@@ -16,7 +16,6 @@ namespace Budget
             public class PRC : IAccount
             {
                 #region Properties
-
                 public string BudgetLevel { get; set; }
                 public int Id { get; set; }
                 public string RPIO { get; set; }
@@ -41,7 +40,6 @@ namespace Budget
                 public string ProgramArea { get; set; }
                 public Parameter Parameter { get; }
                 private Dictionary<string, object> Data { get; set; }
-
                 #endregion Properties
 
                 #region Constructors

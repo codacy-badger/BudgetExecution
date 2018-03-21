@@ -33,5 +33,27 @@ namespace Ninja.Properties {
                 return ((string)(this["R6"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\R6.mdf;Integr" +
+            "ated Security=True;Connect Timeout=30")]
+        public string SqlConnectionString {
+            get {
+                return ((string)(this["SqlConnectionString"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=\"C:\\Users\\terry\\Documents\\Visual Studio 2017\\Projects\\BudgetExecution" +
+            "\\Database\\sqlite\\R6.db\"")]
+        public string SQLiteConnectionString {
+            get {
+                return ((string)(this["SQLiteConnectionString"]));
+            }
+        }
     }
 }

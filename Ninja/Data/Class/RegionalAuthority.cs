@@ -87,7 +87,7 @@ namespace Budget
                 {
                     try
                     {
-                        return table.AsEnumerable( ).Sum(p => p.Field<decimal>("Amount"));
+                        return table.AsEnumerable( ).Where(p =>p.Field<string>("BOC") != "17").Select(p => p).Sum(p => p.Field<decimal>("Amount"));
                     }
                     catch (Exception ex)
                     {

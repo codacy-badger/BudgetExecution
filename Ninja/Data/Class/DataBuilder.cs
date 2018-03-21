@@ -41,7 +41,7 @@ namespace Budget
                 {
                     Query = new Query(source);
                     E6 = GetDataSet( );
-                    Table = E6.Tables[Query.TableName];
+                    Table = E6.Tables[source.ToString()];
                     Total = GetTotal(Table);
                     Data = GetArray( );
                     SqlData = GetSqlData( );
@@ -56,7 +56,7 @@ namespace Budget
                 {
                     Query = new Query(source, param);
                     E6 = GetDataSet( );
-                    Table = E6.Tables[Query.TableName];
+                    Table = E6.Tables[0];
                     Total = GetTotal(Table);
                     Data = GetArray( );
                     SqlData = GetSqlData( );

@@ -107,7 +107,7 @@ namespace Budget
                 {
                     try
                     {
-                        return table.AsEnumerable( ).Sum(p => p.Field<decimal>("Amount"));
+                        return table.AsEnumerable( ).Select(p => p).Sum(p => p.Field<decimal>("Amount"));
                     }
                     catch (Exception ex)
                     {
