@@ -26,7 +26,7 @@ namespace Budget
 
                 #region Methods
 
-                string[] GetCodes(DataTable table, string column);
+                string[] GetCodeElements(DataTable table, string column);
 
                 DataTable FilterTable(DataTable table, string column, string filter);
 

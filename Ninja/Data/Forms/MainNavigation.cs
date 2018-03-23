@@ -33,10 +33,10 @@ namespace Budget
                     Division = new DivisionAuthority( );
                     Timer = new Timer( );
                     Chart = new GetChart(GetMainChart);
-                    Info = new Dictionary<string, decimal>[] { Region.FundInfo, Region.BocInfo, Region.FteInfo, Region.NpmInfo, Region.GoalInfo,
-                Division.DivisionInfo, Division.BocInfo, Division.NpmInfo, Division.GoalInfo };
+                    Info = new Dictionary<string, decimal>[] { Region.FundData, Region.BocData, Region.FteInfo, Region.NpmData, Region.GoalInfo,
+                Division.DivisionData, Division.BocData, Division.NpmData, Division.GoalData };
                     Title = GetChartTitles(Info);
-                    MainChart = Chart(MainChart, Title[1], Division.BocInfo);
+                    MainChart = Chart(MainChart, Title[1], Division.BocData);
                 }
 
                 private string[] GetChartTitles(Dictionary<string, decimal>[] Info)

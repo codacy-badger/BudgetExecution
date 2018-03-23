@@ -1,6 +1,6 @@
 ﻿#region Using DIrectives
 
-using Devart.Data.SQLite;
+using System.Data.SQLite;
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;

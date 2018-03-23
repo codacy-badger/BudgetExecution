@@ -1,6 +1,6 @@
 ﻿#region Using Directives
 
-using Devart.Data.SQLite;
+using System.Data.SQLite;
 using System;
 using System.Collections.Generic;
 using System.Data;

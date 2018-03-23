@@ -27,18 +27,17 @@ namespace Budget
                 public decimal Total { get; }
                 public int Count { get; }
                 public decimal Average { get; }
-                public decimal[] Metrics { get; }
+                public decimal[] FundMetrics { get; }
                 public DataTable FTE { get; }
                 public Tuple<DataTable, PRC[], decimal, int> FteData { get; }
-                public Dictionary<string, decimal> FundInfo { get; }
+                public Dictionary<string, decimal> FundData { get; }
                 public Dictionary<string, decimal> FteInfo { get; }
-                public Dictionary<string, decimal> BocInfo { get; }
-                public Dictionary<string, decimal> NpmInfo { get; }
+                public Dictionary<string, decimal> BocData { get; }
+                public Dictionary<string, decimal> NpmData { get; }
                 public Dictionary<string, decimal> GoalInfo { get; }
-                public Dictionary<string, decimal> ObjectiveInfo { get; }
-                public Dictionary<string, decimal> ProgramInfo { get; }
-                public Dictionary<string, decimal> ProjectInfo { get; }
-                public Dictionary<string, decimal> NpmFteInfo { get; }
+                public Dictionary<string, decimal> ObjectiveData { get; }
+                public Dictionary<string, decimal> ProgramData { get; }
+                public Dictionary<string, decimal> ProjectData { get; }
                 public Appropriation[] Appropriation { get; }
 
                 #endregion Properties
@@ -48,22 +47,22 @@ namespace Budget
                 public RegionalAuthority( )
                 {
                     Data = new DataBuilder(Source.P7, new Dictionary<string, object> { ["BFY"] = FiscalYear });
-                    E6 = Data.E6;
-                    Allocation = Data.PRC;
+                    E6 = Data.Data;
+                    Allocation = Data.Accounts;
                     Total = Data.Total;
                     Count = Data.Table.Rows.Count;
                     Average = GetAverage(Data.Table);
                     DataElement = GetDataElement( );
                     Appropriation = GetAllocation( );
                     FTE = GetFteTable( );
-                    FundInfo = GetDataTotals(Data.Table, DataElement["Fund"], "Fund");
+                    FundData = GetDataTotals(Data.Table, DataElement["Fund"], "Fund");
                     FteInfo = GetDataTotals(FTE, DataElement["Fund"], "Fund");
-                    BocInfo = GetDataTotals(Data.Table, DataElement["BocName"], "BocName");
-                    NpmInfo = GetDataTotals(Data.Table, DataElement["NPM"], "NPM");
+                    BocData = GetDataTotals(Data.Table, DataElement["BocName"], "BocName");
+                    NpmData = GetDataTotals(Data.Table, DataElement["NPM"], "NPM");
                     GoalInfo = GetDataTotals(Data.Table, DataElement["GoalName"], "GoalName");
-                    ObjectiveInfo = GetDataTotals(Data.Table, DataElement["Objective"], "Objective");
-                    ProgramInfo = GetDataTotals(Data.Table, DataElement["ProgramAreaName"], "ProgramAreaName");
-                    ProjectInfo = GetDataTotals(Data.Table, DataElement["ProgramProjectName"], "ProgramProjectName");
+                    ObjectiveData = GetDataTotals(Data.Table, DataElement["Objective"], "Objective");
+                    ProgramData = GetDataTotals(Data.Table, DataElement["ProgramAreaName"], "ProgramAreaName");
+                    ProjectData = GetDataTotals(Data.Table, DataElement["ProgramProjectName"], "ProgramProjectName");
                 }
 
                 #endregion Constructors
@@ -133,7 +132,7 @@ namespace Budget
                     }
                 }
 
-                public string[] GetCodes(DataTable table, string column)
+                public string[] GetCodeElements(DataTable table, string column)
                 {
                     try
                     {
@@ -195,7 +194,7 @@ namespace Budget
                 {
                     try
                     {
-                        var list = GetCodes(table, column);
+                        var list = GetCodeElements(table, column);
                         Dictionary<string, decimal> info = new Dictionary<string, decimal>( );
                         foreach (string ftr in list)
                         {
@@ -261,7 +260,7 @@ namespace Budget
                 {
                     try
                     {
-                        var list = GetCodes(table, column);
+                        var list = GetCodeElements(table, column);
                         Dictionary<string, decimal[]> info = new Dictionary<string, decimal[]>( );
                         foreach (string ftr in list)
                         {

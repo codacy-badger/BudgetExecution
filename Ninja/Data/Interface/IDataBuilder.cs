@@ -15,9 +15,9 @@ namespace Budget
             {
                 #region Properties
 
-                DataRow[] Data { get; }
-                DataSet E6 { get; }
-                PRC[] PRC { get; }
+                DataRow[] Records { get; }
+                DataSet Data { get; }
+                PRC[] Accounts { get; }
                 Tuple<DataTable, PRC[], decimal, int> PrcData { get; }
                 Query Query { get; }
                 Tuple<DataTable, DataRow[], decimal, int> SqlData { get; }

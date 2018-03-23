@@ -18,7 +18,7 @@ namespace Budget
                 public decimal Total { get; }
                 public decimal Average { get; }
                 public int Count { get; }
-                public decimal[] Metrics { get; }
+                public decimal[] FundMetrics { get; }
 
                 public Initializer( )
                 {
@@ -80,7 +80,7 @@ namespace Budget
                     return new decimal[] { GetTotal(table), (decimal)count, GetAverage(table) };
                 }
 
-                public string[] GetCodes(DataTable table, string column)
+                public string[] GetCodeElements(DataTable table, string column)
                 {
                     try
                     {
@@ -100,7 +100,7 @@ namespace Budget
                     {
                         if (dc.ColumnName.Equals("Id") || dc.ColumnName.Equals("Amount"))
                             continue;
-                        data.Add(dc.ColumnName, GetCodes(table, dc.ColumnName));
+                        data.Add(dc.ColumnName, GetCodeElements(table, dc.ColumnName));
                     }
                     if (data.ContainsKey("Id")) data.Remove("Id");
                     if (data.ContainsKey("Amount")) data.Remove("Amount");
@@ -139,7 +139,7 @@ namespace Budget
                 {
                     try
                     {
-                        var list = GetCodes(table, column);
+                        var list = GetCodeElements(table, column);
                         Dictionary<string, decimal> info = new Dictionary<string, decimal>( );
                         foreach (string ftr in list)
                         {
@@ -205,7 +205,7 @@ namespace Budget
                 {
                     try
                     {
-                        string[] list = GetCodes(table, column);
+                        string[] list = GetCodeElements(table, column);
                         Dictionary<string, decimal[]> info = new Dictionary<string, decimal[]>( );
                         foreach (string ftr in list)
                         {

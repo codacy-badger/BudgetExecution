@@ -42,7 +42,7 @@ namespace Budget
                         ["BOC"] = account.BOC.Code,
                         ["Code"] = account.Code
                     };
-                    Allocation = new DataBuilder(Source.P7, Search).PRC;
+                    Allocation = new DataBuilder(Source.P7, Search).Accounts;
                     PrcAccount = Allocation[0];
                     Limit = PrcAccount.Amount;
                 }

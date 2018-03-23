@@ -42,8 +42,8 @@ namespace Budget
                     ColumnChart.Series.Clear( );
                     ColumnChart.Legends.Clear( );
                     ColumnChart.PrimaryXAxis.Title = title;
-                    ColumnChart.PrimaryXAxis.TitleColor = SystemColors.Info;
-                    ColumnChart.PrimaryXAxis.TitleFont = new Font("SegoeUI", 8f);
+                    ColumnChart.PrimaryXAxis.TitleColor = SystemColors.GradientInactiveCaption;
+                    ColumnChart.PrimaryXAxis.TitleFont = new Font("Segoe UI", 10f);
                     ColumnSeries = new ChartSeries("Series", ChartSeriesType.Column);
                     foreach (KeyValuePair<string, decimal> kvp in data)
                     {
@@ -51,7 +51,7 @@ namespace Budget
                     }
                     GetSeriesConfiguration(ColumnSeries);
                     ColumnChart.Series.Add(ColumnSeries);
-                    ColumnSeries.XAxis.Font = new Font("Segoe UI", 8F);
+                    ColumnSeries.XAxis.Font = new Font("Segoe UI", 9F);
                     Get3DMode(ColumnChart);
                 }
 
@@ -62,7 +62,7 @@ namespace Budget
                     var values = table.Rows[i];
                     var value = (decimal)values["Amount"];
                     string pp = values["ProgramProjectName"].ToString( );
-                    var data = P8.ProjectInfo;
+                    var data = P8.ProjectData;
                     ColumnChart = chart;
                     ColumnChart.Series.Clear( );
                     ColumnChart.Legends.Clear( );
@@ -80,7 +80,7 @@ namespace Budget
                                 .Select(p => p.Field<decimal>("Amount")).Sum( );
                             ColumnChart.PrimaryXAxis.Title = $"{ (value / total) * 100:N}% of { pp} Total Funding";
                             ColumnChart.PrimaryXAxis.TitleColor = SystemColors.Info;
-                            ColumnChart.PrimaryXAxis.TitleFont = new Font("SegoeUI", 9f);
+                            ColumnChart.PrimaryXAxis.TitleFont = new Font("Segoe UI", 10f);
                             series.Points.Add("Total", (double)total);
                             GetBindingSeriesConfiguration(series);
                             ColumnChart.Series.Add(series);
@@ -96,7 +96,7 @@ namespace Budget
                     var values = table.Rows[i];
                     var value = (decimal)values["Amount"];
                     string pp = values["ProgramProjectName"].ToString( );
-                    var data = P7.ProjectInfo;
+                    var data = P7.ProjectData;
                     ColumnChart = chart;
                     ColumnChart.Series.Clear( );
                     ColumnChart.Legends.Clear( );

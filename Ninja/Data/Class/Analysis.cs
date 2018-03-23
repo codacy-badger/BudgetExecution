@@ -213,7 +213,7 @@ namespace Budget
                 {
                     var info = new Dictionary<string, decimal>( );
                     foreach (DivisionAuthority d in P8)
-                        info.Add(Info.GetDivisionMailCode(d.RC.Code), d.PrcData.Item3);
+                        info.Add(Info.GetDivisionMailCode(d.RC.Code), d.Data.Total);
                     return info;
                 }
 

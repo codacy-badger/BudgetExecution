@@ -26,19 +26,19 @@ namespace Budget
                 public PRC[] Allocation { get; }
                 public decimal Total { get; }
                 public decimal Average { get; }
-                public decimal[] Metrics { get; }
+                public decimal[] FundMetrics { get; }
                 public int Count { get; }
                 public Tuple<DataTable, PRC[], decimal, int> PrcData { get; }
                 public Tuple<DataTable, PRC[], decimal, int> FteData { get; }
                 public Dictionary<string, string[]> DataElement { get; }
-                public Dictionary<string, decimal> DivisionInfo { get; }
-                public Dictionary<string, decimal> FundInfo { get; }
+                public Dictionary<string, decimal> DivisionData { get; }
+                public Dictionary<string, decimal> FundData { get; }
                 public Dictionary<string, decimal> FteInfo { get; }
-                public Dictionary<string, decimal> BocInfo { get; set; }
-                public Dictionary<string, decimal> NpmInfo { get; }
-                public Dictionary<string, decimal> GoalInfo { get; }
-                public Dictionary<string, decimal> ProgramInfo { get; }
-                public Dictionary<string, decimal> ProjectInfo { get; }
+                public Dictionary<string, decimal> BocData { get; set; }
+                public Dictionary<string, decimal> NpmData { get; }
+                public Dictionary<string, decimal> GoalData { get; }
+                public Dictionary<string, decimal> ProgramData { get; }
+                public Dictionary<string, decimal> ProjectData { get; }
                 public Appropriation[] Appropriation { get; }
 
                 #endregion Properties
@@ -48,17 +48,17 @@ namespace Budget
                 public DivisionAuthority( )
                 {
                     Data = new DataBuilder(Source.P8);
-                    Allocation = Data.PRC;
+                    Allocation = Data.Accounts;
                     Total = Data.Total;
                     DataElement = GetDataElements(Data.Table);
                     Appropriation = GetAllocation( );
-                    DivisionInfo = GetRcInfo(Data.Table);
-                    FundInfo = GetDataTotals(Data.Table, DataElement["Fund"], "Fund");
-                    BocInfo = GetDataTotals(Data.Table, DataElement["BocName"], "BocName");
-                    NpmInfo = GetDataTotals(Data.Table, DataElement["NPM"], "NPM");
-                    GoalInfo = GetDataTotals(Data.Table, DataElement["GoalName"], "GoalName");
-                    ProgramInfo = GetDataTotals(Data.Table, DataElement["ProgramArea"], "ProgramArea");
-                    ProjectInfo = GetDataTotals(Data.Table, DataElement["ProgramProjectName"], "ProgramProjectName");
+                    DivisionData = GetRcInfo(Data.Table);
+                    FundData = GetDataTotals(Data.Table, DataElement["Fund"], "Fund");
+                    BocData = GetDataTotals(Data.Table, DataElement["BocName"], "BocName");
+                    NpmData = GetDataTotals(Data.Table, DataElement["NPM"], "NPM");
+                    GoalData = GetDataTotals(Data.Table, DataElement["GoalName"], "GoalName");
+                    ProgramData = GetDataTotals(Data.Table, DataElement["ProgramArea"], "ProgramArea");
+                    ProjectData = GetDataTotals(Data.Table, DataElement["ProgramProjectName"], "ProgramProjectName");
                     if (DataElement["BOC"].Contains("17"))
                     {
                         FteData = GetDataValues(Data.Table, "BOC", "17");
@@ -71,18 +71,18 @@ namespace Budget
                     RC = new RC(rc);
                     Org = new Org(RC.Code);
                     Data = new DataBuilder(Source.P8, new Dictionary<string, object> { ["RC"] = rc });
-                    Allocation = Data.PRC;
+                    Allocation = Data.Accounts;
                     Total = GetTotal(Data.Table);
                     Count = Data.Table.Rows.Count;
                     Average = GetAverage(Data.Table);
                     DataElement = GetDataElements(Data.Table);
                     Appropriation = GetAllocation( );
-                    FundInfo = GetDataTotals(Data.Table, DataElement["FundName"], "FundName");
-                    BocInfo = GetDataTotals(Data.Table, DataElement["BocName"], "BocName");
-                    NpmInfo = GetDataTotals(Data.Table, DataElement["NPM"], "NPM");
-                    GoalInfo = GetDataTotals(Data.Table, DataElement["GoalName"], "GoalName");
-                    ProgramInfo = GetDataTotals(Data.Table, DataElement["ProgramAreaName"], "ProgramAreaName");
-                    ProjectInfo = GetDataTotals(Data.Table, DataElement["ProgramProjectName"], "ProgramProjectName");
+                    FundData = GetDataTotals(Data.Table, DataElement["FundName"], "FundName");
+                    BocData = GetDataTotals(Data.Table, DataElement["BocName"], "BocName");
+                    NpmData = GetDataTotals(Data.Table, DataElement["NPM"], "NPM");
+                    GoalData = GetDataTotals(Data.Table, DataElement["GoalName"], "GoalName");
+                    ProgramData = GetDataTotals(Data.Table, DataElement["ProgramAreaName"], "ProgramAreaName");
+                    ProjectData = GetDataTotals(Data.Table, DataElement["ProgramProjectName"], "ProgramProjectName");
                     if (DataElement["BOC"].Contains("17"))
                     {
                         FteData = GetDataValues(Data.Table, "BOC", "17");
@@ -220,7 +220,7 @@ namespace Budget
                     return new decimal[] { GetTotal(table), (decimal)count, GetAverage(table) };
                 }
 
-                public string[] GetCodes(DataTable table, string column)
+                public string[] GetCodeElements(DataTable table, string column)
                 {
                     try
                     {
@@ -240,7 +240,7 @@ namespace Budget
                     {
                         if (dc.ColumnName.Equals("Id") || dc.ColumnName.Equals("Amount"))
                             continue;
-                        data.Add(dc.ColumnName, GetCodes(table, dc.ColumnName));
+                        data.Add(dc.ColumnName, GetCodeElements(table, dc.ColumnName));
                     }
                     if (data.ContainsKey("Id")) data.Remove("Id");
                     if (data.ContainsKey("Amount")) data.Remove("Amount");
@@ -279,11 +279,11 @@ namespace Budget
                 {
                     try
                     {
-                        var list = GetCodes(table, column);
+                        var list = GetCodeElements(table, column);
                         Dictionary<string, decimal> info = new Dictionary<string, decimal>( );
                         foreach (string ftr in list)
                         {
-                            var query = PrcData.Item1.AsEnumerable( ).Where(p => p.Field<string>(column).Equals(filter))
+                            var query = table.AsEnumerable( ).Where(p => p.Field<string>(column).Equals(filter))
                                 .Sum(p => p.Field<decimal>("Amount"));
                             if (query > 0)
                                 info.Add(filter, query);
@@ -345,7 +345,7 @@ namespace Budget
                 {
                     try
                     {
-                        string[] list = GetCodes(table, column);
+                        string[] list = GetCodeElements(table, column);
                         Dictionary<string, decimal[]> info = new Dictionary<string, decimal[]>( );
                         foreach (string ftr in list)
                         {

@@ -20,11 +20,12 @@ namespace Budget
 
                 public Query Query { get; }
                 private Dictionary<string, object> Parameter { get; set; }
-                public DataSet E6 { get; }
+                public DataSet Data { get; }
                 public DataTable Table { get; }
-                public DataRow[] Data { get; }
-                public PRC[] PRC { get; }
+                public DataRow[] Records { get; }
+                public PRC[] Accounts { get; }
                 public decimal Total { get; }
+                public int Count { get; }
                 public Tuple<DataTable, DataRow[], decimal, int> SqlData { get; }
                 public Tuple<DataSet, DataRow[], decimal[]> QueryData { get; }
                 public Tuple<DataTable, PRC[], decimal, int> PrcData { get; }
@@ -40,14 +41,15 @@ namespace Budget
                 public DataBuilder(Source source)
                 {
                     Query = new Query(source);
-                    E6 = GetDataSet( );
-                    Table = E6.Tables[source.ToString()];
+                    Data = GetDataSet( );
+                    Table = Data.Tables[source.ToString()];
                     Total = GetTotal(Table);
-                    Data = GetArray( );
+                    Count = Table.Rows.Count;
+                    Records = GetArray( );
                     SqlData = GetSqlData( );
                     if (source == Source.P6 || source == Source.P7 || source == Source.P8)
                     {
-                        PRC = GetPrcArray(Table);
+                        Accounts = GetPrcArray(Table);
                         PrcData = GetPrcData( );
                     }
                 }
@@ -55,14 +57,14 @@ namespace Budget
                 public DataBuilder(Source source, Dictionary<string, object> param)
                 {
                     Query = new Query(source, param);
-                    E6 = GetDataSet( );
-                    Table = E6.Tables[0];
+                    Data = GetDataSet( );
+                    Table = Data.Tables[0];
                     Total = GetTotal(Table);
-                    Data = GetArray( );
+                    Records = GetArray( );
                     SqlData = GetSqlData( );
                     if (source == Source.P6 || source == Source.P7 || source == Source.P8)
                     {
-                        PRC = GetPrcArray(Table);
+                        Accounts = GetPrcArray(Table);
                         PrcData = GetPrcData( );
                     }
                 }
@@ -92,7 +94,7 @@ namespace Budget
                 {
                     try
                     {
-                        return E6.Tables[Query.TableName].AsEnumerable( ).Select(p => p).ToArray( );
+                        return Data.Tables[Query.TableName].AsEnumerable( ).Select(p => p).ToArray( );
                     }
                     catch (Exception ex)
                     {
@@ -103,7 +105,7 @@ namespace Budget
 
                 public Tuple<DataTable, DataRow[], decimal, int> GetSqlData( )
                 {
-                    var table = E6.Tables[Query.TableName];
+                    var table = Data.Tables[Query.TableName];
                     var array = GetArray( );
                     var total = GetTotal(table);
                     var count = GetCount(table);
@@ -112,7 +114,7 @@ namespace Budget
 
                 private Tuple<DataTable, PRC[], decimal, int> GetPrcData( )
                 {
-                    var table = E6.Tables[Query.TableName];
+                    var table = Data.Tables[Query.TableName];
                     var array = GetPrcArray(table);
                     var total = GetTotal(table);
                     var count = GetCount(table);

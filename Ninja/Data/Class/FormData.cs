@@ -8,6 +8,7 @@ using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
 using Syncfusion.Windows.Forms;
+using Syncfusion.Windows.Forms.Tools;
 
 #endregion
 
@@ -21,7 +22,7 @@ namespace Budget
             {
                 #region Properties
 
-                DataBuilder FormBuilder { get; set; }
+                DataBuilder Ninja { get; set; }
                 public Tuple<DataTable, PRC[], decimal, int> PrcData { get; set; }
                 public DataSet Data { get; set; }
                 public DataTable Table { get; set; }
@@ -29,7 +30,7 @@ namespace Budget
                 public decimal Average { get; set; }
                 public int Count { get; set; }
                 public Dictionary<string, string[]> DataElement { get; set; }
-                public decimal[] Metrics { get; set; }
+                public decimal[] FundMetrics { get; set; }
                 public BindingSource BindingSource { get; set; }
                 public BindingNavigator Navigator { get; set; }
                 public DataGridView Grid { get; set; }
@@ -94,7 +95,7 @@ namespace Budget
 
                 internal void GetAppropFilterBox(DataTable table, FlowLayoutPanel filterPanel)
                 {
-                    GetMetroSetButtons(filterPanel, GetCodes(table, "FundName"));
+                    GetMetroSetButtons(filterPanel, GetCodeElements(table, "FundName"));
                     foreach (Control c in filterPanel.Controls) c.Click += AppropriationButton_OnSelect;
                 }
 
@@ -108,7 +109,7 @@ namespace Budget
 
                 internal void GetBocFilterBox(DataTable table, FlowLayoutPanel filterPanel)
                 {
-                    GetMetroSetButtons(filterPanel, GetCodes(table, "BocName"));
+                    GetMetroSetButtons(filterPanel, GetCodeElements(table, "BocName"));
                     foreach (Control c in filterPanel.Controls) c.Click += BocButtonSelect_OnSelect;
                 }
 
@@ -136,6 +137,36 @@ namespace Budget
                     form.Padding = new Padding(1);
                     form.CaptionAlign = HorizontalAlignment.Left;
                 }
+
+                internal void ConfigureTabControl(MetroForm form, TabControlAdv tab, IAuthority data)
+                {
+                    var pages = tab.TabPages;
+                    int pc = pages.Count;
+                    foreach (TabPageAdv tp in pages)
+                    {
+                        tp.TabForeColor = SystemColors.MenuHighlight;
+                        tp.TabBackColor = Color.Black;
+                    }
+                    pages[0].Text = "Summary";
+                    pages[1].Text = "Appropriation";
+                    pages[2].Text = "BOC";
+                    pages[3].Text = "NPM";
+                    pages[4].Text = "Goal";
+                    if (data is RegionalAuthority)
+                    {
+                        pages[5].Text = "Objective";
+                        pages[6].Text = "Divisions";
+                        pages[7].Text = "Transfers";
+                    }
+                    if (data is DivisionAuthority)
+                    {
+                        pages[5].Text = "Program Area";
+                        pages[6].Text = "Program Project";
+                        pages[7].Text = "Transfers";
+                    }
+                    form.Controls.Add(tab);
+                }
+
                 #region IAuthority Interface Implementation
 
                 public int GetCount(DataTable table)
@@ -183,7 +214,7 @@ namespace Budget
                     return new decimal[] { GetTotal(table), (decimal)count, GetAverage(table) };
                 }
 
-                public string[] GetCodes(DataTable table, string column)
+                public string[] GetCodeElements(DataTable table, string column)
                 {
                     try
                     {
@@ -203,7 +234,7 @@ namespace Budget
                     {
                         if (dc.ColumnName.Equals("Id") || dc.ColumnName.Equals("Amount"))
                             continue;
-                        data.Add(dc.ColumnName, GetCodes(table, dc.ColumnName));
+                        data.Add(dc.ColumnName, GetCodeElements(table, dc.ColumnName));
                     }
                     if (data.ContainsKey("Id")) data.Remove("Id");
                     if (data.ContainsKey("Amount")) data.Remove("Amount");
@@ -242,7 +273,7 @@ namespace Budget
                 {
                     try
                     {
-                        var list = GetCodes(table, column);
+                        var list = GetCodeElements(table, column);
                         Dictionary<string, decimal> info = new Dictionary<string, decimal>( );
                         foreach (string ftr in list)
                         {
@@ -308,7 +339,7 @@ namespace Budget
                 {
                     try
                     {
-                        string[] list = GetCodes(table, column);
+                        string[] list = GetCodeElements(table, column);
                         Dictionary<string, decimal[]> info = new Dictionary<string, decimal[]>( );
                         foreach (string ftr in list)
                         {

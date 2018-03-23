@@ -20,7 +20,7 @@ namespace Budget
 
                 decimal Average { get; }
 
-                decimal[] Metrics { get; }
+                decimal[] FundMetrics { get; }
 
                 #endregion Properties
 

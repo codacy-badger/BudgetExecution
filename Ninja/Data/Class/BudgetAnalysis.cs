@@ -40,7 +40,7 @@ namespace Budget
                 {
                     EPA = new RegionalAuthority( );
                     Total = EPA.Total;
-                    Data = EPA.PrcData.Item1;
+                    Data = EPA.Data.Table;
                 }
 
                 #endregion
@@ -220,7 +220,7 @@ namespace Budget
                 {
                     var info = new Dictionary<string, decimal>( );
                     foreach (DivisionAuthority d in GetDivision( ))
-                        info.Add(d.Org.Name, d.PrcData.Item3);
+                        info.Add(d.Org.Name, d.Data.Total);
                     return info;
                 }
 

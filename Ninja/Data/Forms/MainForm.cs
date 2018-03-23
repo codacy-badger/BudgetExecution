@@ -31,10 +31,10 @@ namespace Ninja.Forms
             Division = new DivisionAuthority( );
             Timer = new Timer( );
             Chart = new GetChart(GetMainChart);
-            Values = new Dictionary<string, decimal>[] { R6.FundInfo, R6.BocInfo, R6.FteInfo,
-                R6.NpmInfo, R6.GoalInfo, Division.DivisionInfo, Division.BocInfo, Division.NpmInfo, Division.GoalInfo };
+            Values = new Dictionary<string, decimal>[] { R6.FundData, R6.BocData, R6.FteInfo,
+                R6.NpmData, R6.GoalInfo, Division.DivisionData, Division.BocData, Division.NpmData, Division.GoalData };
             Title = GetChartTitles(Values);
-            MainChart = Chart(MainChart, Title[1], Division.BocInfo);
+            MainChart = Chart(MainChart, Title[1], Division.BocData);
         }
 
 

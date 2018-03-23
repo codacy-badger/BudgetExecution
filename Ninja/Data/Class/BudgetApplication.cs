@@ -26,7 +26,7 @@ namespace Budget
 
             #region Enumerations
 
-            public enum NPM
+            public enum HQ
             {
                 A, B, C, D, E, F, G, H, J, L, M,
             }

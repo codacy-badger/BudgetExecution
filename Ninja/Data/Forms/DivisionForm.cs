@@ -52,8 +52,8 @@ namespace Budget
                     BindData(P8Data, Grid, P8BindingSource, DataNavigator);
                     Appropriation = P8.Appropriation;
                     FundCodes = P8.DataElement["Fund"];
-                    PrcInfo = P8.FundInfo;
-                    BocInfo = P8.BocInfo;
+                    PrcInfo = P8.FundData;
+                    BocInfo = P8.BocData;
                     if (P8.FteInfo != null)
                     {
                         FteInfo = P8.FteInfo;
@@ -72,11 +72,11 @@ namespace Budget
                 private void DivisionForm_Load(object sender, EventArgs e)
                 {
                     Text = "P7 " + P8.Org.Name;
-                    AppropChart = new Chart(AppropChart, P8.FundInfo).CreateColumn( );
-                    BocChart = new Chart(BocChart, P8.BocInfo).CreateColumn( );
-                    NpmChart = new Chart(NpmChart, P8.NpmInfo).CreateColumn( );
-                    AreaChart = new Chart(AreaChart, P8.ProgramInfo).CreateColumn( );
-                    ProjectChart = new Chart(ProjectChart, P8.ProjectInfo).CreateColumn( );
+                    AppropChart = new Chart(AppropChart, P8.FundData).CreateColumn( );
+                    BocChart = new Chart(BocChart, P8.BocData).CreateColumn( );
+                    NpmChart = new Chart(NpmChart, P8.NpmData).CreateColumn( );
+                    AreaChart = new Chart(AreaChart, P8.ProgramData).CreateColumn( );
+                    ProjectChart = new Chart(ProjectChart, P8.ProjectData).CreateColumn( );
                     DivisionFormTabControl.SelectedIndexChanged += new EventHandler(GetTabPanelTitle);
                     BackButton.Visible = false;
                     PrcChart = GetPieChart(PrcChart, "", P8, P8BindingSource);
@@ -147,7 +147,7 @@ namespace Budget
                         case 4:
                             Text = $"{P8.Org.Name} Funds by Program Project";
                             P8Data = P8.Data.Table;
-                            ProjectChart = new Chart(ProjectChart, P8.ProjectInfo).CreateColumn( );
+                            ProjectChart = new Chart(ProjectChart, P8.ProjectData).CreateColumn( );
                             break;
 
                         case 5:

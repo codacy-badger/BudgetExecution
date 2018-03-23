@@ -28,7 +28,7 @@ namespace Budget
                 private DataTable Table { get; }
                 public decimal Total { get; }
                 public decimal Average { get; }
-                public decimal[] Metrics { get; }
+                public decimal[] FundMetrics { get; }
                 public int Count { get; }
                 public Dictionary<string, string[]> DataElement { get; }
                 internal string[] FundCodes { get; set; }
@@ -45,7 +45,7 @@ namespace Budget
                     Division = new DivisionAuthority( );
                     Table = Division.Data.Table;
                     Total = Division.Data.Total;
-                    RC = GetCodes(Table, "RC");
+                    RC = GetCodeElements(Table, "RC");
                     BindingSource.DataSource = Division.Data.Table;
                     Text = $"P7 Status of Funds";
                     GetAllButtons( );
@@ -56,10 +56,10 @@ namespace Budget
                 {
                     InitializeComponent( );
                     Data = new DataBuilder(source);
-                    E6 = Data.E6;
+                    E6 = Data.Data;
                     Table = Data.Table;
                     Total = Data.Total;
-                    RC = GetCodes(Table, "RC");
+                    RC = GetCodeElements(Table, "RC");
                     BindingSource.DataSource = Data.Table;
                     Text = "P7 Division Allocation Summary";
                     GetAllButtons( );
@@ -70,10 +70,10 @@ namespace Budget
                 {
                     InitializeComponent( );
                     Data = new DataBuilder(source, param);
-                    E6 = Data.E6;
+                    E6 = Data.Data;
                     Table = Data.Table;
                     Total = Data.Total;
-                    RC = GetCodes(Table, "RC");
+                    RC = GetCodeElements(Table, "RC");
                     BindingSource.DataSource = Table;
                     Text = "Status of Funds";
                     GetAllButtons( );
@@ -86,21 +86,21 @@ namespace Budget
 
                 private void Form_Load(object sender, EventArgs e)
                 {
-                    P8chart = new Chart(P8chart, "Fund", Division.FundInfo).CreateColumn( );
-                    AppropChart = new Chart(AppropChart, Division.FundInfo).CreateColumn( );
-                    BocChart = new Chart(BocChart, Division.BocInfo).CreateColumn( );
-                    NpmChart = new Chart(NpmChart, Division.NpmInfo).CreateColumn( );
-                    GoalChart = new Chart(GoalChart, Division.GoalInfo).CreateColumn( );
-                    ProgramChart = new Chart(ProgramChart, Division.ProgramInfo).CreateColumn( );
-                    P8SummaryTabControl.SelectedIndexChanged += new EventHandler(GetTabPanelTitle);
+                    P8chart = new Chart(P8chart, "Fund", Division.FundData).CreateColumn( );
+                    AppropChart = new Chart(AppropChart, Division.FundData).CreateColumn( );
+                    BocChart = new Chart(BocChart, Division.BocData).CreateColumn( );
+                    NpmChart = new Chart(NpmChart, Division.NpmData).CreateColumn( );
+                    GoalChart = new Chart(GoalChart, Division.GoalData).CreateColumn( );
+                    ProgramChart = new Chart(ProgramChart, Division.ProgramData).CreateColumn( );
+                    SummaryTabControl.SelectedIndexChanged += new EventHandler(GetTabPanelTitle);
                 }
 
                 #endregion
 
                 private void GetTabPanelTitle(object sender, EventArgs e)
                 {
-                    int tabindex = P8SummaryTabControl.TabCount;
-                    int tc = P8SummaryTabControl.SelectedIndex;
+                    int tabindex = SummaryTabControl.TabCount;
+                    int tc = SummaryTabControl.SelectedIndex;
                     switch (tc)
                     {
                         case 1:
@@ -141,11 +141,11 @@ namespace Budget
 
                 private void GetAllButtons( )
                 {
-                    GetMetroSetButtons(panel1, GetCodes(Table, "FundName"));
-                    GetMetroSetButtons(panel2, GetCodes(Table, "BocName"));
-                    GetMetroSetButtons(panel3, GetCodes(Table, "NPM"));
-                    GetMetroSetButtons(panel4, GetCodes(Table, "GoalName"));
-                    GetMetroSetButtons(panel5, GetCodes(Table, "ObjectiveName"));
+                    GetMetroSetButtons(panel1, GetCodeElements(Table, "FundName"));
+                    GetMetroSetButtons(panel2, GetCodeElements(Table, "BocName"));
+                    GetMetroSetButtons(panel3, GetCodeElements(Table, "NPM"));
+                    GetMetroSetButtons(panel4, GetCodeElements(Table, "GoalName"));
+                    GetMetroSetButtons(panel5, GetCodeElements(Table, "ObjectiveName"));
                 }
 
                 private void GetMetroSetButtons(FlowLayoutPanel panel, string[] list)
@@ -189,7 +189,7 @@ namespace Budget
                     var button = sender as MetroSetButton;
                     var name = button.Tag.ToString( );
                     var table = FilterTable(Table, "FundName", button.Tag.ToString( ));
-                    var div = GetCodes(table, "RC");
+                    var div = GetCodeElements(table, "RC");
                     var data = GetDataTotals(table, div, "RC");
                     Text = $"Total P7 Division {name} Funding";
                     string title = $"Total P7 Division  {name} Funding: {GetTotal(table).ToString("c")}";
@@ -201,7 +201,7 @@ namespace Budget
                     var button = sender as MetroSetButton;
                     var name = button.Tag.ToString( );
                     var table = FilterTable(Table, "BocName", button.Tag.ToString( ));
-                    var div = GetCodes(table, "RC");
+                    var div = GetCodeElements(table, "RC");
                     var data = GetDataTotals(table, div, "RC");
                     Text = $"Total P7 Division {name} Funding";
                     string title = $"Total P7 Division  {name} Funding: {GetTotal(table).ToString("c")}";
@@ -213,7 +213,7 @@ namespace Budget
                     var button = sender as MetroSetButton;
                     var name = button.Tag.ToString( );
                     var table = FilterTable(Table, "NPM", button.Tag.ToString( ));
-                    var div = GetCodes(table, "RC");
+                    var div = GetCodeElements(table, "RC");
                     var data = GetDataTotals(table, div, "RC");
                     Text = $"Total P7 Division {name} Funding";
                     string title = $"Total P7 Division  {name} Funding: {GetTotal(table).ToString("c")}";
@@ -225,7 +225,7 @@ namespace Budget
                     var button = sender as MetroSetButton;
                     var name = button.Tag.ToString( );
                     var table = FilterTable(Table, "GoalName", button.Tag.ToString( ));
-                    var div = GetCodes(table, "RC");
+                    var div = GetCodeElements(table, "RC");
                     var data = GetDataTotals(table, div, "RC");
                     Text = $"Total P7 Division {name} Funding";
                     string title = $"Total P7 Division  {name} Funding: {GetTotal(table).ToString("c")}";
@@ -237,7 +237,7 @@ namespace Budget
                     var button = sender as MetroSetButton;
                     var name = button.Tag.ToString( );
                     var table = FilterTable(Table, "ObjectiveName", button.Tag.ToString( ));
-                    var div = GetCodes(table, "RC");
+                    var div = GetCodeElements(table, "RC");
                     var data = GetDataTotals(table, div, "RC");
                     Text = $"Total P7 Division {name} Funding";
                     string title = $"Total P7 Division {name} Funding: {GetTotal(table).ToString("c")}";
@@ -250,13 +250,13 @@ namespace Budget
 
                 public void AppropriationButton_OnClick(object sender, System.EventArgs e)
                 {
-                    P8chart = new Chart(P8chart, "Fund", Division.FundInfo).CreateColumn( );
+                    P8chart = new Chart(P8chart, "Fund", Division.FundData).CreateColumn( );
                     Text = "P7 Division Funding by Appropriation";
                 }
 
                 public void BocButton_OnClick(object sender, System.EventArgs e)
                 {
-                    P8chart = new Chart(P8chart, "BOC", Division.BocInfo).CreateColumn( );
+                    P8chart = new Chart(P8chart, "BOC", Division.BocData).CreateColumn( );
                     Text = $"P7 Division by Object Class";
                 }
 
@@ -268,26 +268,26 @@ namespace Budget
 
                 public void NpmButton_OnClick(object sender, System.EventArgs e)
                 {
-                    P8chart = new Chart(P8chart, "NPM", Division.NpmInfo).CreateColumn( );
+                    P8chart = new Chart(P8chart, "NPM", Division.NpmData).CreateColumn( );
                     Text = $"P7 Division Funding by HQ Program Office";
                 }
 
                 public void DivisionButton_OnClick(object sender, EventArgs e)
                 {
                     var data = new DivisionAuthority( );
-                    P8chart = new Chart(P8chart, "Division", data.DivisionInfo).CreateColumn( );
+                    P8chart = new Chart(P8chart, "Division", data.DivisionData).CreateColumn( );
                     Text = $"P7 Division Funding by Division/Allowance Holder";
                 }
 
                 public void GoalButton_OnClick(object sender, System.EventArgs e)
                 {
-                    P8chart = new Chart(P8chart, "GoalName", Division.GoalInfo).CreateColumn( );
+                    P8chart = new Chart(P8chart, "GoalName", Division.GoalData).CreateColumn( );
                     Text = $"P7 Division Funding by Agency Goal";
                 }
 
                 public void AreaButton_OnClick(object sender, System.EventArgs e)
                 {
-                    P8chart = new Chart(P8chart, "ProgramAreaName", Division.ProgramInfo).CreateColumn( );
+                    P8chart = new Chart(P8chart, "ProgramAreaName", Division.ProgramData).CreateColumn( );
                     Text = $"P7 Division Funding by Program Area";
                 }
 
@@ -340,7 +340,7 @@ namespace Budget
                     return new decimal[] { GetTotal(table), (decimal)count, GetAverage(table) };
                 }
 
-                public string[] GetCodes(DataTable table, string column)
+                public string[] GetCodeElements(DataTable table, string column)
                 {
                     try
                     {
@@ -360,7 +360,7 @@ namespace Budget
                     {
                         if (dc.ColumnName.Equals("Id") || dc.ColumnName.Equals("Amount"))
                             continue;
-                        data.Add(dc.ColumnName, GetCodes(table, dc.ColumnName));
+                        data.Add(dc.ColumnName, GetCodeElements(table, dc.ColumnName));
                     }
                     if (data.ContainsKey("Id")) data.Remove("Id");
                     if (data.ContainsKey("Amount")) data.Remove("Amount");
@@ -399,11 +399,11 @@ namespace Budget
                 {
                     try
                     {
-                        var list = GetCodes(table, column);
+                        var list = GetCodeElements(table, column);
                         Dictionary<string, decimal> info = new Dictionary<string, decimal>( );
                         foreach (string ftr in list)
                         {
-                            var query = PrcData.Item1.AsEnumerable( ).Where(p => p.Field<string>(column).Equals(filter))
+                            var query = table.AsEnumerable( ).Where(p => p.Field<string>(column).Equals(filter))
                                 .Sum(p => p.Field<decimal>("Amount"));
                             if (query > 0)
                                 info.Add(filter, query);
@@ -465,7 +465,7 @@ namespace Budget
                 {
                     try
                     {
-                        string[] list = GetCodes(table, column);
+                        string[] list = GetCodeElements(table, column);
                         Dictionary<string, decimal[]> info = new Dictionary<string, decimal[]>( );
                         foreach (string ftr in list)
                         {

@@ -21,29 +21,30 @@ namespace Budget
                 #region Properties
 
                 public Fund Fund { get; set; }
-                public string Code { get; set; }
                 public string FiscalYear { get; set; }
-                public Bitmap Image { get; set; }
                 public PRC[] Allocation { get; }
                 public Tuple<DataTable, PRC[], decimal, int> PrcData { get; }
+                public Tuple<DataTable, PRC[], decimal, int> FteData { get; }
                 public Dictionary<string, string[]> DataElement { get; }
+                public Tuple<string[], string[], string[], string[], string[]> Codes  { get; set; }
                 public string[] BocCodes { get; }
                 public string[] BOC { get; }
-                public string[] Codes { get; }
                 public string[] NPM { get; }
                 public string[] Program { get; }
+                public string[] Project { get; }
                 public string[] Goal { get; }
                 public int Count { get; }
                 public decimal Total { get; }
                 public decimal Average { get; }
-                public decimal[] Metrics { get; }
-                public DataTable FteData { get; set; }
+                public decimal[] FundMetrics { get; }
                 public decimal FTE { get; }
-                public Dictionary<string, decimal> BocInfo { get; set; }
-                public Dictionary<string, decimal> NpmInfo { get; set; }
+                public Dictionary<string, decimal> BocData { get; set; }
+                public Dictionary<string, decimal> NpmData { get; set; }
                 public Dictionary<string, decimal> FteInfo { get; set; }
-                public Dictionary<string, decimal> ProgramInfo { get; set; }
-                public Dictionary<string, decimal> GoalInfo { get; set; }
+                public Dictionary<string, decimal> ProgramData { get; set; }
+                public Dictionary<string, decimal> ProjectData { get; set; }
+                public Dictionary<string, decimal> GoalData { get; set; }
+                public Dictionary<string, decimal> ObjectiveData { get; set; }
 
                 #endregion
 
@@ -57,12 +58,11 @@ namespace Budget
                 {
                     Fund = new Fund(fundcode, bfy);
                     FiscalYear = Fund.FiscalYear;
-                    Code = Fund.Code;
                 }
 
                 public Appropriation(DataTable table, string fundcode, string bfy) : this(fundcode, bfy)
                 {
-                    PrcData = GetDataValues(table, "Fund", Code);
+                    PrcData = GetDataValues(table, "Fund", Fund.Code);
                     Allocation = PrcData.Item2;
                     Total = GetTotal(PrcData.Item1);
                     Average = GetAverage(PrcData.Item1);
@@ -73,17 +73,16 @@ namespace Budget
                     Program = DataElement["ProgramAreaName"];
                     Goal = DataElement["GoalName"];
                     Count = PrcData.Item1.Rows.Count;
-                    BocInfo = GetDataTotals(PrcData.Item1, BOC, "BocName");
+                    BocData = GetDataTotals(PrcData.Item1, BOC, "BocName");
                     if (BocCodes.Contains("17"))
                     {
-                        FTE = GetTotal(PrcData.Item1, "BOC", "17");
-                        FteData = GetTable(PrcData.Item1, "BOC", "17");
-                        FteInfo = GetDataTotals(FteData, Program, "ProgramAreaName");
+                        FteData = GetDataValues(PrcData.Item1, "BOC", "17");
+                        FTE = FteData.Item3;
+                        FteInfo = GetDataTotals(FteData.Item1, Program, "ProgramAreaName");
                     }
-                    NpmInfo = GetDataTotals(PrcData.Item1, NPM, "NPM");
-                    ProgramInfo = GetDataTotals(PrcData.Item1, Program, "ProgramAreaName");
-                    GoalInfo = GetDataTotals(PrcData.Item1, Goal, "GoalName");
-                    Image = GetImageFile( );
+                    NpmData = GetDataTotals(PrcData.Item1, NPM, "NPM");
+                    ProgramData = GetDataTotals(PrcData.Item1, Program, "ProgramAreaName");
+                    GoalData = GetDataTotals(PrcData.Item1, Goal, "GoalName");
                 }
 
                 #endregion
@@ -116,6 +115,11 @@ namespace Budget
                     }
                 }
 
+                public decimal GetFTE()
+                {
+                    return PrcData.Item1.AsEnumerable().Where(p => p.Field<string>("BOC").Equals("17")).Select(p => p).Sum(p => p.Field<decimal>("Amount"));
+                }
+
                 public decimal GetAverage(DataTable table)
                 {
                     try
@@ -135,7 +139,7 @@ namespace Budget
                     return new decimal[] { GetTotal(table), (decimal)count, GetAverage(table) };
                 }
 
-                public string[] GetCodes(DataTable table, string column)
+                public string[] GetCodeElements(DataTable table, string column)
                 {
                     try
                     {
@@ -155,12 +159,18 @@ namespace Budget
                     {
                         if (dc.ColumnName.Equals("Id") || dc.ColumnName.Equals("Amount"))
                             continue;
-                        data.Add(dc.ColumnName, GetCodes(table, dc.ColumnName));
+                        data.Add(dc.ColumnName, GetCodeElements(table, dc.ColumnName));
                     }
                     if (data.ContainsKey("Id")) data.Remove("Id");
                     if (data.ContainsKey("Amount")) data.Remove("Amount");
                     if (data.ContainsKey("P6_Id")) data.Remove("P6_Id");
                     return data;
+                }
+
+                public Tuple<string[], string[], string[], string[], string[]> GetCodes()
+                {
+                    return new Tuple<string[], string[], string[], string[], string[]>(DataElement["BOC"],
+                        DataElement["Code"], DataElement["NPM"], DataElement["ProgramArea"], DataElement["ProgramProjectCode"]);
                 }
 
                 public PRC[] GetPrcArray(DataTable table)
@@ -213,7 +223,7 @@ namespace Budget
                 {
                     try
                     {
-                        var list = GetCodes(table, column);
+                        var list = GetCodeElements(table, column);
                         Dictionary<string, decimal> info = new Dictionary<string, decimal>( );
                         foreach (string ftr in list)
                         {
@@ -238,9 +248,8 @@ namespace Budget
                         Dictionary<string, decimal> info = new Dictionary<string, decimal>( );
                         foreach (string f in filters)
                         {
-                            var total = GetTotal(table, column, f);
-                            if (total > 0)
-                                info.Add(f, total);
+                            if (GetTotal(table) > 0)
+                                info.Add(f, GetTotal(table));
                         }
                         return info;
                     }
@@ -278,7 +287,7 @@ namespace Budget
                 {
                     try
                     {
-                        var list = GetCodes(table, column);
+                        var list = GetCodeElements(table, column);
                         Dictionary<string, decimal[]> info = new Dictionary<string, decimal[]>( );
                         foreach (string ftr in list)
                         {
@@ -310,46 +319,6 @@ namespace Budget
                     }
                     return null;
                 }
-
-                #region Private Methods
-
-                private DataTable GetTable(DataTable table, string fund)
-                {
-                    try
-                    {
-                        return table.AsEnumerable( ).Where(p => p.Field<string>("Fund").Equals(fund)).Select(p => p).CopyToDataTable( );
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message.ToString( ) + $"Target Method:\n{ex.TargetSite}\n" + $"Stack:\n{ex.StackTrace}");
-                        return null;
-                    }
-                }
-
-                private DataTable GetTable(DataTable table, string column, string filter)
-                {
-                    try
-                    {
-                        return table.AsEnumerable( ).Where(p => p.Field<string>(column).Equals(filter)).Select(p => p).CopyToDataTable( );
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message.ToString( ) + $"Target Method:\n{ex.TargetSite}\n" + $"Stack:\n{ex.StackTrace}");
-                        return null;
-                    }
-                }
-
-                private decimal GetTotal(DataTable table, string column, string filter)
-                {
-                    return table.AsEnumerable( ).Where(p => p.Field<string>(column).Equals(filter)).Select(p => p).Sum(p => p.Field<decimal>("Amount"));
-                }
-
-                private decimal GetRatio(decimal t1, decimal t2)
-                {
-                    return t1 / t2;
-                }
-
-                #endregion Private Methods
 
                 #region IAuthority Explicit Implementation
 
