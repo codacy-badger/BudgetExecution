@@ -2,12 +2,12 @@
 {
 
 
-    partial class R6DataSet
+    partial class SqlServer
     {
     }
 }
 
-namespace Ninja.R6DataSetTableAdapters
+namespace Ninja.SqlServerTableAdapters
 {
     partial class T7Adapter
     {
