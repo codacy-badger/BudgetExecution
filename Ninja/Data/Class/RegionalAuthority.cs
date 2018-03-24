@@ -55,7 +55,7 @@ namespace Budget
                     Appropriation = GetAllocation( );
                     FTE = GetFTE(Data.Table);
                     FundData = GetDataTotals(Data.Table, DataElement["Fund"], "Fund");
-                    FteInfo = GetDataTotals(FTE.Data, DataElement["Fund"], "Fund");
+                    FteInfo = GetDataTotals(FTE.Allocation, DataElement["Fund"], "Fund");
                     BocData = GetDataTotals(Data.Table, DataElement["BocName"], "BocName");
                     NpmData = GetDataTotals(Data.Table, DataElement["NPM"], "NPM");
                     GoalInfo = GetDataTotals(Data.Table, DataElement["GoalName"], "GoalName");

@@ -18,8 +18,8 @@ namespace Budget
                 #region Properties
                 public DataSet E6 { get; }
                 public Tuple<DataTable, PRC[], decimal, int> AllocationData { get; }
-                public DataTable Data { get; }
-                public PRC[] Allocation { get; }
+                public DataTable Allocation { get; }
+                public PRC[] Data { get; }
                 public string RPIO { get; set; }
                 public string BFY { get; set; }
                 public Fund Fund { get; set; }
@@ -53,26 +53,23 @@ namespace Budget
                 public FTE(DataTable table)
                 {
                     E6 = table.DataSet;
-                    Data = GetDataValues(table, "BOC", "17").Item1;
-                    DataElement = GetDataElements(Data);
-                    Total = GetTotal(Data);
-                    Count = Data.Rows.Count;
-                    Average = GetAverage(Data);
-                    Allocation = GetPrcArray(Data);
-                    AllocationData = new Tuple<DataTable, PRC[], decimal, int>(Data, Allocation, Total, Count);
-                    NpmData = GetDataTotals(Data, DataElement["NPM"], "NPM");
-                    GoalInfo = GetDataTotals(Data, DataElement["GoalName"], "GoalName");
-                    ObjectiveData = GetDataTotals(Data, DataElement["Objective"], "Objective");
-                    ProgramData = GetDataTotals(Data, DataElement["ProgramAreaName"], "ProgramAreaName");
-                    ProjectData = GetDataTotals(Data, DataElement["ProgramProjectName"], "ProgramProjectName");
+                    Allocation = GetDataValues(table, "BOC", "17").Item1;
+                    DataElement = GetDataElements(Allocation);
+                    Total = GetTotal(Allocation);
+                    Count = Allocation.Rows.Count;
+                    Average = GetAverage(Allocation);
+                    Data = GetPrcArray(Allocation);
+                    AllocationData = new Tuple<DataTable, PRC[], decimal, int>(Allocation, Data, Total, Count);
+                    NpmData = GetDataTotals(Allocation, DataElement["NPM"], "NPM");
+                    GoalInfo = GetDataTotals(Allocation, DataElement["GoalName"], "GoalName");
+                    ObjectiveData = GetDataTotals(Allocation, DataElement["Objective"], "Objective");
+                    ProgramData = GetDataTotals(Allocation, DataElement["ProgramAreaName"], "ProgramAreaName");
+                    ProjectData = GetDataTotals(Allocation, DataElement["ProgramProjectName"], "ProgramProjectName");
                 }
 
                 #endregion Constructors
 
                 #region Methods
-
-
-
 
                 #region IAuthority Interface Implementation
 

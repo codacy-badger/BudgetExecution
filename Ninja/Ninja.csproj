@@ -325,6 +325,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AppIcons</DependentUpon>
     </Compile>
+    <Compile Include="Data\Class\SqlQuery.cs" />
     <Compile Include="SqlServer.cs">
       <DependentUpon>SqlServer.xsd</DependentUpon>
     </Compile>
