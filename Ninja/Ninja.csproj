@@ -52,7 +52,7 @@
     <StartupObject>Budget.Ninja.Data.Application</StartupObject>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>summation_3d_blue_oma_icon.ico</ApplicationIcon>
+    <ApplicationIcon>Resources\summation_3d_blue_oma_icon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Devart.Data, Version=5.0.1878.0, Culture=neutral, PublicKeyToken=09af7300eec23701, processorArchitecture=MSIL">
@@ -292,18 +292,6 @@
     <Compile Include="Data\Forms\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Data\Forms\MainNavigation.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Data\Forms\MainNavigation.designer.cs">
-      <DependentUpon>MainNavigation.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Data\Forms\NavigationForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Data\Forms\NavigationForm.Designer.cs">
-      <DependentUpon>NavigationForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="F6.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -332,6 +320,11 @@
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="AppIcons.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AppIcons</DependentUpon>
+    </Compile>
     <Compile Include="SqlServer.cs">
       <DependentUpon>SqlServer.xsd</DependentUpon>
     </Compile>
@@ -343,6 +336,12 @@
     <EmbeddedResource Include="Data\Forms\AccountManager.resx">
       <DependentUpon>AccountManager.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Data\Forms\BudgetTools.resx">
+      <DependentUpon>BudgetTools.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\Forms\DataManager.resx">
+      <DependentUpon>DataManager.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Data\Forms\DivisionForm.resx">
       <DependentUpon>DivisionForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -351,9 +350,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Data\Forms\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Data\Forms\MainNavigation.resx">
-      <DependentUpon>MainNavigation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Data\Forms\SummaryForm.resx">
       <DependentUpon>SummaryForm.cs</DependentUpon>
@@ -366,7 +362,12 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="AppIcons">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AppIcons.Designer.cs</LastGenOutput>
+    </None>
     <EntityDeploy Include="EntityData.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>EntityData.Designer.cs</LastGenOutput>
@@ -414,7 +415,61 @@
       <DependentUpon>EntityData.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
-    <Content Include="summation_3d_blue_oma_icon.ico" />
+    <None Include="Resources\Image1.bmp" />
+    <None Include="Resources\BackArrow.png" />
+    <None Include="Resources\Database Connection.png" />
+    <None Include="Resources\Database.png" />
+    <None Include="Resources\DataExport.png" />
+    <None Include="Resources\DataTable.png" />
+    <None Include="Resources\DivisionTransfer.png" />
+    <None Include="Resources\Download.png" />
+    <None Include="Resources\Excel.png" />
+    <None Include="Resources\ExcelExport.png" />
+    <None Include="Resources\ExcelImport Export.png" />
+    <None Include="Resources\ExcelImport.png" />
+    <None Include="Resources\LeftArrow.png" />
+    <None Include="Resources\MoneyDatabase.png" />
+    <None Include="Resources\RightArrow.png" />
+    <None Include="Resources\Save.png" />
+    <None Include="Resources\Settings.png" />
+    <None Include="Resources\Sigma.png" />
+    <None Include="Resources\Solutions - 03.png" />
+    <None Include="Resources\StatisticalAnalysis.png" />
+    <None Include="Resources\Tools.png" />
+    <None Include="Resources\Transfer.png" />
+    <None Include="Resources\Trash.png" />
+    <None Include="Resources\Upload.png" />
+    <None Include="Resources\Access-New.png" />
+    <None Include="Resources\Add-New.png" />
+    <None Include="Resources\Admin.png" />
+    <None Include="Resources\Bank.png" />
+    <None Include="Resources\Bullets - 04.png" />
+    <None Include="Resources\Calculator-WF.png" />
+    <None Include="Resources\Chart Types.png" />
+    <None Include="Resources\Chart-2-WF.png" />
+    <None Include="Resources\Copy_01.png" />
+    <None Include="Resources\Cut_02.png" />
+    <None Include="Resources\Delete_04.png" />
+    <None Include="Resources\Diagram.png" />
+    <None Include="Resources\Document-Add.png" />
+    <None Include="Resources\Excel n Access.png" />
+    <None Include="Resources\Exchange - 02%281%29.png" />
+    <None Include="Resources\Formula-Support.png" />
+    <None Include="Resources\Graph-03.png" />
+    <None Include="Resources\Graph-Diagram.png" />
+    <None Include="Resources\Hierarchies.png" />
+    <None Include="Resources\Lambda-01.png" />
+    <None Include="Resources\Log file icon 2.png" />
+    <None Include="Resources\Mail-Send.png" />
+    <None Include="Resources\Marketing-WF.png" />
+    <None Include="Resources\Payment-WF.png" />
+    <None Include="Resources\Purchase Order-WF.png" />
+    <None Include="Resources\Save_01.png" />
+    <None Include="Resources\Solutions - 01.png" />
+    <None Include="Resources\Superscript.png" />
+    <None Include="Resources\Upload-02-WF.png" />
+    <None Include="Resources\Branch-Engineering.png" />
+    <Content Include="Resources\summation_3d_blue_oma_icon.ico" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">

@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Ninja.Properties {
+namespace Ninja {
     using System;
     
     
@@ -22,14 +22,14 @@ namespace Ninja.Properties {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Resources {
+    internal class AppIcons {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal Resources() {
+        internal AppIcons() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace Ninja.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Ninja.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Ninja.AppIcons", typeof(AppIcons).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -65,7 +65,7 @@ namespace Ninja.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Access_New {
             get {
-                object obj = ResourceManager.GetObject("Access-New", resourceCulture);
+                object obj = ResourceManager.GetObject("Access_New", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -75,17 +75,7 @@ namespace Ninja.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Add_New {
             get {
-                object obj = ResourceManager.GetObject("Add-New", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Add_New1 {
-            get {
-                object obj = ResourceManager.GetObject("Add-New1", resourceCulture);
+                object obj = ResourceManager.GetObject("Add_New", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -125,7 +115,7 @@ namespace Ninja.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Branch_Engineering {
             get {
-                object obj = ResourceManager.GetObject("Branch-Engineering", resourceCulture);
+                object obj = ResourceManager.GetObject("Branch_Engineering", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -135,7 +125,7 @@ namespace Ninja.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Bullets___04 {
             get {
-                object obj = ResourceManager.GetObject("Bullets - 04", resourceCulture);
+                object obj = ResourceManager.GetObject("Bullets___04", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -145,7 +135,7 @@ namespace Ninja.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Calculator_WF {
             get {
-                object obj = ResourceManager.GetObject("Calculator-WF", resourceCulture);
+                object obj = ResourceManager.GetObject("Calculator_WF", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -155,7 +145,7 @@ namespace Ninja.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Chart_2_WF {
             get {
-                object obj = ResourceManager.GetObject("Chart-2-WF", resourceCulture);
+                object obj = ResourceManager.GetObject("Chart_2_WF", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -165,7 +155,7 @@ namespace Ninja.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Chart_Types {
             get {
-                object obj = ResourceManager.GetObject("Chart Types", resourceCulture);
+                object obj = ResourceManager.GetObject("Chart_Types", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -205,7 +195,7 @@ namespace Ninja.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Database_Connection {
             get {
-                object obj = ResourceManager.GetObject("Database Connection", resourceCulture);
+                object obj = ResourceManager.GetObject("Database_Connection", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -265,7 +255,7 @@ namespace Ninja.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Document_Add {
             get {
-                object obj = ResourceManager.GetObject("Document-Add", resourceCulture);
+                object obj = ResourceManager.GetObject("Document_Add", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -286,16 +276,6 @@ namespace Ninja.Properties {
         internal static System.Drawing.Bitmap Excel {
             get {
                 object obj = ResourceManager.GetObject("Excel", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Excel_n_Access {
-            get {
-                object obj = ResourceManager.GetObject("Excel n Access", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -325,7 +305,7 @@ namespace Ninja.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap ExcelImport_Export {
             get {
-                object obj = ResourceManager.GetObject("ExcelImport Export", resourceCulture);
+                object obj = ResourceManager.GetObject("ExcelImport_Export", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -335,7 +315,7 @@ namespace Ninja.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Exchange___02_1_ {
             get {
-                object obj = ResourceManager.GetObject("Exchange - 02(1)", resourceCulture);
+                object obj = ResourceManager.GetObject("Exchange___02_1_", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -345,7 +325,7 @@ namespace Ninja.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Formula_Support {
             get {
-                object obj = ResourceManager.GetObject("Formula-Support", resourceCulture);
+                object obj = ResourceManager.GetObject("Formula_Support", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -355,7 +335,7 @@ namespace Ninja.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Graph_03 {
             get {
-                object obj = ResourceManager.GetObject("Graph-03", resourceCulture);
+                object obj = ResourceManager.GetObject("Graph_03", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -365,7 +345,7 @@ namespace Ninja.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Graph_Diagram {
             get {
-                object obj = ResourceManager.GetObject("Graph-Diagram", resourceCulture);
+                object obj = ResourceManager.GetObject("Graph_Diagram", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -395,7 +375,7 @@ namespace Ninja.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Lambda_01 {
             get {
-                object obj = ResourceManager.GetObject("Lambda-01", resourceCulture);
+                object obj = ResourceManager.GetObject("Lambda_01", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -415,7 +395,7 @@ namespace Ninja.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Log_file_icon_2 {
             get {
-                object obj = ResourceManager.GetObject("Log file icon 2", resourceCulture);
+                object obj = ResourceManager.GetObject("Log_file_icon_2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -425,7 +405,7 @@ namespace Ninja.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Mail_Send {
             get {
-                object obj = ResourceManager.GetObject("Mail-Send", resourceCulture);
+                object obj = ResourceManager.GetObject("Mail_Send", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -435,7 +415,7 @@ namespace Ninja.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Marketing_WF {
             get {
-                object obj = ResourceManager.GetObject("Marketing-WF", resourceCulture);
+                object obj = ResourceManager.GetObject("Marketing_WF", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -455,7 +435,7 @@ namespace Ninja.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Payment_WF {
             get {
-                object obj = ResourceManager.GetObject("Payment-WF", resourceCulture);
+                object obj = ResourceManager.GetObject("Payment_WF", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -465,7 +445,7 @@ namespace Ninja.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Purchase_Order_WF {
             get {
-                object obj = ResourceManager.GetObject("Purchase Order-WF", resourceCulture);
+                object obj = ResourceManager.GetObject("Purchase_Order_WF", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -525,7 +505,7 @@ namespace Ninja.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Solutions___01 {
             get {
-                object obj = ResourceManager.GetObject("Solutions - 01", resourceCulture);
+                object obj = ResourceManager.GetObject("Solutions___01", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -535,7 +515,7 @@ namespace Ninja.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap Solutions___03 {
             get {
-                object obj = ResourceManager.GetObject("Solutions - 03", resourceCulture);
+                object obj = ResourceManager.GetObject("Solutions___03", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -596,16 +576,6 @@ namespace Ninja.Properties {
         internal static System.Drawing.Bitmap Upload {
             get {
                 object obj = ResourceManager.GetObject("Upload", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Upload_02_WF {
-            get {
-                object obj = ResourceManager.GetObject("Upload-02-WF", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

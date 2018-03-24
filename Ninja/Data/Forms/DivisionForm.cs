@@ -71,10 +71,6 @@ namespace Budget
 
                 private void DivisionForm_Load(object sender, EventArgs e)
                 {
-                    // TODO: This line of code loads data into the 'sqlServer.T6' table. You can move, or remove it, as needed.
-                    this.t6Adapter.Fill(this.sqlServer.T6);
-                    // TODO: This line of code loads data into the 'sqlServer.T7' table. You can move, or remove it, as needed.
-                    this.TransferAdapter.Fill(this.sqlServer.T7);
                     Text = "P7 " + P8.Org.Name;
                     AppropChart = new Chart(AppropChart, P8.FundData).CreateColumn( );
                     BocChart = new Chart(BocChart, P8.BocData).CreateColumn( );
@@ -204,7 +200,7 @@ namespace Budget
 
                 private void GetFilterButtons( )
                 {
-                    GetMetroSetButtons(panel1, GetCodes(P8Data, "FundName"));
+                    GetMetroSetButtons(AppropriationTabFilterPanel, GetCodes(P8Data, "FundName"));
                     GetMetroSetButtons(panel2, GetCodes(P8Data, "BocName"));
                     GetMetroSetButtons(panel3, GetCodes(P8Data, "NPM"));
                     GetMetroSetButtons(panel4, GetCodes(P8Data, "ProgramAreaName"));
@@ -214,7 +210,7 @@ namespace Budget
 
                 private void AssignButtonEvents( )
                 {
-                    foreach (MetroSetButton ab in panel1.Controls)
+                    foreach (MetroSetButton ab in AppropriationTabFilterPanel.Controls)
                         ab.Click += OnAppropButton_Select;
                     foreach (MetroSetButton cd in panel2.Controls)
                         cd.Click += BocButton_OnSelect;

@@ -57,10 +57,10 @@ namespace Budget
                         Data = Division.Data;
                         Table = Division.Data.Table;
                     }
-                    BindData(Table, Grid, BindingSource, DatabaseNavigator);
+                    BindData(Table, DataManagerGrid, BindingSource, DatabaseNavigator);
                     PrcChart = GetPieChart(PrcChart, "", Source, BindingSource);
                     BindingSource.CurrentItemChanged += new EventHandler(UpdatePieChart);
-                    Grid.RowHeaderMouseDoubleClick += GridRow_DoubleClick;
+                    DataManagerGrid.RowHeaderMouseDoubleClick += GridRow_DoubleClick;
                     GetAppropFilterBox(Table);
                     ReturnButton.Visible = false;
                     DatabaseGroupBox.Text = $"{Table.TableName} Database";
@@ -112,15 +112,15 @@ namespace Budget
 
                 private void GetAppropFilterBox(DataTable table)
                 {
-                    GetMetroSetButtons(P7FilterPanel, GetCodes(table, "FundName"));
-                    foreach (Control c in P7FilterPanel.Controls) c.Click += AppropriationButton_OnSelect;
+                    GetMetroSetButtons(DataManagerFilterPanel, GetCodes(table, "FundName"));
+                    foreach (Control c in DataManagerFilterPanel.Controls) c.Click += AppropriationButton_OnSelect;
                 }
 
                 private void AppropriationButton_OnSelect(object sender, EventArgs e)
                 {
                     var button = sender as MetroSetButton;
                     var table = GetTable(Table, "FundName", button.Tag.ToString( ));
-                    BindData(table, Grid, BindingSource, DatabaseNavigator);
+                    BindData(table, DataManagerGrid, BindingSource, DatabaseNavigator);
                     lblTotalAmount.Text = GetTotal(table).ToString("c");
                     lblCount.Text = table.Rows.Count.ToString( );
                     DatabaseGroupBox.Text = $"{table.TableName} Data";
@@ -133,15 +133,15 @@ namespace Budget
 
                 private void GetBocFilterBox(DataTable table)
                 {
-                    GetMetroSetButtons(P7FilterPanel, GetCodes(table, "BocName"));
-                    foreach (Control c in P7FilterPanel.Controls) c.Click += BocButtonSelect_OnSelect;
+                    GetMetroSetButtons(DataManagerFilterPanel, GetCodes(table, "BocName"));
+                    foreach (Control c in DataManagerFilterPanel.Controls) c.Click += BocButtonSelect_OnSelect;
                 }
 
                 private void BocButtonSelect_OnSelect(object sender, EventArgs e)
                 {
                     var button = sender as MetroSetButton;
                     var table = GetTable(Table, "BocName", button.Tag.ToString( ));
-                    BindData(table, Grid, BindingSource, DatabaseNavigator);
+                    BindData(table, DataManagerGrid, BindingSource, DatabaseNavigator);
                     lblTotalAmount.Text = GetTotal(table).ToString("c");
                     lblCount.Text = table.Rows.Count.ToString( );
                     DatabaseGroupBox.Text = $"{table.TableName} Data";
@@ -164,7 +164,7 @@ namespace Budget
 
                 private void ReturnButton_OnClick(object sender, EventArgs e)
                 {
-                    var r6 = new MainNavigation( );
+                    var r6 = new SummarySelector( );
                     r6.ShowDialog( );
                 }
 
@@ -211,9 +211,9 @@ namespace Budget
 
                 private void GetGridSelectedRowValues(object sender, EventArgs e)
                 {
-                    Grid.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-                    var gridrow = Grid.CurrentRow;
-                    var bfy = Grid.CurrentRow.Cells["BFY"].Value;
+                    DataManagerGrid.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+                    var gridrow = DataManagerGrid.CurrentRow;
+                    var bfy = DataManagerGrid.CurrentRow.Cells["BFY"].Value;
                     BFY.Text = bfy.ToString( );
                     var fund = gridrow.Cells["Fund"].Value;
                     Fund.Text = fund.ToString( );

@@ -276,7 +276,7 @@ namespace Budget
             this.SummaryTabControl.FixedSingleBorderColor = System.Drawing.Color.Transparent;
             this.SummaryTabControl.FocusOnTabClick = false;
             this.SummaryTabControl.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SummaryTabControl.InActiveTabForeColor = System.Drawing.SystemColors.GrayText;
+            this.SummaryTabControl.InActiveTabForeColor = System.Drawing.Color.SlateGray;
             this.SummaryTabControl.ItemSize = new System.Drawing.Size(400, 39);
             this.SummaryTabControl.Location = new System.Drawing.Point(1, 1);
             this.SummaryTabControl.Margin = new System.Windows.Forms.Padding(0);
@@ -476,10 +476,10 @@ namespace Budget
             this.Tab1Expander.Controls.Add(this.metroSetButton2);
             this.Tab1Expander.Controls.Add(this.metroSetButton1);
             this.Tab1Expander.ExpandedHeight = 636;
-            this.Tab1Expander.IsExpanded = true;
-            this.Tab1Expander.Location = new System.Drawing.Point(18, 88);
+            this.Tab1Expander.IsExpanded = false;
+            this.Tab1Expander.Location = new System.Drawing.Point(18, 63);
             this.Tab1Expander.Name = "Tab1Expander";
-            this.Tab1Expander.Size = new System.Drawing.Size(244, 636);
+            this.Tab1Expander.Size = new System.Drawing.Size(244, 37);
             this.Tab1Expander.TabIndex = 42;
             this.Tab1Expander.Text = "Selection";
             this.Tab1Expander.UseAnimation = true;
@@ -852,7 +852,7 @@ namespace Budget
             this.expandCollapsePanel4.Controls.Add(this.panel1);
             this.expandCollapsePanel4.ExpandedHeight = 827;
             this.expandCollapsePanel4.IsExpanded = false;
-            this.expandCollapsePanel4.Location = new System.Drawing.Point(19, 13);
+            this.expandCollapsePanel4.Location = new System.Drawing.Point(16, 64);
             this.expandCollapsePanel4.Name = "expandCollapsePanel4";
             this.expandCollapsePanel4.Size = new System.Drawing.Size(236, 37);
             this.expandCollapsePanel4.TabIndex = 105;
@@ -1199,7 +1199,7 @@ namespace Budget
             this.TabChart4.Legend.OnlyColumnsForFloating = false;
             this.TabChart4.Legend.RowsCount = 2;
             this.TabChart4.Legend.ShowSymbol = true;
-            this.TabChart4.Legend.Size = new System.Drawing.Size(107, 32);
+            this.TabChart4.Legend.Size = new System.Drawing.Size(112, 59);
             this.TabChart4.Legend.TextAlignment = System.Drawing.StringAlignment.Near;
             this.TabChart4.Legend.Visible = false;
             this.TabChart4.Legend.VisibleCheckBox = true;
@@ -1302,7 +1302,7 @@ namespace Budget
             this.expandCollapsePanel2.Controls.Add(this.panel3);
             this.expandCollapsePanel2.ExpandedHeight = 667;
             this.expandCollapsePanel2.IsExpanded = false;
-            this.expandCollapsePanel2.Location = new System.Drawing.Point(17, 43);
+            this.expandCollapsePanel2.Location = new System.Drawing.Point(10, 57);
             this.expandCollapsePanel2.Name = "expandCollapsePanel2";
             this.expandCollapsePanel2.Size = new System.Drawing.Size(242, 37);
             this.expandCollapsePanel2.TabIndex = 105;
@@ -1394,7 +1394,7 @@ namespace Budget
             this.TabChart5.Legend.OnlyColumnsForFloating = false;
             this.TabChart5.Legend.RowsCount = 2;
             this.TabChart5.Legend.ShowSymbol = true;
-            this.TabChart5.Legend.Size = new System.Drawing.Size(107, 32);
+            this.TabChart5.Legend.Size = new System.Drawing.Size(112, 59);
             this.TabChart5.Legend.TextAlignment = System.Drawing.StringAlignment.Near;
             this.TabChart5.Legend.Visible = false;
             this.TabChart5.Legend.VisibleCheckBox = true;
@@ -1594,7 +1594,7 @@ namespace Budget
             this.TabChart6.Legend.OnlyColumnsForFloating = false;
             this.TabChart6.Legend.RowsCount = 2;
             this.TabChart6.Legend.ShowSymbol = true;
-            this.TabChart6.Legend.Size = new System.Drawing.Size(107, 32);
+            this.TabChart6.Legend.Size = new System.Drawing.Size(112, 59);
             this.TabChart6.Legend.TextAlignment = System.Drawing.StringAlignment.Near;
             this.TabChart6.Legend.Visible = false;
             this.TabChart6.Legend.VisibleCheckBox = true;
@@ -1698,7 +1698,7 @@ namespace Budget
             this.expandCollapsePanel5.Controls.Add(this.panel5);
             this.expandCollapsePanel5.ExpandedHeight = 793;
             this.expandCollapsePanel5.IsExpanded = false;
-            this.expandCollapsePanel5.Location = new System.Drawing.Point(3, 3);
+            this.expandCollapsePanel5.Location = new System.Drawing.Point(3, 48);
             this.expandCollapsePanel5.Name = "expandCollapsePanel5";
             this.expandCollapsePanel5.Size = new System.Drawing.Size(248, 37);
             this.expandCollapsePanel5.TabIndex = 105;
