@@ -23,7 +23,7 @@ namespace Budget
                 public Fund Fund { get; set; }
                 public string FiscalYear { get; set; }
                 public PRC[] Allocation { get; }
-                public Tuple<DataTable, PRC[], decimal, int> PrcData { get; }
+                public Tuple<DataTable, PRC[], decimal, int> AllocationData { get; }
                 public Tuple<DataTable, PRC[], decimal, int> FteData { get; }
                 public Dictionary<string, string[]> DataElement { get; }
                 public Tuple<string[], string[], string[], string[], string[]> Codes  { get; set; }
@@ -37,10 +37,9 @@ namespace Budget
                 public decimal Total { get; }
                 public decimal Average { get; }
                 public decimal[] FundMetrics { get; }
-                public decimal FTE { get; }
+                public FTE FTE { get; }
                 public Dictionary<string, decimal> BocData { get; set; }
                 public Dictionary<string, decimal> NpmData { get; set; }
-                public Dictionary<string, decimal> FteInfo { get; set; }
                 public Dictionary<string, decimal> ProgramData { get; set; }
                 public Dictionary<string, decimal> ProjectData { get; set; }
                 public Dictionary<string, decimal> GoalData { get; set; }
@@ -62,29 +61,26 @@ namespace Budget
 
                 public Appropriation(DataTable table, string fundcode, string bfy) : this(fundcode, bfy)
                 {
-                    PrcData = GetDataValues(table, "Fund", Fund.Code);
-                    Allocation = PrcData.Item2;
-                    Total = GetTotal(PrcData.Item1);
-                    Average = GetAverage(PrcData.Item1);
-                    DataElement = GetDataElements(PrcData.Item1);
+                    AllocationData = GetDataValues(table, "Fund", Fund.Code);
+                    Allocation = AllocationData.Item2;
+                    Total = GetTotal(AllocationData.Item1);
+                    Average = GetAverage(AllocationData.Item1);
+                    DataElement = GetDataElements(AllocationData.Item1);
                     BocCodes = DataElement["BOC"];
                     BOC = DataElement["BocName"];
                     NPM = DataElement["NPM"];
                     Program = DataElement["ProgramAreaName"];
                     Goal = DataElement["GoalName"];
-                    Count = PrcData.Item1.Rows.Count;
-                    BocData = GetDataTotals(PrcData.Item1, BOC, "BocName");
+                    Count = AllocationData.Item1.Rows.Count;
+                    BocData = GetDataTotals(AllocationData.Item1, BOC, "BocName");
                     if (BocCodes.Contains("17"))
                     {
-                        FteData = GetDataValues(PrcData.Item1, "BOC", "17");
-                        FTE = FteData.Item3;
-                        FteInfo = GetDataTotals(FteData.Item1, Program, "ProgramAreaName");
+                        FTE = new FTE(table);
                     }
-                    NpmData = GetDataTotals(PrcData.Item1, NPM, "NPM");
-                    ProgramData = GetDataTotals(PrcData.Item1, Program, "ProgramAreaName");
-                    GoalData = GetDataTotals(PrcData.Item1, Goal, "GoalName");
+                    NpmData = GetDataTotals(AllocationData.Item1, NPM, "NPM");
+                    ProgramData = GetDataTotals(AllocationData.Item1, Program, "ProgramAreaName");
+                    GoalData = GetDataTotals(AllocationData.Item1, Goal, "GoalName");
                 }
-
                 #endregion
 
                 #region Methods
@@ -117,7 +113,7 @@ namespace Budget
 
                 public decimal GetFTE()
                 {
-                    return PrcData.Item1.AsEnumerable().Where(p => p.Field<string>("BOC").Equals("17")).Select(p => p).Sum(p => p.Field<decimal>("Amount"));
+                    return AllocationData.Item1.AsEnumerable().Where(p => p.Field<string>("BOC").Equals("17")).Select(p => p).Sum(p => p.Field<decimal>("Amount"));
                 }
 
                 public decimal GetAverage(DataTable table)
@@ -227,7 +223,7 @@ namespace Budget
                         Dictionary<string, decimal> info = new Dictionary<string, decimal>( );
                         foreach (string ftr in list)
                         {
-                            var query = PrcData.Item1.AsEnumerable( ).Where(p => p.Field<string>(column).Equals(filter))
+                            var query = AllocationData.Item1.AsEnumerable( ).Where(p => p.Field<string>(column).Equals(filter))
                                 .Sum(p => p.Field<decimal>("Amount"));
                             if (query > 0)
                                 info.Add(filter, query);

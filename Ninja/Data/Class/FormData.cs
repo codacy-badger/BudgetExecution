@@ -23,7 +23,7 @@ namespace Budget
                 #region Properties
 
                 DataBuilder Ninja { get; set; }
-                public Tuple<DataTable, PRC[], decimal, int> PrcData { get; set; }
+                public Tuple<DataTable, PRC[], decimal, int> AllocationData { get; set; }
                 bool Percent { get; set; }
                 public DataSet Data { get; set; }
                 public DataTable Table { get; set; }
@@ -139,33 +139,30 @@ namespace Budget
                     form.CaptionAlign = HorizontalAlignment.Left;
                 }
 
-                internal void ConfigureTabControl(MetroForm form, TabControlAdv tab, IAuthority data)
+                internal void ConfigureTabControl(MetroForm form, TabControlAdv tab, DataBuilder Ninja)
                 {
-                    var pages = tab.TabPages;
-                    int pc = pages.Count;
-                    foreach (TabPageAdv tp in pages)
+                    foreach (TabPageAdv tp in tab.TabPages)
                     {
                         tp.TabForeColor = SystemColors.MenuHighlight;
                         tp.TabBackColor = Color.Black;
                     }
-                    pages[0].Text = "Summary";
-                    pages[1].Text = "Appropriation";
-                    pages[2].Text = "BOC";
-                    pages[3].Text = "NPM";
-                    pages[4].Text = "Goal";
-                    if (data is RegionalAuthority)
+                    tab.TabPages[0].Text = "Summary";
+                    tab.TabPages[1].Text = "Appropriation";
+                    tab.TabPages[2].Text = "BOC";
+                    tab.TabPages[3].Text = "NPM";
+                    tab.TabPages[4].Text = "Goal";
+                    if (Ninja.Query.Source == Source.P7)
                     {
-                        pages[5].Text = "Objective";
-                        pages[6].Text = "Divisions";
-                        pages[7].Text = "Transfers";
+                        tab.TabPages[5].Text = "Objective";
+                        tab.TabPages[6].Text = "Divisions";
+                        tab.TabPages[7].Text = "Transfers";
                     }
-                    if (data is DivisionAuthority)
+                    if (Ninja.Query.Source == Source.P8)
                     {
-                        pages[5].Text = "Program Area";
-                        pages[6].Text = "Program Project";
-                        pages[7].Text = "Transfers";
+                        tab.TabPages[5].Text = "Program Area";
+                        tab.TabPages[6].Text = "Program Project";
+                        tab.TabPages[7].Text = "Transfers";
                     }
-                    form.Controls.Add(tab);
                 }
 
                 #region IAuthority Interface Implementation

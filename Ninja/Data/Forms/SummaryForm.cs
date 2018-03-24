@@ -26,7 +26,7 @@ namespace Budget
                 public DivisionAuthority Division { get; }
                 public DataBuilder Data { get; }
                 public DataSet E6 { get; }
-                public Tuple<DataTable, PRC[], decimal, int> PrcData { get; }
+                public Tuple<DataTable, PRC[], decimal, int> AllocationData { get; }
                 private DataTable Table { get; }
                 public decimal Total { get; }
                 public decimal Average { get; }

@@ -153,6 +153,26 @@ namespace Budget
             Syncfusion.Windows.Forms.Chart.ChartToolBarTypeItem chartToolBarTypeItem7 = new Syncfusion.Windows.Forms.Chart.ChartToolBarTypeItem();
             Syncfusion.Windows.Forms.Chart.ChartToolBarSeries3DItem chartToolBarSeries3DItem7 = new Syncfusion.Windows.Forms.Chart.ChartToolBarSeries3DItem();
             Syncfusion.Windows.Forms.Chart.ChartToolBarShowLegendItem chartToolBarShowLegendItem7 = new Syncfusion.Windows.Forms.Chart.ChartToolBarShowLegendItem();
+            Syncfusion.Windows.Forms.Tools.ActiveStateCollection activeStateCollection2 = new Syncfusion.Windows.Forms.Tools.ActiveStateCollection();
+            Syncfusion.Windows.Forms.Tools.InactiveStateCollection inactiveStateCollection2 = new Syncfusion.Windows.Forms.Tools.InactiveStateCollection();
+            Syncfusion.Windows.Forms.Tools.ToggleButtonRenderer toggleButtonRenderer2 = new Syncfusion.Windows.Forms.Tools.ToggleButtonRenderer();
+            Syncfusion.Windows.Forms.Tools.SliderCollection sliderCollection2 = new Syncfusion.Windows.Forms.Tools.SliderCollection();
+            Syncfusion.Windows.Forms.Tools.ActiveStateCollection activeStateCollection3 = new Syncfusion.Windows.Forms.Tools.ActiveStateCollection();
+            Syncfusion.Windows.Forms.Tools.InactiveStateCollection inactiveStateCollection3 = new Syncfusion.Windows.Forms.Tools.InactiveStateCollection();
+            Syncfusion.Windows.Forms.Tools.ToggleButtonRenderer toggleButtonRenderer3 = new Syncfusion.Windows.Forms.Tools.ToggleButtonRenderer();
+            Syncfusion.Windows.Forms.Tools.SliderCollection sliderCollection3 = new Syncfusion.Windows.Forms.Tools.SliderCollection();
+            Syncfusion.Windows.Forms.Tools.ActiveStateCollection activeStateCollection4 = new Syncfusion.Windows.Forms.Tools.ActiveStateCollection();
+            Syncfusion.Windows.Forms.Tools.InactiveStateCollection inactiveStateCollection4 = new Syncfusion.Windows.Forms.Tools.InactiveStateCollection();
+            Syncfusion.Windows.Forms.Tools.ToggleButtonRenderer toggleButtonRenderer4 = new Syncfusion.Windows.Forms.Tools.ToggleButtonRenderer();
+            Syncfusion.Windows.Forms.Tools.SliderCollection sliderCollection4 = new Syncfusion.Windows.Forms.Tools.SliderCollection();
+            Syncfusion.Windows.Forms.Tools.ActiveStateCollection activeStateCollection5 = new Syncfusion.Windows.Forms.Tools.ActiveStateCollection();
+            Syncfusion.Windows.Forms.Tools.InactiveStateCollection inactiveStateCollection5 = new Syncfusion.Windows.Forms.Tools.InactiveStateCollection();
+            Syncfusion.Windows.Forms.Tools.ToggleButtonRenderer toggleButtonRenderer5 = new Syncfusion.Windows.Forms.Tools.ToggleButtonRenderer();
+            Syncfusion.Windows.Forms.Tools.SliderCollection sliderCollection5 = new Syncfusion.Windows.Forms.Tools.SliderCollection();
+            Syncfusion.Windows.Forms.Tools.ActiveStateCollection activeStateCollection6 = new Syncfusion.Windows.Forms.Tools.ActiveStateCollection();
+            Syncfusion.Windows.Forms.Tools.InactiveStateCollection inactiveStateCollection6 = new Syncfusion.Windows.Forms.Tools.InactiveStateCollection();
+            Syncfusion.Windows.Forms.Tools.ToggleButtonRenderer toggleButtonRenderer6 = new Syncfusion.Windows.Forms.Tools.ToggleButtonRenderer();
+            Syncfusion.Windows.Forms.Tools.SliderCollection sliderCollection6 = new Syncfusion.Windows.Forms.Tools.SliderCollection();
             this.SummaryTabControl = new Syncfusion.Windows.Forms.Tools.TabControlAdv();
             this.summary = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
             this.splitContainerAdv1 = new Syncfusion.Windows.Forms.Tools.SplitContainerAdv();
@@ -208,6 +228,11 @@ namespace Budget
             this.Objective = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
             this.ObjectiveTab = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
             this.BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.toggleButton1 = new Syncfusion.Windows.Forms.Tools.ToggleButton();
+            this.toggleButton2 = new Syncfusion.Windows.Forms.Tools.ToggleButton();
+            this.toggleButton3 = new Syncfusion.Windows.Forms.Tools.ToggleButton();
+            this.toggleButton4 = new Syncfusion.Windows.Forms.Tools.ToggleButton();
+            this.toggleButton5 = new Syncfusion.Windows.Forms.Tools.ToggleButton();
             ((System.ComponentModel.ISupportInitialize)(this.SummaryTabControl)).BeginInit();
             this.SummaryTabControl.SuspendLayout();
             this.summary.SuspendLayout();
@@ -254,6 +279,11 @@ namespace Budget
             this.flpanel5.SuspendLayout();
             this.Project.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.toggleButton1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.toggleButton2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.toggleButton3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.toggleButton4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.toggleButton5)).BeginInit();
             this.SuspendLayout();
             // 
             // SummaryTabControl
@@ -373,7 +403,7 @@ namespace Budget
             this.TabChart1.Legend.Visible = false;
             this.TabChart1.LegendsPlacement = Syncfusion.Windows.Forms.Chart.ChartPlacement.Outside;
             this.TabChart1.Localize = null;
-            this.TabChart1.Location = new System.Drawing.Point(46, 73);
+            this.TabChart1.Location = new System.Drawing.Point(23, 79);
             this.TabChart1.Margin = new System.Windows.Forms.Padding(2);
             this.TabChart1.Name = "TabChart1";
             this.TabChart1.Palette = Syncfusion.Windows.Forms.Chart.ChartColorPalette.Custom;
@@ -441,7 +471,7 @@ namespace Budget
             this.TabChart1.Series3D = true;
             this.TabChart1.SeriesHighlight = true;
             this.TabChart1.ShadowColor = new Syncfusion.Drawing.BrushInfo(Syncfusion.Drawing.GradientStyle.PathRectangle, System.Drawing.SystemColors.WindowText, System.Drawing.Color.Silver);
-            this.TabChart1.Size = new System.Drawing.Size(1376, 562);
+            this.TabChart1.Size = new System.Drawing.Size(1440, 665);
             this.TabChart1.Spacing = 5F;
             this.TabChart1.SpacingBetweenPoints = 5F;
             this.TabChart1.Style3D = true;
@@ -660,12 +690,12 @@ namespace Budget
             inactiveStateCollection1.ForeColor = System.Drawing.Color.Gray;
             inactiveStateCollection1.Text = "%";
             this.Percent.InactiveState = inactiveStateCollection1;
-            this.Percent.Location = new System.Drawing.Point(196, 2);
+            this.Percent.Location = new System.Drawing.Point(8, 2);
             this.Percent.Margin = new System.Windows.Forms.Padding(2);
             this.Percent.MinimumSize = new System.Drawing.Size(36, 14);
             this.Percent.Name = "Percent";
             this.Percent.Renderer = toggleButtonRenderer1;
-            this.Percent.Size = new System.Drawing.Size(73, 36);
+            this.Percent.Size = new System.Drawing.Size(66, 36);
             sliderCollection1.BackColor = System.Drawing.Color.SteelBlue;
             sliderCollection1.BorderColor = System.Drawing.SystemColors.MenuHighlight;
             sliderCollection1.HoverColor = System.Drawing.Color.SteelBlue;
@@ -706,6 +736,7 @@ namespace Budget
             // 
             // splitContainer5.Panel2
             // 
+            this.splitContainer5.Panel2.Controls.Add(this.toggleButton1);
             this.splitContainer5.Panel2.Controls.Add(this.expandCollapsePanel4);
             this.splitContainer5.Panel2.Controls.Add(this.rb5);
             this.splitContainer5.Panel2.Controls.Add(this.rb4);
@@ -715,8 +746,8 @@ namespace Budget
             this.splitContainer5.Panel2.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.splitContainer5.Panel2.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.splitContainer5.Size = new System.Drawing.Size(1780, 843);
-            this.splitContainer5.SplitterDistance = 1505;
-            this.splitContainer5.SplitterWidth = 2;
+            this.splitContainer5.SplitterDistance = 1491;
+            this.splitContainer5.SplitterWidth = 7;
             this.splitContainer5.TabIndex = 96;
             // 
             // TabChart2
@@ -756,7 +787,7 @@ namespace Budget
             this.TabChart2.Legend.Visible = false;
             this.TabChart2.LegendsPlacement = Syncfusion.Windows.Forms.Chart.ChartPlacement.Outside;
             this.TabChart2.Localize = null;
-            this.TabChart2.Location = new System.Drawing.Point(35, 82);
+            this.TabChart2.Location = new System.Drawing.Point(23, 79);
             this.TabChart2.Margin = new System.Windows.Forms.Padding(2);
             this.TabChart2.Name = "TabChart2";
             this.TabChart2.Palette = Syncfusion.Windows.Forms.Chart.ChartColorPalette.Custom;
@@ -824,7 +855,7 @@ namespace Budget
             this.TabChart2.Series3D = true;
             this.TabChart2.SeriesHighlight = true;
             this.TabChart2.ShadowColor = new Syncfusion.Drawing.BrushInfo(Syncfusion.Drawing.GradientStyle.PathRectangle, System.Drawing.SystemColors.WindowText, System.Drawing.Color.Silver);
-            this.TabChart2.Size = new System.Drawing.Size(1383, 629);
+            this.TabChart2.Size = new System.Drawing.Size(1440, 665);
             this.TabChart2.Spacing = 5F;
             this.TabChart2.SpacingBetweenPoints = 5F;
             this.TabChart2.Style3D = true;
@@ -964,11 +995,12 @@ namespace Budget
             // 
             // splitContainer2.Panel2
             // 
+            this.splitContainer2.Panel2.Controls.Add(this.toggleButton2);
             this.splitContainer2.Panel2.Controls.Add(this.expandCollapsePanel3);
             this.splitContainer2.Panel2.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.splitContainer2.Size = new System.Drawing.Size(1776, 839);
-            this.splitContainer2.SplitterDistance = 1503;
-            this.splitContainer2.SplitterWidth = 2;
+            this.splitContainer2.SplitterDistance = 1491;
+            this.splitContainer2.SplitterWidth = 7;
             this.splitContainer2.TabIndex = 98;
             // 
             // TabChart3
@@ -1076,7 +1108,7 @@ namespace Budget
             this.TabChart3.Series3D = true;
             this.TabChart3.SeriesHighlight = true;
             this.TabChart3.ShadowColor = new Syncfusion.Drawing.BrushInfo(Syncfusion.Drawing.GradientStyle.PathRectangle, System.Drawing.SystemColors.WindowText, System.Drawing.Color.Silver);
-            this.TabChart3.Size = new System.Drawing.Size(1407, 618);
+            this.TabChart3.Size = new System.Drawing.Size(1440, 665);
             this.TabChart3.Spacing = 5F;
             this.TabChart3.SpacingBetweenPoints = 5F;
             this.TabChart3.Style3D = true;
@@ -1154,11 +1186,12 @@ namespace Budget
             // 
             // splitContainer4.Panel2
             // 
+            this.splitContainer4.Panel2.Controls.Add(this.toggleButton3);
             this.splitContainer4.Panel2.Controls.Add(this.expandCollapsePanel2);
             this.splitContainer4.Panel2.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.splitContainer4.Size = new System.Drawing.Size(1776, 839);
-            this.splitContainer4.SplitterDistance = 1503;
-            this.splitContainer4.SplitterWidth = 2;
+            this.splitContainer4.SplitterDistance = 1491;
+            this.splitContainer4.SplitterWidth = 7;
             this.splitContainer4.TabIndex = 98;
             // 
             // TabChart4
@@ -1271,7 +1304,7 @@ namespace Budget
             this.TabChart4.Series3D = true;
             this.TabChart4.SeriesHighlight = true;
             this.TabChart4.ShadowColor = new Syncfusion.Drawing.BrushInfo(Syncfusion.Drawing.GradientStyle.PathRectangle, System.Drawing.SystemColors.WindowText, System.Drawing.Color.Silver);
-            this.TabChart4.Size = new System.Drawing.Size(1450, 645);
+            this.TabChart4.Size = new System.Drawing.Size(1440, 665);
             this.TabChart4.Spacing = 5F;
             this.TabChart4.SpacingBetweenSeries = 15F;
             this.TabChart4.Style3D = true;
@@ -1350,10 +1383,11 @@ namespace Budget
             // 
             // splitContaineEPA.Panel2
             // 
+            this.splitContaineEPA.Panel2.Controls.Add(this.toggleButton4);
             this.splitContaineEPA.Panel2.Controls.Add(this.expandCollapsePanel1);
             this.splitContaineEPA.Size = new System.Drawing.Size(1778, 839);
-            this.splitContaineEPA.SplitterDistance = 1504;
-            this.splitContaineEPA.SplitterWidth = 2;
+            this.splitContaineEPA.SplitterDistance = 1491;
+            this.splitContaineEPA.SplitterWidth = 7;
             this.splitContaineEPA.TabIndex = 99;
             // 
             // TabChart5
@@ -1399,7 +1433,7 @@ namespace Budget
             this.TabChart5.Legend.Visible = false;
             this.TabChart5.Legend.VisibleCheckBox = true;
             this.TabChart5.Localize = null;
-            this.TabChart5.Location = new System.Drawing.Point(34, 62);
+            this.TabChart5.Location = new System.Drawing.Point(23, 79);
             this.TabChart5.Margin = new System.Windows.Forms.Padding(2);
             this.TabChart5.Name = "TabChart5";
             this.TabChart5.Padding = new System.Windows.Forms.Padding(1);
@@ -1467,7 +1501,7 @@ namespace Budget
             this.TabChart5.Series3D = true;
             this.TabChart5.SeriesHighlight = true;
             this.TabChart5.ShadowColor = new Syncfusion.Drawing.BrushInfo(Syncfusion.Drawing.GradientStyle.PathRectangle, System.Drawing.SystemColors.WindowText, System.Drawing.Color.Silver);
-            this.TabChart5.Size = new System.Drawing.Size(1442, 589);
+            this.TabChart5.Size = new System.Drawing.Size(1440, 665);
             this.TabChart5.Spacing = 5F;
             this.TabChart5.SpacingBetweenSeries = 15F;
             this.TabChart5.Style3D = true;
@@ -1549,11 +1583,12 @@ namespace Budget
             // 
             // splitContainer8.Panel2
             // 
+            this.splitContainer8.Panel2.Controls.Add(this.toggleButton5);
             this.splitContainer8.Panel2.Controls.Add(this.expandCollapsePanel5);
             this.splitContainer8.Panel2.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.splitContainer8.Size = new System.Drawing.Size(1778, 839);
-            this.splitContainer8.SplitterDistance = 1504;
-            this.splitContainer8.SplitterWidth = 2;
+            this.splitContainer8.SplitterDistance = 1491;
+            this.splitContainer8.SplitterWidth = 7;
             this.splitContainer8.TabIndex = 100;
             // 
             // TabChart6
@@ -1698,7 +1733,7 @@ namespace Budget
             this.expandCollapsePanel5.Controls.Add(this.panel5);
             this.expandCollapsePanel5.ExpandedHeight = 793;
             this.expandCollapsePanel5.IsExpanded = false;
-            this.expandCollapsePanel5.Location = new System.Drawing.Point(3, 48);
+            this.expandCollapsePanel5.Location = new System.Drawing.Point(3, 43);
             this.expandCollapsePanel5.Name = "expandCollapsePanel5";
             this.expandCollapsePanel5.Size = new System.Drawing.Size(248, 37);
             this.expandCollapsePanel5.TabIndex = 105;
@@ -2004,6 +2039,151 @@ namespace Budget
             // 
             this.BindingSource.DataMember = "PRC";
             // 
+            // toggleButton1
+            // 
+            activeStateCollection2.BackColor = System.Drawing.Color.Black;
+            activeStateCollection2.BorderColor = System.Drawing.SystemColors.InactiveCaption;
+            activeStateCollection2.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            activeStateCollection2.Text = "$";
+            this.toggleButton1.ActiveState = activeStateCollection2;
+            this.toggleButton1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toggleButton1.ForeColor = System.Drawing.Color.Black;
+            inactiveStateCollection2.BackColor = System.Drawing.Color.Black;
+            inactiveStateCollection2.BorderColor = System.Drawing.SystemColors.InactiveCaption;
+            inactiveStateCollection2.ForeColor = System.Drawing.Color.Gray;
+            inactiveStateCollection2.Text = "%";
+            this.toggleButton1.InactiveState = inactiveStateCollection2;
+            this.toggleButton1.Location = new System.Drawing.Point(2, 2);
+            this.toggleButton1.Margin = new System.Windows.Forms.Padding(2);
+            this.toggleButton1.MinimumSize = new System.Drawing.Size(36, 14);
+            this.toggleButton1.Name = "toggleButton1";
+            this.toggleButton1.Renderer = toggleButtonRenderer2;
+            this.toggleButton1.Size = new System.Drawing.Size(73, 36);
+            sliderCollection2.BackColor = System.Drawing.Color.SteelBlue;
+            sliderCollection2.BorderColor = System.Drawing.SystemColors.MenuHighlight;
+            sliderCollection2.HoverColor = System.Drawing.Color.SteelBlue;
+            sliderCollection2.Width = 30;
+            this.toggleButton1.Slider = sliderCollection2;
+            this.toggleButton1.TabIndex = 106;
+            this.toggleButton1.Text = "toggleButton1";
+            this.toggleButton1.ToggleState = Syncfusion.Windows.Forms.Tools.ToggleButtonState.Active;
+            // 
+            // toggleButton2
+            // 
+            activeStateCollection3.BackColor = System.Drawing.Color.Black;
+            activeStateCollection3.BorderColor = System.Drawing.SystemColors.InactiveCaption;
+            activeStateCollection3.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            activeStateCollection3.Text = "$";
+            this.toggleButton2.ActiveState = activeStateCollection3;
+            this.toggleButton2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toggleButton2.ForeColor = System.Drawing.Color.Black;
+            inactiveStateCollection3.BackColor = System.Drawing.Color.Black;
+            inactiveStateCollection3.BorderColor = System.Drawing.SystemColors.InactiveCaption;
+            inactiveStateCollection3.ForeColor = System.Drawing.Color.Gray;
+            inactiveStateCollection3.Text = "%";
+            this.toggleButton2.InactiveState = inactiveStateCollection3;
+            this.toggleButton2.Location = new System.Drawing.Point(2, 2);
+            this.toggleButton2.Margin = new System.Windows.Forms.Padding(2);
+            this.toggleButton2.MinimumSize = new System.Drawing.Size(36, 14);
+            this.toggleButton2.Name = "toggleButton2";
+            this.toggleButton2.Renderer = toggleButtonRenderer3;
+            this.toggleButton2.Size = new System.Drawing.Size(66, 36);
+            sliderCollection3.BackColor = System.Drawing.Color.SteelBlue;
+            sliderCollection3.BorderColor = System.Drawing.SystemColors.MenuHighlight;
+            sliderCollection3.HoverColor = System.Drawing.Color.SteelBlue;
+            sliderCollection3.Width = 30;
+            this.toggleButton2.Slider = sliderCollection3;
+            this.toggleButton2.TabIndex = 106;
+            this.toggleButton2.Text = "toggleButton1";
+            this.toggleButton2.ToggleState = Syncfusion.Windows.Forms.Tools.ToggleButtonState.Active;
+            // 
+            // toggleButton3
+            // 
+            activeStateCollection4.BackColor = System.Drawing.Color.Black;
+            activeStateCollection4.BorderColor = System.Drawing.SystemColors.InactiveCaption;
+            activeStateCollection4.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            activeStateCollection4.Text = "$";
+            this.toggleButton3.ActiveState = activeStateCollection4;
+            this.toggleButton3.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toggleButton3.ForeColor = System.Drawing.Color.Black;
+            inactiveStateCollection4.BackColor = System.Drawing.Color.Black;
+            inactiveStateCollection4.BorderColor = System.Drawing.SystemColors.InactiveCaption;
+            inactiveStateCollection4.ForeColor = System.Drawing.Color.Gray;
+            inactiveStateCollection4.Text = "%";
+            this.toggleButton3.InactiveState = inactiveStateCollection4;
+            this.toggleButton3.Location = new System.Drawing.Point(3, 2);
+            this.toggleButton3.Margin = new System.Windows.Forms.Padding(2);
+            this.toggleButton3.MinimumSize = new System.Drawing.Size(36, 14);
+            this.toggleButton3.Name = "toggleButton3";
+            this.toggleButton3.Renderer = toggleButtonRenderer4;
+            this.toggleButton3.Size = new System.Drawing.Size(66, 36);
+            sliderCollection4.BackColor = System.Drawing.Color.SteelBlue;
+            sliderCollection4.BorderColor = System.Drawing.SystemColors.MenuHighlight;
+            sliderCollection4.HoverColor = System.Drawing.Color.SteelBlue;
+            sliderCollection4.Width = 30;
+            this.toggleButton3.Slider = sliderCollection4;
+            this.toggleButton3.TabIndex = 106;
+            this.toggleButton3.Text = "toggleButton1";
+            this.toggleButton3.ToggleState = Syncfusion.Windows.Forms.Tools.ToggleButtonState.Active;
+            // 
+            // toggleButton4
+            // 
+            activeStateCollection5.BackColor = System.Drawing.Color.Black;
+            activeStateCollection5.BorderColor = System.Drawing.SystemColors.InactiveCaption;
+            activeStateCollection5.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            activeStateCollection5.Text = "$";
+            this.toggleButton4.ActiveState = activeStateCollection5;
+            this.toggleButton4.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toggleButton4.ForeColor = System.Drawing.Color.Black;
+            inactiveStateCollection5.BackColor = System.Drawing.Color.Black;
+            inactiveStateCollection5.BorderColor = System.Drawing.SystemColors.InactiveCaption;
+            inactiveStateCollection5.ForeColor = System.Drawing.Color.Gray;
+            inactiveStateCollection5.Text = "%";
+            this.toggleButton4.InactiveState = inactiveStateCollection5;
+            this.toggleButton4.Location = new System.Drawing.Point(3, 2);
+            this.toggleButton4.Margin = new System.Windows.Forms.Padding(2);
+            this.toggleButton4.MinimumSize = new System.Drawing.Size(36, 14);
+            this.toggleButton4.Name = "toggleButton4";
+            this.toggleButton4.Renderer = toggleButtonRenderer5;
+            this.toggleButton4.Size = new System.Drawing.Size(66, 36);
+            sliderCollection5.BackColor = System.Drawing.Color.SteelBlue;
+            sliderCollection5.BorderColor = System.Drawing.SystemColors.MenuHighlight;
+            sliderCollection5.HoverColor = System.Drawing.Color.SteelBlue;
+            sliderCollection5.Width = 30;
+            this.toggleButton4.Slider = sliderCollection5;
+            this.toggleButton4.TabIndex = 106;
+            this.toggleButton4.Text = "toggleButton1";
+            this.toggleButton4.ToggleState = Syncfusion.Windows.Forms.Tools.ToggleButtonState.Active;
+            // 
+            // toggleButton5
+            // 
+            activeStateCollection6.BackColor = System.Drawing.Color.Black;
+            activeStateCollection6.BorderColor = System.Drawing.SystemColors.InactiveCaption;
+            activeStateCollection6.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            activeStateCollection6.Text = "$";
+            this.toggleButton5.ActiveState = activeStateCollection6;
+            this.toggleButton5.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toggleButton5.ForeColor = System.Drawing.Color.Black;
+            inactiveStateCollection6.BackColor = System.Drawing.Color.Black;
+            inactiveStateCollection6.BorderColor = System.Drawing.SystemColors.InactiveCaption;
+            inactiveStateCollection6.ForeColor = System.Drawing.Color.Gray;
+            inactiveStateCollection6.Text = "%";
+            this.toggleButton5.InactiveState = inactiveStateCollection6;
+            this.toggleButton5.Location = new System.Drawing.Point(3, 2);
+            this.toggleButton5.Margin = new System.Windows.Forms.Padding(2);
+            this.toggleButton5.MinimumSize = new System.Drawing.Size(36, 14);
+            this.toggleButton5.Name = "toggleButton5";
+            this.toggleButton5.Renderer = toggleButtonRenderer6;
+            this.toggleButton5.Size = new System.Drawing.Size(66, 36);
+            sliderCollection6.BackColor = System.Drawing.Color.SteelBlue;
+            sliderCollection6.BorderColor = System.Drawing.SystemColors.MenuHighlight;
+            sliderCollection6.HoverColor = System.Drawing.Color.SteelBlue;
+            sliderCollection6.Width = 30;
+            this.toggleButton5.Slider = sliderCollection6;
+            this.toggleButton5.TabIndex = 97;
+            this.toggleButton5.Text = "toggleButton1";
+            this.toggleButton5.ToggleState = Syncfusion.Windows.Forms.Tools.ToggleButtonState.Active;
+            // 
             // SummaryForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
@@ -2086,6 +2266,11 @@ namespace Budget
             this.flpanel5.PerformLayout();
             this.Project.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.toggleButton1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.toggleButton2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.toggleButton3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.toggleButton4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.toggleButton5)).EndInit();
             this.ResumeLayout(false);
 
                 }
@@ -2147,6 +2332,11 @@ namespace Budget
                 private MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel expandCollapsePanel2;
                 private MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel expandCollapsePanel1;
                 private MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel expandCollapsePanel5;
+                private ToggleButton toggleButton1;
+                private ToggleButton toggleButton2;
+                private ToggleButton toggleButton3;
+                private ToggleButton toggleButton4;
+                private ToggleButton toggleButton5;
             } 
         }
     }

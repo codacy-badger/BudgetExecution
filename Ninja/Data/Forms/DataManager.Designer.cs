@@ -185,9 +185,11 @@ namespace Budget
             this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
             this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.DataManagerGrid = new System.Windows.Forms.DataGridView();
+            this.BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.RC = new MetroFramework.Controls.MetroTextBox();
             this.Org = new MetroFramework.Controls.MetroTextBox();
             this.BOC = new MetroFramework.Controls.MetroTextBox();
@@ -210,8 +212,8 @@ namespace Budget
             this.metroTextBox1 = new MetroFramework.Controls.MetroTextBox();
             this.tabPageAdv2 = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.tabPageAdv3 = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
+            this.calculatorControl1 = new Syncfusion.Windows.Forms.Tools.CalculatorControl();
             this.BudgetTab.SuspendLayout();
             this.BudgetDataGroup.SuspendLayout();
             this.MainGridPanel.SuspendLayout();
@@ -225,13 +227,14 @@ namespace Budget
             ((System.ComponentModel.ISupportInitialize)(this.DatabaseNavigator)).BeginInit();
             this.DatabaseNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataManagerGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataManagerTabControl)).BeginInit();
             this.DataManagerTabControl.SuspendLayout();
             this.tabPageAdv1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tabPageAdv2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.BindingSource)).BeginInit();
+            this.tabPageAdv3.SuspendLayout();
             this.SuspendLayout();
             // 
             // BottomToolStripPanel
@@ -1474,6 +1477,11 @@ namespace Budget
             this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(28, 28);
             this.bindingNavigatorMoveNextItem.Text = "Move next";
             // 
+            // bindingNavigatorSeparator2
+            // 
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 31);
+            // 
             // bindingNavigatorMoveLastItem
             // 
             this.bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -1483,10 +1491,10 @@ namespace Budget
             this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(28, 28);
             this.bindingNavigatorMoveLastItem.Text = "Move last";
             // 
-            // bindingNavigatorSeparator2
+            // toolStripSeparator1
             // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 31);
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 31);
             // 
             // DataManagerGrid
             // 
@@ -1556,7 +1564,7 @@ namespace Budget
             this.RC.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.RC.Lines = new string[] {
         "metroTextBox7"};
-            this.RC.Location = new System.Drawing.Point(97, 106);
+            this.RC.Location = new System.Drawing.Point(96, 106);
             this.RC.Margin = new System.Windows.Forms.Padding(2);
             this.RC.MaxLength = 32767;
             this.RC.Name = "RC";
@@ -1581,7 +1589,7 @@ namespace Budget
             // 
             // 
             this.Org.CustomButton.Image = null;
-            this.Org.CustomButton.Location = new System.Drawing.Point(57, 1);
+            this.Org.CustomButton.Location = new System.Drawing.Point(56, 1);
             this.Org.CustomButton.Margin = new System.Windows.Forms.Padding(2);
             this.Org.CustomButton.Name = "";
             this.Org.CustomButton.Size = new System.Drawing.Size(33, 33);
@@ -1604,7 +1612,7 @@ namespace Budget
             this.Org.SelectionLength = 0;
             this.Org.SelectionStart = 0;
             this.Org.ShortcutsEnabled = true;
-            this.Org.Size = new System.Drawing.Size(91, 35);
+            this.Org.Size = new System.Drawing.Size(90, 35);
             this.Org.TabIndex = 159;
             this.Org.Text = "metroTextBox6";
             this.Org.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -1619,7 +1627,7 @@ namespace Budget
             // 
             // 
             this.BOC.CustomButton.Image = null;
-            this.BOC.CustomButton.Location = new System.Drawing.Point(69, 1);
+            this.BOC.CustomButton.Location = new System.Drawing.Point(70, 1);
             this.BOC.CustomButton.Margin = new System.Windows.Forms.Padding(2);
             this.BOC.CustomButton.Name = "";
             this.BOC.CustomButton.Size = new System.Drawing.Size(45, 45);
@@ -1632,7 +1640,7 @@ namespace Budget
             this.BOC.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.BOC.Lines = new string[] {
         "metroTextBox5"};
-            this.BOC.Location = new System.Drawing.Point(208, 32);
+            this.BOC.Location = new System.Drawing.Point(207, 32);
             this.BOC.Margin = new System.Windows.Forms.Padding(2);
             this.BOC.MaxLength = 32767;
             this.BOC.Name = "BOC";
@@ -1642,7 +1650,7 @@ namespace Budget
             this.BOC.SelectionLength = 0;
             this.BOC.SelectionStart = 0;
             this.BOC.ShortcutsEnabled = true;
-            this.BOC.Size = new System.Drawing.Size(115, 47);
+            this.BOC.Size = new System.Drawing.Size(116, 47);
             this.BOC.TabIndex = 158;
             this.BOC.Text = "metroTextBox5";
             this.BOC.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -1670,7 +1678,7 @@ namespace Budget
             this.Fund.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.Fund.Lines = new string[] {
         "metroTextBox4"};
-            this.Fund.Location = new System.Drawing.Point(97, 32);
+            this.Fund.Location = new System.Drawing.Point(96, 32);
             this.Fund.Margin = new System.Windows.Forms.Padding(2);
             this.Fund.MaxLength = 32767;
             this.Fund.Name = "Fund";
@@ -1695,7 +1703,7 @@ namespace Budget
             // 
             // 
             this.BFY.CustomButton.Image = null;
-            this.BFY.CustomButton.Location = new System.Drawing.Point(45, 1);
+            this.BFY.CustomButton.Location = new System.Drawing.Point(44, 1);
             this.BFY.CustomButton.Margin = new System.Windows.Forms.Padding(2);
             this.BFY.CustomButton.Name = "";
             this.BFY.CustomButton.Size = new System.Drawing.Size(45, 45);
@@ -1718,7 +1726,7 @@ namespace Budget
             this.BFY.SelectionLength = 0;
             this.BFY.SelectionStart = 0;
             this.BFY.ShortcutsEnabled = true;
-            this.BFY.Size = new System.Drawing.Size(91, 47);
+            this.BFY.Size = new System.Drawing.Size(90, 47);
             this.BFY.TabIndex = 156;
             this.BFY.Text = "metroTextBox3";
             this.BFY.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -1746,7 +1754,7 @@ namespace Budget
             this.label4.AutoSize = true;
             this.label4.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.label4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label4.Location = new System.Drawing.Point(241, 83);
+            this.label4.Location = new System.Drawing.Point(240, 83);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(49, 21);
             this.label4.TabIndex = 64;
@@ -1758,7 +1766,7 @@ namespace Budget
             this.label15.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label15.AutoSize = true;
             this.label15.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label15.Location = new System.Drawing.Point(126, 9);
+            this.label15.Location = new System.Drawing.Point(125, 9);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(48, 21);
             this.label15.TabIndex = 60;
@@ -1770,7 +1778,7 @@ namespace Budget
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label6.AutoSize = true;
             this.label6.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label6.Location = new System.Drawing.Point(134, 83);
+            this.label6.Location = new System.Drawing.Point(133, 83);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(33, 21);
             this.label6.TabIndex = 63;
@@ -1807,7 +1815,7 @@ namespace Budget
             // 
             // 
             this.Code.CustomButton.Image = null;
-            this.Code.CustomButton.Location = new System.Drawing.Point(81, 1);
+            this.Code.CustomButton.Location = new System.Drawing.Point(82, 1);
             this.Code.CustomButton.Margin = new System.Windows.Forms.Padding(2);
             this.Code.CustomButton.Name = "";
             this.Code.CustomButton.Size = new System.Drawing.Size(33, 33);
@@ -1820,7 +1828,7 @@ namespace Budget
             this.Code.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.Code.Lines = new string[] {
         "metroTextBox2"};
-            this.Code.Location = new System.Drawing.Point(208, 106);
+            this.Code.Location = new System.Drawing.Point(207, 106);
             this.Code.Margin = new System.Windows.Forms.Padding(2);
             this.Code.MaxLength = 32767;
             this.Code.Name = "Code";
@@ -1830,7 +1838,7 @@ namespace Budget
             this.Code.SelectionLength = 0;
             this.Code.SelectionStart = 0;
             this.Code.ShortcutsEnabled = true;
-            this.Code.Size = new System.Drawing.Size(115, 35);
+            this.Code.Size = new System.Drawing.Size(116, 35);
             this.Code.TabIndex = 155;
             this.Code.Text = "metroTextBox2";
             this.Code.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -1845,7 +1853,7 @@ namespace Budget
             this.label12.AutoSize = true;
             this.label12.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.label12.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label12.Location = new System.Drawing.Point(13, 155);
+            this.label12.Location = new System.Drawing.Point(12, 155);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(69, 21);
             this.label12.TabIndex = 65;
@@ -1858,7 +1866,7 @@ namespace Budget
             // 
             // 
             this.OldAmount.CustomButton.Image = null;
-            this.OldAmount.CustomButton.Location = new System.Drawing.Point(65, 2);
+            this.OldAmount.CustomButton.Location = new System.Drawing.Point(64, 2);
             this.OldAmount.CustomButton.Margin = new System.Windows.Forms.Padding(2);
             this.OldAmount.CustomButton.Name = "";
             this.OldAmount.CustomButton.Size = new System.Drawing.Size(23, 23);
@@ -1880,7 +1888,7 @@ namespace Budget
             this.OldAmount.SelectionLength = 0;
             this.OldAmount.SelectionStart = 0;
             this.OldAmount.ShortcutsEnabled = true;
-            this.OldAmount.Size = new System.Drawing.Size(91, 28);
+            this.OldAmount.Size = new System.Drawing.Size(90, 28);
             this.OldAmount.TabIndex = 154;
             this.OldAmount.Text = "metroTextBox1";
             this.OldAmount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -2031,6 +2039,7 @@ namespace Budget
             this.DataManagerTabControl.CloseButtonPressedForeColor = System.Drawing.Color.Black;
             this.DataManagerTabControl.Controls.Add(this.tabPageAdv1);
             this.DataManagerTabControl.Controls.Add(this.tabPageAdv2);
+            this.DataManagerTabControl.Controls.Add(this.tabPageAdv3);
             this.DataManagerTabControl.FixedSingleBorderColor = System.Drawing.SystemColors.ControlDark;
             this.DataManagerTabControl.FocusOnTabClick = false;
             this.DataManagerTabControl.InActiveTabForeColor = System.Drawing.Color.Empty;
@@ -2063,7 +2072,7 @@ namespace Budget
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 46.08696F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 53.91304F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 118F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 119F));
             this.tableLayoutPanel1.Controls.Add(this.label13, 1, 4);
             this.tableLayoutPanel1.Controls.Add(this.OldAmount, 0, 5);
             this.tableLayoutPanel1.Controls.Add(this.label12, 0, 4);
@@ -2098,7 +2107,7 @@ namespace Budget
             this.label13.AutoSize = true;
             this.label13.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.label13.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label13.Location = new System.Drawing.Point(128, 155);
+            this.label13.Location = new System.Drawing.Point(127, 155);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(45, 21);
             this.label13.TabIndex = 162;
@@ -2123,7 +2132,7 @@ namespace Budget
             this.metroTextBox1.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.metroTextBox1.Lines = new string[] {
         "metroTextBox1"};
-            this.metroTextBox1.Location = new System.Drawing.Point(97, 178);
+            this.metroTextBox1.Location = new System.Drawing.Point(96, 178);
             this.metroTextBox1.Margin = new System.Windows.Forms.Padding(2);
             this.metroTextBox1.MaxLength = 32767;
             this.metroTextBox1.Name = "metroTextBox1";
@@ -2171,10 +2180,38 @@ namespace Budget
             this.tableLayoutPanel3.Size = new System.Drawing.Size(1702, 586);
             this.tableLayoutPanel3.TabIndex = 150;
             // 
-            // toolStripSeparator1
+            // tabPageAdv3
             // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 31);
+            this.tabPageAdv3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.tabPageAdv3.Controls.Add(this.calculatorControl1);
+            this.tabPageAdv3.Image = null;
+            this.tabPageAdv3.ImageSize = new System.Drawing.Size(16, 16);
+            this.tabPageAdv3.Location = new System.Drawing.Point(1, 30);
+            this.tabPageAdv3.Name = "tabPageAdv3";
+            this.tabPageAdv3.ShowCloseButton = true;
+            this.tabPageAdv3.Size = new System.Drawing.Size(463, 476);
+            this.tabPageAdv3.TabIndex = 3;
+            this.tabPageAdv3.Text = "tabPageAdv3";
+            this.tabPageAdv3.ThemesEnabled = false;
+            // 
+            // calculatorControl1
+            // 
+            this.calculatorControl1.AccessibleDescription = "Calculator control";
+            this.calculatorControl1.AccessibleName = "Calculator Control";
+            this.calculatorControl1.BeforeTouchSize = new System.Drawing.Size(388, 360);
+            this.calculatorControl1.BorderStyle = System.Windows.Forms.Border3DStyle.Flat;
+            this.calculatorControl1.ButtonStyle = Syncfusion.Windows.Forms.ButtonAppearance.Metro;
+            this.calculatorControl1.Culture = new System.Globalization.CultureInfo("en-US");
+            this.calculatorControl1.DoubleValue = 0D;
+            this.calculatorControl1.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.calculatorControl1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.calculatorControl1.Location = new System.Drawing.Point(39, 55);
+            this.calculatorControl1.MetroColor = System.Drawing.SystemColors.Control;
+            this.calculatorControl1.Name = "calculatorControl1";
+            this.calculatorControl1.Size = new System.Drawing.Size(388, 360);
+            this.calculatorControl1.TabIndex = 0;
+            this.calculatorControl1.Text = "calculatorControl1";
+            this.calculatorControl1.UseVisualStyle = true;
             // 
             // DataManager
             // 
@@ -2215,6 +2252,7 @@ namespace Budget
             this.DatabaseNavigator.ResumeLayout(false);
             this.DatabaseNavigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataManagerGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataManagerTabControl)).EndInit();
             this.DataManagerTabControl.ResumeLayout(false);
             this.tabPageAdv1.ResumeLayout(false);
@@ -2222,7 +2260,7 @@ namespace Budget
             this.tableLayoutPanel1.PerformLayout();
             this.tabPageAdv2.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.BindingSource)).EndInit();
+            this.tabPageAdv3.ResumeLayout(false);
             this.ResumeLayout(false);
 
                 }
@@ -2367,6 +2405,8 @@ namespace Budget
                 private BindingSource BindingSource;
                 private TableLayoutPanel tableLayoutPanel3;
                 private ToolStripSeparator toolStripSeparator1;
+                private TabPageAdv tabPageAdv3;
+                private CalculatorControl calculatorControl1;
             } 
         }
     }

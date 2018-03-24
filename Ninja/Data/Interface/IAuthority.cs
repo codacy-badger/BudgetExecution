@@ -20,7 +20,7 @@ namespace Budget
 
                 Dictionary<string, string[]> DataElement { get; }
 
-                Tuple<DataTable, PRC[], decimal, int> PrcData { get; }
+                Tuple<DataTable, PRC[], decimal, int> AllocationData { get; }
 
                 #endregion Properties
 

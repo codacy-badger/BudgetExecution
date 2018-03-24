@@ -27,13 +27,13 @@ namespace Budget
                 public decimal Total { get; }
                 public decimal Average { get; }
                 public decimal[] FundMetrics { get; }
-                public int Count { get; }
-                public Tuple<DataTable, PRC[], decimal, int> PrcData { get; }
-                public Tuple<DataTable, PRC[], decimal, int> FteData { get; }
                 public Dictionary<string, string[]> DataElement { get; }
+                public int Count { get; }
+                public Tuple<DataTable, PRC[], decimal, int> AllocationData { get; }
+                public FTE FTE { get; }
                 public Dictionary<string, decimal> DivisionData { get; }
-                public Dictionary<string, decimal> FundData { get; }
                 public Dictionary<string, decimal> FteInfo { get; }
+                public Dictionary<string, decimal> FundData { get; }
                 public Dictionary<string, decimal> BocData { get; set; }
                 public Dictionary<string, decimal> NpmData { get; }
                 public Dictionary<string, decimal> GoalData { get; }
@@ -61,8 +61,8 @@ namespace Budget
                     ProjectData = GetDataTotals(Data.Table, DataElement["ProgramProjectName"], "ProgramProjectName");
                     if (DataElement["BOC"].Contains("17"))
                     {
-                        FteData = GetDataValues(Data.Table, "BOC", "17");
-                        FteInfo = GetDataTotals(Data.Table, DataElement["Fund"], "Fund");
+                        FTE = new FTE(Data.Table);
+                        FteInfo = FTE.FundData;
                     }
                 }
 
@@ -85,8 +85,8 @@ namespace Budget
                     ProjectData = GetDataTotals(Data.Table, DataElement["ProgramProjectName"], "ProgramProjectName");
                     if (DataElement["BOC"].Contains("17"))
                     {
-                        FteData = GetDataValues(Data.Table, "BOC", "17");
-                        FteInfo = GetDataTotals(FteData.Item1, DataElement["Fund"], "Fund");
+                        FTE = new FTE(Data.Table);
+                        FteInfo = FTE.FundData;
                     }
                 }
 

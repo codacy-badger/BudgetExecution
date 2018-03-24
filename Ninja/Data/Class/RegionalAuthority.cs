@@ -21,15 +21,14 @@ namespace Budget
                 public static string FiscalYear { get; set; } = "2018";
                 public DataBuilder Data { get; set; }
                 public DataSet E6 { get; }
-                public Tuple<DataTable, PRC[], decimal, int> PrcData { get; }
+                public Tuple<DataTable, PRC[], decimal, int> AllocationData { get; }
                 public Dictionary<string, string[]> DataElement { get; }
                 public PRC[] Allocation { get; }
                 public decimal Total { get; }
                 public int Count { get; }
                 public decimal Average { get; }
                 public decimal[] FundMetrics { get; }
-                public DataTable FTE { get; }
-                public Tuple<DataTable, PRC[], decimal, int> FteData { get; }
+                public FTE FTE { get; }
                 public Dictionary<string, decimal> FundData { get; }
                 public Dictionary<string, decimal> FteInfo { get; }
                 public Dictionary<string, decimal> BocData { get; }
@@ -54,9 +53,9 @@ namespace Budget
                     Average = GetAverage(Data.Table);
                     DataElement = GetDataElement( );
                     Appropriation = GetAllocation( );
-                    FTE = GetFteTable( );
+                    FTE = GetFTE(Data.Table);
                     FundData = GetDataTotals(Data.Table, DataElement["Fund"], "Fund");
-                    FteInfo = GetDataTotals(FTE, DataElement["Fund"], "Fund");
+                    FteInfo = GetDataTotals(FTE.Data, DataElement["Fund"], "Fund");
                     BocData = GetDataTotals(Data.Table, DataElement["BocName"], "BocName");
                     NpmData = GetDataTotals(Data.Table, DataElement["NPM"], "NPM");
                     GoalInfo = GetDataTotals(Data.Table, DataElement["GoalName"], "GoalName");
@@ -146,6 +145,14 @@ namespace Budget
                     }
                 }
 
+                FTE GetFTE(DataTable table)
+                {
+                    string[] code = GetCodeElements(table, "BOC");
+                    if(code.Contains("17"))
+                        return new FTE(table);
+                    return null;
+                }
+
                 internal Dictionary<string, string[]> GetDataElement( )
                 {
                     var data = new Dictionary<string, string[]>( );
@@ -198,7 +205,7 @@ namespace Budget
                         Dictionary<string, decimal> info = new Dictionary<string, decimal>( );
                         foreach (string ftr in list)
                         {
-                            var query = PrcData.Item1.AsEnumerable( ).Where(p => p.Field<string>(column).Equals(filter))
+                            var query = AllocationData.Item1.AsEnumerable( ).Where(p => p.Field<string>(column).Equals(filter))
                                 .Sum(p => p.Field<decimal>("Amount"));
                             if (query > 0)
                                 info.Add(filter, query);

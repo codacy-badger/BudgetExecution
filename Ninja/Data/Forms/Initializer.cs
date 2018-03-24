@@ -14,7 +14,7 @@ namespace Budget
             public partial class Initializer : Metro, IAuthority
             {
                 public Dictionary<string, string[]> DataElement { get; }
-                public Tuple<DataTable, PRC[], decimal, int> PrcData { get; }
+                public Tuple<DataTable, PRC[], decimal, int> AllocationData { get; }
                 public decimal Total { get; }
                 public decimal Average { get; }
                 public int Count { get; }

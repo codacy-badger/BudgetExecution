@@ -36,6 +36,7 @@ namespace Budget
                 public string NpmName { get; set; }
                 public string ProgramProjectCode { get; }
                 public string ProgramProjectName { get; set; }
+                public PRC[] AllocationData { get; set; }
                 public FTE FTE { get; set; }
                 public string ProgramArea { get; set; }
                 public Parameter Parameter { get; }
@@ -44,7 +45,7 @@ namespace Budget
 
                 #region Constructors
 
-                public PRC( )
+                public PRC()
                 {
                 }
 
@@ -66,40 +67,40 @@ namespace Budget
                     GoalName = Account.GoalName;
                     Objective = Account.Objective;
                     ObjectiveName = Account.ObjectiveName;
-                    Parameter = GetParameter( );
+                    Parameter = GetParameter();
                 }
 
                 public PRC(DataRow datarow)
                 {
-                    Id = int.Parse(datarow["Id"].ToString( ));
-                    BudgetLevel = datarow["BudgetLevel"].ToString( );
-                    RPIO = datarow["RPIO"].ToString( );
-                    BFY = datarow["BFY"].ToString( );
-                    Fund = new Fund(datarow["Fund"].ToString( ), datarow["BFY"].ToString( ));
-                    RC = new RC(datarow["RC"].ToString( ));
-                    Org = datarow["Org"].ToString( );
-                    Account = new Account(datarow["Code"].ToString( ));
+                    Id = int.Parse(datarow["Id"].ToString());
+                    BudgetLevel = datarow["BudgetLevel"].ToString();
+                    RPIO = datarow["RPIO"].ToString();
+                    BFY = datarow["BFY"].ToString();
+                    Fund = new Fund(datarow["Fund"].ToString(), datarow["BFY"].ToString());
+                    RC = new RC(datarow["RC"].ToString());
+                    Org = datarow["Org"].ToString();
+                    Account = new Account(datarow["Code"].ToString());
                     Code = Account.Code;
-                    BOC = new BOC(datarow["BOC"].ToString( ));
-                    Amount = decimal.Parse(datarow["Amount"].ToString( ));
+                    BOC = new BOC(datarow["BOC"].ToString());
+                    Amount = decimal.Parse(datarow["Amount"].ToString());
                     NpmCode = Account.NpmCode;
                     ProgramProjectCode = Account.ProgramProjectCode;
                     Goal = Account.Goal;
                     GoalName = Account.GoalName;
                     Objective = Account.Objective;
                     ObjectiveName = Account.ObjectiveName;
-                    Parameter = GetParameter( );
+                    Parameter = GetParameter();
                 }
 
                 #endregion Constructors
 
                 #region Methods
 
-                internal Dictionary<string, object> GetData( )
+                internal Dictionary<string, object> GetData()
                 {
                     try
                     {
-                        Dictionary<string, object> param = new Dictionary<string, object>( )
+                        Dictionary<string, object> param = new Dictionary<string, object>()
                         {
                             ["Id"] = Id,
                             ["BudgetLevel"] = BudgetLevel,
@@ -120,15 +121,15 @@ namespace Budget
                     }
                 }
 
-                internal Parameter GetParameter( )
+                internal Parameter GetParameter()
                 {
                     return new Parameter(BudgetLevel, RPIO, BFY, Fund.Code, Org, RC.Code, BOC.Code, Account.Code);
                 }
 
-                public string GetGoal( )
+                public string GetGoal()
                 {
-                    var goal = Code.Substring(0, 1).ToCharArray( );
-                    return goal.ToString( );
+                    var goal = Code.Substring(0, 1).ToCharArray();
+                    return goal.ToString();
                 }
 
                 public string GetGoalName(string code)
@@ -136,7 +137,7 @@ namespace Budget
                     return Info.GetGoalName(code);
                 }
 
-                public string GetObjective( )
+                public string GetObjective()
                 {
                     return Code.Substring(1, 2);
                 }
@@ -146,32 +147,32 @@ namespace Budget
                     return Info.GetObjectiveName(code);
                 }
 
-                public string GetNpmCode( )
+                public string GetNpmCode()
                 {
-                    var npm = Code.Substring(2, 1).ToCharArray( );
-                    return npm.ToString( );
+                    var npm = Code.Substring(2, 1).ToCharArray();
+                    return npm.ToString();
                 }
 
-                public string GetCode( )
+                public string GetCode()
                 {
                     return Code;
                 }
 
-                public string GetProgramProjectCode( )
+                public string GetProgramProjectCode()
                 {
                     return Code.Substring(5, 2);
                 }
 
-                public string[] GetProgramData( )
+                public string[] GetProgramData()
                 {
-                    var pp = GetProgramProjectCode( );
-                    var sql = new Dictionary<string, object>( );
+                    var pp = GetProgramProjectCode();
+                    var sql = new Dictionary<string, object>();
                     sql.Add("ProgramProjectCode", pp);
-                    string[] p = new DataBuilder(Source.A6, sql).A6Query( );
+                    string[] p = new DataBuilder(Source.A6, sql).A6Query();
                     return p;
                 }
 
-                internal decimal GetFteAllocation( )
+                internal decimal GetFteAllocation()
                 {
                     if (BOC.Code == "17")
                     {
@@ -181,7 +182,7 @@ namespace Budget
                         }
                         catch (Exception ex)
                         {
-                            MessageBox.Show(ex.Message.ToString( ) + $"Target Method:\n{ex.TargetSite}\n" + $"Stack:\n{ex.StackTrace}");
+                            MessageBox.Show(ex.Message.ToString() + $"Target Method:\n{ex.TargetSite}\n" + $"Stack:\n{ex.StackTrace}");
                             return -1m;
                         }
                     }
@@ -198,9 +199,20 @@ namespace Budget
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message.ToString( ) + $"Target Method:\n{ex.TargetSite}\n" + $"Stack:\n{ex.StackTrace}");
+                        MessageBox.Show(ex.Message.ToString() + $"Target Method:\n{ex.TargetSite}\n" + $"Stack:\n{ex.StackTrace}");
                         return -1;
                     }
+                }
+
+                internal PRC[] GetAllocation(DataTable table)
+                {
+                    PRC[] allocation = new PRC[table.Rows.Count];
+                    for(int i = 0; i<table.Rows.Count; i++)
+                    {
+                        foreach (DataRow row in table.Rows)
+                            allocation[i] = new PRC(row);
+                    }
+                    return allocation;
                 }
 
                 public override string ToString( )

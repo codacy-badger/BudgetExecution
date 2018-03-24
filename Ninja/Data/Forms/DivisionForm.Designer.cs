@@ -163,6 +163,9 @@ namespace Budget
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DivisionForm));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             Syncfusion.Windows.Forms.Chart.ChartSeries chartSeries13 = new Syncfusion.Windows.Forms.Chart.ChartSeries();
             Syncfusion.Windows.Forms.Chart.ChartCustomShapeInfo chartCustomShapeInfo13 = new Syncfusion.Windows.Forms.Chart.ChartCustomShapeInfo();
             Syncfusion.Windows.Forms.Chart.ChartLineInfo chartLineInfo7 = new Syncfusion.Windows.Forms.Chart.ChartLineInfo();
@@ -178,9 +181,6 @@ namespace Budget
             Syncfusion.Windows.Forms.Chart.ChartToolBarTypeItem chartToolBarTypeItem7 = new Syncfusion.Windows.Forms.Chart.ChartToolBarTypeItem();
             Syncfusion.Windows.Forms.Chart.ChartToolBarSeries3DItem chartToolBarSeries3DItem7 = new Syncfusion.Windows.Forms.Chart.ChartToolBarSeries3DItem();
             Syncfusion.Windows.Forms.Chart.ChartToolBarShowLegendItem chartToolBarShowLegendItem7 = new Syncfusion.Windows.Forms.Chart.ChartToolBarShowLegendItem();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             Syncfusion.Windows.Forms.Chart.ChartSeries chartSeries15 = new Syncfusion.Windows.Forms.Chart.ChartSeries();
             Syncfusion.Windows.Forms.Chart.ChartCustomShapeInfo chartCustomShapeInfo15 = new Syncfusion.Windows.Forms.Chart.ChartCustomShapeInfo();
             Syncfusion.Windows.Forms.Chart.ChartLineInfo chartLineInfo8 = new Syncfusion.Windows.Forms.Chart.ChartLineInfo();
@@ -214,9 +214,9 @@ namespace Budget
             this.rb2 = new System.Windows.Forms.RadioButton();
             this.rb4 = new System.Windows.Forms.RadioButton();
             this.AppropChart = new Syncfusion.Windows.Forms.Chart.ChartControl();
-            this.toggleButton1 = new Syncfusion.Windows.Forms.Tools.ToggleButton();
             this.AppriopriationTabExpander = new MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel();
             this.AppropriationTabFilterPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.toggleButton1 = new Syncfusion.Windows.Forms.Tools.ToggleButton();
             this.ImageBox = new System.Windows.Forms.ListBox();
             this.approplistbox = new System.Windows.Forms.ListBox();
             this.metroButton1 = new MetroFramework.Controls.MetroButton();
@@ -228,9 +228,9 @@ namespace Budget
             this.rb6 = new System.Windows.Forms.RadioButton();
             this.rb8 = new System.Windows.Forms.RadioButton();
             this.BocChart = new Syncfusion.Windows.Forms.Chart.ChartControl();
-            this.toggleButton2 = new Syncfusion.Windows.Forms.Tools.ToggleButton();
             this.expandCollapsePanel2 = new MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel();
             this.panel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.toggleButton2 = new Syncfusion.Windows.Forms.Tools.ToggleButton();
             this.NpmTab = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
             this.splitContainer3 = new System.Windows.Forms.SplitContainer();
             this.panel7 = new System.Windows.Forms.Panel();
@@ -317,6 +317,21 @@ namespace Budget
             this.toolStripSeparator9 = new System.Windows.Forms.ToolStripSeparator();
             this.TransferTab = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
             this.tableLayoutPanel11 = new System.Windows.Forms.TableLayoutPanel();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.TransferGrid = new System.Windows.Forms.DataGridView();
+            this.TransferBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.TransferNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
+            this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.MiniTabControl2 = new Syncfusion.Windows.Forms.Tools.TabControlAdv();
             this.tabPageAdv3 = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
             this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
@@ -338,20 +353,6 @@ namespace Budget
             this.metroTextBox16 = new MetroFramework.Controls.MetroTextBox();
             this.tabPageAdv4 = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
             this.chartControl2 = new Syncfusion.Windows.Forms.Chart.ChartControl();
-            this.TransferNavigator = new System.Windows.Forms.BindingNavigator(this.components);
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.TransferBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.TransferGrid = new System.Windows.Forms.DataGridView();
             this.TransferExpander = new MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel();
             this.TransferFilterPanel = new MetroFramework.Controls.MetroPanel();
             this.FrRcComboBox1 = new MetroFramework.Controls.MetroComboBox();
@@ -363,12 +364,12 @@ namespace Budget
             this.FrFundComboBox = new MetroFramework.Controls.MetroComboBox();
             this.FrBfyComboBox = new MetroFramework.Controls.MetroComboBox();
             this.FrRpioComboBox = new MetroFramework.Controls.MetroComboBox();
-            this.expandCollapsePanel7 = new MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel();
             this.flowLayoutPanel5 = new System.Windows.Forms.FlowLayoutPanel();
             this.metroButton11 = new MetroFramework.Controls.MetroButton();
             this.metroButton12 = new MetroFramework.Controls.MetroButton();
             this.metroButton13 = new MetroFramework.Controls.MetroButton();
             this.metroButton14 = new MetroFramework.Controls.MetroButton();
+            this.expandCollapsePanel7 = new MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.metroTextBox8 = new MetroFramework.Controls.MetroTextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -402,7 +403,6 @@ namespace Budget
             this.P8GridPanel = new System.Windows.Forms.Panel();
             this.calculatorControl2 = new Syncfusion.Windows.Forms.Tools.CalculatorControl();
             this.P8BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.DivisionFormTabControl)).BeginInit();
             this.DivisionFormTabControl.SuspendLayout();
             this.AppropriationTab.SuspendLayout();
@@ -411,16 +411,16 @@ namespace Budget
             this.splitContainer5.Panel2.SuspendLayout();
             this.splitContainer5.SuspendLayout();
             this.panel13.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.toggleButton1)).BeginInit();
             this.AppriopriationTabExpander.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.toggleButton1)).BeginInit();
             this.BocTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
             this.splitContainer2.Panel1.SuspendLayout();
             this.splitContainer2.Panel2.SuspendLayout();
             this.splitContainer2.SuspendLayout();
             this.panel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.toggleButton2)).BeginInit();
             this.expandCollapsePanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.toggleButton2)).BeginInit();
             this.NpmTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).BeginInit();
             this.splitContainer3.Panel1.SuspendLayout();
@@ -463,15 +463,16 @@ namespace Budget
             this.DataNavigator.SuspendLayout();
             this.TransferTab.SuspendLayout();
             this.tableLayoutPanel11.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.TransferGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TransferBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TransferNavigator)).BeginInit();
+            this.TransferNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MiniTabControl2)).BeginInit();
             this.MiniTabControl2.SuspendLayout();
             this.tabPageAdv3.SuspendLayout();
             this.tableLayoutPanel9.SuspendLayout();
             this.tabPageAdv4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.TransferNavigator)).BeginInit();
-            this.TransferNavigator.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.TransferBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TransferGrid)).BeginInit();
             this.TransferExpander.SuspendLayout();
             this.TransferFilterPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.amountCurrencyTextBox)).BeginInit();
@@ -483,7 +484,6 @@ namespace Budget
             this.PrcPanel.SuspendLayout();
             this.DatabaseGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.P8BindingSource)).BeginInit();
-            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // label5
@@ -864,6 +864,32 @@ namespace Budget
             this.AppropChart.ToolBar.Items.Add(chartToolBarSeries3DItem1);
             this.AppropChart.ToolBar.Items.Add(chartToolBarShowLegendItem1);
             // 
+            // AppriopriationTabExpander
+            // 
+            this.AppriopriationTabExpander.BackColor = System.Drawing.Color.Black;
+            this.AppriopriationTabExpander.ButtonSize = MakarovDev.ExpandCollapsePanel.ExpandCollapseButton.ExpandButtonSize.Normal;
+            this.AppriopriationTabExpander.ButtonStyle = MakarovDev.ExpandCollapsePanel.ExpandCollapseButton.ExpandButtonStyle.Circle;
+            this.AppriopriationTabExpander.Controls.Add(this.AppropriationTabFilterPanel);
+            this.AppriopriationTabExpander.ExpandedHeight = 611;
+            this.AppriopriationTabExpander.IsExpanded = false;
+            this.AppriopriationTabExpander.Location = new System.Drawing.Point(20, 69);
+            this.AppriopriationTabExpander.Name = "AppriopriationTabExpander";
+            this.AppriopriationTabExpander.Size = new System.Drawing.Size(227, 37);
+            this.AppriopriationTabExpander.TabIndex = 44;
+            this.AppriopriationTabExpander.Text = "Selection";
+            this.AppriopriationTabExpander.UseAnimation = true;
+            // 
+            // AppropriationTabFilterPanel
+            // 
+            this.AppropriationTabFilterPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.AppropriationTabFilterPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.AppropriationTabFilterPanel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
+            this.AppropriationTabFilterPanel.Location = new System.Drawing.Point(15, 57);
+            this.AppropriationTabFilterPanel.Margin = new System.Windows.Forms.Padding(2);
+            this.AppropriationTabFilterPanel.Name = "AppropriationTabFilterPanel";
+            this.AppropriationTabFilterPanel.Size = new System.Drawing.Size(197, 656);
+            this.AppropriationTabFilterPanel.TabIndex = 1;
+            // 
             // toggleButton1
             // 
             activeStateCollection1.BackColor = System.Drawing.Color.Black;
@@ -892,32 +918,6 @@ namespace Budget
             this.toggleButton1.TabIndex = 50;
             this.toggleButton1.Text = "toggleButton1";
             this.toggleButton1.ToggleState = Syncfusion.Windows.Forms.Tools.ToggleButtonState.Active;
-            // 
-            // AppriopriationTabExpander
-            // 
-            this.AppriopriationTabExpander.BackColor = System.Drawing.Color.Black;
-            this.AppriopriationTabExpander.ButtonSize = MakarovDev.ExpandCollapsePanel.ExpandCollapseButton.ExpandButtonSize.Normal;
-            this.AppriopriationTabExpander.ButtonStyle = MakarovDev.ExpandCollapsePanel.ExpandCollapseButton.ExpandButtonStyle.Circle;
-            this.AppriopriationTabExpander.Controls.Add(this.AppropriationTabFilterPanel);
-            this.AppriopriationTabExpander.ExpandedHeight = 611;
-            this.AppriopriationTabExpander.IsExpanded = false;
-            this.AppriopriationTabExpander.Location = new System.Drawing.Point(20, 69);
-            this.AppriopriationTabExpander.Name = "AppriopriationTabExpander";
-            this.AppriopriationTabExpander.Size = new System.Drawing.Size(227, 37);
-            this.AppriopriationTabExpander.TabIndex = 44;
-            this.AppriopriationTabExpander.Text = "Selection";
-            this.AppriopriationTabExpander.UseAnimation = true;
-            // 
-            // AppropriationTabFilterPanel
-            // 
-            this.AppropriationTabFilterPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.AppropriationTabFilterPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.AppropriationTabFilterPanel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
-            this.AppropriationTabFilterPanel.Location = new System.Drawing.Point(15, 57);
-            this.AppropriationTabFilterPanel.Margin = new System.Windows.Forms.Padding(2);
-            this.AppropriationTabFilterPanel.Name = "AppropriationTabFilterPanel";
-            this.AppropriationTabFilterPanel.Size = new System.Drawing.Size(197, 656);
-            this.AppropriationTabFilterPanel.TabIndex = 1;
             // 
             // ImageBox
             // 
@@ -1188,6 +1188,32 @@ namespace Budget
             this.BocChart.ToolBar.Items.Add(chartToolBarSeries3DItem2);
             this.BocChart.ToolBar.Items.Add(chartToolBarShowLegendItem2);
             // 
+            // expandCollapsePanel2
+            // 
+            this.expandCollapsePanel2.BackColor = System.Drawing.Color.Black;
+            this.expandCollapsePanel2.ButtonSize = MakarovDev.ExpandCollapsePanel.ExpandCollapseButton.ExpandButtonSize.Normal;
+            this.expandCollapsePanel2.ButtonStyle = MakarovDev.ExpandCollapsePanel.ExpandCollapseButton.ExpandButtonStyle.Circle;
+            this.expandCollapsePanel2.Controls.Add(this.panel2);
+            this.expandCollapsePanel2.ExpandedHeight = 559;
+            this.expandCollapsePanel2.IsExpanded = false;
+            this.expandCollapsePanel2.Location = new System.Drawing.Point(20, 69);
+            this.expandCollapsePanel2.Name = "expandCollapsePanel2";
+            this.expandCollapsePanel2.Size = new System.Drawing.Size(210, 37);
+            this.expandCollapsePanel2.TabIndex = 46;
+            this.expandCollapsePanel2.Text = "Object Class";
+            this.expandCollapsePanel2.UseAnimation = true;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Transparent;
+            this.panel2.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.panel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
+            this.panel2.Location = new System.Drawing.Point(31, 75);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(154, 453);
+            this.panel2.TabIndex = 1;
+            // 
             // toggleButton2
             // 
             activeStateCollection2.BackColor = System.Drawing.Color.Black;
@@ -1216,32 +1242,6 @@ namespace Budget
             this.toggleButton2.TabIndex = 105;
             this.toggleButton2.Text = "toggleButton2";
             this.toggleButton2.ToggleState = Syncfusion.Windows.Forms.Tools.ToggleButtonState.Active;
-            // 
-            // expandCollapsePanel2
-            // 
-            this.expandCollapsePanel2.BackColor = System.Drawing.Color.Black;
-            this.expandCollapsePanel2.ButtonSize = MakarovDev.ExpandCollapsePanel.ExpandCollapseButton.ExpandButtonSize.Normal;
-            this.expandCollapsePanel2.ButtonStyle = MakarovDev.ExpandCollapsePanel.ExpandCollapseButton.ExpandButtonStyle.Circle;
-            this.expandCollapsePanel2.Controls.Add(this.panel2);
-            this.expandCollapsePanel2.ExpandedHeight = 559;
-            this.expandCollapsePanel2.IsExpanded = false;
-            this.expandCollapsePanel2.Location = new System.Drawing.Point(20, 69);
-            this.expandCollapsePanel2.Name = "expandCollapsePanel2";
-            this.expandCollapsePanel2.Size = new System.Drawing.Size(210, 37);
-            this.expandCollapsePanel2.TabIndex = 46;
-            this.expandCollapsePanel2.Text = "Object Class";
-            this.expandCollapsePanel2.UseAnimation = true;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.Transparent;
-            this.panel2.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.panel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
-            this.panel2.Location = new System.Drawing.Point(31, 75);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(154, 453);
-            this.panel2.TabIndex = 1;
             // 
             // NpmTab
             // 
@@ -2152,7 +2152,7 @@ namespace Budget
             this.tableLayoutPanel10.ColumnCount = 3;
             this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 29.26435F));
             this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70.73565F));
-            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 515F));
+            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 516F));
             this.tableLayoutPanel10.Controls.Add(this.Expander, 0, 0);
             this.tableLayoutPanel10.Controls.Add(this.MiniTabControl1, 2, 0);
             this.tableLayoutPanel10.Controls.Add(this.groupBox1, 1, 0);
@@ -2205,7 +2205,7 @@ namespace Budget
             this.MiniTabControl1.FixedSingleBorderColor = System.Drawing.SystemColors.ControlDark;
             this.MiniTabControl1.FocusOnTabClick = false;
             this.MiniTabControl1.InActiveTabForeColor = System.Drawing.Color.Empty;
-            this.MiniTabControl1.Location = new System.Drawing.Point(1239, 3);
+            this.MiniTabControl1.Location = new System.Drawing.Point(1238, 3);
             this.MiniTabControl1.Name = "MiniTabControl1";
             this.MiniTabControl1.SeparatorColor = System.Drawing.SystemColors.ControlDark;
             this.MiniTabControl1.ShowSeparator = false;
@@ -2234,7 +2234,7 @@ namespace Budget
             this.tableLayoutPanel2.ColumnCount = 3;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 46.08696F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 53.91304F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 118F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 119F));
             this.tableLayoutPanel2.Controls.Add(this.label13, 1, 4);
             this.tableLayoutPanel2.Controls.Add(this.OldAmount, 0, 5);
             this.tableLayoutPanel2.Controls.Add(this.label12, 0, 4);
@@ -2269,7 +2269,7 @@ namespace Budget
             this.label13.AutoSize = true;
             this.label13.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.label13.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label13.Location = new System.Drawing.Point(150, 148);
+            this.label13.Location = new System.Drawing.Point(149, 148);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(45, 21);
             this.label13.TabIndex = 162;
@@ -2317,7 +2317,7 @@ namespace Budget
             this.label12.AutoSize = true;
             this.label12.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.label12.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label12.Location = new System.Drawing.Point(20, 148);
+            this.label12.Location = new System.Drawing.Point(19, 148);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(69, 21);
             this.label12.TabIndex = 65;
@@ -2330,7 +2330,7 @@ namespace Budget
             // 
             // 
             this.metroTextBox1.CustomButton.Image = null;
-            this.metroTextBox1.CustomButton.Location = new System.Drawing.Point(79, 1);
+            this.metroTextBox1.CustomButton.Location = new System.Drawing.Point(80, 1);
             this.metroTextBox1.CustomButton.Name = "";
             this.metroTextBox1.CustomButton.Size = new System.Drawing.Size(35, 35);
             this.metroTextBox1.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -2342,7 +2342,7 @@ namespace Budget
             this.metroTextBox1.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.metroTextBox1.Lines = new string[] {
         "metroTextBox2"};
-            this.metroTextBox1.Location = new System.Drawing.Point(238, 88);
+            this.metroTextBox1.Location = new System.Drawing.Point(237, 88);
             this.metroTextBox1.Margin = new System.Windows.Forms.Padding(2);
             this.metroTextBox1.MaxLength = 32767;
             this.metroTextBox1.Name = "metroTextBox1";
@@ -2352,7 +2352,7 @@ namespace Budget
             this.metroTextBox1.SelectionLength = 0;
             this.metroTextBox1.SelectionStart = 0;
             this.metroTextBox1.ShortcutsEnabled = true;
-            this.metroTextBox1.Size = new System.Drawing.Size(115, 37);
+            this.metroTextBox1.Size = new System.Drawing.Size(116, 37);
             this.metroTextBox1.TabIndex = 155;
             this.metroTextBox1.Text = "metroTextBox2";
             this.metroTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -2376,7 +2376,7 @@ namespace Budget
             this.metroTextBox2.CustomButton.UseSelectable = true;
             this.metroTextBox2.CustomButton.Visible = false;
             this.metroTextBox2.Lines = new string[0];
-            this.metroTextBox2.Location = new System.Drawing.Point(111, 88);
+            this.metroTextBox2.Location = new System.Drawing.Point(110, 88);
             this.metroTextBox2.Margin = new System.Windows.Forms.Padding(2);
             this.metroTextBox2.MaxLength = 32767;
             this.metroTextBox2.Name = "metroTextBox2";
@@ -2439,7 +2439,7 @@ namespace Budget
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label3.Location = new System.Drawing.Point(148, 3);
+            this.label3.Location = new System.Drawing.Point(147, 3);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(48, 21);
             this.label3.TabIndex = 60;
@@ -2452,7 +2452,7 @@ namespace Budget
             this.label9.AutoSize = true;
             this.label9.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.label9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label9.Location = new System.Drawing.Point(271, 65);
+            this.label9.Location = new System.Drawing.Point(270, 65);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(49, 21);
             this.label9.TabIndex = 64;
@@ -2474,7 +2474,7 @@ namespace Budget
             this.metroTextBox4.CustomButton.UseSelectable = true;
             this.metroTextBox4.CustomButton.Visible = false;
             this.metroTextBox4.Lines = new string[0];
-            this.metroTextBox4.Location = new System.Drawing.Point(239, 27);
+            this.metroTextBox4.Location = new System.Drawing.Point(238, 27);
             this.metroTextBox4.MaxLength = 32767;
             this.metroTextBox4.Name = "metroTextBox4";
             this.metroTextBox4.PasswordChar = '\0';
@@ -2494,7 +2494,7 @@ namespace Budget
             this.label11.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label11.AutoSize = true;
             this.label11.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label11.Location = new System.Drawing.Point(156, 65);
+            this.label11.Location = new System.Drawing.Point(155, 65);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(33, 21);
             this.label11.TabIndex = 63;
@@ -2540,7 +2540,7 @@ namespace Budget
             this.metroTextBox5.CustomButton.UseSelectable = true;
             this.metroTextBox5.CustomButton.Visible = false;
             this.metroTextBox5.Lines = new string[0];
-            this.metroTextBox5.Location = new System.Drawing.Point(112, 27);
+            this.metroTextBox5.Location = new System.Drawing.Point(111, 27);
             this.metroTextBox5.MaxLength = 32767;
             this.metroTextBox5.Name = "metroTextBox5";
             this.metroTextBox5.PasswordChar = '\0';
@@ -2600,7 +2600,7 @@ namespace Budget
             this.metroTextBox7.CustomButton.UseSelectable = true;
             this.metroTextBox7.CustomButton.Visible = false;
             this.metroTextBox7.Lines = new string[0];
-            this.metroTextBox7.Location = new System.Drawing.Point(112, 172);
+            this.metroTextBox7.Location = new System.Drawing.Point(111, 172);
             this.metroTextBox7.MaxLength = 32767;
             this.metroTextBox7.Name = "metroTextBox7";
             this.metroTextBox7.PasswordChar = '\0';
@@ -2769,7 +2769,7 @@ namespace Budget
             this.groupBox1.Controls.Add(this.DatabaseGridPanel);
             this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.groupBox1.Location = new System.Drawing.Point(364, 2);
+            this.groupBox1.Location = new System.Drawing.Point(363, 2);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
@@ -3036,7 +3036,7 @@ namespace Budget
             this.tableLayoutPanel11.ColumnCount = 3;
             this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.99237F));
             this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 79.00764F));
-            this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 464F));
+            this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 465F));
             this.tableLayoutPanel11.Controls.Add(this.groupBox2, 1, 0);
             this.tableLayoutPanel11.Controls.Add(this.MiniTabControl2, 2, 0);
             this.tableLayoutPanel11.Controls.Add(this.TransferExpander, 0, 0);
@@ -3046,6 +3046,177 @@ namespace Budget
             this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel11.Size = new System.Drawing.Size(1747, 519);
             this.tableLayoutPanel11.TabIndex = 152;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.groupBox2.Controls.Add(this.TransferGrid);
+            this.groupBox2.Controls.Add(this.TransferNavigator);
+            this.groupBox2.ForeColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.groupBox2.Location = new System.Drawing.Point(272, 3);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(995, 448);
+            this.groupBox2.TabIndex = 4;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "groupBox2";
+            // 
+            // TransferGrid
+            // 
+            this.TransferGrid.AutoGenerateColumns = false;
+            this.TransferGrid.BackgroundColor = System.Drawing.SystemColors.GradientActiveCaption;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.TransferGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.TransferGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.TransferGrid.DataSource = this.TransferBindingSource;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.GradientActiveCaption;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.TransferGrid.DefaultCellStyle = dataGridViewCellStyle5;
+            this.TransferGrid.EnableHeadersVisualStyles = false;
+            this.TransferGrid.Location = new System.Drawing.Point(32, 52);
+            this.TransferGrid.Name = "TransferGrid";
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.TransferGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            this.TransferGrid.RowTemplate.Height = 28;
+            this.TransferGrid.Size = new System.Drawing.Size(951, 347);
+            this.TransferGrid.TabIndex = 2;
+            // 
+            // TransferBindingSource
+            // 
+            this.TransferBindingSource.DataMember = "T7";
+            // 
+            // TransferNavigator
+            // 
+            this.TransferNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
+            this.TransferNavigator.BackColor = System.Drawing.Color.Transparent;
+            this.TransferNavigator.BindingSource = this.TransferBindingSource;
+            this.TransferNavigator.CountItem = this.bindingNavigatorCountItem;
+            this.TransferNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
+            this.TransferNavigator.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.TransferNavigator.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.TransferNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.bindingNavigatorMoveFirstItem,
+            this.bindingNavigatorMovePreviousItem,
+            this.bindingNavigatorSeparator,
+            this.bindingNavigatorPositionItem,
+            this.bindingNavigatorCountItem,
+            this.bindingNavigatorSeparator1,
+            this.bindingNavigatorMoveNextItem,
+            this.bindingNavigatorMoveLastItem,
+            this.bindingNavigatorSeparator2,
+            this.bindingNavigatorAddNewItem,
+            this.bindingNavigatorDeleteItem});
+            this.TransferNavigator.Location = new System.Drawing.Point(3, 414);
+            this.TransferNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
+            this.TransferNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
+            this.TransferNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
+            this.TransferNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
+            this.TransferNavigator.Name = "TransferNavigator";
+            this.TransferNavigator.PositionItem = this.bindingNavigatorPositionItem;
+            this.TransferNavigator.Size = new System.Drawing.Size(989, 31);
+            this.TransferNavigator.TabIndex = 3;
+            this.TransferNavigator.Text = "bindingNavigator1";
+            // 
+            // bindingNavigatorAddNewItem
+            // 
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(28, 28);
+            this.bindingNavigatorAddNewItem.Text = "Add new";
+            // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(54, 28);
+            this.bindingNavigatorCountItem.Text = "of {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
+            // 
+            // bindingNavigatorDeleteItem
+            // 
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(28, 28);
+            this.bindingNavigatorDeleteItem.Text = "Delete";
+            // 
+            // bindingNavigatorMoveFirstItem
+            // 
+            this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
+            this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
+            this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(28, 28);
+            this.bindingNavigatorMoveFirstItem.Text = "Move first";
+            // 
+            // bindingNavigatorMovePreviousItem
+            // 
+            this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
+            this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
+            this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(28, 28);
+            this.bindingNavigatorMovePreviousItem.Text = "Move previous";
+            // 
+            // bindingNavigatorSeparator
+            // 
+            this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 31);
+            // 
+            // bindingNavigatorPositionItem
+            // 
+            this.bindingNavigatorPositionItem.AccessibleName = "Position";
+            this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
+            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 31);
+            this.bindingNavigatorPositionItem.Text = "0";
+            this.bindingNavigatorPositionItem.ToolTipText = "Current position";
+            // 
+            // bindingNavigatorSeparator1
+            // 
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 31);
+            // 
+            // bindingNavigatorMoveNextItem
+            // 
+            this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
+            this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
+            this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(28, 28);
+            this.bindingNavigatorMoveNextItem.Text = "Move next";
+            // 
+            // bindingNavigatorMoveLastItem
+            // 
+            this.bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
+            this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
+            this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(28, 28);
+            this.bindingNavigatorMoveLastItem.Text = "Move last";
+            // 
+            // bindingNavigatorSeparator2
+            // 
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 31);
             // 
             // MiniTabControl2
             // 
@@ -3062,7 +3233,7 @@ namespace Budget
             this.MiniTabControl2.FixedSingleBorderColor = System.Drawing.Color.DarkGray;
             this.MiniTabControl2.FocusOnTabClick = false;
             this.MiniTabControl2.InActiveTabForeColor = System.Drawing.Color.Empty;
-            this.MiniTabControl2.Location = new System.Drawing.Point(1285, 3);
+            this.MiniTabControl2.Location = new System.Drawing.Point(1284, 3);
             this.MiniTabControl2.Name = "MiniTabControl2";
             this.MiniTabControl2.SeparatorColor = System.Drawing.SystemColors.ControlDark;
             this.MiniTabControl2.ShowSeparator = false;
@@ -3091,7 +3262,7 @@ namespace Budget
             this.tableLayoutPanel9.ColumnCount = 3;
             this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.02913F));
             this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.97087F));
-            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 118F));
+            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 119F));
             this.tableLayoutPanel9.Controls.Add(this.label21, 1, 4);
             this.tableLayoutPanel9.Controls.Add(this.metroTextBox9, 0, 5);
             this.tableLayoutPanel9.Controls.Add(this.label22, 0, 4);
@@ -3126,7 +3297,7 @@ namespace Budget
             this.label21.AutoSize = true;
             this.label21.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.label21.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label21.Location = new System.Drawing.Point(153, 148);
+            this.label21.Location = new System.Drawing.Point(152, 148);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(45, 21);
             this.label21.TabIndex = 162;
@@ -3187,7 +3358,7 @@ namespace Budget
             // 
             // 
             this.metroTextBox10.CustomButton.Image = null;
-            this.metroTextBox10.CustomButton.Location = new System.Drawing.Point(79, 1);
+            this.metroTextBox10.CustomButton.Location = new System.Drawing.Point(80, 1);
             this.metroTextBox10.CustomButton.Name = "";
             this.metroTextBox10.CustomButton.Size = new System.Drawing.Size(35, 35);
             this.metroTextBox10.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -3199,7 +3370,7 @@ namespace Budget
             this.metroTextBox10.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.metroTextBox10.Lines = new string[] {
         "metroTextBox2"};
-            this.metroTextBox10.Location = new System.Drawing.Point(238, 88);
+            this.metroTextBox10.Location = new System.Drawing.Point(237, 88);
             this.metroTextBox10.Margin = new System.Windows.Forms.Padding(2);
             this.metroTextBox10.MaxLength = 32767;
             this.metroTextBox10.Name = "metroTextBox10";
@@ -3209,7 +3380,7 @@ namespace Budget
             this.metroTextBox10.SelectionLength = 0;
             this.metroTextBox10.SelectionStart = 0;
             this.metroTextBox10.ShortcutsEnabled = true;
-            this.metroTextBox10.Size = new System.Drawing.Size(115, 37);
+            this.metroTextBox10.Size = new System.Drawing.Size(116, 37);
             this.metroTextBox10.TabIndex = 155;
             this.metroTextBox10.Text = "metroTextBox2";
             this.metroTextBox10.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -3233,7 +3404,7 @@ namespace Budget
             this.metroTextBox11.CustomButton.UseSelectable = true;
             this.metroTextBox11.CustomButton.Visible = false;
             this.metroTextBox11.Lines = new string[0];
-            this.metroTextBox11.Location = new System.Drawing.Point(118, 88);
+            this.metroTextBox11.Location = new System.Drawing.Point(117, 88);
             this.metroTextBox11.Margin = new System.Windows.Forms.Padding(2);
             this.metroTextBox11.MaxLength = 32767;
             this.metroTextBox11.Name = "metroTextBox11";
@@ -3254,7 +3425,7 @@ namespace Budget
             this.label23.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label23.AutoSize = true;
             this.label23.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label23.Location = new System.Drawing.Point(40, 3);
+            this.label23.Location = new System.Drawing.Point(39, 3);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(36, 21);
             this.label23.TabIndex = 140;
@@ -3296,7 +3467,7 @@ namespace Budget
             this.label24.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label24.AutoSize = true;
             this.label24.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label24.Location = new System.Drawing.Point(152, 3);
+            this.label24.Location = new System.Drawing.Point(151, 3);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(48, 21);
             this.label24.TabIndex = 60;
@@ -3309,7 +3480,7 @@ namespace Budget
             this.label25.AutoSize = true;
             this.label25.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.label25.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label25.Location = new System.Drawing.Point(271, 65);
+            this.label25.Location = new System.Drawing.Point(270, 65);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(49, 21);
             this.label25.TabIndex = 64;
@@ -3331,7 +3502,7 @@ namespace Budget
             this.metroTextBox13.CustomButton.UseSelectable = true;
             this.metroTextBox13.CustomButton.Visible = false;
             this.metroTextBox13.Lines = new string[0];
-            this.metroTextBox13.Location = new System.Drawing.Point(239, 27);
+            this.metroTextBox13.Location = new System.Drawing.Point(238, 27);
             this.metroTextBox13.MaxLength = 32767;
             this.metroTextBox13.Name = "metroTextBox13";
             this.metroTextBox13.PasswordChar = '\0';
@@ -3351,7 +3522,7 @@ namespace Budget
             this.label26.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label26.AutoSize = true;
             this.label26.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label26.Location = new System.Drawing.Point(159, 65);
+            this.label26.Location = new System.Drawing.Point(158, 65);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(33, 21);
             this.label26.TabIndex = 63;
@@ -3375,7 +3546,7 @@ namespace Budget
             this.label28.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label28.AutoSize = true;
             this.label28.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label28.Location = new System.Drawing.Point(38, 65);
+            this.label28.Location = new System.Drawing.Point(37, 65);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(40, 21);
             this.label28.TabIndex = 62;
@@ -3397,7 +3568,7 @@ namespace Budget
             this.metroTextBox14.CustomButton.UseSelectable = true;
             this.metroTextBox14.CustomButton.Visible = false;
             this.metroTextBox14.Lines = new string[0];
-            this.metroTextBox14.Location = new System.Drawing.Point(119, 27);
+            this.metroTextBox14.Location = new System.Drawing.Point(118, 27);
             this.metroTextBox14.MaxLength = 32767;
             this.metroTextBox14.Name = "metroTextBox14";
             this.metroTextBox14.PasswordChar = '\0';
@@ -3457,7 +3628,7 @@ namespace Budget
             this.metroTextBox16.CustomButton.UseSelectable = true;
             this.metroTextBox16.CustomButton.Visible = false;
             this.metroTextBox16.Lines = new string[0];
-            this.metroTextBox16.Location = new System.Drawing.Point(119, 172);
+            this.metroTextBox16.Location = new System.Drawing.Point(118, 172);
             this.metroTextBox16.MaxLength = 32767;
             this.metroTextBox16.Name = "metroTextBox16";
             this.metroTextBox16.PasswordChar = '\0';
@@ -3614,164 +3785,6 @@ namespace Budget
             this.chartControl2.ToolBar.Items.Add(chartToolBarTypeItem7);
             this.chartControl2.ToolBar.Items.Add(chartToolBarSeries3DItem7);
             this.chartControl2.ToolBar.Items.Add(chartToolBarShowLegendItem7);
-            // 
-            // TransferNavigator
-            // 
-            this.TransferNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
-            this.TransferNavigator.BackColor = System.Drawing.Color.Transparent;
-            this.TransferNavigator.BindingSource = this.TransferBindingSource;
-            this.TransferNavigator.CountItem = this.bindingNavigatorCountItem;
-            this.TransferNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
-            this.TransferNavigator.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.TransferNavigator.ImageScalingSize = new System.Drawing.Size(24, 24);
-            this.TransferNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.bindingNavigatorMoveFirstItem,
-            this.bindingNavigatorMovePreviousItem,
-            this.bindingNavigatorSeparator,
-            this.bindingNavigatorPositionItem,
-            this.bindingNavigatorCountItem,
-            this.bindingNavigatorSeparator1,
-            this.bindingNavigatorMoveNextItem,
-            this.bindingNavigatorMoveLastItem,
-            this.bindingNavigatorSeparator2,
-            this.bindingNavigatorAddNewItem,
-            this.bindingNavigatorDeleteItem});
-            this.TransferNavigator.Location = new System.Drawing.Point(3, 414);
-            this.TransferNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
-            this.TransferNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
-            this.TransferNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
-            this.TransferNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
-            this.TransferNavigator.Name = "TransferNavigator";
-            this.TransferNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.TransferNavigator.Size = new System.Drawing.Size(989, 31);
-            this.TransferNavigator.TabIndex = 3;
-            this.TransferNavigator.Text = "bindingNavigator1";
-            // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(28, 28);
-            this.bindingNavigatorAddNewItem.Text = "Add new";
-            // 
-            // TransferBindingSource
-            // 
-            this.TransferBindingSource.DataMember = "T7";
-            // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(54, 28);
-            this.bindingNavigatorCountItem.Text = "of {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(28, 28);
-            this.bindingNavigatorDeleteItem.Text = "Delete";
-            // 
-            // bindingNavigatorMoveFirstItem
-            // 
-            this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
-            this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
-            this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(28, 28);
-            this.bindingNavigatorMoveFirstItem.Text = "Move first";
-            // 
-            // bindingNavigatorMovePreviousItem
-            // 
-            this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
-            this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
-            this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(28, 28);
-            this.bindingNavigatorMovePreviousItem.Text = "Move previous";
-            // 
-            // bindingNavigatorSeparator
-            // 
-            this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 31);
-            // 
-            // bindingNavigatorPositionItem
-            // 
-            this.bindingNavigatorPositionItem.AccessibleName = "Position";
-            this.bindingNavigatorPositionItem.AutoSize = false;
-            this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
-            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 31);
-            this.bindingNavigatorPositionItem.Text = "0";
-            this.bindingNavigatorPositionItem.ToolTipText = "Current position";
-            // 
-            // bindingNavigatorSeparator1
-            // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 31);
-            // 
-            // bindingNavigatorMoveNextItem
-            // 
-            this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
-            this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
-            this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(28, 28);
-            this.bindingNavigatorMoveNextItem.Text = "Move next";
-            // 
-            // bindingNavigatorMoveLastItem
-            // 
-            this.bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
-            this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
-            this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(28, 28);
-            this.bindingNavigatorMoveLastItem.Text = "Move last";
-            // 
-            // bindingNavigatorSeparator2
-            // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 31);
-            // 
-            // TransferGrid
-            // 
-            this.TransferGrid.AutoGenerateColumns = false;
-            this.TransferGrid.BackgroundColor = System.Drawing.SystemColors.GradientActiveCaption;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.TransferGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.TransferGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.TransferGrid.DataSource = this.TransferBindingSource;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.GradientActiveCaption;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.TransferGrid.DefaultCellStyle = dataGridViewCellStyle5;
-            this.TransferGrid.EnableHeadersVisualStyles = false;
-            this.TransferGrid.Location = new System.Drawing.Point(32, 52);
-            this.TransferGrid.Name = "TransferGrid";
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.TransferGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
-            this.TransferGrid.RowTemplate.Height = 28;
-            this.TransferGrid.Size = new System.Drawing.Size(951, 347);
-            this.TransferGrid.TabIndex = 2;
             // 
             // TransferExpander
             // 
@@ -3957,19 +3970,6 @@ namespace Budget
             this.FrRpioComboBox.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.FrRpioComboBox.UseSelectable = true;
             // 
-            // expandCollapsePanel7
-            // 
-            this.expandCollapsePanel7.ButtonSize = MakarovDev.ExpandCollapsePanel.ExpandCollapseButton.ExpandButtonSize.Normal;
-            this.expandCollapsePanel7.ButtonStyle = MakarovDev.ExpandCollapsePanel.ExpandCollapseButton.ExpandButtonStyle.Circle;
-            this.expandCollapsePanel7.ExpandedHeight = 508;
-            this.expandCollapsePanel7.IsExpanded = true;
-            this.expandCollapsePanel7.Location = new System.Drawing.Point(30, 60);
-            this.expandCollapsePanel7.Name = "expandCollapsePanel7";
-            this.expandCollapsePanel7.Size = new System.Drawing.Size(280, 508);
-            this.expandCollapsePanel7.TabIndex = 86;
-            this.expandCollapsePanel7.Text = "expandCollapsePanel7";
-            this.expandCollapsePanel7.UseAnimation = true;
-            // 
             // flowLayoutPanel5
             // 
             this.flowLayoutPanel5.Anchor = System.Windows.Forms.AnchorStyles.Right;
@@ -4035,6 +4035,19 @@ namespace Budget
             this.metroButton14.TabIndex = 66;
             this.metroButton14.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.metroButton14.UseSelectable = true;
+            // 
+            // expandCollapsePanel7
+            // 
+            this.expandCollapsePanel7.ButtonSize = MakarovDev.ExpandCollapsePanel.ExpandCollapseButton.ExpandButtonSize.Normal;
+            this.expandCollapsePanel7.ButtonStyle = MakarovDev.ExpandCollapsePanel.ExpandCollapseButton.ExpandButtonStyle.Circle;
+            this.expandCollapsePanel7.ExpandedHeight = 508;
+            this.expandCollapsePanel7.IsExpanded = true;
+            this.expandCollapsePanel7.Location = new System.Drawing.Point(30, 60);
+            this.expandCollapsePanel7.Name = "expandCollapsePanel7";
+            this.expandCollapsePanel7.Size = new System.Drawing.Size(280, 508);
+            this.expandCollapsePanel7.TabIndex = 86;
+            this.expandCollapsePanel7.Text = "expandCollapsePanel7";
+            this.expandCollapsePanel7.UseAnimation = true;
             // 
             // tableLayoutPanel1
             // 
@@ -4735,19 +4748,6 @@ namespace Budget
             this.calculatorControl2.Text = "calculatorControl2";
             this.calculatorControl2.UseVisualStyle = true;
             // 
-            // groupBox2
-            // 
-            this.groupBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.groupBox2.Controls.Add(this.TransferGrid);
-            this.groupBox2.Controls.Add(this.TransferNavigator);
-            this.groupBox2.ForeColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.groupBox2.Location = new System.Drawing.Point(272, 3);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(995, 448);
-            this.groupBox2.TabIndex = 4;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "groupBox2";
-            // 
             // DivisionForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
@@ -4782,9 +4782,9 @@ namespace Budget
             this.splitContainer5.ResumeLayout(false);
             this.panel13.ResumeLayout(false);
             this.panel13.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.toggleButton1)).EndInit();
             this.AppriopriationTabExpander.ResumeLayout(false);
             this.AppriopriationTabExpander.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.toggleButton1)).EndInit();
             this.BocTab.ResumeLayout(false);
             this.splitContainer2.Panel1.ResumeLayout(false);
             this.splitContainer2.Panel2.ResumeLayout(false);
@@ -4792,9 +4792,9 @@ namespace Budget
             this.splitContainer2.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.toggleButton2)).EndInit();
             this.expandCollapsePanel2.ResumeLayout(false);
             this.expandCollapsePanel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.toggleButton2)).EndInit();
             this.NpmTab.ResumeLayout(false);
             this.splitContainer3.Panel1.ResumeLayout(false);
             this.splitContainer3.Panel2.ResumeLayout(false);
@@ -4848,17 +4848,19 @@ namespace Budget
             this.DataNavigator.PerformLayout();
             this.TransferTab.ResumeLayout(false);
             this.tableLayoutPanel11.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.TransferGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TransferBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TransferNavigator)).EndInit();
+            this.TransferNavigator.ResumeLayout(false);
+            this.TransferNavigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MiniTabControl2)).EndInit();
             this.MiniTabControl2.ResumeLayout(false);
             this.tabPageAdv3.ResumeLayout(false);
             this.tableLayoutPanel9.ResumeLayout(false);
             this.tableLayoutPanel9.PerformLayout();
             this.tabPageAdv4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.TransferNavigator)).EndInit();
-            this.TransferNavigator.ResumeLayout(false);
-            this.TransferNavigator.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.TransferBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TransferGrid)).EndInit();
             this.TransferExpander.ResumeLayout(false);
             this.TransferExpander.PerformLayout();
             this.TransferFilterPanel.ResumeLayout(false);
@@ -4876,8 +4878,6 @@ namespace Budget
             this.DatabaseGroupBox.ResumeLayout(false);
             this.DatabaseGroupBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.P8BindingSource)).EndInit();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
 
                 }

@@ -90,6 +90,7 @@ namespace Budget
             this.tabControlAdv1.BeforeTouchSize = new System.Drawing.Size(1123, 527);
             this.tabControlAdv1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tabControlAdv1.BorderVisible = true;
+            this.tabControlAdv1.BorderWidth = 1;
             this.tabControlAdv1.CloseButtonForeColor = System.Drawing.Color.Empty;
             this.tabControlAdv1.CloseButtonHoverForeColor = System.Drawing.Color.Empty;
             this.tabControlAdv1.CloseButtonPressedForeColor = System.Drawing.Color.Empty;
@@ -116,10 +117,10 @@ namespace Budget
             this.tabPageAdv1.Controls.Add(this.TransferGrid);
             this.tabPageAdv1.Image = null;
             this.tabPageAdv1.ImageSize = new System.Drawing.Size(16, 16);
-            this.tabPageAdv1.Location = new System.Drawing.Point(5, 29);
+            this.tabPageAdv1.Location = new System.Drawing.Point(1, 29);
             this.tabPageAdv1.Name = "tabPageAdv1";
             this.tabPageAdv1.ShowCloseButton = true;
-            this.tabPageAdv1.Size = new System.Drawing.Size(1113, 493);
+            this.tabPageAdv1.Size = new System.Drawing.Size(1121, 497);
             this.tabPageAdv1.TabIndex = 1;
             this.tabPageAdv1.Text = "tabPageAdv1";
             this.tabPageAdv1.ThemesEnabled = false;
@@ -128,10 +129,10 @@ namespace Budget
             // 
             this.tabPageAdv2.Image = null;
             this.tabPageAdv2.ImageSize = new System.Drawing.Size(16, 16);
-            this.tabPageAdv2.Location = new System.Drawing.Point(5, 29);
+            this.tabPageAdv2.Location = new System.Drawing.Point(1, 29);
             this.tabPageAdv2.Name = "tabPageAdv2";
             this.tabPageAdv2.ShowCloseButton = true;
-            this.tabPageAdv2.Size = new System.Drawing.Size(1113, 493);
+            this.tabPageAdv2.Size = new System.Drawing.Size(1121, 497);
             this.tabPageAdv2.TabIndex = 2;
             this.tabPageAdv2.Text = "tabPageAdv2";
             this.tabPageAdv2.ThemesEnabled = false;
@@ -140,10 +141,10 @@ namespace Budget
             // 
             this.tabPageAdv3.Image = null;
             this.tabPageAdv3.ImageSize = new System.Drawing.Size(16, 16);
-            this.tabPageAdv3.Location = new System.Drawing.Point(5, 29);
+            this.tabPageAdv3.Location = new System.Drawing.Point(1, 29);
             this.tabPageAdv3.Name = "tabPageAdv3";
             this.tabPageAdv3.ShowCloseButton = true;
-            this.tabPageAdv3.Size = new System.Drawing.Size(1113, 493);
+            this.tabPageAdv3.Size = new System.Drawing.Size(1121, 497);
             this.tabPageAdv3.TabIndex = 3;
             this.tabPageAdv3.Text = "tabPageAdv3";
             this.tabPageAdv3.ThemesEnabled = false;
@@ -152,10 +153,10 @@ namespace Budget
             // 
             this.tabPageAdv4.Image = null;
             this.tabPageAdv4.ImageSize = new System.Drawing.Size(16, 16);
-            this.tabPageAdv4.Location = new System.Drawing.Point(5, 29);
+            this.tabPageAdv4.Location = new System.Drawing.Point(1, 29);
             this.tabPageAdv4.Name = "tabPageAdv4";
             this.tabPageAdv4.ShowCloseButton = true;
-            this.tabPageAdv4.Size = new System.Drawing.Size(1113, 493);
+            this.tabPageAdv4.Size = new System.Drawing.Size(1121, 497);
             this.tabPageAdv4.TabIndex = 4;
             this.tabPageAdv4.Text = "tabPageAdv4";
             this.tabPageAdv4.ThemesEnabled = false;
