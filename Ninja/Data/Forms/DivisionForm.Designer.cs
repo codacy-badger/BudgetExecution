@@ -139,13 +139,9 @@ namespace Budget
             Syncfusion.Windows.Forms.Chart.ChartToolBarTypeItem chartToolBarTypeItem6 = new Syncfusion.Windows.Forms.Chart.ChartToolBarTypeItem();
             Syncfusion.Windows.Forms.Chart.ChartToolBarSeries3DItem chartToolBarSeries3DItem6 = new Syncfusion.Windows.Forms.Chart.ChartToolBarSeries3DItem();
             Syncfusion.Windows.Forms.Chart.ChartToolBarShowLegendItem chartToolBarShowLegendItem6 = new Syncfusion.Windows.Forms.Chart.ChartToolBarShowLegendItem();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DivisionForm));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             Syncfusion.Windows.Forms.Chart.ChartSeries chartSeries13 = new Syncfusion.Windows.Forms.Chart.ChartSeries();
             Syncfusion.Windows.Forms.Chart.ChartCustomShapeInfo chartCustomShapeInfo13 = new Syncfusion.Windows.Forms.Chart.ChartCustomShapeInfo();
             Syncfusion.Windows.Forms.Chart.ChartLineInfo chartLineInfo7 = new Syncfusion.Windows.Forms.Chart.ChartLineInfo();
@@ -161,6 +157,31 @@ namespace Budget
             Syncfusion.Windows.Forms.Chart.ChartToolBarTypeItem chartToolBarTypeItem7 = new Syncfusion.Windows.Forms.Chart.ChartToolBarTypeItem();
             Syncfusion.Windows.Forms.Chart.ChartToolBarSeries3DItem chartToolBarSeries3DItem7 = new Syncfusion.Windows.Forms.Chart.ChartToolBarSeries3DItem();
             Syncfusion.Windows.Forms.Chart.ChartToolBarShowLegendItem chartToolBarShowLegendItem7 = new Syncfusion.Windows.Forms.Chart.ChartToolBarShowLegendItem();
+            Syncfusion.Windows.Forms.Tools.ActiveStateCollection activeStateCollection4 = new Syncfusion.Windows.Forms.Tools.ActiveStateCollection();
+            Syncfusion.Windows.Forms.Tools.InactiveStateCollection inactiveStateCollection4 = new Syncfusion.Windows.Forms.Tools.InactiveStateCollection();
+            Syncfusion.Windows.Forms.Tools.ToggleButtonRenderer toggleButtonRenderer4 = new Syncfusion.Windows.Forms.Tools.ToggleButtonRenderer();
+            Syncfusion.Windows.Forms.Tools.SliderCollection sliderCollection4 = new Syncfusion.Windows.Forms.Tools.SliderCollection();
+            Syncfusion.Windows.Forms.Tools.ActiveStateCollection activeStateCollection1 = new Syncfusion.Windows.Forms.Tools.ActiveStateCollection();
+            Syncfusion.Windows.Forms.Tools.InactiveStateCollection inactiveStateCollection1 = new Syncfusion.Windows.Forms.Tools.InactiveStateCollection();
+            Syncfusion.Windows.Forms.Tools.ToggleButtonRenderer toggleButtonRenderer1 = new Syncfusion.Windows.Forms.Tools.ToggleButtonRenderer();
+            Syncfusion.Windows.Forms.Tools.SliderCollection sliderCollection1 = new Syncfusion.Windows.Forms.Tools.SliderCollection();
+            Syncfusion.Windows.Forms.Tools.ActiveStateCollection activeStateCollection2 = new Syncfusion.Windows.Forms.Tools.ActiveStateCollection();
+            Syncfusion.Windows.Forms.Tools.InactiveStateCollection inactiveStateCollection2 = new Syncfusion.Windows.Forms.Tools.InactiveStateCollection();
+            Syncfusion.Windows.Forms.Tools.ToggleButtonRenderer toggleButtonRenderer2 = new Syncfusion.Windows.Forms.Tools.ToggleButtonRenderer();
+            Syncfusion.Windows.Forms.Tools.SliderCollection sliderCollection2 = new Syncfusion.Windows.Forms.Tools.SliderCollection();
+            Syncfusion.Windows.Forms.Tools.ActiveStateCollection activeStateCollection3 = new Syncfusion.Windows.Forms.Tools.ActiveStateCollection();
+            Syncfusion.Windows.Forms.Tools.InactiveStateCollection inactiveStateCollection3 = new Syncfusion.Windows.Forms.Tools.InactiveStateCollection();
+            Syncfusion.Windows.Forms.Tools.ToggleButtonRenderer toggleButtonRenderer3 = new Syncfusion.Windows.Forms.Tools.ToggleButtonRenderer();
+            Syncfusion.Windows.Forms.Tools.SliderCollection sliderCollection3 = new Syncfusion.Windows.Forms.Tools.SliderCollection();
+            Syncfusion.Windows.Forms.Tools.ActiveStateCollection activeStateCollection5 = new Syncfusion.Windows.Forms.Tools.ActiveStateCollection();
+            Syncfusion.Windows.Forms.Tools.InactiveStateCollection inactiveStateCollection5 = new Syncfusion.Windows.Forms.Tools.InactiveStateCollection();
+            Syncfusion.Windows.Forms.Tools.ToggleButtonRenderer toggleButtonRenderer5 = new Syncfusion.Windows.Forms.Tools.ToggleButtonRenderer();
+            Syncfusion.Windows.Forms.Tools.SliderCollection sliderCollection5 = new Syncfusion.Windows.Forms.Tools.SliderCollection();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DivisionForm));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.amountLabel1 = new System.Windows.Forms.Label();
@@ -179,6 +200,7 @@ namespace Budget
             this.rb2 = new System.Windows.Forms.RadioButton();
             this.rb4 = new System.Windows.Forms.RadioButton();
             this.AppropChart = new Syncfusion.Windows.Forms.Chart.ChartControl();
+            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.expandCollapsePanel3 = new MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel();
             this.panel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.ImageBox = new System.Windows.Forms.ListBox();
@@ -192,6 +214,7 @@ namespace Budget
             this.rb6 = new System.Windows.Forms.RadioButton();
             this.rb8 = new System.Windows.Forms.RadioButton();
             this.BocChart = new Syncfusion.Windows.Forms.Chart.ChartControl();
+            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.expandCollapsePanel2 = new MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel();
             this.panel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.NpmTab = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
@@ -202,6 +225,7 @@ namespace Budget
             this.rb11 = new System.Windows.Forms.RadioButton();
             this.rb12 = new System.Windows.Forms.RadioButton();
             this.NpmChart = new Syncfusion.Windows.Forms.Chart.ChartControl();
+            this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.expandCollapsePanel6 = new MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel();
             this.panel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.ProgramTab = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
@@ -212,6 +236,7 @@ namespace Budget
             this.rb15 = new System.Windows.Forms.RadioButton();
             this.rb16 = new System.Windows.Forms.RadioButton();
             this.AreaChart = new Syncfusion.Windows.Forms.Chart.ChartControl();
+            this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
             this.expandCollapsePanel5 = new MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel();
             this.panel4 = new System.Windows.Forms.FlowLayoutPanel();
             this.ProjectTab = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
@@ -222,6 +247,7 @@ namespace Budget
             this.rb20 = new System.Windows.Forms.RadioButton();
             this.rb19 = new System.Windows.Forms.RadioButton();
             this.ProjectChart = new Syncfusion.Windows.Forms.Chart.ChartControl();
+            this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
             this.expandCollapsePanel4 = new MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel();
             this.panel5 = new System.Windows.Forms.FlowLayoutPanel();
             this.DataTab = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
@@ -273,7 +299,6 @@ namespace Budget
             this.toolStripSeparator8 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripSeparator9 = new System.Windows.Forms.ToolStripSeparator();
             this.TransferTab = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
-            this.calculatorControl1 = new Syncfusion.Windows.Forms.Tools.CalculatorControl();
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
             this.FrRcComboBox1 = new MetroFramework.Controls.MetroComboBox();
             this.ReprogrammingTypeComboBox = new MetroFramework.Controls.MetroComboBox();
@@ -285,11 +310,6 @@ namespace Budget
             this.FrBfyComboBox = new MetroFramework.Controls.MetroComboBox();
             this.FrRpioComboBox = new MetroFramework.Controls.MetroComboBox();
             this.metroPanel3 = new MetroFramework.Controls.MetroPanel();
-            this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
-            this.metroButton3 = new MetroFramework.Controls.MetroButton();
-            this.metroButton4 = new MetroFramework.Controls.MetroButton();
-            this.metroButton5 = new MetroFramework.Controls.MetroButton();
-            this.metroButton6 = new MetroFramework.Controls.MetroButton();
             this.flowLayoutPanel5 = new System.Windows.Forms.FlowLayoutPanel();
             this.metroButton11 = new MetroFramework.Controls.MetroButton();
             this.metroButton12 = new MetroFramework.Controls.MetroButton();
@@ -328,11 +348,40 @@ namespace Budget
             this.P8GridPanel = new System.Windows.Forms.Panel();
             this.calculatorControl2 = new Syncfusion.Windows.Forms.Tools.CalculatorControl();
             this.P8BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
+            this.Percent = new Syncfusion.Windows.Forms.Tools.ToggleButton();
+            this.toggleButton1 = new Syncfusion.Windows.Forms.Tools.ToggleButton();
+            this.toggleButton2 = new Syncfusion.Windows.Forms.Tools.ToggleButton();
+            this.toggleButton3 = new Syncfusion.Windows.Forms.Tools.ToggleButton();
+            this.toggleButton4 = new Syncfusion.Windows.Forms.Tools.ToggleButton();
+            this.TransferGrid = new System.Windows.Forms.DataGridView();
+            this.sqlServer = new Ninja.SqlServer();
+            this.TransferBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.TransferAdapter = new Ninja.SqlServerTableAdapters.T7Adapter();
+            this.TransferNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
+            this.budgetLevelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.docTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.orgDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rPIODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rCDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fundDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.programProjectCodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bOCDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.amountDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.programProjectNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.npmCodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.expandCollapsePanel7 = new MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel();
             ((System.ComponentModel.ISupportInitialize)(this.DivisionFormTabControl)).BeginInit();
             this.DivisionFormTabControl.SuspendLayout();
             this.AppropriationTab.SuspendLayout();
@@ -341,6 +390,7 @@ namespace Budget
             this.splitContainer5.Panel2.SuspendLayout();
             this.splitContainer5.SuspendLayout();
             this.panel13.SuspendLayout();
+            this.tableLayoutPanel4.SuspendLayout();
             this.expandCollapsePanel3.SuspendLayout();
             this.BocTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
@@ -348,6 +398,7 @@ namespace Budget
             this.splitContainer2.Panel2.SuspendLayout();
             this.splitContainer2.SuspendLayout();
             this.panel6.SuspendLayout();
+            this.tableLayoutPanel5.SuspendLayout();
             this.expandCollapsePanel2.SuspendLayout();
             this.NpmTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).BeginInit();
@@ -355,6 +406,7 @@ namespace Budget
             this.splitContainer3.Panel2.SuspendLayout();
             this.splitContainer3.SuspendLayout();
             this.panel7.SuspendLayout();
+            this.tableLayoutPanel6.SuspendLayout();
             this.expandCollapsePanel6.SuspendLayout();
             this.ProgramTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -362,6 +414,7 @@ namespace Budget
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             this.panel8.SuspendLayout();
+            this.tableLayoutPanel7.SuspendLayout();
             this.expandCollapsePanel5.SuspendLayout();
             this.ProjectTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer4)).BeginInit();
@@ -369,6 +422,7 @@ namespace Budget
             this.splitContainer4.Panel2.SuspendLayout();
             this.splitContainer4.SuspendLayout();
             this.panel9.SuspendLayout();
+            this.tableLayoutPanel8.SuspendLayout();
             this.expandCollapsePanel4.SuspendLayout();
             this.DataTab.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -387,7 +441,6 @@ namespace Budget
             this.metroPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.amountCurrencyTextBox)).BeginInit();
             this.metroPanel3.SuspendLayout();
-            this.flowLayoutPanel2.SuspendLayout();
             this.flowLayoutPanel5.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.metroSetTabPage2.SuspendLayout();
@@ -396,11 +449,17 @@ namespace Budget
             this.PrcPanel.SuspendLayout();
             this.DatabaseGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.P8BindingSource)).BeginInit();
-            this.tableLayoutPanel4.SuspendLayout();
-            this.tableLayoutPanel5.SuspendLayout();
-            this.tableLayoutPanel6.SuspendLayout();
-            this.tableLayoutPanel7.SuspendLayout();
-            this.tableLayoutPanel8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Percent)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.toggleButton1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.toggleButton2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.toggleButton3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.toggleButton4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TransferGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sqlServer)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TransferBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TransferNavigator)).BeginInit();
+            this.TransferNavigator.SuspendLayout();
+            this.expandCollapsePanel7.SuspendLayout();
             this.SuspendLayout();
             // 
             // label5
@@ -408,10 +467,10 @@ namespace Budget
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.ForeColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.label5.Location = new System.Drawing.Point(32, 229);
+            this.label5.Location = new System.Drawing.Point(22, 230);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(33, 21);
+            this.label5.Size = new System.Drawing.Size(41, 22);
             this.label5.TabIndex = 21;
             this.label5.Text = "RC:";
             // 
@@ -420,10 +479,10 @@ namespace Budget
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.ForeColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.label4.Location = new System.Drawing.Point(21, 16);
+            this.label4.Location = new System.Drawing.Point(15, 16);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(45, 21);
+            this.label4.Size = new System.Drawing.Size(56, 22);
             this.label4.TabIndex = 19;
             this.label4.Text = "Type:";
             // 
@@ -435,7 +494,7 @@ namespace Budget
             this.amountLabel1.Location = new System.Drawing.Point(2, 366);
             this.amountLabel1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.amountLabel1.Name = "amountLabel1";
-            this.amountLabel1.Size = new System.Drawing.Size(69, 21);
+            this.amountLabel1.Size = new System.Drawing.Size(76, 22);
             this.amountLabel1.TabIndex = 16;
             this.amountLabel1.Text = "Amount:";
             // 
@@ -444,10 +503,10 @@ namespace Budget
             this.codeLabel1.AutoSize = true;
             this.codeLabel1.BackColor = System.Drawing.Color.Transparent;
             this.codeLabel1.ForeColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.codeLabel1.Location = new System.Drawing.Point(22, 315);
+            this.codeLabel1.Location = new System.Drawing.Point(13, 317);
             this.codeLabel1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.codeLabel1.Name = "codeLabel1";
-            this.codeLabel1.Size = new System.Drawing.Size(49, 21);
+            this.codeLabel1.Size = new System.Drawing.Size(58, 22);
             this.codeLabel1.TabIndex = 14;
             this.codeLabel1.Text = "Code:";
             // 
@@ -456,10 +515,10 @@ namespace Budget
             this.orgLabel.AutoSize = true;
             this.orgLabel.BackColor = System.Drawing.Color.Transparent;
             this.orgLabel.ForeColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.orgLabel.Location = new System.Drawing.Point(32, 190);
+            this.orgLabel.Location = new System.Drawing.Point(22, 188);
             this.orgLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.orgLabel.Name = "orgLabel";
-            this.orgLabel.Size = new System.Drawing.Size(40, 21);
+            this.orgLabel.Size = new System.Drawing.Size(45, 22);
             this.orgLabel.TabIndex = 12;
             this.orgLabel.Text = "Org:";
             // 
@@ -468,10 +527,10 @@ namespace Budget
             this.bOCLabel1.AutoSize = true;
             this.bOCLabel1.BackColor = System.Drawing.Color.Transparent;
             this.bOCLabel1.ForeColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.bOCLabel1.Location = new System.Drawing.Point(24, 270);
+            this.bOCLabel1.Location = new System.Drawing.Point(9, 271);
             this.bOCLabel1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.bOCLabel1.Name = "bOCLabel1";
-            this.bOCLabel1.Size = new System.Drawing.Size(44, 21);
+            this.bOCLabel1.Size = new System.Drawing.Size(54, 22);
             this.bOCLabel1.TabIndex = 10;
             this.bOCLabel1.Text = "BOC:";
             // 
@@ -480,10 +539,10 @@ namespace Budget
             this.fundLabel1.AutoSize = true;
             this.fundLabel1.BackColor = System.Drawing.Color.Transparent;
             this.fundLabel1.ForeColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.fundLabel1.Location = new System.Drawing.Point(23, 148);
+            this.fundLabel1.Location = new System.Drawing.Point(15, 149);
             this.fundLabel1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.fundLabel1.Name = "fundLabel1";
-            this.fundLabel1.Size = new System.Drawing.Size(48, 21);
+            this.fundLabel1.Size = new System.Drawing.Size(56, 22);
             this.fundLabel1.TabIndex = 8;
             this.fundLabel1.Text = "Fund:";
             // 
@@ -492,10 +551,10 @@ namespace Budget
             this.bFYLabel1.AutoSize = true;
             this.bFYLabel1.BackColor = System.Drawing.Color.Transparent;
             this.bFYLabel1.ForeColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.bFYLabel1.Location = new System.Drawing.Point(32, 106);
+            this.bFYLabel1.Location = new System.Drawing.Point(15, 107);
             this.bFYLabel1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.bFYLabel1.Name = "bFYLabel1";
-            this.bFYLabel1.Size = new System.Drawing.Size(39, 21);
+            this.bFYLabel1.Size = new System.Drawing.Size(50, 22);
             this.bFYLabel1.TabIndex = 6;
             this.bFYLabel1.Text = "BFY:";
             // 
@@ -504,10 +563,10 @@ namespace Budget
             this.rPIOLabel.AutoSize = true;
             this.rPIOLabel.BackColor = System.Drawing.Color.Transparent;
             this.rPIOLabel.ForeColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.rPIOLabel.Location = new System.Drawing.Point(24, 66);
+            this.rPIOLabel.Location = new System.Drawing.Point(15, 71);
             this.rPIOLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.rPIOLabel.Name = "rPIOLabel";
-            this.rPIOLabel.Size = new System.Drawing.Size(48, 21);
+            this.rPIOLabel.Size = new System.Drawing.Size(58, 22);
             this.rPIOLabel.TabIndex = 2;
             this.rPIOLabel.Text = "RPIO:";
             // 
@@ -580,6 +639,7 @@ namespace Budget
             // 
             // splitContainer5.Panel2
             // 
+            this.splitContainer5.Panel2.Controls.Add(this.toggleButton1);
             this.splitContainer5.Panel2.Controls.Add(this.tableLayoutPanel4);
             this.splitContainer5.Panel2.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.splitContainer5.Panel2.ForeColor = System.Drawing.SystemColors.MenuHighlight;
@@ -597,7 +657,7 @@ namespace Budget
             this.panel13.Location = new System.Drawing.Point(747, 3);
             this.panel13.Name = "panel13";
             this.panel13.Padding = new System.Windows.Forms.Padding(1);
-            this.panel13.Size = new System.Drawing.Size(529, 49);
+            this.panel13.Size = new System.Drawing.Size(456, 49);
             this.panel13.TabIndex = 43;
             // 
             // rb1
@@ -780,6 +840,18 @@ namespace Budget
             this.AppropChart.ToolBar.Items.Add(chartToolBarSeries3DItem1);
             this.AppropChart.ToolBar.Items.Add(chartToolBarShowLegendItem1);
             // 
+            // tableLayoutPanel4
+            // 
+            this.tableLayoutPanel4.ColumnCount = 1;
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel4.Controls.Add(this.expandCollapsePanel3, 0, 0);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(24, 79);
+            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
+            this.tableLayoutPanel4.RowCount = 1;
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(228, 669);
+            this.tableLayoutPanel4.TabIndex = 104;
+            // 
             // expandCollapsePanel3
             // 
             this.expandCollapsePanel3.BackColor = System.Drawing.Color.Black;
@@ -833,7 +905,7 @@ namespace Budget
             this.approplistbox.Location = new System.Drawing.Point(204, 568);
             this.approplistbox.Margin = new System.Windows.Forms.Padding(0);
             this.approplistbox.Name = "approplistbox";
-            this.approplistbox.Size = new System.Drawing.Size(616, 261);
+            this.approplistbox.Size = new System.Drawing.Size(616, 203);
             this.approplistbox.TabIndex = 48;
             // 
             // metroButton1
@@ -844,6 +916,7 @@ namespace Budget
             this.metroButton1.Size = new System.Drawing.Size(137, 42);
             this.metroButton1.TabIndex = 46;
             this.metroButton1.Text = "Account Detail";
+            this.metroButton1.UseSelectable = true;
             // 
             // BocTab
             // 
@@ -874,6 +947,7 @@ namespace Budget
             // 
             // splitContainer2.Panel2
             // 
+            this.splitContainer2.Panel2.Controls.Add(this.toggleButton2);
             this.splitContainer2.Panel2.Controls.Add(this.tableLayoutPanel5);
             this.splitContainer2.Panel2.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.splitContainer2.Panel2.ForeColor = System.Drawing.SystemColors.MenuHighlight;
@@ -891,7 +965,7 @@ namespace Budget
             this.panel6.Location = new System.Drawing.Point(747, 3);
             this.panel6.Name = "panel6";
             this.panel6.Padding = new System.Windows.Forms.Padding(1);
-            this.panel6.Size = new System.Drawing.Size(676, 48);
+            this.panel6.Size = new System.Drawing.Size(460, 48);
             this.panel6.TabIndex = 44;
             // 
             // rb5
@@ -1073,6 +1147,18 @@ namespace Budget
             this.BocChart.ToolBar.Items.Add(chartToolBarSeries3DItem2);
             this.BocChart.ToolBar.Items.Add(chartToolBarShowLegendItem2);
             // 
+            // tableLayoutPanel5
+            // 
+            this.tableLayoutPanel5.ColumnCount = 1;
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel5.Controls.Add(this.expandCollapsePanel2, 0, 0);
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(25, 80);
+            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
+            this.tableLayoutPanel5.RowCount = 1;
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(228, 669);
+            this.tableLayoutPanel5.TabIndex = 104;
+            // 
             // expandCollapsePanel2
             // 
             this.expandCollapsePanel2.BackColor = System.Drawing.Color.Black;
@@ -1128,6 +1214,7 @@ namespace Budget
             // 
             // splitContainer3.Panel2
             // 
+            this.splitContainer3.Panel2.Controls.Add(this.toggleButton3);
             this.splitContainer3.Panel2.Controls.Add(this.tableLayoutPanel6);
             this.splitContainer3.Panel2.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.splitContainer3.Panel2.ForeColor = System.Drawing.SystemColors.MenuHighlight;
@@ -1145,7 +1232,7 @@ namespace Budget
             this.panel7.Location = new System.Drawing.Point(747, 3);
             this.panel7.Name = "panel7";
             this.panel7.Padding = new System.Windows.Forms.Padding(1);
-            this.panel7.Size = new System.Drawing.Size(566, 52);
+            this.panel7.Size = new System.Drawing.Size(471, 52);
             this.panel7.TabIndex = 44;
             // 
             // rb9
@@ -1327,6 +1414,18 @@ namespace Budget
             this.NpmChart.ToolBar.Items.Add(chartToolBarSeries3DItem3);
             this.NpmChart.ToolBar.Items.Add(chartToolBarShowLegendItem3);
             // 
+            // tableLayoutPanel6
+            // 
+            this.tableLayoutPanel6.ColumnCount = 1;
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel6.Controls.Add(this.expandCollapsePanel6, 0, 0);
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(25, 80);
+            this.tableLayoutPanel6.Name = "tableLayoutPanel6";
+            this.tableLayoutPanel6.RowCount = 1;
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(228, 669);
+            this.tableLayoutPanel6.TabIndex = 104;
+            // 
             // expandCollapsePanel6
             // 
             this.expandCollapsePanel6.BackColor = System.Drawing.Color.Black;
@@ -1382,6 +1481,7 @@ namespace Budget
             // 
             // splitContainer1.Panel2
             // 
+            this.splitContainer1.Panel2.Controls.Add(this.Percent);
             this.splitContainer1.Panel2.Controls.Add(this.tableLayoutPanel7);
             this.splitContainer1.Panel2.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.splitContainer1.Panel2.ForeColor = System.Drawing.SystemColors.MenuHighlight;
@@ -1399,7 +1499,7 @@ namespace Budget
             this.panel8.Location = new System.Drawing.Point(747, 3);
             this.panel8.Name = "panel8";
             this.panel8.Padding = new System.Windows.Forms.Padding(1);
-            this.panel8.Size = new System.Drawing.Size(577, 51);
+            this.panel8.Size = new System.Drawing.Size(397, 51);
             this.panel8.TabIndex = 44;
             // 
             // rb13
@@ -1581,6 +1681,18 @@ namespace Budget
             this.AreaChart.ToolBar.Items.Add(chartToolBarSeries3DItem4);
             this.AreaChart.ToolBar.Items.Add(chartToolBarShowLegendItem4);
             // 
+            // tableLayoutPanel7
+            // 
+            this.tableLayoutPanel7.ColumnCount = 1;
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel7.Controls.Add(this.expandCollapsePanel5, 0, 0);
+            this.tableLayoutPanel7.Location = new System.Drawing.Point(20, 80);
+            this.tableLayoutPanel7.Name = "tableLayoutPanel7";
+            this.tableLayoutPanel7.RowCount = 1;
+            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel7.Size = new System.Drawing.Size(248, 706);
+            this.tableLayoutPanel7.TabIndex = 104;
+            // 
             // expandCollapsePanel5
             // 
             this.expandCollapsePanel5.BackColor = System.Drawing.Color.Black;
@@ -1637,6 +1749,7 @@ namespace Budget
             // 
             // splitContainer4.Panel2
             // 
+            this.splitContainer4.Panel2.Controls.Add(this.toggleButton4);
             this.splitContainer4.Panel2.Controls.Add(this.tableLayoutPanel8);
             this.splitContainer4.Panel2.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.splitContainer4.Panel2.ForeColor = System.Drawing.SystemColors.MenuHighlight;
@@ -1836,6 +1949,18 @@ namespace Budget
             this.ProjectChart.ToolBar.Items.Add(chartToolBarSeries3DItem5);
             this.ProjectChart.ToolBar.Items.Add(chartToolBarShowLegendItem5);
             // 
+            // tableLayoutPanel8
+            // 
+            this.tableLayoutPanel8.ColumnCount = 1;
+            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel8.Controls.Add(this.expandCollapsePanel4, 0, 0);
+            this.tableLayoutPanel8.Location = new System.Drawing.Point(20, 61);
+            this.tableLayoutPanel8.Name = "tableLayoutPanel8";
+            this.tableLayoutPanel8.RowCount = 1;
+            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel8.Size = new System.Drawing.Size(248, 736);
+            this.tableLayoutPanel8.TabIndex = 104;
+            // 
             // expandCollapsePanel4
             // 
             this.expandCollapsePanel4.BackColor = System.Drawing.Color.Black;
@@ -1963,7 +2088,7 @@ namespace Budget
             this.tableLayoutPanel2.ColumnCount = 3;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 46.08696F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 53.91304F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 114F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 116F));
             this.tableLayoutPanel2.Controls.Add(this.label13, 1, 4);
             this.tableLayoutPanel2.Controls.Add(this.OldAmount, 0, 5);
             this.tableLayoutPanel2.Controls.Add(this.label12, 0, 4);
@@ -1998,7 +2123,7 @@ namespace Budget
             this.label13.AutoSize = true;
             this.label13.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.label13.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label13.Location = new System.Drawing.Point(131, 148);
+            this.label13.Location = new System.Drawing.Point(129, 148);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(45, 21);
             this.label13.TabIndex = 162;
@@ -2008,6 +2133,19 @@ namespace Budget
             // OldAmount
             // 
             // 
+            // 
+            // 
+            this.OldAmount.CustomButton.Image = null;
+            this.OldAmount.CustomButton.Location = new System.Drawing.Point(66, 2);
+            this.OldAmount.CustomButton.Name = "";
+            this.OldAmount.CustomButton.Size = new System.Drawing.Size(23, 23);
+            this.OldAmount.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.OldAmount.CustomButton.TabIndex = 1;
+            this.OldAmount.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.OldAmount.CustomButton.UseSelectable = true;
+            this.OldAmount.CustomButton.Visible = false;
+            this.OldAmount.Lines = new string[] {
+        "metroTextBox1"};
             this.OldAmount.Location = new System.Drawing.Point(2, 171);
             this.OldAmount.Margin = new System.Windows.Forms.Padding(2);
             this.OldAmount.MaxLength = 32767;
@@ -2015,18 +2153,25 @@ namespace Budget
             this.OldAmount.PasswordChar = '\0';
             this.OldAmount.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.OldAmount.SelectedText = "";
-            this.OldAmount.Size = new System.Drawing.Size(93, 28);
+            this.OldAmount.SelectionLength = 0;
+            this.OldAmount.SelectionStart = 0;
+            this.OldAmount.ShortcutsEnabled = true;
+            this.OldAmount.Size = new System.Drawing.Size(92, 28);
             this.OldAmount.TabIndex = 154;
             this.OldAmount.Text = "metroTextBox1";
             this.OldAmount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.OldAmount.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.OldAmount.UseSelectable = true;
+            this.OldAmount.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.OldAmount.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
             // label12
             // 
             this.label12.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label12.AutoSize = true;
             this.label12.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.label12.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label12.Location = new System.Drawing.Point(14, 148);
+            this.label12.Location = new System.Drawing.Point(13, 148);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(69, 21);
             this.label12.TabIndex = 65;
@@ -2037,30 +2182,70 @@ namespace Budget
             // 
             // 
             // 
+            // 
+            this.metroTextBox1.CustomButton.Image = null;
+            this.metroTextBox1.CustomButton.Location = new System.Drawing.Point(77, 1);
+            this.metroTextBox1.CustomButton.Name = "";
+            this.metroTextBox1.CustomButton.Size = new System.Drawing.Size(35, 35);
+            this.metroTextBox1.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.metroTextBox1.CustomButton.TabIndex = 1;
+            this.metroTextBox1.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.metroTextBox1.CustomButton.UseSelectable = true;
+            this.metroTextBox1.CustomButton.Visible = false;
             this.metroTextBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.metroTextBox1.FontSize = MetroFramework.MetroTextBoxSize.Medium;
-            this.metroTextBox1.Location = new System.Drawing.Point(212, 88);
+            this.metroTextBox1.Lines = new string[] {
+        "metroTextBox2"};
+            this.metroTextBox1.Location = new System.Drawing.Point(210, 88);
             this.metroTextBox1.Margin = new System.Windows.Forms.Padding(2);
             this.metroTextBox1.MaxLength = 32767;
             this.metroTextBox1.Name = "metroTextBox1";
             this.metroTextBox1.PasswordChar = '\0';
             this.metroTextBox1.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.metroTextBox1.SelectedText = "";
-            this.metroTextBox1.Size = new System.Drawing.Size(111, 37);
+            this.metroTextBox1.SelectionLength = 0;
+            this.metroTextBox1.SelectionStart = 0;
+            this.metroTextBox1.ShortcutsEnabled = true;
+            this.metroTextBox1.Size = new System.Drawing.Size(113, 37);
             this.metroTextBox1.TabIndex = 155;
             this.metroTextBox1.Text = "metroTextBox2";
             this.metroTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.metroTextBox1.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.metroTextBox1.UseSelectable = true;
+            this.metroTextBox1.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.metroTextBox1.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
             // metroTextBox2
             // 
             // 
             // 
-            this.metroTextBox2.Location = new System.Drawing.Point(99, 88);
+            // 
+            this.metroTextBox2.CustomButton.Image = null;
+            this.metroTextBox2.CustomButton.Location = new System.Drawing.Point(-20, 2);
+            this.metroTextBox2.CustomButton.Name = "";
+            this.metroTextBox2.CustomButton.Size = new System.Drawing.Size(17, 17);
+            this.metroTextBox2.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.metroTextBox2.CustomButton.TabIndex = 1;
+            this.metroTextBox2.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.metroTextBox2.CustomButton.UseSelectable = true;
+            this.metroTextBox2.CustomButton.Visible = false;
+            this.metroTextBox2.Lines = new string[0];
+            this.metroTextBox2.Location = new System.Drawing.Point(98, 88);
             this.metroTextBox2.Margin = new System.Windows.Forms.Padding(2);
             this.metroTextBox2.MaxLength = 32767;
             this.metroTextBox2.Name = "metroTextBox2";
             this.metroTextBox2.PasswordChar = '\0';
             this.metroTextBox2.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.metroTextBox2.SelectedText = "";
+            this.metroTextBox2.SelectionLength = 0;
+            this.metroTextBox2.SelectionStart = 0;
+            this.metroTextBox2.ShortcutsEnabled = true;
+            this.metroTextBox2.Size = new System.Drawing.Size(0, 22);
+            this.metroTextBox2.TabIndex = 163;
+            this.metroTextBox2.UseSelectable = true;
+            this.metroTextBox2.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.metroTextBox2.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
             // label2
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
@@ -2076,12 +2261,39 @@ namespace Budget
             // metroTextBox3
             // 
             // 
+            // 
+            // 
+            this.metroTextBox3.CustomButton.Image = null;
+            this.metroTextBox3.CustomButton.Location = new System.Drawing.Point(-20, 2);
+            this.metroTextBox3.CustomButton.Name = "";
+            this.metroTextBox3.CustomButton.Size = new System.Drawing.Size(17, 17);
+            this.metroTextBox3.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.metroTextBox3.CustomButton.TabIndex = 1;
+            this.metroTextBox3.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.metroTextBox3.CustomButton.UseSelectable = true;
+            this.metroTextBox3.CustomButton.Visible = false;
+            this.metroTextBox3.Lines = new string[0];
+            this.metroTextBox3.Location = new System.Drawing.Point(3, 89);
+            this.metroTextBox3.MaxLength = 32767;
+            this.metroTextBox3.Name = "metroTextBox3";
+            this.metroTextBox3.PasswordChar = '\0';
+            this.metroTextBox3.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.metroTextBox3.SelectedText = "";
+            this.metroTextBox3.SelectionLength = 0;
+            this.metroTextBox3.SelectionStart = 0;
+            this.metroTextBox3.ShortcutsEnabled = true;
+            this.metroTextBox3.Size = new System.Drawing.Size(0, 22);
+            this.metroTextBox3.TabIndex = 164;
+            this.metroTextBox3.UseSelectable = true;
+            this.metroTextBox3.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.metroTextBox3.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
             // label3
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label3.Location = new System.Drawing.Point(129, 3);
+            this.label3.Location = new System.Drawing.Point(128, 3);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(48, 21);
             this.label3.TabIndex = 60;
@@ -2094,7 +2306,7 @@ namespace Budget
             this.label9.AutoSize = true;
             this.label9.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.label9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label9.Location = new System.Drawing.Point(243, 65);
+            this.label9.Location = new System.Drawing.Point(242, 65);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(49, 21);
             this.label9.TabIndex = 64;
@@ -2105,10 +2317,38 @@ namespace Budget
             // 
             // 
             // 
+            // 
+            this.metroTextBox4.CustomButton.Image = null;
+            this.metroTextBox4.CustomButton.Location = new System.Drawing.Point(-20, 2);
+            this.metroTextBox4.CustomButton.Name = "";
+            this.metroTextBox4.CustomButton.Size = new System.Drawing.Size(17, 17);
+            this.metroTextBox4.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.metroTextBox4.CustomButton.TabIndex = 1;
+            this.metroTextBox4.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.metroTextBox4.CustomButton.UseSelectable = true;
+            this.metroTextBox4.CustomButton.Visible = false;
+            this.metroTextBox4.Lines = new string[0];
+            this.metroTextBox4.Location = new System.Drawing.Point(211, 27);
+            this.metroTextBox4.MaxLength = 32767;
+            this.metroTextBox4.Name = "metroTextBox4";
+            this.metroTextBox4.PasswordChar = '\0';
+            this.metroTextBox4.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.metroTextBox4.SelectedText = "";
+            this.metroTextBox4.SelectionLength = 0;
+            this.metroTextBox4.SelectionStart = 0;
+            this.metroTextBox4.ShortcutsEnabled = true;
+            this.metroTextBox4.Size = new System.Drawing.Size(0, 22);
+            this.metroTextBox4.TabIndex = 165;
+            this.metroTextBox4.UseSelectable = true;
+            this.metroTextBox4.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.metroTextBox4.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // label11
+            // 
             this.label11.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label11.AutoSize = true;
             this.label11.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label11.Location = new System.Drawing.Point(137, 65);
+            this.label11.Location = new System.Drawing.Point(135, 65);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(33, 21);
             this.label11.TabIndex = 63;
@@ -2120,7 +2360,7 @@ namespace Budget
             this.label14.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label14.AutoSize = true;
             this.label14.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label14.Location = new System.Drawing.Point(245, 3);
+            this.label14.Location = new System.Drawing.Point(244, 3);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(44, 21);
             this.label14.TabIndex = 66;
@@ -2143,12 +2383,91 @@ namespace Budget
             // 
             // 
             // 
+            // 
+            this.metroTextBox5.CustomButton.Image = null;
+            this.metroTextBox5.CustomButton.Location = new System.Drawing.Point(-20, 2);
+            this.metroTextBox5.CustomButton.Name = "";
+            this.metroTextBox5.CustomButton.Size = new System.Drawing.Size(17, 17);
+            this.metroTextBox5.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.metroTextBox5.CustomButton.TabIndex = 1;
+            this.metroTextBox5.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.metroTextBox5.CustomButton.UseSelectable = true;
+            this.metroTextBox5.CustomButton.Visible = false;
+            this.metroTextBox5.Lines = new string[0];
+            this.metroTextBox5.Location = new System.Drawing.Point(99, 27);
+            this.metroTextBox5.MaxLength = 32767;
+            this.metroTextBox5.Name = "metroTextBox5";
+            this.metroTextBox5.PasswordChar = '\0';
+            this.metroTextBox5.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.metroTextBox5.SelectedText = "";
+            this.metroTextBox5.SelectionLength = 0;
+            this.metroTextBox5.SelectionStart = 0;
+            this.metroTextBox5.ShortcutsEnabled = true;
+            this.metroTextBox5.Size = new System.Drawing.Size(0, 22);
+            this.metroTextBox5.TabIndex = 166;
+            this.metroTextBox5.UseSelectable = true;
+            this.metroTextBox5.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.metroTextBox5.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
             // metroTextBox6
             // 
             // 
             // 
+            // 
+            this.metroTextBox6.CustomButton.Image = null;
+            this.metroTextBox6.CustomButton.Location = new System.Drawing.Point(-20, 2);
+            this.metroTextBox6.CustomButton.Name = "";
+            this.metroTextBox6.CustomButton.Size = new System.Drawing.Size(17, 17);
+            this.metroTextBox6.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.metroTextBox6.CustomButton.TabIndex = 1;
+            this.metroTextBox6.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.metroTextBox6.CustomButton.UseSelectable = true;
+            this.metroTextBox6.CustomButton.Visible = false;
+            this.metroTextBox6.Lines = new string[0];
+            this.metroTextBox6.Location = new System.Drawing.Point(3, 27);
+            this.metroTextBox6.MaxLength = 32767;
+            this.metroTextBox6.Name = "metroTextBox6";
+            this.metroTextBox6.PasswordChar = '\0';
+            this.metroTextBox6.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.metroTextBox6.SelectedText = "";
+            this.metroTextBox6.SelectionLength = 0;
+            this.metroTextBox6.SelectionStart = 0;
+            this.metroTextBox6.ShortcutsEnabled = true;
+            this.metroTextBox6.Size = new System.Drawing.Size(0, 22);
+            this.metroTextBox6.TabIndex = 167;
+            this.metroTextBox6.UseSelectable = true;
+            this.metroTextBox6.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.metroTextBox6.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
             // metroTextBox7
             // 
+            // 
+            // 
+            // 
+            this.metroTextBox7.CustomButton.Image = null;
+            this.metroTextBox7.CustomButton.Location = new System.Drawing.Point(-20, 2);
+            this.metroTextBox7.CustomButton.Name = "";
+            this.metroTextBox7.CustomButton.Size = new System.Drawing.Size(17, 17);
+            this.metroTextBox7.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.metroTextBox7.CustomButton.TabIndex = 1;
+            this.metroTextBox7.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.metroTextBox7.CustomButton.UseSelectable = true;
+            this.metroTextBox7.CustomButton.Visible = false;
+            this.metroTextBox7.Lines = new string[0];
+            this.metroTextBox7.Location = new System.Drawing.Point(99, 172);
+            this.metroTextBox7.MaxLength = 32767;
+            this.metroTextBox7.Name = "metroTextBox7";
+            this.metroTextBox7.PasswordChar = '\0';
+            this.metroTextBox7.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.metroTextBox7.SelectedText = "";
+            this.metroTextBox7.SelectionLength = 0;
+            this.metroTextBox7.SelectionStart = 0;
+            this.metroTextBox7.ShortcutsEnabled = true;
+            this.metroTextBox7.Size = new System.Drawing.Size(0, 22);
+            this.metroTextBox7.TabIndex = 168;
+            this.metroTextBox7.UseSelectable = true;
+            this.metroTextBox7.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.metroTextBox7.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // tabPageAdv2
             // 
@@ -2315,13 +2634,13 @@ namespace Budget
             // 
             // ReturnButton
             // 
-            this.ReturnButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ReturnButton.BackgroundImage")));
             this.ReturnButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ReturnButton.Location = new System.Drawing.Point(619, 47);
             this.ReturnButton.Margin = new System.Windows.Forms.Padding(2);
             this.ReturnButton.Name = "ReturnButton";
             this.ReturnButton.Size = new System.Drawing.Size(34, 26);
             this.ReturnButton.TabIndex = 147;
+            this.ReturnButton.UseSelectable = true;
             // 
             // label17
             // 
@@ -2451,10 +2770,9 @@ namespace Budget
             // toolStripButton1
             // 
             this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
             this.toolStripButton1.Name = "toolStripButton1";
             this.toolStripButton1.RightToLeftAutoMirrorImage = true;
-            this.toolStripButton1.Size = new System.Drawing.Size(28, 28);
+            this.toolStripButton1.Size = new System.Drawing.Size(23, 28);
             this.toolStripButton1.Text = "Add New";
             this.toolStripButton1.ToolTipText = "Add New";
             // 
@@ -2468,16 +2786,14 @@ namespace Budget
             // toolStripButton2
             // 
             this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
             this.toolStripButton2.Name = "toolStripButton2";
             this.toolStripButton2.RightToLeftAutoMirrorImage = true;
-            this.toolStripButton2.Size = new System.Drawing.Size(28, 28);
+            this.toolStripButton2.Size = new System.Drawing.Size(23, 28);
             this.toolStripButton2.Text = "Delete";
             // 
             // toolStripButton3
             // 
             this.toolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.Image")));
             this.toolStripButton3.Name = "toolStripButton3";
             this.toolStripButton3.RightToLeftAutoMirrorImage = true;
             this.toolStripButton3.Size = new System.Drawing.Size(44, 28);
@@ -2491,10 +2807,9 @@ namespace Budget
             // toolStripButton4
             // 
             this.toolStripButton4.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton4.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton4.Image")));
             this.toolStripButton4.Name = "toolStripButton4";
             this.toolStripButton4.RightToLeftAutoMirrorImage = true;
-            this.toolStripButton4.Size = new System.Drawing.Size(28, 28);
+            this.toolStripButton4.Size = new System.Drawing.Size(23, 28);
             this.toolStripButton4.Text = "Previous";
             // 
             // toolStripSeparator5
@@ -2519,10 +2834,9 @@ namespace Budget
             // toolStripButton5
             // 
             this.toolStripButton5.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton5.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton5.Image")));
             this.toolStripButton5.Name = "toolStripButton5";
             this.toolStripButton5.RightToLeftAutoMirrorImage = true;
-            this.toolStripButton5.Size = new System.Drawing.Size(28, 28);
+            this.toolStripButton5.Size = new System.Drawing.Size(23, 28);
             this.toolStripButton5.Text = "Next";
             // 
             // toolStripSeparator7
@@ -2533,7 +2847,6 @@ namespace Budget
             // toolStripButton6
             // 
             this.toolStripButton6.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripButton6.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton6.Image")));
             this.toolStripButton6.Name = "toolStripButton6";
             this.toolStripButton6.RightToLeftAutoMirrorImage = true;
             this.toolStripButton6.Size = new System.Drawing.Size(42, 28);
@@ -2552,8 +2865,8 @@ namespace Budget
             // TransferTab
             // 
             this.TransferTab.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.TransferTab.Controls.Add(this.calculatorControl1);
-            this.TransferTab.Controls.Add(this.metroPanel1);
+            this.TransferTab.Controls.Add(this.expandCollapsePanel7);
+            this.TransferTab.Controls.Add(this.flowLayoutPanel5);
             this.TransferTab.Controls.Add(this.metroPanel3);
             this.TransferTab.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TransferTab.Image = null;
@@ -2564,30 +2877,8 @@ namespace Budget
             this.TransferTab.ShowCloseButton = true;
             this.TransferTab.Size = new System.Drawing.Size(1786, 829);
             this.TransferTab.TabIndex = 5;
-            this.TransferTab.Text = "Reprogramming";
+            this.TransferTab.Text = "Transfers";
             this.TransferTab.ThemesEnabled = false;
-            // 
-            // calculatorControl1
-            // 
-            this.calculatorControl1.AccessibleDescription = "Calculator control";
-            this.calculatorControl1.AccessibleName = "Calculator Control";
-            this.calculatorControl1.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.calculatorControl1.BeforeTouchSize = new System.Drawing.Size(273, 250);
-            this.calculatorControl1.BorderStyle = System.Windows.Forms.Border3DStyle.Flat;
-            this.calculatorControl1.ButtonStyle = Syncfusion.Windows.Forms.ButtonAppearance.Metro;
-            this.calculatorControl1.Culture = new System.Globalization.CultureInfo("en-US");
-            this.calculatorControl1.DoubleValue = 0D;
-            this.calculatorControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.calculatorControl1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.calculatorControl1.Location = new System.Drawing.Point(1413, 179);
-            this.calculatorControl1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.calculatorControl1.MetroColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.calculatorControl1.Name = "calculatorControl1";
-            this.calculatorControl1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.calculatorControl1.Size = new System.Drawing.Size(273, 250);
-            this.calculatorControl1.TabIndex = 78;
-            this.calculatorControl1.Text = "calculatorControl1";
-            this.calculatorControl1.UseVisualStyle = true;
             // 
             // metroPanel1
             // 
@@ -2610,13 +2901,14 @@ namespace Budget
             this.metroPanel1.Controls.Add(this.FrBfyComboBox);
             this.metroPanel1.Controls.Add(this.rPIOLabel);
             this.metroPanel1.Controls.Add(this.FrRpioComboBox);
+            this.metroPanel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(130)))), ((int)(((byte)(180)))));
             this.metroPanel1.HorizontalScrollbarBarColor = true;
             this.metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
             this.metroPanel1.HorizontalScrollbarSize = 9;
-            this.metroPanel1.Location = new System.Drawing.Point(26, 51);
+            this.metroPanel1.Location = new System.Drawing.Point(32, 67);
             this.metroPanel1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.metroPanel1.Name = "metroPanel1";
-            this.metroPanel1.Size = new System.Drawing.Size(212, 431);
+            this.metroPanel1.Size = new System.Drawing.Size(227, 431);
             this.metroPanel1.TabIndex = 70;
             this.metroPanel1.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.metroPanel1.VerticalScrollbarBarColor = true;
@@ -2626,6 +2918,8 @@ namespace Budget
             // FrRcComboBox1
             // 
             this.FrRcComboBox1.BackColor = System.Drawing.Color.Black;
+            this.FrRcComboBox1.DataSource = this.TransferBindingSource;
+            this.FrRcComboBox1.DisplayMember = "RC";
             this.FrRcComboBox1.ForeColor = System.Drawing.SystemColors.Info;
             this.FrRcComboBox1.FormattingEnabled = true;
             this.FrRcComboBox1.ItemHeight = 23;
@@ -2635,21 +2929,21 @@ namespace Budget
             this.FrRcComboBox1.Size = new System.Drawing.Size(117, 29);
             this.FrRcComboBox1.TabIndex = 20;
             this.FrRcComboBox1.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.FrRcComboBox1.UseSelectable = true;
             // 
             // ReprogrammingTypeComboBox
             // 
+            this.ReprogrammingTypeComboBox.DataSource = this.TransferBindingSource;
+            this.ReprogrammingTypeComboBox.DisplayMember = "DocType";
             this.ReprogrammingTypeComboBox.FormattingEnabled = true;
             this.ReprogrammingTypeComboBox.ItemHeight = 23;
-            this.ReprogrammingTypeComboBox.Items.AddRange(new object[] {
-            "HQ",
-            "BOC",
-            "Division"});
             this.ReprogrammingTypeComboBox.Location = new System.Drawing.Point(80, 16);
             this.ReprogrammingTypeComboBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.ReprogrammingTypeComboBox.Name = "ReprogrammingTypeComboBox";
             this.ReprogrammingTypeComboBox.Size = new System.Drawing.Size(117, 29);
             this.ReprogrammingTypeComboBox.TabIndex = 18;
             this.ReprogrammingTypeComboBox.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.ReprogrammingTypeComboBox.UseSelectable = true;
             // 
             // amountCurrencyTextBox
             // 
@@ -2661,7 +2955,7 @@ namespace Budget
             0,
             131072});
             this.amountCurrencyTextBox.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.amountCurrencyTextBox.Location = new System.Drawing.Point(75, 360);
+            this.amountCurrencyTextBox.Location = new System.Drawing.Point(82, 359);
             this.amountCurrencyTextBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.amountCurrencyTextBox.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
             this.amountCurrencyTextBox.Name = "amountCurrencyTextBox";
@@ -2674,6 +2968,8 @@ namespace Budget
             // 
             // FrCodeComboBox
             // 
+            this.FrCodeComboBox.DataSource = this.TransferBindingSource;
+            this.FrCodeComboBox.DisplayMember = "ProgramProjectCode";
             this.FrCodeComboBox.FormattingEnabled = true;
             this.FrCodeComboBox.ItemHeight = 23;
             this.FrCodeComboBox.Location = new System.Drawing.Point(80, 317);
@@ -2682,9 +2978,12 @@ namespace Budget
             this.FrCodeComboBox.Size = new System.Drawing.Size(117, 29);
             this.FrCodeComboBox.TabIndex = 15;
             this.FrCodeComboBox.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.FrCodeComboBox.UseSelectable = true;
             // 
             // FrOrgComboBox
             // 
+            this.FrOrgComboBox.DataSource = this.TransferBindingSource;
+            this.FrOrgComboBox.DisplayMember = "Org";
             this.FrOrgComboBox.FormattingEnabled = true;
             this.FrOrgComboBox.ItemHeight = 23;
             this.FrOrgComboBox.Location = new System.Drawing.Point(80, 188);
@@ -2693,29 +2992,26 @@ namespace Budget
             this.FrOrgComboBox.Size = new System.Drawing.Size(117, 29);
             this.FrOrgComboBox.TabIndex = 13;
             this.FrOrgComboBox.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.FrOrgComboBox.UseSelectable = true;
             // 
             // FrBocComboBox
             // 
+            this.FrBocComboBox.DataSource = this.TransferBindingSource;
+            this.FrBocComboBox.DisplayMember = "BOC";
             this.FrBocComboBox.FormattingEnabled = true;
             this.FrBocComboBox.ItemHeight = 23;
-            this.FrBocComboBox.Items.AddRange(new object[] {
-            "10",
-            "17",
-            "21",
-            "28",
-            "36",
-            "37",
-            "38",
-            "41"});
             this.FrBocComboBox.Location = new System.Drawing.Point(80, 268);
             this.FrBocComboBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.FrBocComboBox.Name = "FrBocComboBox";
             this.FrBocComboBox.Size = new System.Drawing.Size(117, 29);
             this.FrBocComboBox.TabIndex = 11;
             this.FrBocComboBox.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.FrBocComboBox.UseSelectable = true;
             // 
             // FrFundComboBox
             // 
+            this.FrFundComboBox.DataSource = this.TransferBindingSource;
+            this.FrFundComboBox.DisplayMember = "Fund";
             this.FrFundComboBox.FormattingEnabled = true;
             this.FrFundComboBox.ItemHeight = 23;
             this.FrFundComboBox.Location = new System.Drawing.Point(80, 146);
@@ -2724,30 +3020,26 @@ namespace Budget
             this.FrFundComboBox.Size = new System.Drawing.Size(117, 29);
             this.FrFundComboBox.TabIndex = 9;
             this.FrFundComboBox.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.FrFundComboBox.UseSelectable = true;
             // 
             // FrBfyComboBox
             // 
+            this.FrBfyComboBox.DataSource = this.TransferBindingSource;
+            this.FrBfyComboBox.DisplayMember = "BBFY";
             this.FrBfyComboBox.FormattingEnabled = true;
             this.FrBfyComboBox.ItemHeight = 23;
-            this.FrBfyComboBox.Items.AddRange(new object[] {
-            "2017",
-            "2018",
-            "2019",
-            "2020",
-            "2021",
-            "2022",
-            "0223",
-            "2024",
-            "2025"});
             this.FrBfyComboBox.Location = new System.Drawing.Point(80, 104);
             this.FrBfyComboBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.FrBfyComboBox.Name = "FrBfyComboBox";
             this.FrBfyComboBox.Size = new System.Drawing.Size(117, 29);
             this.FrBfyComboBox.TabIndex = 7;
             this.FrBfyComboBox.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.FrBfyComboBox.UseSelectable = true;
             // 
             // FrRpioComboBox
             // 
+            this.FrRpioComboBox.DataSource = this.TransferBindingSource;
+            this.FrRpioComboBox.DisplayMember = "RPIO";
             this.FrRpioComboBox.FormattingEnabled = true;
             this.FrRpioComboBox.ItemHeight = 23;
             this.FrRpioComboBox.Location = new System.Drawing.Point(80, 64);
@@ -2756,81 +3048,26 @@ namespace Budget
             this.FrRpioComboBox.Size = new System.Drawing.Size(117, 29);
             this.FrRpioComboBox.TabIndex = 3;
             this.FrRpioComboBox.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.FrRpioComboBox.UseSelectable = true;
             // 
             // metroPanel3
             // 
             this.metroPanel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.metroPanel3.Controls.Add(this.flowLayoutPanel2);
-            this.metroPanel3.Controls.Add(this.flowLayoutPanel5);
+            this.metroPanel3.Controls.Add(this.TransferNavigator);
+            this.metroPanel3.Controls.Add(this.TransferGrid);
             this.metroPanel3.HorizontalScrollbarBarColor = true;
             this.metroPanel3.HorizontalScrollbarHighlightOnWheel = false;
             this.metroPanel3.HorizontalScrollbarSize = 9;
-            this.metroPanel3.Location = new System.Drawing.Point(259, 51);
+            this.metroPanel3.Location = new System.Drawing.Point(333, 51);
             this.metroPanel3.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.metroPanel3.Name = "metroPanel3";
-            this.metroPanel3.Size = new System.Drawing.Size(1125, 431);
+            this.metroPanel3.Size = new System.Drawing.Size(983, 442);
             this.metroPanel3.TabIndex = 69;
             this.metroPanel3.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.metroPanel3.VerticalScrollbarBarColor = true;
             this.metroPanel3.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel3.VerticalScrollbarSize = 8;
-            // 
-            // flowLayoutPanel2
-            // 
-            this.flowLayoutPanel2.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.flowLayoutPanel2.BackColor = System.Drawing.Color.Transparent;
-            this.flowLayoutPanel2.Controls.Add(this.metroButton3);
-            this.flowLayoutPanel2.Controls.Add(this.metroButton4);
-            this.flowLayoutPanel2.Controls.Add(this.metroButton5);
-            this.flowLayoutPanel2.Controls.Add(this.metroButton6);
-            this.flowLayoutPanel2.Location = new System.Drawing.Point(591, 347);
-            this.flowLayoutPanel2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(487, 63);
-            this.flowLayoutPanel2.TabIndex = 86;
-            // 
-            // metroButton3
-            // 
-            this.metroButton3.BackColor = System.Drawing.Color.Black;
-            this.metroButton3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.metroButton3.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.metroButton3.Location = new System.Drawing.Point(2, 3);
-            this.metroButton3.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.metroButton3.Name = "metroButton3";
-            this.metroButton3.Size = new System.Drawing.Size(117, 53);
-            this.metroButton3.TabIndex = 78;
-            // metroButton4
-            // 
-            this.metroButton4.BackColor = System.Drawing.Color.Black;
-            this.metroButton4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.metroButton4.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.metroButton4.Location = new System.Drawing.Point(123, 3);
-            this.metroButton4.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.metroButton4.Name = "metroButton4";
-            this.metroButton4.Size = new System.Drawing.Size(116, 56);
-            this.metroButton4.TabIndex = 79;
-            // 
-            // metroButton5
-            // 
-            this.metroButton5.BackColor = System.Drawing.Color.Black;
-            this.metroButton5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.metroButton5.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.metroButton5.Location = new System.Drawing.Point(243, 3);
-            this.metroButton5.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.metroButton5.Name = "metroButton5";
-            this.metroButton5.Size = new System.Drawing.Size(114, 56);
-            this.metroButton5.TabIndex = 80;
-            // metroButton6
-            // 
-            this.metroButton6.BackColor = System.Drawing.Color.Black;
-            this.metroButton6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.metroButton6.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.metroButton6.Location = new System.Drawing.Point(361, 3);
-            this.metroButton6.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.metroButton6.Name = "metroButton6";
-            this.metroButton6.Size = new System.Drawing.Size(115, 53);
-            this.metroButton6.TabIndex = 81;
             // 
             // flowLayoutPanel5
             // 
@@ -2840,7 +3077,7 @@ namespace Budget
             this.flowLayoutPanel5.Controls.Add(this.metroButton12);
             this.flowLayoutPanel5.Controls.Add(this.metroButton13);
             this.flowLayoutPanel5.Controls.Add(this.metroButton14);
-            this.flowLayoutPanel5.Location = new System.Drawing.Point(591, 264);
+            this.flowLayoutPanel5.Location = new System.Drawing.Point(652, 517);
             this.flowLayoutPanel5.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.flowLayoutPanel5.Name = "flowLayoutPanel5";
             this.flowLayoutPanel5.Size = new System.Drawing.Size(487, 66);
@@ -2857,6 +3094,7 @@ namespace Budget
             this.metroButton11.Size = new System.Drawing.Size(115, 53);
             this.metroButton11.TabIndex = 64;
             this.metroButton11.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.metroButton11.UseSelectable = true;
             // 
             // metroButton12
             // 
@@ -2869,6 +3107,7 @@ namespace Budget
             this.metroButton12.Size = new System.Drawing.Size(116, 53);
             this.metroButton12.TabIndex = 63;
             this.metroButton12.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.metroButton12.UseSelectable = true;
             // 
             // metroButton13
             // 
@@ -2881,6 +3120,7 @@ namespace Budget
             this.metroButton13.Size = new System.Drawing.Size(115, 53);
             this.metroButton13.TabIndex = 65;
             this.metroButton13.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.metroButton13.UseSelectable = true;
             // 
             // metroButton14
             // 
@@ -2893,28 +3133,7 @@ namespace Budget
             this.metroButton14.Size = new System.Drawing.Size(114, 53);
             this.metroButton14.TabIndex = 66;
             this.metroButton14.Theme = MetroFramework.MetroThemeStyle.Dark;
-            // ReprogrammingGrid
-            // 
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.metroButton14.UseSelectable = true;
             // 
             // tableLayoutPanel1
             // 
@@ -2955,6 +3174,34 @@ namespace Budget
             // 
             // 
             // 
+            // 
+            this.metroTextBox8.CustomButton.Image = null;
+            this.metroTextBox8.CustomButton.Location = new System.Drawing.Point(-20, 2);
+            this.metroTextBox8.CustomButton.Name = "";
+            this.metroTextBox8.CustomButton.Size = new System.Drawing.Size(17, 17);
+            this.metroTextBox8.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.metroTextBox8.CustomButton.TabIndex = 1;
+            this.metroTextBox8.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.metroTextBox8.CustomButton.UseSelectable = true;
+            this.metroTextBox8.CustomButton.Visible = false;
+            this.metroTextBox8.Lines = new string[0];
+            this.metroTextBox8.Location = new System.Drawing.Point(133, 194);
+            this.metroTextBox8.MaxLength = 32767;
+            this.metroTextBox8.Name = "metroTextBox8";
+            this.metroTextBox8.PasswordChar = '\0';
+            this.metroTextBox8.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.metroTextBox8.SelectedText = "";
+            this.metroTextBox8.SelectionLength = 0;
+            this.metroTextBox8.SelectionStart = 0;
+            this.metroTextBox8.ShortcutsEnabled = true;
+            this.metroTextBox8.Size = new System.Drawing.Size(0, 22);
+            this.metroTextBox8.TabIndex = 0;
+            this.metroTextBox8.UseSelectable = true;
+            this.metroTextBox8.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.metroTextBox8.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // label7
+            // 
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label7.AutoSize = true;
             this.label7.ForeColor = System.Drawing.SystemColors.ActiveCaption;
@@ -2965,6 +3212,95 @@ namespace Budget
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Old
+            // 
+            // 
+            // 
+            // 
+            this.Old.CustomButton.Image = null;
+            this.Old.CustomButton.Location = new System.Drawing.Point(-20, 2);
+            this.Old.CustomButton.Name = "";
+            this.Old.CustomButton.Size = new System.Drawing.Size(17, 17);
+            this.Old.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.Old.CustomButton.TabIndex = 1;
+            this.Old.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.Old.CustomButton.UseSelectable = true;
+            this.Old.CustomButton.Visible = false;
+            this.Old.Lines = new string[0];
+            this.Old.Location = new System.Drawing.Point(3, 194);
+            this.Old.MaxLength = 32767;
+            this.Old.Name = "Old";
+            this.Old.PasswordChar = '\0';
+            this.Old.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.Old.SelectedText = "";
+            this.Old.SelectionLength = 0;
+            this.Old.SelectionStart = 0;
+            this.Old.ShortcutsEnabled = true;
+            this.Old.Size = new System.Drawing.Size(0, 22);
+            this.Old.TabIndex = 141;
+            this.Old.UseSelectable = true;
+            this.Old.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.Old.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // Code
+            // 
+            // 
+            // 
+            // 
+            this.Code.CustomButton.Image = null;
+            this.Code.CustomButton.Location = new System.Drawing.Point(-20, 2);
+            this.Code.CustomButton.Name = "";
+            this.Code.CustomButton.Size = new System.Drawing.Size(17, 17);
+            this.Code.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.Code.CustomButton.TabIndex = 1;
+            this.Code.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.Code.CustomButton.UseSelectable = true;
+            this.Code.CustomButton.Visible = false;
+            this.Code.Lines = new string[0];
+            this.Code.Location = new System.Drawing.Point(263, 112);
+            this.Code.MaxLength = 32767;
+            this.Code.Name = "Code";
+            this.Code.PasswordChar = '\0';
+            this.Code.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.Code.SelectedText = "";
+            this.Code.SelectionLength = 0;
+            this.Code.SelectionStart = 0;
+            this.Code.ShortcutsEnabled = true;
+            this.Code.Size = new System.Drawing.Size(0, 22);
+            this.Code.TabIndex = 142;
+            this.Code.UseSelectable = true;
+            this.Code.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.Code.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // BOC
+            // 
+            // 
+            // 
+            // 
+            this.BOC.CustomButton.Image = null;
+            this.BOC.CustomButton.Location = new System.Drawing.Point(-20, 2);
+            this.BOC.CustomButton.Name = "";
+            this.BOC.CustomButton.Size = new System.Drawing.Size(17, 17);
+            this.BOC.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.BOC.CustomButton.TabIndex = 1;
+            this.BOC.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.BOC.CustomButton.UseSelectable = true;
+            this.BOC.CustomButton.Visible = false;
+            this.BOC.Lines = new string[0];
+            this.BOC.Location = new System.Drawing.Point(263, 30);
+            this.BOC.MaxLength = 32767;
+            this.BOC.Name = "BOC";
+            this.BOC.PasswordChar = '\0';
+            this.BOC.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.BOC.SelectedText = "";
+            this.BOC.SelectionLength = 0;
+            this.BOC.SelectionStart = 0;
+            this.BOC.ShortcutsEnabled = true;
+            this.BOC.Size = new System.Drawing.Size(0, 22);
+            this.BOC.TabIndex = 143;
+            this.BOC.UseSelectable = true;
+            this.BOC.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.BOC.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
             // label15
             // 
             this.label15.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
@@ -2981,7 +3317,62 @@ namespace Budget
             // 
             // 
             // 
+            this.Fund.CustomButton.Image = null;
+            this.Fund.CustomButton.Location = new System.Drawing.Point(-20, 2);
+            this.Fund.CustomButton.Name = "";
+            this.Fund.CustomButton.Size = new System.Drawing.Size(17, 17);
+            this.Fund.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.Fund.CustomButton.TabIndex = 1;
+            this.Fund.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.Fund.CustomButton.UseSelectable = true;
+            this.Fund.CustomButton.Visible = false;
+            this.Fund.Lines = new string[0];
+            this.Fund.Location = new System.Drawing.Point(133, 30);
+            this.Fund.MaxLength = 32767;
+            this.Fund.Name = "Fund";
+            this.Fund.PasswordChar = '\0';
+            this.Fund.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.Fund.SelectedText = "";
+            this.Fund.SelectionLength = 0;
+            this.Fund.SelectionStart = 0;
+            this.Fund.ShortcutsEnabled = true;
+            this.Fund.Size = new System.Drawing.Size(0, 22);
+            this.Fund.TabIndex = 144;
+            this.Fund.UseSelectable = true;
+            this.Fund.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.Fund.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
+            // Org
+            // 
+            // 
+            // 
+            // 
+            this.Org.CustomButton.Image = null;
+            this.Org.CustomButton.Location = new System.Drawing.Point(-20, 2);
+            this.Org.CustomButton.Name = "";
+            this.Org.CustomButton.Size = new System.Drawing.Size(17, 17);
+            this.Org.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.Org.CustomButton.TabIndex = 1;
+            this.Org.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.Org.CustomButton.UseSelectable = true;
+            this.Org.CustomButton.Visible = false;
+            this.Org.Lines = new string[0];
+            this.Org.Location = new System.Drawing.Point(3, 112);
+            this.Org.MaxLength = 32767;
+            this.Org.Name = "Org";
+            this.Org.PasswordChar = '\0';
+            this.Org.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.Org.SelectedText = "";
+            this.Org.SelectionLength = 0;
+            this.Org.SelectionStart = 0;
+            this.Org.ShortcutsEnabled = true;
+            this.Org.Size = new System.Drawing.Size(0, 22);
+            this.Org.TabIndex = 145;
+            this.Org.UseSelectable = true;
+            this.Org.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.Org.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // label43
             // 
             this.label43.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label43.AutoSize = true;
@@ -2993,6 +3384,35 @@ namespace Budget
             this.label43.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // BFY
+            // 
+            // 
+            // 
+            // 
+            this.BFY.CustomButton.Image = null;
+            this.BFY.CustomButton.Location = new System.Drawing.Point(-20, 2);
+            this.BFY.CustomButton.Name = "";
+            this.BFY.CustomButton.Size = new System.Drawing.Size(17, 17);
+            this.BFY.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.BFY.CustomButton.TabIndex = 1;
+            this.BFY.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.BFY.CustomButton.UseSelectable = true;
+            this.BFY.CustomButton.Visible = false;
+            this.BFY.Lines = new string[0];
+            this.BFY.Location = new System.Drawing.Point(3, 30);
+            this.BFY.MaxLength = 32767;
+            this.BFY.Name = "BFY";
+            this.BFY.PasswordChar = '\0';
+            this.BFY.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.BFY.SelectedText = "";
+            this.BFY.SelectionLength = 0;
+            this.BFY.SelectionStart = 0;
+            this.BFY.ShortcutsEnabled = true;
+            this.BFY.Size = new System.Drawing.Size(0, 22);
+            this.BFY.TabIndex = 146;
+            this.BFY.UseSelectable = true;
+            this.BFY.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.BFY.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
             // label41
             // 
             this.label41.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
@@ -3032,6 +3452,32 @@ namespace Budget
             // 
             // 
             // 
+            this.RC.CustomButton.Image = null;
+            this.RC.CustomButton.Location = new System.Drawing.Point(-20, 2);
+            this.RC.CustomButton.Name = "";
+            this.RC.CustomButton.Size = new System.Drawing.Size(17, 17);
+            this.RC.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.RC.CustomButton.TabIndex = 1;
+            this.RC.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.RC.CustomButton.UseSelectable = true;
+            this.RC.CustomButton.Visible = false;
+            this.RC.Lines = new string[0];
+            this.RC.Location = new System.Drawing.Point(133, 112);
+            this.RC.MaxLength = 32767;
+            this.RC.Name = "RC";
+            this.RC.PasswordChar = '\0';
+            this.RC.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.RC.SelectedText = "";
+            this.RC.SelectionLength = 0;
+            this.RC.SelectionStart = 0;
+            this.RC.ShortcutsEnabled = true;
+            this.RC.Size = new System.Drawing.Size(0, 22);
+            this.RC.TabIndex = 147;
+            this.RC.UseSelectable = true;
+            this.RC.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.RC.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // label1
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label1.AutoSize = true;
@@ -3388,65 +3834,423 @@ namespace Budget
             this.calculatorControl2.Text = "calculatorControl2";
             this.calculatorControl2.UseVisualStyle = true;
             // 
-            // tableLayoutPanel4
+            // Percent
             // 
-            this.tableLayoutPanel4.ColumnCount = 1;
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.Controls.Add(this.expandCollapsePanel3, 0, 0);
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(24, 79);
-            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
-            this.tableLayoutPanel4.RowCount = 1;
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(228, 669);
-            this.tableLayoutPanel4.TabIndex = 104;
+            activeStateCollection4.BackColor = System.Drawing.Color.Black;
+            activeStateCollection4.BorderColor = System.Drawing.SystemColors.InactiveCaption;
+            activeStateCollection4.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            activeStateCollection4.Text = "$";
+            this.Percent.ActiveState = activeStateCollection4;
+            this.Percent.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Percent.ForeColor = System.Drawing.Color.Black;
+            inactiveStateCollection4.BackColor = System.Drawing.Color.Black;
+            inactiveStateCollection4.BorderColor = System.Drawing.SystemColors.InactiveCaption;
+            inactiveStateCollection4.ForeColor = System.Drawing.Color.Gray;
+            inactiveStateCollection4.Text = "%";
+            this.Percent.InactiveState = inactiveStateCollection4;
+            this.Percent.Location = new System.Drawing.Point(20, 6);
+            this.Percent.Margin = new System.Windows.Forms.Padding(2);
+            this.Percent.MinimumSize = new System.Drawing.Size(36, 14);
+            this.Percent.Name = "Percent";
+            this.Percent.Renderer = toggleButtonRenderer4;
+            this.Percent.Size = new System.Drawing.Size(73, 36);
+            sliderCollection4.BackColor = System.Drawing.Color.SteelBlue;
+            sliderCollection4.BorderColor = System.Drawing.SystemColors.MenuHighlight;
+            sliderCollection4.HoverColor = System.Drawing.Color.SteelBlue;
+            sliderCollection4.Width = 30;
+            this.Percent.Slider = sliderCollection4;
+            this.Percent.TabIndex = 50;
+            this.Percent.Text = "toggleButton1";
+            this.Percent.ToggleState = Syncfusion.Windows.Forms.Tools.ToggleButtonState.Active;
             // 
-            // tableLayoutPanel5
+            // toggleButton1
             // 
-            this.tableLayoutPanel5.ColumnCount = 1;
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel5.Controls.Add(this.expandCollapsePanel2, 0, 0);
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(25, 80);
-            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
-            this.tableLayoutPanel5.RowCount = 1;
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(228, 669);
-            this.tableLayoutPanel5.TabIndex = 104;
+            activeStateCollection1.BackColor = System.Drawing.Color.Black;
+            activeStateCollection1.BorderColor = System.Drawing.SystemColors.InactiveCaption;
+            activeStateCollection1.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            activeStateCollection1.Text = "$";
+            this.toggleButton1.ActiveState = activeStateCollection1;
+            this.toggleButton1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toggleButton1.ForeColor = System.Drawing.Color.Black;
+            inactiveStateCollection1.BackColor = System.Drawing.Color.Black;
+            inactiveStateCollection1.BorderColor = System.Drawing.SystemColors.InactiveCaption;
+            inactiveStateCollection1.ForeColor = System.Drawing.Color.Gray;
+            inactiveStateCollection1.Text = "%";
+            this.toggleButton1.InactiveState = inactiveStateCollection1;
+            this.toggleButton1.Location = new System.Drawing.Point(20, 6);
+            this.toggleButton1.Margin = new System.Windows.Forms.Padding(2);
+            this.toggleButton1.MinimumSize = new System.Drawing.Size(36, 14);
+            this.toggleButton1.Name = "toggleButton1";
+            this.toggleButton1.Renderer = toggleButtonRenderer1;
+            this.toggleButton1.Size = new System.Drawing.Size(73, 36);
+            sliderCollection1.BackColor = System.Drawing.Color.SteelBlue;
+            sliderCollection1.BorderColor = System.Drawing.SystemColors.MenuHighlight;
+            sliderCollection1.HoverColor = System.Drawing.Color.SteelBlue;
+            sliderCollection1.Width = 30;
+            this.toggleButton1.Slider = sliderCollection1;
+            this.toggleButton1.TabIndex = 50;
+            this.toggleButton1.Text = "toggleButton1";
+            this.toggleButton1.ToggleState = Syncfusion.Windows.Forms.Tools.ToggleButtonState.Active;
             // 
-            // tableLayoutPanel6
+            // toggleButton2
             // 
-            this.tableLayoutPanel6.ColumnCount = 1;
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel6.Controls.Add(this.expandCollapsePanel6, 0, 0);
-            this.tableLayoutPanel6.Location = new System.Drawing.Point(25, 80);
-            this.tableLayoutPanel6.Name = "tableLayoutPanel6";
-            this.tableLayoutPanel6.RowCount = 1;
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(228, 669);
-            this.tableLayoutPanel6.TabIndex = 104;
+            activeStateCollection2.BackColor = System.Drawing.Color.Black;
+            activeStateCollection2.BorderColor = System.Drawing.SystemColors.InactiveCaption;
+            activeStateCollection2.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            activeStateCollection2.Text = "$";
+            this.toggleButton2.ActiveState = activeStateCollection2;
+            this.toggleButton2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toggleButton2.ForeColor = System.Drawing.Color.Black;
+            inactiveStateCollection2.BackColor = System.Drawing.Color.Black;
+            inactiveStateCollection2.BorderColor = System.Drawing.SystemColors.InactiveCaption;
+            inactiveStateCollection2.ForeColor = System.Drawing.Color.Gray;
+            inactiveStateCollection2.Text = "%";
+            this.toggleButton2.InactiveState = inactiveStateCollection2;
+            this.toggleButton2.Location = new System.Drawing.Point(28, 15);
+            this.toggleButton2.Margin = new System.Windows.Forms.Padding(2);
+            this.toggleButton2.MinimumSize = new System.Drawing.Size(36, 14);
+            this.toggleButton2.Name = "toggleButton2";
+            this.toggleButton2.Renderer = toggleButtonRenderer2;
+            this.toggleButton2.Size = new System.Drawing.Size(73, 36);
+            sliderCollection2.BackColor = System.Drawing.Color.SteelBlue;
+            sliderCollection2.BorderColor = System.Drawing.SystemColors.MenuHighlight;
+            sliderCollection2.HoverColor = System.Drawing.Color.SteelBlue;
+            sliderCollection2.Width = 30;
+            this.toggleButton2.Slider = sliderCollection2;
+            this.toggleButton2.TabIndex = 105;
+            this.toggleButton2.Text = "toggleButton2";
+            this.toggleButton2.ToggleState = Syncfusion.Windows.Forms.Tools.ToggleButtonState.Active;
             // 
-            // tableLayoutPanel7
+            // toggleButton3
             // 
-            this.tableLayoutPanel7.ColumnCount = 1;
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel7.Controls.Add(this.expandCollapsePanel5, 0, 0);
-            this.tableLayoutPanel7.Location = new System.Drawing.Point(20, 80);
-            this.tableLayoutPanel7.Name = "tableLayoutPanel7";
-            this.tableLayoutPanel7.RowCount = 1;
-            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel7.Size = new System.Drawing.Size(248, 706);
-            this.tableLayoutPanel7.TabIndex = 104;
+            activeStateCollection3.BackColor = System.Drawing.Color.Black;
+            activeStateCollection3.BorderColor = System.Drawing.SystemColors.InactiveCaption;
+            activeStateCollection3.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            activeStateCollection3.Text = "$";
+            this.toggleButton3.ActiveState = activeStateCollection3;
+            this.toggleButton3.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toggleButton3.ForeColor = System.Drawing.Color.Black;
+            inactiveStateCollection3.BackColor = System.Drawing.Color.Black;
+            inactiveStateCollection3.BorderColor = System.Drawing.SystemColors.InactiveCaption;
+            inactiveStateCollection3.ForeColor = System.Drawing.Color.Gray;
+            inactiveStateCollection3.Text = "%";
+            this.toggleButton3.InactiveState = inactiveStateCollection3;
+            this.toggleButton3.Location = new System.Drawing.Point(28, 6);
+            this.toggleButton3.Margin = new System.Windows.Forms.Padding(2);
+            this.toggleButton3.MinimumSize = new System.Drawing.Size(36, 14);
+            this.toggleButton3.Name = "toggleButton3";
+            this.toggleButton3.Renderer = toggleButtonRenderer3;
+            this.toggleButton3.Size = new System.Drawing.Size(73, 36);
+            sliderCollection3.BackColor = System.Drawing.Color.SteelBlue;
+            sliderCollection3.BorderColor = System.Drawing.SystemColors.MenuHighlight;
+            sliderCollection3.HoverColor = System.Drawing.Color.SteelBlue;
+            sliderCollection3.Width = 30;
+            this.toggleButton3.Slider = sliderCollection3;
+            this.toggleButton3.TabIndex = 105;
+            this.toggleButton3.Text = "toggleButton3";
+            this.toggleButton3.ToggleState = Syncfusion.Windows.Forms.Tools.ToggleButtonState.Active;
             // 
-            // tableLayoutPanel8
+            // toggleButton4
             // 
-            this.tableLayoutPanel8.ColumnCount = 1;
-            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel8.Controls.Add(this.expandCollapsePanel4, 0, 0);
-            this.tableLayoutPanel8.Location = new System.Drawing.Point(20, 43);
-            this.tableLayoutPanel8.Name = "tableLayoutPanel8";
-            this.tableLayoutPanel8.RowCount = 1;
-            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel8.Size = new System.Drawing.Size(248, 736);
-            this.tableLayoutPanel8.TabIndex = 104;
+            activeStateCollection5.BackColor = System.Drawing.Color.Black;
+            activeStateCollection5.BorderColor = System.Drawing.SystemColors.InactiveCaption;
+            activeStateCollection5.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            activeStateCollection5.Text = "$";
+            this.toggleButton4.ActiveState = activeStateCollection5;
+            this.toggleButton4.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toggleButton4.ForeColor = System.Drawing.Color.Black;
+            inactiveStateCollection5.BackColor = System.Drawing.Color.Black;
+            inactiveStateCollection5.BorderColor = System.Drawing.SystemColors.InactiveCaption;
+            inactiveStateCollection5.ForeColor = System.Drawing.Color.Gray;
+            inactiveStateCollection5.Text = "%";
+            this.toggleButton4.InactiveState = inactiveStateCollection5;
+            this.toggleButton4.Location = new System.Drawing.Point(20, 13);
+            this.toggleButton4.Margin = new System.Windows.Forms.Padding(2);
+            this.toggleButton4.MinimumSize = new System.Drawing.Size(36, 14);
+            this.toggleButton4.Name = "toggleButton4";
+            this.toggleButton4.Renderer = toggleButtonRenderer5;
+            this.toggleButton4.Size = new System.Drawing.Size(73, 36);
+            sliderCollection5.BackColor = System.Drawing.Color.SteelBlue;
+            sliderCollection5.BorderColor = System.Drawing.SystemColors.MenuHighlight;
+            sliderCollection5.HoverColor = System.Drawing.Color.SteelBlue;
+            sliderCollection5.Width = 30;
+            this.toggleButton4.Slider = sliderCollection5;
+            this.toggleButton4.TabIndex = 105;
+            this.toggleButton4.Text = "toggleButton4";
+            this.toggleButton4.ToggleState = Syncfusion.Windows.Forms.Tools.ToggleButtonState.Active;
+            // 
+            // TransferGrid
+            // 
+            this.TransferGrid.AutoGenerateColumns = false;
+            this.TransferGrid.BackgroundColor = System.Drawing.SystemColors.GradientActiveCaption;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.TransferGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.TransferGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.TransferGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.budgetLevelDataGridViewTextBoxColumn,
+            this.docTypeDataGridViewTextBoxColumn,
+            this.orgDataGridViewTextBoxColumn,
+            this.rPIODataGridViewTextBoxColumn,
+            this.rCDataGridViewTextBoxColumn,
+            this.fundDataGridViewTextBoxColumn,
+            this.programProjectCodeDataGridViewTextBoxColumn,
+            this.bOCDataGridViewTextBoxColumn,
+            this.amountDataGridViewTextBoxColumn,
+            this.dateDataGridViewTextBoxColumn,
+            this.programProjectNameDataGridViewTextBoxColumn,
+            this.npmCodeDataGridViewTextBoxColumn});
+            this.TransferGrid.DataSource = this.TransferBindingSource;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.TransferGrid.DefaultCellStyle = dataGridViewCellStyle6;
+            this.TransferGrid.EnableHeadersVisualStyles = false;
+            this.TransferGrid.Location = new System.Drawing.Point(17, 34);
+            this.TransferGrid.Name = "TransferGrid";
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.TransferGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            this.TransferGrid.RowTemplate.Height = 28;
+            this.TransferGrid.Size = new System.Drawing.Size(951, 347);
+            this.TransferGrid.TabIndex = 2;
+            // 
+            // sqlServer
+            // 
+            this.sqlServer.DataSetName = "SqlServer";
+            this.sqlServer.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // TransferBindingSource
+            // 
+            this.TransferBindingSource.DataMember = "T7";
+            this.TransferBindingSource.DataSource = this.sqlServer;
+            // 
+            // TransferAdapter
+            // 
+            this.TransferAdapter.ClearBeforeFill = true;
+            // 
+            // TransferNavigator
+            // 
+            this.TransferNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
+            this.TransferNavigator.BackColor = System.Drawing.Color.Transparent;
+            this.TransferNavigator.BindingSource = this.TransferBindingSource;
+            this.TransferNavigator.CountItem = this.bindingNavigatorCountItem;
+            this.TransferNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
+            this.TransferNavigator.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.TransferNavigator.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.TransferNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.bindingNavigatorMoveFirstItem,
+            this.bindingNavigatorMovePreviousItem,
+            this.bindingNavigatorSeparator,
+            this.bindingNavigatorPositionItem,
+            this.bindingNavigatorCountItem,
+            this.bindingNavigatorSeparator1,
+            this.bindingNavigatorMoveNextItem,
+            this.bindingNavigatorMoveLastItem,
+            this.bindingNavigatorSeparator2,
+            this.bindingNavigatorAddNewItem,
+            this.bindingNavigatorDeleteItem});
+            this.TransferNavigator.Location = new System.Drawing.Point(0, 411);
+            this.TransferNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
+            this.TransferNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
+            this.TransferNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
+            this.TransferNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
+            this.TransferNavigator.Name = "TransferNavigator";
+            this.TransferNavigator.PositionItem = this.bindingNavigatorPositionItem;
+            this.TransferNavigator.Size = new System.Drawing.Size(983, 31);
+            this.TransferNavigator.TabIndex = 3;
+            this.TransferNavigator.Text = "bindingNavigator1";
+            // 
+            // bindingNavigatorMoveFirstItem
+            // 
+            this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
+            this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
+            this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(28, 28);
+            this.bindingNavigatorMoveFirstItem.Text = "Move first";
+            // 
+            // bindingNavigatorMovePreviousItem
+            // 
+            this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
+            this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
+            this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(28, 28);
+            this.bindingNavigatorMovePreviousItem.Text = "Move previous";
+            // 
+            // bindingNavigatorSeparator
+            // 
+            this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 31);
+            // 
+            // bindingNavigatorPositionItem
+            // 
+            this.bindingNavigatorPositionItem.AccessibleName = "Position";
+            this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
+            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 31);
+            this.bindingNavigatorPositionItem.Text = "0";
+            this.bindingNavigatorPositionItem.ToolTipText = "Current position";
+            // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(54, 28);
+            this.bindingNavigatorCountItem.Text = "of {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
+            // 
+            // bindingNavigatorSeparator1
+            // 
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 31);
+            // 
+            // bindingNavigatorMoveNextItem
+            // 
+            this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
+            this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
+            this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(28, 28);
+            this.bindingNavigatorMoveNextItem.Text = "Move next";
+            // 
+            // bindingNavigatorMoveLastItem
+            // 
+            this.bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
+            this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
+            this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(28, 28);
+            this.bindingNavigatorMoveLastItem.Text = "Move last";
+            // 
+            // bindingNavigatorSeparator2
+            // 
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 31);
+            // 
+            // bindingNavigatorAddNewItem
+            // 
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(28, 28);
+            this.bindingNavigatorAddNewItem.Text = "Add new";
+            // 
+            // bindingNavigatorDeleteItem
+            // 
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(28, 28);
+            this.bindingNavigatorDeleteItem.Text = "Delete";
+            // 
+            // budgetLevelDataGridViewTextBoxColumn
+            // 
+            this.budgetLevelDataGridViewTextBoxColumn.DataPropertyName = "BudgetLevel";
+            this.budgetLevelDataGridViewTextBoxColumn.HeaderText = "BudgetLevel";
+            this.budgetLevelDataGridViewTextBoxColumn.Name = "budgetLevelDataGridViewTextBoxColumn";
+            this.budgetLevelDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // docTypeDataGridViewTextBoxColumn
+            // 
+            this.docTypeDataGridViewTextBoxColumn.DataPropertyName = "DocType";
+            this.docTypeDataGridViewTextBoxColumn.HeaderText = "DocType";
+            this.docTypeDataGridViewTextBoxColumn.Name = "docTypeDataGridViewTextBoxColumn";
+            // 
+            // orgDataGridViewTextBoxColumn
+            // 
+            this.orgDataGridViewTextBoxColumn.DataPropertyName = "Org";
+            this.orgDataGridViewTextBoxColumn.HeaderText = "Org";
+            this.orgDataGridViewTextBoxColumn.Name = "orgDataGridViewTextBoxColumn";
+            // 
+            // rPIODataGridViewTextBoxColumn
+            // 
+            this.rPIODataGridViewTextBoxColumn.DataPropertyName = "RPIO";
+            this.rPIODataGridViewTextBoxColumn.HeaderText = "RPIO";
+            this.rPIODataGridViewTextBoxColumn.Name = "rPIODataGridViewTextBoxColumn";
+            // 
+            // rCDataGridViewTextBoxColumn
+            // 
+            this.rCDataGridViewTextBoxColumn.DataPropertyName = "RC";
+            this.rCDataGridViewTextBoxColumn.HeaderText = "RC";
+            this.rCDataGridViewTextBoxColumn.Name = "rCDataGridViewTextBoxColumn";
+            // 
+            // fundDataGridViewTextBoxColumn
+            // 
+            this.fundDataGridViewTextBoxColumn.DataPropertyName = "Fund";
+            this.fundDataGridViewTextBoxColumn.HeaderText = "Fund";
+            this.fundDataGridViewTextBoxColumn.Name = "fundDataGridViewTextBoxColumn";
+            // 
+            // programProjectCodeDataGridViewTextBoxColumn
+            // 
+            this.programProjectCodeDataGridViewTextBoxColumn.DataPropertyName = "ProgramProjectCode";
+            this.programProjectCodeDataGridViewTextBoxColumn.HeaderText = "ProgramProjectCode";
+            this.programProjectCodeDataGridViewTextBoxColumn.Name = "programProjectCodeDataGridViewTextBoxColumn";
+            // 
+            // bOCDataGridViewTextBoxColumn
+            // 
+            this.bOCDataGridViewTextBoxColumn.DataPropertyName = "BOC";
+            this.bOCDataGridViewTextBoxColumn.HeaderText = "BOC";
+            this.bOCDataGridViewTextBoxColumn.Name = "bOCDataGridViewTextBoxColumn";
+            // 
+            // amountDataGridViewTextBoxColumn
+            // 
+            this.amountDataGridViewTextBoxColumn.DataPropertyName = "Amount";
+            dataGridViewCellStyle5.Format = "C2";
+            dataGridViewCellStyle5.NullValue = null;
+            this.amountDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle5;
+            this.amountDataGridViewTextBoxColumn.HeaderText = "Amount";
+            this.amountDataGridViewTextBoxColumn.Name = "amountDataGridViewTextBoxColumn";
+            // 
+            // dateDataGridViewTextBoxColumn
+            // 
+            this.dateDataGridViewTextBoxColumn.DataPropertyName = "Date";
+            this.dateDataGridViewTextBoxColumn.HeaderText = "Date";
+            this.dateDataGridViewTextBoxColumn.Name = "dateDataGridViewTextBoxColumn";
+            // 
+            // programProjectNameDataGridViewTextBoxColumn
+            // 
+            this.programProjectNameDataGridViewTextBoxColumn.DataPropertyName = "ProgramProjectName";
+            this.programProjectNameDataGridViewTextBoxColumn.HeaderText = "ProgramProjectName";
+            this.programProjectNameDataGridViewTextBoxColumn.Name = "programProjectNameDataGridViewTextBoxColumn";
+            this.programProjectNameDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // npmCodeDataGridViewTextBoxColumn
+            // 
+            this.npmCodeDataGridViewTextBoxColumn.DataPropertyName = "NpmCode";
+            this.npmCodeDataGridViewTextBoxColumn.HeaderText = "NpmCode";
+            this.npmCodeDataGridViewTextBoxColumn.Name = "npmCodeDataGridViewTextBoxColumn";
+            this.npmCodeDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // expandCollapsePanel7
+            // 
+            this.expandCollapsePanel7.ButtonSize = MakarovDev.ExpandCollapsePanel.ExpandCollapseButton.ExpandButtonSize.Normal;
+            this.expandCollapsePanel7.ButtonStyle = MakarovDev.ExpandCollapsePanel.ExpandCollapseButton.ExpandButtonStyle.Circle;
+            this.expandCollapsePanel7.Controls.Add(this.metroPanel1);
+            this.expandCollapsePanel7.ExpandedHeight = 508;
+            this.expandCollapsePanel7.IsExpanded = true;
+            this.expandCollapsePanel7.Location = new System.Drawing.Point(1342, 51);
+            this.expandCollapsePanel7.Name = "expandCollapsePanel7";
+            this.expandCollapsePanel7.Size = new System.Drawing.Size(280, 508);
+            this.expandCollapsePanel7.TabIndex = 86;
+            this.expandCollapsePanel7.Text = "expandCollapsePanel7";
+            this.expandCollapsePanel7.UseAnimation = true;
             // 
             // DivisionForm
             // 
@@ -3471,7 +4275,7 @@ namespace Budget
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Division Operations Detail";
+            this.Text = "Division ";
             this.Load += new System.EventHandler(this.DivisionForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DivisionFormTabControl)).EndInit();
             this.DivisionFormTabControl.ResumeLayout(false);
@@ -3482,6 +4286,7 @@ namespace Budget
             this.splitContainer5.ResumeLayout(false);
             this.panel13.ResumeLayout(false);
             this.panel13.PerformLayout();
+            this.tableLayoutPanel4.ResumeLayout(false);
             this.expandCollapsePanel3.ResumeLayout(false);
             this.expandCollapsePanel3.PerformLayout();
             this.BocTab.ResumeLayout(false);
@@ -3491,6 +4296,7 @@ namespace Budget
             this.splitContainer2.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
+            this.tableLayoutPanel5.ResumeLayout(false);
             this.expandCollapsePanel2.ResumeLayout(false);
             this.expandCollapsePanel2.PerformLayout();
             this.NpmTab.ResumeLayout(false);
@@ -3500,6 +4306,7 @@ namespace Budget
             this.splitContainer3.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
+            this.tableLayoutPanel6.ResumeLayout(false);
             this.expandCollapsePanel6.ResumeLayout(false);
             this.expandCollapsePanel6.PerformLayout();
             this.ProgramTab.ResumeLayout(false);
@@ -3509,6 +4316,7 @@ namespace Budget
             this.splitContainer1.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
+            this.tableLayoutPanel7.ResumeLayout(false);
             this.expandCollapsePanel5.ResumeLayout(false);
             this.expandCollapsePanel5.PerformLayout();
             this.ProjectTab.ResumeLayout(false);
@@ -3518,6 +4326,7 @@ namespace Budget
             this.splitContainer4.ResumeLayout(false);
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
+            this.tableLayoutPanel8.ResumeLayout(false);
             this.expandCollapsePanel4.ResumeLayout(false);
             this.expandCollapsePanel4.PerformLayout();
             this.DataTab.ResumeLayout(false);
@@ -3543,7 +4352,7 @@ namespace Budget
             this.metroPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.amountCurrencyTextBox)).EndInit();
             this.metroPanel3.ResumeLayout(false);
-            this.flowLayoutPanel2.ResumeLayout(false);
+            this.metroPanel3.PerformLayout();
             this.flowLayoutPanel5.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
@@ -3556,11 +4365,19 @@ namespace Budget
             this.DatabaseGroupBox.ResumeLayout(false);
             this.DatabaseGroupBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.P8BindingSource)).EndInit();
-            this.tableLayoutPanel4.ResumeLayout(false);
-            this.tableLayoutPanel5.ResumeLayout(false);
-            this.tableLayoutPanel6.ResumeLayout(false);
-            this.tableLayoutPanel7.ResumeLayout(false);
-            this.tableLayoutPanel8.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.Percent)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.toggleButton1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.toggleButton2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.toggleButton3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.toggleButton4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TransferGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sqlServer)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TransferBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TransferNavigator)).EndInit();
+            this.TransferNavigator.ResumeLayout(false);
+            this.TransferNavigator.PerformLayout();
+            this.expandCollapsePanel7.ResumeLayout(false);
+            this.expandCollapsePanel7.PerformLayout();
             this.ResumeLayout(false);
 
                 }
@@ -3589,11 +4406,6 @@ namespace Budget
                 protected internal MetroFramework.Controls.MetroButton metroButton12;
                 protected internal MetroFramework.Controls.MetroButton metroButton13;
                 protected internal MetroFramework.Controls.MetroButton metroButton14;
-                private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
-                private MetroFramework.Controls.MetroButton metroButton3;
-                private MetroFramework.Controls.MetroButton metroButton4;
-                private MetroFramework.Controls.MetroButton metroButton5;
-                private MetroFramework.Controls.MetroButton metroButton6;
                 private Syncfusion.Windows.Forms.Tools.TabPageAdv ProgramTab;
                 private Syncfusion.Windows.Forms.Tools.TabPageAdv BocTab;
                 private Syncfusion.Windows.Forms.Tools.TabPageAdv NpmTab;
@@ -3602,7 +4414,6 @@ namespace Budget
                 private System.Windows.Forms.RadioButton rb2;
                 private System.Windows.Forms.RadioButton rb1;
                 protected Syncfusion.Windows.Forms.Chart.ChartControl AppropChart;
-                private Syncfusion.Windows.Forms.Tools.CalculatorControl calculatorControl1;
                 private System.Windows.Forms.Label label5;
                 private System.Windows.Forms.Label label4;
                 private System.Windows.Forms.Label amountLabel1;
@@ -3743,6 +4554,40 @@ namespace Budget
                 private TableLayoutPanel tableLayoutPanel6;
                 private TableLayoutPanel tableLayoutPanel7;
                 private TableLayoutPanel tableLayoutPanel8;
+                private ToggleButton toggleButton1;
+                private ToggleButton toggleButton2;
+                private ToggleButton toggleButton3;
+                private ToggleButton Percent;
+                private ToggleButton toggleButton4;
+                private DataGridView TransferGrid;
+                private Ninja.SqlServer sqlServer;
+                private BindingSource TransferBindingSource;
+                private Ninja.SqlServerTableAdapters.T7Adapter TransferAdapter;
+                private BindingNavigator TransferNavigator;
+                private ToolStripButton bindingNavigatorAddNewItem;
+                private ToolStripLabel bindingNavigatorCountItem;
+                private ToolStripButton bindingNavigatorDeleteItem;
+                private ToolStripButton bindingNavigatorMoveFirstItem;
+                private ToolStripButton bindingNavigatorMovePreviousItem;
+                private ToolStripSeparator bindingNavigatorSeparator;
+                private ToolStripTextBox bindingNavigatorPositionItem;
+                private ToolStripSeparator bindingNavigatorSeparator1;
+                private ToolStripButton bindingNavigatorMoveNextItem;
+                private ToolStripButton bindingNavigatorMoveLastItem;
+                private ToolStripSeparator bindingNavigatorSeparator2;
+                private DataGridViewTextBoxColumn budgetLevelDataGridViewTextBoxColumn;
+                private DataGridViewTextBoxColumn docTypeDataGridViewTextBoxColumn;
+                private DataGridViewTextBoxColumn orgDataGridViewTextBoxColumn;
+                private DataGridViewTextBoxColumn rPIODataGridViewTextBoxColumn;
+                private DataGridViewTextBoxColumn rCDataGridViewTextBoxColumn;
+                private DataGridViewTextBoxColumn fundDataGridViewTextBoxColumn;
+                private DataGridViewTextBoxColumn programProjectCodeDataGridViewTextBoxColumn;
+                private DataGridViewTextBoxColumn bOCDataGridViewTextBoxColumn;
+                private DataGridViewTextBoxColumn amountDataGridViewTextBoxColumn;
+                private DataGridViewTextBoxColumn dateDataGridViewTextBoxColumn;
+                private DataGridViewTextBoxColumn programProjectNameDataGridViewTextBoxColumn;
+                private DataGridViewTextBoxColumn npmCodeDataGridViewTextBoxColumn;
+                private MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel expandCollapsePanel7;
             } 
         }
 

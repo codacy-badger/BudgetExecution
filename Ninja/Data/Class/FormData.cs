@@ -24,6 +24,7 @@ namespace Budget
 
                 DataBuilder Ninja { get; set; }
                 public Tuple<DataTable, PRC[], decimal, int> PrcData { get; set; }
+                bool Percent { get; set; }
                 public DataSet Data { get; set; }
                 public DataTable Table { get; set; }
                 public decimal Total { get; set; }

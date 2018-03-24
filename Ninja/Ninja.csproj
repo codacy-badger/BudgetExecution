@@ -343,6 +343,9 @@
     <EmbeddedResource Include="Data\Forms\AccountManager.resx">
       <DependentUpon>AccountManager.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Data\Forms\DivisionForm.resx">
+      <DependentUpon>DivisionForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Data\Forms\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

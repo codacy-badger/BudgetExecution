@@ -71,6 +71,10 @@ namespace Budget
 
                 private void DivisionForm_Load(object sender, EventArgs e)
                 {
+                    // TODO: This line of code loads data into the 'sqlServer.T6' table. You can move, or remove it, as needed.
+                    this.t6Adapter.Fill(this.sqlServer.T6);
+                    // TODO: This line of code loads data into the 'sqlServer.T7' table. You can move, or remove it, as needed.
+                    this.TransferAdapter.Fill(this.sqlServer.T7);
                     Text = "P7 " + P8.Org.Name;
                     AppropChart = new Chart(AppropChart, P8.FundData).CreateColumn( );
                     BocChart = new Chart(BocChart, P8.BocData).CreateColumn( );

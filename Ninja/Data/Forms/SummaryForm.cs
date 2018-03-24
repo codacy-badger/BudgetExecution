@@ -1,6 +1,7 @@
 #region Using Directives
 
 using MetroSet_UI.Controls;
+using Syncfusion.Windows.Forms.Chart;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -20,7 +21,8 @@ namespace Budget
             public partial class SummaryForm : MetroForm, IAuthority
             {
                 #region Properties
-
+                public FormData Ninja { get; set; }
+                ChartControl[] TabChart { get; set; }
                 public DivisionAuthority Division { get; }
                 public DataBuilder Data { get; }
                 public DataSet E6 { get; }
@@ -86,12 +88,13 @@ namespace Budget
 
                 private void Form_Load(object sender, EventArgs e)
                 {
-                    P8chart = new Chart(P8chart, "Fund", Division.FundData).CreateColumn( );
-                    AppropChart = new Chart(AppropChart, Division.FundData).CreateColumn( );
-                    BocChart = new Chart(BocChart, Division.BocData).CreateColumn( );
-                    NpmChart = new Chart(NpmChart, Division.NpmData).CreateColumn( );
-                    GoalChart = new Chart(GoalChart, Division.GoalData).CreateColumn( );
-                    ProgramChart = new Chart(ProgramChart, Division.ProgramData).CreateColumn( );
+                    TabChart = GetChartArray();
+                    TabChart1 = new Chart(TabChart1, "Fund", Division.FundData).CreateColumn( );
+                    TabChart2 = new Chart(TabChart2, Division.FundData).CreateColumn( );
+                    TabChart3 = new Chart(TabChart3, Division.BocData).CreateColumn( );
+                    TabChart4 = new Chart(TabChart4, Division.NpmData).CreateColumn( );
+                    TabChart5 = new Chart(TabChart5, Division.GoalData).CreateColumn( );
+                    TabChart6 = new Chart(TabChart6, Division.ProgramData).CreateColumn( );
                     SummaryTabControl.SelectedIndexChanged += new EventHandler(GetTabPanelTitle);
                 }
 
@@ -135,6 +138,11 @@ namespace Budget
                             Text = $"Division Status of Funds";
                             break;
                     }
+                }
+
+                ChartControl[] GetChartArray()
+                {
+                    return new ChartControl[] { TabChart1, TabChart2, TabChart3, TabChart4, TabChart5, TabChart6 };
                 }
 
                 #region MetroSet Buttons Methods
@@ -193,7 +201,7 @@ namespace Budget
                     var data = GetDataTotals(table, div, "RC");
                     Text = $"Total P7 Division {name} Funding";
                     string title = $"Total P7 Division  {name} Funding: {GetTotal(table).ToString("c")}";
-                    AppropChart = new Chart(AppropChart, title, data).CreateColumn( );
+                    TabChart2 = new Chart(TabChart2, title, data).CreateColumn( );
                 }
 
                 private void OnBocButtonSelect(object sender, EventArgs e)
@@ -205,7 +213,7 @@ namespace Budget
                     var data = GetDataTotals(table, div, "RC");
                     Text = $"Total P7 Division {name} Funding";
                     string title = $"Total P7 Division  {name} Funding: {GetTotal(table).ToString("c")}";
-                    BocChart = new Chart(BocChart, title, data).CreateColumn( );
+                    TabChart3 = new Chart(TabChart3, title, data).CreateColumn( );
                 }
 
                 private void OnNpmButtonSelect(object sender, EventArgs e)
@@ -217,7 +225,7 @@ namespace Budget
                     var data = GetDataTotals(table, div, "RC");
                     Text = $"Total P7 Division {name} Funding";
                     string title = $"Total P7 Division  {name} Funding: {GetTotal(table).ToString("c")}";
-                    NpmChart = new Chart(NpmChart, title, data).CreateColumn( );
+                    TabChart4 = new Chart(TabChart4, title, data).CreateColumn( );
                 }
 
                 private void OnGoalButtonSelect(object sender, EventArgs e)
@@ -229,7 +237,7 @@ namespace Budget
                     var data = GetDataTotals(table, div, "RC");
                     Text = $"Total P7 Division {name} Funding";
                     string title = $"Total P7 Division  {name} Funding: {GetTotal(table).ToString("c")}";
-                    GoalChart = new Chart(GoalChart, title, data).CreateColumn( );
+                    TabChart5 = new Chart(TabChart5, title, data).CreateColumn( );
                 }
 
                 private void ObjectiveButton_OnSelect(object sender, EventArgs e)
@@ -241,7 +249,7 @@ namespace Budget
                     var data = GetDataTotals(table, div, "RC");
                     Text = $"Total P7 Division {name} Funding";
                     string title = $"Total P7 Division {name} Funding: {GetTotal(table).ToString("c")}";
-                    ProgramChart = new Chart(ProgramChart, title, data).CreateColumn( );
+                    TabChart6 = new Chart(TabChart6, title, data).CreateColumn( );
                 }
 
                 #endregion
@@ -250,44 +258,44 @@ namespace Budget
 
                 public void AppropriationButton_OnClick(object sender, System.EventArgs e)
                 {
-                    P8chart = new Chart(P8chart, "Fund", Division.FundData).CreateColumn( );
+                    TabChart1 = new Chart(TabChart1, "Fund", Division.FundData).CreateColumn( );
                     Text = "P7 Division Funding by Appropriation";
                 }
 
                 public void BocButton_OnClick(object sender, System.EventArgs e)
                 {
-                    P8chart = new Chart(P8chart, "BOC", Division.BocData).CreateColumn( );
+                    TabChart1 = new Chart(TabChart1, "BOC", Division.BocData).CreateColumn( );
                     Text = $"P7 Division by Object Class";
                 }
 
                 public void FteButton_OnClick(object sender, System.EventArgs e)
                 {
-                    P8chart = new Chart(P8chart, "FTE", Division.FteInfo).CreateColumn( );
+                    TabChart1 = new Chart(TabChart1, "FTE", Division.FteInfo).CreateColumn( );
                     Text = $"P7 Division FTE by Appropriation";
                 }
 
                 public void NpmButton_OnClick(object sender, System.EventArgs e)
                 {
-                    P8chart = new Chart(P8chart, "NPM", Division.NpmData).CreateColumn( );
+                    TabChart1 = new Chart(TabChart1, "NPM", Division.NpmData).CreateColumn( );
                     Text = $"P7 Division Funding by HQ Program Office";
                 }
 
                 public void DivisionButton_OnClick(object sender, EventArgs e)
                 {
                     var data = new DivisionAuthority( );
-                    P8chart = new Chart(P8chart, "Division", data.DivisionData).CreateColumn( );
+                    TabChart1 = new Chart(TabChart1, "Division", data.DivisionData).CreateColumn( );
                     Text = $"P7 Division Funding by Division/Allowance Holder";
                 }
 
                 public void GoalButton_OnClick(object sender, System.EventArgs e)
                 {
-                    P8chart = new Chart(P8chart, "GoalName", Division.GoalData).CreateColumn( );
+                    TabChart1 = new Chart(TabChart1, "GoalName", Division.GoalData).CreateColumn( );
                     Text = $"P7 Division Funding by Agency Goal";
                 }
 
                 public void AreaButton_OnClick(object sender, System.EventArgs e)
                 {
-                    P8chart = new Chart(P8chart, "ProgramAreaName", Division.ProgramData).CreateColumn( );
+                    TabChart1 = new Chart(TabChart1, "ProgramAreaName", Division.ProgramData).CreateColumn( );
                     Text = $"P7 Division Funding by Program Area";
                 }
 
