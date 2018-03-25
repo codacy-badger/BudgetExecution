@@ -46,7 +46,7 @@ namespace Budget
                     Source = source;
                     TableName = source.ToString();
                     SelectStatement = $"SELECT * FROM {source.ToString()}";
-                    Connection = new SqlConnection(@"data source=C:\Users\terry\Documents\Visual Studio 2017\Projects\Budget\database\sqlce\R6.sdf");
+                    Connection = new SqlConnection(@"data source=C:\Users\terry\Documents\Visual Studio 2017\Projects\Budget\database\sqlclient\R6.mdf");
                     SelectCommand = new SqlCommand(SelectStatement, Connection);
                     Adapter = new SqlDataAdapter(SelectCommand);
                     CommandBuilder = GetCommandBuilder(Adapter);
@@ -61,7 +61,7 @@ namespace Budget
                     TableName = source.ToString();
                     Parameter = param;
                     SelectStatement = GetSqlStatement();
-                    Connection = new SqlConnection(@"data source=C:\Users\terry\Documents\Visual Studio 2017\Projects\Budget\database\sqlce\R6.db");
+                    Connection = new SqlConnection(@"data source=C:\Users\terry\Documents\Visual Studio 2017\Projects\Budget\database\sqlclient\R6.mdf");
                     SelectCommand = new SqlCommand(SelectStatement, Connection);
                     Adapter = new SqlDataAdapter(SelectCommand);
                     CommandBuilder = GetCommandBuilder(Adapter);
@@ -98,6 +98,18 @@ namespace Budget
                     try
                     {
                         return $"SELECT * FROM {TableName} WHERE {GetParamString(Parameter)}";
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("ERROR!: \n\n" + ex.TargetSite + ex.StackTrace);
+                        return null;
+                    }
+                }
+                public string GetSqlStatement(string sql)
+                {
+                    try
+                    {
+                        return $"SELECT * FROM {TableName} WHERE {sql}";
                     }
                     catch (Exception ex)
                     {

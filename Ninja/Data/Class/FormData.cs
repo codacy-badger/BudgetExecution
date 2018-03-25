@@ -9,6 +9,7 @@ using System.Linq;
 using System.Windows.Forms;
 using Syncfusion.Windows.Forms;
 using Syncfusion.Windows.Forms.Tools;
+using Syncfusion.Windows.Forms.Chart;
 
 #endregion
 
@@ -22,7 +23,7 @@ namespace Budget
             {
                 #region Properties
 
-                DataBuilder Ninja { get; set; }
+                public DataBuilder NinjaData { get; set; }
                 public Tuple<DataTable, PRC[], decimal, int> AllocationData { get; set; }
                 bool Percent { get; set; }
                 public DataSet Data { get; set; }
@@ -36,6 +37,8 @@ namespace Budget
                 public BindingNavigator Navigator { get; set; }
                 public DataGridView Grid { get; set; }
                 public FlowLayoutPanel FilterPanel { get; set; }
+                public ChartControl Chart { get; set;}  
+                public ChartDataBindModel ChartModel { get; set; }
 
                 #endregion
 
@@ -43,6 +46,22 @@ namespace Budget
 
                 public FormData( )
                 {
+                }
+
+                public FormData(Source source, BindingSource bs, DataGridView dgv, BindingNavigator bn)
+                {
+                    NinjaData = new DataBuilder(source);
+                    AllocationData = NinjaData.PrcData;
+                    Data = NinjaData.Data;
+                    Table = NinjaData.Table;
+                    DataElement = GetDataElements(Table);
+                    BindingSource = bs;
+                    BindingSource.DataSource = Table;
+                    Navigator = bn;
+                    Navigator.BindingSource = BindingSource;
+                    Grid = dgv;
+                    Grid.DataSource = BindingSource;
+
                 }
 
                 #endregion
@@ -63,7 +82,15 @@ namespace Budget
                     dgv.Columns[12].DefaultCellStyle.Format = "c";
                 }
 
-                internal void BindData(DataTable table, DataGridView dg, BindingSource bs, BindingNavigator bn)
+                internal void BindTextBox(BindingSource bs, TextBox tb, string field)
+                {
+                    var table = (DataTable)bs.DataSource;
+                    var row = table.Rows[bs.Position];
+                    var binding = new Binding("Text", row, field);
+                    tb.DataBindings.Add(binding);
+                }
+
+                internal void BindFormData(DataTable table, DataGridView dg, BindingSource bs, BindingNavigator bn)
                 {
                     bs.DataSource = table;
                     dg.DataSource = bs;
@@ -71,7 +98,7 @@ namespace Budget
                     GetGridColumns(dg);
                 }
 
-                internal void GetMetroSetButtons(FlowLayoutPanel panel, string[] list)
+                internal void GetFilterButtons(FlowLayoutPanel panel, string[] list)
                 {
                     panel.Controls.Clear( );
                     foreach (string f in list)
@@ -94,23 +121,23 @@ namespace Budget
                     }
                 }
 
-                internal void GetAppropFilterBox(DataTable table, FlowLayoutPanel filterPanel)
+                internal void GetFilterBox(DataTable table, FlowLayoutPanel filterPanel)
                 {
-                    GetMetroSetButtons(filterPanel, GetCodeElements(table, "FundName"));
+                    GetFilterButtons(filterPanel, GetCodeElements(table, "FundName"));
                     foreach (Control c in filterPanel.Controls) c.Click += AppropriationButton_OnSelect;
                 }
 
                 internal void AppropriationButton_OnSelect(object sender, EventArgs e)
                 {
                     var button = sender as MetroSetButton;
-                    var table = GetTable(Data.Tables[0], "FundName", button.Tag.ToString( ));
-                    BindData(table, Grid, BindingSource, Navigator);
+                    var table = GetTable(Table, "FundName", button.Tag.ToString( ));
+                    BindFormData(table, Grid, BindingSource, Navigator);
                     Table = table;
                 }
 
                 internal void GetBocFilterBox(DataTable table, FlowLayoutPanel filterPanel)
                 {
-                    GetMetroSetButtons(filterPanel, GetCodeElements(table, "BocName"));
+                    GetFilterButtons(filterPanel, GetCodeElements(table, "BocName"));
                     foreach (Control c in filterPanel.Controls) c.Click += BocButtonSelect_OnSelect;
                 }
 
@@ -118,7 +145,7 @@ namespace Budget
                 {
                     var button = sender as MetroSetButton;
                     var table = GetTable(Table, "BocName", button.Tag.ToString( ));
-                    BindData(table, Grid, BindingSource, Navigator);
+                    BindFormData(table, Grid, BindingSource, Navigator);
                     Table = table;
                 }
 

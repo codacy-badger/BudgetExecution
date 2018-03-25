@@ -569,7 +569,7 @@
         haSoKIqiKIqiNEqv9xuvEj6bLp3LfAAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="P8Btn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="DivisionSummaryButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
         wwAADsMBx2+oZAAAAPFJREFUaEPtmD0OgjAYhjmIg6OjR3B01VhcHD2IN8DWAzA6eABHj6H2GxwdPICD
@@ -579,7 +579,7 @@
         Rcz1hMcDAAAAAFRDFN0AyM+Vei80tmsAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="AppropBtn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="RegionSummaryButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
         wwAADsMBx2+oZAAAAWtJREFUaEPtmD1Ow0AQhV1QcAAKCgoKypSUSHAEEOwGJCQ4AiUddBREincdKQVF

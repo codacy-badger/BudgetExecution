@@ -35,6 +35,8 @@ namespace Ninja.Forms
                 R6.NpmData, R6.GoalInfo, Division.DivisionData, Division.BocData, Division.NpmData, Division.GoalData };
             Title = GetChartTitles(Values);
             MainChart = Chart(MainChart, Title[1], Division.BocData);
+            RegionSummaryButton.Click += RegionSummaryButton_OnClick;
+            DivisionSummaryButton.Click += DivisionSummaryButton_OnClick;
         }
 
 
@@ -91,6 +93,18 @@ namespace Ninja.Forms
             Timer.Tick += ChartTimer;
             Timer.Enabled = true;
             Timer.Interval = 5000;
+        }
+
+        void RegionSummaryButton_OnClick(object sender, EventArgs e)
+        {
+            var datamgr = new DataManager(Source.P7);
+            datamgr.Show();
+        }
+
+        void DivisionSummaryButton_OnClick(object sender, EventArgs e)
+        {
+            var datamgr = new DataManager(Source.P8);
+            datamgr.Show();
         }
     }
 }

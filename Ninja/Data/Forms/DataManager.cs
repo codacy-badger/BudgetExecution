@@ -25,10 +25,10 @@ namespace Budget
                 public DataBuilder Data { get; set; }
                 public RegionalAuthority Regional { get; set; }
                 public DivisionAuthority Division { get; set; }
+                FormData FormNinja { get; set; }
                 public DataTable Table { get; set; }
-                public ChartControl PieChart { get; set; }
-                public Query P7Query { get; set; }
-                public CurrencyManager Currency { get; set; }
+                public ChartControl DataChart { get; set; }
+                public Query DataManagerQuery { get; set; }
                 public decimal Total { get; }
 
                 #endregion
@@ -43,27 +43,9 @@ namespace Budget
                 public DataManager(Source source)
                 {
                     InitializeComponent( );
-                    if (source == Source.P7)
-                    {
-                        Source = Source.P7;
-                        Regional = new RegionalAuthority( );
-                        Data = Regional.Data;
-                        Table = Regional.Data.Table;
-                    }
-                    if (source == Source.P8)
-                    {
-                        Source = Source.P8;
-                        Division = new DivisionAuthority( );
-                        Data = Division.Data;
-                        Table = Division.Data.Table;
-                    }
-                    BindData(Table, DataManagerGrid, BindingSource, DatabaseNavigator);
-                    PrcChart = GetPieChart(PrcChart, "", Source, BindingSource);
-                    BindingSource.CurrentItemChanged += new EventHandler(UpdatePieChart);
-                    DataManagerGrid.RowHeaderMouseDoubleClick += GridRow_DoubleClick;
-                    GetAppropFilterBox(Table);
-                    ReturnButton.Visible = false;
-                    DatabaseGroupBox.Text = $"{Table.TableName} Database";
+                    FormNinja = new FormData(source, DataMgrBindingSource, DataMgrGrid, DataMgrNavigator);
+                    FormNinja.GetGridColumns(DataMgrGrid);
+                    Data = FormNinja.NinjaData;
                 }
 
                 #endregion
@@ -72,10 +54,9 @@ namespace Budget
 
                 private void Form_Load(object sender, EventArgs e)
                 {
-                    GetAppropFilterBox(Table);
                     ReturnButton.Visible = false;
-                    PrcChart = GetPieChart(PrcChart, "", Source, BindingSource);
-                    BindingSource.CurrentItemChanged += new EventHandler(UpdatePieChart);
+                    PrcChart = GetPieChart(PrcChart, "", Source, DataMgrBindingSource);
+                    DataMgrBindingSource.CurrentItemChanged += new EventHandler(UpdatePieChart);
                 }
 
                 private void P7Grid_SelectionChanged(object sender, EventArgs e)
@@ -85,148 +66,39 @@ namespace Budget
 
                 #endregion
 
-                #region Filter Button Methods
-
-                private void GetMetroSetButtons(FlowLayoutPanel panel, string[] list)
-                {
-                    panel.Controls.Clear( );
-                    foreach (string f in list)
-                    {
-                        var b = new MetroSetButton( );
-                        b.Text = f;
-                        b.Font = new Font("Segoe UI", 8f);
-                        b.NormalColor = Color.Black;
-                        b.NormalTextColor = SystemColors.MenuHighlight;
-                        b.NormalBorderColor = Color.Black;
-                        b.HoverBorderColor = Color.Blue;
-                        b.HoverColor = Color.SteelBlue;
-                        b.HoverTextColor = Color.AntiqueWhite;
-                        b.Size = new Size(195, 45);
-                        b.Margin = new Padding(3);
-                        b.Padding = new Padding(1);
-                        panel.Controls.Add(b);
-                        panel.AutoSize = true;
-                        b.Tag = f;
-                    }
-                }
-
-                private void GetAppropFilterBox(DataTable table)
-                {
-                    GetMetroSetButtons(DataManagerFilterPanel, GetCodes(table, "FundName"));
-                    foreach (Control c in DataManagerFilterPanel.Controls) c.Click += AppropriationButton_OnSelect;
-                }
-
-                private void AppropriationButton_OnSelect(object sender, EventArgs e)
-                {
-                    var button = sender as MetroSetButton;
-                    var table = GetTable(Table, "FundName", button.Tag.ToString( ));
-                    BindData(table, DataManagerGrid, BindingSource, DatabaseNavigator);
-                    lblTotalAmount.Text = GetTotal(table).ToString("c");
-                    lblCount.Text = table.Rows.Count.ToString( );
-                    DatabaseGroupBox.Text = $"{table.TableName} Data";
-                    ReturnButton.Visible = true;
-                    GetBocFilterBox(table);
-                    ReturnButton.Click += OnReturnButtonAppropriationSelect;
-                    DatabaseGroupBox.Text = $"{button.Tag.ToString( )} Database";
-                    Table = table;
-                }
-
-                private void GetBocFilterBox(DataTable table)
-                {
-                    GetMetroSetButtons(DataManagerFilterPanel, GetCodes(table, "BocName"));
-                    foreach (Control c in DataManagerFilterPanel.Controls) c.Click += BocButtonSelect_OnSelect;
-                }
-
-                private void BocButtonSelect_OnSelect(object sender, EventArgs e)
-                {
-                    var button = sender as MetroSetButton;
-                    var table = GetTable(Table, "BocName", button.Tag.ToString( ));
-                    BindData(table, DataManagerGrid, BindingSource, DatabaseNavigator);
-                    lblTotalAmount.Text = GetTotal(table).ToString("c");
-                    lblCount.Text = table.Rows.Count.ToString( );
-                    DatabaseGroupBox.Text = $"{table.TableName} Data";
-                    ReturnButton.Visible = true;
-                    ReturnButton.Click += OnReturnButtonAppropriationSelect;
-                    DatabaseGroupBox.Text = $"{button.Tag.ToString( )} Database";
-                }
-
-                #endregion
-
-                #region ReturnPanel Methods
-
-                private void OnReturnButtonAppropriationSelect(object sender, EventArgs e)
-                {
-                    GetAppropFilterBox(Table);
-                    BindingSource.DataSource = Table;
-                    ReturnButton.Visible = false;
-                    DatabaseGroupBox.Text = $"{Table.TableName} Database";
-                }
-
-                private void ReturnButton_OnClick(object sender, EventArgs e)
-                {
-                    var r6 = new SummarySelector( );
-                    r6.ShowDialog( );
-                }
-
-                #endregion
-
-                #region DataGridView Members
-
-                private void GetGridColumns(DataGridView dgv)
-                {
-                    foreach (DataGridViewColumn dc in dgv.Columns)
-                        dc.Visible = false;
-                    dgv.Columns[3].Visible = true;
-                    dgv.Columns[4].Visible = true;
-                    dgv.Columns[6].Visible = true;
-                    dgv.Columns[8].Visible = true;
-                    dgv.Columns[9].Visible = true;
-                    dgv.Columns[11].Visible = true;
-                    dgv.Columns[12].Visible = true;
-                    dgv.Columns[12].DefaultCellStyle.Format = "c";
-                }
-
-                private void BindData(DataTable table, DataGridView dg, BindingSource bs, BindingNavigator bn)
-                {
-                    bs.DataSource = table;
-                    dg.DataSource = bs;
-                    bn.BindingSource = bs;
-                    GetGridColumns(dg);
-                }
-
                 private ChartControl GetPieChart(ChartControl chart, string title, Source source, BindingSource bs)
                 {
                     if (source == Source.P7)
-                        PieChart = new Chart(chart, title, Regional, bs).CreateColumn( );
+                        DataChart = new Chart(chart, title, Regional, bs).CreateColumn( );
                     if (source == Source.P8)
-                        PieChart = new Chart(chart, title, Division, bs).CreateColumn( );
-                    return PieChart;
+                        DataChart = new Chart(chart, title, Division, bs).CreateColumn( );
+                    return DataChart;
                 }
 
                 private void UpdatePieChart(object sender, EventArgs e)
                 {
-                    BindingSource = sender as BindingSource;
-                    PrcChart = GetPieChart(PrcChart, "", Source, BindingSource);
+                    DataMgrBindingSource = sender as BindingSource;
+                    PrcChart = GetPieChart(PrcChart, "", Source, DataMgrBindingSource);
                 }
 
                 private void GetGridSelectedRowValues(object sender, EventArgs e)
                 {
-                    DataManagerGrid.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-                    var gridrow = DataManagerGrid.CurrentRow;
-                    var bfy = DataManagerGrid.CurrentRow.Cells["BFY"].Value;
-                    BFY.Text = bfy.ToString( );
+                    DataMgrGrid.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+                    var gridrow = DataMgrGrid.CurrentRow;
+                    var bfy = DataMgrGrid.CurrentRow.Cells["BFY"].Value;
+                    this.bfy.Text = bfy.ToString( );
                     var fund = gridrow.Cells["Fund"].Value;
-                    Fund.Text = fund.ToString( );
+                    this.fund.Text = fund.ToString( );
                     var org = gridrow.Cells["Org"].Value;
-                    Org.Text = org.ToString( );
+                    this.org.Text = org.ToString( );
                     var rc = gridrow.Cells["RC"].Value;
-                    RC.Text = rc.ToString( );
+                    this.rc.Text = rc.ToString( );
                     var code = gridrow.Cells["Code"].Value;
-                    Code.Text = code.ToString( );
+                    this.code.Text = code.ToString( );
                     var boc = gridrow.Cells["BOC"].Value;
-                    BOC.Text = boc.ToString( );
+                    this.boc.Text = boc.ToString( );
                     var funding = gridrow.Cells["Amount"].Value;
-                    OldAmount.Text = gridrow.Cells["Amount"].Value.ToString( );
+                    amount1.Text = gridrow.Cells["Amount"].Value.ToString( );
                 }
 
                 private void GetCalculatorValue(DataGridViewRow gridrow)
@@ -240,8 +112,7 @@ namespace Budget
                     var am = new AccountManager( );
                     am.Show( );
                 }
-
-                #endregion
+                
 
                 #region IAuthority Implementation Methods
 

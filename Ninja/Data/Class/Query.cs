@@ -105,6 +105,18 @@ namespace Budget
                     }
                 }
 
+                public string GetSqlStatement(string sql)
+                {
+                    try
+                    {
+                        return $"SELECT * FROM {TableName} WHERE {sql}";
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("ERROR!: \n\n" + ex.TargetSite + ex.StackTrace);
+                        return null;
+                    }
+                }
                 private SQLiteCommand GetSelectCommand( )
                 {
                     try
