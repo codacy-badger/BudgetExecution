@@ -175,6 +175,40 @@ namespace Budget
                     }
                 }
 
+                internal void UpdateAmount(DataRow row, decimal amount2)
+                {
+                    try
+                    {
+                        var parameter = new Dictionary<string, object>();
+                        parameter.Add("Id", row["Id"]);
+                        parameter.Add("Amount", amount2);
+                        var query = new Query(Source.P7, parameter);
+                        var update = query.UpdateCommand;
+                        update.ExecuteNonQuery();
+                    }
+                    catch (System.Exception e)
+                    {
+                        MessageBox.Show(e.ToString());
+                    }
+                }
+
+                internal void UpdateAmount(Dictionary<string, object> p, decimal amount2)
+                {
+                    try
+                    {
+                        if (p.ContainsKey("Amount"))
+                            p.Remove("Amount");
+                        p.Add("Amount", amount2);
+                        var query = new Query(Source.P7, p);
+                        var update = query.UpdateCommand;
+                        update.ExecuteNonQuery();
+                    }
+                    catch (System.Exception e)
+                    {
+                        MessageBox.Show(e.ToString());
+                    }
+                }
+
                 public int GetCount(DataTable table)
                 {
                     try

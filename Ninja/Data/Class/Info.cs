@@ -47,56 +47,15 @@ namespace Budget
                         return false;
                 }
 
-                public static object[] DisplayAccount(this DataRow row, params int[] index)
+                public static string[] GetColumnNameArray(this DataTable table)
                 {
-                    object[] account = new object[index.Length];
-                    foreach (int num in index)
+                    string[] col = new string[table.Columns.Count];
+                    for (int i = 0; i < table.Rows.Count; i++)
                     {
-                        int first = 0;
-                        int last = index.Length;
-                        for (int i = first; i < last; i++)
-                        {
-                            account = new object[] { row[i].ToString( ) };
-                        }
+                        foreach (DataColumn dc in table.Columns)
+                            col[i] = dc.ColumnName;
                     }
-                    return null;
-                }
-
-                public static object[] DisplayAccount(this DataRow row, params string[] columns)
-                {
-                    object[] account = new object[columns.Length];
-                    foreach (string key in columns)
-                    {
-                        account = new object[] { row[key].ToString( ) };
-                    }
-                    return account;
-                }
-
-                public static DataTable BudgetDisplay(this DataTable table)
-                {
-                    DataTable display = new DataTable( );
-                    DataColumn fund = new DataColumn("Fund", typeof(string));
-                    fund.Caption = fund.ColumnName;
-                    display.Columns.Add(fund);
-                    DataColumn boc = new DataColumn("BOC", typeof(string));
-                    fund.Caption = fund.ColumnName;
-                    display.Columns.Add(boc);
-                    DataColumn prc = new DataColumn("PRC", typeof(string));
-                    fund.Caption = fund.ColumnName;
-                    display.Columns.Add(prc);
-                    DataColumn amount = new DataColumn("Amount", typeof(decimal));
-                    fund.Caption = fund.ColumnName;
-                    display.Columns.Add(amount);
-                    foreach (DataRow oldrow in table.Rows)
-                    {
-                        DataRow newrow = display.NewRow( );
-                        newrow["Fund"] = oldrow["Fund"];
-                        newrow["BOC"] = oldrow["BOC"];
-                        newrow["PRC"] = oldrow["Code"];
-                        newrow["Amount"] = oldrow["Amount"];
-                        display.Rows.Add(newrow);
-                    }
-                    return display;
+                    return col;
                 }
 
                 #endregion Extension Methods
@@ -118,18 +77,6 @@ namespace Budget
                     form.BorderThickness = 1;
                     form.Padding = new Padding(1);
                     form.CaptionAlign = HorizontalAlignment.Left;
-                }
-
-                public static SortedList<string, object> Parameter(SortedList<string, object> param)
-                {
-                    foreach (KeyValuePair<string, object> kvp in param)
-                    {
-                        if (string.IsNullOrEmpty(kvp.Value.ToString( )))
-                            param.Remove(kvp.Key);
-                        else
-                            param.Add(kvp.Key, kvp.Value);
-                    }
-                    return param;
                 }
 
                 public static string DivisionName(string rc)
@@ -189,33 +136,42 @@ namespace Budget
 
                 public static string GetBocName(string boc)
                 {
-                    switch (boc)
+                    try
                     {
-                        case "10":
-                            return "PAYROLL";
+                        switch (boc)
+                        {
+                            case "10":
+                                return "PAYROLL";
 
-                        case "17":
-                            return "FTE";
+                            case "17":
+                                return "FTE";
 
-                        case "21":
-                            return "TRAVEL";
+                            case "21":
+                                return "TRAVEL";
 
-                        case "28":
-                            return "SITE TRAVEL";
+                            case "28":
+                                return "SITE TRAVEL";
 
-                        case "36":
-                            return "EXPENSES";
+                            case "36":
+                                return "EXPENSES";
 
-                        case "37":
-                            return "CONTRACTS";
+                            case "37":
+                                return "CONTRACTS";
 
-                        case "38":
-                            return "WCF";
+                            case "38":
+                                return "WCF";
 
-                        case "41":
-                            return "GRANTS";
+                            case "41":
+                                return "GRANTS";
 
-                        default: return "NONE";
+                            default: return "NONE";
+                        }
+                    }
+                    catch (System.Exception e)
+                    {
+
+                        MessageBox.Show( e.TargetSite + e.StackTrace);
+                        return null;
                     }
                 }
 
