@@ -225,12 +225,6 @@
     <Compile Include="Data\Forms\FunctionalityForm.Designer.cs">
       <DependentUpon>FunctionalityForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Data\Forms\Initializer.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Data\Forms\Initializer.Designer.cs">
-      <DependentUpon>Initializer.cs</DependentUpon>
-    </Compile>
     <Compile Include="Data\Forms\SummaryForm.cs">
       <SubType>Form</SubType>
     </Compile>

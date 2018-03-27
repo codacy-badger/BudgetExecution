@@ -1,3 +1,4 @@
+using Syncfusion.Windows.Forms.Chart;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -13,234 +14,191 @@ namespace Budget
         {
             public partial class Initializer : Metro, IAuthority
             {
-                public Dictionary<string, string[]> DataElement { get; }
-                public Tuple<DataTable, PRC[], decimal, int> AllocationData { get; }
+
+                public Source Source { get; set; }
+                public DataBuilder Data { get; set; }
+                public RegionalAuthority Regional { get; set; }
+                public DivisionAuthority Division { get; set; }
+                FormData FormNinja { get; set; }
+                public DataTable Table { get; set; }
+                public ChartControl DataChart { get; set; }
+                public Query DataManagerQuery { get; set; }
                 public decimal Total { get; }
-                public decimal Average { get; }
-                public int Count { get; }
-                public decimal[] FundMetrics { get; }
 
-                public Initializer( )
+                public Initializer(Source source)
                 {
-                    InitializeComponent( );
+                    InitializeComponent();
+                    FormNinja = new FormData(source, DataMgrBindingSource, DataGrid, DataMgrNavigator);
+                    FormNinja.GetGridColumns(DataGrid);
+                    Data = FormNinja.NinjaData;
                 }
 
-                private void Initializer_Load(object sender, EventArgs e)
+#endregion
+
+                #region Form Load EventHandler and Methods
+
+                private void Form_Load(object sender, EventArgs e)
                 {
+                    ReturnButton.Visible = false;
+                    PrcChart = GetPieChart(PrcChart, "", Source, DataMgrBindingSource);
+                    DataMgrBindingSource.CurrentItemChanged += new EventHandler(UpdatePieChart);
                 }
 
-                private void toolStripButton1_Click(object sender, EventArgs e)
+                private void P7Grid_SelectionChanged(object sender, EventArgs e)
                 {
+                    GetGridSelectedRowValues(sender, e);
                 }
 
-                #region IAuthority Interface Implementation
+                #endregion
 
-                public int GetCount(DataTable table)
+                private ChartControl GetPieChart(ChartControl chart, string title, Source source, BindingSource bs)
                 {
-                    try
-                    {
-                        return table.Rows.Count;
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message.ToString( ) + $"Target Method:\n{ex.TargetSite}\n" + $"Stack:\n{ex.StackTrace}");
-                        return -1;
-                    }
+                    if (source == Source.P7)
+                        DataChart = new Chart(chart, title, Regional, bs).CreateColumn();
+                    if (source == Source.P8)
+                        DataChart = new Chart(chart, title, Division, bs).CreateColumn();
+                    return DataChart;
                 }
+
+                private void UpdatePieChart(object sender, EventArgs e)
+                {
+                    DataMgrBindingSource = sender as BindingSource;
+                    PrcChart = GetPieChart(PrcChart, "", Source, DataMgrBindingSource);
+                }
+
+                private void GetGridSelectedRowValues(object sender, EventArgs e)
+                {
+                    DataGrid.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+                    var gridrow = DataGrid.CurrentRow;
+                    var bfy = DataGrid.CurrentRow.Cells["BFY"].Value;
+                    this.bfy.Text = bfy.ToString();
+                    var fund = gridrow.Cells["Fund"].Value;
+                    this.fund.Text = fund.ToString();
+                    var org = gridrow.Cells["Org"].Value;
+                    this.org.Text = org.ToString();
+                    var rc = gridrow.Cells["RC"].Value;
+                    this.rc.Text = rc.ToString();
+                    var code = gridrow.Cells["Code"].Value;
+                    this.code.Text = code.ToString();
+                    var boc = gridrow.Cells["BOC"].Value;
+                    this.boc.Text = boc.ToString();
+                    var funding = gridrow.Cells["Amount"].Value;
+                    amount1.Text = gridrow.Cells["Amount"].Value.ToString();
+                }
+
+                private void GetCalculatorValue(DataGridViewRow gridrow)
+                {
+                    var amt = new Syncfusion.Windows.Forms.Tools.CalculatorValue();
+                    amt.SetValue(gridrow.Cells["Amount"].Value.ToString());
+                }
+
+                private void GridRow_DoubleClick(object sender, EventArgs e)
+                {
+                    var am = new AccountManager();
+                    am.Show();
+                }
+
+
+                #region IAuthority Implementation Methods
 
                 public decimal GetTotal(DataTable table)
                 {
                     try
                     {
-                        return table.AsEnumerable( ).Sum(p => p.Field<decimal>("Amount"));
+                        return table.AsEnumerable().Select(p => p).Sum(p => p.Field<decimal>("Amount"));
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message.ToString( ) + $"Target Method:\n{ex.TargetSite}\n" + $"Stack:\n{ex.StackTrace}");
+                        MessageBox.Show(ex.Message.ToString() + $"Target Method:\n{ex.TargetSite}\n" + $"Stack:\n{ex.StackTrace}");
                         return -1M;
                     }
                 }
 
-                public decimal GetAverage(DataTable table)
+                public DataTable GetTable(DataTable table, string column, string filter)
                 {
                     try
                     {
-                        return table.AsEnumerable( ).Select(p => p.Field<decimal>("Amount")).Average( );
+                        return table.AsEnumerable().Where(p => p.Field<string>(column).Equals(filter)).Select(p => p).CopyToDataTable();
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message.ToString( ) + $"Target Method:\n{ex.TargetSite}\n" + $"Stack:\n{ex.StackTrace}");
-                        return -1M;
-                    }
-                }
-
-                public decimal[] GetMetrics(DataTable table)
-                {
-                    var count = GetCount(table);
-                    return new decimal[] { GetTotal(table), (decimal)count, GetAverage(table) };
-                }
-
-                public string[] GetCodeElements(DataTable table, string column)
-                {
-                    try
-                    {
-                        return table.AsEnumerable( ).Select(p => p.Field<string>(column)).Distinct( ).ToArray( );
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message.ToString( ) + $"Target Method:\n{ex.TargetSite}\n" + $"Stack:\n{ex.StackTrace}");
+                        MessageBox.Show(ex.Message.ToString() + $"Target Method:\n{ex.TargetSite}\n" + $"Stack:\n{ex.StackTrace}");
                         return null;
                     }
                 }
 
-                public Dictionary<string, string[]> GetDataElements(DataTable table)
-                {
-                    var data = new Dictionary<string, string[]>( );
-                    foreach (DataColumn dc in table.Columns)
-                    {
-                        if (dc.ColumnName.Equals("Id") || dc.ColumnName.Equals("Amount"))
-                            continue;
-                        data.Add(dc.ColumnName, GetCodeElements(table, dc.ColumnName));
-                    }
-                    if (data.ContainsKey("Id")) data.Remove("Id");
-                    if (data.ContainsKey("Amount")) data.Remove("Amount");
-                    if (data.ContainsKey("P6_Id")) data.Remove("P6_Id");
-                    return data;
-                }
-
-                public PRC[] GetPrcArray(DataTable table)
+                public string[] GetCodes(DataTable table, string column)
                 {
                     try
                     {
-                        return table.AsEnumerable( ).Select(p => new PRC( )).ToArray( );
+                        return table.AsEnumerable().Select(p => p.Field<string>(column)).Distinct().ToArray();
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message.ToString( ) + $"Target Method:\n{ex.TargetSite}\n" + $"Stack:\n{ex.StackTrace}");
+                        MessageBox.Show(ex.Message.ToString() + $"Target Method:\n{ex.TargetSite}\n" + $"Stack:\n{ex.StackTrace}");
                         return null;
                     }
                 }
 
-                public Tuple<DataTable, PRC[], decimal, int> GetDataValues(DataTable table, string column, string filter)
+                public Tuple<DataTable, PRC[], decimal, int> GetData(DataTable table, string column, string filter)
                 {
                     try
                     {
-                        var query = table.AsEnumerable( ).Where(p => p.Field<string>(column).Equals(filter)).Select(p => p).CopyToDataTable( );
-                        return new Tuple<DataTable, PRC[], decimal, int>(query, GetPrcArray(query), GetTotal(query), GetCount(query));
+                        DataTable qtable = GetTable(table, column, filter);
+                        PRC[] prc = qtable.AsEnumerable().Select(p => new PRC()).ToArray();
+                        int count = qtable.Rows.Count;
+                        return new Tuple<DataTable, PRC[], decimal, int>(qtable, prc, GetTotal(qtable), count);
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message.ToString( ) + $"Target Method:\n{ex.TargetSite}\n" + $"Stack:\n{ex.StackTrace}");
+                        MessageBox.Show(ex.Message.ToString() + $"Target Method:\n{ex.TargetSite}\n" + $"Stack:\n{ex.StackTrace}");
                         return null;
                     }
                 }
 
-                public Dictionary<string, decimal> GetDataTotals(DataTable table, string column, string filter)
+                public Dictionary<string, decimal> GetData(DataTable table, string[] filters, string column)
                 {
                     try
                     {
-                        var list = GetCodeElements(table, column);
-                        Dictionary<string, decimal> info = new Dictionary<string, decimal>( );
-                        foreach (string ftr in list)
+                        Dictionary<string, decimal> info = new Dictionary<string, decimal>();
+                        foreach (string f in filters)
                         {
-                            var query = table.AsEnumerable( ).Where(p => p.Field<string>(column).Equals(filter))
-                                .Sum(p => p.Field<decimal>("Amount"));
-                            if (query > 0)
-                                info.Add(filter, query);
+                            info.Add(f, GetData(table, column, f).Item3);
                         }
                         return info;
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message.ToString( ) + $"Target Method:\n{ex.TargetSite}\n" + $"Stack:\n{ex.StackTrace}");
+                        MessageBox.Show(ex.Message.ToString() + $"Target Method:\n{ex.TargetSite}\n" + $"Stack:\n{ex.StackTrace}");
                         return null;
                     }
                 }
 
-                public Dictionary<string, decimal> GetDataTotals(DataTable table, string[] filters, string column)
+                public Dictionary<string, decimal[]> GetMetrics(DataTable table, string[] list, string column)
                 {
                     try
                     {
-                        Dictionary<string, decimal> info = new Dictionary<string, decimal>( );
-                        foreach (string filter in filters)
-                        {
-                            var query = table.AsEnumerable( ).Where(p => p.Field<string>(column).Equals(filter))
-                                .Select(p => p).Sum(p => p.Field<decimal>("Amount"));
-                            if (query > 0)
-                                info.Add(filter, query);
-                        }
-                        return info;
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message.ToString( ) + $"Target Method:\n{ex.TargetSite}\n" + $"Stack:\n{ex.StackTrace}");
-                        return null;
-                    }
-                }
-
-                public Dictionary<string, decimal[]> GetDataMetrics(DataTable table, string[] list, string column)
-                {
-                    try
-                    {
-                        Dictionary<string, decimal[]> info = new Dictionary<string, decimal[]>( );
+                        Dictionary<string, decimal[]> info = new Dictionary<string, decimal[]>();
                         foreach (string filter in list)
                         {
                             decimal[] stat = new decimal[4];
-                            stat[0] = GetDataValues(table, column, filter).Item3;
-                            stat[1] = (decimal)GetDataValues(table, column, filter).Item4;
+                            stat[0] = GetTotal(table);
+                            stat[1] = (decimal)(table.Rows.Count);
                             stat[2] = stat[0] / stat[1];
-                            stat[3] = (stat[0] / stat[1]) * 100;
+                            stat[3] = stat[0] / GetTotal(table);
                             info.Add(filter, stat);
                         }
                         return info;
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message.ToString( ) + $"Target Method:\n{ex.TargetSite}\n" + $"Stack:\n{ex.StackTrace}");
-                        return null;
-                    }
-                }
-
-                public Dictionary<string, decimal[]> GetDataMetrics(DataTable table, string column, string filter)
-                {
-                    try
-                    {
-                        string[] list = GetCodeElements(table, column);
-                        Dictionary<string, decimal[]> info = new Dictionary<string, decimal[]>( );
-                        foreach (string ftr in list)
-                        {
-                            decimal[] stat = new decimal[4];
-                            stat[0] = GetDataValues(table, column, filter).Item3;
-                            stat[1] = (decimal)GetDataValues(table, column, filter).Item4;
-                            stat[2] = stat[0] / stat[1];
-                            stat[3] = (stat[0] / stat[1]) * 100;
-                            info.Add(filter, stat);
-                        }
-                        return info;
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message.ToString( ) + $"Target Method:\n{ex.TargetSite}\n" + $"Stack:\n{ex.StackTrace}");
-                        return null;
-                    }
-                }
-
-                DataSet IAuthority.E6 { get; }
-
-                public DataTable FilterTable(DataTable table, string column, string filter)
-                {
-                    try
-                    {
-                        return table.AsEnumerable( ).Where(p => p.Field<string>(column).Equals(filter)).Select(p => p).CopyToDataTable( );
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message.ToString( ) + $"Target Method:\n{ex.TargetSite}\n" + $"Stack:\n{ex.StackTrace}");
+                        MessageBox.Show(ex.Message.ToString() + $"Target Method:\n{ex.TargetSite}\n" + $"Stack:\n{ex.StackTrace}");
                         return null;
                     }
                 }
 
                 #endregion
+
             }
         }
     }

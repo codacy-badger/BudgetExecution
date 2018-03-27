@@ -1,15 +1,10 @@
-#region Using Directives
-
-using MetroSet_UI.Controls;
 using Syncfusion.Windows.Forms.Chart;
 using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
-
-#endregion
+using Metro = Syncfusion.Windows.Forms.MetroForm;
 
 namespace Budget
 {
@@ -17,10 +12,9 @@ namespace Budget
     {
         namespace Data
         {
-            public partial class DataManager : Syncfusion.Windows.Forms.MetroForm
+            public partial class DataManager : Metro
             {
                 #region Properties
-
                 public Source Source { get; set; }
                 public DataBuilder Data { get; set; }
                 public RegionalAuthority Regional { get; set; }
@@ -30,19 +24,12 @@ namespace Budget
                 public ChartControl DataChart { get; set; }
                 public Query DataManagerQuery { get; set; }
                 public decimal Total { get; }
-
                 #endregion
 
                 #region Constructors
-
-                public DataManager( )
-                {
-                    InitializeComponent( );
-                }
-
                 public DataManager(Source source)
                 {
-                    InitializeComponent( );
+                    InitializeComponent();
                     FormNinja = new FormData(source, DataMgrBindingSource, DataMgrGrid, DataMgrNavigator);
                     FormNinja.GetGridColumns(DataMgrGrid);
                     Data = FormNinja.NinjaData;
@@ -69,9 +56,9 @@ namespace Budget
                 private ChartControl GetPieChart(ChartControl chart, string title, Source source, BindingSource bs)
                 {
                     if (source == Source.P7)
-                        DataChart = new Chart(chart, title, Regional, bs).CreateColumn( );
+                        DataChart = new Chart(chart, title, Regional, bs).CreateColumn();
                     if (source == Source.P8)
-                        DataChart = new Chart(chart, title, Division, bs).CreateColumn( );
+                        DataChart = new Chart(chart, title, Division, bs).CreateColumn();
                     return DataChart;
                 }
 
@@ -86,33 +73,33 @@ namespace Budget
                     DataMgrGrid.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
                     var gridrow = DataMgrGrid.CurrentRow;
                     var bfy = DataMgrGrid.CurrentRow.Cells["BFY"].Value;
-                    this.bfy.Text = bfy.ToString( );
+                    this.bfy.Text = bfy.ToString();
                     var fund = gridrow.Cells["Fund"].Value;
-                    this.fund.Text = fund.ToString( );
+                    this.fund.Text = fund.ToString();
                     var org = gridrow.Cells["Org"].Value;
-                    this.org.Text = org.ToString( );
+                    this.org.Text = org.ToString();
                     var rc = gridrow.Cells["RC"].Value;
-                    this.rc.Text = rc.ToString( );
+                    this.rc.Text = rc.ToString();
                     var code = gridrow.Cells["Code"].Value;
-                    this.code.Text = code.ToString( );
+                    this.code.Text = code.ToString();
                     var boc = gridrow.Cells["BOC"].Value;
-                    this.boc.Text = boc.ToString( );
+                    this.boc.Text = boc.ToString();
                     var funding = gridrow.Cells["Amount"].Value;
-                    amount1.Text = gridrow.Cells["Amount"].Value.ToString( );
+                    amount1.Text = gridrow.Cells["Amount"].Value.ToString();
                 }
 
                 private void GetCalculatorValue(DataGridViewRow gridrow)
                 {
-                    var amt = new Syncfusion.Windows.Forms.Tools.CalculatorValue( );
-                    amt.SetValue(gridrow.Cells["Amount"].Value.ToString( ));
+                    var amt = new Syncfusion.Windows.Forms.Tools.CalculatorValue();
+                    amt.SetValue(gridrow.Cells["Amount"].Value.ToString());
                 }
 
                 private void GridRow_DoubleClick(object sender, EventArgs e)
                 {
-                    var am = new AccountManager( );
-                    am.Show( );
+                    var am = new AccountManager();
+                    am.Show();
                 }
-                
+
 
                 #region IAuthority Implementation Methods
 
@@ -120,11 +107,11 @@ namespace Budget
                 {
                     try
                     {
-                        return table.AsEnumerable( ).Select(p => p).Sum(p => p.Field<decimal>("Amount"));
+                        return table.AsEnumerable().Select(p => p).Sum(p => p.Field<decimal>("Amount"));
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message.ToString( ) + $"Target Method:\n{ex.TargetSite}\n" + $"Stack:\n{ex.StackTrace}");
+                        MessageBox.Show(ex.Message.ToString() + $"Target Method:\n{ex.TargetSite}\n" + $"Stack:\n{ex.StackTrace}");
                         return -1M;
                     }
                 }
@@ -133,11 +120,11 @@ namespace Budget
                 {
                     try
                     {
-                        return table.AsEnumerable( ).Where(p => p.Field<string>(column).Equals(filter)).Select(p => p).CopyToDataTable( );
+                        return table.AsEnumerable().Where(p => p.Field<string>(column).Equals(filter)).Select(p => p).CopyToDataTable();
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message.ToString( ) + $"Target Method:\n{ex.TargetSite}\n" + $"Stack:\n{ex.StackTrace}");
+                        MessageBox.Show(ex.Message.ToString() + $"Target Method:\n{ex.TargetSite}\n" + $"Stack:\n{ex.StackTrace}");
                         return null;
                     }
                 }
@@ -146,11 +133,11 @@ namespace Budget
                 {
                     try
                     {
-                        return table.AsEnumerable( ).Select(p => p.Field<string>(column)).Distinct( ).ToArray( );
+                        return table.AsEnumerable().Select(p => p.Field<string>(column)).Distinct().ToArray();
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message.ToString( ) + $"Target Method:\n{ex.TargetSite}\n" + $"Stack:\n{ex.StackTrace}");
+                        MessageBox.Show(ex.Message.ToString() + $"Target Method:\n{ex.TargetSite}\n" + $"Stack:\n{ex.StackTrace}");
                         return null;
                     }
                 }
@@ -160,13 +147,13 @@ namespace Budget
                     try
                     {
                         DataTable qtable = GetTable(table, column, filter);
-                        PRC[] prc = qtable.AsEnumerable( ).Select(p => new PRC( )).ToArray( );
+                        PRC[] prc = qtable.AsEnumerable().Select(p => new PRC()).ToArray();
                         int count = qtable.Rows.Count;
                         return new Tuple<DataTable, PRC[], decimal, int>(qtable, prc, GetTotal(qtable), count);
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message.ToString( ) + $"Target Method:\n{ex.TargetSite}\n" + $"Stack:\n{ex.StackTrace}");
+                        MessageBox.Show(ex.Message.ToString() + $"Target Method:\n{ex.TargetSite}\n" + $"Stack:\n{ex.StackTrace}");
                         return null;
                     }
                 }
@@ -175,7 +162,7 @@ namespace Budget
                 {
                     try
                     {
-                        Dictionary<string, decimal> info = new Dictionary<string, decimal>( );
+                        Dictionary<string, decimal> info = new Dictionary<string, decimal>();
                         foreach (string f in filters)
                         {
                             info.Add(f, GetData(table, column, f).Item3);
@@ -184,7 +171,7 @@ namespace Budget
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message.ToString( ) + $"Target Method:\n{ex.TargetSite}\n" + $"Stack:\n{ex.StackTrace}");
+                        MessageBox.Show(ex.Message.ToString() + $"Target Method:\n{ex.TargetSite}\n" + $"Stack:\n{ex.StackTrace}");
                         return null;
                     }
                 }
@@ -193,7 +180,7 @@ namespace Budget
                 {
                     try
                     {
-                        Dictionary<string, decimal[]> info = new Dictionary<string, decimal[]>( );
+                        Dictionary<string, decimal[]> info = new Dictionary<string, decimal[]>();
                         foreach (string filter in list)
                         {
                             decimal[] stat = new decimal[4];
@@ -207,20 +194,15 @@ namespace Budget
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message.ToString( ) + $"Target Method:\n{ex.TargetSite}\n" + $"Stack:\n{ex.StackTrace}");
+                        MessageBox.Show(ex.Message.ToString() + $"Target Method:\n{ex.TargetSite}\n" + $"Stack:\n{ex.StackTrace}");
                         return null;
                     }
                 }
 
                 #endregion
 
-                private void P7DataManager_Load(object sender, EventArgs e)
-                {
-                }
 
-                private void P7BFY_Click(object sender, EventArgs e)
-                {
-                }
+  
             }
         }
     }
