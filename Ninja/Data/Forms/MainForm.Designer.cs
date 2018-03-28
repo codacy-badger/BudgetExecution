@@ -291,10 +291,10 @@ namespace Ninja.Forms
             this.expandCollapsePanel2.Controls.Add(this.TransferBtn);
             this.expandCollapsePanel2.Controls.Add(this.DataBtn);
             this.expandCollapsePanel2.ExpandedHeight = 310;
-            this.expandCollapsePanel2.IsExpanded = true;
+            this.expandCollapsePanel2.IsExpanded = false;
             this.expandCollapsePanel2.Location = new System.Drawing.Point(330, 3);
             this.expandCollapsePanel2.Name = "expandCollapsePanel2";
-            this.expandCollapsePanel2.Size = new System.Drawing.Size(208, 310);
+            this.expandCollapsePanel2.Size = new System.Drawing.Size(208, 37);
             this.expandCollapsePanel2.TabIndex = 65;
             this.expandCollapsePanel2.Text = "Data";
             this.expandCollapsePanel2.UseAnimation = true;
