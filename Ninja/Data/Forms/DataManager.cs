@@ -44,6 +44,7 @@ namespace Budget
                     Ninja.GetFilterButtons(FilterPanel, Element["FundName"]);
                     Ninja.GetAppropriationFilterBox(Table, FilterPanel);
                     PrcChart = GetDataChart(PrcChart, "", source, DataMgrBindingSource);
+                    GetGridSelectedRowValues();
                 }
 
                 #endregion
@@ -55,13 +56,8 @@ namespace Budget
                     ReturnButton.Visible = false;
                     ReturnButton.Click += Ninja.ReturnButton_OnClick;
                     DataMgrBindingSource.CurrentItemChanged += UpdateDataChart;
-                    DataMgrBindingSource.CurrentItemChanged += GetGridSelectedRowValues;
                 }
-
-                private void P7Grid_SelectionChanged(object sender, EventArgs e)
-                {
-                    GetGridSelectedRowValues(sender, e);
-                }
+                
 
                 #endregion
 
@@ -80,17 +76,27 @@ namespace Budget
                     PrcChart = GetDataChart(PrcChart, "", Source, DataMgrBindingSource);
                 }
 
-                private void GetGridSelectedRowValues(object sender, EventArgs e)
+                private void GetGridSelectedRowValues()
                 {
                     DataMgrGrid.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-                    var gridrow = DataMgrGrid.CurrentRow;
-                    bfy.Text = DataMgrGrid.CurrentRow.Cells["BFY"].Value.ToString();
-                    fund.Text = gridrow.Cells["Fund"].Value.ToString();
-                    org.Text = gridrow.Cells["Org"].Value.ToString();
-                    rc.Text = gridrow.Cells["RC"].Value.ToString();
-                    code.Text = gridrow.Cells["Code"].Value.ToString();
-                    boc.Text = gridrow.Cells["BOC"].Value.ToString(); 
-                    amount1.Text = gridrow.Cells["Amount"].Value.ToString();
+                    bfy.DataBindings.Add(new Binding("Text", DataMgrGrid.DataSource, "BFY"));
+                    fund.DataBindings.Add(new Binding("Text", DataMgrGrid.DataSource, "Fund"));
+                    org.DataBindings.Add(new Binding("Text", DataMgrGrid.DataSource, "Org"));
+                    rc.DataBindings.Add(new Binding("Text", DataMgrGrid.DataSource, "RC"));
+                    code.DataBindings.Add(new Binding("Text", DataMgrGrid.DataSource, "Code"));
+                    boc.DataBindings.Add(new Binding("Text", DataMgrGrid.DataSource, "BOC"));
+                    amount1.DataBindings.Add(new Binding("Text", DataMgrGrid.DataSource, "Amount"));
+                }
+                private void UpdateGridSelectedRowValues(object sender, EventArgs e)
+                {
+                    var current = DataMgrGrid.CurrentRow;
+                    bfy.DataBindings.Add(new Binding("Text", DataMgrGrid.DataSource, "BFY"));
+                    fund.DataBindings.Add(new Binding("Text", DataMgrGrid.DataSource, "Fund"));
+                    org.DataBindings.Add(new Binding("Text", DataMgrGrid.DataSource, "Org"));
+                    rc.DataBindings.Add(new Binding("Text", DataMgrGrid.DataSource, "RC"));
+                    code.DataBindings.Add(new Binding("Text", DataMgrGrid.DataSource, "Code"));
+                    boc.DataBindings.Add(new Binding("Text", DataMgrGrid.DataSource, "BOC"));
+                    amount1.DataBindings.Add(new Binding("Text", DataMgrGrid.DataSource, "Amount"));
                 }
 
                 private void GetCalculatorValue(DataGridViewRow gridrow)

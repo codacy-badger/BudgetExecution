@@ -56,11 +56,10 @@ namespace Budget
             Syncfusion.Windows.Forms.Chart.ChartToolBarTypeItem chartToolBarTypeItem1 = new Syncfusion.Windows.Forms.Chart.ChartToolBarTypeItem();
             Syncfusion.Windows.Forms.Chart.ChartToolBarSeries3DItem chartToolBarSeries3DItem1 = new Syncfusion.Windows.Forms.Chart.ChartToolBarSeries3DItem();
             Syncfusion.Windows.Forms.Chart.ChartToolBarShowLegendItem chartToolBarShowLegendItem1 = new Syncfusion.Windows.Forms.Chart.ChartToolBarShowLegendItem();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DataManager));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.DataMgrBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DataManager));
             this.tableLayoutPanel10 = new System.Windows.Forms.TableLayoutPanel();
             this.MiniTabControl1 = new Syncfusion.Windows.Forms.Tools.TabControlAdv();
             this.tabPageAdv1 = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
@@ -85,7 +84,6 @@ namespace Budget
             this.tabPageAdv2 = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
             this.PrcChart = new Syncfusion.Windows.Forms.Chart.ChartControl();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.ReturnButton = new MetroFramework.Controls.MetroLink();
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
@@ -93,23 +91,26 @@ namespace Budget
             this.DatabaseGridPanel = new System.Windows.Forms.Panel();
             this.DataMgrGrid = new System.Windows.Forms.DataGridView();
             this.DataMgrNavigator = new System.Windows.Forms.BindingNavigator(this.components);
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
-            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
             this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton6 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator8 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripSeparator9 = new System.Windows.Forms.ToolStripSeparator();
             this.Expander = new MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel();
             this.FilterPanel = new System.Windows.Forms.FlowLayoutPanel();
-            ((System.ComponentModel.ISupportInitialize)(this.DataMgrBindingSource)).BeginInit();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton7 = new System.Windows.Forms.ToolStripButton();
+            this.ReturnButton = new MetroFramework.Controls.MetroLink();
+            this.DataMgrBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tableLayoutPanel10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MiniTabControl1)).BeginInit();
             this.MiniTabControl1.SuspendLayout();
@@ -122,18 +123,15 @@ namespace Budget
             ((System.ComponentModel.ISupportInitialize)(this.DataMgrNavigator)).BeginInit();
             this.DataMgrNavigator.SuspendLayout();
             this.Expander.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DataMgrBindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // DataMgrBindingSource
-            // 
-            this.DataMgrBindingSource.DataMember = "P7";
             // 
             // tableLayoutPanel10
             // 
             this.tableLayoutPanel10.ColumnCount = 3;
             this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 1.017812F));
             this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 98.98219F));
-            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 518F));
+            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 521F));
             this.tableLayoutPanel10.Controls.Add(this.MiniTabControl1, 2, 0);
             this.tableLayoutPanel10.Controls.Add(this.groupBox1, 1, 0);
             this.tableLayoutPanel10.Location = new System.Drawing.Point(337, 70);
@@ -146,7 +144,7 @@ namespace Budget
             // MiniTabControl1
             // 
             this.MiniTabControl1.ActiveTabForeColor = System.Drawing.Color.Empty;
-            this.MiniTabControl1.BeforeTouchSize = new System.Drawing.Size(487, 494);
+            this.MiniTabControl1.BeforeTouchSize = new System.Drawing.Size(487, 495);
             this.MiniTabControl1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.MiniTabControl1.CloseButtonForeColor = System.Drawing.Color.Empty;
             this.MiniTabControl1.CloseButtonHoverForeColor = System.Drawing.Color.Black;
@@ -156,11 +154,11 @@ namespace Budget
             this.MiniTabControl1.FixedSingleBorderColor = System.Drawing.SystemColors.ControlDark;
             this.MiniTabControl1.FocusOnTabClick = false;
             this.MiniTabControl1.InActiveTabForeColor = System.Drawing.Color.Empty;
-            this.MiniTabControl1.Location = new System.Drawing.Point(840, 3);
+            this.MiniTabControl1.Location = new System.Drawing.Point(837, 3);
             this.MiniTabControl1.Name = "MiniTabControl1";
             this.MiniTabControl1.SeparatorColor = System.Drawing.SystemColors.ControlDark;
             this.MiniTabControl1.ShowSeparator = false;
-            this.MiniTabControl1.Size = new System.Drawing.Size(487, 494);
+            this.MiniTabControl1.Size = new System.Drawing.Size(487, 495);
             this.MiniTabControl1.TabIndex = 150;
             this.MiniTabControl1.TabPanelBackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.MiniTabControl1.TabStyle = typeof(Syncfusion.Windows.Forms.Tools.TabRendererMetro);
@@ -175,7 +173,7 @@ namespace Budget
             this.tabPageAdv1.Location = new System.Drawing.Point(1, 29);
             this.tabPageAdv1.Name = "tabPageAdv1";
             this.tabPageAdv1.ShowCloseButton = true;
-            this.tabPageAdv1.Size = new System.Drawing.Size(485, 464);
+            this.tabPageAdv1.Size = new System.Drawing.Size(485, 465);
             this.tabPageAdv1.TabIndex = 1;
             this.tabPageAdv1.Text = "tabPageAdv1";
             this.tabPageAdv1.ThemesEnabled = false;
@@ -589,7 +587,7 @@ namespace Budget
             this.tabPageAdv2.Location = new System.Drawing.Point(1, 29);
             this.tabPageAdv2.Name = "tabPageAdv2";
             this.tabPageAdv2.ShowCloseButton = true;
-            this.tabPageAdv2.Size = new System.Drawing.Size(485, 464);
+            this.tabPageAdv2.Size = new System.Drawing.Size(485, 465);
             this.tabPageAdv2.TabIndex = 2;
             this.tabPageAdv2.Text = "tabPageAdv2";
             this.tabPageAdv2.ThemesEnabled = false;
@@ -701,7 +699,7 @@ namespace Budget
             this.PrcChart.Series3D = true;
             this.PrcChart.SeriesHighlight = true;
             this.PrcChart.ShadowColor = new Syncfusion.Drawing.BrushInfo(Syncfusion.Drawing.GradientStyle.PathRectangle, System.Drawing.SystemColors.WindowText, System.Drawing.Color.Silver);
-            this.PrcChart.Size = new System.Drawing.Size(485, 464);
+            this.PrcChart.Size = new System.Drawing.Size(485, 465);
             this.PrcChart.Spacing = 5F;
             this.PrcChart.SpacingBetweenPoints = 5F;
             this.PrcChart.Style3D = true;
@@ -727,6 +725,7 @@ namespace Budget
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.groupBox1.Controls.Add(this.DataMgrNavigator);
             this.groupBox1.Controls.Add(this.ReturnButton);
             this.groupBox1.Controls.Add(this.label17);
             this.groupBox1.Controls.Add(this.label18);
@@ -743,19 +742,6 @@ namespace Budget
             this.groupBox1.TabIndex = 149;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Regional Database";
-            // 
-            // ReturnButton
-            // 
-            this.ReturnButton.BackColor = System.Drawing.Color.Transparent;
-            this.ReturnButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ReturnButton.BackgroundImage")));
-            this.ReturnButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ReturnButton.Image = ((System.Drawing.Image)(resources.GetObject("ReturnButton.Image")));
-            this.ReturnButton.Location = new System.Drawing.Point(42, 30);
-            this.ReturnButton.Margin = new System.Windows.Forms.Padding(2);
-            this.ReturnButton.Name = "ReturnButton";
-            this.ReturnButton.Size = new System.Drawing.Size(42, 26);
-            this.ReturnButton.TabIndex = 147;
-            this.ReturnButton.UseSelectable = true;
             // 
             // label17
             // 
@@ -804,12 +790,11 @@ namespace Budget
             // DatabaseGridPanel
             // 
             this.DatabaseGridPanel.Controls.Add(this.DataMgrGrid);
-            this.DatabaseGridPanel.Controls.Add(this.DataMgrNavigator);
             this.DatabaseGridPanel.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DatabaseGridPanel.Location = new System.Drawing.Point(24, 106);
             this.DatabaseGridPanel.Margin = new System.Windows.Forms.Padding(2);
             this.DatabaseGridPanel.Name = "DatabaseGridPanel";
-            this.DatabaseGridPanel.Size = new System.Drawing.Size(757, 349);
+            this.DatabaseGridPanel.Size = new System.Drawing.Size(764, 340);
             this.DatabaseGridPanel.TabIndex = 123;
             // 
             // DataMgrGrid
@@ -850,7 +835,7 @@ namespace Budget
             this.DataMgrGrid.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
             this.DataMgrGrid.RowTemplate.Height = 28;
             this.DataMgrGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DataMgrGrid.Size = new System.Drawing.Size(757, 318);
+            this.DataMgrGrid.Size = new System.Drawing.Size(764, 340);
             this.DataMgrGrid.TabIndex = 153;
             // 
             // DataMgrNavigator
@@ -859,7 +844,7 @@ namespace Budget
             this.DataMgrNavigator.BackColor = System.Drawing.Color.Transparent;
             this.DataMgrNavigator.CountItem = this.toolStripLabel1;
             this.DataMgrNavigator.DeleteItem = this.toolStripButton2;
-            this.DataMgrNavigator.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.DataMgrNavigator.Dock = System.Windows.Forms.DockStyle.None;
             this.DataMgrNavigator.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DataMgrNavigator.ImageScalingSize = new System.Drawing.Size(24, 20);
             this.DataMgrNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -876,27 +861,19 @@ namespace Budget
             this.toolStripSeparator8,
             this.toolStripButton1,
             this.toolStripSeparator9,
-            this.toolStripButton2});
-            this.DataMgrNavigator.Location = new System.Drawing.Point(0, 318);
+            this.toolStripButton2,
+            this.toolStripSeparator1,
+            this.toolStripButton7});
+            this.DataMgrNavigator.Location = new System.Drawing.Point(310, 463);
             this.DataMgrNavigator.MoveFirstItem = this.toolStripButton3;
             this.DataMgrNavigator.MoveLastItem = this.toolStripButton6;
             this.DataMgrNavigator.MoveNextItem = this.toolStripButton5;
             this.DataMgrNavigator.MovePreviousItem = this.toolStripButton4;
             this.DataMgrNavigator.Name = "DataMgrNavigator";
             this.DataMgrNavigator.PositionItem = this.toolStripTextBox1;
-            this.DataMgrNavigator.Size = new System.Drawing.Size(757, 31);
+            this.DataMgrNavigator.Size = new System.Drawing.Size(371, 31);
             this.DataMgrNavigator.TabIndex = 152;
             this.DataMgrNavigator.Text = "bindingNavigator1";
-            // 
-            // toolStripButton1
-            // 
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.RightToLeftAutoMirrorImage = true;
-            this.toolStripButton1.Size = new System.Drawing.Size(28, 28);
-            this.toolStripButton1.Text = "Add New";
-            this.toolStripButton1.ToolTipText = "Add New";
             // 
             // toolStripLabel1
             // 
@@ -904,15 +881,6 @@ namespace Budget
             this.toolStripLabel1.Size = new System.Drawing.Size(47, 28);
             this.toolStripLabel1.Text = "of {0}";
             this.toolStripLabel1.ToolTipText = "Total number of items";
-            // 
-            // toolStripButton2
-            // 
-            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
-            this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.RightToLeftAutoMirrorImage = true;
-            this.toolStripButton2.Size = new System.Drawing.Size(28, 28);
-            this.toolStripButton2.Text = "Delete";
             // 
             // toolStripButton3
             // 
@@ -926,15 +894,6 @@ namespace Budget
             // 
             this.toolStripSeparator4.Name = "toolStripSeparator4";
             this.toolStripSeparator4.Size = new System.Drawing.Size(6, 31);
-            // 
-            // toolStripButton4
-            // 
-            this.toolStripButton4.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton4.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton4.Image")));
-            this.toolStripButton4.Name = "toolStripButton4";
-            this.toolStripButton4.RightToLeftAutoMirrorImage = true;
-            this.toolStripButton4.Size = new System.Drawing.Size(28, 28);
-            this.toolStripButton4.Text = "Previous";
             // 
             // toolStripSeparator5
             // 
@@ -954,15 +913,6 @@ namespace Budget
             // 
             this.toolStripSeparator6.Name = "toolStripSeparator6";
             this.toolStripSeparator6.Size = new System.Drawing.Size(6, 31);
-            // 
-            // toolStripButton5
-            // 
-            this.toolStripButton5.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton5.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton5.Image")));
-            this.toolStripButton5.Name = "toolStripButton5";
-            this.toolStripButton5.RightToLeftAutoMirrorImage = true;
-            this.toolStripButton5.Size = new System.Drawing.Size(28, 28);
-            this.toolStripButton5.Text = "Next";
             // 
             // toolStripSeparator7
             // 
@@ -1016,6 +966,74 @@ namespace Budget
             this.FilterPanel.Size = new System.Drawing.Size(228, 583);
             this.FilterPanel.TabIndex = 136;
             // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 31);
+            // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.RightToLeftAutoMirrorImage = true;
+            this.toolStripButton1.Size = new System.Drawing.Size(28, 28);
+            this.toolStripButton1.Text = "Add New";
+            this.toolStripButton1.ToolTipText = "Add New";
+            // 
+            // toolStripButton2
+            // 
+            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
+            this.toolStripButton2.Name = "toolStripButton2";
+            this.toolStripButton2.RightToLeftAutoMirrorImage = true;
+            this.toolStripButton2.Size = new System.Drawing.Size(28, 28);
+            this.toolStripButton2.Text = "Delete";
+            // 
+            // toolStripButton4
+            // 
+            this.toolStripButton4.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton4.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton4.Image")));
+            this.toolStripButton4.Name = "toolStripButton4";
+            this.toolStripButton4.RightToLeftAutoMirrorImage = true;
+            this.toolStripButton4.Size = new System.Drawing.Size(28, 28);
+            this.toolStripButton4.Text = "Previous";
+            // 
+            // toolStripButton5
+            // 
+            this.toolStripButton5.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton5.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton5.Image")));
+            this.toolStripButton5.Name = "toolStripButton5";
+            this.toolStripButton5.RightToLeftAutoMirrorImage = true;
+            this.toolStripButton5.Size = new System.Drawing.Size(28, 28);
+            this.toolStripButton5.Text = "Next";
+            // 
+            // toolStripButton7
+            // 
+            this.toolStripButton7.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton7.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton7.Image")));
+            this.toolStripButton7.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton7.Name = "toolStripButton7";
+            this.toolStripButton7.Size = new System.Drawing.Size(28, 28);
+            this.toolStripButton7.Text = "toolStripButton7";
+            // 
+            // ReturnButton
+            // 
+            this.ReturnButton.BackColor = System.Drawing.Color.Transparent;
+            this.ReturnButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ReturnButton.BackgroundImage")));
+            this.ReturnButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ReturnButton.Image = ((System.Drawing.Image)(resources.GetObject("ReturnButton.Image")));
+            this.ReturnButton.Location = new System.Drawing.Point(42, 30);
+            this.ReturnButton.Margin = new System.Windows.Forms.Padding(2);
+            this.ReturnButton.Name = "ReturnButton";
+            this.ReturnButton.Size = new System.Drawing.Size(42, 26);
+            this.ReturnButton.TabIndex = 147;
+            this.ReturnButton.UseSelectable = true;
+            // 
+            // DataMgrBindingSource
+            // 
+            this.DataMgrBindingSource.DataMember = "P7";
+            // 
             // DataManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -1033,7 +1051,6 @@ namespace Budget
             this.Name = "DataManager";
             this.ShowIcon = false;
             this.Text = "MetroForm1";
-            ((System.ComponentModel.ISupportInitialize)(this.DataMgrBindingSource)).EndInit();
             this.tableLayoutPanel10.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.MiniTabControl1)).EndInit();
             this.MiniTabControl1.ResumeLayout(false);
@@ -1043,13 +1060,13 @@ namespace Budget
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.DatabaseGridPanel.ResumeLayout(false);
-            this.DatabaseGridPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataMgrGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataMgrNavigator)).EndInit();
             this.DataMgrNavigator.ResumeLayout(false);
             this.DataMgrNavigator.PerformLayout();
             this.Expander.ResumeLayout(false);
             this.Expander.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DataMgrBindingSource)).EndInit();
             this.ResumeLayout(false);
 
                 }
@@ -1104,6 +1121,8 @@ namespace Budget
                 private MetroSet_UI.Controls.MetroSetTextBox amount1;
                 private MetroSet_UI.Controls.MetroSetTextBox amount2;
                 private MetroSet_UI.Controls.MetroSetLabel metroSetLabel1;
+                private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+                private System.Windows.Forms.ToolStripButton toolStripButton7;
             }
         }
     } 
