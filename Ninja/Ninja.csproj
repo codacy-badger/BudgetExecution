@@ -385,16 +385,6 @@
     <EmbeddedResource Include="Data\Forms\SummaryForm.resx">
       <DependentUpon>SummaryForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <EmbeddedResource Include="Resources\NinjaApplicationImages.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>NinjaApplicationImages.Designer.cs</LastGenOutput>
@@ -755,9 +745,7 @@
     <None Include="Resources\NinjaApplicationImages\Command-Refresh-01.png" />
     <None Include="Resources\NinjaApplicationImages\Command Undo-WF.png" />
     <None Include="Resources\NinjaApplicationImages\Command Refresh-WF.png" />
-    <None Include="Resources\NinjaApplicationImages\Command Refresh-WF%281%29.png" />
     <None Include="Resources\NinjaApplicationImages\Command Redo-WF.png" />
-    <None Include="Resources\NinjaApplicationImages\Command Redo-WF%281%29.png" />
     <None Include="Resources\NinjaApplicationImages\Columns.png" />
     <None Include="Resources\NinjaApplicationImages\Column-Add.png" />
     <None Include="Resources\NinjaApplicationImages\Column Graph - 01.png" />
@@ -806,7 +794,6 @@
     <None Include="Resources\NinjaApplicationImages\Add row bottom.png" />
     <None Include="Resources\NinjaApplicationImages\Add Report.png" />
     <None Include="Resources\NinjaApplicationImages\Accounting-01-WF.png" />
-    <None Include="Resources\NinjaApplicationImages\Accounting-01-WF%281%29.png" />
     <None Include="Resources\NinjaApplicationImages\Window-Properties.png" />
     <None Include="Resources\NinjaApplicationImages\View-Tiles.png" />
     <None Include="Resources\NinjaApplicationImages\View-05-WF.png" />

@@ -18,7 +18,7 @@ namespace Budget
                 #region Properties
 
                 public DivisionAuthority Division { get; set; }
-                public RegionalAuthority Region { get; set; }
+                public RegionalAuthority R6 { get; set; }
                 private object Current { get; }
                 private int Index { get; }
                 private Dictionary<string, object> Parameter { get; set; }
@@ -31,7 +31,7 @@ namespace Budget
                 public AccountManager( )
                 {
                     InitializeComponent( );
-                    Region = new RegionalAuthority( );
+                    R6 = new RegionalAuthority( );
                     Division = new DivisionAuthority( );
                     GetRCValues( );
                     GetFundValues( );
@@ -60,21 +60,21 @@ namespace Budget
 
                 private void GetFundValues( )
                 {
-                    var fund = Region.DataElement["Fund"];
+                    var fund = R6.DataElement["Fund"];
                     foreach (string f in fund)
                         FundBox.Items.Add(f);
                 }
 
                 private void GetOrgValues( )
                 {
-                    var org = Region.DataElement["Org"];
+                    var org = R6.DataElement["Org"];
                     foreach (string oc in org)
                         OrgBox.Items.Add(oc);
                 }
 
                 private void GetCodeValues( )
                 {
-                    var prc = Region.DataElement["Code"];
+                    var prc = R6.DataElement["Code"];
                     foreach (string p in prc)
                         CodeBox.Items.Add(p);
                 }

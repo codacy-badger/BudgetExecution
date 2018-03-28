@@ -429,7 +429,6 @@ namespace Budget
                 private System.Windows.Forms.Label label10;
                 private System.Windows.Forms.Label label41;
                 private System.Windows.Forms.Label label43;
-                private DataSet E6;
                 private MetroFramework.Controls.MetroComboBox CodeBox;
                 private MetroFramework.Controls.MetroComboBox BfyBox;
                 private MetroFramework.Controls.MetroComboBox RcBox;

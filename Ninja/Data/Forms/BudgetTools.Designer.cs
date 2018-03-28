@@ -258,13 +258,6 @@ namespace Budget
                 private Syncfusion.Windows.Forms.Tools.SplitContainerAdv splitContainerAdv1;
                 private Syncfusion.Windows.Forms.Tools.TabControlAdv tabControlAdv1;
                 private Syncfusion.Windows.Forms.Tools.TabPageAdv tabPageAdv1;
-                private System.Windows.Forms.DataGridViewTextBoxColumn bFYDataGridViewTextBoxColumn;
-                private System.Windows.Forms.DataGridViewTextBoxColumn fundDataGridViewTextBoxColumn;
-                private System.Windows.Forms.DataGridViewTextBoxColumn bOCDataGridViewTextBoxColumn;
-                private System.Windows.Forms.DataGridViewTextBoxColumn orgDataGridViewTextBoxColumn;
-                private System.Windows.Forms.DataGridViewTextBoxColumn rCDataGridViewTextBoxColumn;
-                private System.Windows.Forms.DataGridViewTextBoxColumn codeDataGridViewTextBoxColumn;
-                private System.Windows.Forms.DataGridViewTextBoxColumn amountDataGridViewTextBoxColumn;
                 private System.Windows.Forms.Panel panel1;
                 private System.Windows.Forms.DataGridView TransferGrid;
                 private Syncfusion.Windows.Forms.Tools.TabPageAdv tabPageAdv2;

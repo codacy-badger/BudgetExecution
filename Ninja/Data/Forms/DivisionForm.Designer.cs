@@ -4952,7 +4952,6 @@ namespace Budget
                 private System.Windows.Forms.RadioButton rb20;
                 private System.Windows.Forms.RadioButton rb19;
                 protected Syncfusion.Windows.Forms.Chart.ChartControl ProjectChart;
-                private DataSet E6;
                 protected Syncfusion.Windows.Forms.Chart.ChartControl BocChart;
                 protected internal Syncfusion.Windows.Forms.Tools.TabPageAdv DatabaseTab;
                 private System.Windows.Forms.Label lblTotalAmount;
@@ -4985,7 +4984,6 @@ namespace Budget
                 private System.Windows.Forms.FlowLayoutPanel panel3;
                 private System.Windows.Forms.FlowLayoutPanel panel2;
                 private System.Windows.Forms.FlowLayoutPanel AppropriationTabFilterPanel;
-                private DataGridView DataGrid;
                 protected ChartControl PrcChart;
                 private BindingSource P8BindingSource;
                 private MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel expandCollapsePanel1;
@@ -4994,7 +4992,6 @@ namespace Budget
                 private MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel expandCollapsePanel6;
                 private MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel expandCollapsePanel5;
                 private MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel expandCollapsePanel4;
-                private MetroSet_UI.Controls.MetroSetTabControl metroSetTabControl1;
                 private MetroSet_UI.Child.MetroSetTabPage metroSetTabPage2;
                 private MetroTextBox metroTextBox8;
                 private TableLayoutPanel tableLayoutPanel1;
@@ -5069,18 +5066,6 @@ namespace Budget
                 private ToolStripButton bindingNavigatorMoveNextItem;
                 private ToolStripButton bindingNavigatorMoveLastItem;
                 private ToolStripSeparator bindingNavigatorSeparator2;
-                private DataGridViewTextBoxColumn budgetLevelDataGridViewTextBoxColumn;
-                private DataGridViewTextBoxColumn docTypeDataGridViewTextBoxColumn;
-                private DataGridViewTextBoxColumn orgDataGridViewTextBoxColumn;
-                private DataGridViewTextBoxColumn rPIODataGridViewTextBoxColumn;
-                private DataGridViewTextBoxColumn rCDataGridViewTextBoxColumn;
-                private DataGridViewTextBoxColumn fundDataGridViewTextBoxColumn;
-                private DataGridViewTextBoxColumn programProjectCodeDataGridViewTextBoxColumn;
-                private DataGridViewTextBoxColumn bOCDataGridViewTextBoxColumn;
-                private DataGridViewTextBoxColumn amountDataGridViewTextBoxColumn;
-                private DataGridViewTextBoxColumn dateDataGridViewTextBoxColumn;
-                private DataGridViewTextBoxColumn programProjectNameDataGridViewTextBoxColumn;
-                private DataGridViewTextBoxColumn npmCodeDataGridViewTextBoxColumn;
                 private MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel expandCollapsePanel7;
                 private TabControlAdv MiniTabControl2;
                 private TabPageAdv tabPageAdv3;

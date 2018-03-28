@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Windows.Forms;
+using MetroSet_UI.Controls;
 using Metro = Syncfusion.Windows.Forms.MetroForm;
 
 namespace Budget
@@ -16,13 +17,11 @@ namespace Budget
             {
                 #region Properties
                 public Source Source { get; set; }
-                public DataBuilder Data { get; set; }
                 public RegionalAuthority Regional { get; set; }
                 public DivisionAuthority Division { get; set; }
-                FormData FormNinja { get; set; }
+                public FormData Ninja { get; set; }
                 public DataTable Table { get; set; }
-                public ChartControl DataChart { get; set; }
-                public Query DataManagerQuery { get; set; }
+                public Dictionary<string,string[]> Element { get; set; }
                 public decimal Total { get; }
                 #endregion
 
@@ -30,9 +29,21 @@ namespace Budget
                 public DataManager(Source source)
                 {
                     InitializeComponent();
-                    FormNinja = new FormData(source, DataMgrBindingSource, DataMgrGrid, DataMgrNavigator);
-                    FormNinja.GetGridColumns(DataMgrGrid);
-                    Data = FormNinja.NinjaData;
+                    if (source == Source.P7)
+                    {
+                        this.Regional = new RegionalAuthority();
+                    }
+                    if (source == Source.P8)
+                    {
+                        Division = new DivisionAuthority();
+                    }
+                    Ninja = new FormData(source, FilterPanel, DataMgrBindingSource, DataMgrGrid, DataMgrNavigator);
+                    Ninja.GetGridColumns(DataMgrGrid);
+                    Table = Ninja.Table;
+                    Element = Ninja.GetDataElements(Table);
+                    Ninja.GetFilterButtons(FilterPanel, Element["FundName"]);
+                    Ninja.GetAppropriationFilterBox(Table, FilterPanel);
+                    PrcChart = GetDataChart(PrcChart, "", source, DataMgrBindingSource);
                 }
 
                 #endregion
@@ -42,8 +53,9 @@ namespace Budget
                 private void Form_Load(object sender, EventArgs e)
                 {
                     ReturnButton.Visible = false;
-                    PrcChart = GetPieChart(PrcChart, "", Source, DataMgrBindingSource);
-                    DataMgrBindingSource.CurrentItemChanged += new EventHandler(UpdatePieChart);
+                    ReturnButton.Click += Ninja.ReturnButton_OnClick;
+                    DataMgrBindingSource.CurrentItemChanged += UpdateDataChart;
+                    DataMgrBindingSource.CurrentItemChanged += GetGridSelectedRowValues;
                 }
 
                 private void P7Grid_SelectionChanged(object sender, EventArgs e)
@@ -53,38 +65,31 @@ namespace Budget
 
                 #endregion
 
-                private ChartControl GetPieChart(ChartControl chart, string title, Source source, BindingSource bs)
+                private ChartControl GetDataChart(ChartControl chart, string title, Source source, BindingSource bs)
                 {
                     if (source == Source.P7)
-                        DataChart = new Chart(chart, title, Regional, bs).CreateColumn();
+                        chart = new Chart(chart, title, Regional, bs).CreateColumn();
                     if (source == Source.P8)
-                        DataChart = new Chart(chart, title, Division, bs).CreateColumn();
-                    return DataChart;
+                        chart = new Chart(chart, title, Division, bs).CreateColumn();
+                    return chart;
                 }
 
-                private void UpdatePieChart(object sender, EventArgs e)
+                private void UpdateDataChart(object sender, EventArgs e)
                 {
                     DataMgrBindingSource = sender as BindingSource;
-                    PrcChart = GetPieChart(PrcChart, "", Source, DataMgrBindingSource);
+                    PrcChart = GetDataChart(PrcChart, "", Source, DataMgrBindingSource);
                 }
 
                 private void GetGridSelectedRowValues(object sender, EventArgs e)
                 {
                     DataMgrGrid.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
                     var gridrow = DataMgrGrid.CurrentRow;
-                    var bfy = DataMgrGrid.CurrentRow.Cells["BFY"].Value;
-                    this.bfy.Text = bfy.ToString();
-                    var fund = gridrow.Cells["Fund"].Value;
-                    this.fund.Text = fund.ToString();
-                    var org = gridrow.Cells["Org"].Value;
-                    this.org.Text = org.ToString();
-                    var rc = gridrow.Cells["RC"].Value;
-                    this.rc.Text = rc.ToString();
-                    var code = gridrow.Cells["Code"].Value;
-                    this.code.Text = code.ToString();
-                    var boc = gridrow.Cells["BOC"].Value;
-                    this.boc.Text = boc.ToString();
-                    var funding = gridrow.Cells["Amount"].Value;
+                    bfy.Text = DataMgrGrid.CurrentRow.Cells["BFY"].Value.ToString();
+                    fund.Text = gridrow.Cells["Fund"].Value.ToString();
+                    org.Text = gridrow.Cells["Org"].Value.ToString();
+                    rc.Text = gridrow.Cells["RC"].Value.ToString();
+                    code.Text = gridrow.Cells["Code"].Value.ToString();
+                    boc.Text = gridrow.Cells["BOC"].Value.ToString(); 
                     amount1.Text = gridrow.Cells["Amount"].Value.ToString();
                 }
 

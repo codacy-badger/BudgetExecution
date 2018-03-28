@@ -96,10 +96,8 @@ namespace Budget
                     var values = table.Rows[i];
                     var value = (decimal)values["Amount"];
                     string pp = values["ProgramProjectName"].ToString( );
-                    var data = P7.ProjectData;
+                    var data = new RegionalAuthority().ProjectData;
                     ColumnChart = chart;
-                    ColumnChart.Series.Clear( );
-                    ColumnChart.Legends.Clear( );
                     ColumnSeries = new ChartSeries("Allocation", ChartSeriesType.Column);
                     var series = new ChartSeries("Total", ChartSeriesType.Column);
                     foreach (string key in data.Keys)

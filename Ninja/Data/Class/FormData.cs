@@ -23,20 +23,20 @@ namespace Budget
             {
                 #region Properties
 
-                public DataBuilder NinjaData { get; set; }
+                public DataBuilder Data { get; set; }
                 public Tuple<DataTable, PRC[], decimal, int> AllocationData { get; set; }
                 bool Percent { get; set; }
-                public DataSet Data { get; set; }
+                public DataSet E6 { get; set; }
                 public DataTable Table { get; set; }
                 public decimal Total { get; set; }
                 public decimal Average { get; set; }
                 public int Count { get; set; }
                 public Dictionary<string, string[]> DataElement { get; set; }
-                public decimal[] FundMetrics { get; set; }
+                public FlowLayoutPanel Panel { get; set; }
                 public BindingSource BindingSource { get; set; }
+                public DataGridView DataGrid { get; set; }
                 public BindingNavigator Navigator { get; set; }
-                public DataGridView Grid { get; set; }
-                public FlowLayoutPanel FilterPanel { get; set; }
+                public decimal[] FundMetrics { get; set; }
                 public ChartControl Chart { get; set;}  
                 public ChartDataBindModel ChartModel { get; set; }
 
@@ -48,20 +48,18 @@ namespace Budget
                 {
                 }
 
-                public FormData(Source source, BindingSource bs, DataGridView dgv, BindingNavigator bn)
+                public FormData(Source source, FlowLayoutPanel panel, BindingSource bs, DataGridView dgv, BindingNavigator bn)
                 {
-                    NinjaData = new DataBuilder(source);
-                    AllocationData = NinjaData.PrcData;
-                    Data = NinjaData.Data;
-                    Table = NinjaData.Table;
+                    Data = new DataBuilder(source);
+                    E6 = Data.GetDataSet();
+                    Table = Data.Table;
+                    BindFormData(Table, dgv, bs, bn);
                     DataElement = GetDataElements(Table);
+                    Panel = panel;
                     BindingSource = bs;
-                    BindingSource.DataSource = Table;
                     Navigator = bn;
-                    Navigator.BindingSource = BindingSource;
-                    Grid = dgv;
-                    Grid.DataSource = BindingSource;
-
+                    DataGrid = dgv;
+                    GetAppropriationFilterBox(Table, Panel);
                 }
 
                 #endregion
@@ -100,7 +98,7 @@ namespace Budget
 
                 internal void GetFilterButtons(FlowLayoutPanel panel, string[] list)
                 {
-                    panel.Controls.Clear( );
+                    panel.Controls.Clear();
                     foreach (string f in list)
                     {
                         var b = new MetroSetButton( );
@@ -112,16 +110,16 @@ namespace Budget
                         b.HoverBorderColor = Color.Blue;
                         b.HoverColor = Color.SteelBlue;
                         b.HoverTextColor = Color.AntiqueWhite;
-                        b.Size = new Size(195, 45);
+                        b.Size = new Size(175,30);
                         b.Margin = new Padding(3);
                         b.Padding = new Padding(1);
                         panel.Controls.Add(b);
                         panel.AutoSize = true;
-                        b.Tag = f;
+                        b.Tag = f;                        
                     }
                 }
 
-                internal void GetFilterBox(DataTable table, FlowLayoutPanel filterPanel)
+                internal void GetAppropriationFilterBox(DataTable table, FlowLayoutPanel filterPanel)
                 {
                     GetFilterButtons(filterPanel, GetCodeElements(table, "FundName"));
                     foreach (Control c in filterPanel.Controls) c.Click += AppropriationButton_OnSelect;
@@ -131,7 +129,8 @@ namespace Budget
                 {
                     var button = sender as MetroSetButton;
                     var table = GetTable(Table, "FundName", button.Tag.ToString( ));
-                    BindFormData(table, Grid, BindingSource, Navigator);
+                    BindingSource.DataSource = table;
+                    GetBocFilterBox(table, Panel);
                     Table = table;
                 }
 
@@ -145,10 +144,16 @@ namespace Budget
                 {
                     var button = sender as MetroSetButton;
                     var table = GetTable(Table, "BocName", button.Tag.ToString( ));
-                    BindFormData(table, Grid, BindingSource, Navigator);
-                    Table = table;
+                    BindingSource.DataSource = table;
+                    GetBocFilterBox(Table, Panel);
                 }
 
+                internal void ReturnButton_OnClick(object sender, EventArgs e)
+                {
+                    Table = Data.Table;
+                    BindingSource.DataSource = Table;
+                    GetAppropriationFilterBox(Table, Panel);
+                }
                 internal void GetFormSettings(MetroForm form)
                 {
                     form.Size = new Size(1200, 700);

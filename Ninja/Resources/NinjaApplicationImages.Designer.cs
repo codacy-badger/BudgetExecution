@@ -83,16 +83,6 @@ namespace Ninja.Resources {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Accounting_01_WF_1_ {
-            get {
-                object obj = ResourceManager.GetObject("Accounting_01_WF_1_", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap Add_New {
             get {
                 object obj = ResourceManager.GetObject("Add_New", resourceCulture);
@@ -653,16 +643,6 @@ namespace Ninja.Resources {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Command_Redo_WF_1_ {
-            get {
-                object obj = ResourceManager.GetObject("Command_Redo_WF_1_", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap Command_Refresh_01 {
             get {
                 object obj = ResourceManager.GetObject("Command_Refresh_01", resourceCulture);
@@ -676,16 +656,6 @@ namespace Ninja.Resources {
         internal static System.Drawing.Bitmap Command_Refresh_WF {
             get {
                 object obj = ResourceManager.GetObject("Command_Refresh_WF", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Command_Refresh_WF_1_ {
-            get {
-                object obj = ResourceManager.GetObject("Command_Refresh_WF_1_", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

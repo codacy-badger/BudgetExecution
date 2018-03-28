@@ -420,7 +420,7 @@ namespace Budget
                     var button = sender as MetroSetButton;
                     string name = button.Tag.ToString( );
                     var table = GetTable(Division.Data.Table, "FundName", name);
-                    BindData(table, DataGrid, P8BindingSource, DataNavigator);
+                    BindData(table, Grid, P8BindingSource, DataNavigator);
                     lblTotalAmount.Text = GetTotal(table).ToString("c");
                     lblCount.Text = table.Rows.Count.ToString( );
                     GetP8BocFilterBox(table);
@@ -442,7 +442,7 @@ namespace Budget
                     var button = sender as MetroSetButton;
                     string name = button.Tag.ToString( );
                     var table = GetTable(DivisionData, "BocName", name);
-                    BindData(table, DataGrid, P8BindingSource, DataNavigator);
+                    BindData(table, Grid, P8BindingSource, DataNavigator);
                     BackButton.Text = "Back";
                     DatabaseGroupBox.Text = $"{Division.Org.Name} {name} Data";
                     lblTotalAmount.Text = GetTotal(table).ToString("c");
@@ -453,7 +453,7 @@ namespace Budget
                 private void ReturnButton_OnAppropriationClick(object sender, EventArgs e)
                 {
                     var table = Division.Data.Table;
-                    BindData(table, DataGrid, P8BindingSource, DataNavigator);
+                    BindData(table, Grid, P8BindingSource, DataNavigator);
                     GetP8AppropFilterBox(table);
                     lblTotalAmount.Text = GetTotal(table).ToString("c");
                     lblCount.Text = table.Rows.Count.ToString( );
@@ -464,7 +464,7 @@ namespace Budget
                 private void ReturnButton_OnBocClick(object sender, EventArgs e)
                 {
                     var table = Division.Data.Table;
-                    BindData(table, DataGrid, P8BindingSource, DataNavigator);
+                    BindData(table, Grid, P8BindingSource, DataNavigator);
                     GetP8AppropFilterBox(table);
                     lblTotalAmount.Text = GetTotal(table).ToString("c");
                     lblCount.Text = table.Rows.Count.ToString( );

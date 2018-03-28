@@ -62,23 +62,6 @@ namespace Budget
 
                 #region Static Methods
 
-                public static void GetNinjaBasicForm(MetroForm form)
-                {
-                    form.Size = new Size(1200, 700);
-                    form.BackColor = Color.Black;
-                    form.BorderColor = SystemColors.MenuHighlight;
-                    form.ForeColor = SystemColors.MenuHighlight;
-                    form.MetroColor = Color.Black;
-                    form.ShowIcon = false;
-                    form.ShowInTaskbar = true;
-                    form.CaptionBarColor = Color.Black;
-                    form.CaptionFont = new Font("Segoe UI", 10f, FontStyle.Regular);
-                    form.CaptionForeColor = SystemColors.MenuHighlight;
-                    form.BorderThickness = 1;
-                    form.Padding = new Padding(1);
-                    form.CaptionAlign = HorizontalAlignment.Left;
-                }
-
                 public static string DivisionName(string rc)
                 {
                     switch (rc)
