@@ -14,7 +14,7 @@ namespace Budget
     {
         namespace Data
         {
-            public class Metric<T> : IMetric
+            public class Metric : IMetric
             {
                 #region Properties
                 DataTable table;

@@ -432,6 +432,9 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <AdditionalFiles Include="Report\BudgetControlTemplate.xlsx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AdditionalFiles>
     <None Include="Resources\NinjaApplicationImages\Access-New.png" />
     <None Include="Resources\NinjaApplicationImages\Add-New.png" />
     <None Include="Resources\NinjaApplicationImages\Admin.png" />
@@ -474,7 +477,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Database\" />
-    <Folder Include="Report\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Model1.Context.tt">
