@@ -22,6 +22,7 @@ namespace Budget
 
                 public Fund Fund { get; set; }
                 public string FiscalYear { get; set; }
+                public DataTable Table { get; }
                 public PRC[] Allocation { get; }
                 public Tuple<DataTable, PRC[], decimal, int> AllocationData { get; }
                 public Tuple<DataTable, PRC[], decimal, int> FteData { get; }
@@ -36,7 +37,7 @@ namespace Budget
                 public int Count { get; }
                 public decimal Total { get; }
                 public decimal Average { get; }
-                public decimal[] FundMetrics { get; }
+                public decimal[] Metrics { get; }
                 public FTE FTE { get; }
                 public Dictionary<string, decimal> BocData { get; set; }
                 public Dictionary<string, decimal> NpmData { get; set; }
@@ -63,6 +64,7 @@ namespace Budget
                 {
                     AllocationData = GetDataValues(table, "Fund", Fund.Code);
                     Allocation = AllocationData.Item2;
+                    Table = AllocationData.Item1;
                     Total = GetTotal(AllocationData.Item1);
                     Average = GetAverage(AllocationData.Item1);
                     DataElement = GetDataElements(AllocationData.Item1);

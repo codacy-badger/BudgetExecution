@@ -36,7 +36,7 @@ namespace Budget
                 public BindingSource BindingSource { get; set; }
                 public DataGridView DataGrid { get; set; }
                 public BindingNavigator Navigator { get; set; }
-                public decimal[] FundMetrics { get; set; }
+                public decimal[] Metrics { get; set; }
                 public ChartControl Chart { get; set;}  
                 public ChartDataBindModel ChartModel { get; set; }
 

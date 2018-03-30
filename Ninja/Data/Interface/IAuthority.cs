@@ -12,11 +12,13 @@ namespace Budget
     {
         namespace Data
         {
-            public interface IAuthority : IMetrics
+            public interface IAuthority : IMetric
             {
                 #region Properties
 
                 DataSet E6 { get; }
+
+                DataTable Table { get; }
 
                 Dictionary<string, string[]> DataElement { get; }
 
@@ -35,10 +37,6 @@ namespace Budget
                 PRC[] GetPrcArray(DataTable table);
 
                 Tuple<DataTable, PRC[], decimal, int> GetDataValues(DataTable table, string column, string filter);
-
-                Dictionary<string, decimal> GetDataTotals(DataTable table, string[] codes, string field);
-
-                Dictionary<string, decimal[]> GetDataMetrics(DataTable table, string[] codes, string field);
 
                 #endregion
             }

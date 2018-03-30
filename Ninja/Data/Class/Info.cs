@@ -23,6 +23,20 @@ namespace Budget
                     return new PRC(row);
                 }
 
+                public static string[] GetFields(this DataTable table)
+                {
+                    var columns = table.Columns;
+                    string[] fields = new string[columns.Count];
+                    for (int i = 0; i < columns.Count; i++)
+                    {
+                        foreach (DataColumn dc in columns)
+                        {
+                            fields[i] = dc.ColumnName;
+                        }
+                    }
+                    return fields;
+                }
+
                 public static bool IsParentOf(this DataRow parent, DataRow child)
                 {
                     if (parent["BudgetLevel"].ToString( ).Equals("7") &&

@@ -23,10 +23,11 @@ namespace Budget
                 public RC RC { get; }
                 public DataBuilder Data { get; set; }
                 public DataSet E6 { get; }
+                public DataTable Table { get; }
                 public PRC[] Allocation { get; }
                 public decimal Total { get; }
                 public decimal Average { get; }
-                public decimal[] FundMetrics { get; }
+                public decimal[] Metrics { get; }
                 public Dictionary<string, string[]> DataElement { get; }
                 public int Count { get; }
                 public Tuple<DataTable, PRC[], decimal, int> AllocationData { get; }

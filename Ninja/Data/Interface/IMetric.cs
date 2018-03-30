@@ -1,5 +1,6 @@
 ﻿#region Using Directives
 
+using System.Collections.Generic;
 using System.Data;
 
 #endregion Using Directives
@@ -10,7 +11,7 @@ namespace Budget
     {
         namespace Data
         {
-            public interface IMetrics
+            public interface IMetric
             {
                 #region Properties
 
@@ -20,7 +21,7 @@ namespace Budget
 
                 decimal Average { get; }
 
-                decimal[] FundMetrics { get; }
+                decimal[] Metrics { get; }
 
                 #endregion Properties
 
@@ -33,6 +34,10 @@ namespace Budget
                 decimal GetAverage(DataTable table);
 
                 decimal[] GetMetrics(DataTable table);
+
+                Dictionary<string, decimal> GetDataTotals(DataTable table, string[] codes, string field);
+
+                Dictionary<string, decimal[]> GetDataMetrics(DataTable table, string[] codes, string field);
 
                 #endregion
             }

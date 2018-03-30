@@ -21,13 +21,14 @@ namespace Budget
                 public static string FiscalYear { get; set; } = "2018";
                 public DataBuilder Data { get; set; }
                 public DataSet E6 { get; }
+                public DataTable Table { get; }
                 public Tuple<DataTable, PRC[], decimal, int> AllocationData { get; }
                 public Dictionary<string, string[]> DataElement { get; }
                 public PRC[] Allocation { get; }
                 public decimal Total { get; }
                 public int Count { get; }
                 public decimal Average { get; }
-                public decimal[] FundMetrics { get; }
+                public decimal[] Metrics { get; }
                 public FTE FTE { get; }
                 public Dictionary<string, decimal> FundData { get; }
                 public Dictionary<string, decimal> FteInfo { get; }
@@ -55,7 +56,7 @@ namespace Budget
                     Appropriation = GetAllocation( );
                     FTE = GetFTE(Data.Table);
                     FundData = GetDataTotals(Data.Table, DataElement["Fund"], "Fund");
-                    FteInfo = GetDataTotals(FTE.Allocation, DataElement["Fund"], "Fund");
+                    FteInfo = GetDataTotals(FTE.Table, DataElement["Fund"], "Fund");
                     BocData = GetDataTotals(Data.Table, DataElement["BocName"], "BocName");
                     NpmData = GetDataTotals(Data.Table, DataElement["NPM"], "NPM");
                     GoalInfo = GetDataTotals(Data.Table, DataElement["GoalName"], "GoalName");

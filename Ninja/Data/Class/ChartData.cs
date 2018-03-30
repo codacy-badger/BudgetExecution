@@ -13,7 +13,7 @@ namespace Budget
                 public ChartSeriesType Type { get; set; }
                 public ChartControl Chart { get; set; }
                 public ChartSeries Series { get; set; }
-                public Metric Metric { get; }
+                public ChartDataBindModel Model { get; set; }
                 public bool Percentage { get; set; }
                 public ChartControl PieChart { get; set; }
                 public Dictionary<string, decimal> Values { get; set; }

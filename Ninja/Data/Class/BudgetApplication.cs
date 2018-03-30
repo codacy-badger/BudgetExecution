@@ -83,7 +83,7 @@ namespace Budget
                 Zero, Increase, Decrease
             }
 
-            public enum Metric
+            public enum Statistic
             {
                 Value, Count, Average, Ratio
             }

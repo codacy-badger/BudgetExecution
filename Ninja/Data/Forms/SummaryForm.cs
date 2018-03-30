@@ -27,10 +27,10 @@ namespace Budget
                 public DataBuilder Data { get; }
                 public DataSet E6 { get; }
                 public Tuple<DataTable, PRC[], decimal, int> AllocationData { get; }
-                private DataTable Table { get; }
+                public DataTable Table { get; }
                 public decimal Total { get; }
                 public decimal Average { get; }
-                public decimal[] FundMetrics { get; }
+                public decimal[] Metrics { get; }
                 public int Count { get; }
                 public Dictionary<string, string[]> DataElement { get; }
                 internal string[] FundCodes { get; set; }

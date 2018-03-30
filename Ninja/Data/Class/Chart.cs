@@ -26,7 +26,6 @@ namespace Budget
                 public Dictionary<string, decimal> SeriesInfo { get; set; }
                 public Dictionary<string, double> Data { get; set; }
                 public bool Percentage { get; set; }
-                public Metric Metric { get; }
 
                 #endregion
 

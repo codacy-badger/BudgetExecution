@@ -285,7 +285,7 @@
     <Compile Include="Data\Interface\IDataBuilder.cs" />
     <Compile Include="Data\Interface\IEmployee.cs" />
     <Compile Include="Data\Interface\IExcelOp.cs" />
-    <Compile Include="Data\Interface\IMetrics.cs" />
+    <Compile Include="Data\Interface\IMetric.cs" />
     <Compile Include="Data\Interface\IObligation.cs" />
     <Compile Include="Data\Interface\IParameter.cs" />
     <Compile Include="Data\Interface\IPayroll.cs" />
@@ -302,6 +302,7 @@
     <Compile Include="Data\Forms\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Data\Class\Metric.cs" />
     <Compile Include="F6.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>

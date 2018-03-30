@@ -18,7 +18,7 @@ namespace Budget
                 #region Properties
                 public DataSet E6 { get; }
                 public Tuple<DataTable, PRC[], decimal, int> AllocationData { get; }
-                public DataTable Allocation { get; }
+                public DataTable Table { get; }
                 public PRC[] Data { get; }
                 public string RPIO { get; set; }
                 public string BFY { get; set; }
@@ -30,7 +30,7 @@ namespace Budget
                 public string Code { get; }
                 public decimal Authority { get; set; }
                 public decimal Amount { get; set; }
-                decimal[] IMetrics.FundMetrics { get; }
+                decimal[] IMetric.Metrics { get; }
                 public decimal Average { get; }
                 public int Count { get; }
                 public decimal Total { get; }
@@ -53,18 +53,18 @@ namespace Budget
                 public FTE(DataTable table)
                 {
                     E6 = table.DataSet;
-                    Allocation = GetDataValues(table, "BOC", "17").Item1;
-                    DataElement = GetDataElements(Allocation);
-                    Total = GetTotal(Allocation);
-                    Count = Allocation.Rows.Count;
-                    Average = GetAverage(Allocation);
-                    Data = GetPrcArray(Allocation);
-                    AllocationData = new Tuple<DataTable, PRC[], decimal, int>(Allocation, Data, Total, Count);
-                    NpmData = GetDataTotals(Allocation, DataElement["NPM"], "NPM");
-                    GoalInfo = GetDataTotals(Allocation, DataElement["GoalName"], "GoalName");
-                    ObjectiveData = GetDataTotals(Allocation, DataElement["Objective"], "Objective");
-                    ProgramData = GetDataTotals(Allocation, DataElement["ProgramAreaName"], "ProgramAreaName");
-                    ProjectData = GetDataTotals(Allocation, DataElement["ProgramProjectName"], "ProgramProjectName");
+                    Table = GetDataValues(table, "BOC", "17").Item1;
+                    DataElement = GetDataElements(Table);
+                    Total = GetTotal(Table);
+                    Count = Table.Rows.Count;
+                    Average = GetAverage(Table);
+                    Data = GetPrcArray(Table);
+                    AllocationData = new Tuple<DataTable, PRC[], decimal, int>(Table, Data, Total, Count);
+                    NpmData = GetDataTotals(Table, DataElement["NPM"], "NPM");
+                    GoalInfo = GetDataTotals(Table, DataElement["GoalName"], "GoalName");
+                    ObjectiveData = GetDataTotals(Table, DataElement["Objective"], "Objective");
+                    ProgramData = GetDataTotals(Table, DataElement["ProgramAreaName"], "ProgramAreaName");
+                    ProjectData = GetDataTotals(Table, DataElement["ProgramProjectName"], "ProgramProjectName");
                 }
 
                 #endregion Constructors
