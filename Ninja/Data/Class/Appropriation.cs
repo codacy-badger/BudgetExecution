@@ -16,7 +16,7 @@ namespace Budget
     {
         namespace Data
         {
-            public class Appropriation : IAuthority
+            public class Appropriation : IBudgetAuthority
             {
                 #region Properties
 
@@ -320,9 +320,9 @@ namespace Budget
 
                 #region IAuthority Explicit Implementation
 
-                DataSet IAuthority.E6 { get; }
+                DataSet IBudgetAuthority.E6 { get; }
 
-                DataTable IAuthority.FilterTable(DataTable table, string column, string filter)
+                DataTable IBudgetAuthority.FilterTable(DataTable table, string column, string filter)
                 {
                     try
                     {

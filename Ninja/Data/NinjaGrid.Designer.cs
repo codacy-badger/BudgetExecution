@@ -1,6 +1,6 @@
 ﻿namespace Ninja.Data
 {
-    partial class NinjaDataGrid
+    partial class NinjaGrid
     {
         /// <summary> 
         /// Required designer variable.
@@ -45,10 +45,10 @@
             Syncfusion.Windows.Forms.Chart.ChartToolBarTypeItem chartToolBarTypeItem1 = new Syncfusion.Windows.Forms.Chart.ChartToolBarTypeItem();
             Syncfusion.Windows.Forms.Chart.ChartToolBarSeries3DItem chartToolBarSeries3DItem1 = new Syncfusion.Windows.Forms.Chart.ChartToolBarSeries3DItem();
             Syncfusion.Windows.Forms.Chart.ChartToolBarShowLegendItem chartToolBarShowLegendItem1 = new Syncfusion.Windows.Forms.Chart.ChartToolBarShowLegendItem();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NinjaDataGrid));
-            this.Grid = new System.Windows.Forms.DataGridView();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NinjaGrid));
+            this.DataGrid = new System.Windows.Forms.DataGridView();
             this.chartControl1 = new Syncfusion.Windows.Forms.Chart.ChartControl();
-            this.Navigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.GridNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
@@ -61,22 +61,22 @@
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.metroSetListBox1 = new MetroSet_UI.Controls.MetroSetListBox();
+            this.GridListBox = new MetroSet_UI.Controls.MetroSetListBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.Grid)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Navigator)).BeginInit();
-            this.Navigator.SuspendLayout();
+            this.GridBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.DataGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GridNavigator)).BeginInit();
+            this.GridNavigator.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GridBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
-            // Grid
+            // DataGrid
             // 
-            this.Grid.BackgroundColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.DataGrid.BackgroundColor = System.Drawing.SystemColors.ControlDarkDark;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.SteelBlue;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -84,8 +84,8 @@
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Grid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.Grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.DataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.LightSteelBlue;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -93,20 +93,20 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.Grid.DefaultCellStyle = dataGridViewCellStyle2;
-            this.Grid.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Grid.EnableHeadersVisualStyles = false;
-            this.Grid.GridColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.Grid.Location = new System.Drawing.Point(3, 22);
-            this.Grid.Name = "Grid";
+            this.DataGrid.DefaultCellStyle = dataGridViewCellStyle2;
+            this.DataGrid.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DataGrid.EnableHeadersVisualStyles = false;
+            this.DataGrid.GridColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.DataGrid.Location = new System.Drawing.Point(3, 22);
+            this.DataGrid.Name = "DataGrid";
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.SteelBlue;
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            this.Grid.RowsDefaultCellStyle = dataGridViewCellStyle3;
-            this.Grid.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.Grid.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
-            this.Grid.RowTemplate.Height = 28;
-            this.Grid.Size = new System.Drawing.Size(665, 311);
-            this.Grid.TabIndex = 0;
+            this.DataGrid.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            this.DataGrid.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.DataGrid.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
+            this.DataGrid.RowTemplate.Height = 28;
+            this.DataGrid.Size = new System.Drawing.Size(665, 311);
+            this.DataGrid.TabIndex = 0;
             // 
             // chartControl1
             // 
@@ -123,7 +123,7 @@
             this.chartControl1.ChartArea.CursorLocation = new System.Drawing.Point(0, 0);
             this.chartControl1.ChartArea.CursorReDraw = false;
             this.chartControl1.ChartAreaShadow = true;
-            this.chartControl1.ChartInterior = new Syncfusion.Drawing.BrushInfo(Syncfusion.Drawing.GradientStyle.Vertical, System.Drawing.Color.White, System.Drawing.Color.White);
+            this.chartControl1.ChartInterior = new Syncfusion.Drawing.BrushInfo(Syncfusion.Drawing.GradientStyle.Vertical, System.Drawing.Color.Black, System.Drawing.Color.Black);
             this.chartControl1.CustomPalette = new System.Drawing.Color[] {
         System.Drawing.Color.SkyBlue,
         System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0))))),
@@ -216,15 +216,15 @@
             this.chartControl1.ToolBar.Items.Add(chartToolBarSeries3DItem1);
             this.chartControl1.ToolBar.Items.Add(chartToolBarShowLegendItem1);
             // 
-            // Navigator
+            // GridNavigator
             // 
-            this.Navigator.AddNewItem = this.bindingNavigatorAddNewItem;
-            this.Navigator.BackColor = System.Drawing.Color.Transparent;
-            this.Navigator.CountItem = this.bindingNavigatorCountItem;
-            this.Navigator.DeleteItem = this.bindingNavigatorDeleteItem;
-            this.Navigator.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.Navigator.ImageScalingSize = new System.Drawing.Size(24, 24);
-            this.Navigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.GridNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
+            this.GridNavigator.BackColor = System.Drawing.Color.Transparent;
+            this.GridNavigator.CountItem = this.bindingNavigatorCountItem;
+            this.GridNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
+            this.GridNavigator.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.GridNavigator.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.GridNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bindingNavigatorMoveFirstItem,
             this.bindingNavigatorMovePreviousItem,
             this.bindingNavigatorSeparator,
@@ -236,16 +236,16 @@
             this.bindingNavigatorSeparator2,
             this.bindingNavigatorAddNewItem,
             this.bindingNavigatorDeleteItem});
-            this.Navigator.Location = new System.Drawing.Point(3, 333);
-            this.Navigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
-            this.Navigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
-            this.Navigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
-            this.Navigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
-            this.Navigator.Name = "Navigator";
-            this.Navigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.Navigator.Size = new System.Drawing.Size(665, 31);
-            this.Navigator.TabIndex = 1;
-            this.Navigator.Text = "bindingNavigator1";
+            this.GridNavigator.Location = new System.Drawing.Point(3, 333);
+            this.GridNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
+            this.GridNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
+            this.GridNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
+            this.GridNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
+            this.GridNavigator.Name = "GridNavigator";
+            this.GridNavigator.PositionItem = this.bindingNavigatorPositionItem;
+            this.GridNavigator.Size = new System.Drawing.Size(665, 31);
+            this.GridNavigator.TabIndex = 1;
+            this.GridNavigator.Text = "bindingNavigator1";
             // 
             // bindingNavigatorAddNewItem
             // 
@@ -336,7 +336,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.metroSetListBox1);
+            this.groupBox1.Controls.Add(this.GridListBox);
             this.groupBox1.ForeColor = System.Drawing.Color.LightSteelBlue;
             this.groupBox1.Location = new System.Drawing.Point(1171, 32);
             this.groupBox1.Name = "groupBox1";
@@ -345,36 +345,36 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Appropriation";
             // 
-            // metroSetListBox1
+            // GridListBox
             // 
-            this.metroSetListBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.metroSetListBox1.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.metroSetListBox1.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroSetListBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.metroSetListBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.metroSetListBox1.HoveredItemBackColor = System.Drawing.Color.SteelBlue;
-            this.metroSetListBox1.HoveredItemColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.metroSetListBox1.ItemHeight = 30;
-            this.metroSetListBox1.Location = new System.Drawing.Point(3, 22);
-            this.metroSetListBox1.MultiSelect = false;
-            this.metroSetListBox1.Name = "metroSetListBox1";
-            this.metroSetListBox1.SelectedIndex = -1;
-            this.metroSetListBox1.SelectedItem = null;
-            this.metroSetListBox1.SelectedItemBackColor = System.Drawing.Color.SteelBlue;
-            this.metroSetListBox1.SelectedItemColor = System.Drawing.Color.White;
-            this.metroSetListBox1.ShowBorder = false;
-            this.metroSetListBox1.ShowScrollBar = true;
-            this.metroSetListBox1.Size = new System.Drawing.Size(282, 345);
-            this.metroSetListBox1.Style = MetroSet_UI.Design.Style.Custom;
-            this.metroSetListBox1.StyleManager = null;
-            this.metroSetListBox1.TabIndex = 0;
-            this.metroSetListBox1.ThemeAuthor = "Narwin";
-            this.metroSetListBox1.ThemeName = "MetroDark";
+            this.GridListBox.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.GridListBox.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.GridListBox.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.GridListBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.GridListBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.GridListBox.HoveredItemBackColor = System.Drawing.Color.SteelBlue;
+            this.GridListBox.HoveredItemColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.GridListBox.ItemHeight = 30;
+            this.GridListBox.Location = new System.Drawing.Point(3, 22);
+            this.GridListBox.MultiSelect = false;
+            this.GridListBox.Name = "GridListBox";
+            this.GridListBox.SelectedIndex = -1;
+            this.GridListBox.SelectedItem = null;
+            this.GridListBox.SelectedItemBackColor = System.Drawing.Color.SteelBlue;
+            this.GridListBox.SelectedItemColor = System.Drawing.Color.White;
+            this.GridListBox.ShowBorder = false;
+            this.GridListBox.ShowScrollBar = true;
+            this.GridListBox.Size = new System.Drawing.Size(282, 345);
+            this.GridListBox.Style = MetroSet_UI.Design.Style.Custom;
+            this.GridListBox.StyleManager = null;
+            this.GridListBox.TabIndex = 0;
+            this.GridListBox.ThemeAuthor = "Narwin";
+            this.GridListBox.ThemeName = "MetroDark";
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.Grid);
-            this.groupBox2.Controls.Add(this.Navigator);
+            this.groupBox2.Controls.Add(this.DataGrid);
+            this.groupBox2.Controls.Add(this.GridNavigator);
             this.groupBox2.ForeColor = System.Drawing.Color.LightSteelBlue;
             this.groupBox2.Location = new System.Drawing.Point(477, 32);
             this.groupBox2.Name = "groupBox2";
@@ -405,25 +405,25 @@
             this.ForeColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.Name = "NinjaDataGrid";
             this.Size = new System.Drawing.Size(1478, 428);
-            ((System.ComponentModel.ISupportInitialize)(this.Grid)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Navigator)).EndInit();
-            this.Navigator.ResumeLayout(false);
-            this.Navigator.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DataGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GridNavigator)).EndInit();
+            this.GridNavigator.ResumeLayout(false);
+            this.GridNavigator.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GridBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.BindingSource BindingSource;
-        private System.Windows.Forms.DataGridView Grid;
+        private System.Windows.Forms.BindingSource GridBindingSource;
+        private System.Windows.Forms.DataGridView DataGrid;
         private Syncfusion.Windows.Forms.Chart.ChartControl chartControl1;
-        private System.Windows.Forms.BindingNavigator Navigator;
+        private System.Windows.Forms.BindingNavigator GridNavigator;
         private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
         private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
@@ -438,6 +438,6 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox3;
-        private MetroSet_UI.Controls.MetroSetListBox metroSetListBox1;
+        private MetroSet_UI.Controls.MetroSetListBox GridListBox;
     }
 }

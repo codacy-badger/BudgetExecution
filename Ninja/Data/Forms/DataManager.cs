@@ -17,8 +17,8 @@ namespace Budget
             {
                 #region Properties
                 public Source Source { get; set; }
-                public RegionalAuthority Regional { get; set; }
-                public DivisionAuthority Division { get; set; }
+                public RegionalAuthority R6 { get; set; }
+                public DivisionAuthority D6 { get; set; }
                 public FormData Ninja { get; set; }
                 public DataTable Table { get; set; }
                 public Dictionary<string,string[]> Element { get; set; }
@@ -31,19 +31,19 @@ namespace Budget
                     InitializeComponent();
                     if (source == Source.P7)
                     {
-                        this.Regional = new RegionalAuthority();
+                        this.R6 = new RegionalAuthority();
                     }
                     if (source == Source.P8)
                     {
-                        Division = new DivisionAuthority();
+                        D6 = new DivisionAuthority();
                     }
-                    Ninja = new FormData(source, FilterPanel, DataMgrBindingSource, DataMgrGrid, DataMgrNavigator);
+                    Ninja = new FormData(source, FilterPanel, BindingSource, DataMgrGrid, Navigator);
                     Ninja.GetGridColumns(DataMgrGrid);
                     Table = Ninja.Table;
                     Element = Ninja.GetDataElements(Table);
                     Ninja.GetFilterButtons(FilterPanel, Element["FundName"]);
                     Ninja.GetAppropriationFilterBox(Table, FilterPanel);
-                    PrcChart = GetDataChart(PrcChart, "", source, DataMgrBindingSource);
+                    PrcChart = GetDataChart(PrcChart, "", source, BindingSource);
                     GetGridSelectedRowValues();
                 }
 
@@ -55,7 +55,7 @@ namespace Budget
                 {
                     ReturnButton.Visible = false;
                     ReturnButton.Click += Ninja.ReturnButton_OnClick;
-                    DataMgrBindingSource.CurrentItemChanged += UpdateDataChart;
+                    BindingSource.CurrentItemChanged += UpdateDataChart;
                 }
                 
 
@@ -64,16 +64,16 @@ namespace Budget
                 private ChartControl GetDataChart(ChartControl chart, string title, Source source, BindingSource bs)
                 {
                     if (source == Source.P7)
-                        chart = new Chart(chart, title, Regional, bs).CreateColumn();
+                        chart = new Chart(chart, title, R6, bs).CreateColumn();
                     if (source == Source.P8)
-                        chart = new Chart(chart, title, Division, bs).CreateColumn();
+                        chart = new Chart(chart, title, D6, bs).CreateColumn();
                     return chart;
                 }
 
                 private void UpdateDataChart(object sender, EventArgs e)
                 {
-                    DataMgrBindingSource = sender as BindingSource;
-                    PrcChart = GetDataChart(PrcChart, "", Source, DataMgrBindingSource);
+                    BindingSource = sender as BindingSource;
+                    PrcChart = GetDataChart(PrcChart, "", Source, BindingSource);
                 }
 
                 private void GetGridSelectedRowValues()
@@ -210,10 +210,51 @@ namespace Budget
                     }
                 }
 
+
+
                 #endregion
 
+                private void groupBox2_Enter(object sender, EventArgs e)
+                {
 
-  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                }
             }
         }
     }

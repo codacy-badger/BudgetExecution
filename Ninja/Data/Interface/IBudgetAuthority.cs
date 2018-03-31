@@ -12,7 +12,7 @@ namespace Budget
     {
         namespace Data
         {
-            public interface IAuthority 
+            public interface IBudgetAuthority 
             {
                 #region Properties
 

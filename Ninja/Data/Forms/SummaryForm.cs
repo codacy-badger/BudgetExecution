@@ -18,7 +18,7 @@ namespace Budget
     {
         namespace Data
         {
-            public partial class SummaryForm : MetroForm, IAuthority
+            public partial class SummaryForm : MetroForm, IBudgetAuthority
             {
                 #region Properties
                 public FormData Ninja { get; set; }
@@ -493,7 +493,7 @@ namespace Budget
                     }
                 }
 
-                DataSet IAuthority.E6 { get; }
+                DataSet IBudgetAuthority.E6 { get; }
 
                 public DataTable FilterTable(DataTable table, string column, string filter)
                 {

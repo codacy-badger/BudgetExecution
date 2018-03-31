@@ -148,7 +148,7 @@
         1P8BOHmHxwbvBCHdXezD6GQvLi6GYRiGYRiGYZjOSCQ+AGC4NFOutS5bAAAAAElFTkSuQmCC
 </value>
   </data>
-  <metadata name="DataMgrNavigator.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata name="Navigator.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>288, 14</value>
   </metadata>
   <data name="toolStripButton1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -162,16 +162,6 @@
         LSfHl9Mt7GZOXSSUQLq8hrPSSk15BJfzeMBu5oQW0FG+2eE8sMkcFnAAC/wTAbESiMn9mfd+ChDTG4Gf
         a/JvgQFeeydAQX1RYQEFFjCFBdbAAqawwBpYwJRvAuXOrD0rWQQ/tYQU8BUcyg8bL8AwG0sUfQHteQNH
         1R9qfwAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="toolStripButton2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wwAADsMBx2+oZAAAAP1JREFUaEPtmMEJwjAYRjuIB48eHcEVFNJeHcIB3KAkDuAojlHbHBxFW/gaosQ0
-        JNYofA/eyU//voMIFoSQNITUx1Lpe4zDe/Ex+WBAbhgwF6XUZ9fRPHYXPFY4DPioDMhtRMBOXVfVSW9+
-        QVG3azwW+U+2sltUdbP8tjifjlD65v5yzSvOp8OASHE+HV+AkO1BqHY/2v9+NK7dqL2d2uN8Or6A1y/b
-        8KPj2o1iZvDtMUmHAZaYGRgQAgMsMTMwIAQGWGJmYEAIDLDEzMCAEBhgiZmBASEwwBIzQ/aA/rV6+J/f
-        6NkOPm0n9jifztRDzSXOp8OASHGeEPKWongAAjkrQly+g8UAAAAASUVORK5CYII=
 </value>
   </data>
   <data name="toolStripButton4.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -209,7 +199,7 @@
         aKbrMY6vAAAAAElFTkSuQmCC
 </value>
   </data>
-  <metadata name="DataMgrBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <metadata name="BindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
 </root>

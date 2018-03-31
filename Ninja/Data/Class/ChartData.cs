@@ -22,7 +22,7 @@ namespace Budget
                 public decimal Average { get; set; }
                 public string[] PrimaryTitle { get; set; }
                 public string[] AxisTitle { get; set; }
-                private IAuthority Data { get; set; }
+                private IBudgetAuthority Data { get; set; }
                 public BindingSource BindingSource { get; set; }
                 public int Tilt { get; set; }
                 public int Depth { get; set; }

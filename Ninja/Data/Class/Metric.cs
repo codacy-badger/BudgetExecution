@@ -18,7 +18,7 @@ namespace Budget
             public class Metric 
             {
                 #region Properties
-                public IAuthority Data { get; }
+                public IBudgetAuthority Data { get; }
                 public DataTable Table { get; set; }
                 public DataSet E6 { get; }
                 public int Count { get; }
@@ -48,7 +48,7 @@ namespace Budget
                 {
                 }
 
-                public Metric(IAuthority data)
+                public Metric(IBudgetAuthority data)
                 {
                     Data = data;
                     Table = Data.Table;

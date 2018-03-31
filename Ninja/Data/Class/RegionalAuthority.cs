@@ -14,7 +14,7 @@ namespace Budget
     {
         namespace Data
         {
-            public class RegionalAuthority : IAuthority
+            public class RegionalAuthority : IBudgetAuthority
             {
                 #region Properties
 

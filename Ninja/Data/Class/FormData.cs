@@ -19,7 +19,7 @@ namespace Budget
     {
         namespace Data
         {
-            public class FormData : IAuthority
+            public class FormData : IBudgetAuthority
             {
                 #region Properties
 
@@ -33,6 +33,7 @@ namespace Budget
                 public int Count { get; set; }
                 public Dictionary<string, string[]> DataElement { get; set; }
                 public FlowLayoutPanel Panel { get; set; }
+                public MetroSetListBox FilterBox { get; set; }
                 public BindingSource BindingSource { get; set; }
                 public DataGridView DataGrid { get; set; }
                 public BindingNavigator Navigator { get; set; }
@@ -48,14 +49,14 @@ namespace Budget
                 {
                 }
 
-                public FormData(Source source, FlowLayoutPanel panel, BindingSource bs, DataGridView dgv, BindingNavigator bn)
+                public FormData(Source source, Control panel, BindingSource bs, DataGridView dgv, BindingNavigator bn)
                 {
                     Data = new DataBuilder(source);
                     E6 = Data.GetDataSet();
                     Table = Data.Table;
                     BindFormData(Table, dgv, bs, bn);
                     DataElement = GetDataElements(Table);
-                    Panel = panel;
+                    FilterBox = panel as MetroSetListBox;
                     BindingSource = bs;
                     Navigator = bn;
                     DataGrid = dgv;
@@ -96,7 +97,7 @@ namespace Budget
                     GetGridColumns(dg);
                 }
 
-                internal void GetFilterButtons(FlowLayoutPanel panel, string[] list)
+                internal void GetFilterButtons(Control panel, string[] list)
                 {
                     panel.Controls.Clear();
                     foreach (string f in list)
@@ -119,7 +120,7 @@ namespace Budget
                     }
                 }
 
-                internal void GetAppropriationFilterBox(DataTable table, FlowLayoutPanel filterPanel)
+                internal void GetAppropriationFilterBox(DataTable table, Control filterPanel)
                 {
                     GetFilterButtons(filterPanel, GetCodeElements(table, "FundName"));
                     foreach (Control c in filterPanel.Controls) c.Click += AppropriationButton_OnSelect;
@@ -389,7 +390,7 @@ namespace Budget
                     }
                 }
 
-                DataSet IAuthority.E6 { get; }
+                DataSet IBudgetAuthority.E6 { get; }
 
                 public DataTable FilterTable(DataTable table, string column, string filter)
                 {
