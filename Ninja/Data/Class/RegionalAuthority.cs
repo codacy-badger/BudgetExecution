@@ -23,9 +23,8 @@ namespace Budget
                 public DataSet E6 { get; }
                 public DataTable Table { get; }
                 public BindingSource BindingSource { get; set; }
-                public Tuple<DataTable, PRC[], decimal, int> AllocationData { get; }
+                public Tuple<DataTable, PRC[], decimal, int> Allocation { get; }
                 public Dictionary<string, string[]> DataElement { get; }
-                public PRC[] Allocation { get; }
                 public decimal Total { get; }
                 public int Count { get; }
                 public decimal Average { get; }
@@ -50,25 +49,28 @@ namespace Budget
                 public RegionalAuthority( )
                 {
                     Data = new DataBuilder(Source.P7, new Dictionary<string, object> { ["BFY"] = FiscalYear });
-                    E6 = Data.Data;
-                    Table = Data.Table;
+                    E6 = Data.DataSet;
+                    Allocation = Data.PrcData;
+                    Table = Allocation.Item1;
                     BindingSource = new BindingSource();
                     BindingSource.DataSource = Table;
-                    Allocation = Data.Accounts;
-                    Total = Data.Total;
-                    Count = Data.Table.Rows.Count;
-                    Average = GetAverage(Data.Table);
+                    Total = Allocation.Item3;
+                    Count = Allocation.Item4;
+                    Average = GetAverage(Table);
                     DataElement = GetDataElement( );
                     Appropriation = GetAllocation( );
-                    FTE = GetFTE(Data.Table);
-                    FundData = GetTotal(Data.Table, DataElement["Fund"], "Fund");
-                    FteInfo = GetTotal(FTE.Table, DataElement["Fund"], "Fund");
-                    BocData = GetTotal(Data.Table, DataElement["BocName"], "BocName");
-                    NpmData = GetTotal(Data.Table, DataElement["NPM"], "NPM");
-                    GoalInfo = GetTotal(Data.Table, DataElement["GoalName"], "GoalName");
-                    ObjectiveData = GetTotal(Data.Table, DataElement["Objective"], "Objective");
-                    ProgramData = GetTotal(Data.Table, DataElement["ProgramAreaName"], "ProgramAreaName");
-                    ProjectData = GetTotal(Data.Table, DataElement["ProgramProjectName"], "ProgramProjectName");
+                    FundData = GetTotals(Table, DataElement["Fund"], "Fund");
+                    BocData = GetTotals(Table, DataElement["BocName"], "BocName");
+                    NpmData = GetTotals(Table, DataElement["NPM"], "NPM");
+                    GoalInfo = GetTotals(Table, DataElement["GoalName"], "GoalName");
+                    ObjectiveData = GetTotals(Table, DataElement["Objective"], "Objective");
+                    ProgramData = GetTotals(Table, DataElement["ProgramAreaName"], "ProgramAreaName");
+                    ProjectData = GetTotals(Table, DataElement["ProgramProjectName"], "ProgramProjectName");
+                    if (DataElement["BOC"].Contains("17"))
+                    {
+                        FTE = new FTE(Table);
+                        FteInfo = FTE.FundData;
+                    }
                 }
 
                 #endregion Constructors
@@ -152,14 +154,6 @@ namespace Budget
                     }
                 }
 
-                FTE GetFTE(DataTable table)
-                {
-                    string[] code = GetCodeElements(table, "BOC");
-                    if(code.Contains("17"))
-                        return new FTE(table);
-                    return null;
-                }
-
                 internal void UpdateAmount(DataRow row, decimal amount2)
                 {
                     try
@@ -196,32 +190,49 @@ namespace Budget
 
                 internal Dictionary<string, string[]> GetDataElement( )
                 {
-                    var data = new Dictionary<string, string[]>( );
-                    foreach (DataColumn dc in Data.Table.Columns)
+                    try
                     {
-                        if (dc.ColumnName.Equals("Id") || dc.ColumnName.Equals("Amount"))
-                            continue;
-                        data.Add(dc.ColumnName, GetCodes(dc.ColumnName));
+                        var data = new Dictionary<string, string[]>();
+                        foreach (DataColumn dc in Data.Table.Columns)
+                        {
+                            if (dc.ColumnName.Equals("Id") || dc.ColumnName.Equals("Amount"))
+                                continue;
+                            data.Add(dc.ColumnName, GetCodes(dc.ColumnName));
+                        }
+                        if (data.ContainsKey("Id")) data.Remove("Id");
+                        if (data.ContainsKey("Amount")) data.Remove("Amount");
+                        if (data.ContainsKey("P6_Id")) data.Remove("P6_Id");
+                        return data;
                     }
-                    if (data.ContainsKey("Id")) data.Remove("Id");
-                    if (data.ContainsKey("Amount")) data.Remove("Amount");
-                    if (data.ContainsKey("P6_Id")) data.Remove("P6_Id");
-                    return data;
+                    catch (Exception e)
+                    {
+
+                        MessageBox.Show(e.Message);
+                        return null;
+                    }
                 }
 
                 public Dictionary<string, string[]> GetDataElements(DataTable table)
                 {
-                    var data = new Dictionary<string, string[]>( );
-                    foreach (DataColumn dc in table.Columns)
+                    try
                     {
-                        if (dc.ColumnName.Equals("Id") || dc.ColumnName.Equals("Amount"))
-                            continue;
-                        data.Add(dc.ColumnName, GetCodes(dc.ColumnName));
+                        var data = new Dictionary<string, string[]>();
+                        foreach (DataColumn dc in table.Columns)
+                        {
+                            if (dc.ColumnName.Equals("Id") || dc.ColumnName.Equals("Amount"))
+                                continue;
+                            data.Add(dc.ColumnName, GetCodes(dc.ColumnName));
+                        }
+                        if (data.ContainsKey("Id")) data.Remove("Id");
+                        if (data.ContainsKey("Amount")) data.Remove("Amount");
+                        if (data.ContainsKey("P6_Id")) data.Remove("P6_Id");
+                        return data;
                     }
-                    if (data.ContainsKey("Id")) data.Remove("Id");
-                    if (data.ContainsKey("Amount")) data.Remove("Amount");
-                    if (data.ContainsKey("P6_Id")) data.Remove("P6_Id");
-                    return data;
+                    catch (Exception e)
+                    {
+                        MessageBox.Show(e.Message);
+                        return null;
+                    }
                 }
 
                 public Tuple<DataTable, PRC[], decimal, int> GetDataValues(DataTable table, string column, string filter)
@@ -246,7 +257,7 @@ namespace Budget
                         Dictionary<string, decimal> info = new Dictionary<string, decimal>( );
                         foreach (string ftr in list)
                         {
-                            var query = AllocationData.Item1.AsEnumerable( ).Where(p => p.Field<string>(column).Equals(filter))
+                            var query = Allocation.Item1.AsEnumerable( ).Where(p => p.Field<string>(column).Equals(filter))
                                 .Sum(p => p.Field<decimal>("Amount"));
                             if (query > 0)
                                 info.Add(filter, query);
@@ -260,7 +271,7 @@ namespace Budget
                     }
                 }
 
-                public Dictionary<string, decimal> GetTotal(DataTable table, string[] list, string column)
+                public Dictionary<string, decimal> GetTotals(DataTable table, string[] list, string column)
                 {
                     try
                     {
@@ -364,23 +375,8 @@ namespace Budget
                         return -1;
                     }
                 }
-
-                #region Private Methods
-
-                internal DataTable GetFteTable( )
-                {
-                    try
-                    {
-                        return Data.Table.AsEnumerable( ).Where(p => p.Field<string>("BOC").Equals("17")).Select(p => p).CopyToDataTable( );
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message.ToString( ) + $"Target Method:\n{ex.TargetSite}\n" + $"Stack:\n{ex.StackTrace}");
-                        return null;
-                    }
-                }
-
-                internal PRC[] GetPrcArray(DataTable table)
+             
+                public PRC[] GetPrcArray(DataTable table)
                 {
                     try
                     {
@@ -404,12 +400,6 @@ namespace Budget
                     return data;
                 }
 
-                #endregion
-
-                #region IAuthority Explicit Implementation
-
-                DataSet IAuthority.E6 { get; }
-
                 public DataTable FilterTable(DataTable table, string column, string filter)
                 {
                     try
@@ -422,22 +412,7 @@ namespace Budget
                         return null;
                     }
                 }
-
-                PRC[] IAuthority.GetPrcArray(DataTable table)
-                {
-                    try
-                    {
-                        return table.AsEnumerable( ).Select(p => new PRC( )).ToArray( );
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message.ToString( ) + $"Target Method:\n{ex.TargetSite}\n" + $"Stack:\n{ex.StackTrace}");
-                        return null;
-                    }
-                }
-
-                #endregion
-
+                
                 #endregion Methods
             }
         }

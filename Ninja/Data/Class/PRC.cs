@@ -17,7 +17,7 @@ namespace Budget
             {
                 #region Properties
                 public string BudgetLevel { get; set; }
-                public int Id { get; set; }
+                public int ID { get; set; }
                 public string RPIO { get; set; }
                 public string BFY { get; set; }
                 public Fund Fund { get; }
@@ -72,7 +72,7 @@ namespace Budget
 
                 public PRC(DataRow datarow)
                 {
-                    Id = int.Parse(datarow["Id"].ToString());
+                    ID = int.Parse(datarow["Id"].ToString());
                     BudgetLevel = datarow["BudgetLevel"].ToString();
                     RPIO = datarow["RPIO"].ToString();
                     BFY = datarow["BFY"].ToString();
@@ -102,7 +102,7 @@ namespace Budget
                     {
                         Dictionary<string, object> param = new Dictionary<string, object>()
                         {
-                            ["Id"] = Id,
+                            ["Id"] = ID,
                             ["BudgetLevel"] = BudgetLevel,
                             ["RPIO"] = RPIO,
                             ["BFY"] = BFY,

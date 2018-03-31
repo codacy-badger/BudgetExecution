@@ -26,7 +26,7 @@ namespace Budget
                 public DivisionAuthority Division { get; }
                 public DataBuilder Data { get; }
                 public DataSet E6 { get; }
-                public Tuple<DataTable, PRC[], decimal, int> AllocationData { get; }
+                public Tuple<DataTable, PRC[], decimal, int> Allocation { get; }
                 public DataTable Table { get; }
                 public decimal Total { get; }
                 public decimal Average { get; }
@@ -58,7 +58,7 @@ namespace Budget
                 {
                     InitializeComponent( );
                     Data = new DataBuilder(source);
-                    E6 = Data.Data;
+                    E6 = Data.DataSet;
                     Table = Data.Table;
                     Total = Data.Total;
                     RC = GetCodeElements(Table, "RC");
@@ -72,7 +72,7 @@ namespace Budget
                 {
                     InitializeComponent( );
                     Data = new DataBuilder(source, param);
-                    E6 = Data.Data;
+                    E6 = Data.DataSet;
                     Table = Data.Table;
                     Total = Data.Total;
                     RC = GetCodeElements(Table, "RC");
@@ -198,7 +198,7 @@ namespace Budget
                     var name = button.Tag.ToString( );
                     var table = FilterTable(Table, "FundName", button.Tag.ToString( ));
                     var div = GetCodeElements(table, "RC");
-                    var data = GetTotal(table, div, "RC");
+                    var data = GetTotals(table, div, "RC");
                     Text = $"Total P7 Division {name} Funding";
                     string title = $"Total P7 Division  {name} Funding: {GetTotal(table).ToString("c")}";
                     TabChart2 = new Chart(TabChart2, title, data).CreateColumn( );
@@ -210,7 +210,7 @@ namespace Budget
                     var name = button.Tag.ToString( );
                     var table = FilterTable(Table, "BocName", button.Tag.ToString( ));
                     var div = GetCodeElements(table, "RC");
-                    var data = GetTotal(table, div, "RC");
+                    var data = GetTotals(table, div, "RC");
                     Text = $"Total P7 Division {name} Funding";
                     string title = $"Total P7 Division  {name} Funding: {GetTotal(table).ToString("c")}";
                     TabChart3 = new Chart(TabChart3, title, data).CreateColumn( );
@@ -222,7 +222,7 @@ namespace Budget
                     var name = button.Tag.ToString( );
                     var table = FilterTable(Table, "NPM", button.Tag.ToString( ));
                     var div = GetCodeElements(table, "RC");
-                    var data = GetTotal(table, div, "RC");
+                    var data = GetTotals(table, div, "RC");
                     Text = $"Total P7 Division {name} Funding";
                     string title = $"Total P7 Division  {name} Funding: {GetTotal(table).ToString("c")}";
                     TabChart4 = new Chart(TabChart4, title, data).CreateColumn( );
@@ -234,7 +234,7 @@ namespace Budget
                     var name = button.Tag.ToString( );
                     var table = FilterTable(Table, "GoalName", button.Tag.ToString( ));
                     var div = GetCodeElements(table, "RC");
-                    var data = GetTotal(table, div, "RC");
+                    var data = GetTotals(table, div, "RC");
                     Text = $"Total P7 Division {name} Funding";
                     string title = $"Total P7 Division  {name} Funding: {GetTotal(table).ToString("c")}";
                     TabChart5 = new Chart(TabChart5, title, data).CreateColumn( );
@@ -246,7 +246,7 @@ namespace Budget
                     var name = button.Tag.ToString( );
                     var table = FilterTable(Table, "ObjectiveName", button.Tag.ToString( ));
                     var div = GetCodeElements(table, "RC");
-                    var data = GetTotal(table, div, "RC");
+                    var data = GetTotals(table, div, "RC");
                     Text = $"Total P7 Division {name} Funding";
                     string title = $"Total P7 Division {name} Funding: {GetTotal(table).ToString("c")}";
                     TabChart6 = new Chart(TabChart6, title, data).CreateColumn( );
@@ -425,7 +425,7 @@ namespace Budget
                     }
                 }
 
-                public Dictionary<string, decimal> GetTotal(DataTable table, string[] filters, string column)
+                public Dictionary<string, decimal> GetTotals(DataTable table, string[] filters, string column)
                 {
                     try
                     {

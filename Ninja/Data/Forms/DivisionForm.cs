@@ -50,7 +50,7 @@ namespace Budget
                     Division = new DivisionAuthority(rc);
                     DivisionData = Division.Data.Table;
                     BindData(DivisionData, Grid, P8BindingSource, DataNavigator);
-                    Appropriation = Division.Appropriation;
+                    Appropriation = Division.Appropriations;
                     FundCodes = Division.DataElement["Fund"];
                     PrcInfo = Division.FundData;
                     BocInfo = Division.BocData;

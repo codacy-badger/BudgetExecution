@@ -19,10 +19,10 @@ namespace Budget
                 #region Properties
 
                 public Query Query { get; }
-                private Dictionary<string, object> Parameter { get; set; }
-                public DataSet Data { get; }
+                Dictionary<string, object> Parameter { get; set; }
+                public DataSet DataSet { get; }
                 public DataTable Table { get; }
-                public DataRow[] Records { get; }
+                public DataRow[] DataRecords { get; }
                 public PRC[] Accounts { get; }
                 public decimal Total { get; }
                 public int Count { get; }
@@ -41,32 +41,32 @@ namespace Budget
                 public DataBuilder(Source source)
                 {
                     Query = new Query(source);
-                    Data = GetDataSet( );
+                    DataSet = GetDataSet( );
+                    Table = DataSet.Tables[0];
                     Total = GetTotal(Table);
                     Count = Table.Rows.Count;
-                    Records = GetArray( );
+                    DataRecords = GetArray( );
                     SqlData = GetSqlData( );
                     if (source == Source.P6 || source == Source.P7 || source == Source.P8)
                     {
                         Accounts = GetPrcArray(Table);
                         PrcData = GetPrcData( );
                     }
-                    Table = PrcData.Item1;
                 }
 
                 public DataBuilder(Source source, Dictionary<string, object> param)
                 {
                     Query = new Query(source, param);
-                    Data = GetDataSet( );
+                    DataSet = GetDataSet( );
+                    Table = DataSet.Tables[0];
                     Total = GetTotal(Table);
-                    Records = GetArray( );
+                    DataRecords = GetArray( );
                     SqlData = GetSqlData( );
                     if (source == Source.P6 || source == Source.P7 || source == Source.P8)
                     {
                         Accounts = GetPrcArray(Table);
                         PrcData = GetPrcData( );
                     }
-                    Table = PrcData.Item1;
                 }
 
                 #endregion Constructors
@@ -90,11 +90,24 @@ namespace Budget
                     }
                 }
 
+                internal DataTable GetDataTable(DataSet dataSet)
+                {
+                    try
+                    {
+                        return dataSet.Tables[0];
+                    }
+                    catch(Exception e)
+                    {
+                        MessageBox.Show(e.Message);
+                        return null;
+                    }
+                }
+
                 public DataRow[] GetArray( )
                 {
                     try
                     {
-                        return Data.Tables[Query.TableName].AsEnumerable( ).Select(p => p).ToArray( );
+                        return Table.AsEnumerable( ).Select(p => p).ToArray( );
                     }
                     catch (Exception ex)
                     {
@@ -105,7 +118,7 @@ namespace Budget
 
                 public Tuple<DataTable, DataRow[], decimal, int> GetSqlData( )
                 {
-                    var table = Data.Tables[Query.TableName];
+                    var table = DataSet.Tables[Query.TableName];
                     var array = GetArray( );
                     var total = GetTotal(table);
                     var count = GetCount(table);
@@ -114,7 +127,7 @@ namespace Budget
 
                 private Tuple<DataTable, PRC[], decimal, int> GetPrcData( )
                 {
-                    var table = Data.Tables[Query.TableName];
+                    var table = DataSet.Tables[Query.TableName];
                     var array = GetPrcArray(table);
                     var total = GetTotal(table);
                     var count = GetCount(table);

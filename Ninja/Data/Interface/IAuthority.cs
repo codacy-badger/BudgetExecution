@@ -17,20 +17,13 @@ namespace Budget
                 #region Properties
 
                 DataSet E6 { get; }
-
                 DataTable Table { get; }
-
                 decimal Total { get; }
-
                 int Count { get; }
-
                 decimal Average { get; }
-
                 Dictionary<string, string[]> DataElement { get; }
-
                 decimal[] Metrics { get; }
-
-                Tuple<DataTable, PRC[], decimal, int> AllocationData { get; }
+                Tuple<DataTable, PRC[], decimal, int> Allocation { get; }
 
                 #endregion Properties
 
@@ -54,7 +47,7 @@ namespace Budget
 
                 decimal[] GetMetrics(DataTable table);
 
-                Dictionary<string, decimal> GetTotal(DataTable table, string[] codes, string field);
+                Dictionary<string, decimal> GetTotals(DataTable table, string[] codes, string field);
 
                 Dictionary<string, decimal[]> GetMetrics(DataTable table, string[] codes, string field);
 

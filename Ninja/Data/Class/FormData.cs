@@ -24,7 +24,7 @@ namespace Budget
                 #region Properties
 
                 public DataBuilder Data { get; set; }
-                public Tuple<DataTable, PRC[], decimal, int> AllocationData { get; set; }
+                public Tuple<DataTable, PRC[], decimal, int> Allocation { get; set; }
                 bool Percent { get; set; }
                 public DataSet E6 { get; set; }
                 public DataTable Table { get; set; }
@@ -321,7 +321,7 @@ namespace Budget
                     }
                 }
 
-                public Dictionary<string, decimal> GetTotal(DataTable table, string[] filters, string column)
+                public Dictionary<string, decimal> GetTotals(DataTable table, string[] filters, string column)
                 {
                     try
                     {

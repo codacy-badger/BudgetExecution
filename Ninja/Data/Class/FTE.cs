@@ -13,7 +13,7 @@ namespace Budget
     {
         namespace Data
         {
-            public class FTE : IPRC, IAuthority
+            public class FTE : IPRC
             {
                 #region Properties
                 public DataSet E6 { get; }
@@ -30,7 +30,7 @@ namespace Budget
                 public string Code { get; }
                 public decimal Authority { get; set; }
                 public decimal Amount { get; set; }
-                decimal[] IMetric.Metrics { get; }
+                decimal[] Metrics { get; }
                 public decimal Average { get; }
                 public int Count { get; }
                 public decimal Total { get; }
@@ -60,11 +60,11 @@ namespace Budget
                     Average = GetAverage(Table);
                     Data = GetPrcArray(Table);
                     AllocationData = new Tuple<DataTable, PRC[], decimal, int>(Table, Data, Total, Count);
-                    NpmData = GetTotal(Table, DataElement["NPM"], "NPM");
-                    GoalInfo = GetTotal(Table, DataElement["GoalName"], "GoalName");
-                    ObjectiveData = GetTotal(Table, DataElement["Objective"], "Objective");
-                    ProgramData = GetTotal(Table, DataElement["ProgramAreaName"], "ProgramAreaName");
-                    ProjectData = GetTotal(Table, DataElement["ProgramProjectName"], "ProgramProjectName");
+                    NpmData = GetTotals(Table, DataElement["NPM"], "NPM");
+                    GoalInfo = GetTotals(Table, DataElement["GoalName"], "GoalName");
+                    ObjectiveData = GetTotals(Table, DataElement["Objective"], "Objective");
+                    ProgramData = GetTotals(Table, DataElement["ProgramAreaName"], "ProgramAreaName");
+                    ProjectData = GetTotals(Table, DataElement["ProgramProjectName"], "ProgramProjectName");
                 }
 
                 #endregion Constructors
@@ -195,7 +195,7 @@ namespace Budget
                     }
                 }
 
-                public Dictionary<string, decimal> GetTotal(DataTable table, string[] filters, string column)
+                public Dictionary<string, decimal> GetTotals(DataTable table, string[] filters, string column)
                 {
                     try
                     {

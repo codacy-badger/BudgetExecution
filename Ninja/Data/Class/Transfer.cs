@@ -55,7 +55,7 @@ namespace Budget
                     ControlNumber = GetTransferControlNumber( );
                     Amount = amount;
                     Sender = sender;
-                    FromId = sender.Id;
+                    FromId = sender.ID;
                     FromBFY = sender.BFY;
                     FromBOC = sender.BOC.Code;
                     FromCode = sender.Account.Code;
@@ -64,7 +64,7 @@ namespace Budget
                     FromRPIO = sender.RPIO;
                     FromAmount = sender.Amount;
                     Receiver = receiver;
-                    ToId = receiver.Id;
+                    ToId = receiver.ID;
                     ToBFY = receiver.BFY;
                     ToBOC = receiver.BOC.Code;
                     ToCode = receiver.Account.Code;

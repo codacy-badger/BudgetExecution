@@ -22,11 +22,9 @@ namespace Budget
 
                 public Fund Fund { get; set; }
                 public string FiscalYear { get; set; }
+                public Tuple<DataTable, PRC[], decimal, int> Allocation { get; }
                 public DataTable Table { get; }
                 public BindingSource BindingSource { get; set; }
-                public PRC[] Allocation { get; }
-                public Tuple<DataTable, PRC[], decimal, int> AllocationData { get; }
-                public Tuple<DataTable, PRC[], decimal, int> FteData { get; }
                 public Dictionary<string, string[]> DataElement { get; }
                 public Tuple<string[], string[], string[], string[], string[]> Codes  { get; set; }
                 public string[] BocCodes { get; }
@@ -63,28 +61,27 @@ namespace Budget
 
                 public Appropriation(DataTable table, string fundcode, string bfy) : this(fundcode, bfy)
                 {
-                    AllocationData = GetDataValues(table, "Fund", Fund.Code);
-                    Allocation = AllocationData.Item2;
-                    Table = AllocationData.Item1;
+                    Allocation = GetDataValues(table, "Fund", Fund.Code);
+                    Table = Allocation.Item1;
                     BindingSource = new BindingSource();
                     BindingSource.DataSource = Table;
-                    Total = GetTotal(AllocationData.Item1);
-                    Average = GetAverage(AllocationData.Item1);
-                    DataElement = GetDataElements(AllocationData.Item1);
+                    Total = GetTotal(Allocation.Item1);
+                    Average = GetAverage(Allocation.Item1);
+                    DataElement = GetDataElements(Allocation.Item1);
                     BocCodes = DataElement["BOC"];
                     BOC = DataElement["BocName"];
                     NPM = DataElement["NPM"];
                     Program = DataElement["ProgramAreaName"];
                     Goal = DataElement["GoalName"];
-                    Count = AllocationData.Item1.Rows.Count;
-                    BocData = GetTotal(AllocationData.Item1, BOC, "BocName");
+                    Count = Allocation.Item1.Rows.Count;
+                    BocData = GetTotals(Allocation.Item1, BOC, "BocName");
                     if (BocCodes.Contains("17"))
                     {
                         FTE = new FTE(table);
                     }
-                    NpmData = GetTotal(AllocationData.Item1, NPM, "NPM");
-                    ProgramData = GetTotal(AllocationData.Item1, Program, "ProgramAreaName");
-                    GoalData = GetTotal(AllocationData.Item1, Goal, "GoalName");
+                    NpmData = GetTotals(Allocation.Item1, NPM, "NPM");
+                    ProgramData = GetTotals(Allocation.Item1, Program, "ProgramAreaName");
+                    GoalData = GetTotals(Allocation.Item1, Goal, "GoalName");
                 }
                 #endregion
 
@@ -118,7 +115,7 @@ namespace Budget
 
                 public decimal GetFTE()
                 {
-                    return AllocationData.Item1.AsEnumerable().Where(p => p.Field<string>("BOC").Equals("17")).Select(p => p).Sum(p => p.Field<decimal>("Amount"));
+                    return Allocation.Item1.AsEnumerable().Where(p => p.Field<string>("BOC").Equals("17")).Select(p => p).Sum(p => p.Field<decimal>("Amount"));
                 }
 
                 public decimal GetAverage(DataTable table)
@@ -220,7 +217,7 @@ namespace Budget
                     return null;
                 }
 
-                public Dictionary<string, decimal> GetDataTotals(DataTable table, string column, string filter)
+                public Dictionary<string, decimal> GetTotals(DataTable table, string column, string filter)
                 {
                     try
                     {
@@ -228,7 +225,7 @@ namespace Budget
                         Dictionary<string, decimal> info = new Dictionary<string, decimal>( );
                         foreach (string ftr in list)
                         {
-                            var query = AllocationData.Item1.AsEnumerable( ).Where(p => p.Field<string>(column).Equals(filter))
+                            var query = Allocation.Item1.AsEnumerable( ).Where(p => p.Field<string>(column).Equals(filter))
                                 .Sum(p => p.Field<decimal>("Amount"));
                             if (query > 0)
                                 info.Add(filter, query);
@@ -242,7 +239,7 @@ namespace Budget
                     }
                 }
 
-                public Dictionary<string, decimal> GetTotal(DataTable table, string[] filters, string column)
+                public Dictionary<string, decimal> GetTotals(DataTable table, string[] filters, string column)
                 {
                     try
                     {
@@ -284,7 +281,7 @@ namespace Budget
                     }
                 }
 
-                public Dictionary<string, decimal[]> GetDataMetrics(DataTable table, string column, string filter)
+                public Dictionary<string, decimal[]> GetMetrics(DataTable table, string column, string filter)
                 {
                     try
                     {

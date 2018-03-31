@@ -22,16 +22,15 @@ namespace Budget
                 public Org Org { get; }
                 public RC RC { get; }
                 public DataBuilder Data { get; set; }
+                public Tuple<DataTable, PRC[], decimal, int> Allocation { get; }
                 public DataSet E6 { get; }
                 public DataTable Table { get; }
                 public BindingSource BindingSource { get; set; }
-                public PRC[] Allocation { get; }
                 public decimal Total { get; }
+                public int Count { get; }
                 public decimal Average { get; }
                 public decimal[] Metrics { get; }
                 public Dictionary<string, string[]> DataElement { get; }
-                public int Count { get; }
-                public Tuple<DataTable, PRC[], decimal, int> AllocationData { get; }
                 public FTE FTE { get; }
                 public Dictionary<string, decimal> DivisionData { get; }
                 public Dictionary<string, decimal> FteInfo { get; }
@@ -41,7 +40,7 @@ namespace Budget
                 public Dictionary<string, decimal> GoalData { get; }
                 public Dictionary<string, decimal> ProgramData { get; }
                 public Dictionary<string, decimal> ProjectData { get; }
-                public Appropriation[] Appropriation { get; }
+                public Appropriation[] Appropriations { get; }
 
                 #endregion Properties
 
@@ -50,20 +49,21 @@ namespace Budget
                 public DivisionAuthority( )
                 {
                     Data = new DataBuilder(Source.P8);
-                    Table = Data.Table;
+                    Allocation = Data.PrcData;
+                    Table = Allocation.Item1;
+                    Total = Allocation.Item3;
+                    Count = Allocation.Item4;
                     BindingSource = new BindingSource();
                     BindingSource.DataSource = Table;
-                    Allocation = Data.Accounts;
-                    Total = Data.Total;
                     DataElement = GetDataElements(Data.Table);
-                    Appropriation = GetAllocation( );
+                    Appropriations = GetAllocation( );
                     DivisionData = GetRcInfo(Data.Table);
-                    FundData = GetTotal(Data.Table, DataElement["Fund"], "Fund");
-                    BocData = GetTotal(Data.Table, DataElement["BocName"], "BocName");
-                    NpmData = GetTotal(Data.Table, DataElement["NPM"], "NPM");
-                    GoalData = GetTotal(Data.Table, DataElement["GoalName"], "GoalName");
-                    ProgramData = GetTotal(Data.Table, DataElement["ProgramArea"], "ProgramArea");
-                    ProjectData = GetTotal(Data.Table, DataElement["ProgramProjectName"], "ProgramProjectName");
+                    FundData = GetTotals(Data.Table, DataElement["Fund"], "Fund");
+                    BocData = GetTotals(Data.Table, DataElement["BocName"], "BocName");
+                    NpmData = GetTotals(Data.Table, DataElement["NPM"], "NPM");
+                    GoalData = GetTotals(Data.Table, DataElement["GoalName"], "GoalName");
+                    ProgramData = GetTotals(Data.Table, DataElement["ProgramArea"], "ProgramArea");
+                    ProjectData = GetTotals(Data.Table, DataElement["ProgramProjectName"], "ProgramProjectName");
                     if (DataElement["BOC"].Contains("17"))
                     {
                         FTE = new FTE(Data.Table);
@@ -76,22 +76,22 @@ namespace Budget
                     RC = new RC(rc);
                     Org = new Org(RC.Code);
                     Data = new DataBuilder(Source.P8, new Dictionary<string, object> { ["RC"] = rc });
-                    Table = Data.Table;
-                    Allocation = Data.Accounts;
-                    Total = GetTotal(Data.Table);
-                    Count = Data.Table.Rows.Count;
-                    Average = GetAverage(Data.Table);
-                    DataElement = GetDataElements(Data.Table);
-                    Appropriation = GetAllocation( );
-                    FundData = GetTotal(Data.Table, DataElement["FundName"], "FundName");
-                    BocData = GetTotal(Data.Table, DataElement["BocName"], "BocName");
-                    NpmData = GetTotal(Data.Table, DataElement["NPM"], "NPM");
-                    GoalData = GetTotal(Data.Table, DataElement["GoalName"], "GoalName");
-                    ProgramData = GetTotal(Data.Table, DataElement["ProgramAreaName"], "ProgramAreaName");
-                    ProjectData = GetTotal(Data.Table, DataElement["ProgramProjectName"], "ProgramProjectName");
+                    Allocation = Data.PrcData;
+                    Table = Allocation.Item1;
+                    Total = Allocation.Item3;
+                    Count = Allocation.Item4;
+                    Average = GetAverage(Table);
+                    DataElement = GetDataElements(Table);
+                    Appropriations = GetAllocation( );
+                    FundData = GetTotals(Table, DataElement["FundName"], "FundName");
+                    BocData = GetTotals(Table, DataElement["BocName"], "BocName");
+                    NpmData = GetTotals(Table, DataElement["NPM"], "NPM");
+                    GoalData = GetTotals(Table, DataElement["GoalName"], "GoalName");
+                    ProgramData = GetTotals(Table, DataElement["ProgramAreaName"], "ProgramAreaName");
+                    ProjectData = GetTotals(Table, DataElement["ProgramProjectName"], "ProgramProjectName");
                     if (DataElement["BOC"].Contains("17"))
                     {
-                        FTE = new FTE(Data.Table);
+                        FTE = new FTE(Table);
                         FteInfo = FTE.FundData;
                     }
                 }
@@ -337,7 +337,7 @@ namespace Budget
                     }
                 }
 
-                public Dictionary<string, decimal> GetTotal(DataTable table, string[] filters, string column)
+                public Dictionary<string, decimal> GetTotals(DataTable table, string[] filters, string column)
                 {
                     try
                     {

@@ -403,6 +403,8 @@ namespace Budget
             this.P8GridPanel = new System.Windows.Forms.Panel();
             this.calculatorControl2 = new Syncfusion.Windows.Forms.Tools.CalculatorControl();
             this.P8BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tabPageAdv5 = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
+            this.calculatorControl1 = new Syncfusion.Windows.Forms.Tools.CalculatorControl();
             ((System.ComponentModel.ISupportInitialize)(this.DivisionFormTabControl)).BeginInit();
             this.DivisionFormTabControl.SuspendLayout();
             this.AppropriationTab.SuspendLayout();
@@ -484,6 +486,7 @@ namespace Budget
             this.PrcPanel.SuspendLayout();
             this.DatabaseGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.P8BindingSource)).BeginInit();
+            this.tabPageAdv5.SuspendLayout();
             this.SuspendLayout();
             // 
             // label5
@@ -2152,10 +2155,10 @@ namespace Budget
             this.tableLayoutPanel10.ColumnCount = 3;
             this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 29.26435F));
             this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70.73565F));
-            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 516F));
-            this.tableLayoutPanel10.Controls.Add(this.Expander, 0, 0);
+            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 517F));
             this.tableLayoutPanel10.Controls.Add(this.MiniTabControl1, 2, 0);
             this.tableLayoutPanel10.Controls.Add(this.groupBox1, 1, 0);
+            this.tableLayoutPanel10.Controls.Add(this.Expander, 0, 0);
             this.tableLayoutPanel10.Location = new System.Drawing.Point(11, 46);
             this.tableLayoutPanel10.Name = "tableLayoutPanel10";
             this.tableLayoutPanel10.RowCount = 1;
@@ -2165,17 +2168,17 @@ namespace Budget
             // 
             // Expander
             // 
-            this.Expander.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.Expander.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.Expander.ButtonSize = MakarovDev.ExpandCollapsePanel.ExpandCollapseButton.ExpandButtonSize.Normal;
             this.Expander.ButtonStyle = MakarovDev.ExpandCollapsePanel.ExpandCollapseButton.ExpandButtonStyle.Circle;
             this.Expander.Controls.Add(this.P7FilterPanel);
             this.Expander.ExpandedHeight = 472;
-            this.Expander.IsExpanded = false;
+            this.Expander.IsExpanded = true;
             this.Expander.Location = new System.Drawing.Point(2, 2);
             this.Expander.Margin = new System.Windows.Forms.Padding(2);
             this.Expander.Name = "Expander";
             this.Expander.Padding = new System.Windows.Forms.Padding(1);
-            this.Expander.Size = new System.Drawing.Size(294, 37);
+            this.Expander.Size = new System.Drawing.Size(294, 496);
             this.Expander.TabIndex = 118;
             this.Expander.Text = "Select";
             this.Expander.UseAnimation = true;
@@ -2202,10 +2205,11 @@ namespace Budget
             this.MiniTabControl1.CloseButtonPressedForeColor = System.Drawing.Color.Black;
             this.MiniTabControl1.Controls.Add(this.tabPageAdv1);
             this.MiniTabControl1.Controls.Add(this.tabPageAdv2);
-            this.MiniTabControl1.FixedSingleBorderColor = System.Drawing.SystemColors.ControlDark;
+            this.MiniTabControl1.Controls.Add(this.tabPageAdv5);
+            this.MiniTabControl1.FixedSingleBorderColor = System.Drawing.SystemColors.MenuHighlight;
             this.MiniTabControl1.FocusOnTabClick = false;
             this.MiniTabControl1.InActiveTabForeColor = System.Drawing.Color.Empty;
-            this.MiniTabControl1.Location = new System.Drawing.Point(1238, 3);
+            this.MiniTabControl1.Location = new System.Drawing.Point(1237, 3);
             this.MiniTabControl1.Name = "MiniTabControl1";
             this.MiniTabControl1.SeparatorColor = System.Drawing.SystemColors.ControlDark;
             this.MiniTabControl1.ShowSeparator = false;
@@ -2216,7 +2220,7 @@ namespace Budget
             // 
             // tabPageAdv1
             // 
-            this.tabPageAdv1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.tabPageAdv1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.tabPageAdv1.Controls.Add(this.tableLayoutPanel2);
             this.tabPageAdv1.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.tabPageAdv1.Image = null;
@@ -2234,7 +2238,7 @@ namespace Budget
             this.tableLayoutPanel2.ColumnCount = 3;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 46.08696F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 53.91304F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 119F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 120F));
             this.tableLayoutPanel2.Controls.Add(this.label13, 1, 4);
             this.tableLayoutPanel2.Controls.Add(this.OldAmount, 0, 5);
             this.tableLayoutPanel2.Controls.Add(this.label12, 0, 4);
@@ -2256,10 +2260,10 @@ namespace Budget
             this.tableLayoutPanel2.RowCount = 6;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 36.92308F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 63.07692F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 21F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 41F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 42F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 51F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 27F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 45F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 38F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 45F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(355, 221);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
@@ -2269,7 +2273,7 @@ namespace Budget
             this.label13.AutoSize = true;
             this.label13.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.label13.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label13.Location = new System.Drawing.Point(149, 148);
+            this.label13.Location = new System.Drawing.Point(148, 154);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(45, 21);
             this.label13.TabIndex = 162;
@@ -2282,7 +2286,7 @@ namespace Budget
             // 
             // 
             this.OldAmount.CustomButton.Image = null;
-            this.OldAmount.CustomButton.Location = new System.Drawing.Point(65, 2);
+            this.OldAmount.CustomButton.Location = new System.Drawing.Point(78, 2);
             this.OldAmount.CustomButton.Name = "";
             this.OldAmount.CustomButton.Size = new System.Drawing.Size(23, 23);
             this.OldAmount.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -2292,7 +2296,7 @@ namespace Budget
             this.OldAmount.CustomButton.Visible = false;
             this.OldAmount.Lines = new string[] {
         "metroTextBox1"};
-            this.OldAmount.Location = new System.Drawing.Point(2, 171);
+            this.OldAmount.Location = new System.Drawing.Point(2, 177);
             this.OldAmount.Margin = new System.Windows.Forms.Padding(2);
             this.OldAmount.MaxLength = 32767;
             this.OldAmount.Name = "OldAmount";
@@ -2302,7 +2306,7 @@ namespace Budget
             this.OldAmount.SelectionLength = 0;
             this.OldAmount.SelectionStart = 0;
             this.OldAmount.ShortcutsEnabled = true;
-            this.OldAmount.Size = new System.Drawing.Size(91, 28);
+            this.OldAmount.Size = new System.Drawing.Size(104, 28);
             this.OldAmount.TabIndex = 154;
             this.OldAmount.Text = "metroTextBox1";
             this.OldAmount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -2317,7 +2321,7 @@ namespace Budget
             this.label12.AutoSize = true;
             this.label12.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.label12.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label12.Location = new System.Drawing.Point(19, 148);
+            this.label12.Location = new System.Drawing.Point(19, 154);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(69, 21);
             this.label12.TabIndex = 65;
@@ -2330,9 +2334,9 @@ namespace Budget
             // 
             // 
             this.metroTextBox1.CustomButton.Image = null;
-            this.metroTextBox1.CustomButton.Location = new System.Drawing.Point(80, 1);
+            this.metroTextBox1.CustomButton.Location = new System.Drawing.Point(77, 1);
             this.metroTextBox1.CustomButton.Name = "";
-            this.metroTextBox1.CustomButton.Size = new System.Drawing.Size(35, 35);
+            this.metroTextBox1.CustomButton.Size = new System.Drawing.Size(39, 39);
             this.metroTextBox1.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.metroTextBox1.CustomButton.TabIndex = 1;
             this.metroTextBox1.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -2342,7 +2346,7 @@ namespace Budget
             this.metroTextBox1.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.metroTextBox1.Lines = new string[] {
         "metroTextBox2"};
-            this.metroTextBox1.Location = new System.Drawing.Point(237, 88);
+            this.metroTextBox1.Location = new System.Drawing.Point(236, 94);
             this.metroTextBox1.Margin = new System.Windows.Forms.Padding(2);
             this.metroTextBox1.MaxLength = 32767;
             this.metroTextBox1.Name = "metroTextBox1";
@@ -2352,7 +2356,7 @@ namespace Budget
             this.metroTextBox1.SelectionLength = 0;
             this.metroTextBox1.SelectionStart = 0;
             this.metroTextBox1.ShortcutsEnabled = true;
-            this.metroTextBox1.Size = new System.Drawing.Size(116, 37);
+            this.metroTextBox1.Size = new System.Drawing.Size(117, 41);
             this.metroTextBox1.TabIndex = 155;
             this.metroTextBox1.Text = "metroTextBox2";
             this.metroTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -2376,7 +2380,7 @@ namespace Budget
             this.metroTextBox2.CustomButton.UseSelectable = true;
             this.metroTextBox2.CustomButton.Visible = false;
             this.metroTextBox2.Lines = new string[0];
-            this.metroTextBox2.Location = new System.Drawing.Point(110, 88);
+            this.metroTextBox2.Location = new System.Drawing.Point(110, 94);
             this.metroTextBox2.Margin = new System.Windows.Forms.Padding(2);
             this.metroTextBox2.MaxLength = 32767;
             this.metroTextBox2.Name = "metroTextBox2";
@@ -2419,7 +2423,7 @@ namespace Budget
             this.metroTextBox3.CustomButton.UseSelectable = true;
             this.metroTextBox3.CustomButton.Visible = false;
             this.metroTextBox3.Lines = new string[0];
-            this.metroTextBox3.Location = new System.Drawing.Point(3, 89);
+            this.metroTextBox3.Location = new System.Drawing.Point(3, 95);
             this.metroTextBox3.MaxLength = 32767;
             this.metroTextBox3.Name = "metroTextBox3";
             this.metroTextBox3.PasswordChar = '\0';
@@ -2452,7 +2456,7 @@ namespace Budget
             this.label9.AutoSize = true;
             this.label9.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.label9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label9.Location = new System.Drawing.Point(270, 65);
+            this.label9.Location = new System.Drawing.Point(270, 71);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(49, 21);
             this.label9.TabIndex = 64;
@@ -2474,7 +2478,7 @@ namespace Budget
             this.metroTextBox4.CustomButton.UseSelectable = true;
             this.metroTextBox4.CustomButton.Visible = false;
             this.metroTextBox4.Lines = new string[0];
-            this.metroTextBox4.Location = new System.Drawing.Point(238, 27);
+            this.metroTextBox4.Location = new System.Drawing.Point(237, 27);
             this.metroTextBox4.MaxLength = 32767;
             this.metroTextBox4.Name = "metroTextBox4";
             this.metroTextBox4.PasswordChar = '\0';
@@ -2494,7 +2498,7 @@ namespace Budget
             this.label11.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label11.AutoSize = true;
             this.label11.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label11.Location = new System.Drawing.Point(155, 65);
+            this.label11.Location = new System.Drawing.Point(154, 71);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(33, 21);
             this.label11.TabIndex = 63;
@@ -2506,7 +2510,7 @@ namespace Budget
             this.label14.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label14.AutoSize = true;
             this.label14.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label14.Location = new System.Drawing.Point(273, 3);
+            this.label14.Location = new System.Drawing.Point(272, 3);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(44, 21);
             this.label14.TabIndex = 66;
@@ -2518,7 +2522,7 @@ namespace Budget
             this.label16.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label16.AutoSize = true;
             this.label16.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label16.Location = new System.Drawing.Point(34, 65);
+            this.label16.Location = new System.Drawing.Point(34, 71);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(40, 21);
             this.label16.TabIndex = 62;
@@ -2600,7 +2604,7 @@ namespace Budget
             this.metroTextBox7.CustomButton.UseSelectable = true;
             this.metroTextBox7.CustomButton.Visible = false;
             this.metroTextBox7.Lines = new string[0];
-            this.metroTextBox7.Location = new System.Drawing.Point(111, 172);
+            this.metroTextBox7.Location = new System.Drawing.Point(111, 178);
             this.metroTextBox7.MaxLength = 32767;
             this.metroTextBox7.Name = "metroTextBox7";
             this.metroTextBox7.PasswordChar = '\0';
@@ -2760,7 +2764,7 @@ namespace Budget
             // 
             // groupBox1
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
+            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.groupBox1.Controls.Add(this.ReturnButton);
             this.groupBox1.Controls.Add(this.label17);
             this.groupBox1.Controls.Add(this.label18);
@@ -3036,7 +3040,7 @@ namespace Budget
             this.tableLayoutPanel11.ColumnCount = 3;
             this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.99237F));
             this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 79.00764F));
-            this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 465F));
+            this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 466F));
             this.tableLayoutPanel11.Controls.Add(this.groupBox2, 1, 0);
             this.tableLayoutPanel11.Controls.Add(this.MiniTabControl2, 2, 0);
             this.tableLayoutPanel11.Controls.Add(this.TransferExpander, 0, 0);
@@ -3053,7 +3057,7 @@ namespace Budget
             this.groupBox2.Controls.Add(this.TransferGrid);
             this.groupBox2.Controls.Add(this.TransferNavigator);
             this.groupBox2.ForeColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.groupBox2.Location = new System.Drawing.Point(272, 3);
+            this.groupBox2.Location = new System.Drawing.Point(271, 3);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(995, 448);
             this.groupBox2.TabIndex = 4;
@@ -3233,7 +3237,7 @@ namespace Budget
             this.MiniTabControl2.FixedSingleBorderColor = System.Drawing.Color.DarkGray;
             this.MiniTabControl2.FocusOnTabClick = false;
             this.MiniTabControl2.InActiveTabForeColor = System.Drawing.Color.Empty;
-            this.MiniTabControl2.Location = new System.Drawing.Point(1284, 3);
+            this.MiniTabControl2.Location = new System.Drawing.Point(1283, 3);
             this.MiniTabControl2.Name = "MiniTabControl2";
             this.MiniTabControl2.SeparatorColor = System.Drawing.SystemColors.ControlDark;
             this.MiniTabControl2.ShowSeparator = false;
@@ -3262,7 +3266,7 @@ namespace Budget
             this.tableLayoutPanel9.ColumnCount = 3;
             this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.02913F));
             this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.97087F));
-            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 119F));
+            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 120F));
             this.tableLayoutPanel9.Controls.Add(this.label21, 1, 4);
             this.tableLayoutPanel9.Controls.Add(this.metroTextBox9, 0, 5);
             this.tableLayoutPanel9.Controls.Add(this.label22, 0, 4);
@@ -3358,7 +3362,7 @@ namespace Budget
             // 
             // 
             this.metroTextBox10.CustomButton.Image = null;
-            this.metroTextBox10.CustomButton.Location = new System.Drawing.Point(80, 1);
+            this.metroTextBox10.CustomButton.Location = new System.Drawing.Point(81, 1);
             this.metroTextBox10.CustomButton.Name = "";
             this.metroTextBox10.CustomButton.Size = new System.Drawing.Size(35, 35);
             this.metroTextBox10.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -3370,7 +3374,7 @@ namespace Budget
             this.metroTextBox10.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.metroTextBox10.Lines = new string[] {
         "metroTextBox2"};
-            this.metroTextBox10.Location = new System.Drawing.Point(237, 88);
+            this.metroTextBox10.Location = new System.Drawing.Point(236, 88);
             this.metroTextBox10.Margin = new System.Windows.Forms.Padding(2);
             this.metroTextBox10.MaxLength = 32767;
             this.metroTextBox10.Name = "metroTextBox10";
@@ -3380,7 +3384,7 @@ namespace Budget
             this.metroTextBox10.SelectionLength = 0;
             this.metroTextBox10.SelectionStart = 0;
             this.metroTextBox10.ShortcutsEnabled = true;
-            this.metroTextBox10.Size = new System.Drawing.Size(116, 37);
+            this.metroTextBox10.Size = new System.Drawing.Size(117, 37);
             this.metroTextBox10.TabIndex = 155;
             this.metroTextBox10.Text = "metroTextBox2";
             this.metroTextBox10.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -3467,7 +3471,7 @@ namespace Budget
             this.label24.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label24.AutoSize = true;
             this.label24.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label24.Location = new System.Drawing.Point(151, 3);
+            this.label24.Location = new System.Drawing.Point(150, 3);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(48, 21);
             this.label24.TabIndex = 60;
@@ -3502,7 +3506,7 @@ namespace Budget
             this.metroTextBox13.CustomButton.UseSelectable = true;
             this.metroTextBox13.CustomButton.Visible = false;
             this.metroTextBox13.Lines = new string[0];
-            this.metroTextBox13.Location = new System.Drawing.Point(238, 27);
+            this.metroTextBox13.Location = new System.Drawing.Point(237, 27);
             this.metroTextBox13.MaxLength = 32767;
             this.metroTextBox13.Name = "metroTextBox13";
             this.metroTextBox13.PasswordChar = '\0';
@@ -3534,7 +3538,7 @@ namespace Budget
             this.label27.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label27.AutoSize = true;
             this.label27.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label27.Location = new System.Drawing.Point(273, 3);
+            this.label27.Location = new System.Drawing.Point(272, 3);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(44, 21);
             this.label27.TabIndex = 66;
@@ -3788,14 +3792,15 @@ namespace Budget
             // 
             // TransferExpander
             // 
+            this.TransferExpander.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.TransferExpander.ButtonSize = MakarovDev.ExpandCollapsePanel.ExpandCollapseButton.ExpandButtonSize.Normal;
             this.TransferExpander.ButtonStyle = MakarovDev.ExpandCollapsePanel.ExpandCollapseButton.ExpandButtonStyle.Circle;
             this.TransferExpander.Controls.Add(this.TransferFilterPanel);
             this.TransferExpander.ExpandedHeight = 493;
-            this.TransferExpander.IsExpanded = false;
+            this.TransferExpander.IsExpanded = true;
             this.TransferExpander.Location = new System.Drawing.Point(3, 3);
             this.TransferExpander.Name = "TransferExpander";
-            this.TransferExpander.Size = new System.Drawing.Size(242, 37);
+            this.TransferExpander.Size = new System.Drawing.Size(242, 493);
             this.TransferExpander.TabIndex = 152;
             this.TransferExpander.Text = "Select";
             this.TransferExpander.UseAnimation = true;
@@ -3825,10 +3830,10 @@ namespace Budget
             this.TransferFilterPanel.HorizontalScrollbarBarColor = true;
             this.TransferFilterPanel.HorizontalScrollbarHighlightOnWheel = false;
             this.TransferFilterPanel.HorizontalScrollbarSize = 9;
-            this.TransferFilterPanel.Location = new System.Drawing.Point(18, 60);
+            this.TransferFilterPanel.Location = new System.Drawing.Point(16, 52);
             this.TransferFilterPanel.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.TransferFilterPanel.Name = "TransferFilterPanel";
-            this.TransferFilterPanel.Size = new System.Drawing.Size(227, 430);
+            this.TransferFilterPanel.Size = new System.Drawing.Size(210, 415);
             this.TransferFilterPanel.TabIndex = 70;
             this.TransferFilterPanel.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.TransferFilterPanel.VerticalScrollbarBarColor = true;
@@ -4748,6 +4753,40 @@ namespace Budget
             this.calculatorControl2.Text = "calculatorControl2";
             this.calculatorControl2.UseVisualStyle = true;
             // 
+            // tabPageAdv5
+            // 
+            this.tabPageAdv5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tabPageAdv5.Controls.Add(this.calculatorControl1);
+            this.tabPageAdv5.Image = null;
+            this.tabPageAdv5.ImageSize = new System.Drawing.Size(16, 16);
+            this.tabPageAdv5.Location = new System.Drawing.Point(1, 30);
+            this.tabPageAdv5.Name = "tabPageAdv5";
+            this.tabPageAdv5.ShowCloseButton = true;
+            this.tabPageAdv5.Size = new System.Drawing.Size(485, 463);
+            this.tabPageAdv5.TabIndex = 3;
+            this.tabPageAdv5.Text = "tabPageAdv5";
+            this.tabPageAdv5.ThemesEnabled = false;
+            // 
+            // calculatorControl1
+            // 
+            this.calculatorControl1.AccessibleDescription = "Calculator control";
+            this.calculatorControl1.AccessibleName = "Calculator Control";
+            this.calculatorControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.calculatorControl1.BeforeTouchSize = new System.Drawing.Size(421, 366);
+            this.calculatorControl1.BorderStyle = System.Windows.Forms.Border3DStyle.Flat;
+            this.calculatorControl1.ButtonStyle = Syncfusion.Windows.Forms.ButtonAppearance.Metro;
+            this.calculatorControl1.Culture = new System.Globalization.CultureInfo("en-US");
+            this.calculatorControl1.DoubleValue = 0D;
+            this.calculatorControl1.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.calculatorControl1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.calculatorControl1.Location = new System.Drawing.Point(28, 55);
+            this.calculatorControl1.MetroColor = System.Drawing.SystemColors.Control;
+            this.calculatorControl1.Name = "calculatorControl1";
+            this.calculatorControl1.Size = new System.Drawing.Size(421, 366);
+            this.calculatorControl1.TabIndex = 0;
+            this.calculatorControl1.Text = "calculatorControl1";
+            this.calculatorControl1.UseVisualStyle = true;
+            // 
             // DivisionForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
@@ -4878,6 +4917,7 @@ namespace Budget
             this.DatabaseGroupBox.ResumeLayout(false);
             this.DatabaseGroupBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.P8BindingSource)).EndInit();
+            this.tabPageAdv5.ResumeLayout(false);
             this.ResumeLayout(false);
 
                 }
@@ -5092,6 +5132,8 @@ namespace Budget
                 private TableLayoutPanel tableLayoutPanel11;
                 private MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel TransferExpander;
                 private GroupBox groupBox2;
+                private TabPageAdv tabPageAdv5;
+                private CalculatorControl calculatorControl1;
             } 
         }
 
