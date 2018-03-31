@@ -60,11 +60,11 @@ namespace Budget
                     Average = GetAverage(Table);
                     Data = GetPrcArray(Table);
                     AllocationData = new Tuple<DataTable, PRC[], decimal, int>(Table, Data, Total, Count);
-                    NpmData = GetDataTotals(Table, DataElement["NPM"], "NPM");
-                    GoalInfo = GetDataTotals(Table, DataElement["GoalName"], "GoalName");
-                    ObjectiveData = GetDataTotals(Table, DataElement["Objective"], "Objective");
-                    ProgramData = GetDataTotals(Table, DataElement["ProgramAreaName"], "ProgramAreaName");
-                    ProjectData = GetDataTotals(Table, DataElement["ProgramProjectName"], "ProgramProjectName");
+                    NpmData = GetTotal(Table, DataElement["NPM"], "NPM");
+                    GoalInfo = GetTotal(Table, DataElement["GoalName"], "GoalName");
+                    ObjectiveData = GetTotal(Table, DataElement["Objective"], "Objective");
+                    ProgramData = GetTotal(Table, DataElement["ProgramAreaName"], "ProgramAreaName");
+                    ProjectData = GetTotal(Table, DataElement["ProgramProjectName"], "ProgramProjectName");
                 }
 
                 #endregion Constructors
@@ -195,7 +195,7 @@ namespace Budget
                     }
                 }
 
-                public Dictionary<string, decimal> GetDataTotals(DataTable table, string[] filters, string column)
+                public Dictionary<string, decimal> GetTotal(DataTable table, string[] filters, string column)
                 {
                     try
                     {
@@ -216,7 +216,7 @@ namespace Budget
                     }
                 }
 
-                public Dictionary<string, decimal[]> GetDataMetrics(DataTable table, string[] list, string column)
+                public Dictionary<string, decimal[]> GetMetrics(DataTable table, string[] list, string column)
                 {
                     try
                     {

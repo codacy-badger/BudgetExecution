@@ -42,7 +42,6 @@ namespace Budget
                 {
                     Query = new Query(source);
                     Data = GetDataSet( );
-                    Table = Data.Tables[source.ToString()];
                     Total = GetTotal(Table);
                     Count = Table.Rows.Count;
                     Records = GetArray( );
@@ -52,13 +51,13 @@ namespace Budget
                         Accounts = GetPrcArray(Table);
                         PrcData = GetPrcData( );
                     }
+                    Table = PrcData.Item1;
                 }
 
                 public DataBuilder(Source source, Dictionary<string, object> param)
                 {
                     Query = new Query(source, param);
                     Data = GetDataSet( );
-                    Table = Data.Tables[0];
                     Total = GetTotal(Table);
                     Records = GetArray( );
                     SqlData = GetSqlData( );
@@ -67,6 +66,7 @@ namespace Budget
                         Accounts = GetPrcArray(Table);
                         PrcData = GetPrcData( );
                     }
+                    Table = PrcData.Item1;
                 }
 
                 #endregion Constructors

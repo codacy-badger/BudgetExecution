@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using System.Windows.Forms;
+using Syncfusion.Windows.Forms.Chart;
 #endregion
 
 namespace Budget
@@ -14,18 +15,25 @@ namespace Budget
     {
         namespace Data
         {
-            public class Metric : IMetric
+            public class Metric 
             {
                 #region Properties
-                DataTable table;
-                string[] fields { get; set; }
-                public decimal Total { get; set; }
-                public int Count { get; set; }
-                public decimal Average { get; set; }
-                public decimal Ratio { get; set; }
-                public decimal[] Metrics { get; set; }
-                public Dictionary<string, decimal> DataTotals { get; set; }
-                public Dictionary<string, decimal[]> DataMetrics { get; set; }
+                public IAuthority Data { get; }
+                public DataTable Table { get; set; }
+                public Dictionary<string, decimal> FundTotals{ get; }
+                public Dictionary<string, decimal[]> FundMetrics { get; }
+                public Dictionary<string, decimal> BocTotals { get; set; }
+                public Dictionary<string, decimal[]> BocMetrics { get; set; }
+                public Dictionary<string, decimal> NpmTotals { get; set; }
+                public Dictionary<string, decimal[]> NpmMetrics { get; set; }
+                public Dictionary<string, decimal> ProgramProjectTotals { get; set; }
+                public Dictionary<string, decimal[]> ProgramProjectMetrics { get; set; }
+                public Dictionary<string, decimal> ProgramAreaTotals { get; set; }
+                public Dictionary<string, decimal[]> ProgramAreaMetrics { get; set; }
+                public Dictionary<string, decimal> GoalTotals { get; set; }
+                public Dictionary<string, decimal[]> GoalMetrics { get; set; }
+                public Dictionary<string, decimal> ObjectiveTotals { get; set; }
+                public Dictionary<string, decimal[]> ObjectiveMetrics { get; set; }
                 #endregion Properties
 
                 #region Constructors
@@ -33,101 +41,32 @@ namespace Budget
                 {
                 }
 
-                public Metric(DataTable table)
+                public Metric(IAuthority data)
                 {
-                    this.table = table;
-                    fields = table.GetFields();
-                    Total = GetTotal(table);
-                    Count = GetCount(table);
-                    Average = GetAverage(table);
-                    Metrics = GetMetrics(table);
+                    Data = data;
+                    Table = Data.Table;
+                    FundTotals = GetTotals(Data.AllocationData.Item1, "FundName");
+                    FundMetrics = GetMetrics(Data.Table, "FundName");
                 }
+                
                 #endregion
 
                 #region Methods
-                public decimal GetAverage(decimal total, decimal count)
+
+                public Dictionary<string, decimal> GetTotals(DataTable table, string column)
                 {
                     try
                     {
-                        return total / count;
-                    }
-                    catch (Exception e)
-                    {
-
-                        MessageBox.Show(e.Message);
-                        return -1m;
-                    }
-                }
-
-                public decimal GetAverage(DataTable table)
-                {
-                    try
-                    {
-                        return table.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Average(p => p);
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show("ERROR!\n" + ex.TargetSite + ex.StackTrace);
-                        return -1M;
-                    }
-
-                }
-
-                public decimal GetTotal(DataTable table)
-                {
-                    try
-                    {
-                        return table.AsEnumerable().Select(p => p).Sum(p => p.Field<decimal>("Amount"));
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show("ERROR!\n" + ex.TargetSite + ex.StackTrace);
-                        return -1M;
-                    }
-                }
-
-                public int GetCount(DataTable table)
-                {
-                    try
-                    {
-                        return table.Rows.Count;
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show("ERROR!\n" + ex.TargetSite + ex.StackTrace);
-                        return -1;
-                    }
-                }
-
-                public decimal[] GetMetrics(DataTable table)
-                {
-                    try
-                    {
-                        decimal[] stat = new decimal[4];
-                        stat[0] = GetTotal(table);
-                        stat[1] = (decimal)GetCount(table);
-                        stat[2] = GetAverage(table);
-                        stat[3] = (stat[0] / Total) * 100;
-                        return stat;
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show("ERROR!\n" + ex.TargetSite + ex.StackTrace);
-                        return new decimal[] { -1m, -1m, -1m, -1m };
-                    }
-                }
-
-                public Dictionary<string, decimal> GetDataTotals(DataTable table, string[] list, string column)
-                {
-                    try
-                    {
-                        Dictionary<string, decimal> info = new Dictionary<string, decimal>();
-                        foreach (string filter in list)
+                        var info = new Dictionary<string, decimal>();
+                        if (Data.DataElement.Keys.Contains(column))
                         {
-                            var query = table.AsEnumerable().Where(p => p.Field<string>(column).Equals(filter))
-                                .Select(p => p).Sum(p => p.Field<decimal>("Amount"));
-                            if (query > 0)
-                                info.Add(filter, query);
+                            foreach(string filter in Data.DataElement[column])
+                            {
+                                var query = table.AsEnumerable().Where(p => p.Field<string>(column).Equals(filter))
+                                    .Select(p => p.Field<decimal>("Amount")).Sum();
+                                if (query > 0)
+                                    info.Add(filter, query);
+                            }
                         }
                         return info;
                     }
@@ -138,19 +77,22 @@ namespace Budget
                     }
                 }
 
-                public Dictionary<string, decimal[]> GetDataMetrics(DataTable table, string[] list, string column)
+                public Dictionary<string, decimal[]> GetMetrics(DataTable table, string column)
                 {
                     try
                     {
                         Dictionary<string, decimal[]> info = new Dictionary<string, decimal[]>();
-                        foreach (string filter in list)
+                        if(Data.DataElement.Keys.Contains(column))
                         {
-                            decimal[] stat = new decimal[4];
-                            stat[0] = GetTotal(table);
-                            stat[1] = (decimal)GetCount(table);
-                            stat[2] = stat[0] / stat[1];
-                            stat[3] = (stat[0] / Total) * 100;
-                            info.Add(filter, stat);
+                            foreach (string filter in Data.DataElement[column])
+                            {
+                                decimal[] stat = new decimal[4];
+                                stat[0] = Data.GetTotal(table);
+                                stat[1] = (decimal)Data.GetCount(table);
+                                stat[2] = stat[0] / stat[1];
+                                stat[3] = (stat[0] / Data.Total) * 100;
+                                info.Add(filter, stat);
+                            }
                         }
                         return info;
                     }

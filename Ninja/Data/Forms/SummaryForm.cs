@@ -198,7 +198,7 @@ namespace Budget
                     var name = button.Tag.ToString( );
                     var table = FilterTable(Table, "FundName", button.Tag.ToString( ));
                     var div = GetCodeElements(table, "RC");
-                    var data = GetDataTotals(table, div, "RC");
+                    var data = GetTotal(table, div, "RC");
                     Text = $"Total P7 Division {name} Funding";
                     string title = $"Total P7 Division  {name} Funding: {GetTotal(table).ToString("c")}";
                     TabChart2 = new Chart(TabChart2, title, data).CreateColumn( );
@@ -210,7 +210,7 @@ namespace Budget
                     var name = button.Tag.ToString( );
                     var table = FilterTable(Table, "BocName", button.Tag.ToString( ));
                     var div = GetCodeElements(table, "RC");
-                    var data = GetDataTotals(table, div, "RC");
+                    var data = GetTotal(table, div, "RC");
                     Text = $"Total P7 Division {name} Funding";
                     string title = $"Total P7 Division  {name} Funding: {GetTotal(table).ToString("c")}";
                     TabChart3 = new Chart(TabChart3, title, data).CreateColumn( );
@@ -222,7 +222,7 @@ namespace Budget
                     var name = button.Tag.ToString( );
                     var table = FilterTable(Table, "NPM", button.Tag.ToString( ));
                     var div = GetCodeElements(table, "RC");
-                    var data = GetDataTotals(table, div, "RC");
+                    var data = GetTotal(table, div, "RC");
                     Text = $"Total P7 Division {name} Funding";
                     string title = $"Total P7 Division  {name} Funding: {GetTotal(table).ToString("c")}";
                     TabChart4 = new Chart(TabChart4, title, data).CreateColumn( );
@@ -234,7 +234,7 @@ namespace Budget
                     var name = button.Tag.ToString( );
                     var table = FilterTable(Table, "GoalName", button.Tag.ToString( ));
                     var div = GetCodeElements(table, "RC");
-                    var data = GetDataTotals(table, div, "RC");
+                    var data = GetTotal(table, div, "RC");
                     Text = $"Total P7 Division {name} Funding";
                     string title = $"Total P7 Division  {name} Funding: {GetTotal(table).ToString("c")}";
                     TabChart5 = new Chart(TabChart5, title, data).CreateColumn( );
@@ -246,7 +246,7 @@ namespace Budget
                     var name = button.Tag.ToString( );
                     var table = FilterTable(Table, "ObjectiveName", button.Tag.ToString( ));
                     var div = GetCodeElements(table, "RC");
-                    var data = GetDataTotals(table, div, "RC");
+                    var data = GetTotal(table, div, "RC");
                     Text = $"Total P7 Division {name} Funding";
                     string title = $"Total P7 Division {name} Funding: {GetTotal(table).ToString("c")}";
                     TabChart6 = new Chart(TabChart6, title, data).CreateColumn( );
@@ -425,7 +425,7 @@ namespace Budget
                     }
                 }
 
-                public Dictionary<string, decimal> GetDataTotals(DataTable table, string[] filters, string column)
+                public Dictionary<string, decimal> GetTotal(DataTable table, string[] filters, string column)
                 {
                     try
                     {
@@ -446,7 +446,7 @@ namespace Budget
                     }
                 }
 
-                public Dictionary<string, decimal[]> GetDataMetrics(DataTable table, string[] list, string column)
+                public Dictionary<string, decimal[]> GetMetrics(DataTable table, string[] list, string column)
                 {
                     try
                     {

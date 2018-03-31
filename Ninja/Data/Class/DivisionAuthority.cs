@@ -24,6 +24,7 @@ namespace Budget
                 public DataBuilder Data { get; set; }
                 public DataSet E6 { get; }
                 public DataTable Table { get; }
+                public BindingSource BindingSource { get; set; }
                 public PRC[] Allocation { get; }
                 public decimal Total { get; }
                 public decimal Average { get; }
@@ -49,17 +50,20 @@ namespace Budget
                 public DivisionAuthority( )
                 {
                     Data = new DataBuilder(Source.P8);
+                    Table = Data.Table;
+                    BindingSource = new BindingSource();
+                    BindingSource.DataSource = Table;
                     Allocation = Data.Accounts;
                     Total = Data.Total;
                     DataElement = GetDataElements(Data.Table);
                     Appropriation = GetAllocation( );
                     DivisionData = GetRcInfo(Data.Table);
-                    FundData = GetDataTotals(Data.Table, DataElement["Fund"], "Fund");
-                    BocData = GetDataTotals(Data.Table, DataElement["BocName"], "BocName");
-                    NpmData = GetDataTotals(Data.Table, DataElement["NPM"], "NPM");
-                    GoalData = GetDataTotals(Data.Table, DataElement["GoalName"], "GoalName");
-                    ProgramData = GetDataTotals(Data.Table, DataElement["ProgramArea"], "ProgramArea");
-                    ProjectData = GetDataTotals(Data.Table, DataElement["ProgramProjectName"], "ProgramProjectName");
+                    FundData = GetTotal(Data.Table, DataElement["Fund"], "Fund");
+                    BocData = GetTotal(Data.Table, DataElement["BocName"], "BocName");
+                    NpmData = GetTotal(Data.Table, DataElement["NPM"], "NPM");
+                    GoalData = GetTotal(Data.Table, DataElement["GoalName"], "GoalName");
+                    ProgramData = GetTotal(Data.Table, DataElement["ProgramArea"], "ProgramArea");
+                    ProjectData = GetTotal(Data.Table, DataElement["ProgramProjectName"], "ProgramProjectName");
                     if (DataElement["BOC"].Contains("17"))
                     {
                         FTE = new FTE(Data.Table);
@@ -72,18 +76,19 @@ namespace Budget
                     RC = new RC(rc);
                     Org = new Org(RC.Code);
                     Data = new DataBuilder(Source.P8, new Dictionary<string, object> { ["RC"] = rc });
+                    Table = Data.Table;
                     Allocation = Data.Accounts;
                     Total = GetTotal(Data.Table);
                     Count = Data.Table.Rows.Count;
                     Average = GetAverage(Data.Table);
                     DataElement = GetDataElements(Data.Table);
                     Appropriation = GetAllocation( );
-                    FundData = GetDataTotals(Data.Table, DataElement["FundName"], "FundName");
-                    BocData = GetDataTotals(Data.Table, DataElement["BocName"], "BocName");
-                    NpmData = GetDataTotals(Data.Table, DataElement["NPM"], "NPM");
-                    GoalData = GetDataTotals(Data.Table, DataElement["GoalName"], "GoalName");
-                    ProgramData = GetDataTotals(Data.Table, DataElement["ProgramAreaName"], "ProgramAreaName");
-                    ProjectData = GetDataTotals(Data.Table, DataElement["ProgramProjectName"], "ProgramProjectName");
+                    FundData = GetTotal(Data.Table, DataElement["FundName"], "FundName");
+                    BocData = GetTotal(Data.Table, DataElement["BocName"], "BocName");
+                    NpmData = GetTotal(Data.Table, DataElement["NPM"], "NPM");
+                    GoalData = GetTotal(Data.Table, DataElement["GoalName"], "GoalName");
+                    ProgramData = GetTotal(Data.Table, DataElement["ProgramAreaName"], "ProgramAreaName");
+                    ProjectData = GetTotal(Data.Table, DataElement["ProgramProjectName"], "ProgramProjectName");
                     if (DataElement["BOC"].Contains("17"))
                     {
                         FTE = new FTE(Data.Table);
@@ -332,7 +337,7 @@ namespace Budget
                     }
                 }
 
-                public Dictionary<string, decimal> GetDataTotals(DataTable table, string[] filters, string column)
+                public Dictionary<string, decimal> GetTotal(DataTable table, string[] filters, string column)
                 {
                     try
                     {
@@ -353,7 +358,7 @@ namespace Budget
                     }
                 }
 
-                public Dictionary<string, decimal[]> GetDataMetrics(DataTable table, string[] list, string column)
+                public Dictionary<string, decimal[]> GetMetrics(DataTable table, string[] list, string column)
                 {
                     try
                     {

@@ -321,7 +321,7 @@ namespace Budget
                     }
                 }
 
-                public Dictionary<string, decimal> GetDataTotals(DataTable table, string[] filters, string column)
+                public Dictionary<string, decimal> GetTotal(DataTable table, string[] filters, string column)
                 {
                     try
                     {
@@ -342,7 +342,7 @@ namespace Budget
                     }
                 }
 
-                public Dictionary<string, decimal[]> GetDataMetrics(DataTable table, string[] list, string column)
+                public Dictionary<string, decimal[]> GetMetrics(DataTable table, string[] list, string column)
                 {
                     try
                     {

@@ -22,6 +22,7 @@ namespace Budget
                 public DataBuilder Data { get; set; }
                 public DataSet E6 { get; }
                 public DataTable Table { get; }
+                public BindingSource BindingSource { get; set; }
                 public Tuple<DataTable, PRC[], decimal, int> AllocationData { get; }
                 public Dictionary<string, string[]> DataElement { get; }
                 public PRC[] Allocation { get; }
@@ -30,7 +31,9 @@ namespace Budget
                 public decimal Average { get; }
                 public decimal[] Metrics { get; }
                 public FTE FTE { get; }
+                public Metric FundMetric { get; set; }
                 public Dictionary<string, decimal> FundData { get; }
+                public Metric FteMetric { get; set; }
                 public Dictionary<string, decimal> FteInfo { get; }
                 public Dictionary<string, decimal> BocData { get; }
                 public Dictionary<string, decimal> NpmData { get; }
@@ -48,6 +51,9 @@ namespace Budget
                 {
                     Data = new DataBuilder(Source.P7, new Dictionary<string, object> { ["BFY"] = FiscalYear });
                     E6 = Data.Data;
+                    Table = Data.Table;
+                    BindingSource = new BindingSource();
+                    BindingSource.DataSource = Table;
                     Allocation = Data.Accounts;
                     Total = Data.Total;
                     Count = Data.Table.Rows.Count;
@@ -55,14 +61,14 @@ namespace Budget
                     DataElement = GetDataElement( );
                     Appropriation = GetAllocation( );
                     FTE = GetFTE(Data.Table);
-                    FundData = GetDataTotals(Data.Table, DataElement["Fund"], "Fund");
-                    FteInfo = GetDataTotals(FTE.Table, DataElement["Fund"], "Fund");
-                    BocData = GetDataTotals(Data.Table, DataElement["BocName"], "BocName");
-                    NpmData = GetDataTotals(Data.Table, DataElement["NPM"], "NPM");
-                    GoalInfo = GetDataTotals(Data.Table, DataElement["GoalName"], "GoalName");
-                    ObjectiveData = GetDataTotals(Data.Table, DataElement["Objective"], "Objective");
-                    ProgramData = GetDataTotals(Data.Table, DataElement["ProgramAreaName"], "ProgramAreaName");
-                    ProjectData = GetDataTotals(Data.Table, DataElement["ProgramProjectName"], "ProgramProjectName");
+                    FundData = GetTotal(Data.Table, DataElement["Fund"], "Fund");
+                    FteInfo = GetTotal(FTE.Table, DataElement["Fund"], "Fund");
+                    BocData = GetTotal(Data.Table, DataElement["BocName"], "BocName");
+                    NpmData = GetTotal(Data.Table, DataElement["NPM"], "NPM");
+                    GoalInfo = GetTotal(Data.Table, DataElement["GoalName"], "GoalName");
+                    ObjectiveData = GetTotal(Data.Table, DataElement["Objective"], "Objective");
+                    ProgramData = GetTotal(Data.Table, DataElement["ProgramAreaName"], "ProgramAreaName");
+                    ProjectData = GetTotal(Data.Table, DataElement["ProgramProjectName"], "ProgramProjectName");
                 }
 
                 #endregion Constructors
@@ -254,7 +260,7 @@ namespace Budget
                     }
                 }
 
-                public Dictionary<string, decimal> GetDataTotals(DataTable table, string[] list, string column)
+                public Dictionary<string, decimal> GetTotal(DataTable table, string[] list, string column)
                 {
                     try
                     {
@@ -275,7 +281,7 @@ namespace Budget
                     }
                 }
 
-                public Dictionary<string, decimal[]> GetDataMetrics(DataTable table, string[] list, string column)
+                public Dictionary<string, decimal[]> GetMetrics(DataTable table, string[] list, string column)
                 {
                     try
                     {

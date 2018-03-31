@@ -12,7 +12,7 @@ namespace Budget
     {
         namespace Data
         {
-            public interface IAuthority : IMetric
+            public interface IAuthority 
             {
                 #region Properties
 
@@ -20,7 +20,15 @@ namespace Budget
 
                 DataTable Table { get; }
 
+                decimal Total { get; }
+
+                int Count { get; }
+
+                decimal Average { get; }
+
                 Dictionary<string, string[]> DataElement { get; }
+
+                decimal[] Metrics { get; }
 
                 Tuple<DataTable, PRC[], decimal, int> AllocationData { get; }
 
@@ -28,15 +36,27 @@ namespace Budget
 
                 #region Methods
 
-                string[] GetCodeElements(DataTable table, string column);
-
                 DataTable FilterTable(DataTable table, string column, string filter);
-
-                Dictionary<string, string[]> GetDataElements(DataTable table);
 
                 PRC[] GetPrcArray(DataTable table);
 
                 Tuple<DataTable, PRC[], decimal, int> GetDataValues(DataTable table, string column, string filter);
+
+                string[] GetCodeElements(DataTable table, string column);
+
+                Dictionary<string, string[]> GetDataElements(DataTable table);
+
+                decimal GetTotal(DataTable table);
+
+                int GetCount(DataTable table);
+
+                decimal GetAverage(DataTable table);
+
+                decimal[] GetMetrics(DataTable table);
+
+                Dictionary<string, decimal> GetTotal(DataTable table, string[] codes, string field);
+
+                Dictionary<string, decimal[]> GetMetrics(DataTable table, string[] codes, string field);
 
                 #endregion
             }

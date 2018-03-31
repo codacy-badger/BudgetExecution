@@ -23,6 +23,7 @@ namespace Budget
                 public Fund Fund { get; set; }
                 public string FiscalYear { get; set; }
                 public DataTable Table { get; }
+                public BindingSource BindingSource { get; set; }
                 public PRC[] Allocation { get; }
                 public Tuple<DataTable, PRC[], decimal, int> AllocationData { get; }
                 public Tuple<DataTable, PRC[], decimal, int> FteData { get; }
@@ -65,6 +66,8 @@ namespace Budget
                     AllocationData = GetDataValues(table, "Fund", Fund.Code);
                     Allocation = AllocationData.Item2;
                     Table = AllocationData.Item1;
+                    BindingSource = new BindingSource();
+                    BindingSource.DataSource = Table;
                     Total = GetTotal(AllocationData.Item1);
                     Average = GetAverage(AllocationData.Item1);
                     DataElement = GetDataElements(AllocationData.Item1);
@@ -74,14 +77,14 @@ namespace Budget
                     Program = DataElement["ProgramAreaName"];
                     Goal = DataElement["GoalName"];
                     Count = AllocationData.Item1.Rows.Count;
-                    BocData = GetDataTotals(AllocationData.Item1, BOC, "BocName");
+                    BocData = GetTotal(AllocationData.Item1, BOC, "BocName");
                     if (BocCodes.Contains("17"))
                     {
                         FTE = new FTE(table);
                     }
-                    NpmData = GetDataTotals(AllocationData.Item1, NPM, "NPM");
-                    ProgramData = GetDataTotals(AllocationData.Item1, Program, "ProgramAreaName");
-                    GoalData = GetDataTotals(AllocationData.Item1, Goal, "GoalName");
+                    NpmData = GetTotal(AllocationData.Item1, NPM, "NPM");
+                    ProgramData = GetTotal(AllocationData.Item1, Program, "ProgramAreaName");
+                    GoalData = GetTotal(AllocationData.Item1, Goal, "GoalName");
                 }
                 #endregion
 
@@ -239,7 +242,7 @@ namespace Budget
                     }
                 }
 
-                public Dictionary<string, decimal> GetDataTotals(DataTable table, string[] filters, string column)
+                public Dictionary<string, decimal> GetTotal(DataTable table, string[] filters, string column)
                 {
                     try
                     {
@@ -258,7 +261,7 @@ namespace Budget
                     }
                 }
 
-                public Dictionary<string, decimal[]> GetDataMetrics(DataTable table, string[] list, string column)
+                public Dictionary<string, decimal[]> GetMetrics(DataTable table, string[] list, string column)
                 {
                     try
                     {

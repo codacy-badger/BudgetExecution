@@ -56,12 +56,6 @@
     </ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Devart.Data, Version=5.0.1878.0, Culture=neutral, PublicKeyToken=09af7300eec23701, processorArchitecture=MSIL">
-      <HintPath>..\packages\dotConnect.Express.for.SQLite.5.10.1086\lib\Devart.Data.dll</HintPath>
-    </Reference>
-    <Reference Include="Devart.Data.SQLite, Version=5.10.1086.0, Culture=neutral, PublicKeyToken=09af7300eec23701, processorArchitecture=MSIL">
-      <HintPath>..\packages\dotConnect.Express.for.SQLite.5.10.1086\lib\Devart.Data.SQLite.dll</HintPath>
-    </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
       <Private>True</Private>
@@ -285,7 +279,6 @@
     <Compile Include="Data\Interface\IDataBuilder.cs" />
     <Compile Include="Data\Interface\IEmployee.cs" />
     <Compile Include="Data\Interface\IExcelOp.cs" />
-    <Compile Include="Data\Interface\IMetric.cs" />
     <Compile Include="Data\Interface\IObligation.cs" />
     <Compile Include="Data\Interface\IParameter.cs" />
     <Compile Include="Data\Interface\IPayroll.cs" />
@@ -475,9 +468,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Database\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
