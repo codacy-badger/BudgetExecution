@@ -15,8 +15,8 @@ namespace Budget
             {
                 #region Properties
 
-                DataRow[] DataRecords { get; }
-                DataSet DataSet { get; }
+                DataRow[] Records { get; }
+                DataSet E6 { get; }
                 PRC[] Accounts { get; }
                 Tuple<DataTable, PRC[], decimal, int> PrcData { get; }
                 Query Query { get; }
@@ -30,7 +30,7 @@ namespace Budget
 
                 DataSet GetDataSet( );
 
-                DataRow[] GetArray( );
+                DataRow[] GetRecords( );
 
                 decimal GetAverage(DataTable table);
 

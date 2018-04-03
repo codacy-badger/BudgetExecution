@@ -13,12 +13,18 @@ using System.Data.SQLite;
 
 namespace Ninja.Data
 {
-    public partial class NinjaGrid : UserControl
+    public partial class BudgetDataGrid : UserControl
     {
-        public ChartDataBindModel ChartModel { get; set; }
-        public NinjaGrid()
+        public ChartDataBindModel ChartData { get; set; }
+
+        public BudgetDataGrid()
         {
             InitializeComponent();
+        }
+
+        private void GridListBox_SelectedIndexChanged(object sender)
+        {
+
         }
     }
 }

@@ -23,7 +23,7 @@ namespace Budget
                 decimal Average { get; }
                 Dictionary<string, string[]> DataElement { get; }
                 decimal[] Metrics { get; }
-                Tuple<DataTable, PRC[], decimal, int> Allocation { get; }
+                Tuple<DataTable, PRC[], decimal, int> PrcData { get; }
 
                 #endregion Properties
 
@@ -35,7 +35,7 @@ namespace Budget
 
                 Tuple<DataTable, PRC[], decimal, int> GetDataValues(DataTable table, string column, string filter);
 
-                string[] GetCodeElements(DataTable table, string column);
+                string[] GetCodes(DataTable table, string column);
 
                 Dictionary<string, string[]> GetDataElements(DataTable table);
 

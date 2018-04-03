@@ -42,7 +42,7 @@ namespace Budget
                     Table = Ninja.Table;
                     Element = Ninja.GetDataElements(Table);
                     Ninja.GetFilterButtons(FilterPanel, Element["FundName"]);
-                    Ninja.GetAppropriationFilterBox(Table, FilterPanel);
+                    Ninja.GetAppropriationFilterListBox(Table, FilterPanel);
                     PrcChart = GetDataChart(PrcChart, "", source, BindingSource);
                     GetGridSelectedRowValues();
                 }
@@ -255,6 +255,8 @@ namespace Budget
 
 
                 }
+
+
             }
         }
     }

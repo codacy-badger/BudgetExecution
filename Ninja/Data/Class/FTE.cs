@@ -118,7 +118,7 @@ namespace Budget
                     return new decimal[] { GetTotal(table), (decimal)count, GetAverage(table) };
                 }
 
-                public string[] GetCodeElements(DataTable table, string column)
+                public string[] GetCodes(DataTable table, string column)
                 {
                     try
                     {
@@ -138,7 +138,7 @@ namespace Budget
                     {
                         if (dc.ColumnName.Equals("Id") || dc.ColumnName.Equals("Amount"))
                             continue;
-                        data.Add(dc.ColumnName, GetCodeElements(table, dc.ColumnName));
+                        data.Add(dc.ColumnName, GetCodes(table, dc.ColumnName));
                     }
                     if (data.ContainsKey("Id")) data.Remove("Id");
                     if (data.ContainsKey("Amount")) data.Remove("Amount");
@@ -173,11 +173,11 @@ namespace Budget
                     }
                 }
 
-                public Dictionary<string, decimal> GetDataTotals(DataTable table, string column, string filter)
+                public Dictionary<string, decimal> GetTotals(DataTable table, string column, string filter)
                 {
                     try
                     {
-                        var list = GetCodeElements(table, column);
+                        var list = GetCodes(table, column);
                         Dictionary<string, decimal> info = new Dictionary<string, decimal>();
                         foreach (string ftr in list)
                         {
@@ -239,11 +239,11 @@ namespace Budget
                     }
                 }
 
-                public Dictionary<string, decimal[]> GetDataMetrics(DataTable table, string column, string filter)
+                public Dictionary<string, decimal[]> GetMetrics(DataTable table, string column, string filter)
                 {
                     try
                     {
-                        string[] list = GetCodeElements(table, column);
+                        string[] list = GetCodes(table, column);
                         Dictionary<string, decimal[]> info = new Dictionary<string, decimal[]>();
                         foreach (string ftr in list)
                         {
@@ -264,19 +264,6 @@ namespace Budget
                 }
 
                 public DataTable FilterTable(DataTable table, string column, string filter)
-                {
-                    try
-                    {
-                        return table.AsEnumerable().Where(p => p.Field<string>(column).Equals(filter)).Select(p => p).CopyToDataTable();
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message.ToString() + $"Target Method:\n{ex.TargetSite}\n" + $"Stack:\n{ex.StackTrace}");
-                        return null;
-                    }
-                }
-
-                public DataTable GetTable(DataTable table, string column, string filter)
                 {
                     try
                     {

@@ -19,10 +19,11 @@ namespace Budget
                 #region Properties
 
                 public Query Query { get; }
+                public BindingSource BindingSource { get; set; }
                 Dictionary<string, object> Parameter { get; set; }
-                public DataSet DataSet { get; }
+                public DataSet E6 { get; }
                 public DataTable Table { get; }
-                public DataRow[] DataRecords { get; }
+                public DataRow[] Records { get; }
                 public PRC[] Accounts { get; }
                 public decimal Total { get; }
                 public int Count { get; }
@@ -41,11 +42,11 @@ namespace Budget
                 public DataBuilder(Source source)
                 {
                     Query = new Query(source);
-                    DataSet = GetDataSet( );
-                    Table = DataSet.Tables[0];
+                    E6 = GetDataSet( );
+                    Table = E6.Tables[0];
                     Total = GetTotal(Table);
                     Count = Table.Rows.Count;
-                    DataRecords = GetArray( );
+                    Records = GetRecords( );
                     SqlData = GetSqlData( );
                     if (source == Source.P6 || source == Source.P7 || source == Source.P8)
                     {
@@ -57,10 +58,10 @@ namespace Budget
                 public DataBuilder(Source source, Dictionary<string, object> param)
                 {
                     Query = new Query(source, param);
-                    DataSet = GetDataSet( );
-                    Table = DataSet.Tables[0];
+                    E6 = GetDataSet( );
+                    Table = E6.Tables[0];
                     Total = GetTotal(Table);
-                    DataRecords = GetArray( );
+                    Records = GetRecords( );
                     SqlData = GetSqlData( );
                     if (source == Source.P6 || source == Source.P7 || source == Source.P8)
                     {
@@ -103,7 +104,7 @@ namespace Budget
                     }
                 }
 
-                public DataRow[] GetArray( )
+                public DataRow[] GetRecords( )
                 {
                     try
                     {
@@ -118,8 +119,8 @@ namespace Budget
 
                 public Tuple<DataTable, DataRow[], decimal, int> GetSqlData( )
                 {
-                    var table = DataSet.Tables[Query.TableName];
-                    var array = GetArray( );
+                    var table = E6.Tables[Query.TableName];
+                    var array = GetRecords( );
                     var total = GetTotal(table);
                     var count = GetCount(table);
                     return new Tuple<DataTable, DataRow[], decimal, int>(table, array, total, count);
@@ -127,7 +128,7 @@ namespace Budget
 
                 private Tuple<DataTable, PRC[], decimal, int> GetPrcData( )
                 {
-                    var table = DataSet.Tables[Query.TableName];
+                    var table = E6.Tables[Query.TableName];
                     var array = GetPrcArray(table);
                     var total = GetTotal(table);
                     var count = GetCount(table);

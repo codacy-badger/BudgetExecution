@@ -22,7 +22,7 @@ namespace Budget
 
                 public Fund Fund { get; set; }
                 public string FiscalYear { get; set; }
-                public Tuple<DataTable, PRC[], decimal, int> Allocation { get; }
+                public Tuple<DataTable, PRC[], decimal, int> PrcData { get; }
                 public DataTable Table { get; }
                 public BindingSource BindingSource { get; set; }
                 public Dictionary<string, string[]> DataElement { get; }
@@ -61,27 +61,27 @@ namespace Budget
 
                 public Appropriation(DataTable table, string fundcode, string bfy) : this(fundcode, bfy)
                 {
-                    Allocation = GetDataValues(table, "Fund", Fund.Code);
-                    Table = Allocation.Item1;
+                    PrcData = GetDataValues(table, "Fund", Fund.Code);
+                    Table = PrcData.Item1;
                     BindingSource = new BindingSource();
                     BindingSource.DataSource = Table;
-                    Total = GetTotal(Allocation.Item1);
-                    Average = GetAverage(Allocation.Item1);
-                    DataElement = GetDataElements(Allocation.Item1);
+                    Total = GetTotal(PrcData.Item1);
+                    Average = GetAverage(PrcData.Item1);
+                    DataElement = GetDataElements(PrcData.Item1);
                     BocCodes = DataElement["BOC"];
                     BOC = DataElement["BocName"];
                     NPM = DataElement["NPM"];
                     Program = DataElement["ProgramAreaName"];
                     Goal = DataElement["GoalName"];
-                    Count = Allocation.Item1.Rows.Count;
-                    BocData = GetTotals(Allocation.Item1, BOC, "BocName");
+                    Count = PrcData.Item1.Rows.Count;
+                    BocData = GetTotals(PrcData.Item1, BOC, "BocName");
                     if (BocCodes.Contains("17"))
                     {
                         FTE = new FTE(table);
                     }
-                    NpmData = GetTotals(Allocation.Item1, NPM, "NPM");
-                    ProgramData = GetTotals(Allocation.Item1, Program, "ProgramAreaName");
-                    GoalData = GetTotals(Allocation.Item1, Goal, "GoalName");
+                    NpmData = GetTotals(PrcData.Item1, NPM, "NPM");
+                    ProgramData = GetTotals(PrcData.Item1, Program, "ProgramAreaName");
+                    GoalData = GetTotals(PrcData.Item1, Goal, "GoalName");
                 }
                 #endregion
 
@@ -115,7 +115,7 @@ namespace Budget
 
                 public decimal GetFTE()
                 {
-                    return Allocation.Item1.AsEnumerable().Where(p => p.Field<string>("BOC").Equals("17")).Select(p => p).Sum(p => p.Field<decimal>("Amount"));
+                    return PrcData.Item1.AsEnumerable().Where(p => p.Field<string>("BOC").Equals("17")).Select(p => p).Sum(p => p.Field<decimal>("Amount"));
                 }
 
                 public decimal GetAverage(DataTable table)
@@ -137,7 +137,7 @@ namespace Budget
                     return new decimal[] { GetTotal(table), (decimal)count, GetAverage(table) };
                 }
 
-                public string[] GetCodeElements(DataTable table, string column)
+                public string[] GetCodes(DataTable table, string column)
                 {
                     try
                     {
@@ -157,7 +157,7 @@ namespace Budget
                     {
                         if (dc.ColumnName.Equals("Id") || dc.ColumnName.Equals("Amount"))
                             continue;
-                        data.Add(dc.ColumnName, GetCodeElements(table, dc.ColumnName));
+                        data.Add(dc.ColumnName, GetCodes(table, dc.ColumnName));
                     }
                     if (data.ContainsKey("Id")) data.Remove("Id");
                     if (data.ContainsKey("Amount")) data.Remove("Amount");
@@ -221,11 +221,11 @@ namespace Budget
                 {
                     try
                     {
-                        var list = GetCodeElements(table, column);
+                        var list = GetCodes(table, column);
                         Dictionary<string, decimal> info = new Dictionary<string, decimal>( );
                         foreach (string ftr in list)
                         {
-                            var query = Allocation.Item1.AsEnumerable( ).Where(p => p.Field<string>(column).Equals(filter))
+                            var query = PrcData.Item1.AsEnumerable( ).Where(p => p.Field<string>(column).Equals(filter))
                                 .Sum(p => p.Field<decimal>("Amount"));
                             if (query > 0)
                                 info.Add(filter, query);
@@ -285,7 +285,7 @@ namespace Budget
                 {
                     try
                     {
-                        var list = GetCodeElements(table, column);
+                        var list = GetCodes(table, column);
                         Dictionary<string, decimal[]> info = new Dictionary<string, decimal[]>( );
                         foreach (string ftr in list)
                         {

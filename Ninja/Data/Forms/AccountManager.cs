@@ -31,52 +31,6 @@ namespace Budget
                 public AccountManager( )
                 {
                     InitializeComponent( );
-                    R6 = new RegionalAuthority( );
-                    Division = new DivisionAuthority( );
-                    GetRCValues( );
-                    GetFundValues( );
-                    GetOrgValues( );
-                    GetCodeValues( );
-                }
-
-                private void Next(object sender, EventArgs e)
-                {
-                }
-
-                private void Previous(object sender, EventArgs e)
-                {
-                }
-
-                private void AccountManager_Load(object sender, EventArgs e)
-                {
-                }
-
-                private void GetRCValues( )
-                {
-                    var rc = Division.DataElement["RC"];
-                    foreach (string r in rc)
-                        RcBox.Items.Add(r);
-                }
-
-                private void GetFundValues( )
-                {
-                    var fund = R6.DataElement["Fund"];
-                    foreach (string f in fund)
-                        FundBox.Items.Add(f);
-                }
-
-                private void GetOrgValues( )
-                {
-                    var org = R6.DataElement["Org"];
-                    foreach (string oc in org)
-                        OrgBox.Items.Add(oc);
-                }
-
-                private void GetCodeValues( )
-                {
-                    var prc = R6.DataElement["Code"];
-                    foreach (string p in prc)
-                        CodeBox.Items.Add(p);
                 }
             }
         }

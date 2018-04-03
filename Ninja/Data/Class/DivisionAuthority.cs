@@ -22,7 +22,7 @@ namespace Budget
                 public Org Org { get; }
                 public RC RC { get; }
                 public DataBuilder Data { get; set; }
-                public Tuple<DataTable, PRC[], decimal, int> Allocation { get; }
+                public Tuple<DataTable, PRC[], decimal, int> PrcData { get; }
                 public DataSet E6 { get; }
                 public DataTable Table { get; }
                 public BindingSource BindingSource { get; set; }
@@ -49,10 +49,10 @@ namespace Budget
                 public DivisionAuthority( )
                 {
                     Data = new DataBuilder(Source.P8);
-                    Allocation = Data.PrcData;
-                    Table = Allocation.Item1;
-                    Total = Allocation.Item3;
-                    Count = Allocation.Item4;
+                    PrcData = Data.PrcData;
+                    Table = PrcData.Item1;
+                    Total = PrcData.Item3;
+                    Count = PrcData.Item4;
                     BindingSource = new BindingSource();
                     BindingSource.DataSource = Table;
                     DataElement = GetDataElements(Data.Table);
@@ -76,10 +76,10 @@ namespace Budget
                     RC = new RC(rc);
                     Org = new Org(RC.Code);
                     Data = new DataBuilder(Source.P8, new Dictionary<string, object> { ["RC"] = rc });
-                    Allocation = Data.PrcData;
-                    Table = Allocation.Item1;
-                    Total = Allocation.Item3;
-                    Count = Allocation.Item4;
+                    PrcData = Data.PrcData;
+                    Table = PrcData.Item1;
+                    Total = PrcData.Item3;
+                    Count = PrcData.Item4;
                     Average = GetAverage(Table);
                     DataElement = GetDataElements(Table);
                     Appropriations = GetAllocation( );
@@ -260,7 +260,7 @@ namespace Budget
                     return new decimal[] { GetTotal(table), (decimal)count, GetAverage(table) };
                 }
 
-                public string[] GetCodeElements(DataTable table, string column)
+                public string[] GetCodes(DataTable table, string column)
                 {
                     try
                     {
@@ -280,7 +280,7 @@ namespace Budget
                     {
                         if (dc.ColumnName.Equals("Id") || dc.ColumnName.Equals("Amount"))
                             continue;
-                        data.Add(dc.ColumnName, GetCodeElements(table, dc.ColumnName));
+                        data.Add(dc.ColumnName, GetCodes(table, dc.ColumnName));
                     }
                     if (data.ContainsKey("Id")) data.Remove("Id");
                     if (data.ContainsKey("Amount")) data.Remove("Amount");
@@ -319,7 +319,7 @@ namespace Budget
                 {
                     try
                     {
-                        var list = GetCodeElements(table, column);
+                        var list = GetCodes(table, column);
                         Dictionary<string, decimal> info = new Dictionary<string, decimal>( );
                         foreach (string ftr in list)
                         {
@@ -385,7 +385,7 @@ namespace Budget
                 {
                     try
                     {
-                        string[] list = GetCodeElements(table, column);
+                        string[] list = GetCodes(table, column);
                         Dictionary<string, decimal[]> info = new Dictionary<string, decimal[]>( );
                         foreach (string ftr in list)
                         {

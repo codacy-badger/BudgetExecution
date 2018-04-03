@@ -53,21 +53,21 @@ namespace Budget
                     Data = data;
                     Table = Data.Table;
                     E6 = Data.E6;
-                    Allocation = Data.Allocation;
-                    FundTotals = GetTotals(Data.Table, "FundName");
-                    FundMetrics = GetMetrics(Data.Table, "FundName");
-                    BocTotals = GetTotals(Data.Table, "BocName");
-                    BocMetrics = GetMetrics(Data.Table, "BocName");
-                    NpmTotals = GetTotals(Data.Table, "NPM");
-                    NpmMetrics = GetMetrics(Data.Table, "NPM");
-                    ProgramProjectTotals = GetTotals(Data.Table, "ProgramProjectCode");
-                    ProgramProjectMetrics = GetMetrics(Data.Table, "ProgramProjectCode");
-                    ProgramAreaTotals = GetTotals(Data.Table, "ProgramAreaCode");
-                    ProgramAreaMetrics = GetMetrics(Data.Table, "ProgramAreaCode");
-                    GoalTotals = GetTotals(Data.Table, "GoalName");
-                    GoalMetrics = GetMetrics(Data.Table, "GoalName");
-                    ObjectiveTotals = GetTotals(Data.Table, "ObjectiveName");
-                    ObjectiveMetrics = GetMetrics(Data.Table, "ObjectiveName");
+                    Allocation = Data.PrcData;
+                    FundTotals = GetTotals(Table, "FundName");
+                    FundMetrics = GetMetrics(Table, "FundName");
+                    BocTotals = GetTotals(Table, "BocName");
+                    BocMetrics = GetMetrics(Table, "BocName");
+                    NpmTotals = GetTotals(Table, "NPM");
+                    NpmMetrics = GetMetrics(Table, "NPM");
+                    ProgramProjectTotals = GetTotals(Table, "ProgramProjectCode");
+                    ProgramProjectMetrics = GetMetrics(Table, "ProgramProjectCode");
+                    ProgramAreaTotals = GetTotals(Table, "ProgramAreaCode");
+                    ProgramAreaMetrics = GetMetrics(Table, "ProgramAreaCode");
+                    GoalTotals = GetTotals(Table, "GoalName");
+                    GoalMetrics = GetMetrics(Table, "GoalName");
+                    ObjectiveTotals = GetTotals(Table, "ObjectiveName");
+                    ObjectiveMetrics = GetMetrics(Table, "ObjectiveName");
                 }
 
                 public Metric(DataTable table)
@@ -194,7 +194,7 @@ namespace Budget
                     return new decimal[] { GetTotal(table), (decimal)count, GetAverage(table) };
                 }
 
-                public string[] GetCodeElements(DataTable table, string column)
+                public string[] GetCodes(DataTable table, string column)
                 {
                     try
                     {
@@ -214,7 +214,7 @@ namespace Budget
                     {
                         if (dc.ColumnName.Equals("Id") || dc.ColumnName.Equals("Amount"))
                             continue;
-                        data.Add(dc.ColumnName, GetCodeElements(table, dc.ColumnName));
+                        data.Add(dc.ColumnName, GetCodes(table, dc.ColumnName));
                     }
                     if (data.ContainsKey("Id")) data.Remove("Id");
                     if (data.ContainsKey("Amount")) data.Remove("Amount");

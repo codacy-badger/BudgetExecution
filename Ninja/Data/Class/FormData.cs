@@ -22,9 +22,9 @@ namespace Budget
             public class FormData : IBudgetAuthority
             {
                 #region Properties
-
+                public IBudgetAuthority Authority { get; set; }
                 public DataBuilder Data { get; set; }
-                public Tuple<DataTable, PRC[], decimal, int> Allocation { get; set; }
+                public Tuple<DataTable, PRC[], decimal, int> PrcData { get; set; }
                 bool Percent { get; set; }
                 public DataSet E6 { get; set; }
                 public DataTable Table { get; set; }
@@ -33,7 +33,7 @@ namespace Budget
                 public int Count { get; set; }
                 public Dictionary<string, string[]> DataElement { get; set; }
                 public FlowLayoutPanel Panel { get; set; }
-                public MetroSetListBox FilterBox { get; set; }
+                public ListBox FilterBox { get; set; }
                 public BindingSource BindingSource { get; set; }
                 public DataGridView DataGrid { get; set; }
                 public BindingNavigator Navigator { get; set; }
@@ -51,16 +51,17 @@ namespace Budget
 
                 public FormData(Source source, Control panel, BindingSource bs, DataGridView dgv, BindingNavigator bn)
                 {
-                    Data = new DataBuilder(source);
+                    if (source == Source.P7)
+                        Authority = new RegionalAuthority();
                     E6 = Data.GetDataSet();
                     Table = Data.Table;
-                    BindFormData(Table, dgv, bs, bn);
+                    BindGridAndNavigator(Table, dgv, bs, bn);
                     DataElement = GetDataElements(Table);
-                    FilterBox = panel as MetroSetListBox;
+                    FilterBox = panel as ListBox;
                     BindingSource = bs;
                     Navigator = bn;
                     DataGrid = dgv;
-                    GetAppropriationFilterBox(Table, Panel);
+                    GetAppropriationFilterButtonBox(Table, Panel);
                 }
 
                 #endregion
@@ -89,7 +90,7 @@ namespace Budget
                     tb.DataBindings.Add(binding);
                 }
 
-                internal void BindFormData(DataTable table, DataGridView dg, BindingSource bs, BindingNavigator bn)
+                internal void BindGridAndNavigator(DataTable table, DataGridView dg, BindingSource bs, BindingNavigator bn)
                 {
                     bs.DataSource = table;
                     dg.DataSource = bs;
@@ -120,10 +121,27 @@ namespace Budget
                     }
                 }
 
-                internal void GetAppropriationFilterBox(DataTable table, Control filterPanel)
+                internal void GetFilterListItems(Control panel, string[] list)
                 {
-                    GetFilterButtons(filterPanel, GetCodeElements(table, "FundName"));
+                    var box = panel as MetroSetListBox;
+                    box.Controls.Clear();
+                    foreach (string f in list)
+                    {
+                        box.Items.Add(f);
+                    }
+                }
+
+                internal void GetAppropriationFilterButtonBox(DataTable table, Control filterPanel)
+                {
+                    GetFilterButtons(filterPanel, GetCodes(table, "FundName"));
                     foreach (Control c in filterPanel.Controls) c.Click += AppropriationButton_OnSelect;
+                }
+
+                internal void GetAppropriationFilterListBox(DataTable table, Control filterPanel)
+                {
+                    var filter = filterPanel as MetroSetListBox;
+                    GetFilterListItems(filter, GetCodes(table, "FundName"));
+                    filter.SelectedIndexChanged += AppropriationListBoxItem_OnSelect;
                 }
 
                 internal void AppropriationButton_OnSelect(object sender, EventArgs e)
@@ -135,25 +153,48 @@ namespace Budget
                     Table = table;
                 }
 
+                internal void AppropriationListBoxItem_OnSelect(object sender)
+                {
+                    var button = sender as MetroSetListBox;
+                    var table = GetTable(Table, "FundName", button.SelectedItem.ToString());
+                    BindingSource.DataSource = table;
+                    GetBocListBox(table, FilterBox);
+                    Table = table;
+                }
+
                 internal void GetBocFilterBox(DataTable table, FlowLayoutPanel filterPanel)
                 {
-                    GetFilterButtons(filterPanel, GetCodeElements(table, "BocName"));
+                    GetFilterButtons(filterPanel, GetCodes(table, "BocName"));
                     foreach (Control c in filterPanel.Controls) c.Click += BocButtonSelect_OnSelect;
                 }
 
-                internal void BocButtonSelect_OnSelect(object sender, EventArgs e)
+                internal void GetBocListBox(DataTable table, Control filterPanel)
                 {
-                    var button = sender as MetroSetButton;
-                    var table = GetTable(Table, "BocName", button.Tag.ToString( ));
+                    var filter = filterPanel as MetroSetListBox;
+                    GetFilterButtons(filter, GetCodes(table, "BocName"));
+                    filter.SelectedIndexChanged += BocListBoxItem_OnSelect;
+                }
+
+                internal void BocListBoxItem_OnSelect(object sender)
+                {
+                    var button = sender as MetroSetListBox;
+                    var table = GetTable(Table, "BocName", button.SelectedItem.ToString( ));
                     BindingSource.DataSource = table;
                     GetBocFilterBox(Table, Panel);
                 }
 
+                internal void BocButtonSelect_OnSelect(object sender, EventArgs e)
+                {
+                    var button = sender as MetroSetListBox;
+                    var table = GetTable(Table, "BocName", button.SelectedItem.ToString());
+                    BindingSource.DataSource = table;
+                    GetBocFilterBox(Table, Panel);
+                }
                 internal void ReturnButton_OnClick(object sender, EventArgs e)
                 {
                     Table = Data.Table;
                     BindingSource.DataSource = Table;
-                    GetAppropriationFilterBox(Table, Panel);
+                    GetAppropriationFilterListBox(Table, FilterBox);
                 }
                 internal void GetFormSettings(MetroForm form)
                 {
@@ -245,7 +286,7 @@ namespace Budget
                     return new decimal[] { GetTotal(table), (decimal)count, GetAverage(table) };
                 }
 
-                public string[] GetCodeElements(DataTable table, string column)
+                public string[] GetCodes(DataTable table, string column)
                 {
                     try
                     {
@@ -265,7 +306,7 @@ namespace Budget
                     {
                         if (dc.ColumnName.Equals("Id") || dc.ColumnName.Equals("Amount"))
                             continue;
-                        data.Add(dc.ColumnName, GetCodeElements(table, dc.ColumnName));
+                        data.Add(dc.ColumnName, GetCodes(table, dc.ColumnName));
                     }
                     if (data.ContainsKey("Id")) data.Remove("Id");
                     if (data.ContainsKey("Amount")) data.Remove("Amount");
@@ -304,7 +345,7 @@ namespace Budget
                 {
                     try
                     {
-                        var list = GetCodeElements(table, column);
+                        var list = GetCodes(table, column);
                         Dictionary<string, decimal> info = new Dictionary<string, decimal>( );
                         foreach (string ftr in list)
                         {
@@ -370,7 +411,7 @@ namespace Budget
                 {
                     try
                     {
-                        string[] list = GetCodeElements(table, column);
+                        string[] list = GetCodes(table, column);
                         Dictionary<string, decimal[]> info = new Dictionary<string, decimal[]>( );
                         foreach (string ftr in list)
                         {

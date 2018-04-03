@@ -302,11 +302,11 @@
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Data\Class\Metric.cs" />
-    <Compile Include="Data\NinjaGrid.cs">
+    <Compile Include="Data\BudgetDataGrid.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Data\NinjaGrid.Designer.cs">
-      <DependentUpon>NinjaGrid.cs</DependentUpon>
+    <Compile Include="Data\BudgetDataGrid.Designer.cs">
+      <DependentUpon>BudgetDataGrid.cs</DependentUpon>
     </Compile>
     <Compile Include="F6.cs">
       <DependentUpon>Model1.tt</DependentUpon>
@@ -362,6 +362,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>NinjaFundCodeImages.resx</DependentUpon>
     </Compile>
+    <Compile Include="Resources\NinjaIcons\NinjaIcons.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NinjaIcons.resx</DependentUpon>
+    </Compile>
     <Compile Include="Resources\NinjaSummaryImages.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -399,8 +404,8 @@
     <EmbeddedResource Include="Data\Forms\SummaryForm.resx">
       <DependentUpon>SummaryForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Data\NinjaGrid.resx">
-      <DependentUpon>NinjaGrid.cs</DependentUpon>
+    <EmbeddedResource Include="Data\BudgetDataGrid.resx">
+      <DependentUpon>BudgetDataGrid.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -421,6 +426,10 @@
     <EmbeddedResource Include="Resources\NinjaFundCodeImages.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>NinjaFundCodeImages.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\NinjaIcons\NinjaIcons.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>NinjaIcons.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\NinjaSummaryImages.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -498,7 +507,31 @@
       <DependentUpon>EntityData.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\summation_3d_blue_oma_icon.ico" />
     <None Include="Resources\LeftArrow.png" />
+    <None Include="Resources\11995.ico" />
+    <None Include="Resources\12047.ico" />
+    <None Include="Resources\37223.ico" />
+    <None Include="Resources\42474.ico" />
+    <None Include="Resources\Double-J-Design-Ravenna-3d-Bar-Chart.ico" />
+    <None Include="Resources\epa_seal_medium.ico" />
+    <None Include="Resources\if_5_1376012 %281%29.ico" />
+    <None Include="Resources\if_6_1376009.ico" />
+    <None Include="Resources\if_bar-chart_87411.ico" />
+    <None Include="Resources\if_business-planing_2799210.ico" />
+    <None Include="Resources\if_cpu__chip__microchip__processor__computer__pc__technology_2317703.ico" />
+    <None Include="Resources\if_dollar_87424.ico" />
+    <None Include="Resources\if_epc_1931213.ico" />
+    <None Include="Resources\if_Finance_financial_report_1889193.ico" />
+    <None Include="Resources\if_group_data_44729.ico" />
+    <None Include="Resources\if_group_data_45163 %281%29.ico" />
+    <None Include="Resources\if_hierarchy_1931214.ico" />
+    <None Include="Resources\if_law_87440.ico" />
+    <None Include="Resources\if_research_87460.ico" />
+    <None Include="Resources\if_safe_87462.ico" />
+    <None Include="Resources\if_save_87464.ico" />
+    <None Include="Resources\if_vector_65_14_473802 %281%29.ico" />
+    <None Include="Resources\ninja.ico" />
     <Content Include="Resources\NinjaFormImages\123.jpg" />
     <Content Include="Resources\NinjaFormImages\171016.jpg" />
     <Content Include="Resources\NinjaFormImages\218325-1-m.jpg" />
