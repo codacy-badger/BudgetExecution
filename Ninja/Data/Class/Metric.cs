@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using System.Data;
 using System.Windows.Forms;
 using Syncfusion.Windows.Forms.Chart;
+using System.ComponentModel;
 #endregion
 
 namespace Budget
@@ -15,15 +16,16 @@ namespace Budget
     {
         namespace Data
         {
-            public class Metric 
+            public class Metric : IChartSeriesIndexedModel
             {
                 #region Properties
-                public IBudgetAuthority Data { get; }
+                public DataBuilder Data { get; }
                 public DataTable Table { get; set; }
                 public DataSet E6 { get; }
                 public int Count { get; }
                 public decimal Total { get; }
                 public decimal Average { get; }
+                public double[] ChartData { get; set; }
                 public decimal[] Metrics { get; }
                 public Tuple<DataTable, PRC[], decimal, int> Allocation { get; }
                 public Dictionary<string, string[]> DataElement { get; }
@@ -48,11 +50,15 @@ namespace Budget
                 {
                 }
 
-                public Metric(IBudgetAuthority data)
+                public Metric(Source source)
                 {
-                    Data = data;
+                    Data = new DataBuilder(source);
                     Table = Data.Table;
                     E6 = Data.E6;
+                    Total = GetTotal(Table);
+                    Count = Table.Rows.Count;
+                    Average = GetAverage(Table);
+                    Metrics = GetMetrics(Table);
                     Allocation = Data.PrcData;
                     FundTotals = GetTotals(Table, "FundName");
                     FundMetrics = GetMetrics(Table, "FundName");
@@ -70,10 +76,14 @@ namespace Budget
                     ObjectiveMetrics = GetMetrics(Table, "ObjectiveName");
                 }
 
-                public Metric(DataTable table)
+                public Metric(DataBuilder data)
                 {
-                    Table = table;
+                    Table = data.Table;
                     E6 = Table.DataSet;
+                    Total = GetTotal(Table);
+                    Count = Table.Rows.Count;
+                    Average = GetAverage(Table);
+                    Metrics = GetMetrics(Table);
                     Allocation = GetAllocation(Table);
                     FundTotals = GetTotals(Table, "FundName");
                     FundMetrics = GetMetrics(Table, "FundName");
@@ -92,6 +102,7 @@ namespace Budget
                 }
                 #endregion
 
+                public event ListChangedEventHandler Changed;
                 #region Methods
 
                 Tuple<DataTable, PRC[], decimal, int> GetAllocation(DataTable table)
@@ -188,6 +199,44 @@ namespace Budget
                     }
                 }
 
+                Dictionary<string, decimal>[] GetChartInput()
+                {
+                    return new Dictionary<string, decimal>[] {FundTotals, BocTotals, NpmTotals, GoalTotals,
+                        ObjectiveTotals, ProgramAreaTotals, ProgramProjectTotals};
+                }
+
+                double[] GetChartData(Dictionary<string, decimal> data)
+                {
+                    try
+                    {
+                        var val = new double[data.Values.Count];
+                        for (int i = 0; i < data.Values.Count; i++)
+                        {
+                            foreach (KeyValuePair<string, decimal> kvp in data)
+                            {
+                                val[i] = (double)kvp.Value;
+                            }
+                        }
+                        return val;
+                    }
+                    catch (Exception e)
+                    {
+
+                        MessageBox.Show(e.Message);
+                        return null;
+                    }
+                }
+
+                public double[] GetY(int index)
+                {
+                    return new double[] { ChartData[index] };
+                }
+
+                public bool GetEmpty(int index)
+                {
+                    return false;
+                }
+             
                 public decimal[] GetMetrics(DataTable table)
                 {
                     var count = GetCount(table);

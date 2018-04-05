@@ -22,7 +22,6 @@ namespace Budget
                 Query Query { get; }
                 Tuple<DataTable, DataRow[], decimal, int> SqlData { get; }
                 DataTable Table { get; }
-                decimal Total { get; }
 
                 #endregion
 

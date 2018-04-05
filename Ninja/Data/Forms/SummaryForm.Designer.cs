@@ -84,7 +84,6 @@ namespace Budget
             Syncfusion.Windows.Forms.Tools.SliderCollection sliderCollection2 = new Syncfusion.Windows.Forms.Tools.SliderCollection();
             Syncfusion.Windows.Forms.Chart.ChartSeries chartSeries5 = new Syncfusion.Windows.Forms.Chart.ChartSeries();
             Syncfusion.Windows.Forms.Chart.ChartCustomShapeInfo chartCustomShapeInfo5 = new Syncfusion.Windows.Forms.Chart.ChartCustomShapeInfo();
-            Syncfusion.Windows.Forms.Chart.ChartLineInfo chartLineInfo3 = new Syncfusion.Windows.Forms.Chart.ChartLineInfo();
             Syncfusion.Windows.Forms.Chart.ChartSeries chartSeries6 = new Syncfusion.Windows.Forms.Chart.ChartSeries();
             Syncfusion.Windows.Forms.Chart.ChartCustomShapeInfo chartCustomShapeInfo6 = new Syncfusion.Windows.Forms.Chart.ChartCustomShapeInfo();
             Syncfusion.Windows.Forms.Chart.ChartToolBarSaveItem chartToolBarSaveItem3 = new Syncfusion.Windows.Forms.Chart.ChartToolBarSaveItem();
@@ -103,7 +102,6 @@ namespace Budget
             Syncfusion.Windows.Forms.Tools.SliderCollection sliderCollection3 = new Syncfusion.Windows.Forms.Tools.SliderCollection();
             Syncfusion.Windows.Forms.Chart.ChartSeries chartSeries7 = new Syncfusion.Windows.Forms.Chart.ChartSeries();
             Syncfusion.Windows.Forms.Chart.ChartCustomShapeInfo chartCustomShapeInfo7 = new Syncfusion.Windows.Forms.Chart.ChartCustomShapeInfo();
-            Syncfusion.Windows.Forms.Chart.ChartLineInfo chartLineInfo4 = new Syncfusion.Windows.Forms.Chart.ChartLineInfo();
             Syncfusion.Windows.Forms.Chart.ChartSeries chartSeries8 = new Syncfusion.Windows.Forms.Chart.ChartSeries();
             Syncfusion.Windows.Forms.Chart.ChartCustomShapeInfo chartCustomShapeInfo8 = new Syncfusion.Windows.Forms.Chart.ChartCustomShapeInfo();
             Syncfusion.Windows.Forms.Chart.ChartToolBarSaveItem chartToolBarSaveItem4 = new Syncfusion.Windows.Forms.Chart.ChartToolBarSaveItem();
@@ -122,7 +120,6 @@ namespace Budget
             Syncfusion.Windows.Forms.Tools.SliderCollection sliderCollection4 = new Syncfusion.Windows.Forms.Tools.SliderCollection();
             Syncfusion.Windows.Forms.Chart.ChartSeries chartSeries9 = new Syncfusion.Windows.Forms.Chart.ChartSeries();
             Syncfusion.Windows.Forms.Chart.ChartCustomShapeInfo chartCustomShapeInfo9 = new Syncfusion.Windows.Forms.Chart.ChartCustomShapeInfo();
-            Syncfusion.Windows.Forms.Chart.ChartLineInfo chartLineInfo5 = new Syncfusion.Windows.Forms.Chart.ChartLineInfo();
             Syncfusion.Windows.Forms.Chart.ChartSeries chartSeries10 = new Syncfusion.Windows.Forms.Chart.ChartSeries();
             Syncfusion.Windows.Forms.Chart.ChartCustomShapeInfo chartCustomShapeInfo10 = new Syncfusion.Windows.Forms.Chart.ChartCustomShapeInfo();
             Syncfusion.Windows.Forms.Chart.ChartToolBarSaveItem chartToolBarSaveItem5 = new Syncfusion.Windows.Forms.Chart.ChartToolBarSaveItem();
@@ -141,7 +138,6 @@ namespace Budget
             Syncfusion.Windows.Forms.Tools.SliderCollection sliderCollection5 = new Syncfusion.Windows.Forms.Tools.SliderCollection();
             Syncfusion.Windows.Forms.Chart.ChartSeries chartSeries11 = new Syncfusion.Windows.Forms.Chart.ChartSeries();
             Syncfusion.Windows.Forms.Chart.ChartCustomShapeInfo chartCustomShapeInfo11 = new Syncfusion.Windows.Forms.Chart.ChartCustomShapeInfo();
-            Syncfusion.Windows.Forms.Chart.ChartLineInfo chartLineInfo6 = new Syncfusion.Windows.Forms.Chart.ChartLineInfo();
             Syncfusion.Windows.Forms.Chart.ChartSeries chartSeries12 = new Syncfusion.Windows.Forms.Chart.ChartSeries();
             Syncfusion.Windows.Forms.Chart.ChartCustomShapeInfo chartCustomShapeInfo12 = new Syncfusion.Windows.Forms.Chart.ChartCustomShapeInfo();
             Syncfusion.Windows.Forms.Chart.ChartToolBarSaveItem chartToolBarSaveItem6 = new Syncfusion.Windows.Forms.Chart.ChartToolBarSaveItem();
@@ -160,7 +156,6 @@ namespace Budget
             Syncfusion.Windows.Forms.Tools.SliderCollection sliderCollection6 = new Syncfusion.Windows.Forms.Tools.SliderCollection();
             Syncfusion.Windows.Forms.Chart.ChartSeries chartSeries13 = new Syncfusion.Windows.Forms.Chart.ChartSeries();
             Syncfusion.Windows.Forms.Chart.ChartCustomShapeInfo chartCustomShapeInfo13 = new Syncfusion.Windows.Forms.Chart.ChartCustomShapeInfo();
-            Syncfusion.Windows.Forms.Chart.ChartLineInfo chartLineInfo7 = new Syncfusion.Windows.Forms.Chart.ChartLineInfo();
             Syncfusion.Windows.Forms.Chart.ChartSeries chartSeries14 = new Syncfusion.Windows.Forms.Chart.ChartSeries();
             Syncfusion.Windows.Forms.Chart.ChartCustomShapeInfo chartCustomShapeInfo14 = new Syncfusion.Windows.Forms.Chart.ChartCustomShapeInfo();
             Syncfusion.Windows.Forms.Chart.ChartToolBarSaveItem chartToolBarSaveItem7 = new Syncfusion.Windows.Forms.Chart.ChartToolBarSaveItem();
@@ -179,7 +174,7 @@ namespace Budget
             Syncfusion.Windows.Forms.Tools.SliderCollection sliderCollection7 = new Syncfusion.Windows.Forms.Tools.SliderCollection();
             Syncfusion.Windows.Forms.Chart.ChartSeries chartSeries15 = new Syncfusion.Windows.Forms.Chart.ChartSeries();
             Syncfusion.Windows.Forms.Chart.ChartCustomShapeInfo chartCustomShapeInfo15 = new Syncfusion.Windows.Forms.Chart.ChartCustomShapeInfo();
-            Syncfusion.Windows.Forms.Chart.ChartLineInfo chartLineInfo8 = new Syncfusion.Windows.Forms.Chart.ChartLineInfo();
+            Syncfusion.Windows.Forms.Chart.ChartLineInfo chartLineInfo3 = new Syncfusion.Windows.Forms.Chart.ChartLineInfo();
             Syncfusion.Windows.Forms.Chart.ChartSeries chartSeries16 = new Syncfusion.Windows.Forms.Chart.ChartSeries();
             Syncfusion.Windows.Forms.Chart.ChartCustomShapeInfo chartCustomShapeInfo16 = new Syncfusion.Windows.Forms.Chart.ChartCustomShapeInfo();
             Syncfusion.Windows.Forms.Chart.ChartToolBarSaveItem chartToolBarSaveItem8 = new Syncfusion.Windows.Forms.Chart.ChartToolBarSaveItem();
@@ -196,7 +191,7 @@ namespace Budget
             this.SummaryTabControl = new Syncfusion.Windows.Forms.Tools.TabControlAdv();
             this.Tab1 = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
             this.splitContainer5 = new System.Windows.Forms.SplitContainer();
-            this.Chart1 = new Syncfusion.Windows.Forms.Chart.ChartControl();
+            this.FundChart = new Syncfusion.Windows.Forms.Chart.ChartControl();
             this.toggleButton1 = new Syncfusion.Windows.Forms.Tools.ToggleButton();
             this.expandCollapsePanel4 = new MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel();
             this.listBox1 = new System.Windows.Forms.ListBox();
@@ -207,37 +202,37 @@ namespace Budget
             this.rb2 = new System.Windows.Forms.RadioButton();
             this.Tab2 = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
-            this.Chart2 = new Syncfusion.Windows.Forms.Chart.ChartControl();
+            this.BocChart = new Syncfusion.Windows.Forms.Chart.ChartControl();
             this.expandCollapsePanel3 = new MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel();
             this.listBox2 = new System.Windows.Forms.ListBox();
             this.toggleButton2 = new Syncfusion.Windows.Forms.Tools.ToggleButton();
             this.Tab3 = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
             this.splitContainer4 = new System.Windows.Forms.SplitContainer();
-            this.Chart3 = new Syncfusion.Windows.Forms.Chart.ChartControl();
+            this.NpmChart = new Syncfusion.Windows.Forms.Chart.ChartControl();
             this.expandCollapsePanel2 = new MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel();
             this.listBox3 = new System.Windows.Forms.ListBox();
             this.toggleButton3 = new Syncfusion.Windows.Forms.Tools.ToggleButton();
             this.Tab4 = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
             this.splitContaineEPA = new System.Windows.Forms.SplitContainer();
-            this.Chart4 = new Syncfusion.Windows.Forms.Chart.ChartControl();
+            this.GoalChart = new Syncfusion.Windows.Forms.Chart.ChartControl();
             this.expandCollapsePanel1 = new MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel();
             this.listBox4 = new System.Windows.Forms.ListBox();
             this.toggleButton4 = new Syncfusion.Windows.Forms.Tools.ToggleButton();
             this.Tab5 = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
             this.splitContainer3 = new System.Windows.Forms.SplitContainer();
-            this.Chart5 = new Syncfusion.Windows.Forms.Chart.ChartControl();
+            this.AreaChart1 = new Syncfusion.Windows.Forms.Chart.ChartControl();
             this.expandCollapsePanel6 = new MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel();
             this.listBox6 = new System.Windows.Forms.ListBox();
             this.toggleButton6 = new Syncfusion.Windows.Forms.Tools.ToggleButton();
             this.Tab6 = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
             this.splitContainer8 = new System.Windows.Forms.SplitContainer();
-            this.Chart6 = new Syncfusion.Windows.Forms.Chart.ChartControl();
+            this.AreaChart = new Syncfusion.Windows.Forms.Chart.ChartControl();
             this.expandCollapsePanel5 = new MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel();
             this.listBox5 = new System.Windows.Forms.ListBox();
             this.toggleButton5 = new Syncfusion.Windows.Forms.Tools.ToggleButton();
             this.Tab7 = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
             this.splitContainer6 = new System.Windows.Forms.SplitContainer();
-            this.Chart7 = new Syncfusion.Windows.Forms.Chart.ChartControl();
+            this.ProjectChart = new Syncfusion.Windows.Forms.Chart.ChartControl();
             this.expandCollapsePanel7 = new MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel();
             this.listBox7 = new System.Windows.Forms.ListBox();
             this.toggleButton7 = new Syncfusion.Windows.Forms.Tools.ToggleButton();
@@ -377,7 +372,7 @@ namespace Budget
             // 
             // splitContainer5.Panel1
             // 
-            this.splitContainer5.Panel1.Controls.Add(this.Chart1);
+            this.splitContainer5.Panel1.Controls.Add(this.FundChart);
             // 
             // splitContainer5.Panel2
             // 
@@ -395,65 +390,65 @@ namespace Budget
             this.splitContainer5.SplitterWidth = 7;
             this.splitContainer5.TabIndex = 96;
             // 
-            // Chart1
+            // FundChart
             // 
-            this.Chart1.AllowGradientPalette = true;
-            this.Chart1.AllowUserEditStyles = true;
-            this.Chart1.BackInterior = new Syncfusion.Drawing.BrushInfo(System.Drawing.Color.Black);
-            this.Chart1.ChartArea.AutoScale = true;
-            this.Chart1.ChartArea.BackInterior = new Syncfusion.Drawing.BrushInfo(System.Drawing.Color.Transparent);
-            this.Chart1.ChartArea.BorderColor = System.Drawing.Color.Black;
-            this.Chart1.ChartArea.CursorLocation = new System.Drawing.Point(0, 0);
-            this.Chart1.ChartArea.CursorReDraw = false;
-            this.Chart1.ChartAreaMargins = new Syncfusion.Windows.Forms.Chart.ChartMargins(0, 0, 0, 10);
-            this.Chart1.ChartAreaShadow = true;
-            this.Chart1.ChartInterior = new Syncfusion.Drawing.BrushInfo(Syncfusion.Drawing.GradientStyle.PathRectangle, new System.Drawing.Color[] {
+            this.FundChart.AllowGradientPalette = true;
+            this.FundChart.AllowUserEditStyles = true;
+            this.FundChart.BackInterior = new Syncfusion.Drawing.BrushInfo(System.Drawing.Color.Black);
+            this.FundChart.ChartArea.AutoScale = true;
+            this.FundChart.ChartArea.BackInterior = new Syncfusion.Drawing.BrushInfo(System.Drawing.Color.Transparent);
+            this.FundChart.ChartArea.BorderColor = System.Drawing.Color.Black;
+            this.FundChart.ChartArea.CursorLocation = new System.Drawing.Point(0, 0);
+            this.FundChart.ChartArea.CursorReDraw = false;
+            this.FundChart.ChartAreaMargins = new Syncfusion.Windows.Forms.Chart.ChartMargins(0, 0, 0, 10);
+            this.FundChart.ChartAreaShadow = true;
+            this.FundChart.ChartInterior = new Syncfusion.Drawing.BrushInfo(Syncfusion.Drawing.GradientStyle.PathRectangle, new System.Drawing.Color[] {
             System.Drawing.Color.Black,
             System.Drawing.Color.Gray,
             System.Drawing.Color.DimGray});
-            this.Chart1.CustomPalette = new System.Drawing.Color[] {
+            this.FundChart.CustomPalette = new System.Drawing.Color[] {
         System.Drawing.Color.DeepSkyBlue,
         System.Drawing.Color.DarkRed};
-            this.Chart1.DataSourceName = "[none]";
-            this.Chart1.Depth = 250F;
-            this.Chart1.DisplayChartContextMenu = false;
-            this.Chart1.DisplaySeriesContextMenu = false;
-            this.Chart1.EnableMouseRotation = true;
-            this.Chart1.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Chart1.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.Chart1.HighlightSymbol = true;
-            this.Chart1.IsWindowLess = false;
+            this.FundChart.DataSourceName = "[none]";
+            this.FundChart.Depth = 250F;
+            this.FundChart.DisplayChartContextMenu = false;
+            this.FundChart.DisplaySeriesContextMenu = false;
+            this.FundChart.EnableMouseRotation = true;
+            this.FundChart.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FundChart.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.FundChart.HighlightSymbol = true;
+            this.FundChart.IsWindowLess = false;
             // 
             // 
             // 
-            this.Chart1.Legend.Location = new System.Drawing.Point(7, 7);
-            this.Chart1.Legend.Margin = new System.Windows.Forms.Padding(2);
-            this.Chart1.Legend.Position = Syncfusion.Windows.Forms.Chart.ChartDock.Floating;
-            this.Chart1.Legend.Visible = false;
-            this.Chart1.LegendsPlacement = Syncfusion.Windows.Forms.Chart.ChartPlacement.Outside;
-            this.Chart1.Localize = null;
-            this.Chart1.Location = new System.Drawing.Point(23, 79);
-            this.Chart1.Margin = new System.Windows.Forms.Padding(2);
-            this.Chart1.Name = "Chart1";
-            this.Chart1.Palette = Syncfusion.Windows.Forms.Chart.ChartColorPalette.Custom;
-            this.Chart1.PrimaryXAxis.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Chart1.PrimaryXAxis.GridLineType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(182)))), ((int)(((byte)(183)))));
-            this.Chart1.PrimaryXAxis.LineType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(182)))), ((int)(((byte)(183)))));
-            this.Chart1.PrimaryXAxis.LogLabelsDisplayMode = Syncfusion.Windows.Forms.Chart.LogLabelsDisplayMode.Default;
-            this.Chart1.PrimaryXAxis.Margin = true;
-            this.Chart1.PrimaryXAxis.TickColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(182)))), ((int)(((byte)(183)))));
-            this.Chart1.PrimaryXAxis.TitleColor = System.Drawing.Color.White;
-            this.Chart1.PrimaryXAxis.TitleFont = new System.Drawing.Font("Segoe UI", 14F);
-            this.Chart1.PrimaryYAxis.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Chart1.PrimaryYAxis.GridLineType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(182)))), ((int)(((byte)(183)))));
-            this.Chart1.PrimaryYAxis.LineType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(182)))), ((int)(((byte)(183)))));
-            this.Chart1.PrimaryYAxis.LogLabelsDisplayMode = Syncfusion.Windows.Forms.Chart.LogLabelsDisplayMode.Default;
-            this.Chart1.PrimaryYAxis.Margin = true;
-            this.Chart1.PrimaryYAxis.TickColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(182)))), ((int)(((byte)(183)))));
-            this.Chart1.PrimaryYAxis.TitleColor = System.Drawing.Color.White;
-            this.Chart1.PrimaryYAxis.TitleFont = new System.Drawing.Font("Segoe UI", 14F);
-            this.Chart1.RealMode3D = true;
-            this.Chart1.Rotation = 45F;
+            this.FundChart.Legend.Location = new System.Drawing.Point(7, 7);
+            this.FundChart.Legend.Margin = new System.Windows.Forms.Padding(2);
+            this.FundChart.Legend.Position = Syncfusion.Windows.Forms.Chart.ChartDock.Floating;
+            this.FundChart.Legend.Visible = false;
+            this.FundChart.LegendsPlacement = Syncfusion.Windows.Forms.Chart.ChartPlacement.Outside;
+            this.FundChart.Localize = null;
+            this.FundChart.Location = new System.Drawing.Point(23, 79);
+            this.FundChart.Margin = new System.Windows.Forms.Padding(2);
+            this.FundChart.Name = "FundChart";
+            this.FundChart.Palette = Syncfusion.Windows.Forms.Chart.ChartColorPalette.Custom;
+            this.FundChart.PrimaryXAxis.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FundChart.PrimaryXAxis.GridLineType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(182)))), ((int)(((byte)(183)))));
+            this.FundChart.PrimaryXAxis.LineType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(182)))), ((int)(((byte)(183)))));
+            this.FundChart.PrimaryXAxis.LogLabelsDisplayMode = Syncfusion.Windows.Forms.Chart.LogLabelsDisplayMode.Default;
+            this.FundChart.PrimaryXAxis.Margin = true;
+            this.FundChart.PrimaryXAxis.TickColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(182)))), ((int)(((byte)(183)))));
+            this.FundChart.PrimaryXAxis.TitleColor = System.Drawing.Color.White;
+            this.FundChart.PrimaryXAxis.TitleFont = new System.Drawing.Font("Segoe UI", 14F);
+            this.FundChart.PrimaryYAxis.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FundChart.PrimaryYAxis.GridLineType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(182)))), ((int)(((byte)(183)))));
+            this.FundChart.PrimaryYAxis.LineType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(182)))), ((int)(((byte)(183)))));
+            this.FundChart.PrimaryYAxis.LogLabelsDisplayMode = Syncfusion.Windows.Forms.Chart.LogLabelsDisplayMode.Default;
+            this.FundChart.PrimaryYAxis.Margin = true;
+            this.FundChart.PrimaryYAxis.TickColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(182)))), ((int)(((byte)(183)))));
+            this.FundChart.PrimaryYAxis.TitleColor = System.Drawing.Color.White;
+            this.FundChart.PrimaryYAxis.TitleFont = new System.Drawing.Font("Segoe UI", 14F);
+            this.FundChart.RealMode3D = true;
+            this.FundChart.Rotation = 45F;
             chartSeries1.FancyToolTip.ResizeInsideSymbol = true;
             chartSeries1.Name = "Default0";
             chartSeries1.Points.Add(1D, ((double)(55D)));
@@ -495,30 +490,30 @@ namespace Budget
             chartCustomShapeInfo2.Type = Syncfusion.Windows.Forms.Chart.ChartCustomShape.Square;
             chartSeries2.Style.TextShape = chartCustomShapeInfo2;
             chartSeries2.Text = "Default1";
-            this.Chart1.Series.Add(chartSeries1);
-            this.Chart1.Series.Add(chartSeries2);
-            this.Chart1.Series3D = true;
-            this.Chart1.SeriesHighlight = true;
-            this.Chart1.ShadowColor = new Syncfusion.Drawing.BrushInfo(Syncfusion.Drawing.GradientStyle.PathRectangle, System.Drawing.SystemColors.WindowText, System.Drawing.Color.Silver);
-            this.Chart1.Size = new System.Drawing.Size(1440, 665);
-            this.Chart1.Spacing = 5F;
-            this.Chart1.SpacingBetweenPoints = 5F;
-            this.Chart1.Style3D = true;
-            this.Chart1.TabIndex = 42;
-            this.Chart1.Tilt = 15F;
+            this.FundChart.Series.Add(chartSeries1);
+            this.FundChart.Series.Add(chartSeries2);
+            this.FundChart.Series3D = true;
+            this.FundChart.SeriesHighlight = true;
+            this.FundChart.ShadowColor = new Syncfusion.Drawing.BrushInfo(Syncfusion.Drawing.GradientStyle.PathRectangle, System.Drawing.SystemColors.WindowText, System.Drawing.Color.Silver);
+            this.FundChart.Size = new System.Drawing.Size(1440, 665);
+            this.FundChart.Spacing = 5F;
+            this.FundChart.SpacingBetweenPoints = 5F;
+            this.FundChart.Style3D = true;
+            this.FundChart.TabIndex = 42;
+            this.FundChart.Tilt = 15F;
             // 
             // 
             // 
-            this.Chart1.Title.Font = new System.Drawing.Font("Segoe UI", 16F);
-            this.Chart1.Title.Name = "Default";
-            this.Chart1.ToolBar.EnableDefaultItems = false;
-            this.Chart1.ToolBar.Items.Add(chartToolBarSaveItem1);
-            this.Chart1.ToolBar.Items.Add(chartToolBarCopyItem1);
-            this.Chart1.ToolBar.Items.Add(chartToolBarPrintItem1);
-            this.Chart1.ToolBar.Items.Add(chartToolBarPaletteItem1);
-            this.Chart1.ToolBar.Items.Add(chartToolBarTypeItem1);
-            this.Chart1.ToolBar.Items.Add(chartToolBarSeries3DItem1);
-            this.Chart1.ToolBar.Items.Add(chartToolBarShowLegendItem1);
+            this.FundChart.Title.Font = new System.Drawing.Font("Segoe UI", 16F);
+            this.FundChart.Title.Name = "Default";
+            this.FundChart.ToolBar.EnableDefaultItems = false;
+            this.FundChart.ToolBar.Items.Add(chartToolBarSaveItem1);
+            this.FundChart.ToolBar.Items.Add(chartToolBarCopyItem1);
+            this.FundChart.ToolBar.Items.Add(chartToolBarPrintItem1);
+            this.FundChart.ToolBar.Items.Add(chartToolBarPaletteItem1);
+            this.FundChart.ToolBar.Items.Add(chartToolBarTypeItem1);
+            this.FundChart.ToolBar.Items.Add(chartToolBarSeries3DItem1);
+            this.FundChart.ToolBar.Items.Add(chartToolBarShowLegendItem1);
             // 
             // toggleButton1
             // 
@@ -666,7 +661,7 @@ namespace Budget
             // 
             // splitContainer2.Panel1
             // 
-            this.splitContainer2.Panel1.Controls.Add(this.Chart2);
+            this.splitContainer2.Panel1.Controls.Add(this.BocChart);
             this.splitContainer2.Panel1.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // splitContainer2.Panel2
@@ -679,65 +674,65 @@ namespace Budget
             this.splitContainer2.SplitterWidth = 7;
             this.splitContainer2.TabIndex = 98;
             // 
-            // Chart2
+            // BocChart
             // 
-            this.Chart2.AllowGradientPalette = true;
-            this.Chart2.AllowUserEditStyles = true;
-            this.Chart2.BackInterior = new Syncfusion.Drawing.BrushInfo(System.Drawing.Color.Black);
-            this.Chart2.ChartArea.AutoScale = true;
-            this.Chart2.ChartArea.BackInterior = new Syncfusion.Drawing.BrushInfo(System.Drawing.Color.Transparent);
-            this.Chart2.ChartArea.BorderColor = System.Drawing.Color.Black;
-            this.Chart2.ChartArea.CursorLocation = new System.Drawing.Point(0, 0);
-            this.Chart2.ChartArea.CursorReDraw = false;
-            this.Chart2.ChartAreaMargins = new Syncfusion.Windows.Forms.Chart.ChartMargins(0, 0, 0, 10);
-            this.Chart2.ChartAreaShadow = true;
-            this.Chart2.ChartInterior = new Syncfusion.Drawing.BrushInfo(Syncfusion.Drawing.GradientStyle.PathRectangle, new System.Drawing.Color[] {
+            this.BocChart.AllowGradientPalette = true;
+            this.BocChart.AllowUserEditStyles = true;
+            this.BocChart.BackInterior = new Syncfusion.Drawing.BrushInfo(System.Drawing.Color.Black);
+            this.BocChart.ChartArea.AutoScale = true;
+            this.BocChart.ChartArea.BackInterior = new Syncfusion.Drawing.BrushInfo(System.Drawing.Color.Transparent);
+            this.BocChart.ChartArea.BorderColor = System.Drawing.Color.Black;
+            this.BocChart.ChartArea.CursorLocation = new System.Drawing.Point(0, 0);
+            this.BocChart.ChartArea.CursorReDraw = false;
+            this.BocChart.ChartAreaMargins = new Syncfusion.Windows.Forms.Chart.ChartMargins(0, 0, 0, 10);
+            this.BocChart.ChartAreaShadow = true;
+            this.BocChart.ChartInterior = new Syncfusion.Drawing.BrushInfo(Syncfusion.Drawing.GradientStyle.PathRectangle, new System.Drawing.Color[] {
             System.Drawing.Color.Black,
             System.Drawing.Color.Gray,
             System.Drawing.Color.DimGray});
-            this.Chart2.CustomPalette = new System.Drawing.Color[] {
+            this.BocChart.CustomPalette = new System.Drawing.Color[] {
         System.Drawing.Color.DeepSkyBlue,
         System.Drawing.Color.DarkRed};
-            this.Chart2.DataSourceName = "[none]";
-            this.Chart2.Depth = 250F;
-            this.Chart2.DisplayChartContextMenu = false;
-            this.Chart2.DisplaySeriesContextMenu = false;
-            this.Chart2.EnableMouseRotation = true;
-            this.Chart2.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Chart2.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.Chart2.HighlightSymbol = true;
-            this.Chart2.IsWindowLess = false;
+            this.BocChart.DataSourceName = "FundBindingSource";
+            this.BocChart.Depth = 250F;
+            this.BocChart.DisplayChartContextMenu = false;
+            this.BocChart.DisplaySeriesContextMenu = false;
+            this.BocChart.EnableMouseRotation = true;
+            this.BocChart.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BocChart.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.BocChart.HighlightSymbol = true;
+            this.BocChart.IsWindowLess = false;
             // 
             // 
             // 
-            this.Chart2.Legend.Location = new System.Drawing.Point(7, 7);
-            this.Chart2.Legend.Margin = new System.Windows.Forms.Padding(2);
-            this.Chart2.Legend.Position = Syncfusion.Windows.Forms.Chart.ChartDock.Floating;
-            this.Chart2.Legend.Visible = false;
-            this.Chart2.LegendsPlacement = Syncfusion.Windows.Forms.Chart.ChartPlacement.Outside;
-            this.Chart2.Localize = null;
-            this.Chart2.Location = new System.Drawing.Point(23, 79);
-            this.Chart2.Margin = new System.Windows.Forms.Padding(2);
-            this.Chart2.Name = "Chart2";
-            this.Chart2.Palette = Syncfusion.Windows.Forms.Chart.ChartColorPalette.Custom;
-            this.Chart2.PrimaryXAxis.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Chart2.PrimaryXAxis.GridLineType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(182)))), ((int)(((byte)(183)))));
-            this.Chart2.PrimaryXAxis.LineType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(182)))), ((int)(((byte)(183)))));
-            this.Chart2.PrimaryXAxis.LogLabelsDisplayMode = Syncfusion.Windows.Forms.Chart.LogLabelsDisplayMode.Default;
-            this.Chart2.PrimaryXAxis.Margin = true;
-            this.Chart2.PrimaryXAxis.TickColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(182)))), ((int)(((byte)(183)))));
-            this.Chart2.PrimaryXAxis.TitleColor = System.Drawing.Color.White;
-            this.Chart2.PrimaryXAxis.TitleFont = new System.Drawing.Font("Segoe UI", 14F);
-            this.Chart2.PrimaryYAxis.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Chart2.PrimaryYAxis.GridLineType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(182)))), ((int)(((byte)(183)))));
-            this.Chart2.PrimaryYAxis.LineType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(182)))), ((int)(((byte)(183)))));
-            this.Chart2.PrimaryYAxis.LogLabelsDisplayMode = Syncfusion.Windows.Forms.Chart.LogLabelsDisplayMode.Default;
-            this.Chart2.PrimaryYAxis.Margin = true;
-            this.Chart2.PrimaryYAxis.TickColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(182)))), ((int)(((byte)(183)))));
-            this.Chart2.PrimaryYAxis.TitleColor = System.Drawing.Color.White;
-            this.Chart2.PrimaryYAxis.TitleFont = new System.Drawing.Font("Segoe UI", 14F);
-            this.Chart2.RealMode3D = true;
-            this.Chart2.Rotation = 45F;
+            this.BocChart.Legend.Location = new System.Drawing.Point(7, 7);
+            this.BocChart.Legend.Margin = new System.Windows.Forms.Padding(2);
+            this.BocChart.Legend.Position = Syncfusion.Windows.Forms.Chart.ChartDock.Floating;
+            this.BocChart.Legend.Visible = false;
+            this.BocChart.LegendsPlacement = Syncfusion.Windows.Forms.Chart.ChartPlacement.Outside;
+            this.BocChart.Localize = null;
+            this.BocChart.Location = new System.Drawing.Point(23, 79);
+            this.BocChart.Margin = new System.Windows.Forms.Padding(2);
+            this.BocChart.Name = "BocChart";
+            this.BocChart.Palette = Syncfusion.Windows.Forms.Chart.ChartColorPalette.Custom;
+            this.BocChart.PrimaryXAxis.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BocChart.PrimaryXAxis.GridLineType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(182)))), ((int)(((byte)(183)))));
+            this.BocChart.PrimaryXAxis.LineType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(182)))), ((int)(((byte)(183)))));
+            this.BocChart.PrimaryXAxis.LogLabelsDisplayMode = Syncfusion.Windows.Forms.Chart.LogLabelsDisplayMode.Default;
+            this.BocChart.PrimaryXAxis.Margin = true;
+            this.BocChart.PrimaryXAxis.TickColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(182)))), ((int)(((byte)(183)))));
+            this.BocChart.PrimaryXAxis.TitleColor = System.Drawing.Color.White;
+            this.BocChart.PrimaryXAxis.TitleFont = new System.Drawing.Font("Segoe UI", 14F);
+            this.BocChart.PrimaryYAxis.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BocChart.PrimaryYAxis.GridLineType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(182)))), ((int)(((byte)(183)))));
+            this.BocChart.PrimaryYAxis.LineType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(182)))), ((int)(((byte)(183)))));
+            this.BocChart.PrimaryYAxis.LogLabelsDisplayMode = Syncfusion.Windows.Forms.Chart.LogLabelsDisplayMode.Default;
+            this.BocChart.PrimaryYAxis.Margin = true;
+            this.BocChart.PrimaryYAxis.TickColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(182)))), ((int)(((byte)(183)))));
+            this.BocChart.PrimaryYAxis.TitleColor = System.Drawing.Color.White;
+            this.BocChart.PrimaryYAxis.TitleFont = new System.Drawing.Font("Segoe UI", 14F);
+            this.BocChart.RealMode3D = true;
+            this.BocChart.Rotation = 45F;
             chartSeries3.FancyToolTip.ResizeInsideSymbol = true;
             chartSeries3.Name = "Default0";
             chartSeries3.Points.Add(1D, ((double)(55D)));
@@ -748,9 +743,7 @@ namespace Budget
             chartSeries3.Resolution = 0D;
             chartSeries3.StackingGroup = "Default Group";
             chartSeries3.Style.AltTagFormat = "";
-            chartSeries3.Style.Callout.Font.Facename = "Microsoft Sans Serif";
             chartSeries3.Style.DrawTextShape = false;
-            chartSeries3.Style.Font.Facename = "Microsoft Sans Serif";
             chartLineInfo2.Alignment = System.Drawing.Drawing2D.PenAlignment.Center;
             chartLineInfo2.Color = System.Drawing.SystemColors.ControlText;
             chartLineInfo2.DashPattern = null;
@@ -771,38 +764,36 @@ namespace Budget
             chartSeries4.Resolution = 0D;
             chartSeries4.StackingGroup = "Default Group";
             chartSeries4.Style.AltTagFormat = "";
-            chartSeries4.Style.Callout.Font.Facename = "Microsoft Sans Serif";
             chartSeries4.Style.DrawTextShape = false;
-            chartSeries4.Style.Font.Facename = "Microsoft Sans Serif";
             chartCustomShapeInfo4.Border = chartLineInfo2;
             chartCustomShapeInfo4.Color = System.Drawing.SystemColors.HighlightText;
             chartCustomShapeInfo4.Type = Syncfusion.Windows.Forms.Chart.ChartCustomShape.Square;
             chartSeries4.Style.TextShape = chartCustomShapeInfo4;
             chartSeries4.Text = "Default1";
-            this.Chart2.Series.Add(chartSeries3);
-            this.Chart2.Series.Add(chartSeries4);
-            this.Chart2.Series3D = true;
-            this.Chart2.SeriesHighlight = true;
-            this.Chart2.ShadowColor = new Syncfusion.Drawing.BrushInfo(Syncfusion.Drawing.GradientStyle.PathRectangle, System.Drawing.SystemColors.WindowText, System.Drawing.Color.Silver);
-            this.Chart2.Size = new System.Drawing.Size(1440, 665);
-            this.Chart2.Spacing = 5F;
-            this.Chart2.SpacingBetweenPoints = 5F;
-            this.Chart2.Style3D = true;
-            this.Chart2.TabIndex = 43;
-            this.Chart2.Tilt = 15F;
+            this.BocChart.Series.Add(chartSeries3);
+            this.BocChart.Series.Add(chartSeries4);
+            this.BocChart.Series3D = true;
+            this.BocChart.SeriesHighlight = true;
+            this.BocChart.ShadowColor = new Syncfusion.Drawing.BrushInfo(Syncfusion.Drawing.GradientStyle.PathRectangle, System.Drawing.SystemColors.WindowText, System.Drawing.Color.Silver);
+            this.BocChart.Size = new System.Drawing.Size(1440, 665);
+            this.BocChart.Spacing = 5F;
+            this.BocChart.SpacingBetweenPoints = 5F;
+            this.BocChart.Style3D = true;
+            this.BocChart.TabIndex = 43;
+            this.BocChart.Tilt = 15F;
             // 
             // 
             // 
-            this.Chart2.Title.Font = new System.Drawing.Font("Segoe UI", 16F);
-            this.Chart2.Title.Name = "Default";
-            this.Chart2.ToolBar.EnableDefaultItems = false;
-            this.Chart2.ToolBar.Items.Add(chartToolBarSaveItem2);
-            this.Chart2.ToolBar.Items.Add(chartToolBarCopyItem2);
-            this.Chart2.ToolBar.Items.Add(chartToolBarPrintItem2);
-            this.Chart2.ToolBar.Items.Add(chartToolBarPaletteItem2);
-            this.Chart2.ToolBar.Items.Add(chartToolBarTypeItem2);
-            this.Chart2.ToolBar.Items.Add(chartToolBarSeries3DItem2);
-            this.Chart2.ToolBar.Items.Add(chartToolBarShowLegendItem2);
+            this.BocChart.Title.Font = new System.Drawing.Font("Segoe UI", 16F);
+            this.BocChart.Title.Name = "Default";
+            this.BocChart.ToolBar.EnableDefaultItems = false;
+            this.BocChart.ToolBar.Items.Add(chartToolBarSaveItem2);
+            this.BocChart.ToolBar.Items.Add(chartToolBarCopyItem2);
+            this.BocChart.ToolBar.Items.Add(chartToolBarPrintItem2);
+            this.BocChart.ToolBar.Items.Add(chartToolBarPaletteItem2);
+            this.BocChart.ToolBar.Items.Add(chartToolBarTypeItem2);
+            this.BocChart.ToolBar.Items.Add(chartToolBarSeries3DItem2);
+            this.BocChart.ToolBar.Items.Add(chartToolBarShowLegendItem2);
             // 
             // expandCollapsePanel3
             // 
@@ -887,7 +878,7 @@ namespace Budget
             // 
             // splitContainer4.Panel1
             // 
-            this.splitContainer4.Panel1.Controls.Add(this.Chart3);
+            this.splitContainer4.Panel1.Controls.Add(this.NpmChart);
             this.splitContainer4.Panel1.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // splitContainer4.Panel2
@@ -900,70 +891,70 @@ namespace Budget
             this.splitContainer4.SplitterWidth = 7;
             this.splitContainer4.TabIndex = 98;
             // 
-            // Chart3
+            // NpmChart
             // 
-            this.Chart3.AllowGradientPalette = true;
-            this.Chart3.AllowUserEditStyles = true;
-            this.Chart3.BackInterior = new Syncfusion.Drawing.BrushInfo(System.Drawing.Color.Black);
-            this.Chart3.ChartArea.AutoScale = true;
-            this.Chart3.ChartArea.BackInterior = new Syncfusion.Drawing.BrushInfo(System.Drawing.Color.Transparent);
-            this.Chart3.ChartArea.BorderColor = System.Drawing.Color.Black;
-            this.Chart3.ChartArea.CursorLocation = new System.Drawing.Point(0, 0);
-            this.Chart3.ChartArea.CursorReDraw = false;
-            this.Chart3.ChartAreaMargins = new Syncfusion.Windows.Forms.Chart.ChartMargins(0, 0, 0, 10);
-            this.Chart3.ChartAreaShadow = true;
-            this.Chart3.ChartInterior = new Syncfusion.Drawing.BrushInfo(Syncfusion.Drawing.GradientStyle.PathRectangle, new System.Drawing.Color[] {
+            this.NpmChart.AllowGradientPalette = true;
+            this.NpmChart.AllowUserEditStyles = true;
+            this.NpmChart.BackInterior = new Syncfusion.Drawing.BrushInfo(System.Drawing.Color.Black);
+            this.NpmChart.ChartArea.AutoScale = true;
+            this.NpmChart.ChartArea.BackInterior = new Syncfusion.Drawing.BrushInfo(System.Drawing.Color.Transparent);
+            this.NpmChart.ChartArea.BorderColor = System.Drawing.Color.Black;
+            this.NpmChart.ChartArea.CursorLocation = new System.Drawing.Point(0, 0);
+            this.NpmChart.ChartArea.CursorReDraw = false;
+            this.NpmChart.ChartAreaMargins = new Syncfusion.Windows.Forms.Chart.ChartMargins(0, 0, 0, 10);
+            this.NpmChart.ChartAreaShadow = true;
+            this.NpmChart.ChartInterior = new Syncfusion.Drawing.BrushInfo(Syncfusion.Drawing.GradientStyle.PathRectangle, new System.Drawing.Color[] {
             System.Drawing.Color.Black,
             System.Drawing.Color.Gray,
             System.Drawing.Color.DimGray});
-            this.Chart3.CustomPalette = new System.Drawing.Color[] {
+            this.NpmChart.CustomPalette = new System.Drawing.Color[] {
         System.Drawing.Color.DeepSkyBlue,
         System.Drawing.Color.DarkRed};
-            this.Chart3.DataSourceName = "[none]";
-            this.Chart3.Depth = 250F;
-            this.Chart3.DisplayChartContextMenu = false;
-            this.Chart3.DisplaySeriesContextMenu = false;
-            this.Chart3.EnableMouseRotation = true;
-            this.Chart3.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Chart3.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.Chart3.HighlightSymbol = true;
-            this.Chart3.IsWindowLess = false;
+            this.NpmChart.DataSourceName = "NpmBindingSource";
+            this.NpmChart.Depth = 250F;
+            this.NpmChart.DisplayChartContextMenu = false;
+            this.NpmChart.DisplaySeriesContextMenu = false;
+            this.NpmChart.EnableMouseRotation = true;
+            this.NpmChart.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NpmChart.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.NpmChart.HighlightSymbol = true;
+            this.NpmChart.IsWindowLess = false;
             // 
             // 
             // 
-            this.Chart3.Legend.FloatingAutoSize = false;
-            this.Chart3.Legend.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Chart3.Legend.Location = new System.Drawing.Point(925, 14);
-            this.Chart3.Legend.Margin = new System.Windows.Forms.Padding(2);
-            this.Chart3.Legend.OnlyColumnsForFloating = false;
-            this.Chart3.Legend.RowsCount = 2;
-            this.Chart3.Legend.ShowSymbol = true;
-            this.Chart3.Legend.Size = new System.Drawing.Size(112, 59);
-            this.Chart3.Legend.TextAlignment = System.Drawing.StringAlignment.Near;
-            this.Chart3.Legend.Visible = false;
-            this.Chart3.Legend.VisibleCheckBox = true;
-            this.Chart3.Localize = null;
-            this.Chart3.Location = new System.Drawing.Point(23, 79);
-            this.Chart3.Margin = new System.Windows.Forms.Padding(2);
-            this.Chart3.Name = "Chart3";
-            this.Chart3.Palette = Syncfusion.Windows.Forms.Chart.ChartColorPalette.Custom;
-            this.Chart3.PrimaryXAxis.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Chart3.PrimaryXAxis.GridLineType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(182)))), ((int)(((byte)(183)))));
-            this.Chart3.PrimaryXAxis.LineType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(182)))), ((int)(((byte)(183)))));
-            this.Chart3.PrimaryXAxis.LogLabelsDisplayMode = Syncfusion.Windows.Forms.Chart.LogLabelsDisplayMode.Default;
-            this.Chart3.PrimaryXAxis.Margin = true;
-            this.Chart3.PrimaryXAxis.TickColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(182)))), ((int)(((byte)(183)))));
-            this.Chart3.PrimaryXAxis.TitleColor = System.Drawing.Color.White;
-            this.Chart3.PrimaryXAxis.TitleFont = new System.Drawing.Font("Segoe UI", 14F);
-            this.Chart3.PrimaryYAxis.GridLineType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(182)))), ((int)(((byte)(183)))));
-            this.Chart3.PrimaryYAxis.LineType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(182)))), ((int)(((byte)(183)))));
-            this.Chart3.PrimaryYAxis.LogLabelsDisplayMode = Syncfusion.Windows.Forms.Chart.LogLabelsDisplayMode.Default;
-            this.Chart3.PrimaryYAxis.Margin = true;
-            this.Chart3.PrimaryYAxis.TickColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(182)))), ((int)(((byte)(183)))));
-            this.Chart3.PrimaryYAxis.TitleColor = System.Drawing.Color.White;
-            this.Chart3.PrimaryYAxis.TitleFont = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Chart3.RealMode3D = true;
-            this.Chart3.Rotation = 45F;
+            this.NpmChart.Legend.FloatingAutoSize = false;
+            this.NpmChart.Legend.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NpmChart.Legend.Location = new System.Drawing.Point(925, 14);
+            this.NpmChart.Legend.Margin = new System.Windows.Forms.Padding(2);
+            this.NpmChart.Legend.OnlyColumnsForFloating = false;
+            this.NpmChart.Legend.RowsCount = 2;
+            this.NpmChart.Legend.ShowSymbol = true;
+            this.NpmChart.Legend.Size = new System.Drawing.Size(112, 59);
+            this.NpmChart.Legend.TextAlignment = System.Drawing.StringAlignment.Near;
+            this.NpmChart.Legend.Visible = false;
+            this.NpmChart.Legend.VisibleCheckBox = true;
+            this.NpmChart.Localize = null;
+            this.NpmChart.Location = new System.Drawing.Point(23, 79);
+            this.NpmChart.Margin = new System.Windows.Forms.Padding(2);
+            this.NpmChart.Name = "NpmChart";
+            this.NpmChart.Palette = Syncfusion.Windows.Forms.Chart.ChartColorPalette.Custom;
+            this.NpmChart.PrimaryXAxis.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NpmChart.PrimaryXAxis.GridLineType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(182)))), ((int)(((byte)(183)))));
+            this.NpmChart.PrimaryXAxis.LineType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(182)))), ((int)(((byte)(183)))));
+            this.NpmChart.PrimaryXAxis.LogLabelsDisplayMode = Syncfusion.Windows.Forms.Chart.LogLabelsDisplayMode.Default;
+            this.NpmChart.PrimaryXAxis.Margin = true;
+            this.NpmChart.PrimaryXAxis.TickColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(182)))), ((int)(((byte)(183)))));
+            this.NpmChart.PrimaryXAxis.TitleColor = System.Drawing.Color.White;
+            this.NpmChart.PrimaryXAxis.TitleFont = new System.Drawing.Font("Segoe UI", 14F);
+            this.NpmChart.PrimaryYAxis.GridLineType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(182)))), ((int)(((byte)(183)))));
+            this.NpmChart.PrimaryYAxis.LineType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(182)))), ((int)(((byte)(183)))));
+            this.NpmChart.PrimaryYAxis.LogLabelsDisplayMode = Syncfusion.Windows.Forms.Chart.LogLabelsDisplayMode.Default;
+            this.NpmChart.PrimaryYAxis.Margin = true;
+            this.NpmChart.PrimaryYAxis.TickColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(182)))), ((int)(((byte)(183)))));
+            this.NpmChart.PrimaryYAxis.TitleColor = System.Drawing.Color.White;
+            this.NpmChart.PrimaryYAxis.TitleFont = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NpmChart.RealMode3D = true;
+            this.NpmChart.Rotation = 45F;
             chartSeries5.FancyToolTip.ResizeInsideSymbol = true;
             chartSeries5.Name = "Default0";
             chartSeries5.Points.Add(1D, ((double)(55D)));
@@ -974,15 +965,8 @@ namespace Budget
             chartSeries5.Resolution = 0D;
             chartSeries5.StackingGroup = "Default Group";
             chartSeries5.Style.AltTagFormat = "";
-            chartSeries5.Style.Callout.Font.Facename = "Microsoft Sans Serif";
             chartSeries5.Style.DrawTextShape = false;
-            chartSeries5.Style.Font.Facename = "Microsoft Sans Serif";
-            chartLineInfo3.Alignment = System.Drawing.Drawing2D.PenAlignment.Center;
-            chartLineInfo3.Color = System.Drawing.SystemColors.ControlText;
-            chartLineInfo3.DashPattern = null;
-            chartLineInfo3.DashStyle = System.Drawing.Drawing2D.DashStyle.Solid;
-            chartLineInfo3.Width = 1F;
-            chartCustomShapeInfo5.Border = chartLineInfo3;
+            chartCustomShapeInfo5.Border = chartLineInfo2;
             chartCustomShapeInfo5.Color = System.Drawing.SystemColors.HighlightText;
             chartCustomShapeInfo5.Type = Syncfusion.Windows.Forms.Chart.ChartCustomShape.Square;
             chartSeries5.Style.TextShape = chartCustomShapeInfo5;
@@ -997,41 +981,39 @@ namespace Budget
             chartSeries6.Resolution = 0D;
             chartSeries6.StackingGroup = "Default Group";
             chartSeries6.Style.AltTagFormat = "";
-            chartSeries6.Style.Callout.Font.Facename = "Microsoft Sans Serif";
             chartSeries6.Style.DrawTextShape = false;
-            chartSeries6.Style.Font.Facename = "Microsoft Sans Serif";
-            chartCustomShapeInfo6.Border = chartLineInfo3;
+            chartCustomShapeInfo6.Border = chartLineInfo2;
             chartCustomShapeInfo6.Color = System.Drawing.SystemColors.HighlightText;
             chartCustomShapeInfo6.Type = Syncfusion.Windows.Forms.Chart.ChartCustomShape.Square;
             chartSeries6.Style.TextShape = chartCustomShapeInfo6;
             chartSeries6.Text = "Default1";
-            this.Chart3.Series.Add(chartSeries5);
-            this.Chart3.Series.Add(chartSeries6);
-            this.Chart3.Series3D = true;
-            this.Chart3.SeriesHighlight = true;
-            this.Chart3.ShadowColor = new Syncfusion.Drawing.BrushInfo(Syncfusion.Drawing.GradientStyle.PathRectangle, System.Drawing.SystemColors.WindowText, System.Drawing.Color.Silver);
-            this.Chart3.Size = new System.Drawing.Size(1440, 665);
-            this.Chart3.Spacing = 5F;
-            this.Chart3.SpacingBetweenSeries = 15F;
-            this.Chart3.Style3D = true;
-            this.Chart3.TabIndex = 96;
-            this.Chart3.Tilt = 15F;
+            this.NpmChart.Series.Add(chartSeries5);
+            this.NpmChart.Series.Add(chartSeries6);
+            this.NpmChart.Series3D = true;
+            this.NpmChart.SeriesHighlight = true;
+            this.NpmChart.ShadowColor = new Syncfusion.Drawing.BrushInfo(Syncfusion.Drawing.GradientStyle.PathRectangle, System.Drawing.SystemColors.WindowText, System.Drawing.Color.Silver);
+            this.NpmChart.Size = new System.Drawing.Size(1440, 665);
+            this.NpmChart.Spacing = 5F;
+            this.NpmChart.SpacingBetweenSeries = 15F;
+            this.NpmChart.Style3D = true;
+            this.NpmChart.TabIndex = 96;
+            this.NpmChart.Tilt = 15F;
             // 
             // 
             // 
-            this.Chart3.Title.Font = new System.Drawing.Font("Segoe UI", 16F);
-            this.Chart3.Title.Name = "Default";
-            this.Chart3.ToolBar.EnableDefaultItems = false;
-            this.Chart3.ToolBar.Items.Add(chartToolBarSaveItem3);
-            this.Chart3.ToolBar.Items.Add(chartToolBarCopyItem3);
-            this.Chart3.ToolBar.Items.Add(chartToolBarPrintItem3);
-            this.Chart3.ToolBar.Items.Add(chartToolBarPrintPreviewItem1);
-            this.Chart3.ToolBar.Items.Add(chartToolBarSplitter1);
-            this.Chart3.ToolBar.Items.Add(chartToolBarPaletteItem3);
-            this.Chart3.ToolBar.Items.Add(chartToolBarStyleItem1);
-            this.Chart3.ToolBar.Items.Add(chartToolBarTypeItem3);
-            this.Chart3.ToolBar.Items.Add(chartToolBarSeries3DItem3);
-            this.Chart3.ToolBar.Items.Add(chartToolBarShowLegendItem3);
+            this.NpmChart.Title.Font = new System.Drawing.Font("Segoe UI", 16F);
+            this.NpmChart.Title.Name = "Default";
+            this.NpmChart.ToolBar.EnableDefaultItems = false;
+            this.NpmChart.ToolBar.Items.Add(chartToolBarSaveItem3);
+            this.NpmChart.ToolBar.Items.Add(chartToolBarCopyItem3);
+            this.NpmChart.ToolBar.Items.Add(chartToolBarPrintItem3);
+            this.NpmChart.ToolBar.Items.Add(chartToolBarPrintPreviewItem1);
+            this.NpmChart.ToolBar.Items.Add(chartToolBarSplitter1);
+            this.NpmChart.ToolBar.Items.Add(chartToolBarPaletteItem3);
+            this.NpmChart.ToolBar.Items.Add(chartToolBarStyleItem1);
+            this.NpmChart.ToolBar.Items.Add(chartToolBarTypeItem3);
+            this.NpmChart.ToolBar.Items.Add(chartToolBarSeries3DItem3);
+            this.NpmChart.ToolBar.Items.Add(chartToolBarShowLegendItem3);
             // 
             // expandCollapsePanel2
             // 
@@ -1115,7 +1097,7 @@ namespace Budget
             // 
             // splitContaineEPA.Panel1
             // 
-            this.splitContaineEPA.Panel1.Controls.Add(this.Chart4);
+            this.splitContaineEPA.Panel1.Controls.Add(this.GoalChart);
             // 
             // splitContaineEPA.Panel2
             // 
@@ -1126,71 +1108,71 @@ namespace Budget
             this.splitContaineEPA.SplitterWidth = 7;
             this.splitContaineEPA.TabIndex = 99;
             // 
-            // Chart4
+            // GoalChart
             // 
-            this.Chart4.AllowGradientPalette = true;
-            this.Chart4.AllowUserEditStyles = true;
-            this.Chart4.BackInterior = new Syncfusion.Drawing.BrushInfo(System.Drawing.Color.Black);
-            this.Chart4.ChartArea.AutoScale = true;
-            this.Chart4.ChartArea.BackInterior = new Syncfusion.Drawing.BrushInfo(System.Drawing.Color.Transparent);
-            this.Chart4.ChartArea.BorderColor = System.Drawing.Color.Black;
-            this.Chart4.ChartArea.CursorLocation = new System.Drawing.Point(0, 0);
-            this.Chart4.ChartArea.CursorReDraw = false;
-            this.Chart4.ChartAreaMargins = new Syncfusion.Windows.Forms.Chart.ChartMargins(0, 0, 0, 10);
-            this.Chart4.ChartAreaShadow = true;
-            this.Chart4.ChartInterior = new Syncfusion.Drawing.BrushInfo(Syncfusion.Drawing.GradientStyle.PathRectangle, new System.Drawing.Color[] {
+            this.GoalChart.AllowGradientPalette = true;
+            this.GoalChart.AllowUserEditStyles = true;
+            this.GoalChart.BackInterior = new Syncfusion.Drawing.BrushInfo(System.Drawing.Color.Black);
+            this.GoalChart.ChartArea.AutoScale = true;
+            this.GoalChart.ChartArea.BackInterior = new Syncfusion.Drawing.BrushInfo(System.Drawing.Color.Transparent);
+            this.GoalChart.ChartArea.BorderColor = System.Drawing.Color.Black;
+            this.GoalChart.ChartArea.CursorLocation = new System.Drawing.Point(0, 0);
+            this.GoalChart.ChartArea.CursorReDraw = false;
+            this.GoalChart.ChartAreaMargins = new Syncfusion.Windows.Forms.Chart.ChartMargins(0, 0, 0, 10);
+            this.GoalChart.ChartAreaShadow = true;
+            this.GoalChart.ChartInterior = new Syncfusion.Drawing.BrushInfo(Syncfusion.Drawing.GradientStyle.PathRectangle, new System.Drawing.Color[] {
             System.Drawing.Color.Black,
             System.Drawing.Color.Gray,
             System.Drawing.Color.DimGray});
-            this.Chart4.CustomPalette = new System.Drawing.Color[] {
+            this.GoalChart.CustomPalette = new System.Drawing.Color[] {
         System.Drawing.Color.DeepSkyBlue,
         System.Drawing.Color.DarkRed};
-            this.Chart4.DataSourceName = "[none]";
-            this.Chart4.Depth = 250F;
-            this.Chart4.DisplayChartContextMenu = false;
-            this.Chart4.DisplaySeriesContextMenu = false;
-            this.Chart4.EnableMouseRotation = true;
-            this.Chart4.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Chart4.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.Chart4.HighlightSymbol = true;
-            this.Chart4.IsWindowLess = false;
+            this.GoalChart.DataSourceName = "GoalBindingSource";
+            this.GoalChart.Depth = 250F;
+            this.GoalChart.DisplayChartContextMenu = false;
+            this.GoalChart.DisplaySeriesContextMenu = false;
+            this.GoalChart.EnableMouseRotation = true;
+            this.GoalChart.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GoalChart.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.GoalChart.HighlightSymbol = true;
+            this.GoalChart.IsWindowLess = false;
             // 
             // 
             // 
-            this.Chart4.Legend.FloatingAutoSize = false;
-            this.Chart4.Legend.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Chart4.Legend.Location = new System.Drawing.Point(925, 14);
-            this.Chart4.Legend.Margin = new System.Windows.Forms.Padding(2);
-            this.Chart4.Legend.OnlyColumnsForFloating = false;
-            this.Chart4.Legend.RowsCount = 2;
-            this.Chart4.Legend.ShowSymbol = true;
-            this.Chart4.Legend.Size = new System.Drawing.Size(112, 59);
-            this.Chart4.Legend.TextAlignment = System.Drawing.StringAlignment.Near;
-            this.Chart4.Legend.Visible = false;
-            this.Chart4.Legend.VisibleCheckBox = true;
-            this.Chart4.Localize = null;
-            this.Chart4.Location = new System.Drawing.Point(23, 79);
-            this.Chart4.Margin = new System.Windows.Forms.Padding(2);
-            this.Chart4.Name = "Chart4";
-            this.Chart4.Padding = new System.Windows.Forms.Padding(1);
-            this.Chart4.Palette = Syncfusion.Windows.Forms.Chart.ChartColorPalette.Custom;
-            this.Chart4.PrimaryXAxis.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Chart4.PrimaryXAxis.GridLineType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(182)))), ((int)(((byte)(183)))));
-            this.Chart4.PrimaryXAxis.LineType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(182)))), ((int)(((byte)(183)))));
-            this.Chart4.PrimaryXAxis.LogLabelsDisplayMode = Syncfusion.Windows.Forms.Chart.LogLabelsDisplayMode.Default;
-            this.Chart4.PrimaryXAxis.Margin = true;
-            this.Chart4.PrimaryXAxis.TickColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(182)))), ((int)(((byte)(183)))));
-            this.Chart4.PrimaryXAxis.TitleColor = System.Drawing.Color.White;
-            this.Chart4.PrimaryXAxis.TitleFont = new System.Drawing.Font("Segoe UI", 14F);
-            this.Chart4.PrimaryYAxis.GridLineType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(182)))), ((int)(((byte)(183)))));
-            this.Chart4.PrimaryYAxis.LineType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(182)))), ((int)(((byte)(183)))));
-            this.Chart4.PrimaryYAxis.LogLabelsDisplayMode = Syncfusion.Windows.Forms.Chart.LogLabelsDisplayMode.Default;
-            this.Chart4.PrimaryYAxis.Margin = true;
-            this.Chart4.PrimaryYAxis.TickColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(182)))), ((int)(((byte)(183)))));
-            this.Chart4.PrimaryYAxis.TitleColor = System.Drawing.Color.White;
-            this.Chart4.PrimaryYAxis.TitleFont = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Chart4.RealMode3D = true;
-            this.Chart4.Rotation = 45F;
+            this.GoalChart.Legend.FloatingAutoSize = false;
+            this.GoalChart.Legend.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GoalChart.Legend.Location = new System.Drawing.Point(925, 14);
+            this.GoalChart.Legend.Margin = new System.Windows.Forms.Padding(2);
+            this.GoalChart.Legend.OnlyColumnsForFloating = false;
+            this.GoalChart.Legend.RowsCount = 2;
+            this.GoalChart.Legend.ShowSymbol = true;
+            this.GoalChart.Legend.Size = new System.Drawing.Size(112, 59);
+            this.GoalChart.Legend.TextAlignment = System.Drawing.StringAlignment.Near;
+            this.GoalChart.Legend.Visible = false;
+            this.GoalChart.Legend.VisibleCheckBox = true;
+            this.GoalChart.Localize = null;
+            this.GoalChart.Location = new System.Drawing.Point(23, 79);
+            this.GoalChart.Margin = new System.Windows.Forms.Padding(2);
+            this.GoalChart.Name = "GoalChart";
+            this.GoalChart.Padding = new System.Windows.Forms.Padding(1);
+            this.GoalChart.Palette = Syncfusion.Windows.Forms.Chart.ChartColorPalette.Custom;
+            this.GoalChart.PrimaryXAxis.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GoalChart.PrimaryXAxis.GridLineType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(182)))), ((int)(((byte)(183)))));
+            this.GoalChart.PrimaryXAxis.LineType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(182)))), ((int)(((byte)(183)))));
+            this.GoalChart.PrimaryXAxis.LogLabelsDisplayMode = Syncfusion.Windows.Forms.Chart.LogLabelsDisplayMode.Default;
+            this.GoalChart.PrimaryXAxis.Margin = true;
+            this.GoalChart.PrimaryXAxis.TickColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(182)))), ((int)(((byte)(183)))));
+            this.GoalChart.PrimaryXAxis.TitleColor = System.Drawing.Color.White;
+            this.GoalChart.PrimaryXAxis.TitleFont = new System.Drawing.Font("Segoe UI", 14F);
+            this.GoalChart.PrimaryYAxis.GridLineType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(182)))), ((int)(((byte)(183)))));
+            this.GoalChart.PrimaryYAxis.LineType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(182)))), ((int)(((byte)(183)))));
+            this.GoalChart.PrimaryYAxis.LogLabelsDisplayMode = Syncfusion.Windows.Forms.Chart.LogLabelsDisplayMode.Default;
+            this.GoalChart.PrimaryYAxis.Margin = true;
+            this.GoalChart.PrimaryYAxis.TickColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(182)))), ((int)(((byte)(183)))));
+            this.GoalChart.PrimaryYAxis.TitleColor = System.Drawing.Color.White;
+            this.GoalChart.PrimaryYAxis.TitleFont = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GoalChart.RealMode3D = true;
+            this.GoalChart.Rotation = 45F;
             chartSeries7.FancyToolTip.ResizeInsideSymbol = true;
             chartSeries7.Name = "Default0";
             chartSeries7.Points.Add(1D, ((double)(55D)));
@@ -1201,15 +1183,8 @@ namespace Budget
             chartSeries7.Resolution = 0D;
             chartSeries7.StackingGroup = "Default Group";
             chartSeries7.Style.AltTagFormat = "";
-            chartSeries7.Style.Callout.Font.Facename = "Microsoft Sans Serif";
             chartSeries7.Style.DrawTextShape = false;
-            chartSeries7.Style.Font.Facename = "Microsoft Sans Serif";
-            chartLineInfo4.Alignment = System.Drawing.Drawing2D.PenAlignment.Center;
-            chartLineInfo4.Color = System.Drawing.SystemColors.ControlText;
-            chartLineInfo4.DashPattern = null;
-            chartLineInfo4.DashStyle = System.Drawing.Drawing2D.DashStyle.Solid;
-            chartLineInfo4.Width = 1F;
-            chartCustomShapeInfo7.Border = chartLineInfo4;
+            chartCustomShapeInfo7.Border = chartLineInfo2;
             chartCustomShapeInfo7.Color = System.Drawing.SystemColors.HighlightText;
             chartCustomShapeInfo7.Type = Syncfusion.Windows.Forms.Chart.ChartCustomShape.Square;
             chartSeries7.Style.TextShape = chartCustomShapeInfo7;
@@ -1224,41 +1199,39 @@ namespace Budget
             chartSeries8.Resolution = 0D;
             chartSeries8.StackingGroup = "Default Group";
             chartSeries8.Style.AltTagFormat = "";
-            chartSeries8.Style.Callout.Font.Facename = "Microsoft Sans Serif";
             chartSeries8.Style.DrawTextShape = false;
-            chartSeries8.Style.Font.Facename = "Microsoft Sans Serif";
-            chartCustomShapeInfo8.Border = chartLineInfo4;
+            chartCustomShapeInfo8.Border = chartLineInfo2;
             chartCustomShapeInfo8.Color = System.Drawing.SystemColors.HighlightText;
             chartCustomShapeInfo8.Type = Syncfusion.Windows.Forms.Chart.ChartCustomShape.Square;
             chartSeries8.Style.TextShape = chartCustomShapeInfo8;
             chartSeries8.Text = "Default1";
-            this.Chart4.Series.Add(chartSeries7);
-            this.Chart4.Series.Add(chartSeries8);
-            this.Chart4.Series3D = true;
-            this.Chart4.SeriesHighlight = true;
-            this.Chart4.ShadowColor = new Syncfusion.Drawing.BrushInfo(Syncfusion.Drawing.GradientStyle.PathRectangle, System.Drawing.SystemColors.WindowText, System.Drawing.Color.Silver);
-            this.Chart4.Size = new System.Drawing.Size(1440, 665);
-            this.Chart4.Spacing = 5F;
-            this.Chart4.SpacingBetweenSeries = 15F;
-            this.Chart4.Style3D = true;
-            this.Chart4.TabIndex = 96;
-            this.Chart4.Tilt = 15F;
+            this.GoalChart.Series.Add(chartSeries7);
+            this.GoalChart.Series.Add(chartSeries8);
+            this.GoalChart.Series3D = true;
+            this.GoalChart.SeriesHighlight = true;
+            this.GoalChart.ShadowColor = new Syncfusion.Drawing.BrushInfo(Syncfusion.Drawing.GradientStyle.PathRectangle, System.Drawing.SystemColors.WindowText, System.Drawing.Color.Silver);
+            this.GoalChart.Size = new System.Drawing.Size(1440, 665);
+            this.GoalChart.Spacing = 5F;
+            this.GoalChart.SpacingBetweenSeries = 15F;
+            this.GoalChart.Style3D = true;
+            this.GoalChart.TabIndex = 96;
+            this.GoalChart.Tilt = 15F;
             // 
             // 
             // 
-            this.Chart4.Title.Font = new System.Drawing.Font("Segoe UI", 16F);
-            this.Chart4.Title.Name = "Default";
-            this.Chart4.ToolBar.EnableDefaultItems = false;
-            this.Chart4.ToolBar.Items.Add(chartToolBarSaveItem4);
-            this.Chart4.ToolBar.Items.Add(chartToolBarCopyItem4);
-            this.Chart4.ToolBar.Items.Add(chartToolBarPrintItem4);
-            this.Chart4.ToolBar.Items.Add(chartToolBarPrintPreviewItem2);
-            this.Chart4.ToolBar.Items.Add(chartToolBarSplitter2);
-            this.Chart4.ToolBar.Items.Add(chartToolBarPaletteItem4);
-            this.Chart4.ToolBar.Items.Add(chartToolBarStyleItem2);
-            this.Chart4.ToolBar.Items.Add(chartToolBarTypeItem4);
-            this.Chart4.ToolBar.Items.Add(chartToolBarSeries3DItem4);
-            this.Chart4.ToolBar.Items.Add(chartToolBarShowLegendItem4);
+            this.GoalChart.Title.Font = new System.Drawing.Font("Segoe UI", 16F);
+            this.GoalChart.Title.Name = "Default";
+            this.GoalChart.ToolBar.EnableDefaultItems = false;
+            this.GoalChart.ToolBar.Items.Add(chartToolBarSaveItem4);
+            this.GoalChart.ToolBar.Items.Add(chartToolBarCopyItem4);
+            this.GoalChart.ToolBar.Items.Add(chartToolBarPrintItem4);
+            this.GoalChart.ToolBar.Items.Add(chartToolBarPrintPreviewItem2);
+            this.GoalChart.ToolBar.Items.Add(chartToolBarSplitter2);
+            this.GoalChart.ToolBar.Items.Add(chartToolBarPaletteItem4);
+            this.GoalChart.ToolBar.Items.Add(chartToolBarStyleItem2);
+            this.GoalChart.ToolBar.Items.Add(chartToolBarTypeItem4);
+            this.GoalChart.ToolBar.Items.Add(chartToolBarSeries3DItem4);
+            this.GoalChart.ToolBar.Items.Add(chartToolBarShowLegendItem4);
             // 
             // expandCollapsePanel1
             // 
@@ -1338,7 +1311,7 @@ namespace Budget
             // 
             // splitContainer3.Panel1
             // 
-            this.splitContainer3.Panel1.Controls.Add(this.Chart5);
+            this.splitContainer3.Panel1.Controls.Add(this.AreaChart1);
             this.splitContainer3.Panel1.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // splitContainer3.Panel2
@@ -1351,71 +1324,71 @@ namespace Budget
             this.splitContainer3.SplitterWidth = 7;
             this.splitContainer3.TabIndex = 101;
             // 
-            // Chart5
+            // AreaChart1
             // 
-            this.Chart5.AllowGradientPalette = true;
-            this.Chart5.AllowUserEditStyles = true;
-            this.Chart5.BackInterior = new Syncfusion.Drawing.BrushInfo(System.Drawing.Color.Black);
-            this.Chart5.ChartArea.AutoScale = true;
-            this.Chart5.ChartArea.BackInterior = new Syncfusion.Drawing.BrushInfo(System.Drawing.Color.Transparent);
-            this.Chart5.ChartArea.BorderColor = System.Drawing.Color.Black;
-            this.Chart5.ChartArea.CursorLocation = new System.Drawing.Point(0, 0);
-            this.Chart5.ChartArea.CursorReDraw = false;
-            this.Chart5.ChartAreaMargins = new Syncfusion.Windows.Forms.Chart.ChartMargins(0, 0, 0, 10);
-            this.Chart5.ChartAreaShadow = true;
-            this.Chart5.ChartInterior = new Syncfusion.Drawing.BrushInfo(Syncfusion.Drawing.GradientStyle.PathRectangle, new System.Drawing.Color[] {
+            this.AreaChart1.AllowGradientPalette = true;
+            this.AreaChart1.AllowUserEditStyles = true;
+            this.AreaChart1.BackInterior = new Syncfusion.Drawing.BrushInfo(System.Drawing.Color.Black);
+            this.AreaChart1.ChartArea.AutoScale = true;
+            this.AreaChart1.ChartArea.BackInterior = new Syncfusion.Drawing.BrushInfo(System.Drawing.Color.Transparent);
+            this.AreaChart1.ChartArea.BorderColor = System.Drawing.Color.Black;
+            this.AreaChart1.ChartArea.CursorLocation = new System.Drawing.Point(0, 0);
+            this.AreaChart1.ChartArea.CursorReDraw = false;
+            this.AreaChart1.ChartAreaMargins = new Syncfusion.Windows.Forms.Chart.ChartMargins(0, 0, 0, 10);
+            this.AreaChart1.ChartAreaShadow = true;
+            this.AreaChart1.ChartInterior = new Syncfusion.Drawing.BrushInfo(Syncfusion.Drawing.GradientStyle.PathRectangle, new System.Drawing.Color[] {
             System.Drawing.Color.Black,
             System.Drawing.Color.Gray,
             System.Drawing.Color.DimGray});
-            this.Chart5.CustomPalette = new System.Drawing.Color[] {
+            this.AreaChart1.CustomPalette = new System.Drawing.Color[] {
         System.Drawing.Color.DeepSkyBlue,
         System.Drawing.Color.DarkRed};
-            this.Chart5.DataSourceName = "[none]";
-            this.Chart5.Depth = 250F;
-            this.Chart5.DisplayChartContextMenu = false;
-            this.Chart5.DisplaySeriesContextMenu = false;
-            this.Chart5.EnableMouseRotation = true;
-            this.Chart5.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Chart5.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.Chart5.HighlightSymbol = true;
-            this.Chart5.IsWindowLess = false;
+            this.AreaChart1.DataSourceName = "ObjectiveBindingSource";
+            this.AreaChart1.Depth = 250F;
+            this.AreaChart1.DisplayChartContextMenu = false;
+            this.AreaChart1.DisplaySeriesContextMenu = false;
+            this.AreaChart1.EnableMouseRotation = true;
+            this.AreaChart1.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AreaChart1.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.AreaChart1.HighlightSymbol = true;
+            this.AreaChart1.IsWindowLess = false;
             // 
             // 
             // 
-            this.Chart5.Legend.FloatingAutoSize = false;
-            this.Chart5.Legend.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Chart5.Legend.Location = new System.Drawing.Point(925, 52);
-            this.Chart5.Legend.Margin = new System.Windows.Forms.Padding(2);
-            this.Chart5.Legend.OnlyColumnsForFloating = false;
-            this.Chart5.Legend.RowsCount = 2;
-            this.Chart5.Legend.ShowSymbol = true;
-            this.Chart5.Legend.Size = new System.Drawing.Size(112, 59);
-            this.Chart5.Legend.TextAlignment = System.Drawing.StringAlignment.Near;
-            this.Chart5.Legend.Visible = false;
-            this.Chart5.Legend.VisibleCheckBox = true;
-            this.Chart5.Localize = null;
-            this.Chart5.Location = new System.Drawing.Point(23, 79);
-            this.Chart5.Margin = new System.Windows.Forms.Padding(2);
-            this.Chart5.Name = "Chart5";
-            this.Chart5.Padding = new System.Windows.Forms.Padding(1);
-            this.Chart5.Palette = Syncfusion.Windows.Forms.Chart.ChartColorPalette.Custom;
-            this.Chart5.PrimaryXAxis.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Chart5.PrimaryXAxis.GridLineType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(182)))), ((int)(((byte)(183)))));
-            this.Chart5.PrimaryXAxis.LineType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(182)))), ((int)(((byte)(183)))));
-            this.Chart5.PrimaryXAxis.LogLabelsDisplayMode = Syncfusion.Windows.Forms.Chart.LogLabelsDisplayMode.Default;
-            this.Chart5.PrimaryXAxis.Margin = true;
-            this.Chart5.PrimaryXAxis.TickColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(182)))), ((int)(((byte)(183)))));
-            this.Chart5.PrimaryXAxis.TitleColor = System.Drawing.Color.White;
-            this.Chart5.PrimaryXAxis.TitleFont = new System.Drawing.Font("Segoe UI", 14F);
-            this.Chart5.PrimaryYAxis.GridLineType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(182)))), ((int)(((byte)(183)))));
-            this.Chart5.PrimaryYAxis.LineType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(182)))), ((int)(((byte)(183)))));
-            this.Chart5.PrimaryYAxis.LogLabelsDisplayMode = Syncfusion.Windows.Forms.Chart.LogLabelsDisplayMode.Default;
-            this.Chart5.PrimaryYAxis.Margin = true;
-            this.Chart5.PrimaryYAxis.TickColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(182)))), ((int)(((byte)(183)))));
-            this.Chart5.PrimaryYAxis.TitleColor = System.Drawing.Color.White;
-            this.Chart5.PrimaryYAxis.TitleFont = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Chart5.RealMode3D = true;
-            this.Chart5.Rotation = 45F;
+            this.AreaChart1.Legend.FloatingAutoSize = false;
+            this.AreaChart1.Legend.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AreaChart1.Legend.Location = new System.Drawing.Point(925, 52);
+            this.AreaChart1.Legend.Margin = new System.Windows.Forms.Padding(2);
+            this.AreaChart1.Legend.OnlyColumnsForFloating = false;
+            this.AreaChart1.Legend.RowsCount = 2;
+            this.AreaChart1.Legend.ShowSymbol = true;
+            this.AreaChart1.Legend.Size = new System.Drawing.Size(112, 59);
+            this.AreaChart1.Legend.TextAlignment = System.Drawing.StringAlignment.Near;
+            this.AreaChart1.Legend.Visible = false;
+            this.AreaChart1.Legend.VisibleCheckBox = true;
+            this.AreaChart1.Localize = null;
+            this.AreaChart1.Location = new System.Drawing.Point(23, 79);
+            this.AreaChart1.Margin = new System.Windows.Forms.Padding(2);
+            this.AreaChart1.Name = "AreaChart1";
+            this.AreaChart1.Padding = new System.Windows.Forms.Padding(1);
+            this.AreaChart1.Palette = Syncfusion.Windows.Forms.Chart.ChartColorPalette.Custom;
+            this.AreaChart1.PrimaryXAxis.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AreaChart1.PrimaryXAxis.GridLineType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(182)))), ((int)(((byte)(183)))));
+            this.AreaChart1.PrimaryXAxis.LineType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(182)))), ((int)(((byte)(183)))));
+            this.AreaChart1.PrimaryXAxis.LogLabelsDisplayMode = Syncfusion.Windows.Forms.Chart.LogLabelsDisplayMode.Default;
+            this.AreaChart1.PrimaryXAxis.Margin = true;
+            this.AreaChart1.PrimaryXAxis.TickColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(182)))), ((int)(((byte)(183)))));
+            this.AreaChart1.PrimaryXAxis.TitleColor = System.Drawing.Color.White;
+            this.AreaChart1.PrimaryXAxis.TitleFont = new System.Drawing.Font("Segoe UI", 14F);
+            this.AreaChart1.PrimaryYAxis.GridLineType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(182)))), ((int)(((byte)(183)))));
+            this.AreaChart1.PrimaryYAxis.LineType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(182)))), ((int)(((byte)(183)))));
+            this.AreaChart1.PrimaryYAxis.LogLabelsDisplayMode = Syncfusion.Windows.Forms.Chart.LogLabelsDisplayMode.Default;
+            this.AreaChart1.PrimaryYAxis.Margin = true;
+            this.AreaChart1.PrimaryYAxis.TickColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(182)))), ((int)(((byte)(183)))));
+            this.AreaChart1.PrimaryYAxis.TitleColor = System.Drawing.Color.White;
+            this.AreaChart1.PrimaryYAxis.TitleFont = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AreaChart1.RealMode3D = true;
+            this.AreaChart1.Rotation = 45F;
             chartSeries9.FancyToolTip.ResizeInsideSymbol = true;
             chartSeries9.Name = "Default0";
             chartSeries9.Points.Add(1D, ((double)(55D)));
@@ -1426,15 +1399,8 @@ namespace Budget
             chartSeries9.Resolution = 0D;
             chartSeries9.StackingGroup = "Default Group";
             chartSeries9.Style.AltTagFormat = "";
-            chartSeries9.Style.Callout.Font.Facename = "Microsoft Sans Serif";
             chartSeries9.Style.DrawTextShape = false;
-            chartSeries9.Style.Font.Facename = "Microsoft Sans Serif";
-            chartLineInfo5.Alignment = System.Drawing.Drawing2D.PenAlignment.Center;
-            chartLineInfo5.Color = System.Drawing.SystemColors.ControlText;
-            chartLineInfo5.DashPattern = null;
-            chartLineInfo5.DashStyle = System.Drawing.Drawing2D.DashStyle.Solid;
-            chartLineInfo5.Width = 1F;
-            chartCustomShapeInfo9.Border = chartLineInfo5;
+            chartCustomShapeInfo9.Border = chartLineInfo2;
             chartCustomShapeInfo9.Color = System.Drawing.SystemColors.HighlightText;
             chartCustomShapeInfo9.Type = Syncfusion.Windows.Forms.Chart.ChartCustomShape.Square;
             chartSeries9.Style.TextShape = chartCustomShapeInfo9;
@@ -1449,41 +1415,39 @@ namespace Budget
             chartSeries10.Resolution = 0D;
             chartSeries10.StackingGroup = "Default Group";
             chartSeries10.Style.AltTagFormat = "";
-            chartSeries10.Style.Callout.Font.Facename = "Microsoft Sans Serif";
             chartSeries10.Style.DrawTextShape = false;
-            chartSeries10.Style.Font.Facename = "Microsoft Sans Serif";
-            chartCustomShapeInfo10.Border = chartLineInfo5;
+            chartCustomShapeInfo10.Border = chartLineInfo2;
             chartCustomShapeInfo10.Color = System.Drawing.SystemColors.HighlightText;
             chartCustomShapeInfo10.Type = Syncfusion.Windows.Forms.Chart.ChartCustomShape.Square;
             chartSeries10.Style.TextShape = chartCustomShapeInfo10;
             chartSeries10.Text = "Default1";
-            this.Chart5.Series.Add(chartSeries9);
-            this.Chart5.Series.Add(chartSeries10);
-            this.Chart5.Series3D = true;
-            this.Chart5.SeriesHighlight = true;
-            this.Chart5.ShadowColor = new Syncfusion.Drawing.BrushInfo(Syncfusion.Drawing.GradientStyle.PathRectangle, System.Drawing.SystemColors.WindowText, System.Drawing.Color.Silver);
-            this.Chart5.Size = new System.Drawing.Size(1440, 665);
-            this.Chart5.Spacing = 5F;
-            this.Chart5.SpacingBetweenSeries = 15F;
-            this.Chart5.Style3D = true;
-            this.Chart5.TabIndex = 96;
-            this.Chart5.Tilt = 15F;
+            this.AreaChart1.Series.Add(chartSeries9);
+            this.AreaChart1.Series.Add(chartSeries10);
+            this.AreaChart1.Series3D = true;
+            this.AreaChart1.SeriesHighlight = true;
+            this.AreaChart1.ShadowColor = new Syncfusion.Drawing.BrushInfo(Syncfusion.Drawing.GradientStyle.PathRectangle, System.Drawing.SystemColors.WindowText, System.Drawing.Color.Silver);
+            this.AreaChart1.Size = new System.Drawing.Size(1440, 665);
+            this.AreaChart1.Spacing = 5F;
+            this.AreaChart1.SpacingBetweenSeries = 15F;
+            this.AreaChart1.Style3D = true;
+            this.AreaChart1.TabIndex = 96;
+            this.AreaChart1.Tilt = 15F;
             // 
             // 
             // 
-            this.Chart5.Title.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Chart5.Title.Name = "Default";
-            this.Chart5.ToolBar.EnableDefaultItems = false;
-            this.Chart5.ToolBar.Items.Add(chartToolBarSaveItem5);
-            this.Chart5.ToolBar.Items.Add(chartToolBarCopyItem5);
-            this.Chart5.ToolBar.Items.Add(chartToolBarPrintItem5);
-            this.Chart5.ToolBar.Items.Add(chartToolBarPrintPreviewItem3);
-            this.Chart5.ToolBar.Items.Add(chartToolBarSplitter3);
-            this.Chart5.ToolBar.Items.Add(chartToolBarPaletteItem5);
-            this.Chart5.ToolBar.Items.Add(chartToolBarStyleItem3);
-            this.Chart5.ToolBar.Items.Add(chartToolBarTypeItem5);
-            this.Chart5.ToolBar.Items.Add(chartToolBarSeries3DItem5);
-            this.Chart5.ToolBar.Items.Add(chartToolBarShowLegendItem5);
+            this.AreaChart1.Title.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AreaChart1.Title.Name = "Default";
+            this.AreaChart1.ToolBar.EnableDefaultItems = false;
+            this.AreaChart1.ToolBar.Items.Add(chartToolBarSaveItem5);
+            this.AreaChart1.ToolBar.Items.Add(chartToolBarCopyItem5);
+            this.AreaChart1.ToolBar.Items.Add(chartToolBarPrintItem5);
+            this.AreaChart1.ToolBar.Items.Add(chartToolBarPrintPreviewItem3);
+            this.AreaChart1.ToolBar.Items.Add(chartToolBarSplitter3);
+            this.AreaChart1.ToolBar.Items.Add(chartToolBarPaletteItem5);
+            this.AreaChart1.ToolBar.Items.Add(chartToolBarStyleItem3);
+            this.AreaChart1.ToolBar.Items.Add(chartToolBarTypeItem5);
+            this.AreaChart1.ToolBar.Items.Add(chartToolBarSeries3DItem5);
+            this.AreaChart1.ToolBar.Items.Add(chartToolBarShowLegendItem5);
             // 
             // expandCollapsePanel6
             // 
@@ -1569,7 +1533,7 @@ namespace Budget
             // 
             // splitContainer8.Panel1
             // 
-            this.splitContainer8.Panel1.Controls.Add(this.Chart6);
+            this.splitContainer8.Panel1.Controls.Add(this.AreaChart);
             this.splitContainer8.Panel1.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // splitContainer8.Panel2
@@ -1582,71 +1546,71 @@ namespace Budget
             this.splitContainer8.SplitterWidth = 7;
             this.splitContainer8.TabIndex = 100;
             // 
-            // Chart6
+            // AreaChart
             // 
-            this.Chart6.AllowGradientPalette = true;
-            this.Chart6.AllowUserEditStyles = true;
-            this.Chart6.BackInterior = new Syncfusion.Drawing.BrushInfo(System.Drawing.Color.Black);
-            this.Chart6.ChartArea.AutoScale = true;
-            this.Chart6.ChartArea.BackInterior = new Syncfusion.Drawing.BrushInfo(System.Drawing.Color.Transparent);
-            this.Chart6.ChartArea.BorderColor = System.Drawing.Color.Black;
-            this.Chart6.ChartArea.CursorLocation = new System.Drawing.Point(0, 0);
-            this.Chart6.ChartArea.CursorReDraw = false;
-            this.Chart6.ChartAreaMargins = new Syncfusion.Windows.Forms.Chart.ChartMargins(0, 0, 0, 10);
-            this.Chart6.ChartAreaShadow = true;
-            this.Chart6.ChartInterior = new Syncfusion.Drawing.BrushInfo(Syncfusion.Drawing.GradientStyle.PathRectangle, new System.Drawing.Color[] {
+            this.AreaChart.AllowGradientPalette = true;
+            this.AreaChart.AllowUserEditStyles = true;
+            this.AreaChart.BackInterior = new Syncfusion.Drawing.BrushInfo(System.Drawing.Color.Black);
+            this.AreaChart.ChartArea.AutoScale = true;
+            this.AreaChart.ChartArea.BackInterior = new Syncfusion.Drawing.BrushInfo(System.Drawing.Color.Transparent);
+            this.AreaChart.ChartArea.BorderColor = System.Drawing.Color.Black;
+            this.AreaChart.ChartArea.CursorLocation = new System.Drawing.Point(0, 0);
+            this.AreaChart.ChartArea.CursorReDraw = false;
+            this.AreaChart.ChartAreaMargins = new Syncfusion.Windows.Forms.Chart.ChartMargins(0, 0, 0, 10);
+            this.AreaChart.ChartAreaShadow = true;
+            this.AreaChart.ChartInterior = new Syncfusion.Drawing.BrushInfo(Syncfusion.Drawing.GradientStyle.PathRectangle, new System.Drawing.Color[] {
             System.Drawing.Color.Black,
             System.Drawing.Color.Gray,
             System.Drawing.Color.DimGray});
-            this.Chart6.CustomPalette = new System.Drawing.Color[] {
+            this.AreaChart.CustomPalette = new System.Drawing.Color[] {
         System.Drawing.Color.DeepSkyBlue,
         System.Drawing.Color.DarkRed};
-            this.Chart6.DataSourceName = "[none]";
-            this.Chart6.Depth = 250F;
-            this.Chart6.DisplayChartContextMenu = false;
-            this.Chart6.DisplaySeriesContextMenu = false;
-            this.Chart6.EnableMouseRotation = true;
-            this.Chart6.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Chart6.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.Chart6.HighlightSymbol = true;
-            this.Chart6.IsWindowLess = false;
+            this.AreaChart.DataSourceName = "AreaBindingSource";
+            this.AreaChart.Depth = 250F;
+            this.AreaChart.DisplayChartContextMenu = false;
+            this.AreaChart.DisplaySeriesContextMenu = false;
+            this.AreaChart.EnableMouseRotation = true;
+            this.AreaChart.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AreaChart.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.AreaChart.HighlightSymbol = true;
+            this.AreaChart.IsWindowLess = false;
             // 
             // 
             // 
-            this.Chart6.Legend.FloatingAutoSize = false;
-            this.Chart6.Legend.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Chart6.Legend.Location = new System.Drawing.Point(925, 52);
-            this.Chart6.Legend.Margin = new System.Windows.Forms.Padding(2);
-            this.Chart6.Legend.OnlyColumnsForFloating = false;
-            this.Chart6.Legend.RowsCount = 2;
-            this.Chart6.Legend.ShowSymbol = true;
-            this.Chart6.Legend.Size = new System.Drawing.Size(112, 59);
-            this.Chart6.Legend.TextAlignment = System.Drawing.StringAlignment.Near;
-            this.Chart6.Legend.Visible = false;
-            this.Chart6.Legend.VisibleCheckBox = true;
-            this.Chart6.Localize = null;
-            this.Chart6.Location = new System.Drawing.Point(23, 79);
-            this.Chart6.Margin = new System.Windows.Forms.Padding(2);
-            this.Chart6.Name = "Chart6";
-            this.Chart6.Padding = new System.Windows.Forms.Padding(1);
-            this.Chart6.Palette = Syncfusion.Windows.Forms.Chart.ChartColorPalette.Custom;
-            this.Chart6.PrimaryXAxis.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Chart6.PrimaryXAxis.GridLineType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(182)))), ((int)(((byte)(183)))));
-            this.Chart6.PrimaryXAxis.LineType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(182)))), ((int)(((byte)(183)))));
-            this.Chart6.PrimaryXAxis.LogLabelsDisplayMode = Syncfusion.Windows.Forms.Chart.LogLabelsDisplayMode.Default;
-            this.Chart6.PrimaryXAxis.Margin = true;
-            this.Chart6.PrimaryXAxis.TickColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(182)))), ((int)(((byte)(183)))));
-            this.Chart6.PrimaryXAxis.TitleColor = System.Drawing.Color.White;
-            this.Chart6.PrimaryXAxis.TitleFont = new System.Drawing.Font("Segoe UI", 14F);
-            this.Chart6.PrimaryYAxis.GridLineType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(182)))), ((int)(((byte)(183)))));
-            this.Chart6.PrimaryYAxis.LineType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(182)))), ((int)(((byte)(183)))));
-            this.Chart6.PrimaryYAxis.LogLabelsDisplayMode = Syncfusion.Windows.Forms.Chart.LogLabelsDisplayMode.Default;
-            this.Chart6.PrimaryYAxis.Margin = true;
-            this.Chart6.PrimaryYAxis.TickColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(182)))), ((int)(((byte)(183)))));
-            this.Chart6.PrimaryYAxis.TitleColor = System.Drawing.Color.White;
-            this.Chart6.PrimaryYAxis.TitleFont = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Chart6.RealMode3D = true;
-            this.Chart6.Rotation = 45F;
+            this.AreaChart.Legend.FloatingAutoSize = false;
+            this.AreaChart.Legend.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AreaChart.Legend.Location = new System.Drawing.Point(925, 52);
+            this.AreaChart.Legend.Margin = new System.Windows.Forms.Padding(2);
+            this.AreaChart.Legend.OnlyColumnsForFloating = false;
+            this.AreaChart.Legend.RowsCount = 2;
+            this.AreaChart.Legend.ShowSymbol = true;
+            this.AreaChart.Legend.Size = new System.Drawing.Size(112, 59);
+            this.AreaChart.Legend.TextAlignment = System.Drawing.StringAlignment.Near;
+            this.AreaChart.Legend.Visible = false;
+            this.AreaChart.Legend.VisibleCheckBox = true;
+            this.AreaChart.Localize = null;
+            this.AreaChart.Location = new System.Drawing.Point(23, 79);
+            this.AreaChart.Margin = new System.Windows.Forms.Padding(2);
+            this.AreaChart.Name = "AreaChart";
+            this.AreaChart.Padding = new System.Windows.Forms.Padding(1);
+            this.AreaChart.Palette = Syncfusion.Windows.Forms.Chart.ChartColorPalette.Custom;
+            this.AreaChart.PrimaryXAxis.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AreaChart.PrimaryXAxis.GridLineType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(182)))), ((int)(((byte)(183)))));
+            this.AreaChart.PrimaryXAxis.LineType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(182)))), ((int)(((byte)(183)))));
+            this.AreaChart.PrimaryXAxis.LogLabelsDisplayMode = Syncfusion.Windows.Forms.Chart.LogLabelsDisplayMode.Default;
+            this.AreaChart.PrimaryXAxis.Margin = true;
+            this.AreaChart.PrimaryXAxis.TickColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(182)))), ((int)(((byte)(183)))));
+            this.AreaChart.PrimaryXAxis.TitleColor = System.Drawing.Color.White;
+            this.AreaChart.PrimaryXAxis.TitleFont = new System.Drawing.Font("Segoe UI", 14F);
+            this.AreaChart.PrimaryYAxis.GridLineType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(182)))), ((int)(((byte)(183)))));
+            this.AreaChart.PrimaryYAxis.LineType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(182)))), ((int)(((byte)(183)))));
+            this.AreaChart.PrimaryYAxis.LogLabelsDisplayMode = Syncfusion.Windows.Forms.Chart.LogLabelsDisplayMode.Default;
+            this.AreaChart.PrimaryYAxis.Margin = true;
+            this.AreaChart.PrimaryYAxis.TickColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(182)))), ((int)(((byte)(183)))));
+            this.AreaChart.PrimaryYAxis.TitleColor = System.Drawing.Color.White;
+            this.AreaChart.PrimaryYAxis.TitleFont = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AreaChart.RealMode3D = true;
+            this.AreaChart.Rotation = 45F;
             chartSeries11.FancyToolTip.ResizeInsideSymbol = true;
             chartSeries11.Name = "Default0";
             chartSeries11.Points.Add(1D, ((double)(55D)));
@@ -1657,15 +1621,8 @@ namespace Budget
             chartSeries11.Resolution = 0D;
             chartSeries11.StackingGroup = "Default Group";
             chartSeries11.Style.AltTagFormat = "";
-            chartSeries11.Style.Callout.Font.Facename = "Microsoft Sans Serif";
             chartSeries11.Style.DrawTextShape = false;
-            chartSeries11.Style.Font.Facename = "Microsoft Sans Serif";
-            chartLineInfo6.Alignment = System.Drawing.Drawing2D.PenAlignment.Center;
-            chartLineInfo6.Color = System.Drawing.SystemColors.ControlText;
-            chartLineInfo6.DashPattern = null;
-            chartLineInfo6.DashStyle = System.Drawing.Drawing2D.DashStyle.Solid;
-            chartLineInfo6.Width = 1F;
-            chartCustomShapeInfo11.Border = chartLineInfo6;
+            chartCustomShapeInfo11.Border = chartLineInfo2;
             chartCustomShapeInfo11.Color = System.Drawing.SystemColors.HighlightText;
             chartCustomShapeInfo11.Type = Syncfusion.Windows.Forms.Chart.ChartCustomShape.Square;
             chartSeries11.Style.TextShape = chartCustomShapeInfo11;
@@ -1680,41 +1637,39 @@ namespace Budget
             chartSeries12.Resolution = 0D;
             chartSeries12.StackingGroup = "Default Group";
             chartSeries12.Style.AltTagFormat = "";
-            chartSeries12.Style.Callout.Font.Facename = "Microsoft Sans Serif";
             chartSeries12.Style.DrawTextShape = false;
-            chartSeries12.Style.Font.Facename = "Microsoft Sans Serif";
-            chartCustomShapeInfo12.Border = chartLineInfo6;
+            chartCustomShapeInfo12.Border = chartLineInfo2;
             chartCustomShapeInfo12.Color = System.Drawing.SystemColors.HighlightText;
             chartCustomShapeInfo12.Type = Syncfusion.Windows.Forms.Chart.ChartCustomShape.Square;
             chartSeries12.Style.TextShape = chartCustomShapeInfo12;
             chartSeries12.Text = "Default1";
-            this.Chart6.Series.Add(chartSeries11);
-            this.Chart6.Series.Add(chartSeries12);
-            this.Chart6.Series3D = true;
-            this.Chart6.SeriesHighlight = true;
-            this.Chart6.ShadowColor = new Syncfusion.Drawing.BrushInfo(Syncfusion.Drawing.GradientStyle.PathRectangle, System.Drawing.SystemColors.WindowText, System.Drawing.Color.Silver);
-            this.Chart6.Size = new System.Drawing.Size(1440, 665);
-            this.Chart6.Spacing = 5F;
-            this.Chart6.SpacingBetweenSeries = 15F;
-            this.Chart6.Style3D = true;
-            this.Chart6.TabIndex = 96;
-            this.Chart6.Tilt = 15F;
+            this.AreaChart.Series.Add(chartSeries11);
+            this.AreaChart.Series.Add(chartSeries12);
+            this.AreaChart.Series3D = true;
+            this.AreaChart.SeriesHighlight = true;
+            this.AreaChart.ShadowColor = new Syncfusion.Drawing.BrushInfo(Syncfusion.Drawing.GradientStyle.PathRectangle, System.Drawing.SystemColors.WindowText, System.Drawing.Color.Silver);
+            this.AreaChart.Size = new System.Drawing.Size(1440, 665);
+            this.AreaChart.Spacing = 5F;
+            this.AreaChart.SpacingBetweenSeries = 15F;
+            this.AreaChart.Style3D = true;
+            this.AreaChart.TabIndex = 96;
+            this.AreaChart.Tilt = 15F;
             // 
             // 
             // 
-            this.Chart6.Title.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Chart6.Title.Name = "Default";
-            this.Chart6.ToolBar.EnableDefaultItems = false;
-            this.Chart6.ToolBar.Items.Add(chartToolBarSaveItem6);
-            this.Chart6.ToolBar.Items.Add(chartToolBarCopyItem6);
-            this.Chart6.ToolBar.Items.Add(chartToolBarPrintItem6);
-            this.Chart6.ToolBar.Items.Add(chartToolBarPrintPreviewItem4);
-            this.Chart6.ToolBar.Items.Add(chartToolBarSplitter4);
-            this.Chart6.ToolBar.Items.Add(chartToolBarPaletteItem6);
-            this.Chart6.ToolBar.Items.Add(chartToolBarStyleItem4);
-            this.Chart6.ToolBar.Items.Add(chartToolBarTypeItem6);
-            this.Chart6.ToolBar.Items.Add(chartToolBarSeries3DItem6);
-            this.Chart6.ToolBar.Items.Add(chartToolBarShowLegendItem6);
+            this.AreaChart.Title.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AreaChart.Title.Name = "Default";
+            this.AreaChart.ToolBar.EnableDefaultItems = false;
+            this.AreaChart.ToolBar.Items.Add(chartToolBarSaveItem6);
+            this.AreaChart.ToolBar.Items.Add(chartToolBarCopyItem6);
+            this.AreaChart.ToolBar.Items.Add(chartToolBarPrintItem6);
+            this.AreaChart.ToolBar.Items.Add(chartToolBarPrintPreviewItem4);
+            this.AreaChart.ToolBar.Items.Add(chartToolBarSplitter4);
+            this.AreaChart.ToolBar.Items.Add(chartToolBarPaletteItem6);
+            this.AreaChart.ToolBar.Items.Add(chartToolBarStyleItem4);
+            this.AreaChart.ToolBar.Items.Add(chartToolBarTypeItem6);
+            this.AreaChart.ToolBar.Items.Add(chartToolBarSeries3DItem6);
+            this.AreaChart.ToolBar.Items.Add(chartToolBarShowLegendItem6);
             // 
             // expandCollapsePanel5
             // 
@@ -1738,9 +1693,9 @@ namespace Budget
             this.listBox5.ForeColor = System.Drawing.Color.LightSteelBlue;
             this.listBox5.FormattingEnabled = true;
             this.listBox5.ItemHeight = 21;
-            this.listBox5.Location = new System.Drawing.Point(13, 49);
+            this.listBox5.Location = new System.Drawing.Point(27, 49);
             this.listBox5.Name = "listBox5";
-            this.listBox5.Size = new System.Drawing.Size(226, 378);
+            this.listBox5.Size = new System.Drawing.Size(212, 378);
             this.listBox5.TabIndex = 43;
             // 
             // toggleButton5
@@ -1794,7 +1749,7 @@ namespace Budget
             // 
             // splitContainer6.Panel1
             // 
-            this.splitContainer6.Panel1.Controls.Add(this.Chart7);
+            this.splitContainer6.Panel1.Controls.Add(this.ProjectChart);
             this.splitContainer6.Panel1.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // splitContainer6.Panel2
@@ -1807,71 +1762,71 @@ namespace Budget
             this.splitContainer6.SplitterWidth = 7;
             this.splitContainer6.TabIndex = 101;
             // 
-            // Chart7
+            // ProjectChart
             // 
-            this.Chart7.AllowGradientPalette = true;
-            this.Chart7.AllowUserEditStyles = true;
-            this.Chart7.BackInterior = new Syncfusion.Drawing.BrushInfo(System.Drawing.Color.Black);
-            this.Chart7.ChartArea.AutoScale = true;
-            this.Chart7.ChartArea.BackInterior = new Syncfusion.Drawing.BrushInfo(System.Drawing.Color.Transparent);
-            this.Chart7.ChartArea.BorderColor = System.Drawing.Color.Black;
-            this.Chart7.ChartArea.CursorLocation = new System.Drawing.Point(0, 0);
-            this.Chart7.ChartArea.CursorReDraw = false;
-            this.Chart7.ChartAreaMargins = new Syncfusion.Windows.Forms.Chart.ChartMargins(0, 0, 0, 10);
-            this.Chart7.ChartAreaShadow = true;
-            this.Chart7.ChartInterior = new Syncfusion.Drawing.BrushInfo(Syncfusion.Drawing.GradientStyle.PathRectangle, new System.Drawing.Color[] {
+            this.ProjectChart.AllowGradientPalette = true;
+            this.ProjectChart.AllowUserEditStyles = true;
+            this.ProjectChart.BackInterior = new Syncfusion.Drawing.BrushInfo(System.Drawing.Color.Black);
+            this.ProjectChart.ChartArea.AutoScale = true;
+            this.ProjectChart.ChartArea.BackInterior = new Syncfusion.Drawing.BrushInfo(System.Drawing.Color.Transparent);
+            this.ProjectChart.ChartArea.BorderColor = System.Drawing.Color.Black;
+            this.ProjectChart.ChartArea.CursorLocation = new System.Drawing.Point(0, 0);
+            this.ProjectChart.ChartArea.CursorReDraw = false;
+            this.ProjectChart.ChartAreaMargins = new Syncfusion.Windows.Forms.Chart.ChartMargins(0, 0, 0, 10);
+            this.ProjectChart.ChartAreaShadow = true;
+            this.ProjectChart.ChartInterior = new Syncfusion.Drawing.BrushInfo(Syncfusion.Drawing.GradientStyle.PathRectangle, new System.Drawing.Color[] {
             System.Drawing.Color.Black,
             System.Drawing.Color.Gray,
             System.Drawing.Color.DimGray});
-            this.Chart7.CustomPalette = new System.Drawing.Color[] {
+            this.ProjectChart.CustomPalette = new System.Drawing.Color[] {
         System.Drawing.Color.DeepSkyBlue,
         System.Drawing.Color.DarkRed};
-            this.Chart7.DataSourceName = "[none]";
-            this.Chart7.Depth = 250F;
-            this.Chart7.DisplayChartContextMenu = false;
-            this.Chart7.DisplaySeriesContextMenu = false;
-            this.Chart7.EnableMouseRotation = true;
-            this.Chart7.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Chart7.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.Chart7.HighlightSymbol = true;
-            this.Chart7.IsWindowLess = false;
+            this.ProjectChart.DataSourceName = "ProjectBindingSource";
+            this.ProjectChart.Depth = 250F;
+            this.ProjectChart.DisplayChartContextMenu = false;
+            this.ProjectChart.DisplaySeriesContextMenu = false;
+            this.ProjectChart.EnableMouseRotation = true;
+            this.ProjectChart.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ProjectChart.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.ProjectChart.HighlightSymbol = true;
+            this.ProjectChart.IsWindowLess = false;
             // 
             // 
             // 
-            this.Chart7.Legend.FloatingAutoSize = false;
-            this.Chart7.Legend.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Chart7.Legend.Location = new System.Drawing.Point(925, 52);
-            this.Chart7.Legend.Margin = new System.Windows.Forms.Padding(2);
-            this.Chart7.Legend.OnlyColumnsForFloating = false;
-            this.Chart7.Legend.RowsCount = 2;
-            this.Chart7.Legend.ShowSymbol = true;
-            this.Chart7.Legend.Size = new System.Drawing.Size(112, 59);
-            this.Chart7.Legend.TextAlignment = System.Drawing.StringAlignment.Near;
-            this.Chart7.Legend.Visible = false;
-            this.Chart7.Legend.VisibleCheckBox = true;
-            this.Chart7.Localize = null;
-            this.Chart7.Location = new System.Drawing.Point(23, 79);
-            this.Chart7.Margin = new System.Windows.Forms.Padding(2);
-            this.Chart7.Name = "Chart7";
-            this.Chart7.Padding = new System.Windows.Forms.Padding(1);
-            this.Chart7.Palette = Syncfusion.Windows.Forms.Chart.ChartColorPalette.Custom;
-            this.Chart7.PrimaryXAxis.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Chart7.PrimaryXAxis.GridLineType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(182)))), ((int)(((byte)(183)))));
-            this.Chart7.PrimaryXAxis.LineType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(182)))), ((int)(((byte)(183)))));
-            this.Chart7.PrimaryXAxis.LogLabelsDisplayMode = Syncfusion.Windows.Forms.Chart.LogLabelsDisplayMode.Default;
-            this.Chart7.PrimaryXAxis.Margin = true;
-            this.Chart7.PrimaryXAxis.TickColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(182)))), ((int)(((byte)(183)))));
-            this.Chart7.PrimaryXAxis.TitleColor = System.Drawing.Color.White;
-            this.Chart7.PrimaryXAxis.TitleFont = new System.Drawing.Font("Segoe UI", 14F);
-            this.Chart7.PrimaryYAxis.GridLineType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(182)))), ((int)(((byte)(183)))));
-            this.Chart7.PrimaryYAxis.LineType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(182)))), ((int)(((byte)(183)))));
-            this.Chart7.PrimaryYAxis.LogLabelsDisplayMode = Syncfusion.Windows.Forms.Chart.LogLabelsDisplayMode.Default;
-            this.Chart7.PrimaryYAxis.Margin = true;
-            this.Chart7.PrimaryYAxis.TickColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(182)))), ((int)(((byte)(183)))));
-            this.Chart7.PrimaryYAxis.TitleColor = System.Drawing.Color.White;
-            this.Chart7.PrimaryYAxis.TitleFont = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Chart7.RealMode3D = true;
-            this.Chart7.Rotation = 45F;
+            this.ProjectChart.Legend.FloatingAutoSize = false;
+            this.ProjectChart.Legend.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ProjectChart.Legend.Location = new System.Drawing.Point(925, 52);
+            this.ProjectChart.Legend.Margin = new System.Windows.Forms.Padding(2);
+            this.ProjectChart.Legend.OnlyColumnsForFloating = false;
+            this.ProjectChart.Legend.RowsCount = 2;
+            this.ProjectChart.Legend.ShowSymbol = true;
+            this.ProjectChart.Legend.Size = new System.Drawing.Size(112, 59);
+            this.ProjectChart.Legend.TextAlignment = System.Drawing.StringAlignment.Near;
+            this.ProjectChart.Legend.Visible = false;
+            this.ProjectChart.Legend.VisibleCheckBox = true;
+            this.ProjectChart.Localize = null;
+            this.ProjectChart.Location = new System.Drawing.Point(23, 79);
+            this.ProjectChart.Margin = new System.Windows.Forms.Padding(2);
+            this.ProjectChart.Name = "ProjectChart";
+            this.ProjectChart.Padding = new System.Windows.Forms.Padding(1);
+            this.ProjectChart.Palette = Syncfusion.Windows.Forms.Chart.ChartColorPalette.Custom;
+            this.ProjectChart.PrimaryXAxis.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ProjectChart.PrimaryXAxis.GridLineType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(182)))), ((int)(((byte)(183)))));
+            this.ProjectChart.PrimaryXAxis.LineType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(182)))), ((int)(((byte)(183)))));
+            this.ProjectChart.PrimaryXAxis.LogLabelsDisplayMode = Syncfusion.Windows.Forms.Chart.LogLabelsDisplayMode.Default;
+            this.ProjectChart.PrimaryXAxis.Margin = true;
+            this.ProjectChart.PrimaryXAxis.TickColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(182)))), ((int)(((byte)(183)))));
+            this.ProjectChart.PrimaryXAxis.TitleColor = System.Drawing.Color.White;
+            this.ProjectChart.PrimaryXAxis.TitleFont = new System.Drawing.Font("Segoe UI", 14F);
+            this.ProjectChart.PrimaryYAxis.GridLineType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(182)))), ((int)(((byte)(183)))));
+            this.ProjectChart.PrimaryYAxis.LineType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(182)))), ((int)(((byte)(183)))));
+            this.ProjectChart.PrimaryYAxis.LogLabelsDisplayMode = Syncfusion.Windows.Forms.Chart.LogLabelsDisplayMode.Default;
+            this.ProjectChart.PrimaryYAxis.Margin = true;
+            this.ProjectChart.PrimaryYAxis.TickColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(182)))), ((int)(((byte)(183)))));
+            this.ProjectChart.PrimaryYAxis.TitleColor = System.Drawing.Color.White;
+            this.ProjectChart.PrimaryYAxis.TitleFont = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ProjectChart.RealMode3D = true;
+            this.ProjectChart.Rotation = 45F;
             chartSeries13.FancyToolTip.ResizeInsideSymbol = true;
             chartSeries13.Name = "Default0";
             chartSeries13.Points.Add(1D, ((double)(55D)));
@@ -1882,15 +1837,8 @@ namespace Budget
             chartSeries13.Resolution = 0D;
             chartSeries13.StackingGroup = "Default Group";
             chartSeries13.Style.AltTagFormat = "";
-            chartSeries13.Style.Callout.Font.Facename = "Microsoft Sans Serif";
             chartSeries13.Style.DrawTextShape = false;
-            chartSeries13.Style.Font.Facename = "Microsoft Sans Serif";
-            chartLineInfo7.Alignment = System.Drawing.Drawing2D.PenAlignment.Center;
-            chartLineInfo7.Color = System.Drawing.SystemColors.ControlText;
-            chartLineInfo7.DashPattern = null;
-            chartLineInfo7.DashStyle = System.Drawing.Drawing2D.DashStyle.Solid;
-            chartLineInfo7.Width = 1F;
-            chartCustomShapeInfo13.Border = chartLineInfo7;
+            chartCustomShapeInfo13.Border = chartLineInfo2;
             chartCustomShapeInfo13.Color = System.Drawing.SystemColors.HighlightText;
             chartCustomShapeInfo13.Type = Syncfusion.Windows.Forms.Chart.ChartCustomShape.Square;
             chartSeries13.Style.TextShape = chartCustomShapeInfo13;
@@ -1905,41 +1853,39 @@ namespace Budget
             chartSeries14.Resolution = 0D;
             chartSeries14.StackingGroup = "Default Group";
             chartSeries14.Style.AltTagFormat = "";
-            chartSeries14.Style.Callout.Font.Facename = "Microsoft Sans Serif";
             chartSeries14.Style.DrawTextShape = false;
-            chartSeries14.Style.Font.Facename = "Microsoft Sans Serif";
-            chartCustomShapeInfo14.Border = chartLineInfo7;
+            chartCustomShapeInfo14.Border = chartLineInfo2;
             chartCustomShapeInfo14.Color = System.Drawing.SystemColors.HighlightText;
             chartCustomShapeInfo14.Type = Syncfusion.Windows.Forms.Chart.ChartCustomShape.Square;
             chartSeries14.Style.TextShape = chartCustomShapeInfo14;
             chartSeries14.Text = "Default1";
-            this.Chart7.Series.Add(chartSeries13);
-            this.Chart7.Series.Add(chartSeries14);
-            this.Chart7.Series3D = true;
-            this.Chart7.SeriesHighlight = true;
-            this.Chart7.ShadowColor = new Syncfusion.Drawing.BrushInfo(Syncfusion.Drawing.GradientStyle.PathRectangle, System.Drawing.SystemColors.WindowText, System.Drawing.Color.Silver);
-            this.Chart7.Size = new System.Drawing.Size(1440, 665);
-            this.Chart7.Spacing = 5F;
-            this.Chart7.SpacingBetweenSeries = 15F;
-            this.Chart7.Style3D = true;
-            this.Chart7.TabIndex = 96;
-            this.Chart7.Tilt = 15F;
+            this.ProjectChart.Series.Add(chartSeries13);
+            this.ProjectChart.Series.Add(chartSeries14);
+            this.ProjectChart.Series3D = true;
+            this.ProjectChart.SeriesHighlight = true;
+            this.ProjectChart.ShadowColor = new Syncfusion.Drawing.BrushInfo(Syncfusion.Drawing.GradientStyle.PathRectangle, System.Drawing.SystemColors.WindowText, System.Drawing.Color.Silver);
+            this.ProjectChart.Size = new System.Drawing.Size(1440, 665);
+            this.ProjectChart.Spacing = 5F;
+            this.ProjectChart.SpacingBetweenSeries = 15F;
+            this.ProjectChart.Style3D = true;
+            this.ProjectChart.TabIndex = 96;
+            this.ProjectChart.Tilt = 15F;
             // 
             // 
             // 
-            this.Chart7.Title.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Chart7.Title.Name = "Default";
-            this.Chart7.ToolBar.EnableDefaultItems = false;
-            this.Chart7.ToolBar.Items.Add(chartToolBarSaveItem7);
-            this.Chart7.ToolBar.Items.Add(chartToolBarCopyItem7);
-            this.Chart7.ToolBar.Items.Add(chartToolBarPrintItem7);
-            this.Chart7.ToolBar.Items.Add(chartToolBarPrintPreviewItem5);
-            this.Chart7.ToolBar.Items.Add(chartToolBarSplitter5);
-            this.Chart7.ToolBar.Items.Add(chartToolBarPaletteItem7);
-            this.Chart7.ToolBar.Items.Add(chartToolBarStyleItem5);
-            this.Chart7.ToolBar.Items.Add(chartToolBarTypeItem7);
-            this.Chart7.ToolBar.Items.Add(chartToolBarSeries3DItem7);
-            this.Chart7.ToolBar.Items.Add(chartToolBarShowLegendItem7);
+            this.ProjectChart.Title.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ProjectChart.Title.Name = "Default";
+            this.ProjectChart.ToolBar.EnableDefaultItems = false;
+            this.ProjectChart.ToolBar.Items.Add(chartToolBarSaveItem7);
+            this.ProjectChart.ToolBar.Items.Add(chartToolBarCopyItem7);
+            this.ProjectChart.ToolBar.Items.Add(chartToolBarPrintItem7);
+            this.ProjectChart.ToolBar.Items.Add(chartToolBarPrintPreviewItem5);
+            this.ProjectChart.ToolBar.Items.Add(chartToolBarSplitter5);
+            this.ProjectChart.ToolBar.Items.Add(chartToolBarPaletteItem7);
+            this.ProjectChart.ToolBar.Items.Add(chartToolBarStyleItem5);
+            this.ProjectChart.ToolBar.Items.Add(chartToolBarTypeItem7);
+            this.ProjectChart.ToolBar.Items.Add(chartToolBarSeries3DItem7);
+            this.ProjectChart.ToolBar.Items.Add(chartToolBarShowLegendItem7);
             // 
             // expandCollapsePanel7
             // 
@@ -2175,12 +2121,12 @@ namespace Budget
             chartSeries15.Style.Callout.Font.Facename = "Microsoft Sans Serif";
             chartSeries15.Style.DrawTextShape = false;
             chartSeries15.Style.Font.Facename = "Microsoft Sans Serif";
-            chartLineInfo8.Alignment = System.Drawing.Drawing2D.PenAlignment.Center;
-            chartLineInfo8.Color = System.Drawing.SystemColors.ControlText;
-            chartLineInfo8.DashPattern = null;
-            chartLineInfo8.DashStyle = System.Drawing.Drawing2D.DashStyle.Solid;
-            chartLineInfo8.Width = 1F;
-            chartCustomShapeInfo15.Border = chartLineInfo8;
+            chartLineInfo3.Alignment = System.Drawing.Drawing2D.PenAlignment.Center;
+            chartLineInfo3.Color = System.Drawing.SystemColors.ControlText;
+            chartLineInfo3.DashPattern = null;
+            chartLineInfo3.DashStyle = System.Drawing.Drawing2D.DashStyle.Solid;
+            chartLineInfo3.Width = 1F;
+            chartCustomShapeInfo15.Border = chartLineInfo3;
             chartCustomShapeInfo15.Color = System.Drawing.SystemColors.HighlightText;
             chartCustomShapeInfo15.Type = Syncfusion.Windows.Forms.Chart.ChartCustomShape.Square;
             chartSeries15.Style.TextShape = chartCustomShapeInfo15;
@@ -2198,7 +2144,7 @@ namespace Budget
             chartSeries16.Style.Callout.Font.Facename = "Microsoft Sans Serif";
             chartSeries16.Style.DrawTextShape = false;
             chartSeries16.Style.Font.Facename = "Microsoft Sans Serif";
-            chartCustomShapeInfo16.Border = chartLineInfo8;
+            chartCustomShapeInfo16.Border = chartLineInfo3;
             chartCustomShapeInfo16.Color = System.Drawing.SystemColors.HighlightText;
             chartCustomShapeInfo16.Type = Syncfusion.Windows.Forms.Chart.ChartCustomShape.Square;
             chartSeries16.Style.TextShape = chartCustomShapeInfo16;
@@ -2410,15 +2356,15 @@ namespace Budget
                 private RadioButton rb1;
                 private RadioButton rb3;
                 private RadioButton rb2;
-                protected ChartControl Chart1;
+                protected ChartControl FundChart;
                 private SplitContainer splitContainer2;
                 private SplitContainer splitContainer4;
-                protected ChartControl Chart3;
+                protected ChartControl NpmChart;
                 private SplitContainer splitContaineEPA;
-                protected ChartControl Chart4;
+                protected ChartControl GoalChart;
                 private SplitContainer splitContainer8;
-                protected ChartControl Chart6;
-                protected ChartControl Chart2;
+                protected ChartControl AreaChart;
+                protected ChartControl BocChart;
                 private MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel expandCollapsePanel4;
                 private ToggleButton toggleButton1;
                 private ToggleButton toggleButton2;
@@ -2434,7 +2380,7 @@ namespace Budget
                 private ListBox listBox4;
                 private TabPageAdv Tab5;
                 private SplitContainer splitContainer3;
-                protected ChartControl Chart5;
+                protected ChartControl AreaChart1;
                 private MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel expandCollapsePanel6;
                 private ListBox listBox6;
                 private ToggleButton toggleButton6;
@@ -2445,7 +2391,7 @@ namespace Budget
                 private MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel expandCollapsePanel7;
                 private ListBox listBox7;
                 private ToggleButton toggleButton7;
-                protected ChartControl Chart7;
+                protected ChartControl ProjectChart;
             } 
         }
     }

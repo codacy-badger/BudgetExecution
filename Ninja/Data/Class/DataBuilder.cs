@@ -25,8 +25,6 @@ namespace Budget
                 public DataTable Table { get; }
                 public DataRow[] Records { get; }
                 public PRC[] Accounts { get; }
-                public decimal Total { get; }
-                public int Count { get; }
                 public Tuple<DataTable, DataRow[], decimal, int> SqlData { get; }
                 public Tuple<DataSet, DataRow[], decimal[]> QueryData { get; }
                 public Tuple<DataTable, PRC[], decimal, int> PrcData { get; }
@@ -44,8 +42,6 @@ namespace Budget
                     Query = new Query(source);
                     E6 = GetDataSet( );
                     Table = E6.Tables[0];
-                    Total = GetTotal(Table);
-                    Count = Table.Rows.Count;
                     Records = GetRecords( );
                     SqlData = GetSqlData( );
                     if (source == Source.P6 || source == Source.P7 || source == Source.P8)
@@ -60,7 +56,6 @@ namespace Budget
                     Query = new Query(source, param);
                     E6 = GetDataSet( );
                     Table = E6.Tables[0];
-                    Total = GetTotal(Table);
                     Records = GetRecords( );
                     SqlData = GetSqlData( );
                     if (source == Source.P6 || source == Source.P7 || source == Source.P8)

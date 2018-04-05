@@ -1,7 +1,9 @@
 #region Using Directives
 
+using MakarovDev.ExpandCollapsePanel;
 using MetroSet_UI.Controls;
 using Syncfusion.Windows.Forms.Chart;
+using Syncfusion.Windows.Forms.Tools;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -22,7 +24,10 @@ namespace Budget
             {
                 #region Properties
                 public FormData Ninja { get; set; }
+                TabPageAdv[] Tab { get; set; }
+                ExpandCollapsePanel[] Expander { get; set; }
                 ChartControl[] Chart { get; set; }
+                public ListBox[] FilterBox { get; set; }
                 public IBudgetAuthority Authority { get; set; }
                 public DataBuilder Data { get; }
                 public DataSet DataSet { get; }
@@ -33,7 +38,6 @@ namespace Budget
                 public Tuple<DataTable, PRC[], decimal, int> PrcData { get; }
                 public DivisionAuthority Division { get; }
                 public RegionalAuthority R6 { get; }
-                public ListBox[] FilterBox { get; set; }
                 public int Count { get; }
                 public Dictionary<string, string[]> DataElement { get; }
                 internal string[] RC { get; set; }
@@ -48,7 +52,7 @@ namespace Budget
                     InitializeComponent( );
                     Division = new DivisionAuthority( );
                     Table = Division.Data.Table;
-                    Total = Division.Data.Total;
+                    Total = GetTotal(Table);
                     RC = GetCodes(Table, "RC");
                     BindingSource.DataSource = Division.Data.Table;
                     Text = $"P7 Status of Funds";
@@ -104,17 +108,56 @@ namespace Budget
                 private void Form_Load(object sender, EventArgs e)
                 {
                     Chart = GetChartArray();
-                    Chart1 = new Chart(Chart1, Division.FundData).CreateColumn( );
-                    Chart2 = new Chart(Chart2, Division.BocData).CreateColumn( );
-                    Chart3 = new Chart(Chart3, Division.NpmData).CreateColumn( );
-                    Chart4 = new Chart(Chart4, Division.GoalData).CreateColumn( );
-                    Chart5 = new Chart(Chart5, R6.ObjectiveData).CreateColumn( );
-                    Chart6 = new Chart(Chart6, Division.ProgramData).CreateColumn();
-                    Chart7 = new Chart(Chart7, Division.ProgramData).CreateColumn();
+                    FundChart = new Chart(FundChart, Division.FundData).CreateColumn( );
+                    BocChart = new Chart(BocChart, Division.BocData).CreateColumn( );
+                    NpmChart = new Chart(NpmChart, Division.NpmData).CreateColumn( );
+                    GoalChart = new Chart(GoalChart, Division.GoalData).CreateColumn( );
+                    AreaChart1 = new Chart(AreaChart1, R6.ObjectiveData).CreateColumn( );
+                    AreaChart = new Chart(AreaChart, Division.ProgramData).CreateColumn();
+                    ProjectChart = new Chart(ProjectChart, Division.ProgramData).CreateColumn();
                     SummaryTabControl.SelectedIndexChanged += new EventHandler(GetTabPanelTitle);
                 }
 
                 #endregion
+
+                #region Control Arrays
+
+                private TabPageAdv[] GetTabs()
+                {
+                    try
+                    {
+                        var tabs = SummaryTabControl.TabPages;
+                        var tab = new TabPageAdv[tabs.Count];
+                        for (int i = 0; i < tabs.Count; i++)
+                        {
+                            tab[i] = tabs[i];
+                        }
+                        return tab;
+                    }
+                    catch (Exception e)
+                    {
+
+                        MessageBox.Show(e.Message);
+                        return null;
+                    }
+                }
+
+                private ExpandCollapsePanel[] GetExpanders()
+                {
+                    try
+                    {
+                        var expander = new ExpandCollapsePanel[Tab.Length];
+                        for (int i = 0; i < Tab.Length; i++)
+                            Expander[i] = new ExpandCollapsePanel();
+                        return Expander;
+                    }
+                    catch (Exception e)
+                    {
+
+                        MessageBox.Show(e.Message);
+                        return null;
+                    }
+                }
 
                 private void GetTabPanelTitle(object sender, EventArgs e)
                 {
@@ -158,14 +201,15 @@ namespace Budget
 
                 ChartControl[] GetChartArray()
                 {
-                    return new ChartControl[] { Chart1, Chart2, Chart3, Chart4, Chart5, Chart6, Chart7 };
+                    return new ChartControl[] { FundChart, BocChart, NpmChart, GoalChart, AreaChart1, AreaChart, ProjectChart };
                 }
 
                 ListBox[] GetFilterBox()
                 {
                     var arrary = new ListBox[] { listBox1, listBox2, listBox3, listBox4, listBox5, listBox6, listBox7 };
                     return arrary;
-                }
+                } 
+                #endregion
 
                 #region MetroSet Buttons Methods
 

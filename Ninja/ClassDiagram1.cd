@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Budget.Ninja.Data.Appropriation" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ASUCBQAAAAKoAAAABIAESAVAECAERAEIgCMACIAIAEA=</HashCode>
+      <FileName>Data\Class\Appropriation.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Budget.Ninja.Data.Account" Collapsed="true">
+    <Position X="2.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IQAACQAAAAAAAAIEACEwAIAAAAAAEIAAAAAQAACAAAE=</HashCode>
+      <FileName>Data\Class\Account.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Budget.Ninja.Data.BOC" Collapsed="true">
+    <Position X="3.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAAAAAEAAAgAAQAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Data\Class\BOC.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Budget.Ninja.Data.DataBuilder" Collapsed="true">
+    <Position X="5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ICUIBAAAAIEAAAAABIAAUAQEAAAQRAiAkABAgAAAAEA=</HashCode>
+      <FileName>Data\Class\DataBuilder.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Budget.Ninja.Data.DivisionAuthority" Collapsed="true">
+    <Position X="6.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AC0AFAMQAgCqCAAAAIAGQARAADAERBEogCAAiAAIgEA=</HashCode>
+      <FileName>Data\Class\DivisionAuthority.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Budget.Ninja.Data.FormData" Collapsed="true">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>DG0AFCAAR0AIgAARALCQQAQAQDAEZBEBgDgAiAABBEA=</HashCode>
+      <FileName>Data\Class\FormData.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Budget.Ninja.Data.FTE" Collapsed="true">
+    <Position X="2.25" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACUABAAAAQAKCAAADIBkQATAADAERBEggAIAgBAIAEA=</HashCode>
+      <FileName>Data\Class\FTE.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Budget.Ninja.Data.Metric" Collapsed="true">
+    <Position X="4.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACQBBAEQIAAIABAAAIAAQgQAACEARJEAgAIAgBAQALA=</HashCode>
+      <FileName>Data\Class\Metric.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Budget.Ninja.Data.RegionalAuthority" Collapsed="true">
+    <Position X="5.75" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACUAFAEQgwCKAAAABIAGQARAADAERBEAgCAAiBAIAEA=</HashCode>
+      <FileName>Data\Class\RegionalAuthority.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Budget.Ninja.Data.Employee" Collapsed="true">
+    <Position X="7.25" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAIAQAAAAAQAAAAAAAAAAQEEAABIAAAACAAAAAgA=</HashCode>
+      <FileName>Data\Class\Employee.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Budget.Ninja.Data.Fund" Collapsed="true">
+    <Position X="0.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAEAEAAAgAAQAAAAAAAAAASAAAAAAAAA=</HashCode>
+      <FileName>Data\Class\Fund.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Budget.Ninja.Data.NPM" Collapsed="true">
+    <Position X="3" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAEAEAAAgAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Data\Class\NPM.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Budget.Ninja.Data.Obligation" Collapsed="true">
+    <Position X="4.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AiEiAABAMIICCAIBAABgAAAAAAAAABAgAAIAAAAAAGA=</HashCode>
+      <FileName>Data\Class\Obligation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Budget.Ninja.Data.Org" Collapsed="true">
+    <Position X="6.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAEAAAgAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Data\Class\Org.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Budget.Ninja.Data.Payroll" Collapsed="true">
+    <Position X="0.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAIAAAAISCAAAAAB0AKCAAAACABAgAAIAAAAAAAA=</HashCode>
+      <FileName>Data\Class\Payroll.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Budget.Ninja.Data.Personnel" Collapsed="true">
+    <Position X="2.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Data\Class\Personnel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Budget.Ninja.Data.PRC" Collapsed="true">
+    <Position X="4" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IQEZCQAQEAICiCIUCCFwAICAEAAQEBAgAAJQAAiAAEE=</HashCode>
+      <FileName>Data\Class\PRC.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Budget.Ninja.Data.Query" Collapsed="true">
+    <Position X="6" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>UAQAAEQAAgQAAAMAQABARAAAAAAQYCAAABAAAYAAACA=</HashCode>
+      <FileName>Data\Class\Query.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Budget.Ninja.Data.RC" Collapsed="true">
+    <Position X="7.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAEAAAgAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Data\Class\RC.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Budget.Ninja.Data.Reimbursable" Collapsed="true">
+    <Position X="5.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAABiAADAABAAABAgAAIAAAAAAEA=</HashCode>
+      <FileName>Data\Class\Reimbursable.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

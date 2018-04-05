@@ -189,10 +189,8 @@
       <DependentUpon>AccountControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Data\Class\Account.cs" />
-    <Compile Include="Data\Class\Analysis.cs" />
     <Compile Include="Data\Class\Appropriation.cs" />
     <Compile Include="Data\Class\BOC.cs" />
-    <Compile Include="Data\Class\BudgetAnalysis.cs" />
     <Compile Include="Data\Class\BudgetApplication.cs" />
     <Compile Include="Data\Class\BudgetPortfolio.cs" />
     <Compile Include="Data\Class\Chart.cs" />
@@ -346,11 +344,13 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>NinjaApplicationImages.resx</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Compile>
     <Compile Include="Resources\NinjaDivisionImages.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>NinjaDivisionImages.resx</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Compile>
     <Compile Include="Resources\NinjaFormImages.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -361,19 +361,16 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>NinjaFundCodeImages.resx</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Compile>
-    <Compile Include="Resources\NinjaIcons\NinjaIcons.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>NinjaIcons.resx</DependentUpon>
+    <Compile Include="Resources\NinjaIcons.Designer.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Compile>
     <Compile Include="Resources\NinjaSummaryImages.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>NinjaSummaryImages.resx</DependentUpon>
-    </Compile>
-    <Compile Include="SqlServer.cs">
-      <DependentUpon>SqlServer.xsd</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Compile>
     <Compile Include="SqlServer.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -414,10 +411,12 @@
     <EmbeddedResource Include="Resources\NinjaApplicationImages.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>NinjaApplicationImages.Designer.cs</LastGenOutput>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\NinjaDivisionImages.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>NinjaDivisionImages.Designer.cs</LastGenOutput>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\NinjaFormImages.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -426,19 +425,21 @@
     <EmbeddedResource Include="Resources\NinjaFundCodeImages.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>NinjaFundCodeImages.Designer.cs</LastGenOutput>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
-    <EmbeddedResource Include="Resources\NinjaIcons\NinjaIcons.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>NinjaIcons.Designer.cs</LastGenOutput>
+    <EmbeddedResource Include="Resources\NinjaIcons.resx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\NinjaSummaryImages.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>NinjaSummaryImages.Designer.cs</LastGenOutput>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
     <EntityDeploy Include="EntityData.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>EntityData.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <None Include="ClassDiagram1.cd" />
     <None Include="EntityData.edmx.diagram">
       <DependentUpon>EntityData.edmx</DependentUpon>
     </None>
@@ -455,31 +456,7 @@
     <AdditionalFiles Include="Report\BudgetControlTemplate.xlsx">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </AdditionalFiles>
-    <None Include="Resources\NinjaApplicationImages\Access-New.png" />
-    <None Include="Resources\NinjaApplicationImages\Add-New.png" />
-    <None Include="Resources\NinjaApplicationImages\Admin.png" />
-    <None Include="Resources\NinjaApplicationImages\Bank.png" />
-    <None Include="Resources\NinjaApplicationImages\Branch-Engineering.png" />
-    <None Include="Resources\NinjaApplicationImages\Bullets - 04.png" />
-    <None Include="Resources\NinjaApplicationImages\Calculator-WF.png" />
-    <None Include="Resources\NinjaApplicationImages\Chart Types.png" />
-    <None Include="Resources\NinjaApplicationImages\Chart-2-WF.png" />
-    <None Include="Resources\NinjaApplicationImages\Copy_01.png" />
-    <None Include="Resources\NinjaApplicationImages\Cut_02.png" />
-    <None Include="Resources\NinjaApplicationImages\Database Connection.png" />
-    <None Include="Resources\NinjaApplicationImages\Delete_04.png" />
-    <None Include="Resources\NinjaApplicationImages\Diagram.png" />
-    <None Include="Resources\NinjaApplicationImages\Document-Add.png" />
-    <None Include="Resources\NinjaApplicationImages\Excel n Access.png" />
-    <None Include="Resources\NinjaApplicationImages\Exchange - 02%281%29.png" />
-    <None Include="Resources\NinjaApplicationImages\Formula-Support.png" />
-    <None Include="Resources\NinjaApplicationImages\Graph-03.png" />
-    <None Include="Resources\NinjaApplicationImages\Graph-Diagram.png" />
-    <None Include="Resources\NinjaApplicationImages\Hierarchies.png" />
-    <None Include="Resources\NinjaApplicationImages\Lambda-01.png" />
-    <None Include="Resources\NinjaApplicationImages\Log file icon 2.png" />
-    <None Include="Resources\NinjaApplicationImages\Mail-Send.png" />
-    <None Include="Resources\NinjaApplicationImages\Marketing-WF.png" />
+    <None Include="Resources\epa_seal_medium.ico" />
     <None Include="SqlServer.xsc">
       <DependentUpon>SqlServer.xsd</DependentUpon>
     </None>
@@ -508,353 +485,15 @@
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
     <None Include="Resources\summation_3d_blue_oma_icon.ico" />
-    <None Include="Resources\LeftArrow.png" />
-    <None Include="Resources\11995.ico" />
-    <None Include="Resources\12047.ico" />
-    <None Include="Resources\37223.ico" />
-    <None Include="Resources\42474.ico" />
-    <None Include="Resources\Double-J-Design-Ravenna-3d-Bar-Chart.ico" />
-    <None Include="Resources\epa_seal_medium.ico" />
-    <None Include="Resources\if_5_1376012 %281%29.ico" />
-    <None Include="Resources\if_6_1376009.ico" />
-    <None Include="Resources\if_bar-chart_87411.ico" />
-    <None Include="Resources\if_business-planing_2799210.ico" />
-    <None Include="Resources\if_cpu__chip__microchip__processor__computer__pc__technology_2317703.ico" />
-    <None Include="Resources\if_dollar_87424.ico" />
-    <None Include="Resources\if_epc_1931213.ico" />
-    <None Include="Resources\if_Finance_financial_report_1889193.ico" />
-    <None Include="Resources\if_group_data_44729.ico" />
-    <None Include="Resources\if_group_data_45163 %281%29.ico" />
-    <None Include="Resources\if_hierarchy_1931214.ico" />
-    <None Include="Resources\if_law_87440.ico" />
-    <None Include="Resources\if_research_87460.ico" />
-    <None Include="Resources\if_safe_87462.ico" />
-    <None Include="Resources\if_save_87464.ico" />
-    <None Include="Resources\if_vector_65_14_473802 %281%29.ico" />
     <None Include="Resources\ninja.ico" />
-    <Content Include="Resources\NinjaFormImages\123.jpg" />
-    <Content Include="Resources\NinjaFormImages\171016.jpg" />
-    <Content Include="Resources\NinjaFormImages\218325-1-m.jpg" />
-    <Content Include="Resources\NinjaFormImages\699434-icon-70-document-file-pdf-128.png" />
-    <Content Include="Resources\NinjaFormImages\AboutUs-Icons_Frame5a_Cirlces.png" />
-    <Content Include="Resources\NinjaFormImages\Actions-view-calendar-icon_budget.png" />
-    <Content Include="Resources\NinjaFormImages\api.png" />
-    <Content Include="Resources\NinjaFormImages\blockchain.jpg" />
-    <Content Include="Resources\NinjaFormImages\bo_icon.png" />
-    <Content Include="Resources\NinjaFormImages\budget.jpg" />
-    <Content Include="Resources\NinjaFormImages\charts-512.png" />
-    <Content Include="Resources\NinjaFormImages\Data-Analysis.jpg" />
-    <Content Include="Resources\NinjaFormImages\document %281%29.png" />
-    <Content Include="Resources\NinjaFormImages\Dollar_Money_Time_Payment_Savings_Earnings_Salary-512.png" />
-    <Content Include="Resources\NinjaFormImages\download %281%29.png" />
-    <Content Include="Resources\NinjaFormImages\download.jpg" />
-    <Content Include="Resources\NinjaFormImages\entity_relationship_model_icon.jpg" />
-    <Content Include="Resources\NinjaFormImages\epadarklogoicon.jpg" />
-    <Content Include="Resources\NinjaFormImages\EXPLAIN-FORMATJSON.png" />
-    <Content Include="Resources\NinjaFormImages\ezlizbpckwswoqjbfjaa.jpg" />
-    <Content Include="Resources\NinjaFormImages\federalbudget-icon.png" />
-    <Content Include="Resources\NinjaFormImages\financial-report-business-chart-finance-372ebde1c24ba979-512x512.png" />
-    <Content Include="Resources\NinjaFormImages\Financial-Report-slider2.jpg" />
-    <Content Include="Resources\NinjaFormImages\financial-reports-icon.jpg" />
-    <Content Include="Resources\NinjaFormImages\financialreports.jpg" />
-    <Content Include="Resources\NinjaFormImages\Financial_Report-512.png" />
-    <Content Include="Resources\NinjaFormImages\Financial_Transactions-256.png" />
-    <Content Include="Resources\NinjaFormImages\fiscal_year_2015_budget.jpg" />
-    <Content Include="Resources\NinjaFormImages\govreporting.png" />
-    <Content Include="Resources\NinjaFormImages\icon-analysis500x500.png" />
-    <Content Include="Resources\NinjaFormImages\icon-budget.png" />
-    <Content Include="Resources\NinjaFormImages\icon-innovation %281%29.png" />
-    <Content Include="Resources\NinjaFormImages\images %281%29.png" />
-    <Content Include="Resources\NinjaFormImages\images %2811%29.jpg" />
-    <Content Include="Resources\NinjaFormImages\images %2812%29.jpg" />
-    <Content Include="Resources\NinjaFormImages\images %2814%29.jpg" />
-    <Content Include="Resources\NinjaFormImages\images %287%29.png" />
-    <Content Include="Resources\NinjaFormImages\iStock_000006161493Medium-puzzle.jpg" />
-    <Content Include="Resources\NinjaFormImages\jigsaw-puzzle-and-three-lessons-learned.jpg" />
-    <Content Include="Resources\NinjaFormImages\Jigsaw.png" />
-    <Content Include="Resources\NinjaFormImages\kn1100207198.jpg" />
-    <Content Include="Resources\NinjaFormImages\mmbanner.jpg" />
-    <Content Include="Resources\NinjaFormImages\money-deadline-clock-coin-time-timer-budget-planning-3558282585efb7d3-512x512.png" />
-    <Content Include="Resources\NinjaFormImages\montr-400x284.jpg.pagespeed.ce.kbr0KFiWwq.jpg" />
-    <Content Include="Resources\NinjaFormImages\Planning-and-Budget-Header.jpg" />
-    <Content Include="Resources\NinjaFormImages\planning-graphic.jpg" />
-    <Content Include="Resources\NinjaFormImages\Predictive-modeling.png" />
-    <Content Include="Resources\NinjaFormImages\reporting-and-data-visualization-500x500.png" />
-    <Content Include="Resources\NinjaFormImages\reporting_icon.png" />
-    <Content Include="Resources\NinjaFormImages\resource_builder-01-1-e1503604315834.png" />
-    <Content Include="Resources\NinjaFormImages\RTR4NYEF-1024x683.jpg" />
-    <Content Include="Resources\NinjaFormImages\rzbwrruiezaxgfxmanva.png" />
-    <Content Include="Resources\NinjaFormImages\Screen-Shot-2012-04-18-at-2.43.23-PM-366x327.png" />
-    <Content Include="Resources\NinjaFormImages\SEO-icon.png" />
-    <Content Include="Resources\NinjaFormImages\sql-595x335_0.jpg" />
-    <Content Include="Resources\NinjaFormImages\stakeholder-analysis-project-success.jpg" />
-    <Content Include="Resources\NinjaFormImages\stock-photo--d-budget-federal-text-crossword-on-white-background-96102830.jpg" />
-    <Content Include="Resources\NinjaFormImages\stock-photo-budgeting-concept-metallic-keyboard-with-budgeting-selected-focus-on-blue-enter-button-d-render-475163416.jpg" />
-    <Content Include="Resources\NinjaFormImages\stock-vector-general-expenses-budget-planning-business-icon-flat-vector-illustration-494432347.jpg" />
-    <Content Include="Resources\NinjaFormImages\stock-vector-info-graphic-reporting-and-searching-template-eps-file-1877133681.jpg" />
-    <Content Include="Resources\NinjaFormImages\summary.png" />
-    <Content Include="Resources\NinjaFormImages\Talend-Data-Model-Best-Practices-Part-2-1-250x250.png" />
-    <Content Include="Resources\NinjaFormImages\tile_template_appropriations.jpg" />
-    <Content Include="Resources\NinjaFormImages\tile_template_boc.jpg" />
-    <Content Include="Resources\NinjaFormImages\tile_template_budget_activity.jpg" />
-    <Content Include="Resources\NinjaFormImages\tile_template_division.jpg" />
-    <Content Include="Resources\NinjaFormImages\tile_template_obligations.jpg" />
-    <Content Include="Resources\NinjaFormImages\tile_template_StatusOfFunds.jpg" />
-    <Content Include="Resources\NinjaFormImages\Trading.png" />
-    <Content Include="Resources\NinjaFormImages\Transfer-Arrows.png" />
-    <Content Include="Resources\NinjaFormImages\TripBossEBI_webicon.png" />
-    <Content Include="Resources\NinjaFormImages\x-46-512.png" />
-    <Content Include="Resources\NinjaFormImages\xls.png" />
-    <Content Include="Resources\NinjaDivisionImages\06A.png" />
-    <Content Include="Resources\NinjaDivisionImages\06C.png" />
-    <Content Include="Resources\NinjaDivisionImages\06D.png" />
-    <Content Include="Resources\NinjaDivisionImages\06F.png" />
-    <Content Include="Resources\NinjaDivisionImages\06G.png" />
-    <Content Include="Resources\NinjaDivisionImages\06J.png" />
-    <Content Include="Resources\NinjaDivisionImages\06K.png" />
-    <Content Include="Resources\NinjaDivisionImages\06L.png" />
-    <Content Include="Resources\NinjaDivisionImages\06M.png" />
-    <Content Include="Resources\NinjaDivisionImages\06N.png" />
-    <Content Include="Resources\NinjaDivisionImages\06R.png" />
-    <Content Include="Resources\NinjaDivisionImages\06X.png" />
-    <Content Include="Resources\NinjaFundCodeImages\br.png" />
-    <Content Include="Resources\NinjaFundCodeImages\e1.png" />
-    <Content Include="Resources\NinjaFundCodeImages\e1c.png" />
-    <Content Include="Resources\NinjaFundCodeImages\e1d.png" />
-    <Content Include="Resources\NinjaFundCodeImages\e2.png" />
-    <Content Include="Resources\NinjaFundCodeImages\e2c.png" />
-    <Content Include="Resources\NinjaFundCodeImages\e2d.png" />
-    <Content Include="Resources\NinjaFundCodeImages\e3.png" />
-    <Content Include="Resources\NinjaFundCodeImages\e3c.png" />
-    <Content Include="Resources\NinjaFundCodeImages\e3d.png" />
-    <Content Include="Resources\NinjaFundCodeImages\e4.png" />
-    <Content Include="Resources\NinjaFundCodeImages\e4c.png" />
-    <Content Include="Resources\NinjaFundCodeImages\e4d.png" />
-    <Content Include="Resources\NinjaFundCodeImages\e5.png" />
-    <Content Include="Resources\NinjaFundCodeImages\e5c.png" />
-    <Content Include="Resources\NinjaFundCodeImages\f.png" />
-    <Content Include="Resources\NinjaFundCodeImages\fc.png" />
-    <Content Include="Resources\NinjaFundCodeImages\fd.png" />
-    <Content Include="Resources\NinjaFundCodeImages\fr.png" />
-    <Content Include="Resources\NinjaFundCodeImages\h.png" />
-    <Content Include="Resources\NinjaFundCodeImages\hc.png" />
-    <Content Include="Resources\NinjaFundCodeImages\hr.png" />
-    <Content Include="Resources\NinjaFundCodeImages\sf.png" />
-    <Content Include="Resources\NinjaFundCodeImages\sf6a.png" />
-    <Content Include="Resources\NinjaFundCodeImages\tc.png" />
-    <Content Include="Resources\NinjaFundCodeImages\td.png" />
-    <Content Include="Resources\NinjaFundCodeImages\tr.png" />
-    <Content Include="Resources\NinjaFundCodeImages\TR1.png" />
-    <Content Include="Resources\NinjaFundCodeImages\TR2.png" />
-    <Content Include="Resources\NinjaFundCodeImages\TR2A.png" />
-    <Content Include="Resources\NinjaFundCodeImages\TR2B.png" />
-    <Content Include="Resources\NinjaSummaryImages\Appropriation.png" />
-    <Content Include="Resources\NinjaSummaryImages\D6.png" />
-    <Content Include="Resources\NinjaSummaryImages\Functionality.png" />
-    <Content Include="Resources\NinjaSummaryImages\P7.png" />
+    <Content Include="R6.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="R6_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>R6.mdf</DependentUpon>
+    </Content>
     <None Include="Resources\RightArrow.png" />
-    <None Include="Resources\NinjaApplicationImages\View Details 2-WF.png" />
-    <None Include="Resources\NinjaApplicationImages\Upper Roman.png" />
-    <None Include="Resources\NinjaApplicationImages\Upper Alphabet.png" />
-    <None Include="Resources\NinjaApplicationImages\Upload-02-WF.png" />
-    <None Include="Resources\NinjaApplicationImages\Trash-WF.png" />
-    <None Include="Resources\NinjaApplicationImages\Trash Can-WF.png" />
-    <None Include="Resources\NinjaApplicationImages\Timer-WF.png" />
-    <None Include="Resources\NinjaApplicationImages\Tab-History.png" />
-    <None Include="Resources\NinjaApplicationImages\Tab History-WF.png" />
-    <None Include="Resources\NinjaApplicationImages\Sync-WF.png" />
-    <None Include="Resources\NinjaApplicationImages\Superscript.png" />
-    <None Include="Resources\NinjaApplicationImages\Subscript_01.png" />
-    <None Include="Resources\NinjaApplicationImages\Submit-01-WF.png" />
-    <None Include="Resources\NinjaApplicationImages\Stock-Exchange-06.png" />
-    <None Include="Resources\NinjaApplicationImages\Steparea.png" />
-    <None Include="Resources\NinjaApplicationImages\Stationery-Pen.png" />
-    <None Include="Resources\NinjaApplicationImages\Solutions - 01.png" />
-    <None Include="Resources\NinjaApplicationImages\Server-WF.png" />
-    <None Include="Resources\NinjaApplicationImages\Server-Delete-WF.png" />
-    <None Include="Resources\NinjaApplicationImages\Save-01-WF.png" />
-    <None Include="Resources\NinjaApplicationImages\Save-01.png" />
-    <None Include="Resources\NinjaApplicationImages\Save_01.png" />
-    <None Include="Resources\NinjaApplicationImages\Save.png" />
-    <None Include="Resources\NinjaApplicationImages\RightArrowCircled.png" />
-    <None Include="Resources\NinjaApplicationImages\Reload-01-WF.png" />
-    <None Include="Resources\NinjaApplicationImages\Reload.png" />
-    <None Include="Resources\NinjaApplicationImages\Recover-Deleted Items.png" />
-    <None Include="Resources\NinjaApplicationImages\Recover-Deleted Items%281%29.png" />
-    <None Include="Resources\NinjaApplicationImages\Reading panel-WF.png" />
-    <None Include="Resources\NinjaApplicationImages\Purchase Order-WF.png" />
-    <None Include="Resources\NinjaApplicationImages\Properties.png" />
-    <None Include="Resources\NinjaApplicationImages\Project Plan_01-WF.png" />
-    <None Include="Resources\NinjaApplicationImages\Powerpoint Online.png" />
-    <None Include="Resources\NinjaApplicationImages\Powerpoint Online%281%29.png" />
-    <None Include="Resources\NinjaApplicationImages\Peoples pane-WF.png" />
-    <None Include="Resources\NinjaApplicationImages\People%27s Pane.png" />
-    <None Include="Resources\NinjaApplicationImages\Payment-WF.png" />
-    <None Include="Resources\NinjaApplicationImages\Paste.png" />
-    <None Include="Resources\NinjaApplicationImages\Paid-Invoice-WF.png" />
-    <None Include="Resources\NinjaApplicationImages\Paid Invoice2-WF.png" />
-    <None Include="Resources\NinjaApplicationImages\Organization-WF.png" />
-    <None Include="Resources\NinjaApplicationImages\Operation-WF.png" />
-    <None Include="Resources\NinjaApplicationImages\Office-WF.png" />
-    <None Include="Resources\NinjaApplicationImages\Office-01-WF.png" />
-    <None Include="Resources\NinjaApplicationImages\None.png" />
-    <None Include="Resources\NinjaApplicationImages\New Report.png" />
-    <None Include="Resources\NinjaApplicationImages\Networks-WF.png" />
-    <None Include="Resources\NinjaApplicationImages\Network.png" />
-    <None Include="Resources\NinjaApplicationImages\Navigation-WF.png" />
-    <None Include="Resources\NinjaApplicationImages\Museum .png" />
-    <None Include="Resources\NinjaApplicationImages\Multiple Computers-WF.png" />
-    <None Include="Resources\NinjaApplicationImages\Mug-02-WF.png" />
-    <None Include="Resources\NinjaApplicationImages\MS System Setting3-WF.png" />
-    <None Include="Resources\NinjaApplicationImages\MS PowerPoint 2013.png" />
-    <None Include="Resources\NinjaApplicationImages\Money-WF.png" />
-    <None Include="Resources\NinjaApplicationImages\Money-Credit-Card.png" />
-    <None Include="Resources\NinjaApplicationImages\Money-Coin.png" />
-    <None Include="Resources\NinjaApplicationImages\Money Gold-WF.png" />
-    <None Include="Resources\NinjaApplicationImages\Microsoft-Excel-2013-02.png" />
-    <None Include="Resources\NinjaApplicationImages\Microsoft-Excel-2013-02%281%29.png" />
-    <None Include="Resources\NinjaApplicationImages\Microsoft-Excel-2013-01.png" />
-    <None Include="Resources\NinjaApplicationImages\Media-Rewind.png" />
-    <None Include="Resources\NinjaApplicationImages\Media-Fast-Forward.png" />
-    <None Include="Resources\NinjaApplicationImages\Media Play2-WF.png" />
-    <None Include="Resources\NinjaApplicationImages\Media Pause-WF.png" />
-    <None Include="Resources\NinjaApplicationImages\Media Control-08-WF.png" />
-    <None Include="Resources\NinjaApplicationImages\Media Control-07-WF.png" />
-    <None Include="Resources\NinjaApplicationImages\Media Control-06-WF.png" />
-    <None Include="Resources\NinjaApplicationImages\Media Control-02-WF.png" />
-    <None Include="Resources\NinjaApplicationImages\Media Backward_02.png" />
-    <None Include="Resources\NinjaApplicationImages\MailSync-WF.png" />
-    <None Include="Resources\NinjaApplicationImages\MailBox-WF.png" />
-    <None Include="Resources\NinjaApplicationImages\Mail-Box.png" />
-    <None Include="Resources\NinjaApplicationImages\Mail-01.png" />
-    <None Include="Resources\NinjaApplicationImages\Mail Upload-WF.png" />
-    <None Include="Resources\NinjaApplicationImages\Mail next.png" />
-    <None Include="Resources\NinjaApplicationImages\Mail download.png" />
-    <None Include="Resources\NinjaApplicationImages\Log file icon.png" />
-    <None Include="Resources\NinjaApplicationImages\Library-Books.png" />
-    <None Include="Resources\NinjaApplicationImages\LeftArrowCircled.png" />
-    <None Include="Resources\NinjaApplicationImages\Learning-WF.png" />
-    <None Include="Resources\NinjaApplicationImages\Layer-10-WF.png" />
-    <None Include="Resources\NinjaApplicationImages\Lambda-WF.png" />
-    <None Include="Resources\NinjaApplicationImages\Justice.png" />
-    <None Include="Resources\NinjaApplicationImages\IOLAP List type_05.png" />
-    <None Include="Resources\NinjaApplicationImages\IOLAP List type_04.png" />
-    <None Include="Resources\NinjaApplicationImages\Internet Facilities.png" />
-    <None Include="Resources\NinjaApplicationImages\Identity-01.png" />
-    <None Include="Resources\NinjaApplicationImages\ID-Correct.png" />
-    <None Include="Resources\NinjaApplicationImages\House-11.png" />
-    <None Include="Resources\NinjaApplicationImages\Help - 01.png" />
-    <None Include="Resources\NinjaApplicationImages\Hash-WF.png" />
-    <None Include="Resources\NinjaApplicationImages\Gold-WF.png" />
-    <None Include="Resources\NinjaApplicationImages\Globe.png" />
-    <None Include="Resources\NinjaApplicationImages\Garbage-WF.png" />
-    <None Include="Resources\NinjaApplicationImages\FTP.png" />
-    <None Include="Resources\NinjaApplicationImages\Formula-Support%281%29.png" />
-    <None Include="Resources\NinjaApplicationImages\Form-Remove-01.png" />
-    <None Include="Resources\NinjaApplicationImages\Format-Bullets-01.png" />
-    <None Include="Resources\NinjaApplicationImages\Format Bullet-WF.png" />
-    <None Include="Resources\NinjaApplicationImages\Form remove-01-WF.png" />
-    <None Include="Resources\NinjaApplicationImages\Form ok-01-WF.png" />
-    <None Include="Resources\NinjaApplicationImages\Folder-Upload-01.png" />
-    <None Include="Resources\NinjaApplicationImages\Folder-Empty.png" />
-    <None Include="Resources\NinjaApplicationImages\Folder-Download.png" />
-    <None Include="Resources\NinjaApplicationImages\Folder-Add-02.png" />
-    <None Include="Resources\NinjaApplicationImages\Folder-Add.png" />
-    <None Include="Resources\NinjaApplicationImages\Folder-01.png" />
-    <None Include="Resources\NinjaApplicationImages\Folder Download-WF.png" />
-    <None Include="Resources\NinjaApplicationImages\Folder Add-WF.png" />
-    <None Include="Resources\NinjaApplicationImages\Folder Add 1-WF.png" />
-    <None Include="Resources\NinjaApplicationImages\Finance-04-WF.png" />
-    <None Include="Resources\NinjaApplicationImages\File-Format-ZIP.png" />
-    <None Include="Resources\NinjaApplicationImages\File-Format-ZIP%281%29.png" />
-    <None Include="Resources\NinjaApplicationImages\File-Format-PPT.png" />
-    <None Include="Resources\NinjaApplicationImages\File-Format-PNG.png" />
-    <None Include="Resources\NinjaApplicationImages\File-Format-Mp3.png" />
-    <None Include="Resources\NinjaApplicationImages\File-Format-GIF.png" />
-    <None Include="Resources\NinjaApplicationImages\File-Format-BitMap.png" />
-    <None Include="Resources\NinjaApplicationImages\Expand-03-WF.png" />
-    <None Include="Resources\NinjaApplicationImages\Excel-Import and Export.png" />
-    <None Include="Resources\NinjaApplicationImages\Excel-Export.png" />
-    <None Include="Resources\NinjaApplicationImages\Excel_01.png" />
-    <None Include="Resources\NinjaApplicationImages\Document-Save.png" />
-    <None Include="Resources\NinjaApplicationImages\Document-Delete-01.png" />
-    <None Include="Resources\NinjaApplicationImages\Discussion-WF.png" />
-    <None Include="Resources\NinjaApplicationImages\Despeckle.png" />
-    <None Include="Resources\NinjaApplicationImages\Delete_03.png" />
-    <None Include="Resources\NinjaApplicationImages\Delete Row.png" />
-    <None Include="Resources\NinjaApplicationImages\Delete Column.png" />
-    <None Include="Resources\NinjaApplicationImages\DataSynchronize-WF.png" />
-    <None Include="Resources\NinjaApplicationImages\Data-Synchronize.png" />
-    <None Include="Resources\NinjaApplicationImages\Data-Merge.png" />
-    <None Include="Resources\NinjaApplicationImages\Data-Information.png" />
-    <None Include="Resources\NinjaApplicationImages\DataHistogram-WF.png" />
-    <None Include="Resources\NinjaApplicationImages\Data-Export.png" />
-    <None Include="Resources\NinjaApplicationImages\Data-Defragmentation.png" />
-    <None Include="Resources\NinjaApplicationImages\Database-WF.png" />
-    <None Include="Resources\NinjaApplicationImages\Data Network-WF.png" />
-    <None Include="Resources\NinjaApplicationImages\CPU-01.png" />
-    <None Include="Resources\NinjaApplicationImages\Copy_02.png" />
-    <None Include="Resources\NinjaApplicationImages\Connector-WF.png" />
-    <None Include="Resources\NinjaApplicationImages\Conditional-Formatting.png" />
-    <None Include="Resources\NinjaApplicationImages\Computer-Desktop.png" />
-    <None Include="Resources\NinjaApplicationImages\Command-Undo.png" />
-    <None Include="Resources\NinjaApplicationImages\Command-Refresh-01.png" />
-    <None Include="Resources\NinjaApplicationImages\Command Undo-WF.png" />
-    <None Include="Resources\NinjaApplicationImages\Command Refresh-WF.png" />
-    <None Include="Resources\NinjaApplicationImages\Command Redo-WF.png" />
-    <None Include="Resources\NinjaApplicationImages\Columns.png" />
-    <None Include="Resources\NinjaApplicationImages\Column-Add.png" />
-    <None Include="Resources\NinjaApplicationImages\Column Graph - 01.png" />
-    <None Include="Resources\NinjaApplicationImages\Column add-WF.png" />
-    <None Include="Resources\NinjaApplicationImages\Cloud-Recycle.png" />
-    <None Include="Resources\NinjaApplicationImages\City-WF.png" />
-    <None Include="Resources\NinjaApplicationImages\City.png" />
-    <None Include="Resources\NinjaApplicationImages\CircledArrow Right - 02.png" />
-    <None Include="Resources\NinjaApplicationImages\Circled right - 01.png" />
-    <None Include="Resources\NinjaApplicationImages\Circled Left - 01.png" />
-    <None Include="Resources\NinjaApplicationImages\Check-WF.png" />
-    <None Include="Resources\NinjaApplicationImages\Check-WF%281%29.png" />
-    <None Include="Resources\NinjaApplicationImages\Check-04-WF.png" />
-    <None Include="Resources\NinjaApplicationImages\Check-04-WF%281%29.png" />
-    <None Include="Resources\NinjaApplicationImages\Check-02-WF.png" />
-    <None Include="Resources\NinjaApplicationImages\Check Mark_01.png" />
-    <None Include="Resources\NinjaApplicationImages\chart-blue_530x.png" />
-    <None Include="Resources\NinjaApplicationImages\Chart Scatter.png" />
-    <None Include="Resources\NinjaApplicationImages\Chart Radar.png" />
-    <None Include="Resources\NinjaApplicationImages\Chart Polar.png" />
-    <None Include="Resources\NinjaApplicationImages\Category.png" />
-    <None Include="Resources\NinjaApplicationImages\Cash.png" />
-    <None Include="Resources\NinjaApplicationImages\Calculator-02-WF.png" />
-    <None Include="Resources\NinjaApplicationImages\Calculator-01.png" />
-    <None Include="Resources\NinjaApplicationImages\Calculation-WF.png" />
-    <None Include="Resources\NinjaApplicationImages\C Sharp-02.png" />
-    <None Include="Resources\NinjaApplicationImages\Branch - 03.png" />
-    <None Include="Resources\NinjaApplicationImages\Branch - 02.png" />
-    <None Include="Resources\NinjaApplicationImages\Boxes.png" />
-    <None Include="Resources\NinjaApplicationImages\Boxes .png" />
-    <None Include="Resources\NinjaApplicationImages\BoxedArrow Right 01-WF.png" />
-    <None Include="Resources\NinjaApplicationImages\BoxedArrow Left 01-WF.png" />
-    <None Include="Resources\NinjaApplicationImages\Book-03.png" />
-    <None Include="Resources\NinjaApplicationImages\Bid-01.png" />
-    <None Include="Resources\NinjaApplicationImages\Bank-01-WF.png" />
-    <None Include="Resources\NinjaApplicationImages\Bank-01-WF%281%29.png" />
-    <None Include="Resources\NinjaApplicationImages\Balance-04.png" />
-    <None Include="Resources\NinjaApplicationImages\Balance-02.png" />
-    <None Include="Resources\NinjaApplicationImages\ATM-02-WF.png" />
-    <None Include="Resources\NinjaApplicationImages\ATM-02.png" />
-    <None Include="Resources\NinjaApplicationImages\Arrowhead-Right-01.png" />
-    <None Include="Resources\NinjaApplicationImages\Arrowhead-Left-01.png" />
-    <None Include="Resources\NinjaApplicationImages\Align Left_01-WF.png" />
-    <None Include="Resources\NinjaApplicationImages\Agricultural-Loan.png" />
-    <None Include="Resources\NinjaApplicationImages\Add row child.png" />
-    <None Include="Resources\NinjaApplicationImages\Add row bottom.png" />
-    <None Include="Resources\NinjaApplicationImages\Add Report.png" />
-    <None Include="Resources\NinjaApplicationImages\Accounting-01-WF.png" />
-    <None Include="Resources\NinjaApplicationImages\Window-Properties.png" />
-    <None Include="Resources\NinjaApplicationImages\View-Tiles.png" />
-    <None Include="Resources\NinjaApplicationImages\View-05-WF.png" />
-    <None Include="Resources\NinjaApplicationImages\View-04-WF.png" />
-    <None Include="Resources\NinjaApplicationImages\View List-WF.png" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">

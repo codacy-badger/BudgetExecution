@@ -30,9 +30,8 @@ namespace Budget
                 public decimal Average { get; }
                 public decimal[] Metrics { get; }
                 public FTE FTE { get; }
-                public Metric FundMetric { get; set; }
+                public Metric DataMetric { get; set; }
                 public Dictionary<string, decimal> FundData { get; }
-                public Metric FteMetric { get; set; }
                 public Dictionary<string, decimal> FteInfo { get; }
                 public Dictionary<string, decimal> BocData { get; }
                 public Dictionary<string, decimal> NpmData { get; }
