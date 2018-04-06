@@ -1,9 +1,5 @@
-﻿#region Using Directives
-
-using System;
+﻿using System;
 using System.Data;
-
-#endregion
 
 namespace Budget
 {
@@ -15,11 +11,11 @@ namespace Budget
             {
                 #region Properties
 
-                DataRow[] Records { get; }
-                DataSet E6 { get; }
                 PRC[] Accounts { get; }
+                DataSet E6 { get; }
                 Tuple<DataTable, PRC[], decimal, int> PrcData { get; }
                 Query Query { get; }
+                DataRow[] Records { get; }
                 Tuple<DataTable, DataRow[], decimal, int> SqlData { get; }
                 DataTable Table { get; }
 
@@ -27,17 +23,17 @@ namespace Budget
 
                 #region Methods
 
-                DataSet GetDataSet( );
-
-                DataRow[] GetRecords( );
-
                 decimal GetAverage(DataTable table);
 
                 int GetCount(DataTable table);
 
+                DataSet GetDataSet();
+
                 decimal[] GetMetrics(DataTable table);
 
-                Tuple<DataTable, DataRow[], decimal, int> GetSqlData( );
+                DataRow[] GetRecords();
+
+                Tuple<DataTable, DataRow[], decimal, int> GetSqlData();
 
                 decimal GetTotal(DataTable table);
 

@@ -8,7 +8,7 @@
             {
                 #region Constructors
 
-                public Personnel( )
+                public Personnel()
                 {
                 }
 

@@ -1,17 +1,13 @@
-﻿#region Using Directives
-
-using MetroSet_UI.Controls;
+﻿using MetroSet_UI.Controls;
+using Syncfusion.Windows.Forms;
+using Syncfusion.Windows.Forms.Chart;
+using Syncfusion.Windows.Forms.Tools;
 using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
-using Syncfusion.Windows.Forms;
-using Syncfusion.Windows.Forms.Tools;
-using Syncfusion.Windows.Forms.Chart;
-
-#endregion
 
 namespace Budget
 {
@@ -22,30 +18,31 @@ namespace Budget
             public class FormData : IBudgetAuthority
             {
                 #region Properties
+
                 public IBudgetAuthority Authority { get; set; }
+                public decimal Average { get; set; }
+                public BindingSource BindingSource { get; set; }
+                public ChartControl Chart { get; set; }
+                public ChartDataBindModel ChartModel { get; set; }
+                public int Count { get; set; }
                 public DataBuilder Data { get; set; }
-                public Tuple<DataTable, PRC[], decimal, int> PrcData { get; set; }
-                bool Percent { get; set; }
+                public Dictionary<string, string[]> DataElement { get; set; }
+                public DataGridView DataGrid { get; set; }
                 public DataSet E6 { get; set; }
+                public ListBox FilterBox { get; set; }
+                public decimal[] Metrics { get; set; }
+                public BindingNavigator Navigator { get; set; }
+                public FlowLayoutPanel Panel { get; set; }
+                public Tuple<DataTable, PRC[], decimal, int> PrcData { get; set; }
                 public DataTable Table { get; set; }
                 public decimal Total { get; set; }
-                public decimal Average { get; set; }
-                public int Count { get; set; }
-                public Dictionary<string, string[]> DataElement { get; set; }
-                public FlowLayoutPanel Panel { get; set; }
-                public ListBox FilterBox { get; set; }
-                public BindingSource BindingSource { get; set; }
-                public DataGridView DataGrid { get; set; }
-                public BindingNavigator Navigator { get; set; }
-                public decimal[] Metrics { get; set; }
-                public ChartControl Chart { get; set;}  
-                public ChartDataBindModel ChartModel { get; set; }
+                private bool Percent { get; set; }
 
                 #endregion
 
                 #region Constructors
 
-                public FormData( )
+                public FormData()
                 {
                 }
 
@@ -68,86 +65,228 @@ namespace Budget
 
                 #region Methods
 
-                internal void GetGridColumns(DataGridView dgv)
-                {
-                    foreach (DataGridViewColumn dc in dgv.Columns)
-                        dc.Visible = false;
-                    dgv.Columns[3].Visible = true;
-                    dgv.Columns[4].Visible = true;
-                    dgv.Columns[6].Visible = true;
-                    dgv.Columns[8].Visible = true;
-                    dgv.Columns[9].Visible = true;
-                    dgv.Columns[11].Visible = true;
-                    dgv.Columns[12].Visible = true;
-                    dgv.Columns[12].DefaultCellStyle.Format = "c";
-                }
+                DataSet IBudgetAuthority.E6 { get; }
 
-                internal void BindTextBox(BindingSource bs, TextBox tb, string field)
+                public DataTable FilterTable(DataTable table, string column, string filter)
                 {
-                    var table = (DataTable)bs.DataSource;
-                    var row = table.Rows[bs.Position];
-                    var binding = new Binding("Text", row, field);
-                    tb.DataBindings.Add(binding);
-                }
-
-                internal void BindGridAndNavigator(DataTable table, DataGridView dg, BindingSource bs, BindingNavigator bn)
-                {
-                    bs.DataSource = table;
-                    dg.DataSource = bs;
-                    bn.BindingSource = bs;
-                    GetGridColumns(dg);
-                }
-
-                internal void GetFilterButtons(Control panel, string[] list)
-                {
-                    panel.Controls.Clear();
-                    foreach (string f in list)
+                    try
                     {
-                        var b = new MetroSetButton( );
-                        b.Text = f;
-                        b.Font = new Font("Segoe UI", 8f);
-                        b.NormalColor = Color.Black;
-                        b.NormalTextColor = SystemColors.MenuHighlight;
-                        b.NormalBorderColor = Color.Black;
-                        b.HoverBorderColor = Color.Blue;
-                        b.HoverColor = Color.SteelBlue;
-                        b.HoverTextColor = Color.AntiqueWhite;
-                        b.Size = new Size(175,30);
-                        b.Margin = new Padding(3);
-                        b.Padding = new Padding(1);
-                        panel.Controls.Add(b);
-                        panel.AutoSize = true;
-                        b.Tag = f;                        
+                        return table.AsEnumerable().Where(p => p.Field<string>(column).Equals(filter)).Select(p => p).CopyToDataTable();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message.ToString());
+                        return null;
                     }
                 }
 
-                internal void GetFilterListItems(Control panel, string[] list)
+                public decimal GetAverage(DataTable table)
                 {
-                    var box = panel as MetroSetListBox;
-                    box.Controls.Clear();
-                    foreach (string f in list)
+                    try
                     {
-                        box.Items.Add(f);
+                        return table.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Average();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message.ToString());
+                        return -1M;
                     }
                 }
 
-                internal void GetAppropriationFilterButtonBox(DataTable table, Control filterPanel)
+                public string[] GetCodes(DataTable table, string column)
                 {
-                    GetFilterButtons(filterPanel, GetCodes(table, "FundName"));
-                    foreach (Control c in filterPanel.Controls) c.Click += AppropriationButton_OnSelect;
+                    try
+                    {
+                        return table.AsEnumerable().Select(p => p.Field<string>(column)).Distinct().ToArray();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message.ToString());
+                        return null;
+                    }
                 }
 
-                internal void GetAppropriationFilterListBox(DataTable table, Control filterPanel)
+                public int GetCount(DataTable table)
                 {
-                    var filter = filterPanel as MetroSetListBox;
-                    GetFilterListItems(filter, GetCodes(table, "FundName"));
-                    filter.SelectedIndexChanged += AppropriationListBoxItem_OnSelect;
+                    try
+                    {
+                        return table.Rows.Count;
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message.ToString());
+                        return -1;
+                    }
+                }
+
+                public Dictionary<string, string[]> GetDataElements(DataTable table)
+                {
+                    var data = new Dictionary<string, string[]>();
+                    foreach (DataColumn dc in table.Columns)
+                    {
+                        if (dc.ColumnName.Equals("Id") || dc.ColumnName.Equals("Amount"))
+                            continue;
+                        data.Add(dc.ColumnName, GetCodes(table, dc.ColumnName));
+                    }
+                    if (data.ContainsKey("Id")) data.Remove("Id");
+                    if (data.ContainsKey("Amount")) data.Remove("Amount");
+                    if (data.ContainsKey("P6_Id")) data.Remove("P6_Id");
+                    return data;
+                }
+
+                public Dictionary<string, decimal[]> GetDataMetrics(DataTable table, string column, string filter)
+                {
+                    try
+                    {
+                        string[] list = GetCodes(table, column);
+                        Dictionary<string, decimal[]> info = new Dictionary<string, decimal[]>();
+                        foreach (string ftr in list)
+                        {
+                            decimal[] stat = new decimal[4];
+                            stat[0] = GetDataValues(table, column, filter).Item3;
+                            stat[1] = (decimal)GetDataValues(table, column, filter).Item4;
+                            stat[2] = stat[0] / stat[1];
+                            stat[3] = (stat[0] / stat[1]) * 100;
+                            info.Add(filter, stat);
+                        }
+                        return info;
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message.ToString());
+                        return null;
+                    }
+                }
+
+                public Dictionary<string, decimal> GetDataTotals(DataTable table, string column, string filter)
+                {
+                    try
+                    {
+                        var list = GetCodes(table, column);
+                        Dictionary<string, decimal> info = new Dictionary<string, decimal>();
+                        foreach (string ftr in list)
+                        {
+                            var query = table.AsEnumerable().Where(p => p.Field<string>(column).Equals(filter))
+                                .Sum(p => p.Field<decimal>("Amount"));
+                            if (query > 0)
+                                info.Add(filter, query);
+                        }
+                        return info;
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message.ToString());
+                        return null;
+                    }
+                }
+
+                public Tuple<DataTable, PRC[], decimal, int> GetDataValues(DataTable table, string column, string filter)
+                {
+                    try
+                    {
+                        var query = table.AsEnumerable().Where(p => p.Field<string>(column).Equals(filter)).Select(p => p).CopyToDataTable();
+                        return new Tuple<DataTable, PRC[], decimal, int>(query, GetPrcArray(query), GetTotal(query), GetCount(query));
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message.ToString());
+                        return null;
+                    }
+                }
+
+                public decimal[] GetMetrics(DataTable table)
+                {
+                    var count = GetCount(table);
+                    return new decimal[] { GetTotal(table), (decimal)count, GetAverage(table) };
+                }
+
+                public Dictionary<string, decimal[]> GetMetrics(DataTable table, string[] list, string column)
+                {
+                    try
+                    {
+                        Dictionary<string, decimal[]> info = new Dictionary<string, decimal[]>();
+                        foreach (string filter in list)
+                        {
+                            decimal[] stat = new decimal[4];
+                            stat[0] = GetDataValues(table, column, filter).Item3;
+                            stat[1] = (decimal)GetDataValues(table, column, filter).Item4;
+                            stat[2] = stat[0] / stat[1];
+                            stat[3] = (stat[0] / stat[1]) * 100;
+                            info.Add(filter, stat);
+                        }
+                        return info;
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message.ToString());
+                        return null;
+                    }
+                }
+
+                public PRC[] GetPrcArray(DataTable table)
+                {
+                    try
+                    {
+                        return table.AsEnumerable().Select(p => new PRC()).ToArray();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message.ToString());
+                        return null;
+                    }
+                }
+
+                public DataTable GetTable(DataTable table, string column, string filter)
+                {
+                    try
+                    {
+                        return table.AsEnumerable().Where(p => p.Field<string>(column).Equals(filter)).Select(p => p).CopyToDataTable();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message.ToString());
+                        return null;
+                    }
+                }
+
+                public decimal GetTotal(DataTable table)
+                {
+                    try
+                    {
+                        return table.AsEnumerable().Sum(p => p.Field<decimal>("Amount"));
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message.ToString());
+                        return -1M;
+                    }
+                }
+
+                public Dictionary<string, decimal> GetTotals(DataTable table, string[] filters, string column)
+                {
+                    try
+                    {
+                        Dictionary<string, decimal> info = new Dictionary<string, decimal>();
+                        foreach (string filter in filters)
+                        {
+                            var query = table.AsEnumerable().Where(p => p.Field<string>(column).Equals(filter))
+                                .Select(p => p).Sum(p => p.Field<decimal>("Amount"));
+                            if (query > 0)
+                                info.Add(filter, query);
+                        }
+                        return info;
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message.ToString());
+                        return null;
+                    }
                 }
 
                 internal void AppropriationButton_OnSelect(object sender, EventArgs e)
                 {
                     var button = sender as MetroSetButton;
-                    var table = GetTable(Table, "FundName", button.Tag.ToString( ));
+                    var table = GetTable(Table, "FundName", button.Tag.ToString());
                     BindingSource.DataSource = table;
                     GetBocFilterBox(table, Panel);
                     Table = table;
@@ -162,25 +301,20 @@ namespace Budget
                     Table = table;
                 }
 
-                internal void GetBocFilterBox(DataTable table, FlowLayoutPanel filterPanel)
+                internal void BindGridAndNavigator(DataTable table, DataGridView dg, BindingSource bs, BindingNavigator bn)
                 {
-                    GetFilterButtons(filterPanel, GetCodes(table, "BocName"));
-                    foreach (Control c in filterPanel.Controls) c.Click += BocButtonSelect_OnSelect;
+                    bs.DataSource = table;
+                    dg.DataSource = bs;
+                    bn.BindingSource = bs;
+                    GetGridColumns(dg);
                 }
 
-                internal void GetBocListBox(DataTable table, Control filterPanel)
+                internal void BindTextBox(BindingSource bs, TextBox tb, string field)
                 {
-                    var filter = filterPanel as MetroSetListBox;
-                    GetFilterButtons(filter, GetCodes(table, "BocName"));
-                    filter.SelectedIndexChanged += BocListBoxItem_OnSelect;
-                }
-
-                internal void BocListBoxItem_OnSelect(object sender)
-                {
-                    var button = sender as MetroSetListBox;
-                    var table = GetTable(Table, "BocName", button.SelectedItem.ToString( ));
-                    BindingSource.DataSource = table;
-                    GetBocFilterBox(Table, Panel);
+                    var table = (DataTable)bs.DataSource;
+                    var row = table.Rows[bs.Position];
+                    var binding = new Binding("Text", row, field);
+                    tb.DataBindings.Add(binding);
                 }
 
                 internal void BocButtonSelect_OnSelect(object sender, EventArgs e)
@@ -190,27 +324,13 @@ namespace Budget
                     BindingSource.DataSource = table;
                     GetBocFilterBox(Table, Panel);
                 }
-                internal void ReturnButton_OnClick(object sender, EventArgs e)
+
+                internal void BocListBoxItem_OnSelect(object sender)
                 {
-                    Table = Data.Table;
-                    BindingSource.DataSource = Table;
-                    GetAppropriationFilterListBox(Table, FilterBox);
-                }
-                internal void GetFormSettings(MetroForm form)
-                {
-                    form.Size = new Size(1200, 700);
-                    form.BackColor = Color.Black;
-                    form.BorderColor = SystemColors.MenuHighlight;
-                    form.ForeColor = SystemColors.MenuHighlight;
-                    form.MetroColor = Color.Black;
-                    form.ShowIcon = false;
-                    form.ShowInTaskbar = true;
-                    form.CaptionBarColor = Color.Black;
-                    form.CaptionFont = new Font("Segoe UI", 10f, FontStyle.Regular);
-                    form.CaptionForeColor = SystemColors.MenuHighlight;
-                    form.BorderThickness = 1;
-                    form.Padding = new Padding(1);
-                    form.CaptionAlign = HorizontalAlignment.Left;
+                    var button = sender as MetroSetListBox;
+                    var table = GetTable(Table, "BocName", button.SelectedItem.ToString());
+                    BindingSource.DataSource = table;
+                    GetBocFilterBox(Table, Panel);
                 }
 
                 internal void ConfigureTabControl(MetroForm form, TabControlAdv tab, DataBuilder Ninja)
@@ -239,227 +359,102 @@ namespace Budget
                     }
                 }
 
-                #region IAuthority Interface Implementation
-
-                public int GetCount(DataTable table)
+                internal void GetAppropriationFilterButtonBox(DataTable table, Control filterPanel)
                 {
-                    try
+                    GetFilterButtons(filterPanel, GetCodes(table, "FundName"));
+                    foreach (Control c in filterPanel.Controls) c.Click += AppropriationButton_OnSelect;
+                }
+
+                internal void GetAppropriationFilterListBox(DataTable table, Control filterPanel)
+                {
+                    var filter = filterPanel as MetroSetListBox;
+                    GetFilterListItems(filter, GetCodes(table, "FundName"));
+                    filter.SelectedIndexChanged += AppropriationListBoxItem_OnSelect;
+                }
+
+                internal void GetBocFilterBox(DataTable table, FlowLayoutPanel filterPanel)
+                {
+                    GetFilterButtons(filterPanel, GetCodes(table, "BocName"));
+                    foreach (Control c in filterPanel.Controls) c.Click += BocButtonSelect_OnSelect;
+                }
+
+                internal void GetBocListBox(DataTable table, Control filterPanel)
+                {
+                    var filter = filterPanel as MetroSetListBox;
+                    GetFilterButtons(filter, GetCodes(table, "BocName"));
+                    filter.SelectedIndexChanged += BocListBoxItem_OnSelect;
+                }
+
+                internal void GetFilterButtons(Control panel, string[] list)
+                {
+                    panel.Controls.Clear();
+                    foreach (string f in list)
                     {
-                        return table.Rows.Count;
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message.ToString( ) + $"Target Method:\n{ex.TargetSite}\n" + $"Stack:\n{ex.StackTrace}");
-                        return -1;
+                        var b = new MetroSetButton();
+                        b.Text = f;
+                        b.Font = new Font("Segoe UI", 8f);
+                        b.NormalColor = Color.Black;
+                        b.NormalTextColor = SystemColors.MenuHighlight;
+                        b.NormalBorderColor = Color.Black;
+                        b.HoverBorderColor = Color.Blue;
+                        b.HoverColor = Color.SteelBlue;
+                        b.HoverTextColor = Color.AntiqueWhite;
+                        b.Size = new Size(175, 30);
+                        b.Margin = new Padding(3);
+                        b.Padding = new Padding(1);
+                        panel.Controls.Add(b);
+                        panel.AutoSize = true;
+                        b.Tag = f;
                     }
                 }
 
-                public decimal GetTotal(DataTable table)
+                internal void GetFilterListItems(Control panel, string[] list)
                 {
-                    try
+                    var box = panel as MetroSetListBox;
+                    box.Controls.Clear();
+                    foreach (string f in list)
                     {
-                        return table.AsEnumerable( ).Sum(p => p.Field<decimal>("Amount"));
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message.ToString( ) + $"Target Method:\n{ex.TargetSite}\n" + $"Stack:\n{ex.StackTrace}");
-                        return -1M;
+                        box.Items.Add(f);
                     }
                 }
 
-                public decimal GetAverage(DataTable table)
+                internal void GetFormSettings(MetroForm form)
                 {
-                    try
-                    {
-                        return table.AsEnumerable( ).Select(p => p.Field<decimal>("Amount")).Average( );
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message.ToString( ) + $"Target Method:\n{ex.TargetSite}\n" + $"Stack:\n{ex.StackTrace}");
-                        return -1M;
-                    }
+                    form.Size = new Size(1200, 700);
+                    form.BackColor = Color.Black;
+                    form.BorderColor = SystemColors.MenuHighlight;
+                    form.ForeColor = SystemColors.MenuHighlight;
+                    form.MetroColor = Color.Black;
+                    form.ShowIcon = false;
+                    form.ShowInTaskbar = true;
+                    form.CaptionBarColor = Color.Black;
+                    form.CaptionFont = new Font("Segoe UI", 10f, FontStyle.Regular);
+                    form.CaptionForeColor = SystemColors.MenuHighlight;
+                    form.BorderThickness = 1;
+                    form.Padding = new Padding(1);
+                    form.CaptionAlign = HorizontalAlignment.Left;
                 }
 
-                public decimal[] GetMetrics(DataTable table)
+                internal void GetGridColumns(DataGridView dgv)
                 {
-                    var count = GetCount(table);
-                    return new decimal[] { GetTotal(table), (decimal)count, GetAverage(table) };
+                    foreach (DataGridViewColumn dc in dgv.Columns)
+                        dc.Visible = false;
+                    dgv.Columns[3].Visible = true;
+                    dgv.Columns[4].Visible = true;
+                    dgv.Columns[6].Visible = true;
+                    dgv.Columns[8].Visible = true;
+                    dgv.Columns[9].Visible = true;
+                    dgv.Columns[11].Visible = true;
+                    dgv.Columns[12].Visible = true;
+                    dgv.Columns[12].DefaultCellStyle.Format = "c";
                 }
 
-                public string[] GetCodes(DataTable table, string column)
+                internal void ReturnButton_OnClick(object sender, EventArgs e)
                 {
-                    try
-                    {
-                        return table.AsEnumerable( ).Select(p => p.Field<string>(column)).Distinct( ).ToArray( );
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message.ToString( ) + $"Target Method:\n{ex.TargetSite}\n" + $"Stack:\n{ex.StackTrace}");
-                        return null;
-                    }
+                    Table = Data.Table;
+                    BindingSource.DataSource = Table;
+                    GetAppropriationFilterListBox(Table, FilterBox);
                 }
-
-                public Dictionary<string, string[]> GetDataElements(DataTable table)
-                {
-                    var data = new Dictionary<string, string[]>( );
-                    foreach (DataColumn dc in table.Columns)
-                    {
-                        if (dc.ColumnName.Equals("Id") || dc.ColumnName.Equals("Amount"))
-                            continue;
-                        data.Add(dc.ColumnName, GetCodes(table, dc.ColumnName));
-                    }
-                    if (data.ContainsKey("Id")) data.Remove("Id");
-                    if (data.ContainsKey("Amount")) data.Remove("Amount");
-                    if (data.ContainsKey("P6_Id")) data.Remove("P6_Id");
-                    return data;
-                }
-
-                public PRC[] GetPrcArray(DataTable table)
-                {
-                    try
-                    {
-                        return table.AsEnumerable( ).Select(p => new PRC( )).ToArray( );
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message.ToString( ) + $"Target Method:\n{ex.TargetSite}\n" + $"Stack:\n{ex.StackTrace}");
-                        return null;
-                    }
-                }
-
-                public Tuple<DataTable, PRC[], decimal, int> GetDataValues(DataTable table, string column, string filter)
-                {
-                    try
-                    {
-                        var query = table.AsEnumerable( ).Where(p => p.Field<string>(column).Equals(filter)).Select(p => p).CopyToDataTable( );
-                        return new Tuple<DataTable, PRC[], decimal, int>(query, GetPrcArray(query), GetTotal(query), GetCount(query));
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message.ToString( ) + $"Target Method:\n{ex.TargetSite}\n" + $"Stack:\n{ex.StackTrace}");
-                        return null;
-                    }
-                }
-
-                public Dictionary<string, decimal> GetDataTotals(DataTable table, string column, string filter)
-                {
-                    try
-                    {
-                        var list = GetCodes(table, column);
-                        Dictionary<string, decimal> info = new Dictionary<string, decimal>( );
-                        foreach (string ftr in list)
-                        {
-                            var query = table.AsEnumerable( ).Where(p => p.Field<string>(column).Equals(filter))
-                                .Sum(p => p.Field<decimal>("Amount"));
-                            if (query > 0)
-                                info.Add(filter, query);
-                        }
-                        return info;
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message.ToString( ) + $"Target Method:\n{ex.TargetSite}\n" + $"Stack:\n{ex.StackTrace}");
-                        return null;
-                    }
-                }
-
-                public Dictionary<string, decimal> GetTotals(DataTable table, string[] filters, string column)
-                {
-                    try
-                    {
-                        Dictionary<string, decimal> info = new Dictionary<string, decimal>( );
-                        foreach (string filter in filters)
-                        {
-                            var query = table.AsEnumerable( ).Where(p => p.Field<string>(column).Equals(filter))
-                                .Select(p => p).Sum(p => p.Field<decimal>("Amount"));
-                            if (query > 0)
-                                info.Add(filter, query);
-                        }
-                        return info;
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message.ToString( ) + $"Target Method:\n{ex.TargetSite}\n" + $"Stack:\n{ex.StackTrace}");
-                        return null;
-                    }
-                }
-
-                public Dictionary<string, decimal[]> GetMetrics(DataTable table, string[] list, string column)
-                {
-                    try
-                    {
-                        Dictionary<string, decimal[]> info = new Dictionary<string, decimal[]>( );
-                        foreach (string filter in list)
-                        {
-                            decimal[] stat = new decimal[4];
-                            stat[0] = GetDataValues(table, column, filter).Item3;
-                            stat[1] = (decimal)GetDataValues(table, column, filter).Item4;
-                            stat[2] = stat[0] / stat[1];
-                            stat[3] = (stat[0] / stat[1]) * 100;
-                            info.Add(filter, stat);
-                        }
-                        return info;
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message.ToString( ) + $"Target Method:\n{ex.TargetSite}\n" + $"Stack:\n{ex.StackTrace}");
-                        return null;
-                    }
-                }
-
-                public Dictionary<string, decimal[]> GetDataMetrics(DataTable table, string column, string filter)
-                {
-                    try
-                    {
-                        string[] list = GetCodes(table, column);
-                        Dictionary<string, decimal[]> info = new Dictionary<string, decimal[]>( );
-                        foreach (string ftr in list)
-                        {
-                            decimal[] stat = new decimal[4];
-                            stat[0] = GetDataValues(table, column, filter).Item3;
-                            stat[1] = (decimal)GetDataValues(table, column, filter).Item4;
-                            stat[2] = stat[0] / stat[1];
-                            stat[3] = (stat[0] / stat[1]) * 100;
-                            info.Add(filter, stat);
-                        }
-                        return info;
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message.ToString( ) + $"Target Method:\n{ex.TargetSite}\n" + $"Stack:\n{ex.StackTrace}");
-                        return null;
-                    }
-                }
-
-                DataSet IBudgetAuthority.E6 { get; }
-
-                public DataTable FilterTable(DataTable table, string column, string filter)
-                {
-                    try
-                    {
-                        return table.AsEnumerable( ).Where(p => p.Field<string>(column).Equals(filter)).Select(p => p).CopyToDataTable( );
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message.ToString( ) + $"Target Method:\n{ex.TargetSite}\n" + $"Stack:\n{ex.StackTrace}");
-                        return null;
-                    }
-                }
-
-                public DataTable GetTable(DataTable table, string column, string filter)
-                {
-                    try
-                    {
-                        return table.AsEnumerable( ).Where(p => p.Field<string>(column).Equals(filter)).Select(p => p).CopyToDataTable( );
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message.ToString( ) + $"Target Method:\n{ex.TargetSite}\n" + $"Stack:\n{ex.StackTrace}");
-                        return null;
-                    }
-                }
-
-                #endregion
 
                 #endregion
             }

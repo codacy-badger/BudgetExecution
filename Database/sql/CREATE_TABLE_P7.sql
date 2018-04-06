@@ -1,2 +1,28 @@
-CREATE TABLE if not exists P7 ( `ID` INTEGER NOT NULL UNIQUE, `BudgetLevel` TEXT, `RPIO` TEXT, `BFY` TEXT, `Fund` TEXT, `FundName` TEXT, `BOC` TEXT, `BocName` TEXT, `Org` TEXT, `RC` TEXT, `DivisionName` TEXT, `Code` TEXT, `Amount` NUMERIC, `SubProject` TEXT, `NPM` TEXT, `NpmCode` TEXT, `ProgramProjectCode` TEXT, `ProgramProjectName` TEXT, `ProgramArea` TEXT, `ProgramAreaName` TEXT, `Goal` TEXT, `GoalName` TEXT, `Objective` TEXT, `ObjectiveName` TEXT, PRIMARY KEY(`ID`) );
-INSERT INTO P7 SELECT * FROM P6 WHERE BudgetLevel = '7';
+CREATE TABLE IF NOT EXISTS `P7` (
+	`ID`	INTEGER NOT NULL UNIQUE,
+	`BudgetLevel`	TEXT,
+	`RPIO`	TEXT,
+	`BFY`	TEXT,
+	`Fund`	TEXT,
+	`FundName`	TEXT,
+	`BOC`	TEXT,
+	`BocName`	TEXT,
+	`Org`	TEXT,
+	`RC`	TEXT,
+	`DivisionName`	TEXT,
+	`Code`	TEXT,
+	`Amount`	NUMERIC,
+	`SubProject`	TEXT,
+	`NPM`	TEXT,
+	`NpmCode`	TEXT,
+	`ProgramProjectCode`	TEXT,
+	`ProgramProjectName`	TEXT,
+	`ProgramArea`	TEXT,
+	`ProgramAreaName`	TEXT,
+	`Goal`	TEXT,
+	`GoalName`	TEXT,
+	`Objective`	TEXT,
+	`ObjectiveName`	TEXT,
+	PRIMARY KEY(`RPIO`,`BFY`,`Fund`,`BOC`,`Org`,`Code`),
+	FOREIGN KEY(`ID`) REFERENCES `P6`
+);

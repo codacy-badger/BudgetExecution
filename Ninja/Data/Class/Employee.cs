@@ -1,8 +1,4 @@
-﻿#region Using Directives
-
-using System.Data;
-
-#endregion
+﻿using System.Data;
 
 namespace Budget
 {
@@ -15,22 +11,22 @@ namespace Budget
                 #region Properties
 
                 public string EmployId { get; }
+                public string First { get; }
                 public string HrOrgCode { get; }
                 public string HrOrgName { get; }
-                public string WorkCode { get; }
-                public string First { get; }
                 public string Last { get; }
-                public string LeaveType { get; }
-                public double Work { get; }
                 public double Leave { get; }
+                public string LeaveType { get; }
                 public double Projected { get; }
                 public double UseLose { get; }
+                public double Work { get; }
+                public string WorkCode { get; }
 
                 #endregion
 
                 #region Constructors
 
-                public Employee( )
+                public Employee()
                 {
                 }
 
@@ -54,17 +50,17 @@ namespace Budget
 
                 public Employee(DataRow dr)
                 {
-                    EmployId = dr["EmployId "].ToString( );
-                    HrOrgCode = dr["HrOrgCode"].ToString( );
-                    HrOrgName = dr["HrOrgName"].ToString( );
-                    WorkCode = dr["WorkCode"].ToString( );
-                    First = dr["First"].ToString( );
-                    Last = dr["Last"].ToString( );
-                    LeaveType = dr["LeaveType"].ToString( );
-                    Work = double.Parse(dr["Work"].ToString( ));
-                    Leave = double.Parse(dr["Leave"].ToString( ));
-                    Projected = double.Parse(dr["Projected"].ToString( ));
-                    UseLose = double.Parse(dr["UseLose"].ToString( ));
+                    EmployId = dr["EmployId "].ToString();
+                    HrOrgCode = dr["HrOrgCode"].ToString();
+                    HrOrgName = dr["HrOrgName"].ToString();
+                    WorkCode = dr["WorkCode"].ToString();
+                    First = dr["First"].ToString();
+                    Last = dr["Last"].ToString();
+                    LeaveType = dr["LeaveType"].ToString();
+                    Work = double.Parse(dr["Work"].ToString());
+                    Leave = double.Parse(dr["Leave"].ToString());
+                    Projected = double.Parse(dr["Projected"].ToString());
+                    UseLose = double.Parse(dr["UseLose"].ToString());
                 }
             }
         }

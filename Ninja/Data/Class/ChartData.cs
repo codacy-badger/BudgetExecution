@@ -1,5 +1,4 @@
 ﻿using Syncfusion.Windows.Forms.Chart;
-using System.Collections.Generic;
 using System.Windows.Forms;
 
 namespace Budget
@@ -10,31 +9,28 @@ namespace Budget
         {
             public class ChartData
             {
-                public ChartSeriesType Type { get; set; }
-                public ChartControl Chart { get; set; }
-                public ChartSeries Series { get; set; }
-                public ChartDataBindModel Model { get; set; }
-                public bool Percentage { get; set; }
-                public ChartControl PieChart { get; set; }
-                public Dictionary<string, decimal> Values { get; set; }
-                public decimal Total { get; set; }
-                public decimal Ratio { get; set; }
-                public decimal Average { get; set; }
-                public string[] PrimaryTitle { get; set; }
-                public string[] AxisTitle { get; set; }
-                private IBudgetAuthority Data { get; set; }
-                public BindingSource BindingSource { get; set; }
-                public int Tilt { get; set; }
-                public int Depth { get; set; }
-                public int Rotation { get; set; }
-
                 public ChartData()
                 {
-
                 }
+
+                public ChartData(Source source)
+                {
+                    Data = new DataBuilder(source);
+                    BindingSource.DataSource = Data.Table;
+                    DataMetric = new Metric(Data);
+                }
+
+                public string[] AxesTitle { get; set; }
+                public BindingSource BindingSource { get; }
+                public ChartControl Chart { get; set; }
+                public DataBuilder Data { get; }
+                public Metric DataMetric { get; }
+                public int[] Dimension { get; set; }
+                public ChartDataBindModel Model { get; }
+                public ChartSeries Series { get; set; }
+                public string[] Titles { get; set; }
+                public ChartSeriesType Type { get; set; }
             }
-
-
         }
     }
 }

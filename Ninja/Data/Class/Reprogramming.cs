@@ -1,8 +1,4 @@
-﻿#region Using Directives
-
-using System.Data;
-
-#endregion Using Directives
+﻿using System.Data;
 
 namespace Budget
 {
@@ -12,28 +8,28 @@ namespace Budget
         {
             public class Reprogramming
             {
-                public string BudgetLevel { get; }
-                public string DocType { get; }
-                public string RPIO { get; }
-                public Org Org { get; }
-                public RC RC { get; }
-                public string BFY { get; }
-                public Fund Fund { get; }
-                public string TCN { get; }
-                public string Qtr { get; }
-                public string Date { get; }
-                public string Code { get; }
                 public Account Account { get; }
+                public decimal Amount { get; }
+                public string BFY { get; }
+                public BOC BOC { get; }
+                public string BudgetLevel { get; }
+                public string Code { get; }
+                public string Date { get; }
+                public string DocType { get; }
+                public string FromTo { get; }
+                public Fund Fund { get; }
+                public string NpmCode { get; }
+                public Org Org { get; }
                 public string ProgramProjectCode { get; }
                 public string ProgramProjectName { get; }
-                public string NpmCode { get; }
-                public string FromTo { get; }
-                public BOC BOC { get; }
-                public decimal Amount { get; }
+                public string Qtr { get; }
+                public RC RC { get; }
+                public string RPIO { get; }
+                public string TCN { get; }
 
                 #region Constructors
 
-                public Reprogramming( )
+                public Reprogramming()
                 {
                 }
 
@@ -63,24 +59,24 @@ namespace Budget
 
                 public Reprogramming(DataRow dr)
                 {
-                    BudgetLevel = dr["BudgetLevel"].ToString( );
-                    DocType = dr["DocType"].ToString( );
-                    RPIO = dr["RPIO"].ToString( );
-                    Org = new Org(dr["Org"].ToString( ));
-                    RC = new RC(dr["RC"].ToString( ));
-                    BFY = dr["BFY"].ToString( );
-                    Fund = new Fund(dr["Fund"].ToString( ), BFY);
-                    TCN = dr["TCN"].ToString( );
-                    Qtr = dr["Qtr"].ToString( );
-                    Date = dr["Date"].ToString( );
-                    Code = dr["Code"].ToString( );
+                    BudgetLevel = dr["BudgetLevel"].ToString();
+                    DocType = dr["DocType"].ToString();
+                    RPIO = dr["RPIO"].ToString();
+                    Org = new Org(dr["Org"].ToString());
+                    RC = new RC(dr["RC"].ToString());
+                    BFY = dr["BFY"].ToString();
+                    Fund = new Fund(dr["Fund"].ToString(), BFY);
+                    TCN = dr["TCN"].ToString();
+                    Qtr = dr["Qtr"].ToString();
+                    Date = dr["Date"].ToString();
+                    Code = dr["Code"].ToString();
                     Account = new Account(Code);
-                    ProgramProjectName = dr["ProgramProjectName"].ToString( );
+                    ProgramProjectName = dr["ProgramProjectName"].ToString();
                     ProgramProjectCode = Account.ProgramProjectCode;
                     NpmCode = Account.NpmCode;
-                    FromTo = dr["FromTo"].ToString( );
-                    BOC = new BOC(dr["BOC"].ToString( ));
-                    Amount = decimal.Parse(dr["Amount"].ToString( ));
+                    FromTo = dr["FromTo"].ToString();
+                    BOC = new BOC(dr["BOC"].ToString());
+                    Amount = decimal.Parse(dr["Amount"].ToString());
                 }
 
                 #endregion

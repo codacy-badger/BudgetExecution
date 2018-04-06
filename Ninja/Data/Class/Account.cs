@@ -13,9 +13,9 @@ namespace Budget
                 public string Code { get; }
                 public string Goal { get; }
                 public string GoalName { get; }
+                public string NpmCode { get; }
                 public string Objective { get; }
                 public string ObjectiveName { get; }
-                public string NpmCode { get; }
                 public string ProgramProjectCode { get; }
 
                 #endregion Properties
@@ -37,10 +37,15 @@ namespace Budget
 
                 #region Methods
 
-                public string GetGoal( )
+                public string GetCode()
                 {
-                    var goal = Code.Substring(0, 1).ToCharArray( );
-                    return goal.ToString( );
+                    return Code;
+                }
+
+                public string GetGoal()
+                {
+                    var goal = Code.Substring(0, 1).ToCharArray();
+                    return goal.ToString();
                 }
 
                 public string GetGoalName(string code)
@@ -48,7 +53,13 @@ namespace Budget
                     return Info.GetGoalName(code);
                 }
 
-                public string GetObjective( )
+                public string GetNpmCode()
+                {
+                    var npm = Code.Substring(2, 1).ToCharArray();
+                    return npm.ToString();
+                }
+
+                public string GetObjective()
                 {
                     return Code.Substring(1, 2);
                 }
@@ -58,37 +69,26 @@ namespace Budget
                     return Info.GetObjectiveName(code);
                 }
 
-                public string GetNpmCode( )
+                public string[] GetProgramData(string code)
                 {
-                    var npm = Code.Substring(2, 1).ToCharArray( );
-                    return npm.ToString( );
+                    var pp = GetProgramProjectCode();
+                    var sql = new Dictionary<string, object>();
+                    sql.Add("ProgramProjectCode", pp);
+                    string[] p = new DataBuilder(Source.A6, sql).A6Query();
+                    return p;
                 }
 
-                public string GetCode( )
-                {
-                    return Code;
-                }
-
-                public string GetProgramProjectCode( )
+                public string GetProgramProjectCode()
                 {
                     return Code.Substring(5, 2);
                 }
 
-                public string[] GetProgramData(string code)
-                {
-                    var pp = GetProgramProjectCode( );
-                    var sql = new Dictionary<string, object>( );
-                    sql.Add("ProgramProjectCode", pp);
-                    string[] p = new DataBuilder(Source.A6, sql).A6Query( );
-                    return p;
-                }
-
-                string IAccount.GetCode( )
+                public override string ToString()
                 {
                     return Code;
                 }
 
-                public override string ToString( )
+                string IAccount.GetCode()
                 {
                     return Code;
                 }

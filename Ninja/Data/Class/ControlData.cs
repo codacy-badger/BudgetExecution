@@ -1,8 +1,4 @@
-﻿#region Using Directives
-
-using System.Collections.Generic;
-
-#endregion Using Directives
+﻿using System.Collections.Generic;
 
 namespace Budget
 {
@@ -25,9 +21,7 @@ namespace Budget
 
                 #endregion
 
-                #region Contructors
-
-                public ControlData( )
+                public ControlData()
                 {
                 }
 
@@ -46,8 +40,6 @@ namespace Budget
                     PrcAccount = Allocation[0];
                     Limit = PrcAccount.Amount;
                 }
-
-                #endregion
             }
         }
     }

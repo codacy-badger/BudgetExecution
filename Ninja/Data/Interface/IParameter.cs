@@ -6,13 +6,13 @@
         {
             public interface IParameter
             {
-                string RPIO { get; }
                 string BFY { get; }
+                string BOC { get; }
+                string Code { get; }
                 string Fund { get; }
                 string Org { get; }
                 string RC { get; }
-                string BOC { get; }
-                string Code { get; }
+                string RPIO { get; }
             }
         }
     }

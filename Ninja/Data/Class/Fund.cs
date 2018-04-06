@@ -31,7 +31,7 @@
 
                 #region Methods
 
-                public override string ToString( )
+                public override string ToString()
                 {
                     return Code;
                 }

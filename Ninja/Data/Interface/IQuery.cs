@@ -11,33 +11,33 @@ namespace Budget
             {
                 #region Properties
 
-                Source Table { get; set; }
-                Connection Connection { get; }
                 Command Command { get; }
-                string SqlStatement { get; set; }
+                Connection Connection { get; }
                 string ConnectionString { get; set; }
-                IDbConnection DataConnection { get; set; }
                 IDbDataAdapter DataAdapter { get; set; }
-                IDataReader Reader { get; set; }
                 IDbCommand DataCommand { get; set; }
+                IDbConnection DataConnection { get; set; }
+                IDataReader Reader { get; set; }
+                string SqlStatement { get; set; }
+                Source Table { get; set; }
 
                 #endregion
 
                 #region Methods
 
-                string GetConnectionString(string connectionString);
-
-                string GetSqlStatement(Command command, string sqlStatement);
+                DbCommandBuilder GetCommandBuilder(IDbDataAdapter adapter);
 
                 IDbConnection GetConnection(Connection connection, string connectionString);
 
-                IDbCommand GetDataCommand(IDbConnection dataConnection, string sql);
+                string GetConnectionString(string connectionString);
 
                 IDbDataAdapter GetDataAdapter(IDbCommand command);
 
-                DbCommandBuilder GetCommandBuilder(IDbDataAdapter adapter);
+                IDbCommand GetDataCommand(IDbConnection dataConnection, string sql);
 
                 IDataReader GetDataReader(IDbDataAdapter adapter);
+
+                string GetSqlStatement(Command command, string sqlStatement);
 
                 #endregion
             }

@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Windows.Forms;
-using MetroSet_UI.Controls;
 using Metro = Syncfusion.Windows.Forms.MetroForm;
 
 namespace Budget
@@ -16,16 +15,19 @@ namespace Budget
             public partial class DataManager : Metro
             {
                 #region Properties
-                public Source Source { get; set; }
-                public RegionalAuthority R6 { get; set; }
+
                 public DivisionAuthority D6 { get; set; }
+                public Dictionary<string, string[]> Element { get; set; }
                 public FormData Ninja { get; set; }
+                public RegionalAuthority R6 { get; set; }
+                public Source Source { get; set; }
                 public DataTable Table { get; set; }
-                public Dictionary<string,string[]> Element { get; set; }
                 public decimal Total { get; }
+
                 #endregion
 
                 #region Constructors
+
                 public DataManager(Source source)
                 {
                     InitializeComponent();
@@ -49,97 +51,6 @@ namespace Budget
 
                 #endregion
 
-                #region Form Load EventHandler and Methods
-
-                private void Form_Load(object sender, EventArgs e)
-                {
-                    ReturnButton.Visible = false;
-                    ReturnButton.Click += Ninja.ReturnButton_OnClick;
-                    BindingSource.CurrentItemChanged += UpdateDataChart;
-                }
-                
-
-                #endregion
-
-                private ChartControl GetDataChart(ChartControl chart, string title, Source source, BindingSource bs)
-                {
-                    if (source == Source.P7)
-                        chart = new Chart(chart, title, R6, bs).CreateColumn();
-                    if (source == Source.P8)
-                        chart = new Chart(chart, title, D6, bs).CreateColumn();
-                    return chart;
-                }
-
-                private void UpdateDataChart(object sender, EventArgs e)
-                {
-                    BindingSource = sender as BindingSource;
-                    PrcChart = GetDataChart(PrcChart, "", Source, BindingSource);
-                }
-
-                private void GetGridSelectedRowValues()
-                {
-                    DataMgrGrid.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-                    bfy.DataBindings.Add(new Binding("Text", DataMgrGrid.DataSource, "BFY"));
-                    fund.DataBindings.Add(new Binding("Text", DataMgrGrid.DataSource, "Fund"));
-                    org.DataBindings.Add(new Binding("Text", DataMgrGrid.DataSource, "Org"));
-                    rc.DataBindings.Add(new Binding("Text", DataMgrGrid.DataSource, "RC"));
-                    code.DataBindings.Add(new Binding("Text", DataMgrGrid.DataSource, "Code"));
-                    boc.DataBindings.Add(new Binding("Text", DataMgrGrid.DataSource, "BOC"));
-                    amount1.DataBindings.Add(new Binding("Text", DataMgrGrid.DataSource, "Amount"));
-                }
-                private void UpdateGridSelectedRowValues(object sender, EventArgs e)
-                {
-                    var current = DataMgrGrid.CurrentRow;
-                    bfy.DataBindings.Add(new Binding("Text", DataMgrGrid.DataSource, "BFY"));
-                    fund.DataBindings.Add(new Binding("Text", DataMgrGrid.DataSource, "Fund"));
-                    org.DataBindings.Add(new Binding("Text", DataMgrGrid.DataSource, "Org"));
-                    rc.DataBindings.Add(new Binding("Text", DataMgrGrid.DataSource, "RC"));
-                    code.DataBindings.Add(new Binding("Text", DataMgrGrid.DataSource, "Code"));
-                    boc.DataBindings.Add(new Binding("Text", DataMgrGrid.DataSource, "BOC"));
-                    amount1.DataBindings.Add(new Binding("Text", DataMgrGrid.DataSource, "Amount"));
-                }
-
-                private void GetCalculatorValue(DataGridViewRow gridrow)
-                {
-                    var amt = new Syncfusion.Windows.Forms.Tools.CalculatorValue();
-                    amt.SetValue(gridrow.Cells["Amount"].Value.ToString());
-                }
-
-                private void GridRow_DoubleClick(object sender, EventArgs e)
-                {
-                    var am = new AccountManager();
-                    am.Show();
-                }
-
-
-                #region IAuthority Implementation Methods
-
-                public decimal GetTotal(DataTable table)
-                {
-                    try
-                    {
-                        return table.AsEnumerable().Select(p => p).Sum(p => p.Field<decimal>("Amount"));
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message.ToString() + $"Target Method:\n{ex.TargetSite}\n" + $"Stack:\n{ex.StackTrace}");
-                        return -1M;
-                    }
-                }
-
-                public DataTable GetTable(DataTable table, string column, string filter)
-                {
-                    try
-                    {
-                        return table.AsEnumerable().Where(p => p.Field<string>(column).Equals(filter)).Select(p => p).CopyToDataTable();
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message.ToString() + $"Target Method:\n{ex.TargetSite}\n" + $"Stack:\n{ex.StackTrace}");
-                        return null;
-                    }
-                }
-
                 public string[] GetCodes(DataTable table, string column)
                 {
                     try
@@ -148,7 +59,7 @@ namespace Budget
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message.ToString() + $"Target Method:\n{ex.TargetSite}\n" + $"Stack:\n{ex.StackTrace}");
+                        MessageBox.Show(ex.Message.ToString());
                         return null;
                     }
                 }
@@ -164,7 +75,7 @@ namespace Budget
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message.ToString() + $"Target Method:\n{ex.TargetSite}\n" + $"Stack:\n{ex.StackTrace}");
+                        MessageBox.Show(ex.Message.ToString());
                         return null;
                     }
                 }
@@ -182,7 +93,7 @@ namespace Budget
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message.ToString() + $"Target Method:\n{ex.TargetSite}\n" + $"Stack:\n{ex.StackTrace}");
+                        MessageBox.Show(ex.Message.ToString());
                         return null;
                     }
                 }
@@ -205,58 +116,98 @@ namespace Budget
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message.ToString() + $"Target Method:\n{ex.TargetSite}\n" + $"Stack:\n{ex.StackTrace}");
+                        MessageBox.Show(ex.Message.ToString());
                         return null;
                     }
                 }
 
+                public DataTable GetTable(DataTable table, string column, string filter)
+                {
+                    try
+                    {
+                        return table.AsEnumerable().Where(p => p.Field<string>(column).Equals(filter)).Select(p => p).CopyToDataTable();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message.ToString());
+                        return null;
+                    }
+                }
 
+                public decimal GetTotal(DataTable table)
+                {
+                    try
+                    {
+                        return table.AsEnumerable().Select(p => p).Sum(p => p.Field<decimal>("Amount"));
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message.ToString());
+                        return -1M;
+                    }
+                }
 
-                #endregion
+                private void Form_Load(object sender, EventArgs e)
+                {
+                    ReturnButton.Visible = false;
+                    ReturnButton.Click += Ninja.ReturnButton_OnClick;
+                    BindingSource.CurrentItemChanged += UpdateDataChart;
+                }
+
+                private void GetCalculatorValue(DataGridViewRow gridrow)
+                {
+                    var amt = new Syncfusion.Windows.Forms.Tools.CalculatorValue();
+                    amt.SetValue(gridrow.Cells["Amount"].Value.ToString());
+                }
+
+                private ChartControl GetDataChart(ChartControl chart, string title, Source source, BindingSource bs)
+                {
+                    if (source == Source.P7)
+                        chart = new Chart(chart, title, R6, bs).CreateColumn();
+                    if (source == Source.P8)
+                        chart = new Chart(chart, title, D6, bs).CreateColumn();
+                    return chart;
+                }
+
+                private void GetGridSelectedRowValues()
+                {
+                    DataMgrGrid.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+                    bfy.DataBindings.Add(new Binding("Text", DataMgrGrid.DataSource, "BFY"));
+                    fund.DataBindings.Add(new Binding("Text", DataMgrGrid.DataSource, "Fund"));
+                    org.DataBindings.Add(new Binding("Text", DataMgrGrid.DataSource, "Org"));
+                    rc.DataBindings.Add(new Binding("Text", DataMgrGrid.DataSource, "RC"));
+                    code.DataBindings.Add(new Binding("Text", DataMgrGrid.DataSource, "Code"));
+                    boc.DataBindings.Add(new Binding("Text", DataMgrGrid.DataSource, "BOC"));
+                    amount1.DataBindings.Add(new Binding("Text", DataMgrGrid.DataSource, "Amount"));
+                }
+
+                private void GridRow_DoubleClick(object sender, EventArgs e)
+                {
+                    var am = new AccountManager();
+                    am.Show();
+                }
 
                 private void groupBox2_Enter(object sender, EventArgs e)
                 {
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                 }
 
+                private void UpdateDataChart(object sender, EventArgs e)
+                {
+                    BindingSource = sender as BindingSource;
+                    PrcChart = GetDataChart(PrcChart, "", Source, BindingSource);
+                }
 
+                private void UpdateGridSelectedRowValues(object sender, EventArgs e)
+                {
+                    var current = DataMgrGrid.CurrentRow;
+                    bfy.DataBindings.Add(new Binding("Text", DataMgrGrid.DataSource, "BFY"));
+                    fund.DataBindings.Add(new Binding("Text", DataMgrGrid.DataSource, "Fund"));
+                    org.DataBindings.Add(new Binding("Text", DataMgrGrid.DataSource, "Org"));
+                    rc.DataBindings.Add(new Binding("Text", DataMgrGrid.DataSource, "RC"));
+                    code.DataBindings.Add(new Binding("Text", DataMgrGrid.DataSource, "Code"));
+                    boc.DataBindings.Add(new Binding("Text", DataMgrGrid.DataSource, "BOC"));
+                    amount1.DataBindings.Add(new Binding("Text", DataMgrGrid.DataSource, "Amount"));
+                }
             }
         }
     }

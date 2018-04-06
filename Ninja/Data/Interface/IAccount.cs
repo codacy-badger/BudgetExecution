@@ -10,27 +10,27 @@ namespace Budget
 
                 string Code { get; }
                 string Goal { get; }
-                string Objective { get; }
                 string NpmCode { get; }
+                string Objective { get; }
                 string ProgramProjectCode { get; }
 
                 #endregion properties
 
                 #region Methods
 
-                string GetGoal( );
+                string GetCode();
+
+                string GetGoal();
 
                 string GetGoalName(string code);
 
-                string GetObjective( );
+                string GetNpmCode();
+
+                string GetObjective();
 
                 string GetObjectiveName(string code);
 
-                string GetNpmCode( );
-
-                string GetCode( );
-
-                string GetProgramProjectCode( );
+                string GetProgramProjectCode();
 
                 #endregion Methods
             }

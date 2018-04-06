@@ -1,8 +1,4 @@
-﻿#region Using Directives
-
-using System.Data;
-
-#endregion
+﻿using System.Data;
 
 namespace Budget
 {
@@ -14,22 +10,22 @@ namespace Budget
             {
                 #region Properties
 
+                public Account Account { get; }
+                public string Agreement { get; }
+                public decimal Amount { get; }
+                public decimal Authority { get; }
+                public decimal Available { get; }
+                public string BFY { get; }
+                public string Code { get; }
                 public DataBuilder Data { get; }
                 public Fund Fund { get; }
                 public Org Org { get; }
-                public Account Account { get; }
-                public string Code { get; }
-                public string Agreement { get; }
-                public string BFY { get; }
-                public decimal Authority { get; }
-                public decimal Amount { get; }
-                public decimal Available { get; }
 
                 #endregion Properties
 
                 #region Constructors
 
-                public Reimbursable( )
+                public Reimbursable()
                 {
                 }
 
@@ -49,15 +45,15 @@ namespace Budget
 
                 public Reimbursable(DataRow dr)
                 {
-                    BFY = dr["BFY"].ToString( );
-                    Fund = new Fund(dr["Fund"].ToString( ), BFY);
-                    Org = new Org(dr["Fund"].ToString( ));
-                    Account = new Account(dr["Code"].ToString( ));
+                    BFY = dr["BFY"].ToString();
+                    Fund = new Fund(dr["Fund"].ToString(), BFY);
+                    Org = new Org(dr["Fund"].ToString());
+                    Account = new Account(dr["Code"].ToString());
                     Code = Account.Code;
-                    Agreement = dr["Agreement"].ToString( );
-                    Authority = decimal.Parse(dr["Authority"].ToString( ));
-                    Amount = decimal.Parse(dr["Amount"].ToString( ));
-                    Available = decimal.Parse(dr["Available"].ToString( ));
+                    Agreement = dr["Agreement"].ToString();
+                    Authority = decimal.Parse(dr["Authority"].ToString());
+                    Amount = decimal.Parse(dr["Amount"].ToString());
+                    Available = decimal.Parse(dr["Available"].ToString());
                 }
 
                 #endregion Constructors

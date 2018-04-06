@@ -30,7 +30,6 @@
                 #endregion Constructors
 
                 #region Methods
-                
 
                 public override string ToString()
                 {

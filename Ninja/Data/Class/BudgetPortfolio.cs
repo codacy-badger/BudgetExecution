@@ -1,13 +1,9 @@
-﻿#region Using Directives
-
-using System.Data.SQLite;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.OleDb;
+using System.Data.SQLite;
 using System.Windows.Forms;
-
-#endregion
 
 namespace Budget
 {
@@ -19,16 +15,14 @@ namespace Budget
             {
                 #region Properties
 
-                public Query DocumentQuery { get; set; }
-                public Tuple<DataTable, List<DocInfo>> SqlDocumentData { get; internal set; }
                 public Tuple<DataTable, DataRow[], decimal, int> BudgetCollection { get; set; }
                 public List<string> BudgetList { get; set; }
+                public Query DocumentQuery { get; set; }
+                public Tuple<DataTable, List<DocInfo>> SqlDocumentData { get; internal set; }
 
                 #endregion Properties
 
-                #region Contructors
-
-                public BudgetPortfolio( )
+                public BudgetPortfolio()
                 {
                 }
 
@@ -38,24 +32,9 @@ namespace Budget
                     BudgetCollection = new DataBuilder(Source.B6).SqlData;
                 }
 
-                #endregion Contructors
-
                 #region Methods
 
-                internal SQLiteConnection GetSqlConnection( )
-                {
-                    try
-                    {
-                        return DocumentQuery.Connection;
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.ToString( ) + "  GetSqlConnection() Error!");
-                        return null;
-                    }
-                }
-
-                internal OleDbConnection GetExcelConnection( )
+                internal OleDbConnection GetExcelConnection()
                 {
                     try
                     {
@@ -66,7 +45,20 @@ namespace Budget
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.ToString( ));
+                        MessageBox.Show(ex.ToString());
+                        return null;
+                    }
+                }
+
+                internal SQLiteConnection GetSqlConnection()
+                {
+                    try
+                    {
+                        return DocumentQuery.Connection;
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.ToString() + "  GetSqlConnection() Error!");
                         return null;
                     }
                 }

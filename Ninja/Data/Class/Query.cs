@@ -1,11 +1,7 @@
-﻿#region Using DIrectives
-
-using System.Data.SQLite;
-using System;
+﻿using System;
 using System.Collections.Generic;
+using System.Data.SQLite;
 using System.Windows.Forms;
-
-#endregion
 
 namespace Budget
 {
@@ -17,82 +13,128 @@ namespace Budget
             {
                 #region Properties
 
+                public SQLiteDataAdapter Adapter { get; set; }
+                public SQLiteCommandBuilder CommandBuilder { get; }
+                public SQLiteConnection Connection { get; }
+                public SQLiteCommand DeleteCommand { get; }
+                public SQLiteCommand InsertCommand { get; }
+                public Dictionary<string, object> Parameter { get; }
+                public SQLiteDataReader Reader { get; set; }
+                public SQLiteCommand SelectCommand { get; }
+                public string SelectStatement { get; }
                 public Source Source { get; }
                 public Command Sql { get; set; }
-                public string TableName { get; }
-                public SQLiteConnection Connection { get; }
-                public Dictionary<string, object> Parameter { get; }
-                public string SelectStatement { get; }
-                public SQLiteCommand SelectCommand { get; }
-                public SQLiteCommand InsertCommand { get; }
-                public SQLiteCommand UpdateCommand { get; }
-                public SQLiteCommand DeleteCommand { get; }
                 public Dictionary<string, string> SqlStatement { get; }
-                public SQLiteDataAdapter Adapter { get; set; }
-                public SQLiteDataReader Reader { get; set; }
-                public SQLiteCommandBuilder CommandBuilder { get; }
+                public string TableName { get; }
+                public SQLiteCommand UpdateCommand { get; }
 
                 #endregion Properties
 
                 #region Constructors
 
-                public Query( )
+                public Query()
                 {
                 }
 
                 public Query(Source source)
                 {
                     Source = source;
-                    TableName = source.ToString( );
-                    SelectStatement = $"SELECT * FROM {source.ToString( )}";
+                    TableName = source.ToString();
+                    SelectStatement = $"SELECT * FROM {source.ToString()}";
                     Connection = new SQLiteConnection(@"data source=C:\Users\terry\Documents\Visual Studio 2015\Projects\Budget\database\sqlite\E6.db");
                     SelectCommand = new SQLiteCommand(SelectStatement, Connection);
                     Adapter = new SQLiteDataAdapter(SelectCommand);
                     CommandBuilder = GetCommandBuilder(Adapter);
-                    InsertCommand = CommandBuilder.GetInsertCommand( );
-                    UpdateCommand = CommandBuilder.GetInsertCommand( );
-                    DeleteCommand = CommandBuilder.GetInsertCommand( );
+                    InsertCommand = CommandBuilder.GetInsertCommand();
+                    UpdateCommand = CommandBuilder.GetInsertCommand();
+                    DeleteCommand = CommandBuilder.GetInsertCommand();
                 }
 
                 public Query(Source source, Dictionary<string, object> param)
                 {
                     Source = source;
-                    TableName = source.ToString( );
+                    TableName = source.ToString();
                     Parameter = param;
-                    SelectStatement = GetSqlStatement( );
+                    SelectStatement = GetSqlStatement();
                     Connection = new SQLiteConnection(@"data source=C:\Users\terry\Documents\Visual Studio 2015\Projects\Budget\database\sqlite\E6.db");
                     SelectCommand = new SQLiteCommand(SelectStatement, Connection);
                     Adapter = new SQLiteDataAdapter(SelectCommand);
                     CommandBuilder = GetCommandBuilder(Adapter);
-                    InsertCommand = CommandBuilder.GetInsertCommand( );
-                    UpdateCommand = CommandBuilder.GetInsertCommand( );
-                    DeleteCommand = CommandBuilder.GetInsertCommand( );
+                    InsertCommand = CommandBuilder.GetInsertCommand();
+                    UpdateCommand = CommandBuilder.GetInsertCommand();
+                    DeleteCommand = CommandBuilder.GetInsertCommand();
                 }
 
                 #endregion Constructors
 
                 #region Methods
 
-                private string GetParamString(Dictionary<string, object> param)
+                public SQLiteCommandBuilder GetCommandBuilder(SQLiteDataAdapter adapter)
                 {
                     try
                     {
-                        string vals = "";
-                        foreach (KeyValuePair<string, object> kvp in param)
-                        {
-                            vals += $"{ kvp.Key } = '{(kvp.Value).ToString( )}' AND ";
-                        }
-                        vals = vals.Trim( ).Substring(0, vals.Length - 4);
-                        return vals;
+                        return new SQLiteCommandBuilder(adapter);
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show("ERROR!: \n\n" + ex.TargetSite + ex.StackTrace);
+                        MessageBox.Show("ERROR!: \n" + ex.TargetSite + ex.StackTrace);
                         return null;
                     }
                 }
 
-                public string GetSqlStatement( )
+                public SQLiteDataAdapter GetDataAdapter(SQLiteCommand command)
+                {
+                    try
+                    {
+                        return new SQLiteDataAdapter(command.CommandText, command.Connection);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("ERROR!: \n" + ex.TargetSite + ex.StackTrace);
+                        return null;
+                    }
+                }
+
+                public SQLiteCommand GetDeleteCommand()
+                {
+                    try
+                    {
+                        return new SQLiteCommandBuilder(Adapter).GetDeleteCommand();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("ERROR!: \n" + ex.TargetSite + ex.StackTrace);
+                        return null;
+                    }
+                }
+
+                public SQLiteCommand GetInsertCommand()
+                {
+                    try
+                    {
+                        return new SQLiteCommandBuilder(Adapter).GetInsertCommand();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("ERROR!: \n" + ex.TargetSite + ex.StackTrace);
+                        return null;
+                    }
+                }
+
+                public SQLiteCommand GetSelectCommand(string select)
+                {
+                    try
+                    {
+                        return new SQLiteCommand(select, Connection);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("ERROR!: \n" + ex.TargetSite + ex.StackTrace);
+                        return null;
+                    }
+                }
+
+                public string GetSqlStatement()
                 {
                     try
                     {
@@ -117,50 +159,12 @@ namespace Budget
                         return null;
                     }
                 }
-                private SQLiteCommand GetSelectCommand( )
-                {
-                    try
-                    {
-                        return new SQLiteCommand(SelectStatement, Connection);
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show("ERROR!: \n" + ex.TargetSite + ex.StackTrace);
-                        return null;
-                    }
-                }
 
-                public SQLiteCommand GetSelectCommand(string select)
+                public SQLiteCommand GetUpdateCommand()
                 {
                     try
                     {
-                        return new SQLiteCommand(select, Connection);
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show("ERROR!: \n" + ex.TargetSite + ex.StackTrace);
-                        return null;
-                    }
-                }
-
-                private SQLiteDataAdapter GetDataAdapter( )
-                {
-                    try
-                    {
-                        return new SQLiteDataAdapter(SelectCommand);
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show("ERROR!: \n" + ex.TargetSite + ex.StackTrace);
-                        return null;
-                    }
-                }
-
-                public SQLiteDataAdapter GetDataAdapter(SQLiteCommand command)
-                {
-                    try
-                    {
-                        return new SQLiteDataAdapter(command.CommandText, command.Connection);
+                        return new SQLiteCommandBuilder(Adapter).GetUpdateCommand();
                     }
                     catch (Exception ex)
                     {
@@ -182,7 +186,7 @@ namespace Budget
                     }
                 }
 
-                private SQLiteCommandBuilder GetCommandBuilder( )
+                private SQLiteCommandBuilder GetCommandBuilder()
                 {
                     try
                     {
@@ -195,11 +199,11 @@ namespace Budget
                     }
                 }
 
-                public SQLiteCommandBuilder GetCommandBuilder(SQLiteDataAdapter adapter)
+                private SQLiteDataAdapter GetDataAdapter()
                 {
                     try
                     {
-                        return new SQLiteCommandBuilder(adapter);
+                        return new SQLiteDataAdapter(SelectCommand);
                     }
                     catch (Exception ex)
                     {
@@ -208,37 +212,30 @@ namespace Budget
                     }
                 }
 
-                public SQLiteCommand GetInsertCommand( )
+                private string GetParamString(Dictionary<string, object> param)
                 {
                     try
                     {
-                        return new SQLiteCommandBuilder(Adapter).GetInsertCommand( );
+                        string vals = "";
+                        foreach (KeyValuePair<string, object> kvp in param)
+                        {
+                            vals += $"{ kvp.Key } = '{(kvp.Value).ToString()}' AND ";
+                        }
+                        vals = vals.Trim().Substring(0, vals.Length - 4);
+                        return vals;
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show("ERROR!: \n" + ex.TargetSite + ex.StackTrace);
+                        MessageBox.Show("ERROR!: \n\n" + ex.TargetSite + ex.StackTrace);
                         return null;
                     }
                 }
 
-                public SQLiteCommand GetUpdateCommand( )
+                private SQLiteCommand GetSelectCommand()
                 {
                     try
                     {
-                        return new SQLiteCommandBuilder(Adapter).GetUpdateCommand( );
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show("ERROR!: \n" + ex.TargetSite + ex.StackTrace);
-                        return null;
-                    }
-                }
-
-                public SQLiteCommand GetDeleteCommand( )
-                {
-                    try
-                    {
-                        return new SQLiteCommandBuilder(Adapter).GetDeleteCommand( );
+                        return new SQLiteCommand(SelectStatement, Connection);
                     }
                     catch (Exception ex)
                     {

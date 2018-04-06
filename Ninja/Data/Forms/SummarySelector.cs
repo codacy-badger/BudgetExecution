@@ -1,13 +1,9 @@
-#region Using Directives
-
 using Syncfusion.Windows.Forms.Tools;
 using System;
 using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
 using MetroForm = Syncfusion.Windows.Forms.MetroForm;
-
-#endregion
 
 namespace Budget
 {
@@ -17,16 +13,16 @@ namespace Budget
         {
             public partial class SummarySelector : MetroForm
             {
-                public SummarySelector( )
+                public SummarySelector()
                 {
-                    InitializeComponent( );
-                    GetViewerCarouselImageList( );
+                    InitializeComponent();
+                    GetViewerCarouselImageList();
                     ViewerCarousel.OnCarouselItemFocused += ViewerCarousel_OnImageSelected;
                 }
 
-                private void GetViewerCarouselImageList( )
+                private void GetViewerCarouselImageList()
                 {
-                    ImageList ilist = new ImageList( );
+                    ImageList ilist = new ImageList();
                     CarouselImageCollection icollect = ViewerCarousel.ImageListCollection;
                     ViewerCarousel.ImageSlides = true;
                     ViewerCarousel.UseOriginalImageinPreview = true;
@@ -35,7 +31,7 @@ namespace Budget
                     {
                         var b = new Bitmap(i);
                         b.Tag = i;
-                        var c = new CarouselImage( );
+                        var c = new CarouselImage();
                         c.ItemImage = b;
                         ilist.Images.Add(b);
                         icollect.Add(c);
@@ -43,34 +39,34 @@ namespace Budget
                     ViewerCarousel.ImageList = ilist;
                 }
 
+                private void SummarySelector_Load(object sender, EventArgs e)
+                {
+                }
+
                 private void ViewerCarousel_OnImageSelected(object sender, EventArgs e)
                 {
-                    var i = ViewerCarousel.ActiveImage.Tag.ToString( );
+                    var i = ViewerCarousel.ActiveImage.Tag.ToString();
                     if (i.Contains("P7"))
                     {
-                        var a = new SummaryForm( );
-                        a.ShowDialog( );
+                        var a = new SummaryForm();
+                        a.ShowDialog();
                     }
                     if (i.Contains("P8"))
                     {
-                        var f = new SummaryForm( );
-                        f.ShowDialog( );
+                        var f = new SummaryForm();
+                        f.ShowDialog();
                     }
                     if (i.Contains("Functionality"))
                     {
-                        var g = new FunctionalityForm( );
-                        g.ShowDialog( );
+                        var g = new FunctionalityForm();
+                        g.ShowDialog();
                     }
                     if (i.Contains("Appropriation"))
                     {
-                        var h = new AppropriationSelector( );
-                        h.ShowDialog( );
+                        var h = new AppropriationSelector();
+                        h.ShowDialog();
                     }
                     return;
-                }
-
-                private void SummarySelector_Load(object sender, EventArgs e)
-                {
                 }
             }
         }

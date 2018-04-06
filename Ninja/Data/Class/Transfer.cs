@@ -13,46 +13,42 @@ namespace Budget
         {
             public class Transfer
             {
-                #region Members
-
-                public Reprogramming Type { get; set; }
-                public int ID { get; set; }
-                public PRC Receiver { get; set; }
-                public PRC Sender { get; set; }
                 public decimal Amount { get; set; }
-                public int FromId { get; set; }
+                public string ControlNumber { get; set; }
+                public decimal FromAmount { get; set; }
                 public string FromBFY { get; set; }
                 public string FromBOC { get; set; }
                 public string FromCode { get; set; }
-                public string FromRC { get; set; }
                 public string FromFund { get; set; }
+                public int FromId { get; set; }
                 public string FromOrg { get; set; }
+                public string FromRC { get; set; }
                 public string FromRPIO { get; set; }
-                public decimal FromAmount { get; set; }
+                public int ID { get; set; }
                 public string Purpose { get; set; }
-                public int ToId { get; set; }
+                public PRC Receiver { get; set; }
+                public PRC Sender { get; set; }
+                public decimal ToAmount { get; set; }
                 public string ToBFY { get; set; }
                 public string ToBOC { get; set; }
                 public string ToCode { get; set; }
-                public string ToRC { get; set; }
                 public string ToFund { get; set; }
+                public int ToId { get; set; }
                 public string ToOrg { get; set; }
-                public decimal ToAmount { get; set; }
+                public string ToRC { get; set; }
                 public string ToRPIO { get; set; }
-                public string ControlNumber { get; set; }
-
-                #endregion Members
+                public Reprogramming Type { get; set; }
 
                 #region Constructors
 
-                public Transfer( )
+                public Transfer()
                 {
                 }
 
                 // used for both internal and external transfers using existing prc objects
                 public Transfer(PRC sender, PRC receiver, decimal amount)
                 {
-                    ControlNumber = GetTransferControlNumber( );
+                    ControlNumber = GetTransferControlNumber();
                     Amount = amount;
                     Sender = sender;
                     FromId = sender.ID;
@@ -79,35 +75,35 @@ namespace Budget
                 // prcs must exist in prc table with id properties prior to instatiating
                 public Transfer(DataRow sender, DataRow receiver, decimal amount)
                 {
-                    ControlNumber = GetTransferControlNumber( );
+                    ControlNumber = GetTransferControlNumber();
                     Amount = amount;
-                    FromId = int.Parse(sender["Id"].ToString( ));
-                    FromBFY = sender["BFY"].ToString( );
-                    FromBOC = sender["BOC"].ToString( );
-                    FromCode = sender["Code"].ToString( );
-                    FromFund = sender["Fund"].ToString( );
-                    FromOrg = sender["Org"].ToString( );
-                    FromRPIO = sender["RPIO"].ToString( );
-                    FromAmount = decimal.Parse(sender["Amount"].ToString( ));
-                    ToId = int.Parse(receiver["Id"].ToString( ));
-                    ToBFY = receiver["BFY"].ToString( );
-                    ToBOC = receiver["BOC"].ToString( );
-                    ToCode = receiver["Code"].ToString( );
-                    ToFund = receiver["Fund"].ToString( );
-                    ToOrg = receiver["Org"].ToString( );
-                    ToRPIO = receiver["RPIO"].ToString( );
-                    ToAmount = decimal.Parse(receiver["Amount"].ToString( ));
+                    FromId = int.Parse(sender["Id"].ToString());
+                    FromBFY = sender["BFY"].ToString();
+                    FromBOC = sender["BOC"].ToString();
+                    FromCode = sender["Code"].ToString();
+                    FromFund = sender["Fund"].ToString();
+                    FromOrg = sender["Org"].ToString();
+                    FromRPIO = sender["RPIO"].ToString();
+                    FromAmount = decimal.Parse(sender["Amount"].ToString());
+                    ToId = int.Parse(receiver["Id"].ToString());
+                    ToBFY = receiver["BFY"].ToString();
+                    ToBOC = receiver["BOC"].ToString();
+                    ToCode = receiver["Code"].ToString();
+                    ToFund = receiver["Fund"].ToString();
+                    ToOrg = receiver["Org"].ToString();
+                    ToRPIO = receiver["RPIO"].ToString();
+                    ToAmount = decimal.Parse(receiver["Amount"].ToString());
                 }
 
                 #endregion Constructors
 
                 #region Methods
 
-                internal Dictionary<string, object> GetInternalData( )
+                internal Dictionary<string, object> GetInternalData()
                 {
                     try
                     {
-                        Dictionary<string, object> param = new Dictionary<string, object>( );
+                        Dictionary<string, object> param = new Dictionary<string, object>();
                         param.Add("Id", ID);
                         param.Add("ControlNumber", ControlNumber);
                         param.Add("FrRpio", FromRPIO);
@@ -129,19 +125,19 @@ namespace Budget
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message.ToString( ) + $"Target Method:\n{ex.TargetSite}\n" + $"Stack:\n{ex.StackTrace}");
+                        MessageBox.Show(ex.Message.ToString());
                         return null;
                     }
                 }
 
-                internal string GetTransferControlNumber( )
+                internal string GetTransferControlNumber()
                 {
                     try
                     {
                         DateTime dt = DateTime.Now;
-                        StringBuilder cn = new StringBuilder( );
+                        StringBuilder cn = new StringBuilder();
                         cn.Append("06");
-                        cn.Append(dt.Year.ToString( ));
+                        cn.Append(dt.Year.ToString());
                         cn.Append("-");
                         cn.Append(FromBFY ?? ToBFY);
                         cn.Append(FromFund ?? ToFund);
@@ -150,12 +146,12 @@ namespace Budget
                         cn.Append("-");
                         cn.Append(FromCode ?? ToCode);
                         cn.Append("-");
-                        cn.Append(dt.Month.ToString( ));
-                        cn.Append(dt.Day.ToString( ));
+                        cn.Append(dt.Month.ToString());
+                        cn.Append(dt.Day.ToString());
                         cn.Append("-");
-                        cn.Append(dt.Hour.ToString( ));
-                        cn.Append(dt.Minute.ToString( ));
-                        return cn.ToString( );
+                        cn.Append(dt.Hour.ToString());
+                        cn.Append(dt.Minute.ToString());
+                        return cn.ToString();
                     }
                     catch (Exception ex)
                     {
@@ -164,12 +160,12 @@ namespace Budget
                     }
                 }
 
-                internal void WriteTransfer( )
+                internal void WriteTransfer()
                 {
                     try
                     {
                         string path = $@"c:\EPA\TransferLog\transfers.txt";
-                        File.AppendAllText(path, ToString( ));
+                        File.AppendAllText(path, ToString());
                     }
                     catch (Exception ex)
                     {

@@ -372,11 +372,6 @@
       <DependentUpon>NinjaSummaryImages.resx</DependentUpon>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Compile>
-    <Compile Include="SqlServer.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>SqlServer.xsd</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="Data\AccountControl.resx">
       <DependentUpon>AccountControl.cs</DependentUpon>
     </EmbeddedResource>
@@ -456,17 +451,6 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </AdditionalFiles>
     <None Include="Resources\epa_seal_medium.ico" />
-    <None Include="SqlServer.xsc">
-      <DependentUpon>SqlServer.xsd</DependentUpon>
-    </None>
-    <None Include="SqlServer.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>SqlServer.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="SqlServer.xss">
-      <DependentUpon>SqlServer.xsd</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -485,13 +469,6 @@
     </Content>
     <None Include="Resources\summation_3d_blue_oma_icon.ico" />
     <None Include="Resources\ninja.ico" />
-    <Content Include="R6.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="R6_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>R6.mdf</DependentUpon>
-    </Content>
     <None Include="Resources\RightArrow.png" />
   </ItemGroup>
   <ItemGroup>

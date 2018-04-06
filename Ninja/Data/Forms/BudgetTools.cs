@@ -1,8 +1,4 @@
-#region Using Directives
-
 using System;
-
-#endregion
 
 namespace Budget
 {
@@ -12,9 +8,9 @@ namespace Budget
         {
             public partial class BudgetTools : Syncfusion.Windows.Forms.MetroForm
             {
-                public BudgetTools( )
+                public BudgetTools()
                 {
-                    InitializeComponent( );
+                    InitializeComponent();
                 }
 
                 private void BudgetTools_Load(object sender, EventArgs e)
@@ -23,10 +19,8 @@ namespace Budget
 
                 private void tabControlAdv1_SelectedIndexChanged(object sender, EventArgs e)
                 {
-
                 }
             }
-
         }
     }
 }

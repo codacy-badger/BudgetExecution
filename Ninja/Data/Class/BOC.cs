@@ -39,7 +39,7 @@
                     return prc.Amount;
                 }
 
-                public override string ToString( )
+                public override string ToString()
                 {
                     return Code;
                 }

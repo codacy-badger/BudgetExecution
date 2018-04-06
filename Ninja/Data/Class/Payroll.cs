@@ -1,8 +1,4 @@
-﻿#region Using Directives
-
-using System.Data;
-
-#endregion
+﻿using System.Data;
 
 namespace Budget
 {
@@ -14,29 +10,29 @@ namespace Budget
             {
                 #region Properties
 
-                public string RPIO { get; }
+                public decimal Amount { get; }
                 public string BFY { get; }
-                public Fund Fund { get; }
-                public Org Org { get; }
-                public RC RC { get; }
                 public string Code { get; }
+                public Fund Fund { get; }
+                public double Hours { get; }
+                public string HrOrgCode { get; }
+                public Org Org { get; }
                 public string ProgramProjectCode { get; }
                 public string ProgramProjectName { get; }
-                public string HrOrgCode { get; }
+                public RC RC { get; }
+                public string RPIO { get; }
                 public string WorkCode { get; }
                 public string WorkCodeName { get; }
-                public decimal Amount { get; }
-                public double Hours { get; }
-                public decimal YearBasePay { get; }
                 public double YearBaseHours { get; }
-                public decimal YearOverTimePay { get; }
+                public decimal YearBasePay { get; }
                 public double YearOverTimeHours { get; }
+                public decimal YearOverTimePay { get; }
 
                 #endregion
 
                 #region Constructors
 
-                public Payroll( )
+                public Payroll()
                 {
                 }
 
@@ -64,23 +60,23 @@ namespace Budget
 
                 public Payroll(DataRow dr)
                 {
-                    RPIO = dr["RPIO"].ToString( );
-                    BFY = dr["BFY "].ToString( );
-                    Fund = new Fund(dr["Fund"].ToString( ), BFY);
-                    Org = new Org(dr["Org"].ToString( ));
-                    RC = new RC(dr["RC"].ToString( ));
-                    Code = dr["Code"].ToString( );
-                    ProgramProjectCode = dr["ProgramProjectCode"].ToString( );
-                    ProgramProjectName = dr["ProgramProjectName"].ToString( );
-                    HrOrgCode = dr["HrOrgCode"].ToString( );
-                    WorkCode = dr["WorkCode"].ToString( );
-                    WorkCodeName = dr["WorkCodeName"].ToString( );
-                    Amount = decimal.Parse(dr["Amount"].ToString( ));
-                    Hours = double.Parse(dr["Hours"].ToString( ));
-                    YearBasePay = decimal.Parse(dr["YearBasePay"].ToString( ));
-                    YearBaseHours = double.Parse(dr["YearBaseHours"].ToString( ));
-                    YearOverTimePay = decimal.Parse(dr["YearOverTimePay"].ToString( ));
-                    YearOverTimeHours = double.Parse(dr["YearOverTimeHours"].ToString( ));
+                    RPIO = dr["RPIO"].ToString();
+                    BFY = dr["BFY "].ToString();
+                    Fund = new Fund(dr["Fund"].ToString(), BFY);
+                    Org = new Org(dr["Org"].ToString());
+                    RC = new RC(dr["RC"].ToString());
+                    Code = dr["Code"].ToString();
+                    ProgramProjectCode = dr["ProgramProjectCode"].ToString();
+                    ProgramProjectName = dr["ProgramProjectName"].ToString();
+                    HrOrgCode = dr["HrOrgCode"].ToString();
+                    WorkCode = dr["WorkCode"].ToString();
+                    WorkCodeName = dr["WorkCodeName"].ToString();
+                    Amount = decimal.Parse(dr["Amount"].ToString());
+                    Hours = double.Parse(dr["Hours"].ToString());
+                    YearBasePay = decimal.Parse(dr["YearBasePay"].ToString());
+                    YearBaseHours = double.Parse(dr["YearBaseHours"].ToString());
+                    YearOverTimePay = decimal.Parse(dr["YearOverTimePay"].ToString());
+                    YearOverTimeHours = double.Parse(dr["YearOverTimeHours"].ToString());
                 }
 
                 #endregion

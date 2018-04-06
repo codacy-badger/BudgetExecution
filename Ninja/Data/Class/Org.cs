@@ -9,12 +9,10 @@
                 #region Properties
 
                 public string Code { get; }
-                public string Name { get; }
                 public string ID { get; }
+                public string Name { get; }
 
                 #endregion
-
-                #region Constructor
 
                 public Org(string code)
                 {
@@ -23,11 +21,9 @@
                     ID = Info.GetDivisionMailCode(code);
                 }
 
-                #endregion
-
                 #region Methods
 
-                public override string ToString( )
+                public override string ToString()
                 {
                     return Code;
                 }

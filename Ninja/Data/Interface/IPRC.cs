@@ -8,14 +8,14 @@
             {
                 #region Properties
 
-                string RPIO { get; set; }
+                Account Account { get; }
+                decimal Amount { get; set; }
                 string BFY { get; set; }
+                BOC BOC { get; }
                 Fund Fund { get; }
                 Org Org { get; }
                 RC RC { get; }
-                BOC BOC { get; }
-                Account Account { get; }
-                decimal Amount { get; set; }
+                string RPIO { get; set; }
 
                 #endregion
             }

@@ -1,11 +1,7 @@
-﻿#region Using Directives
-
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Windows.Forms;
-
-#endregion
 
 namespace Budget
 {
@@ -16,31 +12,33 @@ namespace Budget
             public class PRC : IAccount
             {
                 #region Properties
-                public string BudgetLevel { get; set; }
-                public int ID { get; set; }
-                public string RPIO { get; set; }
-                public string BFY { get; set; }
-                public Fund Fund { get; }
-                public RC RC { get; }
-                public string Org { get; }
-                public BOC BOC { get; }
+
                 public Account Account { get; }
+                public PRC[] AllocationData { get; set; }
+                public decimal Amount { get; set; }
+                public string BFY { get; set; }
+                public BOC BOC { get; }
+                public string BudgetLevel { get; set; }
+                public string Code { get; set; }
+                public FTE FTE { get; set; }
+                public Fund Fund { get; }
                 public string Goal { get; }
                 public string GoalName { get; }
-                public string Objective { get; }
-                public string ObjectiveName { get; }
-                public string Code { get; set; }
-                public decimal Amount { get; set; }
+                public int ID { get; set; }
                 public string NPM { get; set; }
                 public string NpmCode { get; }
                 public string NpmName { get; set; }
+                public string Objective { get; }
+                public string ObjectiveName { get; }
+                public string Org { get; }
+                public Parameter Parameter { get; }
+                public string ProgramArea { get; set; }
                 public string ProgramProjectCode { get; }
                 public string ProgramProjectName { get; set; }
-                public PRC[] AllocationData { get; set; }
-                public FTE FTE { get; set; }
-                public string ProgramArea { get; set; }
-                public Parameter Parameter { get; }
+                public RC RC { get; }
+                public string RPIO { get; set; }
                 private Dictionary<string, object> Data { get; set; }
+
                 #endregion Properties
 
                 #region Constructors
@@ -96,6 +94,68 @@ namespace Budget
 
                 #region Methods
 
+                public string GetCode()
+                {
+                    return Code;
+                }
+
+                public string GetGoal()
+                {
+                    var goal = Code.Substring(0, 1).ToCharArray();
+                    return goal.ToString();
+                }
+
+                public string GetGoalName(string code)
+                {
+                    return Info.GetGoalName(code);
+                }
+
+                public string GetNpmCode()
+                {
+                    var npm = Code.Substring(2, 1).ToCharArray();
+                    return npm.ToString();
+                }
+
+                public string GetObjective()
+                {
+                    return Code.Substring(1, 2);
+                }
+
+                public string GetObjectiveName(string code)
+                {
+                    return Info.GetObjectiveName(code);
+                }
+
+                public string[] GetProgramData()
+                {
+                    var pp = GetProgramProjectCode();
+                    var sql = new Dictionary<string, object>();
+                    sql.Add("ProgramProjectCode", pp);
+                    string[] p = new DataBuilder(Source.A6, sql).A6Query();
+                    return p;
+                }
+
+                public string GetProgramProjectCode()
+                {
+                    return Code.Substring(5, 2);
+                }
+
+                public override string ToString()
+                {
+                    return Account.Code;
+                }
+
+                internal PRC[] GetAllocation(DataTable table)
+                {
+                    PRC[] allocation = new PRC[table.Rows.Count];
+                    for (int i = 0; i < table.Rows.Count; i++)
+                    {
+                        foreach (DataRow row in table.Rows)
+                            allocation[i] = new PRC(row);
+                    }
+                    return allocation;
+                }
+
                 internal Dictionary<string, object> GetData()
                 {
                     try
@@ -121,57 +181,6 @@ namespace Budget
                     }
                 }
 
-                internal Parameter GetParameter()
-                {
-                    return new Parameter(BudgetLevel, RPIO, BFY, Fund.Code, Org, RC.Code, BOC.Code, Account.Code);
-                }
-
-                public string GetGoal()
-                {
-                    var goal = Code.Substring(0, 1).ToCharArray();
-                    return goal.ToString();
-                }
-
-                public string GetGoalName(string code)
-                {
-                    return Info.GetGoalName(code);
-                }
-
-                public string GetObjective()
-                {
-                    return Code.Substring(1, 2);
-                }
-
-                public string GetObjectiveName(string code)
-                {
-                    return Info.GetObjectiveName(code);
-                }
-
-                public string GetNpmCode()
-                {
-                    var npm = Code.Substring(2, 1).ToCharArray();
-                    return npm.ToString();
-                }
-
-                public string GetCode()
-                {
-                    return Code;
-                }
-
-                public string GetProgramProjectCode()
-                {
-                    return Code.Substring(5, 2);
-                }
-
-                public string[] GetProgramData()
-                {
-                    var pp = GetProgramProjectCode();
-                    var sql = new Dictionary<string, object>();
-                    sql.Add("ProgramProjectCode", pp);
-                    string[] p = new DataBuilder(Source.A6, sql).A6Query();
-                    return p;
-                }
-
                 internal decimal GetFteAllocation()
                 {
                     if (BOC.Code == "17")
@@ -182,12 +191,17 @@ namespace Budget
                         }
                         catch (Exception ex)
                         {
-                            MessageBox.Show(ex.Message.ToString() + $"Target Method:\n{ex.TargetSite}\n" + $"Stack:\n{ex.StackTrace}");
+                            MessageBox.Show(ex.Message.ToString());
                             return -1m;
                         }
                     }
                     else
                         return 0.0m;
+                }
+
+                internal Parameter GetParameter()
+                {
+                    return new Parameter(BudgetLevel, RPIO, BFY, Fund.Code, Org, RC.Code, BOC.Code, Account.Code);
                 }
 
                 internal decimal Reprogram(decimal amount)
@@ -199,25 +213,9 @@ namespace Budget
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message.ToString() + $"Target Method:\n{ex.TargetSite}\n" + $"Stack:\n{ex.StackTrace}");
+                        MessageBox.Show(ex.Message.ToString());
                         return -1;
                     }
-                }
-
-                internal PRC[] GetAllocation(DataTable table)
-                {
-                    PRC[] allocation = new PRC[table.Rows.Count];
-                    for(int i = 0; i<table.Rows.Count; i++)
-                    {
-                        foreach (DataRow row in table.Rows)
-                            allocation[i] = new PRC(row);
-                    }
-                    return allocation;
-                }
-
-                public override string ToString( )
-                {
-                    return Account.Code;
                 }
 
                 #endregion Methods

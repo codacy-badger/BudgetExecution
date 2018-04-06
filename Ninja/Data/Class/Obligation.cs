@@ -1,8 +1,4 @@
-﻿#region Using Directives
-
-using System.Data;
-
-#endregion
+﻿using System.Data;
 
 namespace Budget
 {
@@ -14,34 +10,34 @@ namespace Budget
             {
                 #region Properties
 
-                public DataBuilder Data { get; set; }
-                public string RPIO { get; set; }
-                public string BFY { get; set; }
-                public Fund Fund { get; set; }
-                public Org Org { get; set; }
-                public RC RC { get; set; }
-                public string Code { get; set; }
                 public Account Account { get; set; }
-                public string NpmCode { get; set; }
+                public string BFY { get; set; }
                 public BOC BOC { get; set; }
+                public string Code { get; set; }
+                public decimal CommitmentAmount { get; set; }
+                public DataBuilder Data { get; set; }
+                public string DCNprefix { get; set; }
+                public string DocType { get; set; }
+                public string DocumentControlNumber { get; set; }
                 public string FOC { get; set; }
                 public string FocName { get; set; }
-                public string DocType { get; set; }
-                public string System { get; set; }
+                public Fund Fund { get; set; }
+                public string GrantNumber { get; set; }
+                public string NpmCode { get; set; }
+                public decimal ObligationAmount { get; set; }
+                public Org Org { get; set; }
                 public string PurchaseRequestNumber { get; set; }
+                public RC RC { get; set; }
+                public string RPIO { get; set; }
                 public string SiteProjectCode { get; set; }
                 public string SiteProjectName { get; set; }
-                public string DocumentControlNumber { get; set; }
-                public string DCNprefix { get; set; }
-                public string GrantNumber { get; set; }
-                public decimal CommitmentAmount { get; set; }
-                public decimal ObligationAmount { get; set; }
+                public string System { get; set; }
 
                 #endregion Properties
 
                 #region Constructors
 
-                public Obligation( )
+                public Obligation()
                 {
                 }
 
@@ -74,27 +70,27 @@ namespace Budget
 
                 public Obligation(DataRow dr)
                 {
-                    RPIO = dr["RPIO "].ToString( );
-                    BFY = dr["BFY"].ToString( );
-                    Fund = new Fund(dr["Fund"].ToString( ), BFY);
-                    Org = new Org(dr["Org"].ToString( ));
-                    RC = new RC(dr["RC"].ToString( ));
-                    Code = dr["Code"].ToString( );
+                    RPIO = dr["RPIO "].ToString();
+                    BFY = dr["BFY"].ToString();
+                    Fund = new Fund(dr["Fund"].ToString(), BFY);
+                    Org = new Org(dr["Org"].ToString());
+                    RC = new RC(dr["RC"].ToString());
+                    Code = dr["Code"].ToString();
                     Account = new Account(Code);
                     NpmCode = Account.NpmCode;
-                    BOC = new BOC(dr["BOC"].ToString( ));
-                    FOC = dr["FOC"].ToString( );
-                    FocName = dr["FocName"].ToString( );
-                    DocType = dr["DocType"].ToString( );
-                    System = dr["System"].ToString( );
-                    PurchaseRequestNumber = dr["PurchaseRequestNumber"].ToString( );
-                    DCNprefix = dr["DCNprefix "].ToString( );
-                    GrantNumber = dr["GrantNumber"].ToString( );
-                    SiteProjectCode = dr["SiteProjectCode"].ToString( );
-                    SiteProjectName = dr["SiteProjectName"].ToString( );
-                    DocumentControlNumber = dr["DocumentControlNumber"].ToString( );
-                    CommitmentAmount = decimal.Parse(dr["CommitmentAmount"].ToString( ));
-                    ObligationAmount = decimal.Parse(dr["ObligationAmount"].ToString( ));
+                    BOC = new BOC(dr["BOC"].ToString());
+                    FOC = dr["FOC"].ToString();
+                    FocName = dr["FocName"].ToString();
+                    DocType = dr["DocType"].ToString();
+                    System = dr["System"].ToString();
+                    PurchaseRequestNumber = dr["PurchaseRequestNumber"].ToString();
+                    DCNprefix = dr["DCNprefix "].ToString();
+                    GrantNumber = dr["GrantNumber"].ToString();
+                    SiteProjectCode = dr["SiteProjectCode"].ToString();
+                    SiteProjectName = dr["SiteProjectName"].ToString();
+                    DocumentControlNumber = dr["DocumentControlNumber"].ToString();
+                    CommitmentAmount = decimal.Parse(dr["CommitmentAmount"].ToString());
+                    ObligationAmount = decimal.Parse(dr["ObligationAmount"].ToString());
                 }
 
                 #endregion Constructors

@@ -13,94 +13,48 @@ namespace Budget
             {
                 #region Properties
 
-                public Org Organization { get; }
-                public DivisionAuthority DivisionBudget { get; set; }
+                public List<string> AccountingInfo { get; set; }
+                public decimal Awards { get; set; }
+                public List<string> ControlInfo { get; set; }
                 public string ControlNumber { get; set; }
                 public List<string> ControlNumbers { get; set; }
                 public string DateIssued { get; set; }
-                public List<Transfer> Reprogrammings { get; set; }
-                public string Purpose { get; set; }
-                public List<string> ControlInfo { get; set; }
-                public Dictionary<string, object> Suppplemental { get; set; }
-                public decimal Awards { get; set; }
-                public int TimeOffAwards { get; set; }
-                public decimal OverTime { get; set; }
-                public PRC Training { get; set; }
-                public List<string> AccountingInfo { get; set; }
-                public List<string> DocumentHeader { get; set; }
-                public List<string> SignatureBlock { get; set; }
                 public string DcnPrefix { get; set; }
+                public DivisionAuthority DivisionBudget { get; set; }
+                public List<string> DocumentHeader { get; set; }
+                public Org Organization { get; }
+                public decimal OverTime { get; set; }
+                public string Purpose { get; set; }
+                public List<Transfer> Reprogrammings { get; set; }
+                public List<string> SignatureBlock { get; set; }
+                public Dictionary<string, object> Suppplemental { get; set; }
+                public int TimeOffAwards { get; set; }
+                public PRC Training { get; set; }
 
                 #endregion Properties
 
                 #region Constructors
 
-                public DocInfo( )
+                public DocInfo()
                 {
                 }
 
                 public DocInfo(DivisionAuthority budget)
                 {
                     DivisionBudget = budget;
-                    ControlNumber = GetControlNumber( );
-                    DocumentHeader = GetDocumentHeader( );
-                    AccountingInfo = GetAccountingInfo( );
-                    SignatureBlock = GetSignatureInfo( );
+                    ControlNumber = GetControlNumber();
+                    DocumentHeader = GetDocumentHeader();
+                    AccountingInfo = GetAccountingInfo();
+                    SignatureBlock = GetSignatureInfo();
                 }
 
                 #endregion Constructors
 
                 #region Methods
 
-                internal string GetControlNumber( )
+                internal List<string> GetAccountingInfo()
                 {
-                    try
-                    {
-                        StringBuilder controlNumber = new StringBuilder( );
-                        string month = DateTime.Now.Month.ToString( );
-                        string day = DateTime.Now.Day.ToString( );
-                        controlNumber.Append(DivisionAuthority.FiscalYear);
-                        controlNumber.Append(month);
-                        controlNumber.Append(day);
-                        controlNumber.Append("-");
-                        controlNumber.Append((DivisionAuthority.FiscalYear[2].ToString( )));
-                        controlNumber.Append((DivisionAuthority.FiscalYear[3].ToString( )));
-                        controlNumber.Append("-");
-                        controlNumber.Append(Organization.ID);
-                        controlNumber.Append("-01");
-                        return controlNumber.ToString( );
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show("ERROR!: \n" + ex.TargetSite + ex.StackTrace);
-                        return null;
-                    }
-                }
-
-                internal List<string> GetDocumentHeader( )
-                {
-                    List<string> division = new List<string>( );
-                    division.Add("US EPA REGION 6");
-                    division.Add($"{ Organization.Name }");
-                    division.Add($"ID : { Organization.ID }");
-                    division.Add($"Org Code: { Organization.Code }");
-                    division.Add($"Budget Authority for Fiscal Year {DivisionAuthority.FiscalYear}");
-                    return division;
-                }
-
-                internal List<string> GetManagementHeader( )
-                {
-                    List<string> header = new List<string>( );
-                    header.Add("US EPA REGION 6");
-                    header.Add("Management Division 6MD");
-                    header.Add("Office of the Regional Comptroller 6MD-C");
-                    header.Add("Budget and Accounting Section 6MD-CB");
-                    return header;
-                }
-
-                internal List<string> GetAccountingInfo( )
-                {
-                    List<string> footer = new List<string>( );
+                    List<string> footer = new List<string>();
                     footer.Add("FUNDING INFORMATION");
                     footer.Add("DCN:  * AT DIVISION'S DISCRETION - MUST BE ALPHA");
                     footer.Add("BUDGET ORG:  ALLOWANCE HOLDER AND RESPONSIBILITY CENTER");
@@ -114,20 +68,36 @@ namespace Budget
                     return footer;
                 }
 
-                internal List<string> GetSignatureInfo( )
-                {
-                    List<string> signature = new List<string>( );
-                    signature.Add("Terry D. Eppler");
-                    signature.Add("Budget Analyst | 6MD-CB");
-                    signature.Add("US EPA Region 6");
-                    return signature;
-                }
-
-                internal Dictionary<string, string> GetDocmumentDictionary( )
+                internal string GetControlNumber()
                 {
                     try
                     {
-                        Dictionary<string, string> param = new Dictionary<string, string>( );
+                        StringBuilder controlNumber = new StringBuilder();
+                        string month = DateTime.Now.Month.ToString();
+                        string day = DateTime.Now.Day.ToString();
+                        controlNumber.Append(DivisionAuthority.FiscalYear);
+                        controlNumber.Append(month);
+                        controlNumber.Append(day);
+                        controlNumber.Append("-");
+                        controlNumber.Append((DivisionAuthority.FiscalYear[2].ToString()));
+                        controlNumber.Append((DivisionAuthority.FiscalYear[3].ToString()));
+                        controlNumber.Append("-");
+                        controlNumber.Append(Organization.ID);
+                        controlNumber.Append("-01");
+                        return controlNumber.ToString();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("ERROR!: \n" + ex.TargetSite + ex.StackTrace);
+                        return null;
+                    }
+                }
+
+                internal Dictionary<string, string> GetDocmumentDictionary()
+                {
+                    try
+                    {
+                        Dictionary<string, string> param = new Dictionary<string, string>();
                         param.Add("ControlNumber", ControlNumber);
                         param.Add("Org", Organization.Code);
                         param.Add("Division", Organization.Name);
@@ -143,7 +113,28 @@ namespace Budget
                     }
                 }
 
-                internal int GetNewDocNumber( )
+                internal List<string> GetDocumentHeader()
+                {
+                    List<string> division = new List<string>();
+                    division.Add("US EPA REGION 6");
+                    division.Add($"{ Organization.Name }");
+                    division.Add($"ID : { Organization.ID }");
+                    division.Add($"Org Code: { Organization.Code }");
+                    division.Add($"Budget Authority for Fiscal Year {DivisionAuthority.FiscalYear}");
+                    return division;
+                }
+
+                internal List<string> GetManagementHeader()
+                {
+                    List<string> header = new List<string>();
+                    header.Add("US EPA REGION 6");
+                    header.Add("Management Division 6MD");
+                    header.Add("Office of the Regional Comptroller 6MD-C");
+                    header.Add("Budget and Accounting Section 6MD-CB");
+                    return header;
+                }
+
+                internal int GetNewDocNumber()
                 {
                     try
                     {
@@ -154,6 +145,15 @@ namespace Budget
                         MessageBox.Show("ERROR!: \n" + ex.TargetSite + ex.StackTrace);
                         return -1;
                     }
+                }
+
+                internal List<string> GetSignatureInfo()
+                {
+                    List<string> signature = new List<string>();
+                    signature.Add("Terry D. Eppler");
+                    signature.Add("Budget Analyst | 6MD-CB");
+                    signature.Add("US EPA Region 6");
+                    return signature;
                 }
 
                 #endregion Methods

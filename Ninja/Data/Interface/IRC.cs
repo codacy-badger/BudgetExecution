@@ -9,14 +9,14 @@
                 #region Properties
 
                 string Code { get; }
-                string Name { get; }
                 string ID { get; }
+                string Name { get; }
 
                 #endregion
 
                 #region Methods
 
-                string ToString( );
+                string ToString();
 
                 #endregion
             }

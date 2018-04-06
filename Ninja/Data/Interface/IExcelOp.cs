@@ -1,9 +1,5 @@
-﻿#region Using Directives
-
-using System;
+﻿using System;
 using Excel = Microsoft.Office.Interop.Excel;
-
-#endregion
 
 namespace Budget
 {
@@ -22,17 +18,17 @@ namespace Budget
 
                 #region Methods
 
-                string GetFile( );
+                Excel.Application GetApplication();
 
-                string GetConnectionString( );
+                string GetConnectionString();
 
-                Excel.Application GetApplication( );
+                string GetFile();
 
                 Excel.Workbook GetWorkbook(Excel.Application excel, string filepath);
 
-                void SaveWorkBook(Excel.Workbook wb);
-
                 void ReleaseObject(object obj);
+
+                void SaveWorkBook(Excel.Workbook wb);
 
                 #endregion
             }

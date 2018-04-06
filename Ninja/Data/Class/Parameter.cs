@@ -10,15 +10,15 @@ namespace Budget
             {
                 #region Properties
 
-                public string BudgetLevel { get; }
-                public string RPIO { get; }
                 public string BFY { get; }
+                public string BOC { get; }
+                public string BudgetLevel { get; }
+                public string Code { get; }
                 public string Fund { get; }
                 public string Org { get; }
-                public string RC { get; }
-                public string BOC { get; }
-                public string Code { get; }
                 public Dictionary<string, string> PRC { get; set; }
+                public string RC { get; }
+                public string RPIO { get; }
 
                 #endregion Properties
 
@@ -34,7 +34,7 @@ namespace Budget
                     RC = rc;
                     BOC = boc;
                     Code = code;
-                    PRC = new Dictionary<string, string>( )
+                    PRC = new Dictionary<string, string>()
                     {
                         ["BudgetLevel"] = bl,
                         ["RPIO"] = RPIO,

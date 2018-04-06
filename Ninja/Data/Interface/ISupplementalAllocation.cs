@@ -1,5 +1,4 @@
-﻿
-namespace Budget
+﻿namespace Budget
 {
     namespace Ninja
     {
@@ -8,8 +7,8 @@ namespace Budget
             internal interface ISupplementalAllocation
             {
                 decimal Awards { get; set; }
-                int TimeOffAwards { get; set; }
                 decimal OverTime { get; set; }
+                int TimeOffAwards { get; set; }
                 PRC Training { get; set; }
             }
         }
