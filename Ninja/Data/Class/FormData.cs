@@ -15,45 +15,20 @@ namespace Budget
     {
         namespace Data
         {
-            public class FormData : IBudgetAuthority
+            public class FormData 
             {
-                #region Properties
-
-                public IBudgetAuthority Authority { get; set; }
-                public decimal Average { get; set; }
-                public BindingSource BindingSource { get; set; }
-                public ChartControl Chart { get; set; }
-                public ChartDataBindModel ChartModel { get; set; }
-                public int Count { get; set; }
-                public DataBuilder Data { get; set; }
-                public Dictionary<string, string[]> DataElement { get; set; }
-                public DataGridView DataGrid { get; set; }
-                public DataSet E6 { get; set; }
-                public ListBox FilterBox { get; set; }
-                public decimal[] Metrics { get; set; }
-                public BindingNavigator Navigator { get; set; }
-                public FlowLayoutPanel Panel { get; set; }
-                public Tuple<DataTable, PRC[], decimal, int> PrcData { get; set; }
-                public DataTable Table { get; set; }
-                public decimal Total { get; set; }
-                private bool Percent { get; set; }
-
-                #endregion
-
-                #region Constructors
-
+                //Constructors
                 public FormData()
                 {
                 }
 
                 public FormData(Source source, Control panel, BindingSource bs, DataGridView dgv, BindingNavigator bn)
                 {
-                    if (source == Source.P7)
-                        Authority = new RegionalAuthority();
-                    E6 = Data.GetDataSet();
-                    Table = Data.Table;
+                    Data = new DataBuilder(source);
+                    BudgetMetric = new DataMetric(Data);
+                    BudgetData = Data.BudgetData;
+                    Table = Data.BudgetTable;
                     BindGridAndNavigator(Table, dgv, bs, bn);
-                    DataElement = GetDataElements(Table);
                     FilterBox = panel as ListBox;
                     BindingSource = bs;
                     Navigator = bn;
@@ -61,12 +36,24 @@ namespace Budget
                     GetAppropriationFilterButtonBox(Table, Panel);
                 }
 
-                #endregion
+                //Properties
+                public DataBuilder Data { get; set; }
+                public DataMetric BudgetMetric { get; set; }
+                public DataSet BudgetData { get; set; }
+                public DataTable Table { get; set; }
+                public ChartControl Chart { get; set; }
+                public ChartDataBindModel ChartModel { get; set; }
+                public int Count { get; set; }
+                public DataGridView DataGrid { get; set; }
+                public ListBox FilterBox { get; set; }
+                public decimal[] Metrics { get; set; }
+                public BindingNavigator Navigator { get; set; }
+                public BindingSource BindingSource { get; set; }
+                public FlowLayoutPanel Panel { get; set; }
+                private bool Percent { get; set; }
 
-                #region Methods
 
-                DataSet IBudgetAuthority.E6 { get; }
-
+                //Methods
                 public DataTable FilterTable(DataTable table, string column, string filter)
                 {
                     try
@@ -75,7 +62,7 @@ namespace Budget
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message.ToString());
+                        MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
                         return null;
                     }
                 }
@@ -88,7 +75,7 @@ namespace Budget
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message.ToString());
+                        MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
                         return -1M;
                     }
                 }
@@ -101,63 +88,11 @@ namespace Budget
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message.ToString());
+                        MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
                         return null;
                     }
                 }
-
-                public int GetCount(DataTable table)
-                {
-                    try
-                    {
-                        return table.Rows.Count;
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message.ToString());
-                        return -1;
-                    }
-                }
-
-                public Dictionary<string, string[]> GetDataElements(DataTable table)
-                {
-                    var data = new Dictionary<string, string[]>();
-                    foreach (DataColumn dc in table.Columns)
-                    {
-                        if (dc.ColumnName.Equals("Id") || dc.ColumnName.Equals("Amount"))
-                            continue;
-                        data.Add(dc.ColumnName, GetCodes(table, dc.ColumnName));
-                    }
-                    if (data.ContainsKey("Id")) data.Remove("Id");
-                    if (data.ContainsKey("Amount")) data.Remove("Amount");
-                    if (data.ContainsKey("P6_Id")) data.Remove("P6_Id");
-                    return data;
-                }
-
-                public Dictionary<string, decimal[]> GetDataMetrics(DataTable table, string column, string filter)
-                {
-                    try
-                    {
-                        string[] list = GetCodes(table, column);
-                        Dictionary<string, decimal[]> info = new Dictionary<string, decimal[]>();
-                        foreach (string ftr in list)
-                        {
-                            decimal[] stat = new decimal[4];
-                            stat[0] = GetDataValues(table, column, filter).Item3;
-                            stat[1] = (decimal)GetDataValues(table, column, filter).Item4;
-                            stat[2] = stat[0] / stat[1];
-                            stat[3] = (stat[0] / stat[1]) * 100;
-                            info.Add(filter, stat);
-                        }
-                        return info;
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message.ToString());
-                        return null;
-                    }
-                }
-
+                
                 public Dictionary<string, decimal> GetDataTotals(DataTable table, string column, string filter)
                 {
                     try
@@ -175,53 +110,10 @@ namespace Budget
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message.ToString());
+                        MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
                         return null;
                     }
-                }
-
-                public Tuple<DataTable, PRC[], decimal, int> GetDataValues(DataTable table, string column, string filter)
-                {
-                    try
-                    {
-                        var query = table.AsEnumerable().Where(p => p.Field<string>(column).Equals(filter)).Select(p => p).CopyToDataTable();
-                        return new Tuple<DataTable, PRC[], decimal, int>(query, GetPrcArray(query), GetTotal(query), GetCount(query));
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message.ToString());
-                        return null;
-                    }
-                }
-
-                public decimal[] GetMetrics(DataTable table)
-                {
-                    var count = GetCount(table);
-                    return new decimal[] { GetTotal(table), (decimal)count, GetAverage(table) };
-                }
-
-                public Dictionary<string, decimal[]> GetMetrics(DataTable table, string[] list, string column)
-                {
-                    try
-                    {
-                        Dictionary<string, decimal[]> info = new Dictionary<string, decimal[]>();
-                        foreach (string filter in list)
-                        {
-                            decimal[] stat = new decimal[4];
-                            stat[0] = GetDataValues(table, column, filter).Item3;
-                            stat[1] = (decimal)GetDataValues(table, column, filter).Item4;
-                            stat[2] = stat[0] / stat[1];
-                            stat[3] = (stat[0] / stat[1]) * 100;
-                            info.Add(filter, stat);
-                        }
-                        return info;
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message.ToString());
-                        return null;
-                    }
-                }
+                }               
 
                 public PRC[] GetPrcArray(DataTable table)
                 {
@@ -231,9 +123,24 @@ namespace Budget
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message.ToString());
+                        MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
                         return null;
                     }
+                }
+
+                public Dictionary<string, string[]> GetProgramElements(DataTable table)
+                {
+                    var data = new Dictionary<string, string[]>();
+                    foreach (DataColumn dc in table.Columns)
+                    {
+                        if (dc.ColumnName.Equals("Id") || dc.ColumnName.Equals("Amount"))
+                            continue;
+                        data.Add(dc.ColumnName, GetCodes(table, dc.ColumnName));
+                    }
+                    if (data.ContainsKey("Id")) data.Remove("Id");
+                    if (data.ContainsKey("Amount")) data.Remove("Amount");
+                    if (data.ContainsKey("P6_Id")) data.Remove("P6_Id");
+                    return data;
                 }
 
                 public DataTable GetTable(DataTable table, string column, string filter)
@@ -244,7 +151,7 @@ namespace Budget
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message.ToString());
+                        MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
                         return null;
                     }
                 }
@@ -257,7 +164,7 @@ namespace Budget
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message.ToString());
+                        MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
                         return -1M;
                     }
                 }
@@ -278,7 +185,7 @@ namespace Budget
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message.ToString());
+                        MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
                         return null;
                     }
                 }
@@ -292,7 +199,7 @@ namespace Budget
                     Table = table;
                 }
 
-                internal void AppropriationListBoxItem_OnSelect(object sender)
+                internal void AppropriationListBoxItem_OnSelect(object sender, EventArgs e)
                 {
                     var button = sender as MetroSetListBox;
                     var table = GetTable(Table, "FundName", button.SelectedItem.ToString());
@@ -325,7 +232,7 @@ namespace Budget
                     GetBocFilterBox(Table, Panel);
                 }
 
-                internal void BocListBoxItem_OnSelect(object sender)
+                internal void BocListBoxItem_OnSelect(object sender, EventArgs e)
                 {
                     var button = sender as MetroSetListBox;
                     var table = GetTable(Table, "BocName", button.SelectedItem.ToString());
@@ -367,7 +274,7 @@ namespace Budget
 
                 internal void GetAppropriationFilterListBox(DataTable table, Control filterPanel)
                 {
-                    var filter = filterPanel as MetroSetListBox;
+                    var filter = filterPanel as ListBox;
                     GetFilterListItems(filter, GetCodes(table, "FundName"));
                     filter.SelectedIndexChanged += AppropriationListBoxItem_OnSelect;
                 }
@@ -380,7 +287,7 @@ namespace Budget
 
                 internal void GetBocListBox(DataTable table, Control filterPanel)
                 {
-                    var filter = filterPanel as MetroSetListBox;
+                    var filter = filterPanel as ListBox;
                     GetFilterButtons(filter, GetCodes(table, "BocName"));
                     filter.SelectedIndexChanged += BocListBoxItem_OnSelect;
                 }
@@ -410,7 +317,7 @@ namespace Budget
 
                 internal void GetFilterListItems(Control panel, string[] list)
                 {
-                    var box = panel as MetroSetListBox;
+                    var box = panel as ListBox;
                     box.Controls.Clear();
                     foreach (string f in list)
                     {
@@ -451,12 +358,11 @@ namespace Budget
 
                 internal void ReturnButton_OnClick(object sender, EventArgs e)
                 {
-                    Table = Data.Table;
+                    Table = Data.BudgetTable;
                     BindingSource.DataSource = Table;
                     GetAppropriationFilterListBox(Table, FilterBox);
                 }
 
-                #endregion
             }
         }
     }

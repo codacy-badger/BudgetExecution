@@ -13,20 +13,8 @@ namespace Budget
         {
             public class Chart
             {
-                #region Properties
 
-                public ChartControl ColumnChart { get; set; }
-                public ChartSeries ColumnSeries { get; set; }
-                public Dictionary<string, double> Data { get; set; }
-                public bool Percentage { get; set; }
-                public ChartControl PieChart { get; set; }
-                public Dictionary<string, decimal> SeriesInfo { get; set; }
-                public decimal Total { get; set; }
-
-                #endregion
-
-                #region Constructors
-
+                //Constructors
                 public Chart()
                 {
                 }
@@ -70,7 +58,7 @@ namespace Budget
                             ColumnSeries.Points.Add($"{values["BocName"].ToString()}", (double)value);
                             GetBindingSeriesConfiguration(ColumnSeries);
                             ColumnChart.Series.Add(ColumnSeries);
-                            decimal total = P8.Data.Table.AsEnumerable()
+                            decimal total = P8.Data.BudgetTable.AsEnumerable()
                                 .Where(p => p.Field<string>("ProgramProjectName").Equals(pp))
                                 .Select(p => p.Field<decimal>("Amount")).Sum();
                             ColumnChart.PrimaryXAxis.Title = $"{ (value / total) * 100:N}% of { pp} Total Funding";
@@ -102,10 +90,10 @@ namespace Budget
                             ColumnSeries.Points.Add($"{values["BocName"].ToString()}", (double)value);
                             GetBindingSeriesConfiguration(ColumnSeries);
                             ColumnChart.Series.Add(ColumnSeries);
-                            decimal total = P7.Data.Table.AsEnumerable()
+                            decimal total = P7.Data.BudgetTable.AsEnumerable()
                                 .Where(p => p.Field<string>("ProgramProjectName").Equals(pp))
                                 .Select(p => p.Field<decimal>("Amount")).Sum();
-                            ColumnChart.PrimaryXAxis.Title = $"{ (value / total) * 100:N}% of { pp} Total Funding";
+                            ColumnChart.PrimaryXAxis.Title = $"{ (value / total) * 100:N}% of {pp} Total Funding";
                             ColumnChart.PrimaryXAxis.TitleColor = SystemColors.Info;
                             ColumnChart.PrimaryXAxis.TitleFont = new Font("SegoeUI", 9f);
                             series.Points.Add("Total", (double)total);
@@ -132,10 +120,18 @@ namespace Budget
                     Get3DMode(ColumnChart);
                 }
 
-                #endregion
+                
+                //Properties
+                public ChartControl ColumnChart { get; set; }
+                public ChartSeries ColumnSeries { get; set; }
+                public Dictionary<string, double> Data { get; set; }
+                public bool Percentage { get; set; }
+                public ChartControl PieChart { get; set; }
+                public Dictionary<string, decimal> SeriesInfo { get; set; }
+                public decimal Total { get; set; }
 
-                #region Methods
-
+                
+                //Methods
                 internal ChartControl CreateColumn()
                 {
                     return ColumnChart;
@@ -263,7 +259,6 @@ namespace Budget
                     ColumnSeries.ConfigItems.ColumnItem.PhongAlpha = 2;
                 }
 
-                #endregion
             }
         }
     }

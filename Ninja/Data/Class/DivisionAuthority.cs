@@ -13,26 +13,26 @@ namespace Budget
             public class DivisionAuthority : IBudgetAuthority
             {
 
+                //Constructors
                 public DivisionAuthority()
                 {
                     Data = new DataBuilder(Source.P8);
-                    PrcData = Data.PrcData;
-                    Table = PrcData.Item1;
-                    Total = PrcData.Item3;
-                    Count = PrcData.Item4;
-                    DataElement = Data.GetElements(Table);
-                    Appropriations = GetAllocation();
-                    DivisionData = GetRcInfo(Data.Table);
-                    FundData = GetTotals(Data.Table, DataElement["Fund"], "Fund");
-                    BocData = GetTotals(Data.Table, DataElement["BocName"], "BocName");
-                    NpmData = GetTotals(Data.Table, DataElement["NPM"], "NPM");
-                    GoalData = GetTotals(Data.Table, DataElement["GoalName"], "GoalName");
-                    ProgramData = GetTotals(Data.Table, DataElement["ProgramArea"], "ProgramArea");
-                    ProjectData = GetTotals(Data.Table, DataElement["ProgramProjectName"], "ProgramProjectName");
-                    if (DataElement["BOC"].Contains("17"))
+                    BudgetMetric = new DataMetric(Data);
+                    Table = Data.BudgetTable;
+                    Total = BudgetMetric.Total;
+                    Count = BudgetMetric.Count;
+                    Average = BudgetMetric.Average;
+                    ProgramElements = GetProgramElements(Table);
+                    FundData = BudgetMetric.FundTotals;
+                    BocData = BudgetMetric.BocTotals;
+                    NpmData = BudgetMetric.NpmTotals;
+                    GoalData = BudgetMetric.GoalTotals;
+                    ProgramData = BudgetMetric.ProgramAreaTotals;
+                    ProjectData = BudgetMetric.ProgramProjectTotals;
+                    if (ProgramElements["BOC"].Contains("17"))
                     {
-                        FTE = new FTE(Data.Table);
-                        FteInfo = FTE.FundData;
+                        FTE = new FTE(Data.BudgetTable);
+                        FteData = FTE.FundData;
                     }
                 }
 
@@ -41,49 +41,51 @@ namespace Budget
                     RC = new RC(rc);
                     Org = new Org(RC.Code);
                     Data = new DataBuilder(Source.P8, new Dictionary<string, object> { ["RC"] = rc });
-                    PrcData = Data.PrcData;
-                    Table = PrcData.Item1;
-                    Total = PrcData.Item3;
-                    Count = PrcData.Item4;
-                    Average = GetAverage(Table);
-                    DataElement = GetDataElements(Table);
-                    Appropriations = GetAllocation();
-                    FundData = GetTotals(Table, DataElement["FundName"], "FundName");
-                    BocData = GetTotals(Table, DataElement["BocName"], "BocName");
-                    NpmData = GetTotals(Table, DataElement["NPM"], "NPM");
-                    GoalData = GetTotals(Table, DataElement["GoalName"], "GoalName");
-                    ProgramData = GetTotals(Table, DataElement["ProgramAreaName"], "ProgramAreaName");
-                    ProjectData = GetTotals(Table, DataElement["ProgramProjectName"], "ProgramProjectName");
-                    if (DataElement["BOC"].Contains("17"))
+                    BudgetMetric = new DataMetric(Data);
+                    Table = Data.BudgetTable;
+                    Total = BudgetMetric.Total;
+                    Count = BudgetMetric.Count;
+                    Average = BudgetMetric.Average;
+                    ProgramElements = GetProgramElements(Table);
+                    FundData = BudgetMetric.FundTotals;
+                    BocData = BudgetMetric.BocTotals;
+                    NpmData = BudgetMetric.NpmTotals;
+                    GoalData = BudgetMetric.GoalTotals;
+                    ProgramData = BudgetMetric.ProgramAreaTotals;
+                    ProjectData = BudgetMetric.ProgramProjectTotals;
+                    if (ProgramElements["BOC"].Contains("17"))
                     {
                         FTE = new FTE(Table);
-                        FteInfo = FTE.FundData;
+                        FteData = FTE.FundData;
                     }
                 }
 
-                public Org Org { get; }
+
+                //Properties
                 public static string FiscalYear { get; set; } = "2018";
+                public Org Org { get; }
                 public RC RC { get; }
-                public DataBuilder Data { get; set; }
+                public DataBuilder Data { get; }
+                public DataMetric BudgetMetric { get; }
+                public DataSet BudgetData { get; }
                 public DataTable Table { get; }
                 public decimal Total { get; }
                 public int Count { get; }
                 public decimal Average { get; }
                 public decimal[] Metrics { get; }
-                public Dictionary<string, string[]> DataElement { get; }
-                public Appropriation[] Appropriations { get; }
+                public Dictionary<string, string[]> ProgramElements { get; }
                 public Dictionary<string, decimal> BocData { get; set; }
                 public Dictionary<string, decimal> DivisionData { get; }
-                public DataSet E6 { get; }
                 public FTE FTE { get; }
-                public Dictionary<string, decimal> FteInfo { get; }
+                public Dictionary<string, decimal> FteData { get; }
                 public Dictionary<string, decimal> FundData { get; }
                 public Dictionary<string, decimal> GoalData { get; }
                 public Dictionary<string, decimal> NpmData { get; }
-                public Tuple<DataTable, PRC[], decimal, int> PrcData { get; }
                 public Dictionary<string, decimal> ProgramData { get; }
                 public Dictionary<string, decimal> ProjectData { get; }
 
+
+                //Methods
                 public decimal GetAverage(DataTable table)
                 {
                     try
@@ -92,7 +94,7 @@ namespace Budget
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message.ToString());
+                        MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
                         return -1M;
                     }
                 }
@@ -105,7 +107,7 @@ namespace Budget
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message.ToString());
+                        MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
                         return null;
                     }
                 }
@@ -118,12 +120,12 @@ namespace Budget
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message.ToString());
+                        MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
                         return -1;
                     }
                 }
 
-                public Dictionary<string, string[]> GetDataElements(DataTable table)
+                public Dictionary<string, string[]> GetProgramElements(DataTable table)
                 {
                     try
                     {
@@ -141,53 +143,7 @@ namespace Budget
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message.ToString());
-                        return null;
-                    }
-                }
-
-                public Dictionary<string, decimal[]> GetDataMetrics(DataTable table, string column, string filter)
-                {
-                    try
-                    {
-                        string[] list = GetCodes(table, column);
-                        Dictionary<string, decimal[]> info = new Dictionary<string, decimal[]>();
-                        foreach (string ftr in list)
-                        {
-                            decimal[] stat = new decimal[4];
-                            stat[0] = GetDataValues(table, column, filter).Item3;
-                            stat[1] = (decimal)GetDataValues(table, column, filter).Item4;
-                            stat[2] = stat[0] / stat[1];
-                            stat[3] = (stat[0] / Total) * 100;
-                            info.Add(filter, stat);
-                        }
-                        return info;
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message.ToString());
-                        return null;
-                    }
-                }
-
-                public Dictionary<string, decimal> GetDataTotals(DataTable table, string column, string filter)
-                {
-                    try
-                    {
-                        var list = GetCodes(table, column);
-                        Dictionary<string, decimal> info = new Dictionary<string, decimal>();
-                        foreach (string ftr in list)
-                        {
-                            var query = table.AsEnumerable().Where(p => p.Field<string>(column).Equals(filter))
-                                .Sum(p => p.Field<decimal>("Amount"));
-                            if (query > 0)
-                                info.Add(filter, query);
-                        }
-                        return info;
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message.ToString());
+                        MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
                         return null;
                     }
                 }
@@ -201,7 +157,7 @@ namespace Budget
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message.ToString());
+                        MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
                         return null;
                     }
                 }
@@ -211,37 +167,14 @@ namespace Budget
                     try
                     {
                         var count = GetCount(table);
-                        return new decimal[] { GetTotal(table), (decimal)count, GetAverage(table) };
+                        return new decimal[] { GetTotal(table), (decimal)table.Rows.Count, GetAverage(table) };
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message.ToString());
+                        MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
                         return null;
                     }
-                }
-
-                public Dictionary<string, decimal[]> GetMetrics(DataTable table, string[] list, string column)
-                {
-                    try
-                    {
-                        Dictionary<string, decimal[]> info = new Dictionary<string, decimal[]>();
-                        foreach (string filter in list)
-                        {
-                            decimal[] stat = new decimal[4];
-                            stat[0] = GetDataValues(table, column, filter).Item3;
-                            stat[1] = (decimal)GetDataValues(table, column, filter).Item4;
-                            stat[2] = stat[0] / stat[1];
-                            stat[3] = (stat[0] / Total) * 100;
-                            info.Add(filter, stat);
-                        }
-                        return info;
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message.ToString());
-                        return null;
-                    }
-                }
+                }            
 
                 public PRC[] GetPrcArray(DataTable table)
                 {
@@ -251,7 +184,7 @@ namespace Budget
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message.ToString());
+                        MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
                         return null;
                     }
                 }
@@ -264,33 +197,12 @@ namespace Budget
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message.ToString());
+                        MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
                         return -1M;
                     }
                 }
 
-                public Dictionary<string, decimal> GetTotals(DataTable table, string[] filters, string column)
-                {
-                    try
-                    {
-                        Dictionary<string, decimal> info = new Dictionary<string, decimal>();
-                        foreach (string filter in filters)
-                        {
-                            var query = table.AsEnumerable().Where(p => p.Field<string>(column).Equals(filter))
-                                .Select(p => p).Sum(p => p.Field<decimal>("Amount"));
-                            if (query > 0)
-                                info.Add(filter, query);
-                        }
-                        return info;
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message.ToString());
-                        return null;
-                    }
-                }
-
-                DataTable IBudgetAuthority.FilterTable(DataTable table, string column, string filter)
+                public DataTable FilterTable(DataTable table, string column, string filter)
                 {
                     try
                     {
@@ -298,26 +210,7 @@ namespace Budget
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message.ToString());
-                        return null;
-                    }
-                }
-
-                internal Appropriation[] GetAllocation()
-                {
-                    try
-                    {
-                        string[] funds = DataElement["Fund"];
-                        Appropriation[] data = new Appropriation[funds.Length];
-                        for (int i = 0; i < funds.Length; i++)
-                        {
-                            data[i] = new Appropriation(Data.Table, funds[i], FiscalYear);
-                        }
-                        return data;
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message.ToString());
+                        MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
                         return null;
                     }
                 }
@@ -339,7 +232,7 @@ namespace Budget
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message.ToString());
+                        MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
                         return null;
                     }
                 }

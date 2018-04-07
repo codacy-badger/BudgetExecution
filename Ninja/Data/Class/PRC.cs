@@ -11,38 +11,8 @@ namespace Budget
         {
             public class PRC : IAccount
             {
-                #region Properties
 
-                public Account Account { get; }
-                public PRC[] AllocationData { get; set; }
-                public decimal Amount { get; set; }
-                public string BFY { get; set; }
-                public BOC BOC { get; }
-                public string BudgetLevel { get; set; }
-                public string Code { get; set; }
-                public FTE FTE { get; set; }
-                public Fund Fund { get; }
-                public string Goal { get; }
-                public string GoalName { get; }
-                public int ID { get; set; }
-                public string NPM { get; set; }
-                public string NpmCode { get; }
-                public string NpmName { get; set; }
-                public string Objective { get; }
-                public string ObjectiveName { get; }
-                public string Org { get; }
-                public Parameter Parameter { get; }
-                public string ProgramArea { get; set; }
-                public string ProgramProjectCode { get; }
-                public string ProgramProjectName { get; set; }
-                public RC RC { get; }
-                public string RPIO { get; set; }
-                private Dictionary<string, object> Data { get; set; }
-
-                #endregion Properties
-
-                #region Constructors
-
+                //Constructors
                 public PRC()
                 {
                 }
@@ -90,10 +60,35 @@ namespace Budget
                     Parameter = GetParameter();
                 }
 
-                #endregion Constructors
 
-                #region Methods
+                //Properties
+                public Account Account { get; }
+                public decimal Amount { get; set; }
+                public string BFY { get; set; }
+                public BOC BOC { get; }
+                public string BudgetLevel { get; set; }
+                public string Code { get; set; }
+                public FTE FTE { get; set; }
+                public Fund Fund { get; }
+                public string Goal { get; }
+                public string GoalName { get; }
+                public int ID { get; set; }
+                public string NPM { get; set; }
+                public string NpmCode { get; }
+                public string NpmName { get; set; }
+                public string Objective { get; }
+                public string ObjectiveName { get; }
+                public string Org { get; }
+                public Parameter Parameter { get; }
+                public string ProgramArea { get; set; }
+                public string ProgramProjectCode { get; }
+                public string ProgramProjectName { get; set; }
+                public RC RC { get; }
+                public string RPIO { get; set; }
+                private Dictionary<string, object> Data { get; set; }
 
+
+                //Methods
                 public string GetCode()
                 {
                     return Code;
@@ -128,11 +123,19 @@ namespace Budget
 
                 public string[] GetProgramData()
                 {
-                    var pp = GetProgramProjectCode();
-                    var sql = new Dictionary<string, object>();
-                    sql.Add("ProgramProjectCode", pp);
-                    string[] p = new DataBuilder(Source.A6, sql).A6Query();
-                    return p;
+                    try
+                    {
+                        var pp = GetProgramProjectCode();
+                        var sql = new Dictionary<string, object>();
+                        sql.Add("ProgramProjectCode", pp);
+                        string[] p = new DataBuilder(Source.A6, sql).A6Query();
+                        return p;
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("ERROR! : \n" + ex.StackTrace);
+                        return null;
+                    }
                 }
 
                 public string GetProgramProjectCode()
@@ -147,13 +150,21 @@ namespace Budget
 
                 internal PRC[] GetAllocation(DataTable table)
                 {
-                    PRC[] allocation = new PRC[table.Rows.Count];
-                    for (int i = 0; i < table.Rows.Count; i++)
+                    try
                     {
-                        foreach (DataRow row in table.Rows)
-                            allocation[i] = new PRC(row);
+                        PRC[] allocation = new PRC[table.Rows.Count];
+                        for (int i = 0; i < table.Rows.Count; i++)
+                        {
+                            foreach (DataRow row in table.Rows)
+                                allocation[i] = new PRC(row);
+                        }
+                        return allocation;
                     }
-                    return allocation;
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("ERROR! : \n" + ex.StackTrace);
+                        return null;
+                    }
                 }
 
                 internal Dictionary<string, object> GetData()
@@ -191,7 +202,7 @@ namespace Budget
                         }
                         catch (Exception ex)
                         {
-                            MessageBox.Show(ex.Message.ToString());
+                            MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
                             return -1m;
                         }
                     }
@@ -213,12 +224,11 @@ namespace Budget
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message.ToString());
+                        MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
                         return -1;
                     }
                 }
 
-                #endregion Methods
             }
         }
     }

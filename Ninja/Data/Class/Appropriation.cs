@@ -15,37 +15,9 @@ namespace Budget
         {
             public class Appropriation : IBudgetAuthority
             {
-                #region Properties
 
-                public decimal Average { get; }
-                public BindingSource BindingSource { get; set; }
-                public string[] BOC { get; }
-                public string[] BocCodes { get; }
-                public Dictionary<string, decimal> BocData { get; set; }
-                public Tuple<string[], string[], string[], string[], string[]> Codes { get; set; }
-                public int Count { get; }
-                public Dictionary<string, string[]> DataElement { get; }
-                public string FiscalYear { get; set; }
-                public FTE FTE { get; }
-                public Fund Fund { get; set; }
-                public string[] Goal { get; }
-                public Dictionary<string, decimal> GoalData { get; set; }
-                public decimal[] Metrics { get; }
-                public string[] NPM { get; }
-                public Dictionary<string, decimal> NpmData { get; set; }
-                public Dictionary<string, decimal> ObjectiveData { get; set; }
-                public Tuple<DataTable, PRC[], decimal, int> PrcData { get; }
-                public string[] Program { get; }
-                public Dictionary<string, decimal> ProgramData { get; set; }
-                public string[] Project { get; }
-                public Dictionary<string, decimal> ProjectData { get; set; }
-                public DataTable Table { get; }
-                public decimal Total { get; }
-                #endregion
-
-                #region Constructors
-
-                public Appropriation( )
+                //Constructors
+                public Appropriation()
                 {
                 }
 
@@ -55,36 +27,59 @@ namespace Budget
                     FiscalYear = Fund.FiscalYear;
                 }
 
-                public Appropriation(DataTable table, string fundcode, string bfy) : this(fundcode, bfy)
+                public Appropriation(Source source, string fundcode, string bfy) : this(fundcode, bfy)
                 {
-                    PrcData = GetDataValues(table, "Fund", Fund.Code);
-                    Table = PrcData.Item1;
-                    BindingSource = new BindingSource();
-                    BindingSource.DataSource = Table;
-                    Total = GetTotal(PrcData.Item1);
-                    Average = GetAverage(PrcData.Item1);
-                    DataElement = GetDataElements(PrcData.Item1);
-                    BocCodes = DataElement["BOC"];
-                    BOC = DataElement["BocName"];
-                    NPM = DataElement["NPM"];
-                    Program = DataElement["ProgramAreaName"];
-                    Goal = DataElement["GoalName"];
+                    Data = new DataBuilder(source, new Dictionary<string, object> { ["Fund"] = fundcode, ["BFY"] = bfy });
+                    BudgetMetric = new DataMetric(Data);
+                    Table = Data.BudgetTable;
+                    Total = BudgetMetric.Total;
+                    Average = BudgetMetric.Average;
+                    ProgramElements = GetProgramElements(Table);
+                    BocCodes = ProgramElements["BOC"];
+                    BOC = ProgramElements["BocName"];
+                    NPM = ProgramElements["NPM"];
+                    Program = ProgramElements["ProgramAreaName"];
+                    Goal = ProgramElements["GoalName"];
                     Count = PrcData.Item1.Rows.Count;
-                    BocData = GetTotals(PrcData.Item1, BOC, "BocName");
+                    BocData = BudgetMetric.BocTotals;
                     if (BocCodes.Contains("17"))
                     {
-                        FTE = new FTE(table);
+                        FTE = new FTE(Table);
                     }
-                    NpmData = GetTotals(PrcData.Item1, NPM, "NPM");
-                    ProgramData = GetTotals(PrcData.Item1, Program, "ProgramAreaName");
-                    GoalData = GetTotals(PrcData.Item1, Goal, "GoalName");
+                    NpmData = BudgetMetric.NpmTotals;
+                    ProgramData = BudgetMetric.ProgramAreaTotals;
+                    GoalData = BudgetMetric.GoalTotals;
                 }
-                #endregion
 
-                #region Methods
 
-                DataSet IBudgetAuthority.E6 { get; }
+                //Properties
+                public string FiscalYear { get;}
+                public Fund Fund { get; }
+                DataBuilder Data { get; }
+                public DataMetric BudgetMetric { get; }
+                public DataTable Table { get; }
+                public decimal Total { get; }
+                public decimal Average { get; }
+                public string[] BOC { get; }
+                public string[] BocCodes { get; }
+                public Dictionary<string, decimal> BocData { get; set; }
+                public int Count { get; }
+                public FTE FTE { get; }
+                public string[] Goal { get; }
+                public Dictionary<string, decimal> GoalData { get; set; }
+                public decimal[] Metrics { get; }
+                public string[] NPM { get; }
+                public Dictionary<string, decimal> NpmData { get; set; }
+                public Dictionary<string, decimal> ObjectiveData { get; set; }
+                public Tuple<DataTable, PRC[], decimal, int> PrcData { get; }
+                public string[] Program { get; }
+                public Dictionary<string, decimal> ProgramData { get; set; }
+                public Dictionary<string, string[]> ProgramElements { get; }
+                public string[] Project { get; }
+                public Dictionary<string, decimal> ProjectData { get; set; }
 
+
+                //Methods
                 public decimal GetAverage(DataTable table)
                 {
                     try
@@ -93,7 +88,7 @@ namespace Budget
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message.ToString());
+                        MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
                         return -1M;
                     }
                 }
@@ -106,15 +101,15 @@ namespace Budget
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message.ToString());
+                        MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
                         return null;
                     }
                 }
 
                 public Tuple<string[], string[], string[], string[], string[]> GetCodes()
                 {
-                    return new Tuple<string[], string[], string[], string[], string[]>(DataElement["BOC"],
-                        DataElement["Code"], DataElement["NPM"], DataElement["ProgramArea"], DataElement["ProgramProjectCode"]);
+                    return new Tuple<string[], string[], string[], string[], string[]>(ProgramElements["BOC"],
+                        ProgramElements["Code"], ProgramElements["NPM"], ProgramElements["ProgramArea"], ProgramElements["ProgramProjectCode"]);
                 }
 
                 public int GetCount(DataTable table)
@@ -130,7 +125,7 @@ namespace Budget
                     }
                 }
 
-                public Dictionary<string, string[]> GetDataElements(DataTable table)
+                public Dictionary<string, string[]> GetProgramElements(DataTable table)
                 {
                     var data = new Dictionary<string, string[]>();
                     foreach (DataColumn dc in table.Columns)
@@ -155,7 +150,7 @@ namespace Budget
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message.ToString());
+                        MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
                         return null;
                     }
                 }
@@ -171,7 +166,7 @@ namespace Budget
                         }
                         catch (Exception ex)
                         {
-                            MessageBox.Show(ex.Message.ToString());
+                            MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
                             return null;
                         }
                     }
@@ -207,7 +202,7 @@ namespace Budget
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message.ToString());
+                        MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
                         return null;
                     }
                 }
@@ -231,7 +226,7 @@ namespace Budget
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message.ToString());
+                        MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
                         return null;
                     }
                 }
@@ -244,7 +239,7 @@ namespace Budget
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message.ToString());
+                        MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
                         return null;
                     }
                 }
@@ -301,7 +296,8 @@ namespace Budget
                         return null;
                     }
                 }
-                DataTable IBudgetAuthority.FilterTable(DataTable table, string column, string filter)
+
+                public DataTable FilterTable(DataTable table, string column, string filter)
                 {
                     try
                     {
@@ -309,7 +305,7 @@ namespace Budget
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message.ToString());
+                        MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
                         return null;
                     }
                 }
@@ -326,7 +322,7 @@ namespace Budget
                     }
                     return null;
                 }
-                #endregion
+
             }
         }
     }

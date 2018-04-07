@@ -12,7 +12,6 @@ namespace Budget
         {
             public class FTE : IPRC
             {
-                #region Properties
 
                 public Account Account { get; }
                 public Tuple<DataTable, PRC[], decimal, int> AllocationData { get; }
@@ -40,10 +39,6 @@ namespace Budget
                 BOC IPRC.BOC { get; }
                 private decimal[] Metrics { get; }
 
-                #endregion Properties
-
-                #region Constructors
-
                 public FTE()
                 {
                 }
@@ -65,8 +60,6 @@ namespace Budget
                     ProjectData = GetTotals(Table, DataElement["ProgramProjectName"], "ProgramProjectName");
                 }
 
-                #endregion Constructors
-
                 public DataTable FilterTable(DataTable table, string column, string filter)
                 {
                     try
@@ -75,7 +68,7 @@ namespace Budget
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message.ToString());
+                        MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
                         return null;
                     }
                 }
@@ -88,7 +81,7 @@ namespace Budget
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message.ToString());
+                        MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
                         return -1M;
                     }
                 }
@@ -101,7 +94,7 @@ namespace Budget
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message.ToString());
+                        MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
                         return null;
                     }
                 }
@@ -114,7 +107,7 @@ namespace Budget
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message.ToString());
+                        MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
                         return -1;
                     }
                 }
@@ -143,7 +136,7 @@ namespace Budget
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message.ToString());
+                        MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
                         return null;
                     }
                 }
@@ -172,7 +165,7 @@ namespace Budget
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message.ToString());
+                        MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
                         return null;
                     }
                 }
@@ -196,7 +189,7 @@ namespace Budget
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message.ToString());
+                        MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
                         return null;
                     }
                 }
@@ -209,7 +202,7 @@ namespace Budget
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message.ToString());
+                        MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
                         return null;
                     }
                 }
@@ -222,7 +215,7 @@ namespace Budget
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message.ToString());
+                        MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
                         return -1M;
                     }
                 }
@@ -244,7 +237,7 @@ namespace Budget
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message.ToString());
+                        MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
                         return null;
                     }
                 }
@@ -265,7 +258,7 @@ namespace Budget
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message.ToString());
+                        MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
                         return null;
                     }
                 }

@@ -12,21 +12,23 @@ namespace Budget
     {
         namespace Data
         {
-            public class Metric : IChartSeriesIndexedModel
+            public class DataMetric 
             {
-                public Metric()
+
+                //Constructors
+                public DataMetric()
                 {
                 }
 
-                public Metric(Source source)
+                public DataMetric(Source source)
                 {
                     Data = new DataBuilder(source);
-                    Table = Data.Table;
-                    E6 = Data.E6;
+                    Table = Data.BudgetTable;
+                    BudgetData = Data.BudgetData;
                     Total = GetTotal(Table);
                     Count = Table.Rows.Count;
                     Average = GetAverage(Table);
-                    Metrics = GetMetrics(Table);
+                    Metrics = GetStats(Table);
                     FundTotals = GetTotals(Table, "FundName");
                     FundMetrics = GetMetrics(Table, "FundName");
                     BocTotals = GetTotals(Table, "BocName");
@@ -41,16 +43,22 @@ namespace Budget
                     GoalMetrics = GetMetrics(Table, "GoalName");
                     ObjectiveTotals = GetTotals(Table, "ObjectiveName");
                     ObjectiveMetrics = GetMetrics(Table, "ObjectiveName");
+                    if(source == Source.P8)
+                    {
+                        DivisionTotals = GetTotals(Table, "RC");
+                        DivisionMetrics = GetMetrics(Table, "RC");
+                    }
                 }
 
-                public Metric(DataBuilder data)
+                public DataMetric(DataBuilder data)
                 {
-                    Table = data.Table;
-                    E6 = Table.DataSet;
+                    Data = data;
+                    Table = Data.BudgetTable;
+                    BudgetData = Table.DataSet;
                     Total = GetTotal(Table);
                     Count = Table.Rows.Count;
                     Average = GetAverage(Table);
-                    Metrics = GetMetrics(Table);
+                    Metrics = GetStats(Table);
                     FundTotals = GetTotals(Table, "FundName");
                     FundMetrics = GetMetrics(Table, "FundName");
                     BocTotals = GetTotals(Table, "BocName");
@@ -59,27 +67,30 @@ namespace Budget
                     NpmMetrics = GetMetrics(Table, "NPM");
                     ProgramProjectTotals = GetTotals(Table, "ProgramProjectCode");
                     ProgramProjectMetrics = GetMetrics(Table, "ProgramProjectCode");
-                    ProgramAreaTotals = GetTotals(Table, "ProgramAreaCode");
-                    ProgramAreaMetrics = GetMetrics(Table, "ProgramAreaCode");
+                    ProgramAreaTotals = GetTotals(Table, "ProgramArea");
+                    ProgramAreaMetrics = GetMetrics(Table, "ProgramArea");
                     GoalTotals = GetTotals(Table, "GoalName");
                     GoalMetrics = GetMetrics(Table, "GoalName");
                     ObjectiveTotals = GetTotals(Table, "ObjectiveName");
                     ObjectiveMetrics = GetMetrics(Table, "ObjectiveName");
                 }
 
+
+                //Properties
+                public DataBuilder Data { get; }
+                public DataSet BudgetData { get; }
+                public DataTable Table { get; set; }
+                public Dictionary<string, string[]> ProgramElements { get; set; }
+                public decimal Total { get; }
+                public int Count { get; }
                 public decimal Average { get; }
+                public decimal[] Metrics { get; }
                 public Dictionary<string, decimal[]> BocMetrics { get; set; }
                 public Dictionary<string, decimal> BocTotals { get; set; }
-                public double[] ChartData { get; set; }
-                public int Count { get; }
-                public DataBuilder Data { get; }
-                public Dictionary<string, string[]> DataElement { get; }
-                public DataSet E6 { get; }
                 public Dictionary<string, decimal[]> FundMetrics { get; }
-                public Dictionary<string, decimal> FundTotals { get; }
+                public Dictionary<string, decimal> FundTotals { get; set; }
                 public Dictionary<string, decimal[]> GoalMetrics { get; set; }
                 public Dictionary<string, decimal> GoalTotals { get; set; }
-                public decimal[] Metrics { get; }
                 public Dictionary<string, decimal[]> NpmMetrics { get; set; }
                 public Dictionary<string, decimal> NpmTotals { get; set; }
                 public Dictionary<string, decimal[]> ObjectiveMetrics { get; set; }
@@ -88,11 +99,11 @@ namespace Budget
                 public Dictionary<string, decimal> ProgramAreaTotals { get; set; }
                 public Dictionary<string, decimal[]> ProgramProjectMetrics { get; set; }
                 public Dictionary<string, decimal> ProgramProjectTotals { get; set; }
-                public DataTable Table { get; set; }
-                public decimal Total { get; }
+                public Dictionary<string, decimal[]> DivisionMetrics { get; set; }
+                public Dictionary<string, decimal> DivisionTotals { get; set; }
 
-                public event ListChangedEventHandler Changed;
 
+                //Methods
                 public decimal GetAverage(DataTable table)
                 {
                     try
@@ -101,7 +112,7 @@ namespace Budget
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message.ToString());
+                        MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
                         return -1M;
                     }
                 }
@@ -114,7 +125,7 @@ namespace Budget
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message.ToString());
+                        MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
                         return null;
                     }
                 }
@@ -127,12 +138,12 @@ namespace Budget
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message.ToString());
+                        MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
                         return -1;
                     }
                 }
 
-                public Dictionary<string, string[]> GetDataElements(DataTable table)
+                public Dictionary<string, string[]> GetProgramElements(DataTable table)
                 {
                     var data = new Dictionary<string, string[]>();
                     foreach (DataColumn dc in table.Columns)
@@ -147,12 +158,7 @@ namespace Budget
                     return data;
                 }
 
-                public bool GetEmpty(int index)
-                {
-                    return false;
-                }
-
-                public decimal[] GetMetrics(DataTable table)
+                public decimal[] GetStats(DataTable table)
                 {
                     var count = GetCount(table);
                     return new decimal[] { GetTotal(table), (decimal)count, GetAverage(table) };
@@ -166,7 +172,7 @@ namespace Budget
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message.ToString());
+                        MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
                         return null;
                     }
                 }
@@ -179,14 +185,23 @@ namespace Budget
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message.ToString());
+                        MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
                         return -1M;
                     }
                 }
 
-                public double[] GetY(int index)
+                public DataTable FilterTable(DataTable table, string column, string filter)
                 {
-                    return new double[] { ChartData[index] };
+                    try
+                    {
+                        return table.AsEnumerable().Where(p => p.Field<string>(column).Equals(filter))
+                            .Select(p => p).CopyToDataTable();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
+                        return null;
+                    }
                 }
 
                 private Tuple<DataTable, PRC[], decimal, int> GetAllocation(DataTable table)
@@ -225,48 +240,44 @@ namespace Budget
                 {
                     try
                     {
+                        var list = GetCodes(table, column);
                         Dictionary<string, decimal[]> info = new Dictionary<string, decimal[]>();
-                        if (table.GetFields().Contains(column))
+                        foreach (string filter in GetCodes(table, column))
                         {
-                            foreach (string filter in DataElement[column])
-                            {
-                                decimal[] stat = new decimal[4];
-                                stat[0] = GetTotal(table);
-                                stat[1] = (decimal)GetCount(table);
-                                stat[2] = stat[0] / stat[1];
-                                stat[3] = (stat[0] / Total) * 100;
-                                info.Add(filter, stat);
-                            }
+                            var query = FilterTable(table, column, filter);
+                            decimal[] stat = new decimal[4];
+                            stat[0] = GetTotal(query);
+                            stat[1] = (decimal)GetCount(query);
+                            stat[2] = stat[0] / stat[1];
+                            stat[3] = (stat[0] / Total) * 100;
+                            info.Add(filter, stat);
                         }
                         return info;
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message.ToString());
+                        MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
                         return null;
                     }
                 }
 
-                private Dictionary<string, decimal> GetTotals(DataTable table, string column)
+                public Dictionary<string, decimal> GetTotals(DataTable table, string column)
                 {
                     try
                     {
+                        var list = GetCodes(table, column);
                         var info = new Dictionary<string, decimal>();
-                        if (table.GetFields().Contains(column))
+                        foreach (string filter in list)
                         {
-                            foreach (string filter in DataElement[column])
-                            {
-                                var query = table.AsEnumerable().Where(p => p.Field<string>(column).Equals(filter))
-                                    .Select(p => p.Field<decimal>("Amount")).Sum();
-                                if (query > 0)
-                                    info.Add(filter, query);
-                            }
+                            var query = table.AsEnumerable().Where(p => p.Field<string>(column).Equals(filter))
+                                .Select(p => p).CopyToDataTable();
+                            info.Add(filter, GetTotal(query));
                         }
                         return info;
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message.ToString());
+                        MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
                         return null;
                     }
                 }

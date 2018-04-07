@@ -13,6 +13,7 @@ namespace Budget
             public class DataBuilder : IDataBuilder
             {
 
+                //Constructors
                 public DataBuilder()
                 {
                 }
@@ -20,42 +21,47 @@ namespace Budget
                 public DataBuilder(Source source)
                 {
                     Query = new Query(source);
-                    E6 = GetDataSet();
-                    Table = E6.Tables[0];
-                    Records = GetRecords();
+                    BudgetData = GetDataSet();
+                    BudgetTable = BudgetData.Tables[0];
+                    BindingSource = new BindingSource();
+                    BindingSource.DataSource = BudgetTable; 
+                    ProgramElements = GetElements(BudgetTable);
+                    Records = GetRecords(BudgetTable);
                     SqlData = GetSqlData();
                     if (source == Source.P6 || source == Source.P7 || source == Source.P8)
                     {
-                        Accounts = GetPrcArray(Table);
-                        PrcData = GetPrcData();
+                        Accounts = GetPrcArray(BudgetTable);
                     }
                 }
 
                 public DataBuilder(Source source, Dictionary<string, object> param)
                 {
                     Query = new Query(source, param);
-                    E6 = GetDataSet();
-                    Table = E6.Tables[0];
-                    Records = GetRecords();
+                    BudgetData = GetDataSet();
+                    BudgetTable = BudgetData.Tables[0];
+                    ProgramElements = GetElements(BudgetTable);
+                    Records = GetRecords(BudgetTable);
                     SqlData = GetSqlData();
                     if (source == Source.P6 || source == Source.P7 || source == Source.P8)
                     {
-                        Accounts = GetPrcArray(Table);
-                        PrcData = GetPrcData();
+                        Accounts = GetPrcArray(BudgetTable);
                     }
                 }
 
+
+                //Properties
                 public Query Query { get; }
-                public DataSet E6 { get; }
-                public DataTable Table { get; }
+                public DataSet BudgetData { get; }
+                public DataTable BudgetTable { get; }
+                public Dictionary<string, string[]> ProgramElements { get; }
                 public DataRow[] Records { get; }
                 public PRC[] Accounts { get; }
                 public BindingSource BindingSource { get; set; }
-                public Tuple<DataTable, PRC[], decimal, int> PrcData { get; }
-                public Tuple<DataSet, DataRow[], decimal[]> QueryData { get; }
                 public Tuple<DataTable, DataRow[], decimal, int> SqlData { get; }
                 Dictionary<string, object> Parameter { get; set; }
 
+
+                //Methods
                 public decimal GetAverage(DataTable table)
                 {
                     try
@@ -64,7 +70,7 @@ namespace Budget
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message.ToString());
+                        MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
                         return -1;
                     }
                 }
@@ -77,7 +83,7 @@ namespace Budget
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message.ToString());
+                        MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
                         return -1;
                     }
                 }
@@ -94,7 +100,7 @@ namespace Budget
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message.ToString());
+                        MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
                         return null;
                     }
                 }
@@ -107,7 +113,7 @@ namespace Budget
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message.ToString());
+                        MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
                         return null;
                     }
                 }
@@ -130,7 +136,7 @@ namespace Budget
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message.ToString());
+                        MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
                         return null;
                     }
                 }
@@ -143,20 +149,20 @@ namespace Budget
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message.ToString());
+                        MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
                         return new decimal[] { -1m, -1m, -1m };
                     }
                 }
 
-                public DataRow[] GetRecords()
+                public DataRow[] GetRecords(DataTable table)
                 {
                     try
                     {
-                        return Table.AsEnumerable().Select(p => p).ToArray();
+                        return table.AsEnumerable().Select(p => p).ToArray();
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message.ToString());
+                        MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
                         return null;
                     }
                 }
@@ -165,15 +171,15 @@ namespace Budget
                 {
                     try
                     {
-                        var table = E6.Tables[Query.TableName];
-                        var array = GetRecords();
+                        var table = BudgetData.Tables[Query.TableName];
+                        var array = GetRecords(table);
                         var total = GetTotal(table);
                         var count = GetCount(table);
                         return new Tuple<DataTable, DataRow[], decimal, int>(table, array, total, count);
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message.ToString());
+                        MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
                         return null;
                     }
                 }
@@ -186,7 +192,7 @@ namespace Budget
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message.ToString());
+                        MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
                         return -1M;
                     }
                 }
@@ -204,7 +210,7 @@ namespace Budget
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message.ToString());
+                        MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
                         return null;
                     }
                 }
@@ -230,28 +236,10 @@ namespace Budget
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message.ToString());
+                        MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
                         return null;
                     }
                 }
-
-                private Tuple<DataTable, PRC[], decimal, int> GetPrcData()
-                {
-                    try
-                    {
-                        var table = E6.Tables[Query.TableName];
-                        var array = GetPrcArray(table);
-                        var total = GetTotal(table);
-                        var count = GetCount(table);
-                        return new Tuple<DataTable, PRC[], decimal, int>(table, array, total, count);
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message.ToString());
-                        return null;
-                    }
-                }
-
             }
         }
     }

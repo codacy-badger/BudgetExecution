@@ -16,10 +16,10 @@ namespace Ninja.Forms
             Division = new DivisionAuthority();
             Timer = new Timer();
             Chart = new GetChart(GetMainChart);
-            Values = new Dictionary<string, decimal>[] { R6.FundData, R6.BocData, R6.FteInfo,
-                R6.NpmData, R6.GoalInfo, Division.DivisionData, Division.BocData, Division.NpmData, Division.GoalData };
+            Values = new Dictionary<string, decimal>[] { R6.FundData, R6.BocData,
+                R6.NpmData, R6.GoalData, Division.BocData, Division.NpmData, Division.GoalData };
             Title = GetChartTitles(Values);
-            MainChart = Chart(MainChart, Title[1], Division.BocData);
+            MainChart = Chart(MainChart, Title[1], Values[1]);
             RegionSummaryButton.Click += RegionSummaryButton_OnClick;
             DivisionSummaryButton.Click += DivisionSummaryButton_OnClick;
         }
@@ -59,13 +59,11 @@ namespace Ninja.Forms
             var t = new string[info.Length];
             t[0] = "R6 Funds by Appropriation";
             t[1] = "R6 Funds by Object Class";
-            t[2] = "R6 FTE by Appropriation";
-            t[3] = "R6 Funds by HQ NPM";
-            t[4] = "R6 Funds by Agency Goal";
-            t[5] = "R6 Funds by Division";
-            t[6] = "Division Funds by Object Class";
-            t[7] = "Division Funds by HQ NPM";
-            t[8] = "Division Funds by Agency Goal";
+            t[2] = "R6 Funds by HQ NPM";
+            t[3] = "R6 Funds by Agency Goal";
+            t[4] = "Division Funds by Object Class";
+            t[5] = "Division Funds by HQ NPM";
+            t[6] = "Division Funds by Agency Goal";
             return t;
         }
 

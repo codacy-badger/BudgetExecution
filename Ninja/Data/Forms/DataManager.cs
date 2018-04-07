@@ -14,43 +14,30 @@ namespace Budget
         {
             public partial class DataManager : Metro
             {
-                #region Properties
 
-                public DivisionAuthority D6 { get; set; }
-                public Dictionary<string, string[]> Element { get; set; }
-                public FormData Ninja { get; set; }
-                public RegionalAuthority R6 { get; set; }
-                public Source Source { get; set; }
-                public DataTable Table { get; set; }
-                public decimal Total { get; }
-
-                #endregion
-
-                #region Constructors
-
+                //Constructors
                 public DataManager(Source source)
                 {
                     InitializeComponent();
-                    if (source == Source.P7)
-                    {
-                        this.R6 = new RegionalAuthority();
-                    }
-                    if (source == Source.P8)
-                    {
-                        D6 = new DivisionAuthority();
-                    }
+                    Data = new DataBuilder(source);
                     Ninja = new FormData(source, FilterPanel, BindingSource, DataMgrGrid, Navigator);
                     Ninja.GetGridColumns(DataMgrGrid);
                     Table = Ninja.Table;
-                    Element = Ninja.GetDataElements(Table);
+                    Element = Ninja.GetProgramElements(Table);
                     Ninja.GetFilterButtons(FilterPanel, Element["FundName"]);
                     Ninja.GetAppropriationFilterListBox(Table, FilterPanel);
                     PrcChart = GetDataChart(PrcChart, "", source, BindingSource);
                     GetGridSelectedRowValues();
                 }
 
-                #endregion
+                //Properties
+                public DataBuilder Data { get; }
+                public Dictionary<string, string[]> Element { get; set; }
+                public FormData Ninja { get; set; }
+                public DataTable Table { get; set; }
+                public decimal Total { get; }
 
+                //Methods
                 public string[] GetCodes(DataTable table, string column)
                 {
                     try
@@ -59,7 +46,7 @@ namespace Budget
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message.ToString());
+                        MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
                         return null;
                     }
                 }
@@ -75,7 +62,7 @@ namespace Budget
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message.ToString());
+                        MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
                         return null;
                     }
                 }
@@ -93,7 +80,7 @@ namespace Budget
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message.ToString());
+                        MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
                         return null;
                     }
                 }
@@ -116,7 +103,7 @@ namespace Budget
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message.ToString());
+                        MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
                         return null;
                     }
                 }
@@ -129,7 +116,7 @@ namespace Budget
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message.ToString());
+                        MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
                         return null;
                     }
                 }
@@ -142,7 +129,7 @@ namespace Budget
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message.ToString());
+                        MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
                         return -1M;
                     }
                 }
@@ -163,9 +150,9 @@ namespace Budget
                 private ChartControl GetDataChart(ChartControl chart, string title, Source source, BindingSource bs)
                 {
                     if (source == Source.P7)
-                        chart = new Chart(chart, title, R6, bs).CreateColumn();
+                        chart = new Chart(chart, title, new RegionalAuthority(), bs).CreateColumn();
                     if (source == Source.P8)
-                        chart = new Chart(chart, title, D6, bs).CreateColumn();
+                        chart = new Chart(chart, title, new DivisionAuthority(), bs).CreateColumn();
                     return chart;
                 }
 
@@ -194,7 +181,7 @@ namespace Budget
                 private void UpdateDataChart(object sender, EventArgs e)
                 {
                     BindingSource = sender as BindingSource;
-                    PrcChart = GetDataChart(PrcChart, "", Source, BindingSource);
+                    PrcChart = GetDataChart(PrcChart, "", Source.P8, BindingSource);
                 }
 
                 private void UpdateGridSelectedRowValues(object sender, EventArgs e)

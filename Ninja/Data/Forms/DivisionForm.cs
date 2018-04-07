@@ -44,10 +44,9 @@ namespace Budget
                     InitializeComponent();
                     P8Query = new Query(Source.P8, GetP8QueryParameter(rc));
                     Division = new DivisionAuthority(rc);
-                    DivisionData = Division.Data.Table;
+                    DivisionData = Division.Data.BudgetTable;
                     BindData(DivisionData, Grid, P8BindingSource, DataNavigator);
-                    Appropriation = Division.Appropriations;
-                    FundCodes = Division.DataElement["Fund"];
+                    FundCodes = Division.ProgramElements["Fund"];
                     PrcInfo = Division.FundData;
                     BocInfo = Division.BocData;
                     if (Division.FTE != null)
@@ -178,7 +177,7 @@ namespace Budget
                 private void ExcelExportButton_Clicked(object sender, EventArgs e)
                 {
                     var excel = new ExcelOp(Division.RC.Code);
-                    excel.ExportData(Division.Data.Table);
+                    excel.ExportData(Division.Data.BudgetTable);
                 }
 
                 private string[] GetChartTitles()
@@ -200,7 +199,7 @@ namespace Budget
                     GetMetroSetButtons(panel3, GetCodes(DivisionData, "NPM"));
                     GetMetroSetButtons(panel4, GetCodes(DivisionData, "ProgramAreaName"));
                     GetMetroSetButtons(panel5, GetCodes(DivisionData, "ProgramProjectName"));
-                    GetMetroSetButtons(GridFilterPanel, Division.DataElement["FundName"]);
+                    GetMetroSetButtons(GridFilterPanel, Division.ProgramElements["FundName"]);
                 }
 
                 private void GetGridColumns(DataGridView dgv)
@@ -270,44 +269,44 @@ namespace Budget
                     {
                         case 0:
                             Text = $"{Division.Org.Name} Funds by Appropriation";
-                            DivisionData = Division.Data.Table;
+                            DivisionData = Division.Data.BudgetTable;
                             break;
 
                         case 1:
                             Text = $"{Division.Org.Name} Funds by Budget Object Class";
-                            DivisionData = Division.Data.Table;
+                            DivisionData = Division.Data.BudgetTable;
                             break;
 
                         case 2:
 
                             Text = $"{Division.Org.Name} Funds by National Program";
-                            DivisionData = Division.Data.Table;
+                            DivisionData = Division.Data.BudgetTable;
                             break;
 
                         case 3:
                             Text = $"{Division.Org.Name} Funds by Program Area";
-                            DivisionData = Division.Data.Table;
+                            DivisionData = Division.Data.BudgetTable;
                             break;
 
                         case 4:
                             Text = $"{Division.Org.Name} Funds by Program Project";
-                            DivisionData = Division.Data.Table;
+                            DivisionData = Division.Data.BudgetTable;
                             ProjectChart = new Chart(ProjectChart, Division.ProjectData).CreateColumn();
                             break;
 
                         case 5:
                             Text = $"{Division.Org.Name} Budget Database";
-                            DivisionData = Division.Data.Table;
+                            DivisionData = Division.Data.BudgetTable;
                             break;
 
                         case 6:
                             Text = $"{Division.Org.Name} Transfers";
-                            DivisionData = Division.Data.Table;
+                            DivisionData = Division.Data.BudgetTable;
                             break;
 
                         default:
                             Text = $"{Division.Org.Name} Status of Funds";
-                            DivisionData = Division.Data.Table;
+                            DivisionData = Division.Data.BudgetTable;
                             break;
                     }
                 }
@@ -396,7 +395,7 @@ namespace Budget
                 {
                     var button = sender as MetroSetButton;
                     string name = button.Tag.ToString();
-                    var table = GetTable(Division.Data.Table, "FundName", name);
+                    var table = GetTable(Division.Data.BudgetTable, "FundName", name);
                     BindData(table, Grid, P8BindingSource, DataNavigator);
                     lblTotalAmount.Text = GetTotal(table).ToString("c");
                     lblCount.Text = table.Rows.Count.ToString();
@@ -460,7 +459,7 @@ namespace Budget
 
                 private void ReturnButton_OnAppropriationClick(object sender, EventArgs e)
                 {
-                    var table = Division.Data.Table;
+                    var table = Division.Data.BudgetTable;
                     BindData(table, Grid, P8BindingSource, DataNavigator);
                     GetP8AppropFilterBox(table);
                     lblTotalAmount.Text = GetTotal(table).ToString("c");
@@ -471,7 +470,7 @@ namespace Budget
 
                 private void ReturnButton_OnBocClick(object sender, EventArgs e)
                 {
-                    var table = Division.Data.Table;
+                    var table = Division.Data.BudgetTable;
                     BindData(table, Grid, P8BindingSource, DataNavigator);
                     GetP8AppropFilterBox(table);
                     lblTotalAmount.Text = GetTotal(table).ToString("c");
@@ -502,7 +501,7 @@ namespace Budget
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message.ToString());
+                        MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
                         return -1M;
                     }
                 }
@@ -515,7 +514,7 @@ namespace Budget
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message.ToString());
+                        MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
                         return null;
                     }
                 }
@@ -528,7 +527,7 @@ namespace Budget
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message.ToString());
+                        MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
                         return -1;
                     }
                 }
@@ -544,7 +543,7 @@ namespace Budget
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message.ToString());
+                        MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
                         return null;
                     }
                 }
@@ -562,7 +561,7 @@ namespace Budget
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message.ToString());
+                        MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
                         return null;
                     }
                 }
@@ -607,7 +606,7 @@ namespace Budget
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message.ToString());
+                        MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
                         return null;
                     }
                 }
@@ -625,7 +624,7 @@ namespace Budget
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message.ToString());
+                        MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
                         return null;
                     }
                 }
@@ -638,7 +637,7 @@ namespace Budget
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message.ToString());
+                        MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
                         return -1M;
                     }
                 }
@@ -651,7 +650,7 @@ namespace Budget
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message.ToString());
+                        MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
                         return new decimal[] { -1m, -1m, -1m };
                     }
                 }

@@ -14,40 +14,18 @@ namespace Budget
     {
         namespace Data
         {
-            public partial class SummaryForm : MetroForm, IBudgetAuthority
+            public partial class SummaryForm : MetroForm
             {
-                #region Properties
 
-                public IBudgetAuthority Authority { get; set; }
-                public decimal Average { get; }
-                public int Count { get; }
-                public DataBuilder Data { get; }
-                public Dictionary<string, string[]> DataElement { get; }
-                public DataSet DataSet { get; }
-                public DivisionAuthority Division { get; }
-                public ListBox[] FilterBox { get; set; }
-                public decimal[] Metrics { get; }
-                public FormData Ninja { get; set; }
-                public Tuple<DataTable, PRC[], decimal, int> PrcData { get; }
-                public RegionalAuthority R6 { get; }
-                public DataTable Table { get; }
-                public decimal Total { get; }
-                internal string[] RC { get; set; }
-                private ChartControl[] Chart { get; set; }
-                private string[] DivName { get; set; }
-                private ExpandCollapsePanel[] Expander { get; set; }
-                private TabPageAdv[] Tab { get; set; }
-
-                #endregion
-
+                //Constructors
                 public SummaryForm()
                 {
                     InitializeComponent();
-                    Division = new DivisionAuthority();
-                    Table = Division.Data.Table;
-                    Total = GetTotal(Table);
-                    RC = GetCodes(Table, "RC");
-                    BindingSource.DataSource = Division.Data.Table;
+                    D6 = new DivisionAuthority();
+                    Table = D6.Data.BudgetTable;
+                    ProgramElements = D6.Data.ProgramElements;
+                    RC = ProgramElements["RC"];
+                    BindingSource.DataSource = D6.Data.BudgetTable;
                     Text = $"P7 Status of Funds";
                     GetAllFilters(FilterBox);
                 }
@@ -59,21 +37,21 @@ namespace Budget
                     {
                         R6 = new RegionalAuthority();
                         Data = R6.Data;
-                        DataSet = R6.E6;
+                        DataSet = R6.BudgetData;
                         Table = R6.Table;
-                        Total = R6.Total;
+                        ProgramElements = R6.ProgramElements;
                         BindingSource.DataSource = R6.Table;
                         Text = "Region 6 Summary";
                     }
                     if (source == Source.P8)
                     {
-                        Division = new DivisionAuthority();
-                        Data = Division.Data;
-                        DataSet = Division.E6;
-                        Table = Division.Table;
-                        Total = Division.Total;
-                        RC = GetCodes(Table, "RC");
-                        BindingSource.DataSource = Division.Table;
+                        D6 = new DivisionAuthority();
+                        Data = D6.Data;
+                        DataSet = D6.BudgetData;
+                        Table = D6.Table;
+                        ProgramElements = D6.ProgramElements;
+                        RC = D6.Data.ProgramElements["RC"];
+                        BindingSource.DataSource = D6.Table;
                         Text = "R6 Division Summary";
                     }
                     FilterBox = GetFilterBox();
@@ -83,19 +61,38 @@ namespace Budget
                 public SummaryForm(string rc)
                 {
                     InitializeComponent();
-                    Authority = new DivisionAuthority(rc);
-                    Data = Division.Data;
-                    DataSet = Division.E6;
-                    Table = Division.Table;
-                    Total = Division.Total;
-                    Text = "Division Summary";
+                    D6 = new DivisionAuthority(rc);
+                    Data = D6.Data;
+                    BudgetMetric = new DataMetric(Data);
+                    DataSet = D6.BudgetData;
+                    Table = D6.Table;
+                    Text = $"{D6.Org.Name} Summary";
                     BindingSource.DataSource = Table;
                     FilterBox = GetFilterBox();
                     GetAllFilters(FilterBox);
                 }
 
-                DataSet IBudgetAuthority.E6 { get; }
 
+                //Properties
+                public IBudgetAuthority Authority { get; set; }
+                public DataBuilder Data { get; }
+                public DataMetric BudgetMetric { get; }
+                public DataSet DataSet { get; }
+                public ListBox[] FilterBox { get; set; }
+                public decimal[] Metrics { get; }
+                public FormData Ninja { get; set; }
+                public Dictionary<string, string[]> ProgramElements { get; }
+                public DivisionAuthority D6 { get; }
+                public RegionalAuthority R6 { get; }
+                public DataTable Table { get; }
+                internal string[] RC { get; set; }
+                private ChartControl[] Chart { get; set; }
+                private string[] DivName { get; set; }
+                private ExpandCollapsePanel[] Expander { get; set; }
+                private TabPageAdv[] Tab { get; set; }
+
+
+                //Methods
                 public DataTable FilterTable(DataTable table, string column, string filter)
                 {
                     try
@@ -104,232 +101,38 @@ namespace Budget
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message.ToString());
+                        MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
                         return null;
                     }
-                }
-
-                public decimal GetAverage(DataTable table)
-                {
-                    try
-                    {
-                        return table.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Average();
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message.ToString());
-                        return -1M;
-                    }
-                }
-
-                public string[] GetCodes(DataTable table, string column)
-                {
-                    try
-                    {
-                        return table.AsEnumerable().Select(p => p.Field<string>(column)).Distinct().ToArray();
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message.ToString());
-                        return null;
-                    }
-                }
-
-                public int GetCount(DataTable table)
-                {
-                    try
-                    {
-                        return table.Rows.Count;
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message.ToString());
-                        return -1;
-                    }
-                }
-
-                public Dictionary<string, string[]> GetDataElements(DataTable table)
-                {
-                    var data = new Dictionary<string, string[]>();
-                    foreach (DataColumn dc in table.Columns)
-                    {
-                        if (dc.ColumnName.Equals("Id") || dc.ColumnName.Equals("Amount"))
-                            continue;
-                        data.Add(dc.ColumnName, GetCodes(table, dc.ColumnName));
-                    }
-                    if (data.ContainsKey("Id")) data.Remove("Id");
-                    if (data.ContainsKey("Amount")) data.Remove("Amount");
-                    if (data.ContainsKey("P6_Id")) data.Remove("P6_Id");
-                    return data;
-                }
-
-                public Dictionary<string, decimal[]> GetDataMetrics(DataTable table, string column, string filter)
-                {
-                    try
-                    {
-                        string[] list = GetCodes(table, column);
-                        Dictionary<string, decimal[]> info = new Dictionary<string, decimal[]>();
-                        foreach (string ftr in list)
-                        {
-                            decimal[] stat = new decimal[4];
-                            stat[0] = GetDataValues(table, column, filter).Item3;
-                            stat[1] = (decimal)GetDataValues(table, column, filter).Item4;
-                            stat[2] = stat[0] / stat[1];
-                            stat[3] = (stat[0] / Total) * 100;
-                            info.Add(filter, stat);
-                        }
-                        return info;
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message.ToString());
-                        return null;
-                    }
-                }
-
-                public Dictionary<string, decimal> GetDataTotals(DataTable table, string column, string filter)
-                {
-                    try
-                    {
-                        var list = GetCodes(table, column);
-                        Dictionary<string, decimal> info = new Dictionary<string, decimal>();
-                        foreach (string ftr in list)
-                        {
-                            var query = table.AsEnumerable().Where(p => p.Field<string>(column).Equals(filter))
-                                .Sum(p => p.Field<decimal>("Amount"));
-                            if (query > 0)
-                                info.Add(filter, query);
-                        }
-                        return info;
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message.ToString());
-                        return null;
-                    }
-                }
-
-                public Tuple<DataTable, PRC[], decimal, int> GetDataValues(DataTable table, string column, string filter)
-                {
-                    try
-                    {
-                        var query = table.AsEnumerable().Where(p => p.Field<string>(column).Equals(filter)).Select(p => p).CopyToDataTable();
-                        return new Tuple<DataTable, PRC[], decimal, int>(query, GetPrcArray(query), GetTotal(query), GetCount(query));
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message.ToString());
-                        return null;
-                    }
-                }
-
-                public decimal[] GetMetrics(DataTable table)
-                {
-                    var count = GetCount(table);
-                    return new decimal[] { GetTotal(table), (decimal)count, GetAverage(table) };
-                }
-
-                public Dictionary<string, decimal[]> GetMetrics(DataTable table, string[] list, string column)
-                {
-                    try
-                    {
-                        Dictionary<string, decimal[]> info = new Dictionary<string, decimal[]>();
-                        foreach (string filter in list)
-                        {
-                            decimal[] stat = new decimal[4];
-                            stat[0] = GetDataValues(table, column, filter).Item3;
-                            stat[1] = (decimal)GetDataValues(table, column, filter).Item4;
-                            stat[2] = stat[0] / stat[1];
-                            stat[3] = (stat[0] / Total) * 100;
-                            info.Add(filter, stat);
-                        }
-                        return info;
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message.ToString());
-                        return null;
-                    }
-                }
-
-                public PRC[] GetPrcArray(DataTable table)
-                {
-                    try
-                    {
-                        return table.AsEnumerable().Select(p => new PRC()).ToArray();
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message.ToString());
-                        return null;
-                    }
-                }
-
-                public decimal GetTotal(DataTable table)
-                {
-                    try
-                    {
-                        return table.AsEnumerable().Sum(p => p.Field<decimal>("Amount"));
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message.ToString());
-                        return -1M;
-                    }
-                }
-
-                public Dictionary<string, decimal> GetTotals(DataTable table, string[] filters, string column)
-                {
-                    try
-                    {
-                        Dictionary<string, decimal> info = new Dictionary<string, decimal>();
-                        foreach (string filter in filters)
-                        {
-                            var query = table.AsEnumerable().Where(p => p.Field<string>(column).Equals(filter))
-                                .Select(p => p).Sum(p => p.Field<decimal>("Amount"));
-                            if (query > 0)
-                                info.Add(filter, query);
-                        }
-                        return info;
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message.ToString());
-                        return null;
-                    }
-                }
-
-                private void expandCollapsePanel4_Paint(object sender, PaintEventArgs e)
-                {
                 }
 
                 private void Form_Load(object sender, EventArgs e)
                 {
                     Chart = GetChartArray();
-                    FundChart = new Chart(FundChart, Division.FundData).CreateColumn();
-                    BocChart = new Chart(BocChart, Division.BocData).CreateColumn();
-                    NpmChart = new Chart(NpmChart, Division.NpmData).CreateColumn();
-                    GoalChart = new Chart(GoalChart, Division.GoalData).CreateColumn();
-                    AreaChart1 = new Chart(AreaChart1, R6.ObjectiveData).CreateColumn();
-                    AreaChart = new Chart(AreaChart, Division.ProgramData).CreateColumn();
-                    ProjectChart = new Chart(ProjectChart, Division.ProgramData).CreateColumn();
+                    FundChart = new Chart(FundChart, D6.FundData).CreateColumn();
+                    BocChart = new Chart(BocChart, D6.BocData).CreateColumn();
+                    NpmChart = new Chart(NpmChart, D6.NpmData).CreateColumn();
+                    GoalChart = new Chart(GoalChart, D6.GoalData).CreateColumn();
+                    ObjChart = new Chart(ObjChart, R6.ObjectiveData).CreateColumn();
+                    AreaChart = new Chart(AreaChart, D6.ProgramData).CreateColumn();
+                    ProjectChart = new Chart(ProjectChart, D6.ProgramData).CreateColumn();
                     SummaryTabControl.SelectedIndexChanged += new EventHandler(GetTabPanelTitle);
                 }
 
                 private void GetAllFilters(ListBox[] listbox)
                 {
-                    GetListBoxItems(listbox[0], GetCodes(Table, "FundName"));
-                    GetListBoxItems(listbox[1], GetCodes(Table, "BocName"));
-                    GetListBoxItems(listbox[2], GetCodes(Table, "NPM"));
-                    GetListBoxItems(listbox[3], GetCodes(Table, "GoalName"));
-                    GetListBoxItems(listbox[4], GetCodes(Table, "ObjectiveName"));
-                    GetListBoxItems(listbox[5], GetCodes(Table, "ProgramAreaName"));
-                    GetListBoxItems(listbox[6], GetCodes(Table, "ProgramProjectName"));
+                    GetListBoxItems(listbox[0], ProgramElements["FundName"]);
+                    GetListBoxItems(listbox[1], ProgramElements["BocName"]);
+                    GetListBoxItems(listbox[2], ProgramElements["NPM"]);
+                    GetListBoxItems(listbox[3], ProgramElements["GoalName"]);
+                    GetListBoxItems(listbox[4], ProgramElements["ObjectiveName"]);
+                    GetListBoxItems(listbox[5], ProgramElements["ProgramAreaName"]);
+                    GetListBoxItems(listbox[6], ProgramElements["ProgramProjectName"]);
                 }
 
                 private ChartControl[] GetChartArray()
                 {
-                    return new ChartControl[] { FundChart, BocChart, NpmChart, GoalChart, AreaChart1, AreaChart, ProjectChart };
+                    return new ChartControl[] { FundChart, BocChart, NpmChart, GoalChart, ObjChart, DivisionChart, AreaChart, ProjectChart };
                 }
 
                 private ExpandCollapsePanel[] GetExpanders()

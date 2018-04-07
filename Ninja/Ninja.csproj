@@ -363,9 +363,7 @@
       <DependentUpon>NinjaFundCodeImages.resx</DependentUpon>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Compile>
-    <Compile Include="Resources\NinjaIcons.Designer.cs">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Compile>
+    <Compile Include="Resources\NinjaIcons.Designer.cs" />
     <Compile Include="Resources\NinjaSummaryImages.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -422,9 +420,7 @@
       <LastGenOutput>NinjaFundCodeImages.Designer.cs</LastGenOutput>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
-    <EmbeddedResource Include="Resources\NinjaIcons.resx">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\NinjaIcons.resx" />
     <EmbeddedResource Include="Resources\NinjaSummaryImages.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>NinjaSummaryImages.Designer.cs</LastGenOutput>

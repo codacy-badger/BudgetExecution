@@ -1,4 +1,5 @@
 ﻿using Syncfusion.Windows.Forms.Chart;
+using System.Collections.Generic;
 using System.Windows.Forms;
 
 namespace Budget
@@ -9,6 +10,8 @@ namespace Budget
         {
             public class ChartData
             {
+
+                //Constructors
                 public ChartData()
                 {
                 }
@@ -16,21 +19,36 @@ namespace Budget
                 public ChartData(Source source)
                 {
                     Data = new DataBuilder(source);
-                    BindingSource.DataSource = Data.Table;
-                    DataMetric = new Metric(Data);
+                    Metric = new DataMetric(Data);
+
                 }
 
-                public string[] AxesTitle { get; set; }
+
+                //Properties
+                public string[] Axes { get; set; }
                 public BindingSource BindingSource { get; }
-                public ChartControl Chart { get; set; }
                 public DataBuilder Data { get; }
-                public Metric DataMetric { get; }
+                public DataMetric Metric { get; }
                 public int[] Dimension { get; set; }
                 public ChartDataBindModel Model { get; }
                 public ChartSeries Series { get; set; }
                 public string[] Titles { get; set; }
                 public ChartSeriesType Type { get; set; }
+
+
+                //Methods
+                internal ChartSeries GetSeriesData(Dictionary<string, decimal> data)
+                {
+                    var model = new ChartSeries();
+                    foreach(KeyValuePair<string, decimal> kvp in data)
+                    {
+                        model.Points.Add(kvp.Key, (double)kvp.Value);
+                    }
+                    return model;
+                }
             }
+
+
         }
     }
 }

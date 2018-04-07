@@ -9,19 +9,13 @@ namespace Budget
         {
             public interface IDataBuilder
             {
-                #region Properties
 
-                PRC[] Accounts { get; }
-                DataSet E6 { get; }
-                Tuple<DataTable, PRC[], decimal, int> PrcData { get; }
                 Query Query { get; }
+                DataSet BudgetData { get; }
+                DataTable BudgetTable { get; }
                 DataRow[] Records { get; }
+                PRC[] Accounts { get; }
                 Tuple<DataTable, DataRow[], decimal, int> SqlData { get; }
-                DataTable Table { get; }
-
-                #endregion
-
-                #region Methods
 
                 decimal GetAverage(DataTable table);
 
@@ -31,13 +25,12 @@ namespace Budget
 
                 decimal[] GetMetrics(DataTable table);
 
-                DataRow[] GetRecords();
+                DataRow[] GetRecords(DataTable table);
 
                 Tuple<DataTable, DataRow[], decimal, int> GetSqlData();
 
                 decimal GetTotal(DataTable table);
 
-                #endregion
             }
         }
     }
