@@ -30,23 +30,23 @@ namespace Budget
                     Average = GetAverage(Table);
                     Metrics = GetStats(Table);
                     FundTotals = GetTotals(Table, "FundName");
-                    FundMetrics = GetMetrics(Table, "FundName");
+                    FundMetrics = GetDecimalMetrics(Table, "FundName");
                     BocTotals = GetTotals(Table, "BocName");
-                    BocMetrics = GetMetrics(Table, "BocName");
+                    BocMetrics = GetDecimalMetrics(Table, "BocName");
                     NpmTotals = GetTotals(Table, "NPM");
-                    NpmMetrics = GetMetrics(Table, "NPM");
+                    NpmMetrics = GetDecimalMetrics(Table, "NPM");
                     ProgramProjectTotals = GetTotals(Table, "ProgramProjectCode");
-                    ProgramProjectMetrics = GetMetrics(Table, "ProgramProjectCode");
+                    ProgramProjectMetrics = GetDecimalMetrics(Table, "ProgramProjectCode");
                     ProgramAreaTotals = GetTotals(Table, "ProgramAreaCode");
-                    ProgramAreaMetrics = GetMetrics(Table, "ProgramAreaCode");
+                    ProgramAreaMetrics = GetDecimalMetrics(Table, "ProgramAreaCode");
                     GoalTotals = GetTotals(Table, "GoalName");
-                    GoalMetrics = GetMetrics(Table, "GoalName");
+                    GoalMetrics = GetDecimalMetrics(Table, "GoalName");
                     ObjectiveTotals = GetTotals(Table, "ObjectiveName");
-                    ObjectiveMetrics = GetMetrics(Table, "ObjectiveName");
+                    ObjectiveMetrics = GetDecimalMetrics(Table, "ObjectiveName");
                     if(source == Source.P8)
                     {
                         DivisionTotals = GetTotals(Table, "RC");
-                        DivisionMetrics = GetMetrics(Table, "RC");
+                        DivisionMetrics = GetDecimalMetrics(Table, "RC");
                     }
                 }
 
@@ -60,20 +60,47 @@ namespace Budget
                     Average = GetAverage(Table);
                     Metrics = GetStats(Table);
                     FundTotals = GetTotals(Table, "FundName");
-                    FundMetrics = GetMetrics(Table, "FundName");
+                    FundMetrics = GetDecimalMetrics(Table, "FundName");
                     BocTotals = GetTotals(Table, "BocName");
-                    BocMetrics = GetMetrics(Table, "BocName");
+                    BocMetrics = GetDecimalMetrics(Table, "BocName");
                     NpmTotals = GetTotals(Table, "NPM");
-                    NpmMetrics = GetMetrics(Table, "NPM");
+                    NpmMetrics = GetDecimalMetrics(Table, "NPM");
                     ProgramProjectTotals = GetTotals(Table, "ProgramProjectCode");
-                    ProgramProjectMetrics = GetMetrics(Table, "ProgramProjectCode");
+                    ProgramProjectMetrics = GetDecimalMetrics(Table, "ProgramProjectCode");
                     ProgramAreaTotals = GetTotals(Table, "ProgramArea");
-                    ProgramAreaMetrics = GetMetrics(Table, "ProgramArea");
+                    ProgramAreaMetrics = GetDecimalMetrics(Table, "ProgramArea");
                     GoalTotals = GetTotals(Table, "GoalName");
-                    GoalMetrics = GetMetrics(Table, "GoalName");
+                    GoalMetrics = GetDecimalMetrics(Table, "GoalName");
                     ObjectiveTotals = GetTotals(Table, "ObjectiveName");
-                    ObjectiveMetrics = GetMetrics(Table, "ObjectiveName");
+                    ObjectiveMetrics = GetDecimalMetrics(Table, "ObjectiveName");
                 }
+
+                public DataMetric(DataBuilder data, string column, string filter)
+                {
+                    Data = data;
+                    Table = FilterTable(Data.BudgetTable, column, filter);
+                    BudgetData = Data.BudgetData;
+                    Total = GetTotal(Table);
+                    Count = Table.Rows.Count;
+                    Average = GetAverage(Table);
+                    Metrics = GetStats(Table);
+                    FundTotals = GetTotals(Table, "FundName");
+                    FundMetrics = GetDecimalMetrics(Table, "FundName");
+                    BocTotals = GetTotals(Table, "BocName");
+                    BocMetrics = GetDecimalMetrics(Table, "BocName");
+                    NpmTotals = GetTotals(Table, "NPM");
+                    NpmMetrics = GetDecimalMetrics(Table, "NPM");
+                    ProgramProjectTotals = GetTotals(Table, "ProgramProjectCode");
+                    ProgramProjectMetrics = GetDecimalMetrics(Table, "ProgramProjectCode");
+                    ProgramAreaTotals = GetTotals(Table, "ProgramArea");
+                    ProgramAreaMetrics = GetDecimalMetrics(Table, "ProgramArea");
+                    GoalTotals = GetTotals(Table, "GoalName");
+                    GoalMetrics = GetDecimalMetrics(Table, "GoalName");
+                    ObjectiveTotals = GetTotals(Table, "ObjectiveName");
+                    ObjectiveMetrics = GetDecimalMetrics(Table, "ObjectiveName");
+                }
+
+
 
 
                 //Properties
@@ -85,6 +112,7 @@ namespace Budget
                 public int Count { get; }
                 public decimal Average { get; }
                 public decimal[] Metrics { get; }
+                public BindingList<IEnumerable<KeyValuePair<string, double>>> BudgetBinding { get; }
                 public Dictionary<string, decimal[]> BocMetrics { get; set; }
                 public Dictionary<string, decimal> BocTotals { get; set; }
                 public Dictionary<string, decimal[]> FundMetrics { get; }
@@ -104,6 +132,7 @@ namespace Budget
 
 
                 //Methods
+                
                 public decimal GetAverage(DataTable table)
                 {
                     try
@@ -209,34 +238,13 @@ namespace Budget
                     return new Tuple<DataTable, PRC[], decimal, int>(table, GetPrcArray(table), GetTotal(table), GetCount(table));
                 }
 
-                private double[] GetChartData(Dictionary<string, decimal> data)
-                {
-                    try
-                    {
-                        var val = new double[data.Values.Count];
-                        for (int i = 0; i < data.Values.Count; i++)
-                        {
-                            foreach (KeyValuePair<string, decimal> kvp in data)
-                            {
-                                val[i] = (double)kvp.Value;
-                            }
-                        }
-                        return val;
-                    }
-                    catch (Exception e)
-                    {
-                        MessageBox.Show(e.Message);
-                        return null;
-                    }
-                }
-
                 private Dictionary<string, decimal>[] GetChartInput()
                 {
                     return new Dictionary<string, decimal>[] {FundTotals, BocTotals, NpmTotals, GoalTotals,
                         ObjectiveTotals, ProgramAreaTotals, ProgramProjectTotals};
                 }
 
-                private Dictionary<string, decimal[]> GetMetrics(DataTable table, string column)
+                private Dictionary<string, decimal[]> GetDecimalMetrics(DataTable table, string column)
                 {
                     try
                     {
@@ -280,6 +288,27 @@ namespace Budget
                         MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
                         return null;
                     }
+                }
+
+                Dictionary<string, double> ConvertDecimalData(Dictionary<string, decimal> data)
+                {
+
+                    try
+                    {
+                        var doubledata = new Dictionary<string, double>();
+                        foreach (KeyValuePair<string, decimal> kvp in data)
+                        {
+                            doubledata.Add(kvp.Key, (double)kvp.Value);
+                        }
+                        return doubledata;
+                    }
+                    catch (Exception e)
+                    {
+
+                        MessageBox.Show(e.Message + e.StackTrace);
+                        return null;
+                    }
+                   
                 }
 
             }

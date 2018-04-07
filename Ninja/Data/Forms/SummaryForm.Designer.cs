@@ -137,6 +137,25 @@ namespace Budget
             Syncfusion.Windows.Forms.Tools.InactiveStateCollection inactiveStateCollection5 = new Syncfusion.Windows.Forms.Tools.InactiveStateCollection();
             Syncfusion.Windows.Forms.Tools.ToggleButtonRenderer toggleButtonRenderer5 = new Syncfusion.Windows.Forms.Tools.ToggleButtonRenderer();
             Syncfusion.Windows.Forms.Tools.SliderCollection sliderCollection5 = new Syncfusion.Windows.Forms.Tools.SliderCollection();
+            Syncfusion.Windows.Forms.Chart.ChartSeries chartSeries11 = new Syncfusion.Windows.Forms.Chart.ChartSeries();
+            Syncfusion.Windows.Forms.Chart.ChartCustomShapeInfo chartCustomShapeInfo11 = new Syncfusion.Windows.Forms.Chart.ChartCustomShapeInfo();
+            Syncfusion.Windows.Forms.Chart.ChartLineInfo chartLineInfo4 = new Syncfusion.Windows.Forms.Chart.ChartLineInfo();
+            Syncfusion.Windows.Forms.Chart.ChartSeries chartSeries12 = new Syncfusion.Windows.Forms.Chart.ChartSeries();
+            Syncfusion.Windows.Forms.Chart.ChartCustomShapeInfo chartCustomShapeInfo12 = new Syncfusion.Windows.Forms.Chart.ChartCustomShapeInfo();
+            Syncfusion.Windows.Forms.Chart.ChartToolBarSaveItem chartToolBarSaveItem6 = new Syncfusion.Windows.Forms.Chart.ChartToolBarSaveItem();
+            Syncfusion.Windows.Forms.Chart.ChartToolBarCopyItem chartToolBarCopyItem6 = new Syncfusion.Windows.Forms.Chart.ChartToolBarCopyItem();
+            Syncfusion.Windows.Forms.Chart.ChartToolBarPrintItem chartToolBarPrintItem6 = new Syncfusion.Windows.Forms.Chart.ChartToolBarPrintItem();
+            Syncfusion.Windows.Forms.Chart.ChartToolBarPrintPreviewItem chartToolBarPrintPreviewItem4 = new Syncfusion.Windows.Forms.Chart.ChartToolBarPrintPreviewItem();
+            Syncfusion.Windows.Forms.Chart.ChartToolBarSplitter chartToolBarSplitter4 = new Syncfusion.Windows.Forms.Chart.ChartToolBarSplitter();
+            Syncfusion.Windows.Forms.Chart.ChartToolBarPaletteItem chartToolBarPaletteItem6 = new Syncfusion.Windows.Forms.Chart.ChartToolBarPaletteItem();
+            Syncfusion.Windows.Forms.Chart.ChartToolBarStyleItem chartToolBarStyleItem4 = new Syncfusion.Windows.Forms.Chart.ChartToolBarStyleItem();
+            Syncfusion.Windows.Forms.Chart.ChartToolBarTypeItem chartToolBarTypeItem6 = new Syncfusion.Windows.Forms.Chart.ChartToolBarTypeItem();
+            Syncfusion.Windows.Forms.Chart.ChartToolBarSeries3DItem chartToolBarSeries3DItem6 = new Syncfusion.Windows.Forms.Chart.ChartToolBarSeries3DItem();
+            Syncfusion.Windows.Forms.Chart.ChartToolBarShowLegendItem chartToolBarShowLegendItem6 = new Syncfusion.Windows.Forms.Chart.ChartToolBarShowLegendItem();
+            Syncfusion.Windows.Forms.Tools.ActiveStateCollection activeStateCollection6 = new Syncfusion.Windows.Forms.Tools.ActiveStateCollection();
+            Syncfusion.Windows.Forms.Tools.InactiveStateCollection inactiveStateCollection6 = new Syncfusion.Windows.Forms.Tools.InactiveStateCollection();
+            Syncfusion.Windows.Forms.Tools.ToggleButtonRenderer toggleButtonRenderer6 = new Syncfusion.Windows.Forms.Tools.ToggleButtonRenderer();
+            Syncfusion.Windows.Forms.Tools.SliderCollection sliderCollection6 = new Syncfusion.Windows.Forms.Tools.SliderCollection();
             Syncfusion.Windows.Forms.Chart.ChartSeries chartSeries13 = new Syncfusion.Windows.Forms.Chart.ChartSeries();
             Syncfusion.Windows.Forms.Chart.ChartCustomShapeInfo chartCustomShapeInfo13 = new Syncfusion.Windows.Forms.Chart.ChartCustomShapeInfo();
             Syncfusion.Windows.Forms.Chart.ChartSeries chartSeries14 = new Syncfusion.Windows.Forms.Chart.ChartSeries();
@@ -188,29 +207,19 @@ namespace Budget
             Syncfusion.Windows.Forms.Chart.ChartToolBarTypeItem chartToolBarTypeItem9 = new Syncfusion.Windows.Forms.Chart.ChartToolBarTypeItem();
             Syncfusion.Windows.Forms.Chart.ChartToolBarSeries3DItem chartToolBarSeries3DItem9 = new Syncfusion.Windows.Forms.Chart.ChartToolBarSeries3DItem();
             Syncfusion.Windows.Forms.Chart.ChartToolBarShowLegendItem chartToolBarShowLegendItem9 = new Syncfusion.Windows.Forms.Chart.ChartToolBarShowLegendItem();
-            Syncfusion.Windows.Forms.Chart.ChartSeries chartSeries11 = new Syncfusion.Windows.Forms.Chart.ChartSeries();
-            Syncfusion.Windows.Forms.Chart.ChartCustomShapeInfo chartCustomShapeInfo11 = new Syncfusion.Windows.Forms.Chart.ChartCustomShapeInfo();
-            Syncfusion.Windows.Forms.Chart.ChartLineInfo chartLineInfo4 = new Syncfusion.Windows.Forms.Chart.ChartLineInfo();
-            Syncfusion.Windows.Forms.Chart.ChartSeries chartSeries12 = new Syncfusion.Windows.Forms.Chart.ChartSeries();
-            Syncfusion.Windows.Forms.Chart.ChartCustomShapeInfo chartCustomShapeInfo12 = new Syncfusion.Windows.Forms.Chart.ChartCustomShapeInfo();
-            Syncfusion.Windows.Forms.Chart.ChartToolBarSaveItem chartToolBarSaveItem6 = new Syncfusion.Windows.Forms.Chart.ChartToolBarSaveItem();
-            Syncfusion.Windows.Forms.Chart.ChartToolBarCopyItem chartToolBarCopyItem6 = new Syncfusion.Windows.Forms.Chart.ChartToolBarCopyItem();
-            Syncfusion.Windows.Forms.Chart.ChartToolBarPrintItem chartToolBarPrintItem6 = new Syncfusion.Windows.Forms.Chart.ChartToolBarPrintItem();
-            Syncfusion.Windows.Forms.Chart.ChartToolBarPrintPreviewItem chartToolBarPrintPreviewItem4 = new Syncfusion.Windows.Forms.Chart.ChartToolBarPrintPreviewItem();
-            Syncfusion.Windows.Forms.Chart.ChartToolBarSplitter chartToolBarSplitter4 = new Syncfusion.Windows.Forms.Chart.ChartToolBarSplitter();
-            Syncfusion.Windows.Forms.Chart.ChartToolBarPaletteItem chartToolBarPaletteItem6 = new Syncfusion.Windows.Forms.Chart.ChartToolBarPaletteItem();
-            Syncfusion.Windows.Forms.Chart.ChartToolBarStyleItem chartToolBarStyleItem4 = new Syncfusion.Windows.Forms.Chart.ChartToolBarStyleItem();
-            Syncfusion.Windows.Forms.Chart.ChartToolBarTypeItem chartToolBarTypeItem6 = new Syncfusion.Windows.Forms.Chart.ChartToolBarTypeItem();
-            Syncfusion.Windows.Forms.Chart.ChartToolBarSeries3DItem chartToolBarSeries3DItem6 = new Syncfusion.Windows.Forms.Chart.ChartToolBarSeries3DItem();
-            Syncfusion.Windows.Forms.Chart.ChartToolBarShowLegendItem chartToolBarShowLegendItem6 = new Syncfusion.Windows.Forms.Chart.ChartToolBarShowLegendItem();
-            Syncfusion.Windows.Forms.Tools.ActiveStateCollection activeStateCollection6 = new Syncfusion.Windows.Forms.Tools.ActiveStateCollection();
-            Syncfusion.Windows.Forms.Tools.InactiveStateCollection inactiveStateCollection6 = new Syncfusion.Windows.Forms.Tools.InactiveStateCollection();
-            Syncfusion.Windows.Forms.Tools.ToggleButtonRenderer toggleButtonRenderer6 = new Syncfusion.Windows.Forms.Tools.ToggleButtonRenderer();
-            Syncfusion.Windows.Forms.Tools.SliderCollection sliderCollection6 = new Syncfusion.Windows.Forms.Tools.SliderCollection();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SummaryForm));
             this.SummaryTabControl = new Syncfusion.Windows.Forms.Tools.TabControlAdv();
             this.Tab1 = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
             this.splitContainer5 = new System.Windows.Forms.SplitContainer();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.radioButton8 = new System.Windows.Forms.RadioButton();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButton3 = new System.Windows.Forms.RadioButton();
+            this.radioButton5 = new System.Windows.Forms.RadioButton();
+            this.radioButton6 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButton7 = new System.Windows.Forms.RadioButton();
+            this.radioButton4 = new System.Windows.Forms.RadioButton();
             this.FundChart = new Syncfusion.Windows.Forms.Chart.ChartControl();
             this.toggleButton1 = new Syncfusion.Windows.Forms.Tools.ToggleButton();
             this.expandCollapsePanel4 = new MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel();
@@ -244,6 +253,12 @@ namespace Budget
             this.expandCollapsePanel6 = new MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel();
             this.listBox6 = new System.Windows.Forms.ListBox();
             this.toggleButton6 = new Syncfusion.Windows.Forms.Tools.ToggleButton();
+            this.Tab6 = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
+            this.splitContainer7 = new System.Windows.Forms.SplitContainer();
+            this.DivisionChart = new Syncfusion.Windows.Forms.Chart.ChartControl();
+            this.expandCollapsePanel8 = new MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel();
+            this.listBox8 = new System.Windows.Forms.ListBox();
+            this.toggleButton8 = new Syncfusion.Windows.Forms.Tools.ToggleButton();
             this.Tab7 = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
             this.splitContainer8 = new System.Windows.Forms.SplitContainer();
             this.AreaChart = new Syncfusion.Windows.Forms.Chart.ChartControl();
@@ -269,12 +284,6 @@ namespace Budget
             this.Objective = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
             this.ObjectiveTab = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
             this.BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.Tab6 = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
-            this.splitContainer7 = new System.Windows.Forms.SplitContainer();
-            this.DivisionChart = new Syncfusion.Windows.Forms.Chart.ChartControl();
-            this.expandCollapsePanel8 = new MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel();
-            this.listBox8 = new System.Windows.Forms.ListBox();
-            this.toggleButton8 = new Syncfusion.Windows.Forms.Tools.ToggleButton();
             ((System.ComponentModel.ISupportInitialize)(this.SummaryTabControl)).BeginInit();
             this.SummaryTabControl.SuspendLayout();
             this.Tab1.SuspendLayout();
@@ -282,6 +291,7 @@ namespace Budget
             this.splitContainer5.Panel1.SuspendLayout();
             this.splitContainer5.Panel2.SuspendLayout();
             this.splitContainer5.SuspendLayout();
+            this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.toggleButton1)).BeginInit();
             this.expandCollapsePanel4.SuspendLayout();
             this.Tab2.SuspendLayout();
@@ -312,6 +322,13 @@ namespace Budget
             this.splitContainer3.SuspendLayout();
             this.expandCollapsePanel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.toggleButton6)).BeginInit();
+            this.Tab6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer7)).BeginInit();
+            this.splitContainer7.Panel1.SuspendLayout();
+            this.splitContainer7.Panel2.SuspendLayout();
+            this.splitContainer7.SuspendLayout();
+            this.expandCollapsePanel8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.toggleButton8)).BeginInit();
             this.Tab7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer8)).BeginInit();
             this.splitContainer8.Panel1.SuspendLayout();
@@ -333,13 +350,6 @@ namespace Budget
             this.flpanel5.SuspendLayout();
             this.Project.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BindingSource)).BeginInit();
-            this.Tab6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer7)).BeginInit();
-            this.splitContainer7.Panel1.SuspendLayout();
-            this.splitContainer7.Panel2.SuspendLayout();
-            this.splitContainer7.SuspendLayout();
-            this.expandCollapsePanel8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.toggleButton8)).BeginInit();
             this.SuspendLayout();
             // 
             // SummaryTabControl
@@ -406,6 +416,7 @@ namespace Budget
             // 
             // splitContainer5.Panel1
             // 
+            this.splitContainer5.Panel1.Controls.Add(this.flowLayoutPanel1);
             this.splitContainer5.Panel1.Controls.Add(this.FundChart);
             // 
             // splitContainer5.Panel2
@@ -423,6 +434,124 @@ namespace Budget
             this.splitContainer5.SplitterDistance = 1491;
             this.splitContainer5.SplitterWidth = 7;
             this.splitContainer5.TabIndex = 96;
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Controls.Add(this.radioButton8);
+            this.flowLayoutPanel1.Controls.Add(this.radioButton1);
+            this.flowLayoutPanel1.Controls.Add(this.radioButton3);
+            this.flowLayoutPanel1.Controls.Add(this.radioButton5);
+            this.flowLayoutPanel1.Controls.Add(this.radioButton6);
+            this.flowLayoutPanel1.Controls.Add(this.radioButton2);
+            this.flowLayoutPanel1.Controls.Add(this.radioButton7);
+            this.flowLayoutPanel1.Controls.Add(this.radioButton4);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(351, 3);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(778, 35);
+            this.flowLayoutPanel1.TabIndex = 45;
+            // 
+            // radioButton8
+            // 
+            this.radioButton8.AutoSize = true;
+            this.radioButton8.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton8.Location = new System.Drawing.Point(2, 2);
+            this.radioButton8.Margin = new System.Windows.Forms.Padding(2);
+            this.radioButton8.Name = "radioButton8";
+            this.radioButton8.Size = new System.Drawing.Size(70, 25);
+            this.radioButton8.TabIndex = 46;
+            this.radioButton8.Text = "Fund";
+            this.radioButton8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.radioButton8.UseVisualStyleBackColor = true;
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Checked = true;
+            this.radioButton1.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton1.Location = new System.Drawing.Point(76, 2);
+            this.radioButton1.Margin = new System.Windows.Forms.Padding(2);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(66, 25);
+            this.radioButton1.TabIndex = 1;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "BOC";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // radioButton3
+            // 
+            this.radioButton3.AutoSize = true;
+            this.radioButton3.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton3.Location = new System.Drawing.Point(146, 2);
+            this.radioButton3.Margin = new System.Windows.Forms.Padding(2);
+            this.radioButton3.Name = "radioButton3";
+            this.radioButton3.Size = new System.Drawing.Size(70, 25);
+            this.radioButton3.TabIndex = 2;
+            this.radioButton3.Text = "NPM";
+            this.radioButton3.UseVisualStyleBackColor = true;
+            // 
+            // radioButton5
+            // 
+            this.radioButton5.AutoSize = true;
+            this.radioButton5.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton5.Location = new System.Drawing.Point(220, 2);
+            this.radioButton5.Margin = new System.Windows.Forms.Padding(2);
+            this.radioButton5.Name = "radioButton5";
+            this.radioButton5.Size = new System.Drawing.Size(67, 25);
+            this.radioButton5.TabIndex = 45;
+            this.radioButton5.Text = "Goal";
+            this.radioButton5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.radioButton5.UseVisualStyleBackColor = true;
+            // 
+            // radioButton6
+            // 
+            this.radioButton6.AutoSize = true;
+            this.radioButton6.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton6.Location = new System.Drawing.Point(291, 2);
+            this.radioButton6.Margin = new System.Windows.Forms.Padding(2);
+            this.radioButton6.Name = "radioButton6";
+            this.radioButton6.Size = new System.Drawing.Size(100, 25);
+            this.radioButton6.TabIndex = 45;
+            this.radioButton6.Text = "Objective";
+            this.radioButton6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.radioButton6.UseVisualStyleBackColor = true;
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton2.Location = new System.Drawing.Point(395, 2);
+            this.radioButton2.Margin = new System.Windows.Forms.Padding(2);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(91, 25);
+            this.radioButton2.TabIndex = 3;
+            this.radioButton2.Text = "Division";
+            this.radioButton2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.radioButton2.UseVisualStyleBackColor = true;
+            // 
+            // radioButton7
+            // 
+            this.radioButton7.AutoSize = true;
+            this.radioButton7.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton7.Location = new System.Drawing.Point(490, 2);
+            this.radioButton7.Margin = new System.Windows.Forms.Padding(2);
+            this.radioButton7.Name = "radioButton7";
+            this.radioButton7.Size = new System.Drawing.Size(132, 25);
+            this.radioButton7.TabIndex = 45;
+            this.radioButton7.Text = "Program Area";
+            this.radioButton7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.radioButton7.UseVisualStyleBackColor = true;
+            // 
+            // radioButton4
+            // 
+            this.radioButton4.AutoSize = true;
+            this.radioButton4.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton4.Location = new System.Drawing.Point(626, 2);
+            this.radioButton4.Margin = new System.Windows.Forms.Padding(2);
+            this.radioButton4.Name = "radioButton4";
+            this.radioButton4.Size = new System.Drawing.Size(148, 25);
+            this.radioButton4.TabIndex = 4;
+            this.radioButton4.Text = "Program Project";
+            this.radioButton4.UseVisualStyleBackColor = true;
             // 
             // FundChart
             // 
@@ -585,10 +714,10 @@ namespace Budget
             this.expandCollapsePanel4.ButtonStyle = MakarovDev.ExpandCollapsePanel.ExpandCollapseButton.ExpandButtonStyle.Circle;
             this.expandCollapsePanel4.Controls.Add(this.listBox1);
             this.expandCollapsePanel4.ExpandedHeight = 442;
-            this.expandCollapsePanel4.IsExpanded = false;
+            this.expandCollapsePanel4.IsExpanded = true;
             this.expandCollapsePanel4.Location = new System.Drawing.Point(10, 105);
             this.expandCollapsePanel4.Name = "expandCollapsePanel4";
-            this.expandCollapsePanel4.Size = new System.Drawing.Size(254, 37);
+            this.expandCollapsePanel4.Size = new System.Drawing.Size(254, 442);
             this.expandCollapsePanel4.TabIndex = 105;
             this.expandCollapsePanel4.Text = "Filter";
             this.expandCollapsePanel4.UseAnimation = true;
@@ -1547,6 +1676,227 @@ namespace Budget
             this.toggleButton6.Text = "toggleButton1";
             this.toggleButton6.ToggleState = Syncfusion.Windows.Forms.Tools.ToggleButtonState.Active;
             // 
+            // Tab6
+            // 
+            this.Tab6.Controls.Add(this.splitContainer7);
+            this.Tab6.Image = null;
+            this.Tab6.ImageSize = new System.Drawing.Size(16, 16);
+            this.Tab6.Location = new System.Drawing.Point(1, 44);
+            this.Tab6.Name = "Tab6";
+            this.Tab6.ShowCloseButton = true;
+            this.Tab6.Size = new System.Drawing.Size(1784, 847);
+            this.Tab6.TabIndex = 12;
+            this.Tab6.Text = "Divisions";
+            this.Tab6.ThemesEnabled = false;
+            // 
+            // splitContainer7
+            // 
+            this.splitContainer7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer7.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer7.Margin = new System.Windows.Forms.Padding(2);
+            this.splitContainer7.Name = "splitContainer7";
+            // 
+            // splitContainer7.Panel1
+            // 
+            this.splitContainer7.Panel1.Controls.Add(this.DivisionChart);
+            this.splitContainer7.Panel1.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
+            // splitContainer7.Panel2
+            // 
+            this.splitContainer7.Panel2.Controls.Add(this.expandCollapsePanel8);
+            this.splitContainer7.Panel2.Controls.Add(this.toggleButton8);
+            this.splitContainer7.Panel2.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.splitContainer7.Size = new System.Drawing.Size(1784, 847);
+            this.splitContainer7.SplitterDistance = 1495;
+            this.splitContainer7.SplitterWidth = 7;
+            this.splitContainer7.TabIndex = 102;
+            // 
+            // DivisionChart
+            // 
+            this.DivisionChart.AllowGradientPalette = true;
+            this.DivisionChart.AllowUserEditStyles = true;
+            this.DivisionChart.BackInterior = new Syncfusion.Drawing.BrushInfo(System.Drawing.Color.Black);
+            this.DivisionChart.ChartArea.AutoScale = true;
+            this.DivisionChart.ChartArea.BackInterior = new Syncfusion.Drawing.BrushInfo(System.Drawing.Color.Transparent);
+            this.DivisionChart.ChartArea.BorderColor = System.Drawing.Color.Black;
+            this.DivisionChart.ChartArea.CursorLocation = new System.Drawing.Point(0, 0);
+            this.DivisionChart.ChartArea.CursorReDraw = false;
+            this.DivisionChart.ChartAreaMargins = new Syncfusion.Windows.Forms.Chart.ChartMargins(0, 0, 0, 10);
+            this.DivisionChart.ChartAreaShadow = true;
+            this.DivisionChart.ChartInterior = new Syncfusion.Drawing.BrushInfo(Syncfusion.Drawing.GradientStyle.PathRectangle, new System.Drawing.Color[] {
+            System.Drawing.Color.Black,
+            System.Drawing.Color.Gray,
+            System.Drawing.Color.DimGray});
+            this.DivisionChart.CustomPalette = new System.Drawing.Color[] {
+        System.Drawing.Color.DeepSkyBlue,
+        System.Drawing.Color.DarkRed};
+            this.DivisionChart.DataSourceName = "ProjectBindingSource";
+            this.DivisionChart.Depth = 250F;
+            this.DivisionChart.DisplayChartContextMenu = false;
+            this.DivisionChart.DisplaySeriesContextMenu = false;
+            this.DivisionChart.EnableMouseRotation = true;
+            this.DivisionChart.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DivisionChart.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.DivisionChart.HighlightSymbol = true;
+            this.DivisionChart.IsWindowLess = false;
+            // 
+            // 
+            // 
+            this.DivisionChart.Legend.FloatingAutoSize = false;
+            this.DivisionChart.Legend.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DivisionChart.Legend.Location = new System.Drawing.Point(925, 52);
+            this.DivisionChart.Legend.Margin = new System.Windows.Forms.Padding(2);
+            this.DivisionChart.Legend.OnlyColumnsForFloating = false;
+            this.DivisionChart.Legend.RowsCount = 2;
+            this.DivisionChart.Legend.ShowSymbol = true;
+            this.DivisionChart.Legend.Size = new System.Drawing.Size(112, 59);
+            this.DivisionChart.Legend.TextAlignment = System.Drawing.StringAlignment.Near;
+            this.DivisionChart.Legend.Visible = false;
+            this.DivisionChart.Legend.VisibleCheckBox = true;
+            this.DivisionChart.Localize = null;
+            this.DivisionChart.Location = new System.Drawing.Point(23, 79);
+            this.DivisionChart.Margin = new System.Windows.Forms.Padding(2);
+            this.DivisionChart.Name = "DivisionChart";
+            this.DivisionChart.Padding = new System.Windows.Forms.Padding(1);
+            this.DivisionChart.Palette = Syncfusion.Windows.Forms.Chart.ChartColorPalette.Custom;
+            this.DivisionChart.PrimaryXAxis.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DivisionChart.PrimaryXAxis.GridLineType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(182)))), ((int)(((byte)(183)))));
+            this.DivisionChart.PrimaryXAxis.LineType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(182)))), ((int)(((byte)(183)))));
+            this.DivisionChart.PrimaryXAxis.LogLabelsDisplayMode = Syncfusion.Windows.Forms.Chart.LogLabelsDisplayMode.Default;
+            this.DivisionChart.PrimaryXAxis.Margin = true;
+            this.DivisionChart.PrimaryXAxis.TickColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(182)))), ((int)(((byte)(183)))));
+            this.DivisionChart.PrimaryXAxis.TitleColor = System.Drawing.Color.White;
+            this.DivisionChart.PrimaryXAxis.TitleFont = new System.Drawing.Font("Segoe UI", 14F);
+            this.DivisionChart.PrimaryYAxis.GridLineType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(182)))), ((int)(((byte)(183)))));
+            this.DivisionChart.PrimaryYAxis.LineType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(182)))), ((int)(((byte)(183)))));
+            this.DivisionChart.PrimaryYAxis.LogLabelsDisplayMode = Syncfusion.Windows.Forms.Chart.LogLabelsDisplayMode.Default;
+            this.DivisionChart.PrimaryYAxis.Margin = true;
+            this.DivisionChart.PrimaryYAxis.TickColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(182)))), ((int)(((byte)(183)))));
+            this.DivisionChart.PrimaryYAxis.TitleColor = System.Drawing.Color.White;
+            this.DivisionChart.PrimaryYAxis.TitleFont = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DivisionChart.RealMode3D = true;
+            this.DivisionChart.Rotation = 45F;
+            chartSeries11.FancyToolTip.ResizeInsideSymbol = true;
+            chartSeries11.Name = "Default0";
+            chartSeries11.Points.Add(1D, ((double)(55D)));
+            chartSeries11.Points.Add(2D, ((double)(70D)));
+            chartSeries11.Points.Add(3D, ((double)(80D)));
+            chartSeries11.Points.Add(4D, ((double)(65D)));
+            chartSeries11.Points.Add(5D, ((double)(75D)));
+            chartSeries11.Resolution = 0D;
+            chartSeries11.StackingGroup = "Default Group";
+            chartSeries11.Style.AltTagFormat = "";
+            chartSeries11.Style.DrawTextShape = false;
+            chartLineInfo4.Alignment = System.Drawing.Drawing2D.PenAlignment.Center;
+            chartLineInfo4.Color = System.Drawing.SystemColors.ControlText;
+            chartLineInfo4.DashPattern = null;
+            chartLineInfo4.DashStyle = System.Drawing.Drawing2D.DashStyle.Solid;
+            chartLineInfo4.Width = 1F;
+            chartCustomShapeInfo11.Border = chartLineInfo4;
+            chartCustomShapeInfo11.Color = System.Drawing.SystemColors.HighlightText;
+            chartCustomShapeInfo11.Type = Syncfusion.Windows.Forms.Chart.ChartCustomShape.Square;
+            chartSeries11.Style.TextShape = chartCustomShapeInfo11;
+            chartSeries11.Text = "Default0";
+            chartSeries12.FancyToolTip.ResizeInsideSymbol = true;
+            chartSeries12.Name = "Default1";
+            chartSeries12.Points.Add(1D, ((double)(70D)));
+            chartSeries12.Points.Add(2D, ((double)(35D)));
+            chartSeries12.Points.Add(3D, ((double)(65D)));
+            chartSeries12.Points.Add(4D, ((double)(25D)));
+            chartSeries12.Points.Add(5D, ((double)(50D)));
+            chartSeries12.Resolution = 0D;
+            chartSeries12.StackingGroup = "Default Group";
+            chartSeries12.Style.AltTagFormat = "";
+            chartSeries12.Style.DrawTextShape = false;
+            chartCustomShapeInfo12.Border = chartLineInfo4;
+            chartCustomShapeInfo12.Color = System.Drawing.SystemColors.HighlightText;
+            chartCustomShapeInfo12.Type = Syncfusion.Windows.Forms.Chart.ChartCustomShape.Square;
+            chartSeries12.Style.TextShape = chartCustomShapeInfo12;
+            chartSeries12.Text = "Default1";
+            this.DivisionChart.Series.Add(chartSeries11);
+            this.DivisionChart.Series.Add(chartSeries12);
+            this.DivisionChart.Series3D = true;
+            this.DivisionChart.SeriesHighlight = true;
+            this.DivisionChart.ShadowColor = new Syncfusion.Drawing.BrushInfo(Syncfusion.Drawing.GradientStyle.PathRectangle, System.Drawing.SystemColors.WindowText, System.Drawing.Color.Silver);
+            this.DivisionChart.Size = new System.Drawing.Size(1440, 665);
+            this.DivisionChart.Spacing = 5F;
+            this.DivisionChart.SpacingBetweenSeries = 15F;
+            this.DivisionChart.Style3D = true;
+            this.DivisionChart.TabIndex = 96;
+            this.DivisionChart.Tilt = 15F;
+            // 
+            // 
+            // 
+            this.DivisionChart.Title.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DivisionChart.Title.Name = "Default";
+            this.DivisionChart.ToolBar.EnableDefaultItems = false;
+            this.DivisionChart.ToolBar.Items.Add(chartToolBarSaveItem6);
+            this.DivisionChart.ToolBar.Items.Add(chartToolBarCopyItem6);
+            this.DivisionChart.ToolBar.Items.Add(chartToolBarPrintItem6);
+            this.DivisionChart.ToolBar.Items.Add(chartToolBarPrintPreviewItem4);
+            this.DivisionChart.ToolBar.Items.Add(chartToolBarSplitter4);
+            this.DivisionChart.ToolBar.Items.Add(chartToolBarPaletteItem6);
+            this.DivisionChart.ToolBar.Items.Add(chartToolBarStyleItem4);
+            this.DivisionChart.ToolBar.Items.Add(chartToolBarTypeItem6);
+            this.DivisionChart.ToolBar.Items.Add(chartToolBarSeries3DItem6);
+            this.DivisionChart.ToolBar.Items.Add(chartToolBarShowLegendItem6);
+            // 
+            // expandCollapsePanel8
+            // 
+            this.expandCollapsePanel8.BackColor = System.Drawing.Color.Black;
+            this.expandCollapsePanel8.ButtonSize = MakarovDev.ExpandCollapsePanel.ExpandCollapseButton.ExpandButtonSize.Small;
+            this.expandCollapsePanel8.ButtonStyle = MakarovDev.ExpandCollapsePanel.ExpandCollapseButton.ExpandButtonStyle.Circle;
+            this.expandCollapsePanel8.Controls.Add(this.listBox8);
+            this.expandCollapsePanel8.ExpandedHeight = 442;
+            this.expandCollapsePanel8.IsExpanded = false;
+            this.expandCollapsePanel8.Location = new System.Drawing.Point(10, 105);
+            this.expandCollapsePanel8.Name = "expandCollapsePanel8";
+            this.expandCollapsePanel8.Size = new System.Drawing.Size(254, 37);
+            this.expandCollapsePanel8.TabIndex = 106;
+            this.expandCollapsePanel8.Text = "Filter";
+            this.expandCollapsePanel8.UseAnimation = true;
+            // 
+            // listBox8
+            // 
+            this.listBox8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.listBox8.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listBox8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(196)))), ((int)(((byte)(222)))));
+            this.listBox8.FormattingEnabled = true;
+            this.listBox8.ItemHeight = 21;
+            this.listBox8.Location = new System.Drawing.Point(13, 49);
+            this.listBox8.Name = "listBox8";
+            this.listBox8.Size = new System.Drawing.Size(226, 378);
+            this.listBox8.TabIndex = 43;
+            // 
+            // toggleButton8
+            // 
+            activeStateCollection6.BackColor = System.Drawing.Color.Black;
+            activeStateCollection6.BorderColor = System.Drawing.SystemColors.InactiveCaption;
+            activeStateCollection6.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            activeStateCollection6.Text = "$";
+            this.toggleButton8.ActiveState = activeStateCollection6;
+            this.toggleButton8.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toggleButton8.ForeColor = System.Drawing.Color.Black;
+            inactiveStateCollection6.BackColor = System.Drawing.Color.Black;
+            inactiveStateCollection6.BorderColor = System.Drawing.SystemColors.InactiveCaption;
+            inactiveStateCollection6.ForeColor = System.Drawing.Color.Gray;
+            inactiveStateCollection6.Text = "%";
+            this.toggleButton8.InactiveState = inactiveStateCollection6;
+            this.toggleButton8.Location = new System.Drawing.Point(3, 2);
+            this.toggleButton8.Margin = new System.Windows.Forms.Padding(2);
+            this.toggleButton8.MinimumSize = new System.Drawing.Size(36, 14);
+            this.toggleButton8.Name = "toggleButton8";
+            this.toggleButton8.Renderer = toggleButtonRenderer6;
+            this.toggleButton8.Size = new System.Drawing.Size(66, 36);
+            sliderCollection6.BackColor = System.Drawing.Color.SteelBlue;
+            sliderCollection6.BorderColor = System.Drawing.SystemColors.MenuHighlight;
+            sliderCollection6.HoverColor = System.Drawing.Color.SteelBlue;
+            sliderCollection6.Width = 30;
+            this.toggleButton8.Slider = sliderCollection6;
+            this.toggleButton8.TabIndex = 97;
+            this.toggleButton8.Text = "toggleButton1";
+            this.toggleButton8.ToggleState = Syncfusion.Windows.Forms.Tools.ToggleButtonState.Active;
+            // 
             // Tab7
             // 
             this.Tab7.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
@@ -2272,227 +2622,6 @@ namespace Budget
             // 
             this.BindingSource.DataMember = "PRC";
             // 
-            // Tab6
-            // 
-            this.Tab6.Controls.Add(this.splitContainer7);
-            this.Tab6.Image = null;
-            this.Tab6.ImageSize = new System.Drawing.Size(16, 16);
-            this.Tab6.Location = new System.Drawing.Point(1, 44);
-            this.Tab6.Name = "Tab6";
-            this.Tab6.ShowCloseButton = true;
-            this.Tab6.Size = new System.Drawing.Size(1784, 847);
-            this.Tab6.TabIndex = 12;
-            this.Tab6.Text = "Divisions";
-            this.Tab6.ThemesEnabled = false;
-            // 
-            // splitContainer7
-            // 
-            this.splitContainer7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer7.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer7.Margin = new System.Windows.Forms.Padding(2);
-            this.splitContainer7.Name = "splitContainer7";
-            // 
-            // splitContainer7.Panel1
-            // 
-            this.splitContainer7.Panel1.Controls.Add(this.DivisionChart);
-            this.splitContainer7.Panel1.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            // 
-            // splitContainer7.Panel2
-            // 
-            this.splitContainer7.Panel2.Controls.Add(this.expandCollapsePanel8);
-            this.splitContainer7.Panel2.Controls.Add(this.toggleButton8);
-            this.splitContainer7.Panel2.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.splitContainer7.Size = new System.Drawing.Size(1784, 847);
-            this.splitContainer7.SplitterDistance = 1495;
-            this.splitContainer7.SplitterWidth = 7;
-            this.splitContainer7.TabIndex = 102;
-            // 
-            // DivisionChart
-            // 
-            this.DivisionChart.AllowGradientPalette = true;
-            this.DivisionChart.AllowUserEditStyles = true;
-            this.DivisionChart.BackInterior = new Syncfusion.Drawing.BrushInfo(System.Drawing.Color.Black);
-            this.DivisionChart.ChartArea.AutoScale = true;
-            this.DivisionChart.ChartArea.BackInterior = new Syncfusion.Drawing.BrushInfo(System.Drawing.Color.Transparent);
-            this.DivisionChart.ChartArea.BorderColor = System.Drawing.Color.Black;
-            this.DivisionChart.ChartArea.CursorLocation = new System.Drawing.Point(0, 0);
-            this.DivisionChart.ChartArea.CursorReDraw = false;
-            this.DivisionChart.ChartAreaMargins = new Syncfusion.Windows.Forms.Chart.ChartMargins(0, 0, 0, 10);
-            this.DivisionChart.ChartAreaShadow = true;
-            this.DivisionChart.ChartInterior = new Syncfusion.Drawing.BrushInfo(Syncfusion.Drawing.GradientStyle.PathRectangle, new System.Drawing.Color[] {
-            System.Drawing.Color.Black,
-            System.Drawing.Color.Gray,
-            System.Drawing.Color.DimGray});
-            this.DivisionChart.CustomPalette = new System.Drawing.Color[] {
-        System.Drawing.Color.DeepSkyBlue,
-        System.Drawing.Color.DarkRed};
-            this.DivisionChart.DataSourceName = "ProjectBindingSource";
-            this.DivisionChart.Depth = 250F;
-            this.DivisionChart.DisplayChartContextMenu = false;
-            this.DivisionChart.DisplaySeriesContextMenu = false;
-            this.DivisionChart.EnableMouseRotation = true;
-            this.DivisionChart.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DivisionChart.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.DivisionChart.HighlightSymbol = true;
-            this.DivisionChart.IsWindowLess = false;
-            // 
-            // 
-            // 
-            this.DivisionChart.Legend.FloatingAutoSize = false;
-            this.DivisionChart.Legend.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DivisionChart.Legend.Location = new System.Drawing.Point(925, 52);
-            this.DivisionChart.Legend.Margin = new System.Windows.Forms.Padding(2);
-            this.DivisionChart.Legend.OnlyColumnsForFloating = false;
-            this.DivisionChart.Legend.RowsCount = 2;
-            this.DivisionChart.Legend.ShowSymbol = true;
-            this.DivisionChart.Legend.Size = new System.Drawing.Size(112, 59);
-            this.DivisionChart.Legend.TextAlignment = System.Drawing.StringAlignment.Near;
-            this.DivisionChart.Legend.Visible = false;
-            this.DivisionChart.Legend.VisibleCheckBox = true;
-            this.DivisionChart.Localize = null;
-            this.DivisionChart.Location = new System.Drawing.Point(23, 79);
-            this.DivisionChart.Margin = new System.Windows.Forms.Padding(2);
-            this.DivisionChart.Name = "DivisionChart";
-            this.DivisionChart.Padding = new System.Windows.Forms.Padding(1);
-            this.DivisionChart.Palette = Syncfusion.Windows.Forms.Chart.ChartColorPalette.Custom;
-            this.DivisionChart.PrimaryXAxis.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DivisionChart.PrimaryXAxis.GridLineType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(182)))), ((int)(((byte)(183)))));
-            this.DivisionChart.PrimaryXAxis.LineType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(182)))), ((int)(((byte)(183)))));
-            this.DivisionChart.PrimaryXAxis.LogLabelsDisplayMode = Syncfusion.Windows.Forms.Chart.LogLabelsDisplayMode.Default;
-            this.DivisionChart.PrimaryXAxis.Margin = true;
-            this.DivisionChart.PrimaryXAxis.TickColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(182)))), ((int)(((byte)(183)))));
-            this.DivisionChart.PrimaryXAxis.TitleColor = System.Drawing.Color.White;
-            this.DivisionChart.PrimaryXAxis.TitleFont = new System.Drawing.Font("Segoe UI", 14F);
-            this.DivisionChart.PrimaryYAxis.GridLineType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(182)))), ((int)(((byte)(183)))));
-            this.DivisionChart.PrimaryYAxis.LineType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(182)))), ((int)(((byte)(183)))));
-            this.DivisionChart.PrimaryYAxis.LogLabelsDisplayMode = Syncfusion.Windows.Forms.Chart.LogLabelsDisplayMode.Default;
-            this.DivisionChart.PrimaryYAxis.Margin = true;
-            this.DivisionChart.PrimaryYAxis.TickColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(182)))), ((int)(((byte)(183)))));
-            this.DivisionChart.PrimaryYAxis.TitleColor = System.Drawing.Color.White;
-            this.DivisionChart.PrimaryYAxis.TitleFont = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DivisionChart.RealMode3D = true;
-            this.DivisionChart.Rotation = 45F;
-            chartSeries11.FancyToolTip.ResizeInsideSymbol = true;
-            chartSeries11.Name = "Default0";
-            chartSeries11.Points.Add(1D, ((double)(55D)));
-            chartSeries11.Points.Add(2D, ((double)(70D)));
-            chartSeries11.Points.Add(3D, ((double)(80D)));
-            chartSeries11.Points.Add(4D, ((double)(65D)));
-            chartSeries11.Points.Add(5D, ((double)(75D)));
-            chartSeries11.Resolution = 0D;
-            chartSeries11.StackingGroup = "Default Group";
-            chartSeries11.Style.AltTagFormat = "";
-            chartSeries11.Style.DrawTextShape = false;
-            chartLineInfo4.Alignment = System.Drawing.Drawing2D.PenAlignment.Center;
-            chartLineInfo4.Color = System.Drawing.SystemColors.ControlText;
-            chartLineInfo4.DashPattern = null;
-            chartLineInfo4.DashStyle = System.Drawing.Drawing2D.DashStyle.Solid;
-            chartLineInfo4.Width = 1F;
-            chartCustomShapeInfo11.Border = chartLineInfo4;
-            chartCustomShapeInfo11.Color = System.Drawing.SystemColors.HighlightText;
-            chartCustomShapeInfo11.Type = Syncfusion.Windows.Forms.Chart.ChartCustomShape.Square;
-            chartSeries11.Style.TextShape = chartCustomShapeInfo11;
-            chartSeries11.Text = "Default0";
-            chartSeries12.FancyToolTip.ResizeInsideSymbol = true;
-            chartSeries12.Name = "Default1";
-            chartSeries12.Points.Add(1D, ((double)(70D)));
-            chartSeries12.Points.Add(2D, ((double)(35D)));
-            chartSeries12.Points.Add(3D, ((double)(65D)));
-            chartSeries12.Points.Add(4D, ((double)(25D)));
-            chartSeries12.Points.Add(5D, ((double)(50D)));
-            chartSeries12.Resolution = 0D;
-            chartSeries12.StackingGroup = "Default Group";
-            chartSeries12.Style.AltTagFormat = "";
-            chartSeries12.Style.DrawTextShape = false;
-            chartCustomShapeInfo12.Border = chartLineInfo4;
-            chartCustomShapeInfo12.Color = System.Drawing.SystemColors.HighlightText;
-            chartCustomShapeInfo12.Type = Syncfusion.Windows.Forms.Chart.ChartCustomShape.Square;
-            chartSeries12.Style.TextShape = chartCustomShapeInfo12;
-            chartSeries12.Text = "Default1";
-            this.DivisionChart.Series.Add(chartSeries11);
-            this.DivisionChart.Series.Add(chartSeries12);
-            this.DivisionChart.Series3D = true;
-            this.DivisionChart.SeriesHighlight = true;
-            this.DivisionChart.ShadowColor = new Syncfusion.Drawing.BrushInfo(Syncfusion.Drawing.GradientStyle.PathRectangle, System.Drawing.SystemColors.WindowText, System.Drawing.Color.Silver);
-            this.DivisionChart.Size = new System.Drawing.Size(1440, 665);
-            this.DivisionChart.Spacing = 5F;
-            this.DivisionChart.SpacingBetweenSeries = 15F;
-            this.DivisionChart.Style3D = true;
-            this.DivisionChart.TabIndex = 96;
-            this.DivisionChart.Tilt = 15F;
-            // 
-            // 
-            // 
-            this.DivisionChart.Title.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DivisionChart.Title.Name = "Default";
-            this.DivisionChart.ToolBar.EnableDefaultItems = false;
-            this.DivisionChart.ToolBar.Items.Add(chartToolBarSaveItem6);
-            this.DivisionChart.ToolBar.Items.Add(chartToolBarCopyItem6);
-            this.DivisionChart.ToolBar.Items.Add(chartToolBarPrintItem6);
-            this.DivisionChart.ToolBar.Items.Add(chartToolBarPrintPreviewItem4);
-            this.DivisionChart.ToolBar.Items.Add(chartToolBarSplitter4);
-            this.DivisionChart.ToolBar.Items.Add(chartToolBarPaletteItem6);
-            this.DivisionChart.ToolBar.Items.Add(chartToolBarStyleItem4);
-            this.DivisionChart.ToolBar.Items.Add(chartToolBarTypeItem6);
-            this.DivisionChart.ToolBar.Items.Add(chartToolBarSeries3DItem6);
-            this.DivisionChart.ToolBar.Items.Add(chartToolBarShowLegendItem6);
-            // 
-            // expandCollapsePanel8
-            // 
-            this.expandCollapsePanel8.BackColor = System.Drawing.Color.Black;
-            this.expandCollapsePanel8.ButtonSize = MakarovDev.ExpandCollapsePanel.ExpandCollapseButton.ExpandButtonSize.Small;
-            this.expandCollapsePanel8.ButtonStyle = MakarovDev.ExpandCollapsePanel.ExpandCollapseButton.ExpandButtonStyle.Circle;
-            this.expandCollapsePanel8.Controls.Add(this.listBox8);
-            this.expandCollapsePanel8.ExpandedHeight = 442;
-            this.expandCollapsePanel8.IsExpanded = false;
-            this.expandCollapsePanel8.Location = new System.Drawing.Point(10, 105);
-            this.expandCollapsePanel8.Name = "expandCollapsePanel8";
-            this.expandCollapsePanel8.Size = new System.Drawing.Size(254, 37);
-            this.expandCollapsePanel8.TabIndex = 106;
-            this.expandCollapsePanel8.Text = "Filter";
-            this.expandCollapsePanel8.UseAnimation = true;
-            // 
-            // listBox8
-            // 
-            this.listBox8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.listBox8.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.listBox8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(196)))), ((int)(((byte)(222)))));
-            this.listBox8.FormattingEnabled = true;
-            this.listBox8.ItemHeight = 21;
-            this.listBox8.Location = new System.Drawing.Point(13, 49);
-            this.listBox8.Name = "listBox8";
-            this.listBox8.Size = new System.Drawing.Size(226, 378);
-            this.listBox8.TabIndex = 43;
-            // 
-            // toggleButton8
-            // 
-            activeStateCollection6.BackColor = System.Drawing.Color.Black;
-            activeStateCollection6.BorderColor = System.Drawing.SystemColors.InactiveCaption;
-            activeStateCollection6.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            activeStateCollection6.Text = "$";
-            this.toggleButton8.ActiveState = activeStateCollection6;
-            this.toggleButton8.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toggleButton8.ForeColor = System.Drawing.Color.Black;
-            inactiveStateCollection6.BackColor = System.Drawing.Color.Black;
-            inactiveStateCollection6.BorderColor = System.Drawing.SystemColors.InactiveCaption;
-            inactiveStateCollection6.ForeColor = System.Drawing.Color.Gray;
-            inactiveStateCollection6.Text = "%";
-            this.toggleButton8.InactiveState = inactiveStateCollection6;
-            this.toggleButton8.Location = new System.Drawing.Point(3, 2);
-            this.toggleButton8.Margin = new System.Windows.Forms.Padding(2);
-            this.toggleButton8.MinimumSize = new System.Drawing.Size(36, 14);
-            this.toggleButton8.Name = "toggleButton8";
-            this.toggleButton8.Renderer = toggleButtonRenderer6;
-            this.toggleButton8.Size = new System.Drawing.Size(66, 36);
-            sliderCollection6.BackColor = System.Drawing.Color.SteelBlue;
-            sliderCollection6.BorderColor = System.Drawing.SystemColors.MenuHighlight;
-            sliderCollection6.HoverColor = System.Drawing.Color.SteelBlue;
-            sliderCollection6.Width = 30;
-            this.toggleButton8.Slider = sliderCollection6;
-            this.toggleButton8.TabIndex = 97;
-            this.toggleButton8.Text = "toggleButton1";
-            this.toggleButton8.ToggleState = Syncfusion.Windows.Forms.Tools.ToggleButtonState.Active;
-            // 
             // SummaryForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
@@ -2529,6 +2658,8 @@ namespace Budget
             this.splitContainer5.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer5)).EndInit();
             this.splitContainer5.ResumeLayout(false);
+            this.flowLayoutPanel1.ResumeLayout(false);
+            this.flowLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.toggleButton1)).EndInit();
             this.expandCollapsePanel4.ResumeLayout(false);
             this.expandCollapsePanel4.PerformLayout();
@@ -2564,6 +2695,14 @@ namespace Budget
             this.expandCollapsePanel6.ResumeLayout(false);
             this.expandCollapsePanel6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.toggleButton6)).EndInit();
+            this.Tab6.ResumeLayout(false);
+            this.splitContainer7.Panel1.ResumeLayout(false);
+            this.splitContainer7.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer7)).EndInit();
+            this.splitContainer7.ResumeLayout(false);
+            this.expandCollapsePanel8.ResumeLayout(false);
+            this.expandCollapsePanel8.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.toggleButton8)).EndInit();
             this.Tab7.ResumeLayout(false);
             this.splitContainer8.Panel1.ResumeLayout(false);
             this.splitContainer8.Panel2.ResumeLayout(false);
@@ -2588,14 +2727,6 @@ namespace Budget
             this.flpanel5.PerformLayout();
             this.Project.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.BindingSource)).EndInit();
-            this.Tab6.ResumeLayout(false);
-            this.splitContainer7.Panel1.ResumeLayout(false);
-            this.splitContainer7.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer7)).EndInit();
-            this.splitContainer7.ResumeLayout(false);
-            this.expandCollapsePanel8.ResumeLayout(false);
-            this.expandCollapsePanel8.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.toggleButton8)).EndInit();
             this.ResumeLayout(false);
 
                 }
@@ -2669,6 +2800,15 @@ namespace Budget
                 private MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel expandCollapsePanel8;
                 private ListBox listBox8;
                 private ToggleButton toggleButton8;
+                private FlowLayoutPanel flowLayoutPanel1;
+                private RadioButton radioButton8;
+                private RadioButton radioButton1;
+                private RadioButton radioButton3;
+                private RadioButton radioButton5;
+                private RadioButton radioButton6;
+                private RadioButton radioButton2;
+                private RadioButton radioButton7;
+                private RadioButton radioButton4;
             } 
         }
     }

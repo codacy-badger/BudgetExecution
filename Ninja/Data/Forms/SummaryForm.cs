@@ -4,6 +4,7 @@ using Syncfusion.Windows.Forms.Tools;
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
 using MetroForm = Syncfusion.Windows.Forms.MetroForm;
@@ -27,7 +28,8 @@ namespace Budget
                     RC = ProgramElements["RC"];
                     BindingSource.DataSource = D6.Data.BudgetTable;
                     Text = $"P7 Status of Funds";
-                    GetAllFilters(FilterBox);
+                    FilterBox = GetExpandersAndList().Item2;
+                    Expander = GetExpandersAndList().Item1;
                 }
 
                 public SummaryForm(Source source)
@@ -42,6 +44,11 @@ namespace Budget
                         ProgramElements = R6.ProgramElements;
                         BindingSource.DataSource = R6.Table;
                         Text = "Region 6 Summary";
+                        Tab = GetTabs();
+                        Tab[6].TabVisible = false;
+                        Tab[7].TabVisible = false;
+                        FilterBox = GetExpandersAndList().Item2;
+                        Expander = GetExpandersAndList().Item1;
                     }
                     if (source == Source.P8)
                     {
@@ -52,10 +59,12 @@ namespace Budget
                         ProgramElements = D6.ProgramElements;
                         RC = D6.Data.ProgramElements["RC"];
                         BindingSource.DataSource = D6.Table;
+                        Tab = GetTabs();
+                        Tab[5].TabVisible = false;
                         Text = "R6 Division Summary";
+                        FilterBox = GetExpandersAndList().Item2;
+                        Expander = GetExpandersAndList().Item1;
                     }
-                    FilterBox = GetFilterBox();
-                    GetAllFilters(FilterBox);
                 }
 
                 public SummaryForm(string rc)
@@ -69,7 +78,8 @@ namespace Budget
                     Text = $"{D6.Org.Name} Summary";
                     BindingSource.DataSource = Table;
                     FilterBox = GetFilterBox();
-                    GetAllFilters(FilterBox);
+                    FilterBox = GetExpandersAndList().Item2;
+                    Expander = GetExpandersAndList().Item1;
                 }
 
 
@@ -86,8 +96,8 @@ namespace Budget
                 public RegionalAuthority R6 { get; }
                 public DataTable Table { get; }
                 internal string[] RC { get; set; }
+                internal RadioButton[] RadioButton { get; set; }
                 private ChartControl[] Chart { get; set; }
-                private string[] DivName { get; set; }
                 private ExpandCollapsePanel[] Expander { get; set; }
                 private TabPageAdv[] Tab { get; set; }
 
@@ -116,33 +126,33 @@ namespace Budget
                     ObjChart = new Chart(ObjChart, R6.ObjectiveData).CreateColumn();
                     AreaChart = new Chart(AreaChart, D6.ProgramData).CreateColumn();
                     ProjectChart = new Chart(ProjectChart, D6.ProgramData).CreateColumn();
-                    SummaryTabControl.SelectedIndexChanged += new EventHandler(GetTabPanelTitle);
+                    SummaryTabControl.SelectedIndexChanged += TabControl_SelectedIndexChanged;
                 }
-
-                private void GetAllFilters(ListBox[] listbox)
-                {
-                    GetListBoxItems(listbox[0], ProgramElements["FundName"]);
-                    GetListBoxItems(listbox[1], ProgramElements["BocName"]);
-                    GetListBoxItems(listbox[2], ProgramElements["NPM"]);
-                    GetListBoxItems(listbox[3], ProgramElements["GoalName"]);
-                    GetListBoxItems(listbox[4], ProgramElements["ObjectiveName"]);
-                    GetListBoxItems(listbox[5], ProgramElements["ProgramAreaName"]);
-                    GetListBoxItems(listbox[6], ProgramElements["ProgramProjectName"]);
-                }
-
                 private ChartControl[] GetChartArray()
                 {
                     return new ChartControl[] { FundChart, BocChart, NpmChart, GoalChart, ObjChart, DivisionChart, AreaChart, ProjectChart };
                 }
 
-                private ExpandCollapsePanel[] GetExpanders()
+                private Tuple<ExpandCollapsePanel[], ListBox[]> GetExpandersAndList()
                 {
                     try
                     {
                         var expander = new ExpandCollapsePanel[Tab.Length];
+                        var filterBox = new ListBox[Tab.Length];
+                        var categories = GetFilterCategories();
+                        var filters = categories.Values.ToArray();
                         for (int i = 0; i < Tab.Length; i++)
-                            Expander[i] = new ExpandCollapsePanel();
-                        return Expander;
+                        {
+                            expander[i] = new ExpandCollapsePanel();
+                            expander[i].Location = new Point(10, 105);
+                            expander[i].IsExpanded = false;
+                            expander[i].UseAnimation = true;
+                            expander[i].ExpandedHeight = 442;
+                            filterBox[i] = new ListBox();
+                            GetListBoxItems(filterBox[i], ProgramElements[filters[i]]);
+                            expander[i].Controls.Add(filterBox[i]);
+                        }
+                        return new Tuple<ExpandCollapsePanel[], ListBox[]>(expander, filterBox);
                     }
                     catch (Exception e)
                     {
@@ -153,7 +163,7 @@ namespace Budget
 
                 private ListBox[] GetFilterBox()
                 {
-                    var arrary = new ListBox[] { listBox1, listBox2, listBox3, listBox4, listBox5, listBox6, listBox7 };
+                    var arrary = new ListBox[] { listBox1, listBox2, listBox3, listBox4, listBox5, listBox6, listBox7,  };
                     return arrary;
                 }
 
@@ -165,42 +175,45 @@ namespace Budget
                     }
                 }
 
-                private void GetTabPanelTitle(object sender, EventArgs e)
+                private void TabControl_SelectedIndexChanged(object sender, EventArgs e)
                 {
                     int tabindex = SummaryTabControl.TabCount;
                     int tc = SummaryTabControl.SelectedIndex;
                     switch (tc)
                     {
+                        case 0:
+                            Text = $"Funding by Appropriation";
+                            break;
+
                         case 1:
-                            Text = $"Division Funding by Appropriation";
+                            Text = $"Funding by Budget Object Class";
                             break;
 
                         case 2:
-                            Text = $"Division Funding by Budget Object Class";
+                            Text = $"Funding by National Program";
                             break;
 
                         case 3:
-                            Text = $"Division Funding by National Program";
+                            Text = $"Funding by Agency Goal";
                             break;
 
                         case 4:
-                            Text = $"Division Funding by Agency Goal";
+                            Text = $"Funding by Strategic Plan Objective";
                             break;
 
                         case 5:
-                            Text = $"Division Funding by Strategic Plan Objective";
+                            Text = $"Funding by Division";
                             break;
 
                         case 6:
-                            Text = $"Division Funding by Division Allowance Holder";
+                            Text = $"Funding by Program Area";
                             break;
 
                         case 7:
-                            Text = $"Division Transfers";
+                            Text = $"Funding by Program Project";
                             break;
-
                         default:
-                            Text = $"Division Status of Funds";
+                            Text = $"Funding Summary";
                             break;
                     }
                 }
@@ -215,6 +228,7 @@ namespace Budget
                         {
                             tab[i] = tabs[i];
                         }
+                            
                         return tab;
                     }
                     catch (Exception e)
@@ -222,6 +236,67 @@ namespace Budget
                         MessageBox.Show(e.Message);
                         return null;
                     }
+                }
+
+                Dictionary<string, string> GetFilterCategories()
+                {
+                    try
+                    {
+                        var filters = new Dictionary<string, string>();
+                        filters.Add("Fund", "Fund");
+                        filters.Add("BOC", "BocName");
+                        filters.Add("NPM", "NPM");
+                        filters.Add("Goal", "GoalName");
+                        filters.Add("Objective", "ObjectiveName");
+                        filters.Add("Division", "RC");
+                        filters.Add("Program Area", "ProgramArea");
+                        filters.Add("Program Project", "ProgramProjectCode");
+                        return filters;
+                    }
+                    catch (Exception e)
+                    {
+
+                        MessageBox.Show(e.Message + e.StackTrace);
+                        return null;
+                    }
+                }
+
+                RadioButton[] GetRadioButtonFiterArray()
+                {
+                    try
+                    {
+                        var flowpanel = new FlowLayoutPanel();
+                        flowpanel.Location = new Point(351, 3);
+                        flowpanel.Size = new Size(778, 35);
+                        flowpanel.ForeColor = SystemColors.MenuHighlight;
+                        var filters = GetFilterCategories();
+                        var array = new RadioButton[filters.Count];
+                        var keys = filters.Keys.ToArray();
+                        var vals = filters.Values.ToArray();
+                        for (int i = 0; i < filters.Count; i++)
+                        {
+                            array[i] = new RadioButton();
+                            array[i].Text = keys[i];
+                            array[i].Tag = vals[i];
+                            array[i].CheckedChanged += RadioButtonFilter_Click;
+                            flowpanel.Controls.Add(array[i]);
+                        }
+                        Controls.Add(flowpanel);
+                        flowpanel.Visible = true;
+                        return array;
+                    }
+                    catch (Exception e)
+                    {
+
+                        MessageBox.Show(e.Message + e.StackTrace);
+                        return null;
+                    }
+                }
+
+                void RadioButtonFilter_Click(object sender, EventArgs e)
+                {
+                    var rb = sender as RadioButton;
+                    var filter = rb.Tag.ToString();
                 }
             }
         }
