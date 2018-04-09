@@ -11,9 +11,8 @@ namespace Budget
     {
         namespace Data
         {
-            public class BudgetChart : ChartControl 
+            public class BudgetChart 
             {
-
                 //Constructors
                 public BudgetChart()
                 {
@@ -21,7 +20,6 @@ namespace Budget
 
                 public BudgetChart(ChartControl chart, string title, Dictionary<string, double> data)
                 {
-                    ColumnChart = new ChartControl();
                     ColumnChart = chart;
                     ColumnChart.Series.Clear();
                     ColumnChart.PrimaryXAxis.Title = title;
@@ -35,74 +33,9 @@ namespace Budget
                     ColumnChart.Series.Add(ColumnSeries);
                     GetRegionSeriesConfiguration(ColumnSeries);
                     ColumnSeries.XAxis.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-                    Get3DMode();
-                    
+                    Get3DMode();                    
                 }
-
-                public BudgetChart(string title, DivisionAuthority P8, BindingSource bs)
-                {
-                    var table = (DataTable)bs.DataSource;
-                    int i = bs.Position;
-                    var values = table.Rows[i];
-                    var value = (decimal)values["Amount"];
-                    string pp = values["ProgramProjectName"].ToString();
-                    var data = P8.ProjectData;
-                    Series.Clear();
-                    Legends.Clear();
-                    ColumnSeries = new ChartSeries("Allocation", ChartSeriesType.Column);
-                    var series = new ChartSeries("Total", ChartSeriesType.Column);
-                    foreach (string key in data.Keys)
-                    {
-                        if (key == pp)
-                        {
-                            ColumnSeries.Points.Add($"{values["BocName"].ToString()}", (double)value);
-                            GetBindingSeriesConfiguration(ColumnSeries);
-                            Series.Add(ColumnSeries);
-                            decimal total = P8.Data.BudgetTable.AsEnumerable()
-                                .Where(p => p.Field<string>("ProgramProjectName").Equals(pp))
-                                .Select(p => p.Field<decimal>("Amount")).Sum();
-                            PrimaryXAxis.Title = $"{ (value / total) * 100:N}% of { pp} Total Funding";
-                            PrimaryXAxis.TitleColor = SystemColors.Info;
-                            PrimaryXAxis.TitleFont = new Font("Segoe UI", 10f);
-                            series.Points.Add("Total", (double)total);
-                            GetBindingSeriesConfiguration(series);
-                            Series.Add(series);
-                        }
-                    }
-                    Get3DBindingMode();
-                }
-
-                public BudgetChart(string title, RegionalAuthority P7, BindingSource bs)
-                {
-                    int i = bs.Position;
-                    var table = (DataTable)bs.DataSource;
-                    var values = table.Rows[i];
-                    var value = (decimal)values["Amount"];
-                    string pp = values["ProgramProjectName"].ToString();
-                    var data = new RegionalAuthority().ProjectData;
-                    ColumnSeries = new ChartSeries("Allocation", ChartSeriesType.Column);
-                    var series = new ChartSeries("Total", ChartSeriesType.Column);
-                    foreach (string key in data.Keys)
-                    {
-                        if (key == pp)
-                        {
-                            ColumnSeries.Points.Add($"{values["BocName"].ToString()}", (double)value);
-                            GetBindingSeriesConfiguration(ColumnSeries);
-                            Series.Add(ColumnSeries);
-                            decimal total = P7.Data.BudgetTable.AsEnumerable()
-                                .Where(p => p.Field<string>("ProgramProjectName").Equals(pp))
-                                .Select(p => p.Field<decimal>("Amount")).Sum();
-                            PrimaryXAxis.Title = $"{ (value / total) * 100:N}% of {pp} Total Funding";
-                            PrimaryXAxis.TitleColor = SystemColors.Info;
-                            PrimaryXAxis.TitleFont = new Font("SegoeUI", 9f);
-                            series.Points.Add("Total", (double)total);
-                            GetBindingSeriesConfiguration(series);
-                            Series.Add(series);
-                        }
-                        ColumnSeries.XAxis.Font = new Font("Segoe UI", 10F);
-                    }
-                    Get3DBindingMode();
-                }
+                
 
                 public BudgetChart(ChartData data)
                 {
@@ -117,7 +50,6 @@ namespace Budget
                     ColumnChart.ChartArea.Series3D = true;
                     ColumnChart.Style3D = true;
                 }
-
                 
                 //Properties
                 public ChartControl ColumnChart { get; set; }
@@ -130,7 +62,6 @@ namespace Budget
 
                 
                 //Methods
-
                 internal ChartControl Activate()
                 {
                     return ColumnChart;
@@ -158,29 +89,36 @@ namespace Budget
                     ColumnChart.SpacingBetweenSeries = 2;
                 }
 
+                internal void GetPrimaryXaxis(ChartData data)
+                {
+                    ChartControl ColumnChart = data.Chart;
+                    ColumnChart.PrimaryXAxis.Title = data.AxisTitle[0];
+                    ColumnChart.PrimaryXAxis.TitleColor = SystemColors.GradientInactiveCaption;
+                    ColumnChart.PrimaryXAxis.TitleFont = new Font("SegoeUI", 9f);
+                }
 
                 private void Get3DMode(ChartData data)
                 {
-                    ChartArea.Series3D = true;
-                    RealMode3D = true;
-                    Style3D = true;
-                    Tilt = data.Dimension[0];
-                    Depth = data.Dimension[1];
-                    Rotation = data.Dimension[2];
-                    SpacingBetweenSeries = 2;
+                    ColumnChart = data.Chart;
+                    ColumnChart.ChartArea.Series3D = true;
+                    ColumnChart.RealMode3D = true;
+                    ColumnChart.Style3D = true;
+                    ColumnChart.Tilt = data.Dimension[0];
+                    ColumnChart.Depth = data.Dimension[1];
+                    ColumnChart.Rotation = data.Dimension[2];
+                    ColumnChart.SpacingBetweenSeries = 2;
                 }
 
                 private void Get3DMode(int[] rt)
                 {
                     ColumnChart.ChartArea.Series3D = true;
-                    RealMode3D = true;
-                    Style3D = true;
-                    Tilt = rt[0];
-                    Depth = 250;
-                    Rotation = rt[1];
-                    SpacingBetweenSeries = 10;
+                    ColumnChart.RealMode3D = true;
+                    ColumnChart.Style3D = true;
+                    ColumnChart.Tilt = rt[0];
+                    ColumnChart.Depth = 250;
+                    ColumnChart.Rotation = rt[1];
+                    ColumnChart.SpacingBetweenSeries = 10;
                 }
-
 
                 private void GetBindingSeriesConfiguration(ChartSeries series)
                 {
@@ -247,7 +185,7 @@ namespace Budget
 
                 private void GetColumnSeriesData(string title, Dictionary<string, double> data)
                 {
-                    ColumnSeries = new ChartSeries("Series", ChartSeriesType.Column);
+                    ColumnSeries = new ChartSeries("Amount", ChartSeriesType.Column);
                     ColumnChart.Series.Add(ColumnSeries);
                     foreach (KeyValuePair<string, double> kvp in data)
                     {
@@ -265,7 +203,7 @@ namespace Budget
                     items.Add(item);
                     legend.VisibleCheckBox = true;
                     legend.ColumnsCount = 1;
-                    Legends.Add(legend);
+                    ColumnChart.Legends.Add(legend);
                 }
 
                 private void GetMainTitle(string t)
@@ -277,14 +215,6 @@ namespace Budget
                     title.Font = new Font("SegoeUI", 8, FontStyle.Regular);
                     ColumnChart.Titles.Add(title);
                 }
-
-                private void GetAxisTitles(string title)
-                {
-                    ColumnChart.PrimaryXAxis.Title = title;
-                    ColumnChart.PrimaryXAxis.TitleColor = SystemColors.Info;
-                    ColumnChart.PrimaryXAxis.TitleFont = new Font("SegoeUI", 9);
-                }
-
             }
         }
     }

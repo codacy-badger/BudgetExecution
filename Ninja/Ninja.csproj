@@ -193,7 +193,7 @@
     <Compile Include="Data\Class\BOC.cs" />
     <Compile Include="Data\Class\BudgetApplication.cs" />
     <Compile Include="Data\Class\BudgetPortfolio.cs" />
-    <Compile Include="Data\Class\Chart.cs" />
+    <Compile Include="Data\Class\BudgetChart.cs" />
     <Compile Include="Data\Class\ChartData.cs" />
     <Compile Include="Data\Class\ControlData.cs" />
     <Compile Include="Data\Class\DataBuilder.cs" />
@@ -238,6 +238,12 @@
     </Compile>
     <Compile Include="Data\Forms\FunctionalityForm.Designer.cs">
       <DependentUpon>FunctionalityForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Forms\SumForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Data\Forms\SumForm.Designer.cs">
+      <DependentUpon>SumForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Data\Forms\SummaryForm.cs">
       <SubType>Form</SubType>
@@ -299,7 +305,7 @@
     <Compile Include="Data\Forms\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Data\Class\Metric.cs" />
+    <Compile Include="Data\Class\DataMetric.cs" />
     <Compile Include="Data\BudgetDataGrid.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -390,6 +396,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Data\Forms\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\Forms\SumForm.resx">
+      <DependentUpon>SumForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Data\Forms\SummaryForm.resx">
       <DependentUpon>SummaryForm.cs</DependentUpon>

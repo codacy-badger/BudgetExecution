@@ -308,7 +308,7 @@ namespace Budget
             // 
             this.SummaryTabControl.ActiveTabFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SummaryTabControl.ActiveTabForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.SummaryTabControl.BeforeTouchSize = new System.Drawing.Size(1486, 692);
+            this.SummaryTabControl.BeforeTouchSize = new System.Drawing.Size(1488, 694);
             this.SummaryTabControl.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.SummaryTabControl.BorderVisible = true;
             this.SummaryTabControl.BorderWidth = 1;
@@ -329,14 +329,14 @@ namespace Budget
             this.SummaryTabControl.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SummaryTabControl.InActiveTabForeColor = System.Drawing.Color.SlateGray;
             this.SummaryTabControl.ItemSize = new System.Drawing.Size(400, 39);
-            this.SummaryTabControl.Location = new System.Drawing.Point(1, 1);
+            this.SummaryTabControl.Location = new System.Drawing.Point(0, 0);
             this.SummaryTabControl.Margin = new System.Windows.Forms.Padding(0);
             this.SummaryTabControl.Name = "SummaryTabControl";
             this.SummaryTabControl.Padding = new System.Drawing.Point(10, 3);
             this.SummaryTabControl.RotateTextWhenVertical = true;
             this.SummaryTabControl.SeparatorColor = System.Drawing.SystemColors.ControlDark;
             this.SummaryTabControl.ShowSeparator = false;
-            this.SummaryTabControl.Size = new System.Drawing.Size(1486, 692);
+            this.SummaryTabControl.Size = new System.Drawing.Size(1488, 694);
             this.SummaryTabControl.SizeMode = Syncfusion.Windows.Forms.Tools.TabSizeMode.ShrinkToFit;
             this.SummaryTabControl.TabGap = 15;
             this.SummaryTabControl.TabIndex = 44;
@@ -355,7 +355,7 @@ namespace Budget
             this.FundTab.Name = "FundTab";
             this.FundTab.Padding = new System.Windows.Forms.Padding(1);
             this.FundTab.ShowCloseButton = true;
-            this.FundTab.Size = new System.Drawing.Size(1484, 647);
+            this.FundTab.Size = new System.Drawing.Size(1486, 649);
             this.FundTab.TabIndex = 6;
             this.FundTab.Text = "Appropriations";
             this.FundTab.ThemesEnabled = false;
@@ -382,8 +382,8 @@ namespace Budget
             this.splitContainer5.Panel2.Controls.Add(this.rb2);
             this.splitContainer5.Panel2.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.splitContainer5.Panel2.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.splitContainer5.Size = new System.Drawing.Size(1480, 643);
-            this.splitContainer5.SplitterDistance = 1239;
+            this.splitContainer5.Size = new System.Drawing.Size(1482, 645);
+            this.splitContainer5.SplitterDistance = 1240;
             this.splitContainer5.SplitterWidth = 7;
             this.splitContainer5.TabIndex = 96;
             // 
@@ -611,7 +611,7 @@ namespace Budget
             this.FundChart.Series3D = true;
             this.FundChart.SeriesHighlight = true;
             this.FundChart.ShadowColor = new Syncfusion.Drawing.BrushInfo(Syncfusion.Drawing.GradientStyle.PathRectangle, System.Drawing.SystemColors.WindowText, System.Drawing.Color.Silver);
-            this.FundChart.Size = new System.Drawing.Size(1239, 643);
+            this.FundChart.Size = new System.Drawing.Size(1240, 645);
             this.FundChart.Spacing = 5F;
             this.FundChart.SpacingBetweenPoints = 5F;
             this.FundChart.Style3D = true;
@@ -733,15 +733,14 @@ namespace Budget
             this.BocTab.Name = "BocTab";
             this.BocTab.Padding = new System.Windows.Forms.Padding(3);
             this.BocTab.ShowCloseButton = true;
-            this.BocTab.Size = new System.Drawing.Size(1484, 647);
+            this.BocTab.Size = new System.Drawing.Size(1486, 649);
             this.BocTab.TabIndex = 3;
             this.BocTab.Text = "BOC";
             this.BocTab.ThemesEnabled = false;
             // 
             // splitContainer2
             // 
-            this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer2.Location = new System.Drawing.Point(3, 3);
+            this.splitContainer2.Location = new System.Drawing.Point(1, 1);
             this.splitContainer2.Margin = new System.Windows.Forms.Padding(2);
             this.splitContainer2.Name = "splitContainer2";
             // 
@@ -754,8 +753,8 @@ namespace Budget
             // 
             this.splitContainer2.Panel2.Controls.Add(this.BocExpander);
             this.splitContainer2.Panel2.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.splitContainer2.Size = new System.Drawing.Size(1476, 639);
-            this.splitContainer2.SplitterDistance = 1239;
+            this.splitContainer2.Size = new System.Drawing.Size(1478, 641);
+            this.splitContainer2.SplitterDistance = 1240;
             this.splitContainer2.SplitterWidth = 7;
             this.splitContainer2.TabIndex = 98;
             // 
@@ -861,7 +860,7 @@ namespace Budget
             this.BocChart.Series3D = true;
             this.BocChart.SeriesHighlight = true;
             this.BocChart.ShadowColor = new Syncfusion.Drawing.BrushInfo(Syncfusion.Drawing.GradientStyle.PathRectangle, System.Drawing.SystemColors.WindowText, System.Drawing.Color.Silver);
-            this.BocChart.Size = new System.Drawing.Size(1239, 639);
+            this.BocChart.Size = new System.Drawing.Size(1240, 641);
             this.BocChart.Spacing = 5F;
             this.BocChart.SpacingBetweenPoints = 5F;
             this.BocChart.Style3D = true;
@@ -920,7 +919,7 @@ namespace Budget
             this.NpmTab.Name = "NpmTab";
             this.NpmTab.Padding = new System.Windows.Forms.Padding(3);
             this.NpmTab.ShowCloseButton = true;
-            this.NpmTab.Size = new System.Drawing.Size(1484, 647);
+            this.NpmTab.Size = new System.Drawing.Size(1486, 649);
             this.NpmTab.TabIndex = 7;
             this.NpmTab.Text = "NPM";
             this.NpmTab.ThemesEnabled = false;
@@ -941,8 +940,8 @@ namespace Budget
             // 
             this.splitContainer4.Panel2.Controls.Add(this.NpmExpander);
             this.splitContainer4.Panel2.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.splitContainer4.Size = new System.Drawing.Size(1476, 639);
-            this.splitContainer4.SplitterDistance = 1239;
+            this.splitContainer4.Size = new System.Drawing.Size(1478, 641);
+            this.splitContainer4.SplitterDistance = 1240;
             this.splitContainer4.SplitterWidth = 7;
             this.splitContainer4.TabIndex = 98;
             // 
@@ -1048,7 +1047,7 @@ namespace Budget
             this.NpmChart.Series3D = true;
             this.NpmChart.SeriesHighlight = true;
             this.NpmChart.ShadowColor = new Syncfusion.Drawing.BrushInfo(Syncfusion.Drawing.GradientStyle.PathRectangle, System.Drawing.SystemColors.WindowText, System.Drawing.Color.Silver);
-            this.NpmChart.Size = new System.Drawing.Size(1239, 639);
+            this.NpmChart.Size = new System.Drawing.Size(1240, 641);
             this.NpmChart.Spacing = 5F;
             this.NpmChart.SpacingBetweenSeries = 15F;
             this.NpmChart.Style3D = true;
@@ -1109,7 +1108,7 @@ namespace Budget
             this.GoalTab.Name = "GoalTab";
             this.GoalTab.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.GoalTab.ShowCloseButton = true;
-            this.GoalTab.Size = new System.Drawing.Size(1484, 647);
+            this.GoalTab.Size = new System.Drawing.Size(1486, 649);
             this.GoalTab.TabIndex = 9;
             this.GoalTab.Text = "Strategic Goal";
             this.GoalTab.ThemesEnabled = false;
@@ -1128,8 +1127,8 @@ namespace Budget
             // splitContaineEPA.Panel2
             // 
             this.splitContaineEPA.Panel2.Controls.Add(this.GoalExpander);
-            this.splitContaineEPA.Size = new System.Drawing.Size(1478, 639);
-            this.splitContaineEPA.SplitterDistance = 1239;
+            this.splitContaineEPA.Size = new System.Drawing.Size(1480, 641);
+            this.splitContaineEPA.SplitterDistance = 1240;
             this.splitContaineEPA.SplitterWidth = 7;
             this.splitContaineEPA.TabIndex = 99;
             // 
@@ -1236,7 +1235,7 @@ namespace Budget
             this.GoalChart.Series3D = true;
             this.GoalChart.SeriesHighlight = true;
             this.GoalChart.ShadowColor = new Syncfusion.Drawing.BrushInfo(Syncfusion.Drawing.GradientStyle.PathRectangle, System.Drawing.SystemColors.WindowText, System.Drawing.Color.Silver);
-            this.GoalChart.Size = new System.Drawing.Size(1239, 639);
+            this.GoalChart.Size = new System.Drawing.Size(1240, 641);
             this.GoalChart.Spacing = 5F;
             this.GoalChart.SpacingBetweenSeries = 15F;
             this.GoalChart.Style3D = true;
@@ -1295,7 +1294,7 @@ namespace Budget
             this.ObjectTab.Location = new System.Drawing.Point(1, 44);
             this.ObjectTab.Name = "ObjectTab";
             this.ObjectTab.ShowCloseButton = true;
-            this.ObjectTab.Size = new System.Drawing.Size(1484, 647);
+            this.ObjectTab.Size = new System.Drawing.Size(1486, 649);
             this.ObjectTab.TabIndex = 10;
             this.ObjectTab.Text = "Agency Objective";
             this.ObjectTab.ThemesEnabled = false;
@@ -1316,8 +1315,8 @@ namespace Budget
             // 
             this.splitContainer3.Panel2.Controls.Add(this.ObjectiveEpxpander);
             this.splitContainer3.Panel2.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.splitContainer3.Size = new System.Drawing.Size(1482, 645);
-            this.splitContainer3.SplitterDistance = 1240;
+            this.splitContainer3.Size = new System.Drawing.Size(1484, 647);
+            this.splitContainer3.SplitterDistance = 1241;
             this.splitContainer3.SplitterWidth = 7;
             this.splitContainer3.TabIndex = 101;
             // 
@@ -1433,7 +1432,7 @@ namespace Budget
             this.ObjChart.Series3D = true;
             this.ObjChart.SeriesHighlight = true;
             this.ObjChart.ShadowColor = new Syncfusion.Drawing.BrushInfo(Syncfusion.Drawing.GradientStyle.PathRectangle, System.Drawing.SystemColors.WindowText, System.Drawing.Color.Silver);
-            this.ObjChart.Size = new System.Drawing.Size(1240, 645);
+            this.ObjChart.Size = new System.Drawing.Size(1241, 647);
             this.ObjChart.Spacing = 5F;
             this.ObjChart.SpacingBetweenSeries = 15F;
             this.ObjChart.Style3D = true;
@@ -1492,7 +1491,7 @@ namespace Budget
             this.DivisionTab.Location = new System.Drawing.Point(1, 44);
             this.DivisionTab.Name = "DivisionTab";
             this.DivisionTab.ShowCloseButton = true;
-            this.DivisionTab.Size = new System.Drawing.Size(1484, 647);
+            this.DivisionTab.Size = new System.Drawing.Size(1486, 649);
             this.DivisionTab.TabIndex = 12;
             this.DivisionTab.Text = "Divisions";
             this.DivisionTab.ThemesEnabled = false;
@@ -1513,8 +1512,8 @@ namespace Budget
             // 
             this.splitContainer7.Panel2.Controls.Add(this.DivisionExpander);
             this.splitContainer7.Panel2.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.splitContainer7.Size = new System.Drawing.Size(1482, 645);
-            this.splitContainer7.SplitterDistance = 1240;
+            this.splitContainer7.Size = new System.Drawing.Size(1484, 647);
+            this.splitContainer7.SplitterDistance = 1241;
             this.splitContainer7.SplitterWidth = 7;
             this.splitContainer7.TabIndex = 102;
             // 
@@ -1626,7 +1625,7 @@ namespace Budget
             this.DivisionChart.Series3D = true;
             this.DivisionChart.SeriesHighlight = true;
             this.DivisionChart.ShadowColor = new Syncfusion.Drawing.BrushInfo(Syncfusion.Drawing.GradientStyle.PathRectangle, System.Drawing.SystemColors.WindowText, System.Drawing.Color.Silver);
-            this.DivisionChart.Size = new System.Drawing.Size(1240, 645);
+            this.DivisionChart.Size = new System.Drawing.Size(1241, 647);
             this.DivisionChart.Spacing = 5F;
             this.DivisionChart.SpacingBetweenSeries = 15F;
             this.DivisionChart.Style3D = true;
@@ -1689,7 +1688,7 @@ namespace Budget
             this.ProgramAreaTab.Name = "ProgramAreaTab";
             this.ProgramAreaTab.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.ProgramAreaTab.ShowCloseButton = true;
-            this.ProgramAreaTab.Size = new System.Drawing.Size(1484, 647);
+            this.ProgramAreaTab.Size = new System.Drawing.Size(1486, 649);
             this.ProgramAreaTab.TabIndex = 8;
             this.ProgramAreaTab.Text = "Program Area";
             this.ProgramAreaTab.ThemesEnabled = false;
@@ -1710,8 +1709,8 @@ namespace Budget
             // 
             this.splitContainer8.Panel2.Controls.Add(this.AreaExpander);
             this.splitContainer8.Panel2.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.splitContainer8.Size = new System.Drawing.Size(1478, 639);
-            this.splitContainer8.SplitterDistance = 1239;
+            this.splitContainer8.Size = new System.Drawing.Size(1480, 641);
+            this.splitContainer8.SplitterDistance = 1240;
             this.splitContainer8.SplitterWidth = 7;
             this.splitContainer8.TabIndex = 100;
             // 
@@ -1818,7 +1817,7 @@ namespace Budget
             this.AreaChart.Series3D = true;
             this.AreaChart.SeriesHighlight = true;
             this.AreaChart.ShadowColor = new Syncfusion.Drawing.BrushInfo(Syncfusion.Drawing.GradientStyle.PathRectangle, System.Drawing.SystemColors.WindowText, System.Drawing.Color.Silver);
-            this.AreaChart.Size = new System.Drawing.Size(1239, 639);
+            this.AreaChart.Size = new System.Drawing.Size(1240, 641);
             this.AreaChart.Spacing = 5F;
             this.AreaChart.SpacingBetweenSeries = 15F;
             this.AreaChart.Style3D = true;
@@ -1877,7 +1876,7 @@ namespace Budget
             this.ProgramProjectTab.Location = new System.Drawing.Point(1, 44);
             this.ProgramProjectTab.Name = "ProgramProjectTab";
             this.ProgramProjectTab.ShowCloseButton = true;
-            this.ProgramProjectTab.Size = new System.Drawing.Size(1484, 647);
+            this.ProgramProjectTab.Size = new System.Drawing.Size(1486, 649);
             this.ProgramProjectTab.TabIndex = 11;
             this.ProgramProjectTab.Text = "Program Project";
             this.ProgramProjectTab.ThemesEnabled = false;
@@ -1898,8 +1897,8 @@ namespace Budget
             // 
             this.splitContainer6.Panel2.Controls.Add(this.ProjectExpander);
             this.splitContainer6.Panel2.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.splitContainer6.Size = new System.Drawing.Size(1482, 645);
-            this.splitContainer6.SplitterDistance = 1240;
+            this.splitContainer6.Size = new System.Drawing.Size(1484, 647);
+            this.splitContainer6.SplitterDistance = 1241;
             this.splitContainer6.SplitterWidth = 7;
             this.splitContainer6.TabIndex = 101;
             // 
@@ -2006,7 +2005,7 @@ namespace Budget
             this.ProjectChart.Series3D = true;
             this.ProjectChart.SeriesHighlight = true;
             this.ProjectChart.ShadowColor = new Syncfusion.Drawing.BrushInfo(Syncfusion.Drawing.GradientStyle.PathRectangle, System.Drawing.SystemColors.WindowText, System.Drawing.Color.Silver);
-            this.ProjectChart.Size = new System.Drawing.Size(1240, 645);
+            this.ProjectChart.Size = new System.Drawing.Size(1241, 647);
             this.ProjectChart.Spacing = 5F;
             this.ProjectChart.SpacingBetweenSeries = 15F;
             this.ProjectChart.Style3D = true;
@@ -2364,7 +2363,6 @@ namespace Budget
             this.MaximumSize = new System.Drawing.Size(1500, 800);
             this.MetroColor = System.Drawing.Color.Transparent;
             this.Name = "SummaryForm";
-            this.Padding = new System.Windows.Forms.Padding(1);
             this.ShowIcon = false;
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

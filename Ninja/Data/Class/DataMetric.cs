@@ -105,7 +105,6 @@ namespace Budget
 
 
 
-
                 //Properties
                 public DataBuilder Data { get; }
                 public DataSet BudgetData { get; }

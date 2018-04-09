@@ -66,7 +66,7 @@ namespace Budget
                 Fund, FundName, BOC, BocName, NPM, Goal, GoalName, Objective, ObjectiveName, Division, ProgramArea, ProgramAreaName, ProgramProjectCode, ProgramProjectName
             }
 
-            public enum Statistic
+            public enum ReportingMetric
             {
                 Value, Count, Average, Ratio
             }
