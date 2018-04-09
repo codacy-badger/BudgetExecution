@@ -20,79 +20,54 @@ namespace Budget
                 {
                 }
 
-                public ChartData(Source source)
+                public ChartData(DataBuilder data, ChartFilter filter)
                 {
-                    Data = new DataBuilder(source);
+                    Data = data;
                     Metric = new DataMetric(Data);
-                    BindingSource = new BindingSource();
+                    InputTotals = Metric.GetChartTotals(Data.BudgetTable, filter.ToString());
+                    Series = GetSeriesData(InputTotals);
+                    Dimension = GetDimensions();
 
                 }
 
+                public ChartData(DataBuilder data, ChartSeriesType type)
+                {
+                    Data = data;
+                    Metric = new DataMetric(Data);
+                    BindingSource = new BindingSource();
+                    BindingSource.DataSource = Data.BudgetTable;
+                    Model = new ChartDataBindModel(BindingSource);
+                    Model.YNames = new string[] { "Amount" };
+                    Series = new ChartSeries();
+                    Series.Type = type;
+                    Series.SeriesModel = Model;
+
+                }
 
                 //Properties
-                public string[] Axes { get; set; }
-                public BindingSource BindingSource { get; set; }
                 public DataBuilder Data { get; }
                 public DataMetric Metric { get; }
-                public int[] Dimension { get; set; }
+                public Dictionary<string, double> InputTotals { get; set; }
+                public Dictionary<string, double[]> InputMetrics { get; set; }
+                public BindingSource BindingSource { get; set; }
                 public ChartDataBindModel Model { get; }
+                public int[] Dimension { get; set; }
                 public ChartSeries Series { get; set; }
-                public string[] Titles { get; set; }
-                public ChartSeriesType Type { get; set; }
+                public string[] MainTitle { get; set; }
+                public string[] AxisTitle { get; set; }
+                public ChartFilter Filter { get; set; }
+                public ChartSeriesType SeriesType { get; set; }
 
 
                 //Methods
-                internal ChartSeries GetSeriesData(Dictionary<string, decimal> data)
+                internal ChartSeries GetSeriesData(Dictionary<string, double> data)
                 {
-                    var model = new ChartSeries();
-                    foreach(KeyValuePair<string, decimal> kvp in data)
+                    var series = new ChartSeries();
+                    foreach(KeyValuePair<string, double> kvp in data)
                     {
-                        model.Points.Add(kvp.Key, (double)kvp.Value);
+                        series.Points.Add(kvp.Key, kvp.Value);
                     }
-                    return model;
-                }
-
-                internal Dictionary<string, double> GetDoubleTotals(DataTable table, string column)
-                {
-                    try
-                    {
-                        Dictionary<string, double> info = new Dictionary<string, double>();
-                        foreach (string filter in Metric.ProgramElements[column])
-                        {
-                            var query = Metric.FilterTable(table, column, filter);
-                            info.Add(filter, (double)Data.GetTotal(query));
-                        }
-                        return info;
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
-                        return null;
-                    }
-                }
-
-                internal Dictionary<string, double[]> GetDoubleMetrics(DataTable table, string column)
-                {
-                    try
-                    {
-                        Dictionary<string, double[]> info = new Dictionary<string, double[]>();
-                        foreach (string filter in Metric.ProgramElements[column])
-                        {
-                            var query = Metric.FilterTable(table, column, filter);
-                            double[] stat = new double[4];
-                            stat[0] = (double)Data.GetTotal(query);
-                            stat[1] = (double)Data.GetCount(query);
-                            stat[2] = stat[0] / stat[1];
-                            stat[3] = (stat[0] / (double)Metric.Total) * 100;
-                            info.Add(filter, stat);
-                        }
-                        return info;
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
-                        return null;
-                    }
+                    return series;
                 }
 
                 internal ChartDataBindModel GetDataBinding(Dictionary<string, double> data)
@@ -116,25 +91,10 @@ namespace Budget
                     }
                 }
 
-                internal ChartDataBindModel GetDataBinding(BindingSource bs, DataTable table)
+                internal int[] GetDimensions(params int[] a)
                 {
-                    try
-                    {
-                        if (BindingSource == null)
-                            BindingSource = new BindingSource();
-                        BindingSource = bs;
-                        BindingSource.DataSource = table;
-                        var model = new ChartDataBindModel(bs);
-                        return model;
-                    }
-                    catch (Exception e)
-                    {
-
-                        MessageBox.Show(e.Message + e.StackTrace);
-                        return null;
-                    }
+                    return new int[] { 2, 250, -10 };
                 }
-
 
             }
 

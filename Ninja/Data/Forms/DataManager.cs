@@ -20,6 +20,7 @@ namespace Budget
                 {
                     InitializeComponent();
                     Data = new DataBuilder(source);
+                    Metric = new DataMetric(Data);
                     Ninja = new FormData(source, FilterPanel, BindingSource, DataMgrGrid, Navigator);
                     Ninja.GetGridColumns(DataMgrGrid);
                     Table = Ninja.Table;
@@ -32,6 +33,7 @@ namespace Budget
 
                 //Properties
                 public DataBuilder Data { get; }
+                public DataMetric Metric { get; }
                 public Dictionary<string, string[]> Element { get; set; }
                 public FormData Ninja { get; set; }
                 public DataTable Table { get; set; }
@@ -150,9 +152,9 @@ namespace Budget
                 private ChartControl GetDataChart(ChartControl chart, string title, Source source, BindingSource bs)
                 {
                     if (source == Source.P7)
-                        chart = new Chart(chart, title, new RegionalAuthority(), bs).CreateColumn();
+                        chart = new BudgetChart(chart, title, new ChartData(Data, ChartFilter.Fund).InputTotals).Activate();
                     if (source == Source.P8)
-                        chart = new Chart(chart, title, new DivisionAuthority(), bs).CreateColumn();
+                        chart = new BudgetChart(chart, title, new ChartData(Data, ChartFilter.Fund).InputTotals).Activate();
                     return chart;
                 }
 

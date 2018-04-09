@@ -1,4 +1,5 @@
 using MakarovDev.ExpandCollapsePanel;
+using MetroSet_UI.Controls;
 using Syncfusion.Windows.Forms.Chart;
 using Syncfusion.Windows.Forms.Tools;
 using System;
@@ -28,8 +29,10 @@ namespace Budget
                     RC = ProgramElements["RC"];
                     BindingSource.DataSource = D6.Data.BudgetTable;
                     Text = $"P7 Status of Funds";
-                    FilterBox = GetExpandersAndList().Item2;
-                    Expander = GetExpandersAndList().Item1;
+                    Tab = GetTabs();
+                    Expander = GetExpanders();
+                    GetFilterButtons();
+                    Chart = GetChartArray();
                 }
 
                 public SummaryForm(Source source)
@@ -37,33 +40,31 @@ namespace Budget
                     InitializeComponent();
                     if (source == Source.P7)
                     {
-                        R6 = new RegionalAuthority();
-                        Data = R6.Data;
-                        DataSet = R6.BudgetData;
-                        Table = R6.Table;
-                        ProgramElements = R6.ProgramElements;
-                        BindingSource.DataSource = R6.Table;
-                        Text = "Region 6 Summary";
+                        Data = new DataBuilder(Source.P7);
+                        BudgetMetric = new DataMetric(Data);
+                        DataSet = Data.BudgetData;
+                        Table = BudgetMetric.Table;
+                        ProgramElements = BudgetMetric.ProgramElements;
+                        BindingSource.DataSource = BudgetMetric.Table;
                         Tab = GetTabs();
-                        Tab[6].TabVisible = false;
-                        Tab[7].TabVisible = false;
-                        FilterBox = GetExpandersAndList().Item2;
-                        Expander = GetExpandersAndList().Item1;
+                        Expander = GetExpanders();
+                        GetFilterButtons();
+                        Text = "Region 6 Summary";
+                        Chart = GetChartArray();
                     }
                     if (source == Source.P8)
                     {
-                        D6 = new DivisionAuthority();
-                        Data = D6.Data;
-                        DataSet = D6.BudgetData;
-                        Table = D6.Table;
-                        ProgramElements = D6.ProgramElements;
-                        RC = D6.Data.ProgramElements["RC"];
-                        BindingSource.DataSource = D6.Table;
+                        Data = new DataBuilder(Source.P8);
+                        BudgetMetric = new DataMetric(Data);
+                        DataSet = Data.BudgetData;
+                        Table = BudgetMetric.Table;
+                        ProgramElements = BudgetMetric.ProgramElements;
+                        RC = Data.ProgramElements["RC"];
                         Tab = GetTabs();
-                        Tab[5].TabVisible = false;
+                        Expander = GetExpanders();
+                        GetFilterButtons();
+                        Chart = GetChartArray();
                         Text = "R6 Division Summary";
-                        FilterBox = GetExpandersAndList().Item2;
-                        Expander = GetExpandersAndList().Item1;
                     }
                 }
 
@@ -72,14 +73,15 @@ namespace Budget
                     InitializeComponent();
                     D6 = new DivisionAuthority(rc);
                     Data = D6.Data;
-                    BudgetMetric = new DataMetric(Data);
                     DataSet = D6.BudgetData;
                     Table = D6.Table;
+                    BudgetMetric = new DataMetric(Data);
+                    Tab = GetTabs();
+                    Expander = GetExpanders();
+                    GetFilterButtons();
                     Text = $"{D6.Org.Name} Summary";
                     BindingSource.DataSource = Table;
-                    FilterBox = GetFilterBox();
-                    FilterBox = GetExpandersAndList().Item2;
-                    Expander = GetExpandersAndList().Item1;
+                    Chart = GetChartArray();
                 }
 
 
@@ -88,6 +90,7 @@ namespace Budget
                 public DataBuilder Data { get; }
                 public DataMetric BudgetMetric { get; }
                 public DataSet DataSet { get; }
+                private TabPageAdv[] Tab { get; set; }
                 public ListBox[] FilterBox { get; set; }
                 public decimal[] Metrics { get; }
                 public FormData Ninja { get; set; }
@@ -99,79 +102,85 @@ namespace Budget
                 internal RadioButton[] RadioButton { get; set; }
                 private ChartControl[] Chart { get; set; }
                 private ExpandCollapsePanel[] Expander { get; set; }
-                private TabPageAdv[] Tab { get; set; }
 
 
                 //Methods
-                public DataTable FilterTable(DataTable table, string column, string filter)
-                {
-                    try
-                    {
-                        return table.AsEnumerable().Where(p => p.Field<string>(column).Equals(filter)).Select(p => p).CopyToDataTable();
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
-                        return null;
-                    }
-                }
 
                 private void Form_Load(object sender, EventArgs e)
                 {
                     Chart = GetChartArray();
-                    FundChart = new Chart(FundChart, D6.FundData).CreateColumn();
-                    BocChart = new Chart(BocChart, D6.BocData).CreateColumn();
-                    NpmChart = new Chart(NpmChart, D6.NpmData).CreateColumn();
-                    GoalChart = new Chart(GoalChart, D6.GoalData).CreateColumn();
-                    ObjChart = new Chart(ObjChart, R6.ObjectiveData).CreateColumn();
-                    AreaChart = new Chart(AreaChart, D6.ProgramData).CreateColumn();
-                    ProjectChart = new Chart(ProjectChart, D6.ProgramData).CreateColumn();
+                    var title = $"R6 Funding" ;
+                    //FundChart = new BudgetChart(FundChart, title, new ChartData(Data, ChartFilter.Fund).InputTotals).Activate();
+                    //BocChart = new BudgetChart(BocChart, title, new ChartData(Data, ChartFilter.Fund).InputTotals).Activate();
+                    //NpmChart = new BudgetChart(NpmChart, title, new ChartData(Data, ChartFilter.Fund).InputTotals).Activate();
+                    //GoalChart = new BudgetChart(GoalChart, title, new ChartData(Data, ChartFilter.Fund).InputTotals).Activate();
+                    //ObjChart = new BudgetChart(ObjChart, title, new ChartData(Data, ChartFilter.Fund).InputTotals).Activate();
+                    //AreaChart = new BudgetChart(AreaChart, title, new ChartData(Data, ChartFilter.Fund).InputTotals).Activate();
+                    //ProjectChart = new BudgetChart(ProjectChart, title, new ChartData(Data, ChartFilter.Fund).InputTotals).Activate();
                     SummaryTabControl.SelectedIndexChanged += TabControl_SelectedIndexChanged;
                 }
+
                 private ChartControl[] GetChartArray()
                 {
                     return new ChartControl[] { FundChart, BocChart, NpmChart, GoalChart, ObjChart, DivisionChart, AreaChart, ProjectChart };
                 }
 
-                private Tuple<ExpandCollapsePanel[], ListBox[]> GetExpandersAndList()
+                ExpandCollapsePanel[] GetExpanders()
                 {
                     try
                     {
-                        var expander = new ExpandCollapsePanel[Tab.Length];
-                        var filterBox = new ListBox[Tab.Length];
-                        var categories = GetFilterCategories();
-                        var filters = categories.Values.ToArray();
-                        for (int i = 0; i < Tab.Length; i++)
-                        {
-                            expander[i] = new ExpandCollapsePanel();
-                            expander[i].Location = new Point(10, 105);
-                            expander[i].IsExpanded = false;
-                            expander[i].UseAnimation = true;
-                            expander[i].ExpandedHeight = 442;
-                            filterBox[i] = new ListBox();
-                            GetListBoxItems(filterBox[i], ProgramElements[filters[i]]);
-                            expander[i].Controls.Add(filterBox[i]);
-                        }
-                        return new Tuple<ExpandCollapsePanel[], ListBox[]>(expander, filterBox);
+                        var expanders = new ExpandCollapsePanel[] {FundExpander, BocExpander, NpmExpander,
+                        GoalExpander, ObjectiveEpxpander, DivisionExpander, AreaExpander, ProjectExpander};
+                        return expanders;
                     }
                     catch (Exception e)
                     {
-                        MessageBox.Show(e.Message);
+
+                        MessageBox.Show(e.Message + e.StackTrace);
                         return null;
                     }
                 }
 
-                private ListBox[] GetFilterBox()
+                private void GetMetroSetButtons(FlowLayoutPanel panel, string[] list)
                 {
-                    var arrary = new ListBox[] { listBox1, listBox2, listBox3, listBox4, listBox5, listBox6, listBox7,  };
-                    return arrary;
-                }
-
-                private void GetListBoxItems(ListBox listbox, string[] list)
-                {
+                    panel.Controls.Clear();
                     foreach (string f in list)
                     {
-                        listbox.Items.Add(f);
+                        var b = new MetroSetButton();
+                        b.Text = f;
+                        b.Font = new Font("Segoe UI", 8f);
+                        b.NormalColor = Color.Black;
+                        b.NormalTextColor = SystemColors.MenuHighlight;
+                        b.NormalBorderColor = Color.Black;
+                        b.HoverBorderColor = Color.SteelBlue;
+                        b.HoverColor = Color.SteelBlue;
+                        b.HoverTextColor = Color.AntiqueWhite;
+                        b.Size = new Size(190, 30);
+                        b.Margin = new Padding(3);
+                        b.Padding = new Padding(1);
+                        panel.Controls.Add(b);
+                        panel.AutoSize = true;
+                        b.Tag = f;
+                    }
+                }
+
+                private void GetFilterButtons()
+                {
+                    try
+                    {
+                        GetMetroSetButtons(fp1, BudgetMetric.ProgramElements["FundName"]);
+                        GetMetroSetButtons(fp2, BudgetMetric.ProgramElements["BocName"]);
+                        GetMetroSetButtons(fp3, BudgetMetric.ProgramElements["NPM"]);
+                        GetMetroSetButtons(fp4, BudgetMetric.ProgramElements["GoalName"]);
+                        GetMetroSetButtons(fp5, BudgetMetric.ProgramElements["ObjectiveName"]);
+                        GetMetroSetButtons(fp6, BudgetMetric.ProgramElements["DivisionName"]);
+                        GetMetroSetButtons(fp7, BudgetMetric.ProgramElements["ProgramAreaName"]);
+                        GetMetroSetButtons(fp8, BudgetMetric.ProgramElements["ProgramProjectName"]);
+                    }
+                    catch (Exception e)
+                    {
+
+                        MessageBox.Show(e.Message + e.StackTrace);
                     }
                 }
 
@@ -218,18 +227,18 @@ namespace Budget
                     }
                 }
 
+                private void ListBox_SelectedItemChanged(object sender, EventArgs e)
+                {
+
+                }
+
                 private TabPageAdv[] GetTabs()
                 {
                     try
                     {
-                        var tabs = SummaryTabControl.TabPages;
-                        var tab = new TabPageAdv[tabs.Count];
-                        for (int i = 0; i < tabs.Count; i++)
-                        {
-                            tab[i] = tabs[i];
-                        }
-                            
-                        return tab;
+                        var tabs = new TabPageAdv[] {FundTab, BocTab, NpmTab, GoalTab, ObjectTab,
+                            DivisionTab, ProgramAreaTab, ProgramProjectTab};
+                        return tabs;
                     }
                     catch (Exception e)
                     {
@@ -243,7 +252,7 @@ namespace Budget
                     try
                     {
                         var filters = new Dictionary<string, string>();
-                        filters.Add("Fund", "Fund");
+                        filters.Add("Fund", "FundName");
                         filters.Add("BOC", "BocName");
                         filters.Add("NPM", "NPM");
                         filters.Add("Goal", "GoalName");
@@ -292,7 +301,7 @@ namespace Budget
                         return null;
                     }
                 }
-
+                 
                 void RadioButtonFilter_Click(object sender, EventArgs e)
                 {
                     var rb = sender as RadioButton;

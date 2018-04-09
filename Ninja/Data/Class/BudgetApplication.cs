@@ -61,6 +61,11 @@ namespace Budget
                 T6, T7, B6, U6, P6, P8, P7, A6, O6, O7, O8, I6, External
             }
 
+            public enum ChartFilter
+            {
+                Fund, FundName, BOC, BocName, NPM, Goal, GoalName, Objective, ObjectiveName, Division, ProgramArea, ProgramAreaName, ProgramProjectCode, ProgramProjectName
+            }
+
             public enum Statistic
             {
                 Value, Count, Average, Ratio
@@ -88,7 +93,7 @@ namespace Budget
 
             #region Delegates
 
-            public delegate ChartControl GetChart(ChartControl chart, string title, Dictionary<string, decimal> data);
+            public delegate ChartControl GetChart(ChartControl chart, string title, Dictionary<string, double> data);
 
             public delegate string GetName(string code);
 

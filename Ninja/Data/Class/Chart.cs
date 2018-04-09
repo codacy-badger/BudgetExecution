@@ -11,34 +11,35 @@ namespace Budget
     {
         namespace Data
         {
-            public class Chart
+            public class BudgetChart : ChartControl 
             {
 
                 //Constructors
-                public Chart()
+                public BudgetChart()
                 {
                 }
 
-                public Chart(ChartControl chart, string title, Dictionary<string, decimal> data)
+                public BudgetChart(ChartControl chart, string title, Dictionary<string, double> data)
                 {
+                    ColumnChart = new ChartControl();
                     ColumnChart = chart;
                     ColumnChart.Series.Clear();
-                    ColumnChart.Legends.Clear();
                     ColumnChart.PrimaryXAxis.Title = title;
                     ColumnChart.PrimaryXAxis.TitleColor = SystemColors.GradientInactiveCaption;
-                    ColumnChart.PrimaryXAxis.TitleFont = new Font("Segoe UI", 10f);
+                    ColumnChart.PrimaryXAxis.TitleFont = new Font("SegoeUI", 9f);
                     ColumnSeries = new ChartSeries("Series", ChartSeriesType.Column);
-                    foreach (KeyValuePair<string, decimal> kvp in data)
+                    foreach (KeyValuePair<string, double> kvp in data)
                     {
-                        ColumnSeries.Points.Add(kvp.Key, (double)kvp.Value);
+                        ColumnSeries.Points.Add(kvp.Key, kvp.Value);
                     }
-                    GetSeriesConfiguration(ColumnSeries);
                     ColumnChart.Series.Add(ColumnSeries);
-                    ColumnSeries.XAxis.Font = new Font("Segoe UI", 9F);
-                    Get3DMode(ColumnChart);
+                    GetRegionSeriesConfiguration(ColumnSeries);
+                    ColumnSeries.XAxis.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+                    Get3DMode();
+                    
                 }
 
-                public Chart(ChartControl chart, string title, DivisionAuthority P8, BindingSource bs)
+                public BudgetChart(string title, DivisionAuthority P8, BindingSource bs)
                 {
                     var table = (DataTable)bs.DataSource;
                     int i = bs.Position;
@@ -46,9 +47,8 @@ namespace Budget
                     var value = (decimal)values["Amount"];
                     string pp = values["ProgramProjectName"].ToString();
                     var data = P8.ProjectData;
-                    ColumnChart = chart;
-                    ColumnChart.Series.Clear();
-                    ColumnChart.Legends.Clear();
+                    Series.Clear();
+                    Legends.Clear();
                     ColumnSeries = new ChartSeries("Allocation", ChartSeriesType.Column);
                     var series = new ChartSeries("Total", ChartSeriesType.Column);
                     foreach (string key in data.Keys)
@@ -57,22 +57,22 @@ namespace Budget
                         {
                             ColumnSeries.Points.Add($"{values["BocName"].ToString()}", (double)value);
                             GetBindingSeriesConfiguration(ColumnSeries);
-                            ColumnChart.Series.Add(ColumnSeries);
+                            Series.Add(ColumnSeries);
                             decimal total = P8.Data.BudgetTable.AsEnumerable()
                                 .Where(p => p.Field<string>("ProgramProjectName").Equals(pp))
                                 .Select(p => p.Field<decimal>("Amount")).Sum();
-                            ColumnChart.PrimaryXAxis.Title = $"{ (value / total) * 100:N}% of { pp} Total Funding";
-                            ColumnChart.PrimaryXAxis.TitleColor = SystemColors.Info;
-                            ColumnChart.PrimaryXAxis.TitleFont = new Font("Segoe UI", 10f);
+                            PrimaryXAxis.Title = $"{ (value / total) * 100:N}% of { pp} Total Funding";
+                            PrimaryXAxis.TitleColor = SystemColors.Info;
+                            PrimaryXAxis.TitleFont = new Font("Segoe UI", 10f);
                             series.Points.Add("Total", (double)total);
                             GetBindingSeriesConfiguration(series);
-                            ColumnChart.Series.Add(series);
+                            Series.Add(series);
                         }
                     }
-                    Get3DBindingMode(ColumnChart);
+                    Get3DBindingMode();
                 }
 
-                public Chart(ChartControl chart, string title, RegionalAuthority P7, BindingSource bs)
+                public BudgetChart(string title, RegionalAuthority P7, BindingSource bs)
                 {
                     int i = bs.Position;
                     var table = (DataTable)bs.DataSource;
@@ -80,7 +80,6 @@ namespace Budget
                     var value = (decimal)values["Amount"];
                     string pp = values["ProgramProjectName"].ToString();
                     var data = new RegionalAuthority().ProjectData;
-                    ColumnChart = chart;
                     ColumnSeries = new ChartSeries("Allocation", ChartSeriesType.Column);
                     var series = new ChartSeries("Total", ChartSeriesType.Column);
                     foreach (string key in data.Keys)
@@ -89,35 +88,34 @@ namespace Budget
                         {
                             ColumnSeries.Points.Add($"{values["BocName"].ToString()}", (double)value);
                             GetBindingSeriesConfiguration(ColumnSeries);
-                            ColumnChart.Series.Add(ColumnSeries);
+                            Series.Add(ColumnSeries);
                             decimal total = P7.Data.BudgetTable.AsEnumerable()
                                 .Where(p => p.Field<string>("ProgramProjectName").Equals(pp))
                                 .Select(p => p.Field<decimal>("Amount")).Sum();
-                            ColumnChart.PrimaryXAxis.Title = $"{ (value / total) * 100:N}% of {pp} Total Funding";
-                            ColumnChart.PrimaryXAxis.TitleColor = SystemColors.Info;
-                            ColumnChart.PrimaryXAxis.TitleFont = new Font("SegoeUI", 9f);
+                            PrimaryXAxis.Title = $"{ (value / total) * 100:N}% of {pp} Total Funding";
+                            PrimaryXAxis.TitleColor = SystemColors.Info;
+                            PrimaryXAxis.TitleFont = new Font("SegoeUI", 9f);
                             series.Points.Add("Total", (double)total);
                             GetBindingSeriesConfiguration(series);
-                            ColumnChart.Series.Add(series);
+                            Series.Add(series);
                         }
                         ColumnSeries.XAxis.Font = new Font("Segoe UI", 10F);
                     }
-                    Get3DBindingMode(ColumnChart);
+                    Get3DBindingMode();
                 }
 
-                public Chart(ChartControl chart, Dictionary<string, decimal> data)
+                public BudgetChart(ChartData data)
                 {
-                    ColumnChart = chart;
-                    ColumnChart.Series.Clear();
-                    ColumnChart.Legends.Clear();
-                    ColumnSeries = new ChartSeries("Value", ChartSeriesType.Column);
-                    foreach (KeyValuePair<string, decimal> kvp in data)
+                    ColumnSeries = data.Series;
+                    foreach (KeyValuePair<string, double> kvp in data.InputTotals)
                     {
-                        ColumnSeries.Points.Add(kvp.Key, (double)kvp.Value);
+                        ColumnSeries.Points.Add(kvp.Key, kvp.Value);
                     }
-                    GetSeriesConfiguration(ColumnSeries);
+                    GetRegionSeriesConfiguration(ColumnSeries);
                     ColumnChart.Series.Add(ColumnSeries);
-                    Get3DMode(ColumnChart);
+                    ColumnChart.RealMode3D = true;
+                    ColumnChart.ChartArea.Series3D = true;
+                    ColumnChart.Style3D = true;
                 }
 
                 
@@ -132,14 +130,14 @@ namespace Budget
 
                 
                 //Methods
-                internal ChartControl CreateColumn()
+
+                internal ChartControl Activate()
                 {
                     return ColumnChart;
                 }
-
-                private void Get3DBindingMode(ChartControl chart)
+   
+                private void Get3DBindingMode()
                 {
-                    ColumnChart = chart;
                     ColumnChart.ChartArea.Series3D = true;
                     ColumnChart.RealMode3D = true;
                     ColumnChart.Style3D = true;
@@ -149,37 +147,40 @@ namespace Budget
                     ColumnChart.SpacingBetweenSeries = 2;
                 }
 
-                private void Get3DMode(ChartControl chart)
+                private void Get3DMode()
                 {
-                    ColumnChart = chart;
                     ColumnChart.ChartArea.Series3D = true;
                     ColumnChart.RealMode3D = true;
                     ColumnChart.Style3D = true;
                     ColumnChart.Tilt = 2;
-                    ColumnChart.Depth = 150;
+                    ColumnChart.Depth = 250;
                     ColumnChart.Rotation = -10;
                     ColumnChart.SpacingBetweenSeries = 2;
                 }
 
-                private void Get3DMode(ChartControl chart, int[] rt)
+
+                private void Get3DMode(ChartData data)
                 {
-                    ColumnChart = chart;
-                    ColumnChart.ChartArea.Series3D = true;
-                    ColumnChart.RealMode3D = true;
-                    ColumnChart.Style3D = true;
-                    ColumnChart.Tilt = rt[0];
-                    ColumnChart.Depth = 250;
-                    ColumnChart.Rotation = rt[1];
-                    ColumnChart.SpacingBetweenSeries = 10;
+                    ChartArea.Series3D = true;
+                    RealMode3D = true;
+                    Style3D = true;
+                    Tilt = data.Dimension[0];
+                    Depth = data.Dimension[1];
+                    Rotation = data.Dimension[2];
+                    SpacingBetweenSeries = 2;
                 }
 
-                private void GetAxisTitles(ChartControl chart, string title)
+                private void Get3DMode(int[] rt)
                 {
-                    ColumnChart = chart;
-                    ColumnChart.PrimaryXAxis.Title = title;
-                    ColumnChart.PrimaryXAxis.TitleColor = SystemColors.Info;
-                    ColumnChart.PrimaryXAxis.TitleFont = new Font("SegoeUI", 9);
+                    ColumnChart.ChartArea.Series3D = true;
+                    RealMode3D = true;
+                    Style3D = true;
+                    Tilt = rt[0];
+                    Depth = 250;
+                    Rotation = rt[1];
+                    SpacingBetweenSeries = 10;
                 }
+
 
                 private void GetBindingSeriesConfiguration(ChartSeries series)
                 {
@@ -202,43 +203,28 @@ namespace Budget
                     ColumnSeries.ConfigItems.ColumnItem.PhongAlpha = 2;
                 }
 
-                private void GetColumnSeriesData(ChartControl chart, string title, Dictionary<string, decimal> data)
+                private void GetRegionSeriesConfiguration(ChartSeries series)
                 {
-                    ColumnChart = chart;
-                    ColumnSeries = new ChartSeries("Series", ChartSeriesType.Column);
-                    ColumnChart.Series.Add(ColumnSeries);
-                    foreach (KeyValuePair<string, decimal> kvp in data)
-                    {
-                        ColumnSeries.Points.Add(kvp.Key, (double)kvp.Value);
-                    }
+                    ColumnSeries = series;
+                    ColumnSeries.SmartLabels = true;
+                    ColumnSeries.SortPoints = true;
+                    ColumnSeries.Style.DisplayText = true;
+                    ColumnSeries.Style.TextOffset = 15.0F;
+                    ColumnSeries.Style.TextOrientation = ChartTextOrientation.Up;
+                    ColumnSeries.Style.DisplayShadow = true;
+                    ColumnSeries.Style.TextColor = Color.White;
+                    ColumnSeries.Style.TextFormat = "${0:#,}";
+                    ColumnSeries.PointsToolTipFormat = "Funding:{4:N}";
+                    ColumnSeries.Style.Font.Size = 10.0F;
+                    ColumnSeries.Style.Font.Facename = "SegoeUI";
+                    ColumnSeries.Style.Font.FontStyle = FontStyle.Bold;
+                    ColumnSeries.DrawSeriesNameInDepth = false;
+                    ColumnSeries.ConfigItems.ColumnItem.ShadingMode = ChartColumnShadingMode.PhongCylinder;
+                    ColumnSeries.ConfigItems.ColumnItem.LightColor = Color.DeepSkyBlue;
+                    ColumnSeries.ConfigItems.ColumnItem.PhongAlpha = 2;
                 }
 
-                private void GetLegend(ChartControl chart, ChartSeries series)
-                {
-                    ColumnChart = chart;
-                    ChartLegendItemsCollection items = new ChartLegendItemsCollection();
-                    ChartLegend legend = new ChartLegend(ColumnChart);
-                    ChartLegendItem item = new ChartLegendItem();
-                    item.Text = series.Name;
-                    legend.Text = "Legend";
-                    items.Add(item);
-                    legend.VisibleCheckBox = true;
-                    legend.ColumnsCount = 1;
-                    ColumnChart.Legends.Add(legend);
-                }
-
-                private void GetMainTitle(ChartControl chart, string t)
-                {
-                    ColumnChart = chart;
-                    ColumnChart.Titles.Clear();
-                    ChartTitle title = new ChartTitle();
-                    title.Text = t;
-                    title.ForeColor = Color.White;
-                    title.Font = new Font("SegoeUI", 8, FontStyle.Regular);
-                    ColumnChart.Titles.Add(title);
-                }
-
-                private void GetSeriesConfiguration(ChartSeries series)
+                private void GetDivisionSeriesConfiguration(ChartSeries series)
                 {
                     ColumnSeries = series;
                     ColumnSeries.SmartLabels = true;
@@ -257,6 +243,46 @@ namespace Budget
                     ColumnSeries.ConfigItems.ColumnItem.ShadingMode = ChartColumnShadingMode.PhongCylinder;
                     ColumnSeries.ConfigItems.ColumnItem.LightColor = Color.DeepSkyBlue;
                     ColumnSeries.ConfigItems.ColumnItem.PhongAlpha = 2;
+                }
+
+                private void GetColumnSeriesData(string title, Dictionary<string, double> data)
+                {
+                    ColumnSeries = new ChartSeries("Series", ChartSeriesType.Column);
+                    ColumnChart.Series.Add(ColumnSeries);
+                    foreach (KeyValuePair<string, double> kvp in data)
+                    {
+                        ColumnSeries.Points.Add(kvp.Key, kvp.Value);
+                    }
+                }
+
+                private void GetLegend(ChartSeries series)
+                {
+                    ChartLegendItemsCollection items = new ChartLegendItemsCollection();
+                    ChartLegend legend = new ChartLegend(ColumnChart);
+                    ChartLegendItem item = new ChartLegendItem();
+                    item.Text = series.Name;
+                    legend.Text = "Legend";
+                    items.Add(item);
+                    legend.VisibleCheckBox = true;
+                    legend.ColumnsCount = 1;
+                    Legends.Add(legend);
+                }
+
+                private void GetMainTitle(string t)
+                {
+                    ColumnChart.Titles.Clear();
+                    ChartTitle title = new ChartTitle();
+                    title.Text = t;
+                    title.ForeColor = Color.White;
+                    title.Font = new Font("SegoeUI", 8, FontStyle.Regular);
+                    ColumnChart.Titles.Add(title);
+                }
+
+                private void GetAxisTitles(string title)
+                {
+                    ColumnChart.PrimaryXAxis.Title = title;
+                    ColumnChart.PrimaryXAxis.TitleColor = SystemColors.Info;
+                    ColumnChart.PrimaryXAxis.TitleFont = new Font("SegoeUI", 9);
                 }
 
             }

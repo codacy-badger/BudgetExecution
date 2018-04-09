@@ -73,28 +73,28 @@ namespace Budget
                     {
                         var fundlist = GetCodes(table, "FundName");
                         var data = GetDataValues(table, fundlist, "FundName");
-                        AreaChart = new Chart(AreaChart, title, data).CreateColumn();
+                        //AreaChart = new BudgetChart(title, data);
                         Text = $"Total {Division.Org.Name} {name} Funding by Appropritaion";
                     }
                     if (rb14.Checked == true)
                     {
                         var boclist = GetCodes(table, "BocName");
                         var data = GetDataValues(table, boclist, "BocName");
-                        AreaChart = new Chart(AreaChart, title, data).CreateColumn();
+                        //AreaChart = new BudgetChart(AreaChart, title, data).CreateColumn();
                         Text = $"Total {Division.Org.Name} {name} Funding by Object Class";
                     }
                     if (rb15.Checked == true)
                     {
                         var npmlist = GetCodes(table, "NPM");
                         var data = GetDataValues(table, npmlist, "NPM");
-                        AreaChart = new Chart(AreaChart, title, data).CreateColumn();
+                        //AreaChart = new BudgetChart(AreaChart, title, data).CreateColumn();
                         Text = $"Total {Division.Org.Name} {name} Funding by HQ National Program";
                     }
                     if (rb16.Checked == true)
                     {
                         var projlist = GetCodes(table, "ProgramProjectName");
                         var data = GetDataValues(table, projlist, "ProgramProjectName");
-                        AreaChart = new Chart(AreaChart, title, data).CreateColumn();
+                        //AreaChart = new BudgetChart(AreaChart, title, data).CreateColumn();
                         Text = $"Total {Division.Org.Name} {name} Funding by Program Project";
                     }
                 }
@@ -134,28 +134,28 @@ namespace Budget
                     {
                         var fundlist = GetCodes(table, "FundName");
                         var data = GetDataValues(table, fundlist, "FundName");
-                        BocChart = new Chart(BocChart, title, data).CreateColumn();
+                        //BocChart = new BudgetChart(BocChart, title, data).CreateColumn();
                         Text = $"Total {Division.Org.Name} {name} Funding by Appropriation";
                     }
                     if (rb6.Checked == true)
                     {
                         var npmlist = GetCodes(table, "NPM");
                         var data = GetDataValues(table, npmlist, "NPM");
-                        BocChart = new Chart(BocChart, title, data).CreateColumn();
+                        //BocChart = new BudgetChart(BocChart, title, data).CreateColumn();
                         Text = $"Total {Division.Org.Name} {name} Funding by HQ National Program";
                     }
                     if (rb7.Checked == true)
                     {
                         var alist = GetCodes(table, "ProgramAreaName");
                         var data = GetDataValues(table, alist, "ProgramAreaName");
-                        BocChart = new Chart(BocChart, title, data).CreateColumn();
+                        //BocChart = new BudgetChart(BocChart, title, data).CreateColumn();
                         Text = $"Total {Division.Org.Name} {name} Funding by Program Area";
                     }
                     if (rb8.Checked == true)
                     {
                         var projlist = GetCodes(table, "ProgramProjectName");
                         var data = GetDataValues(table, projlist, "ProgramProjectName");
-                        BocChart = new Chart(BocChart, title, data).CreateColumn();
+                        //BocChart = new BudgetChart(BocChart, title, data).CreateColumn();
                         Text = $"Total {Division.Org.Name} {name} Funding by Program Project";
                     }
                 }
@@ -163,11 +163,11 @@ namespace Budget
                 private void DivisionForm_Load(object sender, EventArgs e)
                 {
                     Text = "P7 " + Division.Org.Name;
-                    AppropChart = new Chart(AppropChart, Division.FundData).CreateColumn();
-                    BocChart = new Chart(BocChart, Division.BocData).CreateColumn();
-                    NpmChart = new Chart(NpmChart, Division.NpmData).CreateColumn();
-                    AreaChart = new Chart(AreaChart, Division.ProgramData).CreateColumn();
-                    ProjectChart = new Chart(ProjectChart, Division.ProjectData).CreateColumn();
+                    //AppropChart = new BudgetChart(AppropChart, Division.FundData).CreateColumn();
+                   // BocChart = new BudgetChart(BocChart, Division.BocData).CreateColumn();
+                   // NpmChart = new BudgetChart(NpmChart, Division.NpmData).CreateColumn();
+                   // AreaChart = new BudgetChart(AreaChart, Division.ProgramData).CreateColumn();
+                    //ProjectChart = new BudgetChart(ProjectChart, Division.ProjectData).CreateColumn();
                     DivisionFormTabControl.SelectedIndexChanged += new EventHandler(GetTabPanelTitle);
                     BackButton.Visible = false;
                     PrcChart = GetPieChart(PrcChart, "", Division, P8BindingSource);
@@ -257,7 +257,7 @@ namespace Budget
 
                 private ChartControl GetPieChart(ChartControl chart, string title, DivisionAuthority P8, BindingSource bs)
                 {
-                    PieChart = new Chart(chart, title, P8, bs).CreateColumn();
+                    //PieChart = new BudgetChart(chart, title, P8, bs).CreateColumn();
                     return PieChart;
                 }
 
@@ -291,7 +291,7 @@ namespace Budget
                         case 4:
                             Text = $"{Division.Org.Name} Funds by Program Project";
                             DivisionData = Division.Data.BudgetTable;
-                            ProjectChart = new Chart(ProjectChart, Division.ProjectData).CreateColumn();
+                            //ProjectChart = new BudgetChart(ProjectChart, Division.ProjectData).CreateColumn();
                             break;
 
                         case 5:
@@ -328,28 +328,28 @@ namespace Budget
                     {
                         var fundlist = GetCodes(table, "FundName");
                         var data = GetDataValues(table, fundlist, "FundName");
-                        NpmChart = new Chart(NpmChart, title, data).CreateColumn();
+                        //NpmChart = new BudgetChart(NpmChart, title, data).CreateColumn();
                         Text = $"Total {Division.Org.Name} {name} Funding by Appropriation";
                     }
                     if (rb10.Checked == true)
                     {
                         var boclist = GetCodes(table, "BocName");
                         var data = GetDataValues(table, boclist, "BocName");
-                        NpmChart = new Chart(NpmChart, title, data).CreateColumn();
+                        //NpmChart = new BudgetChart(NpmChart, title, data).CreateColumn();
                         Text = $"Total {Division.Org.Name} {name} Funding by Object Class";
                     }
                     if (rb11.Checked == true)
                     {
                         var alist = GetCodes(table, "ProgramAreaName");
                         var data = GetDataValues(table, alist, "ProgramAreaName");
-                        NpmChart = new Chart(NpmChart, title, data).CreateColumn();
+                        //NpmChart = new BudgetChart(NpmChart, title, data).CreateColumn();
                         Text = $"Total {Division.Org.Name} {name} Funding by Program Area";
                     }
                     if (rb12.Checked == true)
                     {
                         var projlist = GetCodes(table, "ProgramProjectName");
                         var data = GetDataValues(table, projlist, "ProgramProjectName");
-                        NpmChart = new Chart(NpmChart, title, data).CreateColumn();
+                        //NpmChart = new BudgetChart(NpmChart, title, data).CreateColumn();
                         Text = $"Total {Division.Org.Name} {name} Funding by Program Project";
                     }
                 }
@@ -365,28 +365,28 @@ namespace Budget
                     {
                         var boclist = GetCodes(table, "BocName");
                         var data = GetDataValues(table, boclist, "BocName");
-                        AppropChart = new Chart(AppropChart, title, data).CreateColumn();
+                        //AppropChart = new BudgetChart(AppropChart, title, data).CreateColumn();
                         Text = $"Total {Division.Org.Name} {name} Funding by Object Class";
                     }
                     if (rb2.Checked == true)
                     {
                         string[] npmlist = GetCodes(table, "NPM");
                         var data = GetDataValues(table, npmlist, "NPM");
-                        AppropChart = new Chart(AppropChart, title, data).CreateColumn();
+                        //AppropChart = new BudgetChart(AppropChart, title, data).CreateColumn();
                         Text = $"Total {Division.Org.Name} {name} Funding by HQ National Program";
                     }
                     if (rb3.Checked == true)
                     {
                         string[] alist = GetCodes(table, "ProgramAreaName");
                         var data = GetDataValues(table, alist, "ProgramAreaName");
-                        AppropChart = new Chart(AppropChart, title, data).CreateColumn();
+                        //AppropChart = new BudgetChart(AppropChart, title, data).CreateColumn();
                         Text = $"Total {Division.Org.Name} {name} Funding by Program Area";
                     }
                     if (rb4.Checked == true)
                     {
                         string[] projlist = GetCodes(table, "ProgramProjectName");
                         var data = GetDataValues(table, projlist, "ProgramProjectName");
-                        AppropChart = new Chart(AppropChart, title, data).CreateColumn();
+                       // AppropChart = new BudgetChart(AppropChart, title, data).CreateColumn();
                         Text = $"Total {Division.Org.Name} {name} Funding by Program Project";
                     }
                 }
@@ -431,28 +431,28 @@ namespace Budget
                     {
                         var objlist = GetCodes(table, "FundName");
                         var data = GetDataValues(table, objlist, "FundName");
-                        ProjectChart = new Chart(ProjectChart, title, data).CreateColumn();
+                        //ProjectChart = new BudgetChart(ProjectChart, title, data).CreateColumn();
                         Text = $"Total {Division.Org.Name} {name} Funding by Appropriation";
                     }
                     if (rb18.Checked == true)
                     {
                         var boclist = GetCodes(table, "BocName");
                         var data = GetDataValues(table, boclist, "BocName");
-                        ProjectChart = new Chart(ProjectChart, title, data).CreateColumn();
+                        //ProjectChart = new BudgetChart(ProjectChart, title, data).CreateColumn();
                         Text = $"Total {Division.Org.Name} {name} Funding by Object Class";
                     }
                     if (rb19.Checked == true)
                     {
                         var npmlist = GetCodes(table, "NPM");
                         var data = GetDataValues(table, npmlist, "NPM");
-                        ProjectChart = new Chart(ProjectChart, title, data).CreateColumn();
+                        //ProjectChart = new BudgetChart(ProjectChart, title, data).CreateColumn();
                         Text = $"Total {Division.Org.Name} {name} Funding by HQ National Program";
                     }
                     if (rb20.Checked == true)
                     {
                         var projlist = GetCodes(table, "ProgramAreaName");
                         var data = GetDataValues(table, projlist, "ProgramAreaName");
-                        ProjectChart = new Chart(ProjectChart, title, data).CreateColumn();
+                        //ProjectChart = new BudgetChart(ProjectChart, title, data).CreateColumn();
                         Text = $"Total {Division.Org.Name} {name} Funding by Program Area";
                     }
                 }
