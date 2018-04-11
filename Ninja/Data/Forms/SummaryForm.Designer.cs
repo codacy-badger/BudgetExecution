@@ -403,12 +403,13 @@ namespace Budget
             this.FundExpander.Controls.Add(this.fp1);
             this.FundExpander.ExpandedHeight = 734;
             this.FundExpander.IsExpanded = true;
-            this.FundExpander.Location = new System.Drawing.Point(1301, 54);
+            this.FundExpander.Location = new System.Drawing.Point(1337, 31);
             this.FundExpander.Name = "FundExpander";
             this.FundExpander.Size = new System.Drawing.Size(229, 734);
             this.FundExpander.TabIndex = 107;
             this.FundExpander.Text = "Filter";
             this.FundExpander.UseAnimation = true;
+            this.FundExpander.Paint += new System.Windows.Forms.PaintEventHandler(this.FundExpander_Paint);
             // 
             // fp1
             // 

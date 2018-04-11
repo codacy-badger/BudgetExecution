@@ -113,27 +113,35 @@ namespace Budget
 
                 private ChartControl[] GetChartArray()
                 {
-                    var charts = new ChartControl[] { FundChart, FundChart, NpmChart, GoalChart, ObjectiveChart, DivisionChart, AreaChart, ProjectChart };
-                    foreach (ChartControl chart in charts)
+                    Chart = new ChartControl[] { FundChart, FundChart, NpmChart, GoalChart, ObjectiveChart, DivisionChart, AreaChart, ProjectChart };
+                    foreach (ChartControl chart in Chart)
+                    {
+                        chart.Location = new Point(37, 54);
+                        chart.Size = new Size(1203, 598);
                         Controls.Add(chart);
-                    return charts;
+                    }
+                    return Chart;
                 }
                 
                 ExpandCollapsePanel[] GetExpanders()
                 {
                     try
                     {
-                        var expanders = new ExpandCollapsePanel[] {FundExpander, FundExpander, NpmExpander,
+                        Expander = new ExpandCollapsePanel[] {FundExpander, BocExpander, NpmExpander,
                         GoalExpander, ObjectiveExpander, DivisionExpander, AreaExpander, ProjectExpander};
-                        var fp = new FlowLayoutPanel();
-                        foreach (ExpandCollapsePanel exp in expanders)
+                        foreach (ExpandCollapsePanel exp in Expander)
                         {
+                            exp.Location = new Point(1337, 31);
+                            exp.Size = new Size(229, 734);
+                            exp.IsExpanded = false;
+                            exp.UseAnimation = true;
+                            var fp = new FlowLayoutPanel();
                             fp.FlowDirection = FlowDirection.TopDown;
                             fp.BackColor = Color.Black;
                             exp.Controls.Add(fp);
                             Controls.Add(exp);
                         }
-                        return expanders;
+                        return Expander;
                     }
                     catch (Exception e)
                     {
@@ -239,22 +247,37 @@ namespace Budget
                 {
                     try
                     {
-                        Tab = new TabPageAdv[] {FundTab, BocTab, NpmTab, GoalTab, ObjectiveTab,
-                            DivisionTab, AreaTab, ProjectTab};
-                        Chart = new ChartControl[] { FundChart, FundChart, NpmChart, GoalChart, ObjectiveChart, DivisionChart, AreaChart, ProjectChart };
-                        Expander = new ExpandCollapsePanel[] {FundExpander, FundExpander, NpmExpander,
-                        GoalExpander, ObjectiveExpander, DivisionExpander, AreaExpander, ProjectExpander};
-                        for (int i = 0; i<0; i++)
+                        Tab = GetTabs();
+                        Chart = GetChartArray();
+                        Expander = GetExpanders();
+                        foreach(TabPageAdv tb in SummaryTabControl.TabPages)
                         {
-                            Tab[i].Controls.Add(Chart[i]);
-                            Tab[i].Controls.Add(Expander[i]);
-                            SummaryTabControl.TabPages.Add(Tab[i]);
+                            for(int i = 0; i < Tab.Length; i++)
+                            {
+                                tb.Controls.Add(Chart[i]);
+                                tb.Controls.Add(Expander[i]);
+
+                            }
                         }
-                        Controls.Add(SummaryTabControl);
                     }
                     catch (Exception e)
                     {
                         MessageBox.Show(e.Message);
+                    }
+                }
+
+                TabPageAdv[] GetTabs()
+                {
+                    try
+                    {
+                        Tab = new TabPageAdv[] {FundTab, BocTab, NpmTab, GoalTab, ObjectiveTab,
+                            DivisionTab, AreaTab, ProjectTab};
+                        return Tab;
+                    }
+                    catch (Exception e)
+                    {
+                        MessageBox.Show(e.Message);
+                        return null;
                     }
                 }
 
@@ -320,6 +343,11 @@ namespace Budget
                 }
 
                 private void SummaryTabControl_SelectedIndexChanged(object sender, EventArgs e)
+                {
+
+                }
+
+                private void FundExpander_Paint(object sender, PaintEventArgs e)
                 {
 
                 }
