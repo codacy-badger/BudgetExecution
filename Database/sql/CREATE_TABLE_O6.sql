@@ -1,1 +1,0 @@
-CREATE TABLE "O6" ( `BudgetLevel` TEXT, `RPIO` TEXT, `BFY` TEXT, `Fund` TEXT, `Org` TEXT, `RC` TEXT, `NPM` TEXT, `NpmName` TEXT, `Code` TEXT, `ProgramProjectCode` TEXT, `ProgramProjectName` TEXT, `ProgramArea` TEXT, `ProgramAreaName` TEXT, `BOC` TEXT, `Authority` NUMERIC, `Amount` NUMERIC, `Available` NUMERIC );

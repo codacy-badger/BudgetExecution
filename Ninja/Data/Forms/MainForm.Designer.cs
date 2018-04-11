@@ -440,10 +440,11 @@ namespace Ninja.Forms
             this.BackColor = System.Drawing.Color.Black;
             this.BorderColor = System.Drawing.SystemColors.MenuHighlight;
             this.CaptionBarColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(1603, 953);
+            this.ClientSize = new System.Drawing.Size(1588, 953);
             this.Controls.Add(this.MainChart);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.MaximumSize = new System.Drawing.Size(1600, 1000);
             this.Name = "MainForm";
             this.Text = "MetroForm1";
             this.Load += new System.EventHandler(this.MainForm_Load);

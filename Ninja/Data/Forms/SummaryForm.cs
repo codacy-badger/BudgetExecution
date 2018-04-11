@@ -1,4 +1,4 @@
-using MakarovDev.ExpandCollapsePanel;
+﻿using MakarovDev.ExpandCollapsePanel;
 using MetroSet_UI.Controls;
 using Syncfusion.Windows.Forms.Chart;
 using Syncfusion.Windows.Forms.Tools;
@@ -29,10 +29,8 @@ namespace Budget
                     RC = ProgramElements["RC"];
                     BindingSource.DataSource = D6.Data.BudgetTable;
                     Text = $"P7 Status of Funds";
-                    Tab = GetTabs();
-                    Expander = GetExpanders();
+                    GetControls();
                     GetFilterButtons();
-                    Chart = GetChartArray();
                 }
 
                 public SummaryForm(Source source)
@@ -46,11 +44,9 @@ namespace Budget
                         Table = BudgetMetric.Table;
                         ProgramElements = BudgetMetric.ProgramElements;
                         BindingSource.DataSource = BudgetMetric.Table;
-                        Tab = GetTabs();
-                        Expander = GetExpanders();
+                        GetControls();
                         GetFilterButtons();
                         Text = "Region 6 Summary";
-                        Chart = GetChartArray();
                     }
                     if (source == Source.P8)
                     {
@@ -60,10 +56,8 @@ namespace Budget
                         Table = BudgetMetric.Table;
                         ProgramElements = BudgetMetric.ProgramElements;
                         RC = Data.ProgramElements["RC"];
-                        Tab = GetTabs();
-                        Expander = GetExpanders();
+                        GetControls();
                         GetFilterButtons();
-                        Chart = GetChartArray();
                         Text = "R6 Division Summary";
                     }
                 }
@@ -76,12 +70,10 @@ namespace Budget
                     DataSet = D6.BudgetData;
                     Table = D6.Table;
                     BudgetMetric = new DataMetric(Data);
-                    Tab = GetTabs();
-                    Expander = GetExpanders();
+                    GetControls();
                     GetFilterButtons();
                     Text = $"{D6.Org.Name} Summary";
                     BindingSource.DataSource = Table;
-                    Chart = GetChartArray();
                 }
 
 
@@ -91,7 +83,7 @@ namespace Budget
                 public DataMetric BudgetMetric { get; }
                 public DataSet DataSet { get; }
                 private TabPageAdv[] Tab { get; set; }
-                public ListBox[] FilterBox { get; set; }
+                public FlowLayoutPanel[] FilterPanel { get; set; }
                 public decimal[] Metrics { get; }
                 public FormData Ninja { get; set; }
                 public Dictionary<string, string[]> ProgramElements { get; }
@@ -108,10 +100,9 @@ namespace Budget
 
                 private void Form_Load(object sender, EventArgs e)
                 {
-                    Chart = GetChartArray();
                     var title = $"R6 Funding" ;
-                    //FundChart = new BudgetChart(FundChart, title, new ChartData(Data, ChartFilter.Fund).InputTotals).Activate();
-                    //BocChart = new BudgetChart(BocChart, title, new ChartData(Data, ChartFilter.Fund).InputTotals).Activate();
+                    FundChart = new BudgetChart(FundChart, title, new ChartData(Data, ChartFilter.Fund).InputTotals).Activate();
+                    BocChart = new BudgetChart(BocChart, title, new ChartData(Data, ChartFilter.Fund).InputTotals).Activate();
                     //NpmChart = new BudgetChart(NpmChart, title, new ChartData(Data, ChartFilter.Fund).InputTotals).Activate();
                     //GoalChart = new BudgetChart(GoalChart, title, new ChartData(Data, ChartFilter.Fund).InputTotals).Activate();
                     //ObjChart = new BudgetChart(ObjChart, title, new ChartData(Data, ChartFilter.Fund).InputTotals).Activate();
@@ -122,15 +113,26 @@ namespace Budget
 
                 private ChartControl[] GetChartArray()
                 {
-                    return new ChartControl[] { FundChart, BocChart, NpmChart, GoalChart, ObjChart, DivisionChart, AreaChart, ProjectChart };
+                    var charts = new ChartControl[] { FundChart, FundChart, NpmChart, GoalChart, ObjectiveChart, DivisionChart, AreaChart, ProjectChart };
+                    foreach (ChartControl chart in charts)
+                        Controls.Add(chart);
+                    return charts;
                 }
-
+                
                 ExpandCollapsePanel[] GetExpanders()
                 {
                     try
                     {
-                        var expanders = new ExpandCollapsePanel[] {FundExpander, BocExpander, NpmExpander,
-                        GoalExpander, ObjectiveEpxpander, DivisionExpander, AreaExpander, ProjectExpander};
+                        var expanders = new ExpandCollapsePanel[] {FundExpander, FundExpander, NpmExpander,
+                        GoalExpander, ObjectiveExpander, DivisionExpander, AreaExpander, ProjectExpander};
+                        var fp = new FlowLayoutPanel();
+                        foreach (ExpandCollapsePanel exp in expanders)
+                        {
+                            fp.FlowDirection = FlowDirection.TopDown;
+                            fp.BackColor = Color.Black;
+                            exp.Controls.Add(fp);
+                            Controls.Add(exp);
+                        }
                         return expanders;
                     }
                     catch (Exception e)
@@ -162,6 +164,7 @@ namespace Budget
                         panel.AutoSize = true;
                         b.Tag = f;
                     }
+                    Controls.Add(panel);
                 }
 
                 private void GetFilterButtons()
@@ -169,7 +172,7 @@ namespace Budget
                     try
                     {
                         GetMetroSetButtons(fp1, BudgetMetric.ProgramElements["FundName"]);
-                        GetMetroSetButtons(fp2, BudgetMetric.ProgramElements["BocName"]);
+                        GetMetroSetButtons(fp1, BudgetMetric.ProgramElements["BocName"]);
                         GetMetroSetButtons(fp3, BudgetMetric.ProgramElements["NPM"]);
                         GetMetroSetButtons(fp4, BudgetMetric.ProgramElements["GoalName"]);
                         GetMetroSetButtons(fp5, BudgetMetric.ProgramElements["ObjectiveName"]);
@@ -232,18 +235,26 @@ namespace Budget
 
                 }
 
-                private TabPageAdv[] GetTabs()
+                void GetControls()
                 {
                     try
                     {
-                        var tabs = new TabPageAdv[] {FundTab, BocTab, NpmTab, GoalTab, ObjectTab,
-                            DivisionTab, ProgramAreaTab, ProgramProjectTab};
-                        return tabs;
+                        Tab = new TabPageAdv[] {FundTab, BocTab, NpmTab, GoalTab, ObjectiveTab,
+                            DivisionTab, AreaTab, ProjectTab};
+                        Chart = new ChartControl[] { FundChart, FundChart, NpmChart, GoalChart, ObjectiveChart, DivisionChart, AreaChart, ProjectChart };
+                        Expander = new ExpandCollapsePanel[] {FundExpander, FundExpander, NpmExpander,
+                        GoalExpander, ObjectiveExpander, DivisionExpander, AreaExpander, ProjectExpander};
+                        for (int i = 0; i<0; i++)
+                        {
+                            Tab[i].Controls.Add(Chart[i]);
+                            Tab[i].Controls.Add(Expander[i]);
+                            SummaryTabControl.TabPages.Add(Tab[i]);
+                        }
+                        Controls.Add(SummaryTabControl);
                     }
                     catch (Exception e)
                     {
                         MessageBox.Show(e.Message);
-                        return null;
                     }
                 }
 
@@ -306,6 +317,11 @@ namespace Budget
                 {
                     var rb = sender as RadioButton;
                     var filter = rb.Tag.ToString();
+                }
+
+                private void SummaryTabControl_SelectedIndexChanged(object sender, EventArgs e)
+                {
+
                 }
             }
         }

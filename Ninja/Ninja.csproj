@@ -239,12 +239,6 @@
     <Compile Include="Data\Forms\FunctionalityForm.Designer.cs">
       <DependentUpon>FunctionalityForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Data\Forms\SumForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Data\Forms\SumForm.Designer.cs">
-      <DependentUpon>SumForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Data\Forms\SummaryForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -396,9 +390,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Data\Forms\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Data\Forms\SumForm.resx">
-      <DependentUpon>SumForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Data\Forms\SummaryForm.resx">
       <DependentUpon>SummaryForm.cs</DependentUpon>
