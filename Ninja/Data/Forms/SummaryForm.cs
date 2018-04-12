@@ -29,7 +29,6 @@ namespace Budget
                     RC = ProgramElements["RC"];
                     BindingSource.DataSource = D6.Data.BudgetTable;
                     Text = $"P7 Status of Funds";
-                    GetControls();
                     GetFilterButtons();
                 }
 
@@ -44,7 +43,6 @@ namespace Budget
                         Table = BudgetMetric.Table;
                         ProgramElements = BudgetMetric.ProgramElements;
                         BindingSource.DataSource = BudgetMetric.Table;
-                        GetControls();
                         GetFilterButtons();
                         Text = "Region 6 Summary";
                     }
@@ -56,7 +54,6 @@ namespace Budget
                         Table = BudgetMetric.Table;
                         ProgramElements = BudgetMetric.ProgramElements;
                         RC = Data.ProgramElements["RC"];
-                        GetControls();
                         GetFilterButtons();
                         Text = "R6 Division Summary";
                     }
@@ -70,7 +67,6 @@ namespace Budget
                     DataSet = D6.BudgetData;
                     Table = D6.Table;
                     BudgetMetric = new DataMetric(Data);
-                    GetControls();
                     GetFilterButtons();
                     Text = $"{D6.Org.Name} Summary";
                     BindingSource.DataSource = Table;
@@ -111,46 +107,6 @@ namespace Budget
                     SummaryTabControl.SelectedIndexChanged += TabControl_SelectedIndexChanged;
                 }
 
-                private ChartControl[] GetChartArray()
-                {
-                    Chart = new ChartControl[] { FundChart, FundChart, NpmChart, GoalChart, ObjectiveChart, DivisionChart, AreaChart, ProjectChart };
-                    foreach (ChartControl chart in Chart)
-                    {
-                        chart.Location = new Point(37, 54);
-                        chart.Size = new Size(1203, 598);
-                        Controls.Add(chart);
-                    }
-                    return Chart;
-                }
-                
-                ExpandCollapsePanel[] GetExpanders()
-                {
-                    try
-                    {
-                        Expander = new ExpandCollapsePanel[] {FundExpander, BocExpander, NpmExpander,
-                        GoalExpander, ObjectiveExpander, DivisionExpander, AreaExpander, ProjectExpander};
-                        foreach (ExpandCollapsePanel exp in Expander)
-                        {
-                            exp.Location = new Point(1337, 31);
-                            exp.Size = new Size(229, 734);
-                            exp.IsExpanded = false;
-                            exp.UseAnimation = true;
-                            var fp = new FlowLayoutPanel();
-                            fp.FlowDirection = FlowDirection.TopDown;
-                            fp.BackColor = Color.Black;
-                            exp.Controls.Add(fp);
-                            Controls.Add(exp);
-                        }
-                        return Expander;
-                    }
-                    catch (Exception e)
-                    {
-
-                        MessageBox.Show(e.Message + e.StackTrace);
-                        return null;
-                    }
-                }
-
                 private void GetMetroSetButtons(FlowLayoutPanel panel, string[] list)
                 {
                     panel.Controls.Clear();
@@ -172,7 +128,6 @@ namespace Budget
                         panel.AutoSize = true;
                         b.Tag = f;
                     }
-                    Controls.Add(panel);
                 }
 
                 private void GetFilterButtons()
@@ -241,44 +196,6 @@ namespace Budget
                 private void ListBox_SelectedItemChanged(object sender, EventArgs e)
                 {
 
-                }
-
-                void GetControls()
-                {
-                    try
-                    {
-                        Tab = GetTabs();
-                        Chart = GetChartArray();
-                        Expander = GetExpanders();
-                        foreach(TabPageAdv tb in SummaryTabControl.TabPages)
-                        {
-                            for(int i = 0; i < Tab.Length; i++)
-                            {
-                                tb.Controls.Add(Chart[i]);
-                                tb.Controls.Add(Expander[i]);
-
-                            }
-                        }
-                    }
-                    catch (Exception e)
-                    {
-                        MessageBox.Show(e.Message);
-                    }
-                }
-
-                TabPageAdv[] GetTabs()
-                {
-                    try
-                    {
-                        Tab = new TabPageAdv[] {FundTab, BocTab, NpmTab, GoalTab, ObjectiveTab,
-                            DivisionTab, AreaTab, ProjectTab};
-                        return Tab;
-                    }
-                    catch (Exception e)
-                    {
-                        MessageBox.Show(e.Message);
-                        return null;
-                    }
                 }
 
                 Dictionary<string, string> GetFilterCategories()
@@ -351,6 +268,7 @@ namespace Budget
                 {
 
                 }
+
             }
         }
     }

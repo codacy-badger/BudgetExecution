@@ -149,40 +149,34 @@ namespace Budget
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SummaryForm));
             this.SummaryTabControl = new Syncfusion.Windows.Forms.Tools.TabControlAdv();
             this.FundTab = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
-            this.FundChart = new Syncfusion.Windows.Forms.Chart.ChartControl();
             this.FundExpander = new MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel();
             this.fp1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.FundChart = new Syncfusion.Windows.Forms.Chart.ChartControl();
             this.BocTab = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
             this.BocChart = new Syncfusion.Windows.Forms.Chart.ChartControl();
             this.BocExpander = new MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel();
             this.fp2 = new System.Windows.Forms.FlowLayoutPanel();
             this.NpmTab = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
-            this.sc3 = new System.Windows.Forms.SplitContainer();
-            this.NpmChart = new Syncfusion.Windows.Forms.Chart.ChartControl();
             this.NpmExpander = new MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel();
             this.fp3 = new System.Windows.Forms.FlowLayoutPanel();
+            this.NpmChart = new Syncfusion.Windows.Forms.Chart.ChartControl();
             this.GoalTab = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
-            this.sc4 = new System.Windows.Forms.SplitContainer();
-            this.GoalChart = new Syncfusion.Windows.Forms.Chart.ChartControl();
             this.GoalExpander = new MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel();
             this.fp4 = new System.Windows.Forms.FlowLayoutPanel();
+            this.GoalChart = new Syncfusion.Windows.Forms.Chart.ChartControl();
             this.ObjectiveTab = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
-            this.sc5 = new System.Windows.Forms.SplitContainer();
             this.ObjectiveChart = new Syncfusion.Windows.Forms.Chart.ChartControl();
             this.ObjectiveExpander = new MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel();
             this.fp5 = new System.Windows.Forms.FlowLayoutPanel();
             this.DivisionTab = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
-            this.sc6 = new System.Windows.Forms.SplitContainer();
             this.DivisionChart = new Syncfusion.Windows.Forms.Chart.ChartControl();
             this.DivisionExpander = new MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel();
             this.fp6 = new System.Windows.Forms.FlowLayoutPanel();
             this.AreaTab = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
-            this.sc7 = new System.Windows.Forms.SplitContainer();
             this.AreaChart = new Syncfusion.Windows.Forms.Chart.ChartControl();
             this.AreaExpander = new MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel();
             this.fp7 = new System.Windows.Forms.FlowLayoutPanel();
             this.ProjectTab = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
-            this.sc8 = new System.Windows.Forms.SplitContainer();
             this.ProjectChart = new Syncfusion.Windows.Forms.Chart.ChartControl();
             this.ProjectExpander = new MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel();
             this.fp8 = new System.Windows.Forms.FlowLayoutPanel();
@@ -194,40 +188,16 @@ namespace Budget
             this.BocTab.SuspendLayout();
             this.BocExpander.SuspendLayout();
             this.NpmTab.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.sc3)).BeginInit();
-            this.sc3.Panel1.SuspendLayout();
-            this.sc3.Panel2.SuspendLayout();
-            this.sc3.SuspendLayout();
             this.NpmExpander.SuspendLayout();
             this.GoalTab.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.sc4)).BeginInit();
-            this.sc4.Panel1.SuspendLayout();
-            this.sc4.Panel2.SuspendLayout();
-            this.sc4.SuspendLayout();
             this.GoalExpander.SuspendLayout();
             this.ObjectiveTab.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.sc5)).BeginInit();
-            this.sc5.Panel1.SuspendLayout();
-            this.sc5.Panel2.SuspendLayout();
-            this.sc5.SuspendLayout();
             this.ObjectiveExpander.SuspendLayout();
             this.DivisionTab.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.sc6)).BeginInit();
-            this.sc6.Panel1.SuspendLayout();
-            this.sc6.Panel2.SuspendLayout();
-            this.sc6.SuspendLayout();
             this.DivisionExpander.SuspendLayout();
             this.AreaTab.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.sc7)).BeginInit();
-            this.sc7.Panel1.SuspendLayout();
-            this.sc7.Panel2.SuspendLayout();
-            this.sc7.SuspendLayout();
             this.AreaExpander.SuspendLayout();
             this.ProjectTab.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.sc8)).BeginInit();
-            this.sc8.Panel1.SuspendLayout();
-            this.sc8.Panel2.SuspendLayout();
-            this.sc8.SuspendLayout();
             this.ProjectExpander.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BindingSource)).BeginInit();
             this.SuspendLayout();
@@ -264,8 +234,8 @@ namespace Budget
             // 
             // FundTab
             // 
-            this.FundTab.Controls.Add(this.FundChart);
             this.FundTab.Controls.Add(this.FundExpander);
+            this.FundTab.Controls.Add(this.FundChart);
             this.FundTab.Image = null;
             this.FundTab.ImageSize = new System.Drawing.Size(16, 16);
             this.FundTab.Location = new System.Drawing.Point(1, 34);
@@ -276,6 +246,33 @@ namespace Budget
             this.FundTab.TabIndex = 1;
             this.FundTab.Text = "Appropriation";
             this.FundTab.ThemesEnabled = false;
+            // 
+            // FundExpander
+            // 
+            this.FundExpander.BackColor = System.Drawing.Color.Black;
+            this.FundExpander.ButtonSize = MakarovDev.ExpandCollapsePanel.ExpandCollapseButton.ExpandButtonSize.Small;
+            this.FundExpander.ButtonStyle = MakarovDev.ExpandCollapsePanel.ExpandCollapseButton.ExpandButtonStyle.Circle;
+            this.FundExpander.Controls.Add(this.fp1);
+            this.FundExpander.ExpandedHeight = 734;
+            this.FundExpander.IsExpanded = false;
+            this.FundExpander.Location = new System.Drawing.Point(1337, 31);
+            this.FundExpander.Name = "FundExpander";
+            this.FundExpander.Size = new System.Drawing.Size(229, 37);
+            this.FundExpander.TabIndex = 107;
+            this.FundExpander.Text = "Filter";
+            this.FundExpander.UseAnimation = true;
+            this.FundExpander.Paint += new System.Windows.Forms.PaintEventHandler(this.FundExpander_Paint);
+            // 
+            // fp1
+            // 
+            this.fp1.AutoScroll = true;
+            this.fp1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.fp1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.fp1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(130)))), ((int)(((byte)(180)))));
+            this.fp1.Location = new System.Drawing.Point(20, 41);
+            this.fp1.Name = "fp1";
+            this.fp1.Size = new System.Drawing.Size(192, 507);
+            this.fp1.TabIndex = 47;
             // 
             // FundChart
             // 
@@ -395,33 +392,6 @@ namespace Budget
             this.FundChart.ToolBar.Items.Add(chartToolBarSeries3DItem1);
             this.FundChart.ToolBar.Items.Add(chartToolBarShowLegendItem1);
             // 
-            // FundExpander
-            // 
-            this.FundExpander.BackColor = System.Drawing.Color.Black;
-            this.FundExpander.ButtonSize = MakarovDev.ExpandCollapsePanel.ExpandCollapseButton.ExpandButtonSize.Small;
-            this.FundExpander.ButtonStyle = MakarovDev.ExpandCollapsePanel.ExpandCollapseButton.ExpandButtonStyle.Circle;
-            this.FundExpander.Controls.Add(this.fp1);
-            this.FundExpander.ExpandedHeight = 734;
-            this.FundExpander.IsExpanded = true;
-            this.FundExpander.Location = new System.Drawing.Point(1337, 31);
-            this.FundExpander.Name = "FundExpander";
-            this.FundExpander.Size = new System.Drawing.Size(229, 734);
-            this.FundExpander.TabIndex = 107;
-            this.FundExpander.Text = "Filter";
-            this.FundExpander.UseAnimation = true;
-            this.FundExpander.Paint += new System.Windows.Forms.PaintEventHandler(this.FundExpander_Paint);
-            // 
-            // fp1
-            // 
-            this.fp1.AutoScroll = true;
-            this.fp1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.fp1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.fp1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(130)))), ((int)(((byte)(180)))));
-            this.fp1.Location = new System.Drawing.Point(20, 41);
-            this.fp1.Name = "fp1";
-            this.fp1.Size = new System.Drawing.Size(192, 507);
-            this.fp1.TabIndex = 47;
-            // 
             // BocTab
             // 
             this.BocTab.Controls.Add(this.BocChart);
@@ -474,7 +444,7 @@ namespace Budget
             this.BocChart.Legend.Visible = false;
             this.BocChart.LegendsPlacement = Syncfusion.Windows.Forms.Chart.ChartPlacement.Outside;
             this.BocChart.Localize = null;
-            this.BocChart.Location = new System.Drawing.Point(74, 84);
+            this.BocChart.Location = new System.Drawing.Point(37, 54);
             this.BocChart.Margin = new System.Windows.Forms.Padding(2);
             this.BocChart.Name = "BocChart";
             this.BocChart.Palette = Syncfusion.Windows.Forms.Chart.ChartColorPalette.Custom;
@@ -542,7 +512,7 @@ namespace Budget
             this.BocChart.Series3D = true;
             this.BocChart.SeriesHighlight = true;
             this.BocChart.ShadowColor = new Syncfusion.Drawing.BrushInfo(Syncfusion.Drawing.GradientStyle.PathRectangle, System.Drawing.SystemColors.WindowText, System.Drawing.Color.Silver);
-            this.BocChart.Size = new System.Drawing.Size(1066, 631);
+            this.BocChart.Size = new System.Drawing.Size(1203, 598);
             this.BocChart.Spacing = 5F;
             this.BocChart.SpacingBetweenPoints = 5F;
             this.BocChart.Style3D = true;
@@ -568,11 +538,11 @@ namespace Budget
             this.BocExpander.ButtonSize = MakarovDev.ExpandCollapsePanel.ExpandCollapseButton.ExpandButtonSize.Small;
             this.BocExpander.ButtonStyle = MakarovDev.ExpandCollapsePanel.ExpandCollapseButton.ExpandButtonStyle.Circle;
             this.BocExpander.Controls.Add(this.fp2);
-            this.BocExpander.ExpandedHeight = 750;
-            this.BocExpander.IsExpanded = true;
-            this.BocExpander.Location = new System.Drawing.Point(1316, 21);
+            this.BocExpander.ExpandedHeight = 734;
+            this.BocExpander.IsExpanded = false;
+            this.BocExpander.Location = new System.Drawing.Point(1337, 31);
             this.BocExpander.Name = "BocExpander";
-            this.BocExpander.Size = new System.Drawing.Size(219, 750);
+            this.BocExpander.Size = new System.Drawing.Size(229, 37);
             this.BocExpander.TabIndex = 107;
             this.BocExpander.Text = "Filter";
             this.BocExpander.UseAnimation = true;
@@ -590,7 +560,8 @@ namespace Budget
             // 
             // NpmTab
             // 
-            this.NpmTab.Controls.Add(this.sc3);
+            this.NpmTab.Controls.Add(this.NpmChart);
+            this.NpmTab.Controls.Add(this.NpmExpander);
             this.NpmTab.Image = null;
             this.NpmTab.ImageSize = new System.Drawing.Size(16, 16);
             this.NpmTab.Location = new System.Drawing.Point(1, 34);
@@ -602,26 +573,31 @@ namespace Budget
             this.NpmTab.Text = "NPM";
             this.NpmTab.ThemesEnabled = false;
             // 
-            // sc3
+            // NpmExpander
             // 
-            this.sc3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.sc3.Location = new System.Drawing.Point(0, 0);
-            this.sc3.Margin = new System.Windows.Forms.Padding(2);
-            this.sc3.Name = "sc3";
+            this.NpmExpander.BackColor = System.Drawing.Color.Black;
+            this.NpmExpander.ButtonSize = MakarovDev.ExpandCollapsePanel.ExpandCollapseButton.ExpandButtonSize.Small;
+            this.NpmExpander.ButtonStyle = MakarovDev.ExpandCollapsePanel.ExpandCollapseButton.ExpandButtonStyle.Circle;
+            this.NpmExpander.Controls.Add(this.fp3);
+            this.NpmExpander.ExpandedHeight = 750;
+            this.NpmExpander.IsExpanded = false;
+            this.NpmExpander.Location = new System.Drawing.Point(1337, 31);
+            this.NpmExpander.Name = "NpmExpander";
+            this.NpmExpander.Size = new System.Drawing.Size(229, 37);
+            this.NpmExpander.TabIndex = 107;
+            this.NpmExpander.Text = "Filter";
+            this.NpmExpander.UseAnimation = true;
             // 
-            // sc3.Panel1
+            // fp3
             // 
-            this.sc3.Panel1.Controls.Add(this.NpmChart);
-            this.sc3.Panel1.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            // 
-            // sc3.Panel2
-            // 
-            this.sc3.Panel2.Controls.Add(this.NpmExpander);
-            this.sc3.Panel2.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sc3.Size = new System.Drawing.Size(1586, 918);
-            this.sc3.SplitterDistance = 1329;
-            this.sc3.SplitterWidth = 7;
-            this.sc3.TabIndex = 99;
+            this.fp3.AutoScroll = true;
+            this.fp3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.fp3.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.fp3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(130)))), ((int)(((byte)(180)))));
+            this.fp3.Location = new System.Drawing.Point(10, 41);
+            this.fp3.Name = "fp3";
+            this.fp3.Size = new System.Drawing.Size(192, 507);
+            this.fp3.TabIndex = 47;
             // 
             // NpmChart
             // 
@@ -646,7 +622,6 @@ namespace Budget
             this.NpmChart.Depth = 250F;
             this.NpmChart.DisplayChartContextMenu = false;
             this.NpmChart.DisplaySeriesContextMenu = false;
-            this.NpmChart.Dock = System.Windows.Forms.DockStyle.Fill;
             this.NpmChart.EnableMouseRotation = true;
             this.NpmChart.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NpmChart.ForeColor = System.Drawing.SystemColors.MenuHighlight;
@@ -661,7 +636,7 @@ namespace Budget
             this.NpmChart.Legend.Visible = false;
             this.NpmChart.LegendsPlacement = Syncfusion.Windows.Forms.Chart.ChartPlacement.Outside;
             this.NpmChart.Localize = null;
-            this.NpmChart.Location = new System.Drawing.Point(0, 0);
+            this.NpmChart.Location = new System.Drawing.Point(37, 54);
             this.NpmChart.Margin = new System.Windows.Forms.Padding(2);
             this.NpmChart.Name = "NpmChart";
             this.NpmChart.Palette = Syncfusion.Windows.Forms.Chart.ChartColorPalette.Custom;
@@ -725,7 +700,7 @@ namespace Budget
             this.NpmChart.Series3D = true;
             this.NpmChart.SeriesHighlight = true;
             this.NpmChart.ShadowColor = new Syncfusion.Drawing.BrushInfo(Syncfusion.Drawing.GradientStyle.PathRectangle, System.Drawing.SystemColors.WindowText, System.Drawing.Color.Silver);
-            this.NpmChart.Size = new System.Drawing.Size(1329, 918);
+            this.NpmChart.Size = new System.Drawing.Size(1203, 598);
             this.NpmChart.Spacing = 5F;
             this.NpmChart.SpacingBetweenPoints = 5F;
             this.NpmChart.Style3D = true;
@@ -745,35 +720,10 @@ namespace Budget
             this.NpmChart.ToolBar.Items.Add(chartToolBarSeries3DItem3);
             this.NpmChart.ToolBar.Items.Add(chartToolBarShowLegendItem3);
             // 
-            // NpmExpander
-            // 
-            this.NpmExpander.BackColor = System.Drawing.Color.Black;
-            this.NpmExpander.ButtonSize = MakarovDev.ExpandCollapsePanel.ExpandCollapseButton.ExpandButtonSize.Small;
-            this.NpmExpander.ButtonStyle = MakarovDev.ExpandCollapsePanel.ExpandCollapseButton.ExpandButtonStyle.Circle;
-            this.NpmExpander.Controls.Add(this.fp3);
-            this.NpmExpander.ExpandedHeight = 750;
-            this.NpmExpander.IsExpanded = false;
-            this.NpmExpander.Location = new System.Drawing.Point(3, 5);
-            this.NpmExpander.Name = "NpmExpander";
-            this.NpmExpander.Size = new System.Drawing.Size(227, 37);
-            this.NpmExpander.TabIndex = 107;
-            this.NpmExpander.Text = "Filter";
-            this.NpmExpander.UseAnimation = true;
-            // 
-            // fp3
-            // 
-            this.fp3.AutoScroll = true;
-            this.fp3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.fp3.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.fp3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(130)))), ((int)(((byte)(180)))));
-            this.fp3.Location = new System.Drawing.Point(10, 41);
-            this.fp3.Name = "fp3";
-            this.fp3.Size = new System.Drawing.Size(192, 507);
-            this.fp3.TabIndex = 47;
-            // 
             // GoalTab
             // 
-            this.GoalTab.Controls.Add(this.sc4);
+            this.GoalTab.Controls.Add(this.GoalChart);
+            this.GoalTab.Controls.Add(this.GoalExpander);
             this.GoalTab.Image = null;
             this.GoalTab.ImageSize = new System.Drawing.Size(16, 16);
             this.GoalTab.Location = new System.Drawing.Point(1, 34);
@@ -785,26 +735,31 @@ namespace Budget
             this.GoalTab.Text = "Goal";
             this.GoalTab.ThemesEnabled = false;
             // 
-            // sc4
+            // GoalExpander
             // 
-            this.sc4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.sc4.Location = new System.Drawing.Point(0, 0);
-            this.sc4.Margin = new System.Windows.Forms.Padding(2);
-            this.sc4.Name = "sc4";
+            this.GoalExpander.BackColor = System.Drawing.Color.Black;
+            this.GoalExpander.ButtonSize = MakarovDev.ExpandCollapsePanel.ExpandCollapseButton.ExpandButtonSize.Small;
+            this.GoalExpander.ButtonStyle = MakarovDev.ExpandCollapsePanel.ExpandCollapseButton.ExpandButtonStyle.Circle;
+            this.GoalExpander.Controls.Add(this.fp4);
+            this.GoalExpander.ExpandedHeight = 750;
+            this.GoalExpander.IsExpanded = false;
+            this.GoalExpander.Location = new System.Drawing.Point(1337, 31);
+            this.GoalExpander.Name = "GoalExpander";
+            this.GoalExpander.Size = new System.Drawing.Size(229, 37);
+            this.GoalExpander.TabIndex = 107;
+            this.GoalExpander.Text = "Filter";
+            this.GoalExpander.UseAnimation = true;
             // 
-            // sc4.Panel1
+            // fp4
             // 
-            this.sc4.Panel1.Controls.Add(this.GoalChart);
-            this.sc4.Panel1.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            // 
-            // sc4.Panel2
-            // 
-            this.sc4.Panel2.Controls.Add(this.GoalExpander);
-            this.sc4.Panel2.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sc4.Size = new System.Drawing.Size(1586, 918);
-            this.sc4.SplitterDistance = 1329;
-            this.sc4.SplitterWidth = 7;
-            this.sc4.TabIndex = 99;
+            this.fp4.AutoScroll = true;
+            this.fp4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.fp4.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.fp4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(130)))), ((int)(((byte)(180)))));
+            this.fp4.Location = new System.Drawing.Point(10, 41);
+            this.fp4.Name = "fp4";
+            this.fp4.Size = new System.Drawing.Size(192, 507);
+            this.fp4.TabIndex = 47;
             // 
             // GoalChart
             // 
@@ -829,7 +784,6 @@ namespace Budget
             this.GoalChart.Depth = 250F;
             this.GoalChart.DisplayChartContextMenu = false;
             this.GoalChart.DisplaySeriesContextMenu = false;
-            this.GoalChart.Dock = System.Windows.Forms.DockStyle.Fill;
             this.GoalChart.EnableMouseRotation = true;
             this.GoalChart.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GoalChart.ForeColor = System.Drawing.SystemColors.MenuHighlight;
@@ -844,7 +798,7 @@ namespace Budget
             this.GoalChart.Legend.Visible = false;
             this.GoalChart.LegendsPlacement = Syncfusion.Windows.Forms.Chart.ChartPlacement.Outside;
             this.GoalChart.Localize = null;
-            this.GoalChart.Location = new System.Drawing.Point(0, 0);
+            this.GoalChart.Location = new System.Drawing.Point(143, 135);
             this.GoalChart.Margin = new System.Windows.Forms.Padding(2);
             this.GoalChart.Name = "GoalChart";
             this.GoalChart.Palette = Syncfusion.Windows.Forms.Chart.ChartColorPalette.Custom;
@@ -908,7 +862,7 @@ namespace Budget
             this.GoalChart.Series3D = true;
             this.GoalChart.SeriesHighlight = true;
             this.GoalChart.ShadowColor = new Syncfusion.Drawing.BrushInfo(Syncfusion.Drawing.GradientStyle.PathRectangle, System.Drawing.SystemColors.WindowText, System.Drawing.Color.Silver);
-            this.GoalChart.Size = new System.Drawing.Size(1329, 918);
+            this.GoalChart.Size = new System.Drawing.Size(1203, 598);
             this.GoalChart.Spacing = 5F;
             this.GoalChart.SpacingBetweenPoints = 5F;
             this.GoalChart.Style3D = true;
@@ -928,35 +882,10 @@ namespace Budget
             this.GoalChart.ToolBar.Items.Add(chartToolBarSeries3DItem4);
             this.GoalChart.ToolBar.Items.Add(chartToolBarShowLegendItem4);
             // 
-            // GoalExpander
-            // 
-            this.GoalExpander.BackColor = System.Drawing.Color.Black;
-            this.GoalExpander.ButtonSize = MakarovDev.ExpandCollapsePanel.ExpandCollapseButton.ExpandButtonSize.Small;
-            this.GoalExpander.ButtonStyle = MakarovDev.ExpandCollapsePanel.ExpandCollapseButton.ExpandButtonStyle.Circle;
-            this.GoalExpander.Controls.Add(this.fp4);
-            this.GoalExpander.ExpandedHeight = 750;
-            this.GoalExpander.IsExpanded = false;
-            this.GoalExpander.Location = new System.Drawing.Point(3, 5);
-            this.GoalExpander.Name = "GoalExpander";
-            this.GoalExpander.Size = new System.Drawing.Size(226, 37);
-            this.GoalExpander.TabIndex = 107;
-            this.GoalExpander.Text = "Filter";
-            this.GoalExpander.UseAnimation = true;
-            // 
-            // fp4
-            // 
-            this.fp4.AutoScroll = true;
-            this.fp4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.fp4.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.fp4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(130)))), ((int)(((byte)(180)))));
-            this.fp4.Location = new System.Drawing.Point(10, 41);
-            this.fp4.Name = "fp4";
-            this.fp4.Size = new System.Drawing.Size(192, 507);
-            this.fp4.TabIndex = 47;
-            // 
             // ObjectiveTab
             // 
-            this.ObjectiveTab.Controls.Add(this.sc5);
+            this.ObjectiveTab.Controls.Add(this.ObjectiveExpander);
+            this.ObjectiveTab.Controls.Add(this.ObjectiveChart);
             this.ObjectiveTab.Image = null;
             this.ObjectiveTab.ImageSize = new System.Drawing.Size(16, 16);
             this.ObjectiveTab.Location = new System.Drawing.Point(1, 34);
@@ -967,29 +896,6 @@ namespace Budget
             this.ObjectiveTab.TabIndex = 5;
             this.ObjectiveTab.Text = "Objective";
             this.ObjectiveTab.ThemesEnabled = false;
-            // 
-            // sc5
-            // 
-            this.sc5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.sc5.Location = new System.Drawing.Point(0, 0);
-            this.sc5.Margin = new System.Windows.Forms.Padding(2);
-            this.sc5.Name = "sc5";
-            // 
-            // sc5.Panel1
-            // 
-            this.sc5.Panel1.Controls.Add(this.ObjectiveChart);
-            this.sc5.Panel1.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            // 
-            // sc5.Panel2
-            // 
-            this.sc5.Panel2.Controls.Add(this.ObjectiveExpander);
-            this.sc5.Panel2.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sc5.Size = new System.Drawing.Size(1585, 983);
-            this.sc5.SplitterDistance = 1329;
-            this.sc5.SplitterWidth = 7;
-            this.sc5.TabIndex = 99;
             // 
             // ObjectiveChart
             // 
@@ -1014,7 +920,6 @@ namespace Budget
             this.ObjectiveChart.Depth = 250F;
             this.ObjectiveChart.DisplayChartContextMenu = false;
             this.ObjectiveChart.DisplaySeriesContextMenu = false;
-            this.ObjectiveChart.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ObjectiveChart.EnableMouseRotation = true;
             this.ObjectiveChart.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ObjectiveChart.ForeColor = System.Drawing.SystemColors.MenuHighlight;
@@ -1029,7 +934,7 @@ namespace Budget
             this.ObjectiveChart.Legend.Visible = false;
             this.ObjectiveChart.LegendsPlacement = Syncfusion.Windows.Forms.Chart.ChartPlacement.Outside;
             this.ObjectiveChart.Localize = null;
-            this.ObjectiveChart.Location = new System.Drawing.Point(0, 0);
+            this.ObjectiveChart.Location = new System.Drawing.Point(37, 54);
             this.ObjectiveChart.Margin = new System.Windows.Forms.Padding(2);
             this.ObjectiveChart.Name = "ObjectiveChart";
             this.ObjectiveChart.Palette = Syncfusion.Windows.Forms.Chart.ChartColorPalette.Custom;
@@ -1093,7 +998,7 @@ namespace Budget
             this.ObjectiveChart.Series3D = true;
             this.ObjectiveChart.SeriesHighlight = true;
             this.ObjectiveChart.ShadowColor = new Syncfusion.Drawing.BrushInfo(Syncfusion.Drawing.GradientStyle.PathRectangle, System.Drawing.SystemColors.WindowText, System.Drawing.Color.Silver);
-            this.ObjectiveChart.Size = new System.Drawing.Size(1329, 983);
+            this.ObjectiveChart.Size = new System.Drawing.Size(1203, 598);
             this.ObjectiveChart.Spacing = 5F;
             this.ObjectiveChart.SpacingBetweenPoints = 5F;
             this.ObjectiveChart.Style3D = true;
@@ -1121,9 +1026,9 @@ namespace Budget
             this.ObjectiveExpander.Controls.Add(this.fp5);
             this.ObjectiveExpander.ExpandedHeight = 717;
             this.ObjectiveExpander.IsExpanded = false;
-            this.ObjectiveExpander.Location = new System.Drawing.Point(3, 5);
+            this.ObjectiveExpander.Location = new System.Drawing.Point(1337, 31);
             this.ObjectiveExpander.Name = "ObjectiveExpander";
-            this.ObjectiveExpander.Size = new System.Drawing.Size(236, 37);
+            this.ObjectiveExpander.Size = new System.Drawing.Size(229, 37);
             this.ObjectiveExpander.TabIndex = 107;
             this.ObjectiveExpander.Text = "Filter";
             this.ObjectiveExpander.UseAnimation = true;
@@ -1141,7 +1046,8 @@ namespace Budget
             // 
             // DivisionTab
             // 
-            this.DivisionTab.Controls.Add(this.sc6);
+            this.DivisionTab.Controls.Add(this.DivisionExpander);
+            this.DivisionTab.Controls.Add(this.DivisionChart);
             this.DivisionTab.Image = null;
             this.DivisionTab.ImageSize = new System.Drawing.Size(16, 16);
             this.DivisionTab.Location = new System.Drawing.Point(1, 34);
@@ -1152,27 +1058,6 @@ namespace Budget
             this.DivisionTab.TabIndex = 6;
             this.DivisionTab.Text = "Division";
             this.DivisionTab.ThemesEnabled = false;
-            // 
-            // sc6
-            // 
-            this.sc6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.sc6.Location = new System.Drawing.Point(0, 0);
-            this.sc6.Margin = new System.Windows.Forms.Padding(2);
-            this.sc6.Name = "sc6";
-            // 
-            // sc6.Panel1
-            // 
-            this.sc6.Panel1.Controls.Add(this.DivisionChart);
-            this.sc6.Panel1.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            // 
-            // sc6.Panel2
-            // 
-            this.sc6.Panel2.Controls.Add(this.DivisionExpander);
-            this.sc6.Panel2.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sc6.Size = new System.Drawing.Size(1586, 918);
-            this.sc6.SplitterDistance = 1329;
-            this.sc6.SplitterWidth = 7;
-            this.sc6.TabIndex = 99;
             // 
             // DivisionChart
             // 
@@ -1197,7 +1082,6 @@ namespace Budget
             this.DivisionChart.Depth = 250F;
             this.DivisionChart.DisplayChartContextMenu = false;
             this.DivisionChart.DisplaySeriesContextMenu = false;
-            this.DivisionChart.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DivisionChart.EnableMouseRotation = true;
             this.DivisionChart.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DivisionChart.ForeColor = System.Drawing.SystemColors.MenuHighlight;
@@ -1212,7 +1096,7 @@ namespace Budget
             this.DivisionChart.Legend.Visible = false;
             this.DivisionChart.LegendsPlacement = Syncfusion.Windows.Forms.Chart.ChartPlacement.Outside;
             this.DivisionChart.Localize = null;
-            this.DivisionChart.Location = new System.Drawing.Point(0, 0);
+            this.DivisionChart.Location = new System.Drawing.Point(37, 54);
             this.DivisionChart.Margin = new System.Windows.Forms.Padding(2);
             this.DivisionChart.Name = "DivisionChart";
             this.DivisionChart.Palette = Syncfusion.Windows.Forms.Chart.ChartColorPalette.Custom;
@@ -1276,7 +1160,7 @@ namespace Budget
             this.DivisionChart.Series3D = true;
             this.DivisionChart.SeriesHighlight = true;
             this.DivisionChart.ShadowColor = new Syncfusion.Drawing.BrushInfo(Syncfusion.Drawing.GradientStyle.PathRectangle, System.Drawing.SystemColors.WindowText, System.Drawing.Color.Silver);
-            this.DivisionChart.Size = new System.Drawing.Size(1329, 918);
+            this.DivisionChart.Size = new System.Drawing.Size(1203, 598);
             this.DivisionChart.Spacing = 5F;
             this.DivisionChart.SpacingBetweenPoints = 5F;
             this.DivisionChart.Style3D = true;
@@ -1304,9 +1188,9 @@ namespace Budget
             this.DivisionExpander.Controls.Add(this.fp6);
             this.DivisionExpander.ExpandedHeight = 750;
             this.DivisionExpander.IsExpanded = false;
-            this.DivisionExpander.Location = new System.Drawing.Point(3, 5);
+            this.DivisionExpander.Location = new System.Drawing.Point(1337, 31);
             this.DivisionExpander.Name = "DivisionExpander";
-            this.DivisionExpander.Size = new System.Drawing.Size(227, 37);
+            this.DivisionExpander.Size = new System.Drawing.Size(229, 37);
             this.DivisionExpander.TabIndex = 107;
             this.DivisionExpander.Text = "Filter";
             this.DivisionExpander.UseAnimation = true;
@@ -1324,7 +1208,8 @@ namespace Budget
             // 
             // AreaTab
             // 
-            this.AreaTab.Controls.Add(this.sc7);
+            this.AreaTab.Controls.Add(this.AreaChart);
+            this.AreaTab.Controls.Add(this.AreaExpander);
             this.AreaTab.Image = null;
             this.AreaTab.ImageSize = new System.Drawing.Size(16, 16);
             this.AreaTab.Location = new System.Drawing.Point(1, 34);
@@ -1335,27 +1220,6 @@ namespace Budget
             this.AreaTab.TabIndex = 7;
             this.AreaTab.Text = "Program Area";
             this.AreaTab.ThemesEnabled = false;
-            // 
-            // sc7
-            // 
-            this.sc7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.sc7.Location = new System.Drawing.Point(0, 0);
-            this.sc7.Margin = new System.Windows.Forms.Padding(2);
-            this.sc7.Name = "sc7";
-            // 
-            // sc7.Panel1
-            // 
-            this.sc7.Panel1.Controls.Add(this.AreaChart);
-            this.sc7.Panel1.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            // 
-            // sc7.Panel2
-            // 
-            this.sc7.Panel2.Controls.Add(this.AreaExpander);
-            this.sc7.Panel2.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sc7.Size = new System.Drawing.Size(1586, 918);
-            this.sc7.SplitterDistance = 1329;
-            this.sc7.SplitterWidth = 7;
-            this.sc7.TabIndex = 99;
             // 
             // AreaChart
             // 
@@ -1380,7 +1244,6 @@ namespace Budget
             this.AreaChart.Depth = 250F;
             this.AreaChart.DisplayChartContextMenu = false;
             this.AreaChart.DisplaySeriesContextMenu = false;
-            this.AreaChart.Dock = System.Windows.Forms.DockStyle.Fill;
             this.AreaChart.EnableMouseRotation = true;
             this.AreaChart.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AreaChart.ForeColor = System.Drawing.SystemColors.MenuHighlight;
@@ -1395,7 +1258,7 @@ namespace Budget
             this.AreaChart.Legend.Visible = false;
             this.AreaChart.LegendsPlacement = Syncfusion.Windows.Forms.Chart.ChartPlacement.Outside;
             this.AreaChart.Localize = null;
-            this.AreaChart.Location = new System.Drawing.Point(0, 0);
+            this.AreaChart.Location = new System.Drawing.Point(37, 54);
             this.AreaChart.Margin = new System.Windows.Forms.Padding(2);
             this.AreaChart.Name = "AreaChart";
             this.AreaChart.Palette = Syncfusion.Windows.Forms.Chart.ChartColorPalette.Custom;
@@ -1459,7 +1322,7 @@ namespace Budget
             this.AreaChart.Series3D = true;
             this.AreaChart.SeriesHighlight = true;
             this.AreaChart.ShadowColor = new Syncfusion.Drawing.BrushInfo(Syncfusion.Drawing.GradientStyle.PathRectangle, System.Drawing.SystemColors.WindowText, System.Drawing.Color.Silver);
-            this.AreaChart.Size = new System.Drawing.Size(1329, 918);
+            this.AreaChart.Size = new System.Drawing.Size(1203, 598);
             this.AreaChart.Spacing = 5F;
             this.AreaChart.SpacingBetweenPoints = 5F;
             this.AreaChart.Style3D = true;
@@ -1487,9 +1350,9 @@ namespace Budget
             this.AreaExpander.Controls.Add(this.fp7);
             this.AreaExpander.ExpandedHeight = 750;
             this.AreaExpander.IsExpanded = false;
-            this.AreaExpander.Location = new System.Drawing.Point(3, 5);
+            this.AreaExpander.Location = new System.Drawing.Point(1337, 31);
             this.AreaExpander.Name = "AreaExpander";
-            this.AreaExpander.Size = new System.Drawing.Size(248, 37);
+            this.AreaExpander.Size = new System.Drawing.Size(229, 37);
             this.AreaExpander.TabIndex = 107;
             this.AreaExpander.Text = "Filter";
             this.AreaExpander.UseAnimation = true;
@@ -1507,7 +1370,8 @@ namespace Budget
             // 
             // ProjectTab
             // 
-            this.ProjectTab.Controls.Add(this.sc8);
+            this.ProjectTab.Controls.Add(this.ProjectChart);
+            this.ProjectTab.Controls.Add(this.ProjectExpander);
             this.ProjectTab.Image = null;
             this.ProjectTab.ImageSize = new System.Drawing.Size(16, 16);
             this.ProjectTab.Location = new System.Drawing.Point(1, 34);
@@ -1518,27 +1382,6 @@ namespace Budget
             this.ProjectTab.TabIndex = 8;
             this.ProjectTab.Text = "Program Project";
             this.ProjectTab.ThemesEnabled = false;
-            // 
-            // sc8
-            // 
-            this.sc8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.sc8.Location = new System.Drawing.Point(0, 0);
-            this.sc8.Margin = new System.Windows.Forms.Padding(2);
-            this.sc8.Name = "sc8";
-            // 
-            // sc8.Panel1
-            // 
-            this.sc8.Panel1.Controls.Add(this.ProjectChart);
-            this.sc8.Panel1.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            // 
-            // sc8.Panel2
-            // 
-            this.sc8.Panel2.Controls.Add(this.ProjectExpander);
-            this.sc8.Panel2.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sc8.Size = new System.Drawing.Size(1586, 918);
-            this.sc8.SplitterDistance = 1329;
-            this.sc8.SplitterWidth = 7;
-            this.sc8.TabIndex = 99;
             // 
             // ProjectChart
             // 
@@ -1563,7 +1406,6 @@ namespace Budget
             this.ProjectChart.Depth = 250F;
             this.ProjectChart.DisplayChartContextMenu = false;
             this.ProjectChart.DisplaySeriesContextMenu = false;
-            this.ProjectChart.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ProjectChart.EnableMouseRotation = true;
             this.ProjectChart.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ProjectChart.ForeColor = System.Drawing.SystemColors.MenuHighlight;
@@ -1578,7 +1420,7 @@ namespace Budget
             this.ProjectChart.Legend.Visible = false;
             this.ProjectChart.LegendsPlacement = Syncfusion.Windows.Forms.Chart.ChartPlacement.Outside;
             this.ProjectChart.Localize = null;
-            this.ProjectChart.Location = new System.Drawing.Point(0, 0);
+            this.ProjectChart.Location = new System.Drawing.Point(37, 54);
             this.ProjectChart.Margin = new System.Windows.Forms.Padding(2);
             this.ProjectChart.Name = "ProjectChart";
             this.ProjectChart.Palette = Syncfusion.Windows.Forms.Chart.ChartColorPalette.Custom;
@@ -1642,7 +1484,7 @@ namespace Budget
             this.ProjectChart.Series3D = true;
             this.ProjectChart.SeriesHighlight = true;
             this.ProjectChart.ShadowColor = new Syncfusion.Drawing.BrushInfo(Syncfusion.Drawing.GradientStyle.PathRectangle, System.Drawing.SystemColors.WindowText, System.Drawing.Color.Silver);
-            this.ProjectChart.Size = new System.Drawing.Size(1329, 918);
+            this.ProjectChart.Size = new System.Drawing.Size(1203, 598);
             this.ProjectChart.Spacing = 5F;
             this.ProjectChart.SpacingBetweenPoints = 5F;
             this.ProjectChart.Style3D = true;
@@ -1670,9 +1512,9 @@ namespace Budget
             this.ProjectExpander.Controls.Add(this.fp8);
             this.ProjectExpander.ExpandedHeight = 750;
             this.ProjectExpander.IsExpanded = false;
-            this.ProjectExpander.Location = new System.Drawing.Point(3, 5);
+            this.ProjectExpander.Location = new System.Drawing.Point(1337, 31);
             this.ProjectExpander.Name = "ProjectExpander";
-            this.ProjectExpander.Size = new System.Drawing.Size(223, 37);
+            this.ProjectExpander.Size = new System.Drawing.Size(229, 37);
             this.ProjectExpander.TabIndex = 107;
             this.ProjectExpander.Text = "Filter";
             this.ProjectExpander.UseAnimation = true;
@@ -1713,45 +1555,21 @@ namespace Budget
             this.BocExpander.ResumeLayout(false);
             this.BocExpander.PerformLayout();
             this.NpmTab.ResumeLayout(false);
-            this.sc3.Panel1.ResumeLayout(false);
-            this.sc3.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.sc3)).EndInit();
-            this.sc3.ResumeLayout(false);
             this.NpmExpander.ResumeLayout(false);
             this.NpmExpander.PerformLayout();
             this.GoalTab.ResumeLayout(false);
-            this.sc4.Panel1.ResumeLayout(false);
-            this.sc4.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.sc4)).EndInit();
-            this.sc4.ResumeLayout(false);
             this.GoalExpander.ResumeLayout(false);
             this.GoalExpander.PerformLayout();
             this.ObjectiveTab.ResumeLayout(false);
-            this.sc5.Panel1.ResumeLayout(false);
-            this.sc5.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.sc5)).EndInit();
-            this.sc5.ResumeLayout(false);
             this.ObjectiveExpander.ResumeLayout(false);
             this.ObjectiveExpander.PerformLayout();
             this.DivisionTab.ResumeLayout(false);
-            this.sc6.Panel1.ResumeLayout(false);
-            this.sc6.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.sc6)).EndInit();
-            this.sc6.ResumeLayout(false);
             this.DivisionExpander.ResumeLayout(false);
             this.DivisionExpander.PerformLayout();
             this.AreaTab.ResumeLayout(false);
-            this.sc7.Panel1.ResumeLayout(false);
-            this.sc7.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.sc7)).EndInit();
-            this.sc7.ResumeLayout(false);
             this.AreaExpander.ResumeLayout(false);
             this.AreaExpander.PerformLayout();
             this.ProjectTab.ResumeLayout(false);
-            this.sc8.Panel1.ResumeLayout(false);
-            this.sc8.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.sc8)).EndInit();
-            this.sc8.ResumeLayout(false);
             this.ProjectExpander.ResumeLayout(false);
             this.ProjectExpander.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BindingSource)).EndInit();
@@ -1773,26 +1591,20 @@ namespace Budget
                 protected ChartControl FundChart;
                 private MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel FundExpander;
                 private FlowLayoutPanel fp1;
-                private SplitContainer sc3;
                 private MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel NpmExpander;
                 private FlowLayoutPanel fp3;
-                private SplitContainer sc4;
                 protected ChartControl GoalChart;
                 private MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel GoalExpander;
                 private FlowLayoutPanel fp4;
-                private SplitContainer sc5;
                 protected ChartControl ObjectiveChart;
                 private MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel ObjectiveExpander;
                 private FlowLayoutPanel fp5;
-                private SplitContainer sc6;
                 protected ChartControl DivisionChart;
                 private MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel DivisionExpander;
                 private FlowLayoutPanel fp6;
-                private SplitContainer sc7;
                 protected ChartControl AreaChart;
                 private MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel AreaExpander;
                 private FlowLayoutPanel fp7;
-                private SplitContainer sc8;
                 protected ChartControl ProjectChart;
                 private MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel ProjectExpander;
                 private FlowLayoutPanel fp8;
