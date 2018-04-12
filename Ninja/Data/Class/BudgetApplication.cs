@@ -63,12 +63,13 @@ namespace Budget
 
             public enum ChartFilter
             {
-                Fund, FundName, BOC, BocName, NPM, Goal, GoalName, Objective, ObjectiveName, Division, ProgramArea, ProgramAreaName, ProgramProjectCode, ProgramProjectName
+                Fund, FundName, BOC, BocName, NPM, Goal, GoalName, Objective, ObjectiveName, RC, DivisionName, ProgramArea, ProgramAreaName, ProgramProjectCode, ProgramProjectName
             }
 
+          
             public enum ReportingMetric
             {
-                Value, Count, Average, Ratio
+                Total, Count, Average, Ratio
             }
 
             public enum TransferType

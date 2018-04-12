@@ -20,7 +20,7 @@ namespace Budget
                 {
                 }
 
-                public ChartData(DataBuilder data, ChartFilter filter)
+                public ChartData(ChartControl chart, DataBuilder data, ChartFilter filter)
                 {
                     Data = data;
                     Metric = new DataMetric(Data);

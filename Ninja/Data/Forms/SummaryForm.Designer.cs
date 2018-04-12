@@ -157,21 +157,21 @@ namespace Budget
             this.BocExpander = new MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel();
             this.fp2 = new System.Windows.Forms.FlowLayoutPanel();
             this.NpmTab = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
+            this.NpmChart = new Syncfusion.Windows.Forms.Chart.ChartControl();
             this.NpmExpander = new MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel();
             this.fp3 = new System.Windows.Forms.FlowLayoutPanel();
-            this.NpmChart = new Syncfusion.Windows.Forms.Chart.ChartControl();
             this.GoalTab = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
+            this.GoalChart = new Syncfusion.Windows.Forms.Chart.ChartControl();
             this.GoalExpander = new MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel();
             this.fp4 = new System.Windows.Forms.FlowLayoutPanel();
-            this.GoalChart = new Syncfusion.Windows.Forms.Chart.ChartControl();
             this.ObjectiveTab = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
-            this.ObjectiveChart = new Syncfusion.Windows.Forms.Chart.ChartControl();
             this.ObjectiveExpander = new MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel();
             this.fp5 = new System.Windows.Forms.FlowLayoutPanel();
+            this.ObjectiveChart = new Syncfusion.Windows.Forms.Chart.ChartControl();
             this.DivisionTab = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
-            this.DivisionChart = new Syncfusion.Windows.Forms.Chart.ChartControl();
             this.DivisionExpander = new MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel();
             this.fp6 = new System.Windows.Forms.FlowLayoutPanel();
+            this.DivisionChart = new Syncfusion.Windows.Forms.Chart.ChartControl();
             this.AreaTab = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
             this.AreaChart = new Syncfusion.Windows.Forms.Chart.ChartControl();
             this.AreaExpander = new MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel();
@@ -573,32 +573,6 @@ namespace Budget
             this.NpmTab.Text = "NPM";
             this.NpmTab.ThemesEnabled = false;
             // 
-            // NpmExpander
-            // 
-            this.NpmExpander.BackColor = System.Drawing.Color.Black;
-            this.NpmExpander.ButtonSize = MakarovDev.ExpandCollapsePanel.ExpandCollapseButton.ExpandButtonSize.Small;
-            this.NpmExpander.ButtonStyle = MakarovDev.ExpandCollapsePanel.ExpandCollapseButton.ExpandButtonStyle.Circle;
-            this.NpmExpander.Controls.Add(this.fp3);
-            this.NpmExpander.ExpandedHeight = 750;
-            this.NpmExpander.IsExpanded = false;
-            this.NpmExpander.Location = new System.Drawing.Point(1337, 31);
-            this.NpmExpander.Name = "NpmExpander";
-            this.NpmExpander.Size = new System.Drawing.Size(229, 37);
-            this.NpmExpander.TabIndex = 107;
-            this.NpmExpander.Text = "Filter";
-            this.NpmExpander.UseAnimation = true;
-            // 
-            // fp3
-            // 
-            this.fp3.AutoScroll = true;
-            this.fp3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.fp3.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.fp3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(130)))), ((int)(((byte)(180)))));
-            this.fp3.Location = new System.Drawing.Point(10, 41);
-            this.fp3.Name = "fp3";
-            this.fp3.Size = new System.Drawing.Size(192, 507);
-            this.fp3.TabIndex = 47;
-            // 
             // NpmChart
             // 
             this.NpmChart.AllowGradientPalette = true;
@@ -720,6 +694,32 @@ namespace Budget
             this.NpmChart.ToolBar.Items.Add(chartToolBarSeries3DItem3);
             this.NpmChart.ToolBar.Items.Add(chartToolBarShowLegendItem3);
             // 
+            // NpmExpander
+            // 
+            this.NpmExpander.BackColor = System.Drawing.Color.Black;
+            this.NpmExpander.ButtonSize = MakarovDev.ExpandCollapsePanel.ExpandCollapseButton.ExpandButtonSize.Small;
+            this.NpmExpander.ButtonStyle = MakarovDev.ExpandCollapsePanel.ExpandCollapseButton.ExpandButtonStyle.Circle;
+            this.NpmExpander.Controls.Add(this.fp3);
+            this.NpmExpander.ExpandedHeight = 750;
+            this.NpmExpander.IsExpanded = false;
+            this.NpmExpander.Location = new System.Drawing.Point(1337, 31);
+            this.NpmExpander.Name = "NpmExpander";
+            this.NpmExpander.Size = new System.Drawing.Size(229, 37);
+            this.NpmExpander.TabIndex = 107;
+            this.NpmExpander.Text = "Filter";
+            this.NpmExpander.UseAnimation = true;
+            // 
+            // fp3
+            // 
+            this.fp3.AutoScroll = true;
+            this.fp3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.fp3.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.fp3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(130)))), ((int)(((byte)(180)))));
+            this.fp3.Location = new System.Drawing.Point(10, 41);
+            this.fp3.Name = "fp3";
+            this.fp3.Size = new System.Drawing.Size(192, 507);
+            this.fp3.TabIndex = 47;
+            // 
             // GoalTab
             // 
             this.GoalTab.Controls.Add(this.GoalChart);
@@ -734,32 +734,6 @@ namespace Budget
             this.GoalTab.TabIndex = 4;
             this.GoalTab.Text = "Goal";
             this.GoalTab.ThemesEnabled = false;
-            // 
-            // GoalExpander
-            // 
-            this.GoalExpander.BackColor = System.Drawing.Color.Black;
-            this.GoalExpander.ButtonSize = MakarovDev.ExpandCollapsePanel.ExpandCollapseButton.ExpandButtonSize.Small;
-            this.GoalExpander.ButtonStyle = MakarovDev.ExpandCollapsePanel.ExpandCollapseButton.ExpandButtonStyle.Circle;
-            this.GoalExpander.Controls.Add(this.fp4);
-            this.GoalExpander.ExpandedHeight = 750;
-            this.GoalExpander.IsExpanded = false;
-            this.GoalExpander.Location = new System.Drawing.Point(1337, 31);
-            this.GoalExpander.Name = "GoalExpander";
-            this.GoalExpander.Size = new System.Drawing.Size(229, 37);
-            this.GoalExpander.TabIndex = 107;
-            this.GoalExpander.Text = "Filter";
-            this.GoalExpander.UseAnimation = true;
-            // 
-            // fp4
-            // 
-            this.fp4.AutoScroll = true;
-            this.fp4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.fp4.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.fp4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(130)))), ((int)(((byte)(180)))));
-            this.fp4.Location = new System.Drawing.Point(10, 41);
-            this.fp4.Name = "fp4";
-            this.fp4.Size = new System.Drawing.Size(192, 507);
-            this.fp4.TabIndex = 47;
             // 
             // GoalChart
             // 
@@ -798,7 +772,7 @@ namespace Budget
             this.GoalChart.Legend.Visible = false;
             this.GoalChart.LegendsPlacement = Syncfusion.Windows.Forms.Chart.ChartPlacement.Outside;
             this.GoalChart.Localize = null;
-            this.GoalChart.Location = new System.Drawing.Point(143, 135);
+            this.GoalChart.Location = new System.Drawing.Point(37, 54);
             this.GoalChart.Margin = new System.Windows.Forms.Padding(2);
             this.GoalChart.Name = "GoalChart";
             this.GoalChart.Palette = Syncfusion.Windows.Forms.Chart.ChartColorPalette.Custom;
@@ -882,6 +856,32 @@ namespace Budget
             this.GoalChart.ToolBar.Items.Add(chartToolBarSeries3DItem4);
             this.GoalChart.ToolBar.Items.Add(chartToolBarShowLegendItem4);
             // 
+            // GoalExpander
+            // 
+            this.GoalExpander.BackColor = System.Drawing.Color.Black;
+            this.GoalExpander.ButtonSize = MakarovDev.ExpandCollapsePanel.ExpandCollapseButton.ExpandButtonSize.Small;
+            this.GoalExpander.ButtonStyle = MakarovDev.ExpandCollapsePanel.ExpandCollapseButton.ExpandButtonStyle.Circle;
+            this.GoalExpander.Controls.Add(this.fp4);
+            this.GoalExpander.ExpandedHeight = 750;
+            this.GoalExpander.IsExpanded = false;
+            this.GoalExpander.Location = new System.Drawing.Point(1337, 31);
+            this.GoalExpander.Name = "GoalExpander";
+            this.GoalExpander.Size = new System.Drawing.Size(229, 37);
+            this.GoalExpander.TabIndex = 107;
+            this.GoalExpander.Text = "Filter";
+            this.GoalExpander.UseAnimation = true;
+            // 
+            // fp4
+            // 
+            this.fp4.AutoScroll = true;
+            this.fp4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.fp4.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.fp4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(130)))), ((int)(((byte)(180)))));
+            this.fp4.Location = new System.Drawing.Point(10, 41);
+            this.fp4.Name = "fp4";
+            this.fp4.Size = new System.Drawing.Size(192, 507);
+            this.fp4.TabIndex = 47;
+            // 
             // ObjectiveTab
             // 
             this.ObjectiveTab.Controls.Add(this.ObjectiveExpander);
@@ -896,6 +896,32 @@ namespace Budget
             this.ObjectiveTab.TabIndex = 5;
             this.ObjectiveTab.Text = "Objective";
             this.ObjectiveTab.ThemesEnabled = false;
+            // 
+            // ObjectiveExpander
+            // 
+            this.ObjectiveExpander.BackColor = System.Drawing.Color.Black;
+            this.ObjectiveExpander.ButtonSize = MakarovDev.ExpandCollapsePanel.ExpandCollapseButton.ExpandButtonSize.Small;
+            this.ObjectiveExpander.ButtonStyle = MakarovDev.ExpandCollapsePanel.ExpandCollapseButton.ExpandButtonStyle.Circle;
+            this.ObjectiveExpander.Controls.Add(this.fp5);
+            this.ObjectiveExpander.ExpandedHeight = 717;
+            this.ObjectiveExpander.IsExpanded = false;
+            this.ObjectiveExpander.Location = new System.Drawing.Point(1337, 31);
+            this.ObjectiveExpander.Name = "ObjectiveExpander";
+            this.ObjectiveExpander.Size = new System.Drawing.Size(229, 37);
+            this.ObjectiveExpander.TabIndex = 107;
+            this.ObjectiveExpander.Text = "Filter";
+            this.ObjectiveExpander.UseAnimation = true;
+            // 
+            // fp5
+            // 
+            this.fp5.AutoScroll = true;
+            this.fp5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.fp5.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.fp5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(130)))), ((int)(((byte)(180)))));
+            this.fp5.Location = new System.Drawing.Point(10, 41);
+            this.fp5.Name = "fp5";
+            this.fp5.Size = new System.Drawing.Size(205, 507);
+            this.fp5.TabIndex = 47;
             // 
             // ObjectiveChart
             // 
@@ -1018,32 +1044,6 @@ namespace Budget
             this.ObjectiveChart.ToolBar.Items.Add(chartToolBarSeries3DItem5);
             this.ObjectiveChart.ToolBar.Items.Add(chartToolBarShowLegendItem5);
             // 
-            // ObjectiveExpander
-            // 
-            this.ObjectiveExpander.BackColor = System.Drawing.Color.Black;
-            this.ObjectiveExpander.ButtonSize = MakarovDev.ExpandCollapsePanel.ExpandCollapseButton.ExpandButtonSize.Small;
-            this.ObjectiveExpander.ButtonStyle = MakarovDev.ExpandCollapsePanel.ExpandCollapseButton.ExpandButtonStyle.Circle;
-            this.ObjectiveExpander.Controls.Add(this.fp5);
-            this.ObjectiveExpander.ExpandedHeight = 717;
-            this.ObjectiveExpander.IsExpanded = false;
-            this.ObjectiveExpander.Location = new System.Drawing.Point(1337, 31);
-            this.ObjectiveExpander.Name = "ObjectiveExpander";
-            this.ObjectiveExpander.Size = new System.Drawing.Size(229, 37);
-            this.ObjectiveExpander.TabIndex = 107;
-            this.ObjectiveExpander.Text = "Filter";
-            this.ObjectiveExpander.UseAnimation = true;
-            // 
-            // fp5
-            // 
-            this.fp5.AutoScroll = true;
-            this.fp5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.fp5.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.fp5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(130)))), ((int)(((byte)(180)))));
-            this.fp5.Location = new System.Drawing.Point(10, 41);
-            this.fp5.Name = "fp5";
-            this.fp5.Size = new System.Drawing.Size(205, 507);
-            this.fp5.TabIndex = 47;
-            // 
             // DivisionTab
             // 
             this.DivisionTab.Controls.Add(this.DivisionExpander);
@@ -1058,6 +1058,32 @@ namespace Budget
             this.DivisionTab.TabIndex = 6;
             this.DivisionTab.Text = "Division";
             this.DivisionTab.ThemesEnabled = false;
+            // 
+            // DivisionExpander
+            // 
+            this.DivisionExpander.BackColor = System.Drawing.Color.Black;
+            this.DivisionExpander.ButtonSize = MakarovDev.ExpandCollapsePanel.ExpandCollapseButton.ExpandButtonSize.Small;
+            this.DivisionExpander.ButtonStyle = MakarovDev.ExpandCollapsePanel.ExpandCollapseButton.ExpandButtonStyle.Circle;
+            this.DivisionExpander.Controls.Add(this.fp6);
+            this.DivisionExpander.ExpandedHeight = 750;
+            this.DivisionExpander.IsExpanded = false;
+            this.DivisionExpander.Location = new System.Drawing.Point(1337, 31);
+            this.DivisionExpander.Name = "DivisionExpander";
+            this.DivisionExpander.Size = new System.Drawing.Size(229, 37);
+            this.DivisionExpander.TabIndex = 107;
+            this.DivisionExpander.Text = "Filter";
+            this.DivisionExpander.UseAnimation = true;
+            // 
+            // fp6
+            // 
+            this.fp6.AutoScroll = true;
+            this.fp6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.fp6.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.fp6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(130)))), ((int)(((byte)(180)))));
+            this.fp6.Location = new System.Drawing.Point(10, 41);
+            this.fp6.Name = "fp6";
+            this.fp6.Size = new System.Drawing.Size(192, 507);
+            this.fp6.TabIndex = 47;
             // 
             // DivisionChart
             // 
@@ -1179,32 +1205,6 @@ namespace Budget
             this.DivisionChart.ToolBar.Items.Add(chartToolBarTypeItem6);
             this.DivisionChart.ToolBar.Items.Add(chartToolBarSeries3DItem6);
             this.DivisionChart.ToolBar.Items.Add(chartToolBarShowLegendItem6);
-            // 
-            // DivisionExpander
-            // 
-            this.DivisionExpander.BackColor = System.Drawing.Color.Black;
-            this.DivisionExpander.ButtonSize = MakarovDev.ExpandCollapsePanel.ExpandCollapseButton.ExpandButtonSize.Small;
-            this.DivisionExpander.ButtonStyle = MakarovDev.ExpandCollapsePanel.ExpandCollapseButton.ExpandButtonStyle.Circle;
-            this.DivisionExpander.Controls.Add(this.fp6);
-            this.DivisionExpander.ExpandedHeight = 750;
-            this.DivisionExpander.IsExpanded = false;
-            this.DivisionExpander.Location = new System.Drawing.Point(1337, 31);
-            this.DivisionExpander.Name = "DivisionExpander";
-            this.DivisionExpander.Size = new System.Drawing.Size(229, 37);
-            this.DivisionExpander.TabIndex = 107;
-            this.DivisionExpander.Text = "Filter";
-            this.DivisionExpander.UseAnimation = true;
-            // 
-            // fp6
-            // 
-            this.fp6.AutoScroll = true;
-            this.fp6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.fp6.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.fp6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(130)))), ((int)(((byte)(180)))));
-            this.fp6.Location = new System.Drawing.Point(10, 41);
-            this.fp6.Name = "fp6";
-            this.fp6.Size = new System.Drawing.Size(192, 507);
-            this.fp6.TabIndex = 47;
             // 
             // AreaTab
             // 
@@ -1546,6 +1546,7 @@ namespace Budget
             this.Name = "SummaryForm";
             this.ShowIcon = false;
             this.Text = "SumForm";
+            this.Load += new System.EventHandler(this.Form_Load);
             ((System.ComponentModel.ISupportInitialize)(this.SummaryTabControl)).EndInit();
             this.SummaryTabControl.ResumeLayout(false);
             this.FundTab.ResumeLayout(false);

@@ -30,6 +30,13 @@ namespace Budget
                     BindingSource.DataSource = D6.Data.BudgetTable;
                     Text = $"P7 Status of Funds";
                     GetFilterButtons();
+                    FundChart = GetSummaryChart(FundChart, Data, ChartFilter.Fund, "R6 Division Summary");
+                    BocChart = GetSummaryChart(BocChart, Data, ChartFilter.BOC, "R6 Division Summary");
+                    NpmChart = GetSummaryChart(NpmChart, Data, ChartFilter.NPM, "R6 Division Summary");
+                    GoalChart = GetSummaryChart(GoalChart, Data, ChartFilter.GoalName, "R6 Division Summary");
+                    ObjectiveChart = GetSummaryChart(ObjectiveChart, Data, ChartFilter.ObjectiveName, "R6 Division Summary");
+                    AreaChart = GetSummaryChart(AreaChart, Data, ChartFilter.ProgramArea, "R6 Division Summary");
+                    ProjectChart = GetSummaryChart(ProjectChart, Data, ChartFilter.ProgramProjectCode, "R6 Division Summary");
                 }
 
                 public SummaryForm(Source source)
@@ -57,6 +64,13 @@ namespace Budget
                         GetFilterButtons();
                         Text = "R6 Division Summary";
                     }
+                    FundChart = GetSummaryChart(FundChart, Data, ChartFilter.Fund, "R6 Division Summary");
+                    BocChart = GetSummaryChart(BocChart, Data, ChartFilter.BOC, "R6 Division Summary");
+                    NpmChart = GetSummaryChart(NpmChart, Data, ChartFilter.NPM, "R6 Division Summary");
+                    GoalChart = GetSummaryChart(GoalChart, Data, ChartFilter.GoalName, "R6 Division Summary");
+                    ObjectiveChart = GetSummaryChart(ObjectiveChart, Data, ChartFilter.ObjectiveName, "R6 Division Summary");
+                    AreaChart = GetSummaryChart(AreaChart, Data, ChartFilter.ProgramArea, "R6 Division Summary");
+                    ProjectChart = GetSummaryChart(ProjectChart, Data, ChartFilter.ProgramProjectCode, "R6 Division Summary");
                 }
 
                 public SummaryForm(string rc)
@@ -70,6 +84,13 @@ namespace Budget
                     GetFilterButtons();
                     Text = $"{D6.Org.Name} Summary";
                     BindingSource.DataSource = Table;
+                    FundChart = GetSummaryChart(FundChart, Data, ChartFilter.Fund, "R6 Division Summary");
+                    BocChart = GetSummaryChart(BocChart, Data, ChartFilter.BOC, "R6 Division Summary");
+                    NpmChart = GetSummaryChart(NpmChart, Data, ChartFilter.NPM, "R6 Division Summary");
+                    GoalChart = GetSummaryChart(GoalChart, Data, ChartFilter.GoalName, "R6 Division Summary");
+                    ObjectiveChart = GetSummaryChart(ObjectiveChart, Data, ChartFilter.ObjectiveName, "R6 Division Summary");
+                    AreaChart = GetSummaryChart(AreaChart, Data, ChartFilter.ProgramArea, "R6 Division Summary");
+                    ProjectChart = GetSummaryChart(ProjectChart, Data, ChartFilter.ProgramProjectCode, "R6 Division Summary");
                 }
 
 
@@ -88,7 +109,7 @@ namespace Budget
                 public DataTable Table { get; }
                 internal string[] RC { get; set; }
                 internal RadioButton[] RadioButton { get; set; }
-                private ChartControl[] Chart { get; set; }
+                internal ChartControl[] Chart { get; set; }
                 private ExpandCollapsePanel[] Expander { get; set; }
 
 
@@ -97,13 +118,6 @@ namespace Budget
                 private void Form_Load(object sender, EventArgs e)
                 {
                     var title = $"R6 Funding" ;
-                    FundChart = new BudgetChart(FundChart, title, new ChartData(Data, ChartFilter.Fund).InputTotals).Activate();
-                    BocChart = new BudgetChart(BocChart, title, new ChartData(Data, ChartFilter.Fund).InputTotals).Activate();
-                    //NpmChart = new BudgetChart(NpmChart, title, new ChartData(Data, ChartFilter.Fund).InputTotals).Activate();
-                    //GoalChart = new BudgetChart(GoalChart, title, new ChartData(Data, ChartFilter.Fund).InputTotals).Activate();
-                    //ObjChart = new BudgetChart(ObjChart, title, new ChartData(Data, ChartFilter.Fund).InputTotals).Activate();
-                    //AreaChart = new BudgetChart(AreaChart, title, new ChartData(Data, ChartFilter.Fund).InputTotals).Activate();
-                    //ProjectChart = new BudgetChart(ProjectChart, title, new ChartData(Data, ChartFilter.Fund).InputTotals).Activate();
                     SummaryTabControl.SelectedIndexChanged += TabControl_SelectedIndexChanged;
                 }
 
@@ -198,6 +212,12 @@ namespace Budget
 
                 }
 
+                ChartControl GetSummaryChart(ChartControl chart, DataBuilder data, ChartFilter filter, string title)
+                {
+                    var fd = new BudgetChart(chart, data, filter);
+                    fd.AxisTitle = new string[] { title };
+                    return fd.Activate();
+                }
                 Dictionary<string, string> GetFilterCategories()
                 {
                     try

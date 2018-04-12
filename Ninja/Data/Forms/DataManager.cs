@@ -151,11 +151,9 @@ namespace Budget
 
                 private ChartControl GetDataChart(ChartControl chart, string title, Source source, BindingSource bs)
                 {
-                    if (source == Source.P7)
-                        chart = new BudgetChart(chart, title, new ChartData(Data, ChartFilter.Fund).InputTotals).Activate();
-                    if (source == Source.P8)
-                        chart = new BudgetChart(chart, title, new ChartData(Data, ChartFilter.Fund).InputTotals).Activate();
-                    return chart;
+                        var cd = new BudgetChart(chart, source, ChartFilter.Fund);
+                        cd.AxisTitle = new string[] { title };
+                        return cd.Activate();
                 }
 
                 private void GetGridSelectedRowValues()

@@ -16,10 +16,10 @@ namespace Ninja.Forms
             D6 = new DataBuilder(Source.P8);
             Metric = new DataMetric(R6);
             Timer = new Timer();
-            Values = new Dictionary<string, double>[] { new ChartData(R6, ChartFilter.Fund).InputTotals, new ChartData(R6, ChartFilter.BocName).InputTotals,
-                new ChartData(R6, ChartFilter.NPM).InputTotals, new ChartData(R6, ChartFilter.GoalName).InputTotals,
-                new ChartData(D6, ChartFilter.BocName).InputTotals, new ChartData(R6, ChartFilter.NPM).InputTotals,
-                new ChartData(R6, ChartFilter.GoalName).InputTotals };
+            Values = new Dictionary<string, double>[] { GetMainData(MainChart, R6, ChartFilter.Fund), GetMainData(MainChart, R6, ChartFilter.BocName),
+                GetMainData(MainChart, R6, ChartFilter.NPM), GetMainData(MainChart, R6, ChartFilter.GoalName),
+                GetMainData(MainChart, D6, ChartFilter.BocName), GetMainData(MainChart, D6, ChartFilter.NPM),
+                GetMainData(MainChart, D6, ChartFilter.RC) };
             Title = GetChartTitles(Values);
             Chart = new GetChart(GetMainChart);
             MainChart = new BudgetChart(MainChart, Title[1], Values[1]).Activate();
@@ -32,6 +32,7 @@ namespace Ninja.Forms
         public DataBuilder D6 { get; }
         public DataBuilder R6{ get; set; }
         public DataMetric Metric { get; set; }
+        ChartData MainData { get; }
         public FormData NinjaData { get; set; }
         public string[] Title { get; set; }
         public Dictionary<string, double>[] Values { get; set; }
@@ -86,6 +87,13 @@ namespace Ninja.Forms
             Timer.Tick += ChartTimer;
             Timer.Enabled = true;
             Timer.Interval = 5000;
+        }
+
+        Dictionary<string, double> GetMainData(ChartControl chart, DataBuilder data, ChartFilter filter)
+        {
+            var cd = new ChartData(chart, data, filter);
+            cd.AxisTitle = Title;
+            return cd.InputTotals;
         }
 
         private void RegionSummaryButton_OnClick(object sender, EventArgs e)
