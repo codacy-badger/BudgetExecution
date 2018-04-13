@@ -218,6 +218,18 @@
     <Compile Include="Data\Forms\DataManager.Designer.cs">
       <DependentUpon>DataManager.cs</DependentUpon>
     </Compile>
+    <Compile Include="Data\Forms\DataMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Data\Forms\DataMaster.Designer.cs">
+      <DependentUpon>DataMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Forms\DataNavigator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Data\Forms\DataNavigator.Designer.cs">
+      <DependentUpon>DataNavigator.cs</DependentUpon>
+    </Compile>
     <Compile Include="Data\Forms\DivisionForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -353,6 +365,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Data\Forms\DataManager.resx">
       <DependentUpon>DataManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\Forms\DataMaster.resx">
+      <DependentUpon>DataMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\Forms\DataNavigator.resx">
+      <DependentUpon>DataNavigator.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Data\Forms\DivisionForm.resx">
       <DependentUpon>DivisionForm.cs</DependentUpon>
