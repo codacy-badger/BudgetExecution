@@ -26,8 +26,8 @@ namespace Ninja.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("data source=C:\\Users\\terry\\Documents\\Visual Studio 2017\\Projects\\Budget\\Database\\" +
-            "sqlite\\R6.db")]
+        [global::System.Configuration.DefaultSettingValueAttribute("data source=\"C:\\Users\\terry\\Documents\\Visual Studio 2017\\Projects\\BudgetExecution" +
+            "\\Ninja\\SQLite\\R6.db\"")]
         public string R6 {
             get {
                 return ((string)(this["R6"]));
@@ -39,20 +39,20 @@ namespace Ninja.Properties {
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
         [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\SqlServer\\R6." +
             "mdf;Integrated Security=True;Connect Timeout=30")]
-        public string SqlConnectionString {
+        public string R6SqlServer {
             get {
-                return ((string)(this["SqlConnectionString"]));
+                return ((string)(this["R6SqlServer"]));
             }
         }
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=\"C:\\Users\\terry\\Documents\\Visual Studio 2017\\Projects\\BudgetExecution" +
-            "\\Database\\sqlite\\R6.db\"")]
-        public string SQLiteConnectionString {
+        [global::System.Configuration.DefaultSettingValueAttribute("data source=\"C:\\Users\\terry\\Documents\\Visual Studio 2017\\Projects\\BudgetExecution" +
+            "\\Ninja\\SqlCe\\R6.sdf\"")]
+        public string SqlCe {
             get {
-                return ((string)(this["SQLiteConnectionString"]));
+                return ((string)(this["SqlCe"]));
             }
         }
     }

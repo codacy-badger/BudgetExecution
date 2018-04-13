@@ -48445,7 +48445,7 @@ namespace Ninja.SqlServer.R6TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Ninja.Properties.Settings.Default.SqlConnectionString;
+            this._connection.ConnectionString = global::Ninja.Properties.Settings.Default.R6SqlServer;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -48740,7 +48740,7 @@ SELECT Id, ControlNumber, DivsionName, FiscalYear, DivisionId, Awards, Org, Over
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Ninja.Properties.Settings.Default.SqlConnectionString;
+            this._connection.ConnectionString = global::Ninja.Properties.Settings.Default.R6SqlServer;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -49145,7 +49145,7 @@ SELECT Id, ControlNumber, DivsionName, FiscalYear, DivisionId, Awards, Org, Over
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Ninja.Properties.Settings.Default.SqlConnectionString;
+            this._connection.ConnectionString = global::Ninja.Properties.Settings.Default.R6SqlServer;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -49443,7 +49443,7 @@ SELECT Id, ControlNumber, DivsionName, FiscalYear, DivisionId, Awards, Org, Over
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Ninja.Properties.Settings.Default.SqlConnectionString;
+            this._connection.ConnectionString = global::Ninja.Properties.Settings.Default.R6SqlServer;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -49837,7 +49837,7 @@ SELECT Id, ControlNumber, DivsionName, FiscalYear, DivisionId, Awards, Org, Over
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Ninja.Properties.Settings.Default.SqlConnectionString;
+            this._connection.ConnectionString = global::Ninja.Properties.Settings.Default.R6SqlServer;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -50105,7 +50105,7 @@ SELECT Id, ControlNumber, DivsionName, FiscalYear, DivisionId, Awards, Org, Over
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Ninja.Properties.Settings.Default.SqlConnectionString;
+            this._connection.ConnectionString = global::Ninja.Properties.Settings.Default.R6SqlServer;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -50422,7 +50422,7 @@ SELECT Id, ControlNumber, DivsionName, FiscalYear, DivisionId, Awards, Org, Over
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Ninja.Properties.Settings.Default.SqlConnectionString;
+            this._connection.ConnectionString = global::Ninja.Properties.Settings.Default.R6SqlServer;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -50856,7 +50856,7 @@ SELECT Id, ControlNumber, DivsionName, FiscalYear, DivisionId, Awards, Org, Over
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Ninja.Properties.Settings.Default.SqlConnectionString;
+            this._connection.ConnectionString = global::Ninja.Properties.Settings.Default.R6SqlServer;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -51290,7 +51290,7 @@ SELECT Id, ControlNumber, DivsionName, FiscalYear, DivisionId, Awards, Org, Over
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Ninja.Properties.Settings.Default.SqlConnectionString;
+            this._connection.ConnectionString = global::Ninja.Properties.Settings.Default.R6SqlServer;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -51724,7 +51724,7 @@ SELECT Id, ControlNumber, DivsionName, FiscalYear, DivisionId, Awards, Org, Over
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Ninja.Properties.Settings.Default.SqlConnectionString;
+            this._connection.ConnectionString = global::Ninja.Properties.Settings.Default.R6SqlServer;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -52120,7 +52120,7 @@ SELECT Id, ControlNumber, DivsionName, FiscalYear, DivisionId, Awards, Org, Over
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Ninja.Properties.Settings.Default.SqlConnectionString;
+            this._connection.ConnectionString = global::Ninja.Properties.Settings.Default.R6SqlServer;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -52424,7 +52424,7 @@ SELECT Id, ControlNumber, DivsionName, FiscalYear, DivisionId, Awards, Org, Over
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Ninja.Properties.Settings.Default.SqlConnectionString;
+            this._connection.ConnectionString = global::Ninja.Properties.Settings.Default.R6SqlServer;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -52858,7 +52858,7 @@ SELECT Id, ControlNumber, DivsionName, FiscalYear, DivisionId, Awards, Org, Over
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Ninja.Properties.Settings.Default.SqlConnectionString;
+            this._connection.ConnectionString = global::Ninja.Properties.Settings.Default.R6SqlServer;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -53292,7 +53292,7 @@ SELECT Id, ControlNumber, DivsionName, FiscalYear, DivisionId, Awards, Org, Over
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Ninja.Properties.Settings.Default.SqlConnectionString;
+            this._connection.ConnectionString = global::Ninja.Properties.Settings.Default.R6SqlServer;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -53726,7 +53726,7 @@ SELECT Id, ControlNumber, DivsionName, FiscalYear, DivisionId, Awards, Org, Over
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Ninja.Properties.Settings.Default.SqlConnectionString;
+            this._connection.ConnectionString = global::Ninja.Properties.Settings.Default.R6SqlServer;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -54160,7 +54160,7 @@ SELECT Id, ControlNumber, DivsionName, FiscalYear, DivisionId, Awards, Org, Over
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Ninja.Properties.Settings.Default.SqlConnectionString;
+            this._connection.ConnectionString = global::Ninja.Properties.Settings.Default.R6SqlServer;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -54594,7 +54594,7 @@ SELECT Id, ControlNumber, DivsionName, FiscalYear, DivisionId, Awards, Org, Over
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Ninja.Properties.Settings.Default.SqlConnectionString;
+            this._connection.ConnectionString = global::Ninja.Properties.Settings.Default.R6SqlServer;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -55014,7 +55014,7 @@ SELECT Id, ControlNumber, DivsionName, FiscalYear, DivisionId, Awards, Org, Over
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Ninja.Properties.Settings.Default.SqlConnectionString;
+            this._connection.ConnectionString = global::Ninja.Properties.Settings.Default.R6SqlServer;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -55407,7 +55407,7 @@ SELECT Id, ControlNumber, DivsionName, FiscalYear, DivisionId, Awards, Org, Over
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Ninja.Properties.Settings.Default.SqlConnectionString;
+            this._connection.ConnectionString = global::Ninja.Properties.Settings.Default.R6SqlServer;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -55853,7 +55853,7 @@ SELECT Id, ControlNumber, DivsionName, FiscalYear, DivisionId, Awards, Org, Over
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Ninja.Properties.Settings.Default.SqlConnectionString;
+            this._connection.ConnectionString = global::Ninja.Properties.Settings.Default.R6SqlServer;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -56251,7 +56251,7 @@ SELECT Id, ControlNumber, DivsionName, FiscalYear, DivisionId, Awards, Org, Over
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Ninja.Properties.Settings.Default.SqlConnectionString;
+            this._connection.ConnectionString = global::Ninja.Properties.Settings.Default.R6SqlServer;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -56592,7 +56592,7 @@ SELECT Id, ControlNumber, DivsionName, FiscalYear, DivisionId, Awards, Org, Over
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Ninja.Properties.Settings.Default.SqlConnectionString;
+            this._connection.ConnectionString = global::Ninja.Properties.Settings.Default.R6SqlServer;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -57067,7 +57067,7 @@ SELECT ID, BudgetLevel, RPIO, BFY, Fund, FundName, BOC, BocName, Org, RC, Divisi
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Ninja.Properties.Settings.Default.SqlConnectionString;
+            this._connection.ConnectionString = global::Ninja.Properties.Settings.Default.R6SqlServer;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -57759,7 +57759,7 @@ SELECT ID, BudgetLevel, RPIO, BFY, Fund, FundName, BOC, BocName, Org, RC, Divisi
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Ninja.Properties.Settings.Default.SqlConnectionString;
+            this._connection.ConnectionString = global::Ninja.Properties.Settings.Default.R6SqlServer;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -58193,7 +58193,7 @@ SELECT ID, BudgetLevel, RPIO, BFY, Fund, FundName, BOC, BocName, Org, RC, Divisi
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Ninja.Properties.Settings.Default.SqlConnectionString;
+            this._connection.ConnectionString = global::Ninja.Properties.Settings.Default.R6SqlServer;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -58627,7 +58627,7 @@ SELECT ID, BudgetLevel, RPIO, BFY, Fund, FundName, BOC, BocName, Org, RC, Divisi
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Ninja.Properties.Settings.Default.SqlConnectionString;
+            this._connection.ConnectionString = global::Ninja.Properties.Settings.Default.R6SqlServer;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -59022,7 +59022,7 @@ SELECT ID, BudgetLevel, RPIO, BFY, Fund, FundName, BOC, BocName, Org, RC, Divisi
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Ninja.Properties.Settings.Default.SqlConnectionString;
+            this._connection.ConnectionString = global::Ninja.Properties.Settings.Default.R6SqlServer;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -59314,7 +59314,7 @@ SELECT ID, BudgetLevel, RPIO, BFY, Fund, FundName, BOC, BocName, Org, RC, Divisi
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Ninja.Properties.Settings.Default.SqlConnectionString;
+            this._connection.ConnectionString = global::Ninja.Properties.Settings.Default.R6SqlServer;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -59748,7 +59748,7 @@ SELECT ID, BudgetLevel, RPIO, BFY, Fund, FundName, BOC, BocName, Org, RC, Divisi
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Ninja.Properties.Settings.Default.SqlConnectionString;
+            this._connection.ConnectionString = global::Ninja.Properties.Settings.Default.R6SqlServer;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -60153,7 +60153,7 @@ SELECT ID, BudgetLevel, RPIO, BFY, Fund, FundName, BOC, BocName, Org, RC, Divisi
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Ninja.Properties.Settings.Default.SqlConnectionString;
+            this._connection.ConnectionString = global::Ninja.Properties.Settings.Default.R6SqlServer;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -60470,7 +60470,7 @@ SELECT ID, BudgetLevel, RPIO, BFY, Fund, FundName, BOC, BocName, Org, RC, Divisi
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Ninja.Properties.Settings.Default.SqlConnectionString;
+            this._connection.ConnectionString = global::Ninja.Properties.Settings.Default.R6SqlServer;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -60904,7 +60904,7 @@ SELECT ID, BudgetLevel, RPIO, BFY, Fund, FundName, BOC, BocName, Org, RC, Divisi
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Ninja.Properties.Settings.Default.SqlConnectionString;
+            this._connection.ConnectionString = global::Ninja.Properties.Settings.Default.R6SqlServer;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -61338,7 +61338,7 @@ SELECT ID, BudgetLevel, RPIO, BFY, Fund, FundName, BOC, BocName, Org, RC, Divisi
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Ninja.Properties.Settings.Default.SqlConnectionString;
+            this._connection.ConnectionString = global::Ninja.Properties.Settings.Default.R6SqlServer;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -61772,7 +61772,7 @@ SELECT ID, BudgetLevel, RPIO, BFY, Fund, FundName, BOC, BocName, Org, RC, Divisi
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Ninja.Properties.Settings.Default.SqlConnectionString;
+            this._connection.ConnectionString = global::Ninja.Properties.Settings.Default.R6SqlServer;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -62185,7 +62185,7 @@ SELECT ID, BudgetLevel, RPIO, BFY, Fund, FundName, BOC, BocName, Org, RC, Divisi
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Ninja.Properties.Settings.Default.SqlConnectionString;
+            this._connection.ConnectionString = global::Ninja.Properties.Settings.Default.R6SqlServer;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -62532,7 +62532,7 @@ SELECT ID, BudgetLevel, RPIO, BFY, Fund, FundName, BOC, BocName, Org, RC, Divisi
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Ninja.Properties.Settings.Default.SqlConnectionString;
+            this._connection.ConnectionString = global::Ninja.Properties.Settings.Default.R6SqlServer;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -62928,7 +62928,7 @@ SELECT ID, BudgetLevel, RPIO, BFY, Fund, FundName, BOC, BocName, Org, RC, Divisi
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Ninja.Properties.Settings.Default.SqlConnectionString;
+            this._connection.ConnectionString = global::Ninja.Properties.Settings.Default.R6SqlServer;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -63362,7 +63362,7 @@ SELECT ID, BudgetLevel, RPIO, BFY, Fund, FundName, BOC, BocName, Org, RC, Divisi
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Ninja.Properties.Settings.Default.SqlConnectionString;
+            this._connection.ConnectionString = global::Ninja.Properties.Settings.Default.R6SqlServer;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -63796,7 +63796,7 @@ SELECT ID, BudgetLevel, RPIO, BFY, Fund, FundName, BOC, BocName, Org, RC, Divisi
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Ninja.Properties.Settings.Default.SqlConnectionString;
+            this._connection.ConnectionString = global::Ninja.Properties.Settings.Default.R6SqlServer;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -64230,7 +64230,7 @@ SELECT ID, BudgetLevel, RPIO, BFY, Fund, FundName, BOC, BocName, Org, RC, Divisi
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Ninja.Properties.Settings.Default.SqlConnectionString;
+            this._connection.ConnectionString = global::Ninja.Properties.Settings.Default.R6SqlServer;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -64664,7 +64664,7 @@ SELECT ID, BudgetLevel, RPIO, BFY, Fund, FundName, BOC, BocName, Org, RC, Divisi
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::Ninja.Properties.Settings.Default.SqlConnectionString;
+            this._connection.ConnectionString = global::Ninja.Properties.Settings.Default.R6SqlServer;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

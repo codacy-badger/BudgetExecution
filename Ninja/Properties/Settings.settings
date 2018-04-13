@@ -5,12 +5,12 @@
     <Setting Name="R6" Type="(Connection string)" Scope="Application">
       <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
 &lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
-  &lt;ConnectionString&gt;data source=C:\Users\terry\Documents\Visual Studio 2017\Projects\Budget\Database\sqlite\R6.db&lt;/ConnectionString&gt;
+  &lt;ConnectionString&gt;data source="C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\SQLite\R6.db"&lt;/ConnectionString&gt;
   &lt;ProviderName&gt;System.Data.SQLite.EF6&lt;/ProviderName&gt;
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
-      <Value Profile="(Default)">data source=C:\Users\terry\Documents\Visual Studio 2017\Projects\Budget\Database\sqlite\R6.db</Value>
+      <Value Profile="(Default)">data source="C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\SQLite\R6.db"</Value>
     </Setting>
-    <Setting Name="SqlConnectionString" Type="(Connection string)" Scope="Application">
+    <Setting Name="R6SqlServer" Type="(Connection string)" Scope="Application">
       <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
 &lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
   &lt;ConnectionString&gt;Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\SqlServer\R6.mdf;Integrated Security=True;Connect Timeout=30&lt;/ConnectionString&gt;
@@ -18,13 +18,13 @@
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
       <Value Profile="(Default)">Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\SqlServer\R6.mdf;Integrated Security=True;Connect Timeout=30</Value>
     </Setting>
-    <Setting Name="SQLiteConnectionString" Type="(Connection string)" Scope="Application">
+    <Setting Name="SqlCe" Type="(Connection string)" Scope="Application">
       <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
 &lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
-  &lt;ConnectionString&gt;Data Source="C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Database\sqlite\R6.db"&lt;/ConnectionString&gt;
-  &lt;ProviderName&gt;Devart.Data.SQLite&lt;/ProviderName&gt;
+  &lt;ConnectionString&gt;data source="C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\SqlCe\R6.sdf"&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SQLite.EF6&lt;/ProviderName&gt;
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
-      <Value Profile="(Default)">Data Source="C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Database\sqlite\R6.db"</Value>
+      <Value Profile="(Default)">data source="C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\SqlCe\R6.sdf"</Value>
     </Setting>
   </Settings>
 </SettingsFile>
