@@ -92,6 +92,7 @@ namespace Budget
                     Chart.Style3D = true;
                 }
 
+            
                 //Properties
                 public ChartControl Chart { get; set; }
                 public DataBuilder Data { get; set; }
