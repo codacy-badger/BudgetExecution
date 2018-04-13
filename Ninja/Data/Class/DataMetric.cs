@@ -12,7 +12,7 @@ namespace Budget
     {
         namespace Data
         {
-            public class DataMetric 
+            public class DataMetric
             {
 
                 //Constructors
@@ -44,7 +44,7 @@ namespace Budget
                     GoalMetrics = GetMetrics(Table, "GoalName");
                     ObjectiveTotals = GetTotals(Table, "ObjectiveName");
                     ObjectiveMetrics = GetMetrics(Table, "ObjectiveName");
-                    if(source == Source.P8)
+                    if (source == Source.P8)
                     {
                         DivisionTotals = GetTotals(Table, "RC");
                         DivisionMetrics = GetMetrics(Table, "RC");
@@ -103,21 +103,19 @@ namespace Budget
                     ObjectiveMetrics = GetMetrics(Table, "ObjectiveName");
                 }
 
-
-
                 //Properties
-                public DataBuilder Data { get; }
-                public DataSet BudgetData { get; }
+                public DataBuilder Data { get; set; }
+                public DataSet BudgetData { get; set; }
                 public DataTable Table { get; set; }
                 public Dictionary<string, string[]> ProgramElements { get; set; }
-                public decimal Total { get; }
-                public int Count { get; }
-                public decimal Average { get; }
-                public decimal[] Metrics { get; }
-                public BindingList<IEnumerable<KeyValuePair<string, double>>> BudgetBinding { get; }
+                public decimal Total { get; set; }
+                public int Count { get; set; }
+                public decimal Average { get; set; }
+                public decimal[] Metrics { get; set; }
+                public BindingList<IEnumerable<KeyValuePair<string, double>>> BudgetBinding { get; set; }
                 public Dictionary<string, decimal[]> BocMetrics { get; set; }
                 public Dictionary<string, decimal> BocTotals { get; set; }
-                public Dictionary<string, decimal[]> FundMetrics { get; }
+                public Dictionary<string, decimal[]> FundMetrics { get; set; }
                 public Dictionary<string, decimal> FundTotals { get; set; }
                 public Dictionary<string, decimal[]> GoalMetrics { get; set; }
                 public Dictionary<string, decimal> GoalTotals { get; set; }
@@ -132,9 +130,7 @@ namespace Budget
                 public Dictionary<string, decimal[]> DivisionMetrics { get; set; }
                 public Dictionary<string, decimal> DivisionTotals { get; set; }
 
-
                 //Methods
-                
                 public decimal GetAverage(DataTable table)
                 {
                     try
@@ -235,18 +231,18 @@ namespace Budget
                     }
                 }
 
-                private Tuple<DataTable, PRC[], decimal, int> GetAllocation(DataTable table)
+                Tuple<DataTable, PRC[], decimal, int> GetAllocation(DataTable table)
                 {
                     return new Tuple<DataTable, PRC[], decimal, int>(table, GetPrcArray(table), GetTotal(table), GetCount(table));
                 }
 
-                private Dictionary<string, decimal>[] GetTotalsArray()
+                Dictionary<string, decimal>[] GetTotalsArray()
                 {
                     return new Dictionary<string, decimal>[] {FundTotals, BocTotals, NpmTotals, GoalTotals,
-                        ObjectiveTotals, ProgramAreaTotals, ProgramProjectTotals};
+                    ObjectiveTotals, ProgramAreaTotals, ProgramProjectTotals};
                 }
 
-                private Dictionary<string, decimal[]> GetMetrics(DataTable table, string column)
+                Dictionary<string, decimal[]> GetMetrics(DataTable table, string column)
                 {
                     try
                     {
@@ -292,16 +288,59 @@ namespace Budget
                     }
                 }
 
+                public Dictionary<string, decimal> GetTotals(DataTable table, PrcFilter prcfilter)
+                {
+                    try
+                    {
+                        var info = new Dictionary<string, decimal>();
+                        foreach (string filter in ProgramElements[prcfilter.ToString()])
+                        {
+                            var query = table.AsEnumerable().Where(p => p.Field<string>(prcfilter.ToString()).Equals(filter)).Select(p => p).CopyToDataTable();
+                            info.Add(filter, GetTotal(query));
+                        }
+                        return info;
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
+                        return null;
+                    }
+                }
+
                 internal Dictionary<string, double> GetChartTotals(DataTable table, string column)
                 {
 
                     try
-                    {;
+                    {
+                        ;
                         var doubledata = new Dictionary<string, double>();
                         foreach (string filter in ProgramElements[column])
                         {
                             var query = table.AsEnumerable().Where(p => p.Field<string>(column).Equals(filter))
                                 .Select(p => p).CopyToDataTable();
+                            doubledata.Add(filter, (double)GetTotal(query));
+                        }
+                        return doubledata;
+                    }
+                    catch (Exception e)
+                    {
+
+                        MessageBox.Show(e.Message + e.StackTrace);
+                        return null;
+                    }
+
+                }
+
+                internal Dictionary<string, double> GetChartTotals(DataTable table, PrcFilter prcfilter)
+                {
+
+                    try
+                    {
+                        ;
+                        var doubledata = new Dictionary<string, double>();
+                        foreach (string filter in ProgramElements[prcfilter.ToString()])
+                        {
+                            var query = table.AsEnumerable().Where(p => p.Field<string>(prcfilter.ToString()).Equals(filter)).Select(p => p).CopyToDataTable();
                             doubledata.Add(filter, (double)GetTotal(query));
                         }
                         return doubledata;
@@ -339,7 +378,29 @@ namespace Budget
                     }
                 }
 
-
+                internal Dictionary<string, double[]> GetChartMetrics(DataTable table, PrcFilter prcfilter)
+                {
+                    try
+                    {
+                        Dictionary<string, double[]> info = new Dictionary<string, double[]>();
+                        foreach (string filter in ProgramElements[prcfilter.ToString()])
+                        {
+                            var query = FilterTable(table, prcfilter.ToString(), filter);
+                            double[] stat = new double[4];
+                            stat[0] = (double)Data.GetTotal(query);
+                            stat[1] = (double)Data.GetCount(query);
+                            stat[2] = stat[0] / stat[1];
+                            stat[3] = (stat[0] / (double)Total) * 100;
+                            info.Add(filter, stat);
+                        }
+                        return info;
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
+                        return null;
+                    }
+                }
             }
         }
     }

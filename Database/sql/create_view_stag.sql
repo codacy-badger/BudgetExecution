@@ -1,1 +1,0 @@
-CREATE VIEW `STAG` AS SELECT * FROM P6 WHERE FUND LIKE 'E%' Group by BFY, Fund, Org, Code, BOC, Amount Order by BFY, Fund, Org, Code, BOC, BudgetLevel asc

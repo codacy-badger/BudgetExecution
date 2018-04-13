@@ -58,7 +58,13 @@ namespace Budget
 
             public enum Source
             {
-                T6, T7, B6, U6, P6, P8, P7, A6, O6, O7, O8, I6, External
+                T6, T7, B6, E1, P6, P7, P8, A6, O6, O7, O8, F6, EPM, LUST, OIL, STAG, SUPERFUND, SF6A, EJ, EN, MD, RC, RA, SF, WQ, MM, WSA, WCF, MDR, XA
+            }
+
+
+            public enum PrcFilter
+            {
+                ID, BFY, RPIO, Fund, FundName, BOC, BocName, NPM, Goal, GoalName, Objective, ObjectiveName, Division, ProgramArea, ProgramAreaName, ProgramProjectCode, ProgramProjectName
             }
 
             public enum ChartFilter
@@ -67,7 +73,7 @@ namespace Budget
             }
 
           
-            public enum ReportingMetric
+            public enum Metric
             {
                 Total, Count, Average, Ratio
             }

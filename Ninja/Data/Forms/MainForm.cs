@@ -8,6 +8,17 @@ namespace Ninja.Forms
 {
     public partial class MainForm : Syncfusion.Windows.Forms.MetroForm
     {
+
+        public GetChart Chart { get; set; }
+        public int Counter { get; set; }
+        public DataBuilder D6 { get; set; }
+        public DataBuilder R6 { get; set; }
+        public DataMetric Metric { get; set; }
+        public FormData NinjaData { get; set; }
+        public string[] Title { get; set; }
+        public Dictionary<string, double>[] Values { get; set; }
+        public System.Windows.Forms.Timer Timer { get; set; }
+
         public MainForm()
         {
             InitializeComponent();
@@ -16,10 +27,9 @@ namespace Ninja.Forms
             D6 = new DataBuilder(Source.P8);
             Metric = new DataMetric(R6);
             Timer = new Timer();
-            Values = new Dictionary<string, double>[] { GetMainData(MainChart, R6, ChartFilter.Fund), GetMainData(MainChart, R6, ChartFilter.BocName),
-                GetMainData(MainChart, R6, ChartFilter.NPM), GetMainData(MainChart, R6, ChartFilter.GoalName),
-                GetMainData(MainChart, D6, ChartFilter.BocName), GetMainData(MainChart, D6, ChartFilter.NPM),
-                GetMainData(MainChart, D6, ChartFilter.RC) };
+            Values = new Dictionary<string, double>[] { Metric.GetChartTotals(R6.BudgetTable, PrcFilter.Fund), Metric.GetChartTotals(R6.BudgetTable, PrcFilter.BOC),
+                Metric.GetChartTotals(D6.BudgetTable, PrcFilter.Fund), Metric.GetChartTotals(R6.BudgetTable, PrcFilter.NPM), Metric.GetChartTotals(D6.BudgetTable, PrcFilter.NPM),
+                Metric.GetChartTotals(R6.BudgetTable, PrcFilter.GoalName), Metric.GetChartTotals(D6.BudgetTable, PrcFilter.GoalName)};
             Title = GetChartTitles(Values);
             Chart = new GetChart(GetMainChart);
             MainChart = new BudgetChart(MainChart, Title[1], Values[1]).Activate();
@@ -27,58 +37,49 @@ namespace Ninja.Forms
             DivisionSummaryButton.Click += DivisionSummaryButton_OnClick;
         }
 
-        public GetChart Chart { get; set; }
-        public int Counter { get; set; }
-        public DataBuilder D6 { get; }
-        public DataBuilder R6{ get; set; }
-        public DataMetric Metric { get; set; }
-        ChartData MainData { get; }
-        public FormData NinjaData { get; set; }
-        public string[] Title { get; set; }
-        public Dictionary<string, double>[] Values { get; set; }
-        public System.Windows.Forms.Timer Timer { get; set; }
+        string[] GetChartTitles(Dictionary<string, double>[] info)
+        {
+            var t = new string[info.Length];
+            t[0] = "R6 Funds by Appropriation";
+            t[1] = "R6 Funds by Object Class";
+            t[2] = "R6 Funds by HQ NPM";
+            t[3] = "Division Funds by HQ NPM";
+            t[4] = "R6 Funds by Agency Goal";
+            t[5] = "Division Funds by Agency Goal";
+            t[6] = "Division Funds by HQ NPM";
+            return t;
+        }
+
+        #region Chart Timer EventHandler
+
+        private ChartControl GetMainChart(ChartControl chart, string[] title, Dictionary<string, double> data)
+        {
+            MainChart = new BudgetChart(chart, title[0], data).Activate();
+            return MainChart;
+        }
+
+        private ChartControl GetMainChart(ChartControl chart, string title, Dictionary<string, double> data)
+        {
+            MainChart = new BudgetChart(chart, title, data).Activate();
+            return MainChart;
+        }
 
         private void ChartTimer(object sender, EventArgs e)
         {
             if (Counter >= Values.Length)
             {
                 Counter = 0;
-                MainChart = new BudgetChart(MainChart, Title[Counter], Values[Counter]).Activate();
+                MainChart = Chart(MainChart, Title[Counter], Values[Counter]);
                 Counter++;
             }
             if (Counter < Values.Length)
             {
-                MainChart = new BudgetChart(MainChart, Title[Counter], Values[Counter]).Activate();
+                MainChart = Chart(MainChart, Title[Counter], Values[Counter]);
                 Counter++;
             }
         }
 
-        private string[] GetChartTitles(Dictionary<string, double>[] info)
-        {
-            var t = new string[info.Length];
-            t[0] = "R6 Funds by Appropriation (in thousands)";
-            t[1] = "R6 Funds by Object Class (in thousands)";
-            t[2] = "R6 Funds by HQ NPM (in thousands)";
-            t[3] = "R6 Funds by Agency Goal (in thousands)";
-            t[4] = "Division Funds by Object (in thousands) ";
-            t[5] = "Division Funds by HQ NPM (in thousands)";
-            t[6] = "Division Funds by Agency Goal (in thousands)";
-            return t;
-        }
-
-        private ChartControl GetMainChart(ChartControl chart, string[] title, Dictionary<string, double> data)
-        {
-            var db = new DataBuilder(Source.P7);
-            var dm = new DataMetric(db);
-            return new BudgetChart(MainChart, title[0], data).Activate();
-        }
-
-        private ChartControl GetMainChart(ChartControl chart, string title, Dictionary<string, double> data)
-        {
-            var db = new DataBuilder(Source.P7);
-            var dm = new DataMetric(db);
-            return new BudgetChart(MainChart, title, data).Activate();
-        }
+        #endregion
 
         private void MainForm_Load(object sender, EventArgs e)
         {
@@ -89,12 +90,6 @@ namespace Ninja.Forms
             Timer.Interval = 5000;
         }
 
-        Dictionary<string, double> GetMainData(ChartControl chart, DataBuilder data, ChartFilter filter)
-        {
-            var cd = new ChartData(chart, data, filter);
-            cd.AxisTitle = Title;
-            return cd.InputTotals;
-        }
 
         private void RegionSummaryButton_OnClick(object sender, EventArgs e)
         {

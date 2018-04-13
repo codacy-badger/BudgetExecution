@@ -1,0 +1,1 @@
+CREATE VIEW `Payroll` AS select * from P6 where BOC = '10'

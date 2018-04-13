@@ -37,8 +37,8 @@ namespace Ninja.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\R6.mdf;Integr" +
-            "ated Security=True;Connect Timeout=30")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\SqlServer\\R6." +
+            "mdf;Integrated Security=True;Connect Timeout=30")]
         public string SqlConnectionString {
             get {
                 return ((string)(this["SqlConnectionString"]));
