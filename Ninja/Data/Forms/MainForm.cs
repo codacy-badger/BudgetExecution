@@ -42,7 +42,7 @@ namespace Ninja.Forms
             var t = new string[info.Length];
             t[0] = "R6 Funds by Appropriation";
             t[1] = "R6 Funds by Object Class";
-            t[2] = "R6 Funds by HQ NPM";
+            t[2] = "Division Funds by Appropriation";
             t[3] = "Division Funds by HQ NPM";
             t[4] = "R6 Funds by Agency Goal";
             t[5] = "Division Funds by Agency Goal";
@@ -101,6 +101,11 @@ namespace Ninja.Forms
         {
             var datamgr = new SummaryForm(Source.P8);
             datamgr.Show();
+        }
+
+        private void DataBtn_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

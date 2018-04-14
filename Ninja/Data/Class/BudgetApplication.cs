@@ -58,13 +58,14 @@ namespace Budget
 
             public enum Source
             {
-                T6, T7, B6, E1, P6, P7, P8, A6, O6, O7, O8, F6, EPM, LUST, OIL, STAG, SUPERFUND, SF6A, EJ, EN, MD, RC, RA, SF, WQ, MM, WSA, WCF, MDR, XA
+                T6, T7, B6, E1, P6, P7, P8, A6, O6, O7, O8, F6, S6, EPM, LUST, OIL, STAG, SUPERFUND, SF6A, EJ, EN, MD, RC, RA, SF, WQ, MM, WSA, WCF, MDR, XA,
+                BOC10, BOC17, BOC21, BOC28, BOC36, BOC37, BOC41, BocControl, PrcControl
             }
 
 
             public enum PrcFilter
             {
-                ID, BFY, RPIO, Fund, FundName, BOC, BocName, NPM, Goal, GoalName, Objective, ObjectiveName, Division, ProgramArea, ProgramAreaName, ProgramProjectCode, ProgramProjectName
+                ID, BFY, RPIO, Fund, FundName, BOC, BocName, Org, RC, NPM, Goal, GoalName, Objective, ObjectiveName, Division, ProgramArea, ProgramAreaName, ProgramProjectCode, ProgramProjectName
             }
 
             public enum ChartFilter

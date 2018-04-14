@@ -23,6 +23,7 @@ namespace Budget
                     Query = new Query(source);
                     BudgetData = GetDataSet();
                     BudgetTable = BudgetData.Tables[0];
+                    Total = GetTotal(BudgetTable);
                     BindingSource = new BindingSource();
                     BindingSource.DataSource = BudgetTable; 
                     ProgramElements = GetElements(BudgetTable);
@@ -53,6 +54,7 @@ namespace Budget
                 public Query Query { get; }
                 public DataSet BudgetData { get; }
                 public DataTable BudgetTable { get; }
+                public decimal Total { get; }
                 public Dictionary<string, string[]> ProgramElements { get; }
                 public DataRow[] Records { get; }
                 public PRC[] Accounts { get; }
@@ -79,7 +81,7 @@ namespace Budget
                 {
                     try
                     {
-                        return table.AsEnumerable().Select(p => p).Count();
+                        return table.AsEnumerable().Where(p => p.Field<decimal>("Amount") > 0m).Select(p => p).Count();
                     }
                     catch (Exception ex)
                     {
@@ -188,7 +190,9 @@ namespace Budget
                 {
                     try
                     {
-                        return table.AsEnumerable().Select(p => p).Sum(p => p.Field<decimal>("Amount"));
+                        if(BudgetTable.Columns.Contains("Amount"))
+                            return table.AsEnumerable().Select(p => p).Sum(p => p.Field<decimal>("Amount"));
+                        return -1M;
                     }
                     catch (Exception ex)
                     {

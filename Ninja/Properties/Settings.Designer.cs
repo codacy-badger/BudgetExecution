@@ -55,5 +55,16 @@ namespace Ninja.Properties {
                 return ((string)(this["SqlCe"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\SqlServer\\R6." +
+            "mdf;Integrated Security=True;Connect Timeout=30")]
+        public string R6ConnectionString {
+            get {
+                return ((string)(this["R6ConnectionString"]));
+            }
+        }
     }
 }

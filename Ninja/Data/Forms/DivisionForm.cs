@@ -1,5 +1,7 @@
 using MetroSet_UI.Controls;
 using Syncfusion.Windows.Forms.Chart;
+using Syncfusion.Windows.Forms.Grid;
+using Syncfusion.Windows.Forms.Tools.Controls;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -16,23 +18,6 @@ namespace Budget
         {
             public partial class DivisionForm : MetroForm
             {
-                #region Properties
-
-                public Dictionary<string, decimal> BocInfo { get; set; }
-                public DivisionAuthority Division { get; set; }
-                public DataTable DivisionData { get; set; }
-                public Dictionary<string, decimal> FteInfo { get; set; }
-                public string[] FundCodes { get; }
-                public Query P8Query { get; set; }
-                public ChartControl PieChart { get; set; }
-                public Dictionary<string, decimal> PrcInfo { get; set; }
-                public decimal Total { get; }
-                private Appropriation[] Appropriation { get; }
-                private DataBuilder DataBuilder { get; set; }
-
-                #endregion
-
-                #region Constructors
 
                 public DivisionForm()
                 {
@@ -60,7 +45,20 @@ namespace Budget
                     lblCount.Text = DivisionData.Rows.Count.ToString();
                 }
 
-                #endregion
+                public Dictionary<string, decimal> BocInfo { get; set; }
+                public DivisionAuthority Division { get; set; }
+                public DataTable DivisionData { get; set; }
+                public Dictionary<string, decimal> FteInfo { get; set; }
+                public string[] FundCodes { get; }
+                public Query P8Query { get; set; }
+                public ChartControl PieChart { get; set; }
+                public Dictionary<string, decimal> PrcInfo { get; set; }
+                public decimal Total { get; }
+                private Appropriation[] Appropriation { get; }
+                private DataBuilder DataBuilder { get; set; }
+                private void area_Click(object sender, EventArgs e)
+                {
+                }
 
                 private void AreaButton_OnSelect(object sender, EventArgs e)
                 {
@@ -115,7 +113,7 @@ namespace Budget
                         c.Click += OnP8AppropButtonSelect;
                 }
 
-                private void BindData(DataTable table, DataGridView dg, BindingSource bs, BindingNavigator bn)
+                private void BindData(DataTable table, GridDataBoundGrid dg, BindingSource bs, BindingNavigator bn)
                 {
                     bs.DataSource = table;
                     dg.DataSource = bs;
@@ -174,10 +172,27 @@ namespace Budget
                     P8BindingSource.CurrentItemChanged += new EventHandler(UpdatePieChart);
                 }
 
+                private void DivisionFormTabControl_SelectedIndexChanged(object sender, EventArgs e)
+                {
+                }
+
                 private void ExcelExportButton_Clicked(object sender, EventArgs e)
                 {
                     var excel = new ExcelOp(Division.RC.Code);
                     excel.ExportData(Division.Data.BudgetTable);
+                }
+
+                private decimal GetAverage(DataTable table)
+                {
+                    try
+                    {
+                        return table.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Average();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
+                        return -1M;
+                    }
                 }
 
                 private string[] GetChartTitles()
@@ -192,6 +207,66 @@ namespace Budget
                     return t;
                 }
 
+                private string[] GetCodes(DataTable table, string column)
+                {
+                    try
+                    {
+                        return table.AsEnumerable().Select(p => p.Field<string>(column)).Distinct().ToArray();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
+                        return null;
+                    }
+                }
+
+                private decimal GetCount(DataTable table)
+                {
+                    try
+                    {
+                        return (decimal)table.AsEnumerable().Select(p => p).Count();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
+                        return -1;
+                    }
+                }
+
+                private Tuple<DataTable, PRC[], decimal> GetData(DataTable table, string column, string filter)
+                {
+                    try
+                    {
+                        var query = GetTable(table, column, filter);
+                        decimal total = query.AsEnumerable().Select(p => p).Sum(p => p.Field<decimal>("Amount"));
+                        PRC[] prc = query.AsEnumerable().Select(p => new PRC()).ToArray();
+                        return new Tuple<DataTable, PRC[], decimal>(query, prc, total);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
+                        return null;
+                    }
+                }
+
+                private Dictionary<string, decimal> GetDataValues(DataTable table, string[] filters, string column)
+                {
+                    try
+                    {
+                        Dictionary<string, decimal> info = new Dictionary<string, decimal>();
+                        foreach (string f in filters)
+                        {
+                            info.Add(f, GetData(table, column, f).Item3);
+                        }
+                        return info;
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
+                        return null;
+                    }
+                }
+
                 private void GetFilterButtons()
                 {
                     GetMetroSetButtons(AppropriationTabFilterPanel, GetCodes(DivisionData, "FundName"));
@@ -202,16 +277,48 @@ namespace Budget
                     GetMetroSetButtons(GridFilterPanel, Division.ProgramElements["FundName"]);
                 }
 
-                private void GetGridColumns(DataGridView dgv)
+                private DataTable GetFormTable(DataTable table)
                 {
-                    foreach (DataGridViewColumn dc in dgv.Columns)
-                        dc.Visible = false;
-                    dgv.Columns[4].Visible = true;
-                    dgv.Columns[6].Visible = true;
-                    dgv.Columns[8].Visible = true;
-                    dgv.Columns[9].Visible = true;
-                    dgv.Columns[11].Visible = true;
-                    dgv.Columns[12].Visible = true;
+                    DataTable viewtable = new DataTable();
+                    var bfy = new DataColumn("BFY");
+                    viewtable.Columns.Add(bfy);
+                    var fund = new DataColumn("Fund");
+                    viewtable.Columns.Add(fund);
+                    var org = new DataColumn("Org");
+                    viewtable.Columns.Add(org);
+                    var rc = new DataColumn("RC");
+                    viewtable.Columns.Add(rc);
+                    var boc = new DataColumn("BOC");
+                    viewtable.Columns.Add(boc);
+                    var code = new DataColumn("Code");
+                    viewtable.Columns.Add(code);
+                    var amt = new DataColumn("Amount");
+                    viewtable.Columns.Add(amt);
+                    foreach (DataRow row in table.Rows)
+                    {
+                        var formrow = viewtable.NewRow();
+                        formrow["BFY"] = row["BFY"];
+                        formrow["Fund"] = row["Fund"];
+                        formrow["Org"] = row["Org"];
+                        formrow["RC"] = row["RC"];
+                        formrow["BOC"] = row["BOC"];
+                        formrow["Code"] = row["Code"];
+                        formrow["Amount"] = row["Amount"];
+                        viewtable.Rows.Add(formrow);
+                    }
+                    return viewtable;
+                }
+
+                private void GetGridColumns(GridDataBoundGrid dgv)
+                {
+                    foreach (GridBoundColumn dc in dgv.GridBoundColumns)
+                        dc.Hidden = true;
+                    dgv.GridBoundColumns[4].Hidden = false;
+                    dgv.GridBoundColumns[6].Hidden = false;
+                    dgv.GridBoundColumns[8].Hidden = false;
+                    dgv.GridBoundColumns[9].Hidden = false;
+                    dgv.GridBoundColumns[11].Hidden = false;
+                    dgv.GridBoundColumns[12].Hidden = false;
                 }
 
                 private void GetMetroSetButtons(FlowLayoutPanel panel, string[] list)
@@ -259,6 +366,37 @@ namespace Budget
                 {
                     //PieChart = new BudgetChart(chart, title, P8, bs).CreateColumn();
                     return PieChart;
+                }
+
+                private PRC[] GetPrcArray(DataTable table)
+                {
+                    try
+                    {
+                        return table.AsEnumerable().Select(p => new PRC()).ToArray();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
+                        return null;
+                    }
+                }
+
+                private decimal GetRatio(decimal t1, decimal t2)
+                {
+                    return t1 / t2;
+                }
+
+                private DataTable GetTable(DataTable table, string column, string filter)
+                {
+                    try
+                    {
+                        return table.AsEnumerable().Where(p => p.Field<string>(column).Equals(filter)).Select(p => p).CopyToDataTable();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
+                        return null;
+                    }
                 }
 
                 private void GetTabPanelTitle(object sender, EventArgs e)
@@ -311,10 +449,40 @@ namespace Budget
                     }
                 }
 
+                private decimal GetTotal(DataTable table)
+                {
+                    try
+                    {
+                        return table.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Sum();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
+                        return -1M;
+                    }
+                }
+
+                private decimal[] GetValues(DataTable table)
+                {
+                    try
+                    {
+                        return new decimal[] { GetTotal(table), GetCount(table), GetAverage(table) };
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
+                        return new decimal[] { -1m, -1m, -1m };
+                    }
+                }
+
                 private void metroButton2_Click(object sender, EventArgs e)
                 {
                     var excel = new ExcelForm();
                     excel.ShowDialog();
+                }
+
+                private void metroTextBox7_Click(object sender, EventArgs e)
+                {
                 }
 
                 private void NpmButton_OnSelect(object sender, EventArgs e)
@@ -479,192 +647,18 @@ namespace Budget
                     DatabaseGroupBox.Text = $"{Division.Org.Name} Database";
                 }
 
-                private void UpdatePieChart(object sender, EventArgs e)
-                {
-                    P8BindingSource = sender as BindingSource;
-                    PrcChart = GetPieChart(PrcChart, "", Division, P8BindingSource);
-                }
-
-                private void area_Click(object sender, EventArgs e)
-                {
-                }
-
-                private void DivisionFormTabControl_SelectedIndexChanged(object sender, EventArgs e)
-                {
-                }
-
-                private decimal GetAverage(DataTable table)
-                {
-                    try
-                    {
-                        return table.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Average();
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
-                        return -1M;
-                    }
-                }
-
-                private string[] GetCodes(DataTable table, string column)
-                {
-                    try
-                    {
-                        return table.AsEnumerable().Select(p => p.Field<string>(column)).Distinct().ToArray();
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
-                        return null;
-                    }
-                }
-
-                private decimal GetCount(DataTable table)
-                {
-                    try
-                    {
-                        return (decimal)table.AsEnumerable().Select(p => p).Count();
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
-                        return -1;
-                    }
-                }
-
-                private Tuple<DataTable, PRC[], decimal> GetData(DataTable table, string column, string filter)
-                {
-                    try
-                    {
-                        var query = GetTable(table, column, filter);
-                        decimal total = query.AsEnumerable().Select(p => p).Sum(p => p.Field<decimal>("Amount"));
-                        PRC[] prc = query.AsEnumerable().Select(p => new PRC()).ToArray();
-                        return new Tuple<DataTable, PRC[], decimal>(query, prc, total);
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
-                        return null;
-                    }
-                }
-
-                private Dictionary<string, decimal> GetDataValues(DataTable table, string[] filters, string column)
-                {
-                    try
-                    {
-                        Dictionary<string, decimal> info = new Dictionary<string, decimal>();
-                        foreach (string f in filters)
-                        {
-                            info.Add(f, GetData(table, column, f).Item3);
-                        }
-                        return info;
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
-                        return null;
-                    }
-                }
-
-                private DataTable GetFormTable(DataTable table)
-                {
-                    DataTable viewtable = new DataTable();
-                    var bfy = new DataColumn("BFY");
-                    viewtable.Columns.Add(bfy);
-                    var fund = new DataColumn("Fund");
-                    viewtable.Columns.Add(fund);
-                    var org = new DataColumn("Org");
-                    viewtable.Columns.Add(org);
-                    var rc = new DataColumn("RC");
-                    viewtable.Columns.Add(rc);
-                    var boc = new DataColumn("BOC");
-                    viewtable.Columns.Add(boc);
-                    var code = new DataColumn("Code");
-                    viewtable.Columns.Add(code);
-                    var amt = new DataColumn("Amount");
-                    viewtable.Columns.Add(amt);
-                    foreach (DataRow row in table.Rows)
-                    {
-                        var formrow = viewtable.NewRow();
-                        formrow["BFY"] = row["BFY"];
-                        formrow["Fund"] = row["Fund"];
-                        formrow["Org"] = row["Org"];
-                        formrow["RC"] = row["RC"];
-                        formrow["BOC"] = row["BOC"];
-                        formrow["Code"] = row["Code"];
-                        formrow["Amount"] = row["Amount"];
-                        viewtable.Rows.Add(formrow);
-                    }
-                    return viewtable;
-                }
-
-                private PRC[] GetPrcArray(DataTable table)
-                {
-                    try
-                    {
-                        return table.AsEnumerable().Select(p => new PRC()).ToArray();
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
-                        return null;
-                    }
-                }
-
-                private decimal GetRatio(decimal t1, decimal t2)
-                {
-                    return t1 / t2;
-                }
-
-                private DataTable GetTable(DataTable table, string column, string filter)
-                {
-                    try
-                    {
-                        return table.AsEnumerable().Where(p => p.Field<string>(column).Equals(filter)).Select(p => p).CopyToDataTable();
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
-                        return null;
-                    }
-                }
-
-                private decimal GetTotal(DataTable table)
-                {
-                    try
-                    {
-                        return table.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Sum();
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
-                        return -1M;
-                    }
-                }
-
-                private decimal[] GetValues(DataTable table)
-                {
-                    try
-                    {
-                        return new decimal[] { GetTotal(table), GetCount(table), GetAverage(table) };
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
-                        return new decimal[] { -1m, -1m, -1m };
-                    }
-                }
-
-                private void metroTextBox7_Click(object sender, EventArgs e)
-                {
-                }
-
                 private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
                 {
                 }
 
                 private void textBox3_TextChanged(object sender, EventArgs e)
                 {
+                }
+
+                private void UpdatePieChart(object sender, EventArgs e)
+                {
+                    P8BindingSource = sender as BindingSource;
+                    PrcChart = GetPieChart(PrcChart, "", Division, P8BindingSource);
                 }
             }
         }

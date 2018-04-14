@@ -118,7 +118,7 @@ namespace Budget
                 {
                     try
                     {
-                        return table.Rows.Count;
+                        return table.AsEnumerable().Where(p => p.Field<decimal>("Amount") > 0m).Select(p => p).Count();
                     }
                     catch (Exception ex)
                     {

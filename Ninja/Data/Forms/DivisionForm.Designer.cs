@@ -64,10 +64,6 @@ namespace Budget
             Syncfusion.Windows.Forms.Chart.ChartToolBarTypeItem chartToolBarTypeItem1 = new Syncfusion.Windows.Forms.Chart.ChartToolBarTypeItem();
             Syncfusion.Windows.Forms.Chart.ChartToolBarSeries3DItem chartToolBarSeries3DItem1 = new Syncfusion.Windows.Forms.Chart.ChartToolBarSeries3DItem();
             Syncfusion.Windows.Forms.Chart.ChartToolBarShowLegendItem chartToolBarShowLegendItem1 = new Syncfusion.Windows.Forms.Chart.ChartToolBarShowLegendItem();
-            Syncfusion.Windows.Forms.Tools.ActiveStateCollection activeStateCollection1 = new Syncfusion.Windows.Forms.Tools.ActiveStateCollection();
-            Syncfusion.Windows.Forms.Tools.InactiveStateCollection inactiveStateCollection1 = new Syncfusion.Windows.Forms.Tools.InactiveStateCollection();
-            Syncfusion.Windows.Forms.Tools.ToggleButtonRenderer toggleButtonRenderer1 = new Syncfusion.Windows.Forms.Tools.ToggleButtonRenderer();
-            Syncfusion.Windows.Forms.Tools.SliderCollection sliderCollection1 = new Syncfusion.Windows.Forms.Tools.SliderCollection();
             Syncfusion.Windows.Forms.Chart.ChartSeries chartSeries3 = new Syncfusion.Windows.Forms.Chart.ChartSeries();
             Syncfusion.Windows.Forms.Chart.ChartCustomShapeInfo chartCustomShapeInfo3 = new Syncfusion.Windows.Forms.Chart.ChartCustomShapeInfo();
             Syncfusion.Windows.Forms.Chart.ChartLineInfo chartLineInfo2 = new Syncfusion.Windows.Forms.Chart.ChartLineInfo();
@@ -83,10 +79,6 @@ namespace Budget
             Syncfusion.Windows.Forms.Chart.ChartToolBarTypeItem chartToolBarTypeItem2 = new Syncfusion.Windows.Forms.Chart.ChartToolBarTypeItem();
             Syncfusion.Windows.Forms.Chart.ChartToolBarSeries3DItem chartToolBarSeries3DItem2 = new Syncfusion.Windows.Forms.Chart.ChartToolBarSeries3DItem();
             Syncfusion.Windows.Forms.Chart.ChartToolBarShowLegendItem chartToolBarShowLegendItem2 = new Syncfusion.Windows.Forms.Chart.ChartToolBarShowLegendItem();
-            Syncfusion.Windows.Forms.Tools.ActiveStateCollection activeStateCollection2 = new Syncfusion.Windows.Forms.Tools.ActiveStateCollection();
-            Syncfusion.Windows.Forms.Tools.InactiveStateCollection inactiveStateCollection2 = new Syncfusion.Windows.Forms.Tools.InactiveStateCollection();
-            Syncfusion.Windows.Forms.Tools.ToggleButtonRenderer toggleButtonRenderer2 = new Syncfusion.Windows.Forms.Tools.ToggleButtonRenderer();
-            Syncfusion.Windows.Forms.Tools.SliderCollection sliderCollection2 = new Syncfusion.Windows.Forms.Tools.SliderCollection();
             Syncfusion.Windows.Forms.Chart.ChartSeries chartSeries5 = new Syncfusion.Windows.Forms.Chart.ChartSeries();
             Syncfusion.Windows.Forms.Chart.ChartCustomShapeInfo chartCustomShapeInfo5 = new Syncfusion.Windows.Forms.Chart.ChartCustomShapeInfo();
             Syncfusion.Windows.Forms.Chart.ChartLineInfo chartLineInfo3 = new Syncfusion.Windows.Forms.Chart.ChartLineInfo();
@@ -102,10 +94,6 @@ namespace Budget
             Syncfusion.Windows.Forms.Chart.ChartToolBarTypeItem chartToolBarTypeItem3 = new Syncfusion.Windows.Forms.Chart.ChartToolBarTypeItem();
             Syncfusion.Windows.Forms.Chart.ChartToolBarSeries3DItem chartToolBarSeries3DItem3 = new Syncfusion.Windows.Forms.Chart.ChartToolBarSeries3DItem();
             Syncfusion.Windows.Forms.Chart.ChartToolBarShowLegendItem chartToolBarShowLegendItem3 = new Syncfusion.Windows.Forms.Chart.ChartToolBarShowLegendItem();
-            Syncfusion.Windows.Forms.Tools.ActiveStateCollection activeStateCollection3 = new Syncfusion.Windows.Forms.Tools.ActiveStateCollection();
-            Syncfusion.Windows.Forms.Tools.InactiveStateCollection inactiveStateCollection3 = new Syncfusion.Windows.Forms.Tools.InactiveStateCollection();
-            Syncfusion.Windows.Forms.Tools.ToggleButtonRenderer toggleButtonRenderer3 = new Syncfusion.Windows.Forms.Tools.ToggleButtonRenderer();
-            Syncfusion.Windows.Forms.Tools.SliderCollection sliderCollection3 = new Syncfusion.Windows.Forms.Tools.SliderCollection();
             Syncfusion.Windows.Forms.Chart.ChartSeries chartSeries7 = new Syncfusion.Windows.Forms.Chart.ChartSeries();
             Syncfusion.Windows.Forms.Chart.ChartCustomShapeInfo chartCustomShapeInfo7 = new Syncfusion.Windows.Forms.Chart.ChartCustomShapeInfo();
             Syncfusion.Windows.Forms.Chart.ChartLineInfo chartLineInfo4 = new Syncfusion.Windows.Forms.Chart.ChartLineInfo();
@@ -121,10 +109,6 @@ namespace Budget
             Syncfusion.Windows.Forms.Chart.ChartToolBarTypeItem chartToolBarTypeItem4 = new Syncfusion.Windows.Forms.Chart.ChartToolBarTypeItem();
             Syncfusion.Windows.Forms.Chart.ChartToolBarSeries3DItem chartToolBarSeries3DItem4 = new Syncfusion.Windows.Forms.Chart.ChartToolBarSeries3DItem();
             Syncfusion.Windows.Forms.Chart.ChartToolBarShowLegendItem chartToolBarShowLegendItem4 = new Syncfusion.Windows.Forms.Chart.ChartToolBarShowLegendItem();
-            Syncfusion.Windows.Forms.Tools.ActiveStateCollection activeStateCollection4 = new Syncfusion.Windows.Forms.Tools.ActiveStateCollection();
-            Syncfusion.Windows.Forms.Tools.InactiveStateCollection inactiveStateCollection4 = new Syncfusion.Windows.Forms.Tools.InactiveStateCollection();
-            Syncfusion.Windows.Forms.Tools.ToggleButtonRenderer toggleButtonRenderer4 = new Syncfusion.Windows.Forms.Tools.ToggleButtonRenderer();
-            Syncfusion.Windows.Forms.Tools.SliderCollection sliderCollection4 = new Syncfusion.Windows.Forms.Tools.SliderCollection();
             Syncfusion.Windows.Forms.Chart.ChartSeries chartSeries9 = new Syncfusion.Windows.Forms.Chart.ChartSeries();
             Syncfusion.Windows.Forms.Chart.ChartCustomShapeInfo chartCustomShapeInfo9 = new Syncfusion.Windows.Forms.Chart.ChartCustomShapeInfo();
             Syncfusion.Windows.Forms.Chart.ChartLineInfo chartLineInfo5 = new Syncfusion.Windows.Forms.Chart.ChartLineInfo();
@@ -140,10 +124,6 @@ namespace Budget
             Syncfusion.Windows.Forms.Chart.ChartToolBarTypeItem chartToolBarTypeItem5 = new Syncfusion.Windows.Forms.Chart.ChartToolBarTypeItem();
             Syncfusion.Windows.Forms.Chart.ChartToolBarSeries3DItem chartToolBarSeries3DItem5 = new Syncfusion.Windows.Forms.Chart.ChartToolBarSeries3DItem();
             Syncfusion.Windows.Forms.Chart.ChartToolBarShowLegendItem chartToolBarShowLegendItem5 = new Syncfusion.Windows.Forms.Chart.ChartToolBarShowLegendItem();
-            Syncfusion.Windows.Forms.Tools.ActiveStateCollection activeStateCollection5 = new Syncfusion.Windows.Forms.Tools.ActiveStateCollection();
-            Syncfusion.Windows.Forms.Tools.InactiveStateCollection inactiveStateCollection5 = new Syncfusion.Windows.Forms.Tools.InactiveStateCollection();
-            Syncfusion.Windows.Forms.Tools.ToggleButtonRenderer toggleButtonRenderer5 = new Syncfusion.Windows.Forms.Tools.ToggleButtonRenderer();
-            Syncfusion.Windows.Forms.Tools.SliderCollection sliderCollection5 = new Syncfusion.Windows.Forms.Tools.SliderCollection();
             Syncfusion.Windows.Forms.Chart.ChartSeries chartSeries11 = new Syncfusion.Windows.Forms.Chart.ChartSeries();
             Syncfusion.Windows.Forms.Chart.ChartCustomShapeInfo chartCustomShapeInfo11 = new Syncfusion.Windows.Forms.Chart.ChartCustomShapeInfo();
             Syncfusion.Windows.Forms.Chart.ChartLineInfo chartLineInfo6 = new Syncfusion.Windows.Forms.Chart.ChartLineInfo();
@@ -159,13 +139,11 @@ namespace Budget
             Syncfusion.Windows.Forms.Chart.ChartToolBarTypeItem chartToolBarTypeItem6 = new Syncfusion.Windows.Forms.Chart.ChartToolBarTypeItem();
             Syncfusion.Windows.Forms.Chart.ChartToolBarSeries3DItem chartToolBarSeries3DItem6 = new Syncfusion.Windows.Forms.Chart.ChartToolBarSeries3DItem();
             Syncfusion.Windows.Forms.Chart.ChartToolBarShowLegendItem chartToolBarShowLegendItem6 = new Syncfusion.Windows.Forms.Chart.ChartToolBarShowLegendItem();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DivisionForm));
+            Syncfusion.Windows.Forms.Grid.GridStyleInfo gridStyleInfo1 = new Syncfusion.Windows.Forms.Grid.GridStyleInfo();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DivisionForm));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             Syncfusion.Windows.Forms.Chart.ChartSeries chartSeries13 = new Syncfusion.Windows.Forms.Chart.ChartSeries();
             Syncfusion.Windows.Forms.Chart.ChartCustomShapeInfo chartCustomShapeInfo13 = new Syncfusion.Windows.Forms.Chart.ChartCustomShapeInfo();
             Syncfusion.Windows.Forms.Chart.ChartLineInfo chartLineInfo7 = new Syncfusion.Windows.Forms.Chart.ChartLineInfo();
@@ -207,99 +185,86 @@ namespace Budget
             this.rPIOLabel = new System.Windows.Forms.Label();
             this.DivisionFormTabControl = new Syncfusion.Windows.Forms.Tools.TabControlAdv();
             this.AppropriationTab = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
-            this.splitContainer5 = new System.Windows.Forms.SplitContainer();
+            this.AppriopriationTabExpander = new MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel();
+            this.AppropriationTabFilterPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.panel13 = new System.Windows.Forms.Panel();
             this.rb1 = new System.Windows.Forms.RadioButton();
             this.rb3 = new System.Windows.Forms.RadioButton();
             this.rb2 = new System.Windows.Forms.RadioButton();
             this.rb4 = new System.Windows.Forms.RadioButton();
             this.AppropChart = new Syncfusion.Windows.Forms.Chart.ChartControl();
-            this.AppriopriationTabExpander = new MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel();
-            this.AppropriationTabFilterPanel = new System.Windows.Forms.FlowLayoutPanel();
-            this.toggleButton1 = new Syncfusion.Windows.Forms.Tools.ToggleButton();
-            this.ImageBox = new System.Windows.Forms.ListBox();
-            this.approplistbox = new System.Windows.Forms.ListBox();
-            this.metroButton1 = new MetroFramework.Controls.MetroButton();
             this.BocTab = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
-            this.splitContainer2 = new System.Windows.Forms.SplitContainer();
+            this.BocChart = new Syncfusion.Windows.Forms.Chart.ChartControl();
             this.panel6 = new System.Windows.Forms.Panel();
             this.rb5 = new System.Windows.Forms.RadioButton();
             this.rb7 = new System.Windows.Forms.RadioButton();
             this.rb6 = new System.Windows.Forms.RadioButton();
             this.rb8 = new System.Windows.Forms.RadioButton();
-            this.BocChart = new Syncfusion.Windows.Forms.Chart.ChartControl();
             this.expandCollapsePanel2 = new MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel();
             this.panel2 = new System.Windows.Forms.FlowLayoutPanel();
-            this.toggleButton2 = new Syncfusion.Windows.Forms.Tools.ToggleButton();
             this.NpmTab = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
-            this.splitContainer3 = new System.Windows.Forms.SplitContainer();
             this.panel7 = new System.Windows.Forms.Panel();
             this.rb9 = new System.Windows.Forms.RadioButton();
             this.rb10 = new System.Windows.Forms.RadioButton();
             this.rb11 = new System.Windows.Forms.RadioButton();
             this.rb12 = new System.Windows.Forms.RadioButton();
-            this.NpmChart = new Syncfusion.Windows.Forms.Chart.ChartControl();
-            this.toggleButton3 = new Syncfusion.Windows.Forms.Tools.ToggleButton();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.expandCollapsePanel6 = new MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel();
             this.panel3 = new System.Windows.Forms.FlowLayoutPanel();
+            this.NpmChart = new Syncfusion.Windows.Forms.Chart.ChartControl();
             this.ProgramTab = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
-            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
+            this.expandCollapsePanel5 = new MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel();
+            this.panel4 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.rb13 = new System.Windows.Forms.RadioButton();
             this.rb14 = new System.Windows.Forms.RadioButton();
             this.rb15 = new System.Windows.Forms.RadioButton();
             this.rb16 = new System.Windows.Forms.RadioButton();
             this.AreaChart = new Syncfusion.Windows.Forms.Chart.ChartControl();
-            this.Percent = new Syncfusion.Windows.Forms.Tools.ToggleButton();
-            this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
-            this.expandCollapsePanel5 = new MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel();
-            this.panel4 = new System.Windows.Forms.FlowLayoutPanel();
             this.ProjectTab = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
-            this.splitContainer4 = new System.Windows.Forms.SplitContainer();
+            this.expandCollapsePanel4 = new MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel();
+            this.panel5 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel9 = new System.Windows.Forms.Panel();
             this.rb17 = new System.Windows.Forms.RadioButton();
             this.rb18 = new System.Windows.Forms.RadioButton();
             this.rb20 = new System.Windows.Forms.RadioButton();
             this.rb19 = new System.Windows.Forms.RadioButton();
             this.ProjectChart = new Syncfusion.Windows.Forms.Chart.ChartControl();
-            this.toggleButton4 = new Syncfusion.Windows.Forms.Tools.ToggleButton();
-            this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
-            this.expandCollapsePanel4 = new MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel();
-            this.panel5 = new System.Windows.Forms.FlowLayoutPanel();
             this.DataTab = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
             this.tableLayoutPanel10 = new System.Windows.Forms.TableLayoutPanel();
-            this.Expander = new MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel();
-            this.P7FilterPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.MiniTabControl1 = new Syncfusion.Windows.Forms.Tools.TabControlAdv();
-            this.tabPageAdv1 = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.label13 = new System.Windows.Forms.Label();
-            this.OldAmount = new MetroFramework.Controls.MetroTextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.metroTextBox1 = new MetroFramework.Controls.MetroTextBox();
-            this.metroTextBox2 = new MetroFramework.Controls.MetroTextBox();
+            this.tabPageAdv5 = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
+            this.expandCollapsePanel3 = new MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
             this.label2 = new System.Windows.Forms.Label();
-            this.metroTextBox3 = new MetroFramework.Controls.MetroTextBox();
+            this.metroComboBox1 = new MetroFramework.Controls.MetroComboBox();
+            this.TransferBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label3 = new System.Windows.Forms.Label();
+            this.metroComboBox2 = new MetroFramework.Controls.MetroComboBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.metroTextBox4 = new MetroFramework.Controls.MetroTextBox();
+            this.currencyTextBox1 = new Syncfusion.Windows.Forms.Tools.CurrencyTextBox();
             this.label11 = new System.Windows.Forms.Label();
+            this.metroComboBox3 = new MetroFramework.Controls.MetroComboBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.metroComboBox4 = new MetroFramework.Controls.MetroComboBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.metroComboBox5 = new MetroFramework.Controls.MetroComboBox();
             this.label14 = new System.Windows.Forms.Label();
+            this.metroComboBox6 = new MetroFramework.Controls.MetroComboBox();
             this.label16 = new System.Windows.Forms.Label();
-            this.metroTextBox5 = new MetroFramework.Controls.MetroTextBox();
-            this.metroTextBox6 = new MetroFramework.Controls.MetroTextBox();
-            this.metroTextBox7 = new MetroFramework.Controls.MetroTextBox();
+            this.metroComboBox7 = new MetroFramework.Controls.MetroComboBox();
+            this.label29 = new System.Windows.Forms.Label();
+            this.metroComboBox8 = new MetroFramework.Controls.MetroComboBox();
             this.tabPageAdv2 = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
             this.chartControl1 = new Syncfusion.Windows.Forms.Chart.ChartControl();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.ReturnButton = new MetroFramework.Controls.MetroLink();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.DatabaseGridPanel = new System.Windows.Forms.Panel();
-            this.Grid = new System.Windows.Forms.DataGridView();
             this.DataNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
@@ -315,11 +280,19 @@ namespace Budget
             this.toolStripButton6 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator8 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripSeparator9 = new System.Windows.Forms.ToolStripSeparator();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.ReturnButton = new MetroFramework.Controls.MetroLink();
+            this.gridRecordNavigationControl1 = new Syncfusion.Windows.Forms.Grid.GridRecordNavigationControl();
+            this.Grid = new Syncfusion.Windows.Forms.Grid.GridDataBoundGrid();
+            this.P8BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
             this.TransferTab = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
             this.tableLayoutPanel11 = new System.Windows.Forms.TableLayoutPanel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.TransferGrid = new System.Windows.Forms.DataGridView();
-            this.TransferBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.TransferNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
@@ -402,72 +375,46 @@ namespace Budget
             this.lblAccounts = new System.Windows.Forms.Label();
             this.P8GridPanel = new System.Windows.Forms.Panel();
             this.calculatorControl2 = new Syncfusion.Windows.Forms.Tools.CalculatorControl();
-            this.P8BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tabPageAdv5 = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
-            this.calculatorControl1 = new Syncfusion.Windows.Forms.Tools.CalculatorControl();
             ((System.ComponentModel.ISupportInitialize)(this.DivisionFormTabControl)).BeginInit();
             this.DivisionFormTabControl.SuspendLayout();
             this.AppropriationTab.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer5)).BeginInit();
-            this.splitContainer5.Panel1.SuspendLayout();
-            this.splitContainer5.Panel2.SuspendLayout();
-            this.splitContainer5.SuspendLayout();
-            this.panel13.SuspendLayout();
             this.AppriopriationTabExpander.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.toggleButton1)).BeginInit();
+            this.panel13.SuspendLayout();
             this.BocTab.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
-            this.splitContainer2.Panel1.SuspendLayout();
-            this.splitContainer2.Panel2.SuspendLayout();
-            this.splitContainer2.SuspendLayout();
             this.panel6.SuspendLayout();
             this.expandCollapsePanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.toggleButton2)).BeginInit();
             this.NpmTab.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).BeginInit();
-            this.splitContainer3.Panel1.SuspendLayout();
-            this.splitContainer3.Panel2.SuspendLayout();
-            this.splitContainer3.SuspendLayout();
             this.panel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.toggleButton3)).BeginInit();
             this.tableLayoutPanel6.SuspendLayout();
             this.expandCollapsePanel6.SuspendLayout();
             this.ProgramTab.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
-            this.splitContainer1.Panel1.SuspendLayout();
-            this.splitContainer1.Panel2.SuspendLayout();
-            this.splitContainer1.SuspendLayout();
-            this.panel8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Percent)).BeginInit();
             this.tableLayoutPanel7.SuspendLayout();
             this.expandCollapsePanel5.SuspendLayout();
+            this.panel8.SuspendLayout();
             this.ProjectTab.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer4)).BeginInit();
-            this.splitContainer4.Panel1.SuspendLayout();
-            this.splitContainer4.Panel2.SuspendLayout();
-            this.splitContainer4.SuspendLayout();
-            this.panel9.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.toggleButton4)).BeginInit();
-            this.tableLayoutPanel8.SuspendLayout();
             this.expandCollapsePanel4.SuspendLayout();
+            this.panel9.SuspendLayout();
             this.DataTab.SuspendLayout();
             this.tableLayoutPanel10.SuspendLayout();
-            this.Expander.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MiniTabControl1)).BeginInit();
             this.MiniTabControl1.SuspendLayout();
-            this.tabPageAdv1.SuspendLayout();
-            this.tableLayoutPanel2.SuspendLayout();
+            this.tabPageAdv5.SuspendLayout();
+            this.expandCollapsePanel3.SuspendLayout();
+            this.flowLayoutPanel1.SuspendLayout();
+            this.metroPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.TransferBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.currencyTextBox1)).BeginInit();
             this.tabPageAdv2.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            this.DatabaseGridPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Grid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DataNavigator)).BeginInit();
             this.DataNavigator.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.gridRecordNavigationControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Grid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P8BindingSource)).BeginInit();
             this.TransferTab.SuspendLayout();
             this.tableLayoutPanel11.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TransferGrid)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TransferBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TransferNavigator)).BeginInit();
             this.TransferNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MiniTabControl2)).BeginInit();
@@ -485,8 +432,6 @@ namespace Budget
             this.AccountMangerGroupBox.SuspendLayout();
             this.PrcPanel.SuspendLayout();
             this.DatabaseGroupBox.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.P8BindingSource)).BeginInit();
-            this.tabPageAdv5.SuspendLayout();
             this.SuspendLayout();
             // 
             // label5
@@ -599,9 +544,9 @@ namespace Budget
             // 
             // DivisionFormTabControl
             // 
-            this.DivisionFormTabControl.ActiveTabFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DivisionFormTabControl.ActiveTabFont = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DivisionFormTabControl.ActiveTabForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.DivisionFormTabControl.BeforeTouchSize = new System.Drawing.Size(1788, 874);
+            this.DivisionFormTabControl.BeforeTouchSize = new System.Drawing.Size(1588, 919);
             this.DivisionFormTabControl.BorderVisible = true;
             this.DivisionFormTabControl.BorderWidth = 1;
             this.DivisionFormTabControl.CloseButtonForeColor = System.Drawing.Color.Black;
@@ -617,7 +562,7 @@ namespace Budget
             this.DivisionFormTabControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DivisionFormTabControl.FixedSingleBorderColor = System.Drawing.Color.Transparent;
             this.DivisionFormTabControl.FocusOnTabClick = false;
-            this.DivisionFormTabControl.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DivisionFormTabControl.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DivisionFormTabControl.InActiveTabForeColor = System.Drawing.Color.Gray;
             this.DivisionFormTabControl.ItemSize = new System.Drawing.Size(400, 39);
             this.DivisionFormTabControl.Location = new System.Drawing.Point(0, 0);
@@ -627,7 +572,7 @@ namespace Budget
             this.DivisionFormTabControl.SeparatorColor = System.Drawing.SystemColors.ControlDark;
             this.DivisionFormTabControl.ShowScroll = false;
             this.DivisionFormTabControl.ShowSeparator = false;
-            this.DivisionFormTabControl.Size = new System.Drawing.Size(1788, 874);
+            this.DivisionFormTabControl.Size = new System.Drawing.Size(1588, 919);
             this.DivisionFormTabControl.SizeMode = Syncfusion.Windows.Forms.Tools.TabSizeMode.ShrinkToFit;
             this.DivisionFormTabControl.TabIndex = 44;
             this.DivisionFormTabControl.TabStyle = typeof(Syncfusion.Windows.Forms.Tools.TabRendererVS2010);
@@ -635,10 +580,9 @@ namespace Budget
             // 
             // AppropriationTab
             // 
-            this.AppropriationTab.Controls.Add(this.splitContainer5);
-            this.AppropriationTab.Controls.Add(this.ImageBox);
-            this.AppropriationTab.Controls.Add(this.approplistbox);
-            this.AppropriationTab.Controls.Add(this.metroButton1);
+            this.AppropriationTab.Controls.Add(this.AppriopriationTabExpander);
+            this.AppropriationTab.Controls.Add(this.panel13);
+            this.AppropriationTab.Controls.Add(this.AppropChart);
             this.AppropriationTab.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AppropriationTab.Image = null;
             this.AppropriationTab.ImageSize = new System.Drawing.Size(40, 35);
@@ -647,33 +591,36 @@ namespace Budget
             this.AppropriationTab.Name = "AppropriationTab";
             this.AppropriationTab.Padding = new System.Windows.Forms.Padding(1);
             this.AppropriationTab.ShowCloseButton = true;
-            this.AppropriationTab.Size = new System.Drawing.Size(1786, 829);
+            this.AppropriationTab.Size = new System.Drawing.Size(1586, 874);
             this.AppropriationTab.TabIndex = 6;
             this.AppropriationTab.Text = "Appropriations";
             this.AppropriationTab.ThemesEnabled = false;
             // 
-            // splitContainer5
+            // AppriopriationTabExpander
             // 
-            this.splitContainer5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer5.Location = new System.Drawing.Point(1, 1);
-            this.splitContainer5.Margin = new System.Windows.Forms.Padding(2);
-            this.splitContainer5.Name = "splitContainer5";
+            this.AppriopriationTabExpander.BackColor = System.Drawing.Color.Black;
+            this.AppriopriationTabExpander.ButtonSize = MakarovDev.ExpandCollapsePanel.ExpandCollapseButton.ExpandButtonSize.Normal;
+            this.AppriopriationTabExpander.ButtonStyle = MakarovDev.ExpandCollapsePanel.ExpandCollapseButton.ExpandButtonStyle.Circle;
+            this.AppriopriationTabExpander.Controls.Add(this.AppropriationTabFilterPanel);
+            this.AppriopriationTabExpander.ExpandedHeight = 611;
+            this.AppriopriationTabExpander.IsExpanded = false;
+            this.AppriopriationTabExpander.Location = new System.Drawing.Point(1277, 36);
+            this.AppriopriationTabExpander.Name = "AppriopriationTabExpander";
+            this.AppriopriationTabExpander.Size = new System.Drawing.Size(274, 37);
+            this.AppriopriationTabExpander.TabIndex = 44;
+            this.AppriopriationTabExpander.Text = "Selection";
+            this.AppriopriationTabExpander.UseAnimation = true;
             // 
-            // splitContainer5.Panel1
+            // AppropriationTabFilterPanel
             // 
-            this.splitContainer5.Panel1.Controls.Add(this.panel13);
-            this.splitContainer5.Panel1.Controls.Add(this.AppropChart);
-            // 
-            // splitContainer5.Panel2
-            // 
-            this.splitContainer5.Panel2.Controls.Add(this.AppriopriationTabExpander);
-            this.splitContainer5.Panel2.Controls.Add(this.toggleButton1);
-            this.splitContainer5.Panel2.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.splitContainer5.Panel2.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.splitContainer5.Size = new System.Drawing.Size(1784, 827);
-            this.splitContainer5.SplitterDistance = 1504;
-            this.splitContainer5.SplitterWidth = 3;
-            this.splitContainer5.TabIndex = 96;
+            this.AppropriationTabFilterPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.AppropriationTabFilterPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.AppropriationTabFilterPanel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
+            this.AppropriationTabFilterPanel.Location = new System.Drawing.Point(15, 57);
+            this.AppropriationTabFilterPanel.Margin = new System.Windows.Forms.Padding(2);
+            this.AppropriationTabFilterPanel.Name = "AppropriationTabFilterPanel";
+            this.AppropriationTabFilterPanel.Size = new System.Drawing.Size(197, 656);
+            this.AppropriationTabFilterPanel.TabIndex = 1;
             // 
             // panel13
             // 
@@ -681,7 +628,7 @@ namespace Budget
             this.panel13.Controls.Add(this.rb3);
             this.panel13.Controls.Add(this.rb2);
             this.panel13.Controls.Add(this.rb4);
-            this.panel13.Location = new System.Drawing.Point(747, 3);
+            this.panel13.Location = new System.Drawing.Point(500, 14);
             this.panel13.Name = "panel13";
             this.panel13.Padding = new System.Windows.Forms.Padding(1);
             this.panel13.Size = new System.Drawing.Size(456, 39);
@@ -775,7 +722,7 @@ namespace Budget
             this.AppropChart.Legend.Visible = false;
             this.AppropChart.LegendsPlacement = Syncfusion.Windows.Forms.Chart.ChartPlacement.Outside;
             this.AppropChart.Localize = null;
-            this.AppropChart.Location = new System.Drawing.Point(19, 69);
+            this.AppropChart.Location = new System.Drawing.Point(36, 99);
             this.AppropChart.Margin = new System.Windows.Forms.Padding(2);
             this.AppropChart.Name = "AppropChart";
             this.AppropChart.Padding = new System.Windows.Forms.Padding(1);
@@ -844,7 +791,7 @@ namespace Budget
             this.AppropChart.Series3D = true;
             this.AppropChart.SeriesHighlight = true;
             this.AppropChart.ShadowColor = new Syncfusion.Drawing.BrushInfo(Syncfusion.Drawing.GradientStyle.PathRectangle, System.Drawing.SystemColors.WindowText, System.Drawing.Color.Silver);
-            this.AppropChart.Size = new System.Drawing.Size(1387, 655);
+            this.AppropChart.Size = new System.Drawing.Size(1163, 572);
             this.AppropChart.Spacing = 5F;
             this.AppropChart.SpacingBetweenPoints = 5F;
             this.AppropChart.Style3D = true;
@@ -867,104 +814,11 @@ namespace Budget
             this.AppropChart.ToolBar.Items.Add(chartToolBarSeries3DItem1);
             this.AppropChart.ToolBar.Items.Add(chartToolBarShowLegendItem1);
             // 
-            // AppriopriationTabExpander
-            // 
-            this.AppriopriationTabExpander.BackColor = System.Drawing.Color.Black;
-            this.AppriopriationTabExpander.ButtonSize = MakarovDev.ExpandCollapsePanel.ExpandCollapseButton.ExpandButtonSize.Normal;
-            this.AppriopriationTabExpander.ButtonStyle = MakarovDev.ExpandCollapsePanel.ExpandCollapseButton.ExpandButtonStyle.Circle;
-            this.AppriopriationTabExpander.Controls.Add(this.AppropriationTabFilterPanel);
-            this.AppriopriationTabExpander.ExpandedHeight = 611;
-            this.AppriopriationTabExpander.IsExpanded = false;
-            this.AppriopriationTabExpander.Location = new System.Drawing.Point(20, 69);
-            this.AppriopriationTabExpander.Name = "AppriopriationTabExpander";
-            this.AppriopriationTabExpander.Size = new System.Drawing.Size(227, 37);
-            this.AppriopriationTabExpander.TabIndex = 44;
-            this.AppriopriationTabExpander.Text = "Selection";
-            this.AppriopriationTabExpander.UseAnimation = true;
-            // 
-            // AppropriationTabFilterPanel
-            // 
-            this.AppropriationTabFilterPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.AppropriationTabFilterPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.AppropriationTabFilterPanel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
-            this.AppropriationTabFilterPanel.Location = new System.Drawing.Point(15, 57);
-            this.AppropriationTabFilterPanel.Margin = new System.Windows.Forms.Padding(2);
-            this.AppropriationTabFilterPanel.Name = "AppropriationTabFilterPanel";
-            this.AppropriationTabFilterPanel.Size = new System.Drawing.Size(197, 656);
-            this.AppropriationTabFilterPanel.TabIndex = 1;
-            // 
-            // toggleButton1
-            // 
-            activeStateCollection1.BackColor = System.Drawing.Color.Black;
-            activeStateCollection1.BorderColor = System.Drawing.SystemColors.InactiveCaption;
-            activeStateCollection1.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            activeStateCollection1.Text = "$";
-            this.toggleButton1.ActiveState = activeStateCollection1;
-            this.toggleButton1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toggleButton1.ForeColor = System.Drawing.Color.Black;
-            inactiveStateCollection1.BackColor = System.Drawing.Color.Black;
-            inactiveStateCollection1.BorderColor = System.Drawing.SystemColors.InactiveCaption;
-            inactiveStateCollection1.ForeColor = System.Drawing.Color.Gray;
-            inactiveStateCollection1.Text = "%";
-            this.toggleButton1.InactiveState = inactiveStateCollection1;
-            this.toggleButton1.Location = new System.Drawing.Point(20, 6);
-            this.toggleButton1.Margin = new System.Windows.Forms.Padding(2);
-            this.toggleButton1.MinimumSize = new System.Drawing.Size(36, 14);
-            this.toggleButton1.Name = "toggleButton1";
-            this.toggleButton1.Renderer = toggleButtonRenderer1;
-            this.toggleButton1.Size = new System.Drawing.Size(73, 36);
-            sliderCollection1.BackColor = System.Drawing.Color.SteelBlue;
-            sliderCollection1.BorderColor = System.Drawing.SystemColors.MenuHighlight;
-            sliderCollection1.HoverColor = System.Drawing.Color.SteelBlue;
-            sliderCollection1.Width = 30;
-            this.toggleButton1.Slider = sliderCollection1;
-            this.toggleButton1.TabIndex = 50;
-            this.toggleButton1.Text = "toggleButton1";
-            this.toggleButton1.ToggleState = Syncfusion.Windows.Forms.Tools.ToggleButtonState.Active;
-            // 
-            // ImageBox
-            // 
-            this.ImageBox.BackColor = System.Drawing.SystemColors.InfoText;
-            this.ImageBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ImageBox.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.ImageBox.FormattingEnabled = true;
-            this.ImageBox.ItemHeight = 21;
-            this.ImageBox.Location = new System.Drawing.Point(317, 544);
-            this.ImageBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.ImageBox.Name = "ImageBox";
-            this.ImageBox.Size = new System.Drawing.Size(122, 65);
-            this.ImageBox.TabIndex = 93;
-            // 
-            // approplistbox
-            // 
-            this.approplistbox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.approplistbox.BackColor = System.Drawing.Color.Black;
-            this.approplistbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.approplistbox.Font = new System.Drawing.Font("Gill Sans MT", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.approplistbox.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.approplistbox.FormattingEnabled = true;
-            this.approplistbox.ItemHeight = 29;
-            this.approplistbox.Location = new System.Drawing.Point(204, 568);
-            this.approplistbox.Margin = new System.Windows.Forms.Padding(0);
-            this.approplistbox.Name = "approplistbox";
-            this.approplistbox.Size = new System.Drawing.Size(616, 203);
-            this.approplistbox.TabIndex = 48;
-            // 
-            // metroButton1
-            // 
-            this.metroButton1.Location = new System.Drawing.Point(25, 567);
-            this.metroButton1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.metroButton1.Name = "metroButton1";
-            this.metroButton1.Size = new System.Drawing.Size(137, 42);
-            this.metroButton1.TabIndex = 46;
-            this.metroButton1.Text = "Account Detail";
-            this.metroButton1.UseSelectable = true;
-            // 
             // BocTab
             // 
-            this.BocTab.Controls.Add(this.splitContainer2);
+            this.BocTab.Controls.Add(this.BocChart);
+            this.BocTab.Controls.Add(this.panel6);
+            this.BocTab.Controls.Add(this.expandCollapsePanel2);
             this.BocTab.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BocTab.Image = null;
             this.BocTab.ImageSize = new System.Drawing.Size(40, 35);
@@ -972,95 +826,10 @@ namespace Budget
             this.BocTab.Margin = new System.Windows.Forms.Padding(2);
             this.BocTab.Name = "BocTab";
             this.BocTab.ShowCloseButton = true;
-            this.BocTab.Size = new System.Drawing.Size(1786, 829);
+            this.BocTab.Size = new System.Drawing.Size(1586, 874);
             this.BocTab.TabIndex = 9;
             this.BocTab.Text = "BOC";
             this.BocTab.ThemesEnabled = false;
-            // 
-            // splitContainer2
-            // 
-            this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer2.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer2.Margin = new System.Windows.Forms.Padding(2);
-            this.splitContainer2.Name = "splitContainer2";
-            // 
-            // splitContainer2.Panel1
-            // 
-            this.splitContainer2.Panel1.Controls.Add(this.panel6);
-            this.splitContainer2.Panel1.Controls.Add(this.BocChart);
-            // 
-            // splitContainer2.Panel2
-            // 
-            this.splitContainer2.Panel2.Controls.Add(this.expandCollapsePanel2);
-            this.splitContainer2.Panel2.Controls.Add(this.toggleButton2);
-            this.splitContainer2.Panel2.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.splitContainer2.Panel2.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.splitContainer2.Size = new System.Drawing.Size(1786, 829);
-            this.splitContainer2.SplitterDistance = 1504;
-            this.splitContainer2.SplitterWidth = 3;
-            this.splitContainer2.TabIndex = 97;
-            // 
-            // panel6
-            // 
-            this.panel6.Controls.Add(this.rb5);
-            this.panel6.Controls.Add(this.rb7);
-            this.panel6.Controls.Add(this.rb6);
-            this.panel6.Controls.Add(this.rb8);
-            this.panel6.Location = new System.Drawing.Point(747, 3);
-            this.panel6.Name = "panel6";
-            this.panel6.Padding = new System.Windows.Forms.Padding(1);
-            this.panel6.Size = new System.Drawing.Size(460, 48);
-            this.panel6.TabIndex = 44;
-            // 
-            // rb5
-            // 
-            this.rb5.AutoSize = true;
-            this.rb5.Checked = true;
-            this.rb5.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rb5.Location = new System.Drawing.Point(10, 3);
-            this.rb5.Margin = new System.Windows.Forms.Padding(2);
-            this.rb5.Name = "rb5";
-            this.rb5.Size = new System.Drawing.Size(70, 25);
-            this.rb5.TabIndex = 0;
-            this.rb5.TabStop = true;
-            this.rb5.Text = "Fund";
-            this.rb5.UseVisualStyleBackColor = true;
-            // 
-            // rb7
-            // 
-            this.rb7.AutoSize = true;
-            this.rb7.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rb7.Location = new System.Drawing.Point(158, 3);
-            this.rb7.Margin = new System.Windows.Forms.Padding(2);
-            this.rb7.Name = "rb7";
-            this.rb7.Size = new System.Drawing.Size(132, 25);
-            this.rb7.TabIndex = 3;
-            this.rb7.Text = "Program Area";
-            this.rb7.UseVisualStyleBackColor = true;
-            // 
-            // rb6
-            // 
-            this.rb6.AutoSize = true;
-            this.rb6.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rb6.Location = new System.Drawing.Point(84, 3);
-            this.rb6.Margin = new System.Windows.Forms.Padding(2);
-            this.rb6.Name = "rb6";
-            this.rb6.Size = new System.Drawing.Size(70, 25);
-            this.rb6.TabIndex = 2;
-            this.rb6.Text = "NPM";
-            this.rb6.UseVisualStyleBackColor = true;
-            // 
-            // rb8
-            // 
-            this.rb8.AutoSize = true;
-            this.rb8.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rb8.Location = new System.Drawing.Point(294, 3);
-            this.rb8.Margin = new System.Windows.Forms.Padding(2);
-            this.rb8.Name = "rb8";
-            this.rb8.Size = new System.Drawing.Size(148, 25);
-            this.rb8.TabIndex = 4;
-            this.rb8.Text = "Program Project";
-            this.rb8.UseVisualStyleBackColor = true;
             // 
             // BocChart
             // 
@@ -1099,7 +868,7 @@ namespace Budget
             this.BocChart.Legend.Visible = false;
             this.BocChart.LegendsPlacement = Syncfusion.Windows.Forms.Chart.ChartPlacement.Outside;
             this.BocChart.Localize = null;
-            this.BocChart.Location = new System.Drawing.Point(19, 69);
+            this.BocChart.Location = new System.Drawing.Point(36, 99);
             this.BocChart.Margin = new System.Windows.Forms.Padding(2);
             this.BocChart.Name = "BocChart";
             this.BocChart.Padding = new System.Windows.Forms.Padding(1);
@@ -1168,7 +937,7 @@ namespace Budget
             this.BocChart.Series3D = true;
             this.BocChart.SeriesHighlight = true;
             this.BocChart.ShadowColor = new Syncfusion.Drawing.BrushInfo(Syncfusion.Drawing.GradientStyle.PathRectangle, System.Drawing.SystemColors.WindowText, System.Drawing.Color.Silver);
-            this.BocChart.Size = new System.Drawing.Size(1387, 655);
+            this.BocChart.Size = new System.Drawing.Size(1163, 572);
             this.BocChart.Spacing = 5F;
             this.BocChart.SpacingBetweenPoints = 5F;
             this.BocChart.Style3D = true;
@@ -1191,6 +960,68 @@ namespace Budget
             this.BocChart.ToolBar.Items.Add(chartToolBarSeries3DItem2);
             this.BocChart.ToolBar.Items.Add(chartToolBarShowLegendItem2);
             // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.rb5);
+            this.panel6.Controls.Add(this.rb7);
+            this.panel6.Controls.Add(this.rb6);
+            this.panel6.Controls.Add(this.rb8);
+            this.panel6.Location = new System.Drawing.Point(513, 14);
+            this.panel6.Name = "panel6";
+            this.panel6.Padding = new System.Windows.Forms.Padding(1);
+            this.panel6.Size = new System.Drawing.Size(462, 48);
+            this.panel6.TabIndex = 44;
+            // 
+            // rb5
+            // 
+            this.rb5.AutoSize = true;
+            this.rb5.Checked = true;
+            this.rb5.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rb5.Location = new System.Drawing.Point(10, 3);
+            this.rb5.Margin = new System.Windows.Forms.Padding(2);
+            this.rb5.Name = "rb5";
+            this.rb5.Size = new System.Drawing.Size(70, 25);
+            this.rb5.TabIndex = 0;
+            this.rb5.TabStop = true;
+            this.rb5.Text = "Fund";
+            this.rb5.UseVisualStyleBackColor = true;
+            // 
+            // rb7
+            // 
+            this.rb7.AutoSize = true;
+            this.rb7.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rb7.Location = new System.Drawing.Point(158, 3);
+            this.rb7.Margin = new System.Windows.Forms.Padding(2);
+            this.rb7.Name = "rb7";
+            this.rb7.Size = new System.Drawing.Size(132, 25);
+            this.rb7.TabIndex = 3;
+            this.rb7.Text = "Program Area";
+            this.rb7.UseVisualStyleBackColor = true;
+            // 
+            // rb6
+            // 
+            this.rb6.AutoSize = true;
+            this.rb6.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rb6.Location = new System.Drawing.Point(84, 3);
+            this.rb6.Margin = new System.Windows.Forms.Padding(2);
+            this.rb6.Name = "rb6";
+            this.rb6.Size = new System.Drawing.Size(70, 25);
+            this.rb6.TabIndex = 2;
+            this.rb6.Text = "NPM";
+            this.rb6.UseVisualStyleBackColor = true;
+            // 
+            // rb8
+            // 
+            this.rb8.AutoSize = true;
+            this.rb8.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rb8.Location = new System.Drawing.Point(294, 3);
+            this.rb8.Margin = new System.Windows.Forms.Padding(2);
+            this.rb8.Name = "rb8";
+            this.rb8.Size = new System.Drawing.Size(148, 25);
+            this.rb8.TabIndex = 4;
+            this.rb8.Text = "Program Project";
+            this.rb8.UseVisualStyleBackColor = true;
+            // 
             // expandCollapsePanel2
             // 
             this.expandCollapsePanel2.BackColor = System.Drawing.Color.Black;
@@ -1199,9 +1030,9 @@ namespace Budget
             this.expandCollapsePanel2.Controls.Add(this.panel2);
             this.expandCollapsePanel2.ExpandedHeight = 559;
             this.expandCollapsePanel2.IsExpanded = false;
-            this.expandCollapsePanel2.Location = new System.Drawing.Point(20, 69);
+            this.expandCollapsePanel2.Location = new System.Drawing.Point(1277, 36);
             this.expandCollapsePanel2.Name = "expandCollapsePanel2";
-            this.expandCollapsePanel2.Size = new System.Drawing.Size(210, 37);
+            this.expandCollapsePanel2.Size = new System.Drawing.Size(274, 37);
             this.expandCollapsePanel2.TabIndex = 46;
             this.expandCollapsePanel2.Text = "Object Class";
             this.expandCollapsePanel2.UseAnimation = true;
@@ -1217,38 +1048,11 @@ namespace Budget
             this.panel2.Size = new System.Drawing.Size(154, 453);
             this.panel2.TabIndex = 1;
             // 
-            // toggleButton2
-            // 
-            activeStateCollection2.BackColor = System.Drawing.Color.Black;
-            activeStateCollection2.BorderColor = System.Drawing.SystemColors.InactiveCaption;
-            activeStateCollection2.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            activeStateCollection2.Text = "$";
-            this.toggleButton2.ActiveState = activeStateCollection2;
-            this.toggleButton2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toggleButton2.ForeColor = System.Drawing.Color.Black;
-            inactiveStateCollection2.BackColor = System.Drawing.Color.Black;
-            inactiveStateCollection2.BorderColor = System.Drawing.SystemColors.InactiveCaption;
-            inactiveStateCollection2.ForeColor = System.Drawing.Color.Gray;
-            inactiveStateCollection2.Text = "%";
-            this.toggleButton2.InactiveState = inactiveStateCollection2;
-            this.toggleButton2.Location = new System.Drawing.Point(20, 6);
-            this.toggleButton2.Margin = new System.Windows.Forms.Padding(2);
-            this.toggleButton2.MinimumSize = new System.Drawing.Size(36, 14);
-            this.toggleButton2.Name = "toggleButton2";
-            this.toggleButton2.Renderer = toggleButtonRenderer2;
-            this.toggleButton2.Size = new System.Drawing.Size(73, 36);
-            sliderCollection2.BackColor = System.Drawing.Color.SteelBlue;
-            sliderCollection2.BorderColor = System.Drawing.SystemColors.MenuHighlight;
-            sliderCollection2.HoverColor = System.Drawing.Color.SteelBlue;
-            sliderCollection2.Width = 30;
-            this.toggleButton2.Slider = sliderCollection2;
-            this.toggleButton2.TabIndex = 105;
-            this.toggleButton2.Text = "toggleButton2";
-            this.toggleButton2.ToggleState = Syncfusion.Windows.Forms.Tools.ToggleButtonState.Active;
-            // 
             // NpmTab
             // 
-            this.NpmTab.Controls.Add(this.splitContainer3);
+            this.NpmTab.Controls.Add(this.panel7);
+            this.NpmTab.Controls.Add(this.tableLayoutPanel6);
+            this.NpmTab.Controls.Add(this.NpmChart);
             this.NpmTab.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NpmTab.Image = null;
             this.NpmTab.ImageSize = new System.Drawing.Size(16, 16);
@@ -1256,33 +1060,10 @@ namespace Budget
             this.NpmTab.Margin = new System.Windows.Forms.Padding(2);
             this.NpmTab.Name = "NpmTab";
             this.NpmTab.ShowCloseButton = true;
-            this.NpmTab.Size = new System.Drawing.Size(1786, 829);
+            this.NpmTab.Size = new System.Drawing.Size(1586, 874);
             this.NpmTab.TabIndex = 10;
             this.NpmTab.Text = "NPM";
             this.NpmTab.ThemesEnabled = false;
-            // 
-            // splitContainer3
-            // 
-            this.splitContainer3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer3.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer3.Margin = new System.Windows.Forms.Padding(2);
-            this.splitContainer3.Name = "splitContainer3";
-            // 
-            // splitContainer3.Panel1
-            // 
-            this.splitContainer3.Panel1.Controls.Add(this.panel7);
-            this.splitContainer3.Panel1.Controls.Add(this.NpmChart);
-            // 
-            // splitContainer3.Panel2
-            // 
-            this.splitContainer3.Panel2.Controls.Add(this.toggleButton3);
-            this.splitContainer3.Panel2.Controls.Add(this.tableLayoutPanel6);
-            this.splitContainer3.Panel2.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.splitContainer3.Panel2.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.splitContainer3.Size = new System.Drawing.Size(1786, 829);
-            this.splitContainer3.SplitterDistance = 1504;
-            this.splitContainer3.SplitterWidth = 3;
-            this.splitContainer3.TabIndex = 97;
             // 
             // panel7
             // 
@@ -1290,7 +1071,7 @@ namespace Budget
             this.panel7.Controls.Add(this.rb10);
             this.panel7.Controls.Add(this.rb11);
             this.panel7.Controls.Add(this.rb12);
-            this.panel7.Location = new System.Drawing.Point(747, 3);
+            this.panel7.Location = new System.Drawing.Point(529, 19);
             this.panel7.Name = "panel7";
             this.panel7.Padding = new System.Windows.Forms.Padding(1);
             this.panel7.Size = new System.Drawing.Size(471, 39);
@@ -1346,6 +1127,44 @@ namespace Budget
             this.rb12.Text = "Program Project";
             this.rb12.UseVisualStyleBackColor = true;
             // 
+            // tableLayoutPanel6
+            // 
+            this.tableLayoutPanel6.ColumnCount = 1;
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel6.Controls.Add(this.expandCollapsePanel6, 0, 0);
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(1277, 36);
+            this.tableLayoutPanel6.Name = "tableLayoutPanel6";
+            this.tableLayoutPanel6.RowCount = 1;
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(274, 37);
+            this.tableLayoutPanel6.TabIndex = 104;
+            // 
+            // expandCollapsePanel6
+            // 
+            this.expandCollapsePanel6.BackColor = System.Drawing.Color.Black;
+            this.expandCollapsePanel6.ButtonSize = MakarovDev.ExpandCollapsePanel.ExpandCollapseButton.ExpandButtonSize.Normal;
+            this.expandCollapsePanel6.ButtonStyle = MakarovDev.ExpandCollapsePanel.ExpandCollapseButton.ExpandButtonStyle.Circle;
+            this.expandCollapsePanel6.Controls.Add(this.panel3);
+            this.expandCollapsePanel6.ExpandedHeight = 626;
+            this.expandCollapsePanel6.IsExpanded = false;
+            this.expandCollapsePanel6.Location = new System.Drawing.Point(3, 3);
+            this.expandCollapsePanel6.Name = "expandCollapsePanel6";
+            this.expandCollapsePanel6.Size = new System.Drawing.Size(222, 31);
+            this.expandCollapsePanel6.TabIndex = 105;
+            this.expandCollapsePanel6.Text = "Select NPM";
+            this.expandCollapsePanel6.UseAnimation = true;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.panel3.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.panel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
+            this.panel3.Location = new System.Drawing.Point(33, 67);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(158, 308);
+            this.panel3.TabIndex = 1;
+            // 
             // NpmChart
             // 
             this.NpmChart.AllowGradientPalette = true;
@@ -1383,7 +1202,7 @@ namespace Budget
             this.NpmChart.Legend.Visible = false;
             this.NpmChart.LegendsPlacement = Syncfusion.Windows.Forms.Chart.ChartPlacement.Outside;
             this.NpmChart.Localize = null;
-            this.NpmChart.Location = new System.Drawing.Point(19, 69);
+            this.NpmChart.Location = new System.Drawing.Point(36, 99);
             this.NpmChart.Margin = new System.Windows.Forms.Padding(2);
             this.NpmChart.Name = "NpmChart";
             this.NpmChart.Padding = new System.Windows.Forms.Padding(1);
@@ -1452,7 +1271,7 @@ namespace Budget
             this.NpmChart.Series3D = true;
             this.NpmChart.SeriesHighlight = true;
             this.NpmChart.ShadowColor = new Syncfusion.Drawing.BrushInfo(Syncfusion.Drawing.GradientStyle.PathRectangle, System.Drawing.SystemColors.WindowText, System.Drawing.Color.Silver);
-            this.NpmChart.Size = new System.Drawing.Size(1387, 655);
+            this.NpmChart.Size = new System.Drawing.Size(1163, 572);
             this.NpmChart.Spacing = 5F;
             this.NpmChart.SpacingBetweenPoints = 5F;
             this.NpmChart.Style3D = true;
@@ -1475,76 +1294,11 @@ namespace Budget
             this.NpmChart.ToolBar.Items.Add(chartToolBarSeries3DItem3);
             this.NpmChart.ToolBar.Items.Add(chartToolBarShowLegendItem3);
             // 
-            // toggleButton3
-            // 
-            activeStateCollection3.BackColor = System.Drawing.Color.Black;
-            activeStateCollection3.BorderColor = System.Drawing.SystemColors.InactiveCaption;
-            activeStateCollection3.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            activeStateCollection3.Text = "$";
-            this.toggleButton3.ActiveState = activeStateCollection3;
-            this.toggleButton3.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toggleButton3.ForeColor = System.Drawing.Color.Black;
-            inactiveStateCollection3.BackColor = System.Drawing.Color.Black;
-            inactiveStateCollection3.BorderColor = System.Drawing.SystemColors.InactiveCaption;
-            inactiveStateCollection3.ForeColor = System.Drawing.Color.Gray;
-            inactiveStateCollection3.Text = "%";
-            this.toggleButton3.InactiveState = inactiveStateCollection3;
-            this.toggleButton3.Location = new System.Drawing.Point(20, 6);
-            this.toggleButton3.Margin = new System.Windows.Forms.Padding(2);
-            this.toggleButton3.MinimumSize = new System.Drawing.Size(36, 14);
-            this.toggleButton3.Name = "toggleButton3";
-            this.toggleButton3.Renderer = toggleButtonRenderer3;
-            this.toggleButton3.Size = new System.Drawing.Size(73, 36);
-            sliderCollection3.BackColor = System.Drawing.Color.SteelBlue;
-            sliderCollection3.BorderColor = System.Drawing.SystemColors.MenuHighlight;
-            sliderCollection3.HoverColor = System.Drawing.Color.SteelBlue;
-            sliderCollection3.Width = 30;
-            this.toggleButton3.Slider = sliderCollection3;
-            this.toggleButton3.TabIndex = 105;
-            this.toggleButton3.Text = "toggleButton3";
-            this.toggleButton3.ToggleState = Syncfusion.Windows.Forms.Tools.ToggleButtonState.Active;
-            // 
-            // tableLayoutPanel6
-            // 
-            this.tableLayoutPanel6.ColumnCount = 1;
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel6.Controls.Add(this.expandCollapsePanel6, 0, 0);
-            this.tableLayoutPanel6.Location = new System.Drawing.Point(25, 80);
-            this.tableLayoutPanel6.Name = "tableLayoutPanel6";
-            this.tableLayoutPanel6.RowCount = 1;
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(228, 669);
-            this.tableLayoutPanel6.TabIndex = 104;
-            // 
-            // expandCollapsePanel6
-            // 
-            this.expandCollapsePanel6.BackColor = System.Drawing.Color.Black;
-            this.expandCollapsePanel6.ButtonSize = MakarovDev.ExpandCollapsePanel.ExpandCollapseButton.ExpandButtonSize.Normal;
-            this.expandCollapsePanel6.ButtonStyle = MakarovDev.ExpandCollapsePanel.ExpandCollapseButton.ExpandButtonStyle.Circle;
-            this.expandCollapsePanel6.Controls.Add(this.panel3);
-            this.expandCollapsePanel6.ExpandedHeight = 626;
-            this.expandCollapsePanel6.IsExpanded = false;
-            this.expandCollapsePanel6.Location = new System.Drawing.Point(3, 3);
-            this.expandCollapsePanel6.Name = "expandCollapsePanel6";
-            this.expandCollapsePanel6.Size = new System.Drawing.Size(222, 37);
-            this.expandCollapsePanel6.TabIndex = 105;
-            this.expandCollapsePanel6.Text = "Select NPM";
-            this.expandCollapsePanel6.UseAnimation = true;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.panel3.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.panel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
-            this.panel3.Location = new System.Drawing.Point(33, 67);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(158, 308);
-            this.panel3.TabIndex = 1;
-            // 
             // ProgramTab
             // 
-            this.ProgramTab.Controls.Add(this.splitContainer1);
+            this.ProgramTab.Controls.Add(this.tableLayoutPanel7);
+            this.ProgramTab.Controls.Add(this.panel8);
+            this.ProgramTab.Controls.Add(this.AreaChart);
             this.ProgramTab.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ProgramTab.Image = null;
             this.ProgramTab.ImageSize = new System.Drawing.Size(50, 30);
@@ -1552,33 +1306,49 @@ namespace Budget
             this.ProgramTab.Margin = new System.Windows.Forms.Padding(2);
             this.ProgramTab.Name = "ProgramTab";
             this.ProgramTab.ShowCloseButton = true;
-            this.ProgramTab.Size = new System.Drawing.Size(1786, 829);
+            this.ProgramTab.Size = new System.Drawing.Size(1586, 874);
             this.ProgramTab.TabIndex = 8;
             this.ProgramTab.Text = "Program Area";
             this.ProgramTab.ThemesEnabled = false;
             // 
-            // splitContainer1
+            // tableLayoutPanel7
             // 
-            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer1.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer1.Margin = new System.Windows.Forms.Padding(2);
-            this.splitContainer1.Name = "splitContainer1";
+            this.tableLayoutPanel7.ColumnCount = 1;
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel7.Controls.Add(this.expandCollapsePanel5, 0, 0);
+            this.tableLayoutPanel7.Location = new System.Drawing.Point(1277, 36);
+            this.tableLayoutPanel7.Name = "tableLayoutPanel7";
+            this.tableLayoutPanel7.RowCount = 1;
+            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel7.Size = new System.Drawing.Size(274, 37);
+            this.tableLayoutPanel7.TabIndex = 104;
             // 
-            // splitContainer1.Panel1
+            // expandCollapsePanel5
             // 
-            this.splitContainer1.Panel1.Controls.Add(this.panel8);
-            this.splitContainer1.Panel1.Controls.Add(this.AreaChart);
+            this.expandCollapsePanel5.BackColor = System.Drawing.Color.Black;
+            this.expandCollapsePanel5.ButtonSize = MakarovDev.ExpandCollapsePanel.ExpandCollapseButton.ExpandButtonSize.Normal;
+            this.expandCollapsePanel5.ButtonStyle = MakarovDev.ExpandCollapsePanel.ExpandCollapseButton.ExpandButtonStyle.Circle;
+            this.expandCollapsePanel5.Controls.Add(this.panel4);
+            this.expandCollapsePanel5.ExpandedHeight = 674;
+            this.expandCollapsePanel5.IsExpanded = false;
+            this.expandCollapsePanel5.Location = new System.Drawing.Point(3, 3);
+            this.expandCollapsePanel5.Name = "expandCollapsePanel5";
+            this.expandCollapsePanel5.Size = new System.Drawing.Size(197, 31);
+            this.expandCollapsePanel5.TabIndex = 105;
+            this.expandCollapsePanel5.Text = "Select Program Area";
+            this.expandCollapsePanel5.UseAnimation = true;
             // 
-            // splitContainer1.Panel2
+            // panel4
             // 
-            this.splitContainer1.Panel2.Controls.Add(this.Percent);
-            this.splitContainer1.Panel2.Controls.Add(this.tableLayoutPanel7);
-            this.splitContainer1.Panel2.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.splitContainer1.Panel2.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.splitContainer1.Size = new System.Drawing.Size(1786, 829);
-            this.splitContainer1.SplitterDistance = 1504;
-            this.splitContainer1.SplitterWidth = 3;
-            this.splitContainer1.TabIndex = 97;
+            this.panel4.BackColor = System.Drawing.Color.Transparent;
+            this.panel4.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.panel4.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
+            this.panel4.Location = new System.Drawing.Point(35, 46);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(175, 544);
+            this.panel4.TabIndex = 1;
             // 
             // panel8
             // 
@@ -1586,7 +1356,7 @@ namespace Budget
             this.panel8.Controls.Add(this.rb14);
             this.panel8.Controls.Add(this.rb15);
             this.panel8.Controls.Add(this.rb16);
-            this.panel8.Location = new System.Drawing.Point(747, 3);
+            this.panel8.Location = new System.Drawing.Point(666, 12);
             this.panel8.Name = "panel8";
             this.panel8.Padding = new System.Windows.Forms.Padding(1);
             this.panel8.Size = new System.Drawing.Size(397, 39);
@@ -1679,7 +1449,7 @@ namespace Budget
             this.AreaChart.Legend.Visible = false;
             this.AreaChart.LegendsPlacement = Syncfusion.Windows.Forms.Chart.ChartPlacement.Outside;
             this.AreaChart.Localize = null;
-            this.AreaChart.Location = new System.Drawing.Point(19, 69);
+            this.AreaChart.Location = new System.Drawing.Point(36, 99);
             this.AreaChart.Margin = new System.Windows.Forms.Padding(2);
             this.AreaChart.Name = "AreaChart";
             this.AreaChart.Padding = new System.Windows.Forms.Padding(1);
@@ -1748,7 +1518,7 @@ namespace Budget
             this.AreaChart.Series3D = true;
             this.AreaChart.SeriesHighlight = true;
             this.AreaChart.ShadowColor = new Syncfusion.Drawing.BrushInfo(Syncfusion.Drawing.GradientStyle.PathRectangle, System.Drawing.SystemColors.WindowText, System.Drawing.Color.Silver);
-            this.AreaChart.Size = new System.Drawing.Size(1387, 655);
+            this.AreaChart.Size = new System.Drawing.Size(1163, 572);
             this.AreaChart.Spacing = 5F;
             this.AreaChart.SpacingBetweenPoints = 5F;
             this.AreaChart.Style3D = true;
@@ -1771,77 +1541,11 @@ namespace Budget
             this.AreaChart.ToolBar.Items.Add(chartToolBarSeries3DItem4);
             this.AreaChart.ToolBar.Items.Add(chartToolBarShowLegendItem4);
             // 
-            // Percent
-            // 
-            activeStateCollection4.BackColor = System.Drawing.Color.Black;
-            activeStateCollection4.BorderColor = System.Drawing.SystemColors.InactiveCaption;
-            activeStateCollection4.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            activeStateCollection4.Text = "$";
-            this.Percent.ActiveState = activeStateCollection4;
-            this.Percent.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Percent.ForeColor = System.Drawing.Color.Black;
-            inactiveStateCollection4.BackColor = System.Drawing.Color.Black;
-            inactiveStateCollection4.BorderColor = System.Drawing.SystemColors.InactiveCaption;
-            inactiveStateCollection4.ForeColor = System.Drawing.Color.Gray;
-            inactiveStateCollection4.Text = "%";
-            this.Percent.InactiveState = inactiveStateCollection4;
-            this.Percent.Location = new System.Drawing.Point(20, 6);
-            this.Percent.Margin = new System.Windows.Forms.Padding(2);
-            this.Percent.MinimumSize = new System.Drawing.Size(36, 14);
-            this.Percent.Name = "Percent";
-            this.Percent.Renderer = toggleButtonRenderer4;
-            this.Percent.Size = new System.Drawing.Size(73, 36);
-            sliderCollection4.BackColor = System.Drawing.Color.SteelBlue;
-            sliderCollection4.BorderColor = System.Drawing.SystemColors.MenuHighlight;
-            sliderCollection4.HoverColor = System.Drawing.Color.SteelBlue;
-            sliderCollection4.Width = 30;
-            this.Percent.Slider = sliderCollection4;
-            this.Percent.TabIndex = 50;
-            this.Percent.Text = "toggleButton1";
-            this.Percent.ToggleState = Syncfusion.Windows.Forms.Tools.ToggleButtonState.Active;
-            // 
-            // tableLayoutPanel7
-            // 
-            this.tableLayoutPanel7.ColumnCount = 1;
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel7.Controls.Add(this.expandCollapsePanel5, 0, 0);
-            this.tableLayoutPanel7.Location = new System.Drawing.Point(20, 80);
-            this.tableLayoutPanel7.Name = "tableLayoutPanel7";
-            this.tableLayoutPanel7.RowCount = 1;
-            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel7.Size = new System.Drawing.Size(248, 706);
-            this.tableLayoutPanel7.TabIndex = 104;
-            // 
-            // expandCollapsePanel5
-            // 
-            this.expandCollapsePanel5.BackColor = System.Drawing.Color.Black;
-            this.expandCollapsePanel5.ButtonSize = MakarovDev.ExpandCollapsePanel.ExpandCollapseButton.ExpandButtonSize.Normal;
-            this.expandCollapsePanel5.ButtonStyle = MakarovDev.ExpandCollapsePanel.ExpandCollapseButton.ExpandButtonStyle.Circle;
-            this.expandCollapsePanel5.Controls.Add(this.panel4);
-            this.expandCollapsePanel5.ExpandedHeight = 674;
-            this.expandCollapsePanel5.IsExpanded = false;
-            this.expandCollapsePanel5.Location = new System.Drawing.Point(3, 3);
-            this.expandCollapsePanel5.Name = "expandCollapsePanel5";
-            this.expandCollapsePanel5.Size = new System.Drawing.Size(227, 37);
-            this.expandCollapsePanel5.TabIndex = 105;
-            this.expandCollapsePanel5.Text = "Select Program Area";
-            this.expandCollapsePanel5.UseAnimation = true;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.Transparent;
-            this.panel4.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.panel4.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
-            this.panel4.Location = new System.Drawing.Point(35, 46);
-            this.panel4.Margin = new System.Windows.Forms.Padding(2);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(175, 544);
-            this.panel4.TabIndex = 1;
-            // 
             // ProjectTab
             // 
-            this.ProjectTab.Controls.Add(this.splitContainer4);
+            this.ProjectTab.Controls.Add(this.expandCollapsePanel4);
+            this.ProjectTab.Controls.Add(this.panel9);
+            this.ProjectTab.Controls.Add(this.ProjectChart);
             this.ProjectTab.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ProjectTab.Image = null;
             this.ProjectTab.ImageSize = new System.Drawing.Size(16, 16);
@@ -1849,33 +1553,37 @@ namespace Budget
             this.ProjectTab.Margin = new System.Windows.Forms.Padding(2);
             this.ProjectTab.Name = "ProjectTab";
             this.ProjectTab.ShowCloseButton = true;
-            this.ProjectTab.Size = new System.Drawing.Size(1786, 829);
+            this.ProjectTab.Size = new System.Drawing.Size(1586, 874);
             this.ProjectTab.TabIndex = 11;
             this.ProjectTab.Text = "Program Project";
             this.ProjectTab.ThemesEnabled = false;
             // 
-            // splitContainer4
+            // expandCollapsePanel4
             // 
-            this.splitContainer4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer4.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer4.Margin = new System.Windows.Forms.Padding(2);
-            this.splitContainer4.Name = "splitContainer4";
+            this.expandCollapsePanel4.BackColor = System.Drawing.Color.Black;
+            this.expandCollapsePanel4.ButtonSize = MakarovDev.ExpandCollapsePanel.ExpandCollapseButton.ExpandButtonSize.Normal;
+            this.expandCollapsePanel4.ButtonStyle = MakarovDev.ExpandCollapsePanel.ExpandCollapseButton.ExpandButtonStyle.Circle;
+            this.expandCollapsePanel4.Controls.Add(this.panel5);
+            this.expandCollapsePanel4.ExpandedHeight = 655;
+            this.expandCollapsePanel4.IsExpanded = false;
+            this.expandCollapsePanel4.Location = new System.Drawing.Point(1277, 36);
+            this.expandCollapsePanel4.Name = "expandCollapsePanel4";
+            this.expandCollapsePanel4.Size = new System.Drawing.Size(274, 37);
+            this.expandCollapsePanel4.TabIndex = 105;
+            this.expandCollapsePanel4.Text = "Select Program Project";
+            this.expandCollapsePanel4.UseAnimation = true;
             // 
-            // splitContainer4.Panel1
+            // panel5
             // 
-            this.splitContainer4.Panel1.Controls.Add(this.panel9);
-            this.splitContainer4.Panel1.Controls.Add(this.ProjectChart);
-            // 
-            // splitContainer4.Panel2
-            // 
-            this.splitContainer4.Panel2.Controls.Add(this.toggleButton4);
-            this.splitContainer4.Panel2.Controls.Add(this.tableLayoutPanel8);
-            this.splitContainer4.Panel2.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.splitContainer4.Panel2.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.splitContainer4.Size = new System.Drawing.Size(1786, 829);
-            this.splitContainer4.SplitterDistance = 1504;
-            this.splitContainer4.SplitterWidth = 3;
-            this.splitContainer4.TabIndex = 98;
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.panel5.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.panel5.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
+            this.panel5.Location = new System.Drawing.Point(30, 53);
+            this.panel5.Margin = new System.Windows.Forms.Padding(2);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(189, 544);
+            this.panel5.TabIndex = 1;
             // 
             // panel9
             // 
@@ -1883,7 +1591,7 @@ namespace Budget
             this.panel9.Controls.Add(this.rb18);
             this.panel9.Controls.Add(this.rb20);
             this.panel9.Controls.Add(this.rb19);
-            this.panel9.Location = new System.Drawing.Point(747, 3);
+            this.panel9.Location = new System.Drawing.Point(602, 12);
             this.panel9.Name = "panel9";
             this.panel9.Padding = new System.Windows.Forms.Padding(1);
             this.panel9.Size = new System.Drawing.Size(389, 46);
@@ -1976,7 +1684,7 @@ namespace Budget
             this.ProjectChart.Legend.Visible = false;
             this.ProjectChart.LegendsPlacement = Syncfusion.Windows.Forms.Chart.ChartPlacement.Outside;
             this.ProjectChart.Localize = null;
-            this.ProjectChart.Location = new System.Drawing.Point(19, 73);
+            this.ProjectChart.Location = new System.Drawing.Point(36, 99);
             this.ProjectChart.Margin = new System.Windows.Forms.Padding(2);
             this.ProjectChart.Name = "ProjectChart";
             this.ProjectChart.Padding = new System.Windows.Forms.Padding(1);
@@ -2045,7 +1753,7 @@ namespace Budget
             this.ProjectChart.Series3D = true;
             this.ProjectChart.SeriesHighlight = true;
             this.ProjectChart.ShadowColor = new Syncfusion.Drawing.BrushInfo(Syncfusion.Drawing.GradientStyle.PathRectangle, System.Drawing.SystemColors.WindowText, System.Drawing.Color.Silver);
-            this.ProjectChart.Size = new System.Drawing.Size(1387, 655);
+            this.ProjectChart.Size = new System.Drawing.Size(1163, 572);
             this.ProjectChart.Spacing = 5F;
             this.ProjectChart.SpacingBetweenPoints = 5F;
             this.ProjectChart.Style3D = true;
@@ -2068,74 +1776,6 @@ namespace Budget
             this.ProjectChart.ToolBar.Items.Add(chartToolBarSeries3DItem5);
             this.ProjectChart.ToolBar.Items.Add(chartToolBarShowLegendItem5);
             // 
-            // toggleButton4
-            // 
-            activeStateCollection5.BackColor = System.Drawing.Color.Black;
-            activeStateCollection5.BorderColor = System.Drawing.SystemColors.InactiveCaption;
-            activeStateCollection5.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            activeStateCollection5.Text = "$";
-            this.toggleButton4.ActiveState = activeStateCollection5;
-            this.toggleButton4.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toggleButton4.ForeColor = System.Drawing.Color.Black;
-            inactiveStateCollection5.BackColor = System.Drawing.Color.Black;
-            inactiveStateCollection5.BorderColor = System.Drawing.SystemColors.InactiveCaption;
-            inactiveStateCollection5.ForeColor = System.Drawing.Color.Gray;
-            inactiveStateCollection5.Text = "%";
-            this.toggleButton4.InactiveState = inactiveStateCollection5;
-            this.toggleButton4.Location = new System.Drawing.Point(20, 6);
-            this.toggleButton4.Margin = new System.Windows.Forms.Padding(2);
-            this.toggleButton4.MinimumSize = new System.Drawing.Size(36, 14);
-            this.toggleButton4.Name = "toggleButton4";
-            this.toggleButton4.Renderer = toggleButtonRenderer5;
-            this.toggleButton4.Size = new System.Drawing.Size(73, 36);
-            sliderCollection5.BackColor = System.Drawing.Color.SteelBlue;
-            sliderCollection5.BorderColor = System.Drawing.SystemColors.MenuHighlight;
-            sliderCollection5.HoverColor = System.Drawing.Color.SteelBlue;
-            sliderCollection5.Width = 30;
-            this.toggleButton4.Slider = sliderCollection5;
-            this.toggleButton4.TabIndex = 105;
-            this.toggleButton4.Text = "toggleButton4";
-            this.toggleButton4.ToggleState = Syncfusion.Windows.Forms.Tools.ToggleButtonState.Active;
-            // 
-            // tableLayoutPanel8
-            // 
-            this.tableLayoutPanel8.ColumnCount = 1;
-            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel8.Controls.Add(this.expandCollapsePanel4, 0, 0);
-            this.tableLayoutPanel8.Location = new System.Drawing.Point(20, 73);
-            this.tableLayoutPanel8.Name = "tableLayoutPanel8";
-            this.tableLayoutPanel8.RowCount = 1;
-            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel8.Size = new System.Drawing.Size(248, 736);
-            this.tableLayoutPanel8.TabIndex = 104;
-            // 
-            // expandCollapsePanel4
-            // 
-            this.expandCollapsePanel4.BackColor = System.Drawing.Color.Black;
-            this.expandCollapsePanel4.ButtonSize = MakarovDev.ExpandCollapsePanel.ExpandCollapseButton.ExpandButtonSize.Normal;
-            this.expandCollapsePanel4.ButtonStyle = MakarovDev.ExpandCollapsePanel.ExpandCollapseButton.ExpandButtonStyle.Circle;
-            this.expandCollapsePanel4.Controls.Add(this.panel5);
-            this.expandCollapsePanel4.ExpandedHeight = 655;
-            this.expandCollapsePanel4.IsExpanded = false;
-            this.expandCollapsePanel4.Location = new System.Drawing.Point(3, 3);
-            this.expandCollapsePanel4.Name = "expandCollapsePanel4";
-            this.expandCollapsePanel4.Size = new System.Drawing.Size(233, 37);
-            this.expandCollapsePanel4.TabIndex = 105;
-            this.expandCollapsePanel4.Text = "Select Program Project";
-            this.expandCollapsePanel4.UseAnimation = true;
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.panel5.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.panel5.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
-            this.panel5.Location = new System.Drawing.Point(30, 53);
-            this.panel5.Margin = new System.Windows.Forms.Padding(2);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(189, 544);
-            this.panel5.TabIndex = 1;
-            // 
             // DataTab
             // 
             this.DataTab.Controls.Add(this.tableLayoutPanel10);
@@ -2145,489 +1785,473 @@ namespace Budget
             this.DataTab.Location = new System.Drawing.Point(1, 44);
             this.DataTab.Name = "DataTab";
             this.DataTab.ShowCloseButton = true;
-            this.DataTab.Size = new System.Drawing.Size(1786, 829);
+            this.DataTab.Size = new System.Drawing.Size(1586, 874);
             this.DataTab.TabIndex = 12;
             this.DataTab.Text = "Database";
             this.DataTab.ThemesEnabled = false;
             // 
             // tableLayoutPanel10
             // 
-            this.tableLayoutPanel10.ColumnCount = 3;
-            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 29.26435F));
-            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70.73565F));
-            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 517F));
-            this.tableLayoutPanel10.Controls.Add(this.MiniTabControl1, 2, 0);
-            this.tableLayoutPanel10.Controls.Add(this.groupBox1, 1, 0);
-            this.tableLayoutPanel10.Controls.Add(this.Expander, 0, 0);
-            this.tableLayoutPanel10.Location = new System.Drawing.Point(11, 46);
+            this.tableLayoutPanel10.ColumnCount = 2;
+            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 496F));
+            this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel10.Controls.Add(this.MiniTabControl1, 1, 0);
+            this.tableLayoutPanel10.Controls.Add(this.groupBox1, 0, 0);
+            this.tableLayoutPanel10.Location = new System.Drawing.Point(11, 23);
             this.tableLayoutPanel10.Name = "tableLayoutPanel10";
             this.tableLayoutPanel10.RowCount = 1;
-            this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel10.Size = new System.Drawing.Size(1752, 517);
+            this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel10.Size = new System.Drawing.Size(1564, 546);
             this.tableLayoutPanel10.TabIndex = 152;
-            // 
-            // Expander
-            // 
-            this.Expander.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.Expander.ButtonSize = MakarovDev.ExpandCollapsePanel.ExpandCollapseButton.ExpandButtonSize.Normal;
-            this.Expander.ButtonStyle = MakarovDev.ExpandCollapsePanel.ExpandCollapseButton.ExpandButtonStyle.Circle;
-            this.Expander.Controls.Add(this.P7FilterPanel);
-            this.Expander.ExpandedHeight = 472;
-            this.Expander.IsExpanded = true;
-            this.Expander.Location = new System.Drawing.Point(2, 2);
-            this.Expander.Margin = new System.Windows.Forms.Padding(2);
-            this.Expander.Name = "Expander";
-            this.Expander.Padding = new System.Windows.Forms.Padding(1);
-            this.Expander.Size = new System.Drawing.Size(294, 496);
-            this.Expander.TabIndex = 118;
-            this.Expander.Text = "Select";
-            this.Expander.UseAnimation = true;
-            // 
-            // P7FilterPanel
-            // 
-            this.P7FilterPanel.BackColor = System.Drawing.Color.Transparent;
-            this.P7FilterPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.P7FilterPanel.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.P7FilterPanel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
-            this.P7FilterPanel.Location = new System.Drawing.Point(22, 59);
-            this.P7FilterPanel.Margin = new System.Windows.Forms.Padding(2);
-            this.P7FilterPanel.Name = "P7FilterPanel";
-            this.P7FilterPanel.Size = new System.Drawing.Size(252, 410);
-            this.P7FilterPanel.TabIndex = 136;
             // 
             // MiniTabControl1
             // 
-            this.MiniTabControl1.ActiveTabForeColor = System.Drawing.Color.Empty;
-            this.MiniTabControl1.BeforeTouchSize = new System.Drawing.Size(487, 494);
+            this.MiniTabControl1.ActiveTabColor = System.Drawing.Color.Black;
+            this.MiniTabControl1.ActiveTabForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.MiniTabControl1.BeforeTouchSize = new System.Drawing.Size(483, 534);
             this.MiniTabControl1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.MiniTabControl1.BorderWidth = 1;
             this.MiniTabControl1.CloseButtonForeColor = System.Drawing.Color.Empty;
             this.MiniTabControl1.CloseButtonHoverForeColor = System.Drawing.Color.Black;
             this.MiniTabControl1.CloseButtonPressedForeColor = System.Drawing.Color.Black;
-            this.MiniTabControl1.Controls.Add(this.tabPageAdv1);
-            this.MiniTabControl1.Controls.Add(this.tabPageAdv2);
             this.MiniTabControl1.Controls.Add(this.tabPageAdv5);
+            this.MiniTabControl1.Controls.Add(this.tabPageAdv2);
             this.MiniTabControl1.FixedSingleBorderColor = System.Drawing.SystemColors.MenuHighlight;
             this.MiniTabControl1.FocusOnTabClick = false;
-            this.MiniTabControl1.InActiveTabForeColor = System.Drawing.Color.Empty;
-            this.MiniTabControl1.Location = new System.Drawing.Point(1237, 3);
+            this.MiniTabControl1.InactiveTabColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.MiniTabControl1.InActiveTabForeColor = System.Drawing.Color.DarkGray;
+            this.MiniTabControl1.Location = new System.Drawing.Point(1071, 3);
+            this.MiniTabControl1.Multiline = true;
             this.MiniTabControl1.Name = "MiniTabControl1";
-            this.MiniTabControl1.SeparatorColor = System.Drawing.SystemColors.ControlDark;
-            this.MiniTabControl1.ShowSeparator = false;
-            this.MiniTabControl1.Size = new System.Drawing.Size(487, 494);
+            this.MiniTabControl1.SeparatorColor = System.Drawing.SystemColors.MenuHighlight;
+            this.MiniTabControl1.ShowSeparator = true;
+            this.MiniTabControl1.Size = new System.Drawing.Size(483, 534);
             this.MiniTabControl1.TabIndex = 150;
-            this.MiniTabControl1.TabPanelBackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.MiniTabControl1.TabPanelBackColor = System.Drawing.Color.Black;
             this.MiniTabControl1.TabStyle = typeof(Syncfusion.Windows.Forms.Tools.TabRendererMetro);
+            this.MiniTabControl1.ThemesEnabled = true;
             // 
-            // tabPageAdv1
+            // tabPageAdv5
             // 
-            this.tabPageAdv1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.tabPageAdv1.Controls.Add(this.tableLayoutPanel2);
-            this.tabPageAdv1.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.tabPageAdv1.Image = null;
-            this.tabPageAdv1.ImageSize = new System.Drawing.Size(16, 16);
-            this.tabPageAdv1.Location = new System.Drawing.Point(1, 30);
-            this.tabPageAdv1.Name = "tabPageAdv1";
-            this.tabPageAdv1.ShowCloseButton = true;
-            this.tabPageAdv1.Size = new System.Drawing.Size(485, 463);
-            this.tabPageAdv1.TabIndex = 1;
-            this.tabPageAdv1.Text = "tabPageAdv1";
-            this.tabPageAdv1.ThemesEnabled = false;
+            this.tabPageAdv5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tabPageAdv5.Controls.Add(this.expandCollapsePanel3);
+            this.tabPageAdv5.Controls.Add(this.metroPanel1);
+            this.tabPageAdv5.Image = null;
+            this.tabPageAdv5.ImageSize = new System.Drawing.Size(16, 16);
+            this.tabPageAdv5.Location = new System.Drawing.Point(3, 32);
+            this.tabPageAdv5.Name = "tabPageAdv5";
+            this.tabPageAdv5.ShowCloseButton = true;
+            this.tabPageAdv5.Size = new System.Drawing.Size(477, 499);
+            this.tabPageAdv5.TabIndex = 3;
+            this.tabPageAdv5.Text = "tabPageAdv5";
+            this.tabPageAdv5.ThemesEnabled = false;
             // 
-            // tableLayoutPanel2
+            // expandCollapsePanel3
             // 
-            this.tableLayoutPanel2.ColumnCount = 3;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 46.08696F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 53.91304F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 120F));
-            this.tableLayoutPanel2.Controls.Add(this.label13, 1, 4);
-            this.tableLayoutPanel2.Controls.Add(this.OldAmount, 0, 5);
-            this.tableLayoutPanel2.Controls.Add(this.label12, 0, 4);
-            this.tableLayoutPanel2.Controls.Add(this.metroTextBox1, 2, 3);
-            this.tableLayoutPanel2.Controls.Add(this.metroTextBox2, 1, 3);
-            this.tableLayoutPanel2.Controls.Add(this.label2, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.metroTextBox3, 0, 3);
-            this.tableLayoutPanel2.Controls.Add(this.label3, 1, 0);
-            this.tableLayoutPanel2.Controls.Add(this.label9, 2, 2);
-            this.tableLayoutPanel2.Controls.Add(this.metroTextBox4, 2, 1);
-            this.tableLayoutPanel2.Controls.Add(this.label11, 1, 2);
-            this.tableLayoutPanel2.Controls.Add(this.label14, 2, 0);
-            this.tableLayoutPanel2.Controls.Add(this.label16, 0, 2);
-            this.tableLayoutPanel2.Controls.Add(this.metroTextBox5, 1, 1);
-            this.tableLayoutPanel2.Controls.Add(this.metroTextBox6, 0, 1);
-            this.tableLayoutPanel2.Controls.Add(this.metroTextBox7, 1, 5);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(67, 47);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 6;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 36.92308F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 63.07692F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 27F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 38F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(355, 221);
-            this.tableLayoutPanel2.TabIndex = 0;
+            this.expandCollapsePanel3.ButtonSize = MakarovDev.ExpandCollapsePanel.ExpandCollapseButton.ExpandButtonSize.Small;
+            this.expandCollapsePanel3.ButtonStyle = MakarovDev.ExpandCollapsePanel.ExpandCollapseButton.ExpandButtonStyle.Circle;
+            this.expandCollapsePanel3.Controls.Add(this.flowLayoutPanel1);
+            this.expandCollapsePanel3.ExpandedHeight = 437;
+            this.expandCollapsePanel3.IsExpanded = false;
+            this.expandCollapsePanel3.Location = new System.Drawing.Point(246, 16);
+            this.expandCollapsePanel3.Name = "expandCollapsePanel3";
+            this.expandCollapsePanel3.Size = new System.Drawing.Size(214, 37);
+            this.expandCollapsePanel3.TabIndex = 71;
+            this.expandCollapsePanel3.Text = "expandCollapsePanel3";
+            this.expandCollapsePanel3.UseAnimation = true;
             // 
-            // label13
+            // flowLayoutPanel1
             // 
-            this.label13.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.label13.AutoSize = true;
-            this.label13.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label13.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label13.Location = new System.Drawing.Point(148, 154);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(45, 21);
-            this.label13.TabIndex = 162;
-            this.label13.Text = "New:";
-            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.flowLayoutPanel1.Controls.Add(this.button1);
+            this.flowLayoutPanel1.Controls.Add(this.button2);
+            this.flowLayoutPanel1.Controls.Add(this.button3);
+            this.flowLayoutPanel1.Controls.Add(this.button4);
+            this.flowLayoutPanel1.Controls.Add(this.button5);
+            this.flowLayoutPanel1.Controls.Add(this.button6);
+            this.flowLayoutPanel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(130)))), ((int)(((byte)(180)))));
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(7, 50);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(206, 367);
+            this.flowLayoutPanel1.TabIndex = 2;
             // 
-            // OldAmount
+            // button1
             // 
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.Color.LightSteelBlue;
+            this.button1.Location = new System.Drawing.Point(3, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(175, 54);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "button1";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.UseVisualStyleBackColor = true;
             // 
+            // button2
             // 
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.ForeColor = System.Drawing.Color.LightSteelBlue;
+            this.button2.Location = new System.Drawing.Point(3, 63);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(175, 54);
+            this.button2.TabIndex = 2;
+            this.button2.Text = "button2";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button2.UseVisualStyleBackColor = true;
             // 
-            this.OldAmount.CustomButton.Image = null;
-            this.OldAmount.CustomButton.Location = new System.Drawing.Point(78, 2);
-            this.OldAmount.CustomButton.Name = "";
-            this.OldAmount.CustomButton.Size = new System.Drawing.Size(23, 23);
-            this.OldAmount.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.OldAmount.CustomButton.TabIndex = 1;
-            this.OldAmount.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.OldAmount.CustomButton.UseSelectable = true;
-            this.OldAmount.CustomButton.Visible = false;
-            this.OldAmount.Lines = new string[] {
-        "metroTextBox1"};
-            this.OldAmount.Location = new System.Drawing.Point(2, 177);
-            this.OldAmount.Margin = new System.Windows.Forms.Padding(2);
-            this.OldAmount.MaxLength = 32767;
-            this.OldAmount.Name = "OldAmount";
-            this.OldAmount.PasswordChar = '\0';
-            this.OldAmount.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.OldAmount.SelectedText = "";
-            this.OldAmount.SelectionLength = 0;
-            this.OldAmount.SelectionStart = 0;
-            this.OldAmount.ShortcutsEnabled = true;
-            this.OldAmount.Size = new System.Drawing.Size(104, 28);
-            this.OldAmount.TabIndex = 154;
-            this.OldAmount.Text = "metroTextBox1";
-            this.OldAmount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.OldAmount.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.OldAmount.UseSelectable = true;
-            this.OldAmount.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.OldAmount.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // button3
             // 
-            // label12
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.ForeColor = System.Drawing.Color.LightSteelBlue;
+            this.button3.Location = new System.Drawing.Point(3, 123);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(175, 54);
+            this.button3.TabIndex = 3;
+            this.button3.Text = "button3";
+            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button3.UseVisualStyleBackColor = true;
             // 
-            this.label12.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.label12.AutoSize = true;
-            this.label12.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label12.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label12.Location = new System.Drawing.Point(19, 154);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(69, 21);
-            this.label12.TabIndex = 65;
-            this.label12.Text = "Amount:";
-            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // button4
             // 
-            // metroTextBox1
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.ForeColor = System.Drawing.Color.LightSteelBlue;
+            this.button4.Location = new System.Drawing.Point(3, 183);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(175, 54);
+            this.button4.TabIndex = 4;
+            this.button4.Text = "button4";
+            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button4.UseVisualStyleBackColor = true;
             // 
+            // button5
             // 
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.ForeColor = System.Drawing.Color.LightSteelBlue;
+            this.button5.Location = new System.Drawing.Point(3, 243);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(175, 54);
+            this.button5.TabIndex = 5;
+            this.button5.Text = "button5";
+            this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button5.UseVisualStyleBackColor = true;
             // 
+            // button6
             // 
-            this.metroTextBox1.CustomButton.Image = null;
-            this.metroTextBox1.CustomButton.Location = new System.Drawing.Point(77, 1);
-            this.metroTextBox1.CustomButton.Name = "";
-            this.metroTextBox1.CustomButton.Size = new System.Drawing.Size(39, 39);
-            this.metroTextBox1.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.metroTextBox1.CustomButton.TabIndex = 1;
-            this.metroTextBox1.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.metroTextBox1.CustomButton.UseSelectable = true;
-            this.metroTextBox1.CustomButton.Visible = false;
-            this.metroTextBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.metroTextBox1.FontSize = MetroFramework.MetroTextBoxSize.Medium;
-            this.metroTextBox1.Lines = new string[] {
-        "metroTextBox2"};
-            this.metroTextBox1.Location = new System.Drawing.Point(236, 94);
-            this.metroTextBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.metroTextBox1.MaxLength = 32767;
-            this.metroTextBox1.Name = "metroTextBox1";
-            this.metroTextBox1.PasswordChar = '\0';
-            this.metroTextBox1.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.metroTextBox1.SelectedText = "";
-            this.metroTextBox1.SelectionLength = 0;
-            this.metroTextBox1.SelectionStart = 0;
-            this.metroTextBox1.ShortcutsEnabled = true;
-            this.metroTextBox1.Size = new System.Drawing.Size(117, 41);
-            this.metroTextBox1.TabIndex = 155;
-            this.metroTextBox1.Text = "metroTextBox2";
-            this.metroTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.metroTextBox1.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.metroTextBox1.UseSelectable = true;
-            this.metroTextBox1.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroTextBox1.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.button6.FlatAppearance.BorderSize = 0;
+            this.button6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.ForeColor = System.Drawing.Color.LightSteelBlue;
+            this.button6.Location = new System.Drawing.Point(3, 303);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(175, 54);
+            this.button6.TabIndex = 6;
+            this.button6.Text = "button6";
+            this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button6.UseVisualStyleBackColor = true;
             // 
-            // metroTextBox2
+            // metroPanel1
             // 
-            // 
-            // 
-            // 
-            this.metroTextBox2.CustomButton.Image = null;
-            this.metroTextBox2.CustomButton.Location = new System.Drawing.Point(-20, 2);
-            this.metroTextBox2.CustomButton.Name = "";
-            this.metroTextBox2.CustomButton.Size = new System.Drawing.Size(17, 17);
-            this.metroTextBox2.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.metroTextBox2.CustomButton.TabIndex = 1;
-            this.metroTextBox2.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.metroTextBox2.CustomButton.UseSelectable = true;
-            this.metroTextBox2.CustomButton.Visible = false;
-            this.metroTextBox2.Lines = new string[0];
-            this.metroTextBox2.Location = new System.Drawing.Point(110, 94);
-            this.metroTextBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.metroTextBox2.MaxLength = 32767;
-            this.metroTextBox2.Name = "metroTextBox2";
-            this.metroTextBox2.PasswordChar = '\0';
-            this.metroTextBox2.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.metroTextBox2.SelectedText = "";
-            this.metroTextBox2.SelectionLength = 0;
-            this.metroTextBox2.SelectionStart = 0;
-            this.metroTextBox2.ShortcutsEnabled = true;
-            this.metroTextBox2.Size = new System.Drawing.Size(0, 22);
-            this.metroTextBox2.TabIndex = 163;
-            this.metroTextBox2.UseSelectable = true;
-            this.metroTextBox2.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroTextBox2.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.metroPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.metroPanel1.Controls.Add(this.label2);
+            this.metroPanel1.Controls.Add(this.metroComboBox1);
+            this.metroPanel1.Controls.Add(this.label3);
+            this.metroPanel1.Controls.Add(this.metroComboBox2);
+            this.metroPanel1.Controls.Add(this.label9);
+            this.metroPanel1.Controls.Add(this.currencyTextBox1);
+            this.metroPanel1.Controls.Add(this.label11);
+            this.metroPanel1.Controls.Add(this.metroComboBox3);
+            this.metroPanel1.Controls.Add(this.label12);
+            this.metroPanel1.Controls.Add(this.metroComboBox4);
+            this.metroPanel1.Controls.Add(this.label13);
+            this.metroPanel1.Controls.Add(this.metroComboBox5);
+            this.metroPanel1.Controls.Add(this.label14);
+            this.metroPanel1.Controls.Add(this.metroComboBox6);
+            this.metroPanel1.Controls.Add(this.label16);
+            this.metroPanel1.Controls.Add(this.metroComboBox7);
+            this.metroPanel1.Controls.Add(this.label29);
+            this.metroPanel1.Controls.Add(this.metroComboBox8);
+            this.metroPanel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(130)))), ((int)(((byte)(180)))));
+            this.metroPanel1.HorizontalScrollbarBarColor = true;
+            this.metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroPanel1.HorizontalScrollbarSize = 9;
+            this.metroPanel1.Location = new System.Drawing.Point(11, 38);
+            this.metroPanel1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.metroPanel1.Name = "metroPanel1";
+            this.metroPanel1.Size = new System.Drawing.Size(230, 415);
+            this.metroPanel1.TabIndex = 70;
+            this.metroPanel1.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.metroPanel1.VerticalScrollbarBarColor = true;
+            this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
+            this.metroPanel1.VerticalScrollbarSize = 8;
             // 
             // label2
             // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label2.AutoSize = true;
-            this.label2.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label2.Location = new System.Drawing.Point(36, 3);
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.ForeColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.label2.Location = new System.Drawing.Point(22, 230);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(36, 21);
-            this.label2.TabIndex = 140;
-            this.label2.Text = "BFY";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label2.Size = new System.Drawing.Size(33, 21);
+            this.label2.TabIndex = 21;
+            this.label2.Text = "RC:";
             // 
-            // metroTextBox3
+            // metroComboBox1
             // 
+            this.metroComboBox1.BackColor = System.Drawing.Color.Black;
+            this.metroComboBox1.DataSource = this.TransferBindingSource;
+            this.metroComboBox1.DisplayMember = "RC";
+            this.metroComboBox1.ForeColor = System.Drawing.SystemColors.Info;
+            this.metroComboBox1.FormattingEnabled = true;
+            this.metroComboBox1.ItemHeight = 23;
+            this.metroComboBox1.Location = new System.Drawing.Point(80, 227);
+            this.metroComboBox1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.metroComboBox1.Name = "metroComboBox1";
+            this.metroComboBox1.Size = new System.Drawing.Size(135, 29);
+            this.metroComboBox1.TabIndex = 20;
+            this.metroComboBox1.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.metroComboBox1.UseSelectable = true;
             // 
+            // TransferBindingSource
             // 
-            // 
-            this.metroTextBox3.CustomButton.Image = null;
-            this.metroTextBox3.CustomButton.Location = new System.Drawing.Point(-20, 2);
-            this.metroTextBox3.CustomButton.Name = "";
-            this.metroTextBox3.CustomButton.Size = new System.Drawing.Size(17, 17);
-            this.metroTextBox3.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.metroTextBox3.CustomButton.TabIndex = 1;
-            this.metroTextBox3.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.metroTextBox3.CustomButton.UseSelectable = true;
-            this.metroTextBox3.CustomButton.Visible = false;
-            this.metroTextBox3.Lines = new string[0];
-            this.metroTextBox3.Location = new System.Drawing.Point(3, 95);
-            this.metroTextBox3.MaxLength = 32767;
-            this.metroTextBox3.Name = "metroTextBox3";
-            this.metroTextBox3.PasswordChar = '\0';
-            this.metroTextBox3.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.metroTextBox3.SelectedText = "";
-            this.metroTextBox3.SelectionLength = 0;
-            this.metroTextBox3.SelectionStart = 0;
-            this.metroTextBox3.ShortcutsEnabled = true;
-            this.metroTextBox3.Size = new System.Drawing.Size(0, 22);
-            this.metroTextBox3.TabIndex = 164;
-            this.metroTextBox3.UseSelectable = true;
-            this.metroTextBox3.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroTextBox3.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.TransferBindingSource.DataMember = "T7";
             // 
             // label3
             // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label3.AutoSize = true;
-            this.label3.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label3.Location = new System.Drawing.Point(147, 3);
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.ForeColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.label3.Location = new System.Drawing.Point(15, 16);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(48, 21);
-            this.label3.TabIndex = 60;
-            this.label3.Text = "Fund:";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label3.Size = new System.Drawing.Size(45, 21);
+            this.label3.TabIndex = 19;
+            this.label3.Text = "Type:";
+            // 
+            // metroComboBox2
+            // 
+            this.metroComboBox2.DataSource = this.TransferBindingSource;
+            this.metroComboBox2.DisplayMember = "DocType";
+            this.metroComboBox2.FormattingEnabled = true;
+            this.metroComboBox2.ItemHeight = 23;
+            this.metroComboBox2.Location = new System.Drawing.Point(80, 16);
+            this.metroComboBox2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.metroComboBox2.Name = "metroComboBox2";
+            this.metroComboBox2.Size = new System.Drawing.Size(135, 29);
+            this.metroComboBox2.TabIndex = 18;
+            this.metroComboBox2.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.metroComboBox2.UseSelectable = true;
             // 
             // label9
             // 
-            this.label9.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label9.AutoSize = true;
-            this.label9.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label9.Location = new System.Drawing.Point(270, 71);
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.ForeColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.label9.Location = new System.Drawing.Point(2, 366);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(49, 21);
-            this.label9.TabIndex = 64;
-            this.label9.Text = "Code:";
-            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label9.Size = new System.Drawing.Size(69, 21);
+            this.label9.TabIndex = 16;
+            this.label9.Text = "Amount:";
             // 
-            // metroTextBox4
+            // currencyTextBox1
             // 
-            // 
-            // 
-            // 
-            this.metroTextBox4.CustomButton.Image = null;
-            this.metroTextBox4.CustomButton.Location = new System.Drawing.Point(-20, 2);
-            this.metroTextBox4.CustomButton.Name = "";
-            this.metroTextBox4.CustomButton.Size = new System.Drawing.Size(17, 17);
-            this.metroTextBox4.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.metroTextBox4.CustomButton.TabIndex = 1;
-            this.metroTextBox4.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.metroTextBox4.CustomButton.UseSelectable = true;
-            this.metroTextBox4.CustomButton.Visible = false;
-            this.metroTextBox4.Lines = new string[0];
-            this.metroTextBox4.Location = new System.Drawing.Point(237, 27);
-            this.metroTextBox4.MaxLength = 32767;
-            this.metroTextBox4.Name = "metroTextBox4";
-            this.metroTextBox4.PasswordChar = '\0';
-            this.metroTextBox4.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.metroTextBox4.SelectedText = "";
-            this.metroTextBox4.SelectionLength = 0;
-            this.metroTextBox4.SelectionStart = 0;
-            this.metroTextBox4.ShortcutsEnabled = true;
-            this.metroTextBox4.Size = new System.Drawing.Size(0, 22);
-            this.metroTextBox4.TabIndex = 165;
-            this.metroTextBox4.UseSelectable = true;
-            this.metroTextBox4.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroTextBox4.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.currencyTextBox1.BackGroundColor = System.Drawing.Color.DimGray;
+            this.currencyTextBox1.BeforeTouchSize = new System.Drawing.Size(133, 26);
+            this.currencyTextBox1.DecimalValue = new decimal(new int[] {
+            100,
+            0,
+            0,
+            131072});
+            this.currencyTextBox1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.currencyTextBox1.Location = new System.Drawing.Point(82, 359);
+            this.currencyTextBox1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.currencyTextBox1.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
+            this.currencyTextBox1.Name = "currencyTextBox1";
+            this.currencyTextBox1.NullString = "";
+            this.currencyTextBox1.PositiveColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.currencyTextBox1.Size = new System.Drawing.Size(133, 29);
+            this.currencyTextBox1.Style = Syncfusion.Windows.Forms.Tools.TextBoxExt.theme.Default;
+            this.currencyTextBox1.TabIndex = 17;
+            this.currencyTextBox1.Text = "$1.00";
             // 
             // label11
             // 
-            this.label11.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label11.AutoSize = true;
-            this.label11.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label11.Location = new System.Drawing.Point(154, 71);
+            this.label11.BackColor = System.Drawing.Color.Transparent;
+            this.label11.ForeColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.label11.Location = new System.Drawing.Point(13, 317);
+            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(33, 21);
-            this.label11.TabIndex = 63;
-            this.label11.Text = "RC:";
-            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label11.Size = new System.Drawing.Size(49, 21);
+            this.label11.TabIndex = 14;
+            this.label11.Text = "Code:";
+            // 
+            // metroComboBox3
+            // 
+            this.metroComboBox3.DataSource = this.TransferBindingSource;
+            this.metroComboBox3.DisplayMember = "ProgramProjectCode";
+            this.metroComboBox3.FormattingEnabled = true;
+            this.metroComboBox3.ItemHeight = 23;
+            this.metroComboBox3.Location = new System.Drawing.Point(80, 309);
+            this.metroComboBox3.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.metroComboBox3.Name = "metroComboBox3";
+            this.metroComboBox3.Size = new System.Drawing.Size(135, 29);
+            this.metroComboBox3.TabIndex = 15;
+            this.metroComboBox3.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.metroComboBox3.UseSelectable = true;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.Transparent;
+            this.label12.ForeColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.label12.Location = new System.Drawing.Point(22, 188);
+            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(40, 21);
+            this.label12.TabIndex = 12;
+            this.label12.Text = "Org:";
+            // 
+            // metroComboBox4
+            // 
+            this.metroComboBox4.DataSource = this.TransferBindingSource;
+            this.metroComboBox4.DisplayMember = "Org";
+            this.metroComboBox4.FormattingEnabled = true;
+            this.metroComboBox4.ItemHeight = 23;
+            this.metroComboBox4.Location = new System.Drawing.Point(80, 188);
+            this.metroComboBox4.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.metroComboBox4.Name = "metroComboBox4";
+            this.metroComboBox4.Size = new System.Drawing.Size(135, 29);
+            this.metroComboBox4.TabIndex = 13;
+            this.metroComboBox4.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.metroComboBox4.UseSelectable = true;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.BackColor = System.Drawing.Color.Transparent;
+            this.label13.ForeColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.label13.Location = new System.Drawing.Point(9, 271);
+            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(44, 21);
+            this.label13.TabIndex = 10;
+            this.label13.Text = "BOC:";
+            // 
+            // metroComboBox5
+            // 
+            this.metroComboBox5.DataSource = this.TransferBindingSource;
+            this.metroComboBox5.DisplayMember = "BOC";
+            this.metroComboBox5.FormattingEnabled = true;
+            this.metroComboBox5.ItemHeight = 23;
+            this.metroComboBox5.Location = new System.Drawing.Point(80, 268);
+            this.metroComboBox5.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.metroComboBox5.Name = "metroComboBox5";
+            this.metroComboBox5.Size = new System.Drawing.Size(135, 29);
+            this.metroComboBox5.TabIndex = 11;
+            this.metroComboBox5.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.metroComboBox5.UseSelectable = true;
             // 
             // label14
             // 
-            this.label14.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label14.AutoSize = true;
-            this.label14.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label14.Location = new System.Drawing.Point(272, 3);
+            this.label14.BackColor = System.Drawing.Color.Transparent;
+            this.label14.ForeColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.label14.Location = new System.Drawing.Point(15, 149);
+            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(44, 21);
-            this.label14.TabIndex = 66;
-            this.label14.Text = "BOC:";
-            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label14.Size = new System.Drawing.Size(48, 21);
+            this.label14.TabIndex = 8;
+            this.label14.Text = "Fund:";
+            // 
+            // metroComboBox6
+            // 
+            this.metroComboBox6.DataSource = this.TransferBindingSource;
+            this.metroComboBox6.DisplayMember = "Fund";
+            this.metroComboBox6.FormattingEnabled = true;
+            this.metroComboBox6.ItemHeight = 23;
+            this.metroComboBox6.Location = new System.Drawing.Point(80, 146);
+            this.metroComboBox6.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.metroComboBox6.Name = "metroComboBox6";
+            this.metroComboBox6.Size = new System.Drawing.Size(135, 29);
+            this.metroComboBox6.TabIndex = 9;
+            this.metroComboBox6.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.metroComboBox6.UseSelectable = true;
             // 
             // label16
             // 
-            this.label16.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label16.AutoSize = true;
-            this.label16.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label16.Location = new System.Drawing.Point(34, 71);
+            this.label16.BackColor = System.Drawing.Color.Transparent;
+            this.label16.ForeColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.label16.Location = new System.Drawing.Point(15, 107);
+            this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(40, 21);
-            this.label16.TabIndex = 62;
-            this.label16.Text = "Org:";
-            this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label16.Size = new System.Drawing.Size(39, 21);
+            this.label16.TabIndex = 6;
+            this.label16.Text = "BFY:";
             // 
-            // metroTextBox5
+            // metroComboBox7
             // 
+            this.metroComboBox7.DataSource = this.TransferBindingSource;
+            this.metroComboBox7.DisplayMember = "BBFY";
+            this.metroComboBox7.FormattingEnabled = true;
+            this.metroComboBox7.ItemHeight = 23;
+            this.metroComboBox7.Location = new System.Drawing.Point(80, 104);
+            this.metroComboBox7.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.metroComboBox7.Name = "metroComboBox7";
+            this.metroComboBox7.Size = new System.Drawing.Size(135, 29);
+            this.metroComboBox7.TabIndex = 7;
+            this.metroComboBox7.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.metroComboBox7.UseSelectable = true;
             // 
+            // label29
             // 
+            this.label29.AutoSize = true;
+            this.label29.BackColor = System.Drawing.Color.Transparent;
+            this.label29.ForeColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.label29.Location = new System.Drawing.Point(15, 71);
+            this.label29.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(48, 21);
+            this.label29.TabIndex = 2;
+            this.label29.Text = "RPIO:";
             // 
-            this.metroTextBox5.CustomButton.Image = null;
-            this.metroTextBox5.CustomButton.Location = new System.Drawing.Point(-20, 2);
-            this.metroTextBox5.CustomButton.Name = "";
-            this.metroTextBox5.CustomButton.Size = new System.Drawing.Size(17, 17);
-            this.metroTextBox5.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.metroTextBox5.CustomButton.TabIndex = 1;
-            this.metroTextBox5.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.metroTextBox5.CustomButton.UseSelectable = true;
-            this.metroTextBox5.CustomButton.Visible = false;
-            this.metroTextBox5.Lines = new string[0];
-            this.metroTextBox5.Location = new System.Drawing.Point(111, 27);
-            this.metroTextBox5.MaxLength = 32767;
-            this.metroTextBox5.Name = "metroTextBox5";
-            this.metroTextBox5.PasswordChar = '\0';
-            this.metroTextBox5.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.metroTextBox5.SelectedText = "";
-            this.metroTextBox5.SelectionLength = 0;
-            this.metroTextBox5.SelectionStart = 0;
-            this.metroTextBox5.ShortcutsEnabled = true;
-            this.metroTextBox5.Size = new System.Drawing.Size(0, 22);
-            this.metroTextBox5.TabIndex = 166;
-            this.metroTextBox5.UseSelectable = true;
-            this.metroTextBox5.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroTextBox5.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // metroComboBox8
             // 
-            // metroTextBox6
-            // 
-            // 
-            // 
-            // 
-            this.metroTextBox6.CustomButton.Image = null;
-            this.metroTextBox6.CustomButton.Location = new System.Drawing.Point(-20, 2);
-            this.metroTextBox6.CustomButton.Name = "";
-            this.metroTextBox6.CustomButton.Size = new System.Drawing.Size(17, 17);
-            this.metroTextBox6.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.metroTextBox6.CustomButton.TabIndex = 1;
-            this.metroTextBox6.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.metroTextBox6.CustomButton.UseSelectable = true;
-            this.metroTextBox6.CustomButton.Visible = false;
-            this.metroTextBox6.Lines = new string[0];
-            this.metroTextBox6.Location = new System.Drawing.Point(3, 27);
-            this.metroTextBox6.MaxLength = 32767;
-            this.metroTextBox6.Name = "metroTextBox6";
-            this.metroTextBox6.PasswordChar = '\0';
-            this.metroTextBox6.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.metroTextBox6.SelectedText = "";
-            this.metroTextBox6.SelectionLength = 0;
-            this.metroTextBox6.SelectionStart = 0;
-            this.metroTextBox6.ShortcutsEnabled = true;
-            this.metroTextBox6.Size = new System.Drawing.Size(0, 22);
-            this.metroTextBox6.TabIndex = 167;
-            this.metroTextBox6.UseSelectable = true;
-            this.metroTextBox6.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroTextBox6.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // metroTextBox7
-            // 
-            // 
-            // 
-            // 
-            this.metroTextBox7.CustomButton.Image = null;
-            this.metroTextBox7.CustomButton.Location = new System.Drawing.Point(-20, 2);
-            this.metroTextBox7.CustomButton.Name = "";
-            this.metroTextBox7.CustomButton.Size = new System.Drawing.Size(17, 17);
-            this.metroTextBox7.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.metroTextBox7.CustomButton.TabIndex = 1;
-            this.metroTextBox7.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.metroTextBox7.CustomButton.UseSelectable = true;
-            this.metroTextBox7.CustomButton.Visible = false;
-            this.metroTextBox7.Lines = new string[0];
-            this.metroTextBox7.Location = new System.Drawing.Point(111, 178);
-            this.metroTextBox7.MaxLength = 32767;
-            this.metroTextBox7.Name = "metroTextBox7";
-            this.metroTextBox7.PasswordChar = '\0';
-            this.metroTextBox7.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.metroTextBox7.SelectedText = "";
-            this.metroTextBox7.SelectionLength = 0;
-            this.metroTextBox7.SelectionStart = 0;
-            this.metroTextBox7.ShortcutsEnabled = true;
-            this.metroTextBox7.Size = new System.Drawing.Size(0, 22);
-            this.metroTextBox7.TabIndex = 168;
-            this.metroTextBox7.UseSelectable = true;
-            this.metroTextBox7.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroTextBox7.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.metroComboBox8.DataSource = this.TransferBindingSource;
+            this.metroComboBox8.DisplayMember = "RPIO";
+            this.metroComboBox8.FormattingEnabled = true;
+            this.metroComboBox8.ItemHeight = 23;
+            this.metroComboBox8.Location = new System.Drawing.Point(80, 64);
+            this.metroComboBox8.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.metroComboBox8.Name = "metroComboBox8";
+            this.metroComboBox8.Size = new System.Drawing.Size(135, 29);
+            this.metroComboBox8.TabIndex = 3;
+            this.metroComboBox8.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.metroComboBox8.UseSelectable = true;
             // 
             // tabPageAdv2
             // 
             this.tabPageAdv2.Controls.Add(this.chartControl1);
+            this.tabPageAdv2.Controls.Add(this.DataNavigator);
             this.tabPageAdv2.Image = null;
             this.tabPageAdv2.ImageSize = new System.Drawing.Size(16, 16);
-            this.tabPageAdv2.Location = new System.Drawing.Point(1, 30);
+            this.tabPageAdv2.Location = new System.Drawing.Point(3, 32);
             this.tabPageAdv2.Name = "tabPageAdv2";
             this.tabPageAdv2.ShowCloseButton = true;
-            this.tabPageAdv2.Size = new System.Drawing.Size(485, 463);
+            this.tabPageAdv2.Size = new System.Drawing.Size(477, 499);
             this.tabPageAdv2.TabIndex = 2;
             this.tabPageAdv2.Text = "tabPageAdv2";
             this.tabPageAdv2.ThemesEnabled = false;
@@ -2739,7 +2363,7 @@ namespace Budget
             this.chartControl1.Series3D = true;
             this.chartControl1.SeriesHighlight = true;
             this.chartControl1.ShadowColor = new Syncfusion.Drawing.BrushInfo(Syncfusion.Drawing.GradientStyle.PathRectangle, System.Drawing.SystemColors.WindowText, System.Drawing.Color.Silver);
-            this.chartControl1.Size = new System.Drawing.Size(485, 463);
+            this.chartControl1.Size = new System.Drawing.Size(477, 468);
             this.chartControl1.Spacing = 5F;
             this.chartControl1.SpacingBetweenPoints = 5F;
             this.chartControl1.Style3D = true;
@@ -2761,127 +2385,6 @@ namespace Budget
             this.chartControl1.ToolBar.Items.Add(chartToolBarTypeItem6);
             this.chartControl1.ToolBar.Items.Add(chartToolBarSeries3DItem6);
             this.chartControl1.ToolBar.Items.Add(chartToolBarShowLegendItem6);
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.groupBox1.Controls.Add(this.ReturnButton);
-            this.groupBox1.Controls.Add(this.label17);
-            this.groupBox1.Controls.Add(this.label18);
-            this.groupBox1.Controls.Add(this.label19);
-            this.groupBox1.Controls.Add(this.label20);
-            this.groupBox1.Controls.Add(this.DatabaseGridPanel);
-            this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.groupBox1.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.groupBox1.Location = new System.Drawing.Point(363, 2);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(818, 496);
-            this.groupBox1.TabIndex = 149;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Regional Database";
-            // 
-            // ReturnButton
-            // 
-            this.ReturnButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ReturnButton.Location = new System.Drawing.Point(619, 47);
-            this.ReturnButton.Margin = new System.Windows.Forms.Padding(2);
-            this.ReturnButton.Name = "ReturnButton";
-            this.ReturnButton.Size = new System.Drawing.Size(34, 26);
-            this.ReturnButton.TabIndex = 147;
-            this.ReturnButton.UseSelectable = true;
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.ForeColor = System.Drawing.SystemColors.Info;
-            this.label17.Location = new System.Drawing.Point(119, 52);
-            this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(61, 21);
-            this.label17.TabIndex = 119;
-            this.label17.Text = "label46";
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.ForeColor = System.Drawing.SystemColors.Info;
-            this.label18.Location = new System.Drawing.Point(492, 52);
-            this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(61, 21);
-            this.label18.TabIndex = 120;
-            this.label18.Text = "label45";
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.ForeColor = System.Drawing.SystemColors.Info;
-            this.label19.Location = new System.Drawing.Point(60, 52);
-            this.label19.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(49, 21);
-            this.label19.TabIndex = 121;
-            this.label19.Text = "Total: ";
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.ForeColor = System.Drawing.SystemColors.Info;
-            this.label20.Location = new System.Drawing.Point(401, 52);
-            this.label20.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(80, 21);
-            this.label20.TabIndex = 122;
-            this.label20.Text = "Accounts: ";
-            // 
-            // DatabaseGridPanel
-            // 
-            this.DatabaseGridPanel.Controls.Add(this.Grid);
-            this.DatabaseGridPanel.Controls.Add(this.DataNavigator);
-            this.DatabaseGridPanel.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DatabaseGridPanel.Location = new System.Drawing.Point(57, 86);
-            this.DatabaseGridPanel.Margin = new System.Windows.Forms.Padding(2);
-            this.DatabaseGridPanel.Name = "DatabaseGridPanel";
-            this.DatabaseGridPanel.Size = new System.Drawing.Size(711, 349);
-            this.DatabaseGridPanel.TabIndex = 123;
-            // 
-            // Grid
-            // 
-            this.Grid.BackgroundColor = System.Drawing.SystemColors.GradientActiveCaption;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Grid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.Grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.Grid.DefaultCellStyle = dataGridViewCellStyle2;
-            this.Grid.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Grid.EnableHeadersVisualStyles = false;
-            this.Grid.Location = new System.Drawing.Point(0, 0);
-            this.Grid.Name = "Grid";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Grid.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.Grid.RowTemplate.Height = 28;
-            this.Grid.Size = new System.Drawing.Size(711, 318);
-            this.Grid.TabIndex = 153;
             // 
             // DataNavigator
             // 
@@ -2907,14 +2410,14 @@ namespace Budget
             this.toolStripButton1,
             this.toolStripSeparator9,
             this.toolStripButton2});
-            this.DataNavigator.Location = new System.Drawing.Point(0, 318);
+            this.DataNavigator.Location = new System.Drawing.Point(0, 468);
             this.DataNavigator.MoveFirstItem = this.toolStripButton3;
             this.DataNavigator.MoveLastItem = this.toolStripButton6;
             this.DataNavigator.MoveNextItem = this.toolStripButton5;
             this.DataNavigator.MovePreviousItem = this.toolStripButton4;
             this.DataNavigator.Name = "DataNavigator";
             this.DataNavigator.PositionItem = this.toolStripTextBox1;
-            this.DataNavigator.Size = new System.Drawing.Size(711, 31);
+            this.DataNavigator.Size = new System.Drawing.Size(477, 31);
             this.DataNavigator.TabIndex = 152;
             this.DataNavigator.Text = "bindingNavigator1";
             // 
@@ -3017,6 +2520,133 @@ namespace Budget
             this.toolStripSeparator9.Name = "toolStripSeparator9";
             this.toolStripSeparator9.Size = new System.Drawing.Size(6, 31);
             // 
+            // groupBox1
+            // 
+            this.groupBox1.BackColor = System.Drawing.Color.Black;
+            this.groupBox1.Controls.Add(this.ReturnButton);
+            this.groupBox1.Controls.Add(this.gridRecordNavigationControl1);
+            this.groupBox1.Controls.Add(this.label17);
+            this.groupBox1.Controls.Add(this.label18);
+            this.groupBox1.Controls.Add(this.label19);
+            this.groupBox1.Controls.Add(this.label20);
+            this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.groupBox1.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.groupBox1.Location = new System.Drawing.Point(2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox1.Size = new System.Drawing.Size(1033, 534);
+            this.groupBox1.TabIndex = 149;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Regional PRC Account Database";
+            // 
+            // ReturnButton
+            // 
+            this.ReturnButton.BackColor = System.Drawing.Color.DimGray;
+            this.ReturnButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ReturnButton.Location = new System.Drawing.Point(863, 33);
+            this.ReturnButton.Margin = new System.Windows.Forms.Padding(2);
+            this.ReturnButton.Name = "ReturnButton";
+            this.ReturnButton.Size = new System.Drawing.Size(132, 26);
+            this.ReturnButton.TabIndex = 147;
+            this.ReturnButton.UseCustomBackColor = true;
+            this.ReturnButton.UseCustomForeColor = true;
+            this.ReturnButton.UseSelectable = true;
+            // 
+            // gridRecordNavigationControl1
+            // 
+            this.gridRecordNavigationControl1.AllowAddNew = true;
+            this.gridRecordNavigationControl1.BeforeTouchSize = new System.Drawing.Size(996, 440);
+            this.gridRecordNavigationControl1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.gridRecordNavigationControl1.Controls.Add(this.Grid);
+            this.gridRecordNavigationControl1.DisabledArrowColor = System.Drawing.SystemColors.GrayText;
+            this.gridRecordNavigationControl1.EnabledArrowColor = System.Drawing.SystemColors.WindowText;
+            this.gridRecordNavigationControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.gridRecordNavigationControl1.GridOfficeScrollBars = Syncfusion.Windows.Forms.OfficeScrollBars.Office2010;
+            this.gridRecordNavigationControl1.Location = new System.Drawing.Point(23, 72);
+            this.gridRecordNavigationControl1.MaxRecord = 0;
+            this.gridRecordNavigationControl1.MinRecord = 1;
+            this.gridRecordNavigationControl1.Name = "gridRecordNavigationControl1";
+            this.gridRecordNavigationControl1.NavigationBarBackColor = System.Drawing.SystemColors.Window;
+            this.gridRecordNavigationControl1.ShowToolTips = true;
+            this.gridRecordNavigationControl1.Size = new System.Drawing.Size(996, 440);
+            this.gridRecordNavigationControl1.SizeFactor = 0D;
+            this.gridRecordNavigationControl1.SplitBars = ((Syncfusion.Windows.Forms.DynamicSplitBars)((Syncfusion.Windows.Forms.DynamicSplitBars.SplitRows | Syncfusion.Windows.Forms.DynamicSplitBars.SplitColumns)));
+            this.gridRecordNavigationControl1.Style = Syncfusion.Windows.Forms.Appearance.Metro;
+            this.gridRecordNavigationControl1.TabIndex = 0;
+            this.gridRecordNavigationControl1.Text = "gridRecordNavigationControl1";
+            this.gridRecordNavigationControl1.ThemesEnabled = true;
+            // 
+            // Grid
+            // 
+            this.Grid.AllowDragSelectedCols = true;
+            this.Grid.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.Grid.ColorStyles = Syncfusion.Windows.Forms.ColorStyles.Office2010Black;
+            this.Grid.DataSource = this.P8BindingSource;
+            this.Grid.FillSplitterPane = true;
+            this.Grid.ForeColor = System.Drawing.Color.Black;
+            this.Grid.GridOfficeScrollBars = Syncfusion.Windows.Forms.OfficeScrollBars.Office2010;
+            this.Grid.GridVisualStyles = Syncfusion.Windows.Forms.GridVisualStyles.Office2010Black;
+            this.Grid.Location = new System.Drawing.Point(0, 0);
+            this.Grid.Name = "Grid";
+            this.Grid.Office2010ScrollBarsColorScheme = Syncfusion.Windows.Forms.Office2010ColorScheme.Black;
+            this.Grid.OptimizeInsertRemoveCells = true;
+            this.Grid.Properties.GridLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Grid.ShowCurrentCellBorderBehavior = Syncfusion.Windows.Forms.Grid.GridShowCurrentCellBorder.GrayWhenLostFocus;
+            this.Grid.Size = new System.Drawing.Size(968, 412);
+            this.Grid.SmartSizeBox = false;
+            this.Grid.SortBehavior = Syncfusion.Windows.Forms.Grid.GridSortBehavior.DoubleClick;
+            gridStyleInfo1.Interior = new Syncfusion.Drawing.BrushInfo(System.Drawing.Color.LightSteelBlue);
+            this.Grid.TableStyle = gridStyleInfo1;
+            this.Grid.Text = "gridDataBoundGrid1";
+            this.Grid.ThemesEnabled = true;
+            this.Grid.UseListChangedEvent = true;
+            this.Grid.UseRightToLeftCompatibleTextBox = true;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.ForeColor = System.Drawing.SystemColors.Info;
+            this.label17.Location = new System.Drawing.Point(73, 48);
+            this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(61, 21);
+            this.label17.TabIndex = 119;
+            this.label17.Text = "label46";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.ForeColor = System.Drawing.SystemColors.Info;
+            this.label18.Location = new System.Drawing.Point(733, 48);
+            this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(61, 21);
+            this.label18.TabIndex = 120;
+            this.label18.Text = "label45";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.ForeColor = System.Drawing.SystemColors.Info;
+            this.label19.Location = new System.Drawing.Point(20, 48);
+            this.label19.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(49, 21);
+            this.label19.TabIndex = 121;
+            this.label19.Text = "Total: ";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.ForeColor = System.Drawing.SystemColors.Info;
+            this.label20.Location = new System.Drawing.Point(649, 48);
+            this.label20.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(80, 21);
+            this.label20.TabIndex = 122;
+            this.label20.Text = "Accounts: ";
+            // 
             // TransferTab
             // 
             this.TransferTab.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
@@ -3030,7 +2660,7 @@ namespace Budget
             this.TransferTab.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.TransferTab.Name = "TransferTab";
             this.TransferTab.ShowCloseButton = true;
-            this.TransferTab.Size = new System.Drawing.Size(1786, 829);
+            this.TransferTab.Size = new System.Drawing.Size(1586, 874);
             this.TransferTab.TabIndex = 5;
             this.TransferTab.Text = "Transfers";
             this.TransferTab.ThemesEnabled = false;
@@ -3038,9 +2668,9 @@ namespace Budget
             // tableLayoutPanel11
             // 
             this.tableLayoutPanel11.ColumnCount = 3;
-            this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.99237F));
-            this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 79.00764F));
-            this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 466F));
+            this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.51593F));
+            this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 73.48407F));
+            this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 480F));
             this.tableLayoutPanel11.Controls.Add(this.groupBox2, 1, 0);
             this.tableLayoutPanel11.Controls.Add(this.MiniTabControl2, 2, 0);
             this.tableLayoutPanel11.Controls.Add(this.TransferExpander, 0, 0);
@@ -3048,7 +2678,7 @@ namespace Budget
             this.tableLayoutPanel11.Name = "tableLayoutPanel11";
             this.tableLayoutPanel11.RowCount = 1;
             this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel11.Size = new System.Drawing.Size(1747, 519);
+            this.tableLayoutPanel11.Size = new System.Drawing.Size(1452, 519);
             this.tableLayoutPanel11.TabIndex = 152;
             // 
             // groupBox2
@@ -3057,9 +2687,9 @@ namespace Budget
             this.groupBox2.Controls.Add(this.TransferGrid);
             this.groupBox2.Controls.Add(this.TransferNavigator);
             this.groupBox2.ForeColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.groupBox2.Location = new System.Drawing.Point(271, 3);
+            this.groupBox2.Location = new System.Drawing.Point(260, 3);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(995, 448);
+            this.groupBox2.Size = new System.Drawing.Size(660, 448);
             this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "groupBox2";
@@ -3068,42 +2698,38 @@ namespace Budget
             // 
             this.TransferGrid.AutoGenerateColumns = false;
             this.TransferGrid.BackgroundColor = System.Drawing.SystemColors.GradientActiveCaption;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.TransferGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.TransferGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.TransferGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.TransferGrid.DataSource = this.TransferBindingSource;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.GradientActiveCaption;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.TransferGrid.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.GradientActiveCaption;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.TransferGrid.DefaultCellStyle = dataGridViewCellStyle2;
             this.TransferGrid.EnableHeadersVisualStyles = false;
             this.TransferGrid.Location = new System.Drawing.Point(32, 52);
             this.TransferGrid.Name = "TransferGrid";
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.TransferGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.TransferGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.TransferGrid.RowTemplate.Height = 28;
-            this.TransferGrid.Size = new System.Drawing.Size(951, 347);
+            this.TransferGrid.Size = new System.Drawing.Size(586, 347);
             this.TransferGrid.TabIndex = 2;
-            // 
-            // TransferBindingSource
-            // 
-            this.TransferBindingSource.DataMember = "T7";
             // 
             // TransferNavigator
             // 
@@ -3133,7 +2759,7 @@ namespace Budget
             this.TransferNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.TransferNavigator.Name = "TransferNavigator";
             this.TransferNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.TransferNavigator.Size = new System.Drawing.Size(989, 31);
+            this.TransferNavigator.Size = new System.Drawing.Size(654, 31);
             this.TransferNavigator.TabIndex = 3;
             this.TransferNavigator.Text = "bindingNavigator1";
             // 
@@ -3237,7 +2863,7 @@ namespace Budget
             this.MiniTabControl2.FixedSingleBorderColor = System.Drawing.Color.DarkGray;
             this.MiniTabControl2.FocusOnTabClick = false;
             this.MiniTabControl2.InActiveTabForeColor = System.Drawing.Color.Empty;
-            this.MiniTabControl2.Location = new System.Drawing.Point(1283, 3);
+            this.MiniTabControl2.Location = new System.Drawing.Point(974, 3);
             this.MiniTabControl2.Name = "MiniTabControl2";
             this.MiniTabControl2.SeparatorColor = System.Drawing.SystemColors.ControlDark;
             this.MiniTabControl2.ShowSeparator = false;
@@ -3266,7 +2892,7 @@ namespace Budget
             this.tableLayoutPanel9.ColumnCount = 3;
             this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.02913F));
             this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.97087F));
-            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 120F));
+            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 124F));
             this.tableLayoutPanel9.Controls.Add(this.label21, 1, 4);
             this.tableLayoutPanel9.Controls.Add(this.metroTextBox9, 0, 5);
             this.tableLayoutPanel9.Controls.Add(this.label22, 0, 4);
@@ -3301,7 +2927,7 @@ namespace Budget
             this.label21.AutoSize = true;
             this.label21.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.label21.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label21.Location = new System.Drawing.Point(152, 148);
+            this.label21.Location = new System.Drawing.Point(149, 148);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(45, 21);
             this.label21.TabIndex = 162;
@@ -3349,7 +2975,7 @@ namespace Budget
             this.label22.AutoSize = true;
             this.label22.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.label22.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label22.Location = new System.Drawing.Point(23, 148);
+            this.label22.Location = new System.Drawing.Point(22, 148);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(69, 21);
             this.label22.TabIndex = 65;
@@ -3362,7 +2988,7 @@ namespace Budget
             // 
             // 
             this.metroTextBox10.CustomButton.Image = null;
-            this.metroTextBox10.CustomButton.Location = new System.Drawing.Point(81, 1);
+            this.metroTextBox10.CustomButton.Location = new System.Drawing.Point(85, 1);
             this.metroTextBox10.CustomButton.Name = "";
             this.metroTextBox10.CustomButton.Size = new System.Drawing.Size(35, 35);
             this.metroTextBox10.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -3374,7 +3000,7 @@ namespace Budget
             this.metroTextBox10.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.metroTextBox10.Lines = new string[] {
         "metroTextBox2"};
-            this.metroTextBox10.Location = new System.Drawing.Point(236, 88);
+            this.metroTextBox10.Location = new System.Drawing.Point(232, 88);
             this.metroTextBox10.Margin = new System.Windows.Forms.Padding(2);
             this.metroTextBox10.MaxLength = 32767;
             this.metroTextBox10.Name = "metroTextBox10";
@@ -3384,7 +3010,7 @@ namespace Budget
             this.metroTextBox10.SelectionLength = 0;
             this.metroTextBox10.SelectionStart = 0;
             this.metroTextBox10.ShortcutsEnabled = true;
-            this.metroTextBox10.Size = new System.Drawing.Size(117, 37);
+            this.metroTextBox10.Size = new System.Drawing.Size(121, 37);
             this.metroTextBox10.TabIndex = 155;
             this.metroTextBox10.Text = "metroTextBox2";
             this.metroTextBox10.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -3408,7 +3034,7 @@ namespace Budget
             this.metroTextBox11.CustomButton.UseSelectable = true;
             this.metroTextBox11.CustomButton.Visible = false;
             this.metroTextBox11.Lines = new string[0];
-            this.metroTextBox11.Location = new System.Drawing.Point(117, 88);
+            this.metroTextBox11.Location = new System.Drawing.Point(115, 88);
             this.metroTextBox11.Margin = new System.Windows.Forms.Padding(2);
             this.metroTextBox11.MaxLength = 32767;
             this.metroTextBox11.Name = "metroTextBox11";
@@ -3429,7 +3055,7 @@ namespace Budget
             this.label23.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label23.AutoSize = true;
             this.label23.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label23.Location = new System.Drawing.Point(39, 3);
+            this.label23.Location = new System.Drawing.Point(38, 3);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(36, 21);
             this.label23.TabIndex = 140;
@@ -3471,7 +3097,7 @@ namespace Budget
             this.label24.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label24.AutoSize = true;
             this.label24.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label24.Location = new System.Drawing.Point(150, 3);
+            this.label24.Location = new System.Drawing.Point(147, 3);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(48, 21);
             this.label24.TabIndex = 60;
@@ -3484,7 +3110,7 @@ namespace Budget
             this.label25.AutoSize = true;
             this.label25.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.label25.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label25.Location = new System.Drawing.Point(270, 65);
+            this.label25.Location = new System.Drawing.Point(268, 65);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(49, 21);
             this.label25.TabIndex = 64;
@@ -3506,7 +3132,7 @@ namespace Budget
             this.metroTextBox13.CustomButton.UseSelectable = true;
             this.metroTextBox13.CustomButton.Visible = false;
             this.metroTextBox13.Lines = new string[0];
-            this.metroTextBox13.Location = new System.Drawing.Point(237, 27);
+            this.metroTextBox13.Location = new System.Drawing.Point(233, 27);
             this.metroTextBox13.MaxLength = 32767;
             this.metroTextBox13.Name = "metroTextBox13";
             this.metroTextBox13.PasswordChar = '\0';
@@ -3526,7 +3152,7 @@ namespace Budget
             this.label26.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label26.AutoSize = true;
             this.label26.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label26.Location = new System.Drawing.Point(158, 65);
+            this.label26.Location = new System.Drawing.Point(155, 65);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(33, 21);
             this.label26.TabIndex = 63;
@@ -3538,7 +3164,7 @@ namespace Budget
             this.label27.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label27.AutoSize = true;
             this.label27.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label27.Location = new System.Drawing.Point(272, 3);
+            this.label27.Location = new System.Drawing.Point(270, 3);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(44, 21);
             this.label27.TabIndex = 66;
@@ -3550,7 +3176,7 @@ namespace Budget
             this.label28.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label28.AutoSize = true;
             this.label28.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label28.Location = new System.Drawing.Point(37, 65);
+            this.label28.Location = new System.Drawing.Point(36, 65);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(40, 21);
             this.label28.TabIndex = 62;
@@ -3572,7 +3198,7 @@ namespace Budget
             this.metroTextBox14.CustomButton.UseSelectable = true;
             this.metroTextBox14.CustomButton.Visible = false;
             this.metroTextBox14.Lines = new string[0];
-            this.metroTextBox14.Location = new System.Drawing.Point(118, 27);
+            this.metroTextBox14.Location = new System.Drawing.Point(116, 27);
             this.metroTextBox14.MaxLength = 32767;
             this.metroTextBox14.Name = "metroTextBox14";
             this.metroTextBox14.PasswordChar = '\0';
@@ -3632,7 +3258,7 @@ namespace Budget
             this.metroTextBox16.CustomButton.UseSelectable = true;
             this.metroTextBox16.CustomButton.Visible = false;
             this.metroTextBox16.Lines = new string[0];
-            this.metroTextBox16.Location = new System.Drawing.Point(118, 172);
+            this.metroTextBox16.Location = new System.Drawing.Point(116, 172);
             this.metroTextBox16.MaxLength = 32767;
             this.metroTextBox16.Name = "metroTextBox16";
             this.metroTextBox16.PasswordChar = '\0';
@@ -3873,7 +3499,7 @@ namespace Budget
             // amountCurrencyTextBox
             // 
             this.amountCurrencyTextBox.BackGroundColor = System.Drawing.Color.DimGray;
-            this.amountCurrencyTextBox.BeforeTouchSize = new System.Drawing.Size(117, 29);
+            this.amountCurrencyTextBox.BeforeTouchSize = new System.Drawing.Size(133, 26);
             this.amountCurrencyTextBox.DecimalValue = new decimal(new int[] {
             100,
             0,
@@ -3983,7 +3609,7 @@ namespace Budget
             this.flowLayoutPanel5.Controls.Add(this.metroButton12);
             this.flowLayoutPanel5.Controls.Add(this.metroButton13);
             this.flowLayoutPanel5.Controls.Add(this.metroButton14);
-            this.flowLayoutPanel5.Location = new System.Drawing.Point(853, 606);
+            this.flowLayoutPanel5.Location = new System.Drawing.Point(653, 629);
             this.flowLayoutPanel5.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.flowLayoutPanel5.Name = "flowLayoutPanel5";
             this.flowLayoutPanel5.Size = new System.Drawing.Size(439, 66);
@@ -4753,40 +4379,6 @@ namespace Budget
             this.calculatorControl2.Text = "calculatorControl2";
             this.calculatorControl2.UseVisualStyle = true;
             // 
-            // tabPageAdv5
-            // 
-            this.tabPageAdv5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tabPageAdv5.Controls.Add(this.calculatorControl1);
-            this.tabPageAdv5.Image = null;
-            this.tabPageAdv5.ImageSize = new System.Drawing.Size(16, 16);
-            this.tabPageAdv5.Location = new System.Drawing.Point(1, 30);
-            this.tabPageAdv5.Name = "tabPageAdv5";
-            this.tabPageAdv5.ShowCloseButton = true;
-            this.tabPageAdv5.Size = new System.Drawing.Size(485, 463);
-            this.tabPageAdv5.TabIndex = 3;
-            this.tabPageAdv5.Text = "tabPageAdv5";
-            this.tabPageAdv5.ThemesEnabled = false;
-            // 
-            // calculatorControl1
-            // 
-            this.calculatorControl1.AccessibleDescription = "Calculator control";
-            this.calculatorControl1.AccessibleName = "Calculator Control";
-            this.calculatorControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
-            this.calculatorControl1.BeforeTouchSize = new System.Drawing.Size(421, 366);
-            this.calculatorControl1.BorderStyle = System.Windows.Forms.Border3DStyle.Flat;
-            this.calculatorControl1.ButtonStyle = Syncfusion.Windows.Forms.ButtonAppearance.Metro;
-            this.calculatorControl1.Culture = new System.Globalization.CultureInfo("en-US");
-            this.calculatorControl1.DoubleValue = 0D;
-            this.calculatorControl1.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.calculatorControl1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.calculatorControl1.Location = new System.Drawing.Point(28, 55);
-            this.calculatorControl1.MetroColor = System.Drawing.SystemColors.Control;
-            this.calculatorControl1.Name = "calculatorControl1";
-            this.calculatorControl1.Size = new System.Drawing.Size(421, 366);
-            this.calculatorControl1.TabIndex = 0;
-            this.calculatorControl1.Text = "calculatorControl1";
-            this.calculatorControl1.UseVisualStyle = true;
-            // 
             // DivisionForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
@@ -4795,16 +4387,16 @@ namespace Budget
             this.BorderColor = System.Drawing.SystemColors.MenuHighlight;
             this.CaptionAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.CaptionBarColor = System.Drawing.Color.Transparent;
-            this.CaptionBarHeight = 120;
-            this.CaptionFont = new System.Drawing.Font("Segoe UI Light", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CaptionBarHeight = 75;
+            this.CaptionFont = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CaptionForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.ClientSize = new System.Drawing.Size(1788, 874);
+            this.ClientSize = new System.Drawing.Size(1588, 919);
             this.Controls.Add(this.DivisionFormTabControl);
             this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.MaximumSize = new System.Drawing.Size(1800, 1000);
+            this.MaximumSize = new System.Drawing.Size(1600, 1000);
             this.MetroColor = System.Drawing.Color.Black;
             this.Name = "DivisionForm";
             this.ShowIcon = false;
@@ -4815,82 +4407,59 @@ namespace Budget
             ((System.ComponentModel.ISupportInitialize)(this.DivisionFormTabControl)).EndInit();
             this.DivisionFormTabControl.ResumeLayout(false);
             this.AppropriationTab.ResumeLayout(false);
-            this.splitContainer5.Panel1.ResumeLayout(false);
-            this.splitContainer5.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer5)).EndInit();
-            this.splitContainer5.ResumeLayout(false);
-            this.panel13.ResumeLayout(false);
-            this.panel13.PerformLayout();
             this.AppriopriationTabExpander.ResumeLayout(false);
             this.AppriopriationTabExpander.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.toggleButton1)).EndInit();
+            this.panel13.ResumeLayout(false);
+            this.panel13.PerformLayout();
             this.BocTab.ResumeLayout(false);
-            this.splitContainer2.Panel1.ResumeLayout(false);
-            this.splitContainer2.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
-            this.splitContainer2.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             this.expandCollapsePanel2.ResumeLayout(false);
             this.expandCollapsePanel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.toggleButton2)).EndInit();
             this.NpmTab.ResumeLayout(false);
-            this.splitContainer3.Panel1.ResumeLayout(false);
-            this.splitContainer3.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).EndInit();
-            this.splitContainer3.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.toggleButton3)).EndInit();
             this.tableLayoutPanel6.ResumeLayout(false);
             this.expandCollapsePanel6.ResumeLayout(false);
             this.expandCollapsePanel6.PerformLayout();
             this.ProgramTab.ResumeLayout(false);
-            this.splitContainer1.Panel1.ResumeLayout(false);
-            this.splitContainer1.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
-            this.splitContainer1.ResumeLayout(false);
-            this.panel8.ResumeLayout(false);
-            this.panel8.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Percent)).EndInit();
             this.tableLayoutPanel7.ResumeLayout(false);
             this.expandCollapsePanel5.ResumeLayout(false);
             this.expandCollapsePanel5.PerformLayout();
+            this.panel8.ResumeLayout(false);
+            this.panel8.PerformLayout();
             this.ProjectTab.ResumeLayout(false);
-            this.splitContainer4.Panel1.ResumeLayout(false);
-            this.splitContainer4.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer4)).EndInit();
-            this.splitContainer4.ResumeLayout(false);
-            this.panel9.ResumeLayout(false);
-            this.panel9.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.toggleButton4)).EndInit();
-            this.tableLayoutPanel8.ResumeLayout(false);
             this.expandCollapsePanel4.ResumeLayout(false);
             this.expandCollapsePanel4.PerformLayout();
+            this.panel9.ResumeLayout(false);
+            this.panel9.PerformLayout();
             this.DataTab.ResumeLayout(false);
             this.tableLayoutPanel10.ResumeLayout(false);
-            this.Expander.ResumeLayout(false);
-            this.Expander.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MiniTabControl1)).EndInit();
             this.MiniTabControl1.ResumeLayout(false);
-            this.tabPageAdv1.ResumeLayout(false);
-            this.tableLayoutPanel2.ResumeLayout(false);
-            this.tableLayoutPanel2.PerformLayout();
+            this.tabPageAdv5.ResumeLayout(false);
+            this.expandCollapsePanel3.ResumeLayout(false);
+            this.expandCollapsePanel3.PerformLayout();
+            this.flowLayoutPanel1.ResumeLayout(false);
+            this.metroPanel1.ResumeLayout(false);
+            this.metroPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.TransferBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.currencyTextBox1)).EndInit();
             this.tabPageAdv2.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.DatabaseGridPanel.ResumeLayout(false);
-            this.DatabaseGridPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Grid)).EndInit();
+            this.tabPageAdv2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataNavigator)).EndInit();
             this.DataNavigator.ResumeLayout(false);
             this.DataNavigator.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.gridRecordNavigationControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.Grid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.P8BindingSource)).EndInit();
             this.TransferTab.ResumeLayout(false);
             this.tableLayoutPanel11.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TransferGrid)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TransferBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TransferNavigator)).EndInit();
             this.TransferNavigator.ResumeLayout(false);
             this.TransferNavigator.PerformLayout();
@@ -4916,8 +4485,6 @@ namespace Budget
             this.PrcPanel.PerformLayout();
             this.DatabaseGroupBox.ResumeLayout(false);
             this.DatabaseGroupBox.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.P8BindingSource)).EndInit();
-            this.tabPageAdv5.ResumeLayout(false);
             this.ResumeLayout(false);
 
                 }
@@ -4926,8 +4493,6 @@ namespace Budget
 
                 protected internal Syncfusion.Windows.Forms.Tools.TabControlAdv DivisionFormTabControl;
                 Syncfusion.Windows.Forms.Tools.TabPageAdv AppropriationTab;
-                System.Windows.Forms.ListBox approplistbox;
-                MetroFramework.Controls.MetroButton metroButton1;
                 protected internal Syncfusion.Windows.Forms.Tools.TabPageAdv TransferTab;
                 MetroFramework.Controls.MetroPanel TransferFilterPanel;
                 MetroFramework.Controls.MetroComboBox FrRcComboBox1;
@@ -4939,7 +4504,6 @@ namespace Budget
                 MetroFramework.Controls.MetroComboBox FrFundComboBox;
                 MetroFramework.Controls.MetroComboBox FrBfyComboBox;
                 MetroFramework.Controls.MetroComboBox FrRpioComboBox;
-                System.Windows.Forms.ListBox ImageBox;
                 private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel5;
                 protected internal MetroFramework.Controls.MetroButton metroButton11;
                 protected internal MetroFramework.Controls.MetroButton metroButton12;
@@ -4948,7 +4512,6 @@ namespace Budget
                 private Syncfusion.Windows.Forms.Tools.TabPageAdv ProgramTab;
                 private Syncfusion.Windows.Forms.Tools.TabPageAdv BocTab;
                 private Syncfusion.Windows.Forms.Tools.TabPageAdv NpmTab;
-                private System.Windows.Forms.SplitContainer splitContainer5;
                 private System.Windows.Forms.RadioButton rb3;
                 private System.Windows.Forms.RadioButton rb2;
                 private System.Windows.Forms.RadioButton rb1;
@@ -4962,10 +4525,7 @@ namespace Budget
                 private System.Windows.Forms.Label fundLabel1;
                 private System.Windows.Forms.Label bFYLabel1;
                 private System.Windows.Forms.Label rPIOLabel;
-                private System.Windows.Forms.SplitContainer splitContainer1;
                 protected Syncfusion.Windows.Forms.Chart.ChartControl AreaChart;
-                private System.Windows.Forms.SplitContainer splitContainer2;
-                private System.Windows.Forms.SplitContainer splitContainer3;
                 protected Syncfusion.Windows.Forms.Chart.ChartControl NpmChart;
                 private Syncfusion.Windows.Forms.Tools.TabPageAdv ProjectTab;
                 private System.Windows.Forms.Panel panel13;
@@ -4985,7 +4545,6 @@ namespace Budget
                 private System.Windows.Forms.RadioButton rb14;
                 private System.Windows.Forms.RadioButton rb15;
                 private System.Windows.Forms.RadioButton rb16;
-                private System.Windows.Forms.SplitContainer splitContainer4;
                 private System.Windows.Forms.Panel panel9;
                 private System.Windows.Forms.RadioButton rb17;
                 private System.Windows.Forms.RadioButton rb18;
@@ -5039,24 +4598,6 @@ namespace Budget
                 private Label New;
                 private TabPageAdv DataTab;
                 private TabControlAdv MiniTabControl1;
-                private TabPageAdv tabPageAdv1;
-                private TableLayoutPanel tableLayoutPanel2;
-                private Label label13;
-                private MetroTextBox OldAmount;
-                private Label label12;
-                private MetroTextBox metroTextBox1;
-                private MetroTextBox metroTextBox2;
-                private Label label2;
-                private MetroTextBox metroTextBox3;
-                private Label label3;
-                private Label label9;
-                private MetroTextBox metroTextBox4;
-                private Label label11;
-                private Label label14;
-                private Label label16;
-                private MetroTextBox metroTextBox5;
-                private MetroTextBox metroTextBox6;
-                private MetroTextBox metroTextBox7;
                 private TabPageAdv tabPageAdv2;
                 protected ChartControl chartControl1;
                 private GroupBox groupBox1;
@@ -5065,7 +4606,6 @@ namespace Budget
                 private Label label18;
                 private Label label19;
                 private Label label20;
-                private Panel DatabaseGridPanel;
                 private BindingNavigator DataNavigator;
                 private ToolStripButton toolStripButton1;
                 private ToolStripLabel toolStripLabel1;
@@ -5081,17 +4621,8 @@ namespace Budget
                 private ToolStripButton toolStripButton6;
                 private ToolStripSeparator toolStripSeparator8;
                 private ToolStripSeparator toolStripSeparator9;
-                private MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel Expander;
-                private FlowLayoutPanel P7FilterPanel;
-                private DataGridView Grid;
                 private TableLayoutPanel tableLayoutPanel6;
                 private TableLayoutPanel tableLayoutPanel7;
-                private TableLayoutPanel tableLayoutPanel8;
-                private ToggleButton toggleButton1;
-                private ToggleButton toggleButton2;
-                private ToggleButton toggleButton3;
-                private ToggleButton Percent;
-                private ToggleButton toggleButton4;
                 private DataGridView TransferGrid;
                 private BindingSource TransferBindingSource;
                 private BindingNavigator TransferNavigator;
@@ -5133,7 +4664,35 @@ namespace Budget
                 private MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel TransferExpander;
                 private GroupBox groupBox2;
                 private TabPageAdv tabPageAdv5;
-                private CalculatorControl calculatorControl1;
+                private Syncfusion.Windows.Forms.Grid.GridRecordNavigationControl gridRecordNavigationControl1;
+                private Syncfusion.Windows.Forms.Grid.GridDataBoundGrid Grid;
+                private MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel expandCollapsePanel3;
+                private FlowLayoutPanel flowLayoutPanel1;
+                private Button button1;
+                private Button button2;
+                private Button button3;
+                private Button button4;
+                private Button button5;
+                private Button button6;
+                private MetroPanel metroPanel1;
+                private Label label2;
+                private MetroComboBox metroComboBox1;
+                private Label label3;
+                private MetroComboBox metroComboBox2;
+                private Label label9;
+                private CurrencyTextBox currencyTextBox1;
+                private Label label11;
+                private MetroComboBox metroComboBox3;
+                private Label label12;
+                private MetroComboBox metroComboBox4;
+                private Label label13;
+                private MetroComboBox metroComboBox5;
+                private Label label14;
+                private MetroComboBox metroComboBox6;
+                private Label label16;
+                private MetroComboBox metroComboBox7;
+                private Label label29;
+                private MetroComboBox metroComboBox8;
             } 
         }
 

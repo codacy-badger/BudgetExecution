@@ -116,7 +116,7 @@ namespace Budget
                 {
                     try
                     {
-                        return table.Rows.Count;
+                        return table.AsEnumerable().Where(p => p.Field<decimal>("Amount") > 0m).Select(p => p).Count();
                     }
                     catch (Exception ex)
                     {
@@ -248,7 +248,7 @@ namespace Budget
                 {
                     try
                     {
-                        return table.AsEnumerable( ).Select(p => p).Sum(p => p.Field<decimal>("Amount"));
+                        return table.AsEnumerable().Where(p => p.Field<string>("BOC") != "17").Sum(p => p.Field<decimal>("Amount"));
                     }
                     catch (Exception ex)
                     {
@@ -256,6 +256,7 @@ namespace Budget
                         return -1M;
                     }
                 }
+
                 public Dictionary<string, decimal> GetTotals(DataTable table, string column, string filter)
                 {
                     try
