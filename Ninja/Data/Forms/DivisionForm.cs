@@ -27,10 +27,11 @@ namespace Budget
                 public DivisionForm(string rc)
                 {
                     InitializeComponent();
+                    Size = new Size(1600, 1000);
                     P8Query = new Query(Source.P8, GetP8QueryParameter(rc));
                     Division = new DivisionAuthority(rc);
                     DivisionData = Division.Data.BudgetTable;
-                    BindData(DivisionData, Grid, P8BindingSource, DataNavigator);
+                    BindData(DivisionData, Grid, BindingSource, Navigator);
                     FundCodes = Division.ProgramElements["Fund"];
                     PrcInfo = Division.FundData;
                     BocInfo = Division.BocData;
@@ -113,7 +114,7 @@ namespace Budget
                         c.Click += OnP8AppropButtonSelect;
                 }
 
-                private void BindData(DataTable table, GridDataBoundGrid dg, BindingSource bs, BindingNavigator bn)
+                private void BindData(DataTable table, DataGridView dg, BindingSource bs, BindingNavigator bn)
                 {
                     bs.DataSource = table;
                     dg.DataSource = bs;
@@ -160,7 +161,7 @@ namespace Budget
 
                 private void DivisionForm_Load(object sender, EventArgs e)
                 {
-                    Text = "P7 " + Division.Org.Name;
+                    Text = Division.Org.Name;
                     //AppropChart = new BudgetChart(AppropChart, Division.FundData).CreateColumn();
                    // BocChart = new BudgetChart(BocChart, Division.BocData).CreateColumn();
                    // NpmChart = new BudgetChart(NpmChart, Division.NpmData).CreateColumn();
@@ -168,8 +169,8 @@ namespace Budget
                     //ProjectChart = new BudgetChart(ProjectChart, Division.ProjectData).CreateColumn();
                     DivisionFormTabControl.SelectedIndexChanged += new EventHandler(GetTabPanelTitle);
                     BackButton.Visible = false;
-                    PrcChart = GetPieChart(PrcChart, "", Division, P8BindingSource);
-                    P8BindingSource.CurrentItemChanged += new EventHandler(UpdatePieChart);
+                    PrcChart = GetPieChart(PrcChart, "", Division, BindingSource);
+                    BindingSource.CurrentItemChanged += new EventHandler(UpdatePieChart);
                 }
 
                 private void DivisionFormTabControl_SelectedIndexChanged(object sender, EventArgs e)
@@ -309,16 +310,19 @@ namespace Budget
                     return viewtable;
                 }
 
-                private void GetGridColumns(GridDataBoundGrid dgv)
+                private void GetGridColumns(DataGridView dgv)
                 {
-                    foreach (GridBoundColumn dc in dgv.GridBoundColumns)
-                        dc.Hidden = true;
-                    dgv.GridBoundColumns[4].Hidden = false;
-                    dgv.GridBoundColumns[6].Hidden = false;
-                    dgv.GridBoundColumns[8].Hidden = false;
-                    dgv.GridBoundColumns[9].Hidden = false;
-                    dgv.GridBoundColumns[11].Hidden = false;
-                    dgv.GridBoundColumns[12].Hidden = false;
+                    foreach (DataGridViewColumn dc in dgv.Columns)
+                        dc.Visible = false;
+                    dgv.Columns[0].Visible = true;
+                    dgv.Columns[4].Visible = true;
+                    dgv.Columns[5].Visible = true;
+                    dgv.Columns[6].Visible = true;
+                    dgv.Columns[8].Visible = true;
+                    dgv.Columns[8].HeaderText = "BOC";
+                    dgv.Columns[9].Visible = true;
+                    dgv.Columns[11].Visible = true;
+                    dgv.Columns[12].Visible = true;
                 }
 
                 private void GetMetroSetButtons(FlowLayoutPanel panel, string[] list)
@@ -564,7 +568,7 @@ namespace Budget
                     var button = sender as MetroSetButton;
                     string name = button.Tag.ToString();
                     var table = GetTable(Division.Data.BudgetTable, "FundName", name);
-                    BindData(table, Grid, P8BindingSource, DataNavigator);
+                    BindData(table, Grid, BindingSource, Navigator);
                     lblTotalAmount.Text = GetTotal(table).ToString("c");
                     lblCount.Text = table.Rows.Count.ToString();
                     GetP8BocFilterBox(table);
@@ -580,7 +584,7 @@ namespace Budget
                     var button = sender as MetroSetButton;
                     string name = button.Tag.ToString();
                     var table = GetTable(DivisionData, "BocName", name);
-                    BindData(table, Grid, P8BindingSource, DataNavigator);
+                    BindData(table, Grid, BindingSource, Navigator);
                     BackButton.Text = "Back";
                     DatabaseGroupBox.Text = $"{Division.Org.Name} {name} Data";
                     lblTotalAmount.Text = GetTotal(table).ToString("c");
@@ -628,7 +632,7 @@ namespace Budget
                 private void ReturnButton_OnAppropriationClick(object sender, EventArgs e)
                 {
                     var table = Division.Data.BudgetTable;
-                    BindData(table, Grid, P8BindingSource, DataNavigator);
+                    BindData(table, Grid, BindingSource, Navigator);
                     GetP8AppropFilterBox(table);
                     lblTotalAmount.Text = GetTotal(table).ToString("c");
                     lblCount.Text = table.Rows.Count.ToString();
@@ -639,7 +643,7 @@ namespace Budget
                 private void ReturnButton_OnBocClick(object sender, EventArgs e)
                 {
                     var table = Division.Data.BudgetTable;
-                    BindData(table, Grid, P8BindingSource, DataNavigator);
+                    BindData(table, Grid, BindingSource, Navigator);
                     GetP8AppropFilterBox(table);
                     lblTotalAmount.Text = GetTotal(table).ToString("c");
                     lblCount.Text = table.Rows.Count.ToString();
@@ -657,8 +661,8 @@ namespace Budget
 
                 private void UpdatePieChart(object sender, EventArgs e)
                 {
-                    P8BindingSource = sender as BindingSource;
-                    PrcChart = GetPieChart(PrcChart, "", Division, P8BindingSource);
+                    BindingSource = sender as BindingSource;
+                    PrcChart = GetPieChart(PrcChart, "", Division, BindingSource);
                 }
             }
         }

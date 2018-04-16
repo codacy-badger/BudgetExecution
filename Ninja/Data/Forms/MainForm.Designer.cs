@@ -65,7 +65,7 @@ namespace Ninja.Forms
             this.MainChart = new Syncfusion.Windows.Forms.Chart.ChartControl();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.expandCollapsePanel2 = new MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel();
-            this.TransferBtn = new System.Windows.Forms.Button();
+            this.TransferButton = new System.Windows.Forms.Button();
             this.DataButton = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.expandCollapsePanel1 = new MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel();
@@ -288,37 +288,37 @@ namespace Ninja.Forms
             // 
             this.expandCollapsePanel2.ButtonSize = MakarovDev.ExpandCollapsePanel.ExpandCollapseButton.ExpandButtonSize.Small;
             this.expandCollapsePanel2.ButtonStyle = MakarovDev.ExpandCollapsePanel.ExpandCollapseButton.ExpandButtonStyle.Circle;
-            this.expandCollapsePanel2.Controls.Add(this.TransferBtn);
+            this.expandCollapsePanel2.Controls.Add(this.TransferButton);
             this.expandCollapsePanel2.Controls.Add(this.DataButton);
             this.expandCollapsePanel2.ExpandedHeight = 383;
-            this.expandCollapsePanel2.IsExpanded = false;
+            this.expandCollapsePanel2.IsExpanded = true;
             this.expandCollapsePanel2.Location = new System.Drawing.Point(307, 3);
             this.expandCollapsePanel2.Name = "expandCollapsePanel2";
-            this.expandCollapsePanel2.Size = new System.Drawing.Size(208, 37);
+            this.expandCollapsePanel2.Size = new System.Drawing.Size(208, 383);
             this.expandCollapsePanel2.TabIndex = 65;
             this.expandCollapsePanel2.Text = "Data";
             this.expandCollapsePanel2.UseAnimation = true;
             // 
-            // TransferBtn
+            // TransferButton
             // 
-            this.TransferBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.TransferBtn.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.TransferBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.TransferBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
-            this.TransferBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.TransferBtn.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TransferBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(247)))), ((int)(((byte)(252)))));
-            this.TransferBtn.Image = ((System.Drawing.Image)(resources.GetObject("TransferBtn.Image")));
-            this.TransferBtn.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.TransferBtn.Location = new System.Drawing.Point(13, 193);
-            this.TransferBtn.Margin = new System.Windows.Forms.Padding(2);
-            this.TransferBtn.Name = "TransferBtn";
-            this.TransferBtn.Size = new System.Drawing.Size(176, 71);
-            this.TransferBtn.TabIndex = 56;
-            this.TransferBtn.Text = "Tranfers";
-            this.TransferBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.TransferBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.TransferBtn.UseVisualStyleBackColor = false;
+            this.TransferButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.TransferButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.TransferButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.TransferButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.TransferButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.TransferButton.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TransferButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(247)))), ((int)(((byte)(252)))));
+            this.TransferButton.Image = ((System.Drawing.Image)(resources.GetObject("TransferButton.Image")));
+            this.TransferButton.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.TransferButton.Location = new System.Drawing.Point(13, 193);
+            this.TransferButton.Margin = new System.Windows.Forms.Padding(2);
+            this.TransferButton.Name = "TransferButton";
+            this.TransferButton.Size = new System.Drawing.Size(176, 71);
+            this.TransferButton.TabIndex = 56;
+            this.TransferButton.Text = "Tranfers";
+            this.TransferButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.TransferButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.TransferButton.UseVisualStyleBackColor = false;
             // 
             // DataButton
             // 
@@ -471,7 +471,7 @@ namespace Ninja.Forms
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private Syncfusion.Windows.Forms.Tools.HubTile DataTile;
         private MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel expandCollapsePanel2;
-        private System.Windows.Forms.Button TransferBtn;
+        private System.Windows.Forms.Button TransferButton;
         private System.Windows.Forms.Button DataButton;
     }
 }

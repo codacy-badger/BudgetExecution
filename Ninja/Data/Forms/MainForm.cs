@@ -36,6 +36,7 @@ namespace Ninja.Forms
             MainChart = new BudgetChart(MainChart, Title[1], Values[1]).Activate();
             RegionSummaryButton.Click += RegionSummaryButton_OnClick;
             DivisionSummaryButton.Click += DivisionSummaryButton_OnClick;
+            TransferButton.Click += TransferButton_OnClick;
         }
 
         string[] GetChartTitles(Dictionary<string, double>[] info)
@@ -107,6 +108,11 @@ namespace Ninja.Forms
         private void DataButton_OnClick(object sender, EventArgs e)
         {
             var dm = new DataMaster();
+            dm.Show();
+        }
+        private void TransferButton_OnClick(object sender, EventArgs e)
+        {
+            var dm = new DivisionForm("06J");
             dm.Show();
         }
     }

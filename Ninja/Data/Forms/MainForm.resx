@@ -516,7 +516,7 @@
         lFJ3IFBcfKQTHfwqdB+f5UqVHlPlEXhHnMiCnsPiGQkrzFqVKkA1KSLjbG+p3pUqVaaf/9k=
 </value>
   </data>
-  <data name="TransferBtn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="TransferButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
         wwAADsMBx2+oZAAAAxBJREFUaEPtmCFsFEEUhk8gEAgEAoFAIBAIBAJBAgKBo8DuNigMAoGoQCAugQSB

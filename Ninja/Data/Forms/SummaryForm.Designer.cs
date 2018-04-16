@@ -330,7 +330,7 @@ namespace Budget
             this.FundExpander.IsExpanded = false;
             this.FundExpander.Location = new System.Drawing.Point(1282, 75);
             this.FundExpander.Name = "FundExpander";
-            this.FundExpander.Size = new System.Drawing.Size(229, 35);
+            this.FundExpander.Size = new System.Drawing.Size(229, 37);
             this.FundExpander.TabIndex = 107;
             this.FundExpander.Text = "Filter";
             this.FundExpander.UseAnimation = true;
