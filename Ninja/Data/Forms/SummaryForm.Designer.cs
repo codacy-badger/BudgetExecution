@@ -149,6 +149,11 @@ namespace Budget
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SummaryForm));
             this.SummaryTabControl = new Syncfusion.Windows.Forms.Tools.TabControlAdv();
             this.FundTab = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
+            this.panel13 = new System.Windows.Forms.Panel();
+            this.rb1 = new System.Windows.Forms.RadioButton();
+            this.rb3 = new System.Windows.Forms.RadioButton();
+            this.rb2 = new System.Windows.Forms.RadioButton();
+            this.rb4 = new System.Windows.Forms.RadioButton();
             this.FundExpander = new MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel();
             this.fp1 = new System.Windows.Forms.FlowLayoutPanel();
             this.FundChart = new Syncfusion.Windows.Forms.Chart.ChartControl();
@@ -180,10 +185,13 @@ namespace Budget
             this.ProjectChart = new Syncfusion.Windows.Forms.Chart.ChartControl();
             this.ProjectExpander = new MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel();
             this.fp8 = new System.Windows.Forms.FlowLayoutPanel();
+            this.toolstripitem1 = new Syncfusion.Windows.Forms.Tools.toolstripitem();
+            this.toolstripitem2 = new Syncfusion.Windows.Forms.Tools.toolstripitem();
             this.BindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.SummaryTabControl)).BeginInit();
             this.SummaryTabControl.SuspendLayout();
             this.FundTab.SuspendLayout();
+            this.panel13.SuspendLayout();
             this.FundExpander.SuspendLayout();
             this.BocTab.SuspendLayout();
             this.BocExpander.SuspendLayout();
@@ -235,6 +243,7 @@ namespace Budget
             // 
             // FundTab
             // 
+            this.FundTab.Controls.Add(this.panel13);
             this.FundTab.Controls.Add(this.FundExpander);
             this.FundTab.Controls.Add(this.FundChart);
             this.FundTab.Image = null;
@@ -248,6 +257,69 @@ namespace Budget
             this.FundTab.Text = "Appropriation";
             this.FundTab.ThemesEnabled = false;
             // 
+            // panel13
+            // 
+            this.panel13.Controls.Add(this.rb1);
+            this.panel13.Controls.Add(this.rb3);
+            this.panel13.Controls.Add(this.rb2);
+            this.panel13.Controls.Add(this.rb4);
+            this.panel13.Location = new System.Drawing.Point(470, 132);
+            this.panel13.Name = "panel13";
+            this.panel13.Padding = new System.Windows.Forms.Padding(1);
+            this.panel13.Size = new System.Drawing.Size(517, 39);
+            this.panel13.TabIndex = 109;
+            // 
+            // rb1
+            // 
+            this.rb1.AutoSize = true;
+            this.rb1.Checked = true;
+            this.rb1.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rb1.Location = new System.Drawing.Point(3, 9);
+            this.rb1.Margin = new System.Windows.Forms.Padding(2);
+            this.rb1.Name = "rb1";
+            this.rb1.Size = new System.Drawing.Size(66, 25);
+            this.rb1.TabIndex = 1;
+            this.rb1.TabStop = true;
+            this.rb1.Text = "BOC";
+            this.rb1.UseVisualStyleBackColor = true;
+            // 
+            // rb3
+            // 
+            this.rb3.AutoSize = true;
+            this.rb3.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rb3.Location = new System.Drawing.Point(147, 9);
+            this.rb3.Margin = new System.Windows.Forms.Padding(2);
+            this.rb3.Name = "rb3";
+            this.rb3.Size = new System.Drawing.Size(132, 25);
+            this.rb3.TabIndex = 3;
+            this.rb3.Text = "Program Area";
+            this.rb3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.rb3.UseVisualStyleBackColor = true;
+            // 
+            // rb2
+            // 
+            this.rb2.AutoSize = true;
+            this.rb2.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rb2.Location = new System.Drawing.Point(73, 9);
+            this.rb2.Margin = new System.Windows.Forms.Padding(2);
+            this.rb2.Name = "rb2";
+            this.rb2.Size = new System.Drawing.Size(70, 25);
+            this.rb2.TabIndex = 2;
+            this.rb2.Text = "NPM";
+            this.rb2.UseVisualStyleBackColor = true;
+            // 
+            // rb4
+            // 
+            this.rb4.AutoSize = true;
+            this.rb4.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rb4.Location = new System.Drawing.Point(283, 9);
+            this.rb4.Margin = new System.Windows.Forms.Padding(2);
+            this.rb4.Name = "rb4";
+            this.rb4.Size = new System.Drawing.Size(148, 25);
+            this.rb4.TabIndex = 4;
+            this.rb4.Text = "Program Project";
+            this.rb4.UseVisualStyleBackColor = true;
+            // 
             // FundExpander
             // 
             this.FundExpander.BackColor = System.Drawing.Color.Black;
@@ -256,9 +328,9 @@ namespace Budget
             this.FundExpander.Controls.Add(this.fp1);
             this.FundExpander.ExpandedHeight = 734;
             this.FundExpander.IsExpanded = false;
-            this.FundExpander.Location = new System.Drawing.Point(1277, 28);
+            this.FundExpander.Location = new System.Drawing.Point(1282, 75);
             this.FundExpander.Name = "FundExpander";
-            this.FundExpander.Size = new System.Drawing.Size(229, 37);
+            this.FundExpander.Size = new System.Drawing.Size(229, 35);
             this.FundExpander.TabIndex = 107;
             this.FundExpander.Text = "Filter";
             this.FundExpander.UseAnimation = true;
@@ -342,7 +414,9 @@ namespace Budget
             chartSeries1.Resolution = 0D;
             chartSeries1.StackingGroup = "Default Group";
             chartSeries1.Style.AltTagFormat = "";
+            chartSeries1.Style.Callout.Font.Facename = "Microsoft Sans Serif";
             chartSeries1.Style.DrawTextShape = false;
+            chartSeries1.Style.Font.Facename = "Microsoft Sans Serif";
             chartLineInfo1.Alignment = System.Drawing.Drawing2D.PenAlignment.Center;
             chartLineInfo1.Color = System.Drawing.SystemColors.ControlText;
             chartLineInfo1.DashPattern = null;
@@ -363,7 +437,9 @@ namespace Budget
             chartSeries2.Resolution = 0D;
             chartSeries2.StackingGroup = "Default Group";
             chartSeries2.Style.AltTagFormat = "";
+            chartSeries2.Style.Callout.Font.Facename = "Microsoft Sans Serif";
             chartSeries2.Style.DrawTextShape = false;
+            chartSeries2.Style.Font.Facename = "Microsoft Sans Serif";
             chartCustomShapeInfo2.Border = chartLineInfo1;
             chartCustomShapeInfo2.Color = System.Drawing.SystemColors.HighlightText;
             chartCustomShapeInfo2.Type = Syncfusion.Windows.Forms.Chart.ChartCustomShape.Square;
@@ -643,7 +719,9 @@ namespace Budget
             chartSeries5.Resolution = 0D;
             chartSeries5.StackingGroup = "Default Group";
             chartSeries5.Style.AltTagFormat = "";
+            chartSeries5.Style.Callout.Font.Facename = "Microsoft Sans Serif";
             chartSeries5.Style.DrawTextShape = false;
+            chartSeries5.Style.Font.Facename = "Microsoft Sans Serif";
             chartLineInfo3.Alignment = System.Drawing.Drawing2D.PenAlignment.Center;
             chartLineInfo3.Color = System.Drawing.SystemColors.ControlText;
             chartLineInfo3.DashPattern = null;
@@ -664,7 +742,9 @@ namespace Budget
             chartSeries6.Resolution = 0D;
             chartSeries6.StackingGroup = "Default Group";
             chartSeries6.Style.AltTagFormat = "";
+            chartSeries6.Style.Callout.Font.Facename = "Microsoft Sans Serif";
             chartSeries6.Style.DrawTextShape = false;
+            chartSeries6.Style.Font.Facename = "Microsoft Sans Serif";
             chartCustomShapeInfo6.Border = chartLineInfo3;
             chartCustomShapeInfo6.Color = System.Drawing.SystemColors.HighlightText;
             chartCustomShapeInfo6.Type = Syncfusion.Windows.Forms.Chart.ChartCustomShape.Square;
@@ -805,7 +885,9 @@ namespace Budget
             chartSeries7.Resolution = 0D;
             chartSeries7.StackingGroup = "Default Group";
             chartSeries7.Style.AltTagFormat = "";
+            chartSeries7.Style.Callout.Font.Facename = "Microsoft Sans Serif";
             chartSeries7.Style.DrawTextShape = false;
+            chartSeries7.Style.Font.Facename = "Microsoft Sans Serif";
             chartLineInfo4.Alignment = System.Drawing.Drawing2D.PenAlignment.Center;
             chartLineInfo4.Color = System.Drawing.SystemColors.ControlText;
             chartLineInfo4.DashPattern = null;
@@ -826,7 +908,9 @@ namespace Budget
             chartSeries8.Resolution = 0D;
             chartSeries8.StackingGroup = "Default Group";
             chartSeries8.Style.AltTagFormat = "";
+            chartSeries8.Style.Callout.Font.Facename = "Microsoft Sans Serif";
             chartSeries8.Style.DrawTextShape = false;
+            chartSeries8.Style.Font.Facename = "Microsoft Sans Serif";
             chartCustomShapeInfo8.Border = chartLineInfo4;
             chartCustomShapeInfo8.Color = System.Drawing.SystemColors.HighlightText;
             chartCustomShapeInfo8.Type = Syncfusion.Windows.Forms.Chart.ChartCustomShape.Square;
@@ -919,9 +1003,9 @@ namespace Budget
             this.fp5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.fp5.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.fp5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(130)))), ((int)(((byte)(180)))));
-            this.fp5.Location = new System.Drawing.Point(10, 41);
+            this.fp5.Location = new System.Drawing.Point(10, 56);
             this.fp5.Name = "fp5";
-            this.fp5.Size = new System.Drawing.Size(205, 507);
+            this.fp5.Size = new System.Drawing.Size(205, 492);
             this.fp5.TabIndex = 47;
             // 
             // ObjectiveChart
@@ -993,7 +1077,9 @@ namespace Budget
             chartSeries9.Resolution = 0D;
             chartSeries9.StackingGroup = "Default Group";
             chartSeries9.Style.AltTagFormat = "";
+            chartSeries9.Style.Callout.Font.Facename = "Microsoft Sans Serif";
             chartSeries9.Style.DrawTextShape = false;
+            chartSeries9.Style.Font.Facename = "Microsoft Sans Serif";
             chartLineInfo5.Alignment = System.Drawing.Drawing2D.PenAlignment.Center;
             chartLineInfo5.Color = System.Drawing.SystemColors.ControlText;
             chartLineInfo5.DashPattern = null;
@@ -1014,7 +1100,9 @@ namespace Budget
             chartSeries10.Resolution = 0D;
             chartSeries10.StackingGroup = "Default Group";
             chartSeries10.Style.AltTagFormat = "";
+            chartSeries10.Style.Callout.Font.Facename = "Microsoft Sans Serif";
             chartSeries10.Style.DrawTextShape = false;
+            chartSeries10.Style.Font.Facename = "Microsoft Sans Serif";
             chartCustomShapeInfo10.Border = chartLineInfo5;
             chartCustomShapeInfo10.Color = System.Drawing.SystemColors.HighlightText;
             chartCustomShapeInfo10.Type = Syncfusion.Windows.Forms.Chart.ChartCustomShape.Square;
@@ -1155,7 +1243,9 @@ namespace Budget
             chartSeries11.Resolution = 0D;
             chartSeries11.StackingGroup = "Default Group";
             chartSeries11.Style.AltTagFormat = "";
+            chartSeries11.Style.Callout.Font.Facename = "Microsoft Sans Serif";
             chartSeries11.Style.DrawTextShape = false;
+            chartSeries11.Style.Font.Facename = "Microsoft Sans Serif";
             chartLineInfo6.Alignment = System.Drawing.Drawing2D.PenAlignment.Center;
             chartLineInfo6.Color = System.Drawing.SystemColors.ControlText;
             chartLineInfo6.DashPattern = null;
@@ -1176,7 +1266,9 @@ namespace Budget
             chartSeries12.Resolution = 0D;
             chartSeries12.StackingGroup = "Default Group";
             chartSeries12.Style.AltTagFormat = "";
+            chartSeries12.Style.Callout.Font.Facename = "Microsoft Sans Serif";
             chartSeries12.Style.DrawTextShape = false;
+            chartSeries12.Style.Font.Facename = "Microsoft Sans Serif";
             chartCustomShapeInfo12.Border = chartLineInfo6;
             chartCustomShapeInfo12.Color = System.Drawing.SystemColors.HighlightText;
             chartCustomShapeInfo12.Type = Syncfusion.Windows.Forms.Chart.ChartCustomShape.Square;
@@ -1291,7 +1383,9 @@ namespace Budget
             chartSeries13.Resolution = 0D;
             chartSeries13.StackingGroup = "Default Group";
             chartSeries13.Style.AltTagFormat = "";
+            chartSeries13.Style.Callout.Font.Facename = "Microsoft Sans Serif";
             chartSeries13.Style.DrawTextShape = false;
+            chartSeries13.Style.Font.Facename = "Microsoft Sans Serif";
             chartLineInfo7.Alignment = System.Drawing.Drawing2D.PenAlignment.Center;
             chartLineInfo7.Color = System.Drawing.SystemColors.ControlText;
             chartLineInfo7.DashPattern = null;
@@ -1312,7 +1406,9 @@ namespace Budget
             chartSeries14.Resolution = 0D;
             chartSeries14.StackingGroup = "Default Group";
             chartSeries14.Style.AltTagFormat = "";
+            chartSeries14.Style.Callout.Font.Facename = "Microsoft Sans Serif";
             chartSeries14.Style.DrawTextShape = false;
+            chartSeries14.Style.Font.Facename = "Microsoft Sans Serif";
             chartCustomShapeInfo14.Border = chartLineInfo7;
             chartCustomShapeInfo14.Color = System.Drawing.SystemColors.HighlightText;
             chartCustomShapeInfo14.Type = Syncfusion.Windows.Forms.Chart.ChartCustomShape.Square;
@@ -1364,9 +1460,9 @@ namespace Budget
             this.fp7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.fp7.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.fp7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(130)))), ((int)(((byte)(180)))));
-            this.fp7.Location = new System.Drawing.Point(10, 41);
+            this.fp7.Location = new System.Drawing.Point(10, 56);
             this.fp7.Name = "fp7";
-            this.fp7.Size = new System.Drawing.Size(192, 507);
+            this.fp7.Size = new System.Drawing.Size(192, 492);
             this.fp7.TabIndex = 47;
             // 
             // ProjectTab
@@ -1453,7 +1549,9 @@ namespace Budget
             chartSeries15.Resolution = 0D;
             chartSeries15.StackingGroup = "Default Group";
             chartSeries15.Style.AltTagFormat = "";
+            chartSeries15.Style.Callout.Font.Facename = "Microsoft Sans Serif";
             chartSeries15.Style.DrawTextShape = false;
+            chartSeries15.Style.Font.Facename = "Microsoft Sans Serif";
             chartLineInfo8.Alignment = System.Drawing.Drawing2D.PenAlignment.Center;
             chartLineInfo8.Color = System.Drawing.SystemColors.ControlText;
             chartLineInfo8.DashPattern = null;
@@ -1474,7 +1572,9 @@ namespace Budget
             chartSeries16.Resolution = 0D;
             chartSeries16.StackingGroup = "Default Group";
             chartSeries16.Style.AltTagFormat = "";
+            chartSeries16.Style.Callout.Font.Facename = "Microsoft Sans Serif";
             chartSeries16.Style.DrawTextShape = false;
+            chartSeries16.Style.Font.Facename = "Microsoft Sans Serif";
             chartCustomShapeInfo16.Border = chartLineInfo8;
             chartCustomShapeInfo16.Color = System.Drawing.SystemColors.HighlightText;
             chartCustomShapeInfo16.Type = Syncfusion.Windows.Forms.Chart.ChartCustomShape.Square;
@@ -1526,10 +1626,22 @@ namespace Budget
             this.fp8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.fp8.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.fp8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(130)))), ((int)(((byte)(180)))));
-            this.fp8.Location = new System.Drawing.Point(20, 39);
+            this.fp8.Location = new System.Drawing.Point(20, 54);
             this.fp8.Name = "fp8";
-            this.fp8.Size = new System.Drawing.Size(192, 548);
+            this.fp8.Size = new System.Drawing.Size(192, 533);
             this.fp8.TabIndex = 47;
+            // 
+            // toolstripitem1
+            // 
+            this.toolstripitem1.Name = "toolstripitem1";
+            this.toolstripitem1.Size = new System.Drawing.Size(23, 23);
+            this.toolstripitem1.Text = "toolstripitem1";
+            // 
+            // toolstripitem2
+            // 
+            this.toolstripitem2.Name = "toolstripitem2";
+            this.toolstripitem2.Size = new System.Drawing.Size(23, 23);
+            this.toolstripitem2.Text = "toolstripitem2";
             // 
             // SummaryForm
             // 
@@ -1555,6 +1667,8 @@ namespace Budget
             ((System.ComponentModel.ISupportInitialize)(this.SummaryTabControl)).EndInit();
             this.SummaryTabControl.ResumeLayout(false);
             this.FundTab.ResumeLayout(false);
+            this.panel13.ResumeLayout(false);
+            this.panel13.PerformLayout();
             this.FundExpander.ResumeLayout(false);
             this.FundExpander.PerformLayout();
             this.BocTab.ResumeLayout(false);
@@ -1619,6 +1733,13 @@ namespace Budget
                 private MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel BocExpander;
                 private FlowLayoutPanel fp2;
                 protected ChartControl NpmChart;
+                private toolstripitem toolstripitem1;
+                private toolstripitem toolstripitem2;
+                private Panel panel13;
+                private RadioButton rb1;
+                private RadioButton rb3;
+                private RadioButton rb2;
+                private RadioButton rb4;
             }
         }
     }

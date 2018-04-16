@@ -140,7 +140,6 @@ namespace Budget
             Syncfusion.Windows.Forms.Chart.ChartToolBarSeries3DItem chartToolBarSeries3DItem6 = new Syncfusion.Windows.Forms.Chart.ChartToolBarSeries3DItem();
             Syncfusion.Windows.Forms.Chart.ChartToolBarShowLegendItem chartToolBarShowLegendItem6 = new Syncfusion.Windows.Forms.Chart.ChartToolBarShowLegendItem();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DivisionForm));
-            Syncfusion.Windows.Forms.Grid.GridStyleInfo gridStyleInfo1 = new Syncfusion.Windows.Forms.Grid.GridStyleInfo();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -174,6 +173,7 @@ namespace Budget
             Syncfusion.Windows.Forms.Chart.ChartToolBarTypeItem chartToolBarTypeItem8 = new Syncfusion.Windows.Forms.Chart.ChartToolBarTypeItem();
             Syncfusion.Windows.Forms.Chart.ChartToolBarSeries3DItem chartToolBarSeries3DItem8 = new Syncfusion.Windows.Forms.Chart.ChartToolBarSeries3DItem();
             Syncfusion.Windows.Forms.Chart.ChartToolBarShowLegendItem chartToolBarShowLegendItem8 = new Syncfusion.Windows.Forms.Chart.ChartToolBarShowLegendItem();
+            Syncfusion.Windows.Forms.Grid.GridStyleInfo gridStyleInfo1 = new Syncfusion.Windows.Forms.Grid.GridStyleInfo();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.amountLabel1 = new System.Windows.Forms.Label();
@@ -203,14 +203,13 @@ namespace Budget
             this.expandCollapsePanel2 = new MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel();
             this.panel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.NpmTab = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
+            this.expandCollapsePanel6 = new MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel();
+            this.panel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.rb9 = new System.Windows.Forms.RadioButton();
             this.rb10 = new System.Windows.Forms.RadioButton();
             this.rb11 = new System.Windows.Forms.RadioButton();
             this.rb12 = new System.Windows.Forms.RadioButton();
-            this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
-            this.expandCollapsePanel6 = new MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel();
-            this.panel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.NpmChart = new Syncfusion.Windows.Forms.Chart.ChartControl();
             this.ProgramTab = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
@@ -283,7 +282,6 @@ namespace Budget
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.ReturnButton = new MetroFramework.Controls.MetroLink();
             this.gridRecordNavigationControl1 = new Syncfusion.Windows.Forms.Grid.GridRecordNavigationControl();
-            this.Grid = new Syncfusion.Windows.Forms.Grid.GridDataBoundGrid();
             this.P8BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
@@ -375,6 +373,7 @@ namespace Budget
             this.lblAccounts = new System.Windows.Forms.Label();
             this.P8GridPanel = new System.Windows.Forms.Panel();
             this.calculatorControl2 = new Syncfusion.Windows.Forms.Tools.CalculatorControl();
+            this.Grid = new Syncfusion.Windows.Forms.Grid.GridDataBoundGrid();
             ((System.ComponentModel.ISupportInitialize)(this.DivisionFormTabControl)).BeginInit();
             this.DivisionFormTabControl.SuspendLayout();
             this.AppropriationTab.SuspendLayout();
@@ -384,9 +383,8 @@ namespace Budget
             this.panel6.SuspendLayout();
             this.expandCollapsePanel2.SuspendLayout();
             this.NpmTab.SuspendLayout();
-            this.panel7.SuspendLayout();
-            this.tableLayoutPanel6.SuspendLayout();
             this.expandCollapsePanel6.SuspendLayout();
+            this.panel7.SuspendLayout();
             this.ProgramTab.SuspendLayout();
             this.tableLayoutPanel7.SuspendLayout();
             this.expandCollapsePanel5.SuspendLayout();
@@ -409,7 +407,6 @@ namespace Budget
             this.DataNavigator.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.gridRecordNavigationControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Grid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.P8BindingSource)).BeginInit();
             this.TransferTab.SuspendLayout();
             this.tableLayoutPanel11.SuspendLayout();
@@ -432,6 +429,7 @@ namespace Budget
             this.AccountMangerGroupBox.SuspendLayout();
             this.PrcPanel.SuspendLayout();
             this.DatabaseGroupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Grid)).BeginInit();
             this.SuspendLayout();
             // 
             // label5
@@ -1050,8 +1048,8 @@ namespace Budget
             // 
             // NpmTab
             // 
+            this.NpmTab.Controls.Add(this.expandCollapsePanel6);
             this.NpmTab.Controls.Add(this.panel7);
-            this.NpmTab.Controls.Add(this.tableLayoutPanel6);
             this.NpmTab.Controls.Add(this.NpmChart);
             this.NpmTab.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NpmTab.Image = null;
@@ -1064,6 +1062,32 @@ namespace Budget
             this.NpmTab.TabIndex = 10;
             this.NpmTab.Text = "NPM";
             this.NpmTab.ThemesEnabled = false;
+            // 
+            // expandCollapsePanel6
+            // 
+            this.expandCollapsePanel6.BackColor = System.Drawing.Color.Black;
+            this.expandCollapsePanel6.ButtonSize = MakarovDev.ExpandCollapsePanel.ExpandCollapseButton.ExpandButtonSize.Normal;
+            this.expandCollapsePanel6.ButtonStyle = MakarovDev.ExpandCollapsePanel.ExpandCollapseButton.ExpandButtonStyle.Circle;
+            this.expandCollapsePanel6.Controls.Add(this.panel3);
+            this.expandCollapsePanel6.ExpandedHeight = 626;
+            this.expandCollapsePanel6.IsExpanded = true;
+            this.expandCollapsePanel6.Location = new System.Drawing.Point(1277, 36);
+            this.expandCollapsePanel6.Name = "expandCollapsePanel6";
+            this.expandCollapsePanel6.Size = new System.Drawing.Size(242, 746);
+            this.expandCollapsePanel6.TabIndex = 105;
+            this.expandCollapsePanel6.Text = "Select NPM";
+            this.expandCollapsePanel6.UseAnimation = true;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.panel3.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.panel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
+            this.panel3.Location = new System.Drawing.Point(33, 67);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(178, 639);
+            this.panel3.TabIndex = 1;
             // 
             // panel7
             // 
@@ -1126,44 +1150,6 @@ namespace Budget
             this.rb12.TabIndex = 4;
             this.rb12.Text = "Program Project";
             this.rb12.UseVisualStyleBackColor = true;
-            // 
-            // tableLayoutPanel6
-            // 
-            this.tableLayoutPanel6.ColumnCount = 1;
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel6.Controls.Add(this.expandCollapsePanel6, 0, 0);
-            this.tableLayoutPanel6.Location = new System.Drawing.Point(1277, 36);
-            this.tableLayoutPanel6.Name = "tableLayoutPanel6";
-            this.tableLayoutPanel6.RowCount = 1;
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(274, 37);
-            this.tableLayoutPanel6.TabIndex = 104;
-            // 
-            // expandCollapsePanel6
-            // 
-            this.expandCollapsePanel6.BackColor = System.Drawing.Color.Black;
-            this.expandCollapsePanel6.ButtonSize = MakarovDev.ExpandCollapsePanel.ExpandCollapseButton.ExpandButtonSize.Normal;
-            this.expandCollapsePanel6.ButtonStyle = MakarovDev.ExpandCollapsePanel.ExpandCollapseButton.ExpandButtonStyle.Circle;
-            this.expandCollapsePanel6.Controls.Add(this.panel3);
-            this.expandCollapsePanel6.ExpandedHeight = 626;
-            this.expandCollapsePanel6.IsExpanded = false;
-            this.expandCollapsePanel6.Location = new System.Drawing.Point(3, 3);
-            this.expandCollapsePanel6.Name = "expandCollapsePanel6";
-            this.expandCollapsePanel6.Size = new System.Drawing.Size(222, 31);
-            this.expandCollapsePanel6.TabIndex = 105;
-            this.expandCollapsePanel6.Text = "Select NPM";
-            this.expandCollapsePanel6.UseAnimation = true;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.panel3.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.panel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(153)))), ((int)(((byte)(255)))));
-            this.panel3.Location = new System.Drawing.Point(33, 67);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(158, 308);
-            this.panel3.TabIndex = 1;
             // 
             // NpmChart
             // 
@@ -1594,7 +1580,7 @@ namespace Budget
             this.panel9.Location = new System.Drawing.Point(602, 12);
             this.panel9.Name = "panel9";
             this.panel9.Padding = new System.Windows.Forms.Padding(1);
-            this.panel9.Size = new System.Drawing.Size(389, 46);
+            this.panel9.Size = new System.Drawing.Size(389, 37);
             this.panel9.TabIndex = 44;
             // 
             // rb17
@@ -1798,11 +1784,11 @@ namespace Budget
             this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel10.Controls.Add(this.MiniTabControl1, 1, 0);
             this.tableLayoutPanel10.Controls.Add(this.groupBox1, 0, 0);
-            this.tableLayoutPanel10.Location = new System.Drawing.Point(11, 23);
+            this.tableLayoutPanel10.Location = new System.Drawing.Point(11, 75);
             this.tableLayoutPanel10.Name = "tableLayoutPanel10";
             this.tableLayoutPanel10.RowCount = 1;
             this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel10.Size = new System.Drawing.Size(1564, 546);
+            this.tableLayoutPanel10.Size = new System.Drawing.Size(1564, 643);
             this.tableLayoutPanel10.TabIndex = 152;
             // 
             // MiniTabControl1
@@ -1853,10 +1839,10 @@ namespace Budget
             this.expandCollapsePanel3.ButtonStyle = MakarovDev.ExpandCollapsePanel.ExpandCollapseButton.ExpandButtonStyle.Circle;
             this.expandCollapsePanel3.Controls.Add(this.flowLayoutPanel1);
             this.expandCollapsePanel3.ExpandedHeight = 437;
-            this.expandCollapsePanel3.IsExpanded = false;
+            this.expandCollapsePanel3.IsExpanded = true;
             this.expandCollapsePanel3.Location = new System.Drawing.Point(246, 16);
             this.expandCollapsePanel3.Name = "expandCollapsePanel3";
-            this.expandCollapsePanel3.Size = new System.Drawing.Size(214, 37);
+            this.expandCollapsePanel3.Size = new System.Drawing.Size(214, 437);
             this.expandCollapsePanel3.TabIndex = 71;
             this.expandCollapsePanel3.Text = "expandCollapsePanel3";
             this.expandCollapsePanel3.UseAnimation = true;
@@ -2068,7 +2054,7 @@ namespace Budget
             // currencyTextBox1
             // 
             this.currencyTextBox1.BackGroundColor = System.Drawing.Color.DimGray;
-            this.currencyTextBox1.BeforeTouchSize = new System.Drawing.Size(133, 26);
+            this.currencyTextBox1.BeforeTouchSize = new System.Drawing.Size(117, 29);
             this.currencyTextBox1.DecimalValue = new decimal(new int[] {
             100,
             0,
@@ -2577,32 +2563,6 @@ namespace Budget
             this.gridRecordNavigationControl1.Text = "gridRecordNavigationControl1";
             this.gridRecordNavigationControl1.ThemesEnabled = true;
             // 
-            // Grid
-            // 
-            this.Grid.AllowDragSelectedCols = true;
-            this.Grid.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.Grid.ColorStyles = Syncfusion.Windows.Forms.ColorStyles.Office2010Black;
-            this.Grid.DataSource = this.P8BindingSource;
-            this.Grid.FillSplitterPane = true;
-            this.Grid.ForeColor = System.Drawing.Color.Black;
-            this.Grid.GridOfficeScrollBars = Syncfusion.Windows.Forms.OfficeScrollBars.Office2010;
-            this.Grid.GridVisualStyles = Syncfusion.Windows.Forms.GridVisualStyles.Office2010Black;
-            this.Grid.Location = new System.Drawing.Point(0, 0);
-            this.Grid.Name = "Grid";
-            this.Grid.Office2010ScrollBarsColorScheme = Syncfusion.Windows.Forms.Office2010ColorScheme.Black;
-            this.Grid.OptimizeInsertRemoveCells = true;
-            this.Grid.Properties.GridLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.Grid.ShowCurrentCellBorderBehavior = Syncfusion.Windows.Forms.Grid.GridShowCurrentCellBorder.GrayWhenLostFocus;
-            this.Grid.Size = new System.Drawing.Size(968, 412);
-            this.Grid.SmartSizeBox = false;
-            this.Grid.SortBehavior = Syncfusion.Windows.Forms.Grid.GridSortBehavior.DoubleClick;
-            gridStyleInfo1.Interior = new Syncfusion.Drawing.BrushInfo(System.Drawing.Color.LightSteelBlue);
-            this.Grid.TableStyle = gridStyleInfo1;
-            this.Grid.Text = "gridDataBoundGrid1";
-            this.Grid.ThemesEnabled = true;
-            this.Grid.UseListChangedEvent = true;
-            this.Grid.UseRightToLeftCompatibleTextBox = true;
-            // 
             // label17
             // 
             this.label17.AutoSize = true;
@@ -2670,7 +2630,7 @@ namespace Budget
             this.tableLayoutPanel11.ColumnCount = 3;
             this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.51593F));
             this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 73.48407F));
-            this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 480F));
+            this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 483F));
             this.tableLayoutPanel11.Controls.Add(this.groupBox2, 1, 0);
             this.tableLayoutPanel11.Controls.Add(this.MiniTabControl2, 2, 0);
             this.tableLayoutPanel11.Controls.Add(this.TransferExpander, 0, 0);
@@ -2687,7 +2647,7 @@ namespace Budget
             this.groupBox2.Controls.Add(this.TransferGrid);
             this.groupBox2.Controls.Add(this.TransferNavigator);
             this.groupBox2.ForeColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.groupBox2.Location = new System.Drawing.Point(260, 3);
+            this.groupBox2.Location = new System.Drawing.Point(259, 3);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(660, 448);
             this.groupBox2.TabIndex = 4;
@@ -2863,7 +2823,7 @@ namespace Budget
             this.MiniTabControl2.FixedSingleBorderColor = System.Drawing.Color.DarkGray;
             this.MiniTabControl2.FocusOnTabClick = false;
             this.MiniTabControl2.InActiveTabForeColor = System.Drawing.Color.Empty;
-            this.MiniTabControl2.Location = new System.Drawing.Point(974, 3);
+            this.MiniTabControl2.Location = new System.Drawing.Point(971, 3);
             this.MiniTabControl2.Name = "MiniTabControl2";
             this.MiniTabControl2.SeparatorColor = System.Drawing.SystemColors.ControlDark;
             this.MiniTabControl2.ShowSeparator = false;
@@ -2892,7 +2852,7 @@ namespace Budget
             this.tableLayoutPanel9.ColumnCount = 3;
             this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.02913F));
             this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.97087F));
-            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 124F));
+            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 127F));
             this.tableLayoutPanel9.Controls.Add(this.label21, 1, 4);
             this.tableLayoutPanel9.Controls.Add(this.metroTextBox9, 0, 5);
             this.tableLayoutPanel9.Controls.Add(this.label22, 0, 4);
@@ -2927,7 +2887,7 @@ namespace Budget
             this.label21.AutoSize = true;
             this.label21.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.label21.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label21.Location = new System.Drawing.Point(149, 148);
+            this.label21.Location = new System.Drawing.Point(146, 148);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(45, 21);
             this.label21.TabIndex = 162;
@@ -2975,7 +2935,7 @@ namespace Budget
             this.label22.AutoSize = true;
             this.label22.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.label22.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label22.Location = new System.Drawing.Point(22, 148);
+            this.label22.Location = new System.Drawing.Point(21, 148);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(69, 21);
             this.label22.TabIndex = 65;
@@ -2988,7 +2948,7 @@ namespace Budget
             // 
             // 
             this.metroTextBox10.CustomButton.Image = null;
-            this.metroTextBox10.CustomButton.Location = new System.Drawing.Point(85, 1);
+            this.metroTextBox10.CustomButton.Location = new System.Drawing.Point(88, 1);
             this.metroTextBox10.CustomButton.Name = "";
             this.metroTextBox10.CustomButton.Size = new System.Drawing.Size(35, 35);
             this.metroTextBox10.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
@@ -3000,7 +2960,7 @@ namespace Budget
             this.metroTextBox10.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.metroTextBox10.Lines = new string[] {
         "metroTextBox2"};
-            this.metroTextBox10.Location = new System.Drawing.Point(232, 88);
+            this.metroTextBox10.Location = new System.Drawing.Point(229, 88);
             this.metroTextBox10.Margin = new System.Windows.Forms.Padding(2);
             this.metroTextBox10.MaxLength = 32767;
             this.metroTextBox10.Name = "metroTextBox10";
@@ -3010,7 +2970,7 @@ namespace Budget
             this.metroTextBox10.SelectionLength = 0;
             this.metroTextBox10.SelectionStart = 0;
             this.metroTextBox10.ShortcutsEnabled = true;
-            this.metroTextBox10.Size = new System.Drawing.Size(121, 37);
+            this.metroTextBox10.Size = new System.Drawing.Size(124, 37);
             this.metroTextBox10.TabIndex = 155;
             this.metroTextBox10.Text = "metroTextBox2";
             this.metroTextBox10.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -3034,7 +2994,7 @@ namespace Budget
             this.metroTextBox11.CustomButton.UseSelectable = true;
             this.metroTextBox11.CustomButton.Visible = false;
             this.metroTextBox11.Lines = new string[0];
-            this.metroTextBox11.Location = new System.Drawing.Point(115, 88);
+            this.metroTextBox11.Location = new System.Drawing.Point(113, 88);
             this.metroTextBox11.Margin = new System.Windows.Forms.Padding(2);
             this.metroTextBox11.MaxLength = 32767;
             this.metroTextBox11.Name = "metroTextBox11";
@@ -3055,7 +3015,7 @@ namespace Budget
             this.label23.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label23.AutoSize = true;
             this.label23.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label23.Location = new System.Drawing.Point(38, 3);
+            this.label23.Location = new System.Drawing.Point(37, 3);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(36, 21);
             this.label23.TabIndex = 140;
@@ -3097,7 +3057,7 @@ namespace Budget
             this.label24.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label24.AutoSize = true;
             this.label24.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label24.Location = new System.Drawing.Point(147, 3);
+            this.label24.Location = new System.Drawing.Point(145, 3);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(48, 21);
             this.label24.TabIndex = 60;
@@ -3110,7 +3070,7 @@ namespace Budget
             this.label25.AutoSize = true;
             this.label25.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.label25.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label25.Location = new System.Drawing.Point(268, 65);
+            this.label25.Location = new System.Drawing.Point(266, 65);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(49, 21);
             this.label25.TabIndex = 64;
@@ -3132,7 +3092,7 @@ namespace Budget
             this.metroTextBox13.CustomButton.UseSelectable = true;
             this.metroTextBox13.CustomButton.Visible = false;
             this.metroTextBox13.Lines = new string[0];
-            this.metroTextBox13.Location = new System.Drawing.Point(233, 27);
+            this.metroTextBox13.Location = new System.Drawing.Point(230, 27);
             this.metroTextBox13.MaxLength = 32767;
             this.metroTextBox13.Name = "metroTextBox13";
             this.metroTextBox13.PasswordChar = '\0';
@@ -3152,7 +3112,7 @@ namespace Budget
             this.label26.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label26.AutoSize = true;
             this.label26.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label26.Location = new System.Drawing.Point(155, 65);
+            this.label26.Location = new System.Drawing.Point(152, 65);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(33, 21);
             this.label26.TabIndex = 63;
@@ -3164,7 +3124,7 @@ namespace Budget
             this.label27.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label27.AutoSize = true;
             this.label27.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label27.Location = new System.Drawing.Point(270, 3);
+            this.label27.Location = new System.Drawing.Point(269, 3);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(44, 21);
             this.label27.TabIndex = 66;
@@ -3176,7 +3136,7 @@ namespace Budget
             this.label28.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label28.AutoSize = true;
             this.label28.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label28.Location = new System.Drawing.Point(36, 65);
+            this.label28.Location = new System.Drawing.Point(35, 65);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(40, 21);
             this.label28.TabIndex = 62;
@@ -3198,7 +3158,7 @@ namespace Budget
             this.metroTextBox14.CustomButton.UseSelectable = true;
             this.metroTextBox14.CustomButton.Visible = false;
             this.metroTextBox14.Lines = new string[0];
-            this.metroTextBox14.Location = new System.Drawing.Point(116, 27);
+            this.metroTextBox14.Location = new System.Drawing.Point(114, 27);
             this.metroTextBox14.MaxLength = 32767;
             this.metroTextBox14.Name = "metroTextBox14";
             this.metroTextBox14.PasswordChar = '\0';
@@ -3258,7 +3218,7 @@ namespace Budget
             this.metroTextBox16.CustomButton.UseSelectable = true;
             this.metroTextBox16.CustomButton.Visible = false;
             this.metroTextBox16.Lines = new string[0];
-            this.metroTextBox16.Location = new System.Drawing.Point(116, 172);
+            this.metroTextBox16.Location = new System.Drawing.Point(114, 172);
             this.metroTextBox16.MaxLength = 32767;
             this.metroTextBox16.Name = "metroTextBox16";
             this.metroTextBox16.PasswordChar = '\0';
@@ -3499,7 +3459,7 @@ namespace Budget
             // amountCurrencyTextBox
             // 
             this.amountCurrencyTextBox.BackGroundColor = System.Drawing.Color.DimGray;
-            this.amountCurrencyTextBox.BeforeTouchSize = new System.Drawing.Size(133, 26);
+            this.amountCurrencyTextBox.BeforeTouchSize = new System.Drawing.Size(117, 29);
             this.amountCurrencyTextBox.DecimalValue = new decimal(new int[] {
             100,
             0,
@@ -4379,6 +4339,32 @@ namespace Budget
             this.calculatorControl2.Text = "calculatorControl2";
             this.calculatorControl2.UseVisualStyle = true;
             // 
+            // Grid
+            // 
+            this.Grid.AllowDragSelectedCols = true;
+            this.Grid.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.Grid.ColorStyles = Syncfusion.Windows.Forms.ColorStyles.Office2010Black;
+            this.Grid.DataSource = this.P8BindingSource;
+            this.Grid.FillSplitterPane = true;
+            this.Grid.ForeColor = System.Drawing.Color.Black;
+            this.Grid.GridOfficeScrollBars = Syncfusion.Windows.Forms.OfficeScrollBars.Office2010;
+            this.Grid.GridVisualStyles = Syncfusion.Windows.Forms.GridVisualStyles.Office2010Black;
+            this.Grid.Location = new System.Drawing.Point(0, 0);
+            this.Grid.Name = "Grid";
+            this.Grid.Office2010ScrollBarsColorScheme = Syncfusion.Windows.Forms.Office2010ColorScheme.Black;
+            this.Grid.OptimizeInsertRemoveCells = true;
+            this.Grid.Properties.GridLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Grid.ShowCurrentCellBorderBehavior = Syncfusion.Windows.Forms.Grid.GridShowCurrentCellBorder.GrayWhenLostFocus;
+            this.Grid.Size = new System.Drawing.Size(968, 412);
+            this.Grid.SmartSizeBox = false;
+            this.Grid.SortBehavior = Syncfusion.Windows.Forms.Grid.GridSortBehavior.DoubleClick;
+            gridStyleInfo1.Interior = new Syncfusion.Drawing.BrushInfo(System.Drawing.Color.LightSteelBlue);
+            this.Grid.TableStyle = gridStyleInfo1;
+            this.Grid.Text = "gridDataBoundGrid1";
+            this.Grid.ThemesEnabled = true;
+            this.Grid.UseListChangedEvent = true;
+            this.Grid.UseRightToLeftCompatibleTextBox = true;
+            // 
             // DivisionForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
@@ -4417,11 +4403,10 @@ namespace Budget
             this.expandCollapsePanel2.ResumeLayout(false);
             this.expandCollapsePanel2.PerformLayout();
             this.NpmTab.ResumeLayout(false);
-            this.panel7.ResumeLayout(false);
-            this.panel7.PerformLayout();
-            this.tableLayoutPanel6.ResumeLayout(false);
             this.expandCollapsePanel6.ResumeLayout(false);
             this.expandCollapsePanel6.PerformLayout();
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
             this.ProgramTab.ResumeLayout(false);
             this.tableLayoutPanel7.ResumeLayout(false);
             this.expandCollapsePanel5.ResumeLayout(false);
@@ -4453,7 +4438,6 @@ namespace Budget
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.gridRecordNavigationControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.Grid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.P8BindingSource)).EndInit();
             this.TransferTab.ResumeLayout(false);
             this.tableLayoutPanel11.ResumeLayout(false);
@@ -4485,6 +4469,7 @@ namespace Budget
             this.PrcPanel.PerformLayout();
             this.DatabaseGroupBox.ResumeLayout(false);
             this.DatabaseGroupBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Grid)).EndInit();
             this.ResumeLayout(false);
 
                 }
@@ -4621,7 +4606,6 @@ namespace Budget
                 private ToolStripButton toolStripButton6;
                 private ToolStripSeparator toolStripSeparator8;
                 private ToolStripSeparator toolStripSeparator9;
-                private TableLayoutPanel tableLayoutPanel6;
                 private TableLayoutPanel tableLayoutPanel7;
                 private DataGridView TransferGrid;
                 private BindingSource TransferBindingSource;
@@ -4665,7 +4649,6 @@ namespace Budget
                 private GroupBox groupBox2;
                 private TabPageAdv tabPageAdv5;
                 private Syncfusion.Windows.Forms.Grid.GridRecordNavigationControl gridRecordNavigationControl1;
-                private Syncfusion.Windows.Forms.Grid.GridDataBoundGrid Grid;
                 private MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel expandCollapsePanel3;
                 private FlowLayoutPanel flowLayoutPanel1;
                 private Button button1;
@@ -4693,6 +4676,7 @@ namespace Budget
                 private MetroComboBox metroComboBox7;
                 private Label label29;
                 private MetroComboBox metroComboBox8;
+                private Syncfusion.Windows.Forms.Grid.GridDataBoundGrid Grid;
             } 
         }
 

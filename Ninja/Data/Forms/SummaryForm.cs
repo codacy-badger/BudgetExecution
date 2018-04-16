@@ -34,7 +34,7 @@ namespace Budget
                     BocChart = GetSummaryChart(BocChart, Data, PrcFilter.BOC, "R6 Division Summary");
                     NpmChart = GetSummaryChart(NpmChart, Data, PrcFilter.NPM, "R6 Division Summary");
                     GoalChart = GetSummaryChart(GoalChart, Data, PrcFilter.GoalName, "R6 Division Summary");
-                    ObjectiveChart = GetSummaryChart(ObjectiveChart, Data, PrcFilter.ObjectiveName, "R6 Division Summary");
+                    ObjectiveChart = GetSummaryChart(ObjectiveChart, Data, PrcFilter.Objective, "R6 Division Summary");
                     AreaChart = GetSummaryChart(AreaChart, Data, PrcFilter.ProgramArea, "R6 Division Summary");
                     ProjectChart = GetSummaryChart(ProjectChart, Data, PrcFilter.ProgramProjectCode, "R6 Division Summary");
                 }
@@ -47,6 +47,7 @@ namespace Budget
                         Data = new DataBuilder(Source.P7);
                         BudgetMetric = new DataMetric(Data);
                         DataSet = Data.BudgetData;
+                        Title = "R6 Funding";
                         Table = BudgetMetric.Table;
                         ProgramElements = BudgetMetric.ProgramElements;
                         BindingSource.DataSource = BudgetMetric.Table;
@@ -58,19 +59,20 @@ namespace Budget
                         Data = new DataBuilder(Source.P8);
                         BudgetMetric = new DataMetric(Data);
                         DataSet = Data.BudgetData;
+                        Title = "Division Funding";
                         Table = BudgetMetric.Table;
                         ProgramElements = BudgetMetric.ProgramElements;
                         RC = Data.ProgramElements["RC"];
                         GetFilterButtons();
                         Text = "R6 Division Summary";
                     }
-                    FundChart = GetSummaryChart(FundChart, Data, PrcFilter.Fund, "R6 Division Summary");
-                    BocChart = GetSummaryChart(BocChart, Data, PrcFilter.BOC, "R6 Division Summary");
-                    NpmChart = GetSummaryChart(NpmChart, Data, PrcFilter.NPM, "R6 Division Summary");
-                    GoalChart = GetSummaryChart(GoalChart, Data, PrcFilter.GoalName, "R6 Division Summary");
-                    ObjectiveChart = GetSummaryChart(ObjectiveChart, Data, PrcFilter.ObjectiveName, "R6 Division Summary");
-                    AreaChart = GetSummaryChart(AreaChart, Data, PrcFilter.ProgramArea, "R6 Division Summary");
-                    ProjectChart = GetSummaryChart(ProjectChart, Data, PrcFilter.ProgramProjectCode, "R6 Division Summary");
+                    FundChart = GetSummaryChart(FundChart, Data, PrcFilter.Fund, string.Format("{0} by Appropriation", Title));
+                    BocChart = GetSummaryChart(BocChart, Data, PrcFilter.BocName, string.Format("{0} by Object Class", Title));
+                    NpmChart = GetSummaryChart(NpmChart, Data, PrcFilter.NPM, string.Format("{0} by NPM", Title));
+                    GoalChart = GetSummaryChart(GoalChart, Data, PrcFilter.GoalName, string.Format("{0} by Agency Goal", Title));
+                    ObjectiveChart = GetSummaryChart(ObjectiveChart, Data, PrcFilter.Objective, string.Format("{0} by Strategic Objective", Title));
+                    AreaChart = GetSummaryChart(AreaChart, Data, PrcFilter.ProgramArea, string.Format("{0} by Program Area", Title));
+                    ProjectChart = GetSummaryChart(ProjectChart, Data, PrcFilter.ProgramProjectCode, string.Format("{0} by Program Project", Title));
                 }
 
                 public SummaryForm(string rc)
@@ -84,13 +86,13 @@ namespace Budget
                     GetFilterButtons();
                     Text = $"{D6.Org.Name} Summary";
                     BindingSource.DataSource = Table;
-                    FundChart = GetSummaryChart(FundChart, Data, PrcFilter.Fund, "R6 Division Summary");
-                    BocChart = GetSummaryChart(BocChart, Data, PrcFilter.BOC, "R6 Division Summary");
-                    NpmChart = GetSummaryChart(NpmChart, Data, PrcFilter.NPM, "R6 Division Summary");
-                    GoalChart = GetSummaryChart(GoalChart, Data, PrcFilter.GoalName, "R6 Division Summary");
-                    ObjectiveChart = GetSummaryChart(ObjectiveChart, Data, PrcFilter.ObjectiveName, "R6 Division Summary");
-                    AreaChart = GetSummaryChart(AreaChart, Data, PrcFilter.ProgramArea, "R6 Division Summary");
-                    ProjectChart = GetSummaryChart(ProjectChart, Data, PrcFilter.ProgramProjectCode, "R6 Division Summary");
+                    FundChart = GetSummaryChart(FundChart, Data, PrcFilter.Fund, string.Format("{0} by Appropriation", D6.RC.Name));
+                    BocChart = GetSummaryChart(BocChart, Data, PrcFilter.BOC, string.Format("{0} by Object Class", D6.RC.Name));
+                    NpmChart = GetSummaryChart(NpmChart, Data, PrcFilter.NPM, string.Format("{0} by HQ Program", D6.RC.Name));
+                    GoalChart = GetSummaryChart(GoalChart, Data, PrcFilter.GoalName, string.Format("{0} by Agency Goal", D6.RC.Name));
+                    ObjectiveChart = GetSummaryChart(ObjectiveChart, Data, PrcFilter.ObjectiveName, string.Format("{0} by Strategic Objective", D6.RC.Name));
+                    AreaChart = GetSummaryChart(AreaChart, Data, PrcFilter.ProgramArea, string.Format("{0} by Program Area", D6.RC.Name));
+                    ProjectChart = GetSummaryChart(ProjectChart, Data, PrcFilter.ProgramProjectCode, string.Format("{0} by Program Project", D6.RC.Name));
                 }
 
 
@@ -99,6 +101,7 @@ namespace Budget
                 public DataBuilder Data { get; }
                 public DataMetric BudgetMetric { get; }
                 public DataSet DataSet { get; }
+                public string Title { get; }
                 private TabPageAdv[] Tab { get; set; }
                 public FlowLayoutPanel[] FilterPanel { get; set; }
                 public decimal[] Metrics { get; }
@@ -214,8 +217,8 @@ namespace Budget
 
                 ChartControl GetSummaryChart(ChartControl chart, DataBuilder data, PrcFilter filter, string title)
                 {
-                    var fd = new BudgetChart(chart, data, filter);
-                    fd.AxisTitle = new string[] { title };
+                    var fd = new BudgetChart(chart, data, filter, Statistic.Ratio);
+                    fd.GetAxisTitle(chart, new string[] { title });
                     return fd.Activate();
                 }
 

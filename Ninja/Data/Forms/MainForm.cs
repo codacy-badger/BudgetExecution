@@ -1,4 +1,5 @@
 using Budget.Ninja.Data;
+using Ninja.Data;
 using Syncfusion.Windows.Forms.Chart;
 using System;
 using System.Collections.Generic;
@@ -103,9 +104,10 @@ namespace Ninja.Forms
             datamgr.Show();
         }
 
-        private void DataBtn_Click(object sender, EventArgs e)
+        private void DataButton_OnClick(object sender, EventArgs e)
         {
-
+            var dm = new DataMaster();
+            dm.Show();
         }
     }
 }

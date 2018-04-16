@@ -22,18 +22,16 @@ namespace Budget
                 {
                 }
 
-                public FormData(Source source, Control panel, BindingSource bs, DataGridView dgv, BindingNavigator bn)
+                public FormData(DataBuilder data, BindingSource bs, DataGridView dgv, BindingNavigator bn)
                 {
-                    Data = new DataBuilder(source);
+                    Data = data;
                     BudgetMetric = new DataMetric(Data);
                     BudgetData = Data.BudgetData;
                     Table = Data.BudgetTable;
                     BindGridAndNavigator(Table, dgv, bs, bn);
-                    FilterBox = panel as ListBox;
                     BindingSource = bs;
                     Navigator = bn;
                     DataGrid = dgv;
-                    GetAppropriationFilterButtonBox(Table, Panel);
                 }
 
                 //Properties
@@ -45,7 +43,6 @@ namespace Budget
                 public ChartDataBindModel ChartModel { get; set; }
                 public int Count { get; set; }
                 public DataGridView DataGrid { get; set; }
-                public ListBox FilterBox { get; set; }
                 public decimal[] Metrics { get; set; }
                 public BindingNavigator Navigator { get; set; }
                 public BindingSource BindingSource { get; set; }
@@ -204,7 +201,6 @@ namespace Budget
                     var button = sender as MetroSetListBox;
                     var table = GetTable(Table, "FundName", button.SelectedItem.ToString());
                     BindingSource.DataSource = table;
-                    GetBocListBox(table, FilterBox);
                     Table = table;
                 }
 
@@ -360,7 +356,6 @@ namespace Budget
                 {
                     Table = Data.BudgetTable;
                     BindingSource.DataSource = Table;
-                    GetAppropriationFilterListBox(Table, FilterBox);
                 }
 
             }

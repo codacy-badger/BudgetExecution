@@ -448,6 +448,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\MoneyDatabase.png" />
+    <None Include="Resources\Data-Information.png" />
+    <None Include="Resources\Add-New.png" />
+    <None Include="Resources\Copy_01.png" />
     <Content Include="SqlServer\R6.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

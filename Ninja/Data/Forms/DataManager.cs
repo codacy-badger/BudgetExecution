@@ -1,4 +1,6 @@
+using MetroSet_UI.Controls;
 using Syncfusion.Windows.Forms.Chart;
+using Syncfusion.Windows.Forms.Grid;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -21,13 +23,10 @@ namespace Budget
                     InitializeComponent();
                     Data = new DataBuilder(source);
                     Metric = new DataMetric(Data);
-                    Ninja = new FormData(source, FilterPanel, BindingSource, DataMgrGrid, Navigator);
-                    Ninja.GetGridColumns(DataMgrGrid);
-                    Table = Ninja.Table;
+                    Table = Data.BudgetTable;
+                    Ninja = new FormData(Data, BindingSource, Grid, Navigator);
                     Element = Ninja.GetProgramElements(Table);
-                    Ninja.GetFilterButtons(FilterPanel, Element["FundName"]);
-                    Ninja.GetAppropriationFilterListBox(Table, FilterPanel);
-                    PrcChart = GetDataChart(PrcChart, "", source, BindingSource);
+                    PrcChart = new BudgetChart(PrcChart, Data, PrcFilter.FundName, Statistic.Total).Activate();
                     GetGridSelectedRowValues();
                 }
 
@@ -52,6 +51,8 @@ namespace Budget
                         return null;
                     }
                 }
+
+                public Dictionary<string, string[]> ProgramElements { get; set; }
 
                 public Tuple<DataTable, PRC[], decimal, int> GetData(DataTable table, string column, string filter)
                 {
@@ -151,33 +152,17 @@ namespace Budget
                     }
                 }
 
-                private void GetCalculatorValue(DataGridViewRow gridrow)
+                private void GetCalculatorValue(DataGridView gridrow)
                 {
                     try
                     {
                         var amt = new Syncfusion.Windows.Forms.Tools.CalculatorValue();
-                        amt.SetValue(gridrow.Cells["Amount"].Value.ToString());
+                        //amt.SetValue(gridrow.Cells["Amount"].Value.ToString());
                     }
                     catch (Exception ex)
                     {
 
                         MessageBox.Show(ex.Message + ex.StackTrace);
-                    }
-                }
-
-                private ChartControl GetDataChart(ChartControl chart, string title, Source source, BindingSource bs)
-                {
-                    try
-                    {
-                        var cd = new BudgetChart(chart, source, PrcFilter.Fund);
-                        cd.AxisTitle = new string[] { title };
-                        return cd.Activate();
-                    }
-                    catch (Exception ex)
-                    {
-
-                        MessageBox.Show(ex.Message + ex.StackTrace);
-                        return null;
                     }
                 }
 
@@ -185,14 +170,14 @@ namespace Budget
                 {
                     try
                     {
-                        DataMgrGrid.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-                        bfy.DataBindings.Add(new Binding("Text", DataMgrGrid.DataSource, "BFY"));
-                        fund.DataBindings.Add(new Binding("Text", DataMgrGrid.DataSource, "Fund"));
-                        org.DataBindings.Add(new Binding("Text", DataMgrGrid.DataSource, "Org"));
-                        rc.DataBindings.Add(new Binding("Text", DataMgrGrid.DataSource, "RC"));
-                        code.DataBindings.Add(new Binding("Text", DataMgrGrid.DataSource, "Code"));
-                        boc.DataBindings.Add(new Binding("Text", DataMgrGrid.DataSource, "BOC"));
-                        amount1.DataBindings.Add(new Binding("Text", DataMgrGrid.DataSource, "Amount"));
+                        Grid.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+                        bfy.DataBindings.Add(new Binding("Text", Grid.DataSource, "BFY"));
+                        fund.DataBindings.Add(new Binding("Text", Grid.DataSource, "Fund"));
+                        org.DataBindings.Add(new Binding("Text", Grid.DataSource, "Org"));
+                        rc.DataBindings.Add(new Binding("Text", Grid.DataSource, "RC"));
+                        code.DataBindings.Add(new Binding("Text", Grid.DataSource, "Code"));
+                        boc.DataBindings.Add(new Binding("Text", Grid.DataSource, "BOC"));
+                        amount1.DataBindings.Add(new Binding("Text", Grid.DataSource, "Amount"));
                     }
                     catch (Exception ex)
                     {
@@ -218,10 +203,20 @@ namespace Budget
 
                 private void UpdateDataChart(object sender, EventArgs e)
                 {
+                   
+                }
+
+                private void UpdateGridSelectedRowValues(object sender, EventArgs e)
+                {
                     try
                     {
-                        BindingSource = sender as BindingSource;
-                        PrcChart = GetDataChart(PrcChart, "", Source.P8, BindingSource);
+                        bfy.DataBindings.Add(new Binding("Text", Grid.DataSource, "BFY"));
+                        fund.DataBindings.Add(new Binding("Text", Grid.DataSource, "Fund"));
+                        org.DataBindings.Add(new Binding("Text", Grid.DataSource, "Org"));
+                        rc.DataBindings.Add(new Binding("Text", Grid.DataSource, "RC"));
+                        code.DataBindings.Add(new Binding("Text", Grid.DataSource, "Code"));
+                        boc.DataBindings.Add(new Binding("Text", Grid.DataSource, "BOC"));
+                        amount1.DataBindings.Add(new Binding("Text", Grid.DataSource, "Amount"));
                     }
                     catch (Exception ex)
                     {
@@ -230,24 +225,49 @@ namespace Budget
                     }
                 }
 
-                private void UpdateGridSelectedRowValues(object sender, EventArgs e)
-                {
-                    try
-                    {
-                        var current = DataMgrGrid.CurrentRow;
-                        bfy.DataBindings.Add(new Binding("Text", DataMgrGrid.DataSource, "BFY"));
-                        fund.DataBindings.Add(new Binding("Text", DataMgrGrid.DataSource, "Fund"));
-                        org.DataBindings.Add(new Binding("Text", DataMgrGrid.DataSource, "Org"));
-                        rc.DataBindings.Add(new Binding("Text", DataMgrGrid.DataSource, "RC"));
-                        code.DataBindings.Add(new Binding("Text", DataMgrGrid.DataSource, "Code"));
-                        boc.DataBindings.Add(new Binding("Text", DataMgrGrid.DataSource, "BOC"));
-                        amount1.DataBindings.Add(new Binding("Text", DataMgrGrid.DataSource, "Amount"));
-                    }
-                    catch (Exception ex)
-                    {
 
-                        MessageBox.Show(ex.Message + ex.StackTrace);
-                    }
+                private void GetGridColumns(DataGridView dgv)
+                {
+                    foreach (DataGridViewColumn dc in dgv.Columns)
+                        dc.Visible = false;
+                    dgv.Columns[0].Visible = true;
+                    dgv.Columns[4].Visible = true;
+                    dgv.Columns[5].Visible = true;
+                    dgv.Columns[6].Visible = true;
+                    dgv.Columns[8].Visible = true;
+                    dgv.Columns[8].HeaderText = "BOC";
+                    dgv.Columns[9].Visible = true;
+                    dgv.Columns[11].Visible = true;
+                    dgv.Columns[12].Visible = true;
+                }
+
+                void GetFundFilterItems()
+                {
+                    var item = Data.ProgramElements["FundName"];
+                    foreach (string i in item)
+                        FundFilter.Items.Add(i);
+                }
+
+                void FundFilter_ItemSelected(object sender, EventArgs e)
+                {
+                    BocFilter.Items.Clear();
+                    var filter = sender as MetroSetComboBox;
+                    FundFilter.Tag = filter;
+                    var fund = filter.SelectedItem.ToString();
+                    BindingSource.Filter = $"FundName = '{fund}'";
+                    var boc = ProgramElements[Budget.Ninja.Data.PrcFilter.BocName.ToString()];
+                    foreach (string b in boc)
+                        BocFilter.Items.Add(b);
+                    BocFilter.Visible = true;
+                    BocFilter.SelectionChangeCommitted += BocFilter_ItemSelected;
+                }
+
+                void BocFilter_ItemSelected(object sender, EventArgs e)
+                {
+                    var boc = sender as MetroSetComboBox;
+                    var bocfilter = boc.SelectedItem.ToString();
+                    BindingSource.Filter = $"FundName = '{FundFilter.SelectedItem.ToString()}' AND BocName = '{bocfilter}'";
+
                 }
             }
         }

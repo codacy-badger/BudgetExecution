@@ -22,62 +22,48 @@ namespace Budget
                 public BudgetChart(ChartControl chart, string title, Dictionary<string, double> data)
                 {
                     Chart = chart;
+                    Value = Ninja.Data.Statistic.Total;
                     if (Chart.Series != null)
                         Chart.Series.Clear();
-                    GetPrimaryXaxis(Chart, new string[] { title });
+                    GetAxisTitle(Chart, new string[] { title });
                     DataSeries = GetSeriesTotals(data);
                     Chart.Series.Add(DataSeries);
                     GetRegionSeriesConfiguration(DataSeries);
                     Get3DMode(Chart);
                 }
 
-                public BudgetChart(ChartControl chart, DataBuilder data, PrcFilter filter)
+                public BudgetChart(ChartControl chart, DataBuilder data, PrcFilter filter, Statistic value )
                 {
                     Chart = chart;
                     Data = data;
                     Table = Data.BudgetTable;
                     Metric = new DataMetric(Data);
-                    DataTotals = Metric.GetChartTotals(Table, filter);
+                    Value = value;
+                    DataMetrics = Metric.GetChartMetrics(Table, filter);
                     if (Chart.Series != null)
                         Chart.Series.Clear();
-                    DataSeries = GetSeriesTotals(DataTotals);
+                    DataSeries = GetSeriesTotals(GetSingleValue(DataMetrics, Value));
                     Chart.Series.Add(DataSeries);
-                    GetRegionSeriesConfiguration(DataSeries);
-                    Get3DMode(Chart);
-
-                }
-
-                public BudgetChart(ChartControl chart, DataBuilder data, PrcFilter filter, ChartSeriesType type)
-                {
-                    Chart = chart;
-                    SeriesType = type;
-                    Data = data;
-                    Table = Data.BudgetTable;
-                    Metric = new DataMetric(Data);
-                    DataTotals = Metric.GetChartTotals(Table, filter);
-                    if (Chart.Series != null)
-                        Chart.Series.Clear();
-                    DataSeries = GetSeriesTotals(DataTotals);
-                    Chart.Series.Add(DataSeries);
-                    GetRegionSeriesConfiguration(DataSeries);
+                    GetSeriesConfiguration(DataSeries, Value);
                     Get3DMode(Chart);
                 }
+
 
                 public BudgetChart(ChartControl chart, Source source, PrcFilter filter)
                 {
                     Chart = chart;
                     Data = new DataBuilder(source);
                     Metric = new DataMetric(Data);
+                    Value = Ninja.Data.Statistic.Total;
                     Table = Data.BudgetTable;
-                    DataTotals = Metric.GetChartTotals(Table, filter);
                     if (Chart.Series != null)
                         Chart.Series.Clear();
-                    DataSeries = GetSeriesTotals(DataTotals);
+                    DataSeries = GetSeriesTotals(GetSingleValue(DataMetrics, Value));
                     Chart.Series.Add(DataSeries);
-                    GetRegionSeriesConfiguration(DataSeries);
+                    GetSeriesConfiguration(DataSeries, Value);
                     Get3DMode(Chart);
                 }
-           
+
                 //Properties
                 public ChartControl Chart { get; set; }
                 public DataBuilder Data { get; set; }
@@ -90,11 +76,13 @@ namespace Budget
                 public int[] Dimension { get; set; }
                 public string[] MainTitle { get; set; }
                 public string[] AxisTitle { get; set; }
-                public ChartFilter Filter { get; set; }
+                public PrcFilter Filter { get; }
+                public Statistic Value { get; set; }
                 public ChartSeriesType SeriesType { get; set; }
                 public ChartSeries DataSeries { get; set; }
                 public Dictionary<string, double> DataTotals { get; set; }
                 public Dictionary<string, double[]> DataMetrics { get; set; }
+                public ChartLegend Legend { get; set; }
                 double Total { get; set; }
 
                 //Methods
@@ -102,129 +90,7 @@ namespace Budget
                 {
                     try
                     {
-                        var series = new ChartSeries();
-                        foreach (KeyValuePair<string, double> kvp in data)
-                        {
-                            series.Points.Add(kvp.Key, kvp.Value);
-                            series.Name = kvp.Key;
-                        }
-                        return series;
-                    }
-                    catch (System.Exception e)
-                    {
-
-                        MessageBox.Show(e.Message + e.StackTrace);
-                        return null;
-                    }
-                }
-
-                internal ChartSeries GetSeriesMetrics(Dictionary<string, double[]> data)
-                {
-                    try
-                    {
-                        var series = new ChartSeries();
-                        foreach (KeyValuePair<string, double[]> kvp in data)
-                        {  
-                            series.Points.Add(kvp.Key, kvp.Value);
-                            series.Name = "Total";
-                        }
-                        return series;
-                    }
-                    catch (System.Exception e)
-                    {
-
-                        MessageBox.Show(e.Message + e.StackTrace);
-                        return null;
-                    }
-                }
-
-                internal ChartSeries GetSeriesValue(Dictionary<string, double[]> data, Metric value)
-                {
-                    try
-                    {
-                        var series = new ChartSeries();
-                        foreach (KeyValuePair<string, double[]> kvp in data)
-                        {
-                            series.Points.Add(kvp.Key, kvp.Value[(int)value]);
-                            series.Name = "Total";
-                        }
-                        return series;
-                    }
-                    catch (System.Exception e)
-                    {
-
-                        MessageBox.Show(e.Message + e.StackTrace);
-                        return null;
-                    }
-                }
-
-                internal ChartSeries GetSeriesCount(Dictionary<string, double[]> data)
-                {
-                    try
-                    {
-                        var series = new ChartSeries();
-                        foreach (KeyValuePair<string, double[]> kvp in data)
-                        {
-                            series.Points.Add(kvp.Key, kvp.Value[1]);
-                            series.Name = "Count";
-                        }
-                        return series;
-                    }
-                    catch (System.Exception e)
-                    {
-
-                        MessageBox.Show(e.Message + e.StackTrace);
-                        return null;
-                    }
-                }
-
-                internal ChartSeries GetSeriesAverage(Dictionary<string, double[]> data)
-                {
-                    try
-                    {
-                        var series = new ChartSeries();
-                        foreach (KeyValuePair<string, double[]> kvp in data)
-                        {
-                            series.Points.Add(kvp.Key, kvp.Value[2]);
-                            series.Name = "Average";
-                        }
-                        return series;
-                    }
-                    catch (System.Exception e)
-                    {
-
-                        MessageBox.Show(e.Message + e.StackTrace);
-                        return null;
-                    }
-                }
-
-                internal ChartSeries GetSeriesRatio(Dictionary<string, double[]> data)
-                {
-                    try
-                    {
-
-                        var series = new ChartSeries();
-                        foreach (KeyValuePair<string, double[]> kvp in data)
-                        {
-                            series.Points.Add(kvp.Key, kvp.Value[3]);
-                            series.Name = "Percentage";
-                        }
-                        return series;
-                    }
-                    catch (System.Exception e)
-                    {
-
-                        MessageBox.Show(e.Message + e.StackTrace);
-                        return null;
-                    }
-                }
-
-                internal ChartSeries GetColumnSeries(Dictionary<string, double> data)
-                {
-                    try
-                    {
-                        var series = new ChartSeries("Amount", ChartSeriesType.Column);
-                        Chart.Series.Add(series);
+                        var series = new ChartSeries("Total");
                         foreach (KeyValuePair<string, double> kvp in data)
                         {
                             series.Points.Add(kvp.Key, kvp.Value);
@@ -233,6 +99,94 @@ namespace Budget
                     }
                     catch (System.Exception e)
                     {
+
+                        MessageBox.Show(e.Message + e.StackTrace);
+                        return null;
+                    }
+                }
+                
+                Dictionary<string, double> GetSingleValue(Dictionary<string, double[]> data, Statistic value)
+                {
+                    try
+                    {
+                        var total = new Dictionary<string, double>();
+                        foreach (KeyValuePair<string, double[]> kvp in data)
+                        {
+                            total.Add(kvp.Key, kvp.Value[(int)value]);
+                        }
+                        return total;
+                    }
+                    catch (Exception ex)
+                    {
+
+                        MessageBox.Show(ex.Message + ex.StackTrace);
+                        return null;
+                    }
+                }
+
+                ChartSeries GetTotalSeries(KeyValuePair<string, double[]> data)
+                {
+                    try
+                    {
+                        var series = new ChartSeries("Totals");
+                        series.Points.Add(data.Key, data.Value[0]);
+                        series.Style.TextFormat = "${0:#,}";
+                        return series;
+                    }
+                    catch (System.Exception e)
+                    {
+
+                        MessageBox.Show(e.Message + e.StackTrace);
+                        return null;
+                    }
+                }
+
+                ChartSeries GetAccountSeries(KeyValuePair<string, double[]> data)
+                {
+                    try
+                    {
+                        var series = new ChartSeries("Accounts");
+                        series.Points.Add(data.Key, data.Value[1]);
+                        series.Style.TextFormat = "{0:N}";
+                        return series;
+                    }
+                    catch (System.Exception e)
+                    {
+
+                        MessageBox.Show(e.Message + e.StackTrace);
+                        return null;
+                    }
+                }
+
+                ChartSeries GetAverageSeries(KeyValuePair<string, double[]> data)
+                {
+                    try
+                    {
+                        var series = new ChartSeries("Average");
+                        series.Points.Add(data.Key, data.Value[2]);
+                        return series;
+                    }
+                    catch (System.Exception e)
+                    {
+
+                        MessageBox.Show(e.Message + e.StackTrace);
+                        return null;
+                    }
+                }
+
+                ChartSeries GetRatioSeries(KeyValuePair<string, double[]> data)
+                {
+                    try
+                    {
+                        var series = new ChartSeries("Ratio");
+                        series.Points.Add(data.Key, data.Value[3]);
+                        GetSeriesConfiguration(series);
+                        series.Style.TextFormat = "{0:P}";
+                        return series;
+                    }
+                    catch (System.Exception e)
+                    {
+
                         MessageBox.Show(e.Message + e.StackTrace);
                         return null;
                     }
@@ -269,24 +223,6 @@ namespace Budget
                     return Chart;
                 }
 
-                void Get3DBindingMode()
-                {
-                    try
-                    {
-                        Chart.ChartArea.Series3D = true;
-                        Chart.RealMode3D = true;
-                        Chart.Style3D = true;
-                        Chart.Tilt = 2;
-                        Chart.Depth = 150;
-                        Chart.Rotation = -10;
-                        Chart.SpacingBetweenSeries = 2;
-                    }
-                    catch (System.Exception e)
-                    {
-                        MessageBox.Show(e.Message + e.StackTrace);
-                    }
-                }
-
                 void Get3DMode(ChartControl chart)
                 {
                     try
@@ -306,14 +242,14 @@ namespace Budget
                     }
                 }
 
-                internal void GetPrimaryXaxis(ChartControl chart, string[] title)
+                internal void GetAxisTitle(ChartControl chart, string[] title)
                 {
                     try
                     {
                         Chart = chart;
                         Chart.PrimaryXAxis.Title = title[0];
-                        Chart.PrimaryXAxis.TitleColor = Color.BlanchedAlmond;
-                        Chart.PrimaryXAxis.TitleFont = new Font("SegoeUI", 9f);
+                        Chart.PrimaryXAxis.TitleColor = Color.LightSteelBlue;
+                        Chart.PrimaryXAxis.TitleFont = new Font("Segoe UI", 9f, FontStyle.Bold);
                     }
                     catch (System.Exception e)
                     {
@@ -339,27 +275,6 @@ namespace Budget
                     }
                 }
 
-                internal void GetBindingSeriesConfiguration(ChartSeries series)
-                {
-                    DataSeries = series;
-                    DataSeries.SmartLabels = true;
-                    DataSeries.SortPoints = true;
-                    DataSeries.Style.DisplayText = true;
-                    DataSeries.Style.TextOffset = 15.0F;
-                    DataSeries.Style.TextOrientation = ChartTextOrientation.Up;
-                    DataSeries.Style.DisplayShadow = true;
-                    DataSeries.Style.TextColor = Color.White;
-                    DataSeries.Style.TextFormat = "${0:N}";
-                    DataSeries.PointsToolTipFormat = "Funding:{4}";
-                    DataSeries.Style.Font.Size = 10.0F;
-                    DataSeries.Style.Font.Facename = "Segoe UI";
-                    DataSeries.Style.Font.FontStyle = FontStyle.Bold;
-                    DataSeries.DrawSeriesNameInDepth = false;
-                    DataSeries.ConfigItems.ColumnItem.ShadingMode = ChartColumnShadingMode.PhongCylinder;
-                    DataSeries.ConfigItems.ColumnItem.LightColor = Color.DeepSkyBlue;
-                    DataSeries.ConfigItems.ColumnItem.PhongAlpha = 2;
-                }
-
                 internal void GetRegionSeriesConfiguration(ChartSeries series)
                 {
                     try
@@ -374,7 +289,7 @@ namespace Budget
                         DataSeries.Style.TextColor = Color.White;
                         DataSeries.Style.TextFormat = "${0:#,}";
                         DataSeries.PointsToolTipFormat = "Funding:{4:N}";
-                        DataSeries.Style.Font.Size = 10.0F;
+                        DataSeries.Style.Font.Size = 12.0F;
                         DataSeries.Style.Font.Facename = "SegoeUI";
                         DataSeries.Style.Font.FontStyle = FontStyle.Bold;
                         DataSeries.DrawSeriesNameInDepth = false;
@@ -391,7 +306,7 @@ namespace Budget
                     }
                 }
 
-                internal void GetDivisionSeriesConfiguration(ChartSeries series)
+                internal void GetSeriesConfiguration(ChartSeries series)
                 {
                     try
                     {
@@ -403,16 +318,50 @@ namespace Budget
                         DataSeries.Style.TextOrientation = ChartTextOrientation.Up;
                         DataSeries.Style.DisplayShadow = true;
                         DataSeries.Style.TextColor = Color.White;
-                        DataSeries.Style.TextFormat = "${0:N}";
                         DataSeries.PointsToolTipFormat = "Funding:{4:N}";
-                        DataSeries.Style.Font.Size = 10.0F;
+                        DataSeries.Style.Font.Size = 12.0F;
                         DataSeries.Style.Font.Facename = "Segoe UI";
                         DataSeries.Style.Font.FontStyle = FontStyle.Bold;
                         DataSeries.DrawSeriesNameInDepth = false;
                         DataSeries.ConfigItems.ColumnItem.ShadingMode = ChartColumnShadingMode.PhongCylinder;
                         DataSeries.ConfigItems.ColumnItem.LightColor = Color.DeepSkyBlue;
                         DataSeries.ConfigItems.ColumnItem.PhongAlpha = 2;
+                    }
+                    catch (System.Exception e)
+                    {
+                        MessageBox.Show(e.Message + e.StackTrace);
+                    }
+                }
+
+                internal void GetSeriesConfiguration(ChartSeries series, Statistic value)
+                {
+                    try
+                    {
+                        DataSeries = series;
+                        DataSeries.SmartLabels = true;
+                        DataSeries.SortPoints = true;
+                        DataSeries.Style.DisplayText = true;
+                        DataSeries.Style.TextOffset = 15.0F;
+                        DataSeries.Style.TextOrientation = ChartTextOrientation.Up;
+                        DataSeries.Style.DisplayShadow = true;
+                        DataSeries.Style.TextColor = Color.White;
+                        if(value == Ninja.Data.Statistic.Total || value == Ninja.Data.Statistic.Average)
+                            DataSeries.Style.TextFormat = "${0:N}";
+                        if (value == Ninja.Data.Statistic.Ratio)
+                            DataSeries.Style.TextFormat = "{0:P}";
+                        if (value == Ninja.Data.Statistic.Count)
+                            DataSeries.Style.TextFormat = "{0}";
+                        DataSeries.PointsToolTipFormat = "Funding:{4:N}";
+                        DataSeries.Style.Font.Size = 12.0F;
+                        DataSeries.Style.Font.Facename = "Segoe UI";
+                        DataSeries.Style.Font.FontStyle = FontStyle.Bold;
                         DataSeries.XAxis.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+                        DataSeries.XAxis.LabelRotate = true;
+                        DataSeries.XAxis.ForeColor = SystemColors.MenuHighlight;
+                        DataSeries.DrawSeriesNameInDepth = false;
+                        DataSeries.ConfigItems.ColumnItem.ShadingMode = ChartColumnShadingMode.PhongCylinder;
+                        DataSeries.ConfigItems.ColumnItem.LightColor = Color.DeepSkyBlue;
+                        DataSeries.ConfigItems.ColumnItem.PhongAlpha = 2;
                     }
                     catch (System.Exception e)
                     {
@@ -420,35 +369,40 @@ namespace Budget
                     }
                 }
 
-                internal void GetLegend(ChartSeries series)
+                internal ChartLegend GetLegend(ChartControl chart)
                 {
                     try
                     {
-                        ChartLegendItemsCollection items = new ChartLegendItemsCollection();
-                        ChartLegend legend = new ChartLegend(Chart);
-                        ChartLegendItem item = new ChartLegendItem();
-                        item.Text = series.Name;
-                        legend.Text = "Legend";
-                        items.Add(item);
+                        Chart = chart;
+                        if(Chart.Legends != null)
+                            Chart.Legends.Clear();
+                        var legend = new ChartLegend(Chart);
+                        foreach(string axislabel in Chart.PrimaryXAxis.Labels)
+                        {
+                            var item = new ChartLegendItem(axislabel);
+                            
+                        }
                         legend.VisibleCheckBox = true;
-                        legend.ColumnsCount = 1;
                         Chart.Legends.Add(legend);
+                        return legend;
                     }
                     catch (System.Exception e)
                     {
                         MessageBox.Show(e.Message + e.StackTrace);
+                        return null;
                     }
                 }
 
-                internal void GetMainTitle(string[] t)
+                internal void GetMainTitle(ChartControl chart, string[] t)
                 {
                     try
                     {
+                        Chart = chart;
                         Chart.Titles.Clear();
                         ChartTitle title = new ChartTitle();
                         title.Text = t[0];
-                        title.ForeColor = Color.White;
-                        title.Font = new Font("SegoeUI", 8, FontStyle.Regular);
+                        title.ForeColor = Color.BlanchedAlmond;
+                        title.Font = new Font("SegoeUI", 10, FontStyle.Regular);
                         Chart.Titles.Add(title);
                     }
                     catch (System.Exception e)

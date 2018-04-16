@@ -68,13 +68,7 @@ namespace Budget
                 ID, BFY, RPIO, Fund, FundName, BOC, BocName, Org, RC, NPM, Goal, GoalName, Objective, ObjectiveName, Division, ProgramArea, ProgramAreaName, ProgramProjectCode, ProgramProjectName
             }
 
-            public enum ChartFilter
-            {
-                Fund, FundName, BOC, BocName, NPM, Goal, GoalName, Objective, ObjectiveName, RC, DivisionName, ProgramArea, ProgramAreaName, ProgramProjectCode, ProgramProjectName
-            }
-
-          
-            public enum Metric
+            public enum Statistic
             {
                 Total, Count, Average, Ratio
             }
