@@ -112,7 +112,7 @@ namespace Ninja.Forms
         }
         private void TransferButton_OnClick(object sender, EventArgs e)
         {
-            var dm = new DivisionForm("06J");
+            var dm = new SummaryForm("06J");
             dm.Show();
         }
     }

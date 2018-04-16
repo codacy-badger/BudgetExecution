@@ -26,7 +26,7 @@ namespace Budget
                     D6 = new DivisionAuthority();
                     Table = D6.Data.BudgetTable;
                     ProgramElements = D6.Data.ProgramElements;
-                    RC = ProgramElements["RC"];
+                    RcCodes = ProgramElements["RC"];
                     BindingSource.DataSource = D6.Data.BudgetTable;
                     Text = $"P7 Status of Funds";
                     GetFilterButtons();
@@ -53,6 +53,7 @@ namespace Budget
                         BindingSource.DataSource = BudgetMetric.Table;
                         GetFilterButtons();
                         Text = "Region 6 Summary";
+                        DatabaseTab.TabVisible = false;
                     }
                     if (source == Source.P8)
                     {
@@ -62,9 +63,10 @@ namespace Budget
                         Title = "Division Funding";
                         Table = BudgetMetric.Table;
                         ProgramElements = BudgetMetric.ProgramElements;
-                        RC = Data.ProgramElements["RC"];
+                        RcCodes = Data.ProgramElements["RC"];
                         GetFilterButtons();
                         Text = "R6 Division Summary";
+                        DatabaseTab.TabVisible = false;
                     }
                     FundChart = GetSummaryChart(FundChart, Data, PrcFilter.Fund, string.Format("{0} by Appropriation", Title));
                     BocChart = GetSummaryChart(BocChart, Data, PrcFilter.BocName, string.Format("{0} by Object Class", Title));
@@ -78,21 +80,32 @@ namespace Budget
                 public SummaryForm(string rc)
                 {
                     InitializeComponent();
+                    DatabaseTab.TabVisible = true;
                     D6 = new DivisionAuthority(rc);
                     Data = D6.Data;
                     DataSet = D6.BudgetData;
                     Table = D6.Table;
                     BudgetMetric = new DataMetric(Data);
+                    ProgramElements = BudgetMetric.ProgramElements;
                     GetFilterButtons();
                     Text = $"{D6.Org.Name} Summary";
-                    BindingSource.DataSource = Table;
-                    FundChart = GetSummaryChart(FundChart, Data, PrcFilter.Fund, string.Format("{0} by Appropriation", D6.RC.Name));
+                    BindingSource.DataSource = Data.BudgetTable;
+                    Navigator.BindingSource = BindingSource;
+                    Grid.DataSource = BindingSource;
+                    GetGridColumns(Grid);
+                    FundChart = GetSummaryChart(FundChart, D6.Data, PrcFilter.Fund, string.Format("{0} by Appropriation", D6.RC.Name));
                     BocChart = GetSummaryChart(BocChart, Data, PrcFilter.BOC, string.Format("{0} by Object Class", D6.RC.Name));
                     NpmChart = GetSummaryChart(NpmChart, Data, PrcFilter.NPM, string.Format("{0} by HQ Program", D6.RC.Name));
                     GoalChart = GetSummaryChart(GoalChart, Data, PrcFilter.GoalName, string.Format("{0} by Agency Goal", D6.RC.Name));
                     ObjectiveChart = GetSummaryChart(ObjectiveChart, Data, PrcFilter.ObjectiveName, string.Format("{0} by Strategic Objective", D6.RC.Name));
                     AreaChart = GetSummaryChart(AreaChart, Data, PrcFilter.ProgramArea, string.Format("{0} by Program Area", D6.RC.Name));
                     ProjectChart = GetSummaryChart(ProjectChart, Data, PrcFilter.ProgramProjectCode, string.Format("{0} by Program Project", D6.RC.Name));
+                    GetFundFilterItems();
+                    GetTextBoxBindings();
+                    lblTotal.Text = Data.GetTotal(Table).ToString("c");
+                    lblCount.Text = Data.GetCount(Table).ToString();
+                    FundFilter.SelectionChangeCommitted += FundFilter_ItemSelected;
+                    BocFilter.SelectionChangeCommitted += BocFilter_ItemSelected;
                 }
 
 
@@ -103,17 +116,14 @@ namespace Budget
                 public DataSet DataSet { get; }
                 public string Title { get; }
                 private TabPageAdv[] Tab { get; set; }
-                public FlowLayoutPanel[] FilterPanel { get; set; }
                 public decimal[] Metrics { get; }
-                public FormData Ninja { get; set; }
                 public Dictionary<string, string[]> ProgramElements { get; }
                 public DivisionAuthority D6 { get; }
                 public RegionalAuthority R6 { get; }
                 public DataTable Table { get; }
-                internal string[] RC { get; set; }
+                public string[]RcCodes { get; }
                 internal RadioButton[] RadioButton { get; set; }
                 internal ChartControl[] Chart { get; set; }
-                private ExpandCollapsePanel[] Expander { get; set; }
 
 
                 //Methods
@@ -210,14 +220,9 @@ namespace Budget
                     }
                 }
 
-                private void ListBox_SelectedItemChanged(object sender, EventArgs e)
-                {
-
-                }
-
                 ChartControl GetSummaryChart(ChartControl chart, DataBuilder data, PrcFilter filter, string title)
                 {
-                    var fd = new BudgetChart(chart, data, filter, Statistic.Ratio);
+                    var fd = new BudgetChart(chart, data, filter, Statistic.Total);
                     fd.GetAxisTitle(chart, new string[] { title });
                     return fd.Activate();
                 }
@@ -283,14 +288,98 @@ namespace Budget
                     var filter = rb.Tag.ToString();
                 }
 
-                private void SummaryTabControl_SelectedIndexChanged(object sender, EventArgs e)
+                private void GetGridColumns(DataGridView dgv)
                 {
+                    foreach (DataGridViewColumn dc in dgv.Columns)
+                        dc.Visible = false;
+                    dgv.Columns[0].Visible = true;
+                    dgv.Columns[3].Visible = true;
+                    dgv.Columns[4].Visible = true;
+                    dgv.Columns[5].Visible = true;
+                    dgv.Columns[6].Visible = true;
+                    dgv.Columns[8].Visible = true;
+                    dgv.Columns[10].Visible = true;
+                    dgv.Columns[11].Visible = true;
+                    dgv.Columns[12].Visible = true;
+                }
+
+                void GetFundFilterItems()
+                {
+                    var item = Data.ProgramElements["FundName"];
+                    foreach (string i in item)
+                        FundFilter.Items.Add(i);
+                }
+
+                void GetTextBoxBindings()
+                {
+                    try
+                    {
+                        bfy.DataBindings.Add(new Binding("Text", Grid.DataSource, "BFY"));
+                        Fund.DataBindings.Add(new Binding("Text", Grid.DataSource, "Fund"));
+                        Org.DataBindings.Add(new Binding("Text", Grid.DataSource, "Org"));
+                        AHRC.DataBindings.Add(new Binding("Text", Grid.DataSource, "RC"));
+                        Code.DataBindings.Add(new Binding("Text", Grid.DataSource, "Code"));
+                        BOC.DataBindings.Add(new Binding("Text", Grid.DataSource, "BOC"));
+                        Amount1.DataBindings.Add(new Binding("Text", Grid.DataSource, "Amount"));
+                    }
+                    catch (Exception ex)
+                    {
+
+                        MessageBox.Show(ex.Message + ex.StackTrace);
+                    }
 
                 }
 
-                private void FundExpander_Paint(object sender, PaintEventArgs e)
+                void FundFilter_ItemSelected(object sender, EventArgs e)
                 {
+                    BocFilter.Items.Clear();
+                    var filter = sender as MetroSetComboBox;
+                    FundFilter.Tag = filter;
+                    var fund = filter.SelectedItem.ToString();
+                    BindingSource.Filter = $"FundName = '{fund}'";
+                    var boc = ProgramElements[PrcFilter.BocName.ToString()];
+                    foreach (string b in boc)
+                        BocFilter.Items.Add(b);
+                    BocFilter.Visible = true;
+                    BocFilter.SelectionChangeCommitted += BocFilter_ItemSelected;
+                    lblCount.Text = GetCount(fund).ToString();
+                    lblTotal.Text = GetTotal(fund).ToString("c");
+                }
 
+                void BocFilter_ItemSelected(object sender, EventArgs e)
+                {
+                    var boc = sender as MetroSetComboBox;
+                    var filter = boc.SelectedItem.ToString();
+                    BindingSource.Filter = $"FundName = '{FundFilter.SelectedItem.ToString()}' AND BocName = '{filter}'";
+                    lblCount.Text = GetCount(FundFilter.SelectedItem.ToString(),filter).ToString();
+                    lblTotal.Text = GetTotal(FundFilter.SelectedItem.ToString(), filter).ToString("c");
+                }
+
+                decimal GetTotal(string filter)
+                { 
+                    return Data.BudgetTable.AsEnumerable().Where(p=>p.Field<string>("FundName").
+                        Equals(filter)).Select(p=>p.Field<decimal>("Amount")).Sum();
+                }
+
+                decimal GetTotal(string filter1, string filter2)
+                {
+                    return Data.BudgetTable.AsEnumerable().Where(p => p.Field<string>("FundName").Equals(filter1))
+                        .Where(p=>p.Field<string>("BocName").Equals(filter2))
+                        .Select(p => p.Field<decimal>("Amount")).Sum();
+                }
+
+                decimal GetCount(string filter)
+                {
+                    return Data.BudgetTable.AsEnumerable().Where(p => p.Field<string>("FundName").
+
+                        Equals(filter)).Select(p => p.Field<decimal>("Amount")>0).Count();
+                }
+
+                decimal GetCount(string filter1, string filter2)
+                {
+                    return Data.BudgetTable.AsEnumerable().Where(p => p.Field<string>("FundName").Equals(filter1))
+                       .Where(p => p.Field<string>("BocName").Equals(filter2))
+                       .Select(p => p.Field<decimal>("Amount")).Count();
                 }
 
             }
