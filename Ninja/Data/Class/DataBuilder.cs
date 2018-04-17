@@ -64,6 +64,20 @@ namespace Budget
 
 
                 //Methods
+                public static DataTable FilterTable(DataTable table, PrcFilter prcfilter, string filter)
+                {
+                    try
+                    {
+                        return table.AsEnumerable().Where(p => p.Field<string>(prcfilter.ToString()).Equals(filter))
+                            .Select(p => p).CopyToDataTable();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
+                        return null;
+                    }
+                }
+
                 public decimal GetAverage(DataTable table)
                 {
                     try

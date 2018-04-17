@@ -23,20 +23,6 @@ namespace Budget
                 public SummaryForm()
                 {
                     InitializeComponent();
-                    D6 = new DivisionAuthority();
-                    Table = D6.Data.BudgetTable;
-                    ProgramElements = D6.Data.ProgramElements;
-                    RcCodes = ProgramElements["RC"];
-                    BindingSource.DataSource = D6.Data.BudgetTable;
-                    Text = $"P7 Status of Funds";
-                    GetFilterButtons();
-                    FundChart = GetSummaryChart(FundChart, Data, PrcFilter.Fund, "R6 Division Summary");
-                    BocChart = GetSummaryChart(BocChart, Data, PrcFilter.BOC, "R6 Division Summary");
-                    NpmChart = GetSummaryChart(NpmChart, Data, PrcFilter.NPM, "R6 Division Summary");
-                    GoalChart = GetSummaryChart(GoalChart, Data, PrcFilter.GoalName, "R6 Division Summary");
-                    ObjectiveChart = GetSummaryChart(ObjectiveChart, Data, PrcFilter.Objective, "R6 Division Summary");
-                    AreaChart = GetSummaryChart(AreaChart, Data, PrcFilter.ProgramArea, "R6 Division Summary");
-                    ProjectChart = GetSummaryChart(ProjectChart, Data, PrcFilter.ProgramProjectCode, "R6 Division Summary");
                 }
 
                 public SummaryForm(Source source)
@@ -48,12 +34,12 @@ namespace Budget
                         BudgetMetric = new DataMetric(Data);
                         DataSet = Data.BudgetData;
                         Title = "R6 Funding";
-                        Table = BudgetMetric.Table;
+                        PopulateCharts(Title);
                         ProgramElements = BudgetMetric.ProgramElements;
                         BindingSource.DataSource = BudgetMetric.Table;
                         GetFilterButtons();
                         Text = "Region 6 Summary";
-                        DatabaseTab.TabVisible = false;
+                        ProjectTab.TabVisible = false;
                     }
                     if (source == Source.P8)
                     {
@@ -61,20 +47,12 @@ namespace Budget
                         BudgetMetric = new DataMetric(Data);
                         DataSet = Data.BudgetData;
                         Title = "Division Funding";
-                        Table = BudgetMetric.Table;
+                        PopulateCharts(Title);
                         ProgramElements = BudgetMetric.ProgramElements;
                         RcCodes = Data.ProgramElements["RC"];
                         GetFilterButtons();
                         Text = "R6 Division Summary";
-                        DatabaseTab.TabVisible = false;
                     }
-                    FundChart = GetSummaryChart(FundChart, Data, PrcFilter.Fund, string.Format("{0} by Appropriation", Title));
-                    BocChart = GetSummaryChart(BocChart, Data, PrcFilter.BocName, string.Format("{0} by Object Class", Title));
-                    NpmChart = GetSummaryChart(NpmChart, Data, PrcFilter.NPM, string.Format("{0} by NPM", Title));
-                    GoalChart = GetSummaryChart(GoalChart, Data, PrcFilter.GoalName, string.Format("{0} by Agency Goal", Title));
-                    ObjectiveChart = GetSummaryChart(ObjectiveChart, Data, PrcFilter.Objective, string.Format("{0} by Strategic Objective", Title));
-                    AreaChart = GetSummaryChart(AreaChart, Data, PrcFilter.ProgramArea, string.Format("{0} by Program Area", Title));
-                    ProjectChart = GetSummaryChart(ProjectChart, Data, PrcFilter.ProgramProjectCode, string.Format("{0} by Program Project", Title));
                 }
 
                 public SummaryForm(string rc)
@@ -82,32 +60,14 @@ namespace Budget
                     InitializeComponent();
                     DatabaseTab.TabVisible = true;
                     D6 = new DivisionAuthority(rc);
-                    Data = D6.Data;
-                    DataSet = D6.BudgetData;
-                    Table = D6.Table;
+                    Data = new DataBuilder(Source.P8, new Dictionary<string, object> { ["RC"] = rc });
+                    DataSet = Data.BudgetData;
                     BudgetMetric = new DataMetric(Data);
                     ProgramElements = BudgetMetric.ProgramElements;
                     GetFilterButtons();
                     Text = $"{D6.Org.Name} Summary";
-                    BindingSource.DataSource = Data.BudgetTable;
-                    Navigator.BindingSource = BindingSource;
-                    Grid.DataSource = BindingSource;
-                    GetGridColumns(Grid);
-                    FundChart = GetSummaryChart(FundChart, D6.Data, PrcFilter.Fund, string.Format("{0} by Appropriation", D6.RC.Name));
-                    BocChart = GetSummaryChart(BocChart, Data, PrcFilter.BOC, string.Format("{0} by Object Class", D6.RC.Name));
-                    NpmChart = GetSummaryChart(NpmChart, Data, PrcFilter.NPM, string.Format("{0} by HQ Program", D6.RC.Name));
-                    GoalChart = GetSummaryChart(GoalChart, Data, PrcFilter.GoalName, string.Format("{0} by Agency Goal", D6.RC.Name));
-                    ObjectiveChart = GetSummaryChart(ObjectiveChart, Data, PrcFilter.ObjectiveName, string.Format("{0} by Strategic Objective", D6.RC.Name));
-                    AreaChart = GetSummaryChart(AreaChart, Data, PrcFilter.ProgramArea, string.Format("{0} by Program Area", D6.RC.Name));
-                    ProjectChart = GetSummaryChart(ProjectChart, Data, PrcFilter.ProgramProjectCode, string.Format("{0} by Program Project", D6.RC.Name));
-                    GetFundFilterItems();
-                    GetTextBoxBindings();
-                    lblTotal.Text = Data.GetTotal(Table).ToString("c");
-                    lblCount.Text = Data.GetCount(Table).ToString();
-                    FundFilter.SelectionChangeCommitted += FundFilter_ItemSelected;
-                    BocFilter.SelectionChangeCommitted += BocFilter_ItemSelected;
+                    Title = D6.RC.Name;
                 }
-
 
                 //Properties
                 public IBudgetAuthority Authority { get; set; }
@@ -115,45 +75,71 @@ namespace Budget
                 public DataMetric BudgetMetric { get; }
                 public DataSet DataSet { get; }
                 public string Title { get; }
+                public PrcFilter ButtonFilter { get; set; }
                 private TabPageAdv[] Tab { get; set; }
                 public decimal[] Metrics { get; }
                 public Dictionary<string, string[]> ProgramElements { get; }
                 public DivisionAuthority D6 { get; }
                 public RegionalAuthority R6 { get; }
                 public DataTable Table { get; }
+                public DataTable Base { get; set; }
                 public string[]RcCodes { get; }
                 internal RadioButton[] RadioButton { get; set; }
                 internal ChartControl[] Chart { get; set; }
 
-
                 //Methods
-
                 private void Form_Load(object sender, EventArgs e)
                 {
-                    var title = $"R6 Funding" ;
-                    SummaryTabControl.SelectedIndexChanged += TabControl_SelectedIndexChanged;
+                    try
+                    {
+                        BindingSource.DataSource = Data.BudgetTable;
+                        Navigator.BindingSource = BindingSource;
+                        Grid.DataSource = BindingSource;
+                        GetGridColumns(Grid);
+                        PopulateCharts(Title);
+                        GetFundFilterItems();
+                        GetTextBoxBindings();
+                        lblTotal.Text = Data.GetTotal(Data.BudgetTable).ToString("c");
+                        lblCount.Text = Data.GetCount(Data.BudgetTable).ToString();
+                        FundFilter.SelectionChangeCommitted += FundFilter_ItemSelected;
+                        BocFilter.SelectionChangeCommitted += BocFilter_ItemSelected;
+                        BocFilter.SelectionChangeCommitted += BocFilter_ItemSelected;
+                    }
+                    catch (Exception ex)
+                    {
+
+                        MessageBox.Show(ex.Message + ex.StackTrace);
+                    }
                 }
 
                 private void GetMetroSetButtons(FlowLayoutPanel panel, string[] list)
                 {
-                    panel.Controls.Clear();
-                    foreach (string f in list)
+                    try
                     {
-                        var b = new MetroSetButton();
-                        b.Text = f;
-                        b.Font = new Font("Segoe UI", 8f);
-                        b.NormalColor = Color.Black;
-                        b.NormalTextColor = SystemColors.MenuHighlight;
-                        b.NormalBorderColor = Color.Black;
-                        b.HoverBorderColor = Color.SteelBlue;
-                        b.HoverColor = Color.SteelBlue;
-                        b.HoverTextColor = Color.AntiqueWhite;
-                        b.Size = new Size(150, 30);
-                        b.Margin = new Padding(3);
-                        b.Padding = new Padding(1);
-                        panel.Controls.Add(b);
-                        panel.AutoSize = true;
-                        b.Tag = f;
+                        panel.Controls.Clear();
+                        foreach (string f in list)
+                        {
+                            var b = new MetroSetButton();
+                            b.Text = f;
+                            b.Font = new Font("Segoe UI", 8f);
+                            b.NormalColor = Color.Black;
+                            b.NormalTextColor = SystemColors.MenuHighlight;
+                            b.NormalBorderColor = Color.Black;
+                            b.HoverBorderColor = Color.SteelBlue;
+                            b.HoverColor = Color.SteelBlue;
+                            b.HoverTextColor = Color.AntiqueWhite;
+                            b.Size = new Size(150, 30);
+                            b.Margin = new Padding(3);
+                            b.Padding = new Padding(1);
+                            panel.Controls.Add(b);
+                            panel.AutoSize = true;
+                            b.Tag = f;
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+
+                        MessageBox.Show(ex.Message + ex.StackTrace);
                     }
                 }
 
@@ -177,57 +163,34 @@ namespace Budget
                     }
                 }
 
-                private void TabControl_SelectedIndexChanged(object sender, EventArgs e)
+                ChartControl GetSummaryChart(ChartControl chart, DataBuilder data, PrcFilter filter, string title)
                 {
-                    int tabindex = SummaryTabControl.TabCount;
-                    int tc = SummaryTabControl.SelectedIndex;
-                    switch (tc)
+                    try
                     {
-                        case 0:
-                            Text = $"Funding by Appropriation";
-                            break;
+                        var fd = new BudgetChart(chart, data, filter, Statistic.Total);
+                        fd.GetAxisTitle(chart, new string[] { title });
+                        return fd.Activate();
+                    }
+                    catch (Exception ex)
+                    {
 
-                        case 1:
-                            Text = $"Funding by Budget Object Class";
-                            break;
-
-                        case 2:
-                            Text = $"Funding by National Program";
-                            break;
-
-                        case 3:
-                            Text = $"Funding by Agency Goal";
-                            break;
-
-                        case 4:
-                            Text = $"Funding by Strategic Plan Objective";
-                            break;
-
-                        case 5:
-                            Text = $"Funding by Division";
-                            break;
-
-                        case 6:
-                            Text = $"Funding by Program Area";
-                            break;
-
-                        case 7:
-                            Text = $"Funding by Program Project";
-                            break;
-                        default:
-                            Text = $"Funding Summary";
-                            break;
+                        MessageBox.Show(ex.Message + ex.StackTrace);
+                        return null;
                     }
                 }
 
-                ChartControl GetSummaryChart(ChartControl chart, DataBuilder data, PrcFilter filter, string title)
+                void PopulateCharts(string title)
                 {
-                    var fd = new BudgetChart(chart, data, filter, Statistic.Total);
-                    fd.GetAxisTitle(chart, new string[] { title });
-                    return fd.Activate();
+                    FundChart = GetSummaryChart(FundChart, Data, PrcFilter.Fund, string.Format("{0} by Appropriation", title));
+                    BocChart = GetSummaryChart(BocChart, Data, PrcFilter.BOC, string.Format("{0} by Object Class", title));
+                    NpmChart = GetSummaryChart(NpmChart, Data, PrcFilter.NPM, string.Format("{0} by HQ Program", title));
+                    GoalChart = GetSummaryChart(GoalChart, Data, PrcFilter.GoalName, string.Format("{0} by Agency Goal", title));
+                    ObjectiveChart = GetSummaryChart(ObjectiveChart, Data, PrcFilter.ObjectiveName, string.Format("{0} by Strategic Objective", title));
+                    AreaChart = GetSummaryChart(AreaChart, Data, PrcFilter.ProgramArea, string.Format("{0} by Program Area", title));
+                    ProjectChart = GetSummaryChart(ProjectChart, Data, PrcFilter.ProgramProjectCode, string.Format("{0} by Program Project", title));
                 }
 
-                Dictionary<string, string> GetFilterCategories()
+                Dictionary<string, string> GetRadioButtonFilters()
                 {
                     try
                     {
@@ -250,64 +213,77 @@ namespace Budget
                     }
                 }
 
-                RadioButton[] GetRadioButtonFiterArray()
+                void GetRadioButtonFiterArray(PrcFilter filter)
                 {
-                    try
-                    {
-                        var flowpanel = new FlowLayoutPanel();
-                        flowpanel.Location = new Point(351, 3);
-                        flowpanel.Size = new Size(778, 35);
-                        flowpanel.ForeColor = SystemColors.MenuHighlight;
-                        var filters = GetFilterCategories();
-                        var array = new RadioButton[filters.Count];
-                        var keys = filters.Keys.ToArray();
-                        var vals = filters.Values.ToArray();
-                        for (int i = 0; i < filters.Count; i++)
-                        {
-                            array[i] = new RadioButton();
-                            array[i].Text = keys[i];
-                            array[i].Tag = vals[i];
-                            array[i].CheckedChanged += RadioButtonFilter_Click;
-                            flowpanel.Controls.Add(array[i]);
-                        }
-                        Controls.Add(flowpanel);
-                        flowpanel.Visible = true;
-                        return array;
-                    }
-                    catch (Exception e)
-                    {
-
-                        MessageBox.Show(e.Message + e.StackTrace);
-                        return null;
-                    }
+                   
                 }
                  
                 void RadioButtonFilter_Click(object sender, EventArgs e)
                 {
-                    var rb = sender as RadioButton;
-                    var filter = rb.Tag.ToString();
+                    try
+                    {
+                        var rb = sender as RadioButton;
+                        var filter = rb.Tag.ToString();
+                    }
+                    catch (Exception ex)
+                    {
+
+                        MessageBox.Show(ex.Message + ex.StackTrace);
+                    }
                 }
 
                 private void GetGridColumns(DataGridView dgv)
                 {
-                    foreach (DataGridViewColumn dc in dgv.Columns)
-                        dc.Visible = false;
-                    dgv.Columns[0].Visible = true;
-                    dgv.Columns[3].Visible = true;
-                    dgv.Columns[4].Visible = true;
-                    dgv.Columns[5].Visible = true;
-                    dgv.Columns[6].Visible = true;
-                    dgv.Columns[8].Visible = true;
-                    dgv.Columns[10].Visible = true;
-                    dgv.Columns[11].Visible = true;
-                    dgv.Columns[12].Visible = true;
+                    try
+                    {
+                        foreach (DataGridViewColumn dc in dgv.Columns)
+                            dc.Visible = false;
+                        dgv.Columns[0].Visible = true;
+                        dgv.Columns[3].Visible = true;
+                        dgv.Columns[4].Visible = true;
+                        dgv.Columns[5].Visible = true;
+                        dgv.Columns[6].Visible = true;
+                        dgv.Columns[8].Visible = true;
+                        dgv.Columns[10].Visible = true;
+                        dgv.Columns[11].Visible = true;
+                        dgv.Columns[12].Visible = true;
+                    }
+                    catch (Exception ex)
+                    {
+
+                        MessageBox.Show(ex.Message + ex.StackTrace);
+                    }
                 }
 
                 void GetFundFilterItems()
                 {
-                    var item = Data.ProgramElements["FundName"];
-                    foreach (string i in item)
-                        FundFilter.Items.Add(i);
+                    try
+                    {
+                        var item = Data.ProgramElements["FundName"];
+                        foreach (string i in item)
+                            FundFilter.Items.Add(i);
+                    }
+                    catch (Exception ex)
+                    {
+
+                        MessageBox.Show(ex.Message + ex.StackTrace);
+                    }
+                }
+
+                void GetBocFilterItems()
+                {
+                    try
+                    {
+                        BocFilter.Items.Clear();
+                        BocFilter.Visible = true;
+                        foreach (string b in ProgramElements[PrcFilter.BocName.ToString()])
+                            BocFilter.Items.Add(b);
+                    }
+                    catch (Exception ex)
+                    {
+
+                        MessageBox.Show(ex.Message + ex.StackTrace);
+                    }
                 }
 
                 void GetTextBoxBindings()
@@ -332,56 +308,119 @@ namespace Budget
 
                 void FundFilter_ItemSelected(object sender, EventArgs e)
                 {
-                    BocFilter.Items.Clear();
-                    var filter = sender as MetroSetComboBox;
-                    FundFilter.Tag = filter;
-                    var fund = filter.SelectedItem.ToString();
-                    BindingSource.Filter = $"FundName = '{fund}'";
-                    var boc = ProgramElements[PrcFilter.BocName.ToString()];
-                    foreach (string b in boc)
-                        BocFilter.Items.Add(b);
-                    BocFilter.Visible = true;
-                    BocFilter.SelectionChangeCommitted += BocFilter_ItemSelected;
-                    lblCount.Text = GetCount(fund).ToString();
-                    lblTotal.Text = GetTotal(fund).ToString("c");
+                    try
+                    {
+                        var filter = sender as MetroSetComboBox;
+                        FundFilter.Tag = filter;
+                        var fund = filter.SelectedItem.ToString();
+                        GetBocFilterItems();
+                        BindingSource.Filter = $"FundName = '{FundFilter.SelectedItem.ToString()}'";
+                        lblCount.Text = GetCount(fund).ToString();
+                        lblTotal.Text = GetTotal(fund).ToString("c");
+                        GetBocFilterItems();
+                    }
+                    catch (Exception ex)
+                    {
+
+                        MessageBox.Show(ex.Message + ex.StackTrace);
+                    }
+                }
+
+                void GetBindingSourceFilter()
+                {
+                    try
+                    {
+                        if (FundFilter.SelectedItem.ToString() != null)
+                        {
+
+                            BindingSource.Filter = $"FundName = '{FundFilter.SelectedItem.ToString()}' AND BocName = '{BocFilter.SelectedItem.ToString()}'";
+                        }
+                        BindingSource.Filter = $"FundName = '{BocFilter.SelectedItem.ToString()}'";
+                    }
+                    catch (Exception ex)
+                    {
+
+                        MessageBox.Show(ex.Message + ex.StackTrace);
+                    }
                 }
 
                 void BocFilter_ItemSelected(object sender, EventArgs e)
                 {
-                    var boc = sender as MetroSetComboBox;
-                    var filter = boc.SelectedItem.ToString();
-                    BindingSource.Filter = $"FundName = '{FundFilter.SelectedItem.ToString()}' AND BocName = '{filter}'";
-                    lblCount.Text = GetCount(FundFilter.SelectedItem.ToString(),filter).ToString();
-                    lblTotal.Text = GetTotal(FundFilter.SelectedItem.ToString(), filter).ToString("c");
+                    try
+                    {
+                        var boc = sender as MetroSetComboBox;
+                        var filter = boc.SelectedItem.ToString();
+                        BindingSource.Filter = $"FundName = '{FundFilter.SelectedItem.ToString()}' AND BocName = '{BocFilter.SelectedItem.ToString()}'";
+                        lblTotal.Text = GetTotal(FundFilter.SelectedItem.ToString(), filter).ToString("c");
+                        lblCount.Text = GetCount(FundFilter.SelectedItem.ToString(), filter).ToString();
+                    }
+                    catch (Exception ex)
+                    {
+
+                        MessageBox.Show(ex.Message + ex.StackTrace);
+                    }
                 }
 
                 decimal GetTotal(string filter)
-                { 
-                    return Data.BudgetTable.AsEnumerable().Where(p=>p.Field<string>("FundName").
-                        Equals(filter)).Select(p=>p.Field<decimal>("Amount")).Sum();
+                {
+                    try
+                    {
+                        return Data.BudgetTable.AsEnumerable().Where(p => p.Field<string>("FundName").
+                     Equals(filter)).Select(p => p.Field<decimal>("Amount")).Sum();
+                    }
+                    catch (Exception ex)
+                    {
+
+                        MessageBox.Show(ex.Message + ex.StackTrace);
+                        return -1;
+                    }
                 }
 
                 decimal GetTotal(string filter1, string filter2)
                 {
-                    return Data.BudgetTable.AsEnumerable().Where(p => p.Field<string>("FundName").Equals(filter1))
-                        .Where(p=>p.Field<string>("BocName").Equals(filter2))
-                        .Select(p => p.Field<decimal>("Amount")).Sum();
+                    try
+                    {
+                        return Data.BudgetTable.AsEnumerable().Where(p => p.Field<string>("FundName").Equals(filter1))
+                    .Where(p => p.Field<string>("BocName").Equals(filter2))
+                    .Select(p => p.Field<decimal>("Amount")).Sum();
+                    }
+                    catch (Exception ex)
+                    {
+
+                        MessageBox.Show(ex.Message + ex.StackTrace);
+                        return -1;
+                    }
                 }
 
                 decimal GetCount(string filter)
                 {
-                    return Data.BudgetTable.AsEnumerable().Where(p => p.Field<string>("FundName").
+                    try
+                    {
+                        return Data.BudgetTable.AsEnumerable().Where(p => p.Field<string>("FundName").
+                    Equals(filter)).Select(p => p.Field<decimal>("Amount") > 0).Count();
+                    }
+                    catch (Exception ex)
+                    {
 
-                        Equals(filter)).Select(p => p.Field<decimal>("Amount")>0).Count();
+                        MessageBox.Show(ex.Message + ex.StackTrace);
+                        return -1;
+                    }
                 }
 
                 decimal GetCount(string filter1, string filter2)
                 {
-                    return Data.BudgetTable.AsEnumerable().Where(p => p.Field<string>("FundName").Equals(filter1))
-                       .Where(p => p.Field<string>("BocName").Equals(filter2))
-                       .Select(p => p.Field<decimal>("Amount")).Count();
-                }
+                    try
+                    {
+                        return Data.BudgetTable.AsEnumerable().Where(p => p.Field<string>("FundName").Equals(filter1))
+                           .Where(p => p.Field<string>("BocName").Equals(filter2)).Select(p => p.Field<decimal>("Amount")).Count();
+                    }
+                    catch (Exception ex)
+                    {
 
+                        MessageBox.Show(ex.Message + ex.StackTrace);
+                        return -1;
+                    }
+                }
             }
         }
     }

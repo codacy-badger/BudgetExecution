@@ -65,7 +65,7 @@ namespace Budget
                 public static string FiscalYear { get; set; } = "2018";
                 public Org Org { get; }
                 public RC RC { get; }
-                public DataBuilder Data { get; }
+                public DataBuilder Data { get; set; }
                 public DataMetric BudgetMetric { get; }
                 public DataSet BudgetData { get; }
                 public DataTable Table { get; }
