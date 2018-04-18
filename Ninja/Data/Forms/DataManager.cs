@@ -25,7 +25,7 @@ namespace Budget
                     Metric = new DataMetric(Data);
                     Table = Data.BudgetTable;
                     Ninja = new FormData(Data, BindingSource, Grid, Navigator);
-                    Element = Ninja.GetProgramElements(Table);
+                    ProgramElements = Ninja.GetProgramElements(Table);
                     PrcChart = new BudgetChart(PrcChart, Data, PrcFilter.FundName, Statistic.Total).Activate();
                     GetGridSelectedRowValues();
                 }
@@ -33,7 +33,7 @@ namespace Budget
                 //Properties
                 public DataBuilder Data { get; }
                 public DataMetric Metric { get; }
-                public Dictionary<string, string[]> Element { get; set; }
+                public Dictionary<string, string[]> ProgramElements { get; set; }
                 public FormData Ninja { get; set; }
                 public DataTable Table { get; set; }
                 public decimal Total { get; }
@@ -51,9 +51,6 @@ namespace Budget
                         return null;
                     }
                 }
-
-                public Dictionary<string, string[]> ProgramElements { get; set; }
-
                 public Tuple<DataTable, PRC[], decimal, int> GetData(DataTable table, string column, string filter)
                 {
                     try
@@ -69,7 +66,6 @@ namespace Budget
                         return null;
                     }
                 }
-
                 public Dictionary<string, decimal> GetData(DataTable table, string[] filters, string column)
                 {
                     try
@@ -87,7 +83,6 @@ namespace Budget
                         return null;
                     }
                 }
-
                 public Dictionary<string, decimal[]> GetMetrics(DataTable table, string[] list, string column)
                 {
                     try
@@ -110,7 +105,6 @@ namespace Budget
                         return null;
                     }
                 }
-
                 public DataTable GetTable(DataTable table, string column, string filter)
                 {
                     try
@@ -123,7 +117,6 @@ namespace Budget
                         return null;
                     }
                 }
-
                 public decimal GetTotal(DataTable table)
                 {
                     try
@@ -136,7 +129,6 @@ namespace Budget
                         return -1M;
                     }
                 }
-
                 private void Form_Load(object sender, EventArgs e)
                 {
                     try
@@ -151,7 +143,6 @@ namespace Budget
                         MessageBox.Show(ex.Message + ex.StackTrace);
                     }
                 }
-
                 private void GetCalculatorValue(DataGridView gridrow)
                 {
                     try
@@ -165,7 +156,6 @@ namespace Budget
                         MessageBox.Show(ex.Message + ex.StackTrace);
                     }
                 }
-
                 private void GetGridSelectedRowValues()
                 {
                     try
@@ -185,7 +175,6 @@ namespace Budget
                         MessageBox.Show(ex.Message + ex.StackTrace);
                     }
                 }
-
                 private void GridRow_DoubleClick(object sender, EventArgs e)
                 {
                     try
@@ -199,13 +188,10 @@ namespace Budget
                         MessageBox.Show(ex.Message + ex.StackTrace);
                     }
                 }
-
-
                 private void UpdateDataChart(object sender, EventArgs e)
                 {
                    
                 }
-
                 private void UpdateGridSelectedRowValues(object sender, EventArgs e)
                 {
                     try
@@ -224,8 +210,6 @@ namespace Budget
                         MessageBox.Show(ex.Message + ex.StackTrace);
                     }
                 }
-
-
                 private void GetGridColumns(DataGridView dgv)
                 {
                     foreach (DataGridViewColumn dc in dgv.Columns)
@@ -240,14 +224,12 @@ namespace Budget
                     dgv.Columns[11].Visible = true;
                     dgv.Columns[12].Visible = true;
                 }
-
                 void GetFundFilterItems()
                 {
                     var item = Data.ProgramElements["FundName"];
                     foreach (string i in item)
                         FundFilter.Items.Add(i);
                 }
-
                 void FundFilter_ItemSelected(object sender, EventArgs e)
                 {
                     BocFilter.Items.Clear();
@@ -261,7 +243,6 @@ namespace Budget
                     BocFilter.Visible = true;
                     BocFilter.SelectionChangeCommitted += BocFilter_ItemSelected;
                 }
-
                 void BocFilter_ItemSelected(object sender, EventArgs e)
                 {
                     var boc = sender as MetroSetComboBox;

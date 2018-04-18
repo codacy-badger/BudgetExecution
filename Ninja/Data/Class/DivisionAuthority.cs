@@ -98,7 +98,6 @@ namespace Budget
                         return -1M;
                     }
                 }
-
                 public string[] GetCodes(DataTable table, string column)
                 {
                     try
@@ -111,7 +110,6 @@ namespace Budget
                         return null;
                     }
                 }
-
                 public int GetCount(DataTable table)
                 {
                     try
@@ -124,7 +122,6 @@ namespace Budget
                         return -1;
                     }
                 }
-
                 public Dictionary<string, string[]> GetProgramElements(DataTable table)
                 {
                     try
@@ -147,7 +144,6 @@ namespace Budget
                         return null;
                     }
                 }
-
                 public Tuple<DataTable, PRC[], decimal, int> GetDataValues(DataTable table, string column, string filter)
                 {
                     try
@@ -161,7 +157,6 @@ namespace Budget
                         return null;
                     }
                 }
-
                 public decimal[] GetMetrics(DataTable table)
                 {
                     try
@@ -175,7 +170,6 @@ namespace Budget
                         return null;
                     }
                 }            
-
                 public PRC[] GetPrcArray(DataTable table)
                 {
                     try
@@ -188,7 +182,6 @@ namespace Budget
                         return null;
                     }
                 }
-
                 public decimal GetTotal(DataTable table)
                 {
                     try
@@ -201,7 +194,6 @@ namespace Budget
                         return -1M;
                     }
                 }
-
                 public DataTable FilterTable(DataTable table, string column, string filter)
                 {
                     try
@@ -214,12 +206,10 @@ namespace Budget
                         return null;
                     }
                 }
-
                 internal decimal GetRatio(decimal t1, decimal t2)
                 {
                     return t1 / t2;
                 }
-
                 internal Dictionary<string, decimal> GetRcInfo(DataTable table)
                 {
                     try
@@ -236,7 +226,6 @@ namespace Budget
                         return null;
                     }
                 }
-
                 internal void UpdateAmount(DataRow row, decimal amount2)
                 {
                     try
@@ -253,7 +242,6 @@ namespace Budget
                         MessageBox.Show(e.ToString());
                     }
                 }
-
                 internal void UpdateAmount(Dictionary<string, object> p, decimal amount2)
                 {
                     try
@@ -270,7 +258,6 @@ namespace Budget
                         MessageBox.Show(e.ToString());
                     }
                 }
-
                 internal int VerifyDataRow(DataTable table, Dictionary<string, object> p)
                 {
                     try
@@ -291,7 +278,6 @@ namespace Budget
                         return -1;
                     }
                 }
-
                 internal bool VerifyRow(DataTable table, Dictionary<string, object> p)
                 {
                     try
@@ -310,7 +296,6 @@ namespace Budget
                         return false;
                     }
                 }
-
             }
         }
     }

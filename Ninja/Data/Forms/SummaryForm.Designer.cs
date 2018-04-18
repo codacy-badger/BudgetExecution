@@ -1818,7 +1818,7 @@ namespace Budget
             this.MiniTabControl1.BeforeTouchSize = new System.Drawing.Size(400, 421);
             this.MiniTabControl1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.MiniTabControl1.BorderWidth = 1;
-            this.MiniTabControl1.CloseButtonForeColor = System.Drawing.Color.Empty;
+            this.MiniTabControl1.CloseButtonForeColor = System.Drawing.Color.Black;
             this.MiniTabControl1.CloseButtonHoverForeColor = System.Drawing.Color.Black;
             this.MiniTabControl1.CloseButtonPressedForeColor = System.Drawing.Color.Black;
             this.MiniTabControl1.Controls.Add(this.tabPageAdv2);
@@ -1857,10 +1857,10 @@ namespace Budget
             this.tabPageAdv2.Controls.Add(this.Org);
             this.tabPageAdv2.Image = null;
             this.tabPageAdv2.ImageSize = new System.Drawing.Size(16, 16);
-            this.tabPageAdv2.Location = new System.Drawing.Point(0, -1);
+            this.tabPageAdv2.Location = new System.Drawing.Point(0, 33);
             this.tabPageAdv2.Name = "tabPageAdv2";
             this.tabPageAdv2.ShowCloseButton = true;
-            this.tabPageAdv2.Size = new System.Drawing.Size(400, 422);
+            this.tabPageAdv2.Size = new System.Drawing.Size(400, 388);
             this.tabPageAdv2.TabIndex = 4;
             this.tabPageAdv2.Text = "tabPageAdv2";
             this.tabPageAdv2.ThemesEnabled = false;
@@ -1898,7 +1898,7 @@ namespace Budget
             // 
             this.metroSetLabel11.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.metroSetLabel11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.metroSetLabel11.Location = new System.Drawing.Point(244, 161);
+            this.metroSetLabel11.Location = new System.Drawing.Point(244, 127);
             this.metroSetLabel11.Name = "metroSetLabel11";
             this.metroSetLabel11.Size = new System.Drawing.Size(62, 23);
             this.metroSetLabel11.Style = MetroSet_UI.Design.Style.Dark;
@@ -1912,7 +1912,7 @@ namespace Budget
             // 
             this.metroSetLabel7.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.metroSetLabel7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.metroSetLabel7.Location = new System.Drawing.Point(111, 161);
+            this.metroSetLabel7.Location = new System.Drawing.Point(111, 127);
             this.metroSetLabel7.Name = "metroSetLabel7";
             this.metroSetLabel7.Size = new System.Drawing.Size(62, 23);
             this.metroSetLabel7.Style = MetroSet_UI.Design.Style.Dark;
@@ -2042,7 +2042,7 @@ namespace Budget
             // 
             this.metroSetLabel6.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.metroSetLabel6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.metroSetLabel6.Location = new System.Drawing.Point(14, 326);
+            this.metroSetLabel6.Location = new System.Drawing.Point(14, 292);
             this.metroSetLabel6.Name = "metroSetLabel6";
             this.metroSetLabel6.Size = new System.Drawing.Size(146, 23);
             this.metroSetLabel6.Style = MetroSet_UI.Design.Style.Dark;
@@ -2056,7 +2056,7 @@ namespace Budget
             // 
             this.metroSetLabel5.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.metroSetLabel5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.metroSetLabel5.Location = new System.Drawing.Point(14, 251);
+            this.metroSetLabel5.Location = new System.Drawing.Point(14, 217);
             this.metroSetLabel5.Name = "metroSetLabel5";
             this.metroSetLabel5.Size = new System.Drawing.Size(94, 23);
             this.metroSetLabel5.Style = MetroSet_UI.Design.Style.Dark;
@@ -2070,7 +2070,7 @@ namespace Budget
             // 
             this.metroSetLabel4.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.metroSetLabel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.metroSetLabel4.Location = new System.Drawing.Point(111, 73);
+            this.metroSetLabel4.Location = new System.Drawing.Point(111, 39);
             this.metroSetLabel4.Name = "metroSetLabel4";
             this.metroSetLabel4.Size = new System.Drawing.Size(62, 23);
             this.metroSetLabel4.Style = MetroSet_UI.Design.Style.Dark;
@@ -2084,7 +2084,7 @@ namespace Budget
             // 
             this.metroSetLabel3.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.metroSetLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.metroSetLabel3.Location = new System.Drawing.Point(14, 161);
+            this.metroSetLabel3.Location = new System.Drawing.Point(14, 127);
             this.metroSetLabel3.Name = "metroSetLabel3";
             this.metroSetLabel3.Size = new System.Drawing.Size(62, 23);
             this.metroSetLabel3.Style = MetroSet_UI.Design.Style.Dark;
@@ -2152,7 +2152,7 @@ namespace Budget
             // 
             this.metroSetLabel10.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.metroSetLabel10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.metroSetLabel10.Location = new System.Drawing.Point(14, 73);
+            this.metroSetLabel10.Location = new System.Drawing.Point(14, 39);
             this.metroSetLabel10.Name = "metroSetLabel10";
             this.metroSetLabel10.Size = new System.Drawing.Size(62, 23);
             this.metroSetLabel10.Style = MetroSet_UI.Design.Style.Dark;
@@ -2191,7 +2191,7 @@ namespace Budget
             // 
             this.metroSetLabel15.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.metroSetLabel15.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.metroSetLabel15.Location = new System.Drawing.Point(244, 73);
+            this.metroSetLabel15.Location = new System.Drawing.Point(244, 39);
             this.metroSetLabel15.Name = "metroSetLabel15";
             this.metroSetLabel15.Size = new System.Drawing.Size(101, 32);
             this.metroSetLabel15.Style = MetroSet_UI.Design.Style.Dark;

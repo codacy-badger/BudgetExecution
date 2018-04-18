@@ -31,28 +31,22 @@ namespace Budget
                     if (source == Source.P7)
                     {
                         Data = new DataBuilder(Source.P7);
-                        BudgetMetric = new DataMetric(Data);
-                        DataSet = Data.BudgetData;
-                        Title = "R6 Funding";
-                        PopulateCharts(Title);
-                        ProgramElements = BudgetMetric.ProgramElements;
-                        BindingSource.DataSource = BudgetMetric.Table;
-                        GetFilterButtons();
                         Text = "Region 6 Summary";
+                        Title = "R6 Funding";
                         ProjectTab.TabVisible = false;
                     }
                     if (source == Source.P8)
                     {
                         Data = new DataBuilder(Source.P8);
-                        BudgetMetric = new DataMetric(Data);
-                        DataSet = Data.BudgetData;
-                        Title = "Division Funding";
-                        PopulateCharts(Title);
-                        ProgramElements = BudgetMetric.ProgramElements;
-                        RcCodes = Data.ProgramElements["RC"];
-                        GetFilterButtons();
                         Text = "R6 Division Summary";
+                        Title = "Division Funding";
                     }
+                    BudgetMetric = new DataMetric(Data);
+                    DataSet = Data.BudgetData;
+                    PopulateCharts(Title);
+                    ProgramElements = BudgetMetric.ProgramElements;
+                    BindingSource.DataSource = BudgetMetric.Table;
+                    GetFilterButtons();
                 }
 
                 public SummaryForm(string rc)
@@ -70,20 +64,17 @@ namespace Budget
                 }
 
                 //Properties
-                public IBudgetAuthority Authority { get; set; }
                 public DataBuilder Data { get; }
                 public DataMetric BudgetMetric { get; }
                 public DataSet DataSet { get; }
                 public string Title { get; }
+                public DataTable Table { get; }
+                public Dictionary<string, string[]> ProgramElements { get; }
+                public decimal[] Metrics { get; }
+                public DivisionAuthority D6 { get; }
                 public PrcFilter ButtonFilter { get; set; }
                 private TabPageAdv[] Tab { get; set; }
-                public decimal[] Metrics { get; }
-                public Dictionary<string, string[]> ProgramElements { get; }
-                public DivisionAuthority D6 { get; }
-                public RegionalAuthority R6 { get; }
-                public DataTable Table { get; }
                 public DataTable Base { get; set; }
-                public string[]RcCodes { get; }
                 internal RadioButton[] RadioButton { get; set; }
                 internal ChartControl[] Chart { get; set; }
 
@@ -111,7 +102,6 @@ namespace Budget
                         MessageBox.Show(ex.Message + ex.StackTrace);
                     }
                 }
-
                 private void GetMetroSetButtons(FlowLayoutPanel panel, string[] list)
                 {
                     try
@@ -142,7 +132,6 @@ namespace Budget
                         MessageBox.Show(ex.Message + ex.StackTrace);
                     }
                 }
-
                 private void GetFilterButtons()
                 {
                     try
@@ -162,7 +151,6 @@ namespace Budget
                         MessageBox.Show(e.Message + e.StackTrace);
                     }
                 }
-
                 ChartControl GetSummaryChart(ChartControl chart, DataBuilder data, PrcFilter filter, string title)
                 {
                     try
@@ -178,7 +166,6 @@ namespace Budget
                         return null;
                     }
                 }
-
                 void PopulateCharts(string title)
                 {
                     FundChart = GetSummaryChart(FundChart, Data, PrcFilter.Fund, string.Format("{0} by Appropriation", title));
@@ -189,49 +176,6 @@ namespace Budget
                     AreaChart = GetSummaryChart(AreaChart, Data, PrcFilter.ProgramArea, string.Format("{0} by Program Area", title));
                     ProjectChart = GetSummaryChart(ProjectChart, Data, PrcFilter.ProgramProjectCode, string.Format("{0} by Program Project", title));
                 }
-
-                Dictionary<string, string> GetRadioButtonFilters()
-                {
-                    try
-                    {
-                        var filters = new Dictionary<string, string>();
-                        filters.Add("Fund", "FundName");
-                        filters.Add("BOC", "BocName");
-                        filters.Add("NPM", "NPM");
-                        filters.Add("Goal", "GoalName");
-                        filters.Add("Objective", "ObjectiveName");
-                        filters.Add("Division", "RC");
-                        filters.Add("Program Area", "ProgramArea");
-                        filters.Add("Program Project", "ProgramProjectCode");
-                        return filters;
-                    }
-                    catch (Exception e)
-                    {
-
-                        MessageBox.Show(e.Message + e.StackTrace);
-                        return null;
-                    }
-                }
-
-                void GetRadioButtonFiterArray(PrcFilter filter)
-                {
-                   
-                }
-                 
-                void RadioButtonFilter_Click(object sender, EventArgs e)
-                {
-                    try
-                    {
-                        var rb = sender as RadioButton;
-                        var filter = rb.Tag.ToString();
-                    }
-                    catch (Exception ex)
-                    {
-
-                        MessageBox.Show(ex.Message + ex.StackTrace);
-                    }
-                }
-
                 private void GetGridColumns(DataGridView dgv)
                 {
                     try
@@ -254,7 +198,6 @@ namespace Budget
                         MessageBox.Show(ex.Message + ex.StackTrace);
                     }
                 }
-
                 void GetFundFilterItems()
                 {
                     try
@@ -269,7 +212,6 @@ namespace Budget
                         MessageBox.Show(ex.Message + ex.StackTrace);
                     }
                 }
-
                 void GetBocFilterItems()
                 {
                     try
@@ -285,7 +227,6 @@ namespace Budget
                         MessageBox.Show(ex.Message + ex.StackTrace);
                     }
                 }
-
                 void GetTextBoxBindings()
                 {
                     try
@@ -305,7 +246,6 @@ namespace Budget
                     }
 
                 }
-
                 void FundFilter_ItemSelected(object sender, EventArgs e)
                 {
                     try
@@ -325,7 +265,6 @@ namespace Budget
                         MessageBox.Show(ex.Message + ex.StackTrace);
                     }
                 }
-
                 void GetBindingSourceFilter()
                 {
                     try
@@ -343,7 +282,6 @@ namespace Budget
                         MessageBox.Show(ex.Message + ex.StackTrace);
                     }
                 }
-
                 void BocFilter_ItemSelected(object sender, EventArgs e)
                 {
                     try
@@ -360,7 +298,6 @@ namespace Budget
                         MessageBox.Show(ex.Message + ex.StackTrace);
                     }
                 }
-
                 decimal GetTotal(string filter)
                 {
                     try
@@ -375,7 +312,6 @@ namespace Budget
                         return -1;
                     }
                 }
-
                 decimal GetTotal(string filter1, string filter2)
                 {
                     try
@@ -391,7 +327,6 @@ namespace Budget
                         return -1;
                     }
                 }
-
                 decimal GetCount(string filter)
                 {
                     try
@@ -406,7 +341,6 @@ namespace Budget
                         return -1;
                     }
                 }
-
                 decimal GetCount(string filter1, string filter2)
                 {
                     try

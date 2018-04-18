@@ -60,7 +60,6 @@ namespace Budget
                     Parameter = GetParameter();
                 }
 
-
                 //Properties
                 public Account Account { get; }
                 public decimal Amount { get; set; }
@@ -87,48 +86,41 @@ namespace Budget
                 public string RPIO { get; set; }
                 private Dictionary<string, object> Data { get; set; }
 
-
                 //Methods
                 public string GetCode()
                 {
                     return Code;
                 }
-
                 public string GetGoal()
                 {
                     var goal = Code.Substring(0, 1).ToCharArray();
                     return goal.ToString();
                 }
-
                 public string GetGoalName(string code)
                 {
                     return Info.GetGoalName(code);
                 }
-
                 public string GetNpmCode()
                 {
                     var npm = Code.Substring(2, 1).ToCharArray();
                     return npm.ToString();
                 }
-
                 public string GetObjective()
                 {
                     return Code.Substring(1, 2);
                 }
-
                 public string GetObjectiveName(string code)
                 {
                     return Info.GetObjectiveName(code);
                 }
-
-                public string[] GetProgramData()
+                public DataRow GetProgramData()
                 {
                     try
                     {
                         var pp = GetProgramProjectCode();
                         var sql = new Dictionary<string, object>();
                         sql.Add("ProgramProjectCode", pp);
-                        string[] p = new DataBuilder(Source.A6, sql).A6Query();
+                        DataRow p = new DataBuilder(Source.A6, sql).BudgetTable.Rows[0];
                         return p;
                     }
                     catch (Exception ex)
@@ -137,17 +129,14 @@ namespace Budget
                         return null;
                     }
                 }
-
                 public string GetProgramProjectCode()
                 {
                     return Code.Substring(5, 2);
                 }
-
                 public override string ToString()
                 {
                     return Account.Code;
                 }
-
                 internal PRC[] GetAllocation(DataTable table)
                 {
                     try
@@ -166,7 +155,6 @@ namespace Budget
                         return null;
                     }
                 }
-
                 internal Dictionary<string, object> GetData()
                 {
                     try
@@ -191,7 +179,6 @@ namespace Budget
                         return null;
                     }
                 }
-
                 internal decimal GetFteAllocation()
                 {
                     if (BOC.Code == "17")
@@ -209,12 +196,10 @@ namespace Budget
                     else
                         return 0.0m;
                 }
-
                 internal Parameter GetParameter()
                 {
                     return new Parameter(BudgetLevel, RPIO, BFY, Fund.Code, Org, RC.Code, BOC.Code, Account.Code);
                 }
-
                 internal decimal Reprogram(decimal amount)
                 {
                     try

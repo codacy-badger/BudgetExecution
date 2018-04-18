@@ -11,8 +11,21 @@ namespace Budget
         {
             public class DocInfo
             {
-                #region Properties
+                //Constructors
+                public DocInfo()
+                {
+                }
 
+                public DocInfo(DivisionAuthority budget)
+                {
+                    DivisionBudget = budget;
+                    ControlNumber = GetControlNumber();
+                    DocumentHeader = GetDocumentHeader();
+                    AccountingInfo = GetAccountingInfo();
+                    SignatureBlock = GetSignatureInfo();
+                }
+
+                //Properties
                 public List<string> AccountingInfo { get; set; }
                 public decimal Awards { get; set; }
                 public List<string> ControlInfo { get; set; }
@@ -31,27 +44,7 @@ namespace Budget
                 public int TimeOffAwards { get; set; }
                 public PRC Training { get; set; }
 
-                #endregion Properties
-
-                #region Constructors
-
-                public DocInfo()
-                {
-                }
-
-                public DocInfo(DivisionAuthority budget)
-                {
-                    DivisionBudget = budget;
-                    ControlNumber = GetControlNumber();
-                    DocumentHeader = GetDocumentHeader();
-                    AccountingInfo = GetAccountingInfo();
-                    SignatureBlock = GetSignatureInfo();
-                }
-
-                #endregion Constructors
-
-                #region Methods
-
+                //Methods
                 internal List<string> GetAccountingInfo()
                 {
                     List<string> footer = new List<string>();
@@ -138,7 +131,7 @@ namespace Budget
                 {
                     try
                     {
-                        return (new DataBuilder(Source.T6).SqlData.Item1.Rows.Count) + 1;
+                        return (new DataBuilder(Source.T6).BudgetTable.Rows.Count) + 1;
                     }
                     catch (Exception ex)
                     {
@@ -156,7 +149,6 @@ namespace Budget
                     return signature;
                 }
 
-                #endregion Methods
             }
         }
     }

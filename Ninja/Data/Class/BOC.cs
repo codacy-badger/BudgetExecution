@@ -6,16 +6,7 @@
         {
             public class BOC
             {
-                #region Properties
-
-                public string Code { get; }
-                public string Name { get; }
-                public decimal Value { get; }
-
-                #endregion Properties
-
-                #region Constructors
-
+                //Constructors
                 public BOC(string code)
                 {
                     Code = code;
@@ -30,10 +21,12 @@
                     Value = amount;
                 }
 
-                #endregion Constructors
+                //Properties
+                public string Code { get; }
+                public string Name { get; }
+                public decimal Value { get; }
 
-                #region Methods
-
+                //Methods
                 public decimal GetValue(PRC prc)
                 {
                     return prc.Amount;
@@ -44,7 +37,6 @@
                     return Code;
                 }
 
-                #endregion Methods
             }
         }
     }

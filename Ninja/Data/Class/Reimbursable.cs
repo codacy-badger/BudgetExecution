@@ -8,23 +8,7 @@ namespace Budget
         {
             public class Reimbursable
             {
-                #region Properties
-
-                public Account Account { get; }
-                public string Agreement { get; }
-                public decimal Amount { get; }
-                public decimal Authority { get; }
-                public decimal Available { get; }
-                public string BFY { get; }
-                public string Code { get; }
-                public DataBuilder Data { get; }
-                public Fund Fund { get; }
-                public Org Org { get; }
-
-                #endregion Properties
-
-                #region Constructors
-
+                //Constructors
                 public Reimbursable()
                 {
                 }
@@ -56,7 +40,17 @@ namespace Budget
                     Available = decimal.Parse(dr["Available"].ToString());
                 }
 
-                #endregion Constructors
+                //Properties
+                public Account Account { get; }
+                public string Agreement { get; }
+                public decimal Amount { get; }
+                public decimal Authority { get; }
+                public decimal Available { get; }
+                public string BFY { get; }
+                public string Code { get; }
+                public DataBuilder Data { get; }
+                public Fund Fund { get; }
+                public Org Org { get; }
             }
         }
     }

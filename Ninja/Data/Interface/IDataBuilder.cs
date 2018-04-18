@@ -15,7 +15,6 @@ namespace Budget
                 DataTable BudgetTable { get; }
                 DataRow[] Records { get; }
                 PRC[] Accounts { get; }
-                Tuple<DataTable, DataRow[], decimal, int> SqlData { get; }
 
                 decimal GetAverage(DataTable table);
 
@@ -26,8 +25,6 @@ namespace Budget
                 decimal[] GetMetrics(DataTable table);
 
                 DataRow[] GetRecords(DataTable table);
-
-                Tuple<DataTable, DataRow[], decimal, int> GetSqlData();
 
                 decimal GetTotal(DataTable table);
 

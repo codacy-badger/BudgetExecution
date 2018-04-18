@@ -65,8 +65,8 @@ namespace Budget
                 }
 
                 //Properties
-                public ChartControl Chart { get; set; }
-                public DataBuilder Data { get; set; }
+                public ChartControl Chart { get; }
+                public DataBuilder Data { get; }
                 public DataMetric Metric { get; set; }
                 public DataTable Table { get; set; }
                 public Dictionary<string, double> InputTotals { get; set; }
@@ -83,7 +83,7 @@ namespace Budget
                 public Dictionary<string, double> DataTotals { get; set; }
                 public Dictionary<string, double[]> DataMetrics { get; set; }
                 public ChartLegend Legend { get; set; }
-                double Total { get; set; }
+                double Total { get;}
 
                 //Methods
                 internal ChartSeries GetSeriesTotals(Dictionary<string, double> data)
@@ -103,8 +103,7 @@ namespace Budget
                         MessageBox.Show(e.Message + e.StackTrace);
                         return null;
                     }
-                }
-                
+                }               
                 Dictionary<string, double> GetSingleValue(Dictionary<string, double[]> data, Statistic value)
                 {
                     try
@@ -123,7 +122,6 @@ namespace Budget
                         return null;
                     }
                 }
-
                 ChartSeries GetTotalSeries(KeyValuePair<string, double[]> data)
                 {
                     try
@@ -140,7 +138,6 @@ namespace Budget
                         return null;
                     }
                 }
-
                 ChartSeries GetAccountSeries(KeyValuePair<string, double[]> data)
                 {
                     try
@@ -157,7 +154,6 @@ namespace Budget
                         return null;
                     }
                 }
-
                 ChartSeries GetAverageSeries(KeyValuePair<string, double[]> data)
                 {
                     try
@@ -173,7 +169,6 @@ namespace Budget
                         return null;
                     }
                 }
-
                 ChartSeries GetRatioSeries(KeyValuePair<string, double[]> data)
                 {
                     try
@@ -191,7 +186,6 @@ namespace Budget
                         return null;
                     }
                 }
-
                 internal ChartDataBindModel GetDataBinding(Dictionary<string, double> data, PrcFilter filter)
                 {
                     try
@@ -212,22 +206,18 @@ namespace Budget
                         return null;
                     }
                 }
-
                 internal int[] GetDimensions(params int[] a)
                 {
                     return new int[] { 2, 250, -10 };
                 }
-
                 internal ChartControl Activate()
                 {
                     return Chart;
                 }
-
                 void Get3DMode(ChartControl chart)
                 {
                     try
                     {
-                        Chart = chart;
                         Chart.ChartArea.Series3D = true;
                         Chart.RealMode3D = true;
                         Chart.Style3D = true;
@@ -241,12 +231,10 @@ namespace Budget
                         MessageBox.Show(e.Message + e.StackTrace);
                     }
                 }
-
                 internal void GetAxisTitle(ChartControl chart, string[] title)
                 {
                     try
                     {
-                        Chart = chart;
                         Chart.PrimaryXAxis.Title = title[0];
                         Chart.PrimaryXAxis.TitleColor = Color.LightSteelBlue;
                         Chart.PrimaryXAxis.TitleFont = new Font("Segoe UI", 9f, FontStyle.Bold);
@@ -256,7 +244,6 @@ namespace Budget
                         MessageBox.Show(e.Message + e.StackTrace);
                     }
                 }
-
                 internal void Get3DMode(int[] dim)
                 {
                     try
@@ -274,7 +261,6 @@ namespace Budget
                         MessageBox.Show(e.Message + e.StackTrace);
                     }
                 }
-
                 internal void GetRegionSeriesConfiguration(ChartSeries series)
                 {
                     try
@@ -305,7 +291,6 @@ namespace Budget
                         MessageBox.Show(e.Message + e.StackTrace);
                     }
                 }
-
                 internal void GetSeriesConfiguration(ChartSeries series)
                 {
                     try
@@ -332,7 +317,6 @@ namespace Budget
                         MessageBox.Show(e.Message + e.StackTrace);
                     }
                 }
-
                 internal void GetSeriesConfiguration(ChartSeries series, Statistic value)
                 {
                     try
@@ -368,12 +352,10 @@ namespace Budget
                         MessageBox.Show(e.Message + e.StackTrace);
                     }
                 }
-
                 internal ChartLegend GetLegend(ChartControl chart)
                 {
                     try
                     {
-                        Chart = chart;
                         if(Chart.Legends != null)
                             Chart.Legends.Clear();
                         var legend = new ChartLegend(Chart);
@@ -392,12 +374,10 @@ namespace Budget
                         return null;
                     }
                 }
-
                 internal void GetMainTitle(ChartControl chart, string[] t)
                 {
                     try
                     {
-                        Chart = chart;
                         Chart.Titles.Clear();
                         ChartTitle title = new ChartTitle();
                         title.Text = t[0];

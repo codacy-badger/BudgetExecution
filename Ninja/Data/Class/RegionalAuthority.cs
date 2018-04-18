@@ -73,7 +73,6 @@ namespace Budget
                         return null;
                     }
                 }
-
                 public decimal GetAverage(DataTable table)
                 {
                     try
@@ -86,7 +85,6 @@ namespace Budget
                         return -1M;
                     }
                 }
-
                 public string[] GetCodes(string filter)
                 {
                     try
@@ -99,7 +97,6 @@ namespace Budget
                         return null;
                     }
                 }
-
                 public string[] GetCodes(DataTable table, string column)
                 {
                     try
@@ -113,7 +110,6 @@ namespace Budget
                         return null;
                     }
                 }
-
                 public int GetCount(DataTable table)
                 {
                     try
@@ -126,7 +122,6 @@ namespace Budget
                         return -1;
                     }
                 }
-
                 public Dictionary<string, string[]> GetProgramElements(DataTable table)
                 {
                     try
@@ -149,7 +144,6 @@ namespace Budget
                         return null;
                     }
                 }
-
                 public Tuple<DataTable, PRC[], decimal, int> GetDataValues(DataTable table, string column, string filter)
                 {
                     try
@@ -163,13 +157,20 @@ namespace Budget
                         return null;
                     }
                 }
-
                 public decimal[] GetMetrics(DataTable table)
                 {
-                    var count = GetCount(table);
-                    return new decimal[] { GetTotal(table), (decimal)count, GetAverage(table) };
-                }
+                    try
+                    {
+                        var count = GetCount(table);
+                        return new decimal[] { GetTotal(table), (decimal)count, GetAverage(table) };
+                    }
+                    catch (Exception ex)
+                    {
 
+                        MessageBox.Show(ex.Message + ex.StackTrace);
+                        return new decimal[] { -1m };
+                    }
+                }
                 public PRC[] GetPrcArray(DataTable table)
                 {
                     try
@@ -182,7 +183,6 @@ namespace Budget
                         return null;
                     }
                 }
-
                 public decimal GetTotal(DataTable table)
                 {
                     try
@@ -195,12 +195,18 @@ namespace Budget
                         return -1M;
                     }
                 }
-
                 internal decimal GetRatio(decimal t1, decimal t2)
                 {
-                    return t1 / t2;
+                    try
+                    {
+                        return t1 / t2;
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
+                        return -1M;
+                    }
                 }
-
                 internal Dictionary<string, object> GetSupplemental(int time, decimal awards, decimal ot, PRC training)
                 {
                     try
@@ -217,7 +223,6 @@ namespace Budget
                         return null;
                     }
                 }
-
                 internal void UpdateAmount(DataRow row, decimal amount2)
                 {
                     try
@@ -234,7 +239,6 @@ namespace Budget
                         MessageBox.Show(e.ToString());
                     }
                 }
-
                 internal void UpdateAmount(Dictionary<string, object> p, decimal amount2)
                 {
                     try
@@ -251,7 +255,6 @@ namespace Budget
                         MessageBox.Show(e.ToString());
                     }
                 }
-
                 internal int VerifyDataRow(DataTable table, Dictionary<string, object> p)
                 {
                     try

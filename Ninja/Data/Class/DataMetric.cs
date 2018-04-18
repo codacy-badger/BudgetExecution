@@ -114,21 +114,21 @@ namespace Budget
                 public double[] Metrics { get; }
                 public BindingList<IEnumerable<KeyValuePair<string, double>>> BudgetBinding { get; set; }
                 public Dictionary<string, double[]> BocMetrics { get; set; }
-                public Dictionary<string, decimal> BocTotals { get; set; }
+                public Dictionary<string, decimal> BocTotals { get; }
                 public Dictionary<string, double[]> FundMetrics { get; set; }
-                public Dictionary<string, decimal> FundTotals { get; set; }
+                public Dictionary<string, decimal> FundTotals { get; }
                 public Dictionary<string, double[]> GoalMetrics { get; set; }
-                public Dictionary<string, decimal> GoalTotals { get; set; }
+                public Dictionary<string, decimal> GoalTotals { get; }
                 public Dictionary<string, double[]> NpmMetrics { get; set; }
-                public Dictionary<string, decimal> NpmTotals { get; set; }
+                public Dictionary<string, decimal> NpmTotals { get; }
                 public Dictionary<string, double[]> ObjectiveMetrics { get; set; }
-                public Dictionary<string, decimal> ObjectiveTotals { get; set; }
+                public Dictionary<string, decimal> ObjectiveTotals { get; }
                 public Dictionary<string, double[]> ProgramAreaMetrics { get; set; }
-                public Dictionary<string, decimal> ProgramAreaTotals { get; set; }
+                public Dictionary<string, decimal> ProgramAreaTotals { get; }
                 public Dictionary<string, double[]> ProgramProjectMetrics { get; set; }
-                public Dictionary<string, decimal> ProgramProjectTotals { get; set; }
+                public Dictionary<string, decimal> ProgramProjectTotals { get; }
                 public Dictionary<string, double[]> DivisionMetrics { get; set; }
-                public Dictionary<string, decimal> DivisionTotals { get; set; }
+                public Dictionary<string, decimal> DivisionTotals { get; }
 
                 //Methods
                 public decimal GetTotal(DataTable table)
@@ -143,7 +143,6 @@ namespace Budget
                         return -1M;
                     }
                 }
-
                 public decimal GetAverage(DataTable table)
                 {
                     try
@@ -156,7 +155,6 @@ namespace Budget
                         return -1M;
                     }
                 }
-
                 public string[] GetCodes(DataTable table, string column)
                 {
                     try
@@ -169,7 +167,6 @@ namespace Budget
                         return null;
                     }
                 }
-
                 public int GetCount(DataTable table)
                 {
                     try
@@ -182,7 +179,6 @@ namespace Budget
                         return -1;
                     }
                 }
-
                 public Dictionary<string, string[]> GetProgramElements(DataTable table)
                 {
                     var data = new Dictionary<string, string[]>();
@@ -197,12 +193,10 @@ namespace Budget
                     if (data.ContainsKey("P6_Id")) data.Remove("P6_Id");
                     return data;
                 }
-
                 public double[] GetMetrics(DataTable table)
                 {
                     return new double[] { (double)GetTotal(table), (double)GetCount(table), (double)GetAverage(table), (double)GetTotal(table)/(double)Data.Total };
                 }
-
                 public PRC[] GetPrcArray(DataTable table)
                 {
                     try
@@ -215,7 +209,6 @@ namespace Budget
                         return null;
                     }
                 }
-
                 public DataTable FilterTable(DataTable table, PrcFilter prcfilter, string filter)
                 {
                     try
@@ -229,18 +222,15 @@ namespace Budget
                         return null;
                     }
                 }
-
                 Tuple<DataTable, PRC[], decimal, int> GetAllocation(DataTable table)
                 {
                     return new Tuple<DataTable, PRC[], decimal, int>(table, GetPrcArray(table), GetTotal(table), GetCount(table));
                 }
-
                 Dictionary<string, decimal>[] GetTotals()
                 {
                     return new Dictionary<string, decimal>[] {FundTotals, BocTotals, NpmTotals, GoalTotals,
                     ObjectiveTotals, ProgramAreaTotals, ProgramProjectTotals};
                 }
-
                 Dictionary<string, double[]> GetMetrics(DataTable table, PrcFilter prcfilter)
                 {
                     try
@@ -262,7 +252,6 @@ namespace Budget
                         return null;
                     }
                 }
-
                 public Dictionary<string, decimal> GetTotals(DataTable table, PrcFilter prcfilter)
                 {
                     try
@@ -282,7 +271,6 @@ namespace Budget
                         return null;
                     }
                 }
-
                 internal Dictionary<string, double> GetChartTotals(DataTable table, PrcFilter prcfilter)
                 {
 
@@ -306,7 +294,6 @@ namespace Budget
                     }
 
                 }
-
                 internal Dictionary<string, double[]> GetChartMetrics(DataTable table, PrcFilter prcfilter)
                 {
                     try

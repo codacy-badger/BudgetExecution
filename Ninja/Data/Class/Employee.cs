@@ -8,24 +8,7 @@ namespace Budget
         {
             public class Employee
             {
-                #region Properties
-
-                public string EmployId { get; }
-                public string First { get; }
-                public string HrOrgCode { get; }
-                public string HrOrgName { get; }
-                public string Last { get; }
-                public double Leave { get; }
-                public string LeaveType { get; }
-                public double Projected { get; }
-                public double UseLose { get; }
-                public double Work { get; }
-                public string WorkCode { get; }
-
-                #endregion
-
-                #region Constructors
-
+                //Constructors
                 public Employee()
                 {
                 }
@@ -46,8 +29,6 @@ namespace Budget
                     UseLose = uselose;
                 }
 
-                #endregion
-
                 public Employee(DataRow dr)
                 {
                     EmployId = dr["EmployId "].ToString();
@@ -62,6 +43,19 @@ namespace Budget
                     Projected = double.Parse(dr["Projected"].ToString());
                     UseLose = double.Parse(dr["UseLose"].ToString());
                 }
+
+                //Properties
+                public string EmployId { get; }
+                public string First { get; }
+                public string HrOrgCode { get; }
+                public string HrOrgName { get; }
+                public string Last { get; }
+                public double Leave { get; }
+                public string LeaveType { get; }
+                public double Projected { get; }
+                public double UseLose { get; }
+                public double Work { get; }
+                public string WorkCode { get; }
             }
         }
     }

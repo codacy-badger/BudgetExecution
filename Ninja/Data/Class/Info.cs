@@ -19,7 +19,6 @@ namespace Budget
                 "45", "46", "47", "F1", "F2", "F3", "F4", "F5", "LA", "PT", "PQ", "UW", "AP", "DJ", "LD",
                 "RL", "58", "B4", "B5", "BP", "PA", "PB", "PC", "PV", "PW", "R3", "R4"
                 };
-
                 public static string[] AgencyITCodes = {
                 "EK", "FH", "FJ", "GB", "SL", "SM", "AA", "AB", "AC", "AD", "AE",
                 "AF", "AG", "AH", "AJ", "AL", "AM", "AQ", "AR", "AT", "BB", "BC", "BG", "BH", "BJ", "BK",
@@ -35,7 +34,6 @@ namespace Budget
                 "TF", "TG", "TH", "TJ", "TK", "TM", "TN", "UA", "VR", "WB", "WC", "WD", "WE", "WI", "WM",
                 "WS", "WT"
                 };
-
                 public static string[] AgencyOrgCodes = {
                 "01", "02", "03", "04", "0400BMT", "05", "0500BMT", "06", "07", "08", "09", "10", "11", "13",
                 "16", "17", "20", "23", "27", "28", "30", "31", "3100EEN", "32", "3200EEN", "3200P", "3200P1",
@@ -50,7 +48,6 @@ namespace Budget
                 "6A00S", "7A00C", "7A00E", "7A00P", "7A00R", "7A00S", "8A00C", "8A00E", "8A00F", "8A00P", "8A00R", "8A00S",
                 "9A00C", "9A00E", "9A00F", "9A00P", "9A00R", "9A00S", "D4", "B7", "H1"
                 };
-
                 public static string[] AgencyPrcCodes = {
                 "101A46", "101A46XP3", "101A46XP4", "101A46XQ3", "101A58", "101A59", "102A45", "102A58", "102A59","102A76", "102AH5", "102J59", "103AC4", "103AC5", "104A97", "104A98", "201B42", "201B53", "201B71",
                 "201BL2", "202B63", "202B65", "202B66", "202B67", "202B68X33", "202B68XP8", "202B68XQC", "202B88",
@@ -73,7 +70,6 @@ namespace Budget
                 "303D91","ZZZPG2", "303D72", "303D72XPA", "303D72XPC", "303DC6", "303DC8", "303DC9", "303DD2", "501EC7", "501EH2", "501JC7",
                 "ZZZD73"
                 };
-
                 public static string[] AgencyRpioCode = {
                 "11", "13", "16", "17", "18", "20", "26", "27", "30", "35", "39", "75", "77", "01","02", "03", "04", "05", "06", "07", "08",
                 "09", "10"
@@ -97,7 +93,6 @@ namespace Budget
                 "6EJ Environmental Justice && Tribal Affairs Division", "6XA The Office of External Affairs",
                 "6WQ Water Quality Protection Division", "EPA Region 6 Dallas,TX"
                 };
-
                 public static string[] MultiYears = {
                 "2015", "2015 2016", "2016 2017", "2016", "2017 2018", "2017","2018 2019", "2018", "2019 2020","2019", "2020 2021","2020", "2021 2022", "2021",
                 "2022", "2022 2023",
@@ -108,7 +103,6 @@ namespace Budget
                 public static string[] RcCodes = { "06C", "06A", "06L", "06F", "06X", "06K", "06J", "06M", "06D", "06N", "06G" };
 
                 public static string[] Year = { "2017", "2018", "2019", "2020", "2021", "2021", "2022", "2024", "2025", "2026", "2027" };
-
                 public static SortedList<string, object> DivisionLookUp()
                 {
                     SortedList<string, object> d = new SortedList<string, object>();
@@ -125,7 +119,6 @@ namespace Budget
                     d.Add("WCF", "Working Capital");
                     return d;
                 }
-
                 public static string DivisionName(string rc)
                 {
                     switch (rc)
@@ -178,7 +171,6 @@ namespace Budget
                         default: return "R06";
                     }
                 }
-
                 public static string GetAppropriationName(string fundcode)
                 {
                     switch (fundcode)
@@ -287,7 +279,6 @@ namespace Budget
                     }
                     return null;
                 }
-
                 public static string GetAppropriationTitle(string fundcode)
                 {
                     switch (fundcode)
@@ -393,7 +384,6 @@ namespace Budget
                     }
                     return null;
                 }
-
                 public static string GetBocName(string boc)
                 {
                     try
@@ -433,284 +423,337 @@ namespace Budget
                         return null;
                     }
                 }
-
-                public static string[] GetColumnNameArray(this DataTable table)
-                {
-                    string[] col = new string[table.Columns.Count];
-                    for (int i = 0; i < table.Rows.Count; i++)
-                    {
-                        foreach (DataColumn dc in table.Columns)
-                            col[i] = dc.ColumnName;
-                    }
-                    return col;
-                }
-
                 public static string GetDivisionMailCode(string Org)
                 {
-                    switch (Org)
+                    try
                     {
-                        case "06K":
-                            return "6WQ";
-
-                        case "06G":
-                            return "6WCF";
-
-                        case "06C":
-                            return "6MD";
-
-                        case "06R":
-                            return "6MDR";
-
-                        case "06N":
-                            return "6WSA";
-
-                        case "06J":
-                            return "6MM";
-
-                        case "06M":
-                            return "6EN";
-
-                        case "06D":
-                            return "6RC";
-
-                        case "06A":
-                            return "6RA";
-
-                        case "06L":
-                            return "6SF";
-
-                        case "6A":
-                            return "6SF";
-
-                        case "06X":
-                            return "6XA";
-
-                        case "06F":
-                            return "6EJ";
-
-                        case "06":
-                            return "R06";
-
-                        default: return "R06";
-                    }
-                }
-
-                public static string[] GetFields(this DataTable table)
-                {
-                    var columns = table.Columns;
-                    string[] fields = new string[columns.Count];
-                    for (int i = 0; i < columns.Count; i++)
-                    {
-                        foreach (DataColumn dc in columns)
+                        switch (Org)
                         {
-                            fields[i] = dc.ColumnName;
+                            case "06K":
+                                return "6WQ";
+
+                            case "06G":
+                                return "6WCF";
+
+                            case "06C":
+                                return "6MD";
+
+                            case "06R":
+                                return "6MDR";
+
+                            case "06N":
+                                return "6WSA";
+
+                            case "06J":
+                                return "6MM";
+
+                            case "06M":
+                                return "6EN";
+
+                            case "06D":
+                                return "6RC";
+
+                            case "06A":
+                                return "6RA";
+
+                            case "06L":
+                                return "6SF";
+
+                            case "6A":
+                                return "6SF";
+
+                            case "06X":
+                                return "6XA";
+
+                            case "06F":
+                                return "6EJ";
+
+                            case "06":
+                                return "R06";
+
+                            default: return "R06";
                         }
                     }
-                    return fields;
-                }
+                    catch (System.Exception ex)
+                    {
 
+                        MessageBox.Show(ex.Message + ex.StackTrace);
+                        return null;
+                    }
+                }
+                public static string[] GetFields(this DataTable table)
+                {
+                    try
+                    {
+                        var columns = table.Columns;
+                        string[] fields = new string[columns.Count];
+                        for (int i = 0; i < columns.Count; i++)
+                        {
+                            foreach (DataColumn dc in columns)
+                            {
+                                fields[i] = dc.ColumnName;
+                            }
+                        }
+                        return fields;
+                    }
+                    catch (System.Exception ex)
+                    {
+
+                        MessageBox.Show(ex.Message + ex.StackTrace);
+                        return null;
+                    }
+                }
                 public static string GetGoalName(string goal)
                 {
-                    switch (goal)
+                    try
                     {
-                        case "01":
-                            return "CORE MISSION";
+                        switch (goal)
+                        {
+                            case "01":
+                                return "CORE MISSION";
 
-                        case "1":
-                            return "CORE MISSION";
+                            case "1":
+                                return "CORE MISSION";
 
-                        case "2":
-                            return "COOPERATIVE FEDERALISM";
+                            case "2":
+                                return "COOPERATIVE FEDERALISM";
 
-                        case "02":
-                            return "COOPERATIVE FEDERALISM";
+                            case "02":
+                                return "COOPERATIVE FEDERALISM";
 
-                        case "3":
-                            return "RULE OF LAW AND PROCESS";
+                            case "3":
+                                return "RULE OF LAW AND PROCESS";
 
-                        case "03":
-                            return "RULE OF LAW AND PROCESS";
+                            case "03":
+                                return "RULE OF LAW AND PROCESS";
 
-                        default:
-                            return goal;
+                            default:
+                                return goal;
+                        }
+                    }
+                    catch (System.Exception ex)
+                    {
+
+                        MessageBox.Show(ex.Message + ex.StackTrace);
+                        return null;
                     }
                 }
-
                 public static string GetObjectiveName(string obj)
                 {
-                    switch (obj)
+                    try
                     {
-                        case "1":
-                            return "COMPLIANCE WITH THE LAW";
+                        switch (obj)
+                        {
+                            case "1":
+                                return "COMPLIANCE WITH THE LAW";
 
-                        case "01":
-                            return "COMPLIANCE WITH THE LAW";
+                            case "01":
+                                return "COMPLIANCE WITH THE LAW";
 
-                        case "2":
-                            return "CREATE CONSISTENCY AND CERTAINTY";
+                            case "2":
+                                return "CREATE CONSISTENCY AND CERTAINTY";
 
-                        case "02":
-                            return "CREATE CONSISTENCY AND CERTAINTY";
+                            case "02":
+                                return "CREATE CONSISTENCY AND CERTAINTY";
 
-                        case "3":
-                            return "PRIORITIZE ROBUST SCIENCE";
+                            case "3":
+                                return "PRIORITIZE ROBUST SCIENCE";
 
-                        case "03":
-                            return "PRIORITIZE ROBUST SCIENCE";
+                            case "03":
+                                return "PRIORITIZE ROBUST SCIENCE";
 
-                        case "4":
-                            return "STREAMLINE AND MODERNIZE";
+                            case "4":
+                                return "STREAMLINE AND MODERNIZE";
 
-                        case "04":
-                            return "STREAMLINE AND MODERNIZE";
+                            case "04":
+                                return "STREAMLINE AND MODERNIZE";
 
-                        case "5":
-                            return "IMPROVE EFFICIENCY AND EFFECTIVENESS";
+                            case "5":
+                                return "IMPROVE EFFICIENCY AND EFFECTIVENESS";
 
-                        case "05":
-                            return "IMPROVE EFFICIENCY AND EFFECTIVENESS";
+                            case "05":
+                                return "IMPROVE EFFICIENCY AND EFFECTIVENESS";
 
-                        default:
-                            return obj;
+                            default:
+                                return obj;
+                        }
+                    }
+                    catch (System.Exception ex)
+                    {
+
+                        MessageBox.Show(ex.Message + ex.StackTrace);
+                        return null;
                     }
                 }
-
                 public static string GetTreasurySymbol(string fundcode)
                 {
-                    switch (fundcode)
+                    try
                     {
-                        case "B":
-                            return "068/0108";
+                        switch (fundcode)
+                        {
+                            case "B":
+                                return "068/0108";
 
-                        case "BR":
-                            return "068/0108";
+                            case "BR":
+                                return "068/0108";
 
-                        case "BR1":
-                            return "068/0108";
+                            case "BR1":
+                                return "068/0108";
 
-                        case "BR3":
-                            return "068/0108";
+                            case "BR3":
+                                return "068/0108";
 
-                        case "T":
-                            return "68-68X8145";
+                            case "T":
+                                return "68-68X8145";
 
-                        case "TD":
-                            return "68-68X8145";
+                            case "TD":
+                                return "68-68X8145";
 
-                        case "TR":
-                            return "68-68X8145";
+                            case "TR":
+                                return "68-68X8145";
 
-                        case "TR1":
-                            return "68-68X8145";
+                            case "TR1":
+                                return "68-68X8145";
 
-                        case "TR2":
-                            return "68-68X8145";
+                            case "TR2":
+                                return "68-68X8145";
 
-                        case "TR2A":
-                            return "68-68X8145";
+                            case "TR2A":
+                                return "68-68X8145";
 
-                        case "TR2B":
-                            return "68-68X8145";
+                            case "TR2B":
+                                return "68-68X8145";
 
-                        case "F":
-                            return "068-68X8153";
+                            case "F":
+                                return "068-68X8153";
 
-                        case "FC":
-                            return "068-68X8153";
+                            case "FC":
+                                return "068-68X8153";
 
-                        case "FD":
-                            return "068-68X8153";
+                            case "FD":
+                                return "068-68X8153";
 
-                        case "H":
-                            return "068X8221";
+                            case "H":
+                                return "068X8221";
 
-                        case "HC":
-                            return "068X8221";
+                            case "HC":
+                                return "068X8221";
 
-                        case "HD":
-                            return "068X8221";
+                            case "HD":
+                                return "068X8221";
 
-                        case "HR":
-                            return "068X8221";
+                            case "HR":
+                                return "068X8221";
 
-                        case "E1":
-                            return "068X0103";
+                            case "E1":
+                                return "068X0103";
 
-                        case "E1C":
-                            return "068X0103";
+                            case "E1C":
+                                return "068X0103";
 
-                        case "E1D":
-                            return "068X0103";
+                            case "E1D":
+                                return "068X0103";
 
-                        case "E2":
-                            return "068X0103";
+                            case "E2":
+                                return "068X0103";
 
-                        case "E2C":
-                            return "068X0103";
+                            case "E2C":
+                                return "068X0103";
 
-                        case "E2D":
-                            return "068X0103";
+                            case "E2D":
+                                return "068X0103";
 
-                        case "E3":
-                            return "068X0103";
+                            case "E3":
+                                return "068X0103";
 
-                        case "E3C":
-                            return "068X0103";
+                            case "E3C":
+                                return "068X0103";
 
-                        case "E3D":
-                            return "068X0103";
+                            case "E3D":
+                                return "068X0103";
 
-                        case "E4":
-                            return "068X0103";
+                            case "E4":
+                                return "068X0103";
 
-                        case "E4C":
-                            return "068X0103";
+                            case "E4C":
+                                return "068X0103";
 
-                        case "E4D":
-                            return "068X0103";
+                            case "E4D":
+                                return "068X0103";
 
-                        case "E5":
-                            return "068X0103";
+                            case "E5":
+                                return "068X0103";
 
-                        case "E5C":
-                            return "068X0103";
+                            case "E5C":
+                                return "068X0103";
 
-                        case "E5D":
-                            return "068X0103";
+                            case "E5D":
+                                return "068X0103";
 
-                        case "ZL":
-                            return "68 - 68X8145";
+                            case "ZL":
+                                return "68 - 68X8145";
+                        }
+                        return null;
                     }
-                    return null;
-                }
+                    catch (System.Exception ex)
+                    {
 
+                        MessageBox.Show(ex.Message + ex.StackTrace);
+                        return null;
+                    }
+                }
                 public static bool IsChildOf(this DataRow child, DataRow parent)
                 {
-                    if (child["BudgetLevel"].ToString().Equals("8") &&
-                        child["BFY"].ToString().Equals(parent["BFY"].ToString()) &&
-                        child["Fund"].ToString().Equals(parent["Fund"].ToString()) &&
-                        child["Code"].ToString().Equals(parent["Code"].ToString()) &&
-                        child["BOC"].ToString().Equals(parent["BOC"].ToString()))
-                        return true;
-                    else
-                        return false;
-                }
+                    try
+                    {
+                        if (child["BudgetLevel"].ToString().Equals("8") &&
+                    child["BFY"].ToString().Equals(parent["BFY"].ToString()) &&
+                    child["Fund"].ToString().Equals(parent["Fund"].ToString()) &&
+                    child["Code"].ToString().Equals(parent["Code"].ToString()) &&
+                    child["BOC"].ToString().Equals(parent["BOC"].ToString()))
+                            return true;
+                        else
+                            return false;
+                    }
+                    catch (System.Exception ex)
+                    {
 
+                        MessageBox.Show(ex.Message + ex.StackTrace);
+                        return false;
+                    }
+                }
                 public static bool IsParentOf(this DataRow parent, DataRow child)
                 {
-                    if (parent["BudgetLevel"].ToString().Equals("7") &&
-                        parent["BFY"].ToString().Equals(child["BFY"].ToString()) &&
-                        parent["Fund"].ToString().Equals(child["Fund"].ToString()) &&
-                        parent["Code"].ToString().Equals(child["Code"].ToString()) &&
-                        parent["BOC"].ToString().Equals(child["BOC"].ToString()))
-                        return true;
-                    else
-                        return false;
-                }
+                    try
+                    {
+                        if (parent["BudgetLevel"].ToString().Equals("7") &&
+                            parent["BFY"].ToString().Equals(child["BFY"].ToString()) &&
+                            parent["Fund"].ToString().Equals(child["Fund"].ToString()) &&
+                            parent["Code"].ToString().Equals(child["Code"].ToString()) &&
+                            parent["BOC"].ToString().Equals(child["BOC"].ToString()))
+                            return true;
+                        else
+                            return false;
+                    }
+                    catch (System.Exception ex)
+                    {
 
+                        MessageBox.Show(ex.Message + ex.StackTrace);
+                        return false;
+                    }
+                }
                 public static PRC ToPrc(this DataRow row)
                 {
-                    return new PRC(row);
+                    try
+                    {
+                        return new PRC(row);
+                    }
+                    catch (System.Exception ex)
+                    {
+
+                        MessageBox.Show(ex.Message + ex.StackTrace);
+                        return null;
+                    }
                 }
             }
         }
