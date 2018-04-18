@@ -1,8 +1,8 @@
-using Ninja.Forms;
-using Syncfusion.Windows.Forms.Chart;
 using System;
 using System.Collections.Generic;
 using System.Data;
+using Ninja.Forms;
+using Syncfusion.Windows.Forms.Chart;
 
 namespace Budget
 {
@@ -51,6 +51,11 @@ namespace Budget
                 O1, O2, O3, O4, O5
             }
 
+            public enum PrcFilter
+            {
+                ID, BFY, RPIO, Fund, FundName, BOC, BocName, Org, RC, NPM, Goal, GoalName, Objective, ObjectiveName, Division, ProgramArea, ProgramAreaName, ProgramProjectCode, ProgramProjectName
+            }
+
             public enum Provider
             {
                 Sqlite = 1, Excel = 2, SqlServer = 3, Access = 4
@@ -60,12 +65,6 @@ namespace Budget
             {
                 T6, T7, B6, E1, P6, P7, P8, A6, O6, O7, O8, F6, S6, EPM, LUST, OIL, STAG, SUPERFUND, SF6A, EJ, EN, MD, RC, RA, SF, WQ, MM, WSA, WCF, MDR, XA,
                 BOC10, BOC17, BOC21, BOC28, BOC36, BOC37, BOC41, BocControl, PrcControl
-            }
-
-
-            public enum PrcFilter
-            {
-                ID, BFY, RPIO, Fund, FundName, BOC, BocName, Org, RC, NPM, Goal, GoalName, Objective, ObjectiveName, Division, ProgramArea, ProgramAreaName, ProgramProjectCode, ProgramProjectName
             }
 
             public enum Stat

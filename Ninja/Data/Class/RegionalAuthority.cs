@@ -12,7 +12,6 @@ namespace Budget
         {
             public class RegionalAuthority : IBudgetAuthority
             {
-
                 //Constructors
                 public RegionalAuthority()
                 {
@@ -36,29 +35,28 @@ namespace Budget
                     }
                 }
 
-
                 //Properties
                 public static string FiscalYear { get; set; } = "2018";
-                public DataBuilder Data { get; set; }
-                public Dictionary<string, string[]> ProgramElements { get; }
-                public DataMetric BudgetMetric { get; }
-                public DataSet BudgetData { get; }
-                public DataTable Table { get; }
-                public decimal Total { get; }
-                public int Count { get; }
+
                 public decimal Average { get; }
                 public Dictionary<string, decimal> BocData { get; }
-                public decimal[] Metrics { get; }
+                public DataSet BudgetData { get; }
+                public DataMetric BudgetMetric { get; }
+                public int Count { get; }
+                public DataBuilder Data { get; set; }
                 public FTE FTE { get; }
                 public Dictionary<string, decimal> FteData { get; }
                 public Dictionary<string, decimal> FundData { get; }
                 public Dictionary<string, decimal> GoalData { get; }
+                public decimal[] Metrics { get; }
                 public Dictionary<string, decimal> NpmData { get; }
                 public Dictionary<string, decimal> ObjectiveData { get; }
                 public Tuple<DataTable, PRC[], decimal, int> PrcData { get; }
                 public Dictionary<string, decimal> ProgramData { get; }
+                public Dictionary<string, string[]> ProgramElements { get; }
                 public Dictionary<string, decimal> ProjectData { get; }
-
+                public DataTable Table { get; }
+                public decimal Total { get; }
 
                 //Methods
                 public DataTable FilterTable(DataTable table, string column, string filter)
@@ -73,6 +71,7 @@ namespace Budget
                         return null;
                     }
                 }
+
                 public decimal GetAverage(DataTable table)
                 {
                     try
@@ -85,6 +84,7 @@ namespace Budget
                         return -1M;
                     }
                 }
+
                 public string[] GetCodes(string filter)
                 {
                     try
@@ -97,6 +97,7 @@ namespace Budget
                         return null;
                     }
                 }
+
                 public string[] GetCodes(DataTable table, string column)
                 {
                     try
@@ -110,6 +111,7 @@ namespace Budget
                         return null;
                     }
                 }
+
                 public int GetCount(DataTable table)
                 {
                     try
@@ -122,6 +124,48 @@ namespace Budget
                         return -1;
                     }
                 }
+
+                public Tuple<DataTable, PRC[], decimal, int> GetDataValues(DataTable table, string column, string filter)
+                {
+                    try
+                    {
+                        var qtable = FilterTable(table, column, filter);
+                        return new Tuple<DataTable, PRC[], decimal, int>(qtable, GetPrcArray(qtable), GetTotal(qtable), GetCount(qtable));
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
+                        return null;
+                    }
+                }
+
+                public decimal[] GetMetrics(DataTable table)
+                {
+                    try
+                    {
+                        var count = GetCount(table);
+                        return new decimal[] { GetTotal(table), (decimal)count, GetAverage(table) };
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message + ex.StackTrace);
+                        return new decimal[] { -1m };
+                    }
+                }
+
+                public PRC[] GetPrcArray(DataTable table)
+                {
+                    try
+                    {
+                        return table.AsEnumerable().Select(p => new PRC()).ToArray();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
+                        return null;
+                    }
+                }
+
                 public Dictionary<string, string[]> GetProgramElements(DataTable table)
                 {
                     try
@@ -144,45 +188,7 @@ namespace Budget
                         return null;
                     }
                 }
-                public Tuple<DataTable, PRC[], decimal, int> GetDataValues(DataTable table, string column, string filter)
-                {
-                    try
-                    {
-                        var qtable = FilterTable(table, column, filter);
-                        return new Tuple<DataTable, PRC[], decimal, int>(qtable, GetPrcArray(qtable), GetTotal(qtable), GetCount(qtable));
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
-                        return null;
-                    }
-                }
-                public decimal[] GetMetrics(DataTable table)
-                {
-                    try
-                    {
-                        var count = GetCount(table);
-                        return new decimal[] { GetTotal(table), (decimal)count, GetAverage(table) };
-                    }
-                    catch (Exception ex)
-                    {
 
-                        MessageBox.Show(ex.Message + ex.StackTrace);
-                        return new decimal[] { -1m };
-                    }
-                }
-                public PRC[] GetPrcArray(DataTable table)
-                {
-                    try
-                    {
-                        return table.AsEnumerable().Select(p => new PRC()).ToArray();
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
-                        return null;
-                    }
-                }
                 public decimal GetTotal(DataTable table)
                 {
                     try
@@ -195,6 +201,7 @@ namespace Budget
                         return -1M;
                     }
                 }
+
                 internal decimal GetRatio(decimal t1, decimal t2)
                 {
                     try
@@ -207,6 +214,7 @@ namespace Budget
                         return -1M;
                     }
                 }
+
                 internal Dictionary<string, object> GetSupplemental(int time, decimal awards, decimal ot, PRC training)
                 {
                     try
@@ -223,6 +231,7 @@ namespace Budget
                         return null;
                     }
                 }
+
                 internal void UpdateAmount(DataRow row, decimal amount2)
                 {
                     try
@@ -239,6 +248,7 @@ namespace Budget
                         MessageBox.Show(e.ToString());
                     }
                 }
+
                 internal void UpdateAmount(Dictionary<string, object> p, decimal amount2)
                 {
                     try
@@ -255,6 +265,7 @@ namespace Budget
                         MessageBox.Show(e.ToString());
                     }
                 }
+
                 internal int VerifyDataRow(DataTable table, Dictionary<string, object> p)
                 {
                     try
@@ -274,7 +285,6 @@ namespace Budget
                         return -1;
                     }
                 }
-
             }
         }
     }

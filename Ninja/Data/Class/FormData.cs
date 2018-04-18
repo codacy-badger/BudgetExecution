@@ -1,13 +1,13 @@
-﻿using MetroSet_UI.Controls;
-using Syncfusion.Windows.Forms;
-using Syncfusion.Windows.Forms.Chart;
-using Syncfusion.Windows.Forms.Tools;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
+using MetroSet_UI.Controls;
+using Syncfusion.Windows.Forms;
+using Syncfusion.Windows.Forms.Chart;
+using Syncfusion.Windows.Forms.Tools;
 
 namespace Budget
 {
@@ -15,7 +15,7 @@ namespace Budget
     {
         namespace Data
         {
-            public class FormData 
+            public class FormData
             {
                 //Constructors
                 public FormData()
@@ -34,21 +34,27 @@ namespace Budget
                     DataGrid = dgv;
                 }
 
+                public BindingSource BindingSource { get; set; }
+
+                public DataSet BudgetData { get; set; }
+
+                public DataMetric BudgetMetric { get; set; }
+
+                public ChartControl Chart { get; set; }
+
+                public ChartDataBindModel ChartModel { get; set; }
+
+                public int Count { get; set; }
+
                 //Properties
                 public DataBuilder Data { get; set; }
-                public DataMetric BudgetMetric { get; set; }
-                public DataSet BudgetData { get; set; }
-                public DataTable Table { get; set; }
-                public ChartControl Chart { get; set; }
-                public ChartDataBindModel ChartModel { get; set; }
-                public int Count { get; set; }
+
                 public DataGridView DataGrid { get; set; }
                 public decimal[] Metrics { get; set; }
                 public BindingNavigator Navigator { get; set; }
-                public BindingSource BindingSource { get; set; }
                 public FlowLayoutPanel Panel { get; set; }
+                public DataTable Table { get; set; }
                 private bool Percent { get; set; }
-
 
                 //Methods
                 public DataTable FilterTable(DataTable table, string column, string filter)
@@ -89,7 +95,7 @@ namespace Budget
                         return null;
                     }
                 }
-                
+
                 public Dictionary<string, decimal> GetDataTotals(DataTable table, string column, string filter)
                 {
                     try
@@ -110,7 +116,7 @@ namespace Budget
                         MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
                         return null;
                     }
-                }               
+                }
 
                 public PRC[] GetPrcArray(DataTable table)
                 {
@@ -357,7 +363,6 @@ namespace Budget
                     Table = Data.QueryTable;
                     BindingSource.DataSource = Table;
                 }
-
             }
         }
     }

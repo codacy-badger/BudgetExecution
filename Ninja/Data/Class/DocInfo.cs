@@ -27,6 +27,7 @@ namespace Budget
 
                 //Properties
                 public List<string> AccountingInfo { get; set; }
+
                 public decimal Awards { get; set; }
                 public List<string> ControlInfo { get; set; }
                 public string ControlNumber { get; set; }
@@ -148,7 +149,6 @@ namespace Budget
                     signature.Add("US EPA Region 6");
                     return signature;
                 }
-
             }
         }
     }

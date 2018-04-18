@@ -1,5 +1,4 @@
-﻿using System;
-using System.Data;
+﻿using System.Data;
 
 namespace Budget
 {
@@ -9,21 +8,27 @@ namespace Budget
         {
             public interface IDataBuilder
             {
+                PRC[] Accounts { get; }
+
                 //Properties
                 Query Query { get; }
+
                 DataSet QuerySet { get; }
                 DataTable QueryTable { get; }
                 DataRow[] Records { get; }
-                PRC[] Accounts { get; }
 
                 //Methods
                 decimal GetQueryAverage(DataTable table);
+
                 int GetQueryCount(DataTable table);
-                DataSet GetQuerySet();
+
                 decimal[] GetQueryMetrics(DataTable table);
-                DataRow[] GetRecords(DataTable table);
+
+                DataSet GetQuerySet();
+
                 decimal GetQueryTotal(DataTable table);
 
+                DataRow[] GetRecords(DataTable table);
             }
         }
     }

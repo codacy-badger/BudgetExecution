@@ -1,9 +1,9 @@
-using Budget.Ninja.Data;
-using Ninja.Data;
-using Syncfusion.Windows.Forms.Chart;
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
+using Budget.Ninja.Data;
+using Ninja.Data;
+using Syncfusion.Windows.Forms.Chart;
 
 namespace Ninja.Forms
 {
@@ -31,6 +31,7 @@ namespace Ninja.Forms
 
         //Properties
         public GetChart Chart { get; set; }
+
         public int Counter { get; set; }
         public DataBuilder D6 { get; set; }
         public DataMetric Metric { get; set; }
@@ -55,17 +56,20 @@ namespace Ninja.Forms
                 Counter++;
             }
         }
+
         private void DataButton_OnClick(object sender, EventArgs e)
         {
             var dm = new DataMaster();
             dm.Show();
         }
+
         private void DivisionSummaryButton_OnClick(object sender, EventArgs e)
         {
             var datamgr = new SummaryForm(Source.P8);
             datamgr.Show();
         }
-        string[] GetChartTitles(Dictionary<string, double>[] info)
+
+        private string[] GetChartTitles(Dictionary<string, double>[] info)
         {
             var t = new string[info.Length];
             t[0] = "R6 Funds by Appropriation";
@@ -77,16 +81,19 @@ namespace Ninja.Forms
             t[6] = "Division Funds by HQ NPM";
             return t;
         }
+
         private ChartControl GetMainChart(ChartControl chart, string[] title, Dictionary<string, double> data)
         {
             MainChart = new BudgetChart(chart, title[0], data).Activate();
             return MainChart;
         }
+
         private ChartControl GetMainChart(ChartControl chart, string title, Dictionary<string, double> data)
         {
             MainChart = new BudgetChart(chart, title, data).Activate();
             return MainChart;
         }
+
         private void MainForm_Load(object sender, EventArgs e)
         {
             NinjaData.GetFormSettings(this);
@@ -95,11 +102,13 @@ namespace Ninja.Forms
             Timer.Enabled = true;
             Timer.Interval = 5000;
         }
+
         private void RegionSummaryButton_OnClick(object sender, EventArgs e)
         {
             var datamgr = new SummaryForm(Source.P7);
             datamgr.Show();
         }
+
         private void TransferButton_OnClick(object sender, EventArgs e)
         {
             var dm = new SummaryForm("06J");

@@ -12,7 +12,6 @@ namespace Budget
         {
             public class FTE : IPRC
             {
-
                 public FTE()
                 {
                 }
@@ -36,9 +35,8 @@ namespace Budget
 
                 //Properties
                 public Account Account { get; }
+
                 public Tuple<DataTable, PRC[], decimal, int> AllocationData { get; }
-                public DataTable Table { get; }
-                public decimal Total { get; }
                 public decimal Amount { get; set; }
                 public decimal Authority { get; set; }
                 public decimal Average { get; }
@@ -58,6 +56,8 @@ namespace Budget
                 public Dictionary<string, decimal> ProjectData { get; }
                 public RC RC { get; set; }
                 public string RPIO { get; set; }
+                public DataTable Table { get; }
+                public decimal Total { get; }
                 BOC IPRC.BOC { get; }
                 private decimal[] Metrics { get; }
 
@@ -74,6 +74,7 @@ namespace Budget
                         return null;
                     }
                 }
+
                 public decimal GetAverage(DataTable table)
                 {
                     try
@@ -86,6 +87,7 @@ namespace Budget
                         return -1M;
                     }
                 }
+
                 public string[] GetCodes(DataTable table, string column)
                 {
                     try
@@ -98,6 +100,7 @@ namespace Budget
                         return null;
                     }
                 }
+
                 public int GetCount(DataTable table)
                 {
                     try
@@ -110,6 +113,7 @@ namespace Budget
                         return -1;
                     }
                 }
+
                 public Dictionary<string, string[]> GetDataElements(DataTable table)
                 {
                     var data = new Dictionary<string, string[]>();
@@ -124,6 +128,7 @@ namespace Budget
                     if (data.ContainsKey("P6_Id")) data.Remove("P6_Id");
                     return data;
                 }
+
                 public Tuple<DataTable, PRC[], decimal, int> GetDataValues(DataTable table, string column, string filter)
                 {
                     try
@@ -137,11 +142,13 @@ namespace Budget
                         return null;
                     }
                 }
+
                 public decimal[] GetMetrics(DataTable table)
                 {
                     var count = GetCount(table);
                     return new decimal[] { GetTotal(table), (decimal)count, GetAverage(table) };
                 }
+
                 public Dictionary<string, decimal[]> GetMetrics(DataTable table, string[] list, string column)
                 {
                     try
@@ -164,6 +171,7 @@ namespace Budget
                         return null;
                     }
                 }
+
                 public Dictionary<string, decimal[]> GetMetrics(DataTable table, string column, string filter)
                 {
                     try
@@ -187,6 +195,7 @@ namespace Budget
                         return null;
                     }
                 }
+
                 public PRC[] GetPrcArray(DataTable table)
                 {
                     try
@@ -199,6 +208,7 @@ namespace Budget
                         return null;
                     }
                 }
+
                 public decimal GetTotal(DataTable table)
                 {
                     try
@@ -211,6 +221,7 @@ namespace Budget
                         return -1M;
                     }
                 }
+
                 public Dictionary<string, decimal> GetTotals(DataTable table, string column, string filter)
                 {
                     try
@@ -232,6 +243,7 @@ namespace Budget
                         return null;
                     }
                 }
+
                 public Dictionary<string, decimal> GetTotals(DataTable table, string[] filters, string column)
                 {
                     try

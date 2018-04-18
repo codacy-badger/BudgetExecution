@@ -12,7 +12,6 @@ namespace Budget
         {
             public class DataBuilder : IDataBuilder
             {
-
                 //Constructors
                 public DataBuilder()
                 {
@@ -25,7 +24,7 @@ namespace Budget
                     QueryTable = QuerySet.Tables[0];
                     QueryTotal = GetQueryTotal(QueryTable);
                     BindingSource = new BindingSource();
-                    BindingSource.DataSource = QueryTable; 
+                    BindingSource.DataSource = QueryTable;
                     ProgramElements = GetElements(QueryTable);
                     Records = GetRecords(QueryTable);
                     if (source == Source.P6 || source == Source.P7 || source == Source.P8)
@@ -49,16 +48,20 @@ namespace Budget
                     }
                 }
 
+                public PRC[] Accounts { get; }
+
+                public BindingSource BindingSource { get; }
+
+                public Dictionary<string, string[]> ProgramElements { get; }
+
                 //Properties
                 public Query Query { get; }
+
                 public DataSet QuerySet { get; }
                 public DataTable QueryTable { get; }
                 public decimal QueryTotal { get; }
-                public Dictionary<string, string[]> ProgramElements { get; }
                 public DataRow[] Records { get; }
-                public PRC[] Accounts { get; }
-                public BindingSource BindingSource { get; }
-                Dictionary<string, object> Parameter { get; set; }
+                private Dictionary<string, object> Parameter { get; set; }
 
                 //Methods
                 public static DataTable FilterTable(DataTable table, PrcFilter prcfilter, string filter)
@@ -74,46 +77,7 @@ namespace Budget
                         return null;
                     }
                 }
-                public decimal GetQueryAverage(DataTable table)
-                {
-                    try
-                    {
-                        return table.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Average();
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
-                        return -1;
-                    }
-                }
-                public int GetQueryCount(DataTable table)
-                {
-                    try
-                    {
-                        return table.AsEnumerable().Where(p => p.Field<decimal>("Amount") > 0m).Select(p => p).Count();
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
-                        return -1;
-                    }
-                }
-                public DataSet GetQuerySet()
-                {
-                    try
-                    {
-                        var dataSet = new DataSet("E6");
-                        var dataTable = new DataTable(Query.TableName);
-                        dataSet.Tables.Add(dataTable);
-                        Query.Adapter.Fill(dataSet, Query.TableName);
-                        return dataSet;
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
-                        return null;
-                    }
-                }
+
                 public string[] GetCodes(DataTable table, string column)
                 {
                     try
@@ -126,6 +90,7 @@ namespace Budget
                         return null;
                     }
                 }
+
                 public Dictionary<string, string[]> GetElements(DataTable table)
                 {
                     try
@@ -148,6 +113,33 @@ namespace Budget
                         return null;
                     }
                 }
+
+                public decimal GetQueryAverage(DataTable table)
+                {
+                    try
+                    {
+                        return table.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Average();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
+                        return -1;
+                    }
+                }
+
+                public int GetQueryCount(DataTable table)
+                {
+                    try
+                    {
+                        return table.AsEnumerable().Where(p => p.Field<decimal>("Amount") > 0m).Select(p => p).Count();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
+                        return -1;
+                    }
+                }
+
                 public decimal[] GetQueryMetrics(DataTable table)
                 {
                     try
@@ -160,6 +152,39 @@ namespace Budget
                         return new decimal[] { -1m, -1m, -1m };
                     }
                 }
+
+                public DataSet GetQuerySet()
+                {
+                    try
+                    {
+                        var dataSet = new DataSet("E6");
+                        var dataTable = new DataTable(Query.TableName);
+                        dataSet.Tables.Add(dataTable);
+                        Query.Adapter.Fill(dataSet, Query.TableName);
+                        return dataSet;
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
+                        return null;
+                    }
+                }
+
+                public decimal GetQueryTotal(DataTable table)
+                {
+                    try
+                    {
+                        if (QueryTable.Columns.Contains("Amount"))
+                            return table.AsEnumerable().Select(p => p).Sum(p => p.Field<decimal>("Amount"));
+                        return -1M;
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
+                        return -1M;
+                    }
+                }
+
                 public DataRow[] GetRecords(DataTable table)
                 {
                     try
@@ -172,20 +197,7 @@ namespace Budget
                         return null;
                     }
                 }
-                public decimal GetQueryTotal(DataTable table)
-                {
-                    try
-                    {
-                        if(QueryTable.Columns.Contains("Amount"))
-                            return table.AsEnumerable().Select(p => p).Sum(p => p.Field<decimal>("Amount"));
-                        return -1M;
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
-                        return -1M;
-                    }
-                }
+
                 internal DataTable GetDataTable(DataSet dataSet)
                 {
                     try
@@ -198,6 +210,7 @@ namespace Budget
                         return null;
                     }
                 }
+
                 private PRC[] GetPrcArray(DataTable table)
                 {
                     try

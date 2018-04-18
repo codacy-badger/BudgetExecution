@@ -1,17 +1,10 @@
-﻿using Budget.Ninja.Data;
-using Syncfusion.Windows.Forms.Chart;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Windows.Forms;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Syncfusion.Windows.Forms.Grid;
-using MetroSet_UI.Controls;
 using System.Data.SQLite;
+using System.Windows.Forms;
+using Budget.Ninja.Data;
+using MetroSet_UI.Controls;
 
 namespace Ninja.Data
 {
@@ -32,15 +25,27 @@ namespace Ninja.Data
             GetFundFilterItems();
         }
 
+        private SQLiteDataAdapter Adapter { get; }
+
+        private DataBuilder Data { get; }
+
+        private DataMetric Metric { get; }
+
+        private Dictionary<string, object> Parameter { get; set; }
+
+        private Dictionary<string, string[]> ProgramElements { get; set; }
 
         //Properties
-        Query Query { get; }
-        SQLiteDataAdapter Adapter { get; }
-        DataBuilder Data { get; }
-        DataMetric Metric { get; }
-        DataTable Table { get; set; }
-        Dictionary<string, string[]> ProgramElements { get; set; }
-        Dictionary<string, object> Parameter { get; set; }
+        private Query Query { get; }
+
+        private DataTable Table { get; set; }
+
+        private void BocFilter_ItemSelected(object sender, EventArgs e)
+        {
+            var boc = sender as MetroSetComboBox;
+            var bocfilter = boc.SelectedItem.ToString();
+            BindingSource.Filter = $"FundName = '{FundFilter.SelectedItem.ToString()}' AND BocName = '{bocfilter}'";
+        }
 
         //Methods
         private void DataMaster_Load(object sender, EventArgs e)
@@ -48,9 +53,26 @@ namespace Ninja.Data
             FundFilter.SelectionChangeCommitted += FundFilter_ItemSelected;
             BocFilter.Visible = false;
         }
-        private void gridRecordNavigationControl1_Click(object sender, EventArgs e)
-        {
 
+        private void FundFilter_ItemSelected(object sender, EventArgs e)
+        {
+            BocFilter.Items.Clear();
+            var filter = sender as MetroSetComboBox;
+            FundFilter.Tag = filter;
+            var fund = filter.SelectedItem.ToString();
+            BindingSource.Filter = $"FundName = '{fund}'";
+            var boc = ProgramElements[PrcFilter.BocName.ToString()];
+            foreach (string b in boc)
+                BocFilter.Items.Add(b);
+            BocFilter.Visible = true;
+            BocFilter.SelectionChangeCommitted += BocFilter_ItemSelected;
+        }
+
+        private void GetFundFilterItems()
+        {
+            var item = Data.ProgramElements["FundName"];
+            foreach (string i in item)
+                FundFilter.Items.Add(i);
         }
 
         private void GetGridColumns(DataGridView dgv)
@@ -68,33 +90,8 @@ namespace Ninja.Data
             dgv.Columns[12].Visible = true;
         }
 
-        void GetFundFilterItems()
+        private void gridRecordNavigationControl1_Click(object sender, EventArgs e)
         {
-            var item = Data.ProgramElements["FundName"];
-            foreach (string i in item)
-                FundFilter.Items.Add(i);
-        }
-
-        void FundFilter_ItemSelected(object sender, EventArgs e)
-        {
-            BocFilter.Items.Clear();
-            var filter = sender as MetroSetComboBox;
-            FundFilter.Tag = filter;
-            var fund = filter.SelectedItem.ToString();
-            BindingSource.Filter = $"FundName = '{fund}'";
-            var boc = ProgramElements[PrcFilter.BocName.ToString()];
-            foreach (string b in boc)
-                BocFilter.Items.Add(b);
-            BocFilter.Visible = true;
-            BocFilter.SelectionChangeCommitted += BocFilter_ItemSelected;
-        }
-
-        void BocFilter_ItemSelected(object sender, EventArgs e)
-        {
-            var boc = sender as MetroSetComboBox;
-            var bocfilter = boc.SelectedItem.ToString();
-            BindingSource.Filter = $"FundName = '{FundFilter.SelectedItem.ToString()}' AND BocName = '{bocfilter}'";
-
         }
     }
 }

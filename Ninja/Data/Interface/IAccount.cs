@@ -8,6 +8,7 @@ namespace Budget
             {
                 //Properties
                 string Code { get; }
+
                 string Goal { get; }
                 string NpmCode { get; }
                 string Objective { get; }
@@ -15,13 +16,18 @@ namespace Budget
 
                 //Methods
                 string GetCode();
-                string GetGoal();
-                string GetGoalName(string code);
-                string GetNpmCode();
-                string GetObjective();
-                string GetObjectiveName(string code);
-                string GetProgramProjectCode();
 
+                string GetGoal();
+
+                string GetGoalName(string code);
+
+                string GetNpmCode();
+
+                string GetObjective();
+
+                string GetObjectiveName(string code);
+
+                string GetProgramProjectCode();
             }
         }
     }

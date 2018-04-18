@@ -1,5 +1,5 @@
-﻿using Syncfusion.Windows.Forms.Chart;
-using System.Windows.Forms;
+﻿using System.Windows.Forms;
+using Syncfusion.Windows.Forms.Chart;
 
 namespace Ninja.Data
 {

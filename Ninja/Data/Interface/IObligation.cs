@@ -8,6 +8,7 @@
             {
                 //Properties
                 decimal CommitmentAmount { get; set; }
+
                 string DCNprefix { get; set; }
                 string DocType { get; set; }
                 string DocumentControlNumber { get; set; }
@@ -19,7 +20,6 @@
                 string SiteProjectCode { get; set; }
                 string SiteProjectName { get; set; }
                 string System { get; set; }
-
             }
         }
     }

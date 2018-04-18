@@ -18,6 +18,7 @@
 
                 //Properties
                 public string Code { get; }
+
                 public string FiscalYear { get; }
                 public string Name { get; }
                 public string Title { get; }
@@ -28,7 +29,6 @@
                 {
                     return Code;
                 }
-
             }
         }
     }

@@ -14,6 +14,8 @@ namespace Budget
         {
             public class ExcelOp
             {
+                internal string P7path = @"C:\Users\terry\Documents\Visual Studio 2015\Projects\Budget\Report\Templates\Budget.xlsx";
+
                 //Constructors
                 public ExcelOp()
                 {
@@ -34,17 +36,18 @@ namespace Budget
 
                 //Properties
                 public DataTable Data { get; }
+
                 public string FilePath { get; }
                 internal string ConnectionString { get; set; }
                 private DocInfo AccountingInfo { get; set; }
                 private Excel Excel { get; }
-                internal string P7path = @"C:\Users\terry\Documents\Visual Studio 2015\Projects\Budget\Report\Templates\Budget.xlsx";
-                
+
                 //Methods
                 public string GetConnectionString(string filepath)
                 {
                     return $@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source='{filepath}';Extended Properties='Excel 12.0 Macro;HDR=YES;IMEX=1'";
                 }
+
                 internal Workbook ExportData(DataTable table)
                 {
                     try
@@ -74,6 +77,7 @@ namespace Budget
                         return null;
                     }
                 }
+
                 internal Workbook ExportData(string filepath, DataTable table)
                 {
                     try
@@ -103,6 +107,7 @@ namespace Budget
                         return null;
                     }
                 }
+
                 internal string GetExternalFile()
                 {
                     try
@@ -120,6 +125,7 @@ namespace Budget
                         return null;
                     }
                 }
+
                 internal Workbook OpenFile(string filepath)
                 {
                     try
@@ -134,6 +140,7 @@ namespace Budget
                         return null;
                     }
                 }
+
                 internal Workbook OpenNew()
                 {
                     try
@@ -148,6 +155,7 @@ namespace Budget
                         return null;
                     }
                 }
+
                 internal void Save(Workbook wb)
                 {
                     try
@@ -166,6 +174,7 @@ namespace Budget
                         MessageBox.Show("ERROR!" + ex.StackTrace); ;
                     }
                 }
+
                 internal void SaveAs(Workbook wb, string filepath)
                 {
                     try
@@ -184,6 +193,7 @@ namespace Budget
                         MessageBox.Show("ERROR!" + ex.StackTrace); ;
                     }
                 }
+
                 private Excel Create()
                 {
                     try
@@ -197,6 +207,7 @@ namespace Budget
                         return null;
                     }
                 }
+
                 private void ReleaseObject(object obj)
                 {
                     try
@@ -214,7 +225,6 @@ namespace Budget
                         GC.Collect();
                     }
                 }
-
             }
         }
     }

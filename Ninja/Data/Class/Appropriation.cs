@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Drawing;
@@ -15,7 +14,6 @@ namespace Budget
         {
             public class Appropriation : IBudgetAuthority
             {
-
                 //Constructors
                 public Appropriation()
                 {
@@ -51,19 +49,23 @@ namespace Budget
                     GoalData = BudgetMetric.GoalTotals;
                 }
 
-                //Properties
-                public string FiscalYear { get;}
-                public Fund Fund { get; }
-                DataBuilder Data { get; }
-                public DataMetric BudgetMetric { get; }
-                public DataTable Table { get; }
-                public decimal Total { get; }
                 public decimal Average { get; }
+
                 public string[] BOC { get; }
+
                 public string[] BocCodes { get; }
+
                 public Dictionary<string, decimal> BocData { get; set; }
+
+                public DataMetric BudgetMetric { get; }
+
                 public int Count { get; }
+
+                //Properties
+                public string FiscalYear { get; }
+
                 public FTE FTE { get; }
+                public Fund Fund { get; }
                 public string[] Goal { get; }
                 public Dictionary<string, decimal> GoalData { get; set; }
                 public decimal[] Metrics { get; }
@@ -76,6 +78,22 @@ namespace Budget
                 public Dictionary<string, string[]> ProgramElements { get; }
                 public string[] Project { get; }
                 public Dictionary<string, decimal> ProjectData { get; set; }
+                public DataTable Table { get; }
+                public decimal Total { get; }
+                private DataBuilder Data { get; }
+
+                public DataTable FilterTable(DataTable table, string column, string filter)
+                {
+                    try
+                    {
+                        return table.AsEnumerable().Where(p => p.Field<string>(column).Equals(filter)).Select(p => p).CopyToDataTable();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
+                        return null;
+                    }
+                }
 
                 //Methods
                 public decimal GetAverage(DataTable table)
@@ -90,6 +108,7 @@ namespace Budget
                         return -1M;
                     }
                 }
+
                 public string[] GetCodes(DataTable table, string column)
                 {
                     try
@@ -102,11 +121,13 @@ namespace Budget
                         return null;
                     }
                 }
+
                 public Tuple<string[], string[], string[], string[], string[]> GetCodes()
                 {
                     return new Tuple<string[], string[], string[], string[], string[]>(ProgramElements["BOC"],
                         ProgramElements["Code"], ProgramElements["NPM"], ProgramElements["ProgramArea"], ProgramElements["ProgramProjectCode"]);
                 }
+
                 public int GetCount(DataTable table)
                 {
                     try
@@ -115,24 +136,11 @@ namespace Budget
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message.ToString( ) + $"Target Method:\n{ex.TargetSite}\n" + $"Stack:\n{ex.StackTrace}");
+                        MessageBox.Show(ex.Message.ToString() + $"Target Method:\n{ex.TargetSite}\n" + $"Stack:\n{ex.StackTrace}");
                         return -1;
                     }
                 }
-                public Dictionary<string, string[]> GetProgramElements(DataTable table)
-                {
-                    var data = new Dictionary<string, string[]>();
-                    foreach (DataColumn dc in table.Columns)
-                    {
-                        if (dc.ColumnName.Equals("Id") || dc.ColumnName.Equals("Amount"))
-                            continue;
-                        data.Add(dc.ColumnName, GetCodes(table, dc.ColumnName));
-                    }
-                    if (data.ContainsKey("Id")) data.Remove("Id");
-                    if (data.ContainsKey("Amount")) data.Remove("Amount");
-                    if (data.ContainsKey("P6_Id")) data.Remove("P6_Id");
-                    return data;
-                }
+
                 public Tuple<DataTable, PRC[], decimal, int> GetDataValues(DataTable table, string column, string filter)
                 {
                     try
@@ -147,6 +155,7 @@ namespace Budget
                         return null;
                     }
                 }
+
                 public Tuple<DataTable, PRC[], decimal, int> GetDataValues(DataTable table, string[] list, string column)
                 {
                     foreach (string filter in list)
@@ -164,15 +173,18 @@ namespace Budget
                     }
                     return null;
                 }
+
                 public decimal GetFTE()
                 {
                     return PrcData.Item1.AsEnumerable().Where(p => p.Field<string>("BOC").Equals("17")).Select(p => p).Sum(p => p.Field<decimal>("Amount"));
                 }
+
                 public decimal[] GetMetrics(DataTable table)
                 {
                     var count = GetCount(table);
                     return new decimal[] { GetTotal(table), (decimal)count, GetAverage(table) };
                 }
+
                 public Dictionary<string, decimal[]> GetMetrics(DataTable table, string[] list, string column)
                 {
                     try
@@ -195,6 +207,7 @@ namespace Budget
                         return null;
                     }
                 }
+
                 public Dictionary<string, decimal[]> GetMetrics(DataTable table, string column, string filter)
                 {
                     try
@@ -218,6 +231,7 @@ namespace Budget
                         return null;
                     }
                 }
+
                 public PRC[] GetPrcArray(DataTable table)
                 {
                     try
@@ -230,6 +244,22 @@ namespace Budget
                         return null;
                     }
                 }
+
+                public Dictionary<string, string[]> GetProgramElements(DataTable table)
+                {
+                    var data = new Dictionary<string, string[]>();
+                    foreach (DataColumn dc in table.Columns)
+                    {
+                        if (dc.ColumnName.Equals("Id") || dc.ColumnName.Equals("Amount"))
+                            continue;
+                        data.Add(dc.ColumnName, GetCodes(table, dc.ColumnName));
+                    }
+                    if (data.ContainsKey("Id")) data.Remove("Id");
+                    if (data.ContainsKey("Amount")) data.Remove("Amount");
+                    if (data.ContainsKey("P6_Id")) data.Remove("P6_Id");
+                    return data;
+                }
+
                 public decimal GetTotal(DataTable table)
                 {
                     try
@@ -238,19 +268,20 @@ namespace Budget
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message.ToString( ) + $"Target Method:\n{ex.TargetSite}\n" + $"Stack:\n{ex.StackTrace}");
+                        MessageBox.Show(ex.Message.ToString() + $"Target Method:\n{ex.TargetSite}\n" + $"Stack:\n{ex.StackTrace}");
                         return -1M;
                     }
                 }
+
                 public Dictionary<string, decimal> GetTotals(DataTable table, string column, string filter)
                 {
                     try
                     {
                         var list = GetCodes(table, column);
-                        Dictionary<string, decimal> info = new Dictionary<string, decimal>( );
+                        Dictionary<string, decimal> info = new Dictionary<string, decimal>();
                         foreach (string ftr in list)
                         {
-                            var query = PrcData.Item1.AsEnumerable( ).Where(p => p.Field<string>(column).Equals(filter))
+                            var query = PrcData.Item1.AsEnumerable().Where(p => p.Field<string>(column).Equals(filter))
                                 .Sum(p => p.Field<decimal>("Amount"));
                             if (query > 0)
                                 info.Add(filter, query);
@@ -259,15 +290,16 @@ namespace Budget
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message.ToString( ) + $"Target Method:\n{ex.TargetSite}\n" + $"Stack:\n{ex.StackTrace}");
+                        MessageBox.Show(ex.Message.ToString() + $"Target Method:\n{ex.TargetSite}\n" + $"Stack:\n{ex.StackTrace}");
                         return null;
                     }
                 }
+
                 public Dictionary<string, decimal> GetTotals(DataTable table, string[] filters, string column)
                 {
                     try
                     {
-                        Dictionary<string, decimal> info = new Dictionary<string, decimal>( );
+                        Dictionary<string, decimal> info = new Dictionary<string, decimal>();
                         foreach (string f in filters)
                         {
                             if (GetTotal(table) > 0)
@@ -277,22 +309,11 @@ namespace Budget
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show(ex.Message.ToString( ) + $"Target Method:\n{ex.TargetSite}\n" + $"Stack:\n{ex.StackTrace}");
+                        MessageBox.Show(ex.Message.ToString() + $"Target Method:\n{ex.TargetSite}\n" + $"Stack:\n{ex.StackTrace}");
                         return null;
                     }
                 }
-                public DataTable FilterTable(DataTable table, string column, string filter)
-                {
-                    try
-                    {
-                        return table.AsEnumerable().Where(p => p.Field<string>(column).Equals(filter)).Select(p => p).CopyToDataTable();
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
-                        return null;
-                    }
-                }
+
                 internal Bitmap GetImageFile()
                 {
                     DirectoryInfo imgfolder = new DirectoryInfo(@"C:\Users\terry\Documents\Visual Studio 2015\Projects\Budget\Resources\fundlabel");
@@ -305,7 +326,6 @@ namespace Budget
                     }
                     return null;
                 }
-
             }
         }
     }

@@ -23,6 +23,7 @@
 
                 //Properties
                 public string Code { get; }
+
                 public string Name { get; }
                 public decimal Value { get; }
 
@@ -36,7 +37,6 @@
                 {
                     return Code;
                 }
-
             }
         }
     }

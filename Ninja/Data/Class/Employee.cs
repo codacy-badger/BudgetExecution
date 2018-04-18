@@ -46,6 +46,7 @@ namespace Budget
 
                 //Properties
                 public string EmployId { get; }
+
                 public string First { get; }
                 public string HrOrgCode { get; }
                 public string HrOrgName { get; }

@@ -42,6 +42,7 @@ namespace Budget
 
                 //Properties
                 public Account Account { get; }
+
                 public string Agreement { get; }
                 public decimal Amount { get; }
                 public decimal Authority { get; }

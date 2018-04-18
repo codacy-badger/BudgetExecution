@@ -47,6 +47,7 @@ namespace Budget
 
                 //Properties
                 public SQLiteDataAdapter Adapter { get; set; }
+
                 public SQLiteCommandBuilder CommandBuilder { get; }
                 public SQLiteConnection Connection { get; }
                 public SQLiteCommand DeleteCommand { get; }
@@ -74,6 +75,7 @@ namespace Budget
                         return null;
                     }
                 }
+
                 public SQLiteDataAdapter GetDataAdapter(SQLiteCommand command)
                 {
                     try
@@ -86,6 +88,7 @@ namespace Budget
                         return null;
                     }
                 }
+
                 public SQLiteCommand GetDeleteCommand()
                 {
                     try
@@ -98,6 +101,7 @@ namespace Budget
                         return null;
                     }
                 }
+
                 public SQLiteCommand GetInsertCommand()
                 {
                     try
@@ -110,6 +114,7 @@ namespace Budget
                         return null;
                     }
                 }
+
                 public SQLiteCommand GetSelectCommand(string select)
                 {
                     try
@@ -122,6 +127,7 @@ namespace Budget
                         return null;
                     }
                 }
+
                 public string GetSqlStatement()
                 {
                     try
@@ -134,6 +140,7 @@ namespace Budget
                         return null;
                     }
                 }
+
                 public string GetSqlStatement(string sql)
                 {
                     try
@@ -146,6 +153,7 @@ namespace Budget
                         return null;
                     }
                 }
+
                 public SQLiteCommand GetUpdateCommand()
                 {
                     try
@@ -158,6 +166,7 @@ namespace Budget
                         return null;
                     }
                 }
+
                 internal SQLiteDataAdapter GetDataAdapter(string sql)
                 {
                     try
@@ -170,6 +179,7 @@ namespace Budget
                         return null;
                     }
                 }
+
                 private SQLiteCommandBuilder GetCommandBuilder()
                 {
                     try
@@ -182,6 +192,7 @@ namespace Budget
                         return null;
                     }
                 }
+
                 private SQLiteDataAdapter GetDataAdapter()
                 {
                     try
@@ -194,6 +205,7 @@ namespace Budget
                         return null;
                     }
                 }
+
                 private string GetParamString(Dictionary<string, object> param)
                 {
                     try
@@ -212,6 +224,7 @@ namespace Budget
                         return null;
                     }
                 }
+
                 private SQLiteCommand GetSelectCommand()
                 {
                     try
@@ -224,7 +237,6 @@ namespace Budget
                         return null;
                     }
                 }
-
             }
         }
     }

@@ -1,11 +1,9 @@
-using MetroSet_UI.Controls;
-using Syncfusion.Windows.Forms.Chart;
-using Syncfusion.Windows.Forms.Grid;
 using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Windows.Forms;
+using MetroSet_UI.Controls;
 using Metro = Syncfusion.Windows.Forms.MetroForm;
 
 namespace Budget
@@ -16,7 +14,6 @@ namespace Budget
         {
             public partial class DataManager : Metro
             {
-
                 //Constructors
                 public DataManager(Source source)
                 {
@@ -32,9 +29,10 @@ namespace Budget
 
                 //Properties
                 public DataBuilder Data { get; }
+
                 public DataMetric Metric { get; }
-                public Dictionary<string, string[]> ProgramElements { get; set; }
                 public FormData Ninja { get; set; }
+                public Dictionary<string, string[]> ProgramElements { get; set; }
                 public DataTable Table { get; set; }
                 public decimal Total { get; }
 
@@ -51,6 +49,7 @@ namespace Budget
                         return null;
                     }
                 }
+
                 public Tuple<DataTable, PRC[], decimal, int> GetData(DataTable table, string column, string filter)
                 {
                     try
@@ -66,6 +65,7 @@ namespace Budget
                         return null;
                     }
                 }
+
                 public Dictionary<string, decimal> GetData(DataTable table, string[] filters, string column)
                 {
                     try
@@ -83,6 +83,7 @@ namespace Budget
                         return null;
                     }
                 }
+
                 public Dictionary<string, decimal[]> GetMetrics(DataTable table, string[] list, string column)
                 {
                     try
@@ -105,6 +106,7 @@ namespace Budget
                         return null;
                     }
                 }
+
                 public DataTable GetTable(DataTable table, string column, string filter)
                 {
                     try
@@ -117,6 +119,7 @@ namespace Budget
                         return null;
                     }
                 }
+
                 public decimal GetTotal(DataTable table)
                 {
                     try
@@ -129,6 +132,14 @@ namespace Budget
                         return -1M;
                     }
                 }
+
+                private void BocFilter_ItemSelected(object sender, EventArgs e)
+                {
+                    var boc = sender as MetroSetComboBox;
+                    var bocfilter = boc.SelectedItem.ToString();
+                    BindingSource.Filter = $"FundName = '{FundFilter.SelectedItem.ToString()}' AND BocName = '{bocfilter}'";
+                }
+
                 private void Form_Load(object sender, EventArgs e)
                 {
                     try
@@ -139,10 +150,24 @@ namespace Budget
                     }
                     catch (Exception ex)
                     {
-
                         MessageBox.Show(ex.Message + ex.StackTrace);
                     }
                 }
+
+                private void FundFilter_ItemSelected(object sender, EventArgs e)
+                {
+                    BocFilter.Items.Clear();
+                    var filter = sender as MetroSetComboBox;
+                    FundFilter.Tag = filter;
+                    var fund = filter.SelectedItem.ToString();
+                    BindingSource.Filter = $"FundName = '{fund}'";
+                    var boc = ProgramElements[Budget.Ninja.Data.PrcFilter.BocName.ToString()];
+                    foreach (string b in boc)
+                        BocFilter.Items.Add(b);
+                    BocFilter.Visible = true;
+                    BocFilter.SelectionChangeCommitted += BocFilter_ItemSelected;
+                }
+
                 private void GetCalculatorValue(DataGridView gridrow)
                 {
                     try
@@ -152,10 +177,32 @@ namespace Budget
                     }
                     catch (Exception ex)
                     {
-
                         MessageBox.Show(ex.Message + ex.StackTrace);
                     }
                 }
+
+                private void GetFundFilterItems()
+                {
+                    var item = Data.ProgramElements["FundName"];
+                    foreach (string i in item)
+                        FundFilter.Items.Add(i);
+                }
+
+                private void GetGridColumns(DataGridView dgv)
+                {
+                    foreach (DataGridViewColumn dc in dgv.Columns)
+                        dc.Visible = false;
+                    dgv.Columns[0].Visible = true;
+                    dgv.Columns[4].Visible = true;
+                    dgv.Columns[5].Visible = true;
+                    dgv.Columns[6].Visible = true;
+                    dgv.Columns[8].Visible = true;
+                    dgv.Columns[8].HeaderText = "BOC";
+                    dgv.Columns[9].Visible = true;
+                    dgv.Columns[11].Visible = true;
+                    dgv.Columns[12].Visible = true;
+                }
+
                 private void GetGridSelectedRowValues()
                 {
                     try
@@ -171,10 +218,10 @@ namespace Budget
                     }
                     catch (Exception ex)
                     {
-
                         MessageBox.Show(ex.Message + ex.StackTrace);
                     }
                 }
+
                 private void GridRow_DoubleClick(object sender, EventArgs e)
                 {
                     try
@@ -184,14 +231,14 @@ namespace Budget
                     }
                     catch (Exception ex)
                     {
-
                         MessageBox.Show(ex.Message + ex.StackTrace);
                     }
                 }
+
                 private void UpdateDataChart(object sender, EventArgs e)
                 {
-                   
                 }
+
                 private void UpdateGridSelectedRowValues(object sender, EventArgs e)
                 {
                     try
@@ -206,49 +253,8 @@ namespace Budget
                     }
                     catch (Exception ex)
                     {
-
                         MessageBox.Show(ex.Message + ex.StackTrace);
                     }
-                }
-                private void GetGridColumns(DataGridView dgv)
-                {
-                    foreach (DataGridViewColumn dc in dgv.Columns)
-                        dc.Visible = false;
-                    dgv.Columns[0].Visible = true;
-                    dgv.Columns[4].Visible = true;
-                    dgv.Columns[5].Visible = true;
-                    dgv.Columns[6].Visible = true;
-                    dgv.Columns[8].Visible = true;
-                    dgv.Columns[8].HeaderText = "BOC";
-                    dgv.Columns[9].Visible = true;
-                    dgv.Columns[11].Visible = true;
-                    dgv.Columns[12].Visible = true;
-                }
-                void GetFundFilterItems()
-                {
-                    var item = Data.ProgramElements["FundName"];
-                    foreach (string i in item)
-                        FundFilter.Items.Add(i);
-                }
-                void FundFilter_ItemSelected(object sender, EventArgs e)
-                {
-                    BocFilter.Items.Clear();
-                    var filter = sender as MetroSetComboBox;
-                    FundFilter.Tag = filter;
-                    var fund = filter.SelectedItem.ToString();
-                    BindingSource.Filter = $"FundName = '{fund}'";
-                    var boc = ProgramElements[Budget.Ninja.Data.PrcFilter.BocName.ToString()];
-                    foreach (string b in boc)
-                        BocFilter.Items.Add(b);
-                    BocFilter.Visible = true;
-                    BocFilter.SelectionChangeCommitted += BocFilter_ItemSelected;
-                }
-                void BocFilter_ItemSelected(object sender, EventArgs e)
-                {
-                    var boc = sender as MetroSetComboBox;
-                    var bocfilter = boc.SelectedItem.ToString();
-                    BindingSource.Filter = $"FundName = '{FundFilter.SelectedItem.ToString()}' AND BocName = '{bocfilter}'";
-
                 }
             }
         }

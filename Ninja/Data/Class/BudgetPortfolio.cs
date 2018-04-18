@@ -14,7 +14,7 @@ namespace Budget
             public class BudgetPortfolio
             {
                 #region Properties
-                
+
                 public List<string> BudgetList { get; set; }
                 public Query DocumentQuery { get; set; }
                 public Tuple<DataTable, List<DocInfo>> SqlDocumentData { get; internal set; }

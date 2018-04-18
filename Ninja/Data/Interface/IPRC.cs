@@ -8,6 +8,7 @@
             {
                 //Properties
                 Account Account { get; }
+
                 decimal Amount { get; set; }
                 string BFY { get; set; }
                 BOC BOC { get; }
@@ -15,7 +16,6 @@
                 Org Org { get; }
                 RC RC { get; }
                 string RPIO { get; set; }
-
             }
         }
     }
