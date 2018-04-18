@@ -18,10 +18,10 @@ namespace Budget
                 {
                     Data = new DataBuilder(Source.P8);
                     BudgetMetric = new DataMetric(Data);
-                    Table = Data.BudgetTable;
-                    Total = BudgetMetric.Total;
-                    Count = BudgetMetric.Count;
-                    Average = BudgetMetric.Average;
+                    Table = Data.QueryTable;
+                    Total = BudgetMetric.BaseTotal;
+                    Count = BudgetMetric.BaseCount;
+                    Average = BudgetMetric.BaseAverage;
                     ProgramElements = GetProgramElements(Table);
                     FundData = BudgetMetric.FundTotals;
                     BocData = BudgetMetric.BocTotals;
@@ -31,7 +31,7 @@ namespace Budget
                     ProjectData = BudgetMetric.ProgramProjectTotals;
                     if (ProgramElements["BOC"].Contains("17"))
                     {
-                        FTE = new FTE(Data.BudgetTable);
+                        FTE = new FTE(Data.QueryTable);
                         FteData = FTE.FundData;
                     }
                 }
@@ -42,10 +42,10 @@ namespace Budget
                     Org = new Org(RC.Code);
                     Data = new DataBuilder(Source.P8, new Dictionary<string, object> { ["RC"] = rc });
                     BudgetMetric = new DataMetric(Data);
-                    Table = Data.BudgetTable;
-                    Total = BudgetMetric.Total;
-                    Count = BudgetMetric.Count;
-                    Average = BudgetMetric.Average;
+                    Table = Data.QueryTable;
+                    Total = BudgetMetric.BaseTotal;
+                    Count = BudgetMetric.BaseCount;
+                    Average = BudgetMetric.BaseAverage;
                     ProgramElements = GetProgramElements(Table);
                     FundData = BudgetMetric.FundTotals;
                     BocData = BudgetMetric.BocTotals;

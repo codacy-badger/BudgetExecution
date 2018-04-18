@@ -6,8 +6,7 @@
         {
             public interface IPRC
             {
-                #region Properties
-
+                //Properties
                 Account Account { get; }
                 decimal Amount { get; set; }
                 string BFY { get; set; }
@@ -17,7 +16,6 @@
                 RC RC { get; }
                 string RPIO { get; set; }
 
-                #endregion
             }
         }
     }

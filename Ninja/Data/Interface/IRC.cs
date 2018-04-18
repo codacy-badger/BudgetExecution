@@ -6,19 +6,14 @@
         {
             public interface IRC
             {
-                #region Properties
-
+                //Properties
                 string Code { get; }
                 string ID { get; }
                 string Name { get; }
 
-                #endregion
-
-                #region Methods
-
+                //Methods
                 string ToString();
 
-                #endregion
             }
         }
     }

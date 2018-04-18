@@ -41,11 +41,11 @@ namespace Budget
                         Text = "R6 Division Summary";
                         Title = "Division Funding";
                     }
-                    BudgetMetric = new DataMetric(Data);
-                    DataSet = Data.BudgetData;
+                    Metric = new DataMetric(Data);
+                    DataSet = Data.QuerySet;
                     PopulateCharts(Title);
-                    ProgramElements = BudgetMetric.ProgramElements;
-                    BindingSource.DataSource = BudgetMetric.Table;
+                    ProgramElements = Metric.ProgramElements;
+                    BindingSource.DataSource = Metric.BaseTable;
                     GetFilterButtons();
                 }
 
@@ -55,9 +55,9 @@ namespace Budget
                     DatabaseTab.TabVisible = true;
                     D6 = new DivisionAuthority(rc);
                     Data = new DataBuilder(Source.P8, new Dictionary<string, object> { ["RC"] = rc });
-                    DataSet = Data.BudgetData;
-                    BudgetMetric = new DataMetric(Data);
-                    ProgramElements = BudgetMetric.ProgramElements;
+                    DataSet = Data.QuerySet;
+                    Metric = new DataMetric(Data);
+                    ProgramElements = Metric.ProgramElements;
                     GetFilterButtons();
                     Text = $"{D6.Org.Name} Summary";
                     Title = D6.RC.Name;
@@ -65,7 +65,7 @@ namespace Budget
 
                 //Properties
                 public DataBuilder Data { get; }
-                public DataMetric BudgetMetric { get; }
+                public DataMetric Metric { get; }
                 public DataSet DataSet { get; }
                 public string Title { get; }
                 public DataTable Table { get; }
@@ -83,15 +83,15 @@ namespace Budget
                 {
                     try
                     {
-                        BindingSource.DataSource = Data.BudgetTable;
+                        BindingSource.DataSource = Data.QueryTable;
                         Navigator.BindingSource = BindingSource;
                         Grid.DataSource = BindingSource;
                         GetGridColumns(Grid);
                         PopulateCharts(Title);
                         GetFundFilterItems();
                         GetTextBoxBindings();
-                        lblTotal.Text = Data.GetTotal(Data.BudgetTable).ToString("c");
-                        lblCount.Text = Data.GetCount(Data.BudgetTable).ToString();
+                        lblTotal.Text = Data.GetQueryTotal(Data.QueryTable).ToString("c");
+                        lblCount.Text = Data.GetQueryCount(Data.QueryTable).ToString();
                         FundFilter.SelectionChangeCommitted += FundFilter_ItemSelected;
                         BocFilter.SelectionChangeCommitted += BocFilter_ItemSelected;
                         BocFilter.SelectionChangeCommitted += BocFilter_ItemSelected;
@@ -136,14 +136,14 @@ namespace Budget
                 {
                     try
                     {
-                        GetMetroSetButtons(fp1, BudgetMetric.ProgramElements["FundName"]);
-                        GetMetroSetButtons(fp1, BudgetMetric.ProgramElements["BocName"]);
-                        GetMetroSetButtons(fp3, BudgetMetric.ProgramElements["NPM"]);
-                        GetMetroSetButtons(fp4, BudgetMetric.ProgramElements["GoalName"]);
-                        GetMetroSetButtons(fp5, BudgetMetric.ProgramElements["ObjectiveName"]);
-                        GetMetroSetButtons(fp6, BudgetMetric.ProgramElements["DivisionName"]);
-                        GetMetroSetButtons(fp7, BudgetMetric.ProgramElements["ProgramAreaName"]);
-                        GetMetroSetButtons(fp8, BudgetMetric.ProgramElements["ProgramProjectName"]);
+                        GetMetroSetButtons(fp1, Metric.ProgramElements["FundName"]);
+                        GetMetroSetButtons(fp1, Metric.ProgramElements["BocName"]);
+                        GetMetroSetButtons(fp3, Metric.ProgramElements["NPM"]);
+                        GetMetroSetButtons(fp4, Metric.ProgramElements["GoalName"]);
+                        GetMetroSetButtons(fp5, Metric.ProgramElements["ObjectiveName"]);
+                        GetMetroSetButtons(fp6, Metric.ProgramElements["DivisionName"]);
+                        GetMetroSetButtons(fp7, Metric.ProgramElements["ProgramAreaName"]);
+                        GetMetroSetButtons(fp8, Metric.ProgramElements["ProgramProjectName"]);
                     }
                     catch (Exception e)
                     {
@@ -155,7 +155,7 @@ namespace Budget
                 {
                     try
                     {
-                        var fd = new BudgetChart(chart, data, filter, Statistic.Total);
+                        var fd = new BudgetChart(chart, data, filter, Stat.Total);
                         fd.GetAxisTitle(chart, new string[] { title });
                         return fd.Activate();
                     }
@@ -185,9 +185,8 @@ namespace Budget
                         dgv.Columns[0].Visible = true;
                         dgv.Columns[3].Visible = true;
                         dgv.Columns[4].Visible = true;
-                        dgv.Columns[5].Visible = true;
                         dgv.Columns[6].Visible = true;
-                        dgv.Columns[8].Visible = true;
+                        dgv.Columns[7].Visible = true;
                         dgv.Columns[10].Visible = true;
                         dgv.Columns[11].Visible = true;
                         dgv.Columns[12].Visible = true;
@@ -302,7 +301,7 @@ namespace Budget
                 {
                     try
                     {
-                        return Data.BudgetTable.AsEnumerable().Where(p => p.Field<string>("FundName").
+                        return Data.QueryTable.AsEnumerable().Where(p => p.Field<string>("FundName").
                      Equals(filter)).Select(p => p.Field<decimal>("Amount")).Sum();
                     }
                     catch (Exception ex)
@@ -316,7 +315,7 @@ namespace Budget
                 {
                     try
                     {
-                        return Data.BudgetTable.AsEnumerable().Where(p => p.Field<string>("FundName").Equals(filter1))
+                        return Data.QueryTable.AsEnumerable().Where(p => p.Field<string>("FundName").Equals(filter1))
                     .Where(p => p.Field<string>("BocName").Equals(filter2))
                     .Select(p => p.Field<decimal>("Amount")).Sum();
                     }
@@ -331,7 +330,7 @@ namespace Budget
                 {
                     try
                     {
-                        return Data.BudgetTable.AsEnumerable().Where(p => p.Field<string>("FundName").
+                        return Data.QueryTable.AsEnumerable().Where(p => p.Field<string>("FundName").
                     Equals(filter)).Select(p => p.Field<decimal>("Amount") > 0).Count();
                     }
                     catch (Exception ex)
@@ -345,7 +344,7 @@ namespace Budget
                 {
                     try
                     {
-                        return Data.BudgetTable.AsEnumerable().Where(p => p.Field<string>("FundName").Equals(filter1))
+                        return Data.QueryTable.AsEnumerable().Where(p => p.Field<string>("FundName").Equals(filter1))
                            .Where(p => p.Field<string>("BocName").Equals(filter2)).Select(p => p.Field<decimal>("Amount")).Count();
                     }
                     catch (Exception ex)

@@ -131,7 +131,7 @@ namespace Budget
                 {
                     try
                     {
-                        return (new DataBuilder(Source.T6).BudgetTable.Rows.Count) + 1;
+                        return (new DataBuilder(Source.T6).QueryTable.Rows.Count) + 1;
                     }
                     catch (Exception ex)
                     {

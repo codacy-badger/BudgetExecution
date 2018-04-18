@@ -22,7 +22,7 @@ namespace Ninja.Data
         {
             InitializeComponent();
             Data = new DataBuilder(Source.P7);
-            Table = Data.BudgetTable;
+            Table = Data.QueryTable;
             Metric = new DataMetric(Data);
             ProgramElements = Data.GetElements(Table);
             BindingSource.DataSource = Table;

@@ -18,10 +18,10 @@ namespace Budget
                 {
                     Data = new DataBuilder(Source.P7, new Dictionary<string, object> { ["BFY"] = FiscalYear });
                     BudgetMetric = new DataMetric(Data);
-                    Table = Data.BudgetTable;
-                    Total = BudgetMetric.Total;
-                    Count = BudgetMetric.Count;
-                    Average = BudgetMetric.Average;
+                    Table = Data.QueryTable;
+                    Total = BudgetMetric.BaseTotal;
+                    Count = BudgetMetric.BaseCount;
+                    Average = BudgetMetric.BaseAverage;
                     ProgramElements = GetProgramElements(Table);
                     FundData = BudgetMetric.FundTotals;
                     BocData = BudgetMetric.BocTotals;
@@ -89,7 +89,7 @@ namespace Budget
                 {
                     try
                     {
-                        return Data.BudgetTable.AsEnumerable().Select(p => p.Field<string>(filter)).Distinct().ToArray();
+                        return Data.QueryTable.AsEnumerable().Select(p => p.Field<string>(filter)).Distinct().ToArray();
                     }
                     catch (Exception ex)
                     {

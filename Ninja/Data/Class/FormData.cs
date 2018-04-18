@@ -26,8 +26,8 @@ namespace Budget
                 {
                     Data = data;
                     BudgetMetric = new DataMetric(Data);
-                    BudgetData = Data.BudgetData;
-                    Table = Data.BudgetTable;
+                    BudgetData = Data.QuerySet;
+                    Table = Data.QueryTable;
                     BindGridAndNavigator(Table, dgv, bs, bn);
                     BindingSource = bs;
                     Navigator = bn;
@@ -354,7 +354,7 @@ namespace Budget
 
                 internal void ReturnButton_OnClick(object sender, EventArgs e)
                 {
-                    Table = Data.BudgetTable;
+                    Table = Data.QueryTable;
                     BindingSource.DataSource = Table;
                 }
 

@@ -6,8 +6,7 @@
         {
             public interface IObligation : IPRC
             {
-                #region Properties
-
+                //Properties
                 decimal CommitmentAmount { get; set; }
                 string DCNprefix { get; set; }
                 string DocType { get; set; }
@@ -21,7 +20,6 @@
                 string SiteProjectName { get; set; }
                 string System { get; set; }
 
-                #endregion
             }
         }
     }

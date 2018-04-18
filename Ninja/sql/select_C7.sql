@@ -1,0 +1,11 @@
+USE [C:\USERS\TERRY\DOCUMENTS\VISUAL STUDIO 2017\PROJECTS\BUDGETEXECUTION\NINJA\SQLSERVER\R6.MDF]
+GO
+
+SELECT [Fund]
+      ,[Org]
+      ,[Code]
+      ,[BOC]
+      ,[BocLevel]
+  FROM [dbo].[BocControl]
+GO
+

@@ -6,6 +6,7 @@
         {
             public interface IParameter
             {
+                //Properties
                 string BFY { get; }
                 string BOC { get; }
                 string Code { get; }

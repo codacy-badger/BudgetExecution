@@ -18,9 +18,9 @@ namespace Ninja.Forms
             D6 = new DataBuilder(Source.P8);
             Metric = new DataMetric(R6);
             Timer = new Timer();
-            Values = new Dictionary<string, double>[] { Metric.GetChartTotals(R6.BudgetTable, PrcFilter.Fund), Metric.GetChartTotals(R6.BudgetTable, PrcFilter.BOC),
-                Metric.GetChartTotals(D6.BudgetTable, PrcFilter.Fund), Metric.GetChartTotals(R6.BudgetTable, PrcFilter.NPM), Metric.GetChartTotals(D6.BudgetTable, PrcFilter.NPM),
-                Metric.GetChartTotals(R6.BudgetTable, PrcFilter.GoalName), Metric.GetChartTotals(D6.BudgetTable, PrcFilter.GoalName)};
+            Values = new Dictionary<string, double>[] { Metric.GetChartTotals(R6.QueryTable, PrcFilter.Fund), Metric.GetChartTotals(R6.QueryTable, PrcFilter.BOC),
+                Metric.GetChartTotals(D6.QueryTable, PrcFilter.Fund), Metric.GetChartTotals(R6.QueryTable, PrcFilter.NPM), Metric.GetChartTotals(D6.QueryTable, PrcFilter.NPM),
+                Metric.GetChartTotals(R6.QueryTable, PrcFilter.GoalName), Metric.GetChartTotals(D6.QueryTable, PrcFilter.GoalName)};
             Title = GetChartTitles(Values);
             Chart = new GetChart(GetMainChart);
             MainChart = new BudgetChart(MainChart, Title[1], Values[1]).Activate();

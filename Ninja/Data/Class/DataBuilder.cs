@@ -21,43 +21,43 @@ namespace Budget
                 public DataBuilder(Source source)
                 {
                     Query = new Query(source);
-                    BudgetData = GetDataSet();
-                    BudgetTable = BudgetData.Tables[0];
-                    Total = GetTotal(BudgetTable);
+                    QuerySet = GetQuerySet();
+                    QueryTable = QuerySet.Tables[0];
+                    QueryTotal = GetQueryTotal(QueryTable);
                     BindingSource = new BindingSource();
-                    BindingSource.DataSource = BudgetTable; 
-                    ProgramElements = GetElements(BudgetTable);
-                    Records = GetRecords(BudgetTable);
+                    BindingSource.DataSource = QueryTable; 
+                    ProgramElements = GetElements(QueryTable);
+                    Records = GetRecords(QueryTable);
                     if (source == Source.P6 || source == Source.P7 || source == Source.P8)
                     {
-                        Accounts = GetPrcArray(BudgetTable);
+                        Accounts = GetPrcArray(QueryTable);
                     }
                 }
 
                 public DataBuilder(Source source, Dictionary<string, object> param)
                 {
                     Query = new Query(source, param);
-                    BudgetData = GetDataSet();
-                    BudgetTable = BudgetData.Tables[0];
+                    QuerySet = GetQuerySet();
+                    QueryTable = QuerySet.Tables[0];
                     BindingSource = new BindingSource();
-                    BindingSource.DataSource = BudgetTable;
-                    ProgramElements = GetElements(BudgetTable);
-                    Records = GetRecords(BudgetTable);
+                    BindingSource.DataSource = QueryTable;
+                    ProgramElements = GetElements(QueryTable);
+                    Records = GetRecords(QueryTable);
                     if (source == Source.P6 || source == Source.P7 || source == Source.P8)
                     {
-                        Accounts = GetPrcArray(BudgetTable);
+                        Accounts = GetPrcArray(QueryTable);
                     }
                 }
 
                 //Properties
                 public Query Query { get; }
-                public DataSet BudgetData { get; }
-                public DataTable BudgetTable { get; }
-                public decimal Total { get; }
+                public DataSet QuerySet { get; }
+                public DataTable QueryTable { get; }
+                public decimal QueryTotal { get; }
                 public Dictionary<string, string[]> ProgramElements { get; }
                 public DataRow[] Records { get; }
                 public PRC[] Accounts { get; }
-                public BindingSource BindingSource { get; set; }
+                public BindingSource BindingSource { get; }
                 Dictionary<string, object> Parameter { get; set; }
 
                 //Methods
@@ -74,7 +74,7 @@ namespace Budget
                         return null;
                     }
                 }
-                public decimal GetAverage(DataTable table)
+                public decimal GetQueryAverage(DataTable table)
                 {
                     try
                     {
@@ -86,7 +86,7 @@ namespace Budget
                         return -1;
                     }
                 }
-                public int GetCount(DataTable table)
+                public int GetQueryCount(DataTable table)
                 {
                     try
                     {
@@ -98,7 +98,7 @@ namespace Budget
                         return -1;
                     }
                 }
-                public DataSet GetDataSet()
+                public DataSet GetQuerySet()
                 {
                     try
                     {
@@ -148,11 +148,11 @@ namespace Budget
                         return null;
                     }
                 }
-                public decimal[] GetMetrics(DataTable table)
+                public decimal[] GetQueryMetrics(DataTable table)
                 {
                     try
                     {
-                        return new decimal[] { GetTotal(table), (decimal)GetCount(table), GetAverage(table) };
+                        return new decimal[] { GetQueryTotal(table), (decimal)GetQueryCount(table), GetQueryAverage(table) };
                     }
                     catch (Exception ex)
                     {
@@ -172,11 +172,11 @@ namespace Budget
                         return null;
                     }
                 }
-                public decimal GetTotal(DataTable table)
+                public decimal GetQueryTotal(DataTable table)
                 {
                     try
                     {
-                        if(BudgetTable.Columns.Contains("Amount"))
+                        if(QueryTable.Columns.Contains("Amount"))
                             return table.AsEnumerable().Select(p => p).Sum(p => p.Field<decimal>("Amount"));
                         return -1M;
                     }

@@ -9,24 +9,20 @@ namespace Budget
         {
             public interface IDataBuilder
             {
-
+                //Properties
                 Query Query { get; }
-                DataSet BudgetData { get; }
-                DataTable BudgetTable { get; }
+                DataSet QuerySet { get; }
+                DataTable QueryTable { get; }
                 DataRow[] Records { get; }
                 PRC[] Accounts { get; }
 
-                decimal GetAverage(DataTable table);
-
-                int GetCount(DataTable table);
-
-                DataSet GetDataSet();
-
-                decimal[] GetMetrics(DataTable table);
-
+                //Methods
+                decimal GetQueryAverage(DataTable table);
+                int GetQueryCount(DataTable table);
+                DataSet GetQuerySet();
+                decimal[] GetQueryMetrics(DataTable table);
                 DataRow[] GetRecords(DataTable table);
-
-                decimal GetTotal(DataTable table);
+                decimal GetQueryTotal(DataTable table);
 
             }
         }

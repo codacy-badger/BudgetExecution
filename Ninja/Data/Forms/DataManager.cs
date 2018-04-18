@@ -23,10 +23,10 @@ namespace Budget
                     InitializeComponent();
                     Data = new DataBuilder(source);
                     Metric = new DataMetric(Data);
-                    Table = Data.BudgetTable;
+                    Table = Data.QueryTable;
                     Ninja = new FormData(Data, BindingSource, Grid, Navigator);
                     ProgramElements = Ninja.GetProgramElements(Table);
-                    PrcChart = new BudgetChart(PrcChart, Data, PrcFilter.FundName, Statistic.Total).Activate();
+                    PrcChart = new BudgetChart(PrcChart, Data, PrcFilter.FundName, Stat.Total).Activate();
                     GetGridSelectedRowValues();
                 }
 

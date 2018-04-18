@@ -120,7 +120,7 @@ namespace Budget
                         var pp = GetProgramProjectCode();
                         var sql = new Dictionary<string, object>();
                         sql.Add("ProgramProjectCode", pp);
-                        DataRow p = new DataBuilder(Source.A6, sql).BudgetTable.Rows[0];
+                        DataRow p = new DataBuilder(Source.A6, sql).QueryTable.Rows[0];
                         return p;
                     }
                     catch (Exception ex)

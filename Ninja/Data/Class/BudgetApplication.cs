@@ -68,7 +68,7 @@ namespace Budget
                 ID, BFY, RPIO, Fund, FundName, BOC, BocName, Org, RC, NPM, Goal, GoalName, Objective, ObjectiveName, Division, ProgramArea, ProgramAreaName, ProgramProjectCode, ProgramProjectName
             }
 
-            public enum Statistic
+            public enum Stat
             {
                 Total, Count, Average, Ratio
             }

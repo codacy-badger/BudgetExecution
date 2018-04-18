@@ -22,7 +22,7 @@ namespace Budget
                 public BudgetChart(ChartControl chart, string title, Dictionary<string, double> data)
                 {
                     Chart = chart;
-                    Value = Ninja.Data.Statistic.Total;
+                    Value = Stat.Total;
                     if (Chart.Series != null)
                         Chart.Series.Clear();
                     GetAxisTitle(Chart, new string[] { title });
@@ -32,11 +32,11 @@ namespace Budget
                     Get3DMode(Chart);
                 }
 
-                public BudgetChart(ChartControl chart, DataBuilder data, PrcFilter filter, Statistic value )
+                public BudgetChart(ChartControl chart, DataBuilder data, PrcFilter filter, Stat value )
                 {
                     Chart = chart;
                     Data = data;
-                    Table = Data.BudgetTable;
+                    Table = Data.QueryTable;
                     Metric = new DataMetric(Data);
                     Value = value;
                     DataMetrics = Metric.GetChartMetrics(Table, filter);
@@ -54,8 +54,8 @@ namespace Budget
                     Chart = chart;
                     Data = new DataBuilder(source);
                     Metric = new DataMetric(Data);
-                    Value = Ninja.Data.Statistic.Total;
-                    Table = Data.BudgetTable;
+                    Table = Data.QueryTable;
+                    Value = Stat.Total;
                     if (Chart.Series != null)
                         Chart.Series.Clear();
                     DataSeries = GetSeriesTotals(GetSingleValue(DataMetrics, Value));
@@ -67,7 +67,7 @@ namespace Budget
                 //Properties
                 public ChartControl Chart { get; }
                 public DataBuilder Data { get; }
-                public DataMetric Metric { get; set; }
+                public DataMetric Metric { get;}
                 public DataTable Table { get; set; }
                 public Dictionary<string, double> InputTotals { get; set; }
                 public Dictionary<string, double[]> InputMetrics { get; set; }
@@ -77,7 +77,7 @@ namespace Budget
                 public string[] MainTitle { get; set; }
                 public string[] AxisTitle { get; set; }
                 public PrcFilter Filter { get; }
-                public Statistic Value { get; set; }
+                public Stat Value { get; set; }
                 public ChartSeriesType SeriesType { get; set; }
                 public ChartSeries DataSeries { get; set; }
                 public Dictionary<string, double> DataTotals { get; set; }
@@ -104,7 +104,7 @@ namespace Budget
                         return null;
                     }
                 }               
-                Dictionary<string, double> GetSingleValue(Dictionary<string, double[]> data, Statistic value)
+                Dictionary<string, double> GetSingleValue(Dictionary<string, double[]> data, Stat value)
                 {
                     try
                     {
@@ -269,7 +269,7 @@ namespace Budget
                         DataSeries.SmartLabels = true;
                         DataSeries.SortPoints = true;
                         DataSeries.Style.DisplayText = true;
-                        DataSeries.Style.TextOffset = 15.0F;
+                        DataSeries.Style.TextOffset = 20.0F;
                         DataSeries.Style.TextOrientation = ChartTextOrientation.Up;
                         DataSeries.Style.DisplayShadow = true;
                         DataSeries.Style.TextColor = Color.White;
@@ -317,7 +317,7 @@ namespace Budget
                         MessageBox.Show(e.Message + e.StackTrace);
                     }
                 }
-                internal void GetSeriesConfiguration(ChartSeries series, Statistic value)
+                internal void GetSeriesConfiguration(ChartSeries series, Stat value)
                 {
                     try
                     {
@@ -329,11 +329,11 @@ namespace Budget
                         DataSeries.Style.TextOrientation = ChartTextOrientation.Up;
                         DataSeries.Style.DisplayShadow = true;
                         DataSeries.Style.TextColor = Color.White;
-                        if(value == Ninja.Data.Statistic.Total || value == Ninja.Data.Statistic.Average)
+                        if(value == Ninja.Data.Stat.Total || value == Ninja.Data.Stat.Average)
                             DataSeries.Style.TextFormat = "${0:N}";
-                        if (value == Ninja.Data.Statistic.Ratio)
+                        if (value == Ninja.Data.Stat.Ratio)
                             DataSeries.Style.TextFormat = "{0:P}";
-                        if (value == Ninja.Data.Statistic.Count)
+                        if (value == Ninja.Data.Stat.Count)
                             DataSeries.Style.TextFormat = "{0}";
                         DataSeries.PointsToolTipFormat = "Funding:{4:N}";
                         DataSeries.Style.Font.Size = 12.0F;
