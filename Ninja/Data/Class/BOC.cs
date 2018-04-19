@@ -23,7 +23,6 @@
 
                 //Properties
                 public string Code { get; }
-
                 public string Name { get; }
                 public decimal Value { get; }
 
@@ -32,7 +31,6 @@
                 {
                     return prc.Amount;
                 }
-
                 public override string ToString()
                 {
                     return Code;

@@ -62,13 +62,10 @@ namespace Budget
                     Get3DMode(Chart);
                 }
 
-                public string[] AxisTitle { get; set; }
-
-                public BindingSource BindingSource { get; set; }
-
                 //Properties
+                public string[] AxisTitle { get; set; }
+                public BindingSource BindingSource { get; set; }
                 public ChartControl Chart { get; }
-
                 public DataBuilder Data { get; }
                 public Dictionary<string, double[]> DataMetrics { get; set; }
                 public ChartSeries DataSeries { get; set; }
@@ -86,11 +83,11 @@ namespace Budget
                 public Stat Value { get; set; }
                 private double Total { get; }
 
+                //Methods
                 internal ChartControl Activate()
                 {
                     return Chart;
                 }
-
                 internal void Get3DMode(int[] dim)
                 {
                     try
@@ -108,7 +105,6 @@ namespace Budget
                         MessageBox.Show(e.Message + e.StackTrace);
                     }
                 }
-
                 internal void GetAxisTitle(ChartControl chart, string[] title)
                 {
                     try
@@ -122,7 +118,6 @@ namespace Budget
                         MessageBox.Show(e.Message + e.StackTrace);
                     }
                 }
-
                 internal ChartDataBindModel GetDataBinding(Dictionary<string, double> data, PrcFilter filter)
                 {
                     try
@@ -142,12 +137,10 @@ namespace Budget
                         return null;
                     }
                 }
-
                 internal int[] GetDimensions(params int[] a)
                 {
                     return new int[] { 2, 250, -10 };
                 }
-
                 internal ChartLegend GetLegend(ChartControl chart)
                 {
                     try
@@ -169,7 +162,6 @@ namespace Budget
                         return null;
                     }
                 }
-
                 internal void GetMainTitle(ChartControl chart, string[] t)
                 {
                     try
@@ -186,7 +178,6 @@ namespace Budget
                         MessageBox.Show(e.Message + e.StackTrace);
                     }
                 }
-
                 internal void GetRegionSeriesConfiguration(ChartSeries series)
                 {
                     try
@@ -217,7 +208,6 @@ namespace Budget
                         MessageBox.Show(e.Message + e.StackTrace);
                     }
                 }
-
                 internal void GetSeriesConfiguration(ChartSeries series)
                 {
                     try
@@ -244,7 +234,6 @@ namespace Budget
                         MessageBox.Show(e.Message + e.StackTrace);
                     }
                 }
-
                 internal void GetSeriesConfiguration(ChartSeries series, Stat value)
                 {
                     try
@@ -280,8 +269,6 @@ namespace Budget
                         MessageBox.Show(e.Message + e.StackTrace);
                     }
                 }
-
-                //Methods
                 internal ChartSeries GetSeriesTotals(Dictionary<string, double> data)
                 {
                     try
@@ -299,7 +286,6 @@ namespace Budget
                         return null;
                     }
                 }
-
                 private void Get3DMode(ChartControl chart)
                 {
                     try
@@ -317,7 +303,6 @@ namespace Budget
                         MessageBox.Show(e.Message + e.StackTrace);
                     }
                 }
-
                 private ChartSeries GetAccountSeries(KeyValuePair<string, double[]> data)
                 {
                     try
@@ -333,7 +318,6 @@ namespace Budget
                         return null;
                     }
                 }
-
                 private ChartSeries GetAverageSeries(KeyValuePair<string, double[]> data)
                 {
                     try
@@ -348,7 +332,6 @@ namespace Budget
                         return null;
                     }
                 }
-
                 private ChartSeries GetRatioSeries(KeyValuePair<string, double[]> data)
                 {
                     try
@@ -365,7 +348,6 @@ namespace Budget
                         return null;
                     }
                 }
-
                 private Dictionary<string, double> GetSingleValue(Dictionary<string, double[]> data, Stat value)
                 {
                     try
@@ -383,7 +365,6 @@ namespace Budget
                         return null;
                     }
                 }
-
                 private ChartSeries GetTotalSeries(KeyValuePair<string, double[]> data)
                 {
                     try

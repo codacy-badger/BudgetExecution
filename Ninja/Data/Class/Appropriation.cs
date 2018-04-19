@@ -49,21 +49,14 @@ namespace Budget
                     GoalData = BudgetMetric.GoalTotals;
                 }
 
-                public decimal Average { get; }
-
-                public string[] BOC { get; }
-
-                public string[] BocCodes { get; }
-
-                public Dictionary<string, decimal> BocData { get; set; }
-
-                public DataMetric BudgetMetric { get; }
-
-                public int Count { get; }
-
                 //Properties
+                public decimal Average { get; }
+                public string[] BOC { get; }
+                public string[] BocCodes { get; }
+                public Dictionary<string, decimal> BocData { get; set; }
+                public DataMetric BudgetMetric { get; }
+                public int Count { get; }
                 public string FiscalYear { get; }
-
                 public FTE FTE { get; }
                 public Fund Fund { get; }
                 public string[] Goal { get; }
@@ -82,6 +75,7 @@ namespace Budget
                 public decimal Total { get; }
                 private DataBuilder Data { get; }
 
+                //Methods
                 public DataTable FilterTable(DataTable table, string column, string filter)
                 {
                     try
@@ -94,8 +88,6 @@ namespace Budget
                         return null;
                     }
                 }
-
-                //Methods
                 public decimal GetAverage(DataTable table)
                 {
                     try
@@ -108,7 +100,6 @@ namespace Budget
                         return -1M;
                     }
                 }
-
                 public string[] GetCodes(DataTable table, string column)
                 {
                     try
@@ -121,13 +112,11 @@ namespace Budget
                         return null;
                     }
                 }
-
                 public Tuple<string[], string[], string[], string[], string[]> GetCodes()
                 {
                     return new Tuple<string[], string[], string[], string[], string[]>(ProgramElements["BOC"],
                         ProgramElements["Code"], ProgramElements["NPM"], ProgramElements["ProgramArea"], ProgramElements["ProgramProjectCode"]);
                 }
-
                 public int GetCount(DataTable table)
                 {
                     try
@@ -140,7 +129,6 @@ namespace Budget
                         return -1;
                     }
                 }
-
                 public Tuple<DataTable, PRC[], decimal, int> GetDataValues(DataTable table, string column, string filter)
                 {
                     try
@@ -155,7 +143,6 @@ namespace Budget
                         return null;
                     }
                 }
-
                 public Tuple<DataTable, PRC[], decimal, int> GetDataValues(DataTable table, string[] list, string column)
                 {
                     foreach (string filter in list)
@@ -173,18 +160,15 @@ namespace Budget
                     }
                     return null;
                 }
-
                 public decimal GetFTE()
                 {
                     return PrcData.Item1.AsEnumerable().Where(p => p.Field<string>("BOC").Equals("17")).Select(p => p).Sum(p => p.Field<decimal>("Amount"));
                 }
-
                 public decimal[] GetMetrics(DataTable table)
                 {
                     var count = GetCount(table);
                     return new decimal[] { GetTotal(table), (decimal)count, GetAverage(table) };
                 }
-
                 public Dictionary<string, decimal[]> GetMetrics(DataTable table, string[] list, string column)
                 {
                     try
@@ -207,7 +191,6 @@ namespace Budget
                         return null;
                     }
                 }
-
                 public Dictionary<string, decimal[]> GetMetrics(DataTable table, string column, string filter)
                 {
                     try
@@ -231,7 +214,6 @@ namespace Budget
                         return null;
                     }
                 }
-
                 public PRC[] GetPrcArray(DataTable table)
                 {
                     try
@@ -244,7 +226,6 @@ namespace Budget
                         return null;
                     }
                 }
-
                 public Dictionary<string, string[]> GetProgramElements(DataTable table)
                 {
                     var data = new Dictionary<string, string[]>();
@@ -259,7 +240,6 @@ namespace Budget
                     if (data.ContainsKey("P6_Id")) data.Remove("P6_Id");
                     return data;
                 }
-
                 public decimal GetTotal(DataTable table)
                 {
                     try
@@ -272,7 +252,6 @@ namespace Budget
                         return -1M;
                     }
                 }
-
                 public Dictionary<string, decimal> GetTotals(DataTable table, string column, string filter)
                 {
                     try
@@ -294,7 +273,6 @@ namespace Budget
                         return null;
                     }
                 }
-
                 public Dictionary<string, decimal> GetTotals(DataTable table, string[] filters, string column)
                 {
                     try
@@ -313,7 +291,6 @@ namespace Budget
                         return null;
                     }
                 }
-
                 internal Bitmap GetImageFile()
                 {
                     DirectoryInfo imgfolder = new DirectoryInfo(@"C:\Users\terry\Documents\Visual Studio 2015\Projects\Budget\Resources\fundlabel");

@@ -48,15 +48,11 @@ namespace Budget
                     }
                 }
 
-                public PRC[] Accounts { get; }
-
-                public BindingSource BindingSource { get; }
-
-                public Dictionary<string, string[]> ProgramElements { get; }
-
                 //Properties
+                public PRC[] Accounts { get; }
+                public BindingSource BindingSource { get; }
+                public Dictionary<string, string[]> ProgramElements { get; }
                 public Query Query { get; }
-
                 public DataSet QuerySet { get; }
                 public DataTable QueryTable { get; }
                 public decimal QueryTotal { get; }
@@ -77,7 +73,6 @@ namespace Budget
                         return null;
                     }
                 }
-
                 public string[] GetCodes(DataTable table, string column)
                 {
                     try
@@ -90,7 +85,6 @@ namespace Budget
                         return null;
                     }
                 }
-
                 public Dictionary<string, string[]> GetElements(DataTable table)
                 {
                     try
@@ -113,7 +107,6 @@ namespace Budget
                         return null;
                     }
                 }
-
                 public decimal GetQueryAverage(DataTable table)
                 {
                     try
@@ -126,7 +119,6 @@ namespace Budget
                         return -1;
                     }
                 }
-
                 public int GetQueryCount(DataTable table)
                 {
                     try
@@ -139,7 +131,6 @@ namespace Budget
                         return -1;
                     }
                 }
-
                 public decimal[] GetQueryMetrics(DataTable table)
                 {
                     try
@@ -152,7 +143,6 @@ namespace Budget
                         return new decimal[] { -1m, -1m, -1m };
                     }
                 }
-
                 public DataSet GetQuerySet()
                 {
                     try
@@ -169,7 +159,6 @@ namespace Budget
                         return null;
                     }
                 }
-
                 public decimal GetQueryTotal(DataTable table)
                 {
                     try
@@ -184,7 +173,6 @@ namespace Budget
                         return -1M;
                     }
                 }
-
                 public DataRow[] GetRecords(DataTable table)
                 {
                     try
@@ -197,7 +185,6 @@ namespace Budget
                         return null;
                     }
                 }
-
                 internal DataTable GetDataTable(DataSet dataSet)
                 {
                     try
@@ -210,7 +197,6 @@ namespace Budget
                         return null;
                     }
                 }
-
                 private PRC[] GetPrcArray(DataTable table)
                 {
                     try

@@ -4,6 +4,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
+using MetroFramework.Controls;
 using MetroSet_UI.Controls;
 using Syncfusion.Windows.Forms.Chart;
 using Syncfusion.Windows.Forms.Tools;
@@ -61,25 +62,25 @@ namespace Budget
                     Title = D6.RC.Name;
                 }
 
-                public DataTable Base { get; set; }
-
-                public PrcFilter ButtonFilter { get; set; }
-
-                public DivisionAuthority D6 { get; }
-
                 //Properties
+                public DataTable Base { get; set; }
+                public PrcFilter ButtonFilter { get; set; }
+                public DivisionAuthority D6 { get; }
                 public DataBuilder Data { get; }
-
                 public DataSet DataSet { get; }
                 public DataMetric Metric { get; }
                 public decimal[] Metrics { get; }
                 public Dictionary<string, string[]> ProgramElements { get; }
                 public DataTable Table { get; }
                 public string Title { get; }
+                public string Filter1 { get; set; }
+                public string Filter2 { get; set; }
                 internal ChartControl[] Chart { get; set; }
                 internal RadioButton[] RadioButton { get; set; }
                 private TabPageAdv[] Tab { get; set; }
 
+
+                //Methods
                 private void BocFilter_ItemSelected(object sender, EventArgs e)
                 {
                     try
@@ -95,8 +96,6 @@ namespace Budget
                         MessageBox.Show(ex.Message + ex.StackTrace);
                     }
                 }
-
-                //Methods
                 private void Form_Load(object sender, EventArgs e)
                 {
                     try
@@ -106,7 +105,7 @@ namespace Budget
                         Grid.DataSource = BindingSource;
                         GetGridColumns(Grid);
                         PopulateCharts(Title);
-                        GetFundFilterItems();
+                        GetDatabaseFundFilterItems();
                         GetTextBoxBindings();
                         lblTotal.Text = Data.GetQueryTotal(Data.QueryTable).ToString("c");
                         lblCount.Text = Data.GetQueryCount(Data.QueryTable).ToString();
@@ -119,7 +118,6 @@ namespace Budget
                         MessageBox.Show(ex.Message + ex.StackTrace);
                     }
                 }
-
                 private void FundFilter_ItemSelected(object sender, EventArgs e)
                 {
                     try
@@ -138,7 +136,6 @@ namespace Budget
                         MessageBox.Show(ex.Message + ex.StackTrace);
                     }
                 }
-
                 private void GetBindingSourceFilter()
                 {
                     try
@@ -154,7 +151,6 @@ namespace Budget
                         MessageBox.Show(ex.Message + ex.StackTrace);
                     }
                 }
-
                 private void GetBocFilterItems()
                 {
                     try
@@ -169,7 +165,6 @@ namespace Budget
                         MessageBox.Show(ex.Message + ex.StackTrace);
                     }
                 }
-
                 private decimal GetCount(string filter)
                 {
                     try
@@ -183,7 +178,6 @@ namespace Budget
                         return -1;
                     }
                 }
-
                 private decimal GetCount(string filter1, string filter2)
                 {
                     try
@@ -197,27 +191,25 @@ namespace Budget
                         return -1;
                     }
                 }
-
                 private void GetFilterButtons()
                 {
                     try
                     {
-                        GetMetroSetButtons(fp1, Metric.ProgramElements["FundName"]);
-                        GetMetroSetButtons(fp1, Metric.ProgramElements["BocName"]);
-                        GetMetroSetButtons(fp3, Metric.ProgramElements["NPM"]);
-                        GetMetroSetButtons(fp4, Metric.ProgramElements["GoalName"]);
-                        GetMetroSetButtons(fp5, Metric.ProgramElements["ObjectiveName"]);
-                        GetMetroSetButtons(fp6, Metric.ProgramElements["DivisionName"]);
-                        GetMetroSetButtons(fp7, Metric.ProgramElements["ProgramAreaName"]);
-                        GetMetroSetButtons(fp8, Metric.ProgramElements["ProgramProjectName"]);
+                        GetChartFilterItems(FundFilter1, Metric.ProgramElements["FundName"]);
+                        GetChartFilterItems(BocFilter1, Metric.ProgramElements["BocName"]);
+                        GetChartFilterItems(NpmFilter1, Metric.ProgramElements["NPM"]);
+                        GetChartFilterItems(GoalFilter1, Metric.ProgramElements["GoalName"]);
+                        GetChartFilterItems(ObjectiveFilter1, Metric.ProgramElements["ObjectiveName"]);
+                        GetChartFilterItems(DivisionFilter1, Metric.ProgramElements["DivisionName"]);
+                        GetChartFilterItems(AreaFilter1, Metric.ProgramElements["ProgramAreaName"]);
+                        GetChartFilterItems(ProjectFilter1, Metric.ProgramElements["ProgramProjectName"]);
                     }
                     catch (Exception e)
                     {
                         MessageBox.Show(e.Message + e.StackTrace);
                     }
                 }
-
-                private void GetFundFilterItems()
+                private void GetDatabaseFundFilterItems()
                 {
                     try
                     {
@@ -230,7 +222,6 @@ namespace Budget
                         MessageBox.Show(ex.Message + ex.StackTrace);
                     }
                 }
-
                 private void GetGridColumns(DataGridView dgv)
                 {
                     try
@@ -251,7 +242,6 @@ namespace Budget
                         MessageBox.Show(ex.Message + ex.StackTrace);
                     }
                 }
-
                 private void GetMetroSetButtons(FlowLayoutPanel panel, string[] list)
                 {
                     try
@@ -281,7 +271,21 @@ namespace Budget
                         MessageBox.Show(ex.Message + ex.StackTrace);
                     }
                 }
-
+                private void GetChartFilterItems(MetroSetComboBox filterbox, string[] list)
+                {
+                    try
+                    {
+                        filterbox.Items.Clear();
+                        foreach (string f in list)
+                        {
+                            filterbox.Items.Add(f);
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message + ex.StackTrace);
+                    }
+                }
                 private ChartControl GetSummaryChart(ChartControl chart, DataBuilder data, PrcFilter filter, string title)
                 {
                     try
@@ -296,7 +300,6 @@ namespace Budget
                         return null;
                     }
                 }
-
                 private void GetTextBoxBindings()
                 {
                     try
@@ -304,7 +307,7 @@ namespace Budget
                         bfy.DataBindings.Add(new Binding("Text", Grid.DataSource, "BFY"));
                         Fund.DataBindings.Add(new Binding("Text", Grid.DataSource, "Fund"));
                         Org.DataBindings.Add(new Binding("Text", Grid.DataSource, "Org"));
-                        AHRC.DataBindings.Add(new Binding("Text", Grid.DataSource, "RC"));
+                        RC.DataBindings.Add(new Binding("Text", Grid.DataSource, "RC"));
                         Code.DataBindings.Add(new Binding("Text", Grid.DataSource, "Code"));
                         BOC.DataBindings.Add(new Binding("Text", Grid.DataSource, "BOC"));
                         Amount1.DataBindings.Add(new Binding("Text", Grid.DataSource, "Amount"));
@@ -314,7 +317,6 @@ namespace Budget
                         MessageBox.Show(ex.Message + ex.StackTrace);
                     }
                 }
-
                 private decimal GetTotal(string filter)
                 {
                     try
@@ -328,7 +330,6 @@ namespace Budget
                         return -1;
                     }
                 }
-
                 private decimal GetTotal(string filter1, string filter2)
                 {
                     try
@@ -343,7 +344,36 @@ namespace Budget
                         return -1;
                     }
                 }
-
+                private void Filter1_ItemSelected(object sender, EventArgs e)
+                {
+                    try
+                    {
+                        var filter = sender as MetroSetComboBox;
+                        FundFilter.Tag = filter;
+                        var fund = filter.SelectedItem.ToString();
+                        GetBocFilterItems();
+                        BindingSource.Filter = $"FundName = '{FundFilter.SelectedItem.ToString()}'";
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message + ex.StackTrace);
+                    }
+                }
+                private void Filter2_ItemSelected(object sender, EventArgs e)
+                {
+                    try
+                    {
+                        var filter = sender as MetroSetComboBox;
+                        FundFilter.Tag = filter;
+                        var fund = filter.SelectedItem.ToString();
+                        GetBocFilterItems();
+                        BindingSource.Filter = $"FundName = '{FundFilter.SelectedItem.ToString()}'";
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message + ex.StackTrace);
+                    }
+                }
                 private void PopulateCharts(string title)
                 {
                     FundChart = GetSummaryChart(FundChart, Data, PrcFilter.Fund, string.Format("{0} by Appropriation", title));
@@ -353,6 +383,32 @@ namespace Budget
                     ObjectiveChart = GetSummaryChart(ObjectiveChart, Data, PrcFilter.ObjectiveName, string.Format("{0} by Strategic Objective", title));
                     AreaChart = GetSummaryChart(AreaChart, Data, PrcFilter.ProgramArea, string.Format("{0} by Program Area", title));
                     ProjectChart = GetSummaryChart(ProjectChart, Data, PrcFilter.ProgramProjectCode, string.Format("{0} by Program Project", title));
+                }
+                Dictionary<string, string> GetFilters()
+                {
+                    try
+                    {
+                        var filters = new Dictionary<string, string>();
+                        filters.Add("Fund", "FundName");
+                        filters.Add("BOC", "BocName");
+                        filters.Add("NPM", "NPM");
+                        filters.Add("Goal", "GoalName");
+                        filters.Add("Objective", "ObjectiveName");
+                        filters.Add("Division", "RC");
+                        filters.Add("Program Area", "ProgramArea");
+                        filters.Add("Program Project", "ProgramProject");
+                        return filters;
+                    }
+                    catch (Exception ex)
+                    {
+
+                        MessageBox.Show(ex.Message + ex.StackTrace);
+                        return null;
+                    }
+                }
+                private void FundExpander_Paint(object sender, PaintEventArgs e)
+                {
+
                 }
             }
         }

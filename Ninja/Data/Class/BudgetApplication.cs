@@ -91,20 +91,13 @@ namespace Budget
                     System.Windows.Forms.Application.Run(new MainForm());
                 }
             }
+            
+            //Delegates
+            public delegate double[] Calculator(DataTable table);
 
-            #region Delegates
+            public delegate DataTable TableFilter(DataTable table, PrcFilter prcfilter, string filter);
 
             public delegate ChartControl GetChart(ChartControl chart, string title, Dictionary<string, double> data);
-
-            public delegate string GetName(string code);
-
-            public delegate void NinjaForm();
-
-            public delegate Tuple<DataSet, decimal[]> QueryData(Source source, Dictionary<string, object> param);
-
-            public delegate bool Verify(DataTable table, Dictionary<string, object> param);
-
-            #endregion Delegates
         }
     }
 }

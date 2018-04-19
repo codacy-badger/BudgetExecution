@@ -34,21 +34,14 @@ namespace Budget
                     DataGrid = dgv;
                 }
 
-                public BindingSource BindingSource { get; set; }
-
-                public DataSet BudgetData { get; set; }
-
-                public DataMetric BudgetMetric { get; set; }
-
-                public ChartControl Chart { get; set; }
-
-                public ChartDataBindModel ChartModel { get; set; }
-
-                public int Count { get; set; }
-
                 //Properties
+                public BindingSource BindingSource { get; set; }
+                public DataSet BudgetData { get; set; }
+                public DataMetric BudgetMetric { get; set; }
+                public ChartControl Chart { get; set; }
+                public ChartDataBindModel ChartModel { get; set; }
+                public int Count { get; set; }
                 public DataBuilder Data { get; set; }
-
                 public DataGridView DataGrid { get; set; }
                 public decimal[] Metrics { get; set; }
                 public BindingNavigator Navigator { get; set; }
@@ -69,7 +62,6 @@ namespace Budget
                         return null;
                     }
                 }
-
                 public decimal GetAverage(DataTable table)
                 {
                     try
@@ -82,7 +74,6 @@ namespace Budget
                         return -1M;
                     }
                 }
-
                 public string[] GetCodes(DataTable table, string column)
                 {
                     try
@@ -95,7 +86,6 @@ namespace Budget
                         return null;
                     }
                 }
-
                 public Dictionary<string, decimal> GetDataTotals(DataTable table, string column, string filter)
                 {
                     try
@@ -117,7 +107,6 @@ namespace Budget
                         return null;
                     }
                 }
-
                 public PRC[] GetPrcArray(DataTable table)
                 {
                     try
@@ -130,7 +119,6 @@ namespace Budget
                         return null;
                     }
                 }
-
                 public Dictionary<string, string[]> GetProgramElements(DataTable table)
                 {
                     var data = new Dictionary<string, string[]>();
@@ -145,7 +133,6 @@ namespace Budget
                     if (data.ContainsKey("P6_Id")) data.Remove("P6_Id");
                     return data;
                 }
-
                 public DataTable GetTable(DataTable table, string column, string filter)
                 {
                     try
@@ -158,7 +145,6 @@ namespace Budget
                         return null;
                     }
                 }
-
                 public decimal GetTotal(DataTable table)
                 {
                     try
@@ -171,7 +157,6 @@ namespace Budget
                         return -1M;
                     }
                 }
-
                 public Dictionary<string, decimal> GetTotals(DataTable table, string[] filters, string column)
                 {
                     try
@@ -192,7 +177,6 @@ namespace Budget
                         return null;
                     }
                 }
-
                 internal void AppropriationButton_OnSelect(object sender, EventArgs e)
                 {
                     var button = sender as MetroSetButton;
@@ -201,7 +185,6 @@ namespace Budget
                     GetBocFilterBox(table, Panel);
                     Table = table;
                 }
-
                 internal void AppropriationListBoxItem_OnSelect(object sender, EventArgs e)
                 {
                     var button = sender as MetroSetListBox;
@@ -209,7 +192,6 @@ namespace Budget
                     BindingSource.DataSource = table;
                     Table = table;
                 }
-
                 internal void BindGridAndNavigator(DataTable table, DataGridView dg, BindingSource bs, BindingNavigator bn)
                 {
                     bs.DataSource = table;
@@ -217,7 +199,6 @@ namespace Budget
                     bn.BindingSource = bs;
                     GetGridColumns(dg);
                 }
-
                 internal void BindTextBox(BindingSource bs, TextBox tb, string field)
                 {
                     var table = (DataTable)bs.DataSource;
@@ -225,7 +206,6 @@ namespace Budget
                     var binding = new Binding("Text", row, field);
                     tb.DataBindings.Add(binding);
                 }
-
                 internal void BocButtonSelect_OnSelect(object sender, EventArgs e)
                 {
                     var button = sender as MetroSetListBox;
@@ -233,7 +213,6 @@ namespace Budget
                     BindingSource.DataSource = table;
                     GetBocFilterBox(Table, Panel);
                 }
-
                 internal void BocListBoxItem_OnSelect(object sender, EventArgs e)
                 {
                     var button = sender as MetroSetListBox;
@@ -241,7 +220,6 @@ namespace Budget
                     BindingSource.DataSource = table;
                     GetBocFilterBox(Table, Panel);
                 }
-
                 internal void ConfigureTabControl(MetroForm form, TabControlAdv tab, DataBuilder Ninja)
                 {
                     foreach (TabPageAdv tp in tab.TabPages)
@@ -267,33 +245,22 @@ namespace Budget
                         tab.TabPages[7].Text = "Transfers";
                     }
                 }
-
                 internal void GetAppropriationFilterButtonBox(DataTable table, Control filterPanel)
                 {
                     GetFilterButtons(filterPanel, GetCodes(table, "FundName"));
                     foreach (Control c in filterPanel.Controls) c.Click += AppropriationButton_OnSelect;
                 }
-
                 internal void GetAppropriationFilterListBox(DataTable table, Control filterPanel)
                 {
                     var filter = filterPanel as ListBox;
                     GetFilterListItems(filter, GetCodes(table, "FundName"));
                     filter.SelectedIndexChanged += AppropriationListBoxItem_OnSelect;
                 }
-
                 internal void GetBocFilterBox(DataTable table, FlowLayoutPanel filterPanel)
                 {
                     GetFilterButtons(filterPanel, GetCodes(table, "BocName"));
                     foreach (Control c in filterPanel.Controls) c.Click += BocButtonSelect_OnSelect;
                 }
-
-                internal void GetBocListBox(DataTable table, Control filterPanel)
-                {
-                    var filter = filterPanel as ListBox;
-                    GetFilterButtons(filter, GetCodes(table, "BocName"));
-                    filter.SelectedIndexChanged += BocListBoxItem_OnSelect;
-                }
-
                 internal void GetFilterButtons(Control panel, string[] list)
                 {
                     panel.Controls.Clear();
@@ -316,7 +283,6 @@ namespace Budget
                         b.Tag = f;
                     }
                 }
-
                 internal void GetFilterListItems(Control panel, string[] list)
                 {
                     var box = panel as ListBox;
@@ -326,7 +292,6 @@ namespace Budget
                         box.Items.Add(f);
                     }
                 }
-
                 internal void GetFormSettings(MetroForm form)
                 {
                     form.Size = new Size(1200, 700);
@@ -343,7 +308,6 @@ namespace Budget
                     form.Padding = new Padding(1);
                     form.CaptionAlign = HorizontalAlignment.Left;
                 }
-
                 internal void GetGridColumns(DataGridView dgv)
                 {
                     foreach (DataGridViewColumn dc in dgv.Columns)
@@ -357,7 +321,6 @@ namespace Budget
                     dgv.Columns[12].Visible = true;
                     dgv.Columns[12].DefaultCellStyle.Format = "c";
                 }
-
                 internal void ReturnButton_OnClick(object sender, EventArgs e)
                 {
                     Table = Data.QueryTable;

@@ -29,6 +29,16 @@ namespace Budget
                     Report = new Spreadsheet();
                     Report.Open(@"D:\dev\database\BudgetControlTemplate.xlsx");
                 }
+
+                private void splitContainerAdv1_Click(object sender, EventArgs e)
+                {
+
+                }
+
+                private void spreadsheet1_Click(object sender, EventArgs e)
+                {
+
+                }
             }
         }
     }
