@@ -179,7 +179,7 @@ namespace Ninja.Forms
             this.MainChart.Legend.Visible = false;
             this.MainChart.LegendsPlacement = Syncfusion.Windows.Forms.Chart.ChartPlacement.Outside;
             this.MainChart.Localize = null;
-            this.MainChart.Location = new System.Drawing.Point(9, 224);
+            this.MainChart.Location = new System.Drawing.Point(9, 175);
             this.MainChart.Margin = new System.Windows.Forms.Padding(0);
             this.MainChart.Name = "MainChart";
             this.MainChart.Palette = Syncfusion.Windows.Forms.Chart.ChartColorPalette.Custom;
@@ -247,7 +247,7 @@ namespace Ninja.Forms
             this.MainChart.Series3D = true;
             this.MainChart.SeriesHighlight = true;
             this.MainChart.ShadowColor = new Syncfusion.Drawing.BrushInfo(Syncfusion.Drawing.GradientStyle.PathRectangle, System.Drawing.SystemColors.WindowText, System.Drawing.Color.Silver);
-            this.MainChart.Size = new System.Drawing.Size(967, 644);
+            this.MainChart.Size = new System.Drawing.Size(967, 665);
             this.MainChart.Spacing = 5F;
             this.MainChart.SpacingBetweenPoints = 5F;
             this.MainChart.Style3D = true;
@@ -273,8 +273,8 @@ namespace Ninja.Forms
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.ColumnCount = 2;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 52.23368F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 47.76632F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 51.89003F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 48.10997F));
             this.tableLayoutPanel2.Controls.Add(this.expandCollapsePanel2, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.DataTile, 0, 0);
             this.tableLayoutPanel2.Location = new System.Drawing.Point(994, 552);
@@ -292,9 +292,9 @@ namespace Ninja.Forms
             this.expandCollapsePanel2.Controls.Add(this.DataButton);
             this.expandCollapsePanel2.ExpandedHeight = 383;
             this.expandCollapsePanel2.IsExpanded = false;
-            this.expandCollapsePanel2.Location = new System.Drawing.Point(307, 3);
+            this.expandCollapsePanel2.Location = new System.Drawing.Point(304, 3);
             this.expandCollapsePanel2.Name = "expandCollapsePanel2";
-            this.expandCollapsePanel2.Size = new System.Drawing.Size(208, 37);
+            this.expandCollapsePanel2.Size = new System.Drawing.Size(259, 29);
             this.expandCollapsePanel2.TabIndex = 65;
             this.expandCollapsePanel2.Text = "Data";
             this.expandCollapsePanel2.UseAnimation = true;
@@ -350,7 +350,7 @@ namespace Ninja.Forms
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 48.3705F));
             this.tableLayoutPanel1.Controls.Add(this.expandCollapsePanel1, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.SummaryTile, 0, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(993, 106);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(993, 87);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -368,7 +368,7 @@ namespace Ninja.Forms
             this.expandCollapsePanel1.IsExpanded = false;
             this.expandCollapsePanel1.Location = new System.Drawing.Point(303, 3);
             this.expandCollapsePanel1.Name = "expandCollapsePanel1";
-            this.expandCollapsePanel1.Size = new System.Drawing.Size(222, 37);
+            this.expandCollapsePanel1.Size = new System.Drawing.Size(264, 37);
             this.expandCollapsePanel1.TabIndex = 64;
             this.expandCollapsePanel1.Text = "Summary";
             this.expandCollapsePanel1.UseAnimation = true;
@@ -384,10 +384,10 @@ namespace Ninja.Forms
             this.DivisionBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(247)))), ((int)(((byte)(252)))));
             this.DivisionBtn.Image = ((System.Drawing.Image)(resources.GetObject("DivisionBtn.Image")));
             this.DivisionBtn.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.DivisionBtn.Location = new System.Drawing.Point(13, 221);
+            this.DivisionBtn.Location = new System.Drawing.Point(19, 282);
             this.DivisionBtn.Margin = new System.Windows.Forms.Padding(2);
             this.DivisionBtn.Name = "DivisionBtn";
-            this.DivisionBtn.Size = new System.Drawing.Size(196, 65);
+            this.DivisionBtn.Size = new System.Drawing.Size(232, 65);
             this.DivisionBtn.TabIndex = 55;
             this.DivisionBtn.Text = "\r\nAllocations";
             this.DivisionBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -404,10 +404,10 @@ namespace Ninja.Forms
             this.DivisionSummaryButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(247)))), ((int)(((byte)(252)))));
             this.DivisionSummaryButton.Image = ((System.Drawing.Image)(resources.GetObject("DivisionSummaryButton.Image")));
             this.DivisionSummaryButton.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.DivisionSummaryButton.Location = new System.Drawing.Point(13, 140);
+            this.DivisionSummaryButton.Location = new System.Drawing.Point(19, 179);
             this.DivisionSummaryButton.Margin = new System.Windows.Forms.Padding(2);
             this.DivisionSummaryButton.Name = "DivisionSummaryButton";
-            this.DivisionSummaryButton.Size = new System.Drawing.Size(202, 77);
+            this.DivisionSummaryButton.Size = new System.Drawing.Size(232, 77);
             this.DivisionSummaryButton.TabIndex = 54;
             this.DivisionSummaryButton.Text = "Division Summary";
             this.DivisionSummaryButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -426,10 +426,10 @@ namespace Ninja.Forms
             this.RegionSummaryButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(247)))), ((int)(((byte)(252)))));
             this.RegionSummaryButton.Image = ((System.Drawing.Image)(resources.GetObject("RegionSummaryButton.Image")));
             this.RegionSummaryButton.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.RegionSummaryButton.Location = new System.Drawing.Point(13, 49);
+            this.RegionSummaryButton.Location = new System.Drawing.Point(15, 85);
             this.RegionSummaryButton.Margin = new System.Windows.Forms.Padding(2);
             this.RegionSummaryButton.Name = "RegionSummaryButton";
-            this.RegionSummaryButton.Size = new System.Drawing.Size(194, 73);
+            this.RegionSummaryButton.Size = new System.Drawing.Size(236, 68);
             this.RegionSummaryButton.TabIndex = 53;
             this.RegionSummaryButton.Text = "Region Summary";
             this.RegionSummaryButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -449,6 +449,8 @@ namespace Ninja.Forms
             this.Controls.Add(this.tableLayoutPanel1);
             this.MaximumSize = new System.Drawing.Size(1600, 1000);
             this.Name = "MainForm";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.expandCollapsePanel2.ResumeLayout(false);

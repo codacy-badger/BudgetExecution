@@ -103,7 +103,7 @@ namespace Budget
             this.metroSetButton1.HoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(207)))), ((int)(((byte)(255)))));
             this.metroSetButton1.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(207)))), ((int)(((byte)(255)))));
             this.metroSetButton1.HoverTextColor = System.Drawing.Color.White;
-            this.metroSetButton1.Location = new System.Drawing.Point(37, 76);
+            this.metroSetButton1.Location = new System.Drawing.Point(46, 75);
             this.metroSetButton1.Name = "metroSetButton1";
             this.metroSetButton1.NormalBorderColor = System.Drawing.Color.SteelBlue;
             this.metroSetButton1.NormalColor = System.Drawing.Color.SteelBlue;
@@ -111,7 +111,7 @@ namespace Budget
             this.metroSetButton1.PressBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(147)))), ((int)(((byte)(195)))));
             this.metroSetButton1.PressColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(147)))), ((int)(((byte)(195)))));
             this.metroSetButton1.PressTextColor = System.Drawing.Color.White;
-            this.metroSetButton1.Size = new System.Drawing.Size(245, 50);
+            this.metroSetButton1.Size = new System.Drawing.Size(226, 50);
             this.metroSetButton1.Style = MetroSet_UI.Design.Style.Custom;
             this.metroSetButton1.StyleManager = null;
             this.metroSetButton1.TabIndex = 1;
@@ -128,7 +128,7 @@ namespace Budget
             this.metroSetButton2.HoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(207)))), ((int)(((byte)(255)))));
             this.metroSetButton2.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(207)))), ((int)(((byte)(255)))));
             this.metroSetButton2.HoverTextColor = System.Drawing.Color.White;
-            this.metroSetButton2.Location = new System.Drawing.Point(37, 173);
+            this.metroSetButton2.Location = new System.Drawing.Point(46, 173);
             this.metroSetButton2.Name = "metroSetButton2";
             this.metroSetButton2.NormalBorderColor = System.Drawing.Color.SteelBlue;
             this.metroSetButton2.NormalColor = System.Drawing.Color.SteelBlue;
@@ -136,7 +136,7 @@ namespace Budget
             this.metroSetButton2.PressBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(147)))), ((int)(((byte)(195)))));
             this.metroSetButton2.PressColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(147)))), ((int)(((byte)(195)))));
             this.metroSetButton2.PressTextColor = System.Drawing.Color.White;
-            this.metroSetButton2.Size = new System.Drawing.Size(245, 50);
+            this.metroSetButton2.Size = new System.Drawing.Size(226, 50);
             this.metroSetButton2.Style = MetroSet_UI.Design.Style.Custom;
             this.metroSetButton2.StyleManager = null;
             this.metroSetButton2.TabIndex = 2;
@@ -203,7 +203,7 @@ namespace Budget
             this.spreadsheetRibbon1.RibbonStyle = Syncfusion.Windows.Forms.Tools.RibbonStyle.Office2013;
             this.spreadsheetRibbon1.ShowQuickItemsDropDownButton = false;
             this.spreadsheetRibbon1.ShowRibbonDisplayOptionButton = false;
-            this.spreadsheetRibbon1.Size = new System.Drawing.Size(1050, 147);
+            this.spreadsheetRibbon1.Size = new System.Drawing.Size(1050, 178);
             this.spreadsheetRibbon1.Spreadsheet = this.spreadsheet1;
             this.spreadsheetRibbon1.SystemText.QuickAccessDialogDropDownName = "Start menu";
             this.spreadsheetRibbon1.SystemText.RenameDisplayLabelText = "&Display Name:";
@@ -227,13 +227,13 @@ namespace Budget
             this.spreadsheet1.DefaultRowCount = 101;
             this.spreadsheet1.DisplayAlerts = true;
             this.spreadsheet1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.spreadsheet1.FileName = "Book4";
+            this.spreadsheet1.FileName = "Book1";
             this.spreadsheet1.FormulaBarVisibility = false;
             formulaRangeSelectionController1.AllowMouseSelection = true;
             formulaRangeSelectionController1.AllowSelectionOnEditing = true;
             this.spreadsheet1.FormulaRangeSelectionController = formulaRangeSelectionController1;
             this.spreadsheet1.IsCustomTabItemContextMenuEnabled = false;
-            this.spreadsheet1.Location = new System.Drawing.Point(0, 147);
+            this.spreadsheet1.Location = new System.Drawing.Point(0, 178);
             this.spreadsheet1.Name = "spreadsheet1";
             this.spreadsheet1.SelectedTabIndex = 0;
             this.spreadsheet1.SelectedTabItem = null;
@@ -432,7 +432,7 @@ namespace Budget
             // 
             // dataGridView1
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.SteelBlue;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.SlateGray;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.SteelBlue;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

@@ -153,7 +153,7 @@ namespace Budget
             this.MiniTabControl1.ShowSeparator = false;
             this.MiniTabControl1.Size = new System.Drawing.Size(400, 421);
             this.MiniTabControl1.TabIndex = 150;
-            this.MiniTabControl1.TabPanelBackColor = System.Drawing.Color.SteelBlue;
+            this.MiniTabControl1.TabPanelBackColor = System.Drawing.Color.Black;
             this.MiniTabControl1.TabStyle = typeof(Syncfusion.Windows.Forms.Tools.TabRendererMetro);
             // 
             // tabPageAdv1
@@ -785,7 +785,7 @@ namespace Budget
             // 
             this.Grid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.Grid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCellsExceptHeaders;
-            this.Grid.BackgroundColor = System.Drawing.Color.SteelBlue;
+            this.Grid.BackgroundColor = System.Drawing.Color.SlateGray;
             this.Grid.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.SteelBlue;
@@ -1170,7 +1170,6 @@ namespace Budget
             this.MetroColor = System.Drawing.Color.Black;
             this.Name = "DataManager";
             this.ShowIcon = false;
-            this.Text = "MetroForm1";
             ((System.ComponentModel.ISupportInitialize)(this.MiniTabControl1)).EndInit();
             this.MiniTabControl1.ResumeLayout(false);
             this.tabPageAdv1.ResumeLayout(false);
