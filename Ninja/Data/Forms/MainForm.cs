@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Windows.Forms;
 using Budget.Ninja.Data;
 using Ninja.Data;
+using Ninja.Data.Forms;
 using Syncfusion.Windows.Forms.Chart;
 
 namespace Ninja.Forms
@@ -117,7 +118,7 @@ namespace Ninja.Forms
 
         private void DataTile_Click(object sender, EventArgs e)
         {
-            var s = new Selector();
+            var s = new NinjaForm();
             s.Show();
         }
     }

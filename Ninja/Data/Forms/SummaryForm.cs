@@ -306,13 +306,13 @@ namespace Budget
                 {
                     try
                     {
-                        bfy.DataBindings.Add(new Binding("Text", Grid.DataSource, "BFY"));
+                        BFY.DataBindings.Add(new Binding("Text", Grid.DataSource, "BFY"));
                         Fund.DataBindings.Add(new Binding("Text", Grid.DataSource, "Fund"));
                         Org.DataBindings.Add(new Binding("Text", Grid.DataSource, "Org"));
                         RC.DataBindings.Add(new Binding("Text", Grid.DataSource, "RC"));
                         Code.DataBindings.Add(new Binding("Text", Grid.DataSource, "Code"));
                         BOC.DataBindings.Add(new Binding("Text", Grid.DataSource, "BOC"));
-                        Amount1.DataBindings.Add(new Binding("Text", Grid.DataSource, "Amount"));
+                        Amount.DataBindings.Add(new Binding("Text", Grid.DataSource, "Amount"));
                     }
                     catch (Exception ex)
                     {

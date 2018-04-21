@@ -229,21 +229,21 @@ namespace Budget
             this.metroSetLabel1 = new MetroSet_UI.Controls.MetroSetLabel();
             this.metroSetLabel2 = new MetroSet_UI.Controls.MetroSetLabel();
             this.metroSetTextBox1 = new MetroSet_UI.Controls.MetroSetTextBox();
-            this.metroSetTextBox3 = new MetroSet_UI.Controls.MetroSetTextBox();
-            this.metroSetTextBox4 = new MetroSet_UI.Controls.MetroSetTextBox();
-            this.metroSetTextBox5 = new MetroSet_UI.Controls.MetroSetTextBox();
+            this.Amount = new MetroSet_UI.Controls.MetroSetTextBox();
+            this.Code = new MetroSet_UI.Controls.MetroSetTextBox();
+            this.BOC = new MetroSet_UI.Controls.MetroSetTextBox();
             this.metroSetLabel12 = new MetroSet_UI.Controls.MetroSetLabel();
             this.metroSetLabel13 = new MetroSet_UI.Controls.MetroSetLabel();
             this.metroSetLabel14 = new MetroSet_UI.Controls.MetroSetLabel();
             this.metroSetLabel16 = new MetroSet_UI.Controls.MetroSetLabel();
-            this.metroSetTextBox6 = new MetroSet_UI.Controls.MetroSetTextBox();
-            this.metroSetTextBox7 = new MetroSet_UI.Controls.MetroSetTextBox();
+            this.RC = new MetroSet_UI.Controls.MetroSetTextBox();
+            this.Fund = new MetroSet_UI.Controls.MetroSetTextBox();
             this.metroSetButton3 = new MetroSet_UI.Controls.MetroSetButton();
             this.metroSetLabel17 = new MetroSet_UI.Controls.MetroSetLabel();
             this.metroSetButton4 = new MetroSet_UI.Controls.MetroSetButton();
             this.metroSetLabel18 = new MetroSet_UI.Controls.MetroSetLabel();
-            this.metroSetTextBox8 = new MetroSet_UI.Controls.MetroSetTextBox();
-            this.metroSetTextBox9 = new MetroSet_UI.Controls.MetroSetTextBox();
+            this.BFY = new MetroSet_UI.Controls.MetroSetTextBox();
+            this.Org = new MetroSet_UI.Controls.MetroSetTextBox();
             this.tabPageAdv5 = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
             this.PrcChart = new Syncfusion.Windows.Forms.Chart.ChartControl();
             this.tabPageAdv6 = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
@@ -302,26 +302,26 @@ namespace Budget
             this.chartControl1 = new Syncfusion.Windows.Forms.Chart.ChartControl();
             this.chartTitle1 = new Syncfusion.Windows.Forms.Chart.ChartTitle();
             this.tabPageAdv2 = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
-            this.ID = new MetroSet_UI.Controls.MetroSetLabel();
+            this.dd = new MetroSet_UI.Controls.MetroSetLabel();
             this.metroSetTextBox2 = new MetroSet_UI.Controls.MetroSetTextBox();
-            this.RC = new MetroSet_UI.Controls.MetroSetTextBox();
+            this.rcc = new MetroSet_UI.Controls.MetroSetTextBox();
             this.metroSetLabel11 = new MetroSet_UI.Controls.MetroSetLabel();
             this.metroSetLabel7 = new MetroSet_UI.Controls.MetroSetLabel();
             this.Amount2 = new MetroSet_UI.Controls.MetroSetTextBox();
             this.Amount1 = new MetroSet_UI.Controls.MetroSetTextBox();
-            this.Code = new MetroSet_UI.Controls.MetroSetTextBox();
-            this.BOC = new MetroSet_UI.Controls.MetroSetTextBox();
+            this.cd = new MetroSet_UI.Controls.MetroSetTextBox();
+            this.bb = new MetroSet_UI.Controls.MetroSetTextBox();
             this.metroSetLabel6 = new MetroSet_UI.Controls.MetroSetLabel();
             this.metroSetLabel5 = new MetroSet_UI.Controls.MetroSetLabel();
             this.metroSetLabel4 = new MetroSet_UI.Controls.MetroSetLabel();
             this.metroSetLabel3 = new MetroSet_UI.Controls.MetroSetLabel();
-            this.Fund = new MetroSet_UI.Controls.MetroSetTextBox();
+            this.ff = new MetroSet_UI.Controls.MetroSetTextBox();
             this.metroSetButton2 = new MetroSet_UI.Controls.MetroSetButton();
             this.metroSetLabel10 = new MetroSet_UI.Controls.MetroSetLabel();
             this.metroSetButton1 = new MetroSet_UI.Controls.MetroSetButton();
             this.metroSetLabel15 = new MetroSet_UI.Controls.MetroSetLabel();
-            this.bfy = new MetroSet_UI.Controls.MetroSetTextBox();
-            this.Org = new MetroSet_UI.Controls.MetroSetTextBox();
+            this.yy = new MetroSet_UI.Controls.MetroSetTextBox();
+            this.o = new MetroSet_UI.Controls.MetroSetTextBox();
             this.MiniTabControl1 = new Syncfusion.Windows.Forms.Tools.TabControlAdv();
             ((System.ComponentModel.ISupportInitialize)(this.SummaryTabControl)).BeginInit();
             this.SummaryTabControl.SuspendLayout();
@@ -419,7 +419,7 @@ namespace Budget
             this.FundExpander.IsExpanded = false;
             this.FundExpander.Location = new System.Drawing.Point(1229, 100);
             this.FundExpander.Name = "FundExpander";
-            this.FundExpander.Size = new System.Drawing.Size(333, 35);
+            this.FundExpander.Size = new System.Drawing.Size(333, 37);
             this.FundExpander.TabIndex = 107;
             this.FundExpander.Text = "Filter";
             this.FundExpander.UseAnimation = true;
@@ -2104,15 +2104,17 @@ namespace Budget
             this.groupBox5.Size = new System.Drawing.Size(446, 508);
             this.groupBox5.TabIndex = 161;
             this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "groupBox5";
+            this.groupBox5.Text = "Account Manager";
             // 
             // tabControlAdv1
             // 
             this.tabControlAdv1.ActiveTabColor = System.Drawing.Color.Black;
-            this.tabControlAdv1.ActiveTabForeColor = System.Drawing.Color.LightSteelBlue;
+            this.tabControlAdv1.ActiveTabForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.tabControlAdv1.AdjustTopGap = 5;
             this.tabControlAdv1.BackColor = System.Drawing.Color.Black;
-            this.tabControlAdv1.BeforeTouchSize = new System.Drawing.Size(405, 421);
+            this.tabControlAdv1.BeforeTouchSize = new System.Drawing.Size(437, 396);
             this.tabControlAdv1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tabControlAdv1.BorderVisible = true;
             this.tabControlAdv1.BorderWidth = 1;
             this.tabControlAdv1.CloseButtonForeColor = System.Drawing.Color.Empty;
             this.tabControlAdv1.CloseButtonHoverForeColor = System.Drawing.Color.Black;
@@ -2122,52 +2124,56 @@ namespace Budget
             this.tabControlAdv1.Controls.Add(this.tabPageAdv6);
             this.tabControlAdv1.FixedSingleBorderColor = System.Drawing.SystemColors.MenuHighlight;
             this.tabControlAdv1.FocusOnTabClick = false;
-            this.tabControlAdv1.InactiveTabColor = System.Drawing.Color.Gray;
-            this.tabControlAdv1.InActiveTabForeColor = System.Drawing.Color.Black;
-            this.tabControlAdv1.Location = new System.Drawing.Point(21, 50);
+            this.tabControlAdv1.InactiveTabColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.tabControlAdv1.InActiveTabForeColor = System.Drawing.Color.Gray;
+            this.tabControlAdv1.Location = new System.Drawing.Point(6, 52);
             this.tabControlAdv1.Name = "tabControlAdv1";
-            this.tabControlAdv1.SeparatorColor = System.Drawing.SystemColors.ControlDark;
+            this.tabControlAdv1.Office2007ColorScheme = Syncfusion.Windows.Forms.Office2007Theme.Black;
+            this.tabControlAdv1.Office2010ColorTheme = Syncfusion.Windows.Forms.Office2010Theme.Black;
+            this.tabControlAdv1.SeparatorColor = System.Drawing.SystemColors.MenuHighlight;
             this.tabControlAdv1.ShowSeparator = false;
-            this.tabControlAdv1.Size = new System.Drawing.Size(405, 421);
+            this.tabControlAdv1.Size = new System.Drawing.Size(437, 396);
             this.tabControlAdv1.TabIndex = 150;
-            this.tabControlAdv1.TabPanelBackColor = System.Drawing.Color.SteelBlue;
+            this.tabControlAdv1.TabPanelBackColor = System.Drawing.Color.Black;
             this.tabControlAdv1.TabStyle = typeof(Syncfusion.Windows.Forms.Tools.TabRendererMetro);
+            this.tabControlAdv1.TextLineAlignment = System.Drawing.StringAlignment.Near;
+            this.tabControlAdv1.ThemesEnabled = true;
             // 
             // tabPageAdv1
             // 
             this.tabPageAdv1.Controls.Add(this.metroSetLabel1);
             this.tabPageAdv1.Controls.Add(this.metroSetLabel2);
             this.tabPageAdv1.Controls.Add(this.metroSetTextBox1);
-            this.tabPageAdv1.Controls.Add(this.metroSetTextBox3);
-            this.tabPageAdv1.Controls.Add(this.metroSetTextBox4);
-            this.tabPageAdv1.Controls.Add(this.metroSetTextBox5);
+            this.tabPageAdv1.Controls.Add(this.Amount);
+            this.tabPageAdv1.Controls.Add(this.Code);
+            this.tabPageAdv1.Controls.Add(this.BOC);
             this.tabPageAdv1.Controls.Add(this.metroSetLabel12);
             this.tabPageAdv1.Controls.Add(this.metroSetLabel13);
             this.tabPageAdv1.Controls.Add(this.metroSetLabel14);
             this.tabPageAdv1.Controls.Add(this.metroSetLabel16);
-            this.tabPageAdv1.Controls.Add(this.metroSetTextBox6);
-            this.tabPageAdv1.Controls.Add(this.metroSetTextBox7);
+            this.tabPageAdv1.Controls.Add(this.RC);
+            this.tabPageAdv1.Controls.Add(this.Fund);
             this.tabPageAdv1.Controls.Add(this.metroSetButton3);
             this.tabPageAdv1.Controls.Add(this.metroSetLabel17);
             this.tabPageAdv1.Controls.Add(this.metroSetButton4);
             this.tabPageAdv1.Controls.Add(this.metroSetLabel18);
-            this.tabPageAdv1.Controls.Add(this.metroSetTextBox8);
-            this.tabPageAdv1.Controls.Add(this.metroSetTextBox9);
+            this.tabPageAdv1.Controls.Add(this.BFY);
+            this.tabPageAdv1.Controls.Add(this.Org);
+            this.tabPageAdv1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPageAdv1.Image = null;
             this.tabPageAdv1.ImageSize = new System.Drawing.Size(16, 16);
-            this.tabPageAdv1.Location = new System.Drawing.Point(1, 0);
+            this.tabPageAdv1.Location = new System.Drawing.Point(2, 35);
             this.tabPageAdv1.Name = "tabPageAdv1";
             this.tabPageAdv1.ShowCloseButton = true;
-            this.tabPageAdv1.Size = new System.Drawing.Size(403, 420);
+            this.tabPageAdv1.Size = new System.Drawing.Size(433, 359);
             this.tabPageAdv1.TabIndex = 4;
             this.tabPageAdv1.Text = "tabPageAdv1";
             this.tabPageAdv1.ThemesEnabled = false;
             // 
             // metroSetLabel1
             // 
-            this.metroSetLabel1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.metroSetLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.metroSetLabel1.Location = new System.Drawing.Point(254, 168);
+            this.metroSetLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.metroSetLabel1.Location = new System.Drawing.Point(254, 99);
             this.metroSetLabel1.Name = "metroSetLabel1";
             this.metroSetLabel1.Size = new System.Drawing.Size(62, 23);
             this.metroSetLabel1.Style = MetroSet_UI.Design.Style.Dark;
@@ -2179,9 +2185,8 @@ namespace Budget
             // 
             // metroSetLabel2
             // 
-            this.metroSetLabel2.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.metroSetLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.metroSetLabel2.Location = new System.Drawing.Point(142, 168);
+            this.metroSetLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.metroSetLabel2.Location = new System.Drawing.Point(137, 99);
             this.metroSetLabel2.Name = "metroSetLabel2";
             this.metroSetLabel2.Size = new System.Drawing.Size(62, 23);
             this.metroSetLabel2.Style = MetroSet_UI.Design.Style.Dark;
@@ -2200,16 +2205,16 @@ namespace Budget
             this.metroSetTextBox1.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.metroSetTextBox1.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.metroSetTextBox1.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroSetTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.metroSetTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.metroSetTextBox1.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.metroSetTextBox1.Image = null;
             this.metroSetTextBox1.Lines = null;
-            this.metroSetTextBox1.Location = new System.Drawing.Point(19, 333);
+            this.metroSetTextBox1.Location = new System.Drawing.Point(14, 297);
             this.metroSetTextBox1.MaxLength = 32767;
             this.metroSetTextBox1.Multiline = false;
             this.metroSetTextBox1.Name = "metroSetTextBox1";
             this.metroSetTextBox1.ReadOnly = false;
-            this.metroSetTextBox1.Size = new System.Drawing.Size(185, 34);
+            this.metroSetTextBox1.Size = new System.Drawing.Size(185, 30);
             this.metroSetTextBox1.Style = MetroSet_UI.Design.Style.Dark;
             this.metroSetTextBox1.StyleManager = null;
             this.metroSetTextBox1.TabIndex = 137;
@@ -2220,98 +2225,97 @@ namespace Budget
             this.metroSetTextBox1.UseSystemPasswordChar = false;
             this.metroSetTextBox1.WatermarkText = "";
             // 
-            // metroSetTextBox3
+            // Amount
             // 
-            this.metroSetTextBox3.AutoCompleteCustomSource = null;
-            this.metroSetTextBox3.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.metroSetTextBox3.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.metroSetTextBox3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
-            this.metroSetTextBox3.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.metroSetTextBox3.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroSetTextBox3.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroSetTextBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.metroSetTextBox3.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.metroSetTextBox3.Image = null;
-            this.metroSetTextBox3.Lines = null;
-            this.metroSetTextBox3.Location = new System.Drawing.Point(19, 258);
-            this.metroSetTextBox3.MaxLength = 32767;
-            this.metroSetTextBox3.Multiline = false;
-            this.metroSetTextBox3.Name = "metroSetTextBox3";
-            this.metroSetTextBox3.ReadOnly = false;
-            this.metroSetTextBox3.Size = new System.Drawing.Size(185, 34);
-            this.metroSetTextBox3.Style = MetroSet_UI.Design.Style.Dark;
-            this.metroSetTextBox3.StyleManager = null;
-            this.metroSetTextBox3.TabIndex = 136;
-            this.metroSetTextBox3.Text = "metroSetTextBox7";
-            this.metroSetTextBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.metroSetTextBox3.ThemeAuthor = "Narwin";
-            this.metroSetTextBox3.ThemeName = "MetroDark";
-            this.metroSetTextBox3.UseSystemPasswordChar = false;
-            this.metroSetTextBox3.WatermarkText = "";
+            this.Amount.AutoCompleteCustomSource = null;
+            this.Amount.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.Amount.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.Amount.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.Amount.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.Amount.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.Amount.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.Amount.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Amount.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.Amount.Image = null;
+            this.Amount.Lines = null;
+            this.Amount.Location = new System.Drawing.Point(14, 217);
+            this.Amount.MaxLength = 32767;
+            this.Amount.Multiline = false;
+            this.Amount.Name = "Amount";
+            this.Amount.ReadOnly = false;
+            this.Amount.Size = new System.Drawing.Size(185, 30);
+            this.Amount.Style = MetroSet_UI.Design.Style.Dark;
+            this.Amount.StyleManager = null;
+            this.Amount.TabIndex = 136;
+            this.Amount.Text = "metroSetTextBox7";
+            this.Amount.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.Amount.ThemeAuthor = "Narwin";
+            this.Amount.ThemeName = "MetroDark";
+            this.Amount.UseSystemPasswordChar = false;
+            this.Amount.WatermarkText = "";
             // 
-            // metroSetTextBox4
+            // Code
             // 
-            this.metroSetTextBox4.AutoCompleteCustomSource = null;
-            this.metroSetTextBox4.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.metroSetTextBox4.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.metroSetTextBox4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
-            this.metroSetTextBox4.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.metroSetTextBox4.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroSetTextBox4.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroSetTextBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.metroSetTextBox4.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.metroSetTextBox4.Image = null;
-            this.metroSetTextBox4.Lines = null;
-            this.metroSetTextBox4.Location = new System.Drawing.Point(254, 165);
-            this.metroSetTextBox4.MaxLength = 32767;
-            this.metroSetTextBox4.Multiline = false;
-            this.metroSetTextBox4.Name = "metroSetTextBox4";
-            this.metroSetTextBox4.ReadOnly = false;
-            this.metroSetTextBox4.Size = new System.Drawing.Size(132, 34);
-            this.metroSetTextBox4.Style = MetroSet_UI.Design.Style.Dark;
-            this.metroSetTextBox4.StyleManager = null;
-            this.metroSetTextBox4.TabIndex = 135;
-            this.metroSetTextBox4.Text = "metroSetTextBox4";
-            this.metroSetTextBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.metroSetTextBox4.ThemeAuthor = "Narwin";
-            this.metroSetTextBox4.ThemeName = "MetroDark";
-            this.metroSetTextBox4.UseSystemPasswordChar = false;
-            this.metroSetTextBox4.WatermarkText = "";
+            this.Code.AutoCompleteCustomSource = null;
+            this.Code.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.Code.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.Code.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.Code.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.Code.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.Code.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.Code.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Code.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.Code.Image = null;
+            this.Code.Lines = null;
+            this.Code.Location = new System.Drawing.Point(254, 128);
+            this.Code.MaxLength = 32767;
+            this.Code.Multiline = false;
+            this.Code.Name = "Code";
+            this.Code.ReadOnly = false;
+            this.Code.Size = new System.Drawing.Size(145, 30);
+            this.Code.Style = MetroSet_UI.Design.Style.Dark;
+            this.Code.StyleManager = null;
+            this.Code.TabIndex = 135;
+            this.Code.Text = "metroSetTextBox4";
+            this.Code.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.Code.ThemeAuthor = "Narwin";
+            this.Code.ThemeName = "MetroDark";
+            this.Code.UseSystemPasswordChar = false;
+            this.Code.WatermarkText = "";
             // 
-            // metroSetTextBox5
+            // BOC
             // 
-            this.metroSetTextBox5.AutoCompleteCustomSource = null;
-            this.metroSetTextBox5.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.metroSetTextBox5.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.metroSetTextBox5.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
-            this.metroSetTextBox5.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.metroSetTextBox5.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroSetTextBox5.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroSetTextBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.metroSetTextBox5.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.metroSetTextBox5.Image = null;
-            this.metroSetTextBox5.Lines = null;
-            this.metroSetTextBox5.Location = new System.Drawing.Point(142, 165);
-            this.metroSetTextBox5.MaxLength = 32767;
-            this.metroSetTextBox5.Multiline = false;
-            this.metroSetTextBox5.Name = "metroSetTextBox5";
-            this.metroSetTextBox5.ReadOnly = false;
-            this.metroSetTextBox5.Size = new System.Drawing.Size(89, 34);
-            this.metroSetTextBox5.Style = MetroSet_UI.Design.Style.Dark;
-            this.metroSetTextBox5.StyleManager = null;
-            this.metroSetTextBox5.TabIndex = 134;
-            this.metroSetTextBox5.Text = "metroSetTextBox3";
-            this.metroSetTextBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.metroSetTextBox5.ThemeAuthor = "Narwin";
-            this.metroSetTextBox5.ThemeName = "MetroDark";
-            this.metroSetTextBox5.UseSystemPasswordChar = false;
-            this.metroSetTextBox5.WatermarkText = "";
+            this.BOC.AutoCompleteCustomSource = null;
+            this.BOC.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.BOC.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.BOC.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.BOC.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.BOC.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.BOC.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.BOC.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BOC.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.BOC.Image = null;
+            this.BOC.Lines = null;
+            this.BOC.Location = new System.Drawing.Point(137, 128);
+            this.BOC.MaxLength = 32767;
+            this.BOC.Multiline = false;
+            this.BOC.Name = "BOC";
+            this.BOC.ReadOnly = false;
+            this.BOC.Size = new System.Drawing.Size(89, 30);
+            this.BOC.Style = MetroSet_UI.Design.Style.Dark;
+            this.BOC.StyleManager = null;
+            this.BOC.TabIndex = 134;
+            this.BOC.Text = "metroSetTextBox3";
+            this.BOC.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.BOC.ThemeAuthor = "Narwin";
+            this.BOC.ThemeName = "MetroDark";
+            this.BOC.UseSystemPasswordChar = false;
+            this.BOC.WatermarkText = "";
             // 
             // metroSetLabel12
             // 
-            this.metroSetLabel12.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.metroSetLabel12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.metroSetLabel12.Location = new System.Drawing.Point(27, 336);
+            this.metroSetLabel12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.metroSetLabel12.Location = new System.Drawing.Point(14, 268);
             this.metroSetLabel12.Name = "metroSetLabel12";
             this.metroSetLabel12.Size = new System.Drawing.Size(146, 23);
             this.metroSetLabel12.Style = MetroSet_UI.Design.Style.Dark;
@@ -2323,9 +2327,8 @@ namespace Budget
             // 
             // metroSetLabel13
             // 
-            this.metroSetLabel13.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.metroSetLabel13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.metroSetLabel13.Location = new System.Drawing.Point(27, 261);
+            this.metroSetLabel13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.metroSetLabel13.Location = new System.Drawing.Point(14, 191);
             this.metroSetLabel13.Name = "metroSetLabel13";
             this.metroSetLabel13.Size = new System.Drawing.Size(94, 23);
             this.metroSetLabel13.Style = MetroSet_UI.Design.Style.Dark;
@@ -2337,9 +2340,8 @@ namespace Budget
             // 
             // metroSetLabel14
             // 
-            this.metroSetLabel14.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.metroSetLabel14.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.metroSetLabel14.Location = new System.Drawing.Point(142, 71);
+            this.metroSetLabel14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.metroSetLabel14.Location = new System.Drawing.Point(146, 17);
             this.metroSetLabel14.Name = "metroSetLabel14";
             this.metroSetLabel14.Size = new System.Drawing.Size(62, 23);
             this.metroSetLabel14.Style = MetroSet_UI.Design.Style.Dark;
@@ -2351,9 +2353,8 @@ namespace Budget
             // 
             // metroSetLabel16
             // 
-            this.metroSetLabel16.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.metroSetLabel16.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.metroSetLabel16.Location = new System.Drawing.Point(29, 168);
+            this.metroSetLabel16.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.metroSetLabel16.Location = new System.Drawing.Point(14, 99);
             this.metroSetLabel16.Name = "metroSetLabel16";
             this.metroSetLabel16.Size = new System.Drawing.Size(62, 23);
             this.metroSetLabel16.Style = MetroSet_UI.Design.Style.Dark;
@@ -2363,74 +2364,74 @@ namespace Budget
             this.metroSetLabel16.ThemeAuthor = "Narwin";
             this.metroSetLabel16.ThemeName = "MetroDark";
             // 
-            // metroSetTextBox6
+            // RC
             // 
-            this.metroSetTextBox6.AutoCompleteCustomSource = null;
-            this.metroSetTextBox6.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.metroSetTextBox6.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.metroSetTextBox6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
-            this.metroSetTextBox6.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.metroSetTextBox6.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroSetTextBox6.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroSetTextBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.metroSetTextBox6.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.metroSetTextBox6.Image = null;
-            this.metroSetTextBox6.Lines = null;
-            this.metroSetTextBox6.Location = new System.Drawing.Point(29, 165);
-            this.metroSetTextBox6.MaxLength = 32767;
-            this.metroSetTextBox6.Multiline = false;
-            this.metroSetTextBox6.Name = "metroSetTextBox6";
-            this.metroSetTextBox6.ReadOnly = false;
-            this.metroSetTextBox6.Size = new System.Drawing.Size(84, 34);
-            this.metroSetTextBox6.Style = MetroSet_UI.Design.Style.Dark;
-            this.metroSetTextBox6.StyleManager = null;
-            this.metroSetTextBox6.TabIndex = 129;
-            this.metroSetTextBox6.Text = "metroSetTextBox2";
-            this.metroSetTextBox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.metroSetTextBox6.ThemeAuthor = "Narwin";
-            this.metroSetTextBox6.ThemeName = "MetroDark";
-            this.metroSetTextBox6.UseSystemPasswordChar = false;
-            this.metroSetTextBox6.WatermarkText = "";
+            this.RC.AutoCompleteCustomSource = null;
+            this.RC.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.RC.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.RC.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.RC.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.RC.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.RC.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.RC.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RC.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.RC.Image = null;
+            this.RC.Lines = null;
+            this.RC.Location = new System.Drawing.Point(14, 128);
+            this.RC.MaxLength = 32767;
+            this.RC.Multiline = false;
+            this.RC.Name = "RC";
+            this.RC.ReadOnly = false;
+            this.RC.Size = new System.Drawing.Size(84, 30);
+            this.RC.Style = MetroSet_UI.Design.Style.Dark;
+            this.RC.StyleManager = null;
+            this.RC.TabIndex = 129;
+            this.RC.Text = "metroSetTextBox2";
+            this.RC.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.RC.ThemeAuthor = "Narwin";
+            this.RC.ThemeName = "MetroDark";
+            this.RC.UseSystemPasswordChar = false;
+            this.RC.WatermarkText = "";
             // 
-            // metroSetTextBox7
+            // Fund
             // 
-            this.metroSetTextBox7.AutoCompleteCustomSource = null;
-            this.metroSetTextBox7.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.metroSetTextBox7.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.metroSetTextBox7.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
-            this.metroSetTextBox7.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.metroSetTextBox7.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroSetTextBox7.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroSetTextBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.metroSetTextBox7.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.metroSetTextBox7.Image = null;
-            this.metroSetTextBox7.Lines = null;
-            this.metroSetTextBox7.Location = new System.Drawing.Point(137, 77);
-            this.metroSetTextBox7.MaxLength = 32767;
-            this.metroSetTextBox7.Multiline = false;
-            this.metroSetTextBox7.Name = "metroSetTextBox7";
-            this.metroSetTextBox7.ReadOnly = false;
-            this.metroSetTextBox7.Size = new System.Drawing.Size(94, 34);
-            this.metroSetTextBox7.Style = MetroSet_UI.Design.Style.Dark;
-            this.metroSetTextBox7.StyleManager = null;
-            this.metroSetTextBox7.TabIndex = 128;
-            this.metroSetTextBox7.Text = "metroSetTextBox1";
-            this.metroSetTextBox7.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.metroSetTextBox7.ThemeAuthor = "Narwin";
-            this.metroSetTextBox7.ThemeName = "MetroDark";
-            this.metroSetTextBox7.UseSystemPasswordChar = false;
-            this.metroSetTextBox7.WatermarkText = "";
+            this.Fund.AutoCompleteCustomSource = null;
+            this.Fund.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.Fund.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.Fund.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.Fund.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.Fund.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.Fund.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.Fund.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Fund.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.Fund.Image = null;
+            this.Fund.Lines = null;
+            this.Fund.Location = new System.Drawing.Point(146, 43);
+            this.Fund.MaxLength = 32767;
+            this.Fund.Multiline = false;
+            this.Fund.Name = "Fund";
+            this.Fund.ReadOnly = false;
+            this.Fund.Size = new System.Drawing.Size(94, 30);
+            this.Fund.Style = MetroSet_UI.Design.Style.Dark;
+            this.Fund.StyleManager = null;
+            this.Fund.TabIndex = 128;
+            this.Fund.Text = "metroSetTextBox1";
+            this.Fund.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.Fund.ThemeAuthor = "Narwin";
+            this.Fund.ThemeName = "MetroDark";
+            this.Fund.UseSystemPasswordChar = false;
+            this.Fund.WatermarkText = "";
             // 
             // metroSetButton3
             // 
             this.metroSetButton3.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.metroSetButton3.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.metroSetButton3.DisabledForeColor = System.Drawing.Color.Gray;
-            this.metroSetButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.metroSetButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.metroSetButton3.HoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(207)))), ((int)(((byte)(255)))));
             this.metroSetButton3.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(207)))), ((int)(((byte)(255)))));
             this.metroSetButton3.HoverTextColor = System.Drawing.Color.White;
-            this.metroSetButton3.Location = new System.Drawing.Point(251, 310);
+            this.metroSetButton3.Location = new System.Drawing.Point(275, 297);
             this.metroSetButton3.Name = "metroSetButton3";
             this.metroSetButton3.NormalBorderColor = System.Drawing.Color.Black;
             this.metroSetButton3.NormalColor = System.Drawing.Color.Black;
@@ -2448,9 +2449,8 @@ namespace Budget
             // 
             // metroSetLabel17
             // 
-            this.metroSetLabel17.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.metroSetLabel17.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.metroSetLabel17.Location = new System.Drawing.Point(27, 71);
+            this.metroSetLabel17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.metroSetLabel17.Location = new System.Drawing.Point(14, 17);
             this.metroSetLabel17.Name = "metroSetLabel17";
             this.metroSetLabel17.Size = new System.Drawing.Size(62, 23);
             this.metroSetLabel17.Style = MetroSet_UI.Design.Style.Dark;
@@ -2465,11 +2465,11 @@ namespace Budget
             this.metroSetButton4.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.metroSetButton4.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.metroSetButton4.DisabledForeColor = System.Drawing.Color.Gray;
-            this.metroSetButton4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.metroSetButton4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.metroSetButton4.HoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(207)))), ((int)(((byte)(255)))));
             this.metroSetButton4.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(207)))), ((int)(((byte)(255)))));
             this.metroSetButton4.HoverTextColor = System.Drawing.Color.White;
-            this.metroSetButton4.Location = new System.Drawing.Point(251, 238);
+            this.metroSetButton4.Location = new System.Drawing.Point(275, 217);
             this.metroSetButton4.Name = "metroSetButton4";
             this.metroSetButton4.NormalBorderColor = System.Drawing.Color.Black;
             this.metroSetButton4.NormalColor = System.Drawing.Color.Black;
@@ -2487,11 +2487,10 @@ namespace Budget
             // 
             // metroSetLabel18
             // 
-            this.metroSetLabel18.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.metroSetLabel18.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.metroSetLabel18.Location = new System.Drawing.Point(251, 71);
+            this.metroSetLabel18.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.metroSetLabel18.Location = new System.Drawing.Point(287, 17);
             this.metroSetLabel18.Name = "metroSetLabel18";
-            this.metroSetLabel18.Size = new System.Drawing.Size(89, 32);
+            this.metroSetLabel18.Size = new System.Drawing.Size(89, 23);
             this.metroSetLabel18.Style = MetroSet_UI.Design.Style.Dark;
             this.metroSetLabel18.StyleManager = null;
             this.metroSetLabel18.TabIndex = 17;
@@ -2499,73 +2498,73 @@ namespace Budget
             this.metroSetLabel18.ThemeAuthor = "Narwin";
             this.metroSetLabel18.ThemeName = "MetroDark";
             // 
-            // metroSetTextBox8
+            // BFY
             // 
-            this.metroSetTextBox8.AutoCompleteCustomSource = null;
-            this.metroSetTextBox8.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.metroSetTextBox8.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.metroSetTextBox8.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
-            this.metroSetTextBox8.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.metroSetTextBox8.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroSetTextBox8.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroSetTextBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.metroSetTextBox8.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.metroSetTextBox8.Image = null;
-            this.metroSetTextBox8.Lines = null;
-            this.metroSetTextBox8.Location = new System.Drawing.Point(29, 77);
-            this.metroSetTextBox8.MaxLength = 32767;
-            this.metroSetTextBox8.Multiline = false;
-            this.metroSetTextBox8.Name = "metroSetTextBox8";
-            this.metroSetTextBox8.ReadOnly = false;
-            this.metroSetTextBox8.Size = new System.Drawing.Size(83, 34);
-            this.metroSetTextBox8.Style = MetroSet_UI.Design.Style.Dark;
-            this.metroSetTextBox8.StyleManager = null;
-            this.metroSetTextBox8.TabIndex = 125;
-            this.metroSetTextBox8.Text = "metroSetTextBox6";
-            this.metroSetTextBox8.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.metroSetTextBox8.ThemeAuthor = "Narwin";
-            this.metroSetTextBox8.ThemeName = "MetroDark";
-            this.metroSetTextBox8.UseSystemPasswordChar = false;
-            this.metroSetTextBox8.WatermarkText = "";
+            this.BFY.AutoCompleteCustomSource = null;
+            this.BFY.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.BFY.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.BFY.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.BFY.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.BFY.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.BFY.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.BFY.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BFY.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.BFY.Image = null;
+            this.BFY.Lines = null;
+            this.BFY.Location = new System.Drawing.Point(14, 43);
+            this.BFY.MaxLength = 32767;
+            this.BFY.Multiline = false;
+            this.BFY.Name = "BFY";
+            this.BFY.ReadOnly = false;
+            this.BFY.Size = new System.Drawing.Size(83, 30);
+            this.BFY.Style = MetroSet_UI.Design.Style.Dark;
+            this.BFY.StyleManager = null;
+            this.BFY.TabIndex = 125;
+            this.BFY.Text = "metroSetTextBox6";
+            this.BFY.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.BFY.ThemeAuthor = "Narwin";
+            this.BFY.ThemeName = "MetroDark";
+            this.BFY.UseSystemPasswordChar = false;
+            this.BFY.WatermarkText = "";
             // 
-            // metroSetTextBox9
+            // Org
             // 
-            this.metroSetTextBox9.AutoCompleteCustomSource = null;
-            this.metroSetTextBox9.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.metroSetTextBox9.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.metroSetTextBox9.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
-            this.metroSetTextBox9.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.metroSetTextBox9.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroSetTextBox9.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroSetTextBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.metroSetTextBox9.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.metroSetTextBox9.Image = null;
-            this.metroSetTextBox9.Lines = null;
-            this.metroSetTextBox9.Location = new System.Drawing.Point(254, 77);
-            this.metroSetTextBox9.MaxLength = 32767;
-            this.metroSetTextBox9.Multiline = false;
-            this.metroSetTextBox9.Name = "metroSetTextBox9";
-            this.metroSetTextBox9.ReadOnly = false;
-            this.metroSetTextBox9.Size = new System.Drawing.Size(89, 34);
-            this.metroSetTextBox9.Style = MetroSet_UI.Design.Style.Dark;
-            this.metroSetTextBox9.StyleManager = null;
-            this.metroSetTextBox9.TabIndex = 124;
-            this.metroSetTextBox9.Text = "metroSetTextBox5";
-            this.metroSetTextBox9.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.metroSetTextBox9.ThemeAuthor = "Narwin";
-            this.metroSetTextBox9.ThemeName = "MetroDark";
-            this.metroSetTextBox9.UseSystemPasswordChar = false;
-            this.metroSetTextBox9.WatermarkText = "";
+            this.Org.AutoCompleteCustomSource = null;
+            this.Org.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.Org.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.Org.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.Org.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.Org.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.Org.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.Org.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Org.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.Org.Image = null;
+            this.Org.Lines = null;
+            this.Org.Location = new System.Drawing.Point(287, 43);
+            this.Org.MaxLength = 32767;
+            this.Org.Multiline = false;
+            this.Org.Name = "Org";
+            this.Org.ReadOnly = false;
+            this.Org.Size = new System.Drawing.Size(89, 30);
+            this.Org.Style = MetroSet_UI.Design.Style.Dark;
+            this.Org.StyleManager = null;
+            this.Org.TabIndex = 124;
+            this.Org.Text = "metroSetTextBox5";
+            this.Org.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.Org.ThemeAuthor = "Narwin";
+            this.Org.ThemeName = "MetroDark";
+            this.Org.UseSystemPasswordChar = false;
+            this.Org.WatermarkText = "";
             // 
             // tabPageAdv5
             // 
             this.tabPageAdv5.Controls.Add(this.PrcChart);
             this.tabPageAdv5.Image = null;
             this.tabPageAdv5.ImageSize = new System.Drawing.Size(16, 16);
-            this.tabPageAdv5.Location = new System.Drawing.Point(1, 0);
+            this.tabPageAdv5.Location = new System.Drawing.Point(2, 35);
             this.tabPageAdv5.Name = "tabPageAdv5";
             this.tabPageAdv5.ShowCloseButton = true;
-            this.tabPageAdv5.Size = new System.Drawing.Size(403, 420);
+            this.tabPageAdv5.Size = new System.Drawing.Size(433, 359);
             this.tabPageAdv5.TabIndex = 2;
             this.tabPageAdv5.Text = "tabPageAdv5";
             this.tabPageAdv5.ThemesEnabled = false;
@@ -2679,7 +2678,7 @@ namespace Budget
             this.PrcChart.Series3D = true;
             this.PrcChart.SeriesHighlight = true;
             this.PrcChart.ShadowColor = new Syncfusion.Drawing.BrushInfo(Syncfusion.Drawing.GradientStyle.PathRectangle, System.Drawing.SystemColors.WindowText, System.Drawing.Color.Silver);
-            this.PrcChart.Size = new System.Drawing.Size(403, 420);
+            this.PrcChart.Size = new System.Drawing.Size(433, 359);
             this.PrcChart.Spacing = 5F;
             this.PrcChart.SpacingBetweenPoints = 5F;
             this.PrcChart.Style3D = true;
@@ -2708,10 +2707,10 @@ namespace Budget
             this.tabPageAdv6.Controls.Add(this.calculatorControl2);
             this.tabPageAdv6.Image = null;
             this.tabPageAdv6.ImageSize = new System.Drawing.Size(16, 16);
-            this.tabPageAdv6.Location = new System.Drawing.Point(1, 0);
+            this.tabPageAdv6.Location = new System.Drawing.Point(2, 35);
             this.tabPageAdv6.Name = "tabPageAdv6";
             this.tabPageAdv6.ShowCloseButton = true;
-            this.tabPageAdv6.Size = new System.Drawing.Size(403, 420);
+            this.tabPageAdv6.Size = new System.Drawing.Size(433, 359);
             this.tabPageAdv6.TabIndex = 3;
             this.tabPageAdv6.Text = "tabPageAdv6";
             this.tabPageAdv6.ThemesEnabled = false;
@@ -3439,26 +3438,26 @@ namespace Budget
             // 
             // tabPageAdv2
             // 
-            this.tabPageAdv2.Controls.Add(this.ID);
+            this.tabPageAdv2.Controls.Add(this.dd);
             this.tabPageAdv2.Controls.Add(this.metroSetTextBox2);
-            this.tabPageAdv2.Controls.Add(this.RC);
+            this.tabPageAdv2.Controls.Add(this.rcc);
             this.tabPageAdv2.Controls.Add(this.metroSetLabel11);
             this.tabPageAdv2.Controls.Add(this.metroSetLabel7);
             this.tabPageAdv2.Controls.Add(this.Amount2);
             this.tabPageAdv2.Controls.Add(this.Amount1);
-            this.tabPageAdv2.Controls.Add(this.Code);
-            this.tabPageAdv2.Controls.Add(this.BOC);
+            this.tabPageAdv2.Controls.Add(this.cd);
+            this.tabPageAdv2.Controls.Add(this.bb);
             this.tabPageAdv2.Controls.Add(this.metroSetLabel6);
             this.tabPageAdv2.Controls.Add(this.metroSetLabel5);
             this.tabPageAdv2.Controls.Add(this.metroSetLabel4);
             this.tabPageAdv2.Controls.Add(this.metroSetLabel3);
-            this.tabPageAdv2.Controls.Add(this.Fund);
+            this.tabPageAdv2.Controls.Add(this.ff);
             this.tabPageAdv2.Controls.Add(this.metroSetButton2);
             this.tabPageAdv2.Controls.Add(this.metroSetLabel10);
             this.tabPageAdv2.Controls.Add(this.metroSetButton1);
             this.tabPageAdv2.Controls.Add(this.metroSetLabel15);
-            this.tabPageAdv2.Controls.Add(this.bfy);
-            this.tabPageAdv2.Controls.Add(this.Org);
+            this.tabPageAdv2.Controls.Add(this.yy);
+            this.tabPageAdv2.Controls.Add(this.o);
             this.tabPageAdv2.Image = null;
             this.tabPageAdv2.ImageSize = new System.Drawing.Size(16, 16);
             this.tabPageAdv2.Location = new System.Drawing.Point(0, -1);
@@ -3469,18 +3468,18 @@ namespace Budget
             this.tabPageAdv2.Text = "tabPageAdv2";
             this.tabPageAdv2.ThemesEnabled = false;
             // 
-            // ID
+            // dd
             // 
-            this.ID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.ID.Location = new System.Drawing.Point(21, 42);
-            this.ID.Name = "ID";
-            this.ID.Size = new System.Drawing.Size(62, 23);
-            this.ID.Style = MetroSet_UI.Design.Style.Dark;
-            this.ID.StyleManager = null;
-            this.ID.TabIndex = 142;
-            this.ID.Text = "ID";
-            this.ID.ThemeAuthor = "Narwin";
-            this.ID.ThemeName = "MetroDark";
+            this.dd.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.dd.Location = new System.Drawing.Point(21, 42);
+            this.dd.Name = "dd";
+            this.dd.Size = new System.Drawing.Size(62, 23);
+            this.dd.Style = MetroSet_UI.Design.Style.Dark;
+            this.dd.StyleManager = null;
+            this.dd.TabIndex = 142;
+            this.dd.Text = "ID";
+            this.dd.ThemeAuthor = "Narwin";
+            this.dd.ThemeName = "MetroDark";
             // 
             // metroSetTextBox2
             // 
@@ -3511,34 +3510,34 @@ namespace Budget
             this.metroSetTextBox2.UseSystemPasswordChar = false;
             this.metroSetTextBox2.WatermarkText = "";
             // 
-            // RC
+            // rcc
             // 
-            this.RC.AutoCompleteCustomSource = null;
-            this.RC.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.RC.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.RC.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
-            this.RC.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.RC.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.RC.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.RC.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RC.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.RC.Image = null;
-            this.RC.Lines = null;
-            this.RC.Location = new System.Drawing.Point(21, 165);
-            this.RC.MaxLength = 32767;
-            this.RC.Multiline = false;
-            this.RC.Name = "RC";
-            this.RC.ReadOnly = false;
-            this.RC.Size = new System.Drawing.Size(86, 30);
-            this.RC.Style = MetroSet_UI.Design.Style.Dark;
-            this.RC.StyleManager = null;
-            this.RC.TabIndex = 140;
-            this.RC.Text = "metroSetTextBox1";
-            this.RC.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.RC.ThemeAuthor = "Narwin";
-            this.RC.ThemeName = "MetroDark";
-            this.RC.UseSystemPasswordChar = false;
-            this.RC.WatermarkText = "";
+            this.rcc.AutoCompleteCustomSource = null;
+            this.rcc.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.rcc.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.rcc.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.rcc.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.rcc.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.rcc.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.rcc.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rcc.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.rcc.Image = null;
+            this.rcc.Lines = null;
+            this.rcc.Location = new System.Drawing.Point(21, 165);
+            this.rcc.MaxLength = 32767;
+            this.rcc.Multiline = false;
+            this.rcc.Name = "rcc";
+            this.rcc.ReadOnly = false;
+            this.rcc.Size = new System.Drawing.Size(86, 30);
+            this.rcc.Style = MetroSet_UI.Design.Style.Dark;
+            this.rcc.StyleManager = null;
+            this.rcc.TabIndex = 140;
+            this.rcc.Text = "metroSetTextBox1";
+            this.rcc.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.rcc.ThemeAuthor = "Narwin";
+            this.rcc.ThemeName = "MetroDark";
+            this.rcc.UseSystemPasswordChar = false;
+            this.rcc.WatermarkText = "";
             // 
             // metroSetLabel11
             // 
@@ -3626,63 +3625,63 @@ namespace Budget
             this.Amount1.UseSystemPasswordChar = false;
             this.Amount1.WatermarkText = "";
             // 
-            // Code
+            // cd
             // 
-            this.Code.AutoCompleteCustomSource = null;
-            this.Code.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.Code.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.Code.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
-            this.Code.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.Code.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.Code.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.Code.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Code.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.Code.Image = null;
-            this.Code.Lines = null;
-            this.Code.Location = new System.Drawing.Point(251, 165);
-            this.Code.MaxLength = 32767;
-            this.Code.Multiline = false;
-            this.Code.Name = "Code";
-            this.Code.ReadOnly = false;
-            this.Code.Size = new System.Drawing.Size(132, 30);
-            this.Code.Style = MetroSet_UI.Design.Style.Dark;
-            this.Code.StyleManager = null;
-            this.Code.TabIndex = 135;
-            this.Code.Text = "metroSetTextBox4";
-            this.Code.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.Code.ThemeAuthor = "Narwin";
-            this.Code.ThemeName = "MetroDark";
-            this.Code.UseSystemPasswordChar = false;
-            this.Code.WatermarkText = "";
+            this.cd.AutoCompleteCustomSource = null;
+            this.cd.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.cd.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.cd.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.cd.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.cd.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.cd.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.cd.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cd.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.cd.Image = null;
+            this.cd.Lines = null;
+            this.cd.Location = new System.Drawing.Point(251, 165);
+            this.cd.MaxLength = 32767;
+            this.cd.Multiline = false;
+            this.cd.Name = "cd";
+            this.cd.ReadOnly = false;
+            this.cd.Size = new System.Drawing.Size(132, 30);
+            this.cd.Style = MetroSet_UI.Design.Style.Dark;
+            this.cd.StyleManager = null;
+            this.cd.TabIndex = 135;
+            this.cd.Text = "metroSetTextBox4";
+            this.cd.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.cd.ThemeAuthor = "Narwin";
+            this.cd.ThemeName = "MetroDark";
+            this.cd.UseSystemPasswordChar = false;
+            this.cd.WatermarkText = "";
             // 
-            // BOC
+            // bb
             // 
-            this.BOC.AutoCompleteCustomSource = null;
-            this.BOC.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.BOC.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.BOC.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
-            this.BOC.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.BOC.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.BOC.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.BOC.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BOC.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.BOC.Image = null;
-            this.BOC.Lines = null;
-            this.BOC.Location = new System.Drawing.Point(136, 165);
-            this.BOC.MaxLength = 32767;
-            this.BOC.Multiline = false;
-            this.BOC.Name = "BOC";
-            this.BOC.ReadOnly = false;
-            this.BOC.Size = new System.Drawing.Size(89, 30);
-            this.BOC.Style = MetroSet_UI.Design.Style.Dark;
-            this.BOC.StyleManager = null;
-            this.BOC.TabIndex = 134;
-            this.BOC.Text = "metroSetTextBox3";
-            this.BOC.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.BOC.ThemeAuthor = "Narwin";
-            this.BOC.ThemeName = "MetroDark";
-            this.BOC.UseSystemPasswordChar = false;
-            this.BOC.WatermarkText = "";
+            this.bb.AutoCompleteCustomSource = null;
+            this.bb.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.bb.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.bb.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.bb.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.bb.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.bb.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.bb.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bb.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.bb.Image = null;
+            this.bb.Lines = null;
+            this.bb.Location = new System.Drawing.Point(136, 165);
+            this.bb.MaxLength = 32767;
+            this.bb.Multiline = false;
+            this.bb.Name = "bb";
+            this.bb.ReadOnly = false;
+            this.bb.Size = new System.Drawing.Size(89, 30);
+            this.bb.Style = MetroSet_UI.Design.Style.Dark;
+            this.bb.StyleManager = null;
+            this.bb.TabIndex = 134;
+            this.bb.Text = "metroSetTextBox3";
+            this.bb.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.bb.ThemeAuthor = "Narwin";
+            this.bb.ThemeName = "MetroDark";
+            this.bb.UseSystemPasswordChar = false;
+            this.bb.WatermarkText = "";
             // 
             // metroSetLabel6
             // 
@@ -3740,34 +3739,34 @@ namespace Budget
             this.metroSetLabel3.ThemeAuthor = "Narwin";
             this.metroSetLabel3.ThemeName = "MetroDark";
             // 
-            // Fund
+            // ff
             // 
-            this.Fund.AutoCompleteCustomSource = null;
-            this.Fund.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.Fund.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.Fund.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
-            this.Fund.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.Fund.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.Fund.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.Fund.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Fund.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.Fund.Image = null;
-            this.Fund.Lines = null;
-            this.Fund.Location = new System.Drawing.Point(185, 77);
-            this.Fund.MaxLength = 32767;
-            this.Fund.Multiline = false;
-            this.Fund.Name = "Fund";
-            this.Fund.ReadOnly = false;
-            this.Fund.Size = new System.Drawing.Size(93, 30);
-            this.Fund.Style = MetroSet_UI.Design.Style.Dark;
-            this.Fund.StyleManager = null;
-            this.Fund.TabIndex = 128;
-            this.Fund.Text = "metroSetTextBox1";
-            this.Fund.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.Fund.ThemeAuthor = "Narwin";
-            this.Fund.ThemeName = "MetroDark";
-            this.Fund.UseSystemPasswordChar = false;
-            this.Fund.WatermarkText = "";
+            this.ff.AutoCompleteCustomSource = null;
+            this.ff.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.ff.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.ff.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.ff.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.ff.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.ff.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.ff.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ff.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.ff.Image = null;
+            this.ff.Lines = null;
+            this.ff.Location = new System.Drawing.Point(185, 77);
+            this.ff.MaxLength = 32767;
+            this.ff.Multiline = false;
+            this.ff.Name = "ff";
+            this.ff.ReadOnly = false;
+            this.ff.Size = new System.Drawing.Size(93, 30);
+            this.ff.Style = MetroSet_UI.Design.Style.Dark;
+            this.ff.StyleManager = null;
+            this.ff.TabIndex = 128;
+            this.ff.Text = "metroSetTextBox1";
+            this.ff.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.ff.ThemeAuthor = "Narwin";
+            this.ff.ThemeName = "MetroDark";
+            this.ff.UseSystemPasswordChar = false;
+            this.ff.WatermarkText = "";
             // 
             // metroSetButton2
             // 
@@ -3847,63 +3846,63 @@ namespace Budget
             this.metroSetLabel15.ThemeAuthor = "Narwin";
             this.metroSetLabel15.ThemeName = "MetroDark";
             // 
-            // bfy
+            // yy
             // 
-            this.bfy.AutoCompleteCustomSource = null;
-            this.bfy.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.bfy.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.bfy.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
-            this.bfy.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.bfy.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.bfy.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.bfy.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bfy.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.bfy.Image = null;
-            this.bfy.Lines = null;
-            this.bfy.Location = new System.Drawing.Point(93, 77);
-            this.bfy.MaxLength = 32767;
-            this.bfy.Multiline = false;
-            this.bfy.Name = "bfy";
-            this.bfy.ReadOnly = false;
-            this.bfy.Size = new System.Drawing.Size(86, 30);
-            this.bfy.Style = MetroSet_UI.Design.Style.Dark;
-            this.bfy.StyleManager = null;
-            this.bfy.TabIndex = 125;
-            this.bfy.Text = "metroSetTextBox6";
-            this.bfy.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.bfy.ThemeAuthor = "Narwin";
-            this.bfy.ThemeName = "MetroDark";
-            this.bfy.UseSystemPasswordChar = false;
-            this.bfy.WatermarkText = "";
+            this.yy.AutoCompleteCustomSource = null;
+            this.yy.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.yy.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.yy.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.yy.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.yy.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.yy.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.yy.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.yy.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.yy.Image = null;
+            this.yy.Lines = null;
+            this.yy.Location = new System.Drawing.Point(93, 77);
+            this.yy.MaxLength = 32767;
+            this.yy.Multiline = false;
+            this.yy.Name = "yy";
+            this.yy.ReadOnly = false;
+            this.yy.Size = new System.Drawing.Size(86, 30);
+            this.yy.Style = MetroSet_UI.Design.Style.Dark;
+            this.yy.StyleManager = null;
+            this.yy.TabIndex = 125;
+            this.yy.Text = "metroSetTextBox6";
+            this.yy.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.yy.ThemeAuthor = "Narwin";
+            this.yy.ThemeName = "MetroDark";
+            this.yy.UseSystemPasswordChar = false;
+            this.yy.WatermarkText = "";
             // 
-            // Org
+            // o
             // 
-            this.Org.AutoCompleteCustomSource = null;
-            this.Org.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.Org.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.Org.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
-            this.Org.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.Org.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.Org.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.Org.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Org.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.Org.Image = null;
-            this.Org.Lines = null;
-            this.Org.Location = new System.Drawing.Point(294, 77);
-            this.Org.MaxLength = 32767;
-            this.Org.Multiline = false;
-            this.Org.Name = "Org";
-            this.Org.ReadOnly = false;
-            this.Org.Size = new System.Drawing.Size(89, 30);
-            this.Org.Style = MetroSet_UI.Design.Style.Dark;
-            this.Org.StyleManager = null;
-            this.Org.TabIndex = 124;
-            this.Org.Text = "metroSetTextBox5";
-            this.Org.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.Org.ThemeAuthor = "Narwin";
-            this.Org.ThemeName = "MetroDark";
-            this.Org.UseSystemPasswordChar = false;
-            this.Org.WatermarkText = "";
+            this.o.AutoCompleteCustomSource = null;
+            this.o.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.o.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.o.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.o.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.o.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.o.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.o.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.o.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.o.Image = null;
+            this.o.Lines = null;
+            this.o.Location = new System.Drawing.Point(294, 77);
+            this.o.MaxLength = 32767;
+            this.o.Multiline = false;
+            this.o.Name = "o";
+            this.o.ReadOnly = false;
+            this.o.Size = new System.Drawing.Size(89, 30);
+            this.o.Style = MetroSet_UI.Design.Style.Dark;
+            this.o.StyleManager = null;
+            this.o.TabIndex = 124;
+            this.o.Text = "metroSetTextBox5";
+            this.o.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.o.ThemeAuthor = "Narwin";
+            this.o.ThemeName = "MetroDark";
+            this.o.UseSystemPasswordChar = false;
+            this.o.WatermarkText = "";
             // 
             // MiniTabControl1
             // 
@@ -4060,26 +4059,26 @@ namespace Budget
                 protected ChartControl chartControl1;
                 private ChartTitle chartTitle1;
                 private TabPageAdv tabPageAdv2;
-                private MetroSetLabel ID;
+                private MetroSetLabel dd;
                 private MetroSetTextBox metroSetTextBox2;
-                private MetroSetTextBox RC;
+                private MetroSetTextBox rcc;
                 private MetroSetLabel metroSetLabel11;
                 private MetroSetLabel metroSetLabel7;
                 private MetroSetTextBox Amount2;
                 private MetroSetTextBox Amount1;
-                private MetroSetTextBox Code;
-                private MetroSetTextBox BOC;
+                private MetroSetTextBox cd;
+                private MetroSetTextBox bb;
                 private MetroSetLabel metroSetLabel6;
                 private MetroSetLabel metroSetLabel5;
                 private MetroSetLabel metroSetLabel4;
                 private MetroSetLabel metroSetLabel3;
-                private MetroSetTextBox Fund;
+                private MetroSetTextBox ff;
                 private MetroSetButton metroSetButton2;
                 private MetroSetLabel metroSetLabel10;
                 private MetroSetButton metroSetButton1;
                 private MetroSetLabel metroSetLabel15;
-                private MetroSetTextBox bfy;
-                private MetroSetTextBox Org;
+                private MetroSetTextBox yy;
+                private MetroSetTextBox o;
                 private TabControlAdv MiniTabControl1;
                 private MetroSetComboBox FundFilter1;
                 private MetroSetComboBox FundFilter2;
@@ -4110,21 +4109,21 @@ namespace Budget
                 private MetroSetLabel metroSetLabel1;
                 private MetroSetLabel metroSetLabel2;
                 private MetroSetTextBox metroSetTextBox1;
-                private MetroSetTextBox metroSetTextBox3;
-                private MetroSetTextBox metroSetTextBox4;
-                private MetroSetTextBox metroSetTextBox5;
+                private MetroSetTextBox Amount;
+                private MetroSetTextBox Code;
+                private MetroSetTextBox BOC;
                 private MetroSetLabel metroSetLabel12;
                 private MetroSetLabel metroSetLabel13;
                 private MetroSetLabel metroSetLabel14;
                 private MetroSetLabel metroSetLabel16;
-                private MetroSetTextBox metroSetTextBox6;
-                private MetroSetTextBox metroSetTextBox7;
+                private MetroSetTextBox RC;
+                private MetroSetTextBox Fund;
                 private MetroSetButton metroSetButton3;
                 private MetroSetLabel metroSetLabel17;
                 private MetroSetButton metroSetButton4;
                 private MetroSetLabel metroSetLabel18;
-                private MetroSetTextBox metroSetTextBox8;
-                private MetroSetTextBox metroSetTextBox9;
+                private MetroSetTextBox BFY;
+                private MetroSetTextBox Org;
                 private TabPageAdv tabPageAdv5;
                 protected ChartControl PrcChart;
                 private TabPageAdv tabPageAdv6;
