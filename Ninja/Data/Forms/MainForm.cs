@@ -114,5 +114,11 @@ namespace Ninja.Forms
             var dm = new SummaryForm("06J");
             dm.Show();
         }
+
+        private void DataTile_Click(object sender, EventArgs e)
+        {
+            var s = new Selector();
+            s.Show();
+        }
     }
 }

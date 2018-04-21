@@ -109,6 +109,7 @@ namespace Ninja.Forms
             textItem4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             textItem4.HubTile = this.DataTile;
             this.DataTile.Title = textItem4;
+            this.DataTile.Click += new System.EventHandler(this.DataTile_Click);
             // 
             // SummaryTile
             // 
@@ -294,7 +295,7 @@ namespace Ninja.Forms
             this.expandCollapsePanel2.IsExpanded = false;
             this.expandCollapsePanel2.Location = new System.Drawing.Point(304, 3);
             this.expandCollapsePanel2.Name = "expandCollapsePanel2";
-            this.expandCollapsePanel2.Size = new System.Drawing.Size(259, 29);
+            this.expandCollapsePanel2.Size = new System.Drawing.Size(259, 37);
             this.expandCollapsePanel2.TabIndex = 65;
             this.expandCollapsePanel2.Text = "Data";
             this.expandCollapsePanel2.UseAnimation = true;

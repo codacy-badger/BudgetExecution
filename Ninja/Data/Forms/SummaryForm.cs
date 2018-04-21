@@ -53,7 +53,7 @@ namespace Budget
                     InitializeComponent();
                     DatabaseTab.TabVisible = true;
                     D6 = new DivisionAuthority(rc);
-                    Data = new DataBuilder(Source.P8, new Dictionary<string, object> { ["RC"] = rc });
+                    Data = D6.Data;
                     DataSet = Data.QuerySet;
                     Metric = new DataMetric(Data);
                     ProgramElements = Metric.ProgramElements;
@@ -235,7 +235,7 @@ namespace Budget
                         dgv.Columns[4].Visible = true;
                         dgv.Columns[6].Visible = true;
                         dgv.Columns[7].Visible = true;
-                        dgv.Columns[10].Visible = true;
+                        dgv.Columns[9].Visible = true;
                         dgv.Columns[11].Visible = true;
                         dgv.Columns[12].Visible = true;
                     }

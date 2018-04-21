@@ -254,17 +254,29 @@
     <Compile Include="Data\Forms\FunctionalityForm.Designer.cs">
       <DependentUpon>FunctionalityForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Data\Forms\NinjaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Data\Forms\NinjaForm.Designer.cs">
+      <DependentUpon>NinjaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Forms\NinjaForm5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Data\Forms\NinjaForm5.Designer.cs">
+      <DependentUpon>NinjaForm5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Forms\Selector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Data\Forms\Selector.Designer.cs">
+      <DependentUpon>Selector.cs</DependentUpon>
+    </Compile>
     <Compile Include="Data\Forms\SummaryForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Data\Forms\SummaryForm.Designer.cs">
       <DependentUpon>SummaryForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Data\Forms\SummarySelector.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Data\Forms\SummarySelector.Designer.cs">
-      <DependentUpon>SummarySelector.cs</DependentUpon>
     </Compile>
     <Compile Include="Data\Class\FTE.cs" />
     <Compile Include="Data\Class\Fund.cs" />
@@ -389,6 +401,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Data\Forms\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\Forms\NinjaForm.resx">
+      <DependentUpon>NinjaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\Forms\NinjaForm5.resx">
+      <DependentUpon>NinjaForm5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Data\Forms\Selector.resx">
+      <DependentUpon>Selector.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Data\Forms\SummaryForm.resx">
       <DependentUpon>SummaryForm.cs</DependentUpon>
