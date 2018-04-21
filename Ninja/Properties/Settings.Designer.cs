@@ -28,9 +28,9 @@ namespace Ninja.Properties {
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
         [global::System.Configuration.DefaultSettingValueAttribute("data source=\"C:\\Users\\terry\\Documents\\Visual Studio 2017\\Projects\\BudgetExecution" +
             "\\Ninja\\SQLite\\R6.db\"")]
-        public string R6 {
+        public string SQLite {
             get {
-                return ((string)(this["R6"]));
+                return ((string)(this["SQLite"]));
             }
         }
         
@@ -39,9 +39,9 @@ namespace Ninja.Properties {
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
         [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\SqlServer\\R6." +
             "mdf;Integrated Security=True;Connect Timeout=30")]
-        public string R6SqlServer {
+        public string SqlServer {
             get {
-                return ((string)(this["R6SqlServer"]));
+                return ((string)(this["SqlServer"]));
             }
         }
         

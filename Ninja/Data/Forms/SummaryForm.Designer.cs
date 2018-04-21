@@ -423,7 +423,6 @@ namespace Budget
             this.FundExpander.TabIndex = 107;
             this.FundExpander.Text = "Filter";
             this.FundExpander.UseAnimation = true;
-            this.FundExpander.Paint += new System.Windows.Forms.PaintEventHandler(this.FundExpander_Paint);
             // 
             // FundFilter2
             // 
@@ -2156,10 +2155,10 @@ namespace Budget
             this.tabPageAdv1.Controls.Add(this.metroSetTextBox9);
             this.tabPageAdv1.Image = null;
             this.tabPageAdv1.ImageSize = new System.Drawing.Size(16, 16);
-            this.tabPageAdv1.Location = new System.Drawing.Point(1, 29);
+            this.tabPageAdv1.Location = new System.Drawing.Point(1, 0);
             this.tabPageAdv1.Name = "tabPageAdv1";
             this.tabPageAdv1.ShowCloseButton = true;
-            this.tabPageAdv1.Size = new System.Drawing.Size(403, 391);
+            this.tabPageAdv1.Size = new System.Drawing.Size(403, 420);
             this.tabPageAdv1.TabIndex = 4;
             this.tabPageAdv1.Text = "tabPageAdv1";
             this.tabPageAdv1.ThemesEnabled = false;
@@ -2168,7 +2167,7 @@ namespace Budget
             // 
             this.metroSetLabel1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.metroSetLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.metroSetLabel1.Location = new System.Drawing.Point(254, 139);
+            this.metroSetLabel1.Location = new System.Drawing.Point(254, 168);
             this.metroSetLabel1.Name = "metroSetLabel1";
             this.metroSetLabel1.Size = new System.Drawing.Size(62, 23);
             this.metroSetLabel1.Style = MetroSet_UI.Design.Style.Dark;
@@ -2182,7 +2181,7 @@ namespace Budget
             // 
             this.metroSetLabel2.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.metroSetLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.metroSetLabel2.Location = new System.Drawing.Point(142, 139);
+            this.metroSetLabel2.Location = new System.Drawing.Point(142, 168);
             this.metroSetLabel2.Name = "metroSetLabel2";
             this.metroSetLabel2.Size = new System.Drawing.Size(62, 23);
             this.metroSetLabel2.Style = MetroSet_UI.Design.Style.Dark;
@@ -2312,7 +2311,7 @@ namespace Budget
             // 
             this.metroSetLabel12.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.metroSetLabel12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.metroSetLabel12.Location = new System.Drawing.Point(27, 307);
+            this.metroSetLabel12.Location = new System.Drawing.Point(27, 336);
             this.metroSetLabel12.Name = "metroSetLabel12";
             this.metroSetLabel12.Size = new System.Drawing.Size(146, 23);
             this.metroSetLabel12.Style = MetroSet_UI.Design.Style.Dark;
@@ -2326,7 +2325,7 @@ namespace Budget
             // 
             this.metroSetLabel13.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.metroSetLabel13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.metroSetLabel13.Location = new System.Drawing.Point(27, 232);
+            this.metroSetLabel13.Location = new System.Drawing.Point(27, 261);
             this.metroSetLabel13.Name = "metroSetLabel13";
             this.metroSetLabel13.Size = new System.Drawing.Size(94, 23);
             this.metroSetLabel13.Style = MetroSet_UI.Design.Style.Dark;
@@ -2340,7 +2339,7 @@ namespace Budget
             // 
             this.metroSetLabel14.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.metroSetLabel14.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.metroSetLabel14.Location = new System.Drawing.Point(142, 42);
+            this.metroSetLabel14.Location = new System.Drawing.Point(142, 71);
             this.metroSetLabel14.Name = "metroSetLabel14";
             this.metroSetLabel14.Size = new System.Drawing.Size(62, 23);
             this.metroSetLabel14.Style = MetroSet_UI.Design.Style.Dark;
@@ -2354,7 +2353,7 @@ namespace Budget
             // 
             this.metroSetLabel16.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.metroSetLabel16.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.metroSetLabel16.Location = new System.Drawing.Point(29, 139);
+            this.metroSetLabel16.Location = new System.Drawing.Point(29, 168);
             this.metroSetLabel16.Name = "metroSetLabel16";
             this.metroSetLabel16.Size = new System.Drawing.Size(62, 23);
             this.metroSetLabel16.Style = MetroSet_UI.Design.Style.Dark;
@@ -2451,7 +2450,7 @@ namespace Budget
             // 
             this.metroSetLabel17.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.metroSetLabel17.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.metroSetLabel17.Location = new System.Drawing.Point(27, 42);
+            this.metroSetLabel17.Location = new System.Drawing.Point(27, 71);
             this.metroSetLabel17.Name = "metroSetLabel17";
             this.metroSetLabel17.Size = new System.Drawing.Size(62, 23);
             this.metroSetLabel17.Style = MetroSet_UI.Design.Style.Dark;
@@ -2490,7 +2489,7 @@ namespace Budget
             // 
             this.metroSetLabel18.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.metroSetLabel18.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.metroSetLabel18.Location = new System.Drawing.Point(251, 42);
+            this.metroSetLabel18.Location = new System.Drawing.Point(251, 71);
             this.metroSetLabel18.Name = "metroSetLabel18";
             this.metroSetLabel18.Size = new System.Drawing.Size(89, 32);
             this.metroSetLabel18.Style = MetroSet_UI.Design.Style.Dark;
@@ -2563,10 +2562,10 @@ namespace Budget
             this.tabPageAdv5.Controls.Add(this.PrcChart);
             this.tabPageAdv5.Image = null;
             this.tabPageAdv5.ImageSize = new System.Drawing.Size(16, 16);
-            this.tabPageAdv5.Location = new System.Drawing.Point(1, 29);
+            this.tabPageAdv5.Location = new System.Drawing.Point(1, 0);
             this.tabPageAdv5.Name = "tabPageAdv5";
             this.tabPageAdv5.ShowCloseButton = true;
-            this.tabPageAdv5.Size = new System.Drawing.Size(403, 391);
+            this.tabPageAdv5.Size = new System.Drawing.Size(403, 420);
             this.tabPageAdv5.TabIndex = 2;
             this.tabPageAdv5.Text = "tabPageAdv5";
             this.tabPageAdv5.ThemesEnabled = false;
@@ -2680,7 +2679,7 @@ namespace Budget
             this.PrcChart.Series3D = true;
             this.PrcChart.SeriesHighlight = true;
             this.PrcChart.ShadowColor = new Syncfusion.Drawing.BrushInfo(Syncfusion.Drawing.GradientStyle.PathRectangle, System.Drawing.SystemColors.WindowText, System.Drawing.Color.Silver);
-            this.PrcChart.Size = new System.Drawing.Size(403, 391);
+            this.PrcChart.Size = new System.Drawing.Size(403, 420);
             this.PrcChart.Spacing = 5F;
             this.PrcChart.SpacingBetweenPoints = 5F;
             this.PrcChart.Style3D = true;
@@ -2709,10 +2708,10 @@ namespace Budget
             this.tabPageAdv6.Controls.Add(this.calculatorControl2);
             this.tabPageAdv6.Image = null;
             this.tabPageAdv6.ImageSize = new System.Drawing.Size(16, 16);
-            this.tabPageAdv6.Location = new System.Drawing.Point(1, 29);
+            this.tabPageAdv6.Location = new System.Drawing.Point(1, 0);
             this.tabPageAdv6.Name = "tabPageAdv6";
             this.tabPageAdv6.ShowCloseButton = true;
-            this.tabPageAdv6.Size = new System.Drawing.Size(403, 391);
+            this.tabPageAdv6.Size = new System.Drawing.Size(403, 420);
             this.tabPageAdv6.TabIndex = 3;
             this.tabPageAdv6.Text = "tabPageAdv6";
             this.tabPageAdv6.ThemesEnabled = false;

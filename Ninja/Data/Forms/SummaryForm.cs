@@ -105,7 +105,7 @@ namespace Budget
                         Grid.DataSource = BindingSource;
                         GetGridColumns(Grid);
                         PopulateCharts(Title);
-                        GetDatabaseFundFilterItems();
+                        GetDatabaseFilterItems(FundFilter, PrcFilter.FundName);
                         GetTextBoxBindings();
                         lblTotal.Text = Data.GetQueryTotal(Data.QueryTable).ToString("c");
                         lblCount.Text = Data.GetQueryCount(Data.QueryTable).ToString();
@@ -209,13 +209,15 @@ namespace Budget
                         MessageBox.Show(e.Message + e.StackTrace);
                     }
                 }
-                private void GetDatabaseFundFilterItems()
+                private void GetDatabaseFilterItems(MetroSetComboBox cmbox, PrcFilter prcfilter)
                 {
                     try
                     {
-                        var item = Data.ProgramElements["FundName"];
-                        foreach (string i in item)
-                            FundFilter.Items.Add(i);
+                        if (cmbox.Items.Count > 0)
+                            cmbox.Items.Clear();
+                        var items = Data.ProgramElements[prcfilter.ToString()];
+                        foreach (string i in items)
+                            cmbox.Items.Add(i);
                     }
                     catch (Exception ex)
                     {
@@ -405,10 +407,6 @@ namespace Budget
                         MessageBox.Show(ex.Message + ex.StackTrace);
                         return null;
                     }
-                }
-                private void FundExpander_Paint(object sender, PaintEventArgs e)
-                {
-
                 }
             }
         }

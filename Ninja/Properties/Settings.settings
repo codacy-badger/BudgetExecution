@@ -2,7 +2,7 @@
 <SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Ninja.Properties" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
-    <Setting Name="R6" Type="(Connection string)" Scope="Application">
+    <Setting Name="SQLite" Type="(Connection string)" Scope="Application">
       <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
 &lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
   &lt;ConnectionString&gt;data source="C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\SQLite\R6.db"&lt;/ConnectionString&gt;
@@ -10,7 +10,7 @@
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
       <Value Profile="(Default)">data source="C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\SQLite\R6.db"</Value>
     </Setting>
-    <Setting Name="R6SqlServer" Type="(Connection string)" Scope="Application">
+    <Setting Name="SqlServer" Type="(Connection string)" Scope="Application">
       <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
 &lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
   &lt;ConnectionString&gt;Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\SqlServer\R6.mdf;Integrated Security=True;Connect Timeout=30&lt;/ConnectionString&gt;
