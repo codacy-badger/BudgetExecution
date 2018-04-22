@@ -63,7 +63,6 @@ namespace Budget
                 }
 
                 //Properties
-                public DataTable Base { get; set; }
                 public PrcFilter ButtonFilter { get; set; }
                 public DivisionAuthority D6 { get; }
                 public DataBuilder Data { get; }
@@ -72,14 +71,17 @@ namespace Budget
                 public decimal[] Metrics { get; }
                 public Dictionary<string, string[]> ProgramElements { get; }
                 public DataTable Table { get; }
-                public string Title { get; }
+                public DataTable Base { get; set; }
+                public string Title { get; set; }
                 public string Filter1 { get; set; }
                 public string Filter2 { get; set; }
-                public string ActiveTab { get; set; }
+                public string TabFilter { get; set; }
                 internal ChartControl[] Chart { get; set; }
                 internal RadioButton[] RadioButton { get; set; }
                 private TabPageAdv[] Tab { get; set; }
 
+                //Delegates
+                TableFilter Filter { get; set; }
 
                 //Methods
                 private void BocFilter_ItemSelected(object sender, EventArgs e)
@@ -113,6 +115,7 @@ namespace Budget
                         FundFilter.SelectionChangeCommitted += GridFundFilter_ItemSelected;
                         BocFilter.SelectionChangeCommitted += BocFilter_ItemSelected;
                         BocFilter.SelectionChangeCommitted += BocFilter_ItemSelected;
+                        SummaryTabControl.Click += SummaryTabPage_Selected;
                     }
                     catch (Exception ex)
                     {
@@ -433,12 +436,13 @@ namespace Budget
                         MessageBox.Show(ex.Message + ex.StackTrace);
                     }
                 }
-                void SummaryTab_Selected(object sender, EventArgs e)
+                void SummaryTabPage_Selected(object sender, EventArgs e)
                 {
                     try
                     {
-                        var filter = sender as TabControlAdv;
-                        FundFilter2.Tag = filter;
+                        var tab = sender as TabControlAdv;
+                        int i = tab.SelectedIndex;
+                        TabFilter = tab.TabPages[i].Tag.ToString();
                     }
                     catch (Exception ex)
                     {

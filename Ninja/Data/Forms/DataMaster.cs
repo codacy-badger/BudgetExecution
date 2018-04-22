@@ -17,7 +17,7 @@ namespace Ninja.Data
             Data = new DataBuilder(Source.P7);
             Table = Data.QueryTable;
             Metric = new DataMetric(Data);
-            ProgramElements = Data.GetElements(Table);
+            ProgramElements = Data.GetProgramElements(Table);
             BindingSource.DataSource = Table;
             Grid.DataSource = BindingSource;
             GridNavigator.BindingSource = BindingSource;

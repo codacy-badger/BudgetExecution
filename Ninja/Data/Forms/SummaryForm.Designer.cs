@@ -2172,10 +2172,10 @@ namespace Budget
             this.tabPageAdv1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPageAdv1.Image = null;
             this.tabPageAdv1.ImageSize = new System.Drawing.Size(16, 16);
-            this.tabPageAdv1.Location = new System.Drawing.Point(2, 35);
+            this.tabPageAdv1.Location = new System.Drawing.Point(2, 1);
             this.tabPageAdv1.Name = "tabPageAdv1";
             this.tabPageAdv1.ShowCloseButton = true;
-            this.tabPageAdv1.Size = new System.Drawing.Size(433, 359);
+            this.tabPageAdv1.Size = new System.Drawing.Size(433, 393);
             this.tabPageAdv1.TabIndex = 4;
             this.tabPageAdv1.Text = "tabPageAdv1";
             this.tabPageAdv1.ThemesEnabled = false;
@@ -2571,10 +2571,10 @@ namespace Budget
             this.tabPageAdv5.Controls.Add(this.PrcChart);
             this.tabPageAdv5.Image = null;
             this.tabPageAdv5.ImageSize = new System.Drawing.Size(16, 16);
-            this.tabPageAdv5.Location = new System.Drawing.Point(2, 35);
+            this.tabPageAdv5.Location = new System.Drawing.Point(2, 1);
             this.tabPageAdv5.Name = "tabPageAdv5";
             this.tabPageAdv5.ShowCloseButton = true;
-            this.tabPageAdv5.Size = new System.Drawing.Size(433, 359);
+            this.tabPageAdv5.Size = new System.Drawing.Size(433, 393);
             this.tabPageAdv5.TabIndex = 2;
             this.tabPageAdv5.Text = "tabPageAdv5";
             this.tabPageAdv5.ThemesEnabled = false;
@@ -2688,7 +2688,7 @@ namespace Budget
             this.PrcChart.Series3D = true;
             this.PrcChart.SeriesHighlight = true;
             this.PrcChart.ShadowColor = new Syncfusion.Drawing.BrushInfo(Syncfusion.Drawing.GradientStyle.PathRectangle, System.Drawing.SystemColors.WindowText, System.Drawing.Color.Silver);
-            this.PrcChart.Size = new System.Drawing.Size(433, 359);
+            this.PrcChart.Size = new System.Drawing.Size(433, 393);
             this.PrcChart.Spacing = 5F;
             this.PrcChart.SpacingBetweenPoints = 5F;
             this.PrcChart.Style3D = true;
@@ -2717,10 +2717,10 @@ namespace Budget
             this.tabPageAdv6.Controls.Add(this.calculatorControl2);
             this.tabPageAdv6.Image = null;
             this.tabPageAdv6.ImageSize = new System.Drawing.Size(16, 16);
-            this.tabPageAdv6.Location = new System.Drawing.Point(2, 35);
+            this.tabPageAdv6.Location = new System.Drawing.Point(2, 1);
             this.tabPageAdv6.Name = "tabPageAdv6";
             this.tabPageAdv6.ShowCloseButton = true;
-            this.tabPageAdv6.Size = new System.Drawing.Size(433, 359);
+            this.tabPageAdv6.Size = new System.Drawing.Size(433, 393);
             this.tabPageAdv6.TabIndex = 3;
             this.tabPageAdv6.Text = "tabPageAdv6";
             this.tabPageAdv6.ThemesEnabled = false;

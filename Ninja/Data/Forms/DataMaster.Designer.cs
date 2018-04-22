@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            Syncfusion.Windows.Forms.Grid.GridBaseStyle gridBaseStyle1 = new Syncfusion.Windows.Forms.Grid.GridBaseStyle();
-            Syncfusion.Windows.Forms.Grid.GridBaseStyle gridBaseStyle2 = new Syncfusion.Windows.Forms.Grid.GridBaseStyle();
-            Syncfusion.Windows.Forms.Grid.GridBaseStyle gridBaseStyle3 = new Syncfusion.Windows.Forms.Grid.GridBaseStyle();
-            Syncfusion.Windows.Forms.Grid.GridBaseStyle gridBaseStyle4 = new Syncfusion.Windows.Forms.Grid.GridBaseStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            Syncfusion.Windows.Forms.Grid.GridBaseStyle gridBaseStyle5 = new Syncfusion.Windows.Forms.Grid.GridBaseStyle();
+            Syncfusion.Windows.Forms.Grid.GridBaseStyle gridBaseStyle6 = new Syncfusion.Windows.Forms.Grid.GridBaseStyle();
+            Syncfusion.Windows.Forms.Grid.GridBaseStyle gridBaseStyle7 = new Syncfusion.Windows.Forms.Grid.GridBaseStyle();
+            Syncfusion.Windows.Forms.Grid.GridBaseStyle gridBaseStyle8 = new Syncfusion.Windows.Forms.Grid.GridBaseStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DataMaster));
             this.R6 = new Ninja.SqlServer.R6();
             this.R6Adapter = new Ninja.SqlServer.R6TableAdapters.P6TableAdapter();
@@ -109,9 +109,9 @@
             this.groupBox1.Controls.Add(this.BocFilter);
             this.groupBox1.Controls.Add(this.FundFilter);
             this.groupBox1.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.groupBox1.Location = new System.Drawing.Point(1056, 184);
+            this.groupBox1.Location = new System.Drawing.Point(1056, 173);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(473, 216);
+            this.groupBox1.Size = new System.Drawing.Size(473, 237);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Data Filters";
@@ -211,39 +211,39 @@
             this.Grid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCellsExceptHeaders;
             this.Grid.BackgroundColor = System.Drawing.Color.SlateGray;
             this.Grid.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Grid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.LightSteelBlue;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.LightSteelBlue;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.Grid.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Grid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.LightSteelBlue;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.LightSteelBlue;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Grid.DefaultCellStyle = dataGridViewCellStyle6;
             this.Grid.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Grid.EnableHeadersVisualStyles = false;
             this.Grid.GridColor = System.Drawing.SystemColors.ControlDarkDark;
             this.Grid.Location = new System.Drawing.Point(0, 0);
             this.Grid.Name = "Grid";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Grid.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Grid.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.Grid.RowHeadersWidth = 30;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            this.Grid.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
+            this.Grid.RowsDefaultCellStyle = dataGridViewCellStyle8;
             this.Grid.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.LightSteelBlue;
             this.Grid.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Grid.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
@@ -254,35 +254,35 @@
             // E6DataGrid
             // 
             this.E6DataGrid.AllowDragSelectedCols = true;
-            gridBaseStyle1.Name = "Column Header";
-            gridBaseStyle1.StyleInfo.BaseStyle = "Header";
-            gridBaseStyle1.StyleInfo.CellType = "ColumnHeaderCell";
-            gridBaseStyle1.StyleInfo.Enabled = false;
-            gridBaseStyle1.StyleInfo.Font.Bold = false;
-            gridBaseStyle1.StyleInfo.HorizontalAlignment = Syncfusion.Windows.Forms.Grid.GridHorizontalAlignment.Center;
-            gridBaseStyle2.Name = "Header";
-            gridBaseStyle2.StyleInfo.Borders.Bottom = new Syncfusion.Windows.Forms.Grid.GridBorder(Syncfusion.Windows.Forms.Grid.GridBorderStyle.None);
-            gridBaseStyle2.StyleInfo.Borders.Left = new Syncfusion.Windows.Forms.Grid.GridBorder(Syncfusion.Windows.Forms.Grid.GridBorderStyle.None);
-            gridBaseStyle2.StyleInfo.Borders.Right = new Syncfusion.Windows.Forms.Grid.GridBorder(Syncfusion.Windows.Forms.Grid.GridBorderStyle.None);
-            gridBaseStyle2.StyleInfo.Borders.Top = new Syncfusion.Windows.Forms.Grid.GridBorder(Syncfusion.Windows.Forms.Grid.GridBorderStyle.None);
-            gridBaseStyle2.StyleInfo.CellType = "Header";
-            gridBaseStyle2.StyleInfo.Font.Bold = true;
-            gridBaseStyle2.StyleInfo.Interior = new Syncfusion.Drawing.BrushInfo(System.Drawing.SystemColors.Control);
-            gridBaseStyle2.StyleInfo.VerticalAlignment = Syncfusion.Windows.Forms.Grid.GridVerticalAlignment.Middle;
-            gridBaseStyle3.Name = "Standard";
-            gridBaseStyle3.StyleInfo.CheckBoxOptions.CheckedValue = "True";
-            gridBaseStyle3.StyleInfo.CheckBoxOptions.UncheckedValue = "False";
-            gridBaseStyle3.StyleInfo.Interior = new Syncfusion.Drawing.BrushInfo(System.Drawing.SystemColors.Window);
-            gridBaseStyle4.Name = "Row Header";
-            gridBaseStyle4.StyleInfo.BaseStyle = "Header";
-            gridBaseStyle4.StyleInfo.CellType = "RowHeaderCell";
-            gridBaseStyle4.StyleInfo.Enabled = true;
-            gridBaseStyle4.StyleInfo.HorizontalAlignment = Syncfusion.Windows.Forms.Grid.GridHorizontalAlignment.Left;
+            gridBaseStyle5.Name = "Column Header";
+            gridBaseStyle5.StyleInfo.BaseStyle = "Header";
+            gridBaseStyle5.StyleInfo.CellType = "ColumnHeaderCell";
+            gridBaseStyle5.StyleInfo.Enabled = false;
+            gridBaseStyle5.StyleInfo.Font.Bold = false;
+            gridBaseStyle5.StyleInfo.HorizontalAlignment = Syncfusion.Windows.Forms.Grid.GridHorizontalAlignment.Center;
+            gridBaseStyle6.Name = "Header";
+            gridBaseStyle6.StyleInfo.Borders.Bottom = new Syncfusion.Windows.Forms.Grid.GridBorder(Syncfusion.Windows.Forms.Grid.GridBorderStyle.None);
+            gridBaseStyle6.StyleInfo.Borders.Left = new Syncfusion.Windows.Forms.Grid.GridBorder(Syncfusion.Windows.Forms.Grid.GridBorderStyle.None);
+            gridBaseStyle6.StyleInfo.Borders.Right = new Syncfusion.Windows.Forms.Grid.GridBorder(Syncfusion.Windows.Forms.Grid.GridBorderStyle.None);
+            gridBaseStyle6.StyleInfo.Borders.Top = new Syncfusion.Windows.Forms.Grid.GridBorder(Syncfusion.Windows.Forms.Grid.GridBorderStyle.None);
+            gridBaseStyle6.StyleInfo.CellType = "Header";
+            gridBaseStyle6.StyleInfo.Font.Bold = true;
+            gridBaseStyle6.StyleInfo.Interior = new Syncfusion.Drawing.BrushInfo(System.Drawing.SystemColors.Control);
+            gridBaseStyle6.StyleInfo.VerticalAlignment = Syncfusion.Windows.Forms.Grid.GridVerticalAlignment.Middle;
+            gridBaseStyle7.Name = "Standard";
+            gridBaseStyle7.StyleInfo.CheckBoxOptions.CheckedValue = "True";
+            gridBaseStyle7.StyleInfo.CheckBoxOptions.UncheckedValue = "False";
+            gridBaseStyle7.StyleInfo.Interior = new Syncfusion.Drawing.BrushInfo(System.Drawing.SystemColors.Window);
+            gridBaseStyle8.Name = "Row Header";
+            gridBaseStyle8.StyleInfo.BaseStyle = "Header";
+            gridBaseStyle8.StyleInfo.CellType = "RowHeaderCell";
+            gridBaseStyle8.StyleInfo.Enabled = true;
+            gridBaseStyle8.StyleInfo.HorizontalAlignment = Syncfusion.Windows.Forms.Grid.GridHorizontalAlignment.Left;
             this.E6DataGrid.BaseStylesMap.AddRange(new Syncfusion.Windows.Forms.Grid.GridBaseStyle[] {
-            gridBaseStyle1,
-            gridBaseStyle2,
-            gridBaseStyle3,
-            gridBaseStyle4});
+            gridBaseStyle5,
+            gridBaseStyle6,
+            gridBaseStyle7,
+            gridBaseStyle8});
             this.E6DataGrid.Location = new System.Drawing.Point(0, 0);
             this.E6DataGrid.Name = "E6DataGrid";
             this.E6DataGrid.ShowCurrentCellBorderBehavior = Syncfusion.Windows.Forms.Grid.GridShowCurrentCellBorder.GrayWhenLostFocus;
@@ -304,9 +304,9 @@
             this.groupBox4.Controls.Add(this.metroSetComboBox2);
             this.groupBox4.Controls.Add(this.metroSetTextBox1);
             this.groupBox4.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.groupBox4.Location = new System.Drawing.Point(1053, 443);
+            this.groupBox4.Location = new System.Drawing.Point(1056, 436);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(476, 184);
+            this.groupBox4.Size = new System.Drawing.Size(473, 191);
             this.groupBox4.TabIndex = 7;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Changes";
@@ -333,14 +333,14 @@
             this.CopyButton,
             this.SaveButton,
             this.DeleteButton});
-            this.GridNavigator.Location = new System.Drawing.Point(3, 153);
+            this.GridNavigator.Location = new System.Drawing.Point(3, 160);
             this.GridNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem1;
             this.GridNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem1;
             this.GridNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem1;
             this.GridNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem1;
             this.GridNavigator.Name = "GridNavigator";
             this.GridNavigator.PositionItem = this.bindingNavigatorPositionItem1;
-            this.GridNavigator.Size = new System.Drawing.Size(470, 28);
+            this.GridNavigator.Size = new System.Drawing.Size(467, 28);
             this.GridNavigator.TabIndex = 3;
             this.GridNavigator.Text = "bindingNavigator1";
             // 
@@ -404,7 +404,7 @@
             "Code",
             "BOC",
             "Amount"});
-            this.metroSetComboBox2.Location = new System.Drawing.Point(42, 58);
+            this.metroSetComboBox2.Location = new System.Drawing.Point(39, 72);
             this.metroSetComboBox2.MaxDropDownItems = 20;
             this.metroSetComboBox2.Name = "metroSetComboBox2";
             this.metroSetComboBox2.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
@@ -430,7 +430,7 @@
             this.metroSetTextBox1.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.metroSetTextBox1.Image = null;
             this.metroSetTextBox1.Lines = null;
-            this.metroSetTextBox1.Location = new System.Drawing.Point(237, 58);
+            this.metroSetTextBox1.Location = new System.Drawing.Point(237, 72);
             this.metroSetTextBox1.MaxLength = 32767;
             this.metroSetTextBox1.Multiline = false;
             this.metroSetTextBox1.Name = "metroSetTextBox1";

@@ -118,7 +118,7 @@ namespace Ninja.Forms
 
         private void DataTile_Click(object sender, EventArgs e)
         {
-            var s = new NinjaForm();
+            var s = new Selector();
             s.Show();
         }
 

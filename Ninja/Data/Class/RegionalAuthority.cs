@@ -16,18 +16,18 @@ namespace Budget
                 public RegionalAuthority()
                 {
                     Data = new DataBuilder(Source.P7, new Dictionary<string, object> { ["BFY"] = FiscalYear });
-                    BudgetMetric = new DataMetric(Data);
+                    Metric = new DataMetric(Data);
                     Table = Data.QueryTable;
-                    Total = BudgetMetric.BaseTotal;
-                    Count = BudgetMetric.BaseCount;
-                    Average = BudgetMetric.BaseAverage;
+                    Total = Metric.BaseTotal;
+                    Count = Metric.BaseCount;
+                    Average = Metric.BaseAverage;
                     ProgramElements = GetProgramElements(Table);
-                    FundData = BudgetMetric.FundTotals;
-                    BocData = BudgetMetric.BocTotals;
-                    NpmData = BudgetMetric.NpmTotals;
-                    GoalData = BudgetMetric.GoalTotals;
-                    ProgramData = BudgetMetric.ProgramAreaTotals;
-                    ProjectData = BudgetMetric.ProgramProjectTotals;
+                    FundData = Metric.FundTotals;
+                    BocData = Metric.BocTotals;
+                    NpmData = Metric.NpmTotals;
+                    GoalData = Metric.GoalTotals;
+                    ProgramData = Metric.ProgramAreaTotals;
+                    ProjectData = Metric.ProgramProjectTotals;
                     if (ProgramElements["BOC"].Contains("17"))
                     {
                         FTE = new FTE(Table);
@@ -41,7 +41,7 @@ namespace Budget
                 public decimal Average { get; }
                 public Dictionary<string, decimal> BocData { get; }
                 public DataSet BudgetData { get; }
-                public DataMetric BudgetMetric { get; }
+                public DataMetric Metric { get; }
                 public int Count { get; }
                 public DataBuilder Data { get; set; }
                 public FTE FTE { get; }

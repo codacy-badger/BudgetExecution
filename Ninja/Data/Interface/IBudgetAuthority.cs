@@ -10,7 +10,7 @@ namespace Budget
         {
             public interface IBudgetAuthority
             {
-                DataMetric BudgetMetric { get; }
+                DataMetric Metric { get; }
 
                 Dictionary<string, string[]> ProgramElements { get; }
 

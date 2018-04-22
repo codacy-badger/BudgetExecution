@@ -16,18 +16,18 @@ namespace Budget
                 public DivisionAuthority()
                 {
                     Data = new DataBuilder(Source.P8);
-                    BudgetMetric = new DataMetric(Data);
+                    Metric = new DataMetric(Data);
                     Table = Data.QueryTable;
-                    Total = BudgetMetric.BaseTotal;
-                    Count = BudgetMetric.BaseCount;
-                    Average = BudgetMetric.BaseAverage;
+                    Total = Metric.BaseTotal;
+                    Count = Metric.BaseCount;
+                    Average = Metric.BaseAverage;
                     ProgramElements = GetProgramElements(Table);
-                    FundData = BudgetMetric.FundTotals;
-                    BocData = BudgetMetric.BocTotals;
-                    NpmData = BudgetMetric.NpmTotals;
-                    GoalData = BudgetMetric.GoalTotals;
-                    ProgramData = BudgetMetric.ProgramAreaTotals;
-                    ProjectData = BudgetMetric.ProgramProjectTotals;
+                    FundData = Metric.FundTotals;
+                    BocData = Metric.BocTotals;
+                    NpmData = Metric.NpmTotals;
+                    GoalData = Metric.GoalTotals;
+                    ProgramData = Metric.ProgramAreaTotals;
+                    ProjectData = Metric.ProgramProjectTotals;
                     if (ProgramElements["BOC"].Contains("17"))
                     {
                         FTE = new FTE(Data.QueryTable);
@@ -40,18 +40,18 @@ namespace Budget
                     RC = new RC(rc);
                     Org = new Org(RC.Code);
                     Data = new DataBuilder(Source.P8, new Dictionary<string, object> { ["RC"] = rc });
-                    BudgetMetric = new DataMetric(Data);
+                    Metric = new DataMetric(Data);
                     Table = Data.QueryTable;
-                    Total = BudgetMetric.BaseTotal;
-                    Count = BudgetMetric.BaseCount;
-                    Average = BudgetMetric.BaseAverage;
+                    Total = Metric.BaseTotal;
+                    Count = Metric.BaseCount;
+                    Average = Metric.BaseAverage;
                     ProgramElements = GetProgramElements(Table);
-                    FundData = BudgetMetric.FundTotals;
-                    BocData = BudgetMetric.BocTotals;
-                    NpmData = BudgetMetric.NpmTotals;
-                    GoalData = BudgetMetric.GoalTotals;
-                    ProgramData = BudgetMetric.ProgramAreaTotals;
-                    ProjectData = BudgetMetric.ProgramProjectTotals;
+                    FundData = Metric.FundTotals;
+                    BocData = Metric.BocTotals;
+                    NpmData = Metric.NpmTotals;
+                    GoalData = Metric.GoalTotals;
+                    ProgramData = Metric.ProgramAreaTotals;
+                    ProjectData = Metric.ProgramProjectTotals;
                     if (ProgramElements["BOC"].Contains("17"))
                     {
                         FTE = new FTE(Table);
@@ -61,26 +61,26 @@ namespace Budget
 
                 //Properties
                 public static string FiscalYear { get; set; } = "2018";
-                public decimal Average { get; }
-                public Dictionary<string, decimal> BocData { get; set; }
+                public RC RC { get; }
+                public Org Org { get; }
                 public DataSet BudgetData { get; }
-                public DataMetric BudgetMetric { get; }
-                public int Count { get; }
                 public DataBuilder Data { get; set; }
+                public DataMetric Metric { get; }
+                public DataTable Table { get; }
+                public Dictionary<string, string[]> ProgramElements { get; }
+                public decimal[] Metrics { get; }
+                public decimal Total { get; }
+                public int Count { get; }
+                public decimal Average { get; }
                 public Dictionary<string, decimal> DivisionData { get; }
                 public FTE FTE { get; }
+                public Dictionary<string, decimal> BocData { get; set; }
                 public Dictionary<string, decimal> FteData { get; }
                 public Dictionary<string, decimal> FundData { get; }
                 public Dictionary<string, decimal> GoalData { get; }
-                public decimal[] Metrics { get; }
                 public Dictionary<string, decimal> NpmData { get; }
-                public Org Org { get; }
                 public Dictionary<string, decimal> ProgramData { get; }
-                public Dictionary<string, string[]> ProgramElements { get; }
                 public Dictionary<string, decimal> ProjectData { get; }
-                public RC RC { get; }
-                public DataTable Table { get; }
-                public decimal Total { get; }
 
                 //Methods
                 public DataTable FilterTable(DataTable table, string column, string filter)

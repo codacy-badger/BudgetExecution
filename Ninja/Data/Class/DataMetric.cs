@@ -22,7 +22,7 @@ namespace Budget
                     Data = new DataBuilder(source);
                     BaseTable = Data.QueryTable;
                     BaseSet = Data.QuerySet;
-                    ProgramElements = Data.GetElements(BaseTable);
+                    ProgramElements = Data.GetProgramElements(BaseTable);
                     BaseTotal = GetBaseTotal(BaseTable);
                     BaseCount = BaseTable.Rows.Count;
                     BaseAverage = GetBaseAverage(BaseTable);
@@ -52,7 +52,7 @@ namespace Budget
                     Data = data;
                     BaseTable = Data.QueryTable;
                     BaseSet = BaseTable.DataSet;
-                    ProgramElements = Data.GetElements(BaseTable);
+                    ProgramElements = Data.GetProgramElements(BaseTable);
                     BaseTotal = GetBaseTotal(BaseTable);
                     BaseCount = BaseTable.Rows.Count;
                     BaseAverage = GetBaseAverage(BaseTable);

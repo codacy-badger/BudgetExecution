@@ -28,10 +28,10 @@ namespace Budget
                 public Appropriation(Source source, string fundcode, string bfy) : this(fundcode, bfy)
                 {
                     Data = new DataBuilder(source, new Dictionary<string, object> { ["Fund"] = fundcode, ["BFY"] = bfy });
-                    BudgetMetric = new DataMetric(Data);
+                    Metric = new DataMetric(Data);
                     Table = Data.QueryTable;
-                    Total = BudgetMetric.BaseTotal;
-                    Average = BudgetMetric.BaseAverage;
+                    Total = Metric.BaseTotal;
+                    Average = Metric.BaseAverage;
                     ProgramElements = GetProgramElements(Table);
                     BocCodes = ProgramElements["BOC"];
                     BOC = ProgramElements["BocName"];
@@ -39,14 +39,14 @@ namespace Budget
                     Program = ProgramElements["ProgramAreaName"];
                     Goal = ProgramElements["GoalName"];
                     Count = PrcData.Item1.Rows.Count;
-                    BocData = BudgetMetric.BocTotals;
+                    BocData = Metric.BocTotals;
                     if (BocCodes.Contains("17"))
                     {
                         FTE = new FTE(Table);
                     }
-                    NpmData = BudgetMetric.NpmTotals;
-                    ProgramData = BudgetMetric.ProgramAreaTotals;
-                    GoalData = BudgetMetric.GoalTotals;
+                    NpmData = Metric.NpmTotals;
+                    ProgramData = Metric.ProgramAreaTotals;
+                    GoalData = Metric.GoalTotals;
                 }
 
                 //Properties
@@ -54,7 +54,7 @@ namespace Budget
                 public string[] BOC { get; }
                 public string[] BocCodes { get; }
                 public Dictionary<string, decimal> BocData { get; set; }
-                public DataMetric BudgetMetric { get; }
+                public DataMetric Metric { get; }
                 public int Count { get; }
                 public string FiscalYear { get; }
                 public FTE FTE { get; }

@@ -25,7 +25,7 @@ namespace Budget
                     QueryTotal = GetQueryTotal(QueryTable);
                     BindingSource = new BindingSource();
                     BindingSource.DataSource = QueryTable;
-                    ProgramElements = GetElements(QueryTable);
+                    ProgramElements = GetProgramElements(QueryTable);
                     Records = GetRecords(QueryTable);
                     if (source == Source.P6 || source == Source.P7 || source == Source.P8)
                     {
@@ -40,7 +40,7 @@ namespace Budget
                     QueryTable = QuerySet.Tables[0];
                     BindingSource = new BindingSource();
                     BindingSource.DataSource = QueryTable;
-                    ProgramElements = GetElements(QueryTable);
+                    ProgramElements = GetProgramElements(QueryTable);
                     Records = GetRecords(QueryTable);
                     if (source == Source.P6 || source == Source.P7 || source == Source.P8)
                     {
@@ -50,7 +50,7 @@ namespace Budget
 
                 //Properties
                 public PRC[] Accounts { get; }
-                public BindingSource BindingSource { get; }
+                public BindingSource BindingSource { get; set; }
                 public Dictionary<string, string[]> ProgramElements { get; }
                 public Query Query { get; }
                 public DataSet QuerySet { get; }
@@ -85,7 +85,7 @@ namespace Budget
                         return null;
                     }
                 }
-                public Dictionary<string, string[]> GetElements(DataTable table)
+                public Dictionary<string, string[]> GetProgramElements(DataTable table)
                 {
                     try
                     {
