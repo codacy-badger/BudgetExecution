@@ -52,7 +52,7 @@
             this.ViewerCarousel.RotateAlways = false;
             this.ViewerCarousel.ShowImagePreview = true;
             this.ViewerCarousel.ShowImageShadow = true;
-            this.ViewerCarousel.Size = new System.Drawing.Size(1482, 599);
+            this.ViewerCarousel.Size = new System.Drawing.Size(1523, 658);
             this.ViewerCarousel.TabIndex = 2;
             this.ViewerCarousel.Text = "carousel2";
             this.ViewerCarousel.TouchTransitionSpeed = 3F;
@@ -62,9 +62,9 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.ViewerCarousel);
-            this.panel1.Location = new System.Drawing.Point(35, 280);
+            this.panel1.Location = new System.Drawing.Point(32, 157);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1482, 599);
+            this.panel1.Size = new System.Drawing.Size(1523, 658);
             this.panel1.TabIndex = 3;
             // 
             // NinjaForm

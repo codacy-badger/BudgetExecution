@@ -121,5 +121,10 @@ namespace Ninja.Forms
             var s = new NinjaForm();
             s.Show();
         }
+
+        private void TransferButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
