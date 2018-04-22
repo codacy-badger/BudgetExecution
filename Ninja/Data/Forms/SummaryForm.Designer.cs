@@ -383,6 +383,7 @@ namespace Budget
             this.SummaryTabControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.SummaryTabControl.FixedSingleBorderColor = System.Drawing.SystemColors.MenuHighlight;
             this.SummaryTabControl.InActiveTabForeColor = System.Drawing.Color.Gray;
+            this.SummaryTabControl.ItemSize = new System.Drawing.Size(80, 50);
             this.SummaryTabControl.Location = new System.Drawing.Point(0, 0);
             this.SummaryTabControl.Multiline = true;
             this.SummaryTabControl.Name = "SummaryTabControl";
@@ -405,6 +406,7 @@ namespace Budget
             this.FundTab.Size = new System.Drawing.Size(1586, 884);
             this.FundTab.TabForeColor = System.Drawing.Color.LightSteelBlue;
             this.FundTab.TabIndex = 1;
+            this.FundTab.Tag = "FundName";
             this.FundTab.Text = "Appropriation";
             this.FundTab.ThemesEnabled = false;
             // 
@@ -416,10 +418,10 @@ namespace Budget
             this.FundExpander.Controls.Add(this.FundFilter2);
             this.FundExpander.Controls.Add(this.FundFilter1);
             this.FundExpander.ExpandedHeight = 421;
-            this.FundExpander.IsExpanded = false;
+            this.FundExpander.IsExpanded = true;
             this.FundExpander.Location = new System.Drawing.Point(1229, 100);
             this.FundExpander.Name = "FundExpander";
-            this.FundExpander.Size = new System.Drawing.Size(333, 37);
+            this.FundExpander.Size = new System.Drawing.Size(333, 421);
             this.FundExpander.TabIndex = 107;
             this.FundExpander.Text = "Filter";
             this.FundExpander.UseAnimation = true;
@@ -613,6 +615,7 @@ namespace Budget
             this.BocTab.Size = new System.Drawing.Size(1586, 884);
             this.BocTab.TabForeColor = System.Drawing.Color.LightSteelBlue;
             this.BocTab.TabIndex = 2;
+            this.BocTab.Tag = "BocName";
             this.BocTab.Text = "BOC";
             this.BocTab.ThemesEnabled = false;
             // 
@@ -624,10 +627,10 @@ namespace Budget
             this.expandCollapsePanel1.Controls.Add(this.BocFilter2);
             this.expandCollapsePanel1.Controls.Add(this.BocFilter1);
             this.expandCollapsePanel1.ExpandedHeight = 421;
-            this.expandCollapsePanel1.IsExpanded = true;
+            this.expandCollapsePanel1.IsExpanded = false;
             this.expandCollapsePanel1.Location = new System.Drawing.Point(1251, 100);
             this.expandCollapsePanel1.Name = "expandCollapsePanel1";
-            this.expandCollapsePanel1.Size = new System.Drawing.Size(311, 421);
+            this.expandCollapsePanel1.Size = new System.Drawing.Size(311, 37);
             this.expandCollapsePanel1.TabIndex = 108;
             this.expandCollapsePanel1.Text = "Filter";
             this.expandCollapsePanel1.UseAnimation = true;
@@ -824,6 +827,7 @@ namespace Budget
             this.NpmTab.Size = new System.Drawing.Size(1586, 884);
             this.NpmTab.TabForeColor = System.Drawing.Color.LightSteelBlue;
             this.NpmTab.TabIndex = 3;
+            this.NpmTab.Tag = "NPM";
             this.NpmTab.Text = "NPM";
             this.NpmTab.ThemesEnabled = false;
             // 
@@ -1035,6 +1039,7 @@ namespace Budget
             this.GoalTab.Size = new System.Drawing.Size(1586, 884);
             this.GoalTab.TabForeColor = System.Drawing.Color.LightSteelBlue;
             this.GoalTab.TabIndex = 4;
+            this.GoalTab.Tag = "GoalName";
             this.GoalTab.Text = "Goal";
             this.GoalTab.ThemesEnabled = false;
             // 
@@ -1246,6 +1251,7 @@ namespace Budget
             this.ObjectiveTab.Size = new System.Drawing.Size(1586, 884);
             this.ObjectiveTab.TabForeColor = System.Drawing.Color.LightSteelBlue;
             this.ObjectiveTab.TabIndex = 5;
+            this.ObjectiveTab.Tag = "ObjectiveName";
             this.ObjectiveTab.Text = "Objective";
             this.ObjectiveTab.ThemesEnabled = false;
             // 
@@ -1457,6 +1463,7 @@ namespace Budget
             this.DivisionTab.Size = new System.Drawing.Size(1586, 884);
             this.DivisionTab.TabForeColor = System.Drawing.Color.LightSteelBlue;
             this.DivisionTab.TabIndex = 6;
+            this.DivisionTab.Tag = "RC";
             this.DivisionTab.Text = "Division";
             this.DivisionTab.ThemesEnabled = false;
             // 
@@ -1668,6 +1675,7 @@ namespace Budget
             this.AreaTab.Size = new System.Drawing.Size(1586, 884);
             this.AreaTab.TabForeColor = System.Drawing.Color.LightSteelBlue;
             this.AreaTab.TabIndex = 7;
+            this.AreaTab.Tag = "ProgramAreaName";
             this.AreaTab.Text = "Program Area";
             this.AreaTab.ThemesEnabled = false;
             // 
@@ -1879,6 +1887,7 @@ namespace Budget
             this.ProjectTab.Size = new System.Drawing.Size(1586, 884);
             this.ProjectTab.TabForeColor = System.Drawing.Color.LightSteelBlue;
             this.ProjectTab.TabIndex = 8;
+            this.ProjectTab.Tag = "ProgramProjectTab";
             this.ProjectTab.Text = "Program Project";
             this.ProjectTab.ThemesEnabled = false;
             // 
@@ -2090,6 +2099,7 @@ namespace Budget
             this.DatabaseTab.ShowCloseButton = true;
             this.DatabaseTab.Size = new System.Drawing.Size(1586, 884);
             this.DatabaseTab.TabIndex = 9;
+            this.DatabaseTab.Tag = "Database";
             this.DatabaseTab.Text = "Database";
             this.DatabaseTab.ThemesEnabled = false;
             // 

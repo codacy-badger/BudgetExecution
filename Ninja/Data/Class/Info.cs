@@ -19,7 +19,6 @@ namespace Budget
                 "45", "46", "47", "F1", "F2", "F3", "F4", "F5", "LA", "PT", "PQ", "UW", "AP", "DJ", "LD",
                 "RL", "58", "B4", "B5", "BP", "PA", "PB", "PC", "PV", "PW", "R3", "R4"
                 };
-
                 public static string[] AgencyITCodes = {
                 "EK", "FH", "FJ", "GB", "SL", "SM", "AA", "AB", "AC", "AD", "AE",
                 "AF", "AG", "AH", "AJ", "AL", "AM", "AQ", "AR", "AT", "BB", "BC", "BG", "BH", "BJ", "BK",
@@ -35,7 +34,6 @@ namespace Budget
                 "TF", "TG", "TH", "TJ", "TK", "TM", "TN", "UA", "VR", "WB", "WC", "WD", "WE", "WI", "WM",
                 "WS", "WT"
                 };
-
                 public static string[] AgencyOrgCodes = {
                 "01", "02", "03", "04", "0400BMT", "05", "0500BMT", "06", "07", "08", "09", "10", "11", "13",
                 "16", "17", "20", "23", "27", "28", "30", "31", "3100EEN", "32", "3200EEN", "3200P", "3200P1",
@@ -50,7 +48,6 @@ namespace Budget
                 "6A00S", "7A00C", "7A00E", "7A00P", "7A00R", "7A00S", "8A00C", "8A00E", "8A00F", "8A00P", "8A00R", "8A00S",
                 "9A00C", "9A00E", "9A00F", "9A00P", "9A00R", "9A00S", "D4", "B7", "H1"
                 };
-
                 public static string[] AgencyPrcCodes = {
                 "101A46", "101A46XP3", "101A46XP4", "101A46XQ3", "101A58", "101A59", "102A45", "102A58", "102A59","102A76", "102AH5", "102J59", "103AC4", "103AC5", "104A97", "104A98", "201B42", "201B53", "201B71",
                 "201BL2", "202B63", "202B65", "202B66", "202B67", "202B68X33", "202B68XP8", "202B68XQC", "202B88",
@@ -73,14 +70,11 @@ namespace Budget
                 "303D91","ZZZPG2", "303D72", "303D72XPA", "303D72XPC", "303DC6", "303DC8", "303DC9", "303DD2", "501EC7", "501EH2", "501JC7",
                 "ZZZD73"
                 };
-
                 public static string[] AgencyRpioCode = {
                 "11", "13", "16", "17", "18", "20", "26", "27", "30", "35", "39", "75", "77", "01","02", "03", "04", "05", "06", "07", "08",
                 "09", "10"
                 };
-
                 public static string[] Division = { "6WQ", "6WCF", "6MD", "6MDR", "WSA", "6MM", "6WSA", "6EN", "6RA", "6RC", "6SF", "6XA", "6EJ", "R06" };
-
                 public static string[] DivisionIdTitleOrg = {
                 "6MD | MANAGEMENT DIVISION | 06C", "6MM | MULTIMEDIA DIVISION | 06J", "6EN | COMPLIANCE & ENFORCEMENT DIVISION | 06M",
                 "6RC | OFFICE OF REGIONAL COUNSEL | 06D", "6SF | SUPERFUND DIVISION | 06L", "6RA | OFFICE OF THE REGIONAL ADMINISTRATOR | 06A",
@@ -88,27 +82,71 @@ namespace Budget
                 "6WQ | WATER QUALITY DIVISION | 06K", "6WSA | WORKFORCE SUPPORT ACCOUNT | 06N",
                 "6WCF | WORKING CAPITAL FUND | 06G"
                 };
-
                 public static string[] Divisions = { "6MD", "6MM", "6RA", "6SF", "6EJ", "6XA", "6WQ", "6EN", "6RC", "R06", "6WSA", "6WCF" };
-
                 public static string[] DivisionTitle = {
                 "6MD Management Division", "6MM MultiMedia Division", "6EN Compliance && Enforcement Division",
                 "6RC Office of Regional Counsel", "6SF Superfund Division", "6RA The Office of the Regional Administrator",
                 "6EJ Environmental Justice && Tribal Affairs Division", "6XA The Office of External Affairs",
                 "6WQ Water Quality Protection Division", "EPA Region 6 Dallas,TX"
                 };
-
                 public static string[] MultiYears = {
                 "2015", "2015 2016", "2016 2017", "2016", "2017 2018", "2017","2018 2019", "2018", "2019 2020","2019", "2020 2021","2020", "2021 2022", "2021",
                 "2022", "2022 2023",
                 };
-
                 public static string[] NpmCodes = { "M", "L", "G", "J", "H", "C", "F", "A", "B", "P", "N", "D", "E" };
-
                 public static string[] RcCodes = { "06C", "06A", "06L", "06F", "06X", "06K", "06J", "06M", "06D", "06N", "06G" };
-
                 public static string[] Year = { "2017", "2018", "2019", "2020", "2021", "2021", "2022", "2024", "2025", "2026", "2027" };
+                public static Dictionary<string, Source> DatabaseParameter()
+                {
+                    try
+                    {
+                        var d = new Dictionary<string, Source>();
+                        d.Add("Programs", Source.A6);
+                        d.Add("Reprogrammings", Source.T6);
+                        d.Add("Level-7", Source.P7);
+                        d.Add("Level-8", Source.P8);
+                        d.Add("R6 PRC", Source.P6);
+                        d.Add("Division Details", Source.D6);
+                        d.Add("Authority", Source.O6);
+                        d.Add("Employee Leave", Source.E1);
+                        d.Add("Appropriations", Source.F6);
+                        d.Add("Obligations", Source.O7);
+                        d.Add("Compensation and Benefits", Source.O8);
+                        d.Add("EPM Appropriation", Source.EPM);
+                        d.Add("Oil Spill", Source.OIL);
+                        d.Add("Superfund Appropriation", Source.SUPERFUND);
+                        d.Add("Underground Storage Tanks", Source.LUST);
+                        d.Add("STAG Appropriation", Source.STAG);
+                        d.Add("6A Extramural", Source.SF6A);
+                        d.Add("Payroll", Source.BOC10);
+                        d.Add("FTE", Source.BOC17);
+                        d.Add("Travel", Source.BOC21);
+                        d.Add("Site Travel", Source.BOC28);
+                        d.Add("Expenses", Source.BOC36);
+                        d.Add("Contracts", Source.BOC37);
+                        d.Add("WCF", Source.WCF);
+                        d.Add("Grants", Source.BOC41);
+                        d.Add("Regional Administrator", Source.RA);
+                        d.Add("External Affairs", Source.XA);
+                        d.Add("Environmental Justice", Source.EJ);
+                        d.Add("Regional Counsel", Source.RC);
+                        d.Add("Enforcement Division", Source.EN);
+                        d.Add("Superfund Division", Source.SF);
+                        d.Add("Multi-Media Division", Source.MM);
+                        d.Add("Management Division", Source.MD);
+                        d.Add("Water Quality Division", Source.WQ);
+                        d.Add("Workforce Support", Source.WSA);
+                        d.Add("Working Captial Fund", Source.WCF);
+                        return d;
+                    }
+                    catch (System.Exception ex)
+                    {
+                        MessageBox.Show(ex.Message + ex.StackTrace);
+                        return null;
+                    }
 
+
+                }
                 public static SortedList<string, object> DivisionLookUp()
                 {
                     SortedList<string, object> d = new SortedList<string, object>();
@@ -125,7 +163,6 @@ namespace Budget
                     d.Add("WCF", "Working Capital");
                     return d;
                 }
-
                 public static string DivisionName(string rc)
                 {
                     switch (rc)
@@ -178,7 +215,6 @@ namespace Budget
                         default: return "R06";
                     }
                 }
-
                 public static string GetAppropriationName(string fundcode)
                 {
                     switch (fundcode)
@@ -287,7 +323,6 @@ namespace Budget
                     }
                     return null;
                 }
-
                 public static string GetAppropriationTitle(string fundcode)
                 {
                     switch (fundcode)
@@ -393,7 +428,6 @@ namespace Budget
                     }
                     return null;
                 }
-
                 public static string GetBocName(string boc)
                 {
                     try
@@ -433,7 +467,6 @@ namespace Budget
                         return null;
                     }
                 }
-
                 public static string GetDivisionMailCode(string Org)
                 {
                     try
@@ -491,7 +524,6 @@ namespace Budget
                         return null;
                     }
                 }
-
                 public static string[] GetFields(this DataTable table)
                 {
                     try
@@ -513,7 +545,6 @@ namespace Budget
                         return null;
                     }
                 }
-
                 public static string GetGoalName(string goal)
                 {
                     try
@@ -548,7 +579,6 @@ namespace Budget
                         return null;
                     }
                 }
-
                 public static string GetObjectiveName(string obj)
                 {
                     try
@@ -595,7 +625,6 @@ namespace Budget
                         return null;
                     }
                 }
-
                 public static string GetTreasurySymbol(string fundcode)
                 {
                     try
@@ -712,7 +741,6 @@ namespace Budget
                         return null;
                     }
                 }
-
                 public static bool IsChildOf(this DataRow child, DataRow parent)
                 {
                     try
@@ -732,7 +760,6 @@ namespace Budget
                         return false;
                     }
                 }
-
                 public static bool IsParentOf(this DataRow parent, DataRow child)
                 {
                     try
@@ -752,7 +779,6 @@ namespace Budget
                         return false;
                     }
                 }
-
                 public static PRC ToPrc(this DataRow row)
                 {
                     try

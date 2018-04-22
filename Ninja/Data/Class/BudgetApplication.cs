@@ -63,13 +63,13 @@ namespace Budget
 
             public enum Source
             {
-                T6, T7, B6, E1, P6, P7, P8, A6, O6, O7, O8, F6, S6, EPM, LUST, OIL, STAG, SUPERFUND, SF6A, EJ, EN, MD, RC, RA, SF, WQ, MM, WSA, WCF, MDR, XA,
-                BOC10, BOC17, BOC21, BOC28, BOC36, BOC37, BOC41, BocControl, PrcControl
+                T6, T7, B6, E1, D6, P6, P7, P8, A6, O6, O7, O8, F6, S6, EPM, LUST, OIL, STAG, SUPERFUND, SF6A, EJ, EN, MD, RC, RA, SF, WQ, MM, WSA, WCF, MDR, XA,
+                BOC10, BOC17, BOC21, BOC28, BOC36, BOC37, BOC41, C8, C7,
             }
 
             public enum Stat
             {
-                Total, Count, Average, Ratio
+                Total, Count, Average, Ratio 
             }
 
             public enum TransferType

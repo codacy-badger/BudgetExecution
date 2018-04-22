@@ -75,6 +75,7 @@ namespace Budget
                 public string Title { get; }
                 public string Filter1 { get; set; }
                 public string Filter2 { get; set; }
+                public string ActiveTab { get; set; }
                 internal ChartControl[] Chart { get; set; }
                 internal RadioButton[] RadioButton { get; set; }
                 private TabPageAdv[] Tab { get; set; }
@@ -109,7 +110,7 @@ namespace Budget
                         GetTextBoxBindings();
                         lblTotal.Text = Data.GetQueryTotal(Data.QueryTable).ToString("c");
                         lblCount.Text = Data.GetQueryCount(Data.QueryTable).ToString();
-                        FundFilter.SelectionChangeCommitted += FundFilter_ItemSelected;
+                        FundFilter.SelectionChangeCommitted += GridFundFilter_ItemSelected;
                         BocFilter.SelectionChangeCommitted += BocFilter_ItemSelected;
                         BocFilter.SelectionChangeCommitted += BocFilter_ItemSelected;
                     }
@@ -118,7 +119,7 @@ namespace Budget
                         MessageBox.Show(ex.Message + ex.StackTrace);
                     }
                 }
-                private void FundFilter_ItemSelected(object sender, EventArgs e)
+                private void GridFundFilter_ItemSelected(object sender, EventArgs e)
                 {
                     try
                     {
@@ -346,7 +347,7 @@ namespace Budget
                         return -1;
                     }
                 }
-                private void Filter1_ItemSelected(object sender, EventArgs e)
+                private void GridFilterFirstItem_Selected(object sender, EventArgs e)
                 {
                     try
                     {
@@ -361,7 +362,7 @@ namespace Budget
                         MessageBox.Show(ex.Message + ex.StackTrace);
                     }
                 }
-                private void Filter2_ItemSelected(object sender, EventArgs e)
+                private void GridFilterSecondItem_Selected(object sender, EventArgs e)
                 {
                     try
                     {
@@ -407,6 +408,43 @@ namespace Budget
                         MessageBox.Show(ex.Message + ex.StackTrace);
                         return null;
                     }
+                }
+                void ChartFilterFirstItem_Selected(object sender, EventArgs e)
+                {
+                    try
+                    {
+                        var filter = sender as MetroSetComboBox;
+                        FundFilter1.Tag = filter;
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message + ex.StackTrace);
+                    }
+                }
+                void ChartFilterSecondItem_Selected(object sender, EventArgs e)
+                {
+                    try
+                    {
+                        var filter = sender as MetroSetComboBox;
+                        FundFilter2.Tag = filter;
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message + ex.StackTrace);
+                    }
+                }
+                void SummaryTab_Selected(object sender, EventArgs e)
+                {
+                    try
+                    {
+                        var filter = sender as TabControlAdv;
+                        FundFilter2.Tag = filter;
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message + ex.StackTrace);
+                    }
+
                 }
             }
         }
