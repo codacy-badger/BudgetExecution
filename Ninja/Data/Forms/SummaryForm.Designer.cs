@@ -418,10 +418,10 @@ namespace Budget
             this.FundExpander.Controls.Add(this.FundFilter2);
             this.FundExpander.Controls.Add(this.FundFilter1);
             this.FundExpander.ExpandedHeight = 421;
-            this.FundExpander.IsExpanded = true;
+            this.FundExpander.IsExpanded = false;
             this.FundExpander.Location = new System.Drawing.Point(1229, 100);
             this.FundExpander.Name = "FundExpander";
-            this.FundExpander.Size = new System.Drawing.Size(333, 421);
+            this.FundExpander.Size = new System.Drawing.Size(333, 37);
             this.FundExpander.TabIndex = 107;
             this.FundExpander.Text = "Filter";
             this.FundExpander.UseAnimation = true;
@@ -478,6 +478,7 @@ namespace Budget
             this.FundFilter1.Style = MetroSet_UI.Design.Style.Dark;
             this.FundFilter1.StyleManager = null;
             this.FundFilter1.TabIndex = 0;
+            this.FundFilter1.Tag = "FundName";
             this.FundFilter1.ThemeAuthor = "Narwin";
             this.FundFilter1.ThemeName = "MetroDark";
             // 
@@ -687,6 +688,7 @@ namespace Budget
             this.BocFilter1.Style = MetroSet_UI.Design.Style.Dark;
             this.BocFilter1.StyleManager = null;
             this.BocFilter1.TabIndex = 0;
+            this.BocFilter1.Tag = "BocName";
             this.BocFilter1.ThemeAuthor = "Narwin";
             this.BocFilter1.ThemeName = "MetroDark";
             // 
@@ -899,6 +901,7 @@ namespace Budget
             this.NpmFilter1.Style = MetroSet_UI.Design.Style.Dark;
             this.NpmFilter1.StyleManager = null;
             this.NpmFilter1.TabIndex = 0;
+            this.NpmFilter1.Tag = "NPM";
             this.NpmFilter1.ThemeAuthor = "Narwin";
             this.NpmFilter1.ThemeName = "MetroDark";
             // 
@@ -1111,6 +1114,7 @@ namespace Budget
             this.GoalFilter1.Style = MetroSet_UI.Design.Style.Dark;
             this.GoalFilter1.StyleManager = null;
             this.GoalFilter1.TabIndex = 0;
+            this.GoalFilter1.Tag = "GoalName";
             this.GoalFilter1.ThemeAuthor = "Narwin";
             this.GoalFilter1.ThemeName = "MetroDark";
             // 
@@ -1323,6 +1327,7 @@ namespace Budget
             this.ObjectiveFilter1.Style = MetroSet_UI.Design.Style.Dark;
             this.ObjectiveFilter1.StyleManager = null;
             this.ObjectiveFilter1.TabIndex = 0;
+            this.ObjectiveFilter1.Tag = "ObjectiveName";
             this.ObjectiveFilter1.ThemeAuthor = "Narwin";
             this.ObjectiveFilter1.ThemeName = "MetroDark";
             // 
@@ -1535,6 +1540,7 @@ namespace Budget
             this.DivisionFilter1.Style = MetroSet_UI.Design.Style.Dark;
             this.DivisionFilter1.StyleManager = null;
             this.DivisionFilter1.TabIndex = 0;
+            this.DivisionFilter1.Tag = "RC";
             this.DivisionFilter1.ThemeAuthor = "Narwin";
             this.DivisionFilter1.ThemeName = "MetroDark";
             // 
@@ -1747,6 +1753,7 @@ namespace Budget
             this.AreaFilter1.Style = MetroSet_UI.Design.Style.Dark;
             this.AreaFilter1.StyleManager = null;
             this.AreaFilter1.TabIndex = 0;
+            this.AreaFilter1.Tag = "ProgramAreaName";
             this.AreaFilter1.ThemeAuthor = "Narwin";
             this.AreaFilter1.ThemeName = "MetroDark";
             // 
@@ -1959,6 +1966,7 @@ namespace Budget
             this.ProjectFilter1.Style = MetroSet_UI.Design.Style.Dark;
             this.ProjectFilter1.StyleManager = null;
             this.ProjectFilter1.TabIndex = 0;
+            this.ProjectFilter1.Tag = "ProgramProjectName";
             this.ProjectFilter1.ThemeAuthor = "Narwin";
             this.ProjectFilter1.ThemeName = "MetroDark";
             // 

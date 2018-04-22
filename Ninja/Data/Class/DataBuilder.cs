@@ -20,6 +20,7 @@ namespace Budget
                 public DataBuilder(Source source)
                 {
                     Query = new Query(source);
+                    Source = Query.Source;
                     QuerySet = GetQuerySet();
                     QueryTable = QuerySet.Tables[0];
                     QueryTotal = GetQueryTotal(QueryTable);
@@ -36,6 +37,7 @@ namespace Budget
                 public DataBuilder(Source source, Dictionary<string, object> param)
                 {
                     Query = new Query(source, param);
+                    Source = Query.Source;
                     QuerySet = GetQuerySet();
                     QueryTable = QuerySet.Tables[0];
                     BindingSource = new BindingSource();
@@ -49,6 +51,7 @@ namespace Budget
                 }
 
                 //Properties
+                public Source Source { get; }
                 public PRC[] Accounts { get; }
                 public BindingSource BindingSource { get; set; }
                 public Dictionary<string, string[]> ProgramElements { get; }

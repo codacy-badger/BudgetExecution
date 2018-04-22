@@ -30,6 +30,8 @@ namespace Budget
                     if (source == Source.P7)
                     {
                         Data = new DataBuilder(Source.P7);
+                        Source = Data.Source;
+                        Table = Data.QueryTable;
                         Text = "Region 6 Summary";
                         Title = "R6 Funding";
                         ProjectTab.TabVisible = false;
@@ -37,6 +39,8 @@ namespace Budget
                     if (source == Source.P8)
                     {
                         Data = new DataBuilder(Source.P8);
+                        Source = Data.Source;
+                        Table = Data.QueryTable;
                         Text = "R6 Division Summary";
                         Title = "Division Funding";
                     }
@@ -45,7 +49,8 @@ namespace Budget
                     PopulateCharts(Title);
                     ProgramElements = Metric.ProgramElements;
                     BindingSource.DataSource = Metric.BaseTable;
-                    GetFilterButtons();
+                    GetChartPrimaryFilterButtons();
+                    Filter = new TableFilter(DataBuilder.FilterTable);
                 }
 
                 public SummaryForm(string rc)
@@ -54,18 +59,24 @@ namespace Budget
                     DatabaseTab.TabVisible = true;
                     D6 = new DivisionAuthority(rc);
                     Data = D6.Data;
+                    Table = Data.QueryTable;
+                    Source = Data.Source;
                     DataSet = Data.QuerySet;
                     Metric = new DataMetric(Data);
                     ProgramElements = Metric.ProgramElements;
-                    GetFilterButtons();
+                    Divisions = ProgramElements["RC"];
+                    GetChartPrimaryFilterButtons();
                     Text = $"{D6.Org.Name} Summary";
                     Title = D6.RC.Name;
+                    Filter = new TableFilter(DataBuilder.FilterTable);
                 }
 
                 //Properties
                 public PrcFilter ButtonFilter { get; set; }
                 public DivisionAuthority D6 { get; }
                 public DataBuilder Data { get; }
+                public Source Source { get; }
+                public string[] Divisions { get; }
                 public DataSet DataSet { get; }
                 public DataMetric Metric { get; }
                 public decimal[] Metrics { get; }
@@ -73,11 +84,13 @@ namespace Budget
                 public DataTable Table { get; }
                 public DataTable Base { get; set; }
                 public string Title { get; set; }
-                public string Filter1 { get; set; }
-                public string Filter2 { get; set; }
+                public int CurrentTabIndex { get; set; }
+                MetroSetComboBox PrimaryFilterBox { get; set; }
+                MetroSetComboBox SecondaryFilterBox { get; set; }
+                public string ChartPrimaryFilter { get; set; }
+                public PrcFilter ChartSecondaryFilter { get; set; }
                 public string TabFilter { get; set; }
                 internal ChartControl[] Chart { get; set; }
-                internal RadioButton[] RadioButton { get; set; }
                 private TabPageAdv[] Tab { get; set; }
 
                 //Delegates
@@ -195,18 +208,18 @@ namespace Budget
                         return -1;
                     }
                 }
-                private void GetFilterButtons()
+                private void GetChartPrimaryFilterButtons()
                 {
                     try
                     {
-                        GetChartFilterItems(FundFilter1, Metric.ProgramElements["FundName"]);
-                        GetChartFilterItems(BocFilter1, Metric.ProgramElements["BocName"]);
-                        GetChartFilterItems(NpmFilter1, Metric.ProgramElements["NPM"]);
-                        GetChartFilterItems(GoalFilter1, Metric.ProgramElements["GoalName"]);
-                        GetChartFilterItems(ObjectiveFilter1, Metric.ProgramElements["ObjectiveName"]);
-                        GetChartFilterItems(DivisionFilter1, Metric.ProgramElements["DivisionName"]);
-                        GetChartFilterItems(AreaFilter1, Metric.ProgramElements["ProgramAreaName"]);
-                        GetChartFilterItems(ProjectFilter1, Metric.ProgramElements["ProgramProjectName"]);
+                        GetChartPrimaryFilterItems(FundFilter1, Metric.ProgramElements["FundName"]);
+                        GetChartPrimaryFilterItems(BocFilter1, Metric.ProgramElements["BocName"]);
+                        GetChartPrimaryFilterItems(NpmFilter1, Metric.ProgramElements["NPM"]);
+                        GetChartPrimaryFilterItems(GoalFilter1, Metric.ProgramElements["GoalName"]);
+                        GetChartPrimaryFilterItems(ObjectiveFilter1, Metric.ProgramElements["ObjectiveName"]);
+                        GetChartPrimaryFilterItems(DivisionFilter1, Divisions ?? Metric.ProgramElements["RC"]);
+                        GetChartPrimaryFilterItems(AreaFilter1, Metric.ProgramElements["ProgramAreaName"]);
+                        GetChartPrimaryFilterItems(ProjectFilter1, Metric.ProgramElements["ProgramProjectName"]);
                     }
                     catch (Exception e)
                     {
@@ -277,7 +290,7 @@ namespace Budget
                         MessageBox.Show(ex.Message + ex.StackTrace);
                     }
                 }
-                private void GetChartFilterItems(MetroSetComboBox filterbox, string[] list)
+                private void GetChartPrimaryFilterItems(MetroSetComboBox filterbox, string[] list)
                 {
                     try
                     {
@@ -289,6 +302,47 @@ namespace Budget
                     }
                     catch (Exception ex)
                     {
+                        MessageBox.Show(ex.Message + ex.StackTrace);
+                    }
+                }
+                private Dictionary<string, string> GetChartSecondaryFilterItems()
+                {
+                    try
+                    {
+                        var items = new Dictionary<string, string>();
+                        items.Add("Fund", "FundName");
+                        items.Add("BOC", "BocName");
+                        items.Add("NPM", "NPM");
+                        items.Add("Agency Goal", "GoalName");
+                        items.Add("Strategic Objective", "ObjectiveName");
+                        items.Add("Division", "Division");
+                        items.Add("Program Area", "ProgramAreaName");
+                        items.Add("Program Project", "ProgramProjectName");
+                        return items;
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message + ex.StackTrace);
+                        return null;
+                    }
+                }
+                private void PopulateChartSecondaryFilterBox(MetroSetComboBox filterbox, TabPageAdv page)
+                {
+                    try
+                    {
+                        filterbox.Items?.Clear();
+                        var items = GetChartSecondaryFilterItems();
+                        if (items.Keys.Contains(page.Name))
+                            items.Remove(page.Name);
+                        foreach (KeyValuePair<string, string> kvp in items)
+                        {
+                            filterbox.Items.Add(kvp.Key);
+                            filterbox.ValueMember = kvp.Value;
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+
                         MessageBox.Show(ex.Message + ex.StackTrace);
                     }
                 }
@@ -412,43 +466,151 @@ namespace Budget
                         return null;
                     }
                 }
-                void ChartFilterFirstItem_Selected(object sender, EventArgs e)
-                {
-                    try
-                    {
-                        var filter = sender as MetroSetComboBox;
-                        FundFilter1.Tag = filter;
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message + ex.StackTrace);
-                    }
-                }
-                void ChartFilterSecondItem_Selected(object sender, EventArgs e)
-                {
-                    try
-                    {
-                        var filter = sender as MetroSetComboBox;
-                        FundFilter2.Tag = filter;
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message + ex.StackTrace);
-                    }
-                }
                 void SummaryTabPage_Selected(object sender, EventArgs e)
                 {
                     try
                     {
                         var tab = sender as TabControlAdv;
-                        int i = tab.SelectedIndex;
-                        TabFilter = tab.TabPages[i].Tag.ToString();
+                        CurrentTabIndex = tab.SelectedIndex;
+                        TabFilter = tab.TabPages[CurrentTabIndex].Tag.ToString();
+                        switch(CurrentTabIndex)
+                        {
+                            case 0:
+                                FundFilter1.SelectionChangeCommitted += ChartPrimaryFilter_ItemSelected;
+                                break;
+                            case 1:
+                                BocFilter1.SelectionChangeCommitted += ChartPrimaryFilter_ItemSelected;
+                                break;
+                            case 2:
+                                NpmFilter1.SelectionChangeCommitted += ChartPrimaryFilter_ItemSelected;
+                                break;
+                            case 3:
+                                GoalFilter1.SelectionChangeCommitted += ChartPrimaryFilter_ItemSelected;
+                                break;
+                            case 4:
+                                ObjectiveFilter1.SelectionChangeCommitted += ChartPrimaryFilter_ItemSelected;
+                                break;
+                            case 5:
+                                DivisionFilter1.SelectionChangeCommitted += ChartPrimaryFilter_ItemSelected;
+                                break;
+                            case 6:
+                                AreaFilter1.SelectionChangeCommitted += ChartPrimaryFilter_ItemSelected;
+                                break;
+                            case 7:
+                                ProjectFilter1.SelectionChangeCommitted += ChartPrimaryFilter_ItemSelected;
+                                break;
+                        }
                     }
                     catch (Exception ex)
                     {
                         MessageBox.Show(ex.Message + ex.StackTrace);
                     }
 
+                }
+                void ChartPrimaryFilter_ItemSelected(object sender, EventArgs e)
+                {
+                    try
+                    {
+                        PrimaryFilterBox = sender as MetroSetComboBox;
+                        ChartPrimaryFilter = PrimaryFilterBox.SelectedItem.ToString();
+                        if (CurrentTabIndex == 0)
+                        {
+                            SecondaryFilterBox = FundFilter2;
+                            PopulateChartSecondaryFilterBox(SecondaryFilterBox, SummaryTabControl.TabPages[CurrentTabIndex]);
+                            SecondaryFilterBox.SelectionChangeCommitted += ChartSecondaryFilter_ItemSelected;
+                        }
+                        if (CurrentTabIndex == 1)
+                        {
+                            SecondaryFilterBox = BocFilter2;
+                            PopulateChartSecondaryFilterBox(SecondaryFilterBox, SummaryTabControl.TabPages[CurrentTabIndex]);
+                            SecondaryFilterBox.SelectionChangeCommitted += ChartSecondaryFilter_ItemSelected;
+                        }
+                        if (CurrentTabIndex == 2)
+                        {
+                            SecondaryFilterBox = NpmFilter2;
+                            PopulateChartSecondaryFilterBox(SecondaryFilterBox, SummaryTabControl.TabPages[CurrentTabIndex]);
+                            SecondaryFilterBox.SelectionChangeCommitted += ChartSecondaryFilter_ItemSelected;
+                        }
+                        if (CurrentTabIndex == 3)
+                        {
+                            SecondaryFilterBox = GoalFilter2;
+                            PopulateChartSecondaryFilterBox(SecondaryFilterBox, SummaryTabControl.TabPages[CurrentTabIndex]);
+                            SecondaryFilterBox.SelectionChangeCommitted += ChartSecondaryFilter_ItemSelected;
+                        }
+                        if (CurrentTabIndex == 4)
+                        {
+                            SecondaryFilterBox = ObjectiveFilter2;
+                            PopulateChartSecondaryFilterBox(SecondaryFilterBox, SummaryTabControl.TabPages[CurrentTabIndex]);
+                            SecondaryFilterBox.SelectionChangeCommitted += ChartSecondaryFilter_ItemSelected;
+                        }
+                        if (CurrentTabIndex == 5)
+                        {
+                            SecondaryFilterBox = DivisionFilter2;
+                            PopulateChartSecondaryFilterBox(SecondaryFilterBox, SummaryTabControl.TabPages[CurrentTabIndex]);
+                            SecondaryFilterBox.SelectionChangeCommitted += ChartSecondaryFilter_ItemSelected;
+                        }
+                        if (CurrentTabIndex == 6)
+                        {
+                            SecondaryFilterBox = AreaFilter2;
+                            PopulateChartSecondaryFilterBox(SecondaryFilterBox, SummaryTabControl.TabPages[CurrentTabIndex]);
+                            SecondaryFilterBox.SelectionChangeCommitted += ChartSecondaryFilter_ItemSelected;
+                        }
+                        if (CurrentTabIndex == 7)
+                        {
+                            SecondaryFilterBox = ProjectFilter2;
+                            PopulateChartSecondaryFilterBox(SecondaryFilterBox, SummaryTabControl.TabPages[CurrentTabIndex]);
+                            SecondaryFilterBox.SelectionChangeCommitted += ChartSecondaryFilter_ItemSelected;
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message + ex.StackTrace);
+                    }
+
+                }
+                void ChartSecondaryFilter_ItemSelected(object sender, EventArgs e)
+                {
+                    try
+                    {
+                        SecondaryFilterBox = sender as MetroSetComboBox;
+                        var filter = SecondaryFilterBox.SelectedItem.ToString();
+                        ChartSecondaryFilter = (PrcFilter)Enum.Parse(typeof(PrcFilter), filter);
+                        var param = new Dictionary<string, object> { [PrimaryFilterBox.Tag.ToString()] = ChartPrimaryFilter };
+                        var data = new DataBuilder(Source, param);
+                        switch(CurrentTabIndex)
+                        {
+                            case 0:
+                                FundChart = new BudgetChart(FundChart, data, ChartSecondaryFilter, Stat.Total).Activate();
+                                break;
+                            case 1:
+                                BocChart = new BudgetChart(BocChart, data, ChartSecondaryFilter, Stat.Total).Activate();
+                                break;
+                            case 2:
+                                NpmChart = new BudgetChart(NpmChart, data, ChartSecondaryFilter, Stat.Total).Activate();
+                                break;
+                            case 3:
+                                GoalChart = new BudgetChart(GoalChart, data, ChartSecondaryFilter, Stat.Total).Activate();
+                                break;
+                            case 4:
+                                ObjectiveChart = new BudgetChart(ObjectiveChart, data, ChartSecondaryFilter, Stat.Total).Activate();
+                                break;
+                            case 5:
+                                DivisionChart = new BudgetChart(DivisionChart, data, ChartSecondaryFilter, Stat.Total).Activate();
+                                break;
+                            case 6:
+                                AreaChart = new BudgetChart(AreaChart, data, ChartSecondaryFilter, Stat.Total).Activate();
+                                break;
+                            case 7:
+                                ProjectChart = new BudgetChart(ProjectChart, data, ChartSecondaryFilter, Stat.Total).Activate();
+                                break;
+                            default:
+                                break;
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message + ex.StackTrace);
+                    }
                 }
             }
         }
