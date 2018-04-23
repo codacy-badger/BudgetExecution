@@ -393,6 +393,7 @@ namespace Budget
             this.SummaryTabControl.Size = new System.Drawing.Size(1588, 919);
             this.SummaryTabControl.TabIndex = 0;
             this.SummaryTabControl.TabStyle = typeof(Syncfusion.Windows.Forms.Tools.TabRendererVS2010);
+            this.SummaryTabControl.SelectedIndexChanged += new System.EventHandler(this.SummaryTabPage_Selected);
             // 
             // FundTab
             // 
@@ -1042,7 +1043,7 @@ namespace Budget
             this.GoalTab.Size = new System.Drawing.Size(1586, 884);
             this.GoalTab.TabForeColor = System.Drawing.Color.LightSteelBlue;
             this.GoalTab.TabIndex = 4;
-            this.GoalTab.Tag = "GoalName";
+            this.GoalTab.Tag = "Goal";
             this.GoalTab.Text = "Goal";
             this.GoalTab.ThemesEnabled = false;
             // 
@@ -1255,7 +1256,7 @@ namespace Budget
             this.ObjectiveTab.Size = new System.Drawing.Size(1586, 884);
             this.ObjectiveTab.TabForeColor = System.Drawing.Color.LightSteelBlue;
             this.ObjectiveTab.TabIndex = 5;
-            this.ObjectiveTab.Tag = "ObjectiveName";
+            this.ObjectiveTab.Tag = "Objective";
             this.ObjectiveTab.Text = "Objective";
             this.ObjectiveTab.ThemesEnabled = false;
             // 
@@ -1894,7 +1895,7 @@ namespace Budget
             this.ProjectTab.Size = new System.Drawing.Size(1586, 884);
             this.ProjectTab.TabForeColor = System.Drawing.Color.LightSteelBlue;
             this.ProjectTab.TabIndex = 8;
-            this.ProjectTab.Tag = "ProgramProjectTab";
+            this.ProjectTab.Tag = "ProgramProjectName";
             this.ProjectTab.Text = "Program Project";
             this.ProjectTab.ThemesEnabled = false;
             // 

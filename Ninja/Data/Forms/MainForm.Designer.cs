@@ -36,6 +36,15 @@ namespace Ninja.Forms
         private void InitializeComponent( )
         {
             this.components = new System.ComponentModel.Container();
+            Syncfusion.Windows.Forms.Tools.TextItem textItem1 = new Syncfusion.Windows.Forms.Tools.TextItem();
+            Syncfusion.Windows.Forms.Tools.TextItem textItem2 = new Syncfusion.Windows.Forms.Tools.TextItem();
+            Syncfusion.Windows.Forms.Tools.TextItem textItem3 = new Syncfusion.Windows.Forms.Tools.TextItem();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
+            Syncfusion.Windows.Forms.Tools.TextItem textItem4 = new Syncfusion.Windows.Forms.Tools.TextItem();
+            Syncfusion.Windows.Forms.Tools.TextItem textItem5 = new Syncfusion.Windows.Forms.Tools.TextItem();
+            Syncfusion.Windows.Forms.Tools.TextItem textItem6 = new Syncfusion.Windows.Forms.Tools.TextItem();
+            Syncfusion.Windows.Forms.Tools.TextItem textItem7 = new Syncfusion.Windows.Forms.Tools.TextItem();
+            Syncfusion.Windows.Forms.Tools.TextItem textItem8 = new Syncfusion.Windows.Forms.Tools.TextItem();
             Syncfusion.Windows.Forms.Chart.ChartSeries chartSeries1 = new Syncfusion.Windows.Forms.Chart.ChartSeries();
             Syncfusion.Windows.Forms.Chart.ChartCustomShapeInfo chartCustomShapeInfo1 = new Syncfusion.Windows.Forms.Chart.ChartCustomShapeInfo();
             Syncfusion.Windows.Forms.Chart.ChartLineInfo chartLineInfo1 = new Syncfusion.Windows.Forms.Chart.ChartLineInfo();
@@ -51,32 +60,88 @@ namespace Ninja.Forms
             Syncfusion.Windows.Forms.Chart.ChartToolBarTypeItem chartToolBarTypeItem1 = new Syncfusion.Windows.Forms.Chart.ChartToolBarTypeItem();
             Syncfusion.Windows.Forms.Chart.ChartToolBarSeries3DItem chartToolBarSeries3DItem1 = new Syncfusion.Windows.Forms.Chart.ChartToolBarSeries3DItem();
             Syncfusion.Windows.Forms.Chart.ChartToolBarShowLegendItem chartToolBarShowLegendItem1 = new Syncfusion.Windows.Forms.Chart.ChartToolBarShowLegendItem();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            Syncfusion.Windows.Forms.Tools.TextItem textItem1 = new Syncfusion.Windows.Forms.Tools.TextItem();
-            Syncfusion.Windows.Forms.Tools.TextItem textItem2 = new Syncfusion.Windows.Forms.Tools.TextItem();
-            Syncfusion.Windows.Forms.Tools.TextItem textItem3 = new Syncfusion.Windows.Forms.Tools.TextItem();
-            Syncfusion.Windows.Forms.Tools.TextItem textItem4 = new Syncfusion.Windows.Forms.Tools.TextItem();
-            Syncfusion.Windows.Forms.Tools.TextItem textItem5 = new Syncfusion.Windows.Forms.Tools.TextItem();
-            Syncfusion.Windows.Forms.Tools.TextItem textItem6 = new Syncfusion.Windows.Forms.Tools.TextItem();
-            Syncfusion.Windows.Forms.Tools.TextItem textItem7 = new Syncfusion.Windows.Forms.Tools.TextItem();
-            Syncfusion.Windows.Forms.Tools.TextItem textItem8 = new Syncfusion.Windows.Forms.Tools.TextItem();
+            this.DataTile = new Syncfusion.Windows.Forms.Tools.HubTile();
+            this.SummaryTile = new Syncfusion.Windows.Forms.Tools.HubTile();
             this.MainChart = new Syncfusion.Windows.Forms.Chart.ChartControl();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.expandCollapsePanel2 = new MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.expandCollapsePanel1 = new MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel();
             this.TransferButton = new System.Windows.Forms.Button();
             this.DataButton = new System.Windows.Forms.Button();
-            this.DataTile = new Syncfusion.Windows.Forms.Tools.HubTile();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.expandCollapsePanel1 = new MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel();
             this.DivisionBtn = new System.Windows.Forms.Button();
             this.DivisionSummaryButton = new System.Windows.Forms.Button();
             this.RegionSummaryButton = new System.Windows.Forms.Button();
-            this.SummaryTile = new Syncfusion.Windows.Forms.Tools.HubTile();
             this.tableLayoutPanel2.SuspendLayout();
             this.expandCollapsePanel2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.expandCollapsePanel1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // DataTile
+            // 
+            this.DataTile.BackColor = System.Drawing.Color.Black;
+            textItem1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            textItem1.HubTile = this.DataTile;
+            textItem1.Text = "Database | Budgets | Transfers";
+            this.DataTile.Banner = textItem1;
+            this.DataTile.BannerColor = System.Drawing.Color.Black;
+            this.DataTile.BannerHeight = 25;
+            textItem2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(0)));
+            textItem2.HubTile = this.DataTile;
+            this.DataTile.Body = textItem2;
+            this.DataTile.EnableSelectionMarker = false;
+            this.DataTile.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(0)));
+            textItem3.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            textItem3.HubTile = this.DataTile;
+            textItem3.TextColor = System.Drawing.SystemColors.MenuHighlight;
+            this.DataTile.Footer = textItem3;
+            this.DataTile.HoveredBorderColor = System.Drawing.SystemColors.MenuHighlight;
+            this.DataTile.ImageSource = ((System.Drawing.Image)(resources.GetObject("DataTile.ImageSource")));
+            this.DataTile.Location = new System.Drawing.Point(1, 1);
+            this.DataTile.Margin = new System.Windows.Forms.Padding(1);
+            this.DataTile.MinimumSize = new System.Drawing.Size(70, 66);
+            this.DataTile.Name = "DataTile";
+            this.DataTile.PulseScale = 2;
+            this.DataTile.ShowBanner = true;
+            this.DataTile.Size = new System.Drawing.Size(290, 231);
+            this.DataTile.TabIndex = 20;
+            textItem4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            textItem4.HubTile = this.DataTile;
+            this.DataTile.Title = textItem4;
+            this.DataTile.Click += new System.EventHandler(this.DataTile_Click);
+            // 
+            // SummaryTile
+            // 
+            this.SummaryTile.BackColor = System.Drawing.Color.Black;
+            textItem5.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            textItem5.HubTile = this.SummaryTile;
+            textItem5.Text = "Summary | Status of Funds";
+            this.SummaryTile.Banner = textItem5;
+            this.SummaryTile.BannerColor = System.Drawing.Color.Black;
+            this.SummaryTile.BannerHeight = 25;
+            textItem6.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(0)));
+            textItem6.HubTile = this.SummaryTile;
+            this.SummaryTile.Body = textItem6;
+            this.SummaryTile.EnableSelectionMarker = false;
+            this.SummaryTile.EnableTileSlideEffect = false;
+            this.SummaryTile.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(0)));
+            textItem7.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            textItem7.HubTile = this.SummaryTile;
+            this.SummaryTile.Footer = textItem7;
+            this.SummaryTile.HoveredBorderColor = System.Drawing.SystemColors.MenuHighlight;
+            this.SummaryTile.ImageSource = ((System.Drawing.Image)(resources.GetObject("SummaryTile.ImageSource")));
+            this.SummaryTile.Location = new System.Drawing.Point(1, 1);
+            this.SummaryTile.Margin = new System.Windows.Forms.Padding(1);
+            this.SummaryTile.MinimumSize = new System.Drawing.Size(70, 66);
+            this.SummaryTile.Name = "SummaryTile";
+            this.SummaryTile.ShowBanner = true;
+            this.SummaryTile.ShowRotateTileBanner = true;
+            this.SummaryTile.Size = new System.Drawing.Size(291, 219);
+            this.SummaryTile.TabIndex = 23;
+            textItem8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            textItem8.HubTile = this.SummaryTile;
+            this.SummaryTile.Title = textItem8;
             // 
             // MainChart
             // 
@@ -224,6 +289,7 @@ namespace Ninja.Forms
             // 
             this.expandCollapsePanel2.ButtonSize = MakarovDev.ExpandCollapsePanel.ExpandCollapseButton.ExpandButtonSize.Small;
             this.expandCollapsePanel2.ButtonStyle = MakarovDev.ExpandCollapsePanel.ExpandCollapseButton.ExpandButtonStyle.Circle;
+            this.expandCollapsePanel2.Controls.Add(this.DivisionBtn);
             this.expandCollapsePanel2.Controls.Add(this.TransferButton);
             this.expandCollapsePanel2.Controls.Add(this.DataButton);
             this.expandCollapsePanel2.ExpandedHeight = 383;
@@ -234,36 +300,6 @@ namespace Ninja.Forms
             this.expandCollapsePanel2.TabIndex = 65;
             this.expandCollapsePanel2.Text = "Data";
             this.expandCollapsePanel2.UseAnimation = true;
-            // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 51.6295F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 48.3705F));
-            this.tableLayoutPanel1.Controls.Add(this.expandCollapsePanel1, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.SummaryTile, 0, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(993, 87);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 1;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(583, 422);
-            this.tableLayoutPanel1.TabIndex = 62;
-            // 
-            // expandCollapsePanel1
-            // 
-            this.expandCollapsePanel1.ButtonSize = MakarovDev.ExpandCollapsePanel.ExpandCollapseButton.ExpandButtonSize.Small;
-            this.expandCollapsePanel1.ButtonStyle = MakarovDev.ExpandCollapsePanel.ExpandCollapseButton.ExpandButtonStyle.Circle;
-            this.expandCollapsePanel1.Controls.Add(this.DivisionBtn);
-            this.expandCollapsePanel1.Controls.Add(this.DivisionSummaryButton);
-            this.expandCollapsePanel1.Controls.Add(this.RegionSummaryButton);
-            this.expandCollapsePanel1.ExpandedHeight = 386;
-            this.expandCollapsePanel1.IsExpanded = false;
-            this.expandCollapsePanel1.Location = new System.Drawing.Point(303, 3);
-            this.expandCollapsePanel1.Name = "expandCollapsePanel1";
-            this.expandCollapsePanel1.Size = new System.Drawing.Size(264, 37);
-            this.expandCollapsePanel1.TabIndex = 64;
-            this.expandCollapsePanel1.Text = "Summary";
-            this.expandCollapsePanel1.UseAnimation = true;
             // 
             // TransferButton
             // 
@@ -276,10 +312,10 @@ namespace Ninja.Forms
             this.TransferButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(247)))), ((int)(((byte)(252)))));
             this.TransferButton.Image = ((System.Drawing.Image)(resources.GetObject("TransferButton.Image")));
             this.TransferButton.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.TransferButton.Location = new System.Drawing.Point(40, 185);
+            this.TransferButton.Location = new System.Drawing.Point(40, 287);
             this.TransferButton.Margin = new System.Windows.Forms.Padding(2);
             this.TransferButton.Name = "TransferButton";
-            this.TransferButton.Size = new System.Drawing.Size(173, 73);
+            this.TransferButton.Size = new System.Drawing.Size(173, 62);
             this.TransferButton.TabIndex = 56;
             this.TransferButton.Text = "    Tranfers";
             this.TransferButton.TextAlign = System.Drawing.ContentAlignment.BottomRight;
@@ -310,38 +346,34 @@ namespace Ninja.Forms
             this.DataButton.UseVisualStyleBackColor = false;
             this.DataButton.Click += new System.EventHandler(this.DataButton_OnClick);
             // 
-            // DataTile
+            // tableLayoutPanel1
             // 
-            this.DataTile.BackColor = System.Drawing.Color.Black;
-            textItem1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            textItem1.HubTile = this.DataTile;
-            textItem1.Text = "Database | Budgets | Transfers";
-            this.DataTile.Banner = textItem1;
-            this.DataTile.BannerColor = System.Drawing.Color.Black;
-            this.DataTile.BannerHeight = 25;
-            textItem2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(0)));
-            textItem2.HubTile = this.DataTile;
-            this.DataTile.Body = textItem2;
-            this.DataTile.EnableSelectionMarker = false;
-            this.DataTile.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(0)));
-            textItem3.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            textItem3.HubTile = this.DataTile;
-            textItem3.TextColor = System.Drawing.SystemColors.MenuHighlight;
-            this.DataTile.Footer = textItem3;
-            this.DataTile.HoveredBorderColor = System.Drawing.SystemColors.MenuHighlight;
-            this.DataTile.ImageSource = ((System.Drawing.Image)(resources.GetObject("DataTile.ImageSource")));
-            this.DataTile.Location = new System.Drawing.Point(1, 1);
-            this.DataTile.Margin = new System.Windows.Forms.Padding(1);
-            this.DataTile.MinimumSize = new System.Drawing.Size(70, 66);
-            this.DataTile.Name = "DataTile";
-            this.DataTile.PulseScale = 2;
-            this.DataTile.ShowBanner = true;
-            this.DataTile.Size = new System.Drawing.Size(290, 231);
-            this.DataTile.TabIndex = 20;
-            textItem4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            textItem4.HubTile = this.DataTile;
-            this.DataTile.Title = textItem4;
-            this.DataTile.Click += new System.EventHandler(this.DataTile_Click);
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 51.6295F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 48.3705F));
+            this.tableLayoutPanel1.Controls.Add(this.expandCollapsePanel1, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.SummaryTile, 0, 0);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(993, 87);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(583, 422);
+            this.tableLayoutPanel1.TabIndex = 62;
+            // 
+            // expandCollapsePanel1
+            // 
+            this.expandCollapsePanel1.ButtonSize = MakarovDev.ExpandCollapsePanel.ExpandCollapseButton.ExpandButtonSize.Small;
+            this.expandCollapsePanel1.ButtonStyle = MakarovDev.ExpandCollapsePanel.ExpandCollapseButton.ExpandButtonStyle.Circle;
+            this.expandCollapsePanel1.Controls.Add(this.DivisionSummaryButton);
+            this.expandCollapsePanel1.Controls.Add(this.RegionSummaryButton);
+            this.expandCollapsePanel1.ExpandedHeight = 386;
+            this.expandCollapsePanel1.IsExpanded = false;
+            this.expandCollapsePanel1.Location = new System.Drawing.Point(303, 3);
+            this.expandCollapsePanel1.Name = "expandCollapsePanel1";
+            this.expandCollapsePanel1.Size = new System.Drawing.Size(264, 37);
+            this.expandCollapsePanel1.TabIndex = 64;
+            this.expandCollapsePanel1.Text = "Summary";
+            this.expandCollapsePanel1.UseAnimation = true;
             // 
             // DivisionBtn
             // 
@@ -354,10 +386,10 @@ namespace Ninja.Forms
             this.DivisionBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(247)))), ((int)(((byte)(252)))));
             this.DivisionBtn.Image = ((System.Drawing.Image)(resources.GetObject("DivisionBtn.Image")));
             this.DivisionBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.DivisionBtn.Location = new System.Drawing.Point(19, 282);
+            this.DivisionBtn.Location = new System.Drawing.Point(27, 196);
             this.DivisionBtn.Margin = new System.Windows.Forms.Padding(2);
             this.DivisionBtn.Name = "DivisionBtn";
-            this.DivisionBtn.Size = new System.Drawing.Size(232, 64);
+            this.DivisionBtn.Size = new System.Drawing.Size(196, 64);
             this.DivisionBtn.TabIndex = 55;
             this.DivisionBtn.Text = "Budget Allocations";
             this.DivisionBtn.TextAlign = System.Drawing.ContentAlignment.BottomRight;
@@ -375,7 +407,7 @@ namespace Ninja.Forms
             this.DivisionSummaryButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(247)))), ((int)(((byte)(252)))));
             this.DivisionSummaryButton.Image = ((System.Drawing.Image)(resources.GetObject("DivisionSummaryButton.Image")));
             this.DivisionSummaryButton.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.DivisionSummaryButton.Location = new System.Drawing.Point(19, 179);
+            this.DivisionSummaryButton.Location = new System.Drawing.Point(19, 198);
             this.DivisionSummaryButton.Margin = new System.Windows.Forms.Padding(2);
             this.DivisionSummaryButton.Name = "DivisionSummaryButton";
             this.DivisionSummaryButton.Size = new System.Drawing.Size(232, 77);
@@ -406,38 +438,6 @@ namespace Ninja.Forms
             this.RegionSummaryButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.RegionSummaryButton.UseCompatibleTextRendering = true;
             this.RegionSummaryButton.UseVisualStyleBackColor = false;
-            // 
-            // SummaryTile
-            // 
-            this.SummaryTile.BackColor = System.Drawing.Color.Black;
-            textItem5.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            textItem5.HubTile = this.SummaryTile;
-            textItem5.Text = "Summary | Status of Funds";
-            this.SummaryTile.Banner = textItem5;
-            this.SummaryTile.BannerColor = System.Drawing.Color.Black;
-            this.SummaryTile.BannerHeight = 25;
-            textItem6.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(0)));
-            textItem6.HubTile = this.SummaryTile;
-            this.SummaryTile.Body = textItem6;
-            this.SummaryTile.EnableSelectionMarker = false;
-            this.SummaryTile.EnableTileSlideEffect = false;
-            this.SummaryTile.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(0)));
-            textItem7.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            textItem7.HubTile = this.SummaryTile;
-            this.SummaryTile.Footer = textItem7;
-            this.SummaryTile.HoveredBorderColor = System.Drawing.SystemColors.MenuHighlight;
-            this.SummaryTile.ImageSource = ((System.Drawing.Image)(resources.GetObject("SummaryTile.ImageSource")));
-            this.SummaryTile.Location = new System.Drawing.Point(1, 1);
-            this.SummaryTile.Margin = new System.Windows.Forms.Padding(1);
-            this.SummaryTile.MinimumSize = new System.Drawing.Size(70, 66);
-            this.SummaryTile.Name = "SummaryTile";
-            this.SummaryTile.ShowBanner = true;
-            this.SummaryTile.ShowRotateTileBanner = true;
-            this.SummaryTile.Size = new System.Drawing.Size(291, 219);
-            this.SummaryTile.TabIndex = 23;
-            textItem8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            textItem8.HubTile = this.SummaryTile;
-            this.SummaryTile.Title = textItem8;
             // 
             // MainForm
             // 

@@ -47,6 +47,21 @@ namespace Budget
                     Get3DMode(Chart);
                 }
 
+                public BudgetChart(ChartControl chart, DataMetric metric, PrcFilter filter, Stat value)
+                {
+                    Chart = chart;
+                    Metric = metric;
+                    Table = Metric.BaseTable;
+                    Value = value;
+                    DataMetrics = Metric.GetChartMetrics(Table, filter);
+                    if (Chart.Series != null)
+                        Chart.Series.Clear();
+                    DataSeries = GetSeriesTotals(GetSingleValue(DataMetrics, Value));
+                    Chart.Series.Add(DataSeries);
+                    GetSeriesConfiguration(DataSeries, Value);
+                    Get3DMode(Chart);
+                }
+
                 public BudgetChart(ChartControl chart, Source source, PrcFilter filter)
                 {
                     Chart = chart;
