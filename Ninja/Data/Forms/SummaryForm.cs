@@ -34,8 +34,6 @@ namespace Budget
                         Table = Data.QueryTable;
                         Text = "Region 6 Summary";
                         Title = "R6 Funding";
-                        ProjectTab.TabVisible = false;
-                        DatabaseTab.TabVisible = false;
                     }
                     if (source == Source.P8)
                     {
@@ -44,16 +42,17 @@ namespace Budget
                         Table = Data.QueryTable;
                         Text = "R6 Division Summary";
                         Title = "Division Funding";
-                        ProjectTab.TabVisible = false;
-                        DatabaseTab.TabVisible = false;
                     }
                     Metric = new DataMetric(Data);
                     DataSet = Data.QuerySet;
                     PopulateCharts(Title);
                     ProgramElements = Metric.ProgramElements;
+                    Divisions = ProgramElements["RC"];
                     BindingSource.DataSource = Metric.BaseTable;
                     GetChartPrimaryFilterBox();
-                    Filter = new TableFilter(DataBuilder.FilterTable);
+                    ProjectTab.TabVisible = false;
+                    DatabaseTab.TabVisible = false;
+                    TabNames = GetTabNames();
                 }
 
                 public SummaryForm(string rc)
@@ -61,6 +60,7 @@ namespace Budget
                     InitializeComponent();
                     DatabaseTab.TabVisible = true;
                     ProjectTab.TabVisible = true;
+                    DivisionTab.TabVisible = false;
                     Data = new DataBuilder(Source.P8, new Dictionary<string, object>() { ["RC"] = rc });
                     Source = Data.Source;
                     Table = Data.QueryTable;
@@ -68,15 +68,16 @@ namespace Budget
                     DataSet = Data.QuerySet;
                     Metric = new DataMetric(Data);
                     ProgramElements = Metric.ProgramElements;
-                    Divisions = ProgramElements["RC"];
                     GetChartPrimaryFilterBox();
-                    Text = $"{Info.DivisionName(rc)} Summary";
+                    Text = string.Format("{0} Summary", Info.DivisionName(rc));
                     Title = Info.DivisionName(rc);
-                    Filter = new TableFilter(DataBuilder.FilterTable);
+                    Text = string.Format("{0} Summary", D6.Org.Name);
+                    Title = D6.RC.Name;
+                    SummaryTabControl.SelectedIndexChanged += TabPage_OnClick;
+                    TabNames = GetTabNames();
                 }
 
                 //Properties
-                public PrcFilter ButtonFilter { get; set; }
                 public DivisionAuthority D6 { get; }
                 public DataBuilder Data { get; }
                 public Source Source { get; }
@@ -96,6 +97,7 @@ namespace Budget
                 public string TabFilter { get; set; }
                 internal ChartControl[] Chart { get; set; }
                 private TabPageAdv[] Tab { get; set; }
+                private string[] TabNames { get; set; }
 
                 //Delegates
                 TableFilter Filter { get; set; }
@@ -334,6 +336,50 @@ namespace Budget
                         return -1;
                     }
                 }
+                string[] GetTabNames()
+                {
+                    var count = SummaryTabControl.TabPages.Count;
+                    var names = new string[count];
+                    var tabs = SummaryTabControl.TabPages;
+                    for (int i = 0; i < count; i++)
+                    {
+                        names[i] = tabs[i].Text;
+                    }
+                    return names;
+                }
+                Dictionary<string, string> GetFilters()
+                {
+                    try
+                    {
+                        var filters = new Dictionary<string, string>();
+                        foreach (string n in TabNames)
+                        {
+                            if (n.Contains("Fund"))
+                                filters.Add("Fund", "FundName");
+                            if (n.Contains("BOC"))
+                                filters.Add("BOC", "BOC");
+                            if (n.Contains("NPM"))
+                                filters.Add("NPM", "NPM");
+                            if (n.Contains("Goal"))
+                                filters.Add("Goal", "GoalName");
+                            if (n.Contains("Division"))
+                                filters.Add("Division", "RC");
+                            if (n.Contains("Objective"))
+                                filters.Add("Objective", "ObjectiveName");
+                            if (n.Contains("ProgramArea"))
+                                filters.Add("ProgramArea", "ProgramArea");
+                            if (n.Contains("ProgramProjectCode"))
+                                filters.Add("ProgramProjectCode", "ProgramProjectCode");
+                        }
+                        return filters;
+                    }
+                    catch (Exception ex)
+                    {
+
+                        MessageBox.Show(ex.Message + ex.StackTrace);
+                        return null;
+                    }
+                }
                 private void GridFilterFirstItem_Selected(object sender, EventArgs e)
                 {
                     try
@@ -373,28 +419,6 @@ namespace Budget
                     ObjectiveChart = GetSummaryChart(ObjectiveChart, Data, PrcFilter.ObjectiveName, string.Format("{0} by Strategic Objective", title));
                     AreaChart = GetSummaryChart(AreaChart, Data, PrcFilter.ProgramArea, string.Format("{0} by Program Area", title));
                     ProjectChart = GetSummaryChart(ProjectChart, Data, PrcFilter.ProgramProjectCode, string.Format("{0} by Program Project", title));
-                }
-                Dictionary<string, string> GetFilters()
-                {
-                    try
-                    {
-                        var filters = new Dictionary<string, string>();
-                        filters.Add("Fund", "FundName");
-                        filters.Add("BOC", "BocName");
-                        filters.Add("NPM", "NPM");
-                        filters.Add("Goal", "GoalName");
-                        filters.Add("Objective", "ObjectiveName");
-                        filters.Add("Division", "RC");
-                        filters.Add("Program Area", "ProgramArea");
-                        filters.Add("Program Project", "ProgramProject");
-                        return filters;
-                    }
-                    catch (Exception ex)
-                    {
-
-                        MessageBox.Show(ex.Message + ex.StackTrace);
-                        return null;
-                    }
                 }
                 void SummaryTabPage_Selected(object sender, EventArgs e)
                 {
@@ -474,16 +498,7 @@ namespace Budget
                 {
                     try
                     {
-                        var items = new Dictionary<string, string>();
-                        items.Add("Fund", "Fund");
-                        items.Add("BOC", "BOC");
-                        items.Add("NPM", "NPM");
-                        items.Add("Goal", "Goal");
-                        items.Add("Objective", "Objective");
-                        items.Add("Division", "Division");
-                        items.Add("ProgramArea", "ProgramArea");
-                        items.Add("ProgramProject", "ProgramProject");
-                        return items;
+                        return GetFilters();
                     }
                     catch (Exception ex)
                     {
@@ -497,8 +512,6 @@ namespace Budget
                     {
                         filterbox.Items?.Clear();
                         var items = GetChartSecondaryFilterItems();
-                        if (items.Keys.Contains(page.Tag.ToString()))
-                            items.Remove(page.Tag.ToString());
                         foreach (KeyValuePair<string, string> kvp in items)
                         {
                             filterbox.Items.Add(kvp.Key);
@@ -517,7 +530,6 @@ namespace Budget
                     {
                         PrimaryFilterBox = sender as MetroSetComboBox;
                         ChartPrimaryFilter = PrimaryFilterBox.SelectedItem.ToString();
-                        Base = Filter(Table, (PrcFilter)Enum.Parse(typeof(PrcFilter), TabFilter), ChartPrimaryFilter);
                         if (CurrentTabIndex == 0)
                         {
                             SecondaryFilterBox = FundFilter2;
@@ -620,6 +632,48 @@ namespace Budget
                         }
                     }
                     catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message + ex.StackTrace);
+                    }
+                }
+                void TabPage_OnClick(object sender, EventArgs e)
+                {
+                    try
+                    {
+                        SummaryTabControl = sender as TabControlAdv;
+                        int i = SummaryTabControl.SelectedIndex;
+                        switch (i)
+                        {
+                            case 0:
+                                FundChart = GetSummaryChart(FundChart, Data, PrcFilter.Fund, string.Format("{0} by Appropriation", Title));
+                                break;
+                            case 1:
+                                BocChart = GetSummaryChart(BocChart, Data, PrcFilter.BOC, string.Format("{0} by Object Class", Title));
+                                break;
+                            case 2:
+                                NpmChart = GetSummaryChart(NpmChart, Data, PrcFilter.NPM, string.Format("{0} by HQ Program Office", Title));
+                                break;
+                            case 3:
+                                GoalChart = GetSummaryChart(GoalChart, Data, PrcFilter.GoalName, string.Format("{0} by Agency Goal", Title));
+                                break;
+                            case 4:
+                                ObjectiveChart = GetSummaryChart(ObjectiveChart, Data, PrcFilter.ObjectiveName, string.Format("{0} by Strategic Objective", Title));
+                                break;
+                            case 5:
+                                DivisionChart = GetSummaryChart(DivisionChart, Data, PrcFilter.Division, string.Format("{0} by Division", Title));
+                                break;
+                            case 6:
+                                AreaChart = GetSummaryChart(AreaChart, Data, PrcFilter.ProgramArea, string.Format("{0} by Program Area", Title));
+                                break;
+                            case 7:
+                                ProjectChart = GetSummaryChart(ProjectChart, Data, PrcFilter.ProgramProjectCode, string.Format("{0} by Program Project", Title));
+                                break;
+                            default:
+                                FundChart = GetSummaryChart(FundChart, Data, PrcFilter.Fund, string.Format("{0} by Appropriation", Title));
+                                break;
+                        }
+                    }
+                    catch (System.Exception ex)
                     {
                         MessageBox.Show(ex.Message + ex.StackTrace);
                     }
