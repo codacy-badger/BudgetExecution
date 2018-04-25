@@ -28,7 +28,7 @@ namespace Budget
                     BudgetMetric = new DataMetric(Data);
                     BudgetData = Data.QuerySet;
                     Table = Data.QueryTable;
-                    BindGridAndNavigator(Table, dgv, bs, bn);
+                    BindDataGridAndNavigator(Table, dgv, bs, bn);
                     BindingSource = bs;
                     Navigator = bn;
                     DataGrid = dgv;
@@ -121,17 +121,25 @@ namespace Budget
                 }
                 public Dictionary<string, string[]> GetProgramElements(DataTable table)
                 {
-                    var data = new Dictionary<string, string[]>();
-                    foreach (DataColumn dc in table.Columns)
+                    try
                     {
-                        if (dc.ColumnName.Equals("Id") || dc.ColumnName.Equals("Amount"))
-                            continue;
-                        data.Add(dc.ColumnName, GetCodes(table, dc.ColumnName));
+                        var data = new Dictionary<string, string[]>();
+                        foreach (DataColumn dc in table.Columns)
+                        {
+                            if (dc.ColumnName.Equals("Id") || dc.ColumnName.Equals("Amount"))
+                                continue;
+                            data.Add(dc.ColumnName, GetCodes(table, dc.ColumnName));
+                        }
+                        if (data.ContainsKey("Id")) data.Remove("Id");
+                        if (data.ContainsKey("Amount")) data.Remove("Amount");
+                        if (data.ContainsKey("P6_Id")) data.Remove("P6_Id");
+                        return data;
                     }
-                    if (data.ContainsKey("Id")) data.Remove("Id");
-                    if (data.ContainsKey("Amount")) data.Remove("Amount");
-                    if (data.ContainsKey("P6_Id")) data.Remove("P6_Id");
-                    return data;
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
+                        return null;
+                    }
                 }
                 public DataTable GetTable(DataTable table, string column, string filter)
                 {
@@ -179,152 +187,258 @@ namespace Budget
                 }
                 internal void AppropriationButton_OnSelect(object sender, EventArgs e)
                 {
-                    var button = sender as MetroSetButton;
-                    var table = GetTable(Table, "FundName", button.Tag.ToString());
-                    BindingSource.DataSource = table;
-                    GetBocFilterBox(table, Panel);
-                    Table = table;
+                    try
+                    {
+                        var button = sender as MetroSetButton;
+                        var table = GetTable(Table, "FundName", button.Tag.ToString());
+                        BindingSource.DataSource = table;
+                        PopulateBocFilterBox(table, Panel);
+                        Table = table;
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
+                    }
                 }
                 internal void AppropriationListBoxItem_OnSelect(object sender, EventArgs e)
                 {
-                    var button = sender as MetroSetListBox;
-                    var table = GetTable(Table, "FundName", button.SelectedItem.ToString());
-                    BindingSource.DataSource = table;
-                    Table = table;
+                    try
+                    {
+                        var button = sender as MetroSetListBox;
+                        var table = GetTable(Table, "FundName", button.SelectedItem.ToString());
+                        BindingSource.DataSource = table;
+                        Table = table;
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
+                    }
                 }
-                internal void BindGridAndNavigator(DataTable table, DataGridView dg, BindingSource bs, BindingNavigator bn)
+                internal void BindDataGridAndNavigator(DataTable table, DataGridView dg, BindingSource bs, BindingNavigator bn)
                 {
-                    bs.DataSource = table;
-                    dg.DataSource = bs;
-                    bn.BindingSource = bs;
-                    GetGridColumns(dg);
+                    try
+                    {
+                        bs.DataSource = table;
+                        dg.DataSource = bs;
+                        bn.BindingSource = bs;
+                        ConfigureGridColumns(dg);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
+                    }
                 }
                 internal void BindTextBox(BindingSource bs, TextBox tb, string field)
                 {
-                    var table = (DataTable)bs.DataSource;
-                    var row = table.Rows[bs.Position];
-                    var binding = new Binding("Text", row, field);
-                    tb.DataBindings.Add(binding);
+                    try
+                    {
+                        var table = (DataTable)bs.DataSource;
+                        var row = table.Rows[bs.Position];
+                        var binding = new Binding("Text", row, field);
+                        tb.DataBindings.Add(binding);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
+                    }
                 }
-                internal void BocButtonSelect_OnSelect(object sender, EventArgs e)
+                internal void BocButton_OnSelect(object sender, EventArgs e)
                 {
-                    var button = sender as MetroSetListBox;
-                    var table = GetTable(Table, "BocName", button.SelectedItem.ToString());
-                    BindingSource.DataSource = table;
-                    GetBocFilterBox(Table, Panel);
+                    try
+                    {
+                        var button = sender as MetroSetListBox;
+                        var table = GetTable(Table, "BocName", button.SelectedItem.ToString());
+                        BindingSource.DataSource = table;
+                        PopulateBocFilterBox(Table, Panel);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
+                    }
                 }
                 internal void BocListBoxItem_OnSelect(object sender, EventArgs e)
                 {
-                    var button = sender as MetroSetListBox;
-                    var table = GetTable(Table, "BocName", button.SelectedItem.ToString());
-                    BindingSource.DataSource = table;
-                    GetBocFilterBox(Table, Panel);
+                    try
+                    {
+                        var button = sender as MetroSetListBox;
+                        var table = GetTable(Table, "BocName", button.SelectedItem.ToString());
+                        BindingSource.DataSource = table;
+                        PopulateBocFilterBox(Table, Panel);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
+                    }
                 }
                 internal void ConfigureTabControl(MetroForm form, TabControlAdv tab, DataBuilder Ninja)
                 {
-                    foreach (TabPageAdv tp in tab.TabPages)
+                    try
                     {
-                        tp.TabForeColor = SystemColors.MenuHighlight;
-                        tp.TabBackColor = Color.Black;
+                        foreach (TabPageAdv tp in tab.TabPages)
+                        {
+                            tp.TabForeColor = SystemColors.MenuHighlight;
+                            tp.TabBackColor = Color.Black;
+                        }
+                        tab.TabPages[0].Text = "Summary";
+                        tab.TabPages[1].Text = "Appropriation";
+                        tab.TabPages[2].Text = "BOC";
+                        tab.TabPages[3].Text = "NPM";
+                        tab.TabPages[4].Text = "Goal";
+                        if (Ninja.Query.Source == Source.P7)
+                        {
+                            tab.TabPages[5].Text = "Objective";
+                            tab.TabPages[6].Text = "Divisions";
+                            tab.TabPages[7].Text = "Transfers";
+                        }
+                        if (Ninja.Query.Source == Source.P8)
+                        {
+                            tab.TabPages[5].Text = "Program Area";
+                            tab.TabPages[6].Text = "Program Project";
+                            tab.TabPages[7].Text = "Transfers";
+                        }
                     }
-                    tab.TabPages[0].Text = "Summary";
-                    tab.TabPages[1].Text = "Appropriation";
-                    tab.TabPages[2].Text = "BOC";
-                    tab.TabPages[3].Text = "NPM";
-                    tab.TabPages[4].Text = "Goal";
-                    if (Ninja.Query.Source == Source.P7)
+                    catch (Exception ex)
                     {
-                        tab.TabPages[5].Text = "Objective";
-                        tab.TabPages[6].Text = "Divisions";
-                        tab.TabPages[7].Text = "Transfers";
-                    }
-                    if (Ninja.Query.Source == Source.P8)
-                    {
-                        tab.TabPages[5].Text = "Program Area";
-                        tab.TabPages[6].Text = "Program Project";
-                        tab.TabPages[7].Text = "Transfers";
-                    }
-                }
-                internal void GetAppropriationFilterButtonBox(DataTable table, Control filterPanel)
-                {
-                    GetFilterButtons(filterPanel, GetCodes(table, "FundName"));
-                    foreach (Control c in filterPanel.Controls) c.Click += AppropriationButton_OnSelect;
-                }
-                internal void GetAppropriationFilterListBox(DataTable table, Control filterPanel)
-                {
-                    var filter = filterPanel as ListBox;
-                    GetFilterListItems(filter, GetCodes(table, "FundName"));
-                    filter.SelectedIndexChanged += AppropriationListBoxItem_OnSelect;
-                }
-                internal void GetBocFilterBox(DataTable table, FlowLayoutPanel filterPanel)
-                {
-                    GetFilterButtons(filterPanel, GetCodes(table, "BocName"));
-                    foreach (Control c in filterPanel.Controls) c.Click += BocButtonSelect_OnSelect;
-                }
-                internal void GetFilterButtons(Control panel, string[] list)
-                {
-                    panel.Controls.Clear();
-                    foreach (string f in list)
-                    {
-                        var b = new MetroSetButton();
-                        b.Text = f;
-                        b.Font = new Font("Segoe UI", 8f);
-                        b.NormalColor = Color.Black;
-                        b.NormalTextColor = SystemColors.MenuHighlight;
-                        b.NormalBorderColor = Color.Black;
-                        b.HoverBorderColor = Color.Blue;
-                        b.HoverColor = Color.SteelBlue;
-                        b.HoverTextColor = Color.AntiqueWhite;
-                        b.Size = new Size(175, 30);
-                        b.Margin = new Padding(3);
-                        b.Padding = new Padding(1);
-                        panel.Controls.Add(b);
-                        panel.AutoSize = true;
-                        b.Tag = f;
+                        MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
                     }
                 }
-                internal void GetFilterListItems(Control panel, string[] list)
+                internal void PopulateFundFilterButtonBox(DataTable table, Control filterPanel)
                 {
-                    var box = panel as ListBox;
-                    box.Controls.Clear();
-                    foreach (string f in list)
+                    try
                     {
-                        box.Items.Add(f);
+                        PopulateFilterButtons(filterPanel, GetCodes(table, "FundName"));
+                        foreach (Control c in filterPanel.Controls) c.Click += AppropriationButton_OnSelect;
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
                     }
                 }
-                internal void GetFormSettings(MetroForm form)
+                internal void PopulateFundFilterListBox(DataTable table, Control filterPanel)
                 {
-                    form.Size = new Size(1200, 700);
-                    form.BackColor = Color.Black;
-                    form.BorderColor = SystemColors.MenuHighlight;
-                    form.ForeColor = SystemColors.MenuHighlight;
-                    form.MetroColor = Color.Black;
-                    form.ShowIcon = false;
-                    form.ShowInTaskbar = true;
-                    form.CaptionBarColor = Color.Black;
-                    form.CaptionFont = new Font("Segoe UI", 10f, FontStyle.Regular);
-                    form.CaptionForeColor = SystemColors.MenuHighlight;
-                    form.BorderThickness = 1;
-                    form.Padding = new Padding(1);
-                    form.CaptionAlign = HorizontalAlignment.Left;
+                    try
+                    {
+                        var filter = filterPanel as ListBox;
+                        PopulateFilterListItems(filter, GetCodes(table, "FundName"));
+                        filter.SelectedIndexChanged += AppropriationListBoxItem_OnSelect;
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
+                    }
                 }
-                internal void GetGridColumns(DataGridView dgv)
+                internal void PopulateBocFilterBox(DataTable table, FlowLayoutPanel filterPanel)
                 {
-                    foreach (DataGridViewColumn dc in dgv.Columns)
-                        dc.Visible = false;
-                    dgv.Columns[3].Visible = true;
-                    dgv.Columns[4].Visible = true;
-                    dgv.Columns[6].Visible = true;
-                    dgv.Columns[8].Visible = true;
-                    dgv.Columns[9].Visible = true;
-                    dgv.Columns[11].Visible = true;
-                    dgv.Columns[12].Visible = true;
-                    dgv.Columns[12].DefaultCellStyle.Format = "c";
+                    try
+                    {
+                        PopulateFilterButtons(filterPanel, GetCodes(table, "BocName"));
+                        foreach (Control c in filterPanel.Controls) c.Click += BocButton_OnSelect;
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
+                    }
+                }
+                internal void PopulateFilterButtons(Control panel, string[] list)
+                {
+                    try
+                    {
+                        panel.Controls.Clear();
+                        foreach (string f in list)
+                        {
+                            var b = new MetroSetButton();
+                            b.Text = f;
+                            b.Font = new Font("Segoe UI", 8f);
+                            b.NormalColor = Color.Black;
+                            b.NormalTextColor = SystemColors.MenuHighlight;
+                            b.NormalBorderColor = Color.Black;
+                            b.HoverBorderColor = Color.Blue;
+                            b.HoverColor = Color.SteelBlue;
+                            b.HoverTextColor = Color.AntiqueWhite;
+                            b.Size = new Size(175, 30);
+                            b.Margin = new Padding(3);
+                            b.Padding = new Padding(1);
+                            panel.Controls.Add(b);
+                            panel.AutoSize = true;
+                            b.Tag = f;
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
+                    }
+                }
+                internal void PopulateFilterListItems(Control panel, string[] list)
+                {
+                    try
+                    {
+                        var box = panel as ListBox;
+                        box.Controls.Clear();
+                        foreach (string f in list)
+                        {
+                            box.Items.Add(f);
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
+                    }
+                }
+                internal void ConfigureFormSettings(MetroForm form)
+                {
+                    try
+                    {
+                        form.Size = new Size(1200, 700);
+                        form.BackColor = Color.Black;
+                        form.BorderColor = SystemColors.MenuHighlight;
+                        form.ForeColor = SystemColors.MenuHighlight;
+                        form.MetroColor = Color.Black;
+                        form.ShowIcon = false;
+                        form.ShowInTaskbar = true;
+                        form.CaptionBarColor = Color.Black;
+                        form.CaptionFont = new Font("Segoe UI", 10f, FontStyle.Regular);
+                        form.CaptionForeColor = SystemColors.MenuHighlight;
+                        form.BorderThickness = 1;
+                        form.Padding = new Padding(1);
+                        form.CaptionAlign = HorizontalAlignment.Left;
+                    }
+
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
+                    }
+                }
+                internal void ConfigureGridColumns(DataGridView dgv)
+                {
+                    try
+                    {
+                        foreach (DataGridViewColumn dc in dgv.Columns)
+                            dc.Visible = false;
+                        dgv.Columns[3].Visible = true;
+                        dgv.Columns[4].Visible = true;
+                        dgv.Columns[6].Visible = true;
+                        dgv.Columns[8].Visible = true;
+                        dgv.Columns[9].Visible = true;
+                        dgv.Columns[11].Visible = true;
+                        dgv.Columns[12].Visible = true;
+                        dgv.Columns[12].DefaultCellStyle.Format = "c";
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
+                    }
                 }
                 internal void ReturnButton_OnClick(object sender, EventArgs e)
                 {
-                    Table = Data.QueryTable;
-                    BindingSource.DataSource = Table;
+                    try
+                    {
+                        Table = Data.QueryTable;
+                        BindingSource.DataSource = Table;
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
+                    }
                 }
             }
         }

@@ -45,16 +45,23 @@ namespace Ninja.Forms
         //Methods
         private void ChartTimer(object sender, EventArgs e)
         {
-            if (Counter >= Values.Length)
+            try
             {
-                Counter = 0;
-                MainChart = Chart(MainChart, Title[Counter], Values[Counter]);
-                Counter++;
+                if (Counter >= Values.Length)
+                {
+                    Counter = 0;
+                    MainChart = Chart(MainChart, Title[Counter], Values[Counter]);
+                    Counter++;
+                }
+                if (Counter < Values.Length)
+                {
+                    MainChart = Chart(MainChart, Title[Counter], Values[Counter]);
+                    Counter++;
+                }
             }
-            if (Counter < Values.Length)
+            catch (Exception ex)
             {
-                MainChart = Chart(MainChart, Title[Counter], Values[Counter]);
-                Counter++;
+                MessageBox.Show(ex.Message + ex.StackTrace);
             }
         }
 
@@ -72,36 +79,67 @@ namespace Ninja.Forms
 
         private string[] GetChartTitles(Dictionary<string, double>[] info)
         {
-            var t = new string[info.Length];
-            t[0] = "R6 Funds by Appropriation";
-            t[1] = "R6 Funds by Object Class";
-            t[2] = "Division Funds by Appropriation";
-            t[3] = "Division Funds by HQ NPM";
-            t[4] = "R6 Funds by Agency Goal";
-            t[5] = "Division Funds by Agency Goal";
-            t[6] = "Division Funds by HQ NPM";
-            return t;
+            try
+            {
+                var t = new string[info.Length];
+                t[0] = "R6 Funds by Appropriation";
+                t[1] = "R6 Funds by Object Class";
+                t[2] = "Division Funds by Appropriation";
+                t[3] = "Division Funds by HQ NPM";
+                t[4] = "R6 Funds by Agency Goal";
+                t[5] = "Division Funds by Agency Goal";
+                t[6] = "Division Funds by HQ NPM";
+                return t;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + ex.StackTrace);
+                return null;
+            }
         }
 
         private ChartControl GetMainChart(ChartControl chart, string[] title, Dictionary<string, double> data)
         {
-            MainChart = new BudgetChart(chart, title[0], data).Activate();
-            return MainChart;
+            try
+            {
+                MainChart = new BudgetChart(chart, title[0], data).Activate();
+                return MainChart;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + ex.StackTrace);
+                return null;
+            }
         }
 
         private ChartControl GetMainChart(ChartControl chart, string title, Dictionary<string, double> data)
         {
-            MainChart = new BudgetChart(chart, title, data).Activate();
-            return MainChart;
+            try
+            {
+                MainChart = new BudgetChart(chart, title, data).Activate();
+                return MainChart;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + ex.StackTrace);
+                return null;
+            }
         }
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            NinjaData.GetFormSettings(this);
-            Counter = 0;
-            Timer.Tick += ChartTimer;
-            Timer.Enabled = true;
-            Timer.Interval = 5000;
+            try
+            {
+                NinjaData.ConfigureFormSettings(this);
+                Counter = 0;
+                Timer.Tick += ChartTimer;
+                Timer.Enabled = true;
+                Timer.Interval = 5000;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + ex.StackTrace);
+            }
         }
 
         private void RegionSummaryButton_OnClick(object sender, EventArgs e)

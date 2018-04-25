@@ -71,8 +71,6 @@ namespace Budget
                     GetChartPrimaryFilterBox();
                     Text = string.Format("{0} Summary", Info.DivisionName(rc));
                     Title = Info.DivisionName(rc);
-                    Text = string.Format("{0} Summary", D6.Org.Name);
-                    Title = D6.RC.Name;
                     SummaryTabControl.SelectedIndexChanged += TabPage_OnClick;
                     TabNames = GetTabNames();
                 }
@@ -99,9 +97,6 @@ namespace Budget
                 private TabPageAdv[] Tab { get; set; }
                 private string[] TabNames { get; set; }
 
-                //Delegates
-                TableFilter Filter { get; set; }
-
                 //Methods
                 private void BocFilter_ItemSelected(object sender, EventArgs e)
                 {
@@ -125,9 +120,9 @@ namespace Budget
                         BindingSource.DataSource = Data.QueryTable;
                         Navigator.BindingSource = BindingSource;
                         Grid.DataSource = BindingSource;
-                        GetGridColumns(Grid);
+                        ConfigureGridColumns(Grid);
                         PopulateCharts(Title);
-                        GetDatabaseFilterItems(FundFilter, PrcFilter.FundName);
+                        PopulateGridFilterItems(FundFilter, PrcFilter.FundName);
                         GetTextBoxBindings();
                         lblTotal.Text = Data.GetQueryTotal(Data.QueryTable).ToString("c");
                         lblCount.Text = Data.GetQueryCount(Data.QueryTable).ToString();
@@ -214,7 +209,7 @@ namespace Budget
                         return -1;
                     }
                 }
-                private void GetDatabaseFilterItems(MetroSetComboBox cmbox, PrcFilter prcfilter)
+                private void PopulateGridFilterItems(MetroSetComboBox cmbox, PrcFilter prcfilter)
                 {
                     try
                     {
@@ -229,7 +224,7 @@ namespace Budget
                         MessageBox.Show(ex.Message + ex.StackTrace);
                     }
                 }
-                private void GetGridColumns(DataGridView dgv)
+                private void ConfigureGridColumns(DataGridView dgv)
                 {
                     try
                     {
@@ -249,7 +244,7 @@ namespace Budget
                         MessageBox.Show(ex.Message + ex.StackTrace);
                     }
                 }
-                private void GetMetroSetButtons(FlowLayoutPanel panel, string[] list)
+                private void PopulateMetroSetButtons(FlowLayoutPanel panel, string[] list)
                 {
                     try
                     {
@@ -283,7 +278,7 @@ namespace Budget
                     try
                     {
                         var fd = new BudgetChart(chart, data, filter, Stat.Total);
-                        fd.GetAxisTitle(chart, new string[] { title });
+                        fd.UpdateAxisTitle(chart, new string[] { title });
                         return fd.Activate();
                     }
                     catch (Exception ex)
@@ -338,10 +333,9 @@ namespace Budget
                 }
                 string[] GetTabNames()
                 {
-                    var count = SummaryTabControl.TabPages.Count;
-                    var names = new string[count];
+                    var names = new string[SummaryTabControl.TabPages.Count];
                     var tabs = SummaryTabControl.TabPages;
-                    for (int i = 0; i < count; i++)
+                    for (int i = 0; i < SummaryTabControl.TabPages.Count; i++)
                     {
                         names[i] = tabs[i].Text;
                     }
@@ -357,7 +351,7 @@ namespace Budget
                             if (n.Contains("Fund"))
                                 filters.Add("Fund", "FundName");
                             if (n.Contains("BOC"))
-                                filters.Add("BOC", "BOC");
+                                filters.Add("BOC", "BocName");
                             if (n.Contains("NPM"))
                                 filters.Add("NPM", "NPM");
                             if (n.Contains("Goal"))
@@ -489,9 +483,9 @@ namespace Budget
                         GetChartPrimaryFilterItems(AreaFilter1, Metric.ProgramElements["ProgramAreaName"]);
                         GetChartPrimaryFilterItems(ProjectFilter1, Metric.ProgramElements["ProgramProjectName"]);
                     }
-                    catch (Exception e)
+                    catch (Exception ex)
                     {
-                        MessageBox.Show(e.Message + e.StackTrace);
+                        MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
                     }
                 }
                 private Dictionary<string, string> GetChartSecondaryFilterItems()
@@ -645,10 +639,10 @@ namespace Budget
                         switch (i)
                         {
                             case 0:
-                                FundChart = GetSummaryChart(FundChart, Data, PrcFilter.Fund, string.Format("{0} by Appropriation", Title));
+                                FundChart = GetSummaryChart(FundChart, Data, PrcFilter.FundName, string.Format("{0} by Appropriation", Title));
                                 break;
                             case 1:
-                                BocChart = GetSummaryChart(BocChart, Data, PrcFilter.BOC, string.Format("{0} by Object Class", Title));
+                                BocChart = GetSummaryChart(BocChart, Data, PrcFilter.BocName, string.Format("{0} by Object Class", Title));
                                 break;
                             case 2:
                                 NpmChart = GetSummaryChart(NpmChart, Data, PrcFilter.NPM, string.Format("{0} by HQ Program Office", Title));
@@ -663,13 +657,13 @@ namespace Budget
                                 DivisionChart = GetSummaryChart(DivisionChart, Data, PrcFilter.Division, string.Format("{0} by Division", Title));
                                 break;
                             case 6:
-                                AreaChart = GetSummaryChart(AreaChart, Data, PrcFilter.ProgramArea, string.Format("{0} by Program Area", Title));
+                                AreaChart = GetSummaryChart(AreaChart, Data, PrcFilter.ProgramAreaName, string.Format("{0} by Program Area", Title));
                                 break;
                             case 7:
                                 ProjectChart = GetSummaryChart(ProjectChart, Data, PrcFilter.ProgramProjectCode, string.Format("{0} by Program Project", Title));
                                 break;
                             default:
-                                FundChart = GetSummaryChart(FundChart, Data, PrcFilter.Fund, string.Format("{0} by Appropriation", Title));
+                                FundChart = GetSummaryChart(FundChart, Data, PrcFilter.FundName, string.Format("{0} by Appropriation", Title));
                                 break;
                         }
                     }

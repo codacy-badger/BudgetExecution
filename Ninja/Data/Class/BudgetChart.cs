@@ -24,11 +24,11 @@ namespace Budget
                     Value = Stat.Total;
                     if (Chart.Series != null)
                         Chart.Series.Clear();
-                    GetAxisTitle(Chart, new string[] { title });
+                    UpdateAxisTitle(Chart, new string[] { title });
                     DataSeries = GetSeriesTotals(data);
                     Chart.Series.Add(DataSeries);
-                    GetRegionSeriesConfiguration(DataSeries);
-                    Get3DMode(Chart);
+                    FormatLargeNumberSeries(DataSeries);
+                    Update3DMode(Chart);
                 }
 
                 public BudgetChart(ChartControl chart, DataBuilder data, PrcFilter filter, Stat value)
@@ -43,8 +43,8 @@ namespace Budget
                         Chart.Series.Clear();
                     DataSeries = GetSeriesTotals(GetSingleValue(DataMetrics, Value));
                     Chart.Series.Add(DataSeries);
-                    GetSeriesConfiguration(DataSeries, Value);
-                    Get3DMode(Chart);
+                    ConfigureSeries(DataSeries, Value);
+                    Update3DMode(Chart);
                 }
 
                 public BudgetChart(ChartControl chart, DataMetric metric, PrcFilter filter, Stat value)
@@ -58,8 +58,8 @@ namespace Budget
                         Chart.Series.Clear();
                     DataSeries = GetSeriesTotals(GetSingleValue(DataMetrics, Value));
                     Chart.Series.Add(DataSeries);
-                    GetSeriesConfiguration(DataSeries, Value);
-                    Get3DMode(Chart);
+                    ConfigureSeries(DataSeries, Value);
+                    Update3DMode(Chart);
                 }
 
                 public BudgetChart(ChartControl chart, Source source, PrcFilter filter)
@@ -73,8 +73,8 @@ namespace Budget
                         Chart.Series.Clear();
                     DataSeries = GetSeriesTotals(GetSingleValue(DataMetrics, Value));
                     Chart.Series.Add(DataSeries);
-                    GetSeriesConfiguration(DataSeries, Value);
-                    Get3DMode(Chart);
+                    ConfigureSeries(DataSeries, Value);
+                    Update3DMode(Chart);
                 }
 
                 //Properties
@@ -103,7 +103,7 @@ namespace Budget
                 {
                     return Chart;
                 }
-                internal void Get3DMode(int[] dim)
+                internal void Update3DMode(int[] dim)
                 {
                     try
                     {
@@ -120,7 +120,7 @@ namespace Budget
                         MessageBox.Show(e.Message + e.StackTrace);
                     }
                 }
-                internal void GetAxisTitle(ChartControl chart, string[] title)
+                internal void UpdateAxisTitle(ChartControl chart, string[] title)
                 {
                     try
                     {
@@ -177,7 +177,7 @@ namespace Budget
                         return null;
                     }
                 }
-                internal void GetMainTitle(ChartControl chart, string[] t)
+                internal void UpdateMainTitle(ChartControl chart, string[] t)
                 {
                     try
                     {
@@ -193,7 +193,7 @@ namespace Budget
                         MessageBox.Show(e.Message + e.StackTrace);
                     }
                 }
-                internal void GetRegionSeriesConfiguration(ChartSeries series)
+                internal void FormatLargeNumberSeries(ChartSeries series)
                 {
                     try
                     {
@@ -223,7 +223,7 @@ namespace Budget
                         MessageBox.Show(e.Message + e.StackTrace);
                     }
                 }
-                internal void GetSeriesConfiguration(ChartSeries series)
+                internal void ConfigureSeries(ChartSeries series)
                 {
                     try
                     {
@@ -235,6 +235,7 @@ namespace Budget
                         DataSeries.Style.TextOrientation = ChartTextOrientation.Up;
                         DataSeries.Style.DisplayShadow = true;
                         DataSeries.Style.TextColor = Color.White;
+                        DataSeries.Style.TextFormat = "${0:#,}";
                         DataSeries.PointsToolTipFormat = "Funding:{4:N}";
                         DataSeries.Style.Font.Size = 12.0F;
                         DataSeries.Style.Font.Facename = "Segoe UI";
@@ -249,7 +250,7 @@ namespace Budget
                         MessageBox.Show(e.Message + e.StackTrace);
                     }
                 }
-                internal void GetSeriesConfiguration(ChartSeries series, Stat value)
+                internal void ConfigureSeries(ChartSeries series, Stat value)
                 {
                     try
                     {
@@ -262,7 +263,7 @@ namespace Budget
                         DataSeries.Style.DisplayShadow = true;
                         DataSeries.Style.TextColor = Color.White;
                         if (value == Ninja.Data.Stat.Total || value == Ninja.Data.Stat.Average)
-                            DataSeries.Style.TextFormat = "${0:N}";
+                            DataSeries.Style.TextFormat = "${0:#,}";
                         if (value == Ninja.Data.Stat.Ratio)
                             DataSeries.Style.TextFormat = "{0:P}";
                         if (value == Ninja.Data.Stat.Count)
@@ -301,7 +302,7 @@ namespace Budget
                         return null;
                     }
                 }
-                private void Get3DMode(ChartControl chart)
+                private void Update3DMode(ChartControl chart)
                 {
                     try
                     {
@@ -310,7 +311,7 @@ namespace Budget
                         Chart.Style3D = true;
                         Chart.Tilt = 2;
                         Chart.Depth = 250;
-                        Chart.Rotation = -10;
+                        Chart.Rotation = 10;
                         Chart.SpacingBetweenSeries = 2;
                     }
                     catch (System.Exception e)
@@ -353,7 +354,7 @@ namespace Budget
                     {
                         var series = new ChartSeries("Ratio");
                         series.Points.Add(data.Key, data.Value[3]);
-                        GetSeriesConfiguration(series);
+                        ConfigureSeries(series);
                         series.Style.TextFormat = "{0:P}";
                         return series;
                     }

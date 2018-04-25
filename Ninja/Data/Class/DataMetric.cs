@@ -29,18 +29,18 @@ namespace Budget
                     BaseMetrics = GetMetrics(BaseTable);
                     FundTotals = GetTotals(BaseTable, PrcFilter.FundName);
                     FundMetrics = GetMetrics(BaseTable, PrcFilter.FundName);
-                    BocTotals = GetTotals(BaseTable, PrcFilter.FundName);
-                    BocMetrics = GetMetrics(BaseTable, PrcFilter.FundName);
-                    NpmTotals = GetTotals(BaseTable, PrcFilter.FundName);
-                    NpmMetrics = GetMetrics(BaseTable, PrcFilter.FundName);
-                    ProgramProjectTotals = GetTotals(BaseTable, PrcFilter.FundName);
-                    ProgramProjectMetrics = GetMetrics(BaseTable, PrcFilter.FundName);
-                    ProgramAreaTotals = GetTotals(BaseTable, PrcFilter.FundName);
-                    ProgramAreaMetrics = GetMetrics(BaseTable, PrcFilter.FundName);
-                    GoalTotals = GetTotals(BaseTable, PrcFilter.FundName);
-                    GoalMetrics = GetMetrics(BaseTable, PrcFilter.FundName);
-                    ObjectiveTotals = GetTotals(BaseTable, PrcFilter.FundName);
-                    ObjectiveMetrics = GetMetrics(BaseTable, PrcFilter.FundName);
+                    BocTotals = GetTotals(BaseTable, PrcFilter.BocName);
+                    BocMetrics = GetMetrics(BaseTable, PrcFilter.BocName);
+                    NpmTotals = GetTotals(BaseTable, PrcFilter.NPM);
+                    NpmMetrics = GetMetrics(BaseTable, PrcFilter.NPM);
+                    ProgramProjectTotals = GetTotals(BaseTable, PrcFilter.ProgramProjectCode);
+                    ProgramProjectMetrics = GetMetrics(BaseTable, PrcFilter.ProgramProjectCode);
+                    ProgramAreaTotals = GetTotals(BaseTable, PrcFilter.ProgramArea);
+                    ProgramAreaMetrics = GetMetrics(BaseTable, PrcFilter.ProgramArea);
+                    GoalTotals = GetTotals(BaseTable, PrcFilter.GoalName);
+                    GoalMetrics = GetMetrics(BaseTable, PrcFilter.GoalName);
+                    ObjectiveTotals = GetTotals(BaseTable, PrcFilter.ObjectiveName);
+                    ObjectiveMetrics = GetMetrics(BaseTable, PrcFilter.ObjectiveName);
                     if (source == Source.P8)
                     {
                         DivisionTotals = GetTotals(BaseTable, PrcFilter.RC);
@@ -59,18 +59,18 @@ namespace Budget
                     BaseMetrics = GetMetrics(BaseTable);
                     FundTotals = GetTotals(BaseTable, PrcFilter.FundName);
                     FundMetrics = GetMetrics(BaseTable, PrcFilter.FundName);
-                    BocTotals = GetTotals(BaseTable, PrcFilter.BOC);
-                    BocMetrics = GetMetrics(BaseTable, PrcFilter.BOC);
+                    BocTotals = GetTotals(BaseTable, PrcFilter.BocName);
+                    BocMetrics = GetMetrics(BaseTable, PrcFilter.BocName);
                     NpmTotals = GetTotals(BaseTable, PrcFilter.NPM);
                     NpmMetrics = GetMetrics(BaseTable, PrcFilter.NPM);
                     ProgramProjectTotals = GetTotals(BaseTable, PrcFilter.ProgramProjectCode);
                     ProgramProjectMetrics = GetMetrics(BaseTable, PrcFilter.ProgramProjectCode);
                     ProgramAreaTotals = GetTotals(BaseTable, PrcFilter.ProgramArea);
                     ProgramAreaMetrics = GetMetrics(BaseTable, PrcFilter.ProgramArea);
-                    GoalTotals = GetTotals(BaseTable, PrcFilter.Goal);
-                    GoalMetrics = GetMetrics(BaseTable, PrcFilter.Goal);
-                    ObjectiveTotals = GetTotals(BaseTable, PrcFilter.Objective);
-                    ObjectiveMetrics = GetMetrics(BaseTable, PrcFilter.Objective);
+                    GoalTotals = GetTotals(BaseTable, PrcFilter.GoalName);
+                    GoalMetrics = GetMetrics(BaseTable, PrcFilter.GoalName);
+                    ObjectiveTotals = GetTotals(BaseTable, PrcFilter.ObjectiveName);
+                    ObjectiveMetrics = GetMetrics(BaseTable, PrcFilter.ObjectiveName);
                 }
                 public DataMetric(DataBuilder data, PrcFilter prcfilter, string filter)
                 {
@@ -84,18 +84,18 @@ namespace Budget
                     BaseMetrics = GetMetrics(BaseTable);
                     FundTotals = GetTotals(BaseTable, PrcFilter.FundName);
                     FundMetrics = GetMetrics(BaseTable, PrcFilter.FundName);
-                    BocTotals = GetTotals(BaseTable, PrcFilter.BOC);
-                    BocMetrics = GetMetrics(BaseTable, PrcFilter.BOC);
+                    BocTotals = GetTotals(BaseTable, PrcFilter.BocName);
+                    BocMetrics = GetMetrics(BaseTable, PrcFilter.BocName);
                     NpmTotals = GetTotals(BaseTable, PrcFilter.NPM);
                     NpmMetrics = GetMetrics(BaseTable, PrcFilter.NPM);
                     ProgramProjectTotals = GetTotals(BaseTable, PrcFilter.ProgramProjectCode);
                     ProgramProjectMetrics = GetMetrics(BaseTable, PrcFilter.ProgramProjectCode);
                     ProgramAreaTotals = GetTotals(BaseTable, PrcFilter.ProgramArea);
                     ProgramAreaMetrics = GetMetrics(BaseTable, PrcFilter.ProgramArea);
-                    GoalTotals = GetTotals(BaseTable, PrcFilter.Goal);
-                    GoalMetrics = GetMetrics(BaseTable, PrcFilter.Goal);
-                    ObjectiveTotals = GetTotals(BaseTable, PrcFilter.Objective);
-                    ObjectiveMetrics = GetMetrics(BaseTable, PrcFilter.Objective);
+                    GoalTotals = GetTotals(BaseTable, PrcFilter.GoalName);
+                    GoalMetrics = GetMetrics(BaseTable, PrcFilter.GoalName);
+                    ObjectiveTotals = GetTotals(BaseTable, PrcFilter.ObjectiveName);
+                    ObjectiveMetrics = GetMetrics(BaseTable, PrcFilter.ObjectiveName);
                 }
                 public DataMetric(DataTable table, PrcFilter prcfilter, string filter)
                 {
@@ -108,18 +108,18 @@ namespace Budget
                     BaseMetrics = GetMetrics(BaseTable);
                     FundTotals = GetTotals(BaseTable, PrcFilter.FundName);
                     FundMetrics = GetMetrics(BaseTable, PrcFilter.FundName);
-                    BocTotals = GetTotals(BaseTable, PrcFilter.BOC);
-                    BocMetrics = GetMetrics(BaseTable, PrcFilter.BOC);
+                    BocTotals = GetTotals(BaseTable, PrcFilter.BocName);
+                    BocMetrics = GetMetrics(BaseTable, PrcFilter.BocName);
                     NpmTotals = GetTotals(BaseTable, PrcFilter.NPM);
                     NpmMetrics = GetMetrics(BaseTable, PrcFilter.NPM);
                     ProgramProjectTotals = GetTotals(BaseTable, PrcFilter.ProgramProjectCode);
                     ProgramProjectMetrics = GetMetrics(BaseTable, PrcFilter.ProgramProjectCode);
                     ProgramAreaTotals = GetTotals(BaseTable, PrcFilter.ProgramArea);
                     ProgramAreaMetrics = GetMetrics(BaseTable, PrcFilter.ProgramArea);
-                    GoalTotals = GetTotals(BaseTable, PrcFilter.Goal);
-                    GoalMetrics = GetMetrics(BaseTable, PrcFilter.Goal);
-                    ObjectiveTotals = GetTotals(BaseTable, PrcFilter.Objective);
-                    ObjectiveMetrics = GetMetrics(BaseTable, PrcFilter.Objective);
+                    GoalTotals = GetTotals(BaseTable, PrcFilter.GoalName);
+                    GoalMetrics = GetMetrics(BaseTable, PrcFilter.GoalName);
+                    ObjectiveTotals = GetTotals(BaseTable, PrcFilter.ObjectiveName);
+                    ObjectiveMetrics = GetMetrics(BaseTable, PrcFilter.ObjectiveName);
                 }
 
                 //Properties

@@ -11,26 +11,6 @@ namespace Budget
         {
             public class SqlQuery
             {
-                #region Properties
-
-                public SqlDataAdapter Adapter { get; set; }
-                public SqlCommandBuilder CommandBuilder { get; }
-                public SqlConnection Connection { get; }
-                public SqlCommand DeleteCommand { get; }
-                public SqlCommand InsertCommand { get; }
-                public Dictionary<string, object> Parameter { get; }
-                public SqlDataReader Reader { get; set; }
-                public SqlCommand SelectCommand { get; }
-                public string SelectStatement { get; }
-                public Source Source { get; }
-                public Command Sql { get; set; }
-                public Dictionary<string, string> SqlStatement { get; }
-                public string TableName { get; }
-                public SqlCommand UpdateCommand { get; }
-
-                #endregion Properties
-
-                #region Constructors
 
                 public SqlQuery()
                 {
@@ -65,9 +45,93 @@ namespace Budget
                     DeleteCommand = CommandBuilder.GetInsertCommand();
                 }
 
-                #endregion Constructors
 
-                #region Methods
+                public SqlDataAdapter Adapter { get; set; }
+                public SqlCommandBuilder CommandBuilder { get; }
+                public SqlConnection Connection { get; }
+                public SqlCommand DeleteCommand { get; }
+                public SqlCommand InsertCommand { get; }
+                public Dictionary<string, object> Parameter { get; }
+                public SqlDataReader Reader { get; set; }
+                public SqlCommand SelectCommand { get; }
+                public string SelectStatement { get; }
+                public Source Source { get; }
+                public Command Sql { get; set; }
+                public Dictionary<string, string> SqlStatement { get; }
+                public string TableName { get; }
+                public SqlCommand UpdateCommand { get; }
+
+
+                private SqlCommandBuilder GetCommandBuilder()
+                {
+                    try
+                    {
+                        return new SqlCommandBuilder(Adapter);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("ERROR!: \n\n" + ex.TargetSite + ex.StackTrace);
+                        return null;
+                    }
+                }
+
+                private SqlDataAdapter GetDataAdapter()
+                {
+                    try
+                    {
+                        return new SqlDataAdapter(SelectCommand);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("ERROR!: \n" + ex.TargetSite + ex.StackTrace);
+                        return null;
+                    }
+                }
+
+                private string GetParamString(Dictionary<string, object> param)
+                {
+                    try
+                    {
+                        string vals = "";
+                        foreach (KeyValuePair<string, object> kvp in param)
+                        {
+                            vals += $"{ kvp.Key } = '{(kvp.Value).ToString()}' AND ";
+                        }
+                        vals = vals.Trim().Substring(0, vals.Length - 4);
+                        return vals;
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("ERROR!: \n\n" + ex.TargetSite + ex.StackTrace);
+                        return null;
+                    }
+                }
+
+                private SqlCommand GetSelectCommand()
+                {
+                    try
+                    {
+                        return new SqlCommand(SelectStatement, Connection);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("ERROR!: \n" + ex.TargetSite + ex.StackTrace);
+                        return null;
+                    }
+                }
+
+                internal SqlDataAdapter GetDataAdapter(string sql)
+                {
+                    try
+                    {
+                        return new SqlDataAdapter(sql, Connection);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("ERROR!: \n" + ex.TargetSite + ex.StackTrace);
+                        return null;
+                    }
+                }
 
                 public SqlCommandBuilder GetCommandBuilder(SqlDataAdapter adapter)
                 {
@@ -173,78 +237,6 @@ namespace Budget
                     }
                 }
 
-                internal SqlDataAdapter GetDataAdapter(string sql)
-                {
-                    try
-                    {
-                        return new SqlDataAdapter(sql, Connection);
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show("ERROR!: \n" + ex.TargetSite + ex.StackTrace);
-                        return null;
-                    }
-                }
-
-                private SqlCommandBuilder GetCommandBuilder()
-                {
-                    try
-                    {
-                        return new SqlCommandBuilder(Adapter);
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show("ERROR!: \n\n" + ex.TargetSite + ex.StackTrace);
-                        return null;
-                    }
-                }
-
-                private SqlDataAdapter GetDataAdapter()
-                {
-                    try
-                    {
-                        return new SqlDataAdapter(SelectCommand);
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show("ERROR!: \n" + ex.TargetSite + ex.StackTrace);
-                        return null;
-                    }
-                }
-
-                private string GetParamString(Dictionary<string, object> param)
-                {
-                    try
-                    {
-                        string vals = "";
-                        foreach (KeyValuePair<string, object> kvp in param)
-                        {
-                            vals += $"{ kvp.Key } = '{(kvp.Value).ToString()}' AND ";
-                        }
-                        vals = vals.Trim().Substring(0, vals.Length - 4);
-                        return vals;
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show("ERROR!: \n\n" + ex.TargetSite + ex.StackTrace);
-                        return null;
-                    }
-                }
-
-                private SqlCommand GetSelectCommand()
-                {
-                    try
-                    {
-                        return new SqlCommand(SelectStatement, Connection);
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show("ERROR!: \n" + ex.TargetSite + ex.StackTrace);
-                        return null;
-                    }
-                }
-
-                #endregion Methods
             }
         }
     }

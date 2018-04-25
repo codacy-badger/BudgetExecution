@@ -235,13 +235,13 @@ namespace Budget
                             return "SUPERFUND";
 
                         case "TD":
-                            return "SUPERFUND RECOVERIES";
+                            return "SF RECOVERIES";
 
                         case "TR":
-                            return "SUPERFUND REIMB.";
+                            return "SF REIMB.";
 
                         case "TR1":
-                            return "SF STATE CONTRACT";
+                            return "SF SSC";
 
                         case "TR2":
                             return "SF SP ACCT NON-FED";
@@ -277,10 +277,10 @@ namespace Budget
                             return "CATEGORICAL GRANTS";
 
                         case "E1C":
-                            return "CATEGORICAL GRANTS CARRYOVER";
+                            return "CATEGGORICAL CARRYOVER";
 
                         case "E1D":
-                            return "CATEGORICAL GRANTS RECOVERIES";
+                            return "CATEGORICAL RECOVERIES";
 
                         case "E2":
                             return "CLEAN WATER SRF";
@@ -304,19 +304,19 @@ namespace Budget
                             return "SPECIAL PROJECTS";
 
                         case "E4C":
-                            return "SPECIAL PROJECTS CARRYOVER";
+                            return "SP PROJ CARRYOVER";
 
                         case "E4D":
-                            return "SPECIAL PROJECTS RECOVERIES";
+                            return "SP PROJ RECOVERIES";
 
                         case "E5":
                             return "STAG EARMARKS";
 
                         case "E5C":
-                            return "STAG EARMARKS CARRYOVER";
+                            return "OLD EARMARKS CARRYOVER";
 
                         case "E5D":
-                            return "STAG EARMARKS RECOVERIES";
+                            return "OLD EARMARKS RECOVERY";
 
                         case "ZL":
                             return "DEEP WATER HORIZON";
@@ -592,10 +592,10 @@ namespace Budget
                                 return "COMPLIANCE WITH THE LAW";
 
                             case "2":
-                                return "CREATE CONSISTENCY AND CERTAINTY";
+                                return "CREATE CONSISTENCY & CERTAINTY";
 
                             case "02":
-                                return "CREATE CONSISTENCY AND CERTAINTY";
+                                return "CREATE CONSISTENCY & CERTAINTY";
 
                             case "3":
                                 return "PRIORITIZE ROBUST SCIENCE";
@@ -604,16 +604,16 @@ namespace Budget
                                 return "PRIORITIZE ROBUST SCIENCE";
 
                             case "4":
-                                return "STREAMLINE AND MODERNIZE";
+                                return "STREAMLINE & MODERNIZE";
 
                             case "04":
-                                return "STREAMLINE AND MODERNIZE";
+                                return "STREAMLINE & MODERNIZE";
 
                             case "5":
-                                return "IMPROVE EFFICIENCY AND EFFECTIVENESS";
+                                return "IMPROVE EFFICIENCY & EFFECTIVENESS";
 
                             case "05":
-                                return "IMPROVE EFFICIENCY AND EFFECTIVENESS";
+                                return "IMPROVE EFFICIENCY & EFFECTIVENESS";
 
                             default:
                                 return obj;

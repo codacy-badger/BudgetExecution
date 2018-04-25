@@ -1261,10 +1261,10 @@ namespace Budget
             this.tabPageAdv1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPageAdv1.Image = null;
             this.tabPageAdv1.ImageSize = new System.Drawing.Size(16, 16);
-            this.tabPageAdv1.Location = new System.Drawing.Point(2, 1);
+            this.tabPageAdv1.Location = new System.Drawing.Point(2, 35);
             this.tabPageAdv1.Name = "tabPageAdv1";
             this.tabPageAdv1.ShowCloseButton = true;
-            this.tabPageAdv1.Size = new System.Drawing.Size(433, 393);
+            this.tabPageAdv1.Size = new System.Drawing.Size(433, 359);
             this.tabPageAdv1.TabIndex = 4;
             this.tabPageAdv1.Text = "tabPageAdv1";
             this.tabPageAdv1.ThemesEnabled = false;
@@ -2226,7 +2226,7 @@ namespace Budget
             this.ProjectTab.Size = new System.Drawing.Size(1586, 884);
             this.ProjectTab.TabForeColor = System.Drawing.Color.LightSteelBlue;
             this.ProjectTab.TabIndex = 8;
-            this.ProjectTab.Tag = "ProgramProject";
+            this.ProjectTab.Tag = "ProgramProjectName";
             this.ProjectTab.Text = "ProgramProject";
             this.ProjectTab.ThemesEnabled = false;
             // 
@@ -2449,7 +2449,7 @@ namespace Budget
             this.AreaTab.Size = new System.Drawing.Size(1586, 884);
             this.AreaTab.TabForeColor = System.Drawing.Color.LightSteelBlue;
             this.AreaTab.TabIndex = 7;
-            this.AreaTab.Tag = "ProgramArea";
+            this.AreaTab.Tag = "ProgramAreaName";
             this.AreaTab.Text = "ProgramArea";
             this.AreaTab.ThemesEnabled = false;
             // 
@@ -3514,7 +3514,7 @@ namespace Budget
             this.BocTab.Size = new System.Drawing.Size(1586, 884);
             this.BocTab.TabForeColor = System.Drawing.Color.LightSteelBlue;
             this.BocTab.TabIndex = 2;
-            this.BocTab.Tag = "BOC";
+            this.BocTab.Tag = "BocName";
             this.BocTab.Text = "BOC";
             this.BocTab.ThemesEnabled = false;
             // 
