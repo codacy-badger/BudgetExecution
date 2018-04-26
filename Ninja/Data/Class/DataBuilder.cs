@@ -81,7 +81,9 @@ namespace Budget
                 {
                     try
                     {
-                        return table.AsEnumerable().Select(p => p.Field<string>(column)).Distinct().ToArray();
+                        if(table.Columns.Contains(column))
+                            return table.AsEnumerable().Select(p => p.Field<string>(column)).Distinct().ToArray();
+                        return null;
                     }
                     catch (Exception ex)
                     {
@@ -96,13 +98,13 @@ namespace Budget
                         var data = new Dictionary<string, string[]>();
                         foreach (DataColumn dc in table.Columns)
                         {
-                            if (dc.ColumnName.Equals("Id") || dc.ColumnName.Equals("Amount"))
+                            if (dc.ColumnName.Equals("ID") || dc.ColumnName.Equals("Amount"))
                                 continue;
                             data.Add(dc.ColumnName, GetCodes(table, dc.ColumnName));
                         }
-                        if (data.ContainsKey("Id")) data.Remove("Id");
+                        if (data.ContainsKey("ID")) data.Remove("ID");
                         if (data.ContainsKey("Amount")) data.Remove("Amount");
-                        if (data.ContainsKey("P6_Id")) data.Remove("P6_Id");
+                        if (data.ContainsKey("P6.ID")) data.Remove("P6.ID");
                         return data;
                     }
                     catch (Exception ex)

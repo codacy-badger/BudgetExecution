@@ -145,33 +145,13 @@ namespace Budget
                 {
                     return Account.Code;
                 }
-
-                internal PRC[] GetAllocation(DataTable table)
-                {
-                    try
-                    {
-                        PRC[] allocation = new PRC[table.Rows.Count];
-                        for (int i = 0; i < table.Rows.Count; i++)
-                        {
-                            foreach (DataRow row in table.Rows)
-                                allocation[i] = new PRC(row);
-                        }
-                        return allocation;
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show("ERROR! : \n" + ex.StackTrace);
-                        return null;
-                    }
-                }
-
                 internal Dictionary<string, object> GetData()
                 {
                     try
                     {
                         Dictionary<string, object> param = new Dictionary<string, object>()
                         {
-                            ["Id"] = ID,
+                            ["ID"] = ID,
                             ["BudgetLevel"] = BudgetLevel,
                             ["RPIO"] = RPIO,
                             ["BFY"] = BFY,
