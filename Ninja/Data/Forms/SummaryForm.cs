@@ -30,6 +30,7 @@ namespace Budget
                     if (source == Source.P7)
                     {
                         Data = new DataBuilder(Source.P7);
+                        DivisionTab.TabVisible = false;
                         Source = Data.Source;
                         Table = Data.QueryTable;
                         Text = "Region 6 Summary";
@@ -47,7 +48,6 @@ namespace Budget
                     DataSet = Data.QuerySet;
                     PopulateCharts(Title);
                     ProgramElements = Metric.ProgramElements;
-                    Divisions = ProgramElements["RC"];
                     BindingSource.DataSource = Metric.BaseTable;
                     GetChartPrimaryFilterBox();
                     ProjectTab.TabVisible = false;
@@ -98,15 +98,15 @@ namespace Budget
                 private string[] TabNames { get; set; }
 
                 //Methods
-                private void BocFilter_ItemSelected(object sender, EventArgs e)
+                private void GridBocFilter_ItemSelected(object sender, EventArgs e)
                 {
                     try
                     {
                         var boc = sender as MetroSetComboBox;
                         var filter = boc.SelectedItem.ToString();
-                        BindingSource.Filter = $"FundName = '{FundFilter.SelectedItem.ToString()}' AND BocName = '{BocFilter.SelectedItem.ToString()}'";
-                        lblTotal.Text = GetTotal(FundFilter.SelectedItem.ToString(), filter).ToString("c");
-                        lblCount.Text = GetCount(FundFilter.SelectedItem.ToString(), filter).ToString();
+                        BindingSource.Filter = $"FundName = '{GridFundFilter.SelectedItem.ToString()}' AND BocName = '{GridBocFilter.SelectedItem.ToString()}'";
+                        lblTotal.Text = GetTotal(GridFundFilter.SelectedItem.ToString(), filter).ToString("c");
+                        lblCount.Text = GetCount(GridFundFilter.SelectedItem.ToString(), filter).ToString();
                     }
                     catch (Exception ex)
                     {
@@ -122,13 +122,13 @@ namespace Budget
                         Grid.DataSource = BindingSource;
                         ConfigureGridColumns(Grid);
                         PopulateCharts(Title);
-                        PopulateGridFilterItems(FundFilter, PrcFilter.FundName);
+                        PopulateGridFilterItems(GridFundFilter, PrcFilter.FundName);
                         GetTextBoxBindings();
                         lblTotal.Text = Data.GetQueryTotal(Data.QueryTable).ToString("c");
                         lblCount.Text = Data.GetQueryCount(Data.QueryTable).ToString();
-                        FundFilter.SelectionChangeCommitted += GridFundFilter_ItemSelected;
-                        BocFilter.SelectionChangeCommitted += BocFilter_ItemSelected;
-                        BocFilter.SelectionChangeCommitted += BocFilter_ItemSelected;
+                        GridFundFilter.SelectionChangeCommitted += GridFundFilter_ItemSelected;
+                        GridBocFilter.SelectionChangeCommitted += GridBocFilter_ItemSelected;
+                        GridBocFilter.SelectionChangeCommitted += GridBocFilter_ItemSelected;
                         SummaryTabControl.Click += SummaryTabPage_Selected;
                     }
                     catch (Exception ex)
@@ -141,10 +141,10 @@ namespace Budget
                     try
                     {
                         var filter = sender as MetroSetComboBox;
-                        FundFilter.Tag = filter;
+                        GridFundFilter.Tag = filter;
                         var fund = filter.SelectedItem.ToString();
                         GetBocFilterItems();
-                        BindingSource.Filter = $"FundName = '{FundFilter.SelectedItem.ToString()}'";
+                        BindingSource.Filter = $"FundName = '{GridFundFilter.SelectedItem.ToString()}'";
                         lblCount.Text = GetCount(fund).ToString();
                         lblTotal.Text = GetTotal(fund).ToString("c");
                         GetBocFilterItems();
@@ -158,11 +158,11 @@ namespace Budget
                 {
                     try
                     {
-                        if (FundFilter.SelectedItem.ToString() != null)
+                        if (GridFundFilter.SelectedItem.ToString() != null)
                         {
-                            BindingSource.Filter = $"FundName = '{FundFilter.SelectedItem.ToString()}' AND BocName = '{BocFilter.SelectedItem.ToString()}'";
+                            BindingSource.Filter = $"FundName = '{GridFundFilter.SelectedItem.ToString()}' AND BocName = '{GridBocFilter.SelectedItem.ToString()}'";
                         }
-                        BindingSource.Filter = $"FundName = '{BocFilter.SelectedItem.ToString()}'";
+                        BindingSource.Filter = $"FundName = '{GridBocFilter.SelectedItem.ToString()}'";
                     }
                     catch (Exception ex)
                     {
@@ -173,10 +173,10 @@ namespace Budget
                 {
                     try
                     {
-                        BocFilter.Items.Clear();
-                        BocFilter.Visible = true;
+                        GridBocFilter.Items.Clear();
+                        GridBocFilter.Visible = true;
                         foreach (string b in ProgramElements[PrcFilter.BocName.ToString()])
-                            BocFilter.Items.Add(b);
+                            GridBocFilter.Items.Add(b);
                     }
                     catch (Exception ex)
                     {
@@ -357,7 +357,7 @@ namespace Budget
                             if (n.Contains("Goal"))
                                 filters.Add("Goal", "GoalName");
                             if (n.Contains("Division"))
-                                filters.Add("Division", "RC");
+                                filters.Add("Division", "Division");
                             if (n.Contains("Objective"))
                                 filters.Add("Objective", "ObjectiveName");
                             if (n.Contains("ProgramArea"))
@@ -379,10 +379,10 @@ namespace Budget
                     try
                     {
                         var filter = sender as MetroSetComboBox;
-                        FundFilter.Tag = filter;
+                        GridFundFilter.Tag = filter;
                         var fund = filter.SelectedItem.ToString();
                         GetBocFilterItems();
-                        BindingSource.Filter = $"FundName = '{FundFilter.SelectedItem.ToString()}'";
+                        BindingSource.Filter = $"FundName = '{GridFundFilter.SelectedItem.ToString()}'";
                     }
                     catch (Exception ex)
                     {
@@ -394,10 +394,10 @@ namespace Budget
                     try
                     {
                         var filter = sender as MetroSetComboBox;
-                        FundFilter.Tag = filter;
+                        GridFundFilter.Tag = filter;
                         var fund = filter.SelectedItem.ToString();
                         GetBocFilterItems();
-                        BindingSource.Filter = $"FundName = '{FundFilter.SelectedItem.ToString()}'";
+                        BindingSource.Filter = $"FundName = '{GridFundFilter.SelectedItem.ToString()}'";
                     }
                     catch (Exception ex)
                     {
@@ -411,6 +411,7 @@ namespace Budget
                     NpmChart = GetSummaryChart(NpmChart, Data, PrcFilter.NPM, string.Format("{0} by HQ Program", title));
                     GoalChart = GetSummaryChart(GoalChart, Data, PrcFilter.GoalName, string.Format("{0} by Agency Goal", title));
                     ObjectiveChart = GetSummaryChart(ObjectiveChart, Data, PrcFilter.ObjectiveName, string.Format("{0} by Strategic Objective", title));
+                    DivisionChart = GetSummaryChart(DivisionChart, Data, PrcFilter.RC, string.Format("{0} by Division", title));
                     AreaChart = GetSummaryChart(AreaChart, Data, PrcFilter.ProgramArea, string.Format("{0} by Program Area", title));
                     ProjectChart = GetSummaryChart(ProjectChart, Data, PrcFilter.ProgramProjectCode, string.Format("{0} by Program Project", title));
                 }
@@ -421,31 +422,44 @@ namespace Budget
                         var tab = sender as TabControlAdv;
                         CurrentTabIndex = tab.SelectedIndex;
                         TabFilter = tab.TabPages[CurrentTabIndex].Tag.ToString();
+                        Base = Table.AsEnumerable().Where(p => p.Field<string>(TabFilter)
+                            .Equals(SummaryTabControl.TabPages[CurrentTabIndex].Tag.ToString()))
+                            .Select(p => p).CopyToDataTable();
+                        var data = new DataMetric(Base, (PrcFilter)Enum.Parse(typeof(PrcFilter), TabFilter), SummaryTabControl.TabPages[CurrentTabIndex].Tag.ToString());
                         switch(CurrentTabIndex)
                         {
                             case 0:
                                 FundFilter1.SelectionChangeCommitted += ChartPrimaryFilter_ItemSelected;
+                                FundChart = new BudgetChart(FundChart, data, ChartSecondaryFilter, Stat.Total).Activate();
                                 break;
                             case 1:
                                 BocFilter1.SelectionChangeCommitted += ChartPrimaryFilter_ItemSelected;
+                                BocChart = new BudgetChart(BocChart, data, ChartSecondaryFilter, Stat.Total).Activate();
                                 break;
                             case 2:
                                 NpmFilter1.SelectionChangeCommitted += ChartPrimaryFilter_ItemSelected;
+                                NpmChart = new BudgetChart(NpmChart, data, ChartSecondaryFilter, Stat.Total).Activate();
+
                                 break;
                             case 3:
                                 GoalFilter1.SelectionChangeCommitted += ChartPrimaryFilter_ItemSelected;
+                                GoalChart = new BudgetChart(GoalChart, data, ChartSecondaryFilter, Stat.Total).Activate();
                                 break;
                             case 4:
                                 ObjectiveFilter1.SelectionChangeCommitted += ChartPrimaryFilter_ItemSelected;
+                                ObjectiveChart = new BudgetChart(ObjectiveChart, data, ChartSecondaryFilter, Stat.Total).Activate();
                                 break;
                             case 5:
                                 DivisionFilter1.SelectionChangeCommitted += ChartPrimaryFilter_ItemSelected;
+                                DivisionChart = new BudgetChart(DivisionChart, data, ChartSecondaryFilter, Stat.Total).Activate();
                                 break;
                             case 6:
                                 AreaFilter1.SelectionChangeCommitted += ChartPrimaryFilter_ItemSelected;
+                                AreaChart = new BudgetChart(AreaChart, data, ChartSecondaryFilter, Stat.Total).Activate();
                                 break;
                             case 7:
                                 ProjectFilter1.SelectionChangeCommitted += ChartPrimaryFilter_ItemSelected;
+                                ProjectChart = new BudgetChart(ProjectChart, data, ChartSecondaryFilter, Stat.Total).Activate();
                                 break;
                         }
                     }
@@ -479,7 +493,7 @@ namespace Budget
                         GetChartPrimaryFilterItems(NpmFilter1, Metric.ProgramElements["NPM"]);
                         GetChartPrimaryFilterItems(GoalFilter1, Metric.ProgramElements["GoalName"]);
                         GetChartPrimaryFilterItems(ObjectiveFilter1, Metric.ProgramElements["ObjectiveName"]);
-                        GetChartPrimaryFilterItems(DivisionFilter1, Divisions ?? Metric.ProgramElements["RC"]);
+                        GetChartPrimaryFilterItems(DivisionFilter1, Divisions ?? Metric.ProgramElements["Division"]);
                         GetChartPrimaryFilterItems(AreaFilter1, Metric.ProgramElements["ProgramAreaName"]);
                         GetChartPrimaryFilterItems(ProjectFilter1, Metric.ProgramElements["ProgramProjectName"]);
                     }
@@ -524,6 +538,8 @@ namespace Budget
                     {
                         PrimaryFilterBox = sender as MetroSetComboBox;
                         ChartPrimaryFilter = PrimaryFilterBox.SelectedItem.ToString();
+                        Base = Table.AsEnumerable().Where(p => p.Field<string>(TabFilter).Equals(ChartPrimaryFilter))
+                            .Select(p => p).CopyToDataTable();
                         if (CurrentTabIndex == 0)
                         {
                             SecondaryFilterBox = FundFilter2;
@@ -594,7 +610,8 @@ namespace Budget
                         SecondaryFilterBox = sender as MetroSetComboBox;
                         var secondaryfilter = SecondaryFilterBox.SelectedItem.ToString();
                         ChartSecondaryFilter = (PrcFilter)Enum.Parse(typeof(PrcFilter), secondaryfilter);
-                        var data = new DataMetric(Data);
+                        var basetable = Metric.FilterTable(Data.QueryTable, (PrcFilter)Enum.Parse(typeof(PrcFilter), TabFilter), ChartPrimaryFilter);
+                        var data = Metric.FilterTable(basetable, ChartSecondaryFilter, secondaryfilter);
                         switch(CurrentTabIndex)
                         {
                             case 0:

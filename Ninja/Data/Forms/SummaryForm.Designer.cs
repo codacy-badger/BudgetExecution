@@ -279,9 +279,9 @@ namespace Budget
             this.metroSetLabel9 = new MetroSet_UI.Controls.MetroSetLabel();
             this.metroSetLabel8 = new MetroSet_UI.Controls.MetroSetLabel();
             this.FilterGroupBox = new System.Windows.Forms.GroupBox();
-            this.CodeFilter = new MetroSet_UI.Controls.MetroSetComboBox();
-            this.BocFilter = new MetroSet_UI.Controls.MetroSetComboBox();
-            this.FundFilter = new MetroSet_UI.Controls.MetroSetComboBox();
+            this.GridCodeFilter = new MetroSet_UI.Controls.MetroSetComboBox();
+            this.GridBocFilter = new MetroSet_UI.Controls.MetroSetComboBox();
+            this.GridFundFilter = new MetroSet_UI.Controls.MetroSetComboBox();
             this.ProjectTab = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
             this.expandCollapsePanel7 = new MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel();
             this.ProjectFilter2 = new MetroSet_UI.Controls.MetroSetComboBox();
@@ -1261,10 +1261,10 @@ namespace Budget
             this.tabPageAdv1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPageAdv1.Image = null;
             this.tabPageAdv1.ImageSize = new System.Drawing.Size(16, 16);
-            this.tabPageAdv1.Location = new System.Drawing.Point(2, 35);
+            this.tabPageAdv1.Location = new System.Drawing.Point(2, 1);
             this.tabPageAdv1.Name = "tabPageAdv1";
             this.tabPageAdv1.ShowCloseButton = true;
-            this.tabPageAdv1.Size = new System.Drawing.Size(433, 359);
+            this.tabPageAdv1.Size = new System.Drawing.Size(433, 393);
             this.tabPageAdv1.TabIndex = 4;
             this.tabPageAdv1.Text = "tabPageAdv1";
             this.tabPageAdv1.ThemesEnabled = false;
@@ -2119,9 +2119,9 @@ namespace Budget
             // FilterGroupBox
             // 
             this.FilterGroupBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.FilterGroupBox.Controls.Add(this.CodeFilter);
-            this.FilterGroupBox.Controls.Add(this.BocFilter);
-            this.FilterGroupBox.Controls.Add(this.FundFilter);
+            this.FilterGroupBox.Controls.Add(this.GridCodeFilter);
+            this.FilterGroupBox.Controls.Add(this.GridBocFilter);
+            this.FilterGroupBox.Controls.Add(this.GridFundFilter);
             this.FilterGroupBox.ForeColor = System.Drawing.Color.LightSteelBlue;
             this.FilterGroupBox.Location = new System.Drawing.Point(11, 125);
             this.FilterGroupBox.Name = "FilterGroupBox";
@@ -2130,89 +2130,89 @@ namespace Budget
             this.FilterGroupBox.TabStop = false;
             this.FilterGroupBox.Text = "Filters";
             // 
-            // CodeFilter
+            // GridCodeFilter
             // 
-            this.CodeFilter.AllowDrop = true;
-            this.CodeFilter.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
-            this.CodeFilter.BackColor = System.Drawing.Color.Transparent;
-            this.CodeFilter.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
-            this.CodeFilter.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
-            this.CodeFilter.CausesValidation = false;
-            this.CodeFilter.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.CodeFilter.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.CodeFilter.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.CodeFilter.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.CodeFilter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.CodeFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.CodeFilter.FormattingEnabled = true;
-            this.CodeFilter.ItemHeight = 30;
-            this.CodeFilter.Location = new System.Drawing.Point(15, 281);
-            this.CodeFilter.MaxDropDownItems = 50;
-            this.CodeFilter.Name = "CodeFilter";
-            this.CodeFilter.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.CodeFilter.SelectedItemForeColor = System.Drawing.Color.White;
-            this.CodeFilter.Size = new System.Drawing.Size(197, 36);
-            this.CodeFilter.Style = MetroSet_UI.Design.Style.Dark;
-            this.CodeFilter.StyleManager = null;
-            this.CodeFilter.TabIndex = 4;
-            this.CodeFilter.ThemeAuthor = "Narwin";
-            this.CodeFilter.ThemeName = "MetroDark";
+            this.GridCodeFilter.AllowDrop = true;
+            this.GridCodeFilter.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.GridCodeFilter.BackColor = System.Drawing.Color.Transparent;
+            this.GridCodeFilter.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.GridCodeFilter.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.GridCodeFilter.CausesValidation = false;
+            this.GridCodeFilter.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.GridCodeFilter.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.GridCodeFilter.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.GridCodeFilter.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.GridCodeFilter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.GridCodeFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.GridCodeFilter.FormattingEnabled = true;
+            this.GridCodeFilter.ItemHeight = 30;
+            this.GridCodeFilter.Location = new System.Drawing.Point(15, 281);
+            this.GridCodeFilter.MaxDropDownItems = 50;
+            this.GridCodeFilter.Name = "GridCodeFilter";
+            this.GridCodeFilter.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.GridCodeFilter.SelectedItemForeColor = System.Drawing.Color.White;
+            this.GridCodeFilter.Size = new System.Drawing.Size(197, 36);
+            this.GridCodeFilter.Style = MetroSet_UI.Design.Style.Dark;
+            this.GridCodeFilter.StyleManager = null;
+            this.GridCodeFilter.TabIndex = 4;
+            this.GridCodeFilter.ThemeAuthor = "Narwin";
+            this.GridCodeFilter.ThemeName = "MetroDark";
             // 
-            // BocFilter
+            // GridBocFilter
             // 
-            this.BocFilter.AllowDrop = true;
-            this.BocFilter.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
-            this.BocFilter.BackColor = System.Drawing.Color.Transparent;
-            this.BocFilter.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
-            this.BocFilter.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
-            this.BocFilter.CausesValidation = false;
-            this.BocFilter.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.BocFilter.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.BocFilter.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.BocFilter.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.BocFilter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.BocFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.BocFilter.FormattingEnabled = true;
-            this.BocFilter.ItemHeight = 30;
-            this.BocFilter.Location = new System.Drawing.Point(15, 180);
-            this.BocFilter.Name = "BocFilter";
-            this.BocFilter.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.BocFilter.SelectedItemForeColor = System.Drawing.Color.White;
-            this.BocFilter.Size = new System.Drawing.Size(197, 36);
-            this.BocFilter.Style = MetroSet_UI.Design.Style.Dark;
-            this.BocFilter.StyleManager = null;
-            this.BocFilter.TabIndex = 3;
-            this.BocFilter.ThemeAuthor = "Narwin";
-            this.BocFilter.ThemeName = "MetroDark";
+            this.GridBocFilter.AllowDrop = true;
+            this.GridBocFilter.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.GridBocFilter.BackColor = System.Drawing.Color.Transparent;
+            this.GridBocFilter.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.GridBocFilter.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.GridBocFilter.CausesValidation = false;
+            this.GridBocFilter.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.GridBocFilter.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.GridBocFilter.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.GridBocFilter.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.GridBocFilter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.GridBocFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.GridBocFilter.FormattingEnabled = true;
+            this.GridBocFilter.ItemHeight = 30;
+            this.GridBocFilter.Location = new System.Drawing.Point(15, 180);
+            this.GridBocFilter.Name = "GridBocFilter";
+            this.GridBocFilter.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.GridBocFilter.SelectedItemForeColor = System.Drawing.Color.White;
+            this.GridBocFilter.Size = new System.Drawing.Size(197, 36);
+            this.GridBocFilter.Style = MetroSet_UI.Design.Style.Dark;
+            this.GridBocFilter.StyleManager = null;
+            this.GridBocFilter.TabIndex = 3;
+            this.GridBocFilter.ThemeAuthor = "Narwin";
+            this.GridBocFilter.ThemeName = "MetroDark";
             // 
-            // FundFilter
+            // GridFundFilter
             // 
-            this.FundFilter.AllowDrop = true;
-            this.FundFilter.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
-            this.FundFilter.BackColor = System.Drawing.Color.Transparent;
-            this.FundFilter.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
-            this.FundFilter.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
-            this.FundFilter.CausesValidation = false;
-            this.FundFilter.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.FundFilter.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.FundFilter.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.FundFilter.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.FundFilter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.FundFilter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.FundFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.FundFilter.FormattingEnabled = true;
-            this.FundFilter.ItemHeight = 30;
-            this.FundFilter.Location = new System.Drawing.Point(15, 90);
-            this.FundFilter.MaxDropDownItems = 15;
-            this.FundFilter.Name = "FundFilter";
-            this.FundFilter.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.FundFilter.SelectedItemForeColor = System.Drawing.Color.White;
-            this.FundFilter.Size = new System.Drawing.Size(197, 36);
-            this.FundFilter.Style = MetroSet_UI.Design.Style.Dark;
-            this.FundFilter.StyleManager = null;
-            this.FundFilter.TabIndex = 2;
-            this.FundFilter.ThemeAuthor = "Narwin";
-            this.FundFilter.ThemeName = "MetroDark";
+            this.GridFundFilter.AllowDrop = true;
+            this.GridFundFilter.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.GridFundFilter.BackColor = System.Drawing.Color.Transparent;
+            this.GridFundFilter.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.GridFundFilter.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.GridFundFilter.CausesValidation = false;
+            this.GridFundFilter.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.GridFundFilter.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.GridFundFilter.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.GridFundFilter.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.GridFundFilter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.GridFundFilter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.GridFundFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.GridFundFilter.FormattingEnabled = true;
+            this.GridFundFilter.ItemHeight = 30;
+            this.GridFundFilter.Location = new System.Drawing.Point(15, 90);
+            this.GridFundFilter.MaxDropDownItems = 15;
+            this.GridFundFilter.Name = "GridFundFilter";
+            this.GridFundFilter.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.GridFundFilter.SelectedItemForeColor = System.Drawing.Color.White;
+            this.GridFundFilter.Size = new System.Drawing.Size(197, 36);
+            this.GridFundFilter.Style = MetroSet_UI.Design.Style.Dark;
+            this.GridFundFilter.StyleManager = null;
+            this.GridFundFilter.TabIndex = 2;
+            this.GridFundFilter.ThemeAuthor = "Narwin";
+            this.GridFundFilter.ThemeName = "MetroDark";
             // 
             // ProjectTab
             // 
@@ -2662,7 +2662,7 @@ namespace Budget
             this.DivisionTab.Size = new System.Drawing.Size(1586, 884);
             this.DivisionTab.TabForeColor = System.Drawing.Color.LightSteelBlue;
             this.DivisionTab.TabIndex = 6;
-            this.DivisionTab.Tag = "RC";
+            this.DivisionTab.Tag = "Division";
             this.DivisionTab.Text = "Division";
             this.DivisionTab.ThemesEnabled = false;
             // 
@@ -4130,9 +4130,9 @@ namespace Budget
                 private MetroSetLabel metroSetLabel9;
                 private MetroSetLabel metroSetLabel8;
                 private GroupBox FilterGroupBox;
-                private MetroSetComboBox CodeFilter;
-                private MetroSetComboBox BocFilter;
-                private MetroSetComboBox FundFilter;
+                private MetroSetComboBox GridCodeFilter;
+                private MetroSetComboBox GridBocFilter;
+                private MetroSetComboBox GridFundFilter;
                 private TabPageAdv ProjectTab;
                 private MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel expandCollapsePanel7;
                 private MetroSetComboBox ProjectFilter2;

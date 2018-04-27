@@ -41,10 +41,16 @@ namespace Budget
                     GoalMetrics = GetMetrics(BaseTable, PrcFilter.GoalName);
                     ObjectiveTotals = GetTotals(BaseTable, PrcFilter.ObjectiveName);
                     ObjectiveMetrics = GetMetrics(BaseTable, PrcFilter.ObjectiveName);
-                    if (source == Source.P8)
+                    if (source == Source.P8 && Data.Parameter == null)
                     {
-                        DivisionTotals = GetTotals(BaseTable, PrcFilter.RC);
-                        DivisionMetrics = GetMetrics(BaseTable, PrcFilter.RC);
+                        DivisionTotals = GetTotals(BaseTable, PrcFilter.Division);
+                        DivisionMetrics = GetMetrics(BaseTable, PrcFilter.Division);
+                    }
+                    if(source == Source.P6)
+                    {
+                        var table = new DivisionAuthority().Table;
+                        DivisionTotals = GetTotals(table, PrcFilter.Division);
+                        DivisionMetrics = GetMetrics(table, PrcFilter.Division);
                     }
                 }
                 public DataMetric(DataBuilder data)
@@ -71,6 +77,17 @@ namespace Budget
                     GoalMetrics = GetMetrics(BaseTable, PrcFilter.GoalName);
                     ObjectiveTotals = GetTotals(BaseTable, PrcFilter.ObjectiveName);
                     ObjectiveMetrics = GetMetrics(BaseTable, PrcFilter.ObjectiveName);
+                    if (Data.Source == Source.P8 && Data.Parameter == null)
+                    {
+                        DivisionTotals = GetTotals(BaseTable, PrcFilter.Division);
+                        DivisionMetrics = GetMetrics(BaseTable, PrcFilter.Division);
+                    }
+                    if (Data.Source == Source.P6)
+                    {
+                        var table = new DivisionAuthority().Table;
+                        DivisionTotals = GetTotals(table, PrcFilter.Division);
+                        DivisionMetrics = GetMetrics(table, PrcFilter.Division);
+                    }
                 }
                 public DataMetric(DataBuilder data, PrcFilter prcfilter, string filter)
                 {
@@ -96,6 +113,17 @@ namespace Budget
                     GoalMetrics = GetMetrics(BaseTable, PrcFilter.GoalName);
                     ObjectiveTotals = GetTotals(BaseTable, PrcFilter.ObjectiveName);
                     ObjectiveMetrics = GetMetrics(BaseTable, PrcFilter.ObjectiveName);
+                    if (Data.Source == Source.P8 && Data.Parameter == null)
+                    {
+                        DivisionTotals = GetTotals(BaseTable, PrcFilter.Division);
+                        DivisionMetrics = GetMetrics(BaseTable, PrcFilter.Division);
+                    }
+                    if (Data.Source == Source.P6)
+                    {
+                        var table = new DivisionAuthority().Table;
+                        DivisionTotals = GetTotals(table, PrcFilter.Division);
+                        DivisionMetrics = GetMetrics(table, PrcFilter.Division);
+                    }
                 }
                 public DataMetric(DataTable table, PrcFilter prcfilter, string filter)
                 {
@@ -120,6 +148,8 @@ namespace Budget
                     GoalMetrics = GetMetrics(BaseTable, PrcFilter.GoalName);
                     ObjectiveTotals = GetTotals(BaseTable, PrcFilter.ObjectiveName);
                     ObjectiveMetrics = GetMetrics(BaseTable, PrcFilter.ObjectiveName);
+                    DivisionTotals = GetTotals(table, PrcFilter.Division);
+                    DivisionMetrics = GetMetrics(table, PrcFilter.Division);
                 }
 
                 //Properties

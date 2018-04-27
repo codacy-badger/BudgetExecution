@@ -19,6 +19,7 @@ namespace Budget
 
                 public DataBuilder(Source source)
                 {
+                    Parameter = null;
                     Query = new Query(source);
                     Source = Query.Source;
                     QuerySet = GetQuerySet();
@@ -36,6 +37,7 @@ namespace Budget
 
                 public DataBuilder(Source source, Dictionary<string, object> param)
                 {
+                    Parameter = param;
                     Query = new Query(source, param);
                     Source = Query.Source;
                     QuerySet = GetQuerySet();
@@ -61,10 +63,43 @@ namespace Budget
                 public BindingSource BindingSource { get; set; }
                 public Dictionary<string, string[]> ProgramElements { get; }
                 public decimal QueryTotal { get; }
-                private Dictionary<string, object> Parameter { get; set; }
+                public Dictionary<string, object> Parameter { get; set; }
 
                 //Methods
-                public static DataTable FilterTable(DataTable table, PrcFilter prcfilter, string filter)
+                Dictionary<string, object> GetParameter(string rc)
+                {
+                    try
+                    {
+                        var param = new Dictionary<string, object>();
+                        param.Add("RC", rc);
+                        return param;
+    
+                    }
+                    catch (Exception e)
+                    {
+
+                        MessageBox.Show(e.Message + e.StackTrace);
+                        return null;
+                    }
+                }
+                public Dictionary<string, object>GetParameter(string rc, PrcFilter prcfilter, string filter)
+                {
+                    try
+                    {
+                        if (Parameter.ContainsKey(rc))
+                        {
+                            Parameter.Add(prcfilter.ToString(), filter);
+                        }
+                        return Parameter;
+                    }
+                    catch (Exception ex)
+                    {
+
+                        MessageBox.Show(ex.Message + ex.StackTrace);
+                        return null;
+                    }
+                }
+                public DataTable FilterTable(DataTable table, PrcFilter prcfilter, string filter)
                 {
                     try
                     {

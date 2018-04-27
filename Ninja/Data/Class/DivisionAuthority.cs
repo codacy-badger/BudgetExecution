@@ -68,7 +68,7 @@ namespace Budget
                 public DataMetric Metric { get; }
                 public DataTable Table { get; }
                 public Dictionary<string, string[]> ProgramElements { get; }
-                public decimal[] Metrics { get; }
+                public decimal[] Measures { get; }
                 public decimal Total { get; }
                 public int Count { get; }
                 public decimal Average { get; }
