@@ -82,7 +82,7 @@ namespace Budget
                         return null;
                     }
                 }
-                public Dictionary<string, object>GetParameter(string rc, PrcFilter prcfilter, string filter)
+                public Dictionary<string, object>GetParameter(string rc, AccountField prcfilter, string filter)
                 {
                     try
                     {
@@ -99,7 +99,7 @@ namespace Budget
                         return null;
                     }
                 }
-                public DataTable FilterTable(DataTable table, PrcFilter prcfilter, string filter)
+                public DataTable FilterTable(DataTable table, AccountField prcfilter, string filter)
                 {
                     try
                     {

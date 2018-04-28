@@ -33,7 +33,26 @@ namespace Budget
                     Update3DMode(Chart);
                 }
 
-                public BudgetChart(ChartControl chart, DataBuilder data, PrcFilter filter, Stat value)
+                public BudgetChart(ChartControl chart, DataBuilder data, AccountField filter)
+                {
+                    Chart = chart;
+                    Data = data;
+                    Value = Stat.Total;
+                    SeriesType = ChartSeriesType.Column;
+                    Table = Data.QueryTable;
+                    Metric = new DataMetric(Data);
+                    DataTotals = Metric.GetChartTotals(Table, filter);
+                    if (Chart.Series != null)
+                        Chart.Series.Clear();
+                    DataSeries = GetSeriesTotals(DataTotals);
+                    ConfigureLargeNumberSeries(DataSeries);
+                    Chart.Series.Add(DataSeries);
+                    Chart.RealMode3D = true;
+                    Chart.ChartArea.Series3D = true;
+                    Chart.Style3D = true;
+
+                }
+                public BudgetChart(ChartControl chart, DataBuilder data, AccountField filter, Stat value)
                 {
                     Chart = chart;
                     Data = data;
@@ -51,7 +70,7 @@ namespace Budget
                     Update3DMode(Chart);
                 }
 
-                public BudgetChart(ChartControl chart, DataMetric metric, PrcFilter filter, Stat value)
+                public BudgetChart(ChartControl chart, DataMetric metric, AccountField filter, Stat value)
                 {
                     Chart = chart;
                     Value = value;
@@ -67,7 +86,7 @@ namespace Budget
                     Update3DMode(Chart);
                 }
 
-                public BudgetChart(ChartControl chart, DataTable tabl, PrcFilter filter, Stat value)
+                public BudgetChart(ChartControl chart, DataTable tabl, AccountField filter, Stat value)
                 {
                     Chart = chart;
                     Value = value;
@@ -82,7 +101,7 @@ namespace Budget
                     Update3DMode(Chart);
                 }
                 
-                public BudgetChart(ChartControl chart, Source source, PrcFilter filter)
+                public BudgetChart(ChartControl chart, Source source, AccountField filter)
                 {
                     Chart = chart;
                     SeriesType = ChartSeriesType.Column;
@@ -107,7 +126,7 @@ namespace Budget
                 public ChartSeries DataSeries { get; set; }
                 public Dictionary<string, double> DataTotals { get; set; }
                 public int[] Dimension { get; set; }
-                public PrcFilter Filter { get; }
+                public AccountField Filter { get; }
                 public Dictionary<string, double[]> InputMetrics { get; set; }
                 public Dictionary<string, double> InputTotals { get; set; }
                 public ChartLegend Legend { get; set; }
@@ -235,9 +254,6 @@ namespace Budget
                         DataSeries.Style.Font.Size = 12.0F;
                         DataSeries.Style.Font.Facename = "SegoeUI";
                         DataSeries.Style.Font.FontStyle = FontStyle.Bold;
-                        DataSeries.XAxis.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-                        DataSeries.XAxis.LabelRotate = true;
-                        DataSeries.XAxis.ForeColor = SystemColors.MenuHighlight;
                         if (SeriesType == ChartSeriesType.Column)
                         {
                             DataSeries.ConfigItems.ColumnItem.ShadingMode = ChartColumnShadingMode.PhongCylinder;
@@ -300,10 +316,6 @@ namespace Budget
                         DataSeries.PointsToolTipFormat = "Funding:{4:N}";
                         DataSeries.Style.Font.Size = 12.0F;
                         DataSeries.Style.Font.Facename = "Segoe UI";
-                        DataSeries.Style.Font.FontStyle = FontStyle.Bold;
-                        DataSeries.XAxis.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-                        DataSeries.XAxis.LabelRotate = true;
-                        DataSeries.XAxis.ForeColor = SystemColors.MenuHighlight;
                         if (SeriesType == ChartSeriesType.Column)
                         {
                             DataSeries.ConfigItems.ColumnItem.ShadingMode = ChartColumnShadingMode.PhongCylinder;
@@ -366,7 +378,7 @@ namespace Budget
                         MessageBox.Show(e.Message + e.StackTrace);
                     }
                 }
-                internal ChartDataBindModel GetDataBinding(Dictionary<string, double> data, PrcFilter filter)
+                internal ChartDataBindModel GetDataBinding(Dictionary<string, double> data, AccountField filter)
                 {
                     try
                     {

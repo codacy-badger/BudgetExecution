@@ -3956,7 +3956,7 @@ namespace Budget
             this.SummaryTabControl.Size = new System.Drawing.Size(1588, 919);
             this.SummaryTabControl.TabIndex = 0;
             this.SummaryTabControl.TabStyle = typeof(Syncfusion.Windows.Forms.Tools.TabRendererVS2010);
-            this.SummaryTabControl.SelectedIndexChanged += new System.EventHandler(this.SummaryTabPage_Selected);
+            this.SummaryTabControl.SelectedIndexChanged += new System.EventHandler(this.SummaryTabPage_TabSelected);
             // 
             // SummaryForm
             // 
