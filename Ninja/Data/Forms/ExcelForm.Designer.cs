@@ -249,7 +249,7 @@ namespace Budget
             this.tabControlAdv1.ActiveTabForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.tabControlAdv1.BeforeTouchSize = new System.Drawing.Size(1078, 772);
             this.tabControlAdv1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tabControlAdv1.CloseButtonForeColor = System.Drawing.Color.Black;
+            this.tabControlAdv1.CloseButtonForeColor = System.Drawing.Color.Empty;
             this.tabControlAdv1.CloseButtonHoverForeColor = System.Drawing.Color.Black;
             this.tabControlAdv1.CloseButtonPressedForeColor = System.Drawing.Color.Black;
             this.tabControlAdv1.Controls.Add(this.tabPageAdv1);
@@ -286,10 +286,10 @@ namespace Budget
             this.tabPageAdv2.Controls.Add(this.metroSetPanel2);
             this.tabPageAdv2.Image = null;
             this.tabPageAdv2.ImageSize = new System.Drawing.Size(16, 16);
-            this.tabPageAdv2.Location = new System.Drawing.Point(1, 45);
+            this.tabPageAdv2.Location = new System.Drawing.Point(1, 0);
             this.tabPageAdv2.Name = "tabPageAdv2";
             this.tabPageAdv2.ShowCloseButton = true;
-            this.tabPageAdv2.Size = new System.Drawing.Size(1076, 726);
+            this.tabPageAdv2.Size = new System.Drawing.Size(1076, 771);
             this.tabPageAdv2.TabIndex = 2;
             this.tabPageAdv2.Text = "tabPageAdv2";
             this.tabPageAdv2.ThemesEnabled = false;

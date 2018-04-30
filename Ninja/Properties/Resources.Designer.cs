@@ -83,6 +83,16 @@ namespace Ninja.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Chart_2_WF {
+            get {
+                object obj = ResourceManager.GetObject("Chart-2-WF", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Copy_01 {
             get {
                 object obj = ResourceManager.GetObject("Copy_01", resourceCulture);
@@ -106,6 +116,16 @@ namespace Ninja.Properties {
         internal static System.Drawing.Bitmap Delete_04 {
             get {
                 object obj = ResourceManager.GetObject("Delete_04", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Graph_03 {
+            get {
+                object obj = ResourceManager.GetObject("Graph-03", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

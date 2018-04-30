@@ -61,7 +61,7 @@ namespace Ninja.Data
             FundFilter.Tag = filter;
             var fund = filter.SelectedItem.ToString();
             BindingSource.Filter = $"FundName = '{fund}'";
-            var boc = ProgramElements[AccountField.BocName.ToString()];
+            var boc = ProgramElements[PrcField.BocName.ToString()];
             foreach (string b in boc)
                 BocFilter.Items.Add(b);
             BocFilter.Visible = true;

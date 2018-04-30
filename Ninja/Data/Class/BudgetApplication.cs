@@ -51,7 +51,7 @@ namespace Budget
                 O1, O2, O3, O4, O5
             }
 
-            public enum AccountField
+            public enum PrcField
             {
                 ID, BFY, RPIO, Fund, FundName, BOC, BocName, Org, RC, NPM, Goal, GoalName, Objective, ObjectiveName, Division, ProgramArea, ProgramAreaName, ProgramProjectCode, ProgramProjectName
             }
@@ -95,7 +95,7 @@ namespace Budget
             //Delegates
             public delegate double[] Calculator(DataTable table);
 
-            public delegate DataTable TableFilter(DataTable table, AccountField prcfilter, string filter);
+            public delegate DataTable TableFilter(DataTable table, PrcField prcfilter, string filter);
 
             public delegate ChartControl GetChart(ChartControl chart, string title, Dictionary<string, double> data);
         }

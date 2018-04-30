@@ -23,7 +23,7 @@ namespace Budget
                     Table = Data.QueryTable;
                     Ninja = new FormData(Data, BindingSource, Grid, Navigator);
                     ProgramElements = Ninja.GetProgramElements(Table);
-                    PrcChart = new BudgetChart(PrcChart, Data, AccountField.FundName, Stat.Total).Activate();
+                    PrcChart = new BudgetChart(PrcChart, Data, PrcField.FundName, Stat.Total).Activate();
                     GetGridSelectedRowValues();
                 }
 
@@ -161,7 +161,7 @@ namespace Budget
                     FundFilter.Tag = filter;
                     var fund = filter.SelectedItem.ToString();
                     BindingSource.Filter = $"FundName = '{fund}'";
-                    var boc = ProgramElements[Budget.Ninja.Data.AccountField.BocName.ToString()];
+                    var boc = ProgramElements[Budget.Ninja.Data.PrcField.BocName.ToString()];
                     foreach (string b in boc)
                         BocFilter.Items.Add(b);
                     BocFilter.Visible = true;

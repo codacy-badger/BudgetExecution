@@ -65,11 +65,11 @@ namespace Ninja.Forms
             this.MainChart = new Syncfusion.Windows.Forms.Chart.ChartControl();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.expandCollapsePanel2 = new MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel();
+            this.DivisionBtn = new System.Windows.Forms.Button();
             this.TransferButton = new System.Windows.Forms.Button();
             this.DataButton = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.expandCollapsePanel1 = new MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel();
-            this.DivisionBtn = new System.Windows.Forms.Button();
             this.DivisionSummaryButton = new System.Windows.Forms.Button();
             this.RegionSummaryButton = new System.Windows.Forms.Button();
             this.tableLayoutPanel2.SuspendLayout();
@@ -301,6 +301,27 @@ namespace Ninja.Forms
             this.expandCollapsePanel2.Text = "Data";
             this.expandCollapsePanel2.UseAnimation = true;
             // 
+            // DivisionBtn
+            // 
+            this.DivisionBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.DivisionBtn.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.DivisionBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.DivisionBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.DivisionBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.DivisionBtn.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.DivisionBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(247)))), ((int)(((byte)(252)))));
+            this.DivisionBtn.Image = ((System.Drawing.Image)(resources.GetObject("DivisionBtn.Image")));
+            this.DivisionBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.DivisionBtn.Location = new System.Drawing.Point(27, 196);
+            this.DivisionBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.DivisionBtn.Name = "DivisionBtn";
+            this.DivisionBtn.Size = new System.Drawing.Size(196, 64);
+            this.DivisionBtn.TabIndex = 55;
+            this.DivisionBtn.Text = "Budget Allocations";
+            this.DivisionBtn.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.DivisionBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.DivisionBtn.UseVisualStyleBackColor = false;
+            // 
             // TransferButton
             // 
             this.TransferButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
@@ -374,27 +395,6 @@ namespace Ninja.Forms
             this.expandCollapsePanel1.TabIndex = 64;
             this.expandCollapsePanel1.Text = "Summary";
             this.expandCollapsePanel1.UseAnimation = true;
-            // 
-            // DivisionBtn
-            // 
-            this.DivisionBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.DivisionBtn.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.DivisionBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.DivisionBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
-            this.DivisionBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.DivisionBtn.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.DivisionBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(247)))), ((int)(((byte)(252)))));
-            this.DivisionBtn.Image = ((System.Drawing.Image)(resources.GetObject("DivisionBtn.Image")));
-            this.DivisionBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.DivisionBtn.Location = new System.Drawing.Point(27, 196);
-            this.DivisionBtn.Margin = new System.Windows.Forms.Padding(2);
-            this.DivisionBtn.Name = "DivisionBtn";
-            this.DivisionBtn.Size = new System.Drawing.Size(196, 64);
-            this.DivisionBtn.TabIndex = 55;
-            this.DivisionBtn.Text = "Budget Allocations";
-            this.DivisionBtn.TextAlign = System.Drawing.ContentAlignment.BottomRight;
-            this.DivisionBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.DivisionBtn.UseVisualStyleBackColor = false;
             // 
             // DivisionSummaryButton
             // 

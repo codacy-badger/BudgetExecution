@@ -284,13 +284,13 @@ namespace Budget
                         tab.TabPages[2].Text = "BOC";
                         tab.TabPages[3].Text = "NPM";
                         tab.TabPages[4].Text = "Goal";
-                        if (Ninja.Query.Source == Source.P7)
+                        if (Ninja.DataQuery.Source == Source.P7)
                         {
                             tab.TabPages[5].Text = "Objective";
                             tab.TabPages[6].Text = "Divisions";
                             tab.TabPages[7].Text = "Transfers";
                         }
-                        if (Ninja.Query.Source == Source.P8)
+                        if (Ninja.DataQuery.Source == Source.P8)
                         {
                             tab.TabPages[5].Text = "Program Area";
                             tab.TabPages[6].Text = "Program Project";

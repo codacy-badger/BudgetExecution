@@ -30,8 +30,8 @@ namespace Budget
                     Data = new DataBuilder(source, new Dictionary<string, object> { ["Fund"] = fundcode, ["BFY"] = bfy });
                     Metric = new DataMetric(Data);
                     Table = Data.QueryTable;
-                    Total = Metric.BaseTotal;
-                    Average = Metric.BaseAverage;
+                    Total = Metric.Total;
+                    Average = Metric.Average;
                     ProgramElements = GetProgramElements(Table);
                     BocCodes = ProgramElements["BOC"];
                     BOC = ProgramElements["BocName"];

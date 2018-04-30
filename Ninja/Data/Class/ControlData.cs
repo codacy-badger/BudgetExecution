@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Data;
 
 namespace Budget
 {
@@ -11,7 +12,7 @@ namespace Budget
                 #region Properties
 
                 public static string BudgetLevel = "7";
-                public PRC[] Allocation { get; }
+                public DataRow[] Allocation { get; }
                 public Query CtrlQuery { get; }
                 public string FiscalYear { get; }
                 public decimal Limit { get; }
@@ -36,8 +37,8 @@ namespace Budget
                         ["BOC"] = account.BOC.Code,
                         ["Code"] = account.Code
                     };
-                    Allocation = new DataBuilder(Source.P7, Search).Accounts;
-                    PrcAccount = Allocation[0];
+                    Allocation = new DataBuilder(Source.P7, Search).DataRecords;
+                    PrcAccount = Allocation[0].ToPrc();
                     Limit = PrcAccount.Amount;
                 }
             }

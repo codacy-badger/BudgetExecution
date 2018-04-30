@@ -18,9 +18,9 @@ namespace Budget
                     Data = new DataBuilder(Source.P7, new Dictionary<string, object> { ["BFY"] = FiscalYear });
                     Metric = new DataMetric(Data);
                     Table = Data.QueryTable;
-                    Total = Metric.BaseTotal;
-                    Count = Metric.BaseCount;
-                    Average = Metric.BaseAverage;
+                    Total = Metric.Total;
+                    Count = Metric.Count;
+                    Average = Metric.Average;
                     ProgramElements = GetProgramElements(Table);
                     FundData = Metric.FundTotals;
                     BocData = Metric.BocTotals;

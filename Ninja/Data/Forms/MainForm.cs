@@ -19,9 +19,9 @@ namespace Ninja.Forms
             D6 = new DataBuilder(Source.P8);
             Metric = new DataMetric(R6);
             Timer = new Timer();
-            Values = new Dictionary<string, double>[] { Metric.GetChartTotals(R6.QueryTable, AccountField.Fund), Metric.GetChartTotals(R6.QueryTable, AccountField.BOC),
-                Metric.GetChartTotals(D6.QueryTable, AccountField.Fund), Metric.GetChartTotals(R6.QueryTable, AccountField.NPM), Metric.GetChartTotals(D6.QueryTable, AccountField.NPM),
-                Metric.GetChartTotals(R6.QueryTable, AccountField.GoalName), Metric.GetChartTotals(D6.QueryTable, AccountField.GoalName)};
+            Values = new Dictionary<string, double>[] { Metric.GetChartTotals(R6.QueryTable, PrcField.Fund), Metric.GetChartTotals(R6.QueryTable, PrcField.BOC),
+                Metric.GetChartTotals(D6.QueryTable, PrcField.Fund), Metric.GetChartTotals(R6.QueryTable, PrcField.NPM), Metric.GetChartTotals(D6.QueryTable, PrcField.NPM),
+                Metric.GetChartTotals(R6.QueryTable, PrcField.GoalName), Metric.GetChartTotals(D6.QueryTable, PrcField.GoalName)};
             Title = GetChartTitles(Values);
             Chart = new GetChart(GetMainChart);
             MainChart = new BudgetChart(MainChart, Title[1], Values[1]).Activate();
@@ -40,9 +40,25 @@ namespace Ninja.Forms
         public DataBuilder R6 { get; set; }
         public string[] Title { get; set; }
         public Dictionary<string, double>[] Values { get; set; }
-        public System.Windows.Forms.Timer Timer { get; set; }
+        public Timer Timer { get; set; }
 
         //Methods
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            try
+            {
+                NinjaData.ConfigureFormSettings(this);
+                Counter = 0;
+                Timer.Tick += ChartTimer;
+                Timer.Enabled = true;
+                Timer.Interval = 5000;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + ex.StackTrace);
+            }
+        }
         private void ChartTimer(object sender, EventArgs e)
         {
             try
@@ -64,19 +80,16 @@ namespace Ninja.Forms
                 MessageBox.Show(ex.Message + ex.StackTrace);
             }
         }
-
         private void DataButton_OnClick(object sender, EventArgs e)
         {
             var dm = new DataMaster();
             dm.Show();
         }
-
         private void DivisionSummaryButton_OnClick(object sender, EventArgs e)
         {
             var datamgr = new SummaryForm(Source.P8);
             datamgr.Show();
         }
-
         private string[] GetChartTitles(Dictionary<string, double>[] info)
         {
             try
@@ -97,7 +110,6 @@ namespace Ninja.Forms
                 return null;
             }
         }
-
         private ChartControl GetMainChart(ChartControl chart, string[] title, Dictionary<string, double> data)
         {
             try
@@ -111,7 +123,6 @@ namespace Ninja.Forms
                 return null;
             }
         }
-
         private ChartControl GetMainChart(ChartControl chart, string title, Dictionary<string, double> data)
         {
             try
@@ -125,41 +136,21 @@ namespace Ninja.Forms
                 return null;
             }
         }
-
-        private void MainForm_Load(object sender, EventArgs e)
-        {
-            try
-            {
-                NinjaData.ConfigureFormSettings(this);
-                Counter = 0;
-                Timer.Tick += ChartTimer;
-                Timer.Enabled = true;
-                Timer.Interval = 5000;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message + ex.StackTrace);
-            }
-        }
-
         private void RegionSummaryButton_OnClick(object sender, EventArgs e)
         {
             var datamgr = new SummaryForm(Source.P7);
             datamgr.Show();
         }
-
         private void TransferButton_OnClick(object sender, EventArgs e)
         {
             var dm = new SummaryForm("06J");
             dm.Show();
         }
-
         private void DataTile_Click(object sender, EventArgs e)
         {
             var s = new Selector();
             s.Show();
         }
-
         private void TransferButton_Click(object sender, EventArgs e)
         {
 

@@ -20,17 +20,16 @@ namespace Budget
                 public DataBuilder(Source source)
                 {
                     Parameter = null;
-                    Query = new Query(source);
-                    Source = Query.Source;
+                    DataQuery = new Query(source);
+                    Source = DataQuery.Source;
                     QuerySet = GetQuerySet();
                     QueryTable = QuerySet.Tables[0];
                     ProgramElements = GetProgramElements(QueryTable);
                     BindingSource = new BindingSource();
                     BindingSource.DataSource = QueryTable;
-                    Records = GetRecords(QueryTable);
+                    DataRecords = GetRecords(QueryTable);
                     if (source == Source.P6 || source == Source.P7 || source == Source.P8)
                     {
-                        Accounts = GetPrcArray(QueryTable);
                         QueryTotal = GetQueryTotal(QueryTable);
                     }
                 }
@@ -38,30 +37,28 @@ namespace Budget
                 public DataBuilder(Source source, Dictionary<string, object> param)
                 {
                     Parameter = param;
-                    Query = new Query(source, param);
-                    Source = Query.Source;
+                    DataQuery = new Query(source, param);
+                    Source = DataQuery.Source;
                     QuerySet = GetQuerySet();
                     QueryTable = QuerySet.Tables[0];
                     ProgramElements = GetProgramElements(QueryTable);
                     BindingSource = new BindingSource();
                     BindingSource.DataSource = QueryTable;
-                    Records = GetRecords(QueryTable);
+                    DataRecords = GetRecords(QueryTable);
                     if (source == Source.P6 || source == Source.P7 || source == Source.P8)
                     {
-                            Accounts = GetPrcArray(QueryTable);
-                            QueryTotal = GetQueryTotal(QueryTable);
+                        QueryTotal = GetQueryTotal(QueryTable);
                     }
                 }
 
                 //Properties
                 public Source Source { get; }
-                public Query Query { get; }
+                public Query DataQuery { get; }
                 public DataSet QuerySet { get; }
                 public DataTable QueryTable { get; }
-                public PRC[] Accounts { get; }
-                public DataRow[] Records { get; }
-                public BindingSource BindingSource { get; set; }
                 public Dictionary<string, string[]> ProgramElements { get; }
+                public DataRow[] DataRecords { get; }
+                public BindingSource BindingSource { get; set; }
                 public decimal QueryTotal { get; }
                 public Dictionary<string, object> Parameter { get; set; }
 
@@ -82,24 +79,7 @@ namespace Budget
                         return null;
                     }
                 }
-                public Dictionary<string, object>GetParameter(string rc, AccountField prcfilter, string filter)
-                {
-                    try
-                    {
-                        if (Parameter.ContainsKey(rc))
-                        {
-                            Parameter.Add(prcfilter.ToString(), filter);
-                        }
-                        return Parameter;
-                    }
-                    catch (Exception ex)
-                    {
-
-                        MessageBox.Show(ex.Message + ex.StackTrace);
-                        return null;
-                    }
-                }
-                public DataTable FilterTable(DataTable table, AccountField prcfilter, string filter)
+                public DataTable FilterTable(DataTable table, PrcField prcfilter, string filter)
                 {
                     try
                     {
@@ -194,10 +174,10 @@ namespace Budget
                 {
                     try
                     {
-                        var dataSet = new DataSet("E6");
-                        var dataTable = new DataTable(Query.TableName);
+                        var dataSet = new DataSet("R6");
+                        var dataTable = new DataTable(Source.ToString());
                         dataSet.Tables.Add(dataTable);
-                        Query.Adapter.Fill(dataSet, Query.TableName);
+                        DataQuery.Adapter.Fill(dataTable);
                         return dataSet;
                     }
                     catch (Exception ex)

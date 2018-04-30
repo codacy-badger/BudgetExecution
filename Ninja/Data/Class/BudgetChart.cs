@@ -17,7 +17,6 @@ namespace Budget
                 public BudgetChart()
                 {
                 }
-
                 public BudgetChart(ChartControl chart, string title, Dictionary<string, double> data)
                 {
                     Chart = chart;
@@ -26,14 +25,13 @@ namespace Budget
                     if (Chart.Series != null)
                         Chart.Series.Clear();
                     SeriesType = ChartSeriesType.Column;
-                    UpdateAxisTitle(Chart, new string[] { title });
+                    ConfigurePrimaryAxisTitle(new string[] { title });
                     DataSeries = GetSeriesTotals(data);
                     Chart.Series.Add(DataSeries);
                     ConfigureLargeNumberSeries(DataSeries);
-                    Update3DMode(Chart);
+                    Configure3DMode(Chart);
                 }
-
-                public BudgetChart(ChartControl chart, DataBuilder data, AccountField filter)
+                public BudgetChart(ChartControl chart, DataBuilder data, PrcField filter)
                 {
                     Chart = chart;
                     Data = data;
@@ -47,61 +45,55 @@ namespace Budget
                     DataSeries = GetSeriesTotals(DataTotals);
                     ConfigureLargeNumberSeries(DataSeries);
                     Chart.Series.Add(DataSeries);
-                    Chart.RealMode3D = true;
-                    Chart.ChartArea.Series3D = true;
-                    Chart.Style3D = true;
+                    Configure3DMode(Chart);
 
                 }
-                public BudgetChart(ChartControl chart, DataBuilder data, AccountField filter, Stat value)
+                public BudgetChart(ChartControl chart, DataBuilder data, PrcField filter, Stat value)
                 {
                     Chart = chart;
                     Data = data;
                     Value = value;
                     SeriesType = ChartSeriesType.Column;
+                    if (Chart.Series != null)
+                        Chart.Series.Clear();
                     Table = Data.QueryTable;
                     Metric = new DataMetric(Data);
                     DataMetrics = Metric.GetChartMetrics(Table, filter);
-                    if (Chart.Series != null)
-                        Chart.Series.Clear();
-                    SeriesType = ChartSeriesType.Column;
                     DataSeries = GetSeriesTotals(GetSingleValue(DataMetrics, Value));
-                    Chart.Series.Add(DataSeries);
                     ConfigureSeries(DataSeries, Value);
-                    Update3DMode(Chart);
+                    Chart.Series.Add(DataSeries);
+                    Configure3DMode(Chart);
                 }
-
-                public BudgetChart(ChartControl chart, DataMetric metric, AccountField filter, Stat value)
+                public BudgetChart(ChartControl chart, DataMetric metric, PrcField field, Stat value)
                 {
                     Chart = chart;
                     Value = value;
                     SeriesType = ChartSeriesType.Column;
                     Metric = metric;
                     Table = Metric.BaseTable;
-                    DataMetrics = Metric.GetChartMetrics(Table, filter);
+                    DataMetrics = Metric.GetChartMetrics(Table, field);
                     if (Chart.Series != null)
                         Chart.Series.Clear();
                     DataSeries = GetSeriesTotals(GetSingleValue(DataMetrics, Value));
-                    Chart.Series.Add(DataSeries);
                     ConfigureSeries(DataSeries, Value);
-                    Update3DMode(Chart);
+                    Chart.Series.Add(DataSeries);
+                    Configure3DMode(Chart);
                 }
-
-                public BudgetChart(ChartControl chart, DataTable tabl, AccountField filter, Stat value)
+                public BudgetChart(ChartControl chart, DataTable table, PrcField prcfilter, Stat value)
                 {
                     Chart = chart;
                     Value = value;
                     SeriesType = ChartSeriesType.Column;
-                    Table = Metric.BaseTable;
-                    DataMetrics = Metric.GetChartMetrics(Table, filter);
+                    Table = table;
+                    DataMetrics = Metric.GetChartMetrics(Table, prcfilter);
                     if (Chart.Series != null)
                         Chart.Series.Clear();
                     DataSeries = GetSeriesTotals(GetSingleValue(DataMetrics, Value));
-                    Chart.Series.Add(DataSeries);
                     ConfigureSeries(DataSeries, Value);
-                    Update3DMode(Chart);
-                }
-                
-                public BudgetChart(ChartControl chart, Source source, AccountField filter)
+                    Chart.Series.Add(DataSeries);
+                    Configure3DMode(Chart);
+                }              
+                public BudgetChart(ChartControl chart, Source source, PrcField filter)
                 {
                     Chart = chart;
                     SeriesType = ChartSeriesType.Column;
@@ -114,19 +106,19 @@ namespace Budget
                     DataSeries = GetSeriesTotals(GetSingleValue(DataMetrics, Value));
                     Chart.Series.Add(DataSeries);
                     ConfigureSeries(DataSeries, Value);
-                    Update3DMode(Chart);
+                    Configure3DMode(Chart);
                 }
 
                 //Properties
                 public string[] AxisTitle { get; set; }
                 public BindingSource BindingSource { get; set; }
-                public ChartControl Chart { get; }
+                public ChartControl Chart { get; set; }
                 public DataBuilder Data { get; }
                 public Dictionary<string, double[]> DataMetrics { get; set; }
                 public ChartSeries DataSeries { get; set; }
                 public Dictionary<string, double> DataTotals { get; set; }
                 public int[] Dimension { get; set; }
-                public AccountField Filter { get; }
+                public PrcField Filter { get; }
                 public Dictionary<string, double[]> InputMetrics { get; set; }
                 public Dictionary<string, double> InputTotals { get; set; }
                 public ChartLegend Legend { get; set; }
@@ -258,7 +250,7 @@ namespace Budget
                         {
                             DataSeries.ConfigItems.ColumnItem.ShadingMode = ChartColumnShadingMode.PhongCylinder;
                             DataSeries.ConfigItems.ColumnItem.LightColor = Color.DeepSkyBlue;
-                            DataSeries.ConfigItems.ColumnItem.PhongAlpha = 2; 
+                            DataSeries.ConfigItems.ColumnItem.PhongAlpha = 2;
                         }
                     }
                     catch (System.Exception e)
@@ -307,15 +299,15 @@ namespace Budget
                         DataSeries.Style.TextOrientation = ChartTextOrientation.Up;
                         DataSeries.Style.DisplayShadow = true;
                         DataSeries.Style.TextColor = Color.White;
-                        if (value == Ninja.Data.Stat.Total || value == Ninja.Data.Stat.Average)
+                        if (value == Stat.Total || value == Stat.Average)
                             DataSeries.Style.TextFormat = "${0:#,}";
-                        if (value == Ninja.Data.Stat.Ratio)
+                        if (value == Stat.Ratio)
                             DataSeries.Style.TextFormat = "{0:P}";
-                        if (value == Ninja.Data.Stat.Count)
+                        if (value == Stat.Count)
                             DataSeries.Style.TextFormat = "{0}";
                         DataSeries.PointsToolTipFormat = "Funding:{4:N}";
                         DataSeries.Style.Font.Size = 12.0F;
-                        DataSeries.Style.Font.Facename = "Segoe UI";
+                        DataSeries.Style.Font.Facename = "SegoeUI";
                         if (SeriesType == ChartSeriesType.Column)
                         {
                             DataSeries.ConfigItems.ColumnItem.ShadingMode = ChartColumnShadingMode.PhongCylinder;
@@ -328,16 +320,17 @@ namespace Budget
                         MessageBox.Show(e.Message + e.StackTrace);
                     }
                 }
-                private void Update3DMode(ChartControl chart)
+                private void Configure3DMode(ChartControl chart)
                 {
                     try
                     {
+                        Chart = chart;
                         Chart.ChartArea.Series3D = true;
                         Chart.RealMode3D = true;
                         Chart.Style3D = true;
-                        Chart.Tilt = 2;
+                        Chart.Tilt = 0;
                         Chart.Depth = 250;
-                        Chart.Rotation = 10;
+                        Chart.Rotation = 5;
                         Chart.SpacingBetweenSeries = 2;
                     }
                     catch (System.Exception e)
@@ -345,7 +338,7 @@ namespace Budget
                         MessageBox.Show(e.Message + e.StackTrace);
                     }
                 }
-                internal void Update3DMode(int[] dim)
+                internal void Configure3DMode(int[] dim)
                 {
                     try
                     {
@@ -365,7 +358,7 @@ namespace Budget
                         MessageBox.Show(e.Message + e.StackTrace);
                     }
                 }
-                internal void UpdateAxisTitle(ChartControl chart, string[] title)
+                internal void ConfigurePrimaryAxisTitle(string[] title)
                 {
                     try
                     {
@@ -378,7 +371,7 @@ namespace Budget
                         MessageBox.Show(e.Message + e.StackTrace);
                     }
                 }
-                internal ChartDataBindModel GetDataBinding(Dictionary<string, double> data, AccountField filter)
+                internal ChartDataBindModel GetDataBinding(Dictionary<string, double> data, PrcField filter)
                 {
                     try
                     {
@@ -396,10 +389,6 @@ namespace Budget
                         MessageBox.Show(ex.Message + ex.StackTrace);
                         return null;
                     }
-                }
-                internal int[] GetDimensions(params int[] a)
-                {
-                    return new int[] { 2, 250, -10 };
                 }
                 internal ChartLegend GetLegend(ChartControl chart)
                 {
@@ -422,16 +411,20 @@ namespace Budget
                         return null;
                     }
                 }
-                internal void UpdateMainTitle(ChartControl chart, string[] t)
+                internal void ConfigureMainTitle(string[] t)
                 {
                     try
                     {
-                        Chart.Titles.Clear();
-                        ChartTitle title = new ChartTitle();
-                        title.Text = t[0];
-                        title.ForeColor = Color.BlanchedAlmond;
-                        title.Font = new Font("SegoeUI", 10, FontStyle.Regular);
-                        Chart.Titles.Add(title);
+                        if(Chart.Titles != null)
+                            Chart.Titles.Clear();
+                        for (int i = 0; i < t.Length; i++)
+                        {
+                            ChartTitle title = new ChartTitle();
+                            title.Text = t[i];
+                            title.ForeColor = Color.LightSteelBlue;
+                            title.Font = new Font("SegoeUI", 9f, FontStyle.Regular);
+                            Chart.Titles.Add(title);
+                        }
                     }
                     catch (System.Exception e)
                     {

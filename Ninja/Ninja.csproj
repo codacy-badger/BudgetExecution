@@ -255,10 +255,10 @@
     <Compile Include="Data\Forms\FunctionalityForm.Designer.cs">
       <DependentUpon>FunctionalityForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Data\Forms\SearchBox.cs">
+    <Compile Include="Data\SearchBox.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Data\Forms\SearchBox.Designer.cs">
+    <Compile Include="Data\SearchBox.Designer.cs">
       <DependentUpon>SearchBox.cs</DependentUpon>
     </Compile>
     <Compile Include="Data\Forms\Selector.cs">
@@ -403,7 +403,7 @@
     <EmbeddedResource Include="Data\Forms\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Data\Forms\SearchBox.resx">
+    <EmbeddedResource Include="Data\SearchBox.resx">
       <DependentUpon>SearchBox.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Data\Forms\Selector.resx">
@@ -483,6 +483,8 @@
     <None Include="Resources\Data-Information.png" />
     <None Include="Resources\Add-New.png" />
     <None Include="Resources\Copy_01.png" />
+    <None Include="Resources\NinjaApplicationImages\Graph-03.png" />
+    <None Include="Resources\NinjaApplicationImages\Chart-2-WF.png" />
     <Content Include="SqlServer\R6.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
