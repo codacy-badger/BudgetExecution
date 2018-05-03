@@ -15,40 +15,36 @@ using MetroForm = Syncfusion.Windows.Forms.MetroForm;
 
 #endregion
 
-namespace Budget
+namespace Budget.Ninja.Data
 {
-    namespace Ninja
+    public partial class SummaryForm
     {
-        namespace Data
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
         {
-            public partial class SummaryForm
+            if (disposing && (components != null))
             {
-                /// <summary>
-                /// Required designer variable.
-                /// </summary>
-                private System.ComponentModel.IContainer components = null;
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
 
-                /// <summary>
-                /// Clean up any resources being used.
-                /// </summary>
-                /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-                protected override void Dispose(bool disposing)
-                {
-                    if (disposing && (components != null))
-                    {
-                        components.Dispose();
-                    }
-                    base.Dispose(disposing);
-                }
+        #region Windows Form Designer generated code
 
-                #region Windows Form Designer generated code
-
-                /// <summary>
-                /// Required method for Designer support - do not modify
-                /// the contents of this method with the code editor.
-                /// </summary>
-                private void InitializeComponent()
-                {
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
             this.components = new System.ComponentModel.Container();
             Syncfusion.Windows.Forms.Chart.ChartSeries chartSeries1 = new Syncfusion.Windows.Forms.Chart.ChartSeries();
             Syncfusion.Windows.Forms.Chart.ChartCustomShapeInfo chartCustomShapeInfo1 = new Syncfusion.Windows.Forms.Chart.ChartCustomShapeInfo();
@@ -169,10 +165,6 @@ namespace Budget
             Syncfusion.Windows.Forms.Chart.ChartToolBarTypeItem chartToolBarTypeItem9 = new Syncfusion.Windows.Forms.Chart.ChartToolBarTypeItem();
             Syncfusion.Windows.Forms.Chart.ChartToolBarSeries3DItem chartToolBarSeries3DItem9 = new Syncfusion.Windows.Forms.Chart.ChartToolBarSeries3DItem();
             Syncfusion.Windows.Forms.Chart.ChartToolBarShowLegendItem chartToolBarShowLegendItem9 = new Syncfusion.Windows.Forms.Chart.ChartToolBarShowLegendItem();
-            Syncfusion.Windows.Forms.Tools.ActiveStateCollection activeStateCollection1 = new Syncfusion.Windows.Forms.Tools.ActiveStateCollection();
-            Syncfusion.Windows.Forms.Tools.InactiveStateCollection inactiveStateCollection1 = new Syncfusion.Windows.Forms.Tools.InactiveStateCollection();
-            Syncfusion.Windows.Forms.Tools.ToggleButtonRenderer toggleButtonRenderer1 = new Syncfusion.Windows.Forms.Tools.ToggleButtonRenderer();
-            Syncfusion.Windows.Forms.Tools.SliderCollection sliderCollection1 = new Syncfusion.Windows.Forms.Tools.SliderCollection();
             Syncfusion.Windows.Forms.Chart.ChartSeries chartSeries19 = new Syncfusion.Windows.Forms.Chart.ChartSeries();
             Syncfusion.Windows.Forms.Chart.ChartCustomShapeInfo chartCustomShapeInfo19 = new Syncfusion.Windows.Forms.Chart.ChartCustomShapeInfo();
             Syncfusion.Windows.Forms.Chart.ChartLineInfo chartLineInfo10 = new Syncfusion.Windows.Forms.Chart.ChartLineInfo();
@@ -309,7 +301,6 @@ namespace Budget
             this.BocFilter = new MetroSet_UI.Controls.MetroSetComboBox();
             this.BocChart = new Syncfusion.Windows.Forms.Chart.ChartControl();
             this.FundTab = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
-            this.ChartType = new Syncfusion.Windows.Forms.Tools.ToggleButton();
             this.FundExpander = new MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel();
             this.FundFilter = new MetroSet_UI.Controls.MetroSetComboBox();
             this.FundChart = new Syncfusion.Windows.Forms.Chart.ChartControl();
@@ -353,7 +344,6 @@ namespace Budget
             this.BocTab.SuspendLayout();
             this.expandCollapsePanel1.SuspendLayout();
             this.FundTab.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ChartType)).BeginInit();
             this.FundExpander.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SummaryTabControl)).BeginInit();
             this.SummaryTabControl.SuspendLayout();
@@ -3499,7 +3489,6 @@ namespace Budget
             // 
             // FundTab
             // 
-            this.FundTab.Controls.Add(this.ChartType);
             this.FundTab.Controls.Add(this.FundExpander);
             this.FundTab.Controls.Add(this.FundChart);
             this.FundTab.Image = null;
@@ -3513,41 +3502,6 @@ namespace Budget
             this.FundTab.Tag = "FundName";
             this.FundTab.Text = "Fund";
             this.FundTab.ThemesEnabled = false;
-            // 
-            // ChartType
-            // 
-            activeStateCollection1.BackColor = System.Drawing.Color.Transparent;
-            activeStateCollection1.BorderColor = System.Drawing.Color.Transparent;
-            activeStateCollection1.ForeColor = System.Drawing.Color.Transparent;
-            activeStateCollection1.HoverColor = System.Drawing.Color.Transparent;
-            activeStateCollection1.Image = global::Ninja.Properties.Resources.Graph_03;
-            activeStateCollection1.Text = "Column";
-            this.ChartType.ActiveState = activeStateCollection1;
-            this.ChartType.DisplayMode = Syncfusion.Windows.Forms.Tools.DisplayType.Image;
-            this.ChartType.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ChartType.ForeColor = System.Drawing.Color.Black;
-            inactiveStateCollection1.BackColor = System.Drawing.Color.Transparent;
-            inactiveStateCollection1.BorderColor = System.Drawing.Color.Transparent;
-            inactiveStateCollection1.ForeColor = System.Drawing.Color.Transparent;
-            inactiveStateCollection1.HoverColor = System.Drawing.Color.Transparent;
-            inactiveStateCollection1.Image = global::Ninja.Properties.Resources.Chart_2_WF;
-            inactiveStateCollection1.Text = "Pie";
-            this.ChartType.InactiveState = inactiveStateCollection1;
-            this.ChartType.Location = new System.Drawing.Point(1429, 15);
-            this.ChartType.MinimumSize = new System.Drawing.Size(52, 20);
-            this.ChartType.Name = "ChartType";
-            this.ChartType.Renderer = toggleButtonRenderer1;
-            this.ChartType.Size = new System.Drawing.Size(133, 54);
-            sliderCollection1.BackColor = System.Drawing.Color.SteelBlue;
-            sliderCollection1.BorderColor = System.Drawing.Color.Transparent;
-            sliderCollection1.DisplayMode = Syncfusion.Windows.Forms.Tools.DisplayType.Image;
-            sliderCollection1.ForeColor = System.Drawing.Color.Transparent;
-            sliderCollection1.HoverColor = System.Drawing.Color.SteelBlue;
-            sliderCollection1.Width = 20;
-            this.ChartType.Slider = sliderCollection1;
-            this.ChartType.TabIndex = 108;
-            this.ChartType.Text = "toggleButton1";
-            this.ChartType.ToggleState = Syncfusion.Windows.Forms.Tools.ToggleButtonState.Active;
             // 
             // FundExpander
             // 
@@ -3863,7 +3817,6 @@ namespace Budget
             this.expandCollapsePanel1.ResumeLayout(false);
             this.expandCollapsePanel1.PerformLayout();
             this.FundTab.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.ChartType)).EndInit();
             this.FundExpander.ResumeLayout(false);
             this.FundExpander.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SummaryTabControl)).EndInit();
@@ -3871,145 +3824,142 @@ namespace Budget
             ((System.ComponentModel.ISupportInitialize)(this.BindingSource)).EndInit();
             this.ResumeLayout(false);
 
-                }
-
-                #endregion
-                private BindingSource BindingSource;
-                private toolstripitem toolstripitem1;
-                private toolstripitem toolstripitem2;
-                private ToolStripButton toolStripButton1;
-                private ToolStripLabel toolStripLabel1;
-                private ToolStripButton toolStripButton3;
-                private ToolStripSeparator toolStripSeparator4;
-                private ToolStripButton toolStripButton4;
-                private ToolStripSeparator toolStripSeparator5;
-                private ToolStripTextBox toolStripTextBox1;
-                private ToolStripSeparator toolStripSeparator6;
-                private ToolStripButton toolStripButton5;
-                private ToolStripSeparator toolStripSeparator7;
-                private ToolStripButton toolStripButton6;
-                private ToolStripSeparator toolStripSeparator8;
-                private ToolStripButton toolStripButton8;
-                private ToolStripSeparator toolStripSeparator2;
-                private ToolStripSeparator toolStripSeparator9;
-                private ToolStripButton toolStripButton2;
-                private ToolStripSeparator toolStripSeparator1;
-                private TabPageAdv tabPageAdv4;
-                private CalculatorControl calculatorControl1;
-                private TabPageAdv tabPageAdv3;
-                protected ChartControl chartControl1;
-                private ChartTitle chartTitle1;
-                private TabPageAdv tabPageAdv2;
-                private MetroSetLabel dd;
-                private MetroSetTextBox metroSetTextBox2;
-                private MetroSetTextBox rcc;
-                private MetroSetLabel metroSetLabel11;
-                private MetroSetLabel metroSetLabel7;
-                private MetroSetTextBox Amount2;
-                private MetroSetTextBox Amount1;
-                private MetroSetTextBox cd;
-                private MetroSetTextBox bb;
-                private MetroSetLabel metroSetLabel6;
-                private MetroSetLabel metroSetLabel5;
-                private MetroSetLabel metroSetLabel4;
-                private MetroSetLabel metroSetLabel3;
-                private MetroSetTextBox ff;
-                private MetroSetButton metroSetButton2;
-                private MetroSetLabel metroSetLabel10;
-                private MetroSetButton metroSetButton1;
-                private MetroSetLabel metroSetLabel15;
-                private MetroSetTextBox yy;
-                private MetroSetTextBox o;
-                private TabControlAdv MiniTabControl1;
-                private TabPageAdv DatabaseTab;
-                private GroupBox groupBox5;
-                private TabControlAdv tabControlAdv1;
-                private TabPageAdv tabPageAdv1;
-                private MetroSetLabel metroSetLabel1;
-                private MetroSetLabel metroSetLabel2;
-                private MetroSetTextBox metroSetTextBox1;
-                private MetroSetTextBox Amount;
-                private MetroSetTextBox Code;
-                private MetroSetTextBox BOC;
-                private MetroSetLabel metroSetLabel12;
-                private MetroSetLabel metroSetLabel13;
-                private MetroSetLabel metroSetLabel14;
-                private MetroSetLabel metroSetLabel16;
-                private MetroSetTextBox RC;
-                private MetroSetTextBox Fund;
-                private MetroSetButton metroSetButton3;
-                private MetroSetLabel metroSetLabel17;
-                private MetroSetButton metroSetButton4;
-                private MetroSetLabel metroSetLabel18;
-                private MetroSetTextBox BFY;
-                private MetroSetTextBox Org;
-                private TabPageAdv tabPageAdv5;
-                protected ChartControl PrcChart;
-                private TabPageAdv tabPageAdv6;
-                private CalculatorControl calculatorControl2;
-                private BindingNavigator Navigator;
-                private ToolStripButton toolStripButton7;
-                private ToolStripLabel toolStripLabel2;
-                private ToolStripButton toolStripButton9;
-                private ToolStripSeparator toolStripSeparator3;
-                private ToolStripButton toolStripButton10;
-                private ToolStripSeparator toolStripSeparator10;
-                private ToolStripTextBox toolStripTextBox2;
-                private ToolStripSeparator toolStripSeparator11;
-                private ToolStripButton toolStripButton11;
-                private ToolStripSeparator toolStripSeparator12;
-                private ToolStripButton toolStripButton12;
-                private ToolStripSeparator toolStripSeparator13;
-                private ToolStripButton toolStripButton13;
-                private ToolStripSeparator toolStripSeparator14;
-                private ToolStripSeparator toolStripSeparator16;
-                private GroupBox groupBox1;
-                private DataGridView Grid;
-                private MetroSetLabel lblCount;
-                private MetroLink ReturnButton;
-                private MetroSetLabel lblTotal;
-                private MetroSetLabel metroSetLabel9;
-                private MetroSetLabel metroSetLabel8;
-                private GroupBox FilterGroupBox;
-                private MetroSetComboBox GridCodeFilter;
-                private MetroSetComboBox GridBocFilter;
-                private MetroSetComboBox GridFundFilter;
-                private TabPageAdv ProjectTab;
-                private MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel expandCollapsePanel7;
-                protected ChartControl ProjectChart;
-                private ButtonEditChildButton buttonEditChildButton1;
-                private TabPageAdv AreaTab;
-                private MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel expandCollapsePanel6;
-                protected ChartControl AreaChart;
-                private TabPageAdv DivisionTab;
-                private MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel expandCollapsePanel5;
-                private MetroSetComboBox DivisionFilter;
-                protected ChartControl DivisionChart;
-                private TabPageAdv ObjectiveTab;
-                private MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel expandCollapsePanel4;
-                protected ChartControl ObjectiveChart;
-                private TabPageAdv GoalTab;
-                private MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel expandCollapsePanel3;
-                protected ChartControl GoalChart;
-                private TabPageAdv NpmTab;
-                private MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel expandCollapsePanel2;
-                protected ChartControl NpmChart;
-                private TabPageAdv BocTab;
-                private MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel expandCollapsePanel1;
-                protected ChartControl BocChart;
-                private TabPageAdv FundTab;
-                private MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel FundExpander;
-                protected ChartControl FundChart;
-                private TabControlAdv SummaryTabControl;
-                private ToggleButton ChartType;
-                private MetroSetComboBox ObjectiveFilter;
-                private MetroSetComboBox GoalFilter;
-                private MetroSetComboBox NpmFilter;
-                private MetroSetComboBox BocFilter;
-                private MetroSetComboBox FundFilter;
-                private MetroSetComboBox ProjectFilter;
-                private MetroSetComboBox AreaFilter;
-            }
         }
+
+        #endregion
+        private BindingSource BindingSource;
+        private toolstripitem toolstripitem1;
+        private toolstripitem toolstripitem2;
+        private ToolStripButton toolStripButton1;
+        private ToolStripLabel toolStripLabel1;
+        private ToolStripButton toolStripButton3;
+        private ToolStripSeparator toolStripSeparator4;
+        private ToolStripButton toolStripButton4;
+        private ToolStripSeparator toolStripSeparator5;
+        private ToolStripTextBox toolStripTextBox1;
+        private ToolStripSeparator toolStripSeparator6;
+        private ToolStripButton toolStripButton5;
+        private ToolStripSeparator toolStripSeparator7;
+        private ToolStripButton toolStripButton6;
+        private ToolStripSeparator toolStripSeparator8;
+        private ToolStripButton toolStripButton8;
+        private ToolStripSeparator toolStripSeparator2;
+        private ToolStripSeparator toolStripSeparator9;
+        private ToolStripButton toolStripButton2;
+        private ToolStripSeparator toolStripSeparator1;
+        private TabPageAdv tabPageAdv4;
+        private CalculatorControl calculatorControl1;
+        private TabPageAdv tabPageAdv3;
+        protected ChartControl chartControl1;
+        private ChartTitle chartTitle1;
+        private TabPageAdv tabPageAdv2;
+        private MetroSetLabel dd;
+        private MetroSetTextBox metroSetTextBox2;
+        private MetroSetTextBox rcc;
+        private MetroSetLabel metroSetLabel11;
+        private MetroSetLabel metroSetLabel7;
+        private MetroSetTextBox Amount2;
+        private MetroSetTextBox Amount1;
+        private MetroSetTextBox cd;
+        private MetroSetTextBox bb;
+        private MetroSetLabel metroSetLabel6;
+        private MetroSetLabel metroSetLabel5;
+        private MetroSetLabel metroSetLabel4;
+        private MetroSetLabel metroSetLabel3;
+        private MetroSetTextBox ff;
+        private MetroSetButton metroSetButton2;
+        private MetroSetLabel metroSetLabel10;
+        private MetroSetButton metroSetButton1;
+        private MetroSetLabel metroSetLabel15;
+        private MetroSetTextBox yy;
+        private MetroSetTextBox o;
+        private TabControlAdv MiniTabControl1;
+        private TabPageAdv DatabaseTab;
+        private GroupBox groupBox5;
+        private TabControlAdv tabControlAdv1;
+        private TabPageAdv tabPageAdv1;
+        private MetroSetLabel metroSetLabel1;
+        private MetroSetLabel metroSetLabel2;
+        private MetroSetTextBox metroSetTextBox1;
+        private MetroSetTextBox Amount;
+        private MetroSetTextBox Code;
+        private MetroSetTextBox BOC;
+        private MetroSetLabel metroSetLabel12;
+        private MetroSetLabel metroSetLabel13;
+        private MetroSetLabel metroSetLabel14;
+        private MetroSetLabel metroSetLabel16;
+        private MetroSetTextBox RC;
+        private MetroSetTextBox Fund;
+        private MetroSetButton metroSetButton3;
+        private MetroSetLabel metroSetLabel17;
+        private MetroSetButton metroSetButton4;
+        private MetroSetLabel metroSetLabel18;
+        private MetroSetTextBox BFY;
+        private MetroSetTextBox Org;
+        private TabPageAdv tabPageAdv5;
+        protected ChartControl PrcChart;
+        private TabPageAdv tabPageAdv6;
+        private CalculatorControl calculatorControl2;
+        private BindingNavigator Navigator;
+        private ToolStripButton toolStripButton7;
+        private ToolStripLabel toolStripLabel2;
+        private ToolStripButton toolStripButton9;
+        private ToolStripSeparator toolStripSeparator3;
+        private ToolStripButton toolStripButton10;
+        private ToolStripSeparator toolStripSeparator10;
+        private ToolStripTextBox toolStripTextBox2;
+        private ToolStripSeparator toolStripSeparator11;
+        private ToolStripButton toolStripButton11;
+        private ToolStripSeparator toolStripSeparator12;
+        private ToolStripButton toolStripButton12;
+        private ToolStripSeparator toolStripSeparator13;
+        private ToolStripButton toolStripButton13;
+        private ToolStripSeparator toolStripSeparator14;
+        private ToolStripSeparator toolStripSeparator16;
+        private GroupBox groupBox1;
+        private DataGridView Grid;
+        private MetroSetLabel lblCount;
+        private MetroLink ReturnButton;
+        private MetroSetLabel lblTotal;
+        private MetroSetLabel metroSetLabel9;
+        private MetroSetLabel metroSetLabel8;
+        private GroupBox FilterGroupBox;
+        private MetroSetComboBox GridCodeFilter;
+        private MetroSetComboBox GridBocFilter;
+        private MetroSetComboBox GridFundFilter;
+        private TabPageAdv ProjectTab;
+        private MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel expandCollapsePanel7;
+        protected ChartControl ProjectChart;
+        private ButtonEditChildButton buttonEditChildButton1;
+        private TabPageAdv AreaTab;
+        private MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel expandCollapsePanel6;
+        protected ChartControl AreaChart;
+        private TabPageAdv DivisionTab;
+        private MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel expandCollapsePanel5;
+        private MetroSetComboBox DivisionFilter;
+        protected ChartControl DivisionChart;
+        private TabPageAdv ObjectiveTab;
+        private MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel expandCollapsePanel4;
+        protected ChartControl ObjectiveChart;
+        private TabPageAdv GoalTab;
+        private MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel expandCollapsePanel3;
+        protected ChartControl GoalChart;
+        private TabPageAdv NpmTab;
+        private MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel expandCollapsePanel2;
+        protected ChartControl NpmChart;
+        private TabPageAdv BocTab;
+        private MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel expandCollapsePanel1;
+        protected ChartControl BocChart;
+        private TabPageAdv FundTab;
+        private MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel FundExpander;
+        protected ChartControl FundChart;
+        private TabControlAdv SummaryTabControl;
+        private MetroSetComboBox ObjectiveFilter;
+        private MetroSetComboBox GoalFilter;
+        private MetroSetComboBox NpmFilter;
+        private MetroSetComboBox BocFilter;
+        private MetroSetComboBox FundFilter;
+        private MetroSetComboBox ProjectFilter;
+        private MetroSetComboBox AreaFilter;
     }
 }

@@ -1,19 +1,13 @@
-﻿namespace Budget
+﻿namespace Budget.Ninja.Data
 {
-    namespace Ninja
+    public class Personnel
     {
-        namespace Data
+        #region Constructors
+
+        public Personnel()
         {
-            public class Personnel
-            {
-                #region Constructors
-
-                public Personnel()
-                {
-                }
-
-                #endregion
-            }
         }
+
+        #endregion
     }
 }

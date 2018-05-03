@@ -8,5 +8,10 @@ namespace Ninja.Data
         {
             InitializeComponent();
         }
+
+        private void groupBox3_Enter(object sender, System.EventArgs e)
+        {
+
+        }
     }
 }

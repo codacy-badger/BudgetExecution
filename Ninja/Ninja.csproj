@@ -457,9 +457,9 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <AdditionalFiles Include="Report\BudgetControlTemplate.xlsx">
+    <EmbeddedResource Include="Report\BudgetControlTemplate.xlsx">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </AdditionalFiles>
+    </EmbeddedResource>
     <None Include="SqlServer\R6.xsc">
       <DependentUpon>R6.xsd</DependentUpon>
     </None>

@@ -1,35 +1,28 @@
-﻿namespace Budget
+﻿namespace Budget.Ninja.Data
 {
-    namespace Ninja
+    public class Fund
     {
-        namespace Data
+        //Constructors
+        public Fund(string code, string bfy)
         {
-            public class Fund
-            {
-                //Constructors
-                public Fund(string code, string bfy)
-                {
-                    Code = code;
-                    FiscalYear = bfy;
-                    Name = Info.GetAppropriationName(code);
-                    Title = Info.GetAppropriationTitle(code);
-                    TreasurySymbol = Info.GetTreasurySymbol(code);
-                }
+            Code = code;
+            FiscalYear = bfy;
+            Name = Info.GetAppropriationName(code);
+            Title = Info.GetAppropriationTitle(code);
+            TreasurySymbol = Info.GetTreasurySymbol(code);
+        }
 
-                //Properties
-                public string Code { get; }
+        //Properties
+        public string Code { get; }
+        public string FiscalYear { get; }
+        public string Name { get; }
+        public string Title { get; }
+        public string TreasurySymbol { get; }
 
-                public string FiscalYear { get; }
-                public string Name { get; }
-                public string Title { get; }
-                public string TreasurySymbol { get; }
-
-                //Methods
-                public override string ToString()
-                {
-                    return Code;
-                }
-            }
+        //Methods
+        public override string ToString()
+        {
+            return Code;
         }
     }
 }

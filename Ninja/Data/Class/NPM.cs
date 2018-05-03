@@ -1,43 +1,27 @@
-﻿namespace Budget
+﻿namespace Budget.Ninja.Data
 {
-    namespace Ninja
+    public class NPM
     {
-        namespace Data
+        //Constructors
+        public NPM(HQ code)
         {
-            public class NPM
-            {
-                #region Properties
+            Code = code.ToString();
+        }
+        public NPM(string code)
+        {
+            Code = code;
+        }
 
-                public string Code { get; }
-                public string Name { get; set; }
-                public string RPIO { get; set; }
-                public string Title { get; set; }
+        //Properties
+        public string Code { get; }
+        public string Name { get; set; }
+        public string RPIO { get; set; }
+        public string Title { get; set; }
 
-                #endregion Properties
-
-                #region Constructors
-
-                public NPM(HQ code)
-                {
-                    Code = code.ToString();
-                }
-
-                public NPM(string code)
-                {
-                    Code = code;
-                }
-
-                #endregion Constructors
-
-                #region Methods
-
-                public override string ToString()
-                {
-                    return Code;
-                }
-
-                #endregion Methods
-            }
+        //Methods
+        public override string ToString()
+        {
+            return Code;
         }
     }
 }
