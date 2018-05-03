@@ -1,10 +1,8 @@
-namespace Budget
+using Ninja.Data.Forms;
+
+namespace Budget.Ninja.Data
 {
-    namespace Ninja
-    {
-        namespace Data
-        {
-            public partial class FunctionalityForm : Syncfusion.Windows.Forms.MetroForm
+    public partial class FunctionalityForm : Syncfusion.Windows.Forms.MetroForm
             {
                 public FunctionalityForm()
                 {
@@ -26,5 +24,3 @@ namespace Budget
                 }
             }
         }
-    }
-}

@@ -1,4 +1,4 @@
-﻿namespace Ninja.Data.Forms
+﻿namespace Budget.Ninja.Data
 {
     partial class Selector
     {

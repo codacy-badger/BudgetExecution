@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Data;
-using Ninja.Forms;
+using Ninja.Data;
 using Syncfusion.Windows.Forms.Chart;
 
 namespace Budget.Ninja.Data

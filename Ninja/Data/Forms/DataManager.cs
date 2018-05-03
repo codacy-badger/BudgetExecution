@@ -3,16 +3,13 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Windows.Forms;
+using Budget.Ninja.Data;
 using MetroSet_UI.Controls;
 using Metro = Syncfusion.Windows.Forms.MetroForm;
 
-namespace Budget
+namespace Ninja.Data.Forms
 {
-    namespace Ninja
-    {
-        namespace Data
-        {
-            public partial class DataManager : Metro
+    public partial class DataManager : Metro
             {
                 //Constructors
                 public DataManager(Source source)
@@ -161,7 +158,7 @@ namespace Budget
                     FundFilter.Tag = filter;
                     var fund = filter.SelectedItem.ToString();
                     BindingSource.Filter = $"FundName = '{fund}'";
-                    var boc = ProgramElements[Budget.Ninja.Data.PrcField.BocName.ToString()];
+                    var boc = ProgramElements[PrcField.BocName.ToString()];
                     foreach (string b in boc)
                         BocFilter.Items.Add(b);
                     BocFilter.Visible = true;
@@ -258,5 +255,3 @@ namespace Budget
                 }
             }
         }
-    }
-}

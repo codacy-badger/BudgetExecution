@@ -6,7 +6,7 @@ using System.Windows.Forms;
 using Budget.Ninja.Data;
 using MetroSet_UI.Controls;
 
-namespace Ninja.Data
+namespace Ninja.Data.Forms
 {
     public partial class DataMaster : Syncfusion.Windows.Forms.MetroForm
     {

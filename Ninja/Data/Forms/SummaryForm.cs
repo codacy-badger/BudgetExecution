@@ -8,6 +8,7 @@ using MetroFramework.Controls;
 using MetroSet_UI.Controls;
 using Syncfusion.Windows.Forms.Chart;
 using Syncfusion.Windows.Forms.Tools;
+using Budget.Ninja.Data;
 using MetroForm = Syncfusion.Windows.Forms.MetroForm;
 
 namespace Budget.Ninja.Data
@@ -93,7 +94,6 @@ namespace Budget.Ninja.Data
         private string[] TabNames { get; set; }
 
         //Methods
-
         private void Form_Load(object sender, EventArgs e)
         {
             try

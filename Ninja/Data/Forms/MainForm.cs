@@ -1,12 +1,10 @@
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
-using Budget.Ninja.Data;
-using Ninja.Data;
 using Ninja.Data.Forms;
 using Syncfusion.Windows.Forms.Chart;
 
-namespace Ninja.Forms
+namespace Budget.Ninja.Data
 {
     public partial class MainForm : Syncfusion.Windows.Forms.MetroForm
     {

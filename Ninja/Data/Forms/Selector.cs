@@ -1,15 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
-using Budget.Ninja.Data;
 using Ninja.Data;
 using Syncfusion.Windows.Forms.Chart;
 using Syncfusion.Windows.Forms.Tools;
 using Syncfusion.Windows.Forms;
 using System.IO;
 using System.Drawing;
+using Ninja.Data.Forms;
 
-namespace Ninja.Data.Forms
+namespace Budget.Ninja.Data
 {
     public partial class Selector : MetroForm
     {

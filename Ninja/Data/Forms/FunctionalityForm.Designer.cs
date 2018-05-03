@@ -15,40 +15,36 @@ using MetroForm = Syncfusion.Windows.Forms.MetroForm;
 
 #endregion
 
-namespace Budget
+namespace Budget.Ninja.Data
 {
-    namespace Ninja
+    partial class FunctionalityForm
     {
-        namespace Data
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
         {
-            partial class FunctionalityForm
+            if (disposing && (components != null))
             {
-                /// <summary>
-                /// Required designer variable.
-                /// </summary>
-                private System.ComponentModel.IContainer components = null;
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
 
-                /// <summary>
-                /// Clean up any resources being used.
-                /// </summary>
-                /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-                protected override void Dispose(bool disposing)
-                {
-                    if (disposing && (components != null))
-                    {
-                        components.Dispose( );
-                    }
-                    base.Dispose(disposing);
-                }
+        #region Windows Form Designer generated code
 
-                #region Windows Form Designer generated code
-
-                /// <summary>
-                /// Required method for Designer support - do not modify
-                /// the contents of this method with the code editor.
-                /// </summary>
-                private void InitializeComponent( )
-                {
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
             this.components = new System.ComponentModel.Container();
             Syncfusion.Windows.Forms.Tools.TextItem textItem1 = new Syncfusion.Windows.Forms.Tools.TextItem();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FunctionalityForm));
@@ -469,28 +465,26 @@ namespace Budget
             this.splitContainer1.ResumeLayout(false);
             this.ResumeLayout(false);
 
-                }
-
-                #endregion
-
-                private Syncfusion.Windows.Forms.Tools.Carousel DivisionCarousel;
-                private Syncfusion.Windows.Forms.Tools.Carousel DatabaseCarousel;
-                private System.Windows.Forms.SplitContainer splitContainer1;
-                private HubTile hubTile1;
-                private HubTile DataTile;
-                private Button button12;
-                private Button button11;
-                private Button button10;
-                private Button button9;
-                private Button button8;
-                private Button button7;
-                private Button button6;
-                private Button button5;
-                private Button button4;
-                private Button button3;
-                private Button button2;
-                private Button button1;
-            } 
         }
+
+        #endregion
+
+        private Syncfusion.Windows.Forms.Tools.Carousel DivisionCarousel;
+        private Syncfusion.Windows.Forms.Tools.Carousel DatabaseCarousel;
+        private System.Windows.Forms.SplitContainer splitContainer1;
+        private HubTile hubTile1;
+        private HubTile DataTile;
+        private Button button12;
+        private Button button11;
+        private Button button10;
+        private Button button9;
+        private Button button8;
+        private Button button7;
+        private Button button6;
+        private Button button5;
+        private Button button4;
+        private Button button3;
+        private Button button2;
+        private Button button1;
     }
 }

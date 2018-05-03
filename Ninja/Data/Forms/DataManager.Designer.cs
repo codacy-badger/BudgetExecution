@@ -5,41 +5,37 @@
 // licensing@syncfusion.com. Any infringement will be prosecuted under
 // applicable laws. 
 #endregion
-namespace Budget
+namespace Ninja.Data.Forms
 {
-    namespace Ninja
+
+    partial class DataManager
     {
-        namespace Data
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
         {
-
-            partial class DataManager
+            if (disposing && (components != null))
             {
-                /// <summary>
-                /// Required designer variable.
-                /// </summary>
-                private System.ComponentModel.IContainer components = null;
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
 
-                /// <summary>
-                /// Clean up any resources being used.
-                /// </summary>
-                /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-                protected override void Dispose(bool disposing)
-                {
-                    if (disposing && (components != null))
-                    {
-                        components.Dispose( );
-                    }
-                    base.Dispose(disposing);
-                }
+        #region Windows Form Designer generated code
 
-                #region Windows Form Designer generated code
-
-                /// <summary>
-                /// Required method for Designer support - do not modify
-                /// the contents of this method with the code editor.
-                /// </summary>
-                private void InitializeComponent( )
-                {
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
             this.components = new System.ComponentModel.Container();
             Syncfusion.Windows.Forms.Chart.ChartSeries chartSeries1 = new Syncfusion.Windows.Forms.Chart.ChartSeries();
             Syncfusion.Windows.Forms.Chart.ChartCustomShapeInfo chartCustomShapeInfo1 = new Syncfusion.Windows.Forms.Chart.ChartCustomShapeInfo();
@@ -1186,64 +1182,62 @@ namespace Budget
             ((System.ComponentModel.ISupportInitialize)(this.BindingSource)).EndInit();
             this.ResumeLayout(false);
 
-                }
-
-                #endregion
-                private System.Windows.Forms.BindingSource BindingSource;
-                private Syncfusion.Windows.Forms.Tools.TabControlAdv MiniTabControl1;
-                private Syncfusion.Windows.Forms.Tools.TabPageAdv tabPageAdv2;
-                protected Syncfusion.Windows.Forms.Chart.ChartControl PrcChart;
-                private System.Windows.Forms.GroupBox groupBox1;
-                private MetroFramework.Controls.MetroLink ReturnButton;
-                private System.Windows.Forms.BindingNavigator Navigator;
-                private System.Windows.Forms.ToolStripButton toolStripButton1;
-                private System.Windows.Forms.ToolStripLabel toolStripLabel1;
-                private System.Windows.Forms.ToolStripButton toolStripButton3;
-                private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
-                private System.Windows.Forms.ToolStripButton toolStripButton4;
-                private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
-                private System.Windows.Forms.ToolStripTextBox toolStripTextBox1;
-                private System.Windows.Forms.ToolStripSeparator toolStripSeparator6;
-                private System.Windows.Forms.ToolStripButton toolStripButton5;
-                private System.Windows.Forms.ToolStripSeparator toolStripSeparator7;
-                private System.Windows.Forms.ToolStripButton toolStripButton6;
-                private System.Windows.Forms.ToolStripSeparator toolStripSeparator8;
-                private System.Windows.Forms.ToolStripSeparator toolStripSeparator9;
-                private MetroSet_UI.Controls.MetroSetLabel metroSetLabel9;
-                private MetroSet_UI.Controls.MetroSetLabel metroSetLabel8;
-                private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-                private Syncfusion.Windows.Forms.Tools.TabPageAdv tabPageAdv3;
-                private Syncfusion.Windows.Forms.Tools.CalculatorControl calculatorControl1;
-                private System.Windows.Forms.ToolStripButton toolStripButton8;
-                private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
-                private MetroSet_UI.Controls.MetroSetTextBox bfy;
-                private MetroSet_UI.Controls.MetroSetTextBox org;
-                private MetroSet_UI.Controls.MetroSetLabel metroSetLabel15;
-                private MetroSet_UI.Controls.MetroSetLabel metroSetLabel10;
-                private MetroSet_UI.Controls.MetroSetButton metroSetButton2;
-                private MetroSet_UI.Controls.MetroSetButton metroSetButton1;
-                private Syncfusion.Windows.Forms.Tools.TabPageAdv tabPageAdv1;
-                private System.Windows.Forms.GroupBox FilterGroupBox;
-                private System.Windows.Forms.GroupBox groupBox5;
-                private MetroSet_UI.Controls.MetroSetLabel metroSetLabel2;
-                private MetroSet_UI.Controls.MetroSetLabel metroSetLabel1;
-                private MetroSet_UI.Controls.MetroSetLabel metroSetLabel11;
-                private MetroSet_UI.Controls.MetroSetLabel metroSetLabel7;
-                private MetroSet_UI.Controls.MetroSetTextBox amount2;
-                private MetroSet_UI.Controls.MetroSetTextBox code;
-                private MetroSet_UI.Controls.MetroSetTextBox boc;
-                private MetroSet_UI.Controls.MetroSetLabel metroSetLabel6;
-                private MetroSet_UI.Controls.MetroSetLabel metroSetLabel4;
-                private MetroSet_UI.Controls.MetroSetLabel metroSetLabel3;
-                private MetroSet_UI.Controls.MetroSetTextBox rc;
-                private MetroSet_UI.Controls.MetroSetTextBox fund;
-                private MetroSet_UI.Controls.MetroSetComboBox CodeFilter;
-                private MetroSet_UI.Controls.MetroSetComboBox BocFilter;
-                private MetroSet_UI.Controls.MetroSetComboBox FundFilter;
-                private System.Windows.Forms.DataGridView Grid;
-                private MetroSet_UI.Controls.MetroSetTextBox amount1;
-                private MetroSet_UI.Controls.MetroSetLabel metroSetLabel5;
-            }
         }
-    } 
+
+        #endregion
+        private System.Windows.Forms.BindingSource BindingSource;
+        private Syncfusion.Windows.Forms.Tools.TabControlAdv MiniTabControl1;
+        private Syncfusion.Windows.Forms.Tools.TabPageAdv tabPageAdv2;
+        protected Syncfusion.Windows.Forms.Chart.ChartControl PrcChart;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private MetroFramework.Controls.MetroLink ReturnButton;
+        private System.Windows.Forms.BindingNavigator Navigator;
+        private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.ToolStripLabel toolStripLabel1;
+        private System.Windows.Forms.ToolStripButton toolStripButton3;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
+        private System.Windows.Forms.ToolStripButton toolStripButton4;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
+        private System.Windows.Forms.ToolStripTextBox toolStripTextBox1;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator6;
+        private System.Windows.Forms.ToolStripButton toolStripButton5;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator7;
+        private System.Windows.Forms.ToolStripButton toolStripButton6;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator8;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator9;
+        private MetroSet_UI.Controls.MetroSetLabel metroSetLabel9;
+        private MetroSet_UI.Controls.MetroSetLabel metroSetLabel8;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private Syncfusion.Windows.Forms.Tools.TabPageAdv tabPageAdv3;
+        private Syncfusion.Windows.Forms.Tools.CalculatorControl calculatorControl1;
+        private System.Windows.Forms.ToolStripButton toolStripButton8;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private MetroSet_UI.Controls.MetroSetTextBox bfy;
+        private MetroSet_UI.Controls.MetroSetTextBox org;
+        private MetroSet_UI.Controls.MetroSetLabel metroSetLabel15;
+        private MetroSet_UI.Controls.MetroSetLabel metroSetLabel10;
+        private MetroSet_UI.Controls.MetroSetButton metroSetButton2;
+        private MetroSet_UI.Controls.MetroSetButton metroSetButton1;
+        private Syncfusion.Windows.Forms.Tools.TabPageAdv tabPageAdv1;
+        private System.Windows.Forms.GroupBox FilterGroupBox;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private MetroSet_UI.Controls.MetroSetLabel metroSetLabel2;
+        private MetroSet_UI.Controls.MetroSetLabel metroSetLabel1;
+        private MetroSet_UI.Controls.MetroSetLabel metroSetLabel11;
+        private MetroSet_UI.Controls.MetroSetLabel metroSetLabel7;
+        private MetroSet_UI.Controls.MetroSetTextBox amount2;
+        private MetroSet_UI.Controls.MetroSetTextBox code;
+        private MetroSet_UI.Controls.MetroSetTextBox boc;
+        private MetroSet_UI.Controls.MetroSetLabel metroSetLabel6;
+        private MetroSet_UI.Controls.MetroSetLabel metroSetLabel4;
+        private MetroSet_UI.Controls.MetroSetLabel metroSetLabel3;
+        private MetroSet_UI.Controls.MetroSetTextBox rc;
+        private MetroSet_UI.Controls.MetroSetTextBox fund;
+        private MetroSet_UI.Controls.MetroSetComboBox CodeFilter;
+        private MetroSet_UI.Controls.MetroSetComboBox BocFilter;
+        private MetroSet_UI.Controls.MetroSetComboBox FundFilter;
+        private System.Windows.Forms.DataGridView Grid;
+        private MetroSet_UI.Controls.MetroSetTextBox amount1;
+        private MetroSet_UI.Controls.MetroSetLabel metroSetLabel5;
+    }
 }

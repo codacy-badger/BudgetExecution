@@ -1,5 +1,5 @@
-﻿#region Using Directives
-
+﻿
+using Budget.Ninja.Data;
 using Syncfusion.Windows.Forms.Chart;
 using Syncfusion.Windows.Forms.Tools;
 using System;
@@ -12,8 +12,6 @@ using System.Windows.Forms;
 using MetroSet_UI.Controls;
 using MetroFramework.Controls;
 using MetroForm = Syncfusion.Windows.Forms.MetroForm;
-
-#endregion
 
 namespace Budget.Ninja.Data
 {
@@ -36,8 +34,6 @@ namespace Budget.Ninja.Data
             }
             base.Dispose(disposing);
         }
-
-        #region Windows Form Designer generated code
 
         /// <summary>
         /// Required method for Designer support - do not modify
@@ -3826,7 +3822,6 @@ namespace Budget.Ninja.Data
 
         }
 
-        #endregion
         private BindingSource BindingSource;
         private toolstripitem toolstripitem1;
         private toolstripitem toolstripitem2;
