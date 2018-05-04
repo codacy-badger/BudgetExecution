@@ -5,11 +5,12 @@ using System.Data.SQLite;
 using System.Windows.Forms;
 using Budget.Ninja.Data;
 using MetroSet_UI.Controls;
+using Syncfusion.Windows.Forms;
 
 
 namespace BudgetExecution
 {
-    public partial class DataMaster : Syncfusion.Windows.Forms.MetroForm
+    public partial class DataMaster : MetroForm
     {
         //Constructors
         public DataMaster()
