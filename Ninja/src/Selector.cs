@@ -34,7 +34,7 @@ namespace BudgetExecution
             CarouselImageCollection icollect = ViewerCarousel.ImageListCollection;
             ViewerCarousel.ImageSlides = true;
             ViewerCarousel.UseOriginalImageinPreview = true;
-            string[] images = Directory.GetFiles(@"C:\Users\terry\Documents\Visual Studio 2017\Projects\Budget\Ninja\Resources\NinjaDivisionImages");
+            string[] images = Directory.GetFiles(@"C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\Resources\NinjaDivisionImages");
             foreach (string i in images)
             {
                 var p = Path.GetFileNameWithoutExtension(i);

@@ -16,7 +16,7 @@ namespace BudgetExecution
             Source = source;
             TableName = source.ToString();
             SelectStatement = $"SELECT * FROM {source.ToString()}";
-            Connection = new SqlConnection(@"data source=C:\Users\terry\Documents\Visual Studio 2017\Projects\Budget\database\sqlclient\R6.mdf");
+            Connection = new SqlConnection(@"data source=C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\database\SqlServer\R6.mdf");
             SelectCommand = new SqlCommand(SelectStatement, Connection);
             Adapter = new SqlDataAdapter(SelectCommand);
             CommandBuilder = GetCommandBuilder(Adapter);

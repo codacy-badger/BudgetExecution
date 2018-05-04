@@ -341,11 +341,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="SqlServer\R6.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>R6.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Resources\NinjaApplicationImages.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -460,20 +455,7 @@
     <EmbeddedResource Include="Report\BudgetControlTemplate.xlsx">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
-    <None Include="SqlServer\R6.xsc">
-      <DependentUpon>R6.xsd</DependentUpon>
-    </None>
-    <None Include="SqlServer\R6.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>R6.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="SqlServer\R6.xss">
-      <DependentUpon>R6.xsd</DependentUpon>
-    </None>
     <None Include="Resources\epa_seal_medium.ico" />
-    <None Include="SQLite\R6.db" />
-    <None Include="SQLite\R6.db.sqbpro" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -518,16 +500,6 @@
     <None Include="Resources\Upload-02-WF.png" />
     <None Include="Resources\Upper Alphabet.png" />
     <None Include="Resources\Upper Roman.png" />
-    <Content Include="SqlServer\R6.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="SqlServer\R6_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>R6.mdf</DependentUpon>
-    </Content>
-    <Content Include="SqlCe\R6.sdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
     <Content Include="database\sql\CREATE_TABLE_P6.sql" />
     <Content Include="database\sql\create_view_ej.sql" />
     <Content Include="database\sql\create_view_en.sql" />

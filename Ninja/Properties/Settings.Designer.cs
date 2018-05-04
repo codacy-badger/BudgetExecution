@@ -26,8 +26,8 @@ namespace BudgetExecution.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("data source=\"C:\\Users\\terry\\Documents\\Visual Studio 2017\\Projects\\Budget\\Ninja\\SQ" +
-            "Lite\\R6.db\"")]
+        [global::System.Configuration.DefaultSettingValueAttribute("data source=\"C:\\Users\\terry\\Documents\\Visual Studio 2017\\Projects\\BudgetExecution" +
+            "\\Ninja\\database\\SQLite\\R6.db\"")]
         public string SQLite {
             get {
                 return ((string)(this["SQLite"]));
@@ -37,8 +37,8 @@ namespace BudgetExecution.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\SqlServer\\R6." +
-            "mdf;Integrated Security=True;Connect Timeout=30")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\database\\SqlS" +
+            "erver\\R6.mdf;Integrated Security=True;Connect Timeout=30")]
         public string SqlServer {
             get {
                 return ((string)(this["SqlServer"]));
@@ -49,7 +49,7 @@ namespace BudgetExecution.Properties {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
         [global::System.Configuration.DefaultSettingValueAttribute("data source=\"C:\\Users\\terry\\Documents\\Visual Studio 2017\\Projects\\BudgetExecution" +
-            "\\Ninja\\SqlCe\\R6.sdf\"")]
+            "\\Ninja\\database\\SqlCe\\R6.sdf\"")]
         public string SqlCe {
             get {
                 return ((string)(this["SqlCe"]));
@@ -59,8 +59,8 @@ namespace BudgetExecution.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\SqlServer\\R6." +
-            "mdf;Integrated Security=True;Connect Timeout=30")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\database\\SqlS" +
+            "erver\\R6.mdf;Integrated Security=True;Connect Timeout=30")]
         public string R6ConnectionString {
             get {
                 return ((string)(this["R6ConnectionString"]));

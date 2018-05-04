@@ -16,7 +16,7 @@ namespace BudgetExecution
             Source = source;
             TableName = source.ToString();
             SelectStatement = $"SELECT * FROM {source.ToString()}";
-            Connection = new SQLiteConnection(@"datasource=C:\Users\terry\Documents\Visual Studio 2017\Projects\Budget\Ninja\SQLite\R6.db");
+            Connection = new SQLiteConnection(@"datasource=C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\database\SQLite\R6.db");
             SelectCommand = new SQLiteCommand(SelectStatement, Connection);
             Adapter = new SQLiteDataAdapter(SelectCommand);
             CommandBuilder = GetCommandBuilder(Adapter);
@@ -30,7 +30,7 @@ namespace BudgetExecution
             TableName = source.ToString();
             Parameter = param;
             SelectStatement = GetSqlStatement();
-            Connection = new SQLiteConnection(@"datasource=C:\Users\terry\Documents\Visual Studio 2017\Projects\Budget\Ninja\SQLite\R6.db");
+            Connection = new SQLiteConnection(@"datasource=C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\database\SQLite\R6.db");
             SelectCommand = new SQLiteCommand(SelectStatement, Connection);
             Adapter = new SQLiteDataAdapter(SelectCommand);
             CommandBuilder = GetCommandBuilder(Adapter);
