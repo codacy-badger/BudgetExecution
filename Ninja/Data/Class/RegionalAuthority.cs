@@ -11,7 +11,7 @@ namespace BudgetExecution
         //Constructors
         public RegionalAuthority()
         {
-            Data = new DataBuilder(Source.P7, new Dictionary<string, object> { ["BFY"] = FiscalYear });
+            Data = new DataBuilder(Source.RegionAccount, new Dictionary<string, object> { ["BFY"] = FiscalYear });
             Metric = new DataMetric(Data);
             Table = Data.QueryTable;
             Total = Metric.Total;
@@ -222,7 +222,7 @@ namespace BudgetExecution
                 var parameter = new Dictionary<string, object>();
                 parameter.Add("Id", row["Id"]);
                 parameter.Add("Amount", amount2);
-                var query = new Query(Source.P7, parameter);
+                var query = new Query(Source.RegionAccount, parameter);
                 var update = query.UpdateCommand;
                 update.ExecuteNonQuery();
             }
@@ -238,7 +238,7 @@ namespace BudgetExecution
                 if (p.ContainsKey("Amount"))
                     p.Remove("Amount");
                 p.Add("Amount", amount2);
-                var query = new Query(Source.P7, p);
+                var query = new Query(Source.RegionAccount, p);
                 var update = query.UpdateCommand;
                 update.ExecuteNonQuery();
             }

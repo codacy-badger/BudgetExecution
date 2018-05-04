@@ -13,8 +13,8 @@ namespace BudgetExecution
         {
             InitializeComponent();
             NinjaData = new FormData();
-            R6 = new DataBuilder(Source.P7);
-            D6 = new DataBuilder(Source.P8);
+            R6 = new DataBuilder(Source.RegionAccount);
+            D6 = new DataBuilder(Source.DivisionAccount);
             Metric = new DataMetric(R6);
             Timer = new Timer();
             Values = new Dictionary<string, double>[] { Metric.GetChartTotals(R6.QueryTable, PrcField.Fund), Metric.GetChartTotals(R6.QueryTable, PrcField.BOC),
@@ -85,7 +85,7 @@ namespace BudgetExecution
         }
         private void DivisionSummaryButton_OnClick(object sender, EventArgs e)
         {
-            var datamgr = new SummaryForm(Source.P8);
+            var datamgr = new SummaryForm(Source.DivisionAccount);
             datamgr.Show();
         }
         private string[] GetChartTitles(Dictionary<string, double>[] info)
@@ -136,7 +136,7 @@ namespace BudgetExecution
         }
         private void RegionSummaryButton_OnClick(object sender, EventArgs e)
         {
-            var datamgr = new SummaryForm(Source.P7);
+            var datamgr = new SummaryForm(Source.RegionAccount);
             datamgr.Show();
         }
         private void TransferButton_OnClick(object sender, EventArgs e)

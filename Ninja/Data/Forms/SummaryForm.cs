@@ -24,9 +24,9 @@ namespace BudgetExecution
         public SummaryForm(Source source)
         {
             InitializeComponent();
-            if (source == Source.P7)
+            if (source == Source.RegionAccount)
             {
-                Data = new DataBuilder(Source.P7);
+                Data = new DataBuilder(Source.RegionAccount);
                 DivisionTab.TabVisible = false;
                 Source = Data.Source;
                 BaseTable = Data.QueryTable;
@@ -34,9 +34,9 @@ namespace BudgetExecution
                 TabNames = GetTabNames();
                 Text = "Region 6 Summary";
             }
-            if (source == Source.P8)
+            if (source == Source.DivisionAccount)
             {
-                Data = new DataBuilder(Source.P8);
+                Data = new DataBuilder(Source.DivisionAccount);
                 Source = Data.Source;
                 BaseTable = Data.QueryTable;
                 TabNames = GetTabNames();
@@ -55,7 +55,7 @@ namespace BudgetExecution
         public SummaryForm(string rc)
         {
             InitializeComponent();
-            Source = Source.P8;
+            Source = Source.DivisionAccount;
             Parameter = new Dictionary<string, object>() { ["RC"] = rc };
             DatabaseTab.TabVisible = true;
             ProjectTab.TabVisible = true;

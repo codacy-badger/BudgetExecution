@@ -280,13 +280,13 @@ namespace BudgetExecution
                 tab.TabPages[2].Text = "BOC";
                 tab.TabPages[3].Text = "NPM";
                 tab.TabPages[4].Text = "Goal";
-                if (Ninja.DataQuery.Source == Source.P7)
+                if (Ninja.DataQuery.Source == Source.RegionAccount)
                 {
                     tab.TabPages[5].Text = "Objective";
                     tab.TabPages[6].Text = "Divisions";
                     tab.TabPages[7].Text = "Transfers";
                 }
-                if (Ninja.DataQuery.Source == Source.P8)
+                if (Ninja.DataQuery.Source == Source.DivisionAccount)
                 {
                     tab.TabPages[5].Text = "Program Area";
                     tab.TabPages[6].Text = "Program Project";

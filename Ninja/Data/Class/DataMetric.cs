@@ -37,12 +37,12 @@ namespace BudgetExecution
             GoalMetrics = GetMetrics(BaseTable, PrcField.GoalName);
             ObjectiveTotals = GetTotals(BaseTable, PrcField.ObjectiveName);
             ObjectiveMetrics = GetMetrics(BaseTable, PrcField.ObjectiveName);
-            if (source == Source.P8 && Data.Parameter == null)
+            if (source == Source.DivisionAccount && Data.Parameter == null)
             {
                 DivisionTotals = GetTotals(BaseTable, PrcField.Division);
                 DivisionMetrics = GetMetrics(BaseTable, PrcField.Division);
             }
-            if(source == Source.P6)
+            if(source == Source.PRC)
             {
                 var table = new DivisionAuthority().Table;
                 DivisionTotals = GetTotals(table, PrcField.Division);
@@ -73,7 +73,7 @@ namespace BudgetExecution
             GoalMetrics = GetMetrics(BaseTable, PrcField.GoalName);
             ObjectiveTotals = GetTotals(BaseTable, PrcField.ObjectiveName);
             ObjectiveMetrics = GetMetrics(BaseTable, PrcField.ObjectiveName);
-            if (Data.Source == Source.P8 && Data.Parameter == null)
+            if (Data.Source == Source.DivisionAccount && Data.Parameter == null)
             {
                 DivisionTotals = GetTotals(Data.QueryTable, PrcField.Division);
                 DivisionMetrics = GetMetrics(Data.QueryTable, PrcField.Division);
@@ -103,12 +103,12 @@ namespace BudgetExecution
             GoalMetrics = GetMetrics(BaseTable, PrcField.GoalName);
             ObjectiveTotals = GetTotals(BaseTable, PrcField.ObjectiveName);
             ObjectiveMetrics = GetMetrics(BaseTable, PrcField.ObjectiveName);
-            if (Data.Source == Source.P8)
+            if (Data.Source == Source.DivisionAccount)
             {
                 DivisionTotals = GetTotals(Data.QueryTable, PrcField.Division);
                 DivisionMetrics = GetMetrics(Data.QueryTable, PrcField.Division);
             }
-            if (Data.Source == Source.P6)
+            if (Data.Source == Source.PRC)
             {
                 var table = new DivisionAuthority().Table;
                 DivisionTotals = GetTotals(table, PrcField.Division);

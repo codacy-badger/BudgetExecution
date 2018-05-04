@@ -25,7 +25,7 @@ namespace BudgetExecution
 
         public BudgetPortfolio(Dictionary<string, object> param)
         {
-            DocumentQuery = new Query(Source.B6, param);
+            DocumentQuery = new Query(Source.BudgetDocument, param);
         }
 
         #region Methods

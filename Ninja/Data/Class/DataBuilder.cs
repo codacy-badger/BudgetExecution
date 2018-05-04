@@ -23,7 +23,7 @@ namespace BudgetExecution
             BindingSource = new BindingSource();
             BindingSource.DataSource = QueryTable;
             DataRecords = GetRecords(QueryTable);
-            if (source == Source.P6 || source == Source.P7 || source == Source.P8)
+            if (source == Source.PRC || source == Source.RegionAccount || source == Source.DivisionAccount)
             {
                 QueryTotal = GetQueryTotal(QueryTable);
             }
@@ -39,7 +39,7 @@ namespace BudgetExecution
             BindingSource = new BindingSource();
             BindingSource.DataSource = QueryTable;
             DataRecords = GetRecords(QueryTable);
-            if (source == Source.P6 || source == Source.P7 || source == Source.P8)
+            if (source == Source.PRC || source == Source.RegionAccount || source == Source.DivisionAccount)
             {
                 QueryTotal = GetQueryTotal(QueryTable);
             }
@@ -113,7 +113,7 @@ namespace BudgetExecution
                 }
                 if (data.ContainsKey("ID")) data.Remove("ID");
                 if (data.ContainsKey("Amount")) data.Remove("Amount");
-                if (data.ContainsKey("P6.ID")) data.Remove("P6.ID");
+                if (data.ContainsKey("PRC.ID")) data.Remove("PRC.ID");
                 return data;
             }
             catch (Exception ex)
