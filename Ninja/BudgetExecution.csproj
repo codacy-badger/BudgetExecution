@@ -199,60 +199,60 @@
     <Compile Include="src\AccountControl.Designer.cs">
       <DependentUpon>AccountControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="Data\Class\Account.cs" />
-    <Compile Include="Data\Class\Appropriation.cs" />
-    <Compile Include="Data\Class\BOC.cs" />
-    <Compile Include="Data\Class\BudgetApplication.cs" />
-    <Compile Include="Data\Class\BudgetPortfolio.cs" />
-    <Compile Include="Data\Class\BudgetChart.cs" />
-    <Compile Include="Data\Class\ControlData.cs" />
-    <Compile Include="Data\Class\DataBuilder.cs" />
-    <Compile Include="Data\Class\DivisionAuthority.cs" />
-    <Compile Include="Data\Class\DocInfo.cs" />
-    <Compile Include="Data\Class\Employee.cs" />
-    <Compile Include="Data\Class\ExcelReport.cs" />
-    <Compile Include="Data\Class\FormData.cs" />
-    <Compile Include="Data\Class\NPM.cs" />
-    <Compile Include="Data\Forms\AccountManager.Designer.cs">
+    <Compile Include="src\Account.cs" />
+    <Compile Include="src\Appropriation.cs" />
+    <Compile Include="src\BOC.cs" />
+    <Compile Include="src\BudgetApplication.cs" />
+    <Compile Include="src\BudgetPortfolio.cs" />
+    <Compile Include="src\BudgetChart.cs" />
+    <Compile Include="src\ControlData.cs" />
+    <Compile Include="src\DataBuilder.cs" />
+    <Compile Include="src\DivisionAuthority.cs" />
+    <Compile Include="src\DocInfo.cs" />
+    <Compile Include="src\Employee.cs" />
+    <Compile Include="src\ExcelReport.cs" />
+    <Compile Include="src\FormData.cs" />
+    <Compile Include="src\NPM.cs" />
+    <Compile Include="src\AccountManager.Designer.cs">
       <DependentUpon>AccountManager.cs</DependentUpon>
     </Compile>
-    <Compile Include="Data\Forms\AppropriationSelector.cs">
+    <Compile Include="src\AppropriationSelector.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Data\Forms\AppropriationSelector.Designer.cs">
+    <Compile Include="src\AppropriationSelector.Designer.cs">
       <DependentUpon>AppropriationSelector.cs</DependentUpon>
     </Compile>
-    <Compile Include="Data\Forms\BudgetTools.cs">
+    <Compile Include="src\BudgetTools.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Data\Forms\BudgetTools.Designer.cs">
+    <Compile Include="src\BudgetTools.Designer.cs">
       <DependentUpon>BudgetTools.cs</DependentUpon>
     </Compile>
-    <Compile Include="Data\Forms\DataManager.cs">
+    <Compile Include="src\DataManager.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Data\Forms\DataManager.Designer.cs">
+    <Compile Include="src\DataManager.Designer.cs">
       <DependentUpon>DataManager.cs</DependentUpon>
     </Compile>
-    <Compile Include="Data\Forms\DataMaster.cs">
+    <Compile Include="src\DataMaster.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Data\Forms\DataMaster.Designer.cs">
+    <Compile Include="src\DataMaster.Designer.cs">
       <DependentUpon>DataMaster.cs</DependentUpon>
     </Compile>
-    <Compile Include="Data\Forms\DataNavigator.cs">
+    <Compile Include="src\DataNavigator.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Data\Forms\DataNavigator.Designer.cs">
+    <Compile Include="src\DataNavigator.Designer.cs">
       <DependentUpon>DataNavigator.cs</DependentUpon>
     </Compile>
-    <Compile Include="Data\Forms\ExcelForm.cs">
+    <Compile Include="src\ExcelForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Data\Forms\ExcelForm.Designer.cs">
+    <Compile Include="src\ExcelForm.Designer.cs">
       <DependentUpon>ExcelForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Data\Forms\FunctionalityForm.Designer.cs">
+    <Compile Include="src\FunctionalityForm.Designer.cs">
       <DependentUpon>FunctionalityForm.cs</DependentUpon>
     </Compile>
     <Compile Include="src\SearchBox.cs">
@@ -261,73 +261,73 @@
     <Compile Include="src\SearchBox.Designer.cs">
       <DependentUpon>SearchBox.cs</DependentUpon>
     </Compile>
-    <Compile Include="Data\Forms\Selector.cs">
+    <Compile Include="src\Selector.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Data\Forms\Selector.Designer.cs">
+    <Compile Include="src\Selector.Designer.cs">
       <DependentUpon>Selector.cs</DependentUpon>
     </Compile>
-    <Compile Include="Data\Forms\NinjaForm5.cs">
+    <Compile Include="src\NinjaForm5.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Data\Forms\NinjaForm5.Designer.cs">
+    <Compile Include="src\NinjaForm5.Designer.cs">
       <DependentUpon>NinjaForm5.cs</DependentUpon>
     </Compile>
-    <Compile Include="Data\Forms\SummaryForm.cs">
+    <Compile Include="src\SummaryForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Data\Forms\SummaryForm.Designer.cs">
+    <Compile Include="src\SummaryForm.Designer.cs">
       <DependentUpon>SummaryForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Data\Class\FTE.cs" />
-    <Compile Include="Data\Class\Fund.cs" />
-    <Compile Include="Data\Class\Info.cs" />
-    <Compile Include="Data\Interface\ISupplementalAllocation.cs" />
-    <Compile Include="Data\Class\Obligation.cs" />
-    <Compile Include="Data\Class\Org.cs" />
-    <Compile Include="Data\Class\Parameter.cs" />
-    <Compile Include="Data\Class\Payroll.cs" />
-    <Compile Include="Data\Class\Personnel.cs" />
-    <Compile Include="Data\Class\PRC.cs" />
-    <Compile Include="Data\Class\Query.cs" />
-    <Compile Include="Data\Class\RC.cs" />
-    <Compile Include="Data\Class\RegionalAuthority.cs" />
-    <Compile Include="Data\Class\Reimbursable.cs" />
-    <Compile Include="Data\Class\Reprogramming.cs" />
-    <Compile Include="Data\Class\Transfer.cs" />
-    <Compile Include="Data\Forms\AccountManager.cs">
+    <Compile Include="src\FTE.cs" />
+    <Compile Include="src\Fund.cs" />
+    <Compile Include="src\Info.cs" />
+    <Compile Include="src\ISupplementalAllocation.cs" />
+    <Compile Include="src\Obligation.cs" />
+    <Compile Include="src\Org.cs" />
+    <Compile Include="src\Parameter.cs" />
+    <Compile Include="src\Payroll.cs" />
+    <Compile Include="src\Personnel.cs" />
+    <Compile Include="src\PRC.cs" />
+    <Compile Include="src\Query.cs" />
+    <Compile Include="src\RC.cs" />
+    <Compile Include="src\RegionalAuthority.cs" />
+    <Compile Include="src\Reimbursable.cs" />
+    <Compile Include="src\Reprogramming.cs" />
+    <Compile Include="src\Transfer.cs" />
+    <Compile Include="src\AccountManager.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Data\Forms\Form1.cs">
+    <Compile Include="src\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Data\Forms\Form1.Designer.cs">
+    <Compile Include="src\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Data\Interface\IAccount.cs" />
-    <Compile Include="Data\Interface\IBudgetAuthority.cs" />
-    <Compile Include="Data\Interface\IBOC.cs" />
-    <Compile Include="Data\Interface\IControlData.cs" />
-    <Compile Include="Data\Interface\IDataBuilder.cs" />
-    <Compile Include="Data\Interface\IEmployee.cs" />
-    <Compile Include="Data\Interface\IExcelOp.cs" />
-    <Compile Include="Data\Interface\IObligation.cs" />
-    <Compile Include="Data\Interface\IParameter.cs" />
-    <Compile Include="Data\Interface\IPayroll.cs" />
-    <Compile Include="Data\Interface\IPersonnel.cs" />
-    <Compile Include="Data\Interface\IPRC.cs" />
-    <Compile Include="Data\Interface\IQuery.cs" />
-    <Compile Include="Data\Interface\IRC.cs" />
-    <Compile Include="Data\Forms\FunctionalityForm.cs">
+    <Compile Include="src\IAccount.cs" />
+    <Compile Include="src\IBudgetAuthority.cs" />
+    <Compile Include="src\IBOC.cs" />
+    <Compile Include="src\IControlData.cs" />
+    <Compile Include="src\IDataBuilder.cs" />
+    <Compile Include="src\IEmployee.cs" />
+    <Compile Include="src\IExcelOp.cs" />
+    <Compile Include="src\IObligation.cs" />
+    <Compile Include="src\IParameter.cs" />
+    <Compile Include="src\IPayroll.cs" />
+    <Compile Include="src\IPersonnel.cs" />
+    <Compile Include="src\IPRC.cs" />
+    <Compile Include="src\IQuery.cs" />
+    <Compile Include="src\IRC.cs" />
+    <Compile Include="src\FunctionalityForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Data\Forms\MainForm.cs">
+    <Compile Include="src\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Data\Forms\MainForm.Designer.cs">
+    <Compile Include="src\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Data\Class\DataMetric.cs" />
+    <Compile Include="src\DataMetric.cs" />
     <Compile Include="src\PrcDataGrid.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -335,7 +335,7 @@
       <DependentUpon>PrcDataGrid.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Data\Class\SqlQuery.cs" />
+    <Compile Include="src\SqlQuery.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -379,40 +379,40 @@
     <EmbeddedResource Include="src\AccountControl.resx">
       <DependentUpon>AccountControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Data\Forms\AccountManager.resx">
+    <EmbeddedResource Include="src\AccountManager.resx">
       <DependentUpon>AccountManager.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Data\Forms\BudgetTools.resx">
+    <EmbeddedResource Include="src\BudgetTools.resx">
       <DependentUpon>BudgetTools.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Data\Forms\DataManager.resx">
+    <EmbeddedResource Include="src\DataManager.resx">
       <DependentUpon>DataManager.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Data\Forms\DataMaster.resx">
+    <EmbeddedResource Include="src\DataMaster.resx">
       <DependentUpon>DataMaster.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Data\Forms\DataNavigator.resx">
+    <EmbeddedResource Include="src\DataNavigator.resx">
       <DependentUpon>DataNavigator.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Data\Forms\ExcelForm.resx">
+    <EmbeddedResource Include="src\ExcelForm.resx">
       <DependentUpon>ExcelForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Data\Forms\Form1.resx">
+    <EmbeddedResource Include="src\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Data\Forms\MainForm.resx">
+    <EmbeddedResource Include="src\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="src\SearchBox.resx">
       <DependentUpon>SearchBox.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Data\Forms\Selector.resx">
+    <EmbeddedResource Include="src\Selector.resx">
       <DependentUpon>Selector.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Data\Forms\NinjaForm5.resx">
+    <EmbeddedResource Include="src\NinjaForm5.resx">
       <DependentUpon>NinjaForm5.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Data\Forms\SummaryForm.resx">
+    <EmbeddedResource Include="src\SummaryForm.resx">
       <DependentUpon>SummaryForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="src\PrcDataGrid.resx">
@@ -528,27 +528,27 @@
     <Content Include="SqlCe\R6.sdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="sql\CREATE_TABLE_P6.sql" />
-    <Content Include="sql\create_view_ej.sql" />
-    <Content Include="sql\create_view_en.sql" />
-    <Content Include="sql\create_view_epm.sql" />
-    <Content Include="sql\create_view_lust.sql" />
-    <Content Include="sql\create_view_md.sql" />
-    <Content Include="sql\create_view_mdr.sql" />
-    <Content Include="sql\create_view_mm.sql" />
-    <Content Include="sql\create_view_oil.sql" />
-    <Content Include="sql\create_view_ra.sql" />
-    <Content Include="sql\create_view_rc.sql" />
-    <Content Include="sql\create_view_sf.sql" />
-    <Content Include="sql\create_view_sf6a.sql" />
-    <Content Include="sql\create_view_stag.sql" />
-    <Content Include="sql\create_view_superfund.sql" />
-    <Content Include="sql\create_view_wcf.sql" />
-    <Content Include="sql\create_view_wq.sql" />
-    <Content Include="sql\create_view_wsa.sql" />
-    <Content Include="sql\create_view_xa.sql" />
-    <Content Include="sql\SELECT_BocLevel.sql" />
-    <Content Include="sql\SELECT_PrcLevel.sql" />
+    <Content Include="database\sql\CREATE_TABLE_P6.sql" />
+    <Content Include="database\sql\create_view_ej.sql" />
+    <Content Include="database\sql\create_view_en.sql" />
+    <Content Include="database\sql\create_view_epm.sql" />
+    <Content Include="database\sql\create_view_lust.sql" />
+    <Content Include="database\sql\create_view_md.sql" />
+    <Content Include="database\sql\create_view_mdr.sql" />
+    <Content Include="database\sql\create_view_mm.sql" />
+    <Content Include="database\sql\create_view_oil.sql" />
+    <Content Include="database\sql\create_view_ra.sql" />
+    <Content Include="database\sql\create_view_rc.sql" />
+    <Content Include="database\sql\create_view_sf.sql" />
+    <Content Include="database\sql\create_view_sf6a.sql" />
+    <Content Include="database\sql\create_view_stag.sql" />
+    <Content Include="database\sql\create_view_superfund.sql" />
+    <Content Include="database\sql\create_view_wcf.sql" />
+    <Content Include="database\sql\create_view_wq.sql" />
+    <Content Include="database\sql\create_view_wsa.sql" />
+    <Content Include="database\sql\create_view_xa.sql" />
+    <Content Include="database\sql\SELECT_BocLevel.sql" />
+    <Content Include="database\sql\SELECT_PrcLevel.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\summation_3d_blue_oma_icon.ico" />
