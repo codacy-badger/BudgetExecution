@@ -1,18 +1,13 @@
-﻿namespace Budget
-{
-    namespace Ninja
+﻿
+namespace BudgetExecution
+{        
+    internal interface ISupplementalAllocation
     {
-        namespace Data
-        {
-            internal interface ISupplementalAllocation
-            {
-                //Properties
-                decimal Awards { get; set; }
-
-                decimal OverTime { get; set; }
-                int TimeOffAwards { get; set; }
-                PRC Training { get; set; }
-            }
-        }
+        //Properties
+        decimal Awards { get; set; }
+        decimal OverTime { get; set; }
+        int TimeOffAwards { get; set; }
+        PRC Training { get; set; }
     }
 }
+    

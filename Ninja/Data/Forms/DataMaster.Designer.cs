@@ -1,4 +1,5 @@
-﻿namespace Ninja.Data.Forms
+﻿
+namespace BudgetExecution
 {
     partial class DataMaster
     {
@@ -334,7 +335,6 @@
             // AddNewButton
             // 
             this.AddNewButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.AddNewButton.Image = global::Ninja.Properties.Resources.Add_New;
             this.AddNewButton.Name = "AddNewButton";
             this.AddNewButton.RightToLeftAutoMirrorImage = true;
             this.AddNewButton.Size = new System.Drawing.Size(28, 25);
@@ -351,7 +351,6 @@
             // DeleteButton
             // 
             this.DeleteButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.DeleteButton.Image = global::Ninja.Properties.Resources.Delete_04;
             this.DeleteButton.Name = "DeleteButton";
             this.DeleteButton.RightToLeftAutoMirrorImage = true;
             this.DeleteButton.Size = new System.Drawing.Size(28, 25);
@@ -369,7 +368,6 @@
             // bindingNavigatorMovePreviousItem1
             // 
             this.bindingNavigatorMovePreviousItem1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMovePreviousItem1.Image = global::Ninja.Properties.Resources.LeftArrow;
             this.bindingNavigatorMovePreviousItem1.Name = "bindingNavigatorMovePreviousItem1";
             this.bindingNavigatorMovePreviousItem1.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorMovePreviousItem1.Size = new System.Drawing.Size(28, 25);
@@ -401,7 +399,6 @@
             // bindingNavigatorMoveNextItem1
             // 
             this.bindingNavigatorMoveNextItem1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveNextItem1.Image = global::Ninja.Properties.Resources.RightArrow;
             this.bindingNavigatorMoveNextItem1.Name = "bindingNavigatorMoveNextItem1";
             this.bindingNavigatorMoveNextItem1.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorMoveNextItem1.Size = new System.Drawing.Size(28, 25);
@@ -423,7 +420,6 @@
             // CopyButton
             // 
             this.CopyButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.CopyButton.Image = global::Ninja.Properties.Resources.Copy_01;
             this.CopyButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.CopyButton.Name = "CopyButton";
             this.CopyButton.Size = new System.Drawing.Size(28, 25);
@@ -433,7 +429,6 @@
             // SaveButton
             // 
             this.SaveButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.SaveButton.Image = global::Ninja.Properties.Resources.Save;
             this.SaveButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.SaveButton.Name = "SaveButton";
             this.SaveButton.Size = new System.Drawing.Size(28, 25);

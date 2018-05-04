@@ -1,20 +1,17 @@
-﻿namespace Budget
+﻿
+
+namespace BudgetExecution
 {
-    namespace Ninja
+    public interface IRC
     {
-        namespace Data
-        {
-            public interface IRC
-            {
-                //Properties
-                string Code { get; }
+        //Properties
+        string Code { get; }
 
-                string ID { get; }
-                string Name { get; }
+        string ID { get; }
+        string Name { get; }
 
-                //Methods
-                string ToString();
-            }
-        }
+        //Methods
+        string ToString();
     }
 }
+    

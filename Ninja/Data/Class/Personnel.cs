@@ -1,4 +1,4 @@
-﻿namespace Budget.Ninja.Data
+﻿namespace BudgetExecution
 {
     public class Personnel
     {

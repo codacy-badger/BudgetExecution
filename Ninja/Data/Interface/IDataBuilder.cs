@@ -1,6 +1,6 @@
 ﻿using System.Data;
 
-namespace Budget.Ninja.Data
+namespace BudgetExecution
 {
     public interface IDataBuilder
     {

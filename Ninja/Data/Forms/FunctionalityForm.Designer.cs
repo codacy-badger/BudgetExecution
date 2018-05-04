@@ -15,7 +15,7 @@ using MetroForm = Syncfusion.Windows.Forms.MetroForm;
 
 #endregion
 
-namespace Budget.Ninja.Data
+namespace BudgetExecution
 {
     partial class FunctionalityForm
     {

@@ -1,6 +1,6 @@
 using Ninja.Data.Forms;
 
-namespace Budget.Ninja.Data
+namespace BudgetExecution
 {
     public partial class FunctionalityForm : Syncfusion.Windows.Forms.MetroForm
             {

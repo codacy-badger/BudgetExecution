@@ -1,37 +1,33 @@
 ﻿using System;
 using Excel = Microsoft.Office.Interop.Excel;
 
-namespace Budget
+
+
+namespace BudgetExecution
 {
-    namespace Ninja
+    public interface IExcelOp
     {
-        namespace Data
-        {
-            public interface IExcelOp
-            {
-                #region Properties
+        #region Properties
 
-                Tuple<string, string> ConnectionString { get; set; }
-                string ExcelFile { get; set; }
+        Tuple<string, string> ConnectionString { get; set; }
+        string ExcelFile { get; set; }
 
-                #endregion
+        #endregion
 
-                #region Methods
+        #region Methods
 
-                Excel.Application GetApplication();
+        Excel.Application GetApplication();
 
-                string GetConnectionString();
+        string GetConnectionString();
 
-                string GetFile();
+        string GetFile();
 
-                Excel.Workbook GetWorkbook(Excel.Application excel, string filepath);
+        Excel.Workbook GetWorkbook(Excel.Application excel, string filepath);
 
-                void ReleaseObject(object obj);
+        void ReleaseObject(object obj);
 
-                void SaveWorkBook(Excel.Workbook wb);
+        void SaveWorkBook(Excel.Workbook wb);
 
-                #endregion
-            }
-        }
+        #endregion
     }
 }

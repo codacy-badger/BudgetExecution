@@ -6,7 +6,7 @@ using Excel = Microsoft.Office.Interop.Excel.Application;
 using Workbook = Microsoft.Office.Interop.Excel.Workbook;
 using Worksheet = Microsoft.Office.Interop.Excel.Worksheet;
 
-namespace Budget.Ninja.Data
+namespace BudgetExecution
 {
     public class ExcelOp
     {

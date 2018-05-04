@@ -7,7 +7,8 @@ using Budget.Ninja.Data;
 using MetroSet_UI.Controls;
 using Metro = Syncfusion.Windows.Forms.MetroForm;
 
-namespace Ninja.Data.Forms
+
+namespace BudgetExecution
 {
     public partial class DataManager : Metro
             {

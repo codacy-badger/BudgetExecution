@@ -5,7 +5,7 @@ using System.IO;
 using System.Text;
 using System.Windows.Forms;
 
-namespace Budget.Ninja.Data
+namespace BudgetExecution
 {
     public class Transfer
     {

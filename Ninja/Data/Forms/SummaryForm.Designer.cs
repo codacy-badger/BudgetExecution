@@ -13,7 +13,8 @@ using MetroSet_UI.Controls;
 using MetroFramework.Controls;
 using MetroForm = Syncfusion.Windows.Forms.MetroForm;
 
-namespace Budget.Ninja.Data
+
+namespace BudgetExecution
 {
     public partial class SummaryForm
     {
@@ -3743,7 +3744,6 @@ namespace Budget.Ninja.Data
             // toolStripButton2
             // 
             this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton2.Image = global::Ninja.Properties.Resources.Save;
             this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton2.Name = "toolStripButton2";
             this.toolStripButton2.Size = new System.Drawing.Size(34, 28);

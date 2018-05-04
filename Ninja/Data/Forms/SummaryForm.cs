@@ -11,7 +11,8 @@ using Syncfusion.Windows.Forms.Tools;
 using Budget.Ninja.Data;
 using MetroForm = Syncfusion.Windows.Forms.MetroForm;
 
-namespace Budget.Ninja.Data
+
+namespace BudgetExecution
 {
     public partial class SummaryForm : MetroForm
     {

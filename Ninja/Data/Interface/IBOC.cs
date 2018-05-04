@@ -1,12 +1,9 @@
-﻿namespace Budget
+﻿
+
+namespace BudgetExecution
 {
-    namespace Ninja
+    public interface IBOC
     {
-        namespace Data
-        {
-            public interface IBOC
-            {
-            }
-        }
     }
 }
+    

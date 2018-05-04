@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Ninja.Resources {
+namespace BudgetExecution.Resources {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace Ninja.Resources {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Ninja.Resources.NinjaDivisionImages", typeof(NinjaDivisionImages).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("BudgetExecution.Resources.NinjaDivisionImages", typeof(NinjaDivisionImages).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;

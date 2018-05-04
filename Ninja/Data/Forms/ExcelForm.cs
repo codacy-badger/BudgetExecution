@@ -1,45 +1,42 @@
 using System;
 using Syncfusion.Windows.Forms.Spreadsheet;
 
-namespace Budget
+
+
+namespace BudgetExecution
 {
-    namespace Ninja
+    public partial class ExcelForm : Syncfusion.Windows.Forms.MetroForm
     {
-        namespace Data
+        public ExcelForm()
         {
-            public partial class ExcelForm : Syncfusion.Windows.Forms.MetroForm
-            {
-                public ExcelForm()
-                {
-                    InitializeComponent();
-                    GetReport();
-                }
+            InitializeComponent();
+            GetReport();
+        }
 
-                public DivisionAuthority Budget { get; set; }
-                public Spreadsheet Report { get; set; }
+        public DivisionAuthority Budget { get; set; }
+        public Spreadsheet Report { get; set; }
 
-                internal void GetReport()
-                {
-                    Report = new Spreadsheet();
-                    Report.Open(@"D:\dev\database\BudgetControlTemplate.xlsx");
-                }
+        internal void GetReport()
+        {
+            Report = new Spreadsheet();
+            Report.Open(@"D:\dev\database\BudgetControlTemplate.xlsx");
+        }
 
-                internal void GetReport(object sender, EventArgs e)
-                {
-                    Report = new Spreadsheet();
-                    Report.Open(@"D:\dev\database\BudgetControlTemplate.xlsx");
-                }
+        internal void GetReport(object sender, EventArgs e)
+        {
+            Report = new Spreadsheet();
+            Report.Open(@"D:\dev\database\BudgetControlTemplate.xlsx");
+        }
 
-                private void splitContainerAdv1_Click(object sender, EventArgs e)
-                {
+        private void splitContainerAdv1_Click(object sender, EventArgs e)
+        {
 
-                }
+        }
 
-                private void spreadsheet1_Click(object sender, EventArgs e)
-                {
+        private void spreadsheet1_Click(object sender, EventArgs e)
+        {
 
-                }
-            }
         }
     }
 }
+

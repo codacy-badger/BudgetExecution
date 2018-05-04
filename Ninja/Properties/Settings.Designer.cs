@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Ninja.Properties {
+namespace BudgetExecution.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
@@ -26,8 +26,8 @@ namespace Ninja.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("data source=\"C:\\Users\\terry\\Documents\\Visual Studio 2017\\Projects\\BudgetExecution" +
-            "\\Ninja\\SQLite\\R6.db\"")]
+        [global::System.Configuration.DefaultSettingValueAttribute("data source=\"C:\\Users\\terry\\Documents\\Visual Studio 2017\\Projects\\Budget\\Ninja\\SQ" +
+            "Lite\\R6.db\"")]
         public string SQLite {
             get {
                 return ((string)(this["SQLite"]));

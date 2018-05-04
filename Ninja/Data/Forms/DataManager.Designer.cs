@@ -5,9 +5,9 @@
 // licensing@syncfusion.com. Any infringement will be prosecuted under
 // applicable laws. 
 #endregion
-namespace Ninja.Data.Forms
-{
 
+namespace BudgetExecution
+{
     partial class DataManager
     {
         /// <summary>

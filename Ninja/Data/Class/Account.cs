@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Data;
 
-namespace Budget.Ninja.Data
+namespace BudgetExecution
 {
     public class Account : IAccount
     {

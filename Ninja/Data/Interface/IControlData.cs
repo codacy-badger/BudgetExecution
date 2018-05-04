@@ -1,26 +1,25 @@
-﻿namespace Budget
+﻿
+namespace BudgetExecution
 {
-    namespace Ninja.Data
+    internal interface IControlDocument : ISupplementalAllocation
     {
-        internal interface IControlDocument : ISupplementalAllocation
-        {
-            #region Properties
+        #region Properties
 
-            string ControlNumber { get; set; }
-            string DateIssued { get; set; }
-            string DivisionID { get; set; }
-            string Name { get; set; }
-            string Purpose { get; set; }
+        string ControlNumber { get; set; }
+        string DateIssued { get; set; }
+        string DivisionID { get; set; }
+        string Name { get; set; }
+        string Purpose { get; set; }
 
-            #endregion
+        #endregion
 
-            #region Methods
+        #region Methods
 
-            string GetDocumentControlNumber();
+        string GetDocumentControlNumber();
 
-            int GetNewDocNumber();
+        int GetNewDocNumber();
 
-            #endregion
-        }
+        #endregion
     }
+    
 }

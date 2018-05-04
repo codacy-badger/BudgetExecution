@@ -2,7 +2,7 @@
 using System.Data;
 using System.Windows.Forms;
 
-namespace Budget.Ninja.Data
+namespace BudgetExecution
 {
     public static class Info
     {

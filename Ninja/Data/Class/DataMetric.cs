@@ -5,7 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Windows.Forms;
 
-namespace Budget.Ninja.Data
+namespace BudgetExecution
 {
     public class DataMetric
     {

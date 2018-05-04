@@ -5,7 +5,7 @@ using System.Drawing;
 using System.Windows.Forms;
 using Syncfusion.Windows.Forms.Chart;
 
-namespace Budget.Ninja.Data
+namespace BudgetExecution
 {
     public class BudgetChart
     {

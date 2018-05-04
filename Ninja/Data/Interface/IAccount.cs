@@ -1,34 +1,31 @@
-namespace Budget
+
+namespace BudgetExecution
 {
-    namespace Ninja
+    public interface IAccount
     {
-        namespace Data
-        {
-            public interface IAccount
-            {
-                //Properties
-                string Code { get; }
+        //Properties
+        string Code { get; }
 
-                string Goal { get; }
-                string NpmCode { get; }
-                string Objective { get; }
-                string ProgramProjectCode { get; }
+        string Goal { get; }
+        string NpmCode { get; }
+        string Objective { get; }
+        string ProgramProjectCode { get; }
 
-                //Methods
-                string GetCode();
+        //Methods
+        string GetCode();
 
-                string GetGoal();
+        string GetGoal();
 
-                string GetGoalName(string code);
+        string GetGoalName(string code);
 
-                string GetNpmCode();
+        string GetNpmCode();
 
-                string GetObjective();
+        string GetObjective();
 
-                string GetObjectiveName(string code);
+        string GetObjectiveName(string code);
 
-                string GetProgramProjectCode();
-            }
-        }
+        string GetProgramProjectCode();
     }
+        
+    
 }

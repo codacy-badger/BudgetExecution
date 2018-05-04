@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Data.SQLite;
 using System.Windows.Forms;
 
-namespace Budget.Ninja.Data
+namespace BudgetExecution
 {
     public class Query
     {
@@ -16,7 +16,7 @@ namespace Budget.Ninja.Data
             Source = source;
             TableName = source.ToString();
             SelectStatement = $"SELECT * FROM {source.ToString()}";
-            Connection = new SQLiteConnection(@"data source=C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\SQLite\R6.db");
+            Connection = new SQLiteConnection(@"datasource=C:\Users\terry\Documents\Visual Studio 2017\Projects\Budget\Ninja\SQLite\R6.db");
             SelectCommand = new SQLiteCommand(SelectStatement, Connection);
             Adapter = new SQLiteDataAdapter(SelectCommand);
             CommandBuilder = GetCommandBuilder(Adapter);
@@ -30,7 +30,7 @@ namespace Budget.Ninja.Data
             TableName = source.ToString();
             Parameter = param;
             SelectStatement = GetSqlStatement();
-            Connection = new SQLiteConnection(@"data source=C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\SQLite\R6.db");
+            Connection = new SQLiteConnection(@"datasource=C:\Users\terry\Documents\Visual Studio 2017\Projects\Budget\Ninja\SQLite\R6.db");
             SelectCommand = new SQLiteCommand(SelectStatement, Connection);
             Adapter = new SQLiteDataAdapter(SelectCommand);
             CommandBuilder = GetCommandBuilder(Adapter);

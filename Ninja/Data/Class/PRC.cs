@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Windows.Forms;
 
-namespace Budget.Ninja.Data
+namespace BudgetExecution
 {
     public class PRC : IAccount
     {

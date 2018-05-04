@@ -15,40 +15,39 @@ using MetroForm = Syncfusion.Windows.Forms.MetroForm;
 
 #endregion
 
-namespace Budget
+
+
+
+namespace BudgetExecution
 {
-    namespace Ninja
+    partial class ExcelForm
     {
-        namespace Data
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
         {
-            partial class ExcelForm
+            if (disposing && (components != null))
             {
-                /// <summary>
-                /// Required designer variable.
-                /// </summary>
-                System.ComponentModel.IContainer components = null;
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
 
-                /// <summary>
-                /// Clean up any resources being used.
-                /// </summary>
-                /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-                protected override void Dispose(bool disposing)
-                {
-                    if (disposing && (components != null))
-                    {
-                        components.Dispose( );
-                    }
-                    base.Dispose(disposing);
-                }
+        #region Windows Form Designer generated code
 
-                #region Windows Form Designer generated code
-
-                /// <summary>
-                /// Required method for Designer support - do not modify
-                /// the contents of this method with the code editor.
-                /// </summary>
-                void InitializeComponent( )
-                {
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        void InitializeComponent()
+        {
             this.components = new System.ComponentModel.Container();
             Syncfusion.Windows.Forms.Spreadsheet.SpreadsheetCopyPaste spreadsheetCopyPaste1 = new Syncfusion.Windows.Forms.Spreadsheet.SpreadsheetCopyPaste();
             Syncfusion.Windows.Forms.Spreadsheet.FormulaRangeSelectionController formulaRangeSelectionController1 = new Syncfusion.Windows.Forms.Spreadsheet.FormulaRangeSelectionController();
@@ -227,7 +226,7 @@ namespace Budget
             this.spreadsheet1.DefaultRowCount = 101;
             this.spreadsheet1.DisplayAlerts = true;
             this.spreadsheet1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.spreadsheet1.FileName = "Book1";
+            this.spreadsheet1.FileName = "Book2";
             this.spreadsheet1.FormulaBarVisibility = false;
             formulaRangeSelectionController1.AllowMouseSelection = true;
             formulaRangeSelectionController1.AllowSelectionOnEditing = true;
@@ -249,7 +248,7 @@ namespace Budget
             this.tabControlAdv1.ActiveTabForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.tabControlAdv1.BeforeTouchSize = new System.Drawing.Size(1078, 772);
             this.tabControlAdv1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tabControlAdv1.CloseButtonForeColor = System.Drawing.Color.Empty;
+            this.tabControlAdv1.CloseButtonForeColor = System.Drawing.Color.Black;
             this.tabControlAdv1.CloseButtonHoverForeColor = System.Drawing.Color.Black;
             this.tabControlAdv1.CloseButtonPressedForeColor = System.Drawing.Color.Black;
             this.tabControlAdv1.Controls.Add(this.tabPageAdv1);
@@ -319,17 +318,17 @@ namespace Budget
             this.bindingNavigator1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.bindingNavigator1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.bindingNavigator1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.bindingNavigatorMoveFirstItem,
-            this.bindingNavigatorMovePreviousItem,
-            this.bindingNavigatorSeparator,
-            this.bindingNavigatorPositionItem,
-            this.bindingNavigatorCountItem,
-            this.bindingNavigatorSeparator1,
-            this.bindingNavigatorMoveNextItem,
-            this.bindingNavigatorMoveLastItem,
-            this.bindingNavigatorSeparator2,
-            this.bindingNavigatorAddNewItem,
-            this.bindingNavigatorDeleteItem});
+    this.bindingNavigatorMoveFirstItem,
+    this.bindingNavigatorMovePreviousItem,
+    this.bindingNavigatorSeparator,
+    this.bindingNavigatorPositionItem,
+    this.bindingNavigatorCountItem,
+    this.bindingNavigatorSeparator1,
+    this.bindingNavigatorMoveNextItem,
+    this.bindingNavigatorMoveLastItem,
+    this.bindingNavigatorSeparator2,
+    this.bindingNavigatorAddNewItem,
+    this.bindingNavigatorDeleteItem});
             this.bindingNavigator1.Location = new System.Drawing.Point(0, 415);
             this.bindingNavigator1.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.bindingNavigator1.MoveLastItem = this.bindingNavigatorMoveLastItem;
@@ -344,10 +343,9 @@ namespace Budget
             // bindingNavigatorAddNewItem
             // 
             this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = global::Ninja.Properties.Resources.Add_New;
             this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
             this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(28, 28);
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 28);
             this.bindingNavigatorAddNewItem.Text = "Add new";
             // 
             // bindingNavigatorCountItem
@@ -360,7 +358,6 @@ namespace Budget
             // bindingNavigatorDeleteItem
             // 
             this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = global::Ninja.Properties.Resources.Save;
             this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
             this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(28, 28);
@@ -378,7 +375,6 @@ namespace Budget
             // bindingNavigatorMovePreviousItem
             // 
             this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMovePreviousItem.Image = global::Ninja.Properties.Resources.LeftArrow;
             this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
             this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(28, 28);
@@ -410,7 +406,6 @@ namespace Budget
             // bindingNavigatorMoveNextItem
             // 
             this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveNextItem.Image = global::Ninja.Properties.Resources.RightArrow;
             this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
             this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(28, 28);
@@ -511,33 +506,31 @@ namespace Budget
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
-                }
-
-                #endregion
-                private MetroSetButton metroSetButton1;
-                private MetroSetButton metroSetButton2;
-                private GroupBox groupBox1;
-                private MetroSetPanel metroSetPanel1;
-                private Syncfusion.Windows.Forms.Spreadsheet.SpreadsheetRibbon spreadsheetRibbon1;
-                private Syncfusion.Windows.Forms.Spreadsheet.Spreadsheet spreadsheet1;
-                private TabControlAdv tabControlAdv1;
-                private TabPageAdv tabPageAdv1;
-                private TabPageAdv tabPageAdv2;
-                private MetroSetPanel metroSetPanel2;
-                private BindingNavigator bindingNavigator1;
-                private ToolStripButton bindingNavigatorAddNewItem;
-                private ToolStripLabel bindingNavigatorCountItem;
-                private ToolStripButton bindingNavigatorDeleteItem;
-                private ToolStripButton bindingNavigatorMoveFirstItem;
-                private ToolStripButton bindingNavigatorMovePreviousItem;
-                private ToolStripSeparator bindingNavigatorSeparator;
-                private ToolStripTextBox bindingNavigatorPositionItem;
-                private ToolStripSeparator bindingNavigatorSeparator1;
-                private ToolStripButton bindingNavigatorMoveNextItem;
-                private ToolStripButton bindingNavigatorMoveLastItem;
-                private ToolStripSeparator bindingNavigatorSeparator2;
-                private DataGridView dataGridView1;
-            } 
         }
+
+        #endregion
+        private MetroSetButton metroSetButton1;
+        private MetroSetButton metroSetButton2;
+        private GroupBox groupBox1;
+        private MetroSetPanel metroSetPanel1;
+        private Syncfusion.Windows.Forms.Spreadsheet.SpreadsheetRibbon spreadsheetRibbon1;
+        private Syncfusion.Windows.Forms.Spreadsheet.Spreadsheet spreadsheet1;
+        private TabControlAdv tabControlAdv1;
+        private TabPageAdv tabPageAdv1;
+        private TabPageAdv tabPageAdv2;
+        private MetroSetPanel metroSetPanel2;
+        private BindingNavigator bindingNavigator1;
+        private ToolStripButton bindingNavigatorAddNewItem;
+        private ToolStripLabel bindingNavigatorCountItem;
+        private ToolStripButton bindingNavigatorDeleteItem;
+        private ToolStripButton bindingNavigatorMoveFirstItem;
+        private ToolStripButton bindingNavigatorMovePreviousItem;
+        private ToolStripSeparator bindingNavigatorSeparator;
+        private ToolStripTextBox bindingNavigatorPositionItem;
+        private ToolStripSeparator bindingNavigatorSeparator1;
+        private ToolStripButton bindingNavigatorMoveNextItem;
+        private ToolStripButton bindingNavigatorMoveLastItem;
+        private ToolStripSeparator bindingNavigatorSeparator2;
+        private DataGridView dataGridView1;
     }
 }

@@ -4,7 +4,7 @@ using System.Data;
 using System.Linq;
 using System.Windows.Forms;
 
-namespace Budget.Ninja.Data
+namespace BudgetExecution
 {
     public class DataBuilder : IDataBuilder
     {
@@ -18,7 +18,7 @@ namespace Budget.Ninja.Data
             DataQuery = new Query(source);
             Source = DataQuery.Source;
             DataSet = GetDataSet();
-            QueryTable = DataSet.Tables[0];
+            QueryTable = GetData();
             ProgramElements = GetProgramElements(QueryTable);
             BindingSource = new BindingSource();
             BindingSource.DataSource = QueryTable;
@@ -206,14 +206,14 @@ namespace Budget.Ninja.Data
                 return null;
             }
         }
-        internal DataTable GetData(string table)
+        internal DataTable GetData()
         {
             try
             {
                 var ds = new DataSet("R6");
-                var dt = new DataTable();
+                var dt = new DataTable(Source.ToString());
                 ds.Tables.Add(dt);
-                DataQuery.Adapter.Fill(ds, table);
+                DataQuery.Adapter.Fill(ds, Source.ToString());
                 return dt;
             }
             catch (Exception e)

@@ -9,7 +9,7 @@ using Syncfusion.Windows.Forms;
 using Syncfusion.Windows.Forms.Chart;
 using Syncfusion.Windows.Forms.Tools;
 
-namespace Budget.Ninja.Data
+namespace BudgetExecution
 {
     public class FormData
     {

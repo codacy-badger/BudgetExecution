@@ -6,7 +6,8 @@ using System.Windows.Forms;
 using Budget.Ninja.Data;
 using MetroSet_UI.Controls;
 
-namespace Ninja.Data.Forms
+
+namespace BudgetExecution
 {
     public partial class DataMaster : Syncfusion.Windows.Forms.MetroForm
     {
@@ -25,35 +26,27 @@ namespace Ninja.Data.Forms
             GetFundFilterItems();
         }
 
-        private SQLiteDataAdapter Adapter { get; }
-
-        private DataBuilder Data { get; }
-
-        private DataMetric Metric { get; }
-
-        private Dictionary<string, object> Parameter { get; set; }
-
-        private Dictionary<string, string[]> ProgramElements { get; set; }
-
         //Properties
+        private SQLiteDataAdapter Adapter { get; }
+        private DataBuilder Data { get; }
+        private DataMetric Metric { get; }
+        private Dictionary<string, object> Parameter { get; set; }
+        private Dictionary<string, string[]> ProgramElements { get; set; }
         private Query Query { get; }
-
         private DataTable Table { get; set; }
 
+        //Methods
         private void BocFilter_ItemSelected(object sender, EventArgs e)
         {
             var boc = sender as MetroSetComboBox;
             var bocfilter = boc.SelectedItem.ToString();
             BindingSource.Filter = $"FundName = '{FundFilter.SelectedItem.ToString()}' AND BocName = '{bocfilter}'";
         }
-
-        //Methods
         private void DataMaster_Load(object sender, EventArgs e)
         {
             FundFilter.SelectionChangeCommitted += FundFilter_ItemSelected;
             BocFilter.Visible = false;
         }
-
         private void FundFilter_ItemSelected(object sender, EventArgs e)
         {
             BocFilter.Items.Clear();
@@ -67,14 +60,12 @@ namespace Ninja.Data.Forms
             BocFilter.Visible = true;
             BocFilter.SelectionChangeCommitted += BocFilter_ItemSelected;
         }
-
         private void GetFundFilterItems()
         {
             var item = Data.ProgramElements["FundName"];
             foreach (string i in item)
                 FundFilter.Items.Add(i);
         }
-
         private void GetGridColumns(DataGridView dgv)
         {
             foreach (DataGridViewColumn dc in dgv.Columns)
@@ -88,10 +79,6 @@ namespace Ninja.Data.Forms
             dgv.Columns[9].Visible = true;
             dgv.Columns[11].Visible = true;
             dgv.Columns[12].Visible = true;
-        }
-
-        private void gridRecordNavigationControl1_Click(object sender, EventArgs e)
-        {
         }
     }
 }

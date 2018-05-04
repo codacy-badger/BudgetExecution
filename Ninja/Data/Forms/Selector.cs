@@ -9,7 +9,8 @@ using System.IO;
 using System.Drawing;
 using Ninja.Data.Forms;
 
-namespace Budget.Ninja.Data
+
+namespace BudgetExecution
 {
     public partial class Selector : MetroForm
     {

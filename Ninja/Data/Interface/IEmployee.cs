@@ -1,12 +1,9 @@
-﻿namespace Budget
+﻿
+
+namespace BudgetExecution
 {
-    namespace Ninja
+    public interface IEmployee
     {
-        namespace Data
-        {
-            public interface IEmployee
-            {
-            }
-        }
     }
 }
+    

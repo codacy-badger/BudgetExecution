@@ -4,7 +4,7 @@ using System.Data;
 using Ninja.Data;
 using Syncfusion.Windows.Forms.Chart;
 
-namespace Budget.Ninja.Data
+namespace BudgetExecution
 {
     public enum Command
     {

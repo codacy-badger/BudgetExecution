@@ -1,4 +1,5 @@
-﻿namespace Budget.Ninja.Data
+﻿
+namespace BudgetExecution
 {
     partial class Selector
     {
