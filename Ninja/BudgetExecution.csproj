@@ -461,6 +461,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Image1.png" />
     <None Include="Resources\MoneyDatabase.png" />
     <None Include="Resources\NinjaApplicationImages\Graph-03.png" />
     <None Include="Resources\NinjaApplicationImages\Chart-2-WF.png" />
