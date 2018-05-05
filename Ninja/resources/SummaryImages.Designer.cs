@@ -22,14 +22,14 @@ namespace BudgetExecution.Resources {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class NinjaSummaryImages {
+    internal class SummaryImages {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal NinjaSummaryImages() {
+        internal SummaryImages() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace BudgetExecution.Resources {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("BudgetExecution.Resources.NinjaSummaryImages", typeof(NinjaSummaryImages).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("BudgetExecution.Resources.SummaryImages", typeof(SummaryImages).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -83,6 +83,36 @@ namespace BudgetExecution.Resources {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Database {
+            get {
+                object obj = ResourceManager.GetObject("Database", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Employee {
+            get {
+                object obj = ResourceManager.GetObject("Employee", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap FTE {
+            get {
+                object obj = ResourceManager.GetObject("FTE", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Functionality {
             get {
                 object obj = ResourceManager.GetObject("Functionality", resourceCulture);
@@ -96,6 +126,46 @@ namespace BudgetExecution.Resources {
         internal static System.Drawing.Bitmap P7 {
             get {
                 object obj = ResourceManager.GetObject("P7", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ReimbursableAgreement {
+            get {
+                object obj = ResourceManager.GetObject("ReimbursableAgreement", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap SiteData {
+            get {
+                object obj = ResourceManager.GetObject("SiteData", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap StatusOfFunds {
+            get {
+                object obj = ResourceManager.GetObject("StatusOfFunds", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Untitled {
+            get {
+                object obj = ResourceManager.GetObject("Untitled", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

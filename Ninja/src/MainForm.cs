@@ -144,9 +144,19 @@ namespace BudgetExecution
             var dm = new SummaryForm("06J");
             dm.Show();
         }
-        private void DataTile_Click(object sender, EventArgs e)
+        private void DataTile_OnClick(object sender, EventArgs e)
         {
-            var s = new Selector();
+            var s = new Selector(Info.DivisionImages);
+            s.Show();
+        }
+        private void SummaryTile_OnClick(object sender, EventArgs e)
+        {
+            var s = new Selector(Info.SummaryImages);
+            s.Show();
+        }
+        private void DocumentButton_OnClick(object sender, EventArgs e)
+        {
+            var s = new FunctionalityForm();
             s.Show();
         }
         private void TransferButton_Click(object sender, EventArgs e)

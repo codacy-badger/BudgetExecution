@@ -14,13 +14,20 @@ namespace BudgetExecution
 {
     public partial class Selector : MetroForm
     {
+        string DivisionImages { get; set; }
+        string SummaryImages { get; set; }
         //Constructors
         public Selector()
         {
+        }
+
+        public Selector(string path)
+        {
             InitializeComponent();
             NinjaData = new FormData();
-            GetViewerCarouselImageList();
+            GetViewerCarouselImageList(path);
             ViewerCarousel.OnCarouselItemFocused += ViewerCarousel_OnImageSelected;
+
         }
 
         //Properties
@@ -28,13 +35,13 @@ namespace BudgetExecution
         string[] Images { get; set; }
 
         //Methods
-        private void GetViewerCarouselImageList()
+        private void GetViewerCarouselImageList(string path)
         {
             ImageList ilist = new ImageList();
             CarouselImageCollection icollect = ViewerCarousel.ImageListCollection;
             ViewerCarousel.ImageSlides = true;
             ViewerCarousel.UseOriginalImageinPreview = true;
-            string[] images = Directory.GetFiles(@"C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\Resources\NinjaDivisionImages");
+            string[] images = Directory.GetFiles(path);
             foreach (string i in images)
             {
                 var p = Path.GetFileNameWithoutExtension(i);

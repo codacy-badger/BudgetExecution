@@ -1,38 +1,39 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.OleDb;
 using System.Data.SQLite;
 using System.Windows.Forms;
 
 namespace BudgetExecution
 {
-    public class Query
+    public class ExcelQuery
     {
         //Constructors
-        public Query()
+        public ExcelQuery()
         {
         }
-        public Query(Source source)
+        public ExcelQuery(Source source)
         {
             Source = source;
             TableName = source.ToString();
             SelectStatement = $"SELECT * FROM {source.ToString()}";
-            Connection = new SQLiteConnection(@"datasource=C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\database\SQLite\R6.db");
-            SelectCommand = new SQLiteCommand(SelectStatement, Connection);
-            Adapter = new SQLiteDataAdapter(SelectCommand);
+            Connection = new OleDbConnection(@"data source=C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\database\SqlServer\R6.mdf");
+            SelectCommand = new OleDbCommand(SelectStatement, Connection);
+            Adapter = new OleDbDataAdapter(SelectCommand);
             CommandBuilder = GetCommandBuilder(Adapter);
             InsertCommand = CommandBuilder.GetInsertCommand();
             UpdateCommand = CommandBuilder.GetInsertCommand();
             DeleteCommand = CommandBuilder.GetInsertCommand();
         }
-        public Query(Source source, Dictionary<string, object> param)
+        public ExcelQuery(Provider xls, Source source, Dictionary<string, object> param)
         {
             Source = source;
             TableName = source.ToString();
             Parameter = param;
             SelectStatement = GetSqlStatement();
-            Connection = new SQLiteConnection(@"datasource=C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\database\SQLite\R6.db");
-            SelectCommand = new SQLiteCommand(SelectStatement, Connection);
-            Adapter = new SQLiteDataAdapter(SelectCommand);
+            Connection = new OleDbConnection(@"data source=C:\Users\terry\Documents\Visual Studio 2017\Projects\Budget\database\sqlclient\R6.mdf");
+            SelectCommand = new OleDbCommand(SelectStatement, Connection);
+            Adapter = new OleDbDataAdapter(SelectCommand);
             CommandBuilder = GetCommandBuilder(Adapter);
             InsertCommand = CommandBuilder.GetInsertCommand();
             UpdateCommand = CommandBuilder.GetInsertCommand();
@@ -40,28 +41,27 @@ namespace BudgetExecution
         }
 
         //Properties
-        public SQLiteDataAdapter Adapter { get; set; }
-        public SQLiteCommandBuilder CommandBuilder { get; }
-        public SQLiteConnection Connection { get; }
-        public SQLiteCommand DeleteCommand { get; }
-        public SQLiteCommand InsertCommand { get; }
+        public OleDbDataAdapter Adapter { get; set; }
+        public OleDbCommandBuilder CommandBuilder { get; }
+        public OleDbConnection Connection { get; }
+        public OleDbCommand DeleteCommand { get; }
+        public OleDbCommand InsertCommand { get; }
         public Dictionary<string, object> Parameter { get; }
-        public SQLiteDataReader Reader { get; set; }
-        public SQLiteCommand SelectCommand { get; }
+        public OleDbDataReader Reader { get; set; }
+        public OleDbCommand SelectCommand { get; }
         public string SelectStatement { get; }
         public Source Source { get; }
-        public Provider Provider { get; }
         public Command Sql { get; set; }
         public Dictionary<string, string> SqlStatement { get; }
         public string TableName { get; }
-        public SQLiteCommand UpdateCommand { get; }
+        public OleDbCommand UpdateCommand { get; }
 
         //Methods
-        public string GetSqlStatement()
+        private OleDbCommandBuilder GetCommandBuilder()
         {
             try
             {
-                return $"SELECT * FROM {TableName} WHERE {GetParamString(Parameter)}";
+                return new OleDbCommandBuilder(Adapter);
             }
             catch (Exception ex)
             {
@@ -69,131 +69,11 @@ namespace BudgetExecution
                 return null;
             }
         }
-        public string GetSqlStatement(string sql)
+        private OleDbDataAdapter GetDataAdapter()
         {
             try
             {
-                return $"SELECT * FROM {TableName} WHERE {sql}";
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("ERROR!: \n\n" + ex.TargetSite + ex.StackTrace);
-                return null;
-            }
-        }
-        public SQLiteCommandBuilder GetCommandBuilder(SQLiteDataAdapter adapter)
-        {
-            try
-            {
-                return new SQLiteCommandBuilder(adapter);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("ERROR!: \n" + ex.TargetSite + ex.StackTrace);
-                return null;
-            }
-        }
-        public SQLiteDataAdapter GetDataAdapter(SQLiteCommand command)
-        {
-            try
-            {
-                return new SQLiteDataAdapter(command.CommandText, command.Connection);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("ERROR!: \n" + ex.TargetSite + ex.StackTrace);
-                return null;
-            }
-        }
-        public SQLiteCommand GetDeleteCommand()
-        {
-            try
-            {
-                return new SQLiteCommandBuilder(Adapter).GetDeleteCommand();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("ERROR!: \n" + ex.TargetSite + ex.StackTrace);
-                return null;
-            }
-        }
-        public SQLiteCommand GetInsertCommand()
-        {
-            try
-            {
-                return new SQLiteCommandBuilder(Adapter).GetInsertCommand();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("ERROR!: \n" + ex.TargetSite + ex.StackTrace);
-                return null;
-            }
-        }
-        public SQLiteCommand GetSelectCommand(string select)
-        {
-            try
-            {
-                return new SQLiteCommand(select, Connection);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("ERROR!: \n" + ex.TargetSite + ex.StackTrace);
-                return null;
-            }
-        }
-        public SQLiteCommand GetUpdateCommand()
-        {
-            try
-            {
-                return new SQLiteCommandBuilder(Adapter).GetUpdateCommand();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("ERROR!: \n" + ex.TargetSite + ex.StackTrace);
-                return null;
-            }
-        }
-        internal SQLiteDataAdapter GetDataAdapter(string sql)
-        {
-            try
-            {
-                return new SQLiteDataAdapter(sql, Connection);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("ERROR!: \n" + ex.TargetSite + ex.StackTrace);
-                return null;
-            }
-        }
-        internal SQLiteDataAdapter GetDataAdapter(Command cmd, string sql)
-        {
-            try
-            {
-                return new SQLiteDataAdapter(sql, Connection);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("ERROR!: \n" + ex.TargetSite + ex.StackTrace);
-                return null;
-            }
-        }
-        private SQLiteCommandBuilder GetCommandBuilder()
-        {
-            try
-            {
-                return new SQLiteCommandBuilder(Adapter);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("ERROR!: \n\n" + ex.TargetSite + ex.StackTrace);
-                return null;
-            }
-        }
-        private SQLiteDataAdapter GetDataAdapter()
-        {
-            try
-            {
-                return new SQLiteDataAdapter(SelectCommand);
+                return new OleDbDataAdapter(SelectCommand);
             }
             catch (Exception ex)
             {
@@ -219,11 +99,11 @@ namespace BudgetExecution
                 return null;
             }
         }
-        private SQLiteCommand GetSelectCommand()
+        private OleDbCommand GetSelectCommand()
         {
             try
             {
-                return new SQLiteCommand(SelectStatement, Connection);
+                return new OleDbCommand(SelectStatement, Connection);
             }
             catch (Exception ex)
             {
@@ -231,5 +111,114 @@ namespace BudgetExecution
                 return null;
             }
         }
+        internal OleDbDataAdapter GetDataAdapter(string sql)
+        {
+            try
+            {
+                return new OleDbDataAdapter(sql, Connection);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("ERROR!: \n" + ex.TargetSite + ex.StackTrace);
+                return null;
+            }
+        }
+        public OleDbCommandBuilder GetCommandBuilder(OleDbDataAdapter adapter)
+        {
+            try
+            {
+                return new OleDbCommandBuilder(adapter);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("ERROR!: \n" + ex.TargetSite + ex.StackTrace);
+                return null;
+            }
+        }
+        public OleDbDataAdapter GetDataAdapter(OleDbCommand command)
+        {
+            try
+            {
+                return new OleDbDataAdapter(command.CommandText, command.Connection);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("ERROR!: \n" + ex.TargetSite + ex.StackTrace);
+                return null;
+            }
+        }
+        public OleDbCommand GetDeleteCommand()
+        {
+            try
+            {
+                return new OleDbCommandBuilder(Adapter).GetDeleteCommand();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("ERROR!: \n" + ex.TargetSite + ex.StackTrace);
+                return null;
+            }
+        }
+        public OleDbCommand GetInsertCommand()
+        {
+            try
+            {
+                return new OleDbCommandBuilder(Adapter).GetInsertCommand();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("ERROR!: \n" + ex.TargetSite + ex.StackTrace);
+                return null;
+            }
+        }
+        public OleDbCommand GetSelectCommand(string select)
+        {
+            try
+            {
+                return new OleDbCommand(select, Connection);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("ERROR!: \n" + ex.TargetSite + ex.StackTrace);
+                return null;
+            }
+        }
+        public string GetSqlStatement()
+        {
+            try
+            {
+                return $"SELECT * FROM {TableName} WHERE {GetParamString(Parameter)}";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("ERROR!: \n\n" + ex.TargetSite + ex.StackTrace);
+                return null;
+            }
+        }
+        public string GetSqlStatement(string sql)
+        {
+            try
+            {
+                return $"SELECT * FROM {TableName} WHERE {sql}";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("ERROR!: \n\n" + ex.TargetSite + ex.StackTrace);
+                return null;
+            }
+        }
+        public OleDbCommand GetUpdateCommand()
+        {
+            try
+            {
+                return new OleDbCommandBuilder(Adapter).GetUpdateCommand();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("ERROR!: \n" + ex.TargetSite + ex.StackTrace);
+                return null;
+            }
+        }
+
     }
 }

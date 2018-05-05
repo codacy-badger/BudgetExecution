@@ -6,6 +6,9 @@ namespace BudgetExecution
 {
     public static class Info
     {
+        public static string DivisionImages = @"C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\Resources\NinjaDivisionImages";
+        public static string SummaryImages = @"C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\Resources\SummaryImages";
+        public static string FunctionImages = @"C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\Resources\FunctionImages";
         public static string[] AgencyActivityCodes = {
         "1", "2", "3", "P1", "P3", "P8", "PS", "Q1", "Q3", "R1",
         "R2", "R5", "Regional", "W1", "W2", "53", "54", "55", "56", "4", "5", "6", "8", "9", "10", "11",
@@ -103,7 +106,7 @@ namespace BudgetExecution
                 d.Add("Level-8", Source.DivisionAccount);
                 d.Add("R6 PRC", Source.PRC);
                 d.Add("Division Details", Source.Org);
-                d.Add("Authority", Source.AvailableBalance);
+                d.Add("Authority", Source.Balance);
                 d.Add("Employee Leave", Source.Employee);
                 d.Add("Appropriations", Source.Fund);
                 d.Add("Obligations", Source.ProgramExpense);

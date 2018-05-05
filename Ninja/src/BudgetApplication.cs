@@ -11,11 +11,6 @@ namespace BudgetExecution
         Select, Insert, Update, Delete, Create, Drop, Alter
     }
 
-    public enum Connection
-    {
-        Sqlite = 1, Excel = 2, SqlServer = 3, Access = 4
-    }
-
     public enum FileExt
     {
         xlsx = 1, csv = 2, txt = 3, pdf = 4, doc = 5
@@ -59,9 +54,9 @@ namespace BudgetExecution
 
     public enum Source
     {
-        Reprogramming, Transfer, BudgetDocument, Employee, Org, PRC, RegionAccount, DivisionAccount, Account, AvailableBalance,
+        Reprogramming, Transfer, BudgetDocument, Employee, Org, PRC, RegionAccount, DivisionAccount, Account, Balance,
         ProgramExpense, PayrollExpense, Fund, SuperfundSite, ReimbursableAgreement, EPM, LUST, OIL, STAG, SUPERFUND, SF6A,
-        DWH, EJ, EN, MD, RC, RA, SF, WQ, MM, WSA, WCF, MDR, XA, PAYROLL, FTE, TRAVEL, BOC28, EXPENSES, CONTRACTS, GRANTS
+        DWH, EJ, EN, MD, RC, RA, SF, WQ, MM, WSA, WCF, MDR, XA, PAYROLL, FTE, TRAVEL, BOC28, EXPENSES, CONTRACTS, GRANTS, ExternalFile
     }
 
     public enum Stat

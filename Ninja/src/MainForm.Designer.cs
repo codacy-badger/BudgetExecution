@@ -32,38 +32,39 @@ namespace BudgetExecution
         private void InitializeComponent( )
         {
             this.components = new System.ComponentModel.Container();
+            Syncfusion.Windows.Forms.Tools.TextItem textItem1 = new Syncfusion.Windows.Forms.Tools.TextItem();
+            Syncfusion.Windows.Forms.Tools.TextItem textItem2 = new Syncfusion.Windows.Forms.Tools.TextItem();
+            Syncfusion.Windows.Forms.Tools.TextItem textItem3 = new Syncfusion.Windows.Forms.Tools.TextItem();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
+            Syncfusion.Windows.Forms.Tools.TextItem textItem4 = new Syncfusion.Windows.Forms.Tools.TextItem();
             Syncfusion.Windows.Forms.Tools.TextItem textItem5 = new Syncfusion.Windows.Forms.Tools.TextItem();
             Syncfusion.Windows.Forms.Tools.TextItem textItem6 = new Syncfusion.Windows.Forms.Tools.TextItem();
             Syncfusion.Windows.Forms.Tools.TextItem textItem7 = new Syncfusion.Windows.Forms.Tools.TextItem();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             Syncfusion.Windows.Forms.Tools.TextItem textItem8 = new Syncfusion.Windows.Forms.Tools.TextItem();
-            Syncfusion.Windows.Forms.Tools.TextItem textItem9 = new Syncfusion.Windows.Forms.Tools.TextItem();
-            Syncfusion.Windows.Forms.Tools.TextItem textItem10 = new Syncfusion.Windows.Forms.Tools.TextItem();
-            Syncfusion.Windows.Forms.Tools.TextItem textItem11 = new Syncfusion.Windows.Forms.Tools.TextItem();
-            Syncfusion.Windows.Forms.Tools.TextItem textItem12 = new Syncfusion.Windows.Forms.Tools.TextItem();
-            Syncfusion.Windows.Forms.Chart.ChartSeries chartSeries1 = new Syncfusion.Windows.Forms.Chart.ChartSeries();
-            Syncfusion.Windows.Forms.Chart.ChartCustomShapeInfo chartCustomShapeInfo1 = new Syncfusion.Windows.Forms.Chart.ChartCustomShapeInfo();
-            Syncfusion.Windows.Forms.Chart.ChartLineInfo chartLineInfo1 = new Syncfusion.Windows.Forms.Chart.ChartLineInfo();
-            Syncfusion.Windows.Forms.Chart.ChartSeries chartSeries2 = new Syncfusion.Windows.Forms.Chart.ChartSeries();
-            Syncfusion.Windows.Forms.Chart.ChartCustomShapeInfo chartCustomShapeInfo2 = new Syncfusion.Windows.Forms.Chart.ChartCustomShapeInfo();
-            Syncfusion.Windows.Forms.Chart.ChartToolBarSaveItem chartToolBarSaveItem1 = new Syncfusion.Windows.Forms.Chart.ChartToolBarSaveItem();
-            Syncfusion.Windows.Forms.Chart.ChartToolBarCopyItem chartToolBarCopyItem1 = new Syncfusion.Windows.Forms.Chart.ChartToolBarCopyItem();
-            Syncfusion.Windows.Forms.Chart.ChartToolBarPrintItem chartToolBarPrintItem1 = new Syncfusion.Windows.Forms.Chart.ChartToolBarPrintItem();
-            Syncfusion.Windows.Forms.Chart.ChartToolBarPrintPreviewItem chartToolBarPrintPreviewItem1 = new Syncfusion.Windows.Forms.Chart.ChartToolBarPrintPreviewItem();
-            Syncfusion.Windows.Forms.Chart.ChartToolBarSplitter chartToolBarSplitter1 = new Syncfusion.Windows.Forms.Chart.ChartToolBarSplitter();
-            Syncfusion.Windows.Forms.Chart.ChartToolBarPaletteItem chartToolBarPaletteItem1 = new Syncfusion.Windows.Forms.Chart.ChartToolBarPaletteItem();
-            Syncfusion.Windows.Forms.Chart.ChartToolBarStyleItem chartToolBarStyleItem1 = new Syncfusion.Windows.Forms.Chart.ChartToolBarStyleItem();
-            Syncfusion.Windows.Forms.Chart.ChartToolBarTypeItem chartToolBarTypeItem1 = new Syncfusion.Windows.Forms.Chart.ChartToolBarTypeItem();
-            Syncfusion.Windows.Forms.Chart.ChartToolBarSeries3DItem chartToolBarSeries3DItem1 = new Syncfusion.Windows.Forms.Chart.ChartToolBarSeries3DItem();
-            Syncfusion.Windows.Forms.Chart.ChartToolBarShowLegendItem chartToolBarShowLegendItem1 = new Syncfusion.Windows.Forms.Chart.ChartToolBarShowLegendItem();
+            Syncfusion.Windows.Forms.Chart.ChartSeries chartSeries3 = new Syncfusion.Windows.Forms.Chart.ChartSeries();
+            Syncfusion.Windows.Forms.Chart.ChartCustomShapeInfo chartCustomShapeInfo3 = new Syncfusion.Windows.Forms.Chart.ChartCustomShapeInfo();
+            Syncfusion.Windows.Forms.Chart.ChartLineInfo chartLineInfo2 = new Syncfusion.Windows.Forms.Chart.ChartLineInfo();
+            Syncfusion.Windows.Forms.Chart.ChartSeries chartSeries4 = new Syncfusion.Windows.Forms.Chart.ChartSeries();
+            Syncfusion.Windows.Forms.Chart.ChartCustomShapeInfo chartCustomShapeInfo4 = new Syncfusion.Windows.Forms.Chart.ChartCustomShapeInfo();
+            Syncfusion.Windows.Forms.Chart.ChartToolBarSaveItem chartToolBarSaveItem2 = new Syncfusion.Windows.Forms.Chart.ChartToolBarSaveItem();
+            Syncfusion.Windows.Forms.Chart.ChartToolBarCopyItem chartToolBarCopyItem2 = new Syncfusion.Windows.Forms.Chart.ChartToolBarCopyItem();
+            Syncfusion.Windows.Forms.Chart.ChartToolBarPrintItem chartToolBarPrintItem2 = new Syncfusion.Windows.Forms.Chart.ChartToolBarPrintItem();
+            Syncfusion.Windows.Forms.Chart.ChartToolBarPrintPreviewItem chartToolBarPrintPreviewItem2 = new Syncfusion.Windows.Forms.Chart.ChartToolBarPrintPreviewItem();
+            Syncfusion.Windows.Forms.Chart.ChartToolBarSplitter chartToolBarSplitter2 = new Syncfusion.Windows.Forms.Chart.ChartToolBarSplitter();
+            Syncfusion.Windows.Forms.Chart.ChartToolBarPaletteItem chartToolBarPaletteItem2 = new Syncfusion.Windows.Forms.Chart.ChartToolBarPaletteItem();
+            Syncfusion.Windows.Forms.Chart.ChartToolBarStyleItem chartToolBarStyleItem2 = new Syncfusion.Windows.Forms.Chart.ChartToolBarStyleItem();
+            Syncfusion.Windows.Forms.Chart.ChartToolBarTypeItem chartToolBarTypeItem2 = new Syncfusion.Windows.Forms.Chart.ChartToolBarTypeItem();
+            Syncfusion.Windows.Forms.Chart.ChartToolBarSeries3DItem chartToolBarSeries3DItem2 = new Syncfusion.Windows.Forms.Chart.ChartToolBarSeries3DItem();
+            Syncfusion.Windows.Forms.Chart.ChartToolBarShowLegendItem chartToolBarShowLegendItem2 = new Syncfusion.Windows.Forms.Chart.ChartToolBarShowLegendItem();
             this.DataTile = new Syncfusion.Windows.Forms.Tools.HubTile();
             this.SummaryTile = new Syncfusion.Windows.Forms.Tools.HubTile();
             this.MainChart = new Syncfusion.Windows.Forms.Chart.ChartControl();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.expandCollapsePanel2 = new MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel();
-            this.DivisionBtn = new System.Windows.Forms.Button();
+            this.DocumentButton = new System.Windows.Forms.Button();
             this.TransferButton = new System.Windows.Forms.Button();
             this.DataButton = new System.Windows.Forms.Button();
+            this.DivisionBtn = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.expandCollapsePanel1 = new MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel();
             this.DivisionSummaryButton = new System.Windows.Forms.Button();
@@ -77,21 +78,21 @@ namespace BudgetExecution
             // DataTile
             // 
             this.DataTile.BackColor = System.Drawing.Color.Black;
-            textItem5.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            textItem5.HubTile = this.DataTile;
-            textItem5.Text = "Database | Budgets | Transfers";
-            this.DataTile.Banner = textItem5;
+            textItem1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            textItem1.HubTile = this.DataTile;
+            textItem1.Text = "Database | Budgets | Transfers";
+            this.DataTile.Banner = textItem1;
             this.DataTile.BannerColor = System.Drawing.Color.Black;
             this.DataTile.BannerHeight = 25;
-            textItem6.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(0)));
-            textItem6.HubTile = this.DataTile;
-            this.DataTile.Body = textItem6;
+            textItem2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(0)));
+            textItem2.HubTile = this.DataTile;
+            this.DataTile.Body = textItem2;
             this.DataTile.EnableSelectionMarker = false;
             this.DataTile.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(0)));
-            textItem7.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            textItem7.HubTile = this.DataTile;
-            textItem7.TextColor = System.Drawing.SystemColors.MenuHighlight;
-            this.DataTile.Footer = textItem7;
+            textItem3.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            textItem3.HubTile = this.DataTile;
+            textItem3.TextColor = System.Drawing.SystemColors.MenuHighlight;
+            this.DataTile.Footer = textItem3;
             this.DataTile.HoveredBorderColor = System.Drawing.SystemColors.MenuHighlight;
             this.DataTile.ImageSource = ((System.Drawing.Image)(resources.GetObject("DataTile.ImageSource")));
             this.DataTile.Location = new System.Drawing.Point(1, 1);
@@ -100,31 +101,31 @@ namespace BudgetExecution
             this.DataTile.Name = "DataTile";
             this.DataTile.PulseScale = 2;
             this.DataTile.ShowBanner = true;
-            this.DataTile.Size = new System.Drawing.Size(290, 231);
+            this.DataTile.Size = new System.Drawing.Size(290, 246);
             this.DataTile.TabIndex = 20;
-            textItem8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            textItem8.HubTile = this.DataTile;
-            this.DataTile.Title = textItem8;
-            this.DataTile.Click += new System.EventHandler(this.DataTile_Click);
+            textItem4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            textItem4.HubTile = this.DataTile;
+            this.DataTile.Title = textItem4;
+            this.DataTile.Click += new System.EventHandler(this.DataTile_OnClick);
             // 
             // SummaryTile
             // 
             this.SummaryTile.BackColor = System.Drawing.Color.Black;
-            textItem9.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            textItem9.HubTile = this.SummaryTile;
-            textItem9.Text = "Summary | Status of Funds";
-            this.SummaryTile.Banner = textItem9;
+            textItem5.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            textItem5.HubTile = this.SummaryTile;
+            textItem5.Text = "Summary | Status of Funds";
+            this.SummaryTile.Banner = textItem5;
             this.SummaryTile.BannerColor = System.Drawing.Color.Black;
             this.SummaryTile.BannerHeight = 25;
-            textItem10.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(0)));
-            textItem10.HubTile = this.SummaryTile;
-            this.SummaryTile.Body = textItem10;
+            textItem6.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(0)));
+            textItem6.HubTile = this.SummaryTile;
+            this.SummaryTile.Body = textItem6;
             this.SummaryTile.EnableSelectionMarker = false;
             this.SummaryTile.EnableTileSlideEffect = false;
             this.SummaryTile.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(0)));
-            textItem11.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            textItem11.HubTile = this.SummaryTile;
-            this.SummaryTile.Footer = textItem11;
+            textItem7.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            textItem7.HubTile = this.SummaryTile;
+            this.SummaryTile.Footer = textItem7;
             this.SummaryTile.HoveredBorderColor = System.Drawing.SystemColors.MenuHighlight;
             this.SummaryTile.ImageSource = ((System.Drawing.Image)(resources.GetObject("SummaryTile.ImageSource")));
             this.SummaryTile.Location = new System.Drawing.Point(1, 1);
@@ -133,11 +134,12 @@ namespace BudgetExecution
             this.SummaryTile.Name = "SummaryTile";
             this.SummaryTile.ShowBanner = true;
             this.SummaryTile.ShowRotateTileBanner = true;
-            this.SummaryTile.Size = new System.Drawing.Size(291, 219);
+            this.SummaryTile.Size = new System.Drawing.Size(291, 249);
             this.SummaryTile.TabIndex = 23;
-            textItem12.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            textItem12.HubTile = this.SummaryTile;
-            this.SummaryTile.Title = textItem12;
+            textItem8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            textItem8.HubTile = this.SummaryTile;
+            this.SummaryTile.Title = textItem8;
+            this.SummaryTile.Click += new System.EventHandler(this.SummaryTile_OnClick);
             // 
             // MainChart
             // 
@@ -198,49 +200,49 @@ namespace BudgetExecution
             this.MainChart.PrimaryYAxis.TitleFont = new System.Drawing.Font("Segoe UI", 14F);
             this.MainChart.RealMode3D = true;
             this.MainChart.Rotation = 0.1F;
-            chartSeries1.FancyToolTip.ResizeInsideSymbol = true;
-            chartSeries1.Name = "Default0";
-            chartSeries1.Points.Add(1D, ((double)(55D)));
-            chartSeries1.Points.Add(2D, ((double)(70D)));
-            chartSeries1.Points.Add(3D, ((double)(80D)));
-            chartSeries1.Points.Add(4D, ((double)(65D)));
-            chartSeries1.Points.Add(5D, ((double)(75D)));
-            chartSeries1.Resolution = 0D;
-            chartSeries1.StackingGroup = "Default Group";
-            chartSeries1.Style.AltTagFormat = "";
-            chartSeries1.Style.Callout.Font.Facename = "Microsoft Sans Serif";
-            chartSeries1.Style.DrawTextShape = false;
-            chartSeries1.Style.Font.Facename = "Microsoft Sans Serif";
-            chartLineInfo1.Alignment = System.Drawing.Drawing2D.PenAlignment.Center;
-            chartLineInfo1.Color = System.Drawing.SystemColors.ControlText;
-            chartLineInfo1.DashPattern = null;
-            chartLineInfo1.DashStyle = System.Drawing.Drawing2D.DashStyle.Solid;
-            chartLineInfo1.Width = 1F;
-            chartCustomShapeInfo1.Border = chartLineInfo1;
-            chartCustomShapeInfo1.Color = System.Drawing.SystemColors.HighlightText;
-            chartCustomShapeInfo1.Type = Syncfusion.Windows.Forms.Chart.ChartCustomShape.Square;
-            chartSeries1.Style.TextShape = chartCustomShapeInfo1;
-            chartSeries1.Text = "Default0";
-            chartSeries2.FancyToolTip.ResizeInsideSymbol = true;
-            chartSeries2.Name = "Default1";
-            chartSeries2.Points.Add(1D, ((double)(70D)));
-            chartSeries2.Points.Add(2D, ((double)(35D)));
-            chartSeries2.Points.Add(3D, ((double)(65D)));
-            chartSeries2.Points.Add(4D, ((double)(25D)));
-            chartSeries2.Points.Add(5D, ((double)(50D)));
-            chartSeries2.Resolution = 0D;
-            chartSeries2.StackingGroup = "Default Group";
-            chartSeries2.Style.AltTagFormat = "";
-            chartSeries2.Style.Callout.Font.Facename = "Microsoft Sans Serif";
-            chartSeries2.Style.DrawTextShape = false;
-            chartSeries2.Style.Font.Facename = "Microsoft Sans Serif";
-            chartCustomShapeInfo2.Border = chartLineInfo1;
-            chartCustomShapeInfo2.Color = System.Drawing.SystemColors.HighlightText;
-            chartCustomShapeInfo2.Type = Syncfusion.Windows.Forms.Chart.ChartCustomShape.Square;
-            chartSeries2.Style.TextShape = chartCustomShapeInfo2;
-            chartSeries2.Text = "Default1";
-            this.MainChart.Series.Add(chartSeries1);
-            this.MainChart.Series.Add(chartSeries2);
+            chartSeries3.FancyToolTip.ResizeInsideSymbol = true;
+            chartSeries3.Name = "Default0";
+            chartSeries3.Points.Add(1D, ((double)(55D)));
+            chartSeries3.Points.Add(2D, ((double)(70D)));
+            chartSeries3.Points.Add(3D, ((double)(80D)));
+            chartSeries3.Points.Add(4D, ((double)(65D)));
+            chartSeries3.Points.Add(5D, ((double)(75D)));
+            chartSeries3.Resolution = 0D;
+            chartSeries3.StackingGroup = "Default Group";
+            chartSeries3.Style.AltTagFormat = "";
+            chartSeries3.Style.Callout.Font.Facename = "Microsoft Sans Serif";
+            chartSeries3.Style.DrawTextShape = false;
+            chartSeries3.Style.Font.Facename = "Microsoft Sans Serif";
+            chartLineInfo2.Alignment = System.Drawing.Drawing2D.PenAlignment.Center;
+            chartLineInfo2.Color = System.Drawing.SystemColors.ControlText;
+            chartLineInfo2.DashPattern = null;
+            chartLineInfo2.DashStyle = System.Drawing.Drawing2D.DashStyle.Solid;
+            chartLineInfo2.Width = 1F;
+            chartCustomShapeInfo3.Border = chartLineInfo2;
+            chartCustomShapeInfo3.Color = System.Drawing.SystemColors.HighlightText;
+            chartCustomShapeInfo3.Type = Syncfusion.Windows.Forms.Chart.ChartCustomShape.Square;
+            chartSeries3.Style.TextShape = chartCustomShapeInfo3;
+            chartSeries3.Text = "Default0";
+            chartSeries4.FancyToolTip.ResizeInsideSymbol = true;
+            chartSeries4.Name = "Default1";
+            chartSeries4.Points.Add(1D, ((double)(70D)));
+            chartSeries4.Points.Add(2D, ((double)(35D)));
+            chartSeries4.Points.Add(3D, ((double)(65D)));
+            chartSeries4.Points.Add(4D, ((double)(25D)));
+            chartSeries4.Points.Add(5D, ((double)(50D)));
+            chartSeries4.Resolution = 0D;
+            chartSeries4.StackingGroup = "Default Group";
+            chartSeries4.Style.AltTagFormat = "";
+            chartSeries4.Style.Callout.Font.Facename = "Microsoft Sans Serif";
+            chartSeries4.Style.DrawTextShape = false;
+            chartSeries4.Style.Font.Facename = "Microsoft Sans Serif";
+            chartCustomShapeInfo4.Border = chartLineInfo2;
+            chartCustomShapeInfo4.Color = System.Drawing.SystemColors.HighlightText;
+            chartCustomShapeInfo4.Type = Syncfusion.Windows.Forms.Chart.ChartCustomShape.Square;
+            chartSeries4.Style.TextShape = chartCustomShapeInfo4;
+            chartSeries4.Text = "Default1";
+            this.MainChart.Series.Add(chartSeries3);
+            this.MainChart.Series.Add(chartSeries4);
             this.MainChart.Series3D = true;
             this.MainChart.SeriesHighlight = true;
             this.MainChart.ShadowColor = new Syncfusion.Drawing.BrushInfo(Syncfusion.Drawing.GradientStyle.PathRectangle, System.Drawing.SystemColors.WindowText, System.Drawing.Color.Silver);
@@ -256,16 +258,16 @@ namespace BudgetExecution
             this.MainChart.Title.Font = new System.Drawing.Font("Segoe UI", 16F);
             this.MainChart.Title.Name = "Default";
             this.MainChart.ToolBar.EnableDefaultItems = false;
-            this.MainChart.ToolBar.Items.Add(chartToolBarSaveItem1);
-            this.MainChart.ToolBar.Items.Add(chartToolBarCopyItem1);
-            this.MainChart.ToolBar.Items.Add(chartToolBarPrintItem1);
-            this.MainChart.ToolBar.Items.Add(chartToolBarPrintPreviewItem1);
-            this.MainChart.ToolBar.Items.Add(chartToolBarSplitter1);
-            this.MainChart.ToolBar.Items.Add(chartToolBarPaletteItem1);
-            this.MainChart.ToolBar.Items.Add(chartToolBarStyleItem1);
-            this.MainChart.ToolBar.Items.Add(chartToolBarTypeItem1);
-            this.MainChart.ToolBar.Items.Add(chartToolBarSeries3DItem1);
-            this.MainChart.ToolBar.Items.Add(chartToolBarShowLegendItem1);
+            this.MainChart.ToolBar.Items.Add(chartToolBarSaveItem2);
+            this.MainChart.ToolBar.Items.Add(chartToolBarCopyItem2);
+            this.MainChart.ToolBar.Items.Add(chartToolBarPrintItem2);
+            this.MainChart.ToolBar.Items.Add(chartToolBarPrintPreviewItem2);
+            this.MainChart.ToolBar.Items.Add(chartToolBarSplitter2);
+            this.MainChart.ToolBar.Items.Add(chartToolBarPaletteItem2);
+            this.MainChart.ToolBar.Items.Add(chartToolBarStyleItem2);
+            this.MainChart.ToolBar.Items.Add(chartToolBarTypeItem2);
+            this.MainChart.ToolBar.Items.Add(chartToolBarSeries3DItem2);
+            this.MainChart.ToolBar.Items.Add(chartToolBarShowLegendItem2);
             // 
             // tableLayoutPanel2
             // 
@@ -276,8 +278,9 @@ namespace BudgetExecution
             this.tableLayoutPanel2.Controls.Add(this.DataTile, 0, 0);
             this.tableLayoutPanel2.Location = new System.Drawing.Point(994, 552);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 1;
+            this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(582, 389);
             this.tableLayoutPanel2.TabIndex = 63;
             // 
@@ -285,10 +288,10 @@ namespace BudgetExecution
             // 
             this.expandCollapsePanel2.ButtonSize = MakarovDev.ExpandCollapsePanel.ExpandCollapseButton.ExpandButtonSize.Small;
             this.expandCollapsePanel2.ButtonStyle = MakarovDev.ExpandCollapsePanel.ExpandCollapseButton.ExpandButtonStyle.Circle;
-            this.expandCollapsePanel2.Controls.Add(this.DivisionBtn);
+            this.expandCollapsePanel2.Controls.Add(this.DocumentButton);
             this.expandCollapsePanel2.Controls.Add(this.TransferButton);
             this.expandCollapsePanel2.Controls.Add(this.DataButton);
-            this.expandCollapsePanel2.ExpandedHeight = 383;
+            this.expandCollapsePanel2.ExpandedHeight = 363;
             this.expandCollapsePanel2.IsExpanded = false;
             this.expandCollapsePanel2.Location = new System.Drawing.Point(304, 3);
             this.expandCollapsePanel2.Name = "expandCollapsePanel2";
@@ -297,26 +300,27 @@ namespace BudgetExecution
             this.expandCollapsePanel2.Text = "Data";
             this.expandCollapsePanel2.UseAnimation = true;
             // 
-            // DivisionBtn
+            // DocumentButton
             // 
-            this.DivisionBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.DivisionBtn.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.DivisionBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.DivisionBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
-            this.DivisionBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.DivisionBtn.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.DivisionBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(247)))), ((int)(((byte)(252)))));
-            this.DivisionBtn.Image = ((System.Drawing.Image)(resources.GetObject("DivisionBtn.Image")));
-            this.DivisionBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.DivisionBtn.Location = new System.Drawing.Point(27, 146);
-            this.DivisionBtn.Margin = new System.Windows.Forms.Padding(2);
-            this.DivisionBtn.Name = "DivisionBtn";
-            this.DivisionBtn.Size = new System.Drawing.Size(196, 55);
-            this.DivisionBtn.TabIndex = 55;
-            this.DivisionBtn.Text = "Budget Allocations";
-            this.DivisionBtn.TextAlign = System.Drawing.ContentAlignment.BottomRight;
-            this.DivisionBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.DivisionBtn.UseVisualStyleBackColor = false;
+            this.DocumentButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.DocumentButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.DocumentButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.DocumentButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.DocumentButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.DocumentButton.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DocumentButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(247)))), ((int)(((byte)(252)))));
+            this.DocumentButton.Image = ((System.Drawing.Image)(resources.GetObject("DocumentButton.Image")));
+            this.DocumentButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.DocumentButton.Location = new System.Drawing.Point(27, 218);
+            this.DocumentButton.Margin = new System.Windows.Forms.Padding(2);
+            this.DocumentButton.Name = "DocumentButton";
+            this.DocumentButton.Size = new System.Drawing.Size(200, 67);
+            this.DocumentButton.TabIndex = 66;
+            this.DocumentButton.Text = "Budget \r\nDocuments";
+            this.DocumentButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.DocumentButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.DocumentButton.UseVisualStyleBackColor = false;
+            this.DocumentButton.Click += new System.EventHandler(this.DocumentButton_OnClick);
             // 
             // TransferButton
             // 
@@ -328,14 +332,14 @@ namespace BudgetExecution
             this.TransferButton.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TransferButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(247)))), ((int)(((byte)(252)))));
             this.TransferButton.Image = ((System.Drawing.Image)(resources.GetObject("TransferButton.Image")));
-            this.TransferButton.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.TransferButton.Location = new System.Drawing.Point(27, 222);
+            this.TransferButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.TransferButton.Location = new System.Drawing.Point(27, 139);
             this.TransferButton.Margin = new System.Windows.Forms.Padding(2);
             this.TransferButton.Name = "TransferButton";
-            this.TransferButton.Size = new System.Drawing.Size(187, 51);
+            this.TransferButton.Size = new System.Drawing.Size(196, 64);
             this.TransferButton.TabIndex = 56;
             this.TransferButton.Text = "    Tranfers";
-            this.TransferButton.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.TransferButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.TransferButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.TransferButton.UseVisualStyleBackColor = false;
             this.TransferButton.Click += new System.EventHandler(this.TransferButton_Click);
@@ -352,16 +356,37 @@ namespace BudgetExecution
             this.DataButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(247)))), ((int)(((byte)(252)))));
             this.DataButton.Image = ((System.Drawing.Image)(resources.GetObject("DataButton.Image")));
             this.DataButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.DataButton.Location = new System.Drawing.Point(27, 69);
+            this.DataButton.Location = new System.Drawing.Point(27, 65);
             this.DataButton.Margin = new System.Windows.Forms.Padding(2);
             this.DataButton.Name = "DataButton";
-            this.DataButton.Size = new System.Drawing.Size(196, 56);
+            this.DataButton.Size = new System.Drawing.Size(196, 57);
             this.DataButton.TabIndex = 57;
             this.DataButton.Text = "Data Server";
-            this.DataButton.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.DataButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.DataButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.DataButton.UseVisualStyleBackColor = false;
             this.DataButton.Click += new System.EventHandler(this.DataButton_OnClick);
+            // 
+            // DivisionBtn
+            // 
+            this.DivisionBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.DivisionBtn.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.DivisionBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.DivisionBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.DivisionBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.DivisionBtn.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.DivisionBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(247)))), ((int)(((byte)(252)))));
+            this.DivisionBtn.Image = ((System.Drawing.Image)(resources.GetObject("DivisionBtn.Image")));
+            this.DivisionBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.DivisionBtn.Location = new System.Drawing.Point(29, 229);
+            this.DivisionBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.DivisionBtn.Name = "DivisionBtn";
+            this.DivisionBtn.Size = new System.Drawing.Size(196, 55);
+            this.DivisionBtn.TabIndex = 55;
+            this.DivisionBtn.Text = "Division Allocations";
+            this.DivisionBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.DivisionBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.DivisionBtn.UseVisualStyleBackColor = false;
             // 
             // tableLayoutPanel1
             // 
@@ -382,6 +407,7 @@ namespace BudgetExecution
             this.expandCollapsePanel1.ButtonSize = MakarovDev.ExpandCollapsePanel.ExpandCollapseButton.ExpandButtonSize.Small;
             this.expandCollapsePanel1.ButtonStyle = MakarovDev.ExpandCollapsePanel.ExpandCollapseButton.ExpandButtonStyle.Circle;
             this.expandCollapsePanel1.Controls.Add(this.DivisionSummaryButton);
+            this.expandCollapsePanel1.Controls.Add(this.DivisionBtn);
             this.expandCollapsePanel1.Controls.Add(this.RegionSummaryButton);
             this.expandCollapsePanel1.ExpandedHeight = 386;
             this.expandCollapsePanel1.IsExpanded = false;
@@ -402,14 +428,14 @@ namespace BudgetExecution
             this.DivisionSummaryButton.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.DivisionSummaryButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(247)))), ((int)(((byte)(252)))));
             this.DivisionSummaryButton.Image = ((System.Drawing.Image)(resources.GetObject("DivisionSummaryButton.Image")));
-            this.DivisionSummaryButton.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.DivisionSummaryButton.Location = new System.Drawing.Point(19, 168);
+            this.DivisionSummaryButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.DivisionSummaryButton.Location = new System.Drawing.Point(19, 146);
             this.DivisionSummaryButton.Margin = new System.Windows.Forms.Padding(2);
             this.DivisionSummaryButton.Name = "DivisionSummaryButton";
-            this.DivisionSummaryButton.Size = new System.Drawing.Size(232, 65);
+            this.DivisionSummaryButton.Size = new System.Drawing.Size(206, 67);
             this.DivisionSummaryButton.TabIndex = 54;
             this.DivisionSummaryButton.Text = "Division Summary";
-            this.DivisionSummaryButton.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.DivisionSummaryButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.DivisionSummaryButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.DivisionSummaryButton.UseVisualStyleBackColor = false;
             // 
@@ -425,14 +451,14 @@ namespace BudgetExecution
             this.RegionSummaryButton.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.RegionSummaryButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(247)))), ((int)(((byte)(252)))));
             this.RegionSummaryButton.Image = ((System.Drawing.Image)(resources.GetObject("RegionSummaryButton.Image")));
-            this.RegionSummaryButton.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.RegionSummaryButton.Location = new System.Drawing.Point(19, 85);
+            this.RegionSummaryButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.RegionSummaryButton.Location = new System.Drawing.Point(19, 65);
             this.RegionSummaryButton.Margin = new System.Windows.Forms.Padding(2);
             this.RegionSummaryButton.Name = "RegionSummaryButton";
-            this.RegionSummaryButton.Size = new System.Drawing.Size(236, 64);
+            this.RegionSummaryButton.Size = new System.Drawing.Size(206, 58);
             this.RegionSummaryButton.TabIndex = 53;
             this.RegionSummaryButton.Text = "Region Summary";
-            this.RegionSummaryButton.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.RegionSummaryButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.RegionSummaryButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.RegionSummaryButton.UseCompatibleTextRendering = true;
             this.RegionSummaryButton.UseVisualStyleBackColor = false;
@@ -476,5 +502,6 @@ namespace BudgetExecution
         private MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel expandCollapsePanel2;
         private System.Windows.Forms.Button TransferButton;
         private System.Windows.Forms.Button DataButton;
+        private System.Windows.Forms.Button DocumentButton;
     }
 }

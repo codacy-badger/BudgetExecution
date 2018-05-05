@@ -88,6 +88,8 @@ namespace BudgetExecution
             ConfigureSeries(DataSeries, Value);
             Chart.Series.Add(DataSeries);
             Configure3DMode(Chart);
+            Chart.PrimaryXAxis.Font = new Font("SegoeUI", 10F, FontStyle.Bold);
+            Chart.PrimaryXAxis.ForeColor = SystemColors.MenuHighlight;
         }              
         public BudgetChart(ChartControl chart, Source source, PrcField filter)
         {
