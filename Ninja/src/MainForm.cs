@@ -156,7 +156,8 @@ namespace BudgetExecution
         }
         private void DocumentButton_OnClick(object sender, EventArgs e)
         {
-            var s = new FunctionalityForm();
+
+            var s = new Selector(Info.FunctionImages);
             s.Show();
         }
         private void TransferButton_Click(object sender, EventArgs e)

@@ -475,6 +475,7 @@
     <Content Include="Resources\FunctionImages\DataTools.png" />
     <Content Include="Resources\FunctionImages\Reprogramming.png" />
     <Content Include="Resources\FunctionImages\Transfer.png" />
+    <None Include="Resources\Solutions - 03.png" />
     <None Include="Resources\SummaryImages\Untitled.png" />
     <None Include="Resources\SummaryImages\StatusOfFunds.png" />
     <None Include="Resources\SummaryImages\SiteData.png" />

@@ -383,6 +383,16 @@ namespace BudgetExecution.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Solutions___03 {
+            get {
+                object obj = ResourceManager.GetObject("Solutions - 03", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Stationery_Pen {
             get {
                 object obj = ResourceManager.GetObject("Stationery_Pen", resourceCulture);
