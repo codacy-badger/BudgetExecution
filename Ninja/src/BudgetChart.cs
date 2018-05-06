@@ -20,57 +20,68 @@ namespace BudgetExecution
             SeriesType = ChartSeriesType.Column;
             if (Chart.Series != null)
                 Chart.Series.Clear();
-            SeriesType = ChartSeriesType.Column;
             ConfigurePrimaryAxisTitle(new string[] { title });
             DataSeries = GetSeriesTotals(data);
+            DataSeries.Type = SeriesType;
             Chart.Series.Add(DataSeries);
             ConfigureLargeNumberSeries(DataSeries);
             Configure3DMode(Chart);
         }
         public BudgetChart(ChartControl chart, DataBuilder data, PrcField filter)
         {
+            SeriesType = ChartSeriesType.Column;
             Chart = chart;
             Data = data;
             Value = Stat.Total;
-            SeriesType = ChartSeriesType.Column;
             Table = Data.QueryTable;
             Metric = new DataMetric(Data);
             DataTotals = Metric.GetChartTotals(Table, filter);
             if (Chart.Series != null)
                 Chart.Series.Clear();
             DataSeries = GetSeriesTotals(DataTotals);
+            DataSeries.Type = SeriesType;
             ConfigureLargeNumberSeries(DataSeries);
             Chart.Series.Add(DataSeries);
             Configure3DMode(Chart);
 
         }
-        public BudgetChart(ChartControl chart, DataBuilder data, PrcField filter, Stat value)
+        public BudgetChart(ChartControl chart, DataBuilder data, PrcField filter, Stat value, ChartSeriesType type)
         {
             Chart = chart;
             Data = data;
             Value = value;
-            SeriesType = ChartSeriesType.Column;
+            SeriesType = type;
+            ConfigurePrimaryAxisLabels(Chart);
             if (Chart.Series != null)
                 Chart.Series.Clear();
             Table = Data.QueryTable;
             Metric = new DataMetric(Data);
             DataMetrics = Metric.GetChartMetrics(Table, filter);
             DataSeries = GetSeriesTotals(GetSingleValue(DataMetrics, Value));
+            DataSeries.Type = SeriesType;
             ConfigureSeries(DataSeries, Value);
             Chart.Series.Add(DataSeries);
             Configure3DMode(Chart);
+            if(SeriesType == ChartSeriesType.Pie)
+            {
+                Chart.Legend.Visible = true;
+                Chart.Series[0].ExplodedAll = true;
+                Chart.Series[0].ExplosionOffset = 20f;
+            }
         }
-        public BudgetChart(ChartControl chart, DataMetric metric, PrcField field, Stat value)
+        public BudgetChart(ChartControl chart, DataMetric metric, PrcField field, Stat value, ChartSeriesType type)
         {
             Chart = chart;
             Value = value;
-            SeriesType = ChartSeriesType.Column;
+            SeriesType = type;
             Metric = metric;
             Table = Metric.BaseTable;
+            ConfigurePrimaryAxisLabels(Chart);
             DataMetrics = Metric.GetChartMetrics(Table, field);
             if (Chart.Series != null)
                 Chart.Series.Clear();
             DataSeries = GetSeriesTotals(GetSingleValue(DataMetrics, Value));
+            DataSeries.Type = SeriesType;
             ConfigureSeries(DataSeries, Value);
             Chart.Series.Add(DataSeries);
             Configure3DMode(Chart);
@@ -80,6 +91,7 @@ namespace BudgetExecution
             Chart = chart;
             Value = value;
             SeriesType = ChartSeriesType.Column;
+            ConfigurePrimaryAxisLabels(Chart);
             Table = table;
             DataMetrics = Metric.GetChartMetrics(Table, prcfilter);
             if (Chart.Series != null)
@@ -88,8 +100,6 @@ namespace BudgetExecution
             ConfigureSeries(DataSeries, Value);
             Chart.Series.Add(DataSeries);
             Configure3DMode(Chart);
-            Chart.PrimaryXAxis.Font = new Font("SegoeUI", 10F, FontStyle.Bold);
-            Chart.PrimaryXAxis.ForeColor = SystemColors.MenuHighlight;
         }              
         public BudgetChart(ChartControl chart, Source source, PrcField filter)
         {
@@ -102,6 +112,7 @@ namespace BudgetExecution
             if (Chart.Series != null)
                 Chart.Series.Clear();
             DataSeries = GetSeriesTotals(GetSingleValue(DataMetrics, Value));
+            DataSeries.Type = SeriesType;
             Chart.Series.Add(DataSeries);
             ConfigureSeries(DataSeries, Value);
             Configure3DMode(Chart);
@@ -279,6 +290,11 @@ namespace BudgetExecution
                     DataSeries.ConfigItems.ColumnItem.LightColor = Color.DeepSkyBlue;
                     DataSeries.ConfigItems.ColumnItem.PhongAlpha = 2;
                 }
+                if(SeriesType == ChartSeriesType.Pie)
+                {
+                    DataSeries.ConfigItems.PieItem.ShowDataBindLabels = true;
+                    
+                }
             }
             catch (System.Exception e)
             {
@@ -307,6 +323,7 @@ namespace BudgetExecution
                 DataSeries.Style.Font.Size = 12.0F;
                 DataSeries.Style.Font.FontStyle = FontStyle.Bold;
                 DataSeries.Style.Font.Facename = "SegoeUI";
+                DataSeries.ShowTicks = true;
                 if (SeriesType == ChartSeriesType.Column)
                 {
                     DataSeries.ConfigItems.ColumnItem.ShadingMode = ChartColumnShadingMode.PhongCylinder;
@@ -319,18 +336,44 @@ namespace BudgetExecution
                 MessageBox.Show(e.Message + e.StackTrace);
             }
         }
-        private void Configure3DMode(ChartControl chart)
+        private void ConfigurePrimaryAxisLabels(ChartControl chart)
         {
             try
             {
                 Chart = chart;
-                Chart.ChartArea.Series3D = true;
-                Chart.RealMode3D = true;
-                Chart.Style3D = true;
-                Chart.Tilt = 0;
-                Chart.Depth = 250;
-                Chart.Rotation = 5;
-                Chart.SpacingBetweenSeries = 2;
+                Chart.PrimaryXAxis.Font = new Font("SegoeUI", 8F, FontStyle.Bold);
+                Chart.PrimaryXAxis.ForeColor = SystemColors.MenuHighlight;
+                
+            }
+            catch (System.Exception e)
+            {
+                MessageBox.Show(e.Message + e.StackTrace);
+            }
+        }
+        private void Configure3DMode(ChartControl chart)
+        {
+            try
+            {
+                if (SeriesType == ChartSeriesType.Column)
+                {
+                    Chart = chart;
+                    Chart.ChartArea.Series3D = true;
+                    Chart.RealMode3D = true;
+                    Chart.Style3D = true;
+                    Chart.Tilt = 0.0f;
+                    Chart.Depth = 250;
+                    Chart.Rotation = 20;
+                    Chart.SpacingBetweenSeries = 2;
+                }
+                if (SeriesType == ChartSeriesType.Pie)
+                {
+                    Chart = chart;
+                    Chart.ChartArea.Series3D = true;
+                    Chart.RealMode3D = false;
+                    Chart.Style3D = true;
+                    Chart.Tilt = -15f;
+                    Chart.Depth = 250;
+                }
             }
             catch (System.Exception e)
             {
@@ -363,7 +406,7 @@ namespace BudgetExecution
             {
                 Chart.PrimaryXAxis.Title = title[0];
                 Chart.PrimaryXAxis.TitleColor = Color.LightSteelBlue;
-                Chart.PrimaryXAxis.TitleFont = new Font("Segoe UI", 9f, FontStyle.Bold);
+                Chart.PrimaryXAxis.TitleFont = new Font("Segoe UI", 10f, FontStyle.Bold);
             }
             catch (System.Exception e)
             {

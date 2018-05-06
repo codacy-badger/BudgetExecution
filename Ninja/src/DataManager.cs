@@ -5,6 +5,7 @@ using System.Linq;
 using System.Windows.Forms;
 using Budget.Ninja.Data;
 using MetroSet_UI.Controls;
+using Syncfusion.Windows.Forms.Chart;
 using Metro = Syncfusion.Windows.Forms.MetroForm;
 
 
@@ -21,7 +22,7 @@ namespace BudgetExecution
                     Table = Data.QueryTable;
                     Ninja = new FormData(Data, BindingSource, Grid, Navigator);
                     ProgramElements = Ninja.GetProgramElements(Table);
-                    PrcChart = new BudgetChart(PrcChart, Data, PrcField.FundName, Stat.Total).Activate();
+                    PrcChart = new BudgetChart(PrcChart, Data, PrcField.FundName, Stat.Total, ChartSeriesType.Column).Activate();
                     GetGridSelectedRowValues();
                 }
 
