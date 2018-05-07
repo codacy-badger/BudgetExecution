@@ -34,7 +34,7 @@ namespace BudgetExecution
             Data = data;
             Value = Stat.Total;
             Table = Data.QueryTable;
-            Metric = new DataMetric(Data);
+            Metric = new PrcMetric(Data);
             DataTotals = Metric.GetChartTotals(Table, filter);
             if (Chart.Series != null)
                 Chart.Series.Clear();
@@ -55,7 +55,7 @@ namespace BudgetExecution
             if (Chart.Series != null)
                 Chart.Series.Clear();
             Table = Data.QueryTable;
-            Metric = new DataMetric(Data);
+            Metric = new PrcMetric(Data);
             DataMetrics = Metric.GetChartMetrics(Table, filter);
             DataSeries = GetSeriesTotals(GetSingleValue(DataMetrics, Value));
             DataSeries.Type = SeriesType;
@@ -69,13 +69,13 @@ namespace BudgetExecution
                 Chart.Series[0].ExplosionOffset = 20f;
             }
         }
-        public BudgetChart(ChartControl chart, DataMetric metric, PrcField field, Stat value, ChartSeriesType type)
+        public BudgetChart(ChartControl chart, PrcMetric metric, PrcField field, Stat value, ChartSeriesType type)
         {
             Chart = chart;
             Value = value;
             SeriesType = type;
             Metric = metric;
-            Table = Metric.BaseTable;
+            Table = Metric.Table;
             ConfigurePrimaryAxisLabels(Chart);
             DataMetrics = Metric.GetChartMetrics(Table, field);
             if (Chart.Series != null)
@@ -84,7 +84,9 @@ namespace BudgetExecution
             DataSeries.Type = SeriesType;
             ConfigureSeries(DataSeries, Value);
             Chart.Series.Add(DataSeries);
+            ConfigureToolTip(DataSeries);
             Configure3DMode(Chart);
+            Chart.ShowToolTips = true;
         }
         public BudgetChart(ChartControl chart, DataTable table, PrcField prcfilter, Stat value)
         {
@@ -106,7 +108,7 @@ namespace BudgetExecution
             Chart = chart;
             SeriesType = ChartSeriesType.Column;
             Data = new DataBuilder(source);
-            Metric = new DataMetric(Data);
+            Metric = new PrcMetric(Data);
             Table = Data.QueryTable;
             Value = Stat.Total;
             if (Chart.Series != null)
@@ -132,7 +134,7 @@ namespace BudgetExecution
         public Dictionary<string, double> InputTotals { get; set; }
         public ChartLegend Legend { get; set; }
         public string[] MainTitle { get; set; }
-        public DataMetric Metric { get; }
+        public PrcMetric Metric { get; }
         public ChartDataBindModel Model { get; set; }
         public ChartSeriesType SeriesType { get; set; }
         public DataTable Table { get; set; }
@@ -319,7 +321,6 @@ namespace BudgetExecution
                     DataSeries.Style.TextFormat = "{0:P}";
                 if (value == Stat.Count)
                     DataSeries.Style.TextFormat = "{0}";
-                DataSeries.PointsToolTipFormat = "Funding:{4:N}";
                 DataSeries.Style.Font.Size = 12.0F;
                 DataSeries.Style.Font.FontStyle = FontStyle.Bold;
                 DataSeries.Style.Font.Facename = "SegoeUI";
@@ -334,6 +335,15 @@ namespace BudgetExecution
             catch (System.Exception e)
             {
                 MessageBox.Show(e.Message + e.StackTrace);
+            }
+        }
+
+        private void ConfigureToolTip(ChartSeries series)
+        {
+            DataSeries = series;
+            for(int i = 0; i < DataSeries.Points.Count; i++)
+            {
+                DataSeries.Styles[i].ToolTip = string.Format("{0}", DataSeries.Points[0].ToString());
             }
         }
         private void ConfigurePrimaryAxisLabels(ChartControl chart)

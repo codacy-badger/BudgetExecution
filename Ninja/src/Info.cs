@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Windows.Forms;
 
@@ -6,6 +7,19 @@ namespace BudgetExecution
 {
     public static class Info
     {
+        public static DataTable FilterTable(DataTable table, PrcField prcfilter, string filter)
+        {
+            try
+            {
+                return table.AsEnumerable().Where(p => p.Field<string>(prcfilter.ToString()).Equals(filter))
+                    .Select(p => p).CopyToDataTable();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
+                return null;
+            }
+        }
         public static string DivisionImages = @"C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\Resources\NinjaDivisionImages";
         public static string SummaryImages = @"C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\Resources\SummaryImages";
         public static string FunctionImages = @"C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\Resources\FunctionImages";

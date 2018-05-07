@@ -222,6 +222,12 @@
     <Compile Include="src\Employee.cs" />
     <Compile Include="src\ExcelQuery.cs" />
     <Compile Include="src\ExcelReport.cs" />
+    <Compile Include="src\PrcAccountManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\PrcAccountManager.Designer.cs">
+      <DependentUpon>PrcAccountManager.cs</DependentUpon>
+    </Compile>
     <Compile Include="src\FormData.cs" />
     <Compile Include="src\NPM.cs" />
     <Compile Include="src\AccountManager.Designer.cs">
@@ -338,7 +344,7 @@
     <Compile Include="src\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="src\DataMetric.cs" />
+    <Compile Include="src\PrcMetric.cs" />
     <Compile Include="src\PrcDataGrid.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -398,6 +404,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="src\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\PrcAccountManager.resx">
+      <DependentUpon>PrcAccountManager.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="src\FunctionalityForm.resx">
       <DependentUpon>FunctionalityForm.cs</DependentUpon>

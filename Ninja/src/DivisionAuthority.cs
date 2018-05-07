@@ -12,7 +12,7 @@ namespace BudgetExecution
         public DivisionAuthority()
         {
             Data = new DataBuilder(Source.DivisionAccount);
-            Metric = new DataMetric(Data);
+            Metric = new PrcMetric(Data);
             Table = Data.QueryTable;
             Total = Metric.Total;
             Count = Metric.Count;
@@ -35,7 +35,7 @@ namespace BudgetExecution
             RC = new RC(rc);
             Org = new Org(RC.Code);
             Data = new DataBuilder(Source.DivisionAccount, new Dictionary<string, object> { ["RC"] = rc });
-            Metric = new DataMetric(Data);
+            Metric = new PrcMetric(Data);
             Table = Data.QueryTable;
             Total = Metric.Total;
             Count = Metric.Count;
@@ -60,7 +60,7 @@ namespace BudgetExecution
         public Org Org { get; }
         public DataSet BudgetData { get; }
         public DataBuilder Data { get; set; }
-        public DataMetric Metric { get; }
+        public PrcMetric Metric { get; }
         public DataTable Table { get; }
         public Dictionary<string, string[]> ProgramElements { get; }
         public decimal[] Measures { get; }

@@ -42,10 +42,10 @@ namespace BudgetExecution
                 TabNames = GetTabNames();
                 Text = "R6 Division Summary";
             }
-            Metric = new DataMetric(Data);
+            Metric = new PrcMetric(Data);
             DataSet = Data.DataSet;
             ProgramElements = Metric.ProgramElements;
-            BindingSource.DataSource = Metric.BaseTable;
+            BindingSource.DataSource = Metric.Table;
             ProjectTab.TabVisible = false;
             DatabaseTab.TabVisible = false;
             CurrentTabIndex = SummaryTabControl.SelectedIndex;
@@ -64,7 +64,7 @@ namespace BudgetExecution
             ProgramElements = Data.ProgramElements;
             BaseTable = Data.QueryTable;
             DataSet = Data.DataSet;
-            Metric = new DataMetric(Data);
+            Metric = new PrcMetric(Data);
             Text = string.Format("{0} Summary", Info.DivisionName(rc));
             CurrentTabIndex = SummaryTabControl.SelectedIndex;
             SummaryTabControl.SelectedIndexChanged += SummaryTabPage_TabSelected;
@@ -76,25 +76,23 @@ namespace BudgetExecution
         public DataBuilder Data { get; }
         public Dictionary<string, object> Parameter { get; set; }
         public Source Source { get; }
-        public ChartSeriesType TypeToggle { get; set; }
+        public ChartSeriesType ChartType { get; set; }
         public string[] Divisions { get; }
         public DataSet DataSet { get; }
-        public DataMetric Metric { get; set; }
+        public PrcMetric Metric { get; set; }
         public decimal[] Metrics { get; }
         public Dictionary<string, string[]> ProgramElements { get; }
         public DataTable BaseTable { get; }
-        public DataTable Base1 { get; set; }
-        public DataTable Base2 { get; set; }
         public string[] MainTitle { get; set; }
         public string[] AxisTitle { get; set; }
         public int CurrentTabIndex { get; set; }
         public MetroSetComboBox GridPrimaryFilter { get; set; }
         public MetroSetComboBox GridSecondaryFilter { get; set; }
         public MetroSetComboBox ChartPrimaryFilterControl { get; set; }
+        public MetroSetComboBox ChartTypeFilterControl { get; set; }
         public Stat Measure { get; set; }
         private TabPageAdv[] Tab { get; set; }
         private string[] TabNames { get; set; }
-        public ChartControl ActiveChart { get; set; }
 
         //Methods
         private void Form_Load(object sender, EventArgs e)
@@ -407,36 +405,16 @@ namespace BudgetExecution
                 MessageBox.Show(ex.Message + ex.StackTrace);
             }
         }
-        void ChartToggleButton_OnClick(object sender, EventArgs e)
+        void ChartTypeFilter_ItemSelected(object sender, EventArgs e)
         {
-            var toggle = sender as ToggleButton;
-            var state = toggle.ToggleState;
-            if(state == ToggleButtonState.Inactive)
-            {
-
-                TypeToggle = ChartSeriesType.Column;
-            }
-            if (state == ToggleButtonState.Active)
-            {
-
-                TypeToggle = ChartSeriesType.Pie;
-            }
+            var tb = sender as MetroSetComboBox;
+            ChartType = (ChartSeriesType)Enum.Parse(typeof(ChartSeriesType), tb.SelectedItem.ToString());
         }
-        ChartSeriesType GetToggleState(ToggleButton toggle)
+        ChartSeriesType GetChartType(MetroSetComboBox ctb)
         {
-            
-            var state = toggle.ToggleState;
-            if (state == ToggleButtonState.Inactive)
-            {
-
+            if (ctb.SelectedItem == null)
                 return ChartSeriesType.Column;
-            }
-            if (state == ToggleButtonState.Active)
-            {
-
-                return ChartSeriesType.Pie;
-            }
-            return ChartSeriesType.Column;
+            return (ChartSeriesType)Enum.Parse(typeof(ChartSeriesType), ctb.SelectedItem.ToString());
         }
         void SummaryTabPage_TabSelected(object sender, EventArgs e)
         {
@@ -446,52 +424,44 @@ namespace BudgetExecution
                 switch (SummaryTabControl.SelectedIndex)
                 {
                     case 0:
-                        GetToggleState(Toggle1);
+                        GetChartType(ChartTypeFilter1);
                         FundFilter.SelectedIndexChanged += ChartPrimaryFilter_ItemSelected;
                         FundChart = new BudgetChart(FundChart, Data, PrcField.Fund).Activate();
-                        ActiveChart = FundChart;
                         break;
                     case 1:
-                        GetToggleState(Toggle2);
+                        GetChartType(ChartTypeFilter2);
                         BocFilter.SelectedIndexChanged += ChartPrimaryFilter_ItemSelected;
                         BocChart = new BudgetChart(BocChart, Data, PrcField.BocName).Activate();
-                        ActiveChart = BocChart;
                         break;
                     case 2:
-                        GetToggleState(Toggle3);
+                        GetChartType(ChartTypeFilter3);
                         NpmFilter.SelectedIndexChanged += ChartPrimaryFilter_ItemSelected;
                         NpmChart = new BudgetChart(NpmChart, Data, PrcField.NPM).Activate();
-                        ActiveChart = NpmChart;
                         break;
                     case 3:
-                        GetToggleState(Toggle4);
+                        GetChartType(ChartTypeFilter4);
                         GoalFilter.SelectedIndexChanged += ChartPrimaryFilter_ItemSelected;
                         GoalChart = new BudgetChart(GoalChart, Data, PrcField.GoalName).Activate();
-                        ActiveChart = GoalChart;
                         break;
                     case 4:
-                        GetToggleState(Toggle5);
+                        GetChartType(ChartTypeFilter5);
                         ObjectiveFilter.SelectedIndexChanged += ChartPrimaryFilter_ItemSelected;
                         ObjectiveChart = new BudgetChart(ObjectiveChart, Data, PrcField.ObjectiveName).Activate();
-                        ActiveChart = ObjectiveChart;
                         break;
                     case 5:
-                        GetToggleState(Toggle6);
+                        GetChartType(ChartTypeFilter6);
                         DivisionFilter.SelectedIndexChanged += ChartPrimaryFilter_ItemSelected;
                         DivisionChart = new BudgetChart(DivisionChart, Data, PrcField.Division).Activate();
-                        ActiveChart = DivisionChart;
                         break;
                     case 6:
-                        GetToggleState(Toggle7);
+                        GetChartType(ChartTypeFilter7);
                         AreaFilter.SelectedIndexChanged += ChartPrimaryFilter_ItemSelected;
                         AreaChart = new BudgetChart(AreaChart, Data, PrcField.ProgramArea).Activate();
-                        ActiveChart = AreaChart;
                         break;
                     case 7:
-                        GetToggleState(Toggle8);
+                        GetChartType(ChartTypeFilter8);
                         ProjectFilter.SelectedIndexChanged += ChartPrimaryFilter_ItemSelected;
                         ProjectChart = new BudgetChart(ProjectChart, Data, PrcField.ProgramProjectCode).Activate();
-                        ActiveChart = ProjectChart;
                         break;
                 }
             }
@@ -509,53 +479,53 @@ namespace BudgetExecution
                 {
                     case 0:
                         FundFilter = ChartPrimaryFilterControl;
-                        TypeToggle = GetToggleState(Toggle1);
+                        ChartType = GetChartType(ChartTypeFilter1);
                         Measure = (Stat)Enum.Parse(typeof(Stat), FundFilter.SelectedItem.ToString());
-                        FundChart = new BudgetChart(FundChart, Data, PrcField.Fund, Measure, TypeToggle).Activate();
+                        FundChart = new BudgetChart(FundChart, Data, PrcField.Fund, Measure, ChartType).Activate();
                         var a = new ChartTitle();
                         FundChart.Titles.Add(a);
                         break;
                     case 1:
                         BocFilter = ChartPrimaryFilterControl;
-                        TypeToggle = GetToggleState(Toggle2);
+                        ChartType = GetChartType(ChartTypeFilter2);
                         Measure = (Stat)Enum.Parse(typeof(Stat), BocFilter.SelectedItem.ToString());
-                        BocChart = new BudgetChart(BocChart, Data, PrcField.BocName, Measure, TypeToggle).Activate();
+                        BocChart = new BudgetChart(BocChart, Data, PrcField.BocName, Measure, ChartType).Activate();
                         break;
                     case 2:
                         NpmFilter = ChartPrimaryFilterControl;
-                        TypeToggle = GetToggleState(Toggle3);
+                        ChartType = GetChartType(ChartTypeFilter3);
                         Measure = (Stat)Enum.Parse(typeof(Stat), NpmFilter.SelectedItem.ToString());
-                        NpmChart = new BudgetChart(NpmChart, Data, PrcField.NPM, Measure, TypeToggle).Activate();
+                        NpmChart = new BudgetChart(NpmChart, Data, PrcField.NPM, Measure, ChartType).Activate();
                         break;
                     case 3:
                         GoalFilter = ChartPrimaryFilterControl;
-                        TypeToggle = GetToggleState(Toggle4);
+                        ChartType = GetChartType(ChartTypeFilter4);
                         Measure = (Stat)Enum.Parse(typeof(Stat), GoalFilter.SelectedItem.ToString());
-                        GoalChart = new BudgetChart(GoalChart, Data, PrcField.GoalName, Measure, TypeToggle).Activate();
+                        GoalChart = new BudgetChart(GoalChart, Data, PrcField.GoalName, Measure, ChartType).Activate();
                         break;
                     case 4:
                         ObjectiveFilter = ChartPrimaryFilterControl;
-                        TypeToggle = GetToggleState(Toggle5);
+                        ChartType = GetChartType(ChartTypeFilter5);
                         Measure = (Stat)Enum.Parse(typeof(Stat), ObjectiveFilter.SelectedItem.ToString());
-                        ObjectiveChart = new BudgetChart(ObjectiveChart, Data, PrcField.ObjectiveName, Measure, TypeToggle).Activate();
+                        ObjectiveChart = new BudgetChart(ObjectiveChart, Data, PrcField.ObjectiveName, Measure, ChartType).Activate();
                         break;
                     case 5:
                         DivisionFilter = ChartPrimaryFilterControl;
-                        TypeToggle = GetToggleState(Toggle6);
+                        ChartType = GetChartType(ChartTypeFilter6);
                         Measure = (Stat)Enum.Parse(typeof(Stat), DivisionFilter.SelectedItem.ToString());
-                        DivisionChart = new BudgetChart(DivisionChart, Data, PrcField.Division, Measure, TypeToggle).Activate();
+                        DivisionChart = new BudgetChart(DivisionChart, Data, PrcField.Division, Measure, ChartType).Activate();
                         break;
                     case 6:
                         AreaFilter = ChartPrimaryFilterControl;
-                        TypeToggle = GetToggleState(Toggle7);
+                        ChartType = GetChartType(ChartTypeFilter7);
                         Measure = (Stat)Enum.Parse(typeof(Stat), AreaFilter.SelectedItem.ToString());
-                        AreaChart = new BudgetChart(AreaChart, Data, PrcField.ProgramArea, Measure, TypeToggle).Activate();
+                        AreaChart = new BudgetChart(AreaChart, Data, PrcField.ProgramArea, Measure, ChartType).Activate();
                         break;
                     case 7:
                         ProjectFilter = ChartPrimaryFilterControl;
-                        TypeToggle = GetToggleState(Toggle8);
+                        ChartType = GetChartType(ChartTypeFilter8);
                         Measure = (Stat)Enum.Parse(typeof(Stat), ProjectFilter.SelectedItem.ToString());
-                        ProjectChart = new BudgetChart(ProjectChart, Data, PrcField.ProgramProjectCode, Measure, TypeToggle).Activate();
+                        ProjectChart = new BudgetChart(ProjectChart, Data, PrcField.ProgramProjectCode, Measure, ChartType).Activate();
                         break;
                 }
             }

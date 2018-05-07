@@ -7,138 +7,106 @@ using System.Windows.Forms;
 
 namespace BudgetExecution
 {
-    public class DataMetric
+    public class PrcMetric
     {
         //Constructors
-        public DataMetric()
+        public PrcMetric()
         {
         }
-        public DataMetric(Source source)
+        public PrcMetric(DataBuilder data)
         {
-            Data = new DataBuilder(source);
-            BaseTable = Data.QueryTable;
-            ProgramElements = Data.GetProgramElements(BaseTable);
-            BaseSet = Data.DataSet;
-            Total = GetBaseMetrics(BaseTable);
-            Count = BaseTable.Rows.Count;
-            Average = GetBaseAverage(BaseTable);
-            Metrics = GetMetrics(BaseTable);
-            FundTotals = GetTotals(BaseTable, PrcField.FundName);
-            FundMetrics = GetMetrics(BaseTable, PrcField.FundName);
-            BocTotals = GetTotals(BaseTable, PrcField.BocName);
-            BocMetrics = GetMetrics(BaseTable, PrcField.BocName);
-            NpmTotals = GetTotals(BaseTable, PrcField.NPM);
-            NpmMetrics = GetMetrics(BaseTable, PrcField.NPM);
-            ProgramProjectTotals = GetTotals(BaseTable, PrcField.ProgramProjectCode);
-            ProgramProjectMetrics = GetMetrics(BaseTable, PrcField.ProgramProjectCode);
-            ProgramAreaTotals = GetTotals(BaseTable, PrcField.ProgramArea);
-            ProgramAreaMetrics = GetMetrics(BaseTable, PrcField.ProgramArea);
-            GoalTotals = GetTotals(BaseTable, PrcField.GoalName);
-            GoalMetrics = GetMetrics(BaseTable, PrcField.GoalName);
-            ObjectiveTotals = GetTotals(BaseTable, PrcField.ObjectiveName);
-            ObjectiveMetrics = GetMetrics(BaseTable, PrcField.ObjectiveName);
-            if (source == Source.DivisionAccount && Data.Parameter == null)
+            Data = data;
+            Table = Data.QueryTable;
+            ProgramElements = Data.GetProgramElements(Table);
+            DataSet = Table.DataSet;
+            Total = GetTotals(Table);
+            Count = Table.Rows.Count;
+            Average = GetBaseAverage(Table);
+            Metrics = GetMetrics(Table);
+            FundTotals = GetDataTotals(Table, PrcField.FundName);
+            FundMetrics = GetMetrics(Table, PrcField.FundName);
+            BocTotals = GetDataTotals(Table, PrcField.BocName);
+            BocMetrics = GetMetrics(Table, PrcField.BocName);
+            NpmTotals = GetDataTotals(Table, PrcField.NPM);
+            NpmMetrics = GetMetrics(Table, PrcField.NPM);
+            ProgramProjectTotals = GetDataTotals(Table, PrcField.ProgramProjectCode);
+            ProgramProjectMetrics = GetMetrics(Table, PrcField.ProgramProjectCode);
+            ProgramAreaTotals = GetDataTotals(Table, PrcField.ProgramArea);
+            ProgramAreaMetrics = GetMetrics(Table, PrcField.ProgramArea);
+            GoalTotals = GetDataTotals(Table, PrcField.GoalName);
+            GoalMetrics = GetMetrics(Table, PrcField.GoalName);
+            ObjectiveTotals = GetDataTotals(Table, PrcField.ObjectiveName);
+            ObjectiveMetrics = GetMetrics(Table, PrcField.ObjectiveName);
+            if (Data.Source == Source.DivisionAccount && Data.Parameter == null)
             {
-                DivisionTotals = GetTotals(BaseTable, PrcField.Division);
-                DivisionMetrics = GetMetrics(BaseTable, PrcField.Division);
+                DivisionTotals = GetDataTotals(Table, PrcField.Division);
+                DivisionMetrics = GetMetrics(Table, PrcField.Division);
             }
-            if(source == Source.PRC)
+            if (Data.Source == Source.PRC)
             {
                 var table = new DivisionAuthority().Table;
-                DivisionTotals = GetTotals(table, PrcField.Division);
+                DivisionTotals = GetDataTotals(table, PrcField.Division);
                 DivisionMetrics = GetMetrics(table, PrcField.Division);
             }
         }
-        public DataMetric(DataBuilder data)
+        public PrcMetric(DataBuilder data, PrcField prcfilter, string filter)
         {
             Data = data;
-            BaseTable = Data.QueryTable;
-            ProgramElements = Data.GetProgramElements(BaseTable);
-            BaseSet = BaseTable.DataSet;
-            Total = GetBaseMetrics(BaseTable);
-            Count = BaseTable.Rows.Count;
-            Average = GetBaseAverage(BaseTable);
-            Metrics = GetMetrics(BaseTable);
-            FundTotals = GetTotals(BaseTable, PrcField.FundName);
-            FundMetrics = GetMetrics(BaseTable, PrcField.FundName);
-            BocTotals = GetTotals(BaseTable, PrcField.BocName);
-            BocMetrics = GetMetrics(BaseTable, PrcField.BocName);
-            NpmTotals = GetTotals(BaseTable, PrcField.NPM);
-            NpmMetrics = GetMetrics(BaseTable, PrcField.NPM);
-            ProgramProjectTotals = GetTotals(BaseTable, PrcField.ProgramProjectCode);
-            ProgramProjectMetrics = GetMetrics(BaseTable, PrcField.ProgramProjectCode);
-            ProgramAreaTotals = GetTotals(BaseTable, PrcField.ProgramArea);
-            ProgramAreaMetrics = GetMetrics(BaseTable, PrcField.ProgramArea);
-            GoalTotals = GetTotals(BaseTable, PrcField.GoalName);
-            GoalMetrics = GetMetrics(BaseTable, PrcField.GoalName);
-            ObjectiveTotals = GetTotals(BaseTable, PrcField.ObjectiveName);
-            ObjectiveMetrics = GetMetrics(BaseTable, PrcField.ObjectiveName);
-            if (Data.Source == Source.DivisionAccount && Data.Parameter == null)
-            {
-                DivisionTotals = GetTotals(Data.QueryTable, PrcField.Division);
-                DivisionMetrics = GetMetrics(Data.QueryTable, PrcField.Division);
-            }
-        }
-        public DataMetric(DataBuilder data, PrcField prcfilter, string filter)
-        {
-            Data = data;
-            BaseSet = data.DataSet;
-            BaseTable = FilterTable(data.QueryTable, prcfilter, filter);
-            ProgramElements = GetProgramElements(BaseTable);
-            Total = GetBaseMetrics(BaseTable);
-            Count = BaseTable.Rows.Count;
-            Average = GetBaseAverage(BaseTable);
-            Metrics = GetMetrics(BaseTable);
-            FundTotals = GetTotals(BaseTable, PrcField.FundName);
-            FundMetrics = GetMetrics(BaseTable, PrcField.FundName);
-            BocTotals = GetTotals(BaseTable, PrcField.BocName);
-            BocMetrics = GetMetrics(BaseTable, PrcField.BocName);
-            NpmTotals = GetTotals(BaseTable, PrcField.NPM);
-            NpmMetrics = GetMetrics(BaseTable, PrcField.NPM);
-            ProgramProjectTotals = GetTotals(BaseTable, PrcField.ProgramProjectCode);
-            ProgramProjectMetrics = GetMetrics(BaseTable, PrcField.ProgramProjectCode);
-            ProgramAreaTotals = GetTotals(BaseTable, PrcField.ProgramArea);
-            ProgramAreaMetrics = GetMetrics(BaseTable, PrcField.ProgramArea);
-            GoalTotals = GetTotals(BaseTable, PrcField.GoalName);
-            GoalMetrics = GetMetrics(BaseTable, PrcField.GoalName);
-            ObjectiveTotals = GetTotals(BaseTable, PrcField.ObjectiveName);
-            ObjectiveMetrics = GetMetrics(BaseTable, PrcField.ObjectiveName);
+            DataSet = data.DataSet;
+            Table = FilterTable(data.QueryTable, prcfilter, filter);
+            ProgramElements = GetProgramElements(Table);
+            Total = GetTotals(Table);
+            Count = Table.Rows.Count;
+            Average = GetBaseAverage(Table);
+            Metrics = GetMetrics(Table);
+            FundTotals = GetDataTotals(Table, PrcField.FundName);
+            FundMetrics = GetMetrics(Table, PrcField.FundName);
+            BocTotals = GetDataTotals(Table, PrcField.BocName);
+            BocMetrics = GetMetrics(Table, PrcField.BocName);
+            NpmTotals = GetDataTotals(Table, PrcField.NPM);
+            NpmMetrics = GetMetrics(Table, PrcField.NPM);
+            ProgramProjectTotals = GetDataTotals(Table, PrcField.ProgramProjectCode);
+            ProgramProjectMetrics = GetMetrics(Table, PrcField.ProgramProjectCode);
+            ProgramAreaTotals = GetDataTotals(Table, PrcField.ProgramArea);
+            ProgramAreaMetrics = GetMetrics(Table, PrcField.ProgramArea);
+            GoalTotals = GetDataTotals(Table, PrcField.GoalName);
+            GoalMetrics = GetMetrics(Table, PrcField.GoalName);
+            ObjectiveTotals = GetDataTotals(Table, PrcField.ObjectiveName);
+            ObjectiveMetrics = GetMetrics(Table, PrcField.ObjectiveName);
             if (Data.Source == Source.DivisionAccount)
             {
-                DivisionTotals = GetTotals(Data.QueryTable, PrcField.Division);
+                DivisionTotals = GetDataTotals(Data.QueryTable, PrcField.Division);
                 DivisionMetrics = GetMetrics(Data.QueryTable, PrcField.Division);
             }
             if (Data.Source == Source.PRC)
             {
                 var table = new DivisionAuthority().Table;
-                DivisionTotals = GetTotals(table, PrcField.Division);
+                DivisionTotals = GetDataTotals(table, PrcField.Division);
                 DivisionMetrics = GetMetrics(table, PrcField.Division);
             }
         }
-        public DataMetric(DataTable table, PrcField prcfilter, string filter)
+        public PrcMetric(DataTable table, PrcField prcfilter, string filter)
         {
-            BaseTable = FilterTable(table, prcfilter, filter);
-            ProgramElements = GetProgramElements(BaseTable);
-            Total = GetBaseMetrics(BaseTable);
-            Count = BaseTable.Rows.Count;
-            Average = GetBaseAverage(BaseTable);
-            Metrics = GetMetrics(BaseTable);
-            FundTotals = GetTotals(BaseTable, PrcField.FundName);
-            FundMetrics = GetMetrics(BaseTable, PrcField.FundName);
-            BocTotals = GetTotals(BaseTable, PrcField.BocName);
-            BocMetrics = GetMetrics(BaseTable, PrcField.BocName);
-            NpmTotals = GetTotals(BaseTable, PrcField.NPM);
-            NpmMetrics = GetMetrics(BaseTable, PrcField.NPM);
-            ProgramProjectTotals = GetTotals(BaseTable, PrcField.ProgramProjectCode);
-            ProgramProjectMetrics = GetMetrics(BaseTable, PrcField.ProgramProjectCode);
-            ProgramAreaTotals = GetTotals(BaseTable, PrcField.ProgramArea);
-            ProgramAreaMetrics = GetMetrics(BaseTable, PrcField.ProgramArea);
-            GoalTotals = GetTotals(BaseTable, PrcField.GoalName);
-            GoalMetrics = GetMetrics(BaseTable, PrcField.GoalName);
-            ObjectiveTotals = GetTotals(BaseTable, PrcField.ObjectiveName);
-            ObjectiveMetrics = GetMetrics(BaseTable, PrcField.ObjectiveName);
-            DivisionTotals = GetTotals(table, PrcField.Division);
-            DivisionMetrics = GetMetrics(table, PrcField.Division);
+            Table = FilterTable(table, prcfilter, filter);
+            ProgramElements = GetProgramElements(Table);
+            Total = GetTotals(Table);
+            Count = Table.Rows.Count;
+            Average = GetBaseAverage(Table);
+            Metrics = GetMetrics(Table);
+            FundTotals = GetDataTotals(Table, PrcField.FundName);
+            FundMetrics = GetMetrics(Table, PrcField.FundName);
+            BocTotals = GetDataTotals(Table, PrcField.BocName);
+            BocMetrics = GetMetrics(Table, PrcField.BocName);
+            NpmTotals = GetDataTotals(Table, PrcField.NPM);
+            NpmMetrics = GetMetrics(Table, PrcField.NPM);
+            ProgramProjectTotals = GetDataTotals(Table, PrcField.ProgramProjectCode);
+            ProgramProjectMetrics = GetMetrics(Table, PrcField.ProgramProjectCode);
+            ProgramAreaTotals = GetDataTotals(Table, PrcField.ProgramArea);
+            ProgramAreaMetrics = GetMetrics(Table, PrcField.ProgramArea);
+            GoalTotals = GetDataTotals(Table, PrcField.GoalName);
+            GoalMetrics = GetMetrics(Table, PrcField.GoalName);
+            ObjectiveTotals = GetDataTotals(Table, PrcField.ObjectiveName);
+            ObjectiveMetrics = GetMetrics(Table, PrcField.ObjectiveName);
         }
 
         //Properties
@@ -146,8 +114,8 @@ namespace BudgetExecution
         public decimal Average { get; set; }
         public int Count { get; }
         public double[] Metrics { get; }
-        public DataSet BaseSet { get; }
-        public DataTable BaseTable { get; set; }
+        public DataSet DataSet { get; }
+        public DataTable Table { get; set; }
         public decimal Total { get; }
         public Dictionary<string, double[]> BocMetrics { get; set; }
         public Dictionary<string, decimal> BocTotals { get; }
@@ -195,7 +163,7 @@ namespace BudgetExecution
                 return -1M;
             }
         }
-        public decimal GetBaseMetrics(DataTable table)
+        public decimal GetTotals(DataTable table)
         {
             try
             {
@@ -221,7 +189,7 @@ namespace BudgetExecution
         }
         public double[] GetMetrics(DataTable table)
         {
-            return new double[] { (double)GetBaseMetrics(table), (double)GetBaseCount(table), (double)GetBaseAverage(table), (double)GetBaseMetrics(table) / (double)Data.QueryTotal };
+            return new double[] { (double)GetTotals(table), (double)GetCount(table), (double)GetBaseAverage(table), (double)GetTotals(table) / (double)Data.QueryTotal };
         }
         public PRC[] GetPrcArray(DataTable table)
         {
@@ -249,7 +217,7 @@ namespace BudgetExecution
             if (data.ContainsKey("P6_ID")) data.Remove("P6_ID");
             return data;
         }
-        public int GetBaseCount(DataTable table)
+        public int GetCount(DataTable table)
         {
             try
             {
@@ -261,7 +229,7 @@ namespace BudgetExecution
                 return -1;
             }
         }
-        public Dictionary<string, decimal> GetTotals(DataTable table, PrcField prcfilter)
+        public Dictionary<string, decimal> GetDataTotals(DataTable table, PrcField prcfilter)
         {
             try
             {
@@ -269,8 +237,8 @@ namespace BudgetExecution
                 foreach (string filter in GetCodes(table, prcfilter.ToString()))
                 {
                     var query = table.AsEnumerable().Where(p => p.Field<string>(prcfilter.ToString()).Equals(filter)).Select(p => p).CopyToDataTable();
-                    if (GetBaseMetrics(query) > 0)
-                        info.Add(filter, GetBaseMetrics(query));
+                    if (GetTotals(query) > 0)
+                        info.Add(filter, GetTotals(query));
                 }
                 return info;
             }
@@ -288,7 +256,7 @@ namespace BudgetExecution
                 foreach (string filter in GetCodes(table, prcfilter.ToString()))
                 {
                     var query = table.AsEnumerable().Where(p => p.Field<string>(prcfilter.ToString()).Equals(filter)).Select(p => p).CopyToDataTable();
-                    if (GetBaseMetrics(query) > 0)
+                    if (GetTotals(query) > 0)
                         info.Add(filter,  GetMetrics(query));
                 }
                 return info;
@@ -308,8 +276,8 @@ namespace BudgetExecution
                 {
                     var query = table.AsEnumerable().Where(p => p.Field<string>(prcfilter.ToString()).Equals(filter))
                         .Select(p => p).CopyToDataTable();
-                    if (GetBaseMetrics(query) > 0)
-                        doubledata.Add(filter, (double)GetBaseMetrics(query));
+                    if (GetTotals(query) > 0)
+                        doubledata.Add(filter, (double)GetTotals(query));
                 }
                 return doubledata;
             }
@@ -319,10 +287,6 @@ namespace BudgetExecution
                 return null;
             }
         }
-        private Tuple<DataTable, PRC[], decimal, int> GetAllocation(DataTable table)
-        {
-            return new Tuple<DataTable, PRC[], decimal, int>(table, GetPrcArray(table), GetBaseMetrics(table), GetBaseCount(table));
-        }
         private Dictionary<string, double[]> GetMetrics(DataTable table, PrcField prcfilter)
         {
             try
@@ -331,8 +295,8 @@ namespace BudgetExecution
                 foreach (string filter in GetCodes(table, prcfilter.ToString()))
                 {
                     var query = table.AsEnumerable().Where(p => p.Field<string>(prcfilter.ToString()).Equals(filter)).Select(p => p).CopyToDataTable();
-                    if (GetBaseMetrics(query) > 0)
-                        info.Add(filter, new double[] { (double)GetBaseMetrics(query) });
+                    if (GetTotals(query) > 0)
+                        info.Add(filter, new double[] { (double)GetTotals(query) });
                 }
                 return info;
             }
@@ -341,11 +305,6 @@ namespace BudgetExecution
                 MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
                 return null;
             }
-        }
-        private Dictionary<string, decimal>[] GetTotals()
-        {
-            return new Dictionary<string, decimal>[] {FundTotals, BocTotals, NpmTotals, GoalTotals,
-            ObjectiveTotals, ProgramAreaTotals, ProgramProjectTotals};
         }
     }
 }

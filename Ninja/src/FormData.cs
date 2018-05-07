@@ -21,7 +21,7 @@ namespace BudgetExecution
         public FormData(DataBuilder data, BindingSource bs, DataGridView dgv, BindingNavigator bn)
         {
             Data = data;
-            BudgetMetric = new DataMetric(Data);
+            BudgetMetric = new PrcMetric(Data);
             BudgetData = Data.DataSet;
             Table = Data.QueryTable;
             BindDataGridAndNavigator(Table, dgv, bs, bn);
@@ -33,7 +33,7 @@ namespace BudgetExecution
         //Properties
         public BindingSource BindingSource { get; set; }
         public DataSet BudgetData { get; set; }
-        public DataMetric BudgetMetric { get; set; }
+        public PrcMetric BudgetMetric { get; set; }
         public ChartControl Chart { get; set; }
         public ChartDataBindModel ChartModel { get; set; }
         public int Count { get; set; }

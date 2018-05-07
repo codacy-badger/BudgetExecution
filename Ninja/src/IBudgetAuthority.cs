@@ -8,7 +8,7 @@ namespace BudgetExecution
     
     public interface IBudgetAuthority
     {
-        DataMetric Metric { get; }
+        PrcMetric Metric { get; }
 
         Dictionary<string, string[]> ProgramElements { get; }
 

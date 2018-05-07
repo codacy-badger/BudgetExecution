@@ -22,7 +22,7 @@ namespace BudgetExecution
         public Appropriation(Source source, string fundcode, string bfy) : this(fundcode, bfy)
         {
             Data = new DataBuilder(source, new Dictionary<string, object> { ["Fund"] = fundcode, ["BFY"] = bfy });
-            Metric = new DataMetric(Data);
+            Metric = new PrcMetric(Data);
             Table = Data.QueryTable;
             Total = Metric.Total;
             Average = Metric.Average;
@@ -48,7 +48,7 @@ namespace BudgetExecution
         public string[] BOC { get; }
         public string[] BocCodes { get; }
         public Dictionary<string, decimal> BocData { get; set; }
-        public DataMetric Metric { get; }
+        public PrcMetric Metric { get; }
         public int Count { get; }
         public string FiscalYear { get; }
         public FTE FTE { get; }

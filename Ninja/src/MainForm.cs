@@ -15,7 +15,7 @@ namespace BudgetExecution
             NinjaData = new FormData();
             R6 = new DataBuilder(Source.RegionAccount);
             D6 = new DataBuilder(Source.DivisionAccount);
-            Metric = new DataMetric(R6);
+            Metric = new PrcMetric(R6);
             Timer = new Timer();
             Values = new Dictionary<string, double>[] { Metric.GetChartTotals(R6.QueryTable, PrcField.Fund), Metric.GetChartTotals(R6.QueryTable, PrcField.BOC),
                 Metric.GetChartTotals(D6.QueryTable, PrcField.Fund), Metric.GetChartTotals(R6.QueryTable, PrcField.NPM), Metric.GetChartTotals(D6.QueryTable, PrcField.NPM),
@@ -33,7 +33,7 @@ namespace BudgetExecution
 
         public int Counter { get; set; }
         public DataBuilder D6 { get; set; }
-        public DataMetric Metric { get; set; }
+        public PrcMetric Metric { get; set; }
         public FormData NinjaData { get; set; }
         public DataBuilder R6 { get; set; }
         public string[] Title { get; set; }

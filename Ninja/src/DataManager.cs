@@ -18,7 +18,7 @@ namespace BudgetExecution
                 {
                     InitializeComponent();
                     Data = new DataBuilder(source);
-                    Metric = new DataMetric(Data);
+                    Metric = new PrcMetric(Data);
                     Table = Data.QueryTable;
                     Ninja = new FormData(Data, BindingSource, Grid, Navigator);
                     ProgramElements = Ninja.GetProgramElements(Table);
@@ -29,7 +29,7 @@ namespace BudgetExecution
                 //Properties
                 public DataBuilder Data { get; }
 
-                public DataMetric Metric { get; }
+                public PrcMetric Metric { get; }
                 public FormData Ninja { get; set; }
                 public Dictionary<string, string[]> ProgramElements { get; set; }
                 public DataTable Table { get; set; }

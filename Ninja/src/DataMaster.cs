@@ -18,7 +18,7 @@ namespace BudgetExecution
             InitializeComponent();
             Data = new DataBuilder(Source.RegionAccount);
             Table = Data.QueryTable;
-            Metric = new DataMetric(Data);
+            Metric = new PrcMetric(Data);
             ProgramElements = Data.GetProgramElements(Table);
             BindingSource.DataSource = Table;
             Grid.DataSource = BindingSource;
@@ -30,7 +30,7 @@ namespace BudgetExecution
         //Properties
         private SQLiteDataAdapter Adapter { get; }
         private DataBuilder Data { get; }
-        private DataMetric Metric { get; }
+        private PrcMetric Metric { get; }
         private Dictionary<string, object> Parameter { get; set; }
         private Dictionary<string, string[]> ProgramElements { get; set; }
         private Query Query { get; }
@@ -80,6 +80,11 @@ namespace BudgetExecution
             dgv.Columns[9].Visible = true;
             dgv.Columns[11].Visible = true;
             dgv.Columns[12].Visible = true;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -268,7 +268,7 @@ namespace BudgetExecution
             this.RegionSummaryButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.RegionSummaryButton.BackColor = System.Drawing.Color.Black;
-            this.RegionSummaryButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuHighlight;
+            this.RegionSummaryButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.RegionSummaryButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSteelBlue;
             this.RegionSummaryButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.RegionSummaryButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -290,7 +290,7 @@ namespace BudgetExecution
             // 
             this.DataButton.BackColor = System.Drawing.Color.Black;
             this.DataButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.DataButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuHighlight;
+            this.DataButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.DataButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSteelBlue;
             this.DataButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.DataButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -312,7 +312,7 @@ namespace BudgetExecution
             // TransferButton
             // 
             this.TransferButton.BackColor = System.Drawing.Color.Black;
-            this.TransferButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuHighlight;
+            this.TransferButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.TransferButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSteelBlue;
             this.TransferButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.TransferButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -334,7 +334,7 @@ namespace BudgetExecution
             // DocumentButton
             // 
             this.DocumentButton.BackColor = System.Drawing.Color.Black;
-            this.DocumentButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuHighlight;
+            this.DocumentButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.DocumentButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSteelBlue;
             this.DocumentButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.DocumentButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -356,7 +356,7 @@ namespace BudgetExecution
             // DivisionSummaryButton
             // 
             this.DivisionSummaryButton.BackColor = System.Drawing.Color.Black;
-            this.DivisionSummaryButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuHighlight;
+            this.DivisionSummaryButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.DivisionSummaryButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSteelBlue;
             this.DivisionSummaryButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.DivisionSummaryButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -367,7 +367,7 @@ namespace BudgetExecution
             this.DivisionSummaryButton.Location = new System.Drawing.Point(1166, 296);
             this.DivisionSummaryButton.Margin = new System.Windows.Forms.Padding(2);
             this.DivisionSummaryButton.Name = "DivisionSummaryButton";
-            this.DivisionSummaryButton.Size = new System.Drawing.Size(160, 102);
+            this.DivisionSummaryButton.Size = new System.Drawing.Size(170, 102);
             this.DivisionSummaryButton.TabIndex = 54;
             this.DivisionSummaryButton.Text = "\r\n\r\nDivision Summary";
             this.DivisionSummaryButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -377,7 +377,7 @@ namespace BudgetExecution
             // DivisionBtn
             // 
             this.DivisionBtn.BackColor = System.Drawing.Color.Black;
-            this.DivisionBtn.FlatAppearance.BorderColor = System.Drawing.SystemColors.MenuHighlight;
+            this.DivisionBtn.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.DivisionBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSteelBlue;
             this.DivisionBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.DivisionBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -385,10 +385,10 @@ namespace BudgetExecution
             this.DivisionBtn.ForeColor = System.Drawing.Color.LightSteelBlue;
             this.DivisionBtn.Image = ((System.Drawing.Image)(resources.GetObject("DivisionBtn.Image")));
             this.DivisionBtn.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.DivisionBtn.Location = new System.Drawing.Point(1342, 296);
+            this.DivisionBtn.Location = new System.Drawing.Point(1353, 296);
             this.DivisionBtn.Margin = new System.Windows.Forms.Padding(2);
             this.DivisionBtn.Name = "DivisionBtn";
-            this.DivisionBtn.Size = new System.Drawing.Size(170, 102);
+            this.DivisionBtn.Size = new System.Drawing.Size(165, 102);
             this.DivisionBtn.TabIndex = 55;
             this.DivisionBtn.Text = "\r\n\r\nDivision Allocations";
             this.DivisionBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;

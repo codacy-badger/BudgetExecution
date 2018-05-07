@@ -1,7 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.SQLite;
+using System.Data.SqlClient;
+using System.Data.OleDb;
+using System.Data.Common;
 using System.Windows.Forms;
+using System.Data;
 
 namespace BudgetExecution
 {
@@ -23,6 +27,37 @@ namespace BudgetExecution
             InsertCommand = CommandBuilder.GetInsertCommand();
             UpdateCommand = CommandBuilder.GetInsertCommand();
             DeleteCommand = CommandBuilder.GetInsertCommand();
+        }
+        public Query(Source source, Provider provider)
+        {
+            switch (provider)
+            {
+                case (Provider.SQLite):
+                    Source = source;
+                    TableName = source.ToString();
+                    SelectStatement = $"SELECT * FROM {source.ToString()}";
+                    Connection = new SQLiteConnection(@"datasource=C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\database\SQLite\R6.db");
+                    SelectCommand = new SQLiteCommand(SelectStatement, Connection);
+                    Adapter = new SQLiteDataAdapter(SelectCommand);
+                    CommandBuilder = GetCommandBuilder(Adapter);
+                    break;
+                case (Provider.SqlCe):
+                    Source = source;
+                    TableName = source.ToString();
+                    SelectStatement = $"SELECT * FROM {source.ToString()}";
+                    break;
+                case (Provider.SqlServer):
+                    Source = source;
+                    TableName = source.ToString();
+                    SelectStatement = $"SELECT * FROM {source.ToString()}";
+                    break;
+                case (Provider.OleDb):
+
+                    Source = source;
+                    TableName = source.ToString();
+                    SelectStatement = $"SELECT * FROM {source.ToString()}";
+                    break;
+            }
         }
         public Query(Source source, Dictionary<string, object> param)
         {

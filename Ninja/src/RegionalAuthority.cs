@@ -12,7 +12,7 @@ namespace BudgetExecution
         public RegionalAuthority()
         {
             Data = new DataBuilder(Source.RegionAccount, new Dictionary<string, object> { ["BFY"] = FiscalYear });
-            Metric = new DataMetric(Data);
+            Metric = new PrcMetric(Data);
             Table = Data.QueryTable;
             Total = Metric.Total;
             Count = Metric.Count;
@@ -36,7 +36,7 @@ namespace BudgetExecution
         public decimal Average { get; }
         public Dictionary<string, decimal> BocData { get; }
         public DataSet BudgetData { get; }
-        public DataMetric Metric { get; }
+        public PrcMetric Metric { get; }
         public int Count { get; }
         public DataBuilder Data { get; set; }
         public FTE FTE { get; }
