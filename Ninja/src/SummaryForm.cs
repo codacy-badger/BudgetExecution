@@ -104,7 +104,7 @@ namespace BudgetExecution
                 Grid.DataSource = BindingSource;
                 DefineVisisbleDataColumns(Grid);
                 PopulateGridDatabaseFilterItems(GridFundFilter, PrcField.FundName);
-                InitializeTextBoxBindings();
+                ConfigureTextBoxBindings();
                 lblTotal.Text = Data.GetQueryTotal(Data.QueryTable).ToString("c");
                 lblCount.Text = Data.GetQueryCount(Data.QueryTable).ToString();
                 GridFundFilter.SelectionChangeCommitted += GridFundFilter_ItemSelected;
@@ -272,7 +272,7 @@ namespace BudgetExecution
                 MessageBox.Show(ex.Message + ex.StackTrace);
             }
         }
-        private void InitializeTextBoxBindings()
+        private void ConfigureTextBoxBindings()
         {
             try
             {
@@ -533,11 +533,6 @@ namespace BudgetExecution
             {
                 MessageBox.Show(ex.Message + ex.StackTrace);
             }
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
         }
     }      
 }

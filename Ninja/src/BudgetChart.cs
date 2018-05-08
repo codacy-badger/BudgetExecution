@@ -62,7 +62,8 @@ namespace BudgetExecution
             ConfigureSeries(DataSeries, Value);
             Chart.Series.Add(DataSeries);
             Configure3DMode(Chart);
-            if(SeriesType == ChartSeriesType.Pie)
+            Chart.ShowToolTips = true;
+            if (SeriesType == ChartSeriesType.Pie)
             {
                 Chart.Legend.Visible = true;
                 Chart.Series[0].ExplodedAll = true;
@@ -87,6 +88,12 @@ namespace BudgetExecution
             ConfigureToolTip(DataSeries);
             Configure3DMode(Chart);
             Chart.ShowToolTips = true;
+            if (SeriesType == ChartSeriesType.Pie)
+            {
+                Chart.Legend.Visible = true;
+                Chart.Series[0].ExplodedAll = true;
+                Chart.Series[0].ExplosionOffset = 20f;
+            }
         }
         public BudgetChart(ChartControl chart, DataTable table, PrcField prcfilter, Stat value)
         {
@@ -260,7 +267,7 @@ namespace BudgetExecution
                 if (SeriesType == ChartSeriesType.Column)
                 {
                     DataSeries.ConfigItems.ColumnItem.ShadingMode = ChartColumnShadingMode.PhongCylinder;
-                    DataSeries.ConfigItems.ColumnItem.LightColor = Color.DeepSkyBlue;
+                    DataSeries.ConfigItems.ColumnItem.LightColor = Color.SteelBlue;
                     DataSeries.ConfigItems.ColumnItem.PhongAlpha = 2;
                 }
             }
@@ -289,7 +296,7 @@ namespace BudgetExecution
                 if (SeriesType == ChartSeriesType.Column)
                 {
                     DataSeries.ConfigItems.ColumnItem.ShadingMode = ChartColumnShadingMode.PhongCylinder;
-                    DataSeries.ConfigItems.ColumnItem.LightColor = Color.DeepSkyBlue;
+                    DataSeries.ConfigItems.ColumnItem.LightColor = Color.SteelBlue;
                     DataSeries.ConfigItems.ColumnItem.PhongAlpha = 2;
                 }
                 if(SeriesType == ChartSeriesType.Pie)
@@ -328,7 +335,7 @@ namespace BudgetExecution
                 if (SeriesType == ChartSeriesType.Column)
                 {
                     DataSeries.ConfigItems.ColumnItem.ShadingMode = ChartColumnShadingMode.PhongCylinder;
-                    DataSeries.ConfigItems.ColumnItem.LightColor = Color.DeepSkyBlue;
+                    DataSeries.ConfigItems.ColumnItem.LightColor = Color.SteelBlue;
                     DataSeries.ConfigItems.ColumnItem.PhongAlpha = 2;
                 }
             }
@@ -337,7 +344,6 @@ namespace BudgetExecution
                 MessageBox.Show(e.Message + e.StackTrace);
             }
         }
-
         private void ConfigureToolTip(ChartSeries series)
         {
             DataSeries = series;
@@ -379,7 +385,7 @@ namespace BudgetExecution
                 {
                     Chart = chart;
                     Chart.ChartArea.Series3D = true;
-                    Chart.RealMode3D = false;
+                    Chart.RealMode3D = true;
                     Chart.Style3D = true;
                     Chart.Tilt = -15f;
                     Chart.Depth = 250;

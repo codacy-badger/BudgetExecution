@@ -1207,10 +1207,10 @@ namespace BudgetExecution
             this.tabPageAdv1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPageAdv1.Image = null;
             this.tabPageAdv1.ImageSize = new System.Drawing.Size(16, 16);
-            this.tabPageAdv1.Location = new System.Drawing.Point(2, 35);
+            this.tabPageAdv1.Location = new System.Drawing.Point(2, 1);
             this.tabPageAdv1.Name = "tabPageAdv1";
             this.tabPageAdv1.ShowCloseButton = true;
-            this.tabPageAdv1.Size = new System.Drawing.Size(423, 350);
+            this.tabPageAdv1.Size = new System.Drawing.Size(423, 384);
             this.tabPageAdv1.TabIndex = 4;
             this.tabPageAdv1.Text = "Details";
             this.tabPageAdv1.ThemesEnabled = false;
@@ -1598,10 +1598,10 @@ namespace BudgetExecution
             this.tabPageAdv5.Controls.Add(this.DbChart);
             this.tabPageAdv5.Image = null;
             this.tabPageAdv5.ImageSize = new System.Drawing.Size(16, 16);
-            this.tabPageAdv5.Location = new System.Drawing.Point(2, 35);
+            this.tabPageAdv5.Location = new System.Drawing.Point(2, 1);
             this.tabPageAdv5.Name = "tabPageAdv5";
             this.tabPageAdv5.ShowCloseButton = true;
-            this.tabPageAdv5.Size = new System.Drawing.Size(423, 350);
+            this.tabPageAdv5.Size = new System.Drawing.Size(423, 384);
             this.tabPageAdv5.TabIndex = 2;
             this.tabPageAdv5.Text = "View";
             this.tabPageAdv5.ThemesEnabled = false;
@@ -1652,7 +1652,6 @@ namespace BudgetExecution
             this.DbChart.Name = "DbChart";
             this.DbChart.Padding = new System.Windows.Forms.Padding(1);
             this.DbChart.Palette = Syncfusion.Windows.Forms.Chart.ChartColorPalette.Custom;
-            this.DbChart.PrimaryXAxis.AutoValueType = true;
             this.DbChart.PrimaryXAxis.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DbChart.PrimaryXAxis.GridLineType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(182)))), ((int)(((byte)(183)))));
             this.DbChart.PrimaryXAxis.LineType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(182)))), ((int)(((byte)(183)))));
@@ -1719,7 +1718,7 @@ namespace BudgetExecution
             this.DbChart.Series3D = true;
             this.DbChart.SeriesHighlight = true;
             this.DbChart.ShadowColor = new Syncfusion.Drawing.BrushInfo(Syncfusion.Drawing.GradientStyle.PathRectangle, System.Drawing.SystemColors.WindowText, System.Drawing.Color.Silver);
-            this.DbChart.Size = new System.Drawing.Size(423, 350);
+            this.DbChart.Size = new System.Drawing.Size(423, 384);
             this.DbChart.Spacing = 5F;
             this.DbChart.SpacingBetweenPoints = 5F;
             this.DbChart.Style3D = true;
@@ -1748,10 +1747,10 @@ namespace BudgetExecution
             this.tabPageAdv6.Controls.Add(this.calculatorControl2);
             this.tabPageAdv6.Image = null;
             this.tabPageAdv6.ImageSize = new System.Drawing.Size(16, 16);
-            this.tabPageAdv6.Location = new System.Drawing.Point(2, 35);
+            this.tabPageAdv6.Location = new System.Drawing.Point(2, 1);
             this.tabPageAdv6.Name = "tabPageAdv6";
             this.tabPageAdv6.ShowCloseButton = true;
-            this.tabPageAdv6.Size = new System.Drawing.Size(423, 350);
+            this.tabPageAdv6.Size = new System.Drawing.Size(423, 384);
             this.tabPageAdv6.TabIndex = 3;
             this.tabPageAdv6.Text = "Calculator";
             this.tabPageAdv6.ThemesEnabled = false;
@@ -2166,7 +2165,7 @@ namespace BudgetExecution
             this.ProjectTab.Size = new System.Drawing.Size(1586, 884);
             this.ProjectTab.TabForeColor = System.Drawing.Color.LightSteelBlue;
             this.ProjectTab.TabIndex = 8;
-            this.ProjectTab.Tag = "ProgramProjectName";
+            this.ProjectTab.Tag = "Program Project";
             this.ProjectTab.Text = "ProgramProject";
             this.ProjectTab.ThemesEnabled = false;
             // 
@@ -2272,7 +2271,7 @@ namespace BudgetExecution
             this.ProjectChart.CustomPalette = new System.Drawing.Color[] {
         System.Drawing.Color.SteelBlue,
         System.Drawing.Color.DarkRed,
-        System.Drawing.Color.PaleGoldenrod,
+        System.Drawing.Color.SlateGray,
         System.Drawing.Color.Olive,
         System.Drawing.Color.Navy};
             this.ProjectChart.DataSourceName = "FundBindingSource";
@@ -2403,7 +2402,7 @@ namespace BudgetExecution
             this.AreaTab.Size = new System.Drawing.Size(1586, 884);
             this.AreaTab.TabForeColor = System.Drawing.Color.LightSteelBlue;
             this.AreaTab.TabIndex = 7;
-            this.AreaTab.Tag = "ProgramAreaName";
+            this.AreaTab.Tag = "Program Area";
             this.AreaTab.Text = "ProgramArea";
             this.AreaTab.ThemesEnabled = false;
             // 
@@ -2509,7 +2508,7 @@ namespace BudgetExecution
             this.AreaChart.CustomPalette = new System.Drawing.Color[] {
         System.Drawing.Color.SteelBlue,
         System.Drawing.Color.DarkRed,
-        System.Drawing.Color.PaleGoldenrod,
+        System.Drawing.Color.SlateGray,
         System.Drawing.Color.Olive,
         System.Drawing.Color.Navy};
             this.AreaChart.DataSourceName = "FundBindingSource";
@@ -2736,7 +2735,7 @@ namespace BudgetExecution
             this.DivisionChart.CustomPalette = new System.Drawing.Color[] {
         System.Drawing.Color.SteelBlue,
         System.Drawing.Color.DarkRed,
-        System.Drawing.Color.PaleGoldenrod,
+        System.Drawing.Color.SlateGray,
         System.Drawing.Color.Olive,
         System.Drawing.Color.Navy};
             this.DivisionChart.DataSourceName = "FundBindingSource";
@@ -2857,7 +2856,7 @@ namespace BudgetExecution
             this.ObjectiveTab.Size = new System.Drawing.Size(1586, 884);
             this.ObjectiveTab.TabForeColor = System.Drawing.Color.LightSteelBlue;
             this.ObjectiveTab.TabIndex = 5;
-            this.ObjectiveTab.Tag = "ObjectiveName";
+            this.ObjectiveTab.Tag = "Agency Objective";
             this.ObjectiveTab.Text = "Objective";
             this.ObjectiveTab.ThemesEnabled = false;
             // 
@@ -2963,7 +2962,7 @@ namespace BudgetExecution
             this.ObjectiveChart.CustomPalette = new System.Drawing.Color[] {
         System.Drawing.Color.SteelBlue,
         System.Drawing.Color.DarkRed,
-        System.Drawing.Color.PaleGoldenrod,
+        System.Drawing.Color.SlateGray,
         System.Drawing.Color.Olive,
         System.Drawing.Color.Navy};
             this.ObjectiveChart.DataSourceName = "FundBindingSource";
@@ -3084,7 +3083,7 @@ namespace BudgetExecution
             this.GoalTab.Size = new System.Drawing.Size(1586, 884);
             this.GoalTab.TabForeColor = System.Drawing.Color.LightSteelBlue;
             this.GoalTab.TabIndex = 4;
-            this.GoalTab.Tag = "GoalName";
+            this.GoalTab.Tag = "Agency Goal";
             this.GoalTab.Text = "Goal";
             this.GoalTab.ThemesEnabled = false;
             // 
@@ -3190,7 +3189,7 @@ namespace BudgetExecution
             this.GoalChart.CustomPalette = new System.Drawing.Color[] {
         System.Drawing.Color.SteelBlue,
         System.Drawing.Color.DarkRed,
-        System.Drawing.Color.PaleGoldenrod,
+        System.Drawing.Color.SlateGray,
         System.Drawing.Color.Olive,
         System.Drawing.Color.Navy};
             this.GoalChart.DataSourceName = "FundBindingSource";
@@ -3311,7 +3310,7 @@ namespace BudgetExecution
             this.NpmTab.Size = new System.Drawing.Size(1586, 884);
             this.NpmTab.TabForeColor = System.Drawing.Color.LightSteelBlue;
             this.NpmTab.TabIndex = 3;
-            this.NpmTab.Tag = "NPM";
+            this.NpmTab.Tag = "HQ Office";
             this.NpmTab.Text = "NPM";
             this.NpmTab.ThemesEnabled = false;
             // 
@@ -3418,7 +3417,7 @@ namespace BudgetExecution
             this.NpmChart.CustomPalette = new System.Drawing.Color[] {
         System.Drawing.Color.SteelBlue,
         System.Drawing.Color.DarkRed,
-        System.Drawing.Color.PaleGoldenrod,
+        System.Drawing.Color.SlateGray,
         System.Drawing.Color.Olive,
         System.Drawing.Color.Navy};
             this.NpmChart.DataSourceName = "FundBindingSource";
@@ -3539,7 +3538,7 @@ namespace BudgetExecution
             this.BocTab.Size = new System.Drawing.Size(1586, 884);
             this.BocTab.TabForeColor = System.Drawing.Color.LightSteelBlue;
             this.BocTab.TabIndex = 2;
-            this.BocTab.Tag = "BocName";
+            this.BocTab.Tag = "Budget Object Class";
             this.BocTab.Text = "BOC";
             this.BocTab.ThemesEnabled = false;
             // 
@@ -3646,7 +3645,7 @@ namespace BudgetExecution
             this.BocChart.CustomPalette = new System.Drawing.Color[] {
         System.Drawing.Color.SteelBlue,
         System.Drawing.Color.DarkRed,
-        System.Drawing.Color.PaleGoldenrod,
+        System.Drawing.Color.SlateGray,
         System.Drawing.Color.Olive,
         System.Drawing.Color.Navy};
             this.BocChart.DataSourceName = "FundBindingSource";
@@ -3767,7 +3766,7 @@ namespace BudgetExecution
             this.FundTab.Size = new System.Drawing.Size(1586, 884);
             this.FundTab.TabForeColor = System.Drawing.Color.LightSteelBlue;
             this.FundTab.TabIndex = 1;
-            this.FundTab.Tag = "FundName";
+            this.FundTab.Tag = "Appropriation";
             this.FundTab.Text = "Fund";
             this.FundTab.ThemesEnabled = false;
             // 
@@ -3873,8 +3872,8 @@ namespace BudgetExecution
             this.FundChart.CustomPalette = new System.Drawing.Color[] {
         System.Drawing.Color.SteelBlue,
         System.Drawing.Color.DarkRed,
-        System.Drawing.Color.PaleGoldenrod,
-        System.Drawing.Color.DarkOliveGreen,
+        System.Drawing.Color.SlateGray,
+        System.Drawing.Color.Olive,
         System.Drawing.Color.Navy};
             this.FundChart.DataSourceName = "FundBindingSource";
             this.FundChart.Depth = 250F;

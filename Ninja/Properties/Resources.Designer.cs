@@ -343,6 +343,16 @@ namespace BudgetExecution.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap PuzzlePiece {
+            get {
+                object obj = ResourceManager.GetObject("PuzzlePiece", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Reload {
             get {
                 object obj = ResourceManager.GetObject("Reload", resourceCulture);
@@ -376,16 +386,6 @@ namespace BudgetExecution.Properties {
         internal static System.Drawing.Bitmap Solutions___01 {
             get {
                 object obj = ResourceManager.GetObject("Solutions___01", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Solutions___03 {
-            get {
-                object obj = ResourceManager.GetObject("Solutions - 03", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
