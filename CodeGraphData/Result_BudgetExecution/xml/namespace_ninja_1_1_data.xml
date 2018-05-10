@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="namespace_ninja_1_1_data" kind="namespace">
+    <compoundname>Ninja::Data</compoundname>
+    <innerclass refid="class_ninja_1_1_data_1_1_account_control" prot="public">Ninja::Data::AccountControl</innerclass>
+    <innerclass refid="class_ninja_1_1_data_1_1_budget_data_grid" prot="public">Ninja::Data::BudgetDataGrid</innerclass>
+    <innernamespace refid="namespace_ninja_1_1_data_1_1_forms">Ninja::Data::Forms</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountControl.cs" line="4" column="1"/>
+  </compounddef>
+</doxygen>

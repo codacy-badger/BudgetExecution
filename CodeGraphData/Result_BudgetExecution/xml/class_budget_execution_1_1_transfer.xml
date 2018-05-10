@@ -1,0 +1,588 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_budget_execution_1_1_transfer" kind="class" prot="public">
+    <compoundname>BudgetExecution::Transfer</compoundname>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_budget_execution_1_1_transfer_1a268997310559c5ba587948dd951ea266" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>int</type>
+        <definition>int BudgetExecution.Transfer.ID</definition>
+        <argsstring></argsstring>
+        <name>ID</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Transfer.cs" line="62" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Transfer.cs" bodystart="62" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_transfer_1a6cfef101f320213e4b0711f109479262" compoundref="_transfer_8cs" startline="89" endline="118">BudgetExecution.Transfer.GetTransferData</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_transfer_1a421f2525994642b9538c1ff7ca67cc95" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>decimal</type>
+        <definition>decimal BudgetExecution.Transfer.Amount</definition>
+        <argsstring></argsstring>
+        <name>Amount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Transfer.cs" line="63" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Transfer.cs" bodystart="63" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_transfer_1a6cfef101f320213e4b0711f109479262" compoundref="_transfer_8cs" startline="89" endline="118">BudgetExecution.Transfer.GetTransferData</referencedby>
+        <referencedby refid="class_budget_execution_1_1_transfer_1a128d661a8bf3f2df41af349bd76618a8" compoundref="_transfer_8cs" startline="16" endline="38">BudgetExecution.Transfer.Transfer</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_transfer_1aadf61460a15e98d23d90a89bfad7574c" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>string</type>
+        <definition>string BudgetExecution.Transfer.ControlNumber</definition>
+        <argsstring></argsstring>
+        <name>ControlNumber</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Transfer.cs" line="64" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Transfer.cs" bodystart="64" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_transfer_1a6cfef101f320213e4b0711f109479262" compoundref="_transfer_8cs" startline="89" endline="118">BudgetExecution.Transfer.GetTransferData</referencedby>
+        <referencedby refid="class_budget_execution_1_1_transfer_1a128d661a8bf3f2df41af349bd76618a8" compoundref="_transfer_8cs" startline="16" endline="38">BudgetExecution.Transfer.Transfer</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_transfer_1a272d2af814ceaeb4436e4d7dbc67e2b3" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>decimal</type>
+        <definition>decimal BudgetExecution.Transfer.FromAmount</definition>
+        <argsstring></argsstring>
+        <name>FromAmount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Transfer.cs" line="65" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Transfer.cs" bodystart="65" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_transfer_1a128d661a8bf3f2df41af349bd76618a8" compoundref="_transfer_8cs" startline="16" endline="38">BudgetExecution.Transfer.Transfer</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_transfer_1acbb30676e1af9687c18b663314f8a0b5" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>string</type>
+        <definition>string BudgetExecution.Transfer.FromBFY</definition>
+        <argsstring></argsstring>
+        <name>FromBFY</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Transfer.cs" line="66" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Transfer.cs" bodystart="66" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_transfer_1a802ad236703239acd516822785d4e973" compoundref="_transfer_8cs" startline="119" endline="147">BudgetExecution.Transfer.GetControlNumber</referencedby>
+        <referencedby refid="class_budget_execution_1_1_transfer_1a6cfef101f320213e4b0711f109479262" compoundref="_transfer_8cs" startline="89" endline="118">BudgetExecution.Transfer.GetTransferData</referencedby>
+        <referencedby refid="class_budget_execution_1_1_transfer_1a128d661a8bf3f2df41af349bd76618a8" compoundref="_transfer_8cs" startline="16" endline="38">BudgetExecution.Transfer.Transfer</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_transfer_1ab2dea26cf1307815402a32fce929dd7b" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>string</type>
+        <definition>string BudgetExecution.Transfer.FromBOC</definition>
+        <argsstring></argsstring>
+        <name>FromBOC</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Transfer.cs" line="67" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Transfer.cs" bodystart="67" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_transfer_1a6cfef101f320213e4b0711f109479262" compoundref="_transfer_8cs" startline="89" endline="118">BudgetExecution.Transfer.GetTransferData</referencedby>
+        <referencedby refid="class_budget_execution_1_1_transfer_1a128d661a8bf3f2df41af349bd76618a8" compoundref="_transfer_8cs" startline="16" endline="38">BudgetExecution.Transfer.Transfer</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_transfer_1aa819fc102b4fc7a7a23d3faab67bbf5a" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>string</type>
+        <definition>string BudgetExecution.Transfer.FromCode</definition>
+        <argsstring></argsstring>
+        <name>FromCode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Transfer.cs" line="68" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Transfer.cs" bodystart="68" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_transfer_1a802ad236703239acd516822785d4e973" compoundref="_transfer_8cs" startline="119" endline="147">BudgetExecution.Transfer.GetControlNumber</referencedby>
+        <referencedby refid="class_budget_execution_1_1_transfer_1a6cfef101f320213e4b0711f109479262" compoundref="_transfer_8cs" startline="89" endline="118">BudgetExecution.Transfer.GetTransferData</referencedby>
+        <referencedby refid="class_budget_execution_1_1_transfer_1a128d661a8bf3f2df41af349bd76618a8" compoundref="_transfer_8cs" startline="16" endline="38">BudgetExecution.Transfer.Transfer</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_transfer_1a0ea233ee2ad0128883610465e5694896" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>string</type>
+        <definition>string BudgetExecution.Transfer.FromFund</definition>
+        <argsstring></argsstring>
+        <name>FromFund</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Transfer.cs" line="69" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Transfer.cs" bodystart="69" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_transfer_1a802ad236703239acd516822785d4e973" compoundref="_transfer_8cs" startline="119" endline="147">BudgetExecution.Transfer.GetControlNumber</referencedby>
+        <referencedby refid="class_budget_execution_1_1_transfer_1a6cfef101f320213e4b0711f109479262" compoundref="_transfer_8cs" startline="89" endline="118">BudgetExecution.Transfer.GetTransferData</referencedby>
+        <referencedby refid="class_budget_execution_1_1_transfer_1a128d661a8bf3f2df41af349bd76618a8" compoundref="_transfer_8cs" startline="16" endline="38">BudgetExecution.Transfer.Transfer</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_transfer_1a95f001c640e6e07e23e6edf828a54d31" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>int</type>
+        <definition>int BudgetExecution.Transfer.FromId</definition>
+        <argsstring></argsstring>
+        <name>FromId</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Transfer.cs" line="70" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Transfer.cs" bodystart="70" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_transfer_1a128d661a8bf3f2df41af349bd76618a8" compoundref="_transfer_8cs" startline="16" endline="38">BudgetExecution.Transfer.Transfer</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_transfer_1a78618567aae1cd5644b46f27d0f5b6b1" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>string</type>
+        <definition>string BudgetExecution.Transfer.FromOrg</definition>
+        <argsstring></argsstring>
+        <name>FromOrg</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Transfer.cs" line="71" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Transfer.cs" bodystart="71" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_transfer_1a6cfef101f320213e4b0711f109479262" compoundref="_transfer_8cs" startline="89" endline="118">BudgetExecution.Transfer.GetTransferData</referencedby>
+        <referencedby refid="class_budget_execution_1_1_transfer_1a128d661a8bf3f2df41af349bd76618a8" compoundref="_transfer_8cs" startline="16" endline="38">BudgetExecution.Transfer.Transfer</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_transfer_1a156d8a42210b4a339c47107d33f838d6" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>string</type>
+        <definition>string BudgetExecution.Transfer.FromRC</definition>
+        <argsstring></argsstring>
+        <name>FromRC</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Transfer.cs" line="72" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Transfer.cs" bodystart="72" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_transfer_1a802ad236703239acd516822785d4e973" compoundref="_transfer_8cs" startline="119" endline="147">BudgetExecution.Transfer.GetControlNumber</referencedby>
+        <referencedby refid="class_budget_execution_1_1_transfer_1a6cfef101f320213e4b0711f109479262" compoundref="_transfer_8cs" startline="89" endline="118">BudgetExecution.Transfer.GetTransferData</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_transfer_1ac2e3afb577d25ec3c8919be2de783a8f" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>string</type>
+        <definition>string BudgetExecution.Transfer.FromRPIO</definition>
+        <argsstring></argsstring>
+        <name>FromRPIO</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Transfer.cs" line="73" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Transfer.cs" bodystart="73" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_transfer_1a6cfef101f320213e4b0711f109479262" compoundref="_transfer_8cs" startline="89" endline="118">BudgetExecution.Transfer.GetTransferData</referencedby>
+        <referencedby refid="class_budget_execution_1_1_transfer_1a128d661a8bf3f2df41af349bd76618a8" compoundref="_transfer_8cs" startline="16" endline="38">BudgetExecution.Transfer.Transfer</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_transfer_1a9bbc82c9f533e1e50a68725494e7d5ac" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>string</type>
+        <definition>string BudgetExecution.Transfer.Purpose</definition>
+        <argsstring></argsstring>
+        <name>Purpose</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Transfer.cs" line="74" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Transfer.cs" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_transfer_1ac08ae1ac2f65855f87ea38201630a104" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type><ref refid="class_budget_execution_1_1_p_r_c" kindref="compound">PRC</ref></type>
+        <definition>PRC BudgetExecution.Transfer.Receiver</definition>
+        <argsstring></argsstring>
+        <name>Receiver</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Transfer.cs" line="75" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Transfer.cs" bodystart="75" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_transfer_1a128d661a8bf3f2df41af349bd76618a8" compoundref="_transfer_8cs" startline="16" endline="38">BudgetExecution.Transfer.Transfer</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_transfer_1a44db26ead502b70ce5915ac9279df17a" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type><ref refid="class_budget_execution_1_1_p_r_c" kindref="compound">PRC</ref></type>
+        <definition>PRC BudgetExecution.Transfer.Sender</definition>
+        <argsstring></argsstring>
+        <name>Sender</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Transfer.cs" line="76" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Transfer.cs" bodystart="76" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_transfer_1a128d661a8bf3f2df41af349bd76618a8" compoundref="_transfer_8cs" startline="16" endline="38">BudgetExecution.Transfer.Transfer</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_transfer_1a684ac26d3094dfb82b2f485098b0c5ea" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>decimal</type>
+        <definition>decimal BudgetExecution.Transfer.ToAmount</definition>
+        <argsstring></argsstring>
+        <name>ToAmount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Transfer.cs" line="77" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Transfer.cs" bodystart="77" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_transfer_1a128d661a8bf3f2df41af349bd76618a8" compoundref="_transfer_8cs" startline="16" endline="38">BudgetExecution.Transfer.Transfer</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_transfer_1a6b8828458721730befd68e17ab6224de" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>string</type>
+        <definition>string BudgetExecution.Transfer.ToBFY</definition>
+        <argsstring></argsstring>
+        <name>ToBFY</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Transfer.cs" line="78" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Transfer.cs" bodystart="78" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_transfer_1a802ad236703239acd516822785d4e973" compoundref="_transfer_8cs" startline="119" endline="147">BudgetExecution.Transfer.GetControlNumber</referencedby>
+        <referencedby refid="class_budget_execution_1_1_transfer_1a6cfef101f320213e4b0711f109479262" compoundref="_transfer_8cs" startline="89" endline="118">BudgetExecution.Transfer.GetTransferData</referencedby>
+        <referencedby refid="class_budget_execution_1_1_transfer_1a128d661a8bf3f2df41af349bd76618a8" compoundref="_transfer_8cs" startline="16" endline="38">BudgetExecution.Transfer.Transfer</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_transfer_1aabc93cf8c08224d63dbb8ab3f3b7e9e9" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>string</type>
+        <definition>string BudgetExecution.Transfer.ToBOC</definition>
+        <argsstring></argsstring>
+        <name>ToBOC</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Transfer.cs" line="79" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Transfer.cs" bodystart="79" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_transfer_1a6cfef101f320213e4b0711f109479262" compoundref="_transfer_8cs" startline="89" endline="118">BudgetExecution.Transfer.GetTransferData</referencedby>
+        <referencedby refid="class_budget_execution_1_1_transfer_1a128d661a8bf3f2df41af349bd76618a8" compoundref="_transfer_8cs" startline="16" endline="38">BudgetExecution.Transfer.Transfer</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_transfer_1a4abdc2c4977d61c74c82c24fa47f05cc" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>string</type>
+        <definition>string BudgetExecution.Transfer.ToCode</definition>
+        <argsstring></argsstring>
+        <name>ToCode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Transfer.cs" line="80" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Transfer.cs" bodystart="80" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_transfer_1a802ad236703239acd516822785d4e973" compoundref="_transfer_8cs" startline="119" endline="147">BudgetExecution.Transfer.GetControlNumber</referencedby>
+        <referencedby refid="class_budget_execution_1_1_transfer_1a6cfef101f320213e4b0711f109479262" compoundref="_transfer_8cs" startline="89" endline="118">BudgetExecution.Transfer.GetTransferData</referencedby>
+        <referencedby refid="class_budget_execution_1_1_transfer_1a128d661a8bf3f2df41af349bd76618a8" compoundref="_transfer_8cs" startline="16" endline="38">BudgetExecution.Transfer.Transfer</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_transfer_1aa92b5217d0f0241311b01f6d68cb3a66" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>string</type>
+        <definition>string BudgetExecution.Transfer.ToFund</definition>
+        <argsstring></argsstring>
+        <name>ToFund</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Transfer.cs" line="81" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Transfer.cs" bodystart="81" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_transfer_1a802ad236703239acd516822785d4e973" compoundref="_transfer_8cs" startline="119" endline="147">BudgetExecution.Transfer.GetControlNumber</referencedby>
+        <referencedby refid="class_budget_execution_1_1_transfer_1a6cfef101f320213e4b0711f109479262" compoundref="_transfer_8cs" startline="89" endline="118">BudgetExecution.Transfer.GetTransferData</referencedby>
+        <referencedby refid="class_budget_execution_1_1_transfer_1a128d661a8bf3f2df41af349bd76618a8" compoundref="_transfer_8cs" startline="16" endline="38">BudgetExecution.Transfer.Transfer</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_transfer_1a4a180a2493395ee2ec768506976ba064" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>int</type>
+        <definition>int BudgetExecution.Transfer.ToId</definition>
+        <argsstring></argsstring>
+        <name>ToId</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Transfer.cs" line="82" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Transfer.cs" bodystart="82" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_transfer_1a128d661a8bf3f2df41af349bd76618a8" compoundref="_transfer_8cs" startline="16" endline="38">BudgetExecution.Transfer.Transfer</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_transfer_1a10dbaf1ac9e7104ca431f0ad969423ce" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>string</type>
+        <definition>string BudgetExecution.Transfer.ToOrg</definition>
+        <argsstring></argsstring>
+        <name>ToOrg</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Transfer.cs" line="83" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Transfer.cs" bodystart="83" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_transfer_1a6cfef101f320213e4b0711f109479262" compoundref="_transfer_8cs" startline="89" endline="118">BudgetExecution.Transfer.GetTransferData</referencedby>
+        <referencedby refid="class_budget_execution_1_1_transfer_1a128d661a8bf3f2df41af349bd76618a8" compoundref="_transfer_8cs" startline="16" endline="38">BudgetExecution.Transfer.Transfer</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_transfer_1aea1c0e7e541fb6852034a4f0249629ac" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>string</type>
+        <definition>string BudgetExecution.Transfer.ToRC</definition>
+        <argsstring></argsstring>
+        <name>ToRC</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Transfer.cs" line="84" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Transfer.cs" bodystart="84" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_transfer_1a802ad236703239acd516822785d4e973" compoundref="_transfer_8cs" startline="119" endline="147">BudgetExecution.Transfer.GetControlNumber</referencedby>
+        <referencedby refid="class_budget_execution_1_1_transfer_1a6cfef101f320213e4b0711f109479262" compoundref="_transfer_8cs" startline="89" endline="118">BudgetExecution.Transfer.GetTransferData</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_transfer_1a4997cd818d827d29a57341694c07a075" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>string</type>
+        <definition>string BudgetExecution.Transfer.ToRPIO</definition>
+        <argsstring></argsstring>
+        <name>ToRPIO</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Transfer.cs" line="85" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Transfer.cs" bodystart="85" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_transfer_1a6cfef101f320213e4b0711f109479262" compoundref="_transfer_8cs" startline="89" endline="118">BudgetExecution.Transfer.GetTransferData</referencedby>
+        <referencedby refid="class_budget_execution_1_1_transfer_1a128d661a8bf3f2df41af349bd76618a8" compoundref="_transfer_8cs" startline="16" endline="38">BudgetExecution.Transfer.Transfer</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_transfer_1a07ec0e381a7771819b614ff10d3173ff" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type><ref refid="class_budget_execution_1_1_reprogramming" kindref="compound">Reprogramming</ref></type>
+        <definition>Reprogramming BudgetExecution.Transfer.Type</definition>
+        <argsstring></argsstring>
+        <name>Type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Transfer.cs" line="86" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Transfer.cs" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_budget_execution_1_1_transfer_1aedd51be907020a704e925df2d01fb7e0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>BudgetExecution.Transfer.Transfer</definition>
+        <argsstring>()</argsstring>
+        <name>Transfer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Transfer.cs" line="13" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Transfer.cs" bodystart="13" bodyend="15"/>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_transfer_1a128d661a8bf3f2df41af349bd76618a8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>BudgetExecution.Transfer.Transfer</definition>
+        <argsstring>(PRC sender, PRC receiver, decimal amount)</argsstring>
+        <name>Transfer</name>
+        <param>
+          <type><ref refid="class_budget_execution_1_1_p_r_c" kindref="compound">PRC</ref></type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type><ref refid="class_budget_execution_1_1_p_r_c" kindref="compound">PRC</ref></type>
+          <declname>receiver</declname>
+        </param>
+        <param>
+          <type>decimal</type>
+          <declname>amount</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Transfer.cs" line="16" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Transfer.cs" bodystart="16" bodyend="38"/>
+        <references refid="class_budget_execution_1_1_transfer_1a421f2525994642b9538c1ff7ca67cc95" compoundref="_transfer_8cs" startline="63">BudgetExecution.Transfer.Amount</references>
+        <references refid="class_budget_execution_1_1_transfer_1aadf61460a15e98d23d90a89bfad7574c" compoundref="_transfer_8cs" startline="64">BudgetExecution.Transfer.ControlNumber</references>
+        <references refid="class_budget_execution_1_1_transfer_1a272d2af814ceaeb4436e4d7dbc67e2b3" compoundref="_transfer_8cs" startline="65">BudgetExecution.Transfer.FromAmount</references>
+        <references refid="class_budget_execution_1_1_transfer_1acbb30676e1af9687c18b663314f8a0b5" compoundref="_transfer_8cs" startline="66">BudgetExecution.Transfer.FromBFY</references>
+        <references refid="class_budget_execution_1_1_transfer_1ab2dea26cf1307815402a32fce929dd7b" compoundref="_transfer_8cs" startline="67">BudgetExecution.Transfer.FromBOC</references>
+        <references refid="class_budget_execution_1_1_transfer_1aa819fc102b4fc7a7a23d3faab67bbf5a" compoundref="_transfer_8cs" startline="68">BudgetExecution.Transfer.FromCode</references>
+        <references refid="class_budget_execution_1_1_transfer_1a0ea233ee2ad0128883610465e5694896" compoundref="_transfer_8cs" startline="69">BudgetExecution.Transfer.FromFund</references>
+        <references refid="class_budget_execution_1_1_transfer_1a95f001c640e6e07e23e6edf828a54d31" compoundref="_transfer_8cs" startline="70">BudgetExecution.Transfer.FromId</references>
+        <references refid="class_budget_execution_1_1_transfer_1a78618567aae1cd5644b46f27d0f5b6b1" compoundref="_transfer_8cs" startline="71">BudgetExecution.Transfer.FromOrg</references>
+        <references refid="class_budget_execution_1_1_transfer_1ac2e3afb577d25ec3c8919be2de783a8f" compoundref="_transfer_8cs" startline="73">BudgetExecution.Transfer.FromRPIO</references>
+        <references refid="class_budget_execution_1_1_transfer_1a802ad236703239acd516822785d4e973" compoundref="_transfer_8cs" startline="119" endline="147">BudgetExecution.Transfer.GetControlNumber</references>
+        <references refid="class_budget_execution_1_1_transfer_1ac08ae1ac2f65855f87ea38201630a104" compoundref="_transfer_8cs" startline="75">BudgetExecution.Transfer.Receiver</references>
+        <references refid="class_budget_execution_1_1_transfer_1a44db26ead502b70ce5915ac9279df17a" compoundref="_transfer_8cs" startline="76">BudgetExecution.Transfer.Sender</references>
+        <references refid="class_budget_execution_1_1_transfer_1a684ac26d3094dfb82b2f485098b0c5ea" compoundref="_transfer_8cs" startline="77">BudgetExecution.Transfer.ToAmount</references>
+        <references refid="class_budget_execution_1_1_transfer_1a6b8828458721730befd68e17ab6224de" compoundref="_transfer_8cs" startline="78">BudgetExecution.Transfer.ToBFY</references>
+        <references refid="class_budget_execution_1_1_transfer_1aabc93cf8c08224d63dbb8ab3f3b7e9e9" compoundref="_transfer_8cs" startline="79">BudgetExecution.Transfer.ToBOC</references>
+        <references refid="class_budget_execution_1_1_transfer_1a4abdc2c4977d61c74c82c24fa47f05cc" compoundref="_transfer_8cs" startline="80">BudgetExecution.Transfer.ToCode</references>
+        <references refid="class_budget_execution_1_1_transfer_1aa92b5217d0f0241311b01f6d68cb3a66" compoundref="_transfer_8cs" startline="81">BudgetExecution.Transfer.ToFund</references>
+        <references refid="class_budget_execution_1_1_transfer_1a4a180a2493395ee2ec768506976ba064" compoundref="_transfer_8cs" startline="82">BudgetExecution.Transfer.ToId</references>
+        <references refid="class_budget_execution_1_1_transfer_1a10dbaf1ac9e7104ca431f0ad969423ce" compoundref="_transfer_8cs" startline="83">BudgetExecution.Transfer.ToOrg</references>
+        <references refid="class_budget_execution_1_1_transfer_1a4997cd818d827d29a57341694c07a075" compoundref="_transfer_8cs" startline="85">BudgetExecution.Transfer.ToRPIO</references>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_transfer_1a55f0f51fa1e4c17574a99c4e26ebaa40" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>BudgetExecution.Transfer.Transfer</definition>
+        <argsstring>(DataRow sender, DataRow receiver, decimal amount)</argsstring>
+        <name>Transfer</name>
+        <param>
+          <type>DataRow</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>DataRow</type>
+          <declname>receiver</declname>
+        </param>
+        <param>
+          <type>decimal</type>
+          <declname>amount</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Transfer.cs" line="39" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Transfer.cs" bodystart="39" bodyend="59"/>
+        <references refid="class_budget_execution_1_1_transfer_1a421f2525994642b9538c1ff7ca67cc95" compoundref="_transfer_8cs" startline="63">BudgetExecution.Transfer.Amount</references>
+        <references refid="class_budget_execution_1_1_transfer_1aadf61460a15e98d23d90a89bfad7574c" compoundref="_transfer_8cs" startline="64">BudgetExecution.Transfer.ControlNumber</references>
+        <references refid="class_budget_execution_1_1_transfer_1a272d2af814ceaeb4436e4d7dbc67e2b3" compoundref="_transfer_8cs" startline="65">BudgetExecution.Transfer.FromAmount</references>
+        <references refid="class_budget_execution_1_1_transfer_1acbb30676e1af9687c18b663314f8a0b5" compoundref="_transfer_8cs" startline="66">BudgetExecution.Transfer.FromBFY</references>
+        <references refid="class_budget_execution_1_1_transfer_1ab2dea26cf1307815402a32fce929dd7b" compoundref="_transfer_8cs" startline="67">BudgetExecution.Transfer.FromBOC</references>
+        <references refid="class_budget_execution_1_1_transfer_1aa819fc102b4fc7a7a23d3faab67bbf5a" compoundref="_transfer_8cs" startline="68">BudgetExecution.Transfer.FromCode</references>
+        <references refid="class_budget_execution_1_1_transfer_1a0ea233ee2ad0128883610465e5694896" compoundref="_transfer_8cs" startline="69">BudgetExecution.Transfer.FromFund</references>
+        <references refid="class_budget_execution_1_1_transfer_1a95f001c640e6e07e23e6edf828a54d31" compoundref="_transfer_8cs" startline="70">BudgetExecution.Transfer.FromId</references>
+        <references refid="class_budget_execution_1_1_transfer_1a78618567aae1cd5644b46f27d0f5b6b1" compoundref="_transfer_8cs" startline="71">BudgetExecution.Transfer.FromOrg</references>
+        <references refid="class_budget_execution_1_1_transfer_1ac2e3afb577d25ec3c8919be2de783a8f" compoundref="_transfer_8cs" startline="73">BudgetExecution.Transfer.FromRPIO</references>
+        <references refid="class_budget_execution_1_1_transfer_1a802ad236703239acd516822785d4e973" compoundref="_transfer_8cs" startline="119" endline="147">BudgetExecution.Transfer.GetControlNumber</references>
+        <references refid="class_budget_execution_1_1_transfer_1a684ac26d3094dfb82b2f485098b0c5ea" compoundref="_transfer_8cs" startline="77">BudgetExecution.Transfer.ToAmount</references>
+        <references refid="class_budget_execution_1_1_transfer_1a6b8828458721730befd68e17ab6224de" compoundref="_transfer_8cs" startline="78">BudgetExecution.Transfer.ToBFY</references>
+        <references refid="class_budget_execution_1_1_transfer_1aabc93cf8c08224d63dbb8ab3f3b7e9e9" compoundref="_transfer_8cs" startline="79">BudgetExecution.Transfer.ToBOC</references>
+        <references refid="class_budget_execution_1_1_transfer_1a4abdc2c4977d61c74c82c24fa47f05cc" compoundref="_transfer_8cs" startline="80">BudgetExecution.Transfer.ToCode</references>
+        <references refid="class_budget_execution_1_1_transfer_1aa92b5217d0f0241311b01f6d68cb3a66" compoundref="_transfer_8cs" startline="81">BudgetExecution.Transfer.ToFund</references>
+        <references refid="class_budget_execution_1_1_transfer_1a4a180a2493395ee2ec768506976ba064" compoundref="_transfer_8cs" startline="82">BudgetExecution.Transfer.ToId</references>
+        <references refid="class_budget_execution_1_1_transfer_1a10dbaf1ac9e7104ca431f0ad969423ce" compoundref="_transfer_8cs" startline="83">BudgetExecution.Transfer.ToOrg</references>
+        <references refid="class_budget_execution_1_1_transfer_1a4997cd818d827d29a57341694c07a075" compoundref="_transfer_8cs" startline="85">BudgetExecution.Transfer.ToRPIO</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="package-func">
+      <memberdef kind="function" id="class_budget_execution_1_1_transfer_1a6cfef101f320213e4b0711f109479262" prot="package" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Dictionary&lt; string, object &gt;</type>
+        <definition>Dictionary&lt;string, object&gt; BudgetExecution.Transfer.GetTransferData</definition>
+        <argsstring>()</argsstring>
+        <name>GetTransferData</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Transfer.cs" line="89" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Transfer.cs" bodystart="89" bodyend="118"/>
+        <references refid="class_budget_execution_1_1_transfer_1a421f2525994642b9538c1ff7ca67cc95" compoundref="_transfer_8cs" startline="63">BudgetExecution.Transfer.Amount</references>
+        <references refid="class_budget_execution_1_1_transfer_1aadf61460a15e98d23d90a89bfad7574c" compoundref="_transfer_8cs" startline="64">BudgetExecution.Transfer.ControlNumber</references>
+        <references refid="class_budget_execution_1_1_transfer_1acbb30676e1af9687c18b663314f8a0b5" compoundref="_transfer_8cs" startline="66">BudgetExecution.Transfer.FromBFY</references>
+        <references refid="class_budget_execution_1_1_transfer_1ab2dea26cf1307815402a32fce929dd7b" compoundref="_transfer_8cs" startline="67">BudgetExecution.Transfer.FromBOC</references>
+        <references refid="class_budget_execution_1_1_transfer_1aa819fc102b4fc7a7a23d3faab67bbf5a" compoundref="_transfer_8cs" startline="68">BudgetExecution.Transfer.FromCode</references>
+        <references refid="class_budget_execution_1_1_transfer_1a0ea233ee2ad0128883610465e5694896" compoundref="_transfer_8cs" startline="69">BudgetExecution.Transfer.FromFund</references>
+        <references refid="class_budget_execution_1_1_transfer_1a78618567aae1cd5644b46f27d0f5b6b1" compoundref="_transfer_8cs" startline="71">BudgetExecution.Transfer.FromOrg</references>
+        <references refid="class_budget_execution_1_1_transfer_1a156d8a42210b4a339c47107d33f838d6" compoundref="_transfer_8cs" startline="72">BudgetExecution.Transfer.FromRC</references>
+        <references refid="class_budget_execution_1_1_transfer_1ac2e3afb577d25ec3c8919be2de783a8f" compoundref="_transfer_8cs" startline="73">BudgetExecution.Transfer.FromRPIO</references>
+        <references refid="class_budget_execution_1_1_transfer_1a268997310559c5ba587948dd951ea266" compoundref="_transfer_8cs" startline="62">BudgetExecution.Transfer.ID</references>
+        <references refid="class_budget_execution_1_1_transfer_1a6b8828458721730befd68e17ab6224de" compoundref="_transfer_8cs" startline="78">BudgetExecution.Transfer.ToBFY</references>
+        <references refid="class_budget_execution_1_1_transfer_1aabc93cf8c08224d63dbb8ab3f3b7e9e9" compoundref="_transfer_8cs" startline="79">BudgetExecution.Transfer.ToBOC</references>
+        <references refid="class_budget_execution_1_1_transfer_1a4abdc2c4977d61c74c82c24fa47f05cc" compoundref="_transfer_8cs" startline="80">BudgetExecution.Transfer.ToCode</references>
+        <references refid="class_budget_execution_1_1_transfer_1aa92b5217d0f0241311b01f6d68cb3a66" compoundref="_transfer_8cs" startline="81">BudgetExecution.Transfer.ToFund</references>
+        <references refid="class_budget_execution_1_1_transfer_1a10dbaf1ac9e7104ca431f0ad969423ce" compoundref="_transfer_8cs" startline="83">BudgetExecution.Transfer.ToOrg</references>
+        <references refid="class_budget_execution_1_1_transfer_1aea1c0e7e541fb6852034a4f0249629ac" compoundref="_transfer_8cs" startline="84">BudgetExecution.Transfer.ToRC</references>
+        <references refid="class_budget_execution_1_1_transfer_1a4997cd818d827d29a57341694c07a075" compoundref="_transfer_8cs" startline="85">BudgetExecution.Transfer.ToRPIO</references>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_transfer_1a802ad236703239acd516822785d4e973" prot="package" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>string BudgetExecution.Transfer.GetControlNumber</definition>
+        <argsstring>()</argsstring>
+        <name>GetControlNumber</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Transfer.cs" line="119" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Transfer.cs" bodystart="119" bodyend="147"/>
+        <references refid="class_budget_execution_1_1_transfer_1acbb30676e1af9687c18b663314f8a0b5" compoundref="_transfer_8cs" startline="66">BudgetExecution.Transfer.FromBFY</references>
+        <references refid="class_budget_execution_1_1_transfer_1aa819fc102b4fc7a7a23d3faab67bbf5a" compoundref="_transfer_8cs" startline="68">BudgetExecution.Transfer.FromCode</references>
+        <references refid="class_budget_execution_1_1_transfer_1a0ea233ee2ad0128883610465e5694896" compoundref="_transfer_8cs" startline="69">BudgetExecution.Transfer.FromFund</references>
+        <references refid="class_budget_execution_1_1_transfer_1a156d8a42210b4a339c47107d33f838d6" compoundref="_transfer_8cs" startline="72">BudgetExecution.Transfer.FromRC</references>
+        <references refid="class_budget_execution_1_1_transfer_1a6b8828458721730befd68e17ab6224de" compoundref="_transfer_8cs" startline="78">BudgetExecution.Transfer.ToBFY</references>
+        <references refid="class_budget_execution_1_1_transfer_1a4abdc2c4977d61c74c82c24fa47f05cc" compoundref="_transfer_8cs" startline="80">BudgetExecution.Transfer.ToCode</references>
+        <references refid="class_budget_execution_1_1_transfer_1aa92b5217d0f0241311b01f6d68cb3a66" compoundref="_transfer_8cs" startline="81">BudgetExecution.Transfer.ToFund</references>
+        <references refid="class_budget_execution_1_1_transfer_1aea1c0e7e541fb6852034a4f0249629ac" compoundref="_transfer_8cs" startline="84">BudgetExecution.Transfer.ToRC</references>
+        <referencedby refid="class_budget_execution_1_1_transfer_1a128d661a8bf3f2df41af349bd76618a8" compoundref="_transfer_8cs" startline="16" endline="38">BudgetExecution.Transfer.Transfer</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_transfer_1a9afc44d0373abb3a3c28bff3c2b2c2ac" prot="package" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BudgetExecution.Transfer.WriteTransfer</definition>
+        <argsstring>()</argsstring>
+        <name>WriteTransfer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Transfer.cs" line="148" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Transfer.cs" bodystart="148" bodyend="159"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Transfer.cs" line="11" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Transfer.cs" bodystart="10" bodyend="160"/>
+    <listofallmembers>
+      <member refid="class_budget_execution_1_1_transfer_1a421f2525994642b9538c1ff7ca67cc95" prot="public" virt="non-virtual"><scope>BudgetExecution::Transfer</scope><name>Amount</name></member>
+      <member refid="class_budget_execution_1_1_transfer_1aadf61460a15e98d23d90a89bfad7574c" prot="public" virt="non-virtual"><scope>BudgetExecution::Transfer</scope><name>ControlNumber</name></member>
+      <member refid="class_budget_execution_1_1_transfer_1a272d2af814ceaeb4436e4d7dbc67e2b3" prot="public" virt="non-virtual"><scope>BudgetExecution::Transfer</scope><name>FromAmount</name></member>
+      <member refid="class_budget_execution_1_1_transfer_1acbb30676e1af9687c18b663314f8a0b5" prot="public" virt="non-virtual"><scope>BudgetExecution::Transfer</scope><name>FromBFY</name></member>
+      <member refid="class_budget_execution_1_1_transfer_1ab2dea26cf1307815402a32fce929dd7b" prot="public" virt="non-virtual"><scope>BudgetExecution::Transfer</scope><name>FromBOC</name></member>
+      <member refid="class_budget_execution_1_1_transfer_1aa819fc102b4fc7a7a23d3faab67bbf5a" prot="public" virt="non-virtual"><scope>BudgetExecution::Transfer</scope><name>FromCode</name></member>
+      <member refid="class_budget_execution_1_1_transfer_1a0ea233ee2ad0128883610465e5694896" prot="public" virt="non-virtual"><scope>BudgetExecution::Transfer</scope><name>FromFund</name></member>
+      <member refid="class_budget_execution_1_1_transfer_1a95f001c640e6e07e23e6edf828a54d31" prot="public" virt="non-virtual"><scope>BudgetExecution::Transfer</scope><name>FromId</name></member>
+      <member refid="class_budget_execution_1_1_transfer_1a78618567aae1cd5644b46f27d0f5b6b1" prot="public" virt="non-virtual"><scope>BudgetExecution::Transfer</scope><name>FromOrg</name></member>
+      <member refid="class_budget_execution_1_1_transfer_1a156d8a42210b4a339c47107d33f838d6" prot="public" virt="non-virtual"><scope>BudgetExecution::Transfer</scope><name>FromRC</name></member>
+      <member refid="class_budget_execution_1_1_transfer_1ac2e3afb577d25ec3c8919be2de783a8f" prot="public" virt="non-virtual"><scope>BudgetExecution::Transfer</scope><name>FromRPIO</name></member>
+      <member refid="class_budget_execution_1_1_transfer_1a802ad236703239acd516822785d4e973" prot="package" virt="non-virtual"><scope>BudgetExecution::Transfer</scope><name>GetControlNumber</name></member>
+      <member refid="class_budget_execution_1_1_transfer_1a6cfef101f320213e4b0711f109479262" prot="package" virt="non-virtual"><scope>BudgetExecution::Transfer</scope><name>GetTransferData</name></member>
+      <member refid="class_budget_execution_1_1_transfer_1a268997310559c5ba587948dd951ea266" prot="public" virt="non-virtual"><scope>BudgetExecution::Transfer</scope><name>ID</name></member>
+      <member refid="class_budget_execution_1_1_transfer_1a9bbc82c9f533e1e50a68725494e7d5ac" prot="public" virt="non-virtual"><scope>BudgetExecution::Transfer</scope><name>Purpose</name></member>
+      <member refid="class_budget_execution_1_1_transfer_1ac08ae1ac2f65855f87ea38201630a104" prot="public" virt="non-virtual"><scope>BudgetExecution::Transfer</scope><name>Receiver</name></member>
+      <member refid="class_budget_execution_1_1_transfer_1a44db26ead502b70ce5915ac9279df17a" prot="public" virt="non-virtual"><scope>BudgetExecution::Transfer</scope><name>Sender</name></member>
+      <member refid="class_budget_execution_1_1_transfer_1a684ac26d3094dfb82b2f485098b0c5ea" prot="public" virt="non-virtual"><scope>BudgetExecution::Transfer</scope><name>ToAmount</name></member>
+      <member refid="class_budget_execution_1_1_transfer_1a6b8828458721730befd68e17ab6224de" prot="public" virt="non-virtual"><scope>BudgetExecution::Transfer</scope><name>ToBFY</name></member>
+      <member refid="class_budget_execution_1_1_transfer_1aabc93cf8c08224d63dbb8ab3f3b7e9e9" prot="public" virt="non-virtual"><scope>BudgetExecution::Transfer</scope><name>ToBOC</name></member>
+      <member refid="class_budget_execution_1_1_transfer_1a4abdc2c4977d61c74c82c24fa47f05cc" prot="public" virt="non-virtual"><scope>BudgetExecution::Transfer</scope><name>ToCode</name></member>
+      <member refid="class_budget_execution_1_1_transfer_1aa92b5217d0f0241311b01f6d68cb3a66" prot="public" virt="non-virtual"><scope>BudgetExecution::Transfer</scope><name>ToFund</name></member>
+      <member refid="class_budget_execution_1_1_transfer_1a4a180a2493395ee2ec768506976ba064" prot="public" virt="non-virtual"><scope>BudgetExecution::Transfer</scope><name>ToId</name></member>
+      <member refid="class_budget_execution_1_1_transfer_1a10dbaf1ac9e7104ca431f0ad969423ce" prot="public" virt="non-virtual"><scope>BudgetExecution::Transfer</scope><name>ToOrg</name></member>
+      <member refid="class_budget_execution_1_1_transfer_1aea1c0e7e541fb6852034a4f0249629ac" prot="public" virt="non-virtual"><scope>BudgetExecution::Transfer</scope><name>ToRC</name></member>
+      <member refid="class_budget_execution_1_1_transfer_1a4997cd818d827d29a57341694c07a075" prot="public" virt="non-virtual"><scope>BudgetExecution::Transfer</scope><name>ToRPIO</name></member>
+      <member refid="class_budget_execution_1_1_transfer_1aedd51be907020a704e925df2d01fb7e0" prot="public" virt="non-virtual"><scope>BudgetExecution::Transfer</scope><name>Transfer</name></member>
+      <member refid="class_budget_execution_1_1_transfer_1a128d661a8bf3f2df41af349bd76618a8" prot="public" virt="non-virtual"><scope>BudgetExecution::Transfer</scope><name>Transfer</name></member>
+      <member refid="class_budget_execution_1_1_transfer_1a55f0f51fa1e4c17574a99c4e26ebaa40" prot="public" virt="non-virtual"><scope>BudgetExecution::Transfer</scope><name>Transfer</name></member>
+      <member refid="class_budget_execution_1_1_transfer_1a07ec0e381a7771819b614ff10d3173ff" prot="public" virt="non-virtual"><scope>BudgetExecution::Transfer</scope><name>Type</name></member>
+      <member refid="class_budget_execution_1_1_transfer_1a9afc44d0373abb3a3c28bff3c2b2c2ac" prot="package" virt="non-virtual"><scope>BudgetExecution::Transfer</scope><name>WriteTransfer</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

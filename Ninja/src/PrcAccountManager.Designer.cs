@@ -112,7 +112,7 @@
             // tabControlAdv1
             // 
             this.tabControlAdv1.ActiveTabForeColor = System.Drawing.Color.White;
-            this.tabControlAdv1.BeforeTouchSize = new System.Drawing.Size(1323, 651);
+            this.tabControlAdv1.BeforeTouchSize = new System.Drawing.Size(1323, 664);
             this.tabControlAdv1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tabControlAdv1.CloseButtonForeColor = System.Drawing.Color.Black;
             this.tabControlAdv1.CloseButtonHoverForeColor = System.Drawing.Color.Black;
@@ -121,11 +121,11 @@
             this.tabControlAdv1.Controls.Add(this.tabPageAdv2);
             this.tabControlAdv1.Controls.Add(this.tabPageAdv3);
             this.tabControlAdv1.InActiveTabForeColor = System.Drawing.Color.Gray;
-            this.tabControlAdv1.Location = new System.Drawing.Point(12, 57);
+            this.tabControlAdv1.Location = new System.Drawing.Point(12, 12);
             this.tabControlAdv1.Name = "tabControlAdv1";
             this.tabControlAdv1.SeparatorColor = System.Drawing.SystemColors.ControlDark;
             this.tabControlAdv1.ShowSeparator = false;
-            this.tabControlAdv1.Size = new System.Drawing.Size(1323, 651);
+            this.tabControlAdv1.Size = new System.Drawing.Size(1323, 664);
             this.tabControlAdv1.TabIndex = 1;
             this.tabControlAdv1.TabStyle = typeof(Syncfusion.Windows.Forms.Tools.TabRendererVS2010);
             this.tabControlAdv1.SelectedIndexChanged += new System.EventHandler(this.tabControlAdv1_SelectedIndexChanged);
@@ -139,10 +139,10 @@
             this.tabPageAdv1.Controls.Add(this.expandCollapsePanel1);
             this.tabPageAdv1.Image = null;
             this.tabPageAdv1.ImageSize = new System.Drawing.Size(16, 16);
-            this.tabPageAdv1.Location = new System.Drawing.Point(0, -1);
+            this.tabPageAdv1.Location = new System.Drawing.Point(0, 33);
             this.tabPageAdv1.Name = "tabPageAdv1";
             this.tabPageAdv1.ShowCloseButton = true;
-            this.tabPageAdv1.Size = new System.Drawing.Size(1323, 652);
+            this.tabPageAdv1.Size = new System.Drawing.Size(1323, 631);
             this.tabPageAdv1.TabIndex = 1;
             this.tabPageAdv1.Text = "tabPageAdv1";
             this.tabPageAdv1.ThemesEnabled = false;
@@ -1162,7 +1162,7 @@
             this.expandCollapsePanel1.IsExpanded = true;
             this.expandCollapsePanel1.Location = new System.Drawing.Point(34, 35);
             this.expandCollapsePanel1.Name = "expandCollapsePanel1";
-            this.expandCollapsePanel1.Size = new System.Drawing.Size(271, 539);
+            this.expandCollapsePanel1.Size = new System.Drawing.Size(271, 383);
             this.expandCollapsePanel1.TabIndex = 1;
             this.expandCollapsePanel1.Text = "Filter";
             this.expandCollapsePanel1.UseAnimation = true;
@@ -1183,7 +1183,7 @@
             this.metroSetComboBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.metroSetComboBox4.FormattingEnabled = true;
             this.metroSetComboBox4.ItemHeight = 20;
-            this.metroSetComboBox4.Location = new System.Drawing.Point(39, 338);
+            this.metroSetComboBox4.Location = new System.Drawing.Point(39, 319);
             this.metroSetComboBox4.Name = "metroSetComboBox4";
             this.metroSetComboBox4.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.metroSetComboBox4.SelectedItemForeColor = System.Drawing.Color.White;
@@ -1210,7 +1210,7 @@
             this.metroSetComboBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.metroSetComboBox3.FormattingEnabled = true;
             this.metroSetComboBox3.ItemHeight = 20;
-            this.metroSetComboBox3.Location = new System.Drawing.Point(39, 250);
+            this.metroSetComboBox3.Location = new System.Drawing.Point(39, 242);
             this.metroSetComboBox3.Name = "metroSetComboBox3";
             this.metroSetComboBox3.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.metroSetComboBox3.SelectedItemForeColor = System.Drawing.Color.White;
@@ -1279,10 +1279,10 @@
             // 
             this.tabPageAdv2.Image = null;
             this.tabPageAdv2.ImageSize = new System.Drawing.Size(16, 16);
-            this.tabPageAdv2.Location = new System.Drawing.Point(0, -1);
+            this.tabPageAdv2.Location = new System.Drawing.Point(0, 33);
             this.tabPageAdv2.Name = "tabPageAdv2";
             this.tabPageAdv2.ShowCloseButton = true;
-            this.tabPageAdv2.Size = new System.Drawing.Size(1323, 652);
+            this.tabPageAdv2.Size = new System.Drawing.Size(1323, 631);
             this.tabPageAdv2.TabIndex = 2;
             this.tabPageAdv2.Text = "tabPageAdv2";
             this.tabPageAdv2.ThemesEnabled = false;
@@ -1291,10 +1291,10 @@
             // 
             this.tabPageAdv3.Image = null;
             this.tabPageAdv3.ImageSize = new System.Drawing.Size(16, 16);
-            this.tabPageAdv3.Location = new System.Drawing.Point(0, -1);
+            this.tabPageAdv3.Location = new System.Drawing.Point(0, 33);
             this.tabPageAdv3.Name = "tabPageAdv3";
             this.tabPageAdv3.ShowCloseButton = true;
-            this.tabPageAdv3.Size = new System.Drawing.Size(1323, 652);
+            this.tabPageAdv3.Size = new System.Drawing.Size(1323, 631);
             this.tabPageAdv3.TabIndex = 3;
             this.tabPageAdv3.Text = "tabPageAdv3";
             this.tabPageAdv3.ThemesEnabled = false;

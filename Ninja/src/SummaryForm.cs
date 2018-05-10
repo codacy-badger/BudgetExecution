@@ -27,9 +27,10 @@ namespace BudgetExecution
             if (source == Source.RegionAccount)
             {
                 Data = new DataBuilder(Source.RegionAccount);
+                DataSet = Data.DataSet;
+                BaseTable = Data.GetData();
                 DivisionTab.TabVisible = false;
                 Source = Data.Source;
-                BaseTable = Data.QueryTable;
                 CurrentTabIndex = 0;
                 TabNames = GetTabNames();
                 Text = "Region 6 Summary";
@@ -37,8 +38,9 @@ namespace BudgetExecution
             if (source == Source.DivisionAccount)
             {
                 Data = new DataBuilder(Source.DivisionAccount);
+                DataSet = Data.DataSet;
+                BaseTable = Data.GetData();
                 Source = Data.Source;
-                BaseTable = Data.QueryTable;
                 TabNames = GetTabNames();
                 Text = "R6 Division Summary";
             }
@@ -61,9 +63,9 @@ namespace BudgetExecution
             ProjectTab.TabVisible = true;
             DivisionTab.TabVisible = false;
             Data = new DataBuilder(Source, Parameter);
-            ProgramElements = Data.ProgramElements;
-            BaseTable = Data.QueryTable;
             DataSet = Data.DataSet;
+            BaseTable = Data.GetData();
+            ProgramElements = Data.ProgramElements;
             Metric = new PrcMetric(Data);
             Text = string.Format("{0} Summary", Info.DivisionName(rc));
             CurrentTabIndex = SummaryTabControl.SelectedIndex;
@@ -451,7 +453,7 @@ namespace BudgetExecution
                     case 5:
                         GetChartType(ChartTypeFilter6);
                         DivisionFilter.SelectedIndexChanged += ChartPrimaryFilter_ItemSelected;
-                        DivisionChart = new BudgetChart(DivisionChart, Data, PrcField.Division).Activate();
+                        DivisionChart = new BudgetChart(DivisionChart, Data, PrcField.RC).Activate();
                         break;
                     case 6:
                         GetChartType(ChartTypeFilter7);
@@ -513,7 +515,7 @@ namespace BudgetExecution
                         DivisionFilter = ChartPrimaryFilterControl;
                         ChartType = GetChartType(ChartTypeFilter6);
                         Measure = (Stat)Enum.Parse(typeof(Stat), DivisionFilter.SelectedItem.ToString());
-                        DivisionChart = new BudgetChart(DivisionChart, Data, PrcField.Division, Measure, ChartType).Activate();
+                        DivisionChart = new BudgetChart(DivisionChart, Data, PrcField.DivisionName, Measure, ChartType).Activate();
                         break;
                     case 6:
                         AreaFilter = ChartPrimaryFilterControl;
@@ -534,5 +536,31 @@ namespace BudgetExecution
                 MessageBox.Show(ex.Message + ex.StackTrace);
             }
         }
+        Dictionary<string, object> GetCurrentRowParameter(DataGridView dgv)
+        {
+            try
+            {
+                if(dgv.CurrentRow != null)
+                {
+                    var dgvRow = dgv.CurrentRow;
+                    var data = new Dictionary<string, object>();
+                    data.Add("ID", int.Parse(dgvRow.Cells["ID"].Value.ToString()));
+                    data.Add("Fund", dgvRow.Cells["Fund"].Value.ToString());
+                    data.Add("Org", dgvRow.Cells["Org"].Value.ToString());
+                    data.Add("RC", dgvRow.Cells["RC"].ToString());
+                    data.Add("Code", dgvRow.Cells["Code"].ToString());
+                    data.Add("BOC", dgvRow.Cells["BOC"].ToString());
+                    return data;
+                }
+                return null;
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message + ex.StackTrace);
+                return null;
+            }
+        }
+           
     }      
 }

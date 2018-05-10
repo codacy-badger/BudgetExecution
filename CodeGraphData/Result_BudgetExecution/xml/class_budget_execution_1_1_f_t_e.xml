@@ -1,0 +1,778 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_budget_execution_1_1_f_t_e" kind="class" prot="public">
+    <compoundname>BudgetExecution::FTE</compoundname>
+    <basecompoundref refid="interface_budget_execution_1_1_i_p_r_c" prot="public" virt="non-virtual">BudgetExecution.IPRC</basecompoundref>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_budget_execution_1_1_f_t_e_1ac039b5352bbdb709af71ef022b562d9d" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type><ref refid="class_budget_execution_1_1_account" kindref="compound">Account</ref></type>
+        <definition>Account BudgetExecution.FTE.Account</definition>
+        <argsstring></argsstring>
+        <name>Account</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FTE.cs" line="35" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FTE.cs" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_f_t_e_1a0d573c9ddbdeab383f31b7984b644d8a" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>Tuple&lt; DataTable, <ref refid="class_budget_execution_1_1_p_r_c" kindref="compound">PRC</ref>[], decimal, int &gt;</type>
+        <definition>Tuple&lt;DataTable, PRC[], decimal, int&gt; BudgetExecution.FTE.AllocationData</definition>
+        <argsstring></argsstring>
+        <name>AllocationData</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FTE.cs" line="37" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FTE.cs" bodystart="37" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_f_t_e_1abc0d4410cde7464c90e8e7cc2dd3e048" compoundref="_f_t_e_8cs" startline="17" endline="32">BudgetExecution.FTE.FTE</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_f_t_e_1a77a9a069714d62539a735829678c659f" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>decimal</type>
+        <definition>decimal BudgetExecution.FTE.Amount</definition>
+        <argsstring></argsstring>
+        <name>Amount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FTE.cs" line="38" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FTE.cs" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_f_t_e_1a005fec88afba1e09abe758d3c099c672" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>decimal</type>
+        <definition>decimal BudgetExecution.FTE.Authority</definition>
+        <argsstring></argsstring>
+        <name>Authority</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FTE.cs" line="39" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FTE.cs" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_f_t_e_1a36282a161977c2f93e46ac2c4282f5d3" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>decimal</type>
+        <definition>decimal BudgetExecution.FTE.Average</definition>
+        <argsstring></argsstring>
+        <name>Average</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FTE.cs" line="40" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FTE.cs" bodystart="40" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_f_t_e_1abc0d4410cde7464c90e8e7cc2dd3e048" compoundref="_f_t_e_8cs" startline="17" endline="32">BudgetExecution.FTE.FTE</referencedby>
+        <referencedby refid="class_budget_execution_1_1_f_t_e_1a76238aa2420d71745ed429f4110c9b31" compoundref="_f_t_e_8cs" startline="76" endline="87">BudgetExecution.FTE.GetAverage</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_f_t_e_1a398649790b7cf668411fceee5dc9299a" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>string</type>
+        <definition>string BudgetExecution.FTE.BFY</definition>
+        <argsstring></argsstring>
+        <name>BFY</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FTE.cs" line="41" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FTE.cs" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_f_t_e_1a1a19d8ec25c81bff8811919e2d70049b" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>string</type>
+        <definition>string BudgetExecution.FTE.Code</definition>
+        <argsstring></argsstring>
+        <name>Code</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FTE.cs" line="42" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FTE.cs" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_f_t_e_1aa02c691c2ee3f672b8194a753e0d5ab5" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>int</type>
+        <definition>int BudgetExecution.FTE.Count</definition>
+        <argsstring></argsstring>
+        <name>Count</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FTE.cs" line="43" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FTE.cs" bodystart="43" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_f_t_e_1abc0d4410cde7464c90e8e7cc2dd3e048" compoundref="_f_t_e_8cs" startline="17" endline="32">BudgetExecution.FTE.FTE</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_f_t_e_1a0becde727fac593060cb9b3095dc309a" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type><ref refid="class_budget_execution_1_1_p_r_c" kindref="compound">PRC</ref>[]</type>
+        <definition>PRC [] BudgetExecution.FTE.Data</definition>
+        <argsstring></argsstring>
+        <name>Data</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FTE.cs" line="44" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FTE.cs" bodystart="44" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_f_t_e_1abc0d4410cde7464c90e8e7cc2dd3e048" compoundref="_f_t_e_8cs" startline="17" endline="32">BudgetExecution.FTE.FTE</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_f_t_e_1aef6964ed58f22efd3c8ecbaad4d4ceb4" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>Dictionary&lt; string, string[]&gt;</type>
+        <definition>Dictionary&lt;string, string[]&gt; BudgetExecution.FTE.DataElement</definition>
+        <argsstring></argsstring>
+        <name>DataElement</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FTE.cs" line="45" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FTE.cs" bodystart="45" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_f_t_e_1abc0d4410cde7464c90e8e7cc2dd3e048" compoundref="_f_t_e_8cs" startline="17" endline="32">BudgetExecution.FTE.FTE</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_f_t_e_1a1fe56e029803dbd2a1930dc0932a737c" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>DataSet</type>
+        <definition>DataSet BudgetExecution.FTE.E6</definition>
+        <argsstring></argsstring>
+        <name>E6</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FTE.cs" line="46" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FTE.cs" bodystart="46" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_f_t_e_1abc0d4410cde7464c90e8e7cc2dd3e048" compoundref="_f_t_e_8cs" startline="17" endline="32">BudgetExecution.FTE.FTE</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_f_t_e_1aea53b12abef0d1a5140fa4bfb76419f9" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type><ref refid="class_budget_execution_1_1_fund" kindref="compound">Fund</ref></type>
+        <definition>Fund BudgetExecution.FTE.Fund</definition>
+        <argsstring></argsstring>
+        <name>Fund</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FTE.cs" line="47" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FTE.cs" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_f_t_e_1aa8f3d22a24ded6cf81902dd4f37623e7" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>Dictionary&lt; string, decimal &gt;</type>
+        <definition>Dictionary&lt;string, decimal&gt; BudgetExecution.FTE.FundData</definition>
+        <argsstring></argsstring>
+        <name>FundData</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FTE.cs" line="48" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FTE.cs" bodystart="48" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_division_authority_1a2bc974bbcab3dfc41db5e210d5f2ddb5" compoundref="_division_authority_8cs" startline="12" endline="32">BudgetExecution.DivisionAuthority.DivisionAuthority</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_f_t_e_1ad2720f72a4871b8bcf3a31f3fb9aa841" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>Dictionary&lt; string, decimal &gt;</type>
+        <definition>Dictionary&lt;string, decimal&gt; BudgetExecution.FTE.GoalInfo</definition>
+        <argsstring></argsstring>
+        <name>GoalInfo</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FTE.cs" line="49" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FTE.cs" bodystart="49" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_f_t_e_1abc0d4410cde7464c90e8e7cc2dd3e048" compoundref="_f_t_e_8cs" startline="17" endline="32">BudgetExecution.FTE.FTE</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_f_t_e_1a6752c030ee0e7964d4425a404e8f051d" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>Dictionary&lt; string, decimal &gt;</type>
+        <definition>Dictionary&lt;string, decimal&gt; BudgetExecution.FTE.NpmData</definition>
+        <argsstring></argsstring>
+        <name>NpmData</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FTE.cs" line="50" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FTE.cs" bodystart="50" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_f_t_e_1abc0d4410cde7464c90e8e7cc2dd3e048" compoundref="_f_t_e_8cs" startline="17" endline="32">BudgetExecution.FTE.FTE</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_f_t_e_1adea630b48b7a3ab68797a017933421fe" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>Dictionary&lt; string, decimal &gt;</type>
+        <definition>Dictionary&lt;string, decimal&gt; BudgetExecution.FTE.ObjectiveData</definition>
+        <argsstring></argsstring>
+        <name>ObjectiveData</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FTE.cs" line="51" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FTE.cs" bodystart="51" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_f_t_e_1abc0d4410cde7464c90e8e7cc2dd3e048" compoundref="_f_t_e_8cs" startline="17" endline="32">BudgetExecution.FTE.FTE</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_f_t_e_1ae7b6b1d5e42081ec3f92b28acdd265d0" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type><ref refid="class_budget_execution_1_1_org" kindref="compound">Org</ref></type>
+        <definition>Org BudgetExecution.FTE.Org</definition>
+        <argsstring></argsstring>
+        <name>Org</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FTE.cs" line="52" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FTE.cs" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_f_t_e_1ab0703c5407608cbb017eb3b72a3d1b37" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>Dictionary&lt; string, decimal &gt;</type>
+        <definition>Dictionary&lt;string, decimal&gt; BudgetExecution.FTE.ProgramData</definition>
+        <argsstring></argsstring>
+        <name>ProgramData</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FTE.cs" line="53" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FTE.cs" bodystart="53" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_f_t_e_1abc0d4410cde7464c90e8e7cc2dd3e048" compoundref="_f_t_e_8cs" startline="17" endline="32">BudgetExecution.FTE.FTE</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_f_t_e_1ab6b52e094ec145378dea4eb830c6f63e" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>Dictionary&lt; string, decimal &gt;</type>
+        <definition>Dictionary&lt;string, decimal&gt; BudgetExecution.FTE.ProjectData</definition>
+        <argsstring></argsstring>
+        <name>ProjectData</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FTE.cs" line="54" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FTE.cs" bodystart="54" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_f_t_e_1abc0d4410cde7464c90e8e7cc2dd3e048" compoundref="_f_t_e_8cs" startline="17" endline="32">BudgetExecution.FTE.FTE</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_f_t_e_1aa50d75402f7d3ed9db8e746ad6d82330" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type><ref refid="class_budget_execution_1_1_r_c" kindref="compound">RC</ref></type>
+        <definition>RC BudgetExecution.FTE.RC</definition>
+        <argsstring></argsstring>
+        <name>RC</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FTE.cs" line="55" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FTE.cs" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_f_t_e_1abce26d087d859b3d87d38a4ad2b8e2fb" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>string</type>
+        <definition>string BudgetExecution.FTE.RPIO</definition>
+        <argsstring></argsstring>
+        <name>RPIO</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FTE.cs" line="56" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FTE.cs" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_f_t_e_1afa2894b56a652e6557fd043a2159df1d" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>DataTable</type>
+        <definition>DataTable BudgetExecution.FTE.Table</definition>
+        <argsstring></argsstring>
+        <name>Table</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FTE.cs" line="57" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FTE.cs" bodystart="57" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_f_t_e_1abc0d4410cde7464c90e8e7cc2dd3e048" compoundref="_f_t_e_8cs" startline="17" endline="32">BudgetExecution.FTE.FTE</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_f_t_e_1a7c8974f4cc99291253a2570f0aaf85ff" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>decimal</type>
+        <definition>decimal BudgetExecution.FTE.Total</definition>
+        <argsstring></argsstring>
+        <name>Total</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FTE.cs" line="58" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FTE.cs" bodystart="58" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_f_t_e_1abc0d4410cde7464c90e8e7cc2dd3e048" compoundref="_f_t_e_8cs" startline="17" endline="32">BudgetExecution.FTE.FTE</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_f_t_e_1a0dc45b6cc36fd14be208cd9c1cb74416" prot="private" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type><ref refid="class_budget_execution_1_1_b_o_c" kindref="compound">BOC</ref> IPRC.</type>
+        <definition>BOC IPRC. BudgetExecution.FTE.BOC</definition>
+        <argsstring></argsstring>
+        <name>BOC</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FTE.cs" line="59" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FTE.cs" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_f_t_e_1af990d5f4baed14d9d1fdf72c3afd4aba" prot="private" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>decimal[]</type>
+        <definition>decimal [] BudgetExecution.FTE.Metrics</definition>
+        <argsstring></argsstring>
+        <name>Metrics</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FTE.cs" line="60" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FTE.cs" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_budget_execution_1_1_f_t_e_1a7943f2f1a618dc1a2b6283c25b41ce3d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>BudgetExecution.FTE.FTE</definition>
+        <argsstring>()</argsstring>
+        <name>FTE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FTE.cs" line="13" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FTE.cs" bodystart="13" bodyend="15"/>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_f_t_e_1abc0d4410cde7464c90e8e7cc2dd3e048" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>BudgetExecution.FTE.FTE</definition>
+        <argsstring>(DataTable table)</argsstring>
+        <name>FTE</name>
+        <param>
+          <type>DataTable</type>
+          <declname>table</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FTE.cs" line="17" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FTE.cs" bodystart="17" bodyend="32"/>
+        <references refid="class_budget_execution_1_1_f_t_e_1a0d573c9ddbdeab383f31b7984b644d8a" compoundref="_f_t_e_8cs" startline="37">BudgetExecution.FTE.AllocationData</references>
+        <references refid="class_budget_execution_1_1_f_t_e_1a36282a161977c2f93e46ac2c4282f5d3" compoundref="_f_t_e_8cs" startline="40">BudgetExecution.FTE.Average</references>
+        <references refid="class_budget_execution_1_1_f_t_e_1aa02c691c2ee3f672b8194a753e0d5ab5" compoundref="_f_t_e_8cs" startline="43">BudgetExecution.FTE.Count</references>
+        <references refid="class_budget_execution_1_1_f_t_e_1a0becde727fac593060cb9b3095dc309a" compoundref="_f_t_e_8cs" startline="44">BudgetExecution.FTE.Data</references>
+        <references refid="class_budget_execution_1_1_f_t_e_1aef6964ed58f22efd3c8ecbaad4d4ceb4" compoundref="_f_t_e_8cs" startline="45">BudgetExecution.FTE.DataElement</references>
+        <references refid="class_budget_execution_1_1_f_t_e_1a1fe56e029803dbd2a1930dc0932a737c" compoundref="_f_t_e_8cs" startline="46">BudgetExecution.FTE.E6</references>
+        <references refid="class_budget_execution_1_1_f_t_e_1a76238aa2420d71745ed429f4110c9b31" compoundref="_f_t_e_8cs" startline="76" endline="87">BudgetExecution.FTE.GetAverage</references>
+        <references refid="class_budget_execution_1_1_f_t_e_1abc7044587d377a3472ee6ba3ed86a1d6" compoundref="_f_t_e_8cs" startline="115" endline="128">BudgetExecution.FTE.GetDataElements</references>
+        <references refid="class_budget_execution_1_1_f_t_e_1abb4cae4c90536bc1ab9e56d6b5d8cd5c" compoundref="_f_t_e_8cs" startline="130" endline="142">BudgetExecution.FTE.GetDataValues</references>
+        <references refid="class_budget_execution_1_1_f_t_e_1a6a01644960aef275d5f9cb23db7e062a" compoundref="_f_t_e_8cs" startline="197" endline="208">BudgetExecution.FTE.GetPrcArray</references>
+        <references refid="class_budget_execution_1_1_f_t_e_1a4dedea85f42d473451dd73e326311cf3" compoundref="_f_t_e_8cs" startline="210" endline="221">BudgetExecution.FTE.GetTotal</references>
+        <references refid="class_budget_execution_1_1_f_t_e_1afc9dd9389ca3f1d57553b4a324c1993e" compoundref="_f_t_e_8cs" startline="223" endline="243">BudgetExecution.FTE.GetTotals</references>
+        <references refid="class_budget_execution_1_1_f_t_e_1ad2720f72a4871b8bcf3a31f3fb9aa841" compoundref="_f_t_e_8cs" startline="49">BudgetExecution.FTE.GoalInfo</references>
+        <references refid="class_budget_execution_1_1_f_t_e_1a6752c030ee0e7964d4425a404e8f051d" compoundref="_f_t_e_8cs" startline="50">BudgetExecution.FTE.NpmData</references>
+        <references refid="class_budget_execution_1_1_f_t_e_1adea630b48b7a3ab68797a017933421fe" compoundref="_f_t_e_8cs" startline="51">BudgetExecution.FTE.ObjectiveData</references>
+        <references refid="class_budget_execution_1_1_f_t_e_1ab0703c5407608cbb017eb3b72a3d1b37" compoundref="_f_t_e_8cs" startline="53">BudgetExecution.FTE.ProgramData</references>
+        <references refid="class_budget_execution_1_1_f_t_e_1ab6b52e094ec145378dea4eb830c6f63e" compoundref="_f_t_e_8cs" startline="54">BudgetExecution.FTE.ProjectData</references>
+        <references refid="class_budget_execution_1_1_f_t_e_1afa2894b56a652e6557fd043a2159df1d" compoundref="_f_t_e_8cs" startline="57">BudgetExecution.FTE.Table</references>
+        <references refid="class_budget_execution_1_1_f_t_e_1a7c8974f4cc99291253a2570f0aaf85ff" compoundref="_f_t_e_8cs" startline="58">BudgetExecution.FTE.Total</references>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_f_t_e_1a12f0fe265cf566d7f74b5c479a5ed3fb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>DataTable</type>
+        <definition>DataTable BudgetExecution.FTE.FilterTable</definition>
+        <argsstring>(DataTable table, string column, string filter)</argsstring>
+        <name>FilterTable</name>
+        <param>
+          <type>DataTable</type>
+          <declname>table</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>column</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>filter</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FTE.cs" line="63" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FTE.cs" bodystart="63" bodyend="74"/>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_f_t_e_1a76238aa2420d71745ed429f4110c9b31" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>decimal</type>
+        <definition>decimal BudgetExecution.FTE.GetAverage</definition>
+        <argsstring>(DataTable table)</argsstring>
+        <name>GetAverage</name>
+        <param>
+          <type>DataTable</type>
+          <declname>table</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FTE.cs" line="76" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FTE.cs" bodystart="76" bodyend="87"/>
+        <references refid="class_budget_execution_1_1_f_t_e_1a36282a161977c2f93e46ac2c4282f5d3" compoundref="_f_t_e_8cs" startline="40">BudgetExecution.FTE.Average</references>
+        <references refid="namespace_budget_execution_1a4bb6ce7543ca92e05f7d224d6887fe1aa69691c7bdcc3ce6d5d8a1361f22d04ac">BudgetExecution.M</references>
+        <references refid="namespace_budget_execution_1acc77f02cde309c445b6e142d257483ddae0626222614bdee31951d84c64e5e9ff">BudgetExecution.Select</references>
+        <referencedby refid="class_budget_execution_1_1_f_t_e_1abc0d4410cde7464c90e8e7cc2dd3e048" compoundref="_f_t_e_8cs" startline="17" endline="32">BudgetExecution.FTE.FTE</referencedby>
+        <referencedby refid="class_budget_execution_1_1_f_t_e_1ab0f90fc9eba5673b99d7b0e119db8571" compoundref="_f_t_e_8cs" startline="144" endline="148">BudgetExecution.FTE.GetMetrics</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_f_t_e_1a2af7bea33c3f6ffda74232170174f4a5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string[]</type>
+        <definition>string [] BudgetExecution.FTE.GetCodes</definition>
+        <argsstring>(DataTable table, string column)</argsstring>
+        <name>GetCodes</name>
+        <param>
+          <type>DataTable</type>
+          <declname>table</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>column</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FTE.cs" line="89" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FTE.cs" bodystart="89" bodyend="100"/>
+        <references refid="namespace_budget_execution_1acc77f02cde309c445b6e142d257483ddae0626222614bdee31951d84c64e5e9ff">BudgetExecution.Select</references>
+        <referencedby refid="class_budget_execution_1_1_f_t_e_1abc7044587d377a3472ee6ba3ed86a1d6" compoundref="_f_t_e_8cs" startline="115" endline="128">BudgetExecution.FTE.GetDataElements</referencedby>
+        <referencedby refid="class_budget_execution_1_1_f_t_e_1aee91d102ccf5ee30660ba638eff39324" compoundref="_f_t_e_8cs" startline="173" endline="195">BudgetExecution.FTE.GetMetrics</referencedby>
+        <referencedby refid="class_budget_execution_1_1_f_t_e_1afc9dd9389ca3f1d57553b4a324c1993e" compoundref="_f_t_e_8cs" startline="223" endline="243">BudgetExecution.FTE.GetTotals</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_f_t_e_1ac61ec1844713a90f6bb95a3ad419f9d2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int BudgetExecution.FTE.GetCount</definition>
+        <argsstring>(DataTable table)</argsstring>
+        <name>GetCount</name>
+        <param>
+          <type>DataTable</type>
+          <declname>table</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FTE.cs" line="102" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FTE.cs" bodystart="102" bodyend="113"/>
+        <referencedby refid="class_budget_execution_1_1_f_t_e_1abb4cae4c90536bc1ab9e56d6b5d8cd5c" compoundref="_f_t_e_8cs" startline="130" endline="142">BudgetExecution.FTE.GetDataValues</referencedby>
+        <referencedby refid="class_budget_execution_1_1_f_t_e_1ab0f90fc9eba5673b99d7b0e119db8571" compoundref="_f_t_e_8cs" startline="144" endline="148">BudgetExecution.FTE.GetMetrics</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_f_t_e_1abc7044587d377a3472ee6ba3ed86a1d6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Dictionary&lt; string, string[]&gt;</type>
+        <definition>Dictionary&lt;string, string[]&gt; BudgetExecution.FTE.GetDataElements</definition>
+        <argsstring>(DataTable table)</argsstring>
+        <name>GetDataElements</name>
+        <param>
+          <type>DataTable</type>
+          <declname>table</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FTE.cs" line="115" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FTE.cs" bodystart="115" bodyend="128"/>
+        <references refid="class_budget_execution_1_1_f_t_e_1a2af7bea33c3f6ffda74232170174f4a5" compoundref="_f_t_e_8cs" startline="89" endline="100">BudgetExecution.FTE.GetCodes</references>
+        <referencedby refid="class_budget_execution_1_1_f_t_e_1abc0d4410cde7464c90e8e7cc2dd3e048" compoundref="_f_t_e_8cs" startline="17" endline="32">BudgetExecution.FTE.FTE</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_f_t_e_1abb4cae4c90536bc1ab9e56d6b5d8cd5c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Tuple&lt; DataTable, <ref refid="class_budget_execution_1_1_p_r_c" kindref="compound">PRC</ref>[], decimal, int &gt;</type>
+        <definition>Tuple&lt;DataTable, PRC[], decimal, int&gt; BudgetExecution.FTE.GetDataValues</definition>
+        <argsstring>(DataTable table, string column, string filter)</argsstring>
+        <name>GetDataValues</name>
+        <param>
+          <type>DataTable</type>
+          <declname>table</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>column</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>filter</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FTE.cs" line="130" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FTE.cs" bodystart="130" bodyend="142"/>
+        <references refid="class_budget_execution_1_1_f_t_e_1ac61ec1844713a90f6bb95a3ad419f9d2" compoundref="_f_t_e_8cs" startline="102" endline="113">BudgetExecution.FTE.GetCount</references>
+        <references refid="class_budget_execution_1_1_f_t_e_1a6a01644960aef275d5f9cb23db7e062a" compoundref="_f_t_e_8cs" startline="197" endline="208">BudgetExecution.FTE.GetPrcArray</references>
+        <references refid="class_budget_execution_1_1_f_t_e_1a4dedea85f42d473451dd73e326311cf3" compoundref="_f_t_e_8cs" startline="210" endline="221">BudgetExecution.FTE.GetTotal</references>
+        <referencedby refid="class_budget_execution_1_1_f_t_e_1abc0d4410cde7464c90e8e7cc2dd3e048" compoundref="_f_t_e_8cs" startline="17" endline="32">BudgetExecution.FTE.FTE</referencedby>
+        <referencedby refid="class_budget_execution_1_1_f_t_e_1acf3b6b661b2f0a12baa4854decc2ff2e" compoundref="_f_t_e_8cs" startline="150" endline="171">BudgetExecution.FTE.GetMetrics</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_f_t_e_1ab0f90fc9eba5673b99d7b0e119db8571" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>decimal[]</type>
+        <definition>decimal [] BudgetExecution.FTE.GetMetrics</definition>
+        <argsstring>(DataTable table)</argsstring>
+        <name>GetMetrics</name>
+        <param>
+          <type>DataTable</type>
+          <declname>table</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FTE.cs" line="144" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FTE.cs" bodystart="144" bodyend="148"/>
+        <references refid="class_budget_execution_1_1_f_t_e_1a76238aa2420d71745ed429f4110c9b31" compoundref="_f_t_e_8cs" startline="76" endline="87">BudgetExecution.FTE.GetAverage</references>
+        <references refid="class_budget_execution_1_1_f_t_e_1ac61ec1844713a90f6bb95a3ad419f9d2" compoundref="_f_t_e_8cs" startline="102" endline="113">BudgetExecution.FTE.GetCount</references>
+        <references refid="class_budget_execution_1_1_f_t_e_1a4dedea85f42d473451dd73e326311cf3" compoundref="_f_t_e_8cs" startline="210" endline="221">BudgetExecution.FTE.GetTotal</references>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_f_t_e_1acf3b6b661b2f0a12baa4854decc2ff2e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Dictionary&lt; string, decimal[]&gt;</type>
+        <definition>Dictionary&lt;string, decimal[]&gt; BudgetExecution.FTE.GetMetrics</definition>
+        <argsstring>(DataTable table, string[] list, string column)</argsstring>
+        <name>GetMetrics</name>
+        <param>
+          <type>DataTable</type>
+          <declname>table</declname>
+        </param>
+        <param>
+          <type>string[]</type>
+          <declname>list</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>column</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FTE.cs" line="150" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FTE.cs" bodystart="150" bodyend="171"/>
+        <references refid="class_budget_execution_1_1_f_t_e_1abb4cae4c90536bc1ab9e56d6b5d8cd5c" compoundref="_f_t_e_8cs" startline="130" endline="142">BudgetExecution.FTE.GetDataValues</references>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_f_t_e_1aee91d102ccf5ee30660ba638eff39324" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Dictionary&lt; string, decimal[]&gt;</type>
+        <definition>Dictionary&lt;string, decimal[]&gt; BudgetExecution.FTE.GetMetrics</definition>
+        <argsstring>(DataTable table, string column, string filter)</argsstring>
+        <name>GetMetrics</name>
+        <param>
+          <type>DataTable</type>
+          <declname>table</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>column</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>filter</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FTE.cs" line="173" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FTE.cs" bodystart="173" bodyend="195"/>
+        <references refid="class_budget_execution_1_1_f_t_e_1a2af7bea33c3f6ffda74232170174f4a5" compoundref="_f_t_e_8cs" startline="89" endline="100">BudgetExecution.FTE.GetCodes</references>
+        <references refid="class_budget_execution_1_1_f_t_e_1abb4cae4c90536bc1ab9e56d6b5d8cd5c" compoundref="_f_t_e_8cs" startline="130" endline="142">BudgetExecution.FTE.GetDataValues</references>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_f_t_e_1a6a01644960aef275d5f9cb23db7e062a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_budget_execution_1_1_p_r_c" kindref="compound">PRC</ref>[]</type>
+        <definition>PRC [] BudgetExecution.FTE.GetPrcArray</definition>
+        <argsstring>(DataTable table)</argsstring>
+        <name>GetPrcArray</name>
+        <param>
+          <type>DataTable</type>
+          <declname>table</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FTE.cs" line="197" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FTE.cs" bodystart="197" bodyend="208"/>
+        <references refid="namespace_budget_execution_1a31d755f9fbeb90de04b7b1e2e21acdc8ae01a919b068424df394a7f38a3a02ed2">BudgetExecution.PRC</references>
+        <references refid="namespace_budget_execution_1acc77f02cde309c445b6e142d257483ddae0626222614bdee31951d84c64e5e9ff">BudgetExecution.Select</references>
+        <referencedby refid="class_budget_execution_1_1_f_t_e_1abc0d4410cde7464c90e8e7cc2dd3e048" compoundref="_f_t_e_8cs" startline="17" endline="32">BudgetExecution.FTE.FTE</referencedby>
+        <referencedby refid="class_budget_execution_1_1_f_t_e_1abb4cae4c90536bc1ab9e56d6b5d8cd5c" compoundref="_f_t_e_8cs" startline="130" endline="142">BudgetExecution.FTE.GetDataValues</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_f_t_e_1a4dedea85f42d473451dd73e326311cf3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>decimal</type>
+        <definition>decimal BudgetExecution.FTE.GetTotal</definition>
+        <argsstring>(DataTable table)</argsstring>
+        <name>GetTotal</name>
+        <param>
+          <type>DataTable</type>
+          <declname>table</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FTE.cs" line="210" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FTE.cs" bodystart="210" bodyend="221"/>
+        <references refid="namespace_budget_execution_1a4bb6ce7543ca92e05f7d224d6887fe1aa69691c7bdcc3ce6d5d8a1361f22d04ac">BudgetExecution.M</references>
+        <referencedby refid="class_budget_execution_1_1_f_t_e_1abc0d4410cde7464c90e8e7cc2dd3e048" compoundref="_f_t_e_8cs" startline="17" endline="32">BudgetExecution.FTE.FTE</referencedby>
+        <referencedby refid="class_budget_execution_1_1_f_t_e_1abb4cae4c90536bc1ab9e56d6b5d8cd5c" compoundref="_f_t_e_8cs" startline="130" endline="142">BudgetExecution.FTE.GetDataValues</referencedby>
+        <referencedby refid="class_budget_execution_1_1_f_t_e_1ab0f90fc9eba5673b99d7b0e119db8571" compoundref="_f_t_e_8cs" startline="144" endline="148">BudgetExecution.FTE.GetMetrics</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_f_t_e_1afc9dd9389ca3f1d57553b4a324c1993e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Dictionary&lt; string, decimal &gt;</type>
+        <definition>Dictionary&lt;string, decimal&gt; BudgetExecution.FTE.GetTotals</definition>
+        <argsstring>(DataTable table, string column, string filter)</argsstring>
+        <name>GetTotals</name>
+        <param>
+          <type>DataTable</type>
+          <declname>table</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>column</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>filter</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FTE.cs" line="223" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FTE.cs" bodystart="223" bodyend="243"/>
+        <references refid="class_budget_execution_1_1_f_t_e_1a2af7bea33c3f6ffda74232170174f4a5" compoundref="_f_t_e_8cs" startline="89" endline="100">BudgetExecution.FTE.GetCodes</references>
+        <referencedby refid="class_budget_execution_1_1_f_t_e_1abc0d4410cde7464c90e8e7cc2dd3e048" compoundref="_f_t_e_8cs" startline="17" endline="32">BudgetExecution.FTE.FTE</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_f_t_e_1a839f117abc35d01e64d3efb8d70adde9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Dictionary&lt; string, decimal &gt;</type>
+        <definition>Dictionary&lt;string, decimal&gt; BudgetExecution.FTE.GetTotals</definition>
+        <argsstring>(DataTable table, string[] filters, string column)</argsstring>
+        <name>GetTotals</name>
+        <param>
+          <type>DataTable</type>
+          <declname>table</declname>
+        </param>
+        <param>
+          <type>string[]</type>
+          <declname>filters</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>column</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FTE.cs" line="245" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FTE.cs" bodystart="245" bodyend="264"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="99">
+        <label>IPRC</label>
+        <link refid="interface_budget_execution_1_1_i_p_r_c"/>
+      </node>
+      <node id="98">
+        <label>BudgetExecution.FTE</label>
+        <link refid="class_budget_execution_1_1_f_t_e"/>
+        <childnode refid="99" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="101">
+        <label>IPRC</label>
+        <link refid="interface_budget_execution_1_1_i_p_r_c"/>
+      </node>
+      <node id="100">
+        <label>BudgetExecution.FTE</label>
+        <link refid="class_budget_execution_1_1_f_t_e"/>
+        <childnode refid="101" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FTE.cs" line="12" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FTE.cs" bodystart="11" bodyend="265"/>
+    <listofallmembers>
+      <member refid="class_budget_execution_1_1_f_t_e_1ac039b5352bbdb709af71ef022b562d9d" prot="public" virt="non-virtual"><scope>BudgetExecution::FTE</scope><name>Account</name></member>
+      <member refid="class_budget_execution_1_1_f_t_e_1a0d573c9ddbdeab383f31b7984b644d8a" prot="public" virt="non-virtual"><scope>BudgetExecution::FTE</scope><name>AllocationData</name></member>
+      <member refid="class_budget_execution_1_1_f_t_e_1a77a9a069714d62539a735829678c659f" prot="public" virt="non-virtual"><scope>BudgetExecution::FTE</scope><name>Amount</name></member>
+      <member refid="class_budget_execution_1_1_f_t_e_1a005fec88afba1e09abe758d3c099c672" prot="public" virt="non-virtual"><scope>BudgetExecution::FTE</scope><name>Authority</name></member>
+      <member refid="class_budget_execution_1_1_f_t_e_1a36282a161977c2f93e46ac2c4282f5d3" prot="public" virt="non-virtual"><scope>BudgetExecution::FTE</scope><name>Average</name></member>
+      <member refid="class_budget_execution_1_1_f_t_e_1a398649790b7cf668411fceee5dc9299a" prot="public" virt="non-virtual"><scope>BudgetExecution::FTE</scope><name>BFY</name></member>
+      <member refid="class_budget_execution_1_1_f_t_e_1a0dc45b6cc36fd14be208cd9c1cb74416" prot="private" virt="non-virtual"><scope>BudgetExecution::FTE</scope><name>BOC</name></member>
+      <member refid="class_budget_execution_1_1_f_t_e_1a1a19d8ec25c81bff8811919e2d70049b" prot="public" virt="non-virtual"><scope>BudgetExecution::FTE</scope><name>Code</name></member>
+      <member refid="class_budget_execution_1_1_f_t_e_1aa02c691c2ee3f672b8194a753e0d5ab5" prot="public" virt="non-virtual"><scope>BudgetExecution::FTE</scope><name>Count</name></member>
+      <member refid="class_budget_execution_1_1_f_t_e_1a0becde727fac593060cb9b3095dc309a" prot="public" virt="non-virtual"><scope>BudgetExecution::FTE</scope><name>Data</name></member>
+      <member refid="class_budget_execution_1_1_f_t_e_1aef6964ed58f22efd3c8ecbaad4d4ceb4" prot="public" virt="non-virtual"><scope>BudgetExecution::FTE</scope><name>DataElement</name></member>
+      <member refid="class_budget_execution_1_1_f_t_e_1a1fe56e029803dbd2a1930dc0932a737c" prot="public" virt="non-virtual"><scope>BudgetExecution::FTE</scope><name>E6</name></member>
+      <member refid="class_budget_execution_1_1_f_t_e_1a12f0fe265cf566d7f74b5c479a5ed3fb" prot="public" virt="non-virtual"><scope>BudgetExecution::FTE</scope><name>FilterTable</name></member>
+      <member refid="class_budget_execution_1_1_f_t_e_1a7943f2f1a618dc1a2b6283c25b41ce3d" prot="public" virt="non-virtual"><scope>BudgetExecution::FTE</scope><name>FTE</name></member>
+      <member refid="class_budget_execution_1_1_f_t_e_1abc0d4410cde7464c90e8e7cc2dd3e048" prot="public" virt="non-virtual"><scope>BudgetExecution::FTE</scope><name>FTE</name></member>
+      <member refid="class_budget_execution_1_1_f_t_e_1aea53b12abef0d1a5140fa4bfb76419f9" prot="public" virt="non-virtual"><scope>BudgetExecution::FTE</scope><name>Fund</name></member>
+      <member refid="class_budget_execution_1_1_f_t_e_1aa8f3d22a24ded6cf81902dd4f37623e7" prot="public" virt="non-virtual"><scope>BudgetExecution::FTE</scope><name>FundData</name></member>
+      <member refid="class_budget_execution_1_1_f_t_e_1a76238aa2420d71745ed429f4110c9b31" prot="public" virt="non-virtual"><scope>BudgetExecution::FTE</scope><name>GetAverage</name></member>
+      <member refid="class_budget_execution_1_1_f_t_e_1a2af7bea33c3f6ffda74232170174f4a5" prot="public" virt="non-virtual"><scope>BudgetExecution::FTE</scope><name>GetCodes</name></member>
+      <member refid="class_budget_execution_1_1_f_t_e_1ac61ec1844713a90f6bb95a3ad419f9d2" prot="public" virt="non-virtual"><scope>BudgetExecution::FTE</scope><name>GetCount</name></member>
+      <member refid="class_budget_execution_1_1_f_t_e_1abc7044587d377a3472ee6ba3ed86a1d6" prot="public" virt="non-virtual"><scope>BudgetExecution::FTE</scope><name>GetDataElements</name></member>
+      <member refid="class_budget_execution_1_1_f_t_e_1abb4cae4c90536bc1ab9e56d6b5d8cd5c" prot="public" virt="non-virtual"><scope>BudgetExecution::FTE</scope><name>GetDataValues</name></member>
+      <member refid="class_budget_execution_1_1_f_t_e_1ab0f90fc9eba5673b99d7b0e119db8571" prot="public" virt="non-virtual"><scope>BudgetExecution::FTE</scope><name>GetMetrics</name></member>
+      <member refid="class_budget_execution_1_1_f_t_e_1acf3b6b661b2f0a12baa4854decc2ff2e" prot="public" virt="non-virtual"><scope>BudgetExecution::FTE</scope><name>GetMetrics</name></member>
+      <member refid="class_budget_execution_1_1_f_t_e_1aee91d102ccf5ee30660ba638eff39324" prot="public" virt="non-virtual"><scope>BudgetExecution::FTE</scope><name>GetMetrics</name></member>
+      <member refid="class_budget_execution_1_1_f_t_e_1a6a01644960aef275d5f9cb23db7e062a" prot="public" virt="non-virtual"><scope>BudgetExecution::FTE</scope><name>GetPrcArray</name></member>
+      <member refid="class_budget_execution_1_1_f_t_e_1a4dedea85f42d473451dd73e326311cf3" prot="public" virt="non-virtual"><scope>BudgetExecution::FTE</scope><name>GetTotal</name></member>
+      <member refid="class_budget_execution_1_1_f_t_e_1afc9dd9389ca3f1d57553b4a324c1993e" prot="public" virt="non-virtual"><scope>BudgetExecution::FTE</scope><name>GetTotals</name></member>
+      <member refid="class_budget_execution_1_1_f_t_e_1a839f117abc35d01e64d3efb8d70adde9" prot="public" virt="non-virtual"><scope>BudgetExecution::FTE</scope><name>GetTotals</name></member>
+      <member refid="class_budget_execution_1_1_f_t_e_1ad2720f72a4871b8bcf3a31f3fb9aa841" prot="public" virt="non-virtual"><scope>BudgetExecution::FTE</scope><name>GoalInfo</name></member>
+      <member refid="class_budget_execution_1_1_f_t_e_1af990d5f4baed14d9d1fdf72c3afd4aba" prot="private" virt="non-virtual"><scope>BudgetExecution::FTE</scope><name>Metrics</name></member>
+      <member refid="class_budget_execution_1_1_f_t_e_1a6752c030ee0e7964d4425a404e8f051d" prot="public" virt="non-virtual"><scope>BudgetExecution::FTE</scope><name>NpmData</name></member>
+      <member refid="class_budget_execution_1_1_f_t_e_1adea630b48b7a3ab68797a017933421fe" prot="public" virt="non-virtual"><scope>BudgetExecution::FTE</scope><name>ObjectiveData</name></member>
+      <member refid="class_budget_execution_1_1_f_t_e_1ae7b6b1d5e42081ec3f92b28acdd265d0" prot="public" virt="non-virtual"><scope>BudgetExecution::FTE</scope><name>Org</name></member>
+      <member refid="class_budget_execution_1_1_f_t_e_1ab0703c5407608cbb017eb3b72a3d1b37" prot="public" virt="non-virtual"><scope>BudgetExecution::FTE</scope><name>ProgramData</name></member>
+      <member refid="class_budget_execution_1_1_f_t_e_1ab6b52e094ec145378dea4eb830c6f63e" prot="public" virt="non-virtual"><scope>BudgetExecution::FTE</scope><name>ProjectData</name></member>
+      <member refid="class_budget_execution_1_1_f_t_e_1aa50d75402f7d3ed9db8e746ad6d82330" prot="public" virt="non-virtual"><scope>BudgetExecution::FTE</scope><name>RC</name></member>
+      <member refid="class_budget_execution_1_1_f_t_e_1abce26d087d859b3d87d38a4ad2b8e2fb" prot="public" virt="non-virtual"><scope>BudgetExecution::FTE</scope><name>RPIO</name></member>
+      <member refid="class_budget_execution_1_1_f_t_e_1afa2894b56a652e6557fd043a2159df1d" prot="public" virt="non-virtual"><scope>BudgetExecution::FTE</scope><name>Table</name></member>
+      <member refid="class_budget_execution_1_1_f_t_e_1a7c8974f4cc99291253a2570f0aaf85ff" prot="public" virt="non-virtual"><scope>BudgetExecution::FTE</scope><name>Total</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

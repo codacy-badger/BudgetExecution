@@ -1,0 +1,736 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_budget_execution_1_1_main_form" kind="class" prot="public">
+    <compoundname>BudgetExecution::MainForm</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MetroForm</basecompoundref>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_budget_execution_1_1_main_form_1aafaf7bea65512034c54a8cdd927f8de9" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type><ref refid="namespace_budget_execution_1a1fc33e65b1aabdb61249f17efac6b32b" kindref="member">GetChart</ref></type>
+        <definition>GetChart BudgetExecution.MainForm.Chart</definition>
+        <argsstring></argsstring>
+        <name>Chart</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/MainForm.cs" line="32" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/MainForm.cs" bodystart="32" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_main_form_1ac3ea5af201ceb42f89b9599d63fbdf98" compoundref="_main_form_8cs" startline="60" endline="80">BudgetExecution.MainForm.ChartTimer</referencedby>
+        <referencedby refid="class_budget_execution_1_1_main_form_1a12093ae2dfbdce8b9a0a6ae5ce55098f" compoundref="_main_form_8cs" startline="12" endline="29">BudgetExecution.MainForm.MainForm</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_main_form_1ac148a36e9b99d86047681b70b1585225" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>int</type>
+        <definition>int BudgetExecution.MainForm.Counter</definition>
+        <argsstring></argsstring>
+        <name>Counter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/MainForm.cs" line="34" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/MainForm.cs" bodystart="34" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_main_form_1ac3ea5af201ceb42f89b9599d63fbdf98" compoundref="_main_form_8cs" startline="60" endline="80">BudgetExecution.MainForm.ChartTimer</referencedby>
+        <referencedby refid="class_budget_execution_1_1_main_form_1aa6fef44f81a7f9c6127eaa3993cc8141" compoundref="_main_form_8cs" startline="45" endline="59">BudgetExecution.MainForm.MainForm_Load</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_main_form_1ad4375599cd851b4dd33bc61b56872e90" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type><ref refid="class_budget_execution_1_1_data_builder" kindref="compound">DataBuilder</ref></type>
+        <definition>DataBuilder BudgetExecution.MainForm.D6</definition>
+        <argsstring></argsstring>
+        <name>D6</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/MainForm.cs" line="35" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/MainForm.cs" bodystart="35" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_main_form_1a12093ae2dfbdce8b9a0a6ae5ce55098f" compoundref="_main_form_8cs" startline="12" endline="29">BudgetExecution.MainForm.MainForm</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_main_form_1a09ab74ddd0346309df5bd8834ccef4a7" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type><ref refid="class_budget_execution_1_1_prc_metric" kindref="compound">PrcMetric</ref></type>
+        <definition>PrcMetric BudgetExecution.MainForm.Metric</definition>
+        <argsstring></argsstring>
+        <name>Metric</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/MainForm.cs" line="36" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/MainForm.cs" bodystart="36" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_main_form_1a12093ae2dfbdce8b9a0a6ae5ce55098f" compoundref="_main_form_8cs" startline="12" endline="29">BudgetExecution.MainForm.MainForm</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_main_form_1abdca7c22c8259c41f7c65acd45764c4d" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type><ref refid="class_budget_execution_1_1_form_data" kindref="compound">FormData</ref></type>
+        <definition>FormData BudgetExecution.MainForm.NinjaData</definition>
+        <argsstring></argsstring>
+        <name>NinjaData</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/MainForm.cs" line="37" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/MainForm.cs" bodystart="37" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_main_form_1a12093ae2dfbdce8b9a0a6ae5ce55098f" compoundref="_main_form_8cs" startline="12" endline="29">BudgetExecution.MainForm.MainForm</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_main_form_1ab90cd8d0038ca59d69b16370eda56db9" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type><ref refid="class_budget_execution_1_1_data_builder" kindref="compound">DataBuilder</ref></type>
+        <definition>DataBuilder BudgetExecution.MainForm.R6</definition>
+        <argsstring></argsstring>
+        <name>R6</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/MainForm.cs" line="38" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/MainForm.cs" bodystart="38" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_main_form_1a12093ae2dfbdce8b9a0a6ae5ce55098f" compoundref="_main_form_8cs" startline="12" endline="29">BudgetExecution.MainForm.MainForm</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_main_form_1ae27d6ededf866cabd91ef1e78a968d17" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>string[]</type>
+        <definition>string [] BudgetExecution.MainForm.Title</definition>
+        <argsstring></argsstring>
+        <name>Title</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/MainForm.cs" line="39" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/MainForm.cs" bodystart="39" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_main_form_1ac3ea5af201ceb42f89b9599d63fbdf98" compoundref="_main_form_8cs" startline="60" endline="80">BudgetExecution.MainForm.ChartTimer</referencedby>
+        <referencedby refid="class_budget_execution_1_1_main_form_1a12093ae2dfbdce8b9a0a6ae5ce55098f" compoundref="_main_form_8cs" startline="12" endline="29">BudgetExecution.MainForm.MainForm</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_main_form_1a3af7c4719a6daf9d28277d22ec1642a0" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>Dictionary&lt; string, double &gt;[]</type>
+        <definition>Dictionary&lt;string, double&gt; [] BudgetExecution.MainForm.Values</definition>
+        <argsstring></argsstring>
+        <name>Values</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/MainForm.cs" line="40" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/MainForm.cs" bodystart="40" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_main_form_1ac3ea5af201ceb42f89b9599d63fbdf98" compoundref="_main_form_8cs" startline="60" endline="80">BudgetExecution.MainForm.ChartTimer</referencedby>
+        <referencedby refid="class_budget_execution_1_1_main_form_1a12093ae2dfbdce8b9a0a6ae5ce55098f" compoundref="_main_form_8cs" startline="12" endline="29">BudgetExecution.MainForm.MainForm</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_main_form_1a48d2789d3aa0ae1496161e3e2ba668ea" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>Timer</type>
+        <definition>Timer BudgetExecution.MainForm.Timer</definition>
+        <argsstring></argsstring>
+        <name>Timer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/MainForm.cs" line="41" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/MainForm.cs" bodystart="41" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_main_form_1a12093ae2dfbdce8b9a0a6ae5ce55098f" compoundref="_main_form_8cs" startline="12" endline="29">BudgetExecution.MainForm.MainForm</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_budget_execution_1_1_main_form_1ac8e9a28fe8b40331f7eff6c4dc3d36cd" prot="private" static="no" mutable="no">
+        <type>System.ComponentModel.IContainer</type>
+        <definition>System.ComponentModel.IContainer BudgetExecution.MainForm.components</definition>
+        <argsstring></argsstring>
+        <name>components</name>
+        <initializer>= null</initializer>
+        <briefdescription>
+<para>Required designer variable. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/MainForm.Designer.cs" line="11" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/MainForm.Designer.cs" bodystart="11" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_main_form_1af03b6c2330fc0ab8aedfa5c6255de720" compoundref="_main_form_8_designer_8cs" startline="17" endline="24">BudgetExecution.MainForm.Dispose</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_main_form_1a01618618e2f01e1b59f1d6fbfdcebf63" prot="private" static="no" mutable="no">
+        <type>Syncfusion.Windows.Forms.Tools.HubTile</type>
+        <definition>Syncfusion.Windows.Forms.Tools.HubTile BudgetExecution.MainForm.SummaryTile</definition>
+        <argsstring></argsstring>
+        <name>SummaryTile</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/MainForm.Designer.cs" line="426" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/MainForm.Designer.cs" bodystart="426" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_main_form_1a591a62ec19a4c53d4403fe0870b6c99a" prot="private" static="no" mutable="no">
+        <type>Syncfusion.Windows.Forms.Tools.HubTile</type>
+        <definition>Syncfusion.Windows.Forms.Tools.HubTile BudgetExecution.MainForm.DataTile</definition>
+        <argsstring></argsstring>
+        <name>DataTile</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/MainForm.Designer.cs" line="427" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/MainForm.Designer.cs" bodystart="427" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_main_form_1a01c3da5b578e70fceffd5178ab8c581c" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Button</type>
+        <definition>System.Windows.Forms.Button BudgetExecution.MainForm.RegionSummaryButton</definition>
+        <argsstring></argsstring>
+        <name>RegionSummaryButton</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/MainForm.Designer.cs" line="428" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/MainForm.Designer.cs" bodystart="428" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_main_form_1a308d746254bcb8536e014bdc42cfc81a" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Button</type>
+        <definition>System.Windows.Forms.Button BudgetExecution.MainForm.DataButton</definition>
+        <argsstring></argsstring>
+        <name>DataButton</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/MainForm.Designer.cs" line="429" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/MainForm.Designer.cs" bodystart="429" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_main_form_1a192a3664be08bdc81b90c9fbfe50002e" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Button</type>
+        <definition>System.Windows.Forms.Button BudgetExecution.MainForm.TransferButton</definition>
+        <argsstring></argsstring>
+        <name>TransferButton</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/MainForm.Designer.cs" line="430" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/MainForm.Designer.cs" bodystart="430" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_main_form_1a2a70460e3a6a399a5f145fbd36d46f66" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Button</type>
+        <definition>System.Windows.Forms.Button BudgetExecution.MainForm.DocumentButton</definition>
+        <argsstring></argsstring>
+        <name>DocumentButton</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/MainForm.Designer.cs" line="431" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/MainForm.Designer.cs" bodystart="431" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_main_form_1a4e338907888d4b7622d51950772c2c22" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Button</type>
+        <definition>System.Windows.Forms.Button BudgetExecution.MainForm.DivisionSummaryButton</definition>
+        <argsstring></argsstring>
+        <name>DivisionSummaryButton</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/MainForm.Designer.cs" line="432" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/MainForm.Designer.cs" bodystart="432" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_main_form_1af149bce99f739100de831bd1acd35203" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Button</type>
+        <definition>System.Windows.Forms.Button BudgetExecution.MainForm.DivisionBtn</definition>
+        <argsstring></argsstring>
+        <name>DivisionBtn</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/MainForm.Designer.cs" line="433" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/MainForm.Designer.cs" bodystart="433" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_budget_execution_1_1_main_form_1a1bc82d59278a92bedc649b193fa9b577" prot="protected" static="no" mutable="no">
+        <type>Syncfusion.Windows.Forms.Chart.ChartControl</type>
+        <definition>Syncfusion.Windows.Forms.Chart.ChartControl BudgetExecution.MainForm.MainChart</definition>
+        <argsstring></argsstring>
+        <name>MainChart</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/MainForm.Designer.cs" line="425" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/MainForm.Designer.cs" bodystart="425" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_main_form_1ac3ea5af201ceb42f89b9599d63fbdf98" compoundref="_main_form_8cs" startline="60" endline="80">BudgetExecution.MainForm.ChartTimer</referencedby>
+        <referencedby refid="class_budget_execution_1_1_main_form_1af30b2b0231ea52cb27fe0a47703daed0" compoundref="_main_form_8cs" startline="111" endline="123">BudgetExecution.MainForm.GetMainChart</referencedby>
+        <referencedby refid="class_budget_execution_1_1_main_form_1a12093ae2dfbdce8b9a0a6ae5ce55098f" compoundref="_main_form_8cs" startline="12" endline="29">BudgetExecution.MainForm.MainForm</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_budget_execution_1_1_main_form_1a12093ae2dfbdce8b9a0a6ae5ce55098f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>BudgetExecution.MainForm.MainForm</definition>
+        <argsstring>()</argsstring>
+        <name>MainForm</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/MainForm.cs" line="12" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/MainForm.cs" bodystart="12" bodyend="29"/>
+        <references refid="class_budget_execution_1_1_main_form_1aafaf7bea65512034c54a8cdd927f8de9" compoundref="_main_form_8cs" startline="32">BudgetExecution.MainForm.Chart</references>
+        <references refid="class_budget_execution_1_1_main_form_1ad4375599cd851b4dd33bc61b56872e90" compoundref="_main_form_8cs" startline="35">BudgetExecution.MainForm.D6</references>
+        <references refid="class_budget_execution_1_1_main_form_1a5a9786355114b410ca04b7787744ac51" compoundref="_main_form_8cs" startline="86" endline="90">BudgetExecution.MainForm.DivisionSummaryButton_OnClick</references>
+        <references refid="namespace_budget_execution_1a1fc33e65b1aabdb61249f17efac6b32b">BudgetExecution.GetChart</references>
+        <references refid="class_budget_execution_1_1_main_form_1a9a2ea38373ad92c6a09546a5e4f09630" compoundref="_main_form_8cs" startline="91" endline="110">BudgetExecution.MainForm.GetChartTitles</references>
+        <references refid="class_budget_execution_1_1_prc_metric_1a02ddd1a568a32fced199f0723ef5190e" compoundref="_prc_metric_8cs" startline="270" endline="289">BudgetExecution.PrcMetric.GetChartTotals</references>
+        <references refid="class_budget_execution_1_1_main_form_1af30b2b0231ea52cb27fe0a47703daed0" compoundref="_main_form_8cs" startline="111" endline="123">BudgetExecution.MainForm.GetMainChart</references>
+        <references refid="class_budget_execution_1_1_main_form_1a3477dda4298edf9c79ec105122cd90fb" compoundref="_main_form_8_designer_8cs" startline="32" endline="422">BudgetExecution.MainForm.InitializeComponent</references>
+        <references refid="class_budget_execution_1_1_main_form_1a1bc82d59278a92bedc649b193fa9b577" compoundref="_main_form_8_designer_8cs" startline="425">BudgetExecution.MainForm.MainChart</references>
+        <references refid="class_budget_execution_1_1_main_form_1a09ab74ddd0346309df5bd8834ccef4a7" compoundref="_main_form_8cs" startline="36">BudgetExecution.MainForm.Metric</references>
+        <references refid="class_budget_execution_1_1_main_form_1abdca7c22c8259c41f7c65acd45764c4d" compoundref="_main_form_8cs" startline="37">BudgetExecution.MainForm.NinjaData</references>
+        <references refid="class_budget_execution_1_1_data_builder_1acf42dc8c64a6fd134fbd4f92a18ed61f" compoundref="_data_builder_8cs" startline="52">BudgetExecution.DataBuilder.QueryTable</references>
+        <references refid="class_budget_execution_1_1_main_form_1ab90cd8d0038ca59d69b16370eda56db9" compoundref="_main_form_8cs" startline="38">BudgetExecution.MainForm.R6</references>
+        <references refid="class_budget_execution_1_1_main_form_1ab67b0ef1795423aee9a04d7f0a55ace2" compoundref="_main_form_8cs" startline="137" endline="141">BudgetExecution.MainForm.RegionSummaryButton_OnClick</references>
+        <references refid="class_budget_execution_1_1_main_form_1a48d2789d3aa0ae1496161e3e2ba668ea" compoundref="_main_form_8cs" startline="41">BudgetExecution.MainForm.Timer</references>
+        <references refid="class_budget_execution_1_1_main_form_1ae27d6ededf866cabd91ef1e78a968d17" compoundref="_main_form_8cs" startline="39">BudgetExecution.MainForm.Title</references>
+        <references refid="class_budget_execution_1_1_main_form_1ab6e08d59cb9f5cd3461a3119d96ed089" compoundref="_main_form_8cs" startline="142" endline="146">BudgetExecution.MainForm.TransferButton_OnClick</references>
+        <references refid="class_budget_execution_1_1_main_form_1a3af7c4719a6daf9d28277d22ec1642a0" compoundref="_main_form_8cs" startline="40">BudgetExecution.MainForm.Values</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_budget_execution_1_1_main_form_1aa6fef44f81a7f9c6127eaa3993cc8141" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BudgetExecution.MainForm.MainForm_Load</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>MainForm_Load</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/MainForm.cs" line="45" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/MainForm.cs" bodystart="45" bodyend="59"/>
+        <references refid="class_budget_execution_1_1_main_form_1ac3ea5af201ceb42f89b9599d63fbdf98" compoundref="_main_form_8cs" startline="60" endline="80">BudgetExecution.MainForm.ChartTimer</references>
+        <references refid="class_budget_execution_1_1_main_form_1ac148a36e9b99d86047681b70b1585225" compoundref="_main_form_8cs" startline="34">BudgetExecution.MainForm.Counter</references>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_main_form_1ac3ea5af201ceb42f89b9599d63fbdf98" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BudgetExecution.MainForm.ChartTimer</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>ChartTimer</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/MainForm.cs" line="60" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/MainForm.cs" bodystart="60" bodyend="80"/>
+        <references refid="class_budget_execution_1_1_main_form_1aafaf7bea65512034c54a8cdd927f8de9" compoundref="_main_form_8cs" startline="32">BudgetExecution.MainForm.Chart</references>
+        <references refid="class_budget_execution_1_1_main_form_1ac148a36e9b99d86047681b70b1585225" compoundref="_main_form_8cs" startline="34">BudgetExecution.MainForm.Counter</references>
+        <references refid="class_budget_execution_1_1_main_form_1a1bc82d59278a92bedc649b193fa9b577" compoundref="_main_form_8_designer_8cs" startline="425">BudgetExecution.MainForm.MainChart</references>
+        <references refid="class_budget_execution_1_1_main_form_1ae27d6ededf866cabd91ef1e78a968d17" compoundref="_main_form_8cs" startline="39">BudgetExecution.MainForm.Title</references>
+        <references refid="class_budget_execution_1_1_main_form_1a3af7c4719a6daf9d28277d22ec1642a0" compoundref="_main_form_8cs" startline="40">BudgetExecution.MainForm.Values</references>
+        <referencedby refid="class_budget_execution_1_1_main_form_1aa6fef44f81a7f9c6127eaa3993cc8141" compoundref="_main_form_8cs" startline="45" endline="59">BudgetExecution.MainForm.MainForm_Load</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_main_form_1a0995b89315b991af9e3abcb735f9ffd7" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BudgetExecution.MainForm.DataButton_OnClick</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>DataButton_OnClick</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/MainForm.cs" line="81" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/MainForm.cs" bodystart="81" bodyend="85"/>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_main_form_1a5a9786355114b410ca04b7787744ac51" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BudgetExecution.MainForm.DivisionSummaryButton_OnClick</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>DivisionSummaryButton_OnClick</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/MainForm.cs" line="86" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/MainForm.cs" bodystart="86" bodyend="90"/>
+        <referencedby refid="class_budget_execution_1_1_main_form_1a12093ae2dfbdce8b9a0a6ae5ce55098f" compoundref="_main_form_8cs" startline="12" endline="29">BudgetExecution.MainForm.MainForm</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_main_form_1a9a2ea38373ad92c6a09546a5e4f09630" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string[]</type>
+        <definition>string [] BudgetExecution.MainForm.GetChartTitles</definition>
+        <argsstring>(Dictionary&lt; string, double &gt;[] info)</argsstring>
+        <name>GetChartTitles</name>
+        <param>
+          <type>Dictionary&lt; string, double &gt;[]</type>
+          <declname>info</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/MainForm.cs" line="91" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/MainForm.cs" bodystart="91" bodyend="110"/>
+        <referencedby refid="class_budget_execution_1_1_main_form_1a12093ae2dfbdce8b9a0a6ae5ce55098f" compoundref="_main_form_8cs" startline="12" endline="29">BudgetExecution.MainForm.MainForm</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_main_form_1af30b2b0231ea52cb27fe0a47703daed0" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>ChartControl</type>
+        <definition>ChartControl BudgetExecution.MainForm.GetMainChart</definition>
+        <argsstring>(ChartControl chart, string[] title, Dictionary&lt; string, double &gt; data)</argsstring>
+        <name>GetMainChart</name>
+        <param>
+          <type>ChartControl</type>
+          <declname>chart</declname>
+        </param>
+        <param>
+          <type>string[]</type>
+          <declname>title</declname>
+        </param>
+        <param>
+          <type>Dictionary&lt; string, double &gt;</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/MainForm.cs" line="111" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/MainForm.cs" bodystart="111" bodyend="123"/>
+        <references refid="class_budget_execution_1_1_main_form_1a1bc82d59278a92bedc649b193fa9b577" compoundref="_main_form_8_designer_8cs" startline="425">BudgetExecution.MainForm.MainChart</references>
+        <referencedby refid="class_budget_execution_1_1_main_form_1a12093ae2dfbdce8b9a0a6ae5ce55098f" compoundref="_main_form_8cs" startline="12" endline="29">BudgetExecution.MainForm.MainForm</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_main_form_1a1c2c9d54eb0075c6ce8c163d4269ab0a" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>ChartControl</type>
+        <definition>ChartControl BudgetExecution.MainForm.GetMainChart</definition>
+        <argsstring>(ChartControl chart, string title, Dictionary&lt; string, double &gt; data)</argsstring>
+        <name>GetMainChart</name>
+        <param>
+          <type>ChartControl</type>
+          <declname>chart</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>title</declname>
+        </param>
+        <param>
+          <type>Dictionary&lt; string, double &gt;</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/MainForm.cs" line="124" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/MainForm.cs" bodystart="124" bodyend="136"/>
+        <references refid="class_budget_execution_1_1_main_form_1a1bc82d59278a92bedc649b193fa9b577" compoundref="_main_form_8_designer_8cs" startline="425">BudgetExecution.MainForm.MainChart</references>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_main_form_1ab67b0ef1795423aee9a04d7f0a55ace2" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BudgetExecution.MainForm.RegionSummaryButton_OnClick</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>RegionSummaryButton_OnClick</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/MainForm.cs" line="137" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/MainForm.cs" bodystart="137" bodyend="141"/>
+        <referencedby refid="class_budget_execution_1_1_main_form_1a12093ae2dfbdce8b9a0a6ae5ce55098f" compoundref="_main_form_8cs" startline="12" endline="29">BudgetExecution.MainForm.MainForm</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_main_form_1ab6e08d59cb9f5cd3461a3119d96ed089" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BudgetExecution.MainForm.TransferButton_OnClick</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>TransferButton_OnClick</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/MainForm.cs" line="142" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/MainForm.cs" bodystart="142" bodyend="146"/>
+        <referencedby refid="class_budget_execution_1_1_main_form_1a12093ae2dfbdce8b9a0a6ae5ce55098f" compoundref="_main_form_8cs" startline="12" endline="29">BudgetExecution.MainForm.MainForm</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_main_form_1adfaf598e1136d2688c69eba7a9691109" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BudgetExecution.MainForm.DataTile_OnClick</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>DataTile_OnClick</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/MainForm.cs" line="147" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/MainForm.cs" bodystart="147" bodyend="151"/>
+        <references refid="class_budget_execution_1_1_info_1a6b507d84da4f9e66e31f5ddf09f8eb13" compoundref="_info_8cs" startline="23">BudgetExecution.Info.DivisionImages</references>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_main_form_1adf91f54b9ff37b3cd397508dcebf48b0" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BudgetExecution.MainForm.SummaryTile_OnClick</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>SummaryTile_OnClick</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/MainForm.cs" line="152" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/MainForm.cs" bodystart="152" bodyend="156"/>
+        <references refid="class_budget_execution_1_1_info_1a2f34a3f1b4225faeaab5671d59578e7b" compoundref="_info_8cs" startline="24">BudgetExecution.Info.SummaryImages</references>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_main_form_1ac23d4d42616affddd9fab6bac5161dba" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BudgetExecution.MainForm.DocumentButton_OnClick</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>DocumentButton_OnClick</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/MainForm.cs" line="157" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/MainForm.cs" bodystart="157" bodyend="162"/>
+        <references refid="class_budget_execution_1_1_info_1a578a762771475341a9007d65e79f46c1" compoundref="_info_8cs" startline="25">BudgetExecution.Info.FunctionImages</references>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_main_form_1afced2d2a4c198ed26e732a3162342616" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BudgetExecution.MainForm.TransferButton_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>TransferButton_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/MainForm.cs" line="163" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/MainForm.cs" bodystart="163" bodyend="166"/>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_main_form_1a3477dda4298edf9c79ec105122cd90fb" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BudgetExecution.MainForm.InitializeComponent</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeComponent</name>
+        <briefdescription>
+<para>Required method for Designer support - do not modify the contents of this method with the code editor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/MainForm.Designer.cs" line="32" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/MainForm.Designer.cs" bodystart="32" bodyend="422"/>
+        <references refid="namespace_budget_execution_1a4bb6ce7543ca92e05f7d224d6887fe1aaf623e75af30e62bbd73d6df5b50bb7b5">BudgetExecution.D</references>
+        <references refid="namespace_budget_execution_1afa69cdcc242b50644155cb4adf244d32a800618943025315f869e4e1f09471012">BudgetExecution.F</references>
+        <referencedby refid="class_budget_execution_1_1_main_form_1a12093ae2dfbdce8b9a0a6ae5ce55098f" compoundref="_main_form_8cs" startline="12" endline="29">BudgetExecution.MainForm.MainForm</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_budget_execution_1_1_main_form_1af03b6c2330fc0ab8aedfa5c6255de720" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void BudgetExecution.MainForm.Dispose</definition>
+        <argsstring>(bool disposing)</argsstring>
+        <name>Dispose</name>
+        <param>
+          <type>bool</type>
+          <declname>disposing</declname>
+        </param>
+        <briefdescription>
+<para>Clean up any resources being used. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>disposing</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true if managed resources should be disposed; otherwise, false.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/MainForm.Designer.cs" line="17" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/MainForm.Designer.cs" bodystart="17" bodyend="24"/>
+        <references refid="class_budget_execution_1_1_main_form_1ac8e9a28fe8b40331f7eff6c4dc3d36cd" compoundref="_main_form_8_designer_8cs" startline="11">BudgetExecution.MainForm.components</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="157">
+        <label>Syncfusion::Windows::Forms::MetroForm</label>
+      </node>
+      <node id="156">
+        <label>BudgetExecution.MainForm</label>
+        <link refid="class_budget_execution_1_1_main_form"/>
+        <childnode refid="157" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="159">
+        <label>Syncfusion::Windows::Forms::MetroForm</label>
+      </node>
+      <node id="161">
+        <label>System</label>
+      </node>
+      <node id="158">
+        <label>BudgetExecution.MainForm</label>
+        <link refid="class_budget_execution_1_1_main_form"/>
+        <childnode refid="159" relation="public-inheritance">
+        </childnode>
+        <childnode refid="160" relation="usage">
+          <edgelabel>DataTile</edgelabel>
+          <edgelabel>SummaryTile</edgelabel>
+          <edgelabel>MainChart</edgelabel>
+        </childnode>
+        <childnode refid="161" relation="usage">
+          <edgelabel>DivisionBtn</edgelabel>
+          <edgelabel>TransferButton</edgelabel>
+          <edgelabel>DivisionSummaryButton</edgelabel>
+          <edgelabel>DataButton</edgelabel>
+          <edgelabel>DocumentButton</edgelabel>
+          <edgelabel>components</edgelabel>
+          <edgelabel>RegionSummaryButton</edgelabel>
+        </childnode>
+      </node>
+      <node id="160">
+        <label>Forms</label>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/MainForm.cs" line="10" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/MainForm.cs" bodystart="9" bodyend="167"/>
+    <listofallmembers>
+      <member refid="class_budget_execution_1_1_main_form_1aafaf7bea65512034c54a8cdd927f8de9" prot="public" virt="non-virtual"><scope>BudgetExecution::MainForm</scope><name>Chart</name></member>
+      <member refid="class_budget_execution_1_1_main_form_1ac3ea5af201ceb42f89b9599d63fbdf98" prot="private" virt="non-virtual"><scope>BudgetExecution::MainForm</scope><name>ChartTimer</name></member>
+      <member refid="class_budget_execution_1_1_main_form_1ac8e9a28fe8b40331f7eff6c4dc3d36cd" prot="private" virt="non-virtual"><scope>BudgetExecution::MainForm</scope><name>components</name></member>
+      <member refid="class_budget_execution_1_1_main_form_1ac148a36e9b99d86047681b70b1585225" prot="public" virt="non-virtual"><scope>BudgetExecution::MainForm</scope><name>Counter</name></member>
+      <member refid="class_budget_execution_1_1_main_form_1ad4375599cd851b4dd33bc61b56872e90" prot="public" virt="non-virtual"><scope>BudgetExecution::MainForm</scope><name>D6</name></member>
+      <member refid="class_budget_execution_1_1_main_form_1a308d746254bcb8536e014bdc42cfc81a" prot="private" virt="non-virtual"><scope>BudgetExecution::MainForm</scope><name>DataButton</name></member>
+      <member refid="class_budget_execution_1_1_main_form_1a0995b89315b991af9e3abcb735f9ffd7" prot="private" virt="non-virtual"><scope>BudgetExecution::MainForm</scope><name>DataButton_OnClick</name></member>
+      <member refid="class_budget_execution_1_1_main_form_1a591a62ec19a4c53d4403fe0870b6c99a" prot="private" virt="non-virtual"><scope>BudgetExecution::MainForm</scope><name>DataTile</name></member>
+      <member refid="class_budget_execution_1_1_main_form_1adfaf598e1136d2688c69eba7a9691109" prot="private" virt="non-virtual"><scope>BudgetExecution::MainForm</scope><name>DataTile_OnClick</name></member>
+      <member refid="class_budget_execution_1_1_main_form_1af03b6c2330fc0ab8aedfa5c6255de720" prot="protected" virt="non-virtual"><scope>BudgetExecution::MainForm</scope><name>Dispose</name></member>
+      <member refid="class_budget_execution_1_1_main_form_1af149bce99f739100de831bd1acd35203" prot="private" virt="non-virtual"><scope>BudgetExecution::MainForm</scope><name>DivisionBtn</name></member>
+      <member refid="class_budget_execution_1_1_main_form_1a4e338907888d4b7622d51950772c2c22" prot="private" virt="non-virtual"><scope>BudgetExecution::MainForm</scope><name>DivisionSummaryButton</name></member>
+      <member refid="class_budget_execution_1_1_main_form_1a5a9786355114b410ca04b7787744ac51" prot="private" virt="non-virtual"><scope>BudgetExecution::MainForm</scope><name>DivisionSummaryButton_OnClick</name></member>
+      <member refid="class_budget_execution_1_1_main_form_1a2a70460e3a6a399a5f145fbd36d46f66" prot="private" virt="non-virtual"><scope>BudgetExecution::MainForm</scope><name>DocumentButton</name></member>
+      <member refid="class_budget_execution_1_1_main_form_1ac23d4d42616affddd9fab6bac5161dba" prot="private" virt="non-virtual"><scope>BudgetExecution::MainForm</scope><name>DocumentButton_OnClick</name></member>
+      <member refid="class_budget_execution_1_1_main_form_1a9a2ea38373ad92c6a09546a5e4f09630" prot="private" virt="non-virtual"><scope>BudgetExecution::MainForm</scope><name>GetChartTitles</name></member>
+      <member refid="class_budget_execution_1_1_main_form_1af30b2b0231ea52cb27fe0a47703daed0" prot="private" virt="non-virtual"><scope>BudgetExecution::MainForm</scope><name>GetMainChart</name></member>
+      <member refid="class_budget_execution_1_1_main_form_1a1c2c9d54eb0075c6ce8c163d4269ab0a" prot="private" virt="non-virtual"><scope>BudgetExecution::MainForm</scope><name>GetMainChart</name></member>
+      <member refid="class_budget_execution_1_1_main_form_1a3477dda4298edf9c79ec105122cd90fb" prot="private" virt="non-virtual"><scope>BudgetExecution::MainForm</scope><name>InitializeComponent</name></member>
+      <member refid="class_budget_execution_1_1_main_form_1a1bc82d59278a92bedc649b193fa9b577" prot="protected" virt="non-virtual"><scope>BudgetExecution::MainForm</scope><name>MainChart</name></member>
+      <member refid="class_budget_execution_1_1_main_form_1a12093ae2dfbdce8b9a0a6ae5ce55098f" prot="public" virt="non-virtual"><scope>BudgetExecution::MainForm</scope><name>MainForm</name></member>
+      <member refid="class_budget_execution_1_1_main_form_1aa6fef44f81a7f9c6127eaa3993cc8141" prot="private" virt="non-virtual"><scope>BudgetExecution::MainForm</scope><name>MainForm_Load</name></member>
+      <member refid="class_budget_execution_1_1_main_form_1a09ab74ddd0346309df5bd8834ccef4a7" prot="public" virt="non-virtual"><scope>BudgetExecution::MainForm</scope><name>Metric</name></member>
+      <member refid="class_budget_execution_1_1_main_form_1abdca7c22c8259c41f7c65acd45764c4d" prot="public" virt="non-virtual"><scope>BudgetExecution::MainForm</scope><name>NinjaData</name></member>
+      <member refid="class_budget_execution_1_1_main_form_1ab90cd8d0038ca59d69b16370eda56db9" prot="public" virt="non-virtual"><scope>BudgetExecution::MainForm</scope><name>R6</name></member>
+      <member refid="class_budget_execution_1_1_main_form_1a01c3da5b578e70fceffd5178ab8c581c" prot="private" virt="non-virtual"><scope>BudgetExecution::MainForm</scope><name>RegionSummaryButton</name></member>
+      <member refid="class_budget_execution_1_1_main_form_1ab67b0ef1795423aee9a04d7f0a55ace2" prot="private" virt="non-virtual"><scope>BudgetExecution::MainForm</scope><name>RegionSummaryButton_OnClick</name></member>
+      <member refid="class_budget_execution_1_1_main_form_1a01618618e2f01e1b59f1d6fbfdcebf63" prot="private" virt="non-virtual"><scope>BudgetExecution::MainForm</scope><name>SummaryTile</name></member>
+      <member refid="class_budget_execution_1_1_main_form_1adf91f54b9ff37b3cd397508dcebf48b0" prot="private" virt="non-virtual"><scope>BudgetExecution::MainForm</scope><name>SummaryTile_OnClick</name></member>
+      <member refid="class_budget_execution_1_1_main_form_1a48d2789d3aa0ae1496161e3e2ba668ea" prot="public" virt="non-virtual"><scope>BudgetExecution::MainForm</scope><name>Timer</name></member>
+      <member refid="class_budget_execution_1_1_main_form_1ae27d6ededf866cabd91ef1e78a968d17" prot="public" virt="non-virtual"><scope>BudgetExecution::MainForm</scope><name>Title</name></member>
+      <member refid="class_budget_execution_1_1_main_form_1a192a3664be08bdc81b90c9fbfe50002e" prot="private" virt="non-virtual"><scope>BudgetExecution::MainForm</scope><name>TransferButton</name></member>
+      <member refid="class_budget_execution_1_1_main_form_1afced2d2a4c198ed26e732a3162342616" prot="private" virt="non-virtual"><scope>BudgetExecution::MainForm</scope><name>TransferButton_Click</name></member>
+      <member refid="class_budget_execution_1_1_main_form_1ab6e08d59cb9f5cd3461a3119d96ed089" prot="private" virt="non-virtual"><scope>BudgetExecution::MainForm</scope><name>TransferButton_OnClick</name></member>
+      <member refid="class_budget_execution_1_1_main_form_1a3af7c4719a6daf9d28277d22ec1642a0" prot="public" virt="non-virtual"><scope>BudgetExecution::MainForm</scope><name>Values</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

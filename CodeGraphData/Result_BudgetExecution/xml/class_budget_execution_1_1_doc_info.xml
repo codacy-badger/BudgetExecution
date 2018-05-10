@@ -1,0 +1,412 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_budget_execution_1_1_doc_info" kind="class" prot="public">
+    <compoundname>BudgetExecution::DocInfo</compoundname>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_budget_execution_1_1_doc_info_1a83662452246612165da69ace1e63561a" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>List&lt; string &gt;</type>
+        <definition>List&lt;string&gt; BudgetExecution.DocInfo.AccountingInfo</definition>
+        <argsstring></argsstring>
+        <name>AccountingInfo</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DocInfo.cs" line="28" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DocInfo.cs" bodystart="28" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_doc_info_1af48323d26036a51223253f360ff87f96" compoundref="_doc_info_8cs" startline="18" endline="25">BudgetExecution.DocInfo.DocInfo</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_doc_info_1a43f513123c3f0d073f5fb4ea709c7d9d" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>decimal</type>
+        <definition>decimal BudgetExecution.DocInfo.Awards</definition>
+        <argsstring></argsstring>
+        <name>Awards</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DocInfo.cs" line="30" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DocInfo.cs" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_doc_info_1a378bda93e0f8fca39e9a2f1c5cc2c394" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>List&lt; string &gt;</type>
+        <definition>List&lt;string&gt; BudgetExecution.DocInfo.ControlInfo</definition>
+        <argsstring></argsstring>
+        <name>ControlInfo</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DocInfo.cs" line="31" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DocInfo.cs" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_doc_info_1a11d140cfa23ad15f929f6298d0f3ca13" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>string</type>
+        <definition>string BudgetExecution.DocInfo.ControlNumber</definition>
+        <argsstring></argsstring>
+        <name>ControlNumber</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DocInfo.cs" line="32" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DocInfo.cs" bodystart="32" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_doc_info_1af48323d26036a51223253f360ff87f96" compoundref="_doc_info_8cs" startline="18" endline="25">BudgetExecution.DocInfo.DocInfo</referencedby>
+        <referencedby refid="class_budget_execution_1_1_doc_info_1a72319db5b9e8582afe4f0b43d0e9d774" compoundref="_doc_info_8cs" startline="89" endline="107">BudgetExecution.DocInfo.GetDocmumentDictionary</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_doc_info_1a7bc04385fe28e523a5e224b8dd36a11a" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>List&lt; string &gt;</type>
+        <definition>List&lt;string&gt; BudgetExecution.DocInfo.ControlNumbers</definition>
+        <argsstring></argsstring>
+        <name>ControlNumbers</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DocInfo.cs" line="33" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DocInfo.cs" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_doc_info_1a5fd42fdb6bd7889e77c0c66f4bf5e3ef" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>string</type>
+        <definition>string BudgetExecution.DocInfo.DateIssued</definition>
+        <argsstring></argsstring>
+        <name>DateIssued</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DocInfo.cs" line="34" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DocInfo.cs" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_doc_info_1a7733b2ddcd89c199c4e96901251dc5da" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>string</type>
+        <definition>string BudgetExecution.DocInfo.DcnPrefix</definition>
+        <argsstring></argsstring>
+        <name>DcnPrefix</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DocInfo.cs" line="35" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DocInfo.cs" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_doc_info_1ada9a3191ccc5c178205b035959c35a13" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type><ref refid="class_budget_execution_1_1_division_authority" kindref="compound">DivisionAuthority</ref></type>
+        <definition>DivisionAuthority BudgetExecution.DocInfo.DivisionBudget</definition>
+        <argsstring></argsstring>
+        <name>DivisionBudget</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DocInfo.cs" line="36" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DocInfo.cs" bodystart="36" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_doc_info_1af48323d26036a51223253f360ff87f96" compoundref="_doc_info_8cs" startline="18" endline="25">BudgetExecution.DocInfo.DocInfo</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_doc_info_1ad402eaa838172dee15733aa7b395b8cf" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>List&lt; string &gt;</type>
+        <definition>List&lt;string&gt; BudgetExecution.DocInfo.DocumentHeader</definition>
+        <argsstring></argsstring>
+        <name>DocumentHeader</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DocInfo.cs" line="37" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DocInfo.cs" bodystart="37" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_doc_info_1af48323d26036a51223253f360ff87f96" compoundref="_doc_info_8cs" startline="18" endline="25">BudgetExecution.DocInfo.DocInfo</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_doc_info_1a67f6a42706e6782e671b0588ddd67aa7" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type><ref refid="class_budget_execution_1_1_org" kindref="compound">Org</ref></type>
+        <definition>Org BudgetExecution.DocInfo.Organization</definition>
+        <argsstring></argsstring>
+        <name>Organization</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DocInfo.cs" line="38" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DocInfo.cs" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_doc_info_1a16226017f39c8d3527e3036c4f831304" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>decimal</type>
+        <definition>decimal BudgetExecution.DocInfo.OverTime</definition>
+        <argsstring></argsstring>
+        <name>OverTime</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DocInfo.cs" line="39" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DocInfo.cs" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_doc_info_1a46e98645f5c832c46c047e5005226cde" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>string</type>
+        <definition>string BudgetExecution.DocInfo.Purpose</definition>
+        <argsstring></argsstring>
+        <name>Purpose</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DocInfo.cs" line="40" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DocInfo.cs" bodystart="40" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_doc_info_1a72319db5b9e8582afe4f0b43d0e9d774" compoundref="_doc_info_8cs" startline="89" endline="107">BudgetExecution.DocInfo.GetDocmumentDictionary</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_doc_info_1add81c29653c25b580eb44de1de18762a" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>List&lt; <ref refid="class_budget_execution_1_1_transfer" kindref="compound">Transfer</ref> &gt;</type>
+        <definition>List&lt;Transfer&gt; BudgetExecution.DocInfo.Reprogrammings</definition>
+        <argsstring></argsstring>
+        <name>Reprogrammings</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DocInfo.cs" line="41" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DocInfo.cs" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_doc_info_1a575eeed5e05ec94afa3d07f072e1ae35" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>List&lt; string &gt;</type>
+        <definition>List&lt;string&gt; BudgetExecution.DocInfo.SignatureBlock</definition>
+        <argsstring></argsstring>
+        <name>SignatureBlock</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DocInfo.cs" line="42" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DocInfo.cs" bodystart="42" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_doc_info_1af48323d26036a51223253f360ff87f96" compoundref="_doc_info_8cs" startline="18" endline="25">BudgetExecution.DocInfo.DocInfo</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_doc_info_1a9c68f2d5343563ae2f5b03d603779160" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>Dictionary&lt; string, object &gt;</type>
+        <definition>Dictionary&lt;string, object&gt; BudgetExecution.DocInfo.Suppplemental</definition>
+        <argsstring></argsstring>
+        <name>Suppplemental</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DocInfo.cs" line="43" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DocInfo.cs" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_doc_info_1a5eeb390085953b61ecf918a2a00bdf65" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>int</type>
+        <definition>int BudgetExecution.DocInfo.TimeOffAwards</definition>
+        <argsstring></argsstring>
+        <name>TimeOffAwards</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DocInfo.cs" line="44" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DocInfo.cs" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_doc_info_1a10cb88274a96b165532b5a6cc959dc8c" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type><ref refid="class_budget_execution_1_1_p_r_c" kindref="compound">PRC</ref></type>
+        <definition>PRC BudgetExecution.DocInfo.Training</definition>
+        <argsstring></argsstring>
+        <name>Training</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DocInfo.cs" line="45" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DocInfo.cs" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_budget_execution_1_1_doc_info_1a52570c740bfd2d51c2300400bca3b636" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>BudgetExecution.DocInfo.DocInfo</definition>
+        <argsstring>()</argsstring>
+        <name>DocInfo</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DocInfo.cs" line="14" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DocInfo.cs" bodystart="14" bodyend="16"/>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_doc_info_1af48323d26036a51223253f360ff87f96" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>BudgetExecution.DocInfo.DocInfo</definition>
+        <argsstring>(DivisionAuthority budget)</argsstring>
+        <name>DocInfo</name>
+        <param>
+          <type><ref refid="class_budget_execution_1_1_division_authority" kindref="compound">DivisionAuthority</ref></type>
+          <declname>budget</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DocInfo.cs" line="18" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DocInfo.cs" bodystart="18" bodyend="25"/>
+        <references refid="class_budget_execution_1_1_doc_info_1a83662452246612165da69ace1e63561a" compoundref="_doc_info_8cs" startline="28">BudgetExecution.DocInfo.AccountingInfo</references>
+        <references refid="class_budget_execution_1_1_doc_info_1a11d140cfa23ad15f929f6298d0f3ca13" compoundref="_doc_info_8cs" startline="32">BudgetExecution.DocInfo.ControlNumber</references>
+        <references refid="class_budget_execution_1_1_doc_info_1ada9a3191ccc5c178205b035959c35a13" compoundref="_doc_info_8cs" startline="36">BudgetExecution.DocInfo.DivisionBudget</references>
+        <references refid="class_budget_execution_1_1_doc_info_1ad402eaa838172dee15733aa7b395b8cf" compoundref="_doc_info_8cs" startline="37">BudgetExecution.DocInfo.DocumentHeader</references>
+        <references refid="class_budget_execution_1_1_doc_info_1a037e07c16034190f2c863d8e6a485238" compoundref="_doc_info_8cs" startline="48" endline="62">BudgetExecution.DocInfo.GetAccountingInfo</references>
+        <references refid="class_budget_execution_1_1_doc_info_1a5ce80da6647a63a10c9d4d25c865d71b" compoundref="_doc_info_8cs" startline="64" endline="87">BudgetExecution.DocInfo.GetControlNumber</references>
+        <references refid="class_budget_execution_1_1_doc_info_1a9999192253741b74d0cc122fc4699de2" compoundref="_doc_info_8cs" startline="109" endline="118">BudgetExecution.DocInfo.GetDocumentHeader</references>
+        <references refid="class_budget_execution_1_1_doc_info_1a5b4a004772e5a0d6dff78905c60dbdb2" compoundref="_doc_info_8cs" startline="143" endline="150">BudgetExecution.DocInfo.GetSignatureInfo</references>
+        <references refid="class_budget_execution_1_1_doc_info_1a575eeed5e05ec94afa3d07f072e1ae35" compoundref="_doc_info_8cs" startline="42">BudgetExecution.DocInfo.SignatureBlock</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="package-func">
+      <memberdef kind="function" id="class_budget_execution_1_1_doc_info_1a037e07c16034190f2c863d8e6a485238" prot="package" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; string &gt;</type>
+        <definition>List&lt;string&gt; BudgetExecution.DocInfo.GetAccountingInfo</definition>
+        <argsstring>()</argsstring>
+        <name>GetAccountingInfo</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DocInfo.cs" line="48" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DocInfo.cs" bodystart="48" bodyend="62"/>
+        <referencedby refid="class_budget_execution_1_1_doc_info_1af48323d26036a51223253f360ff87f96" compoundref="_doc_info_8cs" startline="18" endline="25">BudgetExecution.DocInfo.DocInfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_doc_info_1a5ce80da6647a63a10c9d4d25c865d71b" prot="package" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>string BudgetExecution.DocInfo.GetControlNumber</definition>
+        <argsstring>()</argsstring>
+        <name>GetControlNumber</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DocInfo.cs" line="64" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DocInfo.cs" bodystart="64" bodyend="87"/>
+        <references refid="class_budget_execution_1_1_division_authority_1a161a0666441b5182850380a8071f9907" compoundref="_division_authority_8cs" startline="58">BudgetExecution.DivisionAuthority.FiscalYear</references>
+        <referencedby refid="class_budget_execution_1_1_doc_info_1af48323d26036a51223253f360ff87f96" compoundref="_doc_info_8cs" startline="18" endline="25">BudgetExecution.DocInfo.DocInfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_doc_info_1a72319db5b9e8582afe4f0b43d0e9d774" prot="package" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Dictionary&lt; string, string &gt;</type>
+        <definition>Dictionary&lt;string, string&gt; BudgetExecution.DocInfo.GetDocmumentDictionary</definition>
+        <argsstring>()</argsstring>
+        <name>GetDocmumentDictionary</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DocInfo.cs" line="89" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DocInfo.cs" bodystart="89" bodyend="107"/>
+        <references refid="class_budget_execution_1_1_doc_info_1a11d140cfa23ad15f929f6298d0f3ca13" compoundref="_doc_info_8cs" startline="32">BudgetExecution.DocInfo.ControlNumber</references>
+        <references refid="class_budget_execution_1_1_division_authority_1a161a0666441b5182850380a8071f9907" compoundref="_division_authority_8cs" startline="58">BudgetExecution.DivisionAuthority.FiscalYear</references>
+        <references refid="class_budget_execution_1_1_doc_info_1a46e98645f5c832c46c047e5005226cde" compoundref="_doc_info_8cs" startline="40">BudgetExecution.DocInfo.Purpose</references>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_doc_info_1a9999192253741b74d0cc122fc4699de2" prot="package" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; string &gt;</type>
+        <definition>List&lt;string&gt; BudgetExecution.DocInfo.GetDocumentHeader</definition>
+        <argsstring>()</argsstring>
+        <name>GetDocumentHeader</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DocInfo.cs" line="109" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DocInfo.cs" bodystart="109" bodyend="118"/>
+        <referencedby refid="class_budget_execution_1_1_doc_info_1af48323d26036a51223253f360ff87f96" compoundref="_doc_info_8cs" startline="18" endline="25">BudgetExecution.DocInfo.DocInfo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_doc_info_1a6847d0825307ad4c2440d6764a9399b3" prot="package" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; string &gt;</type>
+        <definition>List&lt;string&gt; BudgetExecution.DocInfo.GetManagementHeader</definition>
+        <argsstring>()</argsstring>
+        <name>GetManagementHeader</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DocInfo.cs" line="120" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DocInfo.cs" bodystart="120" bodyend="128"/>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_doc_info_1a6202c99c34a8921238a97ebf0d5eae65" prot="package" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int BudgetExecution.DocInfo.GetNewDocNumber</definition>
+        <argsstring>()</argsstring>
+        <name>GetNewDocNumber</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DocInfo.cs" line="130" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DocInfo.cs" bodystart="130" bodyend="141"/>
+        <references refid="class_budget_execution_1_1_data_builder_1acf42dc8c64a6fd134fbd4f92a18ed61f" compoundref="_data_builder_8cs" startline="52">BudgetExecution.DataBuilder.QueryTable</references>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_doc_info_1a5b4a004772e5a0d6dff78905c60dbdb2" prot="package" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; string &gt;</type>
+        <definition>List&lt;string&gt; BudgetExecution.DocInfo.GetSignatureInfo</definition>
+        <argsstring>()</argsstring>
+        <name>GetSignatureInfo</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DocInfo.cs" line="143" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DocInfo.cs" bodystart="143" bodyend="150"/>
+        <referencedby refid="class_budget_execution_1_1_doc_info_1af48323d26036a51223253f360ff87f96" compoundref="_doc_info_8cs" startline="18" endline="25">BudgetExecution.DocInfo.DocInfo</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DocInfo.cs" line="12" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DocInfo.cs" bodystart="11" bodyend="151"/>
+    <listofallmembers>
+      <member refid="class_budget_execution_1_1_doc_info_1a83662452246612165da69ace1e63561a" prot="public" virt="non-virtual"><scope>BudgetExecution::DocInfo</scope><name>AccountingInfo</name></member>
+      <member refid="class_budget_execution_1_1_doc_info_1a43f513123c3f0d073f5fb4ea709c7d9d" prot="public" virt="non-virtual"><scope>BudgetExecution::DocInfo</scope><name>Awards</name></member>
+      <member refid="class_budget_execution_1_1_doc_info_1a378bda93e0f8fca39e9a2f1c5cc2c394" prot="public" virt="non-virtual"><scope>BudgetExecution::DocInfo</scope><name>ControlInfo</name></member>
+      <member refid="class_budget_execution_1_1_doc_info_1a11d140cfa23ad15f929f6298d0f3ca13" prot="public" virt="non-virtual"><scope>BudgetExecution::DocInfo</scope><name>ControlNumber</name></member>
+      <member refid="class_budget_execution_1_1_doc_info_1a7bc04385fe28e523a5e224b8dd36a11a" prot="public" virt="non-virtual"><scope>BudgetExecution::DocInfo</scope><name>ControlNumbers</name></member>
+      <member refid="class_budget_execution_1_1_doc_info_1a5fd42fdb6bd7889e77c0c66f4bf5e3ef" prot="public" virt="non-virtual"><scope>BudgetExecution::DocInfo</scope><name>DateIssued</name></member>
+      <member refid="class_budget_execution_1_1_doc_info_1a7733b2ddcd89c199c4e96901251dc5da" prot="public" virt="non-virtual"><scope>BudgetExecution::DocInfo</scope><name>DcnPrefix</name></member>
+      <member refid="class_budget_execution_1_1_doc_info_1ada9a3191ccc5c178205b035959c35a13" prot="public" virt="non-virtual"><scope>BudgetExecution::DocInfo</scope><name>DivisionBudget</name></member>
+      <member refid="class_budget_execution_1_1_doc_info_1a52570c740bfd2d51c2300400bca3b636" prot="public" virt="non-virtual"><scope>BudgetExecution::DocInfo</scope><name>DocInfo</name></member>
+      <member refid="class_budget_execution_1_1_doc_info_1af48323d26036a51223253f360ff87f96" prot="public" virt="non-virtual"><scope>BudgetExecution::DocInfo</scope><name>DocInfo</name></member>
+      <member refid="class_budget_execution_1_1_doc_info_1ad402eaa838172dee15733aa7b395b8cf" prot="public" virt="non-virtual"><scope>BudgetExecution::DocInfo</scope><name>DocumentHeader</name></member>
+      <member refid="class_budget_execution_1_1_doc_info_1a037e07c16034190f2c863d8e6a485238" prot="package" virt="non-virtual"><scope>BudgetExecution::DocInfo</scope><name>GetAccountingInfo</name></member>
+      <member refid="class_budget_execution_1_1_doc_info_1a5ce80da6647a63a10c9d4d25c865d71b" prot="package" virt="non-virtual"><scope>BudgetExecution::DocInfo</scope><name>GetControlNumber</name></member>
+      <member refid="class_budget_execution_1_1_doc_info_1a72319db5b9e8582afe4f0b43d0e9d774" prot="package" virt="non-virtual"><scope>BudgetExecution::DocInfo</scope><name>GetDocmumentDictionary</name></member>
+      <member refid="class_budget_execution_1_1_doc_info_1a9999192253741b74d0cc122fc4699de2" prot="package" virt="non-virtual"><scope>BudgetExecution::DocInfo</scope><name>GetDocumentHeader</name></member>
+      <member refid="class_budget_execution_1_1_doc_info_1a6847d0825307ad4c2440d6764a9399b3" prot="package" virt="non-virtual"><scope>BudgetExecution::DocInfo</scope><name>GetManagementHeader</name></member>
+      <member refid="class_budget_execution_1_1_doc_info_1a6202c99c34a8921238a97ebf0d5eae65" prot="package" virt="non-virtual"><scope>BudgetExecution::DocInfo</scope><name>GetNewDocNumber</name></member>
+      <member refid="class_budget_execution_1_1_doc_info_1a5b4a004772e5a0d6dff78905c60dbdb2" prot="package" virt="non-virtual"><scope>BudgetExecution::DocInfo</scope><name>GetSignatureInfo</name></member>
+      <member refid="class_budget_execution_1_1_doc_info_1a67f6a42706e6782e671b0588ddd67aa7" prot="public" virt="non-virtual"><scope>BudgetExecution::DocInfo</scope><name>Organization</name></member>
+      <member refid="class_budget_execution_1_1_doc_info_1a16226017f39c8d3527e3036c4f831304" prot="public" virt="non-virtual"><scope>BudgetExecution::DocInfo</scope><name>OverTime</name></member>
+      <member refid="class_budget_execution_1_1_doc_info_1a46e98645f5c832c46c047e5005226cde" prot="public" virt="non-virtual"><scope>BudgetExecution::DocInfo</scope><name>Purpose</name></member>
+      <member refid="class_budget_execution_1_1_doc_info_1add81c29653c25b580eb44de1de18762a" prot="public" virt="non-virtual"><scope>BudgetExecution::DocInfo</scope><name>Reprogrammings</name></member>
+      <member refid="class_budget_execution_1_1_doc_info_1a575eeed5e05ec94afa3d07f072e1ae35" prot="public" virt="non-virtual"><scope>BudgetExecution::DocInfo</scope><name>SignatureBlock</name></member>
+      <member refid="class_budget_execution_1_1_doc_info_1a9c68f2d5343563ae2f5b03d603779160" prot="public" virt="non-virtual"><scope>BudgetExecution::DocInfo</scope><name>Suppplemental</name></member>
+      <member refid="class_budget_execution_1_1_doc_info_1a5eeb390085953b61ecf918a2a00bdf65" prot="public" virt="non-virtual"><scope>BudgetExecution::DocInfo</scope><name>TimeOffAwards</name></member>
+      <member refid="class_budget_execution_1_1_doc_info_1a10cb88274a96b165532b5a6cc959dc8c" prot="public" virt="non-virtual"><scope>BudgetExecution::DocInfo</scope><name>Training</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.SQLite;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
@@ -21,43 +22,37 @@ namespace BudgetExecution
         public FormData(DataBuilder data, BindingSource bs, DataGridView dgv, BindingNavigator bn)
         {
             Data = data;
-            BudgetMetric = new PrcMetric(Data);
-            BudgetData = Data.DataSet;
-            Table = Data.QueryTable;
-            BindDataGridAndNavigator(Table, dgv, bs, bn);
+            DataMetric = new PrcMetric(Data);
+            DataSet = Data.DataSet;
+            DataTable = Data.QueryTable;
+            BindDataGridAndNavigator(DataTable, dgv, bs, bn);
             BindingSource = bs;
             Navigator = bn;
             DataGrid = dgv;
         }
 
         //Properties
+        public Stat Measure { get; set; }
+        public ChartSeriesType ChartType { get; set; }
         public BindingSource BindingSource { get; set; }
-        public DataSet BudgetData { get; set; }
-        public PrcMetric BudgetMetric { get; set; }
+        public DataSet DataSet { get; set; }
+        public PrcMetric DataMetric { get; set; }
         public ChartControl Chart { get; set; }
         public ChartDataBindModel ChartModel { get; set; }
+        public Control PrimaryFilterControl { get; set; }
+        public Control SecondaryFilterControl { get; set; }
+        public Control TertiaryFilterControl { get; set; }
         public int Count { get; set; }
         public DataBuilder Data { get; set; }
         public DataGridView DataGrid { get; set; }
         public decimal[] Metrics { get; set; }
         public BindingNavigator Navigator { get; set; }
         public FlowLayoutPanel Panel { get; set; }
-        public DataTable Table { get; set; }
-        private bool Percent { get; set; }
+        public DataTable DataTable { get; set; }
+        public Dictionary<string, object> SearchParameter { get; set; }
+        Func<DataTable, PrcField, string> TableFilter;
 
         //Methods
-        public DataTable FilterTable(DataTable table, string column, string filter)
-        {
-            try
-            {
-                return table.AsEnumerable().Where(p => p.Field<string>(column).Equals(filter)).Select(p => p).CopyToDataTable();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
-                return null;
-            }
-        }
         public decimal GetAverage(DataTable table)
         {
             try
@@ -181,29 +176,29 @@ namespace BudgetExecution
                 return null;
             }
         }
-        internal void AppropriationButton_OnSelect(object sender, EventArgs e)
+        internal void PrimaryFilterControlButton_OnClick(object sender, EventArgs e)
         {
             try
             {
                 var button = sender as MetroSetButton;
-                var table = GetTable(Table, "FundName", button.Tag.ToString());
+                var table = GetTable(DataTable, "FundName", button.Tag.ToString());
                 BindingSource.DataSource = table;
                 PopulateBocFilterBox(table, Panel);
-                Table = table;
+                DataTable = table;
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
             }
         }
-        internal void AppropriationListBoxItem_OnSelect(object sender, EventArgs e)
+        internal void PrimaryFilterControlListBox_OnSelect(object sender, EventArgs e)
         {
             try
             {
                 var button = sender as MetroSetListBox;
-                var table = GetTable(Table, "FundName", button.SelectedItem.ToString());
+                var table = GetTable(DataTable, "FundName", button.SelectedItem.ToString());
                 BindingSource.DataSource = table;
-                Table = table;
+                DataTable = table;
             }
             catch (Exception ex)
             {
@@ -217,7 +212,7 @@ namespace BudgetExecution
                 bs.DataSource = table;
                 dg.DataSource = bs;
                 bn.BindingSource = bs;
-                ConfigureGridColumns(dg);
+                ConfigureDataGridViewVisibleColumns(dg);
             }
             catch (Exception ex)
             {
@@ -243,9 +238,9 @@ namespace BudgetExecution
             try
             {
                 var button = sender as MetroSetListBox;
-                var table = GetTable(Table, "BocName", button.SelectedItem.ToString());
+                var table = GetTable(DataTable, "BocName", button.SelectedItem.ToString());
                 BindingSource.DataSource = table;
-                PopulateBocFilterBox(Table, Panel);
+                PopulateBocFilterBox(DataTable, Panel);
             }
             catch (Exception ex)
             {
@@ -257,89 +252,57 @@ namespace BudgetExecution
             try
             {
                 var button = sender as MetroSetListBox;
-                var table = GetTable(Table, "BocName", button.SelectedItem.ToString());
+                var table = GetTable(DataTable, "BocName", button.SelectedItem.ToString());
                 BindingSource.DataSource = table;
-                PopulateBocFilterBox(Table, Panel);
+                PopulateBocFilterBox(DataTable, Panel);
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
             }
         }
-        internal void ConfigureTabControl(MetroForm form, TabControlAdv tab, DataBuilder Ninja)
+        internal void ConfigurePrimaryFilterControlButton(DataTable table, Control fitlerControl, PrcField prc)
         {
             try
             {
-                foreach (TabPageAdv tp in tab.TabPages)
-                {
-                    tp.TabForeColor = SystemColors.MenuHighlight;
-                    tp.TabBackColor = Color.Black;
-                }
-                tab.TabPages[0].Text = "Summary";
-                tab.TabPages[1].Text = "Appropriation";
-                tab.TabPages[2].Text = "BOC";
-                tab.TabPages[3].Text = "NPM";
-                tab.TabPages[4].Text = "Goal";
-                if (Ninja.DataQuery.Source == Source.RegionAccount)
-                {
-                    tab.TabPages[5].Text = "Objective";
-                    tab.TabPages[6].Text = "Divisions";
-                    tab.TabPages[7].Text = "Transfers";
-                }
-                if (Ninja.DataQuery.Source == Source.DivisionAccount)
-                {
-                    tab.TabPages[5].Text = "Program Area";
-                    tab.TabPages[6].Text = "Program Project";
-                    tab.TabPages[7].Text = "Transfers";
-                }
+                PopulateFilterButtons(fitlerControl, GetCodes(table, prc.ToString()));
+                foreach (Control c in fitlerControl.Controls) c.Click += PrimaryFilterControlButton_OnClick;
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
             }
         }
-        internal void PopulateFundFilterButtonBox(DataTable table, Control filterPanel)
+        internal void ConfigurePrimaryFilterControlBox(DataTable table, Control filterControl, PrcField prc)
         {
             try
             {
-                PopulateFilterButtons(filterPanel, GetCodes(table, "FundName"));
-                foreach (Control c in filterPanel.Controls) c.Click += AppropriationButton_OnSelect;
+                var filter = filterControl as ListBox;
+                PopulateFilterListItems(filter, GetCodes(table, prc.ToString()));
+                filter.SelectedIndexChanged += PrimaryFilterControlListBox_OnSelect;
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
             }
         }
-        internal void PopulateFundFilterListBox(DataTable table, Control filterPanel)
+        internal void PopulateBocFilterBox(DataTable table, FlowLayoutPanel fitlerControl)
         {
             try
             {
-                var filter = filterPanel as ListBox;
-                PopulateFilterListItems(filter, GetCodes(table, "FundName"));
-                filter.SelectedIndexChanged += AppropriationListBoxItem_OnSelect;
+                PopulateFilterButtons(fitlerControl, GetCodes(table, "BocName"));
+                foreach (Control c in fitlerControl.Controls) c.Click += BocButton_OnSelect;
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
             }
         }
-        internal void PopulateBocFilterBox(DataTable table, FlowLayoutPanel filterPanel)
+        internal void PopulateFilterButtons(Control control, string[] list)
         {
             try
             {
-                PopulateFilterButtons(filterPanel, GetCodes(table, "BocName"));
-                foreach (Control c in filterPanel.Controls) c.Click += BocButton_OnSelect;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
-            }
-        }
-        internal void PopulateFilterButtons(Control panel, string[] list)
-        {
-            try
-            {
-                panel.Controls.Clear();
+                control.Controls.Clear();
                 foreach (string f in list)
                 {
                     var b = new MetroSetButton();
@@ -354,8 +317,8 @@ namespace BudgetExecution
                     b.Size = new Size(175, 30);
                     b.Margin = new Padding(3);
                     b.Padding = new Padding(1);
-                    panel.Controls.Add(b);
-                    panel.AutoSize = true;
+                    control.Controls.Add(b);
+                    control.AutoSize = true;
                     b.Tag = f;
                 }
             }
@@ -364,11 +327,11 @@ namespace BudgetExecution
                 MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
             }
         }
-        internal void PopulateFilterListItems(Control panel, string[] list)
+        internal void PopulateFilterListItems(Control control, string[] list)
         {
             try
             {
-                var box = panel as ListBox;
+                var box = control as ListBox;
                 box.Controls.Clear();
                 foreach (string f in list)
                 {
@@ -404,7 +367,7 @@ namespace BudgetExecution
                 MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
             }
         }
-        internal void ConfigureGridColumns(DataGridView dgv)
+        internal void ConfigureDataGridViewVisibleColumns(DataGridView dgv)
         {
             try
             {
@@ -424,16 +387,55 @@ namespace BudgetExecution
                 MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
             }
         }
-        internal void ReturnButton_OnClick(object sender, EventArgs e)
+        internal void ReturnNavigateButton_OnClick(object sender, EventArgs e)
         {
             try
             {
-                Table = Data.QueryTable;
-                BindingSource.DataSource = Table;
+                DataTable = Data.QueryTable;
+                BindingSource.DataSource = DataTable;
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
+            }
+        }
+        internal Dictionary<string, object> GetCurrentRowPrcParameter(DataGridView dgv)
+        {
+            try
+            {
+                if (dgv.CurrentRow != null)
+                {
+                    var dgvRow = dgv.CurrentRow;
+                    var data = new Dictionary<string, object>();
+                    data.Add("ID", int.Parse(dgvRow.Cells["ID"].Value.ToString()));
+                    data.Add("Fund", dgvRow.Cells["Fund"].Value.ToString());
+                    data.Add("Org", dgvRow.Cells["Org"].Value.ToString());
+                    data.Add("RC", dgvRow.Cells["RC"].ToString());
+                    data.Add("Code", dgvRow.Cells["Code"].ToString());
+                    data.Add("BOC", dgvRow.Cells["BOC"].ToString());
+                    return data;
+                }
+                return null;
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message + ex.StackTrace);
+                return null;
+            }
+        }
+        internal void DataGridViewAccountUpdate(DataGridView dgv, Source source)
+        {
+            var param = new Dictionary<string, object>();
+            if(dgv.Rows.Count > 0)
+                param = GetCurrentRowPrcParameter(dgv);
+            var query = new Query(source, param);
+            using (SQLiteConnection conn = query.Connection)
+            {
+                var cmd = query.GetUpdateCommand();
+                cmd.ExecuteNonQuery();
+                var adp = new SQLiteDataAdapter();
+
             }
         }
     }

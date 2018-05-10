@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="_data_navigator_8cs" kind="file">
+    <compoundname>DataNavigator.cs</compoundname>
+    <innerclass refid="class_ninja_1_1_data_1_1_forms_1_1_data_navigator" prot="public">Ninja::Data::Forms::DataNavigator</innerclass>
+    <innernamespace refid="namespace_ninja_1_1_data_1_1_forms">Ninja::Data::Forms</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1" refid="namespace_ninja_1_1_data_1_1_forms" refkind="compound"><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">Ninja.Data.Forms</highlight></codeline>
+<codeline lineno="2"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="3" refid="class_ninja_1_1_data_1_1_forms_1_1_data_navigator" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">partial<sp/>class<sp/></highlight><highlight class="normal"><ref refid="class_ninja_1_1_data_1_1_forms_1_1_data_navigator" kindref="compound">DataNavigator</ref><sp/>:<sp/>Syncfusion.Windows.Forms.<ref refid="_account_manager_8cs_1a67811e0cafc3547df172a7be173c1566" kindref="member">MetroForm</ref></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="5" refid="class_ninja_1_1_data_1_1_forms_1_1_data_navigator_1a90b042cd519adc33a1c079710249404d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_ninja_1_1_data_1_1_forms_1_1_data_navigator_1a90b042cd519adc33a1c079710249404d" kindref="member">DataNavigator</ref>()</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>InitializeComponent();</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="10"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DataNavigator.cs"/>
+  </compounddef>
+</doxygen>

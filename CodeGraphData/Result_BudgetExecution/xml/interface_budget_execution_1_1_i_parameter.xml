@@ -1,0 +1,126 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="interface_budget_execution_1_1_i_parameter" kind="interface" prot="public">
+    <compoundname>BudgetExecution::IParameter</compoundname>
+    <derivedcompoundref refid="class_budget_execution_1_1_parameter" prot="public" virt="non-virtual">BudgetExecution.Parameter</derivedcompoundref>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="interface_budget_execution_1_1_i_parameter_1ab187e40c016dc6d69e2434c87a4f164b" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>string</type>
+        <definition>string BudgetExecution.IParameter.BFY</definition>
+        <argsstring></argsstring>
+        <name>BFY</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/IParameter.cs" line="8" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/IParameter.cs" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="interface_budget_execution_1_1_i_parameter_1a0243d35a967f730e214cac192f031710" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>string</type>
+        <definition>string BudgetExecution.IParameter.BOC</definition>
+        <argsstring></argsstring>
+        <name>BOC</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/IParameter.cs" line="10" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/IParameter.cs" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="interface_budget_execution_1_1_i_parameter_1adf14c97ed057138c92ad4b2baffa0027" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>string</type>
+        <definition>string BudgetExecution.IParameter.Code</definition>
+        <argsstring></argsstring>
+        <name>Code</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/IParameter.cs" line="11" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/IParameter.cs" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="interface_budget_execution_1_1_i_parameter_1a6c2fdac498c996fced6a4c2783b94567" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>string</type>
+        <definition>string BudgetExecution.IParameter.Fund</definition>
+        <argsstring></argsstring>
+        <name>Fund</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/IParameter.cs" line="12" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/IParameter.cs" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="interface_budget_execution_1_1_i_parameter_1a040dff194860b3fa875ed3b7a9866ca0" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>string</type>
+        <definition>string BudgetExecution.IParameter.Org</definition>
+        <argsstring></argsstring>
+        <name>Org</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/IParameter.cs" line="13" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/IParameter.cs" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="interface_budget_execution_1_1_i_parameter_1ab141ef74fcb3c2b06e4428c87da56101" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>string</type>
+        <definition>string BudgetExecution.IParameter.RC</definition>
+        <argsstring></argsstring>
+        <name>RC</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/IParameter.cs" line="14" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/IParameter.cs" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="interface_budget_execution_1_1_i_parameter_1a15ace11fddf45e02f9497eef36500798" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>string</type>
+        <definition>string BudgetExecution.IParameter.RPIO</definition>
+        <argsstring></argsstring>
+        <name>RPIO</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/IParameter.cs" line="15" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/IParameter.cs" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="138">
+        <label>BudgetExecution.IParameter</label>
+        <link refid="interface_budget_execution_1_1_i_parameter"/>
+      </node>
+      <node id="139">
+        <label>BudgetExecution.Parameter</label>
+        <link refid="class_budget_execution_1_1_parameter"/>
+        <childnode refid="138" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/IParameter.cs" line="6" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/IParameter.cs" bodystart="5" bodyend="16"/>
+    <listofallmembers>
+      <member refid="interface_budget_execution_1_1_i_parameter_1ab187e40c016dc6d69e2434c87a4f164b" prot="public" virt="non-virtual"><scope>BudgetExecution::IParameter</scope><name>BFY</name></member>
+      <member refid="interface_budget_execution_1_1_i_parameter_1a0243d35a967f730e214cac192f031710" prot="public" virt="non-virtual"><scope>BudgetExecution::IParameter</scope><name>BOC</name></member>
+      <member refid="interface_budget_execution_1_1_i_parameter_1adf14c97ed057138c92ad4b2baffa0027" prot="public" virt="non-virtual"><scope>BudgetExecution::IParameter</scope><name>Code</name></member>
+      <member refid="interface_budget_execution_1_1_i_parameter_1a6c2fdac498c996fced6a4c2783b94567" prot="public" virt="non-virtual"><scope>BudgetExecution::IParameter</scope><name>Fund</name></member>
+      <member refid="interface_budget_execution_1_1_i_parameter_1a040dff194860b3fa875ed3b7a9866ca0" prot="public" virt="non-virtual"><scope>BudgetExecution::IParameter</scope><name>Org</name></member>
+      <member refid="interface_budget_execution_1_1_i_parameter_1ab141ef74fcb3c2b06e4428c87da56101" prot="public" virt="non-virtual"><scope>BudgetExecution::IParameter</scope><name>RC</name></member>
+      <member refid="interface_budget_execution_1_1_i_parameter_1a15ace11fddf45e02f9497eef36500798" prot="public" virt="non-virtual"><scope>BudgetExecution::IParameter</scope><name>RPIO</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

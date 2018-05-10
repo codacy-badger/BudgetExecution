@@ -1,0 +1,860 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_budget_execution_1_1_form_data" kind="class" prot="public">
+    <compoundname>BudgetExecution::FormData</compoundname>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_budget_execution_1_1_form_data_1a59249a9256043aedff60f83ac7cffb5d" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>BindingSource</type>
+        <definition>BindingSource BudgetExecution.FormData.BindingSource</definition>
+        <argsstring></argsstring>
+        <name>BindingSource</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FormData.cs" line="34" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FormData.cs" bodystart="34" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_form_data_1a54706d615dd948a00a76b305d51db46c" compoundref="_form_data_8cs" startline="21" endline="31">BudgetExecution.FormData.FormData</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_form_data_1a905e2a0a50ab682901c2a1b5f4662c04" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>DataSet</type>
+        <definition>DataSet BudgetExecution.FormData.BudgetData</definition>
+        <argsstring></argsstring>
+        <name>BudgetData</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FormData.cs" line="35" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FormData.cs" bodystart="35" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_form_data_1a54706d615dd948a00a76b305d51db46c" compoundref="_form_data_8cs" startline="21" endline="31">BudgetExecution.FormData.FormData</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_form_data_1a48c9c81b9a56862ca50fb42ca3e52091" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type><ref refid="class_budget_execution_1_1_prc_metric" kindref="compound">PrcMetric</ref></type>
+        <definition>PrcMetric BudgetExecution.FormData.BudgetMetric</definition>
+        <argsstring></argsstring>
+        <name>BudgetMetric</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FormData.cs" line="36" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FormData.cs" bodystart="36" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_form_data_1a54706d615dd948a00a76b305d51db46c" compoundref="_form_data_8cs" startline="21" endline="31">BudgetExecution.FormData.FormData</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_form_data_1aa8e3c10ca5ae7eb1bfa909629c0cfaea" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>ChartControl</type>
+        <definition>ChartControl BudgetExecution.FormData.Chart</definition>
+        <argsstring></argsstring>
+        <name>Chart</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FormData.cs" line="37" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FormData.cs" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_form_data_1a5a12d1025b93a3ddb6dfd41be2e536d4" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>ChartDataBindModel</type>
+        <definition>ChartDataBindModel BudgetExecution.FormData.ChartModel</definition>
+        <argsstring></argsstring>
+        <name>ChartModel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FormData.cs" line="38" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FormData.cs" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_form_data_1a6d97ccbd4f73c0ee53ce646c3b5c5f02" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>int</type>
+        <definition>int BudgetExecution.FormData.Count</definition>
+        <argsstring></argsstring>
+        <name>Count</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FormData.cs" line="39" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FormData.cs" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_form_data_1ae9fcb1ef700bbb98d72f45d0ce629049" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type><ref refid="class_budget_execution_1_1_data_builder" kindref="compound">DataBuilder</ref></type>
+        <definition>DataBuilder BudgetExecution.FormData.Data</definition>
+        <argsstring></argsstring>
+        <name>Data</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FormData.cs" line="40" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FormData.cs" bodystart="40" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_form_data_1a54706d615dd948a00a76b305d51db46c" compoundref="_form_data_8cs" startline="21" endline="31">BudgetExecution.FormData.FormData</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_form_data_1ac19aab5d72d9bcd0ae0a786f55855a17" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>DataGridView</type>
+        <definition>DataGridView BudgetExecution.FormData.DataGrid</definition>
+        <argsstring></argsstring>
+        <name>DataGrid</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FormData.cs" line="41" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FormData.cs" bodystart="41" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_form_data_1a54706d615dd948a00a76b305d51db46c" compoundref="_form_data_8cs" startline="21" endline="31">BudgetExecution.FormData.FormData</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_form_data_1a5a020bbec43174764de789c3be58d004" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>decimal[]</type>
+        <definition>decimal [] BudgetExecution.FormData.Metrics</definition>
+        <argsstring></argsstring>
+        <name>Metrics</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FormData.cs" line="42" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FormData.cs" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_form_data_1a70a8a73f2bcd24669bfe015648a1b5ed" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>BindingNavigator</type>
+        <definition>BindingNavigator BudgetExecution.FormData.Navigator</definition>
+        <argsstring></argsstring>
+        <name>Navigator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FormData.cs" line="43" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FormData.cs" bodystart="43" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_form_data_1a54706d615dd948a00a76b305d51db46c" compoundref="_form_data_8cs" startline="21" endline="31">BudgetExecution.FormData.FormData</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_form_data_1af178ea857294ec97b722df1f72bf783a" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>FlowLayoutPanel</type>
+        <definition>FlowLayoutPanel BudgetExecution.FormData.Panel</definition>
+        <argsstring></argsstring>
+        <name>Panel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FormData.cs" line="44" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FormData.cs" bodystart="44" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_form_data_1ae872bfc6816b1b69742fc1b88df5188d" compoundref="_form_data_8cs" startline="184" endline="198">BudgetExecution.FormData.AppropriationButton_OnSelect</referencedby>
+        <referencedby refid="class_budget_execution_1_1_form_data_1a363ac91b7bf07faa4cccac872b3c9e2f" compoundref="_form_data_8cs" startline="241" endline="254">BudgetExecution.FormData.BocButton_OnSelect</referencedby>
+        <referencedby refid="class_budget_execution_1_1_form_data_1a2898552ed9fa6102cfdbf2839803692d" compoundref="_form_data_8cs" startline="255" endline="268">BudgetExecution.FormData.BocListBoxItem_OnSelect</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_form_data_1a45e149ce3b0b26bb0d1f3f4b16467aec" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>DataTable</type>
+        <definition>DataTable BudgetExecution.FormData.Table</definition>
+        <argsstring></argsstring>
+        <name>Table</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FormData.cs" line="45" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FormData.cs" bodystart="45" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_form_data_1ae872bfc6816b1b69742fc1b88df5188d" compoundref="_form_data_8cs" startline="184" endline="198">BudgetExecution.FormData.AppropriationButton_OnSelect</referencedby>
+        <referencedby refid="class_budget_execution_1_1_form_data_1ae0352b7673cebe337616f3cae7ca8859" compoundref="_form_data_8cs" startline="199" endline="212">BudgetExecution.FormData.AppropriationListBoxItem_OnSelect</referencedby>
+        <referencedby refid="class_budget_execution_1_1_form_data_1a363ac91b7bf07faa4cccac872b3c9e2f" compoundref="_form_data_8cs" startline="241" endline="254">BudgetExecution.FormData.BocButton_OnSelect</referencedby>
+        <referencedby refid="class_budget_execution_1_1_form_data_1a2898552ed9fa6102cfdbf2839803692d" compoundref="_form_data_8cs" startline="255" endline="268">BudgetExecution.FormData.BocListBoxItem_OnSelect</referencedby>
+        <referencedby refid="class_budget_execution_1_1_form_data_1a54706d615dd948a00a76b305d51db46c" compoundref="_form_data_8cs" startline="21" endline="31">BudgetExecution.FormData.FormData</referencedby>
+        <referencedby refid="class_budget_execution_1_1_form_data_1aaa678d840b4e39c5440b2a080885288b" compoundref="_form_data_8cs" startline="427" endline="438">BudgetExecution.FormData.ReturnButton_OnClick</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_form_data_1a7a663d01b7eeb280ec34506983f698a2" prot="private" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>bool</type>
+        <definition>bool BudgetExecution.FormData.Percent</definition>
+        <argsstring></argsstring>
+        <name>Percent</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FormData.cs" line="46" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FormData.cs" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_budget_execution_1_1_form_data_1aceef19285e5a89a798f1d7bcdbf5e391" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>BudgetExecution.FormData.FormData</definition>
+        <argsstring>()</argsstring>
+        <name>FormData</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FormData.cs" line="17" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FormData.cs" bodystart="17" bodyend="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_form_data_1a54706d615dd948a00a76b305d51db46c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>BudgetExecution.FormData.FormData</definition>
+        <argsstring>(DataBuilder data, BindingSource bs, DataGridView dgv, BindingNavigator bn)</argsstring>
+        <name>FormData</name>
+        <param>
+          <type><ref refid="class_budget_execution_1_1_data_builder" kindref="compound">DataBuilder</ref></type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type><ref refid="class_budget_execution_1_1_form_data_1a59249a9256043aedff60f83ac7cffb5d" kindref="member">BindingSource</ref></type>
+          <declname>bs</declname>
+        </param>
+        <param>
+          <type>DataGridView</type>
+          <declname>dgv</declname>
+        </param>
+        <param>
+          <type>BindingNavigator</type>
+          <declname>bn</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FormData.cs" line="21" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FormData.cs" bodystart="21" bodyend="31"/>
+        <references refid="class_budget_execution_1_1_form_data_1a2d4a8baf9c98a2cb71aa378dec56de1b" compoundref="_form_data_8cs" startline="213" endline="226">BudgetExecution.FormData.BindDataGridAndNavigator</references>
+        <references refid="class_budget_execution_1_1_form_data_1a59249a9256043aedff60f83ac7cffb5d" compoundref="_form_data_8cs" startline="34">BudgetExecution.FormData.BindingSource</references>
+        <references refid="class_budget_execution_1_1_form_data_1a905e2a0a50ab682901c2a1b5f4662c04" compoundref="_form_data_8cs" startline="35">BudgetExecution.FormData.BudgetData</references>
+        <references refid="class_budget_execution_1_1_form_data_1a48c9c81b9a56862ca50fb42ca3e52091" compoundref="_form_data_8cs" startline="36">BudgetExecution.FormData.BudgetMetric</references>
+        <references refid="class_budget_execution_1_1_form_data_1ae9fcb1ef700bbb98d72f45d0ce629049" compoundref="_form_data_8cs" startline="40">BudgetExecution.FormData.Data</references>
+        <references refid="class_budget_execution_1_1_form_data_1ac19aab5d72d9bcd0ae0a786f55855a17" compoundref="_form_data_8cs" startline="41">BudgetExecution.FormData.DataGrid</references>
+        <references refid="class_budget_execution_1_1_form_data_1a70a8a73f2bcd24669bfe015648a1b5ed" compoundref="_form_data_8cs" startline="43">BudgetExecution.FormData.Navigator</references>
+        <references refid="class_budget_execution_1_1_form_data_1a45e149ce3b0b26bb0d1f3f4b16467aec" compoundref="_form_data_8cs" startline="45">BudgetExecution.FormData.Table</references>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_form_data_1a8eeeba86768f0628c9f27df59849afbd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>DataTable</type>
+        <definition>DataTable BudgetExecution.FormData.FilterTable</definition>
+        <argsstring>(DataTable table, string column, string filter)</argsstring>
+        <name>FilterTable</name>
+        <param>
+          <type>DataTable</type>
+          <declname>table</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>column</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>filter</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FormData.cs" line="49" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FormData.cs" bodystart="49" bodyend="60"/>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_form_data_1a3cc11818294ec7087b01bdd6d4a41021" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>decimal</type>
+        <definition>decimal BudgetExecution.FormData.GetAverage</definition>
+        <argsstring>(DataTable table)</argsstring>
+        <name>GetAverage</name>
+        <param>
+          <type>DataTable</type>
+          <declname>table</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FormData.cs" line="61" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FormData.cs" bodystart="61" bodyend="72"/>
+        <references refid="namespace_budget_execution_1a3df5d95d2846c10429f5872736ac022eab1897515d548a960afe49ecf66a29021">BudgetExecution.Average</references>
+        <references refid="namespace_budget_execution_1a4bb6ce7543ca92e05f7d224d6887fe1aa69691c7bdcc3ce6d5d8a1361f22d04ac">BudgetExecution.M</references>
+        <references refid="namespace_budget_execution_1acc77f02cde309c445b6e142d257483ddae0626222614bdee31951d84c64e5e9ff">BudgetExecution.Select</references>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_form_data_1a4d4f1c1f43c2aa3efe8068c70f0c242f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string[]</type>
+        <definition>string [] BudgetExecution.FormData.GetCodes</definition>
+        <argsstring>(DataTable table, string column)</argsstring>
+        <name>GetCodes</name>
+        <param>
+          <type>DataTable</type>
+          <declname>table</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>column</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FormData.cs" line="73" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FormData.cs" bodystart="73" bodyend="84"/>
+        <references refid="namespace_budget_execution_1acc77f02cde309c445b6e142d257483ddae0626222614bdee31951d84c64e5e9ff">BudgetExecution.Select</references>
+        <referencedby refid="class_budget_execution_1_1_form_data_1a23b90abd9878819be5d4cc14c9419cc4" compoundref="_form_data_8cs" startline="85" endline="105">BudgetExecution.FormData.GetDataTotals</referencedby>
+        <referencedby refid="class_budget_execution_1_1_form_data_1a6342aeea4e9aad78eaba6f635d3e33cd" compoundref="_form_data_8cs" startline="118" endline="139">BudgetExecution.FormData.GetProgramElements</referencedby>
+        <referencedby refid="class_budget_execution_1_1_form_data_1a43fe2473b0c27f35606d3d94121071dd" compoundref="_form_data_8cs" startline="326" endline="337">BudgetExecution.FormData.PopulateBocFilterBox</referencedby>
+        <referencedby refid="class_budget_execution_1_1_form_data_1a6569adeccf4b67fdcbe460ed2bda2ba6" compoundref="_form_data_8cs" startline="301" endline="312">BudgetExecution.FormData.PopulateFundFilterButtonBox</referencedby>
+        <referencedby refid="class_budget_execution_1_1_form_data_1ad398c896e7b4f1a9741ece478ef79c11" compoundref="_form_data_8cs" startline="313" endline="325">BudgetExecution.FormData.PopulateFundFilterListBox</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_form_data_1a23b90abd9878819be5d4cc14c9419cc4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Dictionary&lt; string, decimal &gt;</type>
+        <definition>Dictionary&lt;string, decimal&gt; BudgetExecution.FormData.GetDataTotals</definition>
+        <argsstring>(DataTable table, string column, string filter)</argsstring>
+        <name>GetDataTotals</name>
+        <param>
+          <type>DataTable</type>
+          <declname>table</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>column</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>filter</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FormData.cs" line="85" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FormData.cs" bodystart="85" bodyend="105"/>
+        <references refid="class_budget_execution_1_1_form_data_1a4d4f1c1f43c2aa3efe8068c70f0c242f" compoundref="_form_data_8cs" startline="73" endline="84">BudgetExecution.FormData.GetCodes</references>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_form_data_1aa52927ce908e37ba902973ffbb30ff43" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_budget_execution_1_1_p_r_c" kindref="compound">PRC</ref>[]</type>
+        <definition>PRC [] BudgetExecution.FormData.GetPrcArray</definition>
+        <argsstring>(DataTable table)</argsstring>
+        <name>GetPrcArray</name>
+        <param>
+          <type>DataTable</type>
+          <declname>table</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FormData.cs" line="106" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FormData.cs" bodystart="106" bodyend="117"/>
+        <references refid="namespace_budget_execution_1a31d755f9fbeb90de04b7b1e2e21acdc8ae01a919b068424df394a7f38a3a02ed2">BudgetExecution.PRC</references>
+        <references refid="namespace_budget_execution_1acc77f02cde309c445b6e142d257483ddae0626222614bdee31951d84c64e5e9ff">BudgetExecution.Select</references>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_form_data_1a6342aeea4e9aad78eaba6f635d3e33cd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Dictionary&lt; string, string[]&gt;</type>
+        <definition>Dictionary&lt;string, string[]&gt; BudgetExecution.FormData.GetProgramElements</definition>
+        <argsstring>(DataTable table)</argsstring>
+        <name>GetProgramElements</name>
+        <param>
+          <type>DataTable</type>
+          <declname>table</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FormData.cs" line="118" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FormData.cs" bodystart="118" bodyend="139"/>
+        <references refid="class_budget_execution_1_1_form_data_1a4d4f1c1f43c2aa3efe8068c70f0c242f" compoundref="_form_data_8cs" startline="73" endline="84">BudgetExecution.FormData.GetCodes</references>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_form_data_1a6afe37dccdd3167ae3cb06d60c819460" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>DataTable</type>
+        <definition>DataTable BudgetExecution.FormData.GetTable</definition>
+        <argsstring>(DataTable table, string column, string filter)</argsstring>
+        <name>GetTable</name>
+        <param>
+          <type>DataTable</type>
+          <declname>table</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>column</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>filter</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FormData.cs" line="140" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FormData.cs" bodystart="140" bodyend="151"/>
+        <referencedby refid="class_budget_execution_1_1_form_data_1ae872bfc6816b1b69742fc1b88df5188d" compoundref="_form_data_8cs" startline="184" endline="198">BudgetExecution.FormData.AppropriationButton_OnSelect</referencedby>
+        <referencedby refid="class_budget_execution_1_1_form_data_1ae0352b7673cebe337616f3cae7ca8859" compoundref="_form_data_8cs" startline="199" endline="212">BudgetExecution.FormData.AppropriationListBoxItem_OnSelect</referencedby>
+        <referencedby refid="class_budget_execution_1_1_form_data_1a363ac91b7bf07faa4cccac872b3c9e2f" compoundref="_form_data_8cs" startline="241" endline="254">BudgetExecution.FormData.BocButton_OnSelect</referencedby>
+        <referencedby refid="class_budget_execution_1_1_form_data_1a2898552ed9fa6102cfdbf2839803692d" compoundref="_form_data_8cs" startline="255" endline="268">BudgetExecution.FormData.BocListBoxItem_OnSelect</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_form_data_1a656ffbf1e19764478e12d299e3e65d21" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>decimal</type>
+        <definition>decimal BudgetExecution.FormData.GetTotal</definition>
+        <argsstring>(DataTable table)</argsstring>
+        <name>GetTotal</name>
+        <param>
+          <type>DataTable</type>
+          <declname>table</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FormData.cs" line="152" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FormData.cs" bodystart="152" bodyend="163"/>
+        <references refid="namespace_budget_execution_1a4bb6ce7543ca92e05f7d224d6887fe1aa69691c7bdcc3ce6d5d8a1361f22d04ac">BudgetExecution.M</references>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_form_data_1a113d38c821f5b8771b27571d10a48752" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Dictionary&lt; string, decimal &gt;</type>
+        <definition>Dictionary&lt;string, decimal&gt; BudgetExecution.FormData.GetTotals</definition>
+        <argsstring>(DataTable table, string[] filters, string column)</argsstring>
+        <name>GetTotals</name>
+        <param>
+          <type>DataTable</type>
+          <declname>table</declname>
+        </param>
+        <param>
+          <type>string[]</type>
+          <declname>filters</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>column</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FormData.cs" line="164" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FormData.cs" bodystart="164" bodyend="183"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="package-func">
+      <memberdef kind="function" id="class_budget_execution_1_1_form_data_1ae872bfc6816b1b69742fc1b88df5188d" prot="package" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BudgetExecution.FormData.AppropriationButton_OnSelect</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>AppropriationButton_OnSelect</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FormData.cs" line="184" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FormData.cs" bodystart="184" bodyend="198"/>
+        <references refid="class_budget_execution_1_1_form_data_1a6afe37dccdd3167ae3cb06d60c819460" compoundref="_form_data_8cs" startline="140" endline="151">BudgetExecution.FormData.GetTable</references>
+        <references refid="class_budget_execution_1_1_form_data_1af178ea857294ec97b722df1f72bf783a" compoundref="_form_data_8cs" startline="44">BudgetExecution.FormData.Panel</references>
+        <references refid="class_budget_execution_1_1_form_data_1a43fe2473b0c27f35606d3d94121071dd" compoundref="_form_data_8cs" startline="326" endline="337">BudgetExecution.FormData.PopulateBocFilterBox</references>
+        <references refid="class_budget_execution_1_1_form_data_1a45e149ce3b0b26bb0d1f3f4b16467aec" compoundref="_form_data_8cs" startline="45">BudgetExecution.FormData.Table</references>
+        <referencedby refid="class_budget_execution_1_1_form_data_1a6569adeccf4b67fdcbe460ed2bda2ba6" compoundref="_form_data_8cs" startline="301" endline="312">BudgetExecution.FormData.PopulateFundFilterButtonBox</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_form_data_1ae0352b7673cebe337616f3cae7ca8859" prot="package" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BudgetExecution.FormData.AppropriationListBoxItem_OnSelect</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>AppropriationListBoxItem_OnSelect</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FormData.cs" line="199" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FormData.cs" bodystart="199" bodyend="212"/>
+        <references refid="class_budget_execution_1_1_form_data_1a6afe37dccdd3167ae3cb06d60c819460" compoundref="_form_data_8cs" startline="140" endline="151">BudgetExecution.FormData.GetTable</references>
+        <references refid="class_budget_execution_1_1_form_data_1a45e149ce3b0b26bb0d1f3f4b16467aec" compoundref="_form_data_8cs" startline="45">BudgetExecution.FormData.Table</references>
+        <referencedby refid="class_budget_execution_1_1_form_data_1ad398c896e7b4f1a9741ece478ef79c11" compoundref="_form_data_8cs" startline="313" endline="325">BudgetExecution.FormData.PopulateFundFilterListBox</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_form_data_1a2d4a8baf9c98a2cb71aa378dec56de1b" prot="package" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BudgetExecution.FormData.BindDataGridAndNavigator</definition>
+        <argsstring>(DataTable table, DataGridView dg, BindingSource bs, BindingNavigator bn)</argsstring>
+        <name>BindDataGridAndNavigator</name>
+        <param>
+          <type>DataTable</type>
+          <declname>table</declname>
+        </param>
+        <param>
+          <type>DataGridView</type>
+          <declname>dg</declname>
+        </param>
+        <param>
+          <type><ref refid="class_budget_execution_1_1_form_data_1a59249a9256043aedff60f83ac7cffb5d" kindref="member">BindingSource</ref></type>
+          <declname>bs</declname>
+        </param>
+        <param>
+          <type>BindingNavigator</type>
+          <declname>bn</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FormData.cs" line="213" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FormData.cs" bodystart="213" bodyend="226"/>
+        <references refid="class_budget_execution_1_1_form_data_1afeffb2390de7314eb036e207adc5dd10" compoundref="_form_data_8cs" startline="407" endline="426">BudgetExecution.FormData.ConfigureGridColumns</references>
+        <referencedby refid="class_budget_execution_1_1_form_data_1a54706d615dd948a00a76b305d51db46c" compoundref="_form_data_8cs" startline="21" endline="31">BudgetExecution.FormData.FormData</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_form_data_1a2aee1876521eb5c775d5ed6183d72cbc" prot="package" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BudgetExecution.FormData.BindTextBox</definition>
+        <argsstring>(BindingSource bs, TextBox tb, string field)</argsstring>
+        <name>BindTextBox</name>
+        <param>
+          <type><ref refid="class_budget_execution_1_1_form_data_1a59249a9256043aedff60f83ac7cffb5d" kindref="member">BindingSource</ref></type>
+          <declname>bs</declname>
+        </param>
+        <param>
+          <type>TextBox</type>
+          <declname>tb</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>field</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FormData.cs" line="227" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FormData.cs" bodystart="227" bodyend="240"/>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_form_data_1a363ac91b7bf07faa4cccac872b3c9e2f" prot="package" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BudgetExecution.FormData.BocButton_OnSelect</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>BocButton_OnSelect</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FormData.cs" line="241" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FormData.cs" bodystart="241" bodyend="254"/>
+        <references refid="class_budget_execution_1_1_form_data_1a6afe37dccdd3167ae3cb06d60c819460" compoundref="_form_data_8cs" startline="140" endline="151">BudgetExecution.FormData.GetTable</references>
+        <references refid="class_budget_execution_1_1_form_data_1af178ea857294ec97b722df1f72bf783a" compoundref="_form_data_8cs" startline="44">BudgetExecution.FormData.Panel</references>
+        <references refid="class_budget_execution_1_1_form_data_1a43fe2473b0c27f35606d3d94121071dd" compoundref="_form_data_8cs" startline="326" endline="337">BudgetExecution.FormData.PopulateBocFilterBox</references>
+        <references refid="class_budget_execution_1_1_form_data_1a45e149ce3b0b26bb0d1f3f4b16467aec" compoundref="_form_data_8cs" startline="45">BudgetExecution.FormData.Table</references>
+        <referencedby refid="class_budget_execution_1_1_form_data_1a43fe2473b0c27f35606d3d94121071dd" compoundref="_form_data_8cs" startline="326" endline="337">BudgetExecution.FormData.PopulateBocFilterBox</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_form_data_1a2898552ed9fa6102cfdbf2839803692d" prot="package" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BudgetExecution.FormData.BocListBoxItem_OnSelect</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>BocListBoxItem_OnSelect</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FormData.cs" line="255" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FormData.cs" bodystart="255" bodyend="268"/>
+        <references refid="class_budget_execution_1_1_form_data_1a6afe37dccdd3167ae3cb06d60c819460" compoundref="_form_data_8cs" startline="140" endline="151">BudgetExecution.FormData.GetTable</references>
+        <references refid="class_budget_execution_1_1_form_data_1af178ea857294ec97b722df1f72bf783a" compoundref="_form_data_8cs" startline="44">BudgetExecution.FormData.Panel</references>
+        <references refid="class_budget_execution_1_1_form_data_1a43fe2473b0c27f35606d3d94121071dd" compoundref="_form_data_8cs" startline="326" endline="337">BudgetExecution.FormData.PopulateBocFilterBox</references>
+        <references refid="class_budget_execution_1_1_form_data_1a45e149ce3b0b26bb0d1f3f4b16467aec" compoundref="_form_data_8cs" startline="45">BudgetExecution.FormData.Table</references>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_form_data_1a6b08f7313f0ae2392d75992015a48c5b" prot="package" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BudgetExecution.FormData.ConfigureTabControl</definition>
+        <argsstring>(MetroForm form, TabControlAdv tab, DataBuilder Ninja)</argsstring>
+        <name>ConfigureTabControl</name>
+        <param>
+          <type><ref refid="_account_manager_8cs_1a67811e0cafc3547df172a7be173c1566" kindref="member">MetroForm</ref></type>
+          <declname>form</declname>
+        </param>
+        <param>
+          <type>TabControlAdv</type>
+          <declname>tab</declname>
+        </param>
+        <param>
+          <type><ref refid="class_budget_execution_1_1_data_builder" kindref="compound">DataBuilder</ref></type>
+          <declname>Ninja</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FormData.cs" line="269" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FormData.cs" bodystart="269" bodyend="300"/>
+        <references refid="class_budget_execution_1_1_data_builder_1ab73d105e5c7ad37e0e8cd92119b78ff8" compoundref="_data_builder_8cs" startline="50">BudgetExecution.DataBuilder.DataQuery</references>
+        <references refid="class_budget_execution_1_1_query_1a22c0f7dbd481c862fe5d871af8a6c791" compoundref="_query_8cs" startline="87">BudgetExecution.Query.Source</references>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_form_data_1a6569adeccf4b67fdcbe460ed2bda2ba6" prot="package" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BudgetExecution.FormData.PopulateFundFilterButtonBox</definition>
+        <argsstring>(DataTable table, Control filterPanel)</argsstring>
+        <name>PopulateFundFilterButtonBox</name>
+        <param>
+          <type>DataTable</type>
+          <declname>table</declname>
+        </param>
+        <param>
+          <type>Control</type>
+          <declname>filterPanel</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FormData.cs" line="301" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FormData.cs" bodystart="301" bodyend="312"/>
+        <references refid="class_budget_execution_1_1_form_data_1ae872bfc6816b1b69742fc1b88df5188d" compoundref="_form_data_8cs" startline="184" endline="198">BudgetExecution.FormData.AppropriationButton_OnSelect</references>
+        <references refid="class_budget_execution_1_1_form_data_1a4d4f1c1f43c2aa3efe8068c70f0c242f" compoundref="_form_data_8cs" startline="73" endline="84">BudgetExecution.FormData.GetCodes</references>
+        <references refid="class_budget_execution_1_1_form_data_1abb26fcf698d665f7bedc732fda50f37c" compoundref="_form_data_8cs" startline="338" endline="366">BudgetExecution.FormData.PopulateFilterButtons</references>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_form_data_1ad398c896e7b4f1a9741ece478ef79c11" prot="package" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BudgetExecution.FormData.PopulateFundFilterListBox</definition>
+        <argsstring>(DataTable table, Control filterPanel)</argsstring>
+        <name>PopulateFundFilterListBox</name>
+        <param>
+          <type>DataTable</type>
+          <declname>table</declname>
+        </param>
+        <param>
+          <type>Control</type>
+          <declname>filterPanel</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FormData.cs" line="313" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FormData.cs" bodystart="313" bodyend="325"/>
+        <references refid="class_budget_execution_1_1_form_data_1ae0352b7673cebe337616f3cae7ca8859" compoundref="_form_data_8cs" startline="199" endline="212">BudgetExecution.FormData.AppropriationListBoxItem_OnSelect</references>
+        <references refid="class_budget_execution_1_1_form_data_1a4d4f1c1f43c2aa3efe8068c70f0c242f" compoundref="_form_data_8cs" startline="73" endline="84">BudgetExecution.FormData.GetCodes</references>
+        <references refid="class_budget_execution_1_1_form_data_1ad26b22be7a914ca08b44008fd315465c" compoundref="_form_data_8cs" startline="367" endline="382">BudgetExecution.FormData.PopulateFilterListItems</references>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_form_data_1a43fe2473b0c27f35606d3d94121071dd" prot="package" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BudgetExecution.FormData.PopulateBocFilterBox</definition>
+        <argsstring>(DataTable table, FlowLayoutPanel filterPanel)</argsstring>
+        <name>PopulateBocFilterBox</name>
+        <param>
+          <type>DataTable</type>
+          <declname>table</declname>
+        </param>
+        <param>
+          <type>FlowLayoutPanel</type>
+          <declname>filterPanel</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FormData.cs" line="326" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FormData.cs" bodystart="326" bodyend="337"/>
+        <references refid="class_budget_execution_1_1_form_data_1a363ac91b7bf07faa4cccac872b3c9e2f" compoundref="_form_data_8cs" startline="241" endline="254">BudgetExecution.FormData.BocButton_OnSelect</references>
+        <references refid="class_budget_execution_1_1_form_data_1a4d4f1c1f43c2aa3efe8068c70f0c242f" compoundref="_form_data_8cs" startline="73" endline="84">BudgetExecution.FormData.GetCodes</references>
+        <references refid="class_budget_execution_1_1_form_data_1abb26fcf698d665f7bedc732fda50f37c" compoundref="_form_data_8cs" startline="338" endline="366">BudgetExecution.FormData.PopulateFilterButtons</references>
+        <referencedby refid="class_budget_execution_1_1_form_data_1ae872bfc6816b1b69742fc1b88df5188d" compoundref="_form_data_8cs" startline="184" endline="198">BudgetExecution.FormData.AppropriationButton_OnSelect</referencedby>
+        <referencedby refid="class_budget_execution_1_1_form_data_1a363ac91b7bf07faa4cccac872b3c9e2f" compoundref="_form_data_8cs" startline="241" endline="254">BudgetExecution.FormData.BocButton_OnSelect</referencedby>
+        <referencedby refid="class_budget_execution_1_1_form_data_1a2898552ed9fa6102cfdbf2839803692d" compoundref="_form_data_8cs" startline="255" endline="268">BudgetExecution.FormData.BocListBoxItem_OnSelect</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_form_data_1abb26fcf698d665f7bedc732fda50f37c" prot="package" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BudgetExecution.FormData.PopulateFilterButtons</definition>
+        <argsstring>(Control panel, string[] list)</argsstring>
+        <name>PopulateFilterButtons</name>
+        <param>
+          <type>Control</type>
+          <declname>panel</declname>
+        </param>
+        <param>
+          <type>string[]</type>
+          <declname>list</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FormData.cs" line="338" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FormData.cs" bodystart="338" bodyend="366"/>
+        <referencedby refid="class_budget_execution_1_1_form_data_1a43fe2473b0c27f35606d3d94121071dd" compoundref="_form_data_8cs" startline="326" endline="337">BudgetExecution.FormData.PopulateBocFilterBox</referencedby>
+        <referencedby refid="class_budget_execution_1_1_form_data_1a6569adeccf4b67fdcbe460ed2bda2ba6" compoundref="_form_data_8cs" startline="301" endline="312">BudgetExecution.FormData.PopulateFundFilterButtonBox</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_form_data_1ad26b22be7a914ca08b44008fd315465c" prot="package" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BudgetExecution.FormData.PopulateFilterListItems</definition>
+        <argsstring>(Control panel, string[] list)</argsstring>
+        <name>PopulateFilterListItems</name>
+        <param>
+          <type>Control</type>
+          <declname>panel</declname>
+        </param>
+        <param>
+          <type>string[]</type>
+          <declname>list</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FormData.cs" line="367" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FormData.cs" bodystart="367" bodyend="382"/>
+        <referencedby refid="class_budget_execution_1_1_form_data_1ad398c896e7b4f1a9741ece478ef79c11" compoundref="_form_data_8cs" startline="313" endline="325">BudgetExecution.FormData.PopulateFundFilterListBox</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_form_data_1aa3da52714d9e3a350d4871175ad39f5f" prot="package" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BudgetExecution.FormData.ConfigureFormSettings</definition>
+        <argsstring>(MetroForm form)</argsstring>
+        <name>ConfigureFormSettings</name>
+        <param>
+          <type><ref refid="_account_manager_8cs_1a67811e0cafc3547df172a7be173c1566" kindref="member">MetroForm</ref></type>
+          <declname>form</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FormData.cs" line="383" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FormData.cs" bodystart="383" bodyend="406"/>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_form_data_1afeffb2390de7314eb036e207adc5dd10" prot="package" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BudgetExecution.FormData.ConfigureGridColumns</definition>
+        <argsstring>(DataGridView dgv)</argsstring>
+        <name>ConfigureGridColumns</name>
+        <param>
+          <type>DataGridView</type>
+          <declname>dgv</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FormData.cs" line="407" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FormData.cs" bodystart="407" bodyend="426"/>
+        <referencedby refid="class_budget_execution_1_1_form_data_1a2d4a8baf9c98a2cb71aa378dec56de1b" compoundref="_form_data_8cs" startline="213" endline="226">BudgetExecution.FormData.BindDataGridAndNavigator</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_form_data_1aaa678d840b4e39c5440b2a080885288b" prot="package" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BudgetExecution.FormData.ReturnButton_OnClick</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>ReturnButton_OnClick</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FormData.cs" line="427" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FormData.cs" bodystart="427" bodyend="438"/>
+        <references refid="class_budget_execution_1_1_form_data_1a45e149ce3b0b26bb0d1f3f4b16467aec" compoundref="_form_data_8cs" startline="45">BudgetExecution.FormData.Table</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FormData.cs" line="15" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FormData.cs" bodystart="14" bodyend="439"/>
+    <listofallmembers>
+      <member refid="class_budget_execution_1_1_form_data_1ae872bfc6816b1b69742fc1b88df5188d" prot="package" virt="non-virtual"><scope>BudgetExecution::FormData</scope><name>AppropriationButton_OnSelect</name></member>
+      <member refid="class_budget_execution_1_1_form_data_1ae0352b7673cebe337616f3cae7ca8859" prot="package" virt="non-virtual"><scope>BudgetExecution::FormData</scope><name>AppropriationListBoxItem_OnSelect</name></member>
+      <member refid="class_budget_execution_1_1_form_data_1a2d4a8baf9c98a2cb71aa378dec56de1b" prot="package" virt="non-virtual"><scope>BudgetExecution::FormData</scope><name>BindDataGridAndNavigator</name></member>
+      <member refid="class_budget_execution_1_1_form_data_1a59249a9256043aedff60f83ac7cffb5d" prot="public" virt="non-virtual"><scope>BudgetExecution::FormData</scope><name>BindingSource</name></member>
+      <member refid="class_budget_execution_1_1_form_data_1a2aee1876521eb5c775d5ed6183d72cbc" prot="package" virt="non-virtual"><scope>BudgetExecution::FormData</scope><name>BindTextBox</name></member>
+      <member refid="class_budget_execution_1_1_form_data_1a363ac91b7bf07faa4cccac872b3c9e2f" prot="package" virt="non-virtual"><scope>BudgetExecution::FormData</scope><name>BocButton_OnSelect</name></member>
+      <member refid="class_budget_execution_1_1_form_data_1a2898552ed9fa6102cfdbf2839803692d" prot="package" virt="non-virtual"><scope>BudgetExecution::FormData</scope><name>BocListBoxItem_OnSelect</name></member>
+      <member refid="class_budget_execution_1_1_form_data_1a905e2a0a50ab682901c2a1b5f4662c04" prot="public" virt="non-virtual"><scope>BudgetExecution::FormData</scope><name>BudgetData</name></member>
+      <member refid="class_budget_execution_1_1_form_data_1a48c9c81b9a56862ca50fb42ca3e52091" prot="public" virt="non-virtual"><scope>BudgetExecution::FormData</scope><name>BudgetMetric</name></member>
+      <member refid="class_budget_execution_1_1_form_data_1aa8e3c10ca5ae7eb1bfa909629c0cfaea" prot="public" virt="non-virtual"><scope>BudgetExecution::FormData</scope><name>Chart</name></member>
+      <member refid="class_budget_execution_1_1_form_data_1a5a12d1025b93a3ddb6dfd41be2e536d4" prot="public" virt="non-virtual"><scope>BudgetExecution::FormData</scope><name>ChartModel</name></member>
+      <member refid="class_budget_execution_1_1_form_data_1aa3da52714d9e3a350d4871175ad39f5f" prot="package" virt="non-virtual"><scope>BudgetExecution::FormData</scope><name>ConfigureFormSettings</name></member>
+      <member refid="class_budget_execution_1_1_form_data_1afeffb2390de7314eb036e207adc5dd10" prot="package" virt="non-virtual"><scope>BudgetExecution::FormData</scope><name>ConfigureGridColumns</name></member>
+      <member refid="class_budget_execution_1_1_form_data_1a6b08f7313f0ae2392d75992015a48c5b" prot="package" virt="non-virtual"><scope>BudgetExecution::FormData</scope><name>ConfigureTabControl</name></member>
+      <member refid="class_budget_execution_1_1_form_data_1a6d97ccbd4f73c0ee53ce646c3b5c5f02" prot="public" virt="non-virtual"><scope>BudgetExecution::FormData</scope><name>Count</name></member>
+      <member refid="class_budget_execution_1_1_form_data_1ae9fcb1ef700bbb98d72f45d0ce629049" prot="public" virt="non-virtual"><scope>BudgetExecution::FormData</scope><name>Data</name></member>
+      <member refid="class_budget_execution_1_1_form_data_1ac19aab5d72d9bcd0ae0a786f55855a17" prot="public" virt="non-virtual"><scope>BudgetExecution::FormData</scope><name>DataGrid</name></member>
+      <member refid="class_budget_execution_1_1_form_data_1a8eeeba86768f0628c9f27df59849afbd" prot="public" virt="non-virtual"><scope>BudgetExecution::FormData</scope><name>FilterTable</name></member>
+      <member refid="class_budget_execution_1_1_form_data_1aceef19285e5a89a798f1d7bcdbf5e391" prot="public" virt="non-virtual"><scope>BudgetExecution::FormData</scope><name>FormData</name></member>
+      <member refid="class_budget_execution_1_1_form_data_1a54706d615dd948a00a76b305d51db46c" prot="public" virt="non-virtual"><scope>BudgetExecution::FormData</scope><name>FormData</name></member>
+      <member refid="class_budget_execution_1_1_form_data_1a3cc11818294ec7087b01bdd6d4a41021" prot="public" virt="non-virtual"><scope>BudgetExecution::FormData</scope><name>GetAverage</name></member>
+      <member refid="class_budget_execution_1_1_form_data_1a4d4f1c1f43c2aa3efe8068c70f0c242f" prot="public" virt="non-virtual"><scope>BudgetExecution::FormData</scope><name>GetCodes</name></member>
+      <member refid="class_budget_execution_1_1_form_data_1a23b90abd9878819be5d4cc14c9419cc4" prot="public" virt="non-virtual"><scope>BudgetExecution::FormData</scope><name>GetDataTotals</name></member>
+      <member refid="class_budget_execution_1_1_form_data_1aa52927ce908e37ba902973ffbb30ff43" prot="public" virt="non-virtual"><scope>BudgetExecution::FormData</scope><name>GetPrcArray</name></member>
+      <member refid="class_budget_execution_1_1_form_data_1a6342aeea4e9aad78eaba6f635d3e33cd" prot="public" virt="non-virtual"><scope>BudgetExecution::FormData</scope><name>GetProgramElements</name></member>
+      <member refid="class_budget_execution_1_1_form_data_1a6afe37dccdd3167ae3cb06d60c819460" prot="public" virt="non-virtual"><scope>BudgetExecution::FormData</scope><name>GetTable</name></member>
+      <member refid="class_budget_execution_1_1_form_data_1a656ffbf1e19764478e12d299e3e65d21" prot="public" virt="non-virtual"><scope>BudgetExecution::FormData</scope><name>GetTotal</name></member>
+      <member refid="class_budget_execution_1_1_form_data_1a113d38c821f5b8771b27571d10a48752" prot="public" virt="non-virtual"><scope>BudgetExecution::FormData</scope><name>GetTotals</name></member>
+      <member refid="class_budget_execution_1_1_form_data_1a5a020bbec43174764de789c3be58d004" prot="public" virt="non-virtual"><scope>BudgetExecution::FormData</scope><name>Metrics</name></member>
+      <member refid="class_budget_execution_1_1_form_data_1a70a8a73f2bcd24669bfe015648a1b5ed" prot="public" virt="non-virtual"><scope>BudgetExecution::FormData</scope><name>Navigator</name></member>
+      <member refid="class_budget_execution_1_1_form_data_1af178ea857294ec97b722df1f72bf783a" prot="public" virt="non-virtual"><scope>BudgetExecution::FormData</scope><name>Panel</name></member>
+      <member refid="class_budget_execution_1_1_form_data_1a7a663d01b7eeb280ec34506983f698a2" prot="private" virt="non-virtual"><scope>BudgetExecution::FormData</scope><name>Percent</name></member>
+      <member refid="class_budget_execution_1_1_form_data_1a43fe2473b0c27f35606d3d94121071dd" prot="package" virt="non-virtual"><scope>BudgetExecution::FormData</scope><name>PopulateBocFilterBox</name></member>
+      <member refid="class_budget_execution_1_1_form_data_1abb26fcf698d665f7bedc732fda50f37c" prot="package" virt="non-virtual"><scope>BudgetExecution::FormData</scope><name>PopulateFilterButtons</name></member>
+      <member refid="class_budget_execution_1_1_form_data_1ad26b22be7a914ca08b44008fd315465c" prot="package" virt="non-virtual"><scope>BudgetExecution::FormData</scope><name>PopulateFilterListItems</name></member>
+      <member refid="class_budget_execution_1_1_form_data_1a6569adeccf4b67fdcbe460ed2bda2ba6" prot="package" virt="non-virtual"><scope>BudgetExecution::FormData</scope><name>PopulateFundFilterButtonBox</name></member>
+      <member refid="class_budget_execution_1_1_form_data_1ad398c896e7b4f1a9741ece478ef79c11" prot="package" virt="non-virtual"><scope>BudgetExecution::FormData</scope><name>PopulateFundFilterListBox</name></member>
+      <member refid="class_budget_execution_1_1_form_data_1aaa678d840b4e39c5440b2a080885288b" prot="package" virt="non-virtual"><scope>BudgetExecution::FormData</scope><name>ReturnButton_OnClick</name></member>
+      <member refid="class_budget_execution_1_1_form_data_1a45e149ce3b0b26bb0d1f3f4b16467aec" prot="public" virt="non-virtual"><scope>BudgetExecution::FormData</scope><name>Table</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

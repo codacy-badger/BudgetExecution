@@ -1,0 +1,1097 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_budget_execution_1_1_prc_account_manager" kind="class" prot="public">
+    <compoundname>BudgetExecution::PrcAccountManager</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MetroForm</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_budget_execution_1_1_prc_account_manager_1a696e0668dae7f744edd7b95f67b38ca7" prot="private" static="no" mutable="no">
+        <type>System.ComponentModel.IContainer</type>
+        <definition>System.ComponentModel.IContainer BudgetExecution.PrcAccountManager.components</definition>
+        <argsstring></argsstring>
+        <name>components</name>
+        <initializer>= null</initializer>
+        <briefdescription>
+<para>Required designer variable. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/PrcAccountManager.Designer.cs" line="8" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/PrcAccountManager.Designer.cs" bodystart="8" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_prc_account_manager_1a2ef47baeab12a94dbe5294c99bc6d95c" compoundref="_prc_account_manager_8_designer_8cs" startline="14" endline="21">BudgetExecution.PrcAccountManager.Dispose</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_prc_account_manager_1a043fea2e66d3082338ba96887e7e550e" prot="private" static="no" mutable="no">
+        <type>Syncfusion.Windows.Forms.Tools.TabControlAdv</type>
+        <definition>Syncfusion.Windows.Forms.Tools.TabControlAdv BudgetExecution.PrcAccountManager.tabControlAdv1</definition>
+        <argsstring></argsstring>
+        <name>tabControlAdv1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/PrcAccountManager.Designer.cs" line="1343" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/PrcAccountManager.Designer.cs" bodystart="1343" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_prc_account_manager_1a2a9e0476b7418166f963155bb9e1d7a2" compoundref="_prc_account_manager_8_designer_8cs" startline="29" endline="1340">BudgetExecution.PrcAccountManager.InitializeComponent</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_prc_account_manager_1a5762388002409f3bfc0a6b954a5c176f" prot="private" static="no" mutable="no">
+        <type>Syncfusion.Windows.Forms.Tools.TabPageAdv</type>
+        <definition>Syncfusion.Windows.Forms.Tools.TabPageAdv BudgetExecution.PrcAccountManager.tabPageAdv1</definition>
+        <argsstring></argsstring>
+        <name>tabPageAdv1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/PrcAccountManager.Designer.cs" line="1344" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/PrcAccountManager.Designer.cs" bodystart="1344" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_prc_account_manager_1a97bc187f55058e2378747b4907cf7914" prot="private" static="no" mutable="no">
+        <type>Syncfusion.Windows.Forms.Tools.TabPageAdv</type>
+        <definition>Syncfusion.Windows.Forms.Tools.TabPageAdv BudgetExecution.PrcAccountManager.tabPageAdv2</definition>
+        <argsstring></argsstring>
+        <name>tabPageAdv2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/PrcAccountManager.Designer.cs" line="1345" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/PrcAccountManager.Designer.cs" bodystart="1345" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_prc_account_manager_1a096b88d884da2512627a1de98ed54dc5" prot="private" static="no" mutable="no">
+        <type>Syncfusion.Windows.Forms.Tools.TabPageAdv</type>
+        <definition>Syncfusion.Windows.Forms.Tools.TabPageAdv BudgetExecution.PrcAccountManager.tabPageAdv3</definition>
+        <argsstring></argsstring>
+        <name>tabPageAdv3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/PrcAccountManager.Designer.cs" line="1346" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/PrcAccountManager.Designer.cs" bodystart="1346" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_prc_account_manager_1a6fcf4a0563f1090dc6e1bbae2a481aa7" prot="private" static="no" mutable="no">
+        <type>MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel</type>
+        <definition>MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel BudgetExecution.PrcAccountManager.expandCollapsePanel1</definition>
+        <argsstring></argsstring>
+        <name>expandCollapsePanel1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/PrcAccountManager.Designer.cs" line="1347" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/PrcAccountManager.Designer.cs" bodystart="1347" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_prc_account_manager_1a431e8ccb24036a94f49550dd8a775eb3" prot="private" static="no" mutable="no">
+        <type>MetroSet_UI.Controls.MetroSetComboBox</type>
+        <definition>MetroSet_UI.Controls.MetroSetComboBox BudgetExecution.PrcAccountManager.metroSetComboBox4</definition>
+        <argsstring></argsstring>
+        <name>metroSetComboBox4</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/PrcAccountManager.Designer.cs" line="1348" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/PrcAccountManager.Designer.cs" bodystart="1348" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_prc_account_manager_1a6bbab9acdf555d19cb12159c2cde84be" prot="private" static="no" mutable="no">
+        <type>MetroSet_UI.Controls.MetroSetComboBox</type>
+        <definition>MetroSet_UI.Controls.MetroSetComboBox BudgetExecution.PrcAccountManager.metroSetComboBox3</definition>
+        <argsstring></argsstring>
+        <name>metroSetComboBox3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/PrcAccountManager.Designer.cs" line="1349" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/PrcAccountManager.Designer.cs" bodystart="1349" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_prc_account_manager_1a35294e971a62419d3433e0202fd0f8fc" prot="private" static="no" mutable="no">
+        <type>MetroSet_UI.Controls.MetroSetComboBox</type>
+        <definition>MetroSet_UI.Controls.MetroSetComboBox BudgetExecution.PrcAccountManager.metroSetComboBox2</definition>
+        <argsstring></argsstring>
+        <name>metroSetComboBox2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/PrcAccountManager.Designer.cs" line="1350" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/PrcAccountManager.Designer.cs" bodystart="1350" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_prc_account_manager_1aa10e3486a98bcba24642d9e7fb259744" prot="private" static="no" mutable="no">
+        <type>MetroSet_UI.Controls.MetroSetComboBox</type>
+        <definition>MetroSet_UI.Controls.MetroSetComboBox BudgetExecution.PrcAccountManager.metroSetComboBox1</definition>
+        <argsstring></argsstring>
+        <name>metroSetComboBox1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/PrcAccountManager.Designer.cs" line="1351" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/PrcAccountManager.Designer.cs" bodystart="1351" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_prc_account_manager_1a643a021775dfefe6d2d612eb9066a32a" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.GroupBox</type>
+        <definition>System.Windows.Forms.GroupBox BudgetExecution.PrcAccountManager.groupBox1</definition>
+        <argsstring></argsstring>
+        <name>groupBox1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/PrcAccountManager.Designer.cs" line="1352" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/PrcAccountManager.Designer.cs" bodystart="1352" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_prc_account_manager_1a51cbf1a048ab965115d602c0ba28f2da" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label BudgetExecution.PrcAccountManager.label10</definition>
+        <argsstring></argsstring>
+        <name>label10</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/PrcAccountManager.Designer.cs" line="1353" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/PrcAccountManager.Designer.cs" bodystart="1353" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_prc_account_manager_1a710d5f978c225b36c36ca1e9d3a064d1" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label BudgetExecution.PrcAccountManager.label9</definition>
+        <argsstring></argsstring>
+        <name>label9</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/PrcAccountManager.Designer.cs" line="1354" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/PrcAccountManager.Designer.cs" bodystart="1354" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_prc_account_manager_1aa30f606c2dc4fca6e4365cad5160e68f" prot="private" static="no" mutable="no">
+        <type>MetroSet_UI.Controls.MetroSetTextBox</type>
+        <definition>MetroSet_UI.Controls.MetroSetTextBox BudgetExecution.PrcAccountManager.metroSetTextBox3</definition>
+        <argsstring></argsstring>
+        <name>metroSetTextBox3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/PrcAccountManager.Designer.cs" line="1355" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/PrcAccountManager.Designer.cs" bodystart="1355" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_prc_account_manager_1a2db367da6ca93cce3c8c043a0738ce38" prot="private" static="no" mutable="no">
+        <type>MetroSet_UI.Controls.MetroSetTextBox</type>
+        <definition>MetroSet_UI.Controls.MetroSetTextBox BudgetExecution.PrcAccountManager.metroSetTextBox1</definition>
+        <argsstring></argsstring>
+        <name>metroSetTextBox1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/PrcAccountManager.Designer.cs" line="1356" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/PrcAccountManager.Designer.cs" bodystart="1356" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_prc_account_manager_1a8d3dedb2443efc6492d2b2d09aa025e7" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label BudgetExecution.PrcAccountManager.label6</definition>
+        <argsstring></argsstring>
+        <name>label6</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/PrcAccountManager.Designer.cs" line="1357" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/PrcAccountManager.Designer.cs" bodystart="1357" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_prc_account_manager_1aec35eea7ded03e53bfed4db01124ceff" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label BudgetExecution.PrcAccountManager.label5</definition>
+        <argsstring></argsstring>
+        <name>label5</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/PrcAccountManager.Designer.cs" line="1358" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/PrcAccountManager.Designer.cs" bodystart="1358" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_prc_account_manager_1a994bbfdbb2b1801e5a0e5ba17a18dd36" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label BudgetExecution.PrcAccountManager.label4</definition>
+        <argsstring></argsstring>
+        <name>label4</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/PrcAccountManager.Designer.cs" line="1359" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/PrcAccountManager.Designer.cs" bodystart="1359" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_prc_account_manager_1a772209da12b5f9d4739ead5f6d89c7de" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label BudgetExecution.PrcAccountManager.label3</definition>
+        <argsstring></argsstring>
+        <name>label3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/PrcAccountManager.Designer.cs" line="1360" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/PrcAccountManager.Designer.cs" bodystart="1360" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_prc_account_manager_1a7425bb3322bf33d1fd14c394bbb1b0d7" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label BudgetExecution.PrcAccountManager.label2</definition>
+        <argsstring></argsstring>
+        <name>label2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/PrcAccountManager.Designer.cs" line="1361" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/PrcAccountManager.Designer.cs" bodystart="1361" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_prc_account_manager_1a69ae69eda5e3b36ee7fea2870145ddee" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label BudgetExecution.PrcAccountManager.label1</definition>
+        <argsstring></argsstring>
+        <name>label1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/PrcAccountManager.Designer.cs" line="1362" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/PrcAccountManager.Designer.cs" bodystart="1362" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_prc_account_manager_1ac42eca78cd37e798b3f015f16715ec78" prot="private" static="no" mutable="no">
+        <type>MetroSet_UI.Controls.MetroSetTextBox</type>
+        <definition>MetroSet_UI.Controls.MetroSetTextBox BudgetExecution.PrcAccountManager.BFY</definition>
+        <argsstring></argsstring>
+        <name>BFY</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/PrcAccountManager.Designer.cs" line="1363" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/PrcAccountManager.Designer.cs" bodystart="1363" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_prc_account_manager_1af0903924c6e9d344668cfacba3ac593e" prot="private" static="no" mutable="no">
+        <type>MetroSet_UI.Controls.MetroSetTextBox</type>
+        <definition>MetroSet_UI.Controls.MetroSetTextBox BudgetExecution.PrcAccountManager.metroSetTextBox5</definition>
+        <argsstring></argsstring>
+        <name>metroSetTextBox5</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/PrcAccountManager.Designer.cs" line="1364" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/PrcAccountManager.Designer.cs" bodystart="1364" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_prc_account_manager_1a54d56054b4c16292805537f48e8718a9" prot="private" static="no" mutable="no">
+        <type>MetroSet_UI.Controls.MetroSetTextBox</type>
+        <definition>MetroSet_UI.Controls.MetroSetTextBox BudgetExecution.PrcAccountManager.RC</definition>
+        <argsstring></argsstring>
+        <name>RC</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/PrcAccountManager.Designer.cs" line="1365" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/PrcAccountManager.Designer.cs" bodystart="1365" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_prc_account_manager_1ac47712842225efbc36979c17827a2580" prot="private" static="no" mutable="no">
+        <type>MetroSet_UI.Controls.MetroSetTextBox</type>
+        <definition>MetroSet_UI.Controls.MetroSetTextBox BudgetExecution.PrcAccountManager.metroSetTextBox2</definition>
+        <argsstring></argsstring>
+        <name>metroSetTextBox2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/PrcAccountManager.Designer.cs" line="1366" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/PrcAccountManager.Designer.cs" bodystart="1366" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_prc_account_manager_1a16c6f7f5217b2a45cf4f58d280604856" prot="private" static="no" mutable="no">
+        <type>MetroSet_UI.Controls.MetroSetTextBox</type>
+        <definition>MetroSet_UI.Controls.MetroSetTextBox BudgetExecution.PrcAccountManager.metroSetTextBox4</definition>
+        <argsstring></argsstring>
+        <name>metroSetTextBox4</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/PrcAccountManager.Designer.cs" line="1367" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/PrcAccountManager.Designer.cs" bodystart="1367" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_prc_account_manager_1ae5fa93f925df912a30bc0a9e469ee94d" prot="private" static="no" mutable="no">
+        <type>MetroSet_UI.Controls.MetroSetTextBox</type>
+        <definition>MetroSet_UI.Controls.MetroSetTextBox BudgetExecution.PrcAccountManager.Fund</definition>
+        <argsstring></argsstring>
+        <name>Fund</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/PrcAccountManager.Designer.cs" line="1368" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/PrcAccountManager.Designer.cs" bodystart="1368" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_prc_account_manager_1ad56450fb4c3b0d96be18459702baeec3" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.GroupBox</type>
+        <definition>System.Windows.Forms.GroupBox BudgetExecution.PrcAccountManager.groupBox2</definition>
+        <argsstring></argsstring>
+        <name>groupBox2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/PrcAccountManager.Designer.cs" line="1369" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/PrcAccountManager.Designer.cs" bodystart="1369" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_prc_account_manager_1ae3a628b1d716c191a64e0c79b8e292b9" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label BudgetExecution.PrcAccountManager.label8</definition>
+        <argsstring></argsstring>
+        <name>label8</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/PrcAccountManager.Designer.cs" line="1370" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/PrcAccountManager.Designer.cs" bodystart="1370" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_prc_account_manager_1a7fa266b135d6844a3a7f67a0db2ad29f" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label BudgetExecution.PrcAccountManager.label7</definition>
+        <argsstring></argsstring>
+        <name>label7</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/PrcAccountManager.Designer.cs" line="1371" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/PrcAccountManager.Designer.cs" bodystart="1371" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_prc_account_manager_1a776b1e6628d183d708cf8c9b2efe7167" prot="private" static="no" mutable="no">
+        <type>MetroSet_UI.Controls.MetroSetTextBox</type>
+        <definition>MetroSet_UI.Controls.MetroSetTextBox BudgetExecution.PrcAccountManager.Amount</definition>
+        <argsstring></argsstring>
+        <name>Amount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/PrcAccountManager.Designer.cs" line="1372" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/PrcAccountManager.Designer.cs" bodystart="1372" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_prc_account_manager_1a87c5bb73b34ab82a6fac9846ebf45dbb" prot="private" static="no" mutable="no">
+        <type>MetroSet_UI.Controls.MetroSetTextBox</type>
+        <definition>MetroSet_UI.Controls.MetroSetTextBox BudgetExecution.PrcAccountManager.Amount2</definition>
+        <argsstring></argsstring>
+        <name>Amount2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/PrcAccountManager.Designer.cs" line="1373" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/PrcAccountManager.Designer.cs" bodystart="1373" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_prc_account_manager_1a6de01672dafe206e15211e3f1f9fe351" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.GroupBox</type>
+        <definition>System.Windows.Forms.GroupBox BudgetExecution.PrcAccountManager.groupBox4</definition>
+        <argsstring></argsstring>
+        <name>groupBox4</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/PrcAccountManager.Designer.cs" line="1374" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/PrcAccountManager.Designer.cs" bodystart="1374" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_prc_account_manager_1a7b2732cfa5044b7d4ac7f2bede933111" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label BudgetExecution.PrcAccountManager.label11</definition>
+        <argsstring></argsstring>
+        <name>label11</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/PrcAccountManager.Designer.cs" line="1375" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/PrcAccountManager.Designer.cs" bodystart="1375" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_prc_account_manager_1a6e4ac6264fb062e298c4054bbabc83f0" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label BudgetExecution.PrcAccountManager.label12</definition>
+        <argsstring></argsstring>
+        <name>label12</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/PrcAccountManager.Designer.cs" line="1376" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/PrcAccountManager.Designer.cs" bodystart="1376" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_prc_account_manager_1af364fcd58043de14d8d219f5aa71f407" prot="private" static="no" mutable="no">
+        <type>MetroSet_UI.Controls.MetroSetTextBox</type>
+        <definition>MetroSet_UI.Controls.MetroSetTextBox BudgetExecution.PrcAccountManager.metroSetTextBox6</definition>
+        <argsstring></argsstring>
+        <name>metroSetTextBox6</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/PrcAccountManager.Designer.cs" line="1377" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/PrcAccountManager.Designer.cs" bodystart="1377" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_prc_account_manager_1a5acc0477d781724f5ea08b0dc5fbe252" prot="private" static="no" mutable="no">
+        <type>MetroSet_UI.Controls.MetroSetTextBox</type>
+        <definition>MetroSet_UI.Controls.MetroSetTextBox BudgetExecution.PrcAccountManager.metroSetTextBox7</definition>
+        <argsstring></argsstring>
+        <name>metroSetTextBox7</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/PrcAccountManager.Designer.cs" line="1378" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/PrcAccountManager.Designer.cs" bodystart="1378" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_prc_account_manager_1a1c185e71b1f36d7371f9bb96293516cf" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label BudgetExecution.PrcAccountManager.label13</definition>
+        <argsstring></argsstring>
+        <name>label13</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/PrcAccountManager.Designer.cs" line="1379" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/PrcAccountManager.Designer.cs" bodystart="1379" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_prc_account_manager_1a37e6c5c3a527a6ce00d0f63fe27fb03b" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label BudgetExecution.PrcAccountManager.label14</definition>
+        <argsstring></argsstring>
+        <name>label14</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/PrcAccountManager.Designer.cs" line="1380" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/PrcAccountManager.Designer.cs" bodystart="1380" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_prc_account_manager_1a3f2f8fa2b36439d0016a40ac86c2f34f" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label BudgetExecution.PrcAccountManager.label15</definition>
+        <argsstring></argsstring>
+        <name>label15</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/PrcAccountManager.Designer.cs" line="1381" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/PrcAccountManager.Designer.cs" bodystart="1381" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_prc_account_manager_1a339ada2fe2bec647880603f6711d56a0" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label BudgetExecution.PrcAccountManager.label16</definition>
+        <argsstring></argsstring>
+        <name>label16</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/PrcAccountManager.Designer.cs" line="1382" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/PrcAccountManager.Designer.cs" bodystart="1382" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_prc_account_manager_1a057dbaeaf3fa837f917311cdc1fa4c68" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label BudgetExecution.PrcAccountManager.label17</definition>
+        <argsstring></argsstring>
+        <name>label17</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/PrcAccountManager.Designer.cs" line="1383" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/PrcAccountManager.Designer.cs" bodystart="1383" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_prc_account_manager_1aa1dbc95001439f0ed521a435688bc88c" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label BudgetExecution.PrcAccountManager.label18</definition>
+        <argsstring></argsstring>
+        <name>label18</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/PrcAccountManager.Designer.cs" line="1384" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/PrcAccountManager.Designer.cs" bodystart="1384" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_prc_account_manager_1a0b69312124cb60fe014ff0270246c27d" prot="private" static="no" mutable="no">
+        <type>MetroSet_UI.Controls.MetroSetTextBox</type>
+        <definition>MetroSet_UI.Controls.MetroSetTextBox BudgetExecution.PrcAccountManager.metroSetTextBox8</definition>
+        <argsstring></argsstring>
+        <name>metroSetTextBox8</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/PrcAccountManager.Designer.cs" line="1385" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/PrcAccountManager.Designer.cs" bodystart="1385" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_prc_account_manager_1a653251258dfa2c3278e959b277baf69e" prot="private" static="no" mutable="no">
+        <type>MetroSet_UI.Controls.MetroSetTextBox</type>
+        <definition>MetroSet_UI.Controls.MetroSetTextBox BudgetExecution.PrcAccountManager.metroSetTextBox9</definition>
+        <argsstring></argsstring>
+        <name>metroSetTextBox9</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/PrcAccountManager.Designer.cs" line="1386" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/PrcAccountManager.Designer.cs" bodystart="1386" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_prc_account_manager_1a8ad8e60fe8278e89a6ede8064c43c648" prot="private" static="no" mutable="no">
+        <type>MetroSet_UI.Controls.MetroSetTextBox</type>
+        <definition>MetroSet_UI.Controls.MetroSetTextBox BudgetExecution.PrcAccountManager.metroSetTextBox10</definition>
+        <argsstring></argsstring>
+        <name>metroSetTextBox10</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/PrcAccountManager.Designer.cs" line="1387" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/PrcAccountManager.Designer.cs" bodystart="1387" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_prc_account_manager_1ab523c8ef2ea4f4eb901547dac5066f48" prot="private" static="no" mutable="no">
+        <type>MetroSet_UI.Controls.MetroSetTextBox</type>
+        <definition>MetroSet_UI.Controls.MetroSetTextBox BudgetExecution.PrcAccountManager.metroSetTextBox11</definition>
+        <argsstring></argsstring>
+        <name>metroSetTextBox11</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/PrcAccountManager.Designer.cs" line="1388" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/PrcAccountManager.Designer.cs" bodystart="1388" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_prc_account_manager_1a0b8d58f8f22dcdeefd142cefde89e0c9" prot="private" static="no" mutable="no">
+        <type>MetroSet_UI.Controls.MetroSetTextBox</type>
+        <definition>MetroSet_UI.Controls.MetroSetTextBox BudgetExecution.PrcAccountManager.metroSetTextBox12</definition>
+        <argsstring></argsstring>
+        <name>metroSetTextBox12</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/PrcAccountManager.Designer.cs" line="1389" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/PrcAccountManager.Designer.cs" bodystart="1389" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_prc_account_manager_1af16fdb7d837f26afce2ca897bc5ed5b4" prot="private" static="no" mutable="no">
+        <type>MetroSet_UI.Controls.MetroSetTextBox</type>
+        <definition>MetroSet_UI.Controls.MetroSetTextBox BudgetExecution.PrcAccountManager.metroSetTextBox13</definition>
+        <argsstring></argsstring>
+        <name>metroSetTextBox13</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/PrcAccountManager.Designer.cs" line="1390" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/PrcAccountManager.Designer.cs" bodystart="1390" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_prc_account_manager_1ae3457b901f9300551a01b753a9d3c594" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.GroupBox</type>
+        <definition>System.Windows.Forms.GroupBox BudgetExecution.PrcAccountManager.groupBox3</definition>
+        <argsstring></argsstring>
+        <name>groupBox3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/PrcAccountManager.Designer.cs" line="1391" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/PrcAccountManager.Designer.cs" bodystart="1391" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_prc_account_manager_1a8400ab4221c6f458aeeea081691315fd" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.BindingNavigator</type>
+        <definition>System.Windows.Forms.BindingNavigator BudgetExecution.PrcAccountManager.Navigator</definition>
+        <argsstring></argsstring>
+        <name>Navigator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/PrcAccountManager.Designer.cs" line="1392" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/PrcAccountManager.Designer.cs" bodystart="1392" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_prc_account_manager_1a2a9e0476b7418166f963155bb9e1d7a2" compoundref="_prc_account_manager_8_designer_8cs" startline="29" endline="1340">BudgetExecution.PrcAccountManager.InitializeComponent</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_prc_account_manager_1aa52bfbe3c4465905fcd9f0e5c0b8ce04" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripLabel</type>
+        <definition>System.Windows.Forms.ToolStripLabel BudgetExecution.PrcAccountManager.bindingNavigatorCountItem</definition>
+        <argsstring></argsstring>
+        <name>bindingNavigatorCountItem</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/PrcAccountManager.Designer.cs" line="1393" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/PrcAccountManager.Designer.cs" bodystart="1393" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_prc_account_manager_1ad69df9d4a06efb861aaf1f2ff4594546" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripButton</type>
+        <definition>System.Windows.Forms.ToolStripButton BudgetExecution.PrcAccountManager.bindingNavigatorMovePreviousItem</definition>
+        <argsstring></argsstring>
+        <name>bindingNavigatorMovePreviousItem</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/PrcAccountManager.Designer.cs" line="1394" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/PrcAccountManager.Designer.cs" bodystart="1394" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_prc_account_manager_1a2f0781a231158317e8a96f84bf3a6798" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripSeparator</type>
+        <definition>System.Windows.Forms.ToolStripSeparator BudgetExecution.PrcAccountManager.bindingNavigatorSeparator</definition>
+        <argsstring></argsstring>
+        <name>bindingNavigatorSeparator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/PrcAccountManager.Designer.cs" line="1395" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/PrcAccountManager.Designer.cs" bodystart="1395" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_prc_account_manager_1a05a0f252742396f0198df8ea462e0561" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripTextBox</type>
+        <definition>System.Windows.Forms.ToolStripTextBox BudgetExecution.PrcAccountManager.bindingNavigatorPositionItem</definition>
+        <argsstring></argsstring>
+        <name>bindingNavigatorPositionItem</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/PrcAccountManager.Designer.cs" line="1396" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/PrcAccountManager.Designer.cs" bodystart="1396" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_prc_account_manager_1a6d6a7076564a7f00ece7b5921d472cfc" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripSeparator</type>
+        <definition>System.Windows.Forms.ToolStripSeparator BudgetExecution.PrcAccountManager.bindingNavigatorSeparator1</definition>
+        <argsstring></argsstring>
+        <name>bindingNavigatorSeparator1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/PrcAccountManager.Designer.cs" line="1397" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/PrcAccountManager.Designer.cs" bodystart="1397" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_prc_account_manager_1af118b227e23a5371479e9e4ff8e0a061" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripButton</type>
+        <definition>System.Windows.Forms.ToolStripButton BudgetExecution.PrcAccountManager.bindingNavigatorMoveNextItem</definition>
+        <argsstring></argsstring>
+        <name>bindingNavigatorMoveNextItem</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/PrcAccountManager.Designer.cs" line="1398" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/PrcAccountManager.Designer.cs" bodystart="1398" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_prc_account_manager_1a53f32d6fb9b061213ba3ee01d118a094" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripSeparator</type>
+        <definition>System.Windows.Forms.ToolStripSeparator BudgetExecution.PrcAccountManager.bindingNavigatorSeparator2</definition>
+        <argsstring></argsstring>
+        <name>bindingNavigatorSeparator2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/PrcAccountManager.Designer.cs" line="1399" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/PrcAccountManager.Designer.cs" bodystart="1399" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_prc_account_manager_1a629f1ce6b3436ce76d70f0207d16b582" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripComboBox</type>
+        <definition>System.Windows.Forms.ToolStripComboBox BudgetExecution.PrcAccountManager.toolStripComboBox1</definition>
+        <argsstring></argsstring>
+        <name>toolStripComboBox1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/PrcAccountManager.Designer.cs" line="1400" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/PrcAccountManager.Designer.cs" bodystart="1400" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_prc_account_manager_1ac0cfba4dfdaee3940ac98cc211afd873" prot="private" static="no" mutable="no">
+        <type>MetroSet_UI.Controls.MetroSetButton</type>
+        <definition>MetroSet_UI.Controls.MetroSetButton BudgetExecution.PrcAccountManager.metroSetButton2</definition>
+        <argsstring></argsstring>
+        <name>metroSetButton2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/PrcAccountManager.Designer.cs" line="1401" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/PrcAccountManager.Designer.cs" bodystart="1401" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_prc_account_manager_1a8a5e1a2a1e8b97d142e588b15a2c9259" prot="private" static="no" mutable="no">
+        <type>MetroSet_UI.Controls.MetroSetButton</type>
+        <definition>MetroSet_UI.Controls.MetroSetButton BudgetExecution.PrcAccountManager.metroSetButton5</definition>
+        <argsstring></argsstring>
+        <name>metroSetButton5</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/PrcAccountManager.Designer.cs" line="1402" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/PrcAccountManager.Designer.cs" bodystart="1402" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_prc_account_manager_1a402062fc922e17b93e64902e875593a4" prot="private" static="no" mutable="no">
+        <type>MetroSet_UI.Controls.MetroSetButton</type>
+        <definition>MetroSet_UI.Controls.MetroSetButton BudgetExecution.PrcAccountManager.metroSetButton6</definition>
+        <argsstring></argsstring>
+        <name>metroSetButton6</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/PrcAccountManager.Designer.cs" line="1403" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/PrcAccountManager.Designer.cs" bodystart="1403" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_prc_account_manager_1aeb3a8cda0a8a23b2cc31e5c8d83abd63" prot="private" static="no" mutable="no">
+        <type>MetroSet_UI.Controls.MetroSetButton</type>
+        <definition>MetroSet_UI.Controls.MetroSetButton BudgetExecution.PrcAccountManager.metroSetButton1</definition>
+        <argsstring></argsstring>
+        <name>metroSetButton1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/PrcAccountManager.Designer.cs" line="1404" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/PrcAccountManager.Designer.cs" bodystart="1404" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_prc_account_manager_1a716be5a330c2d5f220059d896e863e0c" prot="private" static="no" mutable="no">
+        <type>MetroSet_UI.Controls.MetroSetButton</type>
+        <definition>MetroSet_UI.Controls.MetroSetButton BudgetExecution.PrcAccountManager.metroSetButton7</definition>
+        <argsstring></argsstring>
+        <name>metroSetButton7</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/PrcAccountManager.Designer.cs" line="1405" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/PrcAccountManager.Designer.cs" bodystart="1405" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_prc_account_manager_1a550f68d64b6de3f771f1b6d5ed3c2070" prot="private" static="no" mutable="no">
+        <type>MetroSet_UI.Controls.MetroSetButton</type>
+        <definition>MetroSet_UI.Controls.MetroSetButton BudgetExecution.PrcAccountManager.metroSetButton3</definition>
+        <argsstring></argsstring>
+        <name>metroSetButton3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/PrcAccountManager.Designer.cs" line="1406" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/PrcAccountManager.Designer.cs" bodystart="1406" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_prc_account_manager_1a123a492b9498ceeab29e8bceb4fe28b6" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.BindingSource</type>
+        <definition>System.Windows.Forms.BindingSource BudgetExecution.PrcAccountManager.BindingSource</definition>
+        <argsstring></argsstring>
+        <name>BindingSource</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/PrcAccountManager.Designer.cs" line="1407" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/PrcAccountManager.Designer.cs" bodystart="1407" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_prc_account_manager_1a2a9e0476b7418166f963155bb9e1d7a2" compoundref="_prc_account_manager_8_designer_8cs" startline="29" endline="1340">BudgetExecution.PrcAccountManager.InitializeComponent</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_budget_execution_1_1_prc_account_manager_1a587e10b59f8179f171cfcd5de145e7e4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>BudgetExecution.PrcAccountManager.PrcAccountManager</definition>
+        <argsstring>()</argsstring>
+        <name>PrcAccountManager</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/PrcAccountManager.cs" line="18" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/PrcAccountManager.cs" bodystart="18" bodyend="21"/>
+        <references refid="class_budget_execution_1_1_prc_account_manager_1a2a9e0476b7418166f963155bb9e1d7a2" compoundref="_prc_account_manager_8_designer_8cs" startline="29" endline="1340">BudgetExecution.PrcAccountManager.InitializeComponent</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_budget_execution_1_1_prc_account_manager_1a5d148f33acd16b8df4bf567597ea79ae" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BudgetExecution.PrcAccountManager.tabControlAdv1_SelectedIndexChanged</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>tabControlAdv1_SelectedIndexChanged</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/PrcAccountManager.cs" line="23" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/PrcAccountManager.cs" bodystart="23" bodyend="26"/>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_prc_account_manager_1a2a9e0476b7418166f963155bb9e1d7a2" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BudgetExecution.PrcAccountManager.InitializeComponent</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeComponent</name>
+        <briefdescription>
+<para>Required method for Designer support - do not modify the contents of this method with the code editor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/PrcAccountManager.Designer.cs" line="29" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/PrcAccountManager.Designer.cs" bodystart="29" bodyend="1340"/>
+        <references refid="class_budget_execution_1_1_prc_account_manager_1a123a492b9498ceeab29e8bceb4fe28b6" compoundref="_prc_account_manager_8_designer_8cs" startline="1407">BudgetExecution.PrcAccountManager.BindingSource</references>
+        <references refid="namespace_budget_execution_1afa69cdcc242b50644155cb4adf244d32a800618943025315f869e4e1f09471012">BudgetExecution.F</references>
+        <references refid="class_budget_execution_1_1_prc_account_manager_1a8400ab4221c6f458aeeea081691315fd" compoundref="_prc_account_manager_8_designer_8cs" startline="1392">BudgetExecution.PrcAccountManager.Navigator</references>
+        <references refid="class_budget_execution_1_1_prc_account_manager_1a043fea2e66d3082338ba96887e7e550e" compoundref="_prc_account_manager_8_designer_8cs" startline="1343">BudgetExecution.PrcAccountManager.tabControlAdv1</references>
+        <referencedby refid="class_budget_execution_1_1_prc_account_manager_1a587e10b59f8179f171cfcd5de145e7e4" compoundref="_prc_account_manager_8cs" startline="18" endline="21">BudgetExecution.PrcAccountManager.PrcAccountManager</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_budget_execution_1_1_prc_account_manager_1a2ef47baeab12a94dbe5294c99bc6d95c" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void BudgetExecution.PrcAccountManager.Dispose</definition>
+        <argsstring>(bool disposing)</argsstring>
+        <name>Dispose</name>
+        <param>
+          <type>bool</type>
+          <declname>disposing</declname>
+        </param>
+        <briefdescription>
+<para>Clean up any resources being used. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>disposing</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true if managed resources should be disposed; otherwise, false.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/PrcAccountManager.Designer.cs" line="14" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/PrcAccountManager.Designer.cs" bodystart="14" bodyend="21"/>
+        <references refid="class_budget_execution_1_1_prc_account_manager_1a696e0668dae7f744edd7b95f67b38ca7" compoundref="_prc_account_manager_8_designer_8cs" startline="8">BudgetExecution.PrcAccountManager.components</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="204">
+        <label>Syncfusion::Windows::Forms::MetroForm</label>
+      </node>
+      <node id="203">
+        <label>BudgetExecution.PrcAccountManager</label>
+        <link refid="class_budget_execution_1_1_prc_account_manager"/>
+        <childnode refid="204" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="208">
+        <label>Controls</label>
+      </node>
+      <node id="206">
+        <label>Syncfusion::Windows::Forms::MetroForm</label>
+      </node>
+      <node id="209">
+        <label>System</label>
+      </node>
+      <node id="205">
+        <label>BudgetExecution.PrcAccountManager</label>
+        <link refid="class_budget_execution_1_1_prc_account_manager"/>
+        <childnode refid="206" relation="public-inheritance">
+        </childnode>
+        <childnode refid="207" relation="usage">
+          <edgelabel>tabPageAdv3</edgelabel>
+          <edgelabel>tabControlAdv1</edgelabel>
+          <edgelabel>tabPageAdv1</edgelabel>
+          <edgelabel>tabPageAdv2</edgelabel>
+        </childnode>
+        <childnode refid="208" relation="usage">
+          <edgelabel>BFY</edgelabel>
+          <edgelabel>metroSetComboBox2</edgelabel>
+          <edgelabel>metroSetButton5</edgelabel>
+          <edgelabel>metroSetComboBox3</edgelabel>
+          <edgelabel>metroSetButton6</edgelabel>
+          <edgelabel>metroSetTextBox10</edgelabel>
+          <edgelabel>Amount2</edgelabel>
+          <edgelabel>RC</edgelabel>
+          <edgelabel>metroSetComboBox4</edgelabel>
+          <edgelabel>metroSetButton7</edgelabel>
+          <edgelabel>...</edgelabel>
+        </childnode>
+        <childnode refid="209" relation="usage">
+          <edgelabel>bindingNavigatorCountItem</edgelabel>
+          <edgelabel>Navigator</edgelabel>
+          <edgelabel>bindingNavigatorPositionItem</edgelabel>
+          <edgelabel>label1</edgelabel>
+          <edgelabel>label2</edgelabel>
+          <edgelabel>label3</edgelabel>
+          <edgelabel>label4</edgelabel>
+          <edgelabel>label10</edgelabel>
+          <edgelabel>label11</edgelabel>
+          <edgelabel>label5</edgelabel>
+          <edgelabel>...</edgelabel>
+        </childnode>
+      </node>
+      <node id="207">
+        <label>Forms</label>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/PrcAccountManager.cs" line="17" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/PrcAccountManager.cs" bodystart="16" bodyend="27"/>
+    <listofallmembers>
+      <member refid="class_budget_execution_1_1_prc_account_manager_1a776b1e6628d183d708cf8c9b2efe7167" prot="private" virt="non-virtual"><scope>BudgetExecution::PrcAccountManager</scope><name>Amount</name></member>
+      <member refid="class_budget_execution_1_1_prc_account_manager_1a87c5bb73b34ab82a6fac9846ebf45dbb" prot="private" virt="non-virtual"><scope>BudgetExecution::PrcAccountManager</scope><name>Amount2</name></member>
+      <member refid="class_budget_execution_1_1_prc_account_manager_1ac42eca78cd37e798b3f015f16715ec78" prot="private" virt="non-virtual"><scope>BudgetExecution::PrcAccountManager</scope><name>BFY</name></member>
+      <member refid="class_budget_execution_1_1_prc_account_manager_1aa52bfbe3c4465905fcd9f0e5c0b8ce04" prot="private" virt="non-virtual"><scope>BudgetExecution::PrcAccountManager</scope><name>bindingNavigatorCountItem</name></member>
+      <member refid="class_budget_execution_1_1_prc_account_manager_1af118b227e23a5371479e9e4ff8e0a061" prot="private" virt="non-virtual"><scope>BudgetExecution::PrcAccountManager</scope><name>bindingNavigatorMoveNextItem</name></member>
+      <member refid="class_budget_execution_1_1_prc_account_manager_1ad69df9d4a06efb861aaf1f2ff4594546" prot="private" virt="non-virtual"><scope>BudgetExecution::PrcAccountManager</scope><name>bindingNavigatorMovePreviousItem</name></member>
+      <member refid="class_budget_execution_1_1_prc_account_manager_1a05a0f252742396f0198df8ea462e0561" prot="private" virt="non-virtual"><scope>BudgetExecution::PrcAccountManager</scope><name>bindingNavigatorPositionItem</name></member>
+      <member refid="class_budget_execution_1_1_prc_account_manager_1a2f0781a231158317e8a96f84bf3a6798" prot="private" virt="non-virtual"><scope>BudgetExecution::PrcAccountManager</scope><name>bindingNavigatorSeparator</name></member>
+      <member refid="class_budget_execution_1_1_prc_account_manager_1a6d6a7076564a7f00ece7b5921d472cfc" prot="private" virt="non-virtual"><scope>BudgetExecution::PrcAccountManager</scope><name>bindingNavigatorSeparator1</name></member>
+      <member refid="class_budget_execution_1_1_prc_account_manager_1a53f32d6fb9b061213ba3ee01d118a094" prot="private" virt="non-virtual"><scope>BudgetExecution::PrcAccountManager</scope><name>bindingNavigatorSeparator2</name></member>
+      <member refid="class_budget_execution_1_1_prc_account_manager_1a123a492b9498ceeab29e8bceb4fe28b6" prot="private" virt="non-virtual"><scope>BudgetExecution::PrcAccountManager</scope><name>BindingSource</name></member>
+      <member refid="class_budget_execution_1_1_prc_account_manager_1a696e0668dae7f744edd7b95f67b38ca7" prot="private" virt="non-virtual"><scope>BudgetExecution::PrcAccountManager</scope><name>components</name></member>
+      <member refid="class_budget_execution_1_1_prc_account_manager_1a2ef47baeab12a94dbe5294c99bc6d95c" prot="protected" virt="non-virtual"><scope>BudgetExecution::PrcAccountManager</scope><name>Dispose</name></member>
+      <member refid="class_budget_execution_1_1_prc_account_manager_1a6fcf4a0563f1090dc6e1bbae2a481aa7" prot="private" virt="non-virtual"><scope>BudgetExecution::PrcAccountManager</scope><name>expandCollapsePanel1</name></member>
+      <member refid="class_budget_execution_1_1_prc_account_manager_1ae5fa93f925df912a30bc0a9e469ee94d" prot="private" virt="non-virtual"><scope>BudgetExecution::PrcAccountManager</scope><name>Fund</name></member>
+      <member refid="class_budget_execution_1_1_prc_account_manager_1a643a021775dfefe6d2d612eb9066a32a" prot="private" virt="non-virtual"><scope>BudgetExecution::PrcAccountManager</scope><name>groupBox1</name></member>
+      <member refid="class_budget_execution_1_1_prc_account_manager_1ad56450fb4c3b0d96be18459702baeec3" prot="private" virt="non-virtual"><scope>BudgetExecution::PrcAccountManager</scope><name>groupBox2</name></member>
+      <member refid="class_budget_execution_1_1_prc_account_manager_1ae3457b901f9300551a01b753a9d3c594" prot="private" virt="non-virtual"><scope>BudgetExecution::PrcAccountManager</scope><name>groupBox3</name></member>
+      <member refid="class_budget_execution_1_1_prc_account_manager_1a6de01672dafe206e15211e3f1f9fe351" prot="private" virt="non-virtual"><scope>BudgetExecution::PrcAccountManager</scope><name>groupBox4</name></member>
+      <member refid="class_budget_execution_1_1_prc_account_manager_1a2a9e0476b7418166f963155bb9e1d7a2" prot="private" virt="non-virtual"><scope>BudgetExecution::PrcAccountManager</scope><name>InitializeComponent</name></member>
+      <member refid="class_budget_execution_1_1_prc_account_manager_1a69ae69eda5e3b36ee7fea2870145ddee" prot="private" virt="non-virtual"><scope>BudgetExecution::PrcAccountManager</scope><name>label1</name></member>
+      <member refid="class_budget_execution_1_1_prc_account_manager_1a51cbf1a048ab965115d602c0ba28f2da" prot="private" virt="non-virtual"><scope>BudgetExecution::PrcAccountManager</scope><name>label10</name></member>
+      <member refid="class_budget_execution_1_1_prc_account_manager_1a7b2732cfa5044b7d4ac7f2bede933111" prot="private" virt="non-virtual"><scope>BudgetExecution::PrcAccountManager</scope><name>label11</name></member>
+      <member refid="class_budget_execution_1_1_prc_account_manager_1a6e4ac6264fb062e298c4054bbabc83f0" prot="private" virt="non-virtual"><scope>BudgetExecution::PrcAccountManager</scope><name>label12</name></member>
+      <member refid="class_budget_execution_1_1_prc_account_manager_1a1c185e71b1f36d7371f9bb96293516cf" prot="private" virt="non-virtual"><scope>BudgetExecution::PrcAccountManager</scope><name>label13</name></member>
+      <member refid="class_budget_execution_1_1_prc_account_manager_1a37e6c5c3a527a6ce00d0f63fe27fb03b" prot="private" virt="non-virtual"><scope>BudgetExecution::PrcAccountManager</scope><name>label14</name></member>
+      <member refid="class_budget_execution_1_1_prc_account_manager_1a3f2f8fa2b36439d0016a40ac86c2f34f" prot="private" virt="non-virtual"><scope>BudgetExecution::PrcAccountManager</scope><name>label15</name></member>
+      <member refid="class_budget_execution_1_1_prc_account_manager_1a339ada2fe2bec647880603f6711d56a0" prot="private" virt="non-virtual"><scope>BudgetExecution::PrcAccountManager</scope><name>label16</name></member>
+      <member refid="class_budget_execution_1_1_prc_account_manager_1a057dbaeaf3fa837f917311cdc1fa4c68" prot="private" virt="non-virtual"><scope>BudgetExecution::PrcAccountManager</scope><name>label17</name></member>
+      <member refid="class_budget_execution_1_1_prc_account_manager_1aa1dbc95001439f0ed521a435688bc88c" prot="private" virt="non-virtual"><scope>BudgetExecution::PrcAccountManager</scope><name>label18</name></member>
+      <member refid="class_budget_execution_1_1_prc_account_manager_1a7425bb3322bf33d1fd14c394bbb1b0d7" prot="private" virt="non-virtual"><scope>BudgetExecution::PrcAccountManager</scope><name>label2</name></member>
+      <member refid="class_budget_execution_1_1_prc_account_manager_1a772209da12b5f9d4739ead5f6d89c7de" prot="private" virt="non-virtual"><scope>BudgetExecution::PrcAccountManager</scope><name>label3</name></member>
+      <member refid="class_budget_execution_1_1_prc_account_manager_1a994bbfdbb2b1801e5a0e5ba17a18dd36" prot="private" virt="non-virtual"><scope>BudgetExecution::PrcAccountManager</scope><name>label4</name></member>
+      <member refid="class_budget_execution_1_1_prc_account_manager_1aec35eea7ded03e53bfed4db01124ceff" prot="private" virt="non-virtual"><scope>BudgetExecution::PrcAccountManager</scope><name>label5</name></member>
+      <member refid="class_budget_execution_1_1_prc_account_manager_1a8d3dedb2443efc6492d2b2d09aa025e7" prot="private" virt="non-virtual"><scope>BudgetExecution::PrcAccountManager</scope><name>label6</name></member>
+      <member refid="class_budget_execution_1_1_prc_account_manager_1a7fa266b135d6844a3a7f67a0db2ad29f" prot="private" virt="non-virtual"><scope>BudgetExecution::PrcAccountManager</scope><name>label7</name></member>
+      <member refid="class_budget_execution_1_1_prc_account_manager_1ae3a628b1d716c191a64e0c79b8e292b9" prot="private" virt="non-virtual"><scope>BudgetExecution::PrcAccountManager</scope><name>label8</name></member>
+      <member refid="class_budget_execution_1_1_prc_account_manager_1a710d5f978c225b36c36ca1e9d3a064d1" prot="private" virt="non-virtual"><scope>BudgetExecution::PrcAccountManager</scope><name>label9</name></member>
+      <member refid="class_budget_execution_1_1_prc_account_manager_1aeb3a8cda0a8a23b2cc31e5c8d83abd63" prot="private" virt="non-virtual"><scope>BudgetExecution::PrcAccountManager</scope><name>metroSetButton1</name></member>
+      <member refid="class_budget_execution_1_1_prc_account_manager_1ac0cfba4dfdaee3940ac98cc211afd873" prot="private" virt="non-virtual"><scope>BudgetExecution::PrcAccountManager</scope><name>metroSetButton2</name></member>
+      <member refid="class_budget_execution_1_1_prc_account_manager_1a550f68d64b6de3f771f1b6d5ed3c2070" prot="private" virt="non-virtual"><scope>BudgetExecution::PrcAccountManager</scope><name>metroSetButton3</name></member>
+      <member refid="class_budget_execution_1_1_prc_account_manager_1a8a5e1a2a1e8b97d142e588b15a2c9259" prot="private" virt="non-virtual"><scope>BudgetExecution::PrcAccountManager</scope><name>metroSetButton5</name></member>
+      <member refid="class_budget_execution_1_1_prc_account_manager_1a402062fc922e17b93e64902e875593a4" prot="private" virt="non-virtual"><scope>BudgetExecution::PrcAccountManager</scope><name>metroSetButton6</name></member>
+      <member refid="class_budget_execution_1_1_prc_account_manager_1a716be5a330c2d5f220059d896e863e0c" prot="private" virt="non-virtual"><scope>BudgetExecution::PrcAccountManager</scope><name>metroSetButton7</name></member>
+      <member refid="class_budget_execution_1_1_prc_account_manager_1aa10e3486a98bcba24642d9e7fb259744" prot="private" virt="non-virtual"><scope>BudgetExecution::PrcAccountManager</scope><name>metroSetComboBox1</name></member>
+      <member refid="class_budget_execution_1_1_prc_account_manager_1a35294e971a62419d3433e0202fd0f8fc" prot="private" virt="non-virtual"><scope>BudgetExecution::PrcAccountManager</scope><name>metroSetComboBox2</name></member>
+      <member refid="class_budget_execution_1_1_prc_account_manager_1a6bbab9acdf555d19cb12159c2cde84be" prot="private" virt="non-virtual"><scope>BudgetExecution::PrcAccountManager</scope><name>metroSetComboBox3</name></member>
+      <member refid="class_budget_execution_1_1_prc_account_manager_1a431e8ccb24036a94f49550dd8a775eb3" prot="private" virt="non-virtual"><scope>BudgetExecution::PrcAccountManager</scope><name>metroSetComboBox4</name></member>
+      <member refid="class_budget_execution_1_1_prc_account_manager_1a2db367da6ca93cce3c8c043a0738ce38" prot="private" virt="non-virtual"><scope>BudgetExecution::PrcAccountManager</scope><name>metroSetTextBox1</name></member>
+      <member refid="class_budget_execution_1_1_prc_account_manager_1a8ad8e60fe8278e89a6ede8064c43c648" prot="private" virt="non-virtual"><scope>BudgetExecution::PrcAccountManager</scope><name>metroSetTextBox10</name></member>
+      <member refid="class_budget_execution_1_1_prc_account_manager_1ab523c8ef2ea4f4eb901547dac5066f48" prot="private" virt="non-virtual"><scope>BudgetExecution::PrcAccountManager</scope><name>metroSetTextBox11</name></member>
+      <member refid="class_budget_execution_1_1_prc_account_manager_1a0b8d58f8f22dcdeefd142cefde89e0c9" prot="private" virt="non-virtual"><scope>BudgetExecution::PrcAccountManager</scope><name>metroSetTextBox12</name></member>
+      <member refid="class_budget_execution_1_1_prc_account_manager_1af16fdb7d837f26afce2ca897bc5ed5b4" prot="private" virt="non-virtual"><scope>BudgetExecution::PrcAccountManager</scope><name>metroSetTextBox13</name></member>
+      <member refid="class_budget_execution_1_1_prc_account_manager_1ac47712842225efbc36979c17827a2580" prot="private" virt="non-virtual"><scope>BudgetExecution::PrcAccountManager</scope><name>metroSetTextBox2</name></member>
+      <member refid="class_budget_execution_1_1_prc_account_manager_1aa30f606c2dc4fca6e4365cad5160e68f" prot="private" virt="non-virtual"><scope>BudgetExecution::PrcAccountManager</scope><name>metroSetTextBox3</name></member>
+      <member refid="class_budget_execution_1_1_prc_account_manager_1a16c6f7f5217b2a45cf4f58d280604856" prot="private" virt="non-virtual"><scope>BudgetExecution::PrcAccountManager</scope><name>metroSetTextBox4</name></member>
+      <member refid="class_budget_execution_1_1_prc_account_manager_1af0903924c6e9d344668cfacba3ac593e" prot="private" virt="non-virtual"><scope>BudgetExecution::PrcAccountManager</scope><name>metroSetTextBox5</name></member>
+      <member refid="class_budget_execution_1_1_prc_account_manager_1af364fcd58043de14d8d219f5aa71f407" prot="private" virt="non-virtual"><scope>BudgetExecution::PrcAccountManager</scope><name>metroSetTextBox6</name></member>
+      <member refid="class_budget_execution_1_1_prc_account_manager_1a5acc0477d781724f5ea08b0dc5fbe252" prot="private" virt="non-virtual"><scope>BudgetExecution::PrcAccountManager</scope><name>metroSetTextBox7</name></member>
+      <member refid="class_budget_execution_1_1_prc_account_manager_1a0b69312124cb60fe014ff0270246c27d" prot="private" virt="non-virtual"><scope>BudgetExecution::PrcAccountManager</scope><name>metroSetTextBox8</name></member>
+      <member refid="class_budget_execution_1_1_prc_account_manager_1a653251258dfa2c3278e959b277baf69e" prot="private" virt="non-virtual"><scope>BudgetExecution::PrcAccountManager</scope><name>metroSetTextBox9</name></member>
+      <member refid="class_budget_execution_1_1_prc_account_manager_1a8400ab4221c6f458aeeea081691315fd" prot="private" virt="non-virtual"><scope>BudgetExecution::PrcAccountManager</scope><name>Navigator</name></member>
+      <member refid="class_budget_execution_1_1_prc_account_manager_1a587e10b59f8179f171cfcd5de145e7e4" prot="public" virt="non-virtual"><scope>BudgetExecution::PrcAccountManager</scope><name>PrcAccountManager</name></member>
+      <member refid="class_budget_execution_1_1_prc_account_manager_1a54d56054b4c16292805537f48e8718a9" prot="private" virt="non-virtual"><scope>BudgetExecution::PrcAccountManager</scope><name>RC</name></member>
+      <member refid="class_budget_execution_1_1_prc_account_manager_1a043fea2e66d3082338ba96887e7e550e" prot="private" virt="non-virtual"><scope>BudgetExecution::PrcAccountManager</scope><name>tabControlAdv1</name></member>
+      <member refid="class_budget_execution_1_1_prc_account_manager_1a5d148f33acd16b8df4bf567597ea79ae" prot="private" virt="non-virtual"><scope>BudgetExecution::PrcAccountManager</scope><name>tabControlAdv1_SelectedIndexChanged</name></member>
+      <member refid="class_budget_execution_1_1_prc_account_manager_1a5762388002409f3bfc0a6b954a5c176f" prot="private" virt="non-virtual"><scope>BudgetExecution::PrcAccountManager</scope><name>tabPageAdv1</name></member>
+      <member refid="class_budget_execution_1_1_prc_account_manager_1a97bc187f55058e2378747b4907cf7914" prot="private" virt="non-virtual"><scope>BudgetExecution::PrcAccountManager</scope><name>tabPageAdv2</name></member>
+      <member refid="class_budget_execution_1_1_prc_account_manager_1a096b88d884da2512627a1de98ed54dc5" prot="private" virt="non-virtual"><scope>BudgetExecution::PrcAccountManager</scope><name>tabPageAdv3</name></member>
+      <member refid="class_budget_execution_1_1_prc_account_manager_1a629f1ce6b3436ce76d70f0207d16b582" prot="private" virt="non-virtual"><scope>BudgetExecution::PrcAccountManager</scope><name>toolStripComboBox1</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

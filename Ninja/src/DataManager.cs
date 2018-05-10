@@ -144,7 +144,7 @@ namespace BudgetExecution
                     try
                     {
                         ReturnButton.Visible = false;
-                        ReturnButton.Click += Ninja.ReturnButton_OnClick;
+                        ReturnButton.Click += Ninja.ReturnNavigateButton_OnClick;
                         BindingSource.CurrentItemChanged += UpdateDataChart;
                     }
                     catch (Exception ex)

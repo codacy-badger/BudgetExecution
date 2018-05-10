@@ -1,0 +1,1149 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_budget_execution_1_1_data_master" kind="class" prot="public">
+    <compoundname>BudgetExecution::DataMaster</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MetroForm</basecompoundref>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_budget_execution_1_1_data_master_1a5f2a3b9c8656e25142d7533ebfc9e032" prot="private" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>SQLiteDataAdapter</type>
+        <definition>SQLiteDataAdapter BudgetExecution.DataMaster.Adapter</definition>
+        <argsstring></argsstring>
+        <name>Adapter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DataMaster.cs" line="31" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DataMaster.cs" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_data_master_1a5f5d8e7d677f15580f6c9236af7e0843" prot="private" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type><ref refid="class_budget_execution_1_1_data_builder" kindref="compound">DataBuilder</ref></type>
+        <definition>DataBuilder BudgetExecution.DataMaster.Data</definition>
+        <argsstring></argsstring>
+        <name>Data</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DataMaster.cs" line="32" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DataMaster.cs" bodystart="32" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_data_master_1ade9e9b6caa6d12b2be5d4971d9898ed5" compoundref="_data_master_8cs" startline="16" endline="28">BudgetExecution.DataMaster.DataMaster</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_data_master_1abad85e30b5bb35e9b52d8332ee7c5c40" prot="private" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type><ref refid="class_budget_execution_1_1_prc_metric" kindref="compound">PrcMetric</ref></type>
+        <definition>PrcMetric BudgetExecution.DataMaster.Metric</definition>
+        <argsstring></argsstring>
+        <name>Metric</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DataMaster.cs" line="33" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DataMaster.cs" bodystart="33" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_data_master_1ade9e9b6caa6d12b2be5d4971d9898ed5" compoundref="_data_master_8cs" startline="16" endline="28">BudgetExecution.DataMaster.DataMaster</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_data_master_1abde3ba76f8bb7b06c1151eea30378345" prot="private" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>Dictionary&lt; string, object &gt;</type>
+        <definition>Dictionary&lt;string, object&gt; BudgetExecution.DataMaster.Parameter</definition>
+        <argsstring></argsstring>
+        <name>Parameter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DataMaster.cs" line="34" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DataMaster.cs" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_data_master_1afcc4154db9d9d3075e273090be238c34" prot="private" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>Dictionary&lt; string, string[]&gt;</type>
+        <definition>Dictionary&lt;string, string[]&gt; BudgetExecution.DataMaster.ProgramElements</definition>
+        <argsstring></argsstring>
+        <name>ProgramElements</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DataMaster.cs" line="35" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DataMaster.cs" bodystart="35" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_data_master_1ade9e9b6caa6d12b2be5d4971d9898ed5" compoundref="_data_master_8cs" startline="16" endline="28">BudgetExecution.DataMaster.DataMaster</referencedby>
+        <referencedby refid="class_budget_execution_1_1_data_master_1ad56087cfdb8107fdd45ae7e50c77fb69" compoundref="_data_master_8cs" startline="51" endline="63">BudgetExecution.DataMaster.FundFilter_ItemSelected</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_data_master_1a5d57627d85bc350439df748adeb45064" prot="private" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type><ref refid="class_budget_execution_1_1_query" kindref="compound">Query</ref></type>
+        <definition>Query BudgetExecution.DataMaster.Query</definition>
+        <argsstring></argsstring>
+        <name>Query</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DataMaster.cs" line="36" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DataMaster.cs" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_data_master_1a4234c8bf3cec1da33ea1abd43f6f50f9" prot="private" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>DataTable</type>
+        <definition>DataTable BudgetExecution.DataMaster.Table</definition>
+        <argsstring></argsstring>
+        <name>Table</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DataMaster.cs" line="37" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DataMaster.cs" bodystart="37" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_data_master_1ade9e9b6caa6d12b2be5d4971d9898ed5" compoundref="_data_master_8cs" startline="16" endline="28">BudgetExecution.DataMaster.DataMaster</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_budget_execution_1_1_data_master_1a03d468631a895f6bf0f9aea08e52c3ae" prot="private" static="no" mutable="no">
+        <type>System.ComponentModel.IContainer</type>
+        <definition>System.ComponentModel.IContainer BudgetExecution.DataMaster.components</definition>
+        <argsstring></argsstring>
+        <name>components</name>
+        <initializer>= null</initializer>
+        <briefdescription>
+<para>Required designer variable. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DataMaster.Designer.cs" line="9" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DataMaster.Designer.cs" bodystart="9" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_data_master_1a20a7114a472cf44bf926ecc668f08d09" compoundref="_data_master_8_designer_8cs" startline="15" endline="22">BudgetExecution.DataMaster.Dispose</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_data_master_1aa6bcfe0711da36749bace28acc74dce0" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.GroupBox</type>
+        <definition>System.Windows.Forms.GroupBox BudgetExecution.DataMaster.groupBox1</definition>
+        <argsstring></argsstring>
+        <name>groupBox1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DataMaster.Designer.cs" line="974" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DataMaster.Designer.cs" bodystart="974" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_data_master_1a7e63b93c87116360ff456f8904a34257" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.DataGridView</type>
+        <definition>System.Windows.Forms.DataGridView BudgetExecution.DataMaster.Grid</definition>
+        <argsstring></argsstring>
+        <name>Grid</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DataMaster.Designer.cs" line="975" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DataMaster.Designer.cs" bodystart="975" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_data_master_1ade9e9b6caa6d12b2be5d4971d9898ed5" compoundref="_data_master_8cs" startline="16" endline="28">BudgetExecution.DataMaster.DataMaster</referencedby>
+        <referencedby refid="class_budget_execution_1_1_data_master_1afab336801691a20ce801c5001d931343" compoundref="_data_master_8_designer_8cs" startline="30" endline="971">BudgetExecution.DataMaster.InitializeComponent</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_data_master_1a32e59bf0f352f5271b7296919954c9f2" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.GroupBox</type>
+        <definition>System.Windows.Forms.GroupBox BudgetExecution.DataMaster.groupBox2</definition>
+        <argsstring></argsstring>
+        <name>groupBox2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DataMaster.Designer.cs" line="976" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DataMaster.Designer.cs" bodystart="976" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_data_master_1a4d0b52cf0a51bb9d9e8fba6a680c1642" prot="private" static="no" mutable="no">
+        <type>Syncfusion.Windows.Forms.Grid.GridDataBoundGrid</type>
+        <definition>Syncfusion.Windows.Forms.Grid.GridDataBoundGrid BudgetExecution.DataMaster.E6DataGrid</definition>
+        <argsstring></argsstring>
+        <name>E6DataGrid</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DataMaster.Designer.cs" line="977" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DataMaster.Designer.cs" bodystart="977" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_data_master_1afab336801691a20ce801c5001d931343" compoundref="_data_master_8_designer_8cs" startline="30" endline="971">BudgetExecution.DataMaster.InitializeComponent</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_data_master_1a537e6618189b83074d2ee025de7110bb" prot="private" static="no" mutable="no">
+        <type>MetroSet_UI.Controls.MetroSetComboBox</type>
+        <definition>MetroSet_UI.Controls.MetroSetComboBox BudgetExecution.DataMaster.FundFilter</definition>
+        <argsstring></argsstring>
+        <name>FundFilter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DataMaster.Designer.cs" line="978" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DataMaster.Designer.cs" bodystart="978" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_data_master_1acfa1d7a210a1a93546c0357ed5d42b82" prot="private" static="no" mutable="no">
+        <type>Syncfusion.Windows.Forms.Tools.toolstripitem</type>
+        <definition>Syncfusion.Windows.Forms.Tools.toolstripitem BudgetExecution.DataMaster.toolstripitem1</definition>
+        <argsstring></argsstring>
+        <name>toolstripitem1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DataMaster.Designer.cs" line="979" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DataMaster.Designer.cs" bodystart="979" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_data_master_1ac5fcd41ead85b5f552d9ad3e8ecbeec8" prot="private" static="no" mutable="no">
+        <type>MetroSet_UI.Controls.MetroSetComboBox</type>
+        <definition>MetroSet_UI.Controls.MetroSetComboBox BudgetExecution.DataMaster.BocFilter</definition>
+        <argsstring></argsstring>
+        <name>BocFilter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DataMaster.Designer.cs" line="980" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DataMaster.Designer.cs" bodystart="980" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_data_master_1a492d27e8dffc4024c9665dab45a9b9de" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.GroupBox</type>
+        <definition>System.Windows.Forms.GroupBox BudgetExecution.DataMaster.groupBox4</definition>
+        <argsstring></argsstring>
+        <name>groupBox4</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DataMaster.Designer.cs" line="981" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DataMaster.Designer.cs" bodystart="981" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_data_master_1a360cefde0b0fa63a464c54647dadcbcc" prot="private" static="no" mutable="no">
+        <type>MetroSet_UI.Controls.MetroSetComboBox</type>
+        <definition>MetroSet_UI.Controls.MetroSetComboBox BudgetExecution.DataMaster.metroSetComboBox2</definition>
+        <argsstring></argsstring>
+        <name>metroSetComboBox2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DataMaster.Designer.cs" line="982" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DataMaster.Designer.cs" bodystart="982" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_data_master_1aed7b4f646844f9bee96bd2b834eb4b36" prot="private" static="no" mutable="no">
+        <type>MetroSet_UI.Controls.MetroSetTextBox</type>
+        <definition>MetroSet_UI.Controls.MetroSetTextBox BudgetExecution.DataMaster.metroSetTextBox1</definition>
+        <argsstring></argsstring>
+        <name>metroSetTextBox1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DataMaster.Designer.cs" line="983" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DataMaster.Designer.cs" bodystart="983" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_data_master_1a8aa301a334df2b120fbe527158a86c92" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripButton</type>
+        <definition>System.Windows.Forms.ToolStripButton BudgetExecution.DataMaster.bindingNavigatorAddNewItem</definition>
+        <argsstring></argsstring>
+        <name>bindingNavigatorAddNewItem</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DataMaster.Designer.cs" line="984" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DataMaster.Designer.cs" bodystart="984" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_data_master_1a0a3a23b472bc771b463c62f318ca531f" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripLabel</type>
+        <definition>System.Windows.Forms.ToolStripLabel BudgetExecution.DataMaster.bindingNavigatorCountItem</definition>
+        <argsstring></argsstring>
+        <name>bindingNavigatorCountItem</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DataMaster.Designer.cs" line="985" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DataMaster.Designer.cs" bodystart="985" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_data_master_1afd3b327b855ff85a2ef78f7ea45e7234" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripButton</type>
+        <definition>System.Windows.Forms.ToolStripButton BudgetExecution.DataMaster.bindingNavigatorDeleteItem</definition>
+        <argsstring></argsstring>
+        <name>bindingNavigatorDeleteItem</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DataMaster.Designer.cs" line="986" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DataMaster.Designer.cs" bodystart="986" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_data_master_1afbef17860045d6b5df5677fa0644bad2" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripButton</type>
+        <definition>System.Windows.Forms.ToolStripButton BudgetExecution.DataMaster.bindingNavigatorMoveFirstItem</definition>
+        <argsstring></argsstring>
+        <name>bindingNavigatorMoveFirstItem</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DataMaster.Designer.cs" line="987" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DataMaster.Designer.cs" bodystart="987" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_data_master_1a11f41402d91c5a32a85e77df13c1b602" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripButton</type>
+        <definition>System.Windows.Forms.ToolStripButton BudgetExecution.DataMaster.bindingNavigatorMovePreviousItem</definition>
+        <argsstring></argsstring>
+        <name>bindingNavigatorMovePreviousItem</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DataMaster.Designer.cs" line="988" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DataMaster.Designer.cs" bodystart="988" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_data_master_1a94ec2183d31021269e1e05a59cf00eee" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripSeparator</type>
+        <definition>System.Windows.Forms.ToolStripSeparator BudgetExecution.DataMaster.bindingNavigatorSeparator</definition>
+        <argsstring></argsstring>
+        <name>bindingNavigatorSeparator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DataMaster.Designer.cs" line="989" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DataMaster.Designer.cs" bodystart="989" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_data_master_1a6c507e9c39127ed37b027d8db8632af0" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripTextBox</type>
+        <definition>System.Windows.Forms.ToolStripTextBox BudgetExecution.DataMaster.bindingNavigatorPositionItem</definition>
+        <argsstring></argsstring>
+        <name>bindingNavigatorPositionItem</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DataMaster.Designer.cs" line="990" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DataMaster.Designer.cs" bodystart="990" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_data_master_1a0747937176b8b0f03130e5577b49da5b" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripSeparator</type>
+        <definition>System.Windows.Forms.ToolStripSeparator BudgetExecution.DataMaster.bindingNavigatorSeparator1</definition>
+        <argsstring></argsstring>
+        <name>bindingNavigatorSeparator1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DataMaster.Designer.cs" line="991" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DataMaster.Designer.cs" bodystart="991" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_data_master_1a7db2474a7fcd0f8a692dceb58684270b" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripButton</type>
+        <definition>System.Windows.Forms.ToolStripButton BudgetExecution.DataMaster.bindingNavigatorMoveNextItem</definition>
+        <argsstring></argsstring>
+        <name>bindingNavigatorMoveNextItem</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DataMaster.Designer.cs" line="992" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DataMaster.Designer.cs" bodystart="992" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_data_master_1a20c3186c0e2eb091c077037657ce8d03" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripButton</type>
+        <definition>System.Windows.Forms.ToolStripButton BudgetExecution.DataMaster.bindingNavigatorMoveLastItem</definition>
+        <argsstring></argsstring>
+        <name>bindingNavigatorMoveLastItem</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DataMaster.Designer.cs" line="993" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DataMaster.Designer.cs" bodystart="993" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_data_master_1a9dcc26d8d424e41f14f979a5ae6ae1d6" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripSeparator</type>
+        <definition>System.Windows.Forms.ToolStripSeparator BudgetExecution.DataMaster.bindingNavigatorSeparator2</definition>
+        <argsstring></argsstring>
+        <name>bindingNavigatorSeparator2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DataMaster.Designer.cs" line="994" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DataMaster.Designer.cs" bodystart="994" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_data_master_1a67c272395c261fadd1e86b0f969a452b" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripButton</type>
+        <definition>System.Windows.Forms.ToolStripButton BudgetExecution.DataMaster.toolStripButton1</definition>
+        <argsstring></argsstring>
+        <name>toolStripButton1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DataMaster.Designer.cs" line="995" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DataMaster.Designer.cs" bodystart="995" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_data_master_1a33d50c230752d5ee43835bc54cfa4438" prot="private" static="no" mutable="no">
+        <type>MetroFramework.Controls.MetroPanel</type>
+        <definition>MetroFramework.Controls.MetroPanel BudgetExecution.DataMaster.metroPanel1</definition>
+        <argsstring></argsstring>
+        <name>metroPanel1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DataMaster.Designer.cs" line="996" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DataMaster.Designer.cs" bodystart="996" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_data_master_1aa8f7e23569a2de1bd92a0c3d48dd6b43" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripButton</type>
+        <definition>System.Windows.Forms.ToolStripButton BudgetExecution.DataMaster.toolStripButton2</definition>
+        <argsstring></argsstring>
+        <name>toolStripButton2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DataMaster.Designer.cs" line="997" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DataMaster.Designer.cs" bodystart="997" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_data_master_1a7f8bf0606bd9ad71a99ea2b0d9cda463" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.BindingNavigator</type>
+        <definition>System.Windows.Forms.BindingNavigator BudgetExecution.DataMaster.GridNavigator</definition>
+        <argsstring></argsstring>
+        <name>GridNavigator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DataMaster.Designer.cs" line="998" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DataMaster.Designer.cs" bodystart="998" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_data_master_1afab336801691a20ce801c5001d931343" compoundref="_data_master_8_designer_8cs" startline="30" endline="971">BudgetExecution.DataMaster.InitializeComponent</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_data_master_1ab2a3f1565bb3848b549fe76dfcf47764" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripButton</type>
+        <definition>System.Windows.Forms.ToolStripButton BudgetExecution.DataMaster.AddNewButton</definition>
+        <argsstring></argsstring>
+        <name>AddNewButton</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DataMaster.Designer.cs" line="999" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DataMaster.Designer.cs" bodystart="999" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_data_master_1a6a64697a809aab32b5a0962b8c0f8e1f" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripLabel</type>
+        <definition>System.Windows.Forms.ToolStripLabel BudgetExecution.DataMaster.bindingNavigatorCountItem1</definition>
+        <argsstring></argsstring>
+        <name>bindingNavigatorCountItem1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DataMaster.Designer.cs" line="1000" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DataMaster.Designer.cs" bodystart="1000" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_data_master_1a0777d6f8058831a5b9d38e0fdec26990" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripButton</type>
+        <definition>System.Windows.Forms.ToolStripButton BudgetExecution.DataMaster.DeleteButton</definition>
+        <argsstring></argsstring>
+        <name>DeleteButton</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DataMaster.Designer.cs" line="1001" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DataMaster.Designer.cs" bodystart="1001" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_data_master_1aea8a44dd9b36f9019e7fba2b2a58211c" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripButton</type>
+        <definition>System.Windows.Forms.ToolStripButton BudgetExecution.DataMaster.bindingNavigatorMoveFirstItem1</definition>
+        <argsstring></argsstring>
+        <name>bindingNavigatorMoveFirstItem1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DataMaster.Designer.cs" line="1002" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DataMaster.Designer.cs" bodystart="1002" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_data_master_1a313e35a3c271de560efc04b47004d88b" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripButton</type>
+        <definition>System.Windows.Forms.ToolStripButton BudgetExecution.DataMaster.bindingNavigatorMovePreviousItem1</definition>
+        <argsstring></argsstring>
+        <name>bindingNavigatorMovePreviousItem1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DataMaster.Designer.cs" line="1003" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DataMaster.Designer.cs" bodystart="1003" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_data_master_1a73bd32cbc56b535db1d10d622e3fb67d" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripSeparator</type>
+        <definition>System.Windows.Forms.ToolStripSeparator BudgetExecution.DataMaster.bindingNavigatorSeparator3</definition>
+        <argsstring></argsstring>
+        <name>bindingNavigatorSeparator3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DataMaster.Designer.cs" line="1004" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DataMaster.Designer.cs" bodystart="1004" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_data_master_1a0c45114f380671ec3794f43f26400150" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripTextBox</type>
+        <definition>System.Windows.Forms.ToolStripTextBox BudgetExecution.DataMaster.bindingNavigatorPositionItem1</definition>
+        <argsstring></argsstring>
+        <name>bindingNavigatorPositionItem1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DataMaster.Designer.cs" line="1005" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DataMaster.Designer.cs" bodystart="1005" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_data_master_1abb5b77c72d36a6670b2b11d3af912d71" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripSeparator</type>
+        <definition>System.Windows.Forms.ToolStripSeparator BudgetExecution.DataMaster.bindingNavigatorSeparator4</definition>
+        <argsstring></argsstring>
+        <name>bindingNavigatorSeparator4</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DataMaster.Designer.cs" line="1006" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DataMaster.Designer.cs" bodystart="1006" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_data_master_1a51b954008cb9d2bdc2a19570b72eedce" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripButton</type>
+        <definition>System.Windows.Forms.ToolStripButton BudgetExecution.DataMaster.bindingNavigatorMoveNextItem1</definition>
+        <argsstring></argsstring>
+        <name>bindingNavigatorMoveNextItem1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DataMaster.Designer.cs" line="1007" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DataMaster.Designer.cs" bodystart="1007" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_data_master_1a73aa55b30e3eac90f465c56578494e21" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripButton</type>
+        <definition>System.Windows.Forms.ToolStripButton BudgetExecution.DataMaster.bindingNavigatorMoveLastItem1</definition>
+        <argsstring></argsstring>
+        <name>bindingNavigatorMoveLastItem1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DataMaster.Designer.cs" line="1008" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DataMaster.Designer.cs" bodystart="1008" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_data_master_1a5051d7a16afcf559794dff4e517612b0" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripSeparator</type>
+        <definition>System.Windows.Forms.ToolStripSeparator BudgetExecution.DataMaster.bindingNavigatorSeparator5</definition>
+        <argsstring></argsstring>
+        <name>bindingNavigatorSeparator5</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DataMaster.Designer.cs" line="1009" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DataMaster.Designer.cs" bodystart="1009" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_data_master_1a820b42b89bbd3c181b29a87ef111206e" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripButton</type>
+        <definition>System.Windows.Forms.ToolStripButton BudgetExecution.DataMaster.CopyButton</definition>
+        <argsstring></argsstring>
+        <name>CopyButton</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DataMaster.Designer.cs" line="1010" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DataMaster.Designer.cs" bodystart="1010" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_data_master_1afe5b71729a7910da8965668eb04460a8" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripButton</type>
+        <definition>System.Windows.Forms.ToolStripButton BudgetExecution.DataMaster.SaveButton</definition>
+        <argsstring></argsstring>
+        <name>SaveButton</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DataMaster.Designer.cs" line="1011" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DataMaster.Designer.cs" bodystart="1011" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_data_master_1a2b709c03e80dffce606ff4d494fa6bf3" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.GroupBox</type>
+        <definition>System.Windows.Forms.GroupBox BudgetExecution.DataMaster.groupBox3</definition>
+        <argsstring></argsstring>
+        <name>groupBox3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DataMaster.Designer.cs" line="1012" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DataMaster.Designer.cs" bodystart="1012" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_data_master_1ae3f0cd8f847159dca0b018af449b619b" prot="private" static="no" mutable="no">
+        <type>MetroSet_UI.Controls.MetroSetComboBox</type>
+        <definition>MetroSet_UI.Controls.MetroSetComboBox BudgetExecution.DataMaster.DatabaseFilter</definition>
+        <argsstring></argsstring>
+        <name>DatabaseFilter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DataMaster.Designer.cs" line="1013" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DataMaster.Designer.cs" bodystart="1013" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_data_master_1a9ba1f1385e097288f0c42716bc178fe6" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.BindingSource</type>
+        <definition>System.Windows.Forms.BindingSource BudgetExecution.DataMaster.BindingSource</definition>
+        <argsstring></argsstring>
+        <name>BindingSource</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DataMaster.Designer.cs" line="1014" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DataMaster.Designer.cs" bodystart="1014" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_data_master_1ade9e9b6caa6d12b2be5d4971d9898ed5" compoundref="_data_master_8cs" startline="16" endline="28">BudgetExecution.DataMaster.DataMaster</referencedby>
+        <referencedby refid="class_budget_execution_1_1_data_master_1afab336801691a20ce801c5001d931343" compoundref="_data_master_8_designer_8cs" startline="30" endline="971">BudgetExecution.DataMaster.InitializeComponent</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_data_master_1a400413c907a522e65e8c6670501fbe90" prot="private" static="no" mutable="no">
+        <type>MetroSet_UI.Controls.MetroSetComboBox</type>
+        <definition>MetroSet_UI.Controls.MetroSetComboBox BudgetExecution.DataMaster.metroSetComboBox3</definition>
+        <argsstring></argsstring>
+        <name>metroSetComboBox3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DataMaster.Designer.cs" line="1015" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DataMaster.Designer.cs" bodystart="1015" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_data_master_1ac3e1c53b0703557436d2d0ec3d0f5a28" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.GroupBox</type>
+        <definition>System.Windows.Forms.GroupBox BudgetExecution.DataMaster.groupBox5</definition>
+        <argsstring></argsstring>
+        <name>groupBox5</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DataMaster.Designer.cs" line="1016" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DataMaster.Designer.cs" bodystart="1016" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_data_master_1af93f9e36bfdfea04684b905941022109" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Button</type>
+        <definition>System.Windows.Forms.Button BudgetExecution.DataMaster.button4</definition>
+        <argsstring></argsstring>
+        <name>button4</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DataMaster.Designer.cs" line="1017" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DataMaster.Designer.cs" bodystart="1017" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_data_master_1af90c80e1a09cc74e43cc167770d9025e" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Button</type>
+        <definition>System.Windows.Forms.Button BudgetExecution.DataMaster.button3</definition>
+        <argsstring></argsstring>
+        <name>button3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DataMaster.Designer.cs" line="1018" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DataMaster.Designer.cs" bodystart="1018" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_data_master_1ad39fb6d40433f4682f163f0cfd998862" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Button</type>
+        <definition>System.Windows.Forms.Button BudgetExecution.DataMaster.button2</definition>
+        <argsstring></argsstring>
+        <name>button2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DataMaster.Designer.cs" line="1019" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DataMaster.Designer.cs" bodystart="1019" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_data_master_1a82d00640fec0ec4d7e464154e0468280" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Button</type>
+        <definition>System.Windows.Forms.Button BudgetExecution.DataMaster.button1</definition>
+        <argsstring></argsstring>
+        <name>button1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DataMaster.Designer.cs" line="1020" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DataMaster.Designer.cs" bodystart="1020" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_data_master_1a0826f876e9a47a70faa70179018668fa" prot="private" static="no" mutable="no">
+        <type>MetroSet_UI.Controls.MetroSetTextBox</type>
+        <definition>MetroSet_UI.Controls.MetroSetTextBox BudgetExecution.DataMaster.metroSetTextBox3</definition>
+        <argsstring></argsstring>
+        <name>metroSetTextBox3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DataMaster.Designer.cs" line="1021" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DataMaster.Designer.cs" bodystart="1021" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_data_master_1a1c459cd9cf80928ce185a3622d5b8d98" prot="private" static="no" mutable="no">
+        <type>MetroSet_UI.Controls.MetroSetTextBox</type>
+        <definition>MetroSet_UI.Controls.MetroSetTextBox BudgetExecution.DataMaster.metroSetTextBox2</definition>
+        <argsstring></argsstring>
+        <name>metroSetTextBox2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DataMaster.Designer.cs" line="1022" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DataMaster.Designer.cs" bodystart="1022" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_data_master_1a7fe78e0c40d3ee57164d28609f85fef1" prot="private" static="no" mutable="no">
+        <type>MetroSet_UI.Controls.MetroSetComboBox</type>
+        <definition>MetroSet_UI.Controls.MetroSetComboBox BudgetExecution.DataMaster.metroSetComboBox4</definition>
+        <argsstring></argsstring>
+        <name>metroSetComboBox4</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DataMaster.Designer.cs" line="1023" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DataMaster.Designer.cs" bodystart="1023" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_data_master_1a2b88118e4ec742c87b80e16581483aa7" prot="private" static="no" mutable="no">
+        <type>MetroSet_UI.Controls.MetroSetComboBox</type>
+        <definition>MetroSet_UI.Controls.MetroSetComboBox BudgetExecution.DataMaster.metroSetComboBox1</definition>
+        <argsstring></argsstring>
+        <name>metroSetComboBox1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DataMaster.Designer.cs" line="1024" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DataMaster.Designer.cs" bodystart="1024" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_data_master_1a43695346fcb267702fb255f91739b0b2" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Button</type>
+        <definition>System.Windows.Forms.Button BudgetExecution.DataMaster.button6</definition>
+        <argsstring></argsstring>
+        <name>button6</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DataMaster.Designer.cs" line="1025" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DataMaster.Designer.cs" bodystart="1025" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_data_master_1a212dc2488d96a8df1cf7073694d2575a" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Button</type>
+        <definition>System.Windows.Forms.Button BudgetExecution.DataMaster.button5</definition>
+        <argsstring></argsstring>
+        <name>button5</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DataMaster.Designer.cs" line="1026" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DataMaster.Designer.cs" bodystart="1026" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_budget_execution_1_1_data_master_1ade9e9b6caa6d12b2be5d4971d9898ed5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>BudgetExecution.DataMaster.DataMaster</definition>
+        <argsstring>()</argsstring>
+        <name>DataMaster</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DataMaster.cs" line="16" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DataMaster.cs" bodystart="16" bodyend="28"/>
+        <references refid="class_budget_execution_1_1_data_master_1a9ba1f1385e097288f0c42716bc178fe6" compoundref="_data_master_8_designer_8cs" startline="1014">BudgetExecution.DataMaster.BindingSource</references>
+        <references refid="class_budget_execution_1_1_data_master_1a5f5d8e7d677f15580f6c9236af7e0843" compoundref="_data_master_8cs" startline="32">BudgetExecution.DataMaster.Data</references>
+        <references refid="class_budget_execution_1_1_data_master_1a1d1b43139edc588787c9327ea0fa118e" compoundref="_data_master_8cs" startline="64" endline="69">BudgetExecution.DataMaster.GetFundFilterItems</references>
+        <references refid="class_budget_execution_1_1_data_master_1a9abf7f48ff123ad2cdb30cf1f8b498da" compoundref="_data_master_8cs" startline="70" endline="83">BudgetExecution.DataMaster.GetGridColumns</references>
+        <references refid="class_budget_execution_1_1_data_master_1a7e63b93c87116360ff456f8904a34257" compoundref="_data_master_8_designer_8cs" startline="975">BudgetExecution.DataMaster.Grid</references>
+        <references refid="class_budget_execution_1_1_data_master_1afab336801691a20ce801c5001d931343" compoundref="_data_master_8_designer_8cs" startline="30" endline="971">BudgetExecution.DataMaster.InitializeComponent</references>
+        <references refid="class_budget_execution_1_1_data_master_1abad85e30b5bb35e9b52d8332ee7c5c40" compoundref="_data_master_8cs" startline="33">BudgetExecution.DataMaster.Metric</references>
+        <references refid="class_budget_execution_1_1_data_master_1afcc4154db9d9d3075e273090be238c34" compoundref="_data_master_8cs" startline="35">BudgetExecution.DataMaster.ProgramElements</references>
+        <references refid="class_budget_execution_1_1_data_master_1a4234c8bf3cec1da33ea1abd43f6f50f9" compoundref="_data_master_8cs" startline="37">BudgetExecution.DataMaster.Table</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_budget_execution_1_1_data_master_1a0259e8572d7dfa4ce8d3ac8485ff1b5c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BudgetExecution.DataMaster.BocFilter_ItemSelected</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>BocFilter_ItemSelected</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DataMaster.cs" line="40" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DataMaster.cs" bodystart="40" bodyend="45"/>
+        <referencedby refid="class_budget_execution_1_1_data_master_1ad56087cfdb8107fdd45ae7e50c77fb69" compoundref="_data_master_8cs" startline="51" endline="63">BudgetExecution.DataMaster.FundFilter_ItemSelected</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_data_master_1aa2781291decc664f72c6e1fe48a87a4b" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BudgetExecution.DataMaster.DataMaster_Load</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>DataMaster_Load</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DataMaster.cs" line="46" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DataMaster.cs" bodystart="46" bodyend="50"/>
+        <references refid="class_budget_execution_1_1_data_master_1ad56087cfdb8107fdd45ae7e50c77fb69" compoundref="_data_master_8cs" startline="51" endline="63">BudgetExecution.DataMaster.FundFilter_ItemSelected</references>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_data_master_1ad56087cfdb8107fdd45ae7e50c77fb69" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BudgetExecution.DataMaster.FundFilter_ItemSelected</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>FundFilter_ItemSelected</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DataMaster.cs" line="51" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DataMaster.cs" bodystart="51" bodyend="63"/>
+        <references refid="class_budget_execution_1_1_data_master_1a0259e8572d7dfa4ce8d3ac8485ff1b5c" compoundref="_data_master_8cs" startline="40" endline="45">BudgetExecution.DataMaster.BocFilter_ItemSelected</references>
+        <references refid="class_budget_execution_1_1_data_master_1afcc4154db9d9d3075e273090be238c34" compoundref="_data_master_8cs" startline="35">BudgetExecution.DataMaster.ProgramElements</references>
+        <referencedby refid="class_budget_execution_1_1_data_master_1aa2781291decc664f72c6e1fe48a87a4b" compoundref="_data_master_8cs" startline="46" endline="50">BudgetExecution.DataMaster.DataMaster_Load</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_data_master_1a1d1b43139edc588787c9327ea0fa118e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BudgetExecution.DataMaster.GetFundFilterItems</definition>
+        <argsstring>()</argsstring>
+        <name>GetFundFilterItems</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DataMaster.cs" line="64" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DataMaster.cs" bodystart="64" bodyend="69"/>
+        <referencedby refid="class_budget_execution_1_1_data_master_1ade9e9b6caa6d12b2be5d4971d9898ed5" compoundref="_data_master_8cs" startline="16" endline="28">BudgetExecution.DataMaster.DataMaster</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_data_master_1a9abf7f48ff123ad2cdb30cf1f8b498da" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BudgetExecution.DataMaster.GetGridColumns</definition>
+        <argsstring>(DataGridView dgv)</argsstring>
+        <name>GetGridColumns</name>
+        <param>
+          <type>DataGridView</type>
+          <declname>dgv</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DataMaster.cs" line="70" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DataMaster.cs" bodystart="70" bodyend="83"/>
+        <referencedby refid="class_budget_execution_1_1_data_master_1ade9e9b6caa6d12b2be5d4971d9898ed5" compoundref="_data_master_8cs" startline="16" endline="28">BudgetExecution.DataMaster.DataMaster</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_data_master_1af20d6d15b4c0302c146557c6c7dd896f" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BudgetExecution.DataMaster.button2_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>button2_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DataMaster.cs" line="85" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DataMaster.cs" bodystart="85" bodyend="88"/>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_data_master_1afab336801691a20ce801c5001d931343" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BudgetExecution.DataMaster.InitializeComponent</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeComponent</name>
+        <briefdescription>
+<para>Required method for Designer support - do not modify the contents of this method with the code editor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DataMaster.Designer.cs" line="30" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DataMaster.Designer.cs" bodystart="30" bodyend="971"/>
+        <references refid="class_budget_execution_1_1_data_master_1a9ba1f1385e097288f0c42716bc178fe6" compoundref="_data_master_8_designer_8cs" startline="1014">BudgetExecution.DataMaster.BindingSource</references>
+        <references refid="class_budget_execution_1_1_data_master_1a4d0b52cf0a51bb9d9e8fba6a680c1642" compoundref="_data_master_8_designer_8cs" startline="977">BudgetExecution.DataMaster.E6DataGrid</references>
+        <references refid="namespace_budget_execution_1afa69cdcc242b50644155cb4adf244d32a800618943025315f869e4e1f09471012">BudgetExecution.F</references>
+        <references refid="class_budget_execution_1_1_data_master_1a7e63b93c87116360ff456f8904a34257" compoundref="_data_master_8_designer_8cs" startline="975">BudgetExecution.DataMaster.Grid</references>
+        <references refid="class_budget_execution_1_1_data_master_1a7f8bf0606bd9ad71a99ea2b0d9cda463" compoundref="_data_master_8_designer_8cs" startline="998">BudgetExecution.DataMaster.GridNavigator</references>
+        <referencedby refid="class_budget_execution_1_1_data_master_1ade9e9b6caa6d12b2be5d4971d9898ed5" compoundref="_data_master_8cs" startline="16" endline="28">BudgetExecution.DataMaster.DataMaster</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_budget_execution_1_1_data_master_1a20a7114a472cf44bf926ecc668f08d09" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void BudgetExecution.DataMaster.Dispose</definition>
+        <argsstring>(bool disposing)</argsstring>
+        <name>Dispose</name>
+        <param>
+          <type>bool</type>
+          <declname>disposing</declname>
+        </param>
+        <briefdescription>
+<para>Clean up any resources being used. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>disposing</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true if managed resources should be disposed; otherwise, false.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DataMaster.Designer.cs" line="15" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DataMaster.Designer.cs" bodystart="15" bodyend="22"/>
+        <references refid="class_budget_execution_1_1_data_master_1a03d468631a895f6bf0f9aea08e52c3ae" compoundref="_data_master_8_designer_8cs" startline="9">BudgetExecution.DataMaster.components</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="61">
+        <label>MetroForm</label>
+      </node>
+      <node id="60">
+        <label>BudgetExecution.DataMaster</label>
+        <link refid="class_budget_execution_1_1_data_master"/>
+        <childnode refid="61" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="63">
+        <label>MetroForm</label>
+      </node>
+      <node id="65">
+        <label>Controls</label>
+      </node>
+      <node id="66">
+        <label>System</label>
+      </node>
+      <node id="62">
+        <label>BudgetExecution.DataMaster</label>
+        <link refid="class_budget_execution_1_1_data_master"/>
+        <childnode refid="63" relation="public-inheritance">
+        </childnode>
+        <childnode refid="64" relation="usage">
+          <edgelabel>E6DataGrid</edgelabel>
+          <edgelabel>toolstripitem1</edgelabel>
+        </childnode>
+        <childnode refid="65" relation="usage">
+          <edgelabel>metroSetComboBox2</edgelabel>
+          <edgelabel>BocFilter</edgelabel>
+          <edgelabel>metroSetComboBox3</edgelabel>
+          <edgelabel>metroSetComboBox4</edgelabel>
+          <edgelabel>DatabaseFilter</edgelabel>
+          <edgelabel>metroSetTextBox1</edgelabel>
+          <edgelabel>metroSetTextBox2</edgelabel>
+          <edgelabel>metroSetTextBox3</edgelabel>
+          <edgelabel>FundFilter</edgelabel>
+          <edgelabel>metroPanel1</edgelabel>
+          <edgelabel>...</edgelabel>
+        </childnode>
+        <childnode refid="66" relation="usage">
+          <edgelabel>button4</edgelabel>
+          <edgelabel>bindingNavigatorSeparator3</edgelabel>
+          <edgelabel>bindingNavigatorCountItem</edgelabel>
+          <edgelabel>button5</edgelabel>
+          <edgelabel>bindingNavigatorSeparator4</edgelabel>
+          <edgelabel>bindingNavigatorPositionItem</edgelabel>
+          <edgelabel>button6</edgelabel>
+          <edgelabel>CopyButton</edgelabel>
+          <edgelabel>bindingNavigatorSeparator5</edgelabel>
+          <edgelabel>GridNavigator</edgelabel>
+          <edgelabel>...</edgelabel>
+        </childnode>
+      </node>
+      <node id="64">
+        <label>Forms</label>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DataMaster.cs" line="14" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/DataMaster.cs" bodystart="13" bodyend="89"/>
+    <listofallmembers>
+      <member refid="class_budget_execution_1_1_data_master_1a5f2a3b9c8656e25142d7533ebfc9e032" prot="private" virt="non-virtual"><scope>BudgetExecution::DataMaster</scope><name>Adapter</name></member>
+      <member refid="class_budget_execution_1_1_data_master_1ab2a3f1565bb3848b549fe76dfcf47764" prot="private" virt="non-virtual"><scope>BudgetExecution::DataMaster</scope><name>AddNewButton</name></member>
+      <member refid="class_budget_execution_1_1_data_master_1a8aa301a334df2b120fbe527158a86c92" prot="private" virt="non-virtual"><scope>BudgetExecution::DataMaster</scope><name>bindingNavigatorAddNewItem</name></member>
+      <member refid="class_budget_execution_1_1_data_master_1a0a3a23b472bc771b463c62f318ca531f" prot="private" virt="non-virtual"><scope>BudgetExecution::DataMaster</scope><name>bindingNavigatorCountItem</name></member>
+      <member refid="class_budget_execution_1_1_data_master_1a6a64697a809aab32b5a0962b8c0f8e1f" prot="private" virt="non-virtual"><scope>BudgetExecution::DataMaster</scope><name>bindingNavigatorCountItem1</name></member>
+      <member refid="class_budget_execution_1_1_data_master_1afd3b327b855ff85a2ef78f7ea45e7234" prot="private" virt="non-virtual"><scope>BudgetExecution::DataMaster</scope><name>bindingNavigatorDeleteItem</name></member>
+      <member refid="class_budget_execution_1_1_data_master_1afbef17860045d6b5df5677fa0644bad2" prot="private" virt="non-virtual"><scope>BudgetExecution::DataMaster</scope><name>bindingNavigatorMoveFirstItem</name></member>
+      <member refid="class_budget_execution_1_1_data_master_1aea8a44dd9b36f9019e7fba2b2a58211c" prot="private" virt="non-virtual"><scope>BudgetExecution::DataMaster</scope><name>bindingNavigatorMoveFirstItem1</name></member>
+      <member refid="class_budget_execution_1_1_data_master_1a20c3186c0e2eb091c077037657ce8d03" prot="private" virt="non-virtual"><scope>BudgetExecution::DataMaster</scope><name>bindingNavigatorMoveLastItem</name></member>
+      <member refid="class_budget_execution_1_1_data_master_1a73aa55b30e3eac90f465c56578494e21" prot="private" virt="non-virtual"><scope>BudgetExecution::DataMaster</scope><name>bindingNavigatorMoveLastItem1</name></member>
+      <member refid="class_budget_execution_1_1_data_master_1a7db2474a7fcd0f8a692dceb58684270b" prot="private" virt="non-virtual"><scope>BudgetExecution::DataMaster</scope><name>bindingNavigatorMoveNextItem</name></member>
+      <member refid="class_budget_execution_1_1_data_master_1a51b954008cb9d2bdc2a19570b72eedce" prot="private" virt="non-virtual"><scope>BudgetExecution::DataMaster</scope><name>bindingNavigatorMoveNextItem1</name></member>
+      <member refid="class_budget_execution_1_1_data_master_1a11f41402d91c5a32a85e77df13c1b602" prot="private" virt="non-virtual"><scope>BudgetExecution::DataMaster</scope><name>bindingNavigatorMovePreviousItem</name></member>
+      <member refid="class_budget_execution_1_1_data_master_1a313e35a3c271de560efc04b47004d88b" prot="private" virt="non-virtual"><scope>BudgetExecution::DataMaster</scope><name>bindingNavigatorMovePreviousItem1</name></member>
+      <member refid="class_budget_execution_1_1_data_master_1a6c507e9c39127ed37b027d8db8632af0" prot="private" virt="non-virtual"><scope>BudgetExecution::DataMaster</scope><name>bindingNavigatorPositionItem</name></member>
+      <member refid="class_budget_execution_1_1_data_master_1a0c45114f380671ec3794f43f26400150" prot="private" virt="non-virtual"><scope>BudgetExecution::DataMaster</scope><name>bindingNavigatorPositionItem1</name></member>
+      <member refid="class_budget_execution_1_1_data_master_1a94ec2183d31021269e1e05a59cf00eee" prot="private" virt="non-virtual"><scope>BudgetExecution::DataMaster</scope><name>bindingNavigatorSeparator</name></member>
+      <member refid="class_budget_execution_1_1_data_master_1a0747937176b8b0f03130e5577b49da5b" prot="private" virt="non-virtual"><scope>BudgetExecution::DataMaster</scope><name>bindingNavigatorSeparator1</name></member>
+      <member refid="class_budget_execution_1_1_data_master_1a9dcc26d8d424e41f14f979a5ae6ae1d6" prot="private" virt="non-virtual"><scope>BudgetExecution::DataMaster</scope><name>bindingNavigatorSeparator2</name></member>
+      <member refid="class_budget_execution_1_1_data_master_1a73bd32cbc56b535db1d10d622e3fb67d" prot="private" virt="non-virtual"><scope>BudgetExecution::DataMaster</scope><name>bindingNavigatorSeparator3</name></member>
+      <member refid="class_budget_execution_1_1_data_master_1abb5b77c72d36a6670b2b11d3af912d71" prot="private" virt="non-virtual"><scope>BudgetExecution::DataMaster</scope><name>bindingNavigatorSeparator4</name></member>
+      <member refid="class_budget_execution_1_1_data_master_1a5051d7a16afcf559794dff4e517612b0" prot="private" virt="non-virtual"><scope>BudgetExecution::DataMaster</scope><name>bindingNavigatorSeparator5</name></member>
+      <member refid="class_budget_execution_1_1_data_master_1a9ba1f1385e097288f0c42716bc178fe6" prot="private" virt="non-virtual"><scope>BudgetExecution::DataMaster</scope><name>BindingSource</name></member>
+      <member refid="class_budget_execution_1_1_data_master_1ac5fcd41ead85b5f552d9ad3e8ecbeec8" prot="private" virt="non-virtual"><scope>BudgetExecution::DataMaster</scope><name>BocFilter</name></member>
+      <member refid="class_budget_execution_1_1_data_master_1a0259e8572d7dfa4ce8d3ac8485ff1b5c" prot="private" virt="non-virtual"><scope>BudgetExecution::DataMaster</scope><name>BocFilter_ItemSelected</name></member>
+      <member refid="class_budget_execution_1_1_data_master_1a82d00640fec0ec4d7e464154e0468280" prot="private" virt="non-virtual"><scope>BudgetExecution::DataMaster</scope><name>button1</name></member>
+      <member refid="class_budget_execution_1_1_data_master_1ad39fb6d40433f4682f163f0cfd998862" prot="private" virt="non-virtual"><scope>BudgetExecution::DataMaster</scope><name>button2</name></member>
+      <member refid="class_budget_execution_1_1_data_master_1af20d6d15b4c0302c146557c6c7dd896f" prot="private" virt="non-virtual"><scope>BudgetExecution::DataMaster</scope><name>button2_Click</name></member>
+      <member refid="class_budget_execution_1_1_data_master_1af90c80e1a09cc74e43cc167770d9025e" prot="private" virt="non-virtual"><scope>BudgetExecution::DataMaster</scope><name>button3</name></member>
+      <member refid="class_budget_execution_1_1_data_master_1af93f9e36bfdfea04684b905941022109" prot="private" virt="non-virtual"><scope>BudgetExecution::DataMaster</scope><name>button4</name></member>
+      <member refid="class_budget_execution_1_1_data_master_1a212dc2488d96a8df1cf7073694d2575a" prot="private" virt="non-virtual"><scope>BudgetExecution::DataMaster</scope><name>button5</name></member>
+      <member refid="class_budget_execution_1_1_data_master_1a43695346fcb267702fb255f91739b0b2" prot="private" virt="non-virtual"><scope>BudgetExecution::DataMaster</scope><name>button6</name></member>
+      <member refid="class_budget_execution_1_1_data_master_1a03d468631a895f6bf0f9aea08e52c3ae" prot="private" virt="non-virtual"><scope>BudgetExecution::DataMaster</scope><name>components</name></member>
+      <member refid="class_budget_execution_1_1_data_master_1a820b42b89bbd3c181b29a87ef111206e" prot="private" virt="non-virtual"><scope>BudgetExecution::DataMaster</scope><name>CopyButton</name></member>
+      <member refid="class_budget_execution_1_1_data_master_1a5f5d8e7d677f15580f6c9236af7e0843" prot="private" virt="non-virtual"><scope>BudgetExecution::DataMaster</scope><name>Data</name></member>
+      <member refid="class_budget_execution_1_1_data_master_1ae3f0cd8f847159dca0b018af449b619b" prot="private" virt="non-virtual"><scope>BudgetExecution::DataMaster</scope><name>DatabaseFilter</name></member>
+      <member refid="class_budget_execution_1_1_data_master_1ade9e9b6caa6d12b2be5d4971d9898ed5" prot="public" virt="non-virtual"><scope>BudgetExecution::DataMaster</scope><name>DataMaster</name></member>
+      <member refid="class_budget_execution_1_1_data_master_1aa2781291decc664f72c6e1fe48a87a4b" prot="private" virt="non-virtual"><scope>BudgetExecution::DataMaster</scope><name>DataMaster_Load</name></member>
+      <member refid="class_budget_execution_1_1_data_master_1a0777d6f8058831a5b9d38e0fdec26990" prot="private" virt="non-virtual"><scope>BudgetExecution::DataMaster</scope><name>DeleteButton</name></member>
+      <member refid="class_budget_execution_1_1_data_master_1a20a7114a472cf44bf926ecc668f08d09" prot="protected" virt="non-virtual"><scope>BudgetExecution::DataMaster</scope><name>Dispose</name></member>
+      <member refid="class_budget_execution_1_1_data_master_1a4d0b52cf0a51bb9d9e8fba6a680c1642" prot="private" virt="non-virtual"><scope>BudgetExecution::DataMaster</scope><name>E6DataGrid</name></member>
+      <member refid="class_budget_execution_1_1_data_master_1a537e6618189b83074d2ee025de7110bb" prot="private" virt="non-virtual"><scope>BudgetExecution::DataMaster</scope><name>FundFilter</name></member>
+      <member refid="class_budget_execution_1_1_data_master_1ad56087cfdb8107fdd45ae7e50c77fb69" prot="private" virt="non-virtual"><scope>BudgetExecution::DataMaster</scope><name>FundFilter_ItemSelected</name></member>
+      <member refid="class_budget_execution_1_1_data_master_1a1d1b43139edc588787c9327ea0fa118e" prot="private" virt="non-virtual"><scope>BudgetExecution::DataMaster</scope><name>GetFundFilterItems</name></member>
+      <member refid="class_budget_execution_1_1_data_master_1a9abf7f48ff123ad2cdb30cf1f8b498da" prot="private" virt="non-virtual"><scope>BudgetExecution::DataMaster</scope><name>GetGridColumns</name></member>
+      <member refid="class_budget_execution_1_1_data_master_1a7e63b93c87116360ff456f8904a34257" prot="private" virt="non-virtual"><scope>BudgetExecution::DataMaster</scope><name>Grid</name></member>
+      <member refid="class_budget_execution_1_1_data_master_1a7f8bf0606bd9ad71a99ea2b0d9cda463" prot="private" virt="non-virtual"><scope>BudgetExecution::DataMaster</scope><name>GridNavigator</name></member>
+      <member refid="class_budget_execution_1_1_data_master_1aa6bcfe0711da36749bace28acc74dce0" prot="private" virt="non-virtual"><scope>BudgetExecution::DataMaster</scope><name>groupBox1</name></member>
+      <member refid="class_budget_execution_1_1_data_master_1a32e59bf0f352f5271b7296919954c9f2" prot="private" virt="non-virtual"><scope>BudgetExecution::DataMaster</scope><name>groupBox2</name></member>
+      <member refid="class_budget_execution_1_1_data_master_1a2b709c03e80dffce606ff4d494fa6bf3" prot="private" virt="non-virtual"><scope>BudgetExecution::DataMaster</scope><name>groupBox3</name></member>
+      <member refid="class_budget_execution_1_1_data_master_1a492d27e8dffc4024c9665dab45a9b9de" prot="private" virt="non-virtual"><scope>BudgetExecution::DataMaster</scope><name>groupBox4</name></member>
+      <member refid="class_budget_execution_1_1_data_master_1ac3e1c53b0703557436d2d0ec3d0f5a28" prot="private" virt="non-virtual"><scope>BudgetExecution::DataMaster</scope><name>groupBox5</name></member>
+      <member refid="class_budget_execution_1_1_data_master_1afab336801691a20ce801c5001d931343" prot="private" virt="non-virtual"><scope>BudgetExecution::DataMaster</scope><name>InitializeComponent</name></member>
+      <member refid="class_budget_execution_1_1_data_master_1abad85e30b5bb35e9b52d8332ee7c5c40" prot="private" virt="non-virtual"><scope>BudgetExecution::DataMaster</scope><name>Metric</name></member>
+      <member refid="class_budget_execution_1_1_data_master_1a33d50c230752d5ee43835bc54cfa4438" prot="private" virt="non-virtual"><scope>BudgetExecution::DataMaster</scope><name>metroPanel1</name></member>
+      <member refid="class_budget_execution_1_1_data_master_1a2b88118e4ec742c87b80e16581483aa7" prot="private" virt="non-virtual"><scope>BudgetExecution::DataMaster</scope><name>metroSetComboBox1</name></member>
+      <member refid="class_budget_execution_1_1_data_master_1a360cefde0b0fa63a464c54647dadcbcc" prot="private" virt="non-virtual"><scope>BudgetExecution::DataMaster</scope><name>metroSetComboBox2</name></member>
+      <member refid="class_budget_execution_1_1_data_master_1a400413c907a522e65e8c6670501fbe90" prot="private" virt="non-virtual"><scope>BudgetExecution::DataMaster</scope><name>metroSetComboBox3</name></member>
+      <member refid="class_budget_execution_1_1_data_master_1a7fe78e0c40d3ee57164d28609f85fef1" prot="private" virt="non-virtual"><scope>BudgetExecution::DataMaster</scope><name>metroSetComboBox4</name></member>
+      <member refid="class_budget_execution_1_1_data_master_1aed7b4f646844f9bee96bd2b834eb4b36" prot="private" virt="non-virtual"><scope>BudgetExecution::DataMaster</scope><name>metroSetTextBox1</name></member>
+      <member refid="class_budget_execution_1_1_data_master_1a1c459cd9cf80928ce185a3622d5b8d98" prot="private" virt="non-virtual"><scope>BudgetExecution::DataMaster</scope><name>metroSetTextBox2</name></member>
+      <member refid="class_budget_execution_1_1_data_master_1a0826f876e9a47a70faa70179018668fa" prot="private" virt="non-virtual"><scope>BudgetExecution::DataMaster</scope><name>metroSetTextBox3</name></member>
+      <member refid="class_budget_execution_1_1_data_master_1abde3ba76f8bb7b06c1151eea30378345" prot="private" virt="non-virtual"><scope>BudgetExecution::DataMaster</scope><name>Parameter</name></member>
+      <member refid="class_budget_execution_1_1_data_master_1afcc4154db9d9d3075e273090be238c34" prot="private" virt="non-virtual"><scope>BudgetExecution::DataMaster</scope><name>ProgramElements</name></member>
+      <member refid="class_budget_execution_1_1_data_master_1a5d57627d85bc350439df748adeb45064" prot="private" virt="non-virtual"><scope>BudgetExecution::DataMaster</scope><name>Query</name></member>
+      <member refid="class_budget_execution_1_1_data_master_1afe5b71729a7910da8965668eb04460a8" prot="private" virt="non-virtual"><scope>BudgetExecution::DataMaster</scope><name>SaveButton</name></member>
+      <member refid="class_budget_execution_1_1_data_master_1a4234c8bf3cec1da33ea1abd43f6f50f9" prot="private" virt="non-virtual"><scope>BudgetExecution::DataMaster</scope><name>Table</name></member>
+      <member refid="class_budget_execution_1_1_data_master_1a67c272395c261fadd1e86b0f969a452b" prot="private" virt="non-virtual"><scope>BudgetExecution::DataMaster</scope><name>toolStripButton1</name></member>
+      <member refid="class_budget_execution_1_1_data_master_1aa8f7e23569a2de1bd92a0c3d48dd6b43" prot="private" virt="non-virtual"><scope>BudgetExecution::DataMaster</scope><name>toolStripButton2</name></member>
+      <member refid="class_budget_execution_1_1_data_master_1acfa1d7a210a1a93546c0357ed5d42b82" prot="private" virt="non-virtual"><scope>BudgetExecution::DataMaster</scope><name>toolstripitem1</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

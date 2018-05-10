@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="_i_excel_op_8cs" kind="file">
+    <compoundname>IExcelOp.cs</compoundname>
+    <innerclass refid="interface_budget_execution_1_1_i_excel_op" prot="public">BudgetExecution::IExcelOp</innerclass>
+    <innernamespace refid="namespace_budget_execution">BudgetExecution</innernamespace>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="_i_excel_op_8cs_1aec3439e505e38142083956f3cfab005b" prot="public" static="no">
+        <type>Microsoft.Office.Interop.Excel</type>
+        <definition>using Excel =  Microsoft.Office.Interop.Excel</definition>
+        <argsstring></argsstring>
+        <name>Excel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/IExcelOp.cs" line="2" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/IExcelOp.cs" bodystart="2" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="keyword">using</highlight><highlight class="normal"><sp/>System;</highlight></codeline>
+<codeline lineno="2" refid="_i_excel_op_8cs_1aec3439e505e38142083956f3cfab005b" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="_excel_report_8cs_1a3d15d1a81500760be55bef1dbc8a6ad4" kindref="member">Excel</ref><sp/>=<sp/><ref refid="_i_excel_op_8cs_1aec3439e505e38142083956f3cfab005b" kindref="member">Microsoft.Office.Interop.Excel</ref>;</highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">BudgetExecution</highlight></codeline>
+<codeline lineno="7"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="8" refid="interface_budget_execution_1_1_i_excel_op" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">interface<sp/></highlight><highlight class="normal"><ref refid="interface_budget_execution_1_1_i_excel_op" kindref="compound">IExcelOp</ref></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#region<sp/>Properties</highlight></codeline>
+<codeline lineno="11"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12" refid="interface_budget_execution_1_1_i_excel_op_1a3c80e1111112960f23b626c013ef26f5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Tuple&lt;string,<sp/>string&gt;<sp/><ref refid="interface_budget_execution_1_1_i_excel_op_1a3c80e1111112960f23b626c013ef26f5" kindref="member">ConnectionString</ref><sp/>{<sp/></highlight><highlight class="keyword">get</highlight><highlight class="normal">;<sp/>set;<sp/>}</highlight></codeline>
+<codeline lineno="13" refid="interface_budget_execution_1_1_i_excel_op_1ac250745eb10e0c42cb6652b62a5d92b5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="interface_budget_execution_1_1_i_excel_op_1ac250745eb10e0c42cb6652b62a5d92b5" kindref="member">ExcelFile</ref><sp/>{<sp/></highlight><highlight class="keyword">get</highlight><highlight class="normal">;<sp/>set;<sp/>}</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#endregion</highlight></codeline>
+<codeline lineno="16"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#region<sp/>Methods</highlight></codeline>
+<codeline lineno="18"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Excel.Application<sp/><ref refid="interface_budget_execution_1_1_i_excel_op_1a51bf9b23ee847ff6310eaf19054828a4" kindref="member">GetApplication</ref>();</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="interface_budget_execution_1_1_i_excel_op_1ac9fdc80c056af6e24dfe57fef2f0632c" kindref="member">GetConnectionString</ref>();</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="interface_budget_execution_1_1_i_excel_op_1a6132ccffb8ba201e5a4f7f23bc9f2c8a" kindref="member">GetFile</ref>();</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Excel.Workbook<sp/><ref refid="interface_budget_execution_1_1_i_excel_op_1a970a6c0395ba4dec29ed6128aedf9107" kindref="member">GetWorkbook</ref>(<ref refid="_excel_report_8cs_1a3d15d1a81500760be55bef1dbc8a6ad4" kindref="member">Excel</ref>.Application<sp/>excel,<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>filepath);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="interface_budget_execution_1_1_i_excel_op_1a95af06acdfdaf80cf001cb626d4c3d99" kindref="member">ReleaseObject</ref>(</highlight><highlight class="keywordtype">object</highlight><highlight class="normal"><sp/>obj);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="interface_budget_execution_1_1_i_excel_op_1ab1cdbc086f8e9e1779a7c0f81aa7781b" kindref="member">SaveWorkBook</ref>(<ref refid="_excel_report_8cs_1a3d15d1a81500760be55bef1dbc8a6ad4" kindref="member">Excel</ref>.Workbook<sp/>wb);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#endregion</highlight></codeline>
+<codeline lineno="32"><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="33"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/IExcelOp.cs"/>
+  </compounddef>
+</doxygen>

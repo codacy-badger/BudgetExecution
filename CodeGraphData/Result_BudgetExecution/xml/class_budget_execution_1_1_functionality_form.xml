@@ -1,0 +1,263 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_budget_execution_1_1_functionality_form" kind="class" prot="public">
+    <compoundname>BudgetExecution::FunctionalityForm</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MetroForm</basecompoundref>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_budget_execution_1_1_functionality_form_1a1e236dc3a0e91c66bbb7db80f12515cf" prot="private" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>string[]</type>
+        <definition>string [] BudgetExecution.FunctionalityForm.Images</definition>
+        <argsstring></argsstring>
+        <name>Images</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FunctionalityForm.cs" line="24" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FunctionalityForm.cs" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_functionality_form_1a53d5e943e33381ec6ca53d02439facd1" prot="private" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type><ref refid="class_budget_execution_1_1_form_data" kindref="compound">FormData</ref></type>
+        <definition>FormData BudgetExecution.FunctionalityForm.NinjaData</definition>
+        <argsstring></argsstring>
+        <name>NinjaData</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FunctionalityForm.cs" line="25" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FunctionalityForm.cs" bodystart="25" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_functionality_form_1a28b6c537a0b5f515681bf4ec66c90bbd" compoundref="_functionality_form_8cs" startline="16" endline="21">BudgetExecution.FunctionalityForm.FunctionalityForm</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_budget_execution_1_1_functionality_form_1ae2723a11474079af4eda61a04e4a941a" prot="private" static="no" mutable="no">
+        <type>System.ComponentModel.IContainer</type>
+        <definition>System.ComponentModel.IContainer BudgetExecution.FunctionalityForm.components</definition>
+        <argsstring></argsstring>
+        <name>components</name>
+        <initializer>= null</initializer>
+        <briefdescription>
+<para>Required designer variable. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FunctionalityForm.Designer.cs" line="25" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FunctionalityForm.Designer.cs" bodystart="25" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_functionality_form_1ab24e65d78557e505f52848d8b4b8ebde" compoundref="_functionality_form_8_designer_8cs" startline="31" endline="38">BudgetExecution.FunctionalityForm.Dispose</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_functionality_form_1ad001fd4ab65c9d40ab8169396cdb97d2" prot="private" static="no" mutable="no">
+        <type>Syncfusion.Windows.Forms.Tools.Carousel</type>
+        <definition>Syncfusion.Windows.Forms.Tools.Carousel BudgetExecution.FunctionalityForm.FunctionCarousel</definition>
+        <argsstring></argsstring>
+        <name>FunctionCarousel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FunctionalityForm.Designer.cs" line="105" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FunctionalityForm.Designer.cs" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_budget_execution_1_1_functionality_form_1a28b6c537a0b5f515681bf4ec66c90bbd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>BudgetExecution.FunctionalityForm.FunctionalityForm</definition>
+        <argsstring>()</argsstring>
+        <name>FunctionalityForm</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FunctionalityForm.cs" line="16" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FunctionalityForm.cs" bodystart="16" bodyend="21"/>
+        <references refid="class_budget_execution_1_1_info_1a578a762771475341a9007d65e79f46c1" compoundref="_info_8cs" startline="25">BudgetExecution.Info.FunctionImages</references>
+        <references refid="class_budget_execution_1_1_functionality_form_1a6482946f6f76900e8675d1a8bb6743ad" compoundref="_functionality_form_8cs" startline="28" endline="47">BudgetExecution.FunctionalityForm.GetFunctionCarouselImageList</references>
+        <references refid="class_budget_execution_1_1_functionality_form_1af201ef9e65d8d3cce12e5079e531aca8" compoundref="_functionality_form_8_designer_8cs" startline="46" endline="101">BudgetExecution.FunctionalityForm.InitializeComponent</references>
+        <references refid="class_budget_execution_1_1_functionality_form_1a53d5e943e33381ec6ca53d02439facd1" compoundref="_functionality_form_8cs" startline="25">BudgetExecution.FunctionalityForm.NinjaData</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_budget_execution_1_1_functionality_form_1a6482946f6f76900e8675d1a8bb6743ad" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BudgetExecution.FunctionalityForm.GetFunctionCarouselImageList</definition>
+        <argsstring>(string path)</argsstring>
+        <name>GetFunctionCarouselImageList</name>
+        <param>
+          <type>string</type>
+          <declname>path</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FunctionalityForm.cs" line="28" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FunctionalityForm.cs" bodystart="28" bodyend="47"/>
+        <referencedby refid="class_budget_execution_1_1_functionality_form_1a28b6c537a0b5f515681bf4ec66c90bbd" compoundref="_functionality_form_8cs" startline="16" endline="21">BudgetExecution.FunctionalityForm.FunctionalityForm</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_functionality_form_1abd477c32a5de30a3515bfdf98c911481" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BudgetExecution.FunctionalityForm.FunctionCarousel_OnImageSelected</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>FunctionCarousel_OnImageSelected</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FunctionalityForm.cs" line="48" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FunctionalityForm.cs" bodystart="48" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_functionality_form_1a605a5d0e74e59fa2716c42ae5fd3d7db" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BudgetExecution.FunctionalityForm.GetD6DataManager</definition>
+        <argsstring>(object sender, System.EventArgs e)</argsstring>
+        <name>GetD6DataManager</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>System.EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FunctionalityForm.cs" line="55" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FunctionalityForm.cs" bodystart="55" bodyend="60"/>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_functionality_form_1a6662eb2969b95040a0bade1de838828a" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BudgetExecution.FunctionalityForm.GetR6DataManager</definition>
+        <argsstring>(object sender, System.EventArgs e)</argsstring>
+        <name>GetR6DataManager</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>System.EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FunctionalityForm.cs" line="62" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FunctionalityForm.cs" bodystart="62" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_functionality_form_1af201ef9e65d8d3cce12e5079e531aca8" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BudgetExecution.FunctionalityForm.InitializeComponent</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeComponent</name>
+        <briefdescription>
+<para>Required method for Designer support - do not modify the contents of this method with the code editor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FunctionalityForm.Designer.cs" line="46" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FunctionalityForm.Designer.cs" bodystart="46" bodyend="101"/>
+        <references refid="namespace_budget_execution_1afa69cdcc242b50644155cb4adf244d32a800618943025315f869e4e1f09471012">BudgetExecution.F</references>
+        <referencedby refid="class_budget_execution_1_1_functionality_form_1a28b6c537a0b5f515681bf4ec66c90bbd" compoundref="_functionality_form_8cs" startline="16" endline="21">BudgetExecution.FunctionalityForm.FunctionalityForm</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_budget_execution_1_1_functionality_form_1ab24e65d78557e505f52848d8b4b8ebde" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void BudgetExecution.FunctionalityForm.Dispose</definition>
+        <argsstring>(bool disposing)</argsstring>
+        <name>Dispose</name>
+        <param>
+          <type>bool</type>
+          <declname>disposing</declname>
+        </param>
+        <briefdescription>
+<para>Clean up any resources being used. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>disposing</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true if managed resources should be disposed; otherwise, false.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FunctionalityForm.Designer.cs" line="31" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FunctionalityForm.Designer.cs" bodystart="31" bodyend="38"/>
+        <references refid="class_budget_execution_1_1_functionality_form_1ae2723a11474079af4eda61a04e4a941a" compoundref="_functionality_form_8_designer_8cs" startline="25">BudgetExecution.FunctionalityForm.components</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="103">
+        <label>Syncfusion::Windows::Forms::MetroForm</label>
+      </node>
+      <node id="102">
+        <label>BudgetExecution.FunctionalityForm</label>
+        <link refid="class_budget_execution_1_1_functionality_form"/>
+        <childnode refid="103" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="105">
+        <label>Syncfusion::Windows::Forms::MetroForm</label>
+      </node>
+      <node id="107">
+        <label>System</label>
+      </node>
+      <node id="104">
+        <label>BudgetExecution.FunctionalityForm</label>
+        <link refid="class_budget_execution_1_1_functionality_form"/>
+        <childnode refid="105" relation="public-inheritance">
+        </childnode>
+        <childnode refid="106" relation="usage">
+          <edgelabel>FunctionCarousel</edgelabel>
+        </childnode>
+        <childnode refid="107" relation="usage">
+          <edgelabel>components</edgelabel>
+        </childnode>
+      </node>
+      <node id="106">
+        <label>Forms</label>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FunctionalityForm.cs" line="15" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/FunctionalityForm.cs" bodystart="14" bodyend="68"/>
+    <listofallmembers>
+      <member refid="class_budget_execution_1_1_functionality_form_1ae2723a11474079af4eda61a04e4a941a" prot="private" virt="non-virtual"><scope>BudgetExecution::FunctionalityForm</scope><name>components</name></member>
+      <member refid="class_budget_execution_1_1_functionality_form_1ab24e65d78557e505f52848d8b4b8ebde" prot="protected" virt="non-virtual"><scope>BudgetExecution::FunctionalityForm</scope><name>Dispose</name></member>
+      <member refid="class_budget_execution_1_1_functionality_form_1a28b6c537a0b5f515681bf4ec66c90bbd" prot="public" virt="non-virtual"><scope>BudgetExecution::FunctionalityForm</scope><name>FunctionalityForm</name></member>
+      <member refid="class_budget_execution_1_1_functionality_form_1ad001fd4ab65c9d40ab8169396cdb97d2" prot="private" virt="non-virtual"><scope>BudgetExecution::FunctionalityForm</scope><name>FunctionCarousel</name></member>
+      <member refid="class_budget_execution_1_1_functionality_form_1abd477c32a5de30a3515bfdf98c911481" prot="private" virt="non-virtual"><scope>BudgetExecution::FunctionalityForm</scope><name>FunctionCarousel_OnImageSelected</name></member>
+      <member refid="class_budget_execution_1_1_functionality_form_1a605a5d0e74e59fa2716c42ae5fd3d7db" prot="private" virt="non-virtual"><scope>BudgetExecution::FunctionalityForm</scope><name>GetD6DataManager</name></member>
+      <member refid="class_budget_execution_1_1_functionality_form_1a6482946f6f76900e8675d1a8bb6743ad" prot="private" virt="non-virtual"><scope>BudgetExecution::FunctionalityForm</scope><name>GetFunctionCarouselImageList</name></member>
+      <member refid="class_budget_execution_1_1_functionality_form_1a6662eb2969b95040a0bade1de838828a" prot="private" virt="non-virtual"><scope>BudgetExecution::FunctionalityForm</scope><name>GetR6DataManager</name></member>
+      <member refid="class_budget_execution_1_1_functionality_form_1a1e236dc3a0e91c66bbb7db80f12515cf" prot="private" virt="non-virtual"><scope>BudgetExecution::FunctionalityForm</scope><name>Images</name></member>
+      <member refid="class_budget_execution_1_1_functionality_form_1af201ef9e65d8d3cce12e5079e531aca8" prot="private" virt="non-virtual"><scope>BudgetExecution::FunctionalityForm</scope><name>InitializeComponent</name></member>
+      <member refid="class_budget_execution_1_1_functionality_form_1a53d5e943e33381ec6ca53d02439facd1" prot="private" virt="non-virtual"><scope>BudgetExecution::FunctionalityForm</scope><name>NinjaData</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

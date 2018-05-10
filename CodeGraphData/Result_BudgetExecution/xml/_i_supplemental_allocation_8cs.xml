@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="_i_supplemental_allocation_8cs" kind="file">
+    <compoundname>ISupplementalAllocation.cs</compoundname>
+    <innerclass refid="interface_budget_execution_1_1_i_supplemental_allocation" prot="package">BudgetExecution::ISupplementalAllocation</innerclass>
+    <innernamespace refid="namespace_budget_execution">BudgetExecution</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">BudgetExecution</highlight></codeline>
+<codeline lineno="3"><highlight class="normal">{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="4" refid="interface_budget_execution_1_1_i_supplemental_allocation" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">internal</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">interface<sp/></highlight><highlight class="normal"><ref refid="interface_budget_execution_1_1_i_supplemental_allocation" kindref="compound">ISupplementalAllocation</ref></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Properties</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7" refid="interface_budget_execution_1_1_i_supplemental_allocation_1a27691555356e148e8981b97b347d650a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>decimal<sp/><ref refid="interface_budget_execution_1_1_i_supplemental_allocation_1a27691555356e148e8981b97b347d650a" kindref="member">Awards</ref><sp/>{<sp/></highlight><highlight class="keyword">get</highlight><highlight class="normal">;<sp/>set;<sp/>}</highlight></codeline>
+<codeline lineno="8" refid="interface_budget_execution_1_1_i_supplemental_allocation_1ad7d989e74dd9b32c0b29bfe41a98c081" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>decimal<sp/><ref refid="interface_budget_execution_1_1_i_supplemental_allocation_1ad7d989e74dd9b32c0b29bfe41a98c081" kindref="member">OverTime</ref><sp/>{<sp/></highlight><highlight class="keyword">get</highlight><highlight class="normal">;<sp/>set;<sp/>}</highlight></codeline>
+<codeline lineno="9" refid="interface_budget_execution_1_1_i_supplemental_allocation_1a6d2919d819ecdad6bb3a5017e28fd840" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="interface_budget_execution_1_1_i_supplemental_allocation_1a6d2919d819ecdad6bb3a5017e28fd840" kindref="member">TimeOffAwards</ref><sp/>{<sp/></highlight><highlight class="keyword">get</highlight><highlight class="normal">;<sp/>set;<sp/>}</highlight></codeline>
+<codeline lineno="10" refid="interface_budget_execution_1_1_i_supplemental_allocation_1ab454924e9ba806b3ec5ea67e4a41a4ba" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_budget_execution_1_1_p_r_c" kindref="compound">PRC</ref><sp/><ref refid="interface_budget_execution_1_1_i_supplemental_allocation_1ab454924e9ba806b3ec5ea67e4a41a4ba" kindref="member">Training</ref><sp/>{<sp/></highlight><highlight class="keyword">get</highlight><highlight class="normal">;<sp/>set;<sp/>}</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="12"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ISupplementalAllocation.cs"/>
+  </compounddef>
+</doxygen>

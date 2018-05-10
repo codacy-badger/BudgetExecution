@@ -34,7 +34,7 @@ namespace BudgetExecution
             DataQuery = new Query(source, param);
             Source = DataQuery.Source;
             DataSet = GetDataSet();
-            QueryTable = GetData();
+            QueryTable = DataSet.Tables[0];
             ProgramElements = GetProgramElements(QueryTable);
             BindingSource = new BindingSource();
             BindingSource.DataSource = QueryTable;
@@ -113,7 +113,6 @@ namespace BudgetExecution
                 }
                 if (data.ContainsKey("ID")) data.Remove("ID");
                 if (data.ContainsKey("Amount")) data.Remove("Amount");
-                if (data.ContainsKey("PRC.ID")) data.Remove("PRC.ID");
                 return data;
             }
             catch (Exception ex)
@@ -169,9 +168,9 @@ namespace BudgetExecution
             try
             {
                 var ds = new DataSet("R6");
-                var dt = new DataTable();
+                var dt = new DataTable(Source.ToString());
                 ds.Tables.Add(dt);
-                DataQuery.Adapter.Fill(ds);
+                DataQuery.Adapter.Fill(ds, Source.ToString());
                 return ds;
             }
             catch (Exception ex)
@@ -185,7 +184,7 @@ namespace BudgetExecution
             try
             {
                 if (QueryTable.Columns.Contains("Amount"))
-                    return table.AsEnumerable().Select(p => p).Sum(p => p.Field<decimal>("Amount"));
+                    return table.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Sum();
                 return 0m;
             }
             catch (Exception ex)

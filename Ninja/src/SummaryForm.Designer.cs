@@ -3883,6 +3883,7 @@ namespace BudgetExecution
             this.FundChart.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FundChart.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.FundChart.HighlightSymbol = true;
+            this.FundChart.Indexed = true;
             this.FundChart.IsWindowLess = false;
             // 
             // 
@@ -3900,9 +3901,11 @@ namespace BudgetExecution
             this.FundChart.PrimaryXAxis.LineType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(182)))), ((int)(((byte)(183)))));
             this.FundChart.PrimaryXAxis.LogLabelsDisplayMode = Syncfusion.Windows.Forms.Chart.LogLabelsDisplayMode.Default;
             this.FundChart.PrimaryXAxis.Margin = true;
+            this.FundChart.PrimaryXAxis.ShowCrosshairTooltip = true;
             this.FundChart.PrimaryXAxis.TickColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(182)))), ((int)(((byte)(183)))));
             this.FundChart.PrimaryXAxis.TitleColor = System.Drawing.Color.White;
             this.FundChart.PrimaryXAxis.TitleFont = new System.Drawing.Font("Segoe UI", 14F);
+            this.FundChart.PrimaryYAxis.AutoValueType = true;
             this.FundChart.PrimaryYAxis.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FundChart.PrimaryYAxis.GridLineType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(182)))), ((int)(((byte)(183)))));
             this.FundChart.PrimaryYAxis.LineType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(182)))), ((int)(((byte)(183)))));

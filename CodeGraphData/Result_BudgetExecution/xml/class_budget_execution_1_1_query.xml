@@ -1,0 +1,594 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_budget_execution_1_1_query" kind="class" prot="public">
+    <compoundname>BudgetExecution::Query</compoundname>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_budget_execution_1_1_query_1a47995c2d9a51da74a31e44b79a7a010a" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>SQLiteDataAdapter</type>
+        <definition>SQLiteDataAdapter BudgetExecution.Query.Adapter</definition>
+        <argsstring></argsstring>
+        <name>Adapter</name>
+        <initializer>datasource=C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\database\SQLite\R6.db&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Query.cs" line="78" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Query.cs" bodystart="78" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_query_1a86e85aa6999e64aec7982b8c67c41e4b" compoundref="_query_8cs" startline="215" endline="226">BudgetExecution.Query.GetCommandBuilder</referencedby>
+        <referencedby refid="class_budget_execution_1_1_query_1a5a39dc2df9541d6a60b09920221e18ab" compoundref="_query_8cs" startline="143" endline="154">BudgetExecution.Query.GetDeleteCommand</referencedby>
+        <referencedby refid="class_budget_execution_1_1_query_1a5f0e6668c978b1c7d7230aa112f419b9" compoundref="_query_8cs" startline="155" endline="166">BudgetExecution.Query.GetInsertCommand</referencedby>
+        <referencedby refid="class_budget_execution_1_1_query_1ad5bc920f07cf6295e149849ceeb09217" compoundref="_query_8cs" startline="179" endline="190">BudgetExecution.Query.GetUpdateCommand</referencedby>
+        <referencedby refid="class_budget_execution_1_1_query_1a1c140960194cb819d64804b0e3b97163" compoundref="_query_8cs" startline="18" endline="30">BudgetExecution.Query.Query</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_query_1aec8d4f51b9c95052059d89be701f8437" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>SQLiteCommandBuilder</type>
+        <definition>SQLiteCommandBuilder BudgetExecution.Query.CommandBuilder</definition>
+        <argsstring></argsstring>
+        <name>CommandBuilder</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Query.cs" line="79" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Query.cs" bodystart="79" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_query_1a1c140960194cb819d64804b0e3b97163" compoundref="_query_8cs" startline="18" endline="30">BudgetExecution.Query.Query</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_query_1a1eed361017302c1bc012dd18663e8a57" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>SQLiteConnection</type>
+        <definition>SQLiteConnection BudgetExecution.Query.Connection</definition>
+        <argsstring></argsstring>
+        <name>Connection</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Query.cs" line="80" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Query.cs" bodystart="80" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_query_1a280785e8dac0f1a4ad14bfd682334b00" compoundref="_query_8cs" startline="191" endline="202">BudgetExecution.Query.GetDataAdapter</referencedby>
+        <referencedby refid="class_budget_execution_1_1_query_1ae05c20d3457912085b65bdca582603a2" compoundref="_query_8cs" startline="167" endline="178">BudgetExecution.Query.GetSelectCommand</referencedby>
+        <referencedby refid="class_budget_execution_1_1_query_1a1c140960194cb819d64804b0e3b97163" compoundref="_query_8cs" startline="18" endline="30">BudgetExecution.Query.Query</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_query_1ab9b460c9e034ad920dc05ed987202c2d" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>SQLiteCommand</type>
+        <definition>SQLiteCommand BudgetExecution.Query.DeleteCommand</definition>
+        <argsstring></argsstring>
+        <name>DeleteCommand</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Query.cs" line="81" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Query.cs" bodystart="81" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_query_1a1c140960194cb819d64804b0e3b97163" compoundref="_query_8cs" startline="18" endline="30">BudgetExecution.Query.Query</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_query_1a16d0f06b073a49f13abd16358d057228" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>SQLiteCommand</type>
+        <definition>SQLiteCommand BudgetExecution.Query.InsertCommand</definition>
+        <argsstring></argsstring>
+        <name>InsertCommand</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Query.cs" line="82" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Query.cs" bodystart="82" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_query_1a1c140960194cb819d64804b0e3b97163" compoundref="_query_8cs" startline="18" endline="30">BudgetExecution.Query.Query</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_query_1aefdf5350661ac24f8acc3b62a4e714e4" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>Dictionary&lt; string, object &gt;</type>
+        <definition>Dictionary&lt;string, object&gt; BudgetExecution.Query.Parameter</definition>
+        <argsstring></argsstring>
+        <name>Parameter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Query.cs" line="83" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Query.cs" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_query_1abfa7178911f75837ac5eedf87723c48a" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>SQLiteDataReader</type>
+        <definition>SQLiteDataReader BudgetExecution.Query.Reader</definition>
+        <argsstring></argsstring>
+        <name>Reader</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Query.cs" line="84" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Query.cs" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_query_1ae2dbfcf6c29660ce7bcb25a671b8778f" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>SQLiteCommand</type>
+        <definition>SQLiteCommand BudgetExecution.Query.SelectCommand</definition>
+        <argsstring></argsstring>
+        <name>SelectCommand</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Query.cs" line="85" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Query.cs" bodystart="85" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_query_1afa74712b0698c84ad383a45d50a358d4" compoundref="_query_8cs" startline="227" endline="238">BudgetExecution.Query.GetDataAdapter</referencedby>
+        <referencedby refid="class_budget_execution_1_1_query_1a1c140960194cb819d64804b0e3b97163" compoundref="_query_8cs" startline="18" endline="30">BudgetExecution.Query.Query</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_query_1aa4bd8f3191734c2c5f85ac0b009ed09e" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>string</type>
+        <definition>string BudgetExecution.Query.SelectStatement</definition>
+        <argsstring></argsstring>
+        <name>SelectStatement</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Query.cs" line="86" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Query.cs" bodystart="86" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_query_1aed90d4ac48595e34457d49f028145024" compoundref="_query_8cs" startline="257" endline="268">BudgetExecution.Query.GetSelectCommand</referencedby>
+        <referencedby refid="class_budget_execution_1_1_query_1a1c140960194cb819d64804b0e3b97163" compoundref="_query_8cs" startline="18" endline="30">BudgetExecution.Query.Query</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_query_1a22c0f7dbd481c862fe5d871af8a6c791" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type><ref refid="namespace_budget_execution_1a31d755f9fbeb90de04b7b1e2e21acdc8" kindref="member">Source</ref></type>
+        <definition>Source BudgetExecution.Query.Source</definition>
+        <argsstring></argsstring>
+        <name>Source</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Query.cs" line="87" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Query.cs" bodystart="87" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_form_data_1a6b08f7313f0ae2392d75992015a48c5b" compoundref="_form_data_8cs" startline="269" endline="300">BudgetExecution.FormData.ConfigureTabControl</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_query_1ac499920ad4bc264d73432b4801a307e3" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type><ref refid="namespace_budget_execution_1a04fd24d7fd477c1db9884745e14ea571" kindref="member">Provider</ref></type>
+        <definition>Provider BudgetExecution.Query.Provider</definition>
+        <argsstring></argsstring>
+        <name>Provider</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Query.cs" line="88" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Query.cs" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_query_1a33700b7c169cac243d4e687f31d54d9a" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type><ref refid="namespace_budget_execution_1acc77f02cde309c445b6e142d257483dd" kindref="member">Command</ref></type>
+        <definition>Command BudgetExecution.Query.Sql</definition>
+        <argsstring></argsstring>
+        <name>Sql</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Query.cs" line="89" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Query.cs" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_query_1a471586b3bff13e12ddf37a21fddaf440" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>Dictionary&lt; string, string &gt;</type>
+        <definition>Dictionary&lt;string, string&gt; BudgetExecution.Query.SqlStatement</definition>
+        <argsstring></argsstring>
+        <name>SqlStatement</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Query.cs" line="90" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Query.cs" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_query_1ac153d74efee7bf90d370b610f33fb363" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>string</type>
+        <definition>string BudgetExecution.Query.TableName</definition>
+        <argsstring></argsstring>
+        <name>TableName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Query.cs" line="91" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Query.cs" bodystart="91" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_query_1a1c140960194cb819d64804b0e3b97163" compoundref="_query_8cs" startline="18" endline="30">BudgetExecution.Query.Query</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_query_1a1214b4a15526f0857181d183dd7bd7d3" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>SQLiteCommand</type>
+        <definition>SQLiteCommand BudgetExecution.Query.UpdateCommand</definition>
+        <argsstring></argsstring>
+        <name>UpdateCommand</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Query.cs" line="92" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Query.cs" bodystart="92" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_query_1a1c140960194cb819d64804b0e3b97163" compoundref="_query_8cs" startline="18" endline="30">BudgetExecution.Query.Query</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_budget_execution_1_1_query_1a40722151896556e0cebb56b6b9d21aae" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>BudgetExecution.Query.Query</definition>
+        <argsstring>()</argsstring>
+        <name>Query</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Query.cs" line="15" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Query.cs" bodystart="15" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_query_1a1c140960194cb819d64804b0e3b97163" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>BudgetExecution.Query.Query</definition>
+        <argsstring>(Source source)</argsstring>
+        <name>Query</name>
+        <param>
+          <type><ref refid="namespace_budget_execution_1a31d755f9fbeb90de04b7b1e2e21acdc8" kindref="member">Source</ref></type>
+          <declname>source</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Query.cs" line="18" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Query.cs" bodystart="18" bodyend="30"/>
+        <references refid="class_budget_execution_1_1_query_1a47995c2d9a51da74a31e44b79a7a010a" compoundref="_query_8cs" startline="78">BudgetExecution.Query.Adapter</references>
+        <references refid="class_budget_execution_1_1_query_1aec8d4f51b9c95052059d89be701f8437" compoundref="_query_8cs" startline="79">BudgetExecution.Query.CommandBuilder</references>
+        <references refid="class_budget_execution_1_1_query_1a1eed361017302c1bc012dd18663e8a57" compoundref="_query_8cs" startline="80">BudgetExecution.Query.Connection</references>
+        <references refid="class_budget_execution_1_1_query_1ab9b460c9e034ad920dc05ed987202c2d" compoundref="_query_8cs" startline="81">BudgetExecution.Query.DeleteCommand</references>
+        <references refid="class_budget_execution_1_1_query_1a86e85aa6999e64aec7982b8c67c41e4b" compoundref="_query_8cs" startline="215" endline="226">BudgetExecution.Query.GetCommandBuilder</references>
+        <references refid="class_budget_execution_1_1_query_1a16d0f06b073a49f13abd16358d057228" compoundref="_query_8cs" startline="82">BudgetExecution.Query.InsertCommand</references>
+        <references refid="class_budget_execution_1_1_query_1ae2dbfcf6c29660ce7bcb25a671b8778f" compoundref="_query_8cs" startline="85">BudgetExecution.Query.SelectCommand</references>
+        <references refid="class_budget_execution_1_1_query_1aa4bd8f3191734c2c5f85ac0b009ed09e" compoundref="_query_8cs" startline="86">BudgetExecution.Query.SelectStatement</references>
+        <references refid="class_budget_execution_1_1_query_1ac153d74efee7bf90d370b610f33fb363" compoundref="_query_8cs" startline="91">BudgetExecution.Query.TableName</references>
+        <references refid="class_budget_execution_1_1_query_1a1214b4a15526f0857181d183dd7bd7d3" compoundref="_query_8cs" startline="92">BudgetExecution.Query.UpdateCommand</references>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_query_1a7d8a0322cf47af235248f08480580ec3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>BudgetExecution.Query.Query</definition>
+        <argsstring>(Source source, Provider provider)</argsstring>
+        <name>Query</name>
+        <param>
+          <type><ref refid="namespace_budget_execution_1a31d755f9fbeb90de04b7b1e2e21acdc8" kindref="member">Source</ref></type>
+          <declname>source</declname>
+        </param>
+        <param>
+          <type><ref refid="namespace_budget_execution_1a04fd24d7fd477c1db9884745e14ea571" kindref="member">Provider</ref></type>
+          <declname>provider</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Query.cs" line="31" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Query.cs" bodystart="31" bodyend="61"/>
+        <references refid="class_budget_execution_1_1_query_1a47995c2d9a51da74a31e44b79a7a010a" compoundref="_query_8cs" startline="78">BudgetExecution.Query.Adapter</references>
+        <references refid="class_budget_execution_1_1_query_1aec8d4f51b9c95052059d89be701f8437" compoundref="_query_8cs" startline="79">BudgetExecution.Query.CommandBuilder</references>
+        <references refid="class_budget_execution_1_1_query_1a1eed361017302c1bc012dd18663e8a57" compoundref="_query_8cs" startline="80">BudgetExecution.Query.Connection</references>
+        <references refid="class_budget_execution_1_1_query_1a86e85aa6999e64aec7982b8c67c41e4b" compoundref="_query_8cs" startline="215" endline="226">BudgetExecution.Query.GetCommandBuilder</references>
+        <references refid="class_budget_execution_1_1_query_1ae2dbfcf6c29660ce7bcb25a671b8778f" compoundref="_query_8cs" startline="85">BudgetExecution.Query.SelectCommand</references>
+        <references refid="class_budget_execution_1_1_query_1aa4bd8f3191734c2c5f85ac0b009ed09e" compoundref="_query_8cs" startline="86">BudgetExecution.Query.SelectStatement</references>
+        <references refid="class_budget_execution_1_1_query_1ac153d74efee7bf90d370b610f33fb363" compoundref="_query_8cs" startline="91">BudgetExecution.Query.TableName</references>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_query_1a2180876228197201710b945375d67b03" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>BudgetExecution.Query.Query</definition>
+        <argsstring>(Source source, Dictionary&lt; string, object &gt; param)</argsstring>
+        <name>Query</name>
+        <param>
+          <type><ref refid="namespace_budget_execution_1a31d755f9fbeb90de04b7b1e2e21acdc8" kindref="member">Source</ref></type>
+          <declname>source</declname>
+        </param>
+        <param>
+          <type>Dictionary&lt; string, object &gt;</type>
+          <declname>param</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Query.cs" line="62" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Query.cs" bodystart="62" bodyend="75"/>
+        <references refid="class_budget_execution_1_1_query_1a47995c2d9a51da74a31e44b79a7a010a" compoundref="_query_8cs" startline="78">BudgetExecution.Query.Adapter</references>
+        <references refid="class_budget_execution_1_1_query_1aec8d4f51b9c95052059d89be701f8437" compoundref="_query_8cs" startline="79">BudgetExecution.Query.CommandBuilder</references>
+        <references refid="class_budget_execution_1_1_query_1a1eed361017302c1bc012dd18663e8a57" compoundref="_query_8cs" startline="80">BudgetExecution.Query.Connection</references>
+        <references refid="class_budget_execution_1_1_query_1ab9b460c9e034ad920dc05ed987202c2d" compoundref="_query_8cs" startline="81">BudgetExecution.Query.DeleteCommand</references>
+        <references refid="class_budget_execution_1_1_query_1a86e85aa6999e64aec7982b8c67c41e4b" compoundref="_query_8cs" startline="215" endline="226">BudgetExecution.Query.GetCommandBuilder</references>
+        <references refid="class_budget_execution_1_1_query_1accd0e60cb6270827feecb302414adebc" compoundref="_query_8cs" startline="95" endline="106">BudgetExecution.Query.GetSqlStatement</references>
+        <references refid="class_budget_execution_1_1_query_1a16d0f06b073a49f13abd16358d057228" compoundref="_query_8cs" startline="82">BudgetExecution.Query.InsertCommand</references>
+        <references refid="class_budget_execution_1_1_query_1ae2dbfcf6c29660ce7bcb25a671b8778f" compoundref="_query_8cs" startline="85">BudgetExecution.Query.SelectCommand</references>
+        <references refid="class_budget_execution_1_1_query_1aa4bd8f3191734c2c5f85ac0b009ed09e" compoundref="_query_8cs" startline="86">BudgetExecution.Query.SelectStatement</references>
+        <references refid="class_budget_execution_1_1_query_1ac153d74efee7bf90d370b610f33fb363" compoundref="_query_8cs" startline="91">BudgetExecution.Query.TableName</references>
+        <references refid="class_budget_execution_1_1_query_1a1214b4a15526f0857181d183dd7bd7d3" compoundref="_query_8cs" startline="92">BudgetExecution.Query.UpdateCommand</references>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_query_1accd0e60cb6270827feecb302414adebc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>string BudgetExecution.Query.GetSqlStatement</definition>
+        <argsstring>()</argsstring>
+        <name>GetSqlStatement</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Query.cs" line="95" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Query.cs" bodystart="95" bodyend="106"/>
+        <referencedby refid="class_budget_execution_1_1_query_1a2180876228197201710b945375d67b03" compoundref="_query_8cs" startline="62" endline="75">BudgetExecution.Query.Query</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_query_1a45b67ddb72a59906b07514370d3704bb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>string BudgetExecution.Query.GetSqlStatement</definition>
+        <argsstring>(string sql)</argsstring>
+        <name>GetSqlStatement</name>
+        <param>
+          <type>string</type>
+          <declname>sql</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Query.cs" line="107" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Query.cs" bodystart="107" bodyend="118"/>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_query_1a6ab440c635c39443cc867a13a3d7747d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>SQLiteCommandBuilder</type>
+        <definition>SQLiteCommandBuilder BudgetExecution.Query.GetCommandBuilder</definition>
+        <argsstring>(SQLiteDataAdapter adapter)</argsstring>
+        <name>GetCommandBuilder</name>
+        <param>
+          <type>SQLiteDataAdapter</type>
+          <declname>adapter</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Query.cs" line="119" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Query.cs" bodystart="119" bodyend="130"/>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_query_1a31915986503cc556ce7d6cfc7dd77e49" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>SQLiteDataAdapter</type>
+        <definition>SQLiteDataAdapter BudgetExecution.Query.GetDataAdapter</definition>
+        <argsstring>(SQLiteCommand command)</argsstring>
+        <name>GetDataAdapter</name>
+        <param>
+          <type>SQLiteCommand</type>
+          <declname>command</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Query.cs" line="131" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Query.cs" bodystart="131" bodyend="142"/>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_query_1a5a39dc2df9541d6a60b09920221e18ab" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>SQLiteCommand</type>
+        <definition>SQLiteCommand BudgetExecution.Query.GetDeleteCommand</definition>
+        <argsstring>()</argsstring>
+        <name>GetDeleteCommand</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Query.cs" line="143" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Query.cs" bodystart="143" bodyend="154"/>
+        <references refid="class_budget_execution_1_1_query_1a47995c2d9a51da74a31e44b79a7a010a" compoundref="_query_8cs" startline="78">BudgetExecution.Query.Adapter</references>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_query_1a5f0e6668c978b1c7d7230aa112f419b9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>SQLiteCommand</type>
+        <definition>SQLiteCommand BudgetExecution.Query.GetInsertCommand</definition>
+        <argsstring>()</argsstring>
+        <name>GetInsertCommand</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Query.cs" line="155" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Query.cs" bodystart="155" bodyend="166"/>
+        <references refid="class_budget_execution_1_1_query_1a47995c2d9a51da74a31e44b79a7a010a" compoundref="_query_8cs" startline="78">BudgetExecution.Query.Adapter</references>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_query_1ae05c20d3457912085b65bdca582603a2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>SQLiteCommand</type>
+        <definition>SQLiteCommand BudgetExecution.Query.GetSelectCommand</definition>
+        <argsstring>(string select)</argsstring>
+        <name>GetSelectCommand</name>
+        <param>
+          <type>string</type>
+          <declname>select</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Query.cs" line="167" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Query.cs" bodystart="167" bodyend="178"/>
+        <references refid="class_budget_execution_1_1_query_1a1eed361017302c1bc012dd18663e8a57" compoundref="_query_8cs" startline="80">BudgetExecution.Query.Connection</references>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_query_1ad5bc920f07cf6295e149849ceeb09217" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>SQLiteCommand</type>
+        <definition>SQLiteCommand BudgetExecution.Query.GetUpdateCommand</definition>
+        <argsstring>()</argsstring>
+        <name>GetUpdateCommand</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Query.cs" line="179" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Query.cs" bodystart="179" bodyend="190"/>
+        <references refid="class_budget_execution_1_1_query_1a47995c2d9a51da74a31e44b79a7a010a" compoundref="_query_8cs" startline="78">BudgetExecution.Query.Adapter</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="package-func">
+      <memberdef kind="function" id="class_budget_execution_1_1_query_1a280785e8dac0f1a4ad14bfd682334b00" prot="package" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>SQLiteDataAdapter</type>
+        <definition>SQLiteDataAdapter BudgetExecution.Query.GetDataAdapter</definition>
+        <argsstring>(string sql)</argsstring>
+        <name>GetDataAdapter</name>
+        <param>
+          <type>string</type>
+          <declname>sql</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Query.cs" line="191" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Query.cs" bodystart="191" bodyend="202"/>
+        <references refid="class_budget_execution_1_1_query_1a1eed361017302c1bc012dd18663e8a57" compoundref="_query_8cs" startline="80">BudgetExecution.Query.Connection</references>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_query_1a8efac6680ce57014e077970c96a7c0d5" prot="package" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>SQLiteDataAdapter</type>
+        <definition>SQLiteDataAdapter BudgetExecution.Query.GetDataAdapter</definition>
+        <argsstring>(Command cmd, string sql)</argsstring>
+        <name>GetDataAdapter</name>
+        <param>
+          <type><ref refid="namespace_budget_execution_1acc77f02cde309c445b6e142d257483dd" kindref="member">Command</ref></type>
+          <declname>cmd</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>sql</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Query.cs" line="203" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Query.cs" bodystart="203" bodyend="214"/>
+        <references refid="class_budget_execution_1_1_query_1a1eed361017302c1bc012dd18663e8a57" compoundref="_query_8cs" startline="80">BudgetExecution.Query.Connection</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_budget_execution_1_1_query_1a86e85aa6999e64aec7982b8c67c41e4b" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>SQLiteCommandBuilder</type>
+        <definition>SQLiteCommandBuilder BudgetExecution.Query.GetCommandBuilder</definition>
+        <argsstring>()</argsstring>
+        <name>GetCommandBuilder</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Query.cs" line="215" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Query.cs" bodystart="215" bodyend="226"/>
+        <references refid="class_budget_execution_1_1_query_1a47995c2d9a51da74a31e44b79a7a010a" compoundref="_query_8cs" startline="78">BudgetExecution.Query.Adapter</references>
+        <referencedby refid="class_budget_execution_1_1_query_1a1c140960194cb819d64804b0e3b97163" compoundref="_query_8cs" startline="18" endline="30">BudgetExecution.Query.Query</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_query_1afa74712b0698c84ad383a45d50a358d4" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>SQLiteDataAdapter</type>
+        <definition>SQLiteDataAdapter BudgetExecution.Query.GetDataAdapter</definition>
+        <argsstring>()</argsstring>
+        <name>GetDataAdapter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Query.cs" line="227" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Query.cs" bodystart="227" bodyend="238"/>
+        <references refid="class_budget_execution_1_1_query_1ae2dbfcf6c29660ce7bcb25a671b8778f" compoundref="_query_8cs" startline="85">BudgetExecution.Query.SelectCommand</references>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_query_1a006c8025e6a924a715ddf39b2d318319" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>string BudgetExecution.Query.GetParamString</definition>
+        <argsstring>(Dictionary&lt; string, object &gt; param)</argsstring>
+        <name>GetParamString</name>
+        <param>
+          <type>Dictionary&lt; string, object &gt;</type>
+          <declname>param</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Query.cs" line="239" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Query.cs" bodystart="239" bodyend="256"/>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_query_1aed90d4ac48595e34457d49f028145024" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>SQLiteCommand</type>
+        <definition>SQLiteCommand BudgetExecution.Query.GetSelectCommand</definition>
+        <argsstring>()</argsstring>
+        <name>GetSelectCommand</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Query.cs" line="257" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Query.cs" bodystart="257" bodyend="268"/>
+        <references refid="class_budget_execution_1_1_query_1a1eed361017302c1bc012dd18663e8a57" compoundref="_query_8cs" startline="80">BudgetExecution.Query.Connection</references>
+        <references refid="class_budget_execution_1_1_query_1aa4bd8f3191734c2c5f85ac0b009ed09e" compoundref="_query_8cs" startline="86">BudgetExecution.Query.SelectStatement</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Query.cs" line="13" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Query.cs" bodystart="12" bodyend="269"/>
+    <listofallmembers>
+      <member refid="class_budget_execution_1_1_query_1a47995c2d9a51da74a31e44b79a7a010a" prot="public" virt="non-virtual"><scope>BudgetExecution::Query</scope><name>Adapter</name></member>
+      <member refid="class_budget_execution_1_1_query_1aec8d4f51b9c95052059d89be701f8437" prot="public" virt="non-virtual"><scope>BudgetExecution::Query</scope><name>CommandBuilder</name></member>
+      <member refid="class_budget_execution_1_1_query_1a1eed361017302c1bc012dd18663e8a57" prot="public" virt="non-virtual"><scope>BudgetExecution::Query</scope><name>Connection</name></member>
+      <member refid="class_budget_execution_1_1_query_1ab9b460c9e034ad920dc05ed987202c2d" prot="public" virt="non-virtual"><scope>BudgetExecution::Query</scope><name>DeleteCommand</name></member>
+      <member refid="class_budget_execution_1_1_query_1a6ab440c635c39443cc867a13a3d7747d" prot="public" virt="non-virtual"><scope>BudgetExecution::Query</scope><name>GetCommandBuilder</name></member>
+      <member refid="class_budget_execution_1_1_query_1a86e85aa6999e64aec7982b8c67c41e4b" prot="private" virt="non-virtual"><scope>BudgetExecution::Query</scope><name>GetCommandBuilder</name></member>
+      <member refid="class_budget_execution_1_1_query_1a31915986503cc556ce7d6cfc7dd77e49" prot="public" virt="non-virtual"><scope>BudgetExecution::Query</scope><name>GetDataAdapter</name></member>
+      <member refid="class_budget_execution_1_1_query_1a280785e8dac0f1a4ad14bfd682334b00" prot="package" virt="non-virtual"><scope>BudgetExecution::Query</scope><name>GetDataAdapter</name></member>
+      <member refid="class_budget_execution_1_1_query_1a8efac6680ce57014e077970c96a7c0d5" prot="package" virt="non-virtual"><scope>BudgetExecution::Query</scope><name>GetDataAdapter</name></member>
+      <member refid="class_budget_execution_1_1_query_1afa74712b0698c84ad383a45d50a358d4" prot="private" virt="non-virtual"><scope>BudgetExecution::Query</scope><name>GetDataAdapter</name></member>
+      <member refid="class_budget_execution_1_1_query_1a5a39dc2df9541d6a60b09920221e18ab" prot="public" virt="non-virtual"><scope>BudgetExecution::Query</scope><name>GetDeleteCommand</name></member>
+      <member refid="class_budget_execution_1_1_query_1a5f0e6668c978b1c7d7230aa112f419b9" prot="public" virt="non-virtual"><scope>BudgetExecution::Query</scope><name>GetInsertCommand</name></member>
+      <member refid="class_budget_execution_1_1_query_1a006c8025e6a924a715ddf39b2d318319" prot="private" virt="non-virtual"><scope>BudgetExecution::Query</scope><name>GetParamString</name></member>
+      <member refid="class_budget_execution_1_1_query_1ae05c20d3457912085b65bdca582603a2" prot="public" virt="non-virtual"><scope>BudgetExecution::Query</scope><name>GetSelectCommand</name></member>
+      <member refid="class_budget_execution_1_1_query_1aed90d4ac48595e34457d49f028145024" prot="private" virt="non-virtual"><scope>BudgetExecution::Query</scope><name>GetSelectCommand</name></member>
+      <member refid="class_budget_execution_1_1_query_1accd0e60cb6270827feecb302414adebc" prot="public" virt="non-virtual"><scope>BudgetExecution::Query</scope><name>GetSqlStatement</name></member>
+      <member refid="class_budget_execution_1_1_query_1a45b67ddb72a59906b07514370d3704bb" prot="public" virt="non-virtual"><scope>BudgetExecution::Query</scope><name>GetSqlStatement</name></member>
+      <member refid="class_budget_execution_1_1_query_1ad5bc920f07cf6295e149849ceeb09217" prot="public" virt="non-virtual"><scope>BudgetExecution::Query</scope><name>GetUpdateCommand</name></member>
+      <member refid="class_budget_execution_1_1_query_1a16d0f06b073a49f13abd16358d057228" prot="public" virt="non-virtual"><scope>BudgetExecution::Query</scope><name>InsertCommand</name></member>
+      <member refid="class_budget_execution_1_1_query_1aefdf5350661ac24f8acc3b62a4e714e4" prot="public" virt="non-virtual"><scope>BudgetExecution::Query</scope><name>Parameter</name></member>
+      <member refid="class_budget_execution_1_1_query_1ac499920ad4bc264d73432b4801a307e3" prot="public" virt="non-virtual"><scope>BudgetExecution::Query</scope><name>Provider</name></member>
+      <member refid="class_budget_execution_1_1_query_1a40722151896556e0cebb56b6b9d21aae" prot="public" virt="non-virtual"><scope>BudgetExecution::Query</scope><name>Query</name></member>
+      <member refid="class_budget_execution_1_1_query_1a1c140960194cb819d64804b0e3b97163" prot="public" virt="non-virtual"><scope>BudgetExecution::Query</scope><name>Query</name></member>
+      <member refid="class_budget_execution_1_1_query_1a7d8a0322cf47af235248f08480580ec3" prot="public" virt="non-virtual"><scope>BudgetExecution::Query</scope><name>Query</name></member>
+      <member refid="class_budget_execution_1_1_query_1a2180876228197201710b945375d67b03" prot="public" virt="non-virtual"><scope>BudgetExecution::Query</scope><name>Query</name></member>
+      <member refid="class_budget_execution_1_1_query_1abfa7178911f75837ac5eedf87723c48a" prot="public" virt="non-virtual"><scope>BudgetExecution::Query</scope><name>Reader</name></member>
+      <member refid="class_budget_execution_1_1_query_1ae2dbfcf6c29660ce7bcb25a671b8778f" prot="public" virt="non-virtual"><scope>BudgetExecution::Query</scope><name>SelectCommand</name></member>
+      <member refid="class_budget_execution_1_1_query_1aa4bd8f3191734c2c5f85ac0b009ed09e" prot="public" virt="non-virtual"><scope>BudgetExecution::Query</scope><name>SelectStatement</name></member>
+      <member refid="class_budget_execution_1_1_query_1a22c0f7dbd481c862fe5d871af8a6c791" prot="public" virt="non-virtual"><scope>BudgetExecution::Query</scope><name>Source</name></member>
+      <member refid="class_budget_execution_1_1_query_1a33700b7c169cac243d4e687f31d54d9a" prot="public" virt="non-virtual"><scope>BudgetExecution::Query</scope><name>Sql</name></member>
+      <member refid="class_budget_execution_1_1_query_1a471586b3bff13e12ddf37a21fddaf440" prot="public" virt="non-virtual"><scope>BudgetExecution::Query</scope><name>SqlStatement</name></member>
+      <member refid="class_budget_execution_1_1_query_1ac153d74efee7bf90d370b610f33fb363" prot="public" virt="non-virtual"><scope>BudgetExecution::Query</scope><name>TableName</name></member>
+      <member refid="class_budget_execution_1_1_query_1a1214b4a15526f0857181d183dd7bd7d3" prot="public" virt="non-virtual"><scope>BudgetExecution::Query</scope><name>UpdateCommand</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

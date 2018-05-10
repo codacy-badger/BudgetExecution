@@ -113,9 +113,9 @@ namespace BudgetExecution
             this.groupBox1.Controls.Add(this.BocFilter);
             this.groupBox1.Controls.Add(this.FundFilter);
             this.groupBox1.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.groupBox1.Location = new System.Drawing.Point(31, 334);
+            this.groupBox1.Location = new System.Drawing.Point(31, 314);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(473, 540);
+            this.groupBox1.Size = new System.Drawing.Size(473, 529);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Data Filters";
@@ -220,7 +220,7 @@ namespace BudgetExecution
             this.groupBox2.Controls.Add(this.metroPanel1);
             this.groupBox2.Controls.Add(this.groupBox4);
             this.groupBox2.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.groupBox2.Location = new System.Drawing.Point(554, 99);
+            this.groupBox2.Location = new System.Drawing.Point(558, 68);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(985, 775);
             this.groupBox2.TabIndex = 5;
@@ -239,7 +239,7 @@ namespace BudgetExecution
             this.groupBox5.ForeColor = System.Drawing.Color.LightSteelBlue;
             this.groupBox5.Location = new System.Drawing.Point(512, 430);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(430, 276);
+            this.groupBox5.Size = new System.Drawing.Size(430, 279);
             this.groupBox5.TabIndex = 8;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Changes";
@@ -872,7 +872,7 @@ namespace BudgetExecution
             this.groupBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.groupBox3.Controls.Add(this.DatabaseFilter);
             this.groupBox3.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.groupBox3.Location = new System.Drawing.Point(31, 99);
+            this.groupBox3.Location = new System.Drawing.Point(31, 54);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(473, 201);
             this.groupBox3.TabIndex = 8;
@@ -952,7 +952,6 @@ namespace BudgetExecution
             this.Name = "DataMaster";
             this.ShowIcon = false;
             this.Text = "DataMaster";
-            this.Load += new System.EventHandler(this.DataMaster_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox5.ResumeLayout(false);

@@ -18,8 +18,6 @@ namespace BudgetExecution
         public PrcAccountManager()
         {
             InitializeComponent();
-
-
         }
 
         private void tabControlAdv1_SelectedIndexChanged(object sender, EventArgs e)

@@ -1,0 +1,196 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="interface_budget_execution_1_1_i_data_builder" kind="interface" prot="public">
+    <compoundname>BudgetExecution::IDataBuilder</compoundname>
+    <derivedcompoundref refid="class_budget_execution_1_1_data_builder" prot="public" virt="non-virtual">BudgetExecution.DataBuilder</derivedcompoundref>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="interface_budget_execution_1_1_i_data_builder_1ab23568c2fdc6c773c5efd564b01e5293" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type><ref refid="class_budget_execution_1_1_query" kindref="compound">Query</ref></type>
+        <definition>Query BudgetExecution.IDataBuilder.DataQuery</definition>
+        <argsstring></argsstring>
+        <name>DataQuery</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/IDataBuilder.cs" line="9" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/IDataBuilder.cs" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="interface_budget_execution_1_1_i_data_builder_1a9434eb00014b48ffef760b5a16173a8a" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>DataSet</type>
+        <definition>DataSet BudgetExecution.IDataBuilder.DataSet</definition>
+        <argsstring></argsstring>
+        <name>DataSet</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/IDataBuilder.cs" line="10" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/IDataBuilder.cs" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="interface_budget_execution_1_1_i_data_builder_1a276eb6d632fcc96801d44fa0ed0caa8b" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>DataTable</type>
+        <definition>DataTable BudgetExecution.IDataBuilder.QueryTable</definition>
+        <argsstring></argsstring>
+        <name>QueryTable</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/IDataBuilder.cs" line="11" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/IDataBuilder.cs" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="interface_budget_execution_1_1_i_data_builder_1ad7dfd413177be750d164967b2f83c36e" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>DataRow[]</type>
+        <definition>DataRow [] BudgetExecution.IDataBuilder.DataRecords</definition>
+        <argsstring></argsstring>
+        <name>DataRecords</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/IDataBuilder.cs" line="12" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/IDataBuilder.cs" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="interface_budget_execution_1_1_i_data_builder_1a7d94ae7918fc7f414a607633f1757fac" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>decimal</type>
+        <definition>decimal BudgetExecution.IDataBuilder.GetQueryAverage</definition>
+        <argsstring>(DataTable table)</argsstring>
+        <name>GetQueryAverage</name>
+        <reimplementedby refid="class_budget_execution_1_1_data_builder_1a7c2f0bd488d2cd2a3bbb003b1a8ed44d">GetQueryAverage</reimplementedby>
+        <param>
+          <type>DataTable</type>
+          <declname>table</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/IDataBuilder.cs" line="15" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_budget_execution_1_1_i_data_builder_1a4236c872c4673f1891d39101ef88b247" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int BudgetExecution.IDataBuilder.GetQueryCount</definition>
+        <argsstring>(DataTable table)</argsstring>
+        <name>GetQueryCount</name>
+        <reimplementedby refid="class_budget_execution_1_1_data_builder_1ad4e29e2990a6f2385c27e64e05eee900">GetQueryCount</reimplementedby>
+        <param>
+          <type>DataTable</type>
+          <declname>table</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/IDataBuilder.cs" line="16" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_budget_execution_1_1_i_data_builder_1a8d23c11704b9504e67f54bd2abe78353" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>decimal[]</type>
+        <definition>decimal [] BudgetExecution.IDataBuilder.GetQueryMetrics</definition>
+        <argsstring>(DataTable table)</argsstring>
+        <name>GetQueryMetrics</name>
+        <reimplementedby refid="class_budget_execution_1_1_data_builder_1a587ac4f67570cead7e562f5c304af085">GetQueryMetrics</reimplementedby>
+        <param>
+          <type>DataTable</type>
+          <declname>table</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/IDataBuilder.cs" line="17" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_budget_execution_1_1_i_data_builder_1a4373a76534c8978d0cb1620571fe652f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="interface_budget_execution_1_1_i_data_builder_1a9434eb00014b48ffef760b5a16173a8a" kindref="member">DataSet</ref></type>
+        <definition>DataSet BudgetExecution.IDataBuilder.GetDataSet</definition>
+        <argsstring>()</argsstring>
+        <name>GetDataSet</name>
+        <reimplementedby refid="class_budget_execution_1_1_data_builder_1ab52d5daaee17e2b657efa988c70a337b">GetDataSet</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/IDataBuilder.cs" line="18" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_budget_execution_1_1_i_data_builder_1a7227808d8d848bf4518340e30bc77c45" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>decimal</type>
+        <definition>decimal BudgetExecution.IDataBuilder.GetQueryTotal</definition>
+        <argsstring>(DataTable table)</argsstring>
+        <name>GetQueryTotal</name>
+        <reimplementedby refid="class_budget_execution_1_1_data_builder_1a6fee2c7b4f7932c548dac5bc51f2c124">GetQueryTotal</reimplementedby>
+        <param>
+          <type>DataTable</type>
+          <declname>table</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/IDataBuilder.cs" line="19" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_budget_execution_1_1_i_data_builder_1a6aa013284f235d41656fa0b6105c9dac" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DataRow[]</type>
+        <definition>DataRow [] BudgetExecution.IDataBuilder.GetRecords</definition>
+        <argsstring>(DataTable table)</argsstring>
+        <name>GetRecords</name>
+        <reimplementedby refid="class_budget_execution_1_1_data_builder_1ad082363ee769a7353b92fca827c86cc0">GetRecords</reimplementedby>
+        <param>
+          <type>DataTable</type>
+          <declname>table</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/IDataBuilder.cs" line="20" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="125">
+        <label>BudgetExecution.IDataBuilder</label>
+        <link refid="interface_budget_execution_1_1_i_data_builder"/>
+      </node>
+      <node id="126">
+        <label>BudgetExecution.DataBuilder</label>
+        <link refid="class_budget_execution_1_1_data_builder"/>
+        <childnode refid="125" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/IDataBuilder.cs" line="6" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/IDataBuilder.cs" bodystart="5" bodyend="21"/>
+    <listofallmembers>
+      <member refid="interface_budget_execution_1_1_i_data_builder_1ab23568c2fdc6c773c5efd564b01e5293" prot="public" virt="non-virtual"><scope>BudgetExecution::IDataBuilder</scope><name>DataQuery</name></member>
+      <member refid="interface_budget_execution_1_1_i_data_builder_1ad7dfd413177be750d164967b2f83c36e" prot="public" virt="non-virtual"><scope>BudgetExecution::IDataBuilder</scope><name>DataRecords</name></member>
+      <member refid="interface_budget_execution_1_1_i_data_builder_1a9434eb00014b48ffef760b5a16173a8a" prot="public" virt="non-virtual"><scope>BudgetExecution::IDataBuilder</scope><name>DataSet</name></member>
+      <member refid="interface_budget_execution_1_1_i_data_builder_1a4373a76534c8978d0cb1620571fe652f" prot="public" virt="non-virtual"><scope>BudgetExecution::IDataBuilder</scope><name>GetDataSet</name></member>
+      <member refid="interface_budget_execution_1_1_i_data_builder_1a7d94ae7918fc7f414a607633f1757fac" prot="public" virt="non-virtual"><scope>BudgetExecution::IDataBuilder</scope><name>GetQueryAverage</name></member>
+      <member refid="interface_budget_execution_1_1_i_data_builder_1a4236c872c4673f1891d39101ef88b247" prot="public" virt="non-virtual"><scope>BudgetExecution::IDataBuilder</scope><name>GetQueryCount</name></member>
+      <member refid="interface_budget_execution_1_1_i_data_builder_1a8d23c11704b9504e67f54bd2abe78353" prot="public" virt="non-virtual"><scope>BudgetExecution::IDataBuilder</scope><name>GetQueryMetrics</name></member>
+      <member refid="interface_budget_execution_1_1_i_data_builder_1a7227808d8d848bf4518340e30bc77c45" prot="public" virt="non-virtual"><scope>BudgetExecution::IDataBuilder</scope><name>GetQueryTotal</name></member>
+      <member refid="interface_budget_execution_1_1_i_data_builder_1a6aa013284f235d41656fa0b6105c9dac" prot="public" virt="non-virtual"><scope>BudgetExecution::IDataBuilder</scope><name>GetRecords</name></member>
+      <member refid="interface_budget_execution_1_1_i_data_builder_1a276eb6d632fcc96801d44fa0ed0caa8b" prot="public" virt="non-virtual"><scope>BudgetExecution::IDataBuilder</scope><name>QueryTable</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -16,9 +16,9 @@ namespace BudgetExecution
         public PrcMetric(DataBuilder data)
         {
             Data = data;
-            Table = Data.QueryTable;
+            DataSet = Data.DataSet;
+            Table = Data.GetData();
             ProgramElements = Data.GetProgramElements(Table);
-            DataSet = Table.DataSet;
             Total = GetTotals(Table);
             Count = Table.Rows.Count;
             Average = GetBaseAverage(Table);
@@ -39,21 +39,21 @@ namespace BudgetExecution
             ObjectiveMetrics = GetMetrics(Table, PrcField.ObjectiveName);
             if (Data.Source == Source.DivisionAccount && Data.Parameter == null)
             {
-                DivisionTotals = GetDataTotals(Table, PrcField.Division);
-                DivisionMetrics = GetMetrics(Table, PrcField.Division);
+                DivisionTotals = GetDataTotals(Table, PrcField.RC);
+                DivisionMetrics = GetMetrics(Table, PrcField.RC);
             }
             if (Data.Source == Source.PRC)
             {
                 var table = new DivisionAuthority().Table;
-                DivisionTotals = GetDataTotals(table, PrcField.Division);
-                DivisionMetrics = GetMetrics(table, PrcField.Division);
+                DivisionTotals = GetDataTotals(table, PrcField.RC);
+                DivisionMetrics = GetMetrics(table, PrcField.RC);
             }
         }
         public PrcMetric(DataBuilder data, PrcField prcfilter, string filter)
         {
             Data = data;
             DataSet = data.DataSet;
-            Table = FilterTable(data.QueryTable, prcfilter, filter);
+            Table = FilterTable(Data.GetData(), prcfilter, filter);
             ProgramElements = GetProgramElements(Table);
             Total = GetTotals(Table);
             Count = Table.Rows.Count;
@@ -75,14 +75,14 @@ namespace BudgetExecution
             ObjectiveMetrics = GetMetrics(Table, PrcField.ObjectiveName);
             if (Data.Source == Source.DivisionAccount)
             {
-                DivisionTotals = GetDataTotals(Data.QueryTable, PrcField.Division);
-                DivisionMetrics = GetMetrics(Data.QueryTable, PrcField.Division);
+                DivisionTotals = GetDataTotals(Data.QueryTable, PrcField.RC);
+                DivisionMetrics = GetMetrics(Data.QueryTable, PrcField.RC);
             }
             if (Data.Source == Source.PRC)
             {
                 var table = new DivisionAuthority().Table;
-                DivisionTotals = GetDataTotals(table, PrcField.Division);
-                DivisionMetrics = GetMetrics(table, PrcField.Division);
+                DivisionTotals = GetDataTotals(table, PrcField.RC);
+                DivisionMetrics = GetMetrics(table, PrcField.RC);
             }
         }
         public PrcMetric(DataTable table, PrcField prcfilter, string filter)
