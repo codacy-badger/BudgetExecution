@@ -50,7 +50,7 @@ namespace BudgetExecution
         public FlowLayoutPanel Panel { get; set; }
         public DataTable DataTable { get; set; }
         public Dictionary<string, object> SearchParameter { get; set; }
-        Func<DataTable, PrcField, string> TableFilter;
+        internal Func<DataTable, PrcField, string> TableFilter { get; set; }
 
         //Methods
         public decimal GetAverage(DataTable table)

@@ -57,6 +57,8 @@ namespace BudgetExecution
             Table = Data.QueryTable;
             Metric = new PrcMetric(Data);
             DataMetrics = Metric.GetChartMetrics(Table, filter);
+            DataSeries = GetSeriesTotals(GetSingleValue(DataMetrics, Value));
+            DataSeries.Type = SeriesType;
             if (SeriesType == ChartSeriesType.Pie)
             {
                 Chart.Legend.Visible = true;
@@ -66,11 +68,10 @@ namespace BudgetExecution
                 Chart.Series[0].Style.DisplayText = true;
                 Chart.Series[0].PointsToolTipFormat = "Funding:{4:N}";
                 var bm = new ChartDataBindModel(Data.BindingSource);
-                bm.YNames = new string[] { filter.ToString() };
+                bm.XName = filter.ToString();
+                bm.YNames = new string[] { "Amount"};
                 Chart.Series[0].SeriesModel = bm;
             }
-            DataSeries = GetSeriesTotals(GetSingleValue(DataMetrics, Value));
-            DataSeries.Type = SeriesType;
             ConfigureSeries(DataSeries, Value);
             Chart.Series.Add(DataSeries);
             Configure3DMode(Chart);
@@ -87,6 +88,8 @@ namespace BudgetExecution
             DataMetrics = Metric.GetChartMetrics(Table, field);
             if (Chart.Series != null)
                 Chart.Series.Clear();
+            DataSeries = GetSeriesTotals(GetSingleValue(DataMetrics, Value));
+            DataSeries.Type = SeriesType;
             if (SeriesType == ChartSeriesType.Pie)
             {
                 Chart.Legend.Visible = true;
@@ -96,11 +99,10 @@ namespace BudgetExecution
                 Chart.Series[0].Style.DisplayText = true;
                 Chart.Series[0].PointsToolTipFormat = "Funding:{4:N}";
                 var bm = new ChartDataBindModel(Data.BindingSource);
-                bm.YNames = new string[] { field.ToString() };
+                bm.XName = field.ToString();
+                bm.YNames = new string[] { "Amount" };
                 Chart.Series[0].SeriesModel = bm;
             }
-            DataSeries = GetSeriesTotals(GetSingleValue(DataMetrics, Value));
-            DataSeries.Type = SeriesType;
             ConfigureSeries(DataSeries, Value);
             Chart.Series.Add(DataSeries);
             Configure3DMode(Chart);

@@ -114,22 +114,8 @@ namespace BudgetExecution
                 GridBocFilter.SelectionChangeCommitted += GridBocFilter_ItemSelected;
                 SummaryTabControl.SelectedIndexChanged += SummaryTabPage_TabSelected;
                 FundChart = new BudgetChart(FundChart, Data, PrcField.FundName).Activate();
+                SummaryTabControl.SelectedIndex = 1;
 
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message + ex.StackTrace);
-            }
-        }
-        private void GridBocFilter_ItemSelected(object sender, EventArgs e)
-        {
-            try
-            {
-                var boc = sender as MetroSetComboBox;
-                var filter = boc.SelectedItem.ToString();
-                BindingSource.Filter = $"FundName = '{GridFundFilter.SelectedItem.ToString()}' AND BocName = '{GridBocFilter.SelectedItem.ToString()}'";
-                lblTotal.Text = GetTotal(GridFundFilter.SelectedItem.ToString(), filter).ToString("c");
-                lblCount.Text = GetCount(GridFundFilter.SelectedItem.ToString(), filter).ToString();
             }
             catch (Exception ex)
             {
@@ -148,6 +134,21 @@ namespace BudgetExecution
                 lblCount.Text = GetCount(fund).ToString();
                 lblTotal.Text = GetTotal(fund).ToString("c");
                 PopulateGridBocFilterItems();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + ex.StackTrace);
+            }
+        }
+        private void GridBocFilter_ItemSelected(object sender, EventArgs e)
+        {
+            try
+            {
+                var boc = sender as MetroSetComboBox;
+                var filter = boc.SelectedItem.ToString();
+                BindingSource.Filter = $"FundName = '{GridFundFilter.SelectedItem.ToString()}' AND BocName = '{GridBocFilter.SelectedItem.ToString()}'";
+                lblTotal.Text = GetTotal(GridFundFilter.SelectedItem.ToString(), filter).ToString("c");
+                lblCount.Text = GetCount(GridFundFilter.SelectedItem.ToString(), filter).ToString();
             }
             catch (Exception ex)
             {

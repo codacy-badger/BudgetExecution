@@ -34,7 +34,7 @@ namespace BudgetExecution
             DataQuery = new Query(source, param);
             Source = DataQuery.Source;
             DataSet = GetDataSet();
-            QueryTable = DataSet.Tables[0];
+            QueryTable = GetData();
             ProgramElements = GetProgramElements(QueryTable);
             BindingSource = new BindingSource();
             BindingSource.DataSource = QueryTable;

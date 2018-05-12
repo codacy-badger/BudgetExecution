@@ -53,7 +53,7 @@ namespace BudgetExecution
         {
             Data = data;
             DataSet = data.DataSet;
-            Table = FilterTable(Data.GetData(), prcfilter, filter);
+            Table = Info.FilterTable(Data.QueryTable, prcfilter, filter);
             ProgramElements = GetProgramElements(Table);
             Total = GetTotals(Table);
             Count = Table.Rows.Count;
@@ -87,7 +87,7 @@ namespace BudgetExecution
         }
         public PrcMetric(DataTable table, PrcField prcfilter, string filter)
         {
-            Table = FilterTable(table, prcfilter, filter);
+            Table = Info.FilterTable(table, prcfilter, filter);
             ProgramElements = GetProgramElements(Table);
             Total = GetTotals(Table);
             Count = Table.Rows.Count;
@@ -136,19 +136,6 @@ namespace BudgetExecution
         public Dictionary<string, decimal> ProgramProjectTotals { get; set; }
 
         //Methods
-        public DataTable FilterTable(DataTable table, PrcField prcfilter, string filter)
-        {
-            try
-            {
-                return table.AsEnumerable().Where(p => p.Field<string>(prcfilter.ToString()).Equals(filter))
-                    .Select(p => p).CopyToDataTable();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
-                return null;
-            }
-        }
         public decimal GetBaseAverage(DataTable table)
         {
             try

@@ -93,7 +93,7 @@ namespace BudgetExecution
             this.DataTile.Name = "DataTile";
             this.DataTile.PulseScale = 2;
             this.DataTile.ShowBanner = true;
-            this.DataTile.Size = new System.Drawing.Size(531, 171);
+            this.DataTile.Size = new System.Drawing.Size(549, 171);
             this.DataTile.TabIndex = 20;
             textItem4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             textItem4.HubTile = this.DataTile;
@@ -128,7 +128,7 @@ namespace BudgetExecution
             this.SummaryTile.PulseScale = 4;
             this.SummaryTile.ShowBanner = true;
             this.SummaryTile.ShowRotateTileBanner = true;
-            this.SummaryTile.Size = new System.Drawing.Size(531, 169);
+            this.SummaryTile.Size = new System.Drawing.Size(561, 169);
             this.SummaryTile.TabIndex = 23;
             textItem8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             textItem8.HubTile = this.SummaryTile;
@@ -269,8 +269,8 @@ namespace BudgetExecution
             | System.Windows.Forms.AnchorStyles.Right)));
             this.RegionSummaryButton.BackColor = System.Drawing.Color.Black;
             this.RegionSummaryButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.RegionSummaryButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSteelBlue;
-            this.RegionSummaryButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Navy;
+            this.RegionSummaryButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.AliceBlue;
+            this.RegionSummaryButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.RegionSummaryButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.RegionSummaryButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RegionSummaryButton.ForeColor = System.Drawing.Color.LightSteelBlue;
@@ -291,8 +291,8 @@ namespace BudgetExecution
             this.DataButton.BackColor = System.Drawing.Color.Black;
             this.DataButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.DataButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.DataButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSteelBlue;
-            this.DataButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Navy;
+            this.DataButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.AliceBlue;
+            this.DataButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.DataButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.DataButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DataButton.ForeColor = System.Drawing.Color.LightSteelBlue;
@@ -313,14 +313,14 @@ namespace BudgetExecution
             // 
             this.TransferButton.BackColor = System.Drawing.Color.Black;
             this.TransferButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.TransferButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSteelBlue;
-            this.TransferButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Navy;
+            this.TransferButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.AliceBlue;
+            this.TransferButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.TransferButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.TransferButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TransferButton.ForeColor = System.Drawing.Color.LightSteelBlue;
             this.TransferButton.Image = ((System.Drawing.Image)(resources.GetObject("TransferButton.Image")));
             this.TransferButton.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.TransferButton.Location = new System.Drawing.Point(1342, 665);
+            this.TransferButton.Location = new System.Drawing.Point(1359, 665);
             this.TransferButton.Margin = new System.Windows.Forms.Padding(2);
             this.TransferButton.Name = "TransferButton";
             this.TransferButton.Size = new System.Drawing.Size(170, 104);
@@ -335,8 +335,8 @@ namespace BudgetExecution
             // 
             this.DocumentButton.BackColor = System.Drawing.Color.Black;
             this.DocumentButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.DocumentButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSteelBlue;
-            this.DocumentButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Navy;
+            this.DocumentButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.AliceBlue;
+            this.DocumentButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.DocumentButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.DocumentButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DocumentButton.ForeColor = System.Drawing.Color.LightSteelBlue;
@@ -357,8 +357,8 @@ namespace BudgetExecution
             // 
             this.DivisionSummaryButton.BackColor = System.Drawing.Color.Black;
             this.DivisionSummaryButton.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.DivisionSummaryButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSteelBlue;
-            this.DivisionSummaryButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Navy;
+            this.DivisionSummaryButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.AliceBlue;
+            this.DivisionSummaryButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.DivisionSummaryButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.DivisionSummaryButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DivisionSummaryButton.ForeColor = System.Drawing.Color.LightSteelBlue;
@@ -378,8 +378,8 @@ namespace BudgetExecution
             // 
             this.DivisionBtn.BackColor = System.Drawing.Color.Black;
             this.DivisionBtn.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.DivisionBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSteelBlue;
-            this.DivisionBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Navy;
+            this.DivisionBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.AliceBlue;
+            this.DivisionBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.DivisionBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.DivisionBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DivisionBtn.ForeColor = System.Drawing.Color.LightSteelBlue;
@@ -388,7 +388,7 @@ namespace BudgetExecution
             this.DivisionBtn.Location = new System.Drawing.Point(1353, 296);
             this.DivisionBtn.Margin = new System.Windows.Forms.Padding(2);
             this.DivisionBtn.Name = "DivisionBtn";
-            this.DivisionBtn.Size = new System.Drawing.Size(165, 102);
+            this.DivisionBtn.Size = new System.Drawing.Size(189, 102);
             this.DivisionBtn.TabIndex = 55;
             this.DivisionBtn.Text = "\r\n\r\nDivision Allocations";
             this.DivisionBtn.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
