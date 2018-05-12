@@ -64,6 +64,7 @@ namespace BudgetExecution
         public DataTable Table { get; }
         public Dictionary<string, string[]> ProgramElements { get; }
         public decimal[] Measures { get; }
+        public decimal Amount { get; }
         public decimal Total { get; }
         public int Count { get; }
         public decimal Average { get; }

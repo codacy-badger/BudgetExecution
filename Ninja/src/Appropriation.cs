@@ -44,6 +44,7 @@ namespace BudgetExecution
         }
 
         //Properties
+        public decimal Amount { get; }
         public decimal Average { get; }
         public string[] BOC { get; }
         public string[] BocCodes { get; }

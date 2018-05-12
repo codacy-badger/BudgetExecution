@@ -60,19 +60,13 @@ namespace BudgetExecution
             this.metroSetComboBox4 = new MetroSet_UI.Controls.MetroSetComboBox();
             this.metroSetComboBox1 = new MetroSet_UI.Controls.MetroSetComboBox();
             this.GridNavigator = new System.Windows.Forms.BindingNavigator(this.components);
-            this.AddNewButton = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorCountItem1 = new System.Windows.Forms.ToolStripLabel();
-            this.DeleteButton = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMoveFirstItem1 = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem1 = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem1 = new System.Windows.Forms.ToolStripTextBox();
             this.bindingNavigatorSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorMoveNextItem1 = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMoveLastItem1 = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator5 = new System.Windows.Forms.ToolStripSeparator();
-            this.CopyButton = new System.Windows.Forms.ToolStripButton();
-            this.SaveButton = new System.Windows.Forms.ToolStripButton();
             this.metroSetComboBox2 = new MetroSet_UI.Controls.MetroSetComboBox();
             this.metroSetTextBox1 = new MetroSet_UI.Controls.MetroSetTextBox();
             this.E6DataGrid = new Syncfusion.Windows.Forms.Grid.GridDataBoundGrid();
@@ -113,7 +107,7 @@ namespace BudgetExecution
             this.groupBox1.Controls.Add(this.BocFilter);
             this.groupBox1.Controls.Add(this.FundFilter);
             this.groupBox1.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.groupBox1.Location = new System.Drawing.Point(31, 314);
+            this.groupBox1.Location = new System.Drawing.Point(31, 300);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(473, 529);
             this.groupBox1.TabIndex = 2;
@@ -169,7 +163,7 @@ namespace BudgetExecution
             this.BocFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.BocFilter.FormattingEnabled = true;
             this.BocFilter.ItemHeight = 30;
-            this.BocFilter.Location = new System.Drawing.Point(66, 187);
+            this.BocFilter.Location = new System.Drawing.Point(66, 184);
             this.BocFilter.MaxDropDownItems = 20;
             this.BocFilter.Name = "BocFilter";
             this.BocFilter.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
@@ -220,7 +214,7 @@ namespace BudgetExecution
             this.groupBox2.Controls.Add(this.metroPanel1);
             this.groupBox2.Controls.Add(this.groupBox4);
             this.groupBox2.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.groupBox2.Location = new System.Drawing.Point(558, 68);
+            this.groupBox2.Location = new System.Drawing.Point(558, 54);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(985, 775);
             this.groupBox2.TabIndex = 5;
@@ -542,29 +536,23 @@ namespace BudgetExecution
             // 
             // GridNavigator
             // 
-            this.GridNavigator.AddNewItem = this.AddNewButton;
+            this.GridNavigator.AddNewItem = null;
             this.GridNavigator.BackColor = System.Drawing.Color.Transparent;
             this.GridNavigator.CountItem = this.bindingNavigatorCountItem1;
-            this.GridNavigator.DeleteItem = this.DeleteButton;
+            this.GridNavigator.DeleteItem = null;
             this.GridNavigator.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.GridNavigator.ImageScalingSize = new System.Drawing.Size(24, 20);
             this.GridNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.bindingNavigatorMoveFirstItem1,
             this.bindingNavigatorMovePreviousItem1,
             this.bindingNavigatorSeparator3,
             this.bindingNavigatorPositionItem1,
             this.bindingNavigatorCountItem1,
             this.bindingNavigatorSeparator4,
             this.bindingNavigatorMoveNextItem1,
-            this.bindingNavigatorMoveLastItem1,
-            this.bindingNavigatorSeparator5,
-            this.AddNewButton,
-            this.CopyButton,
-            this.SaveButton,
-            this.DeleteButton});
+            this.bindingNavigatorSeparator5});
             this.GridNavigator.Location = new System.Drawing.Point(3, 248);
-            this.GridNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem1;
-            this.GridNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem1;
+            this.GridNavigator.MoveFirstItem = null;
+            this.GridNavigator.MoveLastItem = null;
             this.GridNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem1;
             this.GridNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem1;
             this.GridNavigator.Name = "GridNavigator";
@@ -573,15 +561,6 @@ namespace BudgetExecution
             this.GridNavigator.TabIndex = 3;
             this.GridNavigator.Text = "bindingNavigator1";
             // 
-            // AddNewButton
-            // 
-            this.AddNewButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.AddNewButton.Name = "AddNewButton";
-            this.AddNewButton.RightToLeftAutoMirrorImage = true;
-            this.AddNewButton.Size = new System.Drawing.Size(23, 25);
-            this.AddNewButton.Text = "Add new";
-            this.AddNewButton.ToolTipText = "Adds new blank record";
-            // 
             // bindingNavigatorCountItem1
             // 
             this.bindingNavigatorCountItem1.Name = "bindingNavigatorCountItem1";
@@ -589,29 +568,13 @@ namespace BudgetExecution
             this.bindingNavigatorCountItem1.Text = "of {0}";
             this.bindingNavigatorCountItem1.ToolTipText = "Total number of items";
             // 
-            // DeleteButton
-            // 
-            this.DeleteButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.DeleteButton.Name = "DeleteButton";
-            this.DeleteButton.RightToLeftAutoMirrorImage = true;
-            this.DeleteButton.Size = new System.Drawing.Size(23, 25);
-            this.DeleteButton.Text = "Delete";
-            this.DeleteButton.ToolTipText = "Delete: Removes Account from Database";
-            // 
-            // bindingNavigatorMoveFirstItem1
-            // 
-            this.bindingNavigatorMoveFirstItem1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveFirstItem1.Name = "bindingNavigatorMoveFirstItem1";
-            this.bindingNavigatorMoveFirstItem1.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem1.Size = new System.Drawing.Size(23, 25);
-            this.bindingNavigatorMoveFirstItem1.Text = "Move first";
-            // 
             // bindingNavigatorMovePreviousItem1
             // 
             this.bindingNavigatorMovePreviousItem1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMovePreviousItem1.Image = global::BudgetExecution.Properties.Resources.LeftArrow;
             this.bindingNavigatorMovePreviousItem1.Name = "bindingNavigatorMovePreviousItem1";
             this.bindingNavigatorMovePreviousItem1.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem1.Size = new System.Drawing.Size(23, 25);
+            this.bindingNavigatorMovePreviousItem1.Size = new System.Drawing.Size(28, 25);
             this.bindingNavigatorMovePreviousItem1.Text = "Move previous";
             // 
             // bindingNavigatorSeparator3
@@ -640,41 +603,16 @@ namespace BudgetExecution
             // bindingNavigatorMoveNextItem1
             // 
             this.bindingNavigatorMoveNextItem1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveNextItem1.Image = global::BudgetExecution.Properties.Resources.RightArrow;
             this.bindingNavigatorMoveNextItem1.Name = "bindingNavigatorMoveNextItem1";
             this.bindingNavigatorMoveNextItem1.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem1.Size = new System.Drawing.Size(23, 25);
+            this.bindingNavigatorMoveNextItem1.Size = new System.Drawing.Size(28, 25);
             this.bindingNavigatorMoveNextItem1.Text = "Move next";
-            // 
-            // bindingNavigatorMoveLastItem1
-            // 
-            this.bindingNavigatorMoveLastItem1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveLastItem1.Name = "bindingNavigatorMoveLastItem1";
-            this.bindingNavigatorMoveLastItem1.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem1.Size = new System.Drawing.Size(23, 25);
-            this.bindingNavigatorMoveLastItem1.Text = "Move last";
             // 
             // bindingNavigatorSeparator5
             // 
             this.bindingNavigatorSeparator5.Name = "bindingNavigatorSeparator5";
             this.bindingNavigatorSeparator5.Size = new System.Drawing.Size(6, 28);
-            // 
-            // CopyButton
-            // 
-            this.CopyButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.CopyButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.CopyButton.Name = "CopyButton";
-            this.CopyButton.Size = new System.Drawing.Size(23, 25);
-            this.CopyButton.Text = "toolStripButton3";
-            this.CopyButton.ToolTipText = "Creates new record using current as template";
-            // 
-            // SaveButton
-            // 
-            this.SaveButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.SaveButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.SaveButton.Name = "SaveButton";
-            this.SaveButton.Size = new System.Drawing.Size(23, 25);
-            this.SaveButton.Text = "toolStripButton4";
-            this.SaveButton.ToolTipText = "Saves Current Changes to Database";
             // 
             // metroSetComboBox2
             // 
@@ -995,19 +933,13 @@ namespace BudgetExecution
         private MetroFramework.Controls.MetroPanel metroPanel1;
         private System.Windows.Forms.ToolStripButton toolStripButton2;
         private System.Windows.Forms.BindingNavigator GridNavigator;
-        private System.Windows.Forms.ToolStripButton AddNewButton;
         private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem1;
-        private System.Windows.Forms.ToolStripButton DeleteButton;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveFirstItem1;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMovePreviousItem1;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator3;
         private System.Windows.Forms.ToolStripTextBox bindingNavigatorPositionItem1;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator4;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem1;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem1;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator5;
-        private System.Windows.Forms.ToolStripButton CopyButton;
-        private System.Windows.Forms.ToolStripButton SaveButton;
         private System.Windows.Forms.GroupBox groupBox3;
         private MetroSet_UI.Controls.MetroSetComboBox DatabaseFilter;
         private System.Windows.Forms.BindingSource BindingSource;

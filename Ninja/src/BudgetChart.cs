@@ -25,6 +25,7 @@ namespace BudgetExecution
             DataSeries.Type = SeriesType;
             Chart.Series.Add(DataSeries);
             ConfigureLargeNumberSeries(DataSeries);
+            ConfigurePrimaryAxisLabels(Chart);
             Configure3DMode(Chart);
         }
         public BudgetChart(ChartControl chart, DataBuilder data, PrcField filter)
@@ -41,6 +42,7 @@ namespace BudgetExecution
             DataSeries = GetSeriesTotals(DataTotals);
             DataSeries.Type = SeriesType;
             ConfigureLargeNumberSeries(DataSeries);
+            ConfigurePrimaryAxisLabels(Chart);
             Chart.Series.Add(DataSeries);
             Configure3DMode(Chart);
 
@@ -57,21 +59,10 @@ namespace BudgetExecution
             Table = Data.QueryTable;
             Metric = new PrcMetric(Data);
             DataMetrics = Metric.GetChartMetrics(Table, filter);
-            DataSeries = GetSeriesTotals(GetSingleValue(DataMetrics, Value));
+            DataSeries = GetSeriesTotals(GetMeasure(DataMetrics, Value));
             DataSeries.Type = SeriesType;
             if (SeriesType == ChartSeriesType.Pie)
-            {
-                Chart.Legend.Visible = true;
-                Chart.Series[0].ExplodedAll = true;
-                Chart.Series[0].ExplosionOffset = 20f;
-                Chart.Series[0].ShowTicks = true;
-                Chart.Series[0].Style.DisplayText = true;
-                Chart.Series[0].PointsToolTipFormat = "Funding:{4:N}";
-                var bm = new ChartDataBindModel(Data.BindingSource);
-                bm.XName = filter.ToString();
-                bm.YNames = new string[] { "Amount"};
-                Chart.Series[0].SeriesModel = bm;
-            }
+                ConfigurePieChart(Chart);
             ConfigureSeries(DataSeries, Value);
             Chart.Series.Add(DataSeries);
             Configure3DMode(Chart);
@@ -88,21 +79,10 @@ namespace BudgetExecution
             DataMetrics = Metric.GetChartMetrics(Table, field);
             if (Chart.Series != null)
                 Chart.Series.Clear();
-            DataSeries = GetSeriesTotals(GetSingleValue(DataMetrics, Value));
+            DataSeries = GetSeriesTotals(GetMeasure(DataMetrics, Value));
             DataSeries.Type = SeriesType;
             if (SeriesType == ChartSeriesType.Pie)
-            {
-                Chart.Legend.Visible = true;
-                Chart.Series[0].ExplodedAll = true;
-                Chart.Series[0].ExplosionOffset = 20f;
-                Chart.Series[0].ShowTicks = true;
-                Chart.Series[0].Style.DisplayText = true;
-                Chart.Series[0].PointsToolTipFormat = "Funding:{4:N}";
-                var bm = new ChartDataBindModel(Data.BindingSource);
-                bm.XName = field.ToString();
-                bm.YNames = new string[] { "Amount" };
-                Chart.Series[0].SeriesModel = bm;
-            }
+                ConfigurePieChart(Chart);
             ConfigureSeries(DataSeries, Value);
             Chart.Series.Add(DataSeries);
             Configure3DMode(Chart);
@@ -119,19 +99,15 @@ namespace BudgetExecution
             DataMetrics = Metric.GetChartMetrics(Table, chartuple.Item1);
             if (Chart.Series != null)
                 Chart.Series.Clear();
-            DataSeries = GetSeriesTotals(GetSingleValue(DataMetrics, Value));
+            DataSeries = GetSeriesTotals(GetMeasure(DataMetrics, Value));
             DataSeries.Type = SeriesType;
+            if (SeriesType == ChartSeriesType.Pie)
+                ConfigurePieChart(Chart);
             ConfigureSeries(DataSeries, Value);
             Chart.Series.Add(DataSeries);
             ConfigureToolTip(DataSeries);
             Configure3DMode(Chart);
             Chart.ShowToolTips = true;
-            if (SeriesType == ChartSeriesType.Pie)
-            {
-                Chart.Legend.Visible = true;
-                Chart.Series[0].ExplodedAll = true;
-                Chart.Series[0].ExplosionOffset = 20f;
-            }
         }
         public BudgetChart(ChartControl chart, DataTable table, Tuple<PrcField, Stat, ChartSeriesType> chartuple)
         {
@@ -143,7 +119,7 @@ namespace BudgetExecution
             DataMetrics = Metric.GetChartMetrics(Table, chartuple.Item1);
             if (Chart.Series != null)
                 Chart.Series.Clear();
-            DataSeries = GetSeriesTotals(GetSingleValue(DataMetrics, Value));
+            DataSeries = GetSeriesTotals(GetMeasure(DataMetrics, Value));
             ConfigureSeries(DataSeries, Value);
             Chart.Series.Add(DataSeries);
             Configure3DMode(Chart);
@@ -158,7 +134,7 @@ namespace BudgetExecution
             Value = Stat.Total;
             if (Chart.Series != null)
                 Chart.Series.Clear();
-            DataSeries = GetSeriesTotals(GetSingleValue(DataMetrics, Value));
+            DataSeries = GetSeriesTotals(GetMeasure(DataMetrics, Value));
             DataSeries.Type = SeriesType;
             Chart.Series.Add(DataSeries);
             ConfigureSeries(DataSeries, Value);
@@ -167,74 +143,29 @@ namespace BudgetExecution
 
         //Properties
         public string[] AxisTitle { get; set; }
-        public BindingSource BindingSource { get; set; }
         public ChartControl Chart { get; set; }
         public DataBuilder Data { get; }
+        public PrcMetric Metric { get; }
+        public BindingSource BindingSource { get; set; }
         public Dictionary<string, double[]> DataMetrics { get; set; }
         public ChartSeries DataSeries { get; set; }
         public Dictionary<string, double> DataTotals { get; set; }
         public int[] Dimension { get; set; }
         public PrcField Filter { get; }
+        public ChartSeriesType SeriesType { get; set; }
+        public Stat Value { get; set; }
         public Dictionary<string, double[]> InputMetrics { get; set; }
         public Dictionary<string, double> InputTotals { get; set; }
         public ChartLegend Legend { get; set; }
         public string[] MainTitle { get; set; }
-        public PrcMetric Metric { get; }
         public ChartDataBindModel Model { get; set; }
-        public ChartSeriesType SeriesType { get; set; }
         public DataTable Table { get; set; }
-        public Stat Value { get; set; }
         private double Total { get; }
 
         //Methods
         internal ChartControl Activate()
         {
             return Chart;
-        }
-        private ChartSeries GetAccountSeries(KeyValuePair<string, double[]> data)
-        {
-            try
-            {
-                var series = new ChartSeries("Accounts", SeriesType);
-                series.Points.Add(data.Key, data.Value[1]);
-                series.Style.TextFormat = "{0:N}";
-                return series;
-            }
-            catch (System.Exception e)
-            {
-                MessageBox.Show(e.Message + e.StackTrace);
-                return null;
-            }
-        }
-        private ChartSeries GetAverageSeries(KeyValuePair<string, double[]> data)
-        {
-            try
-            {
-                var series = new ChartSeries("Average", SeriesType);
-                series.Points.Add(data.Key, data.Value[2]);
-                return series;
-            }
-            catch (System.Exception e)
-            {
-                MessageBox.Show(e.Message + e.StackTrace);
-                return null;
-            }
-        }
-        private ChartSeries GetRatioSeries(KeyValuePair<string, double[]> data)
-        {
-            try
-            {
-                var series = new ChartSeries("Ratio", SeriesType);
-                series.Points.Add(data.Key, data.Value[3]);
-                ConfigureSeries(series);
-                series.Style.TextFormat = "{0:P}";
-                return series;
-            }
-            catch (System.Exception e)
-            {
-                MessageBox.Show(e.Message + e.StackTrace);
-                return null;
-            }
         }
         internal ChartSeries GetSeriesTotals(Dictionary<string, double> data)
         {
@@ -253,7 +184,7 @@ namespace BudgetExecution
                 return null;
             }
         }
-        private Dictionary<string, double> GetSingleValue(Dictionary<string, double[]> data, Stat value)
+        private Dictionary<string, double> GetMeasure(Dictionary<string, double[]> data, Stat value)
         {
             try
             {
@@ -270,19 +201,28 @@ namespace BudgetExecution
                 return null;
             }
         }
-        private ChartSeries GetTotalSeries(KeyValuePair<string, double[]> data)
+        internal void ConfigurePieChart(ChartControl Chart)
         {
             try
             {
-                var series = new ChartSeries("Totals", SeriesType);
-                series.Points.Add(data.Key, data.Value[0]);
-                series.Style.TextFormat = "${0:#,}";
-                return series;
+                Chart.Legend.Visible = true;
+                Chart.Series[0].ExplodedAll = true;
+                Chart.Series[0].ExplosionOffset = 20f;
+                Chart.Series[0].ShowTicks = true;
+                Chart.Series[0].Style.DisplayText = true;
+                Chart.Series[0].PointsToolTipFormat = "Funding:{4:N}";
+                Chart.Series[0].ExplodedAll = true;
+                Chart.Series[0].ExplosionOffset = 20f;
+                var bm = new ChartDataBindModel(Data.BindingSource);
+                Chart.Series[0].SeriesIndexedModelImpl = bm;
+                bm.YNames = new string[] { Value.ToString() };
+                Chart.Series[0].SeriesModel = bm;
+                Chart.Series[0].ConfigItems.PieItem.ShowDataBindLabels = true;
             }
-            catch (System.Exception e)
+            catch (Exception ex)
             {
-                MessageBox.Show(e.Message + e.StackTrace);
-                return null;
+
+                MessageBox.Show(ex.Message + ex.StackTrace);
             }
         }
         internal void ConfigureLargeNumberSeries(ChartSeries series)
@@ -395,7 +335,7 @@ namespace BudgetExecution
             try
             {
                 Chart = chart;
-                Chart.PrimaryXAxis.Font = new Font("SegoeUI", 8F, FontStyle.Bold);
+                Chart.PrimaryXAxis.Font = new Font("SegoeUI", 10F, FontStyle.Bold);
                 Chart.PrimaryXAxis.ForeColor = SystemColors.MenuHighlight;
                 
             }

@@ -34,6 +34,7 @@ namespace BudgetExecution
         //Properties
         public static string FiscalYear { get; set; } = "2018";
         public decimal Average { get; }
+        public decimal Amount { get; }
         public Dictionary<string, decimal> BocData { get; }
         public DataSet BudgetData { get; }
         public PrcMetric Metric { get; }
