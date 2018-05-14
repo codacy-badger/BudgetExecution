@@ -34,8 +34,10 @@ namespace BudgetExecution
         //Properties
         public Stat Measure { get; set; }
         public ChartSeriesType ChartType { get; set; }
+        public DataBuilder Data { get; set; }
         public BindingSource BindingSource { get; set; }
         public DataSet DataSet { get; set; }
+        public DataTable DataTable { get; set; }
         public PrcMetric DataMetric { get; set; }
         public ChartControl Chart { get; set; }
         public ChartDataBindModel ChartModel { get; set; }
@@ -43,12 +45,10 @@ namespace BudgetExecution
         public Control SecondaryFilterControl { get; set; }
         public Control TertiaryFilterControl { get; set; }
         public int Count { get; set; }
-        public DataBuilder Data { get; set; }
         public DataGridView DataGrid { get; set; }
         public decimal[] Metrics { get; set; }
         public BindingNavigator Navigator { get; set; }
         public FlowLayoutPanel Panel { get; set; }
-        public DataTable DataTable { get; set; }
         public Dictionary<string, object> SearchParameter { get; set; }
         internal Func<DataTable, PrcField, string> TableFilter { get; set; }
 
@@ -176,14 +176,14 @@ namespace BudgetExecution
                 return null;
             }
         }
-        internal void PrimaryFilterControlButton_OnClick(object sender, EventArgs e)
+        internal void FilterControlButton_OnClick(object sender, EventArgs e)
         {
             try
             {
                 var button = sender as MetroSetButton;
                 var table = GetTable(DataTable, "FundName", button.Tag.ToString());
                 BindingSource.DataSource = table;
-                PopulateBocFilterBox(table, Panel);
+                PopulateFilterBox(Panel, table, PrcField.FundName);
                 DataTable = table;
             }
             catch (Exception ex)
@@ -191,7 +191,7 @@ namespace BudgetExecution
                 MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
             }
         }
-        internal void PrimaryFilterControlListBox_OnSelect(object sender, EventArgs e)
+        internal void FundControlListBox_OnSelect(object sender, EventArgs e)
         {
             try
             {
@@ -240,7 +240,7 @@ namespace BudgetExecution
                 var button = sender as MetroSetListBox;
                 var table = GetTable(DataTable, "BocName", button.SelectedItem.ToString());
                 BindingSource.DataSource = table;
-                PopulateBocFilterBox(DataTable, Panel);
+                PopulateFilterBox(Panel, DataTable, PrcField.BocName);
             }
             catch (Exception ex)
             {
@@ -254,7 +254,7 @@ namespace BudgetExecution
                 var button = sender as MetroSetListBox;
                 var table = GetTable(DataTable, "BocName", button.SelectedItem.ToString());
                 BindingSource.DataSource = table;
-                PopulateBocFilterBox(DataTable, Panel);
+                PopulateFilterBox(Panel, DataTable, PrcField.BocName);
             }
             catch (Exception ex)
             {
@@ -266,7 +266,8 @@ namespace BudgetExecution
             try
             {
                 PopulateFilterButtons(fitlerControl, GetCodes(table, prc.ToString()));
-                foreach (Control c in fitlerControl.Controls) c.Click += PrimaryFilterControlButton_OnClick;
+                foreach (Control c in fitlerControl.Controls)
+                    c.Click += FilterControlButton_OnClick;
             }
             catch (Exception ex)
             {
@@ -279,19 +280,20 @@ namespace BudgetExecution
             {
                 var filter = filterControl as ListBox;
                 PopulateFilterListItems(filter, GetCodes(table, prc.ToString()));
-                filter.SelectedIndexChanged += PrimaryFilterControlListBox_OnSelect;
+                filter.SelectedIndexChanged += FundControlListBox_OnSelect;
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
             }
         }
-        internal void PopulateBocFilterBox(DataTable table, FlowLayoutPanel fitlerControl)
+        internal void PopulateFilterBox(FlowLayoutPanel fitlerControl, DataTable table, PrcField filter)
         {
             try
             {
-                PopulateFilterButtons(fitlerControl, GetCodes(table, "BocName"));
-                foreach (Control c in fitlerControl.Controls) c.Click += BocButton_OnSelect;
+                PopulateFilterButtons(fitlerControl, GetCodes(table, filter.ToString()));
+                foreach (Control c in fitlerControl.Controls)
+                    c.Click += FundControlListBox_OnSelect;
             }
             catch (Exception ex)
             {
@@ -426,16 +428,25 @@ namespace BudgetExecution
         }
         internal void DataGridViewAccountUpdate(DataGridView dgv, Source source)
         {
-            var param = new Dictionary<string, object>();
-            if(dgv.Rows.Count > 0)
-                param = GetCurrentRowPrcParameter(dgv);
-            var query = new Query(source, param);
-            using (SQLiteConnection conn = query.Connection)
+            try
             {
-                var cmd = query.GetUpdateCommand();
-                cmd.ExecuteNonQuery();
-                var adp = new SQLiteDataAdapter();
 
+                var param = new Dictionary<string, object>();
+                if (dgv.Rows.Count > 0)
+                    param = GetCurrentRowPrcParameter(dgv);
+                var query = new Query(source, param);
+                using (SQLiteConnection conn = query.Connection)
+                {
+                    var cmd = query.GetUpdateCommand();
+                    cmd.ExecuteNonQuery();
+                    var adp = new SQLiteDataAdapter();
+
+                }
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message + ex.StackTrace);
             }
         }
     }

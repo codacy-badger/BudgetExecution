@@ -124,19 +124,6 @@
     <value>430, 14</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="toolStripButton7.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wwAADsMBx2+oZAAAAZJJREFUaEPtmLFOwzAQhjMwMjIwMDDyCAxI8AoghaobbwI7SJDQvQ/A0JGxA0PH
-        LkgNSaUODIwMPACc40tikAs+x3ZSdJ/0S5XjnP1Viu0kYhhGz3lafLZKUizi0WoXy4VHOylqQOIszQ6w
-        ZFiaieSPg/vihBqY/FhK5G+dSCj/4hibSMRJcdXU6EDCqQBKQA7xsn+cC8haH/FddoRd/KIM6k5A1gsj
-        oQxoJ5C+XMACMFUTp8WskhjeZDvY1Q9tBXQMbhf7VV3xG5v9wAIaWIACVUA+qHiPTeDBdrpPKIXDCIi4
-        3LGbolQBWC5hD6AG7p1XEqdJvodl7bEVEJPBJhJiHGXM9kfxTgVk5vHoeRsv06kLdScg8mQtURfpVgDq
-        LSfHl9Mt7GZOXSSUQLq8hrPSSk15BJfzeMBu5oQW0FG+2eE8sMkcFnAAC/wTAbESiMn9mfd+ChDTG4Gf
-        a/JvgQFeeydAQX1RYQEFFjCFBdbAAqawwBpYwJRvAuXOrD0rWQQ/tYQU8BUcyg8bL8AwG0sUfQHteQNH
-        1R9qfwAAAABJRU5ErkJggg==
-</value>
-  </data>
   <data name="toolStripButton10.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
@@ -161,15 +148,6 @@
         ukBNAPo81FqZSQnAmaH23siV2rUr4Phj/MyS2YHdqT7BSnSodnf1W6WXdRKUCkgTuoFZxOn0KBKAsVsR
         PM/gVJrkCcBe55z0QeaLEQFYnERL7+MwfYYEfn9omRRQ+smWB5F6ixMVXGk24ZE5bsTzzjAMwzBMKY7z
         CZoe0YgDsH+AAAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="toolStripButton13.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAACXSURBVGhD7dSxDYBADEPRG4UNKGjZEbZEiCGAQ6lOlqBI
-        yBX/Sa4AOW4oAAAAHRmXbZiW41Spz+y1fjEgGwOyMSAbAyLVA94yrfusjn9yP1PftLE6f/KogFidP1UW
-        Eavzp8oiYnX+VFlErM6fKouI1flTZRGxOn/ql9em69/oF/UAefyd9OO+YEA2BmRjQDYGAAAA/KWUC3oQ
-        aKbrMY6vAAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="ReturnButton.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

@@ -39,52 +39,88 @@ namespace BudgetExecution
         //Methods
         private void BocFilter_ItemSelected(object sender, EventArgs e)
         {
-            var boc = sender as MetroSetComboBox;
-            var bocfilter = boc.SelectedItem.ToString();
-            BindingSource.Filter = $"FundName = '{FundFilter.SelectedItem.ToString()}' AND BocName = '{bocfilter}'";
+            try
+            {
+                var boc = sender as MetroSetComboBox;
+                var bocfilter = boc.SelectedItem.ToString();
+                BindingSource.Filter = $"FundName = '{FundFilter.SelectedItem.ToString()}' AND BocName = '{bocfilter}'";
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message + ex.StackTrace);
+            }
         }
         private void DataMaster_Load(object sender, EventArgs e)
         {
-            FundFilter.SelectionChangeCommitted += FundFilter_ItemSelected;
-            BocFilter.Visible = false;
+            try
+            {
+                FundFilter.SelectionChangeCommitted += FundFilter_ItemSelected;
+                BocFilter.Visible = false;
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message + ex.StackTrace);
+            }
         }
         private void FundFilter_ItemSelected(object sender, EventArgs e)
         {
-            BocFilter.Items.Clear();
-            var filter = sender as MetroSetComboBox;
-            FundFilter.Tag = filter;
-            var fund = filter.SelectedItem.ToString();
-            BindingSource.Filter = $"FundName = '{fund}'";
-            var boc = ProgramElements[PrcField.BocName.ToString()];
-            foreach (string b in boc)
-                BocFilter.Items.Add(b);
-            BocFilter.Visible = true;
-            BocFilter.SelectionChangeCommitted += BocFilter_ItemSelected;
+            try
+            {
+                BocFilter.Items.Clear();
+                var filter = sender as MetroSetComboBox;
+                FundFilter.Tag = filter;
+                var fund = filter.SelectedItem.ToString();
+                BindingSource.Filter = $"FundName = '{fund}'";
+                var boc = ProgramElements[PrcField.BocName.ToString()];
+                foreach (string b in boc)
+                    BocFilter.Items.Add(b);
+                BocFilter.Visible = true;
+                BocFilter.SelectionChangeCommitted += BocFilter_ItemSelected;
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message + ex.StackTrace);
+            }
         }
         private void GetFundFilterItems()
         {
-            var item = Data.ProgramElements["FundName"];
-            foreach (string i in item)
-                FundFilter.Items.Add(i);
+            try
+            {
+                var item = Data.ProgramElements["FundName"];
+                foreach (string i in item)
+                    FundFilter.Items.Add(i);
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message + ex.StackTrace);
+            }
         }
         private void GetGridColumns(DataGridView dgv)
         {
-            foreach (DataGridViewColumn dc in dgv.Columns)
-                dc.Visible = false;
-            dgv.Columns[0].Visible = true;
-            dgv.Columns[4].Visible = true;
-            dgv.Columns[5].Visible = true;
-            dgv.Columns[6].Visible = true;
-            dgv.Columns[8].Visible = true;
-            dgv.Columns[8].HeaderText = "BOC";
-            dgv.Columns[9].Visible = true;
-            dgv.Columns[11].Visible = true;
-            dgv.Columns[12].Visible = true;
+            try
+            {
+                foreach (DataGridViewColumn dc in dgv.Columns)
+                    dc.Visible = false;
+                dgv.Columns[0].Visible = true;
+                dgv.Columns[4].Visible = true;
+                dgv.Columns[5].Visible = true;
+                dgv.Columns[6].Visible = true;
+                dgv.Columns[8].Visible = true;
+                dgv.Columns[8].HeaderText = "BOC";
+                dgv.Columns[9].Visible = true;
+                dgv.Columns[11].Visible = true;
+                dgv.Columns[12].Visible = true;
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message + ex.StackTrace);
+            }
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

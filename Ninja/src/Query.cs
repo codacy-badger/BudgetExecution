@@ -81,7 +81,7 @@ namespace BudgetExecution
         public SQLiteCommand DeleteCommand { get; }
         public SQLiteCommand InsertCommand { get; }
         public Dictionary<string, object> Parameter { get; }
-        public SQLiteDataReader Reader { get; set; }
+        public SQLiteDataReader DataReader { get; set; }
         public SQLiteCommand SelectCommand { get; }
         public string SelectStatement { get; }
         public Source Source { get; }
