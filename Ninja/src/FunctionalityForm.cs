@@ -65,5 +65,15 @@ namespace BudgetExecution
             datamanager.Show();
             this.Close();
         }
+
+        private void hubTile1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -17,14 +17,12 @@ namespace BudgetExecution
         {
             InitializeComponent();
             Data = new DataBuilder(Source.RegionAccount);
-            Table = Data.QueryTable;
+            Table = Data.GetData();
             Metric = new PrcMetric(Data);
             ProgramElements = Data.GetProgramElements(Table);
             BindingSource.DataSource = Table;
             Grid.DataSource = BindingSource;
             GridNavigator.BindingSource = BindingSource;
-            GetGridColumns(Grid);
-            GetFundFilterItems();
         }
 
         //Properties
@@ -55,8 +53,6 @@ namespace BudgetExecution
         {
             try
             {
-                FundFilter.SelectionChangeCommitted += FundFilter_ItemSelected;
-                BocFilter.Visible = false;
             }
             catch (Exception ex)
             {

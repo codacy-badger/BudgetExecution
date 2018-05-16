@@ -56,7 +56,7 @@ namespace BudgetExecution
     {
         Reprogramming, Transfer, BudgetDocument, Employee, Org, PRC, RegionAccount, DivisionAccount, Account, Balance,
         ProgramExpense, PayrollExpense, Fund, SuperfundSite, ReimbursableAgreement, EPM, LUST, OIL, STAG, SUPERFUND, SF6A,
-        DWH, EJ, EN, MD, RC, RA, SF, WQ, MM, WSA, WCF, MDR, XA, PAYROLL, FTE, TRAVEL, BOC28, EXPENSES, CONTRACTS, GRANTS, ExternalFile
+        DWH, EJ, EN, MD, RC, RA, SF, WQ, MM, WSA, WCF, MDR, XA, PAYROLL, FTE, TRAVEL, BOC28, EXPENSES, CONTRACTS, GRANTS
     }
 
     public enum Stat

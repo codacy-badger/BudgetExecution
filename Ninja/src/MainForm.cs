@@ -1,8 +1,10 @@
 using System;
 using System.Collections.Generic;
+using System.Drawing;
+using System.IO;
 using System.Windows.Forms;
 using Syncfusion.Windows.Forms.Chart;
-
+using Syncfusion.Windows.Forms.Tools;
 
 namespace BudgetExecution
 {
@@ -23,15 +25,14 @@ namespace BudgetExecution
             Title = GetChartTitles(Values);
             Chart = new GetChart(GetMainChart);
             MainChart = new BudgetChart(MainChart, Title[1], Values[1]).Activate();
-            RegionSummaryButton.Click += RegionSummaryButton_OnClick;
-            DivisionSummaryButton.Click += DivisionSummaryButton_OnClick;
-            TransferButton.Click += TransferButton_OnClick;
+            FunctionalityTile.Click += TransferButton_OnClick;
         }
 
         //Properties
         public GetChart Chart { get; set; }
 
         public int Counter { get; set; }
+        string[] Images { get; set; }
         public DataBuilder D6 { get; set; }
         public PrcMetric Metric { get; set; }
         public FormData NinjaData { get; set; }
@@ -51,6 +52,7 @@ namespace BudgetExecution
                 Timer.Tick += ChartTimer;
                 Timer.Enabled = true;
                 Timer.Interval = 5000;
+                FunctionalityTile.Click += FunctionalityTile_OnClick;
             }
             catch (Exception ex)
             {
@@ -154,6 +156,11 @@ namespace BudgetExecution
             var s = new Selector(Info.SummaryImages);
             s.Show();
         }
+        private void FunctionalityTile_OnClick(object sender, EventArgs e)
+        {
+            var s = new Selector(Info.FunctionImages);
+            s.Show();
+        }
         private void DocumentButton_OnClick(object sender, EventArgs e)
         {
 
@@ -164,5 +171,6 @@ namespace BudgetExecution
         {
 
         }
+
     }
 }

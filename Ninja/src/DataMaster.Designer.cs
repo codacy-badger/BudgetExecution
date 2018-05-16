@@ -34,31 +34,18 @@ namespace BudgetExecution
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DataMaster));
             Syncfusion.Windows.Forms.Grid.GridBaseStyle gridBaseStyle1 = new Syncfusion.Windows.Forms.Grid.GridBaseStyle();
             Syncfusion.Windows.Forms.Grid.GridBaseStyle gridBaseStyle2 = new Syncfusion.Windows.Forms.Grid.GridBaseStyle();
             Syncfusion.Windows.Forms.Grid.GridBaseStyle gridBaseStyle3 = new Syncfusion.Windows.Forms.Grid.GridBaseStyle();
             Syncfusion.Windows.Forms.Grid.GridBaseStyle gridBaseStyle4 = new Syncfusion.Windows.Forms.Grid.GridBaseStyle();
             Syncfusion.Windows.Forms.CaptionImage captionImage1 = new Syncfusion.Windows.Forms.CaptionImage();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DataMaster));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.metroSetComboBox3 = new MetroSet_UI.Controls.MetroSetComboBox();
             this.BocFilter = new MetroSet_UI.Controls.MetroSetComboBox();
             this.FundFilter = new MetroSet_UI.Controls.MetroSetComboBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
-            this.Grid = new System.Windows.Forms.DataGridView();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.metroSetTextBox3 = new MetroSet_UI.Controls.MetroSetTextBox();
-            this.metroSetTextBox2 = new MetroSet_UI.Controls.MetroSetTextBox();
-            this.metroSetComboBox4 = new MetroSet_UI.Controls.MetroSetComboBox();
-            this.metroSetComboBox1 = new MetroSet_UI.Controls.MetroSetComboBox();
             this.GridNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorCountItem1 = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorMovePreviousItem1 = new System.Windows.Forms.ToolStripButton();
@@ -67,6 +54,21 @@ namespace BudgetExecution
             this.bindingNavigatorSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorMoveNextItem1 = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator5 = new System.Windows.Forms.ToolStripSeparator();
+            this.Grid = new System.Windows.Forms.DataGridView();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.metroSetTextBox4 = new MetroSet_UI.Controls.MetroSetTextBox();
+            this.metroSetComboBox8 = new MetroSet_UI.Controls.MetroSetComboBox();
+            this.metroSetTextBox3 = new MetroSet_UI.Controls.MetroSetTextBox();
+            this.metroSetTextBox2 = new MetroSet_UI.Controls.MetroSetTextBox();
+            this.metroSetComboBox4 = new MetroSet_UI.Controls.MetroSetComboBox();
+            this.metroSetComboBox1 = new MetroSet_UI.Controls.MetroSetComboBox();
             this.metroSetComboBox2 = new MetroSet_UI.Controls.MetroSetComboBox();
             this.metroSetTextBox1 = new MetroSet_UI.Controls.MetroSetTextBox();
             this.E6DataGrid = new Syncfusion.Windows.Forms.Grid.GridDataBoundGrid();
@@ -82,21 +84,18 @@ namespace BudgetExecution
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.DatabaseFilter = new MetroSet_UI.Controls.MetroSetComboBox();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            this.groupBox5.SuspendLayout();
             this.metroPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Grid)).BeginInit();
-            this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GridNavigator)).BeginInit();
             this.GridNavigator.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Grid)).BeginInit();
+            this.groupBox5.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.E6DataGrid)).BeginInit();
-            this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -106,10 +105,10 @@ namespace BudgetExecution
             this.groupBox1.Controls.Add(this.metroSetComboBox3);
             this.groupBox1.Controls.Add(this.BocFilter);
             this.groupBox1.Controls.Add(this.FundFilter);
-            this.groupBox1.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.groupBox1.Location = new System.Drawing.Point(31, 300);
+            this.groupBox1.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.groupBox1.Location = new System.Drawing.Point(60, 54);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(473, 529);
+            this.groupBox1.Size = new System.Drawing.Size(443, 488);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Data Filters";
@@ -132,12 +131,12 @@ namespace BudgetExecution
             this.metroSetComboBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.metroSetComboBox3.FormattingEnabled = true;
             this.metroSetComboBox3.ItemHeight = 30;
-            this.metroSetComboBox3.Location = new System.Drawing.Point(66, 297);
+            this.metroSetComboBox3.Location = new System.Drawing.Point(97, 313);
             this.metroSetComboBox3.MaxDropDownItems = 20;
             this.metroSetComboBox3.Name = "metroSetComboBox3";
             this.metroSetComboBox3.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.metroSetComboBox3.SelectedItemForeColor = System.Drawing.Color.White;
-            this.metroSetComboBox3.Size = new System.Drawing.Size(324, 36);
+            this.metroSetComboBox3.Size = new System.Drawing.Size(268, 36);
             this.metroSetComboBox3.Style = MetroSet_UI.Design.Style.Dark;
             this.metroSetComboBox3.StyleManager = null;
             this.metroSetComboBox3.TabIndex = 2;
@@ -163,12 +162,12 @@ namespace BudgetExecution
             this.BocFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.BocFilter.FormattingEnabled = true;
             this.BocFilter.ItemHeight = 30;
-            this.BocFilter.Location = new System.Drawing.Point(66, 184);
+            this.BocFilter.Location = new System.Drawing.Point(97, 208);
             this.BocFilter.MaxDropDownItems = 20;
             this.BocFilter.Name = "BocFilter";
             this.BocFilter.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.BocFilter.SelectedItemForeColor = System.Drawing.Color.White;
-            this.BocFilter.Size = new System.Drawing.Size(324, 36);
+            this.BocFilter.Size = new System.Drawing.Size(268, 36);
             this.BocFilter.Style = MetroSet_UI.Design.Style.Dark;
             this.BocFilter.StyleManager = null;
             this.BocFilter.TabIndex = 1;
@@ -194,12 +193,12 @@ namespace BudgetExecution
             this.FundFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.FundFilter.FormattingEnabled = true;
             this.FundFilter.ItemHeight = 30;
-            this.FundFilter.Location = new System.Drawing.Point(66, 90);
+            this.FundFilter.Location = new System.Drawing.Point(97, 96);
             this.FundFilter.MaxDropDownItems = 20;
             this.FundFilter.Name = "FundFilter";
             this.FundFilter.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.FundFilter.SelectedItemForeColor = System.Drawing.Color.White;
-            this.FundFilter.Size = new System.Drawing.Size(324, 36);
+            this.FundFilter.Size = new System.Drawing.Size(268, 36);
             this.FundFilter.Style = MetroSet_UI.Design.Style.Dark;
             this.FundFilter.StyleManager = null;
             this.FundFilter.TabIndex = 0;
@@ -210,132 +209,108 @@ namespace BudgetExecution
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.groupBox2.Controls.Add(this.groupBox5);
             this.groupBox2.Controls.Add(this.metroPanel1);
-            this.groupBox2.Controls.Add(this.groupBox4);
-            this.groupBox2.ForeColor = System.Drawing.Color.LightSteelBlue;
+            this.groupBox2.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.groupBox2.Location = new System.Drawing.Point(558, 54);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(985, 775);
+            this.groupBox2.Size = new System.Drawing.Size(985, 488);
             this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Database";
             // 
-            // groupBox5
-            // 
-            this.groupBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.groupBox5.Controls.Add(this.button6);
-            this.groupBox5.Controls.Add(this.button5);
-            this.groupBox5.Controls.Add(this.button4);
-            this.groupBox5.Controls.Add(this.button3);
-            this.groupBox5.Controls.Add(this.button2);
-            this.groupBox5.Controls.Add(this.button1);
-            this.groupBox5.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.groupBox5.Location = new System.Drawing.Point(512, 430);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(430, 279);
-            this.groupBox5.TabIndex = 8;
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Changes";
-            // 
-            // button6
-            // 
-            this.button6.BackColor = System.Drawing.Color.Transparent;
-            this.button6.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Location = new System.Drawing.Point(247, 203);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(124, 51);
-            this.button6.TabIndex = 5;
-            this.button6.Text = "button6";
-            this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button6.UseVisualStyleBackColor = false;
-            // 
-            // button5
-            // 
-            this.button5.BackColor = System.Drawing.Color.Transparent;
-            this.button5.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Location = new System.Drawing.Point(46, 203);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(124, 51);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "button5";
-            this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button5.UseVisualStyleBackColor = false;
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.Transparent;
-            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Location = new System.Drawing.Point(247, 125);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(124, 51);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "button4";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button4.UseVisualStyleBackColor = false;
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.Transparent;
-            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(46, 114);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(124, 51);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "button3";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button3.UseVisualStyleBackColor = false;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.Transparent;
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(247, 38);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(124, 51);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "button2";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(46, 38);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(124, 51);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.UseVisualStyleBackColor = false;
-            // 
             // metroPanel1
             // 
+            this.metroPanel1.Controls.Add(this.GridNavigator);
             this.metroPanel1.Controls.Add(this.Grid);
             this.metroPanel1.HorizontalScrollbarBarColor = true;
             this.metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
             this.metroPanel1.HorizontalScrollbarSize = 10;
-            this.metroPanel1.Location = new System.Drawing.Point(45, 94);
+            this.metroPanel1.Location = new System.Drawing.Point(45, 71);
             this.metroPanel1.Name = "metroPanel1";
-            this.metroPanel1.Size = new System.Drawing.Size(897, 277);
+            this.metroPanel1.Size = new System.Drawing.Size(897, 352);
             this.metroPanel1.TabIndex = 5;
             this.metroPanel1.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.metroPanel1.VerticalScrollbarBarColor = true;
             this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel1.VerticalScrollbarSize = 10;
+            // 
+            // GridNavigator
+            // 
+            this.GridNavigator.AddNewItem = null;
+            this.GridNavigator.BackColor = System.Drawing.Color.Transparent;
+            this.GridNavigator.CountItem = this.bindingNavigatorCountItem1;
+            this.GridNavigator.DeleteItem = null;
+            this.GridNavigator.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.GridNavigator.ImageScalingSize = new System.Drawing.Size(24, 20);
+            this.GridNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.bindingNavigatorMovePreviousItem1,
+            this.bindingNavigatorSeparator3,
+            this.bindingNavigatorPositionItem1,
+            this.bindingNavigatorCountItem1,
+            this.bindingNavigatorSeparator4,
+            this.bindingNavigatorMoveNextItem1,
+            this.bindingNavigatorSeparator5});
+            this.GridNavigator.Location = new System.Drawing.Point(0, 324);
+            this.GridNavigator.MoveFirstItem = null;
+            this.GridNavigator.MoveLastItem = null;
+            this.GridNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem1;
+            this.GridNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem1;
+            this.GridNavigator.Name = "GridNavigator";
+            this.GridNavigator.PositionItem = this.bindingNavigatorPositionItem1;
+            this.GridNavigator.Size = new System.Drawing.Size(897, 28);
+            this.GridNavigator.TabIndex = 3;
+            this.GridNavigator.Text = "bindingNavigator1";
+            // 
+            // bindingNavigatorCountItem1
+            // 
+            this.bindingNavigatorCountItem1.Name = "bindingNavigatorCountItem1";
+            this.bindingNavigatorCountItem1.Size = new System.Drawing.Size(54, 25);
+            this.bindingNavigatorCountItem1.Text = "of {0}";
+            this.bindingNavigatorCountItem1.ToolTipText = "Total number of items";
+            // 
+            // bindingNavigatorMovePreviousItem1
+            // 
+            this.bindingNavigatorMovePreviousItem1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMovePreviousItem1.Name = "bindingNavigatorMovePreviousItem1";
+            this.bindingNavigatorMovePreviousItem1.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMovePreviousItem1.Size = new System.Drawing.Size(23, 25);
+            this.bindingNavigatorMovePreviousItem1.Text = "Move previous";
+            // 
+            // bindingNavigatorSeparator3
+            // 
+            this.bindingNavigatorSeparator3.Name = "bindingNavigatorSeparator3";
+            this.bindingNavigatorSeparator3.Size = new System.Drawing.Size(6, 28);
+            // 
+            // bindingNavigatorPositionItem1
+            // 
+            this.bindingNavigatorPositionItem1.AccessibleName = "Position";
+            this.bindingNavigatorPositionItem1.AutoSize = false;
+            this.bindingNavigatorPositionItem1.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.bindingNavigatorPositionItem1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.bindingNavigatorPositionItem1.ForeColor = System.Drawing.SystemColors.Info;
+            this.bindingNavigatorPositionItem1.Name = "bindingNavigatorPositionItem1";
+            this.bindingNavigatorPositionItem1.Size = new System.Drawing.Size(50, 24);
+            this.bindingNavigatorPositionItem1.Text = "0";
+            this.bindingNavigatorPositionItem1.TextBoxTextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.bindingNavigatorPositionItem1.ToolTipText = "Current position";
+            // 
+            // bindingNavigatorSeparator4
+            // 
+            this.bindingNavigatorSeparator4.Name = "bindingNavigatorSeparator4";
+            this.bindingNavigatorSeparator4.Size = new System.Drawing.Size(6, 28);
+            // 
+            // bindingNavigatorMoveNextItem1
+            // 
+            this.bindingNavigatorMoveNextItem1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorMoveNextItem1.Name = "bindingNavigatorMoveNextItem1";
+            this.bindingNavigatorMoveNextItem1.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorMoveNextItem1.Size = new System.Drawing.Size(23, 25);
+            this.bindingNavigatorMoveNextItem1.Text = "Move next";
+            // 
+            // bindingNavigatorSeparator5
+            // 
+            this.bindingNavigatorSeparator5.Name = "bindingNavigatorSeparator5";
+            this.bindingNavigatorSeparator5.Size = new System.Drawing.Size(6, 28);
             // 
             // Grid
             // 
@@ -354,7 +329,7 @@ namespace BudgetExecution
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.LightSteelBlue;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.LightSteelBlue;
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
@@ -380,26 +355,212 @@ namespace BudgetExecution
             this.Grid.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Grid.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
             this.Grid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.Grid.Size = new System.Drawing.Size(897, 277);
+            this.Grid.Size = new System.Drawing.Size(897, 352);
             this.Grid.TabIndex = 2;
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.groupBox5.Controls.Add(this.button6);
+            this.groupBox5.Controls.Add(this.button5);
+            this.groupBox5.Controls.Add(this.button4);
+            this.groupBox5.Controls.Add(this.button3);
+            this.groupBox5.Controls.Add(this.button2);
+            this.groupBox5.Controls.Add(this.button1);
+            this.groupBox5.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.groupBox5.Location = new System.Drawing.Point(968, 610);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(575, 188);
+            this.groupBox5.TabIndex = 8;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "SQL Commands";
+            // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.Transparent;
+            this.button6.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.button6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.ForeColor = System.Drawing.SystemColors.Info;
+            this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
+            this.button6.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.button6.Location = new System.Drawing.Point(356, 114);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(124, 51);
+            this.button6.TabIndex = 5;
+            this.button6.Text = "Save";
+            this.button6.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.button6.UseVisualStyleBackColor = false;
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.Transparent;
+            this.button5.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.ForeColor = System.Drawing.SystemColors.Info;
+            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
+            this.button5.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.button5.Location = new System.Drawing.Point(356, 45);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(124, 51);
+            this.button5.TabIndex = 4;
+            this.button5.Text = "Update";
+            this.button5.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.button5.UseVisualStyleBackColor = false;
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.Transparent;
+            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.ForeColor = System.Drawing.SystemColors.Info;
+            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
+            this.button4.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.button4.Location = new System.Drawing.Point(195, 114);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(114, 51);
+            this.button4.TabIndex = 3;
+            this.button4.Text = "Delete";
+            this.button4.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.button4.UseVisualStyleBackColor = false;
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.Transparent;
+            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.ForeColor = System.Drawing.SystemColors.Info;
+            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.button3.Location = new System.Drawing.Point(26, 114);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(121, 51);
+            this.button3.TabIndex = 2;
+            this.button3.Text = "Refresh";
+            this.button3.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.button3.UseVisualStyleBackColor = false;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.Transparent;
+            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.ForeColor = System.Drawing.SystemColors.Info;
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.button2.Location = new System.Drawing.Point(195, 45);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(114, 51);
+            this.button2.TabIndex = 1;
+            this.button2.Text = "Copy";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.SystemColors.Info;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.button1.Location = new System.Drawing.Point(26, 45);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(124, 51);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "Add ";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // groupBox4
             // 
             this.groupBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.groupBox4.Controls.Add(this.metroSetTextBox4);
+            this.groupBox4.Controls.Add(this.metroSetComboBox8);
             this.groupBox4.Controls.Add(this.metroSetTextBox3);
             this.groupBox4.Controls.Add(this.metroSetTextBox2);
             this.groupBox4.Controls.Add(this.metroSetComboBox4);
             this.groupBox4.Controls.Add(this.metroSetComboBox1);
-            this.groupBox4.Controls.Add(this.GridNavigator);
             this.groupBox4.Controls.Add(this.metroSetComboBox2);
             this.groupBox4.Controls.Add(this.metroSetTextBox1);
-            this.groupBox4.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.groupBox4.Location = new System.Drawing.Point(45, 430);
+            this.groupBox4.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.groupBox4.Location = new System.Drawing.Point(60, 601);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(447, 279);
+            this.groupBox4.Size = new System.Drawing.Size(870, 197);
             this.groupBox4.TabIndex = 7;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Changes";
+            // 
+            // metroSetTextBox4
+            // 
+            this.metroSetTextBox4.AutoCompleteCustomSource = null;
+            this.metroSetTextBox4.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.metroSetTextBox4.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.metroSetTextBox4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.metroSetTextBox4.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.metroSetTextBox4.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.metroSetTextBox4.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.metroSetTextBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.metroSetTextBox4.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.metroSetTextBox4.Image = null;
+            this.metroSetTextBox4.Lines = null;
+            this.metroSetTextBox4.Location = new System.Drawing.Point(642, 114);
+            this.metroSetTextBox4.MaxLength = 32767;
+            this.metroSetTextBox4.Multiline = false;
+            this.metroSetTextBox4.Name = "metroSetTextBox4";
+            this.metroSetTextBox4.ReadOnly = false;
+            this.metroSetTextBox4.Size = new System.Drawing.Size(208, 36);
+            this.metroSetTextBox4.Style = MetroSet_UI.Design.Style.Dark;
+            this.metroSetTextBox4.StyleManager = null;
+            this.metroSetTextBox4.TabIndex = 9;
+            this.metroSetTextBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.metroSetTextBox4.ThemeAuthor = "Narwin";
+            this.metroSetTextBox4.ThemeName = "MetroDark";
+            this.metroSetTextBox4.UseSystemPasswordChar = false;
+            this.metroSetTextBox4.WatermarkText = "";
+            // 
+            // metroSetComboBox8
+            // 
+            this.metroSetComboBox8.AllowDrop = true;
+            this.metroSetComboBox8.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.metroSetComboBox8.BackColor = System.Drawing.Color.Transparent;
+            this.metroSetComboBox8.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.metroSetComboBox8.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.metroSetComboBox8.CausesValidation = false;
+            this.metroSetComboBox8.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.metroSetComboBox8.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.metroSetComboBox8.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.metroSetComboBox8.DisplayMember = "Fund";
+            this.metroSetComboBox8.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.metroSetComboBox8.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.metroSetComboBox8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.metroSetComboBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.metroSetComboBox8.FormattingEnabled = true;
+            this.metroSetComboBox8.ItemHeight = 30;
+            this.metroSetComboBox8.Items.AddRange(new object[] {
+            "Fund",
+            "Org",
+            "RC",
+            "Code",
+            "BOC",
+            "Amount"});
+            this.metroSetComboBox8.Location = new System.Drawing.Point(460, 114);
+            this.metroSetComboBox8.MaxDropDownItems = 20;
+            this.metroSetComboBox8.Name = "metroSetComboBox8";
+            this.metroSetComboBox8.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.metroSetComboBox8.SelectedItemForeColor = System.Drawing.Color.White;
+            this.metroSetComboBox8.Size = new System.Drawing.Size(158, 36);
+            this.metroSetComboBox8.Style = MetroSet_UI.Design.Style.Dark;
+            this.metroSetComboBox8.StyleManager = null;
+            this.metroSetComboBox8.TabIndex = 8;
+            this.metroSetComboBox8.ThemeAuthor = "Narwin";
+            this.metroSetComboBox8.ThemeName = "MetroDark";
+            this.metroSetComboBox8.ValueMember = "Fund";
             // 
             // metroSetTextBox3
             // 
@@ -414,7 +575,7 @@ namespace BudgetExecution
             this.metroSetTextBox3.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.metroSetTextBox3.Image = null;
             this.metroSetTextBox3.Lines = null;
-            this.metroSetTextBox3.Location = new System.Drawing.Point(215, 176);
+            this.metroSetTextBox3.Location = new System.Drawing.Point(642, 53);
             this.metroSetTextBox3.MaxLength = 32767;
             this.metroSetTextBox3.Multiline = false;
             this.metroSetTextBox3.Name = "metroSetTextBox3";
@@ -482,7 +643,7 @@ namespace BudgetExecution
             "Code",
             "BOC",
             "Amount"});
-            this.metroSetComboBox4.Location = new System.Drawing.Point(29, 176);
+            this.metroSetComboBox4.Location = new System.Drawing.Point(460, 53);
             this.metroSetComboBox4.MaxDropDownItems = 20;
             this.metroSetComboBox4.Name = "metroSetComboBox4";
             this.metroSetComboBox4.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
@@ -532,84 +693,6 @@ namespace BudgetExecution
             this.metroSetComboBox1.ThemeAuthor = "Narwin";
             this.metroSetComboBox1.ThemeName = "MetroDark";
             this.metroSetComboBox1.ValueMember = "Fund";
-            // 
-            // GridNavigator
-            // 
-            this.GridNavigator.AddNewItem = null;
-            this.GridNavigator.BackColor = System.Drawing.Color.Transparent;
-            this.GridNavigator.CountItem = this.bindingNavigatorCountItem1;
-            this.GridNavigator.DeleteItem = null;
-            this.GridNavigator.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.GridNavigator.ImageScalingSize = new System.Drawing.Size(24, 20);
-            this.GridNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.bindingNavigatorMovePreviousItem1,
-            this.bindingNavigatorSeparator3,
-            this.bindingNavigatorPositionItem1,
-            this.bindingNavigatorCountItem1,
-            this.bindingNavigatorSeparator4,
-            this.bindingNavigatorMoveNextItem1,
-            this.bindingNavigatorSeparator5});
-            this.GridNavigator.Location = new System.Drawing.Point(3, 248);
-            this.GridNavigator.MoveFirstItem = null;
-            this.GridNavigator.MoveLastItem = null;
-            this.GridNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem1;
-            this.GridNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem1;
-            this.GridNavigator.Name = "GridNavigator";
-            this.GridNavigator.PositionItem = this.bindingNavigatorPositionItem1;
-            this.GridNavigator.Size = new System.Drawing.Size(441, 28);
-            this.GridNavigator.TabIndex = 3;
-            this.GridNavigator.Text = "bindingNavigator1";
-            // 
-            // bindingNavigatorCountItem1
-            // 
-            this.bindingNavigatorCountItem1.Name = "bindingNavigatorCountItem1";
-            this.bindingNavigatorCountItem1.Size = new System.Drawing.Size(54, 25);
-            this.bindingNavigatorCountItem1.Text = "of {0}";
-            this.bindingNavigatorCountItem1.ToolTipText = "Total number of items";
-            // 
-            // bindingNavigatorMovePreviousItem1
-            // 
-            this.bindingNavigatorMovePreviousItem1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMovePreviousItem1.Name = "bindingNavigatorMovePreviousItem1";
-            this.bindingNavigatorMovePreviousItem1.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem1.Size = new System.Drawing.Size(28, 25);
-            this.bindingNavigatorMovePreviousItem1.Text = "Move previous";
-            // 
-            // bindingNavigatorSeparator3
-            // 
-            this.bindingNavigatorSeparator3.Name = "bindingNavigatorSeparator3";
-            this.bindingNavigatorSeparator3.Size = new System.Drawing.Size(6, 28);
-            // 
-            // bindingNavigatorPositionItem1
-            // 
-            this.bindingNavigatorPositionItem1.AccessibleName = "Position";
-            this.bindingNavigatorPositionItem1.AutoSize = false;
-            this.bindingNavigatorPositionItem1.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.bindingNavigatorPositionItem1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.bindingNavigatorPositionItem1.ForeColor = System.Drawing.SystemColors.Info;
-            this.bindingNavigatorPositionItem1.Name = "bindingNavigatorPositionItem1";
-            this.bindingNavigatorPositionItem1.Size = new System.Drawing.Size(50, 24);
-            this.bindingNavigatorPositionItem1.Text = "0";
-            this.bindingNavigatorPositionItem1.TextBoxTextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.bindingNavigatorPositionItem1.ToolTipText = "Current position";
-            // 
-            // bindingNavigatorSeparator4
-            // 
-            this.bindingNavigatorSeparator4.Name = "bindingNavigatorSeparator4";
-            this.bindingNavigatorSeparator4.Size = new System.Drawing.Size(6, 28);
-            // 
-            // bindingNavigatorMoveNextItem1
-            // 
-            this.bindingNavigatorMoveNextItem1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveNextItem1.Name = "bindingNavigatorMoveNextItem1";
-            this.bindingNavigatorMoveNextItem1.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem1.Size = new System.Drawing.Size(28, 25);
-            this.bindingNavigatorMoveNextItem1.Text = "Move next";
-            // 
-            // bindingNavigatorSeparator5
-            // 
-            this.bindingNavigatorSeparator5.Name = "bindingNavigatorSeparator5";
-            this.bindingNavigatorSeparator5.Size = new System.Drawing.Size(6, 28);
             // 
             // metroSetComboBox2
             // 
@@ -802,49 +885,6 @@ namespace BudgetExecution
             this.toolStripButton2.Size = new System.Drawing.Size(28, 28);
             this.toolStripButton2.Text = "toolStripButton2";
             // 
-            // groupBox3
-            // 
-            this.groupBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.groupBox3.Controls.Add(this.DatabaseFilter);
-            this.groupBox3.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.groupBox3.Location = new System.Drawing.Point(31, 54);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(473, 201);
-            this.groupBox3.TabIndex = 8;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Database Selector";
-            // 
-            // DatabaseFilter
-            // 
-            this.DatabaseFilter.AllowDrop = true;
-            this.DatabaseFilter.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
-            this.DatabaseFilter.BackColor = System.Drawing.Color.Transparent;
-            this.DatabaseFilter.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
-            this.DatabaseFilter.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
-            this.DatabaseFilter.CausesValidation = false;
-            this.DatabaseFilter.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.DatabaseFilter.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.DatabaseFilter.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.DatabaseFilter.DisplayMember = "Fund";
-            this.DatabaseFilter.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.DatabaseFilter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.DatabaseFilter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.DatabaseFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.DatabaseFilter.FormattingEnabled = true;
-            this.DatabaseFilter.ItemHeight = 30;
-            this.DatabaseFilter.Location = new System.Drawing.Point(66, 77);
-            this.DatabaseFilter.MaxDropDownItems = 20;
-            this.DatabaseFilter.Name = "DatabaseFilter";
-            this.DatabaseFilter.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.DatabaseFilter.SelectedItemForeColor = System.Drawing.Color.White;
-            this.DatabaseFilter.Size = new System.Drawing.Size(324, 36);
-            this.DatabaseFilter.Style = MetroSet_UI.Design.Style.Dark;
-            this.DatabaseFilter.StyleManager = null;
-            this.DatabaseFilter.TabIndex = 0;
-            this.DatabaseFilter.ThemeAuthor = "Narwin";
-            this.DatabaseFilter.ThemeName = "MetroDark";
-            this.DatabaseFilter.ValueMember = "Fund";
-            // 
             // bindingNavigatorMoveFirstItem
             // 
             this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -877,7 +917,8 @@ namespace BudgetExecution
             captionImage1.Size = new System.Drawing.Size(70, 35);
             this.CaptionImages.Add(captionImage1);
             this.ClientSize = new System.Drawing.Size(1578, 910);
-            this.Controls.Add(this.groupBox3);
+            this.Controls.Add(this.groupBox5);
+            this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.ForeColor = System.Drawing.Color.LightSteelBlue;
@@ -889,16 +930,15 @@ namespace BudgetExecution
             this.Text = "DataMaster";
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
-            this.groupBox5.ResumeLayout(false);
             this.metroPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.Grid)).EndInit();
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
+            this.metroPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GridNavigator)).EndInit();
             this.GridNavigator.ResumeLayout(false);
             this.GridNavigator.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Grid)).EndInit();
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.E6DataGrid)).EndInit();
-            this.groupBox3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.BindingSource)).EndInit();
             this.ResumeLayout(false);
 
@@ -937,9 +977,6 @@ namespace BudgetExecution
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator4;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem1;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator5;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private MetroSet_UI.Controls.MetroSetComboBox DatabaseFilter;
-        private System.Windows.Forms.BindingSource BindingSource;
         private MetroSet_UI.Controls.MetroSetComboBox metroSetComboBox3;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.Button button4;
@@ -950,6 +987,9 @@ namespace BudgetExecution
         private MetroSet_UI.Controls.MetroSetTextBox metroSetTextBox2;
         private MetroSet_UI.Controls.MetroSetComboBox metroSetComboBox4;
         private MetroSet_UI.Controls.MetroSetComboBox metroSetComboBox1;
+        private MetroSet_UI.Controls.MetroSetTextBox metroSetTextBox4;
+        private MetroSet_UI.Controls.MetroSetComboBox metroSetComboBox8;
+        private System.Windows.Forms.BindingSource BindingSource;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button5;
     }

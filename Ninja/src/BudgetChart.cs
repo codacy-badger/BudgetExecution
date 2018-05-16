@@ -301,7 +301,7 @@ namespace BudgetExecution
                 DataSeries.Style.DisplayShadow = true;
                 DataSeries.Style.TextColor = Color.White;
                 if (value == Stat.Total || value == Stat.Average)
-                    DataSeries.Style.TextFormat = "${0:#,}";
+                    DataSeries.Style.TextFormat = "${0}";
                 if (value == Stat.Ratio)
                     DataSeries.Style.TextFormat = "{0:P}";
                 if (value == Stat.Count)
@@ -335,7 +335,7 @@ namespace BudgetExecution
             try
             {
                 Chart = chart;
-                Chart.PrimaryXAxis.Font = new Font("SegoeUI", 10F, FontStyle.Bold);
+                Chart.PrimaryXAxis.Font = new Font("SegoeUI", 8F, FontStyle.Bold);
                 Chart.PrimaryXAxis.ForeColor = SystemColors.MenuHighlight;
                 
             }

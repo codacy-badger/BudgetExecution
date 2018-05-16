@@ -61,10 +61,15 @@ namespace BudgetExecution
 
         private void ViewerCarousel_OnImageSelected(object sender, EventArgs e)
         {
-
+            if (ViewerCarousel.ActiveImage.Tag.ToString().Length > 3)
+            {
+                var s = (Source)Enum.Parse(typeof(Source), ViewerCarousel.ActiveImage.Tag.ToString());
+                var a = new SummaryForm(s);
+                a.Show();
+            }
             var i = ViewerCarousel.ActiveImage.Tag.ToString();
-            var a = new SummaryForm(i);
-            a.Show();
+            var b = new SummaryForm(i);
+            b.Show();
         }
     }
 }

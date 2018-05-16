@@ -63,9 +63,9 @@ namespace BudgetExecution.Resources {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Appropriation {
+        internal static System.Drawing.Bitmap DivisionAccount {
             get {
-                object obj = ResourceManager.GetObject("Appropriation", resourceCulture);
+                object obj = ResourceManager.GetObject("DivisionAccount", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,9 +73,9 @@ namespace BudgetExecution.Resources {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap D6 {
+        internal static System.Drawing.Bitmap Divisions {
             get {
-                object obj = ResourceManager.GetObject("D6", resourceCulture);
+                object obj = ResourceManager.GetObject("Divisions", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -83,89 +83,9 @@ namespace BudgetExecution.Resources {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Database {
+        internal static System.Drawing.Bitmap RegionAccount {
             get {
-                object obj = ResourceManager.GetObject("Database", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Employee {
-            get {
-                object obj = ResourceManager.GetObject("Employee", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap FTE {
-            get {
-                object obj = ResourceManager.GetObject("FTE", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Functionality {
-            get {
-                object obj = ResourceManager.GetObject("Functionality", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap P7 {
-            get {
-                object obj = ResourceManager.GetObject("P7", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap ReimbursableAgreement {
-            get {
-                object obj = ResourceManager.GetObject("ReimbursableAgreement", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap SiteData {
-            get {
-                object obj = ResourceManager.GetObject("SiteData", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap StatusOfFunds {
-            get {
-                object obj = ResourceManager.GetObject("StatusOfFunds", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Untitled {
-            get {
-                object obj = ResourceManager.GetObject("Untitled", resourceCulture);
+                object obj = ResourceManager.GetObject("RegionAccount", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
