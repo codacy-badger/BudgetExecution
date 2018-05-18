@@ -88,9 +88,9 @@ namespace BudgetExecution
         public string[] MainTitle { get; set; }
         public string[] AxisTitle { get; set; }
         public int CurrentTabIndex { get; set; }
-        public MetroSetComboBox GridPrimaryFilter { get; set; }
-        public MetroSetComboBox GridSecondaryFilter { get; set; }
-        public MetroSetComboBox ChartPrimaryFilterControl { get; set; }
+        public MetroSetComboBox GridFilterControl1 { get; set; }
+        public MetroSetComboBox GridFilterControl2 { get; set; }
+        public MetroSetComboBox ChartMeasureFilterControl { get; set; }
         public MetroSetComboBox ChartTypeFilterControl { get; set; }
         public ExpandCollapsePanel Expander1 { get; set; }
         public ExpandCollapsePanel Expander2 { get; set; }
@@ -103,14 +103,14 @@ namespace BudgetExecution
         {
             try
             {
-                BindingSource.DataSource = Data.QueryTable;
+                BindingSource.DataSource = Data.Table;
                 Navigator.BindingSource = BindingSource;
                 Grid.DataSource = BindingSource;
                 DefineVisisbleDataColumns(Grid);
                 PopulateFilterBoxItems(GridFundFilter, PrcField.FundName);
                 ConfigureTextBoxBindings();
-                lblTotal.Text = Data.GetQueryTotal(Data.QueryTable).ToString("c");
-                lblCount.Text = Data.GetQueryCount(Data.QueryTable).ToString();
+                lblTotal.Text = Data.GetQueryTotal(Data.Table).ToString("c");
+                lblCount.Text = Data.GetQueryCount(Data.Table).ToString();
                 GridFundFilter.SelectionChangeCommitted += GridFundFilter_ItemSelected;
                 GridBocFilter.SelectionChangeCommitted += GridBocFilter_ItemSelected;
                 GridBocFilter.SelectionChangeCommitted += GridBocFilter_ItemSelected;
@@ -209,7 +209,7 @@ namespace BudgetExecution
         {
             try
             {
-                return Data.QueryTable.AsEnumerable().Where(p => p.Field<string>("FundName").
+                return Data.Table.AsEnumerable().Where(p => p.Field<string>("FundName").
             Equals(filter)).Select(p => p.Field<decimal>("Amount") > 0).Count();
             }
             catch (Exception ex)
@@ -222,7 +222,7 @@ namespace BudgetExecution
         {
             try
             {
-                return Data.QueryTable.AsEnumerable().Where(p => p.Field<string>("FundName").Equals(filter1))
+                return Data.Table.AsEnumerable().Where(p => p.Field<string>("FundName").Equals(filter1))
                     .Where(p => p.Field<string>("BocName").Equals(filter2)).Select(p => p.Field<decimal>("Amount")).Count();
             }
             catch (Exception ex)
@@ -332,7 +332,7 @@ namespace BudgetExecution
         {
             try
             {
-                return Data.QueryTable.AsEnumerable().Where(p => p.Field<string>("FundName").
+                return Data.Table.AsEnumerable().Where(p => p.Field<string>("FundName").
                 Equals(filter)).Select(p => p.Field<decimal>("Amount")).Sum();
             }
             catch (Exception ex)
@@ -407,7 +407,7 @@ namespace BudgetExecution
                 return null;
             }
         }
-        private void PrimaryGridFilterBox_ItemSelected(object sender, EventArgs e)
+        private void GridFilterControl1_ItemSelected(object sender, EventArgs e)
         {
             try
             {
@@ -422,7 +422,7 @@ namespace BudgetExecution
                 MessageBox.Show(ex.Message + ex.StackTrace);
             }
         }
-        private void SecondaryGridFilterBox_ItemSelected(object sender, EventArgs e)
+        private void GridFilterControl2_ItemSelected(object sender, EventArgs e)
         {
             try
             {
@@ -436,7 +436,7 @@ namespace BudgetExecution
                 MessageBox.Show(ex.Message + ex.StackTrace);
             }
         }
-        void ChartTypeFilter_ItemSelected(object sender, EventArgs e)
+        void ChartTypeFilterControl_ItemSelected(object sender, EventArgs e)
         {
             var tb = sender as MetroSetComboBox;
             ChartType = (ChartSeriesType)Enum.Parse(typeof(ChartSeriesType), tb.SelectedItem.ToString());
@@ -492,74 +492,74 @@ namespace BudgetExecution
                 {
                     case 0:
                         GetChartType(ChartTypeFilter1);
-                        FundFilter.SelectedIndexChanged += ChartPrimaryFilter_ItemSelected;
+                        FundFilter.SelectedIndexChanged += ChartMeasureFilterControl_ItemSelected;
                         PopulateFilterBoxItems(FundFilter2, PrcField.FundName);
                         FundExpander2.Visible = false;
                         FundExpander1.ExpandCollapse += Expander_Click;
-                        FundFilter3.SelectedIndexChanged += ChartSqlFilter_ItemSelected;
+                        FundFilter3.SelectedIndexChanged += ChartSqlCommandFilter_ItemSelected;
                         FundChart = new BudgetChart(FundChart, Data, PrcField.Fund).Activate();
                         break;
                     case 1:
                         GetChartType(ChartTypeFilter2);
-                        BocFilter.SelectedIndexChanged += ChartPrimaryFilter_ItemSelected;
+                        BocFilter.SelectedIndexChanged += ChartMeasureFilterControl_ItemSelected;
                         PopulateFilterBoxItems(BocFilter2, PrcField.BocName);
                         BocExpander2.Visible = false;
                         BocExpander1.ExpandCollapse += Expander_Click;
-                        BocFilter3.SelectedIndexChanged += ChartSqlFilter_ItemSelected;
+                        BocFilter3.SelectedIndexChanged += ChartSqlCommandFilter_ItemSelected;
                         BocChart = new BudgetChart(BocChart, Data, PrcField.BocName).Activate();
                         break;
                     case 2:
                         GetChartType(ChartTypeFilter3);
-                        NpmFilter.SelectedIndexChanged += ChartPrimaryFilter_ItemSelected;
+                        NpmFilter.SelectedIndexChanged += ChartMeasureFilterControl_ItemSelected;
                         PopulateFilterBoxItems(NpmFilter2, PrcField.NPM);
                         NpmExpander2.Visible = false;
                         NpmExpander1.ExpandCollapse += Expander_Click;
-                        NpmFilter3.SelectedIndexChanged += ChartSqlFilter_ItemSelected;
+                        NpmFilter3.SelectedIndexChanged += ChartSqlCommandFilter_ItemSelected;
                         NpmChart = new BudgetChart(NpmChart, Data, PrcField.NPM).Activate();
                         break;
                     case 3:
                         GetChartType(ChartTypeFilter4);
-                        GoalFilter.SelectedIndexChanged += ChartPrimaryFilter_ItemSelected;
+                        GoalFilter.SelectedIndexChanged += ChartMeasureFilterControl_ItemSelected;
                         PopulateFilterBoxItems(GoalFilter2, PrcField.GoalName);
                         GoalExpander2.Visible = false;
                         GoalExpander1.ExpandCollapse += Expander_Click;
-                        GoalFilter3.SelectedIndexChanged += ChartSqlFilter_ItemSelected;
+                        GoalFilter3.SelectedIndexChanged += ChartSqlCommandFilter_ItemSelected;
                         GoalChart = new BudgetChart(GoalChart, Data, PrcField.GoalName).Activate();
                         break;
                     case 4:
                         GetChartType(ChartTypeFilter5);
-                        ObjectiveFilter.SelectedIndexChanged += ChartPrimaryFilter_ItemSelected;
+                        ObjectiveFilter.SelectedIndexChanged += ChartMeasureFilterControl_ItemSelected;
                         PopulateFilterBoxItems(ObjectiveFilter2, PrcField.ObjectiveName);
                         ObjectiveExpander2.Visible = false;
                         ObjectiveExpander1.ExpandCollapse += Expander_Click;
-                        ObjectiveFilter3.SelectedIndexChanged += ChartSqlFilter_ItemSelected;
+                        ObjectiveFilter3.SelectedIndexChanged += ChartSqlCommandFilter_ItemSelected;
                         ObjectiveChart = new BudgetChart(ObjectiveChart, Data, PrcField.ObjectiveName).Activate();
                         break;
                     case 5:
                         GetChartType(ChartTypeFilter6);
-                        DivisionFilter.SelectedIndexChanged += ChartPrimaryFilter_ItemSelected;
+                        DivisionFilter.SelectedIndexChanged += ChartMeasureFilterControl_ItemSelected;
                         PopulateFilterBoxItems(DivisionFilter2, PrcField.DivisionName);
                         DivisionExpander2.Visible = false;
                         DivisionExpander1.ExpandCollapse += Expander_Click;
-                        DivisionFilter3.SelectedIndexChanged += ChartSqlFilter_ItemSelected;
+                        DivisionFilter3.SelectedIndexChanged += ChartSqlCommandFilter_ItemSelected;
                         DivisionChart = new BudgetChart(DivisionChart, Data, PrcField.RC).Activate();
                         break;
                     case 6:
                         GetChartType(ChartTypeFilter7);
-                        AreaFilter.SelectedIndexChanged += ChartPrimaryFilter_ItemSelected;
+                        AreaFilter.SelectedIndexChanged += ChartMeasureFilterControl_ItemSelected;
                         PopulateFilterBoxItems(AreaFilter2, PrcField.ProgramAreaName);
                         AreaExpander2.Visible = false;
                         AreaExpander1.ExpandCollapse += Expander_Click;
-                        AreaFilter3.SelectedIndexChanged += ChartSqlFilter_ItemSelected;
+                        AreaFilter3.SelectedIndexChanged += ChartSqlCommandFilter_ItemSelected;
                         AreaChart = new BudgetChart(AreaChart, Data, PrcField.ProgramArea).Activate();
                         break;
                     case 7:
                         GetChartType(ChartTypeFilter8);
-                        ProjectFilter.SelectedIndexChanged += ChartPrimaryFilter_ItemSelected;
+                        ProjectFilter.SelectedIndexChanged += ChartMeasureFilterControl_ItemSelected;
                         PopulateFilterBoxItems(ProjectFilter2, PrcField.ProgramProjectName);
                         ProjectExpander2.Visible = false;
                         ProjectExpander1.ExpandCollapse += Expander_Click;
-                        ProjectFilter3.SelectedIndexChanged += ChartSqlFilter_ItemSelected;
+                        ProjectFilter3.SelectedIndexChanged += ChartSqlCommandFilter_ItemSelected;
                         ProjectChart = new BudgetChart(ProjectChart, Data, PrcField.ProgramProjectCode).Activate();
                         break;
                 }
@@ -569,15 +569,15 @@ namespace BudgetExecution
                 MessageBox.Show(ex.Message + ex.StackTrace);
             }
         }
-        void ChartPrimaryFilter_ItemSelected(object sender, EventArgs e)
+        void ChartMeasureFilterControl_ItemSelected(object sender, EventArgs e)
         {
             try
             {
-                ChartPrimaryFilterControl = sender as MetroSetComboBox;
+                ChartMeasureFilterControl = sender as MetroSetComboBox;
                 switch (SummaryTabControl.SelectedIndex)
                 {
                     case 0:
-                        FundFilter = ChartPrimaryFilterControl;
+                        FundFilter = ChartMeasureFilterControl;
                         ChartType = GetChartType(ChartTypeFilter1);
                         Measure = (Stat)Enum.Parse(typeof(Stat), FundFilter.SelectedItem.ToString());
                         FundChart = new BudgetChart(FundChart, Data, PrcField.Fund, Measure, ChartType).Activate();
@@ -586,49 +586,49 @@ namespace BudgetExecution
                         FundChart.Titles.Add(a);
                         break;
                     case 1:
-                        BocFilter = ChartPrimaryFilterControl;
+                        BocFilter = ChartMeasureFilterControl;
                         ChartType = GetChartType(ChartTypeFilter2);
                         Measure = (Stat)Enum.Parse(typeof(Stat), BocFilter.SelectedItem.ToString());
                         BocExpander2.Visible = true;
                         BocChart = new BudgetChart(BocChart, Data, PrcField.BocName, Measure, ChartType).Activate();
                         break;
                     case 2:
-                        NpmFilter = ChartPrimaryFilterControl;
+                        NpmFilter = ChartMeasureFilterControl;
                         ChartType = GetChartType(ChartTypeFilter3);
                         Measure = (Stat)Enum.Parse(typeof(Stat), NpmFilter.SelectedItem.ToString());
                         NpmExpander2.Visible = true;
                         NpmChart = new BudgetChart(NpmChart, Data, PrcField.NPM, Measure, ChartType).Activate();
                         break;
                     case 3:
-                        GoalFilter = ChartPrimaryFilterControl;
+                        GoalFilter = ChartMeasureFilterControl;
                         ChartType = GetChartType(ChartTypeFilter4);
                         Measure = (Stat)Enum.Parse(typeof(Stat), GoalFilter.SelectedItem.ToString());
                         GoalExpander2.Visible = true;
                         GoalChart = new BudgetChart(GoalChart, Data, PrcField.GoalName, Measure, ChartType).Activate();
                         break;
                     case 4:
-                        ObjectiveFilter = ChartPrimaryFilterControl;
+                        ObjectiveFilter = ChartMeasureFilterControl;
                         ChartType = GetChartType(ChartTypeFilter5);
                         Measure = (Stat)Enum.Parse(typeof(Stat), ObjectiveFilter.SelectedItem.ToString());
                         ObjectiveExpander2.Visible = true;
                         ObjectiveChart = new BudgetChart(ObjectiveChart, Data, PrcField.ObjectiveName, Measure, ChartType).Activate();
                         break;
                     case 5:
-                        DivisionFilter = ChartPrimaryFilterControl;
+                        DivisionFilter = ChartMeasureFilterControl;
                         ChartType = GetChartType(ChartTypeFilter6);
                         Measure = (Stat)Enum.Parse(typeof(Stat), DivisionFilter.SelectedItem.ToString());
                         DivisionExpander2.Visible = true;
                         DivisionChart = new BudgetChart(DivisionChart, Data, PrcField.DivisionName, Measure, ChartType).Activate();
                         break;
                     case 6:
-                        AreaFilter = ChartPrimaryFilterControl;
+                        AreaFilter = ChartMeasureFilterControl;
                         ChartType = GetChartType(ChartTypeFilter7);
                         Measure = (Stat)Enum.Parse(typeof(Stat), AreaFilter.SelectedItem.ToString());
                         AreaExpander2.Visible = true;
                         AreaChart = new BudgetChart(AreaChart, Data, PrcField.ProgramArea, Measure, ChartType).Activate();
                         break;
                     case 7:
-                        ProjectFilter = ChartPrimaryFilterControl;
+                        ProjectFilter = ChartMeasureFilterControl;
                         ChartType = GetChartType(ChartTypeFilter8);
                         Measure = (Stat)Enum.Parse(typeof(Stat), ProjectFilter.SelectedItem.ToString());
                         ProjectExpander2.Visible = true;
@@ -641,11 +641,11 @@ namespace BudgetExecution
                 MessageBox.Show(ex.Message + ex.StackTrace);
             }
         }
-        void ChartSqlFilter_ItemSelected(object sender, EventArgs e)
+        void ChartSqlCommandFilter_ItemSelected(object sender, EventArgs e)
         {
             try
             {
-                ChartPrimaryFilterControl = sender as MetroSetComboBox;
+                ChartMeasureFilterControl = sender as MetroSetComboBox;
                 var param = new Dictionary<string, object>();
                 switch (SummaryTabControl.SelectedIndex)
                 {

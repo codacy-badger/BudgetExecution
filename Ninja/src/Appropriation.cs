@@ -23,7 +23,7 @@ namespace BudgetExecution
         {
             Data = new DataBuilder(source, new Dictionary<string, object> { ["Fund"] = fundcode, ["BFY"] = bfy });
             Metric = new PrcMetric(Data);
-            Table = Data.QueryTable;
+            Table = Data.Table;
             Total = Metric.Total;
             Average = Metric.Average;
             ProgramElements = GetProgramElements(Table);

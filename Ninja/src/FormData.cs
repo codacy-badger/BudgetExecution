@@ -24,7 +24,7 @@ namespace BudgetExecution
             Data = data;
             DataMetric = new PrcMetric(Data);
             DataSet = Data.DataSet;
-            DataTable = Data.QueryTable;
+            DataTable = Data.Table;
             BindDataGridAndNavigator(DataTable, dgv, bs, bn);
             BindingSource = bs;
             Navigator = bn;
@@ -393,7 +393,7 @@ namespace BudgetExecution
         {
             try
             {
-                DataTable = Data.QueryTable;
+                DataTable = Data.Table;
                 BindingSource.DataSource = DataTable;
             }
             catch (Exception ex)

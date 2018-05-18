@@ -23,10 +23,6 @@ namespace BudgetExecution
             Connection = new SQLiteConnection(@"datasource=C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\database\SQLite\R6.db");
             SelectCommand = new SQLiteCommand(SelectStatement, Connection);
             Adapter = new SQLiteDataAdapter(SelectCommand);
-            CommandBuilder = GetCommandBuilder(Adapter);
-            InsertCommand = CommandBuilder.GetInsertCommand();
-            UpdateCommand = CommandBuilder.GetInsertCommand();
-            DeleteCommand = CommandBuilder.GetInsertCommand();
         }
         public Query(Source source, Provider provider)
         {
@@ -39,22 +35,26 @@ namespace BudgetExecution
                     Connection = new SQLiteConnection(@"datasource=C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\database\SQLite\R6.db");
                     SelectCommand = new SQLiteCommand(SelectStatement, Connection);
                     Adapter = new SQLiteDataAdapter(SelectCommand);
-                    CommandBuilder = GetCommandBuilder(Adapter);
                     break;
                 case (Provider.SqlCe):
                     Source = source;
                     TableName = source.ToString();
+                    Connection = new SQLiteConnection(@"datasource=C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\database\SqlCe\R6.sdf");
                     SelectStatement = $"SELECT * FROM {source.ToString()}";
                     break;
                 case (Provider.SqlServer):
                     Source = source;
                     TableName = source.ToString();
                     SelectStatement = $"SELECT * FROM {source.ToString()}";
+                    Connection = new SQLiteConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C: \Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\database\SqlServer\R6.mdf;Integrated Security=True;Connect Timeout=30");
+                    SelectStatement = $"SELECT * FROM {source.ToString()}";
                     break;
                 case (Provider.OleDb):
 
                     Source = source;
-                    TableName = source.ToString();
+                    TableName = source.ToString(); 
+                    SelectStatement = $"SELECT * FROM {source.ToString()}";
+                    Connection = new SQLiteConnection(@"Data Source = C: \Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\database\OleDb\R6.accdb");
                     SelectStatement = $"SELECT * FROM {source.ToString()}";
                     break;
             }

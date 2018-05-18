@@ -58,7 +58,7 @@ namespace BudgetExecution
             var pp = GetProgramProjectCode();
             var sql = new Dictionary<string, object>();
             sql.Add("ProgramProjectCode", pp);
-            DataRow p = new DataBuilder(Source.Account, sql).QueryTable.Rows[0];
+            DataRow p = new DataBuilder(Source.Account, sql).Table.Rows[0];
             return p;
         }
         public string GetProgramProjectCode()

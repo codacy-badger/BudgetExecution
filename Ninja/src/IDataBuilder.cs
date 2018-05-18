@@ -8,7 +8,7 @@ namespace BudgetExecution
         //Properties
         Query DataQuery { get; }
         DataSet DataSet { get; }
-        DataTable QueryTable { get; }
+        DataTable Table { get; }
         DataRow[] DataRecords { get; }
 
         //Methods

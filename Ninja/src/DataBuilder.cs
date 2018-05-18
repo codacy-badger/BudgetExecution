@@ -18,14 +18,14 @@ namespace BudgetExecution
             DataQuery = new Query(source);
             Source = DataQuery.Source;
             DataSet = GetDataSet();
-            QueryTable = GetData();
-            ProgramElements = GetProgramElements(QueryTable);
+            Table = GetData();
+            ProgramElements = GetProgramElements(Table);
             BindingSource = new BindingSource();
-            BindingSource.DataSource = QueryTable;
-            DataRecords = GetRecords(QueryTable);
+            BindingSource.DataSource = Table;
+            DataRecords = GetRecords(Table);
             if (source == Source.PRC || source == Source.RegionAccount || source == Source.DivisionAccount)
             {
-                QueryTotal = GetQueryTotal(QueryTable);
+                QueryTotal = GetQueryTotal(Table);
             }
         }
         public DataBuilder(Source source, Dictionary<string, object> param)
@@ -34,14 +34,14 @@ namespace BudgetExecution
             DataQuery = new Query(source, param);
             Source = DataQuery.Source;
             DataSet = GetDataSet();
-            QueryTable = GetData();
-            ProgramElements = GetProgramElements(QueryTable);
+            Table = GetData();
+            ProgramElements = GetProgramElements(Table);
             BindingSource = new BindingSource();
-            BindingSource.DataSource = QueryTable;
-            DataRecords = GetRecords(QueryTable);
+            BindingSource.DataSource = Table;
+            DataRecords = GetRecords(Table);
             if (source == Source.PRC || source == Source.RegionAccount || source == Source.DivisionAccount)
             {
-                QueryTotal = GetQueryTotal(QueryTable);
+                QueryTotal = GetQueryTotal(Table);
             }
         }
 
@@ -49,7 +49,7 @@ namespace BudgetExecution
         public Source Source { get; }
         public Query DataQuery { get; }
         public DataSet DataSet { get; }
-        public DataTable QueryTable { get; }
+        public DataTable Table { get; }
         public Dictionary<string, string[]> ProgramElements { get; }
         public DataRow[] DataRecords { get; }
         public BindingSource BindingSource { get; set; }
@@ -125,7 +125,7 @@ namespace BudgetExecution
         {
             try
             {
-                if (QueryTable.Columns.Contains("Amount"))
+                if (Table.Columns.Contains("Amount"))
                     return table.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Average();
                 return 0m;
             }
@@ -139,7 +139,7 @@ namespace BudgetExecution
         {
             try
             {
-                if (QueryTable.Columns.Contains("Amount"))
+                if (Table.Columns.Contains("Amount"))
                     return table.AsEnumerable().Where(p => p.Field<decimal>("Amount") > 0m).Select(p => p).Count();
                 return table.Rows.Count;
             }
@@ -153,7 +153,7 @@ namespace BudgetExecution
         {
             try
             {
-                if (QueryTable.Columns.Contains("Amount"))
+                if (Table.Columns.Contains("Amount"))
                     return new decimal[] { GetQueryTotal(table), (decimal)GetQueryCount(table), GetQueryAverage(table) };
                 return new decimal[] { 0m };
             }
@@ -183,7 +183,7 @@ namespace BudgetExecution
         {
             try
             {
-                if (QueryTable.Columns.Contains("Amount"))
+                if (Table.Columns.Contains("Amount"))
                     return table.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Sum();
                 return 0m;
             }

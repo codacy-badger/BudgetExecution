@@ -53,7 +53,7 @@ namespace BudgetExecution
         {
             Data = data;
             DataSet = data.DataSet;
-            Table = Info.FilterTable(Data.QueryTable, prcfilter, filter);
+            Table = Info.FilterTable(Data.Table, prcfilter, filter);
             ProgramElements = GetProgramElements(Table);
             Total = GetTotals(Table);
             Count = Table.Rows.Count;
@@ -75,8 +75,8 @@ namespace BudgetExecution
             ObjectiveMetrics = GetMetrics(Table, PrcField.ObjectiveName);
             if (Data.Source == Source.DivisionAccount)
             {
-                DivisionTotals = GetDataTotals(Data.QueryTable, PrcField.RC);
-                DivisionMetrics = GetMetrics(Data.QueryTable, PrcField.RC);
+                DivisionTotals = GetDataTotals(Data.Table, PrcField.RC);
+                DivisionMetrics = GetMetrics(Data.Table, PrcField.RC);
             }
             if (Data.Source == Source.PRC)
             {
