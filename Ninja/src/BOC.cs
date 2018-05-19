@@ -1,4 +1,7 @@
-﻿namespace BudgetExecution
+﻿using System.Collections.Generic;
+using System.Windows.Forms;
+
+namespace BudgetExecution
 {
     public class BOC
     {
@@ -22,6 +25,19 @@
         public decimal Value { get; }
 
         //Methods
+        Dictionary<string, object> GetParameter(string code)
+        {
+            try
+            {
+                return new Dictionary<string, object>() { ["Code"] = code };
+            }
+            catch(System.Exception ex)
+            {
+                MessageBox.Show(ex.Message + ex.StackTrace);
+                return null;
+            }
+        }
+
         public decimal GetValue(PRC prc)
         {
             return prc.Amount;

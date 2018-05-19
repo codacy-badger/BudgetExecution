@@ -13,7 +13,7 @@ namespace BudgetExecution
         {
             Data = new DataBuilder(Source.DivisionAccount);
             Metric = new PrcMetric(Data);
-            Table = Data.Table;
+            Table = Data.DataTable;
             Total = Metric.Total;
             Count = Metric.Count;
             Average = Metric.Average;
@@ -25,10 +25,7 @@ namespace BudgetExecution
             ProgramData = Metric.ProgramAreaTotals;
             ProjectData = Metric.ProgramProjectTotals;
             if (ProgramElements["BOC"].Contains("17"))
-            {
-                FTE = new FTE(Data.Table);
-                FteData = FTE.FundData;
-            }
+                FTE = GetFTE(Data.DataTable);
         }
         public DivisionAuthority(string rc)
         {
@@ -36,7 +33,7 @@ namespace BudgetExecution
             Org = new Org(RC.Code);
             Data = new DataBuilder(Source.DivisionAccount, new Dictionary<string, object> { ["RC"] = rc });
             Metric = new PrcMetric(Data);
-            Table = Data.Table;
+            Table = Data.DataTable;
             Total = Metric.Total;
             Count = Metric.Count;
             Average = Metric.Average;
@@ -48,10 +45,7 @@ namespace BudgetExecution
             ProgramData = Metric.ProgramAreaTotals;
             ProjectData = Metric.ProgramProjectTotals;
             if (ProgramElements["BOC"].Contains("17"))
-            {
-                FTE = new FTE(Table);
-                FteData = FTE.FundData;
-            }
+                FTE = GetFTE(Table);
         }
 
         //Properties
@@ -69,7 +63,7 @@ namespace BudgetExecution
         public int Count { get; }
         public decimal Average { get; }
         public Dictionary<string, decimal> DivisionData { get; }
-        public FTE FTE { get; }
+        public FTE[] FTE { get; }
         public Dictionary<string, decimal> BocData { get; set; }
         public Dictionary<string, decimal> FteData { get; }
         public Dictionary<string, decimal> FundData { get; }
@@ -125,6 +119,22 @@ namespace BudgetExecution
             {
                 MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
                 return -1;
+            }
+        }
+        internal FTE[] GetFTE(DataTable table)
+        {
+            try
+            {
+                var fteTable = table.AsEnumerable().Where(p => p.Field<string>("BOC").Equals("17")).Select(p => p).CopyToDataTable();
+                var fteArray = new FTE[fteTable.Rows.Count];
+                for (int i = 0; i < fteTable.Rows.Count; i++)
+                    fteArray[i] = new FTE(fteTable.Rows[i]);
+                return fteArray;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message.ToString() + $"Target Method:\n{ex.TargetSite}\n" + $"Stack:\n{ex.StackTrace}");
+                return null;
             }
         }
         public Tuple<DataTable, PRC[], decimal, int> GetDataValues(DataTable table, string column, string filter)

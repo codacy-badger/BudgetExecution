@@ -19,7 +19,7 @@ namespace BudgetExecution
                     InitializeComponent();
                     Data = new DataBuilder(source);
                     Metric = new PrcMetric(Data);
-                    Table = Data.Table;
+                    Table = Data.DataTable;
                     Ninja = new FormData(Data, BindingSource, Grid, Navigator);
                     ProgramElements = Ninja.GetProgramElements(Table);
                     PrcChart = new BudgetChart(PrcChart, Data, PrcField.FundName, Stat.Total, ChartSeriesType.Column).Activate();

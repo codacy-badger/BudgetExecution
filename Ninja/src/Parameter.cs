@@ -4,26 +4,12 @@
 
 namespace BudgetExecution
 {
-    public class Parameter : IParameter
+    public class PrcParameter : IPrcParameter
     {
-        #region Properties
 
-        public string BFY { get; }
-        public string BOC { get; }
-        public string BudgetLevel { get; }
-        public string Code { get; }
-        public string Fund { get; }
-        public string Org { get; }
-        public Dictionary<string, string> PRC { get; set; }
-        public string RC { get; }
-        public string RPIO { get; }
-
-        #endregion Properties
-
-        #region Constructors
-
-        public Parameter(string bl, string rpio, string bfy, string fund, string org, string rc, string boc, string code)
+        public PrcParameter(int id, string bl, string rpio, string bfy, string fund, string org, string rc, string boc, string code)
         {
+            ID = id;
             BudgetLevel = bl ?? "7";
             RPIO = rpio ?? "06";
             BFY = bfy;
@@ -32,8 +18,9 @@ namespace BudgetExecution
             RC = rc;
             BOC = boc;
             Code = code;
-            PRC = new Dictionary<string, string>()
+            Data = new Dictionary<string, object>()
             {
+                ["ID"] = ID,
                 ["BudgetLevel"] = bl,
                 ["RPIO"] = RPIO,
                 ["BFY"] = BFY,
@@ -44,8 +31,16 @@ namespace BudgetExecution
                 ["Code"] = Code
             };
         }
-
-        #endregion Constructors
+        public int ID { get; }
+        public string BFY { get; }
+        public string BOC { get; }
+        public string BudgetLevel { get; }
+        public string Code { get; }
+        public string Fund { get; }
+        public string Org { get; }
+        public Dictionary<string, object> Data { get; set; }
+        public string RC { get; }
+        public string RPIO { get; }
     }
 }
     

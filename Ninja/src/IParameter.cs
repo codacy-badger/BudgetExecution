@@ -2,11 +2,11 @@
 
 namespace BudgetExecution
 {
-    public interface IParameter
+    public interface IPrcParameter
     {
         //Properties
+        int ID { get; }
         string BFY { get; }
-
         string BOC { get; }
         string Code { get; }
         string Fund { get; }

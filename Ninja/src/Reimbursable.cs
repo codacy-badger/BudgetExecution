@@ -1,4 +1,6 @@
-﻿using System.Data;
+﻿using System.Collections.Generic;
+using System.Data;
+using System.Windows.Forms;
 
 namespace BudgetExecution
 {
@@ -45,5 +47,20 @@ namespace BudgetExecution
         public DataBuilder Data { get; }
         public Fund Fund { get; }
         public Org Org { get; }
+
+        //Methods
+        Dictionary<string, object> GetParameter(string code, string bfy)
+        {
+            try
+            {
+                return new Dictionary<string, object>() { ["Code"] = code, ["BFY"] = bfy };
+            }
+            catch (System.Exception ex)
+            {
+                MessageBox.Show(ex.Message + ex.StackTrace);
+                return null;
+            }
+        }
+
     }
 }

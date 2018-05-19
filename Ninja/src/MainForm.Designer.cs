@@ -76,10 +76,10 @@ namespace BudgetExecution
             // FunctionalityTile
             // 
             this.FunctionalityTile.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            textItem1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(0)));
+            textItem1.Font = new System.Drawing.Font("Segoe UI Semibold", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             textItem1.HubTile = this.FunctionalityTile;
-            textItem1.Text = "Transfer | Data Management";
-            textItem1.TextColor = System.Drawing.Color.LightSteelBlue;
+            textItem1.Text = "Data Management";
+            textItem1.TextColor = System.Drawing.Color.WhiteSmoke;
             this.FunctionalityTile.Banner = textItem1;
             this.FunctionalityTile.BannerColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.FunctionalityTile.BannerHeight = 20;
@@ -94,7 +94,7 @@ namespace BudgetExecution
             this.FunctionalityTile.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(130)))), ((int)(((byte)(180)))));
             this.FunctionalityTile.HoveredBorderColor = System.Drawing.SystemColors.MenuHighlight;
             this.FunctionalityTile.ImageSource = ((System.Drawing.Image)(resources.GetObject("FunctionalityTile.ImageSource")));
-            this.FunctionalityTile.Location = new System.Drawing.Point(31, 543);
+            this.FunctionalityTile.Location = new System.Drawing.Point(22, 650);
             this.FunctionalityTile.Margin = new System.Windows.Forms.Padding(1);
             this.FunctionalityTile.MinimumSize = new System.Drawing.Size(100, 100);
             this.FunctionalityTile.Name = "FunctionalityTile";
@@ -102,7 +102,7 @@ namespace BudgetExecution
             this.FunctionalityTile.ShowBanner = true;
             this.FunctionalityTile.ShowBannerIcon = true;
             this.FunctionalityTile.ShowRotateTileBanner = true;
-            this.FunctionalityTile.Size = new System.Drawing.Size(311, 116);
+            this.FunctionalityTile.Size = new System.Drawing.Size(311, 140);
             this.FunctionalityTile.SwitchRotateTileBannerVisibility = true;
             this.FunctionalityTile.TabIndex = 71;
             textItem4.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(0)));
@@ -112,10 +112,9 @@ namespace BudgetExecution
             // BudgetServerTile
             // 
             this.BudgetServerTile.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            textItem5.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(0)));
+            textItem5.Font = new System.Drawing.Font("Segoe UI Semibold", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             textItem5.HubTile = this.BudgetServerTile;
-            textItem5.Text = "Budget Data Server";
-            textItem5.TextColor = System.Drawing.Color.LightSteelBlue;
+            textItem5.Text = "Functionality | Budget Tools";
             this.BudgetServerTile.Banner = textItem5;
             this.BudgetServerTile.BannerColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.BudgetServerTile.BannerHeight = 20;
@@ -130,7 +129,7 @@ namespace BudgetExecution
             this.BudgetServerTile.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(130)))), ((int)(((byte)(180)))));
             this.BudgetServerTile.HoveredBorderColor = System.Drawing.SystemColors.MenuHighlight;
             this.BudgetServerTile.ImageSource = ((System.Drawing.Image)(resources.GetObject("BudgetServerTile.ImageSource")));
-            this.BudgetServerTile.Location = new System.Drawing.Point(28, 387);
+            this.BudgetServerTile.Location = new System.Drawing.Point(22, 433);
             this.BudgetServerTile.Margin = new System.Windows.Forms.Padding(1);
             this.BudgetServerTile.MinimumSize = new System.Drawing.Size(100, 100);
             this.BudgetServerTile.Name = "BudgetServerTile";
@@ -138,7 +137,7 @@ namespace BudgetExecution
             this.BudgetServerTile.ShowBanner = true;
             this.BudgetServerTile.ShowBannerIcon = true;
             this.BudgetServerTile.ShowRotateTileBanner = true;
-            this.BudgetServerTile.Size = new System.Drawing.Size(314, 127);
+            this.BudgetServerTile.Size = new System.Drawing.Size(314, 149);
             this.BudgetServerTile.SwitchRotateTileBannerVisibility = true;
             this.BudgetServerTile.TabIndex = 70;
             textItem8.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(0)));
@@ -148,9 +147,9 @@ namespace BudgetExecution
             // BudgetDataTile
             // 
             this.BudgetDataTile.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            textItem9.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            textItem9.Font = new System.Drawing.Font("Segoe UI Semibold", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             textItem9.HubTile = this.BudgetDataTile;
-            textItem9.Text = "Database | Budgets | Transfers";
+            textItem9.Text = "Documents | Budgets ";
             this.BudgetDataTile.Banner = textItem9;
             this.BudgetDataTile.BannerColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.BudgetDataTile.BannerHeight = 20;
@@ -167,7 +166,7 @@ namespace BudgetExecution
             this.BudgetDataTile.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(130)))), ((int)(((byte)(180)))));
             this.BudgetDataTile.HoveredBorderColor = System.Drawing.SystemColors.MenuHighlight;
             this.BudgetDataTile.ImageSource = ((System.Drawing.Image)(resources.GetObject("BudgetDataTile.ImageSource")));
-            this.BudgetDataTile.Location = new System.Drawing.Point(28, 227);
+            this.BudgetDataTile.Location = new System.Drawing.Point(22, 239);
             this.BudgetDataTile.Margin = new System.Windows.Forms.Padding(1);
             this.BudgetDataTile.MinimumSize = new System.Drawing.Size(70, 66);
             this.BudgetDataTile.Name = "BudgetDataTile";
@@ -176,7 +175,7 @@ namespace BudgetExecution
             this.BudgetDataTile.ShowBanner = true;
             this.BudgetDataTile.ShowBannerIcon = true;
             this.BudgetDataTile.ShowRotateTileBanner = true;
-            this.BudgetDataTile.Size = new System.Drawing.Size(314, 121);
+            this.BudgetDataTile.Size = new System.Drawing.Size(314, 140);
             this.BudgetDataTile.SwitchRotateTileBannerVisibility = true;
             this.BudgetDataTile.TabIndex = 20;
             textItem12.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -187,7 +186,7 @@ namespace BudgetExecution
             // SummaryTile
             // 
             this.SummaryTile.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            textItem13.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            textItem13.Font = new System.Drawing.Font("Segoe UI Semibold", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             textItem13.HubTile = this.SummaryTile;
             textItem13.Text = "Summary";
             this.SummaryTile.Banner = textItem13;
@@ -216,7 +215,7 @@ namespace BudgetExecution
             this.SummaryTile.ShowBanner = true;
             this.SummaryTile.ShowBannerIcon = true;
             this.SummaryTile.ShowRotateTileBanner = true;
-            this.SummaryTile.Size = new System.Drawing.Size(314, 144);
+            this.SummaryTile.Size = new System.Drawing.Size(314, 129);
             this.SummaryTile.SwitchRotateTileBannerVisibility = true;
             this.SummaryTile.TabIndex = 23;
             textItem16.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -357,10 +356,10 @@ namespace BudgetExecution
             this.expandCollapsePanel1.BackColor = System.Drawing.Color.Black;
             this.expandCollapsePanel1.ButtonSize = MakarovDev.ExpandCollapsePanel.ExpandCollapseButton.ExpandButtonSize.Small;
             this.expandCollapsePanel1.ButtonStyle = MakarovDev.ExpandCollapsePanel.ExpandCollapseButton.ExpandButtonStyle.Circle;
-            this.expandCollapsePanel1.Controls.Add(this.FunctionalityTile);
-            this.expandCollapsePanel1.Controls.Add(this.SummaryTile);
             this.expandCollapsePanel1.Controls.Add(this.BudgetServerTile);
             this.expandCollapsePanel1.Controls.Add(this.BudgetDataTile);
+            this.expandCollapsePanel1.Controls.Add(this.FunctionalityTile);
+            this.expandCollapsePanel1.Controls.Add(this.SummaryTile);
             this.expandCollapsePanel1.ExpandedHeight = 850;
             this.expandCollapsePanel1.IsExpanded = false;
             this.expandCollapsePanel1.Location = new System.Drawing.Point(1211, 66);

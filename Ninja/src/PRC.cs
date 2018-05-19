@@ -76,10 +76,32 @@ namespace BudgetExecution
         public string GoalName { get; }
         public string Objective { get; }
         public string ObjectiveName { get; }
-        public Parameter Parameter { get; }
-        private Dictionary<string, object> Data { get; set; }
+        private Dictionary<string, object> Parameter { get; set; }
 
         //Methods
+        Dictionary<string, object> GetParameter()
+        {
+            try
+            {
+                Dictionary<string, object> param = new Dictionary<string, object>()
+                {
+                    ["ID"] = ID,
+                    ["BudgetLevel"] = BudgetLevel,
+                    ["RPIO"] = RPIO,
+                    ["BFY"] = BFY,
+                    ["Fund"] = Fund.Code,
+                    ["RC"] = RC,
+                    ["BOC"] = BOC.Code,
+                    ["Code"] = Account.Code,
+                };
+                return param;
+            }
+            catch (System.Exception ex)
+            {
+                MessageBox.Show(ex.Message + ex.StackTrace);
+                return null;
+            }
+        }
         public string GetCode()
         {
             return Code;
@@ -113,7 +135,7 @@ namespace BudgetExecution
                 var pp = GetProgramProjectCode();
                 var sql = new Dictionary<string, object>();
                 sql.Add("ProgramProjectCode", pp);
-                DataRow p = new DataBuilder(Source.Account, sql).Table.Rows[0];
+                DataRow p = new DataBuilder(Source.Account, sql).DataTable.Rows[0];
                 return p;
             }
             catch (Exception ex)
@@ -154,9 +176,9 @@ namespace BudgetExecution
                 return null;
             }
         } 
-        internal Parameter GetParameter()
+        internal PrcParameter GetPrcParameter()
         {
-            return new Parameter(BudgetLevel, RPIO, BFY, Fund.Code, Org, RC.Code, BOC.Code, Account.Code);
+            return new PrcParameter(ID, BudgetLevel, RPIO, BFY, Fund.Code, Org, RC.Code, BOC.Code, Account.Code);
         }
         internal decimal Reprogram(decimal amount)
         {

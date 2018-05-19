@@ -13,7 +13,7 @@ namespace BudgetExecution
         {
             Data = new DataBuilder(Source.RegionAccount, new Dictionary<string, object> { ["BFY"] = FiscalYear });
             Metric = new PrcMetric(Data);
-            Table = Data.Table;
+            Table = Data.DataTable;
             Total = Metric.Total;
             Count = Metric.Count;
             Average = Metric.Average;
@@ -26,8 +26,7 @@ namespace BudgetExecution
             ProjectData = Metric.ProgramProjectTotals;
             if (ProgramElements["BOC"].Contains("17"))
             {
-                FTE = new FTE(Table);
-                FteData = FTE.FundData;
+                FTE = GetFTE(Table);
             }
         }
 
@@ -40,7 +39,7 @@ namespace BudgetExecution
         public PrcMetric Metric { get; }
         public int Count { get; }
         public DataBuilder Data { get; set; }
-        public FTE FTE { get; }
+        public FTE[] FTE { get; }
         public Dictionary<string, decimal> FteData { get; }
         public Dictionary<string, decimal> FundData { get; }
         public Dictionary<string, decimal> GoalData { get; }
@@ -83,7 +82,7 @@ namespace BudgetExecution
         {
             try
             {
-                return Data.Table.AsEnumerable().Select(p => p.Field<string>(filter)).Distinct().ToArray();
+                return Data.DataTable.AsEnumerable().Select(p => p.Field<string>(filter)).Distinct().ToArray();
             }
             catch (Exception ex)
             {
@@ -126,6 +125,22 @@ namespace BudgetExecution
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
+                return null;
+            }
+        }
+        internal FTE[] GetFTE(DataTable table)
+        {
+            try
+            {
+                var fteTable = table.AsEnumerable().Where(p => p.Field<string>("BOC").Equals("17")).Select(p => p).CopyToDataTable();
+                var fteArray = new FTE[fteTable.Rows.Count];
+                for (int i = 0; i < fteTable.Rows.Count; i++)
+                    fteArray[i] = new FTE(fteTable.Rows[i]);
+                return fteArray;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message.ToString() + $"Target Method:\n{ex.TargetSite}\n" + $"Stack:\n{ex.StackTrace}");
                 return null;
             }
         }

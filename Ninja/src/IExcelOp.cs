@@ -7,27 +7,17 @@ namespace BudgetExecution
 {
     public interface IExcelOp
     {
-        #region Properties
-
+        //Properties
         Tuple<string, string> ConnectionString { get; set; }
         string ExcelFile { get; set; }
 
-        #endregion
-
-        #region Methods
-
+        //Methods
         Excel.Application GetApplication();
-
         string GetConnectionString();
-
         string GetFile();
-
         Excel.Workbook GetWorkbook(Excel.Application excel, string filepath);
-
         void ReleaseObject(object obj);
-
         void SaveWorkBook(Excel.Workbook wb);
 
-        #endregion
     }
 }

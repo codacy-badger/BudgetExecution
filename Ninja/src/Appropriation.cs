@@ -23,21 +23,19 @@ namespace BudgetExecution
         {
             Data = new DataBuilder(source, new Dictionary<string, object> { ["Fund"] = fundcode, ["BFY"] = bfy });
             Metric = new PrcMetric(Data);
-            Table = Data.Table;
+            Table = Data.DataTable;
+            Allocation = Data.GetRecords(Table);
             Total = Metric.Total;
             Average = Metric.Average;
             ProgramElements = GetProgramElements(Table);
             BocCodes = ProgramElements["BOC"];
-            BOC = ProgramElements["BocName"];
-            NPM = ProgramElements["NPM"];
-            Program = ProgramElements["ProgramAreaName"];
-            Goal = ProgramElements["GoalName"];
-            Count = PrcData.Item1.Rows.Count;
-            BocData = Metric.BocTotals;
             if (BocCodes.Contains("17"))
             {
-                FTE = new FTE(Table);
+
+                FTE = GetFTE(Table);
             }
+            Count = PrcData.Item1.Rows.Count;
+            BocData = Metric.BocTotals;
             NpmData = Metric.NpmTotals;
             ProgramData = Metric.ProgramAreaTotals;
             GoalData = Metric.GoalTotals;
@@ -52,7 +50,7 @@ namespace BudgetExecution
         public PrcMetric Metric { get; }
         public int Count { get; }
         public string FiscalYear { get; }
-        public FTE FTE { get; }
+        public FTE[] FTE { get; }
         public Fund Fund { get; }
         public string[] Goal { get; }
         public Dictionary<string, decimal> GoalData { get; set; }
@@ -69,6 +67,7 @@ namespace BudgetExecution
         public DataTable Table { get; }
         public decimal Total { get; }
         private DataBuilder Data { get; }
+        private DataRow[] Allocation { get; }
 
         //Methods
         public DataTable FilterTable(DataTable table, string column, string filter)
@@ -155,7 +154,7 @@ namespace BudgetExecution
             }
             return null;
         }
-        public decimal GetFTE()
+        public decimal GetFteTotal()
         {
             return PrcData.Item1.AsEnumerable().Where(p => p.Field<string>("BOC").Equals("17")).Select(p => p).Sum(p => p.Field<decimal>("Amount"));
         }
@@ -230,9 +229,8 @@ namespace BudgetExecution
                     continue;
                 data.Add(dc.ColumnName, GetCodes(table, dc.ColumnName));
             }
-            if (data.ContainsKey("Id")) data.Remove("Id");
+            if (data.ContainsKey("ID")) data.Remove("ID");
             if (data.ContainsKey("Amount")) data.Remove("Amount");
-            if (data.ContainsKey("P6_Id")) data.Remove("P6_Id");
             return data;
         }
         public decimal GetTotal(DataTable table)
@@ -285,6 +283,22 @@ namespace BudgetExecution
                 MessageBox.Show(ex.Message.ToString() + $"Target Method:\n{ex.TargetSite}\n" + $"Stack:\n{ex.StackTrace}");
                 return null;
             }
+        }
+        internal FTE[] GetFTE(DataTable table)
+        {
+            try
+            {
+                var fteTable = table.AsEnumerable().Where(p => p.Field<string>("BOC").Equals("17")).Select(p => p).CopyToDataTable();
+                var fteArray = new FTE[fteTable.Rows.Count];
+                for (int i = 0; i < fteTable.Rows.Count; i++)
+                    fteArray[i] = new FTE(fteTable.Rows[i]);
+                return fteArray;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message.ToString() + $"Target Method:\n{ex.TargetSite}\n" + $"Stack:\n{ex.StackTrace}");
+                return null;
+            } 
         }
         internal Bitmap GetImageFile()
         {

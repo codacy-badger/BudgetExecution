@@ -1,10 +1,12 @@
-﻿using System.Data;
+﻿using System.Collections.Generic;
+using System.Data;
+using System.Windows.Forms;
 
 namespace BudgetExecution
 {
     public class Payroll
     {
-
+        //Constructors
         public Payroll()
         {
         }
@@ -49,6 +51,8 @@ namespace BudgetExecution
             YearOverTimePay = decimal.Parse(dr["YearOverTimePay"].ToString());
             YearOverTimeHours = double.Parse(dr["YearOverTimeHours"].ToString());
         }
+
+        //Properties
         public decimal Amount { get; }
         public string BFY { get; }
         public string Code { get; }
@@ -66,6 +70,21 @@ namespace BudgetExecution
         public decimal YearBasePay { get; }
         public double YearOverTimeHours { get; }
         public decimal YearOverTimePay { get; }
+
+        //Methods
+        Dictionary<string, object> GetParameter(string code, string bfy)
+        {
+            try
+            {
+                return new Dictionary<string, object>() { ["Code"] = code, ["BFY"] = bfy };
+            }
+            catch (System.Exception ex)
+            {
+                MessageBox.Show(ex.Message + ex.StackTrace);
+                return null;
+            }
+        }
+
     }
 }
 

@@ -20,83 +20,88 @@ namespace BudgetExecution
             Source = source;
             TableName = source.ToString();
             SelectStatement = $"SELECT * FROM {source.ToString()}";
-            Connection = new SQLiteConnection(@"datasource=C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\database\SQLite\R6.db");
-            SelectCommand = new SQLiteCommand(SelectStatement, Connection);
-            Adapter = new SQLiteDataAdapter(SelectCommand);
+            DataConnection = new SQLiteConnection(@"datasource=C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\database\SQLite\R6.db");
+            SelectCommand = GetSelectCommand(SelectStatement, DataConnection);
+            Adapter = GetDataAdapter(SelectCommand);
         }
-        public Query(Source source, Provider provider)
+        public Query(Source source, Provider provider, Dictionary<string, object> param)
         {
-            switch (provider)
-            {
-                case (Provider.SQLite):
-                    Source = source;
-                    TableName = source.ToString();
-                    SelectStatement = $"SELECT * FROM {source.ToString()}";
-                    Connection = new SQLiteConnection(@"datasource=C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\database\SQLite\R6.db");
-                    SelectCommand = new SQLiteCommand(SelectStatement, Connection);
-                    Adapter = new SQLiteDataAdapter(SelectCommand);
-                    break;
-                case (Provider.SqlCe):
-                    Source = source;
-                    TableName = source.ToString();
-                    Connection = new SQLiteConnection(@"datasource=C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\database\SqlCe\R6.sdf");
-                    SelectStatement = $"SELECT * FROM {source.ToString()}";
-                    break;
-                case (Provider.SqlServer):
-                    Source = source;
-                    TableName = source.ToString();
-                    SelectStatement = $"SELECT * FROM {source.ToString()}";
-                    Connection = new SQLiteConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C: \Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\database\SqlServer\R6.mdf;Integrated Security=True;Connect Timeout=30");
-                    SelectStatement = $"SELECT * FROM {source.ToString()}";
-                    break;
-                case (Provider.OleDb):
-
-                    Source = source;
-                    TableName = source.ToString(); 
-                    SelectStatement = $"SELECT * FROM {source.ToString()}";
-                    Connection = new SQLiteConnection(@"Data Source = C: \Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\database\OleDb\R6.accdb");
-                    SelectStatement = $"SELECT * FROM {source.ToString()}";
-                    break;
-            }
-        }
-        public Query(Source source, Dictionary<string, object> param)
-        {
+            DataConnection = GetConnection(provider);
             Source = source;
             TableName = source.ToString();
             Parameter = param;
-            SelectStatement = GetSqlStatement();
-            Connection = new SQLiteConnection(@"datasource=C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\database\SQLite\R6.db");
-            SelectCommand = new SQLiteCommand(SelectStatement, Connection);
-            Adapter = new SQLiteDataAdapter(SelectCommand);
-            CommandBuilder = GetCommandBuilder(Adapter);
-            InsertCommand = CommandBuilder.GetInsertCommand();
-            UpdateCommand = CommandBuilder.GetInsertCommand();
-            DeleteCommand = CommandBuilder.GetInsertCommand();
+            SelectStatement = $"SELECT * FROM {source.ToString()}";
+            SelectCommand = GetSelectCommand(SelectStatement, DataConnection);
+            Adapter = GetDataAdapter(SelectCommand);
+        }
+        public Query(Source source, Dictionary<string, object> param)
+        {
+            DataConnection = new SQLiteConnection(@"datasource=C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\database\SQLite\R6.db");
+            Source = source;
+            TableName = source.ToString();
+            Parameter = param;
+            SelectStatement = GetSqlStatement(TableName, Parameter);
+            SelectCommand = GetSelectCommand(SelectStatement, DataConnection);
+            Adapter = GetDataAdapter(SelectCommand);
+        }
+        public Query(Provider provider, string sourcePath, Dictionary<string, object> param)
+        {
+            TableName = sourcePath;
+            Parameter = param;
+            switch (provider)
+            {
+                case (Provider.SQLite):
+                    DataConnection = new SQLiteConnection(@"datasource=C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\database\SQLite\R6.db");
+                    break;
+                case (Provider.SqlCe):
+                    DataConnection = new SQLiteConnection(@"datasource=C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\database\SqlCe\R6.sdf");
+                    break;
+                case (Provider.SqlServer):
+                    DataConnection = new SQLiteConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C: \Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\database\SqlServer\R6.mdf;Integrated Security=True;Connect Timeout=30");
+                    break;
+                case (Provider.OleDb):
+                    DataConnection = new SQLiteConnection(@"Data Source = C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\database\OleDb\R6.accdb");
+                    break;
+            }
+            SelectStatement = GetSqlStatement(TableName, Parameter);
+            SelectCommand = GetSelectCommand(SelectStatement, DataConnection);
+            Adapter = GetDataAdapter(SelectCommand);
         }
 
         //Properties
-        public SQLiteDataAdapter Adapter { get; set; }
-        public SQLiteCommandBuilder CommandBuilder { get; }
-        public SQLiteConnection Connection { get; }
-        public SQLiteCommand DeleteCommand { get; }
-        public SQLiteCommand InsertCommand { get; }
-        public Dictionary<string, object> Parameter { get; }
-        public SQLiteDataReader DataReader { get; set; }
-        public SQLiteCommand SelectCommand { get; }
-        public string SelectStatement { get; }
         public Source Source { get; }
         public Provider Provider { get; }
         public Command Sql { get; set; }
-        public Dictionary<string, string> SqlStatement { get; }
+        public IDbConnection DataConnection { get; }
+        public Dictionary<string, object> Parameter { get; }
         public string TableName { get; }
-        public SQLiteCommand UpdateCommand { get; }
+        public Dictionary<string, string> SqlStatement { get; set; }
+        public string SelectStatement { get; set; }
+        public IDbCommand SelectCommand { get; }
+        public DbDataReader DataReader { get; set; }
+        public IDbDataAdapter Adapter { get; set; }
+        public IDbCommand DeleteCommand { get; }
+        public IDbCommand InsertCommand { get; }
+        public IDbCommand UpdateCommand { get; }
 
         //Methods
-        public string GetSqlStatement()
+        public string GetSqlStatement(string table, Dictionary<string, object> param)
         {
             try
             {
-                return $"SELECT * FROM {TableName} WHERE {GetParamString(Parameter)}";
+                return $"SELECT * FROM {table} WHERE {GetParamString(param)}";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("ERROR!: \n\n" + ex.TargetSite + ex.StackTrace);
+                return null;
+            }
+        }
+        public string GetSqlStatement(string table, string sql)
+        {
+            try
+            {
+                return $"SELECT * FROM {table} WHERE {sql}";
             }
             catch (Exception ex)
             {
@@ -116,11 +121,22 @@ namespace BudgetExecution
                 return null;
             }
         }
-        public SQLiteCommandBuilder GetCommandBuilder(SQLiteDataAdapter adapter)
+        internal IDbConnection GetConnection(Provider provider)
         {
             try
             {
-                return new SQLiteCommandBuilder(adapter);
+                switch (provider)
+                {
+                    case (Provider.SQLite):
+                        return new SQLiteConnection(@"datasource=C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\database\SQLite\R6.db");
+                    case (Provider.SqlCe):
+                        return new SQLiteConnection(@"datasource=C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\database\SqlCe\R6.sdf");
+                    case (Provider.SqlServer):
+                        return new SQLiteConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C: \Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\database\SqlServer\R6.mdf;Integrated Security=True;Connect Timeout=30");
+                    case (Provider.OleDb):
+                        return new SQLiteConnection(@"Data Source = C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\database\OleDb\R6.accdb");
+                }
+                return null;
             }
             catch (Exception ex)
             {
@@ -128,11 +144,17 @@ namespace BudgetExecution
                 return null;
             }
         }
-        public SQLiteDataAdapter GetDataAdapter(SQLiteCommand command)
+        public IDbDataAdapter GetDataAdapter(IDbCommand command)
         {
             try
             {
-                return new SQLiteDataAdapter(command.CommandText, command.Connection);
+                if (command is SQLiteCommand)
+                    return new SQLiteDataAdapter((SQLiteCommand)command);
+                if (command is OleDbCommand)
+                    return new OleDbDataAdapter((OleDbCommand)command);
+                if (command is SqlCommand)
+                    return new SqlDataAdapter((SqlCommand)command);
+                return null;
             }
             catch (Exception ex)
             {
@@ -140,11 +162,26 @@ namespace BudgetExecution
                 return null;
             }
         }
-        public SQLiteCommand GetDeleteCommand()
+        internal IDbCommand GetSelectCommand(string select, IDbConnection connection)
         {
             try
             {
-                return new SQLiteCommandBuilder(Adapter).GetDeleteCommand();
+                if(connection is SQLiteConnection)
+                {
+                    SelectStatement = select;
+                    return new SQLiteCommand(SelectStatement, (SQLiteConnection)connection);
+                }
+                if (connection is OleDbConnection)
+                {
+                    SelectStatement = select;
+                    return new OleDbCommand(SelectStatement, (OleDbConnection)connection);
+                }
+                if (connection is SqlConnection)
+                {
+                    SelectStatement = select;
+                    return new SqlCommand(SelectStatement, (SqlConnection)connection);
+                }
+                return null;
             }
             catch (Exception ex)
             {
@@ -152,83 +189,26 @@ namespace BudgetExecution
                 return null;
             }
         }
-        public SQLiteCommand GetInsertCommand()
+        internal IDbCommand GetSelectCommand(Dictionary<string, object> param, IDbConnection connection)
         {
             try
             {
-                return new SQLiteCommandBuilder(Adapter).GetInsertCommand();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("ERROR!: \n" + ex.TargetSite + ex.StackTrace);
+                if (connection is SQLiteConnection)
+                {
+                    SelectStatement = GetParamString(param);
+                    return new SQLiteCommand(SelectStatement, (SQLiteConnection)connection);
+                }
+                if (connection is OleDbConnection)
+                {
+                    SelectStatement = GetParamString(param);
+                    return new OleDbCommand(SelectStatement, (OleDbConnection)connection);
+                }
+                if (connection is SqlConnection)
+                {
+                    SelectStatement = GetParamString(param);
+                    return new SqlCommand(SelectStatement, (SqlConnection)connection);
+                }
                 return null;
-            }
-        }
-        public SQLiteCommand GetSelectCommand(string select)
-        {
-            try
-            {
-                return new SQLiteCommand(select, Connection);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("ERROR!: \n" + ex.TargetSite + ex.StackTrace);
-                return null;
-            }
-        }
-        public SQLiteCommand GetUpdateCommand()
-        {
-            try
-            {
-                return new SQLiteCommandBuilder(Adapter).GetUpdateCommand();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("ERROR!: \n" + ex.TargetSite + ex.StackTrace);
-                return null;
-            }
-        }
-        internal SQLiteDataAdapter GetDataAdapter(string sql)
-        {
-            try
-            {
-                return new SQLiteDataAdapter(sql, Connection);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("ERROR!: \n" + ex.TargetSite + ex.StackTrace);
-                return null;
-            }
-        }
-        internal SQLiteDataAdapter GetDataAdapter(Command cmd, string sql)
-        {
-            try
-            {
-                return new SQLiteDataAdapter(sql, Connection);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("ERROR!: \n" + ex.TargetSite + ex.StackTrace);
-                return null;
-            }
-        }
-        private SQLiteCommandBuilder GetCommandBuilder()
-        {
-            try
-            {
-                return new SQLiteCommandBuilder(Adapter);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("ERROR!: \n\n" + ex.TargetSite + ex.StackTrace);
-                return null;
-            }
-        }
-        private SQLiteDataAdapter GetDataAdapter()
-        {
-            try
-            {
-                return new SQLiteDataAdapter(SelectCommand);
             }
             catch (Exception ex)
             {
@@ -251,18 +231,6 @@ namespace BudgetExecution
             catch (Exception ex)
             {
                 MessageBox.Show("ERROR!: \n\n" + ex.TargetSite + ex.StackTrace);
-                return null;
-            }
-        }
-        private SQLiteCommand GetSelectCommand()
-        {
-            try
-            {
-                return new SQLiteCommand(SelectStatement, Connection);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("ERROR!: \n" + ex.TargetSite + ex.StackTrace);
                 return null;
             }
         }

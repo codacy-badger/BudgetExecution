@@ -14,52 +14,88 @@ namespace BudgetExecution
         {
         }
 
-        public FTE(DataTable table)
+        public FTE(DataRow datarow)
         {
-            E6 = table.DataSet;
-            Table = GetDataValues(table, "BOC", "17").Item1;
-            DataElement = GetDataElements(Table);
-            Total = GetTotal(Table);
-            Count = Table.Rows.Count;
-            Average = GetAverage(Table);
-            Data = GetPrcArray(Table);
-            AllocationData = new Tuple<DataTable, PRC[], decimal, int>(Table, Data, Total, Count);
-            NpmData = GetTotals(Table, DataElement["NPM"], "NPM");
-            GoalInfo = GetTotals(Table, DataElement["GoalName"], "GoalName");
-            ObjectiveData = GetTotals(Table, DataElement["Objective"], "Objective");
-            ProgramData = GetTotals(Table, DataElement["ProgramAreaName"], "ProgramAreaName");
-            ProjectData = GetTotals(Table, DataElement["ProgramProjectName"], "ProgramProjectName");
+            ID = int.Parse(datarow["Id"].ToString());
+            BudgetLevel = datarow["BudgetLevel"].ToString();
+            RPIO = datarow["RPIO"].ToString();
+            BFY = datarow["BFY"].ToString();
+            Fund = new Fund(datarow["Fund"].ToString(), datarow["BFY"].ToString());
+            RC = new RC(datarow["RC"].ToString());
+            Org = new Org(datarow["Org"].ToString());
+            Account = new Account(datarow["Code"].ToString());
+            Code = Account.Code;
+            BOC = new BOC(datarow["BOC"].ToString());
+            Amount = decimal.Parse(datarow["Amount"].ToString());
+            NpmCode = Account.NpmCode;
+            ProgramProjectCode = Account.ProgramProjectCode;
+            Goal = Account.Goal;
+            GoalName = Account.GoalName;
+            Objective = Account.Objective;
+            ObjectiveName = Account.ObjectiveName;
+            Parameter = GetParameter();
         }
-
         //Properties
+        public int ID { get; set; }
+        public string BudgetLevel { get; set; }
+        public string RPIO { get; set; }
+        public string BFY { get; set; }
+        public Fund Fund { get; }
+        public Org Org { get; }
+        public RC RC { get; }
+        public string Code { get; set; }
         public Account Account { get; }
-
-        public Tuple<DataTable, PRC[], decimal, int> AllocationData { get; }
         public decimal Amount { get; set; }
+        public BOC BOC { get; }
+        public string NpmCode { get; }
+        public string ProgramProjectCode { get; }
+        public string Goal { get; }
+        public string GoalName { get; }
+        public string Objective { get; }
+        public string ObjectiveName { get; }
+        public Tuple<DataTable, PRC[], decimal, int> AllocationData { get; }
         public decimal Authority { get; set; }
         public decimal Average { get; }
-        public string BFY { get; set; }
-        public string Code { get; }
         public int Count { get; }
         public PRC[] Data { get; }
         public Dictionary<string, string[]> DataElement { get; }
         public DataSet E6 { get; }
-        public Fund Fund { get; set; }
         public Dictionary<string, decimal> FundData { get; }
         public Dictionary<string, decimal> GoalInfo { get; }
         public Dictionary<string, decimal> NpmData { get; }
         public Dictionary<string, decimal> ObjectiveData { get; }
-        public Org Org { get; set; }
         public Dictionary<string, decimal> ProgramData { get; }
         public Dictionary<string, decimal> ProjectData { get; }
-        public RC RC { get; set; }
-        public string RPIO { get; set; }
         public DataTable Table { get; }
         public decimal Total { get; }
         BOC IPRC.BOC { get; }
         private decimal[] Metrics { get; }
+        private Dictionary<string, object> Parameter { get; set; }
 
         //Methods
+        Dictionary<string, object> GetParameter()
+        {
+            try
+            {
+                Dictionary<string, object> param = new Dictionary<string, object>()
+                {
+                    ["ID"] = ID,
+                    ["BudgetLevel"] = BudgetLevel,
+                    ["RPIO"] = RPIO,
+                    ["BFY"] = BFY,
+                    ["Fund"] = Fund.Code,
+                    ["RC"] = RC,
+                    ["BOC"] = BOC.Code,
+                    ["Code"] = Account.Code,
+                };
+                return param;
+            }
+            catch (System.Exception ex)
+            {
+                MessageBox.Show(ex.Message + ex.StackTrace);
+                return null;
+            }
+        }
         public DataTable FilterTable(DataTable table, string column, string filter)
         {
             try
@@ -117,16 +153,14 @@ namespace BudgetExecution
             var data = new Dictionary<string, string[]>();
             foreach (DataColumn dc in table.Columns)
             {
-                if (dc.ColumnName.Equals("Id") || dc.ColumnName.Equals("Amount"))
+                if (dc.ColumnName.Equals("ID") || dc.ColumnName.Equals("Amount"))
                     continue;
                 data.Add(dc.ColumnName, GetCodes(table, dc.ColumnName));
             }
-            if (data.ContainsKey("Id")) data.Remove("Id");
+            if (data.ContainsKey("ID")) data.Remove("ID");
             if (data.ContainsKey("Amount")) data.Remove("Amount");
-            if (data.ContainsKey("P6_Id")) data.Remove("P6_Id");
             return data;
         }
-
         public Tuple<DataTable, PRC[], decimal, int> GetDataValues(DataTable table, string column, string filter)
         {
             try
@@ -140,13 +174,11 @@ namespace BudgetExecution
                 return null;
             }
         }
-
         public decimal[] GetMetrics(DataTable table)
         {
             var count = GetCount(table);
             return new decimal[] { GetTotal(table), (decimal)count, GetAverage(table) };
         }
-
         public Dictionary<string, decimal[]> GetMetrics(DataTable table, string[] list, string column)
         {
             try
@@ -169,7 +201,6 @@ namespace BudgetExecution
                 return null;
             }
         }
-
         public Dictionary<string, decimal[]> GetMetrics(DataTable table, string column, string filter)
         {
             try
@@ -193,7 +224,6 @@ namespace BudgetExecution
                 return null;
             }
         }
-
         public PRC[] GetPrcArray(DataTable table)
         {
             try
@@ -206,7 +236,6 @@ namespace BudgetExecution
                 return null;
             }
         }
-
         public decimal GetTotal(DataTable table)
         {
             try
@@ -219,7 +248,6 @@ namespace BudgetExecution
                 return -1M;
             }
         }
-
         public Dictionary<string, decimal> GetTotals(DataTable table, string column, string filter)
         {
             try
@@ -241,7 +269,6 @@ namespace BudgetExecution
                 return null;
             }
         }
-
         public Dictionary<string, decimal> GetTotals(DataTable table, string[] filters, string column)
         {
             try

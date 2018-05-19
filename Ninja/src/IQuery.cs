@@ -15,7 +15,7 @@ namespace BudgetExecution
         IDbDataAdapter DataAdapter { get; set; }
         IDbCommand DataCommand { get; set; }
         IDbConnection DataConnection { get; set; }
-        IDataReader Reader { get; set; }
+        IDataReader DataReader { get; set; }
         string SqlStatement { get; set; }
 
         //Methods

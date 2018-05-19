@@ -24,7 +24,7 @@ namespace BudgetExecution
             Data = data;
             DataMetric = new PrcMetric(Data);
             DataSet = Data.DataSet;
-            DataTable = Data.Table;
+            DataTable = Data.DataTable;
             BindDataGridAndNavigator(DataTable, dgv, bs, bn);
             BindingSource = bs;
             Navigator = bn;
@@ -393,7 +393,7 @@ namespace BudgetExecution
         {
             try
             {
-                DataTable = Data.Table;
+                DataTable = Data.DataTable;
                 BindingSource.DataSource = DataTable;
             }
             catch (Exception ex)
@@ -424,29 +424,6 @@ namespace BudgetExecution
 
                 MessageBox.Show(ex.Message + ex.StackTrace);
                 return null;
-            }
-        }
-        internal void DataGridViewAccountUpdate(DataGridView dgv, Source source)
-        {
-            try
-            {
-
-                var param = new Dictionary<string, object>();
-                if (dgv.Rows.Count > 0)
-                    param = GetCurrentRowPrcParameter(dgv);
-                var query = new Query(source, param);
-                using (SQLiteConnection conn = query.Connection)
-                {
-                    var cmd = query.GetUpdateCommand();
-                    cmd.ExecuteNonQuery();
-                    var adp = new SQLiteDataAdapter();
-
-                }
-            }
-            catch (Exception ex)
-            {
-
-                MessageBox.Show(ex.Message + ex.StackTrace);
             }
         }
     }

@@ -17,7 +17,7 @@ namespace BudgetExecution
         {
             InitializeComponent();
             Data = new DataBuilder(Source.RegionAccount);
-            Table = Data.GetData();
+            Table = Data.GetDataTable();
             Metric = new PrcMetric(Data);
             ProgramElements = Data.GetProgramElements(Table);
             BindingSource.DataSource = Table;

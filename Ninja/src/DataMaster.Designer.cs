@@ -914,7 +914,7 @@ namespace BudgetExecution
             captionImage1.Image = ((System.Drawing.Image)(resources.GetObject("captionImage1.Image")));
             captionImage1.Location = new System.Drawing.Point(30, 20);
             captionImage1.Name = "CaptionImage1";
-            captionImage1.Size = new System.Drawing.Size(70, 35);
+            captionImage1.Size = new System.Drawing.Size(70, 60);
             this.CaptionImages.Add(captionImage1);
             this.ClientSize = new System.Drawing.Size(1578, 910);
             this.Controls.Add(this.groupBox5);

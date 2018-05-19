@@ -11,25 +11,19 @@ namespace BudgetExecution
 {
     public class BudgetPortfolio
     {
-        #region Properties
-
-        public List<string> BudgetList { get; set; }
-        public Query DocumentQuery { get; set; }
-        public Tuple<DataTable, List<DocInfo>> SqlDocumentData { get; internal set; }
-
-        #endregion Properties
 
         public BudgetPortfolio()
         {
         }
-
         public BudgetPortfolio(Dictionary<string, object> param)
         {
             DocumentQuery = new Query(Source.BudgetDocument, param);
         }
 
-        #region Methods
 
+        public List<string> BudgetList { get; set; }
+        public Query DocumentQuery { get; set; }
+        public Tuple<DataTable, List<DocInfo>> SqlDocumentData { get; internal set; }
         internal OleDbConnection GetExcelConnection()
         {
             try
@@ -46,11 +40,11 @@ namespace BudgetExecution
             }
         }
 
-        internal SQLiteConnection GetSqlConnection()
+        internal IDbConnection GetSqlConnection()
         {
             try
             {
-                return DocumentQuery.Connection;
+                return DocumentQuery.DataConnection;
             }
             catch (Exception ex)
             {
@@ -59,7 +53,6 @@ namespace BudgetExecution
             }
         }
 
-        #endregion Methods
     }
 }
     

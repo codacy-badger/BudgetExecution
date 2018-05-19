@@ -8,15 +8,12 @@ namespace BudgetExecution
         //Properties
         Query DataQuery { get; }
         DataSet DataSet { get; }
-        DataTable Table { get; }
+        DataTable DataTable { get; }
         DataRow[] DataRecords { get; }
 
         //Methods
-        decimal GetQueryAverage(DataTable table);
-        int GetQueryCount(DataTable table);
-        decimal[] GetQueryMetrics(DataTable table);
         DataSet GetDataSet();
-        decimal GetQueryTotal(DataTable table);
+        DataTable GetDataTable();
         DataRow[] GetRecords(DataTable table);
     }
         
