@@ -41,7 +41,7 @@ namespace BudgetExecution
             {
                 var boc = sender as MetroSetComboBox;
                 var bocfilter = boc.SelectedItem.ToString();
-                BindingSource.Filter = $"FundName = '{FundFilter.SelectedItem.ToString()}' AND BocName = '{bocfilter}'";
+                BindingSource.Filter = $"FundName = '{MasterFilter1.SelectedItem.ToString()}' AND BocName = '{bocfilter}'";
             }
             catch (Exception ex)
             {
@@ -64,16 +64,16 @@ namespace BudgetExecution
         {
             try
             {
-                BocFilter.Items.Clear();
+                MasterFIlter2.Items.Clear();
                 var filter = sender as MetroSetComboBox;
-                FundFilter.Tag = filter;
+                MasterFilter1.Tag = filter;
                 var fund = filter.SelectedItem.ToString();
                 BindingSource.Filter = $"FundName = '{fund}'";
                 var boc = ProgramElements[PrcField.BocName.ToString()];
                 foreach (string b in boc)
-                    BocFilter.Items.Add(b);
-                BocFilter.Visible = true;
-                BocFilter.SelectionChangeCommitted += BocFilter_ItemSelected;
+                    MasterFIlter2.Items.Add(b);
+                MasterFIlter2.Visible = true;
+                MasterFIlter2.SelectionChangeCommitted += BocFilter_ItemSelected;
             }
             catch (Exception ex)
             {
@@ -87,7 +87,7 @@ namespace BudgetExecution
             {
                 var item = Data.ProgramElements["FundName"];
                 foreach (string i in item)
-                    FundFilter.Items.Add(i);
+                    MasterFilter1.Items.Add(i);
             }
             catch (Exception ex)
             {

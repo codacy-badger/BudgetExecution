@@ -41,9 +41,9 @@ namespace BudgetExecution
             Syncfusion.Windows.Forms.Grid.GridBaseStyle gridBaseStyle4 = new Syncfusion.Windows.Forms.Grid.GridBaseStyle();
             Syncfusion.Windows.Forms.CaptionImage captionImage1 = new Syncfusion.Windows.Forms.CaptionImage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.metroSetComboBox3 = new MetroSet_UI.Controls.MetroSetComboBox();
-            this.BocFilter = new MetroSet_UI.Controls.MetroSetComboBox();
-            this.FundFilter = new MetroSet_UI.Controls.MetroSetComboBox();
+            this.MasterFilter3 = new MetroSet_UI.Controls.MetroSetComboBox();
+            this.MasterFIlter2 = new MetroSet_UI.Controls.MetroSetComboBox();
+            this.MasterFilter1 = new MetroSet_UI.Controls.MetroSetComboBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
             this.GridNavigator = new System.Windows.Forms.BindingNavigator(this.components);
@@ -87,6 +87,17 @@ namespace BudgetExecution
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.metroSetComboBox3 = new MetroSet_UI.Controls.MetroSetComboBox();
+            this.metroSetComboBox5 = new MetroSet_UI.Controls.MetroSetComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.metroPanel1.SuspendLayout();
@@ -102,9 +113,16 @@ namespace BudgetExecution
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.metroSetComboBox5);
             this.groupBox1.Controls.Add(this.metroSetComboBox3);
-            this.groupBox1.Controls.Add(this.BocFilter);
-            this.groupBox1.Controls.Add(this.FundFilter);
+            this.groupBox1.Controls.Add(this.MasterFilter3);
+            this.groupBox1.Controls.Add(this.MasterFIlter2);
+            this.groupBox1.Controls.Add(this.MasterFilter1);
             this.groupBox1.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.groupBox1.Location = new System.Drawing.Point(60, 54);
             this.groupBox1.Name = "groupBox1";
@@ -113,98 +131,98 @@ namespace BudgetExecution
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Data Filters";
             // 
-            // metroSetComboBox3
+            // MasterFilter3
             // 
-            this.metroSetComboBox3.AllowDrop = true;
-            this.metroSetComboBox3.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
-            this.metroSetComboBox3.BackColor = System.Drawing.Color.Transparent;
-            this.metroSetComboBox3.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
-            this.metroSetComboBox3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
-            this.metroSetComboBox3.CausesValidation = false;
-            this.metroSetComboBox3.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.metroSetComboBox3.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroSetComboBox3.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroSetComboBox3.DisplayMember = "Fund";
-            this.metroSetComboBox3.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.metroSetComboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.metroSetComboBox3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.metroSetComboBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.metroSetComboBox3.FormattingEnabled = true;
-            this.metroSetComboBox3.ItemHeight = 30;
-            this.metroSetComboBox3.Location = new System.Drawing.Point(97, 313);
-            this.metroSetComboBox3.MaxDropDownItems = 20;
-            this.metroSetComboBox3.Name = "metroSetComboBox3";
-            this.metroSetComboBox3.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.metroSetComboBox3.SelectedItemForeColor = System.Drawing.Color.White;
-            this.metroSetComboBox3.Size = new System.Drawing.Size(268, 36);
-            this.metroSetComboBox3.Style = MetroSet_UI.Design.Style.Dark;
-            this.metroSetComboBox3.StyleManager = null;
-            this.metroSetComboBox3.TabIndex = 2;
-            this.metroSetComboBox3.ThemeAuthor = "Narwin";
-            this.metroSetComboBox3.ThemeName = "MetroDark";
-            this.metroSetComboBox3.ValueMember = "Fund";
+            this.MasterFilter3.AllowDrop = true;
+            this.MasterFilter3.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.MasterFilter3.BackColor = System.Drawing.Color.Transparent;
+            this.MasterFilter3.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.MasterFilter3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.MasterFilter3.CausesValidation = false;
+            this.MasterFilter3.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.MasterFilter3.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.MasterFilter3.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.MasterFilter3.DisplayMember = "Fund";
+            this.MasterFilter3.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.MasterFilter3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.MasterFilter3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MasterFilter3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.MasterFilter3.FormattingEnabled = true;
+            this.MasterFilter3.ItemHeight = 30;
+            this.MasterFilter3.Location = new System.Drawing.Point(97, 245);
+            this.MasterFilter3.MaxDropDownItems = 20;
+            this.MasterFilter3.Name = "MasterFilter3";
+            this.MasterFilter3.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.MasterFilter3.SelectedItemForeColor = System.Drawing.Color.White;
+            this.MasterFilter3.Size = new System.Drawing.Size(268, 36);
+            this.MasterFilter3.Style = MetroSet_UI.Design.Style.Dark;
+            this.MasterFilter3.StyleManager = null;
+            this.MasterFilter3.TabIndex = 2;
+            this.MasterFilter3.ThemeAuthor = "Narwin";
+            this.MasterFilter3.ThemeName = "MetroDark";
+            this.MasterFilter3.ValueMember = "Fund";
             // 
-            // BocFilter
+            // MasterFIlter2
             // 
-            this.BocFilter.AllowDrop = true;
-            this.BocFilter.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
-            this.BocFilter.BackColor = System.Drawing.Color.Transparent;
-            this.BocFilter.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
-            this.BocFilter.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
-            this.BocFilter.CausesValidation = false;
-            this.BocFilter.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.BocFilter.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.BocFilter.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.BocFilter.DisplayMember = "Fund";
-            this.BocFilter.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.BocFilter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.BocFilter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BocFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.BocFilter.FormattingEnabled = true;
-            this.BocFilter.ItemHeight = 30;
-            this.BocFilter.Location = new System.Drawing.Point(97, 208);
-            this.BocFilter.MaxDropDownItems = 20;
-            this.BocFilter.Name = "BocFilter";
-            this.BocFilter.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.BocFilter.SelectedItemForeColor = System.Drawing.Color.White;
-            this.BocFilter.Size = new System.Drawing.Size(268, 36);
-            this.BocFilter.Style = MetroSet_UI.Design.Style.Dark;
-            this.BocFilter.StyleManager = null;
-            this.BocFilter.TabIndex = 1;
-            this.BocFilter.ThemeAuthor = "Narwin";
-            this.BocFilter.ThemeName = "MetroDark";
-            this.BocFilter.ValueMember = "Fund";
+            this.MasterFIlter2.AllowDrop = true;
+            this.MasterFIlter2.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.MasterFIlter2.BackColor = System.Drawing.Color.Transparent;
+            this.MasterFIlter2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.MasterFIlter2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.MasterFIlter2.CausesValidation = false;
+            this.MasterFIlter2.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.MasterFIlter2.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.MasterFIlter2.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.MasterFIlter2.DisplayMember = "Fund";
+            this.MasterFIlter2.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.MasterFIlter2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.MasterFIlter2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MasterFIlter2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.MasterFIlter2.FormattingEnabled = true;
+            this.MasterFIlter2.ItemHeight = 30;
+            this.MasterFIlter2.Location = new System.Drawing.Point(97, 161);
+            this.MasterFIlter2.MaxDropDownItems = 20;
+            this.MasterFIlter2.Name = "MasterFIlter2";
+            this.MasterFIlter2.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.MasterFIlter2.SelectedItemForeColor = System.Drawing.Color.White;
+            this.MasterFIlter2.Size = new System.Drawing.Size(268, 36);
+            this.MasterFIlter2.Style = MetroSet_UI.Design.Style.Dark;
+            this.MasterFIlter2.StyleManager = null;
+            this.MasterFIlter2.TabIndex = 1;
+            this.MasterFIlter2.ThemeAuthor = "Narwin";
+            this.MasterFIlter2.ThemeName = "MetroDark";
+            this.MasterFIlter2.ValueMember = "Fund";
             // 
-            // FundFilter
+            // MasterFilter1
             // 
-            this.FundFilter.AllowDrop = true;
-            this.FundFilter.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
-            this.FundFilter.BackColor = System.Drawing.Color.Transparent;
-            this.FundFilter.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
-            this.FundFilter.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
-            this.FundFilter.CausesValidation = false;
-            this.FundFilter.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.FundFilter.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.FundFilter.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.FundFilter.DisplayMember = "Fund";
-            this.FundFilter.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.FundFilter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.FundFilter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.FundFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.FundFilter.FormattingEnabled = true;
-            this.FundFilter.ItemHeight = 30;
-            this.FundFilter.Location = new System.Drawing.Point(97, 96);
-            this.FundFilter.MaxDropDownItems = 20;
-            this.FundFilter.Name = "FundFilter";
-            this.FundFilter.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.FundFilter.SelectedItemForeColor = System.Drawing.Color.White;
-            this.FundFilter.Size = new System.Drawing.Size(268, 36);
-            this.FundFilter.Style = MetroSet_UI.Design.Style.Dark;
-            this.FundFilter.StyleManager = null;
-            this.FundFilter.TabIndex = 0;
-            this.FundFilter.ThemeAuthor = "Narwin";
-            this.FundFilter.ThemeName = "MetroDark";
-            this.FundFilter.ValueMember = "Fund";
+            this.MasterFilter1.AllowDrop = true;
+            this.MasterFilter1.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.MasterFilter1.BackColor = System.Drawing.Color.Transparent;
+            this.MasterFilter1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.MasterFilter1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.MasterFilter1.CausesValidation = false;
+            this.MasterFilter1.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.MasterFilter1.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.MasterFilter1.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.MasterFilter1.DisplayMember = "Fund";
+            this.MasterFilter1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.MasterFilter1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.MasterFilter1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MasterFilter1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.MasterFilter1.FormattingEnabled = true;
+            this.MasterFilter1.ItemHeight = 30;
+            this.MasterFilter1.Location = new System.Drawing.Point(97, 73);
+            this.MasterFilter1.MaxDropDownItems = 20;
+            this.MasterFilter1.Name = "MasterFilter1";
+            this.MasterFilter1.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.MasterFilter1.SelectedItemForeColor = System.Drawing.Color.White;
+            this.MasterFilter1.Size = new System.Drawing.Size(268, 36);
+            this.MasterFilter1.Style = MetroSet_UI.Design.Style.Dark;
+            this.MasterFilter1.StyleManager = null;
+            this.MasterFilter1.TabIndex = 0;
+            this.MasterFilter1.ThemeAuthor = "Narwin";
+            this.MasterFilter1.ThemeName = "MetroDark";
+            this.MasterFilter1.ValueMember = "Fund";
             // 
             // groupBox2
             // 
@@ -225,7 +243,7 @@ namespace BudgetExecution
             this.metroPanel1.HorizontalScrollbarBarColor = true;
             this.metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
             this.metroPanel1.HorizontalScrollbarSize = 10;
-            this.metroPanel1.Location = new System.Drawing.Point(45, 71);
+            this.metroPanel1.Location = new System.Drawing.Point(42, 94);
             this.metroPanel1.Name = "metroPanel1";
             this.metroPanel1.Size = new System.Drawing.Size(897, 352);
             this.metroPanel1.TabIndex = 5;
@@ -370,10 +388,10 @@ namespace BudgetExecution
             this.groupBox5.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.groupBox5.Location = new System.Drawing.Point(968, 610);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(575, 188);
+            this.groupBox5.Size = new System.Drawing.Size(575, 236);
             this.groupBox5.TabIndex = 8;
             this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "SQL Commands";
+            this.groupBox5.Text = "Commands";
             // 
             // button6
             // 
@@ -384,7 +402,7 @@ namespace BudgetExecution
             this.button6.ForeColor = System.Drawing.SystemColors.Info;
             this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
             this.button6.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.button6.Location = new System.Drawing.Point(356, 114);
+            this.button6.Location = new System.Drawing.Point(356, 129);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(124, 51);
             this.button6.TabIndex = 5;
@@ -418,7 +436,7 @@ namespace BudgetExecution
             this.button4.ForeColor = System.Drawing.SystemColors.Info;
             this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
             this.button4.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.button4.Location = new System.Drawing.Point(195, 114);
+            this.button4.Location = new System.Drawing.Point(195, 132);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(114, 51);
             this.button4.TabIndex = 3;
@@ -435,7 +453,7 @@ namespace BudgetExecution
             this.button3.ForeColor = System.Drawing.SystemColors.Info;
             this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
             this.button3.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.button3.Location = new System.Drawing.Point(26, 114);
+            this.button3.Location = new System.Drawing.Point(26, 132);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(121, 51);
             this.button3.TabIndex = 2;
@@ -480,6 +498,10 @@ namespace BudgetExecution
             // groupBox4
             // 
             this.groupBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.groupBox4.Controls.Add(this.label9);
+            this.groupBox4.Controls.Add(this.label8);
+            this.groupBox4.Controls.Add(this.label7);
+            this.groupBox4.Controls.Add(this.label6);
             this.groupBox4.Controls.Add(this.metroSetTextBox4);
             this.groupBox4.Controls.Add(this.metroSetComboBox8);
             this.groupBox4.Controls.Add(this.metroSetTextBox3);
@@ -491,7 +513,7 @@ namespace BudgetExecution
             this.groupBox4.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.groupBox4.Location = new System.Drawing.Point(60, 601);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(870, 197);
+            this.groupBox4.Size = new System.Drawing.Size(870, 245);
             this.groupBox4.TabIndex = 7;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Changes";
@@ -509,7 +531,7 @@ namespace BudgetExecution
             this.metroSetTextBox4.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.metroSetTextBox4.Image = null;
             this.metroSetTextBox4.Lines = null;
-            this.metroSetTextBox4.Location = new System.Drawing.Point(642, 114);
+            this.metroSetTextBox4.Location = new System.Drawing.Point(642, 178);
             this.metroSetTextBox4.MaxLength = 32767;
             this.metroSetTextBox4.Multiline = false;
             this.metroSetTextBox4.Name = "metroSetTextBox4";
@@ -549,7 +571,7 @@ namespace BudgetExecution
             "Code",
             "BOC",
             "Amount"});
-            this.metroSetComboBox8.Location = new System.Drawing.Point(460, 114);
+            this.metroSetComboBox8.Location = new System.Drawing.Point(460, 178);
             this.metroSetComboBox8.MaxDropDownItems = 20;
             this.metroSetComboBox8.Name = "metroSetComboBox8";
             this.metroSetComboBox8.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
@@ -575,7 +597,7 @@ namespace BudgetExecution
             this.metroSetTextBox3.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.metroSetTextBox3.Image = null;
             this.metroSetTextBox3.Lines = null;
-            this.metroSetTextBox3.Location = new System.Drawing.Point(642, 53);
+            this.metroSetTextBox3.Location = new System.Drawing.Point(642, 89);
             this.metroSetTextBox3.MaxLength = 32767;
             this.metroSetTextBox3.Multiline = false;
             this.metroSetTextBox3.Name = "metroSetTextBox3";
@@ -603,7 +625,7 @@ namespace BudgetExecution
             this.metroSetTextBox2.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.metroSetTextBox2.Image = null;
             this.metroSetTextBox2.Lines = null;
-            this.metroSetTextBox2.Location = new System.Drawing.Point(215, 114);
+            this.metroSetTextBox2.Location = new System.Drawing.Point(215, 178);
             this.metroSetTextBox2.MaxLength = 32767;
             this.metroSetTextBox2.Multiline = false;
             this.metroSetTextBox2.Name = "metroSetTextBox2";
@@ -643,7 +665,7 @@ namespace BudgetExecution
             "Code",
             "BOC",
             "Amount"});
-            this.metroSetComboBox4.Location = new System.Drawing.Point(460, 53);
+            this.metroSetComboBox4.Location = new System.Drawing.Point(460, 89);
             this.metroSetComboBox4.MaxDropDownItems = 20;
             this.metroSetComboBox4.Name = "metroSetComboBox4";
             this.metroSetComboBox4.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
@@ -681,7 +703,7 @@ namespace BudgetExecution
             "Code",
             "BOC",
             "Amount"});
-            this.metroSetComboBox1.Location = new System.Drawing.Point(29, 114);
+            this.metroSetComboBox1.Location = new System.Drawing.Point(29, 178);
             this.metroSetComboBox1.MaxDropDownItems = 20;
             this.metroSetComboBox1.Name = "metroSetComboBox1";
             this.metroSetComboBox1.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
@@ -719,7 +741,7 @@ namespace BudgetExecution
             "Code",
             "BOC",
             "Amount"});
-            this.metroSetComboBox2.Location = new System.Drawing.Point(29, 53);
+            this.metroSetComboBox2.Location = new System.Drawing.Point(29, 89);
             this.metroSetComboBox2.MaxDropDownItems = 20;
             this.metroSetComboBox2.Name = "metroSetComboBox2";
             this.metroSetComboBox2.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
@@ -745,7 +767,7 @@ namespace BudgetExecution
             this.metroSetTextBox1.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.metroSetTextBox1.Image = null;
             this.metroSetTextBox1.Lines = null;
-            this.metroSetTextBox1.Location = new System.Drawing.Point(215, 53);
+            this.metroSetTextBox1.Location = new System.Drawing.Point(215, 89);
             this.metroSetTextBox1.MaxLength = 32767;
             this.metroSetTextBox1.Multiline = false;
             this.metroSetTextBox1.Name = "metroSetTextBox1";
@@ -901,6 +923,158 @@ namespace BudgetExecution
             this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(28, 28);
             this.bindingNavigatorMoveLastItem.Text = "Move last";
             // 
+            // metroSetComboBox3
+            // 
+            this.metroSetComboBox3.AllowDrop = true;
+            this.metroSetComboBox3.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.metroSetComboBox3.BackColor = System.Drawing.Color.Transparent;
+            this.metroSetComboBox3.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.metroSetComboBox3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.metroSetComboBox3.CausesValidation = false;
+            this.metroSetComboBox3.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.metroSetComboBox3.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.metroSetComboBox3.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.metroSetComboBox3.DisplayMember = "Fund";
+            this.metroSetComboBox3.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.metroSetComboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.metroSetComboBox3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.metroSetComboBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.metroSetComboBox3.FormattingEnabled = true;
+            this.metroSetComboBox3.ItemHeight = 30;
+            this.metroSetComboBox3.Location = new System.Drawing.Point(97, 336);
+            this.metroSetComboBox3.MaxDropDownItems = 20;
+            this.metroSetComboBox3.Name = "metroSetComboBox3";
+            this.metroSetComboBox3.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.metroSetComboBox3.SelectedItemForeColor = System.Drawing.Color.White;
+            this.metroSetComboBox3.Size = new System.Drawing.Size(268, 36);
+            this.metroSetComboBox3.Style = MetroSet_UI.Design.Style.Dark;
+            this.metroSetComboBox3.StyleManager = null;
+            this.metroSetComboBox3.TabIndex = 3;
+            this.metroSetComboBox3.ThemeAuthor = "Narwin";
+            this.metroSetComboBox3.ThemeName = "MetroDark";
+            this.metroSetComboBox3.ValueMember = "Fund";
+            // 
+            // metroSetComboBox5
+            // 
+            this.metroSetComboBox5.AllowDrop = true;
+            this.metroSetComboBox5.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.metroSetComboBox5.BackColor = System.Drawing.Color.Transparent;
+            this.metroSetComboBox5.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.metroSetComboBox5.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.metroSetComboBox5.CausesValidation = false;
+            this.metroSetComboBox5.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.metroSetComboBox5.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.metroSetComboBox5.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.metroSetComboBox5.DisplayMember = "Fund";
+            this.metroSetComboBox5.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.metroSetComboBox5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.metroSetComboBox5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.metroSetComboBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.metroSetComboBox5.FormattingEnabled = true;
+            this.metroSetComboBox5.ItemHeight = 30;
+            this.metroSetComboBox5.Location = new System.Drawing.Point(97, 434);
+            this.metroSetComboBox5.MaxDropDownItems = 20;
+            this.metroSetComboBox5.Name = "metroSetComboBox5";
+            this.metroSetComboBox5.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.metroSetComboBox5.SelectedItemForeColor = System.Drawing.Color.White;
+            this.metroSetComboBox5.Size = new System.Drawing.Size(268, 36);
+            this.metroSetComboBox5.Style = MetroSet_UI.Design.Style.Dark;
+            this.metroSetComboBox5.StyleManager = null;
+            this.metroSetComboBox5.TabIndex = 4;
+            this.metroSetComboBox5.ThemeAuthor = "Narwin";
+            this.metroSetComboBox5.ThemeName = "MetroDark";
+            this.metroSetComboBox5.ValueMember = "Fund";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(93, 50);
+            this.label1.Name = "label1";
+            this.label1.Padding = new System.Windows.Forms.Padding(1);
+            this.label1.Size = new System.Drawing.Size(53, 22);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "label1";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(93, 138);
+            this.label2.Name = "label2";
+            this.label2.Padding = new System.Windows.Forms.Padding(1);
+            this.label2.Size = new System.Drawing.Size(53, 22);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "label2";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(93, 222);
+            this.label3.Name = "label3";
+            this.label3.Padding = new System.Windows.Forms.Padding(1);
+            this.label3.Size = new System.Drawing.Size(53, 22);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "label3";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(93, 313);
+            this.label4.Name = "label4";
+            this.label4.Padding = new System.Windows.Forms.Padding(1);
+            this.label4.Size = new System.Drawing.Size(53, 22);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "label4";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(93, 411);
+            this.label5.Name = "label5";
+            this.label5.Padding = new System.Windows.Forms.Padding(1);
+            this.label5.Size = new System.Drawing.Size(53, 22);
+            this.label5.TabIndex = 9;
+            this.label5.Text = "label5";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(25, 66);
+            this.label6.Name = "label6";
+            this.label6.Padding = new System.Windows.Forms.Padding(1);
+            this.label6.Size = new System.Drawing.Size(53, 22);
+            this.label6.TabIndex = 10;
+            this.label6.Text = "label6";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(25, 155);
+            this.label7.Name = "label7";
+            this.label7.Padding = new System.Windows.Forms.Padding(1);
+            this.label7.Size = new System.Drawing.Size(53, 22);
+            this.label7.TabIndex = 11;
+            this.label7.Text = "label7";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(456, 66);
+            this.label8.Name = "label8";
+            this.label8.Padding = new System.Windows.Forms.Padding(1);
+            this.label8.Size = new System.Drawing.Size(53, 22);
+            this.label8.TabIndex = 12;
+            this.label8.Text = "label8";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(456, 155);
+            this.label9.Name = "label9";
+            this.label9.Padding = new System.Windows.Forms.Padding(1);
+            this.label9.Size = new System.Drawing.Size(53, 22);
+            this.label9.TabIndex = 13;
+            this.label9.Text = "label9";
+            // 
             // DataMaster
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -929,6 +1103,7 @@ namespace BudgetExecution
             this.ShowIcon = false;
             this.Text = "DataMaster";
             this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.metroPanel1.ResumeLayout(false);
             this.metroPanel1.PerformLayout();
@@ -938,6 +1113,7 @@ namespace BudgetExecution
             ((System.ComponentModel.ISupportInitialize)(this.Grid)).EndInit();
             this.groupBox5.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.E6DataGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BindingSource)).EndInit();
             this.ResumeLayout(false);
@@ -949,9 +1125,9 @@ namespace BudgetExecution
         private System.Windows.Forms.DataGridView Grid;
         private System.Windows.Forms.GroupBox groupBox2;
         private Syncfusion.Windows.Forms.Grid.GridDataBoundGrid E6DataGrid;
-        private MetroSet_UI.Controls.MetroSetComboBox FundFilter;
+        private MetroSet_UI.Controls.MetroSetComboBox MasterFilter1;
         private Syncfusion.Windows.Forms.Tools.toolstripitem toolstripitem1;
-        private MetroSet_UI.Controls.MetroSetComboBox BocFilter;
+        private MetroSet_UI.Controls.MetroSetComboBox MasterFIlter2;
         private System.Windows.Forms.GroupBox groupBox4;
         private MetroSet_UI.Controls.MetroSetComboBox metroSetComboBox2;
         private MetroSet_UI.Controls.MetroSetTextBox metroSetTextBox1;
@@ -977,7 +1153,7 @@ namespace BudgetExecution
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator4;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem1;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator5;
-        private MetroSet_UI.Controls.MetroSetComboBox metroSetComboBox3;
+        private MetroSet_UI.Controls.MetroSetComboBox MasterFilter3;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
@@ -992,5 +1168,16 @@ namespace BudgetExecution
         private System.Windows.Forms.BindingSource BindingSource;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private MetroSet_UI.Controls.MetroSetComboBox metroSetComboBox5;
+        private MetroSet_UI.Controls.MetroSetComboBox metroSetComboBox3;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
     }
 }

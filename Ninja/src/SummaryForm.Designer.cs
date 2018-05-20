@@ -58,6 +58,7 @@ namespace BudgetExecution
             Syncfusion.Windows.Forms.Chart.ChartToolBarTypeItem chartToolBarTypeItem1 = new Syncfusion.Windows.Forms.Chart.ChartToolBarTypeItem();
             Syncfusion.Windows.Forms.Chart.ChartToolBarSeries3DItem chartToolBarSeries3DItem1 = new Syncfusion.Windows.Forms.Chart.ChartToolBarSeries3DItem();
             Syncfusion.Windows.Forms.Chart.ChartToolBarShowLegendItem chartToolBarShowLegendItem1 = new Syncfusion.Windows.Forms.Chart.ChartToolBarShowLegendItem();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SummaryForm));
             Syncfusion.Windows.Forms.Chart.ChartSeries chartSeries3 = new Syncfusion.Windows.Forms.Chart.ChartSeries();
             Syncfusion.Windows.Forms.Chart.ChartCustomShapeInfo chartCustomShapeInfo3 = new Syncfusion.Windows.Forms.Chart.ChartCustomShapeInfo();
             Syncfusion.Windows.Forms.Chart.ChartLineInfo chartLineInfo2 = new Syncfusion.Windows.Forms.Chart.ChartLineInfo();
@@ -73,7 +74,6 @@ namespace BudgetExecution
             Syncfusion.Windows.Forms.Chart.ChartToolBarTypeItem chartToolBarTypeItem2 = new Syncfusion.Windows.Forms.Chart.ChartToolBarTypeItem();
             Syncfusion.Windows.Forms.Chart.ChartToolBarSeries3DItem chartToolBarSeries3DItem2 = new Syncfusion.Windows.Forms.Chart.ChartToolBarSeries3DItem();
             Syncfusion.Windows.Forms.Chart.ChartToolBarShowLegendItem chartToolBarShowLegendItem2 = new Syncfusion.Windows.Forms.Chart.ChartToolBarShowLegendItem();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SummaryForm));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -219,9 +219,10 @@ namespace BudgetExecution
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.AccountTabControl = new Syncfusion.Windows.Forms.Tools.TabControlAdv();
             this.tabPageAdv1 = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
-            this.metroSetButton6 = new MetroSet_UI.Controls.MetroSetButton();
-            this.metroSetButton5 = new MetroSet_UI.Controls.MetroSetButton();
-            this.metroSetButton4 = new MetroSet_UI.Controls.MetroSetButton();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.metroSetLabel1 = new MetroSet_UI.Controls.MetroSetLabel();
             this.metroSetLabel2 = new MetroSet_UI.Controls.MetroSetLabel();
             this.metroSetTextBox1 = new MetroSet_UI.Controls.MetroSetTextBox();
@@ -234,7 +235,6 @@ namespace BudgetExecution
             this.metroSetLabel16 = new MetroSet_UI.Controls.MetroSetLabel();
             this.RC = new MetroSet_UI.Controls.MetroSetTextBox();
             this.Fund = new MetroSet_UI.Controls.MetroSetTextBox();
-            this.metroSetButton3 = new MetroSet_UI.Controls.MetroSetButton();
             this.metroSetLabel17 = new MetroSet_UI.Controls.MetroSetLabel();
             this.metroSetLabel18 = new MetroSet_UI.Controls.MetroSetLabel();
             this.BFY = new MetroSet_UI.Controls.MetroSetTextBox();
@@ -258,7 +258,6 @@ namespace BudgetExecution
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.Grid = new System.Windows.Forms.DataGridView();
             this.lblCount = new MetroSet_UI.Controls.MetroSetLabel();
-            this.ReturnButton = new MetroFramework.Controls.MetroLink();
             this.lblTotal = new MetroSet_UI.Controls.MetroSetLabel();
             this.metroSetLabel9 = new MetroSet_UI.Controls.MetroSetLabel();
             this.metroSetLabel8 = new MetroSet_UI.Controls.MetroSetLabel();
@@ -271,7 +270,7 @@ namespace BudgetExecution
             this.ProjectTab = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
             this.ProjectExpander2 = new MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel();
             this.label22 = new System.Windows.Forms.Label();
-            this.label32 = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
             this.ProjectFilter3 = new MetroSet_UI.Controls.MetroSetComboBox();
             this.ProjectFilter2 = new MetroSet_UI.Controls.MetroSetComboBox();
             this.ProjectExpander1 = new MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel();
@@ -284,7 +283,7 @@ namespace BudgetExecution
             this.AreaTab = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
             this.AreaExpander2 = new MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel();
             this.label19 = new System.Windows.Forms.Label();
-            this.label31 = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
             this.AreaFilter3 = new MetroSet_UI.Controls.MetroSetComboBox();
             this.AreaFilter2 = new MetroSet_UI.Controls.MetroSetComboBox();
             this.AreaExpander1 = new MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel();
@@ -296,7 +295,7 @@ namespace BudgetExecution
             this.DivisionTab = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
             this.DivisionExpander2 = new MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel();
             this.label16 = new System.Windows.Forms.Label();
-            this.label30 = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
             this.DivisionFilter3 = new MetroSet_UI.Controls.MetroSetComboBox();
             this.DivisionFilter2 = new MetroSet_UI.Controls.MetroSetComboBox();
             this.DivisionExpander1 = new MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel();
@@ -308,7 +307,7 @@ namespace BudgetExecution
             this.ObjectiveTab = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
             this.ObjectiveExpander2 = new MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel();
             this.label13 = new System.Windows.Forms.Label();
-            this.label29 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
             this.ObjectiveFilter3 = new MetroSet_UI.Controls.MetroSetComboBox();
             this.ObjectiveFilter2 = new MetroSet_UI.Controls.MetroSetComboBox();
             this.ObjectiveExpander1 = new MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel();
@@ -319,8 +318,8 @@ namespace BudgetExecution
             this.ObjectiveChart = new Syncfusion.Windows.Forms.Chart.ChartControl();
             this.GoalTab = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
             this.GoalExpander2 = new MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel();
+            this.label4 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.label28 = new System.Windows.Forms.Label();
             this.GoalFilter3 = new MetroSet_UI.Controls.MetroSetComboBox();
             this.GoalFilter2 = new MetroSet_UI.Controls.MetroSetComboBox();
             this.GoalExpander1 = new MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel();
@@ -343,8 +342,8 @@ namespace BudgetExecution
             this.NpmChart = new Syncfusion.Windows.Forms.Chart.ChartControl();
             this.BocTab = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
             this.BocExpander2 = new MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
+            this.label35 = new System.Windows.Forms.Label();
+            this.label36 = new System.Windows.Forms.Label();
             this.BocFilter3 = new MetroSet_UI.Controls.MetroSetComboBox();
             this.BocFilter2 = new MetroSet_UI.Controls.MetroSetComboBox();
             this.BocExpander1 = new MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel();
@@ -1236,12 +1235,14 @@ namespace BudgetExecution
             this.AccountTabControl.FocusOnTabClick = false;
             this.AccountTabControl.InactiveTabColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.AccountTabControl.InActiveTabForeColor = System.Drawing.Color.Silver;
+            this.AccountTabControl.ItemSize = new System.Drawing.Size(75, 29);
             this.AccountTabControl.Location = new System.Drawing.Point(3, 22);
+            this.AccountTabControl.Multiline = true;
             this.AccountTabControl.Name = "AccountTabControl";
             this.AccountTabControl.Office2007ColorScheme = Syncfusion.Windows.Forms.Office2007Theme.Black;
             this.AccountTabControl.Office2010ColorTheme = Syncfusion.Windows.Forms.Office2010Theme.Black;
             this.AccountTabControl.SeparatorColor = System.Drawing.SystemColors.MenuHighlight;
-            this.AccountTabControl.ShowSeparator = false;
+            this.AccountTabControl.ShowSeparator = true;
             this.AccountTabControl.Size = new System.Drawing.Size(440, 455);
             this.AccountTabControl.TabIndex = 150;
             this.AccountTabControl.TabPanelBackColor = System.Drawing.Color.SteelBlue;
@@ -1251,9 +1252,10 @@ namespace BudgetExecution
             // 
             // tabPageAdv1
             // 
-            this.tabPageAdv1.Controls.Add(this.metroSetButton6);
-            this.tabPageAdv1.Controls.Add(this.metroSetButton5);
-            this.tabPageAdv1.Controls.Add(this.metroSetButton4);
+            this.tabPageAdv1.Controls.Add(this.button4);
+            this.tabPageAdv1.Controls.Add(this.button3);
+            this.tabPageAdv1.Controls.Add(this.button2);
+            this.tabPageAdv1.Controls.Add(this.button1);
             this.tabPageAdv1.Controls.Add(this.metroSetLabel1);
             this.tabPageAdv1.Controls.Add(this.metroSetLabel2);
             this.tabPageAdv1.Controls.Add(this.metroSetTextBox1);
@@ -1266,7 +1268,6 @@ namespace BudgetExecution
             this.tabPageAdv1.Controls.Add(this.metroSetLabel16);
             this.tabPageAdv1.Controls.Add(this.RC);
             this.tabPageAdv1.Controls.Add(this.Fund);
-            this.tabPageAdv1.Controls.Add(this.metroSetButton3);
             this.tabPageAdv1.Controls.Add(this.metroSetLabel17);
             this.tabPageAdv1.Controls.Add(this.metroSetLabel18);
             this.tabPageAdv1.Controls.Add(this.BFY);
@@ -1283,80 +1284,61 @@ namespace BudgetExecution
             this.tabPageAdv1.Text = "Details";
             this.tabPageAdv1.ThemesEnabled = false;
             // 
-            // metroSetButton6
+            // button4
             // 
-            this.metroSetButton6.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.metroSetButton6.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.metroSetButton6.DisabledForeColor = System.Drawing.Color.Gray;
-            this.metroSetButton6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.metroSetButton6.HoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(207)))), ((int)(((byte)(255)))));
-            this.metroSetButton6.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(207)))), ((int)(((byte)(255)))));
-            this.metroSetButton6.HoverTextColor = System.Drawing.Color.White;
-            this.metroSetButton6.Location = new System.Drawing.Point(235, 231);
-            this.metroSetButton6.Name = "metroSetButton6";
-            this.metroSetButton6.NormalBorderColor = System.Drawing.Color.Black;
-            this.metroSetButton6.NormalColor = System.Drawing.Color.Black;
-            this.metroSetButton6.NormalTextColor = System.Drawing.SystemColors.MenuHighlight;
-            this.metroSetButton6.PressBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(147)))), ((int)(((byte)(195)))));
-            this.metroSetButton6.PressColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(147)))), ((int)(((byte)(195)))));
-            this.metroSetButton6.PressTextColor = System.Drawing.Color.White;
-            this.metroSetButton6.Size = new System.Drawing.Size(72, 32);
-            this.metroSetButton6.Style = MetroSet_UI.Design.Style.Custom;
-            this.metroSetButton6.StyleManager = null;
-            this.metroSetButton6.TabIndex = 142;
-            this.metroSetButton6.Text = "Refresh";
-            this.metroSetButton6.ThemeAuthor = "Narwin";
-            this.metroSetButton6.ThemeName = "MetroLite";
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightCyan;
+            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.ForeColor = System.Drawing.Color.Transparent;
+            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
+            this.button4.Location = new System.Drawing.Point(355, 268);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(48, 47);
+            this.button4.TabIndex = 143;
+            this.button4.UseVisualStyleBackColor = true;
             // 
-            // metroSetButton5
+            // button3
             // 
-            this.metroSetButton5.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.metroSetButton5.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.metroSetButton5.DisabledForeColor = System.Drawing.Color.Gray;
-            this.metroSetButton5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.metroSetButton5.HoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(207)))), ((int)(((byte)(255)))));
-            this.metroSetButton5.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(207)))), ((int)(((byte)(255)))));
-            this.metroSetButton5.HoverTextColor = System.Drawing.Color.White;
-            this.metroSetButton5.Location = new System.Drawing.Point(334, 231);
-            this.metroSetButton5.Name = "metroSetButton5";
-            this.metroSetButton5.NormalBorderColor = System.Drawing.Color.Black;
-            this.metroSetButton5.NormalColor = System.Drawing.Color.Black;
-            this.metroSetButton5.NormalTextColor = System.Drawing.SystemColors.MenuHighlight;
-            this.metroSetButton5.PressBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(147)))), ((int)(((byte)(195)))));
-            this.metroSetButton5.PressColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(147)))), ((int)(((byte)(195)))));
-            this.metroSetButton5.PressTextColor = System.Drawing.Color.White;
-            this.metroSetButton5.Size = new System.Drawing.Size(72, 32);
-            this.metroSetButton5.Style = MetroSet_UI.Design.Style.Custom;
-            this.metroSetButton5.StyleManager = null;
-            this.metroSetButton5.TabIndex = 141;
-            this.metroSetButton5.Text = "Add";
-            this.metroSetButton5.ThemeAuthor = "Narwin";
-            this.metroSetButton5.ThemeName = "MetroLite";
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightCyan;
+            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.ForeColor = System.Drawing.Color.Transparent;
+            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
+            this.button3.Location = new System.Drawing.Point(271, 268);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(50, 47);
+            this.button3.TabIndex = 142;
+            this.button3.UseVisualStyleBackColor = true;
             // 
-            // metroSetButton4
+            // button2
             // 
-            this.metroSetButton4.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.metroSetButton4.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.metroSetButton4.DisabledForeColor = System.Drawing.Color.Gray;
-            this.metroSetButton4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.metroSetButton4.HoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(207)))), ((int)(((byte)(255)))));
-            this.metroSetButton4.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(207)))), ((int)(((byte)(255)))));
-            this.metroSetButton4.HoverTextColor = System.Drawing.Color.White;
-            this.metroSetButton4.Location = new System.Drawing.Point(334, 295);
-            this.metroSetButton4.Name = "metroSetButton4";
-            this.metroSetButton4.NormalBorderColor = System.Drawing.Color.Black;
-            this.metroSetButton4.NormalColor = System.Drawing.Color.Black;
-            this.metroSetButton4.NormalTextColor = System.Drawing.SystemColors.MenuHighlight;
-            this.metroSetButton4.PressBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(147)))), ((int)(((byte)(195)))));
-            this.metroSetButton4.PressColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(147)))), ((int)(((byte)(195)))));
-            this.metroSetButton4.PressTextColor = System.Drawing.Color.White;
-            this.metroSetButton4.Size = new System.Drawing.Size(72, 32);
-            this.metroSetButton4.Style = MetroSet_UI.Design.Style.Custom;
-            this.metroSetButton4.StyleManager = null;
-            this.metroSetButton4.TabIndex = 140;
-            this.metroSetButton4.Text = "Delete";
-            this.metroSetButton4.ThemeAuthor = "Narwin";
-            this.metroSetButton4.ThemeName = "MetroLite";
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightCyan;
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.ForeColor = System.Drawing.Color.Transparent;
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.Location = new System.Drawing.Point(355, 207);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(48, 40);
+            this.button2.TabIndex = 141;
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightCyan;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.Color.Transparent;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.Location = new System.Drawing.Point(271, 202);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(46, 44);
+            this.button1.TabIndex = 140;
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // metroSetLabel1
             // 
@@ -1604,31 +1586,6 @@ namespace BudgetExecution
             this.Fund.UseSystemPasswordChar = false;
             this.Fund.WatermarkText = "";
             // 
-            // metroSetButton3
-            // 
-            this.metroSetButton3.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.metroSetButton3.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.metroSetButton3.DisabledForeColor = System.Drawing.Color.Gray;
-            this.metroSetButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.metroSetButton3.HoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(207)))), ((int)(((byte)(255)))));
-            this.metroSetButton3.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(207)))), ((int)(((byte)(255)))));
-            this.metroSetButton3.HoverTextColor = System.Drawing.Color.White;
-            this.metroSetButton3.Location = new System.Drawing.Point(235, 295);
-            this.metroSetButton3.Name = "metroSetButton3";
-            this.metroSetButton3.NormalBorderColor = System.Drawing.Color.Black;
-            this.metroSetButton3.NormalColor = System.Drawing.Color.Black;
-            this.metroSetButton3.NormalTextColor = System.Drawing.SystemColors.MenuHighlight;
-            this.metroSetButton3.PressBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(147)))), ((int)(((byte)(195)))));
-            this.metroSetButton3.PressColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(147)))), ((int)(((byte)(195)))));
-            this.metroSetButton3.PressTextColor = System.Drawing.Color.White;
-            this.metroSetButton3.Size = new System.Drawing.Size(72, 32);
-            this.metroSetButton3.Style = MetroSet_UI.Design.Style.Custom;
-            this.metroSetButton3.StyleManager = null;
-            this.metroSetButton3.TabIndex = 127;
-            this.metroSetButton3.Text = "Update";
-            this.metroSetButton3.ThemeAuthor = "Narwin";
-            this.metroSetButton3.ThemeName = "MetroLite";
-            // 
             // metroSetLabel17
             // 
             this.metroSetLabel17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1721,7 +1678,7 @@ namespace BudgetExecution
             this.tabPageAdv5.ShowCloseButton = true;
             this.tabPageAdv5.Size = new System.Drawing.Size(436, 452);
             this.tabPageAdv5.TabIndex = 2;
-            this.tabPageAdv5.Text = "Allocation Graph";
+            this.tabPageAdv5.Text = "Graph";
             this.tabPageAdv5.ThemesEnabled = false;
             // 
             // AccountChart
@@ -2011,7 +1968,6 @@ namespace BudgetExecution
             this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             this.groupBox1.Controls.Add(this.Grid);
             this.groupBox1.Controls.Add(this.lblCount);
-            this.groupBox1.Controls.Add(this.ReturnButton);
             this.groupBox1.Controls.Add(this.lblTotal);
             this.groupBox1.Controls.Add(this.metroSetLabel9);
             this.groupBox1.Controls.Add(this.metroSetLabel8);
@@ -2068,7 +2024,7 @@ namespace BudgetExecution
             this.Grid.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Grid.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
             this.Grid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.Grid.Size = new System.Drawing.Size(810, 358);
+            this.Grid.Size = new System.Drawing.Size(810, 349);
             this.Grid.TabIndex = 150;
             // 
             // lblCount
@@ -2084,19 +2040,6 @@ namespace BudgetExecution
             this.lblCount.Text = "metroSetLabel2";
             this.lblCount.ThemeAuthor = "Narwin";
             this.lblCount.ThemeName = "MetroDark";
-            // 
-            // ReturnButton
-            // 
-            this.ReturnButton.BackColor = System.Drawing.Color.Transparent;
-            this.ReturnButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ReturnButton.BackgroundImage")));
-            this.ReturnButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ReturnButton.Image = ((System.Drawing.Image)(resources.GetObject("ReturnButton.Image")));
-            this.ReturnButton.Location = new System.Drawing.Point(729, 23);
-            this.ReturnButton.Margin = new System.Windows.Forms.Padding(2);
-            this.ReturnButton.Name = "ReturnButton";
-            this.ReturnButton.Size = new System.Drawing.Size(42, 32);
-            this.ReturnButton.TabIndex = 147;
-            this.ReturnButton.UseSelectable = true;
             // 
             // lblTotal
             // 
@@ -2283,7 +2226,7 @@ namespace BudgetExecution
             this.ProjectExpander2.ButtonSize = MakarovDev.ExpandCollapsePanel.ExpandCollapseButton.ExpandButtonSize.Small;
             this.ProjectExpander2.ButtonStyle = MakarovDev.ExpandCollapsePanel.ExpandCollapseButton.ExpandButtonStyle.Circle;
             this.ProjectExpander2.Controls.Add(this.label22);
-            this.ProjectExpander2.Controls.Add(this.label32);
+            this.ProjectExpander2.Controls.Add(this.label30);
             this.ProjectExpander2.Controls.Add(this.ProjectFilter3);
             this.ProjectExpander2.Controls.Add(this.ProjectFilter2);
             this.ProjectExpander2.ExpandedHeight = 292;
@@ -2300,22 +2243,22 @@ namespace BudgetExecution
             this.label22.AutoSize = true;
             this.label22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.label22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(130)))), ((int)(((byte)(180)))));
-            this.label22.Location = new System.Drawing.Point(24, 76);
+            this.label22.Location = new System.Drawing.Point(42, 66);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(184, 22);
-            this.label22.TabIndex = 116;
-            this.label22.Text = "Program Project Filter";
+            this.label22.Size = new System.Drawing.Size(50, 22);
+            this.label22.TabIndex = 117;
+            this.label22.Text = "Filter";
             // 
-            // label32
+            // label30
             // 
-            this.label32.AutoSize = true;
-            this.label32.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label32.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(130)))), ((int)(((byte)(180)))));
-            this.label32.Location = new System.Drawing.Point(24, 195);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(125, 22);
-            this.label32.TabIndex = 116;
-            this.label32.Text = "SQL Grouping";
+            this.label30.AutoSize = true;
+            this.label30.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label30.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(130)))), ((int)(((byte)(180)))));
+            this.label30.Location = new System.Drawing.Point(45, 197);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(84, 22);
+            this.label30.TabIndex = 118;
+            this.label30.Text = "Grouping";
             // 
             // ProjectFilter3
             // 
@@ -2377,7 +2320,7 @@ namespace BudgetExecution
             "Count",
             "Average",
             "Ratio"});
-            this.ProjectFilter2.Location = new System.Drawing.Point(24, 111);
+            this.ProjectFilter2.Location = new System.Drawing.Point(24, 91);
             this.ProjectFilter2.MaxDropDownItems = 20;
             this.ProjectFilter2.Name = "ProjectFilter2";
             this.ProjectFilter2.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
@@ -2658,7 +2601,7 @@ namespace BudgetExecution
             this.AreaExpander2.ButtonSize = MakarovDev.ExpandCollapsePanel.ExpandCollapseButton.ExpandButtonSize.Small;
             this.AreaExpander2.ButtonStyle = MakarovDev.ExpandCollapsePanel.ExpandCollapseButton.ExpandButtonStyle.Circle;
             this.AreaExpander2.Controls.Add(this.label19);
-            this.AreaExpander2.Controls.Add(this.label31);
+            this.AreaExpander2.Controls.Add(this.label29);
             this.AreaExpander2.Controls.Add(this.AreaFilter3);
             this.AreaExpander2.Controls.Add(this.AreaFilter2);
             this.AreaExpander2.ExpandedHeight = 292;
@@ -2675,22 +2618,22 @@ namespace BudgetExecution
             this.label19.AutoSize = true;
             this.label19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.label19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(130)))), ((int)(((byte)(180)))));
-            this.label19.Location = new System.Drawing.Point(23, 74);
+            this.label19.Location = new System.Drawing.Point(29, 57);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(166, 22);
-            this.label19.TabIndex = 116;
-            this.label19.Text = "Program Area Filter";
+            this.label19.Size = new System.Drawing.Size(50, 22);
+            this.label19.TabIndex = 117;
+            this.label19.Text = "Filter";
             // 
-            // label31
+            // label29
             // 
-            this.label31.AutoSize = true;
-            this.label31.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label31.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(130)))), ((int)(((byte)(180)))));
-            this.label31.Location = new System.Drawing.Point(23, 181);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(125, 22);
-            this.label31.TabIndex = 116;
-            this.label31.Text = "SQL Grouping";
+            this.label29.AutoSize = true;
+            this.label29.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label29.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(130)))), ((int)(((byte)(180)))));
+            this.label29.Location = new System.Drawing.Point(32, 188);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(84, 22);
+            this.label29.TabIndex = 118;
+            this.label29.Text = "Grouping";
             // 
             // AreaFilter3
             // 
@@ -2750,7 +2693,7 @@ namespace BudgetExecution
             "Count",
             "Average",
             "Ratio"});
-            this.AreaFilter2.Location = new System.Drawing.Point(23, 109);
+            this.AreaFilter2.Location = new System.Drawing.Point(23, 82);
             this.AreaFilter2.MaxDropDownItems = 20;
             this.AreaFilter2.Name = "AreaFilter2";
             this.AreaFilter2.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
@@ -3021,7 +2964,7 @@ namespace BudgetExecution
             this.DivisionExpander2.ButtonSize = MakarovDev.ExpandCollapsePanel.ExpandCollapseButton.ExpandButtonSize.Small;
             this.DivisionExpander2.ButtonStyle = MakarovDev.ExpandCollapsePanel.ExpandCollapseButton.ExpandButtonStyle.Circle;
             this.DivisionExpander2.Controls.Add(this.label16);
-            this.DivisionExpander2.Controls.Add(this.label30);
+            this.DivisionExpander2.Controls.Add(this.label28);
             this.DivisionExpander2.Controls.Add(this.DivisionFilter3);
             this.DivisionExpander2.Controls.Add(this.DivisionFilter2);
             this.DivisionExpander2.ExpandedHeight = 292;
@@ -3038,22 +2981,22 @@ namespace BudgetExecution
             this.label16.AutoSize = true;
             this.label16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(130)))), ((int)(((byte)(180)))));
-            this.label16.Location = new System.Drawing.Point(23, 70);
+            this.label16.Location = new System.Drawing.Point(27, 73);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(118, 22);
-            this.label16.TabIndex = 116;
-            this.label16.Text = "Division Filter";
+            this.label16.Size = new System.Drawing.Size(50, 22);
+            this.label16.TabIndex = 117;
+            this.label16.Text = "Filter";
             // 
-            // label30
+            // label28
             // 
-            this.label30.AutoSize = true;
-            this.label30.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label30.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(130)))), ((int)(((byte)(180)))));
-            this.label30.Location = new System.Drawing.Point(23, 177);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(125, 22);
-            this.label30.TabIndex = 116;
-            this.label30.Text = "SQL Grouping";
+            this.label28.AutoSize = true;
+            this.label28.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label28.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(130)))), ((int)(((byte)(180)))));
+            this.label28.Location = new System.Drawing.Point(27, 202);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(84, 22);
+            this.label28.TabIndex = 118;
+            this.label28.Text = "Grouping";
             // 
             // DivisionFilter3
             // 
@@ -3080,7 +3023,7 @@ namespace BudgetExecution
             "Objective",
             "ProgramArea",
             "ProgramProject"});
-            this.DivisionFilter3.Location = new System.Drawing.Point(23, 211);
+            this.DivisionFilter3.Location = new System.Drawing.Point(23, 239);
             this.DivisionFilter3.MaxDropDownItems = 20;
             this.DivisionFilter3.Name = "DivisionFilter3";
             this.DivisionFilter3.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
@@ -3386,7 +3329,7 @@ namespace BudgetExecution
             this.ObjectiveExpander2.ButtonSize = MakarovDev.ExpandCollapsePanel.ExpandCollapseButton.ExpandButtonSize.Small;
             this.ObjectiveExpander2.ButtonStyle = MakarovDev.ExpandCollapsePanel.ExpandCollapseButton.ExpandButtonStyle.Circle;
             this.ObjectiveExpander2.Controls.Add(this.label13);
-            this.ObjectiveExpander2.Controls.Add(this.label29);
+            this.ObjectiveExpander2.Controls.Add(this.label26);
             this.ObjectiveExpander2.Controls.Add(this.ObjectiveFilter3);
             this.ObjectiveExpander2.Controls.Add(this.ObjectiveFilter2);
             this.ObjectiveExpander2.ExpandedHeight = 292;
@@ -3403,22 +3346,22 @@ namespace BudgetExecution
             this.label13.AutoSize = true;
             this.label13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(130)))), ((int)(((byte)(180)))));
-            this.label13.Location = new System.Drawing.Point(25, 75);
+            this.label13.Location = new System.Drawing.Point(38, 58);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(130, 22);
-            this.label13.TabIndex = 116;
-            this.label13.Text = "Objective Filter";
+            this.label13.Size = new System.Drawing.Size(50, 22);
+            this.label13.TabIndex = 117;
+            this.label13.Text = "Filter";
             // 
-            // label29
+            // label26
             // 
-            this.label29.AutoSize = true;
-            this.label29.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label29.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(130)))), ((int)(((byte)(180)))));
-            this.label29.Location = new System.Drawing.Point(25, 182);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(125, 22);
-            this.label29.TabIndex = 116;
-            this.label29.Text = "SQL Grouping";
+            this.label26.AutoSize = true;
+            this.label26.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label26.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(130)))), ((int)(((byte)(180)))));
+            this.label26.Location = new System.Drawing.Point(41, 189);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(84, 22);
+            this.label26.TabIndex = 118;
+            this.label26.Text = "Grouping";
             // 
             // ObjectiveFilter3
             // 
@@ -3478,7 +3421,7 @@ namespace BudgetExecution
             "Count",
             "Average",
             "Ratio"});
-            this.ObjectiveFilter2.Location = new System.Drawing.Point(25, 110);
+            this.ObjectiveFilter2.Location = new System.Drawing.Point(25, 83);
             this.ObjectiveFilter2.MaxDropDownItems = 20;
             this.ObjectiveFilter2.Name = "ObjectiveFilter2";
             this.ObjectiveFilter2.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
@@ -3748,8 +3691,8 @@ namespace BudgetExecution
             this.GoalExpander2.BackColor = System.Drawing.Color.Black;
             this.GoalExpander2.ButtonSize = MakarovDev.ExpandCollapsePanel.ExpandCollapseButton.ExpandButtonSize.Small;
             this.GoalExpander2.ButtonStyle = MakarovDev.ExpandCollapsePanel.ExpandCollapseButton.ExpandButtonStyle.Circle;
+            this.GoalExpander2.Controls.Add(this.label4);
             this.GoalExpander2.Controls.Add(this.label10);
-            this.GoalExpander2.Controls.Add(this.label28);
             this.GoalExpander2.Controls.Add(this.GoalFilter3);
             this.GoalExpander2.Controls.Add(this.GoalFilter2);
             this.GoalExpander2.ExpandedHeight = 292;
@@ -3761,27 +3704,27 @@ namespace BudgetExecution
             this.GoalExpander2.Text = "Chart Filters";
             this.GoalExpander2.UseAnimation = true;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(130)))), ((int)(((byte)(180)))));
+            this.label4.Location = new System.Drawing.Point(28, 60);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(50, 22);
+            this.label4.TabIndex = 117;
+            this.label4.Text = "Filter";
+            // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(130)))), ((int)(((byte)(180)))));
-            this.label10.Location = new System.Drawing.Point(21, 77);
+            this.label10.Location = new System.Drawing.Point(31, 191);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(158, 22);
-            this.label10.TabIndex = 116;
-            this.label10.Text = "Agency Goal Filter";
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label28.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(130)))), ((int)(((byte)(180)))));
-            this.label28.Location = new System.Drawing.Point(21, 184);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(125, 22);
-            this.label28.TabIndex = 116;
-            this.label28.Text = "SQL Grouping";
+            this.label10.Size = new System.Drawing.Size(84, 22);
+            this.label10.TabIndex = 118;
+            this.label10.Text = "Grouping";
             // 
             // GoalFilter3
             // 
@@ -3841,7 +3784,7 @@ namespace BudgetExecution
             "Count",
             "Average",
             "Ratio"});
-            this.GoalFilter2.Location = new System.Drawing.Point(21, 112);
+            this.GoalFilter2.Location = new System.Drawing.Point(21, 85);
             this.GoalFilter2.MaxDropDownItems = 20;
             this.GoalFilter2.Name = "GoalFilter2";
             this.GoalFilter2.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
@@ -4131,9 +4074,9 @@ namespace BudgetExecution
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(130)))), ((int)(((byte)(180)))));
             this.label7.Location = new System.Drawing.Point(27, 75);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(94, 22);
+            this.label7.Size = new System.Drawing.Size(55, 22);
             this.label7.TabIndex = 116;
-            this.label7.Text = "NPM Filter";
+            this.label7.Text = " Filter";
             // 
             // label27
             // 
@@ -4142,9 +4085,9 @@ namespace BudgetExecution
             this.label27.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(130)))), ((int)(((byte)(180)))));
             this.label27.Location = new System.Drawing.Point(27, 182);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(125, 22);
+            this.label27.Size = new System.Drawing.Size(84, 22);
             this.label27.TabIndex = 116;
-            this.label27.Text = "SQL Grouping";
+            this.label27.Text = "Grouping";
             // 
             // NpmFilter3
             // 
@@ -4475,8 +4418,8 @@ namespace BudgetExecution
             this.BocExpander2.BackColor = System.Drawing.Color.Black;
             this.BocExpander2.ButtonSize = MakarovDev.ExpandCollapsePanel.ExpandCollapseButton.ExpandButtonSize.Small;
             this.BocExpander2.ButtonStyle = MakarovDev.ExpandCollapsePanel.ExpandCollapseButton.ExpandButtonStyle.Circle;
-            this.BocExpander2.Controls.Add(this.label4);
-            this.BocExpander2.Controls.Add(this.label26);
+            this.BocExpander2.Controls.Add(this.label35);
+            this.BocExpander2.Controls.Add(this.label36);
             this.BocExpander2.Controls.Add(this.BocFilter3);
             this.BocExpander2.Controls.Add(this.BocFilter2);
             this.BocExpander2.ExpandedHeight = 292;
@@ -4488,27 +4431,27 @@ namespace BudgetExecution
             this.BocExpander2.Text = "Chart Filters";
             this.BocExpander2.UseAnimation = true;
             // 
-            // label4
+            // label35
             // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(130)))), ((int)(((byte)(180)))));
-            this.label4.Location = new System.Drawing.Point(24, 79);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(157, 22);
-            this.label4.TabIndex = 116;
-            this.label4.Text = "Object Class FIlter";
+            this.label35.AutoSize = true;
+            this.label35.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label35.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(130)))), ((int)(((byte)(180)))));
+            this.label35.Location = new System.Drawing.Point(21, 66);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(50, 22);
+            this.label35.TabIndex = 117;
+            this.label35.Text = "Filter";
             // 
-            // label26
+            // label36
             // 
-            this.label26.AutoSize = true;
-            this.label26.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label26.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(130)))), ((int)(((byte)(180)))));
-            this.label26.Location = new System.Drawing.Point(24, 186);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(125, 22);
-            this.label26.TabIndex = 116;
-            this.label26.Text = "SQL Grouping";
+            this.label36.AutoSize = true;
+            this.label36.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label36.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(130)))), ((int)(((byte)(180)))));
+            this.label36.Location = new System.Drawing.Point(24, 197);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(84, 22);
+            this.label36.TabIndex = 118;
+            this.label36.Text = "Grouping";
             // 
             // BocFilter3
             // 
@@ -4568,7 +4511,7 @@ namespace BudgetExecution
             "Count",
             "Average",
             "Ratio"});
-            this.BocFilter2.Location = new System.Drawing.Point(24, 114);
+            this.BocFilter2.Location = new System.Drawing.Point(24, 91);
             this.BocFilter2.MaxDropDownItems = 20;
             this.BocFilter2.Name = "BocFilter2";
             this.BocFilter2.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
@@ -4859,9 +4802,9 @@ namespace BudgetExecution
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(130)))), ((int)(((byte)(180)))));
             this.label3.Location = new System.Drawing.Point(31, 64);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(162, 22);
+            this.label3.Size = new System.Drawing.Size(50, 22);
             this.label3.TabIndex = 116;
-            this.label3.Text = "Appropriation Filter";
+            this.label3.Text = "Filter";
             // 
             // label25
             // 
@@ -4870,9 +4813,9 @@ namespace BudgetExecution
             this.label25.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(130)))), ((int)(((byte)(180)))));
             this.label25.Location = new System.Drawing.Point(34, 195);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(125, 22);
+            this.label25.Size = new System.Drawing.Size(84, 22);
             this.label25.TabIndex = 116;
-            this.label25.Text = "SQL Grouping";
+            this.label25.Text = "Grouping";
             // 
             // FundFilter3
             // 
@@ -5408,7 +5351,6 @@ namespace BudgetExecution
         private MetroSetLabel metroSetLabel16;
         private MetroSetTextBox RC;
         private MetroSetTextBox Fund;
-        private MetroSetButton metroSetButton3;
         private MetroSetLabel metroSetLabel17;
         private MetroSetLabel metroSetLabel18;
         private MetroSetTextBox BFY;
@@ -5432,7 +5374,6 @@ namespace BudgetExecution
         private GroupBox groupBox1;
         private DataGridView Grid;
         private MetroSetLabel lblCount;
-        private MetroLink ReturnButton;
         private MetroSetLabel lblTotal;
         private MetroSetLabel metroSetLabel9;
         private MetroSetLabel metroSetLabel8;
@@ -5501,36 +5442,24 @@ namespace BudgetExecution
         private Label label1;
         private MetroSetComboBox FundFilter2;
         private MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel BocExpander2;
-        private Label label4;
-        private Label label26;
         private MetroSetComboBox BocFilter3;
         private MetroSetComboBox BocFilter2;
         private MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel FundExpander2;
         private Label label25;
         private MetroSetComboBox FundFilter3;
         private MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel ProjectExpander2;
-        private Label label22;
-        private Label label32;
         private MetroSetComboBox ProjectFilter3;
         private MetroSetComboBox ProjectFilter2;
         private MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel AreaExpander2;
-        private Label label19;
-        private Label label31;
         private MetroSetComboBox AreaFilter3;
         private MetroSetComboBox AreaFilter2;
         private MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel DivisionExpander2;
-        private Label label16;
-        private Label label30;
         private MetroSetComboBox DivisionFilter3;
         private MetroSetComboBox DivisionFilter2;
         private MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel ObjectiveExpander2;
-        private Label label13;
-        private Label label29;
         private MetroSetComboBox ObjectiveFilter3;
         private MetroSetComboBox ObjectiveFilter2;
         private MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel GoalExpander2;
-        private Label label10;
-        private Label label28;
         private MetroSetComboBox GoalFilter3;
         private MetroSetComboBox GoalFilter2;
         private MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel NpmExpander2;
@@ -5540,9 +5469,22 @@ namespace BudgetExecution
         private MetroSetComboBox NpmFilter2;
         private Label label34;
         private Label label33;
-        private MetroSetButton metroSetButton6;
-        private MetroSetButton metroSetButton5;
-        private MetroSetButton metroSetButton4;
         private BindingSource BindingSource;
+        private Button button4;
+        private Button button3;
+        private Button button2;
+        private Button button1;
+        private Label label22;
+        private Label label30;
+        private Label label19;
+        private Label label29;
+        private Label label16;
+        private Label label28;
+        private Label label13;
+        private Label label26;
+        private Label label4;
+        private Label label10;
+        private Label label35;
+        private Label label36;
     }
 }
