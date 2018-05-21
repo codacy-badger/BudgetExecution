@@ -33,7 +33,7 @@ namespace BudgetExecution
             GoalName = Account.GoalName;
             Objective = Account.Objective;
             ObjectiveName = Account.ObjectiveName;
-            Parameter = GetParameter();
+            FteParameter = GetParameter();
         }
         //Properties
         public int ID { get; set; }
@@ -70,7 +70,7 @@ namespace BudgetExecution
         public decimal Total { get; }
         BOC IPRC.BOC { get; }
         private decimal[] Metrics { get; }
-        private Dictionary<string, object> Parameter { get; set; }
+        private Dictionary<string, object> FteParameter { get; set; }
 
         //Methods
         Dictionary<string, object> GetParameter()
@@ -108,7 +108,6 @@ namespace BudgetExecution
                 return null;
             }
         }
-
         public decimal GetAverage(DataTable table)
         {
             try
@@ -121,7 +120,6 @@ namespace BudgetExecution
                 return -1M;
             }
         }
-
         public string[] GetCodes(DataTable table, string column)
         {
             try
@@ -134,7 +132,6 @@ namespace BudgetExecution
                 return null;
             }
         }
-
         public int GetCount(DataTable table)
         {
             try
@@ -147,7 +144,6 @@ namespace BudgetExecution
                 return -1;
             }
         }
-
         public Dictionary<string, string[]> GetDataElements(DataTable table)
         {
             var data = new Dictionary<string, string[]>();
@@ -232,7 +228,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
+                MessageBox.Show(ex.Message + ex.StackTrace);
                 return null;
             }
         }
