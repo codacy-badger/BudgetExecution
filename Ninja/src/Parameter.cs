@@ -24,7 +24,7 @@ namespace BudgetExecution
                 ["BudgetLevel"] = bl,
                 ["RPIO"] = RPIO,
                 ["BFY"] = BFY,
-                [Fund] = Fund,
+                ["Fund"] = Fund,
                 ["Org"] = Org,
                 ["RC"] = RC,
                 ["BOC"] = BOC,

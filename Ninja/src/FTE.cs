@@ -27,7 +27,7 @@ namespace BudgetExecution
             Code = Account.Code;
             BOC = new BOC(datarow["BOC"].ToString());
             Amount = decimal.Parse(datarow["Amount"].ToString());
-            NpmCode = Account.NpmCode;
+            NpmCode = Account.NPM;
             ProgramProjectCode = Account.ProgramProjectCode;
             Goal = Account.Goal;
             GoalName = Account.GoalName;

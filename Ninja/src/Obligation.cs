@@ -50,7 +50,7 @@ namespace BudgetExecution
             RC = new RC(rc);
             Account = new Account(code);
             Code = Account.Code;
-            NpmCode = Account.NpmCode;
+            NpmCode = Account.NPM;
             BOC = new BOC(boc);
             FOC = foc;
             FocName = focname;
@@ -75,7 +75,7 @@ namespace BudgetExecution
             RC = new RC(dr["RC"].ToString());
             Code = dr["Code"].ToString();
             Account = new Account(Code);
-            NpmCode = Account.NpmCode;
+            NpmCode = Account.NPM;
             BOC = new BOC(dr["BOC"].ToString());
             FOC = dr["FOC"].ToString();
             FocName = dr["FocName"].ToString();

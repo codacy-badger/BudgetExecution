@@ -68,44 +68,26 @@ namespace BudgetExecution
             Configure3DMode(Chart);
             Chart.ShowToolTips = true;
         }
-        public BudgetChart(ChartControl chart, PrcMetric metric, PrcField field, Stat value, ChartSeriesType type)
+
+        public BudgetChart(ChartControl chart, string[] title, DataBuilder data, PrcField filter, Stat value, ChartSeriesType type)
         {
             Chart = chart;
+            Data = data;
             Value = value;
             SeriesType = type;
-            Metric = metric;
-            Table = Metric.Table;
             ConfigurePrimaryAxisLabels(Chart);
-            DataMetrics = Metric.GetChartMetrics(Table, field);
+            ConfigureMainTitle(title);
             if (Chart.Series != null)
                 Chart.Series.Clear();
+            Table = Data.DataTable;
+            Metric = new PrcMetric(Data);
+            DataMetrics = Metric.GetChartMetrics(Table, filter);
             DataSeries = GetSeriesTotals(GetMeasure(DataMetrics, Value));
             DataSeries.Type = SeriesType;
             if (SeriesType == ChartSeriesType.Pie)
                 ConfigurePieChart(Chart);
             ConfigureSeries(DataSeries, Value);
             Chart.Series.Add(DataSeries);
-            Configure3DMode(Chart);
-            Chart.ShowToolTips = true;
-        }
-        public BudgetChart(ChartControl chart, PrcMetric metric, Tuple<PrcField, Stat, ChartSeriesType> chartuple)
-        {
-            Chart = chart;
-            Value = chartuple.Item2;
-            SeriesType = chartuple.Item3;
-            Metric = metric;
-            Table = Metric.Table;
-            ConfigurePrimaryAxisLabels(Chart);
-            DataMetrics = Metric.GetChartMetrics(Table, chartuple.Item1);
-            if (Chart.Series != null)
-                Chart.Series.Clear();
-            DataSeries = GetSeriesTotals(GetMeasure(DataMetrics, Value));
-            DataSeries.Type = SeriesType;
-            if (SeriesType == ChartSeriesType.Pie)
-                ConfigurePieChart(Chart);
-            ConfigureSeries(DataSeries, Value);
-            Chart.Series.Add(DataSeries);
-            ConfigureToolTip(DataSeries);
             Configure3DMode(Chart);
             Chart.ShowToolTips = true;
         }
@@ -210,7 +192,7 @@ namespace BudgetExecution
                 Chart.Series[0].ExplosionOffset = 20f;
                 Chart.Series[0].ShowTicks = true;
                 Chart.Series[0].Style.DisplayText = true;
-                Chart.Series[0].PointsToolTipFormat = "Funding:{4:N}";
+                Chart.Series[0].PointsToolTipFormat = "Funding:{4:N2}";
                 Chart.Series[0].ExplodedAll = true;
                 Chart.Series[0].ExplosionOffset = 20f;
                 var bm = new ChartDataBindModel(Data.BindingSource);
@@ -237,7 +219,7 @@ namespace BudgetExecution
                 DataSeries.Style.TextOrientation = ChartTextOrientation.Up;
                 DataSeries.Style.DisplayShadow = true;
                 DataSeries.Style.TextColor = Color.White;
-                DataSeries.Style.TextFormat = "${0:#,}";
+                DataSeries.Style.TextFormat = "${0:N2}";
                 DataSeries.PointsToolTipFormat = "Funding:{4:N}";
                 DataSeries.Style.Font.Size = 12.0F;
                 DataSeries.Style.Font.Facename = "SegoeUI";
@@ -266,8 +248,8 @@ namespace BudgetExecution
                 DataSeries.Style.TextOrientation = ChartTextOrientation.Up;
                 DataSeries.Style.DisplayShadow = true;
                 DataSeries.Style.TextColor = Color.White;
-                DataSeries.Style.TextFormat = "${0:#,}";
-                DataSeries.PointsToolTipFormat = "Funding:{4:N}";
+                DataSeries.Style.TextFormat = "${0:N2}";
+                DataSeries.PointsToolTipFormat = "Funding:{4:N2}";
                 DataSeries.Style.Font.Size = 12.0F;
                 DataSeries.Style.Font.Facename = "Segoe UI";
                 DataSeries.Style.Font.FontStyle = FontStyle.Bold;
@@ -301,7 +283,7 @@ namespace BudgetExecution
                 DataSeries.Style.DisplayShadow = true;
                 DataSeries.Style.TextColor = Color.White;
                 if (value == Stat.Total || value == Stat.Average)
-                    DataSeries.Style.TextFormat = "${0}";
+                    DataSeries.Style.TextFormat = "${0:N2}";
                 if (value == Stat.Ratio)
                     DataSeries.Style.TextFormat = "{0:P}";
                 if (value == Stat.Count)
@@ -335,7 +317,7 @@ namespace BudgetExecution
             try
             {
                 Chart = chart;
-                Chart.PrimaryXAxis.Font = new Font("SegoeUI", 8F, FontStyle.Bold);
+                Chart.PrimaryXAxis.Font = new Font("SegoeUI", 9F, FontStyle.Bold);
                 Chart.PrimaryXAxis.ForeColor = SystemColors.MenuHighlight;
                 
             }
@@ -453,10 +435,10 @@ namespace BudgetExecution
             {
                 if(Chart.Titles != null)
                     Chart.Titles.Clear();
-                for (int i = 0; i < t.Length; i++)
+                foreach (string s in t)
                 {
                     ChartTitle title = new ChartTitle();
-                    title.Text = t[i];
+                    title.Text = s;
                     title.ForeColor = Color.LightSteelBlue;
                     title.Font = new Font("SegoeUI", 9f, FontStyle.Regular);
                     Chart.Titles.Add(title);

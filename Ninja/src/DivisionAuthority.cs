@@ -234,7 +234,7 @@ namespace BudgetExecution
             try
             {
                 var parameter = new Dictionary<string, object>();
-                parameter.Add("Id", row["Id"]);
+                parameter.Add("ID", row["ID"]);
                 parameter.Add("Amount", amount2);
                 var query = new Query(Source.RegionAccount, parameter);
                 var update = query.UpdateCommand;

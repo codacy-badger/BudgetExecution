@@ -7,7 +7,7 @@ namespace BudgetExecution
         string Code { get; }
 
         string Goal { get; }
-        string NpmCode { get; }
+        string NPM { get; }
         string Objective { get; }
         string ProgramProjectCode { get; }
 

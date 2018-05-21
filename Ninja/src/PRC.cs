@@ -23,7 +23,7 @@ namespace BudgetExecution
             Code = Account.Code;
             BOC = new BOC(boc, amount);
             Amount = amount;
-            NpmCode = Account.NpmCode;
+            NPM = Account.NPM;
             ProgramProjectCode = Account.ProgramProjectCode;
             Goal = Account.Goal;
             GoalName = Account.GoalName;
@@ -44,7 +44,7 @@ namespace BudgetExecution
             Code = Account.Code;
             BOC = new BOC(datarow["BOC"].ToString());
             Amount = decimal.Parse(datarow["Amount"].ToString());
-            NpmCode = Account.NpmCode;
+            NPM = Account.NPM;
             ProgramProjectCode = Account.ProgramProjectCode;
             Goal = Account.Goal;
             GoalName = Account.GoalName;
@@ -67,7 +67,6 @@ namespace BudgetExecution
         public BOC BOC { get; }
         public FTE FTE { get; set; }
         public string NPM { get; set; }
-        public string NpmCode { get; }
         public string NpmName { get; set; }
         public string ProgramProjectCode { get; }
         public string ProgramProjectName { get; set; }

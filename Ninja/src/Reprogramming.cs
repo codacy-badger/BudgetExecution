@@ -26,7 +26,7 @@ namespace BudgetExecution
             Account = new Account(code);
             ProgramProjectName = ppn;
             ProgramProjectCode = Account.ProgramProjectCode;
-            NpmCode = Account.NpmCode;
+            NpmCode = Account.NPM;
             FromTo = fromto;
             BOC = new BOC(boc);
             Amount = amount;
@@ -47,7 +47,7 @@ namespace BudgetExecution
             Account = new Account(Code);
             ProgramProjectName = dr["ProgramProjectName"].ToString();
             ProgramProjectCode = Account.ProgramProjectCode;
-            NpmCode = Account.NpmCode;
+            NpmCode = Account.NPM;
             FromTo = dr["FromTo"].ToString();
             BOC = new BOC(dr["BOC"].ToString());
             Amount = decimal.Parse(dr["Amount"].ToString());

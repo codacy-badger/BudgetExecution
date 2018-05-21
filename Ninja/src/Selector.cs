@@ -67,9 +67,12 @@ namespace BudgetExecution
                 var a = new SummaryForm(s);
                 a.Show();
             }
-            var i = ViewerCarousel.ActiveImage.Tag.ToString();
-            var b = new SummaryForm(i);
-            b.Show();
+            else
+            {
+                var i = ViewerCarousel.ActiveImage.Tag.ToString();
+                var b = new SummaryForm(i);
+                b.Show();
+            }
         }
     }
 }

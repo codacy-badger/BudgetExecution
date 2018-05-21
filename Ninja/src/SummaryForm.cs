@@ -488,6 +488,7 @@ namespace BudgetExecution
             {
                 SummaryTabControl = sender as TabControlAdv;
                 CurrentTabIndex = SummaryTabControl.SelectedIndex;
+                   
                 switch (CurrentTabIndex)
                 {
                     case 0:
@@ -496,8 +497,11 @@ namespace BudgetExecution
                         PopulateFilterBoxItems(FundFilter2, PrcField.FundName);
                         FundExpander2.Visible = false;
                         FundExpander1.ExpandCollapse += Expander_Click;
+                        if (Data.Source == Source.RegionAccount)
+                            FundFilter3.Items.Remove("RC");
                         FundFilter3.SelectedIndexChanged += ChartSqlCommandFilter_ItemSelected;
-                        FundChart = new BudgetChart(FundChart, Data, PrcField.Fund).Activate();
+                        MainTitle = new string[] { "Funding By Appropriation" };
+                        FundChart = new BudgetChart(FundChart, MainTitle, Data, PrcField.Fund, Stat.Total, ChartSeriesType.Column).Activate();
                         break;
                     case 1:
                         GetChartType(ChartTypeFilter2);
@@ -505,8 +509,11 @@ namespace BudgetExecution
                         PopulateFilterBoxItems(BocFilter2, PrcField.BocName);
                         BocExpander2.Visible = false;
                         BocExpander1.ExpandCollapse += Expander_Click;
+                        if (Data.Source == Source.RegionAccount)
+                            BocFilter3.Items.Remove("RC");
                         BocFilter3.SelectedIndexChanged += ChartSqlCommandFilter_ItemSelected;
-                        BocChart = new BudgetChart(BocChart, Data, PrcField.BocName).Activate();
+                        MainTitle = new string[] { "Funding By Budget Object Class" };
+                        BocChart = new BudgetChart(BocChart, MainTitle, Data, PrcField.BocName, Stat.Total, ChartSeriesType.Column).Activate();
                         break;
                     case 2:
                         GetChartType(ChartTypeFilter3);
@@ -514,8 +521,11 @@ namespace BudgetExecution
                         PopulateFilterBoxItems(NpmFilter2, PrcField.NPM);
                         NpmExpander2.Visible = false;
                         NpmExpander1.ExpandCollapse += Expander_Click;
+                        if (Data.Source == Source.RegionAccount)
+                            NpmFilter3.Items.Remove("RC");
                         NpmFilter3.SelectedIndexChanged += ChartSqlCommandFilter_ItemSelected;
-                        NpmChart = new BudgetChart(NpmChart, Data, PrcField.NPM).Activate();
+                        MainTitle = new string[] { "Funding By National Program" };
+                        NpmChart = new BudgetChart(NpmChart, MainTitle, Data, PrcField.NPM, Stat.Total, ChartSeriesType.Column).Activate();
                         break;
                     case 3:
                         GetChartType(ChartTypeFilter4);
@@ -523,8 +533,11 @@ namespace BudgetExecution
                         PopulateFilterBoxItems(GoalFilter2, PrcField.GoalName);
                         GoalExpander2.Visible = false;
                         GoalExpander1.ExpandCollapse += Expander_Click;
+                        if (Data.Source == Source.RegionAccount)
+                            GoalFilter3.Items.Remove("RC");
                         GoalFilter3.SelectedIndexChanged += ChartSqlCommandFilter_ItemSelected;
-                        GoalChart = new BudgetChart(GoalChart, Data, PrcField.GoalName).Activate();
+                        MainTitle = new string[] { "Funding By Agency Goal" };
+                        GoalChart = new BudgetChart(GoalChart, MainTitle, Data, PrcField.GoalName, Stat.Total, ChartSeriesType.Column).Activate();
                         break;
                     case 4:
                         GetChartType(ChartTypeFilter5);
@@ -532,17 +545,23 @@ namespace BudgetExecution
                         PopulateFilterBoxItems(ObjectiveFilter2, PrcField.ObjectiveName);
                         ObjectiveExpander2.Visible = false;
                         ObjectiveExpander1.ExpandCollapse += Expander_Click;
+                        if (Data.Source == Source.RegionAccount)
+                            ObjectiveFilter3.Items.Remove("RC");
                         ObjectiveFilter3.SelectedIndexChanged += ChartSqlCommandFilter_ItemSelected;
-                        ObjectiveChart = new BudgetChart(ObjectiveChart, Data, PrcField.ObjectiveName).Activate();
+                        MainTitle = new string[] { "Funding By Agency Objective" };
+                        ObjectiveChart = new BudgetChart(ObjectiveChart, MainTitle, Data, PrcField.ObjectiveName, Stat.Total, ChartSeriesType.Column).Activate();
                         break;
                     case 5:
                         GetChartType(ChartTypeFilter6);
                         DivisionFilter.SelectedIndexChanged += ChartMeasureFilterControl_ItemSelected;
-                        PopulateFilterBoxItems(DivisionFilter2, PrcField.DivisionName);
+                        PopulateFilterBoxItems(DivisionFilter2, PrcField.RC);
                         DivisionExpander2.Visible = false;
                         DivisionExpander1.ExpandCollapse += Expander_Click;
+                        if (Data.Source == Source.RegionAccount)
+                            DivisionFilter3.Items.Remove("RC");
                         DivisionFilter3.SelectedIndexChanged += ChartSqlCommandFilter_ItemSelected;
-                        DivisionChart = new BudgetChart(DivisionChart, Data, PrcField.RC).Activate();
+                        MainTitle = new string[] { "Funding By Division" };
+                        DivisionChart = new BudgetChart(DivisionChart, MainTitle, Data, PrcField.RC, Stat.Total, ChartSeriesType.Column).Activate();
                         break;
                     case 6:
                         GetChartType(ChartTypeFilter7);
@@ -550,8 +569,11 @@ namespace BudgetExecution
                         PopulateFilterBoxItems(AreaFilter2, PrcField.ProgramAreaName);
                         AreaExpander2.Visible = false;
                         AreaExpander1.ExpandCollapse += Expander_Click;
+                        if (Data.Source == Source.RegionAccount)
+                            AreaFilter3.Items.Remove("RC");
                         AreaFilter3.SelectedIndexChanged += ChartSqlCommandFilter_ItemSelected;
-                        AreaChart = new BudgetChart(AreaChart, Data, PrcField.ProgramArea).Activate();
+                        MainTitle = new string[] { "Funding By Program Area" };
+                        AreaChart = new BudgetChart(AreaChart, MainTitle, Data, PrcField.ProgramArea, Stat.Total, ChartSeriesType.Column).Activate();
                         break;
                     case 7:
                         GetChartType(ChartTypeFilter8);
@@ -559,8 +581,11 @@ namespace BudgetExecution
                         PopulateFilterBoxItems(ProjectFilter2, PrcField.ProgramProjectName);
                         ProjectExpander2.Visible = false;
                         ProjectExpander1.ExpandCollapse += Expander_Click;
+                        if (Data.Source == Source.RegionAccount)
+                            ProjectFilter3.Items.Remove("RC");
                         ProjectFilter3.SelectedIndexChanged += ChartSqlCommandFilter_ItemSelected;
-                        ProjectChart = new BudgetChart(ProjectChart, Data, PrcField.ProgramProjectCode).Activate();
+                        MainTitle = new string[] { "Funding By Program Project" };
+                        ProjectChart = new BudgetChart(ProjectChart, MainTitle, Data, PrcField.ProgramProjectCode, Stat.Total, ChartSeriesType.Column).Activate();
                         break;
                 }
             }
@@ -569,18 +594,74 @@ namespace BudgetExecution
                 MessageBox.Show(ex.Message + ex.StackTrace);
             }
         }
+        string[] GetTitle(TabControlAdv tab, MetroSetComboBox filter)
+        {
+            try
+            {
+                var category = tab.TabPages[CurrentTabIndex].Tag.ToString();
+                var index = filter.SelectedIndex;
+                switch (index)
+                {
+                    case 0:
+                        return new string[] { string.Format("Total Funding by {0}", category) };
+                    case 1:
+                        return new string[] { string.Format("Total Accounts by {0}", category) };
+                    case 2:
+                        return new string[] { string.Format("Average Funding by {0}", category) };
+                    case 3:
+                        return new string[] { string.Format("Funding Percentage by {0}", category) };
+                }
+                return null;
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message + ex.StackTrace);
+                return null;
+            }
+        }
+        string[] GetTitle(TabControlAdv tab, MetroSetComboBox filter1, MetroSetComboBox filter2, MetroSetComboBox filter3)
+        {
+            try
+            {
+                var source = filter2.SelectedItem.ToString();
+                var category = tab.TabPages[CurrentTabIndex].Tag.ToString();
+                var index = filter1.SelectedIndex;
+                var grouping = filter3.SelectedItem.ToString();
+                switch (index)
+                {
+                    case 0:
+                        return new string[] { string.Format("Total {0} Funding by {1}", source, grouping) };
+                    case 1:
+                        return new string[] { string.Format("{0}  Accounts by {1}", source, grouping) };
+                    case 2:
+                        return new string[] { string.Format("Average {0} Funding by {1}", source, grouping)};
+                    case 3:
+                        return new string[] { string.Format("{0} Funding Percentage by {1}", source, grouping)};
+                }
+                return null;
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message + ex.StackTrace);
+                return null;
+            }
+        }
         void ChartMeasureFilterControl_ItemSelected(object sender, EventArgs e)
         {
             try
             {
                 ChartMeasureFilterControl = sender as MetroSetComboBox;
-                switch (SummaryTabControl.SelectedIndex)
+                Measure = (Stat)Enum.Parse(typeof(Stat), ChartMeasureFilterControl.SelectedItem.ToString());
+                switch (CurrentTabIndex)
                 {
                     case 0:
                         FundFilter = ChartMeasureFilterControl;
                         ChartType = GetChartType(ChartTypeFilter1);
                         Measure = (Stat)Enum.Parse(typeof(Stat), FundFilter.SelectedItem.ToString());
-                        FundChart = new BudgetChart(FundChart, Data, PrcField.Fund, Measure, ChartType).Activate();
+                        MainTitle = GetTitle(SummaryTabControl, ChartMeasureFilterControl);
+                        FundChart = new BudgetChart(FundChart, MainTitle, Data, PrcField.Fund, Measure, ChartType).Activate();
                         FundExpander2.Visible = true;
                         var a = new ChartTitle();
                         FundChart.Titles.Add(a);
@@ -590,49 +671,56 @@ namespace BudgetExecution
                         ChartType = GetChartType(ChartTypeFilter2);
                         Measure = (Stat)Enum.Parse(typeof(Stat), BocFilter.SelectedItem.ToString());
                         BocExpander2.Visible = true;
-                        BocChart = new BudgetChart(BocChart, Data, PrcField.BocName, Measure, ChartType).Activate();
+                        MainTitle = GetTitle(SummaryTabControl, ChartMeasureFilterControl);
+                        BocChart = new BudgetChart(BocChart, MainTitle, Data, PrcField.BocName, Measure, ChartType).Activate();
                         break;
                     case 2:
                         NpmFilter = ChartMeasureFilterControl;
                         ChartType = GetChartType(ChartTypeFilter3);
                         Measure = (Stat)Enum.Parse(typeof(Stat), NpmFilter.SelectedItem.ToString());
                         NpmExpander2.Visible = true;
-                        NpmChart = new BudgetChart(NpmChart, Data, PrcField.NPM, Measure, ChartType).Activate();
+                        MainTitle = GetTitle(SummaryTabControl, ChartMeasureFilterControl);
+                        NpmChart = new BudgetChart(NpmChart, MainTitle, Data, PrcField.NPM, Measure, ChartType).Activate();
                         break;
                     case 3:
                         GoalFilter = ChartMeasureFilterControl;
                         ChartType = GetChartType(ChartTypeFilter4);
                         Measure = (Stat)Enum.Parse(typeof(Stat), GoalFilter.SelectedItem.ToString());
                         GoalExpander2.Visible = true;
-                        GoalChart = new BudgetChart(GoalChart, Data, PrcField.GoalName, Measure, ChartType).Activate();
+                        MainTitle = GetTitle(SummaryTabControl, ChartMeasureFilterControl);
+                        GoalChart = new BudgetChart(GoalChart, MainTitle, Data, PrcField.GoalName, Measure, ChartType).Activate();
                         break;
                     case 4:
                         ObjectiveFilter = ChartMeasureFilterControl;
                         ChartType = GetChartType(ChartTypeFilter5);
                         Measure = (Stat)Enum.Parse(typeof(Stat), ObjectiveFilter.SelectedItem.ToString());
                         ObjectiveExpander2.Visible = true;
-                        ObjectiveChart = new BudgetChart(ObjectiveChart, Data, PrcField.ObjectiveName, Measure, ChartType).Activate();
+                        MainTitle = GetTitle(SummaryTabControl, ChartMeasureFilterControl);
+                        ObjectiveChart = new BudgetChart(ObjectiveChart, MainTitle, Data, PrcField.ObjectiveName, Measure, ChartType).Activate();
                         break;
                     case 5:
                         DivisionFilter = ChartMeasureFilterControl;
                         ChartType = GetChartType(ChartTypeFilter6);
                         Measure = (Stat)Enum.Parse(typeof(Stat), DivisionFilter.SelectedItem.ToString());
                         DivisionExpander2.Visible = true;
-                        DivisionChart = new BudgetChart(DivisionChart, Data, PrcField.DivisionName, Measure, ChartType).Activate();
+                        MainTitle = GetTitle(SummaryTabControl, ChartMeasureFilterControl);
+                        DivisionChart = new BudgetChart(DivisionChart, MainTitle, Data, PrcField.DivisionName, Measure, ChartType).Activate();
                         break;
                     case 6:
                         AreaFilter = ChartMeasureFilterControl;
                         ChartType = GetChartType(ChartTypeFilter7);
                         Measure = (Stat)Enum.Parse(typeof(Stat), AreaFilter.SelectedItem.ToString());
                         AreaExpander2.Visible = true;
-                        AreaChart = new BudgetChart(AreaChart, Data, PrcField.ProgramArea, Measure, ChartType).Activate();
+                        MainTitle = GetTitle(SummaryTabControl, ChartMeasureFilterControl);
+                        AreaChart = new BudgetChart(AreaChart, MainTitle, Data, PrcField.ProgramArea, Measure, ChartType).Activate();
                         break;
                     case 7:
                         ProjectFilter = ChartMeasureFilterControl;
                         ChartType = GetChartType(ChartTypeFilter8);
                         Measure = (Stat)Enum.Parse(typeof(Stat), ProjectFilter.SelectedItem.ToString());
                         ProjectExpander2.Visible = true;
-                        ProjectChart = new BudgetChart(ProjectChart, Data, PrcField.ProgramProjectCode, Measure, ChartType).Activate();
+                        MainTitle = GetTitle(SummaryTabControl, ChartMeasureFilterControl);
+                        ProjectChart = new BudgetChart(ProjectChart, MainTitle, Data, PrcField.ProgramProjectCode, Measure, ChartType).Activate();
                         break;
                 }
             }
@@ -655,7 +743,8 @@ namespace BudgetExecution
                             var sqlfilter = (PrcField)Enum.Parse(typeof(PrcField), FundFilter3.SelectedItem.ToString());
                             param.Add(FundFilter2.Tag.ToString(), FundFilter2.SelectedItem.ToString());
                             var data = new DataBuilder(Data.Source, param);
-                            FundChart = new BudgetChart(FundChart, data, sqlfilter, Measure, ChartType).Activate();
+                            MainTitle = GetTitle(SummaryTabControl, FundFilter, FundFilter2, FundFilter3);
+                            FundChart = new BudgetChart(FundChart, MainTitle, data, sqlfilter, Measure, ChartType).Activate();
                         }
                         break;
                     case 1:
@@ -664,7 +753,8 @@ namespace BudgetExecution
                             var sqlfilter = (PrcField)Enum.Parse(typeof(PrcField), BocFilter3.SelectedItem.ToString());
                             param.Add(BocFilter2.Tag.ToString(), BocFilter2.SelectedItem.ToString());
                             var data = new DataBuilder(Data.Source, param);
-                            BocChart = new BudgetChart(BocChart, data, sqlfilter, Measure, ChartType).Activate();
+                            MainTitle = GetTitle(SummaryTabControl, BocFilter, BocFilter2, BocFilter3);
+                            BocChart = new BudgetChart(BocChart, MainTitle, data, sqlfilter, Measure, ChartType).Activate();
                         }
                         break;
                     case 2:
@@ -673,7 +763,8 @@ namespace BudgetExecution
                             var sqlfilter = (PrcField)Enum.Parse(typeof(PrcField), NpmFilter3.SelectedItem.ToString());
                             param.Add(NpmFilter2.Tag.ToString(), NpmFilter2.SelectedItem.ToString());
                             var data = new DataBuilder(Data.Source, param);
-                            NpmChart = new BudgetChart(NpmChart, data, sqlfilter, Measure, ChartType).Activate();
+                            MainTitle = GetTitle(SummaryTabControl, NpmFilter, NpmFilter2, NpmFilter3);
+                            NpmChart = new BudgetChart(NpmChart, MainTitle, data, sqlfilter, Measure, ChartType).Activate();
                         }
                         break;
                     case 3:
@@ -682,7 +773,8 @@ namespace BudgetExecution
                             var sqlfilter = (PrcField)Enum.Parse(typeof(PrcField), GoalFilter3.SelectedItem.ToString());
                             param.Add(GoalFilter2.Tag.ToString(), GoalFilter2.SelectedItem.ToString());
                             var data = new DataBuilder(Data.Source, param);
-                            GoalChart = new BudgetChart(GoalChart, data, sqlfilter, Measure, ChartType).Activate();
+                            MainTitle = GetTitle(SummaryTabControl, GoalFilter, GoalFilter2, GoalFilter3);
+                            GoalChart = new BudgetChart(GoalChart, MainTitle, data, sqlfilter, Measure, ChartType).Activate();
                         }
                         break;
                     case 4:
@@ -691,7 +783,8 @@ namespace BudgetExecution
                             var sqlfilter = (PrcField)Enum.Parse(typeof(PrcField), ObjectiveFilter3.SelectedItem.ToString());
                             param.Add(ObjectiveFilter2.Tag.ToString(), ObjectiveFilter2.SelectedItem.ToString());
                             var data = new DataBuilder(Data.Source, param);
-                            ObjectiveChart = new BudgetChart(ObjectiveChart, data, sqlfilter, Measure, ChartType).Activate();
+                            MainTitle = GetTitle(SummaryTabControl, ChartMeasureFilterControl, ObjectiveFilter2, ObjectiveFilter3);
+                            ObjectiveChart = new BudgetChart(ObjectiveChart, MainTitle, data, sqlfilter, Measure, ChartType).Activate();
                         }
                         break;
                     case 5:
@@ -699,8 +792,9 @@ namespace BudgetExecution
                         {
                             var sqlfilter = (PrcField)Enum.Parse(typeof(PrcField), DivisionFilter3.SelectedItem.ToString());
                             param.Add(DivisionFilter2.Tag.ToString(), DivisionFilter2.SelectedItem.ToString());
-                            var data = new DataBuilder(Data.Source, param);
-                            DivisionChart = new BudgetChart(DivisionChart, data, sqlfilter, Measure, ChartType).Activate();
+                            var data = new DataBuilder(Source.DivisionAccount, param);
+                            MainTitle = GetTitle(SummaryTabControl, DivisionFilter, DivisionFilter2, DivisionFilter3);
+                            DivisionChart = new BudgetChart(DivisionChart, MainTitle, data, sqlfilter, Measure, ChartType).Activate();
                         }
                         break;
                     case 6:
@@ -709,7 +803,8 @@ namespace BudgetExecution
                             var sqlfilter = (PrcField)Enum.Parse(typeof(PrcField), AreaFilter3.SelectedItem.ToString());
                             param.Add(AreaFilter2.Tag.ToString(), AreaFilter2.SelectedItem.ToString());
                             var data = new DataBuilder(Data.Source, param);
-                            AreaChart = new BudgetChart(AreaChart, data, sqlfilter, Measure, ChartType).Activate();
+                            MainTitle = GetTitle(SummaryTabControl, AreaFilter, AreaFilter2, AreaFilter3);
+                            AreaChart = new BudgetChart(AreaChart, MainTitle, data, sqlfilter, Measure, ChartType).Activate();
                         }
                         break;
                     case 7:
@@ -718,7 +813,8 @@ namespace BudgetExecution
                             var sqlfilter = (PrcField)Enum.Parse(typeof(PrcField), ProjectFilter3.SelectedItem.ToString());
                             param.Add(ProjectFilter2.Tag.ToString(), ProjectFilter2.SelectedItem.ToString());
                             var data = new DataBuilder(Data.Source, param);
-                            ProjectChart = new BudgetChart(ProjectChart, data, sqlfilter, Measure, ChartType).Activate();
+                            MainTitle = GetTitle(SummaryTabControl, ProjectFilter, ProjectFilter2, ProjectFilter3);
+                            ProjectChart = new BudgetChart(ProjectChart, MainTitle, data, sqlfilter, Measure, ChartType).Activate();
                         }
                         break;
                 }

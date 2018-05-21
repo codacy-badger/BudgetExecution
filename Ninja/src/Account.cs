@@ -15,11 +15,12 @@ namespace BudgetExecution
         public Account(string code)
         {
             Code = code;
+        
             Parameter = GetAccountParameter(code);
-            DataRecord = GetAccountDataRecord(Source.Account, Parameter);
+            DataRecord = GetDataRecord(Source.Account, Parameter);
             Goal = Code.Substring(0);
             Objective = Code.Substring(1, 2);
-            NpmCode = Code.Substring(2);
+            NPM = Code.Substring(2);
             ProgramProjectCode = Code.Substring(3, 2);
             ObjectiveName = DataRecord["ObjectiveName"].ToString();
             GoalName = DataRecord["GoalName"].ToString();
@@ -28,17 +29,20 @@ namespace BudgetExecution
         }
 
         //Properties
-        public string Code { get; }
-        public Dictionary<string, object> Parameter { get; }
-        public string Goal { get; }
+        public string Code { get; set; }
+        public string Fund { get; set; }
+        public string Org { get; set; }
+        public string NpmCode { get; set; }
+        public string NPM { get; set; }
+        public string Goal { get; set; }
         public string GoalName { get; set; }
-        public string NpmCode { get; }
-        public string Objective { get; }
+        public string Objective { get; set; }
         public string ObjectiveName { get; set; }
         public string ProgramProjectCode { get; }
         public string ProgramProjectName { get; set; }
         public string ProgramArea { get; set; }
         public string ProgramAreaName { get; set; }
+        public Dictionary<string, object> Parameter { get; }
         public DataRow DataRecord { get; set; }
 
         //Methods
@@ -49,9 +53,9 @@ namespace BudgetExecution
                 return new Dictionary<string, object>()
                 {
                     ["Code"] = code,
+                    ["ProgramProjectCode"] = ProgramProjectCode,
                     ["Goal"] = Goal,
                     ["Objective"] = Objective,
-                    ["ProgramProjectCode"] = ProgramProjectCode
                 };
             }
             catch (System.Exception ex)
@@ -64,7 +68,7 @@ namespace BudgetExecution
         {
             try
             {
-                var dr = GetAccountDataRecord(Source.Account, Parameter);
+                var dr = GetDataRecord(Source.Account, Parameter);
                 GoalName = dr["GoalName"].ToString();
                 ObjectiveName = dr["ObjectiveName"].ToString();
                 ProgramProjectName = dr["ProgramProjectName"].ToString();
@@ -79,7 +83,7 @@ namespace BudgetExecution
                 return null;
             }
         }
-        internal DataRow GetAccountDataRecord(Source source, Dictionary<string, object> param)
+        internal DataRow GetDataRecord(Source source, Dictionary<string, object> param)
         {
             try
             {

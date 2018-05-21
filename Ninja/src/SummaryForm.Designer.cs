@@ -2213,7 +2213,7 @@ namespace BudgetExecution
             this.ProjectTab.Location = new System.Drawing.Point(1, 34);
             this.ProjectTab.Name = "ProjectTab";
             this.ProjectTab.ShowCloseButton = true;
-            this.ProjectTab.Size = new System.Drawing.Size(1586, 884);
+            this.ProjectTab.Size = new System.Drawing.Size(1586, 909);
             this.ProjectTab.TabForeColor = System.Drawing.Color.LightSteelBlue;
             this.ProjectTab.TabIndex = 8;
             this.ProjectTab.Tag = "Program Project";
@@ -2283,7 +2283,7 @@ namespace BudgetExecution
             "NPM",
             "Goal",
             "Objective",
-            "Division",
+            "RC",
             "ProgramArea"});
             this.ProjectFilter3.Location = new System.Drawing.Point(24, 229);
             this.ProjectFilter3.MaxDropDownItems = 20;
@@ -2657,7 +2657,9 @@ namespace BudgetExecution
             "BOC",
             "NPM",
             "Goal",
-            "Objective"});
+            "Objective",
+            "RC",
+            "ProgramProject"});
             this.AreaFilter3.Location = new System.Drawing.Point(23, 215);
             this.AreaFilter3.MaxDropDownItems = 20;
             this.AreaFilter3.Name = "AreaFilter3";
@@ -2954,7 +2956,7 @@ namespace BudgetExecution
             this.DivisionTab.Size = new System.Drawing.Size(1586, 884);
             this.DivisionTab.TabForeColor = System.Drawing.Color.LightSteelBlue;
             this.DivisionTab.TabIndex = 6;
-            this.DivisionTab.Tag = "Division";
+            this.DivisionTab.Tag = "RC";
             this.DivisionTab.Text = "Division";
             this.DivisionTab.ThemesEnabled = false;
             // 
@@ -2968,10 +2970,10 @@ namespace BudgetExecution
             this.DivisionExpander2.Controls.Add(this.DivisionFilter3);
             this.DivisionExpander2.Controls.Add(this.DivisionFilter2);
             this.DivisionExpander2.ExpandedHeight = 292;
-            this.DivisionExpander2.IsExpanded = false;
+            this.DivisionExpander2.IsExpanded = true;
             this.DivisionExpander2.Location = new System.Drawing.Point(1344, 303);
             this.DivisionExpander2.Name = "DivisionExpander2";
-            this.DivisionExpander2.Size = new System.Drawing.Size(231, 37);
+            this.DivisionExpander2.Size = new System.Drawing.Size(231, 292);
             this.DivisionExpander2.TabIndex = 110;
             this.DivisionExpander2.Text = "Chart Filters";
             this.DivisionExpander2.UseAnimation = true;
@@ -3021,6 +3023,7 @@ namespace BudgetExecution
             "NPM",
             "Goal",
             "Objective",
+            "RC",
             "ProgramArea",
             "ProgramProject"});
             this.DivisionFilter3.Location = new System.Drawing.Point(23, 239);
@@ -3032,7 +3035,7 @@ namespace BudgetExecution
             this.DivisionFilter3.Style = MetroSet_UI.Design.Style.Dark;
             this.DivisionFilter3.StyleManager = null;
             this.DivisionFilter3.TabIndex = 108;
-            this.DivisionFilter3.Tag = "Division";
+            this.DivisionFilter3.Tag = "RC";
             this.DivisionFilter3.ThemeAuthor = "Narwin";
             this.DivisionFilter3.ThemeName = "MetroDark";
             // 
@@ -3067,7 +3070,7 @@ namespace BudgetExecution
             this.DivisionFilter2.Style = MetroSet_UI.Design.Style.Dark;
             this.DivisionFilter2.StyleManager = null;
             this.DivisionFilter2.TabIndex = 108;
-            this.DivisionFilter2.Tag = "Division";
+            this.DivisionFilter2.Tag = "RC";
             this.DivisionFilter2.ThemeAuthor = "Narwin";
             this.DivisionFilter2.ThemeName = "MetroDark";
             // 
@@ -3140,7 +3143,7 @@ namespace BudgetExecution
             this.ChartTypeFilter6.Style = MetroSet_UI.Design.Style.Dark;
             this.ChartTypeFilter6.StyleManager = null;
             this.ChartTypeFilter6.TabIndex = 113;
-            this.ChartTypeFilter6.Tag = "Division";
+            this.ChartTypeFilter6.Tag = "RC";
             this.ChartTypeFilter6.ThemeAuthor = "Narwin";
             this.ChartTypeFilter6.ThemeName = "MetroDark";
             // 
@@ -3174,7 +3177,7 @@ namespace BudgetExecution
             this.DivisionFilter.Style = MetroSet_UI.Design.Style.Dark;
             this.DivisionFilter.StyleManager = null;
             this.DivisionFilter.TabIndex = 0;
-            this.DivisionFilter.Tag = "Division";
+            this.DivisionFilter.Tag = "RC";
             this.DivisionFilter.ThemeAuthor = "Narwin";
             this.DivisionFilter.ThemeName = "MetroDark";
             // 
@@ -3385,6 +3388,7 @@ namespace BudgetExecution
             "BOC",
             "NPM",
             "Goal",
+            "RC",
             "ProgramArea"});
             this.ObjectiveFilter3.Location = new System.Drawing.Point(25, 216);
             this.ObjectiveFilter3.MaxDropDownItems = 20;
@@ -3747,6 +3751,7 @@ namespace BudgetExecution
             "Fund",
             "BOC",
             "NPM",
+            "RC",
             "Objective",
             "ProgramArea"});
             this.GoalFilter3.Location = new System.Drawing.Point(21, 218);
@@ -4045,7 +4050,7 @@ namespace BudgetExecution
             this.NpmTab.Size = new System.Drawing.Size(1586, 884);
             this.NpmTab.TabForeColor = System.Drawing.Color.LightSteelBlue;
             this.NpmTab.TabIndex = 3;
-            this.NpmTab.Tag = "HQ Office";
+            this.NpmTab.Tag = "HQ National Program Office";
             this.NpmTab.Text = "NPM";
             this.NpmTab.ThemesEnabled = false;
             // 
@@ -4110,6 +4115,7 @@ namespace BudgetExecution
             "Fund",
             "BOC",
             "Goal",
+            "RC",
             "Objective",
             "ProgramArea"});
             this.NpmFilter3.Location = new System.Drawing.Point(27, 216);
@@ -4423,10 +4429,10 @@ namespace BudgetExecution
             this.BocExpander2.Controls.Add(this.BocFilter3);
             this.BocExpander2.Controls.Add(this.BocFilter2);
             this.BocExpander2.ExpandedHeight = 292;
-            this.BocExpander2.IsExpanded = false;
+            this.BocExpander2.IsExpanded = true;
             this.BocExpander2.Location = new System.Drawing.Point(1343, 297);
             this.BocExpander2.Name = "BocExpander2";
-            this.BocExpander2.Size = new System.Drawing.Size(232, 37);
+            this.BocExpander2.Size = new System.Drawing.Size(232, 292);
             this.BocExpander2.TabIndex = 109;
             this.BocExpander2.Text = "Chart Filters";
             this.BocExpander2.UseAnimation = true;
@@ -4474,6 +4480,7 @@ namespace BudgetExecution
             "Fund",
             "NPM",
             "Goal",
+            "RC",
             "Objective",
             "ProgramArea"});
             this.BocFilter3.Location = new System.Drawing.Point(24, 220);
@@ -4838,6 +4845,7 @@ namespace BudgetExecution
             "BOC",
             "NPM",
             "Goal",
+            "RC",
             "Objective",
             "ProgramArea"});
             this.FundFilter3.Location = new System.Drawing.Point(35, 229);
@@ -5125,7 +5133,7 @@ namespace BudgetExecution
             // SummaryTabControl
             // 
             this.SummaryTabControl.ActiveTabForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.SummaryTabControl.BeforeTouchSize = new System.Drawing.Size(1588, 919);
+            this.SummaryTabControl.BeforeTouchSize = new System.Drawing.Size(1588, 944);
             this.SummaryTabControl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.SummaryTabControl.BorderWidth = 1;
             this.SummaryTabControl.CloseButtonForeColor = System.Drawing.Color.Black;
@@ -5150,7 +5158,7 @@ namespace BudgetExecution
             this.SummaryTabControl.SeparatorColor = System.Drawing.Color.Black;
             this.SummaryTabControl.ShowScroll = false;
             this.SummaryTabControl.ShowSeparator = false;
-            this.SummaryTabControl.Size = new System.Drawing.Size(1588, 919);
+            this.SummaryTabControl.Size = new System.Drawing.Size(1588, 944);
             this.SummaryTabControl.TabIndex = 0;
             this.SummaryTabControl.TabStyle = typeof(Syncfusion.Windows.Forms.Tools.TabRendererVS2010);
             this.SummaryTabControl.SelectedIndexChanged += new System.EventHandler(this.SummaryTabPage_TabSelected);
@@ -5208,13 +5216,15 @@ namespace BudgetExecution
             this.BorderColor = System.Drawing.SystemColors.MenuHighlight;
             this.CaptionAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.CaptionBarColor = System.Drawing.Color.Black;
-            this.CaptionBarHeight = 75;
+            this.CaptionBarHeight = 50;
             this.CaptionFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CaptionForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.ClientSize = new System.Drawing.Size(1588, 919);
+            this.CaptionVerticalAlignment = Syncfusion.Windows.Forms.VerticalAlignment.Top;
+            this.ClientSize = new System.Drawing.Size(1588, 944);
             this.Controls.Add(this.SummaryTabControl);
             this.ForeColor = System.Drawing.Color.LightSteelBlue;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.IconTextRelation = System.Windows.Forms.LeftRightAlignment.Right;
             this.MaximumSize = new System.Drawing.Size(1600, 1000);
             this.MetroColor = System.Drawing.Color.Black;
             this.Name = "SummaryForm";
@@ -5469,7 +5479,6 @@ namespace BudgetExecution
         private MetroSetComboBox NpmFilter2;
         private Label label34;
         private Label label33;
-        private BindingSource BindingSource;
         private Button button4;
         private Button button3;
         private Button button2;
@@ -5486,5 +5495,6 @@ namespace BudgetExecution
         private Label label10;
         private Label label35;
         private Label label36;
+        private BindingSource BindingSource;
     }
 }
