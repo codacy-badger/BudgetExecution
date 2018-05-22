@@ -39,8 +39,10 @@ namespace BudgetExecution
             Syncfusion.Windows.Forms.Grid.GridBaseStyle gridBaseStyle2 = new Syncfusion.Windows.Forms.Grid.GridBaseStyle();
             Syncfusion.Windows.Forms.Grid.GridBaseStyle gridBaseStyle3 = new Syncfusion.Windows.Forms.Grid.GridBaseStyle();
             Syncfusion.Windows.Forms.Grid.GridBaseStyle gridBaseStyle4 = new Syncfusion.Windows.Forms.Grid.GridBaseStyle();
-            Syncfusion.Windows.Forms.CaptionImage captionImage1 = new Syncfusion.Windows.Forms.CaptionImage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.MasterFilter3 = new MetroSet_UI.Controls.MetroSetComboBox();
             this.MasterFIlter2 = new MetroSet_UI.Controls.MetroSetComboBox();
             this.MasterFilter1 = new MetroSet_UI.Controls.MetroSetComboBox();
@@ -63,6 +65,10 @@ namespace BudgetExecution
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.metroSetTextBox4 = new MetroSet_UI.Controls.MetroSetTextBox();
             this.metroSetComboBox8 = new MetroSet_UI.Controls.MetroSetComboBox();
             this.metroSetTextBox3 = new MetroSet_UI.Controls.MetroSetTextBox();
@@ -87,17 +93,7 @@ namespace BudgetExecution
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.metroSetComboBox3 = new MetroSet_UI.Controls.MetroSetComboBox();
-            this.metroSetComboBox5 = new MetroSet_UI.Controls.MetroSetComboBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.metroPanel1.SuspendLayout();
@@ -108,28 +104,55 @@ namespace BudgetExecution
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.E6DataGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.metroSetComboBox5);
-            this.groupBox1.Controls.Add(this.metroSetComboBox3);
             this.groupBox1.Controls.Add(this.MasterFilter3);
             this.groupBox1.Controls.Add(this.MasterFIlter2);
             this.groupBox1.Controls.Add(this.MasterFilter1);
-            this.groupBox1.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.groupBox1.Location = new System.Drawing.Point(60, 54);
+            this.groupBox1.ForeColor = System.Drawing.SystemColors.Info;
+            this.groupBox1.Location = new System.Drawing.Point(60, 121);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(443, 488);
+            this.groupBox1.Size = new System.Drawing.Size(443, 458);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Data Filters";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(93, 321);
+            this.label3.Name = "label3";
+            this.label3.Padding = new System.Windows.Forms.Padding(1);
+            this.label3.Size = new System.Drawing.Size(53, 22);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "label3";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(93, 181);
+            this.label2.Name = "label2";
+            this.label2.Padding = new System.Windows.Forms.Padding(1);
+            this.label2.Size = new System.Drawing.Size(53, 22);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "label2";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(93, 50);
+            this.label1.Name = "label1";
+            this.label1.Padding = new System.Windows.Forms.Padding(1);
+            this.label1.Size = new System.Drawing.Size(53, 22);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "label1";
             // 
             // MasterFilter3
             // 
@@ -149,7 +172,7 @@ namespace BudgetExecution
             this.MasterFilter3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.MasterFilter3.FormattingEnabled = true;
             this.MasterFilter3.ItemHeight = 30;
-            this.MasterFilter3.Location = new System.Drawing.Point(97, 245);
+            this.MasterFilter3.Location = new System.Drawing.Point(97, 372);
             this.MasterFilter3.MaxDropDownItems = 20;
             this.MasterFilter3.Name = "MasterFilter3";
             this.MasterFilter3.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
@@ -180,7 +203,7 @@ namespace BudgetExecution
             this.MasterFIlter2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.MasterFIlter2.FormattingEnabled = true;
             this.MasterFIlter2.ItemHeight = 30;
-            this.MasterFIlter2.Location = new System.Drawing.Point(97, 161);
+            this.MasterFIlter2.Location = new System.Drawing.Point(97, 217);
             this.MasterFIlter2.MaxDropDownItems = 20;
             this.MasterFIlter2.Name = "MasterFIlter2";
             this.MasterFIlter2.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
@@ -228,10 +251,10 @@ namespace BudgetExecution
             // 
             this.groupBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.groupBox2.Controls.Add(this.metroPanel1);
-            this.groupBox2.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.groupBox2.Location = new System.Drawing.Point(558, 54);
+            this.groupBox2.ForeColor = System.Drawing.SystemColors.Info;
+            this.groupBox2.Location = new System.Drawing.Point(558, 121);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(985, 488);
+            this.groupBox2.Size = new System.Drawing.Size(985, 458);
             this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Database";
@@ -243,7 +266,7 @@ namespace BudgetExecution
             this.metroPanel1.HorizontalScrollbarBarColor = true;
             this.metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
             this.metroPanel1.HorizontalScrollbarSize = 10;
-            this.metroPanel1.Location = new System.Drawing.Point(42, 94);
+            this.metroPanel1.Location = new System.Drawing.Point(51, 56);
             this.metroPanel1.Name = "metroPanel1";
             this.metroPanel1.Size = new System.Drawing.Size(897, 352);
             this.metroPanel1.TabIndex = 5;
@@ -347,7 +370,7 @@ namespace BudgetExecution
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.LightSteelBlue;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.Info;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
@@ -385,10 +408,10 @@ namespace BudgetExecution
             this.groupBox5.Controls.Add(this.button3);
             this.groupBox5.Controls.Add(this.button2);
             this.groupBox5.Controls.Add(this.button1);
-            this.groupBox5.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.groupBox5.Location = new System.Drawing.Point(968, 610);
+            this.groupBox5.ForeColor = System.Drawing.SystemColors.Info;
+            this.groupBox5.Location = new System.Drawing.Point(968, 620);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(575, 236);
+            this.groupBox5.Size = new System.Drawing.Size(575, 245);
             this.groupBox5.TabIndex = 8;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Commands";
@@ -491,7 +514,7 @@ namespace BudgetExecution
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(124, 51);
             this.button1.TabIndex = 0;
-            this.button1.Text = "Add ";
+            this.button1.Text = "Add New";
             this.button1.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             this.button1.UseVisualStyleBackColor = false;
             // 
@@ -510,13 +533,53 @@ namespace BudgetExecution
             this.groupBox4.Controls.Add(this.metroSetComboBox1);
             this.groupBox4.Controls.Add(this.metroSetComboBox2);
             this.groupBox4.Controls.Add(this.metroSetTextBox1);
-            this.groupBox4.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.groupBox4.Location = new System.Drawing.Point(60, 601);
+            this.groupBox4.ForeColor = System.Drawing.SystemColors.Info;
+            this.groupBox4.Location = new System.Drawing.Point(51, 620);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(870, 245);
             this.groupBox4.TabIndex = 7;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Changes";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(456, 155);
+            this.label9.Name = "label9";
+            this.label9.Padding = new System.Windows.Forms.Padding(1);
+            this.label9.Size = new System.Drawing.Size(53, 22);
+            this.label9.TabIndex = 13;
+            this.label9.Text = "label9";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(456, 66);
+            this.label8.Name = "label8";
+            this.label8.Padding = new System.Windows.Forms.Padding(1);
+            this.label8.Size = new System.Drawing.Size(53, 22);
+            this.label8.TabIndex = 12;
+            this.label8.Text = "label8";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(25, 155);
+            this.label7.Name = "label7";
+            this.label7.Padding = new System.Windows.Forms.Padding(1);
+            this.label7.Size = new System.Drawing.Size(53, 22);
+            this.label7.TabIndex = 11;
+            this.label7.Text = "label7";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(25, 66);
+            this.label6.Name = "label6";
+            this.label6.Padding = new System.Windows.Forms.Padding(1);
+            this.label6.Size = new System.Drawing.Size(53, 22);
+            this.label6.TabIndex = 10;
+            this.label6.Text = "label6";
             // 
             // metroSetTextBox4
             // 
@@ -923,157 +986,16 @@ namespace BudgetExecution
             this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(28, 28);
             this.bindingNavigatorMoveLastItem.Text = "Move last";
             // 
-            // metroSetComboBox3
+            // pictureBox1
             // 
-            this.metroSetComboBox3.AllowDrop = true;
-            this.metroSetComboBox3.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
-            this.metroSetComboBox3.BackColor = System.Drawing.Color.Transparent;
-            this.metroSetComboBox3.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
-            this.metroSetComboBox3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
-            this.metroSetComboBox3.CausesValidation = false;
-            this.metroSetComboBox3.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.metroSetComboBox3.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroSetComboBox3.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroSetComboBox3.DisplayMember = "Fund";
-            this.metroSetComboBox3.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.metroSetComboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.metroSetComboBox3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.metroSetComboBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.metroSetComboBox3.FormattingEnabled = true;
-            this.metroSetComboBox3.ItemHeight = 30;
-            this.metroSetComboBox3.Location = new System.Drawing.Point(97, 336);
-            this.metroSetComboBox3.MaxDropDownItems = 20;
-            this.metroSetComboBox3.Name = "metroSetComboBox3";
-            this.metroSetComboBox3.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.metroSetComboBox3.SelectedItemForeColor = System.Drawing.Color.White;
-            this.metroSetComboBox3.Size = new System.Drawing.Size(268, 36);
-            this.metroSetComboBox3.Style = MetroSet_UI.Design.Style.Dark;
-            this.metroSetComboBox3.StyleManager = null;
-            this.metroSetComboBox3.TabIndex = 3;
-            this.metroSetComboBox3.ThemeAuthor = "Narwin";
-            this.metroSetComboBox3.ThemeName = "MetroDark";
-            this.metroSetComboBox3.ValueMember = "Fund";
-            // 
-            // metroSetComboBox5
-            // 
-            this.metroSetComboBox5.AllowDrop = true;
-            this.metroSetComboBox5.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
-            this.metroSetComboBox5.BackColor = System.Drawing.Color.Transparent;
-            this.metroSetComboBox5.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
-            this.metroSetComboBox5.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
-            this.metroSetComboBox5.CausesValidation = false;
-            this.metroSetComboBox5.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.metroSetComboBox5.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroSetComboBox5.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroSetComboBox5.DisplayMember = "Fund";
-            this.metroSetComboBox5.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.metroSetComboBox5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.metroSetComboBox5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.metroSetComboBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.metroSetComboBox5.FormattingEnabled = true;
-            this.metroSetComboBox5.ItemHeight = 30;
-            this.metroSetComboBox5.Location = new System.Drawing.Point(97, 434);
-            this.metroSetComboBox5.MaxDropDownItems = 20;
-            this.metroSetComboBox5.Name = "metroSetComboBox5";
-            this.metroSetComboBox5.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.metroSetComboBox5.SelectedItemForeColor = System.Drawing.Color.White;
-            this.metroSetComboBox5.Size = new System.Drawing.Size(268, 36);
-            this.metroSetComboBox5.Style = MetroSet_UI.Design.Style.Dark;
-            this.metroSetComboBox5.StyleManager = null;
-            this.metroSetComboBox5.TabIndex = 4;
-            this.metroSetComboBox5.ThemeAuthor = "Narwin";
-            this.metroSetComboBox5.ThemeName = "MetroDark";
-            this.metroSetComboBox5.ValueMember = "Fund";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(93, 50);
-            this.label1.Name = "label1";
-            this.label1.Padding = new System.Windows.Forms.Padding(1);
-            this.label1.Size = new System.Drawing.Size(53, 22);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "label1";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(93, 138);
-            this.label2.Name = "label2";
-            this.label2.Padding = new System.Windows.Forms.Padding(1);
-            this.label2.Size = new System.Drawing.Size(53, 22);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "label2";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(93, 222);
-            this.label3.Name = "label3";
-            this.label3.Padding = new System.Windows.Forms.Padding(1);
-            this.label3.Size = new System.Drawing.Size(53, 22);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "label3";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(93, 313);
-            this.label4.Name = "label4";
-            this.label4.Padding = new System.Windows.Forms.Padding(1);
-            this.label4.Size = new System.Drawing.Size(53, 22);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "label4";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(93, 411);
-            this.label5.Name = "label5";
-            this.label5.Padding = new System.Windows.Forms.Padding(1);
-            this.label5.Size = new System.Drawing.Size(53, 22);
-            this.label5.TabIndex = 9;
-            this.label5.Text = "label5";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(25, 66);
-            this.label6.Name = "label6";
-            this.label6.Padding = new System.Windows.Forms.Padding(1);
-            this.label6.Size = new System.Drawing.Size(53, 22);
-            this.label6.TabIndex = 10;
-            this.label6.Text = "label6";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(25, 155);
-            this.label7.Name = "label7";
-            this.label7.Padding = new System.Windows.Forms.Padding(1);
-            this.label7.Size = new System.Drawing.Size(53, 22);
-            this.label7.TabIndex = 11;
-            this.label7.Text = "label7";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(456, 66);
-            this.label8.Name = "label8";
-            this.label8.Padding = new System.Windows.Forms.Padding(1);
-            this.label8.Size = new System.Drawing.Size(53, 22);
-            this.label8.TabIndex = 12;
-            this.label8.Text = "label8";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(456, 155);
-            this.label9.Name = "label9";
-            this.label9.Padding = new System.Windows.Forms.Padding(1);
-            this.label9.Size = new System.Drawing.Size(53, 22);
-            this.label9.TabIndex = 13;
-            this.label9.Text = "label9";
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
+            this.pictureBox1.Location = new System.Drawing.Point(60, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(164, 89);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 9;
+            this.pictureBox1.TabStop = false;
             // 
             // DataMaster
             // 
@@ -1082,15 +1004,10 @@ namespace BudgetExecution
             this.BackColor = System.Drawing.Color.Black;
             this.BorderColor = System.Drawing.SystemColors.MenuHighlight;
             this.CaptionBarColor = System.Drawing.Color.Black;
-            this.CaptionBarHeight = 75;
+            this.CaptionBarHeight = 5;
             this.CaptionForeColor = System.Drawing.Color.Black;
-            captionImage1.BackColor = System.Drawing.Color.Black;
-            captionImage1.Image = ((System.Drawing.Image)(resources.GetObject("captionImage1.Image")));
-            captionImage1.Location = new System.Drawing.Point(30, 20);
-            captionImage1.Name = "CaptionImage1";
-            captionImage1.Size = new System.Drawing.Size(70, 60);
-            this.CaptionImages.Add(captionImage1);
-            this.ClientSize = new System.Drawing.Size(1578, 910);
+            this.ClientSize = new System.Drawing.Size(1578, 944);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox2);
@@ -1116,6 +1033,7 @@ namespace BudgetExecution
             this.groupBox4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.E6DataGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1165,19 +1083,16 @@ namespace BudgetExecution
         private MetroSet_UI.Controls.MetroSetComboBox metroSetComboBox1;
         private MetroSet_UI.Controls.MetroSetTextBox metroSetTextBox4;
         private MetroSet_UI.Controls.MetroSetComboBox metroSetComboBox8;
-        private System.Windows.Forms.BindingSource BindingSource;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private MetroSet_UI.Controls.MetroSetComboBox metroSetComboBox5;
-        private MetroSet_UI.Controls.MetroSetComboBox metroSetComboBox3;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.BindingSource BindingSource;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

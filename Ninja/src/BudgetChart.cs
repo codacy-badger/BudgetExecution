@@ -221,7 +221,7 @@ namespace BudgetExecution
                 DataSeries.Style.TextColor = Color.White;
                 DataSeries.Style.TextFormat = "${0:N2}";
                 DataSeries.PointsToolTipFormat = "Funding:{4:N}";
-                DataSeries.Style.Font.Size = 12.0F;
+                DataSeries.Style.Font.Size = 10.0F;
                 DataSeries.Style.Font.Facename = "SegoeUI";
                 DataSeries.Style.Font.FontStyle = FontStyle.Bold;
                 if (SeriesType == ChartSeriesType.Column)
@@ -288,7 +288,7 @@ namespace BudgetExecution
                     DataSeries.Style.TextFormat = "{0:P}";
                 if (value == Stat.Count)
                     DataSeries.Style.TextFormat = "{0}";
-                DataSeries.Style.Font.Size = 12.0F;
+                DataSeries.Style.Font.Size = 10.0F;
                 DataSeries.Style.Font.FontStyle = FontStyle.Bold;
                 DataSeries.Style.Font.Facename = "SegoeUI";
                 DataSeries.ShowTicks = true;
@@ -440,7 +440,7 @@ namespace BudgetExecution
                     ChartTitle title = new ChartTitle();
                     title.Text = s;
                     title.ForeColor = Color.LightSteelBlue;
-                    title.Font = new Font("SegoeUI", 9f, FontStyle.Regular);
+                    title.Font = new Font("Consolas", 9f, FontStyle.Regular);
                     Chart.Titles.Add(title);
                 }
             }

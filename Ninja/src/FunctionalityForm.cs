@@ -80,5 +80,10 @@ namespace BudgetExecution
         {
 
         }
+
+        private void FunctionCarousel_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
