@@ -66,21 +66,6 @@ namespace BudgetExecution
             this.Close();
         }
 
-        private void hubTile1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void FunctionCarousel_Click(object sender, EventArgs e)
         {
 
