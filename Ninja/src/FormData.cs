@@ -41,9 +41,9 @@ namespace BudgetExecution
         public PrcMetric DataMetric { get; set; }
         public ChartControl Chart { get; set; }
         public ChartDataBindModel ChartModel { get; set; }
-        public Control PrimaryFilterControl { get; set; }
-        public Control SecondaryFilterControl { get; set; }
-        public Control TertiaryFilterControl { get; set; }
+        public Control FilterControl1 { get; set; }
+        public Control FilterControl2 { get; set; }
+        public Control FilterControl3 { get; set; }
         public int Count { get; set; }
         public DataGridView DataGrid { get; set; }
         public decimal[] Metrics { get; set; }
@@ -407,14 +407,14 @@ namespace BudgetExecution
             {
                 if (dgv.CurrentRow != null)
                 {
-                    var dgvRow = dgv.CurrentRow;
+                    var row = dgv.CurrentRow;
                     var data = new Dictionary<string, object>();
-                    data.Add("ID", int.Parse(dgvRow.Cells["ID"].Value.ToString()));
-                    data.Add("Fund", dgvRow.Cells["Fund"].Value.ToString());
-                    data.Add("Org", dgvRow.Cells["Org"].Value.ToString());
-                    data.Add("RC", dgvRow.Cells["RC"].ToString());
-                    data.Add("Code", dgvRow.Cells["Code"].ToString());
-                    data.Add("BOC", dgvRow.Cells["BOC"].ToString());
+                    data.Add("ID", int.Parse(row.Cells["ID"].Value.ToString()));
+                    data.Add("Fund", row.Cells["Fund"].Value.ToString());
+                    data.Add("Org", row.Cells["Org"].Value.ToString());
+                    data.Add("RC", row.Cells["RC"].ToString());
+                    data.Add("Code", row.Cells["Code"].ToString());
+                    data.Add("BOC", row.Cells["BOC"].ToString());
                     return data;
                 }
                 return null;

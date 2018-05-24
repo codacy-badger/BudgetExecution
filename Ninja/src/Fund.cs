@@ -4,7 +4,7 @@ using System.Windows.Forms;
 
 namespace BudgetExecution
 {
-    public class Fund
+    public class Fund : IFund
     {
         //Constructors
         public Fund(string code, string bfy)
@@ -28,7 +28,7 @@ namespace BudgetExecution
         public DataRow DataRecord { get; set; }
 
         //Methods
-        Dictionary<string, object> GetFundParameter(string code, string bfy)
+        public Dictionary<string, object> GetFundParameter(string code, string bfy)
         {
             try
             {
@@ -40,7 +40,7 @@ namespace BudgetExecution
                 return null;
             }
         }
-        internal Dictionary<string, object> GetFundProgramData(string code)
+        public Dictionary<string, object> GetFundProgramData(string code)
         {
             try
             {
@@ -56,7 +56,7 @@ namespace BudgetExecution
                 return null;
             }
         }
-        internal DataRow GetFundDataRecord(Source source, Dictionary<string, object> param)
+        public DataRow GetFundDataRecord(Source source, Dictionary<string, object> param)
         {
             try
             {
@@ -69,7 +69,6 @@ namespace BudgetExecution
                 return null;
             }
         }
-
         public override string ToString()
         {
             return Code;

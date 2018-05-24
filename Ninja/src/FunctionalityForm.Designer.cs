@@ -67,6 +67,7 @@ namespace BudgetExecution
             this.BudgetServerTile = new Syncfusion.Windows.Forms.Tools.HubTile();
             this.hubTile1 = new Syncfusion.Windows.Forms.Tools.HubTile();
             this.hubTile2 = new Syncfusion.Windows.Forms.Tools.HubTile();
+            this.hubTile3 = new Syncfusion.Windows.Forms.Tools.HubTile();
             this.FunctionCarousel = new Syncfusion.Windows.Forms.Tools.Carousel();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -88,7 +89,6 @@ namespace BudgetExecution
             this.button15 = new System.Windows.Forms.Button();
             this.button19 = new System.Windows.Forms.Button();
             this.button20 = new System.Windows.Forms.Button();
-            this.hubTile3 = new Syncfusion.Windows.Forms.Tools.HubTile();
             this.SuspendLayout();
             // 
             // BudgetServerTile
@@ -111,7 +111,7 @@ namespace BudgetExecution
             this.BudgetServerTile.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(130)))), ((int)(((byte)(180)))));
             this.BudgetServerTile.HoveredBorderColor = System.Drawing.SystemColors.MenuHighlight;
             this.BudgetServerTile.ImageSource = ((System.Drawing.Image)(resources.GetObject("BudgetServerTile.ImageSource")));
-            this.BudgetServerTile.Location = new System.Drawing.Point(1187, 49);
+            this.BudgetServerTile.Location = new System.Drawing.Point(1185, 38);
             this.BudgetServerTile.Margin = new System.Windows.Forms.Padding(1);
             this.BudgetServerTile.MinimumSize = new System.Drawing.Size(100, 100);
             this.BudgetServerTile.Name = "BudgetServerTile";
@@ -119,7 +119,7 @@ namespace BudgetExecution
             this.BudgetServerTile.ShowBanner = true;
             this.BudgetServerTile.ShowBannerIcon = true;
             this.BudgetServerTile.ShowRotateTileBanner = true;
-            this.BudgetServerTile.Size = new System.Drawing.Size(356, 191);
+            this.BudgetServerTile.Size = new System.Drawing.Size(246, 136);
             this.BudgetServerTile.SwitchRotateTileBannerVisibility = true;
             this.BudgetServerTile.TabIndex = 71;
             textItem4.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(0)));
@@ -146,7 +146,7 @@ namespace BudgetExecution
             this.hubTile1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(130)))), ((int)(((byte)(180)))));
             this.hubTile1.HoveredBorderColor = System.Drawing.SystemColors.MenuHighlight;
             this.hubTile1.ImageSource = ((System.Drawing.Image)(resources.GetObject("hubTile1.ImageSource")));
-            this.hubTile1.Location = new System.Drawing.Point(78, 10);
+            this.hubTile1.Location = new System.Drawing.Point(48, 31);
             this.hubTile1.Margin = new System.Windows.Forms.Padding(1);
             this.hubTile1.MinimumSize = new System.Drawing.Size(100, 100);
             this.hubTile1.Name = "hubTile1";
@@ -154,7 +154,7 @@ namespace BudgetExecution
             this.hubTile1.ShowBanner = true;
             this.hubTile1.ShowBannerIcon = true;
             this.hubTile1.ShowRotateTileBanner = true;
-            this.hubTile1.Size = new System.Drawing.Size(356, 230);
+            this.hubTile1.Size = new System.Drawing.Size(272, 143);
             this.hubTile1.SwitchRotateTileBannerVisibility = true;
             this.hubTile1.TabIndex = 72;
             textItem8.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(0)));
@@ -181,7 +181,7 @@ namespace BudgetExecution
             this.hubTile2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(130)))), ((int)(((byte)(180)))));
             this.hubTile2.HoveredBorderColor = System.Drawing.SystemColors.MenuHighlight;
             this.hubTile2.ImageSource = ((System.Drawing.Image)(resources.GetObject("hubTile2.ImageSource")));
-            this.hubTile2.Location = new System.Drawing.Point(95, 344);
+            this.hubTile2.Location = new System.Drawing.Point(48, 337);
             this.hubTile2.Margin = new System.Windows.Forms.Padding(1);
             this.hubTile2.MinimumSize = new System.Drawing.Size(100, 100);
             this.hubTile2.Name = "hubTile2";
@@ -189,12 +189,47 @@ namespace BudgetExecution
             this.hubTile2.ShowBanner = true;
             this.hubTile2.ShowBannerIcon = true;
             this.hubTile2.ShowRotateTileBanner = true;
-            this.hubTile2.Size = new System.Drawing.Size(356, 200);
+            this.hubTile2.Size = new System.Drawing.Size(272, 161);
             this.hubTile2.SwitchRotateTileBannerVisibility = true;
             this.hubTile2.TabIndex = 73;
             textItem12.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(0)));
             textItem12.HubTile = this.hubTile2;
             this.hubTile2.Title = textItem12;
+            // 
+            // hubTile3
+            // 
+            this.hubTile3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            textItem13.Font = new System.Drawing.Font("Segoe UI Semibold", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            textItem13.HubTile = this.hubTile3;
+            textItem13.Text = "Functionality | Budget Tools";
+            this.hubTile3.Banner = textItem13;
+            this.hubTile3.BannerColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.hubTile3.BannerHeight = 20;
+            this.hubTile3.BannerIcon = ((System.Drawing.Image)(resources.GetObject("hubTile3.BannerIcon")));
+            textItem14.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(0)));
+            textItem14.HubTile = this.hubTile3;
+            this.hubTile3.Body = textItem14;
+            this.hubTile3.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(0)));
+            textItem15.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(0)));
+            textItem15.HubTile = this.hubTile3;
+            this.hubTile3.Footer = textItem15;
+            this.hubTile3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(130)))), ((int)(((byte)(180)))));
+            this.hubTile3.HoveredBorderColor = System.Drawing.SystemColors.MenuHighlight;
+            this.hubTile3.ImageSource = ((System.Drawing.Image)(resources.GetObject("hubTile3.ImageSource")));
+            this.hubTile3.Location = new System.Drawing.Point(1187, 326);
+            this.hubTile3.Margin = new System.Windows.Forms.Padding(1);
+            this.hubTile3.MinimumSize = new System.Drawing.Size(100, 100);
+            this.hubTile3.Name = "hubTile3";
+            this.hubTile3.SelectionMarkerColor = System.Drawing.Color.SteelBlue;
+            this.hubTile3.ShowBanner = true;
+            this.hubTile3.ShowBannerIcon = true;
+            this.hubTile3.ShowRotateTileBanner = true;
+            this.hubTile3.Size = new System.Drawing.Size(244, 152);
+            this.hubTile3.SwitchRotateTileBannerVisibility = true;
+            this.hubTile3.TabIndex = 74;
+            textItem16.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(0)));
+            textItem16.HubTile = this.hubTile3;
+            this.hubTile3.Title = textItem16;
             // 
             // FunctionCarousel
             // 
@@ -247,9 +282,9 @@ namespace BudgetExecution
             this.button2.ForeColor = System.Drawing.SystemColors.Info;
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(554, 147);
+            this.button2.Location = new System.Drawing.Point(794, 389);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(136, 49);
+            this.button2.Size = new System.Drawing.Size(159, 49);
             this.button2.TabIndex = 8;
             this.button2.Text = "button2";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -283,9 +318,9 @@ namespace BudgetExecution
             this.button4.ForeColor = System.Drawing.SystemColors.Info;
             this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
             this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(554, 25);
+            this.button4.Location = new System.Drawing.Point(438, 10);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(140, 53);
+            this.button4.Size = new System.Drawing.Size(159, 104);
             this.button4.TabIndex = 10;
             this.button4.Text = "button4";
             this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -320,9 +355,9 @@ namespace BudgetExecution
             this.button6.ForeColor = System.Drawing.SystemColors.Info;
             this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
             this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.Location = new System.Drawing.Point(804, 84);
+            this.button6.Location = new System.Drawing.Point(78, 633);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(140, 68);
+            this.button6.Size = new System.Drawing.Size(168, 104);
             this.button6.TabIndex = 12;
             this.button6.Text = "button6";
             this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -375,9 +410,9 @@ namespace BudgetExecution
             this.button9.ForeColor = System.Drawing.SystemColors.Info;
             this.button9.Image = ((System.Drawing.Image)(resources.GetObject("button9.Image")));
             this.button9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button9.Location = new System.Drawing.Point(554, 212);
+            this.button9.Location = new System.Drawing.Point(785, 465);
             this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(140, 52);
+            this.button9.Size = new System.Drawing.Size(159, 52);
             this.button9.TabIndex = 15;
             this.button9.Text = "button9";
             this.button9.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -393,7 +428,7 @@ namespace BudgetExecution
             this.button10.ForeColor = System.Drawing.SystemColors.Info;
             this.button10.Image = ((System.Drawing.Image)(resources.GetObject("button10.Image")));
             this.button10.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button10.Location = new System.Drawing.Point(630, 306);
+            this.button10.Location = new System.Drawing.Point(475, 420);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(140, 68);
             this.button10.TabIndex = 16;
@@ -465,9 +500,9 @@ namespace BudgetExecution
             this.button14.ForeColor = System.Drawing.SystemColors.Info;
             this.button14.Image = ((System.Drawing.Image)(resources.GetObject("button14.Image")));
             this.button14.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button14.Location = new System.Drawing.Point(554, 84);
+            this.button14.Location = new System.Drawing.Point(266, 633);
             this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(140, 53);
+            this.button14.Size = new System.Drawing.Size(168, 104);
             this.button14.TabIndex = 20;
             this.button14.Text = "button14";
             this.button14.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -537,9 +572,9 @@ namespace BudgetExecution
             this.button15.ForeColor = System.Drawing.SystemColors.Info;
             this.button15.Image = ((System.Drawing.Image)(resources.GetObject("button15.Image")));
             this.button15.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button15.Location = new System.Drawing.Point(742, 212);
+            this.button15.Location = new System.Drawing.Point(603, 10);
             this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(147, 53);
+            this.button15.Size = new System.Drawing.Size(167, 104);
             this.button15.TabIndex = 25;
             this.button15.Text = "button15";
             this.button15.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -582,41 +617,6 @@ namespace BudgetExecution
             this.button20.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button20.UseVisualStyleBackColor = true;
             // 
-            // hubTile3
-            // 
-            this.hubTile3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            textItem13.Font = new System.Drawing.Font("Segoe UI Semibold", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            textItem13.HubTile = this.hubTile3;
-            textItem13.Text = "Functionality | Budget Tools";
-            this.hubTile3.Banner = textItem13;
-            this.hubTile3.BannerColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.hubTile3.BannerHeight = 20;
-            this.hubTile3.BannerIcon = ((System.Drawing.Image)(resources.GetObject("hubTile3.BannerIcon")));
-            textItem14.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(0)));
-            textItem14.HubTile = this.hubTile3;
-            this.hubTile3.Body = textItem14;
-            this.hubTile3.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(0)));
-            textItem15.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(0)));
-            textItem15.HubTile = this.hubTile3;
-            this.hubTile3.Footer = textItem15;
-            this.hubTile3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(130)))), ((int)(((byte)(180)))));
-            this.hubTile3.HoveredBorderColor = System.Drawing.SystemColors.MenuHighlight;
-            this.hubTile3.ImageSource = ((System.Drawing.Image)(resources.GetObject("hubTile3.ImageSource")));
-            this.hubTile3.Location = new System.Drawing.Point(1187, 344);
-            this.hubTile3.Margin = new System.Windows.Forms.Padding(1);
-            this.hubTile3.MinimumSize = new System.Drawing.Size(100, 100);
-            this.hubTile3.Name = "hubTile3";
-            this.hubTile3.SelectionMarkerColor = System.Drawing.Color.SteelBlue;
-            this.hubTile3.ShowBanner = true;
-            this.hubTile3.ShowBannerIcon = true;
-            this.hubTile3.ShowRotateTileBanner = true;
-            this.hubTile3.Size = new System.Drawing.Size(368, 200);
-            this.hubTile3.SwitchRotateTileBannerVisibility = true;
-            this.hubTile3.TabIndex = 74;
-            textItem16.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(0)));
-            textItem16.HubTile = this.hubTile3;
-            this.hubTile3.Title = textItem16;
-            // 
             // FunctionalityForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
@@ -658,6 +658,7 @@ namespace BudgetExecution
             this.Controls.Add(this.button1);
             this.Controls.Add(this.FunctionCarousel);
             this.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(1600, 1000);
             this.MetroColor = System.Drawing.Color.Black;
             this.Name = "FunctionalityForm";

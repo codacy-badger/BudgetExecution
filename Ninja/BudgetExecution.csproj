@@ -242,6 +242,7 @@
     <Compile Include="src\Employee.cs" />
     <Compile Include="src\ExcelQuery.cs" />
     <Compile Include="src\ExcelReport.cs" />
+    <Compile Include="src\IFund.cs" />
     <Compile Include="src\PrcAccountManager.cs">
       <SubType>Form</SubType>
     </Compile>
