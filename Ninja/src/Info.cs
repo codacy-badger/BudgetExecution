@@ -23,6 +23,7 @@ namespace BudgetExecution
         public static string DivisionImages = @"C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\Resources\NinjaDivisionImages";
         public static string SummaryImages = @"C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\Resources\SummaryImages";
         public static string FunctionImages = @"C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\Resources\FunctionImages";
+        public static string DatabaseImages = @"C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\Resources\Database";
         public static string[] AgencyActivityCodes = {
         "1", "2", "3", "P1", "P3", "P8", "PS", "Q1", "Q3", "R1",
         "R2", "R5", "Regional", "W1", "W2", "53", "54", "55", "56", "4", "5", "6", "8", "9", "10", "11",

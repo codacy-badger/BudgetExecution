@@ -25,7 +25,10 @@ namespace BudgetExecution
             Title = GetChartTitles(Values);
             Chart = new GetChart(GetMainChart);
             MainChart = new BudgetChart(MainChart, Title[1], Values[1]).Activate();
-            FunctionalityTile.Click += TransferButton_OnClick;
+            SummaryTile.Click += SummaryTile_OnClick;
+            DivisionBudgetTile.Click += DivisionDataTile_OnClick;
+            DataMasterTile.Click += DatabaseTile_OnClick;
+            FunctionalityTile.Click += FunctionalityTile_OnClick;
         }
 
         //Properties
@@ -52,7 +55,6 @@ namespace BudgetExecution
                 Timer.Tick += ChartTimer;
                 Timer.Enabled = true;
                 Timer.Interval = 5000;
-                FunctionalityTile.Click += FunctionalityTile_OnClick;
             }
             catch (Exception ex)
             {
@@ -87,8 +89,8 @@ namespace BudgetExecution
         }
         private void DivisionSummaryButton_OnClick(object sender, EventArgs e)
         {
-            var datamgr = new SummaryForm(Source.DivisionAccount);
-            datamgr.Show();
+            var summary = new SummaryForm(Source.DivisionAccount);
+            summary.Show();
         }
         private string[] GetChartTitles(Dictionary<string, double>[] info)
         {
@@ -146,25 +148,25 @@ namespace BudgetExecution
             var dm = new SummaryForm("06J");
             dm.Show();
         }
-        private void DataTile_OnClick(object sender, EventArgs e)
+        private void DivisionDataTile_OnClick(object sender, EventArgs e)
         {
             var s = new Selector(Info.DivisionImages);
             s.Show();
         }
         private void SummaryTile_OnClick(object sender, EventArgs e)
         {
-            var s = new Selector(Info.SummaryImages);
-            s.Show();
+            var summary = new Selector(Info.SummaryImages);
+            summary.Show();
         }
         private void FunctionalityTile_OnClick(object sender, EventArgs e)
         {
             var s = new Selector(Info.FunctionImages);
             s.Show();
         }
-        private void DocumentButton_OnClick(object sender, EventArgs e)
+        private void DatabaseTile_OnClick(object sender, EventArgs e)
         {
 
-            var s = new Selector(Info.FunctionImages);
+            var s = new Selector(Info.DatabaseImages);
             s.Show();
         }
         private void TransferButton_Click(object sender, EventArgs e)

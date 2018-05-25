@@ -440,7 +440,7 @@ namespace BudgetExecution
                     ChartTitle title = new ChartTitle();
                     title.Text = s;
                     title.ForeColor = Color.LightSteelBlue;
-                    title.Font = new Font("Consolas", 9f, FontStyle.Regular);
+                    title.Font = new Font("Tahoma", 9f, FontStyle.Regular);
                     Chart.Titles.Add(title);
                 }
             }

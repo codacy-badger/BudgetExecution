@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="FunctionalityTile.BannerIcon" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="DataMasterTile.BannerIcon" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAW
         JQAAFiUBSVIk8AAABepJREFUWEetl0lMlGkQhj3NHGaSOXjGixxIiBcI6GUMLhc4GRMEY+JycEMxRmOi
@@ -149,7 +149,7 @@
         Cr2qZ4SEhGwbP378zClTpozav39/H9fzIUP+A4EQBXE+6f9oAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="FunctionalityTile.ImageSource" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="DataMasterTile.ImageSource" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAABAAAAAMACAYAAAC6uhUNAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
         EwAACxMBAJqcGAAAAAd0SU1FB+IFGAMaBH8TYLIAAP+fSURBVHhe7N13YBRV1wbwj/QQQkmhBNKwY+9i
@@ -3541,7 +3541,7 @@
         xQzzP+f/4P8BJjjHEmxO57sAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="BudgetServerTile.BannerIcon" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="FunctionalityTile.BannerIcon" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAYAAAB5fY51AAAABGdBTUEAALGPC/xhBQAAe2ZJREFUeF7t
         fQd4VUeS7n2zb+fte5tmZ3Zm1jMeR2xjMgIJkEASQQSJnBUQIplgMggMOAImg8kZkZMiOUsiK5Bscs45
@@ -4073,7 +4073,7 @@
         MWWCo5aVaDlvxju1RtcU06MQmM32/wF9LuGcmxcZ2gAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="BudgetServerTile.ImageSource" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="FunctionalityTile.ImageSource" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         /9j/4AAQSkZJRgABAgEAAAAAAAD/4QBSRXhpZgAATU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAZKG
         AAcAAAAcAAAALAAAAABMAGEAdgBjADUANwAuADYANAAuADEAMAAwAAAAAAD/2wBDAAgEBAQEBAUFBQUF
@@ -4349,7 +4349,7 @@
         PUVIDhTJafTJafQTI6TJoNJSBBmiiikMKKKKAFopBS0mB//Z
 </value>
   </data>
-  <data name="BudgetDataTile.BannerIcon" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="DivisionBudgetTile.BannerIcon" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAW
         JQAAFiUBSVIk8AAACVNJREFUWEftlglQldcVgJlO69hoWmtio4A8RVBECCooIKv4eMiigCyP5clDQEAF
@@ -4395,7 +4395,7 @@
         Bl5Xv0tPRkrQAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="BudgetDataTile.ImageSource" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="DivisionBudgetTile.ImageSource" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAABAAAAAMACAYAAAC6uhUNAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
         EwAACxMBAJqcGAAAAAd0SU1FB+IFGAwbL8Ho744AAP+fSURBVHhe7P11eBXX3saNl6ClxQkhCoQEiRNI
