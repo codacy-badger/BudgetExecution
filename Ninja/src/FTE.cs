@@ -100,7 +100,8 @@ namespace BudgetExecution
         {
             try
             {
-                return table.AsEnumerable().Where(p => p.Field<string>(column).Equals(filter)).Select(p => p).CopyToDataTable();
+                return table.AsEnumerable().Where(p => p.Field<string>("BOC").Equals("17"))
+                    .Where(p => p.Field<string>(column).Equals(filter)).Select(p => p).CopyToDataTable();
             }
             catch (Exception ex)
             {
@@ -112,7 +113,7 @@ namespace BudgetExecution
         {
             try
             {
-                return table.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Average();
+                return table.AsEnumerable().Where(p => p.Field<string>("BOC").Equals("17")).Select(p => p.Field<decimal>("Amount")).Average();
             }
             catch (Exception ex)
             {
@@ -224,7 +225,7 @@ namespace BudgetExecution
         {
             try
             {
-                return table.AsEnumerable().Select(p => new PRC()).ToArray();
+                return table.AsEnumerable().Where(p => p.Field<string>("BOC").Equals("17")).Select(p => new PRC()).ToArray();
             }
             catch (Exception ex)
             {
@@ -236,7 +237,7 @@ namespace BudgetExecution
         {
             try
             {
-                return table.AsEnumerable().Sum(p => p.Field<decimal>("Amount"));
+                return table.AsEnumerable().Where(p => p.Field<string>("BOC").Equals("17")).Sum(p => p.Field<decimal>("Amount"));
             }
             catch (Exception ex)
             {
@@ -252,7 +253,8 @@ namespace BudgetExecution
                 Dictionary<string, decimal> info = new Dictionary<string, decimal>();
                 foreach (string ftr in list)
                 {
-                    var query = table.AsEnumerable().Where(p => p.Field<string>(column).Equals(filter))
+                    var query = table.AsEnumerable().Where(p => p.Field<string>("BOC").Equals("17"))
+                        .Where(p => p.Field<string>(column).Equals(filter))
                         .Sum(p => p.Field<decimal>("Amount"));
                     if (query > 0)
                         info.Add(filter, query);
@@ -272,7 +274,8 @@ namespace BudgetExecution
                 Dictionary<string, decimal> info = new Dictionary<string, decimal>();
                 foreach (string filter in filters)
                 {
-                    var query = table.AsEnumerable().Where(p => p.Field<string>(column).Equals(filter))
+                    var query = table.AsEnumerable().Where(p => p.Field<string>("BOC").Equals("17"))
+                        .Where(p => p.Field<string>(column).Equals(filter))
                         .Select(p => p).Sum(p => p.Field<decimal>("Amount"));
                     if (query > 0)
                         info.Add(filter, query);

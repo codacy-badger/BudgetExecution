@@ -27,7 +27,6 @@ namespace BudgetExecution
             if (source == Source.RegionAccount)
             {
                 Data = new DataBuilder(Source.RegionAccount);
-                DataSet = Data.DataSet;
                 BaseTable = Data.GetDataTable();
                 DivisionTab.TabVisible = false;
                 Source = Data.Source;
@@ -38,7 +37,6 @@ namespace BudgetExecution
             if (source == Source.DivisionAccount)
             {
                 Data = new DataBuilder(Source.DivisionAccount);
-                DataSet = Data.DataSet;
                 BaseTable = Data.GetDataTable();
                 Source = Data.Source;
                 CurrentTabIndex = 0;
@@ -46,7 +44,6 @@ namespace BudgetExecution
                 Text = "R6 Division Summary";
             }
             Metric = new PrcMetric(Data);
-            DataSet = Data.DataSet;
             ProgramElements = Metric.ProgramElements;
             BindingSource.DataSource = Metric.Table;
             ProjectTab.TabVisible = false;
@@ -63,7 +60,6 @@ namespace BudgetExecution
             ProjectTab.TabVisible = true;
             DivisionTab.TabVisible = false;
             Data = new DataBuilder(Source, Parameter);
-            DataSet = Data.DataSet;
             BaseTable = Data.GetDataTable();
             ProgramElements = Data.ProgramElements;
             Metric = new PrcMetric(Data);
@@ -103,14 +99,14 @@ namespace BudgetExecution
         {
             try
             {
-                BindingSource.DataSource = Data.DataTable;
+                BindingSource.DataSource = Data.Table;
                 Navigator.BindingSource = BindingSource;
                 Grid.DataSource = BindingSource;
                 DefineVisisbleDataColumns(Grid);
                 PopulateFilterBoxItems(GridFundFilter, PrcField.FundName);
                 ConfigureTextBoxBindings();
-                lblTotal.Text = Data.GetQueryTotal(Data.DataTable).ToString("c");
-                lblCount.Text = Data.GetQueryCount(Data.DataTable).ToString();
+                lblTotal.Text = Data.GetTotal(Data.Table).ToString("c");
+                lblCount.Text = Data.GetQueryCount(Data.Table).ToString();
                 GridFundFilter.SelectionChangeCommitted += GridFundFilter_ItemSelected;
                 GridBocFilter.SelectionChangeCommitted += GridBocFilter_ItemSelected;
                 GridBocFilter.SelectionChangeCommitted += GridBocFilter_ItemSelected;
@@ -209,7 +205,7 @@ namespace BudgetExecution
         {
             try
             {
-                return Data.DataTable.AsEnumerable().Where(p => p.Field<string>("FundName").
+                return Data.Table.AsEnumerable().Where(p => p.Field<string>("FundName").
                     Equals(filter)).Select(p => p.Field<decimal>("Amount") > 0).Count();
             }
             catch (Exception ex)
@@ -222,7 +218,7 @@ namespace BudgetExecution
         {
             try
             {
-                return Data.DataTable.AsEnumerable().Where(p => p.Field<string>("FundName").Equals(filter1))
+                return Data.Table.AsEnumerable().Where(p => p.Field<string>("FundName").Equals(filter1))
                     .Where(p => p.Field<string>("BocName").Equals(filter2)).Select(p => p.Field<decimal>("Amount")).Count();
             }
             catch (Exception ex)
@@ -332,7 +328,7 @@ namespace BudgetExecution
         {
             try
             {
-                return Data.DataTable.AsEnumerable().Where(p => p.Field<string>("FundName").
+                return Data.Table.AsEnumerable().Where(p => p.Field<string>("FundName").
                 Equals(filter)).Select(p => p.Field<decimal>("Amount")).Sum();
             }
             catch (Exception ex)

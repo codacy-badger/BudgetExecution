@@ -14,8 +14,6 @@ namespace BudgetExecution
 {
     public partial class Selector : MetroForm
     {
-        string DivisionImages { get; set; }
-        string SummaryImages { get; set; }
         //Constructors
         public Selector()
         {
@@ -31,6 +29,8 @@ namespace BudgetExecution
         }
 
         //Properties
+        string DivisionImages { get; set; }
+        string SummaryImages { get; set; }
         public FormData NinjaData { get; set; }
         string[] Images { get; set; }
 

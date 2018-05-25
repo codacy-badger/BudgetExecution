@@ -13,7 +13,7 @@ namespace BudgetExecution
         {
             Data = new DataBuilder(Source.DivisionAccount);
             Metric = new PrcMetric(Data);
-            Table = Data.DataTable;
+            Table = Data.Table;
             Total = Metric.Total;
             Count = Metric.Count;
             Average = Metric.Average;
@@ -25,7 +25,7 @@ namespace BudgetExecution
             ProgramData = Metric.ProgramAreaTotals;
             ProjectData = Metric.ProgramProjectTotals;
             if (ProgramElements["BOC"].Contains("17"))
-                FTE = GetFTE(Data.DataTable);
+                FTE = GetFTE(Data.Table);
         }
         public DivisionAuthority(string rc)
         {
@@ -33,7 +33,7 @@ namespace BudgetExecution
             Org = new Org(RC.Code);
             Data = new DataBuilder(Source.DivisionAccount, new Dictionary<string, object> { ["RC"] = rc });
             Metric = new PrcMetric(Data);
-            Table = Data.DataTable;
+            Table = Data.Table;
             Total = Metric.Total;
             Count = Metric.Count;
             Average = Metric.Average;

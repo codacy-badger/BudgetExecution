@@ -23,7 +23,7 @@ namespace BudgetExecution
         {
             Data = new DataBuilder(source, new Dictionary<string, object> { ["Fund"] = fundcode, ["BFY"] = bfy });
             Metric = new PrcMetric(Data);
-            Table = Data.DataTable;
+            Table = Data.Table;
             Allocation = Data.GetRecords(Table);
             Total = Metric.Total;
             Average = Metric.Average;
@@ -42,12 +42,14 @@ namespace BudgetExecution
         }
 
         //Properties
+        public DataBuilder Data { get; }
+        public PrcMetric Metric { get; }
+        public DataTable Table { get; }
         public decimal Amount { get; }
         public decimal Average { get; }
         public string[] BOC { get; }
         public string[] BocCodes { get; }
         public Dictionary<string, decimal> BocData { get; set; }
-        public PrcMetric Metric { get; }
         public int Count { get; }
         public string FiscalYear { get; }
         public FTE[] FTE { get; }
@@ -64,9 +66,7 @@ namespace BudgetExecution
         public Dictionary<string, string[]> ProgramElements { get; }
         public string[] Project { get; }
         public Dictionary<string, decimal> ProjectData { get; set; }
-        public DataTable Table { get; }
         public decimal Total { get; }
-        private DataBuilder Data { get; }
         private DataRow[] Allocation { get; }
 
         //Methods

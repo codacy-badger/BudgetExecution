@@ -34,7 +34,7 @@ namespace BudgetExecution
             Chart = chart;
             Data = data;
             Value = Stat.Total;
-            Table = Data.DataTable;
+            Table = Data.Table;
             Metric = new PrcMetric(Data);
             DataTotals = Metric.GetChartTotals(Table, filter);
             if (Chart.Series != null)
@@ -56,7 +56,7 @@ namespace BudgetExecution
             ConfigurePrimaryAxisLabels(Chart);
             if (Chart.Series != null)
                 Chart.Series.Clear();
-            Table = Data.DataTable;
+            Table = Data.Table;
             Metric = new PrcMetric(Data);
             DataMetrics = Metric.GetChartMetrics(Table, filter);
             DataSeries = GetSeriesTotals(GetMeasure(DataMetrics, Value));
@@ -79,7 +79,7 @@ namespace BudgetExecution
             ConfigureMainTitle(title);
             if (Chart.Series != null)
                 Chart.Series.Clear();
-            Table = Data.DataTable;
+            Table = Data.Table;
             Metric = new PrcMetric(Data);
             DataMetrics = Metric.GetChartMetrics(Table, filter);
             DataSeries = GetSeriesTotals(GetMeasure(DataMetrics, Value));
@@ -112,7 +112,7 @@ namespace BudgetExecution
             SeriesType = ChartSeriesType.Column;
             Data = new DataBuilder(source);
             Metric = new PrcMetric(Data);
-            Table = Data.DataTable;
+            Table = Data.Table;
             Value = Stat.Total;
             if (Chart.Series != null)
                 Chart.Series.Clear();

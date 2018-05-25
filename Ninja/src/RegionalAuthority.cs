@@ -13,7 +13,7 @@ namespace BudgetExecution
         {
             Data = new DataBuilder(Source.RegionAccount, new Dictionary<string, object> { ["BFY"] = FiscalYear });
             Metric = new PrcMetric(Data);
-            Table = Data.DataTable;
+            Table = Data.Table;
             Total = Metric.Total;
             Count = Metric.Count;
             Average = Metric.Average;
@@ -82,7 +82,7 @@ namespace BudgetExecution
         {
             try
             {
-                return Data.DataTable.AsEnumerable().Select(p => p.Field<string>(filter)).Distinct().ToArray();
+                return Data.Table.AsEnumerable().Select(p => p.Field<string>(filter)).Distinct().ToArray();
             }
             catch (Exception ex)
             {

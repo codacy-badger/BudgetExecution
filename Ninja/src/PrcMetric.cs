@@ -15,13 +15,12 @@ namespace BudgetExecution
         }
         public PrcMetric(DataBuilder data)
         {
-            Data = data;
-            DataSet = Data.DataSet;
-            Table = Data.GetDataTable();
-            ProgramElements = Data.GetProgramElements(Table);
+            DbData = data;
+            Table = DbData.GetDataTable();
+            ProgramElements = DbData.GetProgramElements(Table);
             Total = GetTotals(Table);
             Count = Table.Rows.Count;
-            Average = GetBaseAverage(Table);
+            Average = GetAverage(Table);
             Metrics = GetMetrics(Table);
             FundTotals = GetDataTotals(Table, PrcField.FundName);
             FundMetrics = GetMetrics(Table, PrcField.FundName);
@@ -37,12 +36,12 @@ namespace BudgetExecution
             GoalMetrics = GetMetrics(Table, PrcField.GoalName);
             ObjectiveTotals = GetDataTotals(Table, PrcField.ObjectiveName);
             ObjectiveMetrics = GetMetrics(Table, PrcField.ObjectiveName);
-            if (Data.Source == Source.DivisionAccount && Data.Parameter == null)
+            if (DbData.Source == Source.DivisionAccount && DbData.Parameter == null)
             {
                 DivisionTotals = GetDataTotals(Table, PrcField.RC);
                 DivisionMetrics = GetMetrics(Table, PrcField.RC);
             }
-            if (Data.Source == Source.PRC)
+            if (DbData.Source == Source.PRC)
             {
                 var table = new DivisionAuthority().Table;
                 DivisionTotals = GetDataTotals(table, PrcField.RC);
@@ -51,13 +50,12 @@ namespace BudgetExecution
         }
         public PrcMetric(DataBuilder data, PrcField prcfilter, string filter)
         {
-            Data = data;
-            DataSet = data.DataSet;
-            Table = Info.FilterTable(Data.DataTable, prcfilter, filter);
+            DbData = data;
+            Table = Info.FilterTable(DbData.Table, prcfilter, filter);
             ProgramElements = GetProgramElements(Table);
             Total = GetTotals(Table);
             Count = Table.Rows.Count;
-            Average = GetBaseAverage(Table);
+            Average = GetAverage(Table);
             Metrics = GetMetrics(Table);
             FundTotals = GetDataTotals(Table, PrcField.FundName);
             FundMetrics = GetMetrics(Table, PrcField.FundName);
@@ -73,12 +71,12 @@ namespace BudgetExecution
             GoalMetrics = GetMetrics(Table, PrcField.GoalName);
             ObjectiveTotals = GetDataTotals(Table, PrcField.ObjectiveName);
             ObjectiveMetrics = GetMetrics(Table, PrcField.ObjectiveName);
-            if (Data.Source == Source.DivisionAccount)
+            if (DbData.Source == Source.DivisionAccount)
             {
-                DivisionTotals = GetDataTotals(Data.DataTable, PrcField.RC);
-                DivisionMetrics = GetMetrics(Data.DataTable, PrcField.RC);
+                DivisionTotals = GetDataTotals(DbData.Table, PrcField.RC);
+                DivisionMetrics = GetMetrics(DbData.Table, PrcField.RC);
             }
-            if (Data.Source == Source.PRC)
+            if (DbData.Source == Source.PRC)
             {
                 var table = new DivisionAuthority().Table;
                 DivisionTotals = GetDataTotals(table, PrcField.RC);
@@ -91,7 +89,7 @@ namespace BudgetExecution
             ProgramElements = GetProgramElements(Table);
             Total = GetTotals(Table);
             Count = Table.Rows.Count;
-            Average = GetBaseAverage(Table);
+            Average = GetAverage(Table);
             Metrics = GetMetrics(Table);
             FundTotals = GetDataTotals(Table, PrcField.FundName);
             FundMetrics = GetMetrics(Table, PrcField.FundName);
@@ -110,11 +108,10 @@ namespace BudgetExecution
         }
 
         //Properties
-        public DataBuilder Data { get; }
+        public DataBuilder DbData { get; }
         public decimal Average { get; set; }
         public int Count { get; }
         public double[] Metrics { get; }
-        public DataSet DataSet { get; }
         public DataTable Table { get; set; }
         public decimal Total { get; }
         public Dictionary<string, double[]> BocMetrics { get; set; }
@@ -136,7 +133,7 @@ namespace BudgetExecution
         public Dictionary<string, decimal> ProgramProjectTotals { get; set; }
 
         //Methods
-        public decimal GetBaseAverage(DataTable table)
+        public decimal GetAverage(DataTable table)
         {
             try
             {
@@ -154,7 +151,7 @@ namespace BudgetExecution
         {
             try
             {
-                return table.AsEnumerable().Sum(p => p.Field<decimal>("Amount"));
+                return table.AsEnumerable().Where(p => p.Field<string>("BOC") != "17").Sum(p => p.Field<decimal>("Amount"));
             }
             catch (Exception ex)
             {
@@ -176,7 +173,7 @@ namespace BudgetExecution
         }
         public double[] GetMetrics(DataTable table)
         {
-            return new double[] { (double)GetTotals(table), (double)GetCount(table), (double)GetBaseAverage(table), (double)GetTotals(table) / (double)Data.QueryTotal };
+            return new double[] { (double)GetTotals(table), (double)GetCount(table), (double)GetAverage(table), (double)GetTotals(table) / (double)DbData.Total };
         }
         public PRC[] GetPrcArray(DataTable table)
         {
@@ -223,7 +220,8 @@ namespace BudgetExecution
                 var info = new Dictionary<string, decimal>();
                 foreach (string filter in GetCodes(table, prcfilter.ToString()))
                 {
-                    var query = table.AsEnumerable().Where(p => p.Field<string>(prcfilter.ToString()).Equals(filter)).Select(p => p).CopyToDataTable();
+                    var query = table.AsEnumerable().Where(p => p.Field<string>(prcfilter.ToString()).Equals(filter))
+                        .Select(p => p).CopyToDataTable();
                     if (GetTotals(query) > 0)
                         info.Add(filter, GetTotals(query));
                 }
@@ -281,7 +279,8 @@ namespace BudgetExecution
                 var info = new Dictionary<string, double[]>();
                 foreach (string filter in GetCodes(table, prcfilter.ToString()))
                 {
-                    var query = table.AsEnumerable().Where(p => p.Field<string>(prcfilter.ToString()).Equals(filter)).Select(p => p).CopyToDataTable();
+                    var query = table.AsEnumerable().Where(p => p.Field<string>(prcfilter.ToString()).Equals(filter))
+                        .Select(p => p).CopyToDataTable();
                     if (GetTotals(query) > 0)
                         info.Add(filter, new double[] { (double)GetTotals(query) });
                 }
