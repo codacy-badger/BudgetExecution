@@ -16,10 +16,10 @@ namespace BudgetExecution
         public DataMaster()
         {
             InitializeComponent();
-            Data = new DataBuilder(Source.RegionAccount);
-            Table = Data.GetDataTable();
-            Metric = new PrcMetric(Data);
-            ProgramElements = Data.GetProgramElements(Table);
+            DbData = new DataBuilder(Source.RegionAccount);
+            Table = DbData.Table;
+            Metric = new PrcMetric(DbData);
+            ProgramElements = DbData.GetProgramElements(Table);
             BindingSource.DataSource = Table;
             Grid.DataSource = BindingSource;
             GridNavigator.BindingSource = BindingSource;
@@ -27,7 +27,7 @@ namespace BudgetExecution
 
         //Properties
         private SQLiteDataAdapter Adapter { get; }
-        private DataBuilder Data { get; }
+        private DataBuilder DbData { get; }
         private PrcMetric Metric { get; }
         private Dictionary<string, object> Parameter { get; set; }
         private Dictionary<string, string[]> ProgramElements { get; set; }
@@ -85,7 +85,7 @@ namespace BudgetExecution
         {
             try
             {
-                var item = Data.ProgramElements["FundName"];
+                var item = DbData.ProgramElements["FundName"];
                 foreach (string i in item)
                     MasterFilter1.Items.Add(i);
             }

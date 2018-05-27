@@ -32,10 +32,10 @@ namespace BudgetExecution
         {
             SeriesType = ChartSeriesType.Column;
             Chart = chart;
-            Data = data;
+            DbData = data;
             Value = Stat.Total;
-            Table = Data.Table;
-            Metric = new PrcMetric(Data);
+            Table = DbData.Table;
+            Metric = new PrcMetric(DbData);
             DataTotals = Metric.GetChartTotals(Table, filter);
             if (Chart.Series != null)
                 Chart.Series.Clear();
@@ -50,42 +50,41 @@ namespace BudgetExecution
         public BudgetChart(ChartControl chart, DataBuilder data, PrcField filter, Stat value, ChartSeriesType type)
         {
             Chart = chart;
-            Data = data;
+            DbData = data;
             Value = value;
             SeriesType = type;
             ConfigurePrimaryAxisLabels(Chart);
             if (Chart.Series != null)
                 Chart.Series.Clear();
-            Table = Data.Table;
-            Metric = new PrcMetric(Data);
+            Table = DbData.Table;
+            Metric = new PrcMetric(DbData);
             DataMetrics = Metric.GetChartMetrics(Table, filter);
             DataSeries = GetSeriesTotals(GetMeasure(DataMetrics, Value));
             DataSeries.Type = SeriesType;
             if (SeriesType == ChartSeriesType.Pie)
-                ConfigurePieChart(Chart);
+                ConfigurePieChart(Chart, DbData);
             ConfigureSeries(DataSeries, Value);
             Chart.Series.Add(DataSeries);
             Configure3DMode(Chart);
             Chart.ShowToolTips = true;
         }
-
         public BudgetChart(ChartControl chart, string[] title, DataBuilder data, PrcField filter, Stat value, ChartSeriesType type)
         {
             Chart = chart;
-            Data = data;
+            DbData = data;
             Value = value;
             SeriesType = type;
             ConfigurePrimaryAxisLabels(Chart);
             ConfigureMainTitle(title);
             if (Chart.Series != null)
                 Chart.Series.Clear();
-            Table = Data.Table;
-            Metric = new PrcMetric(Data);
+            Table = DbData.Table;
+            Metric = new PrcMetric(DbData);
             DataMetrics = Metric.GetChartMetrics(Table, filter);
             DataSeries = GetSeriesTotals(GetMeasure(DataMetrics, Value));
             DataSeries.Type = SeriesType;
             if (SeriesType == ChartSeriesType.Pie)
-                ConfigurePieChart(Chart);
+                ConfigurePieChart(Chart, DbData);
             ConfigureSeries(DataSeries, Value);
             Chart.Series.Add(DataSeries);
             Configure3DMode(Chart);
@@ -110,9 +109,9 @@ namespace BudgetExecution
         {
             Chart = chart;
             SeriesType = ChartSeriesType.Column;
-            Data = new DataBuilder(source);
-            Metric = new PrcMetric(Data);
-            Table = Data.Table;
+            DbData = new DataBuilder(source);
+            Metric = new PrcMetric(DbData);
+            Table = DbData.Table;
             Value = Stat.Total;
             if (Chart.Series != null)
                 Chart.Series.Clear();
@@ -126,7 +125,7 @@ namespace BudgetExecution
         //Properties
         public string[] AxisTitle { get; set; }
         public ChartControl Chart { get; set; }
-        public DataBuilder Data { get; }
+        public DataBuilder DbData { get; }
         public PrcMetric Metric { get; }
         public BindingSource BindingSource { get; set; }
         public Dictionary<string, double[]> DataMetrics { get; set; }
@@ -183,7 +182,7 @@ namespace BudgetExecution
                 return null;
             }
         }
-        internal void ConfigurePieChart(ChartControl Chart)
+        internal void ConfigurePieChart(ChartControl Chart, DataBuilder data)
         {
             try
             {
@@ -195,7 +194,7 @@ namespace BudgetExecution
                 Chart.Series[0].PointsToolTipFormat = "Funding:{4:N2}";
                 Chart.Series[0].ExplodedAll = true;
                 Chart.Series[0].ExplosionOffset = 20f;
-                var bm = new ChartDataBindModel(Data.BindingSource);
+                var bm = new ChartDataBindModel(data.BindingSource);
                 Chart.Series[0].SeriesIndexedModelImpl = bm;
                 bm.YNames = new string[] { Value.ToString() };
                 Chart.Series[0].SeriesModel = bm;

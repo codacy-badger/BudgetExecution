@@ -18,13 +18,15 @@ namespace BudgetExecution
         {
             Fund = new Fund(fundcode, bfy);
             FiscalYear = Fund.FiscalYear;
+            Name = Fund.Name;
+            Title = Fund.Title;
         }
         public Appropriation(Source source, string fundcode, string bfy) : this(fundcode, bfy)
         {
-            Data = new DataBuilder(source, new Dictionary<string, object> { ["Fund"] = fundcode, ["BFY"] = bfy });
-            Metric = new PrcMetric(Data);
-            Table = Data.Table;
-            Allocation = Data.GetRecords(Table);
+            DbData = new DataBuilder(source, new Dictionary<string, object> { ["Fund"] = fundcode, ["BFY"] = bfy });
+            Metric = new PrcMetric(DbData);
+            Table = DbData.Table;
+            Allocation = DbData.GetRecords(Table);
             Total = Metric.Total;
             Average = Metric.Average;
             ProgramElements = GetProgramElements(Table);
@@ -42,28 +44,25 @@ namespace BudgetExecution
         }
 
         //Properties
-        public DataBuilder Data { get; }
+        public Fund Fund { get; }
+        public string Name { get; }
+        public string Title { get; }
+        public DataBuilder DbData { get; }
+        public Dictionary<string, string[]> ProgramElements { get; }
         public PrcMetric Metric { get; }
         public DataTable Table { get; }
         public decimal Amount { get; }
         public decimal Average { get; }
-        public string[] BOC { get; }
         public string[] BocCodes { get; }
         public Dictionary<string, decimal> BocData { get; set; }
         public int Count { get; }
         public string FiscalYear { get; }
         public FTE[] FTE { get; }
-        public Fund Fund { get; }
-        public string[] Goal { get; }
         public Dictionary<string, decimal> GoalData { get; set; }
-        public decimal[] Metrics { get; }
-        public string[] NPM { get; }
         public Dictionary<string, decimal> NpmData { get; set; }
         public Dictionary<string, decimal> ObjectiveData { get; set; }
         public Tuple<DataTable, PRC[], decimal, int> PrcData { get; }
-        public string[] Program { get; }
         public Dictionary<string, decimal> ProgramData { get; set; }
-        public Dictionary<string, string[]> ProgramElements { get; }
         public string[] Project { get; }
         public Dictionary<string, decimal> ProjectData { get; set; }
         public decimal Total { get; }
@@ -156,7 +155,7 @@ namespace BudgetExecution
         }
         public decimal GetFteTotal()
         {
-            return PrcData.Item1.AsEnumerable().Where(p => p.Field<string>("BOC").Equals("17")).Select(p => p).Sum(p => p.Field<decimal>("Amount"));
+            return PrcData.Item1.AsEnumerable().Select(p => p).Sum(p => p.Field<decimal>("Amount"));
         }
         public decimal[] GetMetrics(DataTable table)
         {
@@ -286,6 +285,7 @@ namespace BudgetExecution
         }
         internal FTE[] GetFTE(DataTable table)
         {
+            if(table.Rows.Count > 0 && BocCodes.Contains("17"))
             try
             {
                 var fteTable = table.AsEnumerable().Where(p => p.Field<string>("BOC").Equals("17")).Select(p => p).CopyToDataTable();
@@ -298,17 +298,6 @@ namespace BudgetExecution
             {
                 MessageBox.Show(ex.Message.ToString() + $"Target Method:\n{ex.TargetSite}\n" + $"Stack:\n{ex.StackTrace}");
                 return null;
-            } 
-        }
-        internal Bitmap GetImageFile()
-        {
-            DirectoryInfo imgfolder = new DirectoryInfo(@"C:\Users\terry\Documents\Visual Studio 2015\Projects\Budget\Resources\fundlabel");
-            var files = imgfolder.GetFiles("*.png");
-            foreach (var f in files)
-            {
-                string imgname = Path.GetFileNameWithoutExtension(f.FullName);
-                if (imgname.Equals(Fund.Code))
-                    return new Bitmap(f.FullName);
             }
             return null;
         }

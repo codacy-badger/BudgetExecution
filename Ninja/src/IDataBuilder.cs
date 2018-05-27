@@ -11,7 +11,6 @@ namespace BudgetExecution
         DataRow[] DataRecords { get; }
 
         //Methods
-        DataSet GetDataSet();
         DataTable GetDataTable();
         DataRow[] GetRecords(DataTable table);
     }

@@ -10,21 +10,21 @@ namespace BudgetExecution
         //Properties
         Command Command { get; }
         Source Table { get; set; }
-        Provider Connection { get; }
+        Provider Provider { get; }
         string ConnectionString { get; set; }
-        IDbDataAdapter DataAdapter { get; set; }
-        IDbCommand DataCommand { get; set; }
-        IDbConnection DataConnection { get; set; }
-        IDataReader DataReader { get; set; }
+        DbDataAdapter DataAdapter { get; set; }
+        DbCommand DataCommand { get; set; }
+        DbConnection DataConnection { get; set; }
+        DbDataReader DataReader { get; set; }
         string SqlStatement { get; set; }
 
         //Methods
         DbCommandBuilder GetCommandBuilder(IDbDataAdapter adapter);
-        IDbConnection GetConnection(Provider connection, string connectionString);
+        DbConnection GetConnection(Provider connection, string connectionString);
         string GetConnectionString(string connectionString);
-        IDbDataAdapter GetDataAdapter(IDbCommand command);
-        IDbCommand GetDataCommand(IDbConnection dataConnection, string sql);
-        IDataReader GetDataReader(IDbDataAdapter adapter);
+        DbDataAdapter GetDataAdapter(IDbCommand command);
+        DbCommand GetDataCommand(IDbConnection dataConnection, string sql);
+        DbDataReader GetDataReader(IDbDataAdapter adapter);
         string GetSqlStatement(Command command, string sqlStatement);
     }
 }

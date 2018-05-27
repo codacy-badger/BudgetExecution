@@ -6,7 +6,6 @@ namespace BudgetExecution
     {
         //Properties
         Account Account { get; }
-
         decimal Amount { get; set; }
         string BFY { get; set; }
         BOC BOC { get; }

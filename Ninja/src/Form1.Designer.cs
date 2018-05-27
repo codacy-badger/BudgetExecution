@@ -44,6 +44,10 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.commandBar1 = new Syncfusion.Windows.Forms.Tools.CommandBar();
+            this.controlBar1 = new Syncfusion.Windows.Forms.Tools.ControlBar();
+            this.commandBar2 = new Syncfusion.Windows.Forms.Tools.CommandBar();
+            this.commandBar3 = new Syncfusion.Windows.Forms.Tools.CommandBar();
             this.SuspendLayout();
             // 
             // button20
@@ -55,7 +59,7 @@
             this.button20.ForeColor = System.Drawing.SystemColors.Info;
             this.button20.Image = ((System.Drawing.Image)(resources.GetObject("button20.Image")));
             this.button20.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button20.Location = new System.Drawing.Point(310, 203);
+            this.button20.Location = new System.Drawing.Point(532, 205);
             this.button20.Name = "button20";
             this.button20.Size = new System.Drawing.Size(159, 68);
             this.button20.TabIndex = 42;
@@ -73,7 +77,7 @@
             this.button19.ForeColor = System.Drawing.SystemColors.Info;
             this.button19.Image = ((System.Drawing.Image)(resources.GetObject("button19.Image")));
             this.button19.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button19.Location = new System.Drawing.Point(310, 351);
+            this.button19.Location = new System.Drawing.Point(518, 353);
             this.button19.Name = "button19";
             this.button19.Size = new System.Drawing.Size(159, 68);
             this.button19.TabIndex = 41;
@@ -91,7 +95,7 @@
             this.button15.ForeColor = System.Drawing.SystemColors.Info;
             this.button15.Image = ((System.Drawing.Image)(resources.GetObject("button15.Image")));
             this.button15.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button15.Location = new System.Drawing.Point(310, 129);
+            this.button15.Location = new System.Drawing.Point(532, 131);
             this.button15.Name = "button15";
             this.button15.Size = new System.Drawing.Size(159, 68);
             this.button15.TabIndex = 40;
@@ -181,7 +185,7 @@
             this.button10.ForeColor = System.Drawing.SystemColors.Info;
             this.button10.Image = ((System.Drawing.Image)(resources.GetObject("button10.Image")));
             this.button10.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button10.Location = new System.Drawing.Point(310, 277);
+            this.button10.Location = new System.Drawing.Point(532, 279);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(159, 68);
             this.button10.TabIndex = 35;
@@ -253,7 +257,7 @@
             this.button4.ForeColor = System.Drawing.SystemColors.Info;
             this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
             this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(310, 55);
+            this.button4.Location = new System.Drawing.Point(532, 57);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(159, 68);
             this.button4.TabIndex = 31;
@@ -289,7 +293,7 @@
             this.button2.ForeColor = System.Drawing.SystemColors.Info;
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(310, 425);
+            this.button2.Location = new System.Drawing.Point(532, 427);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(159, 68);
             this.button2.TabIndex = 29;
@@ -313,6 +317,66 @@
             this.button1.Text = "button1";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button1.UseVisualStyleBackColor = true;
+            // 
+            // commandBar1
+            // 
+            this.commandBar1.ChevronColor = System.Drawing.SystemColors.ControlText;
+            this.commandBar1.DockState = Syncfusion.Windows.Forms.Tools.CommandBarDockState.Top;
+            this.commandBar1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World);
+            this.commandBar1.MaxLength = 200;
+            this.commandBar1.MinHeight = 32;
+            this.commandBar1.MinLength = 50;
+            this.commandBar1.Name = "commandBar1";
+            this.commandBar1.RowIndex = 0;
+            this.commandBar1.RowOffset = 0;
+            this.commandBar1.TabIndex = 0;
+            this.commandBar1.TabStop = false;
+            this.commandBar1.Text = "commandBar1";
+            // 
+            // controlBar1
+            // 
+            this.controlBar1.CaptionControl = null;
+            this.controlBar1.ChevronColor = System.Drawing.SystemColors.ControlText;
+            this.controlBar1.ControlBarCaptionHeight = 35;
+            this.controlBar1.DockState = Syncfusion.Windows.Forms.Tools.CommandBarDockState.Left;
+            this.controlBar1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World);
+            this.controlBar1.MaxLength = 200;
+            this.controlBar1.MinHeight = 50;
+            this.controlBar1.MinLength = 50;
+            this.controlBar1.Name = "controlBar1";
+            this.controlBar1.RowIndex = 0;
+            this.controlBar1.TabIndex = 0;
+            this.controlBar1.TabStop = false;
+            this.controlBar1.Text = "controlBar1";
+            // 
+            // commandBar2
+            // 
+            this.commandBar2.ChevronColor = System.Drawing.SystemColors.ControlText;
+            this.commandBar2.DockState = Syncfusion.Windows.Forms.Tools.CommandBarDockState.Top;
+            this.commandBar2.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World);
+            this.commandBar2.MaxLength = 200;
+            this.commandBar2.MinHeight = 32;
+            this.commandBar2.MinLength = 50;
+            this.commandBar2.Name = "commandBar2";
+            this.commandBar2.RowIndex = 0;
+            this.commandBar2.RowOffset = 202;
+            this.commandBar2.TabIndex = 1;
+            this.commandBar2.TabStop = false;
+            this.commandBar2.Text = "commandBar2";
+            // 
+            // commandBar3
+            // 
+            this.commandBar3.ChevronColor = System.Drawing.SystemColors.ControlText;
+            this.commandBar3.DockState = Syncfusion.Windows.Forms.Tools.CommandBarDockState.Top;
+            this.commandBar3.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World);
+            this.commandBar3.MaxLength = 200;
+            this.commandBar3.MinHeight = 32;
+            this.commandBar3.MinLength = 50;
+            this.commandBar3.Name = "commandBar3";
+            this.commandBar3.RowIndex = 0;
+            this.commandBar3.RowOffset = 0;
+            this.commandBar3.TabIndex = 0;
+            this.commandBar3.TabStop = false;
             // 
             // Form1
             // 
@@ -342,6 +406,7 @@
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -362,6 +427,10 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
+        private Syncfusion.Windows.Forms.Tools.CommandBar commandBar1;
+        private Syncfusion.Windows.Forms.Tools.ControlBar controlBar1;
+        private Syncfusion.Windows.Forms.Tools.CommandBar commandBar2;
+        private Syncfusion.Windows.Forms.Tools.CommandBar commandBar3;
     }
 }
 

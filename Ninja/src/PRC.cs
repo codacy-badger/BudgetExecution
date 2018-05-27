@@ -22,14 +22,8 @@ namespace BudgetExecution
             Account = new Account(code);
             Code = Account.Code;
             BOC = new BOC(boc, amount);
-            Amount = amount;
-            NPM = Account.NPM;
-            ProgramProjectCode = Account.ProgramProjectCode;
-            Goal = Account.Goal;
-            GoalName = Account.GoalName;
-            Objective = Account.Objective;
-            ObjectiveName = Account.ObjectiveName;
             Parameter = GetParameter();
+            Amount = amount;
         }
         public PRC(DataRow datarow)
         {
@@ -38,19 +32,13 @@ namespace BudgetExecution
             RPIO = datarow["RPIO"].ToString();
             BFY = datarow["BFY"].ToString();
             Fund = new Fund(datarow["Fund"].ToString(), datarow["BFY"].ToString());
-            RC = new RC(datarow["RC"].ToString());
             Org = datarow["Org"].ToString();
+            RC = new RC(datarow["RC"].ToString());
             Account = new Account(datarow["Code"].ToString());
             Code = Account.Code;
             BOC = new BOC(datarow["BOC"].ToString());
-            Amount = decimal.Parse(datarow["Amount"].ToString());
-            NPM = Account.NPM;
-            ProgramProjectCode = Account.ProgramProjectCode;
-            Goal = Account.Goal;
-            GoalName = Account.GoalName;
-            Objective = Account.Objective;
-            ObjectiveName = Account.ObjectiveName;
             Parameter = GetParameter();
+            Amount = decimal.Parse(datarow["Amount"].ToString());
         }
 
         //Properties

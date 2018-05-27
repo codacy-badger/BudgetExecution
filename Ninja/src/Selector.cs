@@ -18,7 +18,6 @@ namespace BudgetExecution
         public Selector()
         {
         }
-
         public Selector(string path)
         {
             InitializeComponent();
@@ -54,11 +53,9 @@ namespace BudgetExecution
             }
             ViewerCarousel.ImageList = ilist;
         }
-
         private void Selector_Load(object sender, EventArgs e)
         {
         }
-
         private void ViewerCarousel_OnImageSelected(object sender, EventArgs e)
         {
             if (ViewerCarousel.ActiveImage.Tag.ToString().Length > 3)
