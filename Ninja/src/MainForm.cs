@@ -28,7 +28,6 @@ namespace BudgetExecution
             SummaryTile.Click += SummaryTile_OnClick;
             DivisionBudgetTile.Click += DivisionDataTile_OnClick;
             DataMasterTile.Click += DatabaseTile_OnClick;
-            FunctionalityTile.Click += FunctionalityTile_OnClick;
         }
 
         //Properties

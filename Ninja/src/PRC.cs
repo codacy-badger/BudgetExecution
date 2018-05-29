@@ -11,9 +11,10 @@ namespace BudgetExecution
         public PRC()
         {
         }
-        public PRC(string bl, string rpio, string bfy, string fund, string org, string rc, string code, string boc, decimal amount)
+        public PRC(int id, string bl, string rpio, string bfy, string fund, string org, string rc, string code, string boc, decimal amount)
         {
             BudgetLevel = bl;
+            ID = id;
             RPIO = rpio;
             BFY = bfy;
             Fund = new Fund(fund, bfy);
@@ -22,7 +23,7 @@ namespace BudgetExecution
             Account = new Account(code);
             Code = Account.Code;
             BOC = new BOC(boc, amount);
-            Parameter = GetParameter();
+            Parameter = GetDataParameter();
             Amount = amount;
         }
         public PRC(DataRow datarow)
@@ -37,7 +38,7 @@ namespace BudgetExecution
             Account = new Account(datarow["Code"].ToString());
             Code = Account.Code;
             BOC = new BOC(datarow["BOC"].ToString());
-            Parameter = GetParameter();
+            Parameter = GetDataParameter();
             Amount = decimal.Parse(datarow["Amount"].ToString());
         }
 
@@ -64,9 +65,11 @@ namespace BudgetExecution
         public string Objective { get; }
         public string ObjectiveName { get; }
         private Dictionary<string, object> Parameter { get; set; }
+        public string[] DataFields { get; }
+        public object[] DataObjects { get; }
 
         //Methods
-        Dictionary<string, object> GetParameter()
+        internal Dictionary<string, object> GetDataParameter()
         {
             try
             {
@@ -139,22 +142,26 @@ namespace BudgetExecution
         {
             return Account.Code;
         }
-        internal Dictionary<string, object> GetData()
+        internal Dictionary<string, object> GetFields()
         {
             try
             {
-                Dictionary<string, object> param = new Dictionary<string, object>()
-                {
-                    ["ID"] = ID,
-                    ["BudgetLevel"] = BudgetLevel,
-                    ["RPIO"] = RPIO,
-                    ["BFY"] = BFY,
-                    ["Fund"] = Fund.Code,
-                    ["RC"] = RC,
-                    ["BOC"] = BOC.Code,
-                    ["Code"] = Account.Code,
-                    ["Amount"] = Amount.ToString("c")
-                };
+                Dictionary<string, object> prc = GetDataParameter();
+
+                return prc;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("ERROR! : \n" + ex.StackTrace);
+                return null;
+            }
+        }
+        internal Dictionary<string, object> GetDataObjects()
+        {
+            try
+            {
+                Dictionary<string, object> param = GetDataParameter();
+
                 return param;
             }
             catch (Exception ex)
@@ -162,7 +169,7 @@ namespace BudgetExecution
                 MessageBox.Show("ERROR! : \n" + ex.StackTrace);
                 return null;
             }
-        } 
+        }
         internal PrcParameter GetPrcParameter()
         {
             return new PrcParameter(ID, BudgetLevel, RPIO, BFY, Fund.Code, Org, RC.Code, BOC.Code, Account.Code);

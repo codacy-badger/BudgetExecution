@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data.SQLite;
 using System.Data.SqlClient;
 using System.Data.OleDb;
@@ -18,21 +19,31 @@ namespace BudgetExecution
         public Query(Source source)
         {
             Source = source;
+            Provider = Provider.SQLite;
             TableName = source.ToString();
             SelectStatement = $"SELECT * FROM {source.ToString()}";
             DataConnection = new SQLiteConnection(@"datasource=C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\database\SQLite\R6.db");
             SelectCommand = GetSelectCommand(SelectStatement, DataConnection);
             Adapter = GetDataAdapter(SelectCommand);
+            CommandBuilder = GetCommandBuilder(Adapter);
+            UpdateCommand = CommandBuilder.GetUpdateCommand();
+            InsertCommand = CommandBuilder.GetInsertCommand();
+            DeleteCommand = CommandBuilder.GetDeleteCommand();
         }
         public Query(Source source, Provider provider, Dictionary<string, object> param)
         {
-            DataConnection = GetConnection(provider);
+            Provider = provider;
             Source = source;
+            DataConnection = GetConnection(provider);
             TableName = source.ToString();
             Parameter = param;
             SelectStatement = $"SELECT * FROM {source.ToString()}";
             SelectCommand = GetSelectCommand(SelectStatement, DataConnection);
             Adapter = GetDataAdapter(SelectCommand);
+            CommandBuilder = GetCommandBuilder(Adapter);
+            UpdateCommand = CommandBuilder.GetUpdateCommand();
+            InsertCommand = CommandBuilder.GetInsertCommand();
+            DeleteCommand = CommandBuilder.GetDeleteCommand();
         }
         public Query(Source source, Dictionary<string, object> param)
         {
@@ -43,6 +54,10 @@ namespace BudgetExecution
             SelectStatement = GetSqlStatement(TableName, Parameter);
             SelectCommand = GetSelectCommand(SelectStatement, DataConnection);
             Adapter = GetDataAdapter(SelectCommand);
+            CommandBuilder = GetCommandBuilder(Adapter);
+            UpdateCommand = CommandBuilder.GetUpdateCommand();
+            InsertCommand = CommandBuilder.GetInsertCommand();
+            DeleteCommand = CommandBuilder.GetDeleteCommand();
         }
         public Query(Provider provider, string sourcePath, Dictionary<string, object> param)
         {
@@ -66,12 +81,17 @@ namespace BudgetExecution
             SelectStatement = GetSqlStatement(TableName, Parameter);
             SelectCommand = GetSelectCommand(SelectStatement, DataConnection);
             Adapter = GetDataAdapter(SelectCommand);
+            CommandBuilder = GetCommandBuilder(Adapter);
+            UpdateCommand = CommandBuilder.GetUpdateCommand();
+            InsertCommand = CommandBuilder.GetInsertCommand();
+            DeleteCommand = CommandBuilder.GetDeleteCommand();
         }
 
         //Properties
         public Source Source { get; }
         public Provider Provider { get; }
-        public Command Sql { get; set; }
+        public Command SqlCommand { get; set; }
+        public AppSettingsReader Settings { get; }
         public DbConnection DataConnection { get; }
         public Dictionary<string, object> Parameter { get; }
         public string TableName { get; }
@@ -80,12 +100,13 @@ namespace BudgetExecution
         public DbCommand SelectCommand { get; }
         public DbDataReader DataReader { get; set; }
         public DbDataAdapter Adapter { get; set; }
+        public DbCommandBuilder CommandBuilder { get; internal set; }
         public DbCommand DeleteCommand { get; }
         public DbCommand InsertCommand { get; }
         public DbCommand UpdateCommand { get; }
 
         //Methods
-        private string GetParamString(Dictionary<string, object> param)
+        private string GetParamSelectString(Dictionary<string, object> param)
         {
             try
             {
@@ -107,7 +128,10 @@ namespace BudgetExecution
         {
             try
             {
-                return $"SELECT * FROM {table} WHERE {GetParamString(param)}";
+                if(param.ContainsKey("ID"))
+                    return $"SELECT * FROM {table} WHERE ID = { (int)param["ID"] }";
+                else
+                    return $"SELECT * FROM {table} WHERE {GetParamSelectString(param)}";
             }
             catch (Exception ex)
             {
@@ -172,17 +196,17 @@ namespace BudgetExecution
             {
                 if (connection is SQLiteConnection)
                 {
-                    SelectStatement = GetParamString(param);
+                    SelectStatement = GetParamSelectString(param);
                     return new SQLiteCommand(SelectStatement, (SQLiteConnection)connection);
                 }
                 if (connection is OleDbConnection)
                 {
-                    SelectStatement = GetParamString(param);
+                    SelectStatement = GetParamSelectString(param);
                     return new OleDbCommand(SelectStatement, (OleDbConnection)connection);
                 }
                 if (connection is SqlConnection)
                 {
-                    SelectStatement = GetParamString(param);
+                    SelectStatement = GetParamSelectString(param);
                     return new SqlCommand(SelectStatement, (SqlConnection)connection);
                 }
                 return null;
@@ -231,6 +255,39 @@ namespace BudgetExecution
             catch (Exception ex)
             {
                 MessageBox.Show("ERROR!: \n" + ex.TargetSite + ex.StackTrace);
+                return null;
+            }
+        }
+        public DbCommandBuilder GetCommandBuilder(IDbDataAdapter adapter)
+        {
+            try
+            {
+                if(adapter is SQLiteDataAdapter)
+                {
+                    CommandBuilder = new SQLiteCommandBuilder(adapter as SQLiteDataAdapter);
+                    return CommandBuilder;
+                }
+                if (adapter is OleDbDataAdapter)
+                {
+                    CommandBuilder = new OleDbCommandBuilder(adapter as OleDbDataAdapter);
+                    return CommandBuilder;
+                }
+                if (adapter is SqlDataAdapter)
+                {
+                    CommandBuilder = new SqlCommandBuilder(adapter as SqlDataAdapter);
+                    return CommandBuilder;
+                }
+                if (adapter is SqlDataAdapter)
+                {
+                    CommandBuilder = new SqlCommandBuilder(adapter as SqlDataAdapter);
+                    return CommandBuilder;
+                }
+
+                return null;
+            }
+            catch(SystemException ex)
+            {
+                MessageBox.Show(ex.Message + ex.StackTrace);
                 return null;
             }
         }

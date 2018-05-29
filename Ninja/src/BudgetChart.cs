@@ -90,14 +90,15 @@ namespace BudgetExecution
             Configure3DMode(Chart);
             Chart.ShowToolTips = true;
         }
-        public BudgetChart(ChartControl chart, DataTable table, Tuple<PrcField, Stat, ChartSeriesType> chartuple)
+        public BudgetChart(ChartControl chart, string[] title, DataTable table, PrcField filter, Stat value, ChartSeriesType type)
         {
             Chart = chart;
-            Value = chartuple.Item2;
-            SeriesType = chartuple.Item3;
+            Value = value;
+            SeriesType = type;
             ConfigurePrimaryAxisLabels(Chart);
+            ConfigureMainTitle(title);
             Table = table;
-            DataMetrics = Metric.GetChartMetrics(Table, chartuple.Item1);
+            DataMetrics = Metric.GetChartMetrics(Table, filter);
             if (Chart.Series != null)
                 Chart.Series.Clear();
             DataSeries = GetSeriesTotals(GetMeasure(DataMetrics, Value));
@@ -105,21 +106,49 @@ namespace BudgetExecution
             Chart.Series.Add(DataSeries);
             Configure3DMode(Chart);
         }
-        public BudgetChart(ChartControl chart, Source source, PrcField filter)
+        public BudgetChart(ChartControl chart, string[] title, Source source, PrcField filter, Stat value, ChartSeriesType type)
         {
             Chart = chart;
-            SeriesType = ChartSeriesType.Column;
             DbData = new DataBuilder(source);
-            Metric = new PrcMetric(DbData);
-            Table = DbData.Table;
-            Value = Stat.Total;
+            Value = value;
+            SeriesType = type;
+            ConfigurePrimaryAxisLabels(Chart);
+            ConfigureMainTitle(title);
             if (Chart.Series != null)
                 Chart.Series.Clear();
+            Table = DbData.Table;
+            Metric = new PrcMetric(DbData);
+            DataMetrics = Metric.GetChartMetrics(Table, filter);
             DataSeries = GetSeriesTotals(GetMeasure(DataMetrics, Value));
             DataSeries.Type = SeriesType;
-            Chart.Series.Add(DataSeries);
+            if (SeriesType == ChartSeriesType.Pie)
+                ConfigurePieChart(Chart, DbData);
             ConfigureSeries(DataSeries, Value);
+            Chart.Series.Add(DataSeries);
             Configure3DMode(Chart);
+            Chart.ShowToolTips = true;
+        }
+        public BudgetChart(ChartControl chart, string[] title, Source source, Dictionary<string, object> param, PrcField filter, Stat value, ChartSeriesType type)
+        {
+            Chart = chart;
+            DbData = new DataBuilder(source, param);
+            Value = value;
+            SeriesType = type;
+            ConfigurePrimaryAxisLabels(Chart);
+            ConfigureMainTitle(title);
+            if (Chart.Series != null)
+                Chart.Series.Clear();
+            Table = DbData.Table;
+            Metric = new PrcMetric(DbData);
+            DataMetrics = Metric.GetChartMetrics(Table, filter);
+            DataSeries = GetSeriesTotals(GetMeasure(DataMetrics, Value));
+            DataSeries.Type = SeriesType;
+            if (SeriesType == ChartSeriesType.Pie)
+                ConfigurePieChart(Chart, DbData);
+            ConfigureSeries(DataSeries, Value);
+            Chart.Series.Add(DataSeries);
+            Configure3DMode(Chart);
+            Chart.ShowToolTips = true;
         }
 
         //Properties

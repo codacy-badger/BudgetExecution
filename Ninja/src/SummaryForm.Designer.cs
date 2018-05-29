@@ -43,6 +43,22 @@ namespace BudgetExecution
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            Syncfusion.Windows.Forms.Chart.ChartSeries chartSeries21 = new Syncfusion.Windows.Forms.Chart.ChartSeries();
+            Syncfusion.Windows.Forms.Chart.ChartCustomShapeInfo chartCustomShapeInfo21 = new Syncfusion.Windows.Forms.Chart.ChartCustomShapeInfo();
+            Syncfusion.Windows.Forms.Chart.ChartLineInfo chartLineInfo11 = new Syncfusion.Windows.Forms.Chart.ChartLineInfo();
+            Syncfusion.Windows.Forms.Chart.ChartSeries chartSeries22 = new Syncfusion.Windows.Forms.Chart.ChartSeries();
+            Syncfusion.Windows.Forms.Chart.ChartCustomShapeInfo chartCustomShapeInfo22 = new Syncfusion.Windows.Forms.Chart.ChartCustomShapeInfo();
+            Syncfusion.Windows.Forms.Chart.ChartToolBarSaveItem chartToolBarSaveItem11 = new Syncfusion.Windows.Forms.Chart.ChartToolBarSaveItem();
+            Syncfusion.Windows.Forms.Chart.ChartToolBarCopyItem chartToolBarCopyItem11 = new Syncfusion.Windows.Forms.Chart.ChartToolBarCopyItem();
+            Syncfusion.Windows.Forms.Chart.ChartToolBarPrintItem chartToolBarPrintItem11 = new Syncfusion.Windows.Forms.Chart.ChartToolBarPrintItem();
+            Syncfusion.Windows.Forms.Chart.ChartToolBarPrintPreviewItem chartToolBarPrintPreviewItem1 = new Syncfusion.Windows.Forms.Chart.ChartToolBarPrintPreviewItem();
+            Syncfusion.Windows.Forms.Chart.ChartToolBarSplitter chartToolBarSplitter1 = new Syncfusion.Windows.Forms.Chart.ChartToolBarSplitter();
+            Syncfusion.Windows.Forms.Chart.ChartToolBarPaletteItem chartToolBarPaletteItem11 = new Syncfusion.Windows.Forms.Chart.ChartToolBarPaletteItem();
+            Syncfusion.Windows.Forms.Chart.ChartToolBarStyleItem chartToolBarStyleItem1 = new Syncfusion.Windows.Forms.Chart.ChartToolBarStyleItem();
+            Syncfusion.Windows.Forms.Chart.ChartToolBarTypeItem chartToolBarTypeItem11 = new Syncfusion.Windows.Forms.Chart.ChartToolBarTypeItem();
+            Syncfusion.Windows.Forms.Chart.ChartToolBarSeries3DItem chartToolBarSeries3DItem11 = new Syncfusion.Windows.Forms.Chart.ChartToolBarSeries3DItem();
+            Syncfusion.Windows.Forms.Chart.ChartToolBarShowLegendItem chartToolBarShowLegendItem11 = new Syncfusion.Windows.Forms.Chart.ChartToolBarShowLegendItem();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SummaryForm));
             Syncfusion.Windows.Forms.Chart.ChartSeries chartSeries1 = new Syncfusion.Windows.Forms.Chart.ChartSeries();
             Syncfusion.Windows.Forms.Chart.ChartCustomShapeInfo chartCustomShapeInfo1 = new Syncfusion.Windows.Forms.Chart.ChartCustomShapeInfo();
             Syncfusion.Windows.Forms.Chart.ChartLineInfo chartLineInfo1 = new Syncfusion.Windows.Forms.Chart.ChartLineInfo();
@@ -51,14 +67,18 @@ namespace BudgetExecution
             Syncfusion.Windows.Forms.Chart.ChartToolBarSaveItem chartToolBarSaveItem1 = new Syncfusion.Windows.Forms.Chart.ChartToolBarSaveItem();
             Syncfusion.Windows.Forms.Chart.ChartToolBarCopyItem chartToolBarCopyItem1 = new Syncfusion.Windows.Forms.Chart.ChartToolBarCopyItem();
             Syncfusion.Windows.Forms.Chart.ChartToolBarPrintItem chartToolBarPrintItem1 = new Syncfusion.Windows.Forms.Chart.ChartToolBarPrintItem();
-            Syncfusion.Windows.Forms.Chart.ChartToolBarPrintPreviewItem chartToolBarPrintPreviewItem1 = new Syncfusion.Windows.Forms.Chart.ChartToolBarPrintPreviewItem();
-            Syncfusion.Windows.Forms.Chart.ChartToolBarSplitter chartToolBarSplitter1 = new Syncfusion.Windows.Forms.Chart.ChartToolBarSplitter();
+            Syncfusion.Windows.Forms.Chart.ChartToolBarPrintPreviewItem chartToolBarPrintPreviewItem2 = new Syncfusion.Windows.Forms.Chart.ChartToolBarPrintPreviewItem();
+            Syncfusion.Windows.Forms.Chart.ChartToolBarSplitter chartToolBarSplitter2 = new Syncfusion.Windows.Forms.Chart.ChartToolBarSplitter();
             Syncfusion.Windows.Forms.Chart.ChartToolBarPaletteItem chartToolBarPaletteItem1 = new Syncfusion.Windows.Forms.Chart.ChartToolBarPaletteItem();
-            Syncfusion.Windows.Forms.Chart.ChartToolBarStyleItem chartToolBarStyleItem1 = new Syncfusion.Windows.Forms.Chart.ChartToolBarStyleItem();
+            Syncfusion.Windows.Forms.Chart.ChartToolBarStyleItem chartToolBarStyleItem2 = new Syncfusion.Windows.Forms.Chart.ChartToolBarStyleItem();
             Syncfusion.Windows.Forms.Chart.ChartToolBarTypeItem chartToolBarTypeItem1 = new Syncfusion.Windows.Forms.Chart.ChartToolBarTypeItem();
             Syncfusion.Windows.Forms.Chart.ChartToolBarSeries3DItem chartToolBarSeries3DItem1 = new Syncfusion.Windows.Forms.Chart.ChartToolBarSeries3DItem();
             Syncfusion.Windows.Forms.Chart.ChartToolBarShowLegendItem chartToolBarShowLegendItem1 = new Syncfusion.Windows.Forms.Chart.ChartToolBarShowLegendItem();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SummaryForm));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle61 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle62 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle63 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle64 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle65 = new System.Windows.Forms.DataGridViewCellStyle();
             Syncfusion.Windows.Forms.Chart.ChartSeries chartSeries3 = new Syncfusion.Windows.Forms.Chart.ChartSeries();
             Syncfusion.Windows.Forms.Chart.ChartCustomShapeInfo chartCustomShapeInfo3 = new Syncfusion.Windows.Forms.Chart.ChartCustomShapeInfo();
             Syncfusion.Windows.Forms.Chart.ChartLineInfo chartLineInfo2 = new Syncfusion.Windows.Forms.Chart.ChartLineInfo();
@@ -67,18 +87,10 @@ namespace BudgetExecution
             Syncfusion.Windows.Forms.Chart.ChartToolBarSaveItem chartToolBarSaveItem2 = new Syncfusion.Windows.Forms.Chart.ChartToolBarSaveItem();
             Syncfusion.Windows.Forms.Chart.ChartToolBarCopyItem chartToolBarCopyItem2 = new Syncfusion.Windows.Forms.Chart.ChartToolBarCopyItem();
             Syncfusion.Windows.Forms.Chart.ChartToolBarPrintItem chartToolBarPrintItem2 = new Syncfusion.Windows.Forms.Chart.ChartToolBarPrintItem();
-            Syncfusion.Windows.Forms.Chart.ChartToolBarPrintPreviewItem chartToolBarPrintPreviewItem2 = new Syncfusion.Windows.Forms.Chart.ChartToolBarPrintPreviewItem();
-            Syncfusion.Windows.Forms.Chart.ChartToolBarSplitter chartToolBarSplitter2 = new Syncfusion.Windows.Forms.Chart.ChartToolBarSplitter();
             Syncfusion.Windows.Forms.Chart.ChartToolBarPaletteItem chartToolBarPaletteItem2 = new Syncfusion.Windows.Forms.Chart.ChartToolBarPaletteItem();
-            Syncfusion.Windows.Forms.Chart.ChartToolBarStyleItem chartToolBarStyleItem2 = new Syncfusion.Windows.Forms.Chart.ChartToolBarStyleItem();
             Syncfusion.Windows.Forms.Chart.ChartToolBarTypeItem chartToolBarTypeItem2 = new Syncfusion.Windows.Forms.Chart.ChartToolBarTypeItem();
             Syncfusion.Windows.Forms.Chart.ChartToolBarSeries3DItem chartToolBarSeries3DItem2 = new Syncfusion.Windows.Forms.Chart.ChartToolBarSeries3DItem();
             Syncfusion.Windows.Forms.Chart.ChartToolBarShowLegendItem chartToolBarShowLegendItem2 = new Syncfusion.Windows.Forms.Chart.ChartToolBarShowLegendItem();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             Syncfusion.Windows.Forms.Chart.ChartSeries chartSeries5 = new Syncfusion.Windows.Forms.Chart.ChartSeries();
             Syncfusion.Windows.Forms.Chart.ChartCustomShapeInfo chartCustomShapeInfo5 = new Syncfusion.Windows.Forms.Chart.ChartCustomShapeInfo();
             Syncfusion.Windows.Forms.Chart.ChartLineInfo chartLineInfo3 = new Syncfusion.Windows.Forms.Chart.ChartLineInfo();
@@ -163,18 +175,6 @@ namespace BudgetExecution
             Syncfusion.Windows.Forms.Chart.ChartToolBarTypeItem chartToolBarTypeItem9 = new Syncfusion.Windows.Forms.Chart.ChartToolBarTypeItem();
             Syncfusion.Windows.Forms.Chart.ChartToolBarSeries3DItem chartToolBarSeries3DItem9 = new Syncfusion.Windows.Forms.Chart.ChartToolBarSeries3DItem();
             Syncfusion.Windows.Forms.Chart.ChartToolBarShowLegendItem chartToolBarShowLegendItem9 = new Syncfusion.Windows.Forms.Chart.ChartToolBarShowLegendItem();
-            Syncfusion.Windows.Forms.Chart.ChartSeries chartSeries19 = new Syncfusion.Windows.Forms.Chart.ChartSeries();
-            Syncfusion.Windows.Forms.Chart.ChartCustomShapeInfo chartCustomShapeInfo19 = new Syncfusion.Windows.Forms.Chart.ChartCustomShapeInfo();
-            Syncfusion.Windows.Forms.Chart.ChartLineInfo chartLineInfo10 = new Syncfusion.Windows.Forms.Chart.ChartLineInfo();
-            Syncfusion.Windows.Forms.Chart.ChartSeries chartSeries20 = new Syncfusion.Windows.Forms.Chart.ChartSeries();
-            Syncfusion.Windows.Forms.Chart.ChartCustomShapeInfo chartCustomShapeInfo20 = new Syncfusion.Windows.Forms.Chart.ChartCustomShapeInfo();
-            Syncfusion.Windows.Forms.Chart.ChartToolBarSaveItem chartToolBarSaveItem10 = new Syncfusion.Windows.Forms.Chart.ChartToolBarSaveItem();
-            Syncfusion.Windows.Forms.Chart.ChartToolBarCopyItem chartToolBarCopyItem10 = new Syncfusion.Windows.Forms.Chart.ChartToolBarCopyItem();
-            Syncfusion.Windows.Forms.Chart.ChartToolBarPrintItem chartToolBarPrintItem10 = new Syncfusion.Windows.Forms.Chart.ChartToolBarPrintItem();
-            Syncfusion.Windows.Forms.Chart.ChartToolBarPaletteItem chartToolBarPaletteItem10 = new Syncfusion.Windows.Forms.Chart.ChartToolBarPaletteItem();
-            Syncfusion.Windows.Forms.Chart.ChartToolBarTypeItem chartToolBarTypeItem10 = new Syncfusion.Windows.Forms.Chart.ChartToolBarTypeItem();
-            Syncfusion.Windows.Forms.Chart.ChartToolBarSeries3DItem chartToolBarSeries3DItem10 = new Syncfusion.Windows.Forms.Chart.ChartToolBarSeries3DItem();
-            Syncfusion.Windows.Forms.Chart.ChartToolBarShowLegendItem chartToolBarShowLegendItem10 = new Syncfusion.Windows.Forms.Chart.ChartToolBarShowLegendItem();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
@@ -265,7 +265,8 @@ namespace BudgetExecution
             this.GridRefreshButton = new System.Windows.Forms.Button();
             this.metroSetLabel8 = new MetroSet_UI.Controls.MetroSetLabel();
             this.FilterGroupBox = new System.Windows.Forms.GroupBox();
-            this.label34 = new System.Windows.Forms.Label();
+            this.lblPrc = new System.Windows.Forms.Label();
+            this.lblBoc = new System.Windows.Forms.Label();
             this.label33 = new System.Windows.Forms.Label();
             this.GridAccountFilter = new MetroSet_UI.Controls.MetroSetComboBox();
             this.GridBocFilter = new MetroSet_UI.Controls.MetroSetComboBox();
@@ -274,98 +275,98 @@ namespace BudgetExecution
             this.ProjectExpander2 = new MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel();
             this.label22 = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
+            this.ProjectFilter4 = new MetroSet_UI.Controls.MetroSetComboBox();
             this.ProjectFilter3 = new MetroSet_UI.Controls.MetroSetComboBox();
-            this.ProjectFilter2 = new MetroSet_UI.Controls.MetroSetComboBox();
             this.ProjectExpander1 = new MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel();
             this.label23 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
-            this.ChartTypeFilter8 = new MetroSet_UI.Controls.MetroSetComboBox();
-            this.ProjectFilter = new MetroSet_UI.Controls.MetroSetComboBox();
+            this.ProjectFilter1 = new MetroSet_UI.Controls.MetroSetComboBox();
+            this.ProjectFilter2 = new MetroSet_UI.Controls.MetroSetComboBox();
             this.ProjectChart = new Syncfusion.Windows.Forms.Chart.ChartControl();
             this.buttonEditChildButton1 = new Syncfusion.Windows.Forms.Tools.ButtonEditChildButton();
             this.AreaTab = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
             this.AreaExpander2 = new MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel();
             this.label19 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
+            this.AreaFilter4 = new MetroSet_UI.Controls.MetroSetComboBox();
             this.AreaFilter3 = new MetroSet_UI.Controls.MetroSetComboBox();
-            this.AreaFilter2 = new MetroSet_UI.Controls.MetroSetComboBox();
             this.AreaExpander1 = new MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel();
             this.label20 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
-            this.ChartTypeFilter7 = new MetroSet_UI.Controls.MetroSetComboBox();
-            this.AreaFilter = new MetroSet_UI.Controls.MetroSetComboBox();
+            this.AreaFilter1 = new MetroSet_UI.Controls.MetroSetComboBox();
+            this.AreaFilter2 = new MetroSet_UI.Controls.MetroSetComboBox();
             this.AreaChart = new Syncfusion.Windows.Forms.Chart.ChartControl();
             this.DivisionTab = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
             this.DivisionExpander2 = new MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel();
             this.label16 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
+            this.DivisionFilter4 = new MetroSet_UI.Controls.MetroSetComboBox();
             this.DivisionFilter3 = new MetroSet_UI.Controls.MetroSetComboBox();
-            this.DivisionFilter2 = new MetroSet_UI.Controls.MetroSetComboBox();
             this.DivisionExpander1 = new MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel();
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
-            this.ChartTypeFilter6 = new MetroSet_UI.Controls.MetroSetComboBox();
-            this.DivisionFilter = new MetroSet_UI.Controls.MetroSetComboBox();
+            this.DivisionFilter1 = new MetroSet_UI.Controls.MetroSetComboBox();
+            this.DivisionFilter2 = new MetroSet_UI.Controls.MetroSetComboBox();
             this.DivisionChart = new Syncfusion.Windows.Forms.Chart.ChartControl();
             this.ObjectiveTab = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
             this.ObjectiveExpander2 = new MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel();
             this.label13 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
+            this.ObjectiveFilter4 = new MetroSet_UI.Controls.MetroSetComboBox();
             this.ObjectiveFilter3 = new MetroSet_UI.Controls.MetroSetComboBox();
-            this.ObjectiveFilter2 = new MetroSet_UI.Controls.MetroSetComboBox();
             this.ObjectiveExpander1 = new MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.ChartTypeFilter5 = new MetroSet_UI.Controls.MetroSetComboBox();
-            this.ObjectiveFilter = new MetroSet_UI.Controls.MetroSetComboBox();
+            this.ObjectiveFilter1 = new MetroSet_UI.Controls.MetroSetComboBox();
+            this.ObjectiveFilter2 = new MetroSet_UI.Controls.MetroSetComboBox();
             this.ObjectiveChart = new Syncfusion.Windows.Forms.Chart.ChartControl();
             this.GoalTab = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
             this.GoalExpander2 = new MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel();
             this.label4 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
+            this.GoalFilter4 = new MetroSet_UI.Controls.MetroSetComboBox();
             this.GoalFilter3 = new MetroSet_UI.Controls.MetroSetComboBox();
-            this.GoalFilter2 = new MetroSet_UI.Controls.MetroSetComboBox();
             this.GoalExpander1 = new MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.ChartTypeFilter4 = new MetroSet_UI.Controls.MetroSetComboBox();
-            this.GoalFilter = new MetroSet_UI.Controls.MetroSetComboBox();
+            this.GoalFilter1 = new MetroSet_UI.Controls.MetroSetComboBox();
+            this.GoalFilter2 = new MetroSet_UI.Controls.MetroSetComboBox();
             this.GoalChart = new Syncfusion.Windows.Forms.Chart.ChartControl();
             this.NpmTab = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
             this.NpmExpander2 = new MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel();
             this.label7 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
+            this.NpmFilter4 = new MetroSet_UI.Controls.MetroSetComboBox();
             this.NpmFilter3 = new MetroSet_UI.Controls.MetroSetComboBox();
-            this.NpmFilter2 = new MetroSet_UI.Controls.MetroSetComboBox();
             this.NpmExpander1 = new MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.NpmFilter = new MetroSet_UI.Controls.MetroSetComboBox();
-            this.ChartTypeFilter3 = new MetroSet_UI.Controls.MetroSetComboBox();
+            this.NpmFilter2 = new MetroSet_UI.Controls.MetroSetComboBox();
+            this.NpmFilter1 = new MetroSet_UI.Controls.MetroSetComboBox();
             this.NpmChart = new Syncfusion.Windows.Forms.Chart.ChartControl();
             this.BocTab = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
             this.BocExpander2 = new MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel();
             this.label35 = new System.Windows.Forms.Label();
             this.label36 = new System.Windows.Forms.Label();
+            this.BocFilter4 = new MetroSet_UI.Controls.MetroSetComboBox();
             this.BocFilter3 = new MetroSet_UI.Controls.MetroSetComboBox();
-            this.BocFilter2 = new MetroSet_UI.Controls.MetroSetComboBox();
             this.BocExpander1 = new MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.ChartTypeFilter2 = new MetroSet_UI.Controls.MetroSetComboBox();
-            this.BocFilter = new MetroSet_UI.Controls.MetroSetComboBox();
+            this.BocFilter1 = new MetroSet_UI.Controls.MetroSetComboBox();
+            this.BocFilter2 = new MetroSet_UI.Controls.MetroSetComboBox();
             this.BocChart = new Syncfusion.Windows.Forms.Chart.ChartControl();
             this.FundTab = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
             this.FundExpander2 = new MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel();
             this.label3 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
+            this.FundFilter4 = new MetroSet_UI.Controls.MetroSetComboBox();
             this.FundFilter3 = new MetroSet_UI.Controls.MetroSetComboBox();
-            this.FundFilter2 = new MetroSet_UI.Controls.MetroSetComboBox();
             this.FundExpander1 = new MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.ChartTypeFilter1 = new MetroSet_UI.Controls.MetroSetComboBox();
-            this.FundFilter = new MetroSet_UI.Controls.MetroSetComboBox();
+            this.FundFilter1 = new MetroSet_UI.Controls.MetroSetComboBox();
+            this.FundFilter2 = new MetroSet_UI.Controls.MetroSetComboBox();
             this.FundChart = new Syncfusion.Windows.Forms.Chart.ChartControl();
             this.SummaryTabControl = new Syncfusion.Windows.Forms.Tools.TabControlAdv();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
@@ -618,52 +619,52 @@ namespace BudgetExecution
             this.chartControl1.PrimaryYAxis.TitleColor = System.Drawing.Color.White;
             this.chartControl1.PrimaryYAxis.TitleFont = new System.Drawing.Font("Segoe UI", 14F);
             this.chartControl1.Rotation = 20F;
-            chartSeries1.FancyToolTip.ResizeInsideSymbol = true;
-            chartSeries1.Name = "Default0";
-            chartSeries1.Points.Add(1D, ((double)(55D)));
-            chartSeries1.Points.Add(2D, ((double)(70D)));
-            chartSeries1.Points.Add(3D, ((double)(80D)));
-            chartSeries1.Points.Add(4D, ((double)(65D)));
-            chartSeries1.Points.Add(5D, ((double)(75D)));
-            chartSeries1.Resolution = 0D;
-            chartSeries1.StackingGroup = "Default Group";
-            chartSeries1.Style.AltTagFormat = "";
-            chartSeries1.Style.Border.Color = System.Drawing.Color.Transparent;
-            chartSeries1.Style.Callout.Font.Facename = "Microsoft Sans Serif";
-            chartSeries1.Style.DrawTextShape = false;
-            chartSeries1.Style.Font.Facename = "Microsoft Sans Serif";
-            chartLineInfo1.Alignment = System.Drawing.Drawing2D.PenAlignment.Center;
-            chartLineInfo1.Color = System.Drawing.SystemColors.ControlText;
-            chartLineInfo1.DashPattern = null;
-            chartLineInfo1.DashStyle = System.Drawing.Drawing2D.DashStyle.Solid;
-            chartLineInfo1.Width = 1F;
-            chartCustomShapeInfo1.Border = chartLineInfo1;
-            chartCustomShapeInfo1.Color = System.Drawing.SystemColors.HighlightText;
-            chartCustomShapeInfo1.Type = Syncfusion.Windows.Forms.Chart.ChartCustomShape.Square;
-            chartSeries1.Style.TextShape = chartCustomShapeInfo1;
-            chartSeries1.Text = "Default0";
-            chartSeries1.Type = Syncfusion.Windows.Forms.Chart.ChartSeriesType.Pie;
-            chartSeries2.FancyToolTip.ResizeInsideSymbol = true;
-            chartSeries2.Name = "Default1";
-            chartSeries2.Points.Add(1D, ((double)(70D)));
-            chartSeries2.Points.Add(2D, ((double)(35D)));
-            chartSeries2.Points.Add(3D, ((double)(65D)));
-            chartSeries2.Points.Add(4D, ((double)(25D)));
-            chartSeries2.Points.Add(5D, ((double)(50D)));
-            chartSeries2.Resolution = 0D;
-            chartSeries2.StackingGroup = "Default Group";
-            chartSeries2.Style.AltTagFormat = "";
-            chartSeries2.Style.Callout.Font.Facename = "Microsoft Sans Serif";
-            chartSeries2.Style.DrawTextShape = false;
-            chartSeries2.Style.Font.Facename = "Microsoft Sans Serif";
-            chartCustomShapeInfo2.Border = chartLineInfo1;
-            chartCustomShapeInfo2.Color = System.Drawing.SystemColors.HighlightText;
-            chartCustomShapeInfo2.Type = Syncfusion.Windows.Forms.Chart.ChartCustomShape.Square;
-            chartSeries2.Style.TextShape = chartCustomShapeInfo2;
-            chartSeries2.Text = "Default1";
-            chartSeries2.Type = Syncfusion.Windows.Forms.Chart.ChartSeriesType.Pie;
-            this.chartControl1.Series.Add(chartSeries1);
-            this.chartControl1.Series.Add(chartSeries2);
+            chartSeries21.FancyToolTip.ResizeInsideSymbol = true;
+            chartSeries21.Name = "Default0";
+            chartSeries21.Points.Add(1D, ((double)(55D)));
+            chartSeries21.Points.Add(2D, ((double)(70D)));
+            chartSeries21.Points.Add(3D, ((double)(80D)));
+            chartSeries21.Points.Add(4D, ((double)(65D)));
+            chartSeries21.Points.Add(5D, ((double)(75D)));
+            chartSeries21.Resolution = 0D;
+            chartSeries21.StackingGroup = "Default Group";
+            chartSeries21.Style.AltTagFormat = "";
+            chartSeries21.Style.Border.Color = System.Drawing.Color.Transparent;
+            chartSeries21.Style.Callout.Font.Facename = "Microsoft Sans Serif";
+            chartSeries21.Style.DrawTextShape = false;
+            chartSeries21.Style.Font.Facename = "Microsoft Sans Serif";
+            chartLineInfo11.Alignment = System.Drawing.Drawing2D.PenAlignment.Center;
+            chartLineInfo11.Color = System.Drawing.SystemColors.ControlText;
+            chartLineInfo11.DashPattern = null;
+            chartLineInfo11.DashStyle = System.Drawing.Drawing2D.DashStyle.Solid;
+            chartLineInfo11.Width = 1F;
+            chartCustomShapeInfo21.Border = chartLineInfo11;
+            chartCustomShapeInfo21.Color = System.Drawing.SystemColors.HighlightText;
+            chartCustomShapeInfo21.Type = Syncfusion.Windows.Forms.Chart.ChartCustomShape.Square;
+            chartSeries21.Style.TextShape = chartCustomShapeInfo21;
+            chartSeries21.Text = "Default0";
+            chartSeries21.Type = Syncfusion.Windows.Forms.Chart.ChartSeriesType.Pie;
+            chartSeries22.FancyToolTip.ResizeInsideSymbol = true;
+            chartSeries22.Name = "Default1";
+            chartSeries22.Points.Add(1D, ((double)(70D)));
+            chartSeries22.Points.Add(2D, ((double)(35D)));
+            chartSeries22.Points.Add(3D, ((double)(65D)));
+            chartSeries22.Points.Add(4D, ((double)(25D)));
+            chartSeries22.Points.Add(5D, ((double)(50D)));
+            chartSeries22.Resolution = 0D;
+            chartSeries22.StackingGroup = "Default Group";
+            chartSeries22.Style.AltTagFormat = "";
+            chartSeries22.Style.Callout.Font.Facename = "Microsoft Sans Serif";
+            chartSeries22.Style.DrawTextShape = false;
+            chartSeries22.Style.Font.Facename = "Microsoft Sans Serif";
+            chartCustomShapeInfo22.Border = chartLineInfo11;
+            chartCustomShapeInfo22.Color = System.Drawing.SystemColors.HighlightText;
+            chartCustomShapeInfo22.Type = Syncfusion.Windows.Forms.Chart.ChartCustomShape.Square;
+            chartSeries22.Style.TextShape = chartCustomShapeInfo22;
+            chartSeries22.Text = "Default1";
+            chartSeries22.Type = Syncfusion.Windows.Forms.Chart.ChartSeriesType.Pie;
+            this.chartControl1.Series.Add(chartSeries21);
+            this.chartControl1.Series.Add(chartSeries22);
             this.chartControl1.Series3D = true;
             this.chartControl1.SeriesHighlight = true;
             this.chartControl1.ShadowColor = new Syncfusion.Drawing.BrushInfo(Syncfusion.Drawing.GradientStyle.PathRectangle, System.Drawing.SystemColors.WindowText, System.Drawing.Color.Silver);
@@ -680,16 +681,16 @@ namespace BudgetExecution
             this.chartControl1.Title.Name = "Default";
             this.chartControl1.Titles.Add(this.chartTitle1);
             this.chartControl1.ToolBar.EnableDefaultItems = false;
-            this.chartControl1.ToolBar.Items.Add(chartToolBarSaveItem1);
-            this.chartControl1.ToolBar.Items.Add(chartToolBarCopyItem1);
-            this.chartControl1.ToolBar.Items.Add(chartToolBarPrintItem1);
+            this.chartControl1.ToolBar.Items.Add(chartToolBarSaveItem11);
+            this.chartControl1.ToolBar.Items.Add(chartToolBarCopyItem11);
+            this.chartControl1.ToolBar.Items.Add(chartToolBarPrintItem11);
             this.chartControl1.ToolBar.Items.Add(chartToolBarPrintPreviewItem1);
             this.chartControl1.ToolBar.Items.Add(chartToolBarSplitter1);
-            this.chartControl1.ToolBar.Items.Add(chartToolBarPaletteItem1);
+            this.chartControl1.ToolBar.Items.Add(chartToolBarPaletteItem11);
             this.chartControl1.ToolBar.Items.Add(chartToolBarStyleItem1);
-            this.chartControl1.ToolBar.Items.Add(chartToolBarTypeItem1);
-            this.chartControl1.ToolBar.Items.Add(chartToolBarSeries3DItem1);
-            this.chartControl1.ToolBar.Items.Add(chartToolBarShowLegendItem1);
+            this.chartControl1.ToolBar.Items.Add(chartToolBarTypeItem11);
+            this.chartControl1.ToolBar.Items.Add(chartToolBarSeries3DItem11);
+            this.chartControl1.ToolBar.Items.Add(chartToolBarShowLegendItem11);
             // 
             // chartTitle1
             // 
@@ -1766,7 +1767,7 @@ namespace BudgetExecution
             this.button7.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
             this.button7.Location = new System.Drawing.Point(319, 321);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(105, 59);
+            this.button7.Size = new System.Drawing.Size(116, 59);
             this.button7.TabIndex = 3;
             this.button7.Text = "Remove";
             this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -1783,7 +1784,7 @@ namespace BudgetExecution
             this.button9.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
             this.button9.Location = new System.Drawing.Point(319, 222);
             this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(101, 67);
+            this.button9.Size = new System.Drawing.Size(116, 67);
             this.button9.TabIndex = 1;
             this.button9.Text = "Copy";
             this.button9.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -1882,52 +1883,52 @@ namespace BudgetExecution
             this.AccountChart.PrimaryYAxis.TitleColor = System.Drawing.Color.White;
             this.AccountChart.PrimaryYAxis.TitleFont = new System.Drawing.Font("Segoe UI", 14F);
             this.AccountChart.Rotation = 45F;
-            chartSeries3.FancyToolTip.ResizeInsideSymbol = true;
-            chartSeries3.Name = "Default0";
-            chartSeries3.Points.Add(1D, ((double)(55D)));
-            chartSeries3.Points.Add(2D, ((double)(70D)));
-            chartSeries3.Points.Add(3D, ((double)(80D)));
-            chartSeries3.Points.Add(4D, ((double)(65D)));
-            chartSeries3.Points.Add(5D, ((double)(75D)));
-            chartSeries3.Resolution = 0D;
-            chartSeries3.StackingGroup = "Default Group";
-            chartSeries3.Style.AltTagFormat = "";
-            chartSeries3.Style.Border.Color = System.Drawing.Color.Transparent;
-            chartSeries3.Style.Callout.Font.Facename = "Microsoft Sans Serif";
-            chartSeries3.Style.DrawTextShape = false;
-            chartSeries3.Style.Font.Facename = "Microsoft Sans Serif";
-            chartLineInfo2.Alignment = System.Drawing.Drawing2D.PenAlignment.Center;
-            chartLineInfo2.Color = System.Drawing.SystemColors.ControlText;
-            chartLineInfo2.DashPattern = null;
-            chartLineInfo2.DashStyle = System.Drawing.Drawing2D.DashStyle.Solid;
-            chartLineInfo2.Width = 1F;
-            chartCustomShapeInfo3.Border = chartLineInfo2;
-            chartCustomShapeInfo3.Color = System.Drawing.SystemColors.HighlightText;
-            chartCustomShapeInfo3.Type = Syncfusion.Windows.Forms.Chart.ChartCustomShape.Square;
-            chartSeries3.Style.TextShape = chartCustomShapeInfo3;
-            chartSeries3.Text = "Default0";
-            chartSeries3.Type = Syncfusion.Windows.Forms.Chart.ChartSeriesType.Pie;
-            chartSeries4.FancyToolTip.ResizeInsideSymbol = true;
-            chartSeries4.Name = "Default1";
-            chartSeries4.Points.Add(1D, ((double)(70D)));
-            chartSeries4.Points.Add(2D, ((double)(35D)));
-            chartSeries4.Points.Add(3D, ((double)(65D)));
-            chartSeries4.Points.Add(4D, ((double)(25D)));
-            chartSeries4.Points.Add(5D, ((double)(50D)));
-            chartSeries4.Resolution = 0D;
-            chartSeries4.StackingGroup = "Default Group";
-            chartSeries4.Style.AltTagFormat = "";
-            chartSeries4.Style.Callout.Font.Facename = "Microsoft Sans Serif";
-            chartSeries4.Style.DrawTextShape = false;
-            chartSeries4.Style.Font.Facename = "Microsoft Sans Serif";
-            chartCustomShapeInfo4.Border = chartLineInfo2;
-            chartCustomShapeInfo4.Color = System.Drawing.SystemColors.HighlightText;
-            chartCustomShapeInfo4.Type = Syncfusion.Windows.Forms.Chart.ChartCustomShape.Square;
-            chartSeries4.Style.TextShape = chartCustomShapeInfo4;
-            chartSeries4.Text = "Default1";
-            chartSeries4.Type = Syncfusion.Windows.Forms.Chart.ChartSeriesType.Pie;
-            this.AccountChart.Series.Add(chartSeries3);
-            this.AccountChart.Series.Add(chartSeries4);
+            chartSeries1.FancyToolTip.ResizeInsideSymbol = true;
+            chartSeries1.Name = "Default0";
+            chartSeries1.Points.Add(1D, ((double)(55D)));
+            chartSeries1.Points.Add(2D, ((double)(70D)));
+            chartSeries1.Points.Add(3D, ((double)(80D)));
+            chartSeries1.Points.Add(4D, ((double)(65D)));
+            chartSeries1.Points.Add(5D, ((double)(75D)));
+            chartSeries1.Resolution = 0D;
+            chartSeries1.StackingGroup = "Default Group";
+            chartSeries1.Style.AltTagFormat = "";
+            chartSeries1.Style.Border.Color = System.Drawing.Color.Transparent;
+            chartSeries1.Style.Callout.Font.Facename = "Microsoft Sans Serif";
+            chartSeries1.Style.DrawTextShape = false;
+            chartSeries1.Style.Font.Facename = "Microsoft Sans Serif";
+            chartLineInfo1.Alignment = System.Drawing.Drawing2D.PenAlignment.Center;
+            chartLineInfo1.Color = System.Drawing.SystemColors.ControlText;
+            chartLineInfo1.DashPattern = null;
+            chartLineInfo1.DashStyle = System.Drawing.Drawing2D.DashStyle.Solid;
+            chartLineInfo1.Width = 1F;
+            chartCustomShapeInfo1.Border = chartLineInfo1;
+            chartCustomShapeInfo1.Color = System.Drawing.SystemColors.HighlightText;
+            chartCustomShapeInfo1.Type = Syncfusion.Windows.Forms.Chart.ChartCustomShape.Square;
+            chartSeries1.Style.TextShape = chartCustomShapeInfo1;
+            chartSeries1.Text = "Default0";
+            chartSeries1.Type = Syncfusion.Windows.Forms.Chart.ChartSeriesType.Pie;
+            chartSeries2.FancyToolTip.ResizeInsideSymbol = true;
+            chartSeries2.Name = "Default1";
+            chartSeries2.Points.Add(1D, ((double)(70D)));
+            chartSeries2.Points.Add(2D, ((double)(35D)));
+            chartSeries2.Points.Add(3D, ((double)(65D)));
+            chartSeries2.Points.Add(4D, ((double)(25D)));
+            chartSeries2.Points.Add(5D, ((double)(50D)));
+            chartSeries2.Resolution = 0D;
+            chartSeries2.StackingGroup = "Default Group";
+            chartSeries2.Style.AltTagFormat = "";
+            chartSeries2.Style.Callout.Font.Facename = "Microsoft Sans Serif";
+            chartSeries2.Style.DrawTextShape = false;
+            chartSeries2.Style.Font.Facename = "Microsoft Sans Serif";
+            chartCustomShapeInfo2.Border = chartLineInfo1;
+            chartCustomShapeInfo2.Color = System.Drawing.SystemColors.HighlightText;
+            chartCustomShapeInfo2.Type = Syncfusion.Windows.Forms.Chart.ChartCustomShape.Square;
+            chartSeries2.Style.TextShape = chartCustomShapeInfo2;
+            chartSeries2.Text = "Default1";
+            chartSeries2.Type = Syncfusion.Windows.Forms.Chart.ChartSeriesType.Pie;
+            this.AccountChart.Series.Add(chartSeries1);
+            this.AccountChart.Series.Add(chartSeries2);
             this.AccountChart.Series3D = true;
             this.AccountChart.SeriesHighlight = true;
             this.AccountChart.ShadowColor = new Syncfusion.Drawing.BrushInfo(Syncfusion.Drawing.GradientStyle.PathRectangle, System.Drawing.SystemColors.WindowText, System.Drawing.Color.Silver);
@@ -1943,16 +1944,16 @@ namespace BudgetExecution
             this.AccountChart.Title.Font = new System.Drawing.Font("Segoe UI", 16F);
             this.AccountChart.Title.Name = "Default";
             this.AccountChart.ToolBar.EnableDefaultItems = false;
-            this.AccountChart.ToolBar.Items.Add(chartToolBarSaveItem2);
-            this.AccountChart.ToolBar.Items.Add(chartToolBarCopyItem2);
-            this.AccountChart.ToolBar.Items.Add(chartToolBarPrintItem2);
+            this.AccountChart.ToolBar.Items.Add(chartToolBarSaveItem1);
+            this.AccountChart.ToolBar.Items.Add(chartToolBarCopyItem1);
+            this.AccountChart.ToolBar.Items.Add(chartToolBarPrintItem1);
             this.AccountChart.ToolBar.Items.Add(chartToolBarPrintPreviewItem2);
             this.AccountChart.ToolBar.Items.Add(chartToolBarSplitter2);
-            this.AccountChart.ToolBar.Items.Add(chartToolBarPaletteItem2);
+            this.AccountChart.ToolBar.Items.Add(chartToolBarPaletteItem1);
             this.AccountChart.ToolBar.Items.Add(chartToolBarStyleItem2);
-            this.AccountChart.ToolBar.Items.Add(chartToolBarTypeItem2);
-            this.AccountChart.ToolBar.Items.Add(chartToolBarSeries3DItem2);
-            this.AccountChart.ToolBar.Items.Add(chartToolBarShowLegendItem2);
+            this.AccountChart.ToolBar.Items.Add(chartToolBarTypeItem1);
+            this.AccountChart.ToolBar.Items.Add(chartToolBarSeries3DItem1);
+            this.AccountChart.ToolBar.Items.Add(chartToolBarShowLegendItem1);
             // 
             // tabPageAdv6
             // 
@@ -2012,48 +2013,48 @@ namespace BudgetExecution
             // 
             // Grid
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Linen;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            this.Grid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle61.BackColor = System.Drawing.Color.Linen;
+            dataGridViewCellStyle61.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle61.ForeColor = System.Drawing.Color.Black;
+            this.Grid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle61;
             this.Grid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.Grid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCellsExceptHeaders;
             this.Grid.BackgroundColor = System.Drawing.Color.SlateGray;
             this.Grid.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Grid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.LightSteelBlue;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.Info;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.Grid.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle62.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle62.BackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle62.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle62.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle62.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle62.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle62.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Grid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle62;
+            dataGridViewCellStyle63.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle63.BackColor = System.Drawing.Color.LightSteelBlue;
+            dataGridViewCellStyle63.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle63.ForeColor = System.Drawing.SystemColors.Info;
+            dataGridViewCellStyle63.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle63.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle63.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Grid.DefaultCellStyle = dataGridViewCellStyle63;
             this.Grid.EnableHeadersVisualStyles = false;
             this.Grid.GridColor = System.Drawing.SystemColors.ControlDarkDark;
             this.Grid.Location = new System.Drawing.Point(19, 88);
             this.Grid.Name = "Grid";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Grid.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle64.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle64.BackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle64.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle64.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle64.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle64.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle64.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Grid.RowHeadersDefaultCellStyle = dataGridViewCellStyle64;
             this.Grid.RowHeadersWidth = 30;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.LightSteelBlue;
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle5.NullValue = null;
-            this.Grid.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle65.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle65.BackColor = System.Drawing.Color.LightSteelBlue;
+            dataGridViewCellStyle65.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle65.NullValue = null;
+            this.Grid.RowsDefaultCellStyle = dataGridViewCellStyle65;
             this.Grid.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.LightSteelBlue;
             this.Grid.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Grid.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
@@ -2138,7 +2139,8 @@ namespace BudgetExecution
             // FilterGroupBox
             // 
             this.FilterGroupBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.FilterGroupBox.Controls.Add(this.label34);
+            this.FilterGroupBox.Controls.Add(this.lblPrc);
+            this.FilterGroupBox.Controls.Add(this.lblBoc);
             this.FilterGroupBox.Controls.Add(this.label33);
             this.FilterGroupBox.Controls.Add(this.GridAccountFilter);
             this.FilterGroupBox.Controls.Add(this.GridBocFilter);
@@ -2151,15 +2153,25 @@ namespace BudgetExecution
             this.FilterGroupBox.TabStop = false;
             this.FilterGroupBox.Text = "Filters";
             // 
-            // label34
+            // lblPrc
             // 
-            this.label34.AutoSize = true;
-            this.label34.ForeColor = System.Drawing.SystemColors.Info;
-            this.label34.Location = new System.Drawing.Point(23, 132);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(154, 20);
-            this.label34.TabIndex = 6;
-            this.label34.Text = "Budget Object Class";
+            this.lblPrc.AutoSize = true;
+            this.lblPrc.ForeColor = System.Drawing.SystemColors.Info;
+            this.lblPrc.Location = new System.Drawing.Point(44, 308);
+            this.lblPrc.Name = "lblPrc";
+            this.lblPrc.Size = new System.Drawing.Size(105, 20);
+            this.lblPrc.TabIndex = 7;
+            this.lblPrc.Text = "PRC Account\r\n";
+            // 
+            // lblBoc
+            // 
+            this.lblBoc.AutoSize = true;
+            this.lblBoc.ForeColor = System.Drawing.SystemColors.Info;
+            this.lblBoc.Location = new System.Drawing.Point(22, 177);
+            this.lblBoc.Name = "lblBoc";
+            this.lblBoc.Size = new System.Drawing.Size(154, 20);
+            this.lblBoc.TabIndex = 6;
+            this.lblBoc.Text = "Budget Object Class";
             // 
             // label33
             // 
@@ -2187,7 +2199,7 @@ namespace BudgetExecution
             this.GridAccountFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.GridAccountFilter.FormattingEnabled = true;
             this.GridAccountFilter.ItemHeight = 30;
-            this.GridAccountFilter.Location = new System.Drawing.Point(15, 246);
+            this.GridAccountFilter.Location = new System.Drawing.Point(15, 331);
             this.GridAccountFilter.MaxDropDownItems = 50;
             this.GridAccountFilter.Name = "GridAccountFilter";
             this.GridAccountFilter.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
@@ -2215,7 +2227,7 @@ namespace BudgetExecution
             this.GridBocFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.GridBocFilter.FormattingEnabled = true;
             this.GridBocFilter.ItemHeight = 30;
-            this.GridBocFilter.Location = new System.Drawing.Point(15, 155);
+            this.GridBocFilter.Location = new System.Drawing.Point(15, 200);
             this.GridBocFilter.Name = "GridBocFilter";
             this.GridBocFilter.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.GridBocFilter.SelectedItemForeColor = System.Drawing.Color.White;
@@ -2243,7 +2255,7 @@ namespace BudgetExecution
             this.GridFundFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.GridFundFilter.FormattingEnabled = true;
             this.GridFundFilter.ItemHeight = 30;
-            this.GridFundFilter.Location = new System.Drawing.Point(15, 61);
+            this.GridFundFilter.Location = new System.Drawing.Point(15, 67);
             this.GridFundFilter.MaxDropDownItems = 15;
             this.GridFundFilter.Name = "GridFundFilter";
             this.GridFundFilter.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
@@ -2279,8 +2291,8 @@ namespace BudgetExecution
             this.ProjectExpander2.ButtonStyle = MakarovDev.ExpandCollapsePanel.ExpandCollapseButton.ExpandButtonStyle.Circle;
             this.ProjectExpander2.Controls.Add(this.label22);
             this.ProjectExpander2.Controls.Add(this.label30);
+            this.ProjectExpander2.Controls.Add(this.ProjectFilter4);
             this.ProjectExpander2.Controls.Add(this.ProjectFilter3);
-            this.ProjectExpander2.Controls.Add(this.ProjectFilter2);
             this.ProjectExpander2.ExpandedHeight = 292;
             this.ProjectExpander2.IsExpanded = false;
             this.ProjectExpander2.Location = new System.Drawing.Point(1280, 417);
@@ -2312,6 +2324,43 @@ namespace BudgetExecution
             this.label30.TabIndex = 118;
             this.label30.Text = "Grouping";
             // 
+            // ProjectFilter4
+            // 
+            this.ProjectFilter4.AllowDrop = true;
+            this.ProjectFilter4.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.ProjectFilter4.BackColor = System.Drawing.Color.Transparent;
+            this.ProjectFilter4.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.ProjectFilter4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.ProjectFilter4.CausesValidation = false;
+            this.ProjectFilter4.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.ProjectFilter4.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.ProjectFilter4.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.ProjectFilter4.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.ProjectFilter4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ProjectFilter4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ProjectFilter4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.ProjectFilter4.FormattingEnabled = true;
+            this.ProjectFilter4.ItemHeight = 30;
+            this.ProjectFilter4.Items.AddRange(new object[] {
+            "Fund",
+            "BOC",
+            "NPM",
+            "Goal",
+            "Objective",
+            "RC"});
+            this.ProjectFilter4.Location = new System.Drawing.Point(24, 229);
+            this.ProjectFilter4.MaxDropDownItems = 20;
+            this.ProjectFilter4.Name = "ProjectFilter4";
+            this.ProjectFilter4.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.ProjectFilter4.SelectedItemForeColor = System.Drawing.Color.White;
+            this.ProjectFilter4.Size = new System.Drawing.Size(173, 36);
+            this.ProjectFilter4.Style = MetroSet_UI.Design.Style.Dark;
+            this.ProjectFilter4.StyleManager = null;
+            this.ProjectFilter4.TabIndex = 108;
+            this.ProjectFilter4.Tag = "RC";
+            this.ProjectFilter4.ThemeAuthor = "Narwin";
+            this.ProjectFilter4.ThemeName = "MetroDark";
+            // 
             // ProjectFilter3
             // 
             this.ProjectFilter3.AllowDrop = true;
@@ -2330,14 +2379,11 @@ namespace BudgetExecution
             this.ProjectFilter3.FormattingEnabled = true;
             this.ProjectFilter3.ItemHeight = 30;
             this.ProjectFilter3.Items.AddRange(new object[] {
-            "Fund",
-            "BOC",
-            "NPM",
-            "Goal",
-            "Objective",
-            "RC",
-            "ProgramArea"});
-            this.ProjectFilter3.Location = new System.Drawing.Point(24, 229);
+            "Total ",
+            "Count",
+            "Average",
+            "Ratio"});
+            this.ProjectFilter3.Location = new System.Drawing.Point(24, 91);
             this.ProjectFilter3.MaxDropDownItems = 20;
             this.ProjectFilter3.Name = "ProjectFilter3";
             this.ProjectFilter3.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
@@ -2346,44 +2392,9 @@ namespace BudgetExecution
             this.ProjectFilter3.Style = MetroSet_UI.Design.Style.Dark;
             this.ProjectFilter3.StyleManager = null;
             this.ProjectFilter3.TabIndex = 108;
-            this.ProjectFilter3.Tag = "Division";
+            this.ProjectFilter3.Tag = "ProgramProjectName";
             this.ProjectFilter3.ThemeAuthor = "Narwin";
             this.ProjectFilter3.ThemeName = "MetroDark";
-            // 
-            // ProjectFilter2
-            // 
-            this.ProjectFilter2.AllowDrop = true;
-            this.ProjectFilter2.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
-            this.ProjectFilter2.BackColor = System.Drawing.Color.Transparent;
-            this.ProjectFilter2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
-            this.ProjectFilter2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
-            this.ProjectFilter2.CausesValidation = false;
-            this.ProjectFilter2.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.ProjectFilter2.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.ProjectFilter2.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.ProjectFilter2.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.ProjectFilter2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.ProjectFilter2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ProjectFilter2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.ProjectFilter2.FormattingEnabled = true;
-            this.ProjectFilter2.ItemHeight = 30;
-            this.ProjectFilter2.Items.AddRange(new object[] {
-            "Total ",
-            "Count",
-            "Average",
-            "Ratio"});
-            this.ProjectFilter2.Location = new System.Drawing.Point(24, 91);
-            this.ProjectFilter2.MaxDropDownItems = 20;
-            this.ProjectFilter2.Name = "ProjectFilter2";
-            this.ProjectFilter2.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.ProjectFilter2.SelectedItemForeColor = System.Drawing.Color.White;
-            this.ProjectFilter2.Size = new System.Drawing.Size(173, 36);
-            this.ProjectFilter2.Style = MetroSet_UI.Design.Style.Dark;
-            this.ProjectFilter2.StyleManager = null;
-            this.ProjectFilter2.TabIndex = 108;
-            this.ProjectFilter2.Tag = "ProgramProjectName";
-            this.ProjectFilter2.ThemeAuthor = "Narwin";
-            this.ProjectFilter2.ThemeName = "MetroDark";
             // 
             // ProjectExpander1
             // 
@@ -2392,8 +2403,8 @@ namespace BudgetExecution
             this.ProjectExpander1.ButtonStyle = MakarovDev.ExpandCollapsePanel.ExpandCollapseButton.ExpandButtonStyle.Circle;
             this.ProjectExpander1.Controls.Add(this.label23);
             this.ProjectExpander1.Controls.Add(this.label24);
-            this.ProjectExpander1.Controls.Add(this.ChartTypeFilter8);
-            this.ProjectExpander1.Controls.Add(this.ProjectFilter);
+            this.ProjectExpander1.Controls.Add(this.ProjectFilter1);
+            this.ProjectExpander1.Controls.Add(this.ProjectFilter2);
             this.ProjectExpander1.ExpandedHeight = 268;
             this.ProjectExpander1.IsExpanded = false;
             this.ProjectExpander1.Location = new System.Drawing.Point(1280, 100);
@@ -2425,72 +2436,72 @@ namespace BudgetExecution
             this.label24.TabIndex = 118;
             this.label24.Text = "Chart Type";
             // 
-            // ChartTypeFilter8
+            // ProjectFilter1
             // 
-            this.ChartTypeFilter8.AllowDrop = true;
-            this.ChartTypeFilter8.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
-            this.ChartTypeFilter8.BackColor = System.Drawing.Color.Transparent;
-            this.ChartTypeFilter8.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
-            this.ChartTypeFilter8.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
-            this.ChartTypeFilter8.CausesValidation = false;
-            this.ChartTypeFilter8.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.ChartTypeFilter8.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.ChartTypeFilter8.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.ChartTypeFilter8.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.ChartTypeFilter8.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.ChartTypeFilter8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ChartTypeFilter8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.ChartTypeFilter8.FormattingEnabled = true;
-            this.ChartTypeFilter8.ItemHeight = 30;
-            this.ChartTypeFilter8.Items.AddRange(new object[] {
+            this.ProjectFilter1.AllowDrop = true;
+            this.ProjectFilter1.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.ProjectFilter1.BackColor = System.Drawing.Color.Transparent;
+            this.ProjectFilter1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.ProjectFilter1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.ProjectFilter1.CausesValidation = false;
+            this.ProjectFilter1.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.ProjectFilter1.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.ProjectFilter1.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.ProjectFilter1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.ProjectFilter1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ProjectFilter1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ProjectFilter1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.ProjectFilter1.FormattingEnabled = true;
+            this.ProjectFilter1.ItemHeight = 30;
+            this.ProjectFilter1.Items.AddRange(new object[] {
             "Pie ",
             "Column"});
-            this.ChartTypeFilter8.Location = new System.Drawing.Point(24, 99);
-            this.ChartTypeFilter8.MaxDropDownItems = 20;
-            this.ChartTypeFilter8.Name = "ChartTypeFilter8";
-            this.ChartTypeFilter8.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.ChartTypeFilter8.SelectedItemForeColor = System.Drawing.Color.White;
-            this.ChartTypeFilter8.Size = new System.Drawing.Size(173, 36);
-            this.ChartTypeFilter8.Style = MetroSet_UI.Design.Style.Dark;
-            this.ChartTypeFilter8.StyleManager = null;
-            this.ChartTypeFilter8.TabIndex = 113;
-            this.ChartTypeFilter8.Tag = "Division";
-            this.ChartTypeFilter8.ThemeAuthor = "Narwin";
-            this.ChartTypeFilter8.ThemeName = "MetroDark";
+            this.ProjectFilter1.Location = new System.Drawing.Point(24, 99);
+            this.ProjectFilter1.MaxDropDownItems = 20;
+            this.ProjectFilter1.Name = "ProjectFilter1";
+            this.ProjectFilter1.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.ProjectFilter1.SelectedItemForeColor = System.Drawing.Color.White;
+            this.ProjectFilter1.Size = new System.Drawing.Size(173, 36);
+            this.ProjectFilter1.Style = MetroSet_UI.Design.Style.Dark;
+            this.ProjectFilter1.StyleManager = null;
+            this.ProjectFilter1.TabIndex = 113;
+            this.ProjectFilter1.Tag = "Division";
+            this.ProjectFilter1.ThemeAuthor = "Narwin";
+            this.ProjectFilter1.ThemeName = "MetroDark";
             // 
-            // ProjectFilter
+            // ProjectFilter2
             // 
-            this.ProjectFilter.AllowDrop = true;
-            this.ProjectFilter.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
-            this.ProjectFilter.BackColor = System.Drawing.Color.Transparent;
-            this.ProjectFilter.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
-            this.ProjectFilter.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
-            this.ProjectFilter.CausesValidation = false;
-            this.ProjectFilter.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.ProjectFilter.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.ProjectFilter.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.ProjectFilter.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.ProjectFilter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.ProjectFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.ProjectFilter.FormattingEnabled = true;
-            this.ProjectFilter.ItemHeight = 30;
-            this.ProjectFilter.Items.AddRange(new object[] {
+            this.ProjectFilter2.AllowDrop = true;
+            this.ProjectFilter2.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.ProjectFilter2.BackColor = System.Drawing.Color.Transparent;
+            this.ProjectFilter2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.ProjectFilter2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.ProjectFilter2.CausesValidation = false;
+            this.ProjectFilter2.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.ProjectFilter2.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.ProjectFilter2.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.ProjectFilter2.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.ProjectFilter2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ProjectFilter2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.ProjectFilter2.FormattingEnabled = true;
+            this.ProjectFilter2.ItemHeight = 30;
+            this.ProjectFilter2.Items.AddRange(new object[] {
             "Total ",
             "Count",
             "Average",
             "Ratio"});
-            this.ProjectFilter.Location = new System.Drawing.Point(24, 212);
-            this.ProjectFilter.MaxDropDownItems = 20;
-            this.ProjectFilter.Name = "ProjectFilter";
-            this.ProjectFilter.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.ProjectFilter.SelectedItemForeColor = System.Drawing.Color.White;
-            this.ProjectFilter.Size = new System.Drawing.Size(173, 36);
-            this.ProjectFilter.Style = MetroSet_UI.Design.Style.Dark;
-            this.ProjectFilter.StyleManager = null;
-            this.ProjectFilter.TabIndex = 1;
-            this.ProjectFilter.Tag = "Division";
-            this.ProjectFilter.ThemeAuthor = "Narwin";
-            this.ProjectFilter.ThemeName = "MetroDark";
+            this.ProjectFilter2.Location = new System.Drawing.Point(24, 212);
+            this.ProjectFilter2.MaxDropDownItems = 20;
+            this.ProjectFilter2.Name = "ProjectFilter2";
+            this.ProjectFilter2.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.ProjectFilter2.SelectedItemForeColor = System.Drawing.Color.White;
+            this.ProjectFilter2.Size = new System.Drawing.Size(173, 36);
+            this.ProjectFilter2.Style = MetroSet_UI.Design.Style.Dark;
+            this.ProjectFilter2.StyleManager = null;
+            this.ProjectFilter2.TabIndex = 1;
+            this.ProjectFilter2.Tag = "Division";
+            this.ProjectFilter2.ThemeAuthor = "Narwin";
+            this.ProjectFilter2.ThemeName = "MetroDark";
             // 
             // ProjectChart
             // 
@@ -2554,49 +2565,49 @@ namespace BudgetExecution
             this.ProjectChart.PrimaryYAxis.TitleFont = new System.Drawing.Font("Segoe UI", 14F);
             this.ProjectChart.RealMode3D = true;
             this.ProjectChart.Rotation = 45F;
-            chartSeries5.FancyToolTip.ResizeInsideSymbol = true;
-            chartSeries5.Name = "Default0";
-            chartSeries5.Points.Add(1D, ((double)(55D)));
-            chartSeries5.Points.Add(2D, ((double)(70D)));
-            chartSeries5.Points.Add(3D, ((double)(80D)));
-            chartSeries5.Points.Add(4D, ((double)(65D)));
-            chartSeries5.Points.Add(5D, ((double)(75D)));
-            chartSeries5.Resolution = 0D;
-            chartSeries5.StackingGroup = "Default Group";
-            chartSeries5.Style.AltTagFormat = "";
-            chartSeries5.Style.Callout.Font.Facename = "Microsoft Sans Serif";
-            chartSeries5.Style.DrawTextShape = false;
-            chartSeries5.Style.Font.Facename = "Microsoft Sans Serif";
-            chartLineInfo3.Alignment = System.Drawing.Drawing2D.PenAlignment.Center;
-            chartLineInfo3.Color = System.Drawing.SystemColors.ControlText;
-            chartLineInfo3.DashPattern = null;
-            chartLineInfo3.DashStyle = System.Drawing.Drawing2D.DashStyle.Solid;
-            chartLineInfo3.Width = 1F;
-            chartCustomShapeInfo5.Border = chartLineInfo3;
-            chartCustomShapeInfo5.Color = System.Drawing.SystemColors.HighlightText;
-            chartCustomShapeInfo5.Type = Syncfusion.Windows.Forms.Chart.ChartCustomShape.Square;
-            chartSeries5.Style.TextShape = chartCustomShapeInfo5;
-            chartSeries5.Text = "Default0";
-            chartSeries6.FancyToolTip.ResizeInsideSymbol = true;
-            chartSeries6.Name = "Default1";
-            chartSeries6.Points.Add(1D, ((double)(70D)));
-            chartSeries6.Points.Add(2D, ((double)(35D)));
-            chartSeries6.Points.Add(3D, ((double)(65D)));
-            chartSeries6.Points.Add(4D, ((double)(25D)));
-            chartSeries6.Points.Add(5D, ((double)(50D)));
-            chartSeries6.Resolution = 0D;
-            chartSeries6.StackingGroup = "Default Group";
-            chartSeries6.Style.AltTagFormat = "";
-            chartSeries6.Style.Callout.Font.Facename = "Microsoft Sans Serif";
-            chartSeries6.Style.DrawTextShape = false;
-            chartSeries6.Style.Font.Facename = "Microsoft Sans Serif";
-            chartCustomShapeInfo6.Border = chartLineInfo3;
-            chartCustomShapeInfo6.Color = System.Drawing.SystemColors.HighlightText;
-            chartCustomShapeInfo6.Type = Syncfusion.Windows.Forms.Chart.ChartCustomShape.Square;
-            chartSeries6.Style.TextShape = chartCustomShapeInfo6;
-            chartSeries6.Text = "Default1";
-            this.ProjectChart.Series.Add(chartSeries5);
-            this.ProjectChart.Series.Add(chartSeries6);
+            chartSeries3.FancyToolTip.ResizeInsideSymbol = true;
+            chartSeries3.Name = "Default0";
+            chartSeries3.Points.Add(1D, ((double)(55D)));
+            chartSeries3.Points.Add(2D, ((double)(70D)));
+            chartSeries3.Points.Add(3D, ((double)(80D)));
+            chartSeries3.Points.Add(4D, ((double)(65D)));
+            chartSeries3.Points.Add(5D, ((double)(75D)));
+            chartSeries3.Resolution = 0D;
+            chartSeries3.StackingGroup = "Default Group";
+            chartSeries3.Style.AltTagFormat = "";
+            chartSeries3.Style.Callout.Font.Facename = "Microsoft Sans Serif";
+            chartSeries3.Style.DrawTextShape = false;
+            chartSeries3.Style.Font.Facename = "Microsoft Sans Serif";
+            chartLineInfo2.Alignment = System.Drawing.Drawing2D.PenAlignment.Center;
+            chartLineInfo2.Color = System.Drawing.SystemColors.ControlText;
+            chartLineInfo2.DashPattern = null;
+            chartLineInfo2.DashStyle = System.Drawing.Drawing2D.DashStyle.Solid;
+            chartLineInfo2.Width = 1F;
+            chartCustomShapeInfo3.Border = chartLineInfo2;
+            chartCustomShapeInfo3.Color = System.Drawing.SystemColors.HighlightText;
+            chartCustomShapeInfo3.Type = Syncfusion.Windows.Forms.Chart.ChartCustomShape.Square;
+            chartSeries3.Style.TextShape = chartCustomShapeInfo3;
+            chartSeries3.Text = "Default0";
+            chartSeries4.FancyToolTip.ResizeInsideSymbol = true;
+            chartSeries4.Name = "Default1";
+            chartSeries4.Points.Add(1D, ((double)(70D)));
+            chartSeries4.Points.Add(2D, ((double)(35D)));
+            chartSeries4.Points.Add(3D, ((double)(65D)));
+            chartSeries4.Points.Add(4D, ((double)(25D)));
+            chartSeries4.Points.Add(5D, ((double)(50D)));
+            chartSeries4.Resolution = 0D;
+            chartSeries4.StackingGroup = "Default Group";
+            chartSeries4.Style.AltTagFormat = "";
+            chartSeries4.Style.Callout.Font.Facename = "Microsoft Sans Serif";
+            chartSeries4.Style.DrawTextShape = false;
+            chartSeries4.Style.Font.Facename = "Microsoft Sans Serif";
+            chartCustomShapeInfo4.Border = chartLineInfo2;
+            chartCustomShapeInfo4.Color = System.Drawing.SystemColors.HighlightText;
+            chartCustomShapeInfo4.Type = Syncfusion.Windows.Forms.Chart.ChartCustomShape.Square;
+            chartSeries4.Style.TextShape = chartCustomShapeInfo4;
+            chartSeries4.Text = "Default1";
+            this.ProjectChart.Series.Add(chartSeries3);
+            this.ProjectChart.Series.Add(chartSeries4);
             this.ProjectChart.Series3D = true;
             this.ProjectChart.SeriesHighlight = true;
             this.ProjectChart.ShadowColor = new Syncfusion.Drawing.BrushInfo(Syncfusion.Drawing.GradientStyle.PathRectangle, System.Drawing.SystemColors.WindowText, System.Drawing.Color.Silver);
@@ -2612,13 +2623,13 @@ namespace BudgetExecution
             this.ProjectChart.Title.Font = new System.Drawing.Font("Segoe UI", 16F);
             this.ProjectChart.Title.Name = "Default";
             this.ProjectChart.ToolBar.EnableDefaultItems = false;
-            this.ProjectChart.ToolBar.Items.Add(chartToolBarSaveItem3);
-            this.ProjectChart.ToolBar.Items.Add(chartToolBarCopyItem3);
-            this.ProjectChart.ToolBar.Items.Add(chartToolBarPrintItem3);
-            this.ProjectChart.ToolBar.Items.Add(chartToolBarPaletteItem3);
-            this.ProjectChart.ToolBar.Items.Add(chartToolBarTypeItem3);
-            this.ProjectChart.ToolBar.Items.Add(chartToolBarSeries3DItem3);
-            this.ProjectChart.ToolBar.Items.Add(chartToolBarShowLegendItem3);
+            this.ProjectChart.ToolBar.Items.Add(chartToolBarSaveItem2);
+            this.ProjectChart.ToolBar.Items.Add(chartToolBarCopyItem2);
+            this.ProjectChart.ToolBar.Items.Add(chartToolBarPrintItem2);
+            this.ProjectChart.ToolBar.Items.Add(chartToolBarPaletteItem2);
+            this.ProjectChart.ToolBar.Items.Add(chartToolBarTypeItem2);
+            this.ProjectChart.ToolBar.Items.Add(chartToolBarSeries3DItem2);
+            this.ProjectChart.ToolBar.Items.Add(chartToolBarShowLegendItem2);
             // 
             // buttonEditChildButton1
             // 
@@ -2654,8 +2665,8 @@ namespace BudgetExecution
             this.AreaExpander2.ButtonStyle = MakarovDev.ExpandCollapsePanel.ExpandCollapseButton.ExpandButtonStyle.Circle;
             this.AreaExpander2.Controls.Add(this.label19);
             this.AreaExpander2.Controls.Add(this.label29);
+            this.AreaExpander2.Controls.Add(this.AreaFilter4);
             this.AreaExpander2.Controls.Add(this.AreaFilter3);
-            this.AreaExpander2.Controls.Add(this.AreaFilter2);
             this.AreaExpander2.ExpandedHeight = 292;
             this.AreaExpander2.IsExpanded = false;
             this.AreaExpander2.Location = new System.Drawing.Point(1280, 417);
@@ -2687,6 +2698,43 @@ namespace BudgetExecution
             this.label29.TabIndex = 118;
             this.label29.Text = "Grouping";
             // 
+            // AreaFilter4
+            // 
+            this.AreaFilter4.AllowDrop = true;
+            this.AreaFilter4.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.AreaFilter4.BackColor = System.Drawing.Color.Transparent;
+            this.AreaFilter4.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.AreaFilter4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.AreaFilter4.CausesValidation = false;
+            this.AreaFilter4.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.AreaFilter4.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.AreaFilter4.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.AreaFilter4.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.AreaFilter4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.AreaFilter4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AreaFilter4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.AreaFilter4.FormattingEnabled = true;
+            this.AreaFilter4.ItemHeight = 30;
+            this.AreaFilter4.Items.AddRange(new object[] {
+            "Fund",
+            "BOC",
+            "NPM",
+            "Goal",
+            "Objective",
+            "RC"});
+            this.AreaFilter4.Location = new System.Drawing.Point(23, 215);
+            this.AreaFilter4.MaxDropDownItems = 20;
+            this.AreaFilter4.Name = "AreaFilter4";
+            this.AreaFilter4.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.AreaFilter4.SelectedItemForeColor = System.Drawing.Color.White;
+            this.AreaFilter4.Size = new System.Drawing.Size(173, 36);
+            this.AreaFilter4.Style = MetroSet_UI.Design.Style.Dark;
+            this.AreaFilter4.StyleManager = null;
+            this.AreaFilter4.TabIndex = 108;
+            this.AreaFilter4.Tag = "RC";
+            this.AreaFilter4.ThemeAuthor = "Narwin";
+            this.AreaFilter4.ThemeName = "MetroDark";
+            // 
             // AreaFilter3
             // 
             this.AreaFilter3.AllowDrop = true;
@@ -2705,14 +2753,11 @@ namespace BudgetExecution
             this.AreaFilter3.FormattingEnabled = true;
             this.AreaFilter3.ItemHeight = 30;
             this.AreaFilter3.Items.AddRange(new object[] {
-            "Fund",
-            "BOC",
-            "NPM",
-            "Goal",
-            "Objective",
-            "RC",
-            "ProgramProject"});
-            this.AreaFilter3.Location = new System.Drawing.Point(23, 215);
+            "Total ",
+            "Count",
+            "Average",
+            "Ratio"});
+            this.AreaFilter3.Location = new System.Drawing.Point(23, 82);
             this.AreaFilter3.MaxDropDownItems = 20;
             this.AreaFilter3.Name = "AreaFilter3";
             this.AreaFilter3.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
@@ -2721,44 +2766,9 @@ namespace BudgetExecution
             this.AreaFilter3.Style = MetroSet_UI.Design.Style.Dark;
             this.AreaFilter3.StyleManager = null;
             this.AreaFilter3.TabIndex = 108;
-            this.AreaFilter3.Tag = "Division";
+            this.AreaFilter3.Tag = "ProgramAreaName";
             this.AreaFilter3.ThemeAuthor = "Narwin";
             this.AreaFilter3.ThemeName = "MetroDark";
-            // 
-            // AreaFilter2
-            // 
-            this.AreaFilter2.AllowDrop = true;
-            this.AreaFilter2.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
-            this.AreaFilter2.BackColor = System.Drawing.Color.Transparent;
-            this.AreaFilter2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
-            this.AreaFilter2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
-            this.AreaFilter2.CausesValidation = false;
-            this.AreaFilter2.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.AreaFilter2.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.AreaFilter2.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.AreaFilter2.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.AreaFilter2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.AreaFilter2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AreaFilter2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.AreaFilter2.FormattingEnabled = true;
-            this.AreaFilter2.ItemHeight = 30;
-            this.AreaFilter2.Items.AddRange(new object[] {
-            "Total ",
-            "Count",
-            "Average",
-            "Ratio"});
-            this.AreaFilter2.Location = new System.Drawing.Point(23, 82);
-            this.AreaFilter2.MaxDropDownItems = 20;
-            this.AreaFilter2.Name = "AreaFilter2";
-            this.AreaFilter2.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.AreaFilter2.SelectedItemForeColor = System.Drawing.Color.White;
-            this.AreaFilter2.Size = new System.Drawing.Size(173, 36);
-            this.AreaFilter2.Style = MetroSet_UI.Design.Style.Dark;
-            this.AreaFilter2.StyleManager = null;
-            this.AreaFilter2.TabIndex = 108;
-            this.AreaFilter2.Tag = "ProgramAreaName";
-            this.AreaFilter2.ThemeAuthor = "Narwin";
-            this.AreaFilter2.ThemeName = "MetroDark";
             // 
             // AreaExpander1
             // 
@@ -2767,8 +2777,8 @@ namespace BudgetExecution
             this.AreaExpander1.ButtonStyle = MakarovDev.ExpandCollapsePanel.ExpandCollapseButton.ExpandButtonStyle.Circle;
             this.AreaExpander1.Controls.Add(this.label20);
             this.AreaExpander1.Controls.Add(this.label21);
-            this.AreaExpander1.Controls.Add(this.ChartTypeFilter7);
-            this.AreaExpander1.Controls.Add(this.AreaFilter);
+            this.AreaExpander1.Controls.Add(this.AreaFilter1);
+            this.AreaExpander1.Controls.Add(this.AreaFilter2);
             this.AreaExpander1.ExpandedHeight = 260;
             this.AreaExpander1.IsExpanded = false;
             this.AreaExpander1.Location = new System.Drawing.Point(1280, 100);
@@ -2800,72 +2810,72 @@ namespace BudgetExecution
             this.label21.TabIndex = 118;
             this.label21.Text = "Chart Type";
             // 
-            // ChartTypeFilter7
+            // AreaFilter1
             // 
-            this.ChartTypeFilter7.AllowDrop = true;
-            this.ChartTypeFilter7.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
-            this.ChartTypeFilter7.BackColor = System.Drawing.Color.Transparent;
-            this.ChartTypeFilter7.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
-            this.ChartTypeFilter7.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
-            this.ChartTypeFilter7.CausesValidation = false;
-            this.ChartTypeFilter7.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.ChartTypeFilter7.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.ChartTypeFilter7.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.ChartTypeFilter7.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.ChartTypeFilter7.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.ChartTypeFilter7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ChartTypeFilter7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.ChartTypeFilter7.FormattingEnabled = true;
-            this.ChartTypeFilter7.ItemHeight = 30;
-            this.ChartTypeFilter7.Items.AddRange(new object[] {
+            this.AreaFilter1.AllowDrop = true;
+            this.AreaFilter1.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.AreaFilter1.BackColor = System.Drawing.Color.Transparent;
+            this.AreaFilter1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.AreaFilter1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.AreaFilter1.CausesValidation = false;
+            this.AreaFilter1.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.AreaFilter1.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.AreaFilter1.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.AreaFilter1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.AreaFilter1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.AreaFilter1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AreaFilter1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.AreaFilter1.FormattingEnabled = true;
+            this.AreaFilter1.ItemHeight = 30;
+            this.AreaFilter1.Items.AddRange(new object[] {
             "Pie ",
             "Column"});
-            this.ChartTypeFilter7.Location = new System.Drawing.Point(23, 82);
-            this.ChartTypeFilter7.MaxDropDownItems = 20;
-            this.ChartTypeFilter7.Name = "ChartTypeFilter7";
-            this.ChartTypeFilter7.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.ChartTypeFilter7.SelectedItemForeColor = System.Drawing.Color.White;
-            this.ChartTypeFilter7.Size = new System.Drawing.Size(155, 36);
-            this.ChartTypeFilter7.Style = MetroSet_UI.Design.Style.Dark;
-            this.ChartTypeFilter7.StyleManager = null;
-            this.ChartTypeFilter7.TabIndex = 113;
-            this.ChartTypeFilter7.Tag = "Division";
-            this.ChartTypeFilter7.ThemeAuthor = "Narwin";
-            this.ChartTypeFilter7.ThemeName = "MetroDark";
+            this.AreaFilter1.Location = new System.Drawing.Point(23, 82);
+            this.AreaFilter1.MaxDropDownItems = 20;
+            this.AreaFilter1.Name = "AreaFilter1";
+            this.AreaFilter1.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.AreaFilter1.SelectedItemForeColor = System.Drawing.Color.White;
+            this.AreaFilter1.Size = new System.Drawing.Size(155, 36);
+            this.AreaFilter1.Style = MetroSet_UI.Design.Style.Dark;
+            this.AreaFilter1.StyleManager = null;
+            this.AreaFilter1.TabIndex = 113;
+            this.AreaFilter1.Tag = "Division";
+            this.AreaFilter1.ThemeAuthor = "Narwin";
+            this.AreaFilter1.ThemeName = "MetroDark";
             // 
-            // AreaFilter
+            // AreaFilter2
             // 
-            this.AreaFilter.AllowDrop = true;
-            this.AreaFilter.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
-            this.AreaFilter.BackColor = System.Drawing.Color.Transparent;
-            this.AreaFilter.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
-            this.AreaFilter.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
-            this.AreaFilter.CausesValidation = false;
-            this.AreaFilter.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.AreaFilter.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.AreaFilter.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.AreaFilter.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.AreaFilter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.AreaFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.AreaFilter.FormattingEnabled = true;
-            this.AreaFilter.ItemHeight = 30;
-            this.AreaFilter.Items.AddRange(new object[] {
+            this.AreaFilter2.AllowDrop = true;
+            this.AreaFilter2.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.AreaFilter2.BackColor = System.Drawing.Color.Transparent;
+            this.AreaFilter2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.AreaFilter2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.AreaFilter2.CausesValidation = false;
+            this.AreaFilter2.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.AreaFilter2.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.AreaFilter2.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.AreaFilter2.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.AreaFilter2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.AreaFilter2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.AreaFilter2.FormattingEnabled = true;
+            this.AreaFilter2.ItemHeight = 30;
+            this.AreaFilter2.Items.AddRange(new object[] {
             "Total ",
             "Count",
             "Average",
             "Ratio"});
-            this.AreaFilter.Location = new System.Drawing.Point(23, 194);
-            this.AreaFilter.MaxDropDownItems = 20;
-            this.AreaFilter.Name = "AreaFilter";
-            this.AreaFilter.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.AreaFilter.SelectedItemForeColor = System.Drawing.Color.White;
-            this.AreaFilter.Size = new System.Drawing.Size(155, 36);
-            this.AreaFilter.Style = MetroSet_UI.Design.Style.Dark;
-            this.AreaFilter.StyleManager = null;
-            this.AreaFilter.TabIndex = 1;
-            this.AreaFilter.Tag = "Division";
-            this.AreaFilter.ThemeAuthor = "Narwin";
-            this.AreaFilter.ThemeName = "MetroDark";
+            this.AreaFilter2.Location = new System.Drawing.Point(23, 194);
+            this.AreaFilter2.MaxDropDownItems = 20;
+            this.AreaFilter2.Name = "AreaFilter2";
+            this.AreaFilter2.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.AreaFilter2.SelectedItemForeColor = System.Drawing.Color.White;
+            this.AreaFilter2.Size = new System.Drawing.Size(155, 36);
+            this.AreaFilter2.Style = MetroSet_UI.Design.Style.Dark;
+            this.AreaFilter2.StyleManager = null;
+            this.AreaFilter2.TabIndex = 1;
+            this.AreaFilter2.Tag = "Division";
+            this.AreaFilter2.ThemeAuthor = "Narwin";
+            this.AreaFilter2.ThemeName = "MetroDark";
             // 
             // AreaChart
             // 
@@ -2929,49 +2939,49 @@ namespace BudgetExecution
             this.AreaChart.PrimaryYAxis.TitleFont = new System.Drawing.Font("Segoe UI", 14F);
             this.AreaChart.RealMode3D = true;
             this.AreaChart.Rotation = 45F;
-            chartSeries7.FancyToolTip.ResizeInsideSymbol = true;
-            chartSeries7.Name = "Default0";
-            chartSeries7.Points.Add(1D, ((double)(55D)));
-            chartSeries7.Points.Add(2D, ((double)(70D)));
-            chartSeries7.Points.Add(3D, ((double)(80D)));
-            chartSeries7.Points.Add(4D, ((double)(65D)));
-            chartSeries7.Points.Add(5D, ((double)(75D)));
-            chartSeries7.Resolution = 0D;
-            chartSeries7.StackingGroup = "Default Group";
-            chartSeries7.Style.AltTagFormat = "";
-            chartSeries7.Style.Callout.Font.Facename = "Microsoft Sans Serif";
-            chartSeries7.Style.DrawTextShape = false;
-            chartSeries7.Style.Font.Facename = "Microsoft Sans Serif";
-            chartLineInfo4.Alignment = System.Drawing.Drawing2D.PenAlignment.Center;
-            chartLineInfo4.Color = System.Drawing.SystemColors.ControlText;
-            chartLineInfo4.DashPattern = null;
-            chartLineInfo4.DashStyle = System.Drawing.Drawing2D.DashStyle.Solid;
-            chartLineInfo4.Width = 1F;
-            chartCustomShapeInfo7.Border = chartLineInfo4;
-            chartCustomShapeInfo7.Color = System.Drawing.SystemColors.HighlightText;
-            chartCustomShapeInfo7.Type = Syncfusion.Windows.Forms.Chart.ChartCustomShape.Square;
-            chartSeries7.Style.TextShape = chartCustomShapeInfo7;
-            chartSeries7.Text = "Default0";
-            chartSeries8.FancyToolTip.ResizeInsideSymbol = true;
-            chartSeries8.Name = "Default1";
-            chartSeries8.Points.Add(1D, ((double)(70D)));
-            chartSeries8.Points.Add(2D, ((double)(35D)));
-            chartSeries8.Points.Add(3D, ((double)(65D)));
-            chartSeries8.Points.Add(4D, ((double)(25D)));
-            chartSeries8.Points.Add(5D, ((double)(50D)));
-            chartSeries8.Resolution = 0D;
-            chartSeries8.StackingGroup = "Default Group";
-            chartSeries8.Style.AltTagFormat = "";
-            chartSeries8.Style.Callout.Font.Facename = "Microsoft Sans Serif";
-            chartSeries8.Style.DrawTextShape = false;
-            chartSeries8.Style.Font.Facename = "Microsoft Sans Serif";
-            chartCustomShapeInfo8.Border = chartLineInfo4;
-            chartCustomShapeInfo8.Color = System.Drawing.SystemColors.HighlightText;
-            chartCustomShapeInfo8.Type = Syncfusion.Windows.Forms.Chart.ChartCustomShape.Square;
-            chartSeries8.Style.TextShape = chartCustomShapeInfo8;
-            chartSeries8.Text = "Default1";
-            this.AreaChart.Series.Add(chartSeries7);
-            this.AreaChart.Series.Add(chartSeries8);
+            chartSeries5.FancyToolTip.ResizeInsideSymbol = true;
+            chartSeries5.Name = "Default0";
+            chartSeries5.Points.Add(1D, ((double)(55D)));
+            chartSeries5.Points.Add(2D, ((double)(70D)));
+            chartSeries5.Points.Add(3D, ((double)(80D)));
+            chartSeries5.Points.Add(4D, ((double)(65D)));
+            chartSeries5.Points.Add(5D, ((double)(75D)));
+            chartSeries5.Resolution = 0D;
+            chartSeries5.StackingGroup = "Default Group";
+            chartSeries5.Style.AltTagFormat = "";
+            chartSeries5.Style.Callout.Font.Facename = "Microsoft Sans Serif";
+            chartSeries5.Style.DrawTextShape = false;
+            chartSeries5.Style.Font.Facename = "Microsoft Sans Serif";
+            chartLineInfo3.Alignment = System.Drawing.Drawing2D.PenAlignment.Center;
+            chartLineInfo3.Color = System.Drawing.SystemColors.ControlText;
+            chartLineInfo3.DashPattern = null;
+            chartLineInfo3.DashStyle = System.Drawing.Drawing2D.DashStyle.Solid;
+            chartLineInfo3.Width = 1F;
+            chartCustomShapeInfo5.Border = chartLineInfo3;
+            chartCustomShapeInfo5.Color = System.Drawing.SystemColors.HighlightText;
+            chartCustomShapeInfo5.Type = Syncfusion.Windows.Forms.Chart.ChartCustomShape.Square;
+            chartSeries5.Style.TextShape = chartCustomShapeInfo5;
+            chartSeries5.Text = "Default0";
+            chartSeries6.FancyToolTip.ResizeInsideSymbol = true;
+            chartSeries6.Name = "Default1";
+            chartSeries6.Points.Add(1D, ((double)(70D)));
+            chartSeries6.Points.Add(2D, ((double)(35D)));
+            chartSeries6.Points.Add(3D, ((double)(65D)));
+            chartSeries6.Points.Add(4D, ((double)(25D)));
+            chartSeries6.Points.Add(5D, ((double)(50D)));
+            chartSeries6.Resolution = 0D;
+            chartSeries6.StackingGroup = "Default Group";
+            chartSeries6.Style.AltTagFormat = "";
+            chartSeries6.Style.Callout.Font.Facename = "Microsoft Sans Serif";
+            chartSeries6.Style.DrawTextShape = false;
+            chartSeries6.Style.Font.Facename = "Microsoft Sans Serif";
+            chartCustomShapeInfo6.Border = chartLineInfo3;
+            chartCustomShapeInfo6.Color = System.Drawing.SystemColors.HighlightText;
+            chartCustomShapeInfo6.Type = Syncfusion.Windows.Forms.Chart.ChartCustomShape.Square;
+            chartSeries6.Style.TextShape = chartCustomShapeInfo6;
+            chartSeries6.Text = "Default1";
+            this.AreaChart.Series.Add(chartSeries5);
+            this.AreaChart.Series.Add(chartSeries6);
             this.AreaChart.Series3D = true;
             this.AreaChart.SeriesHighlight = true;
             this.AreaChart.ShadowColor = new Syncfusion.Drawing.BrushInfo(Syncfusion.Drawing.GradientStyle.PathRectangle, System.Drawing.SystemColors.WindowText, System.Drawing.Color.Silver);
@@ -2987,13 +2997,13 @@ namespace BudgetExecution
             this.AreaChart.Title.Font = new System.Drawing.Font("Segoe UI", 16F);
             this.AreaChart.Title.Name = "Default";
             this.AreaChart.ToolBar.EnableDefaultItems = false;
-            this.AreaChart.ToolBar.Items.Add(chartToolBarSaveItem4);
-            this.AreaChart.ToolBar.Items.Add(chartToolBarCopyItem4);
-            this.AreaChart.ToolBar.Items.Add(chartToolBarPrintItem4);
-            this.AreaChart.ToolBar.Items.Add(chartToolBarPaletteItem4);
-            this.AreaChart.ToolBar.Items.Add(chartToolBarTypeItem4);
-            this.AreaChart.ToolBar.Items.Add(chartToolBarSeries3DItem4);
-            this.AreaChart.ToolBar.Items.Add(chartToolBarShowLegendItem4);
+            this.AreaChart.ToolBar.Items.Add(chartToolBarSaveItem3);
+            this.AreaChart.ToolBar.Items.Add(chartToolBarCopyItem3);
+            this.AreaChart.ToolBar.Items.Add(chartToolBarPrintItem3);
+            this.AreaChart.ToolBar.Items.Add(chartToolBarPaletteItem3);
+            this.AreaChart.ToolBar.Items.Add(chartToolBarTypeItem3);
+            this.AreaChart.ToolBar.Items.Add(chartToolBarSeries3DItem3);
+            this.AreaChart.ToolBar.Items.Add(chartToolBarShowLegendItem3);
             // 
             // DivisionTab
             // 
@@ -3021,11 +3031,11 @@ namespace BudgetExecution
             this.DivisionExpander2.ButtonStyle = MakarovDev.ExpandCollapsePanel.ExpandCollapseButton.ExpandButtonStyle.Circle;
             this.DivisionExpander2.Controls.Add(this.label16);
             this.DivisionExpander2.Controls.Add(this.label28);
+            this.DivisionExpander2.Controls.Add(this.DivisionFilter4);
             this.DivisionExpander2.Controls.Add(this.DivisionFilter3);
-            this.DivisionExpander2.Controls.Add(this.DivisionFilter2);
             this.DivisionExpander2.ExpandedHeight = 292;
             this.DivisionExpander2.IsExpanded = false;
-            this.DivisionExpander2.Location = new System.Drawing.Point(1280, 417);
+            this.DivisionExpander2.Location = new System.Drawing.Point(1280, 412);
             this.DivisionExpander2.Name = "DivisionExpander2";
             this.DivisionExpander2.Size = new System.Drawing.Size(231, 37);
             this.DivisionExpander2.TabIndex = 110;
@@ -3054,6 +3064,44 @@ namespace BudgetExecution
             this.label28.TabIndex = 118;
             this.label28.Text = "Grouping";
             // 
+            // DivisionFilter4
+            // 
+            this.DivisionFilter4.AllowDrop = true;
+            this.DivisionFilter4.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.DivisionFilter4.BackColor = System.Drawing.Color.Transparent;
+            this.DivisionFilter4.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.DivisionFilter4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.DivisionFilter4.CausesValidation = false;
+            this.DivisionFilter4.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.DivisionFilter4.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.DivisionFilter4.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.DivisionFilter4.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.DivisionFilter4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.DivisionFilter4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.DivisionFilter4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.DivisionFilter4.FormattingEnabled = true;
+            this.DivisionFilter4.ItemHeight = 30;
+            this.DivisionFilter4.Items.AddRange(new object[] {
+            "Fund",
+            "BOC",
+            "NPM",
+            "Goal",
+            "Objective",
+            "ProgramArea",
+            "ProgramProject"});
+            this.DivisionFilter4.Location = new System.Drawing.Point(23, 239);
+            this.DivisionFilter4.MaxDropDownItems = 20;
+            this.DivisionFilter4.Name = "DivisionFilter4";
+            this.DivisionFilter4.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.DivisionFilter4.SelectedItemForeColor = System.Drawing.Color.White;
+            this.DivisionFilter4.Size = new System.Drawing.Size(173, 36);
+            this.DivisionFilter4.Style = MetroSet_UI.Design.Style.Dark;
+            this.DivisionFilter4.StyleManager = null;
+            this.DivisionFilter4.TabIndex = 108;
+            this.DivisionFilter4.Tag = "RC";
+            this.DivisionFilter4.ThemeAuthor = "Narwin";
+            this.DivisionFilter4.ThemeName = "MetroDark";
+            // 
             // DivisionFilter3
             // 
             this.DivisionFilter3.AllowDrop = true;
@@ -3071,16 +3119,7 @@ namespace BudgetExecution
             this.DivisionFilter3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.DivisionFilter3.FormattingEnabled = true;
             this.DivisionFilter3.ItemHeight = 30;
-            this.DivisionFilter3.Items.AddRange(new object[] {
-            "Fund",
-            "BOC",
-            "NPM",
-            "Goal",
-            "Objective",
-            "RC",
-            "ProgramArea",
-            "ProgramProject"});
-            this.DivisionFilter3.Location = new System.Drawing.Point(23, 239);
+            this.DivisionFilter3.Location = new System.Drawing.Point(23, 105);
             this.DivisionFilter3.MaxDropDownItems = 20;
             this.DivisionFilter3.Name = "DivisionFilter3";
             this.DivisionFilter3.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
@@ -3089,44 +3128,9 @@ namespace BudgetExecution
             this.DivisionFilter3.Style = MetroSet_UI.Design.Style.Dark;
             this.DivisionFilter3.StyleManager = null;
             this.DivisionFilter3.TabIndex = 108;
-            this.DivisionFilter3.Tag = "RC";
+            this.DivisionFilter3.Tag = "DivisionName";
             this.DivisionFilter3.ThemeAuthor = "Narwin";
             this.DivisionFilter3.ThemeName = "MetroDark";
-            // 
-            // DivisionFilter2
-            // 
-            this.DivisionFilter2.AllowDrop = true;
-            this.DivisionFilter2.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
-            this.DivisionFilter2.BackColor = System.Drawing.Color.Transparent;
-            this.DivisionFilter2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
-            this.DivisionFilter2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
-            this.DivisionFilter2.CausesValidation = false;
-            this.DivisionFilter2.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.DivisionFilter2.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.DivisionFilter2.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.DivisionFilter2.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.DivisionFilter2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.DivisionFilter2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.DivisionFilter2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.DivisionFilter2.FormattingEnabled = true;
-            this.DivisionFilter2.ItemHeight = 30;
-            this.DivisionFilter2.Items.AddRange(new object[] {
-            "Total ",
-            "Count",
-            "Average",
-            "Ratio"});
-            this.DivisionFilter2.Location = new System.Drawing.Point(23, 105);
-            this.DivisionFilter2.MaxDropDownItems = 20;
-            this.DivisionFilter2.Name = "DivisionFilter2";
-            this.DivisionFilter2.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.DivisionFilter2.SelectedItemForeColor = System.Drawing.Color.White;
-            this.DivisionFilter2.Size = new System.Drawing.Size(173, 36);
-            this.DivisionFilter2.Style = MetroSet_UI.Design.Style.Dark;
-            this.DivisionFilter2.StyleManager = null;
-            this.DivisionFilter2.TabIndex = 108;
-            this.DivisionFilter2.Tag = "RC";
-            this.DivisionFilter2.ThemeAuthor = "Narwin";
-            this.DivisionFilter2.ThemeName = "MetroDark";
             // 
             // DivisionExpander1
             // 
@@ -3135,8 +3139,8 @@ namespace BudgetExecution
             this.DivisionExpander1.ButtonStyle = MakarovDev.ExpandCollapsePanel.ExpandCollapseButton.ExpandButtonStyle.Circle;
             this.DivisionExpander1.Controls.Add(this.label17);
             this.DivisionExpander1.Controls.Add(this.label18);
-            this.DivisionExpander1.Controls.Add(this.ChartTypeFilter6);
-            this.DivisionExpander1.Controls.Add(this.DivisionFilter);
+            this.DivisionExpander1.Controls.Add(this.DivisionFilter1);
+            this.DivisionExpander1.Controls.Add(this.DivisionFilter2);
             this.DivisionExpander1.ExpandedHeight = 266;
             this.DivisionExpander1.IsExpanded = false;
             this.DivisionExpander1.Location = new System.Drawing.Point(1280, 100);
@@ -3168,72 +3172,72 @@ namespace BudgetExecution
             this.label18.TabIndex = 118;
             this.label18.Text = "Chart Type";
             // 
-            // ChartTypeFilter6
+            // DivisionFilter1
             // 
-            this.ChartTypeFilter6.AllowDrop = true;
-            this.ChartTypeFilter6.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
-            this.ChartTypeFilter6.BackColor = System.Drawing.Color.Transparent;
-            this.ChartTypeFilter6.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
-            this.ChartTypeFilter6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
-            this.ChartTypeFilter6.CausesValidation = false;
-            this.ChartTypeFilter6.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.ChartTypeFilter6.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.ChartTypeFilter6.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.ChartTypeFilter6.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.ChartTypeFilter6.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.ChartTypeFilter6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ChartTypeFilter6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.ChartTypeFilter6.FormattingEnabled = true;
-            this.ChartTypeFilter6.ItemHeight = 30;
-            this.ChartTypeFilter6.Items.AddRange(new object[] {
+            this.DivisionFilter1.AllowDrop = true;
+            this.DivisionFilter1.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.DivisionFilter1.BackColor = System.Drawing.Color.Transparent;
+            this.DivisionFilter1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.DivisionFilter1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.DivisionFilter1.CausesValidation = false;
+            this.DivisionFilter1.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.DivisionFilter1.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.DivisionFilter1.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.DivisionFilter1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.DivisionFilter1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.DivisionFilter1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.DivisionFilter1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.DivisionFilter1.FormattingEnabled = true;
+            this.DivisionFilter1.ItemHeight = 30;
+            this.DivisionFilter1.Items.AddRange(new object[] {
             "Pie ",
             "Column"});
-            this.ChartTypeFilter6.Location = new System.Drawing.Point(27, 85);
-            this.ChartTypeFilter6.MaxDropDownItems = 20;
-            this.ChartTypeFilter6.Name = "ChartTypeFilter6";
-            this.ChartTypeFilter6.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.ChartTypeFilter6.SelectedItemForeColor = System.Drawing.Color.White;
-            this.ChartTypeFilter6.Size = new System.Drawing.Size(173, 36);
-            this.ChartTypeFilter6.Style = MetroSet_UI.Design.Style.Dark;
-            this.ChartTypeFilter6.StyleManager = null;
-            this.ChartTypeFilter6.TabIndex = 113;
-            this.ChartTypeFilter6.Tag = "RC";
-            this.ChartTypeFilter6.ThemeAuthor = "Narwin";
-            this.ChartTypeFilter6.ThemeName = "MetroDark";
+            this.DivisionFilter1.Location = new System.Drawing.Point(27, 85);
+            this.DivisionFilter1.MaxDropDownItems = 20;
+            this.DivisionFilter1.Name = "DivisionFilter1";
+            this.DivisionFilter1.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.DivisionFilter1.SelectedItemForeColor = System.Drawing.Color.White;
+            this.DivisionFilter1.Size = new System.Drawing.Size(173, 36);
+            this.DivisionFilter1.Style = MetroSet_UI.Design.Style.Dark;
+            this.DivisionFilter1.StyleManager = null;
+            this.DivisionFilter1.TabIndex = 113;
+            this.DivisionFilter1.Tag = "RC";
+            this.DivisionFilter1.ThemeAuthor = "Narwin";
+            this.DivisionFilter1.ThemeName = "MetroDark";
             // 
-            // DivisionFilter
+            // DivisionFilter2
             // 
-            this.DivisionFilter.AllowDrop = true;
-            this.DivisionFilter.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
-            this.DivisionFilter.BackColor = System.Drawing.Color.Transparent;
-            this.DivisionFilter.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
-            this.DivisionFilter.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
-            this.DivisionFilter.CausesValidation = false;
-            this.DivisionFilter.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.DivisionFilter.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.DivisionFilter.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.DivisionFilter.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.DivisionFilter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.DivisionFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.DivisionFilter.FormattingEnabled = true;
-            this.DivisionFilter.ItemHeight = 30;
-            this.DivisionFilter.Items.AddRange(new object[] {
+            this.DivisionFilter2.AllowDrop = true;
+            this.DivisionFilter2.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.DivisionFilter2.BackColor = System.Drawing.Color.Transparent;
+            this.DivisionFilter2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.DivisionFilter2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.DivisionFilter2.CausesValidation = false;
+            this.DivisionFilter2.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.DivisionFilter2.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.DivisionFilter2.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.DivisionFilter2.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.DivisionFilter2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.DivisionFilter2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.DivisionFilter2.FormattingEnabled = true;
+            this.DivisionFilter2.ItemHeight = 30;
+            this.DivisionFilter2.Items.AddRange(new object[] {
             "Total ",
             "Count",
             "Average",
             "Ratio"});
-            this.DivisionFilter.Location = new System.Drawing.Point(27, 196);
-            this.DivisionFilter.MaxDropDownItems = 20;
-            this.DivisionFilter.Name = "DivisionFilter";
-            this.DivisionFilter.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.DivisionFilter.SelectedItemForeColor = System.Drawing.Color.White;
-            this.DivisionFilter.Size = new System.Drawing.Size(173, 36);
-            this.DivisionFilter.Style = MetroSet_UI.Design.Style.Dark;
-            this.DivisionFilter.StyleManager = null;
-            this.DivisionFilter.TabIndex = 0;
-            this.DivisionFilter.Tag = "RC";
-            this.DivisionFilter.ThemeAuthor = "Narwin";
-            this.DivisionFilter.ThemeName = "MetroDark";
+            this.DivisionFilter2.Location = new System.Drawing.Point(27, 196);
+            this.DivisionFilter2.MaxDropDownItems = 20;
+            this.DivisionFilter2.Name = "DivisionFilter2";
+            this.DivisionFilter2.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.DivisionFilter2.SelectedItemForeColor = System.Drawing.Color.White;
+            this.DivisionFilter2.Size = new System.Drawing.Size(173, 36);
+            this.DivisionFilter2.Style = MetroSet_UI.Design.Style.Dark;
+            this.DivisionFilter2.StyleManager = null;
+            this.DivisionFilter2.TabIndex = 0;
+            this.DivisionFilter2.Tag = "RC";
+            this.DivisionFilter2.ThemeAuthor = "Narwin";
+            this.DivisionFilter2.ThemeName = "MetroDark";
             // 
             // DivisionChart
             // 
@@ -3297,49 +3301,49 @@ namespace BudgetExecution
             this.DivisionChart.PrimaryYAxis.TitleFont = new System.Drawing.Font("Segoe UI", 14F);
             this.DivisionChart.RealMode3D = true;
             this.DivisionChart.Rotation = 45F;
-            chartSeries9.FancyToolTip.ResizeInsideSymbol = true;
-            chartSeries9.Name = "Default0";
-            chartSeries9.Points.Add(1D, ((double)(55D)));
-            chartSeries9.Points.Add(2D, ((double)(70D)));
-            chartSeries9.Points.Add(3D, ((double)(80D)));
-            chartSeries9.Points.Add(4D, ((double)(65D)));
-            chartSeries9.Points.Add(5D, ((double)(75D)));
-            chartSeries9.Resolution = 0D;
-            chartSeries9.StackingGroup = "Default Group";
-            chartSeries9.Style.AltTagFormat = "";
-            chartSeries9.Style.Callout.Font.Facename = "Microsoft Sans Serif";
-            chartSeries9.Style.DrawTextShape = false;
-            chartSeries9.Style.Font.Facename = "Microsoft Sans Serif";
-            chartLineInfo5.Alignment = System.Drawing.Drawing2D.PenAlignment.Center;
-            chartLineInfo5.Color = System.Drawing.SystemColors.ControlText;
-            chartLineInfo5.DashPattern = null;
-            chartLineInfo5.DashStyle = System.Drawing.Drawing2D.DashStyle.Solid;
-            chartLineInfo5.Width = 1F;
-            chartCustomShapeInfo9.Border = chartLineInfo5;
-            chartCustomShapeInfo9.Color = System.Drawing.SystemColors.HighlightText;
-            chartCustomShapeInfo9.Type = Syncfusion.Windows.Forms.Chart.ChartCustomShape.Square;
-            chartSeries9.Style.TextShape = chartCustomShapeInfo9;
-            chartSeries9.Text = "Default0";
-            chartSeries10.FancyToolTip.ResizeInsideSymbol = true;
-            chartSeries10.Name = "Default1";
-            chartSeries10.Points.Add(1D, ((double)(70D)));
-            chartSeries10.Points.Add(2D, ((double)(35D)));
-            chartSeries10.Points.Add(3D, ((double)(65D)));
-            chartSeries10.Points.Add(4D, ((double)(25D)));
-            chartSeries10.Points.Add(5D, ((double)(50D)));
-            chartSeries10.Resolution = 0D;
-            chartSeries10.StackingGroup = "Default Group";
-            chartSeries10.Style.AltTagFormat = "";
-            chartSeries10.Style.Callout.Font.Facename = "Microsoft Sans Serif";
-            chartSeries10.Style.DrawTextShape = false;
-            chartSeries10.Style.Font.Facename = "Microsoft Sans Serif";
-            chartCustomShapeInfo10.Border = chartLineInfo5;
-            chartCustomShapeInfo10.Color = System.Drawing.SystemColors.HighlightText;
-            chartCustomShapeInfo10.Type = Syncfusion.Windows.Forms.Chart.ChartCustomShape.Square;
-            chartSeries10.Style.TextShape = chartCustomShapeInfo10;
-            chartSeries10.Text = "Default1";
-            this.DivisionChart.Series.Add(chartSeries9);
-            this.DivisionChart.Series.Add(chartSeries10);
+            chartSeries7.FancyToolTip.ResizeInsideSymbol = true;
+            chartSeries7.Name = "Default0";
+            chartSeries7.Points.Add(1D, ((double)(55D)));
+            chartSeries7.Points.Add(2D, ((double)(70D)));
+            chartSeries7.Points.Add(3D, ((double)(80D)));
+            chartSeries7.Points.Add(4D, ((double)(65D)));
+            chartSeries7.Points.Add(5D, ((double)(75D)));
+            chartSeries7.Resolution = 0D;
+            chartSeries7.StackingGroup = "Default Group";
+            chartSeries7.Style.AltTagFormat = "";
+            chartSeries7.Style.Callout.Font.Facename = "Microsoft Sans Serif";
+            chartSeries7.Style.DrawTextShape = false;
+            chartSeries7.Style.Font.Facename = "Microsoft Sans Serif";
+            chartLineInfo4.Alignment = System.Drawing.Drawing2D.PenAlignment.Center;
+            chartLineInfo4.Color = System.Drawing.SystemColors.ControlText;
+            chartLineInfo4.DashPattern = null;
+            chartLineInfo4.DashStyle = System.Drawing.Drawing2D.DashStyle.Solid;
+            chartLineInfo4.Width = 1F;
+            chartCustomShapeInfo7.Border = chartLineInfo4;
+            chartCustomShapeInfo7.Color = System.Drawing.SystemColors.HighlightText;
+            chartCustomShapeInfo7.Type = Syncfusion.Windows.Forms.Chart.ChartCustomShape.Square;
+            chartSeries7.Style.TextShape = chartCustomShapeInfo7;
+            chartSeries7.Text = "Default0";
+            chartSeries8.FancyToolTip.ResizeInsideSymbol = true;
+            chartSeries8.Name = "Default1";
+            chartSeries8.Points.Add(1D, ((double)(70D)));
+            chartSeries8.Points.Add(2D, ((double)(35D)));
+            chartSeries8.Points.Add(3D, ((double)(65D)));
+            chartSeries8.Points.Add(4D, ((double)(25D)));
+            chartSeries8.Points.Add(5D, ((double)(50D)));
+            chartSeries8.Resolution = 0D;
+            chartSeries8.StackingGroup = "Default Group";
+            chartSeries8.Style.AltTagFormat = "";
+            chartSeries8.Style.Callout.Font.Facename = "Microsoft Sans Serif";
+            chartSeries8.Style.DrawTextShape = false;
+            chartSeries8.Style.Font.Facename = "Microsoft Sans Serif";
+            chartCustomShapeInfo8.Border = chartLineInfo4;
+            chartCustomShapeInfo8.Color = System.Drawing.SystemColors.HighlightText;
+            chartCustomShapeInfo8.Type = Syncfusion.Windows.Forms.Chart.ChartCustomShape.Square;
+            chartSeries8.Style.TextShape = chartCustomShapeInfo8;
+            chartSeries8.Text = "Default1";
+            this.DivisionChart.Series.Add(chartSeries7);
+            this.DivisionChart.Series.Add(chartSeries8);
             this.DivisionChart.Series3D = true;
             this.DivisionChart.SeriesHighlight = true;
             this.DivisionChart.ShadowColor = new Syncfusion.Drawing.BrushInfo(Syncfusion.Drawing.GradientStyle.PathRectangle, System.Drawing.SystemColors.WindowText, System.Drawing.Color.Silver);
@@ -3355,13 +3359,13 @@ namespace BudgetExecution
             this.DivisionChart.Title.Font = new System.Drawing.Font("Segoe UI", 16F);
             this.DivisionChart.Title.Name = "Default";
             this.DivisionChart.ToolBar.EnableDefaultItems = false;
-            this.DivisionChart.ToolBar.Items.Add(chartToolBarSaveItem5);
-            this.DivisionChart.ToolBar.Items.Add(chartToolBarCopyItem5);
-            this.DivisionChart.ToolBar.Items.Add(chartToolBarPrintItem5);
-            this.DivisionChart.ToolBar.Items.Add(chartToolBarPaletteItem5);
-            this.DivisionChart.ToolBar.Items.Add(chartToolBarTypeItem5);
-            this.DivisionChart.ToolBar.Items.Add(chartToolBarSeries3DItem5);
-            this.DivisionChart.ToolBar.Items.Add(chartToolBarShowLegendItem5);
+            this.DivisionChart.ToolBar.Items.Add(chartToolBarSaveItem4);
+            this.DivisionChart.ToolBar.Items.Add(chartToolBarCopyItem4);
+            this.DivisionChart.ToolBar.Items.Add(chartToolBarPrintItem4);
+            this.DivisionChart.ToolBar.Items.Add(chartToolBarPaletteItem4);
+            this.DivisionChart.ToolBar.Items.Add(chartToolBarTypeItem4);
+            this.DivisionChart.ToolBar.Items.Add(chartToolBarSeries3DItem4);
+            this.DivisionChart.ToolBar.Items.Add(chartToolBarShowLegendItem4);
             // 
             // ObjectiveTab
             // 
@@ -3387,8 +3391,8 @@ namespace BudgetExecution
             this.ObjectiveExpander2.ButtonStyle = MakarovDev.ExpandCollapsePanel.ExpandCollapseButton.ExpandButtonStyle.Circle;
             this.ObjectiveExpander2.Controls.Add(this.label13);
             this.ObjectiveExpander2.Controls.Add(this.label26);
+            this.ObjectiveExpander2.Controls.Add(this.ObjectiveFilter4);
             this.ObjectiveExpander2.Controls.Add(this.ObjectiveFilter3);
-            this.ObjectiveExpander2.Controls.Add(this.ObjectiveFilter2);
             this.ObjectiveExpander2.ExpandedHeight = 292;
             this.ObjectiveExpander2.IsExpanded = false;
             this.ObjectiveExpander2.Location = new System.Drawing.Point(1280, 417);
@@ -3420,6 +3424,43 @@ namespace BudgetExecution
             this.label26.TabIndex = 118;
             this.label26.Text = "Grouping";
             // 
+            // ObjectiveFilter4
+            // 
+            this.ObjectiveFilter4.AllowDrop = true;
+            this.ObjectiveFilter4.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.ObjectiveFilter4.BackColor = System.Drawing.Color.Transparent;
+            this.ObjectiveFilter4.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.ObjectiveFilter4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.ObjectiveFilter4.CausesValidation = false;
+            this.ObjectiveFilter4.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.ObjectiveFilter4.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.ObjectiveFilter4.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.ObjectiveFilter4.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.ObjectiveFilter4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ObjectiveFilter4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ObjectiveFilter4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.ObjectiveFilter4.FormattingEnabled = true;
+            this.ObjectiveFilter4.ItemHeight = 30;
+            this.ObjectiveFilter4.Items.AddRange(new object[] {
+            "Fund",
+            "BOC",
+            "NPM",
+            "Goal",
+            "RC",
+            "ProgramArea"});
+            this.ObjectiveFilter4.Location = new System.Drawing.Point(25, 216);
+            this.ObjectiveFilter4.MaxDropDownItems = 20;
+            this.ObjectiveFilter4.Name = "ObjectiveFilter4";
+            this.ObjectiveFilter4.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.ObjectiveFilter4.SelectedItemForeColor = System.Drawing.Color.White;
+            this.ObjectiveFilter4.Size = new System.Drawing.Size(173, 36);
+            this.ObjectiveFilter4.Style = MetroSet_UI.Design.Style.Dark;
+            this.ObjectiveFilter4.StyleManager = null;
+            this.ObjectiveFilter4.TabIndex = 108;
+            this.ObjectiveFilter4.Tag = "RC";
+            this.ObjectiveFilter4.ThemeAuthor = "Narwin";
+            this.ObjectiveFilter4.ThemeName = "MetroDark";
+            // 
             // ObjectiveFilter3
             // 
             this.ObjectiveFilter3.AllowDrop = true;
@@ -3437,14 +3478,7 @@ namespace BudgetExecution
             this.ObjectiveFilter3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.ObjectiveFilter3.FormattingEnabled = true;
             this.ObjectiveFilter3.ItemHeight = 30;
-            this.ObjectiveFilter3.Items.AddRange(new object[] {
-            "Fund",
-            "BOC",
-            "NPM",
-            "Goal",
-            "RC",
-            "ProgramArea"});
-            this.ObjectiveFilter3.Location = new System.Drawing.Point(25, 216);
+            this.ObjectiveFilter3.Location = new System.Drawing.Point(25, 83);
             this.ObjectiveFilter3.MaxDropDownItems = 20;
             this.ObjectiveFilter3.Name = "ObjectiveFilter3";
             this.ObjectiveFilter3.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
@@ -3453,44 +3487,9 @@ namespace BudgetExecution
             this.ObjectiveFilter3.Style = MetroSet_UI.Design.Style.Dark;
             this.ObjectiveFilter3.StyleManager = null;
             this.ObjectiveFilter3.TabIndex = 108;
-            this.ObjectiveFilter3.Tag = "Division";
+            this.ObjectiveFilter3.Tag = "ObjectiveName";
             this.ObjectiveFilter3.ThemeAuthor = "Narwin";
             this.ObjectiveFilter3.ThemeName = "MetroDark";
-            // 
-            // ObjectiveFilter2
-            // 
-            this.ObjectiveFilter2.AllowDrop = true;
-            this.ObjectiveFilter2.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
-            this.ObjectiveFilter2.BackColor = System.Drawing.Color.Transparent;
-            this.ObjectiveFilter2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
-            this.ObjectiveFilter2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
-            this.ObjectiveFilter2.CausesValidation = false;
-            this.ObjectiveFilter2.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.ObjectiveFilter2.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.ObjectiveFilter2.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.ObjectiveFilter2.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.ObjectiveFilter2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.ObjectiveFilter2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ObjectiveFilter2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.ObjectiveFilter2.FormattingEnabled = true;
-            this.ObjectiveFilter2.ItemHeight = 30;
-            this.ObjectiveFilter2.Items.AddRange(new object[] {
-            "Total ",
-            "Count",
-            "Average",
-            "Ratio"});
-            this.ObjectiveFilter2.Location = new System.Drawing.Point(25, 83);
-            this.ObjectiveFilter2.MaxDropDownItems = 20;
-            this.ObjectiveFilter2.Name = "ObjectiveFilter2";
-            this.ObjectiveFilter2.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.ObjectiveFilter2.SelectedItemForeColor = System.Drawing.Color.White;
-            this.ObjectiveFilter2.Size = new System.Drawing.Size(173, 36);
-            this.ObjectiveFilter2.Style = MetroSet_UI.Design.Style.Dark;
-            this.ObjectiveFilter2.StyleManager = null;
-            this.ObjectiveFilter2.TabIndex = 108;
-            this.ObjectiveFilter2.Tag = "ObjectiveName";
-            this.ObjectiveFilter2.ThemeAuthor = "Narwin";
-            this.ObjectiveFilter2.ThemeName = "MetroDark";
             // 
             // ObjectiveExpander1
             // 
@@ -3499,8 +3498,8 @@ namespace BudgetExecution
             this.ObjectiveExpander1.ButtonStyle = MakarovDev.ExpandCollapsePanel.ExpandCollapseButton.ExpandButtonStyle.Circle;
             this.ObjectiveExpander1.Controls.Add(this.label14);
             this.ObjectiveExpander1.Controls.Add(this.label15);
-            this.ObjectiveExpander1.Controls.Add(this.ChartTypeFilter5);
-            this.ObjectiveExpander1.Controls.Add(this.ObjectiveFilter);
+            this.ObjectiveExpander1.Controls.Add(this.ObjectiveFilter1);
+            this.ObjectiveExpander1.Controls.Add(this.ObjectiveFilter2);
             this.ObjectiveExpander1.ExpandedHeight = 268;
             this.ObjectiveExpander1.IsExpanded = false;
             this.ObjectiveExpander1.Location = new System.Drawing.Point(1280, 100);
@@ -3532,72 +3531,72 @@ namespace BudgetExecution
             this.label15.TabIndex = 118;
             this.label15.Text = "Chart Type";
             // 
-            // ChartTypeFilter5
+            // ObjectiveFilter1
             // 
-            this.ChartTypeFilter5.AllowDrop = true;
-            this.ChartTypeFilter5.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
-            this.ChartTypeFilter5.BackColor = System.Drawing.Color.Transparent;
-            this.ChartTypeFilter5.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
-            this.ChartTypeFilter5.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
-            this.ChartTypeFilter5.CausesValidation = false;
-            this.ChartTypeFilter5.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.ChartTypeFilter5.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.ChartTypeFilter5.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.ChartTypeFilter5.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.ChartTypeFilter5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.ChartTypeFilter5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ChartTypeFilter5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.ChartTypeFilter5.FormattingEnabled = true;
-            this.ChartTypeFilter5.ItemHeight = 30;
-            this.ChartTypeFilter5.Items.AddRange(new object[] {
+            this.ObjectiveFilter1.AllowDrop = true;
+            this.ObjectiveFilter1.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.ObjectiveFilter1.BackColor = System.Drawing.Color.Transparent;
+            this.ObjectiveFilter1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.ObjectiveFilter1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.ObjectiveFilter1.CausesValidation = false;
+            this.ObjectiveFilter1.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.ObjectiveFilter1.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.ObjectiveFilter1.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.ObjectiveFilter1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.ObjectiveFilter1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ObjectiveFilter1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ObjectiveFilter1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.ObjectiveFilter1.FormattingEnabled = true;
+            this.ObjectiveFilter1.ItemHeight = 30;
+            this.ObjectiveFilter1.Items.AddRange(new object[] {
             "Pie ",
             "Column"});
-            this.ChartTypeFilter5.Location = new System.Drawing.Point(29, 91);
-            this.ChartTypeFilter5.MaxDropDownItems = 20;
-            this.ChartTypeFilter5.Name = "ChartTypeFilter5";
-            this.ChartTypeFilter5.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.ChartTypeFilter5.SelectedItemForeColor = System.Drawing.Color.White;
-            this.ChartTypeFilter5.Size = new System.Drawing.Size(173, 36);
-            this.ChartTypeFilter5.Style = MetroSet_UI.Design.Style.Dark;
-            this.ChartTypeFilter5.StyleManager = null;
-            this.ChartTypeFilter5.TabIndex = 113;
-            this.ChartTypeFilter5.Tag = "Division";
-            this.ChartTypeFilter5.ThemeAuthor = "Narwin";
-            this.ChartTypeFilter5.ThemeName = "MetroDark";
+            this.ObjectiveFilter1.Location = new System.Drawing.Point(29, 91);
+            this.ObjectiveFilter1.MaxDropDownItems = 20;
+            this.ObjectiveFilter1.Name = "ObjectiveFilter1";
+            this.ObjectiveFilter1.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.ObjectiveFilter1.SelectedItemForeColor = System.Drawing.Color.White;
+            this.ObjectiveFilter1.Size = new System.Drawing.Size(173, 36);
+            this.ObjectiveFilter1.Style = MetroSet_UI.Design.Style.Dark;
+            this.ObjectiveFilter1.StyleManager = null;
+            this.ObjectiveFilter1.TabIndex = 113;
+            this.ObjectiveFilter1.Tag = "Division";
+            this.ObjectiveFilter1.ThemeAuthor = "Narwin";
+            this.ObjectiveFilter1.ThemeName = "MetroDark";
             // 
-            // ObjectiveFilter
+            // ObjectiveFilter2
             // 
-            this.ObjectiveFilter.AllowDrop = true;
-            this.ObjectiveFilter.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
-            this.ObjectiveFilter.BackColor = System.Drawing.Color.Transparent;
-            this.ObjectiveFilter.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
-            this.ObjectiveFilter.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
-            this.ObjectiveFilter.CausesValidation = false;
-            this.ObjectiveFilter.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.ObjectiveFilter.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.ObjectiveFilter.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.ObjectiveFilter.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.ObjectiveFilter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.ObjectiveFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.ObjectiveFilter.FormattingEnabled = true;
-            this.ObjectiveFilter.ItemHeight = 30;
-            this.ObjectiveFilter.Items.AddRange(new object[] {
+            this.ObjectiveFilter2.AllowDrop = true;
+            this.ObjectiveFilter2.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.ObjectiveFilter2.BackColor = System.Drawing.Color.Transparent;
+            this.ObjectiveFilter2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.ObjectiveFilter2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.ObjectiveFilter2.CausesValidation = false;
+            this.ObjectiveFilter2.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.ObjectiveFilter2.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.ObjectiveFilter2.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.ObjectiveFilter2.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.ObjectiveFilter2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ObjectiveFilter2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.ObjectiveFilter2.FormattingEnabled = true;
+            this.ObjectiveFilter2.ItemHeight = 30;
+            this.ObjectiveFilter2.Items.AddRange(new object[] {
             "Total ",
             "Count",
             "Average",
             "Ratio"});
-            this.ObjectiveFilter.Location = new System.Drawing.Point(29, 202);
-            this.ObjectiveFilter.MaxDropDownItems = 20;
-            this.ObjectiveFilter.Name = "ObjectiveFilter";
-            this.ObjectiveFilter.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.ObjectiveFilter.SelectedItemForeColor = System.Drawing.Color.White;
-            this.ObjectiveFilter.Size = new System.Drawing.Size(173, 36);
-            this.ObjectiveFilter.Style = MetroSet_UI.Design.Style.Dark;
-            this.ObjectiveFilter.StyleManager = null;
-            this.ObjectiveFilter.TabIndex = 1;
-            this.ObjectiveFilter.Tag = "Division";
-            this.ObjectiveFilter.ThemeAuthor = "Narwin";
-            this.ObjectiveFilter.ThemeName = "MetroDark";
+            this.ObjectiveFilter2.Location = new System.Drawing.Point(29, 202);
+            this.ObjectiveFilter2.MaxDropDownItems = 20;
+            this.ObjectiveFilter2.Name = "ObjectiveFilter2";
+            this.ObjectiveFilter2.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.ObjectiveFilter2.SelectedItemForeColor = System.Drawing.Color.White;
+            this.ObjectiveFilter2.Size = new System.Drawing.Size(173, 36);
+            this.ObjectiveFilter2.Style = MetroSet_UI.Design.Style.Dark;
+            this.ObjectiveFilter2.StyleManager = null;
+            this.ObjectiveFilter2.TabIndex = 1;
+            this.ObjectiveFilter2.Tag = "Division";
+            this.ObjectiveFilter2.ThemeAuthor = "Narwin";
+            this.ObjectiveFilter2.ThemeName = "MetroDark";
             // 
             // ObjectiveChart
             // 
@@ -3661,49 +3660,49 @@ namespace BudgetExecution
             this.ObjectiveChart.PrimaryYAxis.TitleFont = new System.Drawing.Font("Segoe UI", 14F);
             this.ObjectiveChart.RealMode3D = true;
             this.ObjectiveChart.Rotation = 45F;
-            chartSeries11.FancyToolTip.ResizeInsideSymbol = true;
-            chartSeries11.Name = "Default0";
-            chartSeries11.Points.Add(1D, ((double)(55D)));
-            chartSeries11.Points.Add(2D, ((double)(70D)));
-            chartSeries11.Points.Add(3D, ((double)(80D)));
-            chartSeries11.Points.Add(4D, ((double)(65D)));
-            chartSeries11.Points.Add(5D, ((double)(75D)));
-            chartSeries11.Resolution = 0D;
-            chartSeries11.StackingGroup = "Default Group";
-            chartSeries11.Style.AltTagFormat = "";
-            chartSeries11.Style.Callout.Font.Facename = "Microsoft Sans Serif";
-            chartSeries11.Style.DrawTextShape = false;
-            chartSeries11.Style.Font.Facename = "Microsoft Sans Serif";
-            chartLineInfo6.Alignment = System.Drawing.Drawing2D.PenAlignment.Center;
-            chartLineInfo6.Color = System.Drawing.SystemColors.ControlText;
-            chartLineInfo6.DashPattern = null;
-            chartLineInfo6.DashStyle = System.Drawing.Drawing2D.DashStyle.Solid;
-            chartLineInfo6.Width = 1F;
-            chartCustomShapeInfo11.Border = chartLineInfo6;
-            chartCustomShapeInfo11.Color = System.Drawing.SystemColors.HighlightText;
-            chartCustomShapeInfo11.Type = Syncfusion.Windows.Forms.Chart.ChartCustomShape.Square;
-            chartSeries11.Style.TextShape = chartCustomShapeInfo11;
-            chartSeries11.Text = "Default0";
-            chartSeries12.FancyToolTip.ResizeInsideSymbol = true;
-            chartSeries12.Name = "Default1";
-            chartSeries12.Points.Add(1D, ((double)(70D)));
-            chartSeries12.Points.Add(2D, ((double)(35D)));
-            chartSeries12.Points.Add(3D, ((double)(65D)));
-            chartSeries12.Points.Add(4D, ((double)(25D)));
-            chartSeries12.Points.Add(5D, ((double)(50D)));
-            chartSeries12.Resolution = 0D;
-            chartSeries12.StackingGroup = "Default Group";
-            chartSeries12.Style.AltTagFormat = "";
-            chartSeries12.Style.Callout.Font.Facename = "Microsoft Sans Serif";
-            chartSeries12.Style.DrawTextShape = false;
-            chartSeries12.Style.Font.Facename = "Microsoft Sans Serif";
-            chartCustomShapeInfo12.Border = chartLineInfo6;
-            chartCustomShapeInfo12.Color = System.Drawing.SystemColors.HighlightText;
-            chartCustomShapeInfo12.Type = Syncfusion.Windows.Forms.Chart.ChartCustomShape.Square;
-            chartSeries12.Style.TextShape = chartCustomShapeInfo12;
-            chartSeries12.Text = "Default1";
-            this.ObjectiveChart.Series.Add(chartSeries11);
-            this.ObjectiveChart.Series.Add(chartSeries12);
+            chartSeries9.FancyToolTip.ResizeInsideSymbol = true;
+            chartSeries9.Name = "Default0";
+            chartSeries9.Points.Add(1D, ((double)(55D)));
+            chartSeries9.Points.Add(2D, ((double)(70D)));
+            chartSeries9.Points.Add(3D, ((double)(80D)));
+            chartSeries9.Points.Add(4D, ((double)(65D)));
+            chartSeries9.Points.Add(5D, ((double)(75D)));
+            chartSeries9.Resolution = 0D;
+            chartSeries9.StackingGroup = "Default Group";
+            chartSeries9.Style.AltTagFormat = "";
+            chartSeries9.Style.Callout.Font.Facename = "Microsoft Sans Serif";
+            chartSeries9.Style.DrawTextShape = false;
+            chartSeries9.Style.Font.Facename = "Microsoft Sans Serif";
+            chartLineInfo5.Alignment = System.Drawing.Drawing2D.PenAlignment.Center;
+            chartLineInfo5.Color = System.Drawing.SystemColors.ControlText;
+            chartLineInfo5.DashPattern = null;
+            chartLineInfo5.DashStyle = System.Drawing.Drawing2D.DashStyle.Solid;
+            chartLineInfo5.Width = 1F;
+            chartCustomShapeInfo9.Border = chartLineInfo5;
+            chartCustomShapeInfo9.Color = System.Drawing.SystemColors.HighlightText;
+            chartCustomShapeInfo9.Type = Syncfusion.Windows.Forms.Chart.ChartCustomShape.Square;
+            chartSeries9.Style.TextShape = chartCustomShapeInfo9;
+            chartSeries9.Text = "Default0";
+            chartSeries10.FancyToolTip.ResizeInsideSymbol = true;
+            chartSeries10.Name = "Default1";
+            chartSeries10.Points.Add(1D, ((double)(70D)));
+            chartSeries10.Points.Add(2D, ((double)(35D)));
+            chartSeries10.Points.Add(3D, ((double)(65D)));
+            chartSeries10.Points.Add(4D, ((double)(25D)));
+            chartSeries10.Points.Add(5D, ((double)(50D)));
+            chartSeries10.Resolution = 0D;
+            chartSeries10.StackingGroup = "Default Group";
+            chartSeries10.Style.AltTagFormat = "";
+            chartSeries10.Style.Callout.Font.Facename = "Microsoft Sans Serif";
+            chartSeries10.Style.DrawTextShape = false;
+            chartSeries10.Style.Font.Facename = "Microsoft Sans Serif";
+            chartCustomShapeInfo10.Border = chartLineInfo5;
+            chartCustomShapeInfo10.Color = System.Drawing.SystemColors.HighlightText;
+            chartCustomShapeInfo10.Type = Syncfusion.Windows.Forms.Chart.ChartCustomShape.Square;
+            chartSeries10.Style.TextShape = chartCustomShapeInfo10;
+            chartSeries10.Text = "Default1";
+            this.ObjectiveChart.Series.Add(chartSeries9);
+            this.ObjectiveChart.Series.Add(chartSeries10);
             this.ObjectiveChart.Series3D = true;
             this.ObjectiveChart.SeriesHighlight = true;
             this.ObjectiveChart.ShadowColor = new Syncfusion.Drawing.BrushInfo(Syncfusion.Drawing.GradientStyle.PathRectangle, System.Drawing.SystemColors.WindowText, System.Drawing.Color.Silver);
@@ -3719,13 +3718,13 @@ namespace BudgetExecution
             this.ObjectiveChart.Title.Font = new System.Drawing.Font("Segoe UI", 16F);
             this.ObjectiveChart.Title.Name = "Default";
             this.ObjectiveChart.ToolBar.EnableDefaultItems = false;
-            this.ObjectiveChart.ToolBar.Items.Add(chartToolBarSaveItem6);
-            this.ObjectiveChart.ToolBar.Items.Add(chartToolBarCopyItem6);
-            this.ObjectiveChart.ToolBar.Items.Add(chartToolBarPrintItem6);
-            this.ObjectiveChart.ToolBar.Items.Add(chartToolBarPaletteItem6);
-            this.ObjectiveChart.ToolBar.Items.Add(chartToolBarTypeItem6);
-            this.ObjectiveChart.ToolBar.Items.Add(chartToolBarSeries3DItem6);
-            this.ObjectiveChart.ToolBar.Items.Add(chartToolBarShowLegendItem6);
+            this.ObjectiveChart.ToolBar.Items.Add(chartToolBarSaveItem5);
+            this.ObjectiveChart.ToolBar.Items.Add(chartToolBarCopyItem5);
+            this.ObjectiveChart.ToolBar.Items.Add(chartToolBarPrintItem5);
+            this.ObjectiveChart.ToolBar.Items.Add(chartToolBarPaletteItem5);
+            this.ObjectiveChart.ToolBar.Items.Add(chartToolBarTypeItem5);
+            this.ObjectiveChart.ToolBar.Items.Add(chartToolBarSeries3DItem5);
+            this.ObjectiveChart.ToolBar.Items.Add(chartToolBarShowLegendItem5);
             // 
             // GoalTab
             // 
@@ -3751,8 +3750,8 @@ namespace BudgetExecution
             this.GoalExpander2.ButtonStyle = MakarovDev.ExpandCollapsePanel.ExpandCollapseButton.ExpandButtonStyle.Circle;
             this.GoalExpander2.Controls.Add(this.label4);
             this.GoalExpander2.Controls.Add(this.label10);
+            this.GoalExpander2.Controls.Add(this.GoalFilter4);
             this.GoalExpander2.Controls.Add(this.GoalFilter3);
-            this.GoalExpander2.Controls.Add(this.GoalFilter2);
             this.GoalExpander2.ExpandedHeight = 292;
             this.GoalExpander2.IsExpanded = false;
             this.GoalExpander2.Location = new System.Drawing.Point(1280, 417);
@@ -3784,6 +3783,43 @@ namespace BudgetExecution
             this.label10.TabIndex = 118;
             this.label10.Text = "Grouping";
             // 
+            // GoalFilter4
+            // 
+            this.GoalFilter4.AllowDrop = true;
+            this.GoalFilter4.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.GoalFilter4.BackColor = System.Drawing.Color.Transparent;
+            this.GoalFilter4.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.GoalFilter4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.GoalFilter4.CausesValidation = false;
+            this.GoalFilter4.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.GoalFilter4.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.GoalFilter4.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.GoalFilter4.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.GoalFilter4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.GoalFilter4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.GoalFilter4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.GoalFilter4.FormattingEnabled = true;
+            this.GoalFilter4.ItemHeight = 30;
+            this.GoalFilter4.Items.AddRange(new object[] {
+            "Fund",
+            "BOC",
+            "NPM",
+            "RC",
+            "Objective",
+            "ProgramArea"});
+            this.GoalFilter4.Location = new System.Drawing.Point(21, 218);
+            this.GoalFilter4.MaxDropDownItems = 20;
+            this.GoalFilter4.Name = "GoalFilter4";
+            this.GoalFilter4.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.GoalFilter4.SelectedItemForeColor = System.Drawing.Color.White;
+            this.GoalFilter4.Size = new System.Drawing.Size(173, 36);
+            this.GoalFilter4.Style = MetroSet_UI.Design.Style.Dark;
+            this.GoalFilter4.StyleManager = null;
+            this.GoalFilter4.TabIndex = 108;
+            this.GoalFilter4.Tag = "RC";
+            this.GoalFilter4.ThemeAuthor = "Narwin";
+            this.GoalFilter4.ThemeName = "MetroDark";
+            // 
             // GoalFilter3
             // 
             this.GoalFilter3.AllowDrop = true;
@@ -3802,13 +3838,11 @@ namespace BudgetExecution
             this.GoalFilter3.FormattingEnabled = true;
             this.GoalFilter3.ItemHeight = 30;
             this.GoalFilter3.Items.AddRange(new object[] {
-            "Fund",
-            "BOC",
-            "NPM",
-            "RC",
-            "Objective",
-            "ProgramArea"});
-            this.GoalFilter3.Location = new System.Drawing.Point(21, 218);
+            "Total ",
+            "Count",
+            "Average",
+            "Ratio"});
+            this.GoalFilter3.Location = new System.Drawing.Point(21, 85);
             this.GoalFilter3.MaxDropDownItems = 20;
             this.GoalFilter3.Name = "GoalFilter3";
             this.GoalFilter3.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
@@ -3817,44 +3851,9 @@ namespace BudgetExecution
             this.GoalFilter3.Style = MetroSet_UI.Design.Style.Dark;
             this.GoalFilter3.StyleManager = null;
             this.GoalFilter3.TabIndex = 108;
-            this.GoalFilter3.Tag = "Division";
+            this.GoalFilter3.Tag = "GoalName";
             this.GoalFilter3.ThemeAuthor = "Narwin";
             this.GoalFilter3.ThemeName = "MetroDark";
-            // 
-            // GoalFilter2
-            // 
-            this.GoalFilter2.AllowDrop = true;
-            this.GoalFilter2.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
-            this.GoalFilter2.BackColor = System.Drawing.Color.Transparent;
-            this.GoalFilter2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
-            this.GoalFilter2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
-            this.GoalFilter2.CausesValidation = false;
-            this.GoalFilter2.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.GoalFilter2.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.GoalFilter2.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.GoalFilter2.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.GoalFilter2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.GoalFilter2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.GoalFilter2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.GoalFilter2.FormattingEnabled = true;
-            this.GoalFilter2.ItemHeight = 30;
-            this.GoalFilter2.Items.AddRange(new object[] {
-            "Total ",
-            "Count",
-            "Average",
-            "Ratio"});
-            this.GoalFilter2.Location = new System.Drawing.Point(21, 85);
-            this.GoalFilter2.MaxDropDownItems = 20;
-            this.GoalFilter2.Name = "GoalFilter2";
-            this.GoalFilter2.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.GoalFilter2.SelectedItemForeColor = System.Drawing.Color.White;
-            this.GoalFilter2.Size = new System.Drawing.Size(173, 36);
-            this.GoalFilter2.Style = MetroSet_UI.Design.Style.Dark;
-            this.GoalFilter2.StyleManager = null;
-            this.GoalFilter2.TabIndex = 108;
-            this.GoalFilter2.Tag = "GoalName";
-            this.GoalFilter2.ThemeAuthor = "Narwin";
-            this.GoalFilter2.ThemeName = "MetroDark";
             // 
             // GoalExpander1
             // 
@@ -3863,9 +3862,9 @@ namespace BudgetExecution
             this.GoalExpander1.ButtonStyle = MakarovDev.ExpandCollapsePanel.ExpandCollapseButton.ExpandButtonStyle.Circle;
             this.GoalExpander1.Controls.Add(this.label11);
             this.GoalExpander1.Controls.Add(this.label12);
-            this.GoalExpander1.Controls.Add(this.ChartTypeFilter4);
-            this.GoalExpander1.Controls.Add(this.GoalFilter);
-            this.GoalExpander1.ExpandedHeight = 259;
+            this.GoalExpander1.Controls.Add(this.GoalFilter1);
+            this.GoalExpander1.Controls.Add(this.GoalFilter2);
+            this.GoalExpander1.ExpandedHeight = 281;
             this.GoalExpander1.IsExpanded = false;
             this.GoalExpander1.Location = new System.Drawing.Point(1280, 100);
             this.GoalExpander1.Name = "GoalExpander1";
@@ -3896,72 +3895,72 @@ namespace BudgetExecution
             this.label12.TabIndex = 118;
             this.label12.Text = "Chart Type";
             // 
-            // ChartTypeFilter4
+            // GoalFilter1
             // 
-            this.ChartTypeFilter4.AllowDrop = true;
-            this.ChartTypeFilter4.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
-            this.ChartTypeFilter4.BackColor = System.Drawing.Color.Transparent;
-            this.ChartTypeFilter4.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
-            this.ChartTypeFilter4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
-            this.ChartTypeFilter4.CausesValidation = false;
-            this.ChartTypeFilter4.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.ChartTypeFilter4.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.ChartTypeFilter4.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.ChartTypeFilter4.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.ChartTypeFilter4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.ChartTypeFilter4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ChartTypeFilter4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.ChartTypeFilter4.FormattingEnabled = true;
-            this.ChartTypeFilter4.ItemHeight = 30;
-            this.ChartTypeFilter4.Items.AddRange(new object[] {
+            this.GoalFilter1.AllowDrop = true;
+            this.GoalFilter1.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.GoalFilter1.BackColor = System.Drawing.Color.Transparent;
+            this.GoalFilter1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.GoalFilter1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.GoalFilter1.CausesValidation = false;
+            this.GoalFilter1.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.GoalFilter1.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.GoalFilter1.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.GoalFilter1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.GoalFilter1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.GoalFilter1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.GoalFilter1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.GoalFilter1.FormattingEnabled = true;
+            this.GoalFilter1.ItemHeight = 30;
+            this.GoalFilter1.Items.AddRange(new object[] {
             "Pie ",
             "Column"});
-            this.ChartTypeFilter4.Location = new System.Drawing.Point(20, 83);
-            this.ChartTypeFilter4.MaxDropDownItems = 20;
-            this.ChartTypeFilter4.Name = "ChartTypeFilter4";
-            this.ChartTypeFilter4.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.ChartTypeFilter4.SelectedItemForeColor = System.Drawing.Color.White;
-            this.ChartTypeFilter4.Size = new System.Drawing.Size(174, 36);
-            this.ChartTypeFilter4.Style = MetroSet_UI.Design.Style.Dark;
-            this.ChartTypeFilter4.StyleManager = null;
-            this.ChartTypeFilter4.TabIndex = 113;
-            this.ChartTypeFilter4.Tag = "Division";
-            this.ChartTypeFilter4.ThemeAuthor = "Narwin";
-            this.ChartTypeFilter4.ThemeName = "MetroDark";
+            this.GoalFilter1.Location = new System.Drawing.Point(20, 83);
+            this.GoalFilter1.MaxDropDownItems = 20;
+            this.GoalFilter1.Name = "GoalFilter1";
+            this.GoalFilter1.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.GoalFilter1.SelectedItemForeColor = System.Drawing.Color.White;
+            this.GoalFilter1.Size = new System.Drawing.Size(174, 36);
+            this.GoalFilter1.Style = MetroSet_UI.Design.Style.Dark;
+            this.GoalFilter1.StyleManager = null;
+            this.GoalFilter1.TabIndex = 113;
+            this.GoalFilter1.Tag = "Division";
+            this.GoalFilter1.ThemeAuthor = "Narwin";
+            this.GoalFilter1.ThemeName = "MetroDark";
             // 
-            // GoalFilter
+            // GoalFilter2
             // 
-            this.GoalFilter.AllowDrop = true;
-            this.GoalFilter.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
-            this.GoalFilter.BackColor = System.Drawing.Color.Transparent;
-            this.GoalFilter.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
-            this.GoalFilter.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
-            this.GoalFilter.CausesValidation = false;
-            this.GoalFilter.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.GoalFilter.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.GoalFilter.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.GoalFilter.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.GoalFilter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.GoalFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.GoalFilter.FormattingEnabled = true;
-            this.GoalFilter.ItemHeight = 30;
-            this.GoalFilter.Items.AddRange(new object[] {
+            this.GoalFilter2.AllowDrop = true;
+            this.GoalFilter2.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.GoalFilter2.BackColor = System.Drawing.Color.Transparent;
+            this.GoalFilter2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.GoalFilter2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.GoalFilter2.CausesValidation = false;
+            this.GoalFilter2.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.GoalFilter2.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.GoalFilter2.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.GoalFilter2.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.GoalFilter2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.GoalFilter2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.GoalFilter2.FormattingEnabled = true;
+            this.GoalFilter2.ItemHeight = 30;
+            this.GoalFilter2.Items.AddRange(new object[] {
             "Total ",
             "Count",
             "Average",
             "Ratio"});
-            this.GoalFilter.Location = new System.Drawing.Point(21, 195);
-            this.GoalFilter.MaxDropDownItems = 20;
-            this.GoalFilter.Name = "GoalFilter";
-            this.GoalFilter.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.GoalFilter.SelectedItemForeColor = System.Drawing.Color.White;
-            this.GoalFilter.Size = new System.Drawing.Size(173, 36);
-            this.GoalFilter.Style = MetroSet_UI.Design.Style.Dark;
-            this.GoalFilter.StyleManager = null;
-            this.GoalFilter.TabIndex = 1;
-            this.GoalFilter.Tag = "Division";
-            this.GoalFilter.ThemeAuthor = "Narwin";
-            this.GoalFilter.ThemeName = "MetroDark";
+            this.GoalFilter2.Location = new System.Drawing.Point(21, 195);
+            this.GoalFilter2.MaxDropDownItems = 20;
+            this.GoalFilter2.Name = "GoalFilter2";
+            this.GoalFilter2.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.GoalFilter2.SelectedItemForeColor = System.Drawing.Color.White;
+            this.GoalFilter2.Size = new System.Drawing.Size(173, 36);
+            this.GoalFilter2.Style = MetroSet_UI.Design.Style.Dark;
+            this.GoalFilter2.StyleManager = null;
+            this.GoalFilter2.TabIndex = 1;
+            this.GoalFilter2.Tag = "Division";
+            this.GoalFilter2.ThemeAuthor = "Narwin";
+            this.GoalFilter2.ThemeName = "MetroDark";
             // 
             // GoalChart
             // 
@@ -4025,49 +4024,49 @@ namespace BudgetExecution
             this.GoalChart.PrimaryYAxis.TitleFont = new System.Drawing.Font("Segoe UI", 14F);
             this.GoalChart.RealMode3D = true;
             this.GoalChart.Rotation = 45F;
-            chartSeries13.FancyToolTip.ResizeInsideSymbol = true;
-            chartSeries13.Name = "Default0";
-            chartSeries13.Points.Add(1D, ((double)(55D)));
-            chartSeries13.Points.Add(2D, ((double)(70D)));
-            chartSeries13.Points.Add(3D, ((double)(80D)));
-            chartSeries13.Points.Add(4D, ((double)(65D)));
-            chartSeries13.Points.Add(5D, ((double)(75D)));
-            chartSeries13.Resolution = 0D;
-            chartSeries13.StackingGroup = "Default Group";
-            chartSeries13.Style.AltTagFormat = "";
-            chartSeries13.Style.Callout.Font.Facename = "Microsoft Sans Serif";
-            chartSeries13.Style.DrawTextShape = false;
-            chartSeries13.Style.Font.Facename = "Microsoft Sans Serif";
-            chartLineInfo7.Alignment = System.Drawing.Drawing2D.PenAlignment.Center;
-            chartLineInfo7.Color = System.Drawing.SystemColors.ControlText;
-            chartLineInfo7.DashPattern = null;
-            chartLineInfo7.DashStyle = System.Drawing.Drawing2D.DashStyle.Solid;
-            chartLineInfo7.Width = 1F;
-            chartCustomShapeInfo13.Border = chartLineInfo7;
-            chartCustomShapeInfo13.Color = System.Drawing.SystemColors.HighlightText;
-            chartCustomShapeInfo13.Type = Syncfusion.Windows.Forms.Chart.ChartCustomShape.Square;
-            chartSeries13.Style.TextShape = chartCustomShapeInfo13;
-            chartSeries13.Text = "Default0";
-            chartSeries14.FancyToolTip.ResizeInsideSymbol = true;
-            chartSeries14.Name = "Default1";
-            chartSeries14.Points.Add(1D, ((double)(70D)));
-            chartSeries14.Points.Add(2D, ((double)(35D)));
-            chartSeries14.Points.Add(3D, ((double)(65D)));
-            chartSeries14.Points.Add(4D, ((double)(25D)));
-            chartSeries14.Points.Add(5D, ((double)(50D)));
-            chartSeries14.Resolution = 0D;
-            chartSeries14.StackingGroup = "Default Group";
-            chartSeries14.Style.AltTagFormat = "";
-            chartSeries14.Style.Callout.Font.Facename = "Microsoft Sans Serif";
-            chartSeries14.Style.DrawTextShape = false;
-            chartSeries14.Style.Font.Facename = "Microsoft Sans Serif";
-            chartCustomShapeInfo14.Border = chartLineInfo7;
-            chartCustomShapeInfo14.Color = System.Drawing.SystemColors.HighlightText;
-            chartCustomShapeInfo14.Type = Syncfusion.Windows.Forms.Chart.ChartCustomShape.Square;
-            chartSeries14.Style.TextShape = chartCustomShapeInfo14;
-            chartSeries14.Text = "Default1";
-            this.GoalChart.Series.Add(chartSeries13);
-            this.GoalChart.Series.Add(chartSeries14);
+            chartSeries11.FancyToolTip.ResizeInsideSymbol = true;
+            chartSeries11.Name = "Default0";
+            chartSeries11.Points.Add(1D, ((double)(55D)));
+            chartSeries11.Points.Add(2D, ((double)(70D)));
+            chartSeries11.Points.Add(3D, ((double)(80D)));
+            chartSeries11.Points.Add(4D, ((double)(65D)));
+            chartSeries11.Points.Add(5D, ((double)(75D)));
+            chartSeries11.Resolution = 0D;
+            chartSeries11.StackingGroup = "Default Group";
+            chartSeries11.Style.AltTagFormat = "";
+            chartSeries11.Style.Callout.Font.Facename = "Microsoft Sans Serif";
+            chartSeries11.Style.DrawTextShape = false;
+            chartSeries11.Style.Font.Facename = "Microsoft Sans Serif";
+            chartLineInfo6.Alignment = System.Drawing.Drawing2D.PenAlignment.Center;
+            chartLineInfo6.Color = System.Drawing.SystemColors.ControlText;
+            chartLineInfo6.DashPattern = null;
+            chartLineInfo6.DashStyle = System.Drawing.Drawing2D.DashStyle.Solid;
+            chartLineInfo6.Width = 1F;
+            chartCustomShapeInfo11.Border = chartLineInfo6;
+            chartCustomShapeInfo11.Color = System.Drawing.SystemColors.HighlightText;
+            chartCustomShapeInfo11.Type = Syncfusion.Windows.Forms.Chart.ChartCustomShape.Square;
+            chartSeries11.Style.TextShape = chartCustomShapeInfo11;
+            chartSeries11.Text = "Default0";
+            chartSeries12.FancyToolTip.ResizeInsideSymbol = true;
+            chartSeries12.Name = "Default1";
+            chartSeries12.Points.Add(1D, ((double)(70D)));
+            chartSeries12.Points.Add(2D, ((double)(35D)));
+            chartSeries12.Points.Add(3D, ((double)(65D)));
+            chartSeries12.Points.Add(4D, ((double)(25D)));
+            chartSeries12.Points.Add(5D, ((double)(50D)));
+            chartSeries12.Resolution = 0D;
+            chartSeries12.StackingGroup = "Default Group";
+            chartSeries12.Style.AltTagFormat = "";
+            chartSeries12.Style.Callout.Font.Facename = "Microsoft Sans Serif";
+            chartSeries12.Style.DrawTextShape = false;
+            chartSeries12.Style.Font.Facename = "Microsoft Sans Serif";
+            chartCustomShapeInfo12.Border = chartLineInfo6;
+            chartCustomShapeInfo12.Color = System.Drawing.SystemColors.HighlightText;
+            chartCustomShapeInfo12.Type = Syncfusion.Windows.Forms.Chart.ChartCustomShape.Square;
+            chartSeries12.Style.TextShape = chartCustomShapeInfo12;
+            chartSeries12.Text = "Default1";
+            this.GoalChart.Series.Add(chartSeries11);
+            this.GoalChart.Series.Add(chartSeries12);
             this.GoalChart.Series3D = true;
             this.GoalChart.SeriesHighlight = true;
             this.GoalChart.ShadowColor = new Syncfusion.Drawing.BrushInfo(Syncfusion.Drawing.GradientStyle.PathRectangle, System.Drawing.SystemColors.WindowText, System.Drawing.Color.Silver);
@@ -4083,13 +4082,13 @@ namespace BudgetExecution
             this.GoalChart.Title.Font = new System.Drawing.Font("Segoe UI", 16F);
             this.GoalChart.Title.Name = "Default";
             this.GoalChart.ToolBar.EnableDefaultItems = false;
-            this.GoalChart.ToolBar.Items.Add(chartToolBarSaveItem7);
-            this.GoalChart.ToolBar.Items.Add(chartToolBarCopyItem7);
-            this.GoalChart.ToolBar.Items.Add(chartToolBarPrintItem7);
-            this.GoalChart.ToolBar.Items.Add(chartToolBarPaletteItem7);
-            this.GoalChart.ToolBar.Items.Add(chartToolBarTypeItem7);
-            this.GoalChart.ToolBar.Items.Add(chartToolBarSeries3DItem7);
-            this.GoalChart.ToolBar.Items.Add(chartToolBarShowLegendItem7);
+            this.GoalChart.ToolBar.Items.Add(chartToolBarSaveItem6);
+            this.GoalChart.ToolBar.Items.Add(chartToolBarCopyItem6);
+            this.GoalChart.ToolBar.Items.Add(chartToolBarPrintItem6);
+            this.GoalChart.ToolBar.Items.Add(chartToolBarPaletteItem6);
+            this.GoalChart.ToolBar.Items.Add(chartToolBarTypeItem6);
+            this.GoalChart.ToolBar.Items.Add(chartToolBarSeries3DItem6);
+            this.GoalChart.ToolBar.Items.Add(chartToolBarShowLegendItem6);
             // 
             // NpmTab
             // 
@@ -4115,8 +4114,8 @@ namespace BudgetExecution
             this.NpmExpander2.ButtonStyle = MakarovDev.ExpandCollapsePanel.ExpandCollapseButton.ExpandButtonStyle.Circle;
             this.NpmExpander2.Controls.Add(this.label7);
             this.NpmExpander2.Controls.Add(this.label27);
+            this.NpmExpander2.Controls.Add(this.NpmFilter4);
             this.NpmExpander2.Controls.Add(this.NpmFilter3);
-            this.NpmExpander2.Controls.Add(this.NpmFilter2);
             this.NpmExpander2.ExpandedHeight = 292;
             this.NpmExpander2.IsExpanded = false;
             this.NpmExpander2.Location = new System.Drawing.Point(1280, 417);
@@ -4148,6 +4147,43 @@ namespace BudgetExecution
             this.label27.TabIndex = 116;
             this.label27.Text = "Grouping";
             // 
+            // NpmFilter4
+            // 
+            this.NpmFilter4.AllowDrop = true;
+            this.NpmFilter4.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.NpmFilter4.BackColor = System.Drawing.Color.Transparent;
+            this.NpmFilter4.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.NpmFilter4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.NpmFilter4.CausesValidation = false;
+            this.NpmFilter4.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.NpmFilter4.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.NpmFilter4.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.NpmFilter4.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.NpmFilter4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.NpmFilter4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.NpmFilter4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.NpmFilter4.FormattingEnabled = true;
+            this.NpmFilter4.ItemHeight = 30;
+            this.NpmFilter4.Items.AddRange(new object[] {
+            "Fund",
+            "BOC",
+            "Goal",
+            "RC",
+            "Objective",
+            "ProgramArea"});
+            this.NpmFilter4.Location = new System.Drawing.Point(27, 216);
+            this.NpmFilter4.MaxDropDownItems = 20;
+            this.NpmFilter4.Name = "NpmFilter4";
+            this.NpmFilter4.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.NpmFilter4.SelectedItemForeColor = System.Drawing.Color.White;
+            this.NpmFilter4.Size = new System.Drawing.Size(173, 36);
+            this.NpmFilter4.Style = MetroSet_UI.Design.Style.Dark;
+            this.NpmFilter4.StyleManager = null;
+            this.NpmFilter4.TabIndex = 108;
+            this.NpmFilter4.Tag = "RC";
+            this.NpmFilter4.ThemeAuthor = "Narwin";
+            this.NpmFilter4.ThemeName = "MetroDark";
+            // 
             // NpmFilter3
             // 
             this.NpmFilter3.AllowDrop = true;
@@ -4166,13 +4202,11 @@ namespace BudgetExecution
             this.NpmFilter3.FormattingEnabled = true;
             this.NpmFilter3.ItemHeight = 30;
             this.NpmFilter3.Items.AddRange(new object[] {
-            "Fund",
-            "BOC",
-            "Goal",
-            "RC",
-            "Objective",
-            "ProgramArea"});
-            this.NpmFilter3.Location = new System.Drawing.Point(27, 216);
+            "Total ",
+            "Count",
+            "Average",
+            "Ratio"});
+            this.NpmFilter3.Location = new System.Drawing.Point(27, 110);
             this.NpmFilter3.MaxDropDownItems = 20;
             this.NpmFilter3.Name = "NpmFilter3";
             this.NpmFilter3.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
@@ -4181,44 +4215,9 @@ namespace BudgetExecution
             this.NpmFilter3.Style = MetroSet_UI.Design.Style.Dark;
             this.NpmFilter3.StyleManager = null;
             this.NpmFilter3.TabIndex = 108;
-            this.NpmFilter3.Tag = "Division";
+            this.NpmFilter3.Tag = "NPM";
             this.NpmFilter3.ThemeAuthor = "Narwin";
             this.NpmFilter3.ThemeName = "MetroDark";
-            // 
-            // NpmFilter2
-            // 
-            this.NpmFilter2.AllowDrop = true;
-            this.NpmFilter2.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
-            this.NpmFilter2.BackColor = System.Drawing.Color.Transparent;
-            this.NpmFilter2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
-            this.NpmFilter2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
-            this.NpmFilter2.CausesValidation = false;
-            this.NpmFilter2.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.NpmFilter2.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.NpmFilter2.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.NpmFilter2.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.NpmFilter2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.NpmFilter2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.NpmFilter2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.NpmFilter2.FormattingEnabled = true;
-            this.NpmFilter2.ItemHeight = 30;
-            this.NpmFilter2.Items.AddRange(new object[] {
-            "Total ",
-            "Count",
-            "Average",
-            "Ratio"});
-            this.NpmFilter2.Location = new System.Drawing.Point(27, 110);
-            this.NpmFilter2.MaxDropDownItems = 20;
-            this.NpmFilter2.Name = "NpmFilter2";
-            this.NpmFilter2.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.NpmFilter2.SelectedItemForeColor = System.Drawing.Color.White;
-            this.NpmFilter2.Size = new System.Drawing.Size(173, 36);
-            this.NpmFilter2.Style = MetroSet_UI.Design.Style.Dark;
-            this.NpmFilter2.StyleManager = null;
-            this.NpmFilter2.TabIndex = 108;
-            this.NpmFilter2.Tag = "NPM";
-            this.NpmFilter2.ThemeAuthor = "Narwin";
-            this.NpmFilter2.ThemeName = "MetroDark";
             // 
             // NpmExpander1
             // 
@@ -4227,9 +4226,9 @@ namespace BudgetExecution
             this.NpmExpander1.ButtonStyle = MakarovDev.ExpandCollapsePanel.ExpandCollapseButton.ExpandButtonStyle.Circle;
             this.NpmExpander1.Controls.Add(this.label8);
             this.NpmExpander1.Controls.Add(this.label9);
-            this.NpmExpander1.Controls.Add(this.NpmFilter);
-            this.NpmExpander1.Controls.Add(this.ChartTypeFilter3);
-            this.NpmExpander1.ExpandedHeight = 257;
+            this.NpmExpander1.Controls.Add(this.NpmFilter2);
+            this.NpmExpander1.Controls.Add(this.NpmFilter1);
+            this.NpmExpander1.ExpandedHeight = 275;
             this.NpmExpander1.IsExpanded = false;
             this.NpmExpander1.Location = new System.Drawing.Point(1280, 100);
             this.NpmExpander1.Name = "NpmExpander1";
@@ -4260,73 +4259,73 @@ namespace BudgetExecution
             this.label9.TabIndex = 118;
             this.label9.Text = "Chart Type";
             // 
-            // NpmFilter
+            // NpmFilter2
             // 
-            this.NpmFilter.AllowDrop = true;
-            this.NpmFilter.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
-            this.NpmFilter.BackColor = System.Drawing.Color.Transparent;
-            this.NpmFilter.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
-            this.NpmFilter.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
-            this.NpmFilter.CausesValidation = false;
-            this.NpmFilter.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.NpmFilter.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.NpmFilter.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.NpmFilter.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.NpmFilter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.NpmFilter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.NpmFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.NpmFilter.FormattingEnabled = true;
-            this.NpmFilter.ItemHeight = 30;
-            this.NpmFilter.Items.AddRange(new object[] {
+            this.NpmFilter2.AllowDrop = true;
+            this.NpmFilter2.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.NpmFilter2.BackColor = System.Drawing.Color.Transparent;
+            this.NpmFilter2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.NpmFilter2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.NpmFilter2.CausesValidation = false;
+            this.NpmFilter2.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.NpmFilter2.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.NpmFilter2.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.NpmFilter2.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.NpmFilter2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.NpmFilter2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.NpmFilter2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.NpmFilter2.FormattingEnabled = true;
+            this.NpmFilter2.ItemHeight = 30;
+            this.NpmFilter2.Items.AddRange(new object[] {
             "Total ",
             "Count",
             "Average",
             "Ratio"});
-            this.NpmFilter.Location = new System.Drawing.Point(27, 197);
-            this.NpmFilter.MaxDropDownItems = 20;
-            this.NpmFilter.Name = "NpmFilter";
-            this.NpmFilter.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.NpmFilter.SelectedItemForeColor = System.Drawing.Color.White;
-            this.NpmFilter.Size = new System.Drawing.Size(162, 36);
-            this.NpmFilter.Style = MetroSet_UI.Design.Style.Dark;
-            this.NpmFilter.StyleManager = null;
-            this.NpmFilter.TabIndex = 110;
-            this.NpmFilter.Tag = "Division";
-            this.NpmFilter.ThemeAuthor = "Narwin";
-            this.NpmFilter.ThemeName = "MetroDark";
+            this.NpmFilter2.Location = new System.Drawing.Point(27, 197);
+            this.NpmFilter2.MaxDropDownItems = 20;
+            this.NpmFilter2.Name = "NpmFilter2";
+            this.NpmFilter2.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.NpmFilter2.SelectedItemForeColor = System.Drawing.Color.White;
+            this.NpmFilter2.Size = new System.Drawing.Size(162, 36);
+            this.NpmFilter2.Style = MetroSet_UI.Design.Style.Dark;
+            this.NpmFilter2.StyleManager = null;
+            this.NpmFilter2.TabIndex = 110;
+            this.NpmFilter2.Tag = "Division";
+            this.NpmFilter2.ThemeAuthor = "Narwin";
+            this.NpmFilter2.ThemeName = "MetroDark";
             // 
-            // ChartTypeFilter3
+            // NpmFilter1
             // 
-            this.ChartTypeFilter3.AllowDrop = true;
-            this.ChartTypeFilter3.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
-            this.ChartTypeFilter3.BackColor = System.Drawing.Color.Transparent;
-            this.ChartTypeFilter3.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
-            this.ChartTypeFilter3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
-            this.ChartTypeFilter3.CausesValidation = false;
-            this.ChartTypeFilter3.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.ChartTypeFilter3.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.ChartTypeFilter3.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.ChartTypeFilter3.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.ChartTypeFilter3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.ChartTypeFilter3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ChartTypeFilter3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.ChartTypeFilter3.FormattingEnabled = true;
-            this.ChartTypeFilter3.ItemHeight = 30;
-            this.ChartTypeFilter3.Items.AddRange(new object[] {
+            this.NpmFilter1.AllowDrop = true;
+            this.NpmFilter1.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.NpmFilter1.BackColor = System.Drawing.Color.Transparent;
+            this.NpmFilter1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.NpmFilter1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.NpmFilter1.CausesValidation = false;
+            this.NpmFilter1.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.NpmFilter1.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.NpmFilter1.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.NpmFilter1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.NpmFilter1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.NpmFilter1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.NpmFilter1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.NpmFilter1.FormattingEnabled = true;
+            this.NpmFilter1.ItemHeight = 30;
+            this.NpmFilter1.Items.AddRange(new object[] {
             "Pie ",
             "Column"});
-            this.ChartTypeFilter3.Location = new System.Drawing.Point(27, 91);
-            this.ChartTypeFilter3.MaxDropDownItems = 20;
-            this.ChartTypeFilter3.Name = "ChartTypeFilter3";
-            this.ChartTypeFilter3.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.ChartTypeFilter3.SelectedItemForeColor = System.Drawing.Color.White;
-            this.ChartTypeFilter3.Size = new System.Drawing.Size(162, 36);
-            this.ChartTypeFilter3.Style = MetroSet_UI.Design.Style.Dark;
-            this.ChartTypeFilter3.StyleManager = null;
-            this.ChartTypeFilter3.TabIndex = 113;
-            this.ChartTypeFilter3.Tag = "Division";
-            this.ChartTypeFilter3.ThemeAuthor = "Narwin";
-            this.ChartTypeFilter3.ThemeName = "MetroDark";
+            this.NpmFilter1.Location = new System.Drawing.Point(27, 91);
+            this.NpmFilter1.MaxDropDownItems = 20;
+            this.NpmFilter1.Name = "NpmFilter1";
+            this.NpmFilter1.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.NpmFilter1.SelectedItemForeColor = System.Drawing.Color.White;
+            this.NpmFilter1.Size = new System.Drawing.Size(162, 36);
+            this.NpmFilter1.Style = MetroSet_UI.Design.Style.Dark;
+            this.NpmFilter1.StyleManager = null;
+            this.NpmFilter1.TabIndex = 113;
+            this.NpmFilter1.Tag = "Division";
+            this.NpmFilter1.ThemeAuthor = "Narwin";
+            this.NpmFilter1.ThemeName = "MetroDark";
             // 
             // NpmChart
             // 
@@ -4390,49 +4389,49 @@ namespace BudgetExecution
             this.NpmChart.PrimaryYAxis.TitleFont = new System.Drawing.Font("Segoe UI", 14F);
             this.NpmChart.RealMode3D = true;
             this.NpmChart.Rotation = 45F;
-            chartSeries15.FancyToolTip.ResizeInsideSymbol = true;
-            chartSeries15.Name = "Default0";
-            chartSeries15.Points.Add(1D, ((double)(55D)));
-            chartSeries15.Points.Add(2D, ((double)(70D)));
-            chartSeries15.Points.Add(3D, ((double)(80D)));
-            chartSeries15.Points.Add(4D, ((double)(65D)));
-            chartSeries15.Points.Add(5D, ((double)(75D)));
-            chartSeries15.Resolution = 0D;
-            chartSeries15.StackingGroup = "Default Group";
-            chartSeries15.Style.AltTagFormat = "";
-            chartSeries15.Style.Callout.Font.Facename = "Microsoft Sans Serif";
-            chartSeries15.Style.DrawTextShape = false;
-            chartSeries15.Style.Font.Facename = "Microsoft Sans Serif";
-            chartLineInfo8.Alignment = System.Drawing.Drawing2D.PenAlignment.Center;
-            chartLineInfo8.Color = System.Drawing.SystemColors.ControlText;
-            chartLineInfo8.DashPattern = null;
-            chartLineInfo8.DashStyle = System.Drawing.Drawing2D.DashStyle.Solid;
-            chartLineInfo8.Width = 1F;
-            chartCustomShapeInfo15.Border = chartLineInfo8;
-            chartCustomShapeInfo15.Color = System.Drawing.SystemColors.HighlightText;
-            chartCustomShapeInfo15.Type = Syncfusion.Windows.Forms.Chart.ChartCustomShape.Square;
-            chartSeries15.Style.TextShape = chartCustomShapeInfo15;
-            chartSeries15.Text = "Default0";
-            chartSeries16.FancyToolTip.ResizeInsideSymbol = true;
-            chartSeries16.Name = "Default1";
-            chartSeries16.Points.Add(1D, ((double)(70D)));
-            chartSeries16.Points.Add(2D, ((double)(35D)));
-            chartSeries16.Points.Add(3D, ((double)(65D)));
-            chartSeries16.Points.Add(4D, ((double)(25D)));
-            chartSeries16.Points.Add(5D, ((double)(50D)));
-            chartSeries16.Resolution = 0D;
-            chartSeries16.StackingGroup = "Default Group";
-            chartSeries16.Style.AltTagFormat = "";
-            chartSeries16.Style.Callout.Font.Facename = "Microsoft Sans Serif";
-            chartSeries16.Style.DrawTextShape = false;
-            chartSeries16.Style.Font.Facename = "Microsoft Sans Serif";
-            chartCustomShapeInfo16.Border = chartLineInfo8;
-            chartCustomShapeInfo16.Color = System.Drawing.SystemColors.HighlightText;
-            chartCustomShapeInfo16.Type = Syncfusion.Windows.Forms.Chart.ChartCustomShape.Square;
-            chartSeries16.Style.TextShape = chartCustomShapeInfo16;
-            chartSeries16.Text = "Default1";
-            this.NpmChart.Series.Add(chartSeries15);
-            this.NpmChart.Series.Add(chartSeries16);
+            chartSeries13.FancyToolTip.ResizeInsideSymbol = true;
+            chartSeries13.Name = "Default0";
+            chartSeries13.Points.Add(1D, ((double)(55D)));
+            chartSeries13.Points.Add(2D, ((double)(70D)));
+            chartSeries13.Points.Add(3D, ((double)(80D)));
+            chartSeries13.Points.Add(4D, ((double)(65D)));
+            chartSeries13.Points.Add(5D, ((double)(75D)));
+            chartSeries13.Resolution = 0D;
+            chartSeries13.StackingGroup = "Default Group";
+            chartSeries13.Style.AltTagFormat = "";
+            chartSeries13.Style.Callout.Font.Facename = "Microsoft Sans Serif";
+            chartSeries13.Style.DrawTextShape = false;
+            chartSeries13.Style.Font.Facename = "Microsoft Sans Serif";
+            chartLineInfo7.Alignment = System.Drawing.Drawing2D.PenAlignment.Center;
+            chartLineInfo7.Color = System.Drawing.SystemColors.ControlText;
+            chartLineInfo7.DashPattern = null;
+            chartLineInfo7.DashStyle = System.Drawing.Drawing2D.DashStyle.Solid;
+            chartLineInfo7.Width = 1F;
+            chartCustomShapeInfo13.Border = chartLineInfo7;
+            chartCustomShapeInfo13.Color = System.Drawing.SystemColors.HighlightText;
+            chartCustomShapeInfo13.Type = Syncfusion.Windows.Forms.Chart.ChartCustomShape.Square;
+            chartSeries13.Style.TextShape = chartCustomShapeInfo13;
+            chartSeries13.Text = "Default0";
+            chartSeries14.FancyToolTip.ResizeInsideSymbol = true;
+            chartSeries14.Name = "Default1";
+            chartSeries14.Points.Add(1D, ((double)(70D)));
+            chartSeries14.Points.Add(2D, ((double)(35D)));
+            chartSeries14.Points.Add(3D, ((double)(65D)));
+            chartSeries14.Points.Add(4D, ((double)(25D)));
+            chartSeries14.Points.Add(5D, ((double)(50D)));
+            chartSeries14.Resolution = 0D;
+            chartSeries14.StackingGroup = "Default Group";
+            chartSeries14.Style.AltTagFormat = "";
+            chartSeries14.Style.Callout.Font.Facename = "Microsoft Sans Serif";
+            chartSeries14.Style.DrawTextShape = false;
+            chartSeries14.Style.Font.Facename = "Microsoft Sans Serif";
+            chartCustomShapeInfo14.Border = chartLineInfo7;
+            chartCustomShapeInfo14.Color = System.Drawing.SystemColors.HighlightText;
+            chartCustomShapeInfo14.Type = Syncfusion.Windows.Forms.Chart.ChartCustomShape.Square;
+            chartSeries14.Style.TextShape = chartCustomShapeInfo14;
+            chartSeries14.Text = "Default1";
+            this.NpmChart.Series.Add(chartSeries13);
+            this.NpmChart.Series.Add(chartSeries14);
             this.NpmChart.Series3D = true;
             this.NpmChart.SeriesHighlight = true;
             this.NpmChart.ShadowColor = new Syncfusion.Drawing.BrushInfo(Syncfusion.Drawing.GradientStyle.PathRectangle, System.Drawing.SystemColors.WindowText, System.Drawing.Color.Silver);
@@ -4448,13 +4447,13 @@ namespace BudgetExecution
             this.NpmChart.Title.Font = new System.Drawing.Font("Segoe UI", 16F);
             this.NpmChart.Title.Name = "Default";
             this.NpmChart.ToolBar.EnableDefaultItems = false;
-            this.NpmChart.ToolBar.Items.Add(chartToolBarSaveItem8);
-            this.NpmChart.ToolBar.Items.Add(chartToolBarCopyItem8);
-            this.NpmChart.ToolBar.Items.Add(chartToolBarPrintItem8);
-            this.NpmChart.ToolBar.Items.Add(chartToolBarPaletteItem8);
-            this.NpmChart.ToolBar.Items.Add(chartToolBarTypeItem8);
-            this.NpmChart.ToolBar.Items.Add(chartToolBarSeries3DItem8);
-            this.NpmChart.ToolBar.Items.Add(chartToolBarShowLegendItem8);
+            this.NpmChart.ToolBar.Items.Add(chartToolBarSaveItem7);
+            this.NpmChart.ToolBar.Items.Add(chartToolBarCopyItem7);
+            this.NpmChart.ToolBar.Items.Add(chartToolBarPrintItem7);
+            this.NpmChart.ToolBar.Items.Add(chartToolBarPaletteItem7);
+            this.NpmChart.ToolBar.Items.Add(chartToolBarTypeItem7);
+            this.NpmChart.ToolBar.Items.Add(chartToolBarSeries3DItem7);
+            this.NpmChart.ToolBar.Items.Add(chartToolBarShowLegendItem7);
             // 
             // BocTab
             // 
@@ -4480,8 +4479,8 @@ namespace BudgetExecution
             this.BocExpander2.ButtonStyle = MakarovDev.ExpandCollapsePanel.ExpandCollapseButton.ExpandButtonStyle.Circle;
             this.BocExpander2.Controls.Add(this.label35);
             this.BocExpander2.Controls.Add(this.label36);
+            this.BocExpander2.Controls.Add(this.BocFilter4);
             this.BocExpander2.Controls.Add(this.BocFilter3);
-            this.BocExpander2.Controls.Add(this.BocFilter2);
             this.BocExpander2.ExpandedHeight = 292;
             this.BocExpander2.IsExpanded = false;
             this.BocExpander2.Location = new System.Drawing.Point(1280, 417);
@@ -4513,6 +4512,43 @@ namespace BudgetExecution
             this.label36.TabIndex = 118;
             this.label36.Text = "Grouping";
             // 
+            // BocFilter4
+            // 
+            this.BocFilter4.AllowDrop = true;
+            this.BocFilter4.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.BocFilter4.BackColor = System.Drawing.Color.Transparent;
+            this.BocFilter4.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.BocFilter4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.BocFilter4.CausesValidation = false;
+            this.BocFilter4.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.BocFilter4.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.BocFilter4.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.BocFilter4.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.BocFilter4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.BocFilter4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BocFilter4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.BocFilter4.FormattingEnabled = true;
+            this.BocFilter4.ItemHeight = 30;
+            this.BocFilter4.Items.AddRange(new object[] {
+            "Fund",
+            "NPM",
+            "Goal",
+            "RC",
+            "Objective",
+            "ProgramArea"});
+            this.BocFilter4.Location = new System.Drawing.Point(24, 220);
+            this.BocFilter4.MaxDropDownItems = 20;
+            this.BocFilter4.Name = "BocFilter4";
+            this.BocFilter4.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.BocFilter4.SelectedItemForeColor = System.Drawing.Color.White;
+            this.BocFilter4.Size = new System.Drawing.Size(173, 36);
+            this.BocFilter4.Style = MetroSet_UI.Design.Style.Dark;
+            this.BocFilter4.StyleManager = null;
+            this.BocFilter4.TabIndex = 108;
+            this.BocFilter4.Tag = "RC";
+            this.BocFilter4.ThemeAuthor = "Narwin";
+            this.BocFilter4.ThemeName = "MetroDark";
+            // 
             // BocFilter3
             // 
             this.BocFilter3.AllowDrop = true;
@@ -4531,13 +4567,11 @@ namespace BudgetExecution
             this.BocFilter3.FormattingEnabled = true;
             this.BocFilter3.ItemHeight = 30;
             this.BocFilter3.Items.AddRange(new object[] {
-            "Fund",
-            "NPM",
-            "Goal",
-            "RC",
-            "Objective",
-            "ProgramArea"});
-            this.BocFilter3.Location = new System.Drawing.Point(24, 220);
+            "Total ",
+            "Count",
+            "Average",
+            "Ratio"});
+            this.BocFilter3.Location = new System.Drawing.Point(24, 91);
             this.BocFilter3.MaxDropDownItems = 20;
             this.BocFilter3.Name = "BocFilter3";
             this.BocFilter3.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
@@ -4546,44 +4580,9 @@ namespace BudgetExecution
             this.BocFilter3.Style = MetroSet_UI.Design.Style.Dark;
             this.BocFilter3.StyleManager = null;
             this.BocFilter3.TabIndex = 108;
-            this.BocFilter3.Tag = "Division";
+            this.BocFilter3.Tag = "BocName";
             this.BocFilter3.ThemeAuthor = "Narwin";
             this.BocFilter3.ThemeName = "MetroDark";
-            // 
-            // BocFilter2
-            // 
-            this.BocFilter2.AllowDrop = true;
-            this.BocFilter2.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
-            this.BocFilter2.BackColor = System.Drawing.Color.Transparent;
-            this.BocFilter2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
-            this.BocFilter2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
-            this.BocFilter2.CausesValidation = false;
-            this.BocFilter2.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.BocFilter2.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.BocFilter2.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.BocFilter2.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.BocFilter2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.BocFilter2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BocFilter2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.BocFilter2.FormattingEnabled = true;
-            this.BocFilter2.ItemHeight = 30;
-            this.BocFilter2.Items.AddRange(new object[] {
-            "Total ",
-            "Count",
-            "Average",
-            "Ratio"});
-            this.BocFilter2.Location = new System.Drawing.Point(24, 91);
-            this.BocFilter2.MaxDropDownItems = 20;
-            this.BocFilter2.Name = "BocFilter2";
-            this.BocFilter2.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.BocFilter2.SelectedItemForeColor = System.Drawing.Color.White;
-            this.BocFilter2.Size = new System.Drawing.Size(173, 36);
-            this.BocFilter2.Style = MetroSet_UI.Design.Style.Dark;
-            this.BocFilter2.StyleManager = null;
-            this.BocFilter2.TabIndex = 108;
-            this.BocFilter2.Tag = "BocName";
-            this.BocFilter2.ThemeAuthor = "Narwin";
-            this.BocFilter2.ThemeName = "MetroDark";
             // 
             // BocExpander1
             // 
@@ -4592,8 +4591,8 @@ namespace BudgetExecution
             this.BocExpander1.ButtonStyle = MakarovDev.ExpandCollapsePanel.ExpandCollapseButton.ExpandButtonStyle.Circle;
             this.BocExpander1.Controls.Add(this.label5);
             this.BocExpander1.Controls.Add(this.label6);
-            this.BocExpander1.Controls.Add(this.ChartTypeFilter2);
-            this.BocExpander1.Controls.Add(this.BocFilter);
+            this.BocExpander1.Controls.Add(this.BocFilter1);
+            this.BocExpander1.Controls.Add(this.BocFilter2);
             this.BocExpander1.ExpandedHeight = 258;
             this.BocExpander1.IsExpanded = false;
             this.BocExpander1.Location = new System.Drawing.Point(1280, 100);
@@ -4625,73 +4624,73 @@ namespace BudgetExecution
             this.label6.TabIndex = 118;
             this.label6.Text = "Chart Type";
             // 
-            // ChartTypeFilter2
+            // BocFilter1
             // 
-            this.ChartTypeFilter2.AllowDrop = true;
-            this.ChartTypeFilter2.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
-            this.ChartTypeFilter2.BackColor = System.Drawing.Color.Transparent;
-            this.ChartTypeFilter2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
-            this.ChartTypeFilter2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
-            this.ChartTypeFilter2.CausesValidation = false;
-            this.ChartTypeFilter2.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.ChartTypeFilter2.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.ChartTypeFilter2.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.ChartTypeFilter2.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.ChartTypeFilter2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.ChartTypeFilter2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ChartTypeFilter2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.ChartTypeFilter2.FormattingEnabled = true;
-            this.ChartTypeFilter2.ItemHeight = 30;
-            this.ChartTypeFilter2.Items.AddRange(new object[] {
+            this.BocFilter1.AllowDrop = true;
+            this.BocFilter1.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.BocFilter1.BackColor = System.Drawing.Color.Transparent;
+            this.BocFilter1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.BocFilter1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.BocFilter1.CausesValidation = false;
+            this.BocFilter1.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.BocFilter1.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.BocFilter1.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.BocFilter1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.BocFilter1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.BocFilter1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BocFilter1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.BocFilter1.FormattingEnabled = true;
+            this.BocFilter1.ItemHeight = 30;
+            this.BocFilter1.Items.AddRange(new object[] {
             "Pie ",
             "Column"});
-            this.ChartTypeFilter2.Location = new System.Drawing.Point(28, 84);
-            this.ChartTypeFilter2.MaxDropDownItems = 20;
-            this.ChartTypeFilter2.Name = "ChartTypeFilter2";
-            this.ChartTypeFilter2.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.ChartTypeFilter2.SelectedItemForeColor = System.Drawing.Color.White;
-            this.ChartTypeFilter2.Size = new System.Drawing.Size(173, 36);
-            this.ChartTypeFilter2.Style = MetroSet_UI.Design.Style.Dark;
-            this.ChartTypeFilter2.StyleManager = null;
-            this.ChartTypeFilter2.TabIndex = 112;
-            this.ChartTypeFilter2.Tag = "Division";
-            this.ChartTypeFilter2.ThemeAuthor = "Narwin";
-            this.ChartTypeFilter2.ThemeName = "MetroDark";
+            this.BocFilter1.Location = new System.Drawing.Point(28, 84);
+            this.BocFilter1.MaxDropDownItems = 20;
+            this.BocFilter1.Name = "BocFilter1";
+            this.BocFilter1.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.BocFilter1.SelectedItemForeColor = System.Drawing.Color.White;
+            this.BocFilter1.Size = new System.Drawing.Size(173, 36);
+            this.BocFilter1.Style = MetroSet_UI.Design.Style.Dark;
+            this.BocFilter1.StyleManager = null;
+            this.BocFilter1.TabIndex = 112;
+            this.BocFilter1.Tag = "Division";
+            this.BocFilter1.ThemeAuthor = "Narwin";
+            this.BocFilter1.ThemeName = "MetroDark";
             // 
-            // BocFilter
+            // BocFilter2
             // 
-            this.BocFilter.AllowDrop = true;
-            this.BocFilter.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
-            this.BocFilter.BackColor = System.Drawing.Color.Transparent;
-            this.BocFilter.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
-            this.BocFilter.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
-            this.BocFilter.CausesValidation = false;
-            this.BocFilter.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.BocFilter.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.BocFilter.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.BocFilter.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.BocFilter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.BocFilter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BocFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.BocFilter.FormattingEnabled = true;
-            this.BocFilter.ItemHeight = 30;
-            this.BocFilter.Items.AddRange(new object[] {
+            this.BocFilter2.AllowDrop = true;
+            this.BocFilter2.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.BocFilter2.BackColor = System.Drawing.Color.Transparent;
+            this.BocFilter2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.BocFilter2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.BocFilter2.CausesValidation = false;
+            this.BocFilter2.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.BocFilter2.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.BocFilter2.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.BocFilter2.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.BocFilter2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.BocFilter2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BocFilter2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.BocFilter2.FormattingEnabled = true;
+            this.BocFilter2.ItemHeight = 30;
+            this.BocFilter2.Items.AddRange(new object[] {
             "Total ",
             "Count",
             "Average",
             "Ratio"});
-            this.BocFilter.Location = new System.Drawing.Point(28, 189);
-            this.BocFilter.MaxDropDownItems = 20;
-            this.BocFilter.Name = "BocFilter";
-            this.BocFilter.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.BocFilter.SelectedItemForeColor = System.Drawing.Color.White;
-            this.BocFilter.Size = new System.Drawing.Size(173, 36);
-            this.BocFilter.Style = MetroSet_UI.Design.Style.Dark;
-            this.BocFilter.StyleManager = null;
-            this.BocFilter.TabIndex = 1;
-            this.BocFilter.Tag = "Division";
-            this.BocFilter.ThemeAuthor = "Narwin";
-            this.BocFilter.ThemeName = "MetroDark";
+            this.BocFilter2.Location = new System.Drawing.Point(28, 189);
+            this.BocFilter2.MaxDropDownItems = 20;
+            this.BocFilter2.Name = "BocFilter2";
+            this.BocFilter2.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.BocFilter2.SelectedItemForeColor = System.Drawing.Color.White;
+            this.BocFilter2.Size = new System.Drawing.Size(173, 36);
+            this.BocFilter2.Style = MetroSet_UI.Design.Style.Dark;
+            this.BocFilter2.StyleManager = null;
+            this.BocFilter2.TabIndex = 1;
+            this.BocFilter2.Tag = "Division";
+            this.BocFilter2.ThemeAuthor = "Narwin";
+            this.BocFilter2.ThemeName = "MetroDark";
             // 
             // BocChart
             // 
@@ -4755,49 +4754,49 @@ namespace BudgetExecution
             this.BocChart.PrimaryYAxis.TitleFont = new System.Drawing.Font("Segoe UI", 14F);
             this.BocChart.RealMode3D = true;
             this.BocChart.Rotation = 45F;
-            chartSeries17.FancyToolTip.ResizeInsideSymbol = true;
-            chartSeries17.Name = "Default0";
-            chartSeries17.Points.Add(1D, ((double)(55D)));
-            chartSeries17.Points.Add(2D, ((double)(70D)));
-            chartSeries17.Points.Add(3D, ((double)(80D)));
-            chartSeries17.Points.Add(4D, ((double)(65D)));
-            chartSeries17.Points.Add(5D, ((double)(75D)));
-            chartSeries17.Resolution = 0D;
-            chartSeries17.StackingGroup = "Default Group";
-            chartSeries17.Style.AltTagFormat = "";
-            chartSeries17.Style.Callout.Font.Facename = "Microsoft Sans Serif";
-            chartSeries17.Style.DrawTextShape = false;
-            chartSeries17.Style.Font.Facename = "Microsoft Sans Serif";
-            chartLineInfo9.Alignment = System.Drawing.Drawing2D.PenAlignment.Center;
-            chartLineInfo9.Color = System.Drawing.SystemColors.ControlText;
-            chartLineInfo9.DashPattern = null;
-            chartLineInfo9.DashStyle = System.Drawing.Drawing2D.DashStyle.Solid;
-            chartLineInfo9.Width = 1F;
-            chartCustomShapeInfo17.Border = chartLineInfo9;
-            chartCustomShapeInfo17.Color = System.Drawing.SystemColors.HighlightText;
-            chartCustomShapeInfo17.Type = Syncfusion.Windows.Forms.Chart.ChartCustomShape.Square;
-            chartSeries17.Style.TextShape = chartCustomShapeInfo17;
-            chartSeries17.Text = "Default0";
-            chartSeries18.FancyToolTip.ResizeInsideSymbol = true;
-            chartSeries18.Name = "Default1";
-            chartSeries18.Points.Add(1D, ((double)(70D)));
-            chartSeries18.Points.Add(2D, ((double)(35D)));
-            chartSeries18.Points.Add(3D, ((double)(65D)));
-            chartSeries18.Points.Add(4D, ((double)(25D)));
-            chartSeries18.Points.Add(5D, ((double)(50D)));
-            chartSeries18.Resolution = 0D;
-            chartSeries18.StackingGroup = "Default Group";
-            chartSeries18.Style.AltTagFormat = "";
-            chartSeries18.Style.Callout.Font.Facename = "Microsoft Sans Serif";
-            chartSeries18.Style.DrawTextShape = false;
-            chartSeries18.Style.Font.Facename = "Microsoft Sans Serif";
-            chartCustomShapeInfo18.Border = chartLineInfo9;
-            chartCustomShapeInfo18.Color = System.Drawing.SystemColors.HighlightText;
-            chartCustomShapeInfo18.Type = Syncfusion.Windows.Forms.Chart.ChartCustomShape.Square;
-            chartSeries18.Style.TextShape = chartCustomShapeInfo18;
-            chartSeries18.Text = "Default1";
-            this.BocChart.Series.Add(chartSeries17);
-            this.BocChart.Series.Add(chartSeries18);
+            chartSeries15.FancyToolTip.ResizeInsideSymbol = true;
+            chartSeries15.Name = "Default0";
+            chartSeries15.Points.Add(1D, ((double)(55D)));
+            chartSeries15.Points.Add(2D, ((double)(70D)));
+            chartSeries15.Points.Add(3D, ((double)(80D)));
+            chartSeries15.Points.Add(4D, ((double)(65D)));
+            chartSeries15.Points.Add(5D, ((double)(75D)));
+            chartSeries15.Resolution = 0D;
+            chartSeries15.StackingGroup = "Default Group";
+            chartSeries15.Style.AltTagFormat = "";
+            chartSeries15.Style.Callout.Font.Facename = "Microsoft Sans Serif";
+            chartSeries15.Style.DrawTextShape = false;
+            chartSeries15.Style.Font.Facename = "Microsoft Sans Serif";
+            chartLineInfo8.Alignment = System.Drawing.Drawing2D.PenAlignment.Center;
+            chartLineInfo8.Color = System.Drawing.SystemColors.ControlText;
+            chartLineInfo8.DashPattern = null;
+            chartLineInfo8.DashStyle = System.Drawing.Drawing2D.DashStyle.Solid;
+            chartLineInfo8.Width = 1F;
+            chartCustomShapeInfo15.Border = chartLineInfo8;
+            chartCustomShapeInfo15.Color = System.Drawing.SystemColors.HighlightText;
+            chartCustomShapeInfo15.Type = Syncfusion.Windows.Forms.Chart.ChartCustomShape.Square;
+            chartSeries15.Style.TextShape = chartCustomShapeInfo15;
+            chartSeries15.Text = "Default0";
+            chartSeries16.FancyToolTip.ResizeInsideSymbol = true;
+            chartSeries16.Name = "Default1";
+            chartSeries16.Points.Add(1D, ((double)(70D)));
+            chartSeries16.Points.Add(2D, ((double)(35D)));
+            chartSeries16.Points.Add(3D, ((double)(65D)));
+            chartSeries16.Points.Add(4D, ((double)(25D)));
+            chartSeries16.Points.Add(5D, ((double)(50D)));
+            chartSeries16.Resolution = 0D;
+            chartSeries16.StackingGroup = "Default Group";
+            chartSeries16.Style.AltTagFormat = "";
+            chartSeries16.Style.Callout.Font.Facename = "Microsoft Sans Serif";
+            chartSeries16.Style.DrawTextShape = false;
+            chartSeries16.Style.Font.Facename = "Microsoft Sans Serif";
+            chartCustomShapeInfo16.Border = chartLineInfo8;
+            chartCustomShapeInfo16.Color = System.Drawing.SystemColors.HighlightText;
+            chartCustomShapeInfo16.Type = Syncfusion.Windows.Forms.Chart.ChartCustomShape.Square;
+            chartSeries16.Style.TextShape = chartCustomShapeInfo16;
+            chartSeries16.Text = "Default1";
+            this.BocChart.Series.Add(chartSeries15);
+            this.BocChart.Series.Add(chartSeries16);
             this.BocChart.Series3D = true;
             this.BocChart.SeriesHighlight = true;
             this.BocChart.ShadowColor = new Syncfusion.Drawing.BrushInfo(Syncfusion.Drawing.GradientStyle.PathRectangle, System.Drawing.SystemColors.WindowText, System.Drawing.Color.Silver);
@@ -4813,13 +4812,13 @@ namespace BudgetExecution
             this.BocChart.Title.Font = new System.Drawing.Font("Segoe UI", 16F);
             this.BocChart.Title.Name = "Default";
             this.BocChart.ToolBar.EnableDefaultItems = false;
-            this.BocChart.ToolBar.Items.Add(chartToolBarSaveItem9);
-            this.BocChart.ToolBar.Items.Add(chartToolBarCopyItem9);
-            this.BocChart.ToolBar.Items.Add(chartToolBarPrintItem9);
-            this.BocChart.ToolBar.Items.Add(chartToolBarPaletteItem9);
-            this.BocChart.ToolBar.Items.Add(chartToolBarTypeItem9);
-            this.BocChart.ToolBar.Items.Add(chartToolBarSeries3DItem9);
-            this.BocChart.ToolBar.Items.Add(chartToolBarShowLegendItem9);
+            this.BocChart.ToolBar.Items.Add(chartToolBarSaveItem8);
+            this.BocChart.ToolBar.Items.Add(chartToolBarCopyItem8);
+            this.BocChart.ToolBar.Items.Add(chartToolBarPrintItem8);
+            this.BocChart.ToolBar.Items.Add(chartToolBarPaletteItem8);
+            this.BocChart.ToolBar.Items.Add(chartToolBarTypeItem8);
+            this.BocChart.ToolBar.Items.Add(chartToolBarSeries3DItem8);
+            this.BocChart.ToolBar.Items.Add(chartToolBarShowLegendItem8);
             // 
             // FundTab
             // 
@@ -4845,8 +4844,8 @@ namespace BudgetExecution
             this.FundExpander2.ButtonStyle = MakarovDev.ExpandCollapsePanel.ExpandCollapseButton.ExpandButtonStyle.Circle;
             this.FundExpander2.Controls.Add(this.label3);
             this.FundExpander2.Controls.Add(this.label25);
+            this.FundExpander2.Controls.Add(this.FundFilter4);
             this.FundExpander2.Controls.Add(this.FundFilter3);
-            this.FundExpander2.Controls.Add(this.FundFilter2);
             this.FundExpander2.ExpandedHeight = 292;
             this.FundExpander2.IsExpanded = false;
             this.FundExpander2.Location = new System.Drawing.Point(1280, 417);
@@ -4878,6 +4877,43 @@ namespace BudgetExecution
             this.label25.TabIndex = 116;
             this.label25.Text = "Grouping";
             // 
+            // FundFilter4
+            // 
+            this.FundFilter4.AllowDrop = true;
+            this.FundFilter4.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.FundFilter4.BackColor = System.Drawing.Color.Transparent;
+            this.FundFilter4.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.FundFilter4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.FundFilter4.CausesValidation = false;
+            this.FundFilter4.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.FundFilter4.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.FundFilter4.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.FundFilter4.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.FundFilter4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.FundFilter4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.FundFilter4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.FundFilter4.FormattingEnabled = true;
+            this.FundFilter4.ItemHeight = 30;
+            this.FundFilter4.Items.AddRange(new object[] {
+            "BOC",
+            "NPM",
+            "Goal",
+            "Objective",
+            "RC",
+            "ProgramArea"});
+            this.FundFilter4.Location = new System.Drawing.Point(35, 229);
+            this.FundFilter4.MaxDropDownItems = 20;
+            this.FundFilter4.Name = "FundFilter4";
+            this.FundFilter4.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.FundFilter4.SelectedItemForeColor = System.Drawing.Color.White;
+            this.FundFilter4.Size = new System.Drawing.Size(173, 36);
+            this.FundFilter4.Style = MetroSet_UI.Design.Style.Dark;
+            this.FundFilter4.StyleManager = null;
+            this.FundFilter4.TabIndex = 108;
+            this.FundFilter4.Tag = "RC";
+            this.FundFilter4.ThemeAuthor = "Narwin";
+            this.FundFilter4.ThemeName = "MetroDark";
+            // 
             // FundFilter3
             // 
             this.FundFilter3.AllowDrop = true;
@@ -4896,13 +4932,11 @@ namespace BudgetExecution
             this.FundFilter3.FormattingEnabled = true;
             this.FundFilter3.ItemHeight = 30;
             this.FundFilter3.Items.AddRange(new object[] {
-            "BOC",
-            "NPM",
-            "Goal",
-            "RC",
-            "Objective",
-            "ProgramArea"});
-            this.FundFilter3.Location = new System.Drawing.Point(35, 229);
+            "Total ",
+            "Count",
+            "Average",
+            "Ratio"});
+            this.FundFilter3.Location = new System.Drawing.Point(35, 99);
             this.FundFilter3.MaxDropDownItems = 20;
             this.FundFilter3.Name = "FundFilter3";
             this.FundFilter3.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
@@ -4911,44 +4945,9 @@ namespace BudgetExecution
             this.FundFilter3.Style = MetroSet_UI.Design.Style.Dark;
             this.FundFilter3.StyleManager = null;
             this.FundFilter3.TabIndex = 108;
-            this.FundFilter3.Tag = "Division";
+            this.FundFilter3.Tag = "FundName";
             this.FundFilter3.ThemeAuthor = "Narwin";
             this.FundFilter3.ThemeName = "MetroDark";
-            // 
-            // FundFilter2
-            // 
-            this.FundFilter2.AllowDrop = true;
-            this.FundFilter2.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
-            this.FundFilter2.BackColor = System.Drawing.Color.Transparent;
-            this.FundFilter2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
-            this.FundFilter2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
-            this.FundFilter2.CausesValidation = false;
-            this.FundFilter2.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.FundFilter2.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.FundFilter2.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.FundFilter2.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.FundFilter2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.FundFilter2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.FundFilter2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.FundFilter2.FormattingEnabled = true;
-            this.FundFilter2.ItemHeight = 30;
-            this.FundFilter2.Items.AddRange(new object[] {
-            "Total ",
-            "Count",
-            "Average",
-            "Ratio"});
-            this.FundFilter2.Location = new System.Drawing.Point(35, 99);
-            this.FundFilter2.MaxDropDownItems = 20;
-            this.FundFilter2.Name = "FundFilter2";
-            this.FundFilter2.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.FundFilter2.SelectedItemForeColor = System.Drawing.Color.White;
-            this.FundFilter2.Size = new System.Drawing.Size(173, 36);
-            this.FundFilter2.Style = MetroSet_UI.Design.Style.Dark;
-            this.FundFilter2.StyleManager = null;
-            this.FundFilter2.TabIndex = 108;
-            this.FundFilter2.Tag = "FundName";
-            this.FundFilter2.ThemeAuthor = "Narwin";
-            this.FundFilter2.ThemeName = "MetroDark";
             // 
             // FundExpander1
             // 
@@ -4957,9 +4956,9 @@ namespace BudgetExecution
             this.FundExpander1.ButtonStyle = MakarovDev.ExpandCollapsePanel.ExpandCollapseButton.ExpandButtonStyle.Circle;
             this.FundExpander1.Controls.Add(this.label2);
             this.FundExpander1.Controls.Add(this.label1);
-            this.FundExpander1.Controls.Add(this.ChartTypeFilter1);
-            this.FundExpander1.Controls.Add(this.FundFilter);
-            this.FundExpander1.ExpandedHeight = 244;
+            this.FundExpander1.Controls.Add(this.FundFilter1);
+            this.FundExpander1.Controls.Add(this.FundFilter2);
+            this.FundExpander1.ExpandedHeight = 283;
             this.FundExpander1.IsExpanded = false;
             this.FundExpander1.Location = new System.Drawing.Point(1280, 100);
             this.FundExpander1.Name = "FundExpander1";
@@ -4990,72 +4989,72 @@ namespace BudgetExecution
             this.label1.TabIndex = 114;
             this.label1.Text = "Chart Type";
             // 
-            // ChartTypeFilter1
+            // FundFilter1
             // 
-            this.ChartTypeFilter1.AllowDrop = true;
-            this.ChartTypeFilter1.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
-            this.ChartTypeFilter1.BackColor = System.Drawing.Color.Transparent;
-            this.ChartTypeFilter1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
-            this.ChartTypeFilter1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
-            this.ChartTypeFilter1.CausesValidation = false;
-            this.ChartTypeFilter1.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.ChartTypeFilter1.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.ChartTypeFilter1.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.ChartTypeFilter1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.ChartTypeFilter1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.ChartTypeFilter1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ChartTypeFilter1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.ChartTypeFilter1.FormattingEnabled = true;
-            this.ChartTypeFilter1.ItemHeight = 30;
-            this.ChartTypeFilter1.Items.AddRange(new object[] {
+            this.FundFilter1.AllowDrop = true;
+            this.FundFilter1.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.FundFilter1.BackColor = System.Drawing.Color.Transparent;
+            this.FundFilter1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.FundFilter1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.FundFilter1.CausesValidation = false;
+            this.FundFilter1.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.FundFilter1.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.FundFilter1.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.FundFilter1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.FundFilter1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.FundFilter1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.FundFilter1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.FundFilter1.FormattingEnabled = true;
+            this.FundFilter1.ItemHeight = 30;
+            this.FundFilter1.Items.AddRange(new object[] {
             "Pie ",
             "Column"});
-            this.ChartTypeFilter1.Location = new System.Drawing.Point(32, 90);
-            this.ChartTypeFilter1.MaxDropDownItems = 20;
-            this.ChartTypeFilter1.Name = "ChartTypeFilter1";
-            this.ChartTypeFilter1.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.ChartTypeFilter1.SelectedItemForeColor = System.Drawing.Color.White;
-            this.ChartTypeFilter1.Size = new System.Drawing.Size(173, 36);
-            this.ChartTypeFilter1.Style = MetroSet_UI.Design.Style.Dark;
-            this.ChartTypeFilter1.StyleManager = null;
-            this.ChartTypeFilter1.TabIndex = 113;
-            this.ChartTypeFilter1.Tag = "Division";
-            this.ChartTypeFilter1.ThemeAuthor = "Narwin";
-            this.ChartTypeFilter1.ThemeName = "MetroDark";
+            this.FundFilter1.Location = new System.Drawing.Point(32, 90);
+            this.FundFilter1.MaxDropDownItems = 20;
+            this.FundFilter1.Name = "FundFilter1";
+            this.FundFilter1.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.FundFilter1.SelectedItemForeColor = System.Drawing.Color.White;
+            this.FundFilter1.Size = new System.Drawing.Size(173, 36);
+            this.FundFilter1.Style = MetroSet_UI.Design.Style.Dark;
+            this.FundFilter1.StyleManager = null;
+            this.FundFilter1.TabIndex = 113;
+            this.FundFilter1.Tag = "Division";
+            this.FundFilter1.ThemeAuthor = "Narwin";
+            this.FundFilter1.ThemeName = "MetroDark";
             // 
-            // FundFilter
+            // FundFilter2
             // 
-            this.FundFilter.AllowDrop = true;
-            this.FundFilter.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
-            this.FundFilter.BackColor = System.Drawing.Color.Transparent;
-            this.FundFilter.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
-            this.FundFilter.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
-            this.FundFilter.CausesValidation = false;
-            this.FundFilter.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.FundFilter.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.FundFilter.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.FundFilter.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.FundFilter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.FundFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.FundFilter.FormattingEnabled = true;
-            this.FundFilter.ItemHeight = 30;
-            this.FundFilter.Items.AddRange(new object[] {
+            this.FundFilter2.AllowDrop = true;
+            this.FundFilter2.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.FundFilter2.BackColor = System.Drawing.Color.Transparent;
+            this.FundFilter2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.FundFilter2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.FundFilter2.CausesValidation = false;
+            this.FundFilter2.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.FundFilter2.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.FundFilter2.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.FundFilter2.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.FundFilter2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.FundFilter2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.FundFilter2.FormattingEnabled = true;
+            this.FundFilter2.ItemHeight = 30;
+            this.FundFilter2.Items.AddRange(new object[] {
             "Total ",
             "Count",
             "Average",
             "Ratio"});
-            this.FundFilter.Location = new System.Drawing.Point(32, 198);
-            this.FundFilter.MaxDropDownItems = 20;
-            this.FundFilter.Name = "FundFilter";
-            this.FundFilter.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.FundFilter.SelectedItemForeColor = System.Drawing.Color.White;
-            this.FundFilter.Size = new System.Drawing.Size(173, 36);
-            this.FundFilter.Style = MetroSet_UI.Design.Style.Dark;
-            this.FundFilter.StyleManager = null;
-            this.FundFilter.TabIndex = 1;
-            this.FundFilter.Tag = "Division";
-            this.FundFilter.ThemeAuthor = "Narwin";
-            this.FundFilter.ThemeName = "MetroDark";
+            this.FundFilter2.Location = new System.Drawing.Point(32, 198);
+            this.FundFilter2.MaxDropDownItems = 20;
+            this.FundFilter2.Name = "FundFilter2";
+            this.FundFilter2.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.FundFilter2.SelectedItemForeColor = System.Drawing.Color.White;
+            this.FundFilter2.Size = new System.Drawing.Size(173, 36);
+            this.FundFilter2.Style = MetroSet_UI.Design.Style.Dark;
+            this.FundFilter2.StyleManager = null;
+            this.FundFilter2.TabIndex = 1;
+            this.FundFilter2.Tag = "Division";
+            this.FundFilter2.ThemeAuthor = "Narwin";
+            this.FundFilter2.ThemeName = "MetroDark";
             // 
             // FundChart
             // 
@@ -5119,49 +5118,49 @@ namespace BudgetExecution
             this.FundChart.PrimaryYAxis.TitleFont = new System.Drawing.Font("Segoe UI", 14F);
             this.FundChart.RealMode3D = true;
             this.FundChart.Rotation = 20F;
-            chartSeries19.FancyToolTip.ResizeInsideSymbol = true;
-            chartSeries19.Name = "Default0";
-            chartSeries19.Points.Add(1D, ((double)(55D)));
-            chartSeries19.Points.Add(2D, ((double)(70D)));
-            chartSeries19.Points.Add(3D, ((double)(80D)));
-            chartSeries19.Points.Add(4D, ((double)(65D)));
-            chartSeries19.Points.Add(5D, ((double)(75D)));
-            chartSeries19.Resolution = 0D;
-            chartSeries19.StackingGroup = "Default Group";
-            chartSeries19.Style.AltTagFormat = "";
-            chartSeries19.Style.Callout.Font.Facename = "Microsoft Sans Serif";
-            chartSeries19.Style.DrawTextShape = false;
-            chartSeries19.Style.Font.Facename = "Microsoft Sans Serif";
-            chartLineInfo10.Alignment = System.Drawing.Drawing2D.PenAlignment.Center;
-            chartLineInfo10.Color = System.Drawing.SystemColors.ControlText;
-            chartLineInfo10.DashPattern = null;
-            chartLineInfo10.DashStyle = System.Drawing.Drawing2D.DashStyle.Solid;
-            chartLineInfo10.Width = 1F;
-            chartCustomShapeInfo19.Border = chartLineInfo10;
-            chartCustomShapeInfo19.Color = System.Drawing.SystemColors.HighlightText;
-            chartCustomShapeInfo19.Type = Syncfusion.Windows.Forms.Chart.ChartCustomShape.Square;
-            chartSeries19.Style.TextShape = chartCustomShapeInfo19;
-            chartSeries19.Text = "Default0";
-            chartSeries20.FancyToolTip.ResizeInsideSymbol = true;
-            chartSeries20.Name = "Default1";
-            chartSeries20.Points.Add(1D, ((double)(70D)));
-            chartSeries20.Points.Add(2D, ((double)(35D)));
-            chartSeries20.Points.Add(3D, ((double)(65D)));
-            chartSeries20.Points.Add(4D, ((double)(25D)));
-            chartSeries20.Points.Add(5D, ((double)(50D)));
-            chartSeries20.Resolution = 0D;
-            chartSeries20.StackingGroup = "Default Group";
-            chartSeries20.Style.AltTagFormat = "";
-            chartSeries20.Style.Callout.Font.Facename = "Microsoft Sans Serif";
-            chartSeries20.Style.DrawTextShape = false;
-            chartSeries20.Style.Font.Facename = "Microsoft Sans Serif";
-            chartCustomShapeInfo20.Border = chartLineInfo10;
-            chartCustomShapeInfo20.Color = System.Drawing.SystemColors.HighlightText;
-            chartCustomShapeInfo20.Type = Syncfusion.Windows.Forms.Chart.ChartCustomShape.Square;
-            chartSeries20.Style.TextShape = chartCustomShapeInfo20;
-            chartSeries20.Text = "Default1";
-            this.FundChart.Series.Add(chartSeries19);
-            this.FundChart.Series.Add(chartSeries20);
+            chartSeries17.FancyToolTip.ResizeInsideSymbol = true;
+            chartSeries17.Name = "Default0";
+            chartSeries17.Points.Add(1D, ((double)(55D)));
+            chartSeries17.Points.Add(2D, ((double)(70D)));
+            chartSeries17.Points.Add(3D, ((double)(80D)));
+            chartSeries17.Points.Add(4D, ((double)(65D)));
+            chartSeries17.Points.Add(5D, ((double)(75D)));
+            chartSeries17.Resolution = 0D;
+            chartSeries17.StackingGroup = "Default Group";
+            chartSeries17.Style.AltTagFormat = "";
+            chartSeries17.Style.Callout.Font.Facename = "Microsoft Sans Serif";
+            chartSeries17.Style.DrawTextShape = false;
+            chartSeries17.Style.Font.Facename = "Microsoft Sans Serif";
+            chartLineInfo9.Alignment = System.Drawing.Drawing2D.PenAlignment.Center;
+            chartLineInfo9.Color = System.Drawing.SystemColors.ControlText;
+            chartLineInfo9.DashPattern = null;
+            chartLineInfo9.DashStyle = System.Drawing.Drawing2D.DashStyle.Solid;
+            chartLineInfo9.Width = 1F;
+            chartCustomShapeInfo17.Border = chartLineInfo9;
+            chartCustomShapeInfo17.Color = System.Drawing.SystemColors.HighlightText;
+            chartCustomShapeInfo17.Type = Syncfusion.Windows.Forms.Chart.ChartCustomShape.Square;
+            chartSeries17.Style.TextShape = chartCustomShapeInfo17;
+            chartSeries17.Text = "Default0";
+            chartSeries18.FancyToolTip.ResizeInsideSymbol = true;
+            chartSeries18.Name = "Default1";
+            chartSeries18.Points.Add(1D, ((double)(70D)));
+            chartSeries18.Points.Add(2D, ((double)(35D)));
+            chartSeries18.Points.Add(3D, ((double)(65D)));
+            chartSeries18.Points.Add(4D, ((double)(25D)));
+            chartSeries18.Points.Add(5D, ((double)(50D)));
+            chartSeries18.Resolution = 0D;
+            chartSeries18.StackingGroup = "Default Group";
+            chartSeries18.Style.AltTagFormat = "";
+            chartSeries18.Style.Callout.Font.Facename = "Microsoft Sans Serif";
+            chartSeries18.Style.DrawTextShape = false;
+            chartSeries18.Style.Font.Facename = "Microsoft Sans Serif";
+            chartCustomShapeInfo18.Border = chartLineInfo9;
+            chartCustomShapeInfo18.Color = System.Drawing.SystemColors.HighlightText;
+            chartCustomShapeInfo18.Type = Syncfusion.Windows.Forms.Chart.ChartCustomShape.Square;
+            chartSeries18.Style.TextShape = chartCustomShapeInfo18;
+            chartSeries18.Text = "Default1";
+            this.FundChart.Series.Add(chartSeries17);
+            this.FundChart.Series.Add(chartSeries18);
             this.FundChart.Series3D = true;
             this.FundChart.SeriesHighlight = true;
             this.FundChart.ShadowColor = new Syncfusion.Drawing.BrushInfo(Syncfusion.Drawing.GradientStyle.PathRectangle, System.Drawing.SystemColors.WindowText, System.Drawing.Color.Silver);
@@ -5176,13 +5175,13 @@ namespace BudgetExecution
             // 
             this.FundChart.Title.Name = "Default";
             this.FundChart.ToolBar.EnableDefaultItems = false;
-            this.FundChart.ToolBar.Items.Add(chartToolBarSaveItem10);
-            this.FundChart.ToolBar.Items.Add(chartToolBarCopyItem10);
-            this.FundChart.ToolBar.Items.Add(chartToolBarPrintItem10);
-            this.FundChart.ToolBar.Items.Add(chartToolBarPaletteItem10);
-            this.FundChart.ToolBar.Items.Add(chartToolBarTypeItem10);
-            this.FundChart.ToolBar.Items.Add(chartToolBarSeries3DItem10);
-            this.FundChart.ToolBar.Items.Add(chartToolBarShowLegendItem10);
+            this.FundChart.ToolBar.Items.Add(chartToolBarSaveItem9);
+            this.FundChart.ToolBar.Items.Add(chartToolBarCopyItem9);
+            this.FundChart.ToolBar.Items.Add(chartToolBarPrintItem9);
+            this.FundChart.ToolBar.Items.Add(chartToolBarPaletteItem9);
+            this.FundChart.ToolBar.Items.Add(chartToolBarTypeItem9);
+            this.FundChart.ToolBar.Items.Add(chartToolBarSeries3DItem9);
+            this.FundChart.ToolBar.Items.Add(chartToolBarShowLegendItem9);
             // 
             // SummaryTabControl
             // 
@@ -5460,7 +5459,7 @@ namespace BudgetExecution
         protected ChartControl AreaChart;
         private TabPageAdv DivisionTab;
         private MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel DivisionExpander1;
-        private MetroSetComboBox DivisionFilter;
+        private MetroSetComboBox DivisionFilter2;
         protected ChartControl DivisionChart;
         private TabPageAdv ObjectiveTab;
         private MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel ObjectiveExpander1;
@@ -5477,22 +5476,22 @@ namespace BudgetExecution
         private MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel FundExpander1;
         protected ChartControl FundChart;
         private TabControlAdv SummaryTabControl;
-        private MetroSetComboBox ObjectiveFilter;
-        private MetroSetComboBox GoalFilter;
-        private MetroSetComboBox FundFilter;
-        private MetroSetComboBox ProjectFilter;
-        private MetroSetComboBox AreaFilter;
+        private MetroSetComboBox ObjectiveFilter2;
+        private MetroSetComboBox GoalFilter2;
+        private MetroSetComboBox FundFilter2;
+        private MetroSetComboBox ProjectFilter2;
+        private MetroSetComboBox AreaFilter2;
         private MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel BocExpander1;
-        private MetroSetComboBox BocFilter;
-        private MetroSetComboBox ChartTypeFilter2;
-        private MetroSetComboBox NpmFilter;
-        private MetroSetComboBox ChartTypeFilter3;
-        private MetroSetComboBox ChartTypeFilter8;
-        private MetroSetComboBox ChartTypeFilter7;
-        private MetroSetComboBox ChartTypeFilter6;
-        private MetroSetComboBox ChartTypeFilter5;
-        private MetroSetComboBox ChartTypeFilter4;
-        private MetroSetComboBox ChartTypeFilter1;
+        private MetroSetComboBox BocFilter2;
+        private MetroSetComboBox BocFilter1;
+        private MetroSetComboBox NpmFilter2;
+        private MetroSetComboBox NpmFilter1;
+        private MetroSetComboBox ProjectFilter1;
+        private MetroSetComboBox AreaFilter1;
+        private MetroSetComboBox DivisionFilter1;
+        private MetroSetComboBox ObjectiveFilter1;
+        private MetroSetComboBox GoalFilter1;
+        private MetroSetComboBox FundFilter1;
         private Label label23;
         private Label label24;
         private Label label20;
@@ -5510,34 +5509,34 @@ namespace BudgetExecution
         private Label label3;
         private Label label2;
         private Label label1;
-        private MetroSetComboBox FundFilter2;
+        private MetroSetComboBox FundFilter3;
         private MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel BocExpander2;
+        private MetroSetComboBox BocFilter4;
         private MetroSetComboBox BocFilter3;
-        private MetroSetComboBox BocFilter2;
         private MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel FundExpander2;
         private Label label25;
-        private MetroSetComboBox FundFilter3;
+        private MetroSetComboBox FundFilter4;
         private MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel ProjectExpander2;
+        private MetroSetComboBox ProjectFilter4;
         private MetroSetComboBox ProjectFilter3;
-        private MetroSetComboBox ProjectFilter2;
         private MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel AreaExpander2;
+        private MetroSetComboBox AreaFilter4;
         private MetroSetComboBox AreaFilter3;
-        private MetroSetComboBox AreaFilter2;
         private MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel DivisionExpander2;
+        private MetroSetComboBox DivisionFilter4;
         private MetroSetComboBox DivisionFilter3;
-        private MetroSetComboBox DivisionFilter2;
         private MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel ObjectiveExpander2;
+        private MetroSetComboBox ObjectiveFilter4;
         private MetroSetComboBox ObjectiveFilter3;
-        private MetroSetComboBox ObjectiveFilter2;
         private MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel GoalExpander2;
+        private MetroSetComboBox GoalFilter4;
         private MetroSetComboBox GoalFilter3;
-        private MetroSetComboBox GoalFilter2;
         private MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel NpmExpander2;
         private Label label7;
         private Label label27;
+        private MetroSetComboBox NpmFilter4;
         private MetroSetComboBox NpmFilter3;
-        private MetroSetComboBox NpmFilter2;
-        private Label label34;
+        private Label lblBoc;
         private Label label33;
         private Label label22;
         private Label label30;
@@ -5558,5 +5557,6 @@ namespace BudgetExecution
         private Button button10;
         private Button button7;
         private PictureBox pictureBox1;
+        private Label lblPrc;
     }
 }
