@@ -10,22 +10,23 @@ using System.Data;
 
 namespace BudgetExecution
 {
-    public class Query
+    public class Query : IQuery
     {
         //Constructors
         public Query()
         {
         }
-        public Query(Source source)
+        public Query(Source source, Provider provider)
         {
+            Provider = provider;
             Source = source;
             Provider = Provider.SQLite;
             TableName = source.ToString();
             SelectStatement = $"SELECT * FROM {source.ToString()}";
-            DataConnection = new SQLiteConnection(@"datasource=C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\database\SQLite\R6.db");
+            DataConnection = GetConnection(provider);
             SelectCommand = GetSelectCommand(SelectStatement, DataConnection);
-            Adapter = GetDataAdapter(SelectCommand);
-            CommandBuilder = GetCommandBuilder(Adapter);
+            DataAdapter = GetDataAdapter(SelectCommand);
+            CommandBuilder = GetCommandBuilder(DataAdapter);
             UpdateCommand = CommandBuilder.GetUpdateCommand();
             InsertCommand = CommandBuilder.GetInsertCommand();
             DeleteCommand = CommandBuilder.GetDeleteCommand();
@@ -39,22 +40,8 @@ namespace BudgetExecution
             Parameter = param;
             SelectStatement = $"SELECT * FROM {source.ToString()}";
             SelectCommand = GetSelectCommand(SelectStatement, DataConnection);
-            Adapter = GetDataAdapter(SelectCommand);
-            CommandBuilder = GetCommandBuilder(Adapter);
-            UpdateCommand = CommandBuilder.GetUpdateCommand();
-            InsertCommand = CommandBuilder.GetInsertCommand();
-            DeleteCommand = CommandBuilder.GetDeleteCommand();
-        }
-        public Query(Source source, Dictionary<string, object> param)
-        {
-            DataConnection = new SQLiteConnection(@"datasource=C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\database\SQLite\R6.db");
-            Source = source;
-            TableName = source.ToString();
-            Parameter = param;
-            SelectStatement = GetSqlStatement(TableName, Parameter);
-            SelectCommand = GetSelectCommand(SelectStatement, DataConnection);
-            Adapter = GetDataAdapter(SelectCommand);
-            CommandBuilder = GetCommandBuilder(Adapter);
+            DataAdapter = GetDataAdapter(SelectCommand);
+            CommandBuilder = GetCommandBuilder(DataAdapter);
             UpdateCommand = CommandBuilder.GetUpdateCommand();
             InsertCommand = CommandBuilder.GetInsertCommand();
             DeleteCommand = CommandBuilder.GetDeleteCommand();
@@ -80,8 +67,8 @@ namespace BudgetExecution
             }
             SelectStatement = GetSqlStatement(TableName, Parameter);
             SelectCommand = GetSelectCommand(SelectStatement, DataConnection);
-            Adapter = GetDataAdapter(SelectCommand);
-            CommandBuilder = GetCommandBuilder(Adapter);
+            DataAdapter = GetDataAdapter(SelectCommand);
+            CommandBuilder = GetCommandBuilder(DataAdapter);
             UpdateCommand = CommandBuilder.GetUpdateCommand();
             InsertCommand = CommandBuilder.GetInsertCommand();
             DeleteCommand = CommandBuilder.GetDeleteCommand();
@@ -90,17 +77,17 @@ namespace BudgetExecution
         //Properties
         public Source Source { get; }
         public Provider Provider { get; }
-        public Command SqlCommand { get; set; }
         public AppSettingsReader Settings { get; }
         public DbConnection DataConnection { get; }
         public Dictionary<string, object> Parameter { get; }
         public string TableName { get; }
-        public Dictionary<string, string> SqlStatement { get; set; }
+        public string SqlStatement { get; set; }
         public string SelectStatement { get; set; }
         public DbCommand SelectCommand { get; }
         public DbDataReader DataReader { get; set; }
-        public DbDataAdapter Adapter { get; set; }
+        public DbDataAdapter DataAdapter { get; set; }
         public DbCommandBuilder CommandBuilder { get; internal set; }
+        public DbCommand DataCommand { get; set; }
         public DbCommand DeleteCommand { get; }
         public DbCommand InsertCommand { get; }
         public DbCommand UpdateCommand { get; }
@@ -163,6 +150,33 @@ namespace BudgetExecution
                 return null;
             }
         }
+        public DbCommand GetDataCommand(string select, IDbConnection connection)
+        {
+            try
+            {
+                if (connection is SQLiteConnection)
+                {
+                    SelectStatement = select;
+                    return new SQLiteCommand(select, (SQLiteConnection)connection);
+                }
+                if (connection is OleDbConnection)
+                {
+                    SelectStatement = select;
+                    return new OleDbCommand(select, (OleDbConnection)connection);
+                }
+                if (connection is SqlConnection)
+                {
+                    SelectStatement = select;
+                    return new SqlCommand(select, (SqlConnection)connection);
+                }
+                return null;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("ERROR!: \n" + ex.TargetSite + ex.StackTrace);
+                return null;
+            }
+        }
         internal DbCommand GetSelectCommand(string select, IDbConnection connection)
         {
             try
@@ -217,7 +231,7 @@ namespace BudgetExecution
                 return null;
             }
         }
-        internal DbConnection GetConnection(Provider provider)
+        public DbConnection GetConnection(Provider provider)
         {
             try
             {
@@ -257,6 +271,26 @@ namespace BudgetExecution
                 MessageBox.Show("ERROR!: \n" + ex.TargetSite + ex.StackTrace);
                 return null;
             }
+        }
+        public DbDataReader GetDataReader(IDbCommand command)
+        {
+            
+            try
+            {
+                if (command is SQLiteCommand)
+                    return ((SQLiteCommand)command).ExecuteReader();
+                if (command is OleDbCommand)
+                    return ((OleDbCommand)command).ExecuteReader();
+                if (command is SqlCommand)
+                    return ((SqlCommand)command).ExecuteReader();
+                return null;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("ERROR!: \n" + ex.TargetSite + ex.StackTrace);
+                return null;
+            }
+
         }
         public DbCommandBuilder GetCommandBuilder(IDbDataAdapter adapter)
         {

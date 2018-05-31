@@ -1,11 +1,12 @@
 using System;
+using Syncfusion.Windows.Forms;
 using Syncfusion.Windows.Forms.Spreadsheet;
 
 
 
 namespace BudgetExecution
 {
-    public partial class ExcelForm : Syncfusion.Windows.Forms.MetroForm
+    public partial class ExcelForm : MetroForm
     {
         public ExcelForm()
         {
@@ -34,6 +35,41 @@ namespace BudgetExecution
         }
 
         private void spreadsheet1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AccountTabControl_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroSetTextBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroSetLabel12_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void calculatorControl1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabControlAdv2_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

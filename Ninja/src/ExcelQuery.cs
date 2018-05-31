@@ -15,6 +15,7 @@ namespace BudgetExecution
         public ExcelQuery(Source source)
         {
             Source = source;
+            Provider = Provider.OleDb;
             TableName = source.ToString();
             SelectStatement = $"SELECT * FROM {source.ToString()}";
             Connection = new OleDbConnection(@"data source=C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\database\SqlServer\R6.mdf");
@@ -25,9 +26,10 @@ namespace BudgetExecution
             UpdateCommand = CommandBuilder.GetInsertCommand();
             DeleteCommand = CommandBuilder.GetInsertCommand();
         }
-        public ExcelQuery(Provider xls, Source source, Dictionary<string, object> param)
+        public ExcelQuery(Source source, Dictionary<string, object> param)
         {
             Source = source;
+            Provider = Provider.OleDb;
             TableName = source.ToString();
             Parameter = param;
             SelectStatement = GetSqlStatement();
@@ -44,17 +46,17 @@ namespace BudgetExecution
         public OleDbDataAdapter Adapter { get; set; }
         public OleDbCommandBuilder CommandBuilder { get; }
         public OleDbConnection Connection { get; }
-        public OleDbCommand DeleteCommand { get; }
-        public OleDbCommand InsertCommand { get; }
         public Dictionary<string, object> Parameter { get; }
         public OleDbDataReader Reader { get; set; }
         public OleDbCommand SelectCommand { get; }
         public string SelectStatement { get; }
         public Source Source { get; }
-        public Command Sql { get; set; }
+        public Provider Provider { get; set; }
         public Dictionary<string, string> SqlStatement { get; }
         public string TableName { get; }
         public OleDbCommand UpdateCommand { get; }
+        public OleDbCommand InsertCommand { get; }
+        public OleDbCommand DeleteCommand { get; }
 
         //Methods
         private OleDbCommandBuilder GetCommandBuilder()

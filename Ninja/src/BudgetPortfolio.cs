@@ -17,7 +17,7 @@ namespace BudgetExecution
         }
         public BudgetPortfolio(Dictionary<string, object> param)
         {
-            DocumentQuery = new Query(Source.BudgetDocument, param);
+            DocumentQuery = new Query(Source.BudgetDocument, Provider.SQLite, param);
         }
 
 

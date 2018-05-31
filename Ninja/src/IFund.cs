@@ -7,7 +7,7 @@ namespace BudgetExecution
     {
         //Properties
         string Code { get; }
-        DataRow DataRecord { get; set; }
+        DataTable Data { get; set; }
         string FiscalYear { get; }
         string Name { get; }
         Dictionary<string, object> Parameter { get; }
@@ -15,7 +15,7 @@ namespace BudgetExecution
         string TreasurySymbol { get; }
 
         //Methods
-        DataRow GetFundDataRecord(Source source, Dictionary<string, object> param);
+        DataTable GetFundDataRecord(Source source, Provider provider, Dictionary<string, object> param);
         Dictionary<string, object> GetFundParameter(string code, string bfy);
         Dictionary<string, object> GetFundProgramData(string code);
         string ToString();

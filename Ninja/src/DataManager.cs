@@ -14,10 +14,10 @@ namespace BudgetExecution
     public partial class DataManager : Metro
             {
                 //Constructors
-                public DataManager(Source source)
+                public DataManager(Source source, Provider provider)
                 {
                     InitializeComponent();
-                    Data = new DataBuilder(source);
+                    Data = new DataBuilder(source, provider);
                     Metric = new PrcMetric(Data);
                     Table = Data.Table;
                     Ninja = new FormData(Data, BindingSource, Grid, Navigator);

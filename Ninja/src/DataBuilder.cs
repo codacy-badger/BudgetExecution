@@ -13,31 +13,31 @@ namespace BudgetExecution
         public DataBuilder()
         {
         }
-        public DataBuilder(Source source)
+        public DataBuilder(Source source, Provider provider)
         {
             Parameter = null;
-            Query = new Query(source);
+            Query = new Query(source, provider);
             Source = Query.Source;
             Table = GetDataTable();
             ProgramElements = GetProgramElements(Table);
             BindingSource = new BindingSource();
             BindingSource.DataSource = Table;
-            DataRecords = GetRecords(Table);
+            DataRecords = GetDataRecords(Table);
             if (source == Source.PRC || source == Source.RegionAccount || source == Source.DivisionAccount)
             {
                 Total = GetTotal(Table);
             }
         }
-        public DataBuilder(Source source, Dictionary<string, object> param)
+        public DataBuilder(Source source, Provider provider, Dictionary<string, object> param)
         {
             Parameter = param;
-            Query = new Query(source, param);
+            Query = new Query(source, provider, param);
             Source = Query.Source;
             Table = GetDataTable();
             ProgramElements = GetProgramElements(Table);
             BindingSource = new BindingSource();
             BindingSource.DataSource = Table;
-            DataRecords = GetRecords(Table);
+            DataRecords = GetDataRecords(Table);
             if (source == Source.PRC || source == Source.RegionAccount || source == Source.DivisionAccount)
             {
                 Total = GetTotal(Table);
@@ -119,7 +119,7 @@ namespace BudgetExecution
                 return null;
             }
         }
-        public decimal GetQueryAverage(DataTable table)
+        public decimal GetAverage(DataTable table)
         {
             try
             {
@@ -133,7 +133,7 @@ namespace BudgetExecution
                 return -1;
             }
         }
-        public int GetQueryCount(DataTable table)
+        public int GetCount(DataTable table)
         {
             try
             {
@@ -147,12 +147,12 @@ namespace BudgetExecution
                 return -1;
             }
         }
-        public decimal[] GetQueryMetrics(DataTable table)
+        public decimal[] GetMetrics(DataTable table)
         {
             try
             {
                 if (Table.Columns.Contains("Amount"))
-                    return new decimal[] { GetTotal(table), (decimal)GetQueryCount(table), GetQueryAverage(table) };
+                    return new decimal[] { GetTotal(table), (decimal)GetCount(table), GetAverage(table) };
                 return new decimal[] { 0m };
             }
             catch (Exception ex)
@@ -168,7 +168,7 @@ namespace BudgetExecution
                 var ds = new DataSet("R6");
                 var dt = new DataTable(Source.ToString());
                 ds.Tables.Add(dt);
-                Query.Adapter.Fill(ds);
+                Query.DataAdapter.Fill(ds);
                 return ds;
             }
             catch (Exception ex)
@@ -182,8 +182,7 @@ namespace BudgetExecution
             try
             {
                 var dt = new DataTable(Source.ToString());
-                var adapter = Query.Adapter as SQLiteDataAdapter;
-                adapter.Fill(dt);
+                Query.DataAdapter.Fill(dt);
                 return dt;
             }
             catch (Exception e)
@@ -206,23 +205,11 @@ namespace BudgetExecution
                 return -1M;
             }
         }
-        public DataRow[] GetRecords(DataTable table)
+        public DataRow[] GetDataRecords(DataTable table)
         {
             try
             {
                 return table.AsEnumerable().Select(p => p).ToArray();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
-                return null;
-            }
-        }
-        private PRC[] GetPrcArray(DataTable table)
-        {
-            try
-            {
-                return table.AsEnumerable().Select(p => new PRC()).ToArray();
             }
             catch (Exception ex)
             {

@@ -109,7 +109,7 @@ namespace BudgetExecution
         public BudgetChart(ChartControl chart, string[] title, Source source, PrcField filter, Stat value, ChartSeriesType type)
         {
             Chart = chart;
-            DbData = new DataBuilder(source);
+            DbData = new DataBuilder(source, Provider.SQLite);
             Value = value;
             SeriesType = type;
             ConfigurePrimaryAxisLabels(Chart);
@@ -131,7 +131,7 @@ namespace BudgetExecution
         public BudgetChart(ChartControl chart, string[] title, Source source, Dictionary<string, object> param, PrcField filter, Stat value, ChartSeriesType type)
         {
             Chart = chart;
-            DbData = new DataBuilder(source, param);
+            DbData = new DataBuilder(source, Provider.SQLite, param);
             Value = value;
             SeriesType = type;
             ConfigurePrimaryAxisLabels(Chart);
@@ -417,7 +417,7 @@ namespace BudgetExecution
                 MessageBox.Show(e.Message + e.StackTrace);
             }
         }
-        internal ChartDataBindModel GetDataBinding(Dictionary<string, double> data, PrcField filter)
+        internal ChartDataBindModel GetDataBindingSource(Dictionary<string, double> data, PrcField filter)
         {
             try
             {

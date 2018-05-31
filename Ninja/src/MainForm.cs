@@ -15,8 +15,8 @@ namespace BudgetExecution
         {
             InitializeComponent();
             NinjaData = new FormData();
-            R6 = new DataBuilder(Source.RegionAccount);
-            D6 = new DataBuilder(Source.DivisionAccount);
+            R6 = new DataBuilder(Source.RegionAccount, Provider.SQLite);
+            D6 = new DataBuilder(Source.DivisionAccount, Provider.SQLite);
             Metric = new PrcMetric(R6);
             Timer = new Timer();
             Values = new Dictionary<string, double>[] { Metric.GetChartTotals(R6.Table, PrcField.Fund), Metric.GetChartTotals(R6.Table, PrcField.BOC),

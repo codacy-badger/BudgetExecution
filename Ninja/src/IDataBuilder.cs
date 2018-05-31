@@ -12,7 +12,7 @@ namespace BudgetExecution
 
         //Methods
         DataTable GetDataTable();
-        DataRow[] GetRecords(DataTable table);
+        DataRow[] GetDataRecords(DataTable table);
     }
         
 }

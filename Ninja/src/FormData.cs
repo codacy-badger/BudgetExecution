@@ -40,9 +40,12 @@ namespace BudgetExecution
         public PrcMetric DataMetric { get; set; }
         public ChartControl Chart { get; set; }
         public ChartDataBindModel ChartModel { get; set; }
-        public Control FilterControl1 { get; set; }
-        public Control FilterControl2 { get; set; }
-        public Control FilterControl3 { get; set; }
+        public Control GridFilterControl1 { get; set; }
+        public Control GridFilterControl2 { get; set; }
+        public Control GridFilterControl3 { get; set; }
+        public Control ChartFilterControl1 { get; set; }
+        public Control ChartFilterControl2 { get; set; }
+        public Control ChartFilterControl3 { get; set; }
         public int Count { get; set; }
         public DataGridView DataGrid { get; set; }
         public decimal[] Metrics { get; set; }

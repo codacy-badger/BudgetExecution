@@ -17,10 +17,10 @@ namespace BudgetExecution
             ID = id;
             RPIO = rpio;
             BFY = bfy;
-            Fund = new Fund(fund, bfy);
+            Fund = new Fund(Source.Fund, Provider.SQLite, fund, bfy);
             RC = new RC(rc);
             Org = org;
-            Account = new Account(code);
+            Account = new Account(Source.Account, Provider.SQLite, code);
             Code = Account.Code;
             BOC = new BOC(boc, amount);
             Parameter = GetDataParameter();
@@ -28,14 +28,14 @@ namespace BudgetExecution
         }
         public PRC(DataRow datarow)
         {
-            ID = int.Parse(datarow["Id"].ToString());
+            ID = int.Parse(datarow["ID"].ToString());
             BudgetLevel = datarow["BudgetLevel"].ToString();
             RPIO = datarow["RPIO"].ToString();
             BFY = datarow["BFY"].ToString();
             Fund = new Fund(datarow["Fund"].ToString(), datarow["BFY"].ToString());
             Org = datarow["Org"].ToString();
             RC = new RC(datarow["RC"].ToString());
-            Account = new Account(datarow["Code"].ToString());
+            Account = new Account(Source.Account, Provider.SQLite, datarow["Code"].ToString());
             Code = Account.Code;
             BOC = new BOC(datarow["BOC"].ToString());
             Parameter = GetDataParameter();
@@ -56,7 +56,7 @@ namespace BudgetExecution
         public BOC BOC { get; }
         public FTE FTE { get; set; }
         public string NPM { get; set; }
-        public string NpmName { get; set; }
+        public string NpmCode { get; set; }
         public string ProgramProjectCode { get; }
         public string ProgramProjectName { get; set; }
         public string ProgramArea { get; set; }
@@ -125,7 +125,7 @@ namespace BudgetExecution
                 var pp = GetProgramProjectCode();
                 var sql = new Dictionary<string, object>();
                 sql.Add("ProgramProjectCode", pp);
-                DataRow p = new DataBuilder(Source.Account, sql).Table.Rows[0];
+                DataRow p = new DataBuilder(Source.Account, Provider.SQLite, sql).Table.Rows[0];
                 return p;
             }
             catch (Exception ex)

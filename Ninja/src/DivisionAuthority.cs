@@ -11,9 +11,9 @@ namespace BudgetExecution
         //Constructors
         public DivisionAuthority()
         {
-            Data = new DataBuilder(Source.DivisionAccount);
-            Metric = new PrcMetric(Data);
-            Table = Data.Table;
+            DbData = new DataBuilder(Source.DivisionAccount, Provider.SQLite);
+            Metric = new PrcMetric(DbData);
+            Table = DbData.Table;
             Total = Metric.Total;
             Count = Metric.Count;
             Average = Metric.Average;
@@ -25,15 +25,15 @@ namespace BudgetExecution
             ProgramData = Metric.ProgramAreaTotals;
             ProjectData = Metric.ProgramProjectTotals;
             if (ProgramElements["BOC"].Contains("17"))
-                FTE = GetFTE(Data.Table);
+                FTE = GetFTE(DbData.Table);
         }
         public DivisionAuthority(string rc)
         {
             RC = new RC(rc);
             Org = new Org(RC.Code);
-            Data = new DataBuilder(Source.DivisionAccount, new Dictionary<string, object> { ["RC"] = rc });
-            Metric = new PrcMetric(Data);
-            Table = Data.Table;
+            DbData = new DataBuilder(Source.DivisionAccount, Provider.SQLite, new Dictionary<string, object> { ["RC"] = rc });
+            Metric = new PrcMetric(DbData);
+            Table = DbData.Table;
             Total = Metric.Total;
             Count = Metric.Count;
             Average = Metric.Average;
@@ -52,8 +52,9 @@ namespace BudgetExecution
         public static string FiscalYear { get; set; } = "2018";
         public RC RC { get; }
         public Org Org { get; }
-        public DataSet BudgetData { get; }
-        public DataBuilder Data { get; set; }
+        public DataRow[] DataRecords { get; }
+        public PRC[] PrcAllocation { get; }
+        public DataBuilder DbData { get; set; }
         public PrcMetric Metric { get; }
         public DataTable Table { get; }
         public Dictionary<string, string[]> ProgramElements { get; }
@@ -182,13 +183,12 @@ namespace BudgetExecution
                 var data = new Dictionary<string, string[]>();
                 foreach (DataColumn dc in table.Columns)
                 {
-                    if (dc.ColumnName.Equals("Id") || dc.ColumnName.Equals("Amount"))
+                    if (dc.ColumnName.Equals("ID") || dc.ColumnName.Equals("Amount"))
                         continue;
                     data.Add(dc.ColumnName, GetCodes(table, dc.ColumnName));
                 }
-                if (data.ContainsKey("Id")) data.Remove("Id");
+                if (data.ContainsKey("ID")) data.Remove("ID");
                 if (data.ContainsKey("Amount")) data.Remove("Amount");
-                if (data.ContainsKey("P6_Id")) data.Remove("P6_Id");
                 return data;
             }
             catch (Exception ex)
@@ -236,7 +236,7 @@ namespace BudgetExecution
                 var parameter = new Dictionary<string, object>();
                 parameter.Add("ID", row["ID"]);
                 parameter.Add("Amount", amount2);
-                var query = new Query(Source.RegionAccount, parameter);
+                var query = new Query(Source.PRC, Provider.SQLite, parameter);
                 var update = query.UpdateCommand;
                 update.ExecuteNonQuery();
             }
@@ -252,7 +252,7 @@ namespace BudgetExecution
                 if (p.ContainsKey("Amount"))
                     p.Remove("Amount");
                 p.Add("Amount", amount2);
-                var query = new Query(Source.RegionAccount, p);
+                var query = new Query(Source.PRC, Provider.SQLite, p);
                 var update = query.UpdateCommand;
                 update.ExecuteNonQuery();
             }

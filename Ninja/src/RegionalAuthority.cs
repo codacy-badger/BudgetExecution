@@ -11,7 +11,7 @@ namespace BudgetExecution
         //Constructors
         public RegionalAuthority()
         {
-            Data = new DataBuilder(Source.RegionAccount, new Dictionary<string, object> { ["BFY"] = FiscalYear });
+            Data = new DataBuilder(Source.RegionAccount, Provider.SQLite, new Dictionary<string, object> { ["BFY"] = FiscalYear });
             Metric = new PrcMetric(Data);
             Table = Data.Table;
             Total = Metric.Total;
@@ -176,13 +176,12 @@ namespace BudgetExecution
                 var data = new Dictionary<string, string[]>();
                 foreach (DataColumn dc in table.Columns)
                 {
-                    if (dc.ColumnName.Equals("Id") || dc.ColumnName.Equals("Amount"))
+                    if (dc.ColumnName.Equals("ID") || dc.ColumnName.Equals("Amount"))
                         continue;
                     data.Add(dc.ColumnName, GetCodes(dc.ColumnName));
                 }
-                if (data.ContainsKey("Id")) data.Remove("Id");
+                if (data.ContainsKey("ID")) data.Remove("ID");
                 if (data.ContainsKey("Amount")) data.Remove("Amount");
-                if (data.ContainsKey("P6_Id")) data.Remove("P6_Id");
                 return data;
             }
             catch (Exception e)
@@ -236,9 +235,9 @@ namespace BudgetExecution
             try
             {
                 var parameter = new Dictionary<string, object>();
-                parameter.Add("Id", row["Id"]);
+                parameter.Add("ID", row["ID"]);
                 parameter.Add("Amount", amount2);
-                var query = new Query(Source.RegionAccount, parameter);
+                var query = new Query(Source.PRC, Provider.SQLite, parameter);
                 var update = query.UpdateCommand;
                 update.ExecuteNonQuery();
             }
@@ -254,7 +253,7 @@ namespace BudgetExecution
                 if (p.ContainsKey("Amount"))
                     p.Remove("Amount");
                 p.Add("Amount", amount2);
-                var query = new Query(Source.RegionAccount, p);
+                var query = new Query(Source.PRC, Provider.SQLite, p);
                 var update = query.UpdateCommand;
                 update.ExecuteNonQuery();
             }

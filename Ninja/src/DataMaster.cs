@@ -16,7 +16,7 @@ namespace BudgetExecution
         public DataMaster()
         {
             InitializeComponent();
-            DbData = new DataBuilder(Source.RegionAccount);
+            DbData = new DataBuilder(Source.RegionAccount, Provider.SQLite);
             Table = DbData.Table;
             Metric = new PrcMetric(DbData);
             ProgramElements = DbData.GetProgramElements(Table);

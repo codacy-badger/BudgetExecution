@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Data;
+using System.Linq;
 using System.Windows.Forms;
 using BudgetExecution;
 
@@ -14,14 +15,36 @@ namespace BudgetExecution
         }
         public Account(string code)
         {
-            Code = code;
-        
+            Code = code;      
             Parameter = GetAccountParameter(code);
-            DataRecord = GetDataRecord(Source.Account, Parameter);
-            Goal = Code.Substring(0);
+            Data = GetDataRecords(Source.Account, Provider.SQLite, Parameter);
+            DataRecord = Data.AsEnumerable().First();
+            Goal = Code.Substring(0, 1);
             Objective = Code.Substring(1, 2);
-            NPM = Code.Substring(2);
-            ProgramProjectCode = Code.Substring(3, 2);
+            NpmCode = Code.Substring(3, 1);
+            ProgramProjectCode = Code.Substring(4, 2);
+            ProgramProjectName = DataRecord["ProgramProjectName"].ToString();
+            ID = int.Parse(DataRecord["ID"].ToString());
+            NPM = DataRecord["NPM"].ToString();
+            ObjectiveName = DataRecord["ObjectiveName"].ToString();
+            GoalName = DataRecord["GoalName"].ToString();
+            ProgramArea = DataRecord["ProgramArea"].ToString();
+            ProgramAreaName = DataRecord["ProgramAreaName"].ToString();
+        }
+
+        public Account(Source source, Provider provider, string code)
+        {
+            Code = code;
+            Parameter = GetAccountParameter(code);
+            Data = GetDataRecords(source, provider, Parameter);
+            DataRecord = Data.AsEnumerable().First();
+            Goal = Code.Substring(0,1);
+            Objective = Code.Substring(1, 2);
+            NpmCode = Code.Substring(3, 1);
+            ProgramProjectCode = Code.Substring(4, 2);
+            ProgramProjectName = DataRecord["ProgramProjectName"].ToString();
+            ID = int.Parse(DataRecord["ID"].ToString());
+            NPM = DataRecord["NPM"].ToString();
             ObjectiveName = DataRecord["ObjectiveName"].ToString();
             GoalName = DataRecord["GoalName"].ToString();
             ProgramArea = DataRecord["ProgramArea"].ToString();
@@ -29,20 +52,22 @@ namespace BudgetExecution
         }
 
         //Properties
+        public int ID { get; set; }
         public string Code { get; set; }
         public string Fund { get; set; }
         public string Org { get; set; }
         public string NpmCode { get; set; }
         public string NPM { get; set; }
+        public string ProgramProjectName { get; set; }
+        public string ProgramArea { get; set; }
+        public string ProgramAreaName { get; set; }
         public string Goal { get; set; }
         public string GoalName { get; set; }
         public string Objective { get; set; }
         public string ObjectiveName { get; set; }
         public string ProgramProjectCode { get; }
-        public string ProgramProjectName { get; set; }
-        public string ProgramArea { get; set; }
-        public string ProgramAreaName { get; set; }
         public Dictionary<string, object> Parameter { get; }
+        public DataTable Data { get; set; }
         public DataRow DataRecord { get; set; }
 
         //Methods
@@ -52,14 +77,11 @@ namespace BudgetExecution
             {
                 return new Dictionary<string, object>()
                 {
-                    ["Code"] = code,
-                    ["ProgramProjectCode"] = ProgramProjectCode,
-                    ["Goal"] = Goal,
-                    ["Objective"] = Objective,
+                    ["Code"] = code
                 };
             }
             catch (System.Exception ex)
-            {
+            { 
                 MessageBox.Show(ex.Message + ex.StackTrace);
                 return null;
             }
@@ -68,7 +90,8 @@ namespace BudgetExecution
         {
             try
             {
-                var dr = GetDataRecord(Source.Account, Parameter);
+                var data = GetDataRecords(Source.Account, Provider.SQLite, Parameter);
+                var dr = data.Rows[0];
                 GoalName = dr["GoalName"].ToString();
                 ObjectiveName = dr["ObjectiveName"].ToString();
                 ProgramProjectName = dr["ProgramProjectName"].ToString();
@@ -83,12 +106,12 @@ namespace BudgetExecution
                 return null;
             }
         }
-        internal DataRow GetDataRecord(Source source, Dictionary<string, object> param)
+        internal DataTable GetDataRecords(Source source, Provider provider, Dictionary<string, object> param)
         {
             try
             {
-                var data = new DataBuilder(source, param).GetDataTable();
-                return data.Rows[0];
+                var data = new DataBuilder(source, provider, param);
+                return data.Table;
             }
             catch(System.Exception ex)
             {

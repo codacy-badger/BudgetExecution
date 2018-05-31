@@ -5,7 +5,6 @@ namespace BudgetExecution
     {
         //Properties
         string Code { get; }
-
         string Goal { get; }
         string NPM { get; }
         string Objective { get; }

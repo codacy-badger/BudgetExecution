@@ -26,7 +26,7 @@ namespace BudgetExecution
             InitializeComponent();
             if (source == Source.RegionAccount)
             {
-                DbData = new DataBuilder(Source.RegionAccount);
+                DbData = new DataBuilder(Source.RegionAccount, Provider.SQLite);
                 Table = DbData.GetDataTable();
                 DivisionTab.TabVisible = false;
                 Source = DbData.Source;
@@ -36,7 +36,7 @@ namespace BudgetExecution
             }
             if (source == Source.DivisionAccount)
             {
-                DbData = new DataBuilder(Source.DivisionAccount);
+                DbData = new DataBuilder(Source.DivisionAccount, Provider.SQLite);
                 Table = DbData.GetDataTable();
                 Source = DbData.Source;
                 CurrentTabIndex = 0;
@@ -56,15 +56,16 @@ namespace BudgetExecution
             InitializeComponent();
             Source = Source.DivisionAccount;
             Parameter = new Dictionary<string, object>() { ["RC"] = rc };
-            Division = rc;
+            D6 = new DivisionAuthority(rc);
+            Division = D6.RC.Code;
             DatabaseTab.TabVisible = true;
             ProjectTab.TabVisible = true;
             DivisionTab.TabVisible = false;
-            DbData = new DataBuilder(Source, Parameter);
-            Table = DbData.GetDataTable();
-            ProgramElements = DbData.ProgramElements;
-            Metric = new PrcMetric(DbData);
-            Text = string.Format("{0} Summary", Info.DivisionName(rc));
+            DbData = D6.DbData;
+            Table = D6.Table;
+            ProgramElements = D6.ProgramElements;
+            Metric = D6.Metric;
+            Text = string.Format("{0} Summary", D6.RC.Name);
             CurrentTabIndex = SummaryTabControl.SelectedIndex;
             SummaryTabControl.SelectedIndexChanged += SummaryTabPage_TabSelected;
             TabNames = GetTabNames();
@@ -112,7 +113,7 @@ namespace BudgetExecution
                 PopulateFilterBoxItems(GridFundFilter, PrcField.FundName);
                 ConfigureTextBoxBindings();
                 lblTotal.Text = DbData.GetTotal(DbData.Table).ToString("c");
-                lblCount.Text = DbData.GetQueryCount(DbData.Table).ToString();
+                lblCount.Text = DbData.GetCount(DbData.Table).ToString();
                 GridFundFilter.SelectionChangeCommitted += GridFilterControl1_ItemSelected;
                 GridBocFilter.SelectionChangeCommitted += GridFilterControl2_ItemSelected;
                 SummaryTabControl.SelectedIndexChanged += SummaryTabPage_TabSelected;
@@ -391,7 +392,7 @@ namespace BudgetExecution
                     Navigator.BindingSource = BindingSource;
                     Grid.DataSource = BindingSource;
                     lblTotal.Text = DbData.GetTotal(DbData.Table).ToString("c");
-                    lblCount.Text = DbData.GetQueryCount(DbData.Table).ToString();
+                    lblCount.Text = DbData.GetCount(DbData.Table).ToString();
                     GridBocFilter.Items.Clear();
                     GridAccountFilter.Items.Clear();
                     PopulateFilterBoxItems(GridFundFilter, PrcField.FundName);

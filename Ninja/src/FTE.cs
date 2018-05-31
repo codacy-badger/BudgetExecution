@@ -16,7 +16,7 @@ namespace BudgetExecution
 
         public FTE(DataRow datarow)
         {
-            ID = int.Parse(datarow["Id"].ToString());
+            ID = int.Parse(datarow["ID"].ToString());
             BudgetLevel = datarow["BudgetLevel"].ToString();
             RPIO = datarow["RPIO"].ToString();
             BFY = datarow["BFY"].ToString();
@@ -35,9 +35,9 @@ namespace BudgetExecution
             ObjectiveName = Account.ObjectiveName;
             FteParameter = GetParameter();
         }
-        public FTE(Source source, Dictionary<string, object> param)
+        public FTE(Source source, Provider provider, Dictionary<string, object> param)
         {
-            DbData = new DataBuilder(source, param);
+            DbData = new DataBuilder(source, provider, param);
             Metric = new PrcMetric(DbData);
             Table = DbData.Table;
         }

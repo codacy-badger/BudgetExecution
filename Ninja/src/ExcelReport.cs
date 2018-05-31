@@ -40,6 +40,23 @@ namespace BudgetExecution
         {
             return $@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source='{filepath}';Extended Properties='Excel 12.0 Macro;HDR=YES;IMEX=1'";
         }
+        internal string GetExternalFile()
+        {
+            try
+            {
+                OpenFileDialog od = new OpenFileDialog();
+                od.Filter = "Excel Files | *.xls; * .xlsx";
+                DialogResult dr = od.ShowDialog();
+                if (dr == DialogResult.OK)
+                    return od.SafeFileName;
+                return null;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.StackTrace);
+                return null;
+            }
+        }
         internal Workbook ExportData(DataTable table)
         {
             try
@@ -95,23 +112,6 @@ namespace BudgetExecution
             catch (System.Exception ex)
             {
                 MessageBox.Show(ex.Message);
-                return null;
-            }
-        }
-        internal string GetExternalFile()
-        {
-            try
-            {
-                OpenFileDialog od = new OpenFileDialog();
-                od.Filter = "Excel Files | *.xls; * .xlsx";
-                DialogResult dr = od.ShowDialog();
-                if (dr == DialogResult.OK)
-                    return od.SafeFileName;
-                return null;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.StackTrace);
                 return null;
             }
         }

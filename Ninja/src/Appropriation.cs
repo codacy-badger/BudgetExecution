@@ -16,17 +16,16 @@ namespace BudgetExecution
         }
         public Appropriation(string fundcode, string bfy)
         {
-            Fund = new Fund(fundcode, bfy);
+            Fund = new Fund(Source.Fund, Provider.SQLite, fundcode, bfy);
             FiscalYear = Fund.FiscalYear;
             Name = Fund.Name;
-            Title = Fund.Title;
+            Title = Fund.Title;            
         }
-        public Appropriation(Source source, string fundcode, string bfy) : this(fundcode, bfy)
+        public Appropriation(Source source, Provider provider, string fundcode, string bfy) : this(fundcode, bfy)
         {
-            DbData = new DataBuilder(source, new Dictionary<string, object> { ["Fund"] = fundcode, ["BFY"] = bfy });
+            DbData = new DataBuilder(source, provider, new Dictionary<string, object> { ["Fund"] = fundcode, ["BFY"] = bfy });
             Metric = new PrcMetric(DbData);
             Table = DbData.Table;
-            Allocation = DbData.GetRecords(Table);
             Total = Metric.Total;
             Average = Metric.Average;
             ProgramElements = GetProgramElements(Table);
@@ -66,7 +65,7 @@ namespace BudgetExecution
         public string[] Project { get; }
         public Dictionary<string, decimal> ProjectData { get; set; }
         public decimal Total { get; }
-        private DataRow[] Allocation { get; }
+        internal DataRow[] Data { get; }
 
         //Methods
         public DataTable FilterTable(DataTable table, string column, string filter)

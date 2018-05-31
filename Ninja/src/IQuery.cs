@@ -5,27 +5,24 @@ using System.Data.Common;
 
 namespace BudgetExecution
 {
-    public interface IQuery
+    public interface IQuery 
     {
         //Properties
-        Command Command { get; }
-        Source Table { get; set; }
+        Source Source { get; }
         Provider Provider { get; }
-        string ConnectionString { get; set; }
         DbDataAdapter DataAdapter { get; set; }
         DbCommand DataCommand { get; set; }
-        DbConnection DataConnection { get; set; }
+        DbConnection DataConnection { get; }
         DbDataReader DataReader { get; set; }
         string SqlStatement { get; set; }
 
         //Methods
         DbCommandBuilder GetCommandBuilder(IDbDataAdapter adapter);
-        DbConnection GetConnection(Provider connection, string connectionString);
-        string GetConnectionString(string connectionString);
+        DbConnection GetConnection(Provider connection);
         DbDataAdapter GetDataAdapter(IDbCommand command);
-        DbCommand GetDataCommand(IDbConnection dataConnection, string sql);
-        DbDataReader GetDataReader(IDbDataAdapter adapter);
-        string GetSqlStatement(Command command, string sqlStatement);
+        DbCommand GetDataCommand(string sql, IDbConnection dataConnection);
+        DbDataReader GetDataReader(IDbCommand command);
+        string GetSqlStatement(string sqlStatement);
     }
 }
     
