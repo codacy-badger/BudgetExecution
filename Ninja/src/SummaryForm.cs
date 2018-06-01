@@ -21,13 +21,30 @@ namespace BudgetExecution
         {
             InitializeComponent();
         }
+        public SummaryForm(string rc)
+        {
+            InitializeComponent();
+            Parameter = new Dictionary<string, object>() { ["RC"] = rc };
+            DbData = new DataBuilder(Source.DivisionAccount, Provider.SQLite, Parameter);
+            Table = DbData.Table;
+            DatabaseTab.TabVisible = true;
+            ProjectTab.TabVisible = true;
+            DivisionTab.TabVisible = false;
+            ProgramElements = DbData.ProgramElements;
+            Metric = new PrcMetric(DbData);
+            Text = string.Format("{0} Summary", Info.DivisionName(rc));
+            CurrentTabIndex = SummaryTabControl.SelectedIndex;
+            SummaryTabControl.SelectedIndexChanged += SummaryTabPage_TabSelected;
+            TabNames = GetTabNames();
+            GridRefreshButton.Click += GridRefreshButton_OnClick;
+        }
         public SummaryForm(Source source)
         {
             InitializeComponent();
             if (source == Source.RegionAccount)
             {
                 DbData = new DataBuilder(Source.RegionAccount, Provider.SQLite);
-                Table = DbData.GetDataTable();
+                Table = DbData.Table;
                 DivisionTab.TabVisible = false;
                 Source = DbData.Source;
                 CurrentTabIndex = 0;
@@ -37,7 +54,7 @@ namespace BudgetExecution
             if (source == Source.DivisionAccount)
             {
                 DbData = new DataBuilder(Source.DivisionAccount, Provider.SQLite);
-                Table = DbData.GetDataTable();
+                Table = DbData.Table;
                 Source = DbData.Source;
                 CurrentTabIndex = 0;
                 TabNames = GetTabNames();
@@ -51,27 +68,6 @@ namespace BudgetExecution
             CurrentTabIndex = SummaryTabControl.SelectedIndex;
             SummaryTabControl.SelectedIndexChanged += SummaryTabPage_TabSelected;
         }
-        public SummaryForm(string rc)
-        {
-            InitializeComponent();
-            Source = Source.DivisionAccount;
-            Parameter = new Dictionary<string, object>() { ["RC"] = rc };
-            D6 = new DivisionAuthority(rc);
-            Division = D6.RC.Code;
-            DatabaseTab.TabVisible = true;
-            ProjectTab.TabVisible = true;
-            DivisionTab.TabVisible = false;
-            DbData = D6.DbData;
-            Table = D6.Table;
-            ProgramElements = D6.ProgramElements;
-            Metric = D6.Metric;
-            Text = string.Format("{0} Summary", D6.RC.Name);
-            CurrentTabIndex = SummaryTabControl.SelectedIndex;
-            SummaryTabControl.SelectedIndexChanged += SummaryTabPage_TabSelected;
-            TabNames = GetTabNames();
-            GridRefreshButton.Click += GridRefreshButton_OnClick;
-        }
-
         //Properties
         public Source Source { get; }
         public Dictionary<string, object> Parameter { get; set; }

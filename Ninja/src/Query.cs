@@ -20,10 +20,9 @@ namespace BudgetExecution
         {
             Provider = provider;
             Source = source;
-            Provider = Provider.SQLite;
+            DataConnection = GetConnection(provider);
             TableName = source.ToString();
             SelectStatement = $"SELECT * FROM {source.ToString()}";
-            DataConnection = GetConnection(provider);
             SelectCommand = GetSelectCommand(SelectStatement, DataConnection);
             DataAdapter = GetDataAdapter(SelectCommand);
             CommandBuilder = GetCommandBuilder(DataAdapter);
@@ -35,10 +34,10 @@ namespace BudgetExecution
         {
             Provider = provider;
             Source = source;
+            Parameter = param;
             DataConnection = GetConnection(provider);
             TableName = source.ToString();
-            Parameter = param;
-            SelectStatement = $"SELECT * FROM {source.ToString()}";
+            SelectStatement = GetSqlStatement(TableName, Parameter);
             SelectCommand = GetSelectCommand(SelectStatement, DataConnection);
             DataAdapter = GetDataAdapter(SelectCommand);
             CommandBuilder = GetCommandBuilder(DataAdapter);
@@ -93,7 +92,7 @@ namespace BudgetExecution
         public DbCommand UpdateCommand { get; }
 
         //Methods
-        private string GetParamSelectString(Dictionary<string, object> param)
+        internal string GetParamSelectString(Dictionary<string, object> param)
         {
             try
             {
@@ -115,10 +114,7 @@ namespace BudgetExecution
         {
             try
             {
-                if(param.ContainsKey("ID"))
-                    return $"SELECT * FROM {table} WHERE ID = { (int)param["ID"] }";
-                else
-                    return $"SELECT * FROM {table} WHERE {GetParamSelectString(param)}";
+                 return $"SELECT * FROM {table} WHERE {GetParamSelectString(param)}";
             }
             catch (Exception ex)
             {

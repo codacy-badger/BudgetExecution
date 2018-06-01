@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace BudgetExecution
@@ -23,7 +24,7 @@ namespace BudgetExecution
             Account = new Account(Source.Account, Provider.SQLite, code);
             Code = Account.Code;
             BOC = new BOC(boc, amount);
-            Parameter = GetDataParameter();
+            Parameter = GetParameter();
             Amount = amount;
         }
         public PRC(DataRow datarow)
@@ -38,7 +39,7 @@ namespace BudgetExecution
             Account = new Account(Source.Account, Provider.SQLite, datarow["Code"].ToString());
             Code = Account.Code;
             BOC = new BOC(datarow["BOC"].ToString());
-            Parameter = GetDataParameter();
+            Parameter = GetParameter();
             Amount = decimal.Parse(datarow["Amount"].ToString());
         }
 
@@ -69,7 +70,7 @@ namespace BudgetExecution
         public object[] DataObjects { get; }
 
         //Methods
-        internal Dictionary<string, object> GetDataParameter()
+        internal Dictionary<string, object> GetParameter()
         {
             try
             {
@@ -88,6 +89,21 @@ namespace BudgetExecution
             }
             catch (System.Exception ex)
             {
+                MessageBox.Show(ex.Message + ex.StackTrace);
+                return null;
+            }
+        }
+        internal DataRow GetData(Source source, Provider provider)
+        {
+            try
+            {
+
+                var param = GetParameter();
+                return new DataBuilder(source, provider, param).Table.AsEnumerable().Select(p => p).First();
+            }
+            catch (Exception ex)
+            {
+
                 MessageBox.Show(ex.Message + ex.StackTrace);
                 return null;
             }
@@ -142,13 +158,13 @@ namespace BudgetExecution
         {
             return Account.Code;
         }
-        internal Dictionary<string, object> GetFields()
+        internal string[] GetDataFields()
         {
             try
             {
-                Dictionary<string, object> prc = GetDataParameter();
+                Dictionary<string, object> prc = GetParameter();
 
-                return prc;
+                return prc.Keys.ToArray();
             }
             catch (Exception ex)
             {
@@ -160,7 +176,7 @@ namespace BudgetExecution
         {
             try
             {
-                Dictionary<string, object> param = GetDataParameter();
+                Dictionary<string, object> param = GetParameter();
 
                 return param;
             }

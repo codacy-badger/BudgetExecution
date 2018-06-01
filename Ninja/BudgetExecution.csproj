@@ -197,7 +197,6 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -237,6 +236,7 @@
       <DependentUpon>SummaryImages.resx</DependentUpon>
     </Compile>
     <Compile Include="Settings.cs" />
+    <Compile Include="src\AccessQuery.cs" />
     <Compile Include="src\AccountControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -254,7 +254,6 @@
     <Compile Include="src\DivisionAuthority.cs" />
     <Compile Include="src\DocInfo.cs" />
     <Compile Include="src\Employee.cs" />
-    <Compile Include="src\ExcelQuery.cs" />
     <Compile Include="src\ExcelReport.cs" />
     <Compile Include="src\IFund.cs" />
     <Compile Include="src\PrcAccountManager.cs">
@@ -529,7 +528,6 @@
       <DependentUpon>R6.xsd</DependentUpon>
     </None>
     <None Include="Resources\epa_seal_medium.ico" />
-    <None Include="stylecop.json" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

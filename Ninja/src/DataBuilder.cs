@@ -16,8 +16,8 @@ namespace BudgetExecution
         public DataBuilder(Source source, Provider provider)
         {
             Parameter = null;
+            Source = source;
             Query = new Query(source, provider);
-            Source = Query.Source;
             Table = GetDataTable();
             ProgramElements = GetProgramElements(Table);
             BindingSource = new BindingSource();
@@ -30,9 +30,9 @@ namespace BudgetExecution
         }
         public DataBuilder(Source source, Provider provider, Dictionary<string, object> param)
         {
+            Source = source;
             Parameter = param;
-            Query = new Query(source, provider, param);
-            Source = Query.Source;
+            Query = new Query(source, provider, Parameter);
             Table = GetDataTable();
             ProgramElements = GetProgramElements(Table);
             BindingSource = new BindingSource();
