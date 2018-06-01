@@ -1,1 +1,0 @@
-CREATE VIEW `Contracts` AS select * from P6 where BOC ='37'

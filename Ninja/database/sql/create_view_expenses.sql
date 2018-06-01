@@ -1,1 +1,0 @@
-CREATE VIEW `Expenses` AS select * from P6 where BOC ='36'

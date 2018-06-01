@@ -4,11 +4,11 @@
 
     partial class R6
     {
-        partial class TRAVELDataTable
+        partial class SUPERFUNDDataTable
         {
         }
 
-        partial class EXPENSESDataTable
+        partial class OILDataTable
         {
         }
     }

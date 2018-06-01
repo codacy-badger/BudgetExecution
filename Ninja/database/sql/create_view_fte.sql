@@ -1,1 +1,0 @@
-CREATE VIEW `FTE` AS select * from P6 where BOC = '17'

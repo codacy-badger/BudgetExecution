@@ -97,13 +97,11 @@ namespace BudgetExecution
         {
             try
             {
-
                 var param = GetParameter();
                 return new DataBuilder(source, provider, param).Table.AsEnumerable().Select(p => p).First();
             }
             catch (Exception ex)
             {
-
                 MessageBox.Show(ex.Message + ex.StackTrace);
                 return null;
             }
@@ -133,22 +131,6 @@ namespace BudgetExecution
         public string GetObjectiveName(string code)
         {
             return Info.GetObjectiveName(code);
-        }
-        public DataRow GetProgramData()
-        {
-            try
-            {
-                var pp = GetProgramProjectCode();
-                var sql = new Dictionary<string, object>();
-                sql.Add("ProgramProjectCode", pp);
-                DataRow p = new DataBuilder(Source.Account, Provider.SQLite, sql).Table.Rows[0];
-                return p;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("ERROR! : \n" + ex.StackTrace);
-                return null;
-            }
         }
         public string GetProgramProjectCode()
         {
