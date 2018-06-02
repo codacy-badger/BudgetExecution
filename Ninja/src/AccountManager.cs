@@ -26,5 +26,10 @@ namespace BudgetExecution
             {
                 InitializeComponent();
             }
+
+        private void AccountManager_Load(object sender, System.EventArgs e)
+        {
+
         }
+    }
 }

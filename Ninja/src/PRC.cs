@@ -168,22 +168,5 @@ namespace BudgetExecution
                 return null;
             }
         }
-        internal PrcParameter GetPrcParameter()
-        {
-            return new PrcParameter(ID, BudgetLevel, RPIO, BFY, Fund.Code, Org, RC.Code, BOC.Code, Account.Code);
-        }
-        internal decimal Reprogram(decimal amount)
-        {
-            try
-            {
-                this.Amount += amount;
-                return Amount;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
-                return -1;
-            }
-        }
     }
 }
