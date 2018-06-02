@@ -14,7 +14,7 @@ namespace BudgetExecution
 {
     public class FormData
     {
-        //Constructors
+        // CONSTRUCTORS
         public FormData()
         {
         }
@@ -30,7 +30,7 @@ namespace BudgetExecution
             DataGrid = dgv;
         }
 
-        //Properties
+        // PROPERTIES
         public Stat Measure { get; set; }
         public ChartSeriesType ChartType { get; set; }
         public DataBuilder Data { get; set; }
@@ -54,7 +54,7 @@ namespace BudgetExecution
         public Dictionary<string, object> SearchParameter { get; set; }
         internal Func<DataTable, PrcField, string> TableFilter { get; set; }
 
-        //Methods
+        // METHODS
         public decimal GetAverage(DataTable table)
         {
             try

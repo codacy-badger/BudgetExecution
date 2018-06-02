@@ -12,7 +12,7 @@ namespace BudgetExecution
     {
         internal string P7path = @"C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\Report\BudgetControlTemplate.xlsx";
 
-        //Constructors
+        // CONSTRUCTORS
         public ExcelOp()
         {
         }
@@ -28,14 +28,14 @@ namespace BudgetExecution
             Data = data;
         }
 
-        //Properties
+        // PROPERTIES
         public DataTable Data { get; }
         public string FilePath { get; }
         internal string ConnectionString { get; set; }
         private DocInfo AccountingInfo { get; set; }
         private Excel Excel { get; }
 
-        //Methods
+        // METHODS
         public string GetConnectionString(string filepath)
         {
             return $@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source='{filepath}';Extended Properties='Excel 12.0 Macro;HDR=YES;IMEX=1'";

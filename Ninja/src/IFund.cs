@@ -5,7 +5,7 @@ namespace BudgetExecution
 {
     public interface IFund
     {
-        //Properties
+        // PROPERTIES
         string Code { get; }
         DataTable Data { get; set; }
         string FiscalYear { get; }
@@ -14,7 +14,7 @@ namespace BudgetExecution
         string Title { get; }
         string TreasurySymbol { get; }
 
-        //Methods
+        // METHODS
         DataTable GetFundDataRecord(Source source, Provider provider, Dictionary<string, object> param);
         Dictionary<string, object> GetFundParameter(string code, string bfy);
         Dictionary<string, object> GetFundProgramData(string code);

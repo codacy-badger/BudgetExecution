@@ -7,7 +7,7 @@ namespace BudgetExecution
 {
     public class RC
     {
-        //Constructors
+        // CONSTRUCTORS
         public RC(string code)
         {
             Code = code;
@@ -15,12 +15,12 @@ namespace BudgetExecution
             ID = Info.GetDivisionMailCode(code);
         }
 
-        //Properties
+        // PROPERTIES
         public string Code { get; }
         public string ID { get; }
         public string Name { get; }
 
-        //Methods
+        // METHODS
         Dictionary<string, object> GetParameter(string code)
         {
             try

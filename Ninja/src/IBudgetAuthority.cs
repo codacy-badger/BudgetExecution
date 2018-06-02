@@ -9,13 +9,13 @@ namespace BudgetExecution
     public interface IBudgetAuthority
     {
 
-        //Properties
+        // PROPERTIES
         DataTable Table { get; }
         PrcMetric Metric { get; } 
         decimal Amount { get; }
         Dictionary<string, string[]> ProgramElements { get; }
 
-        //Methods
+        // METHODS
         DataTable FilterTable(DataTable table, string column, string filter);
         string[] GetCodes(DataTable table, string column);
         Tuple<DataTable, PRC[], decimal, int> GetDataValues(DataTable table, string column, string filter);

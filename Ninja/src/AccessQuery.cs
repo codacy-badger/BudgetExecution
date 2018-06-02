@@ -2,17 +2,19 @@
 using System.Collections.Generic;
 using System.Data.OleDb;
 using System.Data.SQLite;
+using System.Data.Common;
 using System.Windows.Forms;
+using System.Data;
 
 namespace BudgetExecution
 {
-    public class AccessQuery
+    public class AccessQuery : Query
     {
-        //Constructors
+        // CONSTRUCTORS
         public AccessQuery()
         {
         }
-        public AccessQuery(Source source)
+        public AccessQuery(Source source) : base(source, Provider.OleDb)
         {
             Source = source;
             Provider = Provider.OleDb;
@@ -26,14 +28,14 @@ namespace BudgetExecution
             UpdateCommand = CommandBuilder.GetInsertCommand();
             DeleteCommand = CommandBuilder.GetInsertCommand();
         }
-        public AccessQuery(Source source, Dictionary<string, object> param)
+        public AccessQuery(Source source, Dictionary<string, object> param) : base(source, Provider.OleDb, param)
         {
             Source = source;
             Provider = Provider.OleDb;
             TableName = source.ToString();
             Parameter = param;
             SelectStatement = GetSqlStatement();
-            Connection = new OleDbConnection(@"data source=C:\Users\terry\Documents\Visual Studio 2017\Projects\Budget\database\sqlclient\R6.mdf");
+            Connection = new OleDbConnection(@"data source=C:\Users\terry\Documents\Visual Studio 2017\Projects\Budget\database\OleDb\R6.accdb");
             SelectCommand = new OleDbCommand(SelectStatement, Connection);
             Adapter = new OleDbDataAdapter(SelectCommand);
             CommandBuilder = GetCommandBuilder(Adapter);
@@ -42,23 +44,23 @@ namespace BudgetExecution
             DeleteCommand = CommandBuilder.GetInsertCommand();
         }
 
-        //Properties
-        public Source Source { get; }
-        public Provider Provider { get; set; }
-        public string TableName { get; }
+        // PROPERTIES
+        public new Source Source { get; }
+        public new Provider Provider { get; set; }
+        public new string TableName { get; }
         public OleDbConnection Connection { get; }
-        public Dictionary<string, object> Parameter { get; }
-        public string SelectStatement { get; }
-        public OleDbCommand SelectCommand { get; }
+        public new Dictionary<string, object> Parameter { get; }
+        public new string SelectStatement { get; }
+        public new OleDbCommand SelectCommand { get; }
         public OleDbDataAdapter Adapter { get; set; }
-        public OleDbDataReader Reader { get; set; }
-        public Dictionary<string, string> SqlStatement { get; }
-        public OleDbCommandBuilder CommandBuilder { get; }
-        public OleDbCommand UpdateCommand { get; }
-        public OleDbCommand InsertCommand { get; }
-        public OleDbCommand DeleteCommand { get; }
+        public DbDataReader Reader { get; set; }
+        public new Dictionary<string, string> SqlStatement { get; }
+        public new OleDbCommandBuilder CommandBuilder { get; }
+        public new OleDbCommand UpdateCommand { get; }
+        public new OleDbCommand InsertCommand { get; }
+        public new OleDbCommand DeleteCommand { get; }
 
-        //Methods        
+        // METHODS        
         public OleDbConnection GetConnection()
         {
             try
@@ -137,6 +139,24 @@ namespace BudgetExecution
                 return null;
             }
         }
+        public new DbDataReader GetDataReader(IDbCommand command)
+        {
+            try
+            {
+
+                if (command is OleDbCommand)
+                {
+                    return (OleDbDataReader)command.ExecuteReader();
+                }
+                return null;
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message + ex.StackTrace);
+                return null;
+            }
+        }
         public OleDbCommandBuilder GetCommandBuilder(OleDbDataAdapter adapter)
         {
             try
@@ -209,7 +229,7 @@ namespace BudgetExecution
                 return null;
             }
         }
-        public string GetSqlStatement(string sql)
+        public new string GetSqlStatement(string sql)
         {
             try
             {

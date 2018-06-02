@@ -4,7 +4,7 @@ namespace BudgetExecution
 {
     public interface IPrcParameter
     {
-        //Properties
+        // PROPERTIES
         int ID { get; }
         string BFY { get; }
         string BOC { get; }

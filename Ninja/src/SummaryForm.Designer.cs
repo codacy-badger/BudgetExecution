@@ -1198,10 +1198,11 @@ namespace BudgetExecution
             this.DatabaseTab.Controls.Add(this.FilterGroupBox);
             this.DatabaseTab.Image = null;
             this.DatabaseTab.ImageSize = new System.Drawing.Size(16, 16);
-            this.DatabaseTab.Location = new System.Drawing.Point(2, 36);
+            this.DatabaseTab.Location = new System.Drawing.Point(2, 46);
             this.DatabaseTab.Name = "DatabaseTab";
+            this.DatabaseTab.Padding = new System.Windows.Forms.Padding(1);
             this.DatabaseTab.ShowCloseButton = true;
-            this.DatabaseTab.Size = new System.Drawing.Size(1584, 896);
+            this.DatabaseTab.Size = new System.Drawing.Size(1584, 886);
             this.DatabaseTab.TabIndex = 9;
             this.DatabaseTab.Tag = "Database";
             this.DatabaseTab.Text = "Account Manager";
@@ -1233,11 +1234,10 @@ namespace BudgetExecution
             // AccountTabControl
             // 
             this.AccountTabControl.ActiveTabForeColor = System.Drawing.Color.White;
-            this.AccountTabControl.AdjustTopGap = 5;
+            this.AccountTabControl.AdjustTopGap = 10;
             this.AccountTabControl.BackColor = System.Drawing.Color.Black;
             this.AccountTabControl.BeforeTouchSize = new System.Drawing.Size(440, 483);
             this.AccountTabControl.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.AccountTabControl.BorderVisible = true;
             this.AccountTabControl.BorderWidth = 1;
             this.AccountTabControl.CloseButtonForeColor = System.Drawing.Color.Empty;
             this.AccountTabControl.CloseButtonHoverForeColor = System.Drawing.Color.Black;
@@ -1257,8 +1257,8 @@ namespace BudgetExecution
             this.AccountTabControl.Office2007ColorScheme = Syncfusion.Windows.Forms.Office2007Theme.Black;
             this.AccountTabControl.Office2010ColorTheme = Syncfusion.Windows.Forms.Office2010Theme.Black;
             this.AccountTabControl.Padding = new System.Drawing.Point(6, 6);
-            this.AccountTabControl.SeparatorColor = System.Drawing.SystemColors.MenuHighlight;
-            this.AccountTabControl.ShowSeparator = true;
+            this.AccountTabControl.SeparatorColor = System.Drawing.Color.Transparent;
+            this.AccountTabControl.ShowSeparator = false;
             this.AccountTabControl.Size = new System.Drawing.Size(440, 483);
             this.AccountTabControl.TabIndex = 150;
             this.AccountTabControl.TabPanelBackColor = System.Drawing.Color.Black;
@@ -1293,10 +1293,10 @@ namespace BudgetExecution
             this.tabPageAdv1.ForeColor = System.Drawing.Color.LightSteelBlue;
             this.tabPageAdv1.Image = null;
             this.tabPageAdv1.ImageSize = new System.Drawing.Size(16, 16);
-            this.tabPageAdv1.Location = new System.Drawing.Point(1, 40);
+            this.tabPageAdv1.Location = new System.Drawing.Point(0, 44);
             this.tabPageAdv1.Name = "tabPageAdv1";
             this.tabPageAdv1.ShowCloseButton = true;
-            this.tabPageAdv1.Size = new System.Drawing.Size(438, 442);
+            this.tabPageAdv1.Size = new System.Drawing.Size(440, 439);
             this.tabPageAdv1.TabIndex = 4;
             this.tabPageAdv1.Text = "Details";
             this.tabPageAdv1.ThemesEnabled = false;
@@ -1335,14 +1335,14 @@ namespace BudgetExecution
             this.toolStripSeparator12,
             this.toolStripButton12,
             this.toolStripSeparator13});
-            this.Navigator.Location = new System.Drawing.Point(0, 415);
+            this.Navigator.Location = new System.Drawing.Point(0, 412);
             this.Navigator.MoveFirstItem = this.toolStripButton9;
             this.Navigator.MoveLastItem = this.toolStripButton12;
             this.Navigator.MoveNextItem = this.toolStripButton11;
             this.Navigator.MovePreviousItem = this.toolStripButton10;
             this.Navigator.Name = "Navigator";
             this.Navigator.PositionItem = this.toolStripTextBox2;
-            this.Navigator.Size = new System.Drawing.Size(438, 27);
+            this.Navigator.Size = new System.Drawing.Size(440, 27);
             this.Navigator.TabIndex = 152;
             this.Navigator.Text = "bindingNavigator1";
             // 
@@ -1813,10 +1813,10 @@ namespace BudgetExecution
             this.tabPageAdv5.Controls.Add(this.AccountChart);
             this.tabPageAdv5.Image = null;
             this.tabPageAdv5.ImageSize = new System.Drawing.Size(16, 16);
-            this.tabPageAdv5.Location = new System.Drawing.Point(1, 48);
+            this.tabPageAdv5.Location = new System.Drawing.Point(0, 44);
             this.tabPageAdv5.Name = "tabPageAdv5";
             this.tabPageAdv5.ShowCloseButton = true;
-            this.tabPageAdv5.Size = new System.Drawing.Size(438, 434);
+            this.tabPageAdv5.Size = new System.Drawing.Size(440, 439);
             this.tabPageAdv5.TabIndex = 2;
             this.tabPageAdv5.Text = "Graph";
             this.tabPageAdv5.ThemesEnabled = false;
@@ -1933,7 +1933,7 @@ namespace BudgetExecution
             this.AccountChart.Series3D = true;
             this.AccountChart.SeriesHighlight = true;
             this.AccountChart.ShadowColor = new Syncfusion.Drawing.BrushInfo(Syncfusion.Drawing.GradientStyle.PathRectangle, System.Drawing.SystemColors.WindowText, System.Drawing.Color.Silver);
-            this.AccountChart.Size = new System.Drawing.Size(438, 434);
+            this.AccountChart.Size = new System.Drawing.Size(440, 439);
             this.AccountChart.Spacing = 5F;
             this.AccountChart.SpacingBetweenPoints = 5F;
             this.AccountChart.Style3D = true;
@@ -1962,10 +1962,10 @@ namespace BudgetExecution
             this.tabPageAdv6.Controls.Add(this.calculatorControl2);
             this.tabPageAdv6.Image = null;
             this.tabPageAdv6.ImageSize = new System.Drawing.Size(16, 16);
-            this.tabPageAdv6.Location = new System.Drawing.Point(1, 48);
+            this.tabPageAdv6.Location = new System.Drawing.Point(0, 44);
             this.tabPageAdv6.Name = "tabPageAdv6";
             this.tabPageAdv6.ShowCloseButton = true;
-            this.tabPageAdv6.Size = new System.Drawing.Size(438, 434);
+            this.tabPageAdv6.Size = new System.Drawing.Size(440, 439);
             this.tabPageAdv6.TabIndex = 3;
             this.tabPageAdv6.Text = "Calculator";
             this.tabPageAdv6.ThemesEnabled = false;
@@ -2275,10 +2275,10 @@ namespace BudgetExecution
             this.ProjectTab.Controls.Add(this.ProjectChart);
             this.ProjectTab.Image = null;
             this.ProjectTab.ImageSize = new System.Drawing.Size(16, 16);
-            this.ProjectTab.Location = new System.Drawing.Point(2, 36);
+            this.ProjectTab.Location = new System.Drawing.Point(2, 46);
             this.ProjectTab.Name = "ProjectTab";
             this.ProjectTab.ShowCloseButton = true;
-            this.ProjectTab.Size = new System.Drawing.Size(1584, 896);
+            this.ProjectTab.Size = new System.Drawing.Size(1584, 886);
             this.ProjectTab.TabForeColor = System.Drawing.Color.LightSteelBlue;
             this.ProjectTab.TabIndex = 8;
             this.ProjectTab.Tag = "Program Project";
@@ -2649,10 +2649,10 @@ namespace BudgetExecution
             this.AreaTab.Controls.Add(this.AreaChart);
             this.AreaTab.Image = null;
             this.AreaTab.ImageSize = new System.Drawing.Size(16, 16);
-            this.AreaTab.Location = new System.Drawing.Point(2, 36);
+            this.AreaTab.Location = new System.Drawing.Point(2, 46);
             this.AreaTab.Name = "AreaTab";
             this.AreaTab.ShowCloseButton = true;
-            this.AreaTab.Size = new System.Drawing.Size(1584, 896);
+            this.AreaTab.Size = new System.Drawing.Size(1584, 886);
             this.AreaTab.TabForeColor = System.Drawing.Color.LightSteelBlue;
             this.AreaTab.TabIndex = 7;
             this.AreaTab.Tag = "Program Area";
@@ -3014,10 +3014,10 @@ namespace BudgetExecution
             this.DivisionTab.Controls.Add(this.DivisionChart);
             this.DivisionTab.Image = null;
             this.DivisionTab.ImageSize = new System.Drawing.Size(16, 16);
-            this.DivisionTab.Location = new System.Drawing.Point(2, 36);
+            this.DivisionTab.Location = new System.Drawing.Point(2, 46);
             this.DivisionTab.Name = "DivisionTab";
             this.DivisionTab.ShowCloseButton = true;
-            this.DivisionTab.Size = new System.Drawing.Size(1584, 896);
+            this.DivisionTab.Size = new System.Drawing.Size(1584, 886);
             this.DivisionTab.TabBackColor = System.Drawing.Color.Black;
             this.DivisionTab.TabForeColor = System.Drawing.Color.LightSteelBlue;
             this.DivisionTab.TabIndex = 6;
@@ -3375,10 +3375,10 @@ namespace BudgetExecution
             this.ObjectiveTab.Controls.Add(this.ObjectiveChart);
             this.ObjectiveTab.Image = null;
             this.ObjectiveTab.ImageSize = new System.Drawing.Size(16, 16);
-            this.ObjectiveTab.Location = new System.Drawing.Point(2, 36);
+            this.ObjectiveTab.Location = new System.Drawing.Point(2, 46);
             this.ObjectiveTab.Name = "ObjectiveTab";
             this.ObjectiveTab.ShowCloseButton = true;
-            this.ObjectiveTab.Size = new System.Drawing.Size(1584, 896);
+            this.ObjectiveTab.Size = new System.Drawing.Size(1584, 886);
             this.ObjectiveTab.TabForeColor = System.Drawing.Color.LightSteelBlue;
             this.ObjectiveTab.TabIndex = 5;
             this.ObjectiveTab.Tag = "Agency Objective";
@@ -3734,10 +3734,10 @@ namespace BudgetExecution
             this.GoalTab.Controls.Add(this.GoalChart);
             this.GoalTab.Image = null;
             this.GoalTab.ImageSize = new System.Drawing.Size(16, 16);
-            this.GoalTab.Location = new System.Drawing.Point(2, 36);
+            this.GoalTab.Location = new System.Drawing.Point(2, 46);
             this.GoalTab.Name = "GoalTab";
             this.GoalTab.ShowCloseButton = true;
-            this.GoalTab.Size = new System.Drawing.Size(1584, 896);
+            this.GoalTab.Size = new System.Drawing.Size(1584, 886);
             this.GoalTab.TabForeColor = System.Drawing.Color.LightSteelBlue;
             this.GoalTab.TabIndex = 4;
             this.GoalTab.Tag = "Agency Goal";
@@ -4098,10 +4098,10 @@ namespace BudgetExecution
             this.NpmTab.Controls.Add(this.NpmChart);
             this.NpmTab.Image = null;
             this.NpmTab.ImageSize = new System.Drawing.Size(16, 16);
-            this.NpmTab.Location = new System.Drawing.Point(2, 36);
+            this.NpmTab.Location = new System.Drawing.Point(2, 46);
             this.NpmTab.Name = "NpmTab";
             this.NpmTab.ShowCloseButton = true;
-            this.NpmTab.Size = new System.Drawing.Size(1584, 896);
+            this.NpmTab.Size = new System.Drawing.Size(1584, 886);
             this.NpmTab.TabForeColor = System.Drawing.Color.LightSteelBlue;
             this.NpmTab.TabIndex = 3;
             this.NpmTab.Tag = "HQ National Program Office";
@@ -4463,10 +4463,10 @@ namespace BudgetExecution
             this.BocTab.Controls.Add(this.BocChart);
             this.BocTab.Image = null;
             this.BocTab.ImageSize = new System.Drawing.Size(16, 16);
-            this.BocTab.Location = new System.Drawing.Point(2, 36);
+            this.BocTab.Location = new System.Drawing.Point(2, 46);
             this.BocTab.Name = "BocTab";
             this.BocTab.ShowCloseButton = true;
-            this.BocTab.Size = new System.Drawing.Size(1584, 896);
+            this.BocTab.Size = new System.Drawing.Size(1584, 886);
             this.BocTab.TabForeColor = System.Drawing.Color.LightSteelBlue;
             this.BocTab.TabIndex = 2;
             this.BocTab.Tag = "Budget Object Class";
@@ -4828,10 +4828,10 @@ namespace BudgetExecution
             this.FundTab.Controls.Add(this.FundChart);
             this.FundTab.Image = null;
             this.FundTab.ImageSize = new System.Drawing.Size(16, 16);
-            this.FundTab.Location = new System.Drawing.Point(2, 36);
+            this.FundTab.Location = new System.Drawing.Point(2, 46);
             this.FundTab.Name = "FundTab";
             this.FundTab.ShowCloseButton = true;
-            this.FundTab.Size = new System.Drawing.Size(1584, 896);
+            this.FundTab.Size = new System.Drawing.Size(1584, 886);
             this.FundTab.TabForeColor = System.Drawing.Color.LightSteelBlue;
             this.FundTab.TabIndex = 1;
             this.FundTab.Tag = "Appropriation";
@@ -5188,6 +5188,7 @@ namespace BudgetExecution
             // 
             this.SummaryTabControl.ActiveTabColor = System.Drawing.Color.SteelBlue;
             this.SummaryTabControl.ActiveTabForeColor = System.Drawing.SystemColors.HighlightText;
+            this.SummaryTabControl.AdjustTopGap = 10;
             this.SummaryTabControl.BeforeTouchSize = new System.Drawing.Size(1588, 934);
             this.SummaryTabControl.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.SummaryTabControl.BorderWidth = 1;
@@ -5204,16 +5205,16 @@ namespace BudgetExecution
             this.SummaryTabControl.Controls.Add(this.ProjectTab);
             this.SummaryTabControl.Controls.Add(this.DatabaseTab);
             this.SummaryTabControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.SummaryTabControl.FixedSingleBorderColor = System.Drawing.SystemColors.MenuHighlight;
+            this.SummaryTabControl.FixedSingleBorderColor = System.Drawing.Color.Transparent;
             this.SummaryTabControl.FocusOnTabClick = false;
             this.SummaryTabControl.InactiveTabColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
             this.SummaryTabControl.InActiveTabForeColor = System.Drawing.Color.DimGray;
-            this.SummaryTabControl.ItemSize = new System.Drawing.Size(150, 80);
+            this.SummaryTabControl.ItemSize = new System.Drawing.Size(150, 90);
             this.SummaryTabControl.Location = new System.Drawing.Point(0, 0);
             this.SummaryTabControl.Multiline = true;
             this.SummaryTabControl.Name = "SummaryTabControl";
             this.SummaryTabControl.Padding = new System.Drawing.Point(6, 6);
-            this.SummaryTabControl.SeparatorColor = System.Drawing.SystemColors.MenuHighlight;
+            this.SummaryTabControl.SeparatorColor = System.Drawing.Color.Transparent;
             this.SummaryTabControl.ShowScroll = false;
             this.SummaryTabControl.ShowSeparator = true;
             this.SummaryTabControl.Size = new System.Drawing.Size(1588, 934);

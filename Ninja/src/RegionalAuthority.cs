@@ -8,7 +8,7 @@ namespace BudgetExecution
 {
     public class RegionalAuthority : IBudgetAuthority
     {
-        //Constructors
+        // CONSTRUCTORS
         public RegionalAuthority()
         {
             Data = new DataBuilder(Source.RegionAccount, Provider.SQLite, new Dictionary<string, object> { ["BFY"] = FiscalYear });
@@ -30,7 +30,7 @@ namespace BudgetExecution
             }
         }
 
-        //Properties
+        // PROPERTIES
         public static string FiscalYear { get; set; } = "2018";
         public decimal Average { get; }
         public decimal Amount { get; }
@@ -53,7 +53,7 @@ namespace BudgetExecution
         public DataTable Table { get; }
         public decimal Total { get; }
 
-        //Methods 
+        // METHODS 
         public DataTable FilterTable(DataTable table, string column, string filter)
         {
             try

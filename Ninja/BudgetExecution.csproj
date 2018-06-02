@@ -205,9 +205,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="R6.cs">
-      <DependentUpon>R6.xsd</DependentUpon>
-    </Compile>
     <Compile Include="R6.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -257,6 +254,7 @@
     <Compile Include="src\DivisionAuthority.cs" />
     <Compile Include="src\DocInfo.cs" />
     <Compile Include="src\Employee.cs" />
+    <Compile Include="src\ExcelQuery.cs" />
     <Compile Include="src\ExcelReport.cs" />
     <Compile Include="src\IFund.cs" />
     <Compile Include="src\PrcAccountManager.cs">
@@ -327,6 +325,8 @@
     <Compile Include="src\NinjaForm5.Designer.cs">
       <DependentUpon>NinjaForm5.cs</DependentUpon>
     </Compile>
+    <Compile Include="src\SqlCeQuery.cs" />
+    <Compile Include="src\SqlSvrQuery.cs" />
     <Compile Include="src\SummaryForm.cs">
       <SubType>Form</SubType>
     </Compile>

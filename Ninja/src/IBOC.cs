@@ -4,7 +4,7 @@ namespace BudgetExecution
 {
     public interface IBOC
     {
-        //Properties
+        // PROPERTIES
         string Name { get; set;}
         string Code { get; set; }
 

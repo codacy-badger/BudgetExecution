@@ -3,14 +3,14 @@ namespace BudgetExecution
 {
     public interface IAccount
     {
-        //Properties
+        // PROPERTIES
         string Code { get; }
         string Goal { get; }
         string NPM { get; }
         string Objective { get; }
         string ProgramProjectCode { get; }
 
-        //Methods
+        // METHODS
         string GetCode();
 
         string GetGoal();

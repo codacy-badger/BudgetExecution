@@ -4,13 +4,13 @@ namespace BudgetExecution
 {
     public interface IRC
     {
-        //Properties
+        // PROPERTIES
         string Code { get; }
 
         string ID { get; }
         string Name { get; }
 
-        //Methods
+        // METHODS
         string ToString();
     }
 }

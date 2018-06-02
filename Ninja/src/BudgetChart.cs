@@ -9,7 +9,7 @@ namespace BudgetExecution
 {
     public class BudgetChart
     {
-        //Constructors
+        // CONSTRUCTORS
         public BudgetChart()
         {
         }
@@ -151,7 +151,7 @@ namespace BudgetExecution
             Chart.ShowToolTips = true;
         }
 
-        //Properties
+        // PROPERTIES
         public string[] AxisTitle { get; set; }
         public ChartControl Chart { get; set; }
         public DataBuilder DbData { get; }
@@ -172,7 +172,7 @@ namespace BudgetExecution
         public DataTable Table { get; set; }
         private double Total { get; }
 
-        //Methods
+        // METHODS
         internal ChartControl Activate()
         {
             return Chart;

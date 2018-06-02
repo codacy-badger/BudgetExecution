@@ -7,11 +7,11 @@ namespace BudgetExecution
 {
     public interface IExcelOp
     {
-        //Properties
+        // PROPERTIES
         Tuple<string, string> ConnectionString { get; set; }
         string ExcelFile { get; set; }
 
-        //Methods
+        // METHODS
         Excel.Application GetApplication();
         string GetConnectionString();
         string GetFile();

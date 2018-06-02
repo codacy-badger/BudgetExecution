@@ -9,7 +9,7 @@ namespace BudgetExecution
 {
     public class PrcMetric
     {
-        //Constructors
+        // CONSTRUCTORS
         public PrcMetric()
         {
         }
@@ -107,7 +107,7 @@ namespace BudgetExecution
             ObjectiveMetrics = GetMetrics(Table, PrcField.ObjectiveName);
         }
 
-        //Properties
+        // PROPERTIES
         public DataBuilder DbData { get; }
         public decimal Average { get; set; }
         public int Count { get; }
@@ -132,7 +132,7 @@ namespace BudgetExecution
         public Dictionary<string, double[]> ProgramProjectMetrics { get; set; }
         public Dictionary<string, decimal> ProgramProjectTotals { get; set; }
 
-        //Methods
+        // METHODS
         public decimal GetAverage(DataTable table)
         {
             try

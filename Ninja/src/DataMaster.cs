@@ -12,7 +12,7 @@ namespace BudgetExecution
 {
     public partial class DataMaster : MetroForm
     {
-        //Constructors
+        // CONSTRUCTORS
         public DataMaster()
         {
             InitializeComponent();
@@ -25,7 +25,7 @@ namespace BudgetExecution
             GridNavigator.BindingSource = BindingSource;
         }
 
-        //Properties
+        // PROPERTIES
         private SQLiteDataAdapter Adapter { get; }
         private DataBuilder DbData { get; }
         private PrcMetric Metric { get; }
@@ -34,7 +34,7 @@ namespace BudgetExecution
         private Query Query { get; }
         private DataTable Table { get; set; }
 
-        //Methods
+        // METHODS
         private void BocFilter_ItemSelected(object sender, EventArgs e)
         {
             try

@@ -6,7 +6,7 @@ namespace BudgetExecution
 {
     public class Payroll
     {
-        //Constructors
+        // CONSTRUCTORS
         public Payroll()
         {
         }
@@ -52,7 +52,7 @@ namespace BudgetExecution
             YearOverTimeHours = double.Parse(dr["YearOverTimeHours"].ToString());
         }
 
-        //Properties
+        // PROPERTIES
         public decimal Amount { get; }
         public string BFY { get; }
         public string Code { get; }
@@ -71,7 +71,7 @@ namespace BudgetExecution
         public double YearOverTimeHours { get; }
         public decimal YearOverTimePay { get; }
 
-        //Methods
+        // METHODS
         Dictionary<string, object> GetParameter(string code, string bfy)
         {
             try

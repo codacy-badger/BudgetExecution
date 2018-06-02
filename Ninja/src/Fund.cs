@@ -7,7 +7,7 @@ namespace BudgetExecution
 {
     public class Fund : IFund
     {
-        //Constructors
+        // CONSTRUCTORS
         public Fund()
         {
 
@@ -37,7 +37,7 @@ namespace BudgetExecution
             TreasurySymbol = DataRecord["TreasurySymbol"].ToString();
         }
 
-        //Properties
+        // PROPERTIES
         public int ID { get; set; }
         public string Code { get; }
         public string FiscalYear { get; }
@@ -48,7 +48,7 @@ namespace BudgetExecution
         public DataTable Data { get; set; }
         public DataRow DataRecord { get; set; }
 
-        //Methods
+        // METHODS
         public Dictionary<string, object> GetFundParameter(string code, string bfy)
         {
             try

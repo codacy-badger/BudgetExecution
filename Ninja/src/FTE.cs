@@ -41,7 +41,7 @@ namespace BudgetExecution
             Metric = new PrcMetric(DbData);
             Table = DbData.Table;
         }
-        //Properties
+        // PROPERTIES
         public int ID { get; set; }
         public string BudgetLevel { get; set; }
         public string RPIO { get; set; }
@@ -75,7 +75,7 @@ namespace BudgetExecution
         BOC IPRC.BOC { get; }
         private Dictionary<string, object> FteParameter { get; set; }
 
-        //Methods
+        // METHODS
         Dictionary<string, object> GetParameter()
         {
             try

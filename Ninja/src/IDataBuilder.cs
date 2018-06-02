@@ -5,12 +5,12 @@ namespace BudgetExecution
     public interface IDataBuilder
     {
 
-        //Properties
+        // PROPERTIES
         Query Query { get; }
         DataTable Table { get; }
         DataRow[] DataRecords { get; }
 
-        //Methods
+        // METHODS
         DataTable GetDataTable();
         DataRow[] GetDataRecords(DataTable table);
     }

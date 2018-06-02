@@ -14,7 +14,7 @@ namespace BudgetExecution
 {
     public partial class Selector : MetroForm
     {
-        //Constructors
+        // CONSTRUCTORS
         public Selector()
         {
         }
@@ -27,13 +27,13 @@ namespace BudgetExecution
 
         }
 
-        //Properties
+        // PROPERTIES
         string DivisionImages { get; set; }
         string SummaryImages { get; set; }
         public FormData NinjaData { get; set; }
         string[] Images { get; set; }
 
-        //Methods
+        // METHODS
         private void GetViewerCarouselImageList(string path)
         {
             ImageList ilist = new ImageList();

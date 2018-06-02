@@ -9,7 +9,7 @@ namespace BudgetExecution
 {
     public class DataBuilder : IDataBuilder
     {
-        //Constructors
+        // CONSTRUCTORS
         public DataBuilder()
         {
         }
@@ -44,7 +44,7 @@ namespace BudgetExecution
             }
         }
 
-        //Properties
+        // PROPERTIES
         public Source Source { get; }
         public Query Query { get; }
         public DataTable Table { get; }
@@ -54,7 +54,7 @@ namespace BudgetExecution
         public decimal Total { get; }
         public Dictionary<string, object> Parameter { get; set; }
 
-        //Methods
+        // METHODS
         Dictionary<string, object> GetParameter(string rc)
         {
             try

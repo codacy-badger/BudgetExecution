@@ -16,7 +16,7 @@ namespace BudgetExecution
 {
     public partial class SummaryForm : MetroForm
     {
-        //Constructors
+        // CONSTRUCTORS
         public SummaryForm()
         {
             InitializeComponent();
@@ -24,6 +24,8 @@ namespace BudgetExecution
         public SummaryForm(string rc)
         {
             InitializeComponent();
+            Division = rc;
+            Source = Source.DivisionAccount;
             Parameter = new Dictionary<string, object>() { ["RC"] = rc };
             DbData = new DataBuilder(Source.DivisionAccount, Provider.SQLite, Parameter);
             Table = DbData.Table;
@@ -68,7 +70,7 @@ namespace BudgetExecution
             CurrentTabIndex = SummaryTabControl.SelectedIndex;
             SummaryTabControl.SelectedIndexChanged += SummaryTabPage_TabSelected;
         }
-        //Properties
+        // PROPERTIES
         public Source Source { get; }
         public Dictionary<string, object> Parameter { get; set; }
         public DivisionAuthority D6 { get; }
@@ -97,7 +99,7 @@ namespace BudgetExecution
         private TabPageAdv[] Tab { get; set; }
         private string[] TabNames { get; set; }
 
-        //Methods
+        // METHODS
         private void Form_Load(object sender, EventArgs e)
         {
             try
@@ -592,7 +594,7 @@ namespace BudgetExecution
             }
 
         }
-            void Expander_Click(object sender, EventArgs e)
+        void Expander_Click(object sender, EventArgs e)
         {
             var exp = sender as ExpandCollapsePanel;
             switch(CurrentTabIndex)

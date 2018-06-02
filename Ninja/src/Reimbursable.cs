@@ -6,7 +6,7 @@ namespace BudgetExecution
 {
     public class Reimbursable
     {
-        //Constructors
+        // CONSTRUCTORS
         public Reimbursable()
         {
         }
@@ -36,7 +36,7 @@ namespace BudgetExecution
             Available = decimal.Parse(dr["Available"].ToString());
         }
 
-        //Properties
+        // PROPERTIES
         public Account Account { get; }
         public string Agreement { get; }
         public decimal Amount { get; }
@@ -48,7 +48,7 @@ namespace BudgetExecution
         public Fund Fund { get; }
         public Org Org { get; }
 
-        //Methods
+        // METHODS
         Dictionary<string, object> GetParameter(string code, string bfy)
         {
             try

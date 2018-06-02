@@ -8,7 +8,7 @@ namespace Budget
         {
             public class Employee
             {
-                //Constructors
+                // CONSTRUCTORS
                 public Employee()
                 {
                 }
@@ -44,7 +44,7 @@ namespace Budget
                     UseLose = double.Parse(dr["UseLose"].ToString());
                 }
 
-                //Properties
+                // PROPERTIES
                 public string EmployId { get; }
 
                 public string First { get; }

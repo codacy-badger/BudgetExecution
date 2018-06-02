@@ -4,7 +4,7 @@ namespace BudgetExecution
 {
     public class Reprogramming
     {
-        //Constructors
+        // CONSTRUCTORS
         public Reprogramming()
         {
         }
@@ -53,7 +53,7 @@ namespace BudgetExecution
             Amount = decimal.Parse(dr["Amount"].ToString());
         }
 
-        //Properties
+        // PROPERTIES
         public Account Account { get; }
         public decimal Amount { get; }
         public string BFY { get; }

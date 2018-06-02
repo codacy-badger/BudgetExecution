@@ -4,7 +4,7 @@ namespace BudgetExecution
 {
     public interface IObligation : IPRC
     {
-        //Properties
+        // PROPERTIES
         decimal CommitmentAmount { get; set; }
 
         string DCNprefix { get; set; }

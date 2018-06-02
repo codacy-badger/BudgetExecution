@@ -3,7 +3,7 @@ namespace BudgetExecution
 {        
     internal interface ISupplementalAllocation
     {
-        //Properties
+        // PROPERTIES
         decimal Awards { get; set; }
         decimal OverTime { get; set; }
         int TimeOffAwards { get; set; }

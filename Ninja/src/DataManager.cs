@@ -13,7 +13,7 @@ namespace BudgetExecution
 {
     public partial class DataManager : Metro
             {
-                //Constructors
+                // CONSTRUCTORS
                 public DataManager(Source source, Provider provider)
                 {
                     InitializeComponent();
@@ -26,7 +26,7 @@ namespace BudgetExecution
                     GetGridSelectedRowValues();
                 }
 
-                //Properties
+                // PROPERTIES
                 public DataBuilder Data { get; }
 
                 public PrcMetric Metric { get; }
@@ -35,7 +35,7 @@ namespace BudgetExecution
                 public DataTable Table { get; set; }
                 public decimal Total { get; }
 
-                //Methods
+                // METHODS
                 public string[] GetCodes(DataTable table, string column)
                 {
                     try

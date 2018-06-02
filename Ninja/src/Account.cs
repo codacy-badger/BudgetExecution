@@ -8,7 +8,7 @@ namespace BudgetExecution
 {
     public class Account : IAccount
     {
-        //Constructors
+        // CONSTRUCTORS
         public Account()
         {
 
@@ -51,7 +51,7 @@ namespace BudgetExecution
             ProgramAreaName = DataRecord["ProgramAreaName"].ToString();
         }
 
-        //Properties
+        // PROPERTIES
         public int ID { get; set; }
         public string Code { get; set; }
         public string Fund { get; set; }
@@ -70,7 +70,7 @@ namespace BudgetExecution
         public DataTable Data { get; set; }
         public DataRow DataRecord { get; set; }
 
-        //Methods
+        // METHODS
         internal Dictionary<string, object> GetAccountParameter(string code)
         {
             try

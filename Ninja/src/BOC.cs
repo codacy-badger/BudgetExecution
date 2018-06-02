@@ -5,7 +5,7 @@ namespace BudgetExecution
 {
     public class BOC
     {
-        //Constructors
+        // CONSTRUCTORS
         public BOC(string code)
         {
             Code = code;
@@ -19,12 +19,12 @@ namespace BudgetExecution
             Value = amount;
         }
 
-        //Properties
+        // PROPERTIES
         public string Code { get; }
         public string Name { get; }
         public decimal Value { get; }
 
-        //Methods
+        // METHODS
         Dictionary<string, object> GetParameter(string code)
         {
             try

@@ -20,11 +20,11 @@ namespace BudgetExecution
             GetFunctionCarouselImageList(Info.FunctionImages);
         }
 
-        //Properties
+        // PROPERTIES
         string[] Images { get; set; }
         FormData NinjaData { get; set; }
 
-        //Methods
+        // METHODS
         private void GetFunctionCarouselImageList(string path)
         {
             ImageList ilist = new ImageList();

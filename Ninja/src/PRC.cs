@@ -6,9 +6,9 @@ using System.Windows.Forms;
 
 namespace BudgetExecution
 {
-    public class PRC : IAccount
+    public class PRC : IPRC, IAccount
     {
-        //Constructors
+        // CONSTRUCTORS
         public PRC()
         {
         }
@@ -20,7 +20,7 @@ namespace BudgetExecution
             BFY = bfy;
             Fund = new Fund(Source.Fund, Provider.SQLite, fund, bfy);
             RC = new RC(rc);
-            Org = org;
+            Org = new Org(org);
             Account = new Account(Source.Account, Provider.SQLite, code);
             Code = Account.Code;
             BOC = new BOC(boc, amount);
@@ -34,7 +34,7 @@ namespace BudgetExecution
             RPIO = datarow["RPIO"].ToString();
             BFY = datarow["BFY"].ToString();
             Fund = new Fund(datarow["Fund"].ToString(), datarow["BFY"].ToString());
-            Org = datarow["Org"].ToString();
+            Org = new Org(datarow["Org"].ToString());
             RC = new RC(datarow["RC"].ToString());
             Account = new Account(Source.Account, Provider.SQLite, datarow["Code"].ToString());
             Code = Account.Code;
@@ -43,13 +43,13 @@ namespace BudgetExecution
             Amount = decimal.Parse(datarow["Amount"].ToString());
         }
 
-        //Properties
+        // PROPERTIES
         public int ID { get; set; }
         public string BudgetLevel { get; set; }
         public string RPIO { get; set; }
         public string BFY { get; set; }
         public Fund Fund { get; }
-        public string Org { get; }
+        public Org Org { get; }
         public RC RC { get; }
         public string Code { get; set; }
         public Account Account { get; }
@@ -67,9 +67,9 @@ namespace BudgetExecution
         public string ObjectiveName { get; }
         private Dictionary<string, object> Parameter { get; set; }
         public string[] DataFields { get; }
-        public object[] DataObjects { get; }
+        public object[] DataValues { get; }
 
-        //Methods
+        // METHODS
         internal Dictionary<string, object> GetParameter()
         {
             try
@@ -140,7 +140,7 @@ namespace BudgetExecution
         {
             return Account.Code;
         }
-        internal string[] GetDataFields()
+        internal string[] GetFields()
         {
             try
             {
@@ -154,7 +154,7 @@ namespace BudgetExecution
                 return null;
             }
         }
-        internal Dictionary<string, object> GetDataObjects()
+        internal Dictionary<string, object> GetFieldValues()
         {
             try
             {

@@ -12,7 +12,7 @@ namespace BudgetExecution
 {
     public class Query : IQuery
     {
-        //Constructors
+        // CONSTRUCTORS
         public Query()
         {
         }
@@ -57,7 +57,7 @@ namespace BudgetExecution
                 case (Provider.SqlCe):
                     DataConnection = new SqlConnection(@"datasource=C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\database\SqlCe\R6.sdf");
                     break;
-                case (Provider.SqlServer):
+                case (Provider.SqlSvr):
                     DataConnection = new SQLiteConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C: \Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\database\SqlServer\R6.mdf;Integrated Security=True;Connect Timeout=30");
                     break;
                 case (Provider.OleDb):
@@ -73,7 +73,7 @@ namespace BudgetExecution
             DeleteCommand = CommandBuilder.GetDeleteCommand();
         }
 
-        //Properties
+        // PROPERTIES
         public Source Source { get; }
         public Provider Provider { get; }
         public AppSettingsReader Settings { get; }
@@ -91,7 +91,7 @@ namespace BudgetExecution
         public DbCommand InsertCommand { get; }
         public DbCommand UpdateCommand { get; }
 
-        //Methods
+        // METHODS
         internal string GetParamSelectString(Dictionary<string, object> param)
         {
             try
@@ -237,7 +237,7 @@ namespace BudgetExecution
                         return new SQLiteConnection(@"datasource=C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\database\SQLite\R6.db");
                     case (Provider.SqlCe):
                         return new SQLiteConnection(@"datasource=C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\database\SqlCe\R6.sdf");
-                    case (Provider.SqlServer):
+                    case (Provider.SqlSvr):
                         return new SQLiteConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C: \Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\database\SqlServer\R6.mdf;Integrated Security=True;Connect Timeout=30");
                     case (Provider.OleDb):
                         return new SQLiteConnection(@"Data Source = C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\database\OleDb\R6.accdb");

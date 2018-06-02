@@ -8,7 +8,7 @@ namespace BudgetExecution
 {
     public class DivisionAuthority : IBudgetAuthority
     {
-        //Constructors
+        // CONSTRUCTORS
         public DivisionAuthority()
         {
             DbData = new DataBuilder(Source.DivisionAccount, Provider.SQLite);
@@ -48,7 +48,7 @@ namespace BudgetExecution
                 FTE = GetFTE(Table);
         }
 
-        //Properties
+        // PROPERTIES
         public static string FiscalYear { get; set; } = "2018";
         public RC RC { get; }
         public Org Org { get; }
@@ -73,7 +73,7 @@ namespace BudgetExecution
         public Dictionary<string, decimal> ProgramData { get; }
         public Dictionary<string, decimal> ProjectData { get; }
 
-        //Methods
+        // METHODS
         public DataTable FilterTable(DataTable table, string column, string filter)
         {
             try

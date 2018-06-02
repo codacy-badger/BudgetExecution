@@ -10,7 +10,7 @@ namespace BudgetExecution
 {
     public partial class MainForm : Syncfusion.Windows.Forms.MetroForm
     {
-        //Constructors
+        // CONSTRUCTORS
         public MainForm()
         {
             InitializeComponent();
@@ -28,9 +28,10 @@ namespace BudgetExecution
             SummaryTile.Click += SummaryTile_OnClick;
             DivisionBudgetTile.Click += DivisionDataTile_OnClick;
             DataMasterTile.Click += DatabaseTile_OnClick;
+            FunctionalityTile.Click += FunctionalityTile_OnClick;
         }
 
-        //Properties
+        // PROPERTIES
         public GetChart Chart { get; set; }
 
         public int Counter { get; set; }
@@ -43,7 +44,7 @@ namespace BudgetExecution
         public Dictionary<string, double>[] Values { get; set; }
         public Timer Timer { get; set; }
 
-        //Methods
+        // METHODS
 
         private void MainForm_Load(object sender, EventArgs e)
         {

@@ -7,7 +7,7 @@ namespace BudgetExecution
 {
     public interface IQuery 
     {
-        //Properties
+        // PROPERTIES
         Source Source { get; }
         Provider Provider { get; }
         DbDataAdapter DataAdapter { get; set; }
@@ -16,7 +16,7 @@ namespace BudgetExecution
         DbDataReader DataReader { get; set; }
         string SqlStatement { get; set; }
 
-        //Methods
+        // METHODS
         DbCommandBuilder GetCommandBuilder(IDbDataAdapter adapter);
         DbConnection GetConnection(Provider connection);
         DbDataAdapter GetDataAdapter(IDbCommand command);

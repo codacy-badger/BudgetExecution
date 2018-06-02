@@ -10,7 +10,7 @@ namespace BudgetExecution
 {
     public class Appropriation : IBudgetAuthority
     {
-        //Constructors
+        // CONSTRUCTORS
         public Appropriation()
         {
         }
@@ -42,7 +42,7 @@ namespace BudgetExecution
             GoalData = Metric.GoalTotals;
         }
 
-        //Properties
+        // PROPERTIES
         public Fund Fund { get; }
         public string Name { get; }
         public string Title { get; }
@@ -67,7 +67,7 @@ namespace BudgetExecution
         public decimal Total { get; }
         internal DataRow[] Data { get; }
 
-        //Methods
+        // METHODS
         public DataTable FilterTable(DataTable table, string column, string filter)
         {
             try

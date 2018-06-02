@@ -9,7 +9,7 @@ namespace BudgetExecution
 {
     public class Transfer
     {
-        //Constructors
+        // CONSTRUCTORS
         public Transfer()
         {
         }
@@ -45,7 +45,7 @@ namespace BudgetExecution
             FromBOC = sender["BOC"].ToString();
             FromCode = sender["Code"].ToString();
             FromFund = sender["Fund"].ToString();
-            FromOrg = sender["Org"].ToString();
+            FromOrg = sender["Org"] as Org;
             FromRPIO = sender["RPIO"].ToString();
             FromAmount = decimal.Parse(sender["Amount"].ToString());
             ToId = int.Parse(receiver["Id"].ToString());
@@ -53,12 +53,12 @@ namespace BudgetExecution
             ToBOC = receiver["BOC"].ToString();
             ToCode = receiver["Code"].ToString();
             ToFund = receiver["Fund"].ToString();
-            ToOrg = receiver["Org"].ToString();
+            ToOrg = receiver["Org"] as Org;
             ToRPIO = receiver["RPIO"].ToString();
             ToAmount = decimal.Parse(receiver["Amount"].ToString());
         }
 
-        //Properties
+        // PROPERTIES
         public int ID { get; set; }
         public decimal Amount { get; set; }
         public string ControlNumber { get; set; }
@@ -68,7 +68,7 @@ namespace BudgetExecution
         public string FromCode { get; set; }
         public string FromFund { get; set; }
         public int FromId { get; set; }
-        public string FromOrg { get; set; }
+        public Org FromOrg { get; set; }
         public string FromRC { get; set; }
         public string FromRPIO { get; set; }
         public string Purpose { get; set; }
@@ -80,12 +80,12 @@ namespace BudgetExecution
         public string ToCode { get; set; }
         public string ToFund { get; set; }
         public int ToId { get; set; }
-        public string ToOrg { get; set; }
+        public Org ToOrg { get; set; }
         public string ToRC { get; set; }
         public string ToRPIO { get; set; }
         public Reprogramming Type { get; set; }
 
-        //Methods
+        // METHODS
         internal Dictionary<string, object> GetTransferData()
         {
             try

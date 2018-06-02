@@ -4,7 +4,7 @@ namespace BudgetExecution
 {
     public interface IPRC
     {
-        //Properties
+        // PROPERTIES
         Account Account { get; }
         decimal Amount { get; set; }
         string BFY { get; set; }

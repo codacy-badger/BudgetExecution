@@ -5,7 +5,7 @@ namespace BudgetExecution
 {
     public class NPM
     {
-        //Constructors
+        // CONSTRUCTORS
         public NPM(HQ code)
         {
             Code = code.ToString();
@@ -15,13 +15,13 @@ namespace BudgetExecution
             Code = code;
         }
 
-        //Properties
+        // PROPERTIES
         public string Code { get; }
         public string Name { get; set; }
         public string RPIO { get; set; }
         public string Title { get; set; }
 
-        //Methods
+        // METHODS
         Dictionary<string, object> GetParameter(string code)
         {
             try

@@ -10,7 +10,7 @@ namespace BudgetExecution
 {
     public class DocInfo
     {
-        //Constructors
+        // CONSTRUCTORS
         public DocInfo()
         {
         }
@@ -24,7 +24,7 @@ namespace BudgetExecution
             SignatureBlock = GetSignatureInfo();
         }
 
-        //Properties
+        // PROPERTIES
         public List<string> AccountingInfo { get; set; }
 
         public decimal Awards { get; set; }
@@ -44,7 +44,7 @@ namespace BudgetExecution
         public int TimeOffAwards { get; set; }
         public PRC Training { get; set; }
 
-        //Methods
+        // METHODS
         internal List<string> GetAccountingInfo()
         {
             List<string> footer = new List<string>();
