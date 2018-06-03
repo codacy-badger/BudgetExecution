@@ -210,6 +210,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>R6.xsd</DependentUpon>
     </Compile>
+    <Compile Include="R6Access.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>R6Access.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Resources\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -236,6 +241,19 @@
       <DependentUpon>SummaryImages.resx</DependentUpon>
     </Compile>
     <Compile Include="Settings.cs" />
+    <Compile Include="src\SQLiteQuery.cs" />
+    <Compile Include="src\SQLiteDataMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\SQLiteDataMaster.designer.cs">
+      <DependentUpon>SQLiteDataMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\AccessDataMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\AccessDataMaster.Designer.cs">
+      <DependentUpon>AccessDataMaster.cs</DependentUpon>
+    </Compile>
     <Compile Include="src\AccessQuery.cs" />
     <Compile Include="src\AccountControl.cs">
       <SubType>UserControl</SubType>
@@ -265,9 +283,6 @@
     </Compile>
     <Compile Include="src\FormData.cs" />
     <Compile Include="src\NPM.cs" />
-    <Compile Include="src\AccountManager.Designer.cs">
-      <DependentUpon>AccountManager.cs</DependentUpon>
-    </Compile>
     <Compile Include="src\AppropriationSelector.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -279,18 +294,6 @@
     </Compile>
     <Compile Include="src\BudgetTools.Designer.cs">
       <DependentUpon>BudgetTools.cs</DependentUpon>
-    </Compile>
-    <Compile Include="src\DataManager.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="src\DataManager.Designer.cs">
-      <DependentUpon>DataManager.cs</DependentUpon>
-    </Compile>
-    <Compile Include="src\DataMaster.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="src\DataMaster.Designer.cs">
-      <DependentUpon>DataMaster.cs</DependentUpon>
     </Compile>
     <Compile Include="src\DataNavigator.cs">
       <SubType>Form</SubType>
@@ -326,6 +329,12 @@
       <DependentUpon>NinjaForm5.cs</DependentUpon>
     </Compile>
     <Compile Include="src\SqlCeQuery.cs" />
+    <Compile Include="src\SqlCeDataMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\SqlCeDataMaster.designer.cs">
+      <DependentUpon>SqlCeDataMaster.cs</DependentUpon>
+    </Compile>
     <Compile Include="src\SqlSvrQuery.cs" />
     <Compile Include="src\SummaryForm.cs">
       <SubType>Form</SubType>
@@ -349,9 +358,6 @@
     <Compile Include="src\Reimbursable.cs" />
     <Compile Include="src\Reprogramming.cs" />
     <Compile Include="src\Transfer.cs" />
-    <Compile Include="src\AccountManager.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="src\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -425,20 +431,17 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>DivisionIconImages.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="src\SQLiteDataMaster.resx">
+      <DependentUpon>SQLiteDataMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\AccessDataMaster.resx">
+      <DependentUpon>AccessDataMaster.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="src\AccountControl.resx">
       <DependentUpon>AccountControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="src\AccountManager.resx">
-      <DependentUpon>AccountManager.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="src\BudgetTools.resx">
       <DependentUpon>BudgetTools.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="src\DataManager.resx">
-      <DependentUpon>DataManager.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="src\DataMaster.resx">
-      <DependentUpon>DataMaster.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="src\DataNavigator.resx">
       <DependentUpon>DataNavigator.cs</DependentUpon>
@@ -466,6 +469,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="src\NinjaForm5.resx">
       <DependentUpon>NinjaForm5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\SqlCeDataMaster.resx">
+      <DependentUpon>SqlCeDataMaster.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="src\SummaryForm.resx">
       <DependentUpon>SummaryForm.cs</DependentUpon>
@@ -531,6 +537,17 @@
     <None Include="R6.xss">
       <DependentUpon>R6.xsd</DependentUpon>
     </None>
+    <None Include="R6Access.xsc">
+      <DependentUpon>R6Access.xsd</DependentUpon>
+    </None>
+    <None Include="R6Access.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>R6Access.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="R6Access.xss">
+      <DependentUpon>R6Access.xsd</DependentUpon>
+    </None>
     <None Include="Resources\epa_seal_medium.ico" />
   </ItemGroup>
   <ItemGroup>
@@ -588,6 +605,9 @@
     <None Include="Resources\06N.png" />
     <None Include="Resources\06R.png" />
     <None Include="Resources\06X.png" />
+    <Content Include="R6.accdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\FunctionImages\BudgetTools.png" />
     <Content Include="Resources\FunctionImages\DataTools.png" />
     <Content Include="Resources\FunctionImages\Reprogramming.png" />

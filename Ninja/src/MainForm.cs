@@ -45,7 +45,6 @@ namespace BudgetExecution
         public Timer Timer { get; set; }
 
         // METHODS
-
         private void MainForm_Load(object sender, EventArgs e)
         {
             try
@@ -84,7 +83,7 @@ namespace BudgetExecution
         }
         private void DataButton_OnClick(object sender, EventArgs e)
         {
-            var dm = new DataMaster();
+            var dm = new SQLiteDataMaster();
             dm.Show();
         }
         private void DivisionSummaryButton_OnClick(object sender, EventArgs e)
