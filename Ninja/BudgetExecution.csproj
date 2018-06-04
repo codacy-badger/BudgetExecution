@@ -241,18 +241,24 @@
       <DependentUpon>SummaryImages.resx</DependentUpon>
     </Compile>
     <Compile Include="Settings.cs" />
+    <Compile Include="src\DataTools.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\DataTools.Designer.cs">
+      <DependentUpon>DataTools.cs</DependentUpon>
+    </Compile>
     <Compile Include="src\SQLiteQuery.cs" />
-    <Compile Include="src\SQLiteDataMaster.cs">
+    <Compile Include="src\SQLiteData.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="src\SQLiteDataMaster.designer.cs">
-      <DependentUpon>SQLiteDataMaster.cs</DependentUpon>
+    <Compile Include="src\SQLiteData.designer.cs">
+      <DependentUpon>SQLiteData.cs</DependentUpon>
     </Compile>
-    <Compile Include="src\AccessDataMaster.cs">
+    <Compile Include="src\AccessData.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="src\AccessDataMaster.Designer.cs">
-      <DependentUpon>AccessDataMaster.cs</DependentUpon>
+    <Compile Include="src\AccessData.Designer.cs">
+      <DependentUpon>AccessData.cs</DependentUpon>
     </Compile>
     <Compile Include="src\AccessQuery.cs" />
     <Compile Include="src\AccountControl.cs">
@@ -322,18 +328,12 @@
     <Compile Include="src\Selector.Designer.cs">
       <DependentUpon>Selector.cs</DependentUpon>
     </Compile>
-    <Compile Include="src\NinjaForm5.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="src\NinjaForm5.Designer.cs">
-      <DependentUpon>NinjaForm5.cs</DependentUpon>
-    </Compile>
     <Compile Include="src\SqlCeQuery.cs" />
-    <Compile Include="src\SqlCeDataMaster.cs">
+    <Compile Include="src\SqlCeData.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="src\SqlCeDataMaster.designer.cs">
-      <DependentUpon>SqlCeDataMaster.cs</DependentUpon>
+    <Compile Include="src\SqlCeData.designer.cs">
+      <DependentUpon>SqlCeData.cs</DependentUpon>
     </Compile>
     <Compile Include="src\SqlSvrQuery.cs" />
     <Compile Include="src\SummaryForm.cs">
@@ -431,11 +431,14 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>DivisionIconImages.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="src\SQLiteDataMaster.resx">
-      <DependentUpon>SQLiteDataMaster.cs</DependentUpon>
+    <EmbeddedResource Include="src\DataTools.resx">
+      <DependentUpon>DataTools.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="src\AccessDataMaster.resx">
-      <DependentUpon>AccessDataMaster.cs</DependentUpon>
+    <EmbeddedResource Include="src\SQLiteData.resx">
+      <DependentUpon>SQLiteData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\AccessData.resx">
+      <DependentUpon>AccessData.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="src\AccountControl.resx">
       <DependentUpon>AccountControl.cs</DependentUpon>
@@ -467,11 +470,8 @@
     <EmbeddedResource Include="src\Selector.resx">
       <DependentUpon>Selector.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="src\NinjaForm5.resx">
-      <DependentUpon>NinjaForm5.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="src\SqlCeDataMaster.resx">
-      <DependentUpon>SqlCeDataMaster.cs</DependentUpon>
+    <EmbeddedResource Include="src\SqlCeData.resx">
+      <DependentUpon>SqlCeData.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="src\SummaryForm.resx">
       <DependentUpon>SummaryForm.cs</DependentUpon>

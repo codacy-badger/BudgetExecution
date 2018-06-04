@@ -1,7 +1,7 @@
 ﻿
 namespace BudgetExecution
 {
-    partial class SqlCeDataMaster
+    partial class SQLiteDataMaster
     {
         /// <summary>
         /// Required designer variable.
@@ -30,14 +30,10 @@ namespace BudgetExecution
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Syncfusion.Windows.Forms.Tools.TextItem textItem17 = new Syncfusion.Windows.Forms.Tools.TextItem();
-            Syncfusion.Windows.Forms.Tools.TextItem textItem18 = new Syncfusion.Windows.Forms.Tools.TextItem();
-            Syncfusion.Windows.Forms.Tools.TextItem textItem19 = new Syncfusion.Windows.Forms.Tools.TextItem();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SqlCeDataMaster));
-            Syncfusion.Windows.Forms.Tools.TextItem textItem20 = new Syncfusion.Windows.Forms.Tools.TextItem();
             Syncfusion.Windows.Forms.Tools.TextItem textItem1 = new Syncfusion.Windows.Forms.Tools.TextItem();
             Syncfusion.Windows.Forms.Tools.TextItem textItem2 = new Syncfusion.Windows.Forms.Tools.TextItem();
             Syncfusion.Windows.Forms.Tools.TextItem textItem3 = new Syncfusion.Windows.Forms.Tools.TextItem();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SQLiteDataMaster));
             Syncfusion.Windows.Forms.Tools.TextItem textItem4 = new Syncfusion.Windows.Forms.Tools.TextItem();
             Syncfusion.Windows.Forms.Tools.TextItem textItem5 = new Syncfusion.Windows.Forms.Tools.TextItem();
             Syncfusion.Windows.Forms.Tools.TextItem textItem6 = new Syncfusion.Windows.Forms.Tools.TextItem();
@@ -47,26 +43,23 @@ namespace BudgetExecution
             Syncfusion.Windows.Forms.Tools.TextItem textItem10 = new Syncfusion.Windows.Forms.Tools.TextItem();
             Syncfusion.Windows.Forms.Tools.TextItem textItem11 = new Syncfusion.Windows.Forms.Tools.TextItem();
             Syncfusion.Windows.Forms.Tools.TextItem textItem12 = new Syncfusion.Windows.Forms.Tools.TextItem();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            Syncfusion.Windows.Forms.Grid.GridBaseStyle gridBaseStyle5 = new Syncfusion.Windows.Forms.Grid.GridBaseStyle();
-            Syncfusion.Windows.Forms.Grid.GridBaseStyle gridBaseStyle6 = new Syncfusion.Windows.Forms.Grid.GridBaseStyle();
-            Syncfusion.Windows.Forms.Grid.GridBaseStyle gridBaseStyle7 = new Syncfusion.Windows.Forms.Grid.GridBaseStyle();
-            Syncfusion.Windows.Forms.Grid.GridBaseStyle gridBaseStyle8 = new Syncfusion.Windows.Forms.Grid.GridBaseStyle();
-            Syncfusion.Windows.Forms.CaptionImage captionImage2 = new Syncfusion.Windows.Forms.CaptionImage();
+            Syncfusion.Windows.Forms.Tools.TextItem textItem13 = new Syncfusion.Windows.Forms.Tools.TextItem();
+            Syncfusion.Windows.Forms.Tools.TextItem textItem14 = new Syncfusion.Windows.Forms.Tools.TextItem();
+            Syncfusion.Windows.Forms.Tools.TextItem textItem15 = new Syncfusion.Windows.Forms.Tools.TextItem();
+            Syncfusion.Windows.Forms.Tools.TextItem textItem16 = new Syncfusion.Windows.Forms.Tools.TextItem();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            Syncfusion.Windows.Forms.Grid.GridBaseStyle gridBaseStyle1 = new Syncfusion.Windows.Forms.Grid.GridBaseStyle();
+            Syncfusion.Windows.Forms.Grid.GridBaseStyle gridBaseStyle2 = new Syncfusion.Windows.Forms.Grid.GridBaseStyle();
+            Syncfusion.Windows.Forms.Grid.GridBaseStyle gridBaseStyle3 = new Syncfusion.Windows.Forms.Grid.GridBaseStyle();
+            Syncfusion.Windows.Forms.Grid.GridBaseStyle gridBaseStyle4 = new Syncfusion.Windows.Forms.Grid.GridBaseStyle();
+            Syncfusion.Windows.Forms.CaptionImage captionImage1 = new Syncfusion.Windows.Forms.CaptionImage();
             this.hubTile6 = new Syncfusion.Windows.Forms.Tools.HubTile();
             this.hubTile7 = new Syncfusion.Windows.Forms.Tools.HubTile();
             this.hubTile8 = new Syncfusion.Windows.Forms.Tools.HubTile();
             this.hubTile2 = new Syncfusion.Windows.Forms.Tools.HubTile();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.MasterFilter3 = new MetroSet_UI.Controls.MetroSetComboBox();
-            this.MasterFIlter2 = new MetroSet_UI.Controls.MetroSetComboBox();
-            this.MasterFilter1 = new MetroSet_UI.Controls.MetroSetComboBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
             this.GridNavigator = new System.Windows.Forms.BindingNavigator(this.components);
@@ -139,8 +132,13 @@ namespace BudgetExecution
             this.tabPageAdv3 = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.metroSetComboBox10 = new MetroSet_UI.Controls.MetroSetComboBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.groupBox1.SuspendLayout();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.MasterFilter3 = new MetroSet_UI.Controls.MetroSetComboBox();
+            this.MasterFIlter2 = new MetroSet_UI.Controls.MetroSetComboBox();
+            this.MasterFilter1 = new MetroSet_UI.Controls.MetroSetComboBox();
             this.groupBox2.SuspendLayout();
             this.metroPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GridNavigator)).BeginInit();
@@ -154,21 +152,22 @@ namespace BudgetExecution
             this.tabPageAdv2.SuspendLayout();
             this.tabPageAdv3.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // hubTile6
             // 
             this.hubTile6.BackColor = System.Drawing.Color.Black;
-            textItem17.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(0)));
-            textItem17.HubTile = this.hubTile6;
-            this.hubTile6.Banner = textItem17;
-            textItem18.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(0)));
-            textItem18.HubTile = this.hubTile6;
-            this.hubTile6.Body = textItem18;
+            textItem1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(0)));
+            textItem1.HubTile = this.hubTile6;
+            this.hubTile6.Banner = textItem1;
+            textItem2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(0)));
+            textItem2.HubTile = this.hubTile6;
+            this.hubTile6.Body = textItem2;
             this.hubTile6.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(0)));
-            textItem19.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(0)));
-            textItem19.HubTile = this.hubTile6;
-            this.hubTile6.Footer = textItem19;
+            textItem3.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(0)));
+            textItem3.HubTile = this.hubTile6;
+            this.hubTile6.Footer = textItem3;
             this.hubTile6.HoveredBorderColor = System.Drawing.SystemColors.MenuHighlight;
             this.hubTile6.ImageSource = ((System.Drawing.Image)(resources.GetObject("hubTile6.ImageSource")));
             this.hubTile6.Location = new System.Drawing.Point(808, 73);
@@ -177,23 +176,23 @@ namespace BudgetExecution
             this.hubTile6.Name = "hubTile6";
             this.hubTile6.Size = new System.Drawing.Size(191, 100);
             this.hubTile6.TabIndex = 49;
-            textItem20.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(0)));
-            textItem20.HubTile = this.hubTile6;
-            this.hubTile6.Title = textItem20;
+            textItem4.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(0)));
+            textItem4.HubTile = this.hubTile6;
+            this.hubTile6.Title = textItem4;
             // 
             // hubTile7
             // 
             this.hubTile7.BackColor = System.Drawing.Color.Black;
-            textItem1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(0)));
-            textItem1.HubTile = this.hubTile7;
-            this.hubTile7.Banner = textItem1;
-            textItem2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(0)));
-            textItem2.HubTile = this.hubTile7;
-            this.hubTile7.Body = textItem2;
+            textItem5.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(0)));
+            textItem5.HubTile = this.hubTile7;
+            this.hubTile7.Banner = textItem5;
+            textItem6.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(0)));
+            textItem6.HubTile = this.hubTile7;
+            this.hubTile7.Body = textItem6;
             this.hubTile7.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(0)));
-            textItem3.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(0)));
-            textItem3.HubTile = this.hubTile7;
-            this.hubTile7.Footer = textItem3;
+            textItem7.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(0)));
+            textItem7.HubTile = this.hubTile7;
+            this.hubTile7.Footer = textItem7;
             this.hubTile7.HoveredBorderColor = System.Drawing.SystemColors.MenuHighlight;
             this.hubTile7.ImageSource = ((System.Drawing.Image)(resources.GetObject("hubTile7.ImageSource")));
             this.hubTile7.Location = new System.Drawing.Point(411, 73);
@@ -202,23 +201,23 @@ namespace BudgetExecution
             this.hubTile7.Name = "hubTile7";
             this.hubTile7.Size = new System.Drawing.Size(187, 110);
             this.hubTile7.TabIndex = 48;
-            textItem4.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(0)));
-            textItem4.HubTile = this.hubTile7;
-            this.hubTile7.Title = textItem4;
+            textItem8.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(0)));
+            textItem8.HubTile = this.hubTile7;
+            this.hubTile7.Title = textItem8;
             // 
             // hubTile8
             // 
             this.hubTile8.BackColor = System.Drawing.Color.Black;
-            textItem5.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(0)));
-            textItem5.HubTile = this.hubTile8;
-            this.hubTile8.Banner = textItem5;
-            textItem6.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(0)));
-            textItem6.HubTile = this.hubTile8;
-            this.hubTile8.Body = textItem6;
+            textItem9.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(0)));
+            textItem9.HubTile = this.hubTile8;
+            this.hubTile8.Banner = textItem9;
+            textItem10.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(0)));
+            textItem10.HubTile = this.hubTile8;
+            this.hubTile8.Body = textItem10;
             this.hubTile8.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(0)));
-            textItem7.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(0)));
-            textItem7.HubTile = this.hubTile8;
-            this.hubTile8.Footer = textItem7;
+            textItem11.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(0)));
+            textItem11.HubTile = this.hubTile8;
+            this.hubTile8.Footer = textItem11;
             this.hubTile8.HoveredBorderColor = System.Drawing.SystemColors.MenuHighlight;
             this.hubTile8.ImageSource = ((System.Drawing.Image)(resources.GetObject("hubTile8.ImageSource")));
             this.hubTile8.Location = new System.Drawing.Point(82, 73);
@@ -227,26 +226,26 @@ namespace BudgetExecution
             this.hubTile8.Name = "hubTile8";
             this.hubTile8.Size = new System.Drawing.Size(177, 110);
             this.hubTile8.TabIndex = 47;
-            textItem8.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(0)));
-            textItem8.HubTile = this.hubTile8;
-            this.hubTile8.Title = textItem8;
+            textItem12.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(0)));
+            textItem12.HubTile = this.hubTile8;
+            this.hubTile8.Title = textItem12;
             // 
             // hubTile2
             // 
             this.hubTile2.BackColor = System.Drawing.Color.Black;
-            textItem9.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(0)));
-            textItem9.HubTile = this.hubTile2;
-            this.hubTile2.Banner = textItem9;
+            textItem13.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(0)));
+            textItem13.HubTile = this.hubTile2;
+            this.hubTile2.Banner = textItem13;
             this.hubTile2.BannerColor = System.Drawing.Color.Black;
             this.hubTile2.BannerHeight = 40;
             this.hubTile2.BannerIcon = ((System.Drawing.Image)(resources.GetObject("hubTile2.BannerIcon")));
-            textItem10.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(0)));
-            textItem10.HubTile = this.hubTile2;
-            this.hubTile2.Body = textItem10;
+            textItem14.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(0)));
+            textItem14.HubTile = this.hubTile2;
+            this.hubTile2.Body = textItem14;
             this.hubTile2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(0)));
-            textItem11.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(0)));
-            textItem11.HubTile = this.hubTile2;
-            this.hubTile2.Footer = textItem11;
+            textItem15.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(0)));
+            textItem15.HubTile = this.hubTile2;
+            this.hubTile2.Footer = textItem15;
             this.hubTile2.HoveredBorderColor = System.Drawing.SystemColors.MenuHighlight;
             this.hubTile2.ImageSource = ((System.Drawing.Image)(resources.GetObject("hubTile2.ImageSource")));
             this.hubTile2.Location = new System.Drawing.Point(1057, 135);
@@ -257,157 +256,17 @@ namespace BudgetExecution
             this.hubTile2.ShowBannerIcon = true;
             this.hubTile2.Size = new System.Drawing.Size(265, 153);
             this.hubTile2.TabIndex = 53;
-            textItem12.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            textItem12.HubTile = this.hubTile2;
-            textItem12.Text = "PDF Extractor";
-            this.hubTile2.Title = textItem12;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.MasterFilter3);
-            this.groupBox1.Controls.Add(this.MasterFIlter2);
-            this.groupBox1.Controls.Add(this.MasterFilter1);
-            this.groupBox1.ForeColor = System.Drawing.SystemColors.Info;
-            this.groupBox1.Location = new System.Drawing.Point(84, 203);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(205, 307);
-            this.groupBox1.TabIndex = 2;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Data Fields";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(15, 224);
-            this.label3.Name = "label3";
-            this.label3.Padding = new System.Windows.Forms.Padding(1);
-            this.label3.Size = new System.Drawing.Size(53, 22);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "label3";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(15, 131);
-            this.label2.Name = "label2";
-            this.label2.Padding = new System.Windows.Forms.Padding(1);
-            this.label2.Size = new System.Drawing.Size(53, 22);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "label2";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(15, 44);
-            this.label1.Name = "label1";
-            this.label1.Padding = new System.Windows.Forms.Padding(1);
-            this.label1.Size = new System.Drawing.Size(81, 22);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Database";
-            // 
-            // MasterFilter3
-            // 
-            this.MasterFilter3.AllowDrop = true;
-            this.MasterFilter3.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
-            this.MasterFilter3.BackColor = System.Drawing.Color.Transparent;
-            this.MasterFilter3.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
-            this.MasterFilter3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
-            this.MasterFilter3.CausesValidation = false;
-            this.MasterFilter3.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.MasterFilter3.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.MasterFilter3.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.MasterFilter3.DisplayMember = "Fund";
-            this.MasterFilter3.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.MasterFilter3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.MasterFilter3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.MasterFilter3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.MasterFilter3.FormattingEnabled = true;
-            this.MasterFilter3.ItemHeight = 30;
-            this.MasterFilter3.Location = new System.Drawing.Point(19, 249);
-            this.MasterFilter3.MaxDropDownItems = 20;
-            this.MasterFilter3.Name = "MasterFilter3";
-            this.MasterFilter3.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.MasterFilter3.SelectedItemForeColor = System.Drawing.Color.White;
-            this.MasterFilter3.Size = new System.Drawing.Size(159, 36);
-            this.MasterFilter3.Style = MetroSet_UI.Design.Style.Dark;
-            this.MasterFilter3.StyleManager = null;
-            this.MasterFilter3.TabIndex = 2;
-            this.MasterFilter3.ThemeAuthor = "Narwin";
-            this.MasterFilter3.ThemeName = "MetroDark";
-            this.MasterFilter3.ValueMember = "Fund";
-            // 
-            // MasterFIlter2
-            // 
-            this.MasterFIlter2.AllowDrop = true;
-            this.MasterFIlter2.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
-            this.MasterFIlter2.BackColor = System.Drawing.Color.Transparent;
-            this.MasterFIlter2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
-            this.MasterFIlter2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
-            this.MasterFIlter2.CausesValidation = false;
-            this.MasterFIlter2.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.MasterFIlter2.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.MasterFIlter2.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.MasterFIlter2.DisplayMember = "Fund";
-            this.MasterFIlter2.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.MasterFIlter2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.MasterFIlter2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.MasterFIlter2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.MasterFIlter2.FormattingEnabled = true;
-            this.MasterFIlter2.ItemHeight = 30;
-            this.MasterFIlter2.Location = new System.Drawing.Point(19, 156);
-            this.MasterFIlter2.MaxDropDownItems = 20;
-            this.MasterFIlter2.Name = "MasterFIlter2";
-            this.MasterFIlter2.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.MasterFIlter2.SelectedItemForeColor = System.Drawing.Color.White;
-            this.MasterFIlter2.Size = new System.Drawing.Size(159, 36);
-            this.MasterFIlter2.Style = MetroSet_UI.Design.Style.Dark;
-            this.MasterFIlter2.StyleManager = null;
-            this.MasterFIlter2.TabIndex = 1;
-            this.MasterFIlter2.ThemeAuthor = "Narwin";
-            this.MasterFIlter2.ThemeName = "MetroDark";
-            this.MasterFIlter2.ValueMember = "Fund";
-            // 
-            // MasterFilter1
-            // 
-            this.MasterFilter1.AllowDrop = true;
-            this.MasterFilter1.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
-            this.MasterFilter1.BackColor = System.Drawing.Color.Transparent;
-            this.MasterFilter1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
-            this.MasterFilter1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
-            this.MasterFilter1.CausesValidation = false;
-            this.MasterFilter1.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.MasterFilter1.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.MasterFilter1.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.MasterFilter1.DisplayMember = "Fund";
-            this.MasterFilter1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.MasterFilter1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.MasterFilter1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.MasterFilter1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.MasterFilter1.FormattingEnabled = true;
-            this.MasterFilter1.ItemHeight = 30;
-            this.MasterFilter1.Location = new System.Drawing.Point(19, 69);
-            this.MasterFilter1.MaxDropDownItems = 20;
-            this.MasterFilter1.Name = "MasterFilter1";
-            this.MasterFilter1.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.MasterFilter1.SelectedItemForeColor = System.Drawing.Color.White;
-            this.MasterFilter1.Size = new System.Drawing.Size(159, 36);
-            this.MasterFilter1.Style = MetroSet_UI.Design.Style.Dark;
-            this.MasterFilter1.StyleManager = null;
-            this.MasterFilter1.TabIndex = 0;
-            this.MasterFilter1.ThemeAuthor = "Narwin";
-            this.MasterFilter1.ThemeName = "MetroDark";
-            this.MasterFilter1.ValueMember = "Fund";
+            textItem16.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            textItem16.HubTile = this.hubTile2;
+            textItem16.Text = "PDF Extractor";
+            this.hubTile2.Title = textItem16;
             // 
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.groupBox2.Controls.Add(this.metroPanel1);
             this.groupBox2.ForeColor = System.Drawing.SystemColors.Info;
-            this.groupBox2.Location = new System.Drawing.Point(352, 32);
+            this.groupBox2.Location = new System.Drawing.Point(352, 55);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(1174, 478);
             this.groupBox2.TabIndex = 5;
@@ -618,39 +477,39 @@ namespace BudgetExecution
             this.Grid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCellsExceptHeaders;
             this.Grid.BackgroundColor = System.Drawing.Color.SlateGray;
             this.Grid.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Grid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.LightSteelBlue;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.Info;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.Grid.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Grid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.LightSteelBlue;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.Info;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Grid.DefaultCellStyle = dataGridViewCellStyle2;
             this.Grid.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Grid.EnableHeadersVisualStyles = false;
             this.Grid.GridColor = System.Drawing.SystemColors.ControlDarkDark;
             this.Grid.Location = new System.Drawing.Point(0, 0);
             this.Grid.Name = "Grid";
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Grid.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Grid.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.Grid.RowHeadersWidth = 30;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
-            this.Grid.RowsDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            this.Grid.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.Grid.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.LightSteelBlue;
             this.Grid.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Grid.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
@@ -661,35 +520,35 @@ namespace BudgetExecution
             // E6DataGrid
             // 
             this.E6DataGrid.AllowDragSelectedCols = true;
-            gridBaseStyle5.Name = "Column Header";
-            gridBaseStyle5.StyleInfo.BaseStyle = "Header";
-            gridBaseStyle5.StyleInfo.CellType = "ColumnHeaderCell";
-            gridBaseStyle5.StyleInfo.Enabled = false;
-            gridBaseStyle5.StyleInfo.Font.Bold = false;
-            gridBaseStyle5.StyleInfo.HorizontalAlignment = Syncfusion.Windows.Forms.Grid.GridHorizontalAlignment.Center;
-            gridBaseStyle6.Name = "Header";
-            gridBaseStyle6.StyleInfo.Borders.Bottom = new Syncfusion.Windows.Forms.Grid.GridBorder(Syncfusion.Windows.Forms.Grid.GridBorderStyle.None);
-            gridBaseStyle6.StyleInfo.Borders.Left = new Syncfusion.Windows.Forms.Grid.GridBorder(Syncfusion.Windows.Forms.Grid.GridBorderStyle.None);
-            gridBaseStyle6.StyleInfo.Borders.Right = new Syncfusion.Windows.Forms.Grid.GridBorder(Syncfusion.Windows.Forms.Grid.GridBorderStyle.None);
-            gridBaseStyle6.StyleInfo.Borders.Top = new Syncfusion.Windows.Forms.Grid.GridBorder(Syncfusion.Windows.Forms.Grid.GridBorderStyle.None);
-            gridBaseStyle6.StyleInfo.CellType = "Header";
-            gridBaseStyle6.StyleInfo.Font.Bold = true;
-            gridBaseStyle6.StyleInfo.Interior = new Syncfusion.Drawing.BrushInfo(System.Drawing.SystemColors.Control);
-            gridBaseStyle6.StyleInfo.VerticalAlignment = Syncfusion.Windows.Forms.Grid.GridVerticalAlignment.Middle;
-            gridBaseStyle7.Name = "Standard";
-            gridBaseStyle7.StyleInfo.CheckBoxOptions.CheckedValue = "True";
-            gridBaseStyle7.StyleInfo.CheckBoxOptions.UncheckedValue = "False";
-            gridBaseStyle7.StyleInfo.Interior = new Syncfusion.Drawing.BrushInfo(System.Drawing.SystemColors.Window);
-            gridBaseStyle8.Name = "Row Header";
-            gridBaseStyle8.StyleInfo.BaseStyle = "Header";
-            gridBaseStyle8.StyleInfo.CellType = "RowHeaderCell";
-            gridBaseStyle8.StyleInfo.Enabled = true;
-            gridBaseStyle8.StyleInfo.HorizontalAlignment = Syncfusion.Windows.Forms.Grid.GridHorizontalAlignment.Left;
+            gridBaseStyle1.Name = "Column Header";
+            gridBaseStyle1.StyleInfo.BaseStyle = "Header";
+            gridBaseStyle1.StyleInfo.CellType = "ColumnHeaderCell";
+            gridBaseStyle1.StyleInfo.Enabled = false;
+            gridBaseStyle1.StyleInfo.Font.Bold = false;
+            gridBaseStyle1.StyleInfo.HorizontalAlignment = Syncfusion.Windows.Forms.Grid.GridHorizontalAlignment.Center;
+            gridBaseStyle2.Name = "Header";
+            gridBaseStyle2.StyleInfo.Borders.Bottom = new Syncfusion.Windows.Forms.Grid.GridBorder(Syncfusion.Windows.Forms.Grid.GridBorderStyle.None);
+            gridBaseStyle2.StyleInfo.Borders.Left = new Syncfusion.Windows.Forms.Grid.GridBorder(Syncfusion.Windows.Forms.Grid.GridBorderStyle.None);
+            gridBaseStyle2.StyleInfo.Borders.Right = new Syncfusion.Windows.Forms.Grid.GridBorder(Syncfusion.Windows.Forms.Grid.GridBorderStyle.None);
+            gridBaseStyle2.StyleInfo.Borders.Top = new Syncfusion.Windows.Forms.Grid.GridBorder(Syncfusion.Windows.Forms.Grid.GridBorderStyle.None);
+            gridBaseStyle2.StyleInfo.CellType = "Header";
+            gridBaseStyle2.StyleInfo.Font.Bold = true;
+            gridBaseStyle2.StyleInfo.Interior = new Syncfusion.Drawing.BrushInfo(System.Drawing.SystemColors.Control);
+            gridBaseStyle2.StyleInfo.VerticalAlignment = Syncfusion.Windows.Forms.Grid.GridVerticalAlignment.Middle;
+            gridBaseStyle3.Name = "Standard";
+            gridBaseStyle3.StyleInfo.CheckBoxOptions.CheckedValue = "True";
+            gridBaseStyle3.StyleInfo.CheckBoxOptions.UncheckedValue = "False";
+            gridBaseStyle3.StyleInfo.Interior = new Syncfusion.Drawing.BrushInfo(System.Drawing.SystemColors.Window);
+            gridBaseStyle4.Name = "Row Header";
+            gridBaseStyle4.StyleInfo.BaseStyle = "Header";
+            gridBaseStyle4.StyleInfo.CellType = "RowHeaderCell";
+            gridBaseStyle4.StyleInfo.Enabled = true;
+            gridBaseStyle4.StyleInfo.HorizontalAlignment = Syncfusion.Windows.Forms.Grid.GridHorizontalAlignment.Left;
             this.E6DataGrid.BaseStylesMap.AddRange(new Syncfusion.Windows.Forms.Grid.GridBaseStyle[] {
-            gridBaseStyle5,
-            gridBaseStyle6,
-            gridBaseStyle7,
-            gridBaseStyle8});
+            gridBaseStyle1,
+            gridBaseStyle2,
+            gridBaseStyle3,
+            gridBaseStyle4});
             this.E6DataGrid.Location = new System.Drawing.Point(0, 0);
             this.E6DataGrid.Name = "E6DataGrid";
             this.E6DataGrid.ShowCurrentCellBorderBehavior = Syncfusion.Windows.Forms.Grid.GridShowCurrentCellBorder.GrayWhenLostFocus;
@@ -802,7 +661,7 @@ namespace BudgetExecution
             // tabControlAdv1
             // 
             this.tabControlAdv1.ActiveTabForeColor = System.Drawing.Color.White;
-            this.tabControlAdv1.BeforeTouchSize = new System.Drawing.Size(1442, 455);
+            this.tabControlAdv1.BeforeTouchSize = new System.Drawing.Size(1442, 448);
             this.tabControlAdv1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tabControlAdv1.BorderWidth = 0;
             this.tabControlAdv1.CloseButtonForeColor = System.Drawing.Color.Empty;
@@ -816,11 +675,11 @@ namespace BudgetExecution
             this.tabControlAdv1.InactiveTabColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tabControlAdv1.InActiveTabForeColor = System.Drawing.Color.DarkGray;
             this.tabControlAdv1.ItemSize = new System.Drawing.Size(121, 40);
-            this.tabControlAdv1.Location = new System.Drawing.Point(84, 537);
+            this.tabControlAdv1.Location = new System.Drawing.Point(84, 560);
             this.tabControlAdv1.Name = "tabControlAdv1";
             this.tabControlAdv1.SeparatorColor = System.Drawing.Color.Transparent;
             this.tabControlAdv1.ShowSeparator = false;
-            this.tabControlAdv1.Size = new System.Drawing.Size(1442, 455);
+            this.tabControlAdv1.Size = new System.Drawing.Size(1442, 448);
             this.tabControlAdv1.TabIndex = 12;
             this.tabControlAdv1.TabPanelBackColor = System.Drawing.Color.Black;
             this.tabControlAdv1.TabStyle = typeof(Syncfusion.Windows.Forms.Tools.TabRendererMetro);
@@ -859,7 +718,7 @@ namespace BudgetExecution
             this.tabPageAdv1.Location = new System.Drawing.Point(0, 39);
             this.tabPageAdv1.Name = "tabPageAdv1";
             this.tabPageAdv1.ShowCloseButton = true;
-            this.tabPageAdv1.Size = new System.Drawing.Size(1442, 416);
+            this.tabPageAdv1.Size = new System.Drawing.Size(1442, 409);
             this.tabPageAdv1.TabIndex = 1;
             this.tabPageAdv1.Text = "tabPageAdv1";
             this.tabPageAdv1.ThemesEnabled = false;
@@ -1130,7 +989,7 @@ namespace BudgetExecution
             this.metroSetTextBox9.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.metroSetTextBox9.Image = null;
             this.metroSetTextBox9.Lines = null;
-            this.metroSetTextBox9.Location = new System.Drawing.Point(691, 342);
+            this.metroSetTextBox9.Location = new System.Drawing.Point(691, 321);
             this.metroSetTextBox9.MaxLength = 32767;
             this.metroSetTextBox9.Multiline = false;
             this.metroSetTextBox9.Name = "metroSetTextBox9";
@@ -1158,7 +1017,7 @@ namespace BudgetExecution
             this.metroSetTextBox10.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.metroSetTextBox10.Image = null;
             this.metroSetTextBox10.Lines = null;
-            this.metroSetTextBox10.Location = new System.Drawing.Point(686, 137);
+            this.metroSetTextBox10.Location = new System.Drawing.Point(686, 123);
             this.metroSetTextBox10.MaxLength = 32767;
             this.metroSetTextBox10.Multiline = false;
             this.metroSetTextBox10.Name = "metroSetTextBox10";
@@ -1235,7 +1094,7 @@ namespace BudgetExecution
             this.metroSetTextBox11.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.metroSetTextBox11.Image = null;
             this.metroSetTextBox11.Lines = null;
-            this.metroSetTextBox11.Location = new System.Drawing.Point(482, 342);
+            this.metroSetTextBox11.Location = new System.Drawing.Point(477, 321);
             this.metroSetTextBox11.MaxLength = 32767;
             this.metroSetTextBox11.Multiline = false;
             this.metroSetTextBox11.Name = "metroSetTextBox11";
@@ -1263,7 +1122,7 @@ namespace BudgetExecution
             this.metroSetTextBox12.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.metroSetTextBox12.Image = null;
             this.metroSetTextBox12.Lines = null;
-            this.metroSetTextBox12.Location = new System.Drawing.Point(477, 137);
+            this.metroSetTextBox12.Location = new System.Drawing.Point(477, 123);
             this.metroSetTextBox12.MaxLength = 32767;
             this.metroSetTextBox12.Multiline = false;
             this.metroSetTextBox12.Name = "metroSetTextBox12";
@@ -1340,7 +1199,7 @@ namespace BudgetExecution
             this.metroSetTextBox13.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.metroSetTextBox13.Image = null;
             this.metroSetTextBox13.Lines = null;
-            this.metroSetTextBox13.Location = new System.Drawing.Point(268, 342);
+            this.metroSetTextBox13.Location = new System.Drawing.Point(268, 321);
             this.metroSetTextBox13.MaxLength = 32767;
             this.metroSetTextBox13.Multiline = false;
             this.metroSetTextBox13.Name = "metroSetTextBox13";
@@ -1368,7 +1227,7 @@ namespace BudgetExecution
             this.metroSetTextBox14.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.metroSetTextBox14.Image = null;
             this.metroSetTextBox14.Lines = null;
-            this.metroSetTextBox14.Location = new System.Drawing.Point(263, 137);
+            this.metroSetTextBox14.Location = new System.Drawing.Point(263, 123);
             this.metroSetTextBox14.MaxLength = 32767;
             this.metroSetTextBox14.Multiline = false;
             this.metroSetTextBox14.Name = "metroSetTextBox14";
@@ -1396,7 +1255,7 @@ namespace BudgetExecution
             this.metroSetTextBox15.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.metroSetTextBox15.Image = null;
             this.metroSetTextBox15.Lines = null;
-            this.metroSetTextBox15.Location = new System.Drawing.Point(43, 342);
+            this.metroSetTextBox15.Location = new System.Drawing.Point(43, 321);
             this.metroSetTextBox15.MaxLength = 32767;
             this.metroSetTextBox15.Multiline = false;
             this.metroSetTextBox15.Name = "metroSetTextBox15";
@@ -1522,7 +1381,7 @@ namespace BudgetExecution
             this.metroSetTextBox16.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.metroSetTextBox16.Image = null;
             this.metroSetTextBox16.Lines = null;
-            this.metroSetTextBox16.Location = new System.Drawing.Point(38, 137);
+            this.metroSetTextBox16.Location = new System.Drawing.Point(38, 123);
             this.metroSetTextBox16.MaxLength = 32767;
             this.metroSetTextBox16.Multiline = false;
             this.metroSetTextBox16.Name = "metroSetTextBox16";
@@ -1547,7 +1406,7 @@ namespace BudgetExecution
             this.tabPageAdv2.Location = new System.Drawing.Point(0, 39);
             this.tabPageAdv2.Name = "tabPageAdv2";
             this.tabPageAdv2.ShowCloseButton = true;
-            this.tabPageAdv2.Size = new System.Drawing.Size(1442, 416);
+            this.tabPageAdv2.Size = new System.Drawing.Size(1442, 409);
             this.tabPageAdv2.TabIndex = 2;
             this.tabPageAdv2.Text = "tabPageAdv2";
             this.tabPageAdv2.ThemesEnabled = false;
@@ -1560,7 +1419,7 @@ namespace BudgetExecution
             this.tabPageAdv3.Location = new System.Drawing.Point(0, 39);
             this.tabPageAdv3.Name = "tabPageAdv3";
             this.tabPageAdv3.ShowCloseButton = true;
-            this.tabPageAdv3.Size = new System.Drawing.Size(1442, 416);
+            this.tabPageAdv3.Size = new System.Drawing.Size(1442, 409);
             this.tabPageAdv3.TabIndex = 3;
             this.tabPageAdv3.Text = "tabPageAdv3";
             this.tabPageAdv3.ThemesEnabled = false;
@@ -1568,13 +1427,12 @@ namespace BudgetExecution
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
-            this.groupBox3.Controls.Add(this.label12);
             this.groupBox3.Controls.Add(this.metroSetComboBox10);
             this.groupBox3.ForeColor = System.Drawing.SystemColors.Info;
-            this.groupBox3.Location = new System.Drawing.Point(84, 32);
+            this.groupBox3.Location = new System.Drawing.Point(84, 55);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(205, 151);
-            this.groupBox3.TabIndex = 13;
+            this.groupBox3.Size = new System.Drawing.Size(205, 121);
+            this.groupBox3.TabIndex = 15;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "DataSets";
             // 
@@ -1595,7 +1453,7 @@ namespace BudgetExecution
             this.metroSetComboBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.metroSetComboBox10.FormattingEnabled = true;
             this.metroSetComboBox10.ItemHeight = 30;
-            this.metroSetComboBox10.Location = new System.Drawing.Point(19, 71);
+            this.metroSetComboBox10.Location = new System.Drawing.Point(19, 54);
             this.metroSetComboBox10.MaxDropDownItems = 20;
             this.metroSetComboBox10.Name = "metroSetComboBox10";
             this.metroSetComboBox10.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
@@ -1607,32 +1465,162 @@ namespace BudgetExecution
             this.metroSetComboBox10.ThemeAuthor = "Narwin";
             this.metroSetComboBox10.ThemeName = "MetroDark";
             // 
-            // label12
+            // groupBox1
             // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(15, 46);
-            this.label12.Name = "label12";
-            this.label12.Padding = new System.Windows.Forms.Padding(1);
-            this.label12.Size = new System.Drawing.Size(85, 22);
-            this.label12.TabIndex = 6;
-            this.label12.Text = "DataTable";
+            this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.MasterFilter3);
+            this.groupBox1.Controls.Add(this.MasterFIlter2);
+            this.groupBox1.Controls.Add(this.MasterFilter1);
+            this.groupBox1.ForeColor = System.Drawing.SystemColors.Info;
+            this.groupBox1.Location = new System.Drawing.Point(84, 209);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(205, 307);
+            this.groupBox1.TabIndex = 14;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Data Fields";
             // 
-            // SqlCeDataMaster
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(15, 224);
+            this.label3.Name = "label3";
+            this.label3.Padding = new System.Windows.Forms.Padding(1);
+            this.label3.Size = new System.Drawing.Size(53, 22);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "label3";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(15, 131);
+            this.label2.Name = "label2";
+            this.label2.Padding = new System.Windows.Forms.Padding(1);
+            this.label2.Size = new System.Drawing.Size(53, 22);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "label2";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(15, 44);
+            this.label1.Name = "label1";
+            this.label1.Padding = new System.Windows.Forms.Padding(1);
+            this.label1.Size = new System.Drawing.Size(81, 22);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Database";
+            // 
+            // MasterFilter3
+            // 
+            this.MasterFilter3.AllowDrop = true;
+            this.MasterFilter3.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.MasterFilter3.BackColor = System.Drawing.Color.Transparent;
+            this.MasterFilter3.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.MasterFilter3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.MasterFilter3.CausesValidation = false;
+            this.MasterFilter3.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.MasterFilter3.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.MasterFilter3.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.MasterFilter3.DisplayMember = "Fund";
+            this.MasterFilter3.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.MasterFilter3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.MasterFilter3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MasterFilter3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.MasterFilter3.FormattingEnabled = true;
+            this.MasterFilter3.ItemHeight = 30;
+            this.MasterFilter3.Location = new System.Drawing.Point(19, 249);
+            this.MasterFilter3.MaxDropDownItems = 20;
+            this.MasterFilter3.Name = "MasterFilter3";
+            this.MasterFilter3.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.MasterFilter3.SelectedItemForeColor = System.Drawing.Color.White;
+            this.MasterFilter3.Size = new System.Drawing.Size(159, 36);
+            this.MasterFilter3.Style = MetroSet_UI.Design.Style.Dark;
+            this.MasterFilter3.StyleManager = null;
+            this.MasterFilter3.TabIndex = 2;
+            this.MasterFilter3.ThemeAuthor = "Narwin";
+            this.MasterFilter3.ThemeName = "MetroDark";
+            this.MasterFilter3.ValueMember = "Fund";
+            // 
+            // MasterFIlter2
+            // 
+            this.MasterFIlter2.AllowDrop = true;
+            this.MasterFIlter2.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.MasterFIlter2.BackColor = System.Drawing.Color.Transparent;
+            this.MasterFIlter2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.MasterFIlter2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.MasterFIlter2.CausesValidation = false;
+            this.MasterFIlter2.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.MasterFIlter2.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.MasterFIlter2.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.MasterFIlter2.DisplayMember = "Fund";
+            this.MasterFIlter2.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.MasterFIlter2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.MasterFIlter2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MasterFIlter2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.MasterFIlter2.FormattingEnabled = true;
+            this.MasterFIlter2.ItemHeight = 30;
+            this.MasterFIlter2.Location = new System.Drawing.Point(19, 156);
+            this.MasterFIlter2.MaxDropDownItems = 20;
+            this.MasterFIlter2.Name = "MasterFIlter2";
+            this.MasterFIlter2.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.MasterFIlter2.SelectedItemForeColor = System.Drawing.Color.White;
+            this.MasterFIlter2.Size = new System.Drawing.Size(159, 36);
+            this.MasterFIlter2.Style = MetroSet_UI.Design.Style.Dark;
+            this.MasterFIlter2.StyleManager = null;
+            this.MasterFIlter2.TabIndex = 1;
+            this.MasterFIlter2.ThemeAuthor = "Narwin";
+            this.MasterFIlter2.ThemeName = "MetroDark";
+            this.MasterFIlter2.ValueMember = "Fund";
+            // 
+            // MasterFilter1
+            // 
+            this.MasterFilter1.AllowDrop = true;
+            this.MasterFilter1.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.MasterFilter1.BackColor = System.Drawing.Color.Transparent;
+            this.MasterFilter1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.MasterFilter1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.MasterFilter1.CausesValidation = false;
+            this.MasterFilter1.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.MasterFilter1.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.MasterFilter1.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.MasterFilter1.DisplayMember = "Fund";
+            this.MasterFilter1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.MasterFilter1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.MasterFilter1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MasterFilter1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.MasterFilter1.FormattingEnabled = true;
+            this.MasterFilter1.ItemHeight = 30;
+            this.MasterFilter1.Location = new System.Drawing.Point(19, 69);
+            this.MasterFilter1.MaxDropDownItems = 20;
+            this.MasterFilter1.Name = "MasterFilter1";
+            this.MasterFilter1.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.MasterFilter1.SelectedItemForeColor = System.Drawing.Color.White;
+            this.MasterFilter1.Size = new System.Drawing.Size(159, 36);
+            this.MasterFilter1.Style = MetroSet_UI.Design.Style.Dark;
+            this.MasterFilter1.StyleManager = null;
+            this.MasterFilter1.TabIndex = 0;
+            this.MasterFilter1.ThemeAuthor = "Narwin";
+            this.MasterFilter1.ThemeName = "MetroDark";
+            this.MasterFilter1.ValueMember = "Fund";
+            // 
+            // SQLiteDataMaster
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.BorderColor = System.Drawing.SystemColors.MenuHighlight;
             this.CaptionBarColor = System.Drawing.Color.Black;
-            this.CaptionBarHeight = 60;
-            this.CaptionForeColor = System.Drawing.Color.LightSteelBlue;
-            captionImage2.BackColor = System.Drawing.Color.Black;
-            captionImage2.Image = ((System.Drawing.Image)(resources.GetObject("captionImage2.Image")));
-            captionImage2.Location = new System.Drawing.Point(30, 5);
-            captionImage2.Name = "CaptionImage1";
-            captionImage2.Size = new System.Drawing.Size(100, 50);
-            this.CaptionImages.Add(captionImage2);
-            this.ClientSize = new System.Drawing.Size(1588, 1003);
+            this.CaptionBarHeight = 80;
+            this.CaptionForeColor = System.Drawing.Color.Black;
+            captionImage1.BackColor = System.Drawing.Color.Black;
+            captionImage1.Image = ((System.Drawing.Image)(resources.GetObject("captionImage1.Image")));
+            captionImage1.Location = new System.Drawing.Point(30, 5);
+            captionImage1.Name = "CaptionImage1";
+            captionImage1.Size = new System.Drawing.Size(150, 75);
+            this.CaptionImages.Add(captionImage1);
+            this.ClientSize = new System.Drawing.Size(1588, 1020);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.tabControlAdv1);
@@ -1641,11 +1629,9 @@ namespace BudgetExecution
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(1600, 1400);
             this.MetroColor = System.Drawing.Color.Black;
-            this.Name = "SqlCeDataMaster";
+            this.Name = "SQLiteDataMaster";
             this.ShowIcon = false;
-            this.Text = "SQL Server";
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.Text = "DataMaster";
             this.groupBox2.ResumeLayout(false);
             this.metroPanel1.ResumeLayout(false);
             this.metroPanel1.PerformLayout();
@@ -1662,19 +1648,17 @@ namespace BudgetExecution
             this.tabPageAdv2.ResumeLayout(false);
             this.tabPageAdv3.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView Grid;
         private System.Windows.Forms.GroupBox groupBox2;
         private Syncfusion.Windows.Forms.Grid.GridDataBoundGrid E6DataGrid;
-        private MetroSet_UI.Controls.MetroSetComboBox MasterFilter1;
         private Syncfusion.Windows.Forms.Tools.toolstripitem toolstripitem1;
-        private MetroSet_UI.Controls.MetroSetComboBox MasterFIlter2;
         private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
         private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
@@ -1696,10 +1680,6 @@ namespace BudgetExecution
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator4;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem1;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator5;
-        private MetroSet_UI.Controls.MetroSetComboBox MasterFilter3;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.BindingSource BindingSource;
         private System.Windows.Forms.ToolStripButton toolStripButton3;
         private System.Windows.Forms.ToolStripButton toolStripButton4;
@@ -1750,7 +1730,13 @@ namespace BudgetExecution
         private MetroSet_UI.Controls.MetroSetComboBox metroSetComboBox4;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Label label12;
         private MetroSet_UI.Controls.MetroSetComboBox metroSetComboBox10;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private MetroSet_UI.Controls.MetroSetComboBox MasterFilter3;
+        private MetroSet_UI.Controls.MetroSetComboBox MasterFIlter2;
+        private MetroSet_UI.Controls.MetroSetComboBox MasterFilter1;
     }
 }

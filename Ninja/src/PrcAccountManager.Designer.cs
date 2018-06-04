@@ -115,7 +115,7 @@
             this.AccountTabControl.TabIndex = 1;
             this.AccountTabControl.TabPanelBackColor = System.Drawing.Color.Black;
             this.AccountTabControl.TabStyle = typeof(Syncfusion.Windows.Forms.Tools.TabRendererMetro);
-            this.AccountTabControl.SelectedIndexChanged += new System.EventHandler(this.tabControlAdv1_SelectedIndexChanged);
+            this.AccountTabControl.SelectedIndexChanged += new System.EventHandler(this.TabControlAdv1_SelectedIndexChanged);
             // 
             // tabPageAdv1
             // 
@@ -492,7 +492,7 @@
             this.UpdateButton.Text = "Update";
             this.UpdateButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.UpdateButton.UseVisualStyleBackColor = false;
-            this.UpdateButton.Click += new System.EventHandler(this.button5_Click);
+            this.UpdateButton.Click += new System.EventHandler(this.Button5_Click);
             // 
             // RemoveButton
             // 

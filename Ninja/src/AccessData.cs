@@ -10,13 +10,13 @@ using Syncfusion.Windows.Forms;
 
 namespace BudgetExecution
 {
-    public partial class SqlCeDataMaster : MetroForm
+    public partial class AccessData : MetroForm
     {
         // CONSTRUCTORS
-        public SqlCeDataMaster()
+        public AccessData()
         {
             InitializeComponent();
-            DbData = new DataBuilder(Source.RegionAccount, Provider.SQLite);
+            DbData = new DataBuilder(Source.PRC, Provider.OleDb);
             Table = DbData.Table;
             Metric = new PrcMetric(DbData);
             ProgramElements = DbData.GetProgramElements(Table);
@@ -118,5 +118,8 @@ namespace BudgetExecution
             }
         }
 
+        private void AccessDataMaster_Load(object sender, EventArgs e)
+        {
+        }
     }
 }

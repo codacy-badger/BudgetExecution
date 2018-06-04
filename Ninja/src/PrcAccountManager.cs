@@ -20,12 +20,12 @@ namespace BudgetExecution
             InitializeComponent();
         }
 
-        private void tabControlAdv1_SelectedIndexChanged(object sender, EventArgs e)
+        private void TabControlAdv1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private void Button5_Click(object sender, EventArgs e)
         {
 
         }
