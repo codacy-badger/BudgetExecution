@@ -23,6 +23,9 @@ namespace BudgetExecution
             Objective = Code.Substring(1, 2);
             NpmCode = Code.Substring(3, 1);
             ProgramProjectCode = Code.Substring(4, 2);
+            Org = DataRecord["Org"].ToString();
+            Fund = DataRecord["Fund"].ToString();
+            FundName = DataRecord["FundName"].ToString();
             ProgramProjectName = DataRecord["ProgramProjectName"].ToString();
             ID = int.Parse(DataRecord["ID"].ToString());
             NPM = DataRecord["NPM"].ToString();
@@ -42,6 +45,9 @@ namespace BudgetExecution
             Objective = Code.Substring(1, 2);
             NpmCode = Code.Substring(3, 1);
             ProgramProjectCode = Code.Substring(4, 2);
+            Org = DataRecord["Org"].ToString();
+            Fund = DataRecord["Fund"].ToString();
+            FundName = DataRecord["FundName"].ToString();
             ProgramProjectName = DataRecord["ProgramProjectName"].ToString();
             ID = int.Parse(DataRecord["ID"].ToString());
             NPM = DataRecord["NPM"].ToString();
@@ -55,6 +61,7 @@ namespace BudgetExecution
         public int ID { get; set; }
         public string Code { get; set; }
         public string Fund { get; set; }
+        public string FundName { get; set; }
         public string Org { get; set; }
         public string NpmCode { get; set; }
         public string NPM { get; set; }

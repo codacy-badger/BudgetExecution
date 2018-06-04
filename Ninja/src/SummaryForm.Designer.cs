@@ -375,6 +375,8 @@ namespace BudgetExecution
             this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton8 = new System.Windows.Forms.ToolStripButton();
             this.BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ID = new MetroSet_UI.Controls.MetroSetTextBox();
+            this.metroSetLabel19 = new MetroSet_UI.Controls.MetroSetLabel();
             this.tabPageAdv4.SuspendLayout();
             this.tabPageAdv3.SuspendLayout();
             this.chartControl1.SuspendLayout();
@@ -1268,6 +1270,8 @@ namespace BudgetExecution
             // 
             // tabPageAdv1
             // 
+            this.tabPageAdv1.Controls.Add(this.metroSetLabel19);
+            this.tabPageAdv1.Controls.Add(this.ID);
             this.tabPageAdv1.Controls.Add(this.metroSetLabel1);
             this.tabPageAdv1.Controls.Add(this.Navigator);
             this.tabPageAdv1.Controls.Add(this.metroSetLabel2);
@@ -1579,7 +1583,7 @@ namespace BudgetExecution
             // metroSetLabel14
             // 
             this.metroSetLabel14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.metroSetLabel14.Location = new System.Drawing.Point(146, 17);
+            this.metroSetLabel14.Location = new System.Drawing.Point(206, 17);
             this.metroSetLabel14.Name = "metroSetLabel14";
             this.metroSetLabel14.Size = new System.Drawing.Size(62, 23);
             this.metroSetLabel14.Style = MetroSet_UI.Design.Style.Dark;
@@ -1643,12 +1647,12 @@ namespace BudgetExecution
             this.Fund.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.Fund.Image = null;
             this.Fund.Lines = null;
-            this.Fund.Location = new System.Drawing.Point(137, 43);
+            this.Fund.Location = new System.Drawing.Point(206, 43);
             this.Fund.MaxLength = 32767;
             this.Fund.Multiline = false;
             this.Fund.Name = "Fund";
             this.Fund.ReadOnly = false;
-            this.Fund.Size = new System.Drawing.Size(94, 40);
+            this.Fund.Size = new System.Drawing.Size(73, 40);
             this.Fund.Style = MetroSet_UI.Design.Style.Dark;
             this.Fund.StyleManager = null;
             this.Fund.TabIndex = 128;
@@ -1661,7 +1665,7 @@ namespace BudgetExecution
             // metroSetLabel17
             // 
             this.metroSetLabel17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.metroSetLabel17.Location = new System.Drawing.Point(14, 17);
+            this.metroSetLabel17.Location = new System.Drawing.Point(98, 17);
             this.metroSetLabel17.Name = "metroSetLabel17";
             this.metroSetLabel17.Size = new System.Drawing.Size(62, 23);
             this.metroSetLabel17.Style = MetroSet_UI.Design.Style.Dark;
@@ -1674,7 +1678,7 @@ namespace BudgetExecution
             // metroSetLabel18
             // 
             this.metroSetLabel18.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.metroSetLabel18.Location = new System.Drawing.Point(287, 17);
+            this.metroSetLabel18.Location = new System.Drawing.Point(319, 17);
             this.metroSetLabel18.Name = "metroSetLabel18";
             this.metroSetLabel18.Size = new System.Drawing.Size(89, 23);
             this.metroSetLabel18.Style = MetroSet_UI.Design.Style.Dark;
@@ -1697,12 +1701,12 @@ namespace BudgetExecution
             this.BFY.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.BFY.Image = null;
             this.BFY.Lines = null;
-            this.BFY.Location = new System.Drawing.Point(14, 43);
+            this.BFY.Location = new System.Drawing.Point(98, 43);
             this.BFY.MaxLength = 32767;
             this.BFY.Multiline = false;
             this.BFY.Name = "BFY";
             this.BFY.ReadOnly = false;
-            this.BFY.Size = new System.Drawing.Size(83, 40);
+            this.BFY.Size = new System.Drawing.Size(70, 40);
             this.BFY.Style = MetroSet_UI.Design.Style.Dark;
             this.BFY.StyleManager = null;
             this.BFY.TabIndex = 125;
@@ -1725,7 +1729,7 @@ namespace BudgetExecution
             this.Org.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.Org.Image = null;
             this.Org.Lines = null;
-            this.Org.Location = new System.Drawing.Point(275, 43);
+            this.Org.Location = new System.Drawing.Point(319, 43);
             this.Org.MaxLength = 32767;
             this.Org.Multiline = false;
             this.Org.Name = "Org";
@@ -5269,6 +5273,47 @@ namespace BudgetExecution
             this.toolStripButton8.Size = new System.Drawing.Size(34, 28);
             this.toolStripButton8.Text = "toolStripButton8";
             // 
+            // ID
+            // 
+            this.ID.AutoCompleteCustomSource = null;
+            this.ID.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.ID.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.ID.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.ID.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.ID.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.ID.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.ID.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ID.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.ID.Image = null;
+            this.ID.Lines = null;
+            this.ID.Location = new System.Drawing.Point(14, 43);
+            this.ID.MaxLength = 32767;
+            this.ID.Multiline = false;
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = false;
+            this.ID.Size = new System.Drawing.Size(50, 40);
+            this.ID.Style = MetroSet_UI.Design.Style.Dark;
+            this.ID.StyleManager = null;
+            this.ID.TabIndex = 153;
+            this.ID.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.ID.ThemeAuthor = "Narwin";
+            this.ID.ThemeName = "MetroDark";
+            this.ID.UseSystemPasswordChar = false;
+            this.ID.WatermarkText = "";
+            // 
+            // metroSetLabel19
+            // 
+            this.metroSetLabel19.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.metroSetLabel19.Location = new System.Drawing.Point(14, 17);
+            this.metroSetLabel19.Name = "metroSetLabel19";
+            this.metroSetLabel19.Size = new System.Drawing.Size(62, 23);
+            this.metroSetLabel19.Style = MetroSet_UI.Design.Style.Dark;
+            this.metroSetLabel19.StyleManager = null;
+            this.metroSetLabel19.TabIndex = 154;
+            this.metroSetLabel19.Text = "ID";
+            this.metroSetLabel19.ThemeAuthor = "Narwin";
+            this.metroSetLabel19.ThemeName = "MetroDark";
+            // 
             // SummaryForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -5561,5 +5606,7 @@ namespace BudgetExecution
         private Button button7;
         private PictureBox pictureBox1;
         private Label lblPrc;
+        private MetroSetLabel metroSetLabel19;
+        private MetroSetTextBox ID;
     }
 }

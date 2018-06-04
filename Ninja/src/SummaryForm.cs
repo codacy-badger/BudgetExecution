@@ -340,6 +340,7 @@ namespace BudgetExecution
         {
             try
             {
+                ID.DataBindings.Add(new Binding("Text", Grid.DataSource, "ID"));
                 BFY.DataBindings.Add(new Binding("Text", Grid.DataSource, "BFY"));
                 Fund.DataBindings.Add(new Binding("Text", Grid.DataSource, "Fund"));
                 Org.DataBindings.Add(new Binding("Text", Grid.DataSource, "Org"));

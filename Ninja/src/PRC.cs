@@ -169,6 +169,71 @@ namespace BudgetExecution
                 return null;
             }
         }
+        public static Dictionary<string, object> ValidateParameter(Source source, Provider provider, Dictionary<string, object> param)
+        {
+            try
+            {
+
+                var prc = new Account(source, provider, param["Code"].ToString());
+                if (!param.ContainsKey("FundName") || param["FundName"] == null)
+                {
+                    param["FundName"] = prc.FundName;
+                }
+                if (!param.ContainsKey("Org") || param["Org"] == null)
+                {
+                    param["Org"] = prc.Org;
+                }
+                if (!param.ContainsKey("ProgramProject") || param["ProgramProject"] == null)
+                {
+                    param["ProgramProject"] = prc.ProgramProjectCode;
+                    param["ProgramProjectName"] = prc.ProgramProjectName;
+                }
+                if (!param.ContainsKey("ProgramArea") || param["ProgramArea"] == null)
+                {
+                    param["ProgramArea"] = prc.ProgramArea;
+                    param["ProgramAreaName"] = prc.ProgramAreaName;
+                }
+                if (!param.ContainsKey("Goal") || param["Goal"] == null)
+                {
+                    param["Goal"] = prc.Goal;
+                    param["GoalName"] = prc.GoalName;
+                }
+                if (!param.ContainsKey("Objective") || param["Objective"] == null)
+                {
+                    param["Objective"] = prc.Objective;
+                    param["ObjectiveName"] = prc.ObjectiveName;
+                }
+                return param;
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message + ex.StackTrace);
+                return null;
+            }
+        }
+        public static void Insert(Source source, Provider provider, Dictionary<string, object> p)
+        {
+            try
+            {
+                var param = ValidateParameter(source, provider, p);
+                var fields = param.Keys.ToArray();
+                var vals = param.Values.ToArray();
+                var query = new Query(source, provider, param);
+                var cmd = $"INSERT INTO {source.ToString()} {fields} VALUES {vals};";
+                SQLiteConnection conn = query.GetConnection(Provider.SQLite) as SQLiteConnection;
+                using (conn)
+                {
+                    var insert = query.GetDataCommand(cmd, conn) as SQLiteCommand;
+                    insert.ExecuteNonQuery();
+                }
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message + ex.StackTrace);
+            }
+        }
         public static void Update(Source source, Provider provider, Dictionary<string, object> param)
         {
             try
