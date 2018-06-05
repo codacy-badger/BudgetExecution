@@ -139,6 +139,9 @@ namespace BudgetExecution
             this.tabPageAdv3 = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.metroSetComboBox10 = new MetroSet_UI.Controls.MetroSetComboBox();
+            this.RemoveButton = new System.Windows.Forms.Button();
+            this.CopyButton = new System.Windows.Forms.Button();
+            this.AddButton = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.metroPanel1.SuspendLayout();
@@ -170,7 +173,7 @@ namespace BudgetExecution
             this.hubTile6.Footer = textItem3;
             this.hubTile6.HoveredBorderColor = System.Drawing.SystemColors.MenuHighlight;
             this.hubTile6.ImageSource = ((System.Drawing.Image)(resources.GetObject("hubTile6.ImageSource")));
-            this.hubTile6.Location = new System.Drawing.Point(808, 73);
+            this.hubTile6.Location = new System.Drawing.Point(809, 125);
             this.hubTile6.Margin = new System.Windows.Forms.Padding(1);
             this.hubTile6.MinimumSize = new System.Drawing.Size(100, 100);
             this.hubTile6.Name = "hubTile6";
@@ -195,7 +198,7 @@ namespace BudgetExecution
             this.hubTile7.Footer = textItem7;
             this.hubTile7.HoveredBorderColor = System.Drawing.SystemColors.MenuHighlight;
             this.hubTile7.ImageSource = ((System.Drawing.Image)(resources.GetObject("hubTile7.ImageSource")));
-            this.hubTile7.Location = new System.Drawing.Point(411, 73);
+            this.hubTile7.Location = new System.Drawing.Point(418, 125);
             this.hubTile7.Margin = new System.Windows.Forms.Padding(1);
             this.hubTile7.MinimumSize = new System.Drawing.Size(100, 100);
             this.hubTile7.Name = "hubTile7";
@@ -220,7 +223,7 @@ namespace BudgetExecution
             this.hubTile8.Footer = textItem11;
             this.hubTile8.HoveredBorderColor = System.Drawing.SystemColors.MenuHighlight;
             this.hubTile8.ImageSource = ((System.Drawing.Image)(resources.GetObject("hubTile8.ImageSource")));
-            this.hubTile8.Location = new System.Drawing.Point(82, 73);
+            this.hubTile8.Location = new System.Drawing.Point(89, 125);
             this.hubTile8.Margin = new System.Windows.Forms.Padding(1);
             this.hubTile8.MinimumSize = new System.Drawing.Size(100, 100);
             this.hubTile8.Name = "hubTile8";
@@ -814,18 +817,23 @@ namespace BudgetExecution
             this.tabControlAdv1.FocusOnTabClick = false;
             this.tabControlAdv1.InactiveTabColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tabControlAdv1.InActiveTabForeColor = System.Drawing.Color.DarkGray;
-            this.tabControlAdv1.ItemSize = new System.Drawing.Size(121, 40);
+            this.tabControlAdv1.ItemSize = new System.Drawing.Size(121, 50);
             this.tabControlAdv1.Location = new System.Drawing.Point(84, 560);
             this.tabControlAdv1.Name = "tabControlAdv1";
+            this.tabControlAdv1.Padding = new System.Drawing.Point(6, 6);
             this.tabControlAdv1.SeparatorColor = System.Drawing.Color.Transparent;
             this.tabControlAdv1.ShowSeparator = false;
             this.tabControlAdv1.Size = new System.Drawing.Size(1452, 411);
+            this.tabControlAdv1.TabGap = 7;
             this.tabControlAdv1.TabIndex = 12;
             this.tabControlAdv1.TabPanelBackColor = System.Drawing.Color.Black;
             this.tabControlAdv1.TabStyle = typeof(Syncfusion.Windows.Forms.Tools.TabRendererMetro);
             // 
             // tabPageAdv1
             // 
+            this.tabPageAdv1.Controls.Add(this.RemoveButton);
+            this.tabPageAdv1.Controls.Add(this.CopyButton);
+            this.tabPageAdv1.Controls.Add(this.AddButton);
             this.tabPageAdv1.Controls.Add(this.button1);
             this.tabPageAdv1.Controls.Add(this.metroSetComboBox1);
             this.tabPageAdv1.Controls.Add(this.label4);
@@ -855,10 +863,10 @@ namespace BudgetExecution
             this.tabPageAdv1.Controls.Add(this.metroSetTextBox16);
             this.tabPageAdv1.Image = null;
             this.tabPageAdv1.ImageSize = new System.Drawing.Size(16, 16);
-            this.tabPageAdv1.Location = new System.Drawing.Point(0, 39);
+            this.tabPageAdv1.Location = new System.Drawing.Point(0, 49);
             this.tabPageAdv1.Name = "tabPageAdv1";
             this.tabPageAdv1.ShowCloseButton = true;
-            this.tabPageAdv1.Size = new System.Drawing.Size(1452, 372);
+            this.tabPageAdv1.Size = new System.Drawing.Size(1452, 362);
             this.tabPageAdv1.TabIndex = 1;
             this.tabPageAdv1.Text = "tabPageAdv1";
             this.tabPageAdv1.ThemesEnabled = false;
@@ -1543,10 +1551,10 @@ namespace BudgetExecution
             this.tabPageAdv2.Controls.Add(this.hubTile8);
             this.tabPageAdv2.Image = null;
             this.tabPageAdv2.ImageSize = new System.Drawing.Size(16, 16);
-            this.tabPageAdv2.Location = new System.Drawing.Point(0, 39);
+            this.tabPageAdv2.Location = new System.Drawing.Point(0, 49);
             this.tabPageAdv2.Name = "tabPageAdv2";
             this.tabPageAdv2.ShowCloseButton = true;
-            this.tabPageAdv2.Size = new System.Drawing.Size(1452, 372);
+            this.tabPageAdv2.Size = new System.Drawing.Size(1452, 362);
             this.tabPageAdv2.TabIndex = 2;
             this.tabPageAdv2.Text = "tabPageAdv2";
             this.tabPageAdv2.ThemesEnabled = false;
@@ -1556,10 +1564,10 @@ namespace BudgetExecution
             this.tabPageAdv3.Controls.Add(this.hubTile2);
             this.tabPageAdv3.Image = null;
             this.tabPageAdv3.ImageSize = new System.Drawing.Size(16, 16);
-            this.tabPageAdv3.Location = new System.Drawing.Point(0, 39);
+            this.tabPageAdv3.Location = new System.Drawing.Point(0, 49);
             this.tabPageAdv3.Name = "tabPageAdv3";
             this.tabPageAdv3.ShowCloseButton = true;
-            this.tabPageAdv3.Size = new System.Drawing.Size(1452, 372);
+            this.tabPageAdv3.Size = new System.Drawing.Size(1452, 362);
             this.tabPageAdv3.TabIndex = 3;
             this.tabPageAdv3.Text = "tabPageAdv3";
             this.tabPageAdv3.ThemesEnabled = false;
@@ -1604,6 +1612,57 @@ namespace BudgetExecution
             this.metroSetComboBox10.TabIndex = 1;
             this.metroSetComboBox10.ThemeAuthor = "Narwin";
             this.metroSetComboBox10.ThemeName = "MetroDark";
+            // 
+            // RemoveButton
+            // 
+            this.RemoveButton.BackColor = System.Drawing.Color.Transparent;
+            this.RemoveButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.RemoveButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.RemoveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.RemoveButton.ForeColor = System.Drawing.SystemColors.Info;
+            this.RemoveButton.Image = ((System.Drawing.Image)(resources.GetObject("RemoveButton.Image")));
+            this.RemoveButton.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.RemoveButton.Location = new System.Drawing.Point(1262, 170);
+            this.RemoveButton.Name = "RemoveButton";
+            this.RemoveButton.Size = new System.Drawing.Size(142, 49);
+            this.RemoveButton.TabIndex = 83;
+            this.RemoveButton.Text = "Remove";
+            this.RemoveButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.RemoveButton.UseVisualStyleBackColor = false;
+            // 
+            // CopyButton
+            // 
+            this.CopyButton.BackColor = System.Drawing.Color.Transparent;
+            this.CopyButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.CopyButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.CopyButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CopyButton.ForeColor = System.Drawing.SystemColors.Info;
+            this.CopyButton.Image = ((System.Drawing.Image)(resources.GetObject("CopyButton.Image")));
+            this.CopyButton.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.CopyButton.Location = new System.Drawing.Point(1101, 170);
+            this.CopyButton.Name = "CopyButton";
+            this.CopyButton.Size = new System.Drawing.Size(142, 54);
+            this.CopyButton.TabIndex = 82;
+            this.CopyButton.Text = "Copy";
+            this.CopyButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.CopyButton.UseVisualStyleBackColor = false;
+            // 
+            // AddButton
+            // 
+            this.AddButton.BackColor = System.Drawing.Color.Transparent;
+            this.AddButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.AddButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.AddButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AddButton.ForeColor = System.Drawing.SystemColors.Info;
+            this.AddButton.Image = ((System.Drawing.Image)(resources.GetObject("AddButton.Image")));
+            this.AddButton.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.AddButton.Location = new System.Drawing.Point(940, 170);
+            this.AddButton.Name = "AddButton";
+            this.AddButton.Size = new System.Drawing.Size(133, 54);
+            this.AddButton.TabIndex = 81;
+            this.AddButton.Text = "Add";
+            this.AddButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.AddButton.UseVisualStyleBackColor = false;
             // 
             // SqlCeData
             // 
@@ -1737,5 +1796,8 @@ namespace BudgetExecution
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.GroupBox groupBox3;
         private MetroSet_UI.Controls.MetroSetComboBox metroSetComboBox10;
+        private System.Windows.Forms.Button RemoveButton;
+        private System.Windows.Forms.Button CopyButton;
+        private System.Windows.Forms.Button AddButton;
     }
 }

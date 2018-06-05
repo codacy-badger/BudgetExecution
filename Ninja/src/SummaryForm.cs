@@ -43,32 +43,56 @@ namespace BudgetExecution
         public SummaryForm(Source source)
         {
             InitializeComponent();
+            if (source == Source.FTE)
+            {
+                DbData = new DataBuilder(source, Provider.SQLite);
+                Table = DbData.Table;
+                Source = source;
+                CurrentTabIndex = 0;
+                TabNames = GetTabNames();
+                Text = "R6 FTE Summary";
+                BocTab.TabVisible = false;
+                Metric = new PrcMetric(DbData);
+                ProgramElements = Metric.ProgramElements;
+                BindingSource.DataSource = Metric.Table;
+                ProjectTab.TabVisible = false;
+                DatabaseTab.TabVisible = false;
+                CurrentTabIndex = SummaryTabControl.SelectedIndex;
+                SummaryTabControl.SelectedIndexChanged += SummaryTabPage_TabSelected;
+            }
             if (source == Source.RegionAccount)
             {
-                DbData = new DataBuilder(Source.RegionAccount, Provider.SQLite);
+                DbData = new DataBuilder(source, Provider.SQLite);
                 Table = DbData.Table;
                 DivisionTab.TabVisible = false;
-                Source = DbData.Source;
+                Source = source;
                 CurrentTabIndex = 0;
                 TabNames = GetTabNames();
                 Text = "Region 6 Summary";
+                Metric = new PrcMetric(DbData);
+                ProgramElements = Metric.ProgramElements;
+                BindingSource.DataSource = Metric.Table;
+                ProjectTab.TabVisible = false;
+                DatabaseTab.TabVisible = false;
+                CurrentTabIndex = SummaryTabControl.SelectedIndex;
+                SummaryTabControl.SelectedIndexChanged += SummaryTabPage_TabSelected;
             }
             if (source == Source.DivisionAccount)
             {
-                DbData = new DataBuilder(Source.DivisionAccount, Provider.SQLite);
+                DbData = new DataBuilder(source, Provider.SQLite);
                 Table = DbData.Table;
-                Source = DbData.Source;
+                Source = source;
                 CurrentTabIndex = 0;
                 TabNames = GetTabNames();
                 Text = "R6 Division Summary";
+                Metric = new PrcMetric(DbData);
+                ProgramElements = Metric.ProgramElements;
+                BindingSource.DataSource = Metric.Table;
+                ProjectTab.TabVisible = false;
+                DatabaseTab.TabVisible = false;
+                CurrentTabIndex = SummaryTabControl.SelectedIndex;
+                SummaryTabControl.SelectedIndexChanged += SummaryTabPage_TabSelected;
             }
-            Metric = new PrcMetric(DbData);
-            ProgramElements = Metric.ProgramElements;
-            BindingSource.DataSource = Metric.Table;
-            ProjectTab.TabVisible = false;
-            DatabaseTab.TabVisible = false;
-            CurrentTabIndex = SummaryTabControl.SelectedIndex;
-            SummaryTabControl.SelectedIndexChanged += SummaryTabPage_TabSelected;
         }
         // PROPERTIES
         public Source Source { get; }

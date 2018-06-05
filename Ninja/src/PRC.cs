@@ -155,13 +155,13 @@ namespace BudgetExecution
                 return null;
             }
         }
-        internal Dictionary<string, object> GetFieldValues()
+        internal object[] GetFieldValues()
         {
             try
             {
                 Dictionary<string, object> param = GetParameter();
 
-                return param;
+                return param.Values.ToArray();
             }
             catch (Exception ex)
             {
@@ -204,6 +204,20 @@ namespace BudgetExecution
                     param["ObjectiveName"] = prc.ObjectiveName;
                 }
                 return param;
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message + ex.StackTrace);
+                return null;
+            }
+        }
+        public static PRC Select(Source source, Provider provider, Dictionary<string, object> param)
+        {
+            try
+            {
+                var query = new DataBuilder(source, provider, param).Table.AsEnumerable().Select(p => p).First();
+                return new PRC(query);
             }
             catch (Exception ex)
             {

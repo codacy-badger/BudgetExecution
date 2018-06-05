@@ -16,7 +16,7 @@ namespace BudgetExecution
         public PrcMetric(DataBuilder data)
         {
             DbData = data;
-            Table = DbData.GetDataTable();
+            Table = DbData.Table;
             ProgramElements = DbData.GetProgramElements(Table);
             Total = GetTotals(Table);
             Count = Table.Rows.Count;
@@ -151,7 +151,7 @@ namespace BudgetExecution
         {
             try
             {
-                return table.AsEnumerable().Where(p => p.Field<string>("BOC") != "17").Sum(p => p.Field<decimal>("Amount"));
+                return table.AsEnumerable().Sum(p => p.Field<decimal>("Amount"));
             }
             catch (Exception ex)
             {

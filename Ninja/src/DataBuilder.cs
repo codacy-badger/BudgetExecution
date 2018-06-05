@@ -18,14 +18,25 @@ namespace BudgetExecution
             Parameter = null;
             Source = source;
             Query = new Query(source, provider);
-            Table = GetDataTable();
-            ProgramElements = GetProgramElements(Table);
-            BindingSource = new BindingSource();
-            BindingSource.DataSource = Table;
-            DataRecords = GetDataRecords(Table);
             if (source == Source.PRC || source == Source.RegionAccount || source == Source.DivisionAccount)
             {
+                Table = GetDataTable();
                 Total = GetTotal(Table);
+                ProgramElements = GetProgramElements(Table);
+                BindingSource = new BindingSource();
+                BindingSource.DataSource = Table;
+                DataRecords = GetDataRecords(Table);
+            }
+            if(source == Source.FTE)
+            {
+                Table = GetDataTable().AsEnumerable().Where(p => p.Field<string>("BOC").Equals("17"))
+                    .Where(p => p.Field<string>("BudgetLevel").Equals("8"))
+                    .Select(p => p).CopyToDataTable();
+                Total = GetFteTotal(Table);
+                ProgramElements = GetProgramElements(Table);
+                BindingSource = new BindingSource();
+                BindingSource.DataSource = Table;
+                DataRecords = GetDataRecords(Table);
             }
         }
         public DataBuilder(Source source, Provider provider, Dictionary<string, object> param)
@@ -33,14 +44,24 @@ namespace BudgetExecution
             Source = source;
             Parameter = param;
             Query = new Query(source, provider, Parameter);
-            Table = GetDataTable();
-            ProgramElements = GetProgramElements(Table);
-            BindingSource = new BindingSource();
-            BindingSource.DataSource = Table;
-            DataRecords = GetDataRecords(Table);
             if (source == Source.PRC || source == Source.RegionAccount || source == Source.DivisionAccount)
             {
+                Table = GetDataTable();
                 Total = GetTotal(Table);
+                ProgramElements = GetProgramElements(Table);
+                BindingSource = new BindingSource();
+                BindingSource.DataSource = Table;
+                DataRecords = GetDataRecords(Table);
+            }
+            if (source == Source.FTE)
+            {
+                Table = GetDataTable().AsEnumerable().Where(p => p.Field<string>("BOC").Equals("17"))
+                    .Select(p => p).CopyToDataTable();
+                Total = GetFteTotal(Table);
+                ProgramElements = GetProgramElements(Table);
+                BindingSource = new BindingSource();
+                BindingSource.DataSource = Table;
+                DataRecords = GetDataRecords(Table);
             }
         }
 
@@ -197,6 +218,20 @@ namespace BudgetExecution
             {
                 if (Table.Columns.Contains("Amount"))
                     return table.AsEnumerable().Where(p => p.Field<string>("BOC") != "17").Select(p => p.Field<decimal>("Amount")).Sum();
+                return 0m;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
+                return -1M;
+            }
+        }
+        public decimal GetFteTotal(DataTable table)
+        {
+            try
+            {
+                if (Table.Columns.Contains("Amount"))
+                    return table.AsEnumerable().Where(p => p.Field<string>("BOC") == "17").Select(p => p.Field<decimal>("Amount")).Sum();
                 return 0m;
             }
             catch (Exception ex)

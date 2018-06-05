@@ -8,31 +8,14 @@ using System.Windows.Forms;
 
 namespace BudgetExecution
 {
-    public class FTE : IPRC
+    public class FTE : PRC, IPRC
     {
-        public FTE()
+        public FTE() : base()
         {
         }
 
-        public FTE(DataRow datarow)
+        public FTE(DataRow datarow) : base(datarow)
         {
-            ID = int.Parse(datarow["ID"].ToString());
-            BudgetLevel = datarow["BudgetLevel"].ToString();
-            RPIO = datarow["RPIO"].ToString();
-            BFY = datarow["BFY"].ToString();
-            Fund = new Fund(datarow["Fund"].ToString(), datarow["BFY"].ToString());
-            RC = new RC(datarow["RC"].ToString());
-            Org = new Org(datarow["Org"].ToString());
-            Account = new Account(datarow["Code"].ToString());
-            Code = Account.Code;
-            BOC = new BOC(datarow["BOC"].ToString());
-            Amount = decimal.Parse(datarow["Amount"].ToString());
-            NpmCode = Account.NPM;
-            ProgramProjectCode = Account.ProgramProjectCode;
-            Goal = Account.Goal;
-            GoalName = Account.GoalName;
-            Objective = Account.Objective;
-            ObjectiveName = Account.ObjectiveName;
             FteParameter = GetParameter();
         }
         public FTE(Source source, Provider provider, Dictionary<string, object> param)
@@ -42,23 +25,6 @@ namespace BudgetExecution
             Table = DbData.Table;
         }
         // PROPERTIES
-        public int ID { get; set; }
-        public string BudgetLevel { get; set; }
-        public string RPIO { get; set; }
-        public string BFY { get; set; }
-        public Fund Fund { get; }
-        public Org Org { get; }
-        public RC RC { get; }
-        public string Code { get; set; }
-        public Account Account { get; }
-        public decimal Amount { get; set; }
-        public BOC BOC { get; }
-        public string NpmCode { get; }
-        public string ProgramProjectCode { get; }
-        public string Goal { get; }
-        public string GoalName { get; }
-        public string Objective { get; }
-        public string ObjectiveName { get; }
         DataBuilder DbData { get; }
         PrcMetric Metric { get; }
         public DataTable Table { get; }
@@ -76,29 +42,6 @@ namespace BudgetExecution
         private Dictionary<string, object> FteParameter { get; set; }
 
         // METHODS
-        Dictionary<string, object> GetParameter()
-        {
-            try
-            {
-                Dictionary<string, object> param = new Dictionary<string, object>()
-                {
-                    ["ID"] = ID,
-                    ["BudgetLevel"] = BudgetLevel,
-                    ["RPIO"] = RPIO,
-                    ["BFY"] = BFY,
-                    ["Fund"] = Fund.Code,
-                    ["RC"] = RC,
-                    ["BOC"] = BOC.Code,
-                    ["Code"] = Account.Code,
-                };
-                return param;
-            }
-            catch (System.Exception ex)
-            {
-                MessageBox.Show(ex.Message + ex.StackTrace);
-                return null;
-            }
-        }
         public DataTable FilterTable(DataTable table, string column, string filter)
         {
             try

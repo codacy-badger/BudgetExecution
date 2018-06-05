@@ -53,7 +53,7 @@ namespace BudgetExecution
             this.ViewerCarousel.RotateAlways = false;
             this.ViewerCarousel.ShowImagePreview = true;
             this.ViewerCarousel.ShowImageShadow = true;
-            this.ViewerCarousel.Size = new System.Drawing.Size(1523, 658);
+            this.ViewerCarousel.Size = new System.Drawing.Size(1588, 953);
             this.ViewerCarousel.TabIndex = 2;
             this.ViewerCarousel.Text = "carousel2";
             this.ViewerCarousel.TouchTransitionSpeed = 3F;
@@ -63,12 +63,13 @@ namespace BudgetExecution
             // panel1
             // 
             this.panel1.Controls.Add(this.ViewerCarousel);
-            this.panel1.Location = new System.Drawing.Point(32, 157);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1523, 658);
+            this.panel1.Size = new System.Drawing.Size(1588, 953);
             this.panel1.TabIndex = 3;
             // 
-            // NinjaForm
+            // Selector
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -79,7 +80,7 @@ namespace BudgetExecution
             this.Controls.Add(this.panel1);
             this.MaximumSize = new System.Drawing.Size(1600, 1000);
             this.MetroColor = System.Drawing.Color.Black;
-            this.Name = "NinjaForm";
+            this.Name = "Selector";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.panel1.ResumeLayout(false);
