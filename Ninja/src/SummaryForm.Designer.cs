@@ -1254,6 +1254,7 @@ namespace BudgetExecution
             this.AccountTabControl.InActiveTabForeColor = System.Drawing.Color.DarkGray;
             this.AccountTabControl.ItemSize = new System.Drawing.Size(150, 35);
             this.AccountTabControl.Location = new System.Drawing.Point(3, 22);
+            this.AccountTabControl.Multiline = true;
             this.AccountTabControl.Name = "AccountTabControl";
             this.AccountTabControl.Office2007ColorScheme = Syncfusion.Windows.Forms.Office2007Theme.Black;
             this.AccountTabControl.Office2010ColorTheme = Syncfusion.Windows.Forms.Office2010Theme.Black;
@@ -1297,10 +1298,10 @@ namespace BudgetExecution
             this.tabPageAdv1.ForeColor = System.Drawing.Color.LightSteelBlue;
             this.tabPageAdv1.Image = null;
             this.tabPageAdv1.ImageSize = new System.Drawing.Size(16, 16);
-            this.tabPageAdv1.Location = new System.Drawing.Point(0, 44);
+            this.tabPageAdv1.Location = new System.Drawing.Point(0, -1);
             this.tabPageAdv1.Name = "tabPageAdv1";
             this.tabPageAdv1.ShowCloseButton = true;
-            this.tabPageAdv1.Size = new System.Drawing.Size(440, 439);
+            this.tabPageAdv1.Size = new System.Drawing.Size(440, 484);
             this.tabPageAdv1.TabIndex = 4;
             this.tabPageAdv1.Text = "Details";
             this.tabPageAdv1.ThemesEnabled = false;
@@ -1380,7 +1381,7 @@ namespace BudgetExecution
             this.toolStripSeparator12,
             this.toolStripButton12,
             this.toolStripSeparator13});
-            this.Navigator.Location = new System.Drawing.Point(0, 412);
+            this.Navigator.Location = new System.Drawing.Point(0, 457);
             this.Navigator.MoveFirstItem = this.toolStripButton9;
             this.Navigator.MoveLastItem = this.toolStripButton12;
             this.Navigator.MoveNextItem = this.toolStripButton11;
@@ -1858,10 +1859,10 @@ namespace BudgetExecution
             this.tabPageAdv5.Controls.Add(this.AccountChart);
             this.tabPageAdv5.Image = null;
             this.tabPageAdv5.ImageSize = new System.Drawing.Size(16, 16);
-            this.tabPageAdv5.Location = new System.Drawing.Point(0, 44);
+            this.tabPageAdv5.Location = new System.Drawing.Point(0, -1);
             this.tabPageAdv5.Name = "tabPageAdv5";
             this.tabPageAdv5.ShowCloseButton = true;
-            this.tabPageAdv5.Size = new System.Drawing.Size(440, 439);
+            this.tabPageAdv5.Size = new System.Drawing.Size(440, 484);
             this.tabPageAdv5.TabIndex = 2;
             this.tabPageAdv5.Text = "Graph";
             this.tabPageAdv5.ThemesEnabled = false;
@@ -1978,7 +1979,7 @@ namespace BudgetExecution
             this.AccountChart.Series3D = true;
             this.AccountChart.SeriesHighlight = true;
             this.AccountChart.ShadowColor = new Syncfusion.Drawing.BrushInfo(Syncfusion.Drawing.GradientStyle.PathRectangle, System.Drawing.SystemColors.WindowText, System.Drawing.Color.Silver);
-            this.AccountChart.Size = new System.Drawing.Size(440, 439);
+            this.AccountChart.Size = new System.Drawing.Size(440, 484);
             this.AccountChart.Spacing = 5F;
             this.AccountChart.SpacingBetweenPoints = 5F;
             this.AccountChart.Style3D = true;
@@ -2007,10 +2008,10 @@ namespace BudgetExecution
             this.tabPageAdv6.Controls.Add(this.calculatorControl2);
             this.tabPageAdv6.Image = null;
             this.tabPageAdv6.ImageSize = new System.Drawing.Size(16, 16);
-            this.tabPageAdv6.Location = new System.Drawing.Point(0, 44);
+            this.tabPageAdv6.Location = new System.Drawing.Point(0, -1);
             this.tabPageAdv6.Name = "tabPageAdv6";
             this.tabPageAdv6.ShowCloseButton = true;
-            this.tabPageAdv6.Size = new System.Drawing.Size(440, 439);
+            this.tabPageAdv6.Size = new System.Drawing.Size(440, 484);
             this.tabPageAdv6.TabIndex = 3;
             this.tabPageAdv6.Text = "Calculator";
             this.tabPageAdv6.ThemesEnabled = false;

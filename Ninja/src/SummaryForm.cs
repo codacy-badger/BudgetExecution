@@ -37,6 +37,7 @@ namespace BudgetExecution
             Text = string.Format("{0} Summary", Info.DivisionName(rc));
             CurrentTabIndex = SummaryTabControl.SelectedIndex;
             SummaryTabControl.SelectedIndexChanged += SummaryTabPage_TabSelected;
+            CurrentTabIndex = 1;
             TabNames = GetTabNames();
             GridRefreshButton.Click += GridRefreshButton_OnClick;
         }
@@ -48,7 +49,7 @@ namespace BudgetExecution
                 DbData = new DataBuilder(source, Provider.SQLite);
                 Table = DbData.Table;
                 Source = source;
-                CurrentTabIndex = 0;
+                CurrentTabIndex = 1;
                 TabNames = GetTabNames();
                 Text = "R6 FTE Summary";
                 BocTab.TabVisible = false;
@@ -66,7 +67,7 @@ namespace BudgetExecution
                 Table = DbData.Table;
                 DivisionTab.TabVisible = false;
                 Source = source;
-                CurrentTabIndex = 0;
+                CurrentTabIndex = 1;
                 TabNames = GetTabNames();
                 Text = "Region 6 Summary";
                 Metric = new PrcMetric(DbData);
@@ -140,7 +141,6 @@ namespace BudgetExecution
                 GridBocFilter.SelectionChangeCommitted += GridFilterControl2_ItemSelected;
                 SummaryTabControl.SelectedIndexChanged += SummaryTabPage_TabSelected;
                 FundChart = new BudgetChart(FundChart, DbData, PrcField.FundName).Activate();
-                SummaryTabControl.SelectedIndex = 1;
                 lblPrc.Visible = false;
                 GridAccountFilter.Visible = false;
                 lblBoc.Visible = false;

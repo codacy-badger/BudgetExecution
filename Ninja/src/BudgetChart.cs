@@ -33,6 +33,7 @@ namespace BudgetExecution
             SeriesType = ChartSeriesType.Column;
             Chart = chart;
             DbData = data;
+            Source = data.Source;
             Value = Stat.Total;
             Table = DbData.Table;
             Metric = new PrcMetric(DbData);
@@ -51,6 +52,7 @@ namespace BudgetExecution
         {
             Chart = chart;
             DbData = data;
+            Source = data.Source;
             Value = value;
             SeriesType = type;
             ConfigurePrimaryAxisLabels(Chart);
@@ -72,6 +74,7 @@ namespace BudgetExecution
         {
             Chart = chart;
             DbData = data;
+            Source = data.Source;
             Value = value;
             SeriesType = type;
             ConfigurePrimaryAxisLabels(Chart);
@@ -109,6 +112,7 @@ namespace BudgetExecution
         public BudgetChart(ChartControl chart, string[] title, Source source, PrcField filter, Stat value, ChartSeriesType type)
         {
             Chart = chart;
+            Source = source;
             DbData = new DataBuilder(source, Provider.SQLite);
             Value = value;
             SeriesType = type;
@@ -131,6 +135,7 @@ namespace BudgetExecution
         public BudgetChart(ChartControl chart, string[] title, Source source, Dictionary<string, object> param, PrcField filter, Stat value, ChartSeriesType type)
         {
             Chart = chart;
+            Source = source;
             DbData = new DataBuilder(source, Provider.SQLite, param);
             Value = value;
             SeriesType = type;
@@ -161,6 +166,7 @@ namespace BudgetExecution
         public ChartSeries DataSeries { get; set; }
         public Dictionary<string, double> DataTotals { get; set; }
         public int[] Dimension { get; set; }
+        public Source Source { get; }
         public PrcField Filter { get; }
         public ChartSeriesType SeriesType { get; set; }
         public Stat Value { get; set; }
@@ -247,7 +253,10 @@ namespace BudgetExecution
                 DataSeries.Style.TextOrientation = ChartTextOrientation.Up;
                 DataSeries.Style.DisplayShadow = true;
                 DataSeries.Style.TextColor = Color.White;
-                DataSeries.Style.TextFormat = "${0:N2}";
+                if (Source == Source.FTE)
+                    DataSeries.Style.TextFormat = "{0}";
+                else
+                    DataSeries.Style.TextFormat = "${0:N2}";
                 DataSeries.PointsToolTipFormat = "Funding:{4:N}";
                 DataSeries.Style.Font.Size = 10.0F;
                 DataSeries.Style.Font.Facename = "SegoeUI";
@@ -276,7 +285,10 @@ namespace BudgetExecution
                 DataSeries.Style.TextOrientation = ChartTextOrientation.Up;
                 DataSeries.Style.DisplayShadow = true;
                 DataSeries.Style.TextColor = Color.White;
-                DataSeries.Style.TextFormat = "${0:N2}";
+                if (Source == Source.FTE)
+                    DataSeries.Style.TextFormat = "{0}";
+                else
+                    DataSeries.Style.TextFormat = "${0:N2}";
                 DataSeries.PointsToolTipFormat = "Funding:{4:N2}";
                 DataSeries.Style.Font.Size = 12.0F;
                 DataSeries.Style.Font.Facename = "Segoe UI";
@@ -310,7 +322,9 @@ namespace BudgetExecution
                 DataSeries.Style.TextOrientation = ChartTextOrientation.Up;
                 DataSeries.Style.DisplayShadow = true;
                 DataSeries.Style.TextColor = Color.White;
-                if (value == Stat.Total || value == Stat.Average)
+                if (Source == Source.FTE)
+                    DataSeries.Style.TextFormat = "{0}";
+                else if (value == Stat.Total || value == Stat.Average)
                     DataSeries.Style.TextFormat = "${0:N2}";
                 if (value == Stat.Ratio)
                     DataSeries.Style.TextFormat = "{0:P}";
