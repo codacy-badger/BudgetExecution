@@ -13,8 +13,7 @@ namespace Budget
         {
         }
 
-        public Employee(string eid, string hoc, string hon, string wc, string f, string l, string lvt, double wk,
-                        double leave, double proj, double uselose)
+        public Employee(string eid, string hoc, string hon, string wc, string f, string l, string lvt, double wk, double leave, double proj, double uselose)
         {
             EmployId = eid;
             HrOrgCode = hoc;

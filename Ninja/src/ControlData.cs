@@ -9,6 +9,8 @@ namespace BudgetExecution
 
     public class ControlData
     {
+        private static string budgetLevel = "7";
+
         public ControlData()
         {
         }
@@ -28,8 +30,6 @@ namespace BudgetExecution
             PrcAccount = Allocation[0].ToPrc();
             Limit = PrcAccount.Amount;
         }
-
-        private static string budgetLevel = "7";
 
         public DataRow[] Allocation { get; }
 

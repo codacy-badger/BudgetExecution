@@ -433,7 +433,6 @@ namespace BudgetExecution
                 form.Padding = new Padding(1);
                 form.CaptionAlign = HorizontalAlignment.Left;
             }
-
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());

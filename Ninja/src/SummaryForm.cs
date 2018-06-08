@@ -248,8 +248,7 @@ namespace BudgetExecution
             {
                 if (GridFundFilter.SelectedItem.ToString() != null)
                 {
-                    BindingSource.Filter = string.Format("FundName = '{0}' AND BocName = '{1}'",
-                            GridFundFilter.SelectedItem.ToString(), GridBocFilter.SelectedItem.ToString());
+                    BindingSource.Filter = string.Format("FundName = '{0}' AND BocName = '{1}'", GridFundFilter.SelectedItem.ToString(), GridBocFilter.SelectedItem.ToString());
                 }
 
                 BindingSource.Filter = string.Format("FundName = '{0}'", GridBocFilter.SelectedItem.ToString());

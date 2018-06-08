@@ -40,8 +40,6 @@ namespace BudgetExecution
 
         public int Counter { get; set; }
 
-        private string[] Images { get; set; }
-
         public DataBuilder D6 { get; set; }
 
         public PrcMetric Metric { get; set; }
@@ -55,6 +53,8 @@ namespace BudgetExecution
         public Dictionary<string, double>[] Values { get; set; }
 
         public Timer Timer { get; set; }
+
+        private string[] Images { get; set; }
 
         // METHODS
         private void MainForm_Load(object sender, EventArgs e)

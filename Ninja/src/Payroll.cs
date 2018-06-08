@@ -15,8 +15,7 @@ namespace BudgetExecution
         {
         }
 
-        public Payroll(string rpio, string bfy, string fund, string org, string rc, string code, string progproj, string progprojname,
-                        string hoc, string wc, string wcn, decimal amount, decimal ybp, double ybh, decimal yotp, double yoth)
+        public Payroll(string rpio, string bfy, string fund, string org, string rc, string code, string progproj, string progprojname, string hoc, string wc, string wcn, decimal amount, decimal ybp, double ybh, decimal yotp, double yoth)
         {
             RPIO = rpio;
             BFY = bfy;

@@ -1,4 +1,4 @@
-﻿// <copyright file="IControlData.cs" company="PlaceholderCompany">
+﻿// <copyright file="IControlDocument.cs" company="PlaceholderCompany">
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
@@ -6,8 +6,6 @@ namespace BudgetExecution
 {
     internal interface IControlDocument : ISupplementalAllocation
     {
-        #region Properties
-
         string ControlNumber { get; set; }
 
         string DateIssued { get; set; }
@@ -18,14 +16,8 @@ namespace BudgetExecution
 
         string Purpose { get; set; }
 
-        #endregion
-
-        #region Methods
-
         string GetDocumentControlNumber();
 
         int GetNewDocNumber();
-
-        #endregion
     }
 }

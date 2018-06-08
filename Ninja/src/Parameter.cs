@@ -6,9 +6,9 @@ namespace BudgetExecution
 {
     using System.Collections.Generic;
 
-    public class PrcParameter : IPrcParameter
+    public class Parameter : IParameter
     {
-        public PrcParameter(int id, string bl, string rpio, string bfy, string fund, string org, string rc, string boc, string code)
+        public Parameter(int id, string bl, string rpio, string bfy, string fund, string org, string rc, string boc, string code)
         {
             ID = id;
             BudgetLevel = bl ?? "7";

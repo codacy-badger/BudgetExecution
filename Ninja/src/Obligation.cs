@@ -12,9 +12,7 @@ namespace BudgetExecution
         {
         }
 
-        public Obligation(string rpio, string fy, string fund, string org, string rc, string code, string boc, string foc, string focname,
-                            string doctype, string system, string prn, string dcnprefix, string grantnumber,
-                            string siteprojcode, string siteprojname, string dcn, decimal c, decimal o)
+        public Obligation(string rpio, string fy, string fund, string org, string rc, string code, string boc, string foc, string focname, string doctype, string system, string prn, string dcnprefix, string grantnumber, string siteprojcode, string siteprojname, string dcn, decimal c, decimal o)
         {
             RPIO = rpio;
             BFY = fy;

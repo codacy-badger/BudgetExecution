@@ -138,9 +138,6 @@
     <Reference Include="Syncfusion.Pdf.Base, Version=15.4460.0.20, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
     <Reference Include="Syncfusion.Pdf.Windows, Version=15.4460.0.20, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
     <Reference Include="Syncfusion.PdfViewer.Windows, Version=15.4460.0.20, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
-    <Reference Include="Syncfusion.PivotAnalysis.Base, Version=15.4350.0.20, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
-    <Reference Include="Syncfusion.PivotAnalysis.Windows, Version=15.4350.0.20, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
-    <Reference Include="Syncfusion.PivotChart.Windows, Version=15.4350.0.20, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
     <Reference Include="Syncfusion.Shared.Base, Version=15.4460.0.20, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
     <Reference Include="Syncfusion.Shared.Windows, Version=15.4460.0.20, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
     <Reference Include="Syncfusion.Spreadsheet.Windows, Version=15.4460.0.20, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
@@ -249,6 +246,7 @@
     <Compile Include="src\DataTools.Designer.cs">
       <DependentUpon>DataTools.cs</DependentUpon>
     </Compile>
+    <Compile Include="src\IControlDocument.cs" />
     <Compile Include="src\SQLiteQuery.cs" />
     <Compile Include="src\SQLiteData.cs">
       <SubType>Form</SubType>
@@ -368,7 +366,6 @@
     <Compile Include="src\IAccount.cs" />
     <Compile Include="src\IBudgetAuthority.cs" />
     <Compile Include="src\IBOC.cs" />
-    <Compile Include="src\IControlData.cs" />
     <Compile Include="src\IDataBuilder.cs" />
     <Compile Include="src\IEmployee.cs" />
     <Compile Include="src\IExcelOp.cs" />

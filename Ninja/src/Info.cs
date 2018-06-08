@@ -11,6 +11,11 @@ namespace BudgetExecution
 
     public static class Info
     {
+        public static string DivisionImages = @"C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\Resources\NinjaDivisionImages";
+        public static string SummaryImages = @"C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\Resources\SummaryImages";
+        public static string FunctionImages = @"C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\Resources\FunctionImages";
+        public static string DatabaseImages = @"C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\Resources\Database";
+
         public static DataTable FilterTable(DataTable table, PrcField prcfilter, string filter)
         {
             try
@@ -25,10 +30,6 @@ namespace BudgetExecution
             }
         }
 
-        public static string DivisionImages = @"C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\Resources\NinjaDivisionImages";
-        public static string SummaryImages = @"C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\Resources\SummaryImages";
-        public static string FunctionImages = @"C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\Resources\FunctionImages";
-        public static string DatabaseImages = @"C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\Resources\Database";
         public static string[] AgencyActivityCodes =
         {
         "1", "2", "3", "P1", "P3", "P8", "PS", "Q1", "Q3", "R1",
@@ -75,7 +76,7 @@ namespace BudgetExecution
 
         public static string[] AgencyPrcCodes =
         {
-        "101A46", "101A46XP3", "101A46XP4", "101A46XQ3", "101A58", "101A59", "102A45", "102A58", "102A59","102A76", "102AH5", "102J59", "103AC4", "103AC5", "104A97", "104A98", "201B42", "201B53", "201B71",
+        "101A46", "101A46XP3", "101A46XP4", "101A46XQ3", "101A58", "101A59", "102A45", "102A58", "102A59", "102A76", "102AH5", "102J59", "103AC4", "103AC5", "104A97", "104A98", "201B42", "201B53", "201B71",
         "201BL2", "202B63", "202B65", "202B66", "202B67", "202B68X33", "202B68XP8", "202B68XQC", "202B88",
         "202B89", "202BD4", "202BE2", "202BJ7", "202BK2", "202BK4", "202BK5", "202BL2", "202E63", "202G63X01",
         "202G65X01", "202G68X01", "202GJ7", "202GJ7X01", "202GK2X01", "202GK4X01", "202GK5X01", "202H63", "202JJ7",
@@ -93,13 +94,13 @@ namespace BudgetExecution
         "102A17", "102A20", "201B03", "201B08", "201B23", "202B01", "202B06", "202B06XP1", "202B07", "202B20", "301D24",
         "302D11", "302D16", "303D11", "304L15", "401C09", "401C10", "402C13", "501E12", "501E14", "ZZZH21", "202B80",
         "201B81", "102AH4", "102AJ9", "202B51", "201B51", "202B78", "202B82", "301D79", "301D79XBP", "302DJ6", "303D86", "303D87",
-        "303D91","ZZZPG2", "303D72", "303D72XPA", "303D72XPC", "303DC6", "303DC8", "303DC9", "303DD2", "501EC7", "501EH2", "501JC7",
+        "303D91", "ZZZPG2", "303D72", "303D72XPA", "303D72XPC", "303DC6", "303DC8", "303DC9", "303DD2", "501EC7", "501EH2", "501JC7",
         "ZZZD73"
         };
 
         public static string[] AgencyRpioCode =
         {
-        "11", "13", "16", "17", "18", "20", "26", "27", "30", "35", "39", "75", "77", "01","02", "03", "04", "05", "06", "07", "08",
+        "11", "13", "16", "17", "18", "20", "26", "27", "30", "35", "39", "75", "77", "01", "02", "03", "04", "05", "06", "07", "08",
         "09", "10"
         };
 
@@ -124,7 +125,7 @@ namespace BudgetExecution
 
         public static string[] MultiYears =
         {
-        "2015", "2015 2016", "2016 2017", "2016", "2017 2018", "2017","2018 2019", "2018", "2019 2020","2019", "2020 2021","2020", "2021 2022", "2021",
+        "2015", "2015 2016", "2016 2017", "2016", "2017 2018", "2017", "2018 2019", "2018", "2019 2020", "2019", "2020 2021", "2020", "2021 2022", "2021",
         "2022", "2022 2023",
         };
 

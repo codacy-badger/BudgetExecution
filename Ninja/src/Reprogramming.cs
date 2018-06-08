@@ -13,9 +13,7 @@ namespace BudgetExecution
         {
         }
 
-        public Reprogramming(string bl, string docType, string rpio, string org, string rc, string bfy, string fund,
-                            string tcn, string qtr, string date, string code, string progproj, string ppn, string npmcode,
-                            string fromto, string boc, decimal amount)
+        public Reprogramming(string bl, string docType, string rpio, string org, string rc, string bfy, string fund, string tcn, string qtr, string date, string code, string progproj, string ppn, string npmcode, string fromto, string boc, decimal amount)
         {
             BudgetLevel = bl;
             DocType = docType;

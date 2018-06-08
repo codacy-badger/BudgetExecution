@@ -4,7 +4,7 @@
 
 namespace BudgetExecution
 {
-    public interface IPrcParameter
+    public interface IParameter
     {
         // PROPERTIES
         int ID { get; }

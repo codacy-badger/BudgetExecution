@@ -12,24 +12,24 @@ namespace BudgetExecution
     using Workbook = Microsoft.Office.Interop.Excel.Workbook;
     using Worksheet = Microsoft.Office.Interop.Excel.Worksheet;
 
-    public class ExcelOp
+    public class ExcelReport
     {
-        internal string P7path = @"C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\Report\BudgetControlTemplate.xlsx";
+        private string p7path = @"C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\Report\BudgetControlTemplate.xlsx";
 
         // CONSTRUCTORS
-        public ExcelOp()
+        public ExcelReport()
         {
         }
 
-        public ExcelOp(string filepath)
+        public ExcelReport(string filepath)
         {
             FilePath = filepath;
             ConnectionString = GetConnectionString(FilePath);
         }
 
-        public ExcelOp(DataTable data)
+        public ExcelReport(DataTable data)
         {
-            FilePath = P7path;
+            FilePath = p7path;
             ConnectionString = GetConnectionString(FilePath);
             Data = data;
         }
@@ -77,7 +77,7 @@ namespace BudgetExecution
             try
             {
                 Excel excel = Create();
-                var excelWorkBook = excel.Workbooks.Open(P7path);
+                var excelWorkBook = excel.Workbooks.Open(p7path);
                 int tr = table.Rows.Count;
                 Worksheet excelWorkSheet = (Worksheet)excelWorkBook.Sheets[1];
                 excelWorkSheet.Name = table.TableName;
@@ -181,7 +181,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                MessageBox.Show("ERROR!" + ex.StackTrace); ;
+                MessageBox.Show("ERROR!" + ex.StackTrace);
             }
         }
 

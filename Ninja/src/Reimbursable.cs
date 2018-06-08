@@ -15,8 +15,7 @@ namespace BudgetExecution
         {
         }
 
-        public Reimbursable(string fund, string bfy, string org, string code, string an, decimal auth,
-                            decimal amout, decimal avail)
+        public Reimbursable(string fund, string bfy, string org, string code, string an, decimal auth, decimal amout, decimal avail)
         {
             BFY = bfy;
             Fund = new Fund(fund, bfy);
