@@ -1,17 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.OleDb;
-using System.Data.SQLite;
-using System.Windows.Forms;
-
-namespace BudgetExecution
+﻿namespace BudgetExecution
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Data.OleDb;
+    using System.Windows.Forms;
+
     public class ExcelQuery
     {
         //Constructors
         public ExcelQuery()
         {
         }
+
         public ExcelQuery(Source source)
         {
             Source = source;
@@ -26,6 +26,7 @@ namespace BudgetExecution
             UpdateCommand = CommandBuilder.GetInsertCommand();
             DeleteCommand = CommandBuilder.GetInsertCommand();
         }
+
         public ExcelQuery(Source source, Dictionary<string, object> param)
         {
             Source = source;
@@ -44,18 +45,31 @@ namespace BudgetExecution
 
         //Properties
         public OleDbDataAdapter Adapter { get; set; }
+
         public OleDbCommandBuilder CommandBuilder { get; }
+
         public OleDbConnection Connection { get; }
+
         public Dictionary<string, object> Parameter { get; }
+
         public OleDbDataReader Reader { get; set; }
+
         public OleDbCommand SelectCommand { get; }
+
         public string SelectStatement { get; }
+
         public Source Source { get; }
+
         public Provider Provider { get; set; }
+
         public Dictionary<string, string> SqlStatement { get; }
+
         public string TableName { get; }
+
         public OleDbCommand UpdateCommand { get; }
+
         public OleDbCommand InsertCommand { get; }
+
         public OleDbCommand DeleteCommand { get; }
 
         //Methods
@@ -71,6 +85,7 @@ namespace BudgetExecution
                 return null;
             }
         }
+
         private OleDbDataAdapter GetDataAdapter()
         {
             try
@@ -83,14 +98,15 @@ namespace BudgetExecution
                 return null;
             }
         }
+
         private string GetParamString(Dictionary<string, object> param)
         {
             try
             {
-                string vals = "";
+                string vals = string.Empty;
                 foreach (KeyValuePair<string, object> kvp in param)
                 {
-                    vals += $"{ kvp.Key } = '{(kvp.Value).ToString()}' AND ";
+                    vals += $"{ kvp.Key } = '{kvp.Value.ToString()}' AND ";
                 }
                 vals = vals.Trim().Substring(0, vals.Length - 4);
                 return vals;
@@ -101,6 +117,7 @@ namespace BudgetExecution
                 return null;
             }
         }
+
         private OleDbCommand GetSelectCommand()
         {
             try
@@ -113,6 +130,7 @@ namespace BudgetExecution
                 return null;
             }
         }
+
         internal OleDbDataAdapter GetDataAdapter(string sql)
         {
             try
@@ -125,6 +143,7 @@ namespace BudgetExecution
                 return null;
             }
         }
+
         public OleDbCommandBuilder GetCommandBuilder(OleDbDataAdapter adapter)
         {
             try
@@ -137,6 +156,7 @@ namespace BudgetExecution
                 return null;
             }
         }
+
         public OleDbDataAdapter GetDataAdapter(OleDbCommand command)
         {
             try
@@ -149,6 +169,7 @@ namespace BudgetExecution
                 return null;
             }
         }
+
         public OleDbCommand GetDeleteCommand()
         {
             try
@@ -161,6 +182,7 @@ namespace BudgetExecution
                 return null;
             }
         }
+
         public OleDbCommand GetInsertCommand()
         {
             try
@@ -173,6 +195,7 @@ namespace BudgetExecution
                 return null;
             }
         }
+
         public OleDbCommand GetSelectCommand(string select)
         {
             try
@@ -185,6 +208,7 @@ namespace BudgetExecution
                 return null;
             }
         }
+
         public string GetSqlStatement()
         {
             try
@@ -197,6 +221,7 @@ namespace BudgetExecution
                 return null;
             }
         }
+
         public string GetSqlStatement(string sql)
         {
             try
@@ -209,6 +234,7 @@ namespace BudgetExecution
                 return null;
             }
         }
+
         public OleDbCommand GetUpdateCommand()
         {
             try

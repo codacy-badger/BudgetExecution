@@ -1,15 +1,16 @@
-﻿using System.Collections.Generic;
-using System.Data;
-using System.Windows.Forms;
-
-namespace BudgetExecution
+﻿namespace BudgetExecution
 {
+    using System.Collections.Generic;
+    using System.Data;
+    using System.Windows.Forms;
+
     public class Reimbursable
     {
         // CONSTRUCTORS
         public Reimbursable()
         {
         }
+
         public Reimbursable(string fund, string bfy, string org, string code, string an, decimal auth,
                             decimal amout, decimal avail)
         {
@@ -23,6 +24,7 @@ namespace BudgetExecution
             Amount = amout;
             Available = avail;
         }
+
         public Reimbursable(DataRow dr)
         {
             BFY = dr["BFY"].ToString();
@@ -38,14 +40,23 @@ namespace BudgetExecution
 
         // PROPERTIES
         public Account Account { get; }
+
         public string Agreement { get; }
+
         public decimal Amount { get; }
+
         public decimal Authority { get; }
+
         public decimal Available { get; }
+
         public string BFY { get; }
+
         public string Code { get; }
+
         public DataBuilder Data { get; }
+
         public Fund Fund { get; }
+
         public Org Org { get; }
 
         // METHODS

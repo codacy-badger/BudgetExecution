@@ -1,21 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Data.SQLite;
-using System.Data.SqlClient;
-using System.Data.OleDb;
-using System.Data.Common;
-using System.Windows.Forms;
-using System.Data;
-
-namespace BudgetExecution
+﻿namespace BudgetExecution
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Configuration;
+    using System.Data;
+    using System.Data.Common;
+    using System.Data.OleDb;
+    using System.Data.SqlClient;
+    using System.Data.SQLite;
+    using System.Windows.Forms;
+
     public class SQLiteQuery : IQuery
     {
         // CONSTRUCTORS
         public SQLiteQuery()
         {
         }
+
         public SQLiteQuery(Source source)
         {
             Provider = Provider.SQLite;
@@ -30,6 +31,7 @@ namespace BudgetExecution
             InsertCommand = CommandBuilder.GetInsertCommand();
             DeleteCommand = CommandBuilder.GetDeleteCommand();
         }
+
         public SQLiteQuery(Source source, Dictionary<string, object> param)
         {
             Provider = Provider.SQLite;
@@ -48,20 +50,35 @@ namespace BudgetExecution
 
         // PROPERTIES
         public Source Source { get; }
+
         public Provider Provider { get; }
+
         public AppSettingsReader Settings { get; }
+
         public DbConnection DataConnection { get; }
+
         public Dictionary<string, object> Parameter { get; }
+
         public string TableName { get; }
+
         public string SqlStatement { get; set; }
+
         public string SelectStatement { get; set; }
+
         public DbCommand SelectCommand { get; }
+
         public DbDataReader DataReader { get; set; }
+
         public DbDataAdapter DataAdapter { get; set; }
+
         public DbCommandBuilder CommandBuilder { get; internal set; }
+
         public DbCommand DataCommand { get; set; }
+
         public DbCommand DeleteCommand { get; }
+
         public DbCommand InsertCommand { get; }
+
         public DbCommand UpdateCommand { get; }
 
         // METHODS
@@ -69,10 +86,10 @@ namespace BudgetExecution
         {
             try
             {
-                string vals = "";
+                string vals = string.Empty;
                 foreach (KeyValuePair<string, object> kvp in param)
                 {
-                    vals += $"{ kvp.Key } = '{(kvp.Value).ToString()}' AND ";
+                    vals += $"{ kvp.Key } = '{kvp.Value.ToString()}' AND ";
                 }
                 vals = vals.Trim().Substring(0, vals.Length - 4);
                 return vals;
@@ -83,6 +100,7 @@ namespace BudgetExecution
                 return null;
             }
         }
+
         public string GetSlectSqlStatement(string table, Dictionary<string, object> param)
         {
             try
@@ -95,6 +113,7 @@ namespace BudgetExecution
                 return null;
             }
         }
+
         public string GetSqlStatement(string table, string sql)
         {
             try
@@ -107,6 +126,7 @@ namespace BudgetExecution
                 return null;
             }
         }
+
         public string GetSqlStatement(string sql)
         {
             try
@@ -119,19 +139,20 @@ namespace BudgetExecution
                 return null;
             }
         }
+
         public DbConnection GetConnection(Provider provider)
         {
             try
             {
                 switch (provider)
                 {
-                    case (Provider.SQLite):
+                    case Provider.SQLite:
                         return new SQLiteConnection(@"datasource=C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\database\SQLite\R6.db");
-                    case (Provider.SqlCe):
+                    case Provider.SqlCe:
                         return new SQLiteConnection(@"datasource=C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\database\SqlCe\R6.sdf");
-                    case (Provider.SqlSvr):
+                    case Provider.SqlSvr:
                         return new SQLiteConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C: \Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\database\SqlServer\R6.mdf;Integrated Security=True;Connect Timeout=30");
-                    case (Provider.OleDb):
+                    case Provider.OleDb:
                         return new SQLiteConnection(@"Data Source = C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\database\OleDb\R6.accdb");
                 }
                 return null;
@@ -142,6 +163,7 @@ namespace BudgetExecution
                 return null;
             }
         }
+
         public DbCommand GetDataCommand(string select, IDbConnection connection)
         {
             try
@@ -169,6 +191,7 @@ namespace BudgetExecution
                 return null;
             }
         }
+
         internal DbCommand GetSelectCommand(string select, IDbConnection connection)
         {
             try
@@ -196,6 +219,7 @@ namespace BudgetExecution
                 return null;
             }
         }
+
         internal DbCommand GetSelectCommand(Dictionary<string, object> param, IDbConnection connection)
         {
             try
@@ -223,6 +247,7 @@ namespace BudgetExecution
                 return null;
             }
         }
+
         public DbDataAdapter GetDataAdapter(IDbCommand command)
         {
             try
@@ -241,6 +266,7 @@ namespace BudgetExecution
                 return null;
             }
         }
+
         public DbDataReader GetDataReader(IDbCommand command)
         {
 
@@ -261,6 +287,7 @@ namespace BudgetExecution
             }
 
         }
+
         public DbCommandBuilder GetCommandBuilder(IDbDataAdapter adapter)
         {
             try

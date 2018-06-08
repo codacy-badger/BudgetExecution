@@ -1,18 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Drawing;
-using System.Windows.Forms;
-using Syncfusion.Windows.Forms.Chart;
-
-namespace BudgetExecution
+﻿namespace BudgetExecution
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Data;
+    using System.Drawing;
+    using System.Windows.Forms;
+    using Syncfusion.Windows.Forms.Chart;
+
     public class BudgetChart
     {
         // CONSTRUCTORS
         public BudgetChart()
         {
         }
+
         public BudgetChart(ChartControl chart, string title, Dictionary<string, double> data)
         {
             Chart = chart;
@@ -28,6 +29,7 @@ namespace BudgetExecution
             ConfigurePrimaryAxisLabels(Chart);
             Configure3DMode(Chart);
         }
+
         public BudgetChart(ChartControl chart, DataBuilder data, PrcField filter)
         {
             SeriesType = ChartSeriesType.Column;
@@ -48,6 +50,7 @@ namespace BudgetExecution
             Configure3DMode(Chart);
 
         }
+
         public BudgetChart(ChartControl chart, DataBuilder data, PrcField filter, Stat value, ChartSeriesType type)
         {
             Chart = chart;
@@ -70,6 +73,7 @@ namespace BudgetExecution
             Configure3DMode(Chart);
             Chart.ShowToolTips = true;
         }
+
         public BudgetChart(ChartControl chart, string[] title, DataBuilder data, PrcField filter, Stat value, ChartSeriesType type)
         {
             Chart = chart;
@@ -93,6 +97,7 @@ namespace BudgetExecution
             Configure3DMode(Chart);
             Chart.ShowToolTips = true;
         }
+
         public BudgetChart(ChartControl chart, string[] title, DataTable table, PrcField filter, Stat value, ChartSeriesType type)
         {
             Chart = chart;
@@ -109,6 +114,7 @@ namespace BudgetExecution
             Chart.Series.Add(DataSeries);
             Configure3DMode(Chart);
         }
+
         public BudgetChart(ChartControl chart, string[] title, Source source, PrcField filter, Stat value, ChartSeriesType type)
         {
             Chart = chart;
@@ -132,6 +138,7 @@ namespace BudgetExecution
             Configure3DMode(Chart);
             Chart.ShowToolTips = true;
         }
+
         public BudgetChart(ChartControl chart, string[] title, Source source, Dictionary<string, object> param, PrcField filter, Stat value, ChartSeriesType type)
         {
             Chart = chart;
@@ -158,24 +165,43 @@ namespace BudgetExecution
 
         // PROPERTIES
         public string[] AxisTitle { get; set; }
+
         public ChartControl Chart { get; set; }
+
         public DataBuilder DbData { get; }
+
         public PrcMetric Metric { get; }
+
         public BindingSource BindingSource { get; set; }
+
         public Dictionary<string, double[]> DataMetrics { get; set; }
+
         public ChartSeries DataSeries { get; set; }
+
         public Dictionary<string, double> DataTotals { get; set; }
+
         public int[] Dimension { get; set; }
+
         public Source Source { get; }
+
         public PrcField Filter { get; }
+
         public ChartSeriesType SeriesType { get; set; }
+
         public Stat Value { get; set; }
+
         public Dictionary<string, double[]> InputMetrics { get; set; }
+
         public Dictionary<string, double> InputTotals { get; set; }
+
         public ChartLegend Legend { get; set; }
+
         public string[] MainTitle { get; set; }
+
         public ChartDataBindModel Model { get; set; }
+
         public DataTable Table { get; set; }
+
         private double Total { get; }
 
         // METHODS
@@ -183,6 +209,7 @@ namespace BudgetExecution
         {
             return Chart;
         }
+
         internal ChartSeries GetSeriesTotals(Dictionary<string, double> data)
         {
             try
@@ -200,6 +227,7 @@ namespace BudgetExecution
                 return null;
             }
         }
+
         private Dictionary<string, double> GetMeasure(Dictionary<string, double[]> data, Stat value)
         {
             try
@@ -217,6 +245,7 @@ namespace BudgetExecution
                 return null;
             }
         }
+
         internal void ConfigurePieChart(ChartControl Chart, DataBuilder data)
         {
             try
@@ -241,6 +270,7 @@ namespace BudgetExecution
                 MessageBox.Show(ex.Message + ex.StackTrace);
             }
         }
+
         internal void ConfigureLargeNumberSeries(ChartSeries series)
         {
             try
@@ -273,6 +303,7 @@ namespace BudgetExecution
                 MessageBox.Show(e.Message + e.StackTrace);
             }
         }
+
         internal void ConfigureSeries(ChartSeries series)
         {
             try
@@ -302,7 +333,7 @@ namespace BudgetExecution
                 if(SeriesType == ChartSeriesType.Pie)
                 {
                     DataSeries.ConfigItems.PieItem.ShowDataBindLabels = true;
-                    
+
                 }
             }
             catch (System.Exception e)
@@ -310,6 +341,7 @@ namespace BudgetExecution
                 MessageBox.Show(e.Message + e.StackTrace);
             }
         }
+
         internal void ConfigureSeries(ChartSeries series, Stat value)
         {
             try
@@ -346,6 +378,7 @@ namespace BudgetExecution
                 MessageBox.Show(e.Message + e.StackTrace);
             }
         }
+
         private void ConfigureToolTip(ChartSeries series)
         {
             DataSeries = series;
@@ -354,6 +387,7 @@ namespace BudgetExecution
                 DataSeries.Styles[i].ToolTip = string.Format("{0}", DataSeries.Points[0].ToString());
             }
         }
+
         private void ConfigurePrimaryAxisLabels(ChartControl chart)
         {
             try
@@ -361,13 +395,14 @@ namespace BudgetExecution
                 Chart = chart;
                 Chart.PrimaryXAxis.Font = new Font("SegoeUI", 9F, FontStyle.Bold);
                 Chart.PrimaryXAxis.ForeColor = SystemColors.MenuHighlight;
-                
+
             }
             catch (System.Exception e)
             {
                 MessageBox.Show(e.Message + e.StackTrace);
             }
         }
+
         private void Configure3DMode(ChartControl chart)
         {
             try
@@ -398,6 +433,7 @@ namespace BudgetExecution
                 MessageBox.Show(e.Message + e.StackTrace);
             }
         }
+
         internal void Configure3DMode(int[] dim)
         {
             try
@@ -418,6 +454,7 @@ namespace BudgetExecution
                 MessageBox.Show(e.Message + e.StackTrace);
             }
         }
+
         internal void ConfigurePrimaryAxisTitle(string[] title)
         {
             try
@@ -431,6 +468,7 @@ namespace BudgetExecution
                 MessageBox.Show(e.Message + e.StackTrace);
             }
         }
+
         internal ChartDataBindModel GetDataBindingSource(Dictionary<string, double> data, PrcField filter)
         {
             try
@@ -450,6 +488,7 @@ namespace BudgetExecution
                 return null;
             }
         }
+
         internal ChartLegend GetLegend(ChartControl chart)
         {
             try
@@ -471,6 +510,7 @@ namespace BudgetExecution
                 return null;
             }
         }
+
         internal void ConfigureMainTitle(string[] t)
         {
             try
@@ -492,5 +532,5 @@ namespace BudgetExecution
             }
         }
     }
-        
+
 }

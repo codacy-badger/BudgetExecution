@@ -1,8 +1,8 @@
-﻿using System.Collections.Generic;
-using System.Windows.Forms;
-
-namespace BudgetExecution
+﻿namespace BudgetExecution
 {
+    using System.Collections.Generic;
+    using System.Windows.Forms;
+
     public class BOC
     {
         // CONSTRUCTORS
@@ -11,7 +11,8 @@ namespace BudgetExecution
             Code = code;
             Name = Info.GetBocName(code);
             Value = 0m;
-        }    
+        }
+
         public BOC(string code, decimal amount)
         {
             Code = code;
@@ -21,7 +22,9 @@ namespace BudgetExecution
 
         // PROPERTIES
         public string Code { get; }
+
         public string Name { get; }
+
         public decimal Value { get; }
 
         // METHODS
@@ -42,6 +45,7 @@ namespace BudgetExecution
         {
             return prc.Amount;
         }
+
         public override string ToString()
         {
             return Code;

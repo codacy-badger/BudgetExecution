@@ -8,10 +8,11 @@ namespace BudgetExecution
         string Code { get; }
 
         string ID { get; }
+
         string Name { get; }
 
         // METHODS
         string ToString();
     }
 }
-    
+

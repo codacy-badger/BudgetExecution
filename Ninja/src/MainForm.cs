@@ -1,13 +1,10 @@
-using System;
-using System.Collections.Generic;
-using System.Drawing;
-using System.IO;
-using System.Windows.Forms;
-using Syncfusion.Windows.Forms.Chart;
-using Syncfusion.Windows.Forms.Tools;
-
 namespace BudgetExecution
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Windows.Forms;
+    using Syncfusion.Windows.Forms.Chart;
+
     public partial class MainForm : Syncfusion.Windows.Forms.MetroForm
     {
         // CONSTRUCTORS
@@ -35,13 +32,21 @@ namespace BudgetExecution
         public GetChart Chart { get; set; }
 
         public int Counter { get; set; }
+
         string[] Images { get; set; }
+
         public DataBuilder D6 { get; set; }
+
         public PrcMetric Metric { get; set; }
+
         public FormData NinjaData { get; set; }
+
         public DataBuilder R6 { get; set; }
+
         public string[] Title { get; set; }
+
         public Dictionary<string, double>[] Values { get; set; }
+
         public Timer Timer { get; set; }
 
         // METHODS
@@ -60,6 +65,7 @@ namespace BudgetExecution
                 MessageBox.Show(ex.Message + ex.StackTrace);
             }
         }
+
         private void ChartTimer(object sender, EventArgs e)
         {
             try
@@ -81,16 +87,19 @@ namespace BudgetExecution
                 MessageBox.Show(ex.Message + ex.StackTrace);
             }
         }
+
         private void DataButton_OnClick(object sender, EventArgs e)
         {
             var dm = new SQLiteDataMaster();
             dm.Show();
         }
+
         private void DivisionSummaryButton_OnClick(object sender, EventArgs e)
         {
             var summary = new SummaryForm(Source.DivisionAccount);
             summary.Show();
         }
+
         private string[] GetChartTitles(Dictionary<string, double>[] info)
         {
             try
@@ -111,6 +120,7 @@ namespace BudgetExecution
                 return null;
             }
         }
+
         private ChartControl GetMainChart(ChartControl chart, string[] title, Dictionary<string, double> data)
         {
             try
@@ -124,6 +134,7 @@ namespace BudgetExecution
                 return null;
             }
         }
+
         private ChartControl GetMainChart(ChartControl chart, string title, Dictionary<string, double> data)
         {
             try
@@ -137,37 +148,44 @@ namespace BudgetExecution
                 return null;
             }
         }
+
         private void RegionSummaryButton_OnClick(object sender, EventArgs e)
         {
             var datamgr = new SummaryForm(Source.RegionAccount);
             datamgr.Show();
         }
+
         private void TransferButton_OnClick(object sender, EventArgs e)
         {
             var dm = new SummaryForm("06J");
             dm.Show();
         }
+
         private void DivisionDataTile_OnClick(object sender, EventArgs e)
         {
             var s = new Selector(Info.DivisionImages);
             s.Show();
         }
+
         private void SummaryTile_OnClick(object sender, EventArgs e)
         {
             var summary = new Selector(Info.SummaryImages);
             summary.Show();
         }
+
         private void FunctionalityTile_OnClick(object sender, EventArgs e)
         {
             var s = new Selector(Info.FunctionImages);
             s.Show();
         }
+
         private void DatabaseTile_OnClick(object sender, EventArgs e)
         {
 
             var s = new Selector(Info.DatabaseImages);
             s.Show();
         }
+
         private void TransferButton_Click(object sender, EventArgs e)
         {
 

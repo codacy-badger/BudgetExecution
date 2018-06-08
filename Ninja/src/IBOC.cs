@@ -6,9 +6,9 @@ namespace BudgetExecution
     {
         // PROPERTIES
         string Name { get; set;}
+
         string Code { get; set; }
 
 
     }
 }
-    

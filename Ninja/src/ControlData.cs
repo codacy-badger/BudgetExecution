@@ -1,21 +1,26 @@
-﻿using System.Collections.Generic;
-using System.Data;
-
-
-
-namespace BudgetExecution
+﻿namespace BudgetExecution
 {
+    using System.Collections.Generic;
+    using System.Data;
+
     public class ControlData
     {
         #region Properties
 
         public static string BudgetLevel = "7";
+
         public DataRow[] Allocation { get; }
+
         public Query CtrlQuery { get; }
+
         public string FiscalYear { get; }
+
         public decimal Limit { get; }
+
         public PRC PrcAccount { get; }
+
         public string RC { get; }
+
         public Dictionary<string, object> Search { get; }
 
         #endregion
@@ -41,4 +46,4 @@ namespace BudgetExecution
         }
     }
 }
-    
+

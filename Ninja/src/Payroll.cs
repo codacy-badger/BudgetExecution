@@ -1,15 +1,16 @@
-﻿using System.Collections.Generic;
-using System.Data;
-using System.Windows.Forms;
-
-namespace BudgetExecution
+﻿namespace BudgetExecution
 {
+    using System.Collections.Generic;
+    using System.Data;
+    using System.Windows.Forms;
+
     public class Payroll
     {
         // CONSTRUCTORS
         public Payroll()
         {
         }
+
         public Payroll(string rpio, string bfy, string fund, string org, string rc, string code, string progproj, string progprojname,
                         string hoc, string wc, string wcn, decimal amount, decimal ybp, double ybh, decimal yotp, double yoth)
         {
@@ -31,6 +32,7 @@ namespace BudgetExecution
             YearOverTimePay = yotp;
             YearOverTimeHours = yoth;
         }
+
         public Payroll(DataRow dr)
         {
             RPIO = dr["RPIO"].ToString();
@@ -54,21 +56,37 @@ namespace BudgetExecution
 
         // PROPERTIES
         public decimal Amount { get; }
+
         public string BFY { get; }
+
         public string Code { get; }
+
         public Fund Fund { get; }
+
         public double Hours { get; }
+
         public string HrOrgCode { get; }
+
         public Org Org { get; }
+
         public string ProgramProjectCode { get; }
+
         public string ProgramProjectName { get; }
+
         public RC RC { get; }
+
         public string RPIO { get; }
+
         public string WorkCode { get; }
+
         public string WorkCodeName { get; }
+
         public double YearBaseHours { get; }
+
         public decimal YearBasePay { get; }
+
         public double YearOverTimeHours { get; }
+
         public decimal YearOverTimePay { get; }
 
         // METHODS

@@ -5,9 +5,13 @@ namespace BudgetExecution
     {
         // PROPERTIES
         string Code { get; }
+
         string Goal { get; }
+
         string NPM { get; }
+
         string Objective { get; }
+
         string ProgramProjectCode { get; }
 
         // METHODS
@@ -25,6 +29,6 @@ namespace BudgetExecution
 
         string GetProgramProjectCode();
     }
-        
-    
+
+
 }

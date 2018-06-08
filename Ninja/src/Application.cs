@@ -1,19 +1,21 @@
-using System;
-using System.Collections.Generic;
-using System.Data;
-using Ninja.Data;
-using Syncfusion.Windows.Forms.Chart;
-
-namespace BudgetExecution
+﻿namespace BudgetExecution
 {
-    public enum Command
-    {
-        Select, Insert, Update, Delete, Create, Drop, Alter
-    }
+    using System;
+    using System.Collections.Generic;
+    using System.Data;
+    using Syncfusion.Windows.Forms.Chart;
 
+    // Delegates
+    public delegate double[] Calculator(DataTable table);
+
+    public delegate DataTable TableFilter(DataTable table, PrcField prcfilter, string filter);
+
+    public delegate ChartControl GetChart(ChartControl chart, string title, Dictionary<string, double> data);
+
+    // Enum
     public enum FileExt
     {
-        xlsx = 1, csv = 2, txt = 3, pdf = 4, doc = 5
+        XLSX = 1, CSV = 2, TXT = 3, PDF = 4, DOC = 5
     }
 
     public enum FundCode
@@ -61,7 +63,7 @@ namespace BudgetExecution
 
     public enum Stat
     {
-        Total, Count, Average, Ratio 
+        Total, Count, Average, Ratio
     }
 
     public enum TransferType
@@ -83,11 +85,4 @@ namespace BudgetExecution
             System.Windows.Forms.Application.Run(new MainForm());
         }
     }
-            
-    //Delegates
-    public delegate double[] Calculator(DataTable table);
-
-    public delegate DataTable TableFilter(DataTable table, PrcField prcfilter, string filter);
-
-    public delegate ChartControl GetChart(ChartControl chart, string title, Dictionary<string, double> data);
 }

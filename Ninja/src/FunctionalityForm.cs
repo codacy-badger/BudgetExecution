@@ -1,16 +1,11 @@
-using System;
-using System.Collections.Generic;
-using System.Windows.Forms;
-using Ninja.Data;
-using Syncfusion.Windows.Forms.Chart;
-using Syncfusion.Windows.Forms.Tools;
-using Syncfusion.Windows.Forms;
-using System.IO;
-using System.Drawing;
-using Ninja.Data.Forms;
-
 namespace BudgetExecution
 {
+    using System;
+    using System.Drawing;
+    using System.IO;
+    using System.Windows.Forms;
+    using Syncfusion.Windows.Forms.Tools;
+
     public partial class FunctionalityForm : Syncfusion.Windows.Forms.MetroForm
     {
         public FunctionalityForm()
@@ -22,6 +17,7 @@ namespace BudgetExecution
 
         // PROPERTIES
         string[] Images { get; set; }
+
         FormData NinjaData { get; set; }
 
         // METHODS
@@ -45,6 +41,7 @@ namespace BudgetExecution
             FunctionCarousel.ImageList = ilist;
 
         }
+
         private void FunctionCarousel_OnImageSelected(object sender, EventArgs e)
         {
 
@@ -52,6 +49,7 @@ namespace BudgetExecution
             var a = new SummaryForm(i);
             a.Show();
         }
+
         private void GetD6DataManager(object sender, System.EventArgs e)
         {
             var datamanager = new SQLiteDataMaster();

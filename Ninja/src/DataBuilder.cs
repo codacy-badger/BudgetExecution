@@ -1,18 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Data.SQLite;
-using System.Linq;
-using System.Windows.Forms;
-
-namespace BudgetExecution
+﻿namespace BudgetExecution
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Data;
+    using System.Linq;
+    using System.Windows.Forms;
+
     public class DataBuilder : IDataBuilder
     {
         // CONSTRUCTORS
         public DataBuilder()
         {
         }
+
         public DataBuilder(Source source, Provider provider)
         {
             Parameter = null;
@@ -39,6 +39,7 @@ namespace BudgetExecution
                 DataRecords = GetDataRecords(Table);
             }
         }
+
         public DataBuilder(Source source, Provider provider, Dictionary<string, object> param)
         {
             Source = source;
@@ -67,12 +68,19 @@ namespace BudgetExecution
 
         // PROPERTIES
         public Source Source { get; }
+
         public Query Query { get; }
+
         public DataTable Table { get; }
+
         public Dictionary<string, string[]> ProgramElements { get; }
+
         public DataRow[] DataRecords { get; }
+
         public BindingSource BindingSource { get; set; }
+
         public decimal Total { get; }
+
         public Dictionary<string, object> Parameter { get; set; }
 
         // METHODS
@@ -83,7 +91,7 @@ namespace BudgetExecution
                 var param = new Dictionary<string, object>();
                 param.Add("RC", rc);
                 return param;
-    
+
             }
             catch (Exception e)
             {
@@ -92,6 +100,7 @@ namespace BudgetExecution
                 return null;
             }
         }
+
         public DataTable FilterTable(DataTable table, PrcField prcfilter, string filter)
         {
             try
@@ -105,6 +114,7 @@ namespace BudgetExecution
                 return null;
             }
         }
+
         public string[] GetCodes(DataTable table, string column)
         {
             try
@@ -119,6 +129,7 @@ namespace BudgetExecution
                 return null;
             }
         }
+
         public Dictionary<string, string[]> GetProgramElements(DataTable table)
         {
             try
@@ -140,6 +151,7 @@ namespace BudgetExecution
                 return null;
             }
         }
+
         public decimal GetAverage(DataTable table)
         {
             try
@@ -154,6 +166,7 @@ namespace BudgetExecution
                 return -1;
             }
         }
+
         public int GetCount(DataTable table)
         {
             try
@@ -168,6 +181,7 @@ namespace BudgetExecution
                 return -1;
             }
         }
+
         public decimal[] GetMetrics(DataTable table)
         {
             try
@@ -182,6 +196,7 @@ namespace BudgetExecution
                 return new decimal[] { -1m, -1m, -1m };
             }
         }
+
         public DataSet GetDataSet()
         {
             try
@@ -198,6 +213,7 @@ namespace BudgetExecution
                 return null;
             }
         }
+
         public DataTable GetDataTable()
         {
             try
@@ -212,6 +228,7 @@ namespace BudgetExecution
                 return null;
             }
         }
+
         public decimal GetTotal(DataTable table)
         {
             try
@@ -226,6 +243,7 @@ namespace BudgetExecution
                 return -1M;
             }
         }
+
         public decimal GetFteTotal(DataTable table)
         {
             try
@@ -240,6 +258,7 @@ namespace BudgetExecution
                 return -1M;
             }
         }
+
         public DataRow[] GetDataRecords(DataTable table)
         {
             try

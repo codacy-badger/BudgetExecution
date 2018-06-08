@@ -1,9 +1,7 @@
-﻿using System.Collections.Generic;
-
-
-
-namespace BudgetExecution
+﻿namespace BudgetExecution
 {
+    using System.Collections.Generic;
+
     public class PrcParameter : IPrcParameter
     {
 
@@ -31,16 +29,26 @@ namespace BudgetExecution
                 ["Code"] = Code
             };
         }
+
         public int ID { get; }
+
         public string BFY { get; }
+
         public string BOC { get; }
+
         public string BudgetLevel { get; }
+
         public string Code { get; }
+
         public string Fund { get; }
+
         public string Org { get; }
+
         public Dictionary<string, object> Data { get; set; }
+
         public string RC { get; }
+
         public string RPIO { get; }
     }
 }
-    
+

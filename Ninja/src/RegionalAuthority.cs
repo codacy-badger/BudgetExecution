@@ -1,11 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Linq;
-using System.Windows.Forms;
-
-namespace BudgetExecution
+﻿namespace BudgetExecution
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Data;
+    using System.Linq;
+    using System.Windows.Forms;
+
     public class RegionalAuthority : IBudgetAuthority
     {
         // CONSTRUCTORS
@@ -32,28 +32,48 @@ namespace BudgetExecution
 
         // PROPERTIES
         public static string FiscalYear { get; set; } = "2018";
+
         public decimal Average { get; }
+
         public decimal Amount { get; }
+
         public Dictionary<string, decimal> BocData { get; }
+
         public DataSet BudgetData { get; }
+
         public PrcMetric Metric { get; }
+
         public int Count { get; }
+
         public DataBuilder Data { get; set; }
+
         public FTE[] FTE { get; }
+
         public Dictionary<string, decimal> FteData { get; }
+
         public Dictionary<string, decimal> FundData { get; }
+
         public Dictionary<string, decimal> GoalData { get; }
+
         public decimal[] Metrics { get; }
+
         public Dictionary<string, decimal> NpmData { get; }
+
         public Dictionary<string, decimal> ObjectiveData { get; }
+
         public Tuple<DataTable, PRC[], decimal, int> PrcData { get; }
+
         public Dictionary<string, decimal> ProgramData { get; }
+
         public Dictionary<string, string[]> ProgramElements { get; }
+
         public Dictionary<string, decimal> ProjectData { get; }
+
         public DataTable Table { get; }
+
         public decimal Total { get; }
 
-        // METHODS 
+        // METHODS
         public DataTable FilterTable(DataTable table, string column, string filter)
         {
             try
@@ -66,6 +86,7 @@ namespace BudgetExecution
                 return null;
             }
         }
+
         public decimal GetAverage(DataTable table)
         {
             try
@@ -78,6 +99,7 @@ namespace BudgetExecution
                 return -1M;
             }
         }
+
         public string[] GetCodes(string filter)
         {
             try
@@ -90,6 +112,7 @@ namespace BudgetExecution
                 return null;
             }
         }
+
         public string[] GetCodes(DataTable table, string column)
         {
             try
@@ -103,6 +126,7 @@ namespace BudgetExecution
                 return null;
             }
         }
+
         public int GetCount(DataTable table)
         {
             try
@@ -115,6 +139,7 @@ namespace BudgetExecution
                 return -1;
             }
         }
+
         public Tuple<DataTable, PRC[], decimal, int> GetDataValues(DataTable table, string column, string filter)
         {
             try
@@ -128,6 +153,7 @@ namespace BudgetExecution
                 return null;
             }
         }
+
         internal FTE[] GetFTE(DataTable table)
         {
             try
@@ -144,6 +170,7 @@ namespace BudgetExecution
                 return null;
             }
         }
+
         public decimal[] GetMetrics(DataTable table)
         {
             try
@@ -157,6 +184,7 @@ namespace BudgetExecution
                 return new decimal[] { -1m };
             }
         }
+
         public PRC[] GetPrcArray(DataTable table)
         {
             try
@@ -169,6 +197,7 @@ namespace BudgetExecution
                 return null;
             }
         }
+
         public Dictionary<string, string[]> GetProgramElements(DataTable table)
         {
             try
@@ -190,6 +219,7 @@ namespace BudgetExecution
                 return null;
             }
         }
+
         public decimal GetTotal(DataTable table)
         {
             try
@@ -202,6 +232,7 @@ namespace BudgetExecution
                 return -1M;
             }
         }
+
         internal decimal GetRatio(decimal t1, decimal t2)
         {
             try
@@ -214,6 +245,7 @@ namespace BudgetExecution
                 return -1M;
             }
         }
+
         internal Dictionary<string, object> GetSupplemental(int time, decimal awards, decimal ot, PRC training)
         {
             try
@@ -230,6 +262,7 @@ namespace BudgetExecution
                 return null;
             }
         }
+
         internal void UpdateAmount(DataRow row, decimal amount2)
         {
             try
@@ -246,6 +279,7 @@ namespace BudgetExecution
                 MessageBox.Show(e.ToString());
             }
         }
+
         internal void UpdateAmount(Dictionary<string, object> p, decimal amount2)
         {
             try
@@ -262,6 +296,7 @@ namespace BudgetExecution
                 MessageBox.Show(e.ToString());
             }
         }
+
         internal int VerifyDataRow(DataTable table, Dictionary<string, object> p)
         {
             try

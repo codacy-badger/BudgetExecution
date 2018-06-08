@@ -1,15 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Data.SQLite;
-using System.Windows.Forms;
-using Budget.Ninja.Data;
-using MetroSet_UI.Controls;
-using Syncfusion.Windows.Forms;
-
-
-namespace BudgetExecution
+﻿namespace BudgetExecution
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Data;
+    using System.Data.SQLite;
+    using System.Windows.Forms;
+    using MetroSet_UI.Controls;
+    using Syncfusion.Windows.Forms;
+
     public partial class AccessData : MetroForm
     {
         // CONSTRUCTORS
@@ -19,7 +17,7 @@ namespace BudgetExecution
             DbData = new DataBuilder(Source.PRC, Provider.OleDb);
             Table = DbData.Table;
             Metric = new PrcMetric(DbData);
-            ProgramElements = DbData.GetProgramElements(Table);
+            ProgramElements = DbData.GetProgramElements(this.Table);
             BindingSource.DataSource = Table;
             Grid.DataSource = BindingSource;
             GridNavigator.BindingSource = BindingSource;
@@ -27,11 +25,17 @@ namespace BudgetExecution
 
         // PROPERTIES
         private SQLiteDataAdapter Adapter { get; }
+
         private DataBuilder DbData { get; }
+
         private PrcMetric Metric { get; }
+
         private Dictionary<string, object> Parameter { get; set; }
+
         private Dictionary<string, string[]> ProgramElements { get; set; }
+
         private Query Query { get; }
+
         private DataTable Table { get; set; }
 
         // METHODS
@@ -49,6 +53,7 @@ namespace BudgetExecution
                 MessageBox.Show(ex.Message + ex.StackTrace);
             }
         }
+
         private void DataMaster_Load(object sender, EventArgs e)
         {
             try
@@ -60,6 +65,7 @@ namespace BudgetExecution
                 MessageBox.Show(ex.Message + ex.StackTrace);
             }
         }
+
         private void FundFilter_ItemSelected(object sender, EventArgs e)
         {
             try
@@ -81,6 +87,7 @@ namespace BudgetExecution
                 MessageBox.Show(ex.Message + ex.StackTrace);
             }
         }
+
         private void GetFundFilterItems()
         {
             try
@@ -95,6 +102,7 @@ namespace BudgetExecution
                 MessageBox.Show(ex.Message + ex.StackTrace);
             }
         }
+
         private void GetGridColumns(DataGridView dgv)
         {
             try

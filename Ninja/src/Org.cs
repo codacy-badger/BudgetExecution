@@ -1,8 +1,8 @@
-﻿using System.Collections.Generic;
-using System.Windows.Forms;
-
-namespace BudgetExecution
+﻿namespace BudgetExecution
 {
+    using System.Collections.Generic;
+    using System.Windows.Forms;
+
     public class Org
     {
         // CONSTRUCTORS
@@ -10,6 +10,7 @@ namespace BudgetExecution
         {
 
         }
+
         public Org(string code)
         {
             Code = code;
@@ -19,7 +20,9 @@ namespace BudgetExecution
 
         // PROPERTIES
         public string Code { get; }
+
         public string ID { get; }
+
         public string Name { get; }
 
         // METHODS

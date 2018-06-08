@@ -1,18 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.IO;
-using System.Text;
-using System.Windows.Forms;
-
-namespace BudgetExecution
+﻿namespace BudgetExecution
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Data;
+    using System.IO;
+    using System.Text;
+    using System.Windows.Forms;
+
     public class Transfer
     {
         // CONSTRUCTORS
         public Transfer()
         {
         }
+
         public Transfer(PRC sender, PRC receiver, decimal amount)
         {
             ControlNumber = GetControlNumber();
@@ -36,6 +37,7 @@ namespace BudgetExecution
             ToRPIO = receiver.RPIO;
             ToAmount = receiver.Amount;
         }
+
         public Transfer(DataRow sender, DataRow receiver, decimal amount)
         {
             ControlNumber = GetControlNumber();
@@ -60,29 +62,53 @@ namespace BudgetExecution
 
         // PROPERTIES
         public int ID { get; set; }
+
         public decimal Amount { get; set; }
+
         public string ControlNumber { get; set; }
+
         public decimal FromAmount { get; set; }
+
         public string FromBFY { get; set; }
+
         public string FromBOC { get; set; }
+
         public string FromCode { get; set; }
+
         public string FromFund { get; set; }
+
         public int FromId { get; set; }
+
         public Org FromOrg { get; set; }
+
         public string FromRC { get; set; }
+
         public string FromRPIO { get; set; }
+
         public string Purpose { get; set; }
+
         public PRC Receiver { get; set; }
+
         public PRC Sender { get; set; }
+
         public decimal ToAmount { get; set; }
+
         public string ToBFY { get; set; }
+
         public string ToBOC { get; set; }
+
         public string ToCode { get; set; }
+
         public string ToFund { get; set; }
+
         public int ToId { get; set; }
+
         public Org ToOrg { get; set; }
+
         public string ToRC { get; set; }
+
         public string ToRPIO { get; set; }
+
         public Reprogramming Type { get; set; }
 
         // METHODS
@@ -116,6 +142,7 @@ namespace BudgetExecution
                 return null;
             }
         }
+
         internal string GetControlNumber()
         {
             try
@@ -145,6 +172,7 @@ namespace BudgetExecution
                 return null;
             }
         }
+
         internal void WriteTransfer()
         {
             try
@@ -159,4 +187,3 @@ namespace BudgetExecution
         }
     }
 }
-        

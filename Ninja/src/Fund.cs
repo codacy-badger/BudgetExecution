@@ -1,10 +1,10 @@
-﻿using System.Collections.Generic;
-using System.Data;
-using System.Linq;
-using System.Windows.Forms;
-
-namespace BudgetExecution
+﻿namespace BudgetExecution
 {
+    using System.Collections.Generic;
+    using System.Data;
+    using System.Linq;
+    using System.Windows.Forms;
+
     public class Fund : IFund
     {
         // CONSTRUCTORS
@@ -12,6 +12,7 @@ namespace BudgetExecution
         {
 
         }
+
         public Fund(string code, string bfy)
         {
             Code = code;
@@ -24,6 +25,7 @@ namespace BudgetExecution
             Title = DataRecord["Title"].ToString();
             TreasurySymbol = DataRecord["TreasurySymbol"].ToString();
         }
+
         public Fund(Source source, Provider provider, string code, string bfy)
         {
             Code = code;
@@ -39,13 +41,21 @@ namespace BudgetExecution
 
         // PROPERTIES
         public int ID { get; set; }
+
         public string Code { get; }
+
         public string FiscalYear { get; }
+
         public Dictionary<string, object> Parameter { get; }
+
         public string Name { get; }
+
         public string Title { get; }
+
         public string TreasurySymbol { get; }
+
         public DataTable Data { get; set; }
+
         public DataRow DataRecord { get; set; }
 
         // METHODS
@@ -61,6 +71,7 @@ namespace BudgetExecution
                 return null;
             }
         }
+
         public Dictionary<string, object> GetFundProgramData(string code)
         {
             try
@@ -77,6 +88,7 @@ namespace BudgetExecution
                 return null;
             }
         }
+
         public DataTable GetFundDataRecord(Source source, Provider provider, Dictionary<string, object> param)
         {
             try
@@ -90,6 +102,7 @@ namespace BudgetExecution
                 return null;
             }
         }
+
         public override string ToString()
         {
             return Code;

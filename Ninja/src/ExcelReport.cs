@@ -1,13 +1,13 @@
-﻿using System;
-using System.Data;
-using System.Runtime.InteropServices;
-using System.Windows.Forms;
-using Excel = Microsoft.Office.Interop.Excel.Application;
-using Workbook = Microsoft.Office.Interop.Excel.Workbook;
-using Worksheet = Microsoft.Office.Interop.Excel.Worksheet;
-
-namespace BudgetExecution
+﻿namespace BudgetExecution
 {
+    using System;
+    using System.Data;
+    using System.Runtime.InteropServices;
+    using System.Windows.Forms;
+    using Excel = Microsoft.Office.Interop.Excel.Application;
+    using Workbook = Microsoft.Office.Interop.Excel.Workbook;
+    using Worksheet = Microsoft.Office.Interop.Excel.Worksheet;
+
     public class ExcelOp
     {
         internal string P7path = @"C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\Report\BudgetControlTemplate.xlsx";
@@ -16,11 +16,13 @@ namespace BudgetExecution
         public ExcelOp()
         {
         }
+
         public ExcelOp(string filepath)
         {
             FilePath = filepath;
             ConnectionString = GetConnectionString(FilePath);
         }
+
         public ExcelOp(DataTable data)
         {
             FilePath = P7path;
@@ -30,9 +32,13 @@ namespace BudgetExecution
 
         // PROPERTIES
         public DataTable Data { get; }
+
         public string FilePath { get; }
+
         internal string ConnectionString { get; set; }
+
         private DocInfo AccountingInfo { get; set; }
+
         private Excel Excel { get; }
 
         // METHODS
@@ -40,6 +46,7 @@ namespace BudgetExecution
         {
             return $@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source='{filepath}';Extended Properties='Excel 12.0 Macro;HDR=YES;IMEX=1'";
         }
+
         internal string GetExternalFile()
         {
             try
@@ -57,6 +64,7 @@ namespace BudgetExecution
                 return null;
             }
         }
+
         internal Workbook ExportData(DataTable table)
         {
             try
@@ -86,6 +94,7 @@ namespace BudgetExecution
                 return null;
             }
         }
+
         internal Workbook ExportData(string filepath, DataTable table)
         {
             try
@@ -115,6 +124,7 @@ namespace BudgetExecution
                 return null;
             }
         }
+
         internal Workbook OpenFile(string filepath)
         {
             try
@@ -129,6 +139,7 @@ namespace BudgetExecution
                 return null;
             }
         }
+
         internal Workbook OpenNew()
         {
             try
@@ -143,6 +154,7 @@ namespace BudgetExecution
                 return null;
             }
         }
+
         internal void SaveAs(Workbook wb, string filepath)
         {
             try
@@ -161,6 +173,7 @@ namespace BudgetExecution
                 MessageBox.Show("ERROR!" + ex.StackTrace); ;
             }
         }
+
         private Excel Create()
         {
             try
@@ -174,6 +187,7 @@ namespace BudgetExecution
                 return null;
             }
         }
+
         private void ReleaseObject(object obj)
         {
             try

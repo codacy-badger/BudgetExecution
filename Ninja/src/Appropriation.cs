@@ -1,26 +1,26 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Drawing;
-using System.IO;
-using System.Linq;
-using System.Windows.Forms;
-
-namespace BudgetExecution
+﻿namespace BudgetExecution
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Data;
+    using System.Linq;
+    using System.Windows.Forms;
+
     public class Appropriation : IBudgetAuthority
     {
         // CONSTRUCTORS
         public Appropriation()
         {
         }
+
         public Appropriation(string fundcode, string bfy)
         {
             Fund = new Fund(Source.Fund, Provider.SQLite, fundcode, bfy);
             FiscalYear = Fund.FiscalYear;
             Name = Fund.Name;
-            Title = Fund.Title;            
+            Title = Fund.Title;
         }
+
         public Appropriation(Source source, Provider provider, string fundcode, string bfy) : this(fundcode, bfy)
         {
             DbData = new DataBuilder(source, provider, new Dictionary<string, object> { ["Fund"] = fundcode, ["BFY"] = bfy });
@@ -44,27 +44,49 @@ namespace BudgetExecution
 
         // PROPERTIES
         public Fund Fund { get; }
+
         public string Name { get; }
+
         public string Title { get; }
+
         public DataBuilder DbData { get; }
+
         public Dictionary<string, string[]> ProgramElements { get; }
+
         public PrcMetric Metric { get; }
+
         public DataTable Table { get; }
+
         public decimal Amount { get; }
+
         public decimal Average { get; }
+
         public string[] BocCodes { get; }
+
         public Dictionary<string, decimal> BocData { get; set; }
+
         public int Count { get; }
+
         public string FiscalYear { get; }
+
         public FTE[] FTE { get; }
+
         public Dictionary<string, decimal> GoalData { get; set; }
+
         public Dictionary<string, decimal> NpmData { get; set; }
+
         public Dictionary<string, decimal> ObjectiveData { get; set; }
+
         public Tuple<DataTable, PRC[], decimal, int> PrcData { get; }
+
         public Dictionary<string, decimal> ProgramData { get; set; }
+
         public string[] Project { get; }
+
         public Dictionary<string, decimal> ProjectData { get; set; }
+
         public decimal Total { get; }
+
         internal DataRow[] Data { get; }
 
         // METHODS
@@ -80,6 +102,7 @@ namespace BudgetExecution
                 return null;
             }
         }
+
         public decimal GetAverage(DataTable table)
         {
             try
@@ -92,6 +115,7 @@ namespace BudgetExecution
                 return -1M;
             }
         }
+
         public string[] GetCodes(DataTable table, string column)
         {
             try
@@ -104,11 +128,13 @@ namespace BudgetExecution
                 return null;
             }
         }
+
         public Tuple<string[], string[], string[], string[], string[]> GetCodes()
         {
             return new Tuple<string[], string[], string[], string[], string[]>(ProgramElements["BOC"],
                 ProgramElements["Code"], ProgramElements["NPM"], ProgramElements["ProgramArea"], ProgramElements["ProgramProjectCode"]);
         }
+
         public int GetCount(DataTable table)
         {
             try
@@ -121,6 +147,7 @@ namespace BudgetExecution
                 return -1;
             }
         }
+
         public Tuple<DataTable, PRC[], decimal, int> GetDataValues(DataTable table, string column, string filter)
         {
             try
@@ -135,6 +162,7 @@ namespace BudgetExecution
                 return null;
             }
         }
+
         public Tuple<DataTable, PRC[], decimal, int> GetDataValues(DataTable table, string[] list, string column)
         {
             foreach (string filter in list)
@@ -152,15 +180,18 @@ namespace BudgetExecution
             }
             return null;
         }
+
         public decimal GetFteTotal()
         {
             return PrcData.Item1.AsEnumerable().Select(p => p).Sum(p => p.Field<decimal>("Amount"));
         }
+
         public decimal[] GetMetrics(DataTable table)
         {
             var count = GetCount(table);
             return new decimal[] { GetTotal(table), (decimal)count, GetAverage(table) };
         }
+
         public Dictionary<string, decimal[]> GetMetrics(DataTable table, string[] list, string column)
         {
             try
@@ -183,6 +214,7 @@ namespace BudgetExecution
                 return null;
             }
         }
+
         public Dictionary<string, decimal[]> GetMetrics(DataTable table, string column, string filter)
         {
             try
@@ -206,6 +238,7 @@ namespace BudgetExecution
                 return null;
             }
         }
+
         public PRC[] GetPrcArray(DataTable table)
         {
             try
@@ -218,6 +251,7 @@ namespace BudgetExecution
                 return null;
             }
         }
+
         public Dictionary<string, string[]> GetProgramElements(DataTable table)
         {
             var data = new Dictionary<string, string[]>();
@@ -231,6 +265,7 @@ namespace BudgetExecution
             if (data.ContainsKey("Amount")) data.Remove("Amount");
             return data;
         }
+
         public decimal GetTotal(DataTable table)
         {
             try
@@ -243,6 +278,7 @@ namespace BudgetExecution
                 return -1M;
             }
         }
+
         public Dictionary<string, decimal> GetTotals(DataTable table, string column, string filter)
         {
             try
@@ -264,6 +300,7 @@ namespace BudgetExecution
                 return null;
             }
         }
+
         public Dictionary<string, decimal> GetTotals(DataTable table, string[] filters, string column)
         {
             try
@@ -282,6 +319,7 @@ namespace BudgetExecution
                 return null;
             }
         }
+
         internal FTE[] GetFTE(DataTable table)
         {
             if(table.Rows.Count > 0 && BocCodes.Contains("17"))

@@ -1,11 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Linq;
-using System.Windows.Forms;
-
-namespace BudgetExecution
+﻿namespace BudgetExecution
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Data;
+    using System.Linq;
+    using System.Windows.Forms;
+
     public class DivisionAuthority : IBudgetAuthority
     {
         // CONSTRUCTORS
@@ -27,6 +27,7 @@ namespace BudgetExecution
             if (ProgramElements["BOC"].Contains("17"))
                 FTE = GetFTE(DbData.Table);
         }
+
         public DivisionAuthority(string rc)
         {
             RC = new RC(rc);
@@ -50,27 +51,49 @@ namespace BudgetExecution
 
         // PROPERTIES
         public static string FiscalYear { get; set; } = "2018";
+
         public RC RC { get; }
+
         public Org Org { get; }
+
         public DataRow[] DataRecords { get; }
+
         public PRC[] PrcAllocation { get; }
+
         public DataBuilder DbData { get; set; }
+
         public PrcMetric Metric { get; }
+
         public DataTable Table { get; }
+
         public Dictionary<string, string[]> ProgramElements { get; }
+
         public decimal[] Measures { get; }
+
         public decimal Amount { get; }
+
         public decimal Total { get; }
+
         public int Count { get; }
+
         public decimal Average { get; }
+
         public Dictionary<string, decimal> DivisionData { get; }
+
         public FTE[] FTE { get; }
+
         public Dictionary<string, decimal> BocData { get; set; }
+
         public Dictionary<string, decimal> FteData { get; }
+
         public Dictionary<string, decimal> FundData { get; }
+
         public Dictionary<string, decimal> GoalData { get; }
+
         public Dictionary<string, decimal> NpmData { get; }
+
         public Dictionary<string, decimal> ProgramData { get; }
+
         public Dictionary<string, decimal> ProjectData { get; }
 
         // METHODS
@@ -86,6 +109,7 @@ namespace BudgetExecution
                 return null;
             }
         }
+
         public decimal GetAverage(DataTable table)
         {
             try
@@ -98,6 +122,7 @@ namespace BudgetExecution
                 return -1M;
             }
         }
+
         public string[] GetCodes(DataTable table, string column)
         {
             try
@@ -110,6 +135,7 @@ namespace BudgetExecution
                 return null;
             }
         }
+
         public int GetCount(DataTable table)
         {
             try
@@ -122,6 +148,7 @@ namespace BudgetExecution
                 return -1;
             }
         }
+
         internal FTE[] GetFTE(DataTable table)
         {
             try
@@ -138,6 +165,7 @@ namespace BudgetExecution
                 return null;
             }
         }
+
         public Tuple<DataTable, PRC[], decimal, int> GetDataValues(DataTable table, string column, string filter)
         {
             try
@@ -151,6 +179,7 @@ namespace BudgetExecution
                 return null;
             }
         }
+
         public decimal[] GetMetrics(DataTable table)
         {
             try
@@ -164,6 +193,7 @@ namespace BudgetExecution
                 return null;
             }
         }
+
         public PRC[] GetPrcArray(DataTable table)
         {
             try
@@ -176,6 +206,7 @@ namespace BudgetExecution
                 return null;
             }
         }
+
         public Dictionary<string, string[]> GetProgramElements(DataTable table)
         {
             try
@@ -197,6 +228,7 @@ namespace BudgetExecution
                 return null;
             }
         }
+
         public decimal GetTotal(DataTable table)
         {
             try
@@ -209,10 +241,12 @@ namespace BudgetExecution
                 return -1M;
             }
         }
+
         internal decimal GetRatio(decimal t1, decimal t2)
         {
             return t1 / t2;
         }
+
         internal Dictionary<string, decimal> GetRcInfo(DataTable table)
         {
             try
@@ -229,6 +263,7 @@ namespace BudgetExecution
                 return null;
             }
         }
+
         internal void UpdateAmount(DataRow row, decimal amount2)
         {
             try
@@ -245,6 +280,7 @@ namespace BudgetExecution
                 MessageBox.Show(e.ToString());
             }
         }
+
         internal void UpdateAmount(Dictionary<string, object> p, decimal amount2)
         {
             try
@@ -261,6 +297,7 @@ namespace BudgetExecution
                 MessageBox.Show(e.ToString());
             }
         }
+
         internal int VerifyDataRow(DataTable table, Dictionary<string, object> p)
         {
             try
@@ -281,6 +318,7 @@ namespace BudgetExecution
                 return -1;
             }
         }
+
         internal bool VerifyRow(DataTable table, Dictionary<string, object> p)
         {
             try

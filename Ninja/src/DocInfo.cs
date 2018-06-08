@@ -1,13 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Windows.Forms;
-
-
-
-
-namespace BudgetExecution
+﻿namespace BudgetExecution
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Text;
+    using System.Windows.Forms;
+
     public class DocInfo
     {
         // CONSTRUCTORS
@@ -28,20 +25,35 @@ namespace BudgetExecution
         public List<string> AccountingInfo { get; set; }
 
         public decimal Awards { get; set; }
+
         public List<string> ControlInfo { get; set; }
+
         public string ControlNumber { get; set; }
+
         public List<string> ControlNumbers { get; set; }
+
         public string DateIssued { get; set; }
+
         public string DcnPrefix { get; set; }
+
         public DivisionAuthority DivisionBudget { get; set; }
+
         public List<string> DocumentHeader { get; set; }
+
         public Org Organization { get; }
+
         public decimal OverTime { get; set; }
+
         public string Purpose { get; set; }
+
         public List<Transfer> Reprogrammings { get; set; }
+
         public List<string> SignatureBlock { get; set; }
+
         public Dictionary<string, object> Suppplemental { get; set; }
+
         public int TimeOffAwards { get; set; }
+
         public PRC Training { get; set; }
 
         // METHODS
@@ -72,8 +84,8 @@ namespace BudgetExecution
                 controlNumber.Append(month);
                 controlNumber.Append(day);
                 controlNumber.Append("-");
-                controlNumber.Append((DivisionAuthority.FiscalYear[2].ToString()));
-                controlNumber.Append((DivisionAuthority.FiscalYear[3].ToString()));
+                controlNumber.Append(DivisionAuthority.FiscalYear[2].ToString());
+                controlNumber.Append(DivisionAuthority.FiscalYear[3].ToString());
                 controlNumber.Append("-");
                 controlNumber.Append(Organization.ID);
                 controlNumber.Append("-01");
@@ -131,7 +143,7 @@ namespace BudgetExecution
         {
             try
             {
-                return (new DataBuilder(Source.Reprogramming, Provider.SQLite).Table.Rows.Count) + 1;
+                return new DataBuilder(Source.Reprogramming, Provider.SQLite).Table.Rows.Count + 1;
             }
             catch (Exception ex)
             {
@@ -150,4 +162,4 @@ namespace BudgetExecution
         }
     }
 }
-    
+

@@ -1,18 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Data.SQLite;
-using System.Linq;
-using System.Windows.Forms;
-
-namespace BudgetExecution
+﻿namespace BudgetExecution
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Data;
+    using System.Data.SQLite;
+    using System.Linq;
+    using System.Windows.Forms;
+
     public class PRC : IPRC, IAccount
     {
         // CONSTRUCTORS
         public PRC()
         {
         }
+
         public PRC(int id, string bl, string rpio, string bfy, string fund, string org, string rc, string code, string boc, decimal amount)
         {
             BudgetLevel = bl;
@@ -28,6 +29,7 @@ namespace BudgetExecution
             Parameter = GetParameter();
             Amount = amount;
         }
+
         public PRC(DataRow datarow)
         {
             ID = int.Parse(datarow["ID"].ToString());
@@ -46,28 +48,51 @@ namespace BudgetExecution
 
         // PROPERTIES
         public int ID { get; set; }
+
         public string BudgetLevel { get; set; }
+
         public string RPIO { get; set; }
+
         public string BFY { get; set; }
+
         public Fund Fund { get; }
+
         public Org Org { get; }
+
         public RC RC { get; }
+
         public string Code { get; set; }
+
         public Account Account { get; }
+
         public decimal Amount { get; set; }
+
         public BOC BOC { get; }
+
         public FTE FTE { get; set; }
+
         public string NPM { get; set; }
+
         public string NpmCode { get; set; }
+
         public string ProgramProjectCode { get; }
+
         public string ProgramProjectName { get; set; }
+
         public string ProgramArea { get; set; }
+
         public string Goal { get; }
+
         public string GoalName { get; }
+
         public string Objective { get; }
+
         public string ObjectiveName { get; }
+
         private Dictionary<string, object> Parameter { get; set; }
+
         public string[] DataFields { get; }
+
         public object[] DataValues { get; }
 
         // METHODS
@@ -94,6 +119,7 @@ namespace BudgetExecution
                 return null;
             }
         }
+
         internal DataRow GetData(Source source, Provider provider)
         {
             try
@@ -107,40 +133,49 @@ namespace BudgetExecution
                 return null;
             }
         }
+
         public string GetCode()
         {
             return Code;
         }
+
         public string GetGoal()
         {
             var goal = Code.Substring(0, 1).ToCharArray();
             return goal.ToString();
         }
+
         public string GetGoalName(string code)
         {
             return Info.GetGoalName(code);
         }
+
         public string GetNpmCode()
         {
             var npm = Code.Substring(2, 1).ToCharArray();
             return npm.ToString();
         }
+
         public string GetObjective()
         {
             return Code.Substring(1, 2);
         }
+
         public string GetObjectiveName(string code)
         {
             return Info.GetObjectiveName(code);
         }
+
         public string GetProgramProjectCode()
         {
             return Code.Substring(5, 2);
         }
+
         public override string ToString()
         {
             return Account.Code;
         }
+
         internal string[] GetFields()
         {
             try
@@ -155,6 +190,7 @@ namespace BudgetExecution
                 return null;
             }
         }
+
         internal object[] GetFieldValues()
         {
             try
@@ -169,6 +205,7 @@ namespace BudgetExecution
                 return null;
             }
         }
+
         public static Dictionary<string, object> ValidateParameter(Source source, Provider provider, Dictionary<string, object> param)
         {
             try
@@ -212,6 +249,7 @@ namespace BudgetExecution
                 return null;
             }
         }
+
         public static PRC Select(Source source, Provider provider, Dictionary<string, object> param)
         {
             try
@@ -226,6 +264,7 @@ namespace BudgetExecution
                 return null;
             }
         }
+
         public static void Insert(Source source, Provider provider, Dictionary<string, object> p)
         {
             try
@@ -248,6 +287,7 @@ namespace BudgetExecution
                 MessageBox.Show(ex.Message + ex.StackTrace);
             }
         }
+
         public static void Update(Source source, Provider provider, Dictionary<string, object> param)
         {
             try
@@ -267,6 +307,7 @@ namespace BudgetExecution
                 MessageBox.Show(ex.Message + ex.StackTrace);
             }
         }
+
         public static void Delete(Source source, Provider provider, Dictionary<string, object> param)
         {
             try

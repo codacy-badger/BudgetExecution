@@ -1,13 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Linq;
-using System.Windows.Forms;
-
-
-
-namespace BudgetExecution
+﻿namespace BudgetExecution
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Data;
+    using System.Linq;
+    using System.Windows.Forms;
+
     public class FTE : PRC, IPRC
     {
         public FTE() : base()
@@ -18,27 +16,43 @@ namespace BudgetExecution
         {
             FteParameter = GetParameter();
         }
+
         public FTE(Source source, Provider provider, Dictionary<string, object> param)
         {
             DbData = new DataBuilder(source, provider, param);
             Metric = new PrcMetric(DbData);
             Table = DbData.Table;
         }
+
         // PROPERTIES
         DataBuilder DbData { get; }
+
         PrcMetric Metric { get; }
+
         public DataTable Table { get; }
+
         public Tuple<DataTable, PRC[], decimal, int> AllocationData { get; }
+
         public PRC[] Data { get; }
+
         public Dictionary<string, string[]> DataElement { get; }
+
         public DataSet E6 { get; }
+
         public Dictionary<string, decimal> FundData { get; }
+
         public Dictionary<string, decimal> GoalInfo { get; }
+
         public Dictionary<string, decimal> NpmData { get; }
+
         public Dictionary<string, decimal> ObjectiveData { get; }
+
         public Dictionary<string, decimal> ProgramData { get; }
+
         public Dictionary<string, decimal> ProjectData { get; }
+
         BOC IPRC.BOC { get; }
+
         private Dictionary<string, object> FteParameter { get; set; }
 
         // METHODS
@@ -54,6 +68,7 @@ namespace BudgetExecution
                 return null;
             }
         }
+
         public decimal GetAverage(DataTable table)
         {
             try
@@ -66,6 +81,7 @@ namespace BudgetExecution
                 return -1M;
             }
         }
+
         public string[] GetCodes(DataTable table, string column)
         {
             try
@@ -78,6 +94,7 @@ namespace BudgetExecution
                 return null;
             }
         }
+
         public int GetCount(DataTable table)
         {
             try
@@ -90,6 +107,7 @@ namespace BudgetExecution
                 return -1;
             }
         }
+
         public Dictionary<string, string[]> GetDataElements(DataTable table)
         {
             var data = new Dictionary<string, string[]>();
@@ -103,6 +121,7 @@ namespace BudgetExecution
             if (data.ContainsKey("Amount")) data.Remove("Amount");
             return data;
         }
+
         public Tuple<DataTable, PRC[], decimal, int> GetDataValues(DataTable table, string column, string filter)
         {
             try
@@ -116,11 +135,13 @@ namespace BudgetExecution
                 return null;
             }
         }
+
         public decimal[] GetMetrics(DataTable table)
         {
             var count = GetCount(table);
             return new decimal[] { GetTotal(table), (decimal)count, GetAverage(table) };
         }
+
         public Dictionary<string, decimal[]> GetMetrics(DataTable table, string[] list, string column)
         {
             try
@@ -143,6 +164,7 @@ namespace BudgetExecution
                 return null;
             }
         }
+
         public Dictionary<string, decimal[]> GetMetrics(DataTable table, string column, string filter)
         {
             try
@@ -166,6 +188,7 @@ namespace BudgetExecution
                 return null;
             }
         }
+
         public PRC[] GetPrcArray(DataTable table)
         {
             try
@@ -178,6 +201,7 @@ namespace BudgetExecution
                 return null;
             }
         }
+
         public decimal GetTotal(DataTable table)
         {
             try
@@ -190,6 +214,7 @@ namespace BudgetExecution
                 return -1M;
             }
         }
+
         public Dictionary<string, decimal> GetTotals(DataTable table, string column, string filter)
         {
             try
@@ -212,6 +237,7 @@ namespace BudgetExecution
                 return null;
             }
         }
+
         public Dictionary<string, decimal> GetTotals(DataTable table, string[] filters, string column)
         {
             try
@@ -235,4 +261,4 @@ namespace BudgetExecution
         }
     }
 }
-    
+

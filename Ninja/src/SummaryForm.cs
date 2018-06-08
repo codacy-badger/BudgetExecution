@@ -1,19 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Windows.Forms;
-using MetroFramework.Controls;
-using MetroSet_UI.Controls;
-using Syncfusion.Windows.Forms.Chart;
-using Syncfusion.Windows.Forms.Tools;
-using Budget.Ninja.Data;
-using MetroForm = Syncfusion.Windows.Forms.MetroForm;
-using MakarovDev.ExpandCollapsePanel;
-
-namespace BudgetExecution
+﻿namespace BudgetExecution
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Data;
+    using System.Drawing;
+    using System.Linq;
+    using System.Windows.Forms;
+    using MakarovDev.ExpandCollapsePanel;
+    using MetroSet_UI.Controls;
+    using Syncfusion.Windows.Forms.Chart;
+    using Syncfusion.Windows.Forms.Tools;
+    using MetroForm = Syncfusion.Windows.Forms.MetroForm;
+
     public partial class SummaryForm : MetroForm
     {
         // CONSTRUCTORS
@@ -21,6 +19,7 @@ namespace BudgetExecution
         {
             InitializeComponent();
         }
+
         public SummaryForm(string rc)
         {
             InitializeComponent();
@@ -41,6 +40,7 @@ namespace BudgetExecution
             TabNames = GetTabNames();
             GridRefreshButton.Click += GridRefreshButton_OnClick;
         }
+
         public SummaryForm(Source source)
         {
             InitializeComponent();
@@ -95,33 +95,60 @@ namespace BudgetExecution
                 SummaryTabControl.SelectedIndexChanged += SummaryTabPage_TabSelected;
             }
         }
+
         // PROPERTIES
         public Source Source { get; }
+
         public Dictionary<string, object> Parameter { get; set; }
+
         public DivisionAuthority D6 { get; }
+
         public DataBuilder DbData { get; }
+
         public DataTable Table { get; set; }
+
         public PrcMetric Metric { get; set; }
+
         public ChartSeriesType ChartType { get; set; }
+
         public PrcField ChartPrcField { get; set; }
+
         public string ChartFilter { get; set; }
+
         public string Division { get; set; }
+
         public PrcField ChartGroup { get; set; }
+
         public Dictionary<string, string[]> ProgramElements { get; }
+
         public string[] ChartMainTitle { get; set; }
+
         public string[] ChartAxisTitle { get; set; }
+
         public int CurrentTabIndex { get; set; }
+
         public MetroSetComboBox GridFilterControl1 { get; set; }
+
         public MetroSetComboBox GridFilterControl2 { get; set; }
+
         public MetroSetComboBox GridFilterControl3 { get; set; }
+
         public MetroSetComboBox ChartFilterControl1 { get; set; }
+
         public MetroSetComboBox ChartFilterControl2 { get; set; }
+
         public MetroSetComboBox ChartFilterControl3 { get; set; }
+
         public MetroSetComboBox ChartFilterControl4 { get; set; }
+
         public ExpandCollapsePanel Expander1 { get; set; }
+
         public ExpandCollapsePanel Expander2 { get; set; }
+
         public Stat Measure { get; set; }
+
         private TabPageAdv[] Tab { get; set; }
+
         private string[] TabNames { get; set; }
 
         // METHODS
@@ -151,6 +178,7 @@ namespace BudgetExecution
                 MessageBox.Show(ex.Message + ex.StackTrace);
             }
         }
+
         private void GridFilterControl1_ItemSelected(object sender, EventArgs e)
         {
             try
@@ -170,6 +198,7 @@ namespace BudgetExecution
                 MessageBox.Show(ex.Message + ex.StackTrace);
             }
         }
+
         private void GridFilterControl2_ItemSelected(object sender, EventArgs e)
         {
             try
@@ -190,6 +219,7 @@ namespace BudgetExecution
                 MessageBox.Show(ex.Message + ex.StackTrace);
             }
         }
+
         private void GridFilterControl3_ItemSelected(object sender, EventArgs e)
         {
             try
@@ -205,6 +235,7 @@ namespace BudgetExecution
                 MessageBox.Show(ex.Message + ex.StackTrace);
             }
         }
+
         private void ConfigureGridBindingFilter()
         {
             try
@@ -221,6 +252,7 @@ namespace BudgetExecution
                 MessageBox.Show(ex.Message + ex.StackTrace);
             }
         }
+
         private void PopulateGridBocFilterItems()
         {
             try
@@ -238,6 +270,7 @@ namespace BudgetExecution
                 MessageBox.Show(ex.Message + ex.StackTrace);
             }
         }
+
         private void PopulateGridAccountFilterItems()
         {
             try
@@ -254,6 +287,7 @@ namespace BudgetExecution
                 MessageBox.Show(ex.Message + ex.StackTrace);
             }
         }
+
         private decimal GetCount(string filter)
         {
             try
@@ -267,6 +301,7 @@ namespace BudgetExecution
                 return -1;
             }
         }
+
         private decimal GetCount(string filter1, string filter2)
         {
             try
@@ -280,6 +315,7 @@ namespace BudgetExecution
                 return -1;
             }
         }
+
         private void PopulateFilterBoxItems(MetroSetComboBox cmbox, PrcField prcfilter)
         {
             try
@@ -295,6 +331,7 @@ namespace BudgetExecution
                 MessageBox.Show(ex.Message + ex.StackTrace);
             }
         }
+
         private void PopulateFilterBoxItems(MetroSetComboBox cmbox, int i)
         {
             try
@@ -311,6 +348,7 @@ namespace BudgetExecution
                 MessageBox.Show(ex.Message + ex.StackTrace);
             }
         }
+
         private void DefineVisisbleDataColumns(DataGridView dgv)
         {
             try
@@ -331,6 +369,7 @@ namespace BudgetExecution
                 MessageBox.Show(ex.Message + ex.StackTrace);
             }
         }
+
         private void ConfigureGridFilterButtons(FlowLayoutPanel panel, string[] list)
         {
             try
@@ -360,6 +399,7 @@ namespace BudgetExecution
                 MessageBox.Show(ex.Message + ex.StackTrace);
             }
         }
+
         private void ConfigureTextBoxBindings()
         {
             try
@@ -378,6 +418,7 @@ namespace BudgetExecution
                 MessageBox.Show(ex.Message + ex.StackTrace);
             }
         }
+
         private decimal CalculateTotal(string filter)
         {
             try
@@ -391,6 +432,7 @@ namespace BudgetExecution
                 return -1;
             }
         }
+
         private decimal CalculateTotal(string filter1, string filter2)
         {
             try
@@ -405,6 +447,7 @@ namespace BudgetExecution
                 return -1;
             }
         }
+
         private void GridRefreshButton_OnClick(object sender, EventArgs e)
         {
             if (DbData != null)
@@ -430,6 +473,7 @@ namespace BudgetExecution
                 }
             }
         }
+
         string[] GetTabNames()
         {
             try
@@ -449,12 +493,14 @@ namespace BudgetExecution
                 return null;
             }
         }
+
         ChartSeriesType GetChartType(MetroSetComboBox ctb)
         {
             if (ctb.SelectedItem == null)
                 return ChartSeriesType.Column;
             return (ChartSeriesType)Enum.Parse(typeof(ChartSeriesType), ctb.SelectedItem.ToString());
         }
+
         Dictionary<string, string> GetFilters()
         {
             try
@@ -488,6 +534,7 @@ namespace BudgetExecution
                 return null;
             }
         }
+
         void ChartFilterControl1_ItemSelected(object sender, EventArgs e)
         {
             ChartFilterControl1 = sender as MetroSetComboBox;
@@ -495,6 +542,7 @@ namespace BudgetExecution
             if (Expander2.IsExpanded == true)
                 Expander2.IsExpanded = false;
         }
+
         void ChartFilterControl2_ItemSelected(object sender, EventArgs e)
         {
             try
@@ -509,6 +557,7 @@ namespace BudgetExecution
                 MessageBox.Show(ex.Message + ex.StackTrace);
             }
         }
+
         void ChartFilterControl3_ItemSelected(object sender, EventArgs e)
         {
             try
@@ -522,6 +571,7 @@ namespace BudgetExecution
                 MessageBox.Show(ex.Message + ex.StackTrace);
             }
         }
+
         void ChartFilterControl4_ItemSelected(object sender, EventArgs e)
         {
             try
@@ -595,6 +645,7 @@ namespace BudgetExecution
                 MessageBox.Show(ex.Message + ex.StackTrace);
             }
         }
+
         void AssignChartFIlterControls(MetroSetComboBox filter1, MetroSetComboBox filter2, MetroSetComboBox filter3, MetroSetComboBox filter4)
         {
             ChartFilterControl1 = filter1;
@@ -606,6 +657,7 @@ namespace BudgetExecution
             ChartFilterControl4 = filter4;
             ChartFilterControl4.SelectionChangeCommitted += ChartFilterControl4_ItemSelected;
         }
+
         void AssignChartExpanders(ExpandCollapsePanel panel1, ExpandCollapsePanel panel2)
         {
             try
@@ -619,6 +671,7 @@ namespace BudgetExecution
             }
 
         }
+
         void Expander_Click(object sender, EventArgs e)
         {
             var exp = sender as ExpandCollapsePanel;
@@ -654,12 +707,13 @@ namespace BudgetExecution
                     break;
             }
         }
+
         void SummaryTabPage_TabSelected(object sender, EventArgs e)
         {
             try
             {
                 SummaryTabControl = sender as TabControlAdv;
-                CurrentTabIndex = SummaryTabControl.SelectedIndex;                  
+                CurrentTabIndex = SummaryTabControl.SelectedIndex;
                 switch (CurrentTabIndex)
                 {
                     case 0:
@@ -741,6 +795,7 @@ namespace BudgetExecution
                 MessageBox.Show(ex.Message + ex.StackTrace);
             }
         }
+
         string[] GetTitle(TabControlAdv tab, MetroSetComboBox filter)
         {
             try
@@ -767,6 +822,7 @@ namespace BudgetExecution
                 return null;
             }
         }
+
         string[] GetTitle(TabControlAdv tab, MetroSetComboBox filter1, MetroSetComboBox filter2, MetroSetComboBox filter3)
         {
             try
@@ -795,6 +851,7 @@ namespace BudgetExecution
                 return null;
             }
         }
+
         private Dictionary<string, object> GetSelectedRowParameter(DataGridView dgv)
         {
             try
@@ -821,5 +878,5 @@ namespace BudgetExecution
             }
         }
 
-    }      
+    }
 }

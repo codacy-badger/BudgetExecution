@@ -1,8 +1,8 @@
-﻿using System.Collections.Generic;
-using System.Windows.Forms;
-
-namespace BudgetExecution
+﻿namespace BudgetExecution
 {
+    using System.Collections.Generic;
+    using System.Windows.Forms;
+
     public class NPM
     {
         // CONSTRUCTORS
@@ -10,6 +10,7 @@ namespace BudgetExecution
         {
             Code = code.ToString();
         }
+
         public NPM(string code)
         {
             Code = code;
@@ -17,8 +18,11 @@ namespace BudgetExecution
 
         // PROPERTIES
         public string Code { get; }
+
         public string Name { get; set; }
+
         public string RPIO { get; set; }
+
         public string Title { get; set; }
 
         // METHODS

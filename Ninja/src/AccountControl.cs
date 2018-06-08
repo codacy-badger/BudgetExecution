@@ -1,7 +1,7 @@
-﻿using System.Windows.Forms;
-
-namespace Ninja.Data
+﻿namespace Ninja.Data
 {
+    using System.Windows.Forms;
+
     public partial class AccountControl : UserControl
     {
         public AccountControl()

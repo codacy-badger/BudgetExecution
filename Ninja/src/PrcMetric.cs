@@ -1,18 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Linq;
-using System.Windows.Forms;
-
-namespace BudgetExecution
+﻿namespace BudgetExecution
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Data;
+    using System.Linq;
+    using System.Windows.Forms;
+
     public class PrcMetric
     {
         // CONSTRUCTORS
         public PrcMetric()
         {
         }
+
         public PrcMetric(DataBuilder data)
         {
             DbData = data;
@@ -48,6 +48,7 @@ namespace BudgetExecution
                 DivisionMetrics = GetMetrics(table, PrcField.RC);
             }
         }
+
         public PrcMetric(DataBuilder data, PrcField prcfilter, string filter)
         {
             DbData = data;
@@ -83,6 +84,7 @@ namespace BudgetExecution
                 DivisionMetrics = GetMetrics(table, PrcField.RC);
             }
         }
+
         public PrcMetric(DataTable table, PrcField prcfilter, string filter)
         {
             Table = Info.FilterTable(table, prcfilter, filter);
@@ -109,27 +111,49 @@ namespace BudgetExecution
 
         // PROPERTIES
         public DataBuilder DbData { get; }
+
         public decimal Average { get; set; }
+
         public int Count { get; }
+
         public double[] Metrics { get; }
+
         public DataTable Table { get; set; }
+
         public decimal Total { get; }
+
         public Dictionary<string, double[]> BocMetrics { get; set; }
+
         public Dictionary<string, decimal> BocTotals { get; }
+
         public Dictionary<string, double[]> DivisionMetrics { get; set; }
+
         public Dictionary<string, decimal> DivisionTotals { get; set; }
+
         public Dictionary<string, double[]> FundMetrics { get; set; }
+
         public Dictionary<string, decimal> FundTotals { get; set; }
+
         public Dictionary<string, double[]> GoalMetrics { get; set; }
+
         public Dictionary<string, decimal> GoalTotals { get; set; }
+
         public Dictionary<string, double[]> NpmMetrics { get; set; }
+
         public Dictionary<string, decimal> NpmTotals { get; set; }
+
         public Dictionary<string, double[]> ObjectiveMetrics { get; set; }
+
         public Dictionary<string, decimal> ObjectiveTotals { get; set; }
+
         public Dictionary<string, double[]> ProgramAreaMetrics { get; set; }
+
         public Dictionary<string, decimal> ProgramAreaTotals { get; set; }
+
         public Dictionary<string, string[]> ProgramElements { get; set; }
+
         public Dictionary<string, double[]> ProgramProjectMetrics { get; set; }
+
         public Dictionary<string, decimal> ProgramProjectTotals { get; set; }
 
         // METHODS
@@ -147,6 +171,7 @@ namespace BudgetExecution
                 return -1M;
             }
         }
+
         public decimal GetTotals(DataTable table)
         {
             try
@@ -159,6 +184,7 @@ namespace BudgetExecution
                 return -1M;
             }
         }
+
         public string[] GetCodes(DataTable table, string column)
         {
             try
@@ -171,10 +197,12 @@ namespace BudgetExecution
                 return null;
             }
         }
+
         public double[] GetMetrics(DataTable table)
         {
             return new double[] { (double)GetTotals(table), (double)GetCount(table), (double)GetAverage(table), (double)GetTotals(table) / (double)DbData.Total };
         }
+
         public PRC[] GetPrcArray(DataTable table)
         {
             try
@@ -187,6 +215,7 @@ namespace BudgetExecution
                 return null;
             }
         }
+
         public Dictionary<string, string[]> GetProgramElements(DataTable table)
         {
             var data = new Dictionary<string, string[]>();
@@ -201,6 +230,7 @@ namespace BudgetExecution
             if (data.ContainsKey("P6_ID")) data.Remove("P6_ID");
             return data;
         }
+
         public int GetCount(DataTable table)
         {
             try
@@ -213,6 +243,7 @@ namespace BudgetExecution
                 return -1;
             }
         }
+
         public Dictionary<string, decimal> GetDataTotals(DataTable table, PrcField prcfilter)
         {
             try
@@ -233,6 +264,7 @@ namespace BudgetExecution
                 return null;
             }
         }
+
         internal Dictionary<string, double[]> GetChartMetrics(DataTable table, PrcField prcfilter)
         {
             try
@@ -252,6 +284,7 @@ namespace BudgetExecution
                 return null;
             }
         }
+
         internal Dictionary<string, double> GetChartTotals(DataTable table, PrcField prcfilter)
         {
             try
@@ -272,6 +305,7 @@ namespace BudgetExecution
                 return null;
             }
         }
+
         private Dictionary<string, double[]> GetMetrics(DataTable table, PrcField prcfilter)
         {
             try

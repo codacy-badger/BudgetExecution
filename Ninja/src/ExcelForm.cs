@@ -1,11 +1,9 @@
-using System;
-using Syncfusion.Windows.Forms;
-using Syncfusion.Windows.Forms.Spreadsheet;
-
-
-
 namespace BudgetExecution
 {
+    using System;
+    using Syncfusion.Windows.Forms;
+    using Syncfusion.Windows.Forms.Spreadsheet;
+
     public partial class ExcelForm : MetroForm
     {
         public ExcelForm()
@@ -15,6 +13,7 @@ namespace BudgetExecution
         }
 
         public DivisionAuthority Budget { get; set; }
+
         public Spreadsheet Report { get; set; }
 
         internal void GetReport()

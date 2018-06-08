@@ -1,13 +1,14 @@
-﻿using System.Data;
-
-namespace BudgetExecution
+﻿namespace BudgetExecution
 {
+    using System.Data;
+
     public class Reprogramming
     {
         // CONSTRUCTORS
         public Reprogramming()
         {
         }
+
         public Reprogramming(string bl, string docType, string rpio, string org, string rc, string bfy, string fund,
                             string tcn, string qtr, string date, string code, string progproj, string ppn, string npmcode,
                             string fromto, string boc, decimal amount)
@@ -31,6 +32,7 @@ namespace BudgetExecution
             BOC = new BOC(boc);
             Amount = amount;
         }
+
         public Reprogramming(DataRow dr)
         {
             BudgetLevel = dr["BudgetLevel"].ToString();
@@ -55,22 +57,39 @@ namespace BudgetExecution
 
         // PROPERTIES
         public Account Account { get; }
+
         public decimal Amount { get; }
+
         public string BFY { get; }
+
         public BOC BOC { get; }
+
         public string BudgetLevel { get; }
+
         public string Code { get; }
+
         public string Date { get; }
+
         public string DocType { get; }
+
         public string FromTo { get; }
+
         public Fund Fund { get; }
+
         public string NpmCode { get; }
+
         public Org Org { get; }
+
         public string ProgramProjectCode { get; }
+
         public string ProgramProjectName { get; }
+
         public string Qtr { get; }
+
         public RC RC { get; }
+
         public string RPIO { get; }
+
         public string TCN { get; }
     }
 }

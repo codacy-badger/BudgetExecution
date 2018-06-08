@@ -1,10 +1,8 @@
-﻿
-
-using System.Collections.Generic;
-using System.Windows.Forms;
-
-namespace BudgetExecution
+﻿namespace BudgetExecution
 {
+    using System.Collections.Generic;
+    using System.Windows.Forms;
+
     public class RC
     {
         // CONSTRUCTORS
@@ -17,7 +15,9 @@ namespace BudgetExecution
 
         // PROPERTIES
         public string Code { get; }
+
         public string ID { get; }
+
         public string Name { get; }
 
         // METHODS
@@ -33,6 +33,7 @@ namespace BudgetExecution
                 return null;
             }
         }
+
         public override string ToString()
         {
             return Code;
@@ -40,4 +41,4 @@ namespace BudgetExecution
 
     }
 }
-    
+

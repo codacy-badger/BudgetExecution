@@ -48,14 +48,23 @@ namespace Budget
                 public string EmployId { get; }
 
                 public string First { get; }
+
                 public string HrOrgCode { get; }
+
                 public string HrOrgName { get; }
+
                 public string Last { get; }
+
                 public double Leave { get; }
+
                 public string LeaveType { get; }
+
                 public double Projected { get; }
+
                 public double UseLose { get; }
+
                 public double Work { get; }
+
                 public string WorkCode { get; }
             }
         }

@@ -1,23 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Windows.Forms;
-using Ninja.Data;
-using Syncfusion.Windows.Forms.Chart;
-using Syncfusion.Windows.Forms.Tools;
-using Syncfusion.Windows.Forms;
-using System.IO;
-using System.Drawing;
-using Ninja.Data.Forms;
-
-
-namespace BudgetExecution
+﻿namespace BudgetExecution
 {
+    using System;
+    using System.Drawing;
+    using System.IO;
+    using System.Windows.Forms;
+    using Syncfusion.Windows.Forms;
+    using Syncfusion.Windows.Forms.Tools;
+
     public partial class Selector : MetroForm
     {
         // CONSTRUCTORS
         public Selector()
         {
         }
+
         public Selector(string path)
         {
             InitializeComponent();
@@ -29,8 +25,11 @@ namespace BudgetExecution
 
         // PROPERTIES
         string DivisionImages { get; set; }
+
         string SummaryImages { get; set; }
+
         public FormData NinjaData { get; set; }
+
         string[] Images { get; set; }
 
         // METHODS
@@ -53,9 +52,11 @@ namespace BudgetExecution
             }
             ViewerCarousel.ImageList = ilist;
         }
+
         private void Selector_Load(object sender, EventArgs e)
         {
         }
+
         private void ViewerCarousel_OnImageSelected(object sender, EventArgs e)
         {
             var i = ViewerCarousel.ActiveImage.Tag.ToString();
@@ -67,7 +68,7 @@ namespace BudgetExecution
             }
             else
             {
-                
+
                 var b = new SummaryForm(i);
                 b.Show();
             }

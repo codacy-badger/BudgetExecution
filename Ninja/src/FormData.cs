@@ -1,17 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Data.SQLite;
-using System.Drawing;
-using System.Linq;
-using System.Windows.Forms;
-using MetroSet_UI.Controls;
-using Syncfusion.Windows.Forms;
-using Syncfusion.Windows.Forms.Chart;
-using Syncfusion.Windows.Forms.Tools;
-
-namespace BudgetExecution
+﻿namespace BudgetExecution
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Data;
+    using System.Drawing;
+    using System.Linq;
+    using System.Windows.Forms;
+    using MetroSet_UI.Controls;
+    using Syncfusion.Windows.Forms;
+    using Syncfusion.Windows.Forms.Chart;
+
     public class FormData
     {
         // CONSTRUCTORS
@@ -32,26 +30,47 @@ namespace BudgetExecution
 
         // PROPERTIES
         public Stat Measure { get; set; }
+
         public ChartSeriesType ChartType { get; set; }
+
         public DataBuilder Data { get; set; }
+
         public BindingSource BindingSource { get; set; }
+
         public DataSet DataSet { get; set; }
+
         public DataTable DataTable { get; set; }
+
         public PrcMetric DataMetric { get; set; }
+
         public ChartControl Chart { get; set; }
+
         public ChartDataBindModel ChartModel { get; set; }
+
         public Control GridFilterControl1 { get; set; }
+
         public Control GridFilterControl2 { get; set; }
+
         public Control GridFilterControl3 { get; set; }
+
         public Control ChartFilterControl1 { get; set; }
+
         public Control ChartFilterControl2 { get; set; }
+
         public Control ChartFilterControl3 { get; set; }
+
         public int Count { get; set; }
+
         public DataGridView DataGrid { get; set; }
+
         public decimal[] Metrics { get; set; }
+
         public BindingNavigator Navigator { get; set; }
+
         public FlowLayoutPanel Panel { get; set; }
+
         public Dictionary<string, object> SearchParameter { get; set; }
+
         internal Func<DataTable, PrcField, string> TableFilter { get; set; }
 
         // METHODS
@@ -67,6 +86,7 @@ namespace BudgetExecution
                 return -1M;
             }
         }
+
         public string[] GetCodes(DataTable table, string column)
         {
             try
@@ -79,6 +99,7 @@ namespace BudgetExecution
                 return null;
             }
         }
+
         public Dictionary<string, decimal> GetDataTotals(DataTable table, string column, string filter)
         {
             try
@@ -100,6 +121,7 @@ namespace BudgetExecution
                 return null;
             }
         }
+
         public PRC[] GetPrcArray(DataTable table)
         {
             try
@@ -112,6 +134,7 @@ namespace BudgetExecution
                 return null;
             }
         }
+
         public Dictionary<string, string[]> GetProgramElements(DataTable table)
         {
             try
@@ -134,6 +157,7 @@ namespace BudgetExecution
                 return null;
             }
         }
+
         public DataTable GetTable(DataTable table, string column, string filter)
         {
             try
@@ -146,6 +170,7 @@ namespace BudgetExecution
                 return null;
             }
         }
+
         public decimal GetTotal(DataTable table)
         {
             try
@@ -158,6 +183,7 @@ namespace BudgetExecution
                 return -1M;
             }
         }
+
         public Dictionary<string, decimal> GetTotals(DataTable table, string[] filters, string column)
         {
             try
@@ -178,6 +204,7 @@ namespace BudgetExecution
                 return null;
             }
         }
+
         internal void FilterControlButton_OnClick(object sender, EventArgs e)
         {
             try
@@ -193,6 +220,7 @@ namespace BudgetExecution
                 MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
             }
         }
+
         internal void FundControlListBox_OnSelect(object sender, EventArgs e)
         {
             try
@@ -207,6 +235,7 @@ namespace BudgetExecution
                 MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
             }
         }
+
         internal void BindDataGridAndNavigator(DataTable table, DataGridView dg, BindingSource bs, BindingNavigator bn)
         {
             try
@@ -221,6 +250,7 @@ namespace BudgetExecution
                 MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
             }
         }
+
         internal void BindTextBox(BindingSource bs, TextBox tb, string field)
         {
             try
@@ -235,6 +265,7 @@ namespace BudgetExecution
                 MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
             }
         }
+
         internal void BocButton_OnSelect(object sender, EventArgs e)
         {
             try
@@ -249,6 +280,7 @@ namespace BudgetExecution
                 MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
             }
         }
+
         internal void BocListBoxItem_OnSelect(object sender, EventArgs e)
         {
             try
@@ -263,6 +295,7 @@ namespace BudgetExecution
                 MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
             }
         }
+
         internal void ConfigurePrimaryFilterControlButton(DataTable table, Control fitlerControl, PrcField prc)
         {
             try
@@ -276,6 +309,7 @@ namespace BudgetExecution
                 MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
             }
         }
+
         internal void ConfigurePrimaryFilterControlBox(DataTable table, Control filterControl, PrcField prc)
         {
             try
@@ -289,6 +323,7 @@ namespace BudgetExecution
                 MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
             }
         }
+
         internal void PopulateFilterBox(FlowLayoutPanel fitlerControl, DataTable table, PrcField filter)
         {
             try
@@ -302,6 +337,7 @@ namespace BudgetExecution
                 MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
             }
         }
+
         internal void PopulateFilterButtons(Control control, string[] list)
         {
             try
@@ -331,6 +367,7 @@ namespace BudgetExecution
                 MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
             }
         }
+
         internal void PopulateFilterListItems(Control control, string[] list)
         {
             try
@@ -347,6 +384,7 @@ namespace BudgetExecution
                 MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
             }
         }
+
         internal void ConfigureFormSettings(MetroForm form)
         {
             try
@@ -371,6 +409,7 @@ namespace BudgetExecution
                 MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
             }
         }
+
         internal void ConfigureDataGridViewVisibleColumns(DataGridView dgv)
         {
             try
@@ -391,6 +430,7 @@ namespace BudgetExecution
                 MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
             }
         }
+
         internal void ReturnNavigateButton_OnClick(object sender, EventArgs e)
         {
             try
@@ -403,6 +443,7 @@ namespace BudgetExecution
                 MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
             }
         }
+
         internal Dictionary<string, object> GetCurrentRowPrcParameter(DataGridView dgv)
         {
             try
