@@ -135,8 +135,7 @@ namespace BudgetExecution
 
         public Tuple<string[], string[], string[], string[], string[]> GetCodes()
         {
-            return new Tuple<string[], string[], string[], string[], string[]>(ProgramElements["BOC"],
-                ProgramElements["Code"], ProgramElements["NPM"], ProgramElements["ProgramArea"], ProgramElements["ProgramProjectCode"]);
+            return new Tuple<string[], string[], string[], string[], string[]>(ProgramElements["BOC"], ProgramElements["Code"], ProgramElements["NPM"], ProgramElements["ProgramArea"], ProgramElements["ProgramProjectCode"]);
         }
 
         public int GetCount(DataTable table)
@@ -348,21 +347,23 @@ namespace BudgetExecution
         internal FTE[] GetFTE(DataTable table)
         {
             if (table.Rows.Count > 0 && BocCodes.Contains("17"))
-            try
             {
-                var fteTable = table.AsEnumerable().Where(p => p.Field<string>("BOC").Equals("17")).Select(p => p).CopyToDataTable();
-                var fteArray = new FTE[fteTable.Rows.Count];
-                for (int i = 0; i < fteTable.Rows.Count; i++)
+                try
+                {
+                    var fteTable = table.AsEnumerable().Where(p => p.Field<string>("BOC").Equals("17")).Select(p => p).CopyToDataTable();
+                    var fteArray = new FTE[fteTable.Rows.Count];
+                    for (int i = 0; i < fteTable.Rows.Count; i++)
                     {
                         fteArray[i] = new FTE(fteTable.Rows[i]);
                     }
 
                     return fteArray;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message.ToString() + $"Target Method:\n{ex.TargetSite}\n" + $"Stack:\n{ex.StackTrace}");
-                return null;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message.ToString() + $"Target Method:\n{ex.TargetSite}\n" + $"Stack:\n{ex.StackTrace}");
+                    return null;
+                }
             }
 
             return null;

@@ -8,7 +8,6 @@ namespace BudgetExecution
     using System.Collections.Generic;
     using System.Data;
 
-
     public interface IBudgetAuthority
     {
         // PROPERTIES

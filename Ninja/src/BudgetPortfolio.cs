@@ -21,7 +21,6 @@ namespace BudgetExecution
             DocumentQuery = new Query(Source.BudgetDocument, Provider.SQLite, param);
         }
 
-
         public List<string> BudgetList { get; set; }
 
         public Query DocumentQuery { get; set; }

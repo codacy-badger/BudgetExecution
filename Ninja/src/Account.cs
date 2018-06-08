@@ -44,7 +44,7 @@ namespace BudgetExecution
             Parameter = GetAccountParameter(code);
             Data = GetDataRecords(source, provider, Parameter);
             DataRecord = Data.AsEnumerable().First();
-            Goal = Code.Substring(0,1);
+            Goal = Code.Substring(0, 1);
             Objective = Code.Substring(1, 2);
             NpmCode = Code.Substring(3, 1);
             ProgramProjectCode = Code.Substring(4, 2);

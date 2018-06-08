@@ -8,56 +8,6 @@ namespace BudgetExecution
 
     public class Obligation
     {
-        #region Properties
-
-        public Account Account { get; set; }
-
-        public string BFY { get; set; }
-
-        public BOC BOC { get; set; }
-
-        public string Code { get; set; }
-
-        public decimal CommitmentAmount { get; set; }
-
-        public DataBuilder Data { get; set; }
-
-        public string DCNprefix { get; set; }
-
-        public string DocType { get; set; }
-
-        public string DocumentControlNumber { get; set; }
-
-        public string FOC { get; set; }
-
-        public string FocName { get; set; }
-
-        public Fund Fund { get; set; }
-
-        public string GrantNumber { get; set; }
-
-        public string NpmCode { get; set; }
-
-        public decimal ObligationAmount { get; set; }
-
-        public Org Org { get; set; }
-
-        public string PurchaseRequestNumber { get; set; }
-
-        public RC RC { get; set; }
-
-        public string RPIO { get; set; }
-
-        public string SiteProjectCode { get; set; }
-
-        public string SiteProjectName { get; set; }
-
-        public string System { get; set; }
-
-        #endregion Properties
-
-        #region Constructors
-
         public Obligation()
         {
         }
@@ -114,6 +64,48 @@ namespace BudgetExecution
             ObligationAmount = decimal.Parse(dr["ObligationAmount"].ToString());
         }
 
-        #endregion Constructors
+        public Account Account { get; set; }
+
+        public string BFY { get; set; }
+
+        public BOC BOC { get; set; }
+
+        public string Code { get; set; }
+
+        public decimal CommitmentAmount { get; set; }
+
+        public DataBuilder Data { get; set; }
+
+        public string DCNprefix { get; set; }
+
+        public string DocType { get; set; }
+
+        public string DocumentControlNumber { get; set; }
+
+        public string FOC { get; set; }
+
+        public string FocName { get; set; }
+
+        public Fund Fund { get; set; }
+
+        public string GrantNumber { get; set; }
+
+        public string NpmCode { get; set; }
+
+        public decimal ObligationAmount { get; set; }
+
+        public Org Org { get; set; }
+
+        public string PurchaseRequestNumber { get; set; }
+
+        public RC RC { get; set; }
+
+        public string RPIO { get; set; }
+
+        public string SiteProjectCode { get; set; }
+
+        public string SiteProjectName { get; set; }
+
+        public string System { get; set; }
     }
 }

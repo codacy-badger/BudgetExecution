@@ -110,7 +110,7 @@ namespace BudgetExecution
                 string vals = string.Empty;
                 foreach (KeyValuePair<string, object> kvp in param)
                 {
-                    vals += $"{ kvp.Key} = '{kvp.Value.ToString()}' AND ";
+                    vals += $"{kvp.Key} = '{kvp.Value.ToString()}' AND ";
                 }
 
                 vals = vals.Trim().Substring(0, vals.Length - 4);

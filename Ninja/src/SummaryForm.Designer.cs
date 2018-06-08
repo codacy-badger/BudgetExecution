@@ -1,17 +1,9 @@
 ﻿
-using Budget.Ninja.Data;
+
 using Syncfusion.Windows.Forms.Chart;
 using Syncfusion.Windows.Forms.Tools;
-using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Drawing;
-using System.IO;
-using System.Linq;
 using System.Windows.Forms;
 using MetroSet_UI.Controls;
-using MetroFramework.Controls;
-using MetroForm = Syncfusion.Windows.Forms.MetroForm;
 
 
 namespace BudgetExecution
