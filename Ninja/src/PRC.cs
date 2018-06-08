@@ -1,4 +1,8 @@
-﻿namespace BudgetExecution
+﻿// <copyright file="PRC.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
+
+namespace BudgetExecution
 {
     using System;
     using System.Collections.Generic;
@@ -210,41 +214,45 @@
         {
             try
             {
-
                 var prc = new Account(source, provider, param["Code"].ToString());
                 if (!param.ContainsKey("FundName") || param["FundName"] == null)
                 {
                     param["FundName"] = prc.FundName;
                 }
+
                 if (!param.ContainsKey("Org") || param["Org"] == null)
                 {
                     param["Org"] = prc.Org;
                 }
+
                 if (!param.ContainsKey("ProgramProject") || param["ProgramProject"] == null)
                 {
                     param["ProgramProject"] = prc.ProgramProjectCode;
                     param["ProgramProjectName"] = prc.ProgramProjectName;
                 }
+
                 if (!param.ContainsKey("ProgramArea") || param["ProgramArea"] == null)
                 {
                     param["ProgramArea"] = prc.ProgramArea;
                     param["ProgramAreaName"] = prc.ProgramAreaName;
                 }
+
                 if (!param.ContainsKey("Goal") || param["Goal"] == null)
                 {
                     param["Goal"] = prc.Goal;
                     param["GoalName"] = prc.GoalName;
                 }
+
                 if (!param.ContainsKey("Objective") || param["Objective"] == null)
                 {
                     param["Objective"] = prc.Objective;
                     param["ObjectiveName"] = prc.ObjectiveName;
                 }
+
                 return param;
             }
             catch (Exception ex)
             {
-
                 MessageBox.Show(ex.Message + ex.StackTrace);
                 return null;
             }
@@ -259,7 +267,6 @@
             }
             catch (Exception ex)
             {
-
                 MessageBox.Show(ex.Message + ex.StackTrace);
                 return null;
             }
@@ -283,7 +290,6 @@
             }
             catch (Exception ex)
             {
-
                 MessageBox.Show(ex.Message + ex.StackTrace);
             }
         }
@@ -303,7 +309,6 @@
             }
             catch (Exception ex)
             {
-
                 MessageBox.Show(ex.Message + ex.StackTrace);
             }
         }
@@ -323,7 +328,6 @@
             }
             catch (Exception ex)
             {
-
                 MessageBox.Show(ex.Message + ex.StackTrace);
             }
         }

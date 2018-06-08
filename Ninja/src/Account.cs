@@ -1,4 +1,8 @@
-﻿namespace BudgetExecution
+﻿// <copyright file="Account.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
+
+namespace BudgetExecution
 {
     using System.Collections.Generic;
     using System.Data;
@@ -10,7 +14,6 @@
         // CONSTRUCTORS
         public Account()
         {
-
         }
 
         public Account(string code)
@@ -139,7 +142,7 @@
                 var data = new DataBuilder(source, provider, param);
                 return data.Table;
             }
-            catch(System.Exception ex)
+            catch (System.Exception ex)
             {
                 MessageBox.Show(ex.Message + ex.StackTrace);
                 return null;

@@ -1,4 +1,8 @@
-﻿namespace BudgetExecution
+﻿// <copyright file="SQLiteQuery.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
+
+namespace BudgetExecution
 {
     using System;
     using System.Collections.Generic;
@@ -89,8 +93,9 @@
                 string vals = string.Empty;
                 foreach (KeyValuePair<string, object> kvp in param)
                 {
-                    vals += $"{ kvp.Key } = '{kvp.Value.ToString()}' AND ";
+                    vals += $"{ kvp.Key} = '{kvp.Value.ToString()}' AND ";
                 }
+
                 vals = vals.Trim().Substring(0, vals.Length - 4);
                 return vals;
             }
@@ -155,6 +160,7 @@
                     case Provider.OleDb:
                         return new SQLiteConnection(@"Data Source = C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\database\OleDb\R6.accdb");
                 }
+
                 return null;
             }
             catch (Exception ex)
@@ -173,16 +179,19 @@
                     SelectStatement = select;
                     return new SQLiteCommand(select, (SQLiteConnection)connection);
                 }
+
                 if (connection is OleDbConnection)
                 {
                     SelectStatement = select;
                     return new OleDbCommand(select, (OleDbConnection)connection);
                 }
+
                 if (connection is SqlConnection)
                 {
                     SelectStatement = select;
                     return new SqlCommand(select, (SqlConnection)connection);
                 }
+
                 return null;
             }
             catch (Exception ex)
@@ -201,16 +210,19 @@
                     SelectStatement = select;
                     return new SQLiteCommand(SelectStatement, (SQLiteConnection)connection);
                 }
+
                 if (connection is OleDbConnection)
                 {
                     SelectStatement = select;
                     return new OleDbCommand(SelectStatement, (OleDbConnection)connection);
                 }
+
                 if (connection is SqlConnection)
                 {
                     SelectStatement = select;
                     return new SqlCommand(SelectStatement, (SqlConnection)connection);
                 }
+
                 return null;
             }
             catch (Exception ex)
@@ -229,16 +241,19 @@
                     SelectStatement = GetSelectParameterString(param);
                     return new SQLiteCommand(SelectStatement, (SQLiteConnection)connection);
                 }
+
                 if (connection is OleDbConnection)
                 {
                     SelectStatement = GetSelectParameterString(param);
                     return new OleDbCommand(SelectStatement, (OleDbConnection)connection);
                 }
+
                 if (connection is SqlConnection)
                 {
                     SelectStatement = GetSelectParameterString(param);
                     return new SqlCommand(SelectStatement, (SqlConnection)connection);
                 }
+
                 return null;
             }
             catch (Exception ex)
@@ -253,11 +268,20 @@
             try
             {
                 if (command is SQLiteCommand)
+                {
                     return new SQLiteDataAdapter((SQLiteCommand)command);
+                }
+
                 if (command is OleDbCommand)
+                {
                     return new OleDbDataAdapter((OleDbCommand)command);
+                }
+
                 if (command is SqlCommand)
+                {
                     return new SqlDataAdapter((SqlCommand)command);
+                }
+
                 return null;
             }
             catch (Exception ex)
@@ -269,15 +293,23 @@
 
         public DbDataReader GetDataReader(IDbCommand command)
         {
-
             try
             {
                 if (command is SQLiteCommand)
+                {
                     return ((SQLiteCommand)command).ExecuteReader();
+                }
+
                 if (command is OleDbCommand)
+                {
                     return ((OleDbCommand)command).ExecuteReader();
+                }
+
                 if (command is SqlCommand)
+                {
                     return ((SqlCommand)command).ExecuteReader();
+                }
+
                 return null;
             }
             catch (Exception ex)
@@ -285,7 +317,6 @@
                 MessageBox.Show("ERROR!: \n" + ex.TargetSite + ex.StackTrace);
                 return null;
             }
-
         }
 
         public DbCommandBuilder GetCommandBuilder(IDbDataAdapter adapter)
@@ -297,16 +328,19 @@
                     CommandBuilder = new SQLiteCommandBuilder(adapter as SQLiteDataAdapter);
                     return CommandBuilder;
                 }
+
                 if (adapter is OleDbDataAdapter)
                 {
                     CommandBuilder = new OleDbCommandBuilder(adapter as OleDbDataAdapter);
                     return CommandBuilder;
                 }
+
                 if (adapter is SqlDataAdapter)
                 {
                     CommandBuilder = new SqlCommandBuilder(adapter as SqlDataAdapter);
                     return CommandBuilder;
                 }
+
                 if (adapter is SqlDataAdapter)
                 {
                     CommandBuilder = new SqlCommandBuilder(adapter as SqlDataAdapter);

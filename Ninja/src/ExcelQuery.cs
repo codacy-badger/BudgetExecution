@@ -1,4 +1,8 @@
-﻿namespace BudgetExecution
+﻿// <copyright file="ExcelQuery.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
+
+namespace BudgetExecution
 {
     using System;
     using System.Collections.Generic;
@@ -7,7 +11,7 @@
 
     public class ExcelQuery
     {
-        //Constructors
+        // Constructors
         public ExcelQuery()
         {
         }
@@ -43,7 +47,7 @@
             DeleteCommand = CommandBuilder.GetInsertCommand();
         }
 
-        //Properties
+        // Properties
         public OleDbDataAdapter Adapter { get; set; }
 
         public OleDbCommandBuilder CommandBuilder { get; }
@@ -72,7 +76,7 @@
 
         public OleDbCommand DeleteCommand { get; }
 
-        //Methods
+        // Methods
         private OleDbCommandBuilder GetCommandBuilder()
         {
             try
@@ -106,8 +110,9 @@
                 string vals = string.Empty;
                 foreach (KeyValuePair<string, object> kvp in param)
                 {
-                    vals += $"{ kvp.Key } = '{kvp.Value.ToString()}' AND ";
+                    vals += $"{ kvp.Key} = '{kvp.Value.ToString()}' AND ";
                 }
+
                 vals = vals.Trim().Substring(0, vals.Length - 4);
                 return vals;
             }
@@ -247,6 +252,5 @@
                 return null;
             }
         }
-
     }
 }

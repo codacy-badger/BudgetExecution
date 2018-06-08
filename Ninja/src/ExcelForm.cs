@@ -1,3 +1,7 @@
+// <copyright file="ExcelForm.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
+
 namespace BudgetExecution
 {
     using System;
@@ -28,50 +32,40 @@ namespace BudgetExecution
             Report.Open(@"D:\dev\database\BudgetControlTemplate.xlsx");
         }
 
-        private void splitContainerAdv1_Click(object sender, EventArgs e)
+        private void SplitContainerAdv1_Click(object sender, EventArgs e)
         {
-
         }
 
-        private void spreadsheet1_Click(object sender, EventArgs e)
+        private void Spreadsheet1_Click(object sender, EventArgs e)
         {
-
         }
 
         private void AccountTabControl_SelectedIndexChanged(object sender, EventArgs e)
         {
-
         }
 
-        private void metroSetTextBox1_Click(object sender, EventArgs e)
+        private void MetroSetTextBox1_Click(object sender, EventArgs e)
         {
-
         }
 
-        private void metroSetLabel12_Click(object sender, EventArgs e)
+        private void MetroSetLabel12_Click(object sender, EventArgs e)
         {
-
         }
 
-        private void calculatorControl1_Click(object sender, EventArgs e)
+        private void CalculatorControl1_Click(object sender, EventArgs e)
         {
-
         }
 
-        private void button7_Click(object sender, EventArgs e)
+        private void Button7_Click(object sender, EventArgs e)
         {
-
         }
 
-        private void button10_Click(object sender, EventArgs e)
+        private void Button10_Click(object sender, EventArgs e)
         {
-
         }
 
-        private void tabControlAdv2_SelectedIndexChanged(object sender, EventArgs e)
+        private void TabControlAdv2_SelectedIndexChanged(object sender, EventArgs e)
         {
-
         }
     }
 }
-

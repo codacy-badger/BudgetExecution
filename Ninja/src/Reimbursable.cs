@@ -1,4 +1,8 @@
-﻿namespace BudgetExecution
+﻿// <copyright file="Reimbursable.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
+
+namespace BudgetExecution
 {
     using System.Collections.Generic;
     using System.Data;
@@ -60,7 +64,7 @@
         public Org Org { get; }
 
         // METHODS
-        Dictionary<string, object> GetParameter(string code, string bfy)
+        private Dictionary<string, object> GetParameter(string code, string bfy)
         {
             try
             {
@@ -72,6 +76,5 @@
                 return null;
             }
         }
-
     }
 }

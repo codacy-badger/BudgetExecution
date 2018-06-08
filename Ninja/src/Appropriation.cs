@@ -1,4 +1,8 @@
-﻿namespace BudgetExecution
+﻿// <copyright file="Appropriation.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
+
+namespace BudgetExecution
 {
     using System;
     using System.Collections.Generic;
@@ -32,9 +36,9 @@
             BocCodes = ProgramElements["BOC"];
             if (BocCodes.Contains("17"))
             {
-
                 FTE = GetFTE(Table);
             }
+
             Count = PrcData.Item1.Rows.Count;
             BocData = Metric.BocTotals;
             NpmData = Metric.NpmTotals;
@@ -178,6 +182,7 @@
                     return null;
                 }
             }
+
             return null;
         }
 
@@ -206,6 +211,7 @@
                     stat[3] = (stat[0] / Total) * 100;
                     info.Add(filter, stat);
                 }
+
                 return info;
             }
             catch (Exception ex)
@@ -230,6 +236,7 @@
                     stat[3] = (stat[0] / Total) * 100;
                     info.Add(filter, stat);
                 }
+
                 return info;
             }
             catch (Exception ex)
@@ -258,11 +265,23 @@
             foreach (DataColumn dc in table.Columns)
             {
                 if (dc.ColumnName.Equals("Id") || dc.ColumnName.Equals("Amount"))
+                {
                     continue;
+                }
+
                 data.Add(dc.ColumnName, GetCodes(table, dc.ColumnName));
             }
-            if (data.ContainsKey("ID")) data.Remove("ID");
-            if (data.ContainsKey("Amount")) data.Remove("Amount");
+
+            if (data.ContainsKey("ID"))
+            {
+                data.Remove("ID");
+            }
+
+            if (data.ContainsKey("Amount"))
+            {
+                data.Remove("Amount");
+            }
+
             return data;
         }
 
@@ -290,8 +309,11 @@
                     var query = PrcData.Item1.AsEnumerable().Where(p => p.Field<string>(column).Equals(filter))
                         .Sum(p => p.Field<decimal>("Amount"));
                     if (query > 0)
+                    {
                         info.Add(filter, query);
+                    }
                 }
+
                 return info;
             }
             catch (Exception ex)
@@ -309,8 +331,11 @@
                 foreach (string f in filters)
                 {
                     if (GetTotal(table) > 0)
+                    {
                         info.Add(f, GetTotal(table));
+                    }
                 }
+
                 return info;
             }
             catch (Exception ex)
@@ -322,20 +347,24 @@
 
         internal FTE[] GetFTE(DataTable table)
         {
-            if(table.Rows.Count > 0 && BocCodes.Contains("17"))
+            if (table.Rows.Count > 0 && BocCodes.Contains("17"))
             try
             {
                 var fteTable = table.AsEnumerable().Where(p => p.Field<string>("BOC").Equals("17")).Select(p => p).CopyToDataTable();
                 var fteArray = new FTE[fteTable.Rows.Count];
                 for (int i = 0; i < fteTable.Rows.Count; i++)
-                    fteArray[i] = new FTE(fteTable.Rows[i]);
-                return fteArray;
+                    {
+                        fteArray[i] = new FTE(fteTable.Rows[i]);
+                    }
+
+                    return fteArray;
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message.ToString() + $"Target Method:\n{ex.TargetSite}\n" + $"Stack:\n{ex.StackTrace}");
                 return null;
             }
+
             return null;
         }
     }

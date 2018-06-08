@@ -1,4 +1,8 @@
-﻿namespace BudgetExecution
+﻿// <copyright file="BOC.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
+
+namespace BudgetExecution
 {
     using System.Collections.Generic;
     using System.Windows.Forms;
@@ -28,13 +32,13 @@
         public decimal Value { get; }
 
         // METHODS
-        Dictionary<string, object> GetParameter(string code)
+        private Dictionary<string, object> GetParameter(string code)
         {
             try
             {
                 return new Dictionary<string, object>() { ["Code"] = code };
             }
-            catch(System.Exception ex)
+            catch (System.Exception ex)
             {
                 MessageBox.Show(ex.Message + ex.StackTrace);
                 return null;

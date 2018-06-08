@@ -1,4 +1,8 @@
-﻿namespace BudgetExecution
+﻿// <copyright file="DocInfo.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
+
+namespace BudgetExecution
 {
     using System;
     using System.Collections.Generic;
@@ -122,9 +126,9 @@
         {
             List<string> division = new List<string>();
             division.Add("US EPA REGION 6");
-            division.Add($"{ Organization.Name }");
-            division.Add($"ID : { Organization.ID }");
-            division.Add($"Org Code: { Organization.Code }");
+            division.Add($"{ Organization.Name}");
+            division.Add($"ID : { Organization.ID}");
+            division.Add($"Org Code: { Organization.Code}");
             division.Add($"Budget Authority for Fiscal Year {DivisionAuthority.FiscalYear}");
             return division;
         }
@@ -162,4 +166,3 @@
         }
     }
 }
-

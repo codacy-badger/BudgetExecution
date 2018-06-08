@@ -1,4 +1,8 @@
-﻿namespace BudgetExecution
+﻿// <copyright file="Info.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
+
+namespace BudgetExecution
 {
     using System;
     using System.Collections.Generic;
@@ -25,7 +29,8 @@
         public static string SummaryImages = @"C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\Resources\SummaryImages";
         public static string FunctionImages = @"C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\Resources\FunctionImages";
         public static string DatabaseImages = @"C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\Resources\Database";
-        public static string[] AgencyActivityCodes = {
+        public static string[] AgencyActivityCodes =
+        {
         "1", "2", "3", "P1", "P3", "P8", "PS", "Q1", "Q3", "R1",
         "R2", "R5", "Regional", "W1", "W2", "53", "54", "55", "56", "4", "5", "6", "8", "9", "10", "11",
         "12", "50", "51", "52", "57", "61", "PY", "AT", "DG", "DH", "DN", "DS", "PM", "P4", "Q4",
@@ -35,7 +40,8 @@
         "RL", "58", "B4", "B5", "BP", "PA", "PB", "PC", "PV", "PW", "R3", "R4"
         };
 
-        public static string[] AgencyITCodes = {
+        public static string[] AgencyITCodes =
+        {
         "EK", "FH", "FJ", "GB", "SL", "SM", "AA", "AB", "AC", "AD", "AE",
         "AF", "AG", "AH", "AJ", "AL", "AM", "AQ", "AR", "AT", "BB", "BC", "BG", "BH", "BJ", "BK",
         "BL", "BP", "CB", "CC", "CD", "CE", "CH", "CJ", "CK", "CL", "CP", "CQ", "CR", "CS", "CT",
@@ -51,7 +57,8 @@
         "WS", "WT"
         };
 
-        public static string[] AgencyOrgCodes = {
+        public static string[] AgencyOrgCodes =
+        {
         "01", "02", "03", "04", "0400BMT", "05", "0500BMT", "06", "07", "08", "09", "10", "11", "13",
         "16", "17", "20", "23", "27", "28", "30", "31", "3100EEN", "32", "3200EEN", "3200P", "3200P1",
         "33", "36", "3600BMT", "39", "3900EEN", "40", "4000EEN", "50", "51", "52", "53", "5300EEN", "54",
@@ -66,7 +73,8 @@
         "9A00C", "9A00E", "9A00F", "9A00P", "9A00R", "9A00S", "D4", "B7", "H1"
         };
 
-        public static string[] AgencyPrcCodes = {
+        public static string[] AgencyPrcCodes =
+        {
         "101A46", "101A46XP3", "101A46XP4", "101A46XQ3", "101A58", "101A59", "102A45", "102A58", "102A59","102A76", "102AH5", "102J59", "103AC4", "103AC5", "104A97", "104A98", "201B42", "201B53", "201B71",
         "201BL2", "202B63", "202B65", "202B66", "202B67", "202B68X33", "202B68XP8", "202B68XQC", "202B88",
         "202B89", "202BD4", "202BE2", "202BJ7", "202BK2", "202BK4", "202BK5", "202BL2", "202E63", "202G63X01",
@@ -89,13 +97,15 @@
         "ZZZD73"
         };
 
-        public static string[] AgencyRpioCode = {
+        public static string[] AgencyRpioCode =
+        {
         "11", "13", "16", "17", "18", "20", "26", "27", "30", "35", "39", "75", "77", "01","02", "03", "04", "05", "06", "07", "08",
         "09", "10"
         };
 
         public static string[] Division = { "6WQ", "6WCF", "6MD", "6MDR", "WSA", "6MM", "6WSA", "6EN", "6RA", "6RC", "6SF", "6XA", "6EJ", "R06" };
-        public static string[] DivisionIdTitleOrg = {
+        public static string[] DivisionIdTitleOrg =
+        {
         "6MD | MANAGEMENT DIVISION | 06C", "6MM | MULTIMEDIA DIVISION | 06J", "6EN | COMPLIANCE & ENFORCEMENT DIVISION | 06M",
         "6RC | OFFICE OF REGIONAL COUNSEL | 06D", "6SF | SUPERFUND DIVISION | 06L", "6RA | OFFICE OF THE REGIONAL ADMINISTRATOR | 06A",
         "6EJ | ENVIRONMENTAL JUSTICE & TRIBAL AFFAIRS DIVISION | 06F", "6XA | THE OFFICE OF EXTERNAL AFFAIRS | 06X",
@@ -104,14 +114,16 @@
         };
 
         public static string[] Divisions = { "6MD", "6MM", "6RA", "6SF", "6EJ", "6XA", "6WQ", "6EN", "6RC", "R06", "6WSA", "6WCF" };
-        public static string[] DivisionTitle = {
+        public static string[] DivisionTitle =
+        {
         "6MD Management Division", "6MM MultiMedia Division", "6EN Compliance && Enforcement Division",
         "6RC Office of Regional Counsel", "6SF Superfund Division", "6RA The Office of the Regional Administrator",
         "6EJ Environmental Justice && Tribal Affairs Division", "6XA The Office of External Affairs",
         "6WQ Water Quality Protection Division", "EPA Region 6 Dallas,TX"
         };
 
-        public static string[] MultiYears = {
+        public static string[] MultiYears =
+        {
         "2015", "2015 2016", "2016 2017", "2016", "2017 2018", "2017","2018 2019", "2018", "2019 2020","2019", "2020 2021","2020", "2021 2022", "2021",
         "2022", "2022 2023",
         };
@@ -168,8 +180,6 @@
                 MessageBox.Show(ex.Message + ex.StackTrace);
                 return null;
             }
-
-
         }
 
         public static SortedList<string, object> DivisionLookUp()
@@ -348,6 +358,7 @@
                 case "ZL":
                     return "DEEP WATER HORIZON";
             }
+
             return null;
         }
 
@@ -454,6 +465,7 @@
                 case "E5D":
                     return "OLD EARMARKS RECOVERIES";
             }
+
             return null;
         }
 
@@ -497,11 +509,11 @@
             }
         }
 
-        public static string GetDivisionMailCode(string Org)
+        public static string GetDivisionMailCode(string org)
         {
             try
             {
-                switch (Org)
+                switch (org)
                 {
                     case "06K":
                         return "6WQ";
@@ -568,6 +580,7 @@
                         fields[i] = dc.ColumnName;
                     }
                 }
+
                 return fields;
             }
             catch (System.Exception ex)
@@ -767,6 +780,7 @@
                     case "ZL":
                         return "68 - 68X8145";
                 }
+
                 return null;
             }
             catch (System.Exception ex)
@@ -785,9 +799,13 @@
             child["Fund"].ToString().Equals(parent["Fund"].ToString()) &&
             child["Code"].ToString().Equals(parent["Code"].ToString()) &&
             child["BOC"].ToString().Equals(parent["BOC"].ToString()))
+                {
                     return true;
+                }
                 else
+                {
                     return false;
+                }
             }
             catch (System.Exception ex)
             {
@@ -805,9 +823,13 @@
                     parent["Fund"].ToString().Equals(child["Fund"].ToString()) &&
                     parent["Code"].ToString().Equals(child["Code"].ToString()) &&
                     parent["BOC"].ToString().Equals(child["BOC"].ToString()))
+                {
                     return true;
+                }
                 else
+                {
                     return false;
+                }
             }
             catch (System.Exception ex)
             {

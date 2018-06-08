@@ -1,3 +1,7 @@
+// <copyright file="FunctionalityForm.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
+
 namespace BudgetExecution
 {
     using System;
@@ -16,9 +20,9 @@ namespace BudgetExecution
         }
 
         // PROPERTIES
-        string[] Images { get; set; }
+        private string[] Images { get; set; }
 
-        FormData NinjaData { get; set; }
+        private FormData NinjaData { get; set; }
 
         // METHODS
         private void GetFunctionCarouselImageList(string path)
@@ -38,13 +42,12 @@ namespace BudgetExecution
                 ilist.Images.Add(b);
                 icollect.Add(c);
             }
-            FunctionCarousel.ImageList = ilist;
 
+            FunctionCarousel.ImageList = ilist;
         }
 
         private void FunctionCarousel_OnImageSelected(object sender, EventArgs e)
         {
-
             var i = FunctionCarousel.ActiveImage.Tag.ToString();
             var a = new SummaryForm(i);
             a.Show();
@@ -66,7 +69,6 @@ namespace BudgetExecution
 
         private void FunctionCarousel_Click(object sender, EventArgs e)
         {
-
         }
     }
 }

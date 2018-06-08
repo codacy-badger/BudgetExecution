@@ -1,4 +1,8 @@
-﻿namespace BudgetExecution
+﻿// <copyright file="SummaryForm.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
+
+namespace BudgetExecution
 {
     using System;
     using System.Collections.Generic;
@@ -61,6 +65,7 @@
                 CurrentTabIndex = SummaryTabControl.SelectedIndex;
                 SummaryTabControl.SelectedIndexChanged += SummaryTabPage_TabSelected;
             }
+
             if (source == Source.RegionAccount)
             {
                 DbData = new DataBuilder(source, Provider.SQLite);
@@ -78,6 +83,7 @@
                 CurrentTabIndex = SummaryTabControl.SelectedIndex;
                 SummaryTabControl.SelectedIndexChanged += SummaryTabPage_TabSelected;
             }
+
             if (source == Source.DivisionAccount)
             {
                 DbData = new DataBuilder(source, Provider.SQLite);
@@ -245,6 +251,7 @@
                     BindingSource.Filter = string.Format("FundName = '{0}' AND BocName = '{1}'",
                             GridFundFilter.SelectedItem.ToString(), GridBocFilter.SelectedItem.ToString());
                 }
+
                 BindingSource.Filter = string.Format("FundName = '{0}'", GridBocFilter.SelectedItem.ToString());
             }
             catch (Exception ex)
@@ -263,7 +270,9 @@
                 var query = table.AsEnumerable().Where(p => p.Field<string>("FundName").Equals(GridFundFilter.SelectedItem.ToString()))
                         .Select(p => p).Distinct().CopyToDataTable();
                 foreach (var row in query.AsEnumerable().Select(p => p.Field<string>("BocName")).Distinct().ToArray())
+                {
                     GridBocFilter.Items.Add(row);
+                }
             }
             catch (Exception ex)
             {
@@ -280,7 +289,9 @@
                 var query = table.AsEnumerable().Where(p => p.Field<string>("FundName").Equals(GridFundFilter.SelectedItem.ToString()))
                     .Where(p => p.Field<string>("BocName").Equals(GridBocFilter.SelectedItem.ToString())).Select(p => p).CopyToDataTable();
                 foreach (DataRow row in query.Rows)
+                {
                     GridAccountFilter.Items.Add(row["Code"].ToString());
+                }
             }
             catch (Exception ex)
             {
@@ -321,10 +332,15 @@
             try
             {
                 if (cmbox.Items.Count > 0)
+                {
                     cmbox.Items.Clear();
+                }
+
                 var items = DbData.ProgramElements[prcfilter.ToString()];
                 foreach (string i in items)
+                {
                     cmbox.Items.Add(i);
+                }
             }
             catch (Exception ex)
             {
@@ -336,7 +352,7 @@
         {
             try
             {
-                foreach(string t in TabNames)
+                foreach (string t in TabNames)
                 {
                     cmbox.Items.Clear();
                     cmbox.Items.Add(t);
@@ -354,7 +370,10 @@
             try
             {
                 foreach (DataGridViewColumn dc in dgv.Columns)
+                {
                     dc.Visible = false;
+                }
+
                 dgv.Columns[0].Visible = true;
                 dgv.Columns[3].Visible = true;
                 dgv.Columns[4].Visible = true;
@@ -474,7 +493,7 @@
             }
         }
 
-        string[] GetTabNames()
+        private string[] GetTabNames()
         {
             try
             {
@@ -484,24 +503,27 @@
                 {
                     names[i] = tabs[i].Text;
                 }
+
                 return names;
             }
             catch (Exception ex)
             {
-
                 MessageBox.Show(ex.Message + ex.StackTrace);
                 return null;
             }
         }
 
-        ChartSeriesType GetChartType(MetroSetComboBox ctb)
+        private ChartSeriesType GetChartType(MetroSetComboBox ctb)
         {
             if (ctb.SelectedItem == null)
+            {
                 return ChartSeriesType.Column;
+            }
+
             return (ChartSeriesType)Enum.Parse(typeof(ChartSeriesType), ctb.SelectedItem.ToString());
         }
 
-        Dictionary<string, string> GetFilters()
+        private Dictionary<string, string> GetFilters()
         {
             try
             {
@@ -509,48 +531,75 @@
                 foreach (string n in TabNames)
                 {
                     if (n.Contains("Fund"))
+                    {
                         filters.Add("Fund", "FundName");
+                    }
+
                     if (n.Contains("BOC"))
+                    {
                         filters.Add("BOC", "BocName");
+                    }
+
                     if (n.Contains("NPM"))
+                    {
                         filters.Add("NPM", "NPM");
+                    }
+
                     if (n.Contains("Goal"))
+                    {
                         filters.Add("Goal", "GoalName");
+                    }
+
                     if (n.Contains("Division"))
+                    {
                         filters.Add("Division", "Division");
+                    }
+
                     if (n.Contains("Objective"))
+                    {
                         filters.Add("Objective", "ObjectiveName");
+                    }
+
                     if (n.Contains("ProgramArea"))
+                    {
                         filters.Add("ProgramArea", "ProgramArea");
+                    }
+
                     if (n.Contains("ProgramProjectCode"))
+                    {
                         filters.Add("ProgramProjectCode", "ProgramProjectCode");
+                    }
                 }
+
                 return filters;
             }
             catch (Exception ex)
             {
-
                 MessageBox.Show(ex.Message + ex.StackTrace);
                 return null;
             }
         }
 
-        void ChartFilterControl1_ItemSelected(object sender, EventArgs e)
+        private void ChartFilterControl1_ItemSelected(object sender, EventArgs e)
         {
             ChartFilterControl1 = sender as MetroSetComboBox;
             ChartType = (ChartSeriesType)Enum.Parse(typeof(ChartSeriesType), ChartFilterControl1.SelectedItem.ToString());
             if (Expander2.IsExpanded == true)
+            {
                 Expander2.IsExpanded = false;
+            }
         }
 
-        void ChartFilterControl2_ItemSelected(object sender, EventArgs e)
+        private void ChartFilterControl2_ItemSelected(object sender, EventArgs e)
         {
             try
             {
                 ChartFilterControl2 = sender as MetroSetComboBox;
                 Measure = (Stat)Enum.Parse(typeof(Stat), ChartFilterControl2.SelectedItem.ToString());
                 if (Expander2.IsExpanded == false)
+                {
                     Expander2.IsExpanded = true;
+                }
             }
             catch (Exception ex)
             {
@@ -558,7 +607,7 @@
             }
         }
 
-        void ChartFilterControl3_ItemSelected(object sender, EventArgs e)
+        private void ChartFilterControl3_ItemSelected(object sender, EventArgs e)
         {
             try
             {
@@ -572,7 +621,7 @@
             }
         }
 
-        void ChartFilterControl4_ItemSelected(object sender, EventArgs e)
+        private void ChartFilterControl4_ItemSelected(object sender, EventArgs e)
         {
             try
             {
@@ -583,70 +632,110 @@
                 switch (CurrentTabIndex)
                 {
                     case 0:
-                        if(Division != null)
+                        if (Division != null)
+                        {
                             param = new Dictionary<string, object>() { ["RC"] = Division, [ChartPrcField.ToString()] = ChartFilter };
+                        }
                         else
+                        {
                             param = new Dictionary<string, object>() { [ChartPrcField.ToString()] = ChartFilter };
+                        }
+
                         FundChart = new BudgetChart(FundChart, ChartMainTitle, Source, param, ChartGroup, Measure, ChartType).Activate();
                         break;
                     case 1:
                         if (Division != null)
+                        {
                             param = new Dictionary<string, object>() { ["RC"] = Division, [ChartPrcField.ToString()] = ChartFilter };
+                        }
                         else
+                        {
                             param = new Dictionary<string, object>() { [ChartPrcField.ToString()] = ChartFilter };
+                        }
+
                         BocChart = new BudgetChart(BocChart, ChartMainTitle, Source, param, ChartGroup, Measure, ChartType).Activate();
                         break;
                     case 2:
                         if (Division != null)
+                        {
                             param = new Dictionary<string, object>() { ["RC"] = Division, [ChartPrcField.ToString()] = ChartFilter };
+                        }
                         else
+                        {
                             param = new Dictionary<string, object>() { [ChartPrcField.ToString()] = ChartFilter };
+                        }
+
                         NpmChart = new BudgetChart(NpmChart, ChartMainTitle, Source, param, ChartGroup, Measure, ChartType).Activate();
                         break;
                     case 3:
                         if (Division != null)
+                        {
                             param = new Dictionary<string, object>() { ["RC"] = Division, [ChartPrcField.ToString()] = ChartFilter };
+                        }
                         else
+                        {
                             param = new Dictionary<string, object>() { [ChartPrcField.ToString()] = ChartFilter };
+                        }
+
                         GoalChart = new BudgetChart(GoalChart, ChartMainTitle, Source, param, ChartGroup, Measure, ChartType).Activate();
                         break;
                     case 4:
                         if (Division != null)
+                        {
                             param = new Dictionary<string, object>() { ["RC"] = Division, [ChartPrcField.ToString()] = ChartFilter };
+                        }
                         else
+                        {
                             param = new Dictionary<string, object>() { [ChartPrcField.ToString()] = ChartFilter };
+                        }
+
                         ObjectiveChart = new BudgetChart(ObjectiveChart, ChartMainTitle, Source, param, ChartGroup, Measure, ChartType).Activate();
                         break;
                     case 5:
                         if (Division != null)
+                        {
                             param = new Dictionary<string, object>() { ["RC"] = Division, [ChartPrcField.ToString()] = ChartFilter };
+                        }
                         else
+                        {
                             param = new Dictionary<string, object>() { [ChartPrcField.ToString()] = ChartFilter };
+                        }
+
                         DivisionChart = new BudgetChart(DivisionChart, ChartMainTitle, Source, param, ChartGroup, Measure, ChartType).Activate();
                         break;
                     case 6:
                         if (Division != null)
+                        {
                             param = new Dictionary<string, object>() { ["RC"] = Division, [ChartPrcField.ToString()] = ChartFilter };
+                        }
                         else
+                        {
                             param = new Dictionary<string, object>() { [ChartPrcField.ToString()] = ChartFilter };
+                        }
+
                         AreaChart = new BudgetChart(AreaChart, ChartMainTitle, Source, param, ChartGroup, Measure, ChartType).Activate();
                         break;
                     case 7:
                         if (Division != null)
+                        {
                             param = new Dictionary<string, object>() { ["RC"] = Division, [ChartPrcField.ToString()] = ChartFilter };
+                        }
                         else
+                        {
                             param = new Dictionary<string, object>() { [ChartPrcField.ToString()] = ChartFilter };
+                        }
+
                         ProjectChart = new BudgetChart(ProjectChart, ChartMainTitle, Source, param, ChartGroup, Measure, ChartType).Activate();
                         break;
                 }
             }
-            catch(System.Exception ex)
+            catch (System.Exception ex)
             {
                 MessageBox.Show(ex.Message + ex.StackTrace);
             }
         }
 
-        void AssignChartFIlterControls(MetroSetComboBox filter1, MetroSetComboBox filter2, MetroSetComboBox filter3, MetroSetComboBox filter4)
+        private void AssignChartFIlterControls(MetroSetComboBox filter1, MetroSetComboBox filter2, MetroSetComboBox filter3, MetroSetComboBox filter4)
         {
             ChartFilterControl1 = filter1;
             ChartFilterControl1.SelectionChangeCommitted += ChartFilterControl1_ItemSelected;
@@ -658,57 +747,77 @@
             ChartFilterControl4.SelectionChangeCommitted += ChartFilterControl4_ItemSelected;
         }
 
-        void AssignChartExpanders(ExpandCollapsePanel panel1, ExpandCollapsePanel panel2)
+        private void AssignChartExpanders(ExpandCollapsePanel panel1, ExpandCollapsePanel panel2)
         {
             try
             {
                 Expander1 = panel1;
                 Expander2 = panel2;
             }
-            catch(System.Exception ex)
+            catch (System.Exception ex)
             {
                 MessageBox.Show(ex.Message + ex.StackTrace);
             }
-
         }
 
-        void Expander_Click(object sender, EventArgs e)
+        private void Expander_Click(object sender, EventArgs e)
         {
             var exp = sender as ExpandCollapsePanel;
-            switch(CurrentTabIndex)
+            switch (CurrentTabIndex)
             {
                 case 0:
                     if (FundExpander2.IsExpanded == true)
+                    {
                         FundExpander2.IsExpanded = false;
+                    }
+
                     break;
                 case 1:
                     if (BocExpander2.IsExpanded == true)
+                    {
                         BocExpander2.IsExpanded = false;
+                    }
+
                     break;
                 case 3:
                     if (NpmExpander2.IsExpanded == true)
+                    {
                         NpmExpander2.IsExpanded = false;
+                    }
+
                     break;
                 case 4:
                     if (GoalExpander2.IsExpanded == true)
+                    {
                         GoalExpander2.IsExpanded = false;
+                    }
+
                     break;
                 case 5:
                     if (ObjectiveExpander2.IsExpanded == true)
+                    {
                         ObjectiveExpander2.IsExpanded = false;
+                    }
+
                     break;
                 case 6:
                     if (AreaExpander2.IsExpanded == true)
+                    {
                         AreaExpander2.IsExpanded = false;
+                    }
+
                     break;
                 case 7:
                     if (ProjectExpander2.IsExpanded == true)
+                    {
                         ProjectExpander2.IsExpanded = false;
+                    }
+
                     break;
             }
         }
 
-        void SummaryTabPage_TabSelected(object sender, EventArgs e)
+        private void SummaryTabPage_TabSelected(object sender, EventArgs e)
         {
             try
             {
@@ -721,7 +830,10 @@
                         AssignChartExpanders(FundExpander1, FundExpander2);
                         PopulateFilterBoxItems(ChartFilterControl3, PrcField.FundName);
                         if (Source == Source.RegionAccount)
+                        {
                             FundFilter4.Items.Remove("RC");
+                        }
+
                         ChartMainTitle = new string[] { "Funding By Appropriation" };
                         FundChart = new BudgetChart(FundChart, ChartMainTitle, DbData, PrcField.Fund, Stat.Total, ChartSeriesType.Column).Activate();
                         break;
@@ -730,7 +842,10 @@
                         AssignChartExpanders(BocExpander1, BocExpander2);
                         PopulateFilterBoxItems(ChartFilterControl3, PrcField.BocName);
                         if (DbData.Source == Source.RegionAccount)
+                        {
                             BocFilter4.Items.Remove("RC");
+                        }
+
                         ChartMainTitle = new string[] { "Funding By Budget Object Class" };
                         BocChart = new BudgetChart(BocChart, ChartMainTitle, DbData, PrcField.BocName, Stat.Total, ChartSeriesType.Column).Activate();
                         break;
@@ -739,7 +854,10 @@
                         AssignChartExpanders(NpmExpander1, NpmExpander2);
                         PopulateFilterBoxItems(ChartFilterControl3, PrcField.NPM);
                         if (DbData.Source == Source.RegionAccount)
+                        {
                             NpmFilter4.Items.Remove("RC");
+                        }
+
                         ChartMainTitle = new string[] { "Funding By National Program" };
                         NpmChart = new BudgetChart(NpmChart, ChartMainTitle, DbData, PrcField.NPM, Stat.Total, ChartSeriesType.Column).Activate();
                         break;
@@ -748,7 +866,10 @@
                         AssignChartExpanders(GoalExpander1, GoalExpander2);
                         PopulateFilterBoxItems(ChartFilterControl3, PrcField.GoalName);
                         if (DbData.Source == Source.RegionAccount)
+                        {
                             GoalFilter4.Items.Remove("RC");
+                        }
+
                         ChartMainTitle = new string[] { "Funding By Agency Goal" };
                         GoalChart = new BudgetChart(GoalChart, ChartMainTitle, DbData, PrcField.GoalName, Stat.Total, ChartSeriesType.Column).Activate();
                         break;
@@ -757,7 +878,10 @@
                         AssignChartExpanders(ObjectiveExpander1, ObjectiveExpander2);
                         PopulateFilterBoxItems(ChartFilterControl3, PrcField.ObjectiveName);
                         if (DbData.Source == Source.RegionAccount)
+                        {
                             ObjectiveFilter4.Items.Remove("RC");
+                        }
+
                         ChartMainTitle = new string[] { "Funding By Agency Objective" };
                         ObjectiveChart = new BudgetChart(ObjectiveChart, ChartMainTitle, DbData, PrcField.ObjectiveName, Stat.Total, ChartSeriesType.Column).Activate();
                         break;
@@ -766,7 +890,10 @@
                         AssignChartExpanders(DivisionExpander1, DivisionExpander2);
                         PopulateFilterBoxItems(ChartFilterControl3, PrcField.DivisionName);
                         if (DbData.Source == Source.RegionAccount)
+                        {
                             DivisionFilter4.Items.Remove("RC");
+                        }
+
                         ChartMainTitle = new string[] { "Funding By Division" };
                         DivisionChart = new BudgetChart(DivisionChart, ChartMainTitle, DbData, PrcField.RC, Stat.Total, ChartSeriesType.Column).Activate();
                         break;
@@ -775,7 +902,10 @@
                         AssignChartExpanders(AreaExpander1, AreaExpander2);
                         PopulateFilterBoxItems(ChartFilterControl3, PrcField.ProgramAreaName);
                         if (DbData.Source == Source.RegionAccount)
+                        {
                             AreaFilter4.Items.Remove("RC");
+                        }
+
                         ChartMainTitle = new string[] { "Funding By Program Area" };
                         AreaChart = new BudgetChart(AreaChart, ChartMainTitle, DbData, PrcField.ProgramArea, Stat.Total, ChartSeriesType.Column).Activate();
                         break;
@@ -784,7 +914,10 @@
                         AssignChartExpanders(ProjectExpander1, ProjectExpander2);
                         PopulateFilterBoxItems(ChartFilterControl3, PrcField.ProgramProjectName);
                         if (DbData.Source == Source.RegionAccount)
+                        {
                             ProjectFilter4.Items.Remove("RC");
+                        }
+
                         ChartMainTitle = new string[] { "Funding By Program Project" };
                         ProjectChart = new BudgetChart(ProjectChart, ChartMainTitle, DbData, PrcField.ProgramProjectCode, Stat.Total, ChartSeriesType.Column).Activate();
                         break;
@@ -796,7 +929,7 @@
             }
         }
 
-        string[] GetTitle(TabControlAdv tab, MetroSetComboBox filter)
+        private string[] GetTitle(TabControlAdv tab, MetroSetComboBox filter)
         {
             try
             {
@@ -813,17 +946,17 @@
                     case 3:
                         return new string[] { string.Format("Funding Percentage by {0}", category) };
                 }
+
                 return null;
             }
             catch (Exception ex)
             {
-
                 MessageBox.Show(ex.Message + ex.StackTrace);
                 return null;
             }
         }
 
-        string[] GetTitle(TabControlAdv tab, MetroSetComboBox filter1, MetroSetComboBox filter2, MetroSetComboBox filter3)
+        private string[] GetTitle(TabControlAdv tab, MetroSetComboBox filter1, MetroSetComboBox filter2, MetroSetComboBox filter3)
         {
             try
             {
@@ -838,15 +971,15 @@
                     case 1:
                         return new string[] { string.Format("{0}  Accounts by {1}", source, grouping) };
                     case 2:
-                        return new string[] { string.Format("Average {0} Funding by {1}", source, grouping)};
+                        return new string[] { string.Format("Average {0} Funding by {1}", source, grouping) };
                     case 3:
-                        return new string[] { string.Format("{0} Funding Percentage by {1}", source, grouping)};
+                        return new string[] { string.Format("{0} Funding Percentage by {1}", source, grouping) };
                 }
+
                 return null;
             }
             catch (Exception ex)
             {
-
                 MessageBox.Show(ex.Message + ex.StackTrace);
                 return null;
             }
@@ -856,7 +989,7 @@
         {
             try
             {
-                if(dgv.CurrentRow != null)
+                if (dgv.CurrentRow != null)
                 {
                     var dgvRow = dgv.CurrentRow;
                     var data = new Dictionary<string, object>();
@@ -868,15 +1001,14 @@
                     data.Add("BOC", dgvRow.Cells["BOC"].ToString());
                     return data;
                 }
+
                 return null;
             }
             catch (Exception ex)
             {
-
                 MessageBox.Show(ex.Message + ex.StackTrace);
                 return null;
             }
         }
-
     }
 }

@@ -1,4 +1,8 @@
-﻿namespace Ninja.Data
+﻿// <copyright file="AccountControl.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
+
+namespace Ninja.Data
 {
     using System.Windows.Forms;
 
@@ -9,9 +13,8 @@
             InitializeComponent();
         }
 
-        private void groupBox3_Enter(object sender, System.EventArgs e)
+        private void GroupBox3_Enter(object sender, System.EventArgs e)
         {
-
         }
     }
 }

@@ -1,4 +1,8 @@
-﻿namespace BudgetExecution
+﻿// <copyright file="ExcelReport.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
+
+namespace BudgetExecution
 {
     using System;
     using System.Data;
@@ -55,7 +59,10 @@
                 od.Filter = "Excel Files | *.xls; * .xlsx";
                 DialogResult dr = od.ShowDialog();
                 if (dr == DialogResult.OK)
+                {
                     return od.SafeFileName;
+                }
+
                 return null;
             }
             catch (Exception ex)
@@ -78,6 +85,7 @@
                 {
                     excelWorkSheet.Cells[1, i] = table.Columns[i - 1].ColumnName;
                 }
+
                 for (int j = 0; j < table.Rows.Count; j++)
                 {
                     for (int k = 0; k < table.Columns.Count; k++)
@@ -85,6 +93,7 @@
                         excelWorkSheet.Cells[j + 2, k + 1] = table.Rows[j].ItemArray[k].ToString();
                     }
                 }
+
                 excel.Visible = true;
                 return excelWorkBook;
             }
@@ -108,6 +117,7 @@
                 {
                     excelWorkSheet.Cells[1, i] = table.Columns[i - 1].ColumnName;
                 }
+
                 for (int j = 0; j < table.Rows.Count; j++)
                 {
                     for (int k = 0; k < table.Columns.Count; k++)
@@ -115,6 +125,7 @@
                         excelWorkSheet.Cells[j + 2, k + 1] = table.Rows[j].ItemArray[k].ToString();
                     }
                 }
+
                 excel.Visible = true;
                 return excelWorkBook;
             }

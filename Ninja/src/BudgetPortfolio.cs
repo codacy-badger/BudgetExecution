@@ -1,4 +1,8 @@
-﻿namespace BudgetExecution
+﻿// <copyright file="BudgetPortfolio.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
+
+namespace BudgetExecution
 {
     using System;
     using System.Collections.Generic;
@@ -8,7 +12,6 @@
 
     public class BudgetPortfolio
     {
-
         public BudgetPortfolio()
         {
         }
@@ -53,7 +56,5 @@
                 return null;
             }
         }
-
     }
 }
-

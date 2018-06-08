@@ -1,4 +1,8 @@
-﻿namespace BudgetExecution
+﻿// <copyright file="SqlCeQuery.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
+
+namespace BudgetExecution
 {
     using System;
     using System.Collections.Generic;
@@ -120,8 +124,9 @@
                 string vals = string.Empty;
                 foreach (KeyValuePair<string, object> kvp in param)
                 {
-                    vals += $"{ kvp.Key } = '{kvp.Value.ToString()}' AND ";
+                    vals += $"{ kvp.Key} = '{kvp.Value.ToString()}' AND ";
                 }
+
                 vals = vals.Trim().Substring(0, vals.Length - 4);
                 return vals;
             }
@@ -162,16 +167,15 @@
         {
             try
             {
-
                 if (command is SqlCommand)
                 {
                     return (SqlDataReader)command.ExecuteReader();
                 }
+
                 return null;
             }
             catch (Exception ex)
             {
-
                 MessageBox.Show(ex.Message + ex.StackTrace);
                 return null;
             }
@@ -280,6 +284,5 @@
                 return null;
             }
         }
-
     }
 }

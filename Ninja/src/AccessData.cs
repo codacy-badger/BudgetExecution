@@ -1,4 +1,8 @@
-﻿namespace BudgetExecution
+﻿// <copyright file="AccessData.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
+
+namespace BudgetExecution
 {
     using System;
     using System.Collections.Generic;
@@ -49,7 +53,6 @@
             }
             catch (Exception ex)
             {
-
                 MessageBox.Show(ex.Message + ex.StackTrace);
             }
         }
@@ -61,7 +64,6 @@
             }
             catch (Exception ex)
             {
-
                 MessageBox.Show(ex.Message + ex.StackTrace);
             }
         }
@@ -77,13 +79,15 @@
                 BindingSource.Filter = $"FundName = '{fund}'";
                 var boc = ProgramElements[PrcField.BocName.ToString()];
                 foreach (string b in boc)
+                {
                     MasterFIlter2.Items.Add(b);
+                }
+
                 MasterFIlter2.Visible = true;
                 MasterFIlter2.SelectionChangeCommitted += BocFilter_ItemSelected;
             }
             catch (Exception ex)
             {
-
                 MessageBox.Show(ex.Message + ex.StackTrace);
             }
         }
@@ -94,11 +98,12 @@
             {
                 var item = DbData.ProgramElements["FundName"];
                 foreach (string i in item)
+                {
                     MasterFilter1.Items.Add(i);
+                }
             }
             catch (Exception ex)
             {
-
                 MessageBox.Show(ex.Message + ex.StackTrace);
             }
         }
@@ -108,7 +113,10 @@
             try
             {
                 foreach (DataGridViewColumn dc in dgv.Columns)
+                {
                     dc.Visible = false;
+                }
+
                 dgv.Columns[0].Visible = true;
                 dgv.Columns[4].Visible = true;
                 dgv.Columns[5].Visible = true;
@@ -121,7 +129,6 @@
             }
             catch (Exception ex)
             {
-
                 MessageBox.Show(ex.Message + ex.StackTrace);
             }
         }

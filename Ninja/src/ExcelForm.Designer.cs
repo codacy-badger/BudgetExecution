@@ -282,7 +282,7 @@ namespace BudgetExecution
             this.spreadsheet1.TabIndex = 1;
             this.spreadsheet1.TabItemContextMenu = null;
             this.spreadsheet1.Text = "spreadsheet1";
-            this.spreadsheet1.Click += new System.EventHandler(this.spreadsheet1_Click);
+            this.spreadsheet1.Click += new System.EventHandler(this.Spreadsheet1_Click);
             // 
             // tabControlAdv1
             // 
@@ -846,7 +846,7 @@ namespace BudgetExecution
             this.tabControlAdv2.TabIndex = 4;
             this.tabControlAdv2.TabPanelBackColor = System.Drawing.Color.Black;
             this.tabControlAdv2.TabStyle = typeof(Syncfusion.Windows.Forms.Tools.TabRendererMetro);
-            this.tabControlAdv2.SelectedIndexChanged += new System.EventHandler(this.tabControlAdv2_SelectedIndexChanged);
+            this.tabControlAdv2.SelectedIndexChanged += new System.EventHandler(this.TabControlAdv2_SelectedIndexChanged);
             // 
             // NavigationTab
             // 

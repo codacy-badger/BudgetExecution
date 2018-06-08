@@ -1,4 +1,8 @@
-﻿namespace BudgetExecution
+﻿// <copyright file="Fund.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
+
+namespace BudgetExecution
 {
     using System.Collections.Generic;
     using System.Data;
@@ -10,7 +14,6 @@
         // CONSTRUCTORS
         public Fund()
         {
-
         }
 
         public Fund(string code, string bfy)

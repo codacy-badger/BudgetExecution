@@ -1,4 +1,8 @@
-﻿namespace BudgetExecution
+﻿// <copyright file="PrcMetric.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
+
+namespace BudgetExecution
 {
     using System;
     using System.Collections.Generic;
@@ -41,6 +45,7 @@
                 DivisionTotals = GetDataTotals(Table, PrcField.RC);
                 DivisionMetrics = GetMetrics(Table, PrcField.RC);
             }
+
             if (DbData.Source == Source.PRC)
             {
                 var table = new DivisionAuthority().Table;
@@ -77,6 +82,7 @@
                 DivisionTotals = GetDataTotals(DbData.Table, PrcField.RC);
                 DivisionMetrics = GetMetrics(DbData.Table, PrcField.RC);
             }
+
             if (DbData.Source == Source.PRC)
             {
                 var table = new DivisionAuthority().Table;
@@ -161,8 +167,11 @@
         {
             try
             {
-                if(Count > 0d)
+                if (Count > 0d)
+                {
                     return table.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Average();
+                }
+
                 return 0m;
             }
             catch (Exception ex)
@@ -222,12 +231,28 @@
             foreach (DataColumn dc in table.Columns)
             {
                 if (dc.ColumnName.Equals("ID") || dc.ColumnName.Equals("Amount"))
+                {
                     continue;
+                }
+
                 data.Add(dc.ColumnName, GetCodes(table, dc.ColumnName));
             }
-            if (data.ContainsKey("ID")) data.Remove("ID");
-            if (data.ContainsKey("Amount")) data.Remove("Amount");
-            if (data.ContainsKey("P6_ID")) data.Remove("P6_ID");
+
+            if (data.ContainsKey("ID"))
+            {
+                data.Remove("ID");
+            }
+
+            if (data.ContainsKey("Amount"))
+            {
+                data.Remove("Amount");
+            }
+
+            if (data.ContainsKey("P6_ID"))
+            {
+                data.Remove("P6_ID");
+            }
+
             return data;
         }
 
@@ -254,8 +279,11 @@
                     var query = table.AsEnumerable().Where(p => p.Field<string>(prcfilter.ToString()).Equals(filter))
                         .Select(p => p).CopyToDataTable();
                     if (GetTotals(query) > 0)
+                    {
                         info.Add(filter, GetTotals(query));
+                    }
                 }
+
                 return info;
             }
             catch (Exception ex)
@@ -274,8 +302,11 @@
                 {
                     var query = table.AsEnumerable().Where(p => p.Field<string>(prcfilter.ToString()).Equals(filter)).Select(p => p).CopyToDataTable();
                     if (GetTotals(query) > 0)
+                    {
                         info.Add(filter,  GetMetrics(query));
+                    }
                 }
+
                 return info;
             }
             catch (Exception ex)
@@ -295,8 +326,11 @@
                     var query = table.AsEnumerable().Where(p => p.Field<string>(prcfilter.ToString()).Equals(filter))
                         .Select(p => p).CopyToDataTable();
                     if (GetTotals(query) > 0)
+                    {
                         doubledata.Add(filter, (double)GetTotals(query));
+                    }
                 }
+
                 return doubledata;
             }
             catch (Exception e)
@@ -316,8 +350,11 @@
                     var query = table.AsEnumerable().Where(p => p.Field<string>(prcfilter.ToString()).Equals(filter))
                         .Select(p => p).CopyToDataTable();
                     if (GetTotals(query) > 0)
+                    {
                         info.Add(filter, new double[] { (double)GetTotals(query) });
+                    }
                 }
+
                 return info;
             }
             catch (Exception ex)

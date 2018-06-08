@@ -1,4 +1,8 @@
-﻿namespace BudgetExecution
+﻿// <copyright file="Application.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
+
+namespace BudgetExecution
 {
     using System;
     using System.Collections.Generic;

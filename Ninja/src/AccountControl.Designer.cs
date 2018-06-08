@@ -591,7 +591,7 @@
             this.groupBox3.TabIndex = 16;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "SQL / Navigation";
-            this.groupBox3.Enter += new System.EventHandler(this.groupBox3_Enter);
+            this.groupBox3.Enter += new System.EventHandler(this.GroupBox3_Enter);
             // 
             // Navigator
             // 

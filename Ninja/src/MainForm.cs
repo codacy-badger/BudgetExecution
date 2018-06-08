@@ -1,3 +1,7 @@
+// <copyright file="MainForm.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
+
 namespace BudgetExecution
 {
     using System;
@@ -16,9 +20,12 @@ namespace BudgetExecution
             D6 = new DataBuilder(Source.DivisionAccount, Provider.SQLite);
             Metric = new PrcMetric(R6);
             Timer = new Timer();
-            Values = new Dictionary<string, double>[] { Metric.GetChartTotals(R6.Table, PrcField.Fund), Metric.GetChartTotals(R6.Table, PrcField.BOC),
+            Values = new Dictionary<string, double>[]
+            {
+                Metric.GetChartTotals(R6.Table, PrcField.Fund), Metric.GetChartTotals(R6.Table, PrcField.BOC),
                 Metric.GetChartTotals(D6.Table, PrcField.Fund), Metric.GetChartTotals(R6.Table, PrcField.NPM), Metric.GetChartTotals(D6.Table, PrcField.NPM),
-                Metric.GetChartTotals(R6.Table, PrcField.GoalName), Metric.GetChartTotals(D6.Table, PrcField.GoalName)};
+                Metric.GetChartTotals(R6.Table, PrcField.GoalName), Metric.GetChartTotals(D6.Table, PrcField.GoalName)
+            };
             Title = GetChartTitles(Values);
             Chart = new GetChart(GetMainChart);
             MainChart = new BudgetChart(MainChart, Title[1], Values[1]).Activate();
@@ -33,7 +40,7 @@ namespace BudgetExecution
 
         public int Counter { get; set; }
 
-        string[] Images { get; set; }
+        private string[] Images { get; set; }
 
         public DataBuilder D6 { get; set; }
 
@@ -76,6 +83,7 @@ namespace BudgetExecution
                     MainChart = Chart(MainChart, Title[Counter], Values[Counter]);
                     Counter++;
                 }
+
                 if (Counter < Values.Length)
                 {
                     MainChart = Chart(MainChart, Title[Counter], Values[Counter]);
@@ -181,15 +189,12 @@ namespace BudgetExecution
 
         private void DatabaseTile_OnClick(object sender, EventArgs e)
         {
-
             var s = new Selector(Info.DatabaseImages);
             s.Show();
         }
 
         private void TransferButton_Click(object sender, EventArgs e)
         {
-
         }
-
     }
 }

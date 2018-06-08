@@ -1,4 +1,8 @@
-﻿namespace BudgetExecution
+﻿// <copyright file="DivisionAuthority.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
+
+namespace BudgetExecution
 {
     using System;
     using System.Collections.Generic;
@@ -25,7 +29,9 @@
             ProgramData = Metric.ProgramAreaTotals;
             ProjectData = Metric.ProgramProjectTotals;
             if (ProgramElements["BOC"].Contains("17"))
+            {
                 FTE = GetFTE(DbData.Table);
+            }
         }
 
         public DivisionAuthority(string rc)
@@ -46,7 +52,9 @@
             ProgramData = Metric.ProgramAreaTotals;
             ProjectData = Metric.ProgramProjectTotals;
             if (ProgramElements["BOC"].Contains("17"))
+            {
                 FTE = GetFTE(Table);
+            }
         }
 
         // PROPERTIES
@@ -156,7 +164,10 @@
                 var fteTable = table.AsEnumerable().Where(p => p.Field<string>("BOC").Equals("17")).Select(p => p).CopyToDataTable();
                 var fteArray = new FTE[fteTable.Rows.Count];
                 for (int i = 0; i < fteTable.Rows.Count; i++)
+                {
                     fteArray[i] = new FTE(fteTable.Rows[i]);
+                }
+
                 return fteArray;
             }
             catch (Exception ex)
@@ -215,11 +226,23 @@
                 foreach (DataColumn dc in table.Columns)
                 {
                     if (dc.ColumnName.Equals("ID") || dc.ColumnName.Equals("Amount"))
+                    {
                         continue;
+                    }
+
                     data.Add(dc.ColumnName, GetCodes(table, dc.ColumnName));
                 }
-                if (data.ContainsKey("ID")) data.Remove("ID");
-                if (data.ContainsKey("Amount")) data.Remove("Amount");
+
+                if (data.ContainsKey("ID"))
+                {
+                    data.Remove("ID");
+                }
+
+                if (data.ContainsKey("Amount"))
+                {
+                    data.Remove("Amount");
+                }
+
                 return data;
             }
             catch (Exception ex)
@@ -254,7 +277,10 @@
                 string[] rcs = Info.RcCodes;
                 Dictionary<string, decimal> info = new Dictionary<string, decimal>();
                 foreach (string n in rcs)
+                {
                     info.Add(Info.GetDivisionMailCode(n), new DivisionAuthority(n).Total);
+                }
+
                 return info;
             }
             catch (Exception ex)
@@ -286,7 +312,10 @@
             try
             {
                 if (p.ContainsKey("Amount"))
+                {
                     p.Remove("Amount");
+                }
+
                 p.Add("Amount", amount2);
                 var query = new Query(Source.PRC, Provider.SQLite, p);
                 var update = query.UpdateCommand;
@@ -328,7 +357,10 @@
                     .Where(r => r.Field<string>("Code").Equals(p["Code"].ToString()))
                     .Where(r => r.Field<string>("BOC").Equals(p["BOC"])).Select(r => r.Field<int>("Id")).Single();
                 if (row < 0)
+                {
                     return false;
+                }
+
                 return true;
             }
             catch (Exception ex)

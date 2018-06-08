@@ -1,4 +1,8 @@
-﻿namespace BudgetExecution
+﻿// <copyright file="Selector.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
+
+namespace BudgetExecution
 {
     using System;
     using System.Drawing;
@@ -20,17 +24,16 @@
             NinjaData = new FormData();
             GetViewerCarouselImageList(path);
             ViewerCarousel.OnCarouselItemFocused += ViewerCarousel_OnImageSelected;
-
         }
 
         // PROPERTIES
-        string DivisionImages { get; set; }
+        private string DivisionImages { get; set; }
 
-        string SummaryImages { get; set; }
+        private string SummaryImages { get; set; }
 
         public FormData NinjaData { get; set; }
 
-        string[] Images { get; set; }
+        private string[] Images { get; set; }
 
         // METHODS
         private void GetViewerCarouselImageList(string path)
@@ -50,6 +53,7 @@
                 ilist.Images.Add(b);
                 icollect.Add(c);
             }
+
             ViewerCarousel.ImageList = ilist;
         }
 
@@ -68,11 +72,9 @@
             }
             else
             {
-
                 var b = new SummaryForm(i);
                 b.Show();
             }
         }
     }
 }
-

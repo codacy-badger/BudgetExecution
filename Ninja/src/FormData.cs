@@ -1,4 +1,8 @@
-﻿namespace BudgetExecution
+﻿// <copyright file="FormData.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
+
+namespace BudgetExecution
 {
     using System;
     using System.Collections.Generic;
@@ -111,8 +115,11 @@
                     var query = table.AsEnumerable().Where(p => p.Field<string>(column).Equals(filter))
                         .Sum(p => p.Field<decimal>("Amount"));
                     if (query > 0)
+                    {
                         info.Add(filter, query);
+                    }
                 }
+
                 return info;
             }
             catch (Exception ex)
@@ -143,12 +150,28 @@
                 foreach (DataColumn dc in table.Columns)
                 {
                     if (dc.ColumnName.Equals("Id") || dc.ColumnName.Equals("Amount"))
+                    {
                         continue;
+                    }
+
                     data.Add(dc.ColumnName, GetCodes(table, dc.ColumnName));
                 }
-                if (data.ContainsKey("Id")) data.Remove("Id");
-                if (data.ContainsKey("Amount")) data.Remove("Amount");
-                if (data.ContainsKey("P6_Id")) data.Remove("P6_Id");
+
+                if (data.ContainsKey("Id"))
+                {
+                    data.Remove("Id");
+                }
+
+                if (data.ContainsKey("Amount"))
+                {
+                    data.Remove("Amount");
+                }
+
+                if (data.ContainsKey("P6_Id"))
+                {
+                    data.Remove("P6_Id");
+                }
+
                 return data;
             }
             catch (Exception ex)
@@ -194,8 +217,11 @@
                     var query = table.AsEnumerable().Where(p => p.Field<string>(column).Equals(filter))
                         .Select(p => p).Sum(p => p.Field<decimal>("Amount"));
                     if (query > 0)
+                    {
                         info.Add(filter, query);
+                    }
                 }
+
                 return info;
             }
             catch (Exception ex)
@@ -302,7 +328,9 @@
             {
                 PopulateFilterButtons(fitlerControl, GetCodes(table, prc.ToString()));
                 foreach (Control c in fitlerControl.Controls)
+                {
                     c.Click += FilterControlButton_OnClick;
+                }
             }
             catch (Exception ex)
             {
@@ -330,7 +358,9 @@
             {
                 PopulateFilterButtons(fitlerControl, GetCodes(table, filter.ToString()));
                 foreach (Control c in fitlerControl.Controls)
+                {
                     c.Click += FundControlListBox_OnSelect;
+                }
             }
             catch (Exception ex)
             {
@@ -415,7 +445,10 @@
             try
             {
                 foreach (DataGridViewColumn dc in dgv.Columns)
+                {
                     dc.Visible = false;
+                }
+
                 dgv.Columns[3].Visible = true;
                 dgv.Columns[4].Visible = true;
                 dgv.Columns[6].Visible = true;
@@ -460,11 +493,11 @@
                     data.Add("BOC", row.Cells["BOC"].ToString());
                     return data;
                 }
+
                 return null;
             }
             catch (Exception ex)
             {
-
                 MessageBox.Show(ex.Message + ex.StackTrace);
                 return null;
             }

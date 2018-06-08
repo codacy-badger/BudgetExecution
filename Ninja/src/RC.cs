@@ -1,4 +1,8 @@
-﻿namespace BudgetExecution
+﻿// <copyright file="RC.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
+
+namespace BudgetExecution
 {
     using System.Collections.Generic;
     using System.Windows.Forms;
@@ -21,7 +25,7 @@
         public string Name { get; }
 
         // METHODS
-        Dictionary<string, object> GetParameter(string code)
+        private Dictionary<string, object> GetParameter(string code)
         {
             try
             {
@@ -38,7 +42,5 @@
         {
             return Code;
         }
-
     }
 }
-

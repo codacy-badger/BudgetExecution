@@ -1,4 +1,8 @@
-﻿namespace BudgetExecution
+﻿// <copyright file="PrcAccountManager.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
+
+namespace BudgetExecution
 {
     using System;
 
@@ -11,12 +15,10 @@
 
         private void TabControlAdv1_SelectedIndexChanged(object sender, EventArgs e)
         {
-
         }
 
         private void Button5_Click(object sender, EventArgs e)
         {
-
         }
     }
 }

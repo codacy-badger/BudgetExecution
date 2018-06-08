@@ -1,10 +1,13 @@
-﻿namespace BudgetExecution
+﻿// <copyright file="Parameter.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
+
+namespace BudgetExecution
 {
     using System.Collections.Generic;
 
     public class PrcParameter : IPrcParameter
     {
-
         public PrcParameter(int id, string bl, string rpio, string bfy, string fund, string org, string rc, string boc, string code)
         {
             ID = id;
@@ -51,4 +54,3 @@
         public string RPIO { get; }
     }
 }
-

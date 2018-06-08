@@ -1,4 +1,8 @@
-﻿
+﻿// <copyright file="IObligation.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
+
+
 
 namespace BudgetExecution
 {

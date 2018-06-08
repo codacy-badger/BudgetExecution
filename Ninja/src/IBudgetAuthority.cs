@@ -1,3 +1,7 @@
+// <copyright file="IBudgetAuthority.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
+
 namespace BudgetExecution
 {
     using System;
@@ -7,7 +11,6 @@ namespace BudgetExecution
 
     public interface IBudgetAuthority
     {
-
         // PROPERTIES
         DataTable Table { get; }
 
@@ -32,5 +35,4 @@ namespace BudgetExecution
 
         decimal GetTotal(DataTable table);
     }
-
 }

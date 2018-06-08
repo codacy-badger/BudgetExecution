@@ -1,4 +1,8 @@
-﻿namespace BudgetExecution
+﻿// <copyright file="IQuery.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
+
+namespace BudgetExecution
 {
     using System.Data;
     using System.Data.Common;

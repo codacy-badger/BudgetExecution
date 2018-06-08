@@ -1,4 +1,8 @@
-﻿namespace BudgetExecution
+﻿// <copyright file="Org.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
+
+namespace BudgetExecution
 {
     using System.Collections.Generic;
     using System.Windows.Forms;
@@ -8,7 +12,6 @@
         // CONSTRUCTORS
         public Org()
         {
-
         }
 
         public Org(string code)
@@ -26,7 +29,7 @@
         public string Name { get; }
 
         // METHODS
-        Dictionary<string, object> GetParameter(string code)
+        private Dictionary<string, object> GetParameter(string code)
         {
             try
             {
@@ -43,6 +46,5 @@
         {
             return Code;
         }
-
     }
 }

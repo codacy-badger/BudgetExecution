@@ -1,8 +1,6 @@
-﻿
-// This file is used by Code Analysis to maintain SuppressMessage
-// attributes that are applied to this project.
-// Project-level suppressions either have no target or are given
-// a specific target and scoped to a namespace, type, member, etc.
+﻿// <copyright file="GlobalSuppressions2.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
 
 [assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("StyleCop.CSharp.ReadabilityRules", "SA1101:Prefix local calls with this", Justification = "<Pending>", Scope = "member", Target = "~M:BudgetExecution.AccessData.#ctor")]
 
@@ -294,3 +292,11 @@
 [assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("StyleCop.CSharp.ReadabilityRules", "SA1128:Put constructor initializers on their own line", Justification = "<Pending>", Scope = "member", Target = "~M:BudgetExecution.SqlCeQuery.#ctor(BudgetExecution.Source,System.Collections.Generic.Dictionary{System.String,System.Object})")]
 [assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("StyleCop.CSharp.ReadabilityRules", "SA1128:Put constructor initializers on their own line", Justification = "<Pending>", Scope = "member", Target = "~M:BudgetExecution.SqlSvrQuery.#ctor(BudgetExecution.Source)")]
 [assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("StyleCop.CSharp.ReadabilityRules", "SA1128:Put constructor initializers on their own line", Justification = "<Pending>", Scope = "member", Target = "~M:BudgetExecution.SqlSvrQuery.#ctor(BudgetExecution.Source,System.Collections.Generic.Dictionary{System.String,System.Object})")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("StyleCop.CSharp.DocumentationRules", "SA1652:Enable XML documentation output", Justification = "<Pending>")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("StyleCop.CSharp.DocumentationRules", "SA1652:Enable XML documentation output", Justification = "<Pending>", Scope = "namespace", Target = "~N:BudgetExecution")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("StyleCop.CSharp.DocumentationRules", "SA1652:Enable XML documentation output", Justification = "<Pending>", Scope = "namespace", Target = "~N:BudgetExecution.Properties")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("StyleCop.CSharp.DocumentationRules", "SA1652:Enable XML documentation output", Justification = "<Pending>", Scope = "namespace", Target = "~N:Ninja.Data")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("StyleCop.CSharp.DocumentationRules", "SA1652:Enable XML documentation output", Justification = "<Pending>", Scope = "namespace", Target = "~N:Ninja.Data.Forms")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("StyleCop.CSharp.ReadabilityRules", "SA1101:Prefix local calls with this", Justification = "<Pending>", Scope = "member", Target = "~M:Budget.Employee.#ctor(System.Data.DataRow)")]
+[assembly: System.Diagnostics.CodeAnalysis.SuppressMessage("StyleCop.CSharp.OrderingRules", "SA1202:Elements must be ordered by access", Justification = "<Pending>", Scope = "member", Target = "~M:BudgetExecution.Query.GetDataAdapter(System.Data.IDbCommand)~System.Data.Common.DbDataAdapter")]
+

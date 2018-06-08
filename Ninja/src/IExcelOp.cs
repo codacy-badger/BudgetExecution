@@ -1,4 +1,8 @@
-﻿namespace BudgetExecution
+﻿// <copyright file="IExcelOp.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
+
+namespace BudgetExecution
 {
     using System;
     using Excel = Microsoft.Office.Interop.Excel;
@@ -22,6 +26,5 @@
         void ReleaseObject(object obj);
 
         void SaveWorkBook(Excel.Workbook wb);
-
     }
 }

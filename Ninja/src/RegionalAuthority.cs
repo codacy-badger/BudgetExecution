@@ -1,4 +1,8 @@
-﻿namespace BudgetExecution
+﻿// <copyright file="RegionalAuthority.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
+
+namespace BudgetExecution
 {
     using System;
     using System.Collections.Generic;
@@ -161,7 +165,10 @@
                 var fteTable = table.AsEnumerable().Where(p => p.Field<string>("BOC").Equals("17")).Select(p => p).CopyToDataTable();
                 var fteArray = new FTE[fteTable.Rows.Count];
                 for (int i = 0; i < fteTable.Rows.Count; i++)
+                {
                     fteArray[i] = new FTE(fteTable.Rows[i]);
+                }
+
                 return fteArray;
             }
             catch (Exception ex)
@@ -206,11 +213,23 @@
                 foreach (DataColumn dc in table.Columns)
                 {
                     if (dc.ColumnName.Equals("ID") || dc.ColumnName.Equals("Amount"))
+                    {
                         continue;
+                    }
+
                     data.Add(dc.ColumnName, GetCodes(dc.ColumnName));
                 }
-                if (data.ContainsKey("ID")) data.Remove("ID");
-                if (data.ContainsKey("Amount")) data.Remove("Amount");
+
+                if (data.ContainsKey("ID"))
+                {
+                    data.Remove("ID");
+                }
+
+                if (data.ContainsKey("Amount"))
+                {
+                    data.Remove("Amount");
+                }
+
                 return data;
             }
             catch (Exception e)
@@ -285,7 +304,10 @@
             try
             {
                 if (p.ContainsKey("Amount"))
+                {
                     p.Remove("Amount");
+                }
+
                 p.Add("Amount", amount2);
                 var query = new Query(Source.PRC, Provider.SQLite, p);
                 var update = query.UpdateCommand;

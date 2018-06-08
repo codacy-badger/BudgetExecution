@@ -1,3 +1,7 @@
+// <copyright file="BudgetTools.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
+
 using System;
 
 namespace Budget
@@ -17,7 +21,7 @@ namespace Budget
                 {
                 }
 
-                private void tabControlAdv1_SelectedIndexChanged(object sender, EventArgs e)
+                private void TabControlAdv1_SelectedIndexChanged(object sender, EventArgs e)
                 {
                 }
             }

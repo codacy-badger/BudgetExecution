@@ -1,4 +1,8 @@
-﻿namespace BudgetExecution
+﻿// <copyright file="FTE.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
+
+namespace BudgetExecution
 {
     using System;
     using System.Collections.Generic;
@@ -25,9 +29,9 @@
         }
 
         // PROPERTIES
-        DataBuilder DbData { get; }
+        private DataBuilder DbData { get; }
 
-        PrcMetric Metric { get; }
+        private PrcMetric Metric { get; }
 
         public DataTable Table { get; }
 
@@ -114,11 +118,23 @@
             foreach (DataColumn dc in table.Columns)
             {
                 if (dc.ColumnName.Equals("ID") || dc.ColumnName.Equals("Amount"))
+                {
                     continue;
+                }
+
                 data.Add(dc.ColumnName, GetCodes(table, dc.ColumnName));
             }
-            if (data.ContainsKey("ID")) data.Remove("ID");
-            if (data.ContainsKey("Amount")) data.Remove("Amount");
+
+            if (data.ContainsKey("ID"))
+            {
+                data.Remove("ID");
+            }
+
+            if (data.ContainsKey("Amount"))
+            {
+                data.Remove("Amount");
+            }
+
             return data;
         }
 
@@ -156,6 +172,7 @@
                     stat[3] = (stat[0] / stat[1]) * 100;
                     info.Add(filter, stat);
                 }
+
                 return info;
             }
             catch (Exception ex)
@@ -180,6 +197,7 @@
                     stat[3] = (stat[0] / stat[1]) * 100;
                     info.Add(filter, stat);
                 }
+
                 return info;
             }
             catch (Exception ex)
@@ -227,8 +245,11 @@
                         .Where(p => p.Field<string>(column).Equals(filter))
                         .Sum(p => p.Field<decimal>("Amount"));
                     if (query > 0)
+                    {
                         info.Add(filter, query);
+                    }
                 }
+
                 return info;
             }
             catch (Exception ex)
@@ -249,8 +270,11 @@
                         .Where(p => p.Field<string>(column).Equals(filter))
                         .Select(p => p).Sum(p => p.Field<decimal>("Amount"));
                     if (query > 0)
+                    {
                         info.Add(filter, query);
+                    }
                 }
+
                 return info;
             }
             catch (Exception ex)
@@ -261,4 +285,3 @@
         }
     }
 }
-

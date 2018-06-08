@@ -1,4 +1,8 @@
-﻿namespace BudgetExecution
+﻿// <copyright file="NPM.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
+
+namespace BudgetExecution
 {
     using System.Collections.Generic;
     using System.Windows.Forms;
@@ -26,7 +30,7 @@
         public string Title { get; set; }
 
         // METHODS
-        Dictionary<string, object> GetParameter(string code)
+        private Dictionary<string, object> GetParameter(string code)
         {
             try
             {

@@ -1,4 +1,8 @@
-﻿namespace BudgetExecution
+﻿// <copyright file="DataBuilder.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
+
+namespace BudgetExecution
 {
     using System;
     using System.Collections.Generic;
@@ -27,7 +31,8 @@
                 BindingSource.DataSource = Table;
                 DataRecords = GetDataRecords(Table);
             }
-            if(source == Source.FTE)
+
+            if (source == Source.FTE)
             {
                 Table = GetDataTable().AsEnumerable().Where(p => p.Field<string>("BOC").Equals("17"))
                     .Where(p => p.Field<string>("BudgetLevel").Equals("8"))
@@ -54,6 +59,7 @@
                 BindingSource.DataSource = Table;
                 DataRecords = GetDataRecords(Table);
             }
+
             if (source == Source.FTE)
             {
                 Table = GetDataTable().AsEnumerable().Where(p => p.Field<string>("BOC").Equals("17"))
@@ -84,18 +90,16 @@
         public Dictionary<string, object> Parameter { get; set; }
 
         // METHODS
-        Dictionary<string, object> GetParameter(string rc)
+        private Dictionary<string, object> GetParameter(string rc)
         {
             try
             {
                 var param = new Dictionary<string, object>();
                 param.Add("RC", rc);
                 return param;
-
             }
             catch (Exception e)
             {
-
                 MessageBox.Show(e.Message + e.StackTrace);
                 return null;
             }
@@ -119,8 +123,11 @@
         {
             try
             {
-                if(table.Columns.Contains(column))
+                if (table.Columns.Contains(column))
+                {
                     return table.AsEnumerable().Select(p => p.Field<string>(column)).Distinct().ToArray();
+                }
+
                 return null;
             }
             catch (Exception ex)
@@ -138,11 +145,23 @@
                 foreach (DataColumn dc in table.Columns)
                 {
                     if (dc.ColumnName.Equals("ID") || dc.ColumnName.Equals("Amount"))
+                    {
                         continue;
+                    }
+
                     data.Add(dc.ColumnName, GetCodes(table, dc.ColumnName));
                 }
-                if (data.ContainsKey("ID")) data.Remove("ID");
-                if (data.ContainsKey("Amount")) data.Remove("Amount");
+
+                if (data.ContainsKey("ID"))
+                {
+                    data.Remove("ID");
+                }
+
+                if (data.ContainsKey("Amount"))
+                {
+                    data.Remove("Amount");
+                }
+
                 return data;
             }
             catch (Exception ex)
@@ -157,7 +176,10 @@
             try
             {
                 if (Table.Columns.Contains("Amount"))
+                {
                     return table.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Average();
+                }
+
                 return 0m;
             }
             catch (Exception ex)
@@ -172,7 +194,10 @@
             try
             {
                 if (Table.Columns.Contains("Amount"))
+                {
                     return table.AsEnumerable().Where(p => p.Field<decimal>("Amount") > 0m).Select(p => p).Count();
+                }
+
                 return table.Rows.Count;
             }
             catch (Exception ex)
@@ -187,7 +212,10 @@
             try
             {
                 if (Table.Columns.Contains("Amount"))
+                {
                     return new decimal[] { GetTotal(table), (decimal)GetCount(table), GetAverage(table) };
+                }
+
                 return new decimal[] { 0m };
             }
             catch (Exception ex)
@@ -234,7 +262,10 @@
             try
             {
                 if (Table.Columns.Contains("Amount"))
+                {
                     return table.AsEnumerable().Where(p => p.Field<string>("BOC") != "17").Select(p => p.Field<decimal>("Amount")).Sum();
+                }
+
                 return 0m;
             }
             catch (Exception ex)
@@ -249,7 +280,10 @@
             try
             {
                 if (Table.Columns.Contains("Amount"))
+                {
                     return table.AsEnumerable().Where(p => p.Field<string>("BOC") == "17").Select(p => p.Field<decimal>("Amount")).Sum();
+                }
+
                 return 0m;
             }
             catch (Exception ex)
