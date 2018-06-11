@@ -26,7 +26,7 @@ namespace BudgetExecution
             Qtr = qtr;
             Date = date;
             Code = code;
-            Account = new Account(code);
+            Account = new Account(fund, code);
             ProgramProjectName = ppn;
             ProgramProjectCode = Account.ProgramProjectCode;
             NpmCode = Account.NPM;
@@ -48,7 +48,7 @@ namespace BudgetExecution
             Qtr = dr["Qtr"].ToString();
             Date = dr["Date"].ToString();
             Code = dr["Code"].ToString();
-            Account = new Account(Code);
+            Account = new Account(Fund.Code, Code);
             ProgramProjectName = dr["ProgramProjectName"].ToString();
             ProgramProjectCode = Account.ProgramProjectCode;
             NpmCode = Account.NPM;

@@ -2582,7 +2582,7 @@ namespace BudgetExecution
             this.ProjectChart.Legend.Visible = false;
             this.ProjectChart.LegendsPlacement = Syncfusion.Windows.Forms.Chart.ChartPlacement.Outside;
             this.ProjectChart.Localize = null;
-            this.ProjectChart.Location = new System.Drawing.Point(20, 100);
+            this.ProjectChart.Location = new System.Drawing.Point(2, 100);
             this.ProjectChart.Margin = new System.Windows.Forms.Padding(2);
             this.ProjectChart.Name = "ProjectChart";
             this.ProjectChart.Palette = Syncfusion.Windows.Forms.Chart.ChartColorPalette.Custom;
@@ -2650,7 +2650,7 @@ namespace BudgetExecution
             this.ProjectChart.Series3D = true;
             this.ProjectChart.SeriesHighlight = true;
             this.ProjectChart.ShadowColor = new Syncfusion.Drawing.BrushInfo(Syncfusion.Drawing.GradientStyle.PathRectangle, System.Drawing.SystemColors.WindowText, System.Drawing.Color.Silver);
-            this.ProjectChart.Size = new System.Drawing.Size(1204, 720);
+            this.ProjectChart.Size = new System.Drawing.Size(1273, 720);
             this.ProjectChart.Spacing = 5F;
             this.ProjectChart.SpacingBetweenPoints = 5F;
             this.ProjectChart.Style3D = true;

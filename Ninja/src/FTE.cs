@@ -18,7 +18,7 @@ namespace BudgetExecution
 
         public FTE(DataRow datarow) : base(datarow)
         {
-            FteParameter = GetParameter();
+            FteParameter = GetParamData();
         }
 
         public FTE(Source source, Provider provider, Dictionary<string, object> param)

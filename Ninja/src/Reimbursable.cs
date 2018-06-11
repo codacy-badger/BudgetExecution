@@ -20,7 +20,7 @@ namespace BudgetExecution
             BFY = bfy;
             Fund = new Fund(fund, bfy);
             Org = new Org(org);
-            Account = new Account(code);
+            Account = new Account(fund, code);
             Code = Account.Code;
             Agreement = an;
             Authority = auth;
@@ -33,7 +33,7 @@ namespace BudgetExecution
             BFY = dr["BFY"].ToString();
             Fund = new Fund(dr["Fund"].ToString(), BFY);
             Org = new Org(dr["Fund"].ToString());
-            Account = new Account(dr["Code"].ToString());
+            Account = new Account(dr["Fund"].ToString(), dr["Code"].ToString());
             Code = Account.Code;
             Agreement = dr["Agreement"].ToString();
             Authority = decimal.Parse(dr["Authority"].ToString());

@@ -170,7 +170,7 @@ namespace BudgetExecution
             this.hubTile6.Footer = textItem3;
             this.hubTile6.HoveredBorderColor = System.Drawing.SystemColors.MenuHighlight;
             this.hubTile6.ImageSource = ((System.Drawing.Image)(resources.GetObject("hubTile6.ImageSource")));
-            this.hubTile6.Location = new System.Drawing.Point(808, 73);
+            this.hubTile6.Location = new System.Drawing.Point(1152, 116);
             this.hubTile6.Margin = new System.Windows.Forms.Padding(1);
             this.hubTile6.MinimumSize = new System.Drawing.Size(100, 100);
             this.hubTile6.Name = "hubTile6";
@@ -195,7 +195,7 @@ namespace BudgetExecution
             this.hubTile7.Footer = textItem7;
             this.hubTile7.HoveredBorderColor = System.Drawing.SystemColors.MenuHighlight;
             this.hubTile7.ImageSource = ((System.Drawing.Image)(resources.GetObject("hubTile7.ImageSource")));
-            this.hubTile7.Location = new System.Drawing.Point(411, 73);
+            this.hubTile7.Location = new System.Drawing.Point(662, 106);
             this.hubTile7.Margin = new System.Windows.Forms.Padding(1);
             this.hubTile7.MinimumSize = new System.Drawing.Size(100, 100);
             this.hubTile7.Name = "hubTile7";
@@ -220,7 +220,7 @@ namespace BudgetExecution
             this.hubTile8.Footer = textItem11;
             this.hubTile8.HoveredBorderColor = System.Drawing.SystemColors.MenuHighlight;
             this.hubTile8.ImageSource = ((System.Drawing.Image)(resources.GetObject("hubTile8.ImageSource")));
-            this.hubTile8.Location = new System.Drawing.Point(82, 73);
+            this.hubTile8.Location = new System.Drawing.Point(166, 106);
             this.hubTile8.Margin = new System.Windows.Forms.Padding(1);
             this.hubTile8.MinimumSize = new System.Drawing.Size(100, 100);
             this.hubTile8.Name = "hubTile8";

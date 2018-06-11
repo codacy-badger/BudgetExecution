@@ -13,9 +13,28 @@ namespace BudgetExecution
 
     public class PRC : IPRC, IAccount
     {
+        private DataRow data;
+
         // CONSTRUCTORS
         public PRC()
         {
+        }
+
+        public PRC(Source source, Provider provider, Dictionary<string, object> param)
+        {
+            data = new DataBuilder(source, provider, param).Table.AsEnumerable().Select(p => p).First();
+            ID = int.Parse(data["ID"].ToString());
+            BudgetLevel = data["BudgetLevel"].ToString();
+            RPIO = data["RPIO"].ToString();
+            BFY = data["BFY"].ToString();
+            Fund = new Fund(data["Fund"].ToString(), data["BFY"].ToString());
+            Org = new Org(data["Org"].ToString());
+            RC = new RC(data["RC"].ToString());
+            Account = new Account(Source.Account, Provider.SQLite, Fund.Code, data["Code"].ToString());
+            Code = Account.Code;
+            BOC = new BOC(data["BOC"].ToString());
+            Parameter = GetParamData();
+            Amount = decimal.Parse(data["Amount"].ToString());
         }
 
         public PRC(int id, string bl, string rpio, string bfy, string fund, string org, string rc, string code, string boc, decimal amount)
@@ -27,27 +46,27 @@ namespace BudgetExecution
             Fund = new Fund(Source.Fund, Provider.SQLite, fund, bfy);
             RC = new RC(rc);
             Org = new Org(org);
-            Account = new Account(Source.Account, Provider.SQLite, code);
+            Account = new Account(Source.Account, Provider.SQLite, Fund.Code, code);
             Code = Account.Code;
             BOC = new BOC(boc, amount);
-            Parameter = GetParameter();
+            Parameter = GetParamData();
             Amount = amount;
         }
 
-        public PRC(DataRow datarow)
+        public PRC(DataRow data)
         {
-            ID = int.Parse(datarow["ID"].ToString());
-            BudgetLevel = datarow["BudgetLevel"].ToString();
-            RPIO = datarow["RPIO"].ToString();
-            BFY = datarow["BFY"].ToString();
-            Fund = new Fund(datarow["Fund"].ToString(), datarow["BFY"].ToString());
-            Org = new Org(datarow["Org"].ToString());
-            RC = new RC(datarow["RC"].ToString());
-            Account = new Account(Source.Account, Provider.SQLite, datarow["Code"].ToString());
+            ID = int.Parse(data["ID"].ToString());
+            BudgetLevel = data["BudgetLevel"].ToString();
+            RPIO = data["RPIO"].ToString();
+            BFY = data["BFY"].ToString();
+            Fund = new Fund(data["Fund"].ToString(), data["BFY"].ToString());
+            Org = new Org(data["Org"].ToString());
+            RC = new RC(data["RC"].ToString());
+            Account = new Account(Source.Account, Provider.SQLite, Fund.Code, data["Code"].ToString());
             Code = Account.Code;
-            BOC = new BOC(datarow["BOC"].ToString());
-            Parameter = GetParameter();
-            Amount = decimal.Parse(datarow["Amount"].ToString());
+            BOC = new BOC(data["BOC"].ToString());
+            Parameter = GetParamData();
+            Amount = decimal.Parse(data["Amount"].ToString());
         }
 
         // PROPERTIES
@@ -100,7 +119,7 @@ namespace BudgetExecution
         public object[] DataValues { get; }
 
         // METHODS
-        internal Dictionary<string, object> GetParameter()
+        internal Dictionary<string, object> GetParamData()
         {
             try
             {
@@ -124,11 +143,10 @@ namespace BudgetExecution
             }
         }
 
-        internal DataRow GetData(Source source, Provider provider)
+        internal DataRow GetData(Source source, Provider provider, Dictionary<string, object> param)
         {
             try
             {
-                var param = GetParameter();
                 return new DataBuilder(source, provider, param).Table.AsEnumerable().Select(p => p).First();
             }
             catch (Exception ex)
@@ -184,7 +202,7 @@ namespace BudgetExecution
         {
             try
             {
-                Dictionary<string, object> prc = GetParameter();
+                Dictionary<string, object> prc = GetParamData();
 
                 return prc.Keys.ToArray();
             }
@@ -199,7 +217,7 @@ namespace BudgetExecution
         {
             try
             {
-                Dictionary<string, object> param = GetParameter();
+                Dictionary<string, object> param = GetParamData();
 
                 return param.Values.ToArray();
             }
@@ -214,39 +232,39 @@ namespace BudgetExecution
         {
             try
             {
-                var prc = new Account(source, provider, param["Code"].ToString());
+                var account = new Account(source, provider, param["Fund"].ToString(), param["Code"].ToString());
                 if (!param.ContainsKey("FundName") || param["FundName"] == null)
                 {
-                    param["FundName"] = prc.FundName;
+                    param["FundName"] = account.FundName;
                 }
 
                 if (!param.ContainsKey("Org") || param["Org"] == null)
                 {
-                    param["Org"] = prc.Org;
+                    param["Org"] = account.Org;
                 }
 
                 if (!param.ContainsKey("ProgramProject") || param["ProgramProject"] == null)
                 {
-                    param["ProgramProject"] = prc.ProgramProjectCode;
-                    param["ProgramProjectName"] = prc.ProgramProjectName;
+                    param["ProgramProject"] = account.ProgramProjectCode;
+                    param["ProgramProjectName"] = account.ProgramProjectName;
                 }
 
                 if (!param.ContainsKey("ProgramArea") || param["ProgramArea"] == null)
                 {
-                    param["ProgramArea"] = prc.ProgramArea;
-                    param["ProgramAreaName"] = prc.ProgramAreaName;
+                    param["ProgramArea"] = account.ProgramArea;
+                    param["ProgramAreaName"] = account.ProgramAreaName;
                 }
 
                 if (!param.ContainsKey("Goal") || param["Goal"] == null)
                 {
-                    param["Goal"] = prc.Goal;
-                    param["GoalName"] = prc.GoalName;
+                    param["Goal"] = account.Goal;
+                    param["GoalName"] = account.GoalName;
                 }
 
                 if (!param.ContainsKey("Objective") || param["Objective"] == null)
                 {
-                    param["Objective"] = prc.Objective;
-                    param["ObjectiveName"] = prc.ObjectiveName;
+                    param["Objective"] = account.Objective;
+                    param["ObjectiveName"] = account.ObjectiveName;
                 }
 
                 return param;

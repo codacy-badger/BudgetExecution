@@ -43,36 +43,7 @@ namespace BudgetExecution
             Parameter = param;
             DataConnection = GetConnection(provider);
             TableName = source.ToString();
-            SelectStatement = GetSlectSqlStatement(TableName, Parameter);
-            SelectCommand = GetSelectCommand(SelectStatement, DataConnection);
-            DataAdapter = GetDataAdapter(SelectCommand);
-            CommandBuilder = GetCommandBuilder(DataAdapter);
-            UpdateCommand = CommandBuilder.GetUpdateCommand();
-            InsertCommand = CommandBuilder.GetInsertCommand();
-            DeleteCommand = CommandBuilder.GetDeleteCommand();
-        }
-
-        public Query(Provider provider, string sourcePath, Dictionary<string, object> param)
-        {
-            TableName = sourcePath;
-            Parameter = param;
-            switch (provider)
-            {
-                case Provider.SQLite:
-                    DataConnection = new SQLiteConnection(@"datasource=C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\database\SQLite\R6.db");
-                    break;
-                case Provider.SqlCe:
-                    DataConnection = new SqlConnection(@"datasource=C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\database\SqlCe\R6.sdf");
-                    break;
-                case Provider.SqlSvr:
-                    DataConnection = new SQLiteConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C: \Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\database\SqlServer\R6.mdf;Integrated Security=True;Connect Timeout=30");
-                    break;
-                case Provider.OleDb:
-                    DataConnection = new OleDbConnection(@"Data Source=C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\database\OleDb\R6.accdb");
-                    break;
-            }
-
-            SelectStatement = GetSlectSqlStatement(TableName, Parameter);
+            SelectStatement = GetSelectStatement(TableName, Parameter);
             SelectCommand = GetSelectCommand(SelectStatement, DataConnection);
             DataAdapter = GetDataAdapter(SelectCommand);
             CommandBuilder = GetCommandBuilder(DataAdapter);
@@ -108,34 +79,39 @@ namespace BudgetExecution
 
         public DbCommand DataCommand { get; set; }
 
-        public DbCommand DeleteCommand { get; }
+        public DbCommand DeleteCommand { get; set; }
 
-        public DbCommand InsertCommand { get; }
+        public DbCommand InsertCommand { get; set; }
 
-        public DbCommand UpdateCommand { get; }
+        public DbCommand UpdateCommand { get; set; }
 
         // METHODS
-        internal string GetSelectParameterString(Dictionary<string, object> param)
+        public DbConnection GetConnection(Provider provider)
         {
             try
             {
-                string vals = string.Empty;
-                foreach (KeyValuePair<string, object> kvp in param)
+                switch (provider)
                 {
-                    vals += $"{kvp.Key} = '{kvp.Value.ToString()}' AND ";
+                    case Provider.SQLite:
+                        return new SQLiteConnection(@"datasource=C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\database\SQLite\R6.db");
+                    case Provider.SqlCe:
+                        return new SqlConnection(@"datasource=C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\database\SqlCe\R6.sdf");
+                    case Provider.SqlSvr:
+                        return new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C: \Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\database\SqlServer\R6.mdf;Integrated Security=True;Connect Timeout=30");
+                    case Provider.OleDb:
+                        return new OleDbConnection(@"Data Source = C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\database\OleDb\R6.accdb");
                 }
 
-                vals = vals.Trim().Substring(0, vals.Length - 4);
-                return vals;
+                return null;
             }
             catch (Exception ex)
             {
-                MessageBox.Show("ERROR!: \n\n" + ex.TargetSite + ex.StackTrace);
+                MessageBox.Show("ERROR!: \n" + ex.TargetSite + ex.StackTrace);
                 return null;
             }
         }
 
-        public string GetSlectSqlStatement(string table, Dictionary<string, object> param)
+        public string GetSelectStatement(string table, Dictionary<string, object> param)
         {
             try
             {
@@ -174,51 +150,26 @@ namespace BudgetExecution
             }
         }
 
-        public DbConnection GetConnection(Provider provider)
-        {
-            try
-            {
-                switch (provider)
-                {
-                    case Provider.SQLite:
-                        return new SQLiteConnection(@"datasource=C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\database\SQLite\R6.db");
-                    case Provider.SqlCe:
-                        return new SqlConnection(@"datasource=C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\database\SqlCe\R6.sdf");
-                    case Provider.SqlSvr:
-                        return new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C: \Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\database\SqlServer\R6.mdf;Integrated Security=True;Connect Timeout=30");
-                    case Provider.OleDb:
-                        return new OleDbConnection(@"Data Source = C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\database\OleDb\R6.accdb");
-                }
-
-                return null;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("ERROR!: \n" + ex.TargetSite + ex.StackTrace);
-                return null;
-            }
-        }
-
-        public DbCommand GetDataCommand(string select, IDbConnection connection)
+        public DbCommand GetDataCommand(string sql, IDbConnection connection)
         {
             try
             {
                 if (connection is SQLiteConnection)
                 {
-                    SelectStatement = select;
-                    return new SQLiteCommand(select, (SQLiteConnection)connection);
+                    SelectStatement = sql;
+                    return new SQLiteCommand(sql, (SQLiteConnection)connection);
                 }
 
                 if (connection is OleDbConnection)
                 {
-                    SelectStatement = select;
-                    return new OleDbCommand(select, (OleDbConnection)connection);
+                    SelectStatement = sql;
+                    return new OleDbCommand(sql, (OleDbConnection)connection);
                 }
 
                 if (connection is SqlConnection)
                 {
-                    SelectStatement = select;
-                    return new SqlCommand(select, (SqlConnection)connection);
+                    SelectStatement = sql;
+                    return new SqlCommand(sql, (SqlConnection)connection);
                 }
 
                 return null;
@@ -381,6 +332,26 @@ namespace BudgetExecution
             catch (SystemException ex)
             {
                 MessageBox.Show(ex.Message + ex.StackTrace);
+                return null;
+            }
+        }
+
+        internal string GetSelectParameterString(Dictionary<string, object> param)
+        {
+            try
+            {
+                string vals = string.Empty;
+                foreach (KeyValuePair<string, object> kvp in param)
+                {
+                    vals += $"{kvp.Key} = '{kvp.Value.ToString()}' AND ";
+                }
+
+                vals = vals.Trim().Substring(0, vals.Length - 4);
+                return vals;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("ERROR!: \n\n" + ex.TargetSite + ex.StackTrace);
                 return null;
             }
         }

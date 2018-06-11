@@ -231,8 +231,28 @@ namespace BudgetExecution
             {
                 var ds = new DataSet("R6");
                 var dt = new DataTable(Source.ToString());
+                dt.TableName = Source.ToString();
                 ds.Tables.Add(dt);
                 Query.DataAdapter.Fill(ds);
+                return ds;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
+                return null;
+            }
+        }
+
+        public DataSet GetDataSet(string dataset, Source source)
+        {
+            try
+            {
+                var ds = new DataSet(dataset);
+                ds.DataSetName = dataset;
+                var dt = new DataTable(source.ToString());
+                dt.TableName = source.ToString();
+                ds.Tables.Add(dt);
+                this.Query.DataAdapter.Fill(ds);
                 return ds;
             }
             catch (Exception ex)
@@ -246,7 +266,27 @@ namespace BudgetExecution
         {
             try
             {
+                var ds = new DataSet("R06");
+                ds.DataSetName = "R06";
                 var dt = new DataTable(Source.ToString());
+                dt.TableName = Source.ToString();
+                ds.Tables.Add(dt);
+                this.Query.DataAdapter.Fill(ds, dt.TableName);
+                return dt;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+                return null;
+            }
+        }
+
+        public DataTable GetDataTable(Source source)
+        {
+            try
+            {
+                var dt = new DataTable(source.ToString());
+                dt.TableName = source.ToString();
                 Query.DataAdapter.Fill(dt);
                 return dt;
             }

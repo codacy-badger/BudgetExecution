@@ -138,6 +138,42 @@ namespace BudgetExecution
             }
         }
 
+        internal OleDbParameter[] GetParameter(Dictionary<string, object> param)
+        {
+            try
+            {
+                var val = new OleDbParameter[param.Count];
+                for (int i = 0; i < param.Count; i++)
+                {
+                    foreach (KeyValuePair<string, object> kvp in param)
+                    {
+                        val[i] = new OleDbParameter(kvp.Key.ToString(), (object)kvp.Value);
+                        val[i].SourceColumn = kvp.Key.ToString();
+                        if (kvp.Key.ToString().Equals("ID"))
+                        {
+                            val[i].DbType = DbType.Int64;
+                        }
+
+                        if (kvp.Key.ToString().Equals("Amount"))
+                        {
+                            val[i].DbType = DbType.Decimal;
+                        }
+                        else
+                        {
+                            val[i].DbType = DbType.String;
+                        }
+                    }
+                }
+
+                return val;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("ERROR!: \n\n" + ex.TargetSite + ex.StackTrace);
+                return null;
+            }
+        }
+
         private OleDbCommand GetSelectCommand()
         {
             try

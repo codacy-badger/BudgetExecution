@@ -23,13 +23,13 @@ namespace BudgetExecution
 
         public FormData(DataBuilder data, BindingSource bs, DataGridView dgv, BindingNavigator bn)
         {
-            Data = data;
-            DataMetric = new PrcMetric(Data);
-            DataTable = Data.Table;
-            BindDataGridAndNavigator(DataTable, dgv, bs, bn);
+            DbData = data;
+            Metric = new PrcMetric(DbData);
+            DataTable = DbData.Table;
+            BindGridAndNavigator(DataTable, dgv, bs, bn);
             BindingSource = bs;
             Navigator = bn;
-            DataGrid = dgv;
+            Grid = dgv;
         }
 
         // PROPERTIES
@@ -37,7 +37,7 @@ namespace BudgetExecution
 
         public ChartSeriesType ChartType { get; set; }
 
-        public DataBuilder Data { get; set; }
+        public DataBuilder DbData { get; set; }
 
         public BindingSource BindingSource { get; set; }
 
@@ -45,7 +45,7 @@ namespace BudgetExecution
 
         public DataTable DataTable { get; set; }
 
-        public PrcMetric DataMetric { get; set; }
+        public PrcMetric Metric { get; set; }
 
         public ChartControl Chart { get; set; }
 
@@ -65,15 +65,13 @@ namespace BudgetExecution
 
         public int Count { get; set; }
 
-        public DataGridView DataGrid { get; set; }
+        public DataGridView Grid { get; set; }
 
         public decimal[] Metrics { get; set; }
 
         public BindingNavigator Navigator { get; set; }
 
         public FlowLayoutPanel Panel { get; set; }
-
-        public Dictionary<string, object> SearchParameter { get; set; }
 
         internal Func<DataTable, PrcField, string> TableFilter { get; set; }
 
@@ -262,7 +260,7 @@ namespace BudgetExecution
             }
         }
 
-        internal void BindDataGridAndNavigator(DataTable table, DataGridView dg, BindingSource bs, BindingNavigator bn)
+        internal void BindGridAndNavigator(DataTable table, DataGridView dg, BindingSource bs, BindingNavigator bn)
         {
             try
             {
@@ -463,11 +461,11 @@ namespace BudgetExecution
             }
         }
 
-        internal void ReturnNavigateButton_OnClick(object sender, EventArgs e)
+        internal void ReturnButton_OnClick(object sender, EventArgs e)
         {
             try
             {
-                DataTable = Data.Table;
+                DataTable = DbData.Table;
                 BindingSource.DataSource = DataTable;
             }
             catch (Exception ex)

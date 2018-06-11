@@ -14,7 +14,7 @@ namespace BudgetExecution
     using System.Data.SQLite;
     using System.Windows.Forms;
 
-    public class SQLiteQuery : IQuery
+    public class SQLiteQuery : Query
     {
         // CONSTRUCTORS
         public SQLiteQuery()
@@ -43,7 +43,7 @@ namespace BudgetExecution
             Parameter = param;
             DataConnection = GetConnection(Provider);
             TableName = source.ToString();
-            SelectStatement = GetSlectSqlStatement(TableName, Parameter);
+            SelectStatement = GetSelectStatement(TableName, Parameter);
             SelectCommand = GetSelectCommand(SelectStatement, DataConnection);
             DataAdapter = GetDataAdapter(SelectCommand);
             CommandBuilder = GetCommandBuilder(DataAdapter);
@@ -53,47 +53,48 @@ namespace BudgetExecution
         }
 
         // PROPERTIES
-        public Source Source { get; }
+        public new Source Source { get; }
 
-        public Provider Provider { get; }
+        public new Provider Provider { get; }
 
-        public AppSettingsReader Settings { get; }
+        public new AppSettingsReader Settings { get; }
 
-        public DbConnection DataConnection { get; }
+        public new SQLiteConnection DataConnection { get; }
 
-        public Dictionary<string, object> Parameter { get; }
+        public new Dictionary<string, object> Parameter { get; }
 
-        public string TableName { get; }
+        public new string TableName { get; }
 
-        public string SqlStatement { get; set; }
+        public new string SqlStatement { get; set; }
 
-        public string SelectStatement { get; set; }
+        public new string SelectStatement { get; set; }
 
-        public DbCommand SelectCommand { get; }
+        public new SQLiteCommand SelectCommand { get; }
 
-        public DbDataReader DataReader { get; set; }
+        public new SQLiteDataReader DataReader { get; set; }
 
-        public DbDataAdapter DataAdapter { get; set; }
+        public new SQLiteDataAdapter DataAdapter { get; set; }
 
-        public DbCommandBuilder CommandBuilder { get; internal set; }
+        public new SQLiteCommandBuilder CommandBuilder { get; internal set; }
 
-        public DbCommand DataCommand { get; set; }
+        public new SQLiteCommand DataCommand { get; set; }
 
-        public DbCommand DeleteCommand { get; }
+        public new SQLiteCommand DeleteCommand { get; }
 
-        public DbCommand InsertCommand { get; }
+        public new SQLiteCommand InsertCommand { get; }
 
-        public DbCommand UpdateCommand { get; }
+        public new SQLiteCommand UpdateCommand { get; }
 
         // METHODS
-        internal string GetSelectParameterString(Dictionary<string, object> param)
+        public new string GetSelectParameterString(Dictionary<string, object> param)
         {
             try
             {
                 string vals = string.Empty;
-                foreach (KeyValuePair<string, object> kvp in param)
+                var sqlparameter = GetParameter(param);
+                foreach (SQLiteParameter p in sqlparameter)
                 {
-                    vals += $"{kvp.Key} = '{kvp.Value.ToString()}' AND ";
+                    vals += $"{p.SourceColumn.ToString()} = '{p.Value}' AND ";
                 }
 
                 vals = vals.Trim().Substring(0, vals.Length - 4);
@@ -106,7 +107,43 @@ namespace BudgetExecution
             }
         }
 
-        public string GetSlectSqlStatement(string table, Dictionary<string, object> param)
+        public SQLiteParameter[] GetParameter(Dictionary<string, object> param)
+        {
+            try
+            {
+                var val = new SQLiteParameter[param.Count];
+                for (int i = 0; i < param.Count; i++)
+                {
+                    foreach (KeyValuePair<string, object> kvp in param)
+                    {
+                        val[i] = new SQLiteParameter(kvp.Key.ToString(), (object)kvp.Value);
+                        val[i].SourceColumn = kvp.Key.ToString();
+                        if (kvp.Key.ToString().Equals("ID"))
+                        {
+                            val[i].DbType = DbType.Int64;
+                        }
+
+                        if (kvp.Key.ToString().Equals("Amount"))
+                        {
+                            val[i].DbType = DbType.Decimal;
+                        }
+                        else
+                        {
+                            val[i].DbType = DbType.String;
+                        }
+                    }
+                }
+
+                return val;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("ERROR!: \n\n" + ex.TargetSite + ex.StackTrace);
+                return null;
+            }
+        }
+
+        public new string GetSelectStatement(string table, Dictionary<string, object> param)
         {
             try
             {
@@ -119,7 +156,7 @@ namespace BudgetExecution
             }
         }
 
-        public string GetSqlStatement(string table, string sql)
+        public new string GetSqlStatement(string table, string sql)
         {
             try
             {
@@ -132,7 +169,7 @@ namespace BudgetExecution
             }
         }
 
-        public string GetSqlStatement(string sql)
+        public new string GetSqlStatement(string sql)
         {
             try
             {
@@ -145,23 +182,11 @@ namespace BudgetExecution
             }
         }
 
-        public DbConnection GetConnection(Provider provider)
+        public new SQLiteConnection GetConnection(Provider provider)
         {
             try
             {
-                switch (provider)
-                {
-                    case Provider.SQLite:
-                        return new SQLiteConnection(@"datasource=C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\database\SQLite\R6.db");
-                    case Provider.SqlCe:
-                        return new SQLiteConnection(@"datasource=C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\database\SqlCe\R6.sdf");
-                    case Provider.SqlSvr:
-                        return new SQLiteConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C: \Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\database\SqlServer\R6.mdf;Integrated Security=True;Connect Timeout=30");
-                    case Provider.OleDb:
-                        return new SQLiteConnection(@"Data Source = C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\database\OleDb\R6.accdb");
-                }
-
-                return null;
+                 return new SQLiteConnection(@"datasource=C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\database\SQLite\R6.SQLite");
             }
             catch (Exception ex)
             {
@@ -170,29 +195,12 @@ namespace BudgetExecution
             }
         }
 
-        public DbCommand GetDataCommand(string select, IDbConnection connection)
+        public SQLiteCommand GetDataCommand(string select, SQLiteConnection connection)
         {
             try
             {
-                if (connection is SQLiteConnection)
-                {
-                    SelectStatement = select;
-                    return new SQLiteCommand(select, (SQLiteConnection)connection);
-                }
-
-                if (connection is OleDbConnection)
-                {
-                    SelectStatement = select;
-                    return new OleDbCommand(select, (OleDbConnection)connection);
-                }
-
-                if (connection is SqlConnection)
-                {
-                    SelectStatement = select;
-                    return new SqlCommand(select, (SqlConnection)connection);
-                }
-
-                return null;
+                SelectStatement = select;
+                return new SQLiteCommand(select, connection);
             }
             catch (Exception ex)
             {
@@ -201,29 +209,11 @@ namespace BudgetExecution
             }
         }
 
-        internal DbCommand GetSelectCommand(string select, IDbConnection connection)
+        public SQLiteDataAdapter GetDataAdapter(SQLiteCommand command)
         {
             try
             {
-                if (connection is SQLiteConnection)
-                {
-                    SelectStatement = select;
-                    return new SQLiteCommand(SelectStatement, (SQLiteConnection)connection);
-                }
-
-                if (connection is OleDbConnection)
-                {
-                    SelectStatement = select;
-                    return new OleDbCommand(SelectStatement, (OleDbConnection)connection);
-                }
-
-                if (connection is SqlConnection)
-                {
-                    SelectStatement = select;
-                    return new SqlCommand(SelectStatement, (SqlConnection)connection);
-                }
-
-                return null;
+               return new SQLiteDataAdapter(command);
             }
             catch (Exception ex)
             {
@@ -232,29 +222,11 @@ namespace BudgetExecution
             }
         }
 
-        internal DbCommand GetSelectCommand(Dictionary<string, object> param, IDbConnection connection)
+        public SQLiteDataReader GetDataReader(SQLiteCommand command)
         {
             try
             {
-                if (connection is SQLiteConnection)
-                {
-                    SelectStatement = GetSelectParameterString(param);
-                    return new SQLiteCommand(SelectStatement, (SQLiteConnection)connection);
-                }
-
-                if (connection is OleDbConnection)
-                {
-                    SelectStatement = GetSelectParameterString(param);
-                    return new OleDbCommand(SelectStatement, (OleDbConnection)connection);
-                }
-
-                if (connection is SqlConnection)
-                {
-                    SelectStatement = GetSelectParameterString(param);
-                    return new SqlCommand(SelectStatement, (SqlConnection)connection);
-                }
-
-                return null;
+               return command.ExecuteReader();
             }
             catch (Exception ex)
             {
@@ -263,95 +235,43 @@ namespace BudgetExecution
             }
         }
 
-        public DbDataAdapter GetDataAdapter(IDbCommand command)
+        public SQLiteCommandBuilder GetCommandBuilder(SQLiteDataAdapter adapter)
         {
             try
             {
-                if (command is SQLiteCommand)
-                {
-                    return new SQLiteDataAdapter((SQLiteCommand)command);
-                }
-
-                if (command is OleDbCommand)
-                {
-                    return new OleDbDataAdapter((OleDbCommand)command);
-                }
-
-                if (command is SqlCommand)
-                {
-                    return new SqlDataAdapter((SqlCommand)command);
-                }
-
-                return null;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("ERROR!: \n" + ex.TargetSite + ex.StackTrace);
-                return null;
-            }
-        }
-
-        public DbDataReader GetDataReader(IDbCommand command)
-        {
-            try
-            {
-                if (command is SQLiteCommand)
-                {
-                    return ((SQLiteCommand)command).ExecuteReader();
-                }
-
-                if (command is OleDbCommand)
-                {
-                    return ((OleDbCommand)command).ExecuteReader();
-                }
-
-                if (command is SqlCommand)
-                {
-                    return ((SqlCommand)command).ExecuteReader();
-                }
-
-                return null;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("ERROR!: \n" + ex.TargetSite + ex.StackTrace);
-                return null;
-            }
-        }
-
-        public DbCommandBuilder GetCommandBuilder(IDbDataAdapter adapter)
-        {
-            try
-            {
-                if (adapter is SQLiteDataAdapter)
-                {
-                    CommandBuilder = new SQLiteCommandBuilder(adapter as SQLiteDataAdapter);
-                    return CommandBuilder;
-                }
-
-                if (adapter is OleDbDataAdapter)
-                {
-                    CommandBuilder = new OleDbCommandBuilder(adapter as OleDbDataAdapter);
-                    return CommandBuilder;
-                }
-
-                if (adapter is SqlDataAdapter)
-                {
-                    CommandBuilder = new SqlCommandBuilder(adapter as SqlDataAdapter);
-                    return CommandBuilder;
-                }
-
-                if (adapter is SqlDataAdapter)
-                {
-                    CommandBuilder = new SqlCommandBuilder(adapter as SqlDataAdapter);
-                    return CommandBuilder;
-                }
-
-                return null;
+                return new SQLiteCommandBuilder(adapter);
             }
             catch (SystemException ex)
             {
                 MessageBox.Show(ex.Message + ex.StackTrace);
+                return null;
+            }
+        }
+
+        internal SQLiteCommand GetSelectCommand(string select, SQLiteConnection connection)
+        {
+            try
+            {
+                SelectStatement = select;
+                return new SQLiteCommand(SelectStatement, connection);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("ERROR!: \n" + ex.TargetSite + ex.StackTrace);
+                return null;
+            }
+        }
+
+        internal SQLiteCommand GetSelectCommand(Dictionary<string, object> param, SQLiteConnection connection)
+        {
+            try
+            {
+                SelectStatement = GetSelectParameterString(param);
+                return new SQLiteCommand(SelectStatement, connection);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("ERROR!: \n" + ex.TargetSite + ex.StackTrace);
                 return null;
             }
         }

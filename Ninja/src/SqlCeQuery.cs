@@ -6,6 +6,7 @@ namespace BudgetExecution
 {
     using System;
     using System.Collections.Generic;
+    using System.Configuration;
     using System.Data;
     using System.Data.Common;
     using System.Data.SqlClient;
@@ -18,71 +19,76 @@ namespace BudgetExecution
         {
         }
 
-        public SqlCeQuery(Source source) : base(source, Provider.SqlCe)
+        public SqlCeQuery(Source source)
         {
+            Provider = Provider.SQLite;
             Source = source;
+            DataConnection = GetConnection(Provider);
             TableName = source.ToString();
             SelectStatement = $"SELECT * FROM {source.ToString()}";
-            Connection = new SqlConnection(@"Data Source=C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\database\SqlCe\R6.sdf");
-            SelectCommand = new SqlCommand(SelectStatement, Connection);
-            Adapter = new SqlDataAdapter(SelectCommand);
-            CommandBuilder = GetCommandBuilder(Adapter);
+            SelectCommand = GetSelectCommand(SelectStatement, DataConnection);
+            DataAdapter = GetDataAdapter(SelectCommand);
+            CommandBuilder = GetCommandBuilder(DataAdapter);
+            UpdateCommand = CommandBuilder.GetUpdateCommand();
             InsertCommand = CommandBuilder.GetInsertCommand();
-            UpdateCommand = CommandBuilder.GetInsertCommand();
-            DeleteCommand = CommandBuilder.GetInsertCommand();
+            DeleteCommand = CommandBuilder.GetDeleteCommand();
         }
 
-        public SqlCeQuery(Source source, Dictionary<string, object> param) : base(source, Provider.SqlCe, param)
+        public SqlCeQuery(Source source, Dictionary<string, object> param)
         {
+            Provider = Provider.SQLite;
             Source = source;
-            Provider = Provider.SqlCe;
-            TableName = source.ToString();
             Parameter = param;
-            SelectStatement = GetSqlStatement();
-            Connection = new SqlConnection(@"data source=C:\Users\terry\Documents\Visual Studio 2017\Projects\Budget\database\SqlCe\R6.sdf");
-            SelectCommand = new SqlCommand(SelectStatement, Connection);
-            Adapter = new SqlDataAdapter(SelectCommand);
-            CommandBuilder = GetCommandBuilder(Adapter);
+            DataConnection = GetConnection(Provider);
+            TableName = source.ToString();
+            SelectStatement = GetSelectStatement(TableName, Parameter);
+            SelectCommand = GetSelectCommand(SelectStatement, DataConnection);
+            DataAdapter = GetDataAdapter(SelectCommand);
+            CommandBuilder = GetCommandBuilder(DataAdapter);
+            UpdateCommand = CommandBuilder.GetUpdateCommand();
             InsertCommand = CommandBuilder.GetInsertCommand();
-            UpdateCommand = CommandBuilder.GetInsertCommand();
-            DeleteCommand = CommandBuilder.GetInsertCommand();
+            DeleteCommand = CommandBuilder.GetDeleteCommand();
         }
 
         // PROPERTIES
         public new Source Source { get; }
 
-        public new Provider Provider { get; set; }
+        public new Provider Provider { get; }
 
-        public new string TableName { get; }
+        public new AppSettingsReader Settings { get; }
 
-        public SqlConnection Connection { get; }
+        public new SqlConnection DataConnection { get; }
 
         public new Dictionary<string, object> Parameter { get; }
 
-        public new string SelectStatement { get; }
+        public new string TableName { get; }
+
+        public new string SqlStatement { get; set; }
+
+        public new string SelectStatement { get; set; }
 
         public new SqlCommand SelectCommand { get; }
 
-        public SqlDataAdapter Adapter { get; set; }
+        public new SqlDataReader DataReader { get; set; }
 
-        public DbDataReader Reader { get; set; }
+        public new SqlDataAdapter DataAdapter { get; set; }
 
-        public new Dictionary<string, string> SqlStatement { get; }
+        public new SqlCommandBuilder CommandBuilder { get; internal set; }
 
-        public new SqlCommandBuilder CommandBuilder { get; }
+        public new SqlCommand DataCommand { get; set; }
 
-        public new SqlCommand UpdateCommand { get; }
+        public new SqlCommand DeleteCommand { get; set; }
 
-        public new SqlCommand InsertCommand { get; }
+        public new SqlCommand InsertCommand { get; set; }
 
-        public new SqlCommand DeleteCommand { get; }
+        public new SqlCommand UpdateCommand { get; set; }
 
         // METHODS
-        public SqlConnection GetConnection()
+        public new SqlConnection GetConnection(Provider provider)
         {
             try
             {
-                return new SqlConnection(@"Data Source = C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\database\Sql\R6.accdb");
+                return new SqlConnection(@"datasource=C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\database\SqlCe\R6.sdf");
             }
             catch (Exception ex)
             {
@@ -91,40 +97,15 @@ namespace BudgetExecution
             }
         }
 
-        private SqlCommandBuilder GetCommandBuilder()
-        {
-            try
-            {
-                return new SqlCommandBuilder(Adapter);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("ERROR!: \n\n" + ex.TargetSite + ex.StackTrace);
-                return null;
-            }
-        }
-
-        private SqlDataAdapter GetDataAdapter()
-        {
-            try
-            {
-                return new SqlDataAdapter(SelectCommand);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("ERROR!: \n" + ex.TargetSite + ex.StackTrace);
-                return null;
-            }
-        }
-
-        private string GetParamString(Dictionary<string, object> param)
+        public new string GetSelectParameterString(Dictionary<string, object> param)
         {
             try
             {
                 string vals = string.Empty;
-                foreach (KeyValuePair<string, object> kvp in param)
+                var sqlparameter = GetParameter(param);
+                foreach (SqlParameter p in sqlparameter)
                 {
-                    vals += $"{kvp.Key} = '{kvp.Value.ToString()}' AND ";
+                    vals += $"{p.SourceColumn.ToString()} = '{p.Value}' AND ";
                 }
 
                 vals = vals.Trim().Substring(0, vals.Length - 4);
@@ -137,120 +118,60 @@ namespace BudgetExecution
             }
         }
 
-        private SqlCommand GetSelectCommand()
+        public SqlParameter[] GetParameter(Dictionary<string, object> param)
         {
             try
             {
-                return new SqlCommand(SelectStatement, Connection);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("ERROR!: \n" + ex.TargetSite + ex.StackTrace);
-                return null;
-            }
-        }
-
-        internal SqlDataAdapter GetDataAdapter(string sql)
-        {
-            try
-            {
-                return new SqlDataAdapter(sql, Connection);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("ERROR!: \n" + ex.TargetSite + ex.StackTrace);
-                return null;
-            }
-        }
-
-        public new DbDataReader GetDataReader(IDbCommand command)
-        {
-            try
-            {
-                if (command is SqlCommand)
+                var val = new SqlParameter[param.Count];
+                for (int i = 0; i < param.Count; i++)
                 {
-                    return (SqlDataReader)command.ExecuteReader();
+                    foreach (KeyValuePair<string, object> kvp in param)
+                    {
+                        val[i] = new SqlParameter(kvp.Key.ToString(), (object)kvp.Value);
+                        val[i].SourceColumn = kvp.Key.ToString();
+                        if (kvp.Key.ToString().Equals("ID"))
+                        {
+                            val[i].DbType = DbType.Int64;
+                        }
+
+                        if (kvp.Key.ToString().Equals("Amount"))
+                        {
+                            val[i].DbType = DbType.Decimal;
+                        }
+                        else
+                        {
+                            val[i].DbType = DbType.String;
+                        }
+                    }
                 }
 
-                return null;
+                return val;
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message + ex.StackTrace);
+                MessageBox.Show("ERROR!: \n\n" + ex.TargetSite + ex.StackTrace);
                 return null;
             }
         }
 
-        public SqlCommandBuilder GetCommandBuilder(SqlDataAdapter adapter)
+        public new string GetSelectStatement(string table, Dictionary<string, object> param)
         {
             try
             {
-                return new SqlCommandBuilder(adapter);
+                return $"SELECT * FROM {table} WHERE {GetSelectParameterString(param)}";
             }
             catch (Exception ex)
             {
-                MessageBox.Show("ERROR!: \n" + ex.TargetSite + ex.StackTrace);
+                MessageBox.Show("ERROR!: \n\n" + ex.TargetSite + ex.StackTrace);
                 return null;
             }
         }
 
-        public SqlDataAdapter GetDataAdapter(SqlCommand command)
+        public new string GetSqlStatement(string table, string sql)
         {
             try
             {
-                return new SqlDataAdapter(command.CommandText, command.Connection);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("ERROR!: \n" + ex.TargetSite + ex.StackTrace);
-                return null;
-            }
-        }
-
-        public SqlCommand GetDeleteCommand()
-        {
-            try
-            {
-                return new SqlCommandBuilder(Adapter).GetDeleteCommand();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("ERROR!: \n" + ex.TargetSite + ex.StackTrace);
-                return null;
-            }
-        }
-
-        public SqlCommand GetInsertCommand()
-        {
-            try
-            {
-                return new SqlCommandBuilder(Adapter).GetInsertCommand();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("ERROR!: \n" + ex.TargetSite + ex.StackTrace);
-                return null;
-            }
-        }
-
-        public SqlCommand GetSelectCommand(string select)
-        {
-            try
-            {
-                return new SqlCommand(select, Connection);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("ERROR!: \n" + ex.TargetSite + ex.StackTrace);
-                return null;
-            }
-        }
-
-        public string GetSqlStatement()
-        {
-            try
-            {
-                return $"SELECT * FROM {TableName} WHERE {GetParamString(Parameter)}";
+                return $"SELECT * FROM {table} WHERE {sql}";
             }
             catch (Exception ex)
             {
@@ -272,11 +193,79 @@ namespace BudgetExecution
             }
         }
 
-        public SqlCommand GetUpdateCommand()
+        public SqlCommand GetDataCommand(string sql, SqlConnection connection)
         {
             try
             {
-                return new SqlCommandBuilder(Adapter).GetUpdateCommand();
+                SelectStatement = sql;
+                return new SqlCommand(sql, connection);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("ERROR!: \n" + ex.TargetSite + ex.StackTrace);
+                return null;
+            }
+        }
+
+        public SqlDataAdapter GetDataAdapter(SqlCommand command)
+        {
+            try
+            {
+               return new SqlDataAdapter(command);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("ERROR!: \n" + ex.TargetSite + ex.StackTrace);
+                return null;
+            }
+        }
+
+        public SqlDataReader GetDataReader(SqlCommand command)
+        {
+            try
+            {
+               return command.ExecuteReader();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("ERROR!: \n" + ex.TargetSite + ex.StackTrace);
+                return null;
+            }
+        }
+
+        public SqlCommandBuilder GetCommandBuilder(SqlDataAdapter adapter)
+        {
+            try
+            {
+                return new SqlCommandBuilder(adapter);
+            }
+            catch (SystemException ex)
+            {
+                MessageBox.Show(ex.Message + ex.StackTrace);
+                return null;
+            }
+        }
+
+        public SqlCommand GetSelectCommand(string sql, SqlConnection connection)
+        {
+            try
+            {
+                SelectStatement = sql;
+                return new SqlCommand(SelectStatement, connection);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("ERROR!: \n" + ex.TargetSite + ex.StackTrace);
+                return null;
+            }
+        }
+
+        public SqlCommand GetSelectCommand(Dictionary<string, object> param, SqlConnection connection)
+        {
+            try
+            {
+                SelectStatement = GetSelectParameterString(param);
+                return new SqlCommand(SelectStatement, connection);
             }
             catch (Exception ex)
             {

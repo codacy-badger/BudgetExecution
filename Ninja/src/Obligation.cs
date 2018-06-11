@@ -19,7 +19,7 @@ namespace BudgetExecution
             Fund = new Fund(fund, fy);
             Org = new Org(org);
             RC = new RC(rc);
-            Account = new Account(code);
+            Account = new Account(fund, code);
             Code = Account.Code;
             NpmCode = Account.NPM;
             BOC = new BOC(boc);
@@ -45,7 +45,7 @@ namespace BudgetExecution
             Org = new Org(dr["Org"].ToString());
             RC = new RC(dr["RC"].ToString());
             Code = dr["Code"].ToString();
-            Account = new Account(Code);
+            Account = new Account(Fund.Code, Code);
             NpmCode = Account.NPM;
             BOC = new BOC(dr["BOC"].ToString());
             FOC = dr["FOC"].ToString();
