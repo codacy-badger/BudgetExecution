@@ -27,8 +27,6 @@ namespace BudgetExecution
             Date = date;
             Code = code;
             Account = new Account(fund, code);
-            ProgramProjectName = ppn;
-            ProgramProjectCode = Account.ProgramProjectCode;
             NpmCode = Account.NPM;
             FromTo = fromto;
             BOC = new BOC(boc);
@@ -48,9 +46,7 @@ namespace BudgetExecution
             Qtr = dr["Qtr"].ToString();
             Date = dr["Date"].ToString();
             Code = dr["Code"].ToString();
-            Account = new Account(Fund.Code, Code);
-            ProgramProjectName = dr["ProgramProjectName"].ToString();
-            ProgramProjectCode = Account.ProgramProjectCode;
+            Account = new Account(dr["Code"].ToString(), Code);
             NpmCode = Account.NPM;
             FromTo = dr["FromTo"].ToString();
             BOC = new BOC(dr["BOC"].ToString());
@@ -81,10 +77,6 @@ namespace BudgetExecution
         public string NpmCode { get; }
 
         public Org Org { get; }
-
-        public string ProgramProjectCode { get; }
-
-        public string ProgramProjectName { get; }
 
         public string Qtr { get; }
 

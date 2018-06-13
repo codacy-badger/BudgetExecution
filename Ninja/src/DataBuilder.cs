@@ -17,6 +17,34 @@ namespace BudgetExecution
         {
         }
 
+        public DataBuilder(Query query)
+        {
+            Source = query.Source;
+            Query = query;
+            if (Source == Source.PRC || Source == Source.RegionAccount || Source == Source.DivisionAccount)
+            {
+                Table = GetDataTable();
+                Total = GetTotal(Table);
+                ProgramElements = GetProgramElements(Table);
+                BindingSource = new BindingSource();
+                BindingSource.DataSource = Table;
+                DataRecords = GetDataRecords(Table);
+            }
+
+            if (Source == Source.FTE)
+            {
+                Table = GetDataTable().AsEnumerable().Where(p => p.Field<string>("BOC").Equals("17"))
+                    .Where(p => p.Field<string>("BudgetLevel").Equals("8"))
+                    .Select(p => p).CopyToDataTable();
+                Total = GetFteTotal(Table);
+                ProgramElements = GetProgramElements(Table);
+                BindingSource = new BindingSource();
+                BindingSource.DataSource = Table;
+                DataRecords = GetDataRecords(Table);
+            }
+
+        }
+
         public DataBuilder(Source source, Provider provider)
         {
             Parameter = null;
@@ -271,7 +299,7 @@ namespace BudgetExecution
                 var dt = new DataTable(Source.ToString());
                 dt.TableName = Source.ToString();
                 ds.Tables.Add(dt);
-                this.Query.DataAdapter.Fill(ds, dt.TableName);
+                this.Query.DataAdapter.Fill(dt);
                 return dt;
             }
             catch (Exception e)

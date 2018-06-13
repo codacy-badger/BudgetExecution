@@ -21,7 +21,6 @@ namespace BudgetExecution
             Fund = new Fund(fund, bfy);
             Org = new Org(org);
             Account = new Account(fund, code);
-            Code = Account.Code;
             Agreement = an;
             Authority = auth;
             Amount = amout;
@@ -34,7 +33,6 @@ namespace BudgetExecution
             Fund = new Fund(dr["Fund"].ToString(), BFY);
             Org = new Org(dr["Fund"].ToString());
             Account = new Account(dr["Fund"].ToString(), dr["Code"].ToString());
-            Code = Account.Code;
             Agreement = dr["Agreement"].ToString();
             Authority = decimal.Parse(dr["Authority"].ToString());
             Amount = decimal.Parse(dr["Amount"].ToString());
@@ -53,8 +51,6 @@ namespace BudgetExecution
         public decimal Available { get; }
 
         public string BFY { get; }
-
-        public string Code { get; }
 
         public DataBuilder Data { get; }
 

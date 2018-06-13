@@ -55,7 +55,7 @@ namespace BudgetExecution
 
     public enum Provider
     {
-        SQLite = 1, OleDb = 2, SqlSvr = 3, SqlCe = 4
+        SQLite = 1, OleDb = 2, SqlServer = 3, SqlCe = 4
     }
 
     public enum Source

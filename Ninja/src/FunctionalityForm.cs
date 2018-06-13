@@ -55,14 +55,14 @@ namespace BudgetExecution
 
         private void GetD6DataManager(object sender, System.EventArgs e)
         {
-            var datamanager = new SQLiteDataMaster();
+            var datamanager = new SQLiteData();
             datamanager.Show();
             this.Close();
         }
 
         private void GetR6DataManager(object sender, System.EventArgs e)
         {
-            var datamanager = new SQLiteDataMaster();
+            var datamanager = new SQLiteData();
             datamanager.Show();
             this.Close();
         }

@@ -31,6 +31,8 @@ namespace BudgetExecution
 
         private string SummaryImages { get; set; }
 
+        private string FilePath { get; set; }
+
         public FormData NinjaData { get; set; }
 
         private string[] Images { get; set; }
@@ -43,6 +45,7 @@ namespace BudgetExecution
             ViewerCarousel.ImageSlides = true;
             ViewerCarousel.UseOriginalImageinPreview = true;
             string[] images = Directory.GetFiles(path);
+            FilePath = path;
             foreach (string i in images)
             {
                 var p = Path.GetFileNameWithoutExtension(i);
@@ -63,18 +66,12 @@ namespace BudgetExecution
 
         private void ViewerCarousel_OnImageSelected(object sender, EventArgs e)
         {
-            var i = ViewerCarousel.ActiveImage.Tag.ToString();
-            if (i.Length > 3 || i.Equals("FTE"))
-            {
-                var s = (Source)Enum.Parse(typeof(Source), i.ToString());
-                var a = new SummaryForm(s);
-                a.Show();
-            }
-            else
-            {
-                var b = new SummaryForm(i);
-                b.Show();
-            }
+            var carousel = sender as Carousel;
+            var i = carousel.ActiveImage.Tag.ToString();
+
+            var s = (Source)Enum.Parse(typeof(Source), i);
+            var summary = new SummaryForm(s);
+            summary.Show();
         }
     }
 }

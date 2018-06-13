@@ -11,8 +11,8 @@ namespace BudgetExecution
 
     public static class Info
     {
-        public static string[] R6Data = Enum.GetNames(typeof(Source));
-        public static string DivisionImages = @"C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\Resources\NinjaDivisionImages";
+        public static string[] Sources = Enum.GetNames(typeof(Source));
+        public static string DivisionImages = @"C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\Resources\Division";
         public static string SummaryImages = @"C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\Resources\SummaryImages";
         public static string FunctionImages = @"C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\Resources\FunctionImages";
         public static string DatabaseImages = @"C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\Resources\Database";

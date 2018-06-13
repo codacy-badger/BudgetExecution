@@ -1,116 +1,51 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="BudgetExecution.Account" Collapsed="true">
-    <Position X="9" Y="1.25" Width="1.5" />
+  <Class Name="BudgetExecution.Account" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="5" Y="1.25" Width="1.25" />
     <TypeIdentifier>
-      <HashCode>EQAJCQAAAAAAgAIUACEwAIAAMAAQEJAgAAISIACAAAE=</HashCode>
+      <HashCode>AQANCQAAAAAAgAIUACEwAIAAMAAQEJAgAAISIACAAAE=</HashCode>
       <FileName>src\Account.cs</FileName>
     </TypeIdentifier>
-    <Lollipop Position="0.2" />
+    <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="BudgetExecution.BudgetChart" Collapsed="true">
-    <Position X="7.5" Y="0.5" Width="1.5" />
+  <Class Name="BudgetExecution.Appropriation" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="6.75" Y="2.25" Width="1.25" />
     <TypeIdentifier>
-      <HashCode>AAEAGEIAggAEgABUAAUAWQACALAAQAQSBAgiAARAAAA=</HashCode>
-      <FileName>src\BudgetChart.cs</FileName>
+      <HashCode>ACUCBAAAAQCgAEKQBIAESATAAIAEQBECgCMAAAAIAEA=</HashCode>
+      <FileName>src\Appropriation.cs</FileName>
     </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="BudgetExecution.BOC" Collapsed="true">
-    <Position X="6.75" Y="1.25" Width="1.5" />
+    <Position X="6.75" Y="1.25" Width="1.25" />
     <TypeIdentifier>
       <HashCode>AAAQAAAAIAAAAAAEAAAgAAQAAAAAAAAAAAAgAAAAAAA=</HashCode>
       <FileName>src\BOC.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="BudgetExecution.Appropriation" Collapsed="true">
-    <Position X="5.75" Y="0.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>ACUCBAAAAQCgAEKQBIAESATAAIAEQBECgCMAAAAIAEA=</HashCode>
-      <FileName>src\Appropriation.cs</FileName>
-    </TypeIdentifier>
-    <Lollipop Position="0.2" />
-  </Class>
-  <Class Name="BudgetExecution.DataBuilder" Collapsed="true">
-    <Position X="2.5" Y="3" Width="1.5" />
+  <Class Name="BudgetExecution.DataBuilder" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="3.25" Y="0.5" Width="1.25" />
     <TypeIdentifier>
       <HashCode>AAUYBgAAAwAAAAKQBAAAQAAAIAAQQAkAgAAAAAAAAAA=</HashCode>
       <FileName>src\DataBuilder.cs</FileName>
     </TypeIdentifier>
-    <Lollipop Position="0.2" />
+    <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="BudgetExecution.DivisionAuthority" Collapsed="true">
-    <Position X="4.5" Y="2" Width="1.5" />
+  <Class Name="BudgetExecution.DivisionAuthority" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="5" Y="2.25" Width="1.25" />
     <TypeIdentifier>
       <HashCode>ACUABgIAAQCiCEKAAIAGQATAAJAEQAEigCEAAAAIgAA=</HashCode>
       <FileName>src\DivisionAuthority.cs</FileName>
     </TypeIdentifier>
-    <Lollipop Position="0.2" />
+    <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="Budget.Employee" Collapsed="true">
-    <Position X="6.5" Y="2" Width="1.5" />
+  <Class Name="BudgetExecution.PRC" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="3.25" Y="1.25" Width="1.25" />
     <TypeIdentifier>
-      <HashCode>AAgAAIAQAAAAAQAAAAAAAAAAQEEAABIAAAACAAAAAgA=</HashCode>
-      <FileName>src\Employee.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="BudgetExecution.FTE" Collapsed="true">
-    <Position X="0.5" Y="4" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAUABAAAAQAIAAAADIAEQABAALAEABECgAAAgBAIAEA=</HashCode>
-      <FileName>src\FTE.cs</FileName>
-    </TypeIdentifier>
-    <Lollipop Position="0.2" />
-  </Class>
-  <Class Name="BudgetExecution.Fund" Collapsed="true">
-    <Position X="9.5" Y="0.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>EAAAAAAAAAAAgEAEAAAgAAQAAAAQAFAAASgAAAAAAAA=</HashCode>
-      <FileName>src\Fund.cs</FileName>
-    </TypeIdentifier>
-    <Lollipop Position="0.2" />
-  </Class>
-  <Class Name="BudgetExecution.Obligation" Collapsed="true">
-    <Position X="8.5" Y="2" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AiEiAABAMIICCAIBAABgAAAAAAAAABAgAAIAAAAAAGA=</HashCode>
-      <FileName>src\Obligation.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="BudgetExecution.Org" Collapsed="true">
-    <Position X="10.25" Y="2" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAQAAAAAAAAgAAEAAAgAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>src\Org.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="BudgetExecution.Payroll" Collapsed="true">
-    <Position X="10.25" Y="3" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAARAIAAAAISCAAAAAB0AKCAAAACABAgAAIAAAAAAAA=</HashCode>
-      <FileName>src\Payroll.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="BudgetExecution.Personnel" Collapsed="true">
-    <Position X="8.25" Y="3" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>src\Personnel.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="BudgetExecution.PRC" Collapsed="true">
-    <Position X="0.5" Y="3" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AQUZCUAAkAICiCIEBCFwAICAEAEQEAAgAAIQQICAAFE=</HashCode>
+      <HashCode>AQUJCUAAkAICiCIEBCFwAICAEAEQEAAgAAIQQICAQFE=</HashCode>
       <FileName>src\PRC.cs</FileName>
     </TypeIdentifier>
-    <Lollipop Position="0.2" />
-  </Class>
-  <Class Name="BudgetExecution.PrcMetric" Collapsed="true">
-    <Position X="2.5" Y="4" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>ACQBFAEAYAAAABKAAIIAQgQAAIEARIEAgAIAABAQBLA=</HashCode>
-      <FileName>src\PrcMetric.cs</FileName>
-    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="BudgetExecution.Query" Collapsed="true">
     <Position X="0.5" Y="0.5" Width="1.5" />
@@ -120,83 +55,91 @@
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="BudgetExecution.RC" Collapsed="true">
-    <Position X="6.5" Y="3" Width="1.5" />
+  <Class Name="BudgetExecution.PrcMetric" Collapsed="true">
+    <Position X="5" Y="0.5" Width="1.25" />
     <TypeIdentifier>
-      <HashCode>AAAQAAAAAAAAgAAEAAAgAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>src\RC.cs</FileName>
+      <HashCode>ACQBFAEAYAAAABKAAIIAQgQAAIEARIEAgAIAABAQBLA=</HashCode>
+      <FileName>src\PrcMetric.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="BudgetExecution.RegionalAuthority" Collapsed="true">
-    <Position X="4.5" Y="3" Width="1.5" />
+  <Class Name="BudgetExecution.RegionalAuthority" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="3.25" Y="2.25" Width="1.25" />
     <TypeIdentifier>
       <HashCode>ACUABAAAgQCiAEKABICGQATAABAERBECgCEAAAAIAEA=</HashCode>
       <FileName>src\RegionalAuthority.cs</FileName>
     </TypeIdentifier>
-    <Lollipop Position="0.2" />
-  </Class>
-  <Class Name="BudgetExecution.Reimbursable" Collapsed="true">
-    <Position X="5.75" Y="6.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAQAAAAAAAAAAAAAABiAADAABAAABAgAAIAAAAAAEA=</HashCode>
-      <FileName>src\Reimbursable.cs</FileName>
-    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="BudgetExecution.Reprogramming" Collapsed="true">
-    <Position X="8.25" Y="4" Width="1.5" />
+    <Position X="3.25" Y="3" Width="1.25" />
     <TypeIdentifier>
-      <HashCode>AAADAAAAAAIKCCIAAABgAICAgAAAAAAhAAIAAAAAAEA=</HashCode>
+      <HashCode>AAACAAAAAAIKCCIAAABgAACAgAAAAAAhAAIAAAAAAEA=</HashCode>
       <FileName>src\Reprogramming.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="BudgetExecution.SqlCeQuery" Collapsed="true">
-    <Position X="2.5" Y="1.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>gCQQAEQAEgQEAAEAIABIBAAAgAASICAAgAAAAZAAACA=</HashCode>
-      <FileName>src\SqlCeQuery.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="BudgetExecution.SQLiteQuery" Collapsed="true">
-    <Position X="0.5" Y="1.5" Width="1.5" />
+    <Position X="0.5" Y="1.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>gCQQAEQAEgQEAAEAIABIBAAAgAASICAAgAAAAZAAACA=</HashCode>
       <FileName>src\SQLiteQuery.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="BudgetExecution.SqlServerQuery" Collapsed="true">
-    <Position X="7" Y="5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>gCQQAEQAEgQEAAEAIABIBAAAgAASICAAgAAAAZAAACA=</HashCode>
-      <FileName>src\SqlServerQuery.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="BudgetExecution.Transfer" Collapsed="true">
-    <Position X="9.75" Y="6.5" Width="1.5" />
+    <Position X="5" Y="3" Width="1.25" />
     <TypeIdentifier>
       <HashCode>EABAEKAIABAAgAACAAAASgCAAJAFBgGAIwAAAwAIAAA=</HashCode>
       <FileName>src\Transfer.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="BudgetExecution.NPM" Collapsed="true">
-    <Position X="10" Y="4" Width="1.5" />
+  <Class Name="BudgetExecution.Fund" Collapsed="true">
+    <Position X="8.25" Y="1.25" Width="1.25" />
     <TypeIdentifier>
-      <HashCode>AAAQAAAAAAACAEAEAAAgAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>src\NPM.cs</FileName>
+      <HashCode>EAAAAAAAAAAAgEAEAAAgAAQAAAAQAFAAASgAAAAAAAA=</HashCode>
+      <FileName>src\Fund.cs</FileName>
     </TypeIdentifier>
+    <Lollipop Position="0.2" />
   </Class>
-  <Class Name="BudgetExecution.ExcelQuery" Collapsed="true">
-    <Position X="0.5" Y="6.5" Width="1.5" />
+  <Interface Name="BudgetExecution.IAccount" Collapsed="true">
+    <Position X="3" Y="3.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>UAQAAEQAAgQEAAMAAABARAAAAAAQYCAAABAAAYAAACA=</HashCode>
-      <FileName>src\ExcelQuery.cs</FileName>
+      <HashCode>AQAACAAAAAAAAAAAACEwAIAAEAAAAAAAAAAQAACAAAE=</HashCode>
+      <FileName>src\IAccount.cs</FileName>
     </TypeIdentifier>
-  </Class>
-  <Class Name="BudgetExecution.AccessQuery" Collapsed="true">
-    <Position X="3.5" Y="6.75" Width="1.5" />
+  </Interface>
+  <Interface Name="BudgetExecution.IBOC" Collapsed="true">
+    <Position X="4.75" Y="3.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>0AQQAEQAAgQEAAMAAABARAAAAAAQYCAAABAAAZAAACA=</HashCode>
-      <FileName>src\AccessQuery.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAgAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>src\IBOC.cs</FileName>
     </TypeIdentifier>
-  </Class>
+  </Interface>
+  <Interface Name="BudgetExecution.IBudgetAuthority" Collapsed="true">
+    <Position X="6.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQABAAAAQAAAAKAAIAAQACAAAAEAAECAAAAAAAAAAA=</HashCode>
+      <FileName>src\IBudgetAuthority.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="BudgetExecution.IPRC" Collapsed="true">
+    <Position X="3" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAICCAAAAABAAACAAAAAAAAgAAIAAAAAAEA=</HashCode>
+      <FileName>src\IPRC.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="BudgetExecution.IQuery" Collapsed="true">
+    <Position X="4.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAQAAgAEAAAAIAAIAAAAgAACICAAAAAAAJAAAAA=</HashCode>
+      <FileName>src\IQuery.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="BudgetExecution.IDataBuilder" Collapsed="true">
+    <Position X="8.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAAAAAAAAABAAAQAAAIAAAAAgAAAAAAAAAAAA=</HashCode>
+      <FileName>src\IDataBuilder.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>

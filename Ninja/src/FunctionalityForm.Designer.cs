@@ -77,13 +77,13 @@ namespace BudgetExecution
             this.hubTile2 = new Syncfusion.Windows.Forms.Tools.HubTile();
             this.hubTile3 = new Syncfusion.Windows.Forms.Tools.HubTile();
             this.hubTile4 = new Syncfusion.Windows.Forms.Tools.HubTile();
+            this.hubTile5 = new Syncfusion.Windows.Forms.Tools.HubTile();
             this.FunctionCarousel = new Syncfusion.Windows.Forms.Tools.Carousel();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
             this.button13 = new System.Windows.Forms.Button();
             this.button14 = new System.Windows.Forms.Button();
-            this.hubTile5 = new Syncfusion.Windows.Forms.Tools.HubTile();
             this.SuspendLayout();
             // 
             // BudgetServerTile
@@ -106,7 +106,7 @@ namespace BudgetExecution
             this.BudgetServerTile.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(130)))), ((int)(((byte)(180)))));
             this.BudgetServerTile.HoveredBorderColor = System.Drawing.SystemColors.MenuHighlight;
             this.BudgetServerTile.ImageSource = ((System.Drawing.Image)(resources.GetObject("BudgetServerTile.ImageSource")));
-            this.BudgetServerTile.Location = new System.Drawing.Point(1100, 70);
+            this.BudgetServerTile.Location = new System.Drawing.Point(882, 121);
             this.BudgetServerTile.Margin = new System.Windows.Forms.Padding(1);
             this.BudgetServerTile.MinimumSize = new System.Drawing.Size(100, 100);
             this.BudgetServerTile.Name = "BudgetServerTile";
@@ -114,7 +114,7 @@ namespace BudgetExecution
             this.BudgetServerTile.ShowBanner = true;
             this.BudgetServerTile.ShowBannerIcon = true;
             this.BudgetServerTile.ShowRotateTileBanner = true;
-            this.BudgetServerTile.Size = new System.Drawing.Size(173, 125);
+            this.BudgetServerTile.Size = new System.Drawing.Size(261, 105);
             this.BudgetServerTile.SwitchRotateTileBannerVisibility = true;
             this.BudgetServerTile.TabIndex = 71;
             textItem4.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(0)));
@@ -141,7 +141,7 @@ namespace BudgetExecution
             this.hubTile1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(130)))), ((int)(((byte)(180)))));
             this.hubTile1.HoveredBorderColor = System.Drawing.SystemColors.MenuHighlight;
             this.hubTile1.ImageSource = ((System.Drawing.Image)(resources.GetObject("hubTile1.ImageSource")));
-            this.hubTile1.Location = new System.Drawing.Point(1100, 333);
+            this.hubTile1.Location = new System.Drawing.Point(855, 477);
             this.hubTile1.Margin = new System.Windows.Forms.Padding(1);
             this.hubTile1.MinimumSize = new System.Drawing.Size(100, 100);
             this.hubTile1.Name = "hubTile1";
@@ -149,7 +149,7 @@ namespace BudgetExecution
             this.hubTile1.ShowBanner = true;
             this.hubTile1.ShowBannerIcon = true;
             this.hubTile1.ShowRotateTileBanner = true;
-            this.hubTile1.Size = new System.Drawing.Size(173, 141);
+            this.hubTile1.Size = new System.Drawing.Size(329, 240);
             this.hubTile1.SwitchRotateTileBannerVisibility = true;
             this.hubTile1.TabIndex = 72;
             textItem8.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(0)));
@@ -176,7 +176,7 @@ namespace BudgetExecution
             this.hubTile2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(130)))), ((int)(((byte)(180)))));
             this.hubTile2.HoveredBorderColor = System.Drawing.SystemColors.MenuHighlight;
             this.hubTile2.ImageSource = ((System.Drawing.Image)(resources.GetObject("hubTile2.ImageSource")));
-            this.hubTile2.Location = new System.Drawing.Point(813, 333);
+            this.hubTile2.Location = new System.Drawing.Point(1192, 121);
             this.hubTile2.Margin = new System.Windows.Forms.Padding(1);
             this.hubTile2.MinimumSize = new System.Drawing.Size(100, 100);
             this.hubTile2.Name = "hubTile2";
@@ -184,7 +184,7 @@ namespace BudgetExecution
             this.hubTile2.ShowBanner = true;
             this.hubTile2.ShowBannerIcon = true;
             this.hubTile2.ShowRotateTileBanner = true;
-            this.hubTile2.Size = new System.Drawing.Size(229, 125);
+            this.hubTile2.Size = new System.Drawing.Size(324, 264);
             this.hubTile2.SwitchRotateTileBannerVisibility = true;
             this.hubTile2.TabIndex = 73;
             textItem12.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(0)));
@@ -211,7 +211,7 @@ namespace BudgetExecution
             this.hubTile3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(130)))), ((int)(((byte)(180)))));
             this.hubTile3.HoveredBorderColor = System.Drawing.SystemColors.MenuHighlight;
             this.hubTile3.ImageSource = ((System.Drawing.Image)(resources.GetObject("hubTile3.ImageSource")));
-            this.hubTile3.Location = new System.Drawing.Point(1372, 333);
+            this.hubTile3.Location = new System.Drawing.Point(48, 111);
             this.hubTile3.Margin = new System.Windows.Forms.Padding(1);
             this.hubTile3.MinimumSize = new System.Drawing.Size(100, 100);
             this.hubTile3.Name = "hubTile3";
@@ -219,7 +219,7 @@ namespace BudgetExecution
             this.hubTile3.ShowBanner = true;
             this.hubTile3.ShowBannerIcon = true;
             this.hubTile3.ShowRotateTileBanner = true;
-            this.hubTile3.Size = new System.Drawing.Size(185, 150);
+            this.hubTile3.Size = new System.Drawing.Size(340, 261);
             this.hubTile3.SwitchRotateTileBannerVisibility = true;
             this.hubTile3.TabIndex = 74;
             textItem16.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(0)));
@@ -246,7 +246,7 @@ namespace BudgetExecution
             this.hubTile4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(130)))), ((int)(((byte)(180)))));
             this.hubTile4.HoveredBorderColor = System.Drawing.SystemColors.MenuHighlight;
             this.hubTile4.ImageSource = ((System.Drawing.Image)(resources.GetObject("hubTile4.ImageSource")));
-            this.hubTile4.Location = new System.Drawing.Point(1320, 87);
+            this.hubTile4.Location = new System.Drawing.Point(882, 277);
             this.hubTile4.Margin = new System.Windows.Forms.Padding(1);
             this.hubTile4.MinimumSize = new System.Drawing.Size(100, 100);
             this.hubTile4.Name = "hubTile4";
@@ -254,12 +254,47 @@ namespace BudgetExecution
             this.hubTile4.ShowBanner = true;
             this.hubTile4.ShowBannerIcon = true;
             this.hubTile4.ShowRotateTileBanner = true;
-            this.hubTile4.Size = new System.Drawing.Size(210, 108);
+            this.hubTile4.Size = new System.Drawing.Size(246, 108);
             this.hubTile4.SwitchRotateTileBannerVisibility = true;
             this.hubTile4.TabIndex = 75;
             textItem20.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(0)));
             textItem20.HubTile = this.hubTile4;
             this.hubTile4.Title = textItem20;
+            // 
+            // hubTile5
+            // 
+            this.hubTile5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            textItem21.Font = new System.Drawing.Font("Segoe UI Semibold", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            textItem21.HubTile = this.hubTile5;
+            textItem21.Text = "Functionality | Budget Tools";
+            this.hubTile5.Banner = textItem21;
+            this.hubTile5.BannerColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.hubTile5.BannerHeight = 20;
+            this.hubTile5.BannerIcon = ((System.Drawing.Image)(resources.GetObject("hubTile5.BannerIcon")));
+            textItem22.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(0)));
+            textItem22.HubTile = this.hubTile5;
+            this.hubTile5.Body = textItem22;
+            this.hubTile5.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(0)));
+            textItem23.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(0)));
+            textItem23.HubTile = this.hubTile5;
+            this.hubTile5.Footer = textItem23;
+            this.hubTile5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(130)))), ((int)(((byte)(180)))));
+            this.hubTile5.HoveredBorderColor = System.Drawing.SystemColors.MenuHighlight;
+            this.hubTile5.ImageSource = ((System.Drawing.Image)(resources.GetObject("hubTile5.ImageSource")));
+            this.hubTile5.Location = new System.Drawing.Point(376, 516);
+            this.hubTile5.Margin = new System.Windows.Forms.Padding(1);
+            this.hubTile5.MinimumSize = new System.Drawing.Size(100, 100);
+            this.hubTile5.Name = "hubTile5";
+            this.hubTile5.SelectionMarkerColor = System.Drawing.Color.SteelBlue;
+            this.hubTile5.ShowBanner = true;
+            this.hubTile5.ShowBannerIcon = true;
+            this.hubTile5.ShowRotateTileBanner = true;
+            this.hubTile5.Size = new System.Drawing.Size(372, 261);
+            this.hubTile5.SwitchRotateTileBannerVisibility = true;
+            this.hubTile5.TabIndex = 76;
+            textItem24.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(0)));
+            textItem24.HubTile = this.hubTile5;
+            this.hubTile5.Title = textItem24;
             // 
             // FunctionCarousel
             // 
@@ -296,9 +331,9 @@ namespace BudgetExecution
             this.button5.ForeColor = System.Drawing.SystemColors.Info;
             this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
             this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(635, 653);
+            this.button5.Location = new System.Drawing.Point(48, 493);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(162, 59);
+            this.button5.Size = new System.Drawing.Size(242, 74);
             this.button5.TabIndex = 11;
             this.button5.Text = "button5";
             this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -314,9 +349,9 @@ namespace BudgetExecution
             this.button6.ForeColor = System.Drawing.SystemColors.Info;
             this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
             this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.Location = new System.Drawing.Point(78, 633);
+            this.button6.Location = new System.Drawing.Point(465, 293);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(168, 79);
+            this.button6.Size = new System.Drawing.Size(224, 79);
             this.button6.TabIndex = 12;
             this.button6.Text = "button6";
             this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -332,9 +367,9 @@ namespace BudgetExecution
             this.button11.ForeColor = System.Drawing.SystemColors.Info;
             this.button11.Image = ((System.Drawing.Image)(resources.GetObject("button11.Image")));
             this.button11.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button11.Location = new System.Drawing.Point(940, 595);
+            this.button11.Location = new System.Drawing.Point(48, 599);
             this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(140, 68);
+            this.button11.Size = new System.Drawing.Size(242, 68);
             this.button11.TabIndex = 17;
             this.button11.Text = "button11";
             this.button11.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -350,9 +385,9 @@ namespace BudgetExecution
             this.button13.ForeColor = System.Drawing.SystemColors.Info;
             this.button13.Image = ((System.Drawing.Image)(resources.GetObject("button13.Image")));
             this.button13.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button13.Location = new System.Drawing.Point(635, 540);
+            this.button13.Location = new System.Drawing.Point(465, 111);
             this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(162, 65);
+            this.button13.Size = new System.Drawing.Size(233, 78);
             this.button13.TabIndex = 19;
             this.button13.Text = "button13";
             this.button13.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -368,49 +403,14 @@ namespace BudgetExecution
             this.button14.ForeColor = System.Drawing.SystemColors.Info;
             this.button14.Image = ((System.Drawing.Image)(resources.GetObject("button14.Image")));
             this.button14.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button14.Location = new System.Drawing.Point(364, 633);
+            this.button14.Location = new System.Drawing.Point(48, 698);
             this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(168, 79);
+            this.button14.Size = new System.Drawing.Size(242, 79);
             this.button14.TabIndex = 20;
             this.button14.Text = "button14";
             this.button14.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button14.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button14.UseVisualStyleBackColor = true;
-            // 
-            // hubTile5
-            // 
-            this.hubTile5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            textItem21.Font = new System.Drawing.Font("Segoe UI Semibold", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            textItem21.HubTile = this.hubTile5;
-            textItem21.Text = "Functionality | Budget Tools";
-            this.hubTile5.Banner = textItem21;
-            this.hubTile5.BannerColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.hubTile5.BannerHeight = 20;
-            this.hubTile5.BannerIcon = ((System.Drawing.Image)(resources.GetObject("hubTile5.BannerIcon")));
-            textItem22.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(0)));
-            textItem22.HubTile = this.hubTile5;
-            this.hubTile5.Body = textItem22;
-            this.hubTile5.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(0)));
-            textItem23.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(0)));
-            textItem23.HubTile = this.hubTile5;
-            this.hubTile5.Footer = textItem23;
-            this.hubTile5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(130)))), ((int)(((byte)(180)))));
-            this.hubTile5.HoveredBorderColor = System.Drawing.SystemColors.MenuHighlight;
-            this.hubTile5.ImageSource = ((System.Drawing.Image)(resources.GetObject("hubTile5.ImageSource")));
-            this.hubTile5.Location = new System.Drawing.Point(813, 70);
-            this.hubTile5.Margin = new System.Windows.Forms.Padding(1);
-            this.hubTile5.MinimumSize = new System.Drawing.Size(100, 100);
-            this.hubTile5.Name = "hubTile5";
-            this.hubTile5.SelectionMarkerColor = System.Drawing.Color.SteelBlue;
-            this.hubTile5.ShowBanner = true;
-            this.hubTile5.ShowBannerIcon = true;
-            this.hubTile5.ShowRotateTileBanner = true;
-            this.hubTile5.Size = new System.Drawing.Size(229, 154);
-            this.hubTile5.SwitchRotateTileBannerVisibility = true;
-            this.hubTile5.TabIndex = 76;
-            textItem24.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(0)));
-            textItem24.HubTile = this.hubTile5;
-            this.hubTile5.Title = textItem24;
             // 
             // FunctionalityForm
             // 

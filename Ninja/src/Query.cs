@@ -27,7 +27,7 @@ namespace BudgetExecution
             Source = source;
             DataConnection = GetConnection(provider);
             TableName = source.ToString();
-            SelectStatement = $"SELECT * FROM {source.ToString()}";
+            SelectStatement = $"SELECT * FROM {TableName}";
             SelectCommand = GetSelectCommand(SelectStatement, DataConnection);
             DataAdapter = GetDataAdapter(SelectCommand);
             CommandBuilder = GetCommandBuilder(DataAdapter);
@@ -96,10 +96,10 @@ namespace BudgetExecution
                         return new SQLiteConnection(@"datasource=C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\database\SQLite\R6.db");
                     case Provider.SqlCe:
                         return new SqlConnection(@"datasource=C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\database\SqlCe\R6.sdf");
-                    case Provider.SqlSvr:
-                        return new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C: \Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\database\SqlServer\R6.mdf;Integrated Security=True;Connect Timeout=30");
+                    case Provider.SqlServer:
+                        return new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\database\SqlServer\R6.mdf;Integrated Security=True;Connect Timeout=30");
                     case Provider.OleDb:
-                        return new OleDbConnection(@"Data Source = C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\database\OleDb\R6.accdb");
+                        return new OleDbConnection(@"Provider = Microsoft.ACE.OLEDB.12.0; Data Source =| DataDirectory |\database\OleDb\R6.accdb");
                 }
 
                 return null;

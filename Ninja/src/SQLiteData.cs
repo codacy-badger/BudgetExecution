@@ -12,10 +12,10 @@ namespace BudgetExecution
     using MetroSet_UI.Controls;
     using Syncfusion.Windows.Forms;
 
-    public partial class SQLiteDataMaster : MetroForm
+    public partial class SQLiteData : MetroForm
     {
         // CONSTRUCTORS
-        public SQLiteDataMaster()
+        public SQLiteData()
         {
             InitializeComponent();
             DbData = new DataBuilder(Source.RegionAccount, Provider.SQLite);
@@ -24,7 +24,10 @@ namespace BudgetExecution
             ProgramElements = DbData.GetProgramElements(Table);
             BindingSource.DataSource = Table;
             Grid.DataSource = BindingSource;
+            GetPrcGridVisibleColumns(Grid);
             GridNavigator.BindingSource = BindingSource;
+            PopulateSourceFilters();
+            Filter1.SelectedValueChanged += GetGridDataSource;
         }
 
         // PROPERTIES
@@ -42,14 +45,33 @@ namespace BudgetExecution
 
         private DataTable Table { get; set; }
 
+
         // METHODS
+
+        private void PopulateSourceFilters()
+        {
+            foreach(string s in Info.Sources)
+            {
+                Filter1.Items.Add(s);
+            }
+        }
+
+        private void GetGridDataSource(object sender, EventArgs e)
+        {
+            var cbox = sender as MetroSetComboBox;
+            var name = cbox.SelectedItem.ToString();
+            var source = (Source)Enum.Parse(typeof(Source), name.ToString());
+            BindingSource.DataSource = new DataBuilder(source, Provider.SQLite).GetDataTable();
+            GridNavigator.BindingSource = BindingSource;
+        }
+
         private void BocFilter_ItemSelected(object sender, EventArgs e)
         {
             try
             {
                 var boc = sender as MetroSetComboBox;
                 var bocfilter = boc.SelectedItem.ToString();
-                BindingSource.Filter = $"FundName = '{MasterFilter1.SelectedItem.ToString()}' AND BocName = '{bocfilter}'";
+                BindingSource.Filter = $"FundName = '{Filter1.SelectedItem.ToString()}' AND BocName = '{bocfilter}'";
             }
             catch (Exception ex)
             {
@@ -72,19 +94,19 @@ namespace BudgetExecution
         {
             try
             {
-                MasterFIlter2.Items.Clear();
+                FIlter2.Items.Clear();
                 var filter = sender as MetroSetComboBox;
-                MasterFilter1.Tag = filter;
+                Filter1.Tag = filter;
                 var fund = filter.SelectedItem.ToString();
                 BindingSource.Filter = $"FundName = '{fund}'";
                 var boc = ProgramElements[PrcField.BocName.ToString()];
                 foreach (string b in boc)
                 {
-                    MasterFIlter2.Items.Add(b);
+                    FIlter2.Items.Add(b);
                 }
 
-                MasterFIlter2.Visible = true;
-                MasterFIlter2.SelectionChangeCommitted += BocFilter_ItemSelected;
+                FIlter2.Visible = true;
+                FIlter2.SelectionChangeCommitted += BocFilter_ItemSelected;
             }
             catch (Exception ex)
             {
@@ -99,7 +121,7 @@ namespace BudgetExecution
                 var item = DbData.ProgramElements["FundName"];
                 foreach (string i in item)
                 {
-                    MasterFilter1.Items.Add(i);
+                    Filter1.Items.Add(i);
                 }
             }
             catch (Exception ex)
@@ -108,7 +130,7 @@ namespace BudgetExecution
             }
         }
 
-        private void GetGridColumns(DataGridView dgv)
+        private void GetPrcGridVisibleColumns(DataGridView dgv)
         {
             try
             {

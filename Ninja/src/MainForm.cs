@@ -32,7 +32,6 @@ namespace BudgetExecution
             SummaryTile.Click += SummaryTile_OnClick;
             DivisionBudgetTile.Click += DivisionDataTile_OnClick;
             DataMasterTile.Click += DatabaseTile_OnClick;
-            FunctionalityTile.Click += FunctionalityTile_OnClick;
         }
 
         // PROPERTIES
@@ -98,7 +97,7 @@ namespace BudgetExecution
 
         private void DataButton_OnClick(object sender, EventArgs e)
         {
-            var dm = new SQLiteDataMaster();
+            var dm = new SQLiteData();
             dm.Show();
         }
 
@@ -189,8 +188,8 @@ namespace BudgetExecution
 
         private void DatabaseTile_OnClick(object sender, EventArgs e)
         {
-            var s = new Selector(Info.DatabaseImages);
-            s.Show();
+            var ds = new SQLiteData();
+            ds.Show();
         }
 
         private void TransferButton_Click(object sender, EventArgs e)
