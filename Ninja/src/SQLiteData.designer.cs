@@ -394,7 +394,7 @@ namespace BudgetExecution
             this.button2.ForeColor = System.Drawing.SystemColors.Info;
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(625, 54);
+            this.button2.Location = new System.Drawing.Point(627, 50);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(169, 80);
             this.button2.TabIndex = 71;
@@ -413,7 +413,7 @@ namespace BudgetExecution
             this.button3.ForeColor = System.Drawing.SystemColors.Info;
             this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(1250, 53);
+            this.button3.Location = new System.Drawing.Point(1239, 47);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(169, 83);
             this.button3.TabIndex = 70;
@@ -599,6 +599,7 @@ namespace BudgetExecution
             this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button6
             // 
@@ -610,7 +611,7 @@ namespace BudgetExecution
             this.button6.ForeColor = System.Drawing.SystemColors.Info;
             this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
             this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.Location = new System.Drawing.Point(822, 54);
+            this.button6.Location = new System.Drawing.Point(821, 51);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(169, 80);
             this.button6.TabIndex = 83;
@@ -629,7 +630,7 @@ namespace BudgetExecution
             this.button7.ForeColor = System.Drawing.SystemColors.Info;
             this.button7.Image = ((System.Drawing.Image)(resources.GetObject("button7.Image")));
             this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button7.Location = new System.Drawing.Point(1022, 53);
+            this.button7.Location = new System.Drawing.Point(1029, 47);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(169, 83);
             this.button7.TabIndex = 84;
@@ -656,6 +657,7 @@ namespace BudgetExecution
             this.button8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button8.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button8.UseVisualStyleBackColor = false;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // groupBox3
             // 

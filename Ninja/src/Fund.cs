@@ -21,12 +21,12 @@ namespace BudgetExecution
             Code = code;
             FiscalYear = bfy;
             Parameter = GetFundParameter(Code, FiscalYear);
-            Data = GetFundDataRecord(Source.Fund, Provider.SQLite, Parameter);
-            DataRecord = Data.Rows[0];
-            ID = int.Parse(DataRecord["ID"].ToString());
-            Name = DataRecord["Name"].ToString();
-            Title = DataRecord["Title"].ToString();
-            TreasurySymbol = DataRecord["TreasurySymbol"].ToString();
+            Table = GetData(Source.Fund, Provider.SQLite, Parameter);
+            Data = Table.Rows[0];
+            ID = int.Parse(Data["ID"].ToString());
+            Name = Data["Name"].ToString();
+            Title = Data["Title"].ToString();
+            TreasurySymbol = Data["TreasurySymbol"].ToString();
         }
 
         public Fund(Source source, Provider provider, string code, string bfy)
@@ -34,12 +34,21 @@ namespace BudgetExecution
             Code = code;
             FiscalYear = bfy;
             Parameter = GetFundParameter(Code, FiscalYear);
-            Data = GetFundDataRecord(Source.Fund, Provider.SQLite, Parameter);
-            DataRecord = Data.AsEnumerable().First();
-            ID = int.Parse(DataRecord["ID"].ToString());
-            Name = DataRecord["Name"].ToString();
-            Title = DataRecord["Title"].ToString();
-            TreasurySymbol = DataRecord["TreasurySymbol"].ToString();
+            Table = GetData(Source.Fund, Provider.SQLite, Parameter);
+            Data = Table.AsEnumerable().First();
+            ID = int.Parse(Data["ID"].ToString());
+            Name = Data["Name"].ToString();
+            Title = Data["Title"].ToString();
+            TreasurySymbol = Data["TreasurySymbol"].ToString();
+        }
+
+        public Fund(DataRow data)
+        {
+            Data = data;
+            ID = int.Parse(Data["ID"].ToString());
+            Name = Data["Name"].ToString();
+            Title = Data["Title"].ToString();
+            TreasurySymbol = Data["TreasurySymbol"].ToString();
         }
 
         // PROPERTIES
@@ -57,9 +66,9 @@ namespace BudgetExecution
 
         public string TreasurySymbol { get; }
 
-        public DataTable Data { get; set; }
+        public DataTable Table { get; set; }
 
-        public DataRow DataRecord { get; set; }
+        public DataRow Data { get; set; }
 
         // METHODS
         public Dictionary<string, object> GetFundParameter(string code, string bfy)
@@ -79,7 +88,7 @@ namespace BudgetExecution
         {
             try
             {
-                var dr = GetFundDataRecord(Source.Fund, Provider.SQLite, Parameter);
+                var dr = GetData(Source.Fund, Provider.SQLite, Parameter);
                 Parameter.Add("Name", Name);
                 Parameter.Add("Title", Title);
                 Parameter.Add("TreasurySymbol", TreasurySymbol);
@@ -92,7 +101,7 @@ namespace BudgetExecution
             }
         }
 
-        public DataTable GetFundDataRecord(Source source, Provider provider, Dictionary<string, object> param)
+        public DataTable GetData(Source source, Provider provider, Dictionary<string, object> param)
         {
             try
             {

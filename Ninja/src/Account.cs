@@ -4,8 +4,10 @@
 
 namespace BudgetExecution
 {
+    using System;
     using System.Collections.Generic;
     using System.Data;
+    using System.Data.SQLite;
     using System.Linq;
     using System.Windows.Forms;
 
@@ -61,6 +63,25 @@ namespace BudgetExecution
             ProgramArea = Data["ProgramArea"].ToString();
             ProgramAreaName = Data["ProgramAreaName"].ToString();
         }
+
+        public Account(DataRow data)
+        {
+            Data = data;
+            Goal = Code.Substring(0, 1);
+            Objective = Code.Substring(1, 2);
+            NpmCode = Code.Substring(3, 1);
+            ProgramProjectCode = Code.Substring(4, 2);
+            Fund = Data["Fund"].ToString();
+            FundName = Data["FundName"].ToString();
+            ProgramProjectName = Data["ProgramProjectName"].ToString();
+            ID = int.Parse(Data["ID"].ToString());
+            NPM = Data["NPM"].ToString();
+            ObjectiveName = Data["ObjectiveName"].ToString();
+            GoalName = Data["GoalName"].ToString();
+            ProgramArea = Data["ProgramArea"].ToString();
+            ProgramAreaName = Data["ProgramAreaName"].ToString();
+        }
+
 
         // PROPERTIES
         public int ID { get; set; }
@@ -197,6 +218,128 @@ namespace BudgetExecution
         string IAccount.GetCode()
         {
             return Code;
+        }
+
+        public static Dictionary<string, object> GetInsertFields(Source source, Provider provider, Dictionary<string, object> param)
+        {
+            try
+            {
+                var account = new Account(source, provider, param["Fund"].ToString(), param["Code"].ToString());
+                if (!param.ContainsKey("FundName") || param["FundName"] == null)
+                {
+                    param["FundName"] = account.FundName;
+                }
+
+                if (!param.ContainsKey("Org") || param["Org"] == null)
+                {
+                    param["Org"] = account.Org;
+                }
+
+                if (!param.ContainsKey("ProgramProject") || param["ProgramProject"] == null)
+                {
+                    param["ProgramProject"] = account.ProgramProjectCode;
+                    param["ProgramProjectName"] = account.ProgramProjectName;
+                }
+
+                if (!param.ContainsKey("ProgramArea") || param["ProgramArea"] == null)
+                {
+                    param["ProgramArea"] = account.ProgramArea;
+                    param["ProgramAreaName"] = account.ProgramAreaName;
+                }
+
+                if (!param.ContainsKey("Goal") || param["Goal"] == null)
+                {
+                    param["Goal"] = account.Goal;
+                    param["GoalName"] = account.GoalName;
+                }
+
+                if (!param.ContainsKey("Objective") || param["Objective"] == null)
+                {
+                    param["Objective"] = account.Objective;
+                    param["ObjectiveName"] = account.ObjectiveName;
+                }
+
+                return param;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + ex.StackTrace);
+                return null;
+            }
+        }
+
+        public static PRC Select(Source source, Provider provider, Dictionary<string, object> param)
+        {
+            try
+            {
+                var query = new DataBuilder(source, provider, param).Table.AsEnumerable().Select(p => p).First();
+                return new PRC(query);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + ex.StackTrace);
+                return null;
+            }
+        }
+
+        public static void Insert(Source source, Provider provider, Dictionary<string, object> p)
+        {
+            try
+            {
+                var param = GetInsertFields(source, provider, p);
+                var fields = param.Keys.ToArray();
+                var vals = param.Values.ToArray();
+                var query = new Query(source, provider, param);
+                var cmd = $"INSERT INTO {source.ToString()} {fields} VALUES {vals};";
+                SQLiteConnection conn = query.GetConnection(Provider.SQLite) as SQLiteConnection;
+                using (conn)
+                {
+                    var insert = query.GetDataCommand(cmd, conn) as SQLiteCommand;
+                    insert.ExecuteNonQuery();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + ex.StackTrace);
+            }
+        }
+
+        public static void Update(Source source, Provider provider, Dictionary<string, object> param)
+        {
+            try
+            {
+                var query = new Query(source, provider, param);
+                var cmd = $"UPDATE {source.ToString()} SET Amount = {(decimal)param["Amount"]} WHERE ID = {(int)param["ID"]};";
+                SQLiteConnection conn = query.GetConnection(Provider.SQLite) as SQLiteConnection;
+                using (conn)
+                {
+                    var update = query.GetDataCommand(cmd, conn) as SQLiteCommand;
+                    update.ExecuteNonQuery();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + ex.StackTrace);
+            }
+        }
+
+        public static void Delete(Source source, Provider provider, Dictionary<string, object> param)
+        {
+            try
+            {
+                var query = new Query(source, provider, param);
+                var cmd = $"DELETE ALL FROM {source.ToString()} WHERE ID = {(int)param["ID"]};";
+                SQLiteConnection conn = query.GetConnection(Provider.SQLite) as SQLiteConnection;
+                using (conn)
+                {
+                    var update = query.GetDataCommand(cmd, conn) as SQLiteCommand;
+                    update.ExecuteNonQuery();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + ex.StackTrace);
+            }
         }
     }
 }

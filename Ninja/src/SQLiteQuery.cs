@@ -79,11 +79,11 @@ namespace BudgetExecution
 
         public new SQLiteCommand DataCommand { get; set; }
 
-        public new SQLiteCommand DeleteCommand { get; }
+        public new SQLiteCommand DeleteCommand { get; set; }
 
-        public new SQLiteCommand InsertCommand { get; }
+        public new SQLiteCommand InsertCommand { get; set; }
 
-        public new SQLiteCommand UpdateCommand { get; }
+        public new SQLiteCommand UpdateCommand { get; set; }
 
         // METHODS
         public new string GetSelectParameterString(Dictionary<string, object> param)

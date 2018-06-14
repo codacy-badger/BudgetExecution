@@ -53,20 +53,20 @@ namespace BudgetExecution
             Amount = amount;
         }
 
-        public PRC(DataRow data)
+        public PRC(DataRow row)
         {
-            ID = int.Parse(data["ID"].ToString());
-            BudgetLevel = data["BudgetLevel"].ToString();
-            RPIO = data["RPIO"].ToString();
-            BFY = data["BFY"].ToString();
-            Fund = new Fund(data["Fund"].ToString(), data["BFY"].ToString());
-            Org = new Org(data["Org"].ToString());
-            RC = new RC(data["RC"].ToString());
-            Account = new Account(Source.Account, Provider.SQLite, Fund.Code, data["Code"].ToString());
+            ID = int.Parse(row["ID"].ToString());
+            BudgetLevel = row["BudgetLevel"].ToString();
+            RPIO = row["RPIO"].ToString();
+            BFY = row["BFY"].ToString();
+            Fund = new Fund(row["Fund"].ToString(), row["BFY"].ToString());
+            Org = new Org(row["Org"].ToString());
+            RC = new RC(row["RC"].ToString());
+            Account = new Account(Source.Account, Provider.SQLite, Fund.Code, row["Code"].ToString());
             Code = Account.Code;
-            BOC = new BOC(data["BOC"].ToString());
+            BOC = new BOC(row["BOC"].ToString());
             Parameter = GetParamData();
-            Amount = decimal.Parse(data["Amount"].ToString());
+            Amount = decimal.Parse(row["Amount"].ToString());
         }
 
         // PROPERTIES
@@ -228,7 +228,7 @@ namespace BudgetExecution
             }
         }
 
-        public static Dictionary<string, object> ValidateParameter(Source source, Provider provider, Dictionary<string, object> param)
+        public static Dictionary<string, object> GetInsertFields(Source source, Provider provider, Dictionary<string, object> param)
         {
             try
             {
@@ -294,7 +294,7 @@ namespace BudgetExecution
         {
             try
             {
-                var param = ValidateParameter(source, provider, p);
+                var param = GetInsertFields(source, provider, p);
                 var fields = param.Keys.ToArray();
                 var vals = param.Values.ToArray();
                 var query = new Query(source, provider, param);
