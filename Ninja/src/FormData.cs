@@ -21,12 +21,12 @@ namespace BudgetExecution
         {
         }
 
-        public FormData(DataBuilder data, BindingSource bs, DataGridView dgv, BindingNavigator bn)
+        public FormData(DataBuilder DbData, BindingSource bs, DataGridView dgv, BindingNavigator bn)
         {
-            DbData = data;
-            Metric = new PrcMetric(DbData);
-            DataTable = DbData.Table;
-            BindGridAndNavigator(DataTable, dgv, bs, bn);
+            this.DbData = DbData;
+            Metric = new PrcMetric(this.DbData);
+            Table = this.DbData.Table;
+            BindGridAndNavigator(Table, dgv, bs, bn);
             BindingSource = bs;
             Navigator = bn;
             Grid = dgv;
@@ -35,9 +35,10 @@ namespace BudgetExecution
         public FormData(Source source, Provider provider, Dictionary<string, object> param)
         {
             DbData = new DataBuilder(source, provider, param);
+            Table = DbData.GetDataTable();
             Metric = new PrcMetric(DbData);
             BindingSource = new BindingSource();
-            BindingSource.DataSource = DbData.GetDataTable();
+            BindingSource.DataSource = Table;
         }
 
         // PROPERTIES
@@ -51,7 +52,7 @@ namespace BudgetExecution
 
         public DataSet DataSet { get; set; }
 
-        public DataTable DataTable { get; set; }
+        public DataTable Table { get; set; }
 
         public PrcMetric Metric { get; set; }
 
@@ -122,7 +123,7 @@ namespace BudgetExecution
             }
         }
 
-        internal void BindTextBox(BindingSource bs, TextBox tb, string field)
+        internal void CreateTextBoxDataBinding(BindingSource bs, TextBox tb, string field)
         {
             try
             {
@@ -296,8 +297,8 @@ namespace BudgetExecution
         {
             try
             {
-                DataTable = DbData.Table;
-                BindingSource.DataSource = DataTable;
+                Table = DbData.Table;
+                BindingSource.DataSource = Table;
             }
             catch (Exception ex)
             {

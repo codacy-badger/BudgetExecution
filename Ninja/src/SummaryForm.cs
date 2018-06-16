@@ -50,26 +50,25 @@ namespace BudgetExecution
             InitializeComponent();
             DbData = new DataBuilder(source, Provider.SQLite);
             Table = DbData.Table;
-            Source = DbData.Source;
+            Source = source;
             CurrentTabIndex = 0;
             TabNames = GetTabNames();
-            Text = $"{ Source.ToString() } Summary";
+            Text = $"R6 { Source.ToString() } Summary";
             Metric = new PrcMetric(DbData);
             ProgramElements = Metric.ProgramElements;
             BindingSource.DataSource = Metric.Table;
-            ProjectTab.TabVisible = false;
-            DatabaseTab.TabVisible = false;
+            ProjectTab.TabVisible = true;
+            DatabaseTab.TabVisible = true;
             CurrentTabIndex = SummaryTabControl.SelectedIndex;
             SummaryTabControl.SelectedIndexChanged += SummaryTabPage_TabSelected;
-            if (source == Source.FTE)
+            if (source == Source.RegionAccount || source == Source.DivisionAccount)
             {
                 DbData = new DataBuilder(source, Provider.SQLite);
                 Table = DbData.Table;
                 Source = source;
                 CurrentTabIndex = 1;
                 TabNames = GetTabNames();
-                Text = "R6 FTE Summary";
-                BocTab.TabVisible = false;
+                Text = "R6 Summary";
                 Metric = new PrcMetric(DbData);
                 ProgramElements = Metric.ProgramElements;
                 BindingSource.DataSource = Metric.Table;
@@ -141,6 +140,18 @@ namespace BudgetExecution
         {
             try
             {
+                if (DbData.Source == Source.FTE)
+                {
+
+                    BocTab.TabVisible = false;
+                }
+                if (DbData.Source == Source.RegionAccount)
+                {
+
+                    DivisionTab.TabVisible = false;
+                    DatabaseTab.TabVisible = false;
+                    ProjectTab.TabVisible = false;
+                }
                 BindingSource.DataSource = Table;
                 Navigator.BindingSource = BindingSource;
                 Grid.DataSource = BindingSource;
@@ -157,6 +168,7 @@ namespace BudgetExecution
                 GridAccountFilter.Visible = false;
                 lblBoc.Visible = false;
                 GridBocFilter.Visible = false;
+                GridRefreshButton.Click += GridRefreshButton_OnClick;
             }
             catch (Exception ex)
             {
@@ -221,7 +233,7 @@ namespace BudgetExecution
             }
         }
 
-        private void ConfigureGridBindingFilter()
+        private void FilterDataGrid()
         {
             try
             {
@@ -436,8 +448,8 @@ namespace BudgetExecution
             try
             {
                 return Table.AsEnumerable().Where(p => p.Field<string>("FundName").Equals(filter1))
-            .Where(p => p.Field<string>("BocName").Equals(filter2))
-            .Select(p => p.Field<decimal>("Amount")).Sum();
+                    .Where(p => p.Field<string>("BocName").Equals(filter2))
+                    .Select(p => p.Field<decimal>("Amount")).Sum();
             }
             catch (Exception ex)
             {
@@ -502,63 +514,6 @@ namespace BudgetExecution
             return (ChartSeriesType)Enum.Parse(typeof(ChartSeriesType), ctb.SelectedItem.ToString());
         }
 
-        private Dictionary<string, string> GetFilters()
-        {
-            try
-            {
-                var filters = new Dictionary<string, string>();
-                foreach (string n in TabNames)
-                {
-                    if (n.Contains("Fund"))
-                    {
-                        filters.Add("Fund", "FundName");
-                    }
-
-                    if (n.Contains("BOC"))
-                    {
-                        filters.Add("BOC", "BocName");
-                    }
-
-                    if (n.Contains("NPM"))
-                    {
-                        filters.Add("NPM", "NPM");
-                    }
-
-                    if (n.Contains("Goal"))
-                    {
-                        filters.Add("Goal", "GoalName");
-                    }
-
-                    if (n.Contains("Division"))
-                    {
-                        filters.Add("Division", "Division");
-                    }
-
-                    if (n.Contains("Objective"))
-                    {
-                        filters.Add("Objective", "ObjectiveName");
-                    }
-
-                    if (n.Contains("ProgramArea"))
-                    {
-                        filters.Add("ProgramArea", "ProgramArea");
-                    }
-
-                    if (n.Contains("ProgramProjectCode"))
-                    {
-                        filters.Add("ProgramProjectCode", "ProgramProjectCode");
-                    }
-                }
-
-                return filters;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message + ex.StackTrace);
-                return null;
-            }
-        }
-
         private void ChartFilterControl1_ItemSelected(object sender, EventArgs e)
         {
             ChartFilterControl1 = sender as MetroSetComboBox;
@@ -607,95 +562,31 @@ namespace BudgetExecution
                 ChartFilterControl4 = sender as MetroSetComboBox;
                 ChartGroup = (PrcField)Enum.Parse(typeof(PrcField), ChartFilterControl4.SelectedItem.ToString());
                 ChartMainTitle = new string[] { $"{ChartFilter} Funding By {ChartFilterControl4.SelectedItem.ToString()}" };
-                var param = new Dictionary<string, object>();
+                var param = new Dictionary<string, object>() { [ChartPrcField.ToString()] = ChartFilter };
                 switch (CurrentTabIndex)
                 {
                     case 0:
-                        if (Division != null)
-                        {
-                            param = new Dictionary<string, object>() { ["RC"] = Division, [ChartPrcField.ToString()] = ChartFilter };
-                        }
-                        else
-                        {
-                            param = new Dictionary<string, object>() { [ChartPrcField.ToString()] = ChartFilter };
-                        }
-
                         FundChart = new BudgetChart(FundChart, ChartMainTitle, Source, param, ChartGroup, Measure, ChartType).Activate();
                         break;
                     case 1:
-                        param = new Dictionary<string, object>() { [ChartPrcField.ToString()] = ChartFilter };
                         BocChart = new BudgetChart(BocChart, ChartMainTitle, Source, param, ChartGroup, Measure, ChartType).Activate();
                         break;
                     case 2:
-                        if (Division != null)
-                        {
-                            param = new Dictionary<string, object>() { ["RC"] = Division, [ChartPrcField.ToString()] = ChartFilter };
-                        }
-                        else
-                        {
-                            param = new Dictionary<string, object>() { [ChartPrcField.ToString()] = ChartFilter };
-                        }
-
                         NpmChart = new BudgetChart(NpmChart, ChartMainTitle, Source, param, ChartGroup, Measure, ChartType).Activate();
                         break;
                     case 3:
-                        if (Division != null)
-                        {
-                            param = new Dictionary<string, object>() { ["RC"] = Division, [ChartPrcField.ToString()] = ChartFilter };
-                        }
-                        else
-                        {
-                            param = new Dictionary<string, object>() { [ChartPrcField.ToString()] = ChartFilter };
-                        }
-
                         GoalChart = new BudgetChart(GoalChart, ChartMainTitle, Source, param, ChartGroup, Measure, ChartType).Activate();
                         break;
                     case 4:
-                        if (Division != null)
-                        {
-                            param = new Dictionary<string, object>() { ["RC"] = Division, [ChartPrcField.ToString()] = ChartFilter };
-                        }
-                        else
-                        {
-                            param = new Dictionary<string, object>() { [ChartPrcField.ToString()] = ChartFilter };
-                        }
-
                         ObjectiveChart = new BudgetChart(ObjectiveChart, ChartMainTitle, Source, param, ChartGroup, Measure, ChartType).Activate();
                         break;
                     case 5:
-                        if (Division != null)
-                        {
-                            param = new Dictionary<string, object>() { ["RC"] = Division, [ChartPrcField.ToString()] = ChartFilter };
-                        }
-                        else
-                        {
-                            param = new Dictionary<string, object>() { [ChartPrcField.ToString()] = ChartFilter };
-                        }
-
                         DivisionChart = new BudgetChart(DivisionChart, ChartMainTitle, Source, param, ChartGroup, Measure, ChartType).Activate();
                         break;
                     case 6:
-                        if (Division != null)
-                        {
-                            param = new Dictionary<string, object>() { ["RC"] = Division, [ChartPrcField.ToString()] = ChartFilter };
-                        }
-                        else
-                        {
-                            param = new Dictionary<string, object>() { [ChartPrcField.ToString()] = ChartFilter };
-                        }
-
                         AreaChart = new BudgetChart(AreaChart, ChartMainTitle, Source, param, ChartGroup, Measure, ChartType).Activate();
                         break;
                     case 7:
-                        if (Division != null)
-                        {
-                            param = new Dictionary<string, object>() { ["RC"] = Division, [ChartPrcField.ToString()] = ChartFilter };
-                        }
-                        else
-                        {
-                            param = new Dictionary<string, object>() { [ChartPrcField.ToString()] = ChartFilter };
-                        }
-
                         ProjectChart = new BudgetChart(ProjectChart, ChartMainTitle, Source, param, ChartGroup, Measure, ChartType).Activate();
                         break;
                 }

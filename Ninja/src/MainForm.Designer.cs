@@ -89,7 +89,7 @@ namespace BudgetExecution
             this.DataMasterTile.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(130)))), ((int)(((byte)(180)))));
             this.DataMasterTile.HoveredBorderColor = System.Drawing.SystemColors.MenuHighlight;
             this.DataMasterTile.ImageSource = ((System.Drawing.Image)(resources.GetObject("DataMasterTile.ImageSource")));
-            this.DataMasterTile.Location = new System.Drawing.Point(14, 619);
+            this.DataMasterTile.Location = new System.Drawing.Point(14, 655);
             this.DataMasterTile.Margin = new System.Windows.Forms.Padding(1);
             this.DataMasterTile.MinimumSize = new System.Drawing.Size(100, 100);
             this.DataMasterTile.Name = "DataMasterTile";
@@ -97,7 +97,7 @@ namespace BudgetExecution
             this.DataMasterTile.ShowBanner = true;
             this.DataMasterTile.ShowBannerIcon = true;
             this.DataMasterTile.ShowRotateTileBanner = true;
-            this.DataMasterTile.Size = new System.Drawing.Size(280, 175);
+            this.DataMasterTile.Size = new System.Drawing.Size(280, 206);
             this.DataMasterTile.SwitchRotateTileBannerVisibility = true;
             this.DataMasterTile.TabIndex = 71;
             textItem4.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(0)));
@@ -126,7 +126,7 @@ namespace BudgetExecution
             this.DivisionBudgetTile.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(130)))), ((int)(((byte)(180)))));
             this.DivisionBudgetTile.HoveredBorderColor = System.Drawing.SystemColors.MenuHighlight;
             this.DivisionBudgetTile.ImageSource = ((System.Drawing.Image)(resources.GetObject("DivisionBudgetTile.ImageSource")));
-            this.DivisionBudgetTile.Location = new System.Drawing.Point(14, 369);
+            this.DivisionBudgetTile.Location = new System.Drawing.Point(14, 349);
             this.DivisionBudgetTile.Margin = new System.Windows.Forms.Padding(1);
             this.DivisionBudgetTile.MinimumSize = new System.Drawing.Size(70, 66);
             this.DivisionBudgetTile.Name = "DivisionBudgetTile";
@@ -135,7 +135,7 @@ namespace BudgetExecution
             this.DivisionBudgetTile.ShowBanner = true;
             this.DivisionBudgetTile.ShowBannerIcon = true;
             this.DivisionBudgetTile.ShowRotateTileBanner = true;
-            this.DivisionBudgetTile.Size = new System.Drawing.Size(280, 145);
+            this.DivisionBudgetTile.Size = new System.Drawing.Size(280, 189);
             this.DivisionBudgetTile.SwitchRotateTileBannerVisibility = true;
             this.DivisionBudgetTile.TabIndex = 20;
             textItem8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
