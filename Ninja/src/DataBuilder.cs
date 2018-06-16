@@ -50,16 +50,12 @@ namespace BudgetExecution
             Parameter = null;
             Source = source;
             Query = new Query(source, provider);
-            if (source == Source.PRC || source == Source.RegionAccount || source == Source.DivisionAccount)
-            {
-                Table = GetDataTable();
-                Total = GetTotal(Table);
-                ProgramElements = GetProgramElements(Table);
-                BindingSource = new BindingSource();
-                BindingSource.DataSource = Table;
-                DataRecords = GetDataRecords(Table);
-            }
-
+            Table = GetDataTable();
+            Total = GetTotal(Table);
+            ProgramElements = GetProgramElements(Table);
+            BindingSource = new BindingSource();
+            BindingSource.DataSource = Table;
+            DataRecords = GetDataRecords(Table);
             if (source == Source.FTE)
             {
                 Table = GetDataTable().AsEnumerable().Where(p => p.Field<string>("BOC").Equals("17"))
@@ -78,16 +74,12 @@ namespace BudgetExecution
             Source = source;
             Parameter = param;
             Query = new Query(source, provider, Parameter);
-            if (source == Source.PRC || source == Source.RegionAccount || source == Source.DivisionAccount)
-            {
-                Table = GetDataTable();
-                Total = GetTotal(Table);
-                ProgramElements = GetProgramElements(Table);
-                BindingSource = new BindingSource();
-                BindingSource.DataSource = Table;
-                DataRecords = GetDataRecords(Table);
-            }
-
+            Table = GetDataTable();
+            Total = GetTotal(Table);
+            ProgramElements = GetProgramElements(Table);
+            BindingSource = new BindingSource();
+            BindingSource.DataSource = Table;
+            DataRecords = GetDataRecords(Table);
             if (source == Source.FTE)
             {
                 Table = GetDataTable().AsEnumerable().Where(p => p.Field<string>("BOC").Equals("17"))

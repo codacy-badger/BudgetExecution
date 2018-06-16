@@ -32,6 +32,14 @@ namespace BudgetExecution
             Grid = dgv;
         }
 
+        public FormData(Source source, Provider provider, Dictionary<string, object> param)
+        {
+            DbData = new DataBuilder(source, provider, param);
+            Metric = new PrcMetric(DbData);
+            BindingSource = new BindingSource();
+            BindingSource.DataSource = DbData.GetDataTable();
+        }
+
         // PROPERTIES
         public Stat Measure { get; set; }
 
@@ -76,168 +84,11 @@ namespace BudgetExecution
         internal Func<DataTable, PrcField, string> TableFilter { get; set; }
 
         // METHODS
-        public decimal GetAverage(DataTable table)
-        {
-            try
-            {
-                return table.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Average();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
-                return -1M;
-            }
-        }
-
-        public string[] GetCodes(DataTable table, string column)
-        {
-            try
-            {
-                return table.AsEnumerable().Select(p => p.Field<string>(column)).Distinct().ToArray();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
-                return null;
-            }
-        }
-
-        public Dictionary<string, decimal> GetDataTotals(DataTable table, string column, string filter)
-        {
-            try
-            {
-                var list = GetCodes(table, column);
-                Dictionary<string, decimal> info = new Dictionary<string, decimal>();
-                foreach (string ftr in list)
-                {
-                    var query = table.AsEnumerable().Where(p => p.Field<string>(column).Equals(filter))
-                        .Sum(p => p.Field<decimal>("Amount"));
-                    if (query > 0)
-                    {
-                        info.Add(filter, query);
-                    }
-                }
-
-                return info;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
-                return null;
-            }
-        }
-
-        public PRC[] GetPrcArray(DataTable table)
-        {
-            try
-            {
-                return table.AsEnumerable().Select(p => new PRC()).ToArray();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
-                return null;
-            }
-        }
-
-        public Dictionary<string, string[]> GetProgramElements(DataTable table)
-        {
-            try
-            {
-                var data = new Dictionary<string, string[]>();
-                foreach (DataColumn dc in table.Columns)
-                {
-                    if (dc.ColumnName.Equals("Id") || dc.ColumnName.Equals("Amount"))
-                    {
-                        continue;
-                    }
-
-                    data.Add(dc.ColumnName, GetCodes(table, dc.ColumnName));
-                }
-
-                if (data.ContainsKey("Id"))
-                {
-                    data.Remove("Id");
-                }
-
-                if (data.ContainsKey("Amount"))
-                {
-                    data.Remove("Amount");
-                }
-
-                if (data.ContainsKey("P6_Id"))
-                {
-                    data.Remove("P6_Id");
-                }
-
-                return data;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
-                return null;
-            }
-        }
-
-        public DataTable GetTable(DataTable table, string column, string filter)
-        {
-            try
-            {
-                return table.AsEnumerable().Where(p => p.Field<string>(column).Equals(filter)).Select(p => p).CopyToDataTable();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
-                return null;
-            }
-        }
-
-        public decimal GetTotal(DataTable table)
-        {
-            try
-            {
-                return table.AsEnumerable().Sum(p => p.Field<decimal>("Amount"));
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
-                return -1M;
-            }
-        }
-
-        public Dictionary<string, decimal> GetTotals(DataTable table, string[] filters, string column)
-        {
-            try
-            {
-                Dictionary<string, decimal> info = new Dictionary<string, decimal>();
-                foreach (string filter in filters)
-                {
-                    var query = table.AsEnumerable().Where(p => p.Field<string>(column).Equals(filter))
-                        .Select(p => p).Sum(p => p.Field<decimal>("Amount"));
-                    if (query > 0)
-                    {
-                        info.Add(filter, query);
-                    }
-                }
-
-                return info;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
-                return null;
-            }
-        }
 
         internal void FilterControlButton_OnClick(object sender, EventArgs e)
         {
             try
             {
-                var button = sender as MetroSetButton;
-                var table = GetTable(DataTable, "FundName", button.Tag.ToString());
-                BindingSource.DataSource = table;
-                PopulateFilterBox(Panel, table, PrcField.FundName);
-                DataTable = table;
             }
             catch (Exception ex)
             {
@@ -249,10 +100,6 @@ namespace BudgetExecution
         {
             try
             {
-                var button = sender as MetroSetListBox;
-                var table = GetTable(DataTable, "FundName", button.SelectedItem.ToString());
-                BindingSource.DataSource = table;
-                DataTable = table;
             }
             catch (Exception ex)
             {
@@ -294,10 +141,6 @@ namespace BudgetExecution
         {
             try
             {
-                var button = sender as MetroSetListBox;
-                var table = GetTable(DataTable, "BocName", button.SelectedItem.ToString());
-                BindingSource.DataSource = table;
-                PopulateFilterBox(Panel, DataTable, PrcField.BocName);
             }
             catch (Exception ex)
             {
@@ -309,10 +152,6 @@ namespace BudgetExecution
         {
             try
             {
-                var button = sender as MetroSetListBox;
-                var table = GetTable(DataTable, "BocName", button.SelectedItem.ToString());
-                BindingSource.DataSource = table;
-                PopulateFilterBox(Panel, DataTable, PrcField.BocName);
             }
             catch (Exception ex)
             {
@@ -324,11 +163,6 @@ namespace BudgetExecution
         {
             try
             {
-                PopulateFilterButtons(fitlerControl, GetCodes(table, prc.ToString()));
-                foreach (Control c in fitlerControl.Controls)
-                {
-                    c.Click += FilterControlButton_OnClick;
-                }
             }
             catch (Exception ex)
             {
@@ -340,9 +174,6 @@ namespace BudgetExecution
         {
             try
             {
-                var filter = filterControl as ListBox;
-                PopulateFilterListItems(filter, GetCodes(table, prc.ToString()));
-                filter.SelectedIndexChanged += FundControlListBox_OnSelect;
             }
             catch (Exception ex)
             {
@@ -350,11 +181,11 @@ namespace BudgetExecution
             }
         }
 
-        internal void PopulateFilterBox(FlowLayoutPanel fitlerControl, DataTable table, PrcField filter)
+        internal void PopulateFilterBox(FlowLayoutPanel fitlerControl, string[] filter)
         {
             try
             {
-                PopulateFilterButtons(fitlerControl, GetCodes(table, filter.ToString()));
+                PopulateFilterButtons(fitlerControl, filter);
                 foreach (Control c in fitlerControl.Controls)
                 {
                     c.Click += FundControlListBox_OnSelect;

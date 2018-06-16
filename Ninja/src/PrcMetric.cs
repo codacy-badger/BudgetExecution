@@ -83,7 +83,7 @@ namespace BudgetExecution
                 DivisionMetrics = GetMetrics(DbData.Table, PrcField.RC);
             }
 
-            if (DbData.Source == Source.PRC)
+            else
             {
                 var table = new DivisionAuthority().Table;
                 DivisionTotals = GetDataTotals(table, PrcField.RC);

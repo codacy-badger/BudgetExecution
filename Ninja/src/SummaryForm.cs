@@ -48,6 +48,19 @@ namespace BudgetExecution
         public SummaryForm(Source source)
         {
             InitializeComponent();
+            DbData = new DataBuilder(source, Provider.SQLite);
+            Table = DbData.Table;
+            Source = DbData.Source;
+            CurrentTabIndex = 0;
+            TabNames = GetTabNames();
+            Text = $"{ Source.ToString() } Summary";
+            Metric = new PrcMetric(DbData);
+            ProgramElements = Metric.ProgramElements;
+            BindingSource.DataSource = Metric.Table;
+            ProjectTab.TabVisible = false;
+            DatabaseTab.TabVisible = false;
+            CurrentTabIndex = SummaryTabControl.SelectedIndex;
+            SummaryTabControl.SelectedIndexChanged += SummaryTabPage_TabSelected;
             if (source == Source.FTE)
             {
                 DbData = new DataBuilder(source, Provider.SQLite);
@@ -66,40 +79,6 @@ namespace BudgetExecution
                 SummaryTabControl.SelectedIndexChanged += SummaryTabPage_TabSelected;
             }
 
-            if (source == Source.RegionAccount)
-            {
-                DbData = new DataBuilder(source, Provider.SQLite);
-                Table = DbData.Table;
-                DivisionTab.TabVisible = false;
-                Source = source;
-                CurrentTabIndex = 1;
-                TabNames = GetTabNames();
-                Text = "Region 6 Summary";
-                Metric = new PrcMetric(DbData);
-                ProgramElements = Metric.ProgramElements;
-                BindingSource.DataSource = Metric.Table;
-                ProjectTab.TabVisible = false;
-                DatabaseTab.TabVisible = false;
-                CurrentTabIndex = SummaryTabControl.SelectedIndex;
-                SummaryTabControl.SelectedIndexChanged += SummaryTabPage_TabSelected;
-            }
-
-            if (source == Source.DivisionAccount)
-            {
-                DbData = new DataBuilder(source, Provider.SQLite);
-                Table = DbData.Table;
-                Source = source;
-                CurrentTabIndex = 0;
-                TabNames = GetTabNames();
-                Text = "R6 Division Summary";
-                Metric = new PrcMetric(DbData);
-                ProgramElements = Metric.ProgramElements;
-                BindingSource.DataSource = Metric.Table;
-                ProjectTab.TabVisible = false;
-                DatabaseTab.TabVisible = false;
-                CurrentTabIndex = SummaryTabControl.SelectedIndex;
-                SummaryTabControl.SelectedIndexChanged += SummaryTabPage_TabSelected;
-            }
         }
 
         // PROPERTIES
@@ -162,7 +141,7 @@ namespace BudgetExecution
         {
             try
             {
-                BindingSource.DataSource = DbData.Table;
+                BindingSource.DataSource = Table;
                 Navigator.BindingSource = BindingSource;
                 Grid.DataSource = BindingSource;
                 DefineVisisbleDataColumns(Grid);
@@ -373,14 +352,15 @@ namespace BudgetExecution
                     dc.Visible = false;
                 }
 
-                dgv.Columns[0].Visible = true;
+
                 dgv.Columns[3].Visible = true;
                 dgv.Columns[4].Visible = true;
                 dgv.Columns[6].Visible = true;
-                dgv.Columns[7].Visible = true;
+                dgv.Columns[8].Visible = true;
                 dgv.Columns[9].Visible = true;
                 dgv.Columns[11].Visible = true;
                 dgv.Columns[12].Visible = true;
+                dgv.Columns[12].DefaultCellStyle.Format = "c";
             }
             catch (Exception ex)
             {
@@ -643,15 +623,7 @@ namespace BudgetExecution
                         FundChart = new BudgetChart(FundChart, ChartMainTitle, Source, param, ChartGroup, Measure, ChartType).Activate();
                         break;
                     case 1:
-                        if (Division != null)
-                        {
-                            param = new Dictionary<string, object>() { ["RC"] = Division, [ChartPrcField.ToString()] = ChartFilter };
-                        }
-                        else
-                        {
-                            param = new Dictionary<string, object>() { [ChartPrcField.ToString()] = ChartFilter };
-                        }
-
+                        param = new Dictionary<string, object>() { [ChartPrcField.ToString()] = ChartFilter };
                         BocChart = new BudgetChart(BocChart, ChartMainTitle, Source, param, ChartGroup, Measure, ChartType).Activate();
                         break;
                     case 2:

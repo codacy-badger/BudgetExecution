@@ -139,17 +139,17 @@ namespace BudgetExecution
             try
             {
                 var d = new Dictionary<string, Source>();
-                d.Add("Programs", Source.Account);
+                d.Add("Programs", Source.Accounts);
                 d.Add("Reprogrammings", Source.Reprogramming);
                 d.Add("Level-7", Source.RegionAccount);
                 d.Add("Level-8", Source.DivisionAccount);
                 d.Add("R6 PRC", Source.PRC);
-                d.Add("Division Details", Source.Org);
-                d.Add("Authority", Source.Balance);
-                d.Add("Employee Leave", Source.Employee);
-                d.Add("Appropriations", Source.Fund);
-                d.Add("Obligations", Source.ProgramExpense);
-                d.Add("Compensation and Benefits", Source.PayrollExpense);
+                d.Add("Division Details", Source.Divisions);
+                d.Add("Authority", Source.Balances);
+                d.Add("Employee Leave", Source.Employees);
+                d.Add("Appropriations", Source.Funds);
+                d.Add("Obligations", Source.Obligations);
+                d.Add("Compensation and Benefits", Source.PayrollObligations);
                 d.Add("EPM Appropriation", Source.EPM);
                 d.Add("Oil Spill", Source.OIL);
                 d.Add("Superfund Appropriation", Source.SUPERFUND);

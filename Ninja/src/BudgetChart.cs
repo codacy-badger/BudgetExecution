@@ -174,6 +174,7 @@ namespace BudgetExecution
             Chart = chart;
             Source = source;
             DbData = new DataBuilder(source, Provider.SQLite, param);
+            Metric = new PrcMetric(DbData);
             Value = value;
             SeriesType = type;
             ConfigurePrimaryAxisLabels(Chart);
@@ -184,7 +185,6 @@ namespace BudgetExecution
             }
 
             Table = DbData.Table;
-            Metric = new PrcMetric(DbData);
             DataMetrics = Metric.GetChartMetrics(Table, filter);
             DataSeries = GetSeriesTotals(GetMeasure(DataMetrics, Value));
             DataSeries.Type = SeriesType;

@@ -20,7 +20,7 @@ CREATE TABLE "Obligations" (
 	"FOC"	TEXT,
 	"FocName"	TEXT,
 	"PurchaseRequest"	TEXT,
-	"Column23"	TEXT,
+	"DcnPrefix"	TEXT,
 	"DocType"	TEXT,
 	"DCN"	TEXT,
 	"TransactionNumber"	TEXT,

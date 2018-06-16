@@ -21,7 +21,7 @@ namespace BudgetExecution
             Code = code;
             FiscalYear = bfy;
             Parameter = GetFundParameter(Code, FiscalYear);
-            Table = GetData(Source.Fund, Provider.SQLite, Parameter);
+            Table = GetData(Source.Funds, Provider.SQLite, Parameter);
             Data = Table.Rows[0];
             ID = int.Parse(Data["ID"].ToString());
             Name = Data["Name"].ToString();
@@ -34,7 +34,7 @@ namespace BudgetExecution
             Code = code;
             FiscalYear = bfy;
             Parameter = GetFundParameter(Code, FiscalYear);
-            Table = GetData(Source.Fund, Provider.SQLite, Parameter);
+            Table = GetData(Source.Funds, Provider.SQLite, Parameter);
             Data = Table.AsEnumerable().First();
             ID = int.Parse(Data["ID"].ToString());
             Name = Data["Name"].ToString();
@@ -88,7 +88,7 @@ namespace BudgetExecution
         {
             try
             {
-                var dr = GetData(Source.Fund, Provider.SQLite, Parameter);
+                var dr = GetData(Source.Funds, Provider.SQLite, Parameter);
                 Parameter.Add("Name", Name);
                 Parameter.Add("Title", Title);
                 Parameter.Add("TreasurySymbol", TreasurySymbol);

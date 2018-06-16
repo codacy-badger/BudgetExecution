@@ -30,7 +30,7 @@ namespace BudgetExecution
             Fund = new Fund(data["Fund"].ToString(), data["BFY"].ToString());
             Org = new Org(data["Org"].ToString());
             RC = new RC(data["RC"].ToString());
-            Account = new Account(Source.Account, Provider.SQLite, Fund.Code, data["Code"].ToString());
+            Account = new Account(Source.Accounts, Provider.SQLite, Fund.Code, data["Code"].ToString());
             Code = Account.Code;
             BOC = new BOC(data["BOC"].ToString());
             Parameter = GetParamData();
@@ -43,10 +43,10 @@ namespace BudgetExecution
             ID = id;
             RPIO = rpio;
             BFY = bfy;
-            Fund = new Fund(Source.Fund, Provider.SQLite, fund, bfy);
+            Fund = new Fund(Source.Funds, Provider.SQLite, fund, bfy);
             RC = new RC(rc);
             Org = new Org(org);
-            Account = new Account(Source.Account, Provider.SQLite, Fund.Code, code);
+            Account = new Account(Source.Accounts, Provider.SQLite, Fund.Code, code);
             Code = Account.Code;
             BOC = new BOC(boc, amount);
             Parameter = GetParamData();
@@ -62,7 +62,7 @@ namespace BudgetExecution
             Fund = new Fund(row["Fund"].ToString(), row["BFY"].ToString());
             Org = new Org(row["Org"].ToString());
             RC = new RC(row["RC"].ToString());
-            Account = new Account(Source.Account, Provider.SQLite, Fund.Code, row["Code"].ToString());
+            Account = new Account(Source.Accounts, Provider.SQLite, Fund.Code, row["Code"].ToString());
             Code = Account.Code;
             BOC = new BOC(row["BOC"].ToString());
             Parameter = GetParamData();
@@ -228,7 +228,7 @@ namespace BudgetExecution
             }
         }
 
-        public static Dictionary<string, object> GetInsertFields(Source source, Provider provider, Dictionary<string, object> param)
+        public static Dictionary<string, object> GetInsertionColumns(Source source, Provider provider, Dictionary<string, object> param)
         {
             try
             {
@@ -276,12 +276,12 @@ namespace BudgetExecution
             }
         }
 
-        public static PRC Select(Source source, Provider provider, Dictionary<string, object> param)
+        public static PRC Select(Source source, Provider provider, Dictionary<string, object> p)
         {
             try
             {
-                var query = new DataBuilder(source, provider, param).Table.AsEnumerable().Select(p => p).First();
-                return new PRC(query);
+                var datarow = new DataBuilder(source, provider, p).Table.AsEnumerable().Select(prc => prc).First();
+                return new PRC(datarow);
             }
             catch (Exception ex)
             {
@@ -294,7 +294,7 @@ namespace BudgetExecution
         {
             try
             {
-                var param = GetInsertFields(source, provider, p);
+                var param = GetInsertionColumns(source, provider, p);
                 var fields = param.Keys.ToArray();
                 var vals = param.Values.ToArray();
                 var query = new Query(source, provider, param);
@@ -312,12 +312,12 @@ namespace BudgetExecution
             }
         }
 
-        public static void Update(Source source, Provider provider, Dictionary<string, object> param)
+        public static void Update(Source source, Provider provider, Dictionary<string, object> p)
         {
             try
             {
-                var query = new Query(source, provider, param);
-                var cmd = $"UPDATE {source.ToString()} SET Amount = {(decimal)param["Amount"]} WHERE ID = {(int)param["ID"]};";
+                var query = new Query(source, provider, p);
+                var cmd = $"UPDATE {source.ToString()} SET Amount = {(decimal)p["Amount"]} WHERE ID = {(int)p["ID"]};";
                 SQLiteConnection conn = query.GetConnection(Provider.SQLite) as SQLiteConnection;
                 using (conn)
                 {
@@ -331,12 +331,12 @@ namespace BudgetExecution
             }
         }
 
-        public static void Delete(Source source, Provider provider, Dictionary<string, object> param)
+        public static void Delete(Source source, Provider provider, Dictionary<string, object> p)
         {
             try
             {
-                var query = new Query(source, provider, param);
-                var cmd = $"DELETE ALL FROM {source.ToString()} WHERE ID = {(int)param["ID"]};";
+                var query = new Query(source, provider, p);
+                var cmd = $"DELETE ALL FROM {source.ToString()} WHERE ID = {(int)p["ID"]};";
                 SQLiteConnection conn = query.GetConnection(Provider.SQLite) as SQLiteConnection;
                 using (conn)
                 {

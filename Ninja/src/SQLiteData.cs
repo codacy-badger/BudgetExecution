@@ -139,15 +139,14 @@ namespace BudgetExecution
                     dc.Visible = false;
                 }
 
-                dgv.Columns[0].Visible = true;
+                dgv.Columns[3].Visible = true;
                 dgv.Columns[4].Visible = true;
-                dgv.Columns[5].Visible = true;
                 dgv.Columns[6].Visible = true;
                 dgv.Columns[8].Visible = true;
-                dgv.Columns[8].HeaderText = "BOC";
                 dgv.Columns[9].Visible = true;
                 dgv.Columns[11].Visible = true;
                 dgv.Columns[12].Visible = true;
+                dgv.Columns[12].DefaultCellStyle.Format = "c";
             }
             catch (Exception ex)
             {

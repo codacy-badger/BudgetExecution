@@ -23,7 +23,7 @@ namespace BudgetExecution
         {
             Code = code;
             Parameter = GetAccountParameter(fund, code);
-            DataTable = GetAccountData(Source.Account, Provider.SQLite, Parameter);
+            DataTable = GetAccountData(Source.Accounts, Provider.SQLite, Parameter);
             Data = DataTable.AsEnumerable().First();
             Goal = Code.Substring(0, 1);
             Objective = Code.Substring(1, 2);
@@ -142,7 +142,7 @@ namespace BudgetExecution
         {
             try
             {
-                var data = GetAccountData(Source.Account, Provider.SQLite, Parameter);
+                var data = GetAccountData(Source.Accounts, Provider.SQLite, Parameter);
                 var dr = data.Rows[0];
                 GoalName = dr["GoalName"].ToString();
                 ObjectiveName = dr["ObjectiveName"].ToString();
