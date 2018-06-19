@@ -8,6 +8,7 @@ namespace BudgetExecution
     using System.Collections.Generic;
     using System.Data;
     using System.Data.SQLite;
+    using System.Drawing;
     using System.Windows.Forms;
     using MetroSet_UI.Controls;
     using Syncfusion.Windows.Forms;
@@ -27,7 +28,7 @@ namespace BudgetExecution
             GetPrcGridVisibleColumns(AccountGrid);
             AccountNavigator.BindingSource = BindingSource;
             PopulateSourceFilters();
-            Filter1.SelectedValueChanged += GetGridDataSource;
+            PopulateFilterButtons(Filter1, Info.Sources);
         }
 
         public SQLiteData(Source source, Provider provider)
@@ -44,7 +45,7 @@ namespace BudgetExecution
             GetPrcGridVisibleColumns(AccountGrid);
             AccountNavigator.BindingSource = BindingSource;
             PopulateSourceFilters();
-            Filter1.SelectedValueChanged += GetGridDataSource;
+            PopulateFilterButtons(Filter1, Info.Sources);
         }
         // PROPERTIES
         private Source Source { get; }
@@ -67,33 +68,39 @@ namespace BudgetExecution
 
         public DataGridView Grid { get; set; }
 
+        public FlowLayoutPanel DataFilter1 { get; set; }
+
+        private MetroSetComboBox DataFilter2 { get; set; }
+
+        private MetroSetComboBox DataFilter3 { get; set; }
+
 
         // METHODS
 
         private void PopulateSourceFilters()
         {
+            DataFilter1 = Filter1;
             foreach(string s in Info.Sources)
             {
-                Filter1.Items.Add(s);
             }
         }
 
         private void GetGridDataSource(object sender, EventArgs e)
         {
-            var cbox = sender as MetroSetComboBox;
-            var name = cbox.SelectedItem.ToString();
+            var listbox = sender as ListBox;
+            var name = listbox.SelectedItem.ToString();
             var source = (Source)Enum.Parse(typeof(Source), name.ToString());
             BindingSource.DataSource = new DataBuilder(source, Provider.SQLite).GetDataTable();
             AccountNavigator.BindingSource = BindingSource;
         }
 
-        private void BocFilter_ItemSelected(object sender, EventArgs e)
+        private void Filter3_ItemSelected(object sender, EventArgs e)
         {
             try
             {
                 var boc = sender as MetroSetComboBox;
                 var bocfilter = boc.SelectedItem.ToString();
-                BindingSource.Filter = $"FundName = '{Filter1.SelectedItem.ToString()}' AND BocName = '{bocfilter}'";
+                BindingSource.Filter = $"FundName = '{Filter3.SelectedItem.ToString()}' AND BocName = '{bocfilter}'";
             }
             catch (Exception ex)
             {
@@ -112,23 +119,23 @@ namespace BudgetExecution
             }
         }
 
-        private void FundFilter_ItemSelected(object sender, EventArgs e)
+        private void DataFilter2_ItemSelected(object sender, EventArgs e)
         {
             try
             {
-                FIlter2.Items.Clear();
+                DataFilter2.Items.Clear();
                 var filter = sender as MetroSetComboBox;
-                Filter1.Tag = filter;
+                DataFilter2.Tag = filter;
                 var fund = filter.SelectedItem.ToString();
                 BindingSource.Filter = $"FundName = '{fund}'";
                 var boc = ProgramElements[PrcField.BocName.ToString()];
                 foreach (string b in boc)
                 {
-                    FIlter2.Items.Add(b);
+                    DataFilter2.Items.Add(b);
                 }
 
-                FIlter2.Visible = true;
-                FIlter2.SelectionChangeCommitted += BocFilter_ItemSelected;
+                DataFilter3.Visible = true;
+                DataFilter3.SelectionChangeCommitted += Filter3_ItemSelected;
             }
             catch (Exception ex)
             {
@@ -136,14 +143,14 @@ namespace BudgetExecution
             }
         }
 
-        private void GetFundFilterItems()
+        private void GetFilter2Items()
         {
             try
             {
                 var item = DbData.ProgramElements["FundName"];
                 foreach (string i in item)
                 {
-                    Filter1.Items.Add(i);
+                    DataFilter2.Items.Add(i);
                 }
             }
             catch (Exception ex)
@@ -190,5 +197,55 @@ namespace BudgetExecution
         {
 
         }
+
+
+        internal void PopulateFilterButtons(FlowLayoutPanel control, string[] list)
+        {
+            try
+            {
+                control.Controls.Clear();
+                foreach (string f in list)
+                {
+                    var b = new MetroSetButton();
+                    b.Text = f;
+                    b.Font = new Font("Segoe UI", 8f);
+                    b.NormalColor = Color.Black;
+                    b.NormalTextColor = SystemColors.MenuHighlight;
+                    b.NormalBorderColor = Color.Black;
+                    b.HoverBorderColor = Color.Blue;
+                    b.HoverColor = Color.SteelBlue;
+                    b.HoverTextColor = SystemColors.Info;
+                    b.Size = new Size(160, 30);
+                    b.Margin = new Padding(3);
+                    b.Padding = new Padding(1);
+                    control.Controls.Add(b);
+                    control.AutoSize = true;
+                    b.Tag = f;
+                    b.Click += FilterControlButton_OnClick;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
+            }
+        }
+
+
+        internal void FilterControlButton_OnClick(object sender, EventArgs e)
+        {
+            try
+            {
+                var button = sender as MetroSetButton;
+                var name = button.Tag.ToString();
+                var source = (Source)Enum.Parse(typeof(Source), name.ToString());
+                BindingSource.DataSource = new DataBuilder(source, Provider.SQLite).GetDataTable();
+                AccountNavigator.BindingSource = BindingSource;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
+            }
+        }
+            
     }
 }
