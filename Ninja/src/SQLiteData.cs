@@ -23,14 +23,34 @@ namespace BudgetExecution
             Metric = new PrcMetric(DbData);
             ProgramElements = DbData.GetProgramElements(Table);
             BindingSource.DataSource = Table;
-            Grid.DataSource = BindingSource;
-            GetPrcGridVisibleColumns(Grid);
-            GridNavigator.BindingSource = BindingSource;
+            AccountGrid.DataSource = BindingSource;
+            GetPrcGridVisibleColumns(AccountGrid);
+            AccountNavigator.BindingSource = BindingSource;
             PopulateSourceFilters();
             Filter1.SelectedValueChanged += GetGridDataSource;
         }
 
+        public SQLiteData(Source source, Provider provider)
+        {
+            InitializeComponent();
+            Source = source;
+            Provider = provider;
+            DbData = new DataBuilder(Source, Provider);
+            Table = DbData.Table;
+            Metric = new PrcMetric(DbData);
+            ProgramElements = DbData.GetProgramElements(Table);
+            BindingSource.DataSource = Table;
+            AccountGrid.DataSource = BindingSource;
+            GetPrcGridVisibleColumns(AccountGrid);
+            AccountNavigator.BindingSource = BindingSource;
+            PopulateSourceFilters();
+            Filter1.SelectedValueChanged += GetGridDataSource;
+        }
         // PROPERTIES
+        private Source Source { get; }
+
+        private Provider Provider { get; }
+
         private SQLiteDataAdapter Adapter { get; }
 
         private DataBuilder DbData { get; }
@@ -44,6 +64,8 @@ namespace BudgetExecution
         private Query Query { get; }
 
         private DataTable Table { get; set; }
+
+        public DataGridView Grid { get; set; }
 
 
         // METHODS
@@ -62,7 +84,7 @@ namespace BudgetExecution
             var name = cbox.SelectedItem.ToString();
             var source = (Source)Enum.Parse(typeof(Source), name.ToString());
             BindingSource.DataSource = new DataBuilder(source, Provider.SQLite).GetDataTable();
-            GridNavigator.BindingSource = BindingSource;
+            AccountNavigator.BindingSource = BindingSource;
         }
 
         private void BocFilter_ItemSelected(object sender, EventArgs e)
@@ -162,6 +184,11 @@ namespace BudgetExecution
         private void button8_Click(object sender, EventArgs e)
         {
             BindingSource.MoveNext();
+        }
+
+        private void TabControlTabPage_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

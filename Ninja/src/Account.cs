@@ -13,18 +13,29 @@ namespace BudgetExecution
 
     public class Account : IAccount
     {
+        private DataRow Data;
+        private Source Source;
+        private Provider Provider;
 
         // CONSTRUCTORS
         public Account()
         {
         }
 
-        public Account(string fund, string code)
+
+        public Account(Source source, Provider provider)
+        {
+            Source = source;
+            Provider = provider;
+            Table = GetAccountData(Source, Provider);
+        }
+
+        public Account(string fund, string code) : this(Source.Accounts, Provider.SQLite)
         {
             Code = code;
             Parameter = GetAccountParameter(fund, code);
-            DataTable = GetAccountData(Source.Accounts, Provider.SQLite, Parameter);
-            Data = DataTable.AsEnumerable().First();
+            Table = GetAccountData(Source.Accounts, Provider.SQLite, Parameter);
+            Data = Table.AsEnumerable().First();
             Goal = Code.Substring(0, 1);
             Objective = Code.Substring(1, 2);
             NpmCode = Code.Substring(3, 1);
@@ -46,8 +57,8 @@ namespace BudgetExecution
             Fund = fund;
             Code = code;
             Parameter = GetAccountParameter(fund, code);
-            DataTable = GetAccountData(source, provider, Parameter);
-            Data = DataTable.AsEnumerable().First();
+            Table = GetAccountData(source, provider, Parameter);
+            Data = Table.AsEnumerable().First();
             Goal = Code.Substring(0, 1);
             Objective = Code.Substring(1, 2);
             NpmCode = Code.Substring(3, 1);
@@ -116,9 +127,7 @@ namespace BudgetExecution
 
         public Dictionary<string, object> Parameter { get; }
 
-        public DataTable DataTable { get; set; }
-
-        public DataRow Data { get; set; }
+        public DataTable Table { get; set; }
 
         // METHODS
         internal Dictionary<string, object> GetAccountParameter(string fund, string code)
@@ -151,6 +160,20 @@ namespace BudgetExecution
                 Parameter.Add("ObjectiveName", dr["ObjectiveName"].ToString());
                 Parameter.Add("ProgramProjectName", dr["ProgramProjectName"].ToString());
                 return Parameter;
+            }
+            catch (System.Exception ex)
+            {
+                MessageBox.Show(ex.Message + ex.StackTrace);
+                return null;
+            }
+        }
+
+        internal DataTable GetAccountData(Source source, Provider provider)
+        {
+            try
+            {
+                var data = new DataBuilder(source, provider);
+                return data.Table;
             }
             catch (System.Exception ex)
             {

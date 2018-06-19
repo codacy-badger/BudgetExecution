@@ -30,6 +30,7 @@ namespace BudgetExecution
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SQLiteData));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -38,7 +39,6 @@ namespace BudgetExecution
             Syncfusion.Windows.Forms.Grid.GridBaseStyle gridBaseStyle2 = new Syncfusion.Windows.Forms.Grid.GridBaseStyle();
             Syncfusion.Windows.Forms.Grid.GridBaseStyle gridBaseStyle3 = new Syncfusion.Windows.Forms.Grid.GridBaseStyle();
             Syncfusion.Windows.Forms.Grid.GridBaseStyle gridBaseStyle4 = new Syncfusion.Windows.Forms.Grid.GridBaseStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SQLiteData));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -67,17 +67,45 @@ namespace BudgetExecution
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle31 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle32 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle33 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle34 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle35 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle36 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle37 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle38 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle39 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle40 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle41 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle42 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle43 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle44 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle45 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle46 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle47 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle48 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle49 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle50 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle51 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle52 = new System.Windows.Forms.DataGridViewCellStyle();
             Syncfusion.Windows.Forms.CaptionImage captionImage1 = new Syncfusion.Windows.Forms.CaptionImage();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
-            this.GridNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.AccountNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorDeleteItem1 = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem1 = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem1 = new System.Windows.Forms.ToolStripTextBox();
             this.bindingNavigatorMoveLastItem1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
-            this.Grid = new System.Windows.Forms.DataGridView();
+            this.AccountGrid = new System.Windows.Forms.DataGridView();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             this.E6DataGrid = new Syncfusion.Windows.Forms.Grid.GridDataBoundGrid();
             this.toolstripitem1 = new Syncfusion.Windows.Forms.Tools.toolstripitem();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
@@ -94,8 +122,6 @@ namespace BudgetExecution
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -103,23 +129,10 @@ namespace BudgetExecution
             this.Filter3 = new MetroSet_UI.Controls.MetroSetComboBox();
             this.FIlter2 = new MetroSet_UI.Controls.MetroSetComboBox();
             this.Filter1 = new MetroSet_UI.Controls.MetroSetComboBox();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
             this.tabControlAdv1 = new Syncfusion.Windows.Forms.Tools.TabControlAdv();
             this.tabPageAdv1 = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
-            this.tabPageAdv2 = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
-            this.tabPageAdv3 = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
-            this.tabPageAdv4 = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
-            this.tabPageAdv5 = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
-            this.tabPageAdv6 = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
-            this.tabPageAdv7 = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
-            this.tabPageAdv8 = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
-            this.tabPageAdv9 = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
-            this.label4 = new System.Windows.Forms.Label();
             this.splitContainerAdv1 = new Syncfusion.Windows.Forms.Tools.SplitContainerAdv();
+            this.tabPageAdv2 = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
             this.splitContainerAdv2 = new Syncfusion.Windows.Forms.Tools.SplitContainerAdv();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -133,19 +146,20 @@ namespace BudgetExecution
             this.button1 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.metroPanel2 = new MetroFramework.Controls.MetroPanel();
-            this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
+            this.AwardsNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
             this.toolStripButton6 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton7 = new System.Windows.Forms.ToolStripButton();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.AwardsGrid = new System.Windows.Forms.DataGridView();
             this.button10 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
             this.button12 = new System.Windows.Forms.Button();
             this.button13 = new System.Windows.Forms.Button();
             this.button14 = new System.Windows.Forms.Button();
+            this.tabPageAdv3 = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
             this.splitContainerAdv3 = new Syncfusion.Windows.Forms.Tools.SplitContainerAdv();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -159,19 +173,20 @@ namespace BudgetExecution
             this.button15 = new System.Windows.Forms.Button();
             this.button16 = new System.Windows.Forms.Button();
             this.metroPanel3 = new MetroFramework.Controls.MetroPanel();
-            this.bindingNavigator2 = new System.Windows.Forms.BindingNavigator(this.components);
+            this.BudgetNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.toolStripButton8 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton9 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripTextBox2 = new System.Windows.Forms.ToolStripTextBox();
             this.toolStripButton10 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton11 = new System.Windows.Forms.ToolStripButton();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.BudgetDocumentGrid = new System.Windows.Forms.DataGridView();
             this.button17 = new System.Windows.Forms.Button();
             this.button18 = new System.Windows.Forms.Button();
             this.button19 = new System.Windows.Forms.Button();
             this.button20 = new System.Windows.Forms.Button();
             this.button21 = new System.Windows.Forms.Button();
+            this.tabPageAdv4 = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
             this.splitContainerAdv4 = new Syncfusion.Windows.Forms.Tools.SplitContainerAdv();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.label13 = new System.Windows.Forms.Label();
@@ -185,19 +200,20 @@ namespace BudgetExecution
             this.button22 = new System.Windows.Forms.Button();
             this.button23 = new System.Windows.Forms.Button();
             this.metroPanel4 = new MetroFramework.Controls.MetroPanel();
-            this.bindingNavigator3 = new System.Windows.Forms.BindingNavigator(this.components);
+            this.DivisionNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.toolStripButton12 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton13 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripTextBox3 = new System.Windows.Forms.ToolStripTextBox();
             this.toolStripButton14 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton15 = new System.Windows.Forms.ToolStripButton();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.DivisionAccountGrid = new System.Windows.Forms.DataGridView();
             this.button24 = new System.Windows.Forms.Button();
             this.button25 = new System.Windows.Forms.Button();
             this.button26 = new System.Windows.Forms.Button();
             this.button27 = new System.Windows.Forms.Button();
             this.button28 = new System.Windows.Forms.Button();
+            this.tabPageAdv5 = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
             this.splitContainerAdv5 = new Syncfusion.Windows.Forms.Tools.SplitContainerAdv();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
             this.label17 = new System.Windows.Forms.Label();
@@ -211,19 +227,20 @@ namespace BudgetExecution
             this.button29 = new System.Windows.Forms.Button();
             this.button30 = new System.Windows.Forms.Button();
             this.metroPanel5 = new MetroFramework.Controls.MetroPanel();
-            this.bindingNavigator4 = new System.Windows.Forms.BindingNavigator(this.components);
+            this.RegionAccountNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.toolStripButton16 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton17 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripTextBox4 = new System.Windows.Forms.ToolStripTextBox();
             this.toolStripButton18 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton19 = new System.Windows.Forms.ToolStripButton();
-            this.dataGridView4 = new System.Windows.Forms.DataGridView();
+            this.RegionAccountsGrid = new System.Windows.Forms.DataGridView();
             this.button31 = new System.Windows.Forms.Button();
             this.button32 = new System.Windows.Forms.Button();
             this.button33 = new System.Windows.Forms.Button();
             this.button34 = new System.Windows.Forms.Button();
             this.button35 = new System.Windows.Forms.Button();
+            this.tabPageAdv6 = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
             this.splitContainerAdv6 = new Syncfusion.Windows.Forms.Tools.SplitContainerAdv();
             this.groupBox11 = new System.Windows.Forms.GroupBox();
             this.label21 = new System.Windows.Forms.Label();
@@ -237,19 +254,20 @@ namespace BudgetExecution
             this.button36 = new System.Windows.Forms.Button();
             this.button37 = new System.Windows.Forms.Button();
             this.metroPanel6 = new MetroFramework.Controls.MetroPanel();
-            this.bindingNavigator5 = new System.Windows.Forms.BindingNavigator(this.components);
+            this.TransferNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.toolStripButton20 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton21 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripTextBox5 = new System.Windows.Forms.ToolStripTextBox();
             this.toolStripButton22 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton23 = new System.Windows.Forms.ToolStripButton();
-            this.dataGridView5 = new System.Windows.Forms.DataGridView();
+            this.TransferGrid = new System.Windows.Forms.DataGridView();
             this.button38 = new System.Windows.Forms.Button();
             this.button39 = new System.Windows.Forms.Button();
             this.button40 = new System.Windows.Forms.Button();
             this.button41 = new System.Windows.Forms.Button();
             this.button42 = new System.Windows.Forms.Button();
+            this.tabPageAdv7 = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
             this.splitContainerAdv7 = new Syncfusion.Windows.Forms.Tools.SplitContainerAdv();
             this.groupBox13 = new System.Windows.Forms.GroupBox();
             this.label25 = new System.Windows.Forms.Label();
@@ -263,19 +281,20 @@ namespace BudgetExecution
             this.button43 = new System.Windows.Forms.Button();
             this.button44 = new System.Windows.Forms.Button();
             this.metroPanel7 = new MetroFramework.Controls.MetroPanel();
-            this.bindingNavigator6 = new System.Windows.Forms.BindingNavigator(this.components);
+            this.ObligationNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.toolStripButton24 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton25 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripTextBox6 = new System.Windows.Forms.ToolStripTextBox();
             this.toolStripButton26 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton27 = new System.Windows.Forms.ToolStripButton();
-            this.dataGridView6 = new System.Windows.Forms.DataGridView();
+            this.ObligationGrid = new System.Windows.Forms.DataGridView();
             this.button45 = new System.Windows.Forms.Button();
             this.button46 = new System.Windows.Forms.Button();
             this.button47 = new System.Windows.Forms.Button();
             this.button48 = new System.Windows.Forms.Button();
             this.button49 = new System.Windows.Forms.Button();
+            this.tabPageAdv8 = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
             this.splitContainerAdv8 = new Syncfusion.Windows.Forms.Tools.SplitContainerAdv();
             this.groupBox15 = new System.Windows.Forms.GroupBox();
             this.label29 = new System.Windows.Forms.Label();
@@ -289,41 +308,170 @@ namespace BudgetExecution
             this.button50 = new System.Windows.Forms.Button();
             this.button51 = new System.Windows.Forms.Button();
             this.metroPanel8 = new MetroFramework.Controls.MetroPanel();
-            this.bindingNavigator7 = new System.Windows.Forms.BindingNavigator(this.components);
+            this.FundsNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.toolStripButton28 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton29 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripTextBox7 = new System.Windows.Forms.ToolStripTextBox();
             this.toolStripButton30 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton31 = new System.Windows.Forms.ToolStripButton();
-            this.dataGridView7 = new System.Windows.Forms.DataGridView();
+            this.FundGrid = new System.Windows.Forms.DataGridView();
             this.button52 = new System.Windows.Forms.Button();
             this.button53 = new System.Windows.Forms.Button();
             this.button54 = new System.Windows.Forms.Button();
             this.button55 = new System.Windows.Forms.Button();
             this.button56 = new System.Windows.Forms.Button();
+            this.tabPageAdv9 = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
+            this.tabPageAdv10 = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
+            this.tabPageAdv11 = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
+            this.tabPageAdv12 = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
+            this.tabPageAdv13 = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
+            this.splitContainerAdv9 = new Syncfusion.Windows.Forms.Tools.SplitContainerAdv();
+            this.groupBox17 = new System.Windows.Forms.GroupBox();
+            this.label33 = new System.Windows.Forms.Label();
+            this.label34 = new System.Windows.Forms.Label();
+            this.label35 = new System.Windows.Forms.Label();
+            this.metroSetComboBox22 = new MetroSet_UI.Controls.MetroSetComboBox();
+            this.metroSetComboBox23 = new MetroSet_UI.Controls.MetroSetComboBox();
+            this.metroSetComboBox24 = new MetroSet_UI.Controls.MetroSetComboBox();
+            this.groupBox18 = new System.Windows.Forms.GroupBox();
+            this.label36 = new System.Windows.Forms.Label();
+            this.button57 = new System.Windows.Forms.Button();
+            this.button58 = new System.Windows.Forms.Button();
+            this.metroPanel9 = new MetroFramework.Controls.MetroPanel();
+            this.DivisionAccountNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.toolStripButton32 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton33 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator8 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripTextBox8 = new System.Windows.Forms.ToolStripTextBox();
+            this.toolStripButton34 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton35 = new System.Windows.Forms.ToolStripButton();
+            this.DivisionGrid = new System.Windows.Forms.DataGridView();
+            this.button59 = new System.Windows.Forms.Button();
+            this.button60 = new System.Windows.Forms.Button();
+            this.button61 = new System.Windows.Forms.Button();
+            this.button62 = new System.Windows.Forms.Button();
+            this.button63 = new System.Windows.Forms.Button();
+            this.splitContainerAdv10 = new Syncfusion.Windows.Forms.Tools.SplitContainerAdv();
+            this.groupBox19 = new System.Windows.Forms.GroupBox();
+            this.label37 = new System.Windows.Forms.Label();
+            this.label38 = new System.Windows.Forms.Label();
+            this.label39 = new System.Windows.Forms.Label();
+            this.metroSetComboBox25 = new MetroSet_UI.Controls.MetroSetComboBox();
+            this.metroSetComboBox26 = new MetroSet_UI.Controls.MetroSetComboBox();
+            this.metroSetComboBox27 = new MetroSet_UI.Controls.MetroSetComboBox();
+            this.groupBox20 = new System.Windows.Forms.GroupBox();
+            this.label40 = new System.Windows.Forms.Label();
+            this.button64 = new System.Windows.Forms.Button();
+            this.button65 = new System.Windows.Forms.Button();
+            this.metroPanel10 = new MetroFramework.Controls.MetroPanel();
+            this.PayrollNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.toolStripButton36 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton37 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator9 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripTextBox9 = new System.Windows.Forms.ToolStripTextBox();
+            this.toolStripButton38 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton39 = new System.Windows.Forms.ToolStripButton();
+            this.PayrollGrid = new System.Windows.Forms.DataGridView();
+            this.button66 = new System.Windows.Forms.Button();
+            this.button67 = new System.Windows.Forms.Button();
+            this.button68 = new System.Windows.Forms.Button();
+            this.button69 = new System.Windows.Forms.Button();
+            this.button70 = new System.Windows.Forms.Button();
+            this.splitContainerAdv11 = new Syncfusion.Windows.Forms.Tools.SplitContainerAdv();
+            this.groupBox21 = new System.Windows.Forms.GroupBox();
+            this.label41 = new System.Windows.Forms.Label();
+            this.label42 = new System.Windows.Forms.Label();
+            this.label43 = new System.Windows.Forms.Label();
+            this.metroSetComboBox28 = new MetroSet_UI.Controls.MetroSetComboBox();
+            this.metroSetComboBox29 = new MetroSet_UI.Controls.MetroSetComboBox();
+            this.metroSetComboBox30 = new MetroSet_UI.Controls.MetroSetComboBox();
+            this.groupBox22 = new System.Windows.Forms.GroupBox();
+            this.label44 = new System.Windows.Forms.Label();
+            this.button71 = new System.Windows.Forms.Button();
+            this.button72 = new System.Windows.Forms.Button();
+            this.metroPanel11 = new MetroFramework.Controls.MetroPanel();
+            this.SiteNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.toolStripButton40 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton41 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator10 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripTextBox10 = new System.Windows.Forms.ToolStripTextBox();
+            this.toolStripButton42 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton43 = new System.Windows.Forms.ToolStripButton();
+            this.SiteGrid = new System.Windows.Forms.DataGridView();
+            this.button73 = new System.Windows.Forms.Button();
+            this.button74 = new System.Windows.Forms.Button();
+            this.button75 = new System.Windows.Forms.Button();
+            this.button76 = new System.Windows.Forms.Button();
+            this.button77 = new System.Windows.Forms.Button();
+            this.splitContainerAdv12 = new Syncfusion.Windows.Forms.Tools.SplitContainerAdv();
+            this.groupBox23 = new System.Windows.Forms.GroupBox();
+            this.label45 = new System.Windows.Forms.Label();
+            this.label46 = new System.Windows.Forms.Label();
+            this.label47 = new System.Windows.Forms.Label();
+            this.metroSetComboBox31 = new MetroSet_UI.Controls.MetroSetComboBox();
+            this.metroSetComboBox32 = new MetroSet_UI.Controls.MetroSetComboBox();
+            this.metroSetComboBox33 = new MetroSet_UI.Controls.MetroSetComboBox();
+            this.groupBox24 = new System.Windows.Forms.GroupBox();
+            this.label48 = new System.Windows.Forms.Label();
+            this.button78 = new System.Windows.Forms.Button();
+            this.button79 = new System.Windows.Forms.Button();
+            this.metroPanel12 = new MetroFramework.Controls.MetroPanel();
+            this.ReimbursableNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.toolStripButton44 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton45 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator11 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripTextBox11 = new System.Windows.Forms.ToolStripTextBox();
+            this.toolStripButton46 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton47 = new System.Windows.Forms.ToolStripButton();
+            this.ReimbursableGrid = new System.Windows.Forms.DataGridView();
+            this.button80 = new System.Windows.Forms.Button();
+            this.button81 = new System.Windows.Forms.Button();
+            this.button82 = new System.Windows.Forms.Button();
+            this.button83 = new System.Windows.Forms.Button();
+            this.button84 = new System.Windows.Forms.Button();
+            this.splitContainerAdv13 = new Syncfusion.Windows.Forms.Tools.SplitContainerAdv();
+            this.groupBox25 = new System.Windows.Forms.GroupBox();
+            this.label49 = new System.Windows.Forms.Label();
+            this.label50 = new System.Windows.Forms.Label();
+            this.label51 = new System.Windows.Forms.Label();
+            this.metroSetComboBox34 = new MetroSet_UI.Controls.MetroSetComboBox();
+            this.metroSetComboBox35 = new MetroSet_UI.Controls.MetroSetComboBox();
+            this.metroSetComboBox36 = new MetroSet_UI.Controls.MetroSetComboBox();
+            this.groupBox26 = new System.Windows.Forms.GroupBox();
+            this.label52 = new System.Windows.Forms.Label();
+            this.button85 = new System.Windows.Forms.Button();
+            this.button86 = new System.Windows.Forms.Button();
+            this.metroPanel13 = new MetroFramework.Controls.MetroPanel();
+            this.EmployeeNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.toolStripButton48 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton49 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator12 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripTextBox12 = new System.Windows.Forms.ToolStripTextBox();
+            this.toolStripButton50 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton51 = new System.Windows.Forms.ToolStripButton();
+            this.EmployeeGrid = new System.Windows.Forms.DataGridView();
+            this.button87 = new System.Windows.Forms.Button();
+            this.button88 = new System.Windows.Forms.Button();
+            this.button89 = new System.Windows.Forms.Button();
+            this.button90 = new System.Windows.Forms.Button();
+            this.button91 = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             this.metroPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.GridNavigator)).BeginInit();
-            this.GridNavigator.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Grid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AccountNavigator)).BeginInit();
+            this.AccountNavigator.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.AccountGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.E6DataGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BindingSource)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tabControlAdv1)).BeginInit();
             this.tabControlAdv1.SuspendLayout();
             this.tabPageAdv1.SuspendLayout();
-            this.tabPageAdv2.SuspendLayout();
-            this.tabPageAdv3.SuspendLayout();
-            this.tabPageAdv4.SuspendLayout();
-            this.tabPageAdv5.SuspendLayout();
-            this.tabPageAdv6.SuspendLayout();
-            this.tabPageAdv7.SuspendLayout();
-            this.tabPageAdv8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerAdv1)).BeginInit();
             this.splitContainerAdv1.Panel1.SuspendLayout();
             this.splitContainerAdv1.Panel2.SuspendLayout();
             this.splitContainerAdv1.SuspendLayout();
+            this.tabPageAdv2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerAdv2)).BeginInit();
             this.splitContainerAdv2.Panel1.SuspendLayout();
             this.splitContainerAdv2.Panel2.SuspendLayout();
@@ -331,9 +479,10 @@ namespace BudgetExecution
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.metroPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
-            this.bindingNavigator1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AwardsNavigator)).BeginInit();
+            this.AwardsNavigator.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.AwardsGrid)).BeginInit();
+            this.tabPageAdv3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerAdv3)).BeginInit();
             this.splitContainerAdv3.Panel1.SuspendLayout();
             this.splitContainerAdv3.Panel2.SuspendLayout();
@@ -341,9 +490,10 @@ namespace BudgetExecution
             this.groupBox5.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.metroPanel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator2)).BeginInit();
-            this.bindingNavigator2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BudgetNavigator)).BeginInit();
+            this.BudgetNavigator.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.BudgetDocumentGrid)).BeginInit();
+            this.tabPageAdv4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerAdv4)).BeginInit();
             this.splitContainerAdv4.Panel1.SuspendLayout();
             this.splitContainerAdv4.Panel2.SuspendLayout();
@@ -351,9 +501,10 @@ namespace BudgetExecution
             this.groupBox7.SuspendLayout();
             this.groupBox8.SuspendLayout();
             this.metroPanel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator3)).BeginInit();
-            this.bindingNavigator3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DivisionNavigator)).BeginInit();
+            this.DivisionNavigator.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DivisionAccountGrid)).BeginInit();
+            this.tabPageAdv5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerAdv5)).BeginInit();
             this.splitContainerAdv5.Panel1.SuspendLayout();
             this.splitContainerAdv5.Panel2.SuspendLayout();
@@ -361,9 +512,10 @@ namespace BudgetExecution
             this.groupBox9.SuspendLayout();
             this.groupBox10.SuspendLayout();
             this.metroPanel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator4)).BeginInit();
-            this.bindingNavigator4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RegionAccountNavigator)).BeginInit();
+            this.RegionAccountNavigator.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.RegionAccountsGrid)).BeginInit();
+            this.tabPageAdv6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerAdv6)).BeginInit();
             this.splitContainerAdv6.Panel1.SuspendLayout();
             this.splitContainerAdv6.Panel2.SuspendLayout();
@@ -371,9 +523,10 @@ namespace BudgetExecution
             this.groupBox11.SuspendLayout();
             this.groupBox12.SuspendLayout();
             this.metroPanel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator5)).BeginInit();
-            this.bindingNavigator5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TransferNavigator)).BeginInit();
+            this.TransferNavigator.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.TransferGrid)).BeginInit();
+            this.tabPageAdv7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerAdv7)).BeginInit();
             this.splitContainerAdv7.Panel1.SuspendLayout();
             this.splitContainerAdv7.Panel2.SuspendLayout();
@@ -381,9 +534,10 @@ namespace BudgetExecution
             this.groupBox13.SuspendLayout();
             this.groupBox14.SuspendLayout();
             this.metroPanel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator6)).BeginInit();
-            this.bindingNavigator6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ObligationNavigator)).BeginInit();
+            this.ObligationNavigator.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ObligationGrid)).BeginInit();
+            this.tabPageAdv8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerAdv8)).BeginInit();
             this.splitContainerAdv8.Panel1.SuspendLayout();
             this.splitContainerAdv8.Panel2.SuspendLayout();
@@ -391,9 +545,64 @@ namespace BudgetExecution
             this.groupBox15.SuspendLayout();
             this.groupBox16.SuspendLayout();
             this.metroPanel8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator7)).BeginInit();
-            this.bindingNavigator7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.FundsNavigator)).BeginInit();
+            this.FundsNavigator.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.FundGrid)).BeginInit();
+            this.tabPageAdv9.SuspendLayout();
+            this.tabPageAdv10.SuspendLayout();
+            this.tabPageAdv11.SuspendLayout();
+            this.tabPageAdv12.SuspendLayout();
+            this.tabPageAdv13.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainerAdv9)).BeginInit();
+            this.splitContainerAdv9.Panel1.SuspendLayout();
+            this.splitContainerAdv9.Panel2.SuspendLayout();
+            this.splitContainerAdv9.SuspendLayout();
+            this.groupBox17.SuspendLayout();
+            this.groupBox18.SuspendLayout();
+            this.metroPanel9.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DivisionAccountNavigator)).BeginInit();
+            this.DivisionAccountNavigator.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DivisionGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainerAdv10)).BeginInit();
+            this.splitContainerAdv10.Panel1.SuspendLayout();
+            this.splitContainerAdv10.Panel2.SuspendLayout();
+            this.splitContainerAdv10.SuspendLayout();
+            this.groupBox19.SuspendLayout();
+            this.groupBox20.SuspendLayout();
+            this.metroPanel10.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PayrollNavigator)).BeginInit();
+            this.PayrollNavigator.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PayrollGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainerAdv11)).BeginInit();
+            this.splitContainerAdv11.Panel1.SuspendLayout();
+            this.splitContainerAdv11.Panel2.SuspendLayout();
+            this.splitContainerAdv11.SuspendLayout();
+            this.groupBox21.SuspendLayout();
+            this.groupBox22.SuspendLayout();
+            this.metroPanel11.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.SiteNavigator)).BeginInit();
+            this.SiteNavigator.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.SiteGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainerAdv12)).BeginInit();
+            this.splitContainerAdv12.Panel1.SuspendLayout();
+            this.splitContainerAdv12.Panel2.SuspendLayout();
+            this.splitContainerAdv12.SuspendLayout();
+            this.groupBox23.SuspendLayout();
+            this.groupBox24.SuspendLayout();
+            this.metroPanel12.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ReimbursableNavigator)).BeginInit();
+            this.ReimbursableNavigator.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ReimbursableGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainerAdv13)).BeginInit();
+            this.splitContainerAdv13.Panel1.SuspendLayout();
+            this.splitContainerAdv13.Panel2.SuspendLayout();
+            this.splitContainerAdv13.SuspendLayout();
+            this.groupBox25.SuspendLayout();
+            this.groupBox26.SuspendLayout();
+            this.metroPanel13.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.EmployeeNavigator)).BeginInit();
+            this.EmployeeNavigator.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.EmployeeGrid)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox2
@@ -416,10 +625,56 @@ namespace BudgetExecution
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Database";
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(965, 58);
+            this.label4.Name = "label4";
+            this.label4.Padding = new System.Windows.Forms.Padding(1);
+            this.label4.Size = new System.Drawing.Size(53, 22);
+            this.label4.TabIndex = 86;
+            this.label4.Text = "label4";
+            // 
+            // button7
+            // 
+            this.button7.BackColor = System.Drawing.Color.Transparent;
+            this.button7.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button7.FlatAppearance.BorderSize = 0;
+            this.button7.FlatAppearance.MouseDownBackColor = System.Drawing.Color.PowderBlue;
+            this.button7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button7.ForeColor = System.Drawing.SystemColors.Info;
+            this.button7.Image = ((System.Drawing.Image)(resources.GetObject("button7.Image")));
+            this.button7.Location = new System.Drawing.Point(1016, 510);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(94, 60);
+            this.button7.TabIndex = 84;
+            this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button7.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button7.UseVisualStyleBackColor = false;
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.Transparent;
+            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.PowderBlue;
+            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.ForeColor = System.Drawing.SystemColors.Info;
+            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
+            this.button3.Location = new System.Drawing.Point(854, 510);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(94, 60);
+            this.button3.TabIndex = 70;
+            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button3.UseVisualStyleBackColor = false;
+            // 
             // metroPanel1
             // 
-            this.metroPanel1.Controls.Add(this.GridNavigator);
-            this.metroPanel1.Controls.Add(this.Grid);
+            this.metroPanel1.Controls.Add(this.AccountNavigator);
+            this.metroPanel1.Controls.Add(this.AccountGrid);
             this.metroPanel1.HorizontalScrollbarBarColor = true;
             this.metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
             this.metroPanel1.HorizontalScrollbarSize = 10;
@@ -432,32 +687,32 @@ namespace BudgetExecution
             this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel1.VerticalScrollbarSize = 10;
             // 
-            // GridNavigator
+            // AccountNavigator
             // 
-            this.GridNavigator.AddNewItem = null;
-            this.GridNavigator.BackColor = System.Drawing.Color.Transparent;
-            this.GridNavigator.CountItem = null;
-            this.GridNavigator.DeleteItem = this.bindingNavigatorDeleteItem1;
-            this.GridNavigator.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.GridNavigator.ImageScalingSize = new System.Drawing.Size(24, 20);
-            this.GridNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.AccountNavigator.AddNewItem = null;
+            this.AccountNavigator.BackColor = System.Drawing.Color.Transparent;
+            this.AccountNavigator.CountItem = null;
+            this.AccountNavigator.DeleteItem = this.bindingNavigatorDeleteItem1;
+            this.AccountNavigator.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.AccountNavigator.ImageScalingSize = new System.Drawing.Size(24, 20);
+            this.AccountNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bindingNavigatorMovePreviousItem1,
             this.bindingNavigatorSeparator3,
             this.bindingNavigatorPositionItem1,
             this.bindingNavigatorMoveLastItem1,
             this.bindingNavigatorDeleteItem1,
             this.toolStripButton3});
-            this.GridNavigator.Location = new System.Drawing.Point(0, 357);
-            this.GridNavigator.MoveFirstItem = null;
-            this.GridNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem1;
-            this.GridNavigator.MoveNextItem = null;
-            this.GridNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem1;
-            this.GridNavigator.Name = "GridNavigator";
-            this.GridNavigator.PositionItem = this.bindingNavigatorPositionItem1;
-            this.GridNavigator.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.GridNavigator.Size = new System.Drawing.Size(1073, 31);
-            this.GridNavigator.TabIndex = 87;
-            this.GridNavigator.Text = "bindingNavigator1";
+            this.AccountNavigator.Location = new System.Drawing.Point(0, 357);
+            this.AccountNavigator.MoveFirstItem = null;
+            this.AccountNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem1;
+            this.AccountNavigator.MoveNextItem = null;
+            this.AccountNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem1;
+            this.AccountNavigator.Name = "AccountNavigator";
+            this.AccountNavigator.PositionItem = this.bindingNavigatorPositionItem1;
+            this.AccountNavigator.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
+            this.AccountNavigator.Size = new System.Drawing.Size(1073, 31);
+            this.AccountNavigator.TabIndex = 87;
+            this.AccountNavigator.Text = "bindingNavigator1";
             // 
             // bindingNavigatorDeleteItem1
             // 
@@ -509,12 +764,12 @@ namespace BudgetExecution
             this.toolStripButton3.Size = new System.Drawing.Size(28, 28);
             this.toolStripButton3.Text = "toolStripButton3";
             // 
-            // Grid
+            // AccountGrid
             // 
-            this.Grid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.Grid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.Grid.BackgroundColor = System.Drawing.Color.SlateGray;
-            this.Grid.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.AccountGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.AccountGrid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.AccountGrid.BackgroundColor = System.Drawing.Color.SlateGray;
+            this.AccountGrid.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.SteelBlue;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -522,7 +777,7 @@ namespace BudgetExecution
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Grid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.AccountGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.LightSteelBlue;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -530,12 +785,12 @@ namespace BudgetExecution
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.Grid.DefaultCellStyle = dataGridViewCellStyle2;
-            this.Grid.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Grid.EnableHeadersVisualStyles = false;
-            this.Grid.GridColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.Grid.Location = new System.Drawing.Point(0, 0);
-            this.Grid.Name = "Grid";
+            this.AccountGrid.DefaultCellStyle = dataGridViewCellStyle2;
+            this.AccountGrid.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.AccountGrid.EnableHeadersVisualStyles = false;
+            this.AccountGrid.GridColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.AccountGrid.Location = new System.Drawing.Point(0, 0);
+            this.AccountGrid.Name = "AccountGrid";
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.SteelBlue;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -543,17 +798,109 @@ namespace BudgetExecution
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Grid.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.Grid.RowHeadersWidth = 30;
+            this.AccountGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.AccountGrid.RowHeadersWidth = 30;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.SteelBlue;
             dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            this.Grid.RowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.Grid.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.Grid.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Grid.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
-            this.Grid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.Grid.Size = new System.Drawing.Size(1073, 388);
-            this.Grid.TabIndex = 2;
+            this.AccountGrid.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.AccountGrid.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.AccountGrid.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AccountGrid.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
+            this.AccountGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.AccountGrid.Size = new System.Drawing.Size(1073, 388);
+            this.AccountGrid.TabIndex = 2;
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.Transparent;
+            this.button5.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.PowderBlue;
+            this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.ForeColor = System.Drawing.SystemColors.Info;
+            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
+            this.button5.Location = new System.Drawing.Point(70, 510);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(96, 60);
+            this.button5.TabIndex = 82;
+            this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.Transparent;
+            this.button6.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button6.FlatAppearance.BorderSize = 0;
+            this.button6.FlatAppearance.MouseDownBackColor = System.Drawing.Color.PowderBlue;
+            this.button6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.ForeColor = System.Drawing.SystemColors.Info;
+            this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
+            this.button6.Location = new System.Drawing.Point(687, 510);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(94, 60);
+            this.button6.TabIndex = 83;
+            this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button6.UseVisualStyleBackColor = false;
+            // 
+            // button8
+            // 
+            this.button8.BackColor = System.Drawing.Color.Transparent;
+            this.button8.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button8.FlatAppearance.BorderSize = 0;
+            this.button8.FlatAppearance.MouseDownBackColor = System.Drawing.Color.PowderBlue;
+            this.button8.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button8.ForeColor = System.Drawing.SystemColors.Info;
+            this.button8.Image = ((System.Drawing.Image)(resources.GetObject("button8.Image")));
+            this.button8.Location = new System.Drawing.Point(205, 510);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(96, 60);
+            this.button8.TabIndex = 85;
+            this.button8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button8.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button8.UseVisualStyleBackColor = false;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.Transparent;
+            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.PowderBlue;
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.ForeColor = System.Drawing.SystemColors.Info;
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.Location = new System.Drawing.Point(525, 510);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(94, 60);
+            this.button2.TabIndex = 71;
+            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.Transparent;
+            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.PowderBlue;
+            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.ForeColor = System.Drawing.SystemColors.Info;
+            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
+            this.button4.Location = new System.Drawing.Point(362, 510);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(94, 60);
+            this.button4.TabIndex = 81;
+            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button4.UseVisualStyleBackColor = false;
             // 
             // E6DataGrid
             // 
@@ -697,42 +1044,6 @@ namespace BudgetExecution
             this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(28, 28);
             this.bindingNavigatorMoveLastItem.Text = "Move last";
             // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.Transparent;
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.PowderBlue;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.SystemColors.Info;
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.Location = new System.Drawing.Point(525, 510);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(94, 60);
-            this.button2.TabIndex = 71;
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.Transparent;
-            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.PowderBlue;
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.ForeColor = System.Drawing.SystemColors.Info;
-            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.Location = new System.Drawing.Point(854, 510);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(94, 60);
-            this.button3.TabIndex = 70;
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button3.UseVisualStyleBackColor = false;
-            // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
@@ -873,103 +1184,11 @@ namespace BudgetExecution
             this.Filter1.ThemeName = "MetroDark";
             this.Filter1.ValueMember = "Fund";
             // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.Transparent;
-            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.PowderBlue;
-            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.ForeColor = System.Drawing.SystemColors.Info;
-            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.Location = new System.Drawing.Point(362, 510);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(94, 60);
-            this.button4.TabIndex = 81;
-            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button4.UseVisualStyleBackColor = false;
-            // 
-            // button5
-            // 
-            this.button5.BackColor = System.Drawing.Color.Transparent;
-            this.button5.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.PowderBlue;
-            this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.ForeColor = System.Drawing.SystemColors.Info;
-            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
-            this.button5.Location = new System.Drawing.Point(70, 510);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(96, 60);
-            this.button5.TabIndex = 82;
-            this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button5.UseVisualStyleBackColor = false;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
-            // button6
-            // 
-            this.button6.BackColor = System.Drawing.Color.Transparent;
-            this.button6.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatAppearance.MouseDownBackColor = System.Drawing.Color.PowderBlue;
-            this.button6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.ForeColor = System.Drawing.SystemColors.Info;
-            this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
-            this.button6.Location = new System.Drawing.Point(687, 510);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(94, 60);
-            this.button6.TabIndex = 83;
-            this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button6.UseVisualStyleBackColor = false;
-            // 
-            // button7
-            // 
-            this.button7.BackColor = System.Drawing.Color.Transparent;
-            this.button7.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button7.FlatAppearance.BorderSize = 0;
-            this.button7.FlatAppearance.MouseDownBackColor = System.Drawing.Color.PowderBlue;
-            this.button7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.ForeColor = System.Drawing.SystemColors.Info;
-            this.button7.Image = ((System.Drawing.Image)(resources.GetObject("button7.Image")));
-            this.button7.Location = new System.Drawing.Point(1016, 510);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(94, 60);
-            this.button7.TabIndex = 84;
-            this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button7.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button7.UseVisualStyleBackColor = false;
-            // 
-            // button8
-            // 
-            this.button8.BackColor = System.Drawing.Color.Transparent;
-            this.button8.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button8.FlatAppearance.BorderSize = 0;
-            this.button8.FlatAppearance.MouseDownBackColor = System.Drawing.Color.PowderBlue;
-            this.button8.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.ForeColor = System.Drawing.SystemColors.Info;
-            this.button8.Image = ((System.Drawing.Image)(resources.GetObject("button8.Image")));
-            this.button8.Location = new System.Drawing.Point(205, 510);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(96, 60);
-            this.button8.TabIndex = 85;
-            this.button8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button8.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button8.UseVisualStyleBackColor = false;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
-            // 
             // tabControlAdv1
             // 
             this.tabControlAdv1.ActiveTabColor = System.Drawing.Color.SteelBlue;
             this.tabControlAdv1.ActiveTabForeColor = System.Drawing.Color.White;
-            this.tabControlAdv1.BeforeTouchSize = new System.Drawing.Size(1588, 914);
+            this.tabControlAdv1.BeforeTouchSize = new System.Drawing.Size(1588, 934);
             this.tabControlAdv1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tabControlAdv1.BorderWidth = 1;
             this.tabControlAdv1.CloseButtonForeColor = System.Drawing.Color.Empty;
@@ -984,17 +1203,22 @@ namespace BudgetExecution
             this.tabControlAdv1.Controls.Add(this.tabPageAdv7);
             this.tabControlAdv1.Controls.Add(this.tabPageAdv8);
             this.tabControlAdv1.Controls.Add(this.tabPageAdv9);
+            this.tabControlAdv1.Controls.Add(this.tabPageAdv10);
+            this.tabControlAdv1.Controls.Add(this.tabPageAdv11);
+            this.tabControlAdv1.Controls.Add(this.tabPageAdv12);
+            this.tabControlAdv1.Controls.Add(this.tabPageAdv13);
             this.tabControlAdv1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControlAdv1.FixedSingleBorderColor = System.Drawing.SystemColors.MenuHighlight;
             this.tabControlAdv1.FocusOnTabClick = false;
-            this.tabControlAdv1.InactiveTabColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.tabControlAdv1.InactiveTabColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
             this.tabControlAdv1.InActiveTabForeColor = System.Drawing.Color.Gray;
             this.tabControlAdv1.ItemSize = new System.Drawing.Size(110, 40);
             this.tabControlAdv1.Location = new System.Drawing.Point(0, 0);
             this.tabControlAdv1.Name = "tabControlAdv1";
+            this.tabControlAdv1.Padding = new System.Drawing.Point(6, 6);
             this.tabControlAdv1.SeparatorColor = System.Drawing.Color.Black;
             this.tabControlAdv1.ShowSeparator = true;
-            this.tabControlAdv1.Size = new System.Drawing.Size(1588, 914);
+            this.tabControlAdv1.Size = new System.Drawing.Size(1588, 934);
             this.tabControlAdv1.TabGap = 5;
             this.tabControlAdv1.TabIndex = 87;
             this.tabControlAdv1.TabPanelBackColor = System.Drawing.Color.Black;
@@ -1011,126 +1235,13 @@ namespace BudgetExecution
             this.tabPageAdv1.ShowCloseButton = true;
             this.tabPageAdv1.Size = new System.Drawing.Size(1586, 873);
             this.tabPageAdv1.TabIndex = 1;
-            this.tabPageAdv1.Text = "tabPageAdv1";
+            this.tabPageAdv1.Text = "Account Data";
             this.tabPageAdv1.ThemesEnabled = false;
-            // 
-            // tabPageAdv2
-            // 
-            this.tabPageAdv2.Controls.Add(this.splitContainerAdv2);
-            this.tabPageAdv2.Image = null;
-            this.tabPageAdv2.ImageSize = new System.Drawing.Size(16, 16);
-            this.tabPageAdv2.Location = new System.Drawing.Point(1, 40);
-            this.tabPageAdv2.Name = "tabPageAdv2";
-            this.tabPageAdv2.ShowCloseButton = true;
-            this.tabPageAdv2.Size = new System.Drawing.Size(1586, 873);
-            this.tabPageAdv2.TabIndex = 2;
-            this.tabPageAdv2.Text = "tabPageAdv2";
-            this.tabPageAdv2.ThemesEnabled = false;
-            // 
-            // tabPageAdv3
-            // 
-            this.tabPageAdv3.Controls.Add(this.splitContainerAdv3);
-            this.tabPageAdv3.Image = null;
-            this.tabPageAdv3.ImageSize = new System.Drawing.Size(16, 16);
-            this.tabPageAdv3.Location = new System.Drawing.Point(1, 40);
-            this.tabPageAdv3.Name = "tabPageAdv3";
-            this.tabPageAdv3.ShowCloseButton = true;
-            this.tabPageAdv3.Size = new System.Drawing.Size(1586, 873);
-            this.tabPageAdv3.TabIndex = 3;
-            this.tabPageAdv3.Text = "tabPageAdv3";
-            this.tabPageAdv3.ThemesEnabled = false;
-            // 
-            // tabPageAdv4
-            // 
-            this.tabPageAdv4.Controls.Add(this.splitContainerAdv4);
-            this.tabPageAdv4.Image = null;
-            this.tabPageAdv4.ImageSize = new System.Drawing.Size(16, 16);
-            this.tabPageAdv4.Location = new System.Drawing.Point(1, 40);
-            this.tabPageAdv4.Name = "tabPageAdv4";
-            this.tabPageAdv4.ShowCloseButton = true;
-            this.tabPageAdv4.Size = new System.Drawing.Size(1586, 873);
-            this.tabPageAdv4.TabIndex = 4;
-            this.tabPageAdv4.Text = "tabPageAdv4";
-            this.tabPageAdv4.ThemesEnabled = false;
-            // 
-            // tabPageAdv5
-            // 
-            this.tabPageAdv5.Controls.Add(this.splitContainerAdv5);
-            this.tabPageAdv5.Image = null;
-            this.tabPageAdv5.ImageSize = new System.Drawing.Size(16, 16);
-            this.tabPageAdv5.Location = new System.Drawing.Point(1, 40);
-            this.tabPageAdv5.Name = "tabPageAdv5";
-            this.tabPageAdv5.ShowCloseButton = true;
-            this.tabPageAdv5.Size = new System.Drawing.Size(1586, 873);
-            this.tabPageAdv5.TabIndex = 5;
-            this.tabPageAdv5.Text = "tabPageAdv5";
-            this.tabPageAdv5.ThemesEnabled = false;
-            // 
-            // tabPageAdv6
-            // 
-            this.tabPageAdv6.Controls.Add(this.splitContainerAdv6);
-            this.tabPageAdv6.Image = null;
-            this.tabPageAdv6.ImageSize = new System.Drawing.Size(16, 16);
-            this.tabPageAdv6.Location = new System.Drawing.Point(1, 40);
-            this.tabPageAdv6.Name = "tabPageAdv6";
-            this.tabPageAdv6.ShowCloseButton = true;
-            this.tabPageAdv6.Size = new System.Drawing.Size(1586, 873);
-            this.tabPageAdv6.TabIndex = 6;
-            this.tabPageAdv6.Text = "tabPageAdv6";
-            this.tabPageAdv6.ThemesEnabled = false;
-            // 
-            // tabPageAdv7
-            // 
-            this.tabPageAdv7.Controls.Add(this.splitContainerAdv7);
-            this.tabPageAdv7.Image = null;
-            this.tabPageAdv7.ImageSize = new System.Drawing.Size(16, 16);
-            this.tabPageAdv7.Location = new System.Drawing.Point(1, 40);
-            this.tabPageAdv7.Name = "tabPageAdv7";
-            this.tabPageAdv7.ShowCloseButton = true;
-            this.tabPageAdv7.Size = new System.Drawing.Size(1586, 873);
-            this.tabPageAdv7.TabIndex = 7;
-            this.tabPageAdv7.Text = "tabPageAdv7";
-            this.tabPageAdv7.ThemesEnabled = false;
-            // 
-            // tabPageAdv8
-            // 
-            this.tabPageAdv8.Controls.Add(this.splitContainerAdv8);
-            this.tabPageAdv8.Image = null;
-            this.tabPageAdv8.ImageSize = new System.Drawing.Size(16, 16);
-            this.tabPageAdv8.Location = new System.Drawing.Point(1, 40);
-            this.tabPageAdv8.Name = "tabPageAdv8";
-            this.tabPageAdv8.ShowCloseButton = true;
-            this.tabPageAdv8.Size = new System.Drawing.Size(1586, 873);
-            this.tabPageAdv8.TabIndex = 8;
-            this.tabPageAdv8.Text = "tabPageAdv8";
-            this.tabPageAdv8.ThemesEnabled = false;
-            // 
-            // tabPageAdv9
-            // 
-            this.tabPageAdv9.Image = null;
-            this.tabPageAdv9.ImageSize = new System.Drawing.Size(16, 16);
-            this.tabPageAdv9.Location = new System.Drawing.Point(1, 40);
-            this.tabPageAdv9.Name = "tabPageAdv9";
-            this.tabPageAdv9.ShowCloseButton = true;
-            this.tabPageAdv9.Size = new System.Drawing.Size(1586, 873);
-            this.tabPageAdv9.TabIndex = 9;
-            this.tabPageAdv9.Text = "tabPageAdv9";
-            this.tabPageAdv9.ThemesEnabled = false;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(965, 58);
-            this.label4.Name = "label4";
-            this.label4.Padding = new System.Windows.Forms.Padding(1);
-            this.label4.Size = new System.Drawing.Size(53, 22);
-            this.label4.TabIndex = 86;
-            this.label4.Text = "label4";
             // 
             // splitContainerAdv1
             // 
             this.splitContainerAdv1.BeforeTouchSize = 7;
-            this.splitContainerAdv1.Location = new System.Drawing.Point(3, 16);
+            this.splitContainerAdv1.Location = new System.Drawing.Point(7, 23);
             this.splitContainerAdv1.Name = "splitContainerAdv1";
             // 
             // splitContainerAdv1.Panel1
@@ -1144,6 +1255,19 @@ namespace BudgetExecution
             this.splitContainerAdv1.SplitterDistance = 335;
             this.splitContainerAdv1.TabIndex = 15;
             this.splitContainerAdv1.Text = "splitContainerAdv1";
+            // 
+            // tabPageAdv2
+            // 
+            this.tabPageAdv2.Controls.Add(this.splitContainerAdv2);
+            this.tabPageAdv2.Image = null;
+            this.tabPageAdv2.ImageSize = new System.Drawing.Size(16, 16);
+            this.tabPageAdv2.Location = new System.Drawing.Point(1, 40);
+            this.tabPageAdv2.Name = "tabPageAdv2";
+            this.tabPageAdv2.ShowCloseButton = true;
+            this.tabPageAdv2.Size = new System.Drawing.Size(1586, 873);
+            this.tabPageAdv2.TabIndex = 2;
+            this.tabPageAdv2.Text = "Awards";
+            this.tabPageAdv2.ThemesEnabled = false;
             // 
             // splitContainerAdv2
             // 
@@ -1371,8 +1495,8 @@ namespace BudgetExecution
             // 
             // metroPanel2
             // 
-            this.metroPanel2.Controls.Add(this.bindingNavigator1);
-            this.metroPanel2.Controls.Add(this.dataGridView1);
+            this.metroPanel2.Controls.Add(this.AwardsNavigator);
+            this.metroPanel2.Controls.Add(this.AwardsGrid);
             this.metroPanel2.HorizontalScrollbarBarColor = true;
             this.metroPanel2.HorizontalScrollbarHighlightOnWheel = false;
             this.metroPanel2.HorizontalScrollbarSize = 10;
@@ -1385,32 +1509,32 @@ namespace BudgetExecution
             this.metroPanel2.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel2.VerticalScrollbarSize = 10;
             // 
-            // bindingNavigator1
+            // AwardsNavigator
             // 
-            this.bindingNavigator1.AddNewItem = null;
-            this.bindingNavigator1.BackColor = System.Drawing.Color.Transparent;
-            this.bindingNavigator1.CountItem = null;
-            this.bindingNavigator1.DeleteItem = this.toolStripButton4;
-            this.bindingNavigator1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.bindingNavigator1.ImageScalingSize = new System.Drawing.Size(24, 20);
-            this.bindingNavigator1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.AwardsNavigator.AddNewItem = null;
+            this.AwardsNavigator.BackColor = System.Drawing.Color.Transparent;
+            this.AwardsNavigator.CountItem = null;
+            this.AwardsNavigator.DeleteItem = this.toolStripButton4;
+            this.AwardsNavigator.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.AwardsNavigator.ImageScalingSize = new System.Drawing.Size(24, 20);
+            this.AwardsNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripButton5,
             this.toolStripSeparator1,
             this.toolStripTextBox1,
             this.toolStripButton6,
             this.toolStripButton4,
             this.toolStripButton7});
-            this.bindingNavigator1.Location = new System.Drawing.Point(0, 357);
-            this.bindingNavigator1.MoveFirstItem = null;
-            this.bindingNavigator1.MoveLastItem = this.toolStripButton6;
-            this.bindingNavigator1.MoveNextItem = null;
-            this.bindingNavigator1.MovePreviousItem = this.toolStripButton5;
-            this.bindingNavigator1.Name = "bindingNavigator1";
-            this.bindingNavigator1.PositionItem = this.toolStripTextBox1;
-            this.bindingNavigator1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.bindingNavigator1.Size = new System.Drawing.Size(1073, 31);
-            this.bindingNavigator1.TabIndex = 87;
-            this.bindingNavigator1.Text = "bindingNavigator1";
+            this.AwardsNavigator.Location = new System.Drawing.Point(0, 357);
+            this.AwardsNavigator.MoveFirstItem = null;
+            this.AwardsNavigator.MoveLastItem = this.toolStripButton6;
+            this.AwardsNavigator.MoveNextItem = null;
+            this.AwardsNavigator.MovePreviousItem = this.toolStripButton5;
+            this.AwardsNavigator.Name = "AwardsNavigator";
+            this.AwardsNavigator.PositionItem = this.toolStripTextBox1;
+            this.AwardsNavigator.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
+            this.AwardsNavigator.Size = new System.Drawing.Size(1073, 31);
+            this.AwardsNavigator.TabIndex = 87;
+            this.AwardsNavigator.Text = "bindingNavigator1";
             // 
             // toolStripButton4
             // 
@@ -1462,12 +1586,12 @@ namespace BudgetExecution
             this.toolStripButton7.Size = new System.Drawing.Size(28, 28);
             this.toolStripButton7.Text = "toolStripButton3";
             // 
-            // dataGridView1
+            // AwardsGrid
             // 
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.SlateGray;
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.AwardsGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.AwardsGrid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.AwardsGrid.BackgroundColor = System.Drawing.Color.SlateGray;
+            this.AwardsGrid.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle5.BackColor = System.Drawing.Color.SteelBlue;
             dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1475,7 +1599,7 @@ namespace BudgetExecution
             dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.AwardsGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle6.BackColor = System.Drawing.Color.LightSteelBlue;
             dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1483,12 +1607,12 @@ namespace BudgetExecution
             dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle6;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.EnableHeadersVisualStyles = false;
-            this.dataGridView1.GridColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Name = "dataGridView1";
+            this.AwardsGrid.DefaultCellStyle = dataGridViewCellStyle6;
+            this.AwardsGrid.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.AwardsGrid.EnableHeadersVisualStyles = false;
+            this.AwardsGrid.GridColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.AwardsGrid.Location = new System.Drawing.Point(0, 0);
+            this.AwardsGrid.Name = "AwardsGrid";
             dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle7.BackColor = System.Drawing.Color.SteelBlue;
             dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1496,17 +1620,17 @@ namespace BudgetExecution
             dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
-            this.dataGridView1.RowHeadersWidth = 30;
+            this.AwardsGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            this.AwardsGrid.RowHeadersWidth = 30;
             dataGridViewCellStyle8.BackColor = System.Drawing.Color.SteelBlue;
             dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
-            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle8;
-            this.dataGridView1.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.dataGridView1.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridView1.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(1073, 388);
-            this.dataGridView1.TabIndex = 2;
+            this.AwardsGrid.RowsDefaultCellStyle = dataGridViewCellStyle8;
+            this.AwardsGrid.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.AwardsGrid.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AwardsGrid.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
+            this.AwardsGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.AwardsGrid.Size = new System.Drawing.Size(1073, 388);
+            this.AwardsGrid.TabIndex = 2;
             // 
             // button10
             // 
@@ -1597,6 +1721,19 @@ namespace BudgetExecution
             this.button14.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button14.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button14.UseVisualStyleBackColor = false;
+            // 
+            // tabPageAdv3
+            // 
+            this.tabPageAdv3.Controls.Add(this.splitContainerAdv3);
+            this.tabPageAdv3.Image = null;
+            this.tabPageAdv3.ImageSize = new System.Drawing.Size(16, 16);
+            this.tabPageAdv3.Location = new System.Drawing.Point(1, 40);
+            this.tabPageAdv3.Name = "tabPageAdv3";
+            this.tabPageAdv3.ShowCloseButton = true;
+            this.tabPageAdv3.Size = new System.Drawing.Size(1586, 893);
+            this.tabPageAdv3.TabIndex = 3;
+            this.tabPageAdv3.Text = "Budget Documents\r\n";
+            this.tabPageAdv3.ThemesEnabled = false;
             // 
             // splitContainerAdv3
             // 
@@ -1824,8 +1961,8 @@ namespace BudgetExecution
             // 
             // metroPanel3
             // 
-            this.metroPanel3.Controls.Add(this.bindingNavigator2);
-            this.metroPanel3.Controls.Add(this.dataGridView2);
+            this.metroPanel3.Controls.Add(this.BudgetNavigator);
+            this.metroPanel3.Controls.Add(this.BudgetDocumentGrid);
             this.metroPanel3.HorizontalScrollbarBarColor = true;
             this.metroPanel3.HorizontalScrollbarHighlightOnWheel = false;
             this.metroPanel3.HorizontalScrollbarSize = 10;
@@ -1838,32 +1975,32 @@ namespace BudgetExecution
             this.metroPanel3.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel3.VerticalScrollbarSize = 10;
             // 
-            // bindingNavigator2
+            // BudgetNavigator
             // 
-            this.bindingNavigator2.AddNewItem = null;
-            this.bindingNavigator2.BackColor = System.Drawing.Color.Transparent;
-            this.bindingNavigator2.CountItem = null;
-            this.bindingNavigator2.DeleteItem = this.toolStripButton8;
-            this.bindingNavigator2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.bindingNavigator2.ImageScalingSize = new System.Drawing.Size(24, 20);
-            this.bindingNavigator2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.BudgetNavigator.AddNewItem = null;
+            this.BudgetNavigator.BackColor = System.Drawing.Color.Transparent;
+            this.BudgetNavigator.CountItem = null;
+            this.BudgetNavigator.DeleteItem = this.toolStripButton8;
+            this.BudgetNavigator.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.BudgetNavigator.ImageScalingSize = new System.Drawing.Size(24, 20);
+            this.BudgetNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripButton9,
             this.toolStripSeparator2,
             this.toolStripTextBox2,
             this.toolStripButton10,
             this.toolStripButton8,
             this.toolStripButton11});
-            this.bindingNavigator2.Location = new System.Drawing.Point(0, 357);
-            this.bindingNavigator2.MoveFirstItem = null;
-            this.bindingNavigator2.MoveLastItem = this.toolStripButton10;
-            this.bindingNavigator2.MoveNextItem = null;
-            this.bindingNavigator2.MovePreviousItem = this.toolStripButton9;
-            this.bindingNavigator2.Name = "bindingNavigator2";
-            this.bindingNavigator2.PositionItem = this.toolStripTextBox2;
-            this.bindingNavigator2.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.bindingNavigator2.Size = new System.Drawing.Size(1073, 31);
-            this.bindingNavigator2.TabIndex = 87;
-            this.bindingNavigator2.Text = "bindingNavigator1";
+            this.BudgetNavigator.Location = new System.Drawing.Point(0, 357);
+            this.BudgetNavigator.MoveFirstItem = null;
+            this.BudgetNavigator.MoveLastItem = this.toolStripButton10;
+            this.BudgetNavigator.MoveNextItem = null;
+            this.BudgetNavigator.MovePreviousItem = this.toolStripButton9;
+            this.BudgetNavigator.Name = "BudgetNavigator";
+            this.BudgetNavigator.PositionItem = this.toolStripTextBox2;
+            this.BudgetNavigator.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
+            this.BudgetNavigator.Size = new System.Drawing.Size(1073, 31);
+            this.BudgetNavigator.TabIndex = 87;
+            this.BudgetNavigator.Text = "bindingNavigator1";
             // 
             // toolStripButton8
             // 
@@ -1915,12 +2052,12 @@ namespace BudgetExecution
             this.toolStripButton11.Size = new System.Drawing.Size(28, 28);
             this.toolStripButton11.Text = "toolStripButton3";
             // 
-            // dataGridView2
+            // BudgetDocumentGrid
             // 
-            this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView2.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dataGridView2.BackgroundColor = System.Drawing.Color.SlateGray;
-            this.dataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.BudgetDocumentGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.BudgetDocumentGrid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.BudgetDocumentGrid.BackgroundColor = System.Drawing.Color.SlateGray;
+            this.BudgetDocumentGrid.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle9.BackColor = System.Drawing.Color.SteelBlue;
             dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1928,7 +2065,7 @@ namespace BudgetExecution
             dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            this.BudgetDocumentGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
             dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle10.BackColor = System.Drawing.Color.LightSteelBlue;
             dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1936,12 +2073,12 @@ namespace BudgetExecution
             dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView2.DefaultCellStyle = dataGridViewCellStyle10;
-            this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView2.EnableHeadersVisualStyles = false;
-            this.dataGridView2.GridColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.dataGridView2.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView2.Name = "dataGridView2";
+            this.BudgetDocumentGrid.DefaultCellStyle = dataGridViewCellStyle10;
+            this.BudgetDocumentGrid.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.BudgetDocumentGrid.EnableHeadersVisualStyles = false;
+            this.BudgetDocumentGrid.GridColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.BudgetDocumentGrid.Location = new System.Drawing.Point(0, 0);
+            this.BudgetDocumentGrid.Name = "BudgetDocumentGrid";
             dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle11.BackColor = System.Drawing.Color.SteelBlue;
             dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1949,17 +2086,17 @@ namespace BudgetExecution
             dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView2.RowHeadersDefaultCellStyle = dataGridViewCellStyle11;
-            this.dataGridView2.RowHeadersWidth = 30;
+            this.BudgetDocumentGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            this.BudgetDocumentGrid.RowHeadersWidth = 30;
             dataGridViewCellStyle12.BackColor = System.Drawing.Color.SteelBlue;
             dataGridViewCellStyle12.ForeColor = System.Drawing.Color.White;
-            this.dataGridView2.RowsDefaultCellStyle = dataGridViewCellStyle12;
-            this.dataGridView2.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.dataGridView2.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridView2.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
-            this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView2.Size = new System.Drawing.Size(1073, 388);
-            this.dataGridView2.TabIndex = 2;
+            this.BudgetDocumentGrid.RowsDefaultCellStyle = dataGridViewCellStyle12;
+            this.BudgetDocumentGrid.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.BudgetDocumentGrid.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BudgetDocumentGrid.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
+            this.BudgetDocumentGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.BudgetDocumentGrid.Size = new System.Drawing.Size(1073, 388);
+            this.BudgetDocumentGrid.TabIndex = 2;
             // 
             // button17
             // 
@@ -2050,6 +2187,19 @@ namespace BudgetExecution
             this.button21.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button21.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button21.UseVisualStyleBackColor = false;
+            // 
+            // tabPageAdv4
+            // 
+            this.tabPageAdv4.Controls.Add(this.splitContainerAdv4);
+            this.tabPageAdv4.Image = null;
+            this.tabPageAdv4.ImageSize = new System.Drawing.Size(16, 16);
+            this.tabPageAdv4.Location = new System.Drawing.Point(1, 40);
+            this.tabPageAdv4.Name = "tabPageAdv4";
+            this.tabPageAdv4.ShowCloseButton = true;
+            this.tabPageAdv4.Size = new System.Drawing.Size(1586, 873);
+            this.tabPageAdv4.TabIndex = 4;
+            this.tabPageAdv4.Text = "Division Accounts";
+            this.tabPageAdv4.ThemesEnabled = false;
             // 
             // splitContainerAdv4
             // 
@@ -2277,8 +2427,8 @@ namespace BudgetExecution
             // 
             // metroPanel4
             // 
-            this.metroPanel4.Controls.Add(this.bindingNavigator3);
-            this.metroPanel4.Controls.Add(this.dataGridView3);
+            this.metroPanel4.Controls.Add(this.DivisionNavigator);
+            this.metroPanel4.Controls.Add(this.DivisionAccountGrid);
             this.metroPanel4.HorizontalScrollbarBarColor = true;
             this.metroPanel4.HorizontalScrollbarHighlightOnWheel = false;
             this.metroPanel4.HorizontalScrollbarSize = 10;
@@ -2291,32 +2441,32 @@ namespace BudgetExecution
             this.metroPanel4.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel4.VerticalScrollbarSize = 10;
             // 
-            // bindingNavigator3
+            // DivisionNavigator
             // 
-            this.bindingNavigator3.AddNewItem = null;
-            this.bindingNavigator3.BackColor = System.Drawing.Color.Transparent;
-            this.bindingNavigator3.CountItem = null;
-            this.bindingNavigator3.DeleteItem = this.toolStripButton12;
-            this.bindingNavigator3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.bindingNavigator3.ImageScalingSize = new System.Drawing.Size(24, 20);
-            this.bindingNavigator3.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.DivisionNavigator.AddNewItem = null;
+            this.DivisionNavigator.BackColor = System.Drawing.Color.Transparent;
+            this.DivisionNavigator.CountItem = null;
+            this.DivisionNavigator.DeleteItem = this.toolStripButton12;
+            this.DivisionNavigator.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.DivisionNavigator.ImageScalingSize = new System.Drawing.Size(24, 20);
+            this.DivisionNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripButton13,
             this.toolStripSeparator3,
             this.toolStripTextBox3,
             this.toolStripButton14,
             this.toolStripButton12,
             this.toolStripButton15});
-            this.bindingNavigator3.Location = new System.Drawing.Point(0, 357);
-            this.bindingNavigator3.MoveFirstItem = null;
-            this.bindingNavigator3.MoveLastItem = this.toolStripButton14;
-            this.bindingNavigator3.MoveNextItem = null;
-            this.bindingNavigator3.MovePreviousItem = this.toolStripButton13;
-            this.bindingNavigator3.Name = "bindingNavigator3";
-            this.bindingNavigator3.PositionItem = this.toolStripTextBox3;
-            this.bindingNavigator3.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.bindingNavigator3.Size = new System.Drawing.Size(1073, 31);
-            this.bindingNavigator3.TabIndex = 87;
-            this.bindingNavigator3.Text = "bindingNavigator1";
+            this.DivisionNavigator.Location = new System.Drawing.Point(0, 357);
+            this.DivisionNavigator.MoveFirstItem = null;
+            this.DivisionNavigator.MoveLastItem = this.toolStripButton14;
+            this.DivisionNavigator.MoveNextItem = null;
+            this.DivisionNavigator.MovePreviousItem = this.toolStripButton13;
+            this.DivisionNavigator.Name = "DivisionNavigator";
+            this.DivisionNavigator.PositionItem = this.toolStripTextBox3;
+            this.DivisionNavigator.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
+            this.DivisionNavigator.Size = new System.Drawing.Size(1073, 31);
+            this.DivisionNavigator.TabIndex = 87;
+            this.DivisionNavigator.Text = "bindingNavigator1";
             // 
             // toolStripButton12
             // 
@@ -2368,12 +2518,12 @@ namespace BudgetExecution
             this.toolStripButton15.Size = new System.Drawing.Size(28, 28);
             this.toolStripButton15.Text = "toolStripButton3";
             // 
-            // dataGridView3
+            // DivisionAccountGrid
             // 
-            this.dataGridView3.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView3.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dataGridView3.BackgroundColor = System.Drawing.Color.SlateGray;
-            this.dataGridView3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.DivisionAccountGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.DivisionAccountGrid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.DivisionAccountGrid.BackgroundColor = System.Drawing.Color.SlateGray;
+            this.DivisionAccountGrid.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle13.BackColor = System.Drawing.Color.SteelBlue;
             dataGridViewCellStyle13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -2381,7 +2531,7 @@ namespace BudgetExecution
             dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView3.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
+            this.DivisionAccountGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
             dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle14.BackColor = System.Drawing.Color.LightSteelBlue;
             dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -2389,12 +2539,12 @@ namespace BudgetExecution
             dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView3.DefaultCellStyle = dataGridViewCellStyle14;
-            this.dataGridView3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView3.EnableHeadersVisualStyles = false;
-            this.dataGridView3.GridColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.dataGridView3.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView3.Name = "dataGridView3";
+            this.DivisionAccountGrid.DefaultCellStyle = dataGridViewCellStyle14;
+            this.DivisionAccountGrid.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DivisionAccountGrid.EnableHeadersVisualStyles = false;
+            this.DivisionAccountGrid.GridColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.DivisionAccountGrid.Location = new System.Drawing.Point(0, 0);
+            this.DivisionAccountGrid.Name = "DivisionAccountGrid";
             dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle15.BackColor = System.Drawing.Color.SteelBlue;
             dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -2402,17 +2552,17 @@ namespace BudgetExecution
             dataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView3.RowHeadersDefaultCellStyle = dataGridViewCellStyle15;
-            this.dataGridView3.RowHeadersWidth = 30;
+            this.DivisionAccountGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle15;
+            this.DivisionAccountGrid.RowHeadersWidth = 30;
             dataGridViewCellStyle16.BackColor = System.Drawing.Color.SteelBlue;
             dataGridViewCellStyle16.ForeColor = System.Drawing.Color.White;
-            this.dataGridView3.RowsDefaultCellStyle = dataGridViewCellStyle16;
-            this.dataGridView3.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.dataGridView3.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridView3.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
-            this.dataGridView3.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView3.Size = new System.Drawing.Size(1073, 388);
-            this.dataGridView3.TabIndex = 2;
+            this.DivisionAccountGrid.RowsDefaultCellStyle = dataGridViewCellStyle16;
+            this.DivisionAccountGrid.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.DivisionAccountGrid.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DivisionAccountGrid.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
+            this.DivisionAccountGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.DivisionAccountGrid.Size = new System.Drawing.Size(1073, 388);
+            this.DivisionAccountGrid.TabIndex = 2;
             // 
             // button24
             // 
@@ -2503,6 +2653,19 @@ namespace BudgetExecution
             this.button28.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button28.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button28.UseVisualStyleBackColor = false;
+            // 
+            // tabPageAdv5
+            // 
+            this.tabPageAdv5.Controls.Add(this.splitContainerAdv5);
+            this.tabPageAdv5.Image = null;
+            this.tabPageAdv5.ImageSize = new System.Drawing.Size(16, 16);
+            this.tabPageAdv5.Location = new System.Drawing.Point(1, 40);
+            this.tabPageAdv5.Name = "tabPageAdv5";
+            this.tabPageAdv5.ShowCloseButton = true;
+            this.tabPageAdv5.Size = new System.Drawing.Size(1586, 873);
+            this.tabPageAdv5.TabIndex = 5;
+            this.tabPageAdv5.Text = "Region Accounts\r\n";
+            this.tabPageAdv5.ThemesEnabled = false;
             // 
             // splitContainerAdv5
             // 
@@ -2730,8 +2893,8 @@ namespace BudgetExecution
             // 
             // metroPanel5
             // 
-            this.metroPanel5.Controls.Add(this.bindingNavigator4);
-            this.metroPanel5.Controls.Add(this.dataGridView4);
+            this.metroPanel5.Controls.Add(this.RegionAccountNavigator);
+            this.metroPanel5.Controls.Add(this.RegionAccountsGrid);
             this.metroPanel5.HorizontalScrollbarBarColor = true;
             this.metroPanel5.HorizontalScrollbarHighlightOnWheel = false;
             this.metroPanel5.HorizontalScrollbarSize = 10;
@@ -2744,32 +2907,32 @@ namespace BudgetExecution
             this.metroPanel5.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel5.VerticalScrollbarSize = 10;
             // 
-            // bindingNavigator4
+            // RegionAccountNavigator
             // 
-            this.bindingNavigator4.AddNewItem = null;
-            this.bindingNavigator4.BackColor = System.Drawing.Color.Transparent;
-            this.bindingNavigator4.CountItem = null;
-            this.bindingNavigator4.DeleteItem = this.toolStripButton16;
-            this.bindingNavigator4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.bindingNavigator4.ImageScalingSize = new System.Drawing.Size(24, 20);
-            this.bindingNavigator4.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.RegionAccountNavigator.AddNewItem = null;
+            this.RegionAccountNavigator.BackColor = System.Drawing.Color.Transparent;
+            this.RegionAccountNavigator.CountItem = null;
+            this.RegionAccountNavigator.DeleteItem = this.toolStripButton16;
+            this.RegionAccountNavigator.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.RegionAccountNavigator.ImageScalingSize = new System.Drawing.Size(24, 20);
+            this.RegionAccountNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripButton17,
             this.toolStripSeparator4,
             this.toolStripTextBox4,
             this.toolStripButton18,
             this.toolStripButton16,
             this.toolStripButton19});
-            this.bindingNavigator4.Location = new System.Drawing.Point(0, 357);
-            this.bindingNavigator4.MoveFirstItem = null;
-            this.bindingNavigator4.MoveLastItem = this.toolStripButton18;
-            this.bindingNavigator4.MoveNextItem = null;
-            this.bindingNavigator4.MovePreviousItem = this.toolStripButton17;
-            this.bindingNavigator4.Name = "bindingNavigator4";
-            this.bindingNavigator4.PositionItem = this.toolStripTextBox4;
-            this.bindingNavigator4.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.bindingNavigator4.Size = new System.Drawing.Size(1073, 31);
-            this.bindingNavigator4.TabIndex = 87;
-            this.bindingNavigator4.Text = "bindingNavigator1";
+            this.RegionAccountNavigator.Location = new System.Drawing.Point(0, 357);
+            this.RegionAccountNavigator.MoveFirstItem = null;
+            this.RegionAccountNavigator.MoveLastItem = this.toolStripButton18;
+            this.RegionAccountNavigator.MoveNextItem = null;
+            this.RegionAccountNavigator.MovePreviousItem = this.toolStripButton17;
+            this.RegionAccountNavigator.Name = "RegionAccountNavigator";
+            this.RegionAccountNavigator.PositionItem = this.toolStripTextBox4;
+            this.RegionAccountNavigator.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
+            this.RegionAccountNavigator.Size = new System.Drawing.Size(1073, 31);
+            this.RegionAccountNavigator.TabIndex = 87;
+            this.RegionAccountNavigator.Text = "bindingNavigator1";
             // 
             // toolStripButton16
             // 
@@ -2821,12 +2984,12 @@ namespace BudgetExecution
             this.toolStripButton19.Size = new System.Drawing.Size(28, 28);
             this.toolStripButton19.Text = "toolStripButton3";
             // 
-            // dataGridView4
+            // RegionAccountsGrid
             // 
-            this.dataGridView4.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView4.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dataGridView4.BackgroundColor = System.Drawing.Color.SlateGray;
-            this.dataGridView4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.RegionAccountsGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.RegionAccountsGrid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.RegionAccountsGrid.BackgroundColor = System.Drawing.Color.SlateGray;
+            this.RegionAccountsGrid.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle17.BackColor = System.Drawing.Color.SteelBlue;
             dataGridViewCellStyle17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -2834,7 +2997,7 @@ namespace BudgetExecution
             dataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView4.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle17;
+            this.RegionAccountsGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle17;
             dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle18.BackColor = System.Drawing.Color.LightSteelBlue;
             dataGridViewCellStyle18.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -2842,12 +3005,12 @@ namespace BudgetExecution
             dataGridViewCellStyle18.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView4.DefaultCellStyle = dataGridViewCellStyle18;
-            this.dataGridView4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView4.EnableHeadersVisualStyles = false;
-            this.dataGridView4.GridColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.dataGridView4.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView4.Name = "dataGridView4";
+            this.RegionAccountsGrid.DefaultCellStyle = dataGridViewCellStyle18;
+            this.RegionAccountsGrid.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.RegionAccountsGrid.EnableHeadersVisualStyles = false;
+            this.RegionAccountsGrid.GridColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.RegionAccountsGrid.Location = new System.Drawing.Point(0, 0);
+            this.RegionAccountsGrid.Name = "RegionAccountsGrid";
             dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle19.BackColor = System.Drawing.Color.SteelBlue;
             dataGridViewCellStyle19.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -2855,17 +3018,17 @@ namespace BudgetExecution
             dataGridViewCellStyle19.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle19.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView4.RowHeadersDefaultCellStyle = dataGridViewCellStyle19;
-            this.dataGridView4.RowHeadersWidth = 30;
+            this.RegionAccountsGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle19;
+            this.RegionAccountsGrid.RowHeadersWidth = 30;
             dataGridViewCellStyle20.BackColor = System.Drawing.Color.SteelBlue;
             dataGridViewCellStyle20.ForeColor = System.Drawing.Color.White;
-            this.dataGridView4.RowsDefaultCellStyle = dataGridViewCellStyle20;
-            this.dataGridView4.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.dataGridView4.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridView4.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
-            this.dataGridView4.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView4.Size = new System.Drawing.Size(1073, 388);
-            this.dataGridView4.TabIndex = 2;
+            this.RegionAccountsGrid.RowsDefaultCellStyle = dataGridViewCellStyle20;
+            this.RegionAccountsGrid.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.RegionAccountsGrid.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RegionAccountsGrid.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
+            this.RegionAccountsGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.RegionAccountsGrid.Size = new System.Drawing.Size(1073, 388);
+            this.RegionAccountsGrid.TabIndex = 2;
             // 
             // button31
             // 
@@ -2956,6 +3119,19 @@ namespace BudgetExecution
             this.button35.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button35.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button35.UseVisualStyleBackColor = false;
+            // 
+            // tabPageAdv6
+            // 
+            this.tabPageAdv6.Controls.Add(this.splitContainerAdv6);
+            this.tabPageAdv6.Image = null;
+            this.tabPageAdv6.ImageSize = new System.Drawing.Size(16, 16);
+            this.tabPageAdv6.Location = new System.Drawing.Point(1, 40);
+            this.tabPageAdv6.Name = "tabPageAdv6";
+            this.tabPageAdv6.ShowCloseButton = true;
+            this.tabPageAdv6.Size = new System.Drawing.Size(1586, 873);
+            this.tabPageAdv6.TabIndex = 6;
+            this.tabPageAdv6.Text = "Transfers\r\n";
+            this.tabPageAdv6.ThemesEnabled = false;
             // 
             // splitContainerAdv6
             // 
@@ -3183,8 +3359,8 @@ namespace BudgetExecution
             // 
             // metroPanel6
             // 
-            this.metroPanel6.Controls.Add(this.bindingNavigator5);
-            this.metroPanel6.Controls.Add(this.dataGridView5);
+            this.metroPanel6.Controls.Add(this.TransferNavigator);
+            this.metroPanel6.Controls.Add(this.TransferGrid);
             this.metroPanel6.HorizontalScrollbarBarColor = true;
             this.metroPanel6.HorizontalScrollbarHighlightOnWheel = false;
             this.metroPanel6.HorizontalScrollbarSize = 10;
@@ -3197,32 +3373,32 @@ namespace BudgetExecution
             this.metroPanel6.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel6.VerticalScrollbarSize = 10;
             // 
-            // bindingNavigator5
+            // TransferNavigator
             // 
-            this.bindingNavigator5.AddNewItem = null;
-            this.bindingNavigator5.BackColor = System.Drawing.Color.Transparent;
-            this.bindingNavigator5.CountItem = null;
-            this.bindingNavigator5.DeleteItem = this.toolStripButton20;
-            this.bindingNavigator5.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.bindingNavigator5.ImageScalingSize = new System.Drawing.Size(24, 20);
-            this.bindingNavigator5.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.TransferNavigator.AddNewItem = null;
+            this.TransferNavigator.BackColor = System.Drawing.Color.Transparent;
+            this.TransferNavigator.CountItem = null;
+            this.TransferNavigator.DeleteItem = this.toolStripButton20;
+            this.TransferNavigator.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.TransferNavigator.ImageScalingSize = new System.Drawing.Size(24, 20);
+            this.TransferNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripButton21,
             this.toolStripSeparator5,
             this.toolStripTextBox5,
             this.toolStripButton22,
             this.toolStripButton20,
             this.toolStripButton23});
-            this.bindingNavigator5.Location = new System.Drawing.Point(0, 357);
-            this.bindingNavigator5.MoveFirstItem = null;
-            this.bindingNavigator5.MoveLastItem = this.toolStripButton22;
-            this.bindingNavigator5.MoveNextItem = null;
-            this.bindingNavigator5.MovePreviousItem = this.toolStripButton21;
-            this.bindingNavigator5.Name = "bindingNavigator5";
-            this.bindingNavigator5.PositionItem = this.toolStripTextBox5;
-            this.bindingNavigator5.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.bindingNavigator5.Size = new System.Drawing.Size(1073, 31);
-            this.bindingNavigator5.TabIndex = 87;
-            this.bindingNavigator5.Text = "bindingNavigator1";
+            this.TransferNavigator.Location = new System.Drawing.Point(0, 357);
+            this.TransferNavigator.MoveFirstItem = null;
+            this.TransferNavigator.MoveLastItem = this.toolStripButton22;
+            this.TransferNavigator.MoveNextItem = null;
+            this.TransferNavigator.MovePreviousItem = this.toolStripButton21;
+            this.TransferNavigator.Name = "TransferNavigator";
+            this.TransferNavigator.PositionItem = this.toolStripTextBox5;
+            this.TransferNavigator.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
+            this.TransferNavigator.Size = new System.Drawing.Size(1073, 31);
+            this.TransferNavigator.TabIndex = 87;
+            this.TransferNavigator.Text = "bindingNavigator1";
             // 
             // toolStripButton20
             // 
@@ -3274,12 +3450,12 @@ namespace BudgetExecution
             this.toolStripButton23.Size = new System.Drawing.Size(28, 28);
             this.toolStripButton23.Text = "toolStripButton3";
             // 
-            // dataGridView5
+            // TransferGrid
             // 
-            this.dataGridView5.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView5.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dataGridView5.BackgroundColor = System.Drawing.Color.SlateGray;
-            this.dataGridView5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.TransferGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.TransferGrid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.TransferGrid.BackgroundColor = System.Drawing.Color.SlateGray;
+            this.TransferGrid.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle21.BackColor = System.Drawing.Color.SteelBlue;
             dataGridViewCellStyle21.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -3287,7 +3463,7 @@ namespace BudgetExecution
             dataGridViewCellStyle21.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle21.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView5.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle21;
+            this.TransferGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle21;
             dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle22.BackColor = System.Drawing.Color.LightSteelBlue;
             dataGridViewCellStyle22.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -3295,12 +3471,12 @@ namespace BudgetExecution
             dataGridViewCellStyle22.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle22.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView5.DefaultCellStyle = dataGridViewCellStyle22;
-            this.dataGridView5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView5.EnableHeadersVisualStyles = false;
-            this.dataGridView5.GridColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.dataGridView5.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView5.Name = "dataGridView5";
+            this.TransferGrid.DefaultCellStyle = dataGridViewCellStyle22;
+            this.TransferGrid.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.TransferGrid.EnableHeadersVisualStyles = false;
+            this.TransferGrid.GridColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.TransferGrid.Location = new System.Drawing.Point(0, 0);
+            this.TransferGrid.Name = "TransferGrid";
             dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle23.BackColor = System.Drawing.Color.SteelBlue;
             dataGridViewCellStyle23.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -3308,17 +3484,17 @@ namespace BudgetExecution
             dataGridViewCellStyle23.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle23.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView5.RowHeadersDefaultCellStyle = dataGridViewCellStyle23;
-            this.dataGridView5.RowHeadersWidth = 30;
+            this.TransferGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle23;
+            this.TransferGrid.RowHeadersWidth = 30;
             dataGridViewCellStyle24.BackColor = System.Drawing.Color.SteelBlue;
             dataGridViewCellStyle24.ForeColor = System.Drawing.Color.White;
-            this.dataGridView5.RowsDefaultCellStyle = dataGridViewCellStyle24;
-            this.dataGridView5.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.dataGridView5.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridView5.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
-            this.dataGridView5.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView5.Size = new System.Drawing.Size(1073, 388);
-            this.dataGridView5.TabIndex = 2;
+            this.TransferGrid.RowsDefaultCellStyle = dataGridViewCellStyle24;
+            this.TransferGrid.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.TransferGrid.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TransferGrid.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
+            this.TransferGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.TransferGrid.Size = new System.Drawing.Size(1073, 388);
+            this.TransferGrid.TabIndex = 2;
             // 
             // button38
             // 
@@ -3409,6 +3585,19 @@ namespace BudgetExecution
             this.button42.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button42.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button42.UseVisualStyleBackColor = false;
+            // 
+            // tabPageAdv7
+            // 
+            this.tabPageAdv7.Controls.Add(this.splitContainerAdv7);
+            this.tabPageAdv7.Image = null;
+            this.tabPageAdv7.ImageSize = new System.Drawing.Size(16, 16);
+            this.tabPageAdv7.Location = new System.Drawing.Point(1, 40);
+            this.tabPageAdv7.Name = "tabPageAdv7";
+            this.tabPageAdv7.ShowCloseButton = true;
+            this.tabPageAdv7.Size = new System.Drawing.Size(1586, 873);
+            this.tabPageAdv7.TabIndex = 7;
+            this.tabPageAdv7.Text = "Obligations\r\n\r\n";
+            this.tabPageAdv7.ThemesEnabled = false;
             // 
             // splitContainerAdv7
             // 
@@ -3636,8 +3825,8 @@ namespace BudgetExecution
             // 
             // metroPanel7
             // 
-            this.metroPanel7.Controls.Add(this.bindingNavigator6);
-            this.metroPanel7.Controls.Add(this.dataGridView6);
+            this.metroPanel7.Controls.Add(this.ObligationNavigator);
+            this.metroPanel7.Controls.Add(this.ObligationGrid);
             this.metroPanel7.HorizontalScrollbarBarColor = true;
             this.metroPanel7.HorizontalScrollbarHighlightOnWheel = false;
             this.metroPanel7.HorizontalScrollbarSize = 10;
@@ -3650,32 +3839,32 @@ namespace BudgetExecution
             this.metroPanel7.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel7.VerticalScrollbarSize = 10;
             // 
-            // bindingNavigator6
+            // ObligationNavigator
             // 
-            this.bindingNavigator6.AddNewItem = null;
-            this.bindingNavigator6.BackColor = System.Drawing.Color.Transparent;
-            this.bindingNavigator6.CountItem = null;
-            this.bindingNavigator6.DeleteItem = this.toolStripButton24;
-            this.bindingNavigator6.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.bindingNavigator6.ImageScalingSize = new System.Drawing.Size(24, 20);
-            this.bindingNavigator6.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ObligationNavigator.AddNewItem = null;
+            this.ObligationNavigator.BackColor = System.Drawing.Color.Transparent;
+            this.ObligationNavigator.CountItem = null;
+            this.ObligationNavigator.DeleteItem = this.toolStripButton24;
+            this.ObligationNavigator.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.ObligationNavigator.ImageScalingSize = new System.Drawing.Size(24, 20);
+            this.ObligationNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripButton25,
             this.toolStripSeparator6,
             this.toolStripTextBox6,
             this.toolStripButton26,
             this.toolStripButton24,
             this.toolStripButton27});
-            this.bindingNavigator6.Location = new System.Drawing.Point(0, 357);
-            this.bindingNavigator6.MoveFirstItem = null;
-            this.bindingNavigator6.MoveLastItem = this.toolStripButton26;
-            this.bindingNavigator6.MoveNextItem = null;
-            this.bindingNavigator6.MovePreviousItem = this.toolStripButton25;
-            this.bindingNavigator6.Name = "bindingNavigator6";
-            this.bindingNavigator6.PositionItem = this.toolStripTextBox6;
-            this.bindingNavigator6.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.bindingNavigator6.Size = new System.Drawing.Size(1073, 31);
-            this.bindingNavigator6.TabIndex = 87;
-            this.bindingNavigator6.Text = "bindingNavigator1";
+            this.ObligationNavigator.Location = new System.Drawing.Point(0, 357);
+            this.ObligationNavigator.MoveFirstItem = null;
+            this.ObligationNavigator.MoveLastItem = this.toolStripButton26;
+            this.ObligationNavigator.MoveNextItem = null;
+            this.ObligationNavigator.MovePreviousItem = this.toolStripButton25;
+            this.ObligationNavigator.Name = "ObligationNavigator";
+            this.ObligationNavigator.PositionItem = this.toolStripTextBox6;
+            this.ObligationNavigator.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
+            this.ObligationNavigator.Size = new System.Drawing.Size(1073, 31);
+            this.ObligationNavigator.TabIndex = 87;
+            this.ObligationNavigator.Text = "bindingNavigator1";
             // 
             // toolStripButton24
             // 
@@ -3727,12 +3916,12 @@ namespace BudgetExecution
             this.toolStripButton27.Size = new System.Drawing.Size(28, 28);
             this.toolStripButton27.Text = "toolStripButton3";
             // 
-            // dataGridView6
+            // ObligationGrid
             // 
-            this.dataGridView6.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView6.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dataGridView6.BackgroundColor = System.Drawing.Color.SlateGray;
-            this.dataGridView6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.ObligationGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.ObligationGrid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.ObligationGrid.BackgroundColor = System.Drawing.Color.SlateGray;
+            this.ObligationGrid.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             dataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle25.BackColor = System.Drawing.Color.SteelBlue;
             dataGridViewCellStyle25.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -3740,7 +3929,7 @@ namespace BudgetExecution
             dataGridViewCellStyle25.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle25.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle25.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView6.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle25;
+            this.ObligationGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle25;
             dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle26.BackColor = System.Drawing.Color.LightSteelBlue;
             dataGridViewCellStyle26.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -3748,12 +3937,12 @@ namespace BudgetExecution
             dataGridViewCellStyle26.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle26.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle26.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView6.DefaultCellStyle = dataGridViewCellStyle26;
-            this.dataGridView6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView6.EnableHeadersVisualStyles = false;
-            this.dataGridView6.GridColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.dataGridView6.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView6.Name = "dataGridView6";
+            this.ObligationGrid.DefaultCellStyle = dataGridViewCellStyle26;
+            this.ObligationGrid.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ObligationGrid.EnableHeadersVisualStyles = false;
+            this.ObligationGrid.GridColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.ObligationGrid.Location = new System.Drawing.Point(0, 0);
+            this.ObligationGrid.Name = "ObligationGrid";
             dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle27.BackColor = System.Drawing.Color.SteelBlue;
             dataGridViewCellStyle27.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -3761,17 +3950,17 @@ namespace BudgetExecution
             dataGridViewCellStyle27.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle27.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle27.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView6.RowHeadersDefaultCellStyle = dataGridViewCellStyle27;
-            this.dataGridView6.RowHeadersWidth = 30;
+            this.ObligationGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle27;
+            this.ObligationGrid.RowHeadersWidth = 30;
             dataGridViewCellStyle28.BackColor = System.Drawing.Color.SteelBlue;
             dataGridViewCellStyle28.ForeColor = System.Drawing.Color.White;
-            this.dataGridView6.RowsDefaultCellStyle = dataGridViewCellStyle28;
-            this.dataGridView6.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.dataGridView6.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridView6.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
-            this.dataGridView6.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView6.Size = new System.Drawing.Size(1073, 388);
-            this.dataGridView6.TabIndex = 2;
+            this.ObligationGrid.RowsDefaultCellStyle = dataGridViewCellStyle28;
+            this.ObligationGrid.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.ObligationGrid.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ObligationGrid.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
+            this.ObligationGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.ObligationGrid.Size = new System.Drawing.Size(1073, 388);
+            this.ObligationGrid.TabIndex = 2;
             // 
             // button45
             // 
@@ -3862,6 +4051,19 @@ namespace BudgetExecution
             this.button49.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button49.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button49.UseVisualStyleBackColor = false;
+            // 
+            // tabPageAdv8
+            // 
+            this.tabPageAdv8.Controls.Add(this.splitContainerAdv8);
+            this.tabPageAdv8.Image = null;
+            this.tabPageAdv8.ImageSize = new System.Drawing.Size(16, 16);
+            this.tabPageAdv8.Location = new System.Drawing.Point(1, 40);
+            this.tabPageAdv8.Name = "tabPageAdv8";
+            this.tabPageAdv8.ShowCloseButton = true;
+            this.tabPageAdv8.Size = new System.Drawing.Size(1586, 873);
+            this.tabPageAdv8.TabIndex = 8;
+            this.tabPageAdv8.Text = "Funds";
+            this.tabPageAdv8.ThemesEnabled = false;
             // 
             // splitContainerAdv8
             // 
@@ -4089,8 +4291,8 @@ namespace BudgetExecution
             // 
             // metroPanel8
             // 
-            this.metroPanel8.Controls.Add(this.bindingNavigator7);
-            this.metroPanel8.Controls.Add(this.dataGridView7);
+            this.metroPanel8.Controls.Add(this.FundsNavigator);
+            this.metroPanel8.Controls.Add(this.FundGrid);
             this.metroPanel8.HorizontalScrollbarBarColor = true;
             this.metroPanel8.HorizontalScrollbarHighlightOnWheel = false;
             this.metroPanel8.HorizontalScrollbarSize = 10;
@@ -4103,32 +4305,32 @@ namespace BudgetExecution
             this.metroPanel8.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel8.VerticalScrollbarSize = 10;
             // 
-            // bindingNavigator7
+            // FundsNavigator
             // 
-            this.bindingNavigator7.AddNewItem = null;
-            this.bindingNavigator7.BackColor = System.Drawing.Color.Transparent;
-            this.bindingNavigator7.CountItem = null;
-            this.bindingNavigator7.DeleteItem = this.toolStripButton28;
-            this.bindingNavigator7.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.bindingNavigator7.ImageScalingSize = new System.Drawing.Size(24, 20);
-            this.bindingNavigator7.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.FundsNavigator.AddNewItem = null;
+            this.FundsNavigator.BackColor = System.Drawing.Color.Transparent;
+            this.FundsNavigator.CountItem = null;
+            this.FundsNavigator.DeleteItem = this.toolStripButton28;
+            this.FundsNavigator.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.FundsNavigator.ImageScalingSize = new System.Drawing.Size(24, 20);
+            this.FundsNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripButton29,
             this.toolStripSeparator7,
             this.toolStripTextBox7,
             this.toolStripButton30,
             this.toolStripButton28,
             this.toolStripButton31});
-            this.bindingNavigator7.Location = new System.Drawing.Point(0, 357);
-            this.bindingNavigator7.MoveFirstItem = null;
-            this.bindingNavigator7.MoveLastItem = this.toolStripButton30;
-            this.bindingNavigator7.MoveNextItem = null;
-            this.bindingNavigator7.MovePreviousItem = this.toolStripButton29;
-            this.bindingNavigator7.Name = "bindingNavigator7";
-            this.bindingNavigator7.PositionItem = this.toolStripTextBox7;
-            this.bindingNavigator7.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.bindingNavigator7.Size = new System.Drawing.Size(1073, 31);
-            this.bindingNavigator7.TabIndex = 87;
-            this.bindingNavigator7.Text = "bindingNavigator1";
+            this.FundsNavigator.Location = new System.Drawing.Point(0, 357);
+            this.FundsNavigator.MoveFirstItem = null;
+            this.FundsNavigator.MoveLastItem = this.toolStripButton30;
+            this.FundsNavigator.MoveNextItem = null;
+            this.FundsNavigator.MovePreviousItem = this.toolStripButton29;
+            this.FundsNavigator.Name = "FundsNavigator";
+            this.FundsNavigator.PositionItem = this.toolStripTextBox7;
+            this.FundsNavigator.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
+            this.FundsNavigator.Size = new System.Drawing.Size(1073, 31);
+            this.FundsNavigator.TabIndex = 87;
+            this.FundsNavigator.Text = "bindingNavigator1";
             // 
             // toolStripButton28
             // 
@@ -4180,12 +4382,12 @@ namespace BudgetExecution
             this.toolStripButton31.Size = new System.Drawing.Size(28, 28);
             this.toolStripButton31.Text = "toolStripButton3";
             // 
-            // dataGridView7
+            // FundGrid
             // 
-            this.dataGridView7.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView7.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dataGridView7.BackgroundColor = System.Drawing.Color.SlateGray;
-            this.dataGridView7.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.FundGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.FundGrid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.FundGrid.BackgroundColor = System.Drawing.Color.SlateGray;
+            this.FundGrid.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             dataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle29.BackColor = System.Drawing.Color.SteelBlue;
             dataGridViewCellStyle29.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -4193,7 +4395,7 @@ namespace BudgetExecution
             dataGridViewCellStyle29.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle29.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle29.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView7.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle29;
+            this.FundGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle29;
             dataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle30.BackColor = System.Drawing.Color.LightSteelBlue;
             dataGridViewCellStyle30.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -4201,12 +4403,12 @@ namespace BudgetExecution
             dataGridViewCellStyle30.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle30.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle30.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView7.DefaultCellStyle = dataGridViewCellStyle30;
-            this.dataGridView7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView7.EnableHeadersVisualStyles = false;
-            this.dataGridView7.GridColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.dataGridView7.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView7.Name = "dataGridView7";
+            this.FundGrid.DefaultCellStyle = dataGridViewCellStyle30;
+            this.FundGrid.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.FundGrid.EnableHeadersVisualStyles = false;
+            this.FundGrid.GridColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.FundGrid.Location = new System.Drawing.Point(0, 0);
+            this.FundGrid.Name = "FundGrid";
             dataGridViewCellStyle31.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle31.BackColor = System.Drawing.Color.SteelBlue;
             dataGridViewCellStyle31.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -4214,17 +4416,17 @@ namespace BudgetExecution
             dataGridViewCellStyle31.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle31.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle31.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView7.RowHeadersDefaultCellStyle = dataGridViewCellStyle31;
-            this.dataGridView7.RowHeadersWidth = 30;
+            this.FundGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle31;
+            this.FundGrid.RowHeadersWidth = 30;
             dataGridViewCellStyle32.BackColor = System.Drawing.Color.SteelBlue;
             dataGridViewCellStyle32.ForeColor = System.Drawing.Color.White;
-            this.dataGridView7.RowsDefaultCellStyle = dataGridViewCellStyle32;
-            this.dataGridView7.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.dataGridView7.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridView7.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
-            this.dataGridView7.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView7.Size = new System.Drawing.Size(1073, 388);
-            this.dataGridView7.TabIndex = 2;
+            this.FundGrid.RowsDefaultCellStyle = dataGridViewCellStyle32;
+            this.FundGrid.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.FundGrid.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FundGrid.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
+            this.FundGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.FundGrid.Size = new System.Drawing.Size(1073, 388);
+            this.FundGrid.TabIndex = 2;
             // 
             // button52
             // 
@@ -4316,6 +4518,2336 @@ namespace BudgetExecution
             this.button56.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button56.UseVisualStyleBackColor = false;
             // 
+            // tabPageAdv9
+            // 
+            this.tabPageAdv9.Controls.Add(this.splitContainerAdv9);
+            this.tabPageAdv9.Image = null;
+            this.tabPageAdv9.ImageSize = new System.Drawing.Size(16, 16);
+            this.tabPageAdv9.Location = new System.Drawing.Point(1, 40);
+            this.tabPageAdv9.Name = "tabPageAdv9";
+            this.tabPageAdv9.ShowCloseButton = true;
+            this.tabPageAdv9.Size = new System.Drawing.Size(1586, 873);
+            this.tabPageAdv9.TabIndex = 9;
+            this.tabPageAdv9.Text = "Divisions\r\n";
+            this.tabPageAdv9.ThemesEnabled = false;
+            // 
+            // tabPageAdv10
+            // 
+            this.tabPageAdv10.Controls.Add(this.splitContainerAdv10);
+            this.tabPageAdv10.Image = null;
+            this.tabPageAdv10.ImageSize = new System.Drawing.Size(16, 16);
+            this.tabPageAdv10.Location = new System.Drawing.Point(1, 40);
+            this.tabPageAdv10.Name = "tabPageAdv10";
+            this.tabPageAdv10.ShowCloseButton = true;
+            this.tabPageAdv10.Size = new System.Drawing.Size(1586, 873);
+            this.tabPageAdv10.TabIndex = 10;
+            this.tabPageAdv10.Text = "Payroll\r\n";
+            this.tabPageAdv10.ThemesEnabled = false;
+            // 
+            // tabPageAdv11
+            // 
+            this.tabPageAdv11.Controls.Add(this.splitContainerAdv11);
+            this.tabPageAdv11.Image = null;
+            this.tabPageAdv11.ImageSize = new System.Drawing.Size(16, 16);
+            this.tabPageAdv11.Location = new System.Drawing.Point(1, 40);
+            this.tabPageAdv11.Name = "tabPageAdv11";
+            this.tabPageAdv11.ShowCloseButton = true;
+            this.tabPageAdv11.Size = new System.Drawing.Size(1586, 873);
+            this.tabPageAdv11.TabIndex = 11;
+            this.tabPageAdv11.Text = "Sites\r\n";
+            this.tabPageAdv11.ThemesEnabled = false;
+            // 
+            // tabPageAdv12
+            // 
+            this.tabPageAdv12.Controls.Add(this.splitContainerAdv12);
+            this.tabPageAdv12.Image = null;
+            this.tabPageAdv12.ImageSize = new System.Drawing.Size(16, 16);
+            this.tabPageAdv12.Location = new System.Drawing.Point(1, 40);
+            this.tabPageAdv12.Name = "tabPageAdv12";
+            this.tabPageAdv12.ShowCloseButton = true;
+            this.tabPageAdv12.Size = new System.Drawing.Size(1586, 873);
+            this.tabPageAdv12.TabIndex = 12;
+            this.tabPageAdv12.Text = "Reimbursables";
+            this.tabPageAdv12.ThemesEnabled = false;
+            // 
+            // tabPageAdv13
+            // 
+            this.tabPageAdv13.Controls.Add(this.splitContainerAdv13);
+            this.tabPageAdv13.Image = null;
+            this.tabPageAdv13.ImageSize = new System.Drawing.Size(16, 16);
+            this.tabPageAdv13.Location = new System.Drawing.Point(1, 40);
+            this.tabPageAdv13.Name = "tabPageAdv13";
+            this.tabPageAdv13.ShowCloseButton = true;
+            this.tabPageAdv13.Size = new System.Drawing.Size(1586, 873);
+            this.tabPageAdv13.TabIndex = 13;
+            this.tabPageAdv13.Text = "Employees\r\n";
+            this.tabPageAdv13.ThemesEnabled = false;
+            // 
+            // splitContainerAdv9
+            // 
+            this.splitContainerAdv9.BeforeTouchSize = 7;
+            this.splitContainerAdv9.Location = new System.Drawing.Point(7, 23);
+            this.splitContainerAdv9.Name = "splitContainerAdv9";
+            // 
+            // splitContainerAdv9.Panel1
+            // 
+            this.splitContainerAdv9.Panel1.Controls.Add(this.groupBox17);
+            // 
+            // splitContainerAdv9.Panel2
+            // 
+            this.splitContainerAdv9.Panel2.Controls.Add(this.groupBox18);
+            this.splitContainerAdv9.Size = new System.Drawing.Size(1572, 826);
+            this.splitContainerAdv9.SplitterDistance = 335;
+            this.splitContainerAdv9.TabIndex = 17;
+            this.splitContainerAdv9.Text = "splitContainerAdv9";
+            // 
+            // groupBox17
+            // 
+            this.groupBox17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.groupBox17.Controls.Add(this.label33);
+            this.groupBox17.Controls.Add(this.label34);
+            this.groupBox17.Controls.Add(this.label35);
+            this.groupBox17.Controls.Add(this.metroSetComboBox22);
+            this.groupBox17.Controls.Add(this.metroSetComboBox23);
+            this.groupBox17.Controls.Add(this.metroSetComboBox24);
+            this.groupBox17.ForeColor = System.Drawing.SystemColors.Info;
+            this.groupBox17.Location = new System.Drawing.Point(20, 102);
+            this.groupBox17.Name = "groupBox17";
+            this.groupBox17.Size = new System.Drawing.Size(290, 609);
+            this.groupBox17.TabIndex = 14;
+            this.groupBox17.TabStop = false;
+            this.groupBox17.Text = "Data Fields";
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Location = new System.Drawing.Point(15, 362);
+            this.label33.Name = "label33";
+            this.label33.Padding = new System.Windows.Forms.Padding(1);
+            this.label33.Size = new System.Drawing.Size(62, 22);
+            this.label33.TabIndex = 7;
+            this.label33.Text = "label33";
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Location = new System.Drawing.Point(15, 217);
+            this.label34.Name = "label34";
+            this.label34.Padding = new System.Windows.Forms.Padding(1);
+            this.label34.Size = new System.Drawing.Size(62, 22);
+            this.label34.TabIndex = 6;
+            this.label34.Text = "label34";
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.Location = new System.Drawing.Point(15, 67);
+            this.label35.Name = "label35";
+            this.label35.Padding = new System.Windows.Forms.Padding(1);
+            this.label35.Size = new System.Drawing.Size(81, 22);
+            this.label35.TabIndex = 5;
+            this.label35.Text = "Database";
+            // 
+            // metroSetComboBox22
+            // 
+            this.metroSetComboBox22.AllowDrop = true;
+            this.metroSetComboBox22.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.metroSetComboBox22.BackColor = System.Drawing.Color.Transparent;
+            this.metroSetComboBox22.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.metroSetComboBox22.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.metroSetComboBox22.CausesValidation = false;
+            this.metroSetComboBox22.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.metroSetComboBox22.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.metroSetComboBox22.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.metroSetComboBox22.DisplayMember = "Fund";
+            this.metroSetComboBox22.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.metroSetComboBox22.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.metroSetComboBox22.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.metroSetComboBox22.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.metroSetComboBox22.FormattingEnabled = true;
+            this.metroSetComboBox22.ItemHeight = 30;
+            this.metroSetComboBox22.Location = new System.Drawing.Point(19, 387);
+            this.metroSetComboBox22.MaxDropDownItems = 20;
+            this.metroSetComboBox22.Name = "metroSetComboBox22";
+            this.metroSetComboBox22.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.metroSetComboBox22.SelectedItemForeColor = System.Drawing.Color.White;
+            this.metroSetComboBox22.Size = new System.Drawing.Size(247, 36);
+            this.metroSetComboBox22.Style = MetroSet_UI.Design.Style.Dark;
+            this.metroSetComboBox22.StyleManager = null;
+            this.metroSetComboBox22.TabIndex = 2;
+            this.metroSetComboBox22.ThemeAuthor = "Narwin";
+            this.metroSetComboBox22.ThemeName = "MetroDark";
+            this.metroSetComboBox22.ValueMember = "Fund";
+            // 
+            // metroSetComboBox23
+            // 
+            this.metroSetComboBox23.AllowDrop = true;
+            this.metroSetComboBox23.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.metroSetComboBox23.BackColor = System.Drawing.Color.Transparent;
+            this.metroSetComboBox23.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.metroSetComboBox23.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.metroSetComboBox23.CausesValidation = false;
+            this.metroSetComboBox23.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.metroSetComboBox23.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.metroSetComboBox23.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.metroSetComboBox23.DisplayMember = "Fund";
+            this.metroSetComboBox23.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.metroSetComboBox23.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.metroSetComboBox23.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.metroSetComboBox23.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.metroSetComboBox23.FormattingEnabled = true;
+            this.metroSetComboBox23.ItemHeight = 30;
+            this.metroSetComboBox23.Location = new System.Drawing.Point(19, 242);
+            this.metroSetComboBox23.MaxDropDownItems = 20;
+            this.metroSetComboBox23.Name = "metroSetComboBox23";
+            this.metroSetComboBox23.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.metroSetComboBox23.SelectedItemForeColor = System.Drawing.Color.White;
+            this.metroSetComboBox23.Size = new System.Drawing.Size(247, 36);
+            this.metroSetComboBox23.Style = MetroSet_UI.Design.Style.Dark;
+            this.metroSetComboBox23.StyleManager = null;
+            this.metroSetComboBox23.TabIndex = 1;
+            this.metroSetComboBox23.ThemeAuthor = "Narwin";
+            this.metroSetComboBox23.ThemeName = "MetroDark";
+            this.metroSetComboBox23.ValueMember = "Fund";
+            // 
+            // metroSetComboBox24
+            // 
+            this.metroSetComboBox24.AllowDrop = true;
+            this.metroSetComboBox24.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.metroSetComboBox24.BackColor = System.Drawing.Color.Transparent;
+            this.metroSetComboBox24.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.metroSetComboBox24.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.metroSetComboBox24.CausesValidation = false;
+            this.metroSetComboBox24.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.metroSetComboBox24.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.metroSetComboBox24.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.metroSetComboBox24.DisplayMember = "Fund";
+            this.metroSetComboBox24.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.metroSetComboBox24.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.metroSetComboBox24.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.metroSetComboBox24.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.metroSetComboBox24.FormattingEnabled = true;
+            this.metroSetComboBox24.ItemHeight = 30;
+            this.metroSetComboBox24.Location = new System.Drawing.Point(19, 92);
+            this.metroSetComboBox24.MaxDropDownItems = 20;
+            this.metroSetComboBox24.Name = "metroSetComboBox24";
+            this.metroSetComboBox24.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.metroSetComboBox24.SelectedItemForeColor = System.Drawing.Color.White;
+            this.metroSetComboBox24.Size = new System.Drawing.Size(247, 36);
+            this.metroSetComboBox24.Style = MetroSet_UI.Design.Style.Dark;
+            this.metroSetComboBox24.StyleManager = null;
+            this.metroSetComboBox24.TabIndex = 0;
+            this.metroSetComboBox24.ThemeAuthor = "Narwin";
+            this.metroSetComboBox24.ThemeName = "MetroDark";
+            this.metroSetComboBox24.ValueMember = "Fund";
+            // 
+            // groupBox18
+            // 
+            this.groupBox18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.groupBox18.Controls.Add(this.label36);
+            this.groupBox18.Controls.Add(this.button57);
+            this.groupBox18.Controls.Add(this.button58);
+            this.groupBox18.Controls.Add(this.metroPanel9);
+            this.groupBox18.Controls.Add(this.button59);
+            this.groupBox18.Controls.Add(this.button60);
+            this.groupBox18.Controls.Add(this.button61);
+            this.groupBox18.Controls.Add(this.button62);
+            this.groupBox18.Controls.Add(this.button63);
+            this.groupBox18.ForeColor = System.Drawing.SystemColors.Info;
+            this.groupBox18.Location = new System.Drawing.Point(22, 102);
+            this.groupBox18.Name = "groupBox18";
+            this.groupBox18.Size = new System.Drawing.Size(1189, 609);
+            this.groupBox18.TabIndex = 5;
+            this.groupBox18.TabStop = false;
+            this.groupBox18.Text = "Database";
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.Location = new System.Drawing.Point(965, 58);
+            this.label36.Name = "label36";
+            this.label36.Padding = new System.Windows.Forms.Padding(1);
+            this.label36.Size = new System.Drawing.Size(62, 22);
+            this.label36.TabIndex = 86;
+            this.label36.Text = "label36";
+            // 
+            // button57
+            // 
+            this.button57.BackColor = System.Drawing.Color.Transparent;
+            this.button57.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button57.FlatAppearance.BorderSize = 0;
+            this.button57.FlatAppearance.MouseDownBackColor = System.Drawing.Color.PowderBlue;
+            this.button57.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.button57.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button57.ForeColor = System.Drawing.SystemColors.Info;
+            this.button57.Image = ((System.Drawing.Image)(resources.GetObject("button57.Image")));
+            this.button57.Location = new System.Drawing.Point(1016, 510);
+            this.button57.Name = "button57";
+            this.button57.Size = new System.Drawing.Size(94, 60);
+            this.button57.TabIndex = 84;
+            this.button57.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button57.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button57.UseVisualStyleBackColor = false;
+            // 
+            // button58
+            // 
+            this.button58.BackColor = System.Drawing.Color.Transparent;
+            this.button58.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button58.FlatAppearance.BorderSize = 0;
+            this.button58.FlatAppearance.MouseDownBackColor = System.Drawing.Color.PowderBlue;
+            this.button58.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.button58.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button58.ForeColor = System.Drawing.SystemColors.Info;
+            this.button58.Image = ((System.Drawing.Image)(resources.GetObject("button58.Image")));
+            this.button58.Location = new System.Drawing.Point(854, 510);
+            this.button58.Name = "button58";
+            this.button58.Size = new System.Drawing.Size(94, 60);
+            this.button58.TabIndex = 70;
+            this.button58.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button58.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button58.UseVisualStyleBackColor = false;
+            // 
+            // metroPanel9
+            // 
+            this.metroPanel9.Controls.Add(this.DivisionAccountNavigator);
+            this.metroPanel9.Controls.Add(this.DivisionGrid);
+            this.metroPanel9.HorizontalScrollbarBarColor = true;
+            this.metroPanel9.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroPanel9.HorizontalScrollbarSize = 10;
+            this.metroPanel9.Location = new System.Drawing.Point(49, 83);
+            this.metroPanel9.Name = "metroPanel9";
+            this.metroPanel9.Size = new System.Drawing.Size(1073, 388);
+            this.metroPanel9.TabIndex = 5;
+            this.metroPanel9.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.metroPanel9.VerticalScrollbarBarColor = true;
+            this.metroPanel9.VerticalScrollbarHighlightOnWheel = false;
+            this.metroPanel9.VerticalScrollbarSize = 10;
+            // 
+            // DivisionAccountNavigator
+            // 
+            this.DivisionAccountNavigator.AddNewItem = null;
+            this.DivisionAccountNavigator.BackColor = System.Drawing.Color.Transparent;
+            this.DivisionAccountNavigator.CountItem = null;
+            this.DivisionAccountNavigator.DeleteItem = this.toolStripButton32;
+            this.DivisionAccountNavigator.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.DivisionAccountNavigator.ImageScalingSize = new System.Drawing.Size(24, 20);
+            this.DivisionAccountNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripButton33,
+            this.toolStripSeparator8,
+            this.toolStripTextBox8,
+            this.toolStripButton34,
+            this.toolStripButton32,
+            this.toolStripButton35});
+            this.DivisionAccountNavigator.Location = new System.Drawing.Point(0, 357);
+            this.DivisionAccountNavigator.MoveFirstItem = null;
+            this.DivisionAccountNavigator.MoveLastItem = this.toolStripButton34;
+            this.DivisionAccountNavigator.MoveNextItem = null;
+            this.DivisionAccountNavigator.MovePreviousItem = this.toolStripButton33;
+            this.DivisionAccountNavigator.Name = "DivisionAccountNavigator";
+            this.DivisionAccountNavigator.PositionItem = this.toolStripTextBox8;
+            this.DivisionAccountNavigator.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
+            this.DivisionAccountNavigator.Size = new System.Drawing.Size(1073, 31);
+            this.DivisionAccountNavigator.TabIndex = 87;
+            this.DivisionAccountNavigator.Text = "bindingNavigator1";
+            // 
+            // toolStripButton32
+            // 
+            this.toolStripButton32.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton32.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton32.Image")));
+            this.toolStripButton32.Name = "toolStripButton32";
+            this.toolStripButton32.RightToLeftAutoMirrorImage = true;
+            this.toolStripButton32.Size = new System.Drawing.Size(28, 28);
+            this.toolStripButton32.Text = "Delete";
+            // 
+            // toolStripButton33
+            // 
+            this.toolStripButton33.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton33.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton33.Image")));
+            this.toolStripButton33.Name = "toolStripButton33";
+            this.toolStripButton33.RightToLeftAutoMirrorImage = true;
+            this.toolStripButton33.Size = new System.Drawing.Size(28, 28);
+            this.toolStripButton33.Text = "Move previous";
+            // 
+            // toolStripSeparator8
+            // 
+            this.toolStripSeparator8.Name = "toolStripSeparator8";
+            this.toolStripSeparator8.Size = new System.Drawing.Size(6, 31);
+            // 
+            // toolStripTextBox8
+            // 
+            this.toolStripTextBox8.AccessibleName = "Position";
+            this.toolStripTextBox8.AutoSize = false;
+            this.toolStripTextBox8.Name = "toolStripTextBox8";
+            this.toolStripTextBox8.Size = new System.Drawing.Size(50, 31);
+            this.toolStripTextBox8.Text = "0";
+            this.toolStripTextBox8.ToolTipText = "Current position";
+            // 
+            // toolStripButton34
+            // 
+            this.toolStripButton34.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton34.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton34.Image")));
+            this.toolStripButton34.Name = "toolStripButton34";
+            this.toolStripButton34.RightToLeftAutoMirrorImage = true;
+            this.toolStripButton34.Size = new System.Drawing.Size(28, 28);
+            this.toolStripButton34.Text = "Move last";
+            // 
+            // toolStripButton35
+            // 
+            this.toolStripButton35.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton35.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton35.Image")));
+            this.toolStripButton35.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton35.Name = "toolStripButton35";
+            this.toolStripButton35.Size = new System.Drawing.Size(28, 28);
+            this.toolStripButton35.Text = "toolStripButton3";
+            // 
+            // DivisionGrid
+            // 
+            this.DivisionGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.DivisionGrid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.DivisionGrid.BackgroundColor = System.Drawing.Color.SlateGray;
+            this.DivisionGrid.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            dataGridViewCellStyle33.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle33.BackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle33.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle33.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle33.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle33.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle33.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DivisionGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle33;
+            dataGridViewCellStyle34.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle34.BackColor = System.Drawing.Color.LightSteelBlue;
+            dataGridViewCellStyle34.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle34.ForeColor = System.Drawing.SystemColors.Info;
+            dataGridViewCellStyle34.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle34.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle34.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DivisionGrid.DefaultCellStyle = dataGridViewCellStyle34;
+            this.DivisionGrid.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DivisionGrid.EnableHeadersVisualStyles = false;
+            this.DivisionGrid.GridColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.DivisionGrid.Location = new System.Drawing.Point(0, 0);
+            this.DivisionGrid.Name = "DivisionGrid";
+            dataGridViewCellStyle35.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle35.BackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle35.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle35.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle35.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle35.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle35.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DivisionGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle35;
+            this.DivisionGrid.RowHeadersWidth = 30;
+            dataGridViewCellStyle36.BackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle36.ForeColor = System.Drawing.Color.White;
+            this.DivisionGrid.RowsDefaultCellStyle = dataGridViewCellStyle36;
+            this.DivisionGrid.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.DivisionGrid.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DivisionGrid.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
+            this.DivisionGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.DivisionGrid.Size = new System.Drawing.Size(1073, 388);
+            this.DivisionGrid.TabIndex = 2;
+            // 
+            // button59
+            // 
+            this.button59.BackColor = System.Drawing.Color.Transparent;
+            this.button59.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button59.FlatAppearance.BorderSize = 0;
+            this.button59.FlatAppearance.MouseDownBackColor = System.Drawing.Color.PowderBlue;
+            this.button59.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.button59.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button59.ForeColor = System.Drawing.SystemColors.Info;
+            this.button59.Image = ((System.Drawing.Image)(resources.GetObject("button59.Image")));
+            this.button59.Location = new System.Drawing.Point(70, 510);
+            this.button59.Name = "button59";
+            this.button59.Size = new System.Drawing.Size(96, 60);
+            this.button59.TabIndex = 82;
+            this.button59.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button59.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button59.UseVisualStyleBackColor = false;
+            // 
+            // button60
+            // 
+            this.button60.BackColor = System.Drawing.Color.Transparent;
+            this.button60.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button60.FlatAppearance.BorderSize = 0;
+            this.button60.FlatAppearance.MouseDownBackColor = System.Drawing.Color.PowderBlue;
+            this.button60.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.button60.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button60.ForeColor = System.Drawing.SystemColors.Info;
+            this.button60.Image = ((System.Drawing.Image)(resources.GetObject("button60.Image")));
+            this.button60.Location = new System.Drawing.Point(687, 510);
+            this.button60.Name = "button60";
+            this.button60.Size = new System.Drawing.Size(94, 60);
+            this.button60.TabIndex = 83;
+            this.button60.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button60.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button60.UseVisualStyleBackColor = false;
+            // 
+            // button61
+            // 
+            this.button61.BackColor = System.Drawing.Color.Transparent;
+            this.button61.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button61.FlatAppearance.BorderSize = 0;
+            this.button61.FlatAppearance.MouseDownBackColor = System.Drawing.Color.PowderBlue;
+            this.button61.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.button61.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button61.ForeColor = System.Drawing.SystemColors.Info;
+            this.button61.Image = ((System.Drawing.Image)(resources.GetObject("button61.Image")));
+            this.button61.Location = new System.Drawing.Point(205, 510);
+            this.button61.Name = "button61";
+            this.button61.Size = new System.Drawing.Size(96, 60);
+            this.button61.TabIndex = 85;
+            this.button61.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button61.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button61.UseVisualStyleBackColor = false;
+            // 
+            // button62
+            // 
+            this.button62.BackColor = System.Drawing.Color.Transparent;
+            this.button62.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button62.FlatAppearance.BorderSize = 0;
+            this.button62.FlatAppearance.MouseDownBackColor = System.Drawing.Color.PowderBlue;
+            this.button62.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.button62.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button62.ForeColor = System.Drawing.SystemColors.Info;
+            this.button62.Image = ((System.Drawing.Image)(resources.GetObject("button62.Image")));
+            this.button62.Location = new System.Drawing.Point(525, 510);
+            this.button62.Name = "button62";
+            this.button62.Size = new System.Drawing.Size(94, 60);
+            this.button62.TabIndex = 71;
+            this.button62.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button62.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button62.UseVisualStyleBackColor = false;
+            // 
+            // button63
+            // 
+            this.button63.BackColor = System.Drawing.Color.Transparent;
+            this.button63.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button63.FlatAppearance.BorderSize = 0;
+            this.button63.FlatAppearance.MouseDownBackColor = System.Drawing.Color.PowderBlue;
+            this.button63.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.button63.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button63.ForeColor = System.Drawing.SystemColors.Info;
+            this.button63.Image = ((System.Drawing.Image)(resources.GetObject("button63.Image")));
+            this.button63.Location = new System.Drawing.Point(362, 510);
+            this.button63.Name = "button63";
+            this.button63.Size = new System.Drawing.Size(94, 60);
+            this.button63.TabIndex = 81;
+            this.button63.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button63.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button63.UseVisualStyleBackColor = false;
+            // 
+            // splitContainerAdv10
+            // 
+            this.splitContainerAdv10.BeforeTouchSize = 7;
+            this.splitContainerAdv10.Location = new System.Drawing.Point(7, 23);
+            this.splitContainerAdv10.Name = "splitContainerAdv10";
+            // 
+            // splitContainerAdv10.Panel1
+            // 
+            this.splitContainerAdv10.Panel1.Controls.Add(this.groupBox19);
+            // 
+            // splitContainerAdv10.Panel2
+            // 
+            this.splitContainerAdv10.Panel2.Controls.Add(this.groupBox20);
+            this.splitContainerAdv10.Size = new System.Drawing.Size(1572, 826);
+            this.splitContainerAdv10.SplitterDistance = 335;
+            this.splitContainerAdv10.TabIndex = 17;
+            this.splitContainerAdv10.Text = "splitContainerAdv10";
+            // 
+            // groupBox19
+            // 
+            this.groupBox19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.groupBox19.Controls.Add(this.label37);
+            this.groupBox19.Controls.Add(this.label38);
+            this.groupBox19.Controls.Add(this.label39);
+            this.groupBox19.Controls.Add(this.metroSetComboBox25);
+            this.groupBox19.Controls.Add(this.metroSetComboBox26);
+            this.groupBox19.Controls.Add(this.metroSetComboBox27);
+            this.groupBox19.ForeColor = System.Drawing.SystemColors.Info;
+            this.groupBox19.Location = new System.Drawing.Point(20, 102);
+            this.groupBox19.Name = "groupBox19";
+            this.groupBox19.Size = new System.Drawing.Size(290, 609);
+            this.groupBox19.TabIndex = 14;
+            this.groupBox19.TabStop = false;
+            this.groupBox19.Text = "Data Fields";
+            // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.Location = new System.Drawing.Point(15, 362);
+            this.label37.Name = "label37";
+            this.label37.Padding = new System.Windows.Forms.Padding(1);
+            this.label37.Size = new System.Drawing.Size(62, 22);
+            this.label37.TabIndex = 7;
+            this.label37.Text = "label37";
+            // 
+            // label38
+            // 
+            this.label38.AutoSize = true;
+            this.label38.Location = new System.Drawing.Point(15, 217);
+            this.label38.Name = "label38";
+            this.label38.Padding = new System.Windows.Forms.Padding(1);
+            this.label38.Size = new System.Drawing.Size(62, 22);
+            this.label38.TabIndex = 6;
+            this.label38.Text = "label38";
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.Location = new System.Drawing.Point(15, 67);
+            this.label39.Name = "label39";
+            this.label39.Padding = new System.Windows.Forms.Padding(1);
+            this.label39.Size = new System.Drawing.Size(81, 22);
+            this.label39.TabIndex = 5;
+            this.label39.Text = "Database";
+            // 
+            // metroSetComboBox25
+            // 
+            this.metroSetComboBox25.AllowDrop = true;
+            this.metroSetComboBox25.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.metroSetComboBox25.BackColor = System.Drawing.Color.Transparent;
+            this.metroSetComboBox25.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.metroSetComboBox25.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.metroSetComboBox25.CausesValidation = false;
+            this.metroSetComboBox25.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.metroSetComboBox25.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.metroSetComboBox25.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.metroSetComboBox25.DisplayMember = "Fund";
+            this.metroSetComboBox25.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.metroSetComboBox25.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.metroSetComboBox25.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.metroSetComboBox25.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.metroSetComboBox25.FormattingEnabled = true;
+            this.metroSetComboBox25.ItemHeight = 30;
+            this.metroSetComboBox25.Location = new System.Drawing.Point(19, 387);
+            this.metroSetComboBox25.MaxDropDownItems = 20;
+            this.metroSetComboBox25.Name = "metroSetComboBox25";
+            this.metroSetComboBox25.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.metroSetComboBox25.SelectedItemForeColor = System.Drawing.Color.White;
+            this.metroSetComboBox25.Size = new System.Drawing.Size(247, 36);
+            this.metroSetComboBox25.Style = MetroSet_UI.Design.Style.Dark;
+            this.metroSetComboBox25.StyleManager = null;
+            this.metroSetComboBox25.TabIndex = 2;
+            this.metroSetComboBox25.ThemeAuthor = "Narwin";
+            this.metroSetComboBox25.ThemeName = "MetroDark";
+            this.metroSetComboBox25.ValueMember = "Fund";
+            // 
+            // metroSetComboBox26
+            // 
+            this.metroSetComboBox26.AllowDrop = true;
+            this.metroSetComboBox26.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.metroSetComboBox26.BackColor = System.Drawing.Color.Transparent;
+            this.metroSetComboBox26.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.metroSetComboBox26.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.metroSetComboBox26.CausesValidation = false;
+            this.metroSetComboBox26.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.metroSetComboBox26.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.metroSetComboBox26.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.metroSetComboBox26.DisplayMember = "Fund";
+            this.metroSetComboBox26.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.metroSetComboBox26.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.metroSetComboBox26.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.metroSetComboBox26.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.metroSetComboBox26.FormattingEnabled = true;
+            this.metroSetComboBox26.ItemHeight = 30;
+            this.metroSetComboBox26.Location = new System.Drawing.Point(19, 242);
+            this.metroSetComboBox26.MaxDropDownItems = 20;
+            this.metroSetComboBox26.Name = "metroSetComboBox26";
+            this.metroSetComboBox26.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.metroSetComboBox26.SelectedItemForeColor = System.Drawing.Color.White;
+            this.metroSetComboBox26.Size = new System.Drawing.Size(247, 36);
+            this.metroSetComboBox26.Style = MetroSet_UI.Design.Style.Dark;
+            this.metroSetComboBox26.StyleManager = null;
+            this.metroSetComboBox26.TabIndex = 1;
+            this.metroSetComboBox26.ThemeAuthor = "Narwin";
+            this.metroSetComboBox26.ThemeName = "MetroDark";
+            this.metroSetComboBox26.ValueMember = "Fund";
+            // 
+            // metroSetComboBox27
+            // 
+            this.metroSetComboBox27.AllowDrop = true;
+            this.metroSetComboBox27.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.metroSetComboBox27.BackColor = System.Drawing.Color.Transparent;
+            this.metroSetComboBox27.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.metroSetComboBox27.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.metroSetComboBox27.CausesValidation = false;
+            this.metroSetComboBox27.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.metroSetComboBox27.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.metroSetComboBox27.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.metroSetComboBox27.DisplayMember = "Fund";
+            this.metroSetComboBox27.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.metroSetComboBox27.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.metroSetComboBox27.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.metroSetComboBox27.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.metroSetComboBox27.FormattingEnabled = true;
+            this.metroSetComboBox27.ItemHeight = 30;
+            this.metroSetComboBox27.Location = new System.Drawing.Point(19, 92);
+            this.metroSetComboBox27.MaxDropDownItems = 20;
+            this.metroSetComboBox27.Name = "metroSetComboBox27";
+            this.metroSetComboBox27.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.metroSetComboBox27.SelectedItemForeColor = System.Drawing.Color.White;
+            this.metroSetComboBox27.Size = new System.Drawing.Size(247, 36);
+            this.metroSetComboBox27.Style = MetroSet_UI.Design.Style.Dark;
+            this.metroSetComboBox27.StyleManager = null;
+            this.metroSetComboBox27.TabIndex = 0;
+            this.metroSetComboBox27.ThemeAuthor = "Narwin";
+            this.metroSetComboBox27.ThemeName = "MetroDark";
+            this.metroSetComboBox27.ValueMember = "Fund";
+            // 
+            // groupBox20
+            // 
+            this.groupBox20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.groupBox20.Controls.Add(this.label40);
+            this.groupBox20.Controls.Add(this.button64);
+            this.groupBox20.Controls.Add(this.button65);
+            this.groupBox20.Controls.Add(this.metroPanel10);
+            this.groupBox20.Controls.Add(this.button66);
+            this.groupBox20.Controls.Add(this.button67);
+            this.groupBox20.Controls.Add(this.button68);
+            this.groupBox20.Controls.Add(this.button69);
+            this.groupBox20.Controls.Add(this.button70);
+            this.groupBox20.ForeColor = System.Drawing.SystemColors.Info;
+            this.groupBox20.Location = new System.Drawing.Point(22, 102);
+            this.groupBox20.Name = "groupBox20";
+            this.groupBox20.Size = new System.Drawing.Size(1189, 609);
+            this.groupBox20.TabIndex = 5;
+            this.groupBox20.TabStop = false;
+            this.groupBox20.Text = "Database";
+            // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.Location = new System.Drawing.Point(965, 58);
+            this.label40.Name = "label40";
+            this.label40.Padding = new System.Windows.Forms.Padding(1);
+            this.label40.Size = new System.Drawing.Size(62, 22);
+            this.label40.TabIndex = 86;
+            this.label40.Text = "label40";
+            // 
+            // button64
+            // 
+            this.button64.BackColor = System.Drawing.Color.Transparent;
+            this.button64.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button64.FlatAppearance.BorderSize = 0;
+            this.button64.FlatAppearance.MouseDownBackColor = System.Drawing.Color.PowderBlue;
+            this.button64.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.button64.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button64.ForeColor = System.Drawing.SystemColors.Info;
+            this.button64.Image = ((System.Drawing.Image)(resources.GetObject("button64.Image")));
+            this.button64.Location = new System.Drawing.Point(1016, 510);
+            this.button64.Name = "button64";
+            this.button64.Size = new System.Drawing.Size(94, 60);
+            this.button64.TabIndex = 84;
+            this.button64.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button64.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button64.UseVisualStyleBackColor = false;
+            // 
+            // button65
+            // 
+            this.button65.BackColor = System.Drawing.Color.Transparent;
+            this.button65.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button65.FlatAppearance.BorderSize = 0;
+            this.button65.FlatAppearance.MouseDownBackColor = System.Drawing.Color.PowderBlue;
+            this.button65.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.button65.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button65.ForeColor = System.Drawing.SystemColors.Info;
+            this.button65.Image = ((System.Drawing.Image)(resources.GetObject("button65.Image")));
+            this.button65.Location = new System.Drawing.Point(854, 510);
+            this.button65.Name = "button65";
+            this.button65.Size = new System.Drawing.Size(94, 60);
+            this.button65.TabIndex = 70;
+            this.button65.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button65.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button65.UseVisualStyleBackColor = false;
+            // 
+            // metroPanel10
+            // 
+            this.metroPanel10.Controls.Add(this.PayrollNavigator);
+            this.metroPanel10.Controls.Add(this.PayrollGrid);
+            this.metroPanel10.HorizontalScrollbarBarColor = true;
+            this.metroPanel10.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroPanel10.HorizontalScrollbarSize = 10;
+            this.metroPanel10.Location = new System.Drawing.Point(49, 83);
+            this.metroPanel10.Name = "metroPanel10";
+            this.metroPanel10.Size = new System.Drawing.Size(1073, 388);
+            this.metroPanel10.TabIndex = 5;
+            this.metroPanel10.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.metroPanel10.VerticalScrollbarBarColor = true;
+            this.metroPanel10.VerticalScrollbarHighlightOnWheel = false;
+            this.metroPanel10.VerticalScrollbarSize = 10;
+            // 
+            // PayrollNavigator
+            // 
+            this.PayrollNavigator.AddNewItem = null;
+            this.PayrollNavigator.BackColor = System.Drawing.Color.Transparent;
+            this.PayrollNavigator.CountItem = null;
+            this.PayrollNavigator.DeleteItem = this.toolStripButton36;
+            this.PayrollNavigator.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.PayrollNavigator.ImageScalingSize = new System.Drawing.Size(24, 20);
+            this.PayrollNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripButton37,
+            this.toolStripSeparator9,
+            this.toolStripTextBox9,
+            this.toolStripButton38,
+            this.toolStripButton36,
+            this.toolStripButton39});
+            this.PayrollNavigator.Location = new System.Drawing.Point(0, 357);
+            this.PayrollNavigator.MoveFirstItem = null;
+            this.PayrollNavigator.MoveLastItem = this.toolStripButton38;
+            this.PayrollNavigator.MoveNextItem = null;
+            this.PayrollNavigator.MovePreviousItem = this.toolStripButton37;
+            this.PayrollNavigator.Name = "PayrollNavigator";
+            this.PayrollNavigator.PositionItem = this.toolStripTextBox9;
+            this.PayrollNavigator.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
+            this.PayrollNavigator.Size = new System.Drawing.Size(1073, 31);
+            this.PayrollNavigator.TabIndex = 87;
+            this.PayrollNavigator.Text = "bindingNavigator1";
+            // 
+            // toolStripButton36
+            // 
+            this.toolStripButton36.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton36.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton36.Image")));
+            this.toolStripButton36.Name = "toolStripButton36";
+            this.toolStripButton36.RightToLeftAutoMirrorImage = true;
+            this.toolStripButton36.Size = new System.Drawing.Size(28, 28);
+            this.toolStripButton36.Text = "Delete";
+            // 
+            // toolStripButton37
+            // 
+            this.toolStripButton37.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton37.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton37.Image")));
+            this.toolStripButton37.Name = "toolStripButton37";
+            this.toolStripButton37.RightToLeftAutoMirrorImage = true;
+            this.toolStripButton37.Size = new System.Drawing.Size(28, 28);
+            this.toolStripButton37.Text = "Move previous";
+            // 
+            // toolStripSeparator9
+            // 
+            this.toolStripSeparator9.Name = "toolStripSeparator9";
+            this.toolStripSeparator9.Size = new System.Drawing.Size(6, 31);
+            // 
+            // toolStripTextBox9
+            // 
+            this.toolStripTextBox9.AccessibleName = "Position";
+            this.toolStripTextBox9.AutoSize = false;
+            this.toolStripTextBox9.Name = "toolStripTextBox9";
+            this.toolStripTextBox9.Size = new System.Drawing.Size(50, 31);
+            this.toolStripTextBox9.Text = "0";
+            this.toolStripTextBox9.ToolTipText = "Current position";
+            // 
+            // toolStripButton38
+            // 
+            this.toolStripButton38.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton38.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton38.Image")));
+            this.toolStripButton38.Name = "toolStripButton38";
+            this.toolStripButton38.RightToLeftAutoMirrorImage = true;
+            this.toolStripButton38.Size = new System.Drawing.Size(28, 28);
+            this.toolStripButton38.Text = "Move last";
+            // 
+            // toolStripButton39
+            // 
+            this.toolStripButton39.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton39.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton39.Image")));
+            this.toolStripButton39.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton39.Name = "toolStripButton39";
+            this.toolStripButton39.Size = new System.Drawing.Size(28, 28);
+            this.toolStripButton39.Text = "toolStripButton3";
+            // 
+            // PayrollGrid
+            // 
+            this.PayrollGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.PayrollGrid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.PayrollGrid.BackgroundColor = System.Drawing.Color.SlateGray;
+            this.PayrollGrid.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            dataGridViewCellStyle37.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle37.BackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle37.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle37.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle37.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle37.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle37.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.PayrollGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle37;
+            dataGridViewCellStyle38.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle38.BackColor = System.Drawing.Color.LightSteelBlue;
+            dataGridViewCellStyle38.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle38.ForeColor = System.Drawing.SystemColors.Info;
+            dataGridViewCellStyle38.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle38.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle38.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.PayrollGrid.DefaultCellStyle = dataGridViewCellStyle38;
+            this.PayrollGrid.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PayrollGrid.EnableHeadersVisualStyles = false;
+            this.PayrollGrid.GridColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.PayrollGrid.Location = new System.Drawing.Point(0, 0);
+            this.PayrollGrid.Name = "PayrollGrid";
+            dataGridViewCellStyle39.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle39.BackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle39.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle39.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle39.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle39.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle39.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.PayrollGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle39;
+            this.PayrollGrid.RowHeadersWidth = 30;
+            dataGridViewCellStyle40.BackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle40.ForeColor = System.Drawing.Color.White;
+            this.PayrollGrid.RowsDefaultCellStyle = dataGridViewCellStyle40;
+            this.PayrollGrid.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.PayrollGrid.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PayrollGrid.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
+            this.PayrollGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.PayrollGrid.Size = new System.Drawing.Size(1073, 388);
+            this.PayrollGrid.TabIndex = 2;
+            // 
+            // button66
+            // 
+            this.button66.BackColor = System.Drawing.Color.Transparent;
+            this.button66.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button66.FlatAppearance.BorderSize = 0;
+            this.button66.FlatAppearance.MouseDownBackColor = System.Drawing.Color.PowderBlue;
+            this.button66.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.button66.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button66.ForeColor = System.Drawing.SystemColors.Info;
+            this.button66.Image = ((System.Drawing.Image)(resources.GetObject("button66.Image")));
+            this.button66.Location = new System.Drawing.Point(70, 510);
+            this.button66.Name = "button66";
+            this.button66.Size = new System.Drawing.Size(96, 60);
+            this.button66.TabIndex = 82;
+            this.button66.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button66.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button66.UseVisualStyleBackColor = false;
+            // 
+            // button67
+            // 
+            this.button67.BackColor = System.Drawing.Color.Transparent;
+            this.button67.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button67.FlatAppearance.BorderSize = 0;
+            this.button67.FlatAppearance.MouseDownBackColor = System.Drawing.Color.PowderBlue;
+            this.button67.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.button67.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button67.ForeColor = System.Drawing.SystemColors.Info;
+            this.button67.Image = ((System.Drawing.Image)(resources.GetObject("button67.Image")));
+            this.button67.Location = new System.Drawing.Point(687, 510);
+            this.button67.Name = "button67";
+            this.button67.Size = new System.Drawing.Size(94, 60);
+            this.button67.TabIndex = 83;
+            this.button67.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button67.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button67.UseVisualStyleBackColor = false;
+            // 
+            // button68
+            // 
+            this.button68.BackColor = System.Drawing.Color.Transparent;
+            this.button68.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button68.FlatAppearance.BorderSize = 0;
+            this.button68.FlatAppearance.MouseDownBackColor = System.Drawing.Color.PowderBlue;
+            this.button68.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.button68.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button68.ForeColor = System.Drawing.SystemColors.Info;
+            this.button68.Image = ((System.Drawing.Image)(resources.GetObject("button68.Image")));
+            this.button68.Location = new System.Drawing.Point(205, 510);
+            this.button68.Name = "button68";
+            this.button68.Size = new System.Drawing.Size(96, 60);
+            this.button68.TabIndex = 85;
+            this.button68.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button68.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button68.UseVisualStyleBackColor = false;
+            // 
+            // button69
+            // 
+            this.button69.BackColor = System.Drawing.Color.Transparent;
+            this.button69.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button69.FlatAppearance.BorderSize = 0;
+            this.button69.FlatAppearance.MouseDownBackColor = System.Drawing.Color.PowderBlue;
+            this.button69.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.button69.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button69.ForeColor = System.Drawing.SystemColors.Info;
+            this.button69.Image = ((System.Drawing.Image)(resources.GetObject("button69.Image")));
+            this.button69.Location = new System.Drawing.Point(525, 510);
+            this.button69.Name = "button69";
+            this.button69.Size = new System.Drawing.Size(94, 60);
+            this.button69.TabIndex = 71;
+            this.button69.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button69.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button69.UseVisualStyleBackColor = false;
+            // 
+            // button70
+            // 
+            this.button70.BackColor = System.Drawing.Color.Transparent;
+            this.button70.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button70.FlatAppearance.BorderSize = 0;
+            this.button70.FlatAppearance.MouseDownBackColor = System.Drawing.Color.PowderBlue;
+            this.button70.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.button70.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button70.ForeColor = System.Drawing.SystemColors.Info;
+            this.button70.Image = ((System.Drawing.Image)(resources.GetObject("button70.Image")));
+            this.button70.Location = new System.Drawing.Point(362, 510);
+            this.button70.Name = "button70";
+            this.button70.Size = new System.Drawing.Size(94, 60);
+            this.button70.TabIndex = 81;
+            this.button70.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button70.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button70.UseVisualStyleBackColor = false;
+            // 
+            // splitContainerAdv11
+            // 
+            this.splitContainerAdv11.BeforeTouchSize = 7;
+            this.splitContainerAdv11.Location = new System.Drawing.Point(7, 23);
+            this.splitContainerAdv11.Name = "splitContainerAdv11";
+            // 
+            // splitContainerAdv11.Panel1
+            // 
+            this.splitContainerAdv11.Panel1.Controls.Add(this.groupBox21);
+            // 
+            // splitContainerAdv11.Panel2
+            // 
+            this.splitContainerAdv11.Panel2.Controls.Add(this.groupBox22);
+            this.splitContainerAdv11.Size = new System.Drawing.Size(1572, 826);
+            this.splitContainerAdv11.SplitterDistance = 335;
+            this.splitContainerAdv11.TabIndex = 17;
+            this.splitContainerAdv11.Text = "splitContainerAdv11";
+            // 
+            // groupBox21
+            // 
+            this.groupBox21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.groupBox21.Controls.Add(this.label41);
+            this.groupBox21.Controls.Add(this.label42);
+            this.groupBox21.Controls.Add(this.label43);
+            this.groupBox21.Controls.Add(this.metroSetComboBox28);
+            this.groupBox21.Controls.Add(this.metroSetComboBox29);
+            this.groupBox21.Controls.Add(this.metroSetComboBox30);
+            this.groupBox21.ForeColor = System.Drawing.SystemColors.Info;
+            this.groupBox21.Location = new System.Drawing.Point(20, 102);
+            this.groupBox21.Name = "groupBox21";
+            this.groupBox21.Size = new System.Drawing.Size(290, 609);
+            this.groupBox21.TabIndex = 14;
+            this.groupBox21.TabStop = false;
+            this.groupBox21.Text = "Data Fields";
+            // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.Location = new System.Drawing.Point(15, 362);
+            this.label41.Name = "label41";
+            this.label41.Padding = new System.Windows.Forms.Padding(1);
+            this.label41.Size = new System.Drawing.Size(62, 22);
+            this.label41.TabIndex = 7;
+            this.label41.Text = "label41";
+            // 
+            // label42
+            // 
+            this.label42.AutoSize = true;
+            this.label42.Location = new System.Drawing.Point(15, 217);
+            this.label42.Name = "label42";
+            this.label42.Padding = new System.Windows.Forms.Padding(1);
+            this.label42.Size = new System.Drawing.Size(62, 22);
+            this.label42.TabIndex = 6;
+            this.label42.Text = "label42";
+            // 
+            // label43
+            // 
+            this.label43.AutoSize = true;
+            this.label43.Location = new System.Drawing.Point(15, 67);
+            this.label43.Name = "label43";
+            this.label43.Padding = new System.Windows.Forms.Padding(1);
+            this.label43.Size = new System.Drawing.Size(81, 22);
+            this.label43.TabIndex = 5;
+            this.label43.Text = "Database";
+            // 
+            // metroSetComboBox28
+            // 
+            this.metroSetComboBox28.AllowDrop = true;
+            this.metroSetComboBox28.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.metroSetComboBox28.BackColor = System.Drawing.Color.Transparent;
+            this.metroSetComboBox28.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.metroSetComboBox28.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.metroSetComboBox28.CausesValidation = false;
+            this.metroSetComboBox28.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.metroSetComboBox28.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.metroSetComboBox28.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.metroSetComboBox28.DisplayMember = "Fund";
+            this.metroSetComboBox28.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.metroSetComboBox28.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.metroSetComboBox28.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.metroSetComboBox28.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.metroSetComboBox28.FormattingEnabled = true;
+            this.metroSetComboBox28.ItemHeight = 30;
+            this.metroSetComboBox28.Location = new System.Drawing.Point(19, 387);
+            this.metroSetComboBox28.MaxDropDownItems = 20;
+            this.metroSetComboBox28.Name = "metroSetComboBox28";
+            this.metroSetComboBox28.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.metroSetComboBox28.SelectedItemForeColor = System.Drawing.Color.White;
+            this.metroSetComboBox28.Size = new System.Drawing.Size(247, 36);
+            this.metroSetComboBox28.Style = MetroSet_UI.Design.Style.Dark;
+            this.metroSetComboBox28.StyleManager = null;
+            this.metroSetComboBox28.TabIndex = 2;
+            this.metroSetComboBox28.ThemeAuthor = "Narwin";
+            this.metroSetComboBox28.ThemeName = "MetroDark";
+            this.metroSetComboBox28.ValueMember = "Fund";
+            // 
+            // metroSetComboBox29
+            // 
+            this.metroSetComboBox29.AllowDrop = true;
+            this.metroSetComboBox29.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.metroSetComboBox29.BackColor = System.Drawing.Color.Transparent;
+            this.metroSetComboBox29.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.metroSetComboBox29.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.metroSetComboBox29.CausesValidation = false;
+            this.metroSetComboBox29.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.metroSetComboBox29.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.metroSetComboBox29.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.metroSetComboBox29.DisplayMember = "Fund";
+            this.metroSetComboBox29.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.metroSetComboBox29.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.metroSetComboBox29.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.metroSetComboBox29.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.metroSetComboBox29.FormattingEnabled = true;
+            this.metroSetComboBox29.ItemHeight = 30;
+            this.metroSetComboBox29.Location = new System.Drawing.Point(19, 242);
+            this.metroSetComboBox29.MaxDropDownItems = 20;
+            this.metroSetComboBox29.Name = "metroSetComboBox29";
+            this.metroSetComboBox29.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.metroSetComboBox29.SelectedItemForeColor = System.Drawing.Color.White;
+            this.metroSetComboBox29.Size = new System.Drawing.Size(247, 36);
+            this.metroSetComboBox29.Style = MetroSet_UI.Design.Style.Dark;
+            this.metroSetComboBox29.StyleManager = null;
+            this.metroSetComboBox29.TabIndex = 1;
+            this.metroSetComboBox29.ThemeAuthor = "Narwin";
+            this.metroSetComboBox29.ThemeName = "MetroDark";
+            this.metroSetComboBox29.ValueMember = "Fund";
+            // 
+            // metroSetComboBox30
+            // 
+            this.metroSetComboBox30.AllowDrop = true;
+            this.metroSetComboBox30.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.metroSetComboBox30.BackColor = System.Drawing.Color.Transparent;
+            this.metroSetComboBox30.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.metroSetComboBox30.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.metroSetComboBox30.CausesValidation = false;
+            this.metroSetComboBox30.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.metroSetComboBox30.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.metroSetComboBox30.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.metroSetComboBox30.DisplayMember = "Fund";
+            this.metroSetComboBox30.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.metroSetComboBox30.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.metroSetComboBox30.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.metroSetComboBox30.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.metroSetComboBox30.FormattingEnabled = true;
+            this.metroSetComboBox30.ItemHeight = 30;
+            this.metroSetComboBox30.Location = new System.Drawing.Point(19, 92);
+            this.metroSetComboBox30.MaxDropDownItems = 20;
+            this.metroSetComboBox30.Name = "metroSetComboBox30";
+            this.metroSetComboBox30.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.metroSetComboBox30.SelectedItemForeColor = System.Drawing.Color.White;
+            this.metroSetComboBox30.Size = new System.Drawing.Size(247, 36);
+            this.metroSetComboBox30.Style = MetroSet_UI.Design.Style.Dark;
+            this.metroSetComboBox30.StyleManager = null;
+            this.metroSetComboBox30.TabIndex = 0;
+            this.metroSetComboBox30.ThemeAuthor = "Narwin";
+            this.metroSetComboBox30.ThemeName = "MetroDark";
+            this.metroSetComboBox30.ValueMember = "Fund";
+            // 
+            // groupBox22
+            // 
+            this.groupBox22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.groupBox22.Controls.Add(this.label44);
+            this.groupBox22.Controls.Add(this.button71);
+            this.groupBox22.Controls.Add(this.button72);
+            this.groupBox22.Controls.Add(this.metroPanel11);
+            this.groupBox22.Controls.Add(this.button73);
+            this.groupBox22.Controls.Add(this.button74);
+            this.groupBox22.Controls.Add(this.button75);
+            this.groupBox22.Controls.Add(this.button76);
+            this.groupBox22.Controls.Add(this.button77);
+            this.groupBox22.ForeColor = System.Drawing.SystemColors.Info;
+            this.groupBox22.Location = new System.Drawing.Point(22, 102);
+            this.groupBox22.Name = "groupBox22";
+            this.groupBox22.Size = new System.Drawing.Size(1189, 609);
+            this.groupBox22.TabIndex = 5;
+            this.groupBox22.TabStop = false;
+            this.groupBox22.Text = "Database";
+            // 
+            // label44
+            // 
+            this.label44.AutoSize = true;
+            this.label44.Location = new System.Drawing.Point(965, 58);
+            this.label44.Name = "label44";
+            this.label44.Padding = new System.Windows.Forms.Padding(1);
+            this.label44.Size = new System.Drawing.Size(62, 22);
+            this.label44.TabIndex = 86;
+            this.label44.Text = "label44";
+            // 
+            // button71
+            // 
+            this.button71.BackColor = System.Drawing.Color.Transparent;
+            this.button71.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button71.FlatAppearance.BorderSize = 0;
+            this.button71.FlatAppearance.MouseDownBackColor = System.Drawing.Color.PowderBlue;
+            this.button71.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.button71.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button71.ForeColor = System.Drawing.SystemColors.Info;
+            this.button71.Image = ((System.Drawing.Image)(resources.GetObject("button71.Image")));
+            this.button71.Location = new System.Drawing.Point(1016, 510);
+            this.button71.Name = "button71";
+            this.button71.Size = new System.Drawing.Size(94, 60);
+            this.button71.TabIndex = 84;
+            this.button71.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button71.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button71.UseVisualStyleBackColor = false;
+            // 
+            // button72
+            // 
+            this.button72.BackColor = System.Drawing.Color.Transparent;
+            this.button72.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button72.FlatAppearance.BorderSize = 0;
+            this.button72.FlatAppearance.MouseDownBackColor = System.Drawing.Color.PowderBlue;
+            this.button72.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.button72.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button72.ForeColor = System.Drawing.SystemColors.Info;
+            this.button72.Image = ((System.Drawing.Image)(resources.GetObject("button72.Image")));
+            this.button72.Location = new System.Drawing.Point(854, 510);
+            this.button72.Name = "button72";
+            this.button72.Size = new System.Drawing.Size(94, 60);
+            this.button72.TabIndex = 70;
+            this.button72.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button72.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button72.UseVisualStyleBackColor = false;
+            // 
+            // metroPanel11
+            // 
+            this.metroPanel11.Controls.Add(this.SiteNavigator);
+            this.metroPanel11.Controls.Add(this.SiteGrid);
+            this.metroPanel11.HorizontalScrollbarBarColor = true;
+            this.metroPanel11.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroPanel11.HorizontalScrollbarSize = 10;
+            this.metroPanel11.Location = new System.Drawing.Point(49, 83);
+            this.metroPanel11.Name = "metroPanel11";
+            this.metroPanel11.Size = new System.Drawing.Size(1073, 388);
+            this.metroPanel11.TabIndex = 5;
+            this.metroPanel11.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.metroPanel11.VerticalScrollbarBarColor = true;
+            this.metroPanel11.VerticalScrollbarHighlightOnWheel = false;
+            this.metroPanel11.VerticalScrollbarSize = 10;
+            // 
+            // SiteNavigator
+            // 
+            this.SiteNavigator.AddNewItem = null;
+            this.SiteNavigator.BackColor = System.Drawing.Color.Transparent;
+            this.SiteNavigator.CountItem = null;
+            this.SiteNavigator.DeleteItem = this.toolStripButton40;
+            this.SiteNavigator.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.SiteNavigator.ImageScalingSize = new System.Drawing.Size(24, 20);
+            this.SiteNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripButton41,
+            this.toolStripSeparator10,
+            this.toolStripTextBox10,
+            this.toolStripButton42,
+            this.toolStripButton40,
+            this.toolStripButton43});
+            this.SiteNavigator.Location = new System.Drawing.Point(0, 357);
+            this.SiteNavigator.MoveFirstItem = null;
+            this.SiteNavigator.MoveLastItem = this.toolStripButton42;
+            this.SiteNavigator.MoveNextItem = null;
+            this.SiteNavigator.MovePreviousItem = this.toolStripButton41;
+            this.SiteNavigator.Name = "SiteNavigator";
+            this.SiteNavigator.PositionItem = this.toolStripTextBox10;
+            this.SiteNavigator.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
+            this.SiteNavigator.Size = new System.Drawing.Size(1073, 31);
+            this.SiteNavigator.TabIndex = 87;
+            this.SiteNavigator.Text = "bindingNavigator1";
+            // 
+            // toolStripButton40
+            // 
+            this.toolStripButton40.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton40.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton40.Image")));
+            this.toolStripButton40.Name = "toolStripButton40";
+            this.toolStripButton40.RightToLeftAutoMirrorImage = true;
+            this.toolStripButton40.Size = new System.Drawing.Size(28, 28);
+            this.toolStripButton40.Text = "Delete";
+            // 
+            // toolStripButton41
+            // 
+            this.toolStripButton41.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton41.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton41.Image")));
+            this.toolStripButton41.Name = "toolStripButton41";
+            this.toolStripButton41.RightToLeftAutoMirrorImage = true;
+            this.toolStripButton41.Size = new System.Drawing.Size(28, 28);
+            this.toolStripButton41.Text = "Move previous";
+            // 
+            // toolStripSeparator10
+            // 
+            this.toolStripSeparator10.Name = "toolStripSeparator10";
+            this.toolStripSeparator10.Size = new System.Drawing.Size(6, 31);
+            // 
+            // toolStripTextBox10
+            // 
+            this.toolStripTextBox10.AccessibleName = "Position";
+            this.toolStripTextBox10.AutoSize = false;
+            this.toolStripTextBox10.Name = "toolStripTextBox10";
+            this.toolStripTextBox10.Size = new System.Drawing.Size(50, 31);
+            this.toolStripTextBox10.Text = "0";
+            this.toolStripTextBox10.ToolTipText = "Current position";
+            // 
+            // toolStripButton42
+            // 
+            this.toolStripButton42.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton42.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton42.Image")));
+            this.toolStripButton42.Name = "toolStripButton42";
+            this.toolStripButton42.RightToLeftAutoMirrorImage = true;
+            this.toolStripButton42.Size = new System.Drawing.Size(28, 28);
+            this.toolStripButton42.Text = "Move last";
+            // 
+            // toolStripButton43
+            // 
+            this.toolStripButton43.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton43.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton43.Image")));
+            this.toolStripButton43.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton43.Name = "toolStripButton43";
+            this.toolStripButton43.Size = new System.Drawing.Size(28, 28);
+            this.toolStripButton43.Text = "toolStripButton3";
+            // 
+            // SiteGrid
+            // 
+            this.SiteGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.SiteGrid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.SiteGrid.BackgroundColor = System.Drawing.Color.SlateGray;
+            this.SiteGrid.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            dataGridViewCellStyle41.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle41.BackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle41.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle41.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle41.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle41.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle41.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.SiteGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle41;
+            dataGridViewCellStyle42.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle42.BackColor = System.Drawing.Color.LightSteelBlue;
+            dataGridViewCellStyle42.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle42.ForeColor = System.Drawing.SystemColors.Info;
+            dataGridViewCellStyle42.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle42.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle42.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.SiteGrid.DefaultCellStyle = dataGridViewCellStyle42;
+            this.SiteGrid.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.SiteGrid.EnableHeadersVisualStyles = false;
+            this.SiteGrid.GridColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.SiteGrid.Location = new System.Drawing.Point(0, 0);
+            this.SiteGrid.Name = "SiteGrid";
+            dataGridViewCellStyle43.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle43.BackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle43.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle43.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle43.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle43.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle43.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.SiteGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle43;
+            this.SiteGrid.RowHeadersWidth = 30;
+            dataGridViewCellStyle44.BackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle44.ForeColor = System.Drawing.Color.White;
+            this.SiteGrid.RowsDefaultCellStyle = dataGridViewCellStyle44;
+            this.SiteGrid.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.SiteGrid.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SiteGrid.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
+            this.SiteGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.SiteGrid.Size = new System.Drawing.Size(1073, 388);
+            this.SiteGrid.TabIndex = 2;
+            // 
+            // button73
+            // 
+            this.button73.BackColor = System.Drawing.Color.Transparent;
+            this.button73.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button73.FlatAppearance.BorderSize = 0;
+            this.button73.FlatAppearance.MouseDownBackColor = System.Drawing.Color.PowderBlue;
+            this.button73.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.button73.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button73.ForeColor = System.Drawing.SystemColors.Info;
+            this.button73.Image = ((System.Drawing.Image)(resources.GetObject("button73.Image")));
+            this.button73.Location = new System.Drawing.Point(70, 510);
+            this.button73.Name = "button73";
+            this.button73.Size = new System.Drawing.Size(96, 60);
+            this.button73.TabIndex = 82;
+            this.button73.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button73.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button73.UseVisualStyleBackColor = false;
+            // 
+            // button74
+            // 
+            this.button74.BackColor = System.Drawing.Color.Transparent;
+            this.button74.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button74.FlatAppearance.BorderSize = 0;
+            this.button74.FlatAppearance.MouseDownBackColor = System.Drawing.Color.PowderBlue;
+            this.button74.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.button74.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button74.ForeColor = System.Drawing.SystemColors.Info;
+            this.button74.Image = ((System.Drawing.Image)(resources.GetObject("button74.Image")));
+            this.button74.Location = new System.Drawing.Point(687, 510);
+            this.button74.Name = "button74";
+            this.button74.Size = new System.Drawing.Size(94, 60);
+            this.button74.TabIndex = 83;
+            this.button74.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button74.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button74.UseVisualStyleBackColor = false;
+            // 
+            // button75
+            // 
+            this.button75.BackColor = System.Drawing.Color.Transparent;
+            this.button75.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button75.FlatAppearance.BorderSize = 0;
+            this.button75.FlatAppearance.MouseDownBackColor = System.Drawing.Color.PowderBlue;
+            this.button75.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.button75.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button75.ForeColor = System.Drawing.SystemColors.Info;
+            this.button75.Image = ((System.Drawing.Image)(resources.GetObject("button75.Image")));
+            this.button75.Location = new System.Drawing.Point(205, 510);
+            this.button75.Name = "button75";
+            this.button75.Size = new System.Drawing.Size(96, 60);
+            this.button75.TabIndex = 85;
+            this.button75.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button75.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button75.UseVisualStyleBackColor = false;
+            // 
+            // button76
+            // 
+            this.button76.BackColor = System.Drawing.Color.Transparent;
+            this.button76.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button76.FlatAppearance.BorderSize = 0;
+            this.button76.FlatAppearance.MouseDownBackColor = System.Drawing.Color.PowderBlue;
+            this.button76.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.button76.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button76.ForeColor = System.Drawing.SystemColors.Info;
+            this.button76.Image = ((System.Drawing.Image)(resources.GetObject("button76.Image")));
+            this.button76.Location = new System.Drawing.Point(525, 510);
+            this.button76.Name = "button76";
+            this.button76.Size = new System.Drawing.Size(94, 60);
+            this.button76.TabIndex = 71;
+            this.button76.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button76.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button76.UseVisualStyleBackColor = false;
+            // 
+            // button77
+            // 
+            this.button77.BackColor = System.Drawing.Color.Transparent;
+            this.button77.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button77.FlatAppearance.BorderSize = 0;
+            this.button77.FlatAppearance.MouseDownBackColor = System.Drawing.Color.PowderBlue;
+            this.button77.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.button77.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button77.ForeColor = System.Drawing.SystemColors.Info;
+            this.button77.Image = ((System.Drawing.Image)(resources.GetObject("button77.Image")));
+            this.button77.Location = new System.Drawing.Point(362, 510);
+            this.button77.Name = "button77";
+            this.button77.Size = new System.Drawing.Size(94, 60);
+            this.button77.TabIndex = 81;
+            this.button77.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button77.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button77.UseVisualStyleBackColor = false;
+            // 
+            // splitContainerAdv12
+            // 
+            this.splitContainerAdv12.BeforeTouchSize = 7;
+            this.splitContainerAdv12.Location = new System.Drawing.Point(7, 23);
+            this.splitContainerAdv12.Name = "splitContainerAdv12";
+            // 
+            // splitContainerAdv12.Panel1
+            // 
+            this.splitContainerAdv12.Panel1.Controls.Add(this.groupBox23);
+            // 
+            // splitContainerAdv12.Panel2
+            // 
+            this.splitContainerAdv12.Panel2.Controls.Add(this.groupBox24);
+            this.splitContainerAdv12.Size = new System.Drawing.Size(1572, 826);
+            this.splitContainerAdv12.SplitterDistance = 335;
+            this.splitContainerAdv12.TabIndex = 17;
+            this.splitContainerAdv12.Text = "splitContainerAdv12";
+            // 
+            // groupBox23
+            // 
+            this.groupBox23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.groupBox23.Controls.Add(this.label45);
+            this.groupBox23.Controls.Add(this.label46);
+            this.groupBox23.Controls.Add(this.label47);
+            this.groupBox23.Controls.Add(this.metroSetComboBox31);
+            this.groupBox23.Controls.Add(this.metroSetComboBox32);
+            this.groupBox23.Controls.Add(this.metroSetComboBox33);
+            this.groupBox23.ForeColor = System.Drawing.SystemColors.Info;
+            this.groupBox23.Location = new System.Drawing.Point(20, 102);
+            this.groupBox23.Name = "groupBox23";
+            this.groupBox23.Size = new System.Drawing.Size(290, 609);
+            this.groupBox23.TabIndex = 14;
+            this.groupBox23.TabStop = false;
+            this.groupBox23.Text = "Data Fields";
+            // 
+            // label45
+            // 
+            this.label45.AutoSize = true;
+            this.label45.Location = new System.Drawing.Point(15, 362);
+            this.label45.Name = "label45";
+            this.label45.Padding = new System.Windows.Forms.Padding(1);
+            this.label45.Size = new System.Drawing.Size(62, 22);
+            this.label45.TabIndex = 7;
+            this.label45.Text = "label45";
+            // 
+            // label46
+            // 
+            this.label46.AutoSize = true;
+            this.label46.Location = new System.Drawing.Point(15, 217);
+            this.label46.Name = "label46";
+            this.label46.Padding = new System.Windows.Forms.Padding(1);
+            this.label46.Size = new System.Drawing.Size(62, 22);
+            this.label46.TabIndex = 6;
+            this.label46.Text = "label46";
+            // 
+            // label47
+            // 
+            this.label47.AutoSize = true;
+            this.label47.Location = new System.Drawing.Point(15, 67);
+            this.label47.Name = "label47";
+            this.label47.Padding = new System.Windows.Forms.Padding(1);
+            this.label47.Size = new System.Drawing.Size(81, 22);
+            this.label47.TabIndex = 5;
+            this.label47.Text = "Database";
+            // 
+            // metroSetComboBox31
+            // 
+            this.metroSetComboBox31.AllowDrop = true;
+            this.metroSetComboBox31.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.metroSetComboBox31.BackColor = System.Drawing.Color.Transparent;
+            this.metroSetComboBox31.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.metroSetComboBox31.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.metroSetComboBox31.CausesValidation = false;
+            this.metroSetComboBox31.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.metroSetComboBox31.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.metroSetComboBox31.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.metroSetComboBox31.DisplayMember = "Fund";
+            this.metroSetComboBox31.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.metroSetComboBox31.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.metroSetComboBox31.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.metroSetComboBox31.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.metroSetComboBox31.FormattingEnabled = true;
+            this.metroSetComboBox31.ItemHeight = 30;
+            this.metroSetComboBox31.Location = new System.Drawing.Point(19, 387);
+            this.metroSetComboBox31.MaxDropDownItems = 20;
+            this.metroSetComboBox31.Name = "metroSetComboBox31";
+            this.metroSetComboBox31.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.metroSetComboBox31.SelectedItemForeColor = System.Drawing.Color.White;
+            this.metroSetComboBox31.Size = new System.Drawing.Size(247, 36);
+            this.metroSetComboBox31.Style = MetroSet_UI.Design.Style.Dark;
+            this.metroSetComboBox31.StyleManager = null;
+            this.metroSetComboBox31.TabIndex = 2;
+            this.metroSetComboBox31.ThemeAuthor = "Narwin";
+            this.metroSetComboBox31.ThemeName = "MetroDark";
+            this.metroSetComboBox31.ValueMember = "Fund";
+            // 
+            // metroSetComboBox32
+            // 
+            this.metroSetComboBox32.AllowDrop = true;
+            this.metroSetComboBox32.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.metroSetComboBox32.BackColor = System.Drawing.Color.Transparent;
+            this.metroSetComboBox32.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.metroSetComboBox32.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.metroSetComboBox32.CausesValidation = false;
+            this.metroSetComboBox32.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.metroSetComboBox32.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.metroSetComboBox32.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.metroSetComboBox32.DisplayMember = "Fund";
+            this.metroSetComboBox32.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.metroSetComboBox32.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.metroSetComboBox32.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.metroSetComboBox32.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.metroSetComboBox32.FormattingEnabled = true;
+            this.metroSetComboBox32.ItemHeight = 30;
+            this.metroSetComboBox32.Location = new System.Drawing.Point(19, 242);
+            this.metroSetComboBox32.MaxDropDownItems = 20;
+            this.metroSetComboBox32.Name = "metroSetComboBox32";
+            this.metroSetComboBox32.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.metroSetComboBox32.SelectedItemForeColor = System.Drawing.Color.White;
+            this.metroSetComboBox32.Size = new System.Drawing.Size(247, 36);
+            this.metroSetComboBox32.Style = MetroSet_UI.Design.Style.Dark;
+            this.metroSetComboBox32.StyleManager = null;
+            this.metroSetComboBox32.TabIndex = 1;
+            this.metroSetComboBox32.ThemeAuthor = "Narwin";
+            this.metroSetComboBox32.ThemeName = "MetroDark";
+            this.metroSetComboBox32.ValueMember = "Fund";
+            // 
+            // metroSetComboBox33
+            // 
+            this.metroSetComboBox33.AllowDrop = true;
+            this.metroSetComboBox33.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.metroSetComboBox33.BackColor = System.Drawing.Color.Transparent;
+            this.metroSetComboBox33.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.metroSetComboBox33.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.metroSetComboBox33.CausesValidation = false;
+            this.metroSetComboBox33.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.metroSetComboBox33.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.metroSetComboBox33.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.metroSetComboBox33.DisplayMember = "Fund";
+            this.metroSetComboBox33.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.metroSetComboBox33.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.metroSetComboBox33.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.metroSetComboBox33.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.metroSetComboBox33.FormattingEnabled = true;
+            this.metroSetComboBox33.ItemHeight = 30;
+            this.metroSetComboBox33.Location = new System.Drawing.Point(19, 92);
+            this.metroSetComboBox33.MaxDropDownItems = 20;
+            this.metroSetComboBox33.Name = "metroSetComboBox33";
+            this.metroSetComboBox33.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.metroSetComboBox33.SelectedItemForeColor = System.Drawing.Color.White;
+            this.metroSetComboBox33.Size = new System.Drawing.Size(247, 36);
+            this.metroSetComboBox33.Style = MetroSet_UI.Design.Style.Dark;
+            this.metroSetComboBox33.StyleManager = null;
+            this.metroSetComboBox33.TabIndex = 0;
+            this.metroSetComboBox33.ThemeAuthor = "Narwin";
+            this.metroSetComboBox33.ThemeName = "MetroDark";
+            this.metroSetComboBox33.ValueMember = "Fund";
+            // 
+            // groupBox24
+            // 
+            this.groupBox24.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.groupBox24.Controls.Add(this.label48);
+            this.groupBox24.Controls.Add(this.button78);
+            this.groupBox24.Controls.Add(this.button79);
+            this.groupBox24.Controls.Add(this.metroPanel12);
+            this.groupBox24.Controls.Add(this.button80);
+            this.groupBox24.Controls.Add(this.button81);
+            this.groupBox24.Controls.Add(this.button82);
+            this.groupBox24.Controls.Add(this.button83);
+            this.groupBox24.Controls.Add(this.button84);
+            this.groupBox24.ForeColor = System.Drawing.SystemColors.Info;
+            this.groupBox24.Location = new System.Drawing.Point(22, 102);
+            this.groupBox24.Name = "groupBox24";
+            this.groupBox24.Size = new System.Drawing.Size(1189, 609);
+            this.groupBox24.TabIndex = 5;
+            this.groupBox24.TabStop = false;
+            this.groupBox24.Text = "Database";
+            // 
+            // label48
+            // 
+            this.label48.AutoSize = true;
+            this.label48.Location = new System.Drawing.Point(965, 58);
+            this.label48.Name = "label48";
+            this.label48.Padding = new System.Windows.Forms.Padding(1);
+            this.label48.Size = new System.Drawing.Size(62, 22);
+            this.label48.TabIndex = 86;
+            this.label48.Text = "label48";
+            // 
+            // button78
+            // 
+            this.button78.BackColor = System.Drawing.Color.Transparent;
+            this.button78.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button78.FlatAppearance.BorderSize = 0;
+            this.button78.FlatAppearance.MouseDownBackColor = System.Drawing.Color.PowderBlue;
+            this.button78.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.button78.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button78.ForeColor = System.Drawing.SystemColors.Info;
+            this.button78.Image = ((System.Drawing.Image)(resources.GetObject("button78.Image")));
+            this.button78.Location = new System.Drawing.Point(1016, 510);
+            this.button78.Name = "button78";
+            this.button78.Size = new System.Drawing.Size(94, 60);
+            this.button78.TabIndex = 84;
+            this.button78.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button78.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button78.UseVisualStyleBackColor = false;
+            // 
+            // button79
+            // 
+            this.button79.BackColor = System.Drawing.Color.Transparent;
+            this.button79.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button79.FlatAppearance.BorderSize = 0;
+            this.button79.FlatAppearance.MouseDownBackColor = System.Drawing.Color.PowderBlue;
+            this.button79.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.button79.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button79.ForeColor = System.Drawing.SystemColors.Info;
+            this.button79.Image = ((System.Drawing.Image)(resources.GetObject("button79.Image")));
+            this.button79.Location = new System.Drawing.Point(854, 510);
+            this.button79.Name = "button79";
+            this.button79.Size = new System.Drawing.Size(94, 60);
+            this.button79.TabIndex = 70;
+            this.button79.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button79.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button79.UseVisualStyleBackColor = false;
+            // 
+            // metroPanel12
+            // 
+            this.metroPanel12.Controls.Add(this.ReimbursableNavigator);
+            this.metroPanel12.Controls.Add(this.ReimbursableGrid);
+            this.metroPanel12.HorizontalScrollbarBarColor = true;
+            this.metroPanel12.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroPanel12.HorizontalScrollbarSize = 10;
+            this.metroPanel12.Location = new System.Drawing.Point(49, 83);
+            this.metroPanel12.Name = "metroPanel12";
+            this.metroPanel12.Size = new System.Drawing.Size(1073, 388);
+            this.metroPanel12.TabIndex = 5;
+            this.metroPanel12.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.metroPanel12.VerticalScrollbarBarColor = true;
+            this.metroPanel12.VerticalScrollbarHighlightOnWheel = false;
+            this.metroPanel12.VerticalScrollbarSize = 10;
+            // 
+            // ReimbursableNavigator
+            // 
+            this.ReimbursableNavigator.AddNewItem = null;
+            this.ReimbursableNavigator.BackColor = System.Drawing.Color.Transparent;
+            this.ReimbursableNavigator.CountItem = null;
+            this.ReimbursableNavigator.DeleteItem = this.toolStripButton44;
+            this.ReimbursableNavigator.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.ReimbursableNavigator.ImageScalingSize = new System.Drawing.Size(24, 20);
+            this.ReimbursableNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripButton45,
+            this.toolStripSeparator11,
+            this.toolStripTextBox11,
+            this.toolStripButton46,
+            this.toolStripButton44,
+            this.toolStripButton47});
+            this.ReimbursableNavigator.Location = new System.Drawing.Point(0, 357);
+            this.ReimbursableNavigator.MoveFirstItem = null;
+            this.ReimbursableNavigator.MoveLastItem = this.toolStripButton46;
+            this.ReimbursableNavigator.MoveNextItem = null;
+            this.ReimbursableNavigator.MovePreviousItem = this.toolStripButton45;
+            this.ReimbursableNavigator.Name = "ReimbursableNavigator";
+            this.ReimbursableNavigator.PositionItem = this.toolStripTextBox11;
+            this.ReimbursableNavigator.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
+            this.ReimbursableNavigator.Size = new System.Drawing.Size(1073, 31);
+            this.ReimbursableNavigator.TabIndex = 87;
+            this.ReimbursableNavigator.Text = "bindingNavigator1";
+            // 
+            // toolStripButton44
+            // 
+            this.toolStripButton44.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton44.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton44.Image")));
+            this.toolStripButton44.Name = "toolStripButton44";
+            this.toolStripButton44.RightToLeftAutoMirrorImage = true;
+            this.toolStripButton44.Size = new System.Drawing.Size(28, 28);
+            this.toolStripButton44.Text = "Delete";
+            // 
+            // toolStripButton45
+            // 
+            this.toolStripButton45.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton45.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton45.Image")));
+            this.toolStripButton45.Name = "toolStripButton45";
+            this.toolStripButton45.RightToLeftAutoMirrorImage = true;
+            this.toolStripButton45.Size = new System.Drawing.Size(28, 28);
+            this.toolStripButton45.Text = "Move previous";
+            // 
+            // toolStripSeparator11
+            // 
+            this.toolStripSeparator11.Name = "toolStripSeparator11";
+            this.toolStripSeparator11.Size = new System.Drawing.Size(6, 31);
+            // 
+            // toolStripTextBox11
+            // 
+            this.toolStripTextBox11.AccessibleName = "Position";
+            this.toolStripTextBox11.AutoSize = false;
+            this.toolStripTextBox11.Name = "toolStripTextBox11";
+            this.toolStripTextBox11.Size = new System.Drawing.Size(50, 31);
+            this.toolStripTextBox11.Text = "0";
+            this.toolStripTextBox11.ToolTipText = "Current position";
+            // 
+            // toolStripButton46
+            // 
+            this.toolStripButton46.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton46.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton46.Image")));
+            this.toolStripButton46.Name = "toolStripButton46";
+            this.toolStripButton46.RightToLeftAutoMirrorImage = true;
+            this.toolStripButton46.Size = new System.Drawing.Size(28, 28);
+            this.toolStripButton46.Text = "Move last";
+            // 
+            // toolStripButton47
+            // 
+            this.toolStripButton47.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton47.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton47.Image")));
+            this.toolStripButton47.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton47.Name = "toolStripButton47";
+            this.toolStripButton47.Size = new System.Drawing.Size(28, 28);
+            this.toolStripButton47.Text = "toolStripButton3";
+            // 
+            // ReimbursableGrid
+            // 
+            this.ReimbursableGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.ReimbursableGrid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.ReimbursableGrid.BackgroundColor = System.Drawing.Color.SlateGray;
+            this.ReimbursableGrid.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            dataGridViewCellStyle45.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle45.BackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle45.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle45.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle45.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle45.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle45.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ReimbursableGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle45;
+            dataGridViewCellStyle46.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle46.BackColor = System.Drawing.Color.LightSteelBlue;
+            dataGridViewCellStyle46.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle46.ForeColor = System.Drawing.SystemColors.Info;
+            dataGridViewCellStyle46.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle46.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle46.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.ReimbursableGrid.DefaultCellStyle = dataGridViewCellStyle46;
+            this.ReimbursableGrid.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ReimbursableGrid.EnableHeadersVisualStyles = false;
+            this.ReimbursableGrid.GridColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.ReimbursableGrid.Location = new System.Drawing.Point(0, 0);
+            this.ReimbursableGrid.Name = "ReimbursableGrid";
+            dataGridViewCellStyle47.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle47.BackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle47.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle47.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle47.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle47.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle47.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ReimbursableGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle47;
+            this.ReimbursableGrid.RowHeadersWidth = 30;
+            dataGridViewCellStyle48.BackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle48.ForeColor = System.Drawing.Color.White;
+            this.ReimbursableGrid.RowsDefaultCellStyle = dataGridViewCellStyle48;
+            this.ReimbursableGrid.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.ReimbursableGrid.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ReimbursableGrid.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
+            this.ReimbursableGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.ReimbursableGrid.Size = new System.Drawing.Size(1073, 388);
+            this.ReimbursableGrid.TabIndex = 2;
+            // 
+            // button80
+            // 
+            this.button80.BackColor = System.Drawing.Color.Transparent;
+            this.button80.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button80.FlatAppearance.BorderSize = 0;
+            this.button80.FlatAppearance.MouseDownBackColor = System.Drawing.Color.PowderBlue;
+            this.button80.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.button80.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button80.ForeColor = System.Drawing.SystemColors.Info;
+            this.button80.Image = ((System.Drawing.Image)(resources.GetObject("button80.Image")));
+            this.button80.Location = new System.Drawing.Point(70, 510);
+            this.button80.Name = "button80";
+            this.button80.Size = new System.Drawing.Size(96, 60);
+            this.button80.TabIndex = 82;
+            this.button80.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button80.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button80.UseVisualStyleBackColor = false;
+            // 
+            // button81
+            // 
+            this.button81.BackColor = System.Drawing.Color.Transparent;
+            this.button81.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button81.FlatAppearance.BorderSize = 0;
+            this.button81.FlatAppearance.MouseDownBackColor = System.Drawing.Color.PowderBlue;
+            this.button81.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.button81.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button81.ForeColor = System.Drawing.SystemColors.Info;
+            this.button81.Image = ((System.Drawing.Image)(resources.GetObject("button81.Image")));
+            this.button81.Location = new System.Drawing.Point(687, 510);
+            this.button81.Name = "button81";
+            this.button81.Size = new System.Drawing.Size(94, 60);
+            this.button81.TabIndex = 83;
+            this.button81.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button81.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button81.UseVisualStyleBackColor = false;
+            // 
+            // button82
+            // 
+            this.button82.BackColor = System.Drawing.Color.Transparent;
+            this.button82.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button82.FlatAppearance.BorderSize = 0;
+            this.button82.FlatAppearance.MouseDownBackColor = System.Drawing.Color.PowderBlue;
+            this.button82.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.button82.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button82.ForeColor = System.Drawing.SystemColors.Info;
+            this.button82.Image = ((System.Drawing.Image)(resources.GetObject("button82.Image")));
+            this.button82.Location = new System.Drawing.Point(205, 510);
+            this.button82.Name = "button82";
+            this.button82.Size = new System.Drawing.Size(96, 60);
+            this.button82.TabIndex = 85;
+            this.button82.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button82.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button82.UseVisualStyleBackColor = false;
+            // 
+            // button83
+            // 
+            this.button83.BackColor = System.Drawing.Color.Transparent;
+            this.button83.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button83.FlatAppearance.BorderSize = 0;
+            this.button83.FlatAppearance.MouseDownBackColor = System.Drawing.Color.PowderBlue;
+            this.button83.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.button83.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button83.ForeColor = System.Drawing.SystemColors.Info;
+            this.button83.Image = ((System.Drawing.Image)(resources.GetObject("button83.Image")));
+            this.button83.Location = new System.Drawing.Point(525, 510);
+            this.button83.Name = "button83";
+            this.button83.Size = new System.Drawing.Size(94, 60);
+            this.button83.TabIndex = 71;
+            this.button83.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button83.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button83.UseVisualStyleBackColor = false;
+            // 
+            // button84
+            // 
+            this.button84.BackColor = System.Drawing.Color.Transparent;
+            this.button84.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button84.FlatAppearance.BorderSize = 0;
+            this.button84.FlatAppearance.MouseDownBackColor = System.Drawing.Color.PowderBlue;
+            this.button84.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.button84.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button84.ForeColor = System.Drawing.SystemColors.Info;
+            this.button84.Image = ((System.Drawing.Image)(resources.GetObject("button84.Image")));
+            this.button84.Location = new System.Drawing.Point(362, 510);
+            this.button84.Name = "button84";
+            this.button84.Size = new System.Drawing.Size(94, 60);
+            this.button84.TabIndex = 81;
+            this.button84.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button84.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button84.UseVisualStyleBackColor = false;
+            // 
+            // splitContainerAdv13
+            // 
+            this.splitContainerAdv13.BeforeTouchSize = 7;
+            this.splitContainerAdv13.Location = new System.Drawing.Point(7, 23);
+            this.splitContainerAdv13.Name = "splitContainerAdv13";
+            // 
+            // splitContainerAdv13.Panel1
+            // 
+            this.splitContainerAdv13.Panel1.Controls.Add(this.groupBox25);
+            // 
+            // splitContainerAdv13.Panel2
+            // 
+            this.splitContainerAdv13.Panel2.Controls.Add(this.groupBox26);
+            this.splitContainerAdv13.Size = new System.Drawing.Size(1572, 826);
+            this.splitContainerAdv13.SplitterDistance = 335;
+            this.splitContainerAdv13.TabIndex = 17;
+            this.splitContainerAdv13.Text = "splitContainerAdv13";
+            // 
+            // groupBox25
+            // 
+            this.groupBox25.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.groupBox25.Controls.Add(this.label49);
+            this.groupBox25.Controls.Add(this.label50);
+            this.groupBox25.Controls.Add(this.label51);
+            this.groupBox25.Controls.Add(this.metroSetComboBox34);
+            this.groupBox25.Controls.Add(this.metroSetComboBox35);
+            this.groupBox25.Controls.Add(this.metroSetComboBox36);
+            this.groupBox25.ForeColor = System.Drawing.SystemColors.Info;
+            this.groupBox25.Location = new System.Drawing.Point(20, 102);
+            this.groupBox25.Name = "groupBox25";
+            this.groupBox25.Size = new System.Drawing.Size(290, 609);
+            this.groupBox25.TabIndex = 14;
+            this.groupBox25.TabStop = false;
+            this.groupBox25.Text = "Data Fields";
+            // 
+            // label49
+            // 
+            this.label49.AutoSize = true;
+            this.label49.Location = new System.Drawing.Point(15, 362);
+            this.label49.Name = "label49";
+            this.label49.Padding = new System.Windows.Forms.Padding(1);
+            this.label49.Size = new System.Drawing.Size(62, 22);
+            this.label49.TabIndex = 7;
+            this.label49.Text = "label49";
+            // 
+            // label50
+            // 
+            this.label50.AutoSize = true;
+            this.label50.Location = new System.Drawing.Point(15, 217);
+            this.label50.Name = "label50";
+            this.label50.Padding = new System.Windows.Forms.Padding(1);
+            this.label50.Size = new System.Drawing.Size(62, 22);
+            this.label50.TabIndex = 6;
+            this.label50.Text = "label50";
+            // 
+            // label51
+            // 
+            this.label51.AutoSize = true;
+            this.label51.Location = new System.Drawing.Point(15, 67);
+            this.label51.Name = "label51";
+            this.label51.Padding = new System.Windows.Forms.Padding(1);
+            this.label51.Size = new System.Drawing.Size(81, 22);
+            this.label51.TabIndex = 5;
+            this.label51.Text = "Database";
+            // 
+            // metroSetComboBox34
+            // 
+            this.metroSetComboBox34.AllowDrop = true;
+            this.metroSetComboBox34.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.metroSetComboBox34.BackColor = System.Drawing.Color.Transparent;
+            this.metroSetComboBox34.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.metroSetComboBox34.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.metroSetComboBox34.CausesValidation = false;
+            this.metroSetComboBox34.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.metroSetComboBox34.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.metroSetComboBox34.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.metroSetComboBox34.DisplayMember = "Fund";
+            this.metroSetComboBox34.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.metroSetComboBox34.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.metroSetComboBox34.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.metroSetComboBox34.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.metroSetComboBox34.FormattingEnabled = true;
+            this.metroSetComboBox34.ItemHeight = 30;
+            this.metroSetComboBox34.Location = new System.Drawing.Point(19, 387);
+            this.metroSetComboBox34.MaxDropDownItems = 20;
+            this.metroSetComboBox34.Name = "metroSetComboBox34";
+            this.metroSetComboBox34.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.metroSetComboBox34.SelectedItemForeColor = System.Drawing.Color.White;
+            this.metroSetComboBox34.Size = new System.Drawing.Size(247, 36);
+            this.metroSetComboBox34.Style = MetroSet_UI.Design.Style.Dark;
+            this.metroSetComboBox34.StyleManager = null;
+            this.metroSetComboBox34.TabIndex = 2;
+            this.metroSetComboBox34.ThemeAuthor = "Narwin";
+            this.metroSetComboBox34.ThemeName = "MetroDark";
+            this.metroSetComboBox34.ValueMember = "Fund";
+            // 
+            // metroSetComboBox35
+            // 
+            this.metroSetComboBox35.AllowDrop = true;
+            this.metroSetComboBox35.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.metroSetComboBox35.BackColor = System.Drawing.Color.Transparent;
+            this.metroSetComboBox35.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.metroSetComboBox35.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.metroSetComboBox35.CausesValidation = false;
+            this.metroSetComboBox35.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.metroSetComboBox35.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.metroSetComboBox35.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.metroSetComboBox35.DisplayMember = "Fund";
+            this.metroSetComboBox35.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.metroSetComboBox35.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.metroSetComboBox35.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.metroSetComboBox35.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.metroSetComboBox35.FormattingEnabled = true;
+            this.metroSetComboBox35.ItemHeight = 30;
+            this.metroSetComboBox35.Location = new System.Drawing.Point(19, 242);
+            this.metroSetComboBox35.MaxDropDownItems = 20;
+            this.metroSetComboBox35.Name = "metroSetComboBox35";
+            this.metroSetComboBox35.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.metroSetComboBox35.SelectedItemForeColor = System.Drawing.Color.White;
+            this.metroSetComboBox35.Size = new System.Drawing.Size(247, 36);
+            this.metroSetComboBox35.Style = MetroSet_UI.Design.Style.Dark;
+            this.metroSetComboBox35.StyleManager = null;
+            this.metroSetComboBox35.TabIndex = 1;
+            this.metroSetComboBox35.ThemeAuthor = "Narwin";
+            this.metroSetComboBox35.ThemeName = "MetroDark";
+            this.metroSetComboBox35.ValueMember = "Fund";
+            // 
+            // metroSetComboBox36
+            // 
+            this.metroSetComboBox36.AllowDrop = true;
+            this.metroSetComboBox36.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.metroSetComboBox36.BackColor = System.Drawing.Color.Transparent;
+            this.metroSetComboBox36.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.metroSetComboBox36.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.metroSetComboBox36.CausesValidation = false;
+            this.metroSetComboBox36.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.metroSetComboBox36.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.metroSetComboBox36.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.metroSetComboBox36.DisplayMember = "Fund";
+            this.metroSetComboBox36.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.metroSetComboBox36.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.metroSetComboBox36.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.metroSetComboBox36.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.metroSetComboBox36.FormattingEnabled = true;
+            this.metroSetComboBox36.ItemHeight = 30;
+            this.metroSetComboBox36.Location = new System.Drawing.Point(19, 92);
+            this.metroSetComboBox36.MaxDropDownItems = 20;
+            this.metroSetComboBox36.Name = "metroSetComboBox36";
+            this.metroSetComboBox36.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.metroSetComboBox36.SelectedItemForeColor = System.Drawing.Color.White;
+            this.metroSetComboBox36.Size = new System.Drawing.Size(247, 36);
+            this.metroSetComboBox36.Style = MetroSet_UI.Design.Style.Dark;
+            this.metroSetComboBox36.StyleManager = null;
+            this.metroSetComboBox36.TabIndex = 0;
+            this.metroSetComboBox36.ThemeAuthor = "Narwin";
+            this.metroSetComboBox36.ThemeName = "MetroDark";
+            this.metroSetComboBox36.ValueMember = "Fund";
+            // 
+            // groupBox26
+            // 
+            this.groupBox26.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.groupBox26.Controls.Add(this.label52);
+            this.groupBox26.Controls.Add(this.button85);
+            this.groupBox26.Controls.Add(this.button86);
+            this.groupBox26.Controls.Add(this.metroPanel13);
+            this.groupBox26.Controls.Add(this.button87);
+            this.groupBox26.Controls.Add(this.button88);
+            this.groupBox26.Controls.Add(this.button89);
+            this.groupBox26.Controls.Add(this.button90);
+            this.groupBox26.Controls.Add(this.button91);
+            this.groupBox26.ForeColor = System.Drawing.SystemColors.Info;
+            this.groupBox26.Location = new System.Drawing.Point(22, 102);
+            this.groupBox26.Name = "groupBox26";
+            this.groupBox26.Size = new System.Drawing.Size(1189, 609);
+            this.groupBox26.TabIndex = 5;
+            this.groupBox26.TabStop = false;
+            this.groupBox26.Text = "Database";
+            // 
+            // label52
+            // 
+            this.label52.AutoSize = true;
+            this.label52.Location = new System.Drawing.Point(965, 58);
+            this.label52.Name = "label52";
+            this.label52.Padding = new System.Windows.Forms.Padding(1);
+            this.label52.Size = new System.Drawing.Size(62, 22);
+            this.label52.TabIndex = 86;
+            this.label52.Text = "label52";
+            // 
+            // button85
+            // 
+            this.button85.BackColor = System.Drawing.Color.Transparent;
+            this.button85.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button85.FlatAppearance.BorderSize = 0;
+            this.button85.FlatAppearance.MouseDownBackColor = System.Drawing.Color.PowderBlue;
+            this.button85.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.button85.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button85.ForeColor = System.Drawing.SystemColors.Info;
+            this.button85.Image = ((System.Drawing.Image)(resources.GetObject("button85.Image")));
+            this.button85.Location = new System.Drawing.Point(1016, 510);
+            this.button85.Name = "button85";
+            this.button85.Size = new System.Drawing.Size(94, 60);
+            this.button85.TabIndex = 84;
+            this.button85.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button85.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button85.UseVisualStyleBackColor = false;
+            // 
+            // button86
+            // 
+            this.button86.BackColor = System.Drawing.Color.Transparent;
+            this.button86.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button86.FlatAppearance.BorderSize = 0;
+            this.button86.FlatAppearance.MouseDownBackColor = System.Drawing.Color.PowderBlue;
+            this.button86.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.button86.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button86.ForeColor = System.Drawing.SystemColors.Info;
+            this.button86.Image = ((System.Drawing.Image)(resources.GetObject("button86.Image")));
+            this.button86.Location = new System.Drawing.Point(854, 510);
+            this.button86.Name = "button86";
+            this.button86.Size = new System.Drawing.Size(94, 60);
+            this.button86.TabIndex = 70;
+            this.button86.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button86.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button86.UseVisualStyleBackColor = false;
+            // 
+            // metroPanel13
+            // 
+            this.metroPanel13.Controls.Add(this.EmployeeNavigator);
+            this.metroPanel13.Controls.Add(this.EmployeeGrid);
+            this.metroPanel13.HorizontalScrollbarBarColor = true;
+            this.metroPanel13.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroPanel13.HorizontalScrollbarSize = 10;
+            this.metroPanel13.Location = new System.Drawing.Point(49, 83);
+            this.metroPanel13.Name = "metroPanel13";
+            this.metroPanel13.Size = new System.Drawing.Size(1073, 388);
+            this.metroPanel13.TabIndex = 5;
+            this.metroPanel13.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.metroPanel13.VerticalScrollbarBarColor = true;
+            this.metroPanel13.VerticalScrollbarHighlightOnWheel = false;
+            this.metroPanel13.VerticalScrollbarSize = 10;
+            // 
+            // EmployeeNavigator
+            // 
+            this.EmployeeNavigator.AddNewItem = null;
+            this.EmployeeNavigator.BackColor = System.Drawing.Color.Transparent;
+            this.EmployeeNavigator.CountItem = null;
+            this.EmployeeNavigator.DeleteItem = this.toolStripButton48;
+            this.EmployeeNavigator.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.EmployeeNavigator.ImageScalingSize = new System.Drawing.Size(24, 20);
+            this.EmployeeNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripButton49,
+            this.toolStripSeparator12,
+            this.toolStripTextBox12,
+            this.toolStripButton50,
+            this.toolStripButton48,
+            this.toolStripButton51});
+            this.EmployeeNavigator.Location = new System.Drawing.Point(0, 357);
+            this.EmployeeNavigator.MoveFirstItem = null;
+            this.EmployeeNavigator.MoveLastItem = this.toolStripButton50;
+            this.EmployeeNavigator.MoveNextItem = null;
+            this.EmployeeNavigator.MovePreviousItem = this.toolStripButton49;
+            this.EmployeeNavigator.Name = "EmployeeNavigator";
+            this.EmployeeNavigator.PositionItem = this.toolStripTextBox12;
+            this.EmployeeNavigator.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
+            this.EmployeeNavigator.Size = new System.Drawing.Size(1073, 31);
+            this.EmployeeNavigator.TabIndex = 87;
+            this.EmployeeNavigator.Text = "bindingNavigator1";
+            // 
+            // toolStripButton48
+            // 
+            this.toolStripButton48.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton48.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton48.Image")));
+            this.toolStripButton48.Name = "toolStripButton48";
+            this.toolStripButton48.RightToLeftAutoMirrorImage = true;
+            this.toolStripButton48.Size = new System.Drawing.Size(28, 28);
+            this.toolStripButton48.Text = "Delete";
+            // 
+            // toolStripButton49
+            // 
+            this.toolStripButton49.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton49.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton49.Image")));
+            this.toolStripButton49.Name = "toolStripButton49";
+            this.toolStripButton49.RightToLeftAutoMirrorImage = true;
+            this.toolStripButton49.Size = new System.Drawing.Size(28, 28);
+            this.toolStripButton49.Text = "Move previous";
+            // 
+            // toolStripSeparator12
+            // 
+            this.toolStripSeparator12.Name = "toolStripSeparator12";
+            this.toolStripSeparator12.Size = new System.Drawing.Size(6, 31);
+            // 
+            // toolStripTextBox12
+            // 
+            this.toolStripTextBox12.AccessibleName = "Position";
+            this.toolStripTextBox12.AutoSize = false;
+            this.toolStripTextBox12.Name = "toolStripTextBox12";
+            this.toolStripTextBox12.Size = new System.Drawing.Size(50, 31);
+            this.toolStripTextBox12.Text = "0";
+            this.toolStripTextBox12.ToolTipText = "Current position";
+            // 
+            // toolStripButton50
+            // 
+            this.toolStripButton50.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton50.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton50.Image")));
+            this.toolStripButton50.Name = "toolStripButton50";
+            this.toolStripButton50.RightToLeftAutoMirrorImage = true;
+            this.toolStripButton50.Size = new System.Drawing.Size(28, 28);
+            this.toolStripButton50.Text = "Move last";
+            // 
+            // toolStripButton51
+            // 
+            this.toolStripButton51.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton51.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton51.Image")));
+            this.toolStripButton51.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton51.Name = "toolStripButton51";
+            this.toolStripButton51.Size = new System.Drawing.Size(28, 28);
+            this.toolStripButton51.Text = "toolStripButton3";
+            // 
+            // EmployeeGrid
+            // 
+            this.EmployeeGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.EmployeeGrid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.EmployeeGrid.BackgroundColor = System.Drawing.Color.SlateGray;
+            this.EmployeeGrid.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            dataGridViewCellStyle49.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle49.BackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle49.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle49.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle49.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle49.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle49.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.EmployeeGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle49;
+            dataGridViewCellStyle50.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle50.BackColor = System.Drawing.Color.LightSteelBlue;
+            dataGridViewCellStyle50.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle50.ForeColor = System.Drawing.SystemColors.Info;
+            dataGridViewCellStyle50.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle50.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle50.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.EmployeeGrid.DefaultCellStyle = dataGridViewCellStyle50;
+            this.EmployeeGrid.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.EmployeeGrid.EnableHeadersVisualStyles = false;
+            this.EmployeeGrid.GridColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.EmployeeGrid.Location = new System.Drawing.Point(0, 0);
+            this.EmployeeGrid.Name = "EmployeeGrid";
+            dataGridViewCellStyle51.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle51.BackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle51.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle51.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle51.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle51.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle51.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.EmployeeGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle51;
+            this.EmployeeGrid.RowHeadersWidth = 30;
+            dataGridViewCellStyle52.BackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle52.ForeColor = System.Drawing.Color.White;
+            this.EmployeeGrid.RowsDefaultCellStyle = dataGridViewCellStyle52;
+            this.EmployeeGrid.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.EmployeeGrid.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EmployeeGrid.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
+            this.EmployeeGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.EmployeeGrid.Size = new System.Drawing.Size(1073, 388);
+            this.EmployeeGrid.TabIndex = 2;
+            // 
+            // button87
+            // 
+            this.button87.BackColor = System.Drawing.Color.Transparent;
+            this.button87.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button87.FlatAppearance.BorderSize = 0;
+            this.button87.FlatAppearance.MouseDownBackColor = System.Drawing.Color.PowderBlue;
+            this.button87.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.button87.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button87.ForeColor = System.Drawing.SystemColors.Info;
+            this.button87.Image = ((System.Drawing.Image)(resources.GetObject("button87.Image")));
+            this.button87.Location = new System.Drawing.Point(70, 510);
+            this.button87.Name = "button87";
+            this.button87.Size = new System.Drawing.Size(96, 60);
+            this.button87.TabIndex = 82;
+            this.button87.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button87.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button87.UseVisualStyleBackColor = false;
+            // 
+            // button88
+            // 
+            this.button88.BackColor = System.Drawing.Color.Transparent;
+            this.button88.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button88.FlatAppearance.BorderSize = 0;
+            this.button88.FlatAppearance.MouseDownBackColor = System.Drawing.Color.PowderBlue;
+            this.button88.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.button88.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button88.ForeColor = System.Drawing.SystemColors.Info;
+            this.button88.Image = ((System.Drawing.Image)(resources.GetObject("button88.Image")));
+            this.button88.Location = new System.Drawing.Point(687, 510);
+            this.button88.Name = "button88";
+            this.button88.Size = new System.Drawing.Size(94, 60);
+            this.button88.TabIndex = 83;
+            this.button88.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button88.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button88.UseVisualStyleBackColor = false;
+            // 
+            // button89
+            // 
+            this.button89.BackColor = System.Drawing.Color.Transparent;
+            this.button89.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button89.FlatAppearance.BorderSize = 0;
+            this.button89.FlatAppearance.MouseDownBackColor = System.Drawing.Color.PowderBlue;
+            this.button89.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.button89.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button89.ForeColor = System.Drawing.SystemColors.Info;
+            this.button89.Image = ((System.Drawing.Image)(resources.GetObject("button89.Image")));
+            this.button89.Location = new System.Drawing.Point(205, 510);
+            this.button89.Name = "button89";
+            this.button89.Size = new System.Drawing.Size(96, 60);
+            this.button89.TabIndex = 85;
+            this.button89.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button89.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button89.UseVisualStyleBackColor = false;
+            // 
+            // button90
+            // 
+            this.button90.BackColor = System.Drawing.Color.Transparent;
+            this.button90.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button90.FlatAppearance.BorderSize = 0;
+            this.button90.FlatAppearance.MouseDownBackColor = System.Drawing.Color.PowderBlue;
+            this.button90.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.button90.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button90.ForeColor = System.Drawing.SystemColors.Info;
+            this.button90.Image = ((System.Drawing.Image)(resources.GetObject("button90.Image")));
+            this.button90.Location = new System.Drawing.Point(525, 510);
+            this.button90.Name = "button90";
+            this.button90.Size = new System.Drawing.Size(94, 60);
+            this.button90.TabIndex = 71;
+            this.button90.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button90.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button90.UseVisualStyleBackColor = false;
+            // 
+            // button91
+            // 
+            this.button91.BackColor = System.Drawing.Color.Transparent;
+            this.button91.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button91.FlatAppearance.BorderSize = 0;
+            this.button91.FlatAppearance.MouseDownBackColor = System.Drawing.Color.PowderBlue;
+            this.button91.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.button91.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button91.ForeColor = System.Drawing.SystemColors.Info;
+            this.button91.Image = ((System.Drawing.Image)(resources.GetObject("button91.Image")));
+            this.button91.Location = new System.Drawing.Point(362, 510);
+            this.button91.Name = "button91";
+            this.button91.Size = new System.Drawing.Size(94, 60);
+            this.button91.TabIndex = 81;
+            this.button91.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button91.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button91.UseVisualStyleBackColor = false;
+            // 
             // SQLiteData
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -4323,14 +6855,15 @@ namespace BudgetExecution
             this.BackColor = System.Drawing.Color.Black;
             this.BorderColor = System.Drawing.SystemColors.MenuHighlight;
             this.CaptionBarColor = System.Drawing.Color.Black;
-            this.CaptionBarHeight = 80;
+            this.CaptionBarHeight = 60;
             this.CaptionForeColor = System.Drawing.Color.Black;
             captionImage1.BackColor = System.Drawing.Color.Black;
             captionImage1.Image = ((System.Drawing.Image)(resources.GetObject("captionImage1.Image")));
+            captionImage1.Location = new System.Drawing.Point(10, 5);
             captionImage1.Name = "CaptionImage1";
-            captionImage1.Size = new System.Drawing.Size(120, 70);
+            captionImage1.Size = new System.Drawing.Size(80, 30);
             this.CaptionImages.Add(captionImage1);
-            this.ClientSize = new System.Drawing.Size(1588, 914);
+            this.ClientSize = new System.Drawing.Size(1588, 934);
             this.Controls.Add(this.tabControlAdv1);
             this.ForeColor = System.Drawing.Color.LightSteelBlue;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -4343,10 +6876,10 @@ namespace BudgetExecution
             this.groupBox2.PerformLayout();
             this.metroPanel1.ResumeLayout(false);
             this.metroPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.GridNavigator)).EndInit();
-            this.GridNavigator.ResumeLayout(false);
-            this.GridNavigator.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Grid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AccountNavigator)).EndInit();
+            this.AccountNavigator.ResumeLayout(false);
+            this.AccountNavigator.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.AccountGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.E6DataGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BindingSource)).EndInit();
             this.groupBox1.ResumeLayout(false);
@@ -4354,17 +6887,11 @@ namespace BudgetExecution
             ((System.ComponentModel.ISupportInitialize)(this.tabControlAdv1)).EndInit();
             this.tabControlAdv1.ResumeLayout(false);
             this.tabPageAdv1.ResumeLayout(false);
-            this.tabPageAdv2.ResumeLayout(false);
-            this.tabPageAdv3.ResumeLayout(false);
-            this.tabPageAdv4.ResumeLayout(false);
-            this.tabPageAdv5.ResumeLayout(false);
-            this.tabPageAdv6.ResumeLayout(false);
-            this.tabPageAdv7.ResumeLayout(false);
-            this.tabPageAdv8.ResumeLayout(false);
             this.splitContainerAdv1.Panel1.ResumeLayout(false);
             this.splitContainerAdv1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerAdv1)).EndInit();
             this.splitContainerAdv1.ResumeLayout(false);
+            this.tabPageAdv2.ResumeLayout(false);
             this.splitContainerAdv2.Panel1.ResumeLayout(false);
             this.splitContainerAdv2.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerAdv2)).EndInit();
@@ -4375,10 +6902,11 @@ namespace BudgetExecution
             this.groupBox4.PerformLayout();
             this.metroPanel2.ResumeLayout(false);
             this.metroPanel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
-            this.bindingNavigator1.ResumeLayout(false);
-            this.bindingNavigator1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AwardsNavigator)).EndInit();
+            this.AwardsNavigator.ResumeLayout(false);
+            this.AwardsNavigator.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.AwardsGrid)).EndInit();
+            this.tabPageAdv3.ResumeLayout(false);
             this.splitContainerAdv3.Panel1.ResumeLayout(false);
             this.splitContainerAdv3.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerAdv3)).EndInit();
@@ -4389,10 +6917,11 @@ namespace BudgetExecution
             this.groupBox6.PerformLayout();
             this.metroPanel3.ResumeLayout(false);
             this.metroPanel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator2)).EndInit();
-            this.bindingNavigator2.ResumeLayout(false);
-            this.bindingNavigator2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BudgetNavigator)).EndInit();
+            this.BudgetNavigator.ResumeLayout(false);
+            this.BudgetNavigator.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.BudgetDocumentGrid)).EndInit();
+            this.tabPageAdv4.ResumeLayout(false);
             this.splitContainerAdv4.Panel1.ResumeLayout(false);
             this.splitContainerAdv4.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerAdv4)).EndInit();
@@ -4403,10 +6932,11 @@ namespace BudgetExecution
             this.groupBox8.PerformLayout();
             this.metroPanel4.ResumeLayout(false);
             this.metroPanel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator3)).EndInit();
-            this.bindingNavigator3.ResumeLayout(false);
-            this.bindingNavigator3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DivisionNavigator)).EndInit();
+            this.DivisionNavigator.ResumeLayout(false);
+            this.DivisionNavigator.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DivisionAccountGrid)).EndInit();
+            this.tabPageAdv5.ResumeLayout(false);
             this.splitContainerAdv5.Panel1.ResumeLayout(false);
             this.splitContainerAdv5.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerAdv5)).EndInit();
@@ -4417,10 +6947,11 @@ namespace BudgetExecution
             this.groupBox10.PerformLayout();
             this.metroPanel5.ResumeLayout(false);
             this.metroPanel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator4)).EndInit();
-            this.bindingNavigator4.ResumeLayout(false);
-            this.bindingNavigator4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RegionAccountNavigator)).EndInit();
+            this.RegionAccountNavigator.ResumeLayout(false);
+            this.RegionAccountNavigator.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.RegionAccountsGrid)).EndInit();
+            this.tabPageAdv6.ResumeLayout(false);
             this.splitContainerAdv6.Panel1.ResumeLayout(false);
             this.splitContainerAdv6.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerAdv6)).EndInit();
@@ -4431,10 +6962,11 @@ namespace BudgetExecution
             this.groupBox12.PerformLayout();
             this.metroPanel6.ResumeLayout(false);
             this.metroPanel6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator5)).EndInit();
-            this.bindingNavigator5.ResumeLayout(false);
-            this.bindingNavigator5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.TransferNavigator)).EndInit();
+            this.TransferNavigator.ResumeLayout(false);
+            this.TransferNavigator.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.TransferGrid)).EndInit();
+            this.tabPageAdv7.ResumeLayout(false);
             this.splitContainerAdv7.Panel1.ResumeLayout(false);
             this.splitContainerAdv7.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerAdv7)).EndInit();
@@ -4445,10 +6977,11 @@ namespace BudgetExecution
             this.groupBox14.PerformLayout();
             this.metroPanel7.ResumeLayout(false);
             this.metroPanel7.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator6)).EndInit();
-            this.bindingNavigator6.ResumeLayout(false);
-            this.bindingNavigator6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ObligationNavigator)).EndInit();
+            this.ObligationNavigator.ResumeLayout(false);
+            this.ObligationNavigator.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ObligationGrid)).EndInit();
+            this.tabPageAdv8.ResumeLayout(false);
             this.splitContainerAdv8.Panel1.ResumeLayout(false);
             this.splitContainerAdv8.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerAdv8)).EndInit();
@@ -4459,16 +6992,91 @@ namespace BudgetExecution
             this.groupBox16.PerformLayout();
             this.metroPanel8.ResumeLayout(false);
             this.metroPanel8.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator7)).EndInit();
-            this.bindingNavigator7.ResumeLayout(false);
-            this.bindingNavigator7.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.FundsNavigator)).EndInit();
+            this.FundsNavigator.ResumeLayout(false);
+            this.FundsNavigator.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.FundGrid)).EndInit();
+            this.tabPageAdv9.ResumeLayout(false);
+            this.tabPageAdv10.ResumeLayout(false);
+            this.tabPageAdv11.ResumeLayout(false);
+            this.tabPageAdv12.ResumeLayout(false);
+            this.tabPageAdv13.ResumeLayout(false);
+            this.splitContainerAdv9.Panel1.ResumeLayout(false);
+            this.splitContainerAdv9.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainerAdv9)).EndInit();
+            this.splitContainerAdv9.ResumeLayout(false);
+            this.groupBox17.ResumeLayout(false);
+            this.groupBox17.PerformLayout();
+            this.groupBox18.ResumeLayout(false);
+            this.groupBox18.PerformLayout();
+            this.metroPanel9.ResumeLayout(false);
+            this.metroPanel9.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DivisionAccountNavigator)).EndInit();
+            this.DivisionAccountNavigator.ResumeLayout(false);
+            this.DivisionAccountNavigator.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DivisionGrid)).EndInit();
+            this.splitContainerAdv10.Panel1.ResumeLayout(false);
+            this.splitContainerAdv10.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainerAdv10)).EndInit();
+            this.splitContainerAdv10.ResumeLayout(false);
+            this.groupBox19.ResumeLayout(false);
+            this.groupBox19.PerformLayout();
+            this.groupBox20.ResumeLayout(false);
+            this.groupBox20.PerformLayout();
+            this.metroPanel10.ResumeLayout(false);
+            this.metroPanel10.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PayrollNavigator)).EndInit();
+            this.PayrollNavigator.ResumeLayout(false);
+            this.PayrollNavigator.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PayrollGrid)).EndInit();
+            this.splitContainerAdv11.Panel1.ResumeLayout(false);
+            this.splitContainerAdv11.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainerAdv11)).EndInit();
+            this.splitContainerAdv11.ResumeLayout(false);
+            this.groupBox21.ResumeLayout(false);
+            this.groupBox21.PerformLayout();
+            this.groupBox22.ResumeLayout(false);
+            this.groupBox22.PerformLayout();
+            this.metroPanel11.ResumeLayout(false);
+            this.metroPanel11.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.SiteNavigator)).EndInit();
+            this.SiteNavigator.ResumeLayout(false);
+            this.SiteNavigator.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.SiteGrid)).EndInit();
+            this.splitContainerAdv12.Panel1.ResumeLayout(false);
+            this.splitContainerAdv12.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainerAdv12)).EndInit();
+            this.splitContainerAdv12.ResumeLayout(false);
+            this.groupBox23.ResumeLayout(false);
+            this.groupBox23.PerformLayout();
+            this.groupBox24.ResumeLayout(false);
+            this.groupBox24.PerformLayout();
+            this.metroPanel12.ResumeLayout(false);
+            this.metroPanel12.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ReimbursableNavigator)).EndInit();
+            this.ReimbursableNavigator.ResumeLayout(false);
+            this.ReimbursableNavigator.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ReimbursableGrid)).EndInit();
+            this.splitContainerAdv13.Panel1.ResumeLayout(false);
+            this.splitContainerAdv13.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainerAdv13)).EndInit();
+            this.splitContainerAdv13.ResumeLayout(false);
+            this.groupBox25.ResumeLayout(false);
+            this.groupBox25.PerformLayout();
+            this.groupBox26.ResumeLayout(false);
+            this.groupBox26.PerformLayout();
+            this.metroPanel13.ResumeLayout(false);
+            this.metroPanel13.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.EmployeeNavigator)).EndInit();
+            this.EmployeeNavigator.ResumeLayout(false);
+            this.EmployeeNavigator.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.EmployeeGrid)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.DataGridView Grid;
+        private System.Windows.Forms.DataGridView AccountGrid;
         private System.Windows.Forms.GroupBox groupBox2;
         private Syncfusion.Windows.Forms.Grid.GridDataBoundGrid E6DataGrid;
         private Syncfusion.Windows.Forms.Tools.toolstripitem toolstripitem1;
@@ -4501,7 +7109,7 @@ namespace BudgetExecution
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.BindingNavigator GridNavigator;
+        private System.Windows.Forms.BindingNavigator AccountNavigator;
         private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem1;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMovePreviousItem1;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator3;
@@ -4533,14 +7141,14 @@ namespace BudgetExecution
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button9;
         private MetroFramework.Controls.MetroPanel metroPanel2;
-        private System.Windows.Forms.BindingNavigator bindingNavigator1;
+        private System.Windows.Forms.BindingNavigator AwardsNavigator;
         private System.Windows.Forms.ToolStripButton toolStripButton4;
         private System.Windows.Forms.ToolStripButton toolStripButton5;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripTextBox toolStripTextBox1;
         private System.Windows.Forms.ToolStripButton toolStripButton6;
         private System.Windows.Forms.ToolStripButton toolStripButton7;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView AwardsGrid;
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.Button button12;
@@ -4559,14 +7167,14 @@ namespace BudgetExecution
         private System.Windows.Forms.Button button15;
         private System.Windows.Forms.Button button16;
         private MetroFramework.Controls.MetroPanel metroPanel3;
-        private System.Windows.Forms.BindingNavigator bindingNavigator2;
+        private System.Windows.Forms.BindingNavigator BudgetNavigator;
         private System.Windows.Forms.ToolStripButton toolStripButton8;
         private System.Windows.Forms.ToolStripButton toolStripButton9;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripTextBox toolStripTextBox2;
         private System.Windows.Forms.ToolStripButton toolStripButton10;
         private System.Windows.Forms.ToolStripButton toolStripButton11;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView BudgetDocumentGrid;
         private System.Windows.Forms.Button button17;
         private System.Windows.Forms.Button button18;
         private System.Windows.Forms.Button button19;
@@ -4585,14 +7193,14 @@ namespace BudgetExecution
         private System.Windows.Forms.Button button22;
         private System.Windows.Forms.Button button23;
         private MetroFramework.Controls.MetroPanel metroPanel4;
-        private System.Windows.Forms.BindingNavigator bindingNavigator3;
+        private System.Windows.Forms.BindingNavigator DivisionNavigator;
         private System.Windows.Forms.ToolStripButton toolStripButton12;
         private System.Windows.Forms.ToolStripButton toolStripButton13;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.ToolStripTextBox toolStripTextBox3;
         private System.Windows.Forms.ToolStripButton toolStripButton14;
         private System.Windows.Forms.ToolStripButton toolStripButton15;
-        private System.Windows.Forms.DataGridView dataGridView3;
+        private System.Windows.Forms.DataGridView DivisionAccountGrid;
         private System.Windows.Forms.Button button24;
         private System.Windows.Forms.Button button25;
         private System.Windows.Forms.Button button26;
@@ -4611,14 +7219,14 @@ namespace BudgetExecution
         private System.Windows.Forms.Button button29;
         private System.Windows.Forms.Button button30;
         private MetroFramework.Controls.MetroPanel metroPanel5;
-        private System.Windows.Forms.BindingNavigator bindingNavigator4;
+        private System.Windows.Forms.BindingNavigator RegionAccountNavigator;
         private System.Windows.Forms.ToolStripButton toolStripButton16;
         private System.Windows.Forms.ToolStripButton toolStripButton17;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
         private System.Windows.Forms.ToolStripTextBox toolStripTextBox4;
         private System.Windows.Forms.ToolStripButton toolStripButton18;
         private System.Windows.Forms.ToolStripButton toolStripButton19;
-        private System.Windows.Forms.DataGridView dataGridView4;
+        private System.Windows.Forms.DataGridView RegionAccountsGrid;
         private System.Windows.Forms.Button button31;
         private System.Windows.Forms.Button button32;
         private System.Windows.Forms.Button button33;
@@ -4637,14 +7245,14 @@ namespace BudgetExecution
         private System.Windows.Forms.Button button36;
         private System.Windows.Forms.Button button37;
         private MetroFramework.Controls.MetroPanel metroPanel6;
-        private System.Windows.Forms.BindingNavigator bindingNavigator5;
+        private System.Windows.Forms.BindingNavigator TransferNavigator;
         private System.Windows.Forms.ToolStripButton toolStripButton20;
         private System.Windows.Forms.ToolStripButton toolStripButton21;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
         private System.Windows.Forms.ToolStripTextBox toolStripTextBox5;
         private System.Windows.Forms.ToolStripButton toolStripButton22;
         private System.Windows.Forms.ToolStripButton toolStripButton23;
-        private System.Windows.Forms.DataGridView dataGridView5;
+        private System.Windows.Forms.DataGridView TransferGrid;
         private System.Windows.Forms.Button button38;
         private System.Windows.Forms.Button button39;
         private System.Windows.Forms.Button button40;
@@ -4663,14 +7271,14 @@ namespace BudgetExecution
         private System.Windows.Forms.Button button43;
         private System.Windows.Forms.Button button44;
         private MetroFramework.Controls.MetroPanel metroPanel7;
-        private System.Windows.Forms.BindingNavigator bindingNavigator6;
+        private System.Windows.Forms.BindingNavigator ObligationNavigator;
         private System.Windows.Forms.ToolStripButton toolStripButton24;
         private System.Windows.Forms.ToolStripButton toolStripButton25;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator6;
         private System.Windows.Forms.ToolStripTextBox toolStripTextBox6;
         private System.Windows.Forms.ToolStripButton toolStripButton26;
         private System.Windows.Forms.ToolStripButton toolStripButton27;
-        private System.Windows.Forms.DataGridView dataGridView6;
+        private System.Windows.Forms.DataGridView ObligationGrid;
         private System.Windows.Forms.Button button45;
         private System.Windows.Forms.Button button46;
         private System.Windows.Forms.Button button47;
@@ -4689,18 +7297,152 @@ namespace BudgetExecution
         private System.Windows.Forms.Button button50;
         private System.Windows.Forms.Button button51;
         private MetroFramework.Controls.MetroPanel metroPanel8;
-        private System.Windows.Forms.BindingNavigator bindingNavigator7;
+        private System.Windows.Forms.BindingNavigator FundsNavigator;
         private System.Windows.Forms.ToolStripButton toolStripButton28;
         private System.Windows.Forms.ToolStripButton toolStripButton29;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator7;
         private System.Windows.Forms.ToolStripTextBox toolStripTextBox7;
         private System.Windows.Forms.ToolStripButton toolStripButton30;
         private System.Windows.Forms.ToolStripButton toolStripButton31;
-        private System.Windows.Forms.DataGridView dataGridView7;
+        private System.Windows.Forms.DataGridView FundGrid;
         private System.Windows.Forms.Button button52;
         private System.Windows.Forms.Button button53;
         private System.Windows.Forms.Button button54;
         private System.Windows.Forms.Button button55;
         private System.Windows.Forms.Button button56;
+        private Syncfusion.Windows.Forms.Tools.TabPageAdv tabPageAdv10;
+        private Syncfusion.Windows.Forms.Tools.TabPageAdv tabPageAdv11;
+        private Syncfusion.Windows.Forms.Tools.TabPageAdv tabPageAdv12;
+        private Syncfusion.Windows.Forms.Tools.TabPageAdv tabPageAdv13;
+        private Syncfusion.Windows.Forms.Tools.SplitContainerAdv splitContainerAdv9;
+        private System.Windows.Forms.GroupBox groupBox17;
+        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.Label label35;
+        private MetroSet_UI.Controls.MetroSetComboBox metroSetComboBox22;
+        private MetroSet_UI.Controls.MetroSetComboBox metroSetComboBox23;
+        private MetroSet_UI.Controls.MetroSetComboBox metroSetComboBox24;
+        private System.Windows.Forms.GroupBox groupBox18;
+        private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.Button button57;
+        private System.Windows.Forms.Button button58;
+        private MetroFramework.Controls.MetroPanel metroPanel9;
+        private System.Windows.Forms.BindingNavigator DivisionAccountNavigator;
+        private System.Windows.Forms.ToolStripButton toolStripButton32;
+        private System.Windows.Forms.ToolStripButton toolStripButton33;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator8;
+        private System.Windows.Forms.ToolStripTextBox toolStripTextBox8;
+        private System.Windows.Forms.ToolStripButton toolStripButton34;
+        private System.Windows.Forms.ToolStripButton toolStripButton35;
+        private System.Windows.Forms.DataGridView DivisionGrid;
+        private System.Windows.Forms.Button button59;
+        private System.Windows.Forms.Button button60;
+        private System.Windows.Forms.Button button61;
+        private System.Windows.Forms.Button button62;
+        private System.Windows.Forms.Button button63;
+        private Syncfusion.Windows.Forms.Tools.SplitContainerAdv splitContainerAdv10;
+        private System.Windows.Forms.GroupBox groupBox19;
+        private System.Windows.Forms.Label label37;
+        private System.Windows.Forms.Label label38;
+        private System.Windows.Forms.Label label39;
+        private MetroSet_UI.Controls.MetroSetComboBox metroSetComboBox25;
+        private MetroSet_UI.Controls.MetroSetComboBox metroSetComboBox26;
+        private MetroSet_UI.Controls.MetroSetComboBox metroSetComboBox27;
+        private System.Windows.Forms.GroupBox groupBox20;
+        private System.Windows.Forms.Label label40;
+        private System.Windows.Forms.Button button64;
+        private System.Windows.Forms.Button button65;
+        private MetroFramework.Controls.MetroPanel metroPanel10;
+        private System.Windows.Forms.BindingNavigator PayrollNavigator;
+        private System.Windows.Forms.ToolStripButton toolStripButton36;
+        private System.Windows.Forms.ToolStripButton toolStripButton37;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator9;
+        private System.Windows.Forms.ToolStripTextBox toolStripTextBox9;
+        private System.Windows.Forms.ToolStripButton toolStripButton38;
+        private System.Windows.Forms.ToolStripButton toolStripButton39;
+        private System.Windows.Forms.DataGridView PayrollGrid;
+        private System.Windows.Forms.Button button66;
+        private System.Windows.Forms.Button button67;
+        private System.Windows.Forms.Button button68;
+        private System.Windows.Forms.Button button69;
+        private System.Windows.Forms.Button button70;
+        private Syncfusion.Windows.Forms.Tools.SplitContainerAdv splitContainerAdv11;
+        private System.Windows.Forms.GroupBox groupBox21;
+        private System.Windows.Forms.Label label41;
+        private System.Windows.Forms.Label label42;
+        private System.Windows.Forms.Label label43;
+        private MetroSet_UI.Controls.MetroSetComboBox metroSetComboBox28;
+        private MetroSet_UI.Controls.MetroSetComboBox metroSetComboBox29;
+        private MetroSet_UI.Controls.MetroSetComboBox metroSetComboBox30;
+        private System.Windows.Forms.GroupBox groupBox22;
+        private System.Windows.Forms.Label label44;
+        private System.Windows.Forms.Button button71;
+        private System.Windows.Forms.Button button72;
+        private MetroFramework.Controls.MetroPanel metroPanel11;
+        private System.Windows.Forms.BindingNavigator SiteNavigator;
+        private System.Windows.Forms.ToolStripButton toolStripButton40;
+        private System.Windows.Forms.ToolStripButton toolStripButton41;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator10;
+        private System.Windows.Forms.ToolStripTextBox toolStripTextBox10;
+        private System.Windows.Forms.ToolStripButton toolStripButton42;
+        private System.Windows.Forms.ToolStripButton toolStripButton43;
+        private System.Windows.Forms.DataGridView SiteGrid;
+        private System.Windows.Forms.Button button73;
+        private System.Windows.Forms.Button button74;
+        private System.Windows.Forms.Button button75;
+        private System.Windows.Forms.Button button76;
+        private System.Windows.Forms.Button button77;
+        private Syncfusion.Windows.Forms.Tools.SplitContainerAdv splitContainerAdv12;
+        private System.Windows.Forms.GroupBox groupBox23;
+        private System.Windows.Forms.Label label45;
+        private System.Windows.Forms.Label label46;
+        private System.Windows.Forms.Label label47;
+        private MetroSet_UI.Controls.MetroSetComboBox metroSetComboBox31;
+        private MetroSet_UI.Controls.MetroSetComboBox metroSetComboBox32;
+        private MetroSet_UI.Controls.MetroSetComboBox metroSetComboBox33;
+        private System.Windows.Forms.GroupBox groupBox24;
+        private System.Windows.Forms.Label label48;
+        private System.Windows.Forms.Button button78;
+        private System.Windows.Forms.Button button79;
+        private MetroFramework.Controls.MetroPanel metroPanel12;
+        private System.Windows.Forms.BindingNavigator ReimbursableNavigator;
+        private System.Windows.Forms.ToolStripButton toolStripButton44;
+        private System.Windows.Forms.ToolStripButton toolStripButton45;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator11;
+        private System.Windows.Forms.ToolStripTextBox toolStripTextBox11;
+        private System.Windows.Forms.ToolStripButton toolStripButton46;
+        private System.Windows.Forms.ToolStripButton toolStripButton47;
+        private System.Windows.Forms.DataGridView ReimbursableGrid;
+        private System.Windows.Forms.Button button80;
+        private System.Windows.Forms.Button button81;
+        private System.Windows.Forms.Button button82;
+        private System.Windows.Forms.Button button83;
+        private System.Windows.Forms.Button button84;
+        private Syncfusion.Windows.Forms.Tools.SplitContainerAdv splitContainerAdv13;
+        private System.Windows.Forms.GroupBox groupBox25;
+        private System.Windows.Forms.Label label49;
+        private System.Windows.Forms.Label label50;
+        private System.Windows.Forms.Label label51;
+        private MetroSet_UI.Controls.MetroSetComboBox metroSetComboBox34;
+        private MetroSet_UI.Controls.MetroSetComboBox metroSetComboBox35;
+        private MetroSet_UI.Controls.MetroSetComboBox metroSetComboBox36;
+        private System.Windows.Forms.GroupBox groupBox26;
+        private System.Windows.Forms.Label label52;
+        private System.Windows.Forms.Button button85;
+        private System.Windows.Forms.Button button86;
+        private MetroFramework.Controls.MetroPanel metroPanel13;
+        private System.Windows.Forms.BindingNavigator EmployeeNavigator;
+        private System.Windows.Forms.ToolStripButton toolStripButton48;
+        private System.Windows.Forms.ToolStripButton toolStripButton49;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator12;
+        private System.Windows.Forms.ToolStripTextBox toolStripTextBox12;
+        private System.Windows.Forms.ToolStripButton toolStripButton50;
+        private System.Windows.Forms.ToolStripButton toolStripButton51;
+        private System.Windows.Forms.DataGridView EmployeeGrid;
+        private System.Windows.Forms.Button button87;
+        private System.Windows.Forms.Button button88;
+        private System.Windows.Forms.Button button89;
+        private System.Windows.Forms.Button button90;
+        private System.Windows.Forms.Button button91;
     }
 }

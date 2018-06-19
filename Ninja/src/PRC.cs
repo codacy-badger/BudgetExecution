@@ -14,14 +14,37 @@ namespace BudgetExecution
     public class PRC : IPRC, IAccount
     {
         private DataRow data;
+        private Source Source;
+        private Provider Provider;
 
         // CONSTRUCTORS
         public PRC()
         {
         }
 
+        public PRC(Source source, Provider provider)
+        {
+            Source = source;
+            Provider = provider;
+            data = new DataBuilder(source, provider).Table.AsEnumerable().Select(p => p).First();
+            ID = int.Parse(data["ID"].ToString());
+            BudgetLevel = data["BudgetLevel"].ToString();
+            RPIO = data["RPIO"].ToString();
+            BFY = data["BFY"].ToString();
+            Fund = new Fund(data["Fund"].ToString(), data["BFY"].ToString());
+            Org = new Org(data["Org"].ToString());
+            RC = new RC(data["RC"].ToString());
+            Account = new Account(Source.Accounts, Provider.SQLite, Fund.Code, data["Code"].ToString());
+            Code = Account.Code;
+            BOC = new BOC(data["BOC"].ToString());
+            Parameter = GetParamData();
+            Amount = decimal.Parse(data["Amount"].ToString());
+        }
+
         public PRC(Source source, Provider provider, Dictionary<string, object> param)
         {
+            Source = source;
+            Provider = provider;
             data = new DataBuilder(source, provider, param).Table.AsEnumerable().Select(p => p).First();
             ID = int.Parse(data["ID"].ToString());
             BudgetLevel = data["BudgetLevel"].ToString();

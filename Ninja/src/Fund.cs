@@ -11,17 +11,26 @@ namespace BudgetExecution
 
     public class Fund : IFund
     {
+        private Source Source;
+        private Provider Provider;
+
         // CONSTRUCTORS
         public Fund()
         {
         }
+        public Fund(Source source, Provider provider)
+        {
+            Source = source;
+            Provider = provider;
+            Table = new DataBuilder(Source, Provider).Table;
+        }
 
-        public Fund(string code, string bfy)
+        public Fund(string code, string bfy) : this(Source.Funds, Provider.SQLite)
         {
             Code = code;
             FiscalYear = bfy;
             Parameter = GetFundParameter(Code, FiscalYear);
-            Table = GetData(Source.Funds, Provider.SQLite, Parameter);
+            Table = GetData(Source, Provider, Parameter);
             Data = Table.Rows[0];
             ID = int.Parse(Data["ID"].ToString());
             Name = Data["Name"].ToString();
