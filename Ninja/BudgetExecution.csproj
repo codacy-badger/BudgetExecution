@@ -90,6 +90,9 @@
     <Reference Include="MakarovDev.ExpandCollapsePanel">
       <HintPath>..\lib\MakarovDev.ExpandCollapsePanel.dll</HintPath>
     </Reference>
+    <Reference Include="MaterialSkin, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialSkin.0.2.1\lib\MaterialSkin.dll</HintPath>
+    </Reference>
     <Reference Include="MetroFramework">
       <HintPath>..\..\..\..\Visual Studio 2015\Projects\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
     </Reference>
@@ -360,6 +363,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="GlobalSuppressions.cs" />
+    <Compile Include="src\Message.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Message.Designer.cs">
+      <DependentUpon>Message.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -577,6 +586,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="src\DatabaseSelection.resx">
       <DependentUpon>DatabaseSelection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Message.resx">
+      <DependentUpon>Message.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="src\SQLiteData.resx">
       <DependentUpon>SQLiteData.cs</DependentUpon>

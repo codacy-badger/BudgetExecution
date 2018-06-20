@@ -63,7 +63,6 @@ namespace BudgetExecution
             this.FIlter2 = new MetroSet_UI.Controls.MetroSetComboBox();
             this.Filter3 = new MetroSet_UI.Controls.MetroSetComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.Filter1 = new System.Windows.Forms.FlowLayoutPanel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label4 = new System.Windows.Forms.Label();
             this.button7 = new System.Windows.Forms.Button();
@@ -80,6 +79,7 @@ namespace BudgetExecution
             this.button8 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
+            this.Filter1 = new System.Windows.Forms.FlowLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)(this.E6DataGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerAdv1)).BeginInit();
@@ -239,6 +239,7 @@ namespace BudgetExecution
             // 
             // splitContainerAdv1
             // 
+            this.splitContainerAdv1.BackColor = System.Drawing.Color.Black;
             this.splitContainerAdv1.BeforeTouchSize = 7;
             this.splitContainerAdv1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainerAdv1.Location = new System.Drawing.Point(0, 0);
@@ -252,6 +253,7 @@ namespace BudgetExecution
             // splitContainerAdv1.Panel2
             // 
             this.splitContainerAdv1.Panel2.Controls.Add(this.groupBox2);
+            this.splitContainerAdv1.Panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainerAdv1_Panel2_Paint);
             this.splitContainerAdv1.Size = new System.Drawing.Size(1588, 934);
             this.splitContainerAdv1.SplitterDistance = 338;
             this.splitContainerAdv1.TabIndex = 16;
@@ -259,15 +261,15 @@ namespace BudgetExecution
             // 
             // groupBox3
             // 
-            this.groupBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.groupBox3.BackColor = System.Drawing.Color.Black;
             this.groupBox3.Controls.Add(this.label2);
             this.groupBox3.Controls.Add(this.label3);
             this.groupBox3.Controls.Add(this.FIlter2);
             this.groupBox3.Controls.Add(this.Filter3);
             this.groupBox3.ForeColor = System.Drawing.SystemColors.Info;
-            this.groupBox3.Location = new System.Drawing.Point(18, 542);
+            this.groupBox3.Location = new System.Drawing.Point(34, 542);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(290, 258);
+            this.groupBox3.Size = new System.Drawing.Size(290, 270);
             this.groupBox3.TabIndex = 15;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Data Fields";
@@ -275,7 +277,7 @@ namespace BudgetExecution
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(53, 54);
+            this.label2.Location = new System.Drawing.Point(40, 40);
             this.label2.Name = "label2";
             this.label2.Padding = new System.Windows.Forms.Padding(1);
             this.label2.Size = new System.Drawing.Size(53, 22);
@@ -285,7 +287,7 @@ namespace BudgetExecution
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(53, 159);
+            this.label3.Location = new System.Drawing.Point(40, 152);
             this.label3.Name = "label3";
             this.label3.Padding = new System.Windows.Forms.Padding(1);
             this.label3.Size = new System.Drawing.Size(53, 22);
@@ -310,7 +312,7 @@ namespace BudgetExecution
             this.FIlter2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.FIlter2.FormattingEnabled = true;
             this.FIlter2.ItemHeight = 30;
-            this.FIlter2.Location = new System.Drawing.Point(57, 79);
+            this.FIlter2.Location = new System.Drawing.Point(44, 65);
             this.FIlter2.MaxDropDownItems = 20;
             this.FIlter2.Name = "FIlter2";
             this.FIlter2.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
@@ -341,7 +343,7 @@ namespace BudgetExecution
             this.Filter3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.Filter3.FormattingEnabled = true;
             this.Filter3.ItemHeight = 30;
-            this.Filter3.Location = new System.Drawing.Point(57, 184);
+            this.Filter3.Location = new System.Drawing.Point(44, 177);
             this.Filter3.MaxDropDownItems = 20;
             this.Filter3.Name = "Filter3";
             this.Filter3.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
@@ -359,28 +361,16 @@ namespace BudgetExecution
             this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.groupBox1.Controls.Add(this.Filter1);
             this.groupBox1.ForeColor = System.Drawing.SystemColors.Info;
-            this.groupBox1.Location = new System.Drawing.Point(18, 114);
+            this.groupBox1.Location = new System.Drawing.Point(34, 114);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(290, 386);
             this.groupBox1.TabIndex = 14;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Data Fields";
             // 
-            // Filter1
-            // 
-            this.Filter1.AutoScroll = true;
-            this.Filter1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Filter1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.Filter1.Location = new System.Drawing.Point(3, 22);
-            this.Filter1.Name = "Filter1";
-            this.Filter1.Padding = new System.Windows.Forms.Padding(1);
-            this.Filter1.Size = new System.Drawing.Size(284, 361);
-            this.Filter1.TabIndex = 0;
-            this.Filter1.WrapContents = false;
-            // 
             // groupBox2
             // 
-            this.groupBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.groupBox2.BackColor = System.Drawing.Color.Black;
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.button7);
             this.groupBox2.Controls.Add(this.button3);
@@ -391,7 +381,7 @@ namespace BudgetExecution
             this.groupBox2.Controls.Add(this.button2);
             this.groupBox2.Controls.Add(this.button4);
             this.groupBox2.ForeColor = System.Drawing.SystemColors.Info;
-            this.groupBox2.Location = new System.Drawing.Point(22, 102);
+            this.groupBox2.Location = new System.Drawing.Point(18, 114);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(1189, 698);
             this.groupBox2.TabIndex = 5;
@@ -451,7 +441,7 @@ namespace BudgetExecution
             this.metroPanel1.HorizontalScrollbarBarColor = true;
             this.metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
             this.metroPanel1.HorizontalScrollbarSize = 10;
-            this.metroPanel1.Location = new System.Drawing.Point(49, 83);
+            this.metroPanel1.Location = new System.Drawing.Point(49, 105);
             this.metroPanel1.Name = "metroPanel1";
             this.metroPanel1.Size = new System.Drawing.Size(1073, 433);
             this.metroPanel1.TabIndex = 5;
@@ -463,7 +453,7 @@ namespace BudgetExecution
             // AccountNavigator
             // 
             this.AccountNavigator.AddNewItem = null;
-            this.AccountNavigator.BackColor = System.Drawing.Color.Transparent;
+            this.AccountNavigator.BackColor = System.Drawing.Color.Black;
             this.AccountNavigator.CountItem = null;
             this.AccountNavigator.DeleteItem = null;
             this.AccountNavigator.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -649,18 +639,29 @@ namespace BudgetExecution
             this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button4.UseVisualStyleBackColor = false;
             // 
+            // Filter1
+            // 
+            this.Filter1.AutoScroll = true;
+            this.Filter1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Filter1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.Filter1.Location = new System.Drawing.Point(3, 22);
+            this.Filter1.Name = "Filter1";
+            this.Filter1.Size = new System.Drawing.Size(284, 361);
+            this.Filter1.TabIndex = 0;
+            this.Filter1.WrapContents = false;
+            // 
             // SQLiteData
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Black;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.BorderColor = System.Drawing.SystemColors.MenuHighlight;
             this.CaptionBarColor = System.Drawing.Color.Black;
             this.CaptionBarHeight = 60;
             this.CaptionForeColor = System.Drawing.Color.Black;
             captionImage1.BackColor = System.Drawing.Color.Black;
             captionImage1.Image = ((System.Drawing.Image)(resources.GetObject("captionImage1.Image")));
-            captionImage1.Location = new System.Drawing.Point(10, 5);
+            captionImage1.Location = new System.Drawing.Point(30, 10);
             captionImage1.Name = "CaptionImage1";
             captionImage1.Size = new System.Drawing.Size(80, 30);
             this.CaptionImages.Add(captionImage1);

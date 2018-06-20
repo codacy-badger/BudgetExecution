@@ -218,8 +218,8 @@ namespace BudgetExecution
                     b.Size = new Size(160, 30);
                     b.Margin = new Padding(3);
                     b.Padding = new Padding(1);
-                    control.Controls.Add(b);
                     control.AutoSize = true;
+                    control.Controls.Add(b);
                     b.Tag = f;
                     b.Click += FilterControlButton_OnClick;
                 }
@@ -246,6 +246,15 @@ namespace BudgetExecution
                 MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
             }
         }
-            
+
+        private void splitContainerAdv1_Panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void materialTabSelector1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
