@@ -22,7 +22,6 @@ namespace BudgetExecution
         {
         }
 
-
         public Account(Source source, Provider provider)
         {
             Source = source;
