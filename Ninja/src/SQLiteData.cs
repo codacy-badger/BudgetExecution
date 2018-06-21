@@ -198,7 +198,6 @@ namespace BudgetExecution
 
         }
 
-
         internal void PopulateFilterButtons(FlowLayoutPanel control, string[] list)
         {
             try
@@ -230,7 +229,6 @@ namespace BudgetExecution
             }
         }
 
-
         internal void FilterControlButton_OnClick(object sender, EventArgs e)
         {
             try
@@ -247,12 +245,12 @@ namespace BudgetExecution
             }
         }
 
-        private void splitContainerAdv1_Panel2_Paint(object sender, PaintEventArgs e)
+        private void SplitContainerAdv1_Panel2_Paint(object sender, PaintEventArgs e)
         {
 
         }
 
-        private void materialTabSelector1_Click(object sender, EventArgs e)
+        private void MaterialTabSelector1_Click(object sender, EventArgs e)
         {
 
         }

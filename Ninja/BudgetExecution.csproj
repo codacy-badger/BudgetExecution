@@ -363,6 +363,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="GlobalSuppressions.cs" />
+    <Compile Include="src\IObligation.cs" />
     <Compile Include="src\Message.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -527,7 +528,6 @@
     <Compile Include="src\IDataBuilder.cs" />
     <Compile Include="src\IEmployee.cs" />
     <Compile Include="src\IExcelOp.cs" />
-    <Compile Include="src\IObligation.cs" />
     <Compile Include="src\IParameter.cs" />
     <Compile Include="src\IPayroll.cs" />
     <Compile Include="src\IPersonnel.cs" />

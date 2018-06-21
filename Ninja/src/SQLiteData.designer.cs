@@ -253,7 +253,7 @@ namespace BudgetExecution
             // splitContainerAdv1.Panel2
             // 
             this.splitContainerAdv1.Panel2.Controls.Add(this.groupBox2);
-            this.splitContainerAdv1.Panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainerAdv1_Panel2_Paint);
+            this.splitContainerAdv1.Panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.SplitContainerAdv1_Panel2_Paint);
             this.splitContainerAdv1.Size = new System.Drawing.Size(1588, 934);
             this.splitContainerAdv1.SplitterDistance = 338;
             this.splitContainerAdv1.TabIndex = 16;

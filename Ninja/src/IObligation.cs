@@ -1,34 +1,19 @@
-﻿// <copyright file="IObligation.cs" company="PlaceholderCompany">
-// Copyright (c) PlaceholderCompany. All rights reserved.
-// </copyright>
-
-namespace BudgetExecution
+﻿namespace BudgetExecution
 {
-    public interface IObligation : IPRC
+    public interface IObligation
     {
-        // PROPERTIES
-        decimal CommitmentAmount { get; set; }
-
-        string DCNprefix { get; set; }
-
-        string DocType { get; set; }
-
+        decimal Amount { get; set; }
+        string BFY { get; set; }
+        BOC BOC { get; set; }
         string DocumentControlNumber { get; set; }
-
         string FOC { get; set; }
-
         string FocName { get; set; }
-
-        string GrantNumber { get; set; }
-
-        decimal ObligationAmount { get; set; }
-
-        string PurchaseRequestNumber { get; set; }
-
-        string SiteProjectCode { get; set; }
-
-        string SiteProjectName { get; set; }
-
-        string System { get; set; }
+        Fund Fund { get; set; }
+        int ID { get; set; }
+        Org Org { get; set; }
+        PRC PRC { get; set; }
+        string ProgramProjectCode { get; set; }
+        RC RC { get; set; }
+        string RPIO { get; set; }
     }
 }
