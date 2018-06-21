@@ -1,18 +1,4 @@
-CREATE TABLE "DivisionTransfers" (
-	"ID"	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
-	"BudgetLevel"	TEXT,
-	"DocType"	TEXT,
-	"RPIO"	TEXT,
-	"AH"	TEXT,
-	"BFY"	TEXT,
-	"Fund"	TEXT,
-	"RC"	TEXT,
-	"TCN"	TEXT,
-	"Qtr"	TEXT,
-	"Date"	TEXT,
-	"ProgramProjectCode"	TEXT,
-	"NPM"	TEXT,
-	"FromTo"	TEXT,
-	"BOC"	TEXT,
-	"Amount"	NUMERIC
-);
+CREATE TABLE 'DivisionTransfers' AS SELECT BFY, DocType, Fund, Date, RC, TransferControlNumber, ProgramProjectCode, BOC, FromTo, sum(Amount) as Amount
+FROM Transfers
+WHERE BudgetLevel = '8'
+GROUP BY  BFY, Fund, Date, TransferControlNumber, RC, ProgramProjectCode, BOC, FromTo, Amount

@@ -141,11 +141,10 @@ namespace BudgetExecution
                 var d = new Dictionary<string, Source>();
                 d.Add("Programs", Source.Accounts);
                 d.Add("Reprogrammings", Source.Transfers);
-                d.Add("Level-7", Source.RegionAccount);
-                d.Add("Level-8", Source.DivisionAccount);
+                d.Add("Level-7", Source.RegionalAccounts);
+                d.Add("Level-8", Source.DivisionAccounts);
                 d.Add("R6 PRC", Source.PRC);
                 d.Add("Division Details", Source.Divisions);
-                d.Add("Authority", Source.Balances);
                 d.Add("Employee Leave", Source.Employees);
                 d.Add("Appropriations", Source.Funds);
                 d.Add("Obligations", Source.Obligations);
@@ -155,7 +154,6 @@ namespace BudgetExecution
                 d.Add("Superfund Appropriation", Source.SUPERFUND);
                 d.Add("Underground Storage Tanks", Source.LUST);
                 d.Add("STAG Appropriation", Source.STAG);
-                d.Add("6A Extramural", Source.SF6A);
                 d.Add("Payroll", Source.PAYROLL);
                 d.Add("FTE", Source.FTE);
                 d.Add("Travel", Source.TRAVEL);

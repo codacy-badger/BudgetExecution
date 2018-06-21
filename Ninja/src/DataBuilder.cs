@@ -21,7 +21,7 @@ namespace BudgetExecution
         {
             Source = query.Source;
             Query = query;
-            if (Source == Source.PRC || Source == Source.RegionAccount || Source == Source.DivisionAccount)
+            if (Source == Source.PRC || Source == Source.RegionalAccounts || Source == Source.DivisionAccounts)
             {
                 Table = GetDataTable();
                 Total = GetTotal(Table);
@@ -291,7 +291,7 @@ namespace BudgetExecution
                 var dt = new DataTable(Source.ToString());
                 dt.TableName = Source.ToString();
                 ds.Tables.Add(dt);
-                this.Query.DataAdapter.Fill(dt);
+                this.Query.DataAdapter.Fill(ds, Source.ToString());
                 return dt;
             }
             catch (Exception e)

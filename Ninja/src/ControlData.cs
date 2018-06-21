@@ -26,7 +26,7 @@ namespace BudgetExecution
                 ["BOC"] = account.BOC.Code,
                 ["Code"] = account.Code
             };
-            Allocation = new DataBuilder(Source.RegionAccount, Provider.SQLite, Search).DataRecords;
+            Allocation = new DataBuilder(Source.RegionalAccounts, Provider.SQLite, Search).DataRecords;
             PrcAccount = Allocation[0].ToPrc();
             Limit = PrcAccount.Amount;
         }

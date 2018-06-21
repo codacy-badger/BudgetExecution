@@ -40,7 +40,7 @@ namespace BudgetExecution
             GoalMetrics = GetMetrics(Table, PrcField.GoalName);
             ObjectiveTotals = GetDataTotals(Table, PrcField.ObjectiveName);
             ObjectiveMetrics = GetMetrics(Table, PrcField.ObjectiveName);
-            if (DbData.Source == Source.DivisionAccount && DbData.Parameter == null)
+            if (DbData.Source == Source.DivisionAccounts && DbData.Parameter == null)
             {
                 DivisionTotals = GetDataTotals(Table, PrcField.RC);
                 DivisionMetrics = GetMetrics(Table, PrcField.RC);
@@ -77,7 +77,7 @@ namespace BudgetExecution
             GoalMetrics = GetMetrics(Table, PrcField.GoalName);
             ObjectiveTotals = GetDataTotals(Table, PrcField.ObjectiveName);
             ObjectiveMetrics = GetMetrics(Table, PrcField.ObjectiveName);
-            if (DbData.Source == Source.DivisionAccount)
+            if (DbData.Source == Source.DivisionAccounts)
             {
                 DivisionTotals = GetDataTotals(DbData.Table, PrcField.RC);
                 DivisionMetrics = GetMetrics(DbData.Table, PrcField.RC);

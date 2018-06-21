@@ -15,7 +15,7 @@ namespace BudgetExecution
         // CONSTRUCTORS
         public RegionalAuthority()
         {
-            Data = new DataBuilder(Source.RegionAccount, Provider.SQLite, new Dictionary<string, object> { ["BFY"] = FiscalYear });
+            Data = new DataBuilder(Source.RegionalAccounts, Provider.SQLite, new Dictionary<string, object> { ["BFY"] = FiscalYear });
             Metric = new PrcMetric(Data);
             Table = Data.Table;
             Total = Metric.Total;

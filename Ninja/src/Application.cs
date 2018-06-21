@@ -60,9 +60,8 @@ namespace BudgetExecution
 
     public enum Source
     {
-        Transfers, RegionalTransfers, DivisionTransfers, BudgetDocuments, Employees, Divisions, PRC, RegionAccount, DivisionAccount, Accounts, Balances,
-        Obligations, PayrollObligations, Funds, Sites, Reimbursables, EPM, LUST, OIL, STAG, SUPERFUND, SF6A,
-        DWH, EJ, EN, MD, RC, RA, SF, WQ, MM, WSA, WCF, MDR, XA, PAYROLL, FTE, TRAVEL, EXPENSES, CONTRACTS, GRANTS
+        Accounts, Awards, BudgetDocuments, DivisionAccounts, DivisionObligations, Divisions, DivisionTransfers, DWH, EJ, EN, Employees, EPM, ExternalTransfers, Funds, InternalTransfers, PRC, RegionalAccounts,
+        Obligations, PayrollObligations, Sites, RegionalTransfers, Reimbursables, LUST, OIL, STAG, SUPERFUND, MD, RC, RA, SF, Transfers, WQ, MM, WSA, WCF, MDR, XA, PAYROLL, FTE, TRAVEL, EXPENSES, CONTRACTS, GRANTS
     }
 
     public enum Stat

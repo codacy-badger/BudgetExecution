@@ -16,8 +16,8 @@ namespace BudgetExecution
         {
             InitializeComponent();
             NinjaData = new FormData();
-            R6 = new DataBuilder(Source.RegionAccount, Provider.SQLite);
-            D6 = new DataBuilder(Source.DivisionAccount, Provider.SQLite);
+            R6 = new DataBuilder(Source.RegionalAccounts, Provider.SQLite);
+            D6 = new DataBuilder(Source.DivisionAccounts, Provider.SQLite);
             Metric = new PrcMetric(R6);
             Timer = new Timer();
             Values = new Dictionary<string, double>[]
@@ -103,7 +103,7 @@ namespace BudgetExecution
 
         private void DivisionSummaryButton_OnClick(object sender, EventArgs e)
         {
-            var summary = new SummaryForm(Source.DivisionAccount);
+            var summary = new SummaryForm(Source.DivisionAccounts);
             summary.Show();
         }
 
@@ -158,7 +158,7 @@ namespace BudgetExecution
 
         private void RegionSummaryButton_OnClick(object sender, EventArgs e)
         {
-            var datamgr = new SummaryForm(Source.RegionAccount);
+            var datamgr = new SummaryForm(Source.RegionalAccounts);
             datamgr.Show();
         }
 

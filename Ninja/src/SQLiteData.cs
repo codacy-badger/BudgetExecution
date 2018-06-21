@@ -19,7 +19,7 @@ namespace BudgetExecution
         public SQLiteData()
         {
             InitializeComponent();
-            DbData = new DataBuilder(Source.RegionAccount, Provider.SQLite);
+            DbData = new DataBuilder(Source.RegionalAccounts, Provider.SQLite);
             Table = DbData.Table;
             Metric = new PrcMetric(DbData);
             ProgramElements = DbData.GetProgramElements(Table);

@@ -13,6 +13,10 @@ namespace BudgetExecution
 
     public class Transfer
     {
+        private DataRow Data;
+        private Source Source;
+        private Provider Provider;
+
         // CONSTRUCTORS
         public Transfer()
         {

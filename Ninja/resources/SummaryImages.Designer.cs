@@ -63,9 +63,9 @@ namespace BudgetExecution.Resources {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap DivisionAccount {
+        internal static System.Drawing.Bitmap Appropriation {
             get {
-                object obj = ResourceManager.GetObject("DivisionAccount", resourceCulture);
+                object obj = ResourceManager.GetObject("Appropriation", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,9 +73,9 @@ namespace BudgetExecution.Resources {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Divisions {
+        internal static System.Drawing.Bitmap DivisionAccounts {
             get {
-                object obj = ResourceManager.GetObject("Divisions", resourceCulture);
+                object obj = ResourceManager.GetObject("DivisionAccounts", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -83,9 +83,19 @@ namespace BudgetExecution.Resources {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap RegionAccount {
+        internal static System.Drawing.Bitmap FTE {
             get {
-                object obj = ResourceManager.GetObject("RegionAccount", resourceCulture);
+                object obj = ResourceManager.GetObject("FTE", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap RegionalAccounts {
+            get {
+                object obj = ResourceManager.GetObject("RegionalAccounts", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -28,9 +28,9 @@ namespace BudgetExecution
         {
             InitializeComponent();
             Division = rc;
-            Source = Source.DivisionAccount;
+            Source = Source.DivisionAccounts;
             Parameter = new Dictionary<string, object>() { ["RC"] = rc };
-            DbData = new DataBuilder(Source.DivisionAccount, Provider.SQLite, Parameter);
+            DbData = new DataBuilder(Source.DivisionAccounts, Provider.SQLite, Parameter);
             Table = DbData.Table;
             DatabaseTab.TabVisible = true;
             ProjectTab.TabVisible = true;
@@ -61,7 +61,7 @@ namespace BudgetExecution
             DatabaseTab.TabVisible = true;
             CurrentTabIndex = SummaryTabControl.SelectedIndex;
             SummaryTabControl.SelectedIndexChanged += SummaryTabPage_TabSelected;
-            if (source == Source.RegionAccount || source == Source.DivisionAccount)
+            if (source == Source.RegionalAccounts || source == Source.DivisionAccounts)
             {
                 DbData = new DataBuilder(source, Provider.SQLite);
                 Table = DbData.Table;
@@ -145,7 +145,7 @@ namespace BudgetExecution
 
                     BocTab.TabVisible = false;
                 }
-                if (DbData.Source == Source.RegionAccount)
+                if (DbData.Source == Source.RegionalAccounts)
                 {
 
                     DivisionTab.TabVisible = false;
@@ -691,7 +691,7 @@ namespace BudgetExecution
                         AssignChartFIlterControls(FundFilter1, FundFilter2, FundFilter3, FundFilter4);
                         AssignChartExpanders(FundExpander1, FundExpander2);
                         PopulateFilterBoxItems(ChartFilterControl3, PrcField.FundName);
-                        if (Source == Source.RegionAccount)
+                        if (Source == Source.RegionalAccounts)
                         {
                             FundFilter4.Items.Remove("RC");
                         }
@@ -703,7 +703,7 @@ namespace BudgetExecution
                         AssignChartFIlterControls(BocFilter1, BocFilter2, BocFilter3, BocFilter4);
                         AssignChartExpanders(BocExpander1, BocExpander2);
                         PopulateFilterBoxItems(ChartFilterControl3, PrcField.BocName);
-                        if (DbData.Source == Source.RegionAccount)
+                        if (DbData.Source == Source.RegionalAccounts)
                         {
                             BocFilter4.Items.Remove("RC");
                         }
@@ -715,7 +715,7 @@ namespace BudgetExecution
                         AssignChartFIlterControls(NpmFilter1, NpmFilter2, NpmFilter3, NpmFilter4);
                         AssignChartExpanders(NpmExpander1, NpmExpander2);
                         PopulateFilterBoxItems(ChartFilterControl3, PrcField.NPM);
-                        if (DbData.Source == Source.RegionAccount)
+                        if (DbData.Source == Source.RegionalAccounts)
                         {
                             NpmFilter4.Items.Remove("RC");
                         }
@@ -727,7 +727,7 @@ namespace BudgetExecution
                         AssignChartFIlterControls(GoalFilter1, GoalFilter2, GoalFilter3, GoalFilter4);
                         AssignChartExpanders(GoalExpander1, GoalExpander2);
                         PopulateFilterBoxItems(ChartFilterControl3, PrcField.GoalName);
-                        if (DbData.Source == Source.RegionAccount)
+                        if (DbData.Source == Source.RegionalAccounts)
                         {
                             GoalFilter4.Items.Remove("RC");
                         }
@@ -739,7 +739,7 @@ namespace BudgetExecution
                         AssignChartFIlterControls(ObjectiveFilter1, ObjectiveFilter2, ObjectiveFilter3, ObjectiveFilter4);
                         AssignChartExpanders(ObjectiveExpander1, ObjectiveExpander2);
                         PopulateFilterBoxItems(ChartFilterControl3, PrcField.ObjectiveName);
-                        if (DbData.Source == Source.RegionAccount)
+                        if (DbData.Source == Source.RegionalAccounts)
                         {
                             ObjectiveFilter4.Items.Remove("RC");
                         }
@@ -751,7 +751,7 @@ namespace BudgetExecution
                         AssignChartFIlterControls(DivisionFilter1, DivisionFilter2, DivisionFilter3, DivisionFilter4);
                         AssignChartExpanders(DivisionExpander1, DivisionExpander2);
                         PopulateFilterBoxItems(ChartFilterControl3, PrcField.DivisionName);
-                        if (DbData.Source == Source.RegionAccount)
+                        if (DbData.Source == Source.RegionalAccounts)
                         {
                             DivisionFilter4.Items.Remove("RC");
                         }
@@ -763,7 +763,7 @@ namespace BudgetExecution
                         AssignChartFIlterControls(AreaFilter1, AreaFilter2, AreaFilter3, AreaFilter4);
                         AssignChartExpanders(AreaExpander1, AreaExpander2);
                         PopulateFilterBoxItems(ChartFilterControl3, PrcField.ProgramAreaName);
-                        if (DbData.Source == Source.RegionAccount)
+                        if (DbData.Source == Source.RegionalAccounts)
                         {
                             AreaFilter4.Items.Remove("RC");
                         }
@@ -775,7 +775,7 @@ namespace BudgetExecution
                         AssignChartFIlterControls(ProjectFilter1, ProjectFilter2, ProjectFilter3, ProjectFilter4);
                         AssignChartExpanders(ProjectExpander1, ProjectExpander2);
                         PopulateFilterBoxItems(ChartFilterControl3, PrcField.ProgramProjectName);
-                        if (DbData.Source == Source.RegionAccount)
+                        if (DbData.Source == Source.RegionalAccounts)
                         {
                             ProjectFilter4.Items.Remove("RC");
                         }

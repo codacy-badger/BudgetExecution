@@ -15,7 +15,7 @@ namespace BudgetExecution
         // CONSTRUCTORS
         public DivisionAuthority()
         {
-            DbData = new DataBuilder(Source.DivisionAccount, Provider.SQLite);
+            DbData = new DataBuilder(Source.DivisionAccounts, Provider.SQLite);
             Metric = new PrcMetric(DbData);
             Table = DbData.Table;
             Total = Metric.Total;
@@ -38,7 +38,7 @@ namespace BudgetExecution
         {
             RC = new RC(rc);
             Org = new Org(RC.Code);
-            DbData = new DataBuilder(Source.DivisionAccount, Provider.SQLite, new Dictionary<string, object> { ["RC"] = rc });
+            DbData = new DataBuilder(Source.DivisionAccounts, Provider.SQLite, new Dictionary<string, object> { ["RC"] = rc });
             Metric = new PrcMetric(DbData);
             Table = DbData.Table;
             Total = Metric.Total;
