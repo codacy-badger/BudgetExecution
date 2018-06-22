@@ -67,5 +67,10 @@ namespace BudgetExecution
         private void TabControlAdv2_SelectedIndexChanged(object sender, EventArgs e)
         {
         }
+
+        private void splitContainerAdv1_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

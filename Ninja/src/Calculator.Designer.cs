@@ -35,30 +35,27 @@ namespace BudgetExecution.src
         /// </summary>
         private void InitializeComponent()
         {
-            this.calculatorControl2 = new Syncfusion.Windows.Forms.Tools.CalculatorControl();
+            this.calculatorControl1 = new Syncfusion.Windows.Forms.Tools.CalculatorControl();
             this.SuspendLayout();
             // 
-            // calculatorControl2
+            // calculatorControl1
             // 
-            this.calculatorControl2.AccessibleDescription = "Calculator control";
-            this.calculatorControl2.AccessibleName = "Calculator Control";
-            this.calculatorControl2.BeforeTouchSize = new System.Drawing.Size(426, 442);
-            this.calculatorControl2.BorderStyle = System.Windows.Forms.Border3DStyle.Flat;
-            this.calculatorControl2.ButtonStyle = Syncfusion.Windows.Forms.ButtonAppearance.Metro;
-            this.calculatorControl2.Culture = new System.Globalization.CultureInfo("en-US");
-            this.calculatorControl2.DisplayTextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.calculatorControl2.DoubleValue = 0D;
-            this.calculatorControl2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.calculatorControl2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.calculatorControl2.HorizontalSpacing = 8;
-            this.calculatorControl2.Location = new System.Drawing.Point(132, 67);
-            this.calculatorControl2.MetroColor = System.Drawing.SystemColors.Control;
-            this.calculatorControl2.Name = "calculatorControl2";
-            this.calculatorControl2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.calculatorControl2.Size = new System.Drawing.Size(426, 442);
-            this.calculatorControl2.TabIndex = 1;
-            this.calculatorControl2.Text = "calculatorControl2";
-            this.calculatorControl2.UseVisualStyle = true;
+            this.calculatorControl1.AccessibleDescription = "Calculator control";
+            this.calculatorControl1.AccessibleName = "Calculator Control";
+            this.calculatorControl1.BeforeTouchSize = new System.Drawing.Size(384, 464);
+            this.calculatorControl1.BorderStyle = System.Windows.Forms.Border3DStyle.Flat;
+            this.calculatorControl1.ButtonStyle = Syncfusion.Windows.Forms.ButtonAppearance.Metro;
+            this.calculatorControl1.Culture = new System.Globalization.CultureInfo("en-US");
+            this.calculatorControl1.DoubleValue = 0D;
+            this.calculatorControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.calculatorControl1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.calculatorControl1.Location = new System.Drawing.Point(168, 61);
+            this.calculatorControl1.MetroColor = System.Drawing.SystemColors.Control;
+            this.calculatorControl1.Name = "calculatorControl1";
+            this.calculatorControl1.Size = new System.Drawing.Size(384, 464);
+            this.calculatorControl1.TabIndex = 0;
+            this.calculatorControl1.Text = "calculatorControl1";
+            this.calculatorControl1.UseVisualStyle = true;
             // 
             // Calculator
             // 
@@ -69,7 +66,7 @@ namespace BudgetExecution.src
             this.CaptionBarColor = System.Drawing.Color.Black;
             this.CaptionForeColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(722, 598);
-            this.Controls.Add(this.calculatorControl2);
+            this.Controls.Add(this.calculatorControl1);
             this.MetroColor = System.Drawing.Color.Black;
             this.Name = "Calculator";
             this.ShowIcon = false;
@@ -80,6 +77,6 @@ namespace BudgetExecution.src
 
         #endregion
 
-        private Syncfusion.Windows.Forms.Tools.CalculatorControl calculatorControl2;
+        private Syncfusion.Windows.Forms.Tools.CalculatorControl calculatorControl1;
     }
 }
