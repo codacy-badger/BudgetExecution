@@ -92,7 +92,6 @@ namespace BudgetExecution
             ProgramAreaName = Data["ProgramAreaName"].ToString();
         }
 
-
         // PROPERTIES
         public int ID { get; set; }
 

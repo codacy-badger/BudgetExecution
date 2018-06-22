@@ -63,6 +63,7 @@ namespace BudgetExecution
             this.FIlter2 = new MetroSet_UI.Controls.MetroSetComboBox();
             this.Filter3 = new MetroSet_UI.Controls.MetroSetComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.Filter1 = new System.Windows.Forms.FlowLayoutPanel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label4 = new System.Windows.Forms.Label();
             this.button7 = new System.Windows.Forms.Button();
@@ -79,7 +80,6 @@ namespace BudgetExecution
             this.button8 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.Filter1 = new System.Windows.Forms.FlowLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)(this.E6DataGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerAdv1)).BeginInit();
@@ -368,6 +368,17 @@ namespace BudgetExecution
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Data Fields";
             // 
+            // Filter1
+            // 
+            this.Filter1.AutoScroll = true;
+            this.Filter1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Filter1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.Filter1.Location = new System.Drawing.Point(3, 22);
+            this.Filter1.Name = "Filter1";
+            this.Filter1.Size = new System.Drawing.Size(284, 361);
+            this.Filter1.TabIndex = 0;
+            this.Filter1.WrapContents = false;
+            // 
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.Black;
@@ -484,7 +495,7 @@ namespace BudgetExecution
             // 
             this.bindingNavigatorPositionItem1.AccessibleName = "Position";
             this.bindingNavigatorPositionItem1.AutoSize = false;
-            this.bindingNavigatorPositionItem1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.bindingNavigatorPositionItem1.BackColor = System.Drawing.Color.Black;
             this.bindingNavigatorPositionItem1.ForeColor = System.Drawing.SystemColors.Info;
             this.bindingNavigatorPositionItem1.Name = "bindingNavigatorPositionItem1";
             this.bindingNavigatorPositionItem1.Size = new System.Drawing.Size(50, 31);
@@ -498,7 +509,8 @@ namespace BudgetExecution
             // 
             // toolStripTextBox1
             // 
-            this.toolStripTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.toolStripTextBox1.BackColor = System.Drawing.Color.Black;
+            this.toolStripTextBox1.ForeColor = System.Drawing.SystemColors.Info;
             this.toolStripTextBox1.Name = "toolStripTextBox1";
             this.toolStripTextBox1.Size = new System.Drawing.Size(100, 31);
             // 
@@ -639,17 +651,6 @@ namespace BudgetExecution
             this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button4.UseVisualStyleBackColor = false;
             // 
-            // Filter1
-            // 
-            this.Filter1.AutoScroll = true;
-            this.Filter1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Filter1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.Filter1.Location = new System.Drawing.Point(3, 22);
-            this.Filter1.Name = "Filter1";
-            this.Filter1.Size = new System.Drawing.Size(284, 361);
-            this.Filter1.TabIndex = 0;
-            this.Filter1.WrapContents = false;
-            // 
             // SQLiteData
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -661,9 +662,9 @@ namespace BudgetExecution
             this.CaptionForeColor = System.Drawing.Color.Black;
             captionImage1.BackColor = System.Drawing.Color.Black;
             captionImage1.Image = ((System.Drawing.Image)(resources.GetObject("captionImage1.Image")));
-            captionImage1.Location = new System.Drawing.Point(30, 10);
+            captionImage1.Location = new System.Drawing.Point(5, 10);
             captionImage1.Name = "CaptionImage1";
-            captionImage1.Size = new System.Drawing.Size(80, 30);
+            captionImage1.Size = new System.Drawing.Size(36, 20);
             this.CaptionImages.Add(captionImage1);
             this.ClientSize = new System.Drawing.Size(1588, 934);
             this.Controls.Add(this.splitContainerAdv1);

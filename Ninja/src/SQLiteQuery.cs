@@ -63,6 +63,8 @@ namespace BudgetExecution
 
         public new Dictionary<string, object> Parameter { get; }
 
+        public SQLiteParameter[] Parameters { get; set; }
+
         public new string TableName { get; }
 
         public new string SqlStatement { get; set; }
