@@ -1,81 +1,25 @@
-// <copyright file="ExcelForm.cs" company="PlaceholderCompany">
-// Copyright (c) PlaceholderCompany. All rights reserved.
-// </copyright>
-
+#region Copyright Syncfusion Inc. 2001-2018.
+// Copyright Syncfusion Inc. 2001-2018. All rights reserved.
+// Use of this code is subject to the terms of our license.
+// A copy of the current license can be obtained at any time by e-mailing
+// licensing@syncfusion.com. Any infringement will be prosecuted under
+// applicable laws. 
+#endregion
 namespace BudgetExecution
 {
     using System;
-    using Syncfusion.Windows.Forms;
-    using Syncfusion.Windows.Forms.Spreadsheet;
+    using System.Collections.Generic;
+    using System.ComponentModel;
+    using System.Data;
+    using System.Drawing;
+    using System.Text;
+    using System.Windows.Forms;
 
-    public partial class ExcelForm : MetroForm
+    public partial class ExcelForm : Syncfusion.Windows.Forms.MetroForm
     {
         public ExcelForm()
         {
             InitializeComponent();
-            GetReport();
-        }
-
-        public DivisionAuthority Budget { get; set; }
-
-        public Spreadsheet Report { get; set; }
-
-        internal void GetReport()
-        {
-            Report = new Spreadsheet();
-            Report.Open(@"C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\report\BudgetControlTemplate.xlsx");
-        }
-
-        internal void GetReport(object sender, EventArgs e)
-        {
-            Report = new Spreadsheet();
-            Report.Open(@"C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\report\BudgetControlTemplate.xlsx");
-        }
-
-        private void SplitContainerAdv1_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void Spreadsheet1_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void AccountTabControl_SelectedIndexChanged(object sender, EventArgs e)
-        {
-        }
-
-        private void MetroSetTextBox1_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void MetroSetLabel12_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void CalculatorControl1_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void Button7_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void Button10_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void TabControlAdv2_SelectedIndexChanged(object sender, EventArgs e)
-        {
-        }
-
-        private void splitContainerAdv1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void spreadsheetRibbon1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

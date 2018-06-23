@@ -670,7 +670,6 @@ namespace BudgetExecution
             this.Controls.Add(this.splitContainerAdv1);
             this.ForeColor = System.Drawing.Color.LightSteelBlue;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximumSize = new System.Drawing.Size(1600, 1000);
             this.MetroColor = System.Drawing.Color.Black;
             this.Name = "SQLiteData";
             this.ShowIcon = false;

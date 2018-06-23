@@ -365,7 +365,6 @@ namespace BudgetExecution
             this.FundFilter2 = new MetroSet_UI.Controls.MetroSetComboBox();
             this.FundChart = new Syncfusion.Windows.Forms.Chart.ChartControl();
             this.SummaryTabControl = new Syncfusion.Windows.Forms.Tools.TabControlAdv();
-            this.tabPageAdv7 = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
@@ -1189,6 +1188,7 @@ namespace BudgetExecution
             // 
             // DatabaseTab
             // 
+            this.DatabaseTab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.DatabaseTab.Controls.Add(this.pictureBox1);
             this.DatabaseTab.Controls.Add(this.groupBox5);
             this.DatabaseTab.Controls.Add(this.groupBox1);
@@ -1258,7 +1258,7 @@ namespace BudgetExecution
             this.AccountTabControl.Size = new System.Drawing.Size(440, 483);
             this.AccountTabControl.TabGap = 7;
             this.AccountTabControl.TabIndex = 150;
-            this.AccountTabControl.TabPanelBackColor = System.Drawing.Color.Black;
+            this.AccountTabControl.TabPanelBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.AccountTabControl.TabStyle = typeof(Syncfusion.Windows.Forms.Tools.TabRendererMetro);
             this.AccountTabControl.TextLineAlignment = System.Drawing.StringAlignment.Far;
             this.AccountTabControl.VSLikeScrollButton = true;
@@ -1292,10 +1292,10 @@ namespace BudgetExecution
             this.tabPageAdv1.ForeColor = System.Drawing.Color.LightSteelBlue;
             this.tabPageAdv1.Image = null;
             this.tabPageAdv1.ImageSize = new System.Drawing.Size(16, 16);
-            this.tabPageAdv1.Location = new System.Drawing.Point(0, 44);
+            this.tabPageAdv1.Location = new System.Drawing.Point(0, -1);
             this.tabPageAdv1.Name = "tabPageAdv1";
             this.tabPageAdv1.ShowCloseButton = true;
-            this.tabPageAdv1.Size = new System.Drawing.Size(440, 439);
+            this.tabPageAdv1.Size = new System.Drawing.Size(440, 484);
             this.tabPageAdv1.TabIndex = 4;
             this.tabPageAdv1.Text = "Details";
             this.tabPageAdv1.ThemesEnabled = false;
@@ -1375,7 +1375,7 @@ namespace BudgetExecution
             this.toolStripSeparator12,
             this.toolStripButton12,
             this.toolStripSeparator13});
-            this.Navigator.Location = new System.Drawing.Point(0, 412);
+            this.Navigator.Location = new System.Drawing.Point(0, 457);
             this.Navigator.MoveFirstItem = this.toolStripButton9;
             this.Navigator.MoveLastItem = this.toolStripButton12;
             this.Navigator.MoveNextItem = this.toolStripButton11;
@@ -1852,11 +1852,11 @@ namespace BudgetExecution
             // 
             this.tabPageAdv5.Controls.Add(this.AccountChart);
             this.tabPageAdv5.Image = null;
-            this.tabPageAdv5.ImageSize = new System.Drawing.Size(16, 16);
-            this.tabPageAdv5.Location = new System.Drawing.Point(0, 44);
+            this.tabPageAdv5.ImageSize = new System.Drawing.Size(30, 25);
+            this.tabPageAdv5.Location = new System.Drawing.Point(0, -1);
             this.tabPageAdv5.Name = "tabPageAdv5";
             this.tabPageAdv5.ShowCloseButton = true;
-            this.tabPageAdv5.Size = new System.Drawing.Size(440, 439);
+            this.tabPageAdv5.Size = new System.Drawing.Size(440, 484);
             this.tabPageAdv5.TabIndex = 2;
             this.tabPageAdv5.Text = "Graph";
             this.tabPageAdv5.ThemesEnabled = false;
@@ -1869,7 +1869,7 @@ namespace BudgetExecution
             this.AccountChart.BackInterior = new Syncfusion.Drawing.BrushInfo(System.Drawing.Color.Black);
             this.AccountChart.ChartArea.AutoScale = true;
             this.AccountChart.ChartArea.BackInterior = new Syncfusion.Drawing.BrushInfo(System.Drawing.Color.Black);
-            this.AccountChart.ChartArea.BorderColor = System.Drawing.Color.Black;
+            this.AccountChart.ChartArea.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.AccountChart.ChartArea.CursorLocation = new System.Drawing.Point(0, 0);
             this.AccountChart.ChartArea.CursorReDraw = false;
             this.AccountChart.ChartAreaMargins = new Syncfusion.Windows.Forms.Chart.ChartMargins(0, 0, 0, 10);
@@ -1888,7 +1888,6 @@ namespace BudgetExecution
             this.AccountChart.Depth = 250F;
             this.AccountChart.DisplayChartContextMenu = false;
             this.AccountChart.DisplaySeriesContextMenu = false;
-            this.AccountChart.Dock = System.Windows.Forms.DockStyle.Fill;
             this.AccountChart.EnableMouseRotation = true;
             this.AccountChart.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AccountChart.ForeColor = System.Drawing.SystemColors.MenuHighlight;
@@ -1902,7 +1901,7 @@ namespace BudgetExecution
             this.AccountChart.Legend.Visible = false;
             this.AccountChart.LegendsPlacement = Syncfusion.Windows.Forms.Chart.ChartPlacement.Outside;
             this.AccountChart.Localize = null;
-            this.AccountChart.Location = new System.Drawing.Point(0, 0);
+            this.AccountChart.Location = new System.Drawing.Point(60, 32);
             this.AccountChart.Margin = new System.Windows.Forms.Padding(2);
             this.AccountChart.Name = "AccountChart";
             this.AccountChart.Padding = new System.Windows.Forms.Padding(1);
@@ -1973,7 +1972,7 @@ namespace BudgetExecution
             this.AccountChart.Series3D = true;
             this.AccountChart.SeriesHighlight = true;
             this.AccountChart.ShadowColor = new Syncfusion.Drawing.BrushInfo(Syncfusion.Drawing.GradientStyle.PathRectangle, System.Drawing.SystemColors.WindowText, System.Drawing.Color.Silver);
-            this.AccountChart.Size = new System.Drawing.Size(440, 439);
+            this.AccountChart.Size = new System.Drawing.Size(337, 344);
             this.AccountChart.Spacing = 5F;
             this.AccountChart.SpacingBetweenPoints = 5F;
             this.AccountChart.Style3D = true;
@@ -2003,13 +2002,13 @@ namespace BudgetExecution
             this.tabPageAdv6.Controls.Add(this.CalculatorButton);
             this.tabPageAdv6.Controls.Add(this.CalendatButton);
             this.tabPageAdv6.Image = null;
-            this.tabPageAdv6.ImageSize = new System.Drawing.Size(16, 16);
-            this.tabPageAdv6.Location = new System.Drawing.Point(0, 44);
+            this.tabPageAdv6.ImageSize = new System.Drawing.Size(30, 25);
+            this.tabPageAdv6.Location = new System.Drawing.Point(0, -1);
             this.tabPageAdv6.Name = "tabPageAdv6";
             this.tabPageAdv6.ShowCloseButton = true;
-            this.tabPageAdv6.Size = new System.Drawing.Size(440, 439);
+            this.tabPageAdv6.Size = new System.Drawing.Size(440, 484);
             this.tabPageAdv6.TabIndex = 3;
-            this.tabPageAdv6.Text = "Calculator";
+            this.tabPageAdv6.Text = "Tools";
             this.tabPageAdv6.ThemesEnabled = false;
             // 
             // ExcelButton
@@ -2019,14 +2018,14 @@ namespace BudgetExecution
             this.ExcelButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.ExcelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ExcelButton.Image = ((System.Drawing.Image)(resources.GetObject("ExcelButton.Image")));
-            this.ExcelButton.Location = new System.Drawing.Point(47, 249);
+            this.ExcelButton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.ExcelButton.Location = new System.Drawing.Point(301, 48);
             this.ExcelButton.Name = "ExcelButton";
-            this.ExcelButton.Size = new System.Drawing.Size(132, 97);
+            this.ExcelButton.Size = new System.Drawing.Size(118, 85);
             this.ExcelButton.TabIndex = 3;
             this.ExcelButton.Text = "Excel Form\r\n";
-            this.ExcelButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.ExcelButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.ExcelButton.UseVisualStyleBackColor = true;
-            this.ExcelButton.Click += new System.EventHandler(this.ExcelButton_Click);
             // 
             // CalculatorButton
             // 
@@ -2035,14 +2034,14 @@ namespace BudgetExecution
             this.CalculatorButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.CalculatorButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CalculatorButton.Image = ((System.Drawing.Image)(resources.GetObject("CalculatorButton.Image")));
-            this.CalculatorButton.Location = new System.Drawing.Point(272, 88);
+            this.CalculatorButton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.CalculatorButton.Location = new System.Drawing.Point(152, 48);
             this.CalculatorButton.Name = "CalculatorButton";
-            this.CalculatorButton.Size = new System.Drawing.Size(132, 116);
+            this.CalculatorButton.Size = new System.Drawing.Size(121, 85);
             this.CalculatorButton.TabIndex = 2;
             this.CalculatorButton.Text = "Calculator\r\n";
-            this.CalculatorButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.CalculatorButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.CalculatorButton.UseVisualStyleBackColor = true;
-            this.CalculatorButton.Click += new System.EventHandler(this.CalculatorButton_Click);
             // 
             // CalendatButton
             // 
@@ -2051,14 +2050,14 @@ namespace BudgetExecution
             this.CalendatButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.CalendatButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CalendatButton.Image = ((System.Drawing.Image)(resources.GetObject("CalendatButton.Image")));
-            this.CalendatButton.Location = new System.Drawing.Point(47, 88);
+            this.CalendatButton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.CalendatButton.Location = new System.Drawing.Point(16, 48);
             this.CalendatButton.Name = "CalendatButton";
-            this.CalendatButton.Size = new System.Drawing.Size(132, 116);
+            this.CalendatButton.Size = new System.Drawing.Size(121, 85);
             this.CalendatButton.TabIndex = 1;
             this.CalendatButton.Text = "Calendar";
-            this.CalendatButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.CalendatButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.CalendatButton.UseVisualStyleBackColor = true;
-            this.CalendatButton.Click += new System.EventHandler(this.CalendatButton_Click);
             // 
             // groupBox1
             // 
@@ -5272,7 +5271,6 @@ namespace BudgetExecution
             this.SummaryTabControl.Controls.Add(this.AreaTab);
             this.SummaryTabControl.Controls.Add(this.ProjectTab);
             this.SummaryTabControl.Controls.Add(this.DatabaseTab);
-            this.SummaryTabControl.Controls.Add(this.tabPageAdv7);
             this.SummaryTabControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.SummaryTabControl.FixedSingleBorderColor = System.Drawing.Color.Black;
             this.SummaryTabControl.FocusOnTabClick = false;
@@ -5292,19 +5290,6 @@ namespace BudgetExecution
             this.SummaryTabControl.TabPanelBackColor = System.Drawing.Color.Black;
             this.SummaryTabControl.TabStyle = typeof(Syncfusion.Windows.Forms.Tools.TabRendererMetro);
             this.SummaryTabControl.SelectedIndexChanged += new System.EventHandler(this.SummaryTabPage_TabSelected);
-            // 
-            // tabPageAdv7
-            // 
-            this.tabPageAdv7.Image = null;
-            this.tabPageAdv7.ImageSize = new System.Drawing.Size(16, 16);
-            this.tabPageAdv7.Location = new System.Drawing.Point(0, 39);
-            this.tabPageAdv7.Name = "tabPageAdv7";
-            this.tabPageAdv7.ShowCloseButton = true;
-            this.tabPageAdv7.Size = new System.Drawing.Size(1588, 895);
-            this.tabPageAdv7.TabIndex = 10;
-            this.tabPageAdv7.Text = "tabPageAdv7";
-            this.tabPageAdv7.ThemesEnabled = false;
-            this.tabPageAdv7.Click += new System.EventHandler(this.tabPageAdv7_Click);
             // 
             // toolStripButton2
             // 
@@ -5368,7 +5353,6 @@ namespace BudgetExecution
             this.ForeColor = System.Drawing.Color.LightSteelBlue;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IconTextRelation = System.Windows.Forms.LeftRightAlignment.Right;
-            this.MaximumSize = new System.Drawing.Size(1600, 1000);
             this.MetroColor = System.Drawing.Color.Black;
             this.Name = "SummaryForm";
             this.ShowIcon = false;
@@ -5646,7 +5630,6 @@ namespace BudgetExecution
         private Button CalendatButton;
         private Button ExcelButton;
         private Button CalculatorButton;
-        private TabPageAdv tabPageAdv7;
         private ChartControl chartControl1;
     }
 }

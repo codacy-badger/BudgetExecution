@@ -35,6 +35,8 @@ namespace BudgetExecution
         /// </summary>
         private void InitializeComponent()
         {
+            Syncfusion.Windows.Forms.CaptionImage captionImage1 = new Syncfusion.Windows.Forms.CaptionImage();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CalculatorForm));
             this.calculatorControl1 = new Syncfusion.Windows.Forms.Tools.CalculatorControl();
             this.SuspendLayout();
             // 
@@ -42,18 +44,18 @@ namespace BudgetExecution
             // 
             this.calculatorControl1.AccessibleDescription = "Calculator control";
             this.calculatorControl1.AccessibleName = "Calculator Control";
-            this.calculatorControl1.BeforeTouchSize = new System.Drawing.Size(478, 502);
+            this.calculatorControl1.BeforeTouchSize = new System.Drawing.Size(487, 502);
             this.calculatorControl1.BorderStyle = System.Windows.Forms.Border3DStyle.Flat;
             this.calculatorControl1.ButtonStyle = Syncfusion.Windows.Forms.ButtonAppearance.Metro;
             this.calculatorControl1.Culture = new System.Globalization.CultureInfo("en-US");
             this.calculatorControl1.DoubleValue = 0D;
             this.calculatorControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.calculatorControl1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.calculatorControl1.Location = new System.Drawing.Point(72, 29);
+            this.calculatorControl1.Location = new System.Drawing.Point(65, 52);
             this.calculatorControl1.MetroColor = System.Drawing.Color.Black;
             this.calculatorControl1.Name = "calculatorControl1";
             this.calculatorControl1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.calculatorControl1.Size = new System.Drawing.Size(478, 502);
+            this.calculatorControl1.Size = new System.Drawing.Size(487, 502);
             this.calculatorControl1.TabIndex = 0;
             this.calculatorControl1.Text = "calculatorControl1";
             this.calculatorControl1.UseVisualStyle = true;
@@ -66,7 +68,13 @@ namespace BudgetExecution
             this.BorderColor = System.Drawing.SystemColors.MenuHighlight;
             this.CaptionBarColor = System.Drawing.Color.Black;
             this.CaptionForeColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(627, 577);
+            captionImage1.BackColor = System.Drawing.Color.Black;
+            captionImage1.Image = ((System.Drawing.Image)(resources.GetObject("captionImage1.Image")));
+            captionImage1.Location = new System.Drawing.Point(15, 10);
+            captionImage1.Name = "CaptionImage1";
+            captionImage1.Size = new System.Drawing.Size(30, 30);
+            this.CaptionImages.Add(captionImage1);
+            this.ClientSize = new System.Drawing.Size(619, 614);
             this.Controls.Add(this.calculatorControl1);
             this.MetroColor = System.Drawing.Color.Black;
             this.Name = "CalculatorForm";
