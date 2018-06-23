@@ -23,13 +23,13 @@ namespace BudgetExecution
         internal void GetReport()
         {
             Report = new Spreadsheet();
-            Report.Open(@"D:\dev\database\BudgetControlTemplate.xlsx");
+            Report.Open(@"C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\report\BudgetControlTemplate.xlsx");
         }
 
         internal void GetReport(object sender, EventArgs e)
         {
             Report = new Spreadsheet();
-            Report.Open(@"D:\dev\database\BudgetControlTemplate.xlsx");
+            Report.Open(@"C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\report\BudgetControlTemplate.xlsx");
         }
 
         private void SplitContainerAdv1_Click(object sender, EventArgs e)
@@ -69,6 +69,11 @@ namespace BudgetExecution
         }
 
         private void splitContainerAdv1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void spreadsheetRibbon1_Click(object sender, EventArgs e)
         {
 
         }

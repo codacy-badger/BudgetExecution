@@ -6,7 +6,7 @@
 // applicable laws. 
 #endregion
 
-namespace BudgetExecution.src
+namespace BudgetExecution
 {
     using System;
     using System.Collections.Generic;

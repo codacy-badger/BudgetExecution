@@ -43,6 +43,9 @@ namespace BudgetExecution
             CurrentTabIndex = 1;
             TabNames = GetTabNames();
             GridRefreshButton.Click += GridRefreshButton_OnClick;
+            ExcelButton.Click += ExcelButton_Click;
+            CalendatButton.Click += CalendatButton_Click;
+            CalculatorButton.Click += CalculatorButton_Click;
         }
 
         public SummaryForm(Source source)
@@ -61,6 +64,9 @@ namespace BudgetExecution
             DatabaseTab.TabVisible = true;
             CurrentTabIndex = SummaryTabControl.SelectedIndex;
             SummaryTabControl.SelectedIndexChanged += SummaryTabPage_TabSelected;
+            ExcelButton.Click += ExcelButton_Click;
+            CalendatButton.Click += CalendatButton_Click;
+            CalculatorButton.Click += CalculatorButton_Click;
             if (source == Source.RegionalAccounts || source == Source.DivisionAccounts)
             {
                 DbData = new DataBuilder(source, Provider.SQLite);
@@ -871,6 +877,29 @@ namespace BudgetExecution
                 MessageBox.Show(ex.Message + ex.StackTrace);
                 return null;
             }
+        }
+
+        private void tabPageAdv7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CalendatButton_Click(object sender, EventArgs e)
+        {
+            var cal = new Calendar();
+            cal.Show();
+        }
+
+        private void CalculatorButton_Click(object sender, EventArgs e)
+        {
+            var cf = new CalculatorForm();
+            cf.Show();
+        }
+
+        private void ExcelButton_Click(object sender, EventArgs e)
+        {
+            var er = new ExcelForm();
+            er.Show();
         }
     }
 }

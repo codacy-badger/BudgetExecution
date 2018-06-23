@@ -200,7 +200,7 @@ namespace BudgetExecution
             this.metroSetPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.metroSetPanel1.Location = new System.Drawing.Point(0, 0);
             this.metroSetPanel1.Name = "metroSetPanel1";
-            this.metroSetPanel1.Size = new System.Drawing.Size(1113, 594);
+            this.metroSetPanel1.Size = new System.Drawing.Size(1181, 825);
             this.metroSetPanel1.Style = MetroSet_UI.Design.Style.Dark;
             this.metroSetPanel1.StyleManager = null;
             this.metroSetPanel1.TabIndex = 2;
@@ -241,7 +241,7 @@ namespace BudgetExecution
             this.spreadsheetRibbon1.SelectedTab = this.toolStripTabItem2;
             this.spreadsheetRibbon1.ShowQuickItemsDropDownButton = false;
             this.spreadsheetRibbon1.ShowRibbonDisplayOptionButton = false;
-            this.spreadsheetRibbon1.Size = new System.Drawing.Size(1087, 100);
+            this.spreadsheetRibbon1.Size = new System.Drawing.Size(1155, 100);
             this.spreadsheetRibbon1.Spreadsheet = this.spreadsheet1;
             this.spreadsheetRibbon1.SystemText.QuickAccessDialogDropDownName = "Start menu";
             this.spreadsheetRibbon1.SystemText.RenameDisplayLabelText = "&Display Name:";
@@ -250,6 +250,7 @@ namespace BudgetExecution
             this.spreadsheetRibbon1.ThemeName = "Default";
             this.spreadsheetRibbon1.TitleColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
             this.spreadsheetRibbon1.TitleFont = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.spreadsheetRibbon1.Click += new System.EventHandler(this.spreadsheetRibbon1_Click);
             // 
             // toolStripTabItem1
             // 
@@ -260,6 +261,7 @@ namespace BudgetExecution
             // spreadsheetRibbon1.ribbonPanel1
             // 
             this.toolStripTabItem1.Panel.Name = "ribbonPanel1";
+            this.toolStripTabItem1.Panel.OfficeColorScheme = Syncfusion.Windows.Forms.Tools.ToolStripEx.ColorScheme.Blue;
             this.toolStripTabItem1.Panel.ScrollPosition = 0;
             this.toolStripTabItem1.Panel.TabIndex = 5;
             this.toolStripTabItem1.Panel.Text = "toolStripTabItem1";
@@ -319,22 +321,21 @@ namespace BudgetExecution
             spreadsheetCopyPaste1.AllowPasteOptionPopup = true;
             spreadsheetCopyPaste1.DefaultPasteOption = Syncfusion.Windows.Forms.Spreadsheet.PasteOptions.Paste;
             this.spreadsheet1.CopyPaste = spreadsheetCopyPaste1;
-            this.spreadsheet1.DefaultColumnCount = 101;
+            this.spreadsheet1.DefaultColumnCount = 50;
             this.spreadsheet1.DefaultRowCount = 50;
             this.spreadsheet1.DisplayAlerts = true;
-            this.spreadsheet1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.spreadsheet1.FileName = "Book1";
-            this.spreadsheet1.FormulaBarVisibility = false;
+            this.spreadsheet1.FormulaBarVisibility = true;
             formulaRangeSelectionController1.AllowMouseSelection = true;
             formulaRangeSelectionController1.AllowSelectionOnEditing = true;
             this.spreadsheet1.FormulaRangeSelectionController = formulaRangeSelectionController1;
             this.spreadsheet1.IsCustomTabItemContextMenuEnabled = false;
-            this.spreadsheet1.Location = new System.Drawing.Point(0, 100);
+            this.spreadsheet1.Location = new System.Drawing.Point(24, 118);
             this.spreadsheet1.Name = "spreadsheet1";
             this.spreadsheet1.SelectedTabIndex = 0;
             this.spreadsheet1.SelectedTabItem = null;
             this.spreadsheet1.ShowBusyIndicator = true;
-            this.spreadsheet1.Size = new System.Drawing.Size(1087, 596);
+            this.spreadsheet1.Size = new System.Drawing.Size(1105, 708);
             this.spreadsheet1.TabIndex = 1;
             this.spreadsheet1.TabItemContextMenu = null;
             this.spreadsheet1.Text = "spreadsheet1";
@@ -345,7 +346,7 @@ namespace BudgetExecution
             // 
             this.tabControlAdv1.ActiveTabColor = System.Drawing.Color.SteelBlue;
             this.tabControlAdv1.ActiveTabForeColor = System.Drawing.Color.White;
-            this.tabControlAdv1.BeforeTouchSize = new System.Drawing.Size(1115, 635);
+            this.tabControlAdv1.BeforeTouchSize = new System.Drawing.Size(1183, 866);
             this.tabControlAdv1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tabControlAdv1.CloseButtonForeColor = System.Drawing.Color.Empty;
             this.tabControlAdv1.CloseButtonHoverForeColor = System.Drawing.Color.Black;
@@ -353,18 +354,19 @@ namespace BudgetExecution
             this.tabControlAdv1.Controls.Add(this.tabPageAdv1);
             this.tabControlAdv1.Controls.Add(this.tabPageAdv2);
             this.tabControlAdv1.Controls.Add(this.tabPageAdv7);
+            this.tabControlAdv1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControlAdv1.FixedSingleBorderColor = System.Drawing.SystemColors.MenuHighlight;
             this.tabControlAdv1.FocusOnTabClick = false;
             this.tabControlAdv1.InactiveTabColor = System.Drawing.Color.Black;
             this.tabControlAdv1.InActiveTabForeColor = System.Drawing.Color.DarkGray;
             this.tabControlAdv1.ItemSize = new System.Drawing.Size(121, 40);
-            this.tabControlAdv1.Location = new System.Drawing.Point(14, 79);
+            this.tabControlAdv1.Location = new System.Drawing.Point(0, 0);
             this.tabControlAdv1.Name = "tabControlAdv1";
             this.tabControlAdv1.Office2007ColorScheme = Syncfusion.Windows.Forms.Office2007Theme.Black;
             this.tabControlAdv1.Office2010ColorTheme = Syncfusion.Windows.Forms.Office2010Theme.Black;
             this.tabControlAdv1.SeparatorColor = System.Drawing.SystemColors.ControlDark;
             this.tabControlAdv1.ShowSeparator = false;
-            this.tabControlAdv1.Size = new System.Drawing.Size(1115, 635);
+            this.tabControlAdv1.Size = new System.Drawing.Size(1183, 866);
             this.tabControlAdv1.TabIndex = 3;
             this.tabControlAdv1.TabPanelBackColor = System.Drawing.Color.Black;
             this.tabControlAdv1.TabStyle = typeof(Syncfusion.Windows.Forms.Tools.TabRendererMetro);
@@ -377,7 +379,7 @@ namespace BudgetExecution
             this.tabPageAdv1.Location = new System.Drawing.Point(1, 40);
             this.tabPageAdv1.Name = "tabPageAdv1";
             this.tabPageAdv1.ShowCloseButton = true;
-            this.tabPageAdv1.Size = new System.Drawing.Size(1113, 594);
+            this.tabPageAdv1.Size = new System.Drawing.Size(1181, 825);
             this.tabPageAdv1.TabIndex = 1;
             this.tabPageAdv1.Text = "tabPageAdv1";
             this.tabPageAdv1.ThemesEnabled = false;
@@ -390,7 +392,7 @@ namespace BudgetExecution
             this.tabPageAdv2.Location = new System.Drawing.Point(1, 40);
             this.tabPageAdv2.Name = "tabPageAdv2";
             this.tabPageAdv2.ShowCloseButton = true;
-            this.tabPageAdv2.Size = new System.Drawing.Size(1113, 594);
+            this.tabPageAdv2.Size = new System.Drawing.Size(1181, 825);
             this.tabPageAdv2.TabIndex = 2;
             this.tabPageAdv2.Text = "tabPageAdv2";
             this.tabPageAdv2.ThemesEnabled = false;
@@ -660,7 +662,7 @@ namespace BudgetExecution
             this.tabPageAdv7.Location = new System.Drawing.Point(1, 40);
             this.tabPageAdv7.Name = "tabPageAdv7";
             this.tabPageAdv7.ShowCloseButton = true;
-            this.tabPageAdv7.Size = new System.Drawing.Size(1113, 594);
+            this.tabPageAdv7.Size = new System.Drawing.Size(1181, 825);
             this.tabPageAdv7.TabIndex = 4;
             this.tabPageAdv7.Text = "tabPageAdv7";
             this.tabPageAdv7.ThemesEnabled = false;
@@ -674,8 +676,8 @@ namespace BudgetExecution
             // splitContainer1.Panel1
             // 
             this.splitContainer1.Panel1.Controls.Add(this.chartControl1);
-            this.splitContainer1.Size = new System.Drawing.Size(1113, 594);
-            this.splitContainer1.SplitterDistance = 595;
+            this.splitContainer1.Size = new System.Drawing.Size(1181, 825);
+            this.splitContainer1.SplitterDistance = 632;
             this.splitContainer1.TabIndex = 48;
             // 
             // chartControl1
@@ -861,7 +863,7 @@ namespace BudgetExecution
             this.tabControlAdv2.InactiveTabColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tabControlAdv2.InActiveTabForeColor = System.Drawing.Color.DarkGray;
             this.tabControlAdv2.ItemSize = new System.Drawing.Size(121, 40);
-            this.tabControlAdv2.Location = new System.Drawing.Point(44, 79);
+            this.tabControlAdv2.Location = new System.Drawing.Point(34, 12);
             this.tabControlAdv2.Name = "tabControlAdv2";
             this.tabControlAdv2.SeparatorColor = System.Drawing.SystemColors.MenuHighlight;
             this.tabControlAdv2.ShowSeparator = false;
@@ -939,7 +941,7 @@ namespace BudgetExecution
             // 
             this.splitContainer2.Panel2.Controls.Add(this.tabControlAdv1);
             this.splitContainer2.Size = new System.Drawing.Size(1588, 866);
-            this.splitContainer2.SplitterDistance = 443;
+            this.splitContainer2.SplitterDistance = 401;
             this.splitContainer2.TabIndex = 5;
             // 
             // ExcelForm
