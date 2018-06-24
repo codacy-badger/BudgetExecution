@@ -68,11 +68,6 @@ namespace BudgetExecution
             this.button7 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
-            this.AccountNavigator = new System.Windows.Forms.BindingNavigator(this.components);
-            this.bindingNavigatorSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorPositionItem1 = new System.Windows.Forms.ToolStripTextBox();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
             this.AccountGrid = new System.Windows.Forms.DataGridView();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
@@ -89,8 +84,6 @@ namespace BudgetExecution
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.metroPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.AccountNavigator)).BeginInit();
-            this.AccountNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AccountGrid)).BeginInit();
             this.SuspendLayout();
             // 
@@ -382,14 +375,7 @@ namespace BudgetExecution
             // 
             this.groupBox2.BackColor = System.Drawing.Color.Black;
             this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Controls.Add(this.button7);
-            this.groupBox2.Controls.Add(this.button3);
             this.groupBox2.Controls.Add(this.metroPanel1);
-            this.groupBox2.Controls.Add(this.button5);
-            this.groupBox2.Controls.Add(this.button6);
-            this.groupBox2.Controls.Add(this.button8);
-            this.groupBox2.Controls.Add(this.button2);
-            this.groupBox2.Controls.Add(this.button4);
             this.groupBox2.ForeColor = System.Drawing.SystemColors.Info;
             this.groupBox2.Location = new System.Drawing.Point(18, 114);
             this.groupBox2.Name = "groupBox2";
@@ -418,7 +404,7 @@ namespace BudgetExecution
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button7.ForeColor = System.Drawing.SystemColors.Info;
             this.button7.Image = ((System.Drawing.Image)(resources.GetObject("button7.Image")));
-            this.button7.Location = new System.Drawing.Point(1001, 561);
+            this.button7.Location = new System.Drawing.Point(942, 437);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(94, 60);
             this.button7.TabIndex = 84;
@@ -436,7 +422,7 @@ namespace BudgetExecution
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.ForeColor = System.Drawing.SystemColors.Info;
             this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.Location = new System.Drawing.Point(836, 561);
+            this.button3.Location = new System.Drawing.Point(792, 437);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(94, 60);
             this.button3.TabIndex = 70;
@@ -446,72 +432,25 @@ namespace BudgetExecution
             // 
             // metroPanel1
             // 
-            this.metroPanel1.Controls.Add(this.AccountNavigator);
+            this.metroPanel1.Controls.Add(this.button3);
+            this.metroPanel1.Controls.Add(this.button7);
             this.metroPanel1.Controls.Add(this.AccountGrid);
+            this.metroPanel1.Controls.Add(this.button5);
+            this.metroPanel1.Controls.Add(this.button6);
+            this.metroPanel1.Controls.Add(this.button8);
+            this.metroPanel1.Controls.Add(this.button2);
+            this.metroPanel1.Controls.Add(this.button4);
             this.metroPanel1.HorizontalScrollbarBarColor = true;
             this.metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
             this.metroPanel1.HorizontalScrollbarSize = 10;
             this.metroPanel1.Location = new System.Drawing.Point(49, 105);
             this.metroPanel1.Name = "metroPanel1";
-            this.metroPanel1.Size = new System.Drawing.Size(1073, 433);
+            this.metroPanel1.Size = new System.Drawing.Size(1073, 536);
             this.metroPanel1.TabIndex = 5;
             this.metroPanel1.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.metroPanel1.VerticalScrollbarBarColor = true;
             this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel1.VerticalScrollbarSize = 10;
-            // 
-            // AccountNavigator
-            // 
-            this.AccountNavigator.AddNewItem = null;
-            this.AccountNavigator.BackColor = System.Drawing.Color.Black;
-            this.AccountNavigator.CountItem = null;
-            this.AccountNavigator.DeleteItem = null;
-            this.AccountNavigator.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.AccountNavigator.ImageScalingSize = new System.Drawing.Size(24, 20);
-            this.AccountNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.bindingNavigatorSeparator3,
-            this.bindingNavigatorPositionItem1,
-            this.toolStripSeparator1,
-            this.toolStripTextBox1});
-            this.AccountNavigator.Location = new System.Drawing.Point(0, 402);
-            this.AccountNavigator.MoveFirstItem = null;
-            this.AccountNavigator.MoveLastItem = null;
-            this.AccountNavigator.MoveNextItem = null;
-            this.AccountNavigator.MovePreviousItem = null;
-            this.AccountNavigator.Name = "AccountNavigator";
-            this.AccountNavigator.PositionItem = this.bindingNavigatorPositionItem1;
-            this.AccountNavigator.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.AccountNavigator.Size = new System.Drawing.Size(1073, 31);
-            this.AccountNavigator.TabIndex = 87;
-            this.AccountNavigator.Text = "bindingNavigator1";
-            // 
-            // bindingNavigatorSeparator3
-            // 
-            this.bindingNavigatorSeparator3.Name = "bindingNavigatorSeparator3";
-            this.bindingNavigatorSeparator3.Size = new System.Drawing.Size(6, 31);
-            // 
-            // bindingNavigatorPositionItem1
-            // 
-            this.bindingNavigatorPositionItem1.AccessibleName = "Position";
-            this.bindingNavigatorPositionItem1.AutoSize = false;
-            this.bindingNavigatorPositionItem1.BackColor = System.Drawing.Color.Black;
-            this.bindingNavigatorPositionItem1.ForeColor = System.Drawing.SystemColors.Info;
-            this.bindingNavigatorPositionItem1.Name = "bindingNavigatorPositionItem1";
-            this.bindingNavigatorPositionItem1.Size = new System.Drawing.Size(50, 31);
-            this.bindingNavigatorPositionItem1.Text = "0";
-            this.bindingNavigatorPositionItem1.ToolTipText = "Current position";
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 31);
-            // 
-            // toolStripTextBox1
-            // 
-            this.toolStripTextBox1.BackColor = System.Drawing.Color.Black;
-            this.toolStripTextBox1.ForeColor = System.Drawing.SystemColors.Info;
-            this.toolStripTextBox1.Name = "toolStripTextBox1";
-            this.toolStripTextBox1.Size = new System.Drawing.Size(100, 31);
             // 
             // AccountGrid
             // 
@@ -572,7 +511,7 @@ namespace BudgetExecution
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.ForeColor = System.Drawing.SystemColors.Info;
             this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
-            this.button5.Location = new System.Drawing.Point(75, 561);
+            this.button5.Location = new System.Drawing.Point(39, 437);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(96, 60);
             this.button5.TabIndex = 82;
@@ -591,7 +530,7 @@ namespace BudgetExecution
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.ForeColor = System.Drawing.SystemColors.Info;
             this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
-            this.button6.Location = new System.Drawing.Point(682, 561);
+            this.button6.Location = new System.Drawing.Point(636, 437);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(94, 60);
             this.button6.TabIndex = 83;
@@ -609,7 +548,7 @@ namespace BudgetExecution
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button8.ForeColor = System.Drawing.SystemColors.Info;
             this.button8.Image = ((System.Drawing.Image)(resources.GetObject("button8.Image")));
-            this.button8.Location = new System.Drawing.Point(210, 561);
+            this.button8.Location = new System.Drawing.Point(175, 437);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(96, 60);
             this.button8.TabIndex = 85;
@@ -628,7 +567,7 @@ namespace BudgetExecution
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.ForeColor = System.Drawing.SystemColors.Info;
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.Location = new System.Drawing.Point(524, 561);
+            this.button2.Location = new System.Drawing.Point(487, 437);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(94, 60);
             this.button2.TabIndex = 71;
@@ -646,7 +585,7 @@ namespace BudgetExecution
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.ForeColor = System.Drawing.SystemColors.Info;
             this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.Location = new System.Drawing.Point(356, 561);
+            this.button4.Location = new System.Drawing.Point(319, 437);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(94, 60);
             this.button4.TabIndex = 81;
@@ -683,10 +622,6 @@ namespace BudgetExecution
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.metroPanel1.ResumeLayout(false);
-            this.metroPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.AccountNavigator)).EndInit();
-            this.AccountNavigator.ResumeLayout(false);
-            this.AccountNavigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AccountGrid)).EndInit();
             this.ResumeLayout(false);
 
@@ -720,9 +655,6 @@ namespace BudgetExecution
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button3;
         private MetroFramework.Controls.MetroPanel metroPanel1;
-        private System.Windows.Forms.BindingNavigator AccountNavigator;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator3;
-        private System.Windows.Forms.ToolStripTextBox bindingNavigatorPositionItem1;
         private System.Windows.Forms.DataGridView AccountGrid;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
@@ -730,8 +662,6 @@ namespace BudgetExecution
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-        private System.Windows.Forms.ToolStripTextBox toolStripTextBox1;
         private System.Windows.Forms.FlowLayoutPanel Filter1;
     }
 }

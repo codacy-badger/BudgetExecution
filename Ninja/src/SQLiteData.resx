@@ -121,15 +121,6 @@
     <value>6, 29</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="button7.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wwAADsMBx2+oZAAAAJ9JREFUWEftkLENwkAMRa/IIIzGKGzCCIxwBQNE5yYlRYJSZIhwlr6lFBYcian4
-        T3rF+eJvXxIhhOxhElk9cf17vOEqruPxhrU49/0JEcfwwlsMW0CD9rjm3CHiOGMpl29EWxzeL34n2uLY
-        hD/0rK+02lPkim+y1fQcigVXuQAX+PMFRpFlKuVcvVmtetdaXWqwGtri2AxrEm2EEPKBlF6BW0lTfYK7
-        vgAAAABJRU5ErkJggg==
-</value>
-  </data>
   <data name="button3.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
@@ -141,9 +132,15 @@
         J/TxjB9fNWeyAAAAAElFTkSuQmCC
 </value>
   </data>
-  <metadata name="AccountNavigator.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>557, 27</value>
-  </metadata>
+  <data name="button7.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wwAADsMBx2+oZAAAAJ9JREFUWEftkLENwkAMRa/IIIzGKGzCCIxwBQNE5yYlRYJSZIhwlr6lFBYcian4
+        T3rF+eJvXxIhhOxhElk9cf17vOEqruPxhrU49/0JEcfwwlsMW0CD9rjm3CHiOGMpl29EWxzeL34n2uLY
+        hD/0rK+02lPkim+y1fQcigVXuQAX+PMFRpFlKuVcvVmtetdaXWqwGtri2AxrEm2EEPKBlF6BW0lTfYK7
+        vgAAAABJRU5ErkJggg==
+</value>
+  </data>
   <data name="button5.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
