@@ -879,7 +879,7 @@ namespace BudgetExecution
             }
         }
 
-        private void tabPageAdv7_Click(object sender, EventArgs e)
+        private void TabPageAdv7_Click(object sender, EventArgs e)
         {
 
         }

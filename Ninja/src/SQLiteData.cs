@@ -254,5 +254,16 @@ namespace BudgetExecution
         {
 
         }
+
+        private void LeftButton_Click_1(object sender, EventArgs e)
+        {
+            BindingSource.MovePrevious();
+        }
+
+        private void RightButton_Click_1(object sender, EventArgs e)
+        {
+            BindingSource.MoveNext();
+
+        }
     }
 }

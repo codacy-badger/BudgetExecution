@@ -14,7 +14,7 @@ namespace BudgetExecution
 
     public class ExcelReport
     {
-        private string p7path = @"C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\Report\BudgetControlTemplate.xlsx";
+        private string path = @"C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\Report\BudgetControlTemplate.xlsx";
 
         // CONSTRUCTORS
         public ExcelReport()
@@ -29,13 +29,13 @@ namespace BudgetExecution
 
         public ExcelReport(DataTable data)
         {
-            FilePath = p7path;
+            FilePath = path;
             ConnectionString = GetConnectionString(FilePath);
-            Data = data;
+            Table = data;
         }
 
         // PROPERTIES
-        public DataTable Data { get; }
+        public DataTable Table { get; }
 
         public string FilePath { get; }
 
@@ -51,7 +51,7 @@ namespace BudgetExecution
             return $@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source='{filepath}';Extended Properties='Excel 12.0 Macro;HDR=YES;IMEX=1'";
         }
 
-        internal string GetExternalFile()
+        internal string GetExternalExcelFile()
         {
             try
             {
@@ -77,7 +77,7 @@ namespace BudgetExecution
             try
             {
                 Excel excel = Create();
-                var excelWorkBook = excel.Workbooks.Open(p7path);
+                var excelWorkBook = excel.Workbooks.Open(path);
                 int tr = table.Rows.Count;
                 Worksheet excelWorkSheet = (Worksheet)excelWorkBook.Sheets[1];
                 excelWorkSheet.Name = table.TableName;
@@ -189,8 +189,7 @@ namespace BudgetExecution
         {
             try
             {
-                Excel excel = new Excel();
-                return excel;
+                return new Excel();
             }
             catch (Exception ex)
             {

@@ -39,7 +39,6 @@ namespace BudgetExecution
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            Syncfusion.Windows.Forms.CaptionImage captionImage1 = new Syncfusion.Windows.Forms.CaptionImage();
             this.E6DataGrid = new Syncfusion.Windows.Forms.Grid.GridDataBoundGrid();
             this.toolstripitem1 = new Syncfusion.Windows.Forms.Tools.toolstripitem();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
@@ -516,30 +515,30 @@ namespace BudgetExecution
             // 
             // AccountGrid
             // 
-            this.AccountGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.AccountGrid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.AccountGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            this.AccountGrid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCellsExceptHeaders;
             this.AccountGrid.BackgroundColor = System.Drawing.Color.SlateGray;
             this.AccountGrid.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Consolas", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.AccountGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.AccountGrid.ColumnHeadersHeight = 30;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.LightSteelBlue;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Consolas", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.Info;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.AccountGrid.DefaultCellStyle = dataGridViewCellStyle2;
-            this.AccountGrid.Dock = System.Windows.Forms.DockStyle.Fill;
             this.AccountGrid.EnableHeadersVisualStyles = false;
             this.AccountGrid.GridColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.AccountGrid.Location = new System.Drawing.Point(0, 0);
+            this.AccountGrid.Location = new System.Drawing.Point(39, 15);
             this.AccountGrid.MultiSelect = false;
             this.AccountGrid.Name = "AccountGrid";
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -552,13 +551,15 @@ namespace BudgetExecution
             this.AccountGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.AccountGrid.RowHeadersWidth = 30;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Consolas", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
             this.AccountGrid.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.AccountGrid.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.AccountGrid.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AccountGrid.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Consolas", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AccountGrid.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
+            this.AccountGrid.RowTemplate.Height = 30;
             this.AccountGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.AccountGrid.Size = new System.Drawing.Size(1073, 433);
+            this.AccountGrid.Size = new System.Drawing.Size(997, 370);
             this.AccountGrid.TabIndex = 2;
             // 
             // button5
@@ -578,6 +579,7 @@ namespace BudgetExecution
             this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.LeftButton_Click_1);
             // 
             // button6
             // 
@@ -614,6 +616,7 @@ namespace BudgetExecution
             this.button8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button8.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button8.UseVisualStyleBackColor = false;
+            this.button8.Click += new System.EventHandler(this.RightButton_Click_1);
             // 
             // button2
             // 
@@ -660,12 +663,6 @@ namespace BudgetExecution
             this.CaptionBarColor = System.Drawing.Color.Black;
             this.CaptionBarHeight = 60;
             this.CaptionForeColor = System.Drawing.Color.Black;
-            captionImage1.BackColor = System.Drawing.Color.Black;
-            captionImage1.Image = ((System.Drawing.Image)(resources.GetObject("captionImage1.Image")));
-            captionImage1.Location = new System.Drawing.Point(5, 10);
-            captionImage1.Name = "CaptionImage1";
-            captionImage1.Size = new System.Drawing.Size(36, 20);
-            this.CaptionImages.Add(captionImage1);
             this.ClientSize = new System.Drawing.Size(1588, 934);
             this.Controls.Add(this.splitContainerAdv1);
             this.ForeColor = System.Drawing.Color.LightSteelBlue;
