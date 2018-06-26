@@ -147,7 +147,7 @@ namespace BudgetExecution
         {
             try
             {
-                return new DataBuilder(Source.DivisionTransfers, Provider.SQLite).Table.Rows.Count + 1;
+                return new DataBuilder(Source.InternalTransfers, Provider.SQLite).Table.Rows.Count + 1;
             }
             catch (Exception ex)
             {

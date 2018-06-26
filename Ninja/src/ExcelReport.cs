@@ -29,12 +29,18 @@ namespace BudgetExecution
 
         public ExcelReport(DataTable data)
         {
-            FilePath = path;
-            ConnectionString = GetConnectionString(FilePath);
             Table = data;
         }
+        public ExcelReport(DataBuilder data)
+        {
+            DbData = data;
+            Table = DbData.Table;
+        }
+
 
         // PROPERTIES
+        public DataBuilder DbData { get; set; }
+
         public DataTable Table { get; }
 
         public string FilePath { get; }
@@ -46,11 +52,6 @@ namespace BudgetExecution
         private Excel Excel { get; }
 
         // METHODS
-        public string GetConnectionString(string filepath)
-        {
-            return $@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source='{filepath}';Extended Properties='Excel 12.0 Macro;HDR=YES;IMEX=1'";
-        }
-
         internal string GetExternalExcelFile()
         {
             try
@@ -70,6 +71,11 @@ namespace BudgetExecution
                 MessageBox.Show(ex.StackTrace);
                 return null;
             }
+        }
+
+        public string GetConnectionString(string filepath)
+        {
+            return $@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source='{filepath}';Extended Properties='Excel 12.0 Macro;HDR=YES;IMEX=1'";
         }
 
         internal Workbook ExportData(DataTable table)
@@ -182,6 +188,31 @@ namespace BudgetExecution
             catch (Exception ex)
             {
                 MessageBox.Show("ERROR!" + ex.StackTrace);
+            }
+        }
+
+        internal void Close(Workbook wb)
+        {
+            if(wb != null)
+            {
+                try
+                {
+                    GC.Collect();
+                    GC.WaitForPendingFinalizers();
+                    if (wb.Worksheets != null)
+                    {
+                        Marshal.ReleaseComObject(wb.Worksheets);
+                    }
+
+                    Marshal.ReleaseComObject(wb);
+                    wb.Close();
+                    wb.Application.Quit();
+                    Marshal.ReleaseComObject(wb.Application);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("ERROR!" + ex.StackTrace);
+                }
             }
         }
 

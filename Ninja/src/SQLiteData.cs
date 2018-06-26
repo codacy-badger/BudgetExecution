@@ -25,7 +25,6 @@ namespace BudgetExecution
             ProgramElements = DbData.GetProgramElements(Table);
             BindingSource.DataSource = Table;
             AccountGrid.DataSource = BindingSource;
-            GetPrcGridVisibleColumns(AccountGrid);
             PopulateSourceFilters();
             PopulateFilterButtons(Filter1, Info.Sources);
         }
@@ -41,7 +40,6 @@ namespace BudgetExecution
             ProgramElements = DbData.GetProgramElements(Table);
             BindingSource.DataSource = Table;
             AccountGrid.DataSource = BindingSource;
-            GetPrcGridVisibleColumns(AccountGrid);
             PopulateSourceFilters();
             PopulateFilterButtons(Filter1, Info.Sources);
         }
@@ -88,7 +86,7 @@ namespace BudgetExecution
             var listbox = sender as ListBox;
             var name = listbox.SelectedItem.ToString();
             var source = (Source)Enum.Parse(typeof(Source), name.ToString());
-            BindingSource.DataSource = new DataBuilder(source, Provider.SQLite).GetDataTable();
+            BindingSource.DataSource = new DataBuilder(source, Provider.SQLite).GetDataTable(source);
         }
 
         private void Filter3_ItemSelected(object sender, EventArgs e)
@@ -234,6 +232,7 @@ namespace BudgetExecution
                 var name = button.Tag.ToString();
                 var source = (Source)Enum.Parse(typeof(Source), name.ToString());
                 BindingSource.DataSource = new DataBuilder(source, Provider.SQLite).GetDataTable();
+                DataGridGroupBox.Text = source.ToString();
             }
             catch (Exception ex)
             {

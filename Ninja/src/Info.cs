@@ -31,6 +31,8 @@ namespace BudgetExecution
             }
         }
 
+        public static string[] AgencyFundCodes = Enum.GetNames(typeof(FundCode));
+
         public static string[] AgencyActivityCodes =
         {
         "1", "2", "3", "P1", "P3", "P8", "PS", "Q1", "Q3", "R1",
@@ -837,17 +839,5 @@ namespace BudgetExecution
             }
         }
 
-        public static PRC ToPrc(this DataRow row)
-        {
-            try
-            {
-                return new PRC(row);
-            }
-            catch (System.Exception ex)
-            {
-                MessageBox.Show(ex.Message + ex.StackTrace);
-                return null;
-            }
-        }
     }
 }

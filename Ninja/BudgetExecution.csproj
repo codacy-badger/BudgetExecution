@@ -387,6 +387,7 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="src\BudgetControlNumber.cs" />
     <Compile Include="src\ExcelForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -464,6 +465,24 @@
     <Compile Include="src\MetroForm1.Designer.cs">
       <DependentUpon>MetroForm1.cs</DependentUpon>
     </Compile>
+    <Compile Include="src\NewPrcAccountManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\NewPrcAccountManager.Designer.cs">
+      <DependentUpon>NewPrcAccountManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\RecordManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\RecordManager.Designer.cs">
+      <DependentUpon>RecordManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\FunctionSelector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\FunctionSelector.Designer.cs">
+      <DependentUpon>FunctionSelector.cs</DependentUpon>
+    </Compile>
     <Compile Include="src\SQLiteQuery.cs" />
     <Compile Include="src\SQLiteData.cs">
       <SubType>Form</SubType>
@@ -475,7 +494,6 @@
     <Compile Include="src\BOC.cs" />
     <Compile Include="src\BudgetPortfolio.cs" />
     <Compile Include="src\BudgetChart.cs" />
-    <Compile Include="src\ControlData.cs" />
     <Compile Include="src\DataBuilder.cs" />
     <Compile Include="src\DivisionAuthority.cs" />
     <Compile Include="src\DocInfo.cs" />
@@ -641,6 +659,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="src\MetroForm1.resx">
       <DependentUpon>MetroForm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\NewPrcAccountManager.resx">
+      <DependentUpon>NewPrcAccountManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\RecordManager.resx">
+      <DependentUpon>RecordManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\FunctionSelector.resx">
+      <DependentUpon>FunctionSelector.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="src\SQLiteData.resx">
       <DependentUpon>SQLiteData.cs</DependentUpon>

@@ -97,7 +97,7 @@ namespace BudgetExecution
 
         private void DataButton_OnClick(object sender, EventArgs e)
         {
-            var dm = new SQLiteData();
+            var dm = new FunctionSelector();
             dm.Show();
         }
 
@@ -188,8 +188,8 @@ namespace BudgetExecution
 
         private void DatabaseTile_OnClick(object sender, EventArgs e)
         {
-            var ds = new SQLiteData();
-            ds.Show();
+            var dm = new FunctionSelector();
+            dm.Show();
         }
 
         private void TransferButton_Click(object sender, EventArgs e)

@@ -25,7 +25,12 @@ namespace BudgetExecution
     public enum FundCode
     {
         B, BR, BR2, BR3, T, TC, TD, TR, TR1, TR2, TR2A, TR2B, TR3, F, FC, FD, H, HC, HD, E1, E1C, E1D, E2, E2C, E2D, E3,
-        E3C, E3D, E4, E4C, E4D, E5, E5C, E5D, ZL
+        E3C, E3D, E4, E4C, E4D, E5, E5C, E5D, ZL, FS3, TS3
+    }
+
+    public enum Function
+    {
+        SQLiteData, BudgetTools, DataTools, DataMigration, ExcelImporter, PdfDataReader
     }
 
     public enum Goal
@@ -60,8 +65,8 @@ namespace BudgetExecution
 
     public enum Source
     {
-        Accounts, Awards, BudgetDocuments, DivisionAccounts, DivisionObligations, Divisions, DivisionTransfers, DWH, EJ, EN, Employees, EPM, ExternalTransfers, Funds, InternalTransfers, PRC, RegionalAccounts,
-        Obligations, PayrollObligations, Sites, RegionalTransfers, Reimbursables, LUST, OIL, STAG, SUPERFUND, MD, RC, RA, SF, Transfers, WQ, MM, WSA, WCF, MDR, XA, PAYROLL, FTE, TRAVEL, EXPENSES, CONTRACTS, GRANTS
+        Accounts, Awards, BudgetDocuments, DivisionAccounts, DivisionObligations, Divisions, DWH, EJ, EN, Employees, EPM, ExternalTransfers, Funds, InternalTransfers, PRC, RegionalAccounts,
+        Obligations, PayrollObligations, Sites, Reimbursables, LUST, OIL, STAG, SUPERFUND, MD, RC, RA, SF, Transfers, WQ, MM, WSA, WCF, MDR, XA, PAYROLL, FTE, TRAVEL, EXPENSES, CONTRACTS, GRANTS
     }
 
     public enum Stat

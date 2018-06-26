@@ -23,7 +23,7 @@ namespace BudgetExecution
             Query = query;
             if (Source == Source.PRC || Source == Source.RegionalAccounts || Source == Source.DivisionAccounts)
             {
-                Table = GetDataTable();
+                Table = GetDataTable(Source);
                 Total = GetTotal(Table);
                 ProgramElements = GetProgramElements(Table);
                 BindingSource = new BindingSource();
@@ -50,7 +50,7 @@ namespace BudgetExecution
             Parameter = null;
             Source = source;
             Query = new Query(source, provider);
-            Table = GetDataTable();
+            Table = GetDataTable(Source);
             Total = GetTotal(Table);
             ProgramElements = GetProgramElements(Table);
             BindingSource = new BindingSource();
@@ -74,7 +74,7 @@ namespace BudgetExecution
             Source = source;
             Parameter = param;
             Query = new Query(source, provider, Parameter);
-            Table = GetDataTable();
+            Table = GetDataTable(Source);
             Total = GetTotal(Table);
             ProgramElements = GetProgramElements(Table);
             BindingSource = new BindingSource();
@@ -164,7 +164,7 @@ namespace BudgetExecution
                 var data = new Dictionary<string, string[]>();
                 foreach (DataColumn dc in table.Columns)
                 {
-                    if (dc.ColumnName.Equals("ID") || dc.ColumnName.Equals("Amount"))
+                    if (dc.ColumnName.Equals("ID") || dc.ColumnName.Equals("Amount") || dc.ColumnName.Contains("Obligation") || dc.ColumnName.Contains("Commitment"))
                     {
                         continue;
                     }
@@ -305,6 +305,7 @@ namespace BudgetExecution
         {
             try
             {
+                var ds = new DataSet("R06");
                 var dt = new DataTable(source.ToString());
                 dt.TableName = source.ToString();
                 Query.DataAdapter.Fill(dt);
@@ -364,6 +365,23 @@ namespace BudgetExecution
                 MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
                 return null;
             }
+        }
+
+        public string[] GetColumnNames(DataTable table)
+        {
+            if(table.Rows.Count > 0)
+            {
+                try
+                {
+                    return Info.GetFields(table);
+                }
+                catch(SystemException ex)
+                {
+                    MessageBox.Show(ex.Message + ex.StackTrace);
+                    return null;
+                }
+            }
+            return null;
         }
     }
 }

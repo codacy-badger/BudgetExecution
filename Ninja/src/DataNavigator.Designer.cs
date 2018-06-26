@@ -51,10 +51,11 @@
             this.tileLayout1.AutoScroll = true;
             this.tileLayout1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tileLayout1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tileLayout1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tileLayout1.ExitButtonImage = null;
             this.tileLayout1.Font = new System.Drawing.Font("Segoe UI", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tileLayout1.Items = 0;
-            this.tileLayout1.Location = new System.Drawing.Point(71, 103);
+            this.tileLayout1.Location = new System.Drawing.Point(0, 0);
             // 
             // 
             // 
@@ -71,7 +72,7 @@
             this.tileLayout1.ShowGroupTitle = false;
             this.tileLayout1.ShowItemPreview = false;
             this.tileLayout1.ShowPreviewButtonImage = null;
-            this.tileLayout1.Size = new System.Drawing.Size(680, 338);
+            this.tileLayout1.Size = new System.Drawing.Size(1588, 953);
             this.tileLayout1.TabIndex = 0;
             this.tileLayout1.TextAlignment = Syncfusion.Windows.Forms.Tools.TextAlignment.Left;
             this.tileLayout1.TitleFont = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -95,10 +96,11 @@
             this.tileLayout2.AutoScroll = true;
             this.tileLayout2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tileLayout2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tileLayout2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tileLayout2.ExitButtonImage = null;
             this.tileLayout2.Font = new System.Drawing.Font("Segoe UI", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tileLayout2.Items = 0;
-            this.tileLayout2.Location = new System.Drawing.Point(844, 103);
+            this.tileLayout2.Location = new System.Drawing.Point(0, 0);
             // 
             // 
             // 
@@ -115,7 +117,7 @@
             this.tileLayout2.ShowGroupTitle = false;
             this.tileLayout2.ShowItemPreview = false;
             this.tileLayout2.ShowPreviewButtonImage = null;
-            this.tileLayout2.Size = new System.Drawing.Size(647, 338);
+            this.tileLayout2.Size = new System.Drawing.Size(1588, 953);
             this.tileLayout2.TabIndex = 1;
             this.tileLayout2.TextAlignment = Syncfusion.Windows.Forms.Tools.TextAlignment.Left;
             this.tileLayout2.TitleFont = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -127,10 +129,11 @@
             this.tileLayout3.AutoScroll = true;
             this.tileLayout3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tileLayout3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tileLayout3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tileLayout3.ExitButtonImage = null;
             this.tileLayout3.Font = new System.Drawing.Font("Segoe UI", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tileLayout3.Items = 0;
-            this.tileLayout3.Location = new System.Drawing.Point(71, 539);
+            this.tileLayout3.Location = new System.Drawing.Point(0, 0);
             // 
             // 
             // 
@@ -147,7 +150,7 @@
             this.tileLayout3.ShowGroupTitle = false;
             this.tileLayout3.ShowItemPreview = false;
             this.tileLayout3.ShowPreviewButtonImage = null;
-            this.tileLayout3.Size = new System.Drawing.Size(680, 338);
+            this.tileLayout3.Size = new System.Drawing.Size(1588, 953);
             this.tileLayout3.TabIndex = 2;
             this.tileLayout3.TextAlignment = Syncfusion.Windows.Forms.Tools.TextAlignment.Left;
             this.tileLayout3.TitleFont = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -157,12 +160,13 @@
             // 
             this.tileLayout4.AllowNewGroup = false;
             this.tileLayout4.AutoScroll = true;
-            this.tileLayout4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.tileLayout4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
             this.tileLayout4.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tileLayout4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tileLayout4.ExitButtonImage = null;
             this.tileLayout4.Font = new System.Drawing.Font("Segoe UI", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tileLayout4.Items = 0;
-            this.tileLayout4.Location = new System.Drawing.Point(844, 529);
+            this.tileLayout4.Location = new System.Drawing.Point(0, 0);
             // 
             // 
             // 
@@ -179,7 +183,7 @@
             this.tileLayout4.ShowGroupTitle = false;
             this.tileLayout4.ShowItemPreview = false;
             this.tileLayout4.ShowPreviewButtonImage = null;
-            this.tileLayout4.Size = new System.Drawing.Size(647, 338);
+            this.tileLayout4.Size = new System.Drawing.Size(1588, 953);
             this.tileLayout4.TabIndex = 3;
             this.tileLayout4.TextAlignment = Syncfusion.Windows.Forms.Tools.TextAlignment.Left;
             this.tileLayout4.TitleFont = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

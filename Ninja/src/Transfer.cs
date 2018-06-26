@@ -13,6 +13,7 @@ namespace BudgetExecution
 
     public class Transfer
     {
+        private DataBuilder DbData;
         private DataRow Data;
         private Source Source;
         private Provider Provider;
@@ -20,6 +21,14 @@ namespace BudgetExecution
         // CONSTRUCTORS
         public Transfer()
         {
+        }
+
+        public Transfer(Source source, Provider provider)
+        {
+            Source = source;
+            Provider = provider;
+            DbData = new DataBuilder(source, provider);
+            Data = DbData.Table.AsEnumerable().Select(p => p).CopyToDataTable().Rows[0];
         }
 
         public Transfer(PRC sender, PRC receiver, decimal amount)
