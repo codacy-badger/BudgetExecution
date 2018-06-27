@@ -91,6 +91,14 @@ namespace BudgetExecution
                     var dt = new BudgetTools();
                     dt.Show();
                     break;
+                case Function.ExcelImporter:
+                    var ei = new ExcelImporter();
+                    ei.Show();
+                    break;
+                case Function.PdfDataReader:
+                    var pdfdr = new PdfDataReader();
+                    pdfdr.Show();
+                    break;
             }
         }
     }

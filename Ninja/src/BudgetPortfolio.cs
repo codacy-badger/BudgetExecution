@@ -10,23 +10,27 @@ namespace BudgetExecution
     using System.Data.OleDb;
     using System.Windows.Forms;
 
-    public class BudgetPortfolio
+    public class BudgetDocument
     {
-        public BudgetPortfolio()
+        // CONSTRUCTORS
+        public BudgetDocument()
         {
         }
 
-        public BudgetPortfolio(Dictionary<string, object> param)
+        public BudgetDocument(Dictionary<string, object> param)
         {
             DocumentQuery = new Query(Source.BudgetDocuments, Provider.SQLite, param);
         }
 
+
+        // PROPERTIES
         public List<string> BudgetList { get; set; }
 
         public Query DocumentQuery { get; set; }
 
         public Tuple<DataTable, List<DocInfo>> SqlDocumentData { get; internal set; }
 
+        // METHODS
         internal OleDbConnection GetExcelConnection()
         {
             try

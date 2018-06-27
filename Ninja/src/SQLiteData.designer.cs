@@ -269,7 +269,7 @@ namespace BudgetExecution
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(40, 40);
+            this.label2.Location = new System.Drawing.Point(40, 70);
             this.label2.Name = "label2";
             this.label2.Padding = new System.Windows.Forms.Padding(1);
             this.label2.Size = new System.Drawing.Size(53, 22);
@@ -279,7 +279,7 @@ namespace BudgetExecution
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(40, 152);
+            this.label3.Location = new System.Drawing.Point(40, 153);
             this.label3.Name = "label3";
             this.label3.Padding = new System.Windows.Forms.Padding(1);
             this.label3.Size = new System.Drawing.Size(53, 22);
@@ -304,12 +304,12 @@ namespace BudgetExecution
             this.FIlter2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.FIlter2.FormattingEnabled = true;
             this.FIlter2.ItemHeight = 30;
-            this.FIlter2.Location = new System.Drawing.Point(44, 65);
+            this.FIlter2.Location = new System.Drawing.Point(106, 56);
             this.FIlter2.MaxDropDownItems = 20;
             this.FIlter2.Name = "FIlter2";
             this.FIlter2.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.FIlter2.SelectedItemForeColor = System.Drawing.Color.White;
-            this.FIlter2.Size = new System.Drawing.Size(198, 36);
+            this.FIlter2.Size = new System.Drawing.Size(136, 36);
             this.FIlter2.Style = MetroSet_UI.Design.Style.Dark;
             this.FIlter2.StyleManager = null;
             this.FIlter2.TabIndex = 1;
@@ -335,12 +335,12 @@ namespace BudgetExecution
             this.Filter3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.Filter3.FormattingEnabled = true;
             this.Filter3.ItemHeight = 30;
-            this.Filter3.Location = new System.Drawing.Point(44, 177);
+            this.Filter3.Location = new System.Drawing.Point(106, 133);
             this.Filter3.MaxDropDownItems = 20;
             this.Filter3.Name = "Filter3";
             this.Filter3.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.Filter3.SelectedItemForeColor = System.Drawing.Color.White;
-            this.Filter3.Size = new System.Drawing.Size(198, 36);
+            this.Filter3.Size = new System.Drawing.Size(136, 36);
             this.Filter3.Style = MetroSet_UI.Design.Style.Dark;
             this.Filter3.StyleManager = null;
             this.Filter3.TabIndex = 2;

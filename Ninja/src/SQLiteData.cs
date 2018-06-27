@@ -9,6 +9,7 @@ namespace BudgetExecution
     using System.Data;
     using System.Data.SQLite;
     using System.Drawing;
+    using System.Linq;
     using System.Windows.Forms;
     using MetroSet_UI.Controls;
     using Syncfusion.Windows.Forms;
@@ -237,6 +238,92 @@ namespace BudgetExecution
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
+            }
+        }
+
+        private void GetFilters(Source source)
+        {
+            try
+            {
+                switch(source)
+                {
+                    case Source.Employees:
+                        foreach(string s in DbData.ProgramElements["HrOrgCodeName"])
+                        {
+                            FIlter2.Items.Add(s);
+                            label2.Text = "HR ORG";
+                            FIlter2.SelectedIndexChanged += FilterComboBox_OnSelect;
+                        }
+                        break;
+                    case Source.Reimbursables:
+                        foreach (string s in DbData.ProgramElements["AgreementNumber"])
+                        {
+                            FIlter2.Items.Add(s);
+                            label2.Text = "AgreementNumber";
+                            FIlter2.SelectedIndexChanged += FilterComboBox_OnSelect;
+                        }
+                        break;
+                    case Source.Sites:
+                        foreach (string s in DbData.ProgramElements["State"])
+                        {
+                            FIlter2.Items.Add(s);
+                            label2.Text = "State";
+                            FIlter2.SelectedIndexChanged += FilterComboBox_OnSelect;
+                        }
+                        break;
+                    default:
+                        foreach (string s in DbData.ProgramElements["Fund"])
+                        {
+                            FIlter2.Items.Add(s);
+                            label2.Text = "Fund";
+                            FIlter2.SelectedIndexChanged += FilterComboBox_OnSelect;
+                        }
+                        break;
+
+                }
+
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message + ex.StackTrace);
+            }
+        }
+
+        private void FilterComboBox_OnSelect(object sender, EventArgs e)
+        {
+            try
+            {
+                var control = sender as MetroSetComboBox;
+                var filter = control.SelectedItem.ToString();
+                if(Filter3 == null)
+                {
+
+                    BindingSource.Filter = string.Format("Fund = '{0}'", filter.ToString());
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message + ex.StackTrace);
+            }
+        }
+
+        private void PopulateFilter2Items()
+        {
+            try
+            {
+                Filter3.Items.Clear();
+                Filter3.Visible = true;
+                var table = (DataTable)BindingSource.DataSource;
+                var query = table.AsEnumerable().Where(p => p.Field<string>("Fund").Equals(FIlter2.SelectedItem.ToString()))
+                        .Select(p => p).Distinct().CopyToDataTable();
+                foreach (var row in query.AsEnumerable().Select(p => p.Field<string>("BocName")).Distinct().ToArray())
+                {
+                    Filter3.Items.Add(row);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + ex.StackTrace);
             }
         }
 

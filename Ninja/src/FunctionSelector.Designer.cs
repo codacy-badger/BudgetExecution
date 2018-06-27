@@ -39,21 +39,20 @@ namespace BudgetExecution
             this.ViewerCarousel.BackColor = System.Drawing.Color.Black;
             this.ViewerCarousel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ViewerCarousel.CarouselBounds = 200;
-            this.ViewerCarousel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ViewerCarousel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ViewerCarousel.HighlightColor = System.Drawing.SystemColors.MenuHighlight;
             this.ViewerCarousel.ImageshadeColor = System.Drawing.Color.Black;
             this.ViewerCarousel.ImageSlides = true;
-            this.ViewerCarousel.Location = new System.Drawing.Point(0, 0);
+            this.ViewerCarousel.Location = new System.Drawing.Point(189, 94);
             this.ViewerCarousel.Margin = new System.Windows.Forms.Padding(2);
             this.ViewerCarousel.Name = "ViewerCarousel";
             this.ViewerCarousel.PadX = 1;
             this.ViewerCarousel.PadY = 0;
-            this.ViewerCarousel.Perspective = 4F;
+            this.ViewerCarousel.Perspective = 3F;
             this.ViewerCarousel.RotateAlways = false;
             this.ViewerCarousel.ShowImagePreview = true;
             this.ViewerCarousel.ShowImageShadow = true;
-            this.ViewerCarousel.Size = new System.Drawing.Size(1588, 953);
+            this.ViewerCarousel.Size = new System.Drawing.Size(1317, 814);
             this.ViewerCarousel.TabIndex = 2;
             this.ViewerCarousel.Text = "carousel2";
             this.ViewerCarousel.TouchTransitionSpeed = 3F;
@@ -69,7 +68,7 @@ namespace BudgetExecution
             this.panel1.Size = new System.Drawing.Size(1588, 953);
             this.panel1.TabIndex = 3;
             // 
-            // Selector
+            // FunctionSelector
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -80,7 +79,7 @@ namespace BudgetExecution
             this.Controls.Add(this.panel1);
             this.MaximumSize = new System.Drawing.Size(1600, 1000);
             this.MetroColor = System.Drawing.Color.Black;
-            this.Name = "Selector";
+            this.Name = "FunctionSelector";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.panel1.ResumeLayout(false);

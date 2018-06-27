@@ -7,8 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BudgetExecution", "Ninja\Bu
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SQLiteGUI", "D:\Libraries\C#\winforms\SQLiteGUI\SQLiteGUI\SQLiteGUI.csproj", "{6D4EACB0-66D2-4343-992A-D558EC8126EE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BudgetSheet", "BudgetSheet\BudgetSheet.csproj", "{7F3B038B-E415-4E37-8280-3544EBB5DC15}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,10 +21,6 @@ Global
 		{6D4EACB0-66D2-4343-992A-D558EC8126EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6D4EACB0-66D2-4343-992A-D558EC8126EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6D4EACB0-66D2-4343-992A-D558EC8126EE}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7F3B038B-E415-4E37-8280-3544EBB5DC15}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7F3B038B-E415-4E37-8280-3544EBB5DC15}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7F3B038B-E415-4E37-8280-3544EBB5DC15}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7F3B038B-E415-4E37-8280-3544EBB5DC15}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

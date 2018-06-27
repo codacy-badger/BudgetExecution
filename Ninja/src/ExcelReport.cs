@@ -31,6 +31,7 @@ namespace BudgetExecution
         {
             Table = data;
         }
+
         public ExcelReport(DataBuilder data)
         {
             DbData = data;

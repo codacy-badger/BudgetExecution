@@ -251,6 +251,54 @@ namespace BudgetExecution
             }
         }
 
+        public static Dictionary<string, object> GetInsertFields(Source source, Dictionary<string, object> param)
+        {
+            try
+            {
+                var account = new Account(source, Provider.SQLite, param["Fund"].ToString(), param["Code"].ToString());
+                if (!param.ContainsKey("Fund") || param["Fund"] == null)
+                {
+                    param["FundName"] = account.FundName;
+                }
+
+                if (!param.ContainsKey("Org") || param["Org"] == null)
+                {
+                    param["Org"] = account.Org;
+                }
+
+                if (!param.ContainsKey("ProgramProjectCode") || param["ProgramProjectCode"] == null)
+                {
+                    param["ProgramProjectCode"] = account.ProgramProjectCode;
+                    param["ProgramProjectName"] = account.ProgramProjectName;
+                }
+
+                if (!param.ContainsKey("ProgramArea") || param["ProgramArea"] == null)
+                {
+                    param["ProgramArea"] = account.ProgramArea;
+                    param["ProgramAreaName"] = account.ProgramAreaName;
+                }
+
+                if (!param.ContainsKey("Goal") || param["Goal"] == null)
+                {
+                    param["Goal"] = account.Goal;
+                    param["GoalName"] = account.GoalName;
+                }
+
+                if (!param.ContainsKey("Objective") || param["Objective"] == null)
+                {
+                    param["Objective"] = account.Objective;
+                    param["ObjectiveName"] = account.ObjectiveName;
+                }
+
+                return param;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + ex.StackTrace);
+                return null;
+            }
+        }
+
         public static Dictionary<string, object> GetInsertionColumns(Source source, Provider provider, Dictionary<string, object> param)
         {
             try
@@ -299,6 +347,20 @@ namespace BudgetExecution
             }
         }
 
+        public static PRC Select(Source source, Dictionary<string, object> p)
+        {
+            try
+            {
+                var datarow = new DataBuilder(source, Provider.SQLite, p).Table.AsEnumerable().Select(prc => prc).First();
+                return new PRC(datarow);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + ex.StackTrace);
+                return null;
+            }
+        }
+
         public static PRC Select(Source source, Provider provider, Dictionary<string, object> p)
         {
             try
@@ -310,6 +372,27 @@ namespace BudgetExecution
             {
                 MessageBox.Show(ex.Message + ex.StackTrace);
                 return null;
+            }
+        }
+
+        public static void Insert(Source source, Dictionary<string, object> p)
+        {
+            try
+            {
+                var param = GetInsertionColumns(source, Provider.SQLite, p);
+                var fields = param.Keys.ToArray();
+                var vals = param.Values.ToArray();
+                var query = new SQLiteQuery(source, param);
+                SQLiteConnection conn = query.DataConnection;
+                using (conn)
+                {
+                    var insert = query.InsertCommand;
+                    insert.ExecuteNonQuery();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + ex.StackTrace);
             }
         }
 
@@ -335,6 +418,25 @@ namespace BudgetExecution
             }
         }
 
+        public static void Update(Source source, Dictionary<string, object> p)
+        {
+            try
+            {
+                var query = new SQLiteQuery(source, p);
+                var cmd = $"UPDATE {source.ToString()} SET Amount = {(decimal)p["Amount"]} WHERE ID = {(int)p["ID"]};";
+                SQLiteConnection conn = query.DataConnection;
+                using (conn)
+                {
+                    var update = query.GetDataCommand(cmd, conn);
+                    update.ExecuteNonQuery();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + ex.StackTrace);
+            }
+        }
+
         public static void Update(Source source, Provider provider, Dictionary<string, object> p)
         {
             try
@@ -346,6 +448,25 @@ namespace BudgetExecution
                 {
                     var update = query.GetDataCommand(cmd, conn) as SQLiteCommand;
                     update.ExecuteNonQuery();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + ex.StackTrace);
+            }
+        }
+
+        public static void Delete(Source source, Dictionary<string, object> p)
+        {
+            try
+            {
+                var query = new SQLiteQuery(source, p);
+                var cmd = $"DELETE ALL FROM {source.ToString()} WHERE ID = {(int)p["ID"]};";
+                SQLiteConnection conn = query.DataConnection;
+                using (conn)
+                {
+                    var delete = query.GetDataCommand(cmd, conn);
+                    delete.ExecuteNonQuery();
                 }
             }
             catch (Exception ex)
