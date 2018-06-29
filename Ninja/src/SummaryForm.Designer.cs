@@ -1292,10 +1292,10 @@ namespace BudgetExecution
             this.tabPageAdv1.ForeColor = System.Drawing.Color.LightSteelBlue;
             this.tabPageAdv1.Image = ((System.Drawing.Image)(resources.GetObject("tabPageAdv1.Image")));
             this.tabPageAdv1.ImageSize = new System.Drawing.Size(30, 30);
-            this.tabPageAdv1.Location = new System.Drawing.Point(2, 1);
+            this.tabPageAdv1.Location = new System.Drawing.Point(2, 46);
             this.tabPageAdv1.Name = "tabPageAdv1";
             this.tabPageAdv1.ShowCloseButton = true;
-            this.tabPageAdv1.Size = new System.Drawing.Size(436, 480);
+            this.tabPageAdv1.Size = new System.Drawing.Size(436, 435);
             this.tabPageAdv1.TabIndex = 4;
             this.tabPageAdv1.Text = "Details";
             this.tabPageAdv1.ThemesEnabled = false;
@@ -1375,7 +1375,7 @@ namespace BudgetExecution
             this.toolStripSeparator12,
             this.toolStripButton12,
             this.toolStripSeparator13});
-            this.Navigator.Location = new System.Drawing.Point(0, 453);
+            this.Navigator.Location = new System.Drawing.Point(0, 408);
             this.Navigator.MoveFirstItem = this.toolStripButton9;
             this.Navigator.MoveLastItem = this.toolStripButton12;
             this.Navigator.MoveNextItem = this.toolStripButton11;
@@ -1819,10 +1819,10 @@ namespace BudgetExecution
             this.tabPageAdv5.Controls.Add(this.AccountChart);
             this.tabPageAdv5.Image = ((System.Drawing.Image)(resources.GetObject("tabPageAdv5.Image")));
             this.tabPageAdv5.ImageSize = new System.Drawing.Size(30, 25);
-            this.tabPageAdv5.Location = new System.Drawing.Point(2, 1);
+            this.tabPageAdv5.Location = new System.Drawing.Point(2, 46);
             this.tabPageAdv5.Name = "tabPageAdv5";
             this.tabPageAdv5.ShowCloseButton = true;
-            this.tabPageAdv5.Size = new System.Drawing.Size(436, 480);
+            this.tabPageAdv5.Size = new System.Drawing.Size(436, 435);
             this.tabPageAdv5.TabIndex = 2;
             this.tabPageAdv5.Text = "Graph";
             this.tabPageAdv5.ThemesEnabled = false;
@@ -1969,10 +1969,10 @@ namespace BudgetExecution
             this.tabPageAdv6.Controls.Add(this.CalendatButton);
             this.tabPageAdv6.Image = ((System.Drawing.Image)(resources.GetObject("tabPageAdv6.Image")));
             this.tabPageAdv6.ImageSize = new System.Drawing.Size(30, 25);
-            this.tabPageAdv6.Location = new System.Drawing.Point(2, 1);
+            this.tabPageAdv6.Location = new System.Drawing.Point(2, 46);
             this.tabPageAdv6.Name = "tabPageAdv6";
             this.tabPageAdv6.ShowCloseButton = true;
-            this.tabPageAdv6.Size = new System.Drawing.Size(436, 480);
+            this.tabPageAdv6.Size = new System.Drawing.Size(436, 435);
             this.tabPageAdv6.TabIndex = 3;
             this.tabPageAdv6.Text = "Tools";
             this.tabPageAdv6.ThemesEnabled = false;

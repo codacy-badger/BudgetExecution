@@ -1,4 +1,4 @@
-﻿// <copyright file="Reimbursable.cs" company="PlaceholderCompany">
+﻿// <copyright file="Query.cs" company="PlaceholderCompany">
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
@@ -6,98 +6,83 @@ namespace BudgetExecution
 {
     using System;
     using System.Collections.Generic;
+    using System.Configuration;
     using System.Data;
+    using System.Data.Common;
+    using System.Data.OleDb;
+    using System.Data.SqlClient;
     using System.Data.SQLite;
     using System.Linq;
     using System.Windows.Forms;
 
-    public class Reimbursable
+    public class ControlNumber
     {
         private Source Source;
         private Provider Provider;
         private DataTable Table;
 
         // CONSTRUCTORS
-        public Reimbursable()
+        public ControlNumber()
         {
+
         }
-        public Reimbursable(Source source, Provider provider)
+
+        public ControlNumber(Source source, Provider provider)
         {
             Source = source;
             Provider = provider;
             DbData = new DataBuilder(Source, Provider);
             Table = DbData.Table;
+            ID = int.Parse(Table.AsEnumerable().First().Field<string>("ID"));
+            FiscalYear = Table.AsEnumerable().First().Field<string>("FiscalYear");
+            RegionControlNumber = GetRegionCount();
+            FundControlNumber = RegionControlNumber;
+            BudgetControlNumber = FundControlNumber;
         }
 
-
-        public Reimbursable(string fund, string bfy, string org, string code, string spc, string an, decimal auth, decimal amout)
+        public ControlNumber(string fund, string division)
         {
-            Source = Source.Reimbursables;
+            Source = Source.BudgetDocuments;
             Provider = Provider.SQLite;
-            DbData = new DataBuilder(Source, Provider);
+            Fund = fund;
+            DivisionID = division;
+            DbData = new DataBuilder(Source, Provider, GetParamData(fund, division));
             Table = DbData.Table;
-            BFY = bfy;
-            Fund = new Fund(fund, bfy);
-            OrgCode = org;
-            Account = new Account(fund, code);
-            SiteProjectCode = spc;
-            AgreementNumber = an;
-            Obligations = auth;
-            Commitments = amout;
+            ID = int.Parse(Table.AsEnumerable().First().Field<string>("ID"));
+            FiscalYear = Table.AsEnumerable().First().Field<string>("FiscalYear");
+            RegionControlNumber = GetRegionCount();
+            FundControlNumber = GetFundCount(fund);
+            BudgetControlNumber = GetDivisionCount(division);
         }
 
-        public Reimbursable(DataRow dr)
-        {
-            ID = int.Parse(dr["ID"].ToString());
-            BFY = dr["BFY"].ToString();
-            Fund = new Fund(dr["Fund"].ToString(), BFY);
-            OrgCode = dr["OrgCode"].ToString();
-            Account = new Account(dr["Fund"].ToString(), dr["Code"].ToString());
-            SiteProjectCode = dr["SiteProjectCode"].ToString();
-            AgreementNumber = dr["Agreement"].ToString();
-            Commitments = decimal.Parse(dr["Commitments"].ToString());
-            Obligations = decimal.Parse(dr["Obligations"].ToString());
-        }
 
         // PROPERTIES
-        public int ID { get; }
+        public int ID { get; set; }
 
-        public Account Account { get; }
+        public DataBuilder DbData { get; set; }
 
-        public string AgreementNumber { get; }
+        public string FiscalYear { get; }
 
-        public string DocumentNumber { get; }
+        public string Region { get; set; }
 
-        public string SiteProjectCode { get; }
+        public int RegionControlNumber { get; set; }
 
-        public string OrgCode { get; }
+        public string Fund { get; set; }
 
-        public string Code { get; }
+        public int FundControlNumber { get; set; }
 
-        public BOC BOC { get; }
+        public string DivisionID { get; set; }
 
-        public string FOC { get; }
+        public int BudgetControlNumber { get; set; }
 
-        public decimal Obligations { get; }
-
-        public decimal Commitments { get; }
-
-        public string BFY { get; }
-
-        public DataRow Data { get; }
-
-        public DataBuilder DbData { get; }
-
-        public Fund Fund { get; }
-
-        Dictionary<string, object> ReimbParam { get; }
+        public Dictionary<string, object> Parameter { get; }
 
         // METHODS
-        private Dictionary<string, object> GetParameter(string bfy, string fund)
+        public Dictionary<string, object> GetParamData(string fund, string divisionid)
         {
             try
             {
-                return new Dictionary<string, object>() { ["BFY"] = bfy, ["Fund"] = fund };
+                return new Dictionary<string, object>() { ["Fund"] = fund, ["DivisionID"] = divisionid };
             }
             catch (System.Exception ex)
             {
@@ -106,40 +91,74 @@ namespace BudgetExecution
             }
         }
 
-        public static Dictionary<string, object> GetInsertFields(Source source, Dictionary<string, object> param)
+        internal string[] GetColumnNames()
         {
             try
             {
-                var account = new Reimbursable(source, Provider.SQLite);
-                if (!param.ContainsKey("AgreementNumber") || param["AgreementNumber"] == null)
-                {
-                    param["AgreementNumber"] = account.AgreementNumber;
-                }
+                return Table.GetFields();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("ERROR! : \n" + ex.StackTrace);
+                return null;
+            }
+        }
 
-                if (!param.ContainsKey("OrgCode") || param["OrgCode"] == null)
-                {
-                    param["OrgCode"] = account.OrgCode;
-                }
+        internal int GetFundCount(string fund)
+        {
+            try
+            {
+                return Table.AsEnumerable().Where(p => p.Field<string>("Fund").Equals(fund)).Select(p => p).Count();
+            }
+            catch (Exception ex)
+            {
 
-                if (!param.ContainsKey("SiteProjectCode") || param["SiteProjectCode"] == null)
-                {
-                    param["SiteProjectCode"] = account.SiteProjectCode;
-                }
+                MessageBox.Show(ex.Message + ex.StackTrace);
+                return -1;
+            }
+        }
 
-                if (!param.ContainsKey("DocumentNumber") || param["DocumentNumber"] == null)
-                {
-                    param["DocumentNumber"] = account.DocumentNumber;
-                }
+        internal int GetDivisionCount(string divisionid)
+        {
+            try
+            {
+                return Table.AsEnumerable().Where(p => p.Field<string>("RC").Equals(divisionid)).Select(p => p).Count();
+            }
+            catch (Exception ex)
+            {
 
-                if (!param.ContainsKey("FOC") || param["FOC"] == null)
-                {
-                    param["FOC"] = account.FOC;
-                }
+                MessageBox.Show(ex.Message + ex.StackTrace);
+                return -1;
+            }
+        }
 
-                if (!param.ContainsKey("BOC") || param["BOC"] == null)
-                {
-                    param["BOC"] = account.BOC;
-                }
+        internal int GetRegionCount()
+        {
+            try
+            {
+                return DbData.Table.AsEnumerable().Count();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message + ex.StackTrace);
+                return -1;
+            }
+        }
+
+        internal void Calculate(string fund, string divisionid)
+        {
+            int reg = GetRegionCount() + 1;
+            int fd = GetFundCount(fund) + 1;
+            int dc = GetDivisionCount(divisionid) + 1;
+
+        }
+
+        public static Dictionary<string, object> GetInsertionColumns(Dictionary<string, object> param)
+        {
+            try
+            {
+                var account = new ControlNumber(param["Fund"].ToString(), param["DivisionID"].ToString());
 
                 return param;
             }
@@ -150,12 +169,12 @@ namespace BudgetExecution
             }
         }
 
-        public static Reimbursable Select(Source source, Dictionary<string, object> p)
+        public static Fund Select(Source source, Dictionary<string, object> p)
         {
             try
             {
                 var datarow = new DataBuilder(source, Provider.SQLite, p).Table.AsEnumerable().Select(prc => prc).First();
-                return new Reimbursable(datarow);
+                return new Fund(datarow);
             }
             catch (Exception ex)
             {
@@ -164,12 +183,12 @@ namespace BudgetExecution
             }
         }
 
-        public static Reimbursable Select(Source source, Provider provider, Dictionary<string, object> p)
+        public static Fund Select(Source source, Provider provider, Dictionary<string, object> p)
         {
             try
             {
                 var datarow = new DataBuilder(source, provider, p).Table.AsEnumerable().Select(prc => prc).First();
-                return new Reimbursable(datarow);
+                return new Fund(datarow);
             }
             catch (Exception ex)
             {
@@ -178,14 +197,14 @@ namespace BudgetExecution
             }
         }
 
-        public static void Insert(Source source, Dictionary<string, object> p)
+        public static void Insert(Dictionary<string, object> p)
         {
             try
             {
-                var param = GetInsertFields(source, p);
+                var param = GetInsertionColumns(p);
                 var fields = param.Keys.ToArray();
                 var vals = param.Values.ToArray();
-                var query = new SQLiteQuery(source, param);
+                var query = new SQLiteQuery(Source.BudgetDocuments, param);
                 SQLiteConnection conn = query.DataConnection;
                 using (conn)
                 {
@@ -203,7 +222,7 @@ namespace BudgetExecution
         {
             try
             {
-                var param = GetInsertFields(source, p);
+                var param = GetInsertionColumns(p);
                 var fields = param.Keys.ToArray();
                 var vals = param.Values.ToArray();
                 var query = new Query(source, provider, param);

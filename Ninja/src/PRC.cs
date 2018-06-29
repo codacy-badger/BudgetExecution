@@ -13,7 +13,7 @@ namespace BudgetExecution
 
     public class PRC : IPRC, IAccount
     {
-        private DataRow data;
+        private DataRow Data;
         private Source Source;
         private Provider Provider;
 
@@ -26,38 +26,38 @@ namespace BudgetExecution
         {
             Source = source;
             Provider = provider;
-            data = new DataBuilder(source, provider).Table.AsEnumerable().Select(p => p).First();
-            ID = int.Parse(data["ID"].ToString());
-            BudgetLevel = data["BudgetLevel"].ToString();
-            RPIO = data["RPIO"].ToString();
-            BFY = data["BFY"].ToString();
-            Fund = new Fund(data["Fund"].ToString(), data["BFY"].ToString());
-            Org = new Org(data["Org"].ToString());
-            RC = new RC(data["RC"].ToString());
-            Account = new Account(Source.Accounts, Provider.SQLite, Fund.Code, data["Code"].ToString());
+            Data = new DataBuilder(source, provider).Table.AsEnumerable().Select(p => p).First();
+            ID = int.Parse(Data["ID"].ToString());
+            BudgetLevel = Data["BudgetLevel"].ToString();
+            RPIO = Data["RPIO"].ToString();
+            BFY = Data["BFY"].ToString();
+            Fund = new Fund(Data["Fund"].ToString(), Data["BFY"].ToString());
+            Org = new Org(Data["Org"].ToString());
+            RC = new RC(Data["RC"].ToString());
+            Account = new Account(Source.Accounts, Provider.SQLite, Fund.Code, Data["Code"].ToString());
             Code = Account.Code;
-            BOC = new BOC(data["BOC"].ToString());
+            BOC = new BOC(Data["BOC"].ToString());
             Parameter = GetParamData();
-            Amount = decimal.Parse(data["Amount"].ToString());
+            Amount = decimal.Parse(Data["Amount"].ToString());
         }
 
         public PRC(Source source, Provider provider, Dictionary<string, object> param)
         {
             Source = source;
             Provider = provider;
-            data = new DataBuilder(source, provider, param).Table.AsEnumerable().Select(p => p).First();
-            ID = int.Parse(data["ID"].ToString());
-            BudgetLevel = data["BudgetLevel"].ToString();
-            RPIO = data["RPIO"].ToString();
-            BFY = data["BFY"].ToString();
-            Fund = new Fund(data["Fund"].ToString(), data["BFY"].ToString());
-            Org = new Org(data["Org"].ToString());
-            RC = new RC(data["RC"].ToString());
-            Account = new Account(Source.Accounts, Provider.SQLite, Fund.Code, data["Code"].ToString());
+            Data = new DataBuilder(source, provider, param).Table.AsEnumerable().Select(p => p).First();
+            ID = int.Parse(Data["ID"].ToString());
+            BudgetLevel = Data["BudgetLevel"].ToString();
+            RPIO = Data["RPIO"].ToString();
+            BFY = Data["BFY"].ToString();
+            Fund = new Fund(Data["Fund"].ToString(), Data["BFY"].ToString());
+            Org = new Org(Data["Org"].ToString());
+            RC = new RC(Data["RC"].ToString());
+            Account = new Account(Source.Accounts, Provider.SQLite, Fund.Code, Data["Code"].ToString());
             Code = Account.Code;
-            BOC = new BOC(data["BOC"].ToString());
+            BOC = new BOC(Data["BOC"].ToString());
             Parameter = GetParamData();
-            Amount = decimal.Parse(data["Amount"].ToString());
+            Amount = decimal.Parse(Data["Amount"].ToString());
         }
 
         public PRC(int id, string bl, string rpio, string bfy, string fund, string org, string rc, string code, string boc, decimal amount)

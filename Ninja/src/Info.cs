@@ -108,6 +108,7 @@ namespace BudgetExecution
         };
 
         public static string[] Division = { "6WQ", "6WCF", "6MD", "6MDR", "WSA", "6MM", "6WSA", "6EN", "6RA", "6RC", "6SF", "6XA", "6EJ", "R06" };
+
         public static string[] DivisionIdTitleOrg =
         {
         "6MD | MANAGEMENT DIVISION | 06C", "6MM | MULTIMEDIA DIVISION | 06J", "6EN | COMPLIANCE & ENFORCEMENT DIVISION | 06M",
@@ -118,6 +119,7 @@ namespace BudgetExecution
         };
 
         public static string[] Divisions = { "6MD", "6MM", "6RA", "6SF", "6EJ", "6XA", "6WQ", "6EN", "6RC", "R06", "6WSA", "6WCF" };
+
         public static string[] DivisionTitle =
         {
         "6MD Management Division", "6MM MultiMedia Division", "6EN Compliance && Enforcement Division",
@@ -133,7 +135,9 @@ namespace BudgetExecution
         };
 
         public static string[] NpmCodes = { "M", "L", "G", "J", "H", "C", "F", "A", "B", "P", "N", "D", "E" };
+
         public static string[] RcCodes = { "06C", "06A", "06L", "06F", "06X", "06K", "06J", "06M", "06D", "06N", "06G" };
+
         public static string[] Year = { "2017", "2018", "2019", "2020", "2021", "2021", "2022", "2024", "2025", "2026", "2027" };
 
         public static Dictionary<string, Source> DatabaseParameter()

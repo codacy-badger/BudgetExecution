@@ -25,6 +25,7 @@ namespace BudgetExecution
             Metric = new PrcMetric(DbData);
             ProgramElements = DbData.GetProgramElements(Table);
             BindingSource.DataSource = Table;
+            Navigator.BindingSource = BindingSource;
             AccountGrid.DataSource = BindingSource;
             PopulateSourceFilters();
             PopulateFilterButtons(Filter1, Info.Sources);
@@ -41,6 +42,7 @@ namespace BudgetExecution
             ProgramElements = DbData.GetProgramElements(Table);
             BindingSource.DataSource = Table;
             AccountGrid.DataSource = BindingSource;
+            Navigator.BindingSource = BindingSource;
             PopulateSourceFilters();
             PopulateFilterButtons(Filter1, Info.Sources);
         }

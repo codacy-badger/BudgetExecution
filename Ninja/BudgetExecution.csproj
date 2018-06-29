@@ -399,7 +399,7 @@
     <Compile Include="src\PdfDataReader.Designer.cs">
       <DependentUpon>PdfDataReader.cs</DependentUpon>
     </Compile>
-    <Compile Include="src\BudgetControlNumber.cs" />
+    <Compile Include="src\ControlNumber.cs" />
     <Compile Include="src\ExcelForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -583,11 +583,11 @@
       <DependentUpon>Calendar.cs</DependentUpon>
     </Compile>
     <Compile Include="src\Transfer.cs" />
-    <Compile Include="src\Form1.cs">
+    <Compile Include="src\ExternalDataReader.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="src\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="src\ExternalDataReader.Designer.cs">
+      <DependentUpon>ExternalDataReader.cs</DependentUpon>
     </Compile>
     <Compile Include="src\IAccount.cs" />
     <Compile Include="src\IBudgetAuthority.cs" />
@@ -687,8 +687,8 @@
     <EmbeddedResource Include="src\DataNavigator.resx">
       <DependentUpon>DataNavigator.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="src\Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="src\ExternalDataReader.resx">
+      <DependentUpon>ExternalDataReader.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="src\AccountManager.resx">
       <DependentUpon>AccountManager.cs</DependentUpon>

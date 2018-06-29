@@ -125,7 +125,7 @@ namespace BudgetExecution
             }
         }
 
-        public DataTable FilterTable(DataTable table, PrcField prcfilter, string filter)
+        public static DataTable FilterTable(DataTable table, PrcField prcfilter, string filter)
         {
             try
             {
