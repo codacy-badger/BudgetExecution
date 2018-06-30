@@ -73,6 +73,8 @@ namespace BudgetExecution
 
         public string DivisionID { get; set; }
 
+        public string DivisionControlNumber { get; set; }
+
         public int BudgetControlNumber { get; set; }
 
         public Dictionary<string, object> Parameter { get; }

@@ -376,6 +376,7 @@ namespace BudgetExecution
             // Filter1
             // 
             this.Filter1.AutoScroll = true;
+            this.Filter1.AutoScrollMinSize = new System.Drawing.Size(5, 0);
             this.Filter1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Filter1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.Filter1.Location = new System.Drawing.Point(3, 22);
@@ -470,7 +471,7 @@ namespace BudgetExecution
             this.AccountGrid.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
             this.AccountGrid.RowTemplate.Height = 30;
             this.AccountGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.AccountGrid.Size = new System.Drawing.Size(997, 370);
+            this.AccountGrid.Size = new System.Drawing.Size(997, 421);
             this.AccountGrid.TabIndex = 2;
             // 
             // metroPanel2
@@ -479,7 +480,7 @@ namespace BudgetExecution
             this.metroPanel2.HorizontalScrollbarBarColor = true;
             this.metroPanel2.HorizontalScrollbarHighlightOnWheel = false;
             this.metroPanel2.HorizontalScrollbarSize = 10;
-            this.metroPanel2.Location = new System.Drawing.Point(39, 432);
+            this.metroPanel2.Location = new System.Drawing.Point(39, 497);
             this.metroPanel2.Name = "metroPanel2";
             this.metroPanel2.Size = new System.Drawing.Size(997, 46);
             this.metroPanel2.TabIndex = 86;
