@@ -29,6 +29,7 @@ namespace BudgetExecution
             AccountGrid.DataSource = BindingSource;
             PopulateSourceFilters();
             PopulateFilterButtons(Filter1, Info.Sources);
+            label4.Text = new ControlNumber("B", "6MD").ToString();
         }
 
         public SQLiteData(Source source, Provider provider)
@@ -45,6 +46,7 @@ namespace BudgetExecution
             Navigator.BindingSource = BindingSource;
             PopulateSourceFilters();
             PopulateFilterButtons(Filter1, Info.Sources);
+            label4.Text = new ControlNumber("B", "6MD").ToString();
         }
         // PROPERTIES
         private Source Source { get; }
@@ -349,5 +351,6 @@ namespace BudgetExecution
             BindingSource.MoveNext();
 
         }
+        
     }
 }

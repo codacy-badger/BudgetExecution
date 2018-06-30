@@ -25,17 +25,20 @@ namespace BudgetExecution
         {
             FilePath = filepath;
             ConnectionString = GetConnectionString(FilePath);
+            Excel = Create();
         }
 
         public ExcelReport(DataTable data)
         {
             Table = data;
+            Excel = Create();
         }
 
         public ExcelReport(DataBuilder data)
         {
             DbData = data;
             Table = DbData.Table;
+            Excel = Create();
         }
 
 
@@ -53,7 +56,7 @@ namespace BudgetExecution
         private Excel Excel { get; }
 
         // METHODS
-        internal string GetExternalExcelFile()
+        internal string GetExternalFile()
         {
             try
             {
@@ -147,8 +150,7 @@ namespace BudgetExecution
         {
             try
             {
-                Excel excel = Create();
-                var excelWorkBook = excel.Workbooks.Open(filepath);
+                var excelWorkBook = Excel.Workbooks.Open(filepath);
                 return excelWorkBook;
             }
             catch (Exception ex)
@@ -158,12 +160,11 @@ namespace BudgetExecution
             }
         }
 
-        internal Workbook OpenNew()
+        internal Workbook OpenWorkbook()
         {
             try
             {
-                Excel excel = Create();
-                var excelWorkBook = excel.Workbooks.Add();
+                var excelWorkBook = Excel.Workbooks.Add();
                 return excelWorkBook;
             }
             catch (Exception ex)
@@ -173,7 +174,7 @@ namespace BudgetExecution
             }
         }
 
-        internal void SaveAs(Workbook wb, string filepath)
+        internal void SaveWorkbook(Workbook wb, string filepath)
         {
             try
             {

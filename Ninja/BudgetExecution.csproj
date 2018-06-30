@@ -561,7 +561,6 @@
     <Compile Include="src\ISupplementalAllocation.cs" />
     <Compile Include="src\Obligation.cs" />
     <Compile Include="src\Org.cs" />
-    <Compile Include="src\Parameter.cs" />
     <Compile Include="src\Payroll.cs" />
     <Compile Include="src\Personnel.cs" />
     <Compile Include="src\PRC.cs" />

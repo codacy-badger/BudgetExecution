@@ -13,13 +13,14 @@ namespace BudgetExecution
     using System.Data.SqlClient;
     using System.Data.SQLite;
     using System.Linq;
+    using System.Text;
     using System.Windows.Forms;
 
     public class ControlNumber
     {
         private Source Source;
         private Provider Provider;
-        private DataTable Table;
+        private DataTable Table; 
 
         // CONSTRUCTORS
         public ControlNumber()
@@ -33,11 +34,13 @@ namespace BudgetExecution
             Provider = provider;
             DbData = new DataBuilder(Source, Provider);
             Table = DbData.Table;
-            ID = int.Parse(Table.AsEnumerable().First().Field<string>("ID"));
-            FiscalYear = Table.AsEnumerable().First().Field<string>("FiscalYear");
-            RegionControlNumber = GetRegionCount();
-            FundControlNumber = RegionControlNumber;
-            BudgetControlNumber = FundControlNumber;
+            DbRow = Table.Rows[0];
+            ID = int.Parse(DbRow["ID"].ToString());
+            Region = "R6";
+            FiscalYear = Table.AsEnumerable().Select(p => p).First().Field<string>("FiscalYear");
+            RegionControlNumber = GetRegionCount() + 1;
+            FundControlNumber = RegionControlNumber + 1;
+            BudgetControlNumber = FundControlNumber + 1;
         }
 
         public ControlNumber(string fund, string division)
@@ -48,22 +51,26 @@ namespace BudgetExecution
             DivisionID = division;
             DbData = new DataBuilder(Source, Provider, GetParamData(fund, division));
             Table = DbData.Table;
-            ID = int.Parse(Table.AsEnumerable().First().Field<string>("ID"));
-            FiscalYear = Table.AsEnumerable().First().Field<string>("FiscalYear");
-            RegionControlNumber = GetRegionCount();
-            FundControlNumber = GetFundCount(fund);
-            BudgetControlNumber = GetDivisionCount(division);
+            DbRow = Table.Rows[0];
+            ID = int.Parse(DbRow["ID"].ToString());
+            FiscalYear = DbRow["FiscalYear"].ToString();
+            Region = "R6";
+            RegionControlNumber = GetRegionCount() + 1;
+            FundControlNumber = GetFundCount(fund) + 1;
+            BudgetControlNumber = GetDivisionCount(division) + 1;
         }
 
 
         // PROPERTIES
+        public static string Region { get; set; }
+
         public int ID { get; set; }
+
+        public DataRow DbRow { get; set; }
 
         public DataBuilder DbData { get; set; }
 
         public string FiscalYear { get; }
-
-        public string Region { get; set; }
 
         public int RegionControlNumber { get; set; }
 
@@ -124,7 +131,7 @@ namespace BudgetExecution
         {
             try
             {
-                return Table.AsEnumerable().Where(p => p.Field<string>("RC").Equals(divisionid)).Select(p => p).Count();
+                return Table.AsEnumerable().Where(p => p.Field<string>("DivisionID").Equals(divisionid)).Select(p => p).Count();
             }
             catch (Exception ex)
             {
@@ -316,6 +323,11 @@ namespace BudgetExecution
             {
                 MessageBox.Show(ex.Message + ex.StackTrace);
             }
+        }
+
+        public override string ToString()
+        {
+            return new StringBuilder($"{FiscalYear}={Region}-{RegionControlNumber}-{Fund}-{FundControlNumber}-{DivisionID}-{BudgetControlNumber}").ToString();
         }
     }
 }
