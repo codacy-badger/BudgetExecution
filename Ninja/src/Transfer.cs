@@ -1,15 +1,10 @@
-﻿// <copyright file="Transfer.cs" company="PlaceholderCompany">
+﻿// <copyright file="Reprogramming.cs" company="PlaceholderCompany">
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
 namespace BudgetExecution
 {
-    using System;
-    using System.Collections.Generic;
     using System.Data;
-    using System.IO;
-    using System.Text;
-    using System.Windows.Forms;
 
     public class Transfer
     {
@@ -23,184 +18,77 @@ namespace BudgetExecution
         {
         }
 
-        public Transfer(Source source, Provider provider)
+        public Transfer(string bl, string docType, string rpio, string org, string rc, string bfy, string fund, string tcn, string qtr, string date, string code, string progproj, string ppn, string npmcode, string fromto, string boc, decimal amount)
         {
-            Source = source;
-            Provider = provider;
-            DbData = new DataBuilder(source, provider);
-            Data = DbData.Table.AsEnumerable().Select(p => p).CopyToDataTable().Rows[0];
+            BudgetLevel = bl;
+            DocType = docType;
+            RPIO = rpio;
+            Org = new Org(org);
+            RC = new RC(rc);
+            BFY = bfy;
+            Fund = new Fund(fund, BFY);
+            TCN = tcn;
+            Qtr = qtr;
+            Date = date;
+            Code = code;
+            Account = new Account(fund, code);
+            NpmCode = Account.NPM;
+            FromTo = fromto;
+            BOC = new BOC(boc);
+            Amount = amount;
         }
 
-        public Transfer(PRC sender, PRC receiver, decimal amount)
+        public Transfer(DataRow dr)
         {
-            ControlNumber = GetControlNumber();
-            Amount = amount;
-            Sender = sender;
-            FromId = sender.ID;
-            FromBFY = sender.BFY;
-            FromBOC = sender.BOC.Code;
-            FromCode = sender.Account.Code;
-            FromFund = sender.Fund.Code;
-            FromOrg = sender.Org;
-            FromRPIO = sender.RPIO;
-            FromAmount = sender.Amount;
-            Receiver = receiver;
-            ToId = receiver.ID;
-            ToBFY = receiver.BFY;
-            ToBOC = receiver.BOC.Code;
-            ToCode = receiver.Account.Code;
-            ToFund = receiver.Fund.Code;
-            ToOrg = receiver.Org;
-            ToRPIO = receiver.RPIO;
-            ToAmount = receiver.Amount;
-        }
-
-        public Transfer(DataRow sender, DataRow receiver, decimal amount)
-        {
-            ControlNumber = GetControlNumber();
-            Amount = amount;
-            FromId = int.Parse(sender["Id"].ToString());
-            FromBFY = sender["BFY"].ToString();
-            FromBOC = sender["BOC"].ToString();
-            FromCode = sender["Code"].ToString();
-            FromFund = sender["Fund"].ToString();
-            FromOrg = sender["Org"] as Org;
-            FromRPIO = sender["RPIO"].ToString();
-            FromAmount = decimal.Parse(sender["Amount"].ToString());
-            ToId = int.Parse(receiver["Id"].ToString());
-            ToBFY = receiver["BFY"].ToString();
-            ToBOC = receiver["BOC"].ToString();
-            ToCode = receiver["Code"].ToString();
-            ToFund = receiver["Fund"].ToString();
-            ToOrg = receiver["Org"] as Org;
-            ToRPIO = receiver["RPIO"].ToString();
-            ToAmount = decimal.Parse(receiver["Amount"].ToString());
+            BudgetLevel = dr["BudgetLevel"].ToString();
+            DocType = dr["DocType"].ToString();
+            RPIO = dr["RPIO"].ToString();
+            Org = new Org(dr["Org"].ToString());
+            RC = new RC(dr["RC"].ToString());
+            BFY = dr["BFY"].ToString();
+            Fund = new Fund(dr["Fund"].ToString(), BFY);
+            TCN = dr["TCN"].ToString();
+            Qtr = dr["Qtr"].ToString();
+            Date = dr["Date"].ToString();
+            Code = dr["Code"].ToString();
+            Account = new Account(dr["Code"].ToString(), Code);
+            NpmCode = Account.NPM;
+            FromTo = dr["FromTo"].ToString();
+            BOC = new BOC(dr["BOC"].ToString());
+            Amount = decimal.Parse(dr["Amount"].ToString());
         }
 
         // PROPERTIES
-        public int ID { get; set; }
+        public Account Account { get; }
 
-        public decimal Amount { get; set; }
+        public decimal Amount { get; }
 
-        public string ControlNumber { get; set; }
+        public string BFY { get; }
 
-        public decimal FromAmount { get; set; }
+        public BOC BOC { get; }
 
-        public string FromBFY { get; set; }
+        public string BudgetLevel { get; }
 
-        public string FromBOC { get; set; }
+        public string Code { get; }
 
-        public string FromCode { get; set; }
+        public string Date { get; }
 
-        public string FromFund { get; set; }
+        public string DocType { get; }
 
-        public int FromId { get; set; }
+        public string FromTo { get; }
 
-        public Org FromOrg { get; set; }
+        public Fund Fund { get; }
 
-        public string FromRC { get; set; }
+        public string NpmCode { get; }
 
-        public string FromRPIO { get; set; }
+        public Org Org { get; }
 
-        public string Purpose { get; set; }
+        public string Qtr { get; }
 
-        public PRC Receiver { get; set; }
+        public RC RC { get; }
 
-        public PRC Sender { get; set; }
+        public string RPIO { get; }
 
-        public decimal ToAmount { get; set; }
-
-        public string ToBFY { get; set; }
-
-        public string ToBOC { get; set; }
-
-        public string ToCode { get; set; }
-
-        public string ToFund { get; set; }
-
-        public int ToId { get; set; }
-
-        public Org ToOrg { get; set; }
-
-        public string ToRC { get; set; }
-
-        public string ToRPIO { get; set; }
-
-        public Reprogramming Type { get; set; }
-
-        // METHODS
-        internal Dictionary<string, object> GetTransferData()
-        {
-            try
-            {
-                Dictionary<string, object> param = new Dictionary<string, object>();
-                param.Add("Id", ID);
-                param.Add("ControlNumber", ControlNumber);
-                param.Add("FrRpio", FromRPIO);
-                param.Add("ToRpio", ToRPIO);
-                param.Add("FrOrg", FromOrg);
-                param.Add("ToOrg", ToOrg);
-                param.Add("FrFund", FromFund);
-                param.Add("ToFund", ToFund);
-                param.Add("FrBFY", FromBFY);
-                param.Add("ToBFY", ToBFY);
-                param.Add("FrCode", FromCode);
-                param.Add("ToCode", ToCode);
-                param.Add("FrBOC", FromBOC);
-                param.Add("ToBOC", ToBOC);
-                param.Add("Amount", Amount);
-                param.Add("FrDivision", FromRC);
-                param.Add("ToDivision", ToRC);
-                return param;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
-                return null;
-            }
-        }
-
-        internal string GetControlNumber()
-        {
-            try
-            {
-                DateTime dt = DateTime.Now;
-                StringBuilder cn = new StringBuilder();
-                cn.Append("06");
-                cn.Append(dt.Year.ToString());
-                cn.Append("-");
-                cn.Append(FromBFY ?? ToBFY);
-                cn.Append(FromFund ?? ToFund);
-                cn.Append("-");
-                cn.Append(FromRC ?? ToRC);
-                cn.Append("-");
-                cn.Append(FromCode ?? ToCode);
-                cn.Append("-");
-                cn.Append(dt.Month.ToString());
-                cn.Append(dt.Day.ToString());
-                cn.Append("-");
-                cn.Append(dt.Hour.ToString());
-                cn.Append(dt.Minute.ToString());
-                return cn.ToString();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("ERROR!\n\n" + $"Target Method: {ex.TargetSite}\n\n" + $"Stack: {ex.StackTrace}\n\n");
-                return null;
-            }
-        }
-
-        internal void WriteTransfer()
-        {
-            try
-            {
-                string path = $@"c:\EPA\TransferLog\transfers.txt";
-                File.AppendAllText(path, ToString());
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("ERROR!\n\n" + $"Target Method: {ex.TargetSite}\n\n" + $"Stack: {ex.StackTrace}\n\n");
-            }
-        }
+        public string TCN { get; }
     }
 }

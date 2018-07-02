@@ -13,7 +13,6 @@ namespace BudgetExecution
 
     public class Obligation : IObligation
     {
-        private DataRow Data;
         private Source Source;
         private Provider Provider;
 
@@ -25,21 +24,21 @@ namespace BudgetExecution
         {
             Source = source;
             Provider = provider;
-            Data = new DataBuilder(source, provider, param).Table.AsEnumerable().Select(p => p).First();
+            DbRow = new DataBuilder(source, provider, param).DbTable.AsEnumerable().Select(p => p).First();
         }
 
         public Obligation(Source source, Provider provider, Dictionary<string, object> param, string rpio, string fy, string fund, string org, string rc, string code, string boc, string foc, string focname, string doctype, string system, string prn, string dcnprefix, string grantnumber, string siteprojcode, string siteprojname, string dcn, decimal c, decimal o)
         {
             Source = source;
             Provider = provider;
-            Data = new DataBuilder(source, provider, param).Table.AsEnumerable().Select(p => p).First();
-            ID = int.Parse(Data["ID"].ToString());
+            DbRow = new DataBuilder(source, provider, param).DbTable.AsEnumerable().Select(p => p).First();
+            ID = int.Parse(DbRow["ID"].ToString());
             RPIO = rpio;
             BFY = fy;
             Fund = new Fund(source, provider, fund, fy);
             Org = new Org(org);
             RC = new RC(rc);
-            ProgramProjectCode = Data["ProgramProjectCode"].ToString();
+            ProgramProjectCode = DbRow["ProgramProjectCode"].ToString();
             BOC = new BOC(boc);
             FOC = foc;
             FocName = focname;
@@ -63,6 +62,8 @@ namespace BudgetExecution
 
         //Properties
         public int ID { get; set; }
+
+        public DataRow DbRow { get; set; }
 
         public PRC PRC { get; set; }
 
@@ -116,7 +117,7 @@ namespace BudgetExecution
         {
             try
             {
-                return new DataBuilder(source, provider, param).Table.AsEnumerable().Select(p => p).First();
+                return new DataBuilder(source, provider, param).DbTable.AsEnumerable().Select(p => p).First();
             }
             catch (Exception ex)
             {
@@ -207,7 +208,7 @@ namespace BudgetExecution
         {
             try
             {
-                var datarow = new DataBuilder(source, Provider.SQLite, p).Table.AsEnumerable().Select(prc => prc).First();
+                var datarow = new DataBuilder(source, Provider.SQLite, p).DbTable.AsEnumerable().Select(prc => prc).First();
                 return new Obligation(datarow);
             }
             catch (Exception ex)
@@ -221,7 +222,7 @@ namespace BudgetExecution
         {
             try
             {
-                var query = new DataBuilder(source, provider, param).Table.AsEnumerable().Select(p => p).First();
+                var query = new DataBuilder(source, provider, param).DbTable.AsEnumerable().Select(p => p).First();
                 return new Obligation(query);
             }
             catch (Exception ex)

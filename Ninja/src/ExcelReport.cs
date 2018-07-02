@@ -37,7 +37,7 @@ namespace BudgetExecution
         public ExcelReport(DataBuilder data)
         {
             DbData = data;
-            Table = DbData.Table;
+            Table = DbData.DbTable;
             Excel = Create();
         }
 

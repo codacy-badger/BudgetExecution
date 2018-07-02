@@ -12,7 +12,7 @@ namespace BudgetExecution
     // Delegates
     public delegate double[] Calculator(DataTable table);
 
-    public delegate DataTable TableFilter(DataTable table, PrcField prcfilter, string filter);
+    public delegate DataTable DataFilter(DataTable table, PrcField prcfilter, string filter);
 
     public delegate ChartControl GetChart(ChartControl chart, string title, Dictionary<string, double> data);
 
@@ -65,7 +65,7 @@ namespace BudgetExecution
 
     public enum Source
     {
-        Accounts, Awards, BudgetDocuments, DivisionAccounts, DivisionObligations, Divisions, DWH, EJ, EN, Employees, EPM, ExternalTransfers, Funds, InternalTransfers, PRC, RegionalAccounts,
+        Accounts, Awards, ControlNumbers, DivisionAccounts, DivisionObligations, Divisions, DWH, EJ, EN, Employees, EPM, ExternalTransfers, Funds, InternalTransfers, PRC, RegionalAccounts,
         Obligations, PayrollObligations, Sites, Reimbursables, LUST, OIL, STAG, SUPERFUND, MD, RC, RA, SF, Transfers, WQ, MM, WSA, WCF, MDR, XA, PAYROLL, FTE, TRAVEL, EXPENSES, CONTRACTS, GRANTS
     }
 

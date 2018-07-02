@@ -16,12 +16,13 @@ namespace BudgetExecution
         public RegionalAuthority()
         {
             Data = new DataBuilder(Source.RegionalAccounts, Provider.SQLite, new Dictionary<string, object> { ["BFY"] = FiscalYear });
+            TableFilter = new DataFilter(DataBuilder.FilterTable);
             Metric = new PrcMetric(Data);
-            Table = Data.Table;
+            DbTable = Data.DbTable;
             Total = Metric.Total;
             Count = Metric.Count;
             Average = Metric.Average;
-            ProgramElements = GetProgramElements(Table);
+            ProgramElements = GetProgramElements(DbTable);
             FundData = Metric.FundTotals;
             BocData = Metric.BocTotals;
             NpmData = Metric.NpmTotals;
@@ -30,11 +31,16 @@ namespace BudgetExecution
             ProjectData = Metric.ProgramProjectTotals;
             if (ProgramElements["BOC"].Contains("17"))
             {
-                FTE = GetFTE(Table);
+                FTE = GetFTE(DbTable);
             }
         }
 
         // PROPERTIES
+
+        public DataTable DbTable { get; }
+
+        public decimal Total { get; }
+
         public static string FiscalYear { get; set; } = "2018";
 
         public decimal Average { get; }
@@ -50,6 +56,8 @@ namespace BudgetExecution
         public int Count { get; }
 
         public DataBuilder Data { get; set; }
+
+        public DataFilter TableFilter { get; }
 
         public FTE[] FTE { get; }
 
@@ -72,10 +80,6 @@ namespace BudgetExecution
         public Dictionary<string, string[]> ProgramElements { get; }
 
         public Dictionary<string, decimal> ProjectData { get; }
-
-        public DataTable Table { get; }
-
-        public decimal Total { get; }
 
         // METHODS
         public DataTable FilterTable(DataTable table, string column, string filter)
@@ -108,7 +112,7 @@ namespace BudgetExecution
         {
             try
             {
-                return Data.Table.AsEnumerable().Select(p => p.Field<string>(filter)).Distinct().ToArray();
+                return Data.DbTable.AsEnumerable().Select(p => p.Field<string>(filter)).Distinct().ToArray();
             }
             catch (Exception ex)
             {

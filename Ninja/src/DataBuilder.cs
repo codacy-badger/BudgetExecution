@@ -20,102 +20,108 @@ namespace BudgetExecution
         public DataBuilder(Query query)
         {
             Source = query.Source;
-            Query = query;
+            DbQuery = query;
             if (Source == Source.PRC || Source == Source.RegionalAccounts || Source == Source.DivisionAccounts)
             {
-                Table = GetDataTable(Source);
-                Total = GetTotal(Table);
-                ProgramElements = GetProgramElements(Table);
+                DbTable = GetDataTable(Source);
+                Total = GetTotal(DbTable);
+                ProgramElements = GetProgramElements(DbTable);
                 BindingSource = new BindingSource();
-                BindingSource.DataSource = Table;
-                DataRecords = GetDataRecords(Table);
+                BindingSource.DataSource = DbTable;
+                DbRecords = GetDataRecords(DbTable);
             }
 
             if (Source == Source.FTE)
             {
-                Table = GetDataTable().AsEnumerable().Where(p => p.Field<string>("BOC").Equals("17"))
+                DbTable = GetDataTable().AsEnumerable().Where(p => p.Field<string>("BOC").Equals("17"))
                     .Where(p => p.Field<string>("BudgetLevel").Equals("8"))
                     .Select(p => p).CopyToDataTable();
-                Total = GetFteTotal(Table);
-                ProgramElements = GetProgramElements(Table);
+                Total = GetFteTotal(DbTable);
+                ProgramElements = GetProgramElements(DbTable);
                 BindingSource = new BindingSource();
-                BindingSource.DataSource = Table;
-                DataRecords = GetDataRecords(Table);
+                BindingSource.DataSource = DbTable;
+                DbRecords = GetDataRecords(DbTable);
             }
 
         }
 
         public DataBuilder(Source source, Provider provider)
         {
-            Parameter = null;
+            DataFields = null;
             Source = source;
-            Query = new Query(source, provider);
-            Table = GetDataTable(Source);
-            Total = GetTotal(Table);
-            ProgramElements = GetProgramElements(Table);
+            DbQuery = new Query(source, provider);
+            DbTable = GetDataTable(Source);
+            Total = GetTotal(DbTable);
+            ProgramElements = GetProgramElements(DbTable);
             BindingSource = new BindingSource();
-            BindingSource.DataSource = Table;
-            DataRecords = GetDataRecords(Table);
+            BindingSource.DataSource = DbTable;
+            DbRecords = GetDataRecords(DbTable);
             if (source == Source.FTE)
             {
-                Table = GetDataTable().AsEnumerable().Where(p => p.Field<string>("BOC").Equals("17"))
+                DbTable = GetDataTable().AsEnumerable().Where(p => p.Field<string>("BOC").Equals("17"))
                     .Where(p => p.Field<string>("BudgetLevel").Equals("8"))
                     .Select(p => p).CopyToDataTable();
-                Total = GetFteTotal(Table);
-                ProgramElements = GetProgramElements(Table);
+                Total = GetFteTotal(DbTable);
+                ProgramElements = GetProgramElements(DbTable);
                 BindingSource = new BindingSource();
-                BindingSource.DataSource = Table;
-                DataRecords = GetDataRecords(Table);
+                BindingSource.DataSource = DbTable;
+                DbRecords = GetDataRecords(DbTable);
             }
         }
 
         public DataBuilder(Source source, Provider provider, Dictionary<string, object> param)
         {
             Source = source;
-            Parameter = param;
-            Query = new Query(source, provider, Parameter);
-            Table = GetDataTable(Source);
-            Total = GetTotal(Table);
-            ProgramElements = GetProgramElements(Table);
+            DataFields = param;
+            DbQuery = new Query(source, provider, DataFields);
+            DbTable = GetDataTable(Source);
+            Total = GetTotal(DbTable);
+            ProgramElements = GetProgramElements(DbTable);
             BindingSource = new BindingSource();
-            BindingSource.DataSource = Table;
-            DataRecords = GetDataRecords(Table);
+            BindingSource.DataSource = DbTable;
+            DbRecords = GetDataRecords(DbTable);
             if (source == Source.FTE)
             {
-                Table = GetDataTable().AsEnumerable().Where(p => p.Field<string>("BOC").Equals("17"))
+                DbTable = GetDataTable().AsEnumerable().Where(p => p.Field<string>("BOC").Equals("17"))
                     .Select(p => p).CopyToDataTable();
-                Total = GetFteTotal(Table);
-                ProgramElements = GetProgramElements(Table);
+                Total = GetFteTotal(DbTable);
+                ProgramElements = GetProgramElements(DbTable);
                 BindingSource = new BindingSource();
-                BindingSource.DataSource = Table;
-                DataRecords = GetDataRecords(Table);
+                BindingSource.DataSource = DbTable;
+                DbRecords = GetDataRecords(DbTable);
             }
         }
 
         // PROPERTIES
         public Source Source { get; }
 
-        public Query Query { get; }
+        public Query DbQuery { get; }
 
-        public DataTable Table { get; }
+        public DataTable DbTable { get; }
 
         public Dictionary<string, string[]> ProgramElements { get; }
 
-        public DataRow[] DataRecords { get; }
+        public DataRow[] DbRecords { get; }
 
         public BindingSource BindingSource { get; set; }
 
         public decimal Total { get; }
 
-        public Dictionary<string, object> Parameter { get; set; }
+        public Dictionary<string, object> DataFields { get; set; }
 
         // METHODS
-        private Dictionary<string, object> GetParameter(string rc)
+        private Dictionary<string, object> GetDataFields(DataTable table)
         {
             try
             {
+                var row = table.Rows[0];
+                var col = table.GetFields();
+                var val = row.ItemArray;
+                var cct = table.Columns.Count;
+                var rct = table.Rows.Count;
                 var param = new Dictionary<string, object>();
-                param.Add("RC", rc);
+                for(int i = 0; i < cct; i++)
+                    param.Add(col[i], val[i]);
                 return param;
             }
             catch (Exception e)
@@ -195,7 +201,7 @@ namespace BudgetExecution
         {
             try
             {
-                if (Table.Columns.Contains("Amount"))
+                if (DbTable.Columns.Contains("Amount"))
                 {
                     return table.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Average();
                 }
@@ -213,7 +219,7 @@ namespace BudgetExecution
         {
             try
             {
-                if (Table.Columns.Contains("Amount"))
+                if (DbTable.Columns.Contains("Amount"))
                 {
                     return table.AsEnumerable().Where(p => p.Field<decimal>("Amount") > 0m).Select(p => p).Count();
                 }
@@ -227,24 +233,6 @@ namespace BudgetExecution
             }
         }
 
-        public decimal[] GetMetrics(DataTable table)
-        {
-            try
-            {
-                if (Table.Columns.Contains("Amount"))
-                {
-                    return new decimal[] { GetTotal(table), (decimal)GetCount(table), GetAverage(table) };
-                }
-
-                return new decimal[] { 0m };
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
-                return new decimal[] { -1m, -1m, -1m };
-            }
-        }
-
         public DataSet GetDataSet()
         {
             try
@@ -253,7 +241,7 @@ namespace BudgetExecution
                 var dt = new DataTable(Source.ToString());
                 dt.TableName = Source.ToString();
                 ds.Tables.Add(dt);
-                Query.DataAdapter.Fill(ds);
+                DbQuery.DataAdapter.Fill(ds);
                 return ds;
             }
             catch (Exception ex)
@@ -272,7 +260,7 @@ namespace BudgetExecution
                 var dt = new DataTable(source.ToString());
                 dt.TableName = source.ToString();
                 ds.Tables.Add(dt);
-                this.Query.DataAdapter.Fill(ds);
+                this.DbQuery.DataAdapter.Fill(ds);
                 return ds;
             }
             catch (Exception ex)
@@ -291,7 +279,7 @@ namespace BudgetExecution
                 var dt = new DataTable(Source.ToString());
                 dt.TableName = Source.ToString();
                 ds.Tables.Add(dt);
-                this.Query.DataAdapter.Fill(ds, Source.ToString());
+                this.DbQuery.DataAdapter.Fill(ds, Source.ToString());
                 return dt;
             }
             catch (Exception e)
@@ -308,39 +296,40 @@ namespace BudgetExecution
                 var ds = new DataSet("R06");
                 var dt = new DataTable(source.ToString());
                 dt.TableName = source.ToString();
-                Query.DataAdapter.Fill(dt);
+                DbQuery.DataAdapter.Fill(dt);
                 return dt;
             }
             catch (Exception e)
             {
                 MessageBox.Show(e.Message);
                 return null;
-            }
+            } 
         }
 
         public decimal GetTotal(DataTable table)
         {
-            try
+            if (DbTable.Columns.Contains("Amount"))
             {
-                if (Table.Columns.Contains("Amount"))
+                try
                 {
-                    return table.AsEnumerable().Where(p => p.Field<string>("BOC") != "17").Select(p => p.Field<decimal>("Amount")).Sum();
+                    var total = table.AsEnumerable().Where(p => p.Field<string>("BOC") != "17").Select(p => p.Field<decimal>("Amount")).Sum();
+                    if(total > 0)
+                        return total;
                 }
-
-                return 0m;
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
+                    return -1M;
+                }
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
-                return -1M;
-            }
+            return -1;
         }
 
         public decimal GetFteTotal(DataTable table)
         {
             try
             {
-                if (Table.Columns.Contains("Amount"))
+                if (DbTable.Columns.Contains("Amount"))
                 {
                     return table.AsEnumerable().Where(p => p.Field<string>("BOC") == "17").Select(p => p.Field<decimal>("Amount")).Sum();
                 }

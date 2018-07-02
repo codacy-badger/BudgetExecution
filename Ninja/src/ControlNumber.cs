@@ -33,7 +33,7 @@ namespace BudgetExecution
             Source = source;
             Provider = provider;
             DbData = new DataBuilder(Source, Provider);
-            Table = DbData.Table;
+            Table = DbData.DbTable;
             DbRow = Table.Rows[0];
             ID = int.Parse(DbRow["ID"].ToString());
             Region = "R6";
@@ -45,12 +45,12 @@ namespace BudgetExecution
 
         public ControlNumber(string fund, string division)
         {
-            Source = Source.BudgetDocuments;
+            Source = Source.ControlNumbers;
             Provider = Provider.SQLite;
             Fund = fund;
             DivisionID = division;
             DbData = new DataBuilder(Source, Provider, GetParamData(fund, division));
-            Table = DbData.Table;
+            Table = DbData.DbTable;
             DbRow = Table.Rows[0];
             ID = int.Parse(DbRow["ID"].ToString());
             FiscalYear = DbRow["FiscalYear"].ToString();
@@ -145,7 +145,7 @@ namespace BudgetExecution
         {
             try
             {
-                return DbData.Table.AsEnumerable().Count();
+                return DbData.DbTable.AsEnumerable().Count();
             }
             catch (Exception ex)
             {
@@ -182,7 +182,7 @@ namespace BudgetExecution
         {
             try
             {
-                var datarow = new DataBuilder(source, Provider.SQLite, p).Table.AsEnumerable().Select(prc => prc).First();
+                var datarow = new DataBuilder(source, Provider.SQLite, p).DbTable.AsEnumerable().Select(prc => prc).First();
                 return new Fund(datarow);
             }
             catch (Exception ex)
@@ -196,7 +196,7 @@ namespace BudgetExecution
         {
             try
             {
-                var datarow = new DataBuilder(source, provider, p).Table.AsEnumerable().Select(prc => prc).First();
+                var datarow = new DataBuilder(source, provider, p).DbTable.AsEnumerable().Select(prc => prc).First();
                 return new Fund(datarow);
             }
             catch (Exception ex)
@@ -213,7 +213,7 @@ namespace BudgetExecution
                 var param = GetInsertionColumns(p);
                 var fields = param.Keys.ToArray();
                 var vals = param.Values.ToArray();
-                var query = new SQLiteQuery(Source.BudgetDocuments, param);
+                var query = new SQLiteQuery(Source.ControlNumbers, param);
                 SQLiteConnection conn = query.DataConnection;
                 using (conn)
                 {

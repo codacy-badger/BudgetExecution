@@ -26,7 +26,7 @@ namespace BudgetExecution
         {
             Source = source;
             Provider = provider;
-            Data = new DataBuilder(source, provider).Table.AsEnumerable().Select(p => p).First();
+            Data = new DataBuilder(source, provider).DbTable.AsEnumerable().Select(p => p).First();
             ID = int.Parse(Data["ID"].ToString());
             BudgetLevel = Data["BudgetLevel"].ToString();
             RPIO = Data["RPIO"].ToString();
@@ -45,7 +45,7 @@ namespace BudgetExecution
         {
             Source = source;
             Provider = provider;
-            Data = new DataBuilder(source, provider, param).Table.AsEnumerable().Select(p => p).First();
+            Data = new DataBuilder(source, provider, param).DbTable.AsEnumerable().Select(p => p).First();
             ID = int.Parse(Data["ID"].ToString());
             BudgetLevel = Data["BudgetLevel"].ToString();
             RPIO = Data["RPIO"].ToString();
@@ -170,7 +170,7 @@ namespace BudgetExecution
         {
             try
             {
-                return new DataBuilder(source, provider, param).Table.AsEnumerable().Select(p => p).First();
+                return new DataBuilder(source, provider, param).DbTable.AsEnumerable().Select(p => p).First();
             }
             catch (Exception ex)
             {
@@ -351,7 +351,7 @@ namespace BudgetExecution
         {
             try
             {
-                var datarow = new DataBuilder(source, Provider.SQLite, p).Table.AsEnumerable().Select(prc => prc).First();
+                var datarow = new DataBuilder(source, Provider.SQLite, p).DbTable.AsEnumerable().Select(prc => prc).First();
                 return new PRC(datarow);
             }
             catch (Exception ex)
@@ -365,7 +365,7 @@ namespace BudgetExecution
         {
             try
             {
-                var datarow = new DataBuilder(source, provider, p).Table.AsEnumerable().Select(prc => prc).First();
+                var datarow = new DataBuilder(source, provider, p).DbTable.AsEnumerable().Select(prc => prc).First();
                 return new PRC(datarow);
             }
             catch (Exception ex)

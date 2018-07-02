@@ -14,7 +14,8 @@ namespace BudgetExecution
     using MetroSet_UI.Controls;
     using Syncfusion.Windows.Forms.Chart;
     using Syncfusion.Windows.Forms.Tools;
-    using MetroForm = Syncfusion.Windows.Forms.MetroForm;
+    using MetroForm = Syncfusion.Windows.Forms.MetroForm;   
+
 
     public partial class ExternalDataReader : MetroForm
     {
@@ -39,7 +40,7 @@ namespace BudgetExecution
 
         }
 
-        private void button6_Click(object sender, EventArgs e)
+        private void Button6_Click(object sender, EventArgs e)
         {
 
         }

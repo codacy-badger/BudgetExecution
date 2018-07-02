@@ -31,7 +31,7 @@ namespace BudgetExecution
             Source = Source.DivisionAccounts;
             Parameter = new Dictionary<string, object>() { ["RC"] = rc };
             DbData = new DataBuilder(Source.DivisionAccounts, Provider.SQLite, Parameter);
-            Table = DbData.Table;
+            Table = DbData.DbTable;
             DatabaseTab.TabVisible = true;
             ProjectTab.TabVisible = true;
             DivisionTab.TabVisible = false;
@@ -52,7 +52,7 @@ namespace BudgetExecution
         {
             InitializeComponent();
             DbData = new DataBuilder(source, Provider.SQLite);
-            Table = DbData.Table;
+            Table = DbData.DbTable;
             Source = source;
             CurrentTabIndex = 0;
             TabNames = GetTabNames();
@@ -70,7 +70,7 @@ namespace BudgetExecution
             if (source == Source.RegionalAccounts || source == Source.DivisionAccounts)
             {
                 DbData = new DataBuilder(source, Provider.SQLite);
-                Table = DbData.Table;
+                Table = DbData.DbTable;
                 Source = source;
                 CurrentTabIndex = 1;
                 TabNames = GetTabNames();
@@ -164,8 +164,8 @@ namespace BudgetExecution
                 DefineVisisbleDataColumns(Grid);
                 PopulateFilterBoxItems(GridFundFilter, PrcField.FundName);
                 ConfigureTextBoxBindings();
-                lblTotal.Text = DbData.GetTotal(DbData.Table).ToString("c");
-                lblCount.Text = DbData.GetCount(DbData.Table).ToString();
+                lblTotal.Text = DbData.GetTotal(DbData.DbTable).ToString("c");
+                lblCount.Text = DbData.GetCount(DbData.DbTable).ToString();
                 GridFundFilter.SelectionChangeCommitted += GridFilterControl1_ItemSelected;
                 GridBocFilter.SelectionChangeCommitted += GridFilterControl2_ItemSelected;
                 SummaryTabControl.SelectedIndexChanged += SummaryTabPage_TabSelected;
@@ -299,7 +299,7 @@ namespace BudgetExecution
         {
             try
             {
-                return DbData.Table.AsEnumerable().Where(p => p.Field<string>("FundName").
+                return DbData.DbTable.AsEnumerable().Where(p => p.Field<string>("FundName").
                     Equals(filter)).Select(p => p.Field<decimal>("Amount") > 0).Count();
             }
             catch (Exception ex)
@@ -313,7 +313,7 @@ namespace BudgetExecution
         {
             try
             {
-                return DbData.Table.AsEnumerable().Where(p => p.Field<string>("FundName").Equals(filter1))
+                return DbData.DbTable.AsEnumerable().Where(p => p.Field<string>("FundName").Equals(filter1))
                     .Where(p => p.Field<string>("BocName").Equals(filter2)).Select(p => p.Field<decimal>("Amount")).Count();
             }
             catch (Exception ex)
@@ -439,7 +439,7 @@ namespace BudgetExecution
         {
             try
             {
-                return DbData.Table.AsEnumerable().Where(p => p.Field<string>("FundName").
+                return DbData.DbTable.AsEnumerable().Where(p => p.Field<string>("FundName").
                 Equals(filter)).Select(p => p.Field<decimal>("Amount")).Sum();
             }
             catch (Exception ex)
@@ -473,8 +473,8 @@ namespace BudgetExecution
                     BindingSource.Filter = null;
                     Navigator.BindingSource = BindingSource;
                     Grid.DataSource = BindingSource;
-                    lblTotal.Text = DbData.GetTotal(DbData.Table).ToString("c");
-                    lblCount.Text = DbData.GetCount(DbData.Table).ToString();
+                    lblTotal.Text = DbData.GetTotal(DbData.DbTable).ToString("c");
+                    lblCount.Text = DbData.GetCount(DbData.DbTable).ToString();
                     GridBocFilter.Items.Clear();
                     GridAccountFilter.Items.Clear();
                     PopulateFilterBoxItems(GridFundFilter, PrcField.FundName);

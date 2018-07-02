@@ -22,9 +22,9 @@ namespace BudgetExecution
             Timer = new Timer();
             Values = new Dictionary<string, double>[]
             {
-                Metric.GetChartTotals(R6.Table, PrcField.Fund), Metric.GetChartTotals(R6.Table, PrcField.BOC),
-                Metric.GetChartTotals(D6.Table, PrcField.Fund), Metric.GetChartTotals(R6.Table, PrcField.NPM), Metric.GetChartTotals(D6.Table, PrcField.NPM),
-                Metric.GetChartTotals(R6.Table, PrcField.GoalName), Metric.GetChartTotals(D6.Table, PrcField.GoalName)
+                Metric.GetChartTotals(R6.DbTable, PrcField.Fund), Metric.GetChartTotals(R6.DbTable, PrcField.BOC),
+                Metric.GetChartTotals(D6.DbTable, PrcField.Fund), Metric.GetChartTotals(R6.DbTable, PrcField.NPM), Metric.GetChartTotals(D6.DbTable, PrcField.NPM),
+                Metric.GetChartTotals(R6.DbTable, PrcField.GoalName), Metric.GetChartTotals(D6.DbTable, PrcField.GoalName)
             };
             Title = GetChartTitles(Values);
             Chart = new GetChart(GetMainChart);

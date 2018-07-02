@@ -18,7 +18,7 @@ namespace BudgetExecution
 
         public DocInfo(DivisionAuthority budget)
         {
-            DivisionBudget = budget;
+            Data = budget;
             ControlNumber = GetControlNumber();
             DocumentHeader = GetDocumentHeader();
             AccountingInfo = GetAccountingInfo();
@@ -32,7 +32,7 @@ namespace BudgetExecution
 
         public List<string> ControlInfo { get; set; }
 
-        public string ControlNumber { get; set; }
+        public ControlNumber ControlNumber { get; set; }
 
         public List<string> ControlNumbers { get; set; }
 
@@ -40,7 +40,7 @@ namespace BudgetExecution
 
         public string DcnPrefix { get; set; }
 
-        public DivisionAuthority DivisionBudget { get; set; }
+        public DivisionAuthority Data { get; set; }
 
         public List<string> DocumentHeader { get; set; }
 
@@ -77,23 +77,11 @@ namespace BudgetExecution
             return footer;
         }
 
-        internal string GetControlNumber()
+        internal ControlNumber GetControlNumber()
         {
             try
             {
-                StringBuilder controlNumber = new StringBuilder();
-                string month = DateTime.Now.Month.ToString();
-                string day = DateTime.Now.Day.ToString();
-                controlNumber.Append(DivisionAuthority.FiscalYear);
-                controlNumber.Append(month);
-                controlNumber.Append(day);
-                controlNumber.Append("-");
-                controlNumber.Append(DivisionAuthority.FiscalYear[2].ToString());
-                controlNumber.Append(DivisionAuthority.FiscalYear[3].ToString());
-                controlNumber.Append("-");
-                controlNumber.Append(Organization.ID);
-                controlNumber.Append("-01");
-                return controlNumber.ToString();
+                return new ControlNumber();   
             }
             catch (Exception ex)
             {
@@ -102,12 +90,12 @@ namespace BudgetExecution
             }
         }
 
-        internal Dictionary<string, string> GetDocmumentDictionary()
+        internal Dictionary<string, string> GetDocmumentInfo()
         {
             try
             {
                 Dictionary<string, string> param = new Dictionary<string, string>();
-                param.Add("ControlNumber", ControlNumber);
+                param.Add("ControlNumber", ControlNumber.ToString());
                 param.Add("Org", Organization.Code);
                 param.Add("Division", Organization.Name);
                 param.Add("Id", Organization.ID);
@@ -147,7 +135,7 @@ namespace BudgetExecution
         {
             try
             {
-                return new DataBuilder(Source.InternalTransfers, Provider.SQLite).Table.Rows.Count + 1;
+                return new DataBuilder(Source.InternalTransfers, Provider.SQLite).DbTable.Rows.Count + 1;
             }
             catch (Exception ex)
             {

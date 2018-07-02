@@ -20,7 +20,7 @@ namespace BudgetExecution
         public PrcMetric(DataBuilder data)
         {
             DbData = data;
-            Table = DbData.Table;
+            Table = DbData.DbTable;
             ProgramElements = DbData.GetProgramElements(Table);
             Total = GetTotals(Table);
             Count = Table.Rows.Count;
@@ -40,7 +40,7 @@ namespace BudgetExecution
             GoalMetrics = GetMetrics(Table, PrcField.GoalName);
             ObjectiveTotals = GetDataTotals(Table, PrcField.ObjectiveName);
             ObjectiveMetrics = GetMetrics(Table, PrcField.ObjectiveName);
-            if (DbData.Source == Source.DivisionAccounts && DbData.Parameter == null)
+            if (DbData.Source == Source.DivisionAccounts && DbData.DataFields == null)
             {
                 DivisionTotals = GetDataTotals(Table, PrcField.RC);
                 DivisionMetrics = GetMetrics(Table, PrcField.RC);
@@ -48,7 +48,7 @@ namespace BudgetExecution
 
             if (DbData.Source == Source.PRC)
             {
-                var table = new DivisionAuthority().Table;
+                var table = new DivisionAuthority().DbTable;
                 DivisionTotals = GetDataTotals(table, PrcField.RC);
                 DivisionMetrics = GetMetrics(table, PrcField.RC);
             }
@@ -57,7 +57,7 @@ namespace BudgetExecution
         public PrcMetric(DataBuilder data, PrcField prcfilter, string filter)
         {
             DbData = data;
-            Table = Info.FilterTable(DbData.Table, prcfilter, filter);
+            Table = Info.FilterTable(DbData.DbTable, prcfilter, filter);
             ProgramElements = GetProgramElements(Table);
             Total = GetTotals(Table);
             Count = Table.Rows.Count;
@@ -79,13 +79,13 @@ namespace BudgetExecution
             ObjectiveMetrics = GetMetrics(Table, PrcField.ObjectiveName);
             if (DbData.Source == Source.DivisionAccounts)
             {
-                DivisionTotals = GetDataTotals(DbData.Table, PrcField.RC);
-                DivisionMetrics = GetMetrics(DbData.Table, PrcField.RC);
+                DivisionTotals = GetDataTotals(DbData.DbTable, PrcField.RC);
+                DivisionMetrics = GetMetrics(DbData.DbTable, PrcField.RC);
             }
 
             else
             {
-                var table = new DivisionAuthority().Table;
+                var table = new DivisionAuthority().DbTable;
                 DivisionTotals = GetDataTotals(table, PrcField.RC);
                 DivisionMetrics = GetMetrics(table, PrcField.RC);
             }

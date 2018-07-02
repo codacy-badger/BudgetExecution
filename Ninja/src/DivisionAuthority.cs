@@ -17,20 +17,21 @@ namespace BudgetExecution
         {
             DbData = new DataBuilder(Source.DivisionAccounts, Provider.SQLite);
             Metric = new PrcMetric(DbData);
-            Table = DbData.Table;
+            DbTable = DbData.DbTable;
+            TableFilter = new DataFilter(DataBuilder.FilterTable);
             Total = Metric.Total;
             Count = Metric.Count;
             Average = Metric.Average;
-            ProgramElements = GetProgramElements(Table);
+            ProgramElements = GetProgramElements(DbTable);
             FundData = Metric.FundTotals;
             BocData = Metric.BocTotals;
             NpmData = Metric.NpmTotals;
             GoalData = Metric.GoalTotals;
-            ProgramData = Metric.ProgramAreaTotals;
+            ProgramAreaData = Metric.ProgramAreaTotals;
             ProjectData = Metric.ProgramProjectTotals;
             if (ProgramElements["BOC"].Contains("17"))
             {
-                FTE = GetFTE(DbData.Table);
+                FTE = GetFTE(DbData.DbTable);
             }
         }
 
@@ -39,21 +40,22 @@ namespace BudgetExecution
             RC = new RC(rc);
             Org = new Org(RC.Code);
             DbData = new DataBuilder(Source.DivisionAccounts, Provider.SQLite, new Dictionary<string, object> { ["RC"] = rc });
+            TableFilter = new DataFilter(DataBuilder.FilterTable);
             Metric = new PrcMetric(DbData);
-            Table = DbData.Table;
+            DbTable = DbData.DbTable;
             Total = Metric.Total;
             Count = Metric.Count;
             Average = Metric.Average;
-            ProgramElements = GetProgramElements(Table);
+            ProgramElements = GetProgramElements(DbTable);
             FundData = Metric.FundTotals;
             BocData = Metric.BocTotals;
             NpmData = Metric.NpmTotals;
             GoalData = Metric.GoalTotals;
-            ProgramData = Metric.ProgramAreaTotals;
+            ProgramAreaData = Metric.ProgramAreaTotals;
             ProjectData = Metric.ProgramProjectTotals;
             if (ProgramElements["BOC"].Contains("17"))
             {
-                FTE = GetFTE(Table);
+                FTE = GetFTE(DbTable);
             }
         }
 
@@ -72,11 +74,9 @@ namespace BudgetExecution
 
         public PrcMetric Metric { get; }
 
-        public DataTable Table { get; }
+        public DataTable DbTable { get; }
 
         public Dictionary<string, string[]> ProgramElements { get; }
-
-        public decimal[] Measures { get; }
 
         public decimal Amount { get; }
 
@@ -86,7 +86,9 @@ namespace BudgetExecution
 
         public decimal Average { get; }
 
-        public Dictionary<string, decimal> DivisionData { get; }
+        public DataFilter TableFilter { get; }
+
+        public Dictionary<string, decimal> ProgramData { get; }
 
         public FTE[] FTE { get; }
 
@@ -100,7 +102,7 @@ namespace BudgetExecution
 
         public Dictionary<string, decimal> NpmData { get; }
 
-        public Dictionary<string, decimal> ProgramData { get; }
+        public Dictionary<string, decimal> ProgramAreaData { get; }
 
         public Dictionary<string, decimal> ProjectData { get; }
 
@@ -313,10 +315,9 @@ namespace BudgetExecution
             {
                 if (p.ContainsKey("Amount"))
                 {
-                    p.Remove("Amount");
+                    p["Amount"] = amount2;
                 }
-
-                p.Add("Amount", amount2);
+                
                 var query = new Query(Source.PRC, Provider.SQLite, p);
                 var update = query.UpdateCommand;
                 update.ExecuteNonQuery();
@@ -369,5 +370,6 @@ namespace BudgetExecution
                 return false;
             }
         }
+
     }
 }

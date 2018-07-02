@@ -44,7 +44,7 @@ namespace BudgetExecution
             DbData = data;
             Source = data.Source;
             Value = Stat.Total;
-            Table = DbData.Table;
+            Table = DbData.DbTable;
             Metric = new PrcMetric(DbData);
             DataTotals = Metric.GetChartTotals(Table, filter);
             if (Chart.Series != null)
@@ -73,7 +73,7 @@ namespace BudgetExecution
                 Chart.Series.Clear();
             }
 
-            Table = DbData.Table;
+            Table = DbData.DbTable;
             Metric = new PrcMetric(DbData);
             DataMetrics = Metric.GetChartMetrics(Table, filter);
             DataSeries = GetSeriesTotals(GetMeasure(DataMetrics, Value));
@@ -103,7 +103,7 @@ namespace BudgetExecution
                 Chart.Series.Clear();
             }
 
-            Table = DbData.Table;
+            Table = DbData.DbTable;
             Metric = new PrcMetric(DbData);
             DataMetrics = Metric.GetChartMetrics(Table, filter);
             DataSeries = GetSeriesTotals(GetMeasure(DataMetrics, Value));
@@ -153,7 +153,7 @@ namespace BudgetExecution
                 Chart.Series.Clear();
             }
 
-            Table = DbData.Table;
+            Table = DbData.DbTable;
             Metric = new PrcMetric(DbData);
             DataMetrics = Metric.GetChartMetrics(Table, filter);
             DataSeries = GetSeriesTotals(GetMeasure(DataMetrics, Value));
@@ -184,7 +184,7 @@ namespace BudgetExecution
                 Chart.Series.Clear();
             }
 
-            Table = DbData.Table;
+            Table = DbData.DbTable;
             DataMetrics = Metric.GetChartMetrics(Table, filter);
             DataSeries = GetSeriesTotals(GetMeasure(DataMetrics, Value));
             DataSeries.Type = SeriesType;

@@ -1,89 +1,71 @@
-﻿// <copyright file="Reprogramming.cs" company="PlaceholderCompany">
-// Copyright (c) PlaceholderCompany. All rights reserved.
-// </copyright>
+#region Copyright Syncfusion Inc. 2001-2018.
+// Copyright Syncfusion Inc. 2001-2018. All rights reserved.
+// Use of this code is subject to the terms of our license.
+// A copy of the current license can be obtained at any time by e-mailing
+// licensing@syncfusion.com. Any infringement will be prosecuted under
+// applicable laws. 
+#endregion
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
 
-namespace BudgetExecution
+using System.Text;
+using System.Windows.Forms;
+
+namespace BudgetExecution.src
 {
-    using System.Data;
-
-    public class Reprogramming
+    public partial class Reprogramming : Syncfusion.Windows.Forms.MetroForm
     {
-        // CONSTRUCTORS
         public Reprogramming()
         {
+            InitializeComponent();
         }
 
-        public Reprogramming(string bl, string docType, string rpio, string org, string rc, string bfy, string fund, string tcn, string qtr, string date, string code, string progproj, string ppn, string npmcode, string fromto, string boc, decimal amount)
+        private void metroPanel2_Paint(object sender, PaintEventArgs e)
         {
-            BudgetLevel = bl;
-            DocType = docType;
-            RPIO = rpio;
-            Org = new Org(org);
-            RC = new RC(rc);
-            BFY = bfy;
-            Fund = new Fund(fund, BFY);
-            TCN = tcn;
-            Qtr = qtr;
-            Date = date;
-            Code = code;
-            Account = new Account(fund, code);
-            NpmCode = Account.NPM;
-            FromTo = fromto;
-            BOC = new BOC(boc);
-            Amount = amount;
+
         }
 
-        public Reprogramming(DataRow dr)
+        private void metroSetLabel23_Click(object sender, EventArgs e)
         {
-            BudgetLevel = dr["BudgetLevel"].ToString();
-            DocType = dr["DocType"].ToString();
-            RPIO = dr["RPIO"].ToString();
-            Org = new Org(dr["Org"].ToString());
-            RC = new RC(dr["RC"].ToString());
-            BFY = dr["BFY"].ToString();
-            Fund = new Fund(dr["Fund"].ToString(), BFY);
-            TCN = dr["TCN"].ToString();
-            Qtr = dr["Qtr"].ToString();
-            Date = dr["Date"].ToString();
-            Code = dr["Code"].ToString();
-            Account = new Account(dr["Code"].ToString(), Code);
-            NpmCode = Account.NPM;
-            FromTo = dr["FromTo"].ToString();
-            BOC = new BOC(dr["BOC"].ToString());
-            Amount = decimal.Parse(dr["Amount"].ToString());
+
         }
 
-        // PROPERTIES
-        public Account Account { get; }
+        private void metroSetLabel22_Click(object sender, EventArgs e)
+        {
 
-        public decimal Amount { get; }
+        }
 
-        public string BFY { get; }
+        private void metroSetLabel13_Click(object sender, EventArgs e)
+        {
 
-        public BOC BOC { get; }
+        }
 
-        public string BudgetLevel { get; }
+        private void metroSetLabel20_Click(object sender, EventArgs e)
+        {
 
-        public string Code { get; }
+        }
 
-        public string Date { get; }
+        private void metroSetLabel17_Click(object sender, EventArgs e)
+        {
 
-        public string DocType { get; }
+        }
 
-        public string FromTo { get; }
+        private void metroSetLabel18_Click(object sender, EventArgs e)
+        {
 
-        public Fund Fund { get; }
+        }
 
-        public string NpmCode { get; }
+        private void metroSetLabel16_Click(object sender, EventArgs e)
+        {
 
-        public Org Org { get; }
+        }
 
-        public string Qtr { get; }
+        private void metroSetLabel21_Click(object sender, EventArgs e)
+        {
 
-        public RC RC { get; }
-
-        public string RPIO { get; }
-
-        public string TCN { get; }
+        }
     }
 }

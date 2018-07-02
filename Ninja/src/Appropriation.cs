@@ -29,14 +29,14 @@ namespace BudgetExecution
         {
             DbData = new DataBuilder(source, provider, new Dictionary<string, object> { ["Fund"] = fundcode, ["BFY"] = bfy });
             Metric = new PrcMetric(DbData);
-            Table = DbData.Table;
+            DbTable = DbData.DbTable;
             Total = Metric.Total;
             Average = Metric.Average;
-            ProgramElements = GetProgramElements(Table);
+            ProgramElements = GetProgramElements(DbTable);
             BocCodes = ProgramElements["BOC"];
             if (BocCodes.Contains("17"))
             {
-                FTE = GetFTE(Table);
+                FTE = GetFTE(DbTable);
             }
 
             Count = PrcData.Item1.Rows.Count;
@@ -59,7 +59,7 @@ namespace BudgetExecution
 
         public PrcMetric Metric { get; }
 
-        public DataTable Table { get; }
+        public DataTable DbTable { get; }
 
         public decimal Amount { get; }
 

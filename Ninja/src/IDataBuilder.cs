@@ -9,11 +9,11 @@ namespace BudgetExecution
     public interface IDataBuilder
     {
         // PROPERTIES
-        Query Query { get; }
+        Query DbQuery { get; }
 
-        DataTable Table { get; }
+        DataTable DbTable { get; }
 
-        DataRow[] DataRecords { get; }
+        DataRow[] DbRecords { get; }
 
         // METHODS
         DataTable GetDataTable();

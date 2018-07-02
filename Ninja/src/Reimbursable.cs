@@ -21,21 +21,23 @@ namespace BudgetExecution
         public Reimbursable()
         {
         }
+
         public Reimbursable(Source source, Provider provider)
         {
             Source = source;
             Provider = provider;
             DbData = new DataBuilder(Source, Provider);
-            Table = DbData.Table;
+            Table = DbData.DbTable;
+            DbRow = Table.Rows[0];
         }
-
 
         public Reimbursable(string fund, string bfy, string org, string code, string spc, string an, decimal auth, decimal amout)
         {
             Source = Source.Reimbursables;
             Provider = Provider.SQLite;
             DbData = new DataBuilder(Source, Provider);
-            Table = DbData.Table;
+            Table = DbData.DbTable;
+            DbRow = Table.Rows[0];
             BFY = bfy;
             Fund = new Fund(fund, bfy);
             OrgCode = org;
@@ -57,10 +59,13 @@ namespace BudgetExecution
             AgreementNumber = dr["Agreement"].ToString();
             Commitments = decimal.Parse(dr["Commitments"].ToString());
             Obligations = decimal.Parse(dr["Obligations"].ToString());
+            DbRow = dr;
         }
 
         // PROPERTIES
         public int ID { get; }
+
+        public DataRow DbRow { get; set; }
 
         public Account Account { get; }
 
@@ -154,7 +159,7 @@ namespace BudgetExecution
         {
             try
             {
-                var datarow = new DataBuilder(source, Provider.SQLite, p).Table.AsEnumerable().Select(prc => prc).First();
+                var datarow = new DataBuilder(source, Provider.SQLite, p).DbTable.AsEnumerable().Select(prc => prc).First();
                 return new Reimbursable(datarow);
             }
             catch (Exception ex)
@@ -168,7 +173,7 @@ namespace BudgetExecution
         {
             try
             {
-                var datarow = new DataBuilder(source, provider, p).Table.AsEnumerable().Select(prc => prc).First();
+                var datarow = new DataBuilder(source, provider, p).DbTable.AsEnumerable().Select(prc => prc).First();
                 return new Reimbursable(datarow);
             }
             catch (Exception ex)

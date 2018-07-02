@@ -11,8 +11,11 @@ namespace BudgetExecution
     using System.Drawing;
     using System.Linq;
     using System.Windows.Forms;
+    using MetroFramework.Controls;
     using MetroSet_UI.Controls;
     using Syncfusion.Windows.Forms;
+    using VisualPlus.Toolkit.Controls;
+    using VisualPlus.Toolkit.Controls.DataManagement;
 
     public partial class SQLiteData : MetroForm
     {
@@ -21,15 +24,14 @@ namespace BudgetExecution
         {
             InitializeComponent();
             DbData = new DataBuilder(Source.RegionalAccounts, Provider.SQLite);
-            Table = DbData.Table;
+            Table = DbData.DbTable;
             Metric = new PrcMetric(DbData);
             ProgramElements = DbData.GetProgramElements(Table);
             BindingSource.DataSource = Table;
             Navigator.BindingSource = BindingSource;
-            AccountGrid.DataSource = BindingSource;
+            SQLiteGrid.DataSource = BindingSource.DataSource;
             PopulateSourceFilters();
             PopulateFilterButtons(Filter1, Info.Sources);
-            label4.Text = new ControlNumber("B", "6MD").ToString();
         }
 
         public SQLiteData(Source source, Provider provider)
@@ -38,15 +40,14 @@ namespace BudgetExecution
             Source = source;
             Provider = provider;
             DbData = new DataBuilder(Source, Provider);
-            Table = DbData.Table;
+            Table = DbData.DbTable;
             Metric = new PrcMetric(DbData);
             ProgramElements = DbData.GetProgramElements(Table);
             BindingSource.DataSource = Table;
-            AccountGrid.DataSource = BindingSource;
             Navigator.BindingSource = BindingSource;
+            SQLiteGrid.DataSource = BindingSource.DataSource;
             PopulateSourceFilters();
             PopulateFilterButtons(Filter1, Info.Sources);
-            label4.Text = new ControlNumber("B", "6MD").ToString();
         }
         // PROPERTIES
         private Source Source { get; }
@@ -67,9 +68,9 @@ namespace BudgetExecution
 
         private DataTable Table { get; set; }
 
-        public DataGridView Grid { get; set; }
+        public DataGridView SqlGrid { get; set; }
 
-        public FlowLayoutPanel DataFilter1 { get; set; }
+        public MetroSetComboBox DataFilter1 { get; set; }
 
         private MetroSetComboBox DataFilter2 { get; set; }
 
@@ -83,6 +84,7 @@ namespace BudgetExecution
             DataFilter1 = Filter1;
             foreach(string s in Info.Sources)
             {
+                DataFilter1.Items.Add(s);
             }
         }
 
@@ -229,6 +231,22 @@ namespace BudgetExecution
             }
         }
 
+        internal void PopulateFilterButtons(MetroSetComboBox control, string[] list)
+        {
+            try
+            {
+                control.Items.Clear();
+                foreach (string f in list)
+                {
+                    control.Items.Add(f);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
+            }
+        }
+
         internal void FilterControlButton_OnClick(object sender, EventArgs e)
         {
             try
@@ -237,7 +255,6 @@ namespace BudgetExecution
                 var name = button.Tag.ToString();
                 var source = (Source)Enum.Parse(typeof(Source), name.ToString());
                 BindingSource.DataSource = new DataBuilder(source, Provider.SQLite).GetDataTable();
-                DataGridGroupBox.Text = source.ToString();
             }
             catch (Exception ex)
             {
@@ -351,6 +368,15 @@ namespace BudgetExecution
             BindingSource.MoveNext();
 
         }
-        
+
+        private void splitContainerAdv1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroTabPage1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

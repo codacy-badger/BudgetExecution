@@ -25,7 +25,7 @@ namespace BudgetExecution
         {
             this.DbData = DbData;
             Metric = new PrcMetric(this.DbData);
-            Table = this.DbData.Table;
+            Table = this.DbData.DbTable;
             BindGridAndNavigator(Table, dgv, bs, bn);
             BindingSource = bs;
             Navigator = bn;
@@ -297,7 +297,7 @@ namespace BudgetExecution
         {
             try
             {
-                Table = DbData.Table;
+                Table = DbData.DbTable;
                 BindingSource.DataSource = Table;
             }
             catch (Exception ex)
