@@ -13,10 +13,6 @@ namespace BudgetExecution
 
     public class Reimbursable
     {
-        private Source Source;
-        private Provider Provider;
-        private DataTable Table;
-
         // CONSTRUCTORS
         public Reimbursable()
         {
@@ -27,8 +23,8 @@ namespace BudgetExecution
             Source = source;
             Provider = provider;
             DbData = new DataBuilder(Source, Provider);
-            Table = DbData.DbTable;
-            DbRow = Table.Rows[0];
+            DbTable = DbData.DbTable;
+            DbRow = DbTable.Rows[0];
         }
 
         public Reimbursable(string fund, string bfy, string org, string code, string spc, string an, decimal auth, decimal amout)
@@ -36,8 +32,8 @@ namespace BudgetExecution
             Source = Source.Reimbursables;
             Provider = Provider.SQLite;
             DbData = new DataBuilder(Source, Provider);
-            Table = DbData.DbTable;
-            DbRow = Table.Rows[0];
+            DbTable = DbData.DbTable;
+            DbRow = DbTable.Rows[0];
             BFY = bfy;
             Fund = new Fund(fund, bfy);
             OrgCode = org;
@@ -63,9 +59,21 @@ namespace BudgetExecution
         }
 
         // PROPERTIES
+        public Source Source { get; }
+
+        public Provider Provider { get; }
+
+        public DataBuilder DbData { get; }
+
+        public DataTable DbTable { get; }
+
+        public DataRow DbRow { get; }
+
         public int ID { get; }
 
-        public DataRow DbRow { get; set; }
+        public string BFY { get; }
+
+        public Fund Fund { get; }
 
         public Account Account { get; }
 
@@ -87,18 +95,10 @@ namespace BudgetExecution
 
         public decimal Commitments { get; }
 
-        public string BFY { get; }
-
-        public DataRow Data { get; }
-
-        public DataBuilder DbData { get; }
-
-        public Fund Fund { get; }
-
         Dictionary<string, object> ReimbParam { get; }
 
         // METHODS
-        private Dictionary<string, object> GetParameter(string bfy, string fund)
+        private Dictionary<string, object> GetColumnValues(string bfy, string fund)
         {
             try
             {

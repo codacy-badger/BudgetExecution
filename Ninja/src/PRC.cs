@@ -13,9 +13,6 @@ namespace BudgetExecution
 
     public class PRC : IPRC, IAccount
     {
-        private DataRow Data;
-        private Source Source;
-        private Provider Provider;
 
         // CONSTRUCTORS
         public PRC()
@@ -26,38 +23,38 @@ namespace BudgetExecution
         {
             Source = source;
             Provider = provider;
-            Data = new DataBuilder(source, provider).DbTable.AsEnumerable().Select(p => p).First();
-            ID = int.Parse(Data["ID"].ToString());
-            BudgetLevel = Data["BudgetLevel"].ToString();
-            RPIO = Data["RPIO"].ToString();
-            BFY = Data["BFY"].ToString();
-            Fund = new Fund(Data["Fund"].ToString(), Data["BFY"].ToString());
-            Org = new Org(Data["Org"].ToString());
-            RC = new RC(Data["RC"].ToString());
-            Account = new Account(Source.Accounts, Provider.SQLite, Fund.Code, Data["Code"].ToString());
+            DbRow = new DataBuilder(source, provider).DbTable.AsEnumerable().Select(p => p).First();
+            ID = int.Parse(DbRow["ID"].ToString());
+            BudgetLevel = DbRow["BudgetLevel"].ToString();
+            RPIO = DbRow["RPIO"].ToString();
+            BFY = DbRow["BFY"].ToString();
+            Fund = new Fund(DbRow["Fund"].ToString(), DbRow["BFY"].ToString());
+            Org = new Org(DbRow["Org"].ToString());
+            RC = new RC(DbRow["RC"].ToString());
+            Account = new Account(Source.Accounts, Provider.SQLite, Fund.Code, DbRow["Code"].ToString());
             Code = Account.Code;
-            BOC = new BOC(Data["BOC"].ToString());
-            Parameter = GetParamData();
-            Amount = decimal.Parse(Data["Amount"].ToString());
+            BOC = new BOC(DbRow["BOC"].ToString());
+            Parameter = GetDataFields();
+            Amount = decimal.Parse(DbRow["Amount"].ToString());
         }
 
         public PRC(Source source, Provider provider, Dictionary<string, object> param)
         {
             Source = source;
             Provider = provider;
-            Data = new DataBuilder(source, provider, param).DbTable.AsEnumerable().Select(p => p).First();
-            ID = int.Parse(Data["ID"].ToString());
-            BudgetLevel = Data["BudgetLevel"].ToString();
-            RPIO = Data["RPIO"].ToString();
-            BFY = Data["BFY"].ToString();
-            Fund = new Fund(Data["Fund"].ToString(), Data["BFY"].ToString());
-            Org = new Org(Data["Org"].ToString());
-            RC = new RC(Data["RC"].ToString());
-            Account = new Account(Source.Accounts, Provider.SQLite, Fund.Code, Data["Code"].ToString());
+            DbRow = new DataBuilder(source, provider, param).DbTable.AsEnumerable().Select(p => p).First();
+            ID = int.Parse(DbRow["ID"].ToString());
+            BudgetLevel = DbRow["BudgetLevel"].ToString();
+            RPIO = DbRow["RPIO"].ToString();
+            BFY = DbRow["BFY"].ToString();
+            Fund = new Fund(DbRow["Fund"].ToString(), DbRow["BFY"].ToString());
+            Org = new Org(DbRow["Org"].ToString());
+            RC = new RC(DbRow["RC"].ToString());
+            Account = new Account(Source.Accounts, Provider.SQLite, Fund.Code, DbRow["Code"].ToString());
             Code = Account.Code;
-            BOC = new BOC(Data["BOC"].ToString());
-            Parameter = GetParamData();
-            Amount = decimal.Parse(Data["Amount"].ToString());
+            BOC = new BOC(DbRow["BOC"].ToString());
+            Parameter = GetDataFields();
+            Amount = decimal.Parse(DbRow["Amount"].ToString());
         }
 
         public PRC(int id, string bl, string rpio, string bfy, string fund, string org, string rc, string code, string boc, decimal amount)
@@ -72,7 +69,7 @@ namespace BudgetExecution
             Account = new Account(Source.Accounts, Provider.SQLite, Fund.Code, code);
             Code = Account.Code;
             BOC = new BOC(boc, amount);
-            Parameter = GetParamData();
+            Parameter = GetDataFields();
             Amount = amount;
         }
 
@@ -88,11 +85,21 @@ namespace BudgetExecution
             Account = new Account(Source.Accounts, Provider.SQLite, Fund.Code, row["Code"].ToString());
             Code = Account.Code;
             BOC = new BOC(row["BOC"].ToString());
-            Parameter = GetParamData();
+            Parameter = GetDataFields();
             Amount = decimal.Parse(row["Amount"].ToString());
         }
 
         // PROPERTIES
+        public Source Source { get; }
+
+        public Provider Provider { get; }
+
+        public DataBuilder DbData { get; }
+
+        public DataTable DbTable { get; }
+
+        public DataRow DbRow { get; }
+
         public int ID { get; set; }
 
         public string BudgetLevel { get; set; }
@@ -142,7 +149,7 @@ namespace BudgetExecution
         public object[] DataValues { get; }
 
         // METHODS
-        internal Dictionary<string, object> GetParamData()
+        internal Dictionary<string, object> GetDataFields()
         {
             try
             {
@@ -225,7 +232,7 @@ namespace BudgetExecution
         {
             try
             {
-                Dictionary<string, object> prc = GetParamData();
+                Dictionary<string, object> prc = GetDataFields();
 
                 return prc.Keys.ToArray();
             }
@@ -240,7 +247,7 @@ namespace BudgetExecution
         {
             try
             {
-                Dictionary<string, object> param = GetParamData();
+                Dictionary<string, object> param = GetDataFields();
 
                 return param.Values.ToArray();
             }

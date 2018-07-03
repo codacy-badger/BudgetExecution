@@ -13,8 +13,6 @@ namespace BudgetExecution
 
     public class Fund : IFund
     {
-        private Source Source;
-        private Provider Provider;
 
         // CONSTRUCTORS
         public Fund()
@@ -31,7 +29,7 @@ namespace BudgetExecution
         {
             Code = code;
             FiscalYear = bfy;
-            Parameter = GetParamData(Code, FiscalYear);
+            Parameter = GetDataFields(Code, FiscalYear);
             Table = GetData(Source, Provider, Parameter);
             Data = Table.Rows[0];
             ID = int.Parse(Data["ID"].ToString());
@@ -44,7 +42,7 @@ namespace BudgetExecution
         {
             Code = code;
             FiscalYear = bfy;
-            Parameter = GetParamData(Code, FiscalYear);
+            Parameter = GetDataFields(Code, FiscalYear);
             Table = GetData(source, Provider.SQLite, Parameter);
             Data = Table.AsEnumerable().First();
             ID = int.Parse(Data["ID"].ToString());
@@ -57,7 +55,7 @@ namespace BudgetExecution
         {
             Code = code;
             FiscalYear = bfy;
-            Parameter = GetParamData(Code, FiscalYear);
+            Parameter = GetDataFields(Code, FiscalYear);
             Table = GetData(Source.Funds, Provider.SQLite, Parameter);
             Data = Table.AsEnumerable().First();
             ID = int.Parse(Data["ID"].ToString());
@@ -76,6 +74,16 @@ namespace BudgetExecution
         }
 
         // PROPERTIES
+        public Source Source { get; }
+
+        public Provider Provider { get; }
+
+        public DataBuilder DbData { get; }
+
+        public DataTable DbTable { get; }
+
+        public DataRow DbRow { get; }
+
         public int ID { get; set; }
 
         public string Code { get; }
@@ -95,7 +103,7 @@ namespace BudgetExecution
         public DataRow Data { get; set; }
 
         // METHODS
-        public Dictionary<string, object> GetParamData(string code, string bfy)
+        public Dictionary<string, object> GetDataFields(string code, string bfy)
         {
             try
             {
@@ -143,7 +151,7 @@ namespace BudgetExecution
         {
             try
             {
-                Dictionary<string, object> prc = GetParamData(this.Source.ToString(), this.Provider.ToString());
+                Dictionary<string, object> prc = GetDataFields(this.Source.ToString(), this.Provider.ToString());
 
                 return prc.Keys.ToArray();
             }
@@ -158,7 +166,7 @@ namespace BudgetExecution
         {
             try
             {
-                Dictionary<string, object> param = GetParamData(this.Source.ToString(), this.Provider.ToString());
+                Dictionary<string, object> param = GetDataFields(this.Source.ToString(), this.Provider.ToString());
 
                 return param.Values.ToArray();
             }

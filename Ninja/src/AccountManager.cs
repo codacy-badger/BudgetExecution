@@ -6,6 +6,7 @@ namespace BudgetExecution
 {
     using System;
     using System.Collections.Generic;
+    using System.Data;
     using System.Windows.Forms;
     using MetroSet_UI.Controls;
 
@@ -28,10 +29,37 @@ namespace BudgetExecution
             ComboBoxes = GetComboBoxes();
         }
 
+        public PrcAccountManager(Source source, Provider provider, Dictionary<string, object> p)
+        {
+            InitializeComponent();
+            Source = source;
+            Provider = provider;
+            DbData = new DataBuilder(Source, Provider, p);
+            AccountBinding = DbData.BindingSource;
+            AccountNavigator.BindingSource = AccountBinding;
+            RecordNavigator.BindingSource = AccountBinding;
+            Labels = GetLabels();
+            ComboBoxes = GetComboBoxes();
+        }
+
+
         // PROPERTIES
-        DataBuilder DbData { get; set; }
+        Source Source { get; }
+
+        Provider Provider { get; }
+
+        DataBuilder DbData { get; }
+
+        DataTable DbTable { get; set; }
+
+        DataRow DbRow { get; }
+
         BindingSource AccountBinding { get; set; }
+
         List<Label> Labels { get; set; }
+
+        List<MetroSetTextBox> TextBoxes { get; set; }
+
         List<MetroSetComboBox> ComboBoxes { get; set; }
 
         // METHODS
@@ -53,7 +81,7 @@ namespace BudgetExecution
             }
         }
 
-        private void PopuluateBocCodes()
+        private void PopuluateBocCodes(MetroSetComboBox BocBox)
         {
             try
             {

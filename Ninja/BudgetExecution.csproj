@@ -519,7 +519,6 @@
     </Compile>
     <Compile Include="src\Appropriation.cs" />
     <Compile Include="src\BOC.cs" />
-    <Compile Include="src\BudgetPortfolio.cs" />
     <Compile Include="src\BudgetChart.cs" />
     <Compile Include="src\DataBuilder.cs" />
     <Compile Include="src\DivisionAuthority.cs" />
@@ -583,7 +582,6 @@
     <Compile Include="src\Obligation.cs" />
     <Compile Include="src\Org.cs" />
     <Compile Include="src\Payroll.cs" />
-    <Compile Include="src\Personnel.cs" />
     <Compile Include="src\PRC.cs" />
     <Compile Include="src\Query.cs" />
     <Compile Include="src\RC.cs" />
@@ -616,7 +614,6 @@
     <Compile Include="src\IExcelOp.cs" />
     <Compile Include="src\IParameter.cs" />
     <Compile Include="src\IPayroll.cs" />
-    <Compile Include="src\IPersonnel.cs" />
     <Compile Include="src\IPRC.cs" />
     <Compile Include="src\IQuery.cs" />
     <Compile Include="src\IRC.cs" />

@@ -58,6 +58,16 @@ namespace BudgetExecution
         }
 
         // PROPERTIES
+        public Source Source { get; }
+
+        public Provider Provider { get; }
+
+        public DataBuilder DbData { get; }
+
+        public DataTable DbTable { get; }
+
+        public DataRow DbRow { get; }
+
         public decimal Amount { get; }
 
         public string BFY { get; }

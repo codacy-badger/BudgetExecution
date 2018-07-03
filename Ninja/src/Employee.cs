@@ -2,7 +2,7 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
-namespace Budget
+namespace BudgetExecution
 {
     using System.Data;
 
@@ -44,6 +44,16 @@ namespace Budget
         }
 
         // PROPERTIES
+        public Source Source { get; }
+
+        public Provider Provider { get; }
+
+        public DataBuilder DbData { get; }
+
+        public DataTable DbTable { get; }
+
+        public DataRow DbRow { get; }
+
         public string EmployId { get; }
 
         public string First { get; }

@@ -18,7 +18,7 @@ namespace BudgetExecution
 
         public FTE(DataRow datarow) : base(datarow)
         {
-            FteParameter = GetParamData();
+            FteParameter = GetDataFields();
         }
 
         public FTE(Source source, Provider provider, Dictionary<string, object> param)
@@ -29,7 +29,7 @@ namespace BudgetExecution
         }
 
         // PROPERTIES
-        private DataBuilder DbData { get; }
+        private new DataBuilder DbData { get; }
 
         private PrcMetric Metric { get; }
 

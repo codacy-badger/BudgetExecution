@@ -120,7 +120,6 @@ namespace BudgetExecution
             {
                 Excel excel = Create();
                 var excelWorkBook = excel.Workbooks.Open(filepath);
-                int tr = table.Rows.Count;
                 Worksheet excelWorkSheet = (Worksheet)excelWorkBook.Sheets[1];
                 excelWorkSheet.Name = table.TableName;
                 for (int i = 1; i < table.Columns.Count + 1; i++)

@@ -13,8 +13,6 @@ namespace BudgetExecution
 
     public class Obligation : IObligation
     {
-        private Source Source;
-        private Provider Provider;
 
         public Obligation()
         {
@@ -61,9 +59,17 @@ namespace BudgetExecution
         }
 
         //Properties
-        public int ID { get; set; }
+        public Source Source { get; }
 
-        public DataRow DbRow { get; set; }
+        public Provider Provider { get; }
+
+        public DataBuilder DbData { get; }
+
+        public DataTable DbTable { get; }
+
+        public DataRow DbRow { get; }
+
+        public int ID { get; set; }
 
         public PRC PRC { get; set; }
 
@@ -90,7 +96,7 @@ namespace BudgetExecution
         public string RPIO { get; set; }
 
         // METHODS
-        internal Dictionary<string, object> GetParamData()
+        internal Dictionary<string, object> GetDataFields()
         {
             try
             {
@@ -130,7 +136,7 @@ namespace BudgetExecution
         {
             try
             {
-                Dictionary<string, object> prc = GetParamData();
+                Dictionary<string, object> prc = GetDataFields();
 
                 return prc.Keys.ToArray();
             }
@@ -141,11 +147,11 @@ namespace BudgetExecution
             }
         }
 
-        internal object[] GetFieldValues()
+        internal object[] GetValues()
         {
             try
             {
-                Dictionary<string, object> param = GetParamData();
+                Dictionary<string, object> param = GetDataFields();
 
                 return param.Values.ToArray();
             }
@@ -156,7 +162,7 @@ namespace BudgetExecution
             }
         }
 
-        public static Dictionary<string, object> GetInsertionColumns(Source source, Provider provider, Dictionary<string, object> param)
+        public static Dictionary<string, object> GetInsertColumns(Source source, Provider provider, Dictionary<string, object> param)
         {
             try
             {
@@ -236,7 +242,7 @@ namespace BudgetExecution
         {
             try
             {
-                var param = GetInsertionColumns(source, Provider.SQLite, p);
+                var param = GetInsertColumns(source, Provider.SQLite, p);
                 var fields = param.Keys.ToArray();
                 var vals = param.Values.ToArray();
                 var query = new SQLiteQuery(source, param);
@@ -257,7 +263,7 @@ namespace BudgetExecution
         {
             try
             {
-                var param = GetInsertionColumns(source, provider, p);
+                var param = GetInsertColumns(source, provider, p);
                 var fields = param.Keys.ToArray();
                 var vals = param.Values.ToArray();
                 var query = new Query(source, provider, param);

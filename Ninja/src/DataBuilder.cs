@@ -28,7 +28,7 @@ namespace BudgetExecution
                 ProgramElements = GetProgramElements(DbTable);
                 BindingSource = new BindingSource();
                 BindingSource.DataSource = DbTable;
-                DbRecords = GetDataRecords(DbTable);
+                DbRow = GetDataRecords(DbTable);
             }
 
             if (Source == Source.FTE)
@@ -40,7 +40,7 @@ namespace BudgetExecution
                 ProgramElements = GetProgramElements(DbTable);
                 BindingSource = new BindingSource();
                 BindingSource.DataSource = DbTable;
-                DbRecords = GetDataRecords(DbTable);
+                DbRow = GetDataRecords(DbTable);
             }
 
         }
@@ -55,7 +55,7 @@ namespace BudgetExecution
             ProgramElements = GetProgramElements(DbTable);
             BindingSource = new BindingSource();
             BindingSource.DataSource = DbTable;
-            DbRecords = GetDataRecords(DbTable);
+            DbRow = GetDataRecords(DbTable);
             if (source == Source.FTE)
             {
                 DbTable = GetDataTable().AsEnumerable().Where(p => p.Field<string>("BOC").Equals("17"))
@@ -65,7 +65,7 @@ namespace BudgetExecution
                 ProgramElements = GetProgramElements(DbTable);
                 BindingSource = new BindingSource();
                 BindingSource.DataSource = DbTable;
-                DbRecords = GetDataRecords(DbTable);
+                DbRow = GetDataRecords(DbTable);
             }
         }
 
@@ -79,7 +79,7 @@ namespace BudgetExecution
             ProgramElements = GetProgramElements(DbTable);
             BindingSource = new BindingSource();
             BindingSource.DataSource = DbTable;
-            DbRecords = GetDataRecords(DbTable);
+            DbRow = GetDataRecords(DbTable);
             if (source == Source.FTE)
             {
                 DbTable = GetDataTable().AsEnumerable().Where(p => p.Field<string>("BOC").Equals("17"))
@@ -88,7 +88,7 @@ namespace BudgetExecution
                 ProgramElements = GetProgramElements(DbTable);
                 BindingSource = new BindingSource();
                 BindingSource.DataSource = DbTable;
-                DbRecords = GetDataRecords(DbTable);
+                DbRow = GetDataRecords(DbTable);
             }
         }
 
@@ -101,7 +101,7 @@ namespace BudgetExecution
 
         public Dictionary<string, string[]> ProgramElements { get; }
 
-        public DataRow[] DbRecords { get; }
+        public DataRow[] DbRow { get; }
 
         public BindingSource BindingSource { get; set; }
 

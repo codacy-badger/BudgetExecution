@@ -13,7 +13,7 @@ namespace BudgetExecution
 
         DataTable DbTable { get; }
 
-        DataRow[] DbRecords { get; }
+        DataRow[] DbRow { get; }
 
         // METHODS
         DataTable GetDataTable();

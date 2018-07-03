@@ -8,10 +8,6 @@ namespace BudgetExecution
 
     public class Transfer
     {
-        private DataBuilder DbData;
-        private DataRow Data;
-        private Source Source;
-        private Provider Provider;
 
         // CONSTRUCTORS
         public Transfer()
@@ -59,6 +55,16 @@ namespace BudgetExecution
         }
 
         // PROPERTIES
+        public DataBuilder DbData { get; }
+
+        public DataRow DbTable { get; }
+
+        public DataRow DbRow { get; }
+
+        public Source Source { get; }
+
+        public Provider Provider { get; }
+
         public Account Account { get; }
 
         public decimal Amount { get; }
