@@ -35,6 +35,42 @@ namespace BudgetExecution
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            Syncfusion.Windows.Forms.Chart.ChartSeries chartSeries19 = new Syncfusion.Windows.Forms.Chart.ChartSeries();
+            Syncfusion.Windows.Forms.Chart.ChartCustomShapeInfo chartCustomShapeInfo19 = new Syncfusion.Windows.Forms.Chart.ChartCustomShapeInfo();
+            Syncfusion.Windows.Forms.Chart.ChartLineInfo chartLineInfo10 = new Syncfusion.Windows.Forms.Chart.ChartLineInfo();
+            Syncfusion.Windows.Forms.Chart.ChartSeries chartSeries20 = new Syncfusion.Windows.Forms.Chart.ChartSeries();
+            Syncfusion.Windows.Forms.Chart.ChartCustomShapeInfo chartCustomShapeInfo20 = new Syncfusion.Windows.Forms.Chart.ChartCustomShapeInfo();
+            Syncfusion.Windows.Forms.Chart.ChartToolBarSaveItem chartToolBarSaveItem10 = new Syncfusion.Windows.Forms.Chart.ChartToolBarSaveItem();
+            Syncfusion.Windows.Forms.Chart.ChartToolBarCopyItem chartToolBarCopyItem10 = new Syncfusion.Windows.Forms.Chart.ChartToolBarCopyItem();
+            Syncfusion.Windows.Forms.Chart.ChartToolBarPrintItem chartToolBarPrintItem10 = new Syncfusion.Windows.Forms.Chart.ChartToolBarPrintItem();
+            Syncfusion.Windows.Forms.Chart.ChartToolBarPrintPreviewItem chartToolBarPrintPreviewItem2 = new Syncfusion.Windows.Forms.Chart.ChartToolBarPrintPreviewItem();
+            Syncfusion.Windows.Forms.Chart.ChartToolBarSplitter chartToolBarSplitter2 = new Syncfusion.Windows.Forms.Chart.ChartToolBarSplitter();
+            Syncfusion.Windows.Forms.Chart.ChartToolBarPaletteItem chartToolBarPaletteItem10 = new Syncfusion.Windows.Forms.Chart.ChartToolBarPaletteItem();
+            Syncfusion.Windows.Forms.Chart.ChartToolBarStyleItem chartToolBarStyleItem2 = new Syncfusion.Windows.Forms.Chart.ChartToolBarStyleItem();
+            Syncfusion.Windows.Forms.Chart.ChartToolBarTypeItem chartToolBarTypeItem10 = new Syncfusion.Windows.Forms.Chart.ChartToolBarTypeItem();
+            Syncfusion.Windows.Forms.Chart.ChartToolBarSeries3DItem chartToolBarSeries3DItem10 = new Syncfusion.Windows.Forms.Chart.ChartToolBarSeries3DItem();
+            Syncfusion.Windows.Forms.Chart.ChartToolBarShowLegendItem chartToolBarShowLegendItem10 = new Syncfusion.Windows.Forms.Chart.ChartToolBarShowLegendItem();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SummaryForm));
+            Syncfusion.Windows.Forms.Chart.ChartSeries chartSeries21 = new Syncfusion.Windows.Forms.Chart.ChartSeries();
+            Syncfusion.Windows.Forms.Chart.ChartCustomShapeInfo chartCustomShapeInfo21 = new Syncfusion.Windows.Forms.Chart.ChartCustomShapeInfo();
+            Syncfusion.Windows.Forms.Chart.ChartLineInfo chartLineInfo11 = new Syncfusion.Windows.Forms.Chart.ChartLineInfo();
+            Syncfusion.Windows.Forms.Chart.ChartSeries chartSeries22 = new Syncfusion.Windows.Forms.Chart.ChartSeries();
+            Syncfusion.Windows.Forms.Chart.ChartCustomShapeInfo chartCustomShapeInfo22 = new Syncfusion.Windows.Forms.Chart.ChartCustomShapeInfo();
+            Syncfusion.Windows.Forms.Chart.ChartToolBarSaveItem chartToolBarSaveItem11 = new Syncfusion.Windows.Forms.Chart.ChartToolBarSaveItem();
+            Syncfusion.Windows.Forms.Chart.ChartToolBarCopyItem chartToolBarCopyItem11 = new Syncfusion.Windows.Forms.Chart.ChartToolBarCopyItem();
+            Syncfusion.Windows.Forms.Chart.ChartToolBarPrintItem chartToolBarPrintItem11 = new Syncfusion.Windows.Forms.Chart.ChartToolBarPrintItem();
+            Syncfusion.Windows.Forms.Chart.ChartToolBarPrintPreviewItem chartToolBarPrintPreviewItem3 = new Syncfusion.Windows.Forms.Chart.ChartToolBarPrintPreviewItem();
+            Syncfusion.Windows.Forms.Chart.ChartToolBarSplitter chartToolBarSplitter3 = new Syncfusion.Windows.Forms.Chart.ChartToolBarSplitter();
+            Syncfusion.Windows.Forms.Chart.ChartToolBarPaletteItem chartToolBarPaletteItem11 = new Syncfusion.Windows.Forms.Chart.ChartToolBarPaletteItem();
+            Syncfusion.Windows.Forms.Chart.ChartToolBarStyleItem chartToolBarStyleItem3 = new Syncfusion.Windows.Forms.Chart.ChartToolBarStyleItem();
+            Syncfusion.Windows.Forms.Chart.ChartToolBarTypeItem chartToolBarTypeItem11 = new Syncfusion.Windows.Forms.Chart.ChartToolBarTypeItem();
+            Syncfusion.Windows.Forms.Chart.ChartToolBarSeries3DItem chartToolBarSeries3DItem11 = new Syncfusion.Windows.Forms.Chart.ChartToolBarSeries3DItem();
+            Syncfusion.Windows.Forms.Chart.ChartToolBarShowLegendItem chartToolBarShowLegendItem11 = new Syncfusion.Windows.Forms.Chart.ChartToolBarShowLegendItem();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             Syncfusion.Windows.Forms.Chart.ChartSeries chartSeries1 = new Syncfusion.Windows.Forms.Chart.ChartSeries();
             Syncfusion.Windows.Forms.Chart.ChartCustomShapeInfo chartCustomShapeInfo1 = new Syncfusion.Windows.Forms.Chart.ChartCustomShapeInfo();
             Syncfusion.Windows.Forms.Chart.ChartLineInfo chartLineInfo1 = new Syncfusion.Windows.Forms.Chart.ChartLineInfo();
@@ -43,14 +79,10 @@ namespace BudgetExecution
             Syncfusion.Windows.Forms.Chart.ChartToolBarSaveItem chartToolBarSaveItem1 = new Syncfusion.Windows.Forms.Chart.ChartToolBarSaveItem();
             Syncfusion.Windows.Forms.Chart.ChartToolBarCopyItem chartToolBarCopyItem1 = new Syncfusion.Windows.Forms.Chart.ChartToolBarCopyItem();
             Syncfusion.Windows.Forms.Chart.ChartToolBarPrintItem chartToolBarPrintItem1 = new Syncfusion.Windows.Forms.Chart.ChartToolBarPrintItem();
-            Syncfusion.Windows.Forms.Chart.ChartToolBarPrintPreviewItem chartToolBarPrintPreviewItem1 = new Syncfusion.Windows.Forms.Chart.ChartToolBarPrintPreviewItem();
-            Syncfusion.Windows.Forms.Chart.ChartToolBarSplitter chartToolBarSplitter1 = new Syncfusion.Windows.Forms.Chart.ChartToolBarSplitter();
             Syncfusion.Windows.Forms.Chart.ChartToolBarPaletteItem chartToolBarPaletteItem1 = new Syncfusion.Windows.Forms.Chart.ChartToolBarPaletteItem();
-            Syncfusion.Windows.Forms.Chart.ChartToolBarStyleItem chartToolBarStyleItem1 = new Syncfusion.Windows.Forms.Chart.ChartToolBarStyleItem();
             Syncfusion.Windows.Forms.Chart.ChartToolBarTypeItem chartToolBarTypeItem1 = new Syncfusion.Windows.Forms.Chart.ChartToolBarTypeItem();
             Syncfusion.Windows.Forms.Chart.ChartToolBarSeries3DItem chartToolBarSeries3DItem1 = new Syncfusion.Windows.Forms.Chart.ChartToolBarSeries3DItem();
             Syncfusion.Windows.Forms.Chart.ChartToolBarShowLegendItem chartToolBarShowLegendItem1 = new Syncfusion.Windows.Forms.Chart.ChartToolBarShowLegendItem();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SummaryForm));
             Syncfusion.Windows.Forms.Chart.ChartSeries chartSeries3 = new Syncfusion.Windows.Forms.Chart.ChartSeries();
             Syncfusion.Windows.Forms.Chart.ChartCustomShapeInfo chartCustomShapeInfo3 = new Syncfusion.Windows.Forms.Chart.ChartCustomShapeInfo();
             Syncfusion.Windows.Forms.Chart.ChartLineInfo chartLineInfo2 = new Syncfusion.Windows.Forms.Chart.ChartLineInfo();
@@ -59,18 +91,10 @@ namespace BudgetExecution
             Syncfusion.Windows.Forms.Chart.ChartToolBarSaveItem chartToolBarSaveItem2 = new Syncfusion.Windows.Forms.Chart.ChartToolBarSaveItem();
             Syncfusion.Windows.Forms.Chart.ChartToolBarCopyItem chartToolBarCopyItem2 = new Syncfusion.Windows.Forms.Chart.ChartToolBarCopyItem();
             Syncfusion.Windows.Forms.Chart.ChartToolBarPrintItem chartToolBarPrintItem2 = new Syncfusion.Windows.Forms.Chart.ChartToolBarPrintItem();
-            Syncfusion.Windows.Forms.Chart.ChartToolBarPrintPreviewItem chartToolBarPrintPreviewItem2 = new Syncfusion.Windows.Forms.Chart.ChartToolBarPrintPreviewItem();
-            Syncfusion.Windows.Forms.Chart.ChartToolBarSplitter chartToolBarSplitter2 = new Syncfusion.Windows.Forms.Chart.ChartToolBarSplitter();
             Syncfusion.Windows.Forms.Chart.ChartToolBarPaletteItem chartToolBarPaletteItem2 = new Syncfusion.Windows.Forms.Chart.ChartToolBarPaletteItem();
-            Syncfusion.Windows.Forms.Chart.ChartToolBarStyleItem chartToolBarStyleItem2 = new Syncfusion.Windows.Forms.Chart.ChartToolBarStyleItem();
             Syncfusion.Windows.Forms.Chart.ChartToolBarTypeItem chartToolBarTypeItem2 = new Syncfusion.Windows.Forms.Chart.ChartToolBarTypeItem();
             Syncfusion.Windows.Forms.Chart.ChartToolBarSeries3DItem chartToolBarSeries3DItem2 = new Syncfusion.Windows.Forms.Chart.ChartToolBarSeries3DItem();
             Syncfusion.Windows.Forms.Chart.ChartToolBarShowLegendItem chartToolBarShowLegendItem2 = new Syncfusion.Windows.Forms.Chart.ChartToolBarShowLegendItem();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             Syncfusion.Windows.Forms.Chart.ChartSeries chartSeries5 = new Syncfusion.Windows.Forms.Chart.ChartSeries();
             Syncfusion.Windows.Forms.Chart.ChartCustomShapeInfo chartCustomShapeInfo5 = new Syncfusion.Windows.Forms.Chart.ChartCustomShapeInfo();
             Syncfusion.Windows.Forms.Chart.ChartLineInfo chartLineInfo3 = new Syncfusion.Windows.Forms.Chart.ChartLineInfo();
@@ -143,30 +167,6 @@ namespace BudgetExecution
             Syncfusion.Windows.Forms.Chart.ChartToolBarTypeItem chartToolBarTypeItem8 = new Syncfusion.Windows.Forms.Chart.ChartToolBarTypeItem();
             Syncfusion.Windows.Forms.Chart.ChartToolBarSeries3DItem chartToolBarSeries3DItem8 = new Syncfusion.Windows.Forms.Chart.ChartToolBarSeries3DItem();
             Syncfusion.Windows.Forms.Chart.ChartToolBarShowLegendItem chartToolBarShowLegendItem8 = new Syncfusion.Windows.Forms.Chart.ChartToolBarShowLegendItem();
-            Syncfusion.Windows.Forms.Chart.ChartSeries chartSeries17 = new Syncfusion.Windows.Forms.Chart.ChartSeries();
-            Syncfusion.Windows.Forms.Chart.ChartCustomShapeInfo chartCustomShapeInfo17 = new Syncfusion.Windows.Forms.Chart.ChartCustomShapeInfo();
-            Syncfusion.Windows.Forms.Chart.ChartLineInfo chartLineInfo9 = new Syncfusion.Windows.Forms.Chart.ChartLineInfo();
-            Syncfusion.Windows.Forms.Chart.ChartSeries chartSeries18 = new Syncfusion.Windows.Forms.Chart.ChartSeries();
-            Syncfusion.Windows.Forms.Chart.ChartCustomShapeInfo chartCustomShapeInfo18 = new Syncfusion.Windows.Forms.Chart.ChartCustomShapeInfo();
-            Syncfusion.Windows.Forms.Chart.ChartToolBarSaveItem chartToolBarSaveItem9 = new Syncfusion.Windows.Forms.Chart.ChartToolBarSaveItem();
-            Syncfusion.Windows.Forms.Chart.ChartToolBarCopyItem chartToolBarCopyItem9 = new Syncfusion.Windows.Forms.Chart.ChartToolBarCopyItem();
-            Syncfusion.Windows.Forms.Chart.ChartToolBarPrintItem chartToolBarPrintItem9 = new Syncfusion.Windows.Forms.Chart.ChartToolBarPrintItem();
-            Syncfusion.Windows.Forms.Chart.ChartToolBarPaletteItem chartToolBarPaletteItem9 = new Syncfusion.Windows.Forms.Chart.ChartToolBarPaletteItem();
-            Syncfusion.Windows.Forms.Chart.ChartToolBarTypeItem chartToolBarTypeItem9 = new Syncfusion.Windows.Forms.Chart.ChartToolBarTypeItem();
-            Syncfusion.Windows.Forms.Chart.ChartToolBarSeries3DItem chartToolBarSeries3DItem9 = new Syncfusion.Windows.Forms.Chart.ChartToolBarSeries3DItem();
-            Syncfusion.Windows.Forms.Chart.ChartToolBarShowLegendItem chartToolBarShowLegendItem9 = new Syncfusion.Windows.Forms.Chart.ChartToolBarShowLegendItem();
-            Syncfusion.Windows.Forms.Chart.ChartSeries chartSeries19 = new Syncfusion.Windows.Forms.Chart.ChartSeries();
-            Syncfusion.Windows.Forms.Chart.ChartCustomShapeInfo chartCustomShapeInfo19 = new Syncfusion.Windows.Forms.Chart.ChartCustomShapeInfo();
-            Syncfusion.Windows.Forms.Chart.ChartLineInfo chartLineInfo10 = new Syncfusion.Windows.Forms.Chart.ChartLineInfo();
-            Syncfusion.Windows.Forms.Chart.ChartSeries chartSeries20 = new Syncfusion.Windows.Forms.Chart.ChartSeries();
-            Syncfusion.Windows.Forms.Chart.ChartCustomShapeInfo chartCustomShapeInfo20 = new Syncfusion.Windows.Forms.Chart.ChartCustomShapeInfo();
-            Syncfusion.Windows.Forms.Chart.ChartToolBarSaveItem chartToolBarSaveItem10 = new Syncfusion.Windows.Forms.Chart.ChartToolBarSaveItem();
-            Syncfusion.Windows.Forms.Chart.ChartToolBarCopyItem chartToolBarCopyItem10 = new Syncfusion.Windows.Forms.Chart.ChartToolBarCopyItem();
-            Syncfusion.Windows.Forms.Chart.ChartToolBarPrintItem chartToolBarPrintItem10 = new Syncfusion.Windows.Forms.Chart.ChartToolBarPrintItem();
-            Syncfusion.Windows.Forms.Chart.ChartToolBarPaletteItem chartToolBarPaletteItem10 = new Syncfusion.Windows.Forms.Chart.ChartToolBarPaletteItem();
-            Syncfusion.Windows.Forms.Chart.ChartToolBarTypeItem chartToolBarTypeItem10 = new Syncfusion.Windows.Forms.Chart.ChartToolBarTypeItem();
-            Syncfusion.Windows.Forms.Chart.ChartToolBarSeries3DItem chartToolBarSeries3DItem10 = new Syncfusion.Windows.Forms.Chart.ChartToolBarSeries3DItem();
-            Syncfusion.Windows.Forms.Chart.ChartToolBarShowLegendItem chartToolBarShowLegendItem10 = new Syncfusion.Windows.Forms.Chart.ChartToolBarShowLegendItem();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
@@ -218,7 +218,6 @@ namespace BudgetExecution
             this.metroSetLabel1 = new MetroSet_UI.Controls.MetroSetLabel();
             this.Navigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
-            this.toolStripButton9 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton10 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator10 = new System.Windows.Forms.ToolStripSeparator();
@@ -226,7 +225,6 @@ namespace BudgetExecution
             this.toolStripSeparator11 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton11 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator12 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton12 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator13 = new System.Windows.Forms.ToolStripSeparator();
             this.metroSetLabel2 = new MetroSet_UI.Controls.MetroSetLabel();
             this.metroSetTextBox1 = new MetroSet_UI.Controls.MetroSetTextBox();
@@ -243,8 +241,6 @@ namespace BudgetExecution
             this.metroSetLabel18 = new MetroSet_UI.Controls.MetroSetLabel();
             this.BFY = new MetroSet_UI.Controls.MetroSetTextBox();
             this.Org = new MetroSet_UI.Controls.MetroSetTextBox();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
             this.tabPageAdv5 = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
             this.AccountChart = new Syncfusion.Windows.Forms.Chart.ChartControl();
             this.tabPageAdv6 = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
@@ -258,8 +254,6 @@ namespace BudgetExecution
             this.metroSetLabel9 = new MetroSet_UI.Controls.MetroSetLabel();
             this.GridRefreshButton = new System.Windows.Forms.Button();
             this.metroSetLabel8 = new MetroSet_UI.Controls.MetroSetLabel();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
             this.FilterGroupBox = new System.Windows.Forms.GroupBox();
             this.lblPrc = new System.Windows.Forms.Label();
             this.lblBoc = new System.Windows.Forms.Label();
@@ -371,6 +365,17 @@ namespace BudgetExecution
             this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton8 = new System.Windows.Forms.ToolStripButton();
             this.BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.AddButton = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator14 = new System.Windows.Forms.ToolStripSeparator();
+            this.DeleteButton = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator15 = new System.Windows.Forms.ToolStripSeparator();
+            this.CopyButton = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator16 = new System.Windows.Forms.ToolStripSeparator();
+            this.SaveButton = new System.Windows.Forms.ToolStripButton();
+            this.UpdateButton = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator17 = new System.Windows.Forms.ToolStripSeparator();
+            this.metroSetLabel20 = new MetroSet_UI.Controls.MetroSetLabel();
+            this.metroSetComboBox2 = new MetroSet_UI.Controls.MetroSetComboBox();
             this.tabPageAdv4.SuspendLayout();
             this.tabPageAdv3.SuspendLayout();
             this.chartControl1.SuspendLayout();
@@ -615,52 +620,52 @@ namespace BudgetExecution
             this.chartControl1.PrimaryYAxis.TitleColor = System.Drawing.Color.White;
             this.chartControl1.PrimaryYAxis.TitleFont = new System.Drawing.Font("Segoe UI", 14F);
             this.chartControl1.Rotation = 20F;
-            chartSeries1.FancyToolTip.ResizeInsideSymbol = true;
-            chartSeries1.Name = "Default0";
-            chartSeries1.Points.Add(1D, ((double)(55D)));
-            chartSeries1.Points.Add(2D, ((double)(70D)));
-            chartSeries1.Points.Add(3D, ((double)(80D)));
-            chartSeries1.Points.Add(4D, ((double)(65D)));
-            chartSeries1.Points.Add(5D, ((double)(75D)));
-            chartSeries1.Resolution = 0D;
-            chartSeries1.StackingGroup = "Default Group";
-            chartSeries1.Style.AltTagFormat = "";
-            chartSeries1.Style.Border.Color = System.Drawing.Color.Transparent;
-            chartSeries1.Style.Callout.Font.Facename = "Microsoft Sans Serif";
-            chartSeries1.Style.DrawTextShape = false;
-            chartSeries1.Style.Font.Facename = "Microsoft Sans Serif";
-            chartLineInfo1.Alignment = System.Drawing.Drawing2D.PenAlignment.Center;
-            chartLineInfo1.Color = System.Drawing.SystemColors.ControlText;
-            chartLineInfo1.DashPattern = null;
-            chartLineInfo1.DashStyle = System.Drawing.Drawing2D.DashStyle.Solid;
-            chartLineInfo1.Width = 1F;
-            chartCustomShapeInfo1.Border = chartLineInfo1;
-            chartCustomShapeInfo1.Color = System.Drawing.SystemColors.HighlightText;
-            chartCustomShapeInfo1.Type = Syncfusion.Windows.Forms.Chart.ChartCustomShape.Square;
-            chartSeries1.Style.TextShape = chartCustomShapeInfo1;
-            chartSeries1.Text = "Default0";
-            chartSeries1.Type = Syncfusion.Windows.Forms.Chart.ChartSeriesType.Pie;
-            chartSeries2.FancyToolTip.ResizeInsideSymbol = true;
-            chartSeries2.Name = "Default1";
-            chartSeries2.Points.Add(1D, ((double)(70D)));
-            chartSeries2.Points.Add(2D, ((double)(35D)));
-            chartSeries2.Points.Add(3D, ((double)(65D)));
-            chartSeries2.Points.Add(4D, ((double)(25D)));
-            chartSeries2.Points.Add(5D, ((double)(50D)));
-            chartSeries2.Resolution = 0D;
-            chartSeries2.StackingGroup = "Default Group";
-            chartSeries2.Style.AltTagFormat = "";
-            chartSeries2.Style.Callout.Font.Facename = "Microsoft Sans Serif";
-            chartSeries2.Style.DrawTextShape = false;
-            chartSeries2.Style.Font.Facename = "Microsoft Sans Serif";
-            chartCustomShapeInfo2.Border = chartLineInfo1;
-            chartCustomShapeInfo2.Color = System.Drawing.SystemColors.HighlightText;
-            chartCustomShapeInfo2.Type = Syncfusion.Windows.Forms.Chart.ChartCustomShape.Square;
-            chartSeries2.Style.TextShape = chartCustomShapeInfo2;
-            chartSeries2.Text = "Default1";
-            chartSeries2.Type = Syncfusion.Windows.Forms.Chart.ChartSeriesType.Pie;
-            this.chartControl1.Series.Add(chartSeries1);
-            this.chartControl1.Series.Add(chartSeries2);
+            chartSeries19.FancyToolTip.ResizeInsideSymbol = true;
+            chartSeries19.Name = "Default0";
+            chartSeries19.Points.Add(1D, ((double)(55D)));
+            chartSeries19.Points.Add(2D, ((double)(70D)));
+            chartSeries19.Points.Add(3D, ((double)(80D)));
+            chartSeries19.Points.Add(4D, ((double)(65D)));
+            chartSeries19.Points.Add(5D, ((double)(75D)));
+            chartSeries19.Resolution = 0D;
+            chartSeries19.StackingGroup = "Default Group";
+            chartSeries19.Style.AltTagFormat = "";
+            chartSeries19.Style.Border.Color = System.Drawing.Color.Transparent;
+            chartSeries19.Style.Callout.Font.Facename = "Microsoft Sans Serif";
+            chartSeries19.Style.DrawTextShape = false;
+            chartSeries19.Style.Font.Facename = "Microsoft Sans Serif";
+            chartLineInfo10.Alignment = System.Drawing.Drawing2D.PenAlignment.Center;
+            chartLineInfo10.Color = System.Drawing.SystemColors.ControlText;
+            chartLineInfo10.DashPattern = null;
+            chartLineInfo10.DashStyle = System.Drawing.Drawing2D.DashStyle.Solid;
+            chartLineInfo10.Width = 1F;
+            chartCustomShapeInfo19.Border = chartLineInfo10;
+            chartCustomShapeInfo19.Color = System.Drawing.SystemColors.HighlightText;
+            chartCustomShapeInfo19.Type = Syncfusion.Windows.Forms.Chart.ChartCustomShape.Square;
+            chartSeries19.Style.TextShape = chartCustomShapeInfo19;
+            chartSeries19.Text = "Default0";
+            chartSeries19.Type = Syncfusion.Windows.Forms.Chart.ChartSeriesType.Pie;
+            chartSeries20.FancyToolTip.ResizeInsideSymbol = true;
+            chartSeries20.Name = "Default1";
+            chartSeries20.Points.Add(1D, ((double)(70D)));
+            chartSeries20.Points.Add(2D, ((double)(35D)));
+            chartSeries20.Points.Add(3D, ((double)(65D)));
+            chartSeries20.Points.Add(4D, ((double)(25D)));
+            chartSeries20.Points.Add(5D, ((double)(50D)));
+            chartSeries20.Resolution = 0D;
+            chartSeries20.StackingGroup = "Default Group";
+            chartSeries20.Style.AltTagFormat = "";
+            chartSeries20.Style.Callout.Font.Facename = "Microsoft Sans Serif";
+            chartSeries20.Style.DrawTextShape = false;
+            chartSeries20.Style.Font.Facename = "Microsoft Sans Serif";
+            chartCustomShapeInfo20.Border = chartLineInfo10;
+            chartCustomShapeInfo20.Color = System.Drawing.SystemColors.HighlightText;
+            chartCustomShapeInfo20.Type = Syncfusion.Windows.Forms.Chart.ChartCustomShape.Square;
+            chartSeries20.Style.TextShape = chartCustomShapeInfo20;
+            chartSeries20.Text = "Default1";
+            chartSeries20.Type = Syncfusion.Windows.Forms.Chart.ChartSeriesType.Pie;
+            this.chartControl1.Series.Add(chartSeries19);
+            this.chartControl1.Series.Add(chartSeries20);
             this.chartControl1.Series3D = true;
             this.chartControl1.SeriesHighlight = true;
             this.chartControl1.ShadowColor = new Syncfusion.Drawing.BrushInfo(Syncfusion.Drawing.GradientStyle.PathRectangle, System.Drawing.SystemColors.WindowText, System.Drawing.Color.Silver);
@@ -677,16 +682,16 @@ namespace BudgetExecution
             this.chartControl1.Title.Name = "Default";
             this.chartControl1.Titles.Add(this.chartTitle1);
             this.chartControl1.ToolBar.EnableDefaultItems = false;
-            this.chartControl1.ToolBar.Items.Add(chartToolBarSaveItem1);
-            this.chartControl1.ToolBar.Items.Add(chartToolBarCopyItem1);
-            this.chartControl1.ToolBar.Items.Add(chartToolBarPrintItem1);
-            this.chartControl1.ToolBar.Items.Add(chartToolBarPrintPreviewItem1);
-            this.chartControl1.ToolBar.Items.Add(chartToolBarSplitter1);
-            this.chartControl1.ToolBar.Items.Add(chartToolBarPaletteItem1);
-            this.chartControl1.ToolBar.Items.Add(chartToolBarStyleItem1);
-            this.chartControl1.ToolBar.Items.Add(chartToolBarTypeItem1);
-            this.chartControl1.ToolBar.Items.Add(chartToolBarSeries3DItem1);
-            this.chartControl1.ToolBar.Items.Add(chartToolBarShowLegendItem1);
+            this.chartControl1.ToolBar.Items.Add(chartToolBarSaveItem10);
+            this.chartControl1.ToolBar.Items.Add(chartToolBarCopyItem10);
+            this.chartControl1.ToolBar.Items.Add(chartToolBarPrintItem10);
+            this.chartControl1.ToolBar.Items.Add(chartToolBarPrintPreviewItem2);
+            this.chartControl1.ToolBar.Items.Add(chartToolBarSplitter2);
+            this.chartControl1.ToolBar.Items.Add(chartToolBarPaletteItem10);
+            this.chartControl1.ToolBar.Items.Add(chartToolBarStyleItem2);
+            this.chartControl1.ToolBar.Items.Add(chartToolBarTypeItem10);
+            this.chartControl1.ToolBar.Items.Add(chartToolBarSeries3DItem10);
+            this.chartControl1.ToolBar.Items.Add(chartToolBarShowLegendItem10);
             // 
             // chartTitle1
             // 
@@ -1266,6 +1271,8 @@ namespace BudgetExecution
             // 
             // tabPageAdv1
             // 
+            this.tabPageAdv1.Controls.Add(this.metroSetComboBox2);
+            this.tabPageAdv1.Controls.Add(this.metroSetLabel20);
             this.tabPageAdv1.Controls.Add(this.metroSetLabel19);
             this.tabPageAdv1.Controls.Add(this.ID);
             this.tabPageAdv1.Controls.Add(this.metroSetLabel1);
@@ -1285,16 +1292,14 @@ namespace BudgetExecution
             this.tabPageAdv1.Controls.Add(this.metroSetLabel18);
             this.tabPageAdv1.Controls.Add(this.BFY);
             this.tabPageAdv1.Controls.Add(this.Org);
-            this.tabPageAdv1.Controls.Add(this.button5);
-            this.tabPageAdv1.Controls.Add(this.button9);
             this.tabPageAdv1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPageAdv1.ForeColor = System.Drawing.Color.LightSteelBlue;
             this.tabPageAdv1.Image = ((System.Drawing.Image)(resources.GetObject("tabPageAdv1.Image")));
             this.tabPageAdv1.ImageSize = new System.Drawing.Size(30, 30);
-            this.tabPageAdv1.Location = new System.Drawing.Point(2, 1);
+            this.tabPageAdv1.Location = new System.Drawing.Point(2, 46);
             this.tabPageAdv1.Name = "tabPageAdv1";
             this.tabPageAdv1.ShowCloseButton = true;
-            this.tabPageAdv1.Size = new System.Drawing.Size(436, 480);
+            this.tabPageAdv1.Size = new System.Drawing.Size(436, 435);
             this.tabPageAdv1.TabIndex = 4;
             this.tabPageAdv1.Text = "Details";
             this.tabPageAdv1.ThemesEnabled = false;
@@ -1343,7 +1348,7 @@ namespace BudgetExecution
             // metroSetLabel1
             // 
             this.metroSetLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.metroSetLabel1.Location = new System.Drawing.Point(287, 102);
+            this.metroSetLabel1.Location = new System.Drawing.Point(206, 99);
             this.metroSetLabel1.Name = "metroSetLabel1";
             this.metroSetLabel1.Size = new System.Drawing.Size(62, 23);
             this.metroSetLabel1.Style = MetroSet_UI.Design.Style.Dark;
@@ -1363,7 +1368,6 @@ namespace BudgetExecution
             this.Navigator.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Navigator.ImageScalingSize = new System.Drawing.Size(24, 20);
             this.Navigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButton9,
             this.toolStripSeparator3,
             this.toolStripButton10,
             this.toolStripSeparator10,
@@ -1371,12 +1375,20 @@ namespace BudgetExecution
             this.toolStripLabel2,
             this.toolStripSeparator11,
             this.toolStripButton11,
+            this.toolStripSeparator13,
+            this.CopyButton,
+            this.toolStripSeparator15,
+            this.AddButton,
             this.toolStripSeparator12,
-            this.toolStripButton12,
-            this.toolStripSeparator13});
-            this.Navigator.Location = new System.Drawing.Point(0, 453);
-            this.Navigator.MoveFirstItem = this.toolStripButton9;
-            this.Navigator.MoveLastItem = this.toolStripButton12;
+            this.DeleteButton,
+            this.toolStripSeparator14,
+            this.SaveButton,
+            this.toolStripSeparator16,
+            this.UpdateButton,
+            this.toolStripSeparator17});
+            this.Navigator.Location = new System.Drawing.Point(0, 408);
+            this.Navigator.MoveFirstItem = null;
+            this.Navigator.MoveLastItem = null;
             this.Navigator.MoveNextItem = this.toolStripButton11;
             this.Navigator.MovePreviousItem = this.toolStripButton10;
             this.Navigator.Name = "Navigator";
@@ -1391,14 +1403,6 @@ namespace BudgetExecution
             this.toolStripLabel2.Size = new System.Drawing.Size(46, 24);
             this.toolStripLabel2.Text = "of {0}";
             this.toolStripLabel2.ToolTipText = "Total number of items";
-            // 
-            // toolStripButton9
-            // 
-            this.toolStripButton9.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripButton9.Name = "toolStripButton9";
-            this.toolStripButton9.RightToLeftAutoMirrorImage = true;
-            this.toolStripButton9.Size = new System.Drawing.Size(44, 24);
-            this.toolStripButton9.Text = "First";
             // 
             // toolStripSeparator3
             // 
@@ -1451,14 +1455,6 @@ namespace BudgetExecution
             this.toolStripSeparator12.Name = "toolStripSeparator12";
             this.toolStripSeparator12.Size = new System.Drawing.Size(6, 27);
             // 
-            // toolStripButton12
-            // 
-            this.toolStripButton12.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripButton12.Name = "toolStripButton12";
-            this.toolStripButton12.RightToLeftAutoMirrorImage = true;
-            this.toolStripButton12.Size = new System.Drawing.Size(44, 24);
-            this.toolStripButton12.Text = "Last";
-            // 
             // toolStripSeparator13
             // 
             this.toolStripSeparator13.Name = "toolStripSeparator13";
@@ -1467,7 +1463,7 @@ namespace BudgetExecution
             // metroSetLabel2
             // 
             this.metroSetLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.metroSetLabel2.Location = new System.Drawing.Point(137, 99);
+            this.metroSetLabel2.Location = new System.Drawing.Point(105, 99);
             this.metroSetLabel2.Name = "metroSetLabel2";
             this.metroSetLabel2.Size = new System.Drawing.Size(62, 23);
             this.metroSetLabel2.Style = MetroSet_UI.Design.Style.Dark;
@@ -1490,12 +1486,12 @@ namespace BudgetExecution
             this.metroSetTextBox1.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.metroSetTextBox1.Image = null;
             this.metroSetTextBox1.Lines = null;
-            this.metroSetTextBox1.Location = new System.Drawing.Point(14, 296);
+            this.metroSetTextBox1.Location = new System.Drawing.Point(257, 311);
             this.metroSetTextBox1.MaxLength = 32767;
             this.metroSetTextBox1.Multiline = false;
             this.metroSetTextBox1.Name = "metroSetTextBox1";
             this.metroSetTextBox1.ReadOnly = false;
-            this.metroSetTextBox1.Size = new System.Drawing.Size(176, 40);
+            this.metroSetTextBox1.Size = new System.Drawing.Size(146, 40);
             this.metroSetTextBox1.Style = MetroSet_UI.Design.Style.Dark;
             this.metroSetTextBox1.StyleManager = null;
             this.metroSetTextBox1.TabIndex = 137;
@@ -1518,12 +1514,12 @@ namespace BudgetExecution
             this.Amount.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.Amount.Image = null;
             this.Amount.Lines = null;
-            this.Amount.Location = new System.Drawing.Point(14, 212);
+            this.Amount.Location = new System.Drawing.Point(257, 227);
             this.Amount.MaxLength = 32767;
             this.Amount.Multiline = false;
             this.Amount.Name = "Amount";
             this.Amount.ReadOnly = false;
-            this.Amount.Size = new System.Drawing.Size(185, 40);
+            this.Amount.Size = new System.Drawing.Size(146, 40);
             this.Amount.Style = MetroSet_UI.Design.Style.Dark;
             this.Amount.StyleManager = null;
             this.Amount.TabIndex = 136;
@@ -1546,12 +1542,12 @@ namespace BudgetExecution
             this.Code.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.Code.Image = null;
             this.Code.Lines = null;
-            this.Code.Location = new System.Drawing.Point(257, 128);
+            this.Code.Location = new System.Drawing.Point(206, 128);
             this.Code.MaxLength = 32767;
             this.Code.Multiline = false;
             this.Code.Name = "Code";
             this.Code.ReadOnly = false;
-            this.Code.Size = new System.Drawing.Size(163, 40);
+            this.Code.Size = new System.Drawing.Size(153, 40);
             this.Code.Style = MetroSet_UI.Design.Style.Dark;
             this.Code.StyleManager = null;
             this.Code.TabIndex = 135;
@@ -1574,12 +1570,12 @@ namespace BudgetExecution
             this.BOC.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.BOC.Image = null;
             this.BOC.Lines = null;
-            this.BOC.Location = new System.Drawing.Point(137, 128);
+            this.BOC.Location = new System.Drawing.Point(105, 128);
             this.BOC.MaxLength = 32767;
             this.BOC.Multiline = false;
             this.BOC.Name = "BOC";
             this.BOC.ReadOnly = false;
-            this.BOC.Size = new System.Drawing.Size(94, 40);
+            this.BOC.Size = new System.Drawing.Size(74, 40);
             this.BOC.Style = MetroSet_UI.Design.Style.Dark;
             this.BOC.StyleManager = null;
             this.BOC.TabIndex = 134;
@@ -1592,7 +1588,7 @@ namespace BudgetExecution
             // metroSetLabel12
             // 
             this.metroSetLabel12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.metroSetLabel12.Location = new System.Drawing.Point(14, 270);
+            this.metroSetLabel12.Location = new System.Drawing.Point(257, 285);
             this.metroSetLabel12.Name = "metroSetLabel12";
             this.metroSetLabel12.Size = new System.Drawing.Size(146, 23);
             this.metroSetLabel12.Style = MetroSet_UI.Design.Style.Dark;
@@ -1605,7 +1601,7 @@ namespace BudgetExecution
             // metroSetLabel13
             // 
             this.metroSetLabel13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.metroSetLabel13.Location = new System.Drawing.Point(14, 186);
+            this.metroSetLabel13.Location = new System.Drawing.Point(257, 201);
             this.metroSetLabel13.Name = "metroSetLabel13";
             this.metroSetLabel13.Size = new System.Drawing.Size(94, 23);
             this.metroSetLabel13.Style = MetroSet_UI.Design.Style.Dark;
@@ -1659,7 +1655,7 @@ namespace BudgetExecution
             this.RC.Multiline = false;
             this.RC.Name = "RC";
             this.RC.ReadOnly = false;
-            this.RC.Size = new System.Drawing.Size(95, 40);
+            this.RC.Size = new System.Drawing.Size(62, 40);
             this.RC.Style = MetroSet_UI.Design.Style.Dark;
             this.RC.StyleManager = null;
             this.RC.TabIndex = 129;
@@ -1769,7 +1765,7 @@ namespace BudgetExecution
             this.Org.Multiline = false;
             this.Org.Name = "Org";
             this.Org.ReadOnly = false;
-            this.Org.Size = new System.Drawing.Size(101, 40);
+            this.Org.Size = new System.Drawing.Size(89, 40);
             this.Org.Style = MetroSet_UI.Design.Style.Dark;
             this.Org.StyleManager = null;
             this.Org.TabIndex = 124;
@@ -1779,49 +1775,15 @@ namespace BudgetExecution
             this.Org.UseSystemPasswordChar = false;
             this.Org.WatermarkText = "";
             // 
-            // button5
-            // 
-            this.button5.BackColor = System.Drawing.Color.Transparent;
-            this.button5.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.ForeColor = System.Drawing.SystemColors.Info;
-            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
-            this.button5.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.button5.Location = new System.Drawing.Point(266, 302);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(142, 34);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "Update";
-            this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button5.UseVisualStyleBackColor = false;
-            // 
-            // button9
-            // 
-            this.button9.BackColor = System.Drawing.Color.Transparent;
-            this.button9.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button9.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
-            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.ForeColor = System.Drawing.SystemColors.Info;
-            this.button9.Image = ((System.Drawing.Image)(resources.GetObject("button9.Image")));
-            this.button9.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.button9.Location = new System.Drawing.Point(257, 212);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(142, 52);
-            this.button9.TabIndex = 1;
-            this.button9.Text = "Copy";
-            this.button9.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button9.UseVisualStyleBackColor = false;
-            // 
             // tabPageAdv5
             // 
             this.tabPageAdv5.Controls.Add(this.AccountChart);
             this.tabPageAdv5.Image = ((System.Drawing.Image)(resources.GetObject("tabPageAdv5.Image")));
             this.tabPageAdv5.ImageSize = new System.Drawing.Size(30, 25);
-            this.tabPageAdv5.Location = new System.Drawing.Point(2, 1);
+            this.tabPageAdv5.Location = new System.Drawing.Point(2, 46);
             this.tabPageAdv5.Name = "tabPageAdv5";
             this.tabPageAdv5.ShowCloseButton = true;
-            this.tabPageAdv5.Size = new System.Drawing.Size(436, 480);
+            this.tabPageAdv5.Size = new System.Drawing.Size(436, 435);
             this.tabPageAdv5.TabIndex = 2;
             this.tabPageAdv5.Text = "Graph";
             this.tabPageAdv5.ThemesEnabled = false;
@@ -1890,52 +1852,52 @@ namespace BudgetExecution
             this.AccountChart.PrimaryYAxis.TitleColor = System.Drawing.Color.White;
             this.AccountChart.PrimaryYAxis.TitleFont = new System.Drawing.Font("Segoe UI", 14F);
             this.AccountChart.Rotation = 45F;
-            chartSeries3.FancyToolTip.ResizeInsideSymbol = true;
-            chartSeries3.Name = "Default0";
-            chartSeries3.Points.Add(1D, ((double)(55D)));
-            chartSeries3.Points.Add(2D, ((double)(70D)));
-            chartSeries3.Points.Add(3D, ((double)(80D)));
-            chartSeries3.Points.Add(4D, ((double)(65D)));
-            chartSeries3.Points.Add(5D, ((double)(75D)));
-            chartSeries3.Resolution = 0D;
-            chartSeries3.StackingGroup = "Default Group";
-            chartSeries3.Style.AltTagFormat = "";
-            chartSeries3.Style.Border.Color = System.Drawing.Color.Transparent;
-            chartSeries3.Style.Callout.Font.Facename = "Microsoft Sans Serif";
-            chartSeries3.Style.DrawTextShape = false;
-            chartSeries3.Style.Font.Facename = "Microsoft Sans Serif";
-            chartLineInfo2.Alignment = System.Drawing.Drawing2D.PenAlignment.Center;
-            chartLineInfo2.Color = System.Drawing.SystemColors.ControlText;
-            chartLineInfo2.DashPattern = null;
-            chartLineInfo2.DashStyle = System.Drawing.Drawing2D.DashStyle.Solid;
-            chartLineInfo2.Width = 1F;
-            chartCustomShapeInfo3.Border = chartLineInfo2;
-            chartCustomShapeInfo3.Color = System.Drawing.SystemColors.HighlightText;
-            chartCustomShapeInfo3.Type = Syncfusion.Windows.Forms.Chart.ChartCustomShape.Square;
-            chartSeries3.Style.TextShape = chartCustomShapeInfo3;
-            chartSeries3.Text = "Default0";
-            chartSeries3.Type = Syncfusion.Windows.Forms.Chart.ChartSeriesType.Pie;
-            chartSeries4.FancyToolTip.ResizeInsideSymbol = true;
-            chartSeries4.Name = "Default1";
-            chartSeries4.Points.Add(1D, ((double)(70D)));
-            chartSeries4.Points.Add(2D, ((double)(35D)));
-            chartSeries4.Points.Add(3D, ((double)(65D)));
-            chartSeries4.Points.Add(4D, ((double)(25D)));
-            chartSeries4.Points.Add(5D, ((double)(50D)));
-            chartSeries4.Resolution = 0D;
-            chartSeries4.StackingGroup = "Default Group";
-            chartSeries4.Style.AltTagFormat = "";
-            chartSeries4.Style.Callout.Font.Facename = "Microsoft Sans Serif";
-            chartSeries4.Style.DrawTextShape = false;
-            chartSeries4.Style.Font.Facename = "Microsoft Sans Serif";
-            chartCustomShapeInfo4.Border = chartLineInfo2;
-            chartCustomShapeInfo4.Color = System.Drawing.SystemColors.HighlightText;
-            chartCustomShapeInfo4.Type = Syncfusion.Windows.Forms.Chart.ChartCustomShape.Square;
-            chartSeries4.Style.TextShape = chartCustomShapeInfo4;
-            chartSeries4.Text = "Default1";
-            chartSeries4.Type = Syncfusion.Windows.Forms.Chart.ChartSeriesType.Pie;
-            this.AccountChart.Series.Add(chartSeries3);
-            this.AccountChart.Series.Add(chartSeries4);
+            chartSeries21.FancyToolTip.ResizeInsideSymbol = true;
+            chartSeries21.Name = "Default0";
+            chartSeries21.Points.Add(1D, ((double)(55D)));
+            chartSeries21.Points.Add(2D, ((double)(70D)));
+            chartSeries21.Points.Add(3D, ((double)(80D)));
+            chartSeries21.Points.Add(4D, ((double)(65D)));
+            chartSeries21.Points.Add(5D, ((double)(75D)));
+            chartSeries21.Resolution = 0D;
+            chartSeries21.StackingGroup = "Default Group";
+            chartSeries21.Style.AltTagFormat = "";
+            chartSeries21.Style.Border.Color = System.Drawing.Color.Transparent;
+            chartSeries21.Style.Callout.Font.Facename = "Microsoft Sans Serif";
+            chartSeries21.Style.DrawTextShape = false;
+            chartSeries21.Style.Font.Facename = "Microsoft Sans Serif";
+            chartLineInfo11.Alignment = System.Drawing.Drawing2D.PenAlignment.Center;
+            chartLineInfo11.Color = System.Drawing.SystemColors.ControlText;
+            chartLineInfo11.DashPattern = null;
+            chartLineInfo11.DashStyle = System.Drawing.Drawing2D.DashStyle.Solid;
+            chartLineInfo11.Width = 1F;
+            chartCustomShapeInfo21.Border = chartLineInfo11;
+            chartCustomShapeInfo21.Color = System.Drawing.SystemColors.HighlightText;
+            chartCustomShapeInfo21.Type = Syncfusion.Windows.Forms.Chart.ChartCustomShape.Square;
+            chartSeries21.Style.TextShape = chartCustomShapeInfo21;
+            chartSeries21.Text = "Default0";
+            chartSeries21.Type = Syncfusion.Windows.Forms.Chart.ChartSeriesType.Pie;
+            chartSeries22.FancyToolTip.ResizeInsideSymbol = true;
+            chartSeries22.Name = "Default1";
+            chartSeries22.Points.Add(1D, ((double)(70D)));
+            chartSeries22.Points.Add(2D, ((double)(35D)));
+            chartSeries22.Points.Add(3D, ((double)(65D)));
+            chartSeries22.Points.Add(4D, ((double)(25D)));
+            chartSeries22.Points.Add(5D, ((double)(50D)));
+            chartSeries22.Resolution = 0D;
+            chartSeries22.StackingGroup = "Default Group";
+            chartSeries22.Style.AltTagFormat = "";
+            chartSeries22.Style.Callout.Font.Facename = "Microsoft Sans Serif";
+            chartSeries22.Style.DrawTextShape = false;
+            chartSeries22.Style.Font.Facename = "Microsoft Sans Serif";
+            chartCustomShapeInfo22.Border = chartLineInfo11;
+            chartCustomShapeInfo22.Color = System.Drawing.SystemColors.HighlightText;
+            chartCustomShapeInfo22.Type = Syncfusion.Windows.Forms.Chart.ChartCustomShape.Square;
+            chartSeries22.Style.TextShape = chartCustomShapeInfo22;
+            chartSeries22.Text = "Default1";
+            chartSeries22.Type = Syncfusion.Windows.Forms.Chart.ChartSeriesType.Pie;
+            this.AccountChart.Series.Add(chartSeries21);
+            this.AccountChart.Series.Add(chartSeries22);
             this.AccountChart.Series3D = true;
             this.AccountChart.SeriesHighlight = true;
             this.AccountChart.ShadowColor = new Syncfusion.Drawing.BrushInfo(Syncfusion.Drawing.GradientStyle.PathRectangle, System.Drawing.SystemColors.WindowText, System.Drawing.Color.Silver);
@@ -1951,16 +1913,16 @@ namespace BudgetExecution
             this.AccountChart.Title.Font = new System.Drawing.Font("Segoe UI", 16F);
             this.AccountChart.Title.Name = "Default";
             this.AccountChart.ToolBar.EnableDefaultItems = false;
-            this.AccountChart.ToolBar.Items.Add(chartToolBarSaveItem2);
-            this.AccountChart.ToolBar.Items.Add(chartToolBarCopyItem2);
-            this.AccountChart.ToolBar.Items.Add(chartToolBarPrintItem2);
-            this.AccountChart.ToolBar.Items.Add(chartToolBarPrintPreviewItem2);
-            this.AccountChart.ToolBar.Items.Add(chartToolBarSplitter2);
-            this.AccountChart.ToolBar.Items.Add(chartToolBarPaletteItem2);
-            this.AccountChart.ToolBar.Items.Add(chartToolBarStyleItem2);
-            this.AccountChart.ToolBar.Items.Add(chartToolBarTypeItem2);
-            this.AccountChart.ToolBar.Items.Add(chartToolBarSeries3DItem2);
-            this.AccountChart.ToolBar.Items.Add(chartToolBarShowLegendItem2);
+            this.AccountChart.ToolBar.Items.Add(chartToolBarSaveItem11);
+            this.AccountChart.ToolBar.Items.Add(chartToolBarCopyItem11);
+            this.AccountChart.ToolBar.Items.Add(chartToolBarPrintItem11);
+            this.AccountChart.ToolBar.Items.Add(chartToolBarPrintPreviewItem3);
+            this.AccountChart.ToolBar.Items.Add(chartToolBarSplitter3);
+            this.AccountChart.ToolBar.Items.Add(chartToolBarPaletteItem11);
+            this.AccountChart.ToolBar.Items.Add(chartToolBarStyleItem3);
+            this.AccountChart.ToolBar.Items.Add(chartToolBarTypeItem11);
+            this.AccountChart.ToolBar.Items.Add(chartToolBarSeries3DItem11);
+            this.AccountChart.ToolBar.Items.Add(chartToolBarShowLegendItem11);
             // 
             // tabPageAdv6
             // 
@@ -1970,10 +1932,10 @@ namespace BudgetExecution
             this.tabPageAdv6.Controls.Add(this.CalendatButton);
             this.tabPageAdv6.Image = ((System.Drawing.Image)(resources.GetObject("tabPageAdv6.Image")));
             this.tabPageAdv6.ImageSize = new System.Drawing.Size(30, 25);
-            this.tabPageAdv6.Location = new System.Drawing.Point(2, 1);
+            this.tabPageAdv6.Location = new System.Drawing.Point(2, 46);
             this.tabPageAdv6.Name = "tabPageAdv6";
             this.tabPageAdv6.ShowCloseButton = true;
-            this.tabPageAdv6.Size = new System.Drawing.Size(436, 480);
+            this.tabPageAdv6.Size = new System.Drawing.Size(436, 435);
             this.tabPageAdv6.TabIndex = 3;
             this.tabPageAdv6.Text = "Tools";
             this.tabPageAdv6.ThemesEnabled = false;
@@ -2038,8 +2000,6 @@ namespace BudgetExecution
             this.groupBox1.Controls.Add(this.metroSetLabel9);
             this.groupBox1.Controls.Add(this.GridRefreshButton);
             this.groupBox1.Controls.Add(this.metroSetLabel8);
-            this.groupBox1.Controls.Add(this.button10);
-            this.groupBox1.Controls.Add(this.button7);
             this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox1.ForeColor = System.Drawing.SystemColors.Info;
             this.groupBox1.Location = new System.Drawing.Point(261, 150);
@@ -2053,51 +2013,51 @@ namespace BudgetExecution
             // 
             // Grid
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Linen;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            this.Grid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.Linen;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.Black;
+            this.Grid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle11;
             this.Grid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
             this.Grid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCellsExceptHeaders;
             this.Grid.BackgroundColor = System.Drawing.Color.SlateGray;
             this.Grid.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Consolas", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Grid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Consolas", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Grid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle12;
             this.Grid.ColumnHeadersHeight = 30;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.LightSteelBlue;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Consolas", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.Info;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.Grid.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.LightSteelBlue;
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Consolas", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.Info;
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Grid.DefaultCellStyle = dataGridViewCellStyle13;
             this.Grid.EnableHeadersVisualStyles = false;
             this.Grid.GridColor = System.Drawing.SystemColors.ControlDarkDark;
             this.Grid.Location = new System.Drawing.Point(19, 88);
             this.Grid.MultiSelect = false;
             this.Grid.Name = "Grid";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Grid.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Grid.RowHeadersDefaultCellStyle = dataGridViewCellStyle14;
             this.Grid.RowHeadersWidth = 30;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.LightSteelBlue;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Consolas", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle5.NullValue = null;
-            this.Grid.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.LightSteelBlue;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Consolas", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle15.NullValue = null;
+            this.Grid.RowsDefaultCellStyle = dataGridViewCellStyle15;
             this.Grid.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.LightSteelBlue;
             this.Grid.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Consolas", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Grid.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
@@ -2178,41 +2138,6 @@ namespace BudgetExecution
             this.metroSetLabel8.Text = "Total:";
             this.metroSetLabel8.ThemeAuthor = "Narwin";
             this.metroSetLabel8.ThemeName = "MetroDark";
-            // 
-            // button10
-            // 
-            this.button10.BackColor = System.Drawing.Color.Transparent;
-            this.button10.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button10.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.button10.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
-            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button10.ForeColor = System.Drawing.SystemColors.Info;
-            this.button10.Image = ((System.Drawing.Image)(resources.GetObject("button10.Image")));
-            this.button10.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.button10.Location = new System.Drawing.Point(19, 451);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(84, 42);
-            this.button10.TabIndex = 0;
-            this.button10.Text = "Add";
-            this.button10.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button10.UseVisualStyleBackColor = false;
-            // 
-            // button7
-            // 
-            this.button7.BackColor = System.Drawing.Color.Transparent;
-            this.button7.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.ForeColor = System.Drawing.SystemColors.Info;
-            this.button7.Image = ((System.Drawing.Image)(resources.GetObject("button7.Image")));
-            this.button7.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.button7.Location = new System.Drawing.Point(350, 450);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(130, 44);
-            this.button7.TabIndex = 3;
-            this.button7.Text = "Remove";
-            this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button7.UseVisualStyleBackColor = false;
             // 
             // FilterGroupBox
             // 
@@ -2645,49 +2570,49 @@ namespace BudgetExecution
             this.ProjectChart.PrimaryYAxis.TitleFont = new System.Drawing.Font("Segoe UI", 14F);
             this.ProjectChart.RealMode3D = true;
             this.ProjectChart.Rotation = 45F;
-            chartSeries5.FancyToolTip.ResizeInsideSymbol = true;
-            chartSeries5.Name = "Default0";
-            chartSeries5.Points.Add(1D, ((double)(55D)));
-            chartSeries5.Points.Add(2D, ((double)(70D)));
-            chartSeries5.Points.Add(3D, ((double)(80D)));
-            chartSeries5.Points.Add(4D, ((double)(65D)));
-            chartSeries5.Points.Add(5D, ((double)(75D)));
-            chartSeries5.Resolution = 0D;
-            chartSeries5.StackingGroup = "Default Group";
-            chartSeries5.Style.AltTagFormat = "";
-            chartSeries5.Style.Callout.Font.Facename = "Microsoft Sans Serif";
-            chartSeries5.Style.DrawTextShape = false;
-            chartSeries5.Style.Font.Facename = "Microsoft Sans Serif";
-            chartLineInfo3.Alignment = System.Drawing.Drawing2D.PenAlignment.Center;
-            chartLineInfo3.Color = System.Drawing.SystemColors.ControlText;
-            chartLineInfo3.DashPattern = null;
-            chartLineInfo3.DashStyle = System.Drawing.Drawing2D.DashStyle.Solid;
-            chartLineInfo3.Width = 1F;
-            chartCustomShapeInfo5.Border = chartLineInfo3;
-            chartCustomShapeInfo5.Color = System.Drawing.SystemColors.HighlightText;
-            chartCustomShapeInfo5.Type = Syncfusion.Windows.Forms.Chart.ChartCustomShape.Square;
-            chartSeries5.Style.TextShape = chartCustomShapeInfo5;
-            chartSeries5.Text = "Default0";
-            chartSeries6.FancyToolTip.ResizeInsideSymbol = true;
-            chartSeries6.Name = "Default1";
-            chartSeries6.Points.Add(1D, ((double)(70D)));
-            chartSeries6.Points.Add(2D, ((double)(35D)));
-            chartSeries6.Points.Add(3D, ((double)(65D)));
-            chartSeries6.Points.Add(4D, ((double)(25D)));
-            chartSeries6.Points.Add(5D, ((double)(50D)));
-            chartSeries6.Resolution = 0D;
-            chartSeries6.StackingGroup = "Default Group";
-            chartSeries6.Style.AltTagFormat = "";
-            chartSeries6.Style.Callout.Font.Facename = "Microsoft Sans Serif";
-            chartSeries6.Style.DrawTextShape = false;
-            chartSeries6.Style.Font.Facename = "Microsoft Sans Serif";
-            chartCustomShapeInfo6.Border = chartLineInfo3;
-            chartCustomShapeInfo6.Color = System.Drawing.SystemColors.HighlightText;
-            chartCustomShapeInfo6.Type = Syncfusion.Windows.Forms.Chart.ChartCustomShape.Square;
-            chartSeries6.Style.TextShape = chartCustomShapeInfo6;
-            chartSeries6.Text = "Default1";
-            this.ProjectChart.Series.Add(chartSeries5);
-            this.ProjectChart.Series.Add(chartSeries6);
+            chartSeries1.FancyToolTip.ResizeInsideSymbol = true;
+            chartSeries1.Name = "Default0";
+            chartSeries1.Points.Add(1D, ((double)(55D)));
+            chartSeries1.Points.Add(2D, ((double)(70D)));
+            chartSeries1.Points.Add(3D, ((double)(80D)));
+            chartSeries1.Points.Add(4D, ((double)(65D)));
+            chartSeries1.Points.Add(5D, ((double)(75D)));
+            chartSeries1.Resolution = 0D;
+            chartSeries1.StackingGroup = "Default Group";
+            chartSeries1.Style.AltTagFormat = "";
+            chartSeries1.Style.Callout.Font.Facename = "Microsoft Sans Serif";
+            chartSeries1.Style.DrawTextShape = false;
+            chartSeries1.Style.Font.Facename = "Microsoft Sans Serif";
+            chartLineInfo1.Alignment = System.Drawing.Drawing2D.PenAlignment.Center;
+            chartLineInfo1.Color = System.Drawing.SystemColors.ControlText;
+            chartLineInfo1.DashPattern = null;
+            chartLineInfo1.DashStyle = System.Drawing.Drawing2D.DashStyle.Solid;
+            chartLineInfo1.Width = 1F;
+            chartCustomShapeInfo1.Border = chartLineInfo1;
+            chartCustomShapeInfo1.Color = System.Drawing.SystemColors.HighlightText;
+            chartCustomShapeInfo1.Type = Syncfusion.Windows.Forms.Chart.ChartCustomShape.Square;
+            chartSeries1.Style.TextShape = chartCustomShapeInfo1;
+            chartSeries1.Text = "Default0";
+            chartSeries2.FancyToolTip.ResizeInsideSymbol = true;
+            chartSeries2.Name = "Default1";
+            chartSeries2.Points.Add(1D, ((double)(70D)));
+            chartSeries2.Points.Add(2D, ((double)(35D)));
+            chartSeries2.Points.Add(3D, ((double)(65D)));
+            chartSeries2.Points.Add(4D, ((double)(25D)));
+            chartSeries2.Points.Add(5D, ((double)(50D)));
+            chartSeries2.Resolution = 0D;
+            chartSeries2.StackingGroup = "Default Group";
+            chartSeries2.Style.AltTagFormat = "";
+            chartSeries2.Style.Callout.Font.Facename = "Microsoft Sans Serif";
+            chartSeries2.Style.DrawTextShape = false;
+            chartSeries2.Style.Font.Facename = "Microsoft Sans Serif";
+            chartCustomShapeInfo2.Border = chartLineInfo1;
+            chartCustomShapeInfo2.Color = System.Drawing.SystemColors.HighlightText;
+            chartCustomShapeInfo2.Type = Syncfusion.Windows.Forms.Chart.ChartCustomShape.Square;
+            chartSeries2.Style.TextShape = chartCustomShapeInfo2;
+            chartSeries2.Text = "Default1";
+            this.ProjectChart.Series.Add(chartSeries1);
+            this.ProjectChart.Series.Add(chartSeries2);
             this.ProjectChart.Series3D = true;
             this.ProjectChart.SeriesHighlight = true;
             this.ProjectChart.ShadowColor = new Syncfusion.Drawing.BrushInfo(Syncfusion.Drawing.GradientStyle.PathRectangle, System.Drawing.SystemColors.WindowText, System.Drawing.Color.Silver);
@@ -2703,13 +2628,13 @@ namespace BudgetExecution
             this.ProjectChart.Title.Font = new System.Drawing.Font("Segoe UI", 16F);
             this.ProjectChart.Title.Name = "Default";
             this.ProjectChart.ToolBar.EnableDefaultItems = false;
-            this.ProjectChart.ToolBar.Items.Add(chartToolBarSaveItem3);
-            this.ProjectChart.ToolBar.Items.Add(chartToolBarCopyItem3);
-            this.ProjectChart.ToolBar.Items.Add(chartToolBarPrintItem3);
-            this.ProjectChart.ToolBar.Items.Add(chartToolBarPaletteItem3);
-            this.ProjectChart.ToolBar.Items.Add(chartToolBarTypeItem3);
-            this.ProjectChart.ToolBar.Items.Add(chartToolBarSeries3DItem3);
-            this.ProjectChart.ToolBar.Items.Add(chartToolBarShowLegendItem3);
+            this.ProjectChart.ToolBar.Items.Add(chartToolBarSaveItem1);
+            this.ProjectChart.ToolBar.Items.Add(chartToolBarCopyItem1);
+            this.ProjectChart.ToolBar.Items.Add(chartToolBarPrintItem1);
+            this.ProjectChart.ToolBar.Items.Add(chartToolBarPaletteItem1);
+            this.ProjectChart.ToolBar.Items.Add(chartToolBarTypeItem1);
+            this.ProjectChart.ToolBar.Items.Add(chartToolBarSeries3DItem1);
+            this.ProjectChart.ToolBar.Items.Add(chartToolBarShowLegendItem1);
             // 
             // buttonEditChildButton1
             // 
@@ -3021,49 +2946,49 @@ namespace BudgetExecution
             this.AreaChart.PrimaryYAxis.TitleFont = new System.Drawing.Font("Segoe UI", 14F);
             this.AreaChart.RealMode3D = true;
             this.AreaChart.Rotation = 45F;
-            chartSeries7.FancyToolTip.ResizeInsideSymbol = true;
-            chartSeries7.Name = "Default0";
-            chartSeries7.Points.Add(1D, ((double)(55D)));
-            chartSeries7.Points.Add(2D, ((double)(70D)));
-            chartSeries7.Points.Add(3D, ((double)(80D)));
-            chartSeries7.Points.Add(4D, ((double)(65D)));
-            chartSeries7.Points.Add(5D, ((double)(75D)));
-            chartSeries7.Resolution = 0D;
-            chartSeries7.StackingGroup = "Default Group";
-            chartSeries7.Style.AltTagFormat = "";
-            chartSeries7.Style.Callout.Font.Facename = "Microsoft Sans Serif";
-            chartSeries7.Style.DrawTextShape = false;
-            chartSeries7.Style.Font.Facename = "Microsoft Sans Serif";
-            chartLineInfo4.Alignment = System.Drawing.Drawing2D.PenAlignment.Center;
-            chartLineInfo4.Color = System.Drawing.SystemColors.ControlText;
-            chartLineInfo4.DashPattern = null;
-            chartLineInfo4.DashStyle = System.Drawing.Drawing2D.DashStyle.Solid;
-            chartLineInfo4.Width = 1F;
-            chartCustomShapeInfo7.Border = chartLineInfo4;
-            chartCustomShapeInfo7.Color = System.Drawing.SystemColors.HighlightText;
-            chartCustomShapeInfo7.Type = Syncfusion.Windows.Forms.Chart.ChartCustomShape.Square;
-            chartSeries7.Style.TextShape = chartCustomShapeInfo7;
-            chartSeries7.Text = "Default0";
-            chartSeries8.FancyToolTip.ResizeInsideSymbol = true;
-            chartSeries8.Name = "Default1";
-            chartSeries8.Points.Add(1D, ((double)(70D)));
-            chartSeries8.Points.Add(2D, ((double)(35D)));
-            chartSeries8.Points.Add(3D, ((double)(65D)));
-            chartSeries8.Points.Add(4D, ((double)(25D)));
-            chartSeries8.Points.Add(5D, ((double)(50D)));
-            chartSeries8.Resolution = 0D;
-            chartSeries8.StackingGroup = "Default Group";
-            chartSeries8.Style.AltTagFormat = "";
-            chartSeries8.Style.Callout.Font.Facename = "Microsoft Sans Serif";
-            chartSeries8.Style.DrawTextShape = false;
-            chartSeries8.Style.Font.Facename = "Microsoft Sans Serif";
-            chartCustomShapeInfo8.Border = chartLineInfo4;
-            chartCustomShapeInfo8.Color = System.Drawing.SystemColors.HighlightText;
-            chartCustomShapeInfo8.Type = Syncfusion.Windows.Forms.Chart.ChartCustomShape.Square;
-            chartSeries8.Style.TextShape = chartCustomShapeInfo8;
-            chartSeries8.Text = "Default1";
-            this.AreaChart.Series.Add(chartSeries7);
-            this.AreaChart.Series.Add(chartSeries8);
+            chartSeries3.FancyToolTip.ResizeInsideSymbol = true;
+            chartSeries3.Name = "Default0";
+            chartSeries3.Points.Add(1D, ((double)(55D)));
+            chartSeries3.Points.Add(2D, ((double)(70D)));
+            chartSeries3.Points.Add(3D, ((double)(80D)));
+            chartSeries3.Points.Add(4D, ((double)(65D)));
+            chartSeries3.Points.Add(5D, ((double)(75D)));
+            chartSeries3.Resolution = 0D;
+            chartSeries3.StackingGroup = "Default Group";
+            chartSeries3.Style.AltTagFormat = "";
+            chartSeries3.Style.Callout.Font.Facename = "Microsoft Sans Serif";
+            chartSeries3.Style.DrawTextShape = false;
+            chartSeries3.Style.Font.Facename = "Microsoft Sans Serif";
+            chartLineInfo2.Alignment = System.Drawing.Drawing2D.PenAlignment.Center;
+            chartLineInfo2.Color = System.Drawing.SystemColors.ControlText;
+            chartLineInfo2.DashPattern = null;
+            chartLineInfo2.DashStyle = System.Drawing.Drawing2D.DashStyle.Solid;
+            chartLineInfo2.Width = 1F;
+            chartCustomShapeInfo3.Border = chartLineInfo2;
+            chartCustomShapeInfo3.Color = System.Drawing.SystemColors.HighlightText;
+            chartCustomShapeInfo3.Type = Syncfusion.Windows.Forms.Chart.ChartCustomShape.Square;
+            chartSeries3.Style.TextShape = chartCustomShapeInfo3;
+            chartSeries3.Text = "Default0";
+            chartSeries4.FancyToolTip.ResizeInsideSymbol = true;
+            chartSeries4.Name = "Default1";
+            chartSeries4.Points.Add(1D, ((double)(70D)));
+            chartSeries4.Points.Add(2D, ((double)(35D)));
+            chartSeries4.Points.Add(3D, ((double)(65D)));
+            chartSeries4.Points.Add(4D, ((double)(25D)));
+            chartSeries4.Points.Add(5D, ((double)(50D)));
+            chartSeries4.Resolution = 0D;
+            chartSeries4.StackingGroup = "Default Group";
+            chartSeries4.Style.AltTagFormat = "";
+            chartSeries4.Style.Callout.Font.Facename = "Microsoft Sans Serif";
+            chartSeries4.Style.DrawTextShape = false;
+            chartSeries4.Style.Font.Facename = "Microsoft Sans Serif";
+            chartCustomShapeInfo4.Border = chartLineInfo2;
+            chartCustomShapeInfo4.Color = System.Drawing.SystemColors.HighlightText;
+            chartCustomShapeInfo4.Type = Syncfusion.Windows.Forms.Chart.ChartCustomShape.Square;
+            chartSeries4.Style.TextShape = chartCustomShapeInfo4;
+            chartSeries4.Text = "Default1";
+            this.AreaChart.Series.Add(chartSeries3);
+            this.AreaChart.Series.Add(chartSeries4);
             this.AreaChart.Series3D = true;
             this.AreaChart.SeriesHighlight = true;
             this.AreaChart.ShadowColor = new Syncfusion.Drawing.BrushInfo(Syncfusion.Drawing.GradientStyle.PathRectangle, System.Drawing.SystemColors.WindowText, System.Drawing.Color.Silver);
@@ -3079,13 +3004,13 @@ namespace BudgetExecution
             this.AreaChart.Title.Font = new System.Drawing.Font("Segoe UI", 16F);
             this.AreaChart.Title.Name = "Default";
             this.AreaChart.ToolBar.EnableDefaultItems = false;
-            this.AreaChart.ToolBar.Items.Add(chartToolBarSaveItem4);
-            this.AreaChart.ToolBar.Items.Add(chartToolBarCopyItem4);
-            this.AreaChart.ToolBar.Items.Add(chartToolBarPrintItem4);
-            this.AreaChart.ToolBar.Items.Add(chartToolBarPaletteItem4);
-            this.AreaChart.ToolBar.Items.Add(chartToolBarTypeItem4);
-            this.AreaChart.ToolBar.Items.Add(chartToolBarSeries3DItem4);
-            this.AreaChart.ToolBar.Items.Add(chartToolBarShowLegendItem4);
+            this.AreaChart.ToolBar.Items.Add(chartToolBarSaveItem2);
+            this.AreaChart.ToolBar.Items.Add(chartToolBarCopyItem2);
+            this.AreaChart.ToolBar.Items.Add(chartToolBarPrintItem2);
+            this.AreaChart.ToolBar.Items.Add(chartToolBarPaletteItem2);
+            this.AreaChart.ToolBar.Items.Add(chartToolBarTypeItem2);
+            this.AreaChart.ToolBar.Items.Add(chartToolBarSeries3DItem2);
+            this.AreaChart.ToolBar.Items.Add(chartToolBarShowLegendItem2);
             // 
             // DivisionTab
             // 
@@ -3385,49 +3310,49 @@ namespace BudgetExecution
             this.DivisionChart.PrimaryYAxis.TitleFont = new System.Drawing.Font("Segoe UI", 14F);
             this.DivisionChart.RealMode3D = true;
             this.DivisionChart.Rotation = 45F;
-            chartSeries9.FancyToolTip.ResizeInsideSymbol = true;
-            chartSeries9.Name = "Default0";
-            chartSeries9.Points.Add(1D, ((double)(55D)));
-            chartSeries9.Points.Add(2D, ((double)(70D)));
-            chartSeries9.Points.Add(3D, ((double)(80D)));
-            chartSeries9.Points.Add(4D, ((double)(65D)));
-            chartSeries9.Points.Add(5D, ((double)(75D)));
-            chartSeries9.Resolution = 0D;
-            chartSeries9.StackingGroup = "Default Group";
-            chartSeries9.Style.AltTagFormat = "";
-            chartSeries9.Style.Callout.Font.Facename = "Microsoft Sans Serif";
-            chartSeries9.Style.DrawTextShape = false;
-            chartSeries9.Style.Font.Facename = "Microsoft Sans Serif";
-            chartLineInfo5.Alignment = System.Drawing.Drawing2D.PenAlignment.Center;
-            chartLineInfo5.Color = System.Drawing.SystemColors.ControlText;
-            chartLineInfo5.DashPattern = null;
-            chartLineInfo5.DashStyle = System.Drawing.Drawing2D.DashStyle.Solid;
-            chartLineInfo5.Width = 1F;
-            chartCustomShapeInfo9.Border = chartLineInfo5;
-            chartCustomShapeInfo9.Color = System.Drawing.SystemColors.HighlightText;
-            chartCustomShapeInfo9.Type = Syncfusion.Windows.Forms.Chart.ChartCustomShape.Square;
-            chartSeries9.Style.TextShape = chartCustomShapeInfo9;
-            chartSeries9.Text = "Default0";
-            chartSeries10.FancyToolTip.ResizeInsideSymbol = true;
-            chartSeries10.Name = "Default1";
-            chartSeries10.Points.Add(1D, ((double)(70D)));
-            chartSeries10.Points.Add(2D, ((double)(35D)));
-            chartSeries10.Points.Add(3D, ((double)(65D)));
-            chartSeries10.Points.Add(4D, ((double)(25D)));
-            chartSeries10.Points.Add(5D, ((double)(50D)));
-            chartSeries10.Resolution = 0D;
-            chartSeries10.StackingGroup = "Default Group";
-            chartSeries10.Style.AltTagFormat = "";
-            chartSeries10.Style.Callout.Font.Facename = "Microsoft Sans Serif";
-            chartSeries10.Style.DrawTextShape = false;
-            chartSeries10.Style.Font.Facename = "Microsoft Sans Serif";
-            chartCustomShapeInfo10.Border = chartLineInfo5;
-            chartCustomShapeInfo10.Color = System.Drawing.SystemColors.HighlightText;
-            chartCustomShapeInfo10.Type = Syncfusion.Windows.Forms.Chart.ChartCustomShape.Square;
-            chartSeries10.Style.TextShape = chartCustomShapeInfo10;
-            chartSeries10.Text = "Default1";
-            this.DivisionChart.Series.Add(chartSeries9);
-            this.DivisionChart.Series.Add(chartSeries10);
+            chartSeries5.FancyToolTip.ResizeInsideSymbol = true;
+            chartSeries5.Name = "Default0";
+            chartSeries5.Points.Add(1D, ((double)(55D)));
+            chartSeries5.Points.Add(2D, ((double)(70D)));
+            chartSeries5.Points.Add(3D, ((double)(80D)));
+            chartSeries5.Points.Add(4D, ((double)(65D)));
+            chartSeries5.Points.Add(5D, ((double)(75D)));
+            chartSeries5.Resolution = 0D;
+            chartSeries5.StackingGroup = "Default Group";
+            chartSeries5.Style.AltTagFormat = "";
+            chartSeries5.Style.Callout.Font.Facename = "Microsoft Sans Serif";
+            chartSeries5.Style.DrawTextShape = false;
+            chartSeries5.Style.Font.Facename = "Microsoft Sans Serif";
+            chartLineInfo3.Alignment = System.Drawing.Drawing2D.PenAlignment.Center;
+            chartLineInfo3.Color = System.Drawing.SystemColors.ControlText;
+            chartLineInfo3.DashPattern = null;
+            chartLineInfo3.DashStyle = System.Drawing.Drawing2D.DashStyle.Solid;
+            chartLineInfo3.Width = 1F;
+            chartCustomShapeInfo5.Border = chartLineInfo3;
+            chartCustomShapeInfo5.Color = System.Drawing.SystemColors.HighlightText;
+            chartCustomShapeInfo5.Type = Syncfusion.Windows.Forms.Chart.ChartCustomShape.Square;
+            chartSeries5.Style.TextShape = chartCustomShapeInfo5;
+            chartSeries5.Text = "Default0";
+            chartSeries6.FancyToolTip.ResizeInsideSymbol = true;
+            chartSeries6.Name = "Default1";
+            chartSeries6.Points.Add(1D, ((double)(70D)));
+            chartSeries6.Points.Add(2D, ((double)(35D)));
+            chartSeries6.Points.Add(3D, ((double)(65D)));
+            chartSeries6.Points.Add(4D, ((double)(25D)));
+            chartSeries6.Points.Add(5D, ((double)(50D)));
+            chartSeries6.Resolution = 0D;
+            chartSeries6.StackingGroup = "Default Group";
+            chartSeries6.Style.AltTagFormat = "";
+            chartSeries6.Style.Callout.Font.Facename = "Microsoft Sans Serif";
+            chartSeries6.Style.DrawTextShape = false;
+            chartSeries6.Style.Font.Facename = "Microsoft Sans Serif";
+            chartCustomShapeInfo6.Border = chartLineInfo3;
+            chartCustomShapeInfo6.Color = System.Drawing.SystemColors.HighlightText;
+            chartCustomShapeInfo6.Type = Syncfusion.Windows.Forms.Chart.ChartCustomShape.Square;
+            chartSeries6.Style.TextShape = chartCustomShapeInfo6;
+            chartSeries6.Text = "Default1";
+            this.DivisionChart.Series.Add(chartSeries5);
+            this.DivisionChart.Series.Add(chartSeries6);
             this.DivisionChart.Series3D = true;
             this.DivisionChart.SeriesHighlight = true;
             this.DivisionChart.ShadowColor = new Syncfusion.Drawing.BrushInfo(Syncfusion.Drawing.GradientStyle.PathRectangle, System.Drawing.SystemColors.WindowText, System.Drawing.Color.Silver);
@@ -3443,13 +3368,13 @@ namespace BudgetExecution
             this.DivisionChart.Title.Font = new System.Drawing.Font("Segoe UI", 16F);
             this.DivisionChart.Title.Name = "Default";
             this.DivisionChart.ToolBar.EnableDefaultItems = false;
-            this.DivisionChart.ToolBar.Items.Add(chartToolBarSaveItem5);
-            this.DivisionChart.ToolBar.Items.Add(chartToolBarCopyItem5);
-            this.DivisionChart.ToolBar.Items.Add(chartToolBarPrintItem5);
-            this.DivisionChart.ToolBar.Items.Add(chartToolBarPaletteItem5);
-            this.DivisionChart.ToolBar.Items.Add(chartToolBarTypeItem5);
-            this.DivisionChart.ToolBar.Items.Add(chartToolBarSeries3DItem5);
-            this.DivisionChart.ToolBar.Items.Add(chartToolBarShowLegendItem5);
+            this.DivisionChart.ToolBar.Items.Add(chartToolBarSaveItem3);
+            this.DivisionChart.ToolBar.Items.Add(chartToolBarCopyItem3);
+            this.DivisionChart.ToolBar.Items.Add(chartToolBarPrintItem3);
+            this.DivisionChart.ToolBar.Items.Add(chartToolBarPaletteItem3);
+            this.DivisionChart.ToolBar.Items.Add(chartToolBarTypeItem3);
+            this.DivisionChart.ToolBar.Items.Add(chartToolBarSeries3DItem3);
+            this.DivisionChart.ToolBar.Items.Add(chartToolBarShowLegendItem3);
             // 
             // ObjectiveTab
             // 
@@ -3746,49 +3671,49 @@ namespace BudgetExecution
             this.ObjectiveChart.PrimaryYAxis.TitleFont = new System.Drawing.Font("Segoe UI", 14F);
             this.ObjectiveChart.RealMode3D = true;
             this.ObjectiveChart.Rotation = 45F;
-            chartSeries11.FancyToolTip.ResizeInsideSymbol = true;
-            chartSeries11.Name = "Default0";
-            chartSeries11.Points.Add(1D, ((double)(55D)));
-            chartSeries11.Points.Add(2D, ((double)(70D)));
-            chartSeries11.Points.Add(3D, ((double)(80D)));
-            chartSeries11.Points.Add(4D, ((double)(65D)));
-            chartSeries11.Points.Add(5D, ((double)(75D)));
-            chartSeries11.Resolution = 0D;
-            chartSeries11.StackingGroup = "Default Group";
-            chartSeries11.Style.AltTagFormat = "";
-            chartSeries11.Style.Callout.Font.Facename = "Microsoft Sans Serif";
-            chartSeries11.Style.DrawTextShape = false;
-            chartSeries11.Style.Font.Facename = "Microsoft Sans Serif";
-            chartLineInfo6.Alignment = System.Drawing.Drawing2D.PenAlignment.Center;
-            chartLineInfo6.Color = System.Drawing.SystemColors.ControlText;
-            chartLineInfo6.DashPattern = null;
-            chartLineInfo6.DashStyle = System.Drawing.Drawing2D.DashStyle.Solid;
-            chartLineInfo6.Width = 1F;
-            chartCustomShapeInfo11.Border = chartLineInfo6;
-            chartCustomShapeInfo11.Color = System.Drawing.SystemColors.HighlightText;
-            chartCustomShapeInfo11.Type = Syncfusion.Windows.Forms.Chart.ChartCustomShape.Square;
-            chartSeries11.Style.TextShape = chartCustomShapeInfo11;
-            chartSeries11.Text = "Default0";
-            chartSeries12.FancyToolTip.ResizeInsideSymbol = true;
-            chartSeries12.Name = "Default1";
-            chartSeries12.Points.Add(1D, ((double)(70D)));
-            chartSeries12.Points.Add(2D, ((double)(35D)));
-            chartSeries12.Points.Add(3D, ((double)(65D)));
-            chartSeries12.Points.Add(4D, ((double)(25D)));
-            chartSeries12.Points.Add(5D, ((double)(50D)));
-            chartSeries12.Resolution = 0D;
-            chartSeries12.StackingGroup = "Default Group";
-            chartSeries12.Style.AltTagFormat = "";
-            chartSeries12.Style.Callout.Font.Facename = "Microsoft Sans Serif";
-            chartSeries12.Style.DrawTextShape = false;
-            chartSeries12.Style.Font.Facename = "Microsoft Sans Serif";
-            chartCustomShapeInfo12.Border = chartLineInfo6;
-            chartCustomShapeInfo12.Color = System.Drawing.SystemColors.HighlightText;
-            chartCustomShapeInfo12.Type = Syncfusion.Windows.Forms.Chart.ChartCustomShape.Square;
-            chartSeries12.Style.TextShape = chartCustomShapeInfo12;
-            chartSeries12.Text = "Default1";
-            this.ObjectiveChart.Series.Add(chartSeries11);
-            this.ObjectiveChart.Series.Add(chartSeries12);
+            chartSeries7.FancyToolTip.ResizeInsideSymbol = true;
+            chartSeries7.Name = "Default0";
+            chartSeries7.Points.Add(1D, ((double)(55D)));
+            chartSeries7.Points.Add(2D, ((double)(70D)));
+            chartSeries7.Points.Add(3D, ((double)(80D)));
+            chartSeries7.Points.Add(4D, ((double)(65D)));
+            chartSeries7.Points.Add(5D, ((double)(75D)));
+            chartSeries7.Resolution = 0D;
+            chartSeries7.StackingGroup = "Default Group";
+            chartSeries7.Style.AltTagFormat = "";
+            chartSeries7.Style.Callout.Font.Facename = "Microsoft Sans Serif";
+            chartSeries7.Style.DrawTextShape = false;
+            chartSeries7.Style.Font.Facename = "Microsoft Sans Serif";
+            chartLineInfo4.Alignment = System.Drawing.Drawing2D.PenAlignment.Center;
+            chartLineInfo4.Color = System.Drawing.SystemColors.ControlText;
+            chartLineInfo4.DashPattern = null;
+            chartLineInfo4.DashStyle = System.Drawing.Drawing2D.DashStyle.Solid;
+            chartLineInfo4.Width = 1F;
+            chartCustomShapeInfo7.Border = chartLineInfo4;
+            chartCustomShapeInfo7.Color = System.Drawing.SystemColors.HighlightText;
+            chartCustomShapeInfo7.Type = Syncfusion.Windows.Forms.Chart.ChartCustomShape.Square;
+            chartSeries7.Style.TextShape = chartCustomShapeInfo7;
+            chartSeries7.Text = "Default0";
+            chartSeries8.FancyToolTip.ResizeInsideSymbol = true;
+            chartSeries8.Name = "Default1";
+            chartSeries8.Points.Add(1D, ((double)(70D)));
+            chartSeries8.Points.Add(2D, ((double)(35D)));
+            chartSeries8.Points.Add(3D, ((double)(65D)));
+            chartSeries8.Points.Add(4D, ((double)(25D)));
+            chartSeries8.Points.Add(5D, ((double)(50D)));
+            chartSeries8.Resolution = 0D;
+            chartSeries8.StackingGroup = "Default Group";
+            chartSeries8.Style.AltTagFormat = "";
+            chartSeries8.Style.Callout.Font.Facename = "Microsoft Sans Serif";
+            chartSeries8.Style.DrawTextShape = false;
+            chartSeries8.Style.Font.Facename = "Microsoft Sans Serif";
+            chartCustomShapeInfo8.Border = chartLineInfo4;
+            chartCustomShapeInfo8.Color = System.Drawing.SystemColors.HighlightText;
+            chartCustomShapeInfo8.Type = Syncfusion.Windows.Forms.Chart.ChartCustomShape.Square;
+            chartSeries8.Style.TextShape = chartCustomShapeInfo8;
+            chartSeries8.Text = "Default1";
+            this.ObjectiveChart.Series.Add(chartSeries7);
+            this.ObjectiveChart.Series.Add(chartSeries8);
             this.ObjectiveChart.Series3D = true;
             this.ObjectiveChart.SeriesHighlight = true;
             this.ObjectiveChart.ShadowColor = new Syncfusion.Drawing.BrushInfo(Syncfusion.Drawing.GradientStyle.PathRectangle, System.Drawing.SystemColors.WindowText, System.Drawing.Color.Silver);
@@ -3804,13 +3729,13 @@ namespace BudgetExecution
             this.ObjectiveChart.Title.Font = new System.Drawing.Font("Segoe UI", 16F);
             this.ObjectiveChart.Title.Name = "Default";
             this.ObjectiveChart.ToolBar.EnableDefaultItems = false;
-            this.ObjectiveChart.ToolBar.Items.Add(chartToolBarSaveItem6);
-            this.ObjectiveChart.ToolBar.Items.Add(chartToolBarCopyItem6);
-            this.ObjectiveChart.ToolBar.Items.Add(chartToolBarPrintItem6);
-            this.ObjectiveChart.ToolBar.Items.Add(chartToolBarPaletteItem6);
-            this.ObjectiveChart.ToolBar.Items.Add(chartToolBarTypeItem6);
-            this.ObjectiveChart.ToolBar.Items.Add(chartToolBarSeries3DItem6);
-            this.ObjectiveChart.ToolBar.Items.Add(chartToolBarShowLegendItem6);
+            this.ObjectiveChart.ToolBar.Items.Add(chartToolBarSaveItem4);
+            this.ObjectiveChart.ToolBar.Items.Add(chartToolBarCopyItem4);
+            this.ObjectiveChart.ToolBar.Items.Add(chartToolBarPrintItem4);
+            this.ObjectiveChart.ToolBar.Items.Add(chartToolBarPaletteItem4);
+            this.ObjectiveChart.ToolBar.Items.Add(chartToolBarTypeItem4);
+            this.ObjectiveChart.ToolBar.Items.Add(chartToolBarSeries3DItem4);
+            this.ObjectiveChart.ToolBar.Items.Add(chartToolBarShowLegendItem4);
             // 
             // GoalTab
             // 
@@ -4112,49 +4037,49 @@ namespace BudgetExecution
             this.GoalChart.PrimaryYAxis.TitleFont = new System.Drawing.Font("Segoe UI", 14F);
             this.GoalChart.RealMode3D = true;
             this.GoalChart.Rotation = 45F;
-            chartSeries13.FancyToolTip.ResizeInsideSymbol = true;
-            chartSeries13.Name = "Default0";
-            chartSeries13.Points.Add(1D, ((double)(55D)));
-            chartSeries13.Points.Add(2D, ((double)(70D)));
-            chartSeries13.Points.Add(3D, ((double)(80D)));
-            chartSeries13.Points.Add(4D, ((double)(65D)));
-            chartSeries13.Points.Add(5D, ((double)(75D)));
-            chartSeries13.Resolution = 0D;
-            chartSeries13.StackingGroup = "Default Group";
-            chartSeries13.Style.AltTagFormat = "";
-            chartSeries13.Style.Callout.Font.Facename = "Microsoft Sans Serif";
-            chartSeries13.Style.DrawTextShape = false;
-            chartSeries13.Style.Font.Facename = "Microsoft Sans Serif";
-            chartLineInfo7.Alignment = System.Drawing.Drawing2D.PenAlignment.Center;
-            chartLineInfo7.Color = System.Drawing.SystemColors.ControlText;
-            chartLineInfo7.DashPattern = null;
-            chartLineInfo7.DashStyle = System.Drawing.Drawing2D.DashStyle.Solid;
-            chartLineInfo7.Width = 1F;
-            chartCustomShapeInfo13.Border = chartLineInfo7;
-            chartCustomShapeInfo13.Color = System.Drawing.SystemColors.HighlightText;
-            chartCustomShapeInfo13.Type = Syncfusion.Windows.Forms.Chart.ChartCustomShape.Square;
-            chartSeries13.Style.TextShape = chartCustomShapeInfo13;
-            chartSeries13.Text = "Default0";
-            chartSeries14.FancyToolTip.ResizeInsideSymbol = true;
-            chartSeries14.Name = "Default1";
-            chartSeries14.Points.Add(1D, ((double)(70D)));
-            chartSeries14.Points.Add(2D, ((double)(35D)));
-            chartSeries14.Points.Add(3D, ((double)(65D)));
-            chartSeries14.Points.Add(4D, ((double)(25D)));
-            chartSeries14.Points.Add(5D, ((double)(50D)));
-            chartSeries14.Resolution = 0D;
-            chartSeries14.StackingGroup = "Default Group";
-            chartSeries14.Style.AltTagFormat = "";
-            chartSeries14.Style.Callout.Font.Facename = "Microsoft Sans Serif";
-            chartSeries14.Style.DrawTextShape = false;
-            chartSeries14.Style.Font.Facename = "Microsoft Sans Serif";
-            chartCustomShapeInfo14.Border = chartLineInfo7;
-            chartCustomShapeInfo14.Color = System.Drawing.SystemColors.HighlightText;
-            chartCustomShapeInfo14.Type = Syncfusion.Windows.Forms.Chart.ChartCustomShape.Square;
-            chartSeries14.Style.TextShape = chartCustomShapeInfo14;
-            chartSeries14.Text = "Default1";
-            this.GoalChart.Series.Add(chartSeries13);
-            this.GoalChart.Series.Add(chartSeries14);
+            chartSeries9.FancyToolTip.ResizeInsideSymbol = true;
+            chartSeries9.Name = "Default0";
+            chartSeries9.Points.Add(1D, ((double)(55D)));
+            chartSeries9.Points.Add(2D, ((double)(70D)));
+            chartSeries9.Points.Add(3D, ((double)(80D)));
+            chartSeries9.Points.Add(4D, ((double)(65D)));
+            chartSeries9.Points.Add(5D, ((double)(75D)));
+            chartSeries9.Resolution = 0D;
+            chartSeries9.StackingGroup = "Default Group";
+            chartSeries9.Style.AltTagFormat = "";
+            chartSeries9.Style.Callout.Font.Facename = "Microsoft Sans Serif";
+            chartSeries9.Style.DrawTextShape = false;
+            chartSeries9.Style.Font.Facename = "Microsoft Sans Serif";
+            chartLineInfo5.Alignment = System.Drawing.Drawing2D.PenAlignment.Center;
+            chartLineInfo5.Color = System.Drawing.SystemColors.ControlText;
+            chartLineInfo5.DashPattern = null;
+            chartLineInfo5.DashStyle = System.Drawing.Drawing2D.DashStyle.Solid;
+            chartLineInfo5.Width = 1F;
+            chartCustomShapeInfo9.Border = chartLineInfo5;
+            chartCustomShapeInfo9.Color = System.Drawing.SystemColors.HighlightText;
+            chartCustomShapeInfo9.Type = Syncfusion.Windows.Forms.Chart.ChartCustomShape.Square;
+            chartSeries9.Style.TextShape = chartCustomShapeInfo9;
+            chartSeries9.Text = "Default0";
+            chartSeries10.FancyToolTip.ResizeInsideSymbol = true;
+            chartSeries10.Name = "Default1";
+            chartSeries10.Points.Add(1D, ((double)(70D)));
+            chartSeries10.Points.Add(2D, ((double)(35D)));
+            chartSeries10.Points.Add(3D, ((double)(65D)));
+            chartSeries10.Points.Add(4D, ((double)(25D)));
+            chartSeries10.Points.Add(5D, ((double)(50D)));
+            chartSeries10.Resolution = 0D;
+            chartSeries10.StackingGroup = "Default Group";
+            chartSeries10.Style.AltTagFormat = "";
+            chartSeries10.Style.Callout.Font.Facename = "Microsoft Sans Serif";
+            chartSeries10.Style.DrawTextShape = false;
+            chartSeries10.Style.Font.Facename = "Microsoft Sans Serif";
+            chartCustomShapeInfo10.Border = chartLineInfo5;
+            chartCustomShapeInfo10.Color = System.Drawing.SystemColors.HighlightText;
+            chartCustomShapeInfo10.Type = Syncfusion.Windows.Forms.Chart.ChartCustomShape.Square;
+            chartSeries10.Style.TextShape = chartCustomShapeInfo10;
+            chartSeries10.Text = "Default1";
+            this.GoalChart.Series.Add(chartSeries9);
+            this.GoalChart.Series.Add(chartSeries10);
             this.GoalChart.Series3D = true;
             this.GoalChart.SeriesHighlight = true;
             this.GoalChart.ShadowColor = new Syncfusion.Drawing.BrushInfo(Syncfusion.Drawing.GradientStyle.PathRectangle, System.Drawing.SystemColors.WindowText, System.Drawing.Color.Silver);
@@ -4170,13 +4095,13 @@ namespace BudgetExecution
             this.GoalChart.Title.Font = new System.Drawing.Font("Segoe UI", 16F);
             this.GoalChart.Title.Name = "Default";
             this.GoalChart.ToolBar.EnableDefaultItems = false;
-            this.GoalChart.ToolBar.Items.Add(chartToolBarSaveItem7);
-            this.GoalChart.ToolBar.Items.Add(chartToolBarCopyItem7);
-            this.GoalChart.ToolBar.Items.Add(chartToolBarPrintItem7);
-            this.GoalChart.ToolBar.Items.Add(chartToolBarPaletteItem7);
-            this.GoalChart.ToolBar.Items.Add(chartToolBarTypeItem7);
-            this.GoalChart.ToolBar.Items.Add(chartToolBarSeries3DItem7);
-            this.GoalChart.ToolBar.Items.Add(chartToolBarShowLegendItem7);
+            this.GoalChart.ToolBar.Items.Add(chartToolBarSaveItem5);
+            this.GoalChart.ToolBar.Items.Add(chartToolBarCopyItem5);
+            this.GoalChart.ToolBar.Items.Add(chartToolBarPrintItem5);
+            this.GoalChart.ToolBar.Items.Add(chartToolBarPaletteItem5);
+            this.GoalChart.ToolBar.Items.Add(chartToolBarTypeItem5);
+            this.GoalChart.ToolBar.Items.Add(chartToolBarSeries3DItem5);
+            this.GoalChart.ToolBar.Items.Add(chartToolBarShowLegendItem5);
             // 
             // NpmTab
             // 
@@ -4479,49 +4404,49 @@ namespace BudgetExecution
             this.NpmChart.PrimaryYAxis.TitleFont = new System.Drawing.Font("Segoe UI", 14F);
             this.NpmChart.RealMode3D = true;
             this.NpmChart.Rotation = 45F;
-            chartSeries15.FancyToolTip.ResizeInsideSymbol = true;
-            chartSeries15.Name = "Default0";
-            chartSeries15.Points.Add(1D, ((double)(55D)));
-            chartSeries15.Points.Add(2D, ((double)(70D)));
-            chartSeries15.Points.Add(3D, ((double)(80D)));
-            chartSeries15.Points.Add(4D, ((double)(65D)));
-            chartSeries15.Points.Add(5D, ((double)(75D)));
-            chartSeries15.Resolution = 0D;
-            chartSeries15.StackingGroup = "Default Group";
-            chartSeries15.Style.AltTagFormat = "";
-            chartSeries15.Style.Callout.Font.Facename = "Microsoft Sans Serif";
-            chartSeries15.Style.DrawTextShape = false;
-            chartSeries15.Style.Font.Facename = "Microsoft Sans Serif";
-            chartLineInfo8.Alignment = System.Drawing.Drawing2D.PenAlignment.Center;
-            chartLineInfo8.Color = System.Drawing.SystemColors.ControlText;
-            chartLineInfo8.DashPattern = null;
-            chartLineInfo8.DashStyle = System.Drawing.Drawing2D.DashStyle.Solid;
-            chartLineInfo8.Width = 1F;
-            chartCustomShapeInfo15.Border = chartLineInfo8;
-            chartCustomShapeInfo15.Color = System.Drawing.SystemColors.HighlightText;
-            chartCustomShapeInfo15.Type = Syncfusion.Windows.Forms.Chart.ChartCustomShape.Square;
-            chartSeries15.Style.TextShape = chartCustomShapeInfo15;
-            chartSeries15.Text = "Default0";
-            chartSeries16.FancyToolTip.ResizeInsideSymbol = true;
-            chartSeries16.Name = "Default1";
-            chartSeries16.Points.Add(1D, ((double)(70D)));
-            chartSeries16.Points.Add(2D, ((double)(35D)));
-            chartSeries16.Points.Add(3D, ((double)(65D)));
-            chartSeries16.Points.Add(4D, ((double)(25D)));
-            chartSeries16.Points.Add(5D, ((double)(50D)));
-            chartSeries16.Resolution = 0D;
-            chartSeries16.StackingGroup = "Default Group";
-            chartSeries16.Style.AltTagFormat = "";
-            chartSeries16.Style.Callout.Font.Facename = "Microsoft Sans Serif";
-            chartSeries16.Style.DrawTextShape = false;
-            chartSeries16.Style.Font.Facename = "Microsoft Sans Serif";
-            chartCustomShapeInfo16.Border = chartLineInfo8;
-            chartCustomShapeInfo16.Color = System.Drawing.SystemColors.HighlightText;
-            chartCustomShapeInfo16.Type = Syncfusion.Windows.Forms.Chart.ChartCustomShape.Square;
-            chartSeries16.Style.TextShape = chartCustomShapeInfo16;
-            chartSeries16.Text = "Default1";
-            this.NpmChart.Series.Add(chartSeries15);
-            this.NpmChart.Series.Add(chartSeries16);
+            chartSeries11.FancyToolTip.ResizeInsideSymbol = true;
+            chartSeries11.Name = "Default0";
+            chartSeries11.Points.Add(1D, ((double)(55D)));
+            chartSeries11.Points.Add(2D, ((double)(70D)));
+            chartSeries11.Points.Add(3D, ((double)(80D)));
+            chartSeries11.Points.Add(4D, ((double)(65D)));
+            chartSeries11.Points.Add(5D, ((double)(75D)));
+            chartSeries11.Resolution = 0D;
+            chartSeries11.StackingGroup = "Default Group";
+            chartSeries11.Style.AltTagFormat = "";
+            chartSeries11.Style.Callout.Font.Facename = "Microsoft Sans Serif";
+            chartSeries11.Style.DrawTextShape = false;
+            chartSeries11.Style.Font.Facename = "Microsoft Sans Serif";
+            chartLineInfo6.Alignment = System.Drawing.Drawing2D.PenAlignment.Center;
+            chartLineInfo6.Color = System.Drawing.SystemColors.ControlText;
+            chartLineInfo6.DashPattern = null;
+            chartLineInfo6.DashStyle = System.Drawing.Drawing2D.DashStyle.Solid;
+            chartLineInfo6.Width = 1F;
+            chartCustomShapeInfo11.Border = chartLineInfo6;
+            chartCustomShapeInfo11.Color = System.Drawing.SystemColors.HighlightText;
+            chartCustomShapeInfo11.Type = Syncfusion.Windows.Forms.Chart.ChartCustomShape.Square;
+            chartSeries11.Style.TextShape = chartCustomShapeInfo11;
+            chartSeries11.Text = "Default0";
+            chartSeries12.FancyToolTip.ResizeInsideSymbol = true;
+            chartSeries12.Name = "Default1";
+            chartSeries12.Points.Add(1D, ((double)(70D)));
+            chartSeries12.Points.Add(2D, ((double)(35D)));
+            chartSeries12.Points.Add(3D, ((double)(65D)));
+            chartSeries12.Points.Add(4D, ((double)(25D)));
+            chartSeries12.Points.Add(5D, ((double)(50D)));
+            chartSeries12.Resolution = 0D;
+            chartSeries12.StackingGroup = "Default Group";
+            chartSeries12.Style.AltTagFormat = "";
+            chartSeries12.Style.Callout.Font.Facename = "Microsoft Sans Serif";
+            chartSeries12.Style.DrawTextShape = false;
+            chartSeries12.Style.Font.Facename = "Microsoft Sans Serif";
+            chartCustomShapeInfo12.Border = chartLineInfo6;
+            chartCustomShapeInfo12.Color = System.Drawing.SystemColors.HighlightText;
+            chartCustomShapeInfo12.Type = Syncfusion.Windows.Forms.Chart.ChartCustomShape.Square;
+            chartSeries12.Style.TextShape = chartCustomShapeInfo12;
+            chartSeries12.Text = "Default1";
+            this.NpmChart.Series.Add(chartSeries11);
+            this.NpmChart.Series.Add(chartSeries12);
             this.NpmChart.Series3D = true;
             this.NpmChart.SeriesHighlight = true;
             this.NpmChart.ShadowColor = new Syncfusion.Drawing.BrushInfo(Syncfusion.Drawing.GradientStyle.PathRectangle, System.Drawing.SystemColors.WindowText, System.Drawing.Color.Silver);
@@ -4537,13 +4462,13 @@ namespace BudgetExecution
             this.NpmChart.Title.Font = new System.Drawing.Font("Segoe UI", 16F);
             this.NpmChart.Title.Name = "Default";
             this.NpmChart.ToolBar.EnableDefaultItems = false;
-            this.NpmChart.ToolBar.Items.Add(chartToolBarSaveItem8);
-            this.NpmChart.ToolBar.Items.Add(chartToolBarCopyItem8);
-            this.NpmChart.ToolBar.Items.Add(chartToolBarPrintItem8);
-            this.NpmChart.ToolBar.Items.Add(chartToolBarPaletteItem8);
-            this.NpmChart.ToolBar.Items.Add(chartToolBarTypeItem8);
-            this.NpmChart.ToolBar.Items.Add(chartToolBarSeries3DItem8);
-            this.NpmChart.ToolBar.Items.Add(chartToolBarShowLegendItem8);
+            this.NpmChart.ToolBar.Items.Add(chartToolBarSaveItem6);
+            this.NpmChart.ToolBar.Items.Add(chartToolBarCopyItem6);
+            this.NpmChart.ToolBar.Items.Add(chartToolBarPrintItem6);
+            this.NpmChart.ToolBar.Items.Add(chartToolBarPaletteItem6);
+            this.NpmChart.ToolBar.Items.Add(chartToolBarTypeItem6);
+            this.NpmChart.ToolBar.Items.Add(chartToolBarSeries3DItem6);
+            this.NpmChart.ToolBar.Items.Add(chartToolBarShowLegendItem6);
             // 
             // BocTab
             // 
@@ -4846,49 +4771,49 @@ namespace BudgetExecution
             this.BocChart.PrimaryYAxis.TitleFont = new System.Drawing.Font("Segoe UI", 14F);
             this.BocChart.RealMode3D = true;
             this.BocChart.Rotation = 45F;
-            chartSeries17.FancyToolTip.ResizeInsideSymbol = true;
-            chartSeries17.Name = "Default0";
-            chartSeries17.Points.Add(1D, ((double)(55D)));
-            chartSeries17.Points.Add(2D, ((double)(70D)));
-            chartSeries17.Points.Add(3D, ((double)(80D)));
-            chartSeries17.Points.Add(4D, ((double)(65D)));
-            chartSeries17.Points.Add(5D, ((double)(75D)));
-            chartSeries17.Resolution = 0D;
-            chartSeries17.StackingGroup = "Default Group";
-            chartSeries17.Style.AltTagFormat = "";
-            chartSeries17.Style.Callout.Font.Facename = "Microsoft Sans Serif";
-            chartSeries17.Style.DrawTextShape = false;
-            chartSeries17.Style.Font.Facename = "Microsoft Sans Serif";
-            chartLineInfo9.Alignment = System.Drawing.Drawing2D.PenAlignment.Center;
-            chartLineInfo9.Color = System.Drawing.SystemColors.ControlText;
-            chartLineInfo9.DashPattern = null;
-            chartLineInfo9.DashStyle = System.Drawing.Drawing2D.DashStyle.Solid;
-            chartLineInfo9.Width = 1F;
-            chartCustomShapeInfo17.Border = chartLineInfo9;
-            chartCustomShapeInfo17.Color = System.Drawing.SystemColors.HighlightText;
-            chartCustomShapeInfo17.Type = Syncfusion.Windows.Forms.Chart.ChartCustomShape.Square;
-            chartSeries17.Style.TextShape = chartCustomShapeInfo17;
-            chartSeries17.Text = "Default0";
-            chartSeries18.FancyToolTip.ResizeInsideSymbol = true;
-            chartSeries18.Name = "Default1";
-            chartSeries18.Points.Add(1D, ((double)(70D)));
-            chartSeries18.Points.Add(2D, ((double)(35D)));
-            chartSeries18.Points.Add(3D, ((double)(65D)));
-            chartSeries18.Points.Add(4D, ((double)(25D)));
-            chartSeries18.Points.Add(5D, ((double)(50D)));
-            chartSeries18.Resolution = 0D;
-            chartSeries18.StackingGroup = "Default Group";
-            chartSeries18.Style.AltTagFormat = "";
-            chartSeries18.Style.Callout.Font.Facename = "Microsoft Sans Serif";
-            chartSeries18.Style.DrawTextShape = false;
-            chartSeries18.Style.Font.Facename = "Microsoft Sans Serif";
-            chartCustomShapeInfo18.Border = chartLineInfo9;
-            chartCustomShapeInfo18.Color = System.Drawing.SystemColors.HighlightText;
-            chartCustomShapeInfo18.Type = Syncfusion.Windows.Forms.Chart.ChartCustomShape.Square;
-            chartSeries18.Style.TextShape = chartCustomShapeInfo18;
-            chartSeries18.Text = "Default1";
-            this.BocChart.Series.Add(chartSeries17);
-            this.BocChart.Series.Add(chartSeries18);
+            chartSeries13.FancyToolTip.ResizeInsideSymbol = true;
+            chartSeries13.Name = "Default0";
+            chartSeries13.Points.Add(1D, ((double)(55D)));
+            chartSeries13.Points.Add(2D, ((double)(70D)));
+            chartSeries13.Points.Add(3D, ((double)(80D)));
+            chartSeries13.Points.Add(4D, ((double)(65D)));
+            chartSeries13.Points.Add(5D, ((double)(75D)));
+            chartSeries13.Resolution = 0D;
+            chartSeries13.StackingGroup = "Default Group";
+            chartSeries13.Style.AltTagFormat = "";
+            chartSeries13.Style.Callout.Font.Facename = "Microsoft Sans Serif";
+            chartSeries13.Style.DrawTextShape = false;
+            chartSeries13.Style.Font.Facename = "Microsoft Sans Serif";
+            chartLineInfo7.Alignment = System.Drawing.Drawing2D.PenAlignment.Center;
+            chartLineInfo7.Color = System.Drawing.SystemColors.ControlText;
+            chartLineInfo7.DashPattern = null;
+            chartLineInfo7.DashStyle = System.Drawing.Drawing2D.DashStyle.Solid;
+            chartLineInfo7.Width = 1F;
+            chartCustomShapeInfo13.Border = chartLineInfo7;
+            chartCustomShapeInfo13.Color = System.Drawing.SystemColors.HighlightText;
+            chartCustomShapeInfo13.Type = Syncfusion.Windows.Forms.Chart.ChartCustomShape.Square;
+            chartSeries13.Style.TextShape = chartCustomShapeInfo13;
+            chartSeries13.Text = "Default0";
+            chartSeries14.FancyToolTip.ResizeInsideSymbol = true;
+            chartSeries14.Name = "Default1";
+            chartSeries14.Points.Add(1D, ((double)(70D)));
+            chartSeries14.Points.Add(2D, ((double)(35D)));
+            chartSeries14.Points.Add(3D, ((double)(65D)));
+            chartSeries14.Points.Add(4D, ((double)(25D)));
+            chartSeries14.Points.Add(5D, ((double)(50D)));
+            chartSeries14.Resolution = 0D;
+            chartSeries14.StackingGroup = "Default Group";
+            chartSeries14.Style.AltTagFormat = "";
+            chartSeries14.Style.Callout.Font.Facename = "Microsoft Sans Serif";
+            chartSeries14.Style.DrawTextShape = false;
+            chartSeries14.Style.Font.Facename = "Microsoft Sans Serif";
+            chartCustomShapeInfo14.Border = chartLineInfo7;
+            chartCustomShapeInfo14.Color = System.Drawing.SystemColors.HighlightText;
+            chartCustomShapeInfo14.Type = Syncfusion.Windows.Forms.Chart.ChartCustomShape.Square;
+            chartSeries14.Style.TextShape = chartCustomShapeInfo14;
+            chartSeries14.Text = "Default1";
+            this.BocChart.Series.Add(chartSeries13);
+            this.BocChart.Series.Add(chartSeries14);
             this.BocChart.Series3D = true;
             this.BocChart.SeriesHighlight = true;
             this.BocChart.ShadowColor = new Syncfusion.Drawing.BrushInfo(Syncfusion.Drawing.GradientStyle.PathRectangle, System.Drawing.SystemColors.WindowText, System.Drawing.Color.Silver);
@@ -4904,13 +4829,13 @@ namespace BudgetExecution
             this.BocChart.Title.Font = new System.Drawing.Font("Segoe UI", 16F);
             this.BocChart.Title.Name = "Default";
             this.BocChart.ToolBar.EnableDefaultItems = false;
-            this.BocChart.ToolBar.Items.Add(chartToolBarSaveItem9);
-            this.BocChart.ToolBar.Items.Add(chartToolBarCopyItem9);
-            this.BocChart.ToolBar.Items.Add(chartToolBarPrintItem9);
-            this.BocChart.ToolBar.Items.Add(chartToolBarPaletteItem9);
-            this.BocChart.ToolBar.Items.Add(chartToolBarTypeItem9);
-            this.BocChart.ToolBar.Items.Add(chartToolBarSeries3DItem9);
-            this.BocChart.ToolBar.Items.Add(chartToolBarShowLegendItem9);
+            this.BocChart.ToolBar.Items.Add(chartToolBarSaveItem7);
+            this.BocChart.ToolBar.Items.Add(chartToolBarCopyItem7);
+            this.BocChart.ToolBar.Items.Add(chartToolBarPrintItem7);
+            this.BocChart.ToolBar.Items.Add(chartToolBarPaletteItem7);
+            this.BocChart.ToolBar.Items.Add(chartToolBarTypeItem7);
+            this.BocChart.ToolBar.Items.Add(chartToolBarSeries3DItem7);
+            this.BocChart.ToolBar.Items.Add(chartToolBarShowLegendItem7);
             // 
             // FundTab
             // 
@@ -5212,49 +5137,49 @@ namespace BudgetExecution
             this.FundChart.PrimaryYAxis.TitleFont = new System.Drawing.Font("Segoe UI", 14F);
             this.FundChart.RealMode3D = true;
             this.FundChart.Rotation = 20F;
-            chartSeries19.FancyToolTip.ResizeInsideSymbol = true;
-            chartSeries19.Name = "Default0";
-            chartSeries19.Points.Add(1D, ((double)(55D)));
-            chartSeries19.Points.Add(2D, ((double)(70D)));
-            chartSeries19.Points.Add(3D, ((double)(80D)));
-            chartSeries19.Points.Add(4D, ((double)(65D)));
-            chartSeries19.Points.Add(5D, ((double)(75D)));
-            chartSeries19.Resolution = 0D;
-            chartSeries19.StackingGroup = "Default Group";
-            chartSeries19.Style.AltTagFormat = "";
-            chartSeries19.Style.Callout.Font.Facename = "Microsoft Sans Serif";
-            chartSeries19.Style.DrawTextShape = false;
-            chartSeries19.Style.Font.Facename = "Microsoft Sans Serif";
-            chartLineInfo10.Alignment = System.Drawing.Drawing2D.PenAlignment.Center;
-            chartLineInfo10.Color = System.Drawing.SystemColors.ControlText;
-            chartLineInfo10.DashPattern = null;
-            chartLineInfo10.DashStyle = System.Drawing.Drawing2D.DashStyle.Solid;
-            chartLineInfo10.Width = 1F;
-            chartCustomShapeInfo19.Border = chartLineInfo10;
-            chartCustomShapeInfo19.Color = System.Drawing.SystemColors.HighlightText;
-            chartCustomShapeInfo19.Type = Syncfusion.Windows.Forms.Chart.ChartCustomShape.Square;
-            chartSeries19.Style.TextShape = chartCustomShapeInfo19;
-            chartSeries19.Text = "Default0";
-            chartSeries20.FancyToolTip.ResizeInsideSymbol = true;
-            chartSeries20.Name = "Default1";
-            chartSeries20.Points.Add(1D, ((double)(70D)));
-            chartSeries20.Points.Add(2D, ((double)(35D)));
-            chartSeries20.Points.Add(3D, ((double)(65D)));
-            chartSeries20.Points.Add(4D, ((double)(25D)));
-            chartSeries20.Points.Add(5D, ((double)(50D)));
-            chartSeries20.Resolution = 0D;
-            chartSeries20.StackingGroup = "Default Group";
-            chartSeries20.Style.AltTagFormat = "";
-            chartSeries20.Style.Callout.Font.Facename = "Microsoft Sans Serif";
-            chartSeries20.Style.DrawTextShape = false;
-            chartSeries20.Style.Font.Facename = "Microsoft Sans Serif";
-            chartCustomShapeInfo20.Border = chartLineInfo10;
-            chartCustomShapeInfo20.Color = System.Drawing.SystemColors.HighlightText;
-            chartCustomShapeInfo20.Type = Syncfusion.Windows.Forms.Chart.ChartCustomShape.Square;
-            chartSeries20.Style.TextShape = chartCustomShapeInfo20;
-            chartSeries20.Text = "Default1";
-            this.FundChart.Series.Add(chartSeries19);
-            this.FundChart.Series.Add(chartSeries20);
+            chartSeries15.FancyToolTip.ResizeInsideSymbol = true;
+            chartSeries15.Name = "Default0";
+            chartSeries15.Points.Add(1D, ((double)(55D)));
+            chartSeries15.Points.Add(2D, ((double)(70D)));
+            chartSeries15.Points.Add(3D, ((double)(80D)));
+            chartSeries15.Points.Add(4D, ((double)(65D)));
+            chartSeries15.Points.Add(5D, ((double)(75D)));
+            chartSeries15.Resolution = 0D;
+            chartSeries15.StackingGroup = "Default Group";
+            chartSeries15.Style.AltTagFormat = "";
+            chartSeries15.Style.Callout.Font.Facename = "Microsoft Sans Serif";
+            chartSeries15.Style.DrawTextShape = false;
+            chartSeries15.Style.Font.Facename = "Microsoft Sans Serif";
+            chartLineInfo8.Alignment = System.Drawing.Drawing2D.PenAlignment.Center;
+            chartLineInfo8.Color = System.Drawing.SystemColors.ControlText;
+            chartLineInfo8.DashPattern = null;
+            chartLineInfo8.DashStyle = System.Drawing.Drawing2D.DashStyle.Solid;
+            chartLineInfo8.Width = 1F;
+            chartCustomShapeInfo15.Border = chartLineInfo8;
+            chartCustomShapeInfo15.Color = System.Drawing.SystemColors.HighlightText;
+            chartCustomShapeInfo15.Type = Syncfusion.Windows.Forms.Chart.ChartCustomShape.Square;
+            chartSeries15.Style.TextShape = chartCustomShapeInfo15;
+            chartSeries15.Text = "Default0";
+            chartSeries16.FancyToolTip.ResizeInsideSymbol = true;
+            chartSeries16.Name = "Default1";
+            chartSeries16.Points.Add(1D, ((double)(70D)));
+            chartSeries16.Points.Add(2D, ((double)(35D)));
+            chartSeries16.Points.Add(3D, ((double)(65D)));
+            chartSeries16.Points.Add(4D, ((double)(25D)));
+            chartSeries16.Points.Add(5D, ((double)(50D)));
+            chartSeries16.Resolution = 0D;
+            chartSeries16.StackingGroup = "Default Group";
+            chartSeries16.Style.AltTagFormat = "";
+            chartSeries16.Style.Callout.Font.Facename = "Microsoft Sans Serif";
+            chartSeries16.Style.DrawTextShape = false;
+            chartSeries16.Style.Font.Facename = "Microsoft Sans Serif";
+            chartCustomShapeInfo16.Border = chartLineInfo8;
+            chartCustomShapeInfo16.Color = System.Drawing.SystemColors.HighlightText;
+            chartCustomShapeInfo16.Type = Syncfusion.Windows.Forms.Chart.ChartCustomShape.Square;
+            chartSeries16.Style.TextShape = chartCustomShapeInfo16;
+            chartSeries16.Text = "Default1";
+            this.FundChart.Series.Add(chartSeries15);
+            this.FundChart.Series.Add(chartSeries16);
             this.FundChart.Series3D = true;
             this.FundChart.SeriesHighlight = true;
             this.FundChart.ShadowColor = new Syncfusion.Drawing.BrushInfo(Syncfusion.Drawing.GradientStyle.PathRectangle, System.Drawing.SystemColors.WindowText, System.Drawing.Color.Silver);
@@ -5269,13 +5194,13 @@ namespace BudgetExecution
             // 
             this.FundChart.Title.Name = "Default";
             this.FundChart.ToolBar.EnableDefaultItems = false;
-            this.FundChart.ToolBar.Items.Add(chartToolBarSaveItem10);
-            this.FundChart.ToolBar.Items.Add(chartToolBarCopyItem10);
-            this.FundChart.ToolBar.Items.Add(chartToolBarPrintItem10);
-            this.FundChart.ToolBar.Items.Add(chartToolBarPaletteItem10);
-            this.FundChart.ToolBar.Items.Add(chartToolBarTypeItem10);
-            this.FundChart.ToolBar.Items.Add(chartToolBarSeries3DItem10);
-            this.FundChart.ToolBar.Items.Add(chartToolBarShowLegendItem10);
+            this.FundChart.ToolBar.Items.Add(chartToolBarSaveItem8);
+            this.FundChart.ToolBar.Items.Add(chartToolBarCopyItem8);
+            this.FundChart.ToolBar.Items.Add(chartToolBarPrintItem8);
+            this.FundChart.ToolBar.Items.Add(chartToolBarPaletteItem8);
+            this.FundChart.ToolBar.Items.Add(chartToolBarTypeItem8);
+            this.FundChart.ToolBar.Items.Add(chartToolBarSeries3DItem8);
+            this.FundChart.ToolBar.Items.Add(chartToolBarShowLegendItem8);
             // 
             // SummaryTabControl
             // 
@@ -5361,6 +5286,117 @@ namespace BudgetExecution
             this.toolStripButton8.Name = "toolStripButton8";
             this.toolStripButton8.Size = new System.Drawing.Size(34, 28);
             this.toolStripButton8.Text = "toolStripButton8";
+            // 
+            // AddButton
+            // 
+            this.AddButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.AddButton.Image = ((System.Drawing.Image)(resources.GetObject("AddButton.Image")));
+            this.AddButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.AddButton.Name = "AddButton";
+            this.AddButton.Size = new System.Drawing.Size(28, 24);
+            this.AddButton.Text = "toolStripButton7";
+            this.AddButton.ToolTipText = "Add New Account";
+            // 
+            // toolStripSeparator14
+            // 
+            this.toolStripSeparator14.Name = "toolStripSeparator14";
+            this.toolStripSeparator14.Size = new System.Drawing.Size(6, 27);
+            // 
+            // DeleteButton
+            // 
+            this.DeleteButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.DeleteButton.Image = ((System.Drawing.Image)(resources.GetObject("DeleteButton.Image")));
+            this.DeleteButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.DeleteButton.Name = "DeleteButton";
+            this.DeleteButton.Size = new System.Drawing.Size(28, 24);
+            this.DeleteButton.Text = "toolStripButton13";
+            this.DeleteButton.ToolTipText = "Delete Account\r\n";
+            // 
+            // toolStripSeparator15
+            // 
+            this.toolStripSeparator15.Name = "toolStripSeparator15";
+            this.toolStripSeparator15.Size = new System.Drawing.Size(6, 27);
+            // 
+            // CopyButton
+            // 
+            this.CopyButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.CopyButton.Image = ((System.Drawing.Image)(resources.GetObject("CopyButton.Image")));
+            this.CopyButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.CopyButton.Name = "CopyButton";
+            this.CopyButton.Size = new System.Drawing.Size(28, 24);
+            this.CopyButton.Text = "toolStripButton7";
+            this.CopyButton.ToolTipText = "Copy Data Into New Account";
+            // 
+            // toolStripSeparator16
+            // 
+            this.toolStripSeparator16.Name = "toolStripSeparator16";
+            this.toolStripSeparator16.Size = new System.Drawing.Size(6, 27);
+            this.toolStripSeparator16.Click += new System.EventHandler(this.toolStripSeparator16_Click);
+            // 
+            // SaveButton
+            // 
+            this.SaveButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.SaveButton.Image = ((System.Drawing.Image)(resources.GetObject("SaveButton.Image")));
+            this.SaveButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.SaveButton.Name = "SaveButton";
+            this.SaveButton.Size = new System.Drawing.Size(28, 24);
+            this.SaveButton.Text = "toolStripButton7";
+            this.SaveButton.ToolTipText = "Save Changes";
+            // 
+            // UpdateButton
+            // 
+            this.UpdateButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.UpdateButton.Image = ((System.Drawing.Image)(resources.GetObject("UpdateButton.Image")));
+            this.UpdateButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.UpdateButton.Name = "UpdateButton";
+            this.UpdateButton.Size = new System.Drawing.Size(28, 24);
+            this.UpdateButton.Text = "toolStripButton12";
+            this.UpdateButton.ToolTipText = "Update Database\r\n";
+            // 
+            // toolStripSeparator17
+            // 
+            this.toolStripSeparator17.Name = "toolStripSeparator17";
+            this.toolStripSeparator17.Size = new System.Drawing.Size(6, 27);
+            // 
+            // metroSetLabel20
+            // 
+            this.metroSetLabel20.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.metroSetLabel20.Location = new System.Drawing.Point(29, 201);
+            this.metroSetLabel20.Name = "metroSetLabel20";
+            this.metroSetLabel20.Size = new System.Drawing.Size(79, 23);
+            this.metroSetLabel20.Style = MetroSet_UI.Design.Style.Dark;
+            this.metroSetLabel20.StyleManager = null;
+            this.metroSetLabel20.TabIndex = 157;
+            this.metroSetLabel20.Text = "Sub";
+            this.metroSetLabel20.ThemeAuthor = "Narwin";
+            this.metroSetLabel20.ThemeName = "MetroDark";
+            // 
+            // metroSetComboBox2
+            // 
+            this.metroSetComboBox2.AllowDrop = true;
+            this.metroSetComboBox2.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.metroSetComboBox2.BackColor = System.Drawing.Color.Transparent;
+            this.metroSetComboBox2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.metroSetComboBox2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.metroSetComboBox2.CausesValidation = false;
+            this.metroSetComboBox2.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.metroSetComboBox2.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.metroSetComboBox2.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.metroSetComboBox2.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.metroSetComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.metroSetComboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.metroSetComboBox2.FormattingEnabled = true;
+            this.metroSetComboBox2.ItemHeight = 30;
+            this.metroSetComboBox2.Location = new System.Drawing.Point(14, 227);
+            this.metroSetComboBox2.Name = "metroSetComboBox2";
+            this.metroSetComboBox2.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.metroSetComboBox2.SelectedItemForeColor = System.Drawing.Color.White;
+            this.metroSetComboBox2.Size = new System.Drawing.Size(94, 36);
+            this.metroSetComboBox2.Style = MetroSet_UI.Design.Style.Dark;
+            this.metroSetComboBox2.StyleManager = null;
+            this.metroSetComboBox2.TabIndex = 158;
+            this.metroSetComboBox2.ThemeAuthor = "Narwin";
+            this.metroSetComboBox2.ThemeName = "MetroDark";
             // 
             // SummaryForm
             // 
@@ -5519,7 +5555,6 @@ namespace BudgetExecution
         protected ChartControl AccountChart;
         private BindingNavigator Navigator;
         private ToolStripLabel toolStripLabel2;
-        private ToolStripButton toolStripButton9;
         private ToolStripSeparator toolStripSeparator3;
         private ToolStripButton toolStripButton10;
         private ToolStripSeparator toolStripSeparator10;
@@ -5527,7 +5562,6 @@ namespace BudgetExecution
         private ToolStripSeparator toolStripSeparator11;
         private ToolStripButton toolStripButton11;
         private ToolStripSeparator toolStripSeparator12;
-        private ToolStripButton toolStripButton12;
         private ToolStripSeparator toolStripSeparator13;
         private GroupBox groupBox1;
         private DataGridView Grid;
@@ -5640,11 +5674,7 @@ namespace BudgetExecution
         private Label label35;
         private Label label36;
         private BindingSource BindingSource;
-        private Button button5;
-        private Button button9;
         private Button GridRefreshButton;
-        private Button button10;
-        private Button button7;
         private PictureBox pictureBox1;
         private Label lblPrc;
         private MetroSetLabel metroSetLabel19;
@@ -5657,5 +5687,16 @@ namespace BudgetExecution
         private TabPageAdv tabPageAdv1;
         private TabPageAdv tabPageAdv5;
         private TabPageAdv tabPageAdv6;
+        private ToolStripButton CopyButton;
+        private ToolStripSeparator toolStripSeparator15;
+        private ToolStripButton AddButton;
+        private ToolStripButton DeleteButton;
+        private ToolStripSeparator toolStripSeparator14;
+        private ToolStripSeparator toolStripSeparator16;
+        private ToolStripButton SaveButton;
+        private ToolStripButton UpdateButton;
+        private ToolStripSeparator toolStripSeparator17;
+        private MetroSetComboBox metroSetComboBox2;
+        private MetroSetLabel metroSetLabel20;
     }
 }

@@ -164,6 +164,26 @@ namespace BudgetExecution
             }
         }
 
+        internal void CreateTextBoxDataBinding(BindingSource bs, List<TextBox> tb)
+        {
+            try
+            {
+                var table = (DataTable)bs.DataSource;
+                var field = table.GetFields();
+                var row = table.Rows[bs.Position];
+                Binding binding;
+                for(int i = 0; i < tb.Count; i++)
+                {
+                    binding = new Binding("Text", row, field[i]);
+                    tb[i].DataBindings.Add(binding);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
+            }
+        }
+
         internal void BocButton_OnSelect(object sender, EventArgs e)
         {
             try

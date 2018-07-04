@@ -34,11 +34,6 @@ namespace BudgetExecution
         List<Label> Labels { get; set; }
         List<MetroSetComboBox> ComboBoxes { get; set; }
 
-        // METHODS
-        private void TabControlAdv1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-        }
-
         private void PopuluateFundCodes(MetroSetComboBox FundComboBox)
         {
             try
@@ -102,11 +97,6 @@ namespace BudgetExecution
                 MessageBox.Show(ex.Message + ex.StackTrace);
                 return null;
             }
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
