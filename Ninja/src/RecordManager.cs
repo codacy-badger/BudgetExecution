@@ -39,7 +39,7 @@ namespace BudgetExecution
         {
         }
 
-        private void PopuluateFundCodes()
+        private void PopuluateFundCodes(MetroSetComboBox FundComboBox)
         {
             try
             {
@@ -53,7 +53,7 @@ namespace BudgetExecution
             }
         }
 
-        private void PopuluateBocCodes()
+        private void PopuluateBocCodes(MetroSetComboBox BocBox)
         {
             try
             {

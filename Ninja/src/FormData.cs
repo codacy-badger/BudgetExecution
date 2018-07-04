@@ -30,6 +30,11 @@ namespace BudgetExecution
             BindingSource = bs;
             Navigator = bn;
             Grid = dgv;
+            BindingSource.DataSource = Table;
+            BindingSource = DbData.BindingSource;
+            BindingSource.DataSource = Table;
+            Navigator.BindingSource = BindingSource;
+            Grid.DataSource = BindingSource.DataSource;
         }
 
         public FormData(Source source, Provider provider, Dictionary<string, object> param)
@@ -39,6 +44,27 @@ namespace BudgetExecution
             Metric = new PrcMetric(DbData);
             BindingSource = new BindingSource();
             BindingSource.DataSource = Table;
+            BindingSource = DbData.BindingSource;
+            BindingSource.DataSource = Table;
+            Navigator.BindingSource = BindingSource;
+            Grid.DataSource = BindingSource.DataSource;
+        }
+
+
+        public FormData(Source source, Provider provider, Dictionary<string, object> param, BindingSource bs, DataGridView dgv, BindingNavigator bn)
+        {
+            DbData = new DataBuilder(source, provider, param);
+            Table = DbData.GetDataTable();
+            Metric = new PrcMetric(DbData);
+            BindingSource = new BindingSource();
+            BindingSource.DataSource = Table;
+            BindGridAndNavigator(Table, dgv, bs, bn);
+            BindingSource = bs;
+            BindingSource.DataSource = Table;
+            Navigator = bn;
+            Navigator.BindingSource = BindingSource;
+            Grid = dgv;
+            Grid.DataSource = BindingSource.DataSource;
         }
 
         // PROPERTIES

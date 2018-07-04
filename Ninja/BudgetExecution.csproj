@@ -492,12 +492,6 @@
     <Compile Include="src\MetroForm1.Designer.cs">
       <DependentUpon>MetroForm1.cs</DependentUpon>
     </Compile>
-    <Compile Include="src\NewPrcAccountManager.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="src\NewPrcAccountManager.Designer.cs">
-      <DependentUpon>NewPrcAccountManager.cs</DependentUpon>
-    </Compile>
     <Compile Include="src\RecordManager.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -684,9 +678,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="src\Reprogramming.resx">
       <DependentUpon>Reprogramming.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="src\NewPrcAccountManager.resx">
-      <DependentUpon>NewPrcAccountManager.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="src\PdfDataReader.resx">
       <DependentUpon>PdfDataReader.cs</DependentUpon>

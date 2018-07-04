@@ -25,6 +25,7 @@ namespace BudgetExecution
             if (DbData == null)
                 DbData = data;
             AccountBinding = DbData.BindingSource;
+            AccountNavigator.BindingSource = AccountBinding;
             Labels = GetLabels();
             ComboBoxes = GetComboBoxes();
         }
@@ -37,7 +38,6 @@ namespace BudgetExecution
             DbData = new DataBuilder(Source, Provider, p);
             AccountBinding = DbData.BindingSource;
             AccountNavigator.BindingSource = AccountBinding;
-            RecordNavigator.BindingSource = AccountBinding;
             Labels = GetLabels();
             ComboBoxes = GetComboBoxes();
         }
