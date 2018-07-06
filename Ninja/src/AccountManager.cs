@@ -10,16 +10,16 @@ namespace BudgetExecution
     using System.Windows.Forms;
     using MetroSet_UI.Controls;
 
-    public partial class PrcAccountManager : Syncfusion.Windows.Forms.MetroForm
+    public partial class AccountManager : Syncfusion.Windows.Forms.MetroForm
     {
         // CONSTRUCTORS
-        public PrcAccountManager()
+        public AccountManager()
         {
             InitializeComponent();
         }
 
 
-        public PrcAccountManager(DataBuilder data)
+        public AccountManager(DataBuilder data)
         {
             InitializeComponent();
             if (DbData == null)
@@ -30,7 +30,7 @@ namespace BudgetExecution
             ComboBoxes = GetComboBoxes();
         }
 
-        public PrcAccountManager(Source source, Provider provider, Dictionary<string, object> p)
+        public AccountManager(Source source, Provider provider, Dictionary<string, object> p)
         {
             InitializeComponent();
             Source = source;
@@ -96,6 +96,38 @@ namespace BudgetExecution
 
         }
 
+        private List<Label> GetLabels(GroupBox gbo)
+        {
+            try
+            {
+                List<Label> lblList = null;
+                foreach (Label lbl in gbo.Controls)
+                    lblList.Add(lbl);
+                return lblList;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + ex.StackTrace);
+                return null;
+            }
+        }
+
+        private List<MetroSetComboBox> GetComboBoxes(GroupBox gbo)
+        {
+            try
+            {
+                List<MetroSetComboBox> cboList = null;
+                foreach (MetroSetComboBox cbo in gbo.Controls)
+                    cboList.Add(cbo);
+                return cboList;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + ex.StackTrace);
+                return null;
+            }
+        }
+
         private void Button5_Click(object sender, EventArgs e)
         {
         }
@@ -132,7 +164,7 @@ namespace BudgetExecution
             }
 }
 
-private void button1_Click(object sender, EventArgs e)
+        private void Button1_Click(object sender, EventArgs e)
         {
 
         }

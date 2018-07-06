@@ -4,7 +4,12 @@
 
 namespace BudgetExecution
 {
+    using System;
+    using System.Collections.Generic;
     using System.Data;
+    using System.Data.SQLite;
+    using System.Linq;
+    using System.Windows.Forms;
 
     public class Transfer
     {
@@ -96,5 +101,183 @@ namespace BudgetExecution
         public string RPIO { get; }
 
         public string TCN { get; }
+
+        // METHODS       
+        public static Dictionary<string, object> GetInsertionColumns(Source source, Provider provider, Dictionary<string, object> param)
+        {
+            try
+            {
+                var account = new Fund(source, provider, param["FiscalYear"].ToString(), param["Code"].ToString());
+                if (!param.ContainsKey("Name") || param["Name"] == null)
+                {
+                    param["Name"] = account.Name;
+                }
+
+
+                if (!param.ContainsKey("TreasurySymbol") || param["TreasurySymbol"] == null)
+                {
+                    param["TreasurySymbol"] = account.TreasurySymbol;
+                }
+
+                if (!param.ContainsKey("Title") || param["Title"] == null)
+                {
+                    param["Title"] = account.Title;
+                }
+
+                return param;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + ex.StackTrace);
+                return null;
+            }
+        }
+
+        public static Transfer Select(Source source, Dictionary<string, object> p)
+        {
+            try
+            {
+                var datarow = new DataBuilder(source, Provider.SQLite, p).DbTable.AsEnumerable().Select(prc => prc).First();
+                return new Transfer(datarow);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + ex.StackTrace);
+                return null;
+            }
+        }
+
+        public static Transfer Select(Source source, Provider provider, Dictionary<string, object> p)
+        {
+            try
+            {
+                var datarow = new DataBuilder(source, provider, p).DbTable.AsEnumerable().Select(prc => prc).First();
+                return new Transfer(datarow);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + ex.StackTrace);
+                return null;
+            }
+        }
+
+        public static void Insert(Source source, Dictionary<string, object> p)
+        {
+            try
+            {
+                var param = GetInsertionColumns(source, Provider.SQLite, p);
+                var fields = param.Keys.ToArray();
+                var vals = param.Values.ToArray();
+                var query = new SQLiteQuery(source, param);
+                SQLiteConnection conn = query.DataConnection;
+                using (conn)
+                {
+                    var insert = query.InsertCommand;
+                    insert.ExecuteNonQuery();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + ex.StackTrace);
+            }
+        }
+
+        public static void Insert(Source source, Provider provider, Dictionary<string, object> p)
+        {
+            try
+            {
+                var param = GetInsertionColumns(source, provider, p);
+                var fields = param.Keys.ToArray();
+                var vals = param.Values.ToArray();
+                var query = new Query(source, provider, param);
+                var cmd = $"INSERT INTO {source.ToString()} {fields} VALUES {vals};";
+                SQLiteConnection conn = query.GetConnection(Provider.SQLite) as SQLiteConnection;
+                using (conn)
+                {
+                    var insert = query.GetDataCommand(cmd, conn) as SQLiteCommand;
+                    insert.ExecuteNonQuery();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + ex.StackTrace);
+            }
+        }
+
+        public static void Update(Source source, Dictionary<string, object> p)
+        {
+            try
+            {
+                var query = new SQLiteQuery(source, p);
+                var cmd = $"UPDATE {source.ToString()} SET Amount = {(decimal)p["Amount"]} WHERE ID = {(int)p["ID"]};";
+                SQLiteConnection conn = query.DataConnection;
+                using (conn)
+                {
+                    var update = query.GetDataCommand(cmd, conn);
+                    update.ExecuteNonQuery();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + ex.StackTrace);
+            }
+        }
+
+        public static void Update(Source source, Provider provider, Dictionary<string, object> p)
+        {
+            try
+            {
+                var query = new Query(source, provider, p);
+                var cmd = $"UPDATE {source.ToString()} SET Amount = {(decimal)p["Amount"]} WHERE ID = {(int)p["ID"]};";
+                SQLiteConnection conn = query.GetConnection(Provider.SQLite) as SQLiteConnection;
+                using (conn)
+                {
+                    var update = query.GetDataCommand(cmd, conn) as SQLiteCommand;
+                    update.ExecuteNonQuery();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + ex.StackTrace);
+            }
+        }
+
+        public static void Delete(Source source, Dictionary<string, object> p)
+        {
+            try
+            {
+                var query = new SQLiteQuery(source, p);
+                var cmd = $"DELETE ALL FROM {source.ToString()} WHERE ID = {(int)p["ID"]};";
+                SQLiteConnection conn = query.DataConnection;
+                using (conn)
+                {
+                    var delete = query.GetDataCommand(cmd, conn);
+                    delete.ExecuteNonQuery();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + ex.StackTrace);
+            }
+        }
+
+        public static void Delete(Source source, Provider provider, Dictionary<string, object> p)
+        {
+            try
+            {
+                var query = new Query(source, provider, p);
+                var cmd = $"DELETE ALL FROM {source.ToString()} WHERE ID = {(int)p["ID"]};";
+                SQLiteConnection conn = query.GetConnection(Provider.SQLite) as SQLiteConnection;
+                using (conn)
+                {
+                    var update = query.GetDataCommand(cmd, conn) as SQLiteCommand;
+                    update.ExecuteNonQuery();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + ex.StackTrace);
+            }
+        }
     }
 }
