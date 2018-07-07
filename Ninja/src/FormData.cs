@@ -72,6 +72,10 @@ namespace BudgetExecution
 
         public ChartSeriesType ChartType { get; set; }
 
+        public Source Source { get; }
+
+        public Provider Provider { get; }
+
         public DataBuilder DbData { get; set; }
 
         public BindingSource BindingSource { get; set; }
@@ -111,28 +115,6 @@ namespace BudgetExecution
         internal Func<DataTable, PrcField, string> TableFilter { get; set; }
 
         // METHODS
-
-        internal void FilterControlButton_OnClick(object sender, EventArgs e)
-        {
-            try
-            {
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
-            }
-        }
-
-        internal void FundControlListBox_OnSelect(object sender, EventArgs e)
-        {
-            try
-            {
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
-            }
-        }
 
         internal void BindGridAndNavigator(DataTable table, DataGridView dg, BindingSource bs, BindingNavigator bn)
         {
@@ -186,8 +168,10 @@ namespace BudgetExecution
 
         internal void BocButton_OnSelect(object sender, EventArgs e)
         {
+            var listbox = sender as Button;
             try
             {
+                BindingSource.Filter = $"{listbox.Tag.ToString()} = '{listbox.Text}'";
             }
             catch (Exception ex)
             {
@@ -195,7 +179,20 @@ namespace BudgetExecution
             }
         }
 
-        internal void BocListBoxItem_OnSelect(object sender, EventArgs e)
+        internal void ListBoxItem_OnSelect(object sender, EventArgs e)
+        {
+            var listbox = sender as ListBox;
+            try
+            {
+                BindingSource.Filter = $"{listbox.Tag.ToString()} = '{listbox.SelectedItem.ToString()}'";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
+            }
+        }
+
+        internal void PopulateFilterControlItems(DataTable table, Control filterControl, PrcField prc)
         {
             try
             {
@@ -206,36 +203,14 @@ namespace BudgetExecution
             }
         }
 
-        internal void ConfigurePrimaryFilterControlButton(DataTable table, Control fitlerControl, PrcField prc)
+        internal void PopulateFilterPanel(FlowLayoutPanel fitlerControl, string[] filter)
         {
             try
             {
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
-            }
-        }
-
-        internal void ConfigurePrimaryFilterControlBox(DataTable table, Control filterControl, PrcField prc)
-        {
-            try
-            {
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
-            }
-        }
-
-        internal void PopulateFilterBox(FlowLayoutPanel fitlerControl, string[] filter)
-        {
-            try
-            {
-                PopulateFilterButtons(fitlerControl, filter);
+                InitializeFilterButtons(fitlerControl, filter);
                 foreach (Control c in fitlerControl.Controls)
                 {
-                    c.Click += FundControlListBox_OnSelect;
+                    c.Click += BocButton_OnSelect;
                 }
             }
             catch (Exception ex)
@@ -244,7 +219,7 @@ namespace BudgetExecution
             }
         }
 
-        internal void PopulateFilterButtons(Control control, string[] list)
+        internal void InitializeFilterButtons(Control control, string[] list)
         {
             try
             {
@@ -274,7 +249,7 @@ namespace BudgetExecution
             }
         }
 
-        internal void PopulateFilterListItems(Control control, string[] list)
+        internal void PopulateListBoxItems(Control control, string[] list)
         {
             try
             {
@@ -352,7 +327,7 @@ namespace BudgetExecution
             }
         }
 
-        internal Dictionary<string, object> GetCurrentRowPrcParameter(DataGridView dgv)
+        internal Dictionary<string, object> GetCurrentRowDictionary(DataGridView dgv)
         {
             try
             {
@@ -368,7 +343,6 @@ namespace BudgetExecution
                     data.Add("BOC", row.Cells["BOC"].ToString());
                     return data;
                 }
-
                 return null;
             }
             catch (Exception ex)
@@ -376,6 +350,24 @@ namespace BudgetExecution
                 MessageBox.Show(ex.Message + ex.StackTrace);
                 return null;
             }
+        }
+
+        internal decimal GetCount(DataTable table, PrcField column, string filter)
+        {
+            if(table.Columns.Contains("Amount"))
+            {
+                try
+                {
+                    return table.AsEnumerable().Where(p => p.Field<string>(column.ToString()).
+                        Equals(filter)).Select(p => p.Field<decimal>("Amount") > 0).Count();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message + ex.StackTrace);
+                    return -1;
+                }
+            }
+            return -1;
         }
     }
 }

@@ -187,7 +187,7 @@ namespace BudgetExecution
             try
             {
                 var filter = sender as MetroSetComboBox;
-                GridFundFilter.Tag = filter;
+                GridFundFilter.Tag = filter.SelectedItem.ToString();
                 var fund = filter.SelectedItem.ToString();
                 BindingSource.Filter = string.Format("FundName = '{0}'", GridFundFilter.SelectedItem.ToString());
                 lblCount.Text = GetCount(fund).ToString();
@@ -853,7 +853,7 @@ namespace BudgetExecution
             }
         }
 
-        private Dictionary<string, object> GetSelectedRowParameter(DataGridView dgv)
+        private Dictionary<string, object> GetSelectedRowDictionary(DataGridView dgv)
         {
             try
             {

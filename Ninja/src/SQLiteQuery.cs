@@ -88,7 +88,7 @@ namespace BudgetExecution
         public new SQLiteCommand UpdateCommand { get; set; }
 
         // METHODS
-        public new string GetSelectParameterString(Dictionary<string, object> param)
+        public string GetParameterStrings(Dictionary<string, object> param)
         {
             try
             {
@@ -149,7 +149,7 @@ namespace BudgetExecution
         {
             try
             {
-                return $"SELECT * FROM {table} WHERE {GetSelectParameterString(param)}";
+                return $"SELECT * FROM {table} WHERE {GetParameterStrings(param)}";
             }
             catch (Exception ex)
             {
@@ -268,7 +268,7 @@ namespace BudgetExecution
         {
             try
             {
-                SelectStatement = GetSelectParameterString(param);
+                SelectStatement = GetParameterStrings(param);
                 return new SQLiteCommand(SelectStatement, connection);
             }
             catch (Exception ex)

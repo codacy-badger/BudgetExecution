@@ -226,15 +226,6 @@
   <data name="chart_blue_530x" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>ninjaapplicationimages\chart-blue_530x.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Chart_Polar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>ninjaapplicationimages\chart polar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Chart_Radar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>ninjaapplicationimages\chart radar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Chart_Scatter" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>ninjaapplicationimages\chart scatter.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Chart_Types" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>ninjaapplicationimages\chart types.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -264,12 +255,6 @@
   </data>
   <data name="Circled_right___01" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>ninjaapplicationimages\circled right - 01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="City" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>ninjaapplicationimages\city.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="City_WF" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>ninjaapplicationimages\city-wf.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Cloud_Recycle" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>ninjaapplicationimages\cloud-recycle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -313,9 +298,6 @@
   <data name="Copy_01" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>ninjaapplicationimages\copy_01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Copy_02" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>ninjaapplicationimages\copy_02.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="CPU_01" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>ninjaapplicationimages\cpu-01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -325,29 +307,17 @@
   <data name="C_Sharp_02" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>ninjaapplicationimages\c sharp-02.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Database_Connection" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>ninjaapplicationimages\database connection.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Database_WF" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>ninjaapplicationimages\database-wf.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="DataHistogram_WF" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>ninjaapplicationimages\datahistogram-wf.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="DataSynchronize_WF" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>ninjaapplicationimages\datasynchronize-wf.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Data_Defragmentation" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>ninjaapplicationimages\data-defragmentation.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Data_Export" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>ninjaapplicationimages\data-export.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Data_Information" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>ninjaapplicationimages\data-information.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Data_Merge" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>ninjaapplicationimages\data-merge.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Data_Network_WF" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>ninjaapplicationimages\data network-wf.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -361,20 +331,8 @@
   <data name="Delete_04" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>ninjaapplicationimages\delete_04.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Delete_Column" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>ninjaapplicationimages\delete column.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Delete_Row" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>ninjaapplicationimages\delete row.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Despeckle" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>ninjaapplicationimages\despeckle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Diagram" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>ninjaapplicationimages\diagram.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Discussion_WF" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>ninjaapplicationimages\discussion-wf.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Document_Add" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>ninjaapplicationimages\document-add.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -403,29 +361,11 @@
   <data name="Expand_03_WF" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>ninjaapplicationimages\expand-03-wf.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="File_Format_BitMap" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>ninjaapplicationimages\file-format-bitmap.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="File_Format_GIF" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>ninjaapplicationimages\file-format-gif.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="File_Format_Mp3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>ninjaapplicationimages\file-format-mp3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="File_Format_PNG" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>ninjaapplicationimages\file-format-png.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="File_Format_PPT" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>ninjaapplicationimages\file-format-ppt.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="File_Format_ZIP" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>ninjaapplicationimages\file-format-zip.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="File_Format_ZIP_1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>ninjaapplicationimages\file-format-zip(1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Finance_04_WF" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>ninjaapplicationimages\finance-04-wf.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Folder_01" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>ninjaapplicationimages\folder-01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -436,17 +376,8 @@
   <data name="Folder_Add_02" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>ninjaapplicationimages\folder-add-02.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Folder_Add_1_WF" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>ninjaapplicationimages\folder add 1-wf.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Folder_Add_WF" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>ninjaapplicationimages\folder add-wf.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Folder_Download" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>ninjaapplicationimages\folder-download.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Folder_Download_WF" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>ninjaapplicationimages\folder download-wf.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Folder_Empty" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>ninjaapplicationimages\folder-empty.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -550,17 +481,8 @@
   <data name="MailBox_WF" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>ninjaapplicationimages\mailbox-wf.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="MailSync_WF" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>ninjaapplicationimages\mailsync-wf.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Mail_01" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>ninjaapplicationimages\mail-01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Mail_Box" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>ninjaapplicationimages\mail-box.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Mail_download" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>ninjaapplicationimages\mail download.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Mail_next" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>ninjaapplicationimages\mail next.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -568,38 +490,8 @@
   <data name="Mail_Send" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>ninjaapplicationimages\mail-send.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Mail_Upload_WF" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>ninjaapplicationimages\mail upload-wf.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Marketing_WF" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>ninjaapplicationimages\marketing-wf.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Media_Backward_02" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>ninjaapplicationimages\media backward_02.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Media_Control_02_WF" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>ninjaapplicationimages\media control-02-wf.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Media_Control_06_WF" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>ninjaapplicationimages\media control-06-wf.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Media_Control_07_WF" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>ninjaapplicationimages\media control-07-wf.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Media_Control_08_WF" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>ninjaapplicationimages\media control-08-wf.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Media_Fast_Forward" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>ninjaapplicationimages\media-fast-forward.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Media_Pause_WF" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>ninjaapplicationimages\media pause-wf.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Media_Play2_WF" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>ninjaapplicationimages\media play2-wf.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Media_Rewind" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>ninjaapplicationimages\media-rewind.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Microsoft_Excel_2013_01" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>ninjaapplicationimages\microsoft-excel-2013-01.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -610,29 +502,11 @@
   <data name="Microsoft_Excel_2013_02_1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>ninjaapplicationimages\microsoft-excel-2013-02(1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Money_Coin" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>ninjaapplicationimages\money-coin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Money_Credit_Card" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>ninjaapplicationimages\money-credit-card.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Money_Gold_WF" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>ninjaapplicationimages\money gold-wf.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Money_WF" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>ninjaapplicationimages\money-wf.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="MS_PowerPoint_2013" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>ninjaapplicationimages\ms powerpoint 2013.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="MS_System_Setting3_WF" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>ninjaapplicationimages\ms system setting3-wf.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Mug_02_WF" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>ninjaapplicationimages\mug-02-wf.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Multiple_Computers_WF" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>ninjaapplicationimages\multiple computers-wf.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Museum" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>ninjaapplicationimages\museum .png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -642,12 +516,6 @@
   </data>
   <data name="Network" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>ninjaapplicationimages\network.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Networks_WF" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>ninjaapplicationimages\networks-wf.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="New_Report" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>ninjaapplicationimages\new report.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="None" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>ninjaapplicationimages\none.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -669,9 +537,6 @@
   </data>
   <data name="Paid_Invoice_WF" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>ninjaapplicationimages\paid-invoice-wf.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Paste" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>ninjaapplicationimages\paste.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Payment_WF" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>ninjaapplicationimages\payment-wf.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -699,12 +564,6 @@
   </data>
   <data name="Reading_panel_WF" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>ninjaapplicationimages\reading panel-wf.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Recover_Deleted_Items" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>ninjaapplicationimages\recover-deleted items.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Recover_Deleted_Items_1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>ninjaapplicationimages\recover-deleted items(1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Reload" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>ninjaapplicationimages\reload.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -765,9 +624,6 @@
   </data>
   <data name="Timer_WF" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>ninjaapplicationimages\timer-wf.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Trash_Can_WF" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>ninjaapplicationimages\trash can-wf.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Trash_WF" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>ninjaapplicationimages\trash-wf.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
