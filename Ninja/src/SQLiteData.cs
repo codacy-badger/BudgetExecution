@@ -378,5 +378,35 @@ namespace BudgetExecution
         {
 
         }
+
+        private void AddButton_OnClick(object sender, EventArgs e)
+        {
+            try
+            {
+                var am = new AccountManager(Source.PRC, Provider.SQLite);
+                am.Show();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message + ex.StackTrace);
+            }
+        }
+
+        private void CopyButton_OnClick(object sender, EventArgs e)
+        {
+            try
+            {
+                var view = (DataRowView)BindingSource.Current;
+                var prc = new PRC(view.Row).GetDataFields();
+                var am = new AccountManager(Source.PRC, Provider.SQLite, prc);
+                am.Show();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message + ex.StackTrace);
+            }
+        }
     }
 }

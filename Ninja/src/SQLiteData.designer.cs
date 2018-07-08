@@ -65,22 +65,26 @@ namespace BudgetExecution
             this.SQLiteGrid = new System.Windows.Forms.DataGridView();
             this.Navigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
-            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
+            this.PreviousButton = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton6 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton7 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton8 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton9 = new System.Windows.Forms.ToolStripButton();
+            this.NextButton = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator8 = new System.Windows.Forms.ToolStripSeparator();
+            this.UpdateButton = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator11 = new System.Windows.Forms.ToolStripSeparator();
+            this.CopyButton = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator10 = new System.Windows.Forms.ToolStripSeparator();
+            this.RefreshButton = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator9 = new System.Windows.Forms.ToolStripSeparator();
+            this.AddButton = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton7 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton8 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton9 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
             this.metroPanel3 = new MetroFramework.Controls.MetroPanel();
             this.label2 = new MetroFramework.Controls.MetroLabel();
             this.Filter3 = new MetroSet_UI.Controls.MetroSetComboBox();
@@ -406,28 +410,32 @@ namespace BudgetExecution
             this.Navigator.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.Navigator.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.Navigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButton3,
+            this.PreviousButton,
             this.toolStripSeparator1,
             this.toolStripTextBox1,
             this.toolStripLabel1,
-            this.toolStripSeparator2,
-            this.toolStripButton4,
             this.toolStripSeparator3,
-            this.toolStripButton5,
+            this.NextButton,
+            this.toolStripSeparator8,
+            this.UpdateButton,
+            this.toolStripSeparator11,
+            this.CopyButton,
+            this.toolStripSeparator10,
+            this.RefreshButton,
+            this.toolStripSeparator9,
+            this.AddButton,
             this.toolStripSeparator4,
-            this.toolStripButton6,
-            this.toolStripSeparator5,
             this.toolStripButton7,
-            this.toolStripSeparator6,
+            this.toolStripSeparator5,
             this.toolStripButton8,
-            this.toolStripSeparator7,
+            this.toolStripSeparator6,
             this.toolStripButton9,
-            this.toolStripSeparator8});
+            this.toolStripSeparator7});
             this.Navigator.Location = new System.Drawing.Point(0, 650);
             this.Navigator.MoveFirstItem = null;
             this.Navigator.MoveLastItem = null;
-            this.Navigator.MoveNextItem = this.toolStripButton4;
-            this.Navigator.MovePreviousItem = this.toolStripButton3;
+            this.Navigator.MoveNextItem = this.NextButton;
+            this.Navigator.MovePreviousItem = this.PreviousButton;
             this.Navigator.Name = "Navigator";
             this.Navigator.PositionItem = this.toolStripTextBox1;
             this.Navigator.Size = new System.Drawing.Size(1112, 31);
@@ -442,14 +450,14 @@ namespace BudgetExecution
             this.toolStripLabel1.Text = "of {0}";
             this.toolStripLabel1.ToolTipText = "Total number of items";
             // 
-            // toolStripButton3
+            // PreviousButton
             // 
-            this.toolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.Image")));
-            this.toolStripButton3.Name = "toolStripButton3";
-            this.toolStripButton3.RightToLeftAutoMirrorImage = true;
-            this.toolStripButton3.Size = new System.Drawing.Size(28, 28);
-            this.toolStripButton3.Text = "Move previous";
+            this.PreviousButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.PreviousButton.Image = ((System.Drawing.Image)(resources.GetObject("PreviousButton.Image")));
+            this.PreviousButton.Name = "PreviousButton";
+            this.PreviousButton.RightToLeftAutoMirrorImage = true;
+            this.PreviousButton.Size = new System.Drawing.Size(28, 28);
+            this.PreviousButton.Text = "Move previous";
             // 
             // toolStripSeparator1
             // 
@@ -468,52 +476,80 @@ namespace BudgetExecution
             this.toolStripTextBox1.TextBoxTextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.toolStripTextBox1.ToolTipText = "Current position";
             // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 31);
-            // 
-            // toolStripButton4
-            // 
-            this.toolStripButton4.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton4.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton4.Image")));
-            this.toolStripButton4.Name = "toolStripButton4";
-            this.toolStripButton4.RightToLeftAutoMirrorImage = true;
-            this.toolStripButton4.Size = new System.Drawing.Size(28, 28);
-            this.toolStripButton4.Text = "Move next";
-            // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
             this.toolStripSeparator3.Size = new System.Drawing.Size(6, 31);
             // 
-            // toolStripButton5
+            // NextButton
             // 
-            this.toolStripButton5.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton5.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton5.Image")));
-            this.toolStripButton5.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton5.Name = "toolStripButton5";
-            this.toolStripButton5.Size = new System.Drawing.Size(28, 28);
-            this.toolStripButton5.Text = "toolStripButton1";
+            this.NextButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.NextButton.Image = ((System.Drawing.Image)(resources.GetObject("NextButton.Image")));
+            this.NextButton.Name = "NextButton";
+            this.NextButton.RightToLeftAutoMirrorImage = true;
+            this.NextButton.Size = new System.Drawing.Size(28, 28);
+            this.NextButton.Text = "Move next";
+            // 
+            // toolStripSeparator8
+            // 
+            this.toolStripSeparator8.Name = "toolStripSeparator8";
+            this.toolStripSeparator8.Size = new System.Drawing.Size(6, 31);
+            // 
+            // UpdateButton
+            // 
+            this.UpdateButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.UpdateButton.Image = ((System.Drawing.Image)(resources.GetObject("UpdateButton.Image")));
+            this.UpdateButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.UpdateButton.Name = "UpdateButton";
+            this.UpdateButton.Size = new System.Drawing.Size(28, 28);
+            this.UpdateButton.Text = "toolStripButton10";
+            // 
+            // toolStripSeparator11
+            // 
+            this.toolStripSeparator11.Name = "toolStripSeparator11";
+            this.toolStripSeparator11.Size = new System.Drawing.Size(6, 31);
+            // 
+            // CopyButton
+            // 
+            this.CopyButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.CopyButton.Image = ((System.Drawing.Image)(resources.GetObject("CopyButton.Image")));
+            this.CopyButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.CopyButton.Name = "CopyButton";
+            this.CopyButton.Size = new System.Drawing.Size(28, 28);
+            this.CopyButton.Text = "toolStripButton11";
+            // 
+            // toolStripSeparator10
+            // 
+            this.toolStripSeparator10.Name = "toolStripSeparator10";
+            this.toolStripSeparator10.Size = new System.Drawing.Size(6, 31);
+            // 
+            // RefreshButton
+            // 
+            this.RefreshButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.RefreshButton.Image = ((System.Drawing.Image)(resources.GetObject("RefreshButton.Image")));
+            this.RefreshButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.RefreshButton.Name = "RefreshButton";
+            this.RefreshButton.Size = new System.Drawing.Size(28, 28);
+            this.RefreshButton.Text = "toolStripButton1";
+            // 
+            // toolStripSeparator9
+            // 
+            this.toolStripSeparator9.Name = "toolStripSeparator9";
+            this.toolStripSeparator9.Size = new System.Drawing.Size(6, 31);
+            // 
+            // AddButton
+            // 
+            this.AddButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.AddButton.Image = ((System.Drawing.Image)(resources.GetObject("AddButton.Image")));
+            this.AddButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.AddButton.Name = "AddButton";
+            this.AddButton.Size = new System.Drawing.Size(28, 28);
+            this.AddButton.Text = "toolStripButton2";
             // 
             // toolStripSeparator4
             // 
             this.toolStripSeparator4.Name = "toolStripSeparator4";
             this.toolStripSeparator4.Size = new System.Drawing.Size(6, 31);
-            // 
-            // toolStripButton6
-            // 
-            this.toolStripButton6.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton6.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton6.Image")));
-            this.toolStripButton6.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton6.Name = "toolStripButton6";
-            this.toolStripButton6.Size = new System.Drawing.Size(28, 28);
-            this.toolStripButton6.Text = "toolStripButton2";
-            // 
-            // toolStripSeparator5
-            // 
-            this.toolStripSeparator5.Name = "toolStripSeparator5";
-            this.toolStripSeparator5.Size = new System.Drawing.Size(6, 31);
             // 
             // toolStripButton7
             // 
@@ -524,10 +560,10 @@ namespace BudgetExecution
             this.toolStripButton7.Size = new System.Drawing.Size(28, 28);
             this.toolStripButton7.Text = "toolStripButton4";
             // 
-            // toolStripSeparator6
+            // toolStripSeparator5
             // 
-            this.toolStripSeparator6.Name = "toolStripSeparator6";
-            this.toolStripSeparator6.Size = new System.Drawing.Size(6, 31);
+            this.toolStripSeparator5.Name = "toolStripSeparator5";
+            this.toolStripSeparator5.Size = new System.Drawing.Size(6, 31);
             // 
             // toolStripButton8
             // 
@@ -538,10 +574,10 @@ namespace BudgetExecution
             this.toolStripButton8.Size = new System.Drawing.Size(28, 28);
             this.toolStripButton8.Text = "toolStripButton3";
             // 
-            // toolStripSeparator7
+            // toolStripSeparator6
             // 
-            this.toolStripSeparator7.Name = "toolStripSeparator7";
-            this.toolStripSeparator7.Size = new System.Drawing.Size(6, 31);
+            this.toolStripSeparator6.Name = "toolStripSeparator6";
+            this.toolStripSeparator6.Size = new System.Drawing.Size(6, 31);
             // 
             // toolStripButton9
             // 
@@ -552,10 +588,10 @@ namespace BudgetExecution
             this.toolStripButton9.Size = new System.Drawing.Size(28, 28);
             this.toolStripButton9.Text = "toolStripButton9";
             // 
-            // toolStripSeparator8
+            // toolStripSeparator7
             // 
-            this.toolStripSeparator8.Name = "toolStripSeparator8";
-            this.toolStripSeparator8.Size = new System.Drawing.Size(6, 31);
+            this.toolStripSeparator7.Name = "toolStripSeparator7";
+            this.toolStripSeparator7.Size = new System.Drawing.Size(6, 31);
             // 
             // metroPanel3
             // 
@@ -896,9 +932,9 @@ namespace BudgetExecution
             this.CaptionForeColor = System.Drawing.Color.Black;
             captionImage1.BackColor = System.Drawing.Color.Black;
             captionImage1.Image = ((System.Drawing.Image)(resources.GetObject("captionImage1.Image")));
-            captionImage1.Location = new System.Drawing.Point(30, 10);
+            captionImage1.Location = new System.Drawing.Point(10, 10);
             captionImage1.Name = "CaptionImage1";
-            captionImage1.Size = new System.Drawing.Size(50, 35);
+            captionImage1.Size = new System.Drawing.Size(30, 20);
             this.CaptionImages.Add(captionImage1);
             this.ClientSize = new System.Drawing.Size(1645, 934);
             this.Controls.Add(this.metroPanel5);
@@ -954,15 +990,14 @@ namespace BudgetExecution
         private System.Windows.Forms.DataGridView SQLiteGrid;
         private System.Windows.Forms.BindingNavigator Navigator;
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
-        private System.Windows.Forms.ToolStripButton toolStripButton3;
+        private System.Windows.Forms.ToolStripButton PreviousButton;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripTextBox toolStripTextBox1;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
-        private System.Windows.Forms.ToolStripButton toolStripButton4;
+        private System.Windows.Forms.ToolStripButton NextButton;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
-        private System.Windows.Forms.ToolStripButton toolStripButton5;
+        private System.Windows.Forms.ToolStripButton RefreshButton;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
-        private System.Windows.Forms.ToolStripButton toolStripButton6;
+        private System.Windows.Forms.ToolStripButton AddButton;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
         private System.Windows.Forms.ToolStripButton toolStripButton7;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator6;
@@ -984,12 +1019,17 @@ namespace BudgetExecution
         private MetroFramework.Controls.MetroPanel metroPanel4;
         private MetroFramework.Controls.MetroLabel metroLabel3;
         private System.Windows.Forms.ToolStripButton toolStripButton9;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator8;
         private MetroFramework.Controls.MetroLabel metroLabel5;
         private MetroFramework.Controls.MetroLabel metroLabel4;
         private MetroFramework.Controls.MetroPanel metroPanel5;
         private Syncfusion.Windows.Forms.Tools.TabControlAdv tabControlAdv1;
         private Syncfusion.Windows.Forms.Tools.TabPageAdv tabPageAdv1;
         private Syncfusion.Windows.Forms.Tools.TabPageAdv tabPageAdv2;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator8;
+        private System.Windows.Forms.ToolStripButton UpdateButton;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator11;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator10;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator9;
+        private System.Windows.Forms.ToolStripButton CopyButton;
     }
 }

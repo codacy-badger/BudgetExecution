@@ -67,6 +67,7 @@ namespace BudgetExecution
             this.BackColor = System.Drawing.Color.Black;
             this.BorderColor = System.Drawing.SystemColors.MenuHighlight;
             this.CaptionBarColor = System.Drawing.Color.Black;
+            this.CaptionBarHeight = 50;
             this.CaptionForeColor = System.Drawing.Color.Black;
             captionImage1.BackColor = System.Drawing.Color.Black;
             captionImage1.Image = ((System.Drawing.Image)(resources.GetObject("captionImage1.Image")));
@@ -74,7 +75,7 @@ namespace BudgetExecution
             captionImage1.Name = "CaptionImage1";
             captionImage1.Size = new System.Drawing.Size(30, 30);
             this.CaptionImages.Add(captionImage1);
-            this.ClientSize = new System.Drawing.Size(619, 614);
+            this.ClientSize = new System.Drawing.Size(619, 605);
             this.Controls.Add(this.calculatorControl1);
             this.MetroColor = System.Drawing.Color.Black;
             this.Name = "CalculatorForm";

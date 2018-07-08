@@ -100,6 +100,7 @@ namespace BudgetExecution
                     pdfdr.Show();
                     break;
             }
+            this.Close();
         }
     }
 }

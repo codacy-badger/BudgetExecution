@@ -68,7 +68,6 @@ namespace BudgetExecution
             ProgramProjectCode = Code.Substring(4, 2);
             Org = DbRow["Org"].ToString();
             Fund = DbRow["Fund"].ToString();
-            FundName = DbRow["FundName"].ToString();
             ProgramProjectName = DbRow["ProgramProjectName"].ToString();
             ID = int.Parse(DbRow["ID"].ToString());
             NPM = DbRow["NPM"].ToString();

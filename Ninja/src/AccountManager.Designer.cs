@@ -35,6 +35,10 @@
             this.UpdateTab = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
             this.metroSetPanel2 = new MetroSet_UI.Controls.MetroSetPanel();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.metroSetTextBox4 = new MetroSet_UI.Controls.MetroSetTextBox();
+            this.metroSetTextBox3 = new MetroSet_UI.Controls.MetroSetTextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.metroSetTextBox2 = new MetroSet_UI.Controls.MetroSetTextBox();
@@ -72,14 +76,18 @@
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.metroSetTextBox6 = new MetroSet_UI.Controls.MetroSetTextBox();
+            this.metroSetTextBox5 = new MetroSet_UI.Controls.MetroSetTextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.Amount1 = new MetroSet_UI.Controls.MetroSetTextBox();
             this.Amount2 = new MetroSet_UI.Controls.MetroSetTextBox();
-            this.AddTab = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
-            this.label1 = new System.Windows.Forms.Label();
+            this.AddNewTab = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
             this.metroSetPanel1 = new MetroSet_UI.Controls.MetroSetPanel();
             this.RecorDataGroupBox = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.RcComboBox = new MetroSet_UI.Controls.MetroSetComboBox();
             this.metroSetComboBox6 = new MetroSet_UI.Controls.MetroSetComboBox();
@@ -108,13 +116,6 @@
             this.metroSetTextBox11 = new MetroSet_UI.Controls.MetroSetTextBox();
             this.metroSetTextBox12 = new MetroSet_UI.Controls.MetroSetTextBox();
             this.BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.metroSetTextBox3 = new MetroSet_UI.Controls.MetroSetTextBox();
-            this.metroSetTextBox4 = new MetroSet_UI.Controls.MetroSetTextBox();
-            this.metroSetTextBox5 = new MetroSet_UI.Controls.MetroSetTextBox();
-            this.metroSetTextBox6 = new MetroSet_UI.Controls.MetroSetTextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.AccountTabControl)).BeginInit();
             this.AccountTabControl.SuspendLayout();
             this.UpdateTab.SuspendLayout();
@@ -124,7 +125,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.AccountNavigator)).BeginInit();
             this.AccountNavigator.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            this.AddTab.SuspendLayout();
+            this.AddNewTab.SuspendLayout();
             this.metroSetPanel1.SuspendLayout();
             this.RecorDataGroupBox.SuspendLayout();
             this.groupBox6.SuspendLayout();
@@ -142,7 +143,7 @@
             this.AccountTabControl.CloseButtonHoverForeColor = System.Drawing.Color.Black;
             this.AccountTabControl.CloseButtonPressedForeColor = System.Drawing.Color.Black;
             this.AccountTabControl.Controls.Add(this.UpdateTab);
-            this.AccountTabControl.Controls.Add(this.AddTab);
+            this.AccountTabControl.Controls.Add(this.AddNewTab);
             this.AccountTabControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.AccountTabControl.FocusOnTabClick = false;
             this.AccountTabControl.InactiveTabColor = System.Drawing.Color.Transparent;
@@ -157,7 +158,6 @@
             this.AccountTabControl.TabIndex = 1;
             this.AccountTabControl.TabPanelBackColor = System.Drawing.Color.Black;
             this.AccountTabControl.TabStyle = typeof(Syncfusion.Windows.Forms.Tools.TabRendererMetro);
-            this.AccountTabControl.SelectedIndexChanged += new System.EventHandler(this.TabControlAdv1_SelectedIndexChanged);
             // 
             // UpdateTab
             // 
@@ -181,9 +181,10 @@
             this.metroSetPanel2.Controls.Add(this.groupBox4);
             this.metroSetPanel2.Controls.Add(this.groupBox3);
             this.metroSetPanel2.Controls.Add(this.groupBox2);
-            this.metroSetPanel2.Location = new System.Drawing.Point(54, 13);
+            this.metroSetPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.metroSetPanel2.Location = new System.Drawing.Point(0, 0);
             this.metroSetPanel2.Name = "metroSetPanel2";
-            this.metroSetPanel2.Size = new System.Drawing.Size(1156, 471);
+            this.metroSetPanel2.Size = new System.Drawing.Size(1276, 483);
             this.metroSetPanel2.Style = MetroSet_UI.Design.Style.Dark;
             this.metroSetPanel2.StyleManager = null;
             this.metroSetPanel2.TabIndex = 19;
@@ -215,12 +216,86 @@
             this.groupBox4.Controls.Add(this.Fund);
             this.groupBox4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox4.ForeColor = System.Drawing.SystemColors.Info;
-            this.groupBox4.Location = new System.Drawing.Point(27, 25);
+            this.groupBox4.Location = new System.Drawing.Point(85, 25);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(1106, 179);
+            this.groupBox4.Size = new System.Drawing.Size(1134, 189);
             this.groupBox4.TabIndex = 18;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Account Data";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(757, 118);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(69, 40);
+            this.label4.TabIndex = 19;
+            this.label4.Text = "Program\r\nArea\r\n";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(757, 47);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(69, 40);
+            this.label3.TabIndex = 18;
+            this.label3.Text = "Program\r\nProject";
+            // 
+            // metroSetTextBox4
+            // 
+            this.metroSetTextBox4.AutoCompleteCustomSource = null;
+            this.metroSetTextBox4.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.metroSetTextBox4.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.metroSetTextBox4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.metroSetTextBox4.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.metroSetTextBox4.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.metroSetTextBox4.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.metroSetTextBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.metroSetTextBox4.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.metroSetTextBox4.Image = null;
+            this.metroSetTextBox4.Lines = null;
+            this.metroSetTextBox4.Location = new System.Drawing.Point(832, 118);
+            this.metroSetTextBox4.MaxLength = 32767;
+            this.metroSetTextBox4.Multiline = false;
+            this.metroSetTextBox4.Name = "metroSetTextBox4";
+            this.metroSetTextBox4.ReadOnly = false;
+            this.metroSetTextBox4.Size = new System.Drawing.Size(255, 37);
+            this.metroSetTextBox4.Style = MetroSet_UI.Design.Style.Dark;
+            this.metroSetTextBox4.StyleManager = null;
+            this.metroSetTextBox4.TabIndex = 17;
+            this.metroSetTextBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.metroSetTextBox4.ThemeAuthor = "Narwin";
+            this.metroSetTextBox4.ThemeName = "MetroDark";
+            this.metroSetTextBox4.UseSystemPasswordChar = false;
+            this.metroSetTextBox4.WatermarkText = "";
+            // 
+            // metroSetTextBox3
+            // 
+            this.metroSetTextBox3.AutoCompleteCustomSource = null;
+            this.metroSetTextBox3.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.metroSetTextBox3.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.metroSetTextBox3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.metroSetTextBox3.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.metroSetTextBox3.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.metroSetTextBox3.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.metroSetTextBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.metroSetTextBox3.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.metroSetTextBox3.Image = null;
+            this.metroSetTextBox3.Lines = null;
+            this.metroSetTextBox3.Location = new System.Drawing.Point(832, 47);
+            this.metroSetTextBox3.MaxLength = 32767;
+            this.metroSetTextBox3.Multiline = false;
+            this.metroSetTextBox3.Name = "metroSetTextBox3";
+            this.metroSetTextBox3.ReadOnly = false;
+            this.metroSetTextBox3.Size = new System.Drawing.Size(251, 37);
+            this.metroSetTextBox3.Style = MetroSet_UI.Design.Style.Dark;
+            this.metroSetTextBox3.StyleManager = null;
+            this.metroSetTextBox3.TabIndex = 16;
+            this.metroSetTextBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.metroSetTextBox3.ThemeAuthor = "Narwin";
+            this.metroSetTextBox3.ThemeName = "MetroDark";
+            this.metroSetTextBox3.UseSystemPasswordChar = false;
+            this.metroSetTextBox3.WatermarkText = "";
             // 
             // label9
             // 
@@ -250,7 +325,7 @@
             this.metroSetTextBox2.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.metroSetTextBox2.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.metroSetTextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.metroSetTextBox2.HoverColor = System.Drawing.Color.DodgerBlue;
+            this.metroSetTextBox2.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.metroSetTextBox2.Image = null;
             this.metroSetTextBox2.Lines = null;
             this.metroSetTextBox2.Location = new System.Drawing.Point(83, 118);
@@ -262,7 +337,6 @@
             this.metroSetTextBox2.Style = MetroSet_UI.Design.Style.Dark;
             this.metroSetTextBox2.StyleManager = null;
             this.metroSetTextBox2.TabIndex = 13;
-            this.metroSetTextBox2.Text = "metroSetTextBox1";
             this.metroSetTextBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.metroSetTextBox2.ThemeAuthor = "Narwin";
             this.metroSetTextBox2.ThemeName = "MetroDark";
@@ -279,7 +353,7 @@
             this.metroSetTextBox1.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.metroSetTextBox1.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.metroSetTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.metroSetTextBox1.HoverColor = System.Drawing.Color.DodgerBlue;
+            this.metroSetTextBox1.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.metroSetTextBox1.Image = null;
             this.metroSetTextBox1.Lines = null;
             this.metroSetTextBox1.Location = new System.Drawing.Point(83, 45);
@@ -291,7 +365,6 @@
             this.metroSetTextBox1.Style = MetroSet_UI.Design.Style.Dark;
             this.metroSetTextBox1.StyleManager = null;
             this.metroSetTextBox1.TabIndex = 12;
-            this.metroSetTextBox1.Text = "metroSetTextBox1";
             this.metroSetTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.metroSetTextBox1.ThemeAuthor = "Narwin";
             this.metroSetTextBox1.ThemeName = "MetroDark";
@@ -362,7 +435,7 @@
             this.BFY.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.BFY.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.BFY.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.BFY.HoverColor = System.Drawing.Color.DodgerBlue;
+            this.BFY.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.BFY.Image = null;
             this.BFY.Lines = null;
             this.BFY.Location = new System.Drawing.Point(226, 45);
@@ -374,7 +447,6 @@
             this.BFY.Style = MetroSet_UI.Design.Style.Dark;
             this.BFY.StyleManager = null;
             this.BFY.TabIndex = 0;
-            this.BFY.Text = "metroSetTextBox1";
             this.BFY.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.BFY.ThemeAuthor = "Narwin";
             this.BFY.ThemeName = "MetroDark";
@@ -391,7 +463,7 @@
             this.BOC.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.BOC.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.BOC.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.BOC.HoverColor = System.Drawing.Color.DodgerBlue;
+            this.BOC.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.BOC.Image = null;
             this.BOC.Lines = null;
             this.BOC.Location = new System.Drawing.Point(605, 118);
@@ -419,7 +491,7 @@
             this.RC.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.RC.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.RC.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.RC.HoverColor = System.Drawing.Color.DodgerBlue;
+            this.RC.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.RC.Image = null;
             this.RC.Lines = null;
             this.RC.Location = new System.Drawing.Point(226, 118);
@@ -431,7 +503,6 @@
             this.RC.Style = MetroSet_UI.Design.Style.Dark;
             this.RC.StyleManager = null;
             this.RC.TabIndex = 3;
-            this.RC.Text = "metroSetTextBox1";
             this.RC.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.RC.ThemeAuthor = "Narwin";
             this.RC.ThemeName = "MetroDark";
@@ -448,7 +519,7 @@
             this.Org.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.Org.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.Org.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.Org.HoverColor = System.Drawing.Color.DodgerBlue;
+            this.Org.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.Org.Image = null;
             this.Org.Lines = null;
             this.Org.Location = new System.Drawing.Point(605, 45);
@@ -476,7 +547,7 @@
             this.Code.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.Code.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.Code.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.Code.HoverColor = System.Drawing.Color.DodgerBlue;
+            this.Code.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.Code.Image = null;
             this.Code.Lines = null;
             this.Code.Location = new System.Drawing.Point(395, 118);
@@ -488,7 +559,6 @@
             this.Code.Style = MetroSet_UI.Design.Style.Dark;
             this.Code.StyleManager = null;
             this.Code.TabIndex = 4;
-            this.Code.Text = "metroSetTextBox1";
             this.Code.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.Code.ThemeAuthor = "Narwin";
             this.Code.ThemeName = "MetroDark";
@@ -505,7 +575,7 @@
             this.Fund.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.Fund.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.Fund.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.Fund.HoverColor = System.Drawing.Color.DodgerBlue;
+            this.Fund.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.Fund.Image = null;
             this.Fund.Lines = null;
             this.Fund.Location = new System.Drawing.Point(395, 45);
@@ -517,7 +587,6 @@
             this.Fund.Style = MetroSet_UI.Design.Style.Dark;
             this.Fund.StyleManager = null;
             this.Fund.TabIndex = 1;
-            this.Fund.Text = "metroSetTextBox1";
             this.Fund.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.Fund.ThemeAuthor = "Narwin";
             this.Fund.ThemeName = "MetroDark";
@@ -531,9 +600,9 @@
             this.groupBox3.Controls.Add(this.button3);
             this.groupBox3.Controls.Add(this.AccountNavigator);
             this.groupBox3.ForeColor = System.Drawing.SystemColors.Info;
-            this.groupBox3.Location = new System.Drawing.Point(673, 247);
+            this.groupBox3.Location = new System.Drawing.Point(731, 259);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(460, 170);
+            this.groupBox3.Size = new System.Drawing.Size(488, 184);
             this.groupBox3.TabIndex = 17;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "SQL / Navigation";
@@ -549,7 +618,7 @@
             this.button4.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
             this.button4.Location = new System.Drawing.Point(231, 48);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(120, 54);
+            this.button4.Size = new System.Drawing.Size(149, 54);
             this.button4.TabIndex = 15;
             this.button4.Text = "Remove";
             this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -566,7 +635,7 @@
             this.button3.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
             this.button3.Location = new System.Drawing.Point(63, 48);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(98, 54);
+            this.button3.Size = new System.Drawing.Size(130, 54);
             this.button3.TabIndex = 14;
             this.button3.Text = "Save";
             this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -597,14 +666,14 @@
             this.toolStripButton1,
             this.toolStripSeparator4,
             this.toolStripButton2});
-            this.AccountNavigator.Location = new System.Drawing.Point(3, 136);
+            this.AccountNavigator.Location = new System.Drawing.Point(3, 150);
             this.AccountNavigator.MoveFirstItem = null;
             this.AccountNavigator.MoveLastItem = null;
             this.AccountNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
             this.AccountNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.AccountNavigator.Name = "AccountNavigator";
             this.AccountNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.AccountNavigator.Size = new System.Drawing.Size(454, 31);
+            this.AccountNavigator.Size = new System.Drawing.Size(482, 31);
             this.AccountNavigator.TabIndex = 13;
             this.AccountNavigator.Text = "bindingNavigator1";
             // 
@@ -731,6 +800,7 @@
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.Black;
+            this.groupBox2.Controls.Add(this.label11);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.metroSetTextBox6);
             this.groupBox2.Controls.Add(this.metroSetTextBox5);
@@ -740,12 +810,86 @@
             this.groupBox2.Controls.Add(this.Amount2);
             this.groupBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox2.ForeColor = System.Drawing.SystemColors.Info;
-            this.groupBox2.Location = new System.Drawing.Point(27, 247);
+            this.groupBox2.Location = new System.Drawing.Point(85, 259);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(628, 167);
+            this.groupBox2.Size = new System.Drawing.Size(599, 184);
             this.groupBox2.TabIndex = 8;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Allocation";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(54, 119);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(40, 20);
+            this.label11.TabIndex = 13;
+            this.label11.Text = "New";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(51, 48);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(43, 20);
+            this.label2.TabIndex = 12;
+            this.label2.Text = "BOC";
+            // 
+            // metroSetTextBox6
+            // 
+            this.metroSetTextBox6.AutoCompleteCustomSource = null;
+            this.metroSetTextBox6.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.metroSetTextBox6.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.metroSetTextBox6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.metroSetTextBox6.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.metroSetTextBox6.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.metroSetTextBox6.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.metroSetTextBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.metroSetTextBox6.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.metroSetTextBox6.Image = null;
+            this.metroSetTextBox6.Lines = null;
+            this.metroSetTextBox6.Location = new System.Drawing.Point(106, 102);
+            this.metroSetTextBox6.MaxLength = 32767;
+            this.metroSetTextBox6.Multiline = false;
+            this.metroSetTextBox6.Name = "metroSetTextBox6";
+            this.metroSetTextBox6.ReadOnly = false;
+            this.metroSetTextBox6.Size = new System.Drawing.Size(78, 37);
+            this.metroSetTextBox6.Style = MetroSet_UI.Design.Style.Dark;
+            this.metroSetTextBox6.StyleManager = null;
+            this.metroSetTextBox6.TabIndex = 10;
+            this.metroSetTextBox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.metroSetTextBox6.ThemeAuthor = "Narwin";
+            this.metroSetTextBox6.ThemeName = "MetroDark";
+            this.metroSetTextBox6.UseSystemPasswordChar = false;
+            this.metroSetTextBox6.WatermarkText = "";
+            // 
+            // metroSetTextBox5
+            // 
+            this.metroSetTextBox5.AutoCompleteCustomSource = null;
+            this.metroSetTextBox5.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.metroSetTextBox5.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.metroSetTextBox5.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.metroSetTextBox5.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.metroSetTextBox5.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.metroSetTextBox5.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.metroSetTextBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.metroSetTextBox5.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.metroSetTextBox5.Image = null;
+            this.metroSetTextBox5.Lines = null;
+            this.metroSetTextBox5.Location = new System.Drawing.Point(106, 31);
+            this.metroSetTextBox5.MaxLength = 32767;
+            this.metroSetTextBox5.Multiline = false;
+            this.metroSetTextBox5.Name = "metroSetTextBox5";
+            this.metroSetTextBox5.ReadOnly = false;
+            this.metroSetTextBox5.Size = new System.Drawing.Size(78, 37);
+            this.metroSetTextBox5.Style = MetroSet_UI.Design.Style.Dark;
+            this.metroSetTextBox5.StyleManager = null;
+            this.metroSetTextBox5.TabIndex = 9;
+            this.metroSetTextBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.metroSetTextBox5.ThemeAuthor = "Narwin";
+            this.metroSetTextBox5.ThemeName = "MetroDark";
+            this.metroSetTextBox5.UseSystemPasswordChar = false;
+            this.metroSetTextBox5.WatermarkText = "";
             // 
             // label8
             // 
@@ -775,7 +919,7 @@
             this.Amount1.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.Amount1.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.Amount1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.Amount1.HoverColor = System.Drawing.Color.DodgerBlue;
+            this.Amount1.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.Amount1.Image = null;
             this.Amount1.Lines = null;
             this.Amount1.Location = new System.Drawing.Point(359, 31);
@@ -783,7 +927,7 @@
             this.Amount1.Multiline = false;
             this.Amount1.Name = "Amount1";
             this.Amount1.ReadOnly = false;
-            this.Amount1.Size = new System.Drawing.Size(145, 37);
+            this.Amount1.Size = new System.Drawing.Size(144, 37);
             this.Amount1.Style = MetroSet_UI.Design.Style.Dark;
             this.Amount1.StyleManager = null;
             this.Amount1.TabIndex = 0;
@@ -803,7 +947,7 @@
             this.Amount2.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.Amount2.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.Amount2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.Amount2.HoverColor = System.Drawing.Color.DodgerBlue;
+            this.Amount2.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.Amount2.Image = null;
             this.Amount2.Lines = null;
             this.Amount2.Location = new System.Drawing.Point(359, 102);
@@ -821,30 +965,19 @@
             this.Amount2.UseSystemPasswordChar = false;
             this.Amount2.WatermarkText = "";
             // 
-            // AddTab
+            // AddNewTab
             // 
-            this.AddTab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.AddTab.Controls.Add(this.label1);
-            this.AddTab.Controls.Add(this.metroSetPanel1);
-            this.AddTab.Image = null;
-            this.AddTab.ImageSize = new System.Drawing.Size(16, 16);
-            this.AddTab.Location = new System.Drawing.Point(0, 48);
-            this.AddTab.Name = "AddTab";
-            this.AddTab.ShowCloseButton = true;
-            this.AddTab.Size = new System.Drawing.Size(1276, 483);
-            this.AddTab.TabIndex = 2;
-            this.AddTab.Text = "Add New Account";
-            this.AddTab.ThemesEnabled = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.SystemColors.Info;
-            this.label1.Location = new System.Drawing.Point(1218, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(34, 20);
-            this.label1.TabIndex = 23;
-            this.label1.Text = "ID: ";
+            this.AddNewTab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.AddNewTab.Controls.Add(this.metroSetPanel1);
+            this.AddNewTab.Image = null;
+            this.AddNewTab.ImageSize = new System.Drawing.Size(16, 16);
+            this.AddNewTab.Location = new System.Drawing.Point(0, 48);
+            this.AddNewTab.Name = "AddNewTab";
+            this.AddNewTab.ShowCloseButton = true;
+            this.AddNewTab.Size = new System.Drawing.Size(1276, 483);
+            this.AddNewTab.TabIndex = 2;
+            this.AddNewTab.Text = "Add New Account";
+            this.AddNewTab.ThemesEnabled = false;
             // 
             // metroSetPanel1
             // 
@@ -854,9 +987,10 @@
             this.metroSetPanel1.Controls.Add(this.RecorDataGroupBox);
             this.metroSetPanel1.Controls.Add(this.groupBox6);
             this.metroSetPanel1.Controls.Add(this.groupBox5);
-            this.metroSetPanel1.Location = new System.Drawing.Point(38, 9);
+            this.metroSetPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.metroSetPanel1.Location = new System.Drawing.Point(0, 0);
             this.metroSetPanel1.Name = "metroSetPanel1";
-            this.metroSetPanel1.Size = new System.Drawing.Size(1174, 471);
+            this.metroSetPanel1.Size = new System.Drawing.Size(1276, 483);
             this.metroSetPanel1.Style = MetroSet_UI.Design.Style.Dark;
             this.metroSetPanel1.StyleManager = null;
             this.metroSetPanel1.TabIndex = 22;
@@ -866,6 +1000,7 @@
             // RecorDataGroupBox
             // 
             this.RecorDataGroupBox.BackColor = System.Drawing.Color.Black;
+            this.RecorDataGroupBox.Controls.Add(this.label1);
             this.RecorDataGroupBox.Controls.Add(this.label5);
             this.RecorDataGroupBox.Controls.Add(this.RcComboBox);
             this.RecorDataGroupBox.Controls.Add(this.metroSetComboBox6);
@@ -884,17 +1019,27 @@
             this.RecorDataGroupBox.Controls.Add(this.FundComboBox);
             this.RecorDataGroupBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.RecorDataGroupBox.ForeColor = System.Drawing.SystemColors.Info;
-            this.RecorDataGroupBox.Location = new System.Drawing.Point(71, 48);
+            this.RecorDataGroupBox.Location = new System.Drawing.Point(120, 45);
             this.RecorDataGroupBox.Name = "RecorDataGroupBox";
-            this.RecorDataGroupBox.Size = new System.Drawing.Size(1049, 181);
+            this.RecorDataGroupBox.Size = new System.Drawing.Size(1049, 191);
             this.RecorDataGroupBox.TabIndex = 19;
             this.RecorDataGroupBox.TabStop = false;
             this.RecorDataGroupBox.Text = "Account Data";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.SystemColors.Info;
+            this.label1.Location = new System.Drawing.Point(957, 22);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(34, 20);
+            this.label1.TabIndex = 23;
+            this.label1.Text = "ID: ";
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(7, 118);
+            this.label5.Location = new System.Drawing.Point(66, 114);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(58, 40);
             this.label5.TabIndex = 19;
@@ -915,12 +1060,12 @@
             this.RcComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.RcComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.RcComboBox.FormattingEnabled = true;
-            this.RcComboBox.ItemHeight = 30;
-            this.RcComboBox.Location = new System.Drawing.Point(882, 122);
+            this.RcComboBox.ItemHeight = 25;
+            this.RcComboBox.Location = new System.Drawing.Point(748, 119);
             this.RcComboBox.Name = "RcComboBox";
             this.RcComboBox.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.RcComboBox.SelectedItemForeColor = System.Drawing.Color.White;
-            this.RcComboBox.Size = new System.Drawing.Size(72, 36);
+            this.RcComboBox.Size = new System.Drawing.Size(72, 31);
             this.RcComboBox.Style = MetroSet_UI.Design.Style.Dark;
             this.RcComboBox.StyleManager = null;
             this.RcComboBox.TabIndex = 18;
@@ -942,12 +1087,12 @@
             this.metroSetComboBox6.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.metroSetComboBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.metroSetComboBox6.FormattingEnabled = true;
-            this.metroSetComboBox6.ItemHeight = 30;
-            this.metroSetComboBox6.Location = new System.Drawing.Point(95, 114);
+            this.metroSetComboBox6.ItemHeight = 25;
+            this.metroSetComboBox6.Location = new System.Drawing.Point(143, 114);
             this.metroSetComboBox6.Name = "metroSetComboBox6";
             this.metroSetComboBox6.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.metroSetComboBox6.SelectedItemForeColor = System.Drawing.Color.White;
-            this.metroSetComboBox6.Size = new System.Drawing.Size(81, 36);
+            this.metroSetComboBox6.Size = new System.Drawing.Size(81, 31);
             this.metroSetComboBox6.Style = MetroSet_UI.Design.Style.Dark;
             this.metroSetComboBox6.StyleManager = null;
             this.metroSetComboBox6.TabIndex = 13;
@@ -969,15 +1114,15 @@
             this.LevelComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.LevelComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.LevelComboBox.FormattingEnabled = true;
-            this.LevelComboBox.ItemHeight = 30;
+            this.LevelComboBox.ItemHeight = 25;
             this.LevelComboBox.Items.AddRange(new object[] {
             "7",
             "8"});
-            this.LevelComboBox.Location = new System.Drawing.Point(95, 49);
+            this.LevelComboBox.Location = new System.Drawing.Point(143, 49);
             this.LevelComboBox.Name = "LevelComboBox";
             this.LevelComboBox.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.LevelComboBox.SelectedItemForeColor = System.Drawing.Color.White;
-            this.LevelComboBox.Size = new System.Drawing.Size(81, 36);
+            this.LevelComboBox.Size = new System.Drawing.Size(81, 31);
             this.LevelComboBox.Style = MetroSet_UI.Design.Style.Dark;
             this.LevelComboBox.StyleManager = null;
             this.LevelComboBox.TabIndex = 17;
@@ -999,12 +1144,12 @@
             this.YearComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.YearComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.YearComboBox.FormattingEnabled = true;
-            this.YearComboBox.ItemHeight = 30;
-            this.YearComboBox.Location = new System.Drawing.Point(321, 41);
+            this.YearComboBox.ItemHeight = 25;
+            this.YearComboBox.Location = new System.Drawing.Point(321, 49);
             this.YearComboBox.Name = "YearComboBox";
             this.YearComboBox.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.YearComboBox.SelectedItemForeColor = System.Drawing.Color.White;
-            this.YearComboBox.Size = new System.Drawing.Size(93, 36);
+            this.YearComboBox.Size = new System.Drawing.Size(93, 31);
             this.YearComboBox.Style = MetroSet_UI.Design.Style.Dark;
             this.YearComboBox.StyleManager = null;
             this.YearComboBox.TabIndex = 16;
@@ -1014,7 +1159,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(15, 57);
+            this.label10.Location = new System.Drawing.Point(78, 57);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(46, 20);
             this.label10.TabIndex = 15;
@@ -1023,7 +1168,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(553, 130);
+            this.label12.Location = new System.Drawing.Point(473, 122);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(43, 20);
             this.label12.TabIndex = 11;
@@ -1044,12 +1189,12 @@
             this.CodeComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CodeComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.CodeComboBox.FormattingEnabled = true;
-            this.CodeComboBox.ItemHeight = 30;
-            this.CodeComboBox.Location = new System.Drawing.Point(321, 122);
+            this.CodeComboBox.ItemHeight = 25;
+            this.CodeComboBox.Location = new System.Drawing.Point(304, 114);
             this.CodeComboBox.Name = "CodeComboBox";
             this.CodeComboBox.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.CodeComboBox.SelectedItemForeColor = System.Drawing.Color.White;
-            this.CodeComboBox.Size = new System.Drawing.Size(148, 36);
+            this.CodeComboBox.Size = new System.Drawing.Size(110, 31);
             this.CodeComboBox.Style = MetroSet_UI.Design.Style.Dark;
             this.CodeComboBox.StyleManager = null;
             this.CodeComboBox.TabIndex = 3;
@@ -1059,7 +1204,7 @@
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(257, 130);
+            this.label19.Location = new System.Drawing.Point(251, 130);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(47, 20);
             this.label19.TabIndex = 10;
@@ -1068,7 +1213,7 @@
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(807, 130);
+            this.label20.Location = new System.Drawing.Point(701, 130);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(32, 20);
             this.label20.TabIndex = 9;
@@ -1089,7 +1234,7 @@
             this.BocComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.BocComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.BocComboBox.FormattingEnabled = true;
-            this.BocComboBox.ItemHeight = 30;
+            this.BocComboBox.ItemHeight = 25;
             this.BocComboBox.Items.AddRange(new object[] {
             "10",
             "17",
@@ -1099,11 +1244,11 @@
             "37",
             "38",
             "41"});
-            this.BocComboBox.Location = new System.Drawing.Point(605, 122);
+            this.BocComboBox.Location = new System.Drawing.Point(529, 114);
             this.BocComboBox.Name = "BocComboBox";
             this.BocComboBox.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.BocComboBox.SelectedItemForeColor = System.Drawing.Color.White;
-            this.BocComboBox.Size = new System.Drawing.Size(79, 36);
+            this.BocComboBox.Size = new System.Drawing.Size(79, 31);
             this.BocComboBox.Style = MetroSet_UI.Design.Style.Dark;
             this.BocComboBox.StyleManager = null;
             this.BocComboBox.TabIndex = 4;
@@ -1125,12 +1270,12 @@
             this.OrgComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.OrgComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.OrgComboBox.FormattingEnabled = true;
-            this.OrgComboBox.ItemHeight = 30;
-            this.OrgComboBox.Location = new System.Drawing.Point(882, 49);
+            this.OrgComboBox.ItemHeight = 25;
+            this.OrgComboBox.Location = new System.Drawing.Point(748, 49);
             this.OrgComboBox.Name = "OrgComboBox";
             this.OrgComboBox.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.OrgComboBox.SelectedItemForeColor = System.Drawing.Color.White;
-            this.OrgComboBox.Size = new System.Drawing.Size(72, 36);
+            this.OrgComboBox.Size = new System.Drawing.Size(72, 31);
             this.OrgComboBox.Style = MetroSet_UI.Design.Style.Dark;
             this.OrgComboBox.StyleManager = null;
             this.OrgComboBox.TabIndex = 2;
@@ -1140,7 +1285,7 @@
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(796, 65);
+            this.label21.Location = new System.Drawing.Point(663, 57);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(70, 20);
             this.label21.TabIndex = 8;
@@ -1149,7 +1294,7 @@
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(553, 57);
+            this.label22.Location = new System.Drawing.Point(470, 57);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(46, 20);
             this.label22.TabIndex = 7;
@@ -1158,7 +1303,7 @@
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(257, 49);
+            this.label23.Location = new System.Drawing.Point(272, 57);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(43, 20);
             this.label23.TabIndex = 6;
@@ -1179,12 +1324,12 @@
             this.FundComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.FundComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.FundComboBox.FormattingEnabled = true;
-            this.FundComboBox.ItemHeight = 30;
-            this.FundComboBox.Location = new System.Drawing.Point(605, 49);
+            this.FundComboBox.ItemHeight = 25;
+            this.FundComboBox.Location = new System.Drawing.Point(529, 49);
             this.FundComboBox.Name = "FundComboBox";
             this.FundComboBox.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.FundComboBox.SelectedItemForeColor = System.Drawing.Color.White;
-            this.FundComboBox.Size = new System.Drawing.Size(79, 36);
+            this.FundComboBox.Size = new System.Drawing.Size(79, 31);
             this.FundComboBox.Style = MetroSet_UI.Design.Style.Dark;
             this.FundComboBox.StyleManager = null;
             this.FundComboBox.TabIndex = 1;
@@ -1198,7 +1343,7 @@
             this.groupBox6.Controls.Add(this.button1);
             this.groupBox6.Controls.Add(this.button2);
             this.groupBox6.ForeColor = System.Drawing.SystemColors.Info;
-            this.groupBox6.Location = new System.Drawing.Point(645, 266);
+            this.groupBox6.Location = new System.Drawing.Point(694, 266);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Size = new System.Drawing.Size(475, 157);
             this.groupBox6.TabIndex = 21;
@@ -1214,7 +1359,7 @@
             this.button5.ForeColor = System.Drawing.SystemColors.Info;
             this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
             this.button5.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.button5.Location = new System.Drawing.Point(161, 54);
+            this.button5.Location = new System.Drawing.Point(331, 57);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(86, 54);
             this.button5.TabIndex = 15;
@@ -1231,14 +1376,13 @@
             this.button1.ForeColor = System.Drawing.SystemColors.Info;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.button1.Location = new System.Drawing.Point(308, 57);
+            this.button1.Location = new System.Drawing.Point(174, 57);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(112, 49);
             this.button1.TabIndex = 12;
             this.button1.Text = "Update";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
             // button2
             // 
@@ -1268,7 +1412,7 @@
             this.groupBox5.Controls.Add(this.metroSetTextBox12);
             this.groupBox5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox5.ForeColor = System.Drawing.SystemColors.Info;
-            this.groupBox5.Location = new System.Drawing.Point(71, 266);
+            this.groupBox5.Location = new System.Drawing.Point(120, 266);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(568, 157);
             this.groupBox5.TabIndex = 20;
@@ -1290,12 +1434,12 @@
             this.metroSetComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.metroSetComboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.metroSetComboBox2.FormattingEnabled = true;
-            this.metroSetComboBox2.ItemHeight = 30;
+            this.metroSetComboBox2.ItemHeight = 25;
             this.metroSetComboBox2.Location = new System.Drawing.Point(95, 91);
             this.metroSetComboBox2.Name = "metroSetComboBox2";
             this.metroSetComboBox2.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.metroSetComboBox2.SelectedItemForeColor = System.Drawing.Color.White;
-            this.metroSetComboBox2.Size = new System.Drawing.Size(185, 36);
+            this.metroSetComboBox2.Size = new System.Drawing.Size(185, 31);
             this.metroSetComboBox2.Style = MetroSet_UI.Design.Style.Dark;
             this.metroSetComboBox2.StyleManager = null;
             this.metroSetComboBox2.TabIndex = 17;
@@ -1317,12 +1461,12 @@
             this.metroSetComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.metroSetComboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.metroSetComboBox1.FormattingEnabled = true;
-            this.metroSetComboBox1.ItemHeight = 30;
+            this.metroSetComboBox1.ItemHeight = 25;
             this.metroSetComboBox1.Location = new System.Drawing.Point(95, 46);
             this.metroSetComboBox1.Name = "metroSetComboBox1";
             this.metroSetComboBox1.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.metroSetComboBox1.SelectedItemForeColor = System.Drawing.Color.White;
-            this.metroSetComboBox1.Size = new System.Drawing.Size(185, 36);
+            this.metroSetComboBox1.Size = new System.Drawing.Size(185, 31);
             this.metroSetComboBox1.Style = MetroSet_UI.Design.Style.Dark;
             this.metroSetComboBox1.StyleManager = null;
             this.metroSetComboBox1.TabIndex = 16;
@@ -1405,146 +1549,6 @@
             this.metroSetTextBox12.UseSystemPasswordChar = false;
             this.metroSetTextBox12.WatermarkText = "";
             // 
-            // metroSetTextBox3
-            // 
-            this.metroSetTextBox3.AutoCompleteCustomSource = null;
-            this.metroSetTextBox3.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.metroSetTextBox3.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.metroSetTextBox3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
-            this.metroSetTextBox3.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.metroSetTextBox3.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroSetTextBox3.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroSetTextBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.metroSetTextBox3.HoverColor = System.Drawing.Color.DodgerBlue;
-            this.metroSetTextBox3.Image = null;
-            this.metroSetTextBox3.Lines = null;
-            this.metroSetTextBox3.Location = new System.Drawing.Point(887, 47);
-            this.metroSetTextBox3.MaxLength = 32767;
-            this.metroSetTextBox3.Multiline = false;
-            this.metroSetTextBox3.Name = "metroSetTextBox3";
-            this.metroSetTextBox3.ReadOnly = false;
-            this.metroSetTextBox3.Size = new System.Drawing.Size(196, 37);
-            this.metroSetTextBox3.Style = MetroSet_UI.Design.Style.Dark;
-            this.metroSetTextBox3.StyleManager = null;
-            this.metroSetTextBox3.TabIndex = 16;
-            this.metroSetTextBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.metroSetTextBox3.ThemeAuthor = "Narwin";
-            this.metroSetTextBox3.ThemeName = "MetroDark";
-            this.metroSetTextBox3.UseSystemPasswordChar = false;
-            this.metroSetTextBox3.WatermarkText = "";
-            // 
-            // metroSetTextBox4
-            // 
-            this.metroSetTextBox4.AutoCompleteCustomSource = null;
-            this.metroSetTextBox4.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.metroSetTextBox4.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.metroSetTextBox4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
-            this.metroSetTextBox4.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.metroSetTextBox4.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroSetTextBox4.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroSetTextBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.metroSetTextBox4.HoverColor = System.Drawing.Color.DodgerBlue;
-            this.metroSetTextBox4.Image = null;
-            this.metroSetTextBox4.Lines = null;
-            this.metroSetTextBox4.Location = new System.Drawing.Point(891, 118);
-            this.metroSetTextBox4.MaxLength = 32767;
-            this.metroSetTextBox4.Multiline = false;
-            this.metroSetTextBox4.Name = "metroSetTextBox4";
-            this.metroSetTextBox4.ReadOnly = false;
-            this.metroSetTextBox4.Size = new System.Drawing.Size(196, 37);
-            this.metroSetTextBox4.Style = MetroSet_UI.Design.Style.Dark;
-            this.metroSetTextBox4.StyleManager = null;
-            this.metroSetTextBox4.TabIndex = 17;
-            this.metroSetTextBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.metroSetTextBox4.ThemeAuthor = "Narwin";
-            this.metroSetTextBox4.ThemeName = "MetroDark";
-            this.metroSetTextBox4.UseSystemPasswordChar = false;
-            this.metroSetTextBox4.WatermarkText = "";
-            // 
-            // metroSetTextBox5
-            // 
-            this.metroSetTextBox5.AutoCompleteCustomSource = null;
-            this.metroSetTextBox5.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.metroSetTextBox5.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.metroSetTextBox5.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
-            this.metroSetTextBox5.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.metroSetTextBox5.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroSetTextBox5.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroSetTextBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.metroSetTextBox5.HoverColor = System.Drawing.Color.DodgerBlue;
-            this.metroSetTextBox5.Image = null;
-            this.metroSetTextBox5.Lines = null;
-            this.metroSetTextBox5.Location = new System.Drawing.Point(106, 31);
-            this.metroSetTextBox5.MaxLength = 32767;
-            this.metroSetTextBox5.Multiline = false;
-            this.metroSetTextBox5.Name = "metroSetTextBox5";
-            this.metroSetTextBox5.ReadOnly = false;
-            this.metroSetTextBox5.Size = new System.Drawing.Size(78, 37);
-            this.metroSetTextBox5.Style = MetroSet_UI.Design.Style.Dark;
-            this.metroSetTextBox5.StyleManager = null;
-            this.metroSetTextBox5.TabIndex = 9;
-            this.metroSetTextBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.metroSetTextBox5.ThemeAuthor = "Narwin";
-            this.metroSetTextBox5.ThemeName = "MetroDark";
-            this.metroSetTextBox5.UseSystemPasswordChar = false;
-            this.metroSetTextBox5.WatermarkText = "";
-            // 
-            // metroSetTextBox6
-            // 
-            this.metroSetTextBox6.AutoCompleteCustomSource = null;
-            this.metroSetTextBox6.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.metroSetTextBox6.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.metroSetTextBox6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
-            this.metroSetTextBox6.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.metroSetTextBox6.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroSetTextBox6.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroSetTextBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.metroSetTextBox6.HoverColor = System.Drawing.Color.DodgerBlue;
-            this.metroSetTextBox6.Image = null;
-            this.metroSetTextBox6.Lines = null;
-            this.metroSetTextBox6.Location = new System.Drawing.Point(106, 102);
-            this.metroSetTextBox6.MaxLength = 32767;
-            this.metroSetTextBox6.Multiline = false;
-            this.metroSetTextBox6.Name = "metroSetTextBox6";
-            this.metroSetTextBox6.ReadOnly = false;
-            this.metroSetTextBox6.Size = new System.Drawing.Size(78, 37);
-            this.metroSetTextBox6.Style = MetroSet_UI.Design.Style.Dark;
-            this.metroSetTextBox6.StyleManager = null;
-            this.metroSetTextBox6.TabIndex = 10;
-            this.metroSetTextBox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.metroSetTextBox6.ThemeAuthor = "Narwin";
-            this.metroSetTextBox6.ThemeName = "MetroDark";
-            this.metroSetTextBox6.UseSystemPasswordChar = false;
-            this.metroSetTextBox6.WatermarkText = "";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(51, 48);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(43, 20);
-            this.label2.TabIndex = 12;
-            this.label2.Text = "BOC";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(816, 47);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(69, 40);
-            this.label3.TabIndex = 18;
-            this.label3.Text = "Program\r\nProject";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(816, 118);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(69, 40);
-            this.label4.TabIndex = 19;
-            this.label4.Text = "Program\r\nArea\r\n";
-            // 
             // AccountManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -1555,9 +1559,9 @@
             this.CaptionBarHeight = 50;
             captionImage1.BackColor = System.Drawing.Color.Black;
             captionImage1.Image = ((System.Drawing.Image)(resources.GetObject("captionImage1.Image")));
-            captionImage1.Location = new System.Drawing.Point(30, 15);
+            captionImage1.Location = new System.Drawing.Point(15, 15);
             captionImage1.Name = "CaptionImage1";
-            captionImage1.Size = new System.Drawing.Size(100, 50);
+            captionImage1.Size = new System.Drawing.Size(75, 25);
             this.CaptionImages.Add(captionImage1);
             this.ClientSize = new System.Drawing.Size(1276, 531);
             this.Controls.Add(this.AccountTabControl);
@@ -1577,8 +1581,7 @@
             this.AccountNavigator.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            this.AddTab.ResumeLayout(false);
-            this.AddTab.PerformLayout();
+            this.AddNewTab.ResumeLayout(false);
             this.metroSetPanel1.ResumeLayout(false);
             this.RecorDataGroupBox.ResumeLayout(false);
             this.RecorDataGroupBox.PerformLayout();
@@ -1591,9 +1594,6 @@
         }
 
         #endregion
-        private Syncfusion.Windows.Forms.Tools.TabControlAdv AccountTabControl;
-        private Syncfusion.Windows.Forms.Tools.TabPageAdv UpdateTab;
-        private Syncfusion.Windows.Forms.Tools.TabPageAdv AddTab;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
@@ -1675,6 +1675,10 @@
         private System.Windows.Forms.Label label2;
         private MetroSet_UI.Controls.MetroSetTextBox metroSetTextBox6;
         private MetroSet_UI.Controls.MetroSetTextBox metroSetTextBox5;
+        private System.Windows.Forms.Label label11;
+        internal Syncfusion.Windows.Forms.Tools.TabControlAdv AccountTabControl;
+        internal Syncfusion.Windows.Forms.Tools.TabPageAdv UpdateTab;
+        internal Syncfusion.Windows.Forms.Tools.TabPageAdv AddNewTab;
     }
 }
 

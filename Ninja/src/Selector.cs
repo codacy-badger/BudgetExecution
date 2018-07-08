@@ -72,6 +72,7 @@ namespace BudgetExecution
             var s = (Source)Enum.Parse(typeof(Source), i);
             var summary = new SummaryForm(s);
             summary.Show();
+            this.Close();
         }
     }
 }

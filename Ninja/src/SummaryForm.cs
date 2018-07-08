@@ -42,10 +42,6 @@ namespace BudgetExecution
             SummaryTabControl.SelectedIndexChanged += SummaryTabPage_TabSelected;
             CurrentTabIndex = 1;
             TabNames = GetTabNames();
-            GridRefreshButton.Click += GridRefreshButton_OnClick;
-            ExcelButton.Click += ExcelButton_Click;
-            CalendatButton.Click += CalendatButton_Click;
-            CalculatorButton.Click += CalculatorButton_Click;
         }
 
         public SummaryForm(Source source)
@@ -64,9 +60,6 @@ namespace BudgetExecution
             DatabaseTab.TabVisible = true;
             CurrentTabIndex = SummaryTabControl.SelectedIndex;
             SummaryTabControl.SelectedIndexChanged += SummaryTabPage_TabSelected;
-            ExcelButton.Click += ExcelButton_Click;
-            CalendatButton.Click += CalendatButton_Click;
-            CalculatorButton.Click += CalculatorButton_Click;
             if (source == Source.RegionalAccounts || source == Source.DivisionAccounts)
             {
                 DbData = new DataBuilder(source, Provider.SQLite);
@@ -175,6 +168,12 @@ namespace BudgetExecution
                 lblBoc.Visible = false;
                 GridBocFilter.Visible = false;
                 GridRefreshButton.Click += GridRefreshButton_OnClick;
+                AddButton.Click += AddButton_OnClick;
+                GridRefreshButton.Click += GridRefreshButton_OnClick;
+                ExcelButton.Click += ExcelButton_Click;
+                CalendatButton.Click += CalendatButton_Click;
+                CalculatorButton.Click += CalculatorButton_Click;
+                CopyButton.Click += CopyButton_OnClick;
             }
             catch (Exception ex)
             {
@@ -421,6 +420,7 @@ namespace BudgetExecution
             try
             {
                 ID.DataBindings.Add(new Binding("Text", Grid.DataSource, "ID"));
+                BudgetLevel.DataBindings.Add(new Binding("Text", Grid.DataSource, "BudgetLevel"));
                 BFY.DataBindings.Add(new Binding("Text", Grid.DataSource, "BFY"));
                 Fund.DataBindings.Add(new Binding("Text", Grid.DataSource, "Fund"));
                 Org.DataBindings.Add(new Binding("Text", Grid.DataSource, "Org"));
@@ -905,6 +905,46 @@ namespace BudgetExecution
         private void ToolStripSeparator16_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void MetroSetLabel9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LblCount_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AddButton_OnClick(object sender, EventArgs e)
+        {
+            try
+            {
+                var am = new AccountManager(Source.PRC, Provider.SQLite);
+                am.Show();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message + ex.StackTrace);
+            }
+        }
+
+        private void CopyButton_OnClick(object sender, EventArgs e)
+        {
+            try
+            {
+                var view = (DataRowView)BindingSource.Current;
+                var prc = new PRC(view.Row).GetDataFields();
+                var am = new AccountManager(Source.PRC, Provider.SQLite, prc);
+                am.Show();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message + ex.StackTrace);
+            }
         }
     }
 }

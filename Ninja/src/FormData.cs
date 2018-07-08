@@ -24,47 +24,36 @@ namespace BudgetExecution
         public FormData(DataBuilder DbData, BindingSource bs, DataGridView dgv, BindingNavigator bn)
         {
             this.DbData = DbData;
-            Metric = new PrcMetric(this.DbData);
-            Table = this.DbData.DbTable;
-            BindGridAndNavigator(Table, dgv, bs, bn);
+            DbTable = this.DbData.DbTable;
+            BindGridAndNavigator(DbTable, dgv, bs, bn);
             BindingSource = bs;
-            Navigator = bn;
-            Grid = dgv;
-            BindingSource.DataSource = Table;
+            this.Grid = dgv;
+            BindingSource.DataSource = DbTable;
             BindingSource = DbData.BindingSource;
-            BindingSource.DataSource = Table;
-            Navigator.BindingSource = BindingSource;
-            Grid.DataSource = BindingSource.DataSource;
+            BindingSource.DataSource = DbTable;
+            this.Grid.DataSource = BindingSource.DataSource;
         }
 
         public FormData(Source source, Provider provider, Dictionary<string, object> param)
         {
             DbData = new DataBuilder(source, provider, param);
-            Table = DbData.GetDataTable();
-            Metric = new PrcMetric(DbData);
+            DbTable = DbData.GetDataTable();
             BindingSource = new BindingSource();
-            BindingSource.DataSource = Table;
-            BindingSource = DbData.BindingSource;
-            BindingSource.DataSource = Table;
-            Navigator.BindingSource = BindingSource;
-            Grid.DataSource = BindingSource.DataSource;
+            BindingSource.DataSource = DbTable;
         }
 
 
         public FormData(Source source, Provider provider, Dictionary<string, object> param, BindingSource bs, DataGridView dgv, BindingNavigator bn)
         {
             DbData = new DataBuilder(source, provider, param);
-            Table = DbData.GetDataTable();
-            Metric = new PrcMetric(DbData);
+            DbTable = DbData.GetDataTable();
             BindingSource = new BindingSource();
-            BindingSource.DataSource = Table;
-            BindGridAndNavigator(Table, dgv, bs, bn);
+            BindingSource.DataSource = DbTable;
+            BindGridAndNavigator(DbTable, dgv, bs, bn);
             BindingSource = bs;
-            BindingSource.DataSource = Table;
-            Navigator = bn;
-            Navigator.BindingSource = BindingSource;
-            Grid = dgv;
-            Grid.DataSource = BindingSource.DataSource;
+            BindingSource.DataSource = DbTable;
+            this.Grid = dgv;
+            this.Grid.DataSource = BindingSource.DataSource;
         }
 
         // PROPERTIES
@@ -82,39 +71,56 @@ namespace BudgetExecution
 
         public DataSet DataSet { get; set; }
 
-        public DataTable Table { get; set; }
-
-        public PrcMetric Metric { get; set; }
-
-        public ChartControl Chart { get; set; }
-
-        public ChartDataBindModel ChartModel { get; set; }
-
-        public Control GridFilterControl1 { get; set; }
-
-        public Control GridFilterControl2 { get; set; }
-
-        public Control GridFilterControl3 { get; set; }
-
-        public Control ChartFilterControl1 { get; set; }
-
-        public Control ChartFilterControl2 { get; set; }
-
-        public Control ChartFilterControl3 { get; set; }
+        public DataTable DbTable { get; set; }
 
         public int Count { get; set; }
 
         public DataGridView Grid { get; set; }
 
-        public decimal[] Metrics { get; set; }
-
-        public BindingNavigator Navigator { get; set; }
-
-        public FlowLayoutPanel Panel { get; set; }
-
         internal Func<DataTable, PrcField, string> TableFilter { get; set; }
 
         // METHODS
+
+        private Dictionary<string, object> GetDataFields(DataTable table)
+        {
+            try
+            {
+                var cct = table.Columns.Count;
+                var rct = table.Rows.Count;
+                var row = table.Rows[0];
+                var col = table.GetFields();
+                var val = row.ItemArray;
+                var param = new Dictionary<string, object>();
+                for (int i = 0; i < cct; i++)
+                    param.Add(col[i], val[i]);
+                return param;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message + e.StackTrace);
+                return null;
+            }
+        }
+
+        private void CreateTextBoxBindings(DataGridView dgv, MetroSetTextBox[] tbx)
+        {
+            try
+            {
+                tbx[0].DataBindings.Add(new Binding("Text", dgv.DataSource, "ID"));
+                tbx[1].DataBindings.Add(new Binding("Text", dgv.DataSource, "BudgetLevel"));
+                tbx[2].DataBindings.Add(new Binding("Text", dgv.DataSource, "BFY"));
+                tbx[3].DataBindings.Add(new Binding("Text", dgv.DataSource, "Fund"));
+                tbx[4].DataBindings.Add(new Binding("Text", dgv.DataSource, "Org"));
+                tbx[5].DataBindings.Add(new Binding("Text", dgv.DataSource, "RC"));
+                tbx[6].DataBindings.Add(new Binding("Text", dgv.DataSource, "Code"));
+                tbx[7].DataBindings.Add(new Binding("Text", dgv.DataSource, "BOC"));
+                tbx[8].DataBindings.Add(new Binding("Text", dgv.DataSource, "Amount"));
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + ex.StackTrace);
+            }
+        }
 
         internal void BindGridAndNavigator(DataTable table, DataGridView dg, BindingSource bs, BindingNavigator bn)
         {
@@ -318,8 +324,8 @@ namespace BudgetExecution
         {
             try
             {
-                Table = DbData.DbTable;
-                BindingSource.DataSource = Table;
+                DbTable = DbData.DbTable;
+                BindingSource.DataSource = DbTable;
             }
             catch (Exception ex)
             {
@@ -336,7 +342,7 @@ namespace BudgetExecution
                     var row = dgv.CurrentRow;
                     var data = new Dictionary<string, object>();
                     data.Add("ID", int.Parse(row.Cells["ID"].Value.ToString()));
-                    data.Add("Fund", row.Cells["Fund"].Value.ToString());
+                    data.Add("BudgetLevel", row.Cells["BudgetLevel"].Value.ToString());
                     data.Add("Org", row.Cells["Org"].Value.ToString());
                     data.Add("RC", row.Cells["RC"].ToString());
                     data.Add("Code", row.Cells["Code"].ToString());

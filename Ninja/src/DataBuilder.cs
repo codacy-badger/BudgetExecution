@@ -110,15 +110,15 @@ namespace BudgetExecution
         public Dictionary<string, object> DataFields { get; set; }
 
         // METHODS
-        private Dictionary<string, object> GetDataFields(DataTable table)
+        public Dictionary<string, object> GetDataFields(DataTable table)
         {
             try
             {
+                var cct = table.Columns.Count;
+                var rct = table.Rows.Count;
                 var row = table.Rows[0];
                 var col = table.GetFields();
                 var val = row.ItemArray;
-                var cct = table.Columns.Count;
-                var rct = table.Rows.Count;
                 var param = new Dictionary<string, object>();
                 for(int i = 0; i < cct; i++)
                     param.Add(col[i], val[i]);
