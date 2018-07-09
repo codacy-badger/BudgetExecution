@@ -157,8 +157,8 @@ namespace BudgetExecution
                 DefineVisisbleDataColumns(Grid);
                 PopulateFilterBoxItems(GridFundFilter, PrcField.FundName);
                 ConfigureTextBoxBindings();
-                lblTotal.Text = DbData.GetTotal(DbData.DbTable).ToString("c");
-                lblCount.Text = DbData.GetCount(DbData.DbTable).ToString();
+                label32.Text = DbData.GetTotal(DbData.DbTable).ToString("c");
+                label41.Text = DbData.GetCount(DbData.DbTable).ToString();
                 GridFundFilter.SelectionChangeCommitted += GridFilterControl1_ItemSelected;
                 GridBocFilter.SelectionChangeCommitted += GridFilterControl2_ItemSelected;
                 SummaryTabControl.SelectedIndexChanged += SummaryTabPage_TabSelected;
@@ -189,8 +189,8 @@ namespace BudgetExecution
                 GridFundFilter.Tag = filter.SelectedItem.ToString();
                 var fund = filter.SelectedItem.ToString();
                 BindingSource.Filter = string.Format("FundName = '{0}'", GridFundFilter.SelectedItem.ToString());
-                lblCount.Text = GetCount(fund).ToString();
-                lblTotal.Text = CalculateTotal(fund).ToString("c");
+                label32.Text = GetCount(fund).ToString();
+                label41.Text = CalculateTotal(fund).ToString("c");
                 PopulateGridBocFilterItems();
                 lblBoc.Visible = true;
                 GridBocFilter.Visible = true;
@@ -208,8 +208,8 @@ namespace BudgetExecution
                 var boc = sender as MetroSetComboBox;
                 var filter = boc.SelectedItem.ToString();
                 BindingSource.Filter = $"FundName = '{GridFundFilter.SelectedItem.ToString()}' AND BocName = '{GridBocFilter.SelectedItem.ToString()}'";
-                lblTotal.Text = CalculateTotal(GridFundFilter.SelectedItem.ToString(), filter).ToString("c");
-                lblCount.Text = GetCount(GridFundFilter.SelectedItem.ToString(), filter).ToString();
+                label32.Text = CalculateTotal(GridFundFilter.SelectedItem.ToString(), filter).ToString("c");
+                label41.Text = GetCount(GridFundFilter.SelectedItem.ToString(), filter).ToString();
                 GridAccountFilter.Visible = true;
                 lblPrc.Visible = true;
                 GridAccountFilter.Visible = true;
@@ -229,8 +229,8 @@ namespace BudgetExecution
                 var prc = sender as MetroSetComboBox;
                 var filter = prc.SelectedItem.ToString();
                 BindingSource.Filter = $"FundName = '{GridFundFilter.SelectedItem.ToString()}' AND BocName = '{GridBocFilter.SelectedItem.ToString()}' AND Code = '{filter}'";
-                lblTotal.Text = CalculateTotal(GridFundFilter.SelectedItem.ToString(), filter).ToString("c");
-                lblCount.Text = GetCount(GridFundFilter.SelectedItem.ToString(), filter).ToString();
+                label32.Text = CalculateTotal(GridFundFilter.SelectedItem.ToString(), filter).ToString("c");
+                label41.Text = GetCount(GridFundFilter.SelectedItem.ToString(), filter).ToString();
             }
             catch (Exception ex)
             {
@@ -473,8 +473,8 @@ namespace BudgetExecution
                     BindingSource.Filter = null;
                     Navigator.BindingSource = BindingSource;
                     Grid.DataSource = BindingSource;
-                    lblTotal.Text = DbData.GetTotal(DbData.DbTable).ToString("c");
-                    lblCount.Text = DbData.GetCount(DbData.DbTable).ToString();
+                    label32.Text = DbData.GetTotal(DbData.DbTable).ToString("c");
+                    label41.Text = DbData.GetCount(DbData.DbTable).ToString();
                     GridBocFilter.Items.Clear();
                     GridAccountFilter.Items.Clear();
                     PopulateFilterBoxItems(GridFundFilter, PrcField.FundName);
@@ -914,7 +914,7 @@ namespace BudgetExecution
 
         private void LblCount_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void AddButton_OnClick(object sender, EventArgs e)

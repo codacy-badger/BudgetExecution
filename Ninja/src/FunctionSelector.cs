@@ -80,8 +80,9 @@ namespace BudgetExecution
             switch(s)
             {
                 case Function.SQLiteData:
-                    var sd = new SQLiteData();
+                    var sd = new DatabaseSelector(Info.DatabaseImages);
                     sd.Show();
+                    this.Close();
                     break;
                 case Function.BudgetTools:
                     var bt = new BudgetTools();

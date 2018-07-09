@@ -408,6 +408,12 @@
     <Compile Include="src\ExcelImporter.Designer.cs">
       <DependentUpon>ExcelImporter.cs</DependentUpon>
     </Compile>
+    <Compile Include="src\DatabaseSelector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\DatabaseSelector.Designer.cs">
+      <DependentUpon>DatabaseSelector.cs</DependentUpon>
+    </Compile>
     <Compile Include="src\Reprogramming.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -669,6 +675,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="src\ExcelImporter.resx">
       <DependentUpon>ExcelImporter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\DatabaseSelector.resx">
+      <DependentUpon>DatabaseSelector.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="src\Message.resx">
       <DependentUpon>Message.cs</DependentUpon>

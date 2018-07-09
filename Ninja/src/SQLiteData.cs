@@ -23,15 +23,22 @@ namespace BudgetExecution
         public SQLiteData()
         {
             InitializeComponent();
-            DbData = new DataBuilder(Source.RegionalAccounts, Provider.SQLite);
+            Source = Source.RegionalAccounts;
+            Provider = Provider.SQLite;
+            DbData = new DataBuilder(Source, Provider);
             Table = DbData.DbTable;
-            Metric = new PrcMetric(DbData);
+            Grid.DataSource = DbData.BindingSource;
+            Navigator.BindingSource = DbData.BindingSource;
             ProgramElements = DbData.GetProgramElements(Table);
             BindingSource.DataSource = Table;
             Navigator.BindingSource = BindingSource;
-            SQLiteGrid.DataSource = BindingSource.DataSource;
+            Grid.DataSource = BindingSource.DataSource;
             PopulateSourceFilters();
             PopulateFilterButtons(Filter1, Info.Sources);
+            AddButton.Click += AddButton_OnClick;
+            CopyButton.Click += CopyButton_OnClick;
+            Text = $"{Source.ToString()} Database";
+            DataFunctionTab.TabVisible = false;
         }
 
         public SQLiteData(Source source, Provider provider)
@@ -41,13 +48,13 @@ namespace BudgetExecution
             Provider = provider;
             DbData = new DataBuilder(Source, Provider);
             Table = DbData.DbTable;
-            Metric = new PrcMetric(DbData);
+            Grid.DataSource = DbData.BindingSource;
+            Navigator.BindingSource = DbData.BindingSource;
             ProgramElements = DbData.GetProgramElements(Table);
-            BindingSource.DataSource = Table;
-            Navigator.BindingSource = BindingSource;
-            SQLiteGrid.DataSource = BindingSource.DataSource;
-            PopulateSourceFilters();
-            PopulateFilterButtons(Filter1, Info.Sources);
+            AddButton.Click += AddButton_OnClick;
+            CopyButton.Click += CopyButton_OnClick;
+            Text = $"{Source.ToString()} Database";
+            DataFunctionTab.TabVisible = false;
         }
         // PROPERTIES
         private Source Source { get; }
@@ -110,10 +117,21 @@ namespace BudgetExecution
             }
         }
 
-        private void DataMaster_Load(object sender, EventArgs e)
+        private void SQLiteData_Load(object sender, EventArgs e)
         {
             try
             {
+                if(Source == Source.PRC)
+                {
+                    Filter1.Text = "BFY";
+                    Filter1.Items.Add("2018");
+                    FIlter2.Text = "Fund";
+                    foreach (string f in DbData.ProgramElements["Fund"])
+                        FIlter2.Items.Add(f);
+                    Filter3.Text = "RC";
+                    foreach (string rc in DbData.ProgramElements["RC"])
+                        Filter3.Items.Add(rc);
+                }
             }
             catch (Exception ex)
             {
@@ -185,12 +203,12 @@ namespace BudgetExecution
             }
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private void PreviousButton_OnClick(object sender, EventArgs e)
         {
             BindingSource.MovePrevious();
         }
 
-        private void button8_Click(object sender, EventArgs e)
+        private void NextButton_OnClick(object sender, EventArgs e)
         {
             BindingSource.MoveNext();
         }
@@ -272,7 +290,7 @@ namespace BudgetExecution
                         foreach(string s in DbData.ProgramElements["HrOrgCodeName"])
                         {
                             FIlter2.Items.Add(s);
-                            label2.Text = "HR ORG";
+                            FIlter2.Text = "HR ORG";
                             FIlter2.SelectedIndexChanged += FilterComboBox_OnSelect;
                         }
                         break;
@@ -280,7 +298,7 @@ namespace BudgetExecution
                         foreach (string s in DbData.ProgramElements["AgreementNumber"])
                         {
                             FIlter2.Items.Add(s);
-                            label2.Text = "AgreementNumber";
+                            FIlter2.Text = "AgreementNumber";
                             FIlter2.SelectedIndexChanged += FilterComboBox_OnSelect;
                         }
                         break;
@@ -288,7 +306,7 @@ namespace BudgetExecution
                         foreach (string s in DbData.ProgramElements["State"])
                         {
                             FIlter2.Items.Add(s);
-                            label2.Text = "State";
+                            FIlter2.Text = "State";
                             FIlter2.SelectedIndexChanged += FilterComboBox_OnSelect;
                         }
                         break;
@@ -296,7 +314,7 @@ namespace BudgetExecution
                         foreach (string s in DbData.ProgramElements["Fund"])
                         {
                             FIlter2.Items.Add(s);
-                            label2.Text = "Fund";
+                            FIlter2.Text = "Fund";
                             FIlter2.SelectedIndexChanged += FilterComboBox_OnSelect;
                         }
                         break;
@@ -383,7 +401,7 @@ namespace BudgetExecution
         {
             try
             {
-                var am = new AccountManager(Source.PRC, Provider.SQLite);
+                var am = new AccountManager(Source, Provider);
                 am.Show();
             }
             catch (Exception ex)
@@ -398,8 +416,7 @@ namespace BudgetExecution
             try
             {
                 var view = (DataRowView)BindingSource.Current;
-                var prc = new PRC(view.Row).GetDataFields();
-                var am = new AccountManager(Source.PRC, Provider.SQLite, prc);
+                var am = new AccountManager(Source, Provider);
                 am.Show();
             }
             catch (Exception ex)
@@ -407,6 +424,11 @@ namespace BudgetExecution
 
                 MessageBox.Show(ex.Message + ex.StackTrace);
             }
+        }
+
+        private void DataTabControl_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

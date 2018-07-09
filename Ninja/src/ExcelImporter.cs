@@ -16,6 +16,7 @@ namespace BudgetExecution
         public ExcelImporter()
         {
             InitializeComponent();
+            DataFilterTab.TabVisible = false;
         }
     }
 }

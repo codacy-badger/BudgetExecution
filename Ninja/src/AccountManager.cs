@@ -7,6 +7,7 @@ namespace BudgetExecution
     using System;
     using System.Collections.Generic;
     using System.Data;
+    using System.Linq;
     using System.Windows.Forms;
     using MetroSet_UI.Controls;
 
@@ -37,6 +38,7 @@ namespace BudgetExecution
             AccountBinding = DbData.BindingSource;
             AccountNavigator.BindingSource = AccountBinding;
             UpdateTab.TabVisible = false;
+            PopulateComboBoxes();
         }
 
         public AccountManager(Source source, Provider provider, Dictionary<string, object> p)
@@ -45,9 +47,12 @@ namespace BudgetExecution
             Source = source;
             Provider = provider;
             DbData = new DataBuilder(Source, Provider, p);
+            DbTable = DbData.DbTable;
+            DbRow = DbTable.AsEnumerable().Select(prc => prc).First();
             AccountBinding = DbData.BindingSource;
             AccountNavigator.BindingSource = AccountBinding;
             AddNewTab.TabVisible = false;
+            ConfigureTextBoxBindings();
         }
 
 
@@ -74,6 +79,55 @@ namespace BudgetExecution
 
         // METHODS
 
+        private void AccountManager_Load(object sender, EventArgs e)
+        {
+            if (AddNewTab.TabVisible == true)
+                AddButton.Visible = false;
+            AddButton.Click += AddButton_OnClick;
+            PreviousButton.Click += PreviousButton_Click;
+            NextButton.Click += NextButton_Click;
+        }
+
+        private void ConfigureTextBoxBindings()
+        {
+            try
+            {
+                ID.DataBindings.Add(new Binding("Text", DbTable, "ID"));
+                BudgetLevel.DataBindings.Add(new Binding("Text", DbTable, "BudgetLevel"));
+                BFY.DataBindings.Add(new Binding("Text", DbTable, "BFY"));
+                Fund.DataBindings.Add(new Binding("Text", DbTable, "Fund"));
+                Org.DataBindings.Add(new Binding("Text", DbTable, "Org"));
+                RC.DataBindings.Add(new Binding("Text", DbTable, "RC"));
+                Code.DataBindings.Add(new Binding("Text", DbTable, "Code"));
+                SubProject.DataBindings.Add(new Binding("Text", DbTable, "SubProject"));
+                BOC.DataBindings.Add(new Binding("Text", DbTable, "BOC"));
+                ProgramProject.DataBindings.Add(new Binding("Text", DbTable, "ProgramProjectName"));
+                ProgramArea.DataBindings.Add(new Binding("Text", DbTable, "ProgramAreaName"));
+                Amount1.DataBindings.Add(new Binding("Text", DbTable, "Amount"));
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + ex.StackTrace);
+            }
+        }
+
+        private void PopulateComboBoxes()
+        {
+            var data = new DataBuilder(Source, Provider);
+            foreach (string p in data.ProgramElements["SubProject"])
+                SubProjectComboBox.Items.Add(p);
+            foreach (string p in data.ProgramElements["Code"])
+                CodeComboBox.Items.Add(p);
+            foreach (string p in data.ProgramElements["Fund"])
+                FundComboBox.Items.Add(p);
+            foreach (string p in data.ProgramElements["RC"])
+                RcComboBox.Items.Add(p);
+            foreach (string p in data.ProgramElements["Org"])
+                OrgComboBox.Items.Add(p);
+            foreach (string p in data.ProgramElements["BOC"])
+                BocComboBox.Items.Add(p);
+        }
+
         private void PopuluateFundCodes()
         {
             try
@@ -86,21 +140,6 @@ namespace BudgetExecution
             {
                 MessageBox.Show(ex.Message + ex.StackTrace);
             }
-        }
-
-        private void PopuluateBocCodes(MetroSetComboBox BocBox)
-        {
-            try
-            {
-                var codes = new string[] { "10", "17", "21", "28", "36", "37", "38", "41" };
-                foreach (string c in codes)
-                    BocBox.Items.Add(c);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message + ex.StackTrace);
-            }
-
         }
 
         private List<Label> GetLabels(GroupBox gbo)
@@ -250,6 +289,29 @@ namespace BudgetExecution
                 }
             }
             return null;
+        }
+
+        private void AddButton_OnClick(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PreviousButton_Click(object sender, EventArgs e)
+        {
+            DbData.BindingSource.MovePrevious();
+        }
+
+        private void NextButton_Click(object sender, EventArgs e)
+        {
+            DbData.BindingSource.MoveNext();
+        }
+
+        private void AddButton_Click(object sender, EventArgs e)
+        {
+            var addmanager = new AccountManager(this.Source, this.Provider);
+            addmanager.Show();
+            this.Close();
+
         }
 
     }

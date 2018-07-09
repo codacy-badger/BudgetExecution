@@ -62,7 +62,7 @@ namespace BudgetExecution
             this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
-            this.SQLiteGrid = new System.Windows.Forms.DataGridView();
+            this.Grid = new System.Windows.Forms.DataGridView();
             this.Navigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.PreviousButton = new System.Windows.Forms.ToolStripButton();
@@ -86,12 +86,7 @@ namespace BudgetExecution
             this.toolStripButton9 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
             this.metroPanel3 = new MetroFramework.Controls.MetroPanel();
-            this.label2 = new MetroFramework.Controls.MetroLabel();
             this.Filter3 = new MetroSet_UI.Controls.MetroSetComboBox();
-            this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
-            this.metroPanel2 = new MetroFramework.Controls.MetroPanel();
-            this.Filter1 = new MetroSet_UI.Controls.MetroSetComboBox();
-            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.metroPanel4 = new MetroFramework.Controls.MetroPanel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.button1 = new System.Windows.Forms.Button();
@@ -100,24 +95,24 @@ namespace BudgetExecution
             this.button10 = new System.Windows.Forms.Button();
             this.button13 = new System.Windows.Forms.Button();
             this.metroPanel5 = new MetroFramework.Controls.MetroPanel();
-            this.tabControlAdv1 = new Syncfusion.Windows.Forms.Tools.TabControlAdv();
-            this.tabPageAdv1 = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
-            this.tabPageAdv2 = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
+            this.DataTabControl = new Syncfusion.Windows.Forms.Tools.TabControlAdv();
+            this.DataFilterTab = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
+            this.DataFunctionTab = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
+            this.Filter1 = new MetroSet_UI.Controls.MetroSetComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.E6DataGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BindingSource)).BeginInit();
             this.metroPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.SQLiteGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Grid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Navigator)).BeginInit();
             this.Navigator.SuspendLayout();
             this.metroPanel3.SuspendLayout();
-            this.metroPanel2.SuspendLayout();
             this.metroPanel4.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.metroPanel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tabControlAdv1)).BeginInit();
-            this.tabControlAdv1.SuspendLayout();
-            this.tabPageAdv1.SuspendLayout();
-            this.tabPageAdv2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DataTabControl)).BeginInit();
+            this.DataTabControl.SuspendLayout();
+            this.DataFilterTab.SuspendLayout();
+            this.DataFunctionTab.SuspendLayout();
             this.SuspendLayout();
             // 
             // E6DataGrid
@@ -280,7 +275,7 @@ namespace BudgetExecution
             this.FIlter2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.FIlter2.FormattingEnabled = true;
             this.FIlter2.ItemHeight = 30;
-            this.FIlter2.Location = new System.Drawing.Point(91, 211);
+            this.FIlter2.Location = new System.Drawing.Point(91, 183);
             this.FIlter2.MaxDropDownItems = 20;
             this.FIlter2.Name = "FIlter2";
             this.FIlter2.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
@@ -299,7 +294,7 @@ namespace BudgetExecution
             this.metroPanel1.Controls.Add(this.metroLabel5);
             this.metroPanel1.Controls.Add(this.metroLabel4);
             this.metroPanel1.Controls.Add(this.metroLabel3);
-            this.metroPanel1.Controls.Add(this.SQLiteGrid);
+            this.metroPanel1.Controls.Add(this.Grid);
             this.metroPanel1.Controls.Add(this.Navigator);
             this.metroPanel1.HorizontalScrollbarBarColor = true;
             this.metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
@@ -346,16 +341,16 @@ namespace BudgetExecution
             this.metroLabel3.Text = "DataSet";
             this.metroLabel3.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
-            // SQLiteGrid
+            // Grid
             // 
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.Linen;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            this.SQLiteGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.SQLiteGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
-            this.SQLiteGrid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCellsExceptHeaders;
-            this.SQLiteGrid.BackgroundColor = System.Drawing.Color.SlateGray;
-            this.SQLiteGrid.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.Grid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.Grid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            this.Grid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCellsExceptHeaders;
+            this.Grid.BackgroundColor = System.Drawing.Color.SlateGray;
+            this.Grid.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.SteelBlue;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Consolas", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -363,8 +358,8 @@ namespace BudgetExecution
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.SQLiteGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.SQLiteGrid.ColumnHeadersHeight = 30;
+            this.Grid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.Grid.ColumnHeadersHeight = 30;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.LightSteelBlue;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Consolas", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -372,12 +367,12 @@ namespace BudgetExecution
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.SQLiteGrid.DefaultCellStyle = dataGridViewCellStyle3;
-            this.SQLiteGrid.EnableHeadersVisualStyles = false;
-            this.SQLiteGrid.GridColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.SQLiteGrid.Location = new System.Drawing.Point(27, 86);
-            this.SQLiteGrid.MultiSelect = false;
-            this.SQLiteGrid.Name = "SQLiteGrid";
+            this.Grid.DefaultCellStyle = dataGridViewCellStyle3;
+            this.Grid.EnableHeadersVisualStyles = false;
+            this.Grid.GridColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.Grid.Location = new System.Drawing.Point(38, 75);
+            this.Grid.MultiSelect = false;
+            this.Grid.Name = "Grid";
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.SteelBlue;
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -385,21 +380,21 @@ namespace BudgetExecution
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.SQLiteGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.SQLiteGrid.RowHeadersWidth = 30;
+            this.Grid.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.Grid.RowHeadersWidth = 30;
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle5.BackColor = System.Drawing.Color.LightSteelBlue;
             dataGridViewCellStyle5.Font = new System.Drawing.Font("Consolas", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle5.NullValue = null;
-            this.SQLiteGrid.RowsDefaultCellStyle = dataGridViewCellStyle5;
-            this.SQLiteGrid.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.SQLiteGrid.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Consolas", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SQLiteGrid.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
-            this.SQLiteGrid.RowTemplate.Height = 30;
-            this.SQLiteGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.SQLiteGrid.Size = new System.Drawing.Size(1059, 504);
-            this.SQLiteGrid.TabIndex = 151;
+            this.Grid.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            this.Grid.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.Grid.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Consolas", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Grid.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
+            this.Grid.RowTemplate.Height = 30;
+            this.Grid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.Grid.Size = new System.Drawing.Size(1059, 504);
+            this.Grid.TabIndex = 151;
             // 
             // Navigator
             // 
@@ -596,32 +591,20 @@ namespace BudgetExecution
             // metroPanel3
             // 
             this.metroPanel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.metroPanel3.Controls.Add(this.label2);
+            this.metroPanel3.Controls.Add(this.Filter1);
             this.metroPanel3.Controls.Add(this.FIlter2);
             this.metroPanel3.Controls.Add(this.Filter3);
-            this.metroPanel3.Controls.Add(this.metroLabel6);
             this.metroPanel3.HorizontalScrollbarBarColor = true;
             this.metroPanel3.HorizontalScrollbarHighlightOnWheel = false;
             this.metroPanel3.HorizontalScrollbarSize = 10;
-            this.metroPanel3.Location = new System.Drawing.Point(30, 223);
+            this.metroPanel3.Location = new System.Drawing.Point(30, 48);
             this.metroPanel3.Name = "metroPanel3";
-            this.metroPanel3.Size = new System.Drawing.Size(369, 313);
+            this.metroPanel3.Size = new System.Drawing.Size(369, 488);
             this.metroPanel3.TabIndex = 154;
             this.metroPanel3.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.metroPanel3.VerticalScrollbarBarColor = true;
             this.metroPanel3.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel3.VerticalScrollbarSize = 10;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Location = new System.Drawing.Point(119, 173);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(81, 19);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "metroLabel1";
-            this.label2.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
             // Filter3
             // 
@@ -644,7 +627,7 @@ namespace BudgetExecution
             this.Filter3.FormattingEnabled = true;
             this.Filter3.IntegralHeight = false;
             this.Filter3.ItemHeight = 30;
-            this.Filter3.Location = new System.Drawing.Point(91, 96);
+            this.Filter3.Location = new System.Drawing.Point(91, 298);
             this.Filter3.MaxDropDownItems = 20;
             this.Filter3.Name = "Filter3";
             this.Filter3.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
@@ -656,79 +639,6 @@ namespace BudgetExecution
             this.Filter3.ThemeAuthor = "Narwin";
             this.Filter3.ThemeName = "MetroDark";
             this.Filter3.ValueMember = "Fund";
-            // 
-            // metroLabel6
-            // 
-            this.metroLabel6.AutoSize = true;
-            this.metroLabel6.BackColor = System.Drawing.Color.Transparent;
-            this.metroLabel6.Location = new System.Drawing.Point(130, 58);
-            this.metroLabel6.Name = "metroLabel6";
-            this.metroLabel6.Size = new System.Drawing.Size(54, 19);
-            this.metroLabel6.TabIndex = 6;
-            this.metroLabel6.Text = "DataSet";
-            this.metroLabel6.Theme = MetroFramework.MetroThemeStyle.Dark;
-            // 
-            // metroPanel2
-            // 
-            this.metroPanel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.metroPanel2.Controls.Add(this.Filter1);
-            this.metroPanel2.Controls.Add(this.metroLabel1);
-            this.metroPanel2.HorizontalScrollbarBarColor = true;
-            this.metroPanel2.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroPanel2.HorizontalScrollbarSize = 10;
-            this.metroPanel2.Location = new System.Drawing.Point(30, 33);
-            this.metroPanel2.Name = "metroPanel2";
-            this.metroPanel2.Size = new System.Drawing.Size(369, 163);
-            this.metroPanel2.TabIndex = 153;
-            this.metroPanel2.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.metroPanel2.VerticalScrollbarBarColor = true;
-            this.metroPanel2.VerticalScrollbarHighlightOnWheel = false;
-            this.metroPanel2.VerticalScrollbarSize = 10;
-            // 
-            // Filter1
-            // 
-            this.Filter1.AllowDrop = true;
-            this.Filter1.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
-            this.Filter1.BackColor = System.Drawing.Color.Transparent;
-            this.Filter1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
-            this.Filter1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
-            this.Filter1.CausesValidation = false;
-            this.Filter1.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.Filter1.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.Filter1.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.Filter1.DisplayMember = "Fund";
-            this.Filter1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.Filter1.DropDownHeight = 75;
-            this.Filter1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.Filter1.DropDownWidth = 155;
-            this.Filter1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Filter1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.Filter1.FormattingEnabled = true;
-            this.Filter1.IntegralHeight = false;
-            this.Filter1.ItemHeight = 30;
-            this.Filter1.Location = new System.Drawing.Point(91, 67);
-            this.Filter1.MaxDropDownItems = 100;
-            this.Filter1.Name = "Filter1";
-            this.Filter1.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.Filter1.SelectedItemForeColor = System.Drawing.Color.White;
-            this.Filter1.Size = new System.Drawing.Size(172, 36);
-            this.Filter1.Style = MetroSet_UI.Design.Style.Dark;
-            this.Filter1.StyleManager = null;
-            this.Filter1.TabIndex = 5;
-            this.Filter1.ThemeAuthor = "Narwin";
-            this.Filter1.ThemeName = "MetroDark";
-            this.Filter1.ValueMember = "Fund";
-            // 
-            // metroLabel1
-            // 
-            this.metroLabel1.AutoSize = true;
-            this.metroLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.metroLabel1.Location = new System.Drawing.Point(91, 35);
-            this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(54, 19);
-            this.metroLabel1.TabIndex = 6;
-            this.metroLabel1.Text = "DataSet";
-            this.metroLabel1.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
             // metroPanel4
             // 
@@ -857,7 +767,7 @@ namespace BudgetExecution
             // metroPanel5
             // 
             this.metroPanel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.metroPanel5.Controls.Add(this.tabControlAdv1);
+            this.metroPanel5.Controls.Add(this.DataTabControl);
             this.metroPanel5.HorizontalScrollbarBarColor = true;
             this.metroPanel5.HorizontalScrollbarHighlightOnWheel = false;
             this.metroPanel5.HorizontalScrollbarSize = 10;
@@ -870,56 +780,89 @@ namespace BudgetExecution
             this.metroPanel5.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel5.VerticalScrollbarSize = 10;
             // 
-            // tabControlAdv1
+            // DataTabControl
             // 
-            this.tabControlAdv1.ActiveTabForeColor = System.Drawing.Color.Empty;
-            this.tabControlAdv1.BeforeTouchSize = new System.Drawing.Size(441, 583);
-            this.tabControlAdv1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tabControlAdv1.CloseButtonForeColor = System.Drawing.Color.Empty;
-            this.tabControlAdv1.CloseButtonHoverForeColor = System.Drawing.Color.Empty;
-            this.tabControlAdv1.CloseButtonPressedForeColor = System.Drawing.Color.Empty;
-            this.tabControlAdv1.Controls.Add(this.tabPageAdv1);
-            this.tabControlAdv1.Controls.Add(this.tabPageAdv2);
-            this.tabControlAdv1.FocusOnTabClick = false;
-            this.tabControlAdv1.InactiveTabColor = System.Drawing.Color.Transparent;
-            this.tabControlAdv1.InActiveTabForeColor = System.Drawing.Color.Gray;
-            this.tabControlAdv1.Location = new System.Drawing.Point(3, 47);
-            this.tabControlAdv1.Multiline = true;
-            this.tabControlAdv1.Name = "tabControlAdv1";
-            this.tabControlAdv1.Office2010ColorTheme = Syncfusion.Windows.Forms.Office2010Theme.Black;
-            this.tabControlAdv1.SeparatorColor = System.Drawing.Color.Black;
-            this.tabControlAdv1.ShowSeparator = true;
-            this.tabControlAdv1.Size = new System.Drawing.Size(441, 583);
-            this.tabControlAdv1.TabIndex = 2;
-            this.tabControlAdv1.TabPanelBackColor = System.Drawing.Color.Transparent;
-            this.tabControlAdv1.TabStyle = typeof(Syncfusion.Windows.Forms.Tools.TabRendererMetro);
+            this.DataTabControl.ActiveTabForeColor = System.Drawing.Color.Empty;
+            this.DataTabControl.BeforeTouchSize = new System.Drawing.Size(441, 583);
+            this.DataTabControl.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.DataTabControl.CloseButtonForeColor = System.Drawing.Color.Empty;
+            this.DataTabControl.CloseButtonHoverForeColor = System.Drawing.Color.Empty;
+            this.DataTabControl.CloseButtonPressedForeColor = System.Drawing.Color.Empty;
+            this.DataTabControl.Controls.Add(this.DataFilterTab);
+            this.DataTabControl.Controls.Add(this.DataFunctionTab);
+            this.DataTabControl.FocusOnTabClick = false;
+            this.DataTabControl.InactiveTabColor = System.Drawing.Color.Transparent;
+            this.DataTabControl.InActiveTabForeColor = System.Drawing.Color.Gray;
+            this.DataTabControl.Location = new System.Drawing.Point(3, 47);
+            this.DataTabControl.Multiline = true;
+            this.DataTabControl.Name = "DataTabControl";
+            this.DataTabControl.Office2010ColorTheme = Syncfusion.Windows.Forms.Office2010Theme.Black;
+            this.DataTabControl.SeparatorColor = System.Drawing.Color.Black;
+            this.DataTabControl.ShowSeparator = true;
+            this.DataTabControl.Size = new System.Drawing.Size(441, 583);
+            this.DataTabControl.TabIndex = 2;
+            this.DataTabControl.TabPanelBackColor = System.Drawing.Color.Transparent;
+            this.DataTabControl.TabStyle = typeof(Syncfusion.Windows.Forms.Tools.TabRendererMetro);
+            this.DataTabControl.SelectedIndexChanged += new System.EventHandler(this.DataTabControl_SelectedIndexChanged);
             // 
-            // tabPageAdv1
+            // DataFilterTab
             // 
-            this.tabPageAdv1.Controls.Add(this.metroPanel3);
-            this.tabPageAdv1.Controls.Add(this.metroPanel2);
-            this.tabPageAdv1.Image = null;
-            this.tabPageAdv1.ImageSize = new System.Drawing.Size(16, 16);
-            this.tabPageAdv1.Location = new System.Drawing.Point(0, 28);
-            this.tabPageAdv1.Name = "tabPageAdv1";
-            this.tabPageAdv1.ShowCloseButton = true;
-            this.tabPageAdv1.Size = new System.Drawing.Size(441, 555);
-            this.tabPageAdv1.TabIndex = 1;
-            this.tabPageAdv1.Text = "tabPageAdv1";
-            this.tabPageAdv1.ThemesEnabled = false;
+            this.DataFilterTab.Controls.Add(this.metroPanel3);
+            this.DataFilterTab.Image = null;
+            this.DataFilterTab.ImageSize = new System.Drawing.Size(16, 16);
+            this.DataFilterTab.Location = new System.Drawing.Point(0, 28);
+            this.DataFilterTab.Name = "DataFilterTab";
+            this.DataFilterTab.ShowCloseButton = true;
+            this.DataFilterTab.Size = new System.Drawing.Size(441, 555);
+            this.DataFilterTab.TabIndex = 1;
+            this.DataFilterTab.Text = "Data Filters";
+            this.DataFilterTab.ThemesEnabled = false;
             // 
-            // tabPageAdv2
+            // DataFunctionTab
             // 
-            this.tabPageAdv2.Controls.Add(this.metroPanel4);
-            this.tabPageAdv2.Image = null;
-            this.tabPageAdv2.ImageSize = new System.Drawing.Size(16, 16);
-            this.tabPageAdv2.Location = new System.Drawing.Point(0, 28);
-            this.tabPageAdv2.Name = "tabPageAdv2";
-            this.tabPageAdv2.ShowCloseButton = true;
-            this.tabPageAdv2.Size = new System.Drawing.Size(441, 555);
-            this.tabPageAdv2.TabIndex = 2;
-            this.tabPageAdv2.Text = "tabPageAdv2";
-            this.tabPageAdv2.ThemesEnabled = false;
+            this.DataFunctionTab.Controls.Add(this.metroPanel4);
+            this.DataFunctionTab.Image = null;
+            this.DataFunctionTab.ImageSize = new System.Drawing.Size(16, 16);
+            this.DataFunctionTab.Location = new System.Drawing.Point(0, 28);
+            this.DataFunctionTab.Name = "DataFunctionTab";
+            this.DataFunctionTab.ShowCloseButton = true;
+            this.DataFunctionTab.Size = new System.Drawing.Size(441, 555);
+            this.DataFunctionTab.TabIndex = 2;
+            this.DataFunctionTab.Text = "Data Function";
+            this.DataFunctionTab.ThemesEnabled = false;
+            // 
+            // Filter1
+            // 
+            this.Filter1.AllowDrop = true;
+            this.Filter1.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.Filter1.BackColor = System.Drawing.Color.Transparent;
+            this.Filter1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.Filter1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.Filter1.CausesValidation = false;
+            this.Filter1.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.Filter1.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.Filter1.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.Filter1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.Filter1.DropDownHeight = 75;
+            this.Filter1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Filter1.DropDownWidth = 155;
+            this.Filter1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Filter1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.Filter1.FormattingEnabled = true;
+            this.Filter1.IntegralHeight = false;
+            this.Filter1.ItemHeight = 30;
+            this.Filter1.Location = new System.Drawing.Point(91, 70);
+            this.Filter1.MaxDropDownItems = 100;
+            this.Filter1.Name = "Filter1";
+            this.Filter1.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.Filter1.SelectedItemForeColor = System.Drawing.Color.White;
+            this.Filter1.Size = new System.Drawing.Size(172, 36);
+            this.Filter1.Style = MetroSet_UI.Design.Style.Dark;
+            this.Filter1.StyleManager = null;
+            this.Filter1.TabIndex = 7;
+            this.Filter1.ThemeAuthor = "Narwin";
+            this.Filter1.ThemeName = "MetroDark";
+            this.Filter1.ValueMember = "Fund";
             // 
             // SQLiteData
             // 
@@ -929,7 +872,7 @@ namespace BudgetExecution
             this.BorderColor = System.Drawing.SystemColors.MenuHighlight;
             this.CaptionBarColor = System.Drawing.Color.Black;
             this.CaptionBarHeight = 60;
-            this.CaptionForeColor = System.Drawing.Color.Black;
+            this.CaptionForeColor = System.Drawing.SystemColors.MenuHighlight;
             captionImage1.BackColor = System.Drawing.Color.Black;
             captionImage1.Image = ((System.Drawing.Image)(resources.GetObject("captionImage1.Image")));
             captionImage1.Location = new System.Drawing.Point(10, 10);
@@ -945,25 +888,23 @@ namespace BudgetExecution
             this.Name = "SQLiteData";
             this.ShowIcon = false;
             this.Text = "DataMaster";
+            this.Load += new System.EventHandler(this.SQLiteData_Load);
             ((System.ComponentModel.ISupportInitialize)(this.E6DataGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BindingSource)).EndInit();
             this.metroPanel1.ResumeLayout(false);
             this.metroPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.SQLiteGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Grid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Navigator)).EndInit();
             this.Navigator.ResumeLayout(false);
             this.Navigator.PerformLayout();
             this.metroPanel3.ResumeLayout(false);
-            this.metroPanel3.PerformLayout();
-            this.metroPanel2.ResumeLayout(false);
-            this.metroPanel2.PerformLayout();
             this.metroPanel4.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.metroPanel5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.tabControlAdv1)).EndInit();
-            this.tabControlAdv1.ResumeLayout(false);
-            this.tabPageAdv1.ResumeLayout(false);
-            this.tabPageAdv2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.DataTabControl)).EndInit();
+            this.DataTabControl.ResumeLayout(false);
+            this.DataFilterTab.ResumeLayout(false);
+            this.DataFunctionTab.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -987,7 +928,7 @@ namespace BudgetExecution
         private System.Windows.Forms.BindingSource BindingSource;
         private MetroSet_UI.Controls.MetroSetComboBox FIlter2;
         private MetroFramework.Controls.MetroPanel metroPanel1;
-        private System.Windows.Forms.DataGridView SQLiteGrid;
+        private System.Windows.Forms.DataGridView Grid;
         private System.Windows.Forms.BindingNavigator Navigator;
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
         private System.Windows.Forms.ToolStripButton PreviousButton;
@@ -1009,27 +950,23 @@ namespace BudgetExecution
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Button button13;
-        private MetroFramework.Controls.MetroLabel label2;
-        private MetroFramework.Controls.MetroLabel metroLabel1;
-        private MetroSet_UI.Controls.MetroSetComboBox Filter1;
         private MetroFramework.Controls.MetroPanel metroPanel3;
         private MetroSet_UI.Controls.MetroSetComboBox Filter3;
-        private MetroFramework.Controls.MetroLabel metroLabel6;
-        private MetroFramework.Controls.MetroPanel metroPanel2;
         private MetroFramework.Controls.MetroPanel metroPanel4;
         private MetroFramework.Controls.MetroLabel metroLabel3;
         private System.Windows.Forms.ToolStripButton toolStripButton9;
         private MetroFramework.Controls.MetroLabel metroLabel5;
         private MetroFramework.Controls.MetroLabel metroLabel4;
         private MetroFramework.Controls.MetroPanel metroPanel5;
-        private Syncfusion.Windows.Forms.Tools.TabControlAdv tabControlAdv1;
-        private Syncfusion.Windows.Forms.Tools.TabPageAdv tabPageAdv1;
-        private Syncfusion.Windows.Forms.Tools.TabPageAdv tabPageAdv2;
+        private Syncfusion.Windows.Forms.Tools.TabControlAdv DataTabControl;
+        private Syncfusion.Windows.Forms.Tools.TabPageAdv DataFilterTab;
+        private Syncfusion.Windows.Forms.Tools.TabPageAdv DataFunctionTab;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator8;
         private System.Windows.Forms.ToolStripButton UpdateButton;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator11;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator10;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator9;
         private System.Windows.Forms.ToolStripButton CopyButton;
+        private MetroSet_UI.Controls.MetroSetComboBox Filter1;
     }
 }
