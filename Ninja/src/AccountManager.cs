@@ -115,17 +115,17 @@ namespace BudgetExecution
         {
             var data = new DataBuilder(Source, Provider);
             foreach (string p in data.ProgramElements["SubProject"])
-                SubProjectComboBox.Items.Add(p);
+                ComboBox5.Items.Add(p);
             foreach (string p in data.ProgramElements["Code"])
-                CodeComboBox.Items.Add(p);
+                ComboBox6.Items.Add(p);
             foreach (string p in data.ProgramElements["Fund"])
-                FundComboBox.Items.Add(p);
+                ComboBox3.Items.Add(p);
             foreach (string p in data.ProgramElements["RC"])
-                RcComboBox.Items.Add(p);
+                ComboBox8.Items.Add(p);
             foreach (string p in data.ProgramElements["Org"])
-                OrgComboBox.Items.Add(p);
+                ComboBox4.Items.Add(p);
             foreach (string p in data.ProgramElements["BOC"])
-                BocComboBox.Items.Add(p);
+                ComboBox7.Items.Add(p);
         }
 
         private void PopuluateFundCodes()
@@ -134,7 +134,7 @@ namespace BudgetExecution
             {
                 var codes = Info.AgencyFundCodes;
                 foreach (string c in codes)
-                    FundComboBox.Items.Add(c);
+                    ComboBox3.Items.Add(c);
             }
             catch (Exception ex)
             {

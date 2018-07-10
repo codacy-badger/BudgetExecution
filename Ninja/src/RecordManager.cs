@@ -6,6 +6,8 @@ namespace BudgetExecution
 {
     using System;
     using System.Collections.Generic;
+    using System.Data;
+    using System.Linq;
     using System.Windows.Forms;
     using MetroSet_UI.Controls;
 
@@ -28,10 +30,44 @@ namespace BudgetExecution
             ComboBoxes = GetComboBoxes();
         }
 
+        public RecordManager(Source source, Provider provider)
+        {
+
+            InitializeComponent();
+            Source = source;
+            Provider = provider;
+            DbData = new DataBuilder(Source, Provider);
+            DbTable = DbData.DbTable;
+            DbRow = DbTable.AsEnumerable().Select(prc => prc).First();
+            BindingSource = DbData.BindingSource;
+            BindingSource.DataSource = DbTable;
+            RecordNavigator.BindingSource = BindingSource;
+            AddNewTab.TabVisible = false;
+        }
+
+        public RecordManager(Source source, Provider provider, Dictionary<string, object> p)
+        {
+
+            InitializeComponent();
+            Source = source;
+            Provider = provider;
+            DbData = new DataBuilder(Source, Provider, p);
+            DbTable = DbData.DbTable;
+            DbRow = DbTable.AsEnumerable().Select(prc => prc).First();
+            BindingSource = DbData.BindingSource;
+            BindingSource.DataSource = DbTable;
+            RecordNavigator.BindingSource = BindingSource;
+            AddNewTab.TabVisible = false;
+        }
+
         // PROPERTIES
+        Source Source { get; set;}
+        Provider Provider { get; set; }
         DataBuilder DbData { get; set; }
+        DataTable DbTable { get; set; }
+        DataRow DbRow { get; set; }
         BindingSource AccountBinding { get; set; }
-        List<Label> Labels { get; set; }
+        Label[] Labels { get; set; }
         List<MetroSetComboBox> ComboBoxes { get; set; }
 
         private void PopuluateFundCodes(MetroSetComboBox FundComboBox)
@@ -67,14 +103,17 @@ namespace BudgetExecution
         {
         }
 
-        private List<Label> GetLabels()
+        private Label[] GetLabels()
         {
             try
             {
-                List<Label> labels = null;
-                foreach (Label lbl in RecorDataGroupBox.Controls)
-                    labels.Add(lbl);
-                return labels;
+                var label = new Label[]
+                {
+                    lbl0, lbl1, lbl2, lbl3, lbl4, lbl5, lbl6, lbl7, lbl8, lbl9, lbl10,
+                    lbl11, lbl12, lbl13, lbl14, lbl15, lbl16, lbl17, lbl18, lbl19, lbl20,
+                    lbl21, lbl22, lbl23, lbl24
+                };
+                return label;
             }
             catch (Exception ex)
             {
@@ -97,6 +136,26 @@ namespace BudgetExecution
                 MessageBox.Show(ex.Message + ex.StackTrace);
                 return null;
             }
+        }
+
+        private void lbl14_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void NextButton_Click(object sender, EventArgs e)
+        {
+            BindingSource.MoveNext();
+        }
+
+        private void PreviousButton_Click(object sender, EventArgs e)
+        {
+            BindingSource.MovePrevious();
+        }
+
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

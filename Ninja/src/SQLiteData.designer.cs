@@ -59,9 +59,6 @@ namespace BudgetExecution
             this.BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.FIlter2 = new MetroSet_UI.Controls.MetroSetComboBox();
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
-            this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.Grid = new System.Windows.Forms.DataGridView();
             this.Navigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
@@ -99,6 +96,15 @@ namespace BudgetExecution
             this.DataFilterTab = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
             this.DataFunctionTab = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
             this.Filter1 = new MetroSet_UI.Controls.MetroSetComboBox();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.label31 = new System.Windows.Forms.Label();
+            this.label39 = new System.Windows.Forms.Label();
+            this.label32 = new System.Windows.Forms.Label();
+            this.label38 = new System.Windows.Forms.Label();
+            this.label34 = new System.Windows.Forms.Label();
+            this.label37 = new System.Windows.Forms.Label();
+            this.label40 = new System.Windows.Forms.Label();
+            this.label41 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.E6DataGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BindingSource)).BeginInit();
             this.metroPanel1.SuspendLayout();
@@ -113,6 +119,7 @@ namespace BudgetExecution
             this.DataTabControl.SuspendLayout();
             this.DataFilterTab.SuspendLayout();
             this.DataFunctionTab.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // E6DataGrid
@@ -291,9 +298,7 @@ namespace BudgetExecution
             // metroPanel1
             // 
             this.metroPanel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.metroPanel1.Controls.Add(this.metroLabel5);
-            this.metroPanel1.Controls.Add(this.metroLabel4);
-            this.metroPanel1.Controls.Add(this.metroLabel3);
+            this.metroPanel1.Controls.Add(this.tableLayoutPanel1);
             this.metroPanel1.Controls.Add(this.Grid);
             this.metroPanel1.Controls.Add(this.Navigator);
             this.metroPanel1.HorizontalScrollbarBarColor = true;
@@ -307,39 +312,6 @@ namespace BudgetExecution
             this.metroPanel1.VerticalScrollbarBarColor = true;
             this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel1.VerticalScrollbarSize = 10;
-            // 
-            // metroLabel5
-            // 
-            this.metroLabel5.AutoSize = true;
-            this.metroLabel5.BackColor = System.Drawing.Color.Transparent;
-            this.metroLabel5.Location = new System.Drawing.Point(900, 47);
-            this.metroLabel5.Name = "metroLabel5";
-            this.metroLabel5.Size = new System.Drawing.Size(54, 19);
-            this.metroLabel5.TabIndex = 155;
-            this.metroLabel5.Text = "DataSet";
-            this.metroLabel5.Theme = MetroFramework.MetroThemeStyle.Dark;
-            // 
-            // metroLabel4
-            // 
-            this.metroLabel4.AutoSize = true;
-            this.metroLabel4.BackColor = System.Drawing.Color.Transparent;
-            this.metroLabel4.Location = new System.Drawing.Point(486, 47);
-            this.metroLabel4.Name = "metroLabel4";
-            this.metroLabel4.Size = new System.Drawing.Size(54, 19);
-            this.metroLabel4.TabIndex = 154;
-            this.metroLabel4.Text = "DataSet";
-            this.metroLabel4.Theme = MetroFramework.MetroThemeStyle.Dark;
-            // 
-            // metroLabel3
-            // 
-            this.metroLabel3.AutoSize = true;
-            this.metroLabel3.BackColor = System.Drawing.Color.Transparent;
-            this.metroLabel3.Location = new System.Drawing.Point(49, 47);
-            this.metroLabel3.Name = "metroLabel3";
-            this.metroLabel3.Size = new System.Drawing.Size(54, 19);
-            this.metroLabel3.TabIndex = 153;
-            this.metroLabel3.Text = "DataSet";
-            this.metroLabel3.Theme = MetroFramework.MetroThemeStyle.Dark;
             // 
             // Grid
             // 
@@ -862,7 +834,112 @@ namespace BudgetExecution
             this.Filter1.TabIndex = 7;
             this.Filter1.ThemeAuthor = "Narwin";
             this.Filter1.ThemeName = "MetroDark";
-            this.Filter1.ValueMember = "Fund";
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 8;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.41322F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.58678F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 108F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 158F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 118F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 120F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 118F));
+            this.tableLayoutPanel1.Controls.Add(this.label31, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.label39, 5, 0);
+            this.tableLayoutPanel1.Controls.Add(this.label32, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.label38, 4, 0);
+            this.tableLayoutPanel1.Controls.Add(this.label34, 2, 0);
+            this.tableLayoutPanel1.Controls.Add(this.label37, 3, 0);
+            this.tableLayoutPanel1.Controls.Add(this.label40, 6, 0);
+            this.tableLayoutPanel1.Controls.Add(this.label41, 7, 0);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(38, 24);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1012, 33);
+            this.tableLayoutPanel1.TabIndex = 160;
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Dock = System.Windows.Forms.DockStyle.Right;
+            this.label31.Location = new System.Drawing.Point(83, 0);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(60, 33);
+            this.label31.TabIndex = 153;
+            this.label31.Text = "label31";
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label39.Location = new System.Drawing.Point(658, 0);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(60, 33);
+            this.label39.TabIndex = 158;
+            this.label39.Text = "label39";
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label32.Location = new System.Drawing.Point(149, 0);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(60, 33);
+            this.label32.TabIndex = 154;
+            this.label32.Text = "label32";
+            // 
+            // label38
+            // 
+            this.label38.AutoSize = true;
+            this.label38.Dock = System.Windows.Forms.DockStyle.Right;
+            this.label38.Location = new System.Drawing.Point(592, 0);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(60, 33);
+            this.label38.TabIndex = 157;
+            this.label38.Text = "label38";
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Dock = System.Windows.Forms.DockStyle.Right;
+            this.label34.Location = new System.Drawing.Point(334, 0);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(60, 33);
+            this.label34.TabIndex = 155;
+            this.label34.Text = "label34";
+            // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label37.Location = new System.Drawing.Point(400, 0);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(60, 33);
+            this.label37.TabIndex = 156;
+            this.label37.Text = "label37";
+            // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.Dock = System.Windows.Forms.DockStyle.Right;
+            this.label40.Location = new System.Drawing.Point(830, 0);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(60, 33);
+            this.label40.TabIndex = 159;
+            this.label40.Text = "label40";
+            // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label41.Location = new System.Drawing.Point(896, 0);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(60, 33);
+            this.label41.TabIndex = 160;
+            this.label41.Text = "label41";
             // 
             // SQLiteData
             // 
@@ -905,6 +982,8 @@ namespace BudgetExecution
             this.DataTabControl.ResumeLayout(false);
             this.DataFilterTab.ResumeLayout(false);
             this.DataFunctionTab.ResumeLayout(false);
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -953,10 +1032,7 @@ namespace BudgetExecution
         private MetroFramework.Controls.MetroPanel metroPanel3;
         private MetroSet_UI.Controls.MetroSetComboBox Filter3;
         private MetroFramework.Controls.MetroPanel metroPanel4;
-        private MetroFramework.Controls.MetroLabel metroLabel3;
         private System.Windows.Forms.ToolStripButton toolStripButton9;
-        private MetroFramework.Controls.MetroLabel metroLabel5;
-        private MetroFramework.Controls.MetroLabel metroLabel4;
         private MetroFramework.Controls.MetroPanel metroPanel5;
         private Syncfusion.Windows.Forms.Tools.TabControlAdv DataTabControl;
         private Syncfusion.Windows.Forms.Tools.TabPageAdv DataFilterTab;
@@ -968,5 +1044,14 @@ namespace BudgetExecution
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator9;
         private System.Windows.Forms.ToolStripButton CopyButton;
         private MetroSet_UI.Controls.MetroSetComboBox Filter1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.Label label39;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.Label label38;
+        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.Label label37;
+        private System.Windows.Forms.Label label40;
+        private System.Windows.Forms.Label label41;
     }
 }
