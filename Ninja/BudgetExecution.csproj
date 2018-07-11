@@ -402,6 +402,12 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="src\AccountManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\AccountManager.Designer.cs">
+      <DependentUpon>AccountManager.cs</DependentUpon>
+    </Compile>
     <Compile Include="src\ExcelImporter.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -527,12 +533,6 @@
     <Compile Include="src\ExcelQuery.cs" />
     <Compile Include="src\ExcelReport.cs" />
     <Compile Include="src\IFund.cs" />
-    <Compile Include="src\AccountManager.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="src\AccountManager.Designer.cs">
-      <DependentUpon>AccountManager.cs</DependentUpon>
-    </Compile>
     <Compile Include="src\FormData.cs" />
     <Compile Include="src\NPM.cs" />
     <Compile Include="src\AppropriationSelector.cs">
@@ -664,6 +664,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>DivisionIconImages.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="src\AccountManager.resx">
+      <DependentUpon>AccountManager.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="src\CalculatorForm.resx">
       <DependentUpon>CalculatorForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -708,9 +711,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="src\ExternalDataReader.resx">
       <DependentUpon>ExternalDataReader.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="src\AccountManager.resx">
-      <DependentUpon>AccountManager.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="src\FunctionalityForm.resx">
       <DependentUpon>FunctionalityForm.cs</DependentUpon>

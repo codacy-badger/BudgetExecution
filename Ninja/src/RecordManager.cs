@@ -127,7 +127,7 @@ namespace BudgetExecution
             try
             {
                 List<MetroSetComboBox> labels = null;
-                foreach (MetroSetComboBox lbl in RecorDataGroupBox.Controls)
+                foreach (MetroSetComboBox lbl in RecordTabelPanel.Controls)
                     labels.Add(lbl);
                 return labels;
             }
@@ -138,7 +138,7 @@ namespace BudgetExecution
             }
         }
 
-        private void lbl14_Click(object sender, EventArgs e)
+        private void Lbl14_Click(object sender, EventArgs e)
         {
 
         }
@@ -153,7 +153,12 @@ namespace BudgetExecution
             BindingSource.MovePrevious();
         }
 
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        private void TableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void Button2_Click(object sender, EventArgs e)
         {
 
         }
