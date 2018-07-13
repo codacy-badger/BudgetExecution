@@ -114,8 +114,11 @@ namespace BudgetExecution
         private void PopulateComboBoxes()
         {
             var data = new DataBuilder(Source, Provider);
-            foreach (string p in data.ProgramElements["SubProject"])
-                ComboBox5.Items.Add(p);
+            if(data.DbTable.Columns.Contains("SubProject"))
+            {
+                foreach (string p in data.ProgramElements["SubProject"])
+                    ComboBox5.Items.Add(p);
+            }
             foreach (string p in data.ProgramElements["Code"])
                 ComboBox6.Items.Add(p);
             foreach (string p in data.ProgramElements["Fund"])

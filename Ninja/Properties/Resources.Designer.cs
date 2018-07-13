@@ -59,5 +59,15 @@ namespace BudgetExecution.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Arrow_Left___03 {
+            get {
+                object obj = ResourceManager.GetObject("Arrow Left - 03", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

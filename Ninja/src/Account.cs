@@ -36,6 +36,7 @@ namespace BudgetExecution
         public Account(string fund, string code) : this(Source.Accounts, Provider.SQLite)
         {
             Code = code;
+            ProgramProjectCode = Code.Substring(4, 2);
             Parameter = GetAccountParameter(fund, code);
             DbTable = GetAccountData(Source.Accounts, Provider.SQLite, Parameter);
             DbRow = DbTable.AsEnumerable().First();
@@ -59,13 +60,13 @@ namespace BudgetExecution
         {
             Fund = fund;
             Code = code;
+            ProgramProjectCode = Code.Substring(4, 2);
             Parameter = GetAccountParameter(fund, code);
             DbTable = GetAccountData(source, provider, Parameter);
             DbRow = DbTable.AsEnumerable().First();
             Goal = Code.Substring(0, 1);
             Objective = Code.Substring(1, 2);
             NpmCode = Code.Substring(3, 1);
-            ProgramProjectCode = Code.Substring(4, 2);
             Org = DbRow["Org"].ToString();
             Fund = DbRow["Fund"].ToString();
             ProgramProjectName = DbRow["ProgramProjectName"].ToString();
@@ -146,7 +147,7 @@ namespace BudgetExecution
                 return new Dictionary<string, object>()
                 {
                     ["Fund"] = fund,
-                    ["Code"] = code
+                    ["ProgramProjectCode"] = Code.Substring(4, 2)
                 };
             }
             catch (System.Exception ex)

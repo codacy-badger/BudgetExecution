@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RecordManager));
             Syncfusion.Windows.Forms.CaptionImage captionImage1 = new Syncfusion.Windows.Forms.CaptionImage();
-            this.BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.RecordNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
@@ -53,6 +52,11 @@
             this.AccountTabControl = new Syncfusion.Windows.Forms.Tools.TabControlAdv();
             this.UpdateTab = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
             this.RecordTabelPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.lbl29 = new System.Windows.Forms.Label();
+            this.lbl28 = new System.Windows.Forms.Label();
+            this.box29 = new MetroSet_UI.Controls.MetroSetTextBox();
+            this.lbl27 = new System.Windows.Forms.Label();
+            this.lbl26 = new System.Windows.Forms.Label();
             this.box0 = new MetroSet_UI.Controls.MetroSetTextBox();
             this.box4 = new MetroSet_UI.Controls.MetroSetTextBox();
             this.lbl0 = new System.Windows.Forms.Label();
@@ -102,9 +106,12 @@
             this.lbl24 = new System.Windows.Forms.Label();
             this.box2 = new MetroSet_UI.Controls.MetroSetTextBox();
             this.lbl25 = new System.Windows.Forms.Label();
-            this.box25 = new MetroSet_UI.Controls.MetroSetTextBox();
             this.box18 = new MetroSet_UI.Controls.MetroSetTextBox();
             this.box24 = new MetroSet_UI.Controls.MetroSetTextBox();
+            this.box25 = new MetroSet_UI.Controls.MetroSetTextBox();
+            this.box27 = new MetroSet_UI.Controls.MetroSetTextBox();
+            this.box26 = new MetroSet_UI.Controls.MetroSetTextBox();
+            this.box28 = new MetroSet_UI.Controls.MetroSetTextBox();
             this.AddNewTab = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
             this.metroSetPanel1 = new MetroSet_UI.Controls.MetroSetPanel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -142,7 +149,7 @@
             this.label25 = new System.Windows.Forms.Label();
             this.metroSetTextBox11 = new MetroSet_UI.Controls.MetroSetTextBox();
             this.metroSetTextBox12 = new MetroSet_UI.Controls.MetroSetTextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.BindingSource)).BeginInit();
+            this.BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.RecordNavigator)).BeginInit();
             this.RecordNavigator.SuspendLayout();
@@ -155,6 +162,7 @@
             this.groupBox1.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.groupBox5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.BindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox2
@@ -163,7 +171,7 @@
             this.groupBox2.Controls.Add(this.RecordNavigator);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.ForeColor = System.Drawing.SystemColors.Info;
-            this.groupBox2.Location = new System.Drawing.Point(765, 436);
+            this.groupBox2.Location = new System.Drawing.Point(773, 463);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(499, 59);
             this.groupBox2.TabIndex = 56;
@@ -308,10 +316,9 @@
             // DeleteButton
             // 
             this.DeleteButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.DeleteButton.Image = ((System.Drawing.Image)(resources.GetObject("DeleteButton.Image")));
             this.DeleteButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.DeleteButton.Name = "DeleteButton";
-            this.DeleteButton.Size = new System.Drawing.Size(28, 28);
+            this.DeleteButton.Size = new System.Drawing.Size(23, 28);
             this.DeleteButton.Text = "toolStripButton3";
             this.DeleteButton.ToolTipText = "Delete Record";
             // 
@@ -334,7 +341,7 @@
             // 
             this.AccountTabControl.ActiveTabForeColor = System.Drawing.Color.White;
             this.AccountTabControl.AdjustTopGap = 10;
-            this.AccountTabControl.BeforeTouchSize = new System.Drawing.Size(1276, 576);
+            this.AccountTabControl.BeforeTouchSize = new System.Drawing.Size(1275, 597);
             this.AccountTabControl.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.AccountTabControl.CloseButtonForeColor = System.Drawing.Color.Empty;
             this.AccountTabControl.CloseButtonHoverForeColor = System.Drawing.Color.Black;
@@ -343,14 +350,13 @@
             this.AccountTabControl.Controls.Add(this.AddNewTab);
             this.AccountTabControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.AccountTabControl.FocusOnTabClick = false;
-            this.AccountTabControl.InactiveTabColor = System.Drawing.Color.Transparent;
             this.AccountTabControl.InActiveTabForeColor = System.Drawing.Color.Gray;
             this.AccountTabControl.Location = new System.Drawing.Point(0, 0);
             this.AccountTabControl.Name = "AccountTabControl";
             this.AccountTabControl.Padding = new System.Drawing.Point(6, 8);
             this.AccountTabControl.SeparatorColor = System.Drawing.SystemColors.ControlDark;
             this.AccountTabControl.ShowSeparator = false;
-            this.AccountTabControl.Size = new System.Drawing.Size(1276, 576);
+            this.AccountTabControl.Size = new System.Drawing.Size(1275, 597);
             this.AccountTabControl.TabGap = 5;
             this.AccountTabControl.TabIndex = 24;
             this.AccountTabControl.TabPanelBackColor = System.Drawing.Color.Black;
@@ -365,7 +371,7 @@
             this.UpdateTab.Location = new System.Drawing.Point(0, 48);
             this.UpdateTab.Name = "UpdateTab";
             this.UpdateTab.ShowCloseButton = true;
-            this.UpdateTab.Size = new System.Drawing.Size(1276, 528);
+            this.UpdateTab.Size = new System.Drawing.Size(1275, 549);
             this.UpdateTab.TabIndex = 3;
             this.UpdateTab.Text = "Update";
             this.UpdateTab.ThemesEnabled = false;
@@ -379,6 +385,11 @@
             this.RecordTabelPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 203F));
             this.RecordTabelPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 210F));
             this.RecordTabelPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 194F));
+            this.RecordTabelPanel.Controls.Add(this.lbl29, 5, 8);
+            this.RecordTabelPanel.Controls.Add(this.lbl28, 4, 8);
+            this.RecordTabelPanel.Controls.Add(this.box29, 5, 9);
+            this.RecordTabelPanel.Controls.Add(this.lbl27, 3, 8);
+            this.RecordTabelPanel.Controls.Add(this.lbl26, 2, 8);
             this.RecordTabelPanel.Controls.Add(this.box0, 0, 1);
             this.RecordTabelPanel.Controls.Add(this.box4, 4, 1);
             this.RecordTabelPanel.Controls.Add(this.lbl0, 0, 0);
@@ -428,25 +439,94 @@
             this.RecordTabelPanel.Controls.Add(this.lbl24, 0, 8);
             this.RecordTabelPanel.Controls.Add(this.box2, 2, 1);
             this.RecordTabelPanel.Controls.Add(this.lbl25, 1, 8);
-            this.RecordTabelPanel.Controls.Add(this.box25, 1, 9);
             this.RecordTabelPanel.Controls.Add(this.box18, 0, 7);
             this.RecordTabelPanel.Controls.Add(this.box24, 0, 9);
+            this.RecordTabelPanel.Controls.Add(this.box25, 1, 9);
+            this.RecordTabelPanel.Controls.Add(this.box27, 3, 9);
+            this.RecordTabelPanel.Controls.Add(this.box26, 2, 9);
+            this.RecordTabelPanel.Controls.Add(this.box28, 4, 9);
             this.RecordTabelPanel.ForeColor = System.Drawing.Color.LightGray;
-            this.RecordTabelPanel.Location = new System.Drawing.Point(12, 43);
+            this.RecordTabelPanel.Location = new System.Drawing.Point(32, 51);
             this.RecordTabelPanel.Name = "RecordTabelPanel";
             this.RecordTabelPanel.RowCount = 10;
             this.RecordTabelPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 21F));
-            this.RecordTabelPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 51F));
-            this.RecordTabelPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 21F));
-            this.RecordTabelPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.RecordTabelPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 21F));
-            this.RecordTabelPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 57F));
-            this.RecordTabelPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 24F));
-            this.RecordTabelPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 58F));
+            this.RecordTabelPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 62F));
             this.RecordTabelPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.RecordTabelPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 146F));
-            this.RecordTabelPanel.Size = new System.Drawing.Size(1225, 374);
+            this.RecordTabelPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 59F));
+            this.RecordTabelPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.RecordTabelPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
+            this.RecordTabelPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 17F));
+            this.RecordTabelPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 64F));
+            this.RecordTabelPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 23F));
+            this.RecordTabelPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 123F));
+            this.RecordTabelPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.RecordTabelPanel.Size = new System.Drawing.Size(1210, 393);
             this.RecordTabelPanel.TabIndex = 57;
+            // 
+            // lbl29
+            // 
+            this.lbl29.AutoSize = true;
+            this.lbl29.Location = new System.Drawing.Point(1034, 323);
+            this.lbl29.Name = "lbl29";
+            this.lbl29.Size = new System.Drawing.Size(47, 20);
+            this.lbl29.TabIndex = 58;
+            this.lbl29.Text = "Code";
+            // 
+            // lbl28
+            // 
+            this.lbl28.AutoSize = true;
+            this.lbl28.Location = new System.Drawing.Point(824, 323);
+            this.lbl28.Name = "lbl28";
+            this.lbl28.Size = new System.Drawing.Size(47, 20);
+            this.lbl28.TabIndex = 58;
+            this.lbl28.Text = "Code";
+            // 
+            // box29
+            // 
+            this.box29.AutoCompleteCustomSource = null;
+            this.box29.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.box29.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.box29.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.box29.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.box29.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.box29.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.box29.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.box29.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.box29.Image = null;
+            this.box29.Lines = null;
+            this.box29.Location = new System.Drawing.Point(1034, 349);
+            this.box29.MaxLength = 32767;
+            this.box29.Multiline = false;
+            this.box29.Name = "box29";
+            this.box29.ReadOnly = false;
+            this.box29.Size = new System.Drawing.Size(174, 37);
+            this.box29.Style = MetroSet_UI.Design.Style.Dark;
+            this.box29.StyleManager = null;
+            this.box29.TabIndex = 61;
+            this.box29.Text = "metroSetTextBox1";
+            this.box29.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.box29.ThemeAuthor = "Narwin";
+            this.box29.ThemeName = "MetroDark";
+            this.box29.UseSystemPasswordChar = false;
+            this.box29.WatermarkText = "";
+            // 
+            // lbl27
+            // 
+            this.lbl27.AutoSize = true;
+            this.lbl27.Location = new System.Drawing.Point(621, 323);
+            this.lbl27.Name = "lbl27";
+            this.lbl27.Size = new System.Drawing.Size(47, 20);
+            this.lbl27.TabIndex = 58;
+            this.lbl27.Text = "Code";
+            // 
+            // lbl26
+            // 
+            this.lbl26.AutoSize = true;
+            this.lbl26.Location = new System.Drawing.Point(414, 323);
+            this.lbl26.Name = "lbl26";
+            this.lbl26.Size = new System.Drawing.Size(47, 20);
+            this.lbl26.TabIndex = 62;
+            this.lbl26.Text = "Code";
             // 
             // box0
             // 
@@ -542,7 +622,7 @@
             this.box1.Multiline = false;
             this.box1.Name = "box1";
             this.box1.ReadOnly = false;
-            this.box1.Size = new System.Drawing.Size(163, 37);
+            this.box1.Size = new System.Drawing.Size(174, 37);
             this.box1.Style = MetroSet_UI.Design.Style.Dark;
             this.box1.StyleManager = null;
             this.box1.TabIndex = 22;
@@ -650,7 +730,7 @@
             // lbl6
             // 
             this.lbl6.AutoSize = true;
-            this.lbl6.Location = new System.Drawing.Point(3, 72);
+            this.lbl6.Location = new System.Drawing.Point(3, 83);
             this.lbl6.Name = "lbl6";
             this.lbl6.Size = new System.Drawing.Size(102, 20);
             this.lbl6.TabIndex = 25;
@@ -669,7 +749,7 @@
             this.box6.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.box6.Image = null;
             this.box6.Lines = null;
-            this.box6.Location = new System.Drawing.Point(3, 96);
+            this.box6.Location = new System.Drawing.Point(3, 106);
             this.box6.MaxLength = 32767;
             this.box6.Multiline = false;
             this.box6.Name = "box6";
@@ -688,7 +768,7 @@
             // lbl7
             // 
             this.lbl7.AutoSize = true;
-            this.lbl7.Location = new System.Drawing.Point(205, 72);
+            this.lbl7.Location = new System.Drawing.Point(205, 83);
             this.lbl7.Name = "lbl7";
             this.lbl7.Size = new System.Drawing.Size(102, 20);
             this.lbl7.TabIndex = 35;
@@ -707,12 +787,12 @@
             this.box7.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.box7.Image = null;
             this.box7.Lines = null;
-            this.box7.Location = new System.Drawing.Point(205, 96);
+            this.box7.Location = new System.Drawing.Point(205, 106);
             this.box7.MaxLength = 32767;
             this.box7.Multiline = false;
             this.box7.Name = "box7";
             this.box7.ReadOnly = false;
-            this.box7.Size = new System.Drawing.Size(166, 37);
+            this.box7.Size = new System.Drawing.Size(174, 37);
             this.box7.Style = MetroSet_UI.Design.Style.Dark;
             this.box7.StyleManager = null;
             this.box7.TabIndex = 33;
@@ -726,7 +806,7 @@
             // lbl8
             // 
             this.lbl8.AutoSize = true;
-            this.lbl8.Location = new System.Drawing.Point(414, 72);
+            this.lbl8.Location = new System.Drawing.Point(414, 83);
             this.lbl8.Name = "lbl8";
             this.lbl8.Size = new System.Drawing.Size(102, 20);
             this.lbl8.TabIndex = 45;
@@ -745,7 +825,7 @@
             this.box8.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.box8.Image = null;
             this.box8.Lines = null;
-            this.box8.Location = new System.Drawing.Point(414, 96);
+            this.box8.Location = new System.Drawing.Point(414, 106);
             this.box8.MaxLength = 32767;
             this.box8.Multiline = false;
             this.box8.Name = "box8";
@@ -764,7 +844,7 @@
             // lbl9
             // 
             this.lbl9.AutoSize = true;
-            this.lbl9.Location = new System.Drawing.Point(621, 72);
+            this.lbl9.Location = new System.Drawing.Point(621, 83);
             this.lbl9.Name = "lbl9";
             this.lbl9.Size = new System.Drawing.Size(102, 20);
             this.lbl9.TabIndex = 55;
@@ -783,7 +863,7 @@
             this.box9.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.box9.Image = null;
             this.box9.Lines = null;
-            this.box9.Location = new System.Drawing.Point(621, 96);
+            this.box9.Location = new System.Drawing.Point(621, 106);
             this.box9.MaxLength = 32767;
             this.box9.Multiline = false;
             this.box9.Name = "box9";
@@ -802,7 +882,7 @@
             // lbl10
             // 
             this.lbl10.AutoSize = true;
-            this.lbl10.Location = new System.Drawing.Point(824, 72);
+            this.lbl10.Location = new System.Drawing.Point(824, 83);
             this.lbl10.Name = "lbl10";
             this.lbl10.Size = new System.Drawing.Size(43, 20);
             this.lbl10.TabIndex = 6;
@@ -821,7 +901,7 @@
             this.box10.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.box10.Image = null;
             this.box10.Lines = null;
-            this.box10.Location = new System.Drawing.Point(824, 96);
+            this.box10.Location = new System.Drawing.Point(824, 106);
             this.box10.MaxLength = 32767;
             this.box10.Multiline = false;
             this.box10.Name = "box10";
@@ -840,7 +920,7 @@
             // lbl11
             // 
             this.lbl11.AutoSize = true;
-            this.lbl11.Location = new System.Drawing.Point(1034, 72);
+            this.lbl11.Location = new System.Drawing.Point(1034, 83);
             this.lbl11.Name = "lbl11";
             this.lbl11.Size = new System.Drawing.Size(43, 20);
             this.lbl11.TabIndex = 19;
@@ -859,7 +939,7 @@
             this.box11.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.box11.Image = null;
             this.box11.Lines = null;
-            this.box11.Location = new System.Drawing.Point(1034, 96);
+            this.box11.Location = new System.Drawing.Point(1034, 106);
             this.box11.MaxLength = 32767;
             this.box11.Multiline = false;
             this.box11.Name = "box11";
@@ -878,7 +958,7 @@
             // lbl12
             // 
             this.lbl12.AutoSize = true;
-            this.lbl12.Location = new System.Drawing.Point(3, 143);
+            this.lbl12.Location = new System.Drawing.Point(3, 162);
             this.lbl12.Name = "lbl12";
             this.lbl12.Size = new System.Drawing.Size(43, 20);
             this.lbl12.TabIndex = 29;
@@ -897,7 +977,7 @@
             this.box12.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.box12.Image = null;
             this.box12.Lines = null;
-            this.box12.Location = new System.Drawing.Point(3, 167);
+            this.box12.Location = new System.Drawing.Point(3, 185);
             this.box12.MaxLength = 32767;
             this.box12.Multiline = false;
             this.box12.Name = "box12";
@@ -916,7 +996,7 @@
             // lbl13
             // 
             this.lbl13.AutoSize = true;
-            this.lbl13.Location = new System.Drawing.Point(205, 143);
+            this.lbl13.Location = new System.Drawing.Point(205, 162);
             this.lbl13.Name = "lbl13";
             this.lbl13.Size = new System.Drawing.Size(43, 20);
             this.lbl13.TabIndex = 39;
@@ -935,7 +1015,7 @@
             this.box13.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.box13.Image = null;
             this.box13.Lines = null;
-            this.box13.Location = new System.Drawing.Point(205, 167);
+            this.box13.Location = new System.Drawing.Point(205, 185);
             this.box13.MaxLength = 32767;
             this.box13.Multiline = false;
             this.box13.Name = "box13";
@@ -954,7 +1034,7 @@
             // lbl14
             // 
             this.lbl14.AutoSize = true;
-            this.lbl14.Location = new System.Drawing.Point(414, 143);
+            this.lbl14.Location = new System.Drawing.Point(414, 162);
             this.lbl14.Name = "lbl14";
             this.lbl14.Size = new System.Drawing.Size(43, 20);
             this.lbl14.TabIndex = 49;
@@ -973,7 +1053,7 @@
             this.box14.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.box14.Image = null;
             this.box14.Lines = null;
-            this.box14.Location = new System.Drawing.Point(414, 167);
+            this.box14.Location = new System.Drawing.Point(414, 185);
             this.box14.MaxLength = 32767;
             this.box14.Multiline = false;
             this.box14.Name = "box14";
@@ -992,7 +1072,7 @@
             // lbl15
             // 
             this.lbl15.AutoSize = true;
-            this.lbl15.Location = new System.Drawing.Point(621, 143);
+            this.lbl15.Location = new System.Drawing.Point(621, 162);
             this.lbl15.Name = "lbl15";
             this.lbl15.Size = new System.Drawing.Size(46, 20);
             this.lbl15.TabIndex = 7;
@@ -1011,7 +1091,7 @@
             this.box15.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.box15.Image = null;
             this.box15.Lines = null;
-            this.box15.Location = new System.Drawing.Point(621, 167);
+            this.box15.Location = new System.Drawing.Point(621, 185);
             this.box15.MaxLength = 32767;
             this.box15.Multiline = false;
             this.box15.Name = "box15";
@@ -1030,7 +1110,7 @@
             // lbl16
             // 
             this.lbl16.AutoSize = true;
-            this.lbl16.Location = new System.Drawing.Point(824, 143);
+            this.lbl16.Location = new System.Drawing.Point(824, 162);
             this.lbl16.Name = "lbl16";
             this.lbl16.Size = new System.Drawing.Size(46, 20);
             this.lbl16.TabIndex = 20;
@@ -1049,7 +1129,7 @@
             this.box16.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.box16.Image = null;
             this.box16.Lines = null;
-            this.box16.Location = new System.Drawing.Point(824, 167);
+            this.box16.Location = new System.Drawing.Point(824, 185);
             this.box16.MaxLength = 32767;
             this.box16.Multiline = false;
             this.box16.Name = "box16";
@@ -1068,7 +1148,7 @@
             // lbl17
             // 
             this.lbl17.AutoSize = true;
-            this.lbl17.Location = new System.Drawing.Point(1034, 143);
+            this.lbl17.Location = new System.Drawing.Point(1034, 162);
             this.lbl17.Name = "lbl17";
             this.lbl17.Size = new System.Drawing.Size(46, 20);
             this.lbl17.TabIndex = 30;
@@ -1087,7 +1167,7 @@
             this.box17.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.box17.Image = null;
             this.box17.Lines = null;
-            this.box17.Location = new System.Drawing.Point(1034, 167);
+            this.box17.Location = new System.Drawing.Point(1034, 185);
             this.box17.MaxLength = 32767;
             this.box17.Multiline = false;
             this.box17.Name = "box17";
@@ -1106,18 +1186,18 @@
             // lbl18
             // 
             this.lbl18.AutoSize = true;
-            this.lbl18.Location = new System.Drawing.Point(3, 221);
+            this.lbl18.Location = new System.Drawing.Point(3, 242);
             this.lbl18.Name = "lbl18";
-            this.lbl18.Size = new System.Drawing.Size(46, 20);
+            this.lbl18.Size = new System.Drawing.Size(46, 17);
             this.lbl18.TabIndex = 40;
             this.lbl18.Text = "Fund";
             // 
             // lbl19
             // 
             this.lbl19.AutoSize = true;
-            this.lbl19.Location = new System.Drawing.Point(205, 221);
+            this.lbl19.Location = new System.Drawing.Point(205, 242);
             this.lbl19.Name = "lbl19";
-            this.lbl19.Size = new System.Drawing.Size(46, 20);
+            this.lbl19.Size = new System.Drawing.Size(46, 17);
             this.lbl19.TabIndex = 50;
             this.lbl19.Text = "Fund";
             // 
@@ -1134,12 +1214,12 @@
             this.box19.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.box19.Image = null;
             this.box19.Lines = null;
-            this.box19.Location = new System.Drawing.Point(205, 248);
+            this.box19.Location = new System.Drawing.Point(205, 262);
             this.box19.MaxLength = 32767;
             this.box19.Multiline = false;
             this.box19.Name = "box19";
             this.box19.ReadOnly = false;
-            this.box19.Size = new System.Drawing.Size(172, 37);
+            this.box19.Size = new System.Drawing.Size(174, 37);
             this.box19.Style = MetroSet_UI.Design.Style.Dark;
             this.box19.StyleManager = null;
             this.box19.TabIndex = 48;
@@ -1153,9 +1233,9 @@
             // lbl20
             // 
             this.lbl20.AutoSize = true;
-            this.lbl20.Location = new System.Drawing.Point(414, 221);
+            this.lbl20.Location = new System.Drawing.Point(414, 242);
             this.lbl20.Name = "lbl20";
-            this.lbl20.Size = new System.Drawing.Size(47, 20);
+            this.lbl20.Size = new System.Drawing.Size(47, 17);
             this.lbl20.TabIndex = 10;
             this.lbl20.Text = "Code";
             // 
@@ -1172,7 +1252,7 @@
             this.box20.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.box20.Image = null;
             this.box20.Lines = null;
-            this.box20.Location = new System.Drawing.Point(414, 248);
+            this.box20.Location = new System.Drawing.Point(414, 262);
             this.box20.MaxLength = 32767;
             this.box20.Multiline = false;
             this.box20.Name = "box20";
@@ -1191,9 +1271,9 @@
             // lbl21
             // 
             this.lbl21.AutoSize = true;
-            this.lbl21.Location = new System.Drawing.Point(621, 221);
+            this.lbl21.Location = new System.Drawing.Point(621, 242);
             this.lbl21.Name = "lbl21";
-            this.lbl21.Size = new System.Drawing.Size(47, 20);
+            this.lbl21.Size = new System.Drawing.Size(47, 17);
             this.lbl21.TabIndex = 21;
             this.lbl21.Text = "Code";
             // 
@@ -1210,7 +1290,7 @@
             this.box21.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.box21.Image = null;
             this.box21.Lines = null;
-            this.box21.Location = new System.Drawing.Point(621, 248);
+            this.box21.Location = new System.Drawing.Point(621, 262);
             this.box21.MaxLength = 32767;
             this.box21.Multiline = false;
             this.box21.Name = "box21";
@@ -1229,9 +1309,9 @@
             // lbl22
             // 
             this.lbl22.AutoSize = true;
-            this.lbl22.Location = new System.Drawing.Point(824, 221);
+            this.lbl22.Location = new System.Drawing.Point(824, 242);
             this.lbl22.Name = "lbl22";
-            this.lbl22.Size = new System.Drawing.Size(47, 20);
+            this.lbl22.Size = new System.Drawing.Size(47, 17);
             this.lbl22.TabIndex = 31;
             this.lbl22.Text = "Code";
             // 
@@ -1248,7 +1328,7 @@
             this.box22.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.box22.Image = null;
             this.box22.Lines = null;
-            this.box22.Location = new System.Drawing.Point(824, 248);
+            this.box22.Location = new System.Drawing.Point(824, 262);
             this.box22.MaxLength = 32767;
             this.box22.Multiline = false;
             this.box22.Name = "box22";
@@ -1267,9 +1347,9 @@
             // lbl23
             // 
             this.lbl23.AutoSize = true;
-            this.lbl23.Location = new System.Drawing.Point(1034, 221);
+            this.lbl23.Location = new System.Drawing.Point(1034, 242);
             this.lbl23.Name = "lbl23";
-            this.lbl23.Size = new System.Drawing.Size(47, 20);
+            this.lbl23.Size = new System.Drawing.Size(47, 17);
             this.lbl23.TabIndex = 41;
             this.lbl23.Text = "Code";
             // 
@@ -1286,7 +1366,7 @@
             this.box23.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.box23.Image = null;
             this.box23.Lines = null;
-            this.box23.Location = new System.Drawing.Point(1034, 248);
+            this.box23.Location = new System.Drawing.Point(1034, 262);
             this.box23.MaxLength = 32767;
             this.box23.Multiline = false;
             this.box23.Name = "box23";
@@ -1305,7 +1385,7 @@
             // lbl24
             // 
             this.lbl24.AutoSize = true;
-            this.lbl24.Location = new System.Drawing.Point(3, 303);
+            this.lbl24.Location = new System.Drawing.Point(3, 323);
             this.lbl24.Name = "lbl24";
             this.lbl24.Size = new System.Drawing.Size(47, 20);
             this.lbl24.TabIndex = 51;
@@ -1343,40 +1423,11 @@
             // lbl25
             // 
             this.lbl25.AutoSize = true;
-            this.lbl25.Location = new System.Drawing.Point(205, 303);
+            this.lbl25.Location = new System.Drawing.Point(205, 323);
             this.lbl25.Name = "lbl25";
             this.lbl25.Size = new System.Drawing.Size(47, 20);
             this.lbl25.TabIndex = 56;
             this.lbl25.Text = "Code";
-            // 
-            // box25
-            // 
-            this.box25.AutoCompleteCustomSource = null;
-            this.box25.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.box25.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.box25.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
-            this.box25.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.box25.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.box25.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.box25.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.box25.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.box25.Image = null;
-            this.box25.Lines = null;
-            this.box25.Location = new System.Drawing.Point(205, 326);
-            this.box25.MaxLength = 32767;
-            this.box25.Multiline = false;
-            this.box25.Name = "box25";
-            this.box25.ReadOnly = false;
-            this.box25.Size = new System.Drawing.Size(174, 37);
-            this.box25.Style = MetroSet_UI.Design.Style.Dark;
-            this.box25.StyleManager = null;
-            this.box25.TabIndex = 57;
-            this.box25.Text = "metroSetTextBox1";
-            this.box25.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.box25.ThemeAuthor = "Narwin";
-            this.box25.ThemeName = "MetroDark";
-            this.box25.UseSystemPasswordChar = false;
-            this.box25.WatermarkText = "";
             // 
             // box18
             // 
@@ -1391,7 +1442,7 @@
             this.box18.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.box18.Image = null;
             this.box18.Lines = null;
-            this.box18.Location = new System.Drawing.Point(3, 248);
+            this.box18.Location = new System.Drawing.Point(3, 262);
             this.box18.MaxLength = 32767;
             this.box18.Multiline = false;
             this.box18.Name = "box18";
@@ -1420,7 +1471,7 @@
             this.box24.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.box24.Image = null;
             this.box24.Lines = null;
-            this.box24.Location = new System.Drawing.Point(3, 326);
+            this.box24.Location = new System.Drawing.Point(3, 349);
             this.box24.MaxLength = 32767;
             this.box24.Multiline = false;
             this.box24.Name = "box24";
@@ -1436,6 +1487,123 @@
             this.box24.UseSystemPasswordChar = false;
             this.box24.WatermarkText = "";
             // 
+            // box25
+            // 
+            this.box25.AutoCompleteCustomSource = null;
+            this.box25.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.box25.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.box25.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.box25.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.box25.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.box25.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.box25.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.box25.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.box25.Image = null;
+            this.box25.Lines = null;
+            this.box25.Location = new System.Drawing.Point(205, 349);
+            this.box25.MaxLength = 32767;
+            this.box25.Multiline = false;
+            this.box25.Name = "box25";
+            this.box25.ReadOnly = false;
+            this.box25.Size = new System.Drawing.Size(174, 37);
+            this.box25.Style = MetroSet_UI.Design.Style.Dark;
+            this.box25.StyleManager = null;
+            this.box25.TabIndex = 57;
+            this.box25.Text = "metroSetTextBox1";
+            this.box25.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.box25.ThemeAuthor = "Narwin";
+            this.box25.ThemeName = "MetroDark";
+            this.box25.UseSystemPasswordChar = false;
+            this.box25.WatermarkText = "";
+            // 
+            // box27
+            // 
+            this.box27.AutoCompleteCustomSource = null;
+            this.box27.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.box27.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.box27.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.box27.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.box27.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.box27.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.box27.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.box27.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.box27.Image = null;
+            this.box27.Lines = null;
+            this.box27.Location = new System.Drawing.Point(621, 349);
+            this.box27.MaxLength = 32767;
+            this.box27.Multiline = false;
+            this.box27.Name = "box27";
+            this.box27.ReadOnly = false;
+            this.box27.Size = new System.Drawing.Size(174, 37);
+            this.box27.Style = MetroSet_UI.Design.Style.Dark;
+            this.box27.StyleManager = null;
+            this.box27.TabIndex = 58;
+            this.box27.Text = "metroSetTextBox1";
+            this.box27.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.box27.ThemeAuthor = "Narwin";
+            this.box27.ThemeName = "MetroDark";
+            this.box27.UseSystemPasswordChar = false;
+            this.box27.WatermarkText = "";
+            // 
+            // box26
+            // 
+            this.box26.AutoCompleteCustomSource = null;
+            this.box26.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.box26.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.box26.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.box26.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.box26.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.box26.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.box26.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.box26.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.box26.Image = null;
+            this.box26.Lines = null;
+            this.box26.Location = new System.Drawing.Point(414, 349);
+            this.box26.MaxLength = 32767;
+            this.box26.Multiline = false;
+            this.box26.Name = "box26";
+            this.box26.ReadOnly = false;
+            this.box26.Size = new System.Drawing.Size(174, 37);
+            this.box26.Style = MetroSet_UI.Design.Style.Dark;
+            this.box26.StyleManager = null;
+            this.box26.TabIndex = 60;
+            this.box26.Text = "metroSetTextBox1";
+            this.box26.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.box26.ThemeAuthor = "Narwin";
+            this.box26.ThemeName = "MetroDark";
+            this.box26.UseSystemPasswordChar = false;
+            this.box26.WatermarkText = "";
+            // 
+            // box28
+            // 
+            this.box28.AutoCompleteCustomSource = null;
+            this.box28.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.box28.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.box28.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.box28.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.box28.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.box28.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.box28.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.box28.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.box28.Image = null;
+            this.box28.Lines = null;
+            this.box28.Location = new System.Drawing.Point(824, 349);
+            this.box28.MaxLength = 32767;
+            this.box28.Multiline = false;
+            this.box28.Name = "box28";
+            this.box28.ReadOnly = false;
+            this.box28.Size = new System.Drawing.Size(174, 37);
+            this.box28.Style = MetroSet_UI.Design.Style.Dark;
+            this.box28.StyleManager = null;
+            this.box28.TabIndex = 59;
+            this.box28.Text = "metroSetTextBox1";
+            this.box28.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.box28.ThemeAuthor = "Narwin";
+            this.box28.ThemeName = "MetroDark";
+            this.box28.UseSystemPasswordChar = false;
+            this.box28.WatermarkText = "";
+            this.box28.Click += new System.EventHandler(this.Box28_Click);
+            // 
             // AddNewTab
             // 
             this.AddNewTab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
@@ -1445,7 +1613,7 @@
             this.AddNewTab.Location = new System.Drawing.Point(0, 48);
             this.AddNewTab.Name = "AddNewTab";
             this.AddNewTab.ShowCloseButton = true;
-            this.AddNewTab.Size = new System.Drawing.Size(1276, 528);
+            this.AddNewTab.Size = new System.Drawing.Size(1275, 549);
             this.AddNewTab.TabIndex = 2;
             this.AddNewTab.Text = "Add ";
             this.AddNewTab.ThemesEnabled = false;
@@ -1461,7 +1629,7 @@
             this.metroSetPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.metroSetPanel1.Location = new System.Drawing.Point(0, 0);
             this.metroSetPanel1.Name = "metroSetPanel1";
-            this.metroSetPanel1.Size = new System.Drawing.Size(1276, 528);
+            this.metroSetPanel1.Size = new System.Drawing.Size(1275, 549);
             this.metroSetPanel1.Style = MetroSet_UI.Design.Style.Dark;
             this.metroSetPanel1.StyleManager = null;
             this.metroSetPanel1.TabIndex = 22;
@@ -1806,7 +1974,7 @@
             this.groupBox6.ForeColor = System.Drawing.SystemColors.Info;
             this.groupBox6.Location = new System.Drawing.Point(766, 212);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(471, 277);
+            this.groupBox6.Size = new System.Drawing.Size(471, 304);
             this.groupBox6.TabIndex = 21;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "SQL / Navigation";
@@ -1828,7 +1996,6 @@
             this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.ForeColor = System.Drawing.SystemColors.Info;
-            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
             this.button5.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
             this.button5.Location = new System.Drawing.Point(268, 54);
             this.button5.Name = "button5";
@@ -1845,7 +2012,6 @@
             this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ForeColor = System.Drawing.SystemColors.Info;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
             this.button1.Location = new System.Drawing.Point(67, 148);
             this.button1.Name = "button1";
@@ -1862,7 +2028,6 @@
             this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.ForeColor = System.Drawing.SystemColors.Info;
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
             this.button2.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
             this.button2.Location = new System.Drawing.Point(67, 54);
             this.button2.Name = "button2";
@@ -1892,7 +2057,7 @@
             this.groupBox5.ForeColor = System.Drawing.SystemColors.Info;
             this.groupBox5.Location = new System.Drawing.Point(29, 212);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(698, 304);
+            this.groupBox5.Size = new System.Drawing.Size(718, 304);
             this.groupBox5.TabIndex = 20;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Allocation";
@@ -2169,14 +2334,14 @@
             captionImage1.Image = ((System.Drawing.Image)(resources.GetObject("captionImage1.Image")));
             captionImage1.Location = new System.Drawing.Point(15, 15);
             captionImage1.Name = "CaptionImage1";
-            captionImage1.Size = new System.Drawing.Size(75, 25);
+            captionImage1.Size = new System.Drawing.Size(50, 25);
             this.CaptionImages.Add(captionImage1);
-            this.ClientSize = new System.Drawing.Size(1276, 576);
+            this.ClientSize = new System.Drawing.Size(1275, 597);
             this.Controls.Add(this.AccountTabControl);
+            this.MaximumSize = new System.Drawing.Size(1287, 653);
             this.MetroColor = System.Drawing.Color.Black;
             this.Name = "RecordManager";
             this.ShowIcon = false;
-            ((System.ComponentModel.ISupportInitialize)(this.BindingSource)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.RecordNavigator)).EndInit();
@@ -2195,6 +2360,7 @@
             this.groupBox6.PerformLayout();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.BindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2311,6 +2477,14 @@
         private MetroSet_UI.Controls.MetroSetTextBox box25;
         private MetroSet_UI.Controls.MetroSetTextBox box18;
         private MetroSet_UI.Controls.MetroSetTextBox box24;
+        private MetroSet_UI.Controls.MetroSetTextBox box27;
+        private System.Windows.Forms.Label lbl29;
+        private System.Windows.Forms.Label lbl28;
+        private System.Windows.Forms.Label lbl27;
+        private System.Windows.Forms.Label lbl26;
+        private MetroSet_UI.Controls.MetroSetTextBox box29;
+        private MetroSet_UI.Controls.MetroSetTextBox box26;
+        private MetroSet_UI.Controls.MetroSetTextBox box28;
     }
 }
 

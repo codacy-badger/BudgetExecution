@@ -402,6 +402,11 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Resources\NinjaApplicationImages\ApplicationIconsImages.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ApplicationIconsImages.resx</DependentUpon>
+    </Compile>
     <Compile Include="src\AccountManager.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -664,6 +669,10 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>DivisionIconImages.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Resources\NinjaApplicationImages\ApplicationIconsImages.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ApplicationIconsImages.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="src\AccountManager.resx">
       <DependentUpon>AccountManager.cs</DependentUpon>
     </EmbeddedResource>
@@ -688,35 +697,20 @@
     <EmbeddedResource Include="src\MetroForm1.resx">
       <DependentUpon>MetroForm1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="src\RecordManager.resx">
+      <DependentUpon>RecordManager.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="src\Reprogramming.resx">
       <DependentUpon>Reprogramming.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="src\PdfDataReader.resx">
       <DependentUpon>PdfDataReader.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="src\RecordManager.resx">
-      <DependentUpon>RecordManager.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="src\FunctionSelector.resx">
       <DependentUpon>FunctionSelector.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="src\SQLiteData.resx">
-      <DependentUpon>SQLiteData.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="src\BudgetTools.resx">
       <DependentUpon>BudgetTools.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="src\DataNavigator.resx">
-      <DependentUpon>DataNavigator.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="src\ExternalDataReader.resx">
-      <DependentUpon>ExternalDataReader.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="src\FunctionalityForm.resx">
-      <DependentUpon>FunctionalityForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="src\MainForm.resx">
-      <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="src\SearchBox.resx">
       <DependentUpon>SearchBox.cs</DependentUpon>
@@ -724,11 +718,11 @@
     <EmbeddedResource Include="src\Selector.resx">
       <DependentUpon>Selector.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="src\SQLiteData.resx">
+      <DependentUpon>SQLiteData.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="src\SummaryForm.resx">
       <DependentUpon>SummaryForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="src\PrcDataGrid.resx">
-      <DependentUpon>PrcDataGrid.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -793,6 +787,70 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\NinjaApplicationImages\Addition .png" />
+    <None Include="Resources\NinjaApplicationImages\Arrow Left - 03.png" />
+    <None Include="Resources\NinjaApplicationImages\Arrow right .png" />
+    <None Include="Resources\NinjaApplicationImages\Branch-Engineering.png" />
+    <None Include="Resources\NinjaApplicationImages\Check-WF.png" />
+    <None Include="Resources\NinjaApplicationImages\Data Sync1-WF.png" />
+    <None Include="Resources\NinjaApplicationImages\Data transfer-WF.png" />
+    <None Include="Resources\NinjaApplicationImages\Data-Refresh%281%29.png" />
+    <None Include="Resources\NinjaApplicationImages\Data-Refresh.png" />
+    <None Include="Resources\NinjaApplicationImages\Data-Settings.png" />
+    <None Include="Resources\NinjaApplicationImages\Delete_03.png" />
+    <None Include="Resources\NinjaApplicationImages\Download.png" />
+    <None Include="Resources\NinjaApplicationImages\Excel Online.png" />
+    <None Include="Resources\NinjaApplicationImages\Excel-Export.png" />
+    <None Include="Resources\NinjaApplicationImages\Excel-Import and Export.png" />
+    <None Include="Resources\NinjaApplicationImages\Export.png" />
+    <None Include="Resources\NinjaApplicationImages\Filter-09-WF.png" />
+    <None Include="Resources\NinjaApplicationImages\Floppy-WF.png" />
+    <None Include="Resources\NinjaApplicationImages\Folder Add-WF.png" />
+    <None Include="Resources\NinjaApplicationImages\Folder-01.png" />
+    <None Include="Resources\NinjaApplicationImages\Folder-Add.png" />
+    <None Include="Resources\NinjaApplicationImages\Folder-Add-02.png" />
+    <None Include="Resources\NinjaApplicationImages\Folder-Download%281%29.png" />
+    <None Include="Resources\NinjaApplicationImages\Folder-Open-01.png" />
+    <None Include="Resources\NinjaApplicationImages\Folder-Upload.png" />
+    <None Include="Resources\NinjaApplicationImages\Help - 01.png" />
+    <None Include="Resources\NinjaApplicationImages\Import.png" />
+    <None Include="Resources\NinjaApplicationImages\Library-Books.png" />
+    <None Include="Resources\NinjaApplicationImages\Mail-01.png" />
+    <None Include="Resources\NinjaApplicationImages\Mailbox.png" />
+    <None Include="Resources\NinjaApplicationImages\MailBox-WF.png" />
+    <None Include="Resources\NinjaApplicationImages\MailSync-WF.png" />
+    <None Include="Resources\NinjaApplicationImages\Map-Location.png" />
+    <None Include="Resources\NinjaApplicationImages\Maps -04.png" />
+    <None Include="Resources\NinjaApplicationImages\Microsoft-Excel-2013-02%281%29.png" />
+    <None Include="Resources\NinjaApplicationImages\Money-Transfer.png" />
+    <None Include="Resources\NinjaApplicationImages\Museum .png" />
+    <None Include="Resources\NinjaApplicationImages\Navigation-WF.png" />
+    <None Include="Resources\NinjaApplicationImages\Networks-WF.png" />
+    <None Include="Resources\NinjaApplicationImages\Note memo-02-WF.png" />
+    <None Include="Resources\NinjaApplicationImages\Organization-WF.png" />
+    <None Include="Resources\NinjaApplicationImages\Pencil-04.png" />
+    <None Include="Resources\NinjaApplicationImages\Print - 01.png" />
+    <None Include="Resources\NinjaApplicationImages\Save.png" />
+    <None Include="Resources\NinjaApplicationImages\Setting_2-WF.png" />
+    <None Include="Resources\NinjaApplicationImages\Shuffle New.png" />
+    <None Include="Resources\NinjaApplicationImages\Sigma.png" />
+    <None Include="Resources\NinjaApplicationImages\Solutions - 01.png" />
+    <None Include="Resources\NinjaApplicationImages\Solutions - 03.png" />
+    <None Include="Resources\NinjaApplicationImages\Stationery-Pen.png" />
+    <None Include="Resources\NinjaApplicationImages\Statistical-Analysis.png" />
+    <None Include="Resources\NinjaApplicationImages\Stock-Exchange-07%281%29.png" />
+    <None Include="Resources\NinjaApplicationImages\Subscript_01.png" />
+    <None Include="Resources\NinjaApplicationImages\Superscript.png" />
+    <None Include="Resources\NinjaApplicationImages\Sync - 03.png" />
+    <None Include="Resources\NinjaApplicationImages\Sync_02.png" />
+    <None Include="Resources\NinjaApplicationImages\Tab-History.png" />
+    <None Include="Resources\NinjaApplicationImages\Table_01%281%29.png" />
+    <None Include="Resources\NinjaApplicationImages\Tools-02.png" />
+    <None Include="Resources\NinjaApplicationImages\Unlike - 01.png" />
+    <None Include="Resources\NinjaApplicationImages\Upload%281%29.png" />
+    <None Include="Resources\NinjaApplicationImages\View List-WF.png" />
+    <None Include="Resources\NinjaApplicationImages\View-04-WF.png" />
+    <None Include="Resources\NinjaApplicationImages\Wallet-WF.png" />
     <Content Include="summation_3d_blue_oma_icon.ico" />
     <None Include="Resources\SummaryImages\RegionalAccounts.png" />
     <None Include="Resources\SummaryImages\FTE.png" />

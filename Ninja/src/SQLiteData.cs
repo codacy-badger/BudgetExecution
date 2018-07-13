@@ -35,8 +35,6 @@ namespace BudgetExecution
             Grid.DataSource = BindingSource.DataSource;
             PopulateSourceFilters();
             PopulateFilterButtons(Filter1, Info.Sources);
-            AddButton.Click += AddButton_OnClick;
-            CopyButton.Click += CopyButton_OnClick;
             Text = $"{Source.ToString()} Database";
             DataFunctionTab.TabVisible = false;
         }
@@ -51,8 +49,6 @@ namespace BudgetExecution
             Grid.DataSource = DbData.BindingSource;
             Navigator.BindingSource = DbData.BindingSource;
             ProgramElements = DbData.GetProgramElements(Table);
-            AddButton.Click += AddButton_OnClick;
-            CopyButton.Click += CopyButton_OnClick;
             Text = $"{Source.ToString()} Database";
             DataFunctionTab.TabVisible = false;
         }
@@ -121,7 +117,7 @@ namespace BudgetExecution
         {
             try
             {
-                if(Source == Source.PRC)
+                if (Source == Source.PRC)
                 {
                     Filter1.Text = "BFY";
                     Filter1.Items.Add("2018");
@@ -365,17 +361,7 @@ namespace BudgetExecution
                 MessageBox.Show(ex.Message + ex.StackTrace);
             }
         }
-
-        private void SplitContainerAdv1_Panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void MaterialTabSelector1_Click(object sender, EventArgs e)
-        {
-
-        }
-
+        
         private void LeftButton_Click_1(object sender, EventArgs e)
         {
             BindingSource.MovePrevious();
@@ -387,21 +373,11 @@ namespace BudgetExecution
 
         }
 
-        private void splitContainerAdv1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void metroTabPage1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void AddButton_OnClick(object sender, EventArgs e)
         {
             try
             {
-                var am = new AccountManager(Source, Provider);
+                var am = new RecordManager(this.DbData);
                 am.Show();
             }
             catch (Exception ex)
@@ -415,8 +391,7 @@ namespace BudgetExecution
         {
             try
             {
-                var view = (DataRowView)BindingSource.Current;
-                var am = new AccountManager(Source, Provider);
+                var am = new RecordManager(this.DbData);
                 am.Show();
             }
             catch (Exception ex)
@@ -426,9 +401,6 @@ namespace BudgetExecution
             }
         }
 
-        private void DataTabControl_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }

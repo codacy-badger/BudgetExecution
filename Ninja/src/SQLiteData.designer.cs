@@ -59,6 +59,15 @@ namespace BudgetExecution
             this.BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.FIlter2 = new MetroSet_UI.Controls.MetroSetComboBox();
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.label31 = new System.Windows.Forms.Label();
+            this.label39 = new System.Windows.Forms.Label();
+            this.label32 = new System.Windows.Forms.Label();
+            this.label38 = new System.Windows.Forms.Label();
+            this.label34 = new System.Windows.Forms.Label();
+            this.label37 = new System.Windows.Forms.Label();
+            this.label40 = new System.Windows.Forms.Label();
+            this.label41 = new System.Windows.Forms.Label();
             this.Grid = new System.Windows.Forms.DataGridView();
             this.Navigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
@@ -68,9 +77,9 @@ namespace BudgetExecution
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.NextButton = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator8 = new System.Windows.Forms.ToolStripSeparator();
-            this.UpdateButton = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator11 = new System.Windows.Forms.ToolStripSeparator();
             this.CopyButton = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator11 = new System.Windows.Forms.ToolStripSeparator();
+            this.UpdateButton = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator10 = new System.Windows.Forms.ToolStripSeparator();
             this.RefreshButton = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator9 = new System.Windows.Forms.ToolStripSeparator();
@@ -83,6 +92,7 @@ namespace BudgetExecution
             this.toolStripButton9 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
             this.metroPanel3 = new MetroFramework.Controls.MetroPanel();
+            this.Filter1 = new MetroSet_UI.Controls.MetroSetComboBox();
             this.Filter3 = new MetroSet_UI.Controls.MetroSetComboBox();
             this.metroPanel4 = new MetroFramework.Controls.MetroPanel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
@@ -95,19 +105,10 @@ namespace BudgetExecution
             this.DataTabControl = new Syncfusion.Windows.Forms.Tools.TabControlAdv();
             this.DataFilterTab = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
             this.DataFunctionTab = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
-            this.Filter1 = new MetroSet_UI.Controls.MetroSetComboBox();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.label31 = new System.Windows.Forms.Label();
-            this.label39 = new System.Windows.Forms.Label();
-            this.label32 = new System.Windows.Forms.Label();
-            this.label38 = new System.Windows.Forms.Label();
-            this.label34 = new System.Windows.Forms.Label();
-            this.label37 = new System.Windows.Forms.Label();
-            this.label40 = new System.Windows.Forms.Label();
-            this.label41 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.E6DataGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BindingSource)).BeginInit();
             this.metroPanel1.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Grid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Navigator)).BeginInit();
             this.Navigator.SuspendLayout();
@@ -119,7 +120,6 @@ namespace BudgetExecution
             this.DataTabControl.SuspendLayout();
             this.DataFilterTab.SuspendLayout();
             this.DataFunctionTab.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // E6DataGrid
@@ -305,13 +305,120 @@ namespace BudgetExecution
             this.metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
             this.metroPanel1.HorizontalScrollbarSize = 10;
             this.metroPanel1.Location = new System.Drawing.Point(509, 79);
+            this.metroPanel1.MaximumSize = new System.Drawing.Size(1140, 683);
             this.metroPanel1.Name = "metroPanel1";
-            this.metroPanel1.Size = new System.Drawing.Size(1114, 683);
+            this.metroPanel1.Size = new System.Drawing.Size(1140, 683);
             this.metroPanel1.TabIndex = 87;
             this.metroPanel1.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.metroPanel1.VerticalScrollbarBarColor = true;
             this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel1.VerticalScrollbarSize = 10;
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 8;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.41322F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.58678F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 108F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 158F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 118F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 120F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 122F));
+            this.tableLayoutPanel1.Controls.Add(this.label31, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.label39, 5, 0);
+            this.tableLayoutPanel1.Controls.Add(this.label32, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.label38, 4, 0);
+            this.tableLayoutPanel1.Controls.Add(this.label34, 2, 0);
+            this.tableLayoutPanel1.Controls.Add(this.label37, 3, 0);
+            this.tableLayoutPanel1.Controls.Add(this.label40, 6, 0);
+            this.tableLayoutPanel1.Controls.Add(this.label41, 7, 0);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(38, 24);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1012, 33);
+            this.tableLayoutPanel1.TabIndex = 160;
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Dock = System.Windows.Forms.DockStyle.Right;
+            this.label31.Location = new System.Drawing.Point(81, 0);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(60, 33);
+            this.label31.TabIndex = 153;
+            this.label31.Text = "label31";
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label39.Location = new System.Drawing.Point(654, 0);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(60, 33);
+            this.label39.TabIndex = 158;
+            this.label39.Text = "label39";
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label32.Location = new System.Drawing.Point(147, 0);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(60, 33);
+            this.label32.TabIndex = 154;
+            this.label32.Text = "label32";
+            // 
+            // label38
+            // 
+            this.label38.AutoSize = true;
+            this.label38.Dock = System.Windows.Forms.DockStyle.Right;
+            this.label38.Location = new System.Drawing.Point(588, 0);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(60, 33);
+            this.label38.TabIndex = 157;
+            this.label38.Text = "label38";
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Dock = System.Windows.Forms.DockStyle.Right;
+            this.label34.Location = new System.Drawing.Point(330, 0);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(60, 33);
+            this.label34.TabIndex = 155;
+            this.label34.Text = "label34";
+            // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label37.Location = new System.Drawing.Point(396, 0);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(60, 33);
+            this.label37.TabIndex = 156;
+            this.label37.Text = "label37";
+            // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.Dock = System.Windows.Forms.DockStyle.Right;
+            this.label40.Location = new System.Drawing.Point(826, 0);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(60, 33);
+            this.label40.TabIndex = 159;
+            this.label40.Text = "label40";
+            // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label41.Location = new System.Drawing.Point(892, 0);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(60, 33);
+            this.label41.TabIndex = 160;
+            this.label41.Text = "label41";
             // 
             // Grid
             // 
@@ -375,7 +482,7 @@ namespace BudgetExecution
             this.Navigator.CountItem = this.toolStripLabel1;
             this.Navigator.DeleteItem = null;
             this.Navigator.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.Navigator.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.Navigator.ImageScalingSize = new System.Drawing.Size(20, 15);
             this.Navigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.PreviousButton,
             this.toolStripSeparator1,
@@ -384,9 +491,9 @@ namespace BudgetExecution
             this.toolStripSeparator3,
             this.NextButton,
             this.toolStripSeparator8,
-            this.UpdateButton,
-            this.toolStripSeparator11,
             this.CopyButton,
+            this.toolStripSeparator11,
+            this.UpdateButton,
             this.toolStripSeparator10,
             this.RefreshButton,
             this.toolStripSeparator9,
@@ -405,7 +512,7 @@ namespace BudgetExecution
             this.Navigator.MovePreviousItem = this.PreviousButton;
             this.Navigator.Name = "Navigator";
             this.Navigator.PositionItem = this.toolStripTextBox1;
-            this.Navigator.Size = new System.Drawing.Size(1112, 31);
+            this.Navigator.Size = new System.Drawing.Size(1138, 31);
             this.Navigator.TabIndex = 152;
             this.Navigator.Text = "bindingNavigator1";
             // 
@@ -423,7 +530,7 @@ namespace BudgetExecution
             this.PreviousButton.Image = ((System.Drawing.Image)(resources.GetObject("PreviousButton.Image")));
             this.PreviousButton.Name = "PreviousButton";
             this.PreviousButton.RightToLeftAutoMirrorImage = true;
-            this.PreviousButton.Size = new System.Drawing.Size(28, 28);
+            this.PreviousButton.Size = new System.Drawing.Size(24, 28);
             this.PreviousButton.Text = "Move previous";
             // 
             // toolStripSeparator1
@@ -454,7 +561,7 @@ namespace BudgetExecution
             this.NextButton.Image = ((System.Drawing.Image)(resources.GetObject("NextButton.Image")));
             this.NextButton.Name = "NextButton";
             this.NextButton.RightToLeftAutoMirrorImage = true;
-            this.NextButton.Size = new System.Drawing.Size(28, 28);
+            this.NextButton.Size = new System.Drawing.Size(24, 28);
             this.NextButton.Text = "Move next";
             // 
             // toolStripSeparator8
@@ -462,28 +569,30 @@ namespace BudgetExecution
             this.toolStripSeparator8.Name = "toolStripSeparator8";
             this.toolStripSeparator8.Size = new System.Drawing.Size(6, 31);
             // 
-            // UpdateButton
-            // 
-            this.UpdateButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.UpdateButton.Image = ((System.Drawing.Image)(resources.GetObject("UpdateButton.Image")));
-            this.UpdateButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.UpdateButton.Name = "UpdateButton";
-            this.UpdateButton.Size = new System.Drawing.Size(28, 28);
-            this.UpdateButton.Text = "toolStripButton10";
-            // 
-            // toolStripSeparator11
-            // 
-            this.toolStripSeparator11.Name = "toolStripSeparator11";
-            this.toolStripSeparator11.Size = new System.Drawing.Size(6, 31);
-            // 
             // CopyButton
             // 
             this.CopyButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.CopyButton.Image = ((System.Drawing.Image)(resources.GetObject("CopyButton.Image")));
             this.CopyButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.CopyButton.Name = "CopyButton";
-            this.CopyButton.Size = new System.Drawing.Size(28, 28);
+            this.CopyButton.Size = new System.Drawing.Size(24, 28);
             this.CopyButton.Text = "toolStripButton11";
+            this.CopyButton.Click += new System.EventHandler(this.CopyButton_OnClick);
+            // 
+            // toolStripSeparator11
+            // 
+            this.toolStripSeparator11.Name = "toolStripSeparator11";
+            this.toolStripSeparator11.Size = new System.Drawing.Size(6, 31);
+            // 
+            // UpdateButton
+            // 
+            this.UpdateButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.UpdateButton.Image = ((System.Drawing.Image)(resources.GetObject("UpdateButton.Image")));
+            this.UpdateButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.UpdateButton.Name = "UpdateButton";
+            this.UpdateButton.Size = new System.Drawing.Size(24, 28);
+            this.UpdateButton.Text = "toolStripButton10";
+            this.UpdateButton.Click += new System.EventHandler(this.AddButton_OnClick);
             // 
             // toolStripSeparator10
             // 
@@ -496,7 +605,7 @@ namespace BudgetExecution
             this.RefreshButton.Image = ((System.Drawing.Image)(resources.GetObject("RefreshButton.Image")));
             this.RefreshButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.RefreshButton.Name = "RefreshButton";
-            this.RefreshButton.Size = new System.Drawing.Size(28, 28);
+            this.RefreshButton.Size = new System.Drawing.Size(24, 28);
             this.RefreshButton.Text = "toolStripButton1";
             // 
             // toolStripSeparator9
@@ -507,10 +616,9 @@ namespace BudgetExecution
             // AddButton
             // 
             this.AddButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.AddButton.Image = ((System.Drawing.Image)(resources.GetObject("AddButton.Image")));
             this.AddButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.AddButton.Name = "AddButton";
-            this.AddButton.Size = new System.Drawing.Size(28, 28);
+            this.AddButton.Size = new System.Drawing.Size(23, 28);
             this.AddButton.Text = "toolStripButton2";
             // 
             // toolStripSeparator4
@@ -521,10 +629,9 @@ namespace BudgetExecution
             // toolStripButton7
             // 
             this.toolStripButton7.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton7.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton7.Image")));
             this.toolStripButton7.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton7.Name = "toolStripButton7";
-            this.toolStripButton7.Size = new System.Drawing.Size(28, 28);
+            this.toolStripButton7.Size = new System.Drawing.Size(23, 28);
             this.toolStripButton7.Text = "toolStripButton4";
             // 
             // toolStripSeparator5
@@ -535,10 +642,9 @@ namespace BudgetExecution
             // toolStripButton8
             // 
             this.toolStripButton8.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton8.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton8.Image")));
             this.toolStripButton8.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton8.Name = "toolStripButton8";
-            this.toolStripButton8.Size = new System.Drawing.Size(28, 28);
+            this.toolStripButton8.Size = new System.Drawing.Size(23, 28);
             this.toolStripButton8.Text = "toolStripButton3";
             // 
             // toolStripSeparator6
@@ -549,10 +655,9 @@ namespace BudgetExecution
             // toolStripButton9
             // 
             this.toolStripButton9.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton9.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton9.Image")));
             this.toolStripButton9.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton9.Name = "toolStripButton9";
-            this.toolStripButton9.Size = new System.Drawing.Size(28, 28);
+            this.toolStripButton9.Size = new System.Drawing.Size(23, 28);
             this.toolStripButton9.Text = "toolStripButton9";
             // 
             // toolStripSeparator7
@@ -577,6 +682,38 @@ namespace BudgetExecution
             this.metroPanel3.VerticalScrollbarBarColor = true;
             this.metroPanel3.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel3.VerticalScrollbarSize = 10;
+            // 
+            // Filter1
+            // 
+            this.Filter1.AllowDrop = true;
+            this.Filter1.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.Filter1.BackColor = System.Drawing.Color.Transparent;
+            this.Filter1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.Filter1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.Filter1.CausesValidation = false;
+            this.Filter1.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.Filter1.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.Filter1.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.Filter1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.Filter1.DropDownHeight = 75;
+            this.Filter1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Filter1.DropDownWidth = 155;
+            this.Filter1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Filter1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.Filter1.FormattingEnabled = true;
+            this.Filter1.IntegralHeight = false;
+            this.Filter1.ItemHeight = 30;
+            this.Filter1.Location = new System.Drawing.Point(91, 70);
+            this.Filter1.MaxDropDownItems = 100;
+            this.Filter1.Name = "Filter1";
+            this.Filter1.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.Filter1.SelectedItemForeColor = System.Drawing.Color.White;
+            this.Filter1.Size = new System.Drawing.Size(172, 36);
+            this.Filter1.Style = MetroSet_UI.Design.Style.Dark;
+            this.Filter1.StyleManager = null;
+            this.Filter1.TabIndex = 7;
+            this.Filter1.ThemeAuthor = "Narwin";
+            this.Filter1.ThemeName = "MetroDark";
             // 
             // Filter3
             // 
@@ -649,7 +786,6 @@ namespace BudgetExecution
             this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ForeColor = System.Drawing.SystemColors.Info;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.Location = new System.Drawing.Point(3, 3);
             this.button1.Name = "button1";
@@ -668,7 +804,6 @@ namespace BudgetExecution
             this.button6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.ForeColor = System.Drawing.SystemColors.Info;
-            this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
             this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button6.Location = new System.Drawing.Point(3, 68);
             this.button6.Name = "button6";
@@ -687,7 +822,6 @@ namespace BudgetExecution
             this.button7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button7.ForeColor = System.Drawing.SystemColors.Info;
-            this.button7.Image = ((System.Drawing.Image)(resources.GetObject("button7.Image")));
             this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button7.Location = new System.Drawing.Point(3, 142);
             this.button7.Name = "button7";
@@ -706,7 +840,6 @@ namespace BudgetExecution
             this.button10.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button10.ForeColor = System.Drawing.SystemColors.Info;
-            this.button10.Image = ((System.Drawing.Image)(resources.GetObject("button10.Image")));
             this.button10.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button10.Location = new System.Drawing.Point(3, 207);
             this.button10.Name = "button10";
@@ -725,7 +858,6 @@ namespace BudgetExecution
             this.button13.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button13.ForeColor = System.Drawing.SystemColors.Info;
-            this.button13.Image = ((System.Drawing.Image)(resources.GetObject("button13.Image")));
             this.button13.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button13.Location = new System.Drawing.Point(3, 275);
             this.button13.Name = "button13";
@@ -775,7 +907,6 @@ namespace BudgetExecution
             this.DataTabControl.TabIndex = 2;
             this.DataTabControl.TabPanelBackColor = System.Drawing.Color.Transparent;
             this.DataTabControl.TabStyle = typeof(Syncfusion.Windows.Forms.Tools.TabRendererMetro);
-            this.DataTabControl.SelectedIndexChanged += new System.EventHandler(this.DataTabControl_SelectedIndexChanged);
             // 
             // DataFilterTab
             // 
@@ -803,144 +934,6 @@ namespace BudgetExecution
             this.DataFunctionTab.Text = "Data Function";
             this.DataFunctionTab.ThemesEnabled = false;
             // 
-            // Filter1
-            // 
-            this.Filter1.AllowDrop = true;
-            this.Filter1.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
-            this.Filter1.BackColor = System.Drawing.Color.Transparent;
-            this.Filter1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
-            this.Filter1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
-            this.Filter1.CausesValidation = false;
-            this.Filter1.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.Filter1.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.Filter1.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.Filter1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.Filter1.DropDownHeight = 75;
-            this.Filter1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.Filter1.DropDownWidth = 155;
-            this.Filter1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Filter1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.Filter1.FormattingEnabled = true;
-            this.Filter1.IntegralHeight = false;
-            this.Filter1.ItemHeight = 30;
-            this.Filter1.Location = new System.Drawing.Point(91, 70);
-            this.Filter1.MaxDropDownItems = 100;
-            this.Filter1.Name = "Filter1";
-            this.Filter1.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.Filter1.SelectedItemForeColor = System.Drawing.Color.White;
-            this.Filter1.Size = new System.Drawing.Size(172, 36);
-            this.Filter1.Style = MetroSet_UI.Design.Style.Dark;
-            this.Filter1.StyleManager = null;
-            this.Filter1.TabIndex = 7;
-            this.Filter1.ThemeAuthor = "Narwin";
-            this.Filter1.ThemeName = "MetroDark";
-            // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.ColumnCount = 8;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.41322F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.58678F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 108F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 158F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 118F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 120F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 118F));
-            this.tableLayoutPanel1.Controls.Add(this.label31, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.label39, 5, 0);
-            this.tableLayoutPanel1.Controls.Add(this.label32, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.label38, 4, 0);
-            this.tableLayoutPanel1.Controls.Add(this.label34, 2, 0);
-            this.tableLayoutPanel1.Controls.Add(this.label37, 3, 0);
-            this.tableLayoutPanel1.Controls.Add(this.label40, 6, 0);
-            this.tableLayoutPanel1.Controls.Add(this.label41, 7, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(38, 24);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 1;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1012, 33);
-            this.tableLayoutPanel1.TabIndex = 160;
-            // 
-            // label31
-            // 
-            this.label31.AutoSize = true;
-            this.label31.Dock = System.Windows.Forms.DockStyle.Right;
-            this.label31.Location = new System.Drawing.Point(83, 0);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(60, 33);
-            this.label31.TabIndex = 153;
-            this.label31.Text = "label31";
-            // 
-            // label39
-            // 
-            this.label39.AutoSize = true;
-            this.label39.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label39.Location = new System.Drawing.Point(658, 0);
-            this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(60, 33);
-            this.label39.TabIndex = 158;
-            this.label39.Text = "label39";
-            // 
-            // label32
-            // 
-            this.label32.AutoSize = true;
-            this.label32.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label32.Location = new System.Drawing.Point(149, 0);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(60, 33);
-            this.label32.TabIndex = 154;
-            this.label32.Text = "label32";
-            // 
-            // label38
-            // 
-            this.label38.AutoSize = true;
-            this.label38.Dock = System.Windows.Forms.DockStyle.Right;
-            this.label38.Location = new System.Drawing.Point(592, 0);
-            this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(60, 33);
-            this.label38.TabIndex = 157;
-            this.label38.Text = "label38";
-            // 
-            // label34
-            // 
-            this.label34.AutoSize = true;
-            this.label34.Dock = System.Windows.Forms.DockStyle.Right;
-            this.label34.Location = new System.Drawing.Point(334, 0);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(60, 33);
-            this.label34.TabIndex = 155;
-            this.label34.Text = "label34";
-            // 
-            // label37
-            // 
-            this.label37.AutoSize = true;
-            this.label37.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label37.Location = new System.Drawing.Point(400, 0);
-            this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(60, 33);
-            this.label37.TabIndex = 156;
-            this.label37.Text = "label37";
-            // 
-            // label40
-            // 
-            this.label40.AutoSize = true;
-            this.label40.Dock = System.Windows.Forms.DockStyle.Right;
-            this.label40.Location = new System.Drawing.Point(830, 0);
-            this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(60, 33);
-            this.label40.TabIndex = 159;
-            this.label40.Text = "label40";
-            // 
-            // label41
-            // 
-            this.label41.AutoSize = true;
-            this.label41.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label41.Location = new System.Drawing.Point(896, 0);
-            this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(60, 33);
-            this.label41.TabIndex = 160;
-            this.label41.Text = "label41";
-            // 
             // SQLiteData
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -954,13 +947,12 @@ namespace BudgetExecution
             captionImage1.Image = ((System.Drawing.Image)(resources.GetObject("captionImage1.Image")));
             captionImage1.Location = new System.Drawing.Point(10, 10);
             captionImage1.Name = "CaptionImage1";
-            captionImage1.Size = new System.Drawing.Size(30, 20);
+            captionImage1.Size = new System.Drawing.Size(100, 25);
             this.CaptionImages.Add(captionImage1);
-            this.ClientSize = new System.Drawing.Size(1645, 934);
+            this.ClientSize = new System.Drawing.Size(1661, 934);
             this.Controls.Add(this.metroPanel5);
             this.Controls.Add(this.metroPanel1);
             this.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MetroColor = System.Drawing.Color.Black;
             this.Name = "SQLiteData";
             this.ShowIcon = false;
@@ -970,6 +962,8 @@ namespace BudgetExecution
             ((System.ComponentModel.ISupportInitialize)(this.BindingSource)).EndInit();
             this.metroPanel1.ResumeLayout(false);
             this.metroPanel1.PerformLayout();
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Grid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Navigator)).EndInit();
             this.Navigator.ResumeLayout(false);
@@ -982,8 +976,6 @@ namespace BudgetExecution
             this.DataTabControl.ResumeLayout(false);
             this.DataFilterTab.ResumeLayout(false);
             this.DataFunctionTab.ResumeLayout(false);
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
