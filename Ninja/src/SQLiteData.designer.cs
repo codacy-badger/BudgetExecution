@@ -324,7 +324,7 @@ namespace BudgetExecution
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 118F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 120F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 122F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 123F));
             this.tableLayoutPanel1.Controls.Add(this.label31, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.label39, 5, 0);
             this.tableLayoutPanel1.Controls.Add(this.label32, 1, 0);
@@ -344,7 +344,7 @@ namespace BudgetExecution
             // 
             this.label31.AutoSize = true;
             this.label31.Dock = System.Windows.Forms.DockStyle.Right;
-            this.label31.Location = new System.Drawing.Point(81, 0);
+            this.label31.Location = new System.Drawing.Point(80, 0);
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(60, 33);
             this.label31.TabIndex = 153;
@@ -354,7 +354,7 @@ namespace BudgetExecution
             // 
             this.label39.AutoSize = true;
             this.label39.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label39.Location = new System.Drawing.Point(654, 0);
+            this.label39.Location = new System.Drawing.Point(653, 0);
             this.label39.Name = "label39";
             this.label39.Size = new System.Drawing.Size(60, 33);
             this.label39.TabIndex = 158;
@@ -364,7 +364,7 @@ namespace BudgetExecution
             // 
             this.label32.AutoSize = true;
             this.label32.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label32.Location = new System.Drawing.Point(147, 0);
+            this.label32.Location = new System.Drawing.Point(146, 0);
             this.label32.Name = "label32";
             this.label32.Size = new System.Drawing.Size(60, 33);
             this.label32.TabIndex = 154;
@@ -374,7 +374,7 @@ namespace BudgetExecution
             // 
             this.label38.AutoSize = true;
             this.label38.Dock = System.Windows.Forms.DockStyle.Right;
-            this.label38.Location = new System.Drawing.Point(588, 0);
+            this.label38.Location = new System.Drawing.Point(587, 0);
             this.label38.Name = "label38";
             this.label38.Size = new System.Drawing.Size(60, 33);
             this.label38.TabIndex = 157;
@@ -384,7 +384,7 @@ namespace BudgetExecution
             // 
             this.label34.AutoSize = true;
             this.label34.Dock = System.Windows.Forms.DockStyle.Right;
-            this.label34.Location = new System.Drawing.Point(330, 0);
+            this.label34.Location = new System.Drawing.Point(329, 0);
             this.label34.Name = "label34";
             this.label34.Size = new System.Drawing.Size(60, 33);
             this.label34.TabIndex = 155;
@@ -394,7 +394,7 @@ namespace BudgetExecution
             // 
             this.label37.AutoSize = true;
             this.label37.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label37.Location = new System.Drawing.Point(396, 0);
+            this.label37.Location = new System.Drawing.Point(395, 0);
             this.label37.Name = "label37";
             this.label37.Size = new System.Drawing.Size(60, 33);
             this.label37.TabIndex = 156;
@@ -404,7 +404,7 @@ namespace BudgetExecution
             // 
             this.label40.AutoSize = true;
             this.label40.Dock = System.Windows.Forms.DockStyle.Right;
-            this.label40.Location = new System.Drawing.Point(826, 0);
+            this.label40.Location = new System.Drawing.Point(825, 0);
             this.label40.Name = "label40";
             this.label40.Size = new System.Drawing.Size(60, 33);
             this.label40.TabIndex = 159;
@@ -414,7 +414,7 @@ namespace BudgetExecution
             // 
             this.label41.AutoSize = true;
             this.label41.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label41.Location = new System.Drawing.Point(892, 0);
+            this.label41.Location = new System.Drawing.Point(891, 0);
             this.label41.Name = "label41";
             this.label41.Size = new System.Drawing.Size(60, 33);
             this.label41.TabIndex = 160;
@@ -495,9 +495,9 @@ namespace BudgetExecution
             this.toolStripSeparator11,
             this.UpdateButton,
             this.toolStripSeparator10,
-            this.RefreshButton,
-            this.toolStripSeparator9,
             this.AddButton,
+            this.toolStripSeparator9,
+            this.RefreshButton,
             this.toolStripSeparator4,
             this.toolStripButton7,
             this.toolStripSeparator5,
@@ -616,9 +616,10 @@ namespace BudgetExecution
             // AddButton
             // 
             this.AddButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.AddButton.Image = ((System.Drawing.Image)(resources.GetObject("AddButton.Image")));
             this.AddButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.AddButton.Name = "AddButton";
-            this.AddButton.Size = new System.Drawing.Size(23, 28);
+            this.AddButton.Size = new System.Drawing.Size(24, 28);
             this.AddButton.Text = "toolStripButton2";
             // 
             // toolStripSeparator4

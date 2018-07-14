@@ -335,9 +335,6 @@ namespace BudgetExecution
             this.tabPageAdv5 = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
             this.AccountChart = new Syncfusion.Windows.Forms.Chart.ChartControl();
             this.tabPageAdv6 = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
-            this.ExcelButton = new System.Windows.Forms.Button();
-            this.CalculatorButton = new System.Windows.Forms.Button();
-            this.CalendatButton = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label31 = new System.Windows.Forms.Label();
@@ -384,6 +381,12 @@ namespace BudgetExecution
             this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton8 = new System.Windows.Forms.ToolStripButton();
             this.BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ExcelButton = new System.Windows.Forms.Button();
+            this.CalculatorButton = new System.Windows.Forms.Button();
+            this.CalendatButton = new System.Windows.Forms.Button();
+            this.label42 = new System.Windows.Forms.Label();
+            this.label43 = new System.Windows.Forms.Label();
+            this.label44 = new System.Windows.Forms.Label();
             this.tabPageAdv4.SuspendLayout();
             this.tabPageAdv3.SuspendLayout();
             this.chartControl1.SuspendLayout();
@@ -4871,6 +4874,9 @@ namespace BudgetExecution
             // tabPageAdv6
             // 
             this.tabPageAdv6.BackColor = System.Drawing.Color.Black;
+            this.tabPageAdv6.Controls.Add(this.label44);
+            this.tabPageAdv6.Controls.Add(this.label43);
+            this.tabPageAdv6.Controls.Add(this.label42);
             this.tabPageAdv6.Controls.Add(this.ExcelButton);
             this.tabPageAdv6.Controls.Add(this.CalculatorButton);
             this.tabPageAdv6.Controls.Add(this.CalendatButton);
@@ -4883,63 +4889,6 @@ namespace BudgetExecution
             this.tabPageAdv6.TabIndex = 3;
             this.tabPageAdv6.Text = "Tools";
             this.tabPageAdv6.ThemesEnabled = false;
-            // 
-            // ExcelButton
-            // 
-            this.ExcelButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.ExcelButton.FlatAppearance.BorderSize = 0;
-            this.ExcelButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSteelBlue;
-            this.ExcelButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
-            this.ExcelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ExcelButton.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.ExcelButton.Image = ((System.Drawing.Image)(resources.GetObject("ExcelButton.Image")));
-            this.ExcelButton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.ExcelButton.Location = new System.Drawing.Point(301, 48);
-            this.ExcelButton.Name = "ExcelButton";
-            this.ExcelButton.Size = new System.Drawing.Size(118, 110);
-            this.ExcelButton.TabIndex = 3;
-            this.ExcelButton.Text = "Excel Form\r\n";
-            this.ExcelButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.ExcelButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.ExcelButton.UseVisualStyleBackColor = true;
-            // 
-            // CalculatorButton
-            // 
-            this.CalculatorButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.CalculatorButton.FlatAppearance.BorderSize = 0;
-            this.CalculatorButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSteelBlue;
-            this.CalculatorButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
-            this.CalculatorButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CalculatorButton.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.CalculatorButton.Image = ((System.Drawing.Image)(resources.GetObject("CalculatorButton.Image")));
-            this.CalculatorButton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.CalculatorButton.Location = new System.Drawing.Point(159, 48);
-            this.CalculatorButton.Name = "CalculatorButton";
-            this.CalculatorButton.Size = new System.Drawing.Size(121, 103);
-            this.CalculatorButton.TabIndex = 2;
-            this.CalculatorButton.Text = "Calculator\r\n";
-            this.CalculatorButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.CalculatorButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.CalculatorButton.UseVisualStyleBackColor = true;
-            // 
-            // CalendatButton
-            // 
-            this.CalendatButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.CalendatButton.FlatAppearance.BorderSize = 0;
-            this.CalendatButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSteelBlue;
-            this.CalendatButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
-            this.CalendatButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CalendatButton.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.CalendatButton.Image = ((System.Drawing.Image)(resources.GetObject("CalendatButton.Image")));
-            this.CalendatButton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.CalendatButton.Location = new System.Drawing.Point(16, 48);
-            this.CalendatButton.Name = "CalendatButton";
-            this.CalendatButton.Size = new System.Drawing.Size(121, 103);
-            this.CalendatButton.TabIndex = 1;
-            this.CalendatButton.Text = "Calendar";
-            this.CalendatButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.CalendatButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.CalendatButton.UseVisualStyleBackColor = true;
             // 
             // groupBox1
             // 
@@ -4969,7 +4918,7 @@ namespace BudgetExecution
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 108F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 112F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 86F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 94F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 96F));
             this.tableLayoutPanel1.Controls.Add(this.label31, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.label39, 5, 0);
             this.tableLayoutPanel1.Controls.Add(this.label32, 1, 0);
@@ -4989,7 +4938,7 @@ namespace BudgetExecution
             // 
             this.label31.AutoSize = true;
             this.label31.Dock = System.Windows.Forms.DockStyle.Right;
-            this.label31.Location = new System.Drawing.Point(7, 0);
+            this.label31.Location = new System.Drawing.Point(6, 0);
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(60, 33);
             this.label31.TabIndex = 153;
@@ -4999,7 +4948,7 @@ namespace BudgetExecution
             // 
             this.label39.AutoSize = true;
             this.label39.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label39.Location = new System.Drawing.Point(471, 0);
+            this.label39.Location = new System.Drawing.Point(469, 0);
             this.label39.Name = "label39";
             this.label39.Size = new System.Drawing.Size(60, 33);
             this.label39.TabIndex = 158;
@@ -5009,7 +4958,7 @@ namespace BudgetExecution
             // 
             this.label32.AutoSize = true;
             this.label32.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label32.Location = new System.Drawing.Point(73, 0);
+            this.label32.Location = new System.Drawing.Point(72, 0);
             this.label32.Name = "label32";
             this.label32.Size = new System.Drawing.Size(60, 33);
             this.label32.TabIndex = 154;
@@ -5019,7 +4968,7 @@ namespace BudgetExecution
             // 
             this.label38.AutoSize = true;
             this.label38.Dock = System.Windows.Forms.DockStyle.Right;
-            this.label38.Location = new System.Drawing.Point(405, 0);
+            this.label38.Location = new System.Drawing.Point(403, 0);
             this.label38.Name = "label38";
             this.label38.Size = new System.Drawing.Size(60, 33);
             this.label38.TabIndex = 157;
@@ -5029,7 +4978,7 @@ namespace BudgetExecution
             // 
             this.label34.AutoSize = true;
             this.label34.Dock = System.Windows.Forms.DockStyle.Right;
-            this.label34.Location = new System.Drawing.Point(180, 0);
+            this.label34.Location = new System.Drawing.Point(178, 0);
             this.label34.Name = "label34";
             this.label34.Size = new System.Drawing.Size(60, 33);
             this.label34.TabIndex = 155;
@@ -5039,7 +4988,7 @@ namespace BudgetExecution
             // 
             this.label37.AutoSize = true;
             this.label37.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label37.Location = new System.Drawing.Point(246, 0);
+            this.label37.Location = new System.Drawing.Point(244, 0);
             this.label37.Name = "label37";
             this.label37.Size = new System.Drawing.Size(60, 33);
             this.label37.TabIndex = 156;
@@ -5049,7 +4998,7 @@ namespace BudgetExecution
             // 
             this.label40.AutoSize = true;
             this.label40.Dock = System.Windows.Forms.DockStyle.Right;
-            this.label40.Location = new System.Drawing.Point(603, 0);
+            this.label40.Location = new System.Drawing.Point(601, 0);
             this.label40.Name = "label40";
             this.label40.Size = new System.Drawing.Size(60, 33);
             this.label40.TabIndex = 159;
@@ -5059,7 +5008,7 @@ namespace BudgetExecution
             // 
             this.label41.AutoSize = true;
             this.label41.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label41.Location = new System.Drawing.Point(669, 0);
+            this.label41.Location = new System.Drawing.Point(667, 0);
             this.label41.Name = "label41";
             this.label41.Size = new System.Drawing.Size(60, 33);
             this.label41.TabIndex = 160;
@@ -5316,6 +5265,7 @@ namespace BudgetExecution
             this.Grid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.Grid.Size = new System.Drawing.Size(759, 370);
             this.Grid.TabIndex = 150;
+            this.Grid.DoubleClick += new System.EventHandler(this.Grid_OnDoubleClick);
             // 
             // FilterGroupBox
             // 
@@ -5512,6 +5462,89 @@ namespace BudgetExecution
             this.toolStripButton8.Size = new System.Drawing.Size(34, 28);
             this.toolStripButton8.Text = "toolStripButton8";
             // 
+            // ExcelButton
+            // 
+            this.ExcelButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ExcelButton.BackgroundImage")));
+            this.ExcelButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ExcelButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.ExcelButton.FlatAppearance.BorderSize = 0;
+            this.ExcelButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSteelBlue;
+            this.ExcelButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.ExcelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ExcelButton.ForeColor = System.Drawing.Color.LightSteelBlue;
+            this.ExcelButton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.ExcelButton.Location = new System.Drawing.Point(47, 289);
+            this.ExcelButton.Name = "ExcelButton";
+            this.ExcelButton.Size = new System.Drawing.Size(116, 91);
+            this.ExcelButton.TabIndex = 3;
+            this.ExcelButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.ExcelButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.ExcelButton.UseVisualStyleBackColor = true;
+            // 
+            // CalculatorButton
+            // 
+            this.CalculatorButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("CalculatorButton.BackgroundImage")));
+            this.CalculatorButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.CalculatorButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.CalculatorButton.FlatAppearance.BorderSize = 0;
+            this.CalculatorButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSteelBlue;
+            this.CalculatorButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.CalculatorButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CalculatorButton.ForeColor = System.Drawing.Color.LightSteelBlue;
+            this.CalculatorButton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.CalculatorButton.Location = new System.Drawing.Point(300, 71);
+            this.CalculatorButton.Name = "CalculatorButton";
+            this.CalculatorButton.Size = new System.Drawing.Size(121, 103);
+            this.CalculatorButton.TabIndex = 2;
+            this.CalculatorButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.CalculatorButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.CalculatorButton.UseVisualStyleBackColor = true;
+            // 
+            // CalendatButton
+            // 
+            this.CalendatButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("CalendatButton.BackgroundImage")));
+            this.CalendatButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.CalendatButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.CalendatButton.FlatAppearance.BorderSize = 0;
+            this.CalendatButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSteelBlue;
+            this.CalendatButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.CalendatButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CalendatButton.ForeColor = System.Drawing.Color.LightSteelBlue;
+            this.CalendatButton.Location = new System.Drawing.Point(47, 65);
+            this.CalendatButton.Name = "CalendatButton";
+            this.CalendatButton.Size = new System.Drawing.Size(125, 98);
+            this.CalendatButton.TabIndex = 1;
+            this.CalendatButton.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.CalendatButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.CalendatButton.UseVisualStyleBackColor = true;
+            // 
+            // label42
+            // 
+            this.label42.AutoSize = true;
+            this.label42.Location = new System.Drawing.Point(43, 35);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(129, 20);
+            this.label42.TabIndex = 4;
+            this.label42.Text = "Budget Calendar\r\n";
+            // 
+            // label43
+            // 
+            this.label43.AutoSize = true;
+            this.label43.Location = new System.Drawing.Point(296, 36);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(136, 20);
+            this.label43.TabIndex = 5;
+            this.label43.Text = "Budget Calculator";
+            // 
+            // label44
+            // 
+            this.label44.AutoSize = true;
+            this.label44.Location = new System.Drawing.Point(43, 245);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(142, 20);
+            this.label44.TabIndex = 6;
+            this.label44.Text = "Budget Worksheet\r\n";
+            // 
             // SummaryForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -5590,6 +5623,7 @@ namespace BudgetExecution
             this.tabPageAdv1.ResumeLayout(false);
             this.tabPageAdv5.ResumeLayout(false);
             this.tabPageAdv6.ResumeLayout(false);
+            this.tabPageAdv6.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
@@ -5795,9 +5829,6 @@ namespace BudgetExecution
         private TabPageAdv tabPageAdv5;
         protected ChartControl AccountChart;
         private TabPageAdv tabPageAdv6;
-        private Button ExcelButton;
-        private Button CalculatorButton;
-        private Button CalendatButton;
         private GroupBox groupBox1;
         private MetroSetLabel lblCount;
         private DataGridView Grid;
@@ -5821,5 +5852,11 @@ namespace BudgetExecution
         private ToolStripButton toolStripButton7;
         private ToolStripSeparator toolStripSeparator12;
         private ToolStripButton toolStripButton9;
+        private Button ExcelButton;
+        private Button CalculatorButton;
+        private Button CalendatButton;
+        private Label label44;
+        private Label label43;
+        private Label label42;
     }
 }

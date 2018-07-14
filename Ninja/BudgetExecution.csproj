@@ -691,6 +691,9 @@
     <EmbeddedResource Include="src\DatabaseSelector.resx">
       <DependentUpon>DatabaseSelector.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="src\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="src\Message.resx">
       <DependentUpon>Message.cs</DependentUpon>
     </EmbeddedResource>

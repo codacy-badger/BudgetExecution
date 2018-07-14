@@ -30,10 +30,10 @@ namespace BudgetExecution
             BFY = DbRow["BFY"].ToString();
             Fund = new Fund(DbRow["Fund"].ToString(), DbRow["BFY"].ToString());
             Org = new Org(DbRow["Org"].ToString());
+            BOC = new BOC(DbRow["BOC"].ToString());
             RC = new RC(DbRow["RC"].ToString());
             Account = new Account(Source.Accounts, Provider.SQLite, Fund.Code, DbRow["Code"].ToString());
             Code = Account.Code;
-            BOC = new BOC(DbRow["BOC"].ToString());
             Parameter = GetDataFields();
             Amount = decimal.Parse(DbRow["Amount"].ToString());
         }
@@ -354,20 +354,6 @@ namespace BudgetExecution
             }
         }
 
-        public static PRC Select(Source source, Dictionary<string, object> p)
-        {
-            try
-            {
-                var datarow = new DataBuilder(source, Provider.SQLite, p).DbTable.AsEnumerable().Select(prc => prc).First();
-                return new PRC(datarow);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message + ex.StackTrace);
-                return null;
-            }
-        }
-
         public static PRC Select(Source source, Provider provider, Dictionary<string, object> p)
         {
             try
@@ -379,27 +365,6 @@ namespace BudgetExecution
             {
                 MessageBox.Show(ex.Message + ex.StackTrace);
                 return null;
-            }
-        }
-
-        public static void Insert(Source source, Dictionary<string, object> p)
-        {
-            try
-            {
-                var param = GetInsertionColumns(source, Provider.SQLite, p);
-                var fields = param.Keys.ToArray();
-                var vals = param.Values.ToArray();
-                var query = new SQLiteQuery(source, param);
-                SQLiteConnection conn = query.DataConnection;
-                using (conn)
-                {
-                    var insert = query.InsertCommand;
-                    insert.ExecuteNonQuery();
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message + ex.StackTrace);
             }
         }
 
@@ -425,25 +390,6 @@ namespace BudgetExecution
             }
         }
 
-        public static void Update(Source source, Dictionary<string, object> p)
-        {
-            try
-            {
-                var query = new SQLiteQuery(source, p);
-                var cmd = $"UPDATE {source.ToString()} SET Amount = {(decimal)p["Amount"]} WHERE ID = {(int)p["ID"]};";
-                SQLiteConnection conn = query.DataConnection;
-                using (conn)
-                {
-                    var update = query.GetDataCommand(cmd, conn);
-                    update.ExecuteNonQuery();
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message + ex.StackTrace);
-            }
-        }
-
         public static void Update(Source source, Provider provider, Dictionary<string, object> p)
         {
             try
@@ -455,25 +401,6 @@ namespace BudgetExecution
                 {
                     var update = query.GetDataCommand(cmd, conn) as SQLiteCommand;
                     update.ExecuteNonQuery();
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message + ex.StackTrace);
-            }
-        }
-
-        public static void Delete(Source source, Dictionary<string, object> p)
-        {
-            try
-            {
-                var query = new SQLiteQuery(source, p);
-                var cmd = $"DELETE ALL FROM {source.ToString()} WHERE ID = {(int)p["ID"]};";
-                SQLiteConnection conn = query.DataConnection;
-                using (conn)
-                {
-                    var delete = query.GetDataCommand(cmd, conn);
-                    delete.ExecuteNonQuery();
                 }
             }
             catch (Exception ex)

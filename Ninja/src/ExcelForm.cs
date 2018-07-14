@@ -21,5 +21,10 @@ namespace BudgetExecution
         {
             InitializeComponent();
         }
+
+        private void ExcelForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

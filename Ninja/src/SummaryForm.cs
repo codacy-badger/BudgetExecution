@@ -42,6 +42,7 @@ namespace BudgetExecution
             SummaryTabControl.SelectedIndexChanged += SummaryTabPage_TabSelected;
             CurrentTabIndex = 1;
             TabNames = GetTabNames();
+            tabPageAdv1.TabVisible = false;
         }
 
         public SummaryForm(Source source)
@@ -76,6 +77,7 @@ namespace BudgetExecution
                 CurrentTabIndex = SummaryTabControl.SelectedIndex;
                 SummaryTabControl.SelectedIndexChanged += SummaryTabPage_TabSelected;
             }
+            tabPageAdv1.TabVisible = false;
 
         }
 
@@ -83,8 +85,6 @@ namespace BudgetExecution
         public Source Source { get; }
 
         public Dictionary<string, object> Parameter { get; set; }
-
-        public DivisionAuthority D6 { get; }
 
         public DataBuilder DbData { get; }
 
@@ -932,6 +932,22 @@ namespace BudgetExecution
         }
 
         private void CopyButton_OnClick(object sender, EventArgs e)
+        {
+            try
+            {
+                var view = (DataRowView)BindingSource.Current;
+                var prc = new PRC(view.Row).GetDataFields();
+                var am = new AccountManager(Source.PRC, Provider.SQLite, prc);
+                am.Show();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message + ex.StackTrace);
+            }
+        }
+
+        private void Grid_OnDoubleClick(object sender, EventArgs e)
         {
             try
             {

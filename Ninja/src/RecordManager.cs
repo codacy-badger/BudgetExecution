@@ -106,10 +106,6 @@ namespace BudgetExecution
 
         }
 
-        private void Button5_Click(object sender, EventArgs e)
-        {
-        }
-
         private Label[] GetLabels()
         {
             try
@@ -232,11 +228,6 @@ namespace BudgetExecution
             }
         }
 
-        private void Lbl14_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void NextButton_Click(object sender, EventArgs e)
         {
            
@@ -246,21 +237,6 @@ namespace BudgetExecution
         private void PreviousButton_Click(object sender, EventArgs e)
         {
             BindingSource.MovePrevious();
-        }
-
-        private void TableLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void Button2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Box28_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
