@@ -25,9 +25,12 @@ namespace BudgetExecution
             InitializeComponent();
             DbData = data;
             DbTable = DbData.GetDataTable();
-            this.BindingSource.DataSource = DbTable;
+            BindingSource = new BindingSource();
+            BindingSource.DataSource = DbTable;
             BindTextBoxes(this.BindingSource, this.DbTable);
-            RecordNavigator.BindingSource = this.BindingSource;
+            RecordNavigator1.BindingSource = this.BindingSource;
+            RecordNavigator1.BindingSource = this.BindingSource;
+            RecordNavigator2.BindingSource = this.BindingSource;
             AddNewTab.TabVisible = false;
         }
 
@@ -39,9 +42,11 @@ namespace BudgetExecution
             Provider = provider;
             DbData = new DataBuilder(Source, Provider);
             DbTable = DbData.GetDataTable();
-            this.BindingSource.DataSource = DbTable;
+            BindingSource = new BindingSource();
+            BindingSource.DataSource = DbTable;
             BindTextBoxes(this.BindingSource, this.DbTable);
-            RecordNavigator.BindingSource = this.BindingSource;
+            RecordNavigator1.BindingSource = this.BindingSource;
+            RecordNavigator2.BindingSource = this.BindingSource;
             AddNewTab.TabVisible = false;
         }
 
@@ -52,9 +57,11 @@ namespace BudgetExecution
             Provider = provider;
             DbData = new DataBuilder(Source, Provider, p);
             DbTable = DbData.GetDataTable();
-            this.BindingSource.DataSource = DbTable;
+            BindingSource = new BindingSource();
+            BindingSource.DataSource = DbTable;
             BindTextBoxes(this.BindingSource, this.DbTable);
-            RecordNavigator.BindingSource = this.BindingSource;
+            RecordNavigator1.BindingSource = this.BindingSource;
+            RecordNavigator2.BindingSource = this.BindingSource;
             AddNewTab.TabVisible = false;
         }
 
@@ -164,7 +171,7 @@ namespace BudgetExecution
                 for (int i = 0; i < cn.Count; i++)
                 {
                     tbx[i].Visible = true;
-                    tbx[i].DataBindings.Add(new Binding("Text", bs.Current, dt.Columns[i].ColumnName));
+                    tbx[i].DataBindings.Add(new Binding("Text", this.BindingSource.DataSource, dt.Columns[i].ColumnName));
                     lbl[i].Visible = true;
                     lbl[i].Text = dt.Columns[i].ColumnName;
                 }

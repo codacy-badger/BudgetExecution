@@ -38,20 +38,19 @@ namespace BudgetExecution
             this.components = new System.ComponentModel.Container();
             Syncfusion.Windows.Forms.Spreadsheet.SpreadsheetCopyPaste spreadsheetCopyPaste1 = new Syncfusion.Windows.Forms.Spreadsheet.SpreadsheetCopyPaste();
             Syncfusion.Windows.Forms.Spreadsheet.FormulaRangeSelectionController formulaRangeSelectionController1 = new Syncfusion.Windows.Forms.Spreadsheet.FormulaRangeSelectionController();
+            Syncfusion.Windows.Forms.CaptionImage captionImage1 = new Syncfusion.Windows.Forms.CaptionImage();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ExcelForm));
             this.toolStripTabItem1 = new Syncfusion.Windows.Forms.Tools.ToolStripTabItem();
             this.toolStripEx1 = new Syncfusion.Windows.Forms.Tools.ToolStripEx();
             this.toolStripTabItem2 = new Syncfusion.Windows.Forms.Tools.ToolStripTabItem();
             this.toolStripEx2 = new Syncfusion.Windows.Forms.Tools.ToolStripEx();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.spreadsheetRibbon1 = new Syncfusion.Windows.Forms.Spreadsheet.SpreadsheetRibbon();
             this.spreadsheet1 = new Syncfusion.Windows.Forms.Spreadsheet.Spreadsheet();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.spreadsheetRibbon1 = new Syncfusion.Windows.Forms.Spreadsheet.SpreadsheetRibbon();
             this.toolStripTabItem1.Panel.SuspendLayout();
             this.toolStripTabItem2.Panel.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.spreadsheetRibbon1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // toolStripTabItem1
@@ -118,10 +117,40 @@ namespace BudgetExecution
             // 
             this.panel1.Controls.Add(this.spreadsheet1);
             this.panel1.Controls.Add(this.spreadsheetRibbon1);
-            this.panel1.Location = new System.Drawing.Point(300, 79);
+            this.panel1.Location = new System.Drawing.Point(271, 70);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1163, 832);
             this.panel1.TabIndex = 1;
+            // 
+            // spreadsheet1
+            // 
+            this.spreadsheet1.AllowCellContextMenu = true;
+            this.spreadsheet1.AllowExtendRowColumnCount = true;
+            this.spreadsheet1.AllowFormulaRangeSelection = true;
+            this.spreadsheet1.AllowTabItemContextMenu = true;
+            this.spreadsheet1.AllowZooming = true;
+            spreadsheetCopyPaste1.AllowPasteOptionPopup = true;
+            spreadsheetCopyPaste1.DefaultPasteOption = Syncfusion.Windows.Forms.Spreadsheet.PasteOptions.Paste;
+            this.spreadsheet1.CopyPaste = spreadsheetCopyPaste1;
+            this.spreadsheet1.DefaultColumnCount = 14;
+            this.spreadsheet1.DefaultRowCount = 50;
+            this.spreadsheet1.DisplayAlerts = true;
+            this.spreadsheet1.FileName = "Book4";
+            this.spreadsheet1.FormulaBarVisibility = true;
+            formulaRangeSelectionController1.AllowMouseSelection = true;
+            formulaRangeSelectionController1.AllowSelectionOnEditing = true;
+            this.spreadsheet1.FormulaRangeSelectionController = formulaRangeSelectionController1;
+            this.spreadsheet1.IsCustomTabItemContextMenuEnabled = false;
+            this.spreadsheet1.Location = new System.Drawing.Point(0, 220);
+            this.spreadsheet1.Name = "spreadsheet1";
+            this.spreadsheet1.SelectedTabIndex = 0;
+            this.spreadsheet1.SelectedTabItem = null;
+            this.spreadsheet1.ShowBusyIndicator = true;
+            this.spreadsheet1.Size = new System.Drawing.Size(1163, 609);
+            this.spreadsheet1.TabIndex = 1;
+            this.spreadsheet1.TabItemContextMenu = null;
+            this.spreadsheet1.Text = "spreadsheet1";
+            this.spreadsheet1.ThemeName = "Default";
             // 
             // spreadsheetRibbon1
             // 
@@ -159,46 +188,6 @@ namespace BudgetExecution
             this.spreadsheetRibbon1.TitleColor = System.Drawing.Color.White;
             this.spreadsheetRibbon1.TitleFont = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
-            // spreadsheet1
-            // 
-            this.spreadsheet1.AllowCellContextMenu = true;
-            this.spreadsheet1.AllowExtendRowColumnCount = true;
-            this.spreadsheet1.AllowFormulaRangeSelection = true;
-            this.spreadsheet1.AllowTabItemContextMenu = true;
-            this.spreadsheet1.AllowZooming = true;
-            spreadsheetCopyPaste1.AllowPasteOptionPopup = true;
-            spreadsheetCopyPaste1.DefaultPasteOption = Syncfusion.Windows.Forms.Spreadsheet.PasteOptions.Paste;
-            this.spreadsheet1.CopyPaste = spreadsheetCopyPaste1;
-            this.spreadsheet1.DefaultColumnCount = 14;
-            this.spreadsheet1.DefaultRowCount = 50;
-            this.spreadsheet1.DisplayAlerts = true;
-            this.spreadsheet1.FileName = "Book3";
-            this.spreadsheet1.FormulaBarVisibility = true;
-            formulaRangeSelectionController1.AllowMouseSelection = true;
-            formulaRangeSelectionController1.AllowSelectionOnEditing = true;
-            this.spreadsheet1.FormulaRangeSelectionController = formulaRangeSelectionController1;
-            this.spreadsheet1.IsCustomTabItemContextMenuEnabled = false;
-            this.spreadsheet1.Location = new System.Drawing.Point(0, 220);
-            this.spreadsheet1.Name = "spreadsheet1";
-            this.spreadsheet1.SelectedTabIndex = 0;
-            this.spreadsheet1.SelectedTabItem = null;
-            this.spreadsheet1.ShowBusyIndicator = true;
-            this.spreadsheet1.Size = new System.Drawing.Size(1163, 609);
-            this.spreadsheet1.TabIndex = 1;
-            this.spreadsheet1.TabItemContextMenu = null;
-            this.spreadsheet1.Text = "spreadsheet1";
-            this.spreadsheet1.ThemeName = "Default";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(41, 34);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(223, 87);
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
-            // 
             // ExcelForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -209,8 +198,12 @@ namespace BudgetExecution
             this.CaptionBarHeight = 40;
             this.CaptionButtonHoverColor = System.Drawing.SystemColors.MenuHighlight;
             this.CaptionForeColor = System.Drawing.Color.Black;
+            captionImage1.BackColor = System.Drawing.Color.Black;
+            captionImage1.Image = ((System.Drawing.Image)(resources.GetObject("captionImage1.Image")));
+            captionImage1.Name = "CaptionImage1";
+            captionImage1.Size = new System.Drawing.Size(150, 50);
+            this.CaptionImages.Add(captionImage1);
             this.ClientSize = new System.Drawing.Size(1517, 953);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(1600, 1000);
@@ -225,7 +218,6 @@ namespace BudgetExecution
             this.toolStripTabItem2.Panel.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.spreadsheetRibbon1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -238,6 +230,5 @@ namespace BudgetExecution
         private System.Windows.Forms.Panel panel1;
         private Syncfusion.Windows.Forms.Spreadsheet.Spreadsheet spreadsheet1;
         private Syncfusion.Windows.Forms.Spreadsheet.SpreadsheetRibbon spreadsheetRibbon1;
-        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

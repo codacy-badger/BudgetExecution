@@ -110,6 +110,8 @@ namespace BudgetExecution
 
         public Fund Fund { get; }
 
+        public string AH { get; }
+
         public Org Org { get; }
 
         public RC RC { get; }

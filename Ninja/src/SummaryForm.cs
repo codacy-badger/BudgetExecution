@@ -29,6 +29,7 @@ namespace BudgetExecution
             InitializeComponent();
             Division = rc;
             Source = Source.DivisionAccounts;
+            Provider = Provider.SQLite;
             Parameter = new Dictionary<string, object>() { ["RC"] = rc };
             DbData = new DataBuilder(Source.DivisionAccounts, Provider.SQLite, Parameter);
             Table = DbData.DbTable;
@@ -51,6 +52,7 @@ namespace BudgetExecution
             DbData = new DataBuilder(source, Provider.SQLite);
             Table = DbData.DbTable;
             Source = source;
+            Provider = Provider.SQLite;
             CurrentTabIndex = 0;
             TabNames = GetTabNames();
             Text = $"R6 { Source.ToString() } Summary";
@@ -83,6 +85,8 @@ namespace BudgetExecution
 
         // PROPERTIES
         public Source Source { get; }
+
+        public Provider Provider { get; }
 
         public Dictionary<string, object> Parameter { get; set; }
 
@@ -168,12 +172,9 @@ namespace BudgetExecution
                 lblBoc.Visible = false;
                 GridBocFilter.Visible = false;
                 GridRefreshButton.Click += GridRefreshButton_OnClick;
-                AddButton.Click += AddButton_OnClick;
-                GridRefreshButton.Click += GridRefreshButton_OnClick;
                 ExcelButton.Click += ExcelButton_Click;
                 CalendatButton.Click += CalendatButton_Click;
                 CalculatorButton.Click += CalculatorButton_Click;
-                CopyButton.Click += CopyButton_OnClick;
             }
             catch (Exception ex)
             {
@@ -189,8 +190,9 @@ namespace BudgetExecution
                 GridFundFilter.Tag = filter.SelectedItem.ToString();
                 var fund = filter.SelectedItem.ToString();
                 BindingSource.Filter = string.Format("FundName = '{0}'", GridFundFilter.SelectedItem.ToString());
-                label32.Text = GetCount(fund).ToString();
-                label41.Text = CalculateTotal(fund).ToString("c");
+                label41.Text = GetCount(fund).ToString();
+                label37.Text = CalculateAverage(GridFundFilter.SelectedItem.ToString()).ToString("c");
+                label32.Text = CalculateTotal(fund).ToString("c");
                 PopulateGridBocFilterItems();
                 lblBoc.Visible = true;
                 GridBocFilter.Visible = true;
@@ -209,6 +211,7 @@ namespace BudgetExecution
                 var filter = boc.SelectedItem.ToString();
                 BindingSource.Filter = $"FundName = '{GridFundFilter.SelectedItem.ToString()}' AND BocName = '{GridBocFilter.SelectedItem.ToString()}'";
                 label32.Text = CalculateTotal(GridFundFilter.SelectedItem.ToString(), filter).ToString("c");
+                label37.Text = CalculateAverage(GridFundFilter.SelectedItem.ToString(), filter).ToString("c");
                 label41.Text = GetCount(GridFundFilter.SelectedItem.ToString(), filter).ToString();
                 GridAccountFilter.Visible = true;
                 lblPrc.Visible = true;
@@ -435,12 +438,41 @@ namespace BudgetExecution
             }
         }
 
+        private decimal CalculateAverage(string filter)
+        {
+            try
+            {
+                return DbData.DbTable.AsEnumerable().Where(p => p.Field<string>("FundName").
+                    Equals(filter)).Select(p => p.Field<decimal>("Amount")).Average();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + ex.StackTrace);
+                return -1;
+            }
+        }
+
+        private decimal CalculateAverage(string filter1, string filter2)
+        {
+            try
+            {
+                return Table.AsEnumerable().Where(p => p.Field<string>("FundName").Equals(filter1))
+                    .Where(p => p.Field<string>("BocName").Equals(filter2))
+                    .Select(p => p.Field<decimal>("Amount")).Average();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + ex.StackTrace);
+                return -1;
+            }
+        }
+
         private decimal CalculateTotal(string filter)
         {
             try
             {
                 return DbData.DbTable.AsEnumerable().Where(p => p.Field<string>("FundName").
-                Equals(filter)).Select(p => p.Field<decimal>("Amount")).Sum();
+                    Equals(filter)).Select(p => p.Field<decimal>("Amount")).Sum();
             }
             catch (Exception ex)
             {
@@ -921,7 +953,9 @@ namespace BudgetExecution
         {
             try
             {
-                var am = new AccountManager(Source.PRC, Provider.SQLite);
+                var am = new AccountManager(Source.PRC, this.Provider);
+                am.AccountNavigator.Visible = false;
+                am.UpdateTab.TabVisible = false;
                 am.Show();
             }
             catch (Exception ex)
@@ -937,7 +971,9 @@ namespace BudgetExecution
             {
                 var view = (DataRowView)BindingSource.Current;
                 var prc = new PRC(view.Row).GetDataFields();
-                var am = new AccountManager(Source.PRC, Provider.SQLite, prc);
+                var am = new AccountManager(this.Source, this.Provider, prc);
+                am.AccountNavigator.Visible = false;
+                am.AddNewTab.TabVisible = false;
                 am.Show();
             }
             catch (Exception ex)
@@ -953,7 +989,7 @@ namespace BudgetExecution
             {
                 var view = (DataRowView)BindingSource.Current;
                 var prc = new PRC(view.Row).GetDataFields();
-                var am = new AccountManager(Source.PRC, Provider.SQLite, prc);
+                var am = new AccountManager(Source, Provider.SQLite, prc);
                 am.Show();
             }
             catch (Exception ex)
@@ -961,6 +997,12 @@ namespace BudgetExecution
 
                 MessageBox.Show(ex.Message + ex.StackTrace);
             }
+        }
+
+        private void ReprogramButton_OnClick(object sender, EventArgs e)
+        {
+            var rp = new Reprogramming();
+            rp.Show();
         }
     }
 }

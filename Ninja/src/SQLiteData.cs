@@ -99,7 +99,49 @@ namespace BudgetExecution
             BindingSource.DataSource = new DataBuilder(source, Provider.SQLite).GetDataTable(source);
         }
 
+        private void Filter1_ItemSelected(object sender, EventArgs e)
+        {
+            try
+            {
+                var filter = sender as MetroSetComboBox;
+                var fund = filter.SelectedItem.ToString();
+                BindingSource.Filter = string.Format("{0} = '{1}'", filter.Tag.ToString(), filter.SelectedItem.ToString());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + ex.StackTrace);
+            }
+        }
+
+        private void Filter2_ItemSelected(object sender, EventArgs e)
+        {
+            try
+            {
+                var filter = sender as MetroSetComboBox;
+                var fund = filter.SelectedItem.ToString();
+                BindingSource.Filter = string.Format("{0} = '{1}'", filter.Tag.ToString(), filter.SelectedItem.ToString());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + ex.StackTrace);
+            }
+        }
+
         private void Filter3_ItemSelected(object sender, EventArgs e)
+        {
+            try
+            {
+                var filter = sender as MetroSetComboBox;
+                var fund = filter.SelectedItem.ToString();
+                BindingSource.Filter = string.Format("{0} = '{1}'", filter.Tag.ToString(), filter.SelectedItem.ToString());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + ex.StackTrace);
+            }
+        }
+
+        private void Filter4_ItemSelected(object sender, EventArgs e)
         {
             try
             {
@@ -377,7 +419,7 @@ namespace BudgetExecution
         {
             try
             {
-                var am = new RecordManager(this.DbData);
+                var am = new RecordManager(this.Source, this.Provider);
                 am.Show();
             }
             catch (Exception ex)
@@ -391,7 +433,7 @@ namespace BudgetExecution
         {
             try
             {
-                var am = new RecordManager(this.DbData);
+                var am = new RecordManager(this.Source, this.Provider);
                 am.Show();
             }
             catch (Exception ex)

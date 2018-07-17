@@ -81,9 +81,9 @@ namespace BudgetExecution
             this.toolStripSeparator11 = new System.Windows.Forms.ToolStripSeparator();
             this.UpdateButton = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator10 = new System.Windows.Forms.ToolStripSeparator();
-            this.RefreshButton = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator9 = new System.Windows.Forms.ToolStripSeparator();
             this.AddButton = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator9 = new System.Windows.Forms.ToolStripSeparator();
+            this.RefreshButton = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton7 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
@@ -92,6 +92,7 @@ namespace BudgetExecution
             this.toolStripButton9 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
             this.metroPanel3 = new MetroFramework.Controls.MetroPanel();
+            this.Filter4 = new MetroSet_UI.Controls.MetroSetComboBox();
             this.Filter1 = new MetroSet_UI.Controls.MetroSetComboBox();
             this.Filter3 = new MetroSet_UI.Controls.MetroSetComboBox();
             this.metroPanel4 = new MetroFramework.Controls.MetroPanel();
@@ -282,7 +283,7 @@ namespace BudgetExecution
             this.FIlter2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.FIlter2.FormattingEnabled = true;
             this.FIlter2.ItemHeight = 30;
-            this.FIlter2.Location = new System.Drawing.Point(91, 183);
+            this.FIlter2.Location = new System.Drawing.Point(91, 152);
             this.FIlter2.MaxDropDownItems = 20;
             this.FIlter2.Name = "FIlter2";
             this.FIlter2.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
@@ -324,7 +325,7 @@ namespace BudgetExecution
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 118F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 120F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 123F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 125F));
             this.tableLayoutPanel1.Controls.Add(this.label31, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.label39, 5, 0);
             this.tableLayoutPanel1.Controls.Add(this.label32, 1, 0);
@@ -344,17 +345,17 @@ namespace BudgetExecution
             // 
             this.label31.AutoSize = true;
             this.label31.Dock = System.Windows.Forms.DockStyle.Right;
-            this.label31.Location = new System.Drawing.Point(80, 0);
+            this.label31.Location = new System.Drawing.Point(87, 0);
             this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(60, 33);
+            this.label31.Size = new System.Drawing.Size(52, 33);
             this.label31.TabIndex = 153;
-            this.label31.Text = "label31";
+            this.label31.Text = "Total: ";
             // 
             // label39
             // 
             this.label39.AutoSize = true;
             this.label39.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label39.Location = new System.Drawing.Point(653, 0);
+            this.label39.Location = new System.Drawing.Point(651, 0);
             this.label39.Name = "label39";
             this.label39.Size = new System.Drawing.Size(60, 33);
             this.label39.TabIndex = 158;
@@ -364,7 +365,7 @@ namespace BudgetExecution
             // 
             this.label32.AutoSize = true;
             this.label32.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label32.Location = new System.Drawing.Point(146, 0);
+            this.label32.Location = new System.Drawing.Point(145, 0);
             this.label32.Name = "label32";
             this.label32.Size = new System.Drawing.Size(60, 33);
             this.label32.TabIndex = 154;
@@ -374,7 +375,7 @@ namespace BudgetExecution
             // 
             this.label38.AutoSize = true;
             this.label38.Dock = System.Windows.Forms.DockStyle.Right;
-            this.label38.Location = new System.Drawing.Point(587, 0);
+            this.label38.Location = new System.Drawing.Point(585, 0);
             this.label38.Name = "label38";
             this.label38.Size = new System.Drawing.Size(60, 33);
             this.label38.TabIndex = 157;
@@ -384,7 +385,7 @@ namespace BudgetExecution
             // 
             this.label34.AutoSize = true;
             this.label34.Dock = System.Windows.Forms.DockStyle.Right;
-            this.label34.Location = new System.Drawing.Point(329, 0);
+            this.label34.Location = new System.Drawing.Point(327, 0);
             this.label34.Name = "label34";
             this.label34.Size = new System.Drawing.Size(60, 33);
             this.label34.TabIndex = 155;
@@ -394,7 +395,7 @@ namespace BudgetExecution
             // 
             this.label37.AutoSize = true;
             this.label37.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label37.Location = new System.Drawing.Point(395, 0);
+            this.label37.Location = new System.Drawing.Point(393, 0);
             this.label37.Name = "label37";
             this.label37.Size = new System.Drawing.Size(60, 33);
             this.label37.TabIndex = 156;
@@ -404,17 +405,17 @@ namespace BudgetExecution
             // 
             this.label40.AutoSize = true;
             this.label40.Dock = System.Windows.Forms.DockStyle.Right;
-            this.label40.Location = new System.Drawing.Point(825, 0);
+            this.label40.Location = new System.Drawing.Point(806, 0);
             this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(60, 33);
+            this.label40.Size = new System.Drawing.Size(77, 33);
             this.label40.TabIndex = 159;
-            this.label40.Text = "label40";
+            this.label40.Text = "Recrods :";
             // 
             // label41
             // 
             this.label41.AutoSize = true;
             this.label41.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label41.Location = new System.Drawing.Point(891, 0);
+            this.label41.Location = new System.Drawing.Point(889, 0);
             this.label41.Name = "label41";
             this.label41.Size = new System.Drawing.Size(60, 33);
             this.label41.TabIndex = 160;
@@ -599,20 +600,6 @@ namespace BudgetExecution
             this.toolStripSeparator10.Name = "toolStripSeparator10";
             this.toolStripSeparator10.Size = new System.Drawing.Size(6, 31);
             // 
-            // RefreshButton
-            // 
-            this.RefreshButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.RefreshButton.Image = ((System.Drawing.Image)(resources.GetObject("RefreshButton.Image")));
-            this.RefreshButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.RefreshButton.Name = "RefreshButton";
-            this.RefreshButton.Size = new System.Drawing.Size(24, 28);
-            this.RefreshButton.Text = "toolStripButton1";
-            // 
-            // toolStripSeparator9
-            // 
-            this.toolStripSeparator9.Name = "toolStripSeparator9";
-            this.toolStripSeparator9.Size = new System.Drawing.Size(6, 31);
-            // 
             // AddButton
             // 
             this.AddButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -621,6 +608,20 @@ namespace BudgetExecution
             this.AddButton.Name = "AddButton";
             this.AddButton.Size = new System.Drawing.Size(24, 28);
             this.AddButton.Text = "toolStripButton2";
+            // 
+            // toolStripSeparator9
+            // 
+            this.toolStripSeparator9.Name = "toolStripSeparator9";
+            this.toolStripSeparator9.Size = new System.Drawing.Size(6, 31);
+            // 
+            // RefreshButton
+            // 
+            this.RefreshButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.RefreshButton.Image = ((System.Drawing.Image)(resources.GetObject("RefreshButton.Image")));
+            this.RefreshButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.RefreshButton.Name = "RefreshButton";
+            this.RefreshButton.Size = new System.Drawing.Size(24, 28);
+            this.RefreshButton.Text = "toolStripButton1";
             // 
             // toolStripSeparator4
             // 
@@ -669,6 +670,7 @@ namespace BudgetExecution
             // metroPanel3
             // 
             this.metroPanel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.metroPanel3.Controls.Add(this.Filter4);
             this.metroPanel3.Controls.Add(this.Filter1);
             this.metroPanel3.Controls.Add(this.FIlter2);
             this.metroPanel3.Controls.Add(this.Filter3);
@@ -683,6 +685,40 @@ namespace BudgetExecution
             this.metroPanel3.VerticalScrollbarBarColor = true;
             this.metroPanel3.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel3.VerticalScrollbarSize = 10;
+            // 
+            // Filter4
+            // 
+            this.Filter4.AllowDrop = true;
+            this.Filter4.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.Filter4.BackColor = System.Drawing.Color.Transparent;
+            this.Filter4.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.Filter4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.Filter4.CausesValidation = false;
+            this.Filter4.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.Filter4.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.Filter4.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.Filter4.DisplayMember = "Fund";
+            this.Filter4.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.Filter4.DropDownHeight = 75;
+            this.Filter4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Filter4.DropDownWidth = 200;
+            this.Filter4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Filter4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.Filter4.FormattingEnabled = true;
+            this.Filter4.IntegralHeight = false;
+            this.Filter4.ItemHeight = 30;
+            this.Filter4.Location = new System.Drawing.Point(91, 367);
+            this.Filter4.MaxDropDownItems = 20;
+            this.Filter4.Name = "Filter4";
+            this.Filter4.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.Filter4.SelectedItemForeColor = System.Drawing.Color.White;
+            this.Filter4.Size = new System.Drawing.Size(172, 36);
+            this.Filter4.Style = MetroSet_UI.Design.Style.Dark;
+            this.Filter4.StyleManager = null;
+            this.Filter4.TabIndex = 8;
+            this.Filter4.ThemeAuthor = "Narwin";
+            this.Filter4.ThemeName = "MetroDark";
+            this.Filter4.ValueMember = "Fund";
             // 
             // Filter1
             // 
@@ -704,7 +740,7 @@ namespace BudgetExecution
             this.Filter1.FormattingEnabled = true;
             this.Filter1.IntegralHeight = false;
             this.Filter1.ItemHeight = 30;
-            this.Filter1.Location = new System.Drawing.Point(91, 70);
+            this.Filter1.Location = new System.Drawing.Point(91, 45);
             this.Filter1.MaxDropDownItems = 100;
             this.Filter1.Name = "Filter1";
             this.Filter1.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
@@ -737,7 +773,7 @@ namespace BudgetExecution
             this.Filter3.FormattingEnabled = true;
             this.Filter3.IntegralHeight = false;
             this.Filter3.ItemHeight = 30;
-            this.Filter3.Location = new System.Drawing.Point(91, 298);
+            this.Filter3.Location = new System.Drawing.Point(91, 256);
             this.Filter3.MaxDropDownItems = 20;
             this.Filter3.Name = "Filter3";
             this.Filter3.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
@@ -1046,5 +1082,6 @@ namespace BudgetExecution
         private System.Windows.Forms.Label label37;
         private System.Windows.Forms.Label label40;
         private System.Windows.Forms.Label label41;
+        private MetroSet_UI.Controls.MetroSetComboBox Filter4;
     }
 }

@@ -25,8 +25,9 @@ namespace BudgetExecution
             InitializeComponent();
             if (DbData == null)
                 DbData = data;
-            AccountBinding = DbData.BindingSource;
-            AccountNavigator.BindingSource = AccountBinding;
+            BindingSource = new BindingSource();
+            BindingSource.DataSource = new DataBuilder(data.Source, Provider.SQLite);
+            AccountNavigator.BindingSource = BindingSource;
         }
 
         public AccountManager(Source source, Provider provider)
@@ -34,9 +35,10 @@ namespace BudgetExecution
             InitializeComponent();
             Source = source;
             Provider = provider;
-            DbData = new DataBuilder(Source, Provider);
-            AccountBinding = DbData.BindingSource;
-            AccountNavigator.BindingSource = AccountBinding;
+            DbData = new DataBuilder(this.Source, this.Provider);
+            BindingSource = new BindingSource();
+            BindingSource.DataSource = DbData.DbTable;
+            AccountNavigator.BindingSource = BindingSource;
             UpdateTab.TabVisible = false;
             PopulateComboBoxes();
         }
@@ -49,25 +51,23 @@ namespace BudgetExecution
             DbData = new DataBuilder(Source, Provider, p);
             DbTable = DbData.DbTable;
             DbRow = DbTable.AsEnumerable().Select(prc => prc).First();
-            AccountBinding = DbData.BindingSource;
-            AccountNavigator.BindingSource = AccountBinding;
+            BindingSource = new BindingSource();
+            BindingSource.DataSource = DbTable;
+            AccountNavigator.BindingSource = BindingSource;
             AddNewTab.TabVisible = false;
-            ConfigureTextBoxBindings();
         }
 
 
         // PROPERTIES
-        Source Source { get; }
+        public Source Source { get; }
 
-        Provider Provider { get; }
+        public Provider Provider { get; }
 
-        DataBuilder DbData { get; }
+        public DataBuilder DbData { get; }
 
-        DataTable DbTable { get; set; }
+        public DataTable DbTable { get; set; }
 
-        DataRow DbRow { get; }
-
-        BindingSource AccountBinding { get; set; }
+        public DataRow DbRow { get; }
 
         List<Label> Labels { get; set; }
 
@@ -83,33 +83,32 @@ namespace BudgetExecution
         {
             if (AddNewTab.TabVisible == true)
                 AddButton.Visible = false;
-            AddButton.Click += AddButton_OnClick;
-            PreviousButton.Click += PreviousButton_Click;
-            NextButton.Click += NextButton_Click;
+            ConfigureTextBoxBindings();
         }
 
         private void ConfigureTextBoxBindings()
         {
             try
             {
-                ID.DataBindings.Add(new Binding("Text", DbTable, "ID"));
-                BudgetLevel.DataBindings.Add(new Binding("Text", DbTable, "BudgetLevel"));
-                BFY.DataBindings.Add(new Binding("Text", DbTable, "BFY"));
-                Fund.DataBindings.Add(new Binding("Text", DbTable, "Fund"));
-                Org.DataBindings.Add(new Binding("Text", DbTable, "Org"));
-                RC.DataBindings.Add(new Binding("Text", DbTable, "RC"));
-                Code.DataBindings.Add(new Binding("Text", DbTable, "Code"));
-                SubProject.DataBindings.Add(new Binding("Text", DbTable, "SubProject"));
-                BOC.DataBindings.Add(new Binding("Text", DbTable, "BOC"));
-                ProgramProject.DataBindings.Add(new Binding("Text", DbTable, "ProgramProjectName"));
-                ProgramArea.DataBindings.Add(new Binding("Text", DbTable, "ProgramAreaName"));
-                Amount1.DataBindings.Add(new Binding("Text", DbTable, "Amount"));
+                ID.DataBindings.Add(new Binding("Text", BindingSource.DataSource, "ID"));
+                BudgetLevel.DataBindings.Add(new Binding("Text", BindingSource.DataSource, "BudgetLevel"));
+                BFY.DataBindings.Add(new Binding("Text", BindingSource.DataSource, "BFY"));
+                Fund.DataBindings.Add(new Binding("Text", BindingSource.DataSource, "Fund"));
+                Org.DataBindings.Add(new Binding("Text", BindingSource.DataSource, "Org"));
+                RC.DataBindings.Add(new Binding("Text", BindingSource.DataSource, "RC"));
+                Code.DataBindings.Add(new Binding("Text", BindingSource.DataSource, "Code"));
+                SubProject.DataBindings.Add(new Binding("Text", BindingSource.DataSource, "SubProject"));
+                BOC.DataBindings.Add(new Binding("Text", BindingSource.DataSource, "BOC"));
+                ProgramProject.DataBindings.Add(new Binding("Text", BindingSource.DataSource, "ProgramProjectName"));
+                ProgramArea.DataBindings.Add(new Binding("Text", BindingSource.DataSource, "ProgramAreaName"));
+                Amount1.DataBindings.Add(new Binding("Text", BindingSource.DataSource, "Amount"));
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message + ex.StackTrace);
             }
         }
+
 
         private void PopulateComboBoxes()
         {
@@ -296,30 +295,43 @@ namespace BudgetExecution
 
         private void AddButton_OnClick(object sender, EventArgs e)
         {
-
+            var addmanager = new AccountManager(Source.PRC, this.Provider);
+            addmanager.AccountNavigator.Visible = false;
+            addmanager.UpdateTab.TabVisible = false;
+            addmanager.Show();
+            this.Close();
         }
 
-        private void PreviousButton_Click(object sender, EventArgs e)
+        private void PreviousButton_OnClick(object sender, EventArgs e)
         {
-            DbData.BindingSource.MovePrevious();
+            this.BindingSource.MovePrevious();
         }
 
-        private void NextButton_Click(object sender, EventArgs e)
+        private void NextButton_OnClick(object sender, EventArgs e)
         {
-            DbData.BindingSource.MoveNext();
+            this.BindingSource.MoveNext();
         }
 
-        private void AddButton_Click(object sender, EventArgs e)
+        private void UpdateButton_Click(object sender, EventArgs e)
         {
             var addmanager = new AccountManager(this.Source, this.Provider);
+            addmanager.AccountNavigator.Visible = false;
+            addmanager.AddNewTab.TabVisible = false;
             addmanager.Show();
             this.Close();
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Button1_Click(object sender, EventArgs e)
         {
 
         }
+
+        private void CalculatorButton_Click(object sender, EventArgs e)
+        {
+            var cf = new CalculatorForm();
+            cf.Show();
+        }
+
     }
 }

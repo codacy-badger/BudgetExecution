@@ -32,7 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RecordManager));
             Syncfusion.Windows.Forms.CaptionImage captionImage1 = new Syncfusion.Windows.Forms.CaptionImage();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.RecordNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.RecordNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.PreviousButton = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
@@ -113,7 +113,6 @@
             this.box26 = new MetroSet_UI.Controls.MetroSetTextBox();
             this.box28 = new MetroSet_UI.Controls.MetroSetTextBox();
             this.AddNewTab = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
-            this.BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -176,7 +175,7 @@
             this.metroSetTextBox29 = new MetroSet_UI.Controls.MetroSetTextBox();
             this.metroSetTextBox30 = new MetroSet_UI.Controls.MetroSetTextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
+            this.RecordNavigator2 = new System.Windows.Forms.BindingNavigator(this.components);
             this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator8 = new System.Windows.Forms.ToolStripSeparator();
@@ -193,43 +192,44 @@
             this.toolStripButton6 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator14 = new System.Windows.Forms.ToolStripSeparator();
             this.label32 = new System.Windows.Forms.Label();
+            this.BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.RecordNavigator)).BeginInit();
-            this.RecordNavigator.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.RecordNavigator1)).BeginInit();
+            this.RecordNavigator1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AccountTabControl)).BeginInit();
             this.AccountTabControl.SuspendLayout();
             this.UpdateTab.SuspendLayout();
             this.RecordTabelPanel.SuspendLayout();
             this.AddNewTab.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.BindingSource)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
-            this.bindingNavigator1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.RecordNavigator2)).BeginInit();
+            this.RecordNavigator2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.BindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.Black;
-            this.groupBox2.Controls.Add(this.RecordNavigator);
+            this.groupBox2.Controls.Add(this.RecordNavigator1);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.ForeColor = System.Drawing.SystemColors.Info;
-            this.groupBox2.Location = new System.Drawing.Point(764, 463);
+            this.groupBox2.Location = new System.Drawing.Point(773, 444);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(499, 59);
             this.groupBox2.TabIndex = 56;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Commands";
             // 
-            // RecordNavigator
+            // RecordNavigator1
             // 
-            this.RecordNavigator.AddNewItem = null;
-            this.RecordNavigator.BackColor = System.Drawing.Color.Transparent;
-            this.RecordNavigator.CountItem = this.toolStripLabel1;
-            this.RecordNavigator.DeleteItem = null;
-            this.RecordNavigator.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.RecordNavigator.ImageScalingSize = new System.Drawing.Size(24, 20);
-            this.RecordNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.RecordNavigator1.AddNewItem = null;
+            this.RecordNavigator1.BackColor = System.Drawing.Color.Transparent;
+            this.RecordNavigator1.CountItem = this.toolStripLabel1;
+            this.RecordNavigator1.DeleteItem = null;
+            this.RecordNavigator1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.RecordNavigator1.ImageScalingSize = new System.Drawing.Size(24, 20);
+            this.RecordNavigator1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.PreviousButton,
             this.toolStripSeparator1,
             this.toolStripTextBox1,
@@ -245,16 +245,16 @@
             this.toolStripSeparator6,
             this.DeleteButton,
             this.toolStripSeparator7});
-            this.RecordNavigator.Location = new System.Drawing.Point(3, 25);
-            this.RecordNavigator.MoveFirstItem = null;
-            this.RecordNavigator.MoveLastItem = null;
-            this.RecordNavigator.MoveNextItem = this.NextButton;
-            this.RecordNavigator.MovePreviousItem = this.PreviousButton;
-            this.RecordNavigator.Name = "RecordNavigator";
-            this.RecordNavigator.PositionItem = this.toolStripTextBox1;
-            this.RecordNavigator.Size = new System.Drawing.Size(493, 31);
-            this.RecordNavigator.TabIndex = 14;
-            this.RecordNavigator.Text = "bindingNavigator1";
+            this.RecordNavigator1.Location = new System.Drawing.Point(3, 25);
+            this.RecordNavigator1.MoveFirstItem = null;
+            this.RecordNavigator1.MoveLastItem = null;
+            this.RecordNavigator1.MoveNextItem = this.NextButton;
+            this.RecordNavigator1.MovePreviousItem = this.PreviousButton;
+            this.RecordNavigator1.Name = "RecordNavigator1";
+            this.RecordNavigator1.PositionItem = this.toolStripTextBox1;
+            this.RecordNavigator1.Size = new System.Drawing.Size(493, 31);
+            this.RecordNavigator1.TabIndex = 14;
+            this.RecordNavigator1.Text = "bindingNavigator1";
             // 
             // toolStripLabel1
             // 
@@ -384,7 +384,7 @@
             // 
             this.AccountTabControl.ActiveTabForeColor = System.Drawing.Color.White;
             this.AccountTabControl.AdjustTopGap = 10;
-            this.AccountTabControl.BeforeTouchSize = new System.Drawing.Size(1275, 597);
+            this.AccountTabControl.BeforeTouchSize = new System.Drawing.Size(1275, 578);
             this.AccountTabControl.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.AccountTabControl.CloseButtonForeColor = System.Drawing.Color.Empty;
             this.AccountTabControl.CloseButtonHoverForeColor = System.Drawing.Color.Black;
@@ -399,7 +399,7 @@
             this.AccountTabControl.Padding = new System.Drawing.Point(6, 8);
             this.AccountTabControl.SeparatorColor = System.Drawing.SystemColors.ControlDark;
             this.AccountTabControl.ShowSeparator = false;
-            this.AccountTabControl.Size = new System.Drawing.Size(1275, 597);
+            this.AccountTabControl.Size = new System.Drawing.Size(1275, 578);
             this.AccountTabControl.TabGap = 5;
             this.AccountTabControl.TabIndex = 24;
             this.AccountTabControl.TabPanelBackColor = System.Drawing.Color.Black;
@@ -414,7 +414,7 @@
             this.UpdateTab.Location = new System.Drawing.Point(0, 48);
             this.UpdateTab.Name = "UpdateTab";
             this.UpdateTab.ShowCloseButton = true;
-            this.UpdateTab.Size = new System.Drawing.Size(1275, 549);
+            this.UpdateTab.Size = new System.Drawing.Size(1275, 530);
             this.UpdateTab.TabIndex = 3;
             this.UpdateTab.Text = "Update";
             this.UpdateTab.ThemesEnabled = false;
@@ -489,7 +489,7 @@
             this.RecordTabelPanel.Controls.Add(this.box26, 2, 9);
             this.RecordTabelPanel.Controls.Add(this.box28, 4, 9);
             this.RecordTabelPanel.ForeColor = System.Drawing.Color.LightGray;
-            this.RecordTabelPanel.Location = new System.Drawing.Point(32, 51);
+            this.RecordTabelPanel.Location = new System.Drawing.Point(28, 34);
             this.RecordTabelPanel.Name = "RecordTabelPanel";
             this.RecordTabelPanel.RowCount = 10;
             this.RecordTabelPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 21F));
@@ -1656,7 +1656,7 @@
             this.AddNewTab.Location = new System.Drawing.Point(0, 48);
             this.AddNewTab.Name = "AddNewTab";
             this.AddNewTab.ShowCloseButton = true;
-            this.AddNewTab.Size = new System.Drawing.Size(1275, 549);
+            this.AddNewTab.Size = new System.Drawing.Size(1275, 530);
             this.AddNewTab.TabIndex = 2;
             this.AddNewTab.Text = "Add ";
             this.AddNewTab.ThemesEnabled = false;
@@ -1731,7 +1731,7 @@
             this.tableLayoutPanel1.Controls.Add(this.metroSetTextBox29, 2, 9);
             this.tableLayoutPanel1.Controls.Add(this.metroSetTextBox30, 4, 9);
             this.tableLayoutPanel1.ForeColor = System.Drawing.Color.LightGray;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(34, 53);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(34, 33);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 10;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 21F));
@@ -2891,25 +2891,25 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox1.Controls.Add(this.bindingNavigator1);
+            this.groupBox1.Controls.Add(this.RecordNavigator2);
             this.groupBox1.Controls.Add(this.label32);
             this.groupBox1.ForeColor = System.Drawing.SystemColors.Info;
-            this.groupBox1.Location = new System.Drawing.Point(764, 478);
+            this.groupBox1.Location = new System.Drawing.Point(764, 442);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(499, 59);
             this.groupBox1.TabIndex = 59;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Commands";
             // 
-            // bindingNavigator1
+            // RecordNavigator2
             // 
-            this.bindingNavigator1.AddNewItem = null;
-            this.bindingNavigator1.BackColor = System.Drawing.Color.Transparent;
-            this.bindingNavigator1.CountItem = this.toolStripLabel2;
-            this.bindingNavigator1.DeleteItem = null;
-            this.bindingNavigator1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.bindingNavigator1.ImageScalingSize = new System.Drawing.Size(24, 20);
-            this.bindingNavigator1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.RecordNavigator2.AddNewItem = null;
+            this.RecordNavigator2.BackColor = System.Drawing.Color.Transparent;
+            this.RecordNavigator2.CountItem = this.toolStripLabel2;
+            this.RecordNavigator2.DeleteItem = null;
+            this.RecordNavigator2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.RecordNavigator2.ImageScalingSize = new System.Drawing.Size(24, 20);
+            this.RecordNavigator2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripButton1,
             this.toolStripSeparator8,
             this.toolStripTextBox2,
@@ -2925,16 +2925,15 @@
             this.toolStripSeparator13,
             this.toolStripButton6,
             this.toolStripSeparator14});
-            this.bindingNavigator1.Location = new System.Drawing.Point(3, 25);
-            this.bindingNavigator1.MoveFirstItem = null;
-            this.bindingNavigator1.MoveLastItem = null;
-            this.bindingNavigator1.MoveNextItem = this.toolStripButton2;
-            this.bindingNavigator1.MovePreviousItem = this.toolStripButton1;
-            this.bindingNavigator1.Name = "bindingNavigator1";
-            this.bindingNavigator1.PositionItem = this.toolStripTextBox2;
-            this.bindingNavigator1.Size = new System.Drawing.Size(493, 31);
-            this.bindingNavigator1.TabIndex = 14;
-            this.bindingNavigator1.Text = "bindingNavigator1";
+            this.RecordNavigator2.Location = new System.Drawing.Point(3, 25);
+            this.RecordNavigator2.MoveFirstItem = null;
+            this.RecordNavigator2.MoveLastItem = null;
+            this.RecordNavigator2.MoveNextItem = this.toolStripButton2;
+            this.RecordNavigator2.MovePreviousItem = this.toolStripButton1;
+            this.RecordNavigator2.Name = "RecordNavigator2";
+            this.RecordNavigator2.PositionItem = this.toolStripTextBox2;
+            this.RecordNavigator2.Size = new System.Drawing.Size(493, 31);
+            this.RecordNavigator2.TabIndex = 14;
             // 
             // toolStripLabel2
             // 
@@ -3065,14 +3064,14 @@
             this.BackColor = System.Drawing.Color.Black;
             this.BorderColor = System.Drawing.SystemColors.MenuHighlight;
             this.CaptionBarColor = System.Drawing.Color.Black;
-            this.CaptionBarHeight = 50;
+            this.CaptionBarHeight = 40;
             captionImage1.BackColor = System.Drawing.Color.Black;
             captionImage1.Image = ((System.Drawing.Image)(resources.GetObject("captionImage1.Image")));
             captionImage1.Location = new System.Drawing.Point(15, 15);
             captionImage1.Name = "CaptionImage1";
-            captionImage1.Size = new System.Drawing.Size(35, 25);
+            captionImage1.Size = new System.Drawing.Size(25, 20);
             this.CaptionImages.Add(captionImage1);
-            this.ClientSize = new System.Drawing.Size(1275, 597);
+            this.ClientSize = new System.Drawing.Size(1275, 578);
             this.Controls.Add(this.AccountTabControl);
             this.MaximumSize = new System.Drawing.Size(1287, 653);
             this.MetroColor = System.Drawing.Color.Black;
@@ -3080,30 +3079,30 @@
             this.ShowIcon = false;
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.RecordNavigator)).EndInit();
-            this.RecordNavigator.ResumeLayout(false);
-            this.RecordNavigator.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.RecordNavigator1)).EndInit();
+            this.RecordNavigator1.ResumeLayout(false);
+            this.RecordNavigator1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AccountTabControl)).EndInit();
             this.AccountTabControl.ResumeLayout(false);
             this.UpdateTab.ResumeLayout(false);
             this.RecordTabelPanel.ResumeLayout(false);
             this.RecordTabelPanel.PerformLayout();
             this.AddNewTab.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.BindingSource)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
-            this.bindingNavigator1.ResumeLayout(false);
-            this.bindingNavigator1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.RecordNavigator2)).EndInit();
+            this.RecordNavigator2.ResumeLayout(false);
+            this.RecordNavigator2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.BindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
         private System.Windows.Forms.BindingSource BindingSource;
-        private System.Windows.Forms.BindingNavigator RecordNavigator;
+        private System.Windows.Forms.BindingNavigator RecordNavigator1;
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
         private System.Windows.Forms.ToolStripButton PreviousButton;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
@@ -3186,7 +3185,7 @@
         private MetroSet_UI.Controls.MetroSetTextBox box26;
         private MetroSet_UI.Controls.MetroSetTextBox box28;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.BindingNavigator bindingNavigator1;
+        private System.Windows.Forms.BindingNavigator RecordNavigator2;
         private System.Windows.Forms.ToolStripLabel toolStripLabel2;
         private System.Windows.Forms.ToolStripButton toolStripButton1;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator8;
