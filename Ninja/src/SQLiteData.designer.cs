@@ -305,12 +305,13 @@ namespace BudgetExecution
             this.metroPanel1.HorizontalScrollbarBarColor = true;
             this.metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
             this.metroPanel1.HorizontalScrollbarSize = 10;
-            this.metroPanel1.Location = new System.Drawing.Point(509, 79);
+            this.metroPanel1.Location = new System.Drawing.Point(499, 79);
             this.metroPanel1.MaximumSize = new System.Drawing.Size(1140, 683);
             this.metroPanel1.Name = "metroPanel1";
             this.metroPanel1.Size = new System.Drawing.Size(1140, 683);
             this.metroPanel1.TabIndex = 87;
             this.metroPanel1.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.metroPanel1.UseCustomBackColor = true;
             this.metroPanel1.VerticalScrollbarBarColor = true;
             this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel1.VerticalScrollbarSize = 10;
@@ -325,7 +326,7 @@ namespace BudgetExecution
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 118F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 120F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 125F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 127F));
             this.tableLayoutPanel1.Controls.Add(this.label31, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.label39, 5, 0);
             this.tableLayoutPanel1.Controls.Add(this.label32, 1, 0);
@@ -345,7 +346,7 @@ namespace BudgetExecution
             // 
             this.label31.AutoSize = true;
             this.label31.Dock = System.Windows.Forms.DockStyle.Right;
-            this.label31.Location = new System.Drawing.Point(87, 0);
+            this.label31.Location = new System.Drawing.Point(86, 0);
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(52, 33);
             this.label31.TabIndex = 153;
@@ -355,7 +356,7 @@ namespace BudgetExecution
             // 
             this.label39.AutoSize = true;
             this.label39.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label39.Location = new System.Drawing.Point(651, 0);
+            this.label39.Location = new System.Drawing.Point(649, 0);
             this.label39.Name = "label39";
             this.label39.Size = new System.Drawing.Size(60, 33);
             this.label39.TabIndex = 158;
@@ -365,7 +366,7 @@ namespace BudgetExecution
             // 
             this.label32.AutoSize = true;
             this.label32.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label32.Location = new System.Drawing.Point(145, 0);
+            this.label32.Location = new System.Drawing.Point(144, 0);
             this.label32.Name = "label32";
             this.label32.Size = new System.Drawing.Size(60, 33);
             this.label32.TabIndex = 154;
@@ -375,7 +376,7 @@ namespace BudgetExecution
             // 
             this.label38.AutoSize = true;
             this.label38.Dock = System.Windows.Forms.DockStyle.Right;
-            this.label38.Location = new System.Drawing.Point(585, 0);
+            this.label38.Location = new System.Drawing.Point(583, 0);
             this.label38.Name = "label38";
             this.label38.Size = new System.Drawing.Size(60, 33);
             this.label38.TabIndex = 157;
@@ -385,7 +386,7 @@ namespace BudgetExecution
             // 
             this.label34.AutoSize = true;
             this.label34.Dock = System.Windows.Forms.DockStyle.Right;
-            this.label34.Location = new System.Drawing.Point(327, 0);
+            this.label34.Location = new System.Drawing.Point(325, 0);
             this.label34.Name = "label34";
             this.label34.Size = new System.Drawing.Size(60, 33);
             this.label34.TabIndex = 155;
@@ -395,7 +396,7 @@ namespace BudgetExecution
             // 
             this.label37.AutoSize = true;
             this.label37.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label37.Location = new System.Drawing.Point(393, 0);
+            this.label37.Location = new System.Drawing.Point(391, 0);
             this.label37.Name = "label37";
             this.label37.Size = new System.Drawing.Size(60, 33);
             this.label37.TabIndex = 156;
@@ -405,7 +406,7 @@ namespace BudgetExecution
             // 
             this.label40.AutoSize = true;
             this.label40.Dock = System.Windows.Forms.DockStyle.Right;
-            this.label40.Location = new System.Drawing.Point(806, 0);
+            this.label40.Location = new System.Drawing.Point(804, 0);
             this.label40.Name = "label40";
             this.label40.Size = new System.Drawing.Size(77, 33);
             this.label40.TabIndex = 159;
@@ -415,7 +416,7 @@ namespace BudgetExecution
             // 
             this.label41.AutoSize = true;
             this.label41.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label41.Location = new System.Drawing.Point(889, 0);
+            this.label41.Location = new System.Drawing.Point(887, 0);
             this.label41.Name = "label41";
             this.label41.Size = new System.Drawing.Size(60, 33);
             this.label41.TabIndex = 160;
@@ -473,7 +474,7 @@ namespace BudgetExecution
             this.Grid.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
             this.Grid.RowTemplate.Height = 30;
             this.Grid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.Grid.Size = new System.Drawing.Size(1059, 504);
+            this.Grid.Size = new System.Drawing.Size(1059, 536);
             this.Grid.TabIndex = 151;
             // 
             // Navigator
@@ -917,6 +918,7 @@ namespace BudgetExecution
             this.metroPanel5.Size = new System.Drawing.Size(462, 683);
             this.metroPanel5.TabIndex = 156;
             this.metroPanel5.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.metroPanel5.UseCustomBackColor = true;
             this.metroPanel5.VerticalScrollbarBarColor = true;
             this.metroPanel5.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel5.VerticalScrollbarSize = 10;
@@ -924,7 +926,7 @@ namespace BudgetExecution
             // DataTabControl
             // 
             this.DataTabControl.ActiveTabForeColor = System.Drawing.Color.Empty;
-            this.DataTabControl.BeforeTouchSize = new System.Drawing.Size(441, 583);
+            this.DataTabControl.BeforeTouchSize = new System.Drawing.Size(454, 583);
             this.DataTabControl.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.DataTabControl.CloseButtonForeColor = System.Drawing.Color.Empty;
             this.DataTabControl.CloseButtonHoverForeColor = System.Drawing.Color.Empty;
@@ -940,7 +942,7 @@ namespace BudgetExecution
             this.DataTabControl.Office2010ColorTheme = Syncfusion.Windows.Forms.Office2010Theme.Black;
             this.DataTabControl.SeparatorColor = System.Drawing.Color.Black;
             this.DataTabControl.ShowSeparator = true;
-            this.DataTabControl.Size = new System.Drawing.Size(441, 583);
+            this.DataTabControl.Size = new System.Drawing.Size(454, 583);
             this.DataTabControl.TabIndex = 2;
             this.DataTabControl.TabPanelBackColor = System.Drawing.Color.Transparent;
             this.DataTabControl.TabStyle = typeof(Syncfusion.Windows.Forms.Tools.TabRendererMetro);
@@ -953,7 +955,7 @@ namespace BudgetExecution
             this.DataFilterTab.Location = new System.Drawing.Point(0, 28);
             this.DataFilterTab.Name = "DataFilterTab";
             this.DataFilterTab.ShowCloseButton = true;
-            this.DataFilterTab.Size = new System.Drawing.Size(441, 555);
+            this.DataFilterTab.Size = new System.Drawing.Size(454, 555);
             this.DataFilterTab.TabIndex = 1;
             this.DataFilterTab.Text = "Data Filters";
             this.DataFilterTab.ThemesEnabled = false;
@@ -966,7 +968,7 @@ namespace BudgetExecution
             this.DataFunctionTab.Location = new System.Drawing.Point(0, 28);
             this.DataFunctionTab.Name = "DataFunctionTab";
             this.DataFunctionTab.ShowCloseButton = true;
-            this.DataFunctionTab.Size = new System.Drawing.Size(441, 555);
+            this.DataFunctionTab.Size = new System.Drawing.Size(454, 555);
             this.DataFunctionTab.TabIndex = 2;
             this.DataFunctionTab.Text = "Data Function";
             this.DataFunctionTab.ThemesEnabled = false;
@@ -979,6 +981,7 @@ namespace BudgetExecution
             this.BorderColor = System.Drawing.SystemColors.MenuHighlight;
             this.CaptionBarColor = System.Drawing.Color.Black;
             this.CaptionBarHeight = 60;
+            this.CaptionFont = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CaptionForeColor = System.Drawing.SystemColors.MenuHighlight;
             captionImage1.BackColor = System.Drawing.Color.Black;
             captionImage1.Image = ((System.Drawing.Image)(resources.GetObject("captionImage1.Image")));

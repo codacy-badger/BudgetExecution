@@ -94,6 +94,8 @@ namespace BudgetExecution
 
         public DataTable Table { get; set; }
 
+        public DataRow DbRow { get; set; }
+
         public PrcMetric Metric { get; set; }
 
         public ChartSeriesType ChartType { get; set; }
@@ -821,6 +823,19 @@ namespace BudgetExecution
                         ChartMainTitle = new string[] { "Funding By Program Project" };
                         ProjectChart = new BudgetChart(ProjectChart, ChartMainTitle, DbData, PrcField.ProgramProjectCode, Stat.Total, ChartSeriesType.Column).Activate();
                         break;
+                    case 8:
+                        var current = BindingSource.Position;
+                        var dvrow = (DataRowView)BindingSource.Current;
+                        DbRow = Table.Rows[current];
+                        var id = int.Parse(DbRow["ID"].ToString());
+                        var table = DbData.GetDataTable();
+                        var total = DbData.GetTotal(table);
+                        var p = new Dictionary<string, object> { ["ID"] = id };
+                        var data = new DataBuilder(Source, Provider.SQLite, p);
+                        var amt = decimal.Parse(DbRow["Amount"].ToString());
+                        ChartMainTitle = new string[] { $"{Source.ToString()} {DbRow["ProgramProjectName"].ToString()} Funding = {amt.ToString("c")}" };
+                        AccountChart = new BudgetChart(AccountChart, ChartMainTitle, data, PrcField.ProgramProjectCode, Stat.Total, ChartSeriesType.Pie).Activate();
+                        break;
                 }
             }
             catch (Exception ex)
@@ -1003,6 +1018,22 @@ namespace BudgetExecution
         {
             var rp = new Reprogramming();
             rp.Show();
+        }
+
+        private void UpdateAccountChart(object sender, EventArgs e)
+        {
+            var current = BindingSource.Position;
+            var row = Grid.CurrentRow;
+            var dvrow = (DataRowView)BindingSource.Current;
+            DbRow = Table.Rows[current];
+            var id = int.Parse(row.Cells["ID"].ToString());
+            var table = DbData.GetDataTable();
+            var total = DbData.GetTotal(table);
+            var p = new Dictionary<string, object> { ["ID"] = id };
+            var data = new DataBuilder(Source, Provider.SQLite, p);
+            var amt = decimal.Parse(DbRow["Amount"].ToString());
+            ChartMainTitle = new string[] { $"{Source.ToString()} {DbRow["ProgramProjectName"].ToString()} \n {DbRow["BocName"].ToString()}  Funding = {amt.ToString("c")}" };
+            AccountChart = new BudgetChart(AccountChart, ChartMainTitle, data, PrcField.ProgramProjectCode, Stat.Total, ChartSeriesType.Pie).Activate();
         }
     }
 }

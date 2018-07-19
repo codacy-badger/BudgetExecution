@@ -26,11 +26,11 @@ namespace BudgetExecution
             Source = Source.RegionalAccounts;
             Provider = Provider.SQLite;
             DbData = new DataBuilder(Source, Provider);
+            BindingSource = DbData.BindingSource;
             Table = DbData.DbTable;
-            Grid.DataSource = DbData.BindingSource;
-            Navigator.BindingSource = DbData.BindingSource;
+            Grid.DataSource = BindingSource;
+            Navigator.BindingSource = BindingSource;
             ProgramElements = DbData.GetProgramElements(Table);
-            BindingSource.DataSource = Table;
             Navigator.BindingSource = BindingSource;
             Grid.DataSource = BindingSource.DataSource;
             PopulateSourceFilters();
@@ -45,6 +45,7 @@ namespace BudgetExecution
             Source = source;
             Provider = provider;
             DbData = new DataBuilder(Source, Provider);
+            BindingSource = DbData.BindingSource;
             Table = DbData.DbTable;
             Grid.DataSource = DbData.BindingSource;
             Navigator.BindingSource = DbData.BindingSource;
@@ -60,7 +61,7 @@ namespace BudgetExecution
         private SQLiteDataAdapter Adapter { get; }
 
         private DataBuilder DbData { get; }
-
+        
         private PrcMetric Metric { get; }
 
         private Dictionary<string, object> Parameter { get; set; }
@@ -159,6 +160,7 @@ namespace BudgetExecution
         {
             try
             {
+                Text = Source.ToString();
                 if (Source == Source.PRC)
                 {
                     Filter1.Text = "BFY";
