@@ -43,7 +43,7 @@ namespace BudgetExecution
             SummaryTabControl.SelectedIndexChanged += SummaryTabPage_TabSelected;
             CurrentTabIndex = 1;
             TabNames = GetTabNames();
-            tabPageAdv1.TabVisible = false;
+            UpdateTab.TabVisible = false;
         }
 
         public SummaryForm(Source source)
@@ -79,7 +79,7 @@ namespace BudgetExecution
                 CurrentTabIndex = SummaryTabControl.SelectedIndex;
                 SummaryTabControl.SelectedIndexChanged += SummaryTabPage_TabSelected;
             }
-            tabPageAdv1.TabVisible = false;
+            UpdateTab.TabVisible = false;
 
         }
 
@@ -177,6 +177,7 @@ namespace BudgetExecution
                 ExcelButton.Click += ExcelButton_Click;
                 CalendatButton.Click += CalendatButton_Click;
                 CalculatorButton.Click += CalculatorButton_Click;
+                Grid.SelectionChanged += UpdateAccountChart;
             }
             catch (Exception ex)
             {
@@ -1026,7 +1027,7 @@ namespace BudgetExecution
             var row = Grid.CurrentRow;
             var dvrow = (DataRowView)BindingSource.Current;
             DbRow = Table.Rows[current];
-            var id = int.Parse(row.Cells["ID"].ToString());
+            var id = int.Parse(dvrow["ID"].ToString());
             var table = DbData.GetDataTable();
             var total = DbData.GetTotal(table);
             var p = new Dictionary<string, object> { ["ID"] = id };
@@ -1034,6 +1035,13 @@ namespace BudgetExecution
             var amt = decimal.Parse(DbRow["Amount"].ToString());
             ChartMainTitle = new string[] { $"{Source.ToString()} {DbRow["ProgramProjectName"].ToString()} \n {DbRow["BocName"].ToString()}  Funding = {amt.ToString("c")}" };
             AccountChart = new BudgetChart(AccountChart, ChartMainTitle, data, PrcField.ProgramProjectCode, Stat.Total, ChartSeriesType.Pie).Activate();
+        }
+
+        private void AccountToolsButton_OnClick(object sender, EventArgs e)
+        {
+            AccountTabControl.SelectedIndex = 0;
+            if (UpdateTab.TabVisible != true)
+                UpdateTab.TabVisible = true;
         }
     }
 }

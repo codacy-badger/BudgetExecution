@@ -367,6 +367,7 @@ namespace BudgetExecution
                 DataSeries.Style.TextOrientation = ChartTextOrientation.Up;
                 DataSeries.Style.DisplayShadow = true;
                 DataSeries.Style.TextColor = Color.White;
+                ConfigureToolTip(DataSeries);
                 if (Source == Source.FTE)
                 {
                     DataSeries.Style.TextFormat = "{0}";
@@ -392,6 +393,7 @@ namespace BudgetExecution
                     DataSeries.ConfigItems.ColumnItem.ShadingMode = ChartColumnShadingMode.PhongCylinder;
                     DataSeries.ConfigItems.ColumnItem.LightColor = Color.SteelBlue;
                     DataSeries.ConfigItems.ColumnItem.PhongAlpha = 2;
+                    ConfigureToolTip(DataSeries);
                 }
                 
             }
@@ -406,20 +408,13 @@ namespace BudgetExecution
             try
             {
                 DataSeries = series;
-                DataSeries.SmartLabels = true;
-                DataSeries.SortPoints = true;
-                DataSeries.Style.DisplayText = true;
-                DataSeries.Style.TextOffset = 20.0F;
-                DataSeries.Style.TextOrientation = ChartTextOrientation.Up;
-                DataSeries.Style.DisplayShadow = true;
-                DataSeries.Style.TextColor = Color.White;
                 if (Source == Source.FTE)
                 {
                     DataSeries.Style.TextFormat = "{0}";
                 }
                 else if (value == Stat.Total || value == Stat.Average)
                 {
-                    DataSeries.Style.TextFormat = "${0:N2}";
+                    DataSeries.Style.TextFormat = "{0:N2}";
                 }
 
                 if (value == Stat.Ratio)
@@ -432,19 +427,40 @@ namespace BudgetExecution
                     DataSeries.Style.TextFormat = "{0}";
                 }
 
-                DataSeries.Style.Font.Size = 10.0F;
-                DataSeries.Style.Font.FontStyle = FontStyle.Bold;
-                DataSeries.Style.Font.Facename = "SegoeUI";
-                DataSeries.ShowTicks = true;
-                if (SeriesType == ChartSeriesType.Column)
+                if (SeriesType == ChartSeriesType.Pie)
                 {
+
+                    DataSeries.Style.DisplayText = true;
                     DataSeries.SmartLabels = true;
                     DataSeries.SortPoints = true;
                     DataSeries.Style.DisplayText = true;
-                    DataSeries.Style.TextOffset = 15.0F;
+                    DataSeries.Style.DisplayShadow = true;
+                    DataSeries.Style.TextOffset = 20.0F;
                     DataSeries.Style.TextOrientation = ChartTextOrientation.Up;
                     DataSeries.Style.DisplayShadow = true;
                     DataSeries.Style.TextColor = Color.White;
+                    DataSeries.Style.Font.Size = 10.0F;
+                    DataSeries.Style.Font.FontStyle = FontStyle.Bold;
+                    DataSeries.Style.Font.Facename = "SegoeUI";
+                    DataSeries.ShowTicks = true;
+                    DataSeries.Style.TextFormat = "{0:N2}";
+                }
+                if (SeriesType == ChartSeriesType.Column)
+                {
+
+                    DataSeries.SmartLabels = true;
+                    DataSeries.SortPoints = true;
+                    DataSeries.Style.DisplayText = true;
+                    DataSeries.Style.TextOffset = 20.0F;
+                    DataSeries.Style.TextOrientation = ChartTextOrientation.Up;
+                    DataSeries.Style.DisplayShadow = true;
+                    DataSeries.Style.TextColor = Color.White;
+                    DataSeries.Style.Font.Size = 10.0F;
+                    DataSeries.Style.Font.FontStyle = FontStyle.Bold;
+                    DataSeries.Style.Font.Facename = "SegoeUI";
+                    DataSeries.ShowTicks = true;
+                    DataSeries.Style.TextOrientation = ChartTextOrientation.Up;
+                    DataSeries.Style.DisplayShadow = true;
                     DataSeries.ConfigItems.ColumnItem.ShadingMode = ChartColumnShadingMode.PhongCylinder;
                     DataSeries.ConfigItems.ColumnItem.LightColor = Color.SteelBlue;
                     DataSeries.ConfigItems.ColumnItem.PhongAlpha = 2;
@@ -461,7 +477,7 @@ namespace BudgetExecution
             DataSeries = series;
             for (int i = 0; i < DataSeries.Points.Count; i++)
             {
-                DataSeries.Styles[i].ToolTip = string.Format("{0}", DataSeries.Points[0].ToString());
+                DataSeries.Styles[i].ToolTip = string.Format("{0}", DataSeries.Points[0].Category);
             }
         }
 
