@@ -70,7 +70,6 @@ namespace BudgetExecution
             this.richTextBox2 = new System.Windows.Forms.RichTextBox();
             this.metroSetLabel25 = new MetroSet_UI.Controls.MetroSetLabel();
             this.metroPanel5 = new MetroFramework.Controls.MetroPanel();
-            this.currencyEdit2 = new Syncfusion.Windows.Forms.Tools.CurrencyEdit();
             this.label27 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
@@ -129,7 +128,6 @@ namespace BudgetExecution
             this.metroSetComboBox1 = new MetroSet_UI.Controls.MetroSetComboBox();
             this.metroPanel8 = new MetroFramework.Controls.MetroPanel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.currencyEdit1 = new Syncfusion.Windows.Forms.Tools.CurrencyEdit();
             this.label35 = new System.Windows.Forms.Label();
             this.label34 = new System.Windows.Forms.Label();
             this.label33 = new System.Windows.Forms.Label();
@@ -174,7 +172,6 @@ namespace BudgetExecution
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.metroSetLabel1 = new MetroSet_UI.Controls.MetroSetLabel();
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
-            this.currencyEdit3 = new Syncfusion.Windows.Forms.Tools.CurrencyEdit();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -200,19 +197,21 @@ namespace BudgetExecution
             this.metroSetTextBox11 = new MetroSet_UI.Controls.MetroSetTextBox();
             this.tabPageAdv2 = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
             this.tabPageAdv3 = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
+            this.metroSetTextBox12 = new MetroSet_UI.Controls.MetroSetTextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.metroSetTextBox13 = new MetroSet_UI.Controls.MetroSetTextBox();
+            this.metroSetTextBox25 = new MetroSet_UI.Controls.MetroSetTextBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.metroPanel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
             this.metroPanel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.currencyEdit2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.currencyEdit2.TextBox)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Navigator3)).BeginInit();
             this.Navigator3.SuspendLayout();
             this.metroPanel12.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.currencyEdit1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.currencyEdit1.TextBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TransferBinding)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabControlAdv1)).BeginInit();
             this.tabControlAdv1.SuspendLayout();
@@ -221,8 +220,6 @@ namespace BudgetExecution
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator2)).BeginInit();
             this.bindingNavigator2.SuspendLayout();
             this.metroPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.currencyEdit3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.currencyEdit3.TextBox)).BeginInit();
             this.tabPageAdv2.SuspendLayout();
             this.tabPageAdv3.SuspendLayout();
             this.SuspendLayout();
@@ -578,7 +575,8 @@ namespace BudgetExecution
             // metroPanel5
             // 
             this.metroPanel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.metroPanel5.Controls.Add(this.currencyEdit2);
+            this.metroPanel5.Controls.Add(this.button2);
+            this.metroPanel5.Controls.Add(this.metroSetTextBox25);
             this.metroPanel5.Controls.Add(this.label27);
             this.metroPanel5.Controls.Add(this.label26);
             this.metroPanel5.Controls.Add(this.label25);
@@ -614,51 +612,6 @@ namespace BudgetExecution
             this.metroPanel5.VerticalScrollbarBarColor = true;
             this.metroPanel5.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel5.VerticalScrollbarSize = 10;
-            // 
-            // currencyEdit2
-            // 
-            this.currencyEdit2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
-            this.currencyEdit2.BeforeTouchSize = new System.Drawing.Size(176, 31);
-            this.currencyEdit2.ButtonStyle = Syncfusion.Windows.Forms.ButtonAppearance.Office2016Black;
-            // 
-            // 
-            // 
-            this.currencyEdit2.CalculatorButton.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.currencyEdit2.CalculatorButton.BeforeTouchSize = new System.Drawing.Size(75, 23);
-            this.currencyEdit2.CalculatorButton.BorderStyleAdv = Syncfusion.Windows.Forms.ButtonAdvBorderStyle.Flat;
-            this.currencyEdit2.CalculatorButton.ButtonType = Syncfusion.Windows.Forms.Tools.ButtonTypes.Calculator;
-            this.currencyEdit2.CalculatorButton.Image = ((System.Drawing.Image)(resources.GetObject("currencyEdit2.CalculatorButton.Image")));
-            this.currencyEdit2.CalculatorButton.IsBackStageButton = false;
-            this.currencyEdit2.CalculatorButton.Name = "";
-            this.currencyEdit2.CalculatorButton.PreferredWidth = 24;
-            this.currencyEdit2.CalculatorButton.TabIndex = 0;
-            this.currencyEdit2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.currencyEdit2.Location = new System.Drawing.Point(414, 457);
-            this.currencyEdit2.MetroColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(165)))), ((int)(((byte)(220)))));
-            this.currencyEdit2.Name = "currencyEdit2";
-            this.currencyEdit2.SelectionLength = 5;
-            this.currencyEdit2.ShowTextBox = false;
-            this.currencyEdit2.Size = new System.Drawing.Size(176, 31);
-            this.currencyEdit2.TabIndex = 39;
-            // 
-            // 
-            // 
-            this.currencyEdit2.TextBox.BackGroundColor = System.Drawing.SystemColors.Window;
-            this.currencyEdit2.TextBox.BeforeTouchSize = new System.Drawing.Size(100, 26);
-            this.currencyEdit2.TextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.currencyEdit2.TextBox.DecimalValue = new decimal(new int[] {
-            100,
-            0,
-            0,
-            131072});
-            this.currencyEdit2.TextBox.Location = new System.Drawing.Point(3, 4);
-            this.currencyEdit2.TextBox.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
-            this.currencyEdit2.TextBox.Name = "";
-            this.currencyEdit2.TextBox.NullString = "";
-            this.currencyEdit2.TextBox.Size = new System.Drawing.Size(146, 23);
-            this.currencyEdit2.TextBox.Style = Syncfusion.Windows.Forms.Tools.TextBoxExt.theme.Default;
-            this.currencyEdit2.TextBox.TabIndex = 0;
-            this.currencyEdit2.TextBox.Text = "$1.00";
             // 
             // label27
             // 
@@ -1478,7 +1431,8 @@ namespace BudgetExecution
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox1.Controls.Add(this.currencyEdit1);
+            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.metroSetTextBox12);
             this.groupBox1.Controls.Add(this.label35);
             this.groupBox1.Controls.Add(this.label34);
             this.groupBox1.Controls.Add(this.label33);
@@ -1496,51 +1450,6 @@ namespace BudgetExecution
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "From";
-            // 
-            // currencyEdit1
-            // 
-            this.currencyEdit1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
-            this.currencyEdit1.BeforeTouchSize = new System.Drawing.Size(227, 31);
-            this.currencyEdit1.ButtonStyle = Syncfusion.Windows.Forms.ButtonAppearance.Office2016Black;
-            // 
-            // 
-            // 
-            this.currencyEdit1.CalculatorButton.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.currencyEdit1.CalculatorButton.BeforeTouchSize = new System.Drawing.Size(75, 23);
-            this.currencyEdit1.CalculatorButton.BorderStyleAdv = Syncfusion.Windows.Forms.ButtonAdvBorderStyle.Flat;
-            this.currencyEdit1.CalculatorButton.ButtonType = Syncfusion.Windows.Forms.Tools.ButtonTypes.Calculator;
-            this.currencyEdit1.CalculatorButton.Image = ((System.Drawing.Image)(resources.GetObject("currencyEdit1.CalculatorButton.Image")));
-            this.currencyEdit1.CalculatorButton.IsBackStageButton = false;
-            this.currencyEdit1.CalculatorButton.Name = "";
-            this.currencyEdit1.CalculatorButton.PreferredWidth = 24;
-            this.currencyEdit1.CalculatorButton.TabIndex = 0;
-            this.currencyEdit1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.currencyEdit1.Location = new System.Drawing.Point(350, 502);
-            this.currencyEdit1.MetroColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(165)))), ((int)(((byte)(220)))));
-            this.currencyEdit1.Name = "currencyEdit1";
-            this.currencyEdit1.SelectionLength = 5;
-            this.currencyEdit1.ShowTextBox = false;
-            this.currencyEdit1.Size = new System.Drawing.Size(227, 31);
-            this.currencyEdit1.TabIndex = 32;
-            // 
-            // 
-            // 
-            this.currencyEdit1.TextBox.BackGroundColor = System.Drawing.SystemColors.Window;
-            this.currencyEdit1.TextBox.BeforeTouchSize = new System.Drawing.Size(100, 26);
-            this.currencyEdit1.TextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.currencyEdit1.TextBox.DecimalValue = new decimal(new int[] {
-            100,
-            0,
-            0,
-            131072});
-            this.currencyEdit1.TextBox.Location = new System.Drawing.Point(3, 4);
-            this.currencyEdit1.TextBox.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
-            this.currencyEdit1.TextBox.Name = "";
-            this.currencyEdit1.TextBox.NullString = "";
-            this.currencyEdit1.TextBox.Size = new System.Drawing.Size(197, 23);
-            this.currencyEdit1.TextBox.Style = Syncfusion.Windows.Forms.Tools.TextBoxExt.theme.Default;
-            this.currencyEdit1.TextBox.TabIndex = 0;
-            this.currencyEdit1.TextBox.Text = "$1.00";
             // 
             // label35
             // 
@@ -2048,7 +1957,8 @@ namespace BudgetExecution
             // metroPanel1
             // 
             this.metroPanel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.metroPanel1.Controls.Add(this.currencyEdit3);
+            this.metroPanel1.Controls.Add(this.button3);
+            this.metroPanel1.Controls.Add(this.metroSetTextBox13);
             this.metroPanel1.Controls.Add(this.label1);
             this.metroPanel1.Controls.Add(this.label2);
             this.metroPanel1.Controls.Add(this.label3);
@@ -2084,50 +1994,6 @@ namespace BudgetExecution
             this.metroPanel1.VerticalScrollbarBarColor = true;
             this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel1.VerticalScrollbarSize = 10;
-            // 
-            // currencyEdit3
-            // 
-            this.currencyEdit3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
-            this.currencyEdit3.BeforeTouchSize = new System.Drawing.Size(176, 31);
-            this.currencyEdit3.ButtonStyle = Syncfusion.Windows.Forms.ButtonAppearance.Office2016Black;
-            // 
-            // 
-            // 
-            this.currencyEdit3.CalculatorButton.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.currencyEdit3.CalculatorButton.BeforeTouchSize = new System.Drawing.Size(75, 23);
-            this.currencyEdit3.CalculatorButton.BorderStyleAdv = Syncfusion.Windows.Forms.ButtonAdvBorderStyle.Flat;
-            this.currencyEdit3.CalculatorButton.ButtonType = Syncfusion.Windows.Forms.Tools.ButtonTypes.Calculator;
-            this.currencyEdit3.CalculatorButton.Image = ((System.Drawing.Image)(resources.GetObject("currencyEdit3.CalculatorButton.Image")));
-            this.currencyEdit3.CalculatorButton.IsBackStageButton = false;
-            this.currencyEdit3.CalculatorButton.Name = "";
-            this.currencyEdit3.CalculatorButton.PreferredWidth = 24;
-            this.currencyEdit3.CalculatorButton.TabIndex = 0;
-            this.currencyEdit3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.currencyEdit3.Location = new System.Drawing.Point(414, 457);
-            this.currencyEdit3.MetroColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(165)))), ((int)(((byte)(220)))));
-            this.currencyEdit3.Name = "currencyEdit3";
-            this.currencyEdit3.SelectionLength = 5;
-            this.currencyEdit3.Size = new System.Drawing.Size(176, 31);
-            this.currencyEdit3.TabIndex = 39;
-            // 
-            // 
-            // 
-            this.currencyEdit3.TextBox.BackGroundColor = System.Drawing.SystemColors.Window;
-            this.currencyEdit3.TextBox.BeforeTouchSize = new System.Drawing.Size(100, 26);
-            this.currencyEdit3.TextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.currencyEdit3.TextBox.DecimalValue = new decimal(new int[] {
-            100,
-            0,
-            0,
-            131072});
-            this.currencyEdit3.TextBox.Location = new System.Drawing.Point(3, 4);
-            this.currencyEdit3.TextBox.Metrocolor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
-            this.currencyEdit3.TextBox.Name = "";
-            this.currencyEdit3.TextBox.NullString = "";
-            this.currencyEdit3.TextBox.Size = new System.Drawing.Size(146, 23);
-            this.currencyEdit3.TextBox.Style = Syncfusion.Windows.Forms.Tools.TextBoxExt.theme.Default;
-            this.currencyEdit3.TextBox.TabIndex = 0;
-            this.currencyEdit3.TextBox.Text = "$1.00";
             // 
             // label1
             // 
@@ -2596,6 +2462,141 @@ namespace BudgetExecution
             this.tabPageAdv3.Text = "tabPageAdv3";
             this.tabPageAdv3.ThemesEnabled = false;
             // 
+            // metroSetTextBox12
+            // 
+            this.metroSetTextBox12.AutoCompleteCustomSource = null;
+            this.metroSetTextBox12.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.metroSetTextBox12.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.metroSetTextBox12.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.metroSetTextBox12.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.metroSetTextBox12.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.metroSetTextBox12.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.metroSetTextBox12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.metroSetTextBox12.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.metroSetTextBox12.Image = null;
+            this.metroSetTextBox12.Lines = null;
+            this.metroSetTextBox12.Location = new System.Drawing.Point(349, 540);
+            this.metroSetTextBox12.MaxLength = 32767;
+            this.metroSetTextBox12.Multiline = false;
+            this.metroSetTextBox12.Name = "metroSetTextBox12";
+            this.metroSetTextBox12.ReadOnly = false;
+            this.metroSetTextBox12.Size = new System.Drawing.Size(198, 36);
+            this.metroSetTextBox12.Style = MetroSet_UI.Design.Style.Dark;
+            this.metroSetTextBox12.StyleManager = null;
+            this.metroSetTextBox12.TabIndex = 32;
+            this.metroSetTextBox12.Text = "metroSetTextBox12";
+            this.metroSetTextBox12.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.metroSetTextBox12.ThemeAuthor = "Narwin";
+            this.metroSetTextBox12.ThemeName = "MetroDark";
+            this.metroSetTextBox12.UseSystemPasswordChar = false;
+            this.metroSetTextBox12.WatermarkText = "";
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Black;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.AliceBlue;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.Location = new System.Drawing.Point(553, 537);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(41, 39);
+            this.button1.TabIndex = 33;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // metroSetTextBox13
+            // 
+            this.metroSetTextBox13.AutoCompleteCustomSource = null;
+            this.metroSetTextBox13.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.metroSetTextBox13.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.metroSetTextBox13.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.metroSetTextBox13.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.metroSetTextBox13.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.metroSetTextBox13.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.metroSetTextBox13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.metroSetTextBox13.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.metroSetTextBox13.Image = null;
+            this.metroSetTextBox13.Lines = null;
+            this.metroSetTextBox13.Location = new System.Drawing.Point(411, 453);
+            this.metroSetTextBox13.MaxLength = 32767;
+            this.metroSetTextBox13.Multiline = false;
+            this.metroSetTextBox13.Name = "metroSetTextBox13";
+            this.metroSetTextBox13.ReadOnly = false;
+            this.metroSetTextBox13.Size = new System.Drawing.Size(152, 36);
+            this.metroSetTextBox13.Style = MetroSet_UI.Design.Style.Dark;
+            this.metroSetTextBox13.StyleManager = null;
+            this.metroSetTextBox13.TabIndex = 39;
+            this.metroSetTextBox13.Text = "metroSetTextBox13";
+            this.metroSetTextBox13.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.metroSetTextBox13.ThemeAuthor = "Narwin";
+            this.metroSetTextBox13.ThemeName = "MetroDark";
+            this.metroSetTextBox13.UseSystemPasswordChar = false;
+            this.metroSetTextBox13.WatermarkText = "";
+            // 
+            // metroSetTextBox25
+            // 
+            this.metroSetTextBox25.AutoCompleteCustomSource = null;
+            this.metroSetTextBox25.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.metroSetTextBox25.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.metroSetTextBox25.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.metroSetTextBox25.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.metroSetTextBox25.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.metroSetTextBox25.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.metroSetTextBox25.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.metroSetTextBox25.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.metroSetTextBox25.Image = null;
+            this.metroSetTextBox25.Lines = null;
+            this.metroSetTextBox25.Location = new System.Drawing.Point(411, 453);
+            this.metroSetTextBox25.MaxLength = 32767;
+            this.metroSetTextBox25.Multiline = false;
+            this.metroSetTextBox25.Name = "metroSetTextBox25";
+            this.metroSetTextBox25.ReadOnly = false;
+            this.metroSetTextBox25.Size = new System.Drawing.Size(148, 36);
+            this.metroSetTextBox25.Style = MetroSet_UI.Design.Style.Dark;
+            this.metroSetTextBox25.StyleManager = null;
+            this.metroSetTextBox25.TabIndex = 39;
+            this.metroSetTextBox25.Text = "metroSetTextBox25";
+            this.metroSetTextBox25.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.metroSetTextBox25.ThemeAuthor = "Narwin";
+            this.metroSetTextBox25.ThemeName = "MetroDark";
+            this.metroSetTextBox25.UseSystemPasswordChar = false;
+            this.metroSetTextBox25.WatermarkText = "";
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.Black;
+            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.AliceBlue;
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.Location = new System.Drawing.Point(565, 453);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(41, 39);
+            this.button2.TabIndex = 40;
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.Black;
+            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.AliceBlue;
+            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
+            this.button3.Location = new System.Drawing.Point(569, 449);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(41, 39);
+            this.button3.TabIndex = 40;
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // Reprogramming
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -2609,7 +2610,7 @@ namespace BudgetExecution
             captionImage1.Image = ((System.Drawing.Image)(resources.GetObject("captionImage1.Image")));
             captionImage1.Location = new System.Drawing.Point(10, 10);
             captionImage1.Name = "CaptionImage1";
-            captionImage1.Size = new System.Drawing.Size(50, 25);
+            captionImage1.Size = new System.Drawing.Size(30, 25);
             this.CaptionImages.Add(captionImage1);
             this.ClientSize = new System.Drawing.Size(1588, 934);
             this.Controls.Add(this.tabControlAdv1);
@@ -2626,8 +2627,6 @@ namespace BudgetExecution
             this.bindingNavigator1.PerformLayout();
             this.metroPanel5.ResumeLayout(false);
             this.metroPanel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.currencyEdit2.TextBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.currencyEdit2)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Navigator3)).EndInit();
@@ -2636,8 +2635,6 @@ namespace BudgetExecution
             this.metroPanel12.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.currencyEdit1.TextBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.currencyEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TransferBinding)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabControlAdv1)).EndInit();
             this.tabControlAdv1.ResumeLayout(false);
@@ -2649,8 +2646,6 @@ namespace BudgetExecution
             this.bindingNavigator2.PerformLayout();
             this.metroPanel1.ResumeLayout(false);
             this.metroPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.currencyEdit3.TextBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.currencyEdit3)).EndInit();
             this.tabPageAdv2.ResumeLayout(false);
             this.tabPageAdv3.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -2736,8 +2731,6 @@ namespace BudgetExecution
         private MetroFramework.Controls.MetroPanel metroPanel10;
         private MetroFramework.Controls.MetroPanel metroPanel7;
         private MetroFramework.Controls.MetroPanel metroPanel9;
-        private Syncfusion.Windows.Forms.Tools.CurrencyEdit currencyEdit2;
-        private Syncfusion.Windows.Forms.Tools.CurrencyEdit currencyEdit1;
         private Syncfusion.Windows.Forms.Tools.TabControlAdv tabControlAdv1;
         private Syncfusion.Windows.Forms.Tools.TabPageAdv tabPageAdv1;
         private Syncfusion.Windows.Forms.Tools.TabPageAdv tabPageAdv2;
@@ -2796,7 +2789,6 @@ namespace BudgetExecution
         private System.Windows.Forms.RichTextBox richTextBox1;
         private MetroSet_UI.Controls.MetroSetLabel metroSetLabel1;
         private MetroFramework.Controls.MetroPanel metroPanel1;
-        private Syncfusion.Windows.Forms.Tools.CurrencyEdit currencyEdit3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -2820,5 +2812,11 @@ namespace BudgetExecution
         private MetroSet_UI.Controls.MetroSetTextBox metroSetTextBox9;
         private MetroSet_UI.Controls.MetroSetTextBox metroSetTextBox10;
         private MetroSet_UI.Controls.MetroSetTextBox metroSetTextBox11;
+        private System.Windows.Forms.Button button2;
+        private MetroSet_UI.Controls.MetroSetTextBox metroSetTextBox25;
+        private System.Windows.Forms.Button button1;
+        private MetroSet_UI.Controls.MetroSetTextBox metroSetTextBox12;
+        private System.Windows.Forms.Button button3;
+        private MetroSet_UI.Controls.MetroSetTextBox metroSetTextBox13;
     }
 }

@@ -829,13 +829,14 @@ namespace BudgetExecution
                         var dvrow = (DataRowView)BindingSource.Current;
                         DbRow = Table.Rows[current];
                         var id = int.Parse(DbRow["ID"].ToString());
-                        var table = DbData.GetDataTable();
-                        var total = DbData.GetTotal(table);
+                        var code = dvrow["Code"].ToString();
                         var p = new Dictionary<string, object> { ["ID"] = id };
                         var data = new DataBuilder(Source, Provider.SQLite, p);
+                        var total = DbData.GetTotal(DbData.DbTable);
                         var amt = decimal.Parse(DbRow["Amount"].ToString());
+                        var d = new Dictionary<string, double>() { ["Total"] = (double)total, ["Allocation"] = (double)amt };
                         ChartMainTitle = new string[] { $"{Source.ToString()} {DbRow["ProgramProjectName"].ToString()} Funding = {amt.ToString("c")}" };
-                        AccountChart = new BudgetChart(AccountChart, ChartMainTitle, data, PrcField.ProgramProjectCode, Stat.Total, ChartSeriesType.Pie).Activate();
+                        AccountChart = new BudgetChart(AccountChart, ChartMainTitle, d, PrcField.ProgramProjectCode, Stat.Total, ChartSeriesType.Column).Activate();
                         break;
                 }
             }
@@ -1024,24 +1025,45 @@ namespace BudgetExecution
         private void UpdateAccountChart(object sender, EventArgs e)
         {
             var current = BindingSource.Position;
-            var row = Grid.CurrentRow;
             var dvrow = (DataRowView)BindingSource.Current;
             DbRow = Table.Rows[current];
-            var id = int.Parse(dvrow["ID"].ToString());
-            var table = DbData.GetDataTable();
-            var total = DbData.GetTotal(table);
+            var id = int.Parse(DbRow["ID"].ToString());
+            var code = dvrow["Code"].ToString();
             var p = new Dictionary<string, object> { ["ID"] = id };
-            var data = new DataBuilder(Source, Provider.SQLite, p);
+            var data = new DataBuilder(Source.RegionalAccounts, Provider.SQLite, new Dictionary<string, object> { ["Code"] = code });
+            var total = data.Total;
             var amt = decimal.Parse(DbRow["Amount"].ToString());
-            ChartMainTitle = new string[] { $"{Source.ToString()} {DbRow["ProgramProjectName"].ToString()} \n {DbRow["BocName"].ToString()}  Funding = {amt.ToString("c")}" };
-            AccountChart = new BudgetChart(AccountChart, ChartMainTitle, data, PrcField.ProgramProjectCode, Stat.Total, ChartSeriesType.Pie).Activate();
+            var d = new Dictionary<string, double>{ ["Total"] = (double)total, ["Allocation"] = (double)amt };
+            ChartMainTitle = new string[] { $"{Source.ToString()} {DbRow["ProgramProjectName"].ToString()} Funding = {amt.ToString("c")}" };
+            AccountChart = new BudgetChart(AccountChart, ChartMainTitle, d, PrcField.ProgramProjectCode, Stat.Total, ChartSeriesType.Column).Activate();
         }
 
         private void AccountToolsButton_OnClick(object sender, EventArgs e)
         {
-            AccountTabControl.SelectedIndex = 0;
-            if (UpdateTab.TabVisible != true)
-                UpdateTab.TabVisible = true;
+            if (UpdateTab.TabVisible == true)
+                UpdateTab.TabVisible = false;
+            else
+            {
+
+                AccountTabControl.SelectedIndex = 0;
+                if (UpdateTab.TabVisible != true)
+                    UpdateTab.TabVisible = true;
+            }
+        }
+
+        private void AccountChart_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Button4_Click(object sender, EventArgs e)
+        {
+            BindingSource.MovePrevious();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            BindingSource.MoveNext();
         }
     }
 }

@@ -80,11 +80,9 @@ namespace BudgetExecution
             Table = DbData.DbTable;
             Metric = new PrcMetric(DbData);
             DataMetrics = Metric.GetChartMetrics(Table, filter);
-            DataSeries = GetSeriesTotals(GetMeasure(DataMetrics, Value));
-            DataSeries.Type = SeriesType;
-
+            DataSeries = GetSeriesTotals(GetMeasure(DataMetrics, Value), type);
+            DataSeries.Type = type;
             ConfigureSeries(DataSeries, Value);
-            Chart.Series.Add(DataSeries);
             Configure3DMode(Chart);
             ConfigureToolTip(DataSeries);
             Chart.ShowToolTips = true;
@@ -107,16 +105,12 @@ namespace BudgetExecution
             Table = DbData.DbTable;
             Metric = new PrcMetric(DbData);
             DataMetrics = Metric.GetChartMetrics(Table, filter);
-            DataSeries = GetSeriesTotals(GetMeasure(DataMetrics, Value));
-            DataSeries.Type = SeriesType;
-            if (SeriesType == ChartSeriesType.Column)
-            {
-                ConfigureSeries(DataSeries, Value);
-                Chart.Series.Add(DataSeries);
-                Configure3DMode(Chart);
-                ConfigureToolTip(DataSeries);
-                Chart.ShowToolTips = true;
-            }
+            DataSeries = GetSeriesTotals(GetMeasure(DataMetrics, Value), type);
+            DataSeries.Type = type;
+            ConfigureSeries(DataSeries, Value);
+            Configure3DMode(Chart);
+            ConfigureToolTip(DataSeries);
+            Chart.ShowToolTips = true;
             
         }
 
@@ -134,8 +128,28 @@ namespace BudgetExecution
                 Chart.Series.Clear();
             }
 
-            DataSeries = GetSeriesTotals(GetMeasure(DataMetrics, Value));
+            DataSeries = GetSeriesTotals(GetMeasure(DataMetrics, Value), type);
             ConfigureSeries(DataSeries, Value);
+            Configure3DMode(Chart);
+            ConfigureToolTip(DataSeries);
+            Chart.ShowToolTips = true;
+        }
+
+        public BudgetChart(ChartControl chart, string[] title, Dictionary<string, double> data, PrcField filter, Stat value, ChartSeriesType type)
+        {
+            Chart = chart;
+            Value = value;
+            SeriesType = type;
+            ConfigurePrimaryAxisLabels(Chart);
+            ConfigureMainTitle(title);
+            if (Chart.Series != null)
+            {
+                Chart.Series.Clear();
+            }
+            DataSeries = new ChartSeries();
+            DataSeries.Type = SeriesType;
+            foreach (KeyValuePair<string, double> kvp in data)
+                DataSeries.Points.Add(kvp.Key, kvp.Value);
             Chart.Series.Add(DataSeries);
             Configure3DMode(Chart);
             ConfigureToolTip(DataSeries);
@@ -159,10 +173,9 @@ namespace BudgetExecution
             Table = DbData.DbTable;
             Metric = new PrcMetric(DbData);
             DataMetrics = Metric.GetChartMetrics(Table, filter);
-            DataSeries = GetSeriesTotals(GetMeasure(DataMetrics, Value));
+            DataSeries = GetSeriesTotals(GetMeasure(DataMetrics, Value), type);
             DataSeries.Type = SeriesType;
             ConfigureSeries(DataSeries, Value);
-            Chart.Series.Add(DataSeries);
             Configure3DMode(Chart);
             ConfigureToolTip(DataSeries);
             Chart.ShowToolTips = true;
@@ -185,10 +198,9 @@ namespace BudgetExecution
 
             Table = DbData.DbTable;
             DataMetrics = Metric.GetChartMetrics(Table, filter);
-            DataSeries = GetSeriesTotals(GetMeasure(DataMetrics, Value));
+            DataSeries = GetSeriesTotals(GetMeasure(DataMetrics, Value), type);
             DataSeries.Type = SeriesType;
             ConfigureSeries(DataSeries, Value);
-            Chart.Series.Add(DataSeries);
             Configure3DMode(Chart);
             ConfigureToolTip(DataSeries);
             Chart.ShowToolTips = true;
@@ -258,7 +270,47 @@ namespace BudgetExecution
                     foreach (KeyValuePair<string, double> kvp in data)
                     {
                         series.Style.DisplayText = true;
+                        series.ExplodedAll = true;
+                        series.ExplosionOffset = 20f;
+                        series.ShowTicks = true;
+                        series.SmartLabels = true;
+                        series.SortPoints = true;
+                        series.Style.TextOffset = 15.0F;
+                        series.OptimizePiePointPositions = true;
+                        series.Style.TextColor = Color.White;
                         series.Points.Add(kvp.Key, kvp.Value);
+                    }
+                }
+
+                DataSeries = series;
+                return DataSeries;
+            }
+            catch (System.Exception e)
+            {
+                MessageBox.Show(e.Message + e.StackTrace);
+                return null;
+            }
+        }
+
+        internal ChartSeries GetSeriesTotals(Dictionary<string, double> data, ChartSeriesType type)
+        {
+            try
+            {
+                var series = new ChartSeries("Total", type);
+                if (type == ChartSeriesType.Column)
+                {
+                    foreach (KeyValuePair<string, double> kvp in data)
+                    {
+                        series.Points.Add(kvp.Key, kvp.Value);
+                    }
+                }
+                if (type == ChartSeriesType.Pie)
+                {
+                    foreach (KeyValuePair<string, double> kvp in data)
+                    {
+                        series.Points.Add(kvp.Key, kvp.Value);
+                        series.Style.DisplayText = true;
+                        series.Style.TextFormat = $"{kvp.Key}, {kvp.Value}";
                         series.ExplodedAll = true;
                         series.ExplosionOffset = 20f;
                         series.ShowTicks = true;
@@ -271,6 +323,7 @@ namespace BudgetExecution
                 }
 
                 DataSeries = series;
+                Chart.Series.Add(DataSeries);
                 return DataSeries;
             }
             catch (System.Exception e)
@@ -367,7 +420,10 @@ namespace BudgetExecution
                 DataSeries.Style.TextOrientation = ChartTextOrientation.Up;
                 DataSeries.Style.DisplayShadow = true;
                 DataSeries.Style.TextColor = Color.White;
-                ConfigureToolTip(DataSeries);
+                DataSeries.PointsToolTipFormat = "Funding:{0}-{4:N2}";
+                DataSeries.Style.Font.Size = 12.0F;
+                DataSeries.Style.Font.Facename = "Segoe UI";
+                DataSeries.Style.Font.FontStyle = FontStyle.Bold;
                 if (Source == Source.FTE)
                 {
                     DataSeries.Style.TextFormat = "{0}";
@@ -376,11 +432,6 @@ namespace BudgetExecution
                 {
                     DataSeries.Style.TextFormat = "${0:N2}";
                 }
-
-                DataSeries.PointsToolTipFormat = "Funding:{4:N2}";
-                DataSeries.Style.Font.Size = 12.0F;
-                DataSeries.Style.Font.Facename = "Segoe UI";
-                DataSeries.Style.Font.FontStyle = FontStyle.Bold;
                 if (SeriesType == ChartSeriesType.Column)
                 {
                     DataSeries.SmartLabels = true;
@@ -427,7 +478,7 @@ namespace BudgetExecution
                     DataSeries.Style.TextFormat = "{0}";
                 }
 
-                if (SeriesType == ChartSeriesType.Pie)
+                if (DataSeries.Type == ChartSeriesType.Pie)
                 {
 
                     DataSeries.Style.DisplayText = true;
@@ -439,13 +490,14 @@ namespace BudgetExecution
                     DataSeries.Style.TextOrientation = ChartTextOrientation.Up;
                     DataSeries.Style.DisplayShadow = true;
                     DataSeries.Style.TextColor = Color.White;
+                    DataSeries.PointsToolTipFormat = "{0}-{4:N2}";
                     DataSeries.Style.Font.Size = 10.0F;
                     DataSeries.Style.Font.FontStyle = FontStyle.Bold;
                     DataSeries.Style.Font.Facename = "SegoeUI";
                     DataSeries.ShowTicks = true;
-                    DataSeries.Style.TextFormat = "{0:N2}";
+                    Chart.Series[0].ConfigItems.PieItem.HeightCoeficient = 0.1f;
                 }
-                if (SeriesType == ChartSeriesType.Column)
+                if (DataSeries.Type == ChartSeriesType.Column)
                 {
 
                     DataSeries.SmartLabels = true;
@@ -502,9 +554,9 @@ namespace BudgetExecution
                 if (SeriesType == ChartSeriesType.Column)
                 {
                     Chart = chart;
+                    Chart.Style3D = true;
                     Chart.ChartArea.Series3D = true;
                     Chart.RealMode3D = true;
-                    Chart.Style3D = true;
                     Chart.Tilt = 0.0f;
                     Chart.Depth = 250;
                     Chart.Rotation = 20;
@@ -514,11 +566,12 @@ namespace BudgetExecution
                 if (SeriesType == ChartSeriesType.Pie)
                 {
                     Chart = chart;
+                    Chart.Style3D = true;
                     Chart.ChartArea.Series3D = true;
                     Chart.RealMode3D = true;
-                    Chart.Style3D = true;
                     Chart.Tilt = -15f;
                     Chart.Depth = 250;
+                    Chart.Rotation = 0;
                 }
             }
             catch (System.Exception e)
