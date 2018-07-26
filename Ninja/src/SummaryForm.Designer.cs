@@ -4150,7 +4150,7 @@ namespace BudgetExecution
             this.SummaryTabControl.FixedSingleBorderColor = System.Drawing.Color.Black;
             this.SummaryTabControl.FocusOnTabClick = false;
             this.SummaryTabControl.InactiveTabColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
-            this.SummaryTabControl.InActiveTabForeColor = System.Drawing.Color.DimGray;
+            this.SummaryTabControl.InActiveTabForeColor = System.Drawing.Color.DarkGray;
             this.SummaryTabControl.ItemSize = new System.Drawing.Size(150, 45);
             this.SummaryTabControl.Location = new System.Drawing.Point(0, 0);
             this.SummaryTabControl.Multiline = true;
@@ -4262,10 +4262,10 @@ namespace BudgetExecution
             this.UpdateTab.ForeColor = System.Drawing.Color.LightSteelBlue;
             this.UpdateTab.Image = ((System.Drawing.Image)(resources.GetObject("UpdateTab.Image")));
             this.UpdateTab.ImageSize = new System.Drawing.Size(30, 30);
-            this.UpdateTab.Location = new System.Drawing.Point(0, 44);
+            this.UpdateTab.Location = new System.Drawing.Point(0, -1);
             this.UpdateTab.Name = "UpdateTab";
             this.UpdateTab.ShowCloseButton = true;
-            this.UpdateTab.Size = new System.Drawing.Size(464, 457);
+            this.UpdateTab.Size = new System.Drawing.Size(464, 502);
             this.UpdateTab.TabIndex = 4;
             this.UpdateTab.ThemesEnabled = false;
             // 
@@ -4738,10 +4738,10 @@ namespace BudgetExecution
             this.tabPageAdv5.Controls.Add(this.AccountChart);
             this.tabPageAdv5.Image = ((System.Drawing.Image)(resources.GetObject("tabPageAdv5.Image")));
             this.tabPageAdv5.ImageSize = new System.Drawing.Size(30, 30);
-            this.tabPageAdv5.Location = new System.Drawing.Point(0, 44);
+            this.tabPageAdv5.Location = new System.Drawing.Point(0, -1);
             this.tabPageAdv5.Name = "tabPageAdv5";
             this.tabPageAdv5.ShowCloseButton = true;
-            this.tabPageAdv5.Size = new System.Drawing.Size(464, 457);
+            this.tabPageAdv5.Size = new System.Drawing.Size(464, 502);
             this.tabPageAdv5.TabIndex = 2;
             this.tabPageAdv5.ThemesEnabled = false;
             // 
@@ -4854,7 +4854,7 @@ namespace BudgetExecution
             this.AccountChart.Series3D = true;
             this.AccountChart.SeriesHighlight = true;
             this.AccountChart.ShadowColor = new Syncfusion.Drawing.BrushInfo(Syncfusion.Drawing.GradientStyle.PathRectangle, System.Drawing.SystemColors.WindowText, System.Drawing.Color.Silver);
-            this.AccountChart.Size = new System.Drawing.Size(464, 457);
+            this.AccountChart.Size = new System.Drawing.Size(464, 502);
             this.AccountChart.Spacing = 5F;
             this.AccountChart.SpacingBetweenPoints = 5F;
             this.AccountChart.Style3D = true;
@@ -4884,10 +4884,10 @@ namespace BudgetExecution
             this.tabPageAdv6.Controls.Add(this.CalendatButton);
             this.tabPageAdv6.Image = ((System.Drawing.Image)(resources.GetObject("tabPageAdv6.Image")));
             this.tabPageAdv6.ImageSize = new System.Drawing.Size(30, 30);
-            this.tabPageAdv6.Location = new System.Drawing.Point(0, 44);
+            this.tabPageAdv6.Location = new System.Drawing.Point(0, -1);
             this.tabPageAdv6.Name = "tabPageAdv6";
             this.tabPageAdv6.ShowCloseButton = true;
-            this.tabPageAdv6.Size = new System.Drawing.Size(464, 457);
+            this.tabPageAdv6.Size = new System.Drawing.Size(464, 502);
             this.tabPageAdv6.TabIndex = 3;
             this.tabPageAdv6.ThemesEnabled = false;
             // 
@@ -5000,7 +5000,7 @@ namespace BudgetExecution
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 19F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 68F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 97F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 94F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 96F));
             this.tableLayoutPanel1.Controls.Add(this.label31, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.label32, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.label34, 2, 0);
@@ -5018,7 +5018,7 @@ namespace BudgetExecution
             // 
             this.label31.AutoSize = true;
             this.label31.Dock = System.Windows.Forms.DockStyle.Right;
-            this.label31.Location = new System.Drawing.Point(5, 0);
+            this.label31.Location = new System.Drawing.Point(4, 0);
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(48, 33);
             this.label31.TabIndex = 153;
@@ -5028,7 +5028,7 @@ namespace BudgetExecution
             // 
             this.label32.AutoSize = true;
             this.label32.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label32.Location = new System.Drawing.Point(59, 0);
+            this.label32.Location = new System.Drawing.Point(58, 0);
             this.label32.Name = "label32";
             this.label32.Size = new System.Drawing.Size(60, 33);
             this.label32.TabIndex = 154;
@@ -5038,7 +5038,7 @@ namespace BudgetExecution
             // 
             this.label34.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label34.AutoSize = true;
-            this.label34.Location = new System.Drawing.Point(278, 0);
+            this.label34.Location = new System.Drawing.Point(276, 0);
             this.label34.Name = "label34";
             this.label34.Size = new System.Drawing.Size(76, 20);
             this.label34.TabIndex = 155;
@@ -5048,7 +5048,7 @@ namespace BudgetExecution
             // 
             this.label37.AutoSize = true;
             this.label37.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label37.Location = new System.Drawing.Point(360, 0);
+            this.label37.Location = new System.Drawing.Point(358, 0);
             this.label37.Name = "label37";
             this.label37.Size = new System.Drawing.Size(60, 33);
             this.label37.TabIndex = 156;
@@ -5058,7 +5058,7 @@ namespace BudgetExecution
             // 
             this.label40.AutoSize = true;
             this.label40.Dock = System.Windows.Forms.DockStyle.Right;
-            this.label40.Location = new System.Drawing.Point(590, 0);
+            this.label40.Location = new System.Drawing.Point(588, 0);
             this.label40.Name = "label40";
             this.label40.Size = new System.Drawing.Size(84, 33);
             this.label40.TabIndex = 159;
@@ -5068,7 +5068,7 @@ namespace BudgetExecution
             // 
             this.label41.AutoSize = true;
             this.label41.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label41.Location = new System.Drawing.Point(680, 0);
+            this.label41.Location = new System.Drawing.Point(678, 0);
             this.label41.Name = "label41";
             this.label41.Size = new System.Drawing.Size(60, 33);
             this.label41.TabIndex = 160;
