@@ -17,14 +17,14 @@ namespace BudgetExecution
     using System.Text;
     using System.Windows.Forms;
 
-    public partial class Message : Syncfusion.Windows.Forms.MetroForm
+    public partial class ErrorMessage : Syncfusion.Windows.Forms.MetroForm
     {
-        public Message()
+        public ErrorMessage()
         {
             InitializeComponent();
         }
         
-        public Message(Exception ex)
+        public ErrorMessage(Exception ex)
         {
             InitializeComponent();
             Error = ex.Message;

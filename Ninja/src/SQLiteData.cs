@@ -139,7 +139,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                var m = new Message(ex);
+                var m = new ErrorMessage(ex);
                 m.Show();
             }
         }
@@ -851,7 +851,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                var errorMessage = new Message(ex);
+                var errorMessage = new ErrorMessage(ex);
                 errorMessage.ShowDialog();
             }
 

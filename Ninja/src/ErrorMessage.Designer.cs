@@ -7,7 +7,7 @@
 #endregion
 namespace BudgetExecution
 {
-    partial class Message
+    partial class ErrorMessage
     {
         /// <summary>
         /// Required designer variable.
@@ -36,7 +36,7 @@ namespace BudgetExecution
         private void InitializeComponent()
         {
             Syncfusion.Windows.Forms.CaptionImage captionImage1 = new Syncfusion.Windows.Forms.CaptionImage();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Message));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ErrorMessage));
             this.Info = new System.Windows.Forms.RichTextBox();
             this.OkButton = new MetroSet_UI.Controls.MetroSetButton();
             this.metroSetPanel1 = new MetroSet_UI.Controls.MetroSetPanel();
