@@ -37,62 +37,137 @@ namespace BudgetExecution
         {
             Syncfusion.Windows.Forms.CaptionImage captionImage1 = new Syncfusion.Windows.Forms.CaptionImage();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Message));
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.metroSetButton1 = new MetroSet_UI.Controls.MetroSetButton();
+            this.Info = new System.Windows.Forms.RichTextBox();
+            this.OkButton = new MetroSet_UI.Controls.MetroSetButton();
+            this.metroSetPanel1 = new MetroSet_UI.Controls.MetroSetPanel();
+            this.StackButton = new MetroSet_UI.Controls.MetroSetButton();
+            this.TargetButton = new MetroSet_UI.Controls.MetroSetButton();
+            this.metroSetPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // richTextBox1
+            // Info
             // 
-            this.richTextBox1.BackColor = System.Drawing.Color.Black;
-            this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox1.ForeColor = System.Drawing.SystemColors.Info;
-            this.richTextBox1.Location = new System.Drawing.Point(21, 43);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(555, 138);
-            this.richTextBox1.TabIndex = 0;
-            this.richTextBox1.Text = "Message Here";
+            this.Info.BackColor = System.Drawing.Color.Black;
+            this.Info.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Info.ForeColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.Info.Location = new System.Drawing.Point(16, 22);
+            this.Info.Name = "Info";
+            this.Info.Size = new System.Drawing.Size(503, 215);
+            this.Info.TabIndex = 0;
+            this.Info.Text = "Message Here";
             // 
-            // metroSetButton1
+            // OkButton
             // 
-            this.metroSetButton1.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.metroSetButton1.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.metroSetButton1.DisabledForeColor = System.Drawing.Color.Gray;
-            this.metroSetButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.metroSetButton1.HoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(207)))), ((int)(((byte)(255)))));
-            this.metroSetButton1.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(207)))), ((int)(((byte)(255)))));
-            this.metroSetButton1.HoverTextColor = System.Drawing.Color.White;
-            this.metroSetButton1.Location = new System.Drawing.Point(215, 223);
-            this.metroSetButton1.Name = "metroSetButton1";
-            this.metroSetButton1.NormalBorderColor = System.Drawing.Color.Black;
-            this.metroSetButton1.NormalColor = System.Drawing.Color.Black;
-            this.metroSetButton1.NormalTextColor = System.Drawing.SystemColors.MenuHighlight;
-            this.metroSetButton1.PressBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(147)))), ((int)(((byte)(195)))));
-            this.metroSetButton1.PressColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(147)))), ((int)(((byte)(195)))));
-            this.metroSetButton1.PressTextColor = System.Drawing.Color.White;
-            this.metroSetButton1.Size = new System.Drawing.Size(112, 78);
-            this.metroSetButton1.Style = MetroSet_UI.Design.Style.Dark;
-            this.metroSetButton1.StyleManager = null;
-            this.metroSetButton1.TabIndex = 1;
-            this.metroSetButton1.Text = "OK";
-            this.metroSetButton1.ThemeAuthor = "Narwin";
-            this.metroSetButton1.ThemeName = "MetroDark";
+            this.OkButton.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.OkButton.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.OkButton.DisabledForeColor = System.Drawing.Color.Gray;
+            this.OkButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.OkButton.HoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(207)))), ((int)(((byte)(255)))));
+            this.OkButton.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(207)))), ((int)(((byte)(255)))));
+            this.OkButton.HoverTextColor = System.Drawing.Color.White;
+            this.OkButton.Location = new System.Drawing.Point(60, 306);
+            this.OkButton.Name = "OkButton";
+            this.OkButton.NormalBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.OkButton.NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.OkButton.NormalTextColor = System.Drawing.Color.White;
+            this.OkButton.PressBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(147)))), ((int)(((byte)(195)))));
+            this.OkButton.PressColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(147)))), ((int)(((byte)(195)))));
+            this.OkButton.PressTextColor = System.Drawing.Color.White;
+            this.OkButton.Size = new System.Drawing.Size(100, 36);
+            this.OkButton.Style = MetroSet_UI.Design.Style.Dark;
+            this.OkButton.StyleManager = null;
+            this.OkButton.TabIndex = 1;
+            this.OkButton.Text = "OK";
+            this.OkButton.ThemeAuthor = "Narwin";
+            this.OkButton.ThemeName = "MetroDark";
+            this.OkButton.Click += new System.EventHandler(this.OkButton_OnClick);
+            // 
+            // metroSetPanel1
+            // 
+            this.metroSetPanel1.BackgroundColor = System.Drawing.Color.Black;
+            this.metroSetPanel1.BorderColor = System.Drawing.SystemColors.MenuHighlight;
+            this.metroSetPanel1.BorderThickness = 1;
+            this.metroSetPanel1.Controls.Add(this.Info);
+            this.metroSetPanel1.Location = new System.Drawing.Point(34, 25);
+            this.metroSetPanel1.Name = "metroSetPanel1";
+            this.metroSetPanel1.Size = new System.Drawing.Size(529, 253);
+            this.metroSetPanel1.Style = MetroSet_UI.Design.Style.Custom;
+            this.metroSetPanel1.StyleManager = null;
+            this.metroSetPanel1.TabIndex = 2;
+            this.metroSetPanel1.ThemeAuthor = "Narwin";
+            this.metroSetPanel1.ThemeName = "MetroDark";
+            // 
+            // StackButton
+            // 
+            this.StackButton.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.StackButton.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.StackButton.DisabledForeColor = System.Drawing.Color.Gray;
+            this.StackButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.StackButton.HoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(207)))), ((int)(((byte)(255)))));
+            this.StackButton.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(207)))), ((int)(((byte)(255)))));
+            this.StackButton.HoverTextColor = System.Drawing.Color.White;
+            this.StackButton.Location = new System.Drawing.Point(232, 306);
+            this.StackButton.Name = "StackButton";
+            this.StackButton.NormalBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.StackButton.NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.StackButton.NormalTextColor = System.Drawing.Color.White;
+            this.StackButton.PressBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(147)))), ((int)(((byte)(195)))));
+            this.StackButton.PressColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(147)))), ((int)(((byte)(195)))));
+            this.StackButton.PressTextColor = System.Drawing.Color.White;
+            this.StackButton.Size = new System.Drawing.Size(100, 36);
+            this.StackButton.Style = MetroSet_UI.Design.Style.Dark;
+            this.StackButton.StyleManager = null;
+            this.StackButton.TabIndex = 3;
+            this.StackButton.Text = "Stack";
+            this.StackButton.ThemeAuthor = "Narwin";
+            this.StackButton.ThemeName = "MetroDark";
+            this.StackButton.Click += new System.EventHandler(this.StackButton_OnClick);
+            // 
+            // TargetButton
+            // 
+            this.TargetButton.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.TargetButton.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.TargetButton.DisabledForeColor = System.Drawing.Color.Gray;
+            this.TargetButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.TargetButton.HoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(207)))), ((int)(((byte)(255)))));
+            this.TargetButton.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(207)))), ((int)(((byte)(255)))));
+            this.TargetButton.HoverTextColor = System.Drawing.Color.White;
+            this.TargetButton.Location = new System.Drawing.Point(409, 306);
+            this.TargetButton.Name = "TargetButton";
+            this.TargetButton.NormalBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.TargetButton.NormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.TargetButton.NormalTextColor = System.Drawing.Color.White;
+            this.TargetButton.PressBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(147)))), ((int)(((byte)(195)))));
+            this.TargetButton.PressColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(147)))), ((int)(((byte)(195)))));
+            this.TargetButton.PressTextColor = System.Drawing.Color.White;
+            this.TargetButton.Size = new System.Drawing.Size(100, 36);
+            this.TargetButton.Style = MetroSet_UI.Design.Style.Dark;
+            this.TargetButton.StyleManager = null;
+            this.TargetButton.TabIndex = 4;
+            this.TargetButton.Text = "Target";
+            this.TargetButton.ThemeAuthor = "Narwin";
+            this.TargetButton.ThemeName = "MetroDark";
+            this.TargetButton.Click += new System.EventHandler(this.TargetButton_OnClick);
             // 
             // Message
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.BorderColor = System.Drawing.SystemColors.MenuHighlight;
+            this.BorderColor = System.Drawing.Color.Red;
             this.CaptionBarColor = System.Drawing.Color.Black;
             this.CaptionForeColor = System.Drawing.Color.Black;
             captionImage1.BackColor = System.Drawing.Color.Black;
             captionImage1.Image = ((System.Drawing.Image)(resources.GetObject("captionImage1.Image")));
+            captionImage1.Location = new System.Drawing.Point(10, 10);
             captionImage1.Name = "CaptionImage1";
-            captionImage1.Size = new System.Drawing.Size(30, 40);
+            captionImage1.Size = new System.Drawing.Size(25, 20);
             this.CaptionImages.Add(captionImage1);
             this.ClientSize = new System.Drawing.Size(600, 354);
-            this.Controls.Add(this.metroSetButton1);
-            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.TargetButton);
+            this.Controls.Add(this.StackButton);
+            this.Controls.Add(this.metroSetPanel1);
+            this.Controls.Add(this.OkButton);
             this.ForeColor = System.Drawing.Color.LightSteelBlue;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -104,13 +179,17 @@ namespace BudgetExecution
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Message";
             this.TopMost = true;
+            this.metroSetPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private MetroSet_UI.Controls.MetroSetButton metroSetButton1;
+        private System.Windows.Forms.RichTextBox Info;
+        private MetroSet_UI.Controls.MetroSetButton OkButton;
+        private MetroSet_UI.Controls.MetroSetPanel metroSetPanel1;
+        private MetroSet_UI.Controls.MetroSetButton StackButton;
+        private MetroSet_UI.Controls.MetroSetButton TargetButton;
     }
 }

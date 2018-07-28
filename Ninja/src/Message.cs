@@ -23,5 +23,35 @@ namespace BudgetExecution
         {
             InitializeComponent();
         }
+        
+        public Message(Exception ex)
+        {
+            InitializeComponent();
+            Error = ex.Message;
+            Stack = ex.StackTrace;
+            Target = ex.TargetSite.ReflectedType.Name;
+            this.Info.Text = "\n\n\n    " + Error;
+        }
+
+        // PROPERTIES
+        public string Error { get; set; }
+        string Stack { get; }
+        string Target { get; }
+
+        // METHODS
+        void OkButton_OnClick(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        void StackButton_OnClick(object sender, EventArgs e)
+        {
+            Info.Text = "Call Stack: \n\n" + Stack;
+        }
+
+        void TargetButton_OnClick(object sender, EventArgs e)
+        {
+            Info.Text = "Target Site: \n\n" + Target;
+        }
     }
 }

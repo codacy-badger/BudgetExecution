@@ -139,7 +139,8 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message + ex.StackTrace);
+                var m = new Message(ex);
+                m.Show();
             }
         }
 
@@ -154,7 +155,7 @@ namespace BudgetExecution
                 var f2col = Filter2.Tag.ToString();
                 F3 = Filter3.SelectedItem.ToString();
                 var f3col = Filter3.Tag.ToString();
-                BindingSource.Filter = string.Format("{0} = '{1}' AND {3} = '{4}' AND {5} = '{6}'", f1col, F1, f2col, F2, f3col, F3);
+                BindingSource.Filter = string.Format("{0} = '{1}' AND {2} = '{3}' AND {4} = '{5}'", f1col, F1, f2col, F2, f3col, F3);
                 if (Filter4.Visible == false)
                     Filter4.Visible = true;
             }
@@ -695,7 +696,7 @@ namespace BudgetExecution
                     PopulateFilterItems(PrcField.RC, DbData, Filter3, label3);
                     Filter4.Visible = true;
                     label4.Text = "Reprogramming Number";
-                    PopulateFilterItems("ControlNumber", DbData, Filter4, label4);
+                    PopulateFilterItems("DocumentNumber", DbData, Filter4, label4);
                     break;
                 case Source.FTE:
                     label1.Text = "Fund";
@@ -850,7 +851,8 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message + ex.TargetSite);
+                var errorMessage = new Message(ex);
+                errorMessage.ShowDialog();
             }
 
         }

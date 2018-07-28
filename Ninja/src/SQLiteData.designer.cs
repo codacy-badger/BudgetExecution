@@ -290,7 +290,7 @@ namespace BudgetExecution
             this.Filter2.FormattingEnabled = true;
             this.Filter2.IntegralHeight = false;
             this.Filter2.ItemHeight = 30;
-            this.Filter2.Location = new System.Drawing.Point(37, 197);
+            this.Filter2.Location = new System.Drawing.Point(37, 167);
             this.Filter2.MaxDropDownItems = 100;
             this.Filter2.Name = "Filter2";
             this.Filter2.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
@@ -334,7 +334,7 @@ namespace BudgetExecution
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 132F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 143F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 120F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 131F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 133F));
             this.tableLayoutPanel1.Controls.Add(this.label5, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.label10, 5, 0);
             this.tableLayoutPanel1.Controls.Add(this.label6, 1, 0);
@@ -354,6 +354,7 @@ namespace BudgetExecution
             // 
             this.label5.AutoSize = true;
             this.label5.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(3, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(44, 45);
@@ -364,7 +365,8 @@ namespace BudgetExecution
             // 
             this.label10.AutoSize = true;
             this.label10.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label10.Location = new System.Drawing.Point(667, 0);
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(665, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(60, 45);
             this.label10.TabIndex = 158;
@@ -374,6 +376,7 @@ namespace BudgetExecution
             // 
             this.label6.AutoSize = true;
             this.label6.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Location = new System.Drawing.Point(56, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(51, 45);
@@ -384,7 +387,8 @@ namespace BudgetExecution
             // 
             this.label9.AutoSize = true;
             this.label9.Dock = System.Windows.Forms.DockStyle.Right;
-            this.label9.Location = new System.Drawing.Point(610, 0);
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(608, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(51, 45);
             this.label9.TabIndex = 157;
@@ -394,7 +398,8 @@ namespace BudgetExecution
             // 
             this.label7.AutoSize = true;
             this.label7.Dock = System.Windows.Forms.DockStyle.Right;
-            this.label7.Location = new System.Drawing.Point(295, 0);
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(293, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(51, 45);
             this.label7.TabIndex = 155;
@@ -404,7 +409,8 @@ namespace BudgetExecution
             // 
             this.label8.AutoSize = true;
             this.label8.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label8.Location = new System.Drawing.Point(352, 0);
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(350, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(51, 45);
             this.label8.TabIndex = 156;
@@ -414,7 +420,8 @@ namespace BudgetExecution
             // 
             this.label11.AutoSize = true;
             this.label11.Dock = System.Windows.Forms.DockStyle.Right;
-            this.label11.Location = new System.Drawing.Point(847, 0);
+            this.label11.ForeColor = System.Drawing.Color.White;
+            this.label11.Location = new System.Drawing.Point(845, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(77, 45);
             this.label11.TabIndex = 159;
@@ -424,7 +431,8 @@ namespace BudgetExecution
             // 
             this.label12.AutoSize = true;
             this.label12.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label12.Location = new System.Drawing.Point(930, 0);
+            this.label12.ForeColor = System.Drawing.Color.White;
+            this.label12.Location = new System.Drawing.Point(928, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(60, 45);
             this.label12.TabIndex = 160;
@@ -692,7 +700,7 @@ namespace BudgetExecution
             this.metroPanel3.HorizontalScrollbarSize = 10;
             this.metroPanel3.Location = new System.Drawing.Point(41, 27);
             this.metroPanel3.Name = "metroPanel3";
-            this.metroPanel3.Size = new System.Drawing.Size(369, 561);
+            this.metroPanel3.Size = new System.Drawing.Size(369, 525);
             this.metroPanel3.TabIndex = 154;
             this.metroPanel3.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.metroPanel3.VerticalScrollbarBarColor = true;
@@ -702,7 +710,8 @@ namespace BudgetExecution
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(41, 447);
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(33, 367);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(55, 20);
             this.label4.TabIndex = 157;
@@ -711,7 +720,8 @@ namespace BudgetExecution
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(41, 312);
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(37, 257);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(51, 20);
             this.label3.TabIndex = 156;
@@ -720,7 +730,8 @@ namespace BudgetExecution
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(41, 174);
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(33, 144);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(51, 20);
             this.label2.TabIndex = 155;
@@ -729,6 +740,7 @@ namespace BudgetExecution
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(41, 37);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(55, 20);
@@ -756,7 +768,7 @@ namespace BudgetExecution
             this.Filter4.FormattingEnabled = true;
             this.Filter4.IntegralHeight = false;
             this.Filter4.ItemHeight = 30;
-            this.Filter4.Location = new System.Drawing.Point(37, 470);
+            this.Filter4.Location = new System.Drawing.Point(37, 390);
             this.Filter4.MaxDropDownItems = 100;
             this.Filter4.Name = "Filter4";
             this.Filter4.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
@@ -789,7 +801,7 @@ namespace BudgetExecution
             this.Filter1.FormattingEnabled = true;
             this.Filter1.IntegralHeight = false;
             this.Filter1.ItemHeight = 30;
-            this.Filter1.Location = new System.Drawing.Point(37, 60);
+            this.Filter1.Location = new System.Drawing.Point(37, 71);
             this.Filter1.MaxDropDownItems = 100;
             this.Filter1.Name = "Filter1";
             this.Filter1.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
@@ -823,7 +835,7 @@ namespace BudgetExecution
             this.Filter3.FormattingEnabled = true;
             this.Filter3.IntegralHeight = false;
             this.Filter3.ItemHeight = 30;
-            this.Filter3.Location = new System.Drawing.Point(37, 335);
+            this.Filter3.Location = new System.Drawing.Point(37, 280);
             this.Filter3.MaxDropDownItems = 100;
             this.Filter3.Name = "Filter3";
             this.Filter3.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
@@ -1031,7 +1043,7 @@ namespace BudgetExecution
             this.BorderColor = System.Drawing.SystemColors.MenuHighlight;
             this.CaptionBarColor = System.Drawing.Color.Black;
             this.CaptionBarHeight = 60;
-            this.CaptionFont = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CaptionFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CaptionForeColor = System.Drawing.SystemColors.MenuHighlight;
             captionImage1.BackColor = System.Drawing.Color.Black;
             captionImage1.Image = ((System.Drawing.Image)(resources.GetObject("captionImage1.Image")));
