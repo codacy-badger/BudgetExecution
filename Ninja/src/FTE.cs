@@ -68,7 +68,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
+                var error = new Error(ex).ShowDialog();
                 return null;
             }
         }
@@ -81,7 +81,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
+                var error = new Error(ex).ShowDialog();
                 return -1M;
             }
         }
@@ -94,7 +94,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
+                var error = new Error(ex).ShowDialog();
                 return null;
             }
         }
@@ -107,7 +107,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
+                var error = new Error(ex).ShowDialog();
                 return -1;
             }
         }
@@ -147,7 +147,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
+                var error = new Error(ex).ShowDialog();
                 return null;
             }
         }
@@ -177,7 +177,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
+                var error = new Error(ex).ShowDialog();
                 return null;
             }
         }
@@ -202,7 +202,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
+                var error = new Error(ex).ShowDialog();
                 return null;
             }
         }
@@ -215,7 +215,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message + ex.StackTrace);
+                var error = new Error(ex).ShowDialog();
                 return null;
             }
         }
@@ -228,7 +228,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
+                var error = new Error(ex).ShowDialog();
                 return -1M;
             }
         }
@@ -254,7 +254,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
+                var error = new Error(ex).ShowDialog();
                 return null;
             }
         }
@@ -279,7 +279,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
+                var error = new Error(ex).ShowDialog();
                 return null;
             }
         }

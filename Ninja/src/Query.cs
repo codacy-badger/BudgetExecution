@@ -106,7 +106,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                MessageBox.Show("ERROR!: \n" + ex.TargetSite + ex.StackTrace);
+                var error = new Error(ex).ShowDialog();
                 return null;
             }
         }
@@ -119,7 +119,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                MessageBox.Show("ERROR!: \n\n" + ex.TargetSite + ex.StackTrace);
+                var error = new Error(ex).ShowDialog();
                 return null;
             }
         }
@@ -132,7 +132,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                MessageBox.Show("ERROR!: \n\n" + ex.TargetSite + ex.StackTrace);
+                var error = new Error(ex).ShowDialog();
                 return null;
             }
         }
@@ -145,7 +145,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                MessageBox.Show("ERROR!: \n\n" + ex.TargetSite + ex.StackTrace);
+                var error = new Error(ex).ShowDialog();
                 return null;
             }
         }
@@ -176,7 +176,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                MessageBox.Show("ERROR!: \n" + ex.TargetSite + ex.StackTrace);
+                var error = new Error(ex).ShowDialog();
                 return null;
             }
         }
@@ -207,7 +207,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                MessageBox.Show("ERROR!: \n" + ex.TargetSite + ex.StackTrace);
+                var error = new Error(ex).ShowDialog();
                 return null;
             }
         }
@@ -238,7 +238,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                MessageBox.Show("ERROR!: \n" + ex.TargetSite + ex.StackTrace);
+                var error = new Error(ex).ShowDialog();
                 return null;
             }
         }
@@ -266,7 +266,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                MessageBox.Show("ERROR!: \n" + ex.TargetSite + ex.StackTrace);
+                var error = new Error(ex).ShowDialog();
                 return null;
             }
         }
@@ -294,7 +294,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                MessageBox.Show("ERROR!: \n" + ex.TargetSite + ex.StackTrace);
+                var error = new Error(ex).ShowDialog();
                 return null;
             }
         }
@@ -331,7 +331,7 @@ namespace BudgetExecution
             }
             catch (SystemException ex)
             {
-                MessageBox.Show(ex.Message + ex.StackTrace);
+                var error = new Error(ex).ShowDialog();
                 return null;
             }
         }
@@ -351,7 +351,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                MessageBox.Show("ERROR!: \n\n" + ex.TargetSite + ex.StackTrace);
+                var error = new Error(ex).ShowDialog();
                 return null;
             }
         }

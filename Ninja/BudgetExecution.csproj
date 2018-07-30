@@ -230,6 +230,12 @@
     <Compile Include="src\AccountManager.Designer.cs">
       <DependentUpon>AccountManager.cs</DependentUpon>
     </Compile>
+    <Compile Include="src\Message.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Message.Designer.cs">
+      <DependentUpon>Message.cs</DependentUpon>
+    </Compile>
     <Compile Include="src\ExcelImporter.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -270,11 +276,11 @@
     <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="src\Account.cs" />
     <Compile Include="src\IObligation.cs" />
-    <Compile Include="src\ErrorMessage.cs">
+    <Compile Include="src\Error.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="src\ErrorMessage.Designer.cs">
-      <DependentUpon>ErrorMessage.cs</DependentUpon>
+    <Compile Include="src\Error.Designer.cs">
+      <DependentUpon>Error.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -499,6 +505,9 @@
     <EmbeddedResource Include="src\DataTools.resx">
       <DependentUpon>DataTools.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="src\Message.resx">
+      <DependentUpon>Message.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="src\ExcelForm.resx">
       <DependentUpon>ExcelForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -511,8 +520,8 @@
     <EmbeddedResource Include="src\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="src\ErrorMessage.resx">
-      <DependentUpon>ErrorMessage.cs</DependentUpon>
+    <EmbeddedResource Include="src\Error.resx">
+      <DependentUpon>Error.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="src\MetroForm1.resx">
       <DependentUpon>MetroForm1.cs</DependentUpon>

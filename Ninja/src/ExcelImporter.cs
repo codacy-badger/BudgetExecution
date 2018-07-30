@@ -18,5 +18,10 @@ namespace BudgetExecution
             InitializeComponent();
             DataFilterTab.TabVisible = false;
         }
+
+        private void ExcelImporter_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

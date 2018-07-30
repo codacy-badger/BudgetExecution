@@ -176,7 +176,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
+                var error = new Error(ex).ShowDialog();
                 return -1M;
             }
         }
@@ -189,7 +189,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
+                var error = new Error(ex).ShowDialog();
                 return -1M;
             }
         }
@@ -202,7 +202,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
+                var error = new Error(ex).ShowDialog();
                 return null;
             }
         }
@@ -220,40 +220,48 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
+                var error = new Error(ex).ShowDialog();
                 return null;
             }
         }
 
         public Dictionary<string, string[]> GetProgramElements(DataTable table)
         {
-            var data = new Dictionary<string, string[]>();
-            foreach (DataColumn dc in table.Columns)
+            try
             {
-                if (dc.ColumnName.Equals("ID") || dc.ColumnName.Equals("Amount"))
+                var data = new Dictionary<string, string[]>();
+                foreach (DataColumn dc in table.Columns)
                 {
-                    continue;
+                    if (dc.ColumnName.Equals("ID") || dc.ColumnName.Equals("Amount"))
+                    {
+                        continue;
+                    }
+
+                    data.Add(dc.ColumnName, GetCodes(table, dc.ColumnName));
                 }
 
-                data.Add(dc.ColumnName, GetCodes(table, dc.ColumnName));
-            }
+                if (data.ContainsKey("ID"))
+                {
+                    data.Remove("ID");
+                }
 
-            if (data.ContainsKey("ID"))
+                if (data.ContainsKey("Amount"))
+                {
+                    data.Remove("Amount");
+                }
+
+                if (data.ContainsKey("P6_ID"))
+                {
+                    data.Remove("P6_ID");
+                }
+
+                return data;
+            }
+            catch (Exception ex)
             {
-                data.Remove("ID");
+                var error = new Error(ex).ShowDialog();
+                return null;
             }
-
-            if (data.ContainsKey("Amount"))
-            {
-                data.Remove("Amount");
-            }
-
-            if (data.ContainsKey("P6_ID"))
-            {
-                data.Remove("P6_ID");
-            }
-
-            return data;
         }
 
         public int GetCount(DataTable table)
@@ -264,7 +272,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
+                var error = new Error(ex).ShowDialog();
                 return -1;
             }
         }
@@ -288,7 +296,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
+                var error = new Error(ex).ShowDialog();
                 return null;
             }
         }
@@ -311,7 +319,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
+                var error = new Error(ex).ShowDialog();
                 return null;
             }
         }
@@ -335,7 +343,7 @@ namespace BudgetExecution
             }
             catch (Exception e)
             {
-                MessageBox.Show(e.Message + e.StackTrace);
+                var error = new Error(e).ShowDialog();
                 return null;
             }
         }
@@ -359,7 +367,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
+                var error = new Error(ex).ShowDialog();
                 return null;
             }
         }

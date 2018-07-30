@@ -26,6 +26,7 @@ namespace BudgetExecution
             Source = Source.RegionalAccounts;
             Provider = Provider.SQLite;
             DbData = new DataBuilder(Source, Provider);
+            Table = DbData.DbTable;
             BindingSource = DbData.BindingSource;
             Grid.DataSource = BindingSource;
             Navigator.BindingSource = BindingSource;
@@ -44,17 +45,21 @@ namespace BudgetExecution
             Source = source;
             Provider = provider;
             DbData = new DataBuilder(Source, Provider);
+            Table = DbData.DbTable;
             BindingSource = DbData.BindingSource;
             Grid.DataSource = DbData.BindingSource;
             Navigator.BindingSource = DbData.BindingSource;
             ProgramElements = DbData.GetProgramElements(DbData.DbTable);
             Text = $"{Source.ToString()} Database";
             FunctionTab.TabVisible = false;
+            TableFilter = new DataFilter(Info.FilterTable);
         }
         // PROPERTIES
         private Source Source { get; }
 
         private Provider Provider { get; }
+
+        private DataFilter TableFilter { get; set; }
 
         private SQLiteDataAdapter Adapter { get; }
 
@@ -84,11 +89,11 @@ namespace BudgetExecution
 
         public string F3 { get; set; }
 
-        public string C1 { get; set; }
+        public PrcField C1 { get; set; }
 
-        public string C2 { get; set; }
+        public PrcField C2 { get; set; }
 
-        public string C3 { get; set; }
+        public PrcField C3 { get; set; }
 
         // METHODS
 
@@ -107,76 +112,6 @@ namespace BudgetExecution
             var name = listbox.SelectedItem.ToString();
             var source = (Source)Enum.Parse(typeof(Source), name.ToString());
             BindingSource.DataSource = new DataBuilder(source, Provider.SQLite).GetDataTable(source);
-        }
-
-        private void Filter1_ItemSelected(object sender, EventArgs e)
-        {
-            try
-            {
-                var filter = sender as MetroSetComboBox;
-                F1 = filter.SelectedItem.ToString();
-                BindingSource.Filter = string.Format("{0} = '{1}'", filter.Tag.ToString(), filter.SelectedItem.ToString());
-                if (Filter2.Visible == false)
-                    Filter2.Visible = true;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message + ex.StackTrace);
-            }
-        }
-
-        private void Filter2_ItemSelected(object sender, EventArgs e)
-        {
-            try
-            {
-                var filter = sender as MetroSetComboBox;
-                var fund = filter.SelectedItem.ToString();
-                F1 = Filter1.SelectedItem.ToString();
-                var f1col = Filter1.Tag.ToString();
-                BindingSource.Filter = string.Format("{0} = '{1}' AND {2} = '{3}'", f1col, F1, filter.Tag.ToString(), fund);
-                if (Filter3.Visible == false)
-                    Filter3.Visible = true;
-            }
-            catch (Exception ex)
-            {
-                var m = new ErrorMessage(ex);
-                m.Show();
-            }
-        }
-
-        private void Filter3_ItemSelected(object sender, EventArgs e)
-        {
-            try
-            {
-                var filter = sender as MetroSetComboBox;
-                F1 = Filter1.SelectedItem.ToString();
-                var f1col = Filter1.Tag.ToString();
-                F2 = Filter2.SelectedItem.ToString();
-                var f2col = Filter2.Tag.ToString();
-                F3 = Filter3.SelectedItem.ToString();
-                var f3col = Filter3.Tag.ToString();
-                BindingSource.Filter = string.Format("{0} = '{1}' AND {2} = '{3}' AND {4} = '{5}'", f1col, F1, f2col, F2, f3col, F3);
-                if (Filter4.Visible == false)
-                    Filter4.Visible = true;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message + ex.StackTrace);
-            }
-        }
-
-        private void Filter4_ItemSelected(object sender, EventArgs e)
-        {
-            try
-            {
-                var boc = sender as MetroSetComboBox;
-                var bocfilter = boc.SelectedItem.ToString();
-                BindingSource.Filter = $"FundName = '{Filter3.SelectedItem.ToString()}' AND BocName = '{bocfilter}'";
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message + ex.StackTrace);
-            }
         }
 
         private void SQLiteData_Load(object sender, EventArgs e)
@@ -203,7 +138,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message + ex.StackTrace);
+                var error = new Error(ex).ShowDialog();
             }
         }
 
@@ -225,7 +160,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message + ex.StackTrace);
+                var error = new Error(ex).ShowDialog();
             }
         }
 
@@ -252,7 +187,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message + ex.StackTrace);
+                var error = new Error(ex).ShowDialog();
             }
         }
 
@@ -273,7 +208,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message + ex.StackTrace);
+                var error = new Error(ex).ShowDialog();
             }
         }
 
@@ -300,7 +235,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message + ex.StackTrace);
+                var error = new Error(ex).ShowDialog();
             }
         }
 
@@ -324,7 +259,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message + ex.StackTrace);
+                var error = new Error(ex).ShowDialog();
             }
         }
 
@@ -336,11 +271,6 @@ namespace BudgetExecution
         private void NextButton_OnClick(object sender, EventArgs e)
         {
             BindingSource.MoveNext();
-        }
-
-        private void TabControlTabPage_Click(object sender, EventArgs e)
-        {
-
         }
 
         internal void PopulateFilterButtons(FlowLayoutPanel control, string[] list)
@@ -370,7 +300,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
+                var error = new Error(ex).ShowDialog();
             }
         }
 
@@ -386,7 +316,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
+                var error = new Error(ex).ShowDialog();
             }
         }
 
@@ -401,93 +331,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
-            }
-        }
-
-        private void GetFilters(Source source)
-        {
-            try
-            {
-                switch(source)
-                {
-                    case Source.Employees:
-                        foreach(string s in DbData.ProgramElements["HrOrgCodeName"])
-                        {
-                            Filter2.Items.Add(s);
-                            Filter2.Text = "HR ORG";
-                            Filter2.SelectedIndexChanged += Filter1ComboBox_OnSelect;
-                        }
-                        break;
-                    case Source.Reimbursables:
-                        foreach (string s in DbData.ProgramElements["AgreementNumber"])
-                        {
-                            Filter2.Items.Add(s);
-                            Filter2.Text = "AgreementNumber";
-                            Filter2.SelectedIndexChanged += Filter1ComboBox_OnSelect;
-                        }
-                        break;
-                    case Source.Sites:
-                        foreach (string s in DbData.ProgramElements["State"])
-                        {
-                            Filter2.Items.Add(s);
-                            Filter2.Text = "State";
-                            Filter2.SelectedIndexChanged += Filter1ComboBox_OnSelect;
-                        }
-                        break;
-                    default:
-                        foreach (string s in DbData.ProgramElements["Fund"])
-                        {
-                            Filter2.Items.Add(s);
-                            Filter2.Text = "Fund";
-                            Filter2.SelectedIndexChanged += Filter1ComboBox_OnSelect;
-                        }
-                        break;
-
-                }
-
-            }
-            catch(Exception ex)
-            {
-                MessageBox.Show(ex.Message + ex.StackTrace);
-            }
-        }
-
-        private void Filter1ComboBox_OnSelect(object sender, EventArgs e)
-        {
-            try
-            {
-                var control = sender as MetroSetComboBox;
-                var filter = control.SelectedItem.ToString();
-                if(Filter3 == null)
-                {
-
-                    BindingSource.Filter = string.Format("Fund = '{0}'", control.SelectedItem.ToString());
-                }
-            }
-            catch(Exception ex)
-            {
-                MessageBox.Show(ex.Message + ex.StackTrace);
-            }
-        }
-
-        private void PopulateFilter2Items()
-        {
-            try
-            {
-                Filter3.Items.Clear();
-                Filter3.Visible = true;
-                var table = (DataTable)BindingSource.DataSource;
-                var query = table.AsEnumerable().Where(p => p.Field<string>("Fund").Equals(Filter2.SelectedItem.ToString()))
-                        .Select(p => p).Distinct().CopyToDataTable();
-                foreach (var row in query.AsEnumerable().Select(p => p.Field<string>("BocName")).Distinct().ToArray())
-                {
-                    Filter3.Items.Add(row);
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message + ex.StackTrace);
+                var error = new Error(ex).ShowDialog();
             }
         }
         
@@ -512,7 +356,7 @@ namespace BudgetExecution
             catch (Exception ex)
             {
 
-                MessageBox.Show(ex.Message + ex.StackTrace);
+                var error = new Error(ex).ShowDialog();
             }
         }
 
@@ -526,37 +370,10 @@ namespace BudgetExecution
             catch (Exception ex)
             {
 
-                MessageBox.Show(ex.Message + ex.StackTrace);
+                var error = new Error(ex).ShowDialog();
             }
         }
 
-        private void RefreshButton_OnClick(object sender, EventArgs e)
-        {
-            if (DbData != null)
-            {
-                try
-                {
-                    BindingSource.Filter = null;
-                    Navigator.BindingSource = BindingSource;
-                    Grid.DataSource = BindingSource;
-                    label6.Text = DbData.GetTotal(DbData.DbTable).ToString("c");
-                    label12.Text = DbData.GetCount(DbData.DbTable).ToString();
-                    Filter2.Items.Clear();
-                    Filter3.Items.Clear();
-                    PopulateFilterItems(Filter1.SelectedItem.ToString(), DbData, Filter2, label2);
-                    label2.Visible = false;
-                    Filter2.Visible = false;
-                    label3.Visible = false;
-                    Filter3.Visible = false;
-                    label4.Visible = false;
-                    Filter4.Visible = false;
-                }
-                catch (System.Exception ex)
-                {
-                    MessageBox.Show(ex.Message + ex.StackTrace);
-                }
-            }
-        }
 
         private void HideTopGridLabels()
         {
@@ -578,7 +395,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message + ex.TargetSite);
+                var error = new Error(ex).ShowDialog();
             }
         }
 
@@ -821,13 +638,13 @@ namespace BudgetExecution
         {
             try
             {
-                var control = sender as MetroSetComboBox;
-                F1 = control.SelectedItem.ToString();
-                C1 = control.Tag.ToString();
-                BindingSource.Filter = $"{C1} = '{F1}'";
-                Table = DbData.DbTable.AsEnumerable()
-                    .Where(p => p.Field<string>(C1).Equals(F1))
-                    .Select(p => p).CopyToDataTable();
+                var filter = sender as MetroSetComboBox;
+                F1 = filter.SelectedItem.ToString();
+                C1 = (PrcField)Enum.Parse(typeof(PrcField), filter.Tag.ToString());
+                var tbl = TableFilter(Table, C1, F1);
+                BindingSource.DataSource = tbl;
+                label6.Text = DbData.GetTotal(tbl).ToString("c");
+                label12.Text = DbData.GetCount(tbl).ToString();
             }
             catch (Exception ex)
             {
@@ -840,21 +657,64 @@ namespace BudgetExecution
         {
             try
             {
-                var control = sender as MetroSetComboBox;
-                F2 = control.SelectedItem.ToString();
-                C2 = control.Tag.ToString();
-                BindingSource.Filter = $"{C1} = '{F1}' AND {C2} = '{F2}'";
-                Table = DbData.DbTable.AsEnumerable()
-                    .Where(p => p.Field<string>(C1).Equals(F1))
-                    .Where(p => p.Field<string>(C2).Equals(F2))
-                    .Select(p => p).CopyToDataTable();
+                var filter = sender as MetroSetComboBox;
+                F2 = filter.SelectedItem.ToString();
+                C2 = (PrcField)Enum.Parse(typeof(PrcField), filter.Tag.ToString());
+                var tbl = TableFilter(Table, C1, F1);
+                var tbl2 = TableFilter(tbl, C2, F2);
+                BindingSource.DataSource = tbl2;
+                label6.Text = DbData.GetTotal(tbl2).ToString("c");
+                label12.Text = DbData.GetCount(tbl2).ToString();
             }
             catch (Exception ex)
             {
-                var errorMessage = new ErrorMessage(ex);
+                var errorMessage = new Error(ex);
                 errorMessage.ShowDialog();
             }
+        }
 
+        private void Filter3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                var filter = sender as MetroSetComboBox;
+                F3 = filter.SelectedItem.ToString();
+                C3 = (PrcField)Enum.Parse(typeof(PrcField), filter.Tag.ToString());
+                var tbl = TableFilter(Table, C1, F1);
+                var tbl2 = TableFilter(tbl, C2, F2);
+                var tbl3 = TableFilter(tbl2, C3, F3);
+                BindingSource.DataSource = tbl3;
+                label6.Text = DbData.GetTotal(tbl3).ToString("c");
+                label12.Text = DbData.GetCount(tbl3).ToString();
+            }
+            catch (Exception ex)
+            {
+                var errorMessage = new Error(ex);
+                errorMessage.ShowDialog();
+            }
+        }
+
+        private void RefreshButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                BindingSource.Filter = null;
+                BindingSource.DataSource = Table;
+                Navigator.BindingSource = BindingSource;
+                Grid.DataSource = BindingSource;
+                Filter2.Items.Clear();
+                Filter3.Items.Clear();
+                label2.Visible = false;
+                Filter2.Visible = false;
+                label3.Visible = false;
+                Filter3.Visible = false;
+                label4.Visible = false;
+                Filter4.Visible = false;
+            }
+            catch (System.Exception ex)
+            {
+                var error = new Error(ex).ShowDialog();
+            }      
         }
     }
 }

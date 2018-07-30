@@ -7,6 +7,7 @@ namespace BudgetExecution
     using System;
     using System.Collections.Generic;
     using System.Data;
+    using System.Linq;
     using System.Windows.Forms;
 
     public static class Info
@@ -26,9 +27,66 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message.ToString() + ex.StackTrace.ToString());
+                var error = new Error(ex).ShowDialog();
                 return null;
             }
+        } 
+
+        public static string[] GetCodes(DataTable table, string column)
+        {
+            try
+            {
+                if (table != null && table.Columns.Contains(column))
+                {
+                    return table.AsEnumerable().Select(p => p.Field<string>(column)).Distinct().ToArray();
+                }
+
+                return null;
+            }
+            catch (Exception ex)
+            {
+                var error = new Error(ex).ShowDialog();
+                return null;
+            }
+        }
+
+        public static Dictionary<string, string[]> GetProgramElements(DataTable table, string column)
+        {
+            if (table != null && table.Columns.Contains(column))
+            {
+                try
+                {
+                    var data = new Dictionary<string, string[]>();
+                    foreach (DataColumn dc in table.Columns)
+                    {
+                        if (dc.ColumnName.Equals("ID") || dc.ColumnName.Equals("Amount") || dc.ColumnName.Contains("Obligation") || dc.ColumnName.Contains("Commitment"))
+                        {
+                            continue;
+                        }
+
+                        data.Add(dc.ColumnName, table.AsEnumerable().Select(p => p.Field<string>(column)).Distinct().ToArray());
+                    }
+
+                    if (data.ContainsKey("ID"))
+                    {
+                        data.Remove("ID");
+                    }
+
+                    if (data.ContainsKey("Amount"))
+                    {
+                        data.Remove("Amount");
+                    }
+
+                    return data;
+                }
+                catch (Exception ex)
+                {
+                    var error = new Error(ex).ShowDialog();
+                    return null;
+                }
+
+            }
+            return null;
         }
 
         public static string[] AgencyFundCodes = Enum.GetNames(typeof(FundCode));
@@ -182,7 +240,7 @@ namespace BudgetExecution
             }
             catch (System.Exception ex)
             {
-                MessageBox.Show(ex.Message + ex.StackTrace);
+                var error = new Error(ex).ShowDialog();
                 return null;
             }
         }
@@ -567,7 +625,7 @@ namespace BudgetExecution
             }
             catch (System.Exception ex)
             {
-                MessageBox.Show(ex.Message + ex.StackTrace);
+                var error = new Error(ex).ShowDialog();
                 return null;
             }
         }
@@ -590,7 +648,7 @@ namespace BudgetExecution
             }
             catch (System.Exception ex)
             {
-                MessageBox.Show(ex.Message + ex.StackTrace);
+                var error = new Error(ex).ShowDialog();
                 return null;
             }
         }
@@ -625,7 +683,7 @@ namespace BudgetExecution
             }
             catch (System.Exception ex)
             {
-                MessageBox.Show(ex.Message + ex.StackTrace);
+                var error = new Error(ex).ShowDialog();
                 return null;
             }
         }
@@ -672,7 +730,7 @@ namespace BudgetExecution
             }
             catch (System.Exception ex)
             {
-                MessageBox.Show(ex.Message + ex.StackTrace);
+                var error = new Error(ex).ShowDialog();
                 return null;
             }
         }
@@ -790,7 +848,7 @@ namespace BudgetExecution
             }
             catch (System.Exception ex)
             {
-                MessageBox.Show(ex.Message + ex.StackTrace);
+                var error = new Error(ex).ShowDialog();
                 return null;
             }
         }
@@ -814,7 +872,7 @@ namespace BudgetExecution
             }
             catch (System.Exception ex)
             {
-                MessageBox.Show(ex.Message + ex.StackTrace);
+                var error = new Error(ex).ShowDialog();
                 return false;
             }
         }
@@ -838,7 +896,7 @@ namespace BudgetExecution
             }
             catch (System.Exception ex)
             {
-                MessageBox.Show(ex.Message + ex.StackTrace);
+                var error = new Error(ex).ShowDialog();
                 return false;
             }
         }

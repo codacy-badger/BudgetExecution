@@ -1663,7 +1663,7 @@ namespace BudgetExecution
             // tabControlAdv1
             // 
             this.tabControlAdv1.ActiveTabForeColor = System.Drawing.Color.Empty;
-            this.tabControlAdv1.BeforeTouchSize = new System.Drawing.Size(1588, 934);
+            this.tabControlAdv1.BeforeTouchSize = new System.Drawing.Size(1588, 953);
             this.tabControlAdv1.CloseButtonForeColor = System.Drawing.Color.Empty;
             this.tabControlAdv1.CloseButtonHoverForeColor = System.Drawing.Color.Empty;
             this.tabControlAdv1.CloseButtonPressedForeColor = System.Drawing.Color.Empty;
@@ -1671,13 +1671,14 @@ namespace BudgetExecution
             this.tabControlAdv1.Controls.Add(this.tabPageAdv2);
             this.tabControlAdv1.Controls.Add(this.tabPageAdv3);
             this.tabControlAdv1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControlAdv1.FixedSingleBorderColor = System.Drawing.Color.SteelBlue;
             this.tabControlAdv1.FocusOnTabClick = false;
             this.tabControlAdv1.InActiveTabForeColor = System.Drawing.Color.Empty;
             this.tabControlAdv1.Location = new System.Drawing.Point(0, 0);
             this.tabControlAdv1.Name = "tabControlAdv1";
             this.tabControlAdv1.SeparatorColor = System.Drawing.SystemColors.ControlDark;
             this.tabControlAdv1.ShowSeparator = false;
-            this.tabControlAdv1.Size = new System.Drawing.Size(1588, 934);
+            this.tabControlAdv1.Size = new System.Drawing.Size(1588, 953);
             this.tabControlAdv1.TabIndex = 2;
             this.tabControlAdv1.TabPanelBackColor = System.Drawing.Color.Black;
             this.tabControlAdv1.TabStyle = typeof(Syncfusion.Windows.Forms.Tools.TabRendererMetro);
@@ -1691,7 +1692,7 @@ namespace BudgetExecution
             this.tabPageAdv1.Location = new System.Drawing.Point(1, 29);
             this.tabPageAdv1.Name = "tabPageAdv1";
             this.tabPageAdv1.ShowCloseButton = true;
-            this.tabPageAdv1.Size = new System.Drawing.Size(1585, 903);
+            this.tabPageAdv1.Size = new System.Drawing.Size(1585, 922);
             this.tabPageAdv1.TabIndex = 1;
             this.tabPageAdv1.Text = "tabPageAdv1";
             this.tabPageAdv1.ThemesEnabled = false;
@@ -2578,7 +2579,7 @@ namespace BudgetExecution
             this.tabPageAdv2.Location = new System.Drawing.Point(1, 29);
             this.tabPageAdv2.Name = "tabPageAdv2";
             this.tabPageAdv2.ShowCloseButton = true;
-            this.tabPageAdv2.Size = new System.Drawing.Size(1585, 903);
+            this.tabPageAdv2.Size = new System.Drawing.Size(1585, 913);
             this.tabPageAdv2.TabIndex = 2;
             this.tabPageAdv2.Text = "tabPageAdv2";
             this.tabPageAdv2.ThemesEnabled = false;
@@ -2592,7 +2593,7 @@ namespace BudgetExecution
             this.tabPageAdv3.Location = new System.Drawing.Point(1, 29);
             this.tabPageAdv3.Name = "tabPageAdv3";
             this.tabPageAdv3.ShowCloseButton = true;
-            this.tabPageAdv3.Size = new System.Drawing.Size(1585, 903);
+            this.tabPageAdv3.Size = new System.Drawing.Size(1585, 913);
             this.tabPageAdv3.TabIndex = 3;
             this.tabPageAdv3.Text = "tabPageAdv3";
             this.tabPageAdv3.ThemesEnabled = false;
@@ -2604,15 +2605,15 @@ namespace BudgetExecution
             this.BackColor = System.Drawing.Color.Black;
             this.BorderColor = System.Drawing.SystemColors.MenuHighlight;
             this.CaptionBarColor = System.Drawing.Color.Black;
-            this.CaptionBarHeight = 60;
+            this.CaptionBarHeight = 40;
             this.CaptionForeColor = System.Drawing.SystemColors.MenuHighlight;
             captionImage1.BackColor = System.Drawing.Color.Black;
             captionImage1.Image = ((System.Drawing.Image)(resources.GetObject("captionImage1.Image")));
-            captionImage1.Location = new System.Drawing.Point(10, 10);
+            captionImage1.Location = new System.Drawing.Point(10, 5);
             captionImage1.Name = "CaptionImage1";
-            captionImage1.Size = new System.Drawing.Size(30, 25);
+            captionImage1.Size = new System.Drawing.Size(40, 25);
             this.CaptionImages.Add(captionImage1);
-            this.ClientSize = new System.Drawing.Size(1588, 934);
+            this.ClientSize = new System.Drawing.Size(1588, 953);
             this.Controls.Add(this.tabControlAdv1);
             this.ForeColor = System.Drawing.SystemColors.Info;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

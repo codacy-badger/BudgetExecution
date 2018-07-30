@@ -77,13 +77,13 @@ namespace BudgetExecution
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.NextButton = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator8 = new System.Windows.Forms.ToolStripSeparator();
-            this.CopyButton = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator11 = new System.Windows.Forms.ToolStripSeparator();
             this.UpdateButton = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator10 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripSeparator11 = new System.Windows.Forms.ToolStripSeparator();
             this.AddButton = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator9 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripSeparator10 = new System.Windows.Forms.ToolStripSeparator();
             this.RefreshButton = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator9 = new System.Windows.Forms.ToolStripSeparator();
+            this.DeleteButton = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton7 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
@@ -334,7 +334,7 @@ namespace BudgetExecution
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 132F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 143F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 120F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 133F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 134F));
             this.tableLayoutPanel1.Controls.Add(this.label5, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.label10, 5, 0);
             this.tableLayoutPanel1.Controls.Add(this.label6, 1, 0);
@@ -366,7 +366,7 @@ namespace BudgetExecution
             this.label10.AutoSize = true;
             this.label10.Dock = System.Windows.Forms.DockStyle.Left;
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(665, 0);
+            this.label10.Location = new System.Drawing.Point(664, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(60, 45);
             this.label10.TabIndex = 158;
@@ -388,7 +388,7 @@ namespace BudgetExecution
             this.label9.AutoSize = true;
             this.label9.Dock = System.Windows.Forms.DockStyle.Right;
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(608, 0);
+            this.label9.Location = new System.Drawing.Point(607, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(51, 45);
             this.label9.TabIndex = 157;
@@ -399,7 +399,7 @@ namespace BudgetExecution
             this.label7.AutoSize = true;
             this.label7.Dock = System.Windows.Forms.DockStyle.Right;
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(293, 0);
+            this.label7.Location = new System.Drawing.Point(292, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(51, 45);
             this.label7.TabIndex = 155;
@@ -410,7 +410,7 @@ namespace BudgetExecution
             this.label8.AutoSize = true;
             this.label8.Dock = System.Windows.Forms.DockStyle.Left;
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(350, 0);
+            this.label8.Location = new System.Drawing.Point(349, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(51, 45);
             this.label8.TabIndex = 156;
@@ -421,7 +421,7 @@ namespace BudgetExecution
             this.label11.AutoSize = true;
             this.label11.Dock = System.Windows.Forms.DockStyle.Right;
             this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(845, 0);
+            this.label11.Location = new System.Drawing.Point(844, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(77, 45);
             this.label11.TabIndex = 159;
@@ -432,7 +432,7 @@ namespace BudgetExecution
             this.label12.AutoSize = true;
             this.label12.Dock = System.Windows.Forms.DockStyle.Left;
             this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(928, 0);
+            this.label12.Location = new System.Drawing.Point(927, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(60, 45);
             this.label12.TabIndex = 160;
@@ -509,13 +509,13 @@ namespace BudgetExecution
             this.toolStripSeparator3,
             this.NextButton,
             this.toolStripSeparator8,
-            this.CopyButton,
-            this.toolStripSeparator11,
             this.UpdateButton,
-            this.toolStripSeparator10,
+            this.toolStripSeparator11,
             this.AddButton,
-            this.toolStripSeparator9,
+            this.toolStripSeparator10,
             this.RefreshButton,
+            this.toolStripSeparator9,
+            this.DeleteButton,
             this.toolStripSeparator4,
             this.toolStripButton7,
             this.toolStripSeparator5,
@@ -587,21 +587,6 @@ namespace BudgetExecution
             this.toolStripSeparator8.Name = "toolStripSeparator8";
             this.toolStripSeparator8.Size = new System.Drawing.Size(6, 31);
             // 
-            // CopyButton
-            // 
-            this.CopyButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.CopyButton.Image = ((System.Drawing.Image)(resources.GetObject("CopyButton.Image")));
-            this.CopyButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.CopyButton.Name = "CopyButton";
-            this.CopyButton.Size = new System.Drawing.Size(24, 28);
-            this.CopyButton.Text = "toolStripButton11";
-            this.CopyButton.Click += new System.EventHandler(this.CopyButton_OnClick);
-            // 
-            // toolStripSeparator11
-            // 
-            this.toolStripSeparator11.Name = "toolStripSeparator11";
-            this.toolStripSeparator11.Size = new System.Drawing.Size(6, 31);
-            // 
             // UpdateButton
             // 
             this.UpdateButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -609,13 +594,13 @@ namespace BudgetExecution
             this.UpdateButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.UpdateButton.Name = "UpdateButton";
             this.UpdateButton.Size = new System.Drawing.Size(24, 28);
-            this.UpdateButton.Text = "toolStripButton10";
-            this.UpdateButton.Click += new System.EventHandler(this.AddButton_OnClick);
+            this.UpdateButton.Text = "toolStripButton11";
+            this.UpdateButton.Click += new System.EventHandler(this.CopyButton_OnClick);
             // 
-            // toolStripSeparator10
+            // toolStripSeparator11
             // 
-            this.toolStripSeparator10.Name = "toolStripSeparator10";
-            this.toolStripSeparator10.Size = new System.Drawing.Size(6, 31);
+            this.toolStripSeparator11.Name = "toolStripSeparator11";
+            this.toolStripSeparator11.Size = new System.Drawing.Size(6, 31);
             // 
             // AddButton
             // 
@@ -624,12 +609,13 @@ namespace BudgetExecution
             this.AddButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.AddButton.Name = "AddButton";
             this.AddButton.Size = new System.Drawing.Size(24, 28);
-            this.AddButton.Text = "toolStripButton2";
+            this.AddButton.Text = "toolStripButton10";
+            this.AddButton.Click += new System.EventHandler(this.AddButton_OnClick);
             // 
-            // toolStripSeparator9
+            // toolStripSeparator10
             // 
-            this.toolStripSeparator9.Name = "toolStripSeparator9";
-            this.toolStripSeparator9.Size = new System.Drawing.Size(6, 31);
+            this.toolStripSeparator10.Name = "toolStripSeparator10";
+            this.toolStripSeparator10.Size = new System.Drawing.Size(6, 31);
             // 
             // RefreshButton
             // 
@@ -638,7 +624,22 @@ namespace BudgetExecution
             this.RefreshButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.RefreshButton.Name = "RefreshButton";
             this.RefreshButton.Size = new System.Drawing.Size(24, 28);
-            this.RefreshButton.Text = "toolStripButton1";
+            this.RefreshButton.Text = "toolStripButton2";
+            this.RefreshButton.Click += new System.EventHandler(this.RefreshButton_Click);
+            // 
+            // toolStripSeparator9
+            // 
+            this.toolStripSeparator9.Name = "toolStripSeparator9";
+            this.toolStripSeparator9.Size = new System.Drawing.Size(6, 31);
+            // 
+            // DeleteButton
+            // 
+            this.DeleteButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.DeleteButton.Image = ((System.Drawing.Image)(resources.GetObject("DeleteButton.Image")));
+            this.DeleteButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.DeleteButton.Name = "DeleteButton";
+            this.DeleteButton.Size = new System.Drawing.Size(24, 28);
+            this.DeleteButton.Text = "toolStripButton1";
             // 
             // toolStripSeparator4
             // 
@@ -847,6 +848,7 @@ namespace BudgetExecution
             this.Filter3.ThemeAuthor = "Narwin";
             this.Filter3.ThemeName = "MetroDark";
             this.Filter3.ValueMember = "Fund";
+            this.Filter3.SelectedIndexChanged += new System.EventHandler(this.Filter3_SelectedIndexChanged);
             // 
             // metroPanel4
             // 
@@ -1110,9 +1112,9 @@ namespace BudgetExecution
         private System.Windows.Forms.ToolStripTextBox toolStripTextBox1;
         private System.Windows.Forms.ToolStripButton NextButton;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
-        private System.Windows.Forms.ToolStripButton RefreshButton;
+        private System.Windows.Forms.ToolStripButton DeleteButton;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
-        private System.Windows.Forms.ToolStripButton AddButton;
+        private System.Windows.Forms.ToolStripButton RefreshButton;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
         private System.Windows.Forms.ToolStripButton toolStripButton7;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator6;
@@ -1133,11 +1135,11 @@ namespace BudgetExecution
         private Syncfusion.Windows.Forms.Tools.TabPageAdv FilterTab;
         private Syncfusion.Windows.Forms.Tools.TabPageAdv FunctionTab;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator8;
-        private System.Windows.Forms.ToolStripButton UpdateButton;
+        private System.Windows.Forms.ToolStripButton AddButton;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator11;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator10;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator9;
-        private System.Windows.Forms.ToolStripButton CopyButton;
+        private System.Windows.Forms.ToolStripButton UpdateButton;
         private MetroSet_UI.Controls.MetroSetComboBox Filter1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label label5;

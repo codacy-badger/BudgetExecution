@@ -111,7 +111,7 @@ namespace BudgetExecution
             }
             catch (System.Exception ex)
             {
-                MessageBox.Show(ex.Message + ex.StackTrace);
+                var error = new Error(ex).ShowDialog();
                 return null;
             }
         }

@@ -1,11 +1,6 @@
-#region Copyright Syncfusion Inc. 2001-2018.
-// Copyright Syncfusion Inc. 2001-2018. All rights reserved.
-// Use of this code is subject to the terms of our license.
-// A copy of the current license can be obtained at any time by e-mailing
-// licensing@syncfusion.com. Any infringement will be prosecuted under
-// applicable laws. 
-#endregion
-
+// <copyright file="ErrorMessage.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
 
 namespace BudgetExecution
 {
@@ -16,25 +11,26 @@ namespace BudgetExecution
     using System.Drawing;
     using System.Text;
     using System.Windows.Forms;
+    using Syncfusion.Windows.Forms;
 
-    public partial class ErrorMessage : Syncfusion.Windows.Forms.MetroForm
+    public partial class Error : MetroForm
     {
-        public ErrorMessage()
+        public Error()
         {
             InitializeComponent();
         }
         
-        public ErrorMessage(Exception ex)
+        public Error(Exception ex)
         {
             InitializeComponent();
-            Error = ex.Message;
+            Message = ex.Message;
             Stack = ex.StackTrace;
             Target = ex.TargetSite.ReflectedType.Name;
-            this.Info.Text = "\n\n\n    " + Error;
+            this.Info.Text = "\n\n\n    " + Message;
         }
 
         // PROPERTIES
-        public string Error { get; set; }
+        public string Message { get; set; }
         string Stack { get; }
         string Target { get; }
 
