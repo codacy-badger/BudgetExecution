@@ -57,7 +57,7 @@ namespace BudgetExecution
         public PrcMetric(DataBuilder data, PrcField prcfilter, string filter)
         {
             DbData = data;
-            Table = Info.FilterTable(DbData.DbTable, prcfilter, filter);
+            Table = Info.FilterTableRows(DbData.DbTable, prcfilter, filter);
             ProgramElements = GetProgramElements(Table);
             Total = GetTotals(Table);
             Count = Table.Rows.Count;
@@ -93,7 +93,7 @@ namespace BudgetExecution
 
         public PrcMetric(DataTable table, PrcField prcfilter, string filter)
         {
-            Table = Info.FilterTable(table, prcfilter, filter);
+            Table = Info.FilterTableRows(table, prcfilter, filter);
             ProgramElements = GetProgramElements(Table);
             Total = GetTotals(Table);
             Count = Table.Rows.Count;

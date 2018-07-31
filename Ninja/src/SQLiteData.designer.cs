@@ -327,14 +327,14 @@ namespace BudgetExecution
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 8;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 18.68512F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 81.31488F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 22.88732F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 77.11268F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 61F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 183F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 132F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 143F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 120F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 134F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 135F));
             this.tableLayoutPanel1.Controls.Add(this.label5, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.label10, 5, 0);
             this.tableLayoutPanel1.Controls.Add(this.label6, 1, 0);
@@ -347,7 +347,7 @@ namespace BudgetExecution
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1059, 45);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1059, 34);
             this.tableLayoutPanel1.TabIndex = 160;
             // 
             // label5
@@ -357,7 +357,7 @@ namespace BudgetExecution
             this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(3, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(44, 45);
+            this.label5.Size = new System.Drawing.Size(52, 34);
             this.label5.TabIndex = 153;
             this.label5.Text = "Total: ";
             // 
@@ -366,9 +366,9 @@ namespace BudgetExecution
             this.label10.AutoSize = true;
             this.label10.Dock = System.Windows.Forms.DockStyle.Left;
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(664, 0);
+            this.label10.Location = new System.Drawing.Point(663, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(60, 45);
+            this.label10.Size = new System.Drawing.Size(60, 34);
             this.label10.TabIndex = 158;
             this.label10.Text = "label10";
             // 
@@ -377,9 +377,9 @@ namespace BudgetExecution
             this.label6.AutoSize = true;
             this.label6.Dock = System.Windows.Forms.DockStyle.Left;
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(56, 0);
+            this.label6.Location = new System.Drawing.Point(68, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(51, 45);
+            this.label6.Size = new System.Drawing.Size(51, 34);
             this.label6.TabIndex = 154;
             this.label6.Text = "label6";
             // 
@@ -388,9 +388,9 @@ namespace BudgetExecution
             this.label9.AutoSize = true;
             this.label9.Dock = System.Windows.Forms.DockStyle.Right;
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(607, 0);
+            this.label9.Location = new System.Drawing.Point(606, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(51, 45);
+            this.label9.Size = new System.Drawing.Size(51, 34);
             this.label9.TabIndex = 157;
             this.label9.Text = "label9";
             // 
@@ -399,9 +399,9 @@ namespace BudgetExecution
             this.label7.AutoSize = true;
             this.label7.Dock = System.Windows.Forms.DockStyle.Right;
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(292, 0);
+            this.label7.Location = new System.Drawing.Point(291, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(51, 45);
+            this.label7.Size = new System.Drawing.Size(51, 34);
             this.label7.TabIndex = 155;
             this.label7.Text = "label7";
             // 
@@ -410,9 +410,9 @@ namespace BudgetExecution
             this.label8.AutoSize = true;
             this.label8.Dock = System.Windows.Forms.DockStyle.Left;
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(349, 0);
+            this.label8.Location = new System.Drawing.Point(348, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(51, 45);
+            this.label8.Size = new System.Drawing.Size(51, 34);
             this.label8.TabIndex = 156;
             this.label8.Text = "label8";
             // 
@@ -421,9 +421,9 @@ namespace BudgetExecution
             this.label11.AutoSize = true;
             this.label11.Dock = System.Windows.Forms.DockStyle.Right;
             this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(844, 0);
+            this.label11.Location = new System.Drawing.Point(843, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(77, 45);
+            this.label11.Size = new System.Drawing.Size(77, 34);
             this.label11.TabIndex = 159;
             this.label11.Text = "Recrods :";
             // 
@@ -432,9 +432,9 @@ namespace BudgetExecution
             this.label12.AutoSize = true;
             this.label12.Dock = System.Windows.Forms.DockStyle.Left;
             this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(927, 0);
+            this.label12.Location = new System.Drawing.Point(926, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(60, 45);
+            this.label12.Size = new System.Drawing.Size(60, 34);
             this.label12.TabIndex = 160;
             this.label12.Text = "label12";
             // 

@@ -52,7 +52,7 @@ namespace BudgetExecution
             ProgramElements = DbData.GetProgramElements(DbData.DbTable);
             Text = $"{Source.ToString()} Database";
             FunctionTab.TabVisible = false;
-            TableFilter = new DataFilter(Info.FilterTable);
+            TableFilter = new DataFilter(Info.FilterTableRows);
         }
         // PROPERTIES
         private Source Source { get; }
@@ -104,14 +104,6 @@ namespace BudgetExecution
             {
                 FilterControl1.Items.Add(s);
             }
-        }
-
-        private void GetGridDataSource(object sender, EventArgs e)
-        {
-            var listbox = sender as ListBox;
-            var name = listbox.SelectedItem.ToString();
-            var source = (Source)Enum.Parse(typeof(Source), name.ToString());
-            BindingSource.DataSource = new DataBuilder(source, Provider.SQLite).GetDataTable(source);
         }
 
         private void SQLiteData_Load(object sender, EventArgs e)

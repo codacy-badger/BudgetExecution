@@ -18,7 +18,7 @@ namespace BudgetExecution
         public static string FunctionImages = @"C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\Resources\FunctionImages";
         public static string DatabaseImages = @"C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\Resources\Database";
 
-        public static DataTable FilterTable(DataTable table, PrcField prcfilter, string filter)
+        public static DataTable FilterTableRows(DataTable table, PrcField prcfilter, string filter)
         {
             try
             {
@@ -32,7 +32,7 @@ namespace BudgetExecution
             }
         } 
 
-        public static string[] GetCodes(DataTable table, string column)
+        public static string[] GetColumnValues(DataTable table, string column)
         {
             try
             {
