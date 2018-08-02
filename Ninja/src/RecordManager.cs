@@ -27,10 +27,10 @@ namespace BudgetExecution
             DbTable = DbData.GetDataTable();
             BindingSource = new BindingSource();
             BindingSource.DataSource = DbTable;
-            BindTextBoxes(this.BindingSource, this.DbTable);
-            RecordNavigator1.BindingSource = this.BindingSource;
-            RecordNavigator1.BindingSource = this.BindingSource;
-            RecordNavigator2.BindingSource = this.BindingSource;
+            BindTextBoxes(BindingSource, DbTable);
+            RecordNavigator1.BindingSource = BindingSource;
+            RecordNavigator1.BindingSource = BindingSource;
+            RecordNavigator2.BindingSource = BindingSource;
             AddNewTab.TabVisible = false;
         }
 
@@ -44,9 +44,9 @@ namespace BudgetExecution
             DbTable = DbData.GetDataTable();
             BindingSource = new BindingSource();
             BindingSource.DataSource = DbTable;
-            BindTextBoxes(this.BindingSource, this.DbTable);
-            RecordNavigator1.BindingSource = this.BindingSource;
-            RecordNavigator2.BindingSource = this.BindingSource;
+            BindTextBoxes(BindingSource, DbTable);
+            RecordNavigator1.BindingSource = BindingSource;
+            RecordNavigator2.BindingSource = BindingSource;
             AddNewTab.TabVisible = false;
         }
 
@@ -59,9 +59,9 @@ namespace BudgetExecution
             DbTable = DbData.GetDataTable();
             BindingSource = new BindingSource();
             BindingSource.DataSource = DbTable;
-            BindTextBoxes(this.BindingSource, this.DbTable);
-            RecordNavigator1.BindingSource = this.BindingSource;
-            RecordNavigator2.BindingSource = this.BindingSource;
+            BindTextBoxes(BindingSource, DbTable);
+            RecordNavigator1.BindingSource = BindingSource;
+            RecordNavigator2.BindingSource = BindingSource;
             AddNewTab.TabVisible = false;
         }
 
@@ -94,7 +94,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                var error = new Error(ex).ShowDialog();
+                var  _ = new Error(ex).ShowDialog();
             }
         }
 
@@ -108,7 +108,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                var error = new Error(ex).ShowDialog();
+                var  _ = new Error(ex).ShowDialog();
             }
 
         }
@@ -127,7 +127,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                var error = new Error(ex).ShowDialog();
+                var  _ = new Error(ex).ShowDialog();
                 return null;
             }
         }
@@ -146,7 +146,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                var error = new Error(ex).ShowDialog();
+                var  _ = new Error(ex).ShowDialog();
                 return null;
             }
         }
@@ -171,7 +171,7 @@ namespace BudgetExecution
                 for (int i = 0; i < cn.Count; i++)
                 {
                     tbx[i].Visible = true;
-                    tbx[i].DataBindings.Add(new Binding("Text", this.BindingSource.DataSource, dt.Columns[i].ColumnName));
+                    tbx[i].DataBindings.Add(new Binding("Text", BindingSource.DataSource, dt.Columns[i].ColumnName));
                     lbl[i].Visible = true;
                     lbl[i].Text = dt.Columns[i].ColumnName;
                 }
@@ -180,7 +180,7 @@ namespace BudgetExecution
             catch (Exception ex)
             {
 
-                var error = new Error(ex).ShowDialog();
+                var  _ = new Error(ex).ShowDialog();
             }
 
         }
@@ -205,7 +205,7 @@ namespace BudgetExecution
                 for (int i = 0; i < cn.Count; i++)
                 {
                     tbx[i].Visible = true;
-                    tbx[i].DataBindings.Add(new Binding("Text", this.BindingSource.DataSource, cn[i]));
+                    tbx[i].DataBindings.Add(new Binding("Text", BindingSource.DataSource, cn[i]));
                     lbl[i].Visible = true;
                     lbl[i].Text = cn[i];
                 }
@@ -214,7 +214,7 @@ namespace BudgetExecution
             catch (Exception ex)
             {
 
-                var error = new Error(ex).ShowDialog();
+                var  _ = new Error(ex).ShowDialog();
             }
             
         }
@@ -230,7 +230,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                var error = new Error(ex).ShowDialog();
+                var  _ = new Error(ex).ShowDialog();
                 return null;
             }
         }

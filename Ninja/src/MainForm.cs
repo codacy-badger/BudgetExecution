@@ -22,9 +22,9 @@ namespace BudgetExecution
             Timer = new Timer();
             Values = new Dictionary<string, double>[]
             {
-                Metric.GetChartTotals(R6.DbTable, PrcField.Fund), Metric.GetChartTotals(R6.DbTable, PrcField.BOC),
-                Metric.GetChartTotals(D6.DbTable, PrcField.Fund), Metric.GetChartTotals(R6.DbTable, PrcField.NPM), Metric.GetChartTotals(D6.DbTable, PrcField.NPM),
-                Metric.GetChartTotals(R6.DbTable, PrcField.GoalName), Metric.GetChartTotals(D6.DbTable, PrcField.GoalName)
+                Metric.GetChartTotals(R6.DbTable, Field.Fund), Metric.GetChartTotals(R6.DbTable, Field.BOC),
+                Metric.GetChartTotals(D6.DbTable, Field.Fund), Metric.GetChartTotals(R6.DbTable, Field.NPM), Metric.GetChartTotals(D6.DbTable, Field.NPM),
+                Metric.GetChartTotals(R6.DbTable, Field.GoalName), Metric.GetChartTotals(D6.DbTable, Field.GoalName)
             };
             Title = GetChartTitles(Values);
             Chart = new GetChart(GetMainChart);
@@ -68,7 +68,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                var error = new Error(ex).ShowDialog();
+                var  _ = new Error(ex).ShowDialog();
             }
         }
 
@@ -91,7 +91,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                var error = new Error(ex).ShowDialog();
+                var  _ = new Error(ex).ShowDialog();
             }
         }
 
@@ -123,7 +123,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                var error = new Error(ex).ShowDialog();
+                var  _ = new Error(ex).ShowDialog();
                 return null;
             }
         }
@@ -137,7 +137,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                var error = new Error(ex).ShowDialog();
+                var  _ = new Error(ex).ShowDialog();
                 return null;
             }
         }
@@ -151,7 +151,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                var error = new Error(ex).ShowDialog();
+                var  _ = new Error(ex).ShowDialog();
                 return null;
             }
         }

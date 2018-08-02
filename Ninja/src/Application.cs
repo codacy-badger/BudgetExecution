@@ -12,7 +12,9 @@ namespace BudgetExecution
     // Delegates
     public delegate double[] Calculator(DataTable table);
 
-    public delegate DataTable DataFilter(DataTable table, PrcField prcfilter, string filter);
+    public delegate DataTable DataFilter(DataTable table, Field prcfilter, string filter);
+
+    public delegate string[] ColumnFilter(DataTable table, string filter);
 
     public delegate ChartControl GetChart(ChartControl chart, string title, Dictionary<string, double> data);
 
@@ -53,9 +55,11 @@ namespace BudgetExecution
         O1, O2, O3, O4, O5
     }
 
-    public enum PrcField
+    public enum Field
     {
-        ID, BudgetLevel, BFY, RPIO, Fund, FundName, BOC, BocName, Org, RC, Code, NPM, Goal, GoalName, Objective, ObjectiveName, DivisionName, ProgramArea, ProgramAreaName, ProgramProjectCode, ProgramProjectName
+        ID, BudgetLevel, BFY, RPIO, Fund, FundName, BOC, BocName, Org, RC, Code, NPM, Goal, GoalName, Objective,
+        ObjectiveName, DivisionName, ProgramArea, ProgramAreaName, ProgramProjectCode, ProgramProjectName,
+        SiteProjectName, SiteProjectCode, NpmName, AH, DCN, ControlNumber, PurchaseRequest
     }
 
     public enum Provider

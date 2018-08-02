@@ -39,7 +39,7 @@ namespace BudgetExecution
             Chart.ShowToolTips = true;
         }
 
-        public BudgetChart(ChartControl chart, DataBuilder data, PrcField filter)
+        public BudgetChart(ChartControl chart, DataBuilder data, Field filter)
         {
             SeriesType = ChartSeriesType.Column;
             Chart = chart;
@@ -64,7 +64,7 @@ namespace BudgetExecution
             Chart.ShowToolTips = true;
         }
 
-        public BudgetChart(ChartControl chart, DataBuilder data, PrcField filter, Stat value, ChartSeriesType type)
+        public BudgetChart(ChartControl chart, DataBuilder data, Field filter, Stat value, ChartSeriesType type)
         {
             Chart = chart;
             DbData = data;
@@ -88,7 +88,7 @@ namespace BudgetExecution
             Chart.ShowToolTips = true;
         }
 
-        public BudgetChart(ChartControl chart, string[] title, DataBuilder data, PrcField filter, Stat value, ChartSeriesType type)
+        public BudgetChart(ChartControl chart, string[] title, DataBuilder data, Field filter, Stat value, ChartSeriesType type)
         {
             Chart = chart;
             DbData = data;
@@ -114,7 +114,7 @@ namespace BudgetExecution
             
         }
 
-        public BudgetChart(ChartControl chart, string[] title, DataTable table, PrcField filter, Stat value, ChartSeriesType type)
+        public BudgetChart(ChartControl chart, string[] title, DataTable table, Field filter, Stat value, ChartSeriesType type)
         {
             Chart = chart;
             Value = value;
@@ -135,7 +135,7 @@ namespace BudgetExecution
             Chart.ShowToolTips = true;
         }
 
-        public BudgetChart(ChartControl chart, string[] title, Dictionary<string, double> data, PrcField filter, Stat value, ChartSeriesType type)
+        public BudgetChart(ChartControl chart, string[] title, Dictionary<string, double> data, Field filter, Stat value, ChartSeriesType type)
         {
             Chart = chart;
             Value = value;
@@ -156,7 +156,7 @@ namespace BudgetExecution
             Chart.ShowToolTips = true;
         }
 
-        public BudgetChart(ChartControl chart, string[] title, Source source, PrcField filter, Stat value, ChartSeriesType type)
+        public BudgetChart(ChartControl chart, string[] title, Source source, Field filter, Stat value, ChartSeriesType type)
         {
             Chart = chart;
             Source = source;
@@ -181,7 +181,7 @@ namespace BudgetExecution
             Chart.ShowToolTips = true;
         }
 
-        public BudgetChart(ChartControl chart, string[] title, Source source, Dictionary<string, object> param, PrcField filter, Stat value, ChartSeriesType type)
+        public BudgetChart(ChartControl chart, string[] title, Source source, Dictionary<string, object> param, Field filter, Stat value, ChartSeriesType type)
         {
             Chart = chart;
             Source = source;
@@ -227,7 +227,7 @@ namespace BudgetExecution
 
         public Source Source { get; }
 
-        public PrcField Filter { get; }
+        public Field Filter { get; }
 
         public ChartSeriesType SeriesType { get; set; }
 
@@ -287,7 +287,7 @@ namespace BudgetExecution
             }
             catch (System.Exception e)
             {
-                var error = new Error(e).ShowDialog();
+                var  _ = new Error(e).ShowDialog();
                 return null;
             }
         }
@@ -328,7 +328,7 @@ namespace BudgetExecution
             }
             catch (System.Exception e)
             {
-                var error = new Error(e).ShowDialog();
+                var  _ = new Error(e).ShowDialog();
                 return null;
             }
         }
@@ -347,7 +347,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                var error = new Error(ex).ShowDialog();
+                var  _ = new Error(ex).ShowDialog();
                 return null;
             }
         }
@@ -366,7 +366,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                var error = new Error(ex).ShowDialog();
+                var  _ = new Error(ex).ShowDialog();
             }
         }
 
@@ -404,7 +404,7 @@ namespace BudgetExecution
             }
             catch (System.Exception e)
             {
-                var error = new Error(e).ShowDialog();
+                var  _ = new Error(e).ShowDialog();
             }
         }
 
@@ -450,7 +450,7 @@ namespace BudgetExecution
             }
             catch (System.Exception e)
             {
-                var error = new Error(e).ShowDialog();
+                var  _ = new Error(e).ShowDialog();
             }
         }
 
@@ -520,7 +520,7 @@ namespace BudgetExecution
             }
             catch (System.Exception e)
             {
-                var error = new Error(e).ShowDialog();
+                var  _ = new Error(e).ShowDialog();
             }
         }
 
@@ -543,7 +543,7 @@ namespace BudgetExecution
             }
             catch (System.Exception e)
             {
-                var error = new Error(e).ShowDialog();
+                var  _ = new Error(e).ShowDialog();
             }
         }
 
@@ -576,7 +576,7 @@ namespace BudgetExecution
             }
             catch (System.Exception e)
             {
-                var error = new Error(e).ShowDialog();
+                var  _ = new Error(e).ShowDialog();
             }
         }
 
@@ -597,7 +597,7 @@ namespace BudgetExecution
             }
             catch (System.Exception e)
             {
-                var error = new Error(e).ShowDialog();
+                var  _ = new Error(e).ShowDialog();
             }
         }
 
@@ -611,11 +611,11 @@ namespace BudgetExecution
             }
             catch (System.Exception e)
             {
-                var error = new Error(e).ShowDialog();
+                var  _ = new Error(e).ShowDialog();
             }
         }
 
-        internal ChartDataBindModel GetDataBindingSource(Dictionary<string, double> data, PrcField filter)
+        internal ChartDataBindModel GetDataBindingSource(Dictionary<string, double> data, Field filter)
         {
             try
             {
@@ -631,7 +631,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                var error = new Error(ex).ShowDialog();
+                var  _ = new Error(ex).ShowDialog();
                 return null;
             }
         }
@@ -657,7 +657,7 @@ namespace BudgetExecution
             }
             catch (System.Exception e)
             {
-                var error = new Error(e).ShowDialog();
+                var  _ = new Error(e).ShowDialog();
                 return null;
             }
         }
@@ -682,7 +682,7 @@ namespace BudgetExecution
             }
             catch (System.Exception e)
             {
-                var error = new Error(e).ShowDialog();
+                var  _ = new Error(e).ShowDialog();
             }
         }
     }

@@ -82,7 +82,7 @@ namespace BudgetExecution
                 case Function.SQLiteData:
                     var sd = new DatabaseSelector(Info.DatabaseImages);
                     sd.Show();
-                    this.Close();
+                    Close();
                     break;
                 case Function.BudgetTools:
                     var bt = new BudgetTools();
@@ -101,7 +101,7 @@ namespace BudgetExecution
                     pdfdr.Show();
                     break;
             }
-            this.Close();
+            Close();
         }
     }
 }

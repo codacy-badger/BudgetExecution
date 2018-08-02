@@ -15,35 +15,7 @@ namespace BudgetExecution
         // CONSTRUCTORS
         public DataBuilder()
         {
-        }
-
-        public DataBuilder(Query query)
-        {
-            Source = query.Source;
-            DbQuery = query;
-            if (Source == Source.PRC || Source == Source.RegionalAccounts || Source == Source.DivisionAccounts)
-            {
-                DbTable = GetDataTable(Source);
-                Total = GetTotal(DbTable);
-                ProgramElements = GetProgramElements(DbTable);
-                BindingSource = new BindingSource();
-                BindingSource.DataSource = DbTable;
-                DbRow = GetDataRecords(DbTable);
-            }
-
-            if (Source == Source.FTE)
-            {
-                DbTable = GetDataTable().AsEnumerable().Where(p => p.Field<string>("BOC").Equals("17"))
-                    .Where(p => p.Field<string>("BudgetLevel").Equals("8"))
-                    .Select(p => p).CopyToDataTable();
-                Total = GetFteTotal(DbTable);
-                ProgramElements = GetProgramElements(DbTable);
-                BindingSource = new BindingSource();
-                BindingSource.DataSource = DbTable;
-                DbRow = GetDataRecords(DbTable);
-            }
-
-        }
+        }       
 
         public DataBuilder(Source source, Provider provider)
         {
@@ -56,6 +28,7 @@ namespace BudgetExecution
             BindingSource = new BindingSource();
             BindingSource.DataSource = DbTable;
             DbRow = GetDataRecords(DbTable);
+            Columns = GetColumnNames(DbTable);
             if (source == Source.FTE)
             {
                 DbTable = GetDataTable().AsEnumerable().Where(p => p.Field<string>("BOC").Equals("17"))
@@ -66,7 +39,9 @@ namespace BudgetExecution
                 BindingSource = new BindingSource();
                 BindingSource.DataSource = DbTable;
                 DbRow = GetDataRecords(DbTable);
+                Columns = GetColumnNames(DbTable);
             }
+            
         }
 
         public DataBuilder(Source source, Provider provider, Dictionary<string, object> param)
@@ -80,6 +55,7 @@ namespace BudgetExecution
             BindingSource = new BindingSource();
             BindingSource.DataSource = DbTable;
             DbRow = GetDataRecords(DbTable);
+            Columns = GetColumnNames(DbTable);
             if (source == Source.FTE)
             {
                 DbTable = GetDataTable().AsEnumerable().Where(p => p.Field<string>("BOC").Equals("17"))
@@ -89,6 +65,7 @@ namespace BudgetExecution
                 BindingSource = new BindingSource();
                 BindingSource.DataSource = DbTable;
                 DbRow = GetDataRecords(DbTable);
+                Columns = GetColumnNames(DbTable);
             }
         }
 
@@ -101,6 +78,8 @@ namespace BudgetExecution
 
         public Dictionary<string, string[]> ProgramElements { get; }
 
+        public string[] Columns { get; }
+
         public DataRow[] DbRow { get; }
 
         public BindingSource BindingSource { get; set; }
@@ -109,29 +88,12 @@ namespace BudgetExecution
 
         public Dictionary<string, object> DataFields { get; set; }
 
-        // METHODS
-        public Dictionary<string, object> GetDataFields(DataTable table)
-        {
-            try
-            {
-                var cct = table.Columns.Count;
-                var rct = table.Rows.Count;
-                var row = table.Rows[0];
-                var col = table.GetFields();
-                var val = row.ItemArray;
-                var param = new Dictionary<string, object>();
-                for(int i = 0; i < cct; i++)
-                    param.Add(col[i], val[i]);
-                return param;
-            }
-            catch (Exception e)
-            {
-                var error = new Error(e).ShowDialog();
-                return null;
-            }
-        }
+        // DELEGATES
 
-        public static DataTable FilterTable(DataTable table, PrcField prcfilter, string filter)
+        
+
+        // METHODS
+        public static DataTable FilterTable(DataTable table, Field prcfilter, string filter)
         {
             try
             {
@@ -140,7 +102,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                var error = new Error(ex).ShowDialog();
+                var  _ = new Error(ex).ShowDialog();
                 return null;
             }
         }
@@ -158,7 +120,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                var error = new Error(ex).ShowDialog();
+                var  _ = new Error(ex).ShowDialog();
                 return null;
             }
         }
@@ -192,26 +154,8 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                var error = new Error(ex).ShowDialog();
+                var  _ = new Error(ex).ShowDialog();
                 return null;
-            }
-        }
-
-        public decimal GetAverage(DataTable table)
-        {
-            try
-            {
-                if (DbTable.Columns.Contains("Amount"))
-                {
-                    return table.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Average();
-                }
-
-                return 0m;
-            }
-            catch (Exception ex)
-            {
-                var error = new Error(ex).ShowDialog();
-                return -1;
             }
         }
 
@@ -228,7 +172,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                var error = new Error(ex).ShowDialog();
+                var  _ = new Error(ex).ShowDialog();
                 return -1;
             }
         }
@@ -246,7 +190,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                var error = new Error(ex).ShowDialog();
+                var  _ = new Error(ex).ShowDialog();
                 return null;
             }
         }
@@ -260,12 +204,12 @@ namespace BudgetExecution
                 var dt = new DataTable(source.ToString());
                 dt.TableName = source.ToString();
                 ds.Tables.Add(dt);
-                this.DbQuery.DataAdapter.Fill(ds);
+                DbQuery.DataAdapter.Fill(ds);
                 return ds;
             }
             catch (Exception ex)
             {
-                var error = new Error(ex).ShowDialog();
+                var  _ = new Error(ex).ShowDialog();
                 return null;
             }
         }
@@ -279,12 +223,12 @@ namespace BudgetExecution
                 var dt = new DataTable(Source.ToString());
                 dt.TableName = Source.ToString();
                 ds.Tables.Add(dt);
-                this.DbQuery.DataAdapter.Fill(ds, Source.ToString());
+                DbQuery.DataAdapter.Fill(ds, Source.ToString());
                 return dt;
             }
             catch (Exception e)
             {
-                var error = new Error(e).ShowDialog();
+                var _ = new Error(e).ShowDialog();
                 return null;
             }
         }
@@ -293,7 +237,6 @@ namespace BudgetExecution
         {
             try
             {
-                var ds = new DataSet("R06");
                 var dt = new DataTable(source.ToString());
                 dt.TableName = source.ToString();
                 DbQuery.DataAdapter.Fill(dt);
@@ -301,7 +244,7 @@ namespace BudgetExecution
             }
             catch (Exception e)
             {
-                var error = new Error(e).ShowDialog();
+                var _ = new Error(e).ShowDialog();
                 return null;
             } 
         }
@@ -318,7 +261,7 @@ namespace BudgetExecution
                 }
                 catch (Exception ex)
                 {
-                    var error = new Error(ex).ShowDialog();
+                    var  _ = new Error(ex).ShowDialog();
                     return -1M;
                 }
             }
@@ -338,7 +281,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                var error = new Error(ex).ShowDialog();
+                var  _ = new Error(ex).ShowDialog();
                 return -1M;
             }
         }
@@ -351,7 +294,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                var error = new Error(ex).ShowDialog();
+                var  _ = new Error(ex).ShowDialog();
                 return null;
             }
         }
@@ -366,7 +309,7 @@ namespace BudgetExecution
                 }
                 catch(SystemException ex)
                 {
-                    var error = new Error(ex).ShowDialog();
+                    var  _ = new Error(ex).ShowDialog();
                     return null;
                 }
             }

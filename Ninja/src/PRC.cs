@@ -9,7 +9,6 @@ namespace BudgetExecution
     using System.Data;
     using System.Data.SQLite;
     using System.Linq;
-    using System.Windows.Forms;
 
     public class PRC : IPRC, IAccount
     {
@@ -23,7 +22,8 @@ namespace BudgetExecution
         {
             Source = source;
             Provider = provider;
-            DbRow = new DataBuilder(source, provider).DbTable.AsEnumerable().Select(p => p).First();
+            DbData = new DataBuilder(source, provider);
+            DbRow = DbData.DbTable.AsEnumerable().Select(p => p).First();
             ID = int.Parse(DbRow["ID"].ToString());
             BudgetLevel = DbRow["BudgetLevel"].ToString();
             RPIO = DbRow["RPIO"].ToString();
@@ -34,18 +34,29 @@ namespace BudgetExecution
             RC = new RC(DbRow["RC"].ToString());
             Account = new Account(Source.Accounts, Provider.SQLite, Fund.Code, DbRow["Code"].ToString());
             Code = Account.Code;
-            Parameter = GetDataFields();
             Amount = decimal.Parse(DbRow["Amount"].ToString());
+            Parameter = GetDataFields();
+            ProgramProjectCode = Account.ProgramProjectCode;
+            ProgramProjectName = Account.ProgramProjectName;
+            ProgramArea = Account.ProgramArea;
+            NPM = Account.NPM;
+            NpmCode = Account.NpmCode;
+            Goal = Account.Goal;
+            GoalName = Account.GoalName;
+            Objective = Account.Objective;
+            ObjectiveName = Account.ObjectiveName;
         }
 
         public PRC(Source source, Provider provider, Dictionary<string, object> param)
         {
             Source = source;
             Provider = provider;
-            DbRow = new DataBuilder(source, provider, param).DbTable.AsEnumerable().Select(p => p).First();
+            DbData = new DataBuilder(source, provider, param);
+            DbRow = DbData.DbTable.AsEnumerable().Select(p => p).First();
             ID = int.Parse(DbRow["ID"].ToString());
             BudgetLevel = DbRow["BudgetLevel"].ToString();
             RPIO = DbRow["RPIO"].ToString();
+            AH = DbRow["AH"].ToString();
             BFY = DbRow["BFY"].ToString();
             Fund = new Fund(DbRow["Fund"].ToString(), DbRow["BFY"].ToString());
             Org = new Org(DbRow["Org"].ToString());
@@ -55,13 +66,24 @@ namespace BudgetExecution
             BOC = new BOC(DbRow["BOC"].ToString());
             Parameter = GetDataFields();
             Amount = decimal.Parse(DbRow["Amount"].ToString());
+            Parameter = GetDataFields();
+            ProgramProjectCode = Account.ProgramProjectCode;
+            ProgramProjectName = Account.ProgramProjectName;
+            ProgramArea = Account.ProgramArea;
+            NPM = Account.NPM;
+            NpmCode = Account.NpmCode;
+            Goal = Account.Goal;
+            GoalName = Account.GoalName;
+            Objective = Account.Objective;
+            ObjectiveName = Account.ObjectiveName;
         }
 
-        public PRC(int id, string bl, string rpio, string bfy, string fund, string org, string rc, string code, string boc, decimal amount)
+        public PRC(int id, string bl, string rpio, string bfy, string fund, string ah, string org, string rc, string code, string boc, decimal amount)
         {
             BudgetLevel = bl;
             ID = id;
             RPIO = rpio;
+            AH = ah;
             BFY = bfy;
             Fund = new Fund(Source.Funds, Provider.SQLite, fund, bfy);
             RC = new RC(rc);
@@ -71,6 +93,16 @@ namespace BudgetExecution
             BOC = new BOC(boc, amount);
             Parameter = GetDataFields();
             Amount = amount;
+            Parameter = GetDataFields();
+            ProgramProjectCode = Account.ProgramProjectCode;
+            ProgramProjectName = Account.ProgramProjectName;
+            ProgramArea = Account.ProgramArea;
+            NPM = Account.NPM;
+            NpmCode = Account.NpmCode;
+            Goal = Account.Goal;
+            GoalName = Account.GoalName;
+            Objective = Account.Objective;
+            ObjectiveName = Account.ObjectiveName;
         }
 
         public PRC(DataRow row)
@@ -95,8 +127,6 @@ namespace BudgetExecution
         public Provider Provider { get; }
 
         public DataBuilder DbData { get; }
-
-        public DataTable DbTable { get; }
 
         public DataRow DbRow { get; }
 
@@ -144,7 +174,7 @@ namespace BudgetExecution
 
         public string ObjectiveName { get; }
 
-        private Dictionary<string, object> Parameter { get; set; }
+        internal Dictionary<string, object> Parameter { get; set; }
 
         public string[] DataFields { get; }
 
@@ -155,7 +185,7 @@ namespace BudgetExecution
         {
             try
             {
-                Dictionary<string, object> param = new Dictionary<string, object>()
+                var param = new Dictionary<string, object>()
                 {
                     ["ID"] = ID,
                     ["BudgetLevel"] = BudgetLevel,
@@ -170,7 +200,7 @@ namespace BudgetExecution
             }
             catch (System.Exception ex)
             {
-                var error = new Error(ex).ShowDialog();
+                var  _ = new Error(ex).ShowDialog();
                 return null;
             }
         }
@@ -183,7 +213,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                var error = new Error(ex).ShowDialog();
+                var  _ = new Error(ex).ShowDialog();
                 return null;
             }
         }
@@ -234,13 +264,13 @@ namespace BudgetExecution
         {
             try
             {
-                Dictionary<string, object> prc = GetDataFields();
+                var prc = GetDataFields();
 
                 return prc.Keys.ToArray();
             }
             catch (Exception ex)
             {
-                var error = new Error(ex).ShowDialog();
+                var  _ = new Error(ex).ShowDialog();
                 return null;
             }
         }
@@ -249,13 +279,12 @@ namespace BudgetExecution
         {
             try
             {
-                Dictionary<string, object> param = GetDataFields();
-
+                var param = GetDataFields();
                 return param.Values.ToArray();
             }
             catch (Exception ex)
             {
-                var error = new Error(ex).ShowDialog();
+                var  _ = new Error(ex).ShowDialog();
                 return null;
             }
         }
@@ -303,7 +332,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                var error = new Error(ex).ShowDialog();
+                var _ = new Error(ex).ShowDialog();
                 return null;
             }
         }
@@ -351,7 +380,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                var error = new Error(ex).ShowDialog();
+                var _ = new Error(ex).ShowDialog();
                 return null;
             }
         }
@@ -365,7 +394,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                var error = new Error(ex).ShowDialog();
+                var _ = new Error(ex).ShowDialog();
                 return null;
             }
         }
@@ -379,7 +408,7 @@ namespace BudgetExecution
                 var vals = param.Values.ToArray();
                 var query = new Query(source, provider, param);
                 var cmd = $"INSERT INTO {source.ToString()} {fields} VALUES {vals};";
-                SQLiteConnection conn = query.GetConnection(Provider.SQLite) as SQLiteConnection;
+                var conn = query.GetConnection(Provider.SQLite) as SQLiteConnection;
                 using (conn)
                 {
                     var insert = query.GetDataCommand(cmd, conn) as SQLiteCommand;
@@ -388,7 +417,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                var error = new Error(ex).ShowDialog();
+                var  _ = new Error(ex).ShowDialog();
             }
         }
 
@@ -398,7 +427,7 @@ namespace BudgetExecution
             {
                 var query = new Query(source, provider, p);
                 var cmd = $"UPDATE {source.ToString()} SET Amount = {(decimal)p["Amount"]} WHERE ID = {(int)p["ID"]};";
-                SQLiteConnection conn = query.GetConnection(Provider.SQLite) as SQLiteConnection;
+                var conn = query.GetConnection(Provider.SQLite) as SQLiteConnection;
                 using (conn)
                 {
                     var update = query.GetDataCommand(cmd, conn) as SQLiteCommand;
@@ -407,7 +436,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                var error = new Error(ex).ShowDialog();
+                var  _ = new Error(ex).ShowDialog();
             }
         }
 
@@ -417,7 +446,7 @@ namespace BudgetExecution
             {
                 var query = new Query(source, provider, p);
                 var cmd = $"DELETE ALL FROM {source.ToString()} WHERE ID = {(int)p["ID"]};";
-                SQLiteConnection conn = query.GetConnection(Provider.SQLite) as SQLiteConnection;
+                var conn = query.GetConnection(Provider.SQLite) as SQLiteConnection;
                 using (conn)
                 {
                     var update = query.GetDataCommand(cmd, conn) as SQLiteCommand;
@@ -426,7 +455,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                var error = new Error(ex).ShowDialog();
+                var  _ = new Error(ex).ShowDialog();
             }
         }
     }

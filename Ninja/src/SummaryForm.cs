@@ -100,13 +100,13 @@ namespace BudgetExecution
 
         public ChartSeriesType ChartType { get; set; }
 
-        public PrcField ChartPrcField { get; set; }
+        public Field ChartField { get; set; }
 
         public string ChartFilter { get; set; }
 
         public string Division { get; set; }
 
-        public PrcField ChartGroup { get; set; }
+        public Field ChartGroup { get; set; }
 
         public Dictionary<string, string[]> ProgramElements { get; }
 
@@ -161,14 +161,14 @@ namespace BudgetExecution
                 Navigator.BindingSource = BindingSource;
                 Grid.DataSource = BindingSource;
                 DefineVisisbleDataColumns(Grid);
-                PopulateFilterBoxItems(GridFundFilter, PrcField.FundName);
+                PopulateFilterBoxItems(GridFundFilter, Field.FundName);
                 ConfigureTextBoxBindings();
                 label32.Text = DbData.GetTotal(DbData.DbTable).ToString("c");
                 label41.Text = DbData.GetCount(DbData.DbTable).ToString();
                 GridFundFilter.SelectionChangeCommitted += GridFilterControl1_ItemSelected;
                 GridBocFilter.SelectionChangeCommitted += GridFilterControl2_ItemSelected;
                 SummaryTabControl.SelectedIndexChanged += SummaryTabPage_TabSelected;
-                FundChart = new BudgetChart(FundChart, DbData, PrcField.FundName).Activate();
+                FundChart = new BudgetChart(FundChart, DbData, Field.FundName).Activate();
                 lblPrc.Visible = false;
                 GridAccountFilter.Visible = false;
                 lblBoc.Visible = false;
@@ -181,7 +181,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                var error = new Error(ex).ShowDialog();
+                var  _ = new Error(ex).ShowDialog();
             }
         }
 
@@ -202,7 +202,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                var error = new Error(ex).ShowDialog();
+                var  _ = new Error(ex).ShowDialog();
             }
         }
 
@@ -224,7 +224,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                var error = new Error(ex).ShowDialog();
+                var  _ = new Error(ex).ShowDialog();
             }
         }
 
@@ -240,7 +240,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                var error = new Error(ex).ShowDialog();
+                var  _ = new Error(ex).ShowDialog();
             }
         }
 
@@ -257,7 +257,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                var error = new Error(ex).ShowDialog();
+                var  _ = new Error(ex).ShowDialog();
             }
         }
 
@@ -277,7 +277,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                var error = new Error(ex).ShowDialog();
+                var  _ = new Error(ex).ShowDialog();
             }
         }
 
@@ -296,7 +296,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                var error = new Error(ex).ShowDialog();
+                var  _ = new Error(ex).ShowDialog();
             }
         }
 
@@ -309,7 +309,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                var error = new Error(ex).ShowDialog();
+                var  _ = new Error(ex).ShowDialog();
                 return -1;
             }
         }
@@ -323,12 +323,12 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                var error = new Error(ex).ShowDialog();
+                var  _ = new Error(ex).ShowDialog();
                 return -1;
             }
         }
 
-        private void PopulateFilterBoxItems(MetroSetComboBox cmbox, PrcField prcfilter)
+        private void PopulateFilterBoxItems(MetroSetComboBox cmbox, Field prcfilter)
         {
             try
             {
@@ -345,7 +345,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                var error = new Error(ex).ShowDialog();
+                var  _ = new Error(ex).ShowDialog();
             }
         }
 
@@ -362,7 +362,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                var error = new Error(ex).ShowDialog();
+                var  _ = new Error(ex).ShowDialog();
             }
         }
 
@@ -387,7 +387,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                var error = new Error(ex).ShowDialog();
+                var  _ = new Error(ex).ShowDialog();
             }
         }
 
@@ -417,7 +417,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                var error = new Error(ex).ShowDialog();
+                var  _ = new Error(ex).ShowDialog();
             }
         }
 
@@ -437,7 +437,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                var error = new Error(ex).ShowDialog();
+                var  _ = new Error(ex).ShowDialog();
             }
         }
 
@@ -450,7 +450,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                var error = new Error(ex).ShowDialog();
+                var  _ = new Error(ex).ShowDialog();
                 return -1;
             }
         }
@@ -465,7 +465,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                var error = new Error(ex).ShowDialog();
+                var  _ = new Error(ex).ShowDialog();
                 return -1;
             }
         }
@@ -479,7 +479,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                var error = new Error(ex).ShowDialog();
+                var  _ = new Error(ex).ShowDialog();
                 return -1;
             }
         }
@@ -494,7 +494,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                var error = new Error(ex).ShowDialog();
+                var  _ = new Error(ex).ShowDialog();
                 return -1;
             }
         }
@@ -512,7 +512,7 @@ namespace BudgetExecution
                     label41.Text = DbData.GetCount(DbData.DbTable).ToString();
                     GridBocFilter.Items.Clear();
                     GridAccountFilter.Items.Clear();
-                    PopulateFilterBoxItems(GridFundFilter, PrcField.FundName);
+                    PopulateFilterBoxItems(GridFundFilter, Field.FundName);
                     lblBoc.Visible = false;
                     GridBocFilter.Visible = false;
                     lblPrc.Visible = false;
@@ -520,7 +520,7 @@ namespace BudgetExecution
                 }
                 catch (System.Exception ex)
                 {
-                    var error = new Error(ex).ShowDialog();
+                    var  _ = new Error(ex).ShowDialog();
                 }
             }
         }
@@ -540,7 +540,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                var error = new Error(ex).ShowDialog();
+                var  _ = new Error(ex).ShowDialog();
                 return null;
             }
         }
@@ -578,7 +578,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                var error = new Error(ex).ShowDialog();
+                var  _ = new Error(ex).ShowDialog();
             }
         }
 
@@ -587,12 +587,12 @@ namespace BudgetExecution
             try
             {
                 ChartFilterControl3 = sender as MetroSetComboBox;
-                ChartPrcField = (PrcField)Enum.Parse(typeof(PrcField), ChartFilterControl3.Tag.ToString());
+                ChartField = (Field)Enum.Parse(typeof(Field), ChartFilterControl3.Tag.ToString());
                 ChartFilter = ChartFilterControl3.SelectedItem.ToString();
             }
             catch (Exception ex)
             {
-                var error = new Error(ex).ShowDialog();
+                var  _ = new Error(ex).ShowDialog();
             }
         }
 
@@ -601,9 +601,9 @@ namespace BudgetExecution
             try
             {
                 ChartFilterControl4 = sender as MetroSetComboBox;
-                ChartGroup = (PrcField)Enum.Parse(typeof(PrcField), ChartFilterControl4.SelectedItem.ToString());
+                ChartGroup = (Field)Enum.Parse(typeof(Field), ChartFilterControl4.SelectedItem.ToString());
                 ChartMainTitle = new string[] { $"{ChartFilter} Funding By {ChartFilterControl4.SelectedItem.ToString()}" };
-                var param = new Dictionary<string, object>() { [ChartPrcField.ToString()] = ChartFilter };
+                var param = new Dictionary<string, object>() { [ChartField.ToString()] = ChartFilter };
                 switch (CurrentTabIndex)
                 {
                     case 0:
@@ -634,7 +634,7 @@ namespace BudgetExecution
             }
             catch (System.Exception ex)
             {
-                var error = new Error(ex).ShowDialog();
+                var  _ = new Error(ex).ShowDialog();
             }
         }
 
@@ -659,7 +659,7 @@ namespace BudgetExecution
             }
             catch (System.Exception ex)
             {
-                var error = new Error(ex).ShowDialog();
+                var  _ = new Error(ex).ShowDialog();
             }
         }
 
@@ -731,98 +731,98 @@ namespace BudgetExecution
                     case 0:
                         AssignChartFIlterControls(FundFilter1, FundFilter2, FundFilter3, FundFilter4);
                         AssignChartExpanders(FundExpander1, FundExpander2);
-                        PopulateFilterBoxItems(ChartFilterControl3, PrcField.FundName);
+                        PopulateFilterBoxItems(ChartFilterControl3, Field.FundName);
                         if (Source == Source.RegionalAccounts)
                         {
                             FundFilter4.Items.Remove("RC");
                         }
 
                         ChartMainTitle = new string[] { "Funding By Appropriation" };
-                        FundChart = new BudgetChart(FundChart, ChartMainTitle, DbData, PrcField.Fund, Stat.Total, ChartSeriesType.Column).Activate();
+                        FundChart = new BudgetChart(FundChart, ChartMainTitle, DbData, Field.Fund, Stat.Total, ChartSeriesType.Column).Activate();
                         break;
                     case 1:
                         AssignChartFIlterControls(BocFilter1, BocFilter2, BocFilter3, BocFilter4);
                         AssignChartExpanders(BocExpander1, BocExpander2);
-                        PopulateFilterBoxItems(ChartFilterControl3, PrcField.BocName);
+                        PopulateFilterBoxItems(ChartFilterControl3, Field.BocName);
                         if (DbData.Source == Source.RegionalAccounts)
                         {
                             BocFilter4.Items.Remove("RC");
                         }
 
                         ChartMainTitle = new string[] { "Funding By Budget Object Class" };
-                        BocChart = new BudgetChart(BocChart, ChartMainTitle, DbData, PrcField.BocName, Stat.Total, ChartSeriesType.Column).Activate();
+                        BocChart = new BudgetChart(BocChart, ChartMainTitle, DbData, Field.BocName, Stat.Total, ChartSeriesType.Column).Activate();
                         break;
                     case 2:
                         AssignChartFIlterControls(NpmFilter1, NpmFilter2, NpmFilter3, NpmFilter4);
                         AssignChartExpanders(NpmExpander1, NpmExpander2);
-                        PopulateFilterBoxItems(ChartFilterControl3, PrcField.NPM);
+                        PopulateFilterBoxItems(ChartFilterControl3, Field.NPM);
                         if (DbData.Source == Source.RegionalAccounts)
                         {
                             NpmFilter4.Items.Remove("RC");
                         }
 
                         ChartMainTitle = new string[] { "Funding By National Program" };
-                        NpmChart = new BudgetChart(NpmChart, ChartMainTitle, DbData, PrcField.NPM, Stat.Total, ChartSeriesType.Column).Activate();
+                        NpmChart = new BudgetChart(NpmChart, ChartMainTitle, DbData, Field.NPM, Stat.Total, ChartSeriesType.Column).Activate();
                         break;
                     case 3:
                         AssignChartFIlterControls(GoalFilter1, GoalFilter2, GoalFilter3, GoalFilter4);
                         AssignChartExpanders(GoalExpander1, GoalExpander2);
-                        PopulateFilterBoxItems(ChartFilterControl3, PrcField.GoalName);
+                        PopulateFilterBoxItems(ChartFilterControl3, Field.GoalName);
                         if (DbData.Source == Source.RegionalAccounts)
                         {
                             GoalFilter4.Items.Remove("RC");
                         }
 
                         ChartMainTitle = new string[] { "Funding By Agency Goal" };
-                        GoalChart = new BudgetChart(GoalChart, ChartMainTitle, DbData, PrcField.GoalName, Stat.Total, ChartSeriesType.Column).Activate();
+                        GoalChart = new BudgetChart(GoalChart, ChartMainTitle, DbData, Field.GoalName, Stat.Total, ChartSeriesType.Column).Activate();
                         break;
                     case 4:
                         AssignChartFIlterControls(ObjectiveFilter1, ObjectiveFilter2, ObjectiveFilter3, ObjectiveFilter4);
                         AssignChartExpanders(ObjectiveExpander1, ObjectiveExpander2);
-                        PopulateFilterBoxItems(ChartFilterControl3, PrcField.ObjectiveName);
+                        PopulateFilterBoxItems(ChartFilterControl3, Field.ObjectiveName);
                         if (DbData.Source == Source.RegionalAccounts)
                         {
                             ObjectiveFilter4.Items.Remove("RC");
                         }
 
                         ChartMainTitle = new string[] { "Funding By Agency Objective" };
-                        ObjectiveChart = new BudgetChart(ObjectiveChart, ChartMainTitle, DbData, PrcField.ObjectiveName, Stat.Total, ChartSeriesType.Column).Activate();
+                        ObjectiveChart = new BudgetChart(ObjectiveChart, ChartMainTitle, DbData, Field.ObjectiveName, Stat.Total, ChartSeriesType.Column).Activate();
                         break;
                     case 5:
                         AssignChartFIlterControls(DivisionFilter1, DivisionFilter2, DivisionFilter3, DivisionFilter4);
                         AssignChartExpanders(DivisionExpander1, DivisionExpander2);
-                        PopulateFilterBoxItems(ChartFilterControl3, PrcField.DivisionName);
+                        PopulateFilterBoxItems(ChartFilterControl3, Field.DivisionName);
                         if (DbData.Source == Source.RegionalAccounts)
                         {
                             DivisionFilter4.Items.Remove("RC");
                         }
 
                         ChartMainTitle = new string[] { "Funding By Division" };
-                        DivisionChart = new BudgetChart(DivisionChart, ChartMainTitle, DbData, PrcField.RC, Stat.Total, ChartSeriesType.Column).Activate();
+                        DivisionChart = new BudgetChart(DivisionChart, ChartMainTitle, DbData, Field.RC, Stat.Total, ChartSeriesType.Column).Activate();
                         break;
                     case 6:
                         AssignChartFIlterControls(AreaFilter1, AreaFilter2, AreaFilter3, AreaFilter4);
                         AssignChartExpanders(AreaExpander1, AreaExpander2);
-                        PopulateFilterBoxItems(ChartFilterControl3, PrcField.ProgramAreaName);
+                        PopulateFilterBoxItems(ChartFilterControl3, Field.ProgramAreaName);
                         if (DbData.Source == Source.RegionalAccounts)
                         {
                             AreaFilter4.Items.Remove("RC");
                         }
 
                         ChartMainTitle = new string[] { "Funding By Program Area" };
-                        AreaChart = new BudgetChart(AreaChart, ChartMainTitle, DbData, PrcField.ProgramArea, Stat.Total, ChartSeriesType.Column).Activate();
+                        AreaChart = new BudgetChart(AreaChart, ChartMainTitle, DbData, Field.ProgramArea, Stat.Total, ChartSeriesType.Column).Activate();
                         break;
                     case 7:
                         AssignChartFIlterControls(ProjectFilter1, ProjectFilter2, ProjectFilter3, ProjectFilter4);
                         AssignChartExpanders(ProjectExpander1, ProjectExpander2);
-                        PopulateFilterBoxItems(ChartFilterControl3, PrcField.ProgramProjectName);
+                        PopulateFilterBoxItems(ChartFilterControl3, Field.ProgramProjectName);
                         if (DbData.Source == Source.RegionalAccounts)
                         {
                             ProjectFilter4.Items.Remove("RC");
                         }
 
                         ChartMainTitle = new string[] { "Funding By Program Project" };
-                        ProjectChart = new BudgetChart(ProjectChart, ChartMainTitle, DbData, PrcField.ProgramProjectCode, Stat.Total, ChartSeriesType.Column).Activate();
+                        ProjectChart = new BudgetChart(ProjectChart, ChartMainTitle, DbData, Field.ProgramProjectCode, Stat.Total, ChartSeriesType.Column).Activate();
                         break;
                     case 8:
                         var current = BindingSource.Position;
@@ -836,13 +836,13 @@ namespace BudgetExecution
                         var amt = decimal.Parse(DbRow["Amount"].ToString());
                         var d = new Dictionary<string, double>() { ["Total"] = (double)total, ["Allocation"] = (double)amt };
                         ChartMainTitle = new string[] { $"{Source.ToString()} {DbRow["ProgramProjectName"].ToString()} Funding = {amt.ToString("c")}" };
-                        AccountChart = new BudgetChart(AccountChart, ChartMainTitle, d, PrcField.ProgramProjectCode, Stat.Total, ChartSeriesType.Column).Activate();
+                        AccountChart = new BudgetChart(AccountChart, ChartMainTitle, d, Field.ProgramProjectCode, Stat.Total, ChartSeriesType.Column).Activate();
                         break;
                 }
             }
             catch (Exception ex)
             {
-                var error = new Error(ex).ShowDialog();
+                var  _ = new Error(ex).ShowDialog();
             }
         }
 
@@ -868,7 +868,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                var error = new Error(ex).ShowDialog();
+                var  _ = new Error(ex).ShowDialog();
                 return null;
             }
         }
@@ -897,7 +897,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                var error = new Error(ex).ShowDialog();
+                var  _ = new Error(ex).ShowDialog();
                 return null;
             }
         }
@@ -923,7 +923,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                var error = new Error(ex).ShowDialog();
+                var  _ = new Error(ex).ShowDialog();
                 return null;
             }
         }
@@ -970,7 +970,7 @@ namespace BudgetExecution
         {
             try
             {
-                var am = new AccountManager(Source.PRC, this.Provider);
+                var am = new AccountManager(Source.PRC, Provider);
                 am.AccountNavigator.Visible = false;
                 am.UpdateTab.TabVisible = false;
                 am.Show();
@@ -978,7 +978,7 @@ namespace BudgetExecution
             catch (Exception ex)
             {
 
-                var error = new Error(ex).ShowDialog();
+                var  _ = new Error(ex).ShowDialog();
             }
         }
 
@@ -988,7 +988,7 @@ namespace BudgetExecution
             {
                 var view = (DataRowView)BindingSource.Current;
                 var prc = new PRC(view.Row).GetDataFields();
-                var am = new AccountManager(this.Source, this.Provider, prc);
+                var am = new AccountManager(Source, Provider, prc);
                 am.AccountNavigator.Visible = false;
                 am.AddNewTab.TabVisible = false;
                 am.Show();
@@ -996,7 +996,7 @@ namespace BudgetExecution
             catch (Exception ex)
             {
 
-                var error = new Error(ex).ShowDialog();
+                var  _ = new Error(ex).ShowDialog();
             }
         }
 
@@ -1012,7 +1012,7 @@ namespace BudgetExecution
             catch (Exception ex)
             {
 
-                var error = new Error(ex).ShowDialog();
+                var  _ = new Error(ex).ShowDialog();
             }
         }
 
@@ -1035,7 +1035,7 @@ namespace BudgetExecution
             var amt = decimal.Parse(DbRow["Amount"].ToString());
             var d = new Dictionary<string, double>{ ["Total"] = (double)total, ["Allocation"] = (double)amt };
             ChartMainTitle = new string[] { $"{Source.ToString()} {DbRow["ProgramProjectName"].ToString()} Funding = {amt.ToString("c")}" };
-            AccountChart = new BudgetChart(AccountChart, ChartMainTitle, d, PrcField.ProgramProjectCode, Stat.Total, ChartSeriesType.Column).Activate();
+            AccountChart = new BudgetChart(AccountChart, ChartMainTitle, d, Field.ProgramProjectCode, Stat.Total, ChartSeriesType.Column).Activate();
         }
 
         private void AccountToolsButton_OnClick(object sender, EventArgs e)

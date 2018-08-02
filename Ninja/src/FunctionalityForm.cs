@@ -57,14 +57,14 @@ namespace BudgetExecution
         {
             var datamanager = new SQLiteData();
             datamanager.Show();
-            this.Close();
+            Close();
         }
 
         private void GetR6DataManager(object sender, System.EventArgs e)
         {
             var datamanager = new SQLiteData();
             datamanager.Show();
-            this.Close();
+            Close();
         }
 
         private void FunctionCarousel_Click(object sender, EventArgs e)

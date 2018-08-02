@@ -26,7 +26,7 @@ namespace BudgetExecution
             Message = ex.Message;
             Stack = ex.StackTrace;
             Target = ex.TargetSite.ReflectedType.Name;
-            this.Info.Text = "\n\n\n    " + Message;
+            Info.Text = "\n\n\n    " + Message;
         }
 
         // PROPERTIES
@@ -37,7 +37,7 @@ namespace BudgetExecution
         // METHODS
         void OkButton_OnClick(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
 
         void StackButton_OnClick(object sender, EventArgs e)

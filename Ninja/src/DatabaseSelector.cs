@@ -79,7 +79,7 @@ namespace BudgetExecution
             var s = (Source)Enum.Parse(typeof(Source), i);
             var data = new SQLiteData(s, Provider.SQLite);
             data.Show();
-            this.Close();
+            Close();
             
         }
     }

@@ -24,7 +24,7 @@ namespace BudgetExecution
         {
             InitializeComponent();
             MessageText = message;
-            this.Info.Text = "\n  " + MessageText;
+            Info.Text = "\n  " + MessageText;
         }
 
         // PROPERTIES
@@ -33,7 +33,7 @@ namespace BudgetExecution
         // METHODS
         void OkButton_OnClick(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
         
     }

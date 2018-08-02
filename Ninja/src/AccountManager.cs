@@ -35,7 +35,7 @@ namespace BudgetExecution
             InitializeComponent();
             Source = source;
             Provider = provider;
-            DbData = new DataBuilder(this.Source, this.Provider);
+            DbData = new DataBuilder(Source, Provider);
             BindingSource = new BindingSource();
             BindingSource.DataSource = DbData.DbTable;
             AccountNavigator.BindingSource = BindingSource;
@@ -105,7 +105,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                var error = new Error(ex).ShowDialog();
+                var  _ = new Error(ex).ShowDialog();
             }
         }
 
@@ -140,7 +140,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                var error = new Error(ex).ShowDialog();
+                var  _ = new Error(ex).ShowDialog();
             }
         }
 
@@ -155,7 +155,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                var error = new Error(ex).ShowDialog();
+                var  _ = new Error(ex).ShowDialog();
                 return null;
             }
         }
@@ -171,7 +171,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                var error = new Error(ex).ShowDialog();
+                var  _ = new Error(ex).ShowDialog();
                 return null;
             }
         }
@@ -187,7 +187,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                var error = new Error(ex).ShowDialog();
+                var  _ = new Error(ex).ShowDialog();
                 return null;
             }
         }
@@ -203,7 +203,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                var error = new Error(ex).ShowDialog();
+                var  _ = new Error(ex).ShowDialog();
                 return null;
             }
         }
@@ -224,7 +224,7 @@ namespace BudgetExecution
             }
             catch (Exception e)
             {
-                var error = new Error(e).ShowDialog();
+                var  _ = new Error(e).ShowDialog();
                 return null;
             }
         }
@@ -249,7 +249,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                var error = new Error(ex).ShowDialog();
+                var  _ = new Error(ex).ShowDialog();
             }
         }
 
@@ -264,7 +264,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                var error = new Error(ex).ShowDialog();
+                var  _ = new Error(ex).ShowDialog();
             }
         }
 
@@ -286,7 +286,7 @@ namespace BudgetExecution
                 }
                 catch (Exception ex)
                 {
-                    var error = new Error(ex).ShowDialog();
+                    var  _ = new Error(ex).ShowDialog();
                     return null;
                 }
             }
@@ -295,30 +295,30 @@ namespace BudgetExecution
 
         private void AddButton_OnClick(object sender, EventArgs e)
         {
-            var addmanager = new AccountManager(Source.PRC, this.Provider);
+            var addmanager = new AccountManager(Source.PRC, Provider);
             addmanager.AccountNavigator.Visible = false;
             addmanager.UpdateTab.TabVisible = false;
             addmanager.Show();
-            this.Close();
+            Close();
         }
 
         private void PreviousButton_OnClick(object sender, EventArgs e)
         {
-            this.BindingSource.MovePrevious();
+            BindingSource.MovePrevious();
         }
 
         private void NextButton_OnClick(object sender, EventArgs e)
         {
-            this.BindingSource.MoveNext();
+            BindingSource.MoveNext();
         }
 
         private void UpdateButton_Click(object sender, EventArgs e)
         {
-            var addmanager = new AccountManager(this.Source, this.Provider);
+            var addmanager = new AccountManager(Source, Provider);
             addmanager.AccountNavigator.Visible = false;
             addmanager.AddNewTab.TabVisible = false;
             addmanager.Show();
-            this.Close();
+            Close();
 
         }
 

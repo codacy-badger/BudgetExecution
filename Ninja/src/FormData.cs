@@ -27,11 +27,11 @@ namespace BudgetExecution
             DbTable = this.DbData.DbTable;
             BindGridAndNavigator(DbTable, dgv, bs, bn);
             BindingSource = bs;
-            this.Grid = dgv;
+            Grid = dgv;
             BindingSource.DataSource = DbTable;
             BindingSource = DbData.BindingSource;
             BindingSource.DataSource = DbTable;
-            this.Grid.DataSource = BindingSource.DataSource;
+            Grid.DataSource = BindingSource.DataSource;
         }
 
         public FormData(Source source, Provider provider, Dictionary<string, object> param)
@@ -52,8 +52,8 @@ namespace BudgetExecution
             BindGridAndNavigator(DbTable, dgv, bs, bn);
             BindingSource = bs;
             BindingSource.DataSource = DbTable;
-            this.Grid = dgv;
-            this.Grid.DataSource = BindingSource.DataSource;
+            Grid = dgv;
+            Grid.DataSource = BindingSource.DataSource;
         }
 
         // PROPERTIES
@@ -77,7 +77,7 @@ namespace BudgetExecution
 
         public DataGridView Grid { get; set; }
 
-        internal Func<DataTable, PrcField, string> TableFilter { get; set; }
+        internal Func<DataTable, Field, string> TableFilter { get; set; }
 
         // METHODS
 
@@ -97,7 +97,7 @@ namespace BudgetExecution
             }
             catch (Exception e)
             {
-                var error = new Error(e).ShowDialog();
+                var  _ = new Error(e).ShowDialog();
                 return null;
             }
         }
@@ -118,7 +118,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                var error = new Error(ex).ShowDialog();
+                var  _ = new Error(ex).ShowDialog();
             }
         }
 
@@ -133,7 +133,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                var error = new Error(ex).ShowDialog();
+                var  _ = new Error(ex).ShowDialog();
             }
         }
 
@@ -148,7 +148,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                var error = new Error(ex).ShowDialog();
+                var  _ = new Error(ex).ShowDialog();
             }
         }
 
@@ -168,7 +168,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                var error = new Error(ex).ShowDialog();
+                var  _ = new Error(ex).ShowDialog();
             }
         }
 
@@ -181,7 +181,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                var error = new Error(ex).ShowDialog();
+                var  _ = new Error(ex).ShowDialog();
             }
         }
 
@@ -194,18 +194,18 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                var error = new Error(ex).ShowDialog();
+                var  _ = new Error(ex).ShowDialog();
             }
         }
 
-        internal void PopulateFilterControlItems(DataTable table, Control filterControl, PrcField prc)
+        internal void PopulateFilterControlItems(DataTable table, Control filterControl, Field prc)
         {
             try
             {
             }
             catch (Exception ex)
             {
-                var error = new Error(ex).ShowDialog();
+                var  _ = new Error(ex).ShowDialog();
             }
         }
 
@@ -221,7 +221,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                var error = new Error(ex).ShowDialog();
+                var  _ = new Error(ex).ShowDialog();
             }
         }
 
@@ -251,7 +251,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                var error = new Error(ex).ShowDialog();
+                var  _ = new Error(ex).ShowDialog();
             }
         }
 
@@ -268,7 +268,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                var error = new Error(ex).ShowDialog();
+                var  _ = new Error(ex).ShowDialog();
             }
         }
 
@@ -292,7 +292,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                var error = new Error(ex).ShowDialog();
+                var  _ = new Error(ex).ShowDialog();
             }
         }
 
@@ -316,7 +316,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                var error = new Error(ex).ShowDialog();
+                var  _ = new Error(ex).ShowDialog();
             }
         }
 
@@ -329,7 +329,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                var error = new Error(ex).ShowDialog();
+                var  _ = new Error(ex).ShowDialog();
             }
         }
 
@@ -353,12 +353,12 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                var error = new Error(ex).ShowDialog();
+                var  _ = new Error(ex).ShowDialog();
                 return null;
             }
         }
 
-        internal decimal GetCount(DataTable table, PrcField column, string filter)
+        internal decimal GetCount(DataTable table, Field column, string filter)
         {
             if(table.Columns.Contains("Amount"))
             {
@@ -369,7 +369,7 @@ namespace BudgetExecution
                 }
                 catch (Exception ex)
                 {
-                    var error = new Error(ex).ShowDialog();
+                    var  _ = new Error(ex).ShowDialog();
                     return -1;
                 }
             }
