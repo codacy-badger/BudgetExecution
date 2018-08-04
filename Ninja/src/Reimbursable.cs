@@ -9,7 +9,6 @@ namespace BudgetExecution
     using System.Data;
     using System.Data.SQLite;
     using System.Linq;
-    using System.Windows.Forms;
 
     public class Reimbursable
     {
@@ -104,7 +103,7 @@ namespace BudgetExecution
             {
                 return new Dictionary<string, object>() { ["BFY"] = bfy, ["Fund"] = fund };
             }
-            catch (System.Exception ex)
+            catch (Exception ex)
             {
                 var  _ = new Error(ex).ShowDialog();
                 return null;

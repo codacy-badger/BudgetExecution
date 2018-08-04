@@ -9,7 +9,6 @@ namespace BudgetExecution
     using System.Data;
     using System.Data.SQLite;
     using System.Linq;
-    using System.Windows.Forms;
 
     public class Transfer
     {

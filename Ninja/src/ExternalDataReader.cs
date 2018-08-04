@@ -5,16 +5,7 @@
 namespace BudgetExecution
 {
     using System;
-    using System.Collections.Generic;
-    using System.Data;
-    using System.Drawing;
-    using System.Linq;
-    using System.Windows.Forms;
-    using MakarovDev.ExpandCollapsePanel;
-    using MetroSet_UI.Controls;
-    using Syncfusion.Windows.Forms.Chart;
-    using Syncfusion.Windows.Forms.Tools;
-    using MetroForm = Syncfusion.Windows.Forms.MetroForm;   
+    using MetroForm = Syncfusion.Windows.Forms.MetroForm;
 
 
     public partial class ExternalDataReader : MetroForm

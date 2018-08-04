@@ -9,7 +9,6 @@ namespace BudgetExecution
     using System.Data;
     using System.Data.SQLite;
     using System.Linq;
-    using System.Windows.Forms;
 
     public class Account : IAccount
     {
@@ -150,7 +149,7 @@ namespace BudgetExecution
                     ["ProgramProjectCode"] = Code.Substring(4, 2)
                 };
             }
-            catch (System.Exception ex)
+            catch (Exception ex)
             {
                 var  _ = new Error(ex).ShowDialog();
                 return null;
@@ -172,7 +171,7 @@ namespace BudgetExecution
                 param.Add("ProgramProjectName", dr["ProgramProjectName"].ToString());
                 return param;
             }
-            catch (System.Exception ex)
+            catch (Exception ex)
             {
                 var  _ = new Error(ex).ShowDialog();
                 return null;
@@ -186,7 +185,7 @@ namespace BudgetExecution
                 var data = new DataBuilder(source, provider);
                 return data.DbTable;
             }
-            catch (System.Exception ex)
+            catch (Exception ex)
             {
                 var  _ = new Error(ex).ShowDialog();
                 return null;
@@ -200,7 +199,7 @@ namespace BudgetExecution
                 var data = new DataBuilder(source, Provider.SQLite, param);
                 return data.DbTable;
             }
-            catch (System.Exception ex)
+            catch (Exception ex)
             {
                 var  _ = new Error(ex).ShowDialog();
                 return null;
@@ -214,7 +213,7 @@ namespace BudgetExecution
                 var data = new DataBuilder(source, provider, param);
                 return data.DbTable;
             }
-            catch (System.Exception ex)
+            catch (Exception ex)
             {
                 var  _ = new Error(ex).ShowDialog();
                 return null;

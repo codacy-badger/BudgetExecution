@@ -9,7 +9,6 @@ namespace BudgetExecution
     using System.Data;
     using System.Data.SQLite;
     using System.Linq;
-    using System.Windows.Forms;
 
     public class Fund : IFund
     {
@@ -109,7 +108,7 @@ namespace BudgetExecution
             {
                 return new Dictionary<string, object>() { ["Code"] = code, ["FiscalYear"] = bfy };
             }
-            catch (System.Exception ex)
+            catch (Exception ex)
             {
                 var  _ = new Error(ex).ShowDialog();
                 return null;
@@ -126,7 +125,7 @@ namespace BudgetExecution
                 Parameter.Add("TreasurySymbol", TreasurySymbol);
                 return Parameter;
             }
-            catch (System.Exception ex)
+            catch (Exception ex)
             {
                 var  _ = new Error(ex).ShowDialog();
                 return null;
@@ -140,7 +139,7 @@ namespace BudgetExecution
                 var data = new DataBuilder(source, provider, param);
                 return data.DbTable;
             }
-            catch (System.Exception ex)
+            catch (Exception ex)
             {
                 var  _ = new Error(ex).ShowDialog();
                 return null;

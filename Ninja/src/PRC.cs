@@ -198,7 +198,7 @@ namespace BudgetExecution
                 };
                 return param;
             }
-            catch (System.Exception ex)
+            catch (Exception ex)
             {
                 var  _ = new Error(ex).ShowDialog();
                 return null;

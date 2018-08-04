@@ -12,7 +12,6 @@ namespace BudgetExecution
     using System.Data.OleDb;
     using System.Data.SqlClient;
     using System.Data.SQLite;
-    using System.Windows.Forms;
 
     public class Query : IQuery
     {
@@ -34,6 +33,7 @@ namespace BudgetExecution
             UpdateCommand = CommandBuilder.GetUpdateCommand();
             InsertCommand = CommandBuilder.GetInsertCommand();
             DeleteCommand = CommandBuilder.GetDeleteCommand();
+            Settings = new AppSettingsReader();
         }
 
         public Query(Source source, Provider provider, Dictionary<string, object> param)
@@ -46,6 +46,7 @@ namespace BudgetExecution
             SelectStatement = GetSelectStatement(TableName, Parameter);
             SelectCommand = GetSelectCommand(SelectStatement, DataConnection);
             DataAdapter = GetDataAdapter(SelectCommand);
+            Settings = new AppSettingsReader();
             CommandBuilder = GetCommandBuilder(DataAdapter);
             UpdateCommand = CommandBuilder.GetUpdateCommand();
             InsertCommand = CommandBuilder.GetInsertCommand();
@@ -181,6 +182,93 @@ namespace BudgetExecution
             }
         }
 
+        public DbDataAdapter GetDataAdapter(IDbCommand command)
+        {
+            try
+            {
+                if (command is SQLiteCommand)
+                {
+                    return new SQLiteDataAdapter((SQLiteCommand)command);
+                }
+
+                if (command is OleDbCommand)
+                {
+                    return new OleDbDataAdapter((OleDbCommand)command);
+                }
+
+                if (command is SqlCommand)
+                {
+                    return new SqlDataAdapter((SqlCommand)command);
+                }
+
+                return null;
+            }
+            catch (Exception ex)
+            {
+                var _ = new Error(ex).ShowDialog();
+                return null;
+            }
+        }
+
+        public DbDataReader GetDataReader(IDbCommand command)
+        {
+            try
+            {
+                if (command is SQLiteCommand)
+                {
+                    return ((SQLiteCommand)command).ExecuteReader();
+                }
+
+                if (command is OleDbCommand)
+                {
+                    return ((OleDbCommand)command).ExecuteReader();
+                }
+
+                if (command is SqlCommand)
+                {
+                    return ((SqlCommand)command).ExecuteReader();
+                }
+
+                return null;
+            }
+            catch (Exception ex)
+            {
+                var _ = new Error(ex).ShowDialog();
+                return null;
+            }
+        }
+
+        public DbCommandBuilder GetCommandBuilder(IDbDataAdapter adapter)
+        {
+            try
+            {
+                if (adapter is SQLiteDataAdapter)
+                {
+                    CommandBuilder = new SQLiteCommandBuilder(adapter as SQLiteDataAdapter);
+                    return CommandBuilder;
+                }
+
+                if (adapter is OleDbDataAdapter)
+                {
+                    CommandBuilder = new OleDbCommandBuilder(adapter as OleDbDataAdapter);
+                    return CommandBuilder;
+                }
+
+                if (adapter is SqlDataAdapter)
+                {
+                    CommandBuilder = new SqlCommandBuilder(adapter as SqlDataAdapter);
+                    return CommandBuilder;
+                }
+
+                return null;
+            }
+            catch (SystemException ex)
+            {
+                var _ = new Error(ex).ShowDialog();
+                return null;
+            }
+        }
+
         internal DbCommand GetSelectCommand(string select, IDbConnection connection)
         {
             try
@@ -243,99 +331,6 @@ namespace BudgetExecution
             }
         }
 
-        public DbDataAdapter GetDataAdapter(IDbCommand command)
-        {
-            try
-            {
-                if (command is SQLiteCommand)
-                {
-                    return new SQLiteDataAdapter((SQLiteCommand)command);
-                }
-
-                if (command is OleDbCommand)
-                {
-                    return new OleDbDataAdapter((OleDbCommand)command);
-                }
-
-                if (command is SqlCommand)
-                {
-                    return new SqlDataAdapter((SqlCommand)command);
-                }
-
-                return null;
-            }
-            catch (Exception ex)
-            {
-                var  _ = new Error(ex).ShowDialog();
-                return null;
-            }
-        }
-
-        public DbDataReader GetDataReader(IDbCommand command)
-        {
-            try
-            {
-                if (command is SQLiteCommand)
-                {
-                    return ((SQLiteCommand)command).ExecuteReader();
-                }
-
-                if (command is OleDbCommand)
-                {
-                    return ((OleDbCommand)command).ExecuteReader();
-                }
-
-                if (command is SqlCommand)
-                {
-                    return ((SqlCommand)command).ExecuteReader();
-                }
-
-                return null;
-            }
-            catch (Exception ex)
-            {
-                var  _ = new Error(ex).ShowDialog();
-                return null;
-            }
-        }
-
-        public DbCommandBuilder GetCommandBuilder(IDbDataAdapter adapter)
-        {
-            try
-            {
-                if (adapter is SQLiteDataAdapter)
-                {
-                    CommandBuilder = new SQLiteCommandBuilder(adapter as SQLiteDataAdapter);
-                    return CommandBuilder;
-                }
-
-                if (adapter is OleDbDataAdapter)
-                {
-                    CommandBuilder = new OleDbCommandBuilder(adapter as OleDbDataAdapter);
-                    return CommandBuilder;
-                }
-
-                if (adapter is SqlDataAdapter)
-                {
-                    CommandBuilder = new SqlCommandBuilder(adapter as SqlDataAdapter);
-                    return CommandBuilder;
-                }
-
-                if (adapter is SqlDataAdapter)
-                {
-                    CommandBuilder = new SqlCommandBuilder(adapter as SqlDataAdapter);
-                    return CommandBuilder;
-                }
-
-                return null;
-            }
-            catch (SystemException ex)
-            {
-                var  _ = new Error(ex).ShowDialog();
-                return null;
-            }
-        }
-
         internal string GetSelectParameterString(Dictionary<string, object> param)
         {
             try
@@ -343,7 +338,7 @@ namespace BudgetExecution
                 string vals = string.Empty;
                 foreach (KeyValuePair<string, object> kvp in param)
                 {
-                    vals += $"{kvp.Key} = '{kvp.Value.ToString()}' AND ";
+                    vals += $"{kvp.Key} = '{kvp.Value}' AND ";
                 }
 
                 vals = vals.Trim().Substring(0, vals.Length - 4);

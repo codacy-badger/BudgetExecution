@@ -8,7 +8,6 @@ namespace BudgetExecution
     using System.Collections.Generic;
     using System.Data;
     using System.Linq;
-    using System.Windows.Forms;
 
     public class PrcMetric
     {
@@ -57,7 +56,7 @@ namespace BudgetExecution
         public PrcMetric(DataBuilder data, Field prcfilter, string filter)
         {
             DbData = data;
-            Table = Info.FilterTableRows(DbData.DbTable, prcfilter, filter);
+            Table = Info.FilterRows(DbData.DbTable, prcfilter, filter);
             ProgramElements = GetProgramElements(Table);
             Total = GetTotals(Table);
             Count = Table.Rows.Count;
@@ -93,7 +92,7 @@ namespace BudgetExecution
 
         public PrcMetric(DataTable table, Field prcfilter, string filter)
         {
-            Table = Info.FilterTableRows(table, prcfilter, filter);
+            Table = Info.FilterRows(table, prcfilter, filter);
             ProgramElements = GetProgramElements(Table);
             Total = GetTotals(Table);
             Count = Table.Rows.Count;

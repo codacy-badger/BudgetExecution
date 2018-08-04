@@ -162,7 +162,7 @@ namespace BudgetExecution
             captionImage1.Image = ((System.Drawing.Image)(resources.GetObject("captionImage1.Image")));
             captionImage1.Location = new System.Drawing.Point(5, 5);
             captionImage1.Name = "CaptionImage1";
-            captionImage1.Size = new System.Drawing.Size(30, 25);
+            captionImage1.Size = new System.Drawing.Size(25, 25);
             this.CaptionImages.Add(captionImage1);
             this.ClientSize = new System.Drawing.Size(600, 336);
             this.Controls.Add(this.TargetButton);

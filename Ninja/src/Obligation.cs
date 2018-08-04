@@ -9,7 +9,6 @@ namespace BudgetExecution
     using System.Data;
     using System.Data.SQLite;
     using System.Linq;
-    using System.Windows.Forms;
 
     public class Obligation : IObligation
     {
@@ -112,7 +111,7 @@ namespace BudgetExecution
                 };
                 return param;
             }
-            catch (System.Exception ex)
+            catch (Exception ex)
             {
                 var  _ = new Error(ex).ShowDialog();
                 return null;

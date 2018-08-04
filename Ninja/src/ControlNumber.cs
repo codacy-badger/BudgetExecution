@@ -6,15 +6,10 @@ namespace BudgetExecution
 {
     using System;
     using System.Collections.Generic;
-    using System.Configuration;
     using System.Data;
-    using System.Data.Common;
-    using System.Data.OleDb;
-    using System.Data.SqlClient;
     using System.Data.SQLite;
     using System.Linq;
     using System.Text;
-    using System.Windows.Forms;
 
     public class ControlNumber
     {
@@ -93,7 +88,7 @@ namespace BudgetExecution
             {
                 return new Dictionary<string, object>() { ["Fund"] = fund, ["DivisionID"] = divisionid };
             }
-            catch (System.Exception ex)
+            catch (Exception ex)
             {
                 var  _ = new Error(ex).ShowDialog();
                 return null;

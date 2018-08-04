@@ -518,7 +518,7 @@ namespace BudgetExecution
                     lblPrc.Visible = false;
                     GridAccountFilter.Visible = false;
                 }
-                catch (System.Exception ex)
+                catch (Exception ex)
                 {
                     var  _ = new Error(ex).ShowDialog();
                 }
@@ -632,7 +632,7 @@ namespace BudgetExecution
                         break;
                 }
             }
-            catch (System.Exception ex)
+            catch (Exception ex)
             {
                 var  _ = new Error(ex).ShowDialog();
             }
@@ -657,7 +657,7 @@ namespace BudgetExecution
                 Expander1 = panel1;
                 Expander2 = panel2;
             }
-            catch (System.Exception ex)
+            catch (Exception ex)
             {
                 var  _ = new Error(ex).ShowDialog();
             }

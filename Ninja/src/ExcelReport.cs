@@ -107,7 +107,7 @@ namespace BudgetExecution
                 excel.Visible = true;
                 return excelWorkBook;
             }
-            catch (System.Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
                 return null;
@@ -138,7 +138,7 @@ namespace BudgetExecution
                 excel.Visible = true;
                 return excelWorkBook;
             }
-            catch (System.Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
                 return null;

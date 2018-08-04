@@ -8,7 +8,6 @@ namespace BudgetExecution
     using System.Collections.Generic;
     using System.Data;
     using System.Linq;
-    using System.Windows.Forms;
 
     public class DivisionAuthority : IBudgetAuthority
     {
@@ -303,7 +302,7 @@ namespace BudgetExecution
                 var update = query.UpdateCommand;
                 update.ExecuteNonQuery();
             }
-            catch (System.Exception e)
+            catch (Exception e)
             {
                 var  _ = new Error(e).ShowDialog();
             }
@@ -322,7 +321,7 @@ namespace BudgetExecution
                 var update = query.UpdateCommand;
                 update.ExecuteNonQuery();
             }
-            catch (System.Exception e)
+            catch (Exception e)
             {
                 var  _ = new Error(e).ShowDialog();
             }

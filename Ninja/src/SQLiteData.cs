@@ -7,8 +7,6 @@ namespace BudgetExecution
     using System;
     using System.Collections.Generic;
     using System.Data;
-    using System.Data.SQLite;
-    using System.Drawing;
     using System.Windows.Forms;
     using MetroSet_UI.Controls;
     using Syncfusion.Windows.Forms;
@@ -29,10 +27,11 @@ namespace BudgetExecution
             ProgramElements = DbData.GetProgramElements(DbData.DbTable);
             Navigator.BindingSource = BindingSource;
             Grid.DataSource = BindingSource.DataSource;
-            PopulateSourceFilters();
             PopulateFilterButtons(Filter1, Info.Sources);
             Text = $"{Source.ToString()} Database";
             FunctionTab.TabVisible = false;
+            TableFilter = new DataFilter(Info.FilterRows);
+            FieldFilter = new ColumnFilter(Info.GetColumnValues);
         }
 
         public SQLiteData(Source source, Provider provider)
@@ -48,8 +47,11 @@ namespace BudgetExecution
             ProgramElements = DbData.GetProgramElements(DbData.DbTable);
             Text = $"{Source.ToString()} Database";
             FunctionTab.TabVisible = false;
-            TableFilter = new DataFilter(Info.FilterTableRows);
+            TableFilter = new DataFilter(Info.FilterRows);
+            FieldFilter = new ColumnFilter(Info.GetColumnValues);
+
         }
+
         // PROPERTIES
         private Source Source { get; }
 
@@ -57,17 +59,13 @@ namespace BudgetExecution
 
         private DataFilter TableFilter { get; set; }
 
-        private SQLiteDataAdapter Adapter { get; }
+        private ColumnFilter FieldFilter { get; set; }
 
         private DataBuilder DbData { get; }
-        
-        private PrcMetric Metric { get; }
 
-        private Dictionary<string, object> Parameter { get; set; }
+        internal Dictionary<string, object> Parameter { get; set; }
 
         private Dictionary<string, string[]> ProgramElements { get; set; }
-
-        private Query Query { get; }
 
         private DataTable Table { get; set; }
 
@@ -75,9 +73,11 @@ namespace BudgetExecution
 
         public MetroSetComboBox FilterControl1 { get; set; }
 
-        private MetroSetComboBox FilterControl2 { get; set; }
+        internal MetroSetComboBox FilterControl2 { get; set; }
 
-        private MetroSetComboBox FilterControl3 { get; set; }
+        internal MetroSetComboBox FilterControl3 { get; set; }
+
+        internal MetroSetComboBox FilterControl4 { get; set; }
 
         public string F1 { get; set; }
 
@@ -85,23 +85,18 @@ namespace BudgetExecution
 
         public string F3 { get; set; }
 
+        public string F4 { get; set; }
+
         public Field C1 { get; set; }
 
         public Field C2 { get; set; }
 
         public Field C3 { get; set; }
 
+        public Field C4 { get; set; }
+
         // METHODS
-
-        private void PopulateSourceFilters()
-        {
-            FilterControl1 = Filter1;
-            foreach(string s in Info.Sources)
-            {
-                FilterControl1.Items.Add(s);
-            }
-        }
-
+        
         private void SQLiteData_Load(object sender, EventArgs e)
         {
             try
@@ -130,7 +125,7 @@ namespace BudgetExecution
             }
         }
 
-        internal void PopulateFilterItems(string colname, DataBuilder DbData, MetroSetComboBox control, Label label)
+        internal void PopulateFilterItems(string colname, DataBuilder data, MetroSetComboBox control, Label label)
         {
             try
             {
@@ -144,7 +139,7 @@ namespace BudgetExecution
                     label.Visible = true;
                 }
 
-                var filters = DbData.ProgramElements[colname];
+                var filters = data.ProgramElements[colname];
                 control.Tag = colname;
                 foreach (string i in filters)
                 {
@@ -157,7 +152,37 @@ namespace BudgetExecution
             }
         }
 
-        internal void PopulateFilterItems(Field colname, DataBuilder DbData, MetroSetComboBox control, Label label)
+        internal void PopulateFilterItems(string colname, DataTable table, MetroSetComboBox control, Label label)
+        {
+            try
+            {
+                if (control.Items.Count > 0)
+                {
+                    control.Items.Clear();
+                }
+
+                if (label.Visible == false)
+                {
+                    label.Visible = true;
+                    label.Text = control.Tag.ToString();
+                }
+
+                var filters = FieldFilter(table, colname);
+                foreach (string i in filters)
+                {
+                    control.Items.Add(i);
+                }
+                if(control.Visible == false)
+                    control.Visible = true;
+
+            }
+            catch (Exception ex)
+            {
+                var _ = new Error(ex).ShowDialog();
+            }
+        }
+
+        internal void PopulateFilterItems(Field colname, DataBuilder data, MetroSetComboBox control, Label label)
         {
             try
             {
@@ -171,7 +196,7 @@ namespace BudgetExecution
                     label.Visible = true;
                 }
 
-                var item = DbData.ProgramElements[colname.ToString()];
+                var item = data.ProgramElements[colname.ToString()];
                 control.Tag = colname.ToString();
                 foreach (string i in item)
                 {
@@ -181,6 +206,33 @@ namespace BudgetExecution
             catch (Exception ex)
             {
                 var  _ = new Error(ex).ShowDialog();
+            }
+        }
+
+        internal void PopulateFilterItems(Field colname, DataTable table, MetroSetComboBox control, Label label)
+        {
+            try
+            {
+                if (control.Items.Count > 0)
+                {
+                    control.Items.Clear();
+                }
+
+                if (label.Visible == false)
+                {
+                    label.Visible = true;
+                }
+
+                var item = FieldFilter(table, colname.ToString());
+                control.Tag = colname.ToString();
+                foreach (string i in item)
+                {
+                    control.Items.Add(i);
+                }
+            }
+            catch (Exception ex)
+            {
+                var _ = new Error(ex).ShowDialog();
             }
         }
 
@@ -216,37 +268,6 @@ namespace BudgetExecution
         private void NextButton_OnClick(object sender, EventArgs e)
         {
             BindingSource.MoveNext();
-        }
-
-        internal void PopulateFilterButtons(FlowLayoutPanel control, string[] list)
-        {
-            try
-            {
-                control.Controls.Clear();
-                foreach (string f in list)
-                {
-                    var b = new MetroSetButton();
-                    b.Text = f;
-                    b.Font = new Font("Segoe UI", 8f);
-                    b.NormalColor = Color.Black;
-                    b.NormalTextColor = SystemColors.MenuHighlight;
-                    b.NormalBorderColor = Color.Black;
-                    b.HoverBorderColor = Color.Blue;
-                    b.HoverColor = Color.SteelBlue;
-                    b.HoverTextColor = SystemColors.Info;
-                    b.Size = new Size(160, 30);
-                    b.Margin = new Padding(3);
-                    b.Padding = new Padding(1);
-                    control.AutoSize = true;
-                    control.Controls.Add(b);
-                    b.Tag = f;
-                    b.Click += FilterControlButton_OnClick;
-                }
-            }
-            catch (Exception ex)
-            {
-                var  _ = new Error(ex).ShowDialog();
-            }
         }
 
         internal void PopulateFilterButtons(MetroSetComboBox control, string[] list)
@@ -305,6 +326,11 @@ namespace BudgetExecution
             }
         }
 
+        private void RefreshButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void CopyButton_OnClick(object sender, EventArgs e)
         {
             try
@@ -318,7 +344,6 @@ namespace BudgetExecution
                 var  _ = new Error(ex).ShowDialog();
             }
         }
-
 
         private void HideTopGridLabels()
         {
@@ -344,241 +369,6 @@ namespace BudgetExecution
             }
         }
 
-        private void GetDataBase(Source source)
-        {
-            switch (source)
-            {
-                case Source.Accounts:
-                    label1.Text = "Fund Code";
-                    PopulateFilterItems(Field.Fund, DbData, Filter1, label1);
-                    Filter2.Visible = true;
-                    PopulateFilterItems(Field.ProgramProjectCode, DbData, Filter2, label2);
-                    label2.Text = "Program Project";
-                    break;
-                case Source.Awards:
-
-                    label1.Text = "Division";
-                    PopulateFilterItems(Field.DivisionName, DbData, Filter1, label1);
-                    Filter2.Visible = true;
-                    PopulateFilterItems(Field.FundName, DbData, Filter2, label2);
-                    label2.Text = "Fund Name";
-                    break;
-                case Source.Reimbursables:
-                    label1.Text = "Agreement Number";
-                    PopulateFilterItems("AgreementNumber", DbData, Filter1, label1);
-                    Filter2.Visible = true;
-                    label2.Text = "Fund";
-                    PopulateFilterItems(Field.FundName, DbData, Filter2, label2);
-                    Filter3.Visible = true;
-                    label3.Text = "Reimbursable Org Code";
-                    PopulateFilterItems("ReimbOrg", DbData, Filter3, label3);
-                    break;
-                case Source.ControlNumbers:
-                    label1.Text = "Division";
-                    PopulateFilterItems("DivisionID", DbData, Filter1, label1);
-                    Filter2.Visible = true;
-                    label2.Text = "Fund";
-                    PopulateFilterItems(Field.Fund, DbData, Filter2, label2);
-                    break;
-                case Source.Divisions:
-                    label1.Text = "Division Name";
-                    PopulateFilterItems("Name", DbData, Filter1, label1);
-                    break;
-                case Source.Employees:
-                    label1.Text = "HR Org Code Name";
-                    PopulateFilterItems("HrOrgCodeName", DbData, Filter1, label1);
-                    Filter2.Visible = true;
-                    label2.Text = "Work Code";
-                    PopulateFilterItems("WorkCode", DbData, Filter2, label2);
-                    break;
-                case Source.Funds:
-                    label1.Text = "Fund";
-                    PopulateFilterItems("FundName", DbData, Filter1, label1);
-                    break;
-                case Source.Obligations:
-                    label1.Text = "Division";
-                    PopulateFilterItems(Field.DivisionName, DbData, Filter1, label1);
-                    Filter2.Visible = true;
-                    label2.Text = "Fund";
-                    PopulateFilterItems(Field.FundName, DbData, Filter2, label2);
-                    Filter3.Visible = true;
-                    label3.Text = "Budget Object Class";
-                    PopulateFilterItems(Field.BocName, DbData, Filter3, label3);
-                    Filter4.Visible = true;
-                    label4.Text = "Finance Object Class";
-                    PopulateFilterItems("FocName", DbData, Filter4, label4);
-                    break;
-                case Source.DivisionObligations:
-                    label1.Text = "Division";
-                    PopulateFilterItems(Field.DivisionName, DbData, Filter1, label1);
-                    Filter2.Visible = true;
-                    label2.Text = "Fund";
-                    PopulateFilterItems(Field.FundName, DbData, Filter2, label2);
-                    Filter3.Visible = true;
-                    label3.Text = "Budget Object Class";
-                    PopulateFilterItems(Field.BocName, DbData, Filter3, label3);
-                    Filter4.Visible = true;
-                    label4.Text = "Finance Object Class";
-                    PopulateFilterItems("FocName", DbData, Filter4, label4);
-                    break;
-                case Source.PayrollObligations:
-                    label1.Text = "Division";
-                    PopulateFilterItems(Field.DivisionName, DbData, Filter1, label1);
-                    Filter2.Visible = true;
-                    label2.Text = "Fund";
-                    PopulateFilterItems(Field.FundName, DbData, Filter2, label2);
-                    Filter3.Visible = true;
-                    label3.Text = "Work Code Name";
-                    PopulateFilterItems("WorkCodeName", DbData, Filter3, label3);
-                    Filter4.Visible = true;
-                    label4.Text = "Finance Object Class";
-                    PopulateFilterItems("FocName", DbData, Filter4, label4);
-                    break;
-                case Source.PRC:
-                    label1.Text = "Budget Level";
-                    PopulateFilterItems(Field.BudgetLevel, DbData, Filter1, label1);
-                    Filter2.Visible = true;
-                    label2.Text = "Fund";
-                    PopulateFilterItems(Field.FundName, DbData, Filter2, label2);
-                    Filter3.Visible = true;
-                    label3.Text = "Division";
-                    PopulateFilterItems(Field.DivisionName, DbData, Filter3, label3);
-                    Filter4.Visible = true;
-                    label4.Text = "Budget Object Class";
-                    PopulateFilterItems(Field.BocName, DbData, Filter4, label4);
-                    break;
-                case Source.Transfers:
-                    label1.Text = "Budget Level";
-                    PopulateFilterItems(Field.BudgetLevel, DbData, Filter1, label1);
-                    Filter2.Visible = true;
-                    label2.Text = "Fund";
-                    PopulateFilterItems(Field.Fund, DbData, Filter2, label2);
-                    Filter3.Visible = true;
-                    label3.Text = "Division";
-                    PopulateFilterItems(Field.RC, DbData, Filter3, label3);
-                    Filter4.Visible = true;
-                    label4.Text = "Reprogramming Number";
-                    PopulateFilterItems("DocumentNumber", DbData, Filter4, label4);
-                    break;
-                case Source.FTE:
-                    label1.Text = "Fund";
-                    PopulateFilterItems(Field.FundName, DbData, Filter1, label1);
-                    Filter2.Visible = true;
-                    label2.Text = "Program Project";
-                    PopulateFilterItems(Field.ProgramProjectName, DbData, Filter2, label2);
-                    break;
-                case Source.PAYROLL:
-                    label1.Text = "Fund";
-                    PopulateFilterItems(Field.FundName, DbData, Filter1, label1);
-                    Filter2.Visible = true;
-                    label2.Text = "Program Project";
-                    PopulateFilterItems(Field.ProgramProjectName, DbData, Filter2, label2);
-                    break;
-                case Source.EPM:
-                    label1.Text = "Budget Level";
-                    PopulateFilterItems(Field.BudgetLevel, DbData, Filter1, label1);
-                    Filter2.Visible = true;
-                    label2.Text = "Fund";
-                    PopulateFilterItems(Field.FundName, DbData, Filter2, label2);
-                    Filter3.Visible = true;
-                    label3.Text = "Division";
-                    PopulateFilterItems(Field.DivisionName, DbData, Filter3, label3);
-                    Filter4.Visible = true;
-                    label4.Text = "Budget Object Class";
-                    PopulateFilterItems(Field.BocName, DbData, Filter4, label4);
-                    break;
-                case Source.OIL:
-                    PopulateFilterItems(Field.BudgetLevel, DbData, Filter1, label1);
-                    Filter2.Visible = true;
-                    PopulateFilterItems(Field.FundName, DbData, Filter2, label2);
-                    Filter3.Visible = true;
-                    PopulateFilterItems(Field.DivisionName, DbData, Filter3, label3);
-                    Filter4.Visible = true;
-                    PopulateFilterItems(Field.BocName, DbData, Filter4, label4);
-                    break;
-                case Source.SUPERFUND:
-                    PopulateFilterItems(Field.BudgetLevel, DbData, Filter1, label1);
-                    Filter2.Visible = true;
-                    PopulateFilterItems(Field.FundName, DbData, Filter2, label2);
-                    Filter3.Visible = true;
-                    PopulateFilterItems(Field.DivisionName, DbData, Filter3, label3);
-                    Filter4.Visible = true;
-                    PopulateFilterItems(Field.BocName, DbData, Filter4, label4);
-                    break;
-                case Source.STAG:
-                    PopulateFilterItems(Field.BudgetLevel, DbData, Filter1, label1);
-                    Filter2.Visible = true;
-                    PopulateFilterItems(Field.FundName, DbData, Filter2, label2);
-                    Filter3.Visible = true;
-                    PopulateFilterItems(Field.DivisionName, DbData, Filter3, label3);
-                    Filter4.Visible = true;
-                    break;
-                case Source.LUST:
-                    PopulateFilterItems(Field.BudgetLevel, DbData, Filter1, label1);
-                    Filter2.Visible = true;
-                    PopulateFilterItems(Field.FundName, DbData, Filter2, label2);
-                    Filter3.Visible = true;
-                    PopulateFilterItems(Field.DivisionName, DbData, Filter3, label3);
-                    Filter4.Visible = true;
-                    PopulateFilterItems(Field.BocName, DbData, Filter4, label4);
-                    break;
-                case Source.DWH:
-                    PopulateFilterItems(Field.BudgetLevel, DbData, Filter1, label1);
-                    Filter2.Visible = true;
-                    PopulateFilterItems(Field.FundName, DbData, Filter2, label2);
-                    Filter3.Visible = true;
-                    PopulateFilterItems(Field.DivisionName, DbData, Filter3, label3);
-                    Filter4.Visible = true;
-                    PopulateFilterItems(Field.BocName, DbData, Filter4, label4);
-                    break;
-                case Source.TRAVEL:
-                    PopulateFilterItems(Field.BudgetLevel, DbData, Filter1, label1);
-                    Filter2.Visible = true;
-                    PopulateFilterItems(Field.FundName, DbData, Filter2, label2);
-                    Filter3.Visible = true;
-                    PopulateFilterItems(Field.DivisionName, DbData, Filter3, label3);
-                    break;
-                case Source.EXPENSES:
-                    PopulateFilterItems(Field.BudgetLevel, DbData, Filter1, label1);
-                    Filter2.Visible = true;
-                    PopulateFilterItems(Field.FundName, DbData, Filter2, label2);
-                    Filter3.Visible = true;
-                    PopulateFilterItems(Field.DivisionName, DbData, Filter3, label3);
-                    Filter4.Visible = true;
-                    PopulateFilterItems(Field.BocName, DbData, Filter4, label4);
-                    break;
-                case Source.CONTRACTS:
-                    PopulateFilterItems(Field.BudgetLevel, DbData, Filter1, label1);
-                    Filter2.Visible = true;
-                    PopulateFilterItems(Field.FundName, DbData, Filter2, label2);
-                    Filter3.Visible = true;
-                    PopulateFilterItems(Field.DivisionName, DbData, Filter3, label3);
-                    Filter4.Visible = true;
-                    PopulateFilterItems(Field.BocName, DbData, Filter4, label4);
-                    break;
-                case Source.GRANTS:
-                    PopulateFilterItems(Field.BudgetLevel, DbData, Filter1, label1);
-                    Filter2.Visible = true;
-                    PopulateFilterItems(Field.FundName, DbData, Filter2, label2);
-                    Filter3.Visible = true;
-                    PopulateFilterItems(Field.DivisionName, DbData, Filter3, label3);
-                    Filter4.Visible = true;
-                    PopulateFilterItems(Field.BocName, DbData, Filter4, label4);
-                    break;
-                case Source.WCF:
-                    PopulateFilterItems(Field.BudgetLevel, DbData, Filter1, label1);
-                    Filter2.Visible = true;
-                    PopulateFilterItems(Field.FundName, DbData, Filter2, label2);
-                    Filter3.Visible = true;
-                    PopulateFilterItems(Field.DivisionName, DbData, Filter3, label3);
-                    Filter4.Visible = true;
-                    PopulateFilterItems(Field.BocName, DbData, Filter4, label4);
-                    break;
-
-
-            }
-        }
-
         private void Filter1_SelectedIndexChanged(object sender, EventArgs e)
         {
             try
@@ -590,10 +380,15 @@ namespace BudgetExecution
                 BindingSource.DataSource = tbl;
                 label6.Text = DbData.GetTotal(tbl).ToString("c");
                 label12.Text = DbData.GetCount(tbl).ToString();
+                PopulateFilterItems(Filter2.Tag.ToString(), tbl, Filter2, label2);
+                Filter3.Visible = false;
+                label3.Visible = false;
+                Filter4.Visible = false;
+                label4.Visible = false;
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message + ex.TargetSite);
+                new Error(ex).ShowDialog();
             }
 
         }
@@ -602,19 +397,24 @@ namespace BudgetExecution
         {
             try
             {
-                var filter = sender as MetroSetComboBox;
-                F2 = filter.SelectedItem.ToString();
-                C2 = (Field)Enum.Parse(typeof(Field), filter.Tag.ToString());
+                if (sender is MetroSetComboBox filter)
+                {
+                    F2 = filter.SelectedItem.ToString();
+                    C2 = (Field) Enum.Parse(typeof(Field), filter.Tag.ToString());
+                }
+
                 var tbl = TableFilter(Table, C1, F1);
                 var tbl2 = TableFilter(tbl, C2, F2);
                 BindingSource.DataSource = tbl2;
                 label6.Text = DbData.GetTotal(tbl2).ToString("c");
-                label12.Text = DbData.GetCount(tbl2).ToString();
+                label12.Text = tbl2.Rows.ToString();
+                PopulateFilterItems(Filter3.Tag.ToString(), tbl2, Filter3, label3);
+                Filter4.Visible = false;
+                label4.Visible = false;
             }
             catch (Exception ex)
             {
-                var errorMessage = new Error(ex);
-                errorMessage.ShowDialog();
+                new Error(ex).ShowDialog();
             }
         }
 
@@ -623,43 +423,325 @@ namespace BudgetExecution
             try
             {
                 var filter = sender as MetroSetComboBox;
-                F3 = filter.SelectedItem.ToString();
-                C3 = (Field)Enum.Parse(typeof(Field), filter.Tag.ToString());
+                F3 = filter?.SelectedItem.ToString();
+                if (filter != null) C3 = (Field) Enum.Parse(typeof(Field), filter.Tag.ToString());
                 var tbl = TableFilter(Table, C1, F1);
                 var tbl2 = TableFilter(tbl, C2, F2);
                 var tbl3 = TableFilter(tbl2, C3, F3);
                 BindingSource.DataSource = tbl3;
                 label6.Text = DbData.GetTotal(tbl3).ToString("c");
                 label12.Text = DbData.GetCount(tbl3).ToString();
+                PopulateFilterItems(Filter4.Tag.ToString(), tbl3, Filter4, label4);
             }
             catch (Exception ex)
             {
-                var errorMessage = new Error(ex);
-                errorMessage.ShowDialog();
+                new Error(ex).ShowDialog();
             }
         }
 
-        private void RefreshButton_Click(object sender, EventArgs e)
+        private void Filter4_SelectedIndexChanged(object sender, EventArgs e)
         {
             try
             {
-                BindingSource.Filter = null;
-                BindingSource.DataSource = Table;
-                Navigator.BindingSource = BindingSource;
-                Grid.DataSource = BindingSource;
-                Filter2.Items.Clear();
-                Filter3.Items.Clear();
-                label2.Visible = false;
-                Filter2.Visible = false;
-                label3.Visible = false;
-                Filter3.Visible = false;
-                label4.Visible = false;
-                Filter4.Visible = false;
+                var filter = sender as MetroSetComboBox;
+                F4 = filter?.SelectedItem.ToString();
+                if (filter != null) C4 = (Field)Enum.Parse(typeof(Field), filter.Tag.ToString());
+                var tbl = TableFilter(Table, C1, F1);
+                var tbl2 = TableFilter(tbl, C2, F2);
+                var tbl3 = TableFilter(tbl2, C3, F3);
+                var tbl4 = TableFilter(tbl3, C4, F4);
+                BindingSource.DataSource = tbl4;
+                label6.Text = DbData.GetTotal(tbl4).ToString("c");
+                label12.Text = DbData.GetCount(tbl4).ToString();
             }
-            catch (System.Exception ex)
+            catch (Exception ex)
             {
-                var  _ = new Error(ex).ShowDialog();
-            }      
+                new Error(ex).ShowDialog();
+            }
         }
+
+        private void GetDataBase(Source source)
+        {
+            try
+            {
+            switch (source)
+            {
+                case Source.Accounts:
+                    label1.Text = "Fund";
+                    PopulateFilterItems(Field.Fund, DbData, Filter1, label1);
+                    Filter2.Tag = "GoalName";
+                    Filter3.Tag = "ProgramProjectName";
+                    break;
+                case Source.Awards:
+                    label1.Text = "DivisionName";
+                    PopulateFilterItems(Field.DivisionName, DbData, Filter1, label1);
+                    Filter2.Tag = "FundName";
+                    Filter3.Tag = "Type";
+                    break;
+                case Source.Reimbursables:
+                    label1.Text = "AgreementNumber";
+                    PopulateFilterItems("AgreementNumber", DbData, Filter1, label1);
+                    Filter2.Tag = "ReimbOrg";
+                    Filter3.Tag = "FundName";
+                    break;
+                case Source.ControlNumbers:
+                    label1.Text = "DivisionID";
+                    PopulateFilterItems("DivisionID", DbData, Filter1, label1);
+                    Filter2.Tag = "Fund";
+                    break;
+                case Source.Divisions:
+                    label1.Text = "DivisionName";
+                    PopulateFilterItems("Name", DbData, Filter1, label1);
+                    Filter2.Tag = "Title";
+                    Filter3.Tag = "RC";
+                    Filter4.Tag = "Code";
+                    break;
+                case Source.Employees:
+                    label1.Text = "HR Org Code Name";
+                    PopulateFilterItems("HrOrgCodeName", DbData, Filter1, label1);
+                    Filter2.Tag = "WorkCode";
+                    Filter3.Tag = "HrOrgCoe";
+                    Filter4.Tag = "LastName";
+                    break;
+                case Source.Funds:
+                    label1.Text = "Name";
+                    PopulateFilterItems("Name", DbData, Filter1, label1);
+                    Filter2.Tag = "Title";
+                    Filter3.Tag = "Code";
+                    Filter4.Tag = "FiscalYear";
+                    break;
+                case Source.Obligations:
+                    label1.Text = "FundName";
+                    PopulateFilterItems(Field.FundName, DbData, Filter1, label1);
+                    Filter2.Tag = "BocName";
+                    Filter3.Tag = "ProgramArea";
+                    Filter4.Tag = "DCN";
+                    break;
+                case Source.DivisionObligations:
+                    label1.Text = "DivisionName";
+                    PopulateFilterItems(Field.DivisionName, DbData, Filter1, label1);
+                    Filter2.Tag = "FundName";
+                    Filter3.Tag = "BocName";
+                    Filter4.Tag = "DCN";
+                    break;
+                case Source.PayrollObligations:
+                    label1.Text = "DivisionName";
+                    PopulateFilterItems(Field.DivisionName, DbData, Filter1, label1);
+                    Filter2.Tag = "Fund";
+                    Filter3.Tag = "BocName";
+                    Filter4.Tag = "FocName";
+                    break;
+                    case Source.PRC:
+                    label1.Text = "BudgetLevel";
+                    PopulateFilterItems(Field.BudgetLevel, DbData, Filter1, label1);
+                    Filter2.Tag = "FundName";
+                    Filter3.Tag = "BocName";
+                    Filter4.Tag = "ProgramAreaName";
+                    break;
+                case Source.Transfers:
+                    label1.Text = "DocumentNumber";
+                    PopulateFilterItems(Field.DocumentNumber, DbData, Filter1, label1);
+                    Filter2.Tag = "Organization";
+                    Filter3.Tag = "Fund";
+                    Filter4.Tag = "BOC";
+                    break;
+                case Source.FTE:
+                    label1.Text = "FundName";
+                    PopulateFilterItems(Field.FundName, DbData, Filter1, label1);
+                    Filter2.Tag = "BudgetLevel";
+                    Filter3.Tag = "DivisionName";
+                    Filter4.Tag = "ProgramProjectName";
+                    break;
+                case Source.PAYROLL:
+                    label1.Text = "FundName";
+                    PopulateFilterItems(Field.FundName, DbData, Filter1, label1);
+                    Filter2.Tag = "ProgramAreaName";
+                    Filter3.Tag = "NpmCode";
+                    Filter4.Tag = "ProgramProjectName";
+                    break;
+                case Source.EPM:
+                    label1.Text = "DivisionName";
+                    PopulateFilterItems(Field.BudgetLevel, DbData, Filter1, label1);
+                    Filter2.Tag = "BocName";
+                    Filter3.Tag = "ProgramAreaName";
+                    Filter4.Tag = "ProgramProjectName";
+                    break;
+                case Source.OIL:
+                    label1.Text = "DivisionName";
+                    PopulateFilterItems(Field.BudgetLevel, DbData, Filter1, label1);
+                    Filter2.Tag = "BocName";
+                    Filter3.Tag = "ProgramAreaName";
+                    Filter4.Tag = "ProgramProjectName";
+                    break;
+                case Source.SUPERFUND:
+                    label1.Text = "DivisionName";
+                    PopulateFilterItems(Field.BudgetLevel, DbData, Filter1, label1);
+                    Filter2.Tag = "BocName";
+                    Filter3.Tag = "ProgramAreaName";
+                    Filter4.Tag = "ProgramProjectName";
+                    break;
+                case Source.STAG:
+                    label1.Text = "DivisionName";
+                    PopulateFilterItems(Field.BudgetLevel, DbData, Filter1, label1);
+                    Filter2.Tag = "BocName";
+                    Filter3.Tag = "ProgramAreaName";
+                    Filter4.Tag = "ProgramProjectName";
+                    break;
+                case Source.LUST:
+                    label1.Text = "DivisionName";
+                    PopulateFilterItems(Field.BudgetLevel, DbData, Filter1, label1);
+                    Filter2.Tag = "BocName";
+                    Filter3.Tag = "ProgramAreaName";
+                    Filter4.Tag = "ProgramProjectName";
+                    break;
+                case Source.DWH:
+                    label1.Text = "DivisionName";
+                    PopulateFilterItems(Field.BudgetLevel, DbData, Filter1, label1);
+                    Filter2.Tag = "BocName";
+                    Filter3.Tag = "ProgramAreaName";
+                    Filter4.Tag = "ProgramProjectName";
+                    break;
+                case Source.TRAVEL:
+                    label1.Text = "FundName";
+                    PopulateFilterItems(Field.BudgetLevel, DbData, Filter1, label1);
+                    Filter2.Tag = "DivisionName";
+                    Filter3.Tag = "ProgramAreaName";
+                    Filter4.Tag = "ProgramProjectName";
+                    break;
+                case Source.EXPENSES:
+                    label1.Text = "FundName";
+                    PopulateFilterItems(Field.BudgetLevel, DbData, Filter1, label1);
+                    Filter2.Tag = "DivisionName";
+                    Filter3.Tag = "ProgramAreaName";
+                    Filter4.Tag = "ProgramProjectName";
+                    break;
+                case Source.CONTRACTS:
+                    label1.Text = "FundName";
+                    PopulateFilterItems(Field.BudgetLevel, DbData, Filter1, label1);
+                    Filter2.Tag = "DivisionName";
+                    Filter3.Tag = "ProgramAreaName";
+                    Filter4.Tag = "ProgramProjectName";
+                    break;
+                case Source.GRANTS:
+                    label1.Text = "FundName";
+                    PopulateFilterItems(Field.BudgetLevel, DbData, Filter1, label1);
+                    Filter2.Tag = "DivisionName";
+                    Filter3.Tag = "ProgramAreaName";
+                    Filter4.Tag = "ProgramProjectName";
+                    break;
+                case Source.WCF:
+                    label1.Text = "BudgetLevel";
+                    PopulateFilterItems(Field.BudgetLevel, DbData, Filter1, label1);
+                    Filter2.Tag = "FundName";
+                    Filter3.Tag = "ProgramAreaName";
+                    break;
+                case Source.DivisionAccounts:
+                    label1.Text = "DivisionName";
+                    PopulateFilterItems(Field.DivisionName, DbData, Filter1, label1);
+                    Filter2.Tag = "FundName";
+                    Filter3.Tag = "BocName";
+                    Filter4.Tag = "ProgramAreaName";
+                    break;
+                case Source.EJ:
+                    label1.Text = "FundName";
+                    PopulateFilterItems(Field.FundName, DbData, Filter1, label1);
+                    Filter2.Tag = "BocName";
+                    Filter3.Tag = "ProgramAreaName";
+                    break;
+                case Source.EN:
+                    label1.Text = "FundName";
+                    PopulateFilterItems(Field.FundName, DbData, Filter1, label1);
+                    Filter2.Tag = "BocName";
+                    Filter3.Tag = "ProgramAreaName";
+                    break;
+                case Source.ExternalTransfers:
+                    label1.Text = "DocumentNumber";
+                    PopulateFilterItems(Field.DocumentNumber, DbData, Filter1, label1);
+                    Filter2.Tag = "Type";
+                    Filter3.Tag = "Fund";
+                    Filter4.Tag = "BOC";
+                    break;
+                case Source.InternalTransfers:
+                    label1.Text = "DivisionName";
+                    PopulateFilterItems(Field.DivisionName, DbData, Filter1, label1);
+                    Filter2.Tag = "Fund";
+                    Filter3.Tag = "BOC";
+                    break;
+                case Source.RegionalAccounts:
+                    label1.Text = "FundName";
+                    PopulateFilterItems(Field.FundName, DbData, Filter1, label1);
+                    Filter2.Tag = "BocName";
+                    Filter3.Tag = "ProgramAreaName";
+                    break;
+                case Source.Sites:
+                    label1.Text = "State";
+                    PopulateFilterItems(Field.State, DbData, Filter1, label1);
+                    Filter2.Tag = "Code";
+                    Filter3.Tag = "FocName";
+                    Filter4.Tag = "";
+                    break;
+                case Source.MD:
+                    label1.Text = "FundName";
+                    PopulateFilterItems(Field.FundName, DbData, Filter1, label1);
+                    Filter2.Tag = "BocName";
+                    Filter3.Tag = "ProgramAreaName";
+                    break;
+                case Source.RC:
+                    label1.Text = "FundName";
+                    PopulateFilterItems(Field.FundName, DbData, Filter1, label1);
+                    Filter2.Tag = "BocName";
+                    Filter3.Tag = "ProgramAreaName";
+                    break;
+                case Source.RA:
+                    label1.Text = "FundName";
+                    PopulateFilterItems(Field.FundName, DbData, Filter1, label1);
+                    Filter2.Tag = "BocName";
+                    Filter3.Tag = "ProgramAreaName";
+                    break;
+                case Source.SF:
+                    label1.Text = "FundName";
+                    PopulateFilterItems(Field.FundName, DbData, Filter1, label1);
+                    Filter2.Tag = "BocName";
+                    Filter3.Tag = "ProgramAreaName";
+                    break;
+                case Source.WQ:
+                    label1.Text = "FundName";
+                    PopulateFilterItems(Field.FundName, DbData, Filter1, label1);
+                    Filter2.Tag = "BocName";
+                    Filter3.Tag = "ProgramAreaName";
+                    break;
+                case Source.MM:
+                    label1.Text = "FundName";
+                    PopulateFilterItems(Field.FundName, DbData, Filter1, label1);
+                    Filter2.Tag = "BocName";
+                    Filter3.Tag = "ProgramAreaName";
+                    break;
+                case Source.WSA:
+                    label1.Text = "FundName";
+                    PopulateFilterItems(Field.FundName, DbData, Filter1, label1);
+                    Filter2.Tag = "BocName";
+                    Filter3.Tag = "ProgramAreaName";
+                    break;
+                case Source.MDR:
+                    label1.Text = "FundName";
+                    PopulateFilterItems(Field.FundName, DbData, Filter1, label1);
+                    Filter2.Tag = "BocName";
+                    Filter3.Tag = "ProgramAreaName";
+                    break;
+                case Source.XA:
+                    label1.Text = "FundName";
+                    PopulateFilterItems(Field.FundName, DbData, Filter1, label1);
+                    Filter2.Tag = "BocName";
+                    Filter3.Tag = "ProgramAreaName";
+                    break;
+            }
+
+            }
+            catch (Exception ex)
+            {
+                new Error(ex).ShowDialog();
+            }
+        }
+        
     }
 }

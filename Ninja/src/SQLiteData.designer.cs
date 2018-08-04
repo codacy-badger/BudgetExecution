@@ -280,7 +280,6 @@ namespace BudgetExecution
             this.Filter2.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.Filter2.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.Filter2.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.Filter2.DisplayMember = "Fund";
             this.Filter2.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.Filter2.DropDownHeight = 75;
             this.Filter2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -301,7 +300,6 @@ namespace BudgetExecution
             this.Filter2.TabIndex = 1;
             this.Filter2.ThemeAuthor = "Narwin";
             this.Filter2.ThemeName = "MetroDark";
-            this.Filter2.ValueMember = "Fund";
             this.Filter2.SelectedIndexChanged += new System.EventHandler(this.Filter2_SelectedIndexChanged);
             // 
             // metroPanel1
@@ -334,7 +332,7 @@ namespace BudgetExecution
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 132F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 143F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 120F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 135F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 136F));
             this.tableLayoutPanel1.Controls.Add(this.label5, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.label10, 5, 0);
             this.tableLayoutPanel1.Controls.Add(this.label6, 1, 0);
@@ -366,7 +364,7 @@ namespace BudgetExecution
             this.label10.AutoSize = true;
             this.label10.Dock = System.Windows.Forms.DockStyle.Left;
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(663, 0);
+            this.label10.Location = new System.Drawing.Point(662, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(60, 34);
             this.label10.TabIndex = 158;
@@ -377,7 +375,7 @@ namespace BudgetExecution
             this.label6.AutoSize = true;
             this.label6.Dock = System.Windows.Forms.DockStyle.Left;
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(68, 0);
+            this.label6.Location = new System.Drawing.Point(67, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(51, 34);
             this.label6.TabIndex = 154;
@@ -388,7 +386,7 @@ namespace BudgetExecution
             this.label9.AutoSize = true;
             this.label9.Dock = System.Windows.Forms.DockStyle.Right;
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(606, 0);
+            this.label9.Location = new System.Drawing.Point(605, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(51, 34);
             this.label9.TabIndex = 157;
@@ -399,7 +397,7 @@ namespace BudgetExecution
             this.label7.AutoSize = true;
             this.label7.Dock = System.Windows.Forms.DockStyle.Right;
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(291, 0);
+            this.label7.Location = new System.Drawing.Point(290, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(51, 34);
             this.label7.TabIndex = 155;
@@ -410,7 +408,7 @@ namespace BudgetExecution
             this.label8.AutoSize = true;
             this.label8.Dock = System.Windows.Forms.DockStyle.Left;
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(348, 0);
+            this.label8.Location = new System.Drawing.Point(347, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(51, 34);
             this.label8.TabIndex = 156;
@@ -421,7 +419,7 @@ namespace BudgetExecution
             this.label11.AutoSize = true;
             this.label11.Dock = System.Windows.Forms.DockStyle.Right;
             this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(843, 0);
+            this.label11.Location = new System.Drawing.Point(842, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(77, 34);
             this.label11.TabIndex = 159;
@@ -432,7 +430,7 @@ namespace BudgetExecution
             this.label12.AutoSize = true;
             this.label12.Dock = System.Windows.Forms.DockStyle.Left;
             this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(926, 0);
+            this.label12.Location = new System.Drawing.Point(925, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(60, 34);
             this.label12.TabIndex = 160;
@@ -759,7 +757,6 @@ namespace BudgetExecution
             this.Filter4.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.Filter4.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.Filter4.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.Filter4.DisplayMember = "Fund";
             this.Filter4.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.Filter4.DropDownHeight = 75;
             this.Filter4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -780,7 +777,7 @@ namespace BudgetExecution
             this.Filter4.TabIndex = 8;
             this.Filter4.ThemeAuthor = "Narwin";
             this.Filter4.ThemeName = "MetroDark";
-            this.Filter4.ValueMember = "Fund";
+            this.Filter4.SelectedIndexChanged += new System.EventHandler(this.Filter4_SelectedIndexChanged);
             // 
             // Filter1
             // 
@@ -826,7 +823,6 @@ namespace BudgetExecution
             this.Filter3.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.Filter3.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.Filter3.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.Filter3.DisplayMember = "Fund";
             this.Filter3.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.Filter3.DropDownHeight = 75;
             this.Filter3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -847,7 +843,6 @@ namespace BudgetExecution
             this.Filter3.TabIndex = 5;
             this.Filter3.ThemeAuthor = "Narwin";
             this.Filter3.ThemeName = "MetroDark";
-            this.Filter3.ValueMember = "Fund";
             this.Filter3.SelectedIndexChanged += new System.EventHandler(this.Filter3_SelectedIndexChanged);
             // 
             // metroPanel4

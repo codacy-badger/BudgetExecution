@@ -59,7 +59,8 @@ namespace BudgetExecution
     {
         ID, BudgetLevel, BFY, RPIO, Fund, FundName, BOC, BocName, Org, RC, Code, NPM, Goal, GoalName, Objective,
         ObjectiveName, DivisionName, ProgramArea, ProgramAreaName, ProgramProjectCode, ProgramProjectName,
-        SiteProjectName, SiteProjectCode, NpmName, AH, DCN, ControlNumber, PurchaseRequest
+        SiteProjectName, SiteProjectCode, NpmName, ReimbOrg, AH, DCN, ControlNumber, PurchaseRequest, AgreementNumber, Type,
+        DivisionID, DocumentNumber, State
     }
 
     public enum Provider
@@ -70,7 +71,8 @@ namespace BudgetExecution
     public enum Source
     {
         Accounts, Awards, ControlNumbers, DivisionAccounts, DivisionObligations, Divisions, DWH, EJ, EN, Employees, EPM, ExternalTransfers, Funds, InternalTransfers, PRC, RegionalAccounts,
-        Obligations, PayrollObligations, Sites, Reimbursables, LUST, OIL, STAG, SUPERFUND, MD, RC, RA, SF, Transfers, WQ, MM, WSA, WCF, MDR, XA, PAYROLL, FTE, TRAVEL, EXPENSES, CONTRACTS, GRANTS
+        Obligations, PayrollObligations, Sites, Reimbursables, LUST, OIL, STAG, SUPERFUND, MD, RC, RA, SF, Transfers, WQ,MM, WSA, WCF, MDR, XA, PAYROLL, FTE, TRAVEL, EXPENSES, CONTRACTS, GRANTS
+
     }
 
     public enum Stat

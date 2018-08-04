@@ -8,11 +8,7 @@ namespace BudgetExecution
     using System.Collections.Generic;
     using System.Configuration;
     using System.Data;
-    using System.Data.Common;
-    using System.Data.OleDb;
-    using System.Data.SqlClient;
     using System.Data.SQLite;
-    using System.Windows.Forms;
 
     public class SQLiteQuery : Query
     {

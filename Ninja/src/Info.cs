@@ -18,7 +18,7 @@ namespace BudgetExecution
         public static string FunctionImages = @"C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\Resources\FunctionImages";
         public static string DatabaseImages = @"C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\Resources\Database";
 
-        public static DataTable FilterTableRows(DataTable table, Field prcfilter, string filter)
+        public static DataTable FilterRows(DataTable table, Field prcfilter, string filter)
         {
             try
             {
@@ -238,9 +238,9 @@ namespace BudgetExecution
                 d.Add("Working Captial Fund", Source.WCF);
                 return d;
             }
-            catch (System.Exception ex)
+            catch (Exception ex)
             {
-                var  _ = new Error(ex).ShowDialog();
+                new Error(ex).ShowDialog();
                 return null;
             }
         }
@@ -565,7 +565,7 @@ namespace BudgetExecution
                     default: return "NONE";
                 }
             }
-            catch (System.Exception e)
+            catch (Exception e)
             {
                 MessageBox.Show(e.TargetSite + e.StackTrace);
                 return null;
@@ -623,7 +623,7 @@ namespace BudgetExecution
                     default: return "R06";
                 }
             }
-            catch (System.Exception ex)
+            catch (Exception ex)
             {
                 var  _ = new Error(ex).ShowDialog();
                 return null;
@@ -646,7 +646,7 @@ namespace BudgetExecution
 
                 return fields;
             }
-            catch (System.Exception ex)
+            catch (Exception ex)
             {
                 var  _ = new Error(ex).ShowDialog();
                 return null;
@@ -681,7 +681,7 @@ namespace BudgetExecution
                         return goal;
                 }
             }
-            catch (System.Exception ex)
+            catch (Exception ex)
             {
                 var  _ = new Error(ex).ShowDialog();
                 return null;
@@ -728,7 +728,7 @@ namespace BudgetExecution
                         return obj;
                 }
             }
-            catch (System.Exception ex)
+            catch (Exception ex)
             {
                 var  _ = new Error(ex).ShowDialog();
                 return null;
@@ -846,7 +846,7 @@ namespace BudgetExecution
 
                 return null;
             }
-            catch (System.Exception ex)
+            catch (Exception ex)
             {
                 var  _ = new Error(ex).ShowDialog();
                 return null;
@@ -870,7 +870,7 @@ namespace BudgetExecution
                     return false;
                 }
             }
-            catch (System.Exception ex)
+            catch (Exception ex)
             {
                 var  _ = new Error(ex).ShowDialog();
                 return false;
@@ -894,7 +894,7 @@ namespace BudgetExecution
                     return false;
                 }
             }
-            catch (System.Exception ex)
+            catch (Exception ex)
             {
                 var  _ = new Error(ex).ShowDialog();
                 return false;

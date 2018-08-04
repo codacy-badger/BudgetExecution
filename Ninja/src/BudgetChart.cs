@@ -285,7 +285,7 @@ namespace BudgetExecution
                 DataSeries = series;
                 return DataSeries;
             }
-            catch (System.Exception e)
+            catch (Exception e)
             {
                 var  _ = new Error(e).ShowDialog();
                 return null;
@@ -326,7 +326,7 @@ namespace BudgetExecution
                 Chart.Series.Add(DataSeries);
                 return DataSeries;
             }
-            catch (System.Exception e)
+            catch (Exception e)
             {
                 var  _ = new Error(e).ShowDialog();
                 return null;
@@ -402,7 +402,7 @@ namespace BudgetExecution
                     DataSeries.ConfigItems.ColumnItem.PhongAlpha = 2;
                 }
             }
-            catch (System.Exception e)
+            catch (Exception e)
             {
                 var  _ = new Error(e).ShowDialog();
             }
@@ -448,7 +448,7 @@ namespace BudgetExecution
                 }
                 
             }
-            catch (System.Exception e)
+            catch (Exception e)
             {
                 var  _ = new Error(e).ShowDialog();
             }
@@ -518,7 +518,7 @@ namespace BudgetExecution
                     DataSeries.ConfigItems.ColumnItem.PhongAlpha = 2;
                 }
             }
-            catch (System.Exception e)
+            catch (Exception e)
             {
                 var  _ = new Error(e).ShowDialog();
             }
@@ -541,7 +541,7 @@ namespace BudgetExecution
                 Chart.PrimaryXAxis.Font = new Font("SegoeUI", 9F, FontStyle.Bold);
                 Chart.PrimaryXAxis.ForeColor = SystemColors.MenuHighlight;
             }
-            catch (System.Exception e)
+            catch (Exception e)
             {
                 var  _ = new Error(e).ShowDialog();
             }
@@ -574,7 +574,7 @@ namespace BudgetExecution
                     Chart.Rotation = 0;
                 }
             }
-            catch (System.Exception e)
+            catch (Exception e)
             {
                 var  _ = new Error(e).ShowDialog();
             }
@@ -595,7 +595,7 @@ namespace BudgetExecution
                     Chart.SpacingBetweenSeries = 2;
                 }
             }
-            catch (System.Exception e)
+            catch (Exception e)
             {
                 var  _ = new Error(e).ShowDialog();
             }
@@ -609,7 +609,7 @@ namespace BudgetExecution
                 Chart.PrimaryXAxis.TitleColor = Color.LightSteelBlue;
                 Chart.PrimaryXAxis.TitleFont = new Font("Segoe UI", 10f, FontStyle.Bold);
             }
-            catch (System.Exception e)
+            catch (Exception e)
             {
                 var  _ = new Error(e).ShowDialog();
             }
@@ -655,7 +655,7 @@ namespace BudgetExecution
                 Chart.Legends.Add(legend);
                 return legend;
             }
-            catch (System.Exception e)
+            catch (Exception e)
             {
                 var  _ = new Error(e).ShowDialog();
                 return null;
@@ -680,7 +680,7 @@ namespace BudgetExecution
                     Chart.Titles.Add(title);
                 }
             }
-            catch (System.Exception e)
+            catch (Exception e)
             {
                 var  _ = new Error(e).ShowDialog();
             }
