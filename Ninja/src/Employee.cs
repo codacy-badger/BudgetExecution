@@ -13,8 +13,9 @@ namespace BudgetExecution
         {
         }
 
-        public Employee(string eid, string hoc, string hon, string wc, string f, string l, string lvt, double wk, double leave, double proj, double uselose)
+        public Employee(int id, string eid, string hoc, string hon, string wc, string f, string l, string lvt, double leave)
         {
+            ID = id;
             EmployId = eid;
             HrOrgCode = hoc;
             HrOrgName = hon;
@@ -22,25 +23,20 @@ namespace BudgetExecution
             First = f;
             Last = l;
             LeaveType = lvt;
-            Work = wk;
-            Leave = leave;
-            Projected = proj;
-            UseLose = uselose;
+            LeaveHours = leave;
         }
 
         public Employee(DataRow dr)
         {
-            EmployId = dr["EmployId "].ToString();
+            ID =  int.Parse(dr["ID"].ToString());
+            EmployId = dr["EmployId"].ToString();
             HrOrgCode = dr["HrOrgCode"].ToString();
             HrOrgName = dr["HrOrgName"].ToString();
             WorkCode = dr["WorkCode"].ToString();
             First = dr["First"].ToString();
             Last = dr["Last"].ToString();
             LeaveType = dr["LeaveType"].ToString();
-            Work = double.Parse(dr["Work"].ToString());
-            Leave = double.Parse(dr["Leave"].ToString());
-            Projected = double.Parse(dr["Projected"].ToString());
-            UseLose = double.Parse(dr["UseLose"].ToString());
+            LeaveHours = double.Parse(dr["LeaveHours"].ToString());
         }
 
         // PROPERTIES
@@ -54,6 +50,8 @@ namespace BudgetExecution
 
         public DataRow DbRow { get; }
 
+        public int ID { get; }
+
         public string EmployId { get; }
 
         public string First { get; }
@@ -64,15 +62,9 @@ namespace BudgetExecution
 
         public string Last { get; }
 
-        public double Leave { get; }
+        public double LeaveHours { get; }
 
         public string LeaveType { get; }
-
-        public double Projected { get; }
-
-        public double UseLose { get; }
-
-        public double Work { get; }
 
         public string WorkCode { get; }
     }

@@ -2,6 +2,8 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
+using System.Linq;
+
 namespace BudgetExecution
 {
     using System;
@@ -57,27 +59,17 @@ namespace BudgetExecution
 
         private Provider Provider { get; }
 
-        private DataFilter TableFilter { get; set; }
+        internal DataFilter TableFilter { get; set; }
 
-        private ColumnFilter FieldFilter { get; set; }
+        internal ColumnFilter FieldFilter { get; set; }
 
-        private DataBuilder DbData { get; }
+        internal DataBuilder DbData { get; }
 
         internal Dictionary<string, object> Parameter { get; set; }
 
-        private Dictionary<string, string[]> ProgramElements { get; set; }
+        internal Dictionary<string, string[]> ProgramElements { get; set; }
 
-        private DataTable Table { get; set; }
-
-        public DataGridView SqlGrid { get; set; }
-
-        public MetroSetComboBox FilterControl1 { get; set; }
-
-        internal MetroSetComboBox FilterControl2 { get; set; }
-
-        internal MetroSetComboBox FilterControl3 { get; set; }
-
-        internal MetroSetComboBox FilterControl4 { get; set; }
+        internal DataTable Table { get; set; }
 
         public string F1 { get; set; }
 
@@ -102,7 +94,6 @@ namespace BudgetExecution
             try
             {
                 HideTopGridLabels();
-                Text = Source.ToString();
                 if (Source == Source.PRC)
                 {
                     Filter1.Text = "BFY";
@@ -121,7 +112,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                var  _ = new Error(ex).ShowDialog();
+                new Error(ex).ShowDialog();
             }
         }
 
@@ -148,7 +139,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                var  _ = new Error(ex).ShowDialog();
+                new Error(ex).ShowDialog();
             }
         }
 
@@ -186,6 +177,7 @@ namespace BudgetExecution
         {
             try
             {
+                control.Tag = colname.ToString();
                 if (control.Items.Count > 0)
                 {
                     control.Items.Clear();
@@ -194,18 +186,18 @@ namespace BudgetExecution
                 if (label.Visible == false)
                 {
                     label.Visible = true;
+                    label.Text = control.Tag.ToString();
                 }
 
-                var item = data.ProgramElements[colname.ToString()];
-                control.Tag = colname.ToString();
-                foreach (string i in item)
+                var items = data.ProgramElements[colname.ToString()];
+                foreach (string i in items)
                 {
                     control.Items.Add(i);
                 }
             }
             catch (Exception ex)
             {
-                var  _ = new Error(ex).ShowDialog();
+                new Error(ex).ShowDialog();
             }
         }
 
@@ -256,18 +248,8 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                var  _ = new Error(ex).ShowDialog();
+                new Error(ex).ShowDialog();
             }
-        }
-
-        private void PreviousButton_OnClick(object sender, EventArgs e)
-        {
-            BindingSource.MovePrevious();
-        }
-
-        private void NextButton_OnClick(object sender, EventArgs e)
-        {
-            BindingSource.MoveNext();
         }
 
         internal void PopulateFilterButtons(MetroSetComboBox control, string[] list)
@@ -282,7 +264,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                var  _ = new Error(ex).ShowDialog();
+                new Error(ex).ShowDialog();
             }
         }
 
@@ -297,16 +279,16 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                var  _ = new Error(ex).ShowDialog();
+                new Error(ex).ShowDialog();
             }
         }
         
-        private void LeftButton_Click_1(object sender, EventArgs e)
+        private void PreviousButton_OnClick(object sender, EventArgs e)
         {
             BindingSource.MovePrevious();
         }
 
-        private void RightButton_Click_1(object sender, EventArgs e)
+        private void NextButton_OnClick(object sender, EventArgs e)
         {
             BindingSource.MoveNext();
 
@@ -322,7 +304,7 @@ namespace BudgetExecution
             catch (Exception ex)
             {
 
-                var  _ = new Error(ex).ShowDialog();
+                new Error(ex).ShowDialog();
             }
         }
 
@@ -341,7 +323,7 @@ namespace BudgetExecution
             catch (Exception ex)
             {
 
-                var  _ = new Error(ex).ShowDialog();
+                new Error(ex).ShowDialog();
             }
         }
 
@@ -365,7 +347,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                var  _ = new Error(ex).ShowDialog();
+                new Error(ex).ShowDialog();
             }
         }
 
@@ -431,7 +413,10 @@ namespace BudgetExecution
                 BindingSource.DataSource = tbl3;
                 label6.Text = DbData.GetTotal(tbl3).ToString("c");
                 label12.Text = DbData.GetCount(tbl3).ToString();
-                PopulateFilterItems(Filter4.Tag.ToString(), tbl3, Filter4, label4);
+                if (Filter4.Tag != null)
+                {
+                    PopulateFilterItems(Filter4.Tag.ToString(), tbl3, Filter4, label4);
+                }
             }
             catch (Exception ex)
             {
@@ -497,11 +482,10 @@ namespace BudgetExecution
                     Filter4.Tag = "Code";
                     break;
                 case Source.Employees:
-                    label1.Text = "HR Org Code Name";
-                    PopulateFilterItems("HrOrgCodeName", DbData, Filter1, label1);
+                    label1.Text = "HrOrgCodeName";
+                    PopulateFilterItems(Field.HrOrgCodeName, DbData, Filter1, label1);
                     Filter2.Tag = "WorkCode";
-                    Filter3.Tag = "HrOrgCoe";
-                    Filter4.Tag = "LastName";
+                    Filter3.Tag = "LastName";
                     break;
                 case Source.Funds:
                     label1.Text = "Name";
@@ -539,11 +523,10 @@ namespace BudgetExecution
                     Filter4.Tag = "ProgramAreaName";
                     break;
                 case Source.Transfers:
-                    label1.Text = "DocumentNumber";
-                    PopulateFilterItems(Field.DocumentNumber, DbData, Filter1, label1);
-                    Filter2.Tag = "Organization";
-                    Filter3.Tag = "Fund";
-                    Filter4.Tag = "BOC";
+                    label1.Text = "Organization";
+                    PopulateFilterItems(Field.Organization, DbData, Filter1, label1);
+                    Filter2.Tag = "Fund";
+                    Filter3.Tag = "BOC";
                     break;
                 case Source.FTE:
                     label1.Text = "FundName";
@@ -676,9 +659,8 @@ namespace BudgetExecution
                 case Source.Sites:
                     label1.Text = "State";
                     PopulateFilterItems(Field.State, DbData, Filter1, label1);
-                    Filter2.Tag = "Code";
+                    Filter2.Tag = "District";
                     Filter3.Tag = "FocName";
-                    Filter4.Tag = "";
                     break;
                 case Source.MD:
                     label1.Text = "FundName";

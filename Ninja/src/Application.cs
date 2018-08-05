@@ -60,7 +60,7 @@ namespace BudgetExecution
         ID, BudgetLevel, BFY, RPIO, Fund, FundName, BOC, BocName, Org, RC, Code, NPM, Goal, GoalName, Objective,
         ObjectiveName, DivisionName, ProgramArea, ProgramAreaName, ProgramProjectCode, ProgramProjectName,
         SiteProjectName, SiteProjectCode, NpmName, ReimbOrg, AH, DCN, ControlNumber, PurchaseRequest, AgreementNumber, Type,
-        DivisionID, DocumentNumber, State
+        DivisionID, DocumentNumber, State, Organization, District, FocName, LastName, WorkCode, HrOrgCodeName
     }
 
     public enum Provider

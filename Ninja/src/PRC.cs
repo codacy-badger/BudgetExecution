@@ -119,6 +119,16 @@ namespace BudgetExecution
             BOC = new BOC(row["BOC"].ToString());
             Parameter = GetDataFields();
             Amount = decimal.Parse(row["Amount"].ToString());
+            Parameter = GetDataFields();
+            ProgramProjectCode = Account.ProgramProjectCode;
+            ProgramProjectName = Account.ProgramProjectName;
+            ProgramArea = Account.ProgramArea;
+            NPM = Account.NPM;
+            NpmCode = Account.NpmCode;
+            Goal = Account.Goal;
+            GoalName = Account.GoalName;
+            Objective = Account.Objective;
+            ObjectiveName = Account.ObjectiveName;
         }
 
         // PROPERTIES
@@ -176,10 +186,6 @@ namespace BudgetExecution
 
         internal Dictionary<string, object> Parameter { get; set; }
 
-        public string[] DataFields { get; }
-
-        public object[] DataValues { get; }
-
         // METHODS
         internal Dictionary<string, object> GetDataFields()
         {
@@ -200,7 +206,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                var  _ = new Error(ex).ShowDialog();
+                new Error(ex).ShowDialog();
                 return null;
             }
         }
@@ -213,7 +219,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                var  _ = new Error(ex).ShowDialog();
+                new Error(ex).ShowDialog();
                 return null;
             }
         }
@@ -259,84 +265,7 @@ namespace BudgetExecution
         {
             return Account.Code;
         }
-
-        internal string[] GetFields()
-        {
-            try
-            {
-                var prc = GetDataFields();
-
-                return prc.Keys.ToArray();
-            }
-            catch (Exception ex)
-            {
-                var  _ = new Error(ex).ShowDialog();
-                return null;
-            }
-        }
-
-        internal object[] GetFieldValues()
-        {
-            try
-            {
-                var param = GetDataFields();
-                return param.Values.ToArray();
-            }
-            catch (Exception ex)
-            {
-                var  _ = new Error(ex).ShowDialog();
-                return null;
-            }
-        }
-
-        public static Dictionary<string, object> GetInsertFields(Source source, Dictionary<string, object> param)
-        {
-            try
-            {
-                var account = new Account(source, Provider.SQLite, param["Fund"].ToString(), param["Code"].ToString());
-                if (!param.ContainsKey("Fund") || param["Fund"] == null)
-                {
-                    param["FundName"] = account.FundName;
-                }
-
-                if (!param.ContainsKey("Org") || param["Org"] == null)
-                {
-                    param["Org"] = account.Org;
-                }
-
-                if (!param.ContainsKey("ProgramProjectCode") || param["ProgramProjectCode"] == null)
-                {
-                    param["ProgramProjectCode"] = account.ProgramProjectCode;
-                    param["ProgramProjectName"] = account.ProgramProjectName;
-                }
-
-                if (!param.ContainsKey("ProgramArea") || param["ProgramArea"] == null)
-                {
-                    param["ProgramArea"] = account.ProgramArea;
-                    param["ProgramAreaName"] = account.ProgramAreaName;
-                }
-
-                if (!param.ContainsKey("Goal") || param["Goal"] == null)
-                {
-                    param["Goal"] = account.Goal;
-                    param["GoalName"] = account.GoalName;
-                }
-
-                if (!param.ContainsKey("Objective") || param["Objective"] == null)
-                {
-                    param["Objective"] = account.Objective;
-                    param["ObjectiveName"] = account.ObjectiveName;
-                }
-
-                return param;
-            }
-            catch (Exception ex)
-            {
-                var _ = new Error(ex).ShowDialog();
-                return null;
-            }
-        }
-
+        
         public static Dictionary<string, object> GetInsertionColumns(Source source, Provider provider, Dictionary<string, object> param)
         {
             try
@@ -412,12 +341,12 @@ namespace BudgetExecution
                 using (conn)
                 {
                     var insert = query.GetDataCommand(cmd, conn) as SQLiteCommand;
-                    insert.ExecuteNonQuery();
+                    insert?.ExecuteNonQuery();
                 }
             }
             catch (Exception ex)
             {
-                var  _ = new Error(ex).ShowDialog();
+                new Error(ex).ShowDialog();
             }
         }
 
@@ -431,12 +360,12 @@ namespace BudgetExecution
                 using (conn)
                 {
                     var update = query.GetDataCommand(cmd, conn) as SQLiteCommand;
-                    update.ExecuteNonQuery();
+                    update?.ExecuteNonQuery();
                 }
             }
             catch (Exception ex)
             {
-                var  _ = new Error(ex).ShowDialog();
+                new Error(ex).ShowDialog();
             }
         }
 
@@ -450,12 +379,12 @@ namespace BudgetExecution
                 using (conn)
                 {
                     var update = query.GetDataCommand(cmd, conn) as SQLiteCommand;
-                    update.ExecuteNonQuery();
+                    update?.ExecuteNonQuery();
                 }
             }
             catch (Exception ex)
             {
-                var  _ = new Error(ex).ShowDialog();
+                new Error(ex).ShowDialog();
             }
         }
     }

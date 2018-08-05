@@ -36,7 +36,7 @@ namespace BudgetExecution
             }
             catch (System.Exception ex)
             {
-                var  _ = new Error(ex).ShowDialog();
+                new Error(ex).ShowDialog();
                 return null;
             }
         }

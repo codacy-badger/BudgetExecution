@@ -90,7 +90,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                var  _ = new Error(ex).ShowDialog();
+                new Error(ex).ShowDialog();
                 return null;
             }
         }
@@ -103,7 +103,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                var  _ = new Error(ex).ShowDialog();
+                new Error(ex).ShowDialog();
                 return null;
             }
         }
@@ -117,7 +117,7 @@ namespace BudgetExecution
             catch (Exception ex)
             {
 
-                var  _ = new Error(ex).ShowDialog();
+                new Error(ex).ShowDialog();
                 return -1;
             }
         }
@@ -131,7 +131,7 @@ namespace BudgetExecution
             catch (Exception ex)
             {
 
-                var  _ = new Error(ex).ShowDialog();
+                new Error(ex).ShowDialog();
                 return -1;
             }
         }
@@ -145,7 +145,7 @@ namespace BudgetExecution
             catch (Exception ex)
             {
 
-                var  _ = new Error(ex).ShowDialog();
+                new Error(ex).ShowDialog();
                 return -1;
             }
         }
@@ -168,7 +168,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                var  _ = new Error(ex).ShowDialog();
+                new Error(ex).ShowDialog();
                 return null;
             }
         }
@@ -182,7 +182,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                var  _ = new Error(ex).ShowDialog();
+                new Error(ex).ShowDialog();
                 return null;
             }
         }
@@ -196,7 +196,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                var  _ = new Error(ex).ShowDialog();
+                new Error(ex).ShowDialog();
                 return null;
             }
         }
@@ -218,7 +218,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                var  _ = new Error(ex).ShowDialog();
+                new Error(ex).ShowDialog();
             }
         }
 
@@ -240,7 +240,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                var  _ = new Error(ex).ShowDialog();
+                new Error(ex).ShowDialog();
             }
         }
 
@@ -259,7 +259,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                var  _ = new Error(ex).ShowDialog();
+                new Error(ex).ShowDialog();
             }
         }
 
@@ -278,7 +278,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                var  _ = new Error(ex).ShowDialog();
+                new Error(ex).ShowDialog();
             }
         }
 
@@ -297,7 +297,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                var  _ = new Error(ex).ShowDialog();
+                new Error(ex).ShowDialog();
             }
         }
 
@@ -316,7 +316,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                var  _ = new Error(ex).ShowDialog();
+                new Error(ex).ShowDialog();
             }
         }
 

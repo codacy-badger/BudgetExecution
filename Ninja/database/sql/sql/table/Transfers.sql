@@ -1,0 +1,18 @@
+CREATE TABLE "Transfers" ( 
+    "ID" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE, 
+    "BudgetLevel" TEXT, 
+    "DocumentType" TEXT, 
+    "RPIO" TEXT DEFAULT 06, 
+    "AH" TEXT DEFAULT 06, 
+    "Organization" TEXT, 
+    "BBFY" TEXT, 
+    "Fund" TEXT, 
+    "NPM" TEXT, 
+    "RC" TEXT, 
+    "DocumentNumber" TEXT, 
+    "ProcessedDate" TEXT, 
+    "ProgramProject" TEXT, 
+    "FromTo" TEXT, 
+    "BOC" TEXT, 
+    "Amount" NUMERIC DEFAULT 0, 
+    "Purpose" TEXT );

@@ -1,0 +1,5 @@
+CREATE VIEW "FTE" (
+    AS SELECT * 
+    FROM PRC 
+    WHERE BOC = '17'
+);
