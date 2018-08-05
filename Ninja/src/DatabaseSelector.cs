@@ -39,6 +39,8 @@ namespace BudgetExecution
 
         private string SummaryImages { get; set; }
 
+        private string AppropriationImages { get; set; }
+
         private string FilePath { get; set; }
 
         public FormData NinjaData { get; set; }

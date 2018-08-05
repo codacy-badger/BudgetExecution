@@ -17,6 +17,7 @@ namespace BudgetExecution
         public static string SummaryImages = @"C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\Resources\SummaryImages";
         public static string FunctionImages = @"C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\Resources\FunctionImages";
         public static string DatabaseImages = @"C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\Resources\Database";
+        public static string AppropriationImages = @"C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\Resources\AppropriationImages";
 
         public static DataTable FilterRows(DataTable table, Field prcfilter, string filter)
         {
@@ -91,7 +92,7 @@ namespace BudgetExecution
 
         public static string[] AgencyFundCodes = Enum.GetNames(typeof(FundCode));
 
-        public static string[] AgencyActivityCodes =
+        public static string[] ActivityCodes =
         {
         "1", "2", "3", "P1", "P3", "P8", "PS", "Q1", "Q3", "R1",
         "R2", "R5", "Regional", "W1", "W2", "53", "54", "55", "56", "4", "5", "6", "8", "9", "10", "11",
@@ -102,7 +103,7 @@ namespace BudgetExecution
         "RL", "58", "B4", "B5", "BP", "PA", "PB", "PC", "PV", "PW", "R3", "R4"
         };
 
-        public static string[] AgencyITCodes =
+        public static string[] ITCodes =
         {
         "EK", "FH", "FJ", "GB", "SL", "SM", "AA", "AB", "AC", "AD", "AE",
         "AF", "AG", "AH", "AJ", "AL", "AM", "AQ", "AR", "AT", "BB", "BC", "BG", "BH", "BJ", "BK",
@@ -119,7 +120,7 @@ namespace BudgetExecution
         "WS", "WT"
         };
 
-        public static string[] AgencyOrgCodes =
+        public static string[] OrgCodes =
         {
         "01", "02", "03", "04", "0400BMT", "05", "0500BMT", "06", "07", "08", "09", "10", "11", "13",
         "16", "17", "20", "23", "27", "28", "30", "31", "3100EEN", "32", "3200EEN", "3200P", "3200P1",
@@ -135,7 +136,7 @@ namespace BudgetExecution
         "9A00C", "9A00E", "9A00F", "9A00P", "9A00R", "9A00S", "D4", "B7", "H1"
         };
 
-        public static string[] AgencyPrcCodes =
+        public static string[] PrcCodes2017 =
         {
         "101A46", "101A46XP3", "101A46XP4", "101A46XQ3", "101A58", "101A59", "102A45", "102A58", "102A59", "102A76", "102AH5", "102J59", "103AC4", "103AC5", "104A97", "104A98", "201B42", "201B53", "201B71",
         "201BL2", "202B63", "202B65", "202B66", "202B67", "202B68X33", "202B68XP8", "202B68XQC", "202B88",
@@ -159,13 +160,17 @@ namespace BudgetExecution
         "ZZZD73"
         };
 
-        public static string[] AgencyRpioCode =
+        public static string[] RpioCodes =
         {
         "11", "13", "16", "17", "18", "20", "26", "27", "30", "35", "39", "75", "77", "01", "02", "03", "04", "05", "06", "07", "08",
         "09", "10"
         };
 
-        public static string[] Division = { "6WQ", "6WCF", "6MD", "6MDR", "WSA", "6MM", "6WSA", "6EN", "6RA", "6RC", "6SF", "6XA", "6EJ", "R06" };
+        public static string[] AllowanceHolders =
+        {
+        "11", "13", "16", "17", "18", "20", "26", "27", "30", "35", "39", "75", "77", "01", "02", "03", "04", "05", "06", "07", "08",
+        "09", "10"
+        };
 
         public static string[] DivisionIdTitleOrg =
         {
@@ -192,13 +197,11 @@ namespace BudgetExecution
         "2022", "2022 2023",
         };
 
-        public static string[] NpmCodes = { "M", "L", "G", "J", "H", "C", "F", "A", "B", "P", "N", "D", "E" };
-
-        public static string[] RcCodes = { "06C", "06A", "06L", "06F", "06X", "06K", "06J", "06M", "06D", "06N", "06G" };
+        public static string[] RcCodes = { "06C", "06A", "06L", "06F", "06X", "06K", "06J", "06M", "06D", "06N", "06G", "06R" };
 
         public static string[] Year = { "2017", "2018", "2019", "2020", "2021", "2021", "2022", "2024", "2025", "2026", "2027" };
 
-        public static Dictionary<string, Source> DatabaseParameter()
+        public static Dictionary<string, Source> SourceTitleDictionary()
         {
             try
             {
@@ -315,7 +318,7 @@ namespace BudgetExecution
             }
         }
 
-        public static string GetAppropriationName(string fundcode)
+        public static string GetFundName(string fundcode)
         {
             switch (fundcode)
             {
@@ -858,10 +861,10 @@ namespace BudgetExecution
             try
             {
                 if (child["BudgetLevel"].ToString().Equals("8") &&
-            child["BFY"].ToString().Equals(parent["BFY"].ToString()) &&
-            child["Fund"].ToString().Equals(parent["Fund"].ToString()) &&
-            child["Code"].ToString().Equals(parent["Code"].ToString()) &&
-            child["BOC"].ToString().Equals(parent["BOC"].ToString()))
+                    child["BFY"].ToString().Equals(parent["BFY"].ToString()) &&
+                    child["Fund"].ToString().Equals(parent["Fund"].ToString()) &&
+                    child["Code"].ToString().Equals(parent["Code"].ToString()) &&
+                    child["BOC"].ToString().Equals(parent["BOC"].ToString()))
                 {
                     return true;
                 }

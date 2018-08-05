@@ -12,9 +12,9 @@ namespace BudgetExecution
     using System;
     using System.Windows.Forms;
 
-    public partial class Reprogramming : Syncfusion.Windows.Forms.MetroForm
+    public partial class Ta3 : Syncfusion.Windows.Forms.MetroForm
     {
-        public Reprogramming()
+        public Ta3()
         {
             InitializeComponent();
         }

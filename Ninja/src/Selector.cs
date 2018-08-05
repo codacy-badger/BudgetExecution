@@ -68,11 +68,19 @@ namespace BudgetExecution
         {
             var carousel = sender as Carousel;
             var i = carousel.ActiveImage.Tag.ToString();
-
-            var s = (Source)Enum.Parse(typeof(Source), i);
-            var summary = new SummaryForm(s);
-            summary.Show();
-            Close();
+            if (i == "Appropriation")
+            {
+                var f = new Selector(Info.AppropriationImages);
+                f.Show();
+                this.Close();
+            }
+            else
+            {
+                var s = (Source)Enum.Parse(typeof(Source), i);
+                var summary = new SummaryForm(s);
+                summary.Show();
+                Close();
+            }
         }
     }
 }
