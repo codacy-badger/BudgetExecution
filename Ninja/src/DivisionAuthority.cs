@@ -16,7 +16,9 @@ namespace BudgetExecution
         {
             DbData = new DataBuilder(Source.DivisionAccounts, Provider.SQLite);
             Metric = new PrcMetric(DbData);
+            DataRecords = DbData.DbRow;
             DbTable = DbData.DbTable;
+            PrcAllocation = GetPrcArray(DbTable);
             TableFilter = new DataFilter(DataBuilder.FilterTable);
             Total = Metric.Total;
             Count = Metric.Count;
@@ -42,6 +44,8 @@ namespace BudgetExecution
             TableFilter = new DataFilter(DataBuilder.FilterTable);
             Metric = new PrcMetric(DbData);
             DbTable = DbData.DbTable;
+            DataRecords = DbData.DbRow;
+            PrcAllocation = GetPrcArray(DbTable);
             Total = Metric.Total;
             Count = Metric.Count;
             Average = Metric.Average;
@@ -77,7 +81,7 @@ namespace BudgetExecution
 
         public Dictionary<string, string[]> ProgramElements { get; }
 
-        public decimal Amount { get; }
+        public decimal Amount { get; set; }
 
         public decimal Total { get; }
 
@@ -87,37 +91,23 @@ namespace BudgetExecution
 
         public DataFilter TableFilter { get; }
 
-        public Dictionary<string, decimal> ProgramData { get; }
+        public Dictionary<string, decimal> ProgramData { get; set; }
 
         public FTE[] FTE { get; }
 
         public Dictionary<string, decimal> BocData { get; set; }
 
-        public Dictionary<string, decimal> FteData { get; }
+        public Dictionary<string, decimal> FundData { get; set; }
 
-        public Dictionary<string, decimal> FundData { get; }
+        public Dictionary<string, decimal> GoalData { get; set; }
 
-        public Dictionary<string, decimal> GoalData { get; }
+        public Dictionary<string, decimal> NpmData { get; set; }
 
-        public Dictionary<string, decimal> NpmData { get; }
+        public Dictionary<string, decimal> ProgramAreaData { get; set; }
 
-        public Dictionary<string, decimal> ProgramAreaData { get; }
-
-        public Dictionary<string, decimal> ProjectData { get; }
+        public Dictionary<string, decimal> ProjectData { get; set; }
 
         // METHODS
-        public DataTable FilterTable(DataTable table, string column, string filter)
-        {
-            try
-            {
-                return table.AsEnumerable().Where(p => p.Field<string>(column).Equals(filter)).Select(p => p).CopyToDataTable();
-            }
-            catch (Exception ex)
-            {
-                new Error(ex).ShowDialog();
-                return null;
-            }
-        }
 
         public decimal GetAverage(DataTable table)
         {
@@ -263,110 +253,6 @@ namespace BudgetExecution
             {
                 new Error(ex).ShowDialog();
                 return -1M;
-            }
-        }
-
-        internal decimal GetRatio(decimal t1, decimal t2)
-        {
-            return t1 / t2;
-        }
-
-        internal Dictionary<string, decimal> GetRcInfo(DataTable table)
-        {
-            try
-            {
-                string[] rcs = Info.RcCodes;
-                Dictionary<string, decimal> info = new Dictionary<string, decimal>();
-                foreach (string n in rcs)
-                {
-                    info.Add(Info.GetDivisionMailCode(n), new DivisionAuthority(n).Total);
-                }
-
-                return info;
-            }
-            catch (Exception ex)
-            {
-                new Error(ex).ShowDialog();
-                return null;
-            }
-        }
-
-        internal void UpdateAmount(DataRow row, decimal amount2)
-        {
-            try
-            {
-                var parameter = new Dictionary<string, object>();
-                parameter.Add("ID", row["ID"]);
-                parameter.Add("Amount", amount2);
-                var query = new Query(Source.PRC, Provider.SQLite, parameter);
-                var update = query.UpdateCommand;
-                update.ExecuteNonQuery();
-            }
-            catch (Exception e)
-            {
-                var  _ = new Error(e).ShowDialog();
-            }
-        }
-
-        internal void UpdateAmount(Dictionary<string, object> p, decimal amount2)
-        {
-            try
-            {
-                if (p.ContainsKey("Amount"))
-                {
-                    p["Amount"] = amount2;
-                }
-                
-                var query = new Query(Source.PRC, Provider.SQLite, p);
-                var update = query.UpdateCommand;
-                update.ExecuteNonQuery();
-            }
-            catch (Exception e)
-            {
-                var  _ = new Error(e).ShowDialog();
-            }
-        }
-
-        internal int VerifyDataRow(DataTable table, Dictionary<string, object> p)
-        {
-            try
-            {
-                var query = table.AsEnumerable().Where(r => r.Field<string>("BFY").Equals(p["BFY"]))
-                    .Where(r => r.Field<string>("Fund").Equals(p["Fund"]))
-                    .Where(r => r.Field<string>("Org").Equals(p["Org"]))
-                    .Where(r => r.Field<string>("RC").Equals(p["RC"]))
-                    .Where(r => r.Field<string>("Code").Equals(p["Code"]))
-                    .Where(r => r.Field<string>("BOC").Equals(p["BOC"]))
-                    .Select(r => r).CopyToDataTable();
-                DataRow row = query.Rows[0];
-                return (int)row["Id"];
-            }
-            catch (Exception ex)
-            {
-                new Error(ex).ShowDialog();
-                return -1;
-            }
-        }
-
-        internal bool VerifyRow(DataTable table, Dictionary<string, object> p)
-        {
-            try
-            {
-                int row = table.AsEnumerable().Where(r => r.Field<string>("BFY").Equals(p["BFY"].ToString()))
-                    .Where(r => r.Field<string>("Fund").Equals(p["Fund"].ToString()))
-                    .Where(r => r.Field<string>("Code").Equals(p["Code"].ToString()))
-                    .Where(r => r.Field<string>("BOC").Equals(p["BOC"])).Select(r => r.Field<int>("Id")).Single();
-                if (row < 0)
-                {
-                    return false;
-                }
-
-                return true;
-            }
-            catch (Exception ex)
-            {
-                new Error(ex).ShowDialog();
-                return false;
             }
         }
 

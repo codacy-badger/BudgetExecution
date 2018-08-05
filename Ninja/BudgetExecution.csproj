@@ -409,7 +409,7 @@
     <Compile Include="src\ISupplementalAllocation.cs" />
     <Compile Include="src\Obligation.cs" />
     <Compile Include="src\Org.cs" />
-    <Compile Include="src\Payroll.cs" />
+    <Compile Include="src\PayrollObligation.cs" />
     <Compile Include="src\PRC.cs" />
     <Compile Include="src\Query.cs" />
     <Compile Include="src\RC.cs" />

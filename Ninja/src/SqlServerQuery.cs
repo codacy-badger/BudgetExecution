@@ -22,7 +22,7 @@ namespace BudgetExecution
             Source = source;
             TableName = source.ToString();
             SelectStatement = $"SELECT * FROM {source.ToString()}";
-            DataConnection = new SqlConnection(@"Data Source=C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\database\SqlCe\R6.mdf");
+            DataConnection = new SqlConnection(@"DbData Source=C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\database\SqlCe\R6.mdf");
             SelectCommand = new SqlCommand(SelectStatement, DataConnection);
             DataAdapter = new SqlDataAdapter(SelectCommand);
             CommandBuilder = GetCommandBuilder(DataAdapter);

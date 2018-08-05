@@ -5177,7 +5177,7 @@ namespace BudgetExecution
             this.CopyButton.Name = "CopyButton";
             this.CopyButton.Size = new System.Drawing.Size(24, 22);
             this.CopyButton.Text = "toolStripButton7";
-            this.CopyButton.ToolTipText = "Copy Data Into New Account";
+            this.CopyButton.ToolTipText = "Copy DbData Into New Account";
             this.CopyButton.Click += new System.EventHandler(this.CopyButton_OnClick);
             // 
             // toolStripSeparator15

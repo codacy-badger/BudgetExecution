@@ -349,7 +349,7 @@
             this.CopyButton.Name = "CopyButton";
             this.CopyButton.Size = new System.Drawing.Size(28, 28);
             this.CopyButton.Text = "toolStripButton5";
-            this.CopyButton.ToolTipText = "Copy Data\r\nInto New\r\nRecord";
+            this.CopyButton.ToolTipText = "Copy DbData\r\nInto New\r\nRecord";
             // 
             // toolStripSeparator6
             // 
@@ -3027,7 +3027,7 @@
             this.toolStripButton5.Name = "toolStripButton5";
             this.toolStripButton5.Size = new System.Drawing.Size(28, 28);
             this.toolStripButton5.Text = "toolStripButton5";
-            this.toolStripButton5.ToolTipText = "Copy Data\r\nInto New\r\nRecord";
+            this.toolStripButton5.ToolTipText = "Copy DbData\r\nInto New\r\nRecord";
             // 
             // toolStripSeparator13
             // 

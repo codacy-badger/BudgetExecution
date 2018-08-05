@@ -453,7 +453,7 @@ namespace BudgetExecution
             this.DataFilterTab.ShowCloseButton = true;
             this.DataFilterTab.Size = new System.Drawing.Size(441, 555);
             this.DataFilterTab.TabIndex = 1;
-            this.DataFilterTab.Text = "Data Filters";
+            this.DataFilterTab.Text = "DbData Filters";
             this.DataFilterTab.ThemesEnabled = false;
             // 
             // metroPanel3
@@ -619,7 +619,7 @@ namespace BudgetExecution
             this.DataFunctionTab.ShowCloseButton = true;
             this.DataFunctionTab.Size = new System.Drawing.Size(441, 555);
             this.DataFunctionTab.TabIndex = 2;
-            this.DataFunctionTab.Text = "Data Function";
+            this.DataFunctionTab.Text = "DbData Function";
             this.DataFunctionTab.ThemesEnabled = false;
             // 
             // metroPanel4

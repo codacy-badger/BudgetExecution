@@ -218,7 +218,7 @@ namespace BudgetExecution
                 d.Add("Superfund Appropriation", Source.SUPERFUND);
                 d.Add("Underground Storage Tanks", Source.LUST);
                 d.Add("STAG Appropriation", Source.STAG);
-                d.Add("Payroll", Source.PAYROLL);
+                d.Add("PayrollObligation", Source.PAYROLL);
                 d.Add("FTE", Source.FTE);
                 d.Add("Travel", Source.TRAVEL);
                 d.Add("Expenses", Source.EXPENSES);

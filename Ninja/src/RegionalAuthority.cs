@@ -14,10 +14,10 @@ namespace BudgetExecution
         // CONSTRUCTORS
         public RegionalAuthority()
         {
-            Data = new DataBuilder(Source.RegionalAccounts, Provider.SQLite, new Dictionary<string, object> { ["BFY"] = FiscalYear });
+            DbData = new DataBuilder(Source.RegionalAccounts, Provider.SQLite, new Dictionary<string, object> { ["BFY"] = FiscalYear });
             TableFilter = new DataFilter(DataBuilder.FilterTable);
-            Metric = new PrcMetric(Data);
-            DbTable = Data.DbTable;
+            Metric = new PrcMetric(DbData);
+            DbTable = DbData.DbTable;
             Total = Metric.Total;
             Count = Metric.Count;
             Average = Metric.Average;
@@ -42,25 +42,21 @@ namespace BudgetExecution
 
         public static string FiscalYear { get; set; } = "2018";
 
-        public decimal Average { get; }
+        public decimal Average { get; set; }
 
-        public decimal Amount { get; }
+        public decimal Amount { get; set; }
 
         public Dictionary<string, decimal> BocData { get; }
-
-        public DataSet BudgetData { get; }
 
         public PrcMetric Metric { get; }
 
         public int Count { get; }
 
-        public DataBuilder Data { get; set; }
+        public DataBuilder DbData { get; set; }
 
         public DataFilter TableFilter { get; }
 
         public FTE[] FTE { get; }
-
-        public Dictionary<string, decimal> FteData { get; }
 
         public Dictionary<string, decimal> FundData { get; }
 
@@ -111,7 +107,7 @@ namespace BudgetExecution
         {
             try
             {
-                return Data.DbTable.AsEnumerable().Select(p => p.Field<string>(filter)).Distinct().ToArray();
+                return DbData.DbTable.AsEnumerable().Select(p => p.Field<string>(filter)).Distinct().ToArray();
             }
             catch (Exception ex)
             {

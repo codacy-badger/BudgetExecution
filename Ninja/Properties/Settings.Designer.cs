@@ -37,8 +37,8 @@ namespace BudgetExecution.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\database\\SqlS" +
-            "erver\\R6.mdf;Integrated Security=True;Connect Timeout=30")]
+        [global::System.Configuration.DefaultSettingValueAttribute("DbData Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DbDataDirectory|\\database\\" +
+            "SqlServer\\R6.mdf;Integrated Security=True;Connect Timeout=30")]
         public string SqlServer {
             get {
                 return ((string)(this["SqlServer"]));
@@ -59,8 +59,8 @@ namespace BudgetExecution.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\database\\SqlS" +
-            "erver\\R6.mdf;Integrated Security=True;Connect Timeout=30")]
+        [global::System.Configuration.DefaultSettingValueAttribute("DbData Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DbDataDirectory|\\database\\" +
+            "SqlServer\\R6.mdf;Integrated Security=True;Connect Timeout=30")]
         public string R6ConnectionString {
             get {
                 return ((string)(this["R6ConnectionString"]));
@@ -70,8 +70,8 @@ namespace BudgetExecution.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=\"C:\\Users\\terry\\Documents\\Visual Studio 2017\\Projects\\BudgetExecution" +
-            "\\Ninja\\database\\SQLite\\R6.db\"")]
+        [global::System.Configuration.DefaultSettingValueAttribute("DbData Source=\"C:\\Users\\terry\\Documents\\Visual Studio 2017\\Projects\\BudgetExecuti" +
+            "on\\Ninja\\database\\SQLite\\R6.db\"")]
         public string SqliteConnectionString {
             get {
                 return ((string)(this["SqliteConnectionString"]));
@@ -81,7 +81,7 @@ namespace BudgetExecution.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\\R6.accdb")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Provider=Microsoft.ACE.OLEDB.12.0;DbData Source=|DbDataDirectory|\\R6.accdb")]
         public string OleDb {
             get {
                 return ((string)(this["OleDb"]));

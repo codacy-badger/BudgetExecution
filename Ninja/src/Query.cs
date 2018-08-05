@@ -98,9 +98,9 @@ namespace BudgetExecution
                     case Provider.SqlCe:
                         return new SqlConnection(@"datasource=C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\database\SqlCe\R6.sdf");
                     case Provider.SqlServer:
-                        return new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\database\SqlServer\R6.mdf;Integrated Security=True;Connect Timeout=30");
+                        return new SqlConnection(@"DbData Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\database\SqlServer\R6.mdf;Integrated Security=True;Connect Timeout=30");
                     case Provider.OleDb:
-                        return new OleDbConnection(@"Provider = Microsoft.ACE.OLEDB.12.0; Data Source =| DataDirectory |\database\OleDb\R6.accdb");
+                        return new OleDbConnection(@"Provider = Microsoft.ACE.OLEDB.12.0; DbData Source =| DataDirectory |\database\OleDb\R6.accdb");
                 }
 
                 return null;

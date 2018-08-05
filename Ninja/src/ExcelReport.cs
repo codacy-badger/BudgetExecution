@@ -79,7 +79,7 @@ namespace BudgetExecution
 
         public string GetConnectionString(string filepath)
         {
-            return $@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source='{filepath}';Extended Properties='Excel 12.0 Macro;HDR=YES;IMEX=1'";
+            return $@"Provider=Microsoft.ACE.OLEDB.12.0;DbData Source='{filepath}';Extended Properties='Excel 12.0 Macro;HDR=YES;IMEX=1'";
         }
 
         internal Workbook ExportData(DataTable table)

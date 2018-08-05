@@ -1,20 +1,22 @@
-﻿// <copyright file="Payroll.cs" company="PlaceholderCompany">
+﻿// <copyright file="PayrollObligation.cs" company="PlaceholderCompany">
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
+
+using System.Linq;
 
 namespace BudgetExecution
 {
     using System.Collections.Generic;
     using System.Data;
 
-    public class Payroll
+    public class PayrollObligation
     {
         // CONSTRUCTORS
-        public Payroll()
+        public PayrollObligation()
         {
         }
 
-        public Payroll(string rpio, string bfy, string fund, string org, string rc, string code, string progproj, string progprojname, string hoc, string wc, string wcn, decimal amount, decimal ybp, double ybh, decimal yotp, double yoth)
+        public PayrollObligation(string rpio, string bfy, string fund, string org, string rc, string code, string progproj, string progprojname, string hoc, string wc, string wcn, decimal amount, decimal ybp, double ybh, decimal yotp, double yoth)
         {
             RPIO = rpio;
             BFY = bfy;
@@ -35,7 +37,33 @@ namespace BudgetExecution
             YearOverTimeHours = yoth;
         }
 
-        public Payroll(DataRow dr)
+        public PayrollObligation(Source source, Provider provider, Dictionary<string, object> p)
+        {
+            Source = source;
+            Provider = provider;
+            DbData = new DataBuilder(Source, Provider, p);
+            DbTable = DbData.DbTable;
+            DbRow = DbTable.AsEnumerable().Select(prc => prc).First();
+            RPIO = DbRow["RPIO"].ToString();
+            BFY = DbRow["BFY "].ToString();
+            Fund = new Fund(DbRow["Fund"].ToString(), BFY);
+            Org = new Org(DbRow["Org"].ToString());
+            RC = new RC(DbRow["RC"].ToString());
+            Code = DbRow["Code"].ToString();
+            ProgramProjectCode = DbRow["ProgramProjectCode"].ToString();
+            ProgramProjectName = DbRow["ProgramProjectName"].ToString();
+            HrOrgCode = DbRow["HrOrgCode"].ToString();
+            WorkCode = DbRow["WorkCode"].ToString();
+            WorkCodeName = DbRow["WorkCodeName"].ToString();
+            Amount = decimal.Parse(DbRow["Amount"].ToString());
+            Hours = double.Parse(DbRow["Hours"].ToString());
+            YearBasePay = decimal.Parse(DbRow["YearBasePay"].ToString());
+            YearBaseHours = double.Parse(DbRow["YearBaseHours"].ToString());
+            YearOverTimePay = decimal.Parse(DbRow["YearOverTimePay"].ToString());
+            YearOverTimeHours = double.Parse(DbRow["YearOverTimeHours"].ToString());
+        }
+
+        public PayrollObligation(DataRow dr)
         {
             RPIO = dr["RPIO"].ToString();
             BFY = dr["BFY "].ToString();

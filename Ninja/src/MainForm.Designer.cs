@@ -72,7 +72,7 @@ namespace BudgetExecution
             this.DataMasterTile.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             textItem1.Font = new System.Drawing.Font("Segoe UI Semibold", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             textItem1.HubTile = this.DataMasterTile;
-            textItem1.Text = "Data Management";
+            textItem1.Text = "DbData Management";
             textItem1.TextColor = System.Drawing.Color.WhiteSmoke;
             this.DataMasterTile.Banner = textItem1;
             this.DataMasterTile.BannerColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));

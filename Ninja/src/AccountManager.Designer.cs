@@ -215,7 +215,7 @@
             this.groupBox4.Size = new System.Drawing.Size(1134, 202);
             this.groupBox4.TabIndex = 18;
             this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Account Data";
+            this.groupBox4.Text = "Account DbData";
             // 
             // label4
             // 
@@ -973,7 +973,7 @@
             this.RecorDataGroupBox.Size = new System.Drawing.Size(1136, 224);
             this.RecorDataGroupBox.TabIndex = 19;
             this.RecorDataGroupBox.TabStop = false;
-            this.RecorDataGroupBox.Text = "Account Data";
+            this.RecorDataGroupBox.Text = "Account DbData";
             // 
             // label24
             // 

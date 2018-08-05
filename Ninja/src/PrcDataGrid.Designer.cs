@@ -241,7 +241,7 @@
             this.groupBox2.Size = new System.Drawing.Size(668, 367);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Account Data";
+            this.groupBox2.Text = "Account DbData";
             // 
             // groupBox3
             // 

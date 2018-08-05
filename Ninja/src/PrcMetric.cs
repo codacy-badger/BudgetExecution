@@ -211,19 +211,6 @@ namespace BudgetExecution
             return new double[] { (double)GetTotals(table), (double)GetCount(table), (double)GetAverage(table), (double)GetTotals(table) / (double)DbData.Total };
         }
 
-        public PRC[] GetPrcArray(DataTable table)
-        {
-            try
-            {
-                return table.AsEnumerable().Select(p => new PRC()).ToArray();
-            }
-            catch (Exception ex)
-            {
-                new Error(ex).ShowDialog();
-                return null;
-            }
-        }
-
         public Dictionary<string, string[]> GetProgramElements(DataTable table)
         {
             try

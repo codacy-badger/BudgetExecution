@@ -20,7 +20,6 @@ namespace BudgetExecution
         Dictionary<string, string[]> ProgramElements { get; }
 
         // METHODS
-        DataTable FilterTable(DataTable table, string column, string filter);
 
         string[] GetCodes(DataTable table, string column);
 
