@@ -22,22 +22,13 @@ namespace BudgetExecution
 
         private void AppropriationCarousel_OnImageSelected(object sender, EventArgs e)
         {
-            // var i = AppropriationCarousel.ActiveImage.Tag.ToString( );
-            // if (i.Contains("EPASummary"))
-            // {
-            //    var a = new RegionSummary( );
-            //    a.ShowDialog( );
-            // }
-            // if (i.Contains("DivisionSummary"))
-            // {
-            //    var f = new DivisionForm( );
-            //    f.ShowDialog( );
-            // }
-            // if (i.Contains("Functionality"))
-            // {
-            //    var g = new BudgetExecutionForm( );
-            //    g.ShowDialog( );
-            // }
+            var i = AppropriationCarousel.ActiveImage.Tag.ToString( );
+            if (i.Contains("Functionality"))
+            {
+                var g = new Selector(Info.AppropriationImages);
+                g.Show();
+                this.Close();
+            }
             return;
         }
 
@@ -47,7 +38,7 @@ namespace BudgetExecution
             CarouselImageCollection icollect = AppropriationCarousel.ImageListCollection;
             AppropriationCarousel.ImageSlides = true;
             AppropriationCarousel.UseOriginalImageinPreview = true;
-            string[] images = Directory.GetFiles(@"C:\Users\terry\Documents\Visual Studio 2015\Projects\Budget\Resources\fundlabel");
+            string[] images = Directory.GetFiles(@"C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\Resources\AppropriationImages");
             foreach (string i in images)
             {
                 var b = new Bitmap(i);

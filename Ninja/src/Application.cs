@@ -55,6 +55,15 @@ namespace BudgetExecution
         O1, O2, O3, O4, O5
     }
 
+    public enum Numeric
+    {
+        ID, Amount, Obligations, Commitments, LeaveHours, WorkHours
+    }
+
+    public enum Command
+    {
+        Select, Insert, Update, Delete, Create, Drop
+    }
     public enum Field
     {
         ID, BudgetLevel, BFY, RPIO, Fund, FundName, BOC, BocName, Org, RC, Code, NPM, Goal, GoalName, Objective,

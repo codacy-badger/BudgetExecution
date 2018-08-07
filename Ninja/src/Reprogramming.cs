@@ -10,7 +10,6 @@
 namespace BudgetExecution
 {
     using System;
-    using System.Windows.Forms;
 
     public partial class Ta3 : Syncfusion.Windows.Forms.MetroForm
     {
@@ -19,69 +18,12 @@ namespace BudgetExecution
             InitializeComponent();
         }
 
-        private void metroPanel2_Paint(object sender, PaintEventArgs e)
-        {
 
-        }
-
-        private void metroSetLabel23_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void metroSetLabel22_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void metroSetLabel13_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void metroSetLabel20_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void metroSetLabel17_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void metroSetLabel18_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void metroSetLabel16_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void metroSetLabel21_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button3_Click(object sender, EventArgs e)
+        private void CalculatorButton_OnClick(object sender, EventArgs e)
         {
             var c = new CalculatorForm();
             c.Show();
         }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-            var c = new CalculatorForm();
-            c.Show();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-            var c = new CalculatorForm();
-            c.Show();
-        }
+        
     }
 }

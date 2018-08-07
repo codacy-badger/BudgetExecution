@@ -112,6 +112,27 @@ namespace BudgetExecution
             }
         }
 
+        public string GetParameterStrings(Dictionary<string, object> param)
+        {
+            try
+            {
+                string vals = string.Empty;
+                var sqlparameter = GetParameter(param);
+                foreach (SQLiteParameter p in sqlparameter)
+                {
+                    vals += $"{p.SourceColumn} = '{p.Value}' AND ";
+                }
+
+                vals = vals.Trim().Substring(0, vals.Length - 4);
+                return vals;
+            }
+            catch (Exception ex)
+            {
+                new Error(ex).ShowDialog();
+                return null;
+            }
+        }
+
         public string GetSelectStatement(string table, Dictionary<string, object> param)
         {
             try
@@ -125,11 +146,11 @@ namespace BudgetExecution
             }
         }
 
-        public string GetSqlStatement(string table, string sql)
+        public string GetSelectStatement(string tableName, string sql)
         {
             try
             {
-                return $"SELECT * FROM {table} WHERE {sql}";
+                return $"SELECT * FROM {tableName} WHERE {sql}";
             }
             catch (Exception ex)
             {
@@ -171,6 +192,87 @@ namespace BudgetExecution
                 {
                     SelectStatement = sql;
                     return new SqlCommand(sql, (SqlConnection)connection);
+                }
+
+                return null;
+            }
+            catch (Exception ex)
+            {
+                new Error(ex).ShowDialog();
+                return null;
+            }
+        }
+
+        public SQLiteParameter[] GetParameter(Dictionary<string, object> param)
+        {
+            try
+            {
+                var val = new SQLiteParameter[param.Count];
+                for (int i = 0; i < param.Count; i++)
+                {
+                    foreach (KeyValuePair<string, object> kvp in param)
+                    {
+                        val[i] = new SQLiteParameter(kvp.Key, (object)kvp.Value);
+                        val[i].SourceColumn = kvp.Key;
+                        if (kvp.Key.Equals("ID"))
+                        {
+                            val[i].DbType = DbType.Int64;
+                        }
+
+                        if (kvp.Key.Equals("Amount"))
+                        {
+                            val[i].DbType = DbType.Decimal;
+                        }
+                        else
+                        {
+                            val[i].DbType = DbType.String;
+                        }
+                    }
+                }
+
+                return val;
+            }
+            catch (Exception ex)
+            {
+                new Error(ex).ShowDialog();
+                return null;
+            }
+        }
+
+        public DbCommand GetDataCommand(Command cmd, DbParameter[] pmr, IDbConnection connection)
+        {
+            try
+            {
+                switch (cmd)
+                {
+                    case Command.Select:
+                        var sql = $"SELECT * FROM {Source.ToString()} WHERE {pmr[0].SourceColumn} = '{pmr[0].Value}";
+                        var select = new SQLiteCommand(sql, connection as SQLiteConnection);
+                        foreach (SQLiteParameter p in pmr) select.Parameters.Add(p);
+                        DataAdapter = new SQLiteDataAdapter(select);
+                        return select;
+                    case Command.Update:
+                        var upd = $"UPDATE {Source.ToString()} SET WHERE {pmr[0].SourceColumn} = '{pmr[0].Value}'";
+                        var update = new SQLiteCommand(upd, connection as SQLiteConnection);
+                        foreach (SQLiteParameter p in pmr) update.Parameters.Add(p);
+                        return update;
+                    case Command.Insert:
+                        var ins = $"UPDATE {Source.ToString()} SET WHERE {pmr[0].SourceColumn} = '{pmr[0].Value}'";
+                        var insert = new SQLiteCommand(ins, connection as SQLiteConnection);
+                        foreach (SQLiteParameter p in pmr) insert.Parameters.Add(p);
+                        return insert;
+                        break;
+                    case Command.Delete:
+                        var del = $"UPDATE {Source.ToString()} SET WHERE {pmr[0].SourceColumn} = '{pmr[0].Value}'";
+                        var delete = new SQLiteCommand(del, connection as SQLiteConnection);
+                        foreach (SQLiteParameter p in pmr) delete.Parameters.Add(p);
+                        return delete;
+                        break;
+                    default:
+                        var dft = $"SELECT * FROM {Source.ToString()} WHERE {pmr[0].SourceColumn} = '{pmr[0].Value}";
+                        var def = new SQLiteCommand(dft, connection as SQLiteConnection);
+                        foreach (SQLiteParameter p in pmr) def.Parameters.Add(p);
+                        return def;
                 }
 
                 return null;

@@ -7,6 +7,8 @@ namespace BudgetExecution
     using System;
     using System.Collections.Generic;
     using System.Data;
+    using System.Data.OleDb;
+    using System.Data.SQLite;
     using System.Linq;
     using System.Windows.Forms;
 
@@ -93,6 +95,86 @@ namespace BudgetExecution
         
 
         // METHODS
+
+        private SQLiteQuery GetSQLiteQuery(Source source, Provider provider)
+        {
+            try
+            {
+                if (provider == Provider.SQLite)
+                    return new SQLiteQuery(source);
+                return null;
+            }
+            catch (Exception ex)
+            {
+                new Error(ex).ShowDialog();
+                return null;
+            }
+        }
+
+        private SQLiteQuery GetSQLiteQuery(Source source, Provider provider, SQLiteParameter[] pmr)
+        {
+            try
+            {
+                if (provider == Provider.SQLite)
+                    return new SQLiteQuery(source);
+                return null;
+            }
+            catch (Exception ex)
+            {
+                new Error(ex).ShowDialog();
+                return null;
+            }
+        }
+
+        private SQLiteQuery GetSQLiteQuery(Source source, Provider provider, Dictionary<string, object> dpr)
+        {
+            try
+            {
+                if (provider == Provider.SQLite)
+                    return new SQLiteQuery(source, provider, dpr);
+                return null;
+            }
+            catch (Exception ex)
+            {
+                new Error(ex).ShowDialog();
+                return null;
+            }
+        }
+
+        private ExcelQuery GetExcelQuery(Source source, Provider provider, OleDbParameter[] pmr)
+        {
+            try
+            {
+                if (provider == Provider.OleDb)
+                {
+                    var eq = new ExcelQuery(source);
+                    eq.Parameters = pmr;
+                    return eq;
+                }
+                return null;
+            }
+            catch (Exception ex)
+            {
+                new Error(ex).ShowDialog();
+                return null;
+            }
+        }
+
+        private ExcelQuery GetExcelQuery(Source source, Provider provider, Dictionary<string, object> dpr)
+        {
+            try
+            {
+                if (provider == Provider.OleDb)
+                    return new ExcelQuery(source);
+                return null;
+            }
+            catch (Exception ex)
+            {
+                new Error(ex).ShowDialog();
+                return null;
+            }
+        }
+
         public static DataTable FilterTable(DataTable table, Field prcfilter, string filter)
         {
             try

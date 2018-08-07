@@ -2,6 +2,8 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
+using Syncfusion.XlsIO.Implementation;
+
 namespace BudgetExecution
 {
     using System;
@@ -13,13 +15,13 @@ namespace BudgetExecution
     public class SQLiteQuery : Query
     {
         // CONSTRUCTORS
-        public SQLiteQuery()
+        public SQLiteQuery() : base()
         {
         }
 
-        public SQLiteQuery(Source source)
+        public SQLiteQuery(Source source)  : base(source, Provider.SQLite)
         {
-            Provider = Provider.SQLite;
+            Provider = base.Provider;
             Source = source;
             DataConnection = GetConnection(Provider);
             TableName = source.ToString();
@@ -30,13 +32,15 @@ namespace BudgetExecution
             UpdateCommand = CommandBuilder.GetUpdateCommand();
             InsertCommand = CommandBuilder.GetInsertCommand();
             DeleteCommand = CommandBuilder.GetDeleteCommand();
+            Settings = new AppSettingsReader();
         }
-
+        
         public SQLiteQuery(Source source, Dictionary<string, object> param)
         {
             Provider = Provider.SQLite;
             Source = source;
             Parameter = param;
+            Parameters = GetParameter(param);
             DataConnection = GetConnection(Provider);
             TableName = source.ToString();
             SelectStatement = GetSelectStatement(TableName, Parameter);
@@ -46,6 +50,24 @@ namespace BudgetExecution
             UpdateCommand = CommandBuilder.GetUpdateCommand();
             InsertCommand = CommandBuilder.GetInsertCommand();
             DeleteCommand = CommandBuilder.GetDeleteCommand();
+            Settings = new AppSettingsReader();
+        }
+
+        public SQLiteQuery(Source source, Provider provider, Dictionary<string, object> param)
+        {
+            Provider = provider;
+            Source = source;
+            Parameters = GetParameter(param);
+            DataConnection = GetConnection(Provider);
+            TableName = source.ToString();
+            SelectStatement = GetSelectStatement(TableName, Parameter);
+            SelectCommand = GetSelectCommand(SelectStatement, DataConnection);
+            DataAdapter = GetDataAdapter(SelectCommand);
+            CommandBuilder = GetCommandBuilder(DataAdapter);
+            UpdateCommand = CommandBuilder.GetUpdateCommand();
+            InsertCommand = CommandBuilder.GetInsertCommand();
+            DeleteCommand = CommandBuilder.GetDeleteCommand();
+            Settings = new AppSettingsReader();
         }
 
         // PROPERTIES
@@ -84,15 +106,14 @@ namespace BudgetExecution
         public new SQLiteCommand UpdateCommand { get; set; }
 
         // METHODS
-        public string GetParameterStrings(Dictionary<string, object> param)
+        public new string GetParameterStrings(Dictionary<string, object> param)
         {
             try
             {
                 string vals = string.Empty;
-                var sqlparameter = GetParameter(param);
-                foreach (SQLiteParameter p in sqlparameter)
+                foreach (SQLiteParameter p in GetParameter(param))
                 {
-                    vals += $"{p.SourceColumn.ToString()} = '{p.Value}' AND ";
+                    vals += $"{p.SourceColumn} = '{p.Value}' AND ";
                 }
 
                 vals = vals.Trim().Substring(0, vals.Length - 4);
@@ -105,7 +126,64 @@ namespace BudgetExecution
             }
         }
 
-        public SQLiteParameter[] GetParameter(Dictionary<string, object> param)
+        public SQLiteParameter[] GetParameter(DataRow dr)
+        {
+            try
+            {              
+                var val = new SQLiteParameter[dr.ItemArray.Length];
+                for (int i = 0; i < dr.ItemArray.Length; i++)
+                {
+                    val[i] = new SQLiteParameter(dr.Table.Columns[i].ColumnName, (object)dr[i]);
+                }
+
+                return val;
+            }
+            catch (Exception ex)
+            {
+                new Error(ex).ShowDialog();
+                return null;
+            }
+        }
+
+        public List<SQLiteParameter> GetParameters(DataRow dr)
+        {
+            try
+            {
+                var val = new List<SQLiteParameter>();
+                for (int i = 0; i < dr.ItemArray.Length; i++)
+                {
+                    val.Add(new SQLiteParameter(dr.Table.Columns[i].ColumnName, dr[i]));
+                }
+
+                return val;
+            }
+            catch (Exception ex)
+            {
+                new Error(ex).ShowDialog();
+                return null;
+            }
+        }
+
+        public List<SQLiteParameter[]> GetParameter(DataTable table)
+        {
+            try
+            {
+                var val = new List<SQLiteParameter[]>();
+                foreach(DataRow dr in table.Rows)
+                {
+                    val.Add(GetParameter(dr));
+                }
+
+                return val;
+            }
+            catch (Exception ex)
+            {
+                new Error(ex).ShowDialog();
+                return null;
+            }
+        }
+
+        public new SQLiteParameter[] GetParameter(Dictionary<string, object> param)
         {
             try
             {
@@ -114,14 +192,14 @@ namespace BudgetExecution
                 {
                     foreach (KeyValuePair<string, object> kvp in param)
                     {
-                        val[i] = new SQLiteParameter(kvp.Key.ToString(), (object)kvp.Value);
-                        val[i].SourceColumn = kvp.Key.ToString();
-                        if (kvp.Key.ToString().Equals("ID"))
+                        val[i] = new SQLiteParameter(kvp.Key, (object)kvp.Value);
+                        val[i].SourceColumn = kvp.Key;
+                        if (kvp.Key.Equals("ID"))
                         {
                             val[i].DbType = DbType.Int64;
                         }
 
-                        if (kvp.Key.ToString().Equals("Amount"))
+                        if (kvp.Key.Equals("Amount"))
                         {
                             val[i].DbType = DbType.Decimal;
                         }
@@ -154,7 +232,7 @@ namespace BudgetExecution
             }
         }
 
-        public new string GetSqlStatement(string table, string sql)
+        public string GetSqlStatement(string table, string sql)
         {
             try
             {
