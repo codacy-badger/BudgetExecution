@@ -102,7 +102,7 @@ namespace BudgetExecution
             }
         }
 
-        public SqlParameter[] GetParameter(Dictionary<string, object> param)
+        public new SqlParameter[] GetParameter(Dictionary<string, object> param)
         {
             try
             {
@@ -151,7 +151,7 @@ namespace BudgetExecution
             }
         }
 
-        public new string GetSqlStatement(string table, string sql)
+        public string GetSqlStatement(string table, string sql)
         {
             try
             {

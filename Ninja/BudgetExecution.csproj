@@ -228,10 +228,40 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Resources\ControlIcon.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ControlIcon.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\DivisionImages.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DivisionImages.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\ExcelFile.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ExcelFile.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\FunctionImages.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FunctionImages.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Icon.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Icon.resx</DependentUpon>
+    </Compile>
     <Compile Include="Resources\NinjaApplicationImages\ApplicationIconsImages.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ApplicationIconsImages.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\SlideImages.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SlideImages.resx</DependentUpon>
     </Compile>
     <Compile Include="src\AccountManager.cs">
       <SubType>Form</SubType>
@@ -493,6 +523,10 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Resources\ControlIcon.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ControlIcon.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Resources\ControlImages.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>ControlImages.Designer.cs</LastGenOutput>
@@ -501,9 +535,29 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>DivisionIconImages.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Resources\DivisionImages.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>DivisionImages.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\ExcelFile.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ExcelFile.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\FunctionImages.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>FunctionImages.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Icon.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Icon.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Resources\NinjaApplicationImages\ApplicationIconsImages.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>ApplicationIconsImages.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\SlideImages.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>SlideImages.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="src\AccountManager.resx">
       <DependentUpon>AccountManager.cs</DependentUpon>
@@ -601,7 +655,6 @@
     <EmbeddedResource Include="src\Calendar.resx">
       <DependentUpon>Calendar.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="ClassDiagram1.cd" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -687,6 +740,87 @@
     <None Include="Resources\NinjaApplicationImages\View List-WF.png" />
     <None Include="Resources\NinjaApplicationImages\View-04-WF.png" />
     <None Include="Resources\NinjaApplicationImages\Wallet-WF.png" />
+    <None Include="Resources\FunctionImages\DataMigration.png" />
+    <None Include="Resources\FunctionImages\ExcelImporter.png" />
+    <None Include="Resources\FunctionImages\PdfDataReader.png" />
+    <None Include="Resources\FunctionImages\SQLiteData.png" />
+    <None Include="Resources\deepwater_horizon.png" />
+    <None Include="Resources\epa_logo.jpg" />
+    <None Include="Resources\epm.jpg" />
+    <None Include="Resources\eppler_signature.jpg" />
+    <None Include="Resources\lust.png" />
+    <None Include="Resources\oil.png" />
+    <None Include="Resources\stag.png" />
+    <None Include="Resources\superfund.png" />
+    <None Include="Resources\superfund_reimbursable.png" />
+    <None Include="Resources\superfund_removals.png" />
+    <None Include="Resources\superfund_supplemental.png" />
+    <None Include="Resources\NinjaIcons\BudgetNinja.ico" />
+    <None Include="Resources\blue-ms-excel-256.ico" />
+    <None Include="Resources\PDF File Extension.ico" />
+    <None Include="Resources\gakuseisean-ivista-2-misc-delete-database.ico" />
+    <None Include="Resources\PDF Files.ico" />
+    <None Include="Resources\remove-from-database.ico" />
+    <None Include="Resources\12047.ico" />
+    <None Include="Resources\37223.ico" />
+    <None Include="Resources\BlueIcon\Abacus.ico" />
+    <None Include="Resources\BlueIcon\Access-New.ico" />
+    <None Include="Resources\BlueIcon\Accounting-01-WF.ico" />
+    <None Include="Resources\BlueIcon\Addition .ico" />
+    <None Include="Resources\BlueIcon\Arrow Left - 03.ico" />
+    <None Include="Resources\BlueIcon\Arrow right .ico" />
+    <None Include="Resources\BlueIcon\Bank-01-WF.ico" />
+    <None Include="Resources\BlueIcon\Book-Open.ico" />
+    <None Include="Resources\BlueIcon\Book-Shelf.ico" />
+    <None Include="Resources\BlueIcon\Branch-Engineering.ico" />
+    <None Include="Resources\BlueIcon\Calculator-WF.ico" />
+    <None Include="Resources\BlueIcon\Calendar-01.ico" />
+    <None Include="Resources\BlueIcon\Chart-2-WF.ico" />
+    <None Include="Resources\BlueIcon\Check Mark_01.ico" />
+    <None Include="Resources\BlueIcon\Clock-02.ico" />
+    <None Include="Resources\BlueIcon\Command Redo-WF.ico" />
+    <None Include="Resources\BlueIcon\Command Undo-WF.ico" />
+    <None Include="Resources\BlueIcon\Data Sync1-WF.ico" />
+    <None Include="Resources\BlueIcon\Data transfer-WF.ico" />
+    <None Include="Resources\BlueIcon\Data-Add.ico" />
+    <None Include="Resources\BlueIcon\Database Connection.ico" />
+    <None Include="Resources\BlueIcon\Data-Refresh.ico" />
+    <None Include="Resources\BlueIcon\Data-Settings.ico" />
+    <None Include="Resources\BlueIcon\Delete_04.ico" />
+    <None Include="Resources\BlueIcon\Excel Online.ico" />
+    <None Include="Resources\BlueIcon\Excel-Export.ico" />
+    <None Include="Resources\BlueIcon\Excel-Import and Export%282%29.ico" />
+    <None Include="Resources\BlueIcon\Exchange - 02.ico" />
+    <None Include="Resources\BlueIcon\Filter-09-WF.ico" />
+    <None Include="Resources\BlueIcon\Folder setting-02-WF.ico" />
+    <None Include="Resources\BlueIcon\Folder-03.ico" />
+    <None Include="Resources\BlueIcon\Folder-Add-02.ico" />
+    <None Include="Resources\BlueIcon\Folder-Download%281%29.ico" />
+    <None Include="Resources\BlueIcon\Folder-Upload.ico" />
+    <None Include="Resources\BlueIcon\Formula-Support.ico" />
+    <None Include="Resources\BlueIcon\Import.ico" />
+    <None Include="Resources\BlueIcon\Library-Books.ico" />
+    <None Include="Resources\BlueIcon\Like - 01.ico" />
+    <None Include="Resources\BlueIcon\Log file icon.ico" />
+    <None Include="Resources\BlueIcon\Mail-01.ico" />
+    <None Include="Resources\BlueIcon\Mail-Send.ico" />
+    <None Include="Resources\BlueIcon\Map-Location.ico" />
+    <None Include="Resources\BlueIcon\Organization-WF.ico" />
+    <None Include="Resources\BlueIcon\Save.ico" />
+    <None Include="Resources\BlueIcon\Search-Folder-New.ico" />
+    <None Include="Resources\BlueIcon\Setting_2-WF.ico" />
+    <None Include="Resources\BlueIcon\Shuffle New.ico" />
+    <None Include="Resources\BlueIcon\Sigma.ico" />
+    <None Include="Resources\BlueIcon\Solutions - 01.ico" />
+    <None Include="Resources\BlueIcon\Statistical-Analysis%281%29.ico" />
+    <None Include="Resources\BlueIcon\Stock-Exchange-01.ico" />
+    <None Include="Resources\BlueIcon\Sync - 03.ico" />
+    <None Include="Resources\BlueIcon\Sync_02.ico" />
+    <None Include="Resources\BlueIcon\Tab History-WF%281%29.ico" />
+    <None Include="Resources\BlueIcon\Table_01.ico" />
+    <None Include="Resources\BlueIcon\Tools-02.ico" />
+    <None Include="Resources\BlueIcon\Unlike - 01.ico" />
+    <None Include="Resources\BlueIcon\Upload.ico" />
     <Content Include="summation_3d_blue_oma_icon.ico" />
     <None Include="Resources\SummaryImages\RegionalAccounts.png" />
     <None Include="Resources\SummaryImages\FTE.png" />

@@ -1018,7 +1018,7 @@ namespace BudgetExecution
 
         private void ReprogramButton_OnClick(object sender, EventArgs e)
         {
-            var rp = new Ta3();
+            var rp = new Reprogramming();
             rp.Show();
         }
 

@@ -7,7 +7,7 @@
 #endregion
 namespace BudgetExecution
 {
-    partial class Ta3
+    partial class Reprogramming
     {
         /// <summary>
         /// Required designer variable.
@@ -36,7 +36,7 @@ namespace BudgetExecution
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Ta3));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Reprogramming));
             Syncfusion.Windows.Forms.CaptionImage captionImage1 = new Syncfusion.Windows.Forms.CaptionImage();
             this.Tab2P2 = new MetroFramework.Controls.MetroPanel();
             this.Navigator1 = new System.Windows.Forms.BindingNavigator(this.components);
@@ -2672,7 +2672,7 @@ namespace BudgetExecution
             this.ForeColor = System.Drawing.SystemColors.Info;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MetroColor = System.Drawing.Color.Black;
-            this.Name = "Ta3";
+            this.Name = "Reprogramming";
             this.ShowIcon = false;
             this.Text = "Division";
             this.Tab2P2.ResumeLayout(false);

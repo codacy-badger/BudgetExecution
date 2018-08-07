@@ -104,7 +104,7 @@ namespace BudgetExecution
             }
         }
 
-        public OleDbParameter[] GetParameter(Dictionary<string, object> param)
+        public new OleDbParameter[] GetParameter(Dictionary<string, object> param)
         {
             try
             {
