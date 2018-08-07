@@ -24,7 +24,7 @@ namespace BudgetExecution
             Provider = base.Provider;
             TableName = source.ToString();
             SelectStatement = $"SELECT * FROM {source.ToString()}";
-            Connection = new OleDbConnection(@"data source=C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\database\SqlServer\R6.mdf");
+            Connection = new OleDbConnection(@"data source=C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\database\SqlServerQuery\R6.mdf");
             SelectCommand = new OleDbCommand(SelectStatement, Connection);
             Adapter = new OleDbDataAdapter(SelectCommand);
             CommandBuilder = GetCommandBuilder(Adapter);

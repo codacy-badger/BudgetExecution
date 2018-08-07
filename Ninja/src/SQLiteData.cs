@@ -69,21 +69,21 @@ namespace BudgetExecution
 
         internal DataTable Table { get; set; }
 
-        public string F1 { get; set; }
+        private string F1 { get; set; }
 
-        public string F2 { get; set; }
+        private string F2 { get; set; }
 
-        public string F3 { get; set; }
+        private string F3 { get; set; }
 
-        public string F4 { get; set; }
+        private string F4 { get; set; }
 
-        public Field C1 { get; set; }
+        private Field C1 { get; set; }
 
-        public Field C2 { get; set; }
+        private Field C2 { get; set; }
 
-        public Field C3 { get; set; }
+        private Field C3 { get; set; }
 
-        public Field C4 { get; set; }
+        private Field C4 { get; set; }
 
         // METHODS
         

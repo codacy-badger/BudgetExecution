@@ -98,7 +98,7 @@ namespace BudgetExecution
                     case Provider.SqlCe:
                         return new SqlConnection(@"datasource=C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\database\SqlCe\R6.sdf");
                     case Provider.SqlServer:
-                        return new SqlConnection(@"DbData Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\database\SqlServer\R6.mdf;Integrated Security=True;Connect Timeout=30");
+                        return new SqlConnection(@"DbData Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\database\SqlServerQuery\R6.mdf;Integrated Security=True;Connect Timeout=30");
                     case Provider.OleDb:
                         return new OleDbConnection(@"Provider = Microsoft.ACE.OLEDB.12.0; DbData Source =| DataDirectory |\database\OleDb\R6.accdb");
                 }
@@ -212,7 +212,7 @@ namespace BudgetExecution
                 {
                     foreach (KeyValuePair<string, object> kvp in param)
                     {
-                        val[i] = new SQLiteParameter(kvp.Key, (object)kvp.Value);
+                        val[i] = new SQLiteParameter(kvp.Key, kvp.Value);
                         val[i].SourceColumn = kvp.Key;
                         if (kvp.Key.Equals("ID"))
                         {
@@ -248,34 +248,30 @@ namespace BudgetExecution
                     case Command.Select:
                         var sql = $"SELECT * FROM {Source.ToString()} WHERE {pmr[0].SourceColumn} = '{pmr[0].Value}";
                         var select = new SQLiteCommand(sql, connection as SQLiteConnection);
-                        foreach (SQLiteParameter p in pmr) select.Parameters.Add(p);
+                        foreach (var p in pmr) select.Parameters.Add(p);
                         DataAdapter = new SQLiteDataAdapter(select);
                         return select;
                     case Command.Update:
                         var upd = $"UPDATE {Source.ToString()} SET WHERE {pmr[0].SourceColumn} = '{pmr[0].Value}'";
                         var update = new SQLiteCommand(upd, connection as SQLiteConnection);
-                        foreach (SQLiteParameter p in pmr) update.Parameters.Add(p);
+                        foreach (var p in pmr) update.Parameters.Add(p);
                         return update;
                     case Command.Insert:
                         var ins = $"UPDATE {Source.ToString()} SET WHERE {pmr[0].SourceColumn} = '{pmr[0].Value}'";
                         var insert = new SQLiteCommand(ins, connection as SQLiteConnection);
-                        foreach (SQLiteParameter p in pmr) insert.Parameters.Add(p);
+                        foreach (var p in pmr) insert.Parameters.Add(p);
                         return insert;
-                        break;
                     case Command.Delete:
                         var del = $"UPDATE {Source.ToString()} SET WHERE {pmr[0].SourceColumn} = '{pmr[0].Value}'";
                         var delete = new SQLiteCommand(del, connection as SQLiteConnection);
-                        foreach (SQLiteParameter p in pmr) delete.Parameters.Add(p);
+                        foreach (var p in pmr) delete.Parameters.Add(p);
                         return delete;
-                        break;
                     default:
                         var dft = $"SELECT * FROM {Source.ToString()} WHERE {pmr[0].SourceColumn} = '{pmr[0].Value}";
                         var def = new SQLiteCommand(dft, connection as SQLiteConnection);
-                        foreach (SQLiteParameter p in pmr) def.Parameters.Add(p);
+                        foreach (var p in pmr) def.Parameters.Add(p);
                         return def;
                 }
-
-                return null;
             }
             catch (Exception ex)
             {

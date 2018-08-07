@@ -38,10 +38,10 @@ namespace BudgetExecution.Properties {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
         [global::System.Configuration.DefaultSettingValueAttribute("DbData Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DbDataDirectory|\\database\\" +
-            "SqlServer\\R6.mdf;Integrated Security=True;Connect Timeout=30")]
-        public string SqlServer {
+            "SqlServerQuery\\R6.mdf;Integrated Security=True;Connect Timeout=30")]
+        public string SqlServerQuery {
             get {
-                return ((string)(this["SqlServer"]));
+                return ((string)(this["SqlServerQuery"]));
             }
         }
         
@@ -60,7 +60,7 @@ namespace BudgetExecution.Properties {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
         [global::System.Configuration.DefaultSettingValueAttribute("DbData Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DbDataDirectory|\\database\\" +
-            "SqlServer\\R6.mdf;Integrated Security=True;Connect Timeout=30")]
+            "SqlServerQuery\\R6.mdf;Integrated Security=True;Connect Timeout=30")]
         public string R6ConnectionString {
             get {
                 return ((string)(this["R6ConnectionString"]));
