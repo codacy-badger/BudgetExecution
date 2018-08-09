@@ -2,7 +2,6 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
-using System.Configuration;
 
 namespace BudgetExecution
 {
@@ -10,6 +9,7 @@ namespace BudgetExecution
     using System.Collections.Generic;
     using System.Data;
     using System.Data.OleDb;
+    using System.Configuration;
 
     public class ExcelQuery : Query
     {
@@ -71,9 +71,7 @@ namespace BudgetExecution
         public new Source Source { get; }
 
         public new Provider Provider { get; set; }
-
-        public new Dictionary<string, string> SqlStatement { get; }
-
+        
         public new string TableName { get; }
 
         public new OleDbCommand UpdateCommand { get; }
@@ -171,6 +169,46 @@ namespace BudgetExecution
                 }
 
                 return val;
+            }
+            catch (Exception ex)
+            {
+                new Error(ex).ShowDialog();
+                return null;
+            }
+        }
+
+        internal new string GetSelectParamString(Dictionary<string, object> param)
+        {
+            try
+            {
+                string vals = string.Empty;
+                foreach (KeyValuePair<string, object> kvp in param)
+                {
+                    vals += $"{kvp.Key} = '{kvp.Value}' AND ";
+                }
+
+                vals = vals.Trim().Substring(0, vals.Length - 4);
+                return vals;
+            }
+            catch (Exception ex)
+            {
+                new Error(ex).ShowDialog();
+                return null;
+            }
+        }
+
+        internal string GetSelectParamString(OleDbParameter[] param)
+        {
+            try
+            {
+                string vals = string.Empty;
+                foreach (var p in param)
+                {
+                    vals += $"{p.SourceColumn} = '{p.Value}' AND ";
+                }
+
+                vals = vals.Trim().Substring(0, vals.Length - 4);
+                return vals;
             }
             catch (Exception ex)
             {
@@ -354,5 +392,6 @@ namespace BudgetExecution
                 return null;
             }
         }
+
     }
 }

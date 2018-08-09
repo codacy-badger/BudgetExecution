@@ -97,8 +97,6 @@ namespace BudgetExecution
 
         public new SQLiteCommandBuilder CommandBuilder { get; internal set; }
 
-        public new SQLiteCommand DataCommand { get; set; }
-
         public new SQLiteCommand DeleteCommand { get; set; }
 
         public new SQLiteCommand InsertCommand { get; set; }

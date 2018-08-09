@@ -81,7 +81,7 @@ namespace BudgetExecution
         public new SqlCommand UpdateCommand { get; set; }
 
         // METHODS
-        public new string GetSelectParameterString(Dictionary<string, object> param)
+        public new string GetSelectParamString(Dictionary<string, object> param)
         {
             try
             {
@@ -90,6 +90,26 @@ namespace BudgetExecution
                 foreach (SqlParameter p in sqlparameter)
                 {
                     vals += $"{p.SourceColumn.ToString()} = '{p.Value}' AND ";
+                }
+
+                vals = vals.Trim().Substring(0, vals.Length - 4);
+                return vals;
+            }
+            catch (Exception ex)
+            {
+                new Error(ex).ShowDialog();
+                return null;
+            }
+        }
+        
+        public string GetSelectParamString(SqlParameter[] param)
+        {
+            try
+            {
+                string vals = string.Empty;
+                foreach (var p in param)
+                {
+                    vals += $"{p.SourceColumn} = '{p.Value}' AND ";
                 }
 
                 vals = vals.Trim().Substring(0, vals.Length - 4);
@@ -142,7 +162,7 @@ namespace BudgetExecution
         {
             try
             {
-                return $"SELECT * FROM {table} WHERE {GetSelectParameterString(param)}";
+                return $"SELECT * FROM {table} WHERE {GetSelectParamString(param)}";
             }
             catch (Exception ex)
             {
@@ -261,7 +281,7 @@ namespace BudgetExecution
         {
             try
             {
-                SelectStatement = GetSelectParameterString(param);
+                SelectStatement = GetSelectParamString(param);
                 return new SqlCommand(SelectStatement, connection);
             }
             catch (Exception ex)

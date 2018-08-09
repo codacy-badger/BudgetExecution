@@ -29,8 +29,6 @@ namespace BudgetExecution
             BindingSource = bs;
             Grid = dgv;
             BindingSource.DataSource = DbTable;
-            BindingSource = DbData.BindingSource;
-            BindingSource.DataSource = DbTable;
             Grid.DataSource = BindingSource.DataSource;
         }
 
@@ -77,7 +75,7 @@ namespace BudgetExecution
 
         public DataGridView Grid { get; set; }
 
-        internal Func<DataTable, Field, string> TableFilter { get; set; }
+        internal DataFilter TableFilter { get; set; }
 
         // METHODS
 
@@ -102,6 +100,17 @@ namespace BudgetExecution
             }
         }
 
+        private void GetParameters(DataRow row)
+        {
+            try
+            {
+
+            }
+            catch (Exception ex)
+            {
+                new Error(ex).ShowDialog();
+            }
+        }
         private void CreateTextBoxBindings(DataGridView dgv, MetroSetTextBox[] tbx)
         {
             try

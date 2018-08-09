@@ -137,7 +137,7 @@ namespace BudgetExecution
         {
             try
             {
-                 return $"SELECT * FROM {table} WHERE {GetSelectParameterString(param)}";
+                 return $"SELECT * FROM {table} WHERE {GetSelectParamString(param)}";
             }
             catch (Exception ex)
             {
@@ -219,6 +219,26 @@ namespace BudgetExecution
                             val[i].DbType = DbType.Int64;
                         }
 
+                        if (kvp.Key.Equals("Obligations"))
+                        {
+                            val[i].DbType = DbType.Decimal;
+                        }
+
+                        if (kvp.Key.Equals("Commitments"))
+                        {
+                            val[i].DbType = DbType.Decimal;
+                        }
+
+                        if (kvp.Key.Equals("LeaveHours"))
+                        {
+                            val[i].DbType = DbType.Decimal;
+                        }
+
+                        if (kvp.Key.Equals("WorkHours"))
+                        {
+                            val[i].DbType = DbType.Decimal;
+                        }
+
                         if (kvp.Key.Equals("Amount"))
                         {
                             val[i].DbType = DbType.Decimal;
@@ -276,6 +296,69 @@ namespace BudgetExecution
             catch (Exception ex)
             {
                 new Error(ex).ShowDialog();
+                return null;
+            }
+        }
+
+        public SQLiteCommand GetSelectCommand(Provider provider, SQLiteParameter[] pmr, SQLiteConnection connection)
+        {
+            try
+            {
+                if (provider == Provider.SQLite)
+                {
+
+                    var sql = $"SELECT * FROM {Source} WHERE {GetSelectParamString(pmr)}";
+                    var select = new SQLiteCommand(sql, connection);
+                    foreach (var p in pmr) select.Parameters.Add(p);
+                    DataAdapter = new SQLiteDataAdapter(select);
+                    return select;
+                }
+
+                return null;
+            }
+            catch (Exception e)
+            {
+                new Error(e).ShowDialog();
+                return null;
+            }
+        }
+
+        public SQLiteCommand GetUpdateCommand(Provider provider, SQLiteParameter[] pmr, SQLiteConnection connection)
+        {
+            try
+            {
+                if (provider == Provider.SQLite)
+                {
+                    var update = GetSelectCommand(provider, pmr, connection);
+                    var adapter = new SQLiteDataAdapter(update);
+                    return adapter.UpdateCommand;
+                }
+
+                return null;
+            }
+            catch (Exception e)
+            {
+                new Error(e).ShowDialog();
+                return null;
+            }
+        }
+
+        public SQLiteCommand GetInsertCommand(Provider provider, SQLiteParameter[] pmr, SQLiteConnection connection)
+        {
+            try
+            {
+                if (provider == Provider.SQLite)
+                {
+                    var insert = GetSelectCommand(provider, pmr, connection);
+                    var adapter = new SQLiteDataAdapter(insert);
+                    return adapter.InsertCommand;
+                }
+
+                return null;
+            }
+            catch (Exception e)
+            {
+                new Error(e).ShowDialog();
                 return null;
             }
         }
@@ -404,19 +487,19 @@ namespace BudgetExecution
             {
                 if (connection is SQLiteConnection)
                 {
-                    SelectStatement = GetSelectParameterString(param);
+                    SelectStatement = GetSelectParamString(param);
                     return new SQLiteCommand(SelectStatement, (SQLiteConnection)connection);
                 }
 
                 if (connection is OleDbConnection)
                 {
-                    SelectStatement = GetSelectParameterString(param);
+                    SelectStatement = GetSelectParamString(param);
                     return new OleDbCommand(SelectStatement, (OleDbConnection)connection);
                 }
 
                 if (connection is SqlConnection)
                 {
-                    SelectStatement = GetSelectParameterString(param);
+                    SelectStatement = GetSelectParamString(param);
                     return new SqlCommand(SelectStatement, (SqlConnection)connection);
                 }
 
@@ -429,7 +512,7 @@ namespace BudgetExecution
             }
         }
 
-        internal string GetSelectParameterString(Dictionary<string, object> param)
+        internal string GetSelectParamString(Dictionary<string, object> param)
         {
             try
             {
@@ -437,6 +520,26 @@ namespace BudgetExecution
                 foreach (KeyValuePair<string, object> kvp in param)
                 {
                     vals += $"{kvp.Key} = '{kvp.Value}' AND ";
+                }
+
+                vals = vals.Trim().Substring(0, vals.Length - 4);
+                return vals;
+            }
+            catch (Exception ex)
+            {
+                new Error(ex).ShowDialog();
+                return null;
+            }
+        }
+
+        internal string GetSelectParamString(SQLiteParameter[] param)
+        {
+            try
+            {
+                string vals = string.Empty;
+                foreach (var p in param)
+                {
+                    vals += $"{p.SourceColumn} = '{p.Value}' AND ";
                 }
 
                 vals = vals.Trim().Substring(0, vals.Length - 4);

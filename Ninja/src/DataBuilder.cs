@@ -2,6 +2,8 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
+using Syncfusion.Data.Extensions;
+
 namespace BudgetExecution
 {
     using System;
@@ -17,7 +19,34 @@ namespace BudgetExecution
         // CONSTRUCTORS
         public DataBuilder()
         {
-        }       
+        }
+
+        public DataBuilder(Query q)
+        {
+            DataFields = null;
+            Source = q.Source;
+            DbQuery = new Query(q.Source, q.Provider);
+            DbTable = GetDataTable(q.Source);
+            Total = GetTotal(DbTable);
+            ProgramElements = GetProgramElements(DbTable);
+            BindingSource = new BindingSource();
+            BindingSource.DataSource = DbTable;
+            DbRow = GetDataRecords(DbTable);
+            Columns = GetColumnNames(DbTable);
+            if (q.Source == Source.FTE)
+            {
+                DbTable = GetDataTable().AsEnumerable().Where(p => p.Field<string>("BOC").Equals("17"))
+                    .Where(p => p.Field<string>("BudgetLevel").Equals("8"))
+                    .Select(p => p).CopyToDataTable();
+                Total = GetFteTotal(DbTable);
+                ProgramElements = GetProgramElements(DbTable);
+                BindingSource = new BindingSource();
+                BindingSource.DataSource = DbTable;
+                DbRow = GetDataRecords(DbTable);
+                Columns = GetColumnNames(DbTable);
+            }
+
+        }
 
         public DataBuilder(Source source, Provider provider)
         {
@@ -237,6 +266,37 @@ namespace BudgetExecution
             catch (Exception ex)
             {
                 var  _ = new Error(ex).ShowDialog();
+                return null;
+            }
+        }
+
+        public Dictionary<string, object> GetParamVals(DataTable table)
+        {
+            try
+            {
+                var ct = table.Columns.Count;
+                var dc = table.Columns.ToList<string>().ToArray();
+                var dr = table.Rows.Count;
+                var data = new Dictionary<string, object>();
+                foreach (DataRow r in table.Rows)
+                {
+                    foreach (var c in dc)
+                    {
+                        if (c.Equals("Amount") || c.Contains("Obligation") || c.Contains("Commitment") || c.Contains("WorkHour") || c.Contains("LeaveHour"))
+                        {
+                            continue;
+                        }
+
+                        data.Add(c, r[c]);
+                    }
+
+                }
+
+                return data;
+            }
+            catch (Exception ex)
+            {
+                var _ = new Error(ex).ShowDialog();
                 return null;
             }
         }

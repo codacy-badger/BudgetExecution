@@ -11,10 +11,20 @@ namespace BudgetExecution
         // CONSTRUCTORS
         public Employee()
         {
+            Source = Source.Employees;
+            Provider = Provider.SQLite;
+            DbQuery = new SQLiteQuery(Source); 
+            DbData= new DataBuilder(DbQuery);
+            DbTable = DbData.DbTable;
         }
 
         public Employee(int id, string eid, string hoc, string hon, string wc, string f, string l, string lvt, double leave)
         {
+            Source = Source.Employees;
+            Provider = Provider.SQLite;
+            DbQuery = new SQLiteQuery(Source);
+            DbData = new DataBuilder(DbQuery);
+            DbTable = DbData.DbTable;
             ID = id;
             EmployId = eid;
             HrOrgCode = hoc;
@@ -45,6 +55,8 @@ namespace BudgetExecution
         public Provider Provider { get; }
 
         public DataBuilder DbData { get; }
+
+        public SQLiteQuery DbQuery { get; set; } 
 
         public DataTable DbTable { get; }
 

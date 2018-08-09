@@ -127,8 +127,10 @@ namespace BudgetExecution
             this.Tab3Rtx = new System.Windows.Forms.RichTextBox();
             this.Tab3Tx2 = new MetroSet_UI.Controls.MetroSetTextBox();
             this.metroPanel11 = new MetroFramework.Controls.MetroPanel();
+            this.Tab3Fp4 = new System.Windows.Forms.FlowLayoutPanel();
             this.Tab3Cb2 = new MetroSet_UI.Controls.MetroSetComboBox();
             this.metroPanel8 = new MetroFramework.Controls.MetroPanel();
+            this.Tab3Fp5 = new System.Windows.Forms.FlowLayoutPanel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.button1 = new System.Windows.Forms.Button();
             this.Tab3Tx1 = new MetroSet_UI.Controls.MetroSetTextBox();
@@ -139,8 +141,11 @@ namespace BudgetExecution
             this.label31 = new System.Windows.Forms.Label();
             this.Tab3Cb1 = new MetroSet_UI.Controls.MetroSetComboBox();
             this.metroPanel10 = new MetroFramework.Controls.MetroPanel();
+            this.Tab3Fp2 = new System.Windows.Forms.FlowLayoutPanel();
             this.metroPanel7 = new MetroFramework.Controls.MetroPanel();
+            this.Tab3Fp1 = new System.Windows.Forms.FlowLayoutPanel();
             this.metroPanel9 = new MetroFramework.Controls.MetroPanel();
+            this.Tab3Fp3 = new System.Windows.Forms.FlowLayoutPanel();
             this.TransferBinding = new System.Windows.Forms.BindingSource(this.components);
             this.Tab2 = new Syncfusion.Windows.Forms.Tools.TabControlAdv();
             this.Tab1 = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
@@ -203,11 +208,6 @@ namespace BudgetExecution
             this.Tab1Tx1 = new MetroSet_UI.Controls.MetroSetTextBox();
             this.tabPageAdv2 = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
             this.Tab3 = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
-            this.Tab3Fp3 = new System.Windows.Forms.FlowLayoutPanel();
-            this.Tab3Fp2 = new System.Windows.Forms.FlowLayoutPanel();
-            this.Tab3Fp4 = new System.Windows.Forms.FlowLayoutPanel();
-            this.Tab3Fp5 = new System.Windows.Forms.FlowLayoutPanel();
-            this.Tab3Fp1 = new System.Windows.Forms.FlowLayoutPanel();
             this.Tab2P2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Navigator1)).BeginInit();
             this.Navigator1.SuspendLayout();
@@ -647,7 +647,7 @@ namespace BudgetExecution
             this.Tab2Tx12.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.Tab2Tx12.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.Tab2Tx12.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.Tab2Tx12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.Tab2Tx12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Tab2Tx12.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.Tab2Tx12.Image = null;
             this.Tab2Tx12.Lines = null;
@@ -656,7 +656,7 @@ namespace BudgetExecution
             this.Tab2Tx12.Multiline = false;
             this.Tab2Tx12.Name = "Tab2Tx12";
             this.Tab2Tx12.ReadOnly = false;
-            this.Tab2Tx12.Size = new System.Drawing.Size(148, 36);
+            this.Tab2Tx12.Size = new System.Drawing.Size(148, 30);
             this.Tab2Tx12.Style = MetroSet_UI.Design.Style.Dark;
             this.Tab2Tx12.StyleManager = null;
             this.Tab2Tx12.TabIndex = 39;
@@ -796,7 +796,7 @@ namespace BudgetExecution
             this.Tab2Tx5.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.Tab2Tx5.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.Tab2Tx5.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.Tab2Tx5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.Tab2Tx5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Tab2Tx5.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.Tab2Tx5.Image = null;
             this.Tab2Tx5.Lines = null;
@@ -805,7 +805,7 @@ namespace BudgetExecution
             this.Tab2Tx5.Multiline = false;
             this.Tab2Tx5.Name = "Tab2Tx5";
             this.Tab2Tx5.ReadOnly = false;
-            this.Tab2Tx5.Size = new System.Drawing.Size(128, 35);
+            this.Tab2Tx5.Size = new System.Drawing.Size(128, 30);
             this.Tab2Tx5.Style = MetroSet_UI.Design.Style.Dark;
             this.Tab2Tx5.StyleManager = null;
             this.Tab2Tx5.TabIndex = 22;
@@ -825,7 +825,7 @@ namespace BudgetExecution
             this.Tab2Tx9.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.Tab2Tx9.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.Tab2Tx9.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.Tab2Tx9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.Tab2Tx9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Tab2Tx9.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.Tab2Tx9.Image = null;
             this.Tab2Tx9.Lines = null;
@@ -834,7 +834,7 @@ namespace BudgetExecution
             this.Tab2Tx9.Multiline = false;
             this.Tab2Tx9.Name = "Tab2Tx9";
             this.Tab2Tx9.ReadOnly = false;
-            this.Tab2Tx9.Size = new System.Drawing.Size(179, 35);
+            this.Tab2Tx9.Size = new System.Drawing.Size(179, 30);
             this.Tab2Tx9.Style = MetroSet_UI.Design.Style.Dark;
             this.Tab2Tx9.StyleManager = null;
             this.Tab2Tx9.TabIndex = 20;
@@ -854,7 +854,7 @@ namespace BudgetExecution
             this.Tab2Tx11.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.Tab2Tx11.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.Tab2Tx11.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.Tab2Tx11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.Tab2Tx11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Tab2Tx11.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.Tab2Tx11.Image = null;
             this.Tab2Tx11.Lines = null;
@@ -863,7 +863,7 @@ namespace BudgetExecution
             this.Tab2Tx11.Multiline = false;
             this.Tab2Tx11.Name = "Tab2Tx11";
             this.Tab2Tx11.ReadOnly = false;
-            this.Tab2Tx11.Size = new System.Drawing.Size(128, 35);
+            this.Tab2Tx11.Size = new System.Drawing.Size(128, 30);
             this.Tab2Tx11.Style = MetroSet_UI.Design.Style.Dark;
             this.Tab2Tx11.StyleManager = null;
             this.Tab2Tx11.TabIndex = 18;
@@ -883,7 +883,7 @@ namespace BudgetExecution
             this.Tab2Tx10.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.Tab2Tx10.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.Tab2Tx10.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.Tab2Tx10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.Tab2Tx10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Tab2Tx10.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.Tab2Tx10.Image = null;
             this.Tab2Tx10.Lines = null;
@@ -892,7 +892,7 @@ namespace BudgetExecution
             this.Tab2Tx10.Multiline = false;
             this.Tab2Tx10.Name = "Tab2Tx10";
             this.Tab2Tx10.ReadOnly = false;
-            this.Tab2Tx10.Size = new System.Drawing.Size(154, 33);
+            this.Tab2Tx10.Size = new System.Drawing.Size(154, 30);
             this.Tab2Tx10.Style = MetroSet_UI.Design.Style.Dark;
             this.Tab2Tx10.StyleManager = null;
             this.Tab2Tx10.TabIndex = 16;
@@ -912,7 +912,7 @@ namespace BudgetExecution
             this.Tab2Tx3.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.Tab2Tx3.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.Tab2Tx3.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.Tab2Tx3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.Tab2Tx3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Tab2Tx3.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.Tab2Tx3.Image = null;
             this.Tab2Tx3.Lines = null;
@@ -921,7 +921,7 @@ namespace BudgetExecution
             this.Tab2Tx3.Multiline = false;
             this.Tab2Tx3.Name = "Tab2Tx3";
             this.Tab2Tx3.ReadOnly = false;
-            this.Tab2Tx3.Size = new System.Drawing.Size(179, 35);
+            this.Tab2Tx3.Size = new System.Drawing.Size(179, 30);
             this.Tab2Tx3.Style = MetroSet_UI.Design.Style.Dark;
             this.Tab2Tx3.StyleManager = null;
             this.Tab2Tx3.TabIndex = 14;
@@ -941,7 +941,7 @@ namespace BudgetExecution
             this.Tab2Tx6.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.Tab2Tx6.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.Tab2Tx6.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.Tab2Tx6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.Tab2Tx6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Tab2Tx6.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.Tab2Tx6.Image = null;
             this.Tab2Tx6.Lines = null;
@@ -950,7 +950,7 @@ namespace BudgetExecution
             this.Tab2Tx6.Multiline = false;
             this.Tab2Tx6.Name = "Tab2Tx6";
             this.Tab2Tx6.ReadOnly = false;
-            this.Tab2Tx6.Size = new System.Drawing.Size(176, 35);
+            this.Tab2Tx6.Size = new System.Drawing.Size(176, 30);
             this.Tab2Tx6.Style = MetroSet_UI.Design.Style.Dark;
             this.Tab2Tx6.StyleManager = null;
             this.Tab2Tx6.TabIndex = 12;
@@ -970,7 +970,7 @@ namespace BudgetExecution
             this.Tab2Tx8.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.Tab2Tx8.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.Tab2Tx8.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.Tab2Tx8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.Tab2Tx8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Tab2Tx8.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.Tab2Tx8.Image = null;
             this.Tab2Tx8.Lines = null;
@@ -979,7 +979,7 @@ namespace BudgetExecution
             this.Tab2Tx8.Multiline = false;
             this.Tab2Tx8.Name = "Tab2Tx8";
             this.Tab2Tx8.ReadOnly = false;
-            this.Tab2Tx8.Size = new System.Drawing.Size(128, 35);
+            this.Tab2Tx8.Size = new System.Drawing.Size(128, 30);
             this.Tab2Tx8.Style = MetroSet_UI.Design.Style.Dark;
             this.Tab2Tx8.StyleManager = null;
             this.Tab2Tx8.TabIndex = 10;
@@ -999,7 +999,7 @@ namespace BudgetExecution
             this.Tab2Tx2.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.Tab2Tx2.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.Tab2Tx2.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.Tab2Tx2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.Tab2Tx2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Tab2Tx2.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.Tab2Tx2.Image = null;
             this.Tab2Tx2.Lines = null;
@@ -1008,7 +1008,7 @@ namespace BudgetExecution
             this.Tab2Tx2.Multiline = false;
             this.Tab2Tx2.Name = "Tab2Tx2";
             this.Tab2Tx2.ReadOnly = false;
-            this.Tab2Tx2.Size = new System.Drawing.Size(131, 35);
+            this.Tab2Tx2.Size = new System.Drawing.Size(131, 30);
             this.Tab2Tx2.Style = MetroSet_UI.Design.Style.Dark;
             this.Tab2Tx2.StyleManager = null;
             this.Tab2Tx2.TabIndex = 8;
@@ -1028,7 +1028,7 @@ namespace BudgetExecution
             this.Tab2Tx7.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.Tab2Tx7.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.Tab2Tx7.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.Tab2Tx7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.Tab2Tx7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Tab2Tx7.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.Tab2Tx7.Image = null;
             this.Tab2Tx7.Lines = null;
@@ -1037,7 +1037,7 @@ namespace BudgetExecution
             this.Tab2Tx7.Multiline = false;
             this.Tab2Tx7.Name = "Tab2Tx7";
             this.Tab2Tx7.ReadOnly = false;
-            this.Tab2Tx7.Size = new System.Drawing.Size(154, 35);
+            this.Tab2Tx7.Size = new System.Drawing.Size(154, 30);
             this.Tab2Tx7.Style = MetroSet_UI.Design.Style.Dark;
             this.Tab2Tx7.StyleManager = null;
             this.Tab2Tx7.TabIndex = 6;
@@ -1057,7 +1057,7 @@ namespace BudgetExecution
             this.Tab2Tx4.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.Tab2Tx4.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.Tab2Tx4.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.Tab2Tx4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.Tab2Tx4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Tab2Tx4.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.Tab2Tx4.Image = null;
             this.Tab2Tx4.Lines = null;
@@ -1066,7 +1066,7 @@ namespace BudgetExecution
             this.Tab2Tx4.Multiline = false;
             this.Tab2Tx4.Name = "Tab2Tx4";
             this.Tab2Tx4.ReadOnly = false;
-            this.Tab2Tx4.Size = new System.Drawing.Size(154, 35);
+            this.Tab2Tx4.Size = new System.Drawing.Size(154, 30);
             this.Tab2Tx4.Style = MetroSet_UI.Design.Style.Dark;
             this.Tab2Tx4.StyleManager = null;
             this.Tab2Tx4.TabIndex = 4;
@@ -1086,7 +1086,7 @@ namespace BudgetExecution
             this.Tab2Tx1.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.Tab2Tx1.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.Tab2Tx1.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.Tab2Tx1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.Tab2Tx1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Tab2Tx1.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.Tab2Tx1.Image = null;
             this.Tab2Tx1.Lines = null;
@@ -1095,7 +1095,7 @@ namespace BudgetExecution
             this.Tab2Tx1.Multiline = false;
             this.Tab2Tx1.Name = "Tab2Tx1";
             this.Tab2Tx1.ReadOnly = false;
-            this.Tab2Tx1.Size = new System.Drawing.Size(154, 35);
+            this.Tab2Tx1.Size = new System.Drawing.Size(154, 30);
             this.Tab2Tx1.Style = MetroSet_UI.Design.Style.Dark;
             this.Tab2Tx1.StyleManager = null;
             this.Tab2Tx1.TabIndex = 2;
@@ -1442,6 +1442,14 @@ namespace BudgetExecution
             this.metroPanel11.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel11.VerticalScrollbarSize = 10;
             // 
+            // Tab3Fp4
+            // 
+            this.Tab3Fp4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Tab3Fp4.Location = new System.Drawing.Point(0, 0);
+            this.Tab3Fp4.Name = "Tab3Fp4";
+            this.Tab3Fp4.Size = new System.Drawing.Size(241, 164);
+            this.Tab3Fp4.TabIndex = 3;
+            // 
             // Tab3Cb2
             // 
             this.Tab3Cb2.AllowDrop = true;
@@ -1483,6 +1491,14 @@ namespace BudgetExecution
             this.metroPanel8.VerticalScrollbarBarColor = true;
             this.metroPanel8.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel8.VerticalScrollbarSize = 10;
+            // 
+            // Tab3Fp5
+            // 
+            this.Tab3Fp5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Tab3Fp5.Location = new System.Drawing.Point(0, 0);
+            this.Tab3Fp5.Name = "Tab3Fp5";
+            this.Tab3Fp5.Size = new System.Drawing.Size(241, 164);
+            this.Tab3Fp5.TabIndex = 3;
             // 
             // groupBox1
             // 
@@ -1643,6 +1659,14 @@ namespace BudgetExecution
             this.metroPanel10.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel10.VerticalScrollbarSize = 10;
             // 
+            // Tab3Fp2
+            // 
+            this.Tab3Fp2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Tab3Fp2.Location = new System.Drawing.Point(0, 0);
+            this.Tab3Fp2.Name = "Tab3Fp2";
+            this.Tab3Fp2.Size = new System.Drawing.Size(227, 164);
+            this.Tab3Fp2.TabIndex = 3;
+            // 
             // metroPanel7
             // 
             this.metroPanel7.Controls.Add(this.Tab3Fp1);
@@ -1658,6 +1682,14 @@ namespace BudgetExecution
             this.metroPanel7.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel7.VerticalScrollbarSize = 10;
             // 
+            // Tab3Fp1
+            // 
+            this.Tab3Fp1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Tab3Fp1.Location = new System.Drawing.Point(0, 0);
+            this.Tab3Fp1.Name = "Tab3Fp1";
+            this.Tab3Fp1.Size = new System.Drawing.Size(227, 164);
+            this.Tab3Fp1.TabIndex = 3;
+            // 
             // metroPanel9
             // 
             this.metroPanel9.Controls.Add(this.Tab3Fp3);
@@ -1672,6 +1704,14 @@ namespace BudgetExecution
             this.metroPanel9.VerticalScrollbarBarColor = true;
             this.metroPanel9.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel9.VerticalScrollbarSize = 10;
+            // 
+            // Tab3Fp3
+            // 
+            this.Tab3Fp3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Tab3Fp3.Location = new System.Drawing.Point(0, 0);
+            this.Tab3Fp3.Name = "Tab3Fp3";
+            this.Tab3Fp3.Size = new System.Drawing.Size(225, 243);
+            this.Tab3Fp3.TabIndex = 2;
             // 
             // Tab2
             // 
@@ -1696,6 +1736,7 @@ namespace BudgetExecution
             this.Tab2.TabIndex = 2;
             this.Tab2.TabPanelBackColor = System.Drawing.Color.Black;
             this.Tab2.TabStyle = typeof(Syncfusion.Windows.Forms.Tools.TabRendererMetro);
+            this.Tab2.SelectedIndexChanged += new System.EventHandler(this.Tab2_SelectedIndexChanged);
             // 
             // Tab1
             // 
@@ -2125,7 +2166,7 @@ namespace BudgetExecution
             this.Tab1Tx12.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.Tab1Tx12.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.Tab1Tx12.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.Tab1Tx12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.Tab1Tx12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Tab1Tx12.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.Tab1Tx12.Image = null;
             this.Tab1Tx12.Lines = null;
@@ -2134,7 +2175,7 @@ namespace BudgetExecution
             this.Tab1Tx12.Multiline = false;
             this.Tab1Tx12.Name = "Tab1Tx12";
             this.Tab1Tx12.ReadOnly = false;
-            this.Tab1Tx12.Size = new System.Drawing.Size(152, 36);
+            this.Tab1Tx12.Size = new System.Drawing.Size(152, 30);
             this.Tab1Tx12.Style = MetroSet_UI.Design.Style.Dark;
             this.Tab1Tx12.StyleManager = null;
             this.Tab1Tx12.TabIndex = 39;
@@ -2274,7 +2315,7 @@ namespace BudgetExecution
             this.Tab1Tx5.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.Tab1Tx5.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.Tab1Tx5.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.Tab1Tx5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.Tab1Tx5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Tab1Tx5.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.Tab1Tx5.Image = null;
             this.Tab1Tx5.Lines = null;
@@ -2283,7 +2324,7 @@ namespace BudgetExecution
             this.Tab1Tx5.Multiline = false;
             this.Tab1Tx5.Name = "Tab1Tx5";
             this.Tab1Tx5.ReadOnly = false;
-            this.Tab1Tx5.Size = new System.Drawing.Size(128, 35);
+            this.Tab1Tx5.Size = new System.Drawing.Size(128, 30);
             this.Tab1Tx5.Style = MetroSet_UI.Design.Style.Dark;
             this.Tab1Tx5.StyleManager = null;
             this.Tab1Tx5.TabIndex = 22;
@@ -2303,7 +2344,7 @@ namespace BudgetExecution
             this.Tab1Tx9.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.Tab1Tx9.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.Tab1Tx9.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.Tab1Tx9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.Tab1Tx9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Tab1Tx9.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.Tab1Tx9.Image = null;
             this.Tab1Tx9.Lines = null;
@@ -2312,7 +2353,7 @@ namespace BudgetExecution
             this.Tab1Tx9.Multiline = false;
             this.Tab1Tx9.Name = "Tab1Tx9";
             this.Tab1Tx9.ReadOnly = false;
-            this.Tab1Tx9.Size = new System.Drawing.Size(179, 35);
+            this.Tab1Tx9.Size = new System.Drawing.Size(179, 30);
             this.Tab1Tx9.Style = MetroSet_UI.Design.Style.Dark;
             this.Tab1Tx9.StyleManager = null;
             this.Tab1Tx9.TabIndex = 20;
@@ -2332,7 +2373,7 @@ namespace BudgetExecution
             this.Tab1Tx11.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.Tab1Tx11.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.Tab1Tx11.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.Tab1Tx11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.Tab1Tx11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Tab1Tx11.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.Tab1Tx11.Image = null;
             this.Tab1Tx11.Lines = null;
@@ -2341,7 +2382,7 @@ namespace BudgetExecution
             this.Tab1Tx11.Multiline = false;
             this.Tab1Tx11.Name = "Tab1Tx11";
             this.Tab1Tx11.ReadOnly = false;
-            this.Tab1Tx11.Size = new System.Drawing.Size(128, 35);
+            this.Tab1Tx11.Size = new System.Drawing.Size(128, 30);
             this.Tab1Tx11.Style = MetroSet_UI.Design.Style.Dark;
             this.Tab1Tx11.StyleManager = null;
             this.Tab1Tx11.TabIndex = 18;
@@ -2361,7 +2402,7 @@ namespace BudgetExecution
             this.Tab1Tx10.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.Tab1Tx10.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.Tab1Tx10.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.Tab1Tx10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.Tab1Tx10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Tab1Tx10.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.Tab1Tx10.Image = null;
             this.Tab1Tx10.Lines = null;
@@ -2370,7 +2411,7 @@ namespace BudgetExecution
             this.Tab1Tx10.Multiline = false;
             this.Tab1Tx10.Name = "Tab1Tx10";
             this.Tab1Tx10.ReadOnly = false;
-            this.Tab1Tx10.Size = new System.Drawing.Size(154, 33);
+            this.Tab1Tx10.Size = new System.Drawing.Size(154, 30);
             this.Tab1Tx10.Style = MetroSet_UI.Design.Style.Dark;
             this.Tab1Tx10.StyleManager = null;
             this.Tab1Tx10.TabIndex = 16;
@@ -2390,7 +2431,7 @@ namespace BudgetExecution
             this.Tab1Tx3.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.Tab1Tx3.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.Tab1Tx3.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.Tab1Tx3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.Tab1Tx3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Tab1Tx3.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.Tab1Tx3.Image = null;
             this.Tab1Tx3.Lines = null;
@@ -2399,7 +2440,7 @@ namespace BudgetExecution
             this.Tab1Tx3.Multiline = false;
             this.Tab1Tx3.Name = "Tab1Tx3";
             this.Tab1Tx3.ReadOnly = false;
-            this.Tab1Tx3.Size = new System.Drawing.Size(179, 35);
+            this.Tab1Tx3.Size = new System.Drawing.Size(179, 30);
             this.Tab1Tx3.Style = MetroSet_UI.Design.Style.Dark;
             this.Tab1Tx3.StyleManager = null;
             this.Tab1Tx3.TabIndex = 14;
@@ -2419,7 +2460,7 @@ namespace BudgetExecution
             this.Tab1Tx6.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.Tab1Tx6.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.Tab1Tx6.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.Tab1Tx6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.Tab1Tx6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Tab1Tx6.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.Tab1Tx6.Image = null;
             this.Tab1Tx6.Lines = null;
@@ -2428,7 +2469,7 @@ namespace BudgetExecution
             this.Tab1Tx6.Multiline = false;
             this.Tab1Tx6.Name = "Tab1Tx6";
             this.Tab1Tx6.ReadOnly = false;
-            this.Tab1Tx6.Size = new System.Drawing.Size(176, 35);
+            this.Tab1Tx6.Size = new System.Drawing.Size(176, 30);
             this.Tab1Tx6.Style = MetroSet_UI.Design.Style.Dark;
             this.Tab1Tx6.StyleManager = null;
             this.Tab1Tx6.TabIndex = 12;
@@ -2448,7 +2489,7 @@ namespace BudgetExecution
             this.Tab1Tx8.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.Tab1Tx8.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.Tab1Tx8.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.Tab1Tx8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.Tab1Tx8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Tab1Tx8.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.Tab1Tx8.Image = null;
             this.Tab1Tx8.Lines = null;
@@ -2457,7 +2498,7 @@ namespace BudgetExecution
             this.Tab1Tx8.Multiline = false;
             this.Tab1Tx8.Name = "Tab1Tx8";
             this.Tab1Tx8.ReadOnly = false;
-            this.Tab1Tx8.Size = new System.Drawing.Size(128, 35);
+            this.Tab1Tx8.Size = new System.Drawing.Size(128, 30);
             this.Tab1Tx8.Style = MetroSet_UI.Design.Style.Dark;
             this.Tab1Tx8.StyleManager = null;
             this.Tab1Tx8.TabIndex = 10;
@@ -2477,7 +2518,7 @@ namespace BudgetExecution
             this.Tab1Tx2.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.Tab1Tx2.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.Tab1Tx2.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.Tab1Tx2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.Tab1Tx2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Tab1Tx2.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.Tab1Tx2.Image = null;
             this.Tab1Tx2.Lines = null;
@@ -2486,7 +2527,7 @@ namespace BudgetExecution
             this.Tab1Tx2.Multiline = false;
             this.Tab1Tx2.Name = "Tab1Tx2";
             this.Tab1Tx2.ReadOnly = false;
-            this.Tab1Tx2.Size = new System.Drawing.Size(131, 35);
+            this.Tab1Tx2.Size = new System.Drawing.Size(131, 30);
             this.Tab1Tx2.Style = MetroSet_UI.Design.Style.Dark;
             this.Tab1Tx2.StyleManager = null;
             this.Tab1Tx2.TabIndex = 8;
@@ -2506,7 +2547,7 @@ namespace BudgetExecution
             this.Tab1Tx7.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.Tab1Tx7.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.Tab1Tx7.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.Tab1Tx7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.Tab1Tx7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Tab1Tx7.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.Tab1Tx7.Image = null;
             this.Tab1Tx7.Lines = null;
@@ -2515,7 +2556,7 @@ namespace BudgetExecution
             this.Tab1Tx7.Multiline = false;
             this.Tab1Tx7.Name = "Tab1Tx7";
             this.Tab1Tx7.ReadOnly = false;
-            this.Tab1Tx7.Size = new System.Drawing.Size(154, 35);
+            this.Tab1Tx7.Size = new System.Drawing.Size(154, 30);
             this.Tab1Tx7.Style = MetroSet_UI.Design.Style.Dark;
             this.Tab1Tx7.StyleManager = null;
             this.Tab1Tx7.TabIndex = 6;
@@ -2535,7 +2576,7 @@ namespace BudgetExecution
             this.Tab1Tx4.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.Tab1Tx4.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.Tab1Tx4.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.Tab1Tx4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.Tab1Tx4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Tab1Tx4.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.Tab1Tx4.Image = null;
             this.Tab1Tx4.Lines = null;
@@ -2544,7 +2585,7 @@ namespace BudgetExecution
             this.Tab1Tx4.Multiline = false;
             this.Tab1Tx4.Name = "Tab1Tx4";
             this.Tab1Tx4.ReadOnly = false;
-            this.Tab1Tx4.Size = new System.Drawing.Size(154, 35);
+            this.Tab1Tx4.Size = new System.Drawing.Size(154, 30);
             this.Tab1Tx4.Style = MetroSet_UI.Design.Style.Dark;
             this.Tab1Tx4.StyleManager = null;
             this.Tab1Tx4.TabIndex = 4;
@@ -2564,7 +2605,7 @@ namespace BudgetExecution
             this.Tab1Tx1.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.Tab1Tx1.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.Tab1Tx1.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.Tab1Tx1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.Tab1Tx1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Tab1Tx1.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.Tab1Tx1.Image = null;
             this.Tab1Tx1.Lines = null;
@@ -2573,7 +2614,7 @@ namespace BudgetExecution
             this.Tab1Tx1.Multiline = false;
             this.Tab1Tx1.Name = "Tab1Tx1";
             this.Tab1Tx1.ReadOnly = false;
-            this.Tab1Tx1.Size = new System.Drawing.Size(154, 35);
+            this.Tab1Tx1.Size = new System.Drawing.Size(154, 30);
             this.Tab1Tx1.Style = MetroSet_UI.Design.Style.Dark;
             this.Tab1Tx1.StyleManager = null;
             this.Tab1Tx1.TabIndex = 2;
@@ -2612,47 +2653,7 @@ namespace BudgetExecution
             this.Tab3.Text = "tabPageAdv3";
             this.Tab3.ThemesEnabled = false;
             // 
-            // Tab3Fp3
-            // 
-            this.Tab3Fp3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Tab3Fp3.Location = new System.Drawing.Point(0, 0);
-            this.Tab3Fp3.Name = "Tab3Fp3";
-            this.Tab3Fp3.Size = new System.Drawing.Size(225, 243);
-            this.Tab3Fp3.TabIndex = 2;
-            // 
-            // Tab3Fp2
-            // 
-            this.Tab3Fp2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Tab3Fp2.Location = new System.Drawing.Point(0, 0);
-            this.Tab3Fp2.Name = "Tab3Fp2";
-            this.Tab3Fp2.Size = new System.Drawing.Size(227, 164);
-            this.Tab3Fp2.TabIndex = 3;
-            // 
-            // Tab3Fp4
-            // 
-            this.Tab3Fp4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Tab3Fp4.Location = new System.Drawing.Point(0, 0);
-            this.Tab3Fp4.Name = "Tab3Fp4";
-            this.Tab3Fp4.Size = new System.Drawing.Size(241, 164);
-            this.Tab3Fp4.TabIndex = 3;
-            // 
-            // Tab3Fp5
-            // 
-            this.Tab3Fp5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Tab3Fp5.Location = new System.Drawing.Point(0, 0);
-            this.Tab3Fp5.Name = "Tab3Fp5";
-            this.Tab3Fp5.Size = new System.Drawing.Size(241, 164);
-            this.Tab3Fp5.TabIndex = 3;
-            // 
-            // Tab3Fp1
-            // 
-            this.Tab3Fp1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Tab3Fp1.Location = new System.Drawing.Point(0, 0);
-            this.Tab3Fp1.Name = "Tab3Fp1";
-            this.Tab3Fp1.Size = new System.Drawing.Size(227, 164);
-            this.Tab3Fp1.TabIndex = 3;
-            // 
-            // Ta3
+            // Reprogramming
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
