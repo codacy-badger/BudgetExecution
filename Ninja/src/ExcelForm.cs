@@ -1,10 +1,6 @@
-#region Copyright Syncfusion Inc. 2001-2018.
-// Copyright Syncfusion Inc. 2001-2018. All rights reserved.
-// Use of this code is subject to the terms of our license.
-// A copy of the current license can be obtained at any time by e-mailing
-// licensing@syncfusion.com. Any infringement will be prosecuted under
-// applicable laws. 
-#endregion
+// <copyright file="ExcelForm.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
 namespace BudgetExecution
 {
     using System;
@@ -17,6 +13,11 @@ namespace BudgetExecution
         }
 
         private void ExcelForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void spreadsheetRibbon1_Click(object sender, EventArgs e)
         {
 
         }

@@ -10,17 +10,20 @@ namespace BudgetExecution
     using MetroSet_UI.Controls;
     using Syncfusion.Windows.Forms;
 
+    /// <summary>
+    /// class Reprogramming
+    /// </summary>
     public partial class Reprogramming : MetroForm
     {
         // CONSTRUCTORS
         public Reprogramming()
         {
-            InitializeComponent();
+           this.InitializeComponent();
         }
 
         public Reprogramming(Source source, Provider provider)
         {
-            InitializeComponent();
+            this.InitializeComponent();
             Source = source;
             Provider = provider;
             DbQuery = new Query(Source, Provider);
@@ -35,13 +38,6 @@ namespace BudgetExecution
 
 
         // PROPERTIES
-        private Source Source { get; }
-
-        private Provider Provider { get; }
-
-        internal DataFilter TableFilter { get; set; }
-
-        internal DataBuilder DbData { get; set; }
 
         public Query DbQuery { get; }
 
@@ -54,6 +50,14 @@ namespace BudgetExecution
         public DataRow[] DbRow { get; }
 
         public BindingSource BindingSource { get; set; }
+
+        internal DataFilter TableFilter { get; set; }
+
+        internal DataBuilder DbData { get; set; }
+
+        private Source Source { get; }
+
+        private Provider Provider { get; }
 
         // METHODS
         private void CalculatorButton_OnClick(object sender, EventArgs e)

@@ -1040,15 +1040,7 @@ namespace BudgetExecution
 
         private void AccountToolsButton_OnClick(object sender, EventArgs e)
         {
-            if (UpdateTab.TabVisible == true)
-                UpdateTab.TabVisible = false;
-            else
-            {
 
-                AccountTabControl.SelectedIndex = 0;
-                if (UpdateTab.TabVisible != true)
-                    UpdateTab.TabVisible = true;
-            }
         }
 
         private void AccountChart_Click(object sender, EventArgs e)

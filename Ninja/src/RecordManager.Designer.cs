@@ -34,20 +34,32 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.RecordNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
-            this.PreviousButton = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton10 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.NextButton = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-            this.SaveButton = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
-            this.AddButton = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton11 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.CopyButton = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator15 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton13 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator18 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton12 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator16 = new System.Windows.Forms.ToolStripSeparator();
+            this.ResetButton = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
+            this.AddButton = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator19 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton7 = new System.Windows.Forms.ToolStripButton();
+            this.GridRefreshButton = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton9 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
-            this.DeleteButton = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton14 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator17 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton15 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator20 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton16 = new System.Windows.Forms.ToolStripButton();
             this.label2 = new System.Windows.Forms.Label();
             this.AccountTabControl = new Syncfusion.Windows.Forms.Tools.TabControlAdv();
             this.UpdateTab = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
@@ -177,20 +189,32 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.RecordNavigator2 = new System.Windows.Forms.BindingNavigator(this.components);
             this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator8 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripTextBox2 = new System.Windows.Forms.ToolStripTextBox();
-            this.toolStripSeparator9 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator10 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripTextBox2 = new System.Windows.Forms.ToolStripTextBox();
             this.toolStripSeparator11 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator12 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator13 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator8 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator9 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator12 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton6 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator14 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton8 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator21 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton17 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator22 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton18 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator23 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton19 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator24 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton20 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator25 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton21 = new System.Windows.Forms.ToolStripButton();
             this.label32 = new System.Windows.Forms.Label();
             this.BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox2.SuspendLayout();
@@ -210,13 +234,13 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.BackColor = System.Drawing.Color.Black;
+            this.groupBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             this.groupBox2.Controls.Add(this.RecordNavigator1);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.ForeColor = System.Drawing.SystemColors.Info;
-            this.groupBox2.Location = new System.Drawing.Point(773, 444);
+            this.groupBox2.Location = new System.Drawing.Point(657, 435);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(499, 59);
+            this.groupBox2.Size = new System.Drawing.Size(606, 59);
             this.groupBox2.TabIndex = 56;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Commands";
@@ -228,64 +252,82 @@
             this.RecordNavigator1.CountItem = this.toolStripLabel1;
             this.RecordNavigator1.DeleteItem = null;
             this.RecordNavigator1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.RecordNavigator1.ImageScalingSize = new System.Drawing.Size(24, 20);
+            this.RecordNavigator1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RecordNavigator1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.RecordNavigator1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.PreviousButton,
+            this.toolStripSeparator3,
+            this.toolStripButton10,
             this.toolStripSeparator1,
             this.toolStripTextBox1,
             this.toolStripLabel1,
             this.toolStripSeparator2,
-            this.NextButton,
-            this.toolStripSeparator3,
-            this.SaveButton,
-            this.toolStripSeparator5,
-            this.AddButton,
+            this.toolStripButton11,
             this.toolStripSeparator4,
             this.CopyButton,
+            this.toolStripSeparator15,
+            this.toolStripButton13,
+            this.toolStripSeparator18,
+            this.toolStripButton12,
+            this.toolStripSeparator16,
+            this.ResetButton,
+            this.toolStripSeparator5,
+            this.AddButton,
+            this.toolStripSeparator19,
+            this.toolStripButton7,
+            this.GridRefreshButton,
+            this.toolStripButton9,
             this.toolStripSeparator6,
-            this.DeleteButton,
-            this.toolStripSeparator7});
-            this.RecordNavigator1.Location = new System.Drawing.Point(3, 25);
+            this.toolStripButton14,
+            this.toolStripSeparator17,
+            this.toolStripButton15,
+            this.toolStripSeparator20,
+            this.toolStripButton16});
+            this.RecordNavigator1.Location = new System.Drawing.Point(3, 29);
             this.RecordNavigator1.MoveFirstItem = null;
             this.RecordNavigator1.MoveLastItem = null;
-            this.RecordNavigator1.MoveNextItem = this.NextButton;
-            this.RecordNavigator1.MovePreviousItem = this.PreviousButton;
+            this.RecordNavigator1.MoveNextItem = this.toolStripButton11;
+            this.RecordNavigator1.MovePreviousItem = this.toolStripButton10;
             this.RecordNavigator1.Name = "RecordNavigator1";
             this.RecordNavigator1.PositionItem = this.toolStripTextBox1;
-            this.RecordNavigator1.Size = new System.Drawing.Size(493, 31);
-            this.RecordNavigator1.TabIndex = 14;
+            this.RecordNavigator1.Size = new System.Drawing.Size(600, 27);
+            this.RecordNavigator1.TabIndex = 153;
             this.RecordNavigator1.Text = "bindingNavigator1";
             // 
             // toolStripLabel1
             // 
             this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(54, 28);
+            this.toolStripLabel1.Size = new System.Drawing.Size(46, 24);
             this.toolStripLabel1.Text = "of {0}";
             this.toolStripLabel1.ToolTipText = "Total number of items";
             // 
-            // PreviousButton
+            // toolStripSeparator3
             // 
-            this.PreviousButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.PreviousButton.Image = ((System.Drawing.Image)(resources.GetObject("PreviousButton.Image")));
-            this.PreviousButton.Name = "PreviousButton";
-            this.PreviousButton.RightToLeftAutoMirrorImage = true;
-            this.PreviousButton.Size = new System.Drawing.Size(28, 28);
-            this.PreviousButton.ToolTipText = "Previous Record";
-            this.PreviousButton.Click += new System.EventHandler(this.PreviousButton_Click);
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 27);
+            // 
+            // toolStripButton10
+            // 
+            this.toolStripButton10.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton10.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton10.Image")));
+            this.toolStripButton10.Name = "toolStripButton10";
+            this.toolStripButton10.RightToLeftAutoMirrorImage = true;
+            this.toolStripButton10.Size = new System.Drawing.Size(24, 24);
+            this.toolStripButton10.Text = "Previous";
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 31);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 27);
             // 
             // toolStripTextBox1
             // 
             this.toolStripTextBox1.AccessibleName = "Position";
             this.toolStripTextBox1.AutoSize = false;
-            this.toolStripTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.toolStripTextBox1.ForeColor = System.Drawing.SystemColors.Info;
+            this.toolStripTextBox1.BackColor = System.Drawing.Color.Black;
+            this.toolStripTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.toolStripTextBox1.ForeColor = System.Drawing.Color.White;
             this.toolStripTextBox1.Name = "toolStripTextBox1";
-            this.toolStripTextBox1.Size = new System.Drawing.Size(50, 31);
+            this.toolStripTextBox1.Size = new System.Drawing.Size(42, 24);
             this.toolStripTextBox1.Text = "0";
             this.toolStripTextBox1.TextBoxTextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.toolStripTextBox1.ToolTipText = "Current position";
@@ -293,53 +335,21 @@
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 31);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 27);
             // 
-            // NextButton
+            // toolStripButton11
             // 
-            this.NextButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.NextButton.Image = ((System.Drawing.Image)(resources.GetObject("NextButton.Image")));
-            this.NextButton.Name = "NextButton";
-            this.NextButton.RightToLeftAutoMirrorImage = true;
-            this.NextButton.Size = new System.Drawing.Size(28, 28);
-            this.NextButton.Text = "Move next";
-            this.NextButton.ToolTipText = "Next Record";
-            this.NextButton.Click += new System.EventHandler(this.NextButton_Click);
-            // 
-            // toolStripSeparator3
-            // 
-            this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 31);
-            // 
-            // SaveButton
-            // 
-            this.SaveButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.SaveButton.Image = ((System.Drawing.Image)(resources.GetObject("SaveButton.Image")));
-            this.SaveButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.SaveButton.Name = "SaveButton";
-            this.SaveButton.Size = new System.Drawing.Size(28, 28);
-            this.SaveButton.Text = "toolStripButton1";
-            this.SaveButton.ToolTipText = "Save Changes";
-            // 
-            // toolStripSeparator5
-            // 
-            this.toolStripSeparator5.Name = "toolStripSeparator5";
-            this.toolStripSeparator5.Size = new System.Drawing.Size(6, 31);
-            // 
-            // AddButton
-            // 
-            this.AddButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.AddButton.Image = ((System.Drawing.Image)(resources.GetObject("AddButton.Image")));
-            this.AddButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.AddButton.Name = "AddButton";
-            this.AddButton.Size = new System.Drawing.Size(28, 28);
-            this.AddButton.Text = "toolStripButton2";
-            this.AddButton.ToolTipText = "And New Record";
+            this.toolStripButton11.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton11.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton11.Image")));
+            this.toolStripButton11.Name = "toolStripButton11";
+            this.toolStripButton11.RightToLeftAutoMirrorImage = true;
+            this.toolStripButton11.Size = new System.Drawing.Size(24, 24);
+            this.toolStripButton11.Text = "Next";
             // 
             // toolStripSeparator4
             // 
             this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 31);
+            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 27);
             // 
             // CopyButton
             // 
@@ -347,28 +357,141 @@
             this.CopyButton.Image = ((System.Drawing.Image)(resources.GetObject("CopyButton.Image")));
             this.CopyButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.CopyButton.Name = "CopyButton";
-            this.CopyButton.Size = new System.Drawing.Size(28, 28);
-            this.CopyButton.Text = "toolStripButton5";
-            this.CopyButton.ToolTipText = "Copy DbData\r\nInto New\r\nRecord";
+            this.CopyButton.Size = new System.Drawing.Size(24, 24);
+            this.CopyButton.Text = "toolStripButton7";
+            this.CopyButton.ToolTipText = "Copy DbData Into New Account";
+            // 
+            // toolStripSeparator15
+            // 
+            this.toolStripSeparator15.Name = "toolStripSeparator15";
+            this.toolStripSeparator15.Size = new System.Drawing.Size(6, 27);
+            // 
+            // toolStripButton13
+            // 
+            this.toolStripButton13.BackColor = System.Drawing.Color.Black;
+            this.toolStripButton13.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton13.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.toolStripButton13.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton13.Image")));
+            this.toolStripButton13.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton13.Name = "toolStripButton13";
+            this.toolStripButton13.Size = new System.Drawing.Size(24, 24);
+            this.toolStripButton13.Text = "toolStripButton13";
+            // 
+            // toolStripSeparator18
+            // 
+            this.toolStripSeparator18.Name = "toolStripSeparator18";
+            this.toolStripSeparator18.Size = new System.Drawing.Size(6, 27);
+            // 
+            // toolStripButton12
+            // 
+            this.toolStripButton12.BackColor = System.Drawing.Color.Black;
+            this.toolStripButton12.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("toolStripButton12.BackgroundImage")));
+            this.toolStripButton12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.toolStripButton12.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton12.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton12.Image")));
+            this.toolStripButton12.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton12.Name = "toolStripButton12";
+            this.toolStripButton12.Size = new System.Drawing.Size(24, 24);
+            this.toolStripButton12.Text = "toolStripButton12";
+            // 
+            // toolStripSeparator16
+            // 
+            this.toolStripSeparator16.Name = "toolStripSeparator16";
+            this.toolStripSeparator16.Size = new System.Drawing.Size(6, 27);
+            // 
+            // ResetButton
+            // 
+            this.ResetButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.ResetButton.Image = ((System.Drawing.Image)(resources.GetObject("ResetButton.Image")));
+            this.ResetButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.ResetButton.Name = "ResetButton";
+            this.ResetButton.Size = new System.Drawing.Size(24, 24);
+            this.ResetButton.Text = "toolStripButton7";
+            this.ResetButton.ToolTipText = "Reset DataTable and Filters";
+            // 
+            // toolStripSeparator5
+            // 
+            this.toolStripSeparator5.Name = "toolStripSeparator5";
+            this.toolStripSeparator5.Size = new System.Drawing.Size(6, 27);
+            // 
+            // AddButton
+            // 
+            this.AddButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.AddButton.Image = ((System.Drawing.Image)(resources.GetObject("AddButton.Image")));
+            this.AddButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.AddButton.Name = "AddButton";
+            this.AddButton.Size = new System.Drawing.Size(24, 24);
+            this.AddButton.Text = "toolStripButton7";
+            // 
+            // toolStripSeparator19
+            // 
+            this.toolStripSeparator19.Name = "toolStripSeparator19";
+            this.toolStripSeparator19.Size = new System.Drawing.Size(6, 27);
+            // 
+            // toolStripButton7
+            // 
+            this.toolStripButton7.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton7.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton7.Image")));
+            this.toolStripButton7.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton7.Name = "toolStripButton7";
+            this.toolStripButton7.Size = new System.Drawing.Size(24, 24);
+            this.toolStripButton7.Text = "toolStripButton7";
+            // 
+            // GridRefreshButton
+            // 
+            this.GridRefreshButton.Name = "GridRefreshButton";
+            this.GridRefreshButton.Size = new System.Drawing.Size(6, 27);
+            // 
+            // toolStripButton9
+            // 
+            this.toolStripButton9.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton9.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton9.Image")));
+            this.toolStripButton9.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton9.Name = "toolStripButton9";
+            this.toolStripButton9.Size = new System.Drawing.Size(24, 24);
+            this.toolStripButton9.Text = "toolStripButton9";
             // 
             // toolStripSeparator6
             // 
             this.toolStripSeparator6.Name = "toolStripSeparator6";
-            this.toolStripSeparator6.Size = new System.Drawing.Size(6, 31);
+            this.toolStripSeparator6.Size = new System.Drawing.Size(6, 27);
             // 
-            // DeleteButton
+            // toolStripButton14
             // 
-            this.DeleteButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.DeleteButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.DeleteButton.Name = "DeleteButton";
-            this.DeleteButton.Size = new System.Drawing.Size(23, 28);
-            this.DeleteButton.Text = "toolStripButton3";
-            this.DeleteButton.ToolTipText = "Delete Record";
+            this.toolStripButton14.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton14.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton14.Image")));
+            this.toolStripButton14.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton14.Name = "toolStripButton14";
+            this.toolStripButton14.Size = new System.Drawing.Size(24, 24);
+            this.toolStripButton14.Text = "toolStripButton14";
             // 
-            // toolStripSeparator7
+            // toolStripSeparator17
             // 
-            this.toolStripSeparator7.Name = "toolStripSeparator7";
-            this.toolStripSeparator7.Size = new System.Drawing.Size(6, 31);
+            this.toolStripSeparator17.Name = "toolStripSeparator17";
+            this.toolStripSeparator17.Size = new System.Drawing.Size(6, 27);
+            // 
+            // toolStripButton15
+            // 
+            this.toolStripButton15.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton15.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton15.Image")));
+            this.toolStripButton15.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton15.Name = "toolStripButton15";
+            this.toolStripButton15.Size = new System.Drawing.Size(24, 24);
+            this.toolStripButton15.Text = "toolStripButton15";
+            // 
+            // toolStripSeparator20
+            // 
+            this.toolStripSeparator20.Name = "toolStripSeparator20";
+            this.toolStripSeparator20.Size = new System.Drawing.Size(6, 27);
+            // 
+            // toolStripButton16
+            // 
+            this.toolStripButton16.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton16.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton16.Image")));
+            this.toolStripButton16.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton16.Name = "toolStripButton16";
+            this.toolStripButton16.Size = new System.Drawing.Size(24, 24);
+            this.toolStripButton16.Text = "toolStripButton16";
             // 
             // label2
             // 
@@ -385,7 +508,7 @@
             this.AccountTabControl.ActiveTabColor = System.Drawing.Color.SteelBlue;
             this.AccountTabControl.ActiveTabForeColor = System.Drawing.Color.White;
             this.AccountTabControl.AdjustTopGap = 10;
-            this.AccountTabControl.BeforeTouchSize = new System.Drawing.Size(1275, 578);
+            this.AccountTabControl.BeforeTouchSize = new System.Drawing.Size(1275, 554);
             this.AccountTabControl.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.AccountTabControl.CloseButtonForeColor = System.Drawing.Color.Empty;
             this.AccountTabControl.CloseButtonHoverForeColor = System.Drawing.Color.Black;
@@ -400,10 +523,10 @@
             this.AccountTabControl.Padding = new System.Drawing.Point(6, 8);
             this.AccountTabControl.SeparatorColor = System.Drawing.SystemColors.ControlDark;
             this.AccountTabControl.ShowSeparator = false;
-            this.AccountTabControl.Size = new System.Drawing.Size(1275, 578);
+            this.AccountTabControl.Size = new System.Drawing.Size(1275, 554);
             this.AccountTabControl.TabGap = 5;
             this.AccountTabControl.TabIndex = 24;
-            this.AccountTabControl.TabPanelBackColor = System.Drawing.Color.Black;
+            this.AccountTabControl.TabPanelBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             this.AccountTabControl.TabStyle = typeof(Syncfusion.Windows.Forms.Tools.TabRendererMetro);
             // 
             // UpdateTab
@@ -415,7 +538,7 @@
             this.UpdateTab.Location = new System.Drawing.Point(0, 48);
             this.UpdateTab.Name = "UpdateTab";
             this.UpdateTab.ShowCloseButton = true;
-            this.UpdateTab.Size = new System.Drawing.Size(1275, 530);
+            this.UpdateTab.Size = new System.Drawing.Size(1275, 506);
             this.UpdateTab.TabIndex = 3;
             this.UpdateTab.Text = "Update";
             this.UpdateTab.ThemesEnabled = false;
@@ -534,7 +657,7 @@
             this.box29.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.box29.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.box29.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.box29.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.box29.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.box29.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.box29.Image = null;
             this.box29.Lines = null;
@@ -543,7 +666,7 @@
             this.box29.Multiline = false;
             this.box29.Name = "box29";
             this.box29.ReadOnly = false;
-            this.box29.Size = new System.Drawing.Size(174, 37);
+            this.box29.Size = new System.Drawing.Size(174, 30);
             this.box29.Style = MetroSet_UI.Design.Style.Dark;
             this.box29.StyleManager = null;
             this.box29.TabIndex = 61;
@@ -581,7 +704,7 @@
             this.box0.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.box0.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.box0.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.box0.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.box0.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.box0.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.box0.Image = null;
             this.box0.Lines = null;
@@ -590,7 +713,7 @@
             this.box0.Multiline = false;
             this.box0.Name = "box0";
             this.box0.ReadOnly = false;
-            this.box0.Size = new System.Drawing.Size(166, 37);
+            this.box0.Size = new System.Drawing.Size(166, 30);
             this.box0.Style = MetroSet_UI.Design.Style.Dark;
             this.box0.StyleManager = null;
             this.box0.TabIndex = 12;
@@ -610,7 +733,7 @@
             this.box4.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.box4.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.box4.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.box4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.box4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.box4.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.box4.Image = null;
             this.box4.Lines = null;
@@ -619,7 +742,7 @@
             this.box4.Multiline = false;
             this.box4.Name = "box4";
             this.box4.ReadOnly = false;
-            this.box4.Size = new System.Drawing.Size(175, 37);
+            this.box4.Size = new System.Drawing.Size(175, 30);
             this.box4.Style = MetroSet_UI.Design.Style.Dark;
             this.box4.StyleManager = null;
             this.box4.TabIndex = 52;
@@ -657,7 +780,7 @@
             this.box1.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.box1.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.box1.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.box1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.box1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.box1.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.box1.Image = null;
             this.box1.Lines = null;
@@ -666,7 +789,7 @@
             this.box1.Multiline = false;
             this.box1.Name = "box1";
             this.box1.ReadOnly = false;
-            this.box1.Size = new System.Drawing.Size(174, 37);
+            this.box1.Size = new System.Drawing.Size(174, 30);
             this.box1.Style = MetroSet_UI.Design.Style.Dark;
             this.box1.StyleManager = null;
             this.box1.TabIndex = 22;
@@ -695,7 +818,7 @@
             this.box3.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.box3.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.box3.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.box3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.box3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.box3.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.box3.Image = null;
             this.box3.Lines = null;
@@ -704,7 +827,7 @@
             this.box3.Multiline = false;
             this.box3.Name = "box3";
             this.box3.ReadOnly = false;
-            this.box3.Size = new System.Drawing.Size(174, 37);
+            this.box3.Size = new System.Drawing.Size(174, 30);
             this.box3.Style = MetroSet_UI.Design.Style.Dark;
             this.box3.StyleManager = null;
             this.box3.TabIndex = 42;
@@ -751,7 +874,7 @@
             this.box5.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.box5.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.box5.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.box5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.box5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.box5.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.box5.Image = null;
             this.box5.Lines = null;
@@ -760,7 +883,7 @@
             this.box5.Multiline = false;
             this.box5.Name = "box5";
             this.box5.ReadOnly = false;
-            this.box5.Size = new System.Drawing.Size(163, 37);
+            this.box5.Size = new System.Drawing.Size(163, 30);
             this.box5.Style = MetroSet_UI.Design.Style.Dark;
             this.box5.StyleManager = null;
             this.box5.TabIndex = 13;
@@ -789,7 +912,7 @@
             this.box6.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.box6.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.box6.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.box6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.box6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.box6.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.box6.Image = null;
             this.box6.Lines = null;
@@ -798,7 +921,7 @@
             this.box6.Multiline = false;
             this.box6.Name = "box6";
             this.box6.ReadOnly = false;
-            this.box6.Size = new System.Drawing.Size(174, 37);
+            this.box6.Size = new System.Drawing.Size(174, 30);
             this.box6.Style = MetroSet_UI.Design.Style.Dark;
             this.box6.StyleManager = null;
             this.box6.TabIndex = 23;
@@ -827,7 +950,7 @@
             this.box7.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.box7.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.box7.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.box7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.box7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.box7.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.box7.Image = null;
             this.box7.Lines = null;
@@ -836,7 +959,7 @@
             this.box7.Multiline = false;
             this.box7.Name = "box7";
             this.box7.ReadOnly = false;
-            this.box7.Size = new System.Drawing.Size(174, 37);
+            this.box7.Size = new System.Drawing.Size(174, 30);
             this.box7.Style = MetroSet_UI.Design.Style.Dark;
             this.box7.StyleManager = null;
             this.box7.TabIndex = 33;
@@ -865,7 +988,7 @@
             this.box8.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.box8.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.box8.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.box8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.box8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.box8.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.box8.Image = null;
             this.box8.Lines = null;
@@ -874,7 +997,7 @@
             this.box8.Multiline = false;
             this.box8.Name = "box8";
             this.box8.ReadOnly = false;
-            this.box8.Size = new System.Drawing.Size(174, 37);
+            this.box8.Size = new System.Drawing.Size(174, 30);
             this.box8.Style = MetroSet_UI.Design.Style.Dark;
             this.box8.StyleManager = null;
             this.box8.TabIndex = 43;
@@ -903,7 +1026,7 @@
             this.box9.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.box9.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.box9.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.box9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.box9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.box9.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.box9.Image = null;
             this.box9.Lines = null;
@@ -912,7 +1035,7 @@
             this.box9.Multiline = false;
             this.box9.Name = "box9";
             this.box9.ReadOnly = false;
-            this.box9.Size = new System.Drawing.Size(172, 37);
+            this.box9.Size = new System.Drawing.Size(172, 30);
             this.box9.Style = MetroSet_UI.Design.Style.Dark;
             this.box9.StyleManager = null;
             this.box9.TabIndex = 53;
@@ -941,7 +1064,7 @@
             this.box10.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.box10.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.box10.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.box10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.box10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.box10.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.box10.Image = null;
             this.box10.Lines = null;
@@ -950,7 +1073,7 @@
             this.box10.Multiline = false;
             this.box10.Name = "box10";
             this.box10.ReadOnly = false;
-            this.box10.Size = new System.Drawing.Size(172, 37);
+            this.box10.Size = new System.Drawing.Size(172, 30);
             this.box10.Style = MetroSet_UI.Design.Style.Dark;
             this.box10.StyleManager = null;
             this.box10.TabIndex = 0;
@@ -979,7 +1102,7 @@
             this.box11.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.box11.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.box11.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.box11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.box11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.box11.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.box11.Image = null;
             this.box11.Lines = null;
@@ -988,7 +1111,7 @@
             this.box11.Multiline = false;
             this.box11.Name = "box11";
             this.box11.ReadOnly = false;
-            this.box11.Size = new System.Drawing.Size(163, 37);
+            this.box11.Size = new System.Drawing.Size(163, 30);
             this.box11.Style = MetroSet_UI.Design.Style.Dark;
             this.box11.StyleManager = null;
             this.box11.TabIndex = 16;
@@ -1017,7 +1140,7 @@
             this.box12.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.box12.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.box12.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.box12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.box12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.box12.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.box12.Image = null;
             this.box12.Lines = null;
@@ -1026,7 +1149,7 @@
             this.box12.Multiline = false;
             this.box12.Name = "box12";
             this.box12.ReadOnly = false;
-            this.box12.Size = new System.Drawing.Size(174, 37);
+            this.box12.Size = new System.Drawing.Size(174, 30);
             this.box12.Style = MetroSet_UI.Design.Style.Dark;
             this.box12.StyleManager = null;
             this.box12.TabIndex = 26;
@@ -1055,7 +1178,7 @@
             this.box13.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.box13.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.box13.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.box13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.box13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.box13.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.box13.Image = null;
             this.box13.Lines = null;
@@ -1064,7 +1187,7 @@
             this.box13.Multiline = false;
             this.box13.Name = "box13";
             this.box13.ReadOnly = false;
-            this.box13.Size = new System.Drawing.Size(174, 37);
+            this.box13.Size = new System.Drawing.Size(174, 30);
             this.box13.Style = MetroSet_UI.Design.Style.Dark;
             this.box13.StyleManager = null;
             this.box13.TabIndex = 36;
@@ -1093,7 +1216,7 @@
             this.box14.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.box14.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.box14.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.box14.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.box14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.box14.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.box14.Image = null;
             this.box14.Lines = null;
@@ -1102,7 +1225,7 @@
             this.box14.Multiline = false;
             this.box14.Name = "box14";
             this.box14.ReadOnly = false;
-            this.box14.Size = new System.Drawing.Size(172, 37);
+            this.box14.Size = new System.Drawing.Size(172, 30);
             this.box14.Style = MetroSet_UI.Design.Style.Dark;
             this.box14.StyleManager = null;
             this.box14.TabIndex = 46;
@@ -1131,7 +1254,7 @@
             this.box15.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.box15.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.box15.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.box15.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.box15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.box15.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.box15.Image = null;
             this.box15.Lines = null;
@@ -1140,7 +1263,7 @@
             this.box15.Multiline = false;
             this.box15.Name = "box15";
             this.box15.ReadOnly = false;
-            this.box15.Size = new System.Drawing.Size(172, 37);
+            this.box15.Size = new System.Drawing.Size(172, 30);
             this.box15.Style = MetroSet_UI.Design.Style.Dark;
             this.box15.StyleManager = null;
             this.box15.TabIndex = 3;
@@ -1169,7 +1292,7 @@
             this.box16.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.box16.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.box16.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.box16.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.box16.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.box16.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.box16.Image = null;
             this.box16.Lines = null;
@@ -1178,7 +1301,7 @@
             this.box16.Multiline = false;
             this.box16.Name = "box16";
             this.box16.ReadOnly = false;
-            this.box16.Size = new System.Drawing.Size(163, 37);
+            this.box16.Size = new System.Drawing.Size(163, 30);
             this.box16.Style = MetroSet_UI.Design.Style.Dark;
             this.box16.StyleManager = null;
             this.box16.TabIndex = 18;
@@ -1207,7 +1330,7 @@
             this.box17.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.box17.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.box17.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.box17.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.box17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.box17.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.box17.Image = null;
             this.box17.Lines = null;
@@ -1216,7 +1339,7 @@
             this.box17.Multiline = false;
             this.box17.Name = "box17";
             this.box17.ReadOnly = false;
-            this.box17.Size = new System.Drawing.Size(166, 37);
+            this.box17.Size = new System.Drawing.Size(166, 30);
             this.box17.Style = MetroSet_UI.Design.Style.Dark;
             this.box17.StyleManager = null;
             this.box17.TabIndex = 28;
@@ -1254,7 +1377,7 @@
             this.box19.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.box19.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.box19.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.box19.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.box19.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.box19.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.box19.Image = null;
             this.box19.Lines = null;
@@ -1263,7 +1386,7 @@
             this.box19.Multiline = false;
             this.box19.Name = "box19";
             this.box19.ReadOnly = false;
-            this.box19.Size = new System.Drawing.Size(174, 37);
+            this.box19.Size = new System.Drawing.Size(174, 30);
             this.box19.Style = MetroSet_UI.Design.Style.Dark;
             this.box19.StyleManager = null;
             this.box19.TabIndex = 48;
@@ -1292,7 +1415,7 @@
             this.box20.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.box20.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.box20.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.box20.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.box20.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.box20.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.box20.Image = null;
             this.box20.Lines = null;
@@ -1301,7 +1424,7 @@
             this.box20.Multiline = false;
             this.box20.Name = "box20";
             this.box20.ReadOnly = false;
-            this.box20.Size = new System.Drawing.Size(174, 37);
+            this.box20.Size = new System.Drawing.Size(174, 30);
             this.box20.Style = MetroSet_UI.Design.Style.Dark;
             this.box20.StyleManager = null;
             this.box20.TabIndex = 1;
@@ -1330,7 +1453,7 @@
             this.box21.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.box21.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.box21.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.box21.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.box21.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.box21.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.box21.Image = null;
             this.box21.Lines = null;
@@ -1339,7 +1462,7 @@
             this.box21.Multiline = false;
             this.box21.Name = "box21";
             this.box21.ReadOnly = false;
-            this.box21.Size = new System.Drawing.Size(163, 37);
+            this.box21.Size = new System.Drawing.Size(163, 30);
             this.box21.Style = MetroSet_UI.Design.Style.Dark;
             this.box21.StyleManager = null;
             this.box21.TabIndex = 17;
@@ -1368,7 +1491,7 @@
             this.box22.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.box22.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.box22.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.box22.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.box22.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.box22.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.box22.Image = null;
             this.box22.Lines = null;
@@ -1377,7 +1500,7 @@
             this.box22.Multiline = false;
             this.box22.Name = "box22";
             this.box22.ReadOnly = false;
-            this.box22.Size = new System.Drawing.Size(166, 37);
+            this.box22.Size = new System.Drawing.Size(166, 30);
             this.box22.Style = MetroSet_UI.Design.Style.Dark;
             this.box22.StyleManager = null;
             this.box22.TabIndex = 27;
@@ -1406,7 +1529,7 @@
             this.box23.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.box23.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.box23.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.box23.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.box23.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.box23.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.box23.Image = null;
             this.box23.Lines = null;
@@ -1415,7 +1538,7 @@
             this.box23.Multiline = false;
             this.box23.Name = "box23";
             this.box23.ReadOnly = false;
-            this.box23.Size = new System.Drawing.Size(174, 37);
+            this.box23.Size = new System.Drawing.Size(174, 30);
             this.box23.Style = MetroSet_UI.Design.Style.Dark;
             this.box23.StyleManager = null;
             this.box23.TabIndex = 37;
@@ -1444,7 +1567,7 @@
             this.box2.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.box2.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.box2.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.box2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.box2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.box2.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.box2.Image = null;
             this.box2.Lines = null;
@@ -1453,7 +1576,7 @@
             this.box2.Multiline = false;
             this.box2.Name = "box2";
             this.box2.ReadOnly = false;
-            this.box2.Size = new System.Drawing.Size(172, 37);
+            this.box2.Size = new System.Drawing.Size(172, 30);
             this.box2.Style = MetroSet_UI.Design.Style.Dark;
             this.box2.StyleManager = null;
             this.box2.TabIndex = 32;
@@ -1482,7 +1605,7 @@
             this.box18.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.box18.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.box18.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.box18.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.box18.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.box18.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.box18.Image = null;
             this.box18.Lines = null;
@@ -1491,7 +1614,7 @@
             this.box18.Multiline = false;
             this.box18.Name = "box18";
             this.box18.ReadOnly = false;
-            this.box18.Size = new System.Drawing.Size(174, 37);
+            this.box18.Size = new System.Drawing.Size(174, 30);
             this.box18.Style = MetroSet_UI.Design.Style.Dark;
             this.box18.StyleManager = null;
             this.box18.TabIndex = 38;
@@ -1511,7 +1634,7 @@
             this.box24.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.box24.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.box24.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.box24.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.box24.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.box24.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.box24.Image = null;
             this.box24.Lines = null;
@@ -1520,7 +1643,7 @@
             this.box24.Multiline = false;
             this.box24.Name = "box24";
             this.box24.ReadOnly = false;
-            this.box24.Size = new System.Drawing.Size(172, 37);
+            this.box24.Size = new System.Drawing.Size(172, 30);
             this.box24.Style = MetroSet_UI.Design.Style.Dark;
             this.box24.StyleManager = null;
             this.box24.TabIndex = 47;
@@ -1540,7 +1663,7 @@
             this.box25.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.box25.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.box25.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.box25.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.box25.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.box25.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.box25.Image = null;
             this.box25.Lines = null;
@@ -1549,7 +1672,7 @@
             this.box25.Multiline = false;
             this.box25.Name = "box25";
             this.box25.ReadOnly = false;
-            this.box25.Size = new System.Drawing.Size(174, 37);
+            this.box25.Size = new System.Drawing.Size(174, 30);
             this.box25.Style = MetroSet_UI.Design.Style.Dark;
             this.box25.StyleManager = null;
             this.box25.TabIndex = 57;
@@ -1569,7 +1692,7 @@
             this.box27.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.box27.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.box27.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.box27.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.box27.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.box27.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.box27.Image = null;
             this.box27.Lines = null;
@@ -1578,7 +1701,7 @@
             this.box27.Multiline = false;
             this.box27.Name = "box27";
             this.box27.ReadOnly = false;
-            this.box27.Size = new System.Drawing.Size(174, 37);
+            this.box27.Size = new System.Drawing.Size(174, 30);
             this.box27.Style = MetroSet_UI.Design.Style.Dark;
             this.box27.StyleManager = null;
             this.box27.TabIndex = 58;
@@ -1598,7 +1721,7 @@
             this.box26.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.box26.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.box26.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.box26.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.box26.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.box26.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.box26.Image = null;
             this.box26.Lines = null;
@@ -1607,7 +1730,7 @@
             this.box26.Multiline = false;
             this.box26.Name = "box26";
             this.box26.ReadOnly = false;
-            this.box26.Size = new System.Drawing.Size(174, 37);
+            this.box26.Size = new System.Drawing.Size(174, 30);
             this.box26.Style = MetroSet_UI.Design.Style.Dark;
             this.box26.StyleManager = null;
             this.box26.TabIndex = 60;
@@ -1627,7 +1750,7 @@
             this.box28.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.box28.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.box28.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.box28.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.box28.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.box28.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.box28.Image = null;
             this.box28.Lines = null;
@@ -1636,7 +1759,7 @@
             this.box28.Multiline = false;
             this.box28.Name = "box28";
             this.box28.ReadOnly = false;
-            this.box28.Size = new System.Drawing.Size(174, 37);
+            this.box28.Size = new System.Drawing.Size(174, 30);
             this.box28.Style = MetroSet_UI.Design.Style.Dark;
             this.box28.StyleManager = null;
             this.box28.TabIndex = 59;
@@ -1657,7 +1780,7 @@
             this.AddNewTab.Location = new System.Drawing.Point(0, 48);
             this.AddNewTab.Name = "AddNewTab";
             this.AddNewTab.ShowCloseButton = true;
-            this.AddNewTab.Size = new System.Drawing.Size(1275, 530);
+            this.AddNewTab.Size = new System.Drawing.Size(1275, 506);
             this.AddNewTab.TabIndex = 2;
             this.AddNewTab.Text = "Add ";
             this.AddNewTab.ThemesEnabled = false;
@@ -1776,7 +1899,7 @@
             this.metroSetTextBox1.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.metroSetTextBox1.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.metroSetTextBox1.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroSetTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.metroSetTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.metroSetTextBox1.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.metroSetTextBox1.Image = null;
             this.metroSetTextBox1.Lines = null;
@@ -1785,7 +1908,7 @@
             this.metroSetTextBox1.Multiline = false;
             this.metroSetTextBox1.Name = "metroSetTextBox1";
             this.metroSetTextBox1.ReadOnly = false;
-            this.metroSetTextBox1.Size = new System.Drawing.Size(174, 37);
+            this.metroSetTextBox1.Size = new System.Drawing.Size(174, 30);
             this.metroSetTextBox1.Style = MetroSet_UI.Design.Style.Dark;
             this.metroSetTextBox1.StyleManager = null;
             this.metroSetTextBox1.TabIndex = 61;
@@ -1823,7 +1946,7 @@
             this.metroSetTextBox2.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.metroSetTextBox2.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.metroSetTextBox2.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroSetTextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.metroSetTextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.metroSetTextBox2.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.metroSetTextBox2.Image = null;
             this.metroSetTextBox2.Lines = null;
@@ -1832,7 +1955,7 @@
             this.metroSetTextBox2.Multiline = false;
             this.metroSetTextBox2.Name = "metroSetTextBox2";
             this.metroSetTextBox2.ReadOnly = false;
-            this.metroSetTextBox2.Size = new System.Drawing.Size(166, 37);
+            this.metroSetTextBox2.Size = new System.Drawing.Size(166, 30);
             this.metroSetTextBox2.Style = MetroSet_UI.Design.Style.Dark;
             this.metroSetTextBox2.StyleManager = null;
             this.metroSetTextBox2.TabIndex = 12;
@@ -1852,7 +1975,7 @@
             this.metroSetTextBox3.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.metroSetTextBox3.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.metroSetTextBox3.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroSetTextBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.metroSetTextBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.metroSetTextBox3.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.metroSetTextBox3.Image = null;
             this.metroSetTextBox3.Lines = null;
@@ -1861,7 +1984,7 @@
             this.metroSetTextBox3.Multiline = false;
             this.metroSetTextBox3.Name = "metroSetTextBox3";
             this.metroSetTextBox3.ReadOnly = false;
-            this.metroSetTextBox3.Size = new System.Drawing.Size(175, 37);
+            this.metroSetTextBox3.Size = new System.Drawing.Size(175, 30);
             this.metroSetTextBox3.Style = MetroSet_UI.Design.Style.Dark;
             this.metroSetTextBox3.StyleManager = null;
             this.metroSetTextBox3.TabIndex = 52;
@@ -1899,7 +2022,7 @@
             this.metroSetTextBox4.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.metroSetTextBox4.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.metroSetTextBox4.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroSetTextBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.metroSetTextBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.metroSetTextBox4.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.metroSetTextBox4.Image = null;
             this.metroSetTextBox4.Lines = null;
@@ -1908,7 +2031,7 @@
             this.metroSetTextBox4.Multiline = false;
             this.metroSetTextBox4.Name = "metroSetTextBox4";
             this.metroSetTextBox4.ReadOnly = false;
-            this.metroSetTextBox4.Size = new System.Drawing.Size(174, 37);
+            this.metroSetTextBox4.Size = new System.Drawing.Size(174, 30);
             this.metroSetTextBox4.Style = MetroSet_UI.Design.Style.Dark;
             this.metroSetTextBox4.StyleManager = null;
             this.metroSetTextBox4.TabIndex = 22;
@@ -1937,7 +2060,7 @@
             this.metroSetTextBox5.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.metroSetTextBox5.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.metroSetTextBox5.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroSetTextBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.metroSetTextBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.metroSetTextBox5.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.metroSetTextBox5.Image = null;
             this.metroSetTextBox5.Lines = null;
@@ -1946,7 +2069,7 @@
             this.metroSetTextBox5.Multiline = false;
             this.metroSetTextBox5.Name = "metroSetTextBox5";
             this.metroSetTextBox5.ReadOnly = false;
-            this.metroSetTextBox5.Size = new System.Drawing.Size(174, 37);
+            this.metroSetTextBox5.Size = new System.Drawing.Size(174, 30);
             this.metroSetTextBox5.Style = MetroSet_UI.Design.Style.Dark;
             this.metroSetTextBox5.StyleManager = null;
             this.metroSetTextBox5.TabIndex = 42;
@@ -1993,7 +2116,7 @@
             this.metroSetTextBox6.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.metroSetTextBox6.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.metroSetTextBox6.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroSetTextBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.metroSetTextBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.metroSetTextBox6.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.metroSetTextBox6.Image = null;
             this.metroSetTextBox6.Lines = null;
@@ -2002,7 +2125,7 @@
             this.metroSetTextBox6.Multiline = false;
             this.metroSetTextBox6.Name = "metroSetTextBox6";
             this.metroSetTextBox6.ReadOnly = false;
-            this.metroSetTextBox6.Size = new System.Drawing.Size(163, 37);
+            this.metroSetTextBox6.Size = new System.Drawing.Size(163, 30);
             this.metroSetTextBox6.Style = MetroSet_UI.Design.Style.Dark;
             this.metroSetTextBox6.StyleManager = null;
             this.metroSetTextBox6.TabIndex = 13;
@@ -2031,7 +2154,7 @@
             this.metroSetTextBox7.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.metroSetTextBox7.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.metroSetTextBox7.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroSetTextBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.metroSetTextBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.metroSetTextBox7.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.metroSetTextBox7.Image = null;
             this.metroSetTextBox7.Lines = null;
@@ -2040,7 +2163,7 @@
             this.metroSetTextBox7.Multiline = false;
             this.metroSetTextBox7.Name = "metroSetTextBox7";
             this.metroSetTextBox7.ReadOnly = false;
-            this.metroSetTextBox7.Size = new System.Drawing.Size(174, 37);
+            this.metroSetTextBox7.Size = new System.Drawing.Size(174, 30);
             this.metroSetTextBox7.Style = MetroSet_UI.Design.Style.Dark;
             this.metroSetTextBox7.StyleManager = null;
             this.metroSetTextBox7.TabIndex = 23;
@@ -2069,7 +2192,7 @@
             this.metroSetTextBox8.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.metroSetTextBox8.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.metroSetTextBox8.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroSetTextBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.metroSetTextBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.metroSetTextBox8.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.metroSetTextBox8.Image = null;
             this.metroSetTextBox8.Lines = null;
@@ -2078,7 +2201,7 @@
             this.metroSetTextBox8.Multiline = false;
             this.metroSetTextBox8.Name = "metroSetTextBox8";
             this.metroSetTextBox8.ReadOnly = false;
-            this.metroSetTextBox8.Size = new System.Drawing.Size(174, 37);
+            this.metroSetTextBox8.Size = new System.Drawing.Size(174, 30);
             this.metroSetTextBox8.Style = MetroSet_UI.Design.Style.Dark;
             this.metroSetTextBox8.StyleManager = null;
             this.metroSetTextBox8.TabIndex = 33;
@@ -2107,7 +2230,7 @@
             this.metroSetTextBox9.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.metroSetTextBox9.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.metroSetTextBox9.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroSetTextBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.metroSetTextBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.metroSetTextBox9.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.metroSetTextBox9.Image = null;
             this.metroSetTextBox9.Lines = null;
@@ -2116,7 +2239,7 @@
             this.metroSetTextBox9.Multiline = false;
             this.metroSetTextBox9.Name = "metroSetTextBox9";
             this.metroSetTextBox9.ReadOnly = false;
-            this.metroSetTextBox9.Size = new System.Drawing.Size(174, 37);
+            this.metroSetTextBox9.Size = new System.Drawing.Size(174, 30);
             this.metroSetTextBox9.Style = MetroSet_UI.Design.Style.Dark;
             this.metroSetTextBox9.StyleManager = null;
             this.metroSetTextBox9.TabIndex = 43;
@@ -2145,7 +2268,7 @@
             this.metroSetTextBox10.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.metroSetTextBox10.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.metroSetTextBox10.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroSetTextBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.metroSetTextBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.metroSetTextBox10.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.metroSetTextBox10.Image = null;
             this.metroSetTextBox10.Lines = null;
@@ -2154,7 +2277,7 @@
             this.metroSetTextBox10.Multiline = false;
             this.metroSetTextBox10.Name = "metroSetTextBox10";
             this.metroSetTextBox10.ReadOnly = false;
-            this.metroSetTextBox10.Size = new System.Drawing.Size(172, 37);
+            this.metroSetTextBox10.Size = new System.Drawing.Size(172, 30);
             this.metroSetTextBox10.Style = MetroSet_UI.Design.Style.Dark;
             this.metroSetTextBox10.StyleManager = null;
             this.metroSetTextBox10.TabIndex = 53;
@@ -2183,7 +2306,7 @@
             this.metroSetTextBox11.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.metroSetTextBox11.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.metroSetTextBox11.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroSetTextBox11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.metroSetTextBox11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.metroSetTextBox11.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.metroSetTextBox11.Image = null;
             this.metroSetTextBox11.Lines = null;
@@ -2192,7 +2315,7 @@
             this.metroSetTextBox11.Multiline = false;
             this.metroSetTextBox11.Name = "metroSetTextBox11";
             this.metroSetTextBox11.ReadOnly = false;
-            this.metroSetTextBox11.Size = new System.Drawing.Size(172, 37);
+            this.metroSetTextBox11.Size = new System.Drawing.Size(172, 30);
             this.metroSetTextBox11.Style = MetroSet_UI.Design.Style.Dark;
             this.metroSetTextBox11.StyleManager = null;
             this.metroSetTextBox11.TabIndex = 0;
@@ -2221,7 +2344,7 @@
             this.metroSetTextBox12.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.metroSetTextBox12.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.metroSetTextBox12.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroSetTextBox12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.metroSetTextBox12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.metroSetTextBox12.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.metroSetTextBox12.Image = null;
             this.metroSetTextBox12.Lines = null;
@@ -2230,7 +2353,7 @@
             this.metroSetTextBox12.Multiline = false;
             this.metroSetTextBox12.Name = "metroSetTextBox12";
             this.metroSetTextBox12.ReadOnly = false;
-            this.metroSetTextBox12.Size = new System.Drawing.Size(163, 37);
+            this.metroSetTextBox12.Size = new System.Drawing.Size(163, 30);
             this.metroSetTextBox12.Style = MetroSet_UI.Design.Style.Dark;
             this.metroSetTextBox12.StyleManager = null;
             this.metroSetTextBox12.TabIndex = 16;
@@ -2259,7 +2382,7 @@
             this.metroSetTextBox13.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.metroSetTextBox13.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.metroSetTextBox13.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroSetTextBox13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.metroSetTextBox13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.metroSetTextBox13.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.metroSetTextBox13.Image = null;
             this.metroSetTextBox13.Lines = null;
@@ -2268,7 +2391,7 @@
             this.metroSetTextBox13.Multiline = false;
             this.metroSetTextBox13.Name = "metroSetTextBox13";
             this.metroSetTextBox13.ReadOnly = false;
-            this.metroSetTextBox13.Size = new System.Drawing.Size(174, 37);
+            this.metroSetTextBox13.Size = new System.Drawing.Size(174, 30);
             this.metroSetTextBox13.Style = MetroSet_UI.Design.Style.Dark;
             this.metroSetTextBox13.StyleManager = null;
             this.metroSetTextBox13.TabIndex = 26;
@@ -2297,7 +2420,7 @@
             this.metroSetTextBox14.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.metroSetTextBox14.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.metroSetTextBox14.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroSetTextBox14.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.metroSetTextBox14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.metroSetTextBox14.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.metroSetTextBox14.Image = null;
             this.metroSetTextBox14.Lines = null;
@@ -2306,7 +2429,7 @@
             this.metroSetTextBox14.Multiline = false;
             this.metroSetTextBox14.Name = "metroSetTextBox14";
             this.metroSetTextBox14.ReadOnly = false;
-            this.metroSetTextBox14.Size = new System.Drawing.Size(174, 37);
+            this.metroSetTextBox14.Size = new System.Drawing.Size(174, 30);
             this.metroSetTextBox14.Style = MetroSet_UI.Design.Style.Dark;
             this.metroSetTextBox14.StyleManager = null;
             this.metroSetTextBox14.TabIndex = 36;
@@ -2335,7 +2458,7 @@
             this.metroSetTextBox15.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.metroSetTextBox15.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.metroSetTextBox15.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroSetTextBox15.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.metroSetTextBox15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.metroSetTextBox15.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.metroSetTextBox15.Image = null;
             this.metroSetTextBox15.Lines = null;
@@ -2344,7 +2467,7 @@
             this.metroSetTextBox15.Multiline = false;
             this.metroSetTextBox15.Name = "metroSetTextBox15";
             this.metroSetTextBox15.ReadOnly = false;
-            this.metroSetTextBox15.Size = new System.Drawing.Size(172, 37);
+            this.metroSetTextBox15.Size = new System.Drawing.Size(172, 30);
             this.metroSetTextBox15.Style = MetroSet_UI.Design.Style.Dark;
             this.metroSetTextBox15.StyleManager = null;
             this.metroSetTextBox15.TabIndex = 46;
@@ -2373,7 +2496,7 @@
             this.metroSetTextBox16.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.metroSetTextBox16.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.metroSetTextBox16.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroSetTextBox16.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.metroSetTextBox16.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.metroSetTextBox16.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.metroSetTextBox16.Image = null;
             this.metroSetTextBox16.Lines = null;
@@ -2382,7 +2505,7 @@
             this.metroSetTextBox16.Multiline = false;
             this.metroSetTextBox16.Name = "metroSetTextBox16";
             this.metroSetTextBox16.ReadOnly = false;
-            this.metroSetTextBox16.Size = new System.Drawing.Size(172, 37);
+            this.metroSetTextBox16.Size = new System.Drawing.Size(172, 30);
             this.metroSetTextBox16.Style = MetroSet_UI.Design.Style.Dark;
             this.metroSetTextBox16.StyleManager = null;
             this.metroSetTextBox16.TabIndex = 3;
@@ -2411,7 +2534,7 @@
             this.metroSetTextBox17.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.metroSetTextBox17.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.metroSetTextBox17.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroSetTextBox17.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.metroSetTextBox17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.metroSetTextBox17.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.metroSetTextBox17.Image = null;
             this.metroSetTextBox17.Lines = null;
@@ -2420,7 +2543,7 @@
             this.metroSetTextBox17.Multiline = false;
             this.metroSetTextBox17.Name = "metroSetTextBox17";
             this.metroSetTextBox17.ReadOnly = false;
-            this.metroSetTextBox17.Size = new System.Drawing.Size(163, 37);
+            this.metroSetTextBox17.Size = new System.Drawing.Size(163, 30);
             this.metroSetTextBox17.Style = MetroSet_UI.Design.Style.Dark;
             this.metroSetTextBox17.StyleManager = null;
             this.metroSetTextBox17.TabIndex = 18;
@@ -2449,7 +2572,7 @@
             this.metroSetTextBox18.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.metroSetTextBox18.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.metroSetTextBox18.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroSetTextBox18.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.metroSetTextBox18.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.metroSetTextBox18.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.metroSetTextBox18.Image = null;
             this.metroSetTextBox18.Lines = null;
@@ -2458,7 +2581,7 @@
             this.metroSetTextBox18.Multiline = false;
             this.metroSetTextBox18.Name = "metroSetTextBox18";
             this.metroSetTextBox18.ReadOnly = false;
-            this.metroSetTextBox18.Size = new System.Drawing.Size(166, 37);
+            this.metroSetTextBox18.Size = new System.Drawing.Size(166, 30);
             this.metroSetTextBox18.Style = MetroSet_UI.Design.Style.Dark;
             this.metroSetTextBox18.StyleManager = null;
             this.metroSetTextBox18.TabIndex = 28;
@@ -2496,7 +2619,7 @@
             this.metroSetTextBox19.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.metroSetTextBox19.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.metroSetTextBox19.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroSetTextBox19.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.metroSetTextBox19.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.metroSetTextBox19.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.metroSetTextBox19.Image = null;
             this.metroSetTextBox19.Lines = null;
@@ -2505,7 +2628,7 @@
             this.metroSetTextBox19.Multiline = false;
             this.metroSetTextBox19.Name = "metroSetTextBox19";
             this.metroSetTextBox19.ReadOnly = false;
-            this.metroSetTextBox19.Size = new System.Drawing.Size(174, 37);
+            this.metroSetTextBox19.Size = new System.Drawing.Size(174, 30);
             this.metroSetTextBox19.Style = MetroSet_UI.Design.Style.Dark;
             this.metroSetTextBox19.StyleManager = null;
             this.metroSetTextBox19.TabIndex = 48;
@@ -2534,7 +2657,7 @@
             this.metroSetTextBox20.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.metroSetTextBox20.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.metroSetTextBox20.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroSetTextBox20.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.metroSetTextBox20.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.metroSetTextBox20.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.metroSetTextBox20.Image = null;
             this.metroSetTextBox20.Lines = null;
@@ -2543,7 +2666,7 @@
             this.metroSetTextBox20.Multiline = false;
             this.metroSetTextBox20.Name = "metroSetTextBox20";
             this.metroSetTextBox20.ReadOnly = false;
-            this.metroSetTextBox20.Size = new System.Drawing.Size(174, 37);
+            this.metroSetTextBox20.Size = new System.Drawing.Size(174, 30);
             this.metroSetTextBox20.Style = MetroSet_UI.Design.Style.Dark;
             this.metroSetTextBox20.StyleManager = null;
             this.metroSetTextBox20.TabIndex = 1;
@@ -2572,7 +2695,7 @@
             this.metroSetTextBox21.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.metroSetTextBox21.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.metroSetTextBox21.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroSetTextBox21.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.metroSetTextBox21.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.metroSetTextBox21.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.metroSetTextBox21.Image = null;
             this.metroSetTextBox21.Lines = null;
@@ -2581,7 +2704,7 @@
             this.metroSetTextBox21.Multiline = false;
             this.metroSetTextBox21.Name = "metroSetTextBox21";
             this.metroSetTextBox21.ReadOnly = false;
-            this.metroSetTextBox21.Size = new System.Drawing.Size(163, 37);
+            this.metroSetTextBox21.Size = new System.Drawing.Size(163, 30);
             this.metroSetTextBox21.Style = MetroSet_UI.Design.Style.Dark;
             this.metroSetTextBox21.StyleManager = null;
             this.metroSetTextBox21.TabIndex = 17;
@@ -2610,7 +2733,7 @@
             this.metroSetTextBox22.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.metroSetTextBox22.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.metroSetTextBox22.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroSetTextBox22.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.metroSetTextBox22.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.metroSetTextBox22.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.metroSetTextBox22.Image = null;
             this.metroSetTextBox22.Lines = null;
@@ -2619,7 +2742,7 @@
             this.metroSetTextBox22.Multiline = false;
             this.metroSetTextBox22.Name = "metroSetTextBox22";
             this.metroSetTextBox22.ReadOnly = false;
-            this.metroSetTextBox22.Size = new System.Drawing.Size(166, 37);
+            this.metroSetTextBox22.Size = new System.Drawing.Size(166, 30);
             this.metroSetTextBox22.Style = MetroSet_UI.Design.Style.Dark;
             this.metroSetTextBox22.StyleManager = null;
             this.metroSetTextBox22.TabIndex = 27;
@@ -2648,7 +2771,7 @@
             this.metroSetTextBox23.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.metroSetTextBox23.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.metroSetTextBox23.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroSetTextBox23.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.metroSetTextBox23.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.metroSetTextBox23.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.metroSetTextBox23.Image = null;
             this.metroSetTextBox23.Lines = null;
@@ -2657,7 +2780,7 @@
             this.metroSetTextBox23.Multiline = false;
             this.metroSetTextBox23.Name = "metroSetTextBox23";
             this.metroSetTextBox23.ReadOnly = false;
-            this.metroSetTextBox23.Size = new System.Drawing.Size(174, 37);
+            this.metroSetTextBox23.Size = new System.Drawing.Size(174, 30);
             this.metroSetTextBox23.Style = MetroSet_UI.Design.Style.Dark;
             this.metroSetTextBox23.StyleManager = null;
             this.metroSetTextBox23.TabIndex = 37;
@@ -2686,7 +2809,7 @@
             this.metroSetTextBox24.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.metroSetTextBox24.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.metroSetTextBox24.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroSetTextBox24.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.metroSetTextBox24.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.metroSetTextBox24.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.metroSetTextBox24.Image = null;
             this.metroSetTextBox24.Lines = null;
@@ -2695,7 +2818,7 @@
             this.metroSetTextBox24.Multiline = false;
             this.metroSetTextBox24.Name = "metroSetTextBox24";
             this.metroSetTextBox24.ReadOnly = false;
-            this.metroSetTextBox24.Size = new System.Drawing.Size(172, 37);
+            this.metroSetTextBox24.Size = new System.Drawing.Size(172, 30);
             this.metroSetTextBox24.Style = MetroSet_UI.Design.Style.Dark;
             this.metroSetTextBox24.StyleManager = null;
             this.metroSetTextBox24.TabIndex = 32;
@@ -2724,7 +2847,7 @@
             this.metroSetTextBox25.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.metroSetTextBox25.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.metroSetTextBox25.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroSetTextBox25.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.metroSetTextBox25.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.metroSetTextBox25.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.metroSetTextBox25.Image = null;
             this.metroSetTextBox25.Lines = null;
@@ -2733,7 +2856,7 @@
             this.metroSetTextBox25.Multiline = false;
             this.metroSetTextBox25.Name = "metroSetTextBox25";
             this.metroSetTextBox25.ReadOnly = false;
-            this.metroSetTextBox25.Size = new System.Drawing.Size(174, 37);
+            this.metroSetTextBox25.Size = new System.Drawing.Size(174, 30);
             this.metroSetTextBox25.Style = MetroSet_UI.Design.Style.Dark;
             this.metroSetTextBox25.StyleManager = null;
             this.metroSetTextBox25.TabIndex = 38;
@@ -2753,7 +2876,7 @@
             this.metroSetTextBox26.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.metroSetTextBox26.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.metroSetTextBox26.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroSetTextBox26.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.metroSetTextBox26.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.metroSetTextBox26.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.metroSetTextBox26.Image = null;
             this.metroSetTextBox26.Lines = null;
@@ -2762,7 +2885,7 @@
             this.metroSetTextBox26.Multiline = false;
             this.metroSetTextBox26.Name = "metroSetTextBox26";
             this.metroSetTextBox26.ReadOnly = false;
-            this.metroSetTextBox26.Size = new System.Drawing.Size(172, 37);
+            this.metroSetTextBox26.Size = new System.Drawing.Size(172, 30);
             this.metroSetTextBox26.Style = MetroSet_UI.Design.Style.Dark;
             this.metroSetTextBox26.StyleManager = null;
             this.metroSetTextBox26.TabIndex = 47;
@@ -2782,7 +2905,7 @@
             this.metroSetTextBox27.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.metroSetTextBox27.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.metroSetTextBox27.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroSetTextBox27.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.metroSetTextBox27.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.metroSetTextBox27.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.metroSetTextBox27.Image = null;
             this.metroSetTextBox27.Lines = null;
@@ -2791,7 +2914,7 @@
             this.metroSetTextBox27.Multiline = false;
             this.metroSetTextBox27.Name = "metroSetTextBox27";
             this.metroSetTextBox27.ReadOnly = false;
-            this.metroSetTextBox27.Size = new System.Drawing.Size(174, 37);
+            this.metroSetTextBox27.Size = new System.Drawing.Size(174, 30);
             this.metroSetTextBox27.Style = MetroSet_UI.Design.Style.Dark;
             this.metroSetTextBox27.StyleManager = null;
             this.metroSetTextBox27.TabIndex = 57;
@@ -2811,7 +2934,7 @@
             this.metroSetTextBox28.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.metroSetTextBox28.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.metroSetTextBox28.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroSetTextBox28.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.metroSetTextBox28.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.metroSetTextBox28.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.metroSetTextBox28.Image = null;
             this.metroSetTextBox28.Lines = null;
@@ -2820,7 +2943,7 @@
             this.metroSetTextBox28.Multiline = false;
             this.metroSetTextBox28.Name = "metroSetTextBox28";
             this.metroSetTextBox28.ReadOnly = false;
-            this.metroSetTextBox28.Size = new System.Drawing.Size(174, 37);
+            this.metroSetTextBox28.Size = new System.Drawing.Size(174, 30);
             this.metroSetTextBox28.Style = MetroSet_UI.Design.Style.Dark;
             this.metroSetTextBox28.StyleManager = null;
             this.metroSetTextBox28.TabIndex = 58;
@@ -2840,7 +2963,7 @@
             this.metroSetTextBox29.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.metroSetTextBox29.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.metroSetTextBox29.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroSetTextBox29.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.metroSetTextBox29.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.metroSetTextBox29.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.metroSetTextBox29.Image = null;
             this.metroSetTextBox29.Lines = null;
@@ -2849,7 +2972,7 @@
             this.metroSetTextBox29.Multiline = false;
             this.metroSetTextBox29.Name = "metroSetTextBox29";
             this.metroSetTextBox29.ReadOnly = false;
-            this.metroSetTextBox29.Size = new System.Drawing.Size(174, 37);
+            this.metroSetTextBox29.Size = new System.Drawing.Size(174, 30);
             this.metroSetTextBox29.Style = MetroSet_UI.Design.Style.Dark;
             this.metroSetTextBox29.StyleManager = null;
             this.metroSetTextBox29.TabIndex = 60;
@@ -2869,7 +2992,7 @@
             this.metroSetTextBox30.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             this.metroSetTextBox30.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.metroSetTextBox30.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroSetTextBox30.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.metroSetTextBox30.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.metroSetTextBox30.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.metroSetTextBox30.Image = null;
             this.metroSetTextBox30.Lines = null;
@@ -2878,7 +3001,7 @@
             this.metroSetTextBox30.Multiline = false;
             this.metroSetTextBox30.Name = "metroSetTextBox30";
             this.metroSetTextBox30.ReadOnly = false;
-            this.metroSetTextBox30.Size = new System.Drawing.Size(174, 37);
+            this.metroSetTextBox30.Size = new System.Drawing.Size(174, 30);
             this.metroSetTextBox30.Style = MetroSet_UI.Design.Style.Dark;
             this.metroSetTextBox30.StyleManager = null;
             this.metroSetTextBox30.TabIndex = 59;
@@ -2895,9 +3018,9 @@
             this.groupBox1.Controls.Add(this.RecordNavigator2);
             this.groupBox1.Controls.Add(this.label32);
             this.groupBox1.ForeColor = System.Drawing.SystemColors.Info;
-            this.groupBox1.Location = new System.Drawing.Point(764, 442);
+            this.groupBox1.Location = new System.Drawing.Point(661, 432);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(499, 59);
+            this.groupBox1.Size = new System.Drawing.Size(602, 59);
             this.groupBox1.TabIndex = 59;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Commands";
@@ -2909,39 +3032,58 @@
             this.RecordNavigator2.CountItem = this.toolStripLabel2;
             this.RecordNavigator2.DeleteItem = null;
             this.RecordNavigator2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.RecordNavigator2.ImageScalingSize = new System.Drawing.Size(24, 20);
+            this.RecordNavigator2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RecordNavigator2.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.RecordNavigator2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripSeparator7,
             this.toolStripButton1,
-            this.toolStripSeparator8,
+            this.toolStripSeparator10,
             this.toolStripTextBox2,
             this.toolStripLabel2,
-            this.toolStripSeparator9,
-            this.toolStripButton2,
-            this.toolStripSeparator10,
-            this.toolStripButton3,
             this.toolStripSeparator11,
-            this.toolStripButton4,
-            this.toolStripSeparator12,
-            this.toolStripButton5,
+            this.toolStripButton2,
             this.toolStripSeparator13,
+            this.toolStripButton3,
+            this.toolStripSeparator8,
+            this.toolStripButton4,
+            this.toolStripSeparator9,
+            this.toolStripButton5,
+            this.toolStripSeparator12,
             this.toolStripButton6,
-            this.toolStripSeparator14});
-            this.RecordNavigator2.Location = new System.Drawing.Point(3, 25);
+            this.toolStripSeparator14,
+            this.toolStripButton8,
+            this.toolStripSeparator21,
+            this.toolStripButton17,
+            this.toolStripSeparator22,
+            this.toolStripButton18,
+            this.toolStripSeparator23,
+            this.toolStripButton19,
+            this.toolStripSeparator24,
+            this.toolStripButton20,
+            this.toolStripSeparator25,
+            this.toolStripButton21});
+            this.RecordNavigator2.Location = new System.Drawing.Point(3, 29);
             this.RecordNavigator2.MoveFirstItem = null;
             this.RecordNavigator2.MoveLastItem = null;
             this.RecordNavigator2.MoveNextItem = this.toolStripButton2;
             this.RecordNavigator2.MovePreviousItem = this.toolStripButton1;
             this.RecordNavigator2.Name = "RecordNavigator2";
             this.RecordNavigator2.PositionItem = this.toolStripTextBox2;
-            this.RecordNavigator2.Size = new System.Drawing.Size(493, 31);
-            this.RecordNavigator2.TabIndex = 14;
+            this.RecordNavigator2.Size = new System.Drawing.Size(596, 27);
+            this.RecordNavigator2.TabIndex = 153;
+            this.RecordNavigator2.Text = "bindingNavigator1";
             // 
             // toolStripLabel2
             // 
             this.toolStripLabel2.Name = "toolStripLabel2";
-            this.toolStripLabel2.Size = new System.Drawing.Size(54, 28);
+            this.toolStripLabel2.Size = new System.Drawing.Size(46, 24);
             this.toolStripLabel2.Text = "of {0}";
             this.toolStripLabel2.ToolTipText = "Total number of items";
+            // 
+            // toolStripSeparator7
+            // 
+            this.toolStripSeparator7.Name = "toolStripSeparator7";
+            this.toolStripSeparator7.Size = new System.Drawing.Size(6, 27);
             // 
             // toolStripButton1
             // 
@@ -2949,30 +3091,31 @@
             this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
             this.toolStripButton1.Name = "toolStripButton1";
             this.toolStripButton1.RightToLeftAutoMirrorImage = true;
-            this.toolStripButton1.Size = new System.Drawing.Size(28, 28);
-            this.toolStripButton1.ToolTipText = "Previous Record";
+            this.toolStripButton1.Size = new System.Drawing.Size(24, 24);
+            this.toolStripButton1.Text = "Previous";
             // 
-            // toolStripSeparator8
+            // toolStripSeparator10
             // 
-            this.toolStripSeparator8.Name = "toolStripSeparator8";
-            this.toolStripSeparator8.Size = new System.Drawing.Size(6, 31);
+            this.toolStripSeparator10.Name = "toolStripSeparator10";
+            this.toolStripSeparator10.Size = new System.Drawing.Size(6, 27);
             // 
             // toolStripTextBox2
             // 
             this.toolStripTextBox2.AccessibleName = "Position";
             this.toolStripTextBox2.AutoSize = false;
-            this.toolStripTextBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.toolStripTextBox2.ForeColor = System.Drawing.SystemColors.Info;
+            this.toolStripTextBox2.BackColor = System.Drawing.Color.Black;
+            this.toolStripTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.toolStripTextBox2.ForeColor = System.Drawing.Color.White;
             this.toolStripTextBox2.Name = "toolStripTextBox2";
-            this.toolStripTextBox2.Size = new System.Drawing.Size(50, 31);
+            this.toolStripTextBox2.Size = new System.Drawing.Size(42, 24);
             this.toolStripTextBox2.Text = "0";
             this.toolStripTextBox2.TextBoxTextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.toolStripTextBox2.ToolTipText = "Current position";
             // 
-            // toolStripSeparator9
+            // toolStripSeparator11
             // 
-            this.toolStripSeparator9.Name = "toolStripSeparator9";
-            this.toolStripSeparator9.Size = new System.Drawing.Size(6, 31);
+            this.toolStripSeparator11.Name = "toolStripSeparator11";
+            this.toolStripSeparator11.Size = new System.Drawing.Size(6, 27);
             // 
             // toolStripButton2
             // 
@@ -2980,14 +3123,13 @@
             this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
             this.toolStripButton2.Name = "toolStripButton2";
             this.toolStripButton2.RightToLeftAutoMirrorImage = true;
-            this.toolStripButton2.Size = new System.Drawing.Size(28, 28);
-            this.toolStripButton2.Text = "Move next";
-            this.toolStripButton2.ToolTipText = "Next Record";
+            this.toolStripButton2.Size = new System.Drawing.Size(24, 24);
+            this.toolStripButton2.Text = "Next";
             // 
-            // toolStripSeparator10
+            // toolStripSeparator13
             // 
-            this.toolStripSeparator10.Name = "toolStripSeparator10";
-            this.toolStripSeparator10.Size = new System.Drawing.Size(6, 31);
+            this.toolStripSeparator13.Name = "toolStripSeparator13";
+            this.toolStripSeparator13.Size = new System.Drawing.Size(6, 27);
             // 
             // toolStripButton3
             // 
@@ -2995,58 +3137,141 @@
             this.toolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.Image")));
             this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton3.Name = "toolStripButton3";
-            this.toolStripButton3.Size = new System.Drawing.Size(28, 28);
-            this.toolStripButton3.Text = "toolStripButton1";
-            this.toolStripButton3.ToolTipText = "Save Changes";
+            this.toolStripButton3.Size = new System.Drawing.Size(24, 24);
+            this.toolStripButton3.Text = "toolStripButton7";
+            this.toolStripButton3.ToolTipText = "Copy DbData Into New Account";
             // 
-            // toolStripSeparator11
+            // toolStripSeparator8
             // 
-            this.toolStripSeparator11.Name = "toolStripSeparator11";
-            this.toolStripSeparator11.Size = new System.Drawing.Size(6, 31);
+            this.toolStripSeparator8.Name = "toolStripSeparator8";
+            this.toolStripSeparator8.Size = new System.Drawing.Size(6, 27);
             // 
             // toolStripButton4
             // 
+            this.toolStripButton4.BackColor = System.Drawing.Color.Black;
             this.toolStripButton4.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton4.ForeColor = System.Drawing.SystemColors.ControlText;
             this.toolStripButton4.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton4.Image")));
             this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton4.Name = "toolStripButton4";
-            this.toolStripButton4.Size = new System.Drawing.Size(28, 28);
-            this.toolStripButton4.Text = "toolStripButton2";
-            this.toolStripButton4.ToolTipText = "And New Record";
+            this.toolStripButton4.Size = new System.Drawing.Size(24, 24);
+            this.toolStripButton4.Text = "toolStripButton13";
             // 
-            // toolStripSeparator12
+            // toolStripSeparator9
             // 
-            this.toolStripSeparator12.Name = "toolStripSeparator12";
-            this.toolStripSeparator12.Size = new System.Drawing.Size(6, 31);
+            this.toolStripSeparator9.Name = "toolStripSeparator9";
+            this.toolStripSeparator9.Size = new System.Drawing.Size(6, 27);
             // 
             // toolStripButton5
             // 
+            this.toolStripButton5.BackColor = System.Drawing.Color.Black;
+            this.toolStripButton5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("toolStripButton5.BackgroundImage")));
+            this.toolStripButton5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.toolStripButton5.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.toolStripButton5.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton5.Image")));
             this.toolStripButton5.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton5.Name = "toolStripButton5";
-            this.toolStripButton5.Size = new System.Drawing.Size(28, 28);
-            this.toolStripButton5.Text = "toolStripButton5";
-            this.toolStripButton5.ToolTipText = "Copy DbData\r\nInto New\r\nRecord";
+            this.toolStripButton5.Size = new System.Drawing.Size(24, 24);
+            this.toolStripButton5.Text = "toolStripButton12";
             // 
-            // toolStripSeparator13
+            // toolStripSeparator12
             // 
-            this.toolStripSeparator13.Name = "toolStripSeparator13";
-            this.toolStripSeparator13.Size = new System.Drawing.Size(6, 31);
+            this.toolStripSeparator12.Name = "toolStripSeparator12";
+            this.toolStripSeparator12.Size = new System.Drawing.Size(6, 27);
             // 
             // toolStripButton6
             // 
             this.toolStripButton6.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton6.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton6.Image")));
             this.toolStripButton6.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton6.Name = "toolStripButton6";
-            this.toolStripButton6.Size = new System.Drawing.Size(23, 28);
-            this.toolStripButton6.Text = "toolStripButton3";
-            this.toolStripButton6.ToolTipText = "Delete Record";
+            this.toolStripButton6.Size = new System.Drawing.Size(24, 24);
+            this.toolStripButton6.Text = "toolStripButton7";
+            this.toolStripButton6.ToolTipText = "Reset DataTable and Filters";
             // 
             // toolStripSeparator14
             // 
             this.toolStripSeparator14.Name = "toolStripSeparator14";
-            this.toolStripSeparator14.Size = new System.Drawing.Size(6, 31);
+            this.toolStripSeparator14.Size = new System.Drawing.Size(6, 27);
+            // 
+            // toolStripButton8
+            // 
+            this.toolStripButton8.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton8.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton8.Image")));
+            this.toolStripButton8.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton8.Name = "toolStripButton8";
+            this.toolStripButton8.Size = new System.Drawing.Size(24, 24);
+            this.toolStripButton8.Text = "toolStripButton7";
+            // 
+            // toolStripSeparator21
+            // 
+            this.toolStripSeparator21.Name = "toolStripSeparator21";
+            this.toolStripSeparator21.Size = new System.Drawing.Size(6, 27);
+            // 
+            // toolStripButton17
+            // 
+            this.toolStripButton17.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton17.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton17.Image")));
+            this.toolStripButton17.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton17.Name = "toolStripButton17";
+            this.toolStripButton17.Size = new System.Drawing.Size(24, 24);
+            this.toolStripButton17.Text = "toolStripButton7";
+            // 
+            // toolStripSeparator22
+            // 
+            this.toolStripSeparator22.Name = "toolStripSeparator22";
+            this.toolStripSeparator22.Size = new System.Drawing.Size(6, 27);
+            // 
+            // toolStripButton18
+            // 
+            this.toolStripButton18.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton18.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton18.Image")));
+            this.toolStripButton18.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton18.Name = "toolStripButton18";
+            this.toolStripButton18.Size = new System.Drawing.Size(24, 24);
+            this.toolStripButton18.Text = "toolStripButton9";
+            // 
+            // toolStripSeparator23
+            // 
+            this.toolStripSeparator23.Name = "toolStripSeparator23";
+            this.toolStripSeparator23.Size = new System.Drawing.Size(6, 27);
+            // 
+            // toolStripButton19
+            // 
+            this.toolStripButton19.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton19.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton19.Image")));
+            this.toolStripButton19.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton19.Name = "toolStripButton19";
+            this.toolStripButton19.Size = new System.Drawing.Size(24, 24);
+            this.toolStripButton19.Text = "toolStripButton14";
+            // 
+            // toolStripSeparator24
+            // 
+            this.toolStripSeparator24.Name = "toolStripSeparator24";
+            this.toolStripSeparator24.Size = new System.Drawing.Size(6, 27);
+            // 
+            // toolStripButton20
+            // 
+            this.toolStripButton20.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton20.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton20.Image")));
+            this.toolStripButton20.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton20.Name = "toolStripButton20";
+            this.toolStripButton20.Size = new System.Drawing.Size(24, 24);
+            this.toolStripButton20.Text = "toolStripButton15";
+            // 
+            // toolStripSeparator25
+            // 
+            this.toolStripSeparator25.Name = "toolStripSeparator25";
+            this.toolStripSeparator25.Size = new System.Drawing.Size(6, 27);
+            // 
+            // toolStripButton21
+            // 
+            this.toolStripButton21.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton21.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton21.Image")));
+            this.toolStripButton21.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton21.Name = "toolStripButton21";
+            this.toolStripButton21.Size = new System.Drawing.Size(24, 24);
+            this.toolStripButton21.Text = "toolStripButton16";
             // 
             // label32
             // 
@@ -3062,20 +3287,21 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Black;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             this.BorderColor = System.Drawing.SystemColors.MenuHighlight;
-            this.CaptionBarColor = System.Drawing.Color.Black;
+            this.CaptionBarColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             this.CaptionBarHeight = 35;
+            this.CaptionForeColor = System.Drawing.Color.SteelBlue;
             captionImage1.BackColor = System.Drawing.Color.Black;
             captionImage1.Image = ((System.Drawing.Image)(resources.GetObject("captionImage1.Image")));
             captionImage1.Location = new System.Drawing.Point(10, 5);
             captionImage1.Name = "CaptionImage1";
             captionImage1.Size = new System.Drawing.Size(20, 20);
             this.CaptionImages.Add(captionImage1);
-            this.ClientSize = new System.Drawing.Size(1275, 578);
+            this.ClientSize = new System.Drawing.Size(1275, 554);
             this.Controls.Add(this.AccountTabControl);
             this.MaximumSize = new System.Drawing.Size(1287, 653);
-            this.MetroColor = System.Drawing.Color.Black;
+            this.MetroColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             this.Name = "RecordManager";
             this.ShowIcon = false;
             this.groupBox2.ResumeLayout(false);
@@ -3103,26 +3329,10 @@
 
         #endregion
         private System.Windows.Forms.BindingSource BindingSource;
-        private System.Windows.Forms.BindingNavigator RecordNavigator1;
-        private System.Windows.Forms.ToolStripLabel toolStripLabel1;
-        private System.Windows.Forms.ToolStripButton PreviousButton;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-        private System.Windows.Forms.ToolStripTextBox toolStripTextBox1;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
-        private System.Windows.Forms.ToolStripButton NextButton;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
         private Syncfusion.Windows.Forms.Tools.TabControlAdv AccountTabControl;
         private Syncfusion.Windows.Forms.Tools.TabPageAdv UpdateTab;
         private Syncfusion.Windows.Forms.Tools.TabPageAdv AddNewTab;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
-        private System.Windows.Forms.ToolStripButton SaveButton;
-        private System.Windows.Forms.ToolStripButton AddButton;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator6;
-        private System.Windows.Forms.ToolStripButton DeleteButton;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator7;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.ToolStripButton CopyButton;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TableLayoutPanel RecordTabelPanel;
         private MetroSet_UI.Controls.MetroSetTextBox box0;
@@ -3186,22 +3396,6 @@
         private MetroSet_UI.Controls.MetroSetTextBox box26;
         private MetroSet_UI.Controls.MetroSetTextBox box28;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.BindingNavigator RecordNavigator2;
-        private System.Windows.Forms.ToolStripLabel toolStripLabel2;
-        private System.Windows.Forms.ToolStripButton toolStripButton1;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator8;
-        private System.Windows.Forms.ToolStripTextBox toolStripTextBox2;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator9;
-        private System.Windows.Forms.ToolStripButton toolStripButton2;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator10;
-        private System.Windows.Forms.ToolStripButton toolStripButton3;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator11;
-        private System.Windows.Forms.ToolStripButton toolStripButton4;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator12;
-        private System.Windows.Forms.ToolStripButton toolStripButton5;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator13;
-        private System.Windows.Forms.ToolStripButton toolStripButton6;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator14;
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label label1;
@@ -3264,6 +3458,62 @@
         private MetroSet_UI.Controls.MetroSetTextBox metroSetTextBox28;
         private MetroSet_UI.Controls.MetroSetTextBox metroSetTextBox29;
         private MetroSet_UI.Controls.MetroSetTextBox metroSetTextBox30;
+        private System.Windows.Forms.BindingNavigator RecordNavigator1;
+        private System.Windows.Forms.ToolStripLabel toolStripLabel1;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
+        private System.Windows.Forms.ToolStripButton toolStripButton10;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripTextBox toolStripTextBox1;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private System.Windows.Forms.ToolStripButton toolStripButton11;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
+        private System.Windows.Forms.ToolStripButton CopyButton;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator15;
+        private System.Windows.Forms.ToolStripButton toolStripButton13;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator18;
+        private System.Windows.Forms.ToolStripButton toolStripButton12;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator16;
+        private System.Windows.Forms.ToolStripButton ResetButton;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
+        private System.Windows.Forms.ToolStripButton AddButton;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator19;
+        private System.Windows.Forms.ToolStripButton toolStripButton7;
+        private System.Windows.Forms.ToolStripSeparator GridRefreshButton;
+        private System.Windows.Forms.ToolStripButton toolStripButton9;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator6;
+        private System.Windows.Forms.ToolStripButton toolStripButton14;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator17;
+        private System.Windows.Forms.ToolStripButton toolStripButton15;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator20;
+        private System.Windows.Forms.ToolStripButton toolStripButton16;
+        private System.Windows.Forms.BindingNavigator RecordNavigator2;
+        private System.Windows.Forms.ToolStripLabel toolStripLabel2;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator7;
+        private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator10;
+        private System.Windows.Forms.ToolStripTextBox toolStripTextBox2;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator11;
+        private System.Windows.Forms.ToolStripButton toolStripButton2;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator13;
+        private System.Windows.Forms.ToolStripButton toolStripButton3;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator8;
+        private System.Windows.Forms.ToolStripButton toolStripButton4;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator9;
+        private System.Windows.Forms.ToolStripButton toolStripButton5;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator12;
+        private System.Windows.Forms.ToolStripButton toolStripButton6;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator14;
+        private System.Windows.Forms.ToolStripButton toolStripButton8;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator21;
+        private System.Windows.Forms.ToolStripButton toolStripButton17;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator22;
+        private System.Windows.Forms.ToolStripButton toolStripButton18;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator23;
+        private System.Windows.Forms.ToolStripButton toolStripButton19;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator24;
+        private System.Windows.Forms.ToolStripButton toolStripButton20;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator25;
+        private System.Windows.Forms.ToolStripButton toolStripButton21;
     }
 }
 

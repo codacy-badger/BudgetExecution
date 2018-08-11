@@ -11,6 +11,10 @@ namespace BudgetExecution
     using MetroSet_UI.Controls;
     using Syncfusion.Windows.Forms;
 
+    /// <summary>
+    /// UI for the SQLiteData class.
+    /// </summary>
+    /// <seealso cref="Syncfusion.Windows.Forms.MetroForm" />
     public partial class SQLiteData : MetroForm
     {
         // CONSTRUCTORS
@@ -226,30 +230,6 @@ namespace BudgetExecution
             }
         }
 
-        private void GetPrcGridVisibleColumns(DataGridView dgv)
-        {
-            try
-            {
-                foreach (DataGridViewColumn dc in dgv.Columns)
-                {
-                    dc.Visible = false;
-                }
-
-                dgv.Columns[3].Visible = true;
-                dgv.Columns[4].Visible = true;
-                dgv.Columns[6].Visible = true;
-                dgv.Columns[8].Visible = true;
-                dgv.Columns[9].Visible = true;
-                dgv.Columns[11].Visible = true;
-                dgv.Columns[12].Visible = true;
-                dgv.Columns[12].DefaultCellStyle.Format = "c";
-            }
-            catch (Exception ex)
-            {
-                new Error(ex).ShowDialog();
-            }
-        }
-
         internal void PopulateFilterButtons(MetroSetComboBox control, string[] list)
         {
             try
@@ -321,6 +301,30 @@ namespace BudgetExecution
             catch (Exception ex)
             {
 
+                new Error(ex).ShowDialog();
+            }
+        }
+
+        private void GetPrcGridVisibleColumns(DataGridView dgv)
+        {
+            try
+            {
+                foreach (DataGridViewColumn dc in dgv.Columns)
+                {
+                    dc.Visible = false;
+                }
+
+                dgv.Columns[3].Visible = true;
+                dgv.Columns[4].Visible = true;
+                dgv.Columns[6].Visible = true;
+                dgv.Columns[8].Visible = true;
+                dgv.Columns[9].Visible = true;
+                dgv.Columns[11].Visible = true;
+                dgv.Columns[12].Visible = true;
+                dgv.Columns[12].DefaultCellStyle.Format = "c";
+            }
+            catch (Exception ex)
+            {
                 new Error(ex).ShowDialog();
             }
         }

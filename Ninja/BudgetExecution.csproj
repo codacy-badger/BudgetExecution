@@ -568,6 +568,9 @@
     <EmbeddedResource Include="src\DataTools.resx">
       <DependentUpon>DataTools.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="src\ExternalDataReader.resx">
+      <DependentUpon>ExternalDataReader.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="src\Message.resx">
       <DependentUpon>Message.cs</DependentUpon>
     </EmbeddedResource>
@@ -821,6 +824,61 @@
     <None Include="Resources\BlueIcon\Tools-02.ico" />
     <None Include="Resources\BlueIcon\Unlike - 01.ico" />
     <None Include="Resources\BlueIcon\Upload.ico" />
+    <None Include="Resources\DWH.ico" />
+    <None Include="Resources\EPM.ico" />
+    <None Include="Resources\LUST.ico" />
+    <None Include="Resources\OIL.ico" />
+    <None Include="Resources\SF.ico" />
+    <None Include="Resources\SF6A.ico" />
+    <None Include="Resources\STAG.ico" />
+    <None Include="Resources\Arrioch-Senary-Office-excel-csv.ico" />
+    <None Include="Resources\Arrioch-Senary-Office-excel-xlsx.ico" />
+    <None Include="Resources\calculator_blue.ico" />
+    <None Include="Resources\currency_dollar_blue.ico" />
+    <None Include="Resources\datareader.ico" />
+    <None Include="Resources\datatransfer.ico" />
+    <None Include="Resources\datawriter.ico" />
+    <None Include="Resources\fte.ico" />
+    <None Include="Resources\funding.ico" />
+    <None Include="Resources\gears %281%29.ico" />
+    <None Include="Resources\gears.ico" />
+    <None Include="Resources\reprogramming.ico" />
+    <None Include="Resources\environment_icon_7lP_icon.ico" />
+    <None Include="Resources\budget.ico" />
+    <None Include="Resources\data.ico" />
+    <None Include="Resources\bluedatabase.ico" />
+    <None Include="Resources\budgetclear.ico" />
+    <None Include="Resources\computerdatabase.ico" />
+    <None Include="Resources\databaseheader.ico" />
+    <None Include="Resources\epablue.ico" />
+    <None Include="Resources\PdfDataReader.ico" />
+    <None Include="Resources\transfer.ico" />
+    <None Include="Resources\databaseheader1.ico" />
+    <None Include="Resources\computerdatabase1.ico" />
+    <None Include="Resources\DivisionPuzzle\06A.ico" />
+    <None Include="Resources\DivisionPuzzle\06C.ico" />
+    <None Include="Resources\DivisionPuzzle\06D.ico" />
+    <None Include="Resources\DivisionPuzzle\06F.ico" />
+    <None Include="Resources\DivisionPuzzle\06G.ico" />
+    <None Include="Resources\DivisionPuzzle\06J.ico" />
+    <None Include="Resources\DivisionPuzzle\06K.ico" />
+    <None Include="Resources\DivisionPuzzle\06L.ico" />
+    <None Include="Resources\DivisionPuzzle\06M.ico" />
+    <None Include="Resources\DivisionPuzzle\06N.ico" />
+    <None Include="Resources\DivisionPuzzle\06R.ico" />
+    <None Include="Resources\DivisionPuzzle\06X.ico" />
+    <None Include="Resources\06A.ico" />
+    <None Include="Resources\06C.ico" />
+    <None Include="Resources\06D.ico" />
+    <None Include="Resources\06F.ico" />
+    <None Include="Resources\06G.ico" />
+    <None Include="Resources\06J.ico" />
+    <None Include="Resources\06K.ico" />
+    <None Include="Resources\06L.ico" />
+    <None Include="Resources\06M.ico" />
+    <None Include="Resources\06N.ico" />
+    <None Include="Resources\06R.ico" />
+    <None Include="Resources\06X.ico" />
     <Content Include="summation_3d_blue_oma_icon.ico" />
     <None Include="Resources\SummaryImages\RegionalAccounts.png" />
     <None Include="Resources\SummaryImages\FTE.png" />
@@ -905,7 +963,6 @@
     <None Include="Resources\if_processing_2799201 %281%29.ico" />
     <None Include="Resources\if_bar-chart_87411.ico" />
     <None Include="Resources\if_6_1376009.ico" />
-    <None Include="Resources\bluedatabase.ico" />
     <None Include="Resources\if_pie-chart_87451.ico" />
     <None Include="Resources\BudgetNinja.ico" />
     <None Include="Resources\Image1.png" />
