@@ -37,7 +37,7 @@ namespace BudgetExecution
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Reprogramming));
-            Syncfusion.Windows.Forms.CaptionImage captionImage1 = new Syncfusion.Windows.Forms.CaptionImage();
+            Syncfusion.Windows.Forms.CaptionImage captionImage6 = new Syncfusion.Windows.Forms.CaptionImage();
             this.Tab2P2 = new MetroFramework.Controls.MetroPanel();
             this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
@@ -1853,7 +1853,7 @@ namespace BudgetExecution
             // 
             this.Tab2.ActiveTabForeColor = System.Drawing.Color.Empty;
             this.Tab2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.Tab2.BeforeTouchSize = new System.Drawing.Size(1588, 953);
+            this.Tab2.BeforeTouchSize = new System.Drawing.Size(1588, 951);
             this.Tab2.CloseButtonForeColor = System.Drawing.Color.Empty;
             this.Tab2.CloseButtonHoverForeColor = System.Drawing.Color.Empty;
             this.Tab2.CloseButtonPressedForeColor = System.Drawing.Color.Empty;
@@ -1863,13 +1863,13 @@ namespace BudgetExecution
             this.Tab2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Tab2.FixedSingleBorderColor = System.Drawing.Color.SteelBlue;
             this.Tab2.FocusOnTabClick = false;
-            this.Tab2.InactiveTabColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Tab2.InactiveTabColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.Tab2.InActiveTabForeColor = System.Drawing.Color.Gray;
             this.Tab2.Location = new System.Drawing.Point(0, 0);
             this.Tab2.Name = "Tab2";
             this.Tab2.SeparatorColor = System.Drawing.Color.SteelBlue;
             this.Tab2.ShowSeparator = false;
-            this.Tab2.Size = new System.Drawing.Size(1588, 953);
+            this.Tab2.Size = new System.Drawing.Size(1588, 951);
             this.Tab2.TabIndex = 2;
             this.Tab2.TabPanelBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             this.Tab2.TabStyle = typeof(Syncfusion.Windows.Forms.Tools.TabRendererMetro);
@@ -1884,7 +1884,7 @@ namespace BudgetExecution
             this.Tab1.Location = new System.Drawing.Point(1, 29);
             this.Tab1.Name = "Tab1";
             this.Tab1.ShowCloseButton = true;
-            this.Tab1.Size = new System.Drawing.Size(1585, 922);
+            this.Tab1.Size = new System.Drawing.Size(1585, 920);
             this.Tab1.TabIndex = 1;
             this.Tab1.Text = "tabPageAdv1";
             this.Tab1.ThemesEnabled = false;
@@ -2830,7 +2830,7 @@ namespace BudgetExecution
             this.tabPageAdv2.Location = new System.Drawing.Point(1, 29);
             this.tabPageAdv2.Name = "tabPageAdv2";
             this.tabPageAdv2.ShowCloseButton = true;
-            this.tabPageAdv2.Size = new System.Drawing.Size(1585, 922);
+            this.tabPageAdv2.Size = new System.Drawing.Size(1585, 920);
             this.tabPageAdv2.TabIndex = 2;
             this.tabPageAdv2.Text = "tabPageAdv2";
             this.tabPageAdv2.ThemesEnabled = false;
@@ -2844,7 +2844,7 @@ namespace BudgetExecution
             this.Tab3.Location = new System.Drawing.Point(1, 29);
             this.Tab3.Name = "Tab3";
             this.Tab3.ShowCloseButton = true;
-            this.Tab3.Size = new System.Drawing.Size(1585, 922);
+            this.Tab3.Size = new System.Drawing.Size(1585, 920);
             this.Tab3.TabIndex = 3;
             this.Tab3.Text = "tabPageAdv3";
             this.Tab3.ThemesEnabled = false;
@@ -2857,21 +2857,22 @@ namespace BudgetExecution
             this.BorderColor = System.Drawing.SystemColors.MenuHighlight;
             this.CaptionBarColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             this.CaptionBarHeight = 40;
+            this.CaptionFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CaptionForeColor = System.Drawing.SystemColors.MenuHighlight;
-            captionImage1.BackColor = System.Drawing.Color.Black;
-            captionImage1.Image = global::BudgetExecution.Properties.Resources.Shuffle_New;
-            captionImage1.Location = new System.Drawing.Point(10, 5);
-            captionImage1.Name = "CaptionImage1";
-            captionImage1.Size = new System.Drawing.Size(40, 25);
-            this.CaptionImages.Add(captionImage1);
-            this.ClientSize = new System.Drawing.Size(1588, 953);
+            captionImage6.BackColor = System.Drawing.Color.Black;
+            captionImage6.Image = global::BudgetExecution.Properties.Resources.Shuffle_New;
+            captionImage6.Location = new System.Drawing.Point(10, 5);
+            captionImage6.Name = "CaptionImage1";
+            captionImage6.Size = new System.Drawing.Size(40, 25);
+            this.CaptionImages.Add(captionImage6);
+            this.ClientSize = new System.Drawing.Size(1588, 951);
             this.Controls.Add(this.Tab2);
             this.ForeColor = System.Drawing.SystemColors.Info;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MetroColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             this.Name = "Reprogramming";
             this.ShowIcon = false;
-            this.Text = "Division";
+            this.Text = "Reprogramming Form";
             this.Tab2P2.ResumeLayout(false);
             this.Tab2P2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();

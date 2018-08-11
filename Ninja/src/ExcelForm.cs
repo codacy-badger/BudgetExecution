@@ -17,9 +17,22 @@ namespace BudgetExecution
 
         }
 
-        private void spreadsheetRibbon1_Click(object sender, EventArgs e)
+        private void CalculatorButton_OnClick(object sender, EventArgs e)
         {
+            var cf = new CalculatorForm();
+            cf.ShowDialog();
+        }
 
+        private void ExcelButton_OnClick(object sender, EventArgs e)
+        {
+            var ef = new ExcelImporter();
+            ef.Show();
+        }
+
+        private void ReprogrammingButton_OnClick(object sender, EventArgs e)
+        {
+            var rf = new Reprogramming();
+            rf.Show();
         }
     }
 }

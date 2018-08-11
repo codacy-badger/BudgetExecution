@@ -48,7 +48,6 @@ namespace BudgetExecution
             this.spreadsheet1 = new Syncfusion.Windows.Forms.Spreadsheet.Spreadsheet();
             this.spreadsheetRibbon1 = new Syncfusion.Windows.Forms.Spreadsheet.SpreadsheetRibbon();
             this.metroSetPanel1 = new MetroSet_UI.Controls.MetroSetPanel();
-            this.button3 = new System.Windows.Forms.Button();
             this.metroSetListBox1 = new MetroSet_UI.Controls.MetroSetListBox();
             this.metroSetListBox2 = new MetroSet_UI.Controls.MetroSetListBox();
             this.metroSetComboBox1 = new MetroSet_UI.Controls.MetroSetComboBox();
@@ -72,7 +71,7 @@ namespace BudgetExecution
             this.toolStripSeparator14 = new System.Windows.Forms.ToolStripSeparator();
             this.AddButton = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator19 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton7 = new System.Windows.Forms.ToolStripButton();
+            this.CalculatorButton = new System.Windows.Forms.ToolStripButton();
             this.GridRefreshButton = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton9 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator12 = new System.Windows.Forms.ToolStripSeparator();
@@ -80,7 +79,7 @@ namespace BudgetExecution
             this.toolStripSeparator17 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton15 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator20 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton16 = new System.Windows.Forms.ToolStripButton();
+            this.ReprogrammingButton = new System.Windows.Forms.ToolStripButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.toolStripTabItem1.Panel.SuspendLayout();
             this.toolStripTabItem2.Panel.SuspendLayout();
@@ -166,7 +165,7 @@ namespace BudgetExecution
             this.spreadsheet1.DefaultRowCount = 50;
             this.spreadsheet1.DisplayAlerts = true;
             this.spreadsheet1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.spreadsheet1.FileName = "Book1";
+            this.spreadsheet1.FileName = "Book3";
             this.spreadsheet1.FormulaBarVisibility = true;
             formulaRangeSelectionController1.AllowMouseSelection = true;
             formulaRangeSelectionController1.AllowSelectionOnEditing = true;
@@ -221,7 +220,7 @@ namespace BudgetExecution
             this.spreadsheetRibbon1.ThemeName = "Default";
             this.spreadsheetRibbon1.TitleColor = System.Drawing.Color.White;
             this.spreadsheetRibbon1.TitleFont = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.spreadsheetRibbon1.Click += new System.EventHandler(this.spreadsheetRibbon1_Click);
+            this.spreadsheetRibbon1.Click += new System.EventHandler(this.CalculatorButton_OnClick);
             // 
             // metroSetPanel1
             // 
@@ -231,6 +230,7 @@ namespace BudgetExecution
             this.metroSetPanel1.Controls.Add(this.spreadsheet1);
             this.metroSetPanel1.Controls.Add(this.spreadsheetRibbon1);
             this.metroSetPanel1.Location = new System.Drawing.Point(391, 124);
+            this.metroSetPanel1.MaximumSize = new System.Drawing.Size(1009, 763);
             this.metroSetPanel1.Name = "metroSetPanel1";
             this.metroSetPanel1.Size = new System.Drawing.Size(1009, 763);
             this.metroSetPanel1.Style = MetroSet_UI.Design.Style.Dark;
@@ -238,22 +238,6 @@ namespace BudgetExecution
             this.metroSetPanel1.TabIndex = 2;
             this.metroSetPanel1.ThemeAuthor = "Narwin";
             this.metroSetPanel1.ThemeName = "MetroDark";
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.Black;
-            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.AliceBlue;
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.Location = new System.Drawing.Point(1359, 67);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(41, 39);
-            this.button3.TabIndex = 41;
-            this.button3.UseVisualStyleBackColor = false;
             // 
             // metroSetListBox1
             // 
@@ -386,7 +370,7 @@ namespace BudgetExecution
             this.toolStripSeparator14,
             this.AddButton,
             this.toolStripSeparator19,
-            this.toolStripButton7,
+            this.CalculatorButton,
             this.GridRefreshButton,
             this.toolStripButton9,
             this.toolStripSeparator12,
@@ -394,7 +378,7 @@ namespace BudgetExecution
             this.toolStripSeparator17,
             this.toolStripButton15,
             this.toolStripSeparator20,
-            this.toolStripButton16});
+            this.ReprogrammingButton});
             this.Navigator.Location = new System.Drawing.Point(0, 0);
             this.Navigator.MoveFirstItem = null;
             this.Navigator.MoveLastItem = null;
@@ -541,14 +525,15 @@ namespace BudgetExecution
             this.toolStripSeparator19.Name = "toolStripSeparator19";
             this.toolStripSeparator19.Size = new System.Drawing.Size(6, 27);
             // 
-            // toolStripButton7
+            // CalculatorButton
             // 
-            this.toolStripButton7.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton7.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton7.Image")));
-            this.toolStripButton7.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton7.Name = "toolStripButton7";
-            this.toolStripButton7.Size = new System.Drawing.Size(24, 24);
-            this.toolStripButton7.Text = "toolStripButton7";
+            this.CalculatorButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.CalculatorButton.Image = ((System.Drawing.Image)(resources.GetObject("CalculatorButton.Image")));
+            this.CalculatorButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.CalculatorButton.Name = "CalculatorButton";
+            this.CalculatorButton.Size = new System.Drawing.Size(24, 24);
+            this.CalculatorButton.Text = "toolStripButton7";
+            this.CalculatorButton.Click += new System.EventHandler(this.CalculatorButton_OnClick);
             // 
             // GridRefreshButton
             // 
@@ -563,6 +548,7 @@ namespace BudgetExecution
             this.toolStripButton9.Name = "toolStripButton9";
             this.toolStripButton9.Size = new System.Drawing.Size(24, 24);
             this.toolStripButton9.Text = "toolStripButton9";
+            this.toolStripButton9.Click += new System.EventHandler(this.ExcelButton_OnClick);
             // 
             // toolStripSeparator12
             // 
@@ -597,14 +583,15 @@ namespace BudgetExecution
             this.toolStripSeparator20.Name = "toolStripSeparator20";
             this.toolStripSeparator20.Size = new System.Drawing.Size(6, 27);
             // 
-            // toolStripButton16
+            // ReprogrammingButton
             // 
-            this.toolStripButton16.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton16.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton16.Image")));
-            this.toolStripButton16.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton16.Name = "toolStripButton16";
-            this.toolStripButton16.Size = new System.Drawing.Size(24, 24);
-            this.toolStripButton16.Text = "toolStripButton16";
+            this.ReprogrammingButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.ReprogrammingButton.Image = ((System.Drawing.Image)(resources.GetObject("ReprogrammingButton.Image")));
+            this.ReprogrammingButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.ReprogrammingButton.Name = "ReprogrammingButton";
+            this.ReprogrammingButton.Size = new System.Drawing.Size(24, 24);
+            this.ReprogrammingButton.Text = "toolStripButton16";
+            this.ReprogrammingButton.Click += new System.EventHandler(this.ReprogrammingButton_OnClick);
             // 
             // panel1
             // 
@@ -621,22 +608,22 @@ namespace BudgetExecution
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             this.BorderColor = System.Drawing.SystemColors.MenuHighlight;
             this.CaptionBarColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.CaptionBarHeight = 40;
+            this.CaptionBarHeight = 45;
             this.CaptionButtonHoverColor = System.Drawing.SystemColors.MenuHighlight;
-            this.CaptionForeColor = System.Drawing.Color.Black;
+            this.CaptionFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CaptionForeColor = System.Drawing.SystemColors.MenuHighlight;
             captionImage1.BackColor = System.Drawing.Color.Black;
             captionImage1.Image = ((System.Drawing.Image)(resources.GetObject("captionImage1.Image")));
-            captionImage1.Location = new System.Drawing.Point(10, 10);
+            captionImage1.Location = new System.Drawing.Point(10, 5);
             captionImage1.Name = "CaptionImage1";
-            captionImage1.Size = new System.Drawing.Size(50, 30);
+            captionImage1.Size = new System.Drawing.Size(30, 30);
             this.CaptionImages.Add(captionImage1);
-            this.ClientSize = new System.Drawing.Size(1437, 953);
+            this.ClientSize = new System.Drawing.Size(1449, 949);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.metroSetComboBox2);
             this.Controls.Add(this.metroSetComboBox1);
             this.Controls.Add(this.metroSetListBox2);
             this.Controls.Add(this.metroSetListBox1);
-            this.Controls.Add(this.button3);
             this.Controls.Add(this.metroSetPanel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(1600, 1000);
@@ -644,7 +631,7 @@ namespace BudgetExecution
             this.Name = "ExcelForm";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "MetroForm1";
+            this.Text = "ExcelForm";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.ExcelForm_Load);
             this.toolStripTabItem1.Panel.ResumeLayout(false);
@@ -668,7 +655,6 @@ namespace BudgetExecution
         private Syncfusion.Windows.Forms.Spreadsheet.Spreadsheet spreadsheet1;
         private Syncfusion.Windows.Forms.Spreadsheet.SpreadsheetRibbon spreadsheetRibbon1;
         private MetroSet_UI.Controls.MetroSetPanel metroSetPanel1;
-        private System.Windows.Forms.Button button3;
         private MetroSet_UI.Controls.MetroSetListBox metroSetListBox1;
         private MetroSet_UI.Controls.MetroSetListBox metroSetListBox2;
         private MetroSet_UI.Controls.MetroSetComboBox metroSetComboBox1;
@@ -692,7 +678,7 @@ namespace BudgetExecution
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator14;
         private System.Windows.Forms.ToolStripButton AddButton;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator19;
-        private System.Windows.Forms.ToolStripButton toolStripButton7;
+        private System.Windows.Forms.ToolStripButton CalculatorButton;
         private System.Windows.Forms.ToolStripSeparator GridRefreshButton;
         private System.Windows.Forms.ToolStripButton toolStripButton9;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator12;
@@ -700,7 +686,7 @@ namespace BudgetExecution
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator17;
         private System.Windows.Forms.ToolStripButton toolStripButton15;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator20;
-        private System.Windows.Forms.ToolStripButton toolStripButton16;
+        private System.Windows.Forms.ToolStripButton ReprogrammingButton;
         private System.Windows.Forms.Panel panel1;
     }
 }
