@@ -1,0 +1,622 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_budget_execution_1_1_account_control" kind="class" prot="public">
+    <compoundname>BudgetExecution::AccountControl</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">UserControl</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_budget_execution_1_1_account_control_1a57c43a619abc593b7dca5f36d8374edf" prot="private" static="no" mutable="no">
+        <type>System.ComponentModel.IContainer</type>
+        <definition>System.ComponentModel.IContainer BudgetExecution.AccountControl.components</definition>
+        <argsstring></argsstring>
+        <name>components</name>
+        <initializer>= null</initializer>
+        <briefdescription>
+<para>Required designer variable. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountControl.Designer.cs" line="8" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountControl.Designer.cs" bodystart="8" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_account_control_1a918fd2500d1c152587f953f901f691c0" compoundref="_account_control_8_designer_8cs" startline="14" endline="21">BudgetExecution.AccountControl.Dispose</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_account_control_1ace2ed5ee9d6d941240f75fd83e22d857" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.GroupBox</type>
+        <definition>System.Windows.Forms.GroupBox BudgetExecution.AccountControl.groupBox1</definition>
+        <argsstring></argsstring>
+        <name>groupBox1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountControl.Designer.cs" line="650" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountControl.Designer.cs" bodystart="650" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_account_control_1ab35ad724d6b1c1cb32065afb4d6436a8" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.BindingSource</type>
+        <definition>System.Windows.Forms.BindingSource BudgetExecution.AccountControl.BindingSource</definition>
+        <argsstring></argsstring>
+        <name>BindingSource</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountControl.Designer.cs" line="651" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountControl.Designer.cs" bodystart="651" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_account_control_1a5d154f65104a774ec62fc82bb3d7e28e" compoundref="_account_control_8_designer_8cs" startline="29" endline="647">BudgetExecution.AccountControl.InitializeComponent</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_account_control_1a2e45722cd045e097998452ba17ee559e" prot="private" static="no" mutable="no">
+        <type>MetroSet_UI.Controls.MetroSetTextBox</type>
+        <definition>MetroSet_UI.Controls.MetroSetTextBox BudgetExecution.AccountControl.Amount2</definition>
+        <argsstring></argsstring>
+        <name>Amount2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountControl.Designer.cs" line="652" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountControl.Designer.cs" bodystart="652" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_account_control_1a8fb3845d26a69e0be0b3b905f4bb700b" prot="private" static="no" mutable="no">
+        <type>MetroSet_UI.Controls.MetroSetTextBox</type>
+        <definition>MetroSet_UI.Controls.MetroSetTextBox BudgetExecution.AccountControl.Amount</definition>
+        <argsstring></argsstring>
+        <name>Amount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountControl.Designer.cs" line="653" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountControl.Designer.cs" bodystart="653" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_account_control_1a2cfa201db6372fd45979b936460e35dc" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.GroupBox</type>
+        <definition>System.Windows.Forms.GroupBox BudgetExecution.AccountControl.groupBox2</definition>
+        <argsstring></argsstring>
+        <name>groupBox2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountControl.Designer.cs" line="654" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountControl.Designer.cs" bodystart="654" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_account_control_1a213379412d457af9f28aa4f19709b950" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.GroupBox</type>
+        <definition>System.Windows.Forms.GroupBox BudgetExecution.AccountControl.groupBox3</definition>
+        <argsstring></argsstring>
+        <name>groupBox3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountControl.Designer.cs" line="655" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountControl.Designer.cs" bodystart="655" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_account_control_1a78c9222dc0876ea303d2d08906ee5251" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label BudgetExecution.AccountControl.label6</definition>
+        <argsstring></argsstring>
+        <name>label6</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountControl.Designer.cs" line="656" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountControl.Designer.cs" bodystart="656" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_account_control_1ab0254890d6d07a6c27525082b6eded6e" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label BudgetExecution.AccountControl.label5</definition>
+        <argsstring></argsstring>
+        <name>label5</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountControl.Designer.cs" line="657" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountControl.Designer.cs" bodystart="657" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_account_control_1ac42051b842f6c5920d6ba0ad730d296b" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label BudgetExecution.AccountControl.label4</definition>
+        <argsstring></argsstring>
+        <name>label4</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountControl.Designer.cs" line="658" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountControl.Designer.cs" bodystart="658" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_account_control_1ae87db4dde1ce18fe87ab736da379738f" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label BudgetExecution.AccountControl.label3</definition>
+        <argsstring></argsstring>
+        <name>label3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountControl.Designer.cs" line="659" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountControl.Designer.cs" bodystart="659" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_account_control_1a4959c254225270929c47c80ab26d49c9" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label BudgetExecution.AccountControl.label2</definition>
+        <argsstring></argsstring>
+        <name>label2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountControl.Designer.cs" line="660" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountControl.Designer.cs" bodystart="660" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_account_control_1a539a90bdc700186fb4d578ae1ac6c102" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label BudgetExecution.AccountControl.label1</definition>
+        <argsstring></argsstring>
+        <name>label1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountControl.Designer.cs" line="661" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountControl.Designer.cs" bodystart="661" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_account_control_1a74e9fe5da4ca967fe93508ec142fc866" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label BudgetExecution.AccountControl.label8</definition>
+        <argsstring></argsstring>
+        <name>label8</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountControl.Designer.cs" line="662" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountControl.Designer.cs" bodystart="662" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_account_control_1a54b057f9793655440c7dc5a3779e9e44" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label BudgetExecution.AccountControl.label7</definition>
+        <argsstring></argsstring>
+        <name>label7</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountControl.Designer.cs" line="663" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountControl.Designer.cs" bodystart="663" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_account_control_1a80909ca7511c0b96bf9ada42fd66348c" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label BudgetExecution.AccountControl.label10</definition>
+        <argsstring></argsstring>
+        <name>label10</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountControl.Designer.cs" line="664" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountControl.Designer.cs" bodystart="664" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_account_control_1a9de0513d2f48d975562763c3bcb5b871" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label BudgetExecution.AccountControl.label9</definition>
+        <argsstring></argsstring>
+        <name>label9</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountControl.Designer.cs" line="665" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountControl.Designer.cs" bodystart="665" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_account_control_1a819e95baa37d3030b003b81ffcf6a38b" prot="private" static="no" mutable="no">
+        <type>MetroSet_UI.Controls.MetroSetComboBox</type>
+        <definition>MetroSet_UI.Controls.MetroSetComboBox BudgetExecution.AccountControl.metroSetComboBox8</definition>
+        <argsstring></argsstring>
+        <name>metroSetComboBox8</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountControl.Designer.cs" line="666" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountControl.Designer.cs" bodystart="666" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_account_control_1a29963d11db756ab82c5b08c3db443913" prot="private" static="no" mutable="no">
+        <type>MetroSet_UI.Controls.MetroSetComboBox</type>
+        <definition>MetroSet_UI.Controls.MetroSetComboBox BudgetExecution.AccountControl.metroSetComboBox7</definition>
+        <argsstring></argsstring>
+        <name>metroSetComboBox7</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountControl.Designer.cs" line="667" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountControl.Designer.cs" bodystart="667" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_account_control_1a9b6a33699ed8d76bd05d135eb217c2d3" prot="private" static="no" mutable="no">
+        <type>MetroSet_UI.Controls.MetroSetComboBox</type>
+        <definition>MetroSet_UI.Controls.MetroSetComboBox BudgetExecution.AccountControl.metroSetComboBox6</definition>
+        <argsstring></argsstring>
+        <name>metroSetComboBox6</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountControl.Designer.cs" line="668" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountControl.Designer.cs" bodystart="668" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_account_control_1a5de0690dfff174ac9eabd574c4b2ae5e" prot="private" static="no" mutable="no">
+        <type>MetroSet_UI.Controls.MetroSetComboBox</type>
+        <definition>MetroSet_UI.Controls.MetroSetComboBox BudgetExecution.AccountControl.metroSetComboBox5</definition>
+        <argsstring></argsstring>
+        <name>metroSetComboBox5</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountControl.Designer.cs" line="669" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountControl.Designer.cs" bodystart="669" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_account_control_1a888a9ac222dd89a8ead210d1161b3efe" prot="private" static="no" mutable="no">
+        <type>MetroSet_UI.Controls.MetroSetComboBox</type>
+        <definition>MetroSet_UI.Controls.MetroSetComboBox BudgetExecution.AccountControl.metroSetComboBox4</definition>
+        <argsstring></argsstring>
+        <name>metroSetComboBox4</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountControl.Designer.cs" line="670" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountControl.Designer.cs" bodystart="670" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_account_control_1a29e06da12a8a5b75c5eabf7f14a9d098" prot="private" static="no" mutable="no">
+        <type>MetroSet_UI.Controls.MetroSetComboBox</type>
+        <definition>MetroSet_UI.Controls.MetroSetComboBox BudgetExecution.AccountControl.metroSetComboBox3</definition>
+        <argsstring></argsstring>
+        <name>metroSetComboBox3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountControl.Designer.cs" line="671" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountControl.Designer.cs" bodystart="671" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_account_control_1ae0efc1aece1aa1c865aaea6d52cf66c2" prot="private" static="no" mutable="no">
+        <type>MetroSet_UI.Controls.MetroSetComboBox</type>
+        <definition>MetroSet_UI.Controls.MetroSetComboBox BudgetExecution.AccountControl.metroSetComboBox2</definition>
+        <argsstring></argsstring>
+        <name>metroSetComboBox2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountControl.Designer.cs" line="672" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountControl.Designer.cs" bodystart="672" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_account_control_1ab88744e7271da4ab69e77d15cdc4227d" prot="private" static="no" mutable="no">
+        <type>MetroSet_UI.Controls.MetroSetComboBox</type>
+        <definition>MetroSet_UI.Controls.MetroSetComboBox BudgetExecution.AccountControl.metroSetComboBox1</definition>
+        <argsstring></argsstring>
+        <name>metroSetComboBox1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountControl.Designer.cs" line="673" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountControl.Designer.cs" bodystart="673" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_account_control_1a08dc24b86fe4926cbbd4c9c51fc1c5d5" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Button</type>
+        <definition>System.Windows.Forms.Button BudgetExecution.AccountControl.button8</definition>
+        <argsstring></argsstring>
+        <name>button8</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountControl.Designer.cs" line="674" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountControl.Designer.cs" bodystart="674" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_account_control_1ad20d24abb7f2dc8e92500a0a6d6d01a7" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Button</type>
+        <definition>System.Windows.Forms.Button BudgetExecution.AccountControl.button7</definition>
+        <argsstring></argsstring>
+        <name>button7</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountControl.Designer.cs" line="675" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountControl.Designer.cs" bodystart="675" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_account_control_1afb35c51e3c505ea4fb4f67279e7a8e30" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Button</type>
+        <definition>System.Windows.Forms.Button BudgetExecution.AccountControl.button6</definition>
+        <argsstring></argsstring>
+        <name>button6</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountControl.Designer.cs" line="676" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountControl.Designer.cs" bodystart="676" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_account_control_1a7da949229022d6b310853b3bfbb93464" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Button</type>
+        <definition>System.Windows.Forms.Button BudgetExecution.AccountControl.button5</definition>
+        <argsstring></argsstring>
+        <name>button5</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountControl.Designer.cs" line="677" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountControl.Designer.cs" bodystart="677" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_account_control_1a3c60b09947529680311f70dcd4686d5f" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Button</type>
+        <definition>System.Windows.Forms.Button BudgetExecution.AccountControl.button4</definition>
+        <argsstring></argsstring>
+        <name>button4</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountControl.Designer.cs" line="678" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountControl.Designer.cs" bodystart="678" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_account_control_1ab3df57e663a0a7c03ca1674a97ae5f16" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Button</type>
+        <definition>System.Windows.Forms.Button BudgetExecution.AccountControl.button3</definition>
+        <argsstring></argsstring>
+        <name>button3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountControl.Designer.cs" line="679" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountControl.Designer.cs" bodystart="679" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_account_control_1a04fa599d6184e307bdd195100bc62319" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Button</type>
+        <definition>System.Windows.Forms.Button BudgetExecution.AccountControl.button2</definition>
+        <argsstring></argsstring>
+        <name>button2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountControl.Designer.cs" line="680" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountControl.Designer.cs" bodystart="680" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_account_control_1a3da3364d145c086c9d1340910dc9abb8" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Button</type>
+        <definition>System.Windows.Forms.Button BudgetExecution.AccountControl.button1</definition>
+        <argsstring></argsstring>
+        <name>button1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountControl.Designer.cs" line="681" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountControl.Designer.cs" bodystart="681" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_budget_execution_1_1_account_control_1a2ba0272118c556496e3eec3c7f5f1768" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>BudgetExecution.AccountControl.AccountControl</definition>
+        <argsstring>()</argsstring>
+        <name>AccountControl</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountControl.cs" line="11" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountControl.cs" bodystart="11" bodyend="14"/>
+        <references refid="class_budget_execution_1_1_account_control_1a5d154f65104a774ec62fc82bb3d7e28e" compoundref="_account_control_8_designer_8cs" startline="29" endline="647">BudgetExecution.AccountControl.InitializeComponent</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_budget_execution_1_1_account_control_1a86901cdd5b7e187e184201f00ea6fa04" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BudgetExecution.AccountControl.GroupBox3_Enter</definition>
+        <argsstring>(object sender, System.EventArgs e)</argsstring>
+        <name>GroupBox3_Enter</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>System.EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountControl.cs" line="16" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountControl.cs" bodystart="16" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_account_control_1a5d154f65104a774ec62fc82bb3d7e28e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BudgetExecution.AccountControl.InitializeComponent</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeComponent</name>
+        <briefdescription>
+<para>Required method for Designer support - do not modify the contents of this method with the code editor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountControl.Designer.cs" line="29" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountControl.Designer.cs" bodystart="29" bodyend="647"/>
+        <references refid="class_budget_execution_1_1_account_control_1ab35ad724d6b1c1cb32065afb4d6436a8" compoundref="_account_control_8_designer_8cs" startline="651">BudgetExecution.AccountControl.BindingSource</references>
+        <references refid="namespace_budget_execution_1afa69cdcc242b50644155cb4adf244d32a800618943025315f869e4e1f09471012">BudgetExecution.F</references>
+        <referencedby refid="class_budget_execution_1_1_account_control_1a2ba0272118c556496e3eec3c7f5f1768" compoundref="_account_control_8cs" startline="11" endline="14">BudgetExecution.AccountControl.AccountControl</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_budget_execution_1_1_account_control_1a918fd2500d1c152587f953f901f691c0" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void BudgetExecution.AccountControl.Dispose</definition>
+        <argsstring>(bool disposing)</argsstring>
+        <name>Dispose</name>
+        <param>
+          <type>bool</type>
+          <declname>disposing</declname>
+        </param>
+        <briefdescription>
+<para>Clean up any resources being used. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>disposing</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true if managed resources should be disposed; otherwise, false.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountControl.Designer.cs" line="14" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountControl.Designer.cs" bodystart="14" bodyend="21"/>
+        <references refid="class_budget_execution_1_1_account_control_1a57c43a619abc593b7dca5f36d8374edf" compoundref="_account_control_8_designer_8cs" startline="8">BudgetExecution.AccountControl.components</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="5">
+        <label>UserControl</label>
+      </node>
+      <node id="4">
+        <label>BudgetExecution.AccountControl</label>
+        <link refid="class_budget_execution_1_1_account_control"/>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="8">
+        <label>Controls</label>
+      </node>
+      <node id="9">
+        <label>System</label>
+      </node>
+      <node id="7">
+        <label>UserControl</label>
+      </node>
+      <node id="6">
+        <label>BudgetExecution.AccountControl</label>
+        <link refid="class_budget_execution_1_1_account_control"/>
+        <childnode refid="7" relation="public-inheritance">
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>metroSetComboBox2</edgelabel>
+          <edgelabel>metroSetComboBox3</edgelabel>
+          <edgelabel>metroSetComboBox4</edgelabel>
+          <edgelabel>Amount2</edgelabel>
+          <edgelabel>metroSetComboBox5</edgelabel>
+          <edgelabel>metroSetComboBox6</edgelabel>
+          <edgelabel>metroSetComboBox7</edgelabel>
+          <edgelabel>Amount</edgelabel>
+          <edgelabel>metroSetComboBox8</edgelabel>
+          <edgelabel>metroSetComboBox1</edgelabel>
+          <edgelabel>...</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>button4</edgelabel>
+          <edgelabel>button5</edgelabel>
+          <edgelabel>label1</edgelabel>
+          <edgelabel>button6</edgelabel>
+          <edgelabel>label2</edgelabel>
+          <edgelabel>button7</edgelabel>
+          <edgelabel>label3</edgelabel>
+          <edgelabel>button8</edgelabel>
+          <edgelabel>label10</edgelabel>
+          <edgelabel>label4</edgelabel>
+          <edgelabel>...</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountControl.cs" line="10" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountControl.cs" bodystart="9" bodyend="19"/>
+    <listofallmembers>
+      <member refid="class_budget_execution_1_1_account_control_1a2ba0272118c556496e3eec3c7f5f1768" prot="public" virt="non-virtual"><scope>BudgetExecution::AccountControl</scope><name>AccountControl</name></member>
+      <member refid="class_budget_execution_1_1_account_control_1a8fb3845d26a69e0be0b3b905f4bb700b" prot="private" virt="non-virtual"><scope>BudgetExecution::AccountControl</scope><name>Amount</name></member>
+      <member refid="class_budget_execution_1_1_account_control_1a2e45722cd045e097998452ba17ee559e" prot="private" virt="non-virtual"><scope>BudgetExecution::AccountControl</scope><name>Amount2</name></member>
+      <member refid="class_budget_execution_1_1_account_control_1ab35ad724d6b1c1cb32065afb4d6436a8" prot="private" virt="non-virtual"><scope>BudgetExecution::AccountControl</scope><name>BindingSource</name></member>
+      <member refid="class_budget_execution_1_1_account_control_1a3da3364d145c086c9d1340910dc9abb8" prot="private" virt="non-virtual"><scope>BudgetExecution::AccountControl</scope><name>button1</name></member>
+      <member refid="class_budget_execution_1_1_account_control_1a04fa599d6184e307bdd195100bc62319" prot="private" virt="non-virtual"><scope>BudgetExecution::AccountControl</scope><name>button2</name></member>
+      <member refid="class_budget_execution_1_1_account_control_1ab3df57e663a0a7c03ca1674a97ae5f16" prot="private" virt="non-virtual"><scope>BudgetExecution::AccountControl</scope><name>button3</name></member>
+      <member refid="class_budget_execution_1_1_account_control_1a3c60b09947529680311f70dcd4686d5f" prot="private" virt="non-virtual"><scope>BudgetExecution::AccountControl</scope><name>button4</name></member>
+      <member refid="class_budget_execution_1_1_account_control_1a7da949229022d6b310853b3bfbb93464" prot="private" virt="non-virtual"><scope>BudgetExecution::AccountControl</scope><name>button5</name></member>
+      <member refid="class_budget_execution_1_1_account_control_1afb35c51e3c505ea4fb4f67279e7a8e30" prot="private" virt="non-virtual"><scope>BudgetExecution::AccountControl</scope><name>button6</name></member>
+      <member refid="class_budget_execution_1_1_account_control_1ad20d24abb7f2dc8e92500a0a6d6d01a7" prot="private" virt="non-virtual"><scope>BudgetExecution::AccountControl</scope><name>button7</name></member>
+      <member refid="class_budget_execution_1_1_account_control_1a08dc24b86fe4926cbbd4c9c51fc1c5d5" prot="private" virt="non-virtual"><scope>BudgetExecution::AccountControl</scope><name>button8</name></member>
+      <member refid="class_budget_execution_1_1_account_control_1a57c43a619abc593b7dca5f36d8374edf" prot="private" virt="non-virtual"><scope>BudgetExecution::AccountControl</scope><name>components</name></member>
+      <member refid="class_budget_execution_1_1_account_control_1a918fd2500d1c152587f953f901f691c0" prot="protected" virt="non-virtual"><scope>BudgetExecution::AccountControl</scope><name>Dispose</name></member>
+      <member refid="class_budget_execution_1_1_account_control_1ace2ed5ee9d6d941240f75fd83e22d857" prot="private" virt="non-virtual"><scope>BudgetExecution::AccountControl</scope><name>groupBox1</name></member>
+      <member refid="class_budget_execution_1_1_account_control_1a2cfa201db6372fd45979b936460e35dc" prot="private" virt="non-virtual"><scope>BudgetExecution::AccountControl</scope><name>groupBox2</name></member>
+      <member refid="class_budget_execution_1_1_account_control_1a213379412d457af9f28aa4f19709b950" prot="private" virt="non-virtual"><scope>BudgetExecution::AccountControl</scope><name>groupBox3</name></member>
+      <member refid="class_budget_execution_1_1_account_control_1a86901cdd5b7e187e184201f00ea6fa04" prot="private" virt="non-virtual"><scope>BudgetExecution::AccountControl</scope><name>GroupBox3_Enter</name></member>
+      <member refid="class_budget_execution_1_1_account_control_1a5d154f65104a774ec62fc82bb3d7e28e" prot="private" virt="non-virtual"><scope>BudgetExecution::AccountControl</scope><name>InitializeComponent</name></member>
+      <member refid="class_budget_execution_1_1_account_control_1a539a90bdc700186fb4d578ae1ac6c102" prot="private" virt="non-virtual"><scope>BudgetExecution::AccountControl</scope><name>label1</name></member>
+      <member refid="class_budget_execution_1_1_account_control_1a80909ca7511c0b96bf9ada42fd66348c" prot="private" virt="non-virtual"><scope>BudgetExecution::AccountControl</scope><name>label10</name></member>
+      <member refid="class_budget_execution_1_1_account_control_1a4959c254225270929c47c80ab26d49c9" prot="private" virt="non-virtual"><scope>BudgetExecution::AccountControl</scope><name>label2</name></member>
+      <member refid="class_budget_execution_1_1_account_control_1ae87db4dde1ce18fe87ab736da379738f" prot="private" virt="non-virtual"><scope>BudgetExecution::AccountControl</scope><name>label3</name></member>
+      <member refid="class_budget_execution_1_1_account_control_1ac42051b842f6c5920d6ba0ad730d296b" prot="private" virt="non-virtual"><scope>BudgetExecution::AccountControl</scope><name>label4</name></member>
+      <member refid="class_budget_execution_1_1_account_control_1ab0254890d6d07a6c27525082b6eded6e" prot="private" virt="non-virtual"><scope>BudgetExecution::AccountControl</scope><name>label5</name></member>
+      <member refid="class_budget_execution_1_1_account_control_1a78c9222dc0876ea303d2d08906ee5251" prot="private" virt="non-virtual"><scope>BudgetExecution::AccountControl</scope><name>label6</name></member>
+      <member refid="class_budget_execution_1_1_account_control_1a54b057f9793655440c7dc5a3779e9e44" prot="private" virt="non-virtual"><scope>BudgetExecution::AccountControl</scope><name>label7</name></member>
+      <member refid="class_budget_execution_1_1_account_control_1a74e9fe5da4ca967fe93508ec142fc866" prot="private" virt="non-virtual"><scope>BudgetExecution::AccountControl</scope><name>label8</name></member>
+      <member refid="class_budget_execution_1_1_account_control_1a9de0513d2f48d975562763c3bcb5b871" prot="private" virt="non-virtual"><scope>BudgetExecution::AccountControl</scope><name>label9</name></member>
+      <member refid="class_budget_execution_1_1_account_control_1ab88744e7271da4ab69e77d15cdc4227d" prot="private" virt="non-virtual"><scope>BudgetExecution::AccountControl</scope><name>metroSetComboBox1</name></member>
+      <member refid="class_budget_execution_1_1_account_control_1ae0efc1aece1aa1c865aaea6d52cf66c2" prot="private" virt="non-virtual"><scope>BudgetExecution::AccountControl</scope><name>metroSetComboBox2</name></member>
+      <member refid="class_budget_execution_1_1_account_control_1a29e06da12a8a5b75c5eabf7f14a9d098" prot="private" virt="non-virtual"><scope>BudgetExecution::AccountControl</scope><name>metroSetComboBox3</name></member>
+      <member refid="class_budget_execution_1_1_account_control_1a888a9ac222dd89a8ead210d1161b3efe" prot="private" virt="non-virtual"><scope>BudgetExecution::AccountControl</scope><name>metroSetComboBox4</name></member>
+      <member refid="class_budget_execution_1_1_account_control_1a5de0690dfff174ac9eabd574c4b2ae5e" prot="private" virt="non-virtual"><scope>BudgetExecution::AccountControl</scope><name>metroSetComboBox5</name></member>
+      <member refid="class_budget_execution_1_1_account_control_1a9b6a33699ed8d76bd05d135eb217c2d3" prot="private" virt="non-virtual"><scope>BudgetExecution::AccountControl</scope><name>metroSetComboBox6</name></member>
+      <member refid="class_budget_execution_1_1_account_control_1a29963d11db756ab82c5b08c3db443913" prot="private" virt="non-virtual"><scope>BudgetExecution::AccountControl</scope><name>metroSetComboBox7</name></member>
+      <member refid="class_budget_execution_1_1_account_control_1a819e95baa37d3030b003b81ffcf6a38b" prot="private" virt="non-virtual"><scope>BudgetExecution::AccountControl</scope><name>metroSetComboBox8</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

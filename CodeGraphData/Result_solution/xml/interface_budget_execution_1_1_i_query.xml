@@ -1,0 +1,269 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="interface_budget_execution_1_1_i_query" kind="interface" prot="public">
+    <compoundname>BudgetExecution::IQuery</compoundname>
+    <derivedcompoundref refid="class_budget_execution_1_1_query" prot="public" virt="non-virtual">BudgetExecution.Query</derivedcompoundref>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="interface_budget_execution_1_1_i_query_1ac0e7164c2e9a83f99d8969dfb107a66f" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type><ref refid="namespace_budget_execution_1a31d755f9fbeb90de04b7b1e2e21acdc8" kindref="member">Source</ref></type>
+        <definition>Source BudgetExecution.IQuery.Source</definition>
+        <argsstring></argsstring>
+        <name>Source</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/IQuery.cs" line="13" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/IQuery.cs" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="interface_budget_execution_1_1_i_query_1a50f7ac1aaeb985372eabf8055167d8c2" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type><ref refid="namespace_budget_execution_1a04fd24d7fd477c1db9884745e14ea571" kindref="member">Provider</ref></type>
+        <definition>Provider BudgetExecution.IQuery.Provider</definition>
+        <argsstring></argsstring>
+        <name>Provider</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/IQuery.cs" line="15" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/IQuery.cs" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="interface_budget_execution_1_1_i_query_1aecd68b26d66f1ecc60799185a690f8ec" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>DbDataAdapter</type>
+        <definition>DbDataAdapter BudgetExecution.IQuery.DataAdapter</definition>
+        <argsstring></argsstring>
+        <name>DataAdapter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/IQuery.cs" line="17" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/IQuery.cs" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="interface_budget_execution_1_1_i_query_1ab43ee0adec634e2f59d0ff4f8d528123" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>DbCommand</type>
+        <definition>DbCommand BudgetExecution.IQuery.DataCommand</definition>
+        <argsstring></argsstring>
+        <name>DataCommand</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/IQuery.cs" line="19" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/IQuery.cs" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="interface_budget_execution_1_1_i_query_1a22a5ae608a1e12feae4d5d3cab6eceb4" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>DbConnection</type>
+        <definition>DbConnection BudgetExecution.IQuery.DataConnection</definition>
+        <argsstring></argsstring>
+        <name>DataConnection</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/IQuery.cs" line="21" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/IQuery.cs" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="interface_budget_execution_1_1_i_query_1a892f8ea498949c1747155d461d0afe41" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>DbDataReader</type>
+        <definition>DbDataReader BudgetExecution.IQuery.DataReader</definition>
+        <argsstring></argsstring>
+        <name>DataReader</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/IQuery.cs" line="23" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/IQuery.cs" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="interface_budget_execution_1_1_i_query_1a48975ac00a0c5fda5fef9bc2e1e1fc4e" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>string</type>
+        <definition>string BudgetExecution.IQuery.SqlStatement</definition>
+        <argsstring></argsstring>
+        <name>SqlStatement</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/IQuery.cs" line="25" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/IQuery.cs" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="interface_budget_execution_1_1_i_query_1a062ec6813b63c9f8270e318a368ff1d1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DbCommandBuilder</type>
+        <definition>DbCommandBuilder BudgetExecution.IQuery.GetCommandBuilder</definition>
+        <argsstring>(IDbDataAdapter adapter)</argsstring>
+        <name>GetCommandBuilder</name>
+        <reimplementedby refid="class_budget_execution_1_1_query_1a5d369c4710c09997a72980c5005b4336">GetCommandBuilder</reimplementedby>
+        <param>
+          <type>IDbDataAdapter</type>
+          <declname>adapter</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/IQuery.cs" line="28" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_budget_execution_1_1_i_query_1add71944d600e93f48e2f13d61cda107e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DbConnection</type>
+        <definition>DbConnection BudgetExecution.IQuery.GetConnection</definition>
+        <argsstring>(Provider connection)</argsstring>
+        <name>GetConnection</name>
+        <reimplementedby refid="class_budget_execution_1_1_query_1a4ff9054aab453792f181553bc53452d9">GetConnection</reimplementedby>
+        <reimplementedby refid="class_budget_execution_1_1_sql_server_query_1a913fe48363d1d3a910e1afac7f760c76">GetConnection</reimplementedby>
+        <reimplementedby refid="class_budget_execution_1_1_s_q_lite_query_1a3c5ad42b11271007ecc0ff5dadb419cf">GetConnection</reimplementedby>
+        <param>
+          <type><ref refid="namespace_budget_execution_1a04fd24d7fd477c1db9884745e14ea571" kindref="member">Provider</ref></type>
+          <declname>connection</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/IQuery.cs" line="30" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_budget_execution_1_1_i_query_1a97ac8a5dd1bf7b1a86e5dc62ecdc08df" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DbDataAdapter</type>
+        <definition>DbDataAdapter BudgetExecution.IQuery.GetDataAdapter</definition>
+        <argsstring>(IDbCommand command)</argsstring>
+        <name>GetDataAdapter</name>
+        <reimplementedby refid="class_budget_execution_1_1_query_1ae23dc6bdc04cc0e4a4c5393c4dd3af11">GetDataAdapter</reimplementedby>
+        <param>
+          <type>IDbCommand</type>
+          <declname>command</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/IQuery.cs" line="32" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_budget_execution_1_1_i_query_1a931014a92383b243f1b02b91e3b4d1ff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DbCommand</type>
+        <definition>DbCommand BudgetExecution.IQuery.GetDataCommand</definition>
+        <argsstring>(string sql, IDbConnection dataConnection)</argsstring>
+        <name>GetDataCommand</name>
+        <reimplementedby refid="class_budget_execution_1_1_query_1ab142a6ee9dd9a68f29670d6798ab8aed">GetDataCommand</reimplementedby>
+        <param>
+          <type>string</type>
+          <declname>sql</declname>
+        </param>
+        <param>
+          <type>IDbConnection</type>
+          <declname>dataConnection</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/IQuery.cs" line="34" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_budget_execution_1_1_i_query_1ac2b6db97fb5b45d3c9f69c0757c6c402" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DbDataReader</type>
+        <definition>DbDataReader BudgetExecution.IQuery.GetDataReader</definition>
+        <argsstring>(IDbCommand command)</argsstring>
+        <name>GetDataReader</name>
+        <reimplementedby refid="class_budget_execution_1_1_query_1a6c1f606fca9fdd4448abcf160a24e23a">GetDataReader</reimplementedby>
+        <param>
+          <type>IDbCommand</type>
+          <declname>command</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/IQuery.cs" line="36" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="interface_budget_execution_1_1_i_query_1aa2842d58a8b3757ec44159bace4adb86" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string BudgetExecution.IQuery.GetSqlStatement</definition>
+        <argsstring>(string sqlStatement)</argsstring>
+        <name>GetSqlStatement</name>
+        <reimplementedby refid="class_budget_execution_1_1_query_1a45b67ddb72a59906b07514370d3704bb">GetSqlStatement</reimplementedby>
+        <reimplementedby refid="class_budget_execution_1_1_sql_server_query_1ac5805ccdaf1156bf3364ea19258a6e6d">GetSqlStatement</reimplementedby>
+        <reimplementedby refid="class_budget_execution_1_1_s_q_lite_query_1af13c5c7efd1ac900a3e8f1e59bd9176b">GetSqlStatement</reimplementedby>
+        <reimplementedby refid="class_budget_execution_1_1_excel_query_1a820179cd4ae2df6ce8fb539a7a0cf3a3">GetSqlStatement</reimplementedby>
+        <param>
+          <type>string</type>
+          <declname>sqlStatement</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/IQuery.cs" line="38" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="254">
+        <label>BudgetExecution.SQLiteQuery</label>
+        <link refid="class_budget_execution_1_1_s_q_lite_query"/>
+        <childnode refid="252" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="252">
+        <label>BudgetExecution.Query</label>
+        <link refid="class_budget_execution_1_1_query"/>
+        <childnode refid="251" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="255">
+        <label>BudgetExecution.SqlServerQuery</label>
+        <link refid="class_budget_execution_1_1_sql_server_query"/>
+        <childnode refid="252" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="251">
+        <label>BudgetExecution.IQuery</label>
+        <link refid="interface_budget_execution_1_1_i_query"/>
+      </node>
+      <node id="253">
+        <label>BudgetExecution.ExcelQuery</label>
+        <link refid="class_budget_execution_1_1_excel_query"/>
+        <childnode refid="252" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/IQuery.cs" line="11" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/IQuery.cs" bodystart="10" bodyend="39"/>
+    <listofallmembers>
+      <member refid="interface_budget_execution_1_1_i_query_1aecd68b26d66f1ecc60799185a690f8ec" prot="public" virt="non-virtual"><scope>BudgetExecution::IQuery</scope><name>DataAdapter</name></member>
+      <member refid="interface_budget_execution_1_1_i_query_1ab43ee0adec634e2f59d0ff4f8d528123" prot="public" virt="non-virtual"><scope>BudgetExecution::IQuery</scope><name>DataCommand</name></member>
+      <member refid="interface_budget_execution_1_1_i_query_1a22a5ae608a1e12feae4d5d3cab6eceb4" prot="public" virt="non-virtual"><scope>BudgetExecution::IQuery</scope><name>DataConnection</name></member>
+      <member refid="interface_budget_execution_1_1_i_query_1a892f8ea498949c1747155d461d0afe41" prot="public" virt="non-virtual"><scope>BudgetExecution::IQuery</scope><name>DataReader</name></member>
+      <member refid="interface_budget_execution_1_1_i_query_1a062ec6813b63c9f8270e318a368ff1d1" prot="public" virt="non-virtual"><scope>BudgetExecution::IQuery</scope><name>GetCommandBuilder</name></member>
+      <member refid="interface_budget_execution_1_1_i_query_1add71944d600e93f48e2f13d61cda107e" prot="public" virt="non-virtual"><scope>BudgetExecution::IQuery</scope><name>GetConnection</name></member>
+      <member refid="interface_budget_execution_1_1_i_query_1a97ac8a5dd1bf7b1a86e5dc62ecdc08df" prot="public" virt="non-virtual"><scope>BudgetExecution::IQuery</scope><name>GetDataAdapter</name></member>
+      <member refid="interface_budget_execution_1_1_i_query_1a931014a92383b243f1b02b91e3b4d1ff" prot="public" virt="non-virtual"><scope>BudgetExecution::IQuery</scope><name>GetDataCommand</name></member>
+      <member refid="interface_budget_execution_1_1_i_query_1ac2b6db97fb5b45d3c9f69c0757c6c402" prot="public" virt="non-virtual"><scope>BudgetExecution::IQuery</scope><name>GetDataReader</name></member>
+      <member refid="interface_budget_execution_1_1_i_query_1aa2842d58a8b3757ec44159bace4adb86" prot="public" virt="non-virtual"><scope>BudgetExecution::IQuery</scope><name>GetSqlStatement</name></member>
+      <member refid="interface_budget_execution_1_1_i_query_1a50f7ac1aaeb985372eabf8055167d8c2" prot="public" virt="non-virtual"><scope>BudgetExecution::IQuery</scope><name>Provider</name></member>
+      <member refid="interface_budget_execution_1_1_i_query_1ac0e7164c2e9a83f99d8969dfb107a66f" prot="public" virt="non-virtual"><scope>BudgetExecution::IQuery</scope><name>Source</name></member>
+      <member refid="interface_budget_execution_1_1_i_query_1a48975ac00a0c5fda5fef9bc2e1e1fc4e" prot="public" virt="non-virtual"><scope>BudgetExecution::IQuery</scope><name>SqlStatement</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

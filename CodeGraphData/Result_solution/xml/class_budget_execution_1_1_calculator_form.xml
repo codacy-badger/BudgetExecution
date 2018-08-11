@@ -1,0 +1,145 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_budget_execution_1_1_calculator_form" kind="class" prot="public">
+    <compoundname>BudgetExecution::CalculatorForm</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MetroForm</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_budget_execution_1_1_calculator_form_1a2acfe7c1f4417c2ce6e69775515caf3f" prot="private" static="no" mutable="no">
+        <type>System.ComponentModel.IContainer</type>
+        <definition>System.ComponentModel.IContainer BudgetExecution.CalculatorForm.components</definition>
+        <argsstring></argsstring>
+        <name>components</name>
+        <initializer>= null</initializer>
+        <briefdescription>
+<para>Required designer variable. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/CalculatorForm.Designer.cs" line="15" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/CalculatorForm.Designer.cs" bodystart="15" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_calculator_form_1ad793dfd5757288baea72e5569e8f6b31" compoundref="_calculator_form_8_designer_8cs" startline="21" endline="28">BudgetExecution.CalculatorForm.Dispose</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_calculator_form_1ac4bc817d6444c5abdd7b0ac770f24c4f" prot="private" static="no" mutable="no">
+        <type>Syncfusion.Windows.Forms.Tools.CalculatorControl</type>
+        <definition>Syncfusion.Windows.Forms.Tools.CalculatorControl BudgetExecution.CalculatorForm.calculatorControl1</definition>
+        <argsstring></argsstring>
+        <name>calculatorControl1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/CalculatorForm.Designer.cs" line="90" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/CalculatorForm.Designer.cs" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_budget_execution_1_1_calculator_form_1a892bf374384a6351cbb97b60491b1647" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>BudgetExecution.CalculatorForm.CalculatorForm</definition>
+        <argsstring>()</argsstring>
+        <name>CalculatorForm</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/CalculatorForm.cs" line="14" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/CalculatorForm.cs" bodystart="14" bodyend="17"/>
+        <references refid="class_budget_execution_1_1_calculator_form_1a204ee6923563af7d80041771156826d2" compoundref="_calculator_form_8_designer_8cs" startline="36" endline="86">BudgetExecution.CalculatorForm.InitializeComponent</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_budget_execution_1_1_calculator_form_1ad793dfd5757288baea72e5569e8f6b31" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void BudgetExecution.CalculatorForm.Dispose</definition>
+        <argsstring>(bool disposing)</argsstring>
+        <name>Dispose</name>
+        <param>
+          <type>bool</type>
+          <declname>disposing</declname>
+        </param>
+        <briefdescription>
+<para>Clean up any resources being used. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>disposing</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true if managed resources should be disposed; otherwise, false.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/CalculatorForm.Designer.cs" line="21" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/CalculatorForm.Designer.cs" bodystart="21" bodyend="28"/>
+        <references refid="class_budget_execution_1_1_calculator_form_1a2acfe7c1f4417c2ce6e69775515caf3f" compoundref="_calculator_form_8_designer_8cs" startline="15">BudgetExecution.CalculatorForm.components</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_budget_execution_1_1_calculator_form_1a204ee6923563af7d80041771156826d2" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BudgetExecution.CalculatorForm.InitializeComponent</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeComponent</name>
+        <briefdescription>
+<para>Required method for Designer support - do not modify the contents of this method with the code editor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/CalculatorForm.Designer.cs" line="36" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/CalculatorForm.Designer.cs" bodystart="36" bodyend="86"/>
+        <references refid="namespace_budget_execution_1a4bb6ce7543ca92e05f7d224d6887fe1aaf623e75af30e62bbd73d6df5b50bb7b5">BudgetExecution.D</references>
+        <references refid="namespace_budget_execution_1afa69cdcc242b50644155cb4adf244d32a800618943025315f869e4e1f09471012">BudgetExecution.F</references>
+        <referencedby refid="class_budget_execution_1_1_calculator_form_1a892bf374384a6351cbb97b60491b1647" compoundref="_calculator_form_8cs" startline="14" endline="17">BudgetExecution.CalculatorForm.CalculatorForm</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="61">
+        <label>Syncfusion::Windows::Forms::MetroForm</label>
+      </node>
+      <node id="60">
+        <label>BudgetExecution.CalculatorForm</label>
+        <link refid="class_budget_execution_1_1_calculator_form"/>
+        <childnode refid="61" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="64">
+        <label>Windows</label>
+      </node>
+      <node id="63">
+        <label>Syncfusion::Windows::Forms::MetroForm</label>
+      </node>
+      <node id="65">
+        <label>System</label>
+      </node>
+      <node id="62">
+        <label>BudgetExecution.CalculatorForm</label>
+        <link refid="class_budget_execution_1_1_calculator_form"/>
+        <childnode refid="63" relation="public-inheritance">
+        </childnode>
+        <childnode refid="64" relation="usage">
+          <edgelabel>calculatorControl1</edgelabel>
+        </childnode>
+        <childnode refid="65" relation="usage">
+          <edgelabel>components</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/CalculatorForm.cs" line="13" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/CalculatorForm.cs" bodystart="12" bodyend="18"/>
+    <listofallmembers>
+      <member refid="class_budget_execution_1_1_calculator_form_1ac4bc817d6444c5abdd7b0ac770f24c4f" prot="private" virt="non-virtual"><scope>BudgetExecution::CalculatorForm</scope><name>calculatorControl1</name></member>
+      <member refid="class_budget_execution_1_1_calculator_form_1a892bf374384a6351cbb97b60491b1647" prot="public" virt="non-virtual"><scope>BudgetExecution::CalculatorForm</scope><name>CalculatorForm</name></member>
+      <member refid="class_budget_execution_1_1_calculator_form_1a2acfe7c1f4417c2ce6e69775515caf3f" prot="private" virt="non-virtual"><scope>BudgetExecution::CalculatorForm</scope><name>components</name></member>
+      <member refid="class_budget_execution_1_1_calculator_form_1ad793dfd5757288baea72e5569e8f6b31" prot="protected" virt="non-virtual"><scope>BudgetExecution::CalculatorForm</scope><name>Dispose</name></member>
+      <member refid="class_budget_execution_1_1_calculator_form_1a204ee6923563af7d80041771156826d2" prot="private" virt="non-virtual"><scope>BudgetExecution::CalculatorForm</scope><name>InitializeComponent</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

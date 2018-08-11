@@ -1,0 +1,529 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_budget_execution_1_1_sql_query" kind="class" prot="public">
+    <compoundname>BudgetExecution::SqlQuery</compoundname>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_budget_execution_1_1_sql_query_1adbcb544a8156f4425a122cbaa22e2f58" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>SqlDataAdapter</type>
+        <definition>SqlDataAdapter BudgetExecution.SqlQuery.Adapter</definition>
+        <argsstring></argsstring>
+        <name>Adapter</name>
+        <initializer>data source=C:\Users\terry\Documents\Visual Studio 2017\Projects\Budget\database\sqlclient\R6.mdf&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlQuery.cs" line="43" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlQuery.cs" bodystart="43" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_sql_query_1a334ca54b51a9e1a3132b9ddcf23a5919" compoundref="_sql_query_8cs" startline="59" endline="70">BudgetExecution.SqlQuery.GetCommandBuilder</referencedby>
+        <referencedby refid="class_budget_execution_1_1_sql_query_1a0ad1492587df740fe1d5a74fced111b7" compoundref="_sql_query_8cs" startline="149" endline="160">BudgetExecution.SqlQuery.GetDeleteCommand</referencedby>
+        <referencedby refid="class_budget_execution_1_1_sql_query_1a9421e339eb122e932560aba48d1dfece" compoundref="_sql_query_8cs" startline="161" endline="172">BudgetExecution.SqlQuery.GetInsertCommand</referencedby>
+        <referencedby refid="class_budget_execution_1_1_sql_query_1a748a4ee9eb5f1123746ed0eedfb8d420" compoundref="_sql_query_8cs" startline="209" endline="220">BudgetExecution.SqlQuery.GetUpdateCommand</referencedby>
+        <referencedby refid="class_budget_execution_1_1_sql_query_1a10b8ad8047a606b76ac1f4f1fa90a7c6" compoundref="_sql_query_8cs" startline="14" endline="26">BudgetExecution.SqlQuery.SqlQuery</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_sql_query_1a75adaa98276eaebcd2e774826194b155" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>SqlCommandBuilder</type>
+        <definition>SqlCommandBuilder BudgetExecution.SqlQuery.CommandBuilder</definition>
+        <argsstring></argsstring>
+        <name>CommandBuilder</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlQuery.cs" line="44" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlQuery.cs" bodystart="44" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_sql_query_1a10b8ad8047a606b76ac1f4f1fa90a7c6" compoundref="_sql_query_8cs" startline="14" endline="26">BudgetExecution.SqlQuery.SqlQuery</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_sql_query_1aa71c12ea290c8dbf4a5c95afc67a7eaf" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>SqlConnection</type>
+        <definition>SqlConnection BudgetExecution.SqlQuery.Connection</definition>
+        <argsstring></argsstring>
+        <name>Connection</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlQuery.cs" line="45" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlQuery.cs" bodystart="45" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_sql_query_1aa2351da1a9bc7530244cdb775bfdb551" compoundref="_sql_query_8cs" startline="113" endline="124">BudgetExecution.SqlQuery.GetDataAdapter</referencedby>
+        <referencedby refid="class_budget_execution_1_1_sql_query_1a326900f729cf065330ba1dfa1d983659" compoundref="_sql_query_8cs" startline="101" endline="112">BudgetExecution.SqlQuery.GetSelectCommand</referencedby>
+        <referencedby refid="class_budget_execution_1_1_sql_query_1a10b8ad8047a606b76ac1f4f1fa90a7c6" compoundref="_sql_query_8cs" startline="14" endline="26">BudgetExecution.SqlQuery.SqlQuery</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_sql_query_1ab9b407091144291e8add89926efaff1f" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>SqlCommand</type>
+        <definition>SqlCommand BudgetExecution.SqlQuery.DeleteCommand</definition>
+        <argsstring></argsstring>
+        <name>DeleteCommand</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlQuery.cs" line="46" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlQuery.cs" bodystart="46" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_sql_query_1a10b8ad8047a606b76ac1f4f1fa90a7c6" compoundref="_sql_query_8cs" startline="14" endline="26">BudgetExecution.SqlQuery.SqlQuery</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_sql_query_1a6112fdfeca6fc5d886e836e8b1b1b097" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>SqlCommand</type>
+        <definition>SqlCommand BudgetExecution.SqlQuery.InsertCommand</definition>
+        <argsstring></argsstring>
+        <name>InsertCommand</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlQuery.cs" line="47" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlQuery.cs" bodystart="47" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_sql_query_1a10b8ad8047a606b76ac1f4f1fa90a7c6" compoundref="_sql_query_8cs" startline="14" endline="26">BudgetExecution.SqlQuery.SqlQuery</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_sql_query_1acc439e396527f1f64c87f10394a8e1c3" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>Dictionary&lt; string, object &gt;</type>
+        <definition>Dictionary&lt;string, object&gt; BudgetExecution.SqlQuery.Parameter</definition>
+        <argsstring></argsstring>
+        <name>Parameter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlQuery.cs" line="48" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlQuery.cs" bodystart="48" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_sql_query_1aa8116185d57aeb346dd4f8b67c4206a6" compoundref="_sql_query_8cs" startline="27" endline="40">BudgetExecution.SqlQuery.SqlQuery</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_sql_query_1a3477898636eb6fbb47d67b023a7d77c5" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>SqlDataReader</type>
+        <definition>SqlDataReader BudgetExecution.SqlQuery.Reader</definition>
+        <argsstring></argsstring>
+        <name>Reader</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlQuery.cs" line="49" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlQuery.cs" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_sql_query_1a8513fe453932f16f1a9060c6f75092c8" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>SqlCommand</type>
+        <definition>SqlCommand BudgetExecution.SqlQuery.SelectCommand</definition>
+        <argsstring></argsstring>
+        <name>SelectCommand</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlQuery.cs" line="50" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlQuery.cs" bodystart="50" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_sql_query_1a7ea553cf06e0b960ad713bd9240e97dc" compoundref="_sql_query_8cs" startline="71" endline="82">BudgetExecution.SqlQuery.GetDataAdapter</referencedby>
+        <referencedby refid="class_budget_execution_1_1_sql_query_1a10b8ad8047a606b76ac1f4f1fa90a7c6" compoundref="_sql_query_8cs" startline="14" endline="26">BudgetExecution.SqlQuery.SqlQuery</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_sql_query_1ad8c484dc2a58830faff34e26bf7ffeb1" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>string</type>
+        <definition>string BudgetExecution.SqlQuery.SelectStatement</definition>
+        <argsstring></argsstring>
+        <name>SelectStatement</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlQuery.cs" line="51" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlQuery.cs" bodystart="51" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_sql_query_1a326900f729cf065330ba1dfa1d983659" compoundref="_sql_query_8cs" startline="101" endline="112">BudgetExecution.SqlQuery.GetSelectCommand</referencedby>
+        <referencedby refid="class_budget_execution_1_1_sql_query_1a10b8ad8047a606b76ac1f4f1fa90a7c6" compoundref="_sql_query_8cs" startline="14" endline="26">BudgetExecution.SqlQuery.SqlQuery</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_sql_query_1a24ed62bc9a60747fad9282267d9c3a16" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type><ref refid="namespace_budget_execution_1a31d755f9fbeb90de04b7b1e2e21acdc8" kindref="member">Source</ref></type>
+        <definition>Source BudgetExecution.SqlQuery.Source</definition>
+        <argsstring></argsstring>
+        <name>Source</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlQuery.cs" line="52" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlQuery.cs" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_sql_query_1a010d61061887be1521fe4ad145610fa1" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type><ref refid="namespace_budget_execution_1acc77f02cde309c445b6e142d257483dd" kindref="member">Command</ref></type>
+        <definition>Command BudgetExecution.SqlQuery.Sql</definition>
+        <argsstring></argsstring>
+        <name>Sql</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlQuery.cs" line="53" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlQuery.cs" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_sql_query_1a4efbcdd6a08afcd7a2578246e389d7df" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>Dictionary&lt; string, string &gt;</type>
+        <definition>Dictionary&lt;string, string&gt; BudgetExecution.SqlQuery.SqlStatement</definition>
+        <argsstring></argsstring>
+        <name>SqlStatement</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlQuery.cs" line="54" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlQuery.cs" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_sql_query_1abce1ba583b21881517adaa380e439b58" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>string</type>
+        <definition>string BudgetExecution.SqlQuery.TableName</definition>
+        <argsstring></argsstring>
+        <name>TableName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlQuery.cs" line="55" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlQuery.cs" bodystart="55" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_sql_query_1a10b8ad8047a606b76ac1f4f1fa90a7c6" compoundref="_sql_query_8cs" startline="14" endline="26">BudgetExecution.SqlQuery.SqlQuery</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_sql_query_1a739ff5ec3ed2a6512f31b53acfb07f2b" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>SqlCommand</type>
+        <definition>SqlCommand BudgetExecution.SqlQuery.UpdateCommand</definition>
+        <argsstring></argsstring>
+        <name>UpdateCommand</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlQuery.cs" line="56" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlQuery.cs" bodystart="56" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_sql_query_1a10b8ad8047a606b76ac1f4f1fa90a7c6" compoundref="_sql_query_8cs" startline="14" endline="26">BudgetExecution.SqlQuery.SqlQuery</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_budget_execution_1_1_sql_query_1a11b70fba5a3502c95ac3c7834afec736" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>BudgetExecution.SqlQuery.SqlQuery</definition>
+        <argsstring>()</argsstring>
+        <name>SqlQuery</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlQuery.cs" line="11" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlQuery.cs" bodystart="11" bodyend="13"/>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_sql_query_1a10b8ad8047a606b76ac1f4f1fa90a7c6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>BudgetExecution.SqlQuery.SqlQuery</definition>
+        <argsstring>(Source source)</argsstring>
+        <name>SqlQuery</name>
+        <param>
+          <type><ref refid="namespace_budget_execution_1a31d755f9fbeb90de04b7b1e2e21acdc8" kindref="member">Source</ref></type>
+          <declname>source</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlQuery.cs" line="14" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlQuery.cs" bodystart="14" bodyend="26"/>
+        <references refid="class_budget_execution_1_1_sql_query_1adbcb544a8156f4425a122cbaa22e2f58" compoundref="_sql_query_8cs" startline="43">BudgetExecution.SqlQuery.Adapter</references>
+        <references refid="class_budget_execution_1_1_sql_query_1a75adaa98276eaebcd2e774826194b155" compoundref="_sql_query_8cs" startline="44">BudgetExecution.SqlQuery.CommandBuilder</references>
+        <references refid="class_budget_execution_1_1_sql_query_1aa71c12ea290c8dbf4a5c95afc67a7eaf" compoundref="_sql_query_8cs" startline="45">BudgetExecution.SqlQuery.Connection</references>
+        <references refid="class_budget_execution_1_1_sql_query_1ab9b407091144291e8add89926efaff1f" compoundref="_sql_query_8cs" startline="46">BudgetExecution.SqlQuery.DeleteCommand</references>
+        <references refid="class_budget_execution_1_1_sql_query_1a334ca54b51a9e1a3132b9ddcf23a5919" compoundref="_sql_query_8cs" startline="59" endline="70">BudgetExecution.SqlQuery.GetCommandBuilder</references>
+        <references refid="class_budget_execution_1_1_sql_query_1a6112fdfeca6fc5d886e836e8b1b1b097" compoundref="_sql_query_8cs" startline="47">BudgetExecution.SqlQuery.InsertCommand</references>
+        <references refid="class_budget_execution_1_1_sql_query_1a8513fe453932f16f1a9060c6f75092c8" compoundref="_sql_query_8cs" startline="50">BudgetExecution.SqlQuery.SelectCommand</references>
+        <references refid="class_budget_execution_1_1_sql_query_1ad8c484dc2a58830faff34e26bf7ffeb1" compoundref="_sql_query_8cs" startline="51">BudgetExecution.SqlQuery.SelectStatement</references>
+        <references refid="class_budget_execution_1_1_sql_query_1abce1ba583b21881517adaa380e439b58" compoundref="_sql_query_8cs" startline="55">BudgetExecution.SqlQuery.TableName</references>
+        <references refid="class_budget_execution_1_1_sql_query_1a739ff5ec3ed2a6512f31b53acfb07f2b" compoundref="_sql_query_8cs" startline="56">BudgetExecution.SqlQuery.UpdateCommand</references>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_sql_query_1aa8116185d57aeb346dd4f8b67c4206a6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>BudgetExecution.SqlQuery.SqlQuery</definition>
+        <argsstring>(Source source, Dictionary&lt; string, object &gt; param)</argsstring>
+        <name>SqlQuery</name>
+        <param>
+          <type><ref refid="namespace_budget_execution_1a31d755f9fbeb90de04b7b1e2e21acdc8" kindref="member">Source</ref></type>
+          <declname>source</declname>
+        </param>
+        <param>
+          <type>Dictionary&lt; string, object &gt;</type>
+          <declname>param</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlQuery.cs" line="27" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlQuery.cs" bodystart="27" bodyend="40"/>
+        <references refid="class_budget_execution_1_1_sql_query_1adbcb544a8156f4425a122cbaa22e2f58" compoundref="_sql_query_8cs" startline="43">BudgetExecution.SqlQuery.Adapter</references>
+        <references refid="class_budget_execution_1_1_sql_query_1a75adaa98276eaebcd2e774826194b155" compoundref="_sql_query_8cs" startline="44">BudgetExecution.SqlQuery.CommandBuilder</references>
+        <references refid="class_budget_execution_1_1_sql_query_1aa71c12ea290c8dbf4a5c95afc67a7eaf" compoundref="_sql_query_8cs" startline="45">BudgetExecution.SqlQuery.Connection</references>
+        <references refid="class_budget_execution_1_1_sql_query_1ab9b407091144291e8add89926efaff1f" compoundref="_sql_query_8cs" startline="46">BudgetExecution.SqlQuery.DeleteCommand</references>
+        <references refid="class_budget_execution_1_1_sql_query_1a334ca54b51a9e1a3132b9ddcf23a5919" compoundref="_sql_query_8cs" startline="59" endline="70">BudgetExecution.SqlQuery.GetCommandBuilder</references>
+        <references refid="class_budget_execution_1_1_sql_query_1af85935cb761c25dd84d78b9d408b6db0" compoundref="_sql_query_8cs" startline="185" endline="196">BudgetExecution.SqlQuery.GetSqlStatement</references>
+        <references refid="class_budget_execution_1_1_sql_query_1a6112fdfeca6fc5d886e836e8b1b1b097" compoundref="_sql_query_8cs" startline="47">BudgetExecution.SqlQuery.InsertCommand</references>
+        <references refid="class_budget_execution_1_1_sql_query_1acc439e396527f1f64c87f10394a8e1c3" compoundref="_sql_query_8cs" startline="48">BudgetExecution.SqlQuery.Parameter</references>
+        <references refid="class_budget_execution_1_1_sql_query_1a8513fe453932f16f1a9060c6f75092c8" compoundref="_sql_query_8cs" startline="50">BudgetExecution.SqlQuery.SelectCommand</references>
+        <references refid="class_budget_execution_1_1_sql_query_1ad8c484dc2a58830faff34e26bf7ffeb1" compoundref="_sql_query_8cs" startline="51">BudgetExecution.SqlQuery.SelectStatement</references>
+        <references refid="class_budget_execution_1_1_sql_query_1abce1ba583b21881517adaa380e439b58" compoundref="_sql_query_8cs" startline="55">BudgetExecution.SqlQuery.TableName</references>
+        <references refid="class_budget_execution_1_1_sql_query_1a739ff5ec3ed2a6512f31b53acfb07f2b" compoundref="_sql_query_8cs" startline="56">BudgetExecution.SqlQuery.UpdateCommand</references>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_sql_query_1a9e550298948118af16120cfd4f6707ba" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>SqlCommandBuilder</type>
+        <definition>SqlCommandBuilder BudgetExecution.SqlQuery.GetCommandBuilder</definition>
+        <argsstring>(SqlDataAdapter adapter)</argsstring>
+        <name>GetCommandBuilder</name>
+        <param>
+          <type>SqlDataAdapter</type>
+          <declname>adapter</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlQuery.cs" line="125" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlQuery.cs" bodystart="125" bodyend="136"/>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_sql_query_1ae4de0ca7d182bee5274c8ed7f02bfc2a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>SqlDataAdapter</type>
+        <definition>SqlDataAdapter BudgetExecution.SqlQuery.GetDataAdapter</definition>
+        <argsstring>(SqlCommand command)</argsstring>
+        <name>GetDataAdapter</name>
+        <param>
+          <type>SqlCommand</type>
+          <declname>command</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlQuery.cs" line="137" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlQuery.cs" bodystart="137" bodyend="148"/>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_sql_query_1a0ad1492587df740fe1d5a74fced111b7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>SqlCommand</type>
+        <definition>SqlCommand BudgetExecution.SqlQuery.GetDeleteCommand</definition>
+        <argsstring>()</argsstring>
+        <name>GetDeleteCommand</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlQuery.cs" line="149" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlQuery.cs" bodystart="149" bodyend="160"/>
+        <references refid="class_budget_execution_1_1_sql_query_1adbcb544a8156f4425a122cbaa22e2f58" compoundref="_sql_query_8cs" startline="43">BudgetExecution.SqlQuery.Adapter</references>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_sql_query_1a9421e339eb122e932560aba48d1dfece" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>SqlCommand</type>
+        <definition>SqlCommand BudgetExecution.SqlQuery.GetInsertCommand</definition>
+        <argsstring>()</argsstring>
+        <name>GetInsertCommand</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlQuery.cs" line="161" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlQuery.cs" bodystart="161" bodyend="172"/>
+        <references refid="class_budget_execution_1_1_sql_query_1adbcb544a8156f4425a122cbaa22e2f58" compoundref="_sql_query_8cs" startline="43">BudgetExecution.SqlQuery.Adapter</references>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_sql_query_1a1bd4f8a7c42f8717c397d9af16a79c23" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>SqlCommand</type>
+        <definition>SqlCommand BudgetExecution.SqlQuery.GetSelectCommand</definition>
+        <argsstring>(string select)</argsstring>
+        <name>GetSelectCommand</name>
+        <param>
+          <type>string</type>
+          <declname>select</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlQuery.cs" line="173" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlQuery.cs" bodystart="173" bodyend="184"/>
+        <references refid="class_budget_execution_1_1_sql_query_1aa71c12ea290c8dbf4a5c95afc67a7eaf" compoundref="_sql_query_8cs" startline="45">BudgetExecution.SqlQuery.Connection</references>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_sql_query_1af85935cb761c25dd84d78b9d408b6db0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>string BudgetExecution.SqlQuery.GetSqlStatement</definition>
+        <argsstring>()</argsstring>
+        <name>GetSqlStatement</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlQuery.cs" line="185" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlQuery.cs" bodystart="185" bodyend="196"/>
+        <referencedby refid="class_budget_execution_1_1_sql_query_1aa8116185d57aeb346dd4f8b67c4206a6" compoundref="_sql_query_8cs" startline="27" endline="40">BudgetExecution.SqlQuery.SqlQuery</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_sql_query_1ae2035e1db858595516bcb5e232da4e8b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>string BudgetExecution.SqlQuery.GetSqlStatement</definition>
+        <argsstring>(string sql)</argsstring>
+        <name>GetSqlStatement</name>
+        <param>
+          <type>string</type>
+          <declname>sql</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlQuery.cs" line="197" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlQuery.cs" bodystart="197" bodyend="208"/>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_sql_query_1a748a4ee9eb5f1123746ed0eedfb8d420" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>SqlCommand</type>
+        <definition>SqlCommand BudgetExecution.SqlQuery.GetUpdateCommand</definition>
+        <argsstring>()</argsstring>
+        <name>GetUpdateCommand</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlQuery.cs" line="209" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlQuery.cs" bodystart="209" bodyend="220"/>
+        <references refid="class_budget_execution_1_1_sql_query_1adbcb544a8156f4425a122cbaa22e2f58" compoundref="_sql_query_8cs" startline="43">BudgetExecution.SqlQuery.Adapter</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_budget_execution_1_1_sql_query_1a334ca54b51a9e1a3132b9ddcf23a5919" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>SqlCommandBuilder</type>
+        <definition>SqlCommandBuilder BudgetExecution.SqlQuery.GetCommandBuilder</definition>
+        <argsstring>()</argsstring>
+        <name>GetCommandBuilder</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlQuery.cs" line="59" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlQuery.cs" bodystart="59" bodyend="70"/>
+        <references refid="class_budget_execution_1_1_sql_query_1adbcb544a8156f4425a122cbaa22e2f58" compoundref="_sql_query_8cs" startline="43">BudgetExecution.SqlQuery.Adapter</references>
+        <referencedby refid="class_budget_execution_1_1_sql_query_1a10b8ad8047a606b76ac1f4f1fa90a7c6" compoundref="_sql_query_8cs" startline="14" endline="26">BudgetExecution.SqlQuery.SqlQuery</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_sql_query_1a7ea553cf06e0b960ad713bd9240e97dc" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>SqlDataAdapter</type>
+        <definition>SqlDataAdapter BudgetExecution.SqlQuery.GetDataAdapter</definition>
+        <argsstring>()</argsstring>
+        <name>GetDataAdapter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlQuery.cs" line="71" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlQuery.cs" bodystart="71" bodyend="82"/>
+        <references refid="class_budget_execution_1_1_sql_query_1a8513fe453932f16f1a9060c6f75092c8" compoundref="_sql_query_8cs" startline="50">BudgetExecution.SqlQuery.SelectCommand</references>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_sql_query_1a9b48240957fbc806ae8298f76885ffd5" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>string BudgetExecution.SqlQuery.GetParamString</definition>
+        <argsstring>(Dictionary&lt; string, object &gt; param)</argsstring>
+        <name>GetParamString</name>
+        <param>
+          <type>Dictionary&lt; string, object &gt;</type>
+          <declname>param</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlQuery.cs" line="83" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlQuery.cs" bodystart="83" bodyend="100"/>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_sql_query_1a326900f729cf065330ba1dfa1d983659" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>SqlCommand</type>
+        <definition>SqlCommand BudgetExecution.SqlQuery.GetSelectCommand</definition>
+        <argsstring>()</argsstring>
+        <name>GetSelectCommand</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlQuery.cs" line="101" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlQuery.cs" bodystart="101" bodyend="112"/>
+        <references refid="class_budget_execution_1_1_sql_query_1aa71c12ea290c8dbf4a5c95afc67a7eaf" compoundref="_sql_query_8cs" startline="45">BudgetExecution.SqlQuery.Connection</references>
+        <references refid="class_budget_execution_1_1_sql_query_1ad8c484dc2a58830faff34e26bf7ffeb1" compoundref="_sql_query_8cs" startline="51">BudgetExecution.SqlQuery.SelectStatement</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="package-func">
+      <memberdef kind="function" id="class_budget_execution_1_1_sql_query_1aa2351da1a9bc7530244cdb775bfdb551" prot="package" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>SqlDataAdapter</type>
+        <definition>SqlDataAdapter BudgetExecution.SqlQuery.GetDataAdapter</definition>
+        <argsstring>(string sql)</argsstring>
+        <name>GetDataAdapter</name>
+        <param>
+          <type>string</type>
+          <declname>sql</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlQuery.cs" line="113" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlQuery.cs" bodystart="113" bodyend="124"/>
+        <references refid="class_budget_execution_1_1_sql_query_1aa71c12ea290c8dbf4a5c95afc67a7eaf" compoundref="_sql_query_8cs" startline="45">BudgetExecution.SqlQuery.Connection</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlQuery.cs" line="9" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlQuery.cs" bodystart="8" bodyend="222"/>
+    <listofallmembers>
+      <member refid="class_budget_execution_1_1_sql_query_1adbcb544a8156f4425a122cbaa22e2f58" prot="public" virt="non-virtual"><scope>BudgetExecution::SqlQuery</scope><name>Adapter</name></member>
+      <member refid="class_budget_execution_1_1_sql_query_1a75adaa98276eaebcd2e774826194b155" prot="public" virt="non-virtual"><scope>BudgetExecution::SqlQuery</scope><name>CommandBuilder</name></member>
+      <member refid="class_budget_execution_1_1_sql_query_1aa71c12ea290c8dbf4a5c95afc67a7eaf" prot="public" virt="non-virtual"><scope>BudgetExecution::SqlQuery</scope><name>Connection</name></member>
+      <member refid="class_budget_execution_1_1_sql_query_1ab9b407091144291e8add89926efaff1f" prot="public" virt="non-virtual"><scope>BudgetExecution::SqlQuery</scope><name>DeleteCommand</name></member>
+      <member refid="class_budget_execution_1_1_sql_query_1a334ca54b51a9e1a3132b9ddcf23a5919" prot="private" virt="non-virtual"><scope>BudgetExecution::SqlQuery</scope><name>GetCommandBuilder</name></member>
+      <member refid="class_budget_execution_1_1_sql_query_1a9e550298948118af16120cfd4f6707ba" prot="public" virt="non-virtual"><scope>BudgetExecution::SqlQuery</scope><name>GetCommandBuilder</name></member>
+      <member refid="class_budget_execution_1_1_sql_query_1a7ea553cf06e0b960ad713bd9240e97dc" prot="private" virt="non-virtual"><scope>BudgetExecution::SqlQuery</scope><name>GetDataAdapter</name></member>
+      <member refid="class_budget_execution_1_1_sql_query_1aa2351da1a9bc7530244cdb775bfdb551" prot="package" virt="non-virtual"><scope>BudgetExecution::SqlQuery</scope><name>GetDataAdapter</name></member>
+      <member refid="class_budget_execution_1_1_sql_query_1ae4de0ca7d182bee5274c8ed7f02bfc2a" prot="public" virt="non-virtual"><scope>BudgetExecution::SqlQuery</scope><name>GetDataAdapter</name></member>
+      <member refid="class_budget_execution_1_1_sql_query_1a0ad1492587df740fe1d5a74fced111b7" prot="public" virt="non-virtual"><scope>BudgetExecution::SqlQuery</scope><name>GetDeleteCommand</name></member>
+      <member refid="class_budget_execution_1_1_sql_query_1a9421e339eb122e932560aba48d1dfece" prot="public" virt="non-virtual"><scope>BudgetExecution::SqlQuery</scope><name>GetInsertCommand</name></member>
+      <member refid="class_budget_execution_1_1_sql_query_1a9b48240957fbc806ae8298f76885ffd5" prot="private" virt="non-virtual"><scope>BudgetExecution::SqlQuery</scope><name>GetParamString</name></member>
+      <member refid="class_budget_execution_1_1_sql_query_1a326900f729cf065330ba1dfa1d983659" prot="private" virt="non-virtual"><scope>BudgetExecution::SqlQuery</scope><name>GetSelectCommand</name></member>
+      <member refid="class_budget_execution_1_1_sql_query_1a1bd4f8a7c42f8717c397d9af16a79c23" prot="public" virt="non-virtual"><scope>BudgetExecution::SqlQuery</scope><name>GetSelectCommand</name></member>
+      <member refid="class_budget_execution_1_1_sql_query_1af85935cb761c25dd84d78b9d408b6db0" prot="public" virt="non-virtual"><scope>BudgetExecution::SqlQuery</scope><name>GetSqlStatement</name></member>
+      <member refid="class_budget_execution_1_1_sql_query_1ae2035e1db858595516bcb5e232da4e8b" prot="public" virt="non-virtual"><scope>BudgetExecution::SqlQuery</scope><name>GetSqlStatement</name></member>
+      <member refid="class_budget_execution_1_1_sql_query_1a748a4ee9eb5f1123746ed0eedfb8d420" prot="public" virt="non-virtual"><scope>BudgetExecution::SqlQuery</scope><name>GetUpdateCommand</name></member>
+      <member refid="class_budget_execution_1_1_sql_query_1a6112fdfeca6fc5d886e836e8b1b1b097" prot="public" virt="non-virtual"><scope>BudgetExecution::SqlQuery</scope><name>InsertCommand</name></member>
+      <member refid="class_budget_execution_1_1_sql_query_1acc439e396527f1f64c87f10394a8e1c3" prot="public" virt="non-virtual"><scope>BudgetExecution::SqlQuery</scope><name>Parameter</name></member>
+      <member refid="class_budget_execution_1_1_sql_query_1a3477898636eb6fbb47d67b023a7d77c5" prot="public" virt="non-virtual"><scope>BudgetExecution::SqlQuery</scope><name>Reader</name></member>
+      <member refid="class_budget_execution_1_1_sql_query_1a8513fe453932f16f1a9060c6f75092c8" prot="public" virt="non-virtual"><scope>BudgetExecution::SqlQuery</scope><name>SelectCommand</name></member>
+      <member refid="class_budget_execution_1_1_sql_query_1ad8c484dc2a58830faff34e26bf7ffeb1" prot="public" virt="non-virtual"><scope>BudgetExecution::SqlQuery</scope><name>SelectStatement</name></member>
+      <member refid="class_budget_execution_1_1_sql_query_1a24ed62bc9a60747fad9282267d9c3a16" prot="public" virt="non-virtual"><scope>BudgetExecution::SqlQuery</scope><name>Source</name></member>
+      <member refid="class_budget_execution_1_1_sql_query_1a010d61061887be1521fe4ad145610fa1" prot="public" virt="non-virtual"><scope>BudgetExecution::SqlQuery</scope><name>Sql</name></member>
+      <member refid="class_budget_execution_1_1_sql_query_1a11b70fba5a3502c95ac3c7834afec736" prot="public" virt="non-virtual"><scope>BudgetExecution::SqlQuery</scope><name>SqlQuery</name></member>
+      <member refid="class_budget_execution_1_1_sql_query_1a10b8ad8047a606b76ac1f4f1fa90a7c6" prot="public" virt="non-virtual"><scope>BudgetExecution::SqlQuery</scope><name>SqlQuery</name></member>
+      <member refid="class_budget_execution_1_1_sql_query_1aa8116185d57aeb346dd4f8b67c4206a6" prot="public" virt="non-virtual"><scope>BudgetExecution::SqlQuery</scope><name>SqlQuery</name></member>
+      <member refid="class_budget_execution_1_1_sql_query_1a4efbcdd6a08afcd7a2578246e389d7df" prot="public" virt="non-virtual"><scope>BudgetExecution::SqlQuery</scope><name>SqlStatement</name></member>
+      <member refid="class_budget_execution_1_1_sql_query_1abce1ba583b21881517adaa380e439b58" prot="public" virt="non-virtual"><scope>BudgetExecution::SqlQuery</scope><name>TableName</name></member>
+      <member refid="class_budget_execution_1_1_sql_query_1a739ff5ec3ed2a6512f31b53acfb07f2b" prot="public" virt="non-virtual"><scope>BudgetExecution::SqlQuery</scope><name>UpdateCommand</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

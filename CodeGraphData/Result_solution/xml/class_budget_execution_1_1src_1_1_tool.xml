@@ -1,0 +1,120 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_budget_execution_1_1src_1_1_tool" kind="class" prot="public">
+    <compoundname>BudgetExecution::src::Tool</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MetroForm</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_budget_execution_1_1src_1_1_tool_1a9193b508e5fde1710606288d3ca9fcd8" prot="private" static="no" mutable="no">
+        <type>System.ComponentModel.IContainer</type>
+        <definition>System.ComponentModel.IContainer BudgetExecution.src.Tool.components</definition>
+        <argsstring></argsstring>
+        <name>components</name>
+        <initializer>= null</initializer>
+        <briefdescription>
+<para>Required designer variable. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Tool.Designer.cs" line="15" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Tool.Designer.cs" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_budget_execution_1_1src_1_1_tool_1a620f74a8e2b16c6daf918ea7b056e27a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>BudgetExecution.src.Tool.Tool</definition>
+        <argsstring>()</argsstring>
+        <name>Tool</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Tool.cs" line="14" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Tool.cs" bodystart="14" bodyend="17"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_budget_execution_1_1src_1_1_tool_1a4228fedd39921d1da07015d5e1fbf4cf" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void BudgetExecution.src.Tool.Dispose</definition>
+        <argsstring>(bool disposing)</argsstring>
+        <name>Dispose</name>
+        <param>
+          <type>bool</type>
+          <declname>disposing</declname>
+        </param>
+        <briefdescription>
+<para>Clean up any resources being used. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>disposing</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true if managed resources should be disposed; otherwise, false.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Tool.Designer.cs" line="21" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Tool.Designer.cs" bodystart="21" bodyend="28"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_budget_execution_1_1src_1_1_tool_1a1013134f85238962334b69c87ff0a729" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BudgetExecution.src.Tool.InitializeComponent</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeComponent</name>
+        <briefdescription>
+<para>Required method for Designer support - do not modify the contents of this method with the code editor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Tool.Designer.cs" line="36" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Tool.Designer.cs" bodystart="36" bodyend="55"/>
+        <references refid="namespace_budget_execution_1afa69cdcc242b50644155cb4adf244d32a800618943025315f869e4e1f09471012">BudgetExecution.F</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="409">
+        <label>BudgetExecution.src.Tool</label>
+        <link refid="class_budget_execution_1_1src_1_1_tool"/>
+        <childnode refid="410" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="410">
+        <label>Syncfusion::Windows::Forms::MetroForm</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="411">
+        <label>BudgetExecution.src.Tool</label>
+        <link refid="class_budget_execution_1_1src_1_1_tool"/>
+        <childnode refid="412" relation="public-inheritance">
+        </childnode>
+        <childnode refid="413" relation="usage">
+          <edgelabel>components</edgelabel>
+        </childnode>
+      </node>
+      <node id="412">
+        <label>Syncfusion::Windows::Forms::MetroForm</label>
+      </node>
+      <node id="413">
+        <label>System</label>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Tool.cs" line="13" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Tool.cs" bodystart="12" bodyend="18"/>
+    <listofallmembers>
+      <member refid="class_budget_execution_1_1src_1_1_tool_1a9193b508e5fde1710606288d3ca9fcd8" prot="private" virt="non-virtual"><scope>BudgetExecution::src::Tool</scope><name>components</name></member>
+      <member refid="class_budget_execution_1_1src_1_1_tool_1a4228fedd39921d1da07015d5e1fbf4cf" prot="protected" virt="non-virtual"><scope>BudgetExecution::src::Tool</scope><name>Dispose</name></member>
+      <member refid="class_budget_execution_1_1src_1_1_tool_1a1013134f85238962334b69c87ff0a729" prot="private" virt="non-virtual"><scope>BudgetExecution::src::Tool</scope><name>InitializeComponent</name></member>
+      <member refid="class_budget_execution_1_1src_1_1_tool_1a620f74a8e2b16c6daf918ea7b056e27a" prot="public" virt="non-virtual"><scope>BudgetExecution::src::Tool</scope><name>Tool</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

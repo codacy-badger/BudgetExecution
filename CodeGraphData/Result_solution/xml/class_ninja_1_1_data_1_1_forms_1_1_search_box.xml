@@ -1,0 +1,119 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_ninja_1_1_data_1_1_forms_1_1_search_box" kind="class" prot="public">
+    <compoundname>Ninja::Data::Forms::SearchBox</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">UserControl</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_ninja_1_1_data_1_1_forms_1_1_search_box_1ae09124845d178a664dac8f6f929cd9a1" prot="private" static="no" mutable="no">
+        <type>System.ComponentModel.IContainer</type>
+        <definition>System.ComponentModel.IContainer Ninja.Data.Forms.SearchBox.components</definition>
+        <argsstring></argsstring>
+        <name>components</name>
+        <initializer>= null</initializer>
+        <briefdescription>
+<para>Required designer variable. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SearchBox.Designer.cs" line="8" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SearchBox.Designer.cs" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_ninja_1_1_data_1_1_forms_1_1_search_box_1acaa8a36df623ceac3911718218e5d759" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Ninja.Data.Forms.SearchBox.SearchBox</definition>
+        <argsstring>()</argsstring>
+        <name>SearchBox</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SearchBox.cs" line="11" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SearchBox.cs" bodystart="11" bodyend="14"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_ninja_1_1_data_1_1_forms_1_1_search_box_1a0887f0b7da455782f4c55c3d060d6731" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void Ninja.Data.Forms.SearchBox.Dispose</definition>
+        <argsstring>(bool disposing)</argsstring>
+        <name>Dispose</name>
+        <param>
+          <type>bool</type>
+          <declname>disposing</declname>
+        </param>
+        <briefdescription>
+<para>Clean up any resources being used. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>disposing</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true if managed resources should be disposed; otherwise, false.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SearchBox.Designer.cs" line="14" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SearchBox.Designer.cs" bodystart="14" bodyend="21"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_ninja_1_1_data_1_1_forms_1_1_search_box_1a9118b3791dd59fd4b10ff0b81c93ef38" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Ninja.Data.Forms.SearchBox.InitializeComponent</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeComponent</name>
+        <briefdescription>
+<para>Required method for Designer support - do not modify the contents of this method with the code editor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SearchBox.Designer.cs" line="29" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SearchBox.Designer.cs" bodystart="29" bodyend="33"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="354">
+        <label>Ninja.Data.Forms.SearchBox</label>
+        <link refid="class_ninja_1_1_data_1_1_forms_1_1_search_box"/>
+        <childnode refid="355" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="355">
+        <label>UserControl</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="356">
+        <label>Ninja.Data.Forms.SearchBox</label>
+        <link refid="class_ninja_1_1_data_1_1_forms_1_1_search_box"/>
+        <childnode refid="357" relation="public-inheritance">
+        </childnode>
+        <childnode refid="358" relation="usage">
+          <edgelabel>components</edgelabel>
+        </childnode>
+      </node>
+      <node id="358">
+        <label>System</label>
+      </node>
+      <node id="357">
+        <label>UserControl</label>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SearchBox.cs" line="10" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SearchBox.cs" bodystart="9" bodyend="15"/>
+    <listofallmembers>
+      <member refid="class_ninja_1_1_data_1_1_forms_1_1_search_box_1ae09124845d178a664dac8f6f929cd9a1" prot="private" virt="non-virtual"><scope>Ninja::Data::Forms::SearchBox</scope><name>components</name></member>
+      <member refid="class_ninja_1_1_data_1_1_forms_1_1_search_box_1a0887f0b7da455782f4c55c3d060d6731" prot="protected" virt="non-virtual"><scope>Ninja::Data::Forms::SearchBox</scope><name>Dispose</name></member>
+      <member refid="class_ninja_1_1_data_1_1_forms_1_1_search_box_1a9118b3791dd59fd4b10ff0b81c93ef38" prot="private" virt="non-virtual"><scope>Ninja::Data::Forms::SearchBox</scope><name>InitializeComponent</name></member>
+      <member refid="class_ninja_1_1_data_1_1_forms_1_1_search_box_1acaa8a36df623ceac3911718218e5d759" prot="public" virt="non-virtual"><scope>Ninja::Data::Forms::SearchBox</scope><name>SearchBox</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

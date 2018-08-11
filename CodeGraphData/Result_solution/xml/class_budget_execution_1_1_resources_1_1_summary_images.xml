@@ -1,0 +1,161 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_budget_execution_1_1_resources_1_1_summary_images" kind="class" prot="package">
+    <compoundname>BudgetExecution::Resources::SummaryImages</compoundname>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_budget_execution_1_1_resources_1_1_summary_images_1a0701ba74237d5a4ec99169c9554eb67c" prot="private" static="yes" mutable="no">
+        <type>global::System.Resources.ResourceManager</type>
+        <definition>global::System.Resources.ResourceManager BudgetExecution.Resources.SummaryImages.resourceMan</definition>
+        <argsstring></argsstring>
+        <name>resourceMan</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/SummaryImages.Designer.cs" line="27" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/SummaryImages.Designer.cs" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_resources_1_1_summary_images_1aa2ec3617f360dbf942009f8ecfd10f5f" prot="private" static="yes" mutable="no">
+        <type>global::System.Globalization.CultureInfo</type>
+        <definition>global::System.Globalization.CultureInfo BudgetExecution.Resources.SummaryImages.resourceCulture</definition>
+        <argsstring></argsstring>
+        <name>resourceCulture</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/SummaryImages.Designer.cs" line="29" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/SummaryImages.Designer.cs" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_budget_execution_1_1_resources_1_1_summary_images_1afaceb19a7bb608fc43d571880727da75" prot="package" static="yes" readable="no" writable="no" gettable="yes" settable="no">
+        <type>global::System.Resources.ResourceManager</type>
+        <definition>global::System.Resources.ResourceManager BudgetExecution.Resources.SummaryImages.ResourceManager</definition>
+        <argsstring></argsstring>
+        <name>ResourceManager</name>
+        <briefdescription>
+<para>Returns the cached ResourceManager instance used by this class. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/SummaryImages.Designer.cs" line="39" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/SummaryImages.Designer.cs" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_resources_1_1_summary_images_1a20122a6b4c9d3b35bdb4f7d724517d71" prot="package" static="yes" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>global::System.Globalization.CultureInfo</type>
+        <definition>global::System.Globalization.CultureInfo BudgetExecution.Resources.SummaryImages.Culture</definition>
+        <argsstring></argsstring>
+        <name>Culture</name>
+        <briefdescription>
+<para>Overrides the current thread&apos;s CurrentUICulture property for all resource lookups using this strongly typed resource class. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/SummaryImages.Designer.cs" line="54" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/SummaryImages.Designer.cs" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_resources_1_1_summary_images_1a4a9db2a62c76365e911df3065d254f9b" prot="package" static="yes" readable="no" writable="no" gettable="yes" settable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap BudgetExecution.Resources.SummaryImages.Appropriation</definition>
+        <argsstring></argsstring>
+        <name>Appropriation</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/SummaryImages.Designer.cs" line="66" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/SummaryImages.Designer.cs" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_resources_1_1_summary_images_1a49c80e5419664bc986e58edc768558cd" prot="package" static="yes" readable="no" writable="no" gettable="yes" settable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap BudgetExecution.Resources.SummaryImages.DivisionAccounts</definition>
+        <argsstring></argsstring>
+        <name>DivisionAccounts</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/SummaryImages.Designer.cs" line="76" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/SummaryImages.Designer.cs" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_resources_1_1_summary_images_1a78858e989bdfb900321790001af53478" prot="package" static="yes" readable="no" writable="no" gettable="yes" settable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap BudgetExecution.Resources.SummaryImages.FTE</definition>
+        <argsstring></argsstring>
+        <name>FTE</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/SummaryImages.Designer.cs" line="86" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/SummaryImages.Designer.cs" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_resources_1_1_summary_images_1ab83a84e5279a33546a1cb27f451b0804" prot="package" static="yes" readable="no" writable="no" gettable="yes" settable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap BudgetExecution.Resources.SummaryImages.RegionalAccounts</definition>
+        <argsstring></argsstring>
+        <name>RegionalAccounts</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/SummaryImages.Designer.cs" line="96" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/SummaryImages.Designer.cs" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="package-func">
+      <memberdef kind="function" id="class_budget_execution_1_1_resources_1_1_summary_images_1af6e8eff02163cfd99f654dfbd916822a" prot="package" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>BudgetExecution.Resources.SummaryImages.SummaryImages</definition>
+        <argsstring>()</argsstring>
+        <name>SummaryImages</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/SummaryImages.Designer.cs" line="32" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/SummaryImages.Designer.cs" bodystart="32" bodyend="33"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A strongly-typed resource class, for looking up localized strings, etc. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="408">
+        <label>BudgetExecution.Resources.Resources</label>
+        <link refid="class_budget_execution_1_1_resources_1_1_resources"/>
+        <childnode refid="408" relation="usage">
+          <edgelabel>resourceMan</edgelabel>
+        </childnode>
+      </node>
+      <node id="407">
+        <label>BudgetExecution.Resources.SummaryImages</label>
+        <link refid="class_budget_execution_1_1_resources_1_1_summary_images"/>
+        <childnode refid="408" relation="usage">
+          <edgelabel>resourceMan</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/SummaryImages.Designer.cs" line="25" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/SummaryImages.Designer.cs" bodystart="25" bodyend="102"/>
+    <listofallmembers>
+      <member refid="class_budget_execution_1_1_resources_1_1_summary_images_1a4a9db2a62c76365e911df3065d254f9b" prot="package" virt="non-virtual"><scope>BudgetExecution::Resources::SummaryImages</scope><name>Appropriation</name></member>
+      <member refid="class_budget_execution_1_1_resources_1_1_summary_images_1a20122a6b4c9d3b35bdb4f7d724517d71" prot="package" virt="non-virtual"><scope>BudgetExecution::Resources::SummaryImages</scope><name>Culture</name></member>
+      <member refid="class_budget_execution_1_1_resources_1_1_summary_images_1a49c80e5419664bc986e58edc768558cd" prot="package" virt="non-virtual"><scope>BudgetExecution::Resources::SummaryImages</scope><name>DivisionAccounts</name></member>
+      <member refid="class_budget_execution_1_1_resources_1_1_summary_images_1a78858e989bdfb900321790001af53478" prot="package" virt="non-virtual"><scope>BudgetExecution::Resources::SummaryImages</scope><name>FTE</name></member>
+      <member refid="class_budget_execution_1_1_resources_1_1_summary_images_1ab83a84e5279a33546a1cb27f451b0804" prot="package" virt="non-virtual"><scope>BudgetExecution::Resources::SummaryImages</scope><name>RegionalAccounts</name></member>
+      <member refid="class_budget_execution_1_1_resources_1_1_summary_images_1aa2ec3617f360dbf942009f8ecfd10f5f" prot="private" virt="non-virtual"><scope>BudgetExecution::Resources::SummaryImages</scope><name>resourceCulture</name></member>
+      <member refid="class_budget_execution_1_1_resources_1_1_summary_images_1a0701ba74237d5a4ec99169c9554eb67c" prot="private" virt="non-virtual"><scope>BudgetExecution::Resources::SummaryImages</scope><name>resourceMan</name></member>
+      <member refid="class_budget_execution_1_1_resources_1_1_summary_images_1afaceb19a7bb608fc43d571880727da75" prot="package" virt="non-virtual"><scope>BudgetExecution::Resources::SummaryImages</scope><name>ResourceManager</name></member>
+      <member refid="class_budget_execution_1_1_resources_1_1_summary_images_1af6e8eff02163cfd99f654dfbd916822a" prot="package" virt="non-virtual"><scope>BudgetExecution::Resources::SummaryImages</scope><name>SummaryImages</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

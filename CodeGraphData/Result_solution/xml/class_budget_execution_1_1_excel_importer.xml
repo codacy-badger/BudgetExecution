@@ -1,0 +1,900 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_budget_execution_1_1_excel_importer" kind="class" prot="public">
+    <compoundname>BudgetExecution::ExcelImporter</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MetroForm</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_budget_execution_1_1_excel_importer_1af03e43e7852967a708062702fc1597be" prot="private" static="no" mutable="no">
+        <type>System.ComponentModel.IContainer</type>
+        <definition>System.ComponentModel.IContainer BudgetExecution.ExcelImporter.components</definition>
+        <argsstring></argsstring>
+        <name>components</name>
+        <initializer>= null</initializer>
+        <briefdescription>
+<para>Required designer variable. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelImporter.Designer.cs" line="15" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelImporter.Designer.cs" bodystart="15" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_excel_importer_1a057fb6a384f5c50cf9dcf97069b567ad" compoundref="_excel_importer_8_designer_8cs" startline="21" endline="28">BudgetExecution.ExcelImporter.Dispose</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_excel_importer_1a9a30106a1345dcc10886a30536cbf431" prot="private" static="no" mutable="no">
+        <type>MetroFramework.Controls.MetroPanel</type>
+        <definition>MetroFramework.Controls.MetroPanel BudgetExecution.ExcelImporter.metroPanel5</definition>
+        <argsstring></argsstring>
+        <name>metroPanel5</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelImporter.Designer.cs" line="861" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelImporter.Designer.cs" bodystart="861" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_excel_importer_1a9606fe871817dd86c0f6ce5a7907d40b" prot="private" static="no" mutable="no">
+        <type>Syncfusion.Windows.Forms.Tools.TabControlAdv</type>
+        <definition>Syncfusion.Windows.Forms.Tools.TabControlAdv BudgetExecution.ExcelImporter.DataTabControl</definition>
+        <argsstring></argsstring>
+        <name>DataTabControl</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelImporter.Designer.cs" line="862" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelImporter.Designer.cs" bodystart="862" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_excel_importer_1a26a6debf3421c1b4f2d0e90aca9c7d4d" compoundref="_excel_importer_8_designer_8cs" startline="36" endline="857">BudgetExecution.ExcelImporter.InitializeComponent</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_excel_importer_1ab7b3b0aceedcba220827a6017df94b7f" prot="private" static="no" mutable="no">
+        <type>Syncfusion.Windows.Forms.Tools.TabPageAdv</type>
+        <definition>Syncfusion.Windows.Forms.Tools.TabPageAdv BudgetExecution.ExcelImporter.DataFilterTab</definition>
+        <argsstring></argsstring>
+        <name>DataFilterTab</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelImporter.Designer.cs" line="863" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelImporter.Designer.cs" bodystart="863" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_excel_importer_1a3640b97ebf9606469a4bb03b335b9ae0" prot="private" static="no" mutable="no">
+        <type>MetroFramework.Controls.MetroPanel</type>
+        <definition>MetroFramework.Controls.MetroPanel BudgetExecution.ExcelImporter.metroPanel3</definition>
+        <argsstring></argsstring>
+        <name>metroPanel3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelImporter.Designer.cs" line="864" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelImporter.Designer.cs" bodystart="864" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_excel_importer_1a6ea9538c88282a766562218beb8d0e0b" prot="private" static="no" mutable="no">
+        <type>MetroSet_UI.Controls.MetroSetComboBox</type>
+        <definition>MetroSet_UI.Controls.MetroSetComboBox BudgetExecution.ExcelImporter.Filter1</definition>
+        <argsstring></argsstring>
+        <name>Filter1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelImporter.Designer.cs" line="865" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelImporter.Designer.cs" bodystart="865" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_excel_importer_1a7a621cdf1e404ff63f1549cb6d0e3453" prot="private" static="no" mutable="no">
+        <type>MetroFramework.Controls.MetroLabel</type>
+        <definition>MetroFramework.Controls.MetroLabel BudgetExecution.ExcelImporter.metroLabel1</definition>
+        <argsstring></argsstring>
+        <name>metroLabel1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelImporter.Designer.cs" line="866" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelImporter.Designer.cs" bodystart="866" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_excel_importer_1abbca4ce7d99ce92c56009ab114960d6f" prot="private" static="no" mutable="no">
+        <type>MetroFramework.Controls.MetroLabel</type>
+        <definition>MetroFramework.Controls.MetroLabel BudgetExecution.ExcelImporter.label2</definition>
+        <argsstring></argsstring>
+        <name>label2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelImporter.Designer.cs" line="867" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelImporter.Designer.cs" bodystart="867" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_excel_importer_1a028ad914d25f05e36ff301708907c87e" prot="private" static="no" mutable="no">
+        <type>MetroSet_UI.Controls.MetroSetComboBox</type>
+        <definition>MetroSet_UI.Controls.MetroSetComboBox BudgetExecution.ExcelImporter.FIlter2</definition>
+        <argsstring></argsstring>
+        <name>FIlter2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelImporter.Designer.cs" line="868" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelImporter.Designer.cs" bodystart="868" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_excel_importer_1a73a1cd2e45fb9bce0b5acd01f7ad80af" prot="private" static="no" mutable="no">
+        <type>MetroSet_UI.Controls.MetroSetComboBox</type>
+        <definition>MetroSet_UI.Controls.MetroSetComboBox BudgetExecution.ExcelImporter.Filter3</definition>
+        <argsstring></argsstring>
+        <name>Filter3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelImporter.Designer.cs" line="869" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelImporter.Designer.cs" bodystart="869" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_excel_importer_1a836cde18108986fcafbe0b2b3ef92e9c" prot="private" static="no" mutable="no">
+        <type>MetroFramework.Controls.MetroLabel</type>
+        <definition>MetroFramework.Controls.MetroLabel BudgetExecution.ExcelImporter.metroLabel6</definition>
+        <argsstring></argsstring>
+        <name>metroLabel6</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelImporter.Designer.cs" line="870" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelImporter.Designer.cs" bodystart="870" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_excel_importer_1ac0d969c4e4e0af9d85abd7a2b97dcbbb" prot="private" static="no" mutable="no">
+        <type>Syncfusion.Windows.Forms.Tools.TabPageAdv</type>
+        <definition>Syncfusion.Windows.Forms.Tools.TabPageAdv BudgetExecution.ExcelImporter.DataFunctionTab</definition>
+        <argsstring></argsstring>
+        <name>DataFunctionTab</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelImporter.Designer.cs" line="871" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelImporter.Designer.cs" bodystart="871" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_excel_importer_1ab72d702b81028112405a80411130209a" prot="private" static="no" mutable="no">
+        <type>MetroFramework.Controls.MetroPanel</type>
+        <definition>MetroFramework.Controls.MetroPanel BudgetExecution.ExcelImporter.metroPanel4</definition>
+        <argsstring></argsstring>
+        <name>metroPanel4</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelImporter.Designer.cs" line="872" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelImporter.Designer.cs" bodystart="872" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_excel_importer_1a590a817dd105183b271827edad54ebf2" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.FlowLayoutPanel</type>
+        <definition>System.Windows.Forms.FlowLayoutPanel BudgetExecution.ExcelImporter.flowLayoutPanel1</definition>
+        <argsstring></argsstring>
+        <name>flowLayoutPanel1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelImporter.Designer.cs" line="873" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelImporter.Designer.cs" bodystart="873" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_excel_importer_1aa369c80d7d2ad5aed097b0ea54bb5390" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Button</type>
+        <definition>System.Windows.Forms.Button BudgetExecution.ExcelImporter.button1</definition>
+        <argsstring></argsstring>
+        <name>button1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelImporter.Designer.cs" line="874" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelImporter.Designer.cs" bodystart="874" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_excel_importer_1a0619fd1f4bc4329bc9b8648350ec8c09" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Button</type>
+        <definition>System.Windows.Forms.Button BudgetExecution.ExcelImporter.button6</definition>
+        <argsstring></argsstring>
+        <name>button6</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelImporter.Designer.cs" line="875" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelImporter.Designer.cs" bodystart="875" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_excel_importer_1af46623992988e8127f732b84a28f1638" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Button</type>
+        <definition>System.Windows.Forms.Button BudgetExecution.ExcelImporter.button7</definition>
+        <argsstring></argsstring>
+        <name>button7</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelImporter.Designer.cs" line="876" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelImporter.Designer.cs" bodystart="876" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_excel_importer_1aeae8e1d43bc83eecd1b190ae0e084422" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Button</type>
+        <definition>System.Windows.Forms.Button BudgetExecution.ExcelImporter.button10</definition>
+        <argsstring></argsstring>
+        <name>button10</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelImporter.Designer.cs" line="877" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelImporter.Designer.cs" bodystart="877" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_excel_importer_1a8a3e7a5407658e552acdd99157af1b3d" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Button</type>
+        <definition>System.Windows.Forms.Button BudgetExecution.ExcelImporter.button13</definition>
+        <argsstring></argsstring>
+        <name>button13</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelImporter.Designer.cs" line="878" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelImporter.Designer.cs" bodystart="878" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_excel_importer_1a4c9ba543e416dd5ad9106d5b2d2aa06d" prot="private" static="no" mutable="no">
+        <type>MetroFramework.Controls.MetroPanel</type>
+        <definition>MetroFramework.Controls.MetroPanel BudgetExecution.ExcelImporter.metroPanel1</definition>
+        <argsstring></argsstring>
+        <name>metroPanel1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelImporter.Designer.cs" line="879" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelImporter.Designer.cs" bodystart="879" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_excel_importer_1a3c60d532626576d5918c63470e0b2818" prot="private" static="no" mutable="no">
+        <type>MetroFramework.Controls.MetroLabel</type>
+        <definition>MetroFramework.Controls.MetroLabel BudgetExecution.ExcelImporter.metroLabel5</definition>
+        <argsstring></argsstring>
+        <name>metroLabel5</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelImporter.Designer.cs" line="880" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelImporter.Designer.cs" bodystart="880" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_excel_importer_1a7aaee6988eb9f3267436b8b84792b142" prot="private" static="no" mutable="no">
+        <type>MetroFramework.Controls.MetroLabel</type>
+        <definition>MetroFramework.Controls.MetroLabel BudgetExecution.ExcelImporter.metroLabel4</definition>
+        <argsstring></argsstring>
+        <name>metroLabel4</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelImporter.Designer.cs" line="881" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelImporter.Designer.cs" bodystart="881" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_excel_importer_1ad029054e3a9ebd15edc9497439824a3d" prot="private" static="no" mutable="no">
+        <type>MetroFramework.Controls.MetroLabel</type>
+        <definition>MetroFramework.Controls.MetroLabel BudgetExecution.ExcelImporter.metroLabel3</definition>
+        <argsstring></argsstring>
+        <name>metroLabel3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelImporter.Designer.cs" line="882" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelImporter.Designer.cs" bodystart="882" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_excel_importer_1a6870d947ce87b62179006e7740a30f1d" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.DataGridView</type>
+        <definition>System.Windows.Forms.DataGridView BudgetExecution.ExcelImporter.SQLiteGrid</definition>
+        <argsstring></argsstring>
+        <name>SQLiteGrid</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelImporter.Designer.cs" line="883" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelImporter.Designer.cs" bodystart="883" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_excel_importer_1a26a6debf3421c1b4f2d0e90aca9c7d4d" compoundref="_excel_importer_8_designer_8cs" startline="36" endline="857">BudgetExecution.ExcelImporter.InitializeComponent</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_excel_importer_1a56ae32af90499b73710c5db1e06c7391" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.BindingNavigator</type>
+        <definition>System.Windows.Forms.BindingNavigator BudgetExecution.ExcelImporter.Navigator</definition>
+        <argsstring></argsstring>
+        <name>Navigator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelImporter.Designer.cs" line="884" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelImporter.Designer.cs" bodystart="884" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_excel_importer_1a26a6debf3421c1b4f2d0e90aca9c7d4d" compoundref="_excel_importer_8_designer_8cs" startline="36" endline="857">BudgetExecution.ExcelImporter.InitializeComponent</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_excel_importer_1ac95ed4d6c6b1aee7acbe5463257ec70c" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripLabel</type>
+        <definition>System.Windows.Forms.ToolStripLabel BudgetExecution.ExcelImporter.toolStripLabel2</definition>
+        <argsstring></argsstring>
+        <name>toolStripLabel2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelImporter.Designer.cs" line="885" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelImporter.Designer.cs" bodystart="885" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_excel_importer_1a7ac375cc9cb3c7261c2ab75ab1eb7a3b" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripSeparator</type>
+        <definition>System.Windows.Forms.ToolStripSeparator BudgetExecution.ExcelImporter.toolStripSeparator3</definition>
+        <argsstring></argsstring>
+        <name>toolStripSeparator3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelImporter.Designer.cs" line="886" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelImporter.Designer.cs" bodystart="886" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_excel_importer_1a133a3b3b411ffe09807a1c4e619d2689" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripButton</type>
+        <definition>System.Windows.Forms.ToolStripButton BudgetExecution.ExcelImporter.toolStripButton10</definition>
+        <argsstring></argsstring>
+        <name>toolStripButton10</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelImporter.Designer.cs" line="887" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelImporter.Designer.cs" bodystart="887" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_excel_importer_1aa46945ba1470faa53fb9cd09f388bfd9" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripSeparator</type>
+        <definition>System.Windows.Forms.ToolStripSeparator BudgetExecution.ExcelImporter.toolStripSeparator10</definition>
+        <argsstring></argsstring>
+        <name>toolStripSeparator10</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelImporter.Designer.cs" line="888" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelImporter.Designer.cs" bodystart="888" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_excel_importer_1a6bf707ba3dd707d0c6e10cfd4d165f65" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripTextBox</type>
+        <definition>System.Windows.Forms.ToolStripTextBox BudgetExecution.ExcelImporter.toolStripTextBox2</definition>
+        <argsstring></argsstring>
+        <name>toolStripTextBox2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelImporter.Designer.cs" line="889" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelImporter.Designer.cs" bodystart="889" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_excel_importer_1a395b82a1b359b65a2ba85bb42725eda8" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripSeparator</type>
+        <definition>System.Windows.Forms.ToolStripSeparator BudgetExecution.ExcelImporter.toolStripSeparator11</definition>
+        <argsstring></argsstring>
+        <name>toolStripSeparator11</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelImporter.Designer.cs" line="890" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelImporter.Designer.cs" bodystart="890" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_excel_importer_1a6c070960618a2d62fc90bbbb73ef739b" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripButton</type>
+        <definition>System.Windows.Forms.ToolStripButton BudgetExecution.ExcelImporter.toolStripButton11</definition>
+        <argsstring></argsstring>
+        <name>toolStripButton11</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelImporter.Designer.cs" line="891" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelImporter.Designer.cs" bodystart="891" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_excel_importer_1afa6d772adce1b23b57a32831aeb462ee" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripSeparator</type>
+        <definition>System.Windows.Forms.ToolStripSeparator BudgetExecution.ExcelImporter.toolStripSeparator13</definition>
+        <argsstring></argsstring>
+        <name>toolStripSeparator13</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelImporter.Designer.cs" line="892" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelImporter.Designer.cs" bodystart="892" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_excel_importer_1a1c47aefc4ebb940837e0cda4a10d510f" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripButton</type>
+        <definition>System.Windows.Forms.ToolStripButton BudgetExecution.ExcelImporter.CopyButton</definition>
+        <argsstring></argsstring>
+        <name>CopyButton</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelImporter.Designer.cs" line="893" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelImporter.Designer.cs" bodystart="893" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_excel_importer_1a3164d55868bc930ae3682c4e26e69fa5" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripSeparator</type>
+        <definition>System.Windows.Forms.ToolStripSeparator BudgetExecution.ExcelImporter.toolStripSeparator15</definition>
+        <argsstring></argsstring>
+        <name>toolStripSeparator15</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelImporter.Designer.cs" line="894" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelImporter.Designer.cs" bodystart="894" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_excel_importer_1aa4cebdbca3e75f77b861622e5e7d1087" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripButton</type>
+        <definition>System.Windows.Forms.ToolStripButton BudgetExecution.ExcelImporter.toolStripButton13</definition>
+        <argsstring></argsstring>
+        <name>toolStripButton13</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelImporter.Designer.cs" line="895" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelImporter.Designer.cs" bodystart="895" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_excel_importer_1a7b9a30dfb489ba9da51825e37abf9a67" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripSeparator</type>
+        <definition>System.Windows.Forms.ToolStripSeparator BudgetExecution.ExcelImporter.toolStripSeparator18</definition>
+        <argsstring></argsstring>
+        <name>toolStripSeparator18</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelImporter.Designer.cs" line="896" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelImporter.Designer.cs" bodystart="896" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_excel_importer_1a427a740deb5108c90af5ca4253d560ce" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripButton</type>
+        <definition>System.Windows.Forms.ToolStripButton BudgetExecution.ExcelImporter.toolStripButton12</definition>
+        <argsstring></argsstring>
+        <name>toolStripButton12</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelImporter.Designer.cs" line="897" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelImporter.Designer.cs" bodystart="897" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_excel_importer_1ae429c317f9c64ffb369e8e3e20bd0720" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripSeparator</type>
+        <definition>System.Windows.Forms.ToolStripSeparator BudgetExecution.ExcelImporter.toolStripSeparator16</definition>
+        <argsstring></argsstring>
+        <name>toolStripSeparator16</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelImporter.Designer.cs" line="898" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelImporter.Designer.cs" bodystart="898" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_excel_importer_1a231d4e338e2cb8af9a93849195cda1cf" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripButton</type>
+        <definition>System.Windows.Forms.ToolStripButton BudgetExecution.ExcelImporter.ResetButton</definition>
+        <argsstring></argsstring>
+        <name>ResetButton</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelImporter.Designer.cs" line="899" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelImporter.Designer.cs" bodystart="899" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_excel_importer_1a581565571c55693312d3c2ac54fe4b4e" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripSeparator</type>
+        <definition>System.Windows.Forms.ToolStripSeparator BudgetExecution.ExcelImporter.toolStripSeparator14</definition>
+        <argsstring></argsstring>
+        <name>toolStripSeparator14</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelImporter.Designer.cs" line="900" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelImporter.Designer.cs" bodystart="900" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_excel_importer_1a2093664e4699fb10dc69018e47ba148c" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripButton</type>
+        <definition>System.Windows.Forms.ToolStripButton BudgetExecution.ExcelImporter.AddButton</definition>
+        <argsstring></argsstring>
+        <name>AddButton</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelImporter.Designer.cs" line="901" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelImporter.Designer.cs" bodystart="901" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_excel_importer_1a0f3493bd93cc36b9cce84ce2523bdabf" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripSeparator</type>
+        <definition>System.Windows.Forms.ToolStripSeparator BudgetExecution.ExcelImporter.toolStripSeparator19</definition>
+        <argsstring></argsstring>
+        <name>toolStripSeparator19</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelImporter.Designer.cs" line="902" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelImporter.Designer.cs" bodystart="902" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_excel_importer_1a76f66c7898599e1abe8fcb1c93c27b69" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripButton</type>
+        <definition>System.Windows.Forms.ToolStripButton BudgetExecution.ExcelImporter.toolStripButton7</definition>
+        <argsstring></argsstring>
+        <name>toolStripButton7</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelImporter.Designer.cs" line="903" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelImporter.Designer.cs" bodystart="903" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_excel_importer_1abecee11f3284f020953358bb70b8aa7e" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripSeparator</type>
+        <definition>System.Windows.Forms.ToolStripSeparator BudgetExecution.ExcelImporter.GridRefreshButton</definition>
+        <argsstring></argsstring>
+        <name>GridRefreshButton</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelImporter.Designer.cs" line="904" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelImporter.Designer.cs" bodystart="904" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_excel_importer_1abe619fb852c7f471ddc1d0cc4ca5f294" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripButton</type>
+        <definition>System.Windows.Forms.ToolStripButton BudgetExecution.ExcelImporter.toolStripButton9</definition>
+        <argsstring></argsstring>
+        <name>toolStripButton9</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelImporter.Designer.cs" line="905" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelImporter.Designer.cs" bodystart="905" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_excel_importer_1a9832c55ad254e5d6d71da8ebfbfb11c4" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripSeparator</type>
+        <definition>System.Windows.Forms.ToolStripSeparator BudgetExecution.ExcelImporter.toolStripSeparator12</definition>
+        <argsstring></argsstring>
+        <name>toolStripSeparator12</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelImporter.Designer.cs" line="906" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelImporter.Designer.cs" bodystart="906" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_excel_importer_1af63443cb81d8716fe7ff052958fc3e86" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripButton</type>
+        <definition>System.Windows.Forms.ToolStripButton BudgetExecution.ExcelImporter.toolStripButton14</definition>
+        <argsstring></argsstring>
+        <name>toolStripButton14</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelImporter.Designer.cs" line="907" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelImporter.Designer.cs" bodystart="907" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_excel_importer_1a1ecdf6fb8f423b445bc1d5ca6cd51c9e" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripSeparator</type>
+        <definition>System.Windows.Forms.ToolStripSeparator BudgetExecution.ExcelImporter.toolStripSeparator17</definition>
+        <argsstring></argsstring>
+        <name>toolStripSeparator17</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelImporter.Designer.cs" line="908" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelImporter.Designer.cs" bodystart="908" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_excel_importer_1a648934b10c05a08d7181efa8db15b718" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripButton</type>
+        <definition>System.Windows.Forms.ToolStripButton BudgetExecution.ExcelImporter.toolStripButton15</definition>
+        <argsstring></argsstring>
+        <name>toolStripButton15</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelImporter.Designer.cs" line="909" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelImporter.Designer.cs" bodystart="909" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_excel_importer_1a21e2d0b766969cfa8d308e2d9fa10704" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripSeparator</type>
+        <definition>System.Windows.Forms.ToolStripSeparator BudgetExecution.ExcelImporter.toolStripSeparator20</definition>
+        <argsstring></argsstring>
+        <name>toolStripSeparator20</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelImporter.Designer.cs" line="910" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelImporter.Designer.cs" bodystart="910" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_excel_importer_1a6c37bac3a931333e90c8fc468a1f6613" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripButton</type>
+        <definition>System.Windows.Forms.ToolStripButton BudgetExecution.ExcelImporter.ReprogrammingButton</definition>
+        <argsstring></argsstring>
+        <name>ReprogrammingButton</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelImporter.Designer.cs" line="911" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelImporter.Designer.cs" bodystart="911" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_budget_execution_1_1_excel_importer_1ac7a0295e7f167d01a2a15f6ca98a3938" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>BudgetExecution.ExcelImporter.ExcelImporter</definition>
+        <argsstring>()</argsstring>
+        <name>ExcelImporter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelImporter.cs" line="10" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelImporter.cs" bodystart="10" bodyend="14"/>
+        <references refid="class_budget_execution_1_1_excel_importer_1a26a6debf3421c1b4f2d0e90aca9c7d4d" compoundref="_excel_importer_8_designer_8cs" startline="36" endline="857">BudgetExecution.ExcelImporter.InitializeComponent</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_budget_execution_1_1_excel_importer_1a9dcd0c17ea6355f95853ee8750191e31" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BudgetExecution.ExcelImporter.ExcelImporter_Load</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>ExcelImporter_Load</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelImporter.cs" line="16" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelImporter.cs" bodystart="16" bodyend="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_excel_importer_1a26a6debf3421c1b4f2d0e90aca9c7d4d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BudgetExecution.ExcelImporter.InitializeComponent</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeComponent</name>
+        <briefdescription>
+<para>Required method for Designer support - do not modify the contents of this method with the code editor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelImporter.Designer.cs" line="36" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelImporter.Designer.cs" bodystart="36" bodyend="857"/>
+        <references refid="class_budget_execution_1_1_excel_importer_1a9606fe871817dd86c0f6ce5a7907d40b" compoundref="_excel_importer_8_designer_8cs" startline="862">BudgetExecution.ExcelImporter.DataTabControl</references>
+        <references refid="namespace_budget_execution_1afa69cdcc242b50644155cb4adf244d32a800618943025315f869e4e1f09471012">BudgetExecution.F</references>
+        <references refid="class_budget_execution_1_1_excel_importer_1a56ae32af90499b73710c5db1e06c7391" compoundref="_excel_importer_8_designer_8cs" startline="884">BudgetExecution.ExcelImporter.Navigator</references>
+        <references refid="class_budget_execution_1_1_excel_importer_1a6870d947ce87b62179006e7740a30f1d" compoundref="_excel_importer_8_designer_8cs" startline="883">BudgetExecution.ExcelImporter.SQLiteGrid</references>
+        <referencedby refid="class_budget_execution_1_1_excel_importer_1ac7a0295e7f167d01a2a15f6ca98a3938" compoundref="_excel_importer_8cs" startline="10" endline="14">BudgetExecution.ExcelImporter.ExcelImporter</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_budget_execution_1_1_excel_importer_1a057fb6a384f5c50cf9dcf97069b567ad" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void BudgetExecution.ExcelImporter.Dispose</definition>
+        <argsstring>(bool disposing)</argsstring>
+        <name>Dispose</name>
+        <param>
+          <type>bool</type>
+          <declname>disposing</declname>
+        </param>
+        <briefdescription>
+<para>Clean up any resources being used. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>disposing</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true if managed resources should be disposed; otherwise, false.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelImporter.Designer.cs" line="21" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelImporter.Designer.cs" bodystart="21" bodyend="28"/>
+        <references refid="class_budget_execution_1_1_excel_importer_1af03e43e7852967a708062702fc1597be" compoundref="_excel_importer_8_designer_8cs" startline="15">BudgetExecution.ExcelImporter.components</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="147">
+        <label>Syncfusion::Windows::Forms::MetroForm</label>
+      </node>
+      <node id="146">
+        <label>BudgetExecution.ExcelImporter</label>
+        <link refid="class_budget_execution_1_1_excel_importer"/>
+        <childnode refid="147" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="150">
+        <label>Windows</label>
+      </node>
+      <node id="151">
+        <label>Controls</label>
+      </node>
+      <node id="149">
+        <label>Syncfusion::Windows::Forms::MetroForm</label>
+      </node>
+      <node id="152">
+        <label>System</label>
+      </node>
+      <node id="148">
+        <label>BudgetExecution.ExcelImporter</label>
+        <link refid="class_budget_execution_1_1_excel_importer"/>
+        <childnode refid="149" relation="public-inheritance">
+        </childnode>
+        <childnode refid="150" relation="usage">
+          <edgelabel>DataTabControl</edgelabel>
+          <edgelabel>DataFilterTab</edgelabel>
+          <edgelabel>DataFunctionTab</edgelabel>
+        </childnode>
+        <childnode refid="151" relation="usage">
+          <edgelabel>FIlter2</edgelabel>
+          <edgelabel>Filter1</edgelabel>
+          <edgelabel>label2</edgelabel>
+          <edgelabel>Filter3</edgelabel>
+          <edgelabel>metroLabel1</edgelabel>
+          <edgelabel>metroPanel1</edgelabel>
+          <edgelabel>metroLabel3</edgelabel>
+          <edgelabel>metroLabel4</edgelabel>
+          <edgelabel>metroPanel3</edgelabel>
+          <edgelabel>metroLabel5</edgelabel>
+          <edgelabel>...</edgelabel>
+        </childnode>
+        <childnode refid="152" relation="usage">
+          <edgelabel>toolStripSeparator14</edgelabel>
+          <edgelabel>toolStripLabel2</edgelabel>
+          <edgelabel>Navigator</edgelabel>
+          <edgelabel>button10</edgelabel>
+          <edgelabel>toolStripSeparator15</edgelabel>
+          <edgelabel>toolStripButton10</edgelabel>
+          <edgelabel>toolStripButton7</edgelabel>
+          <edgelabel>ResetButton</edgelabel>
+          <edgelabel>toolStripSeparator16</edgelabel>
+          <edgelabel>CopyButton</edgelabel>
+          <edgelabel>...</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelImporter.cs" line="9" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelImporter.cs" bodystart="8" bodyend="20"/>
+    <listofallmembers>
+      <member refid="class_budget_execution_1_1_excel_importer_1a2093664e4699fb10dc69018e47ba148c" prot="private" virt="non-virtual"><scope>BudgetExecution::ExcelImporter</scope><name>AddButton</name></member>
+      <member refid="class_budget_execution_1_1_excel_importer_1aa369c80d7d2ad5aed097b0ea54bb5390" prot="private" virt="non-virtual"><scope>BudgetExecution::ExcelImporter</scope><name>button1</name></member>
+      <member refid="class_budget_execution_1_1_excel_importer_1aeae8e1d43bc83eecd1b190ae0e084422" prot="private" virt="non-virtual"><scope>BudgetExecution::ExcelImporter</scope><name>button10</name></member>
+      <member refid="class_budget_execution_1_1_excel_importer_1a8a3e7a5407658e552acdd99157af1b3d" prot="private" virt="non-virtual"><scope>BudgetExecution::ExcelImporter</scope><name>button13</name></member>
+      <member refid="class_budget_execution_1_1_excel_importer_1a0619fd1f4bc4329bc9b8648350ec8c09" prot="private" virt="non-virtual"><scope>BudgetExecution::ExcelImporter</scope><name>button6</name></member>
+      <member refid="class_budget_execution_1_1_excel_importer_1af46623992988e8127f732b84a28f1638" prot="private" virt="non-virtual"><scope>BudgetExecution::ExcelImporter</scope><name>button7</name></member>
+      <member refid="class_budget_execution_1_1_excel_importer_1af03e43e7852967a708062702fc1597be" prot="private" virt="non-virtual"><scope>BudgetExecution::ExcelImporter</scope><name>components</name></member>
+      <member refid="class_budget_execution_1_1_excel_importer_1a1c47aefc4ebb940837e0cda4a10d510f" prot="private" virt="non-virtual"><scope>BudgetExecution::ExcelImporter</scope><name>CopyButton</name></member>
+      <member refid="class_budget_execution_1_1_excel_importer_1ab7b3b0aceedcba220827a6017df94b7f" prot="private" virt="non-virtual"><scope>BudgetExecution::ExcelImporter</scope><name>DataFilterTab</name></member>
+      <member refid="class_budget_execution_1_1_excel_importer_1ac0d969c4e4e0af9d85abd7a2b97dcbbb" prot="private" virt="non-virtual"><scope>BudgetExecution::ExcelImporter</scope><name>DataFunctionTab</name></member>
+      <member refid="class_budget_execution_1_1_excel_importer_1a9606fe871817dd86c0f6ce5a7907d40b" prot="private" virt="non-virtual"><scope>BudgetExecution::ExcelImporter</scope><name>DataTabControl</name></member>
+      <member refid="class_budget_execution_1_1_excel_importer_1a057fb6a384f5c50cf9dcf97069b567ad" prot="protected" virt="non-virtual"><scope>BudgetExecution::ExcelImporter</scope><name>Dispose</name></member>
+      <member refid="class_budget_execution_1_1_excel_importer_1ac7a0295e7f167d01a2a15f6ca98a3938" prot="public" virt="non-virtual"><scope>BudgetExecution::ExcelImporter</scope><name>ExcelImporter</name></member>
+      <member refid="class_budget_execution_1_1_excel_importer_1a9dcd0c17ea6355f95853ee8750191e31" prot="private" virt="non-virtual"><scope>BudgetExecution::ExcelImporter</scope><name>ExcelImporter_Load</name></member>
+      <member refid="class_budget_execution_1_1_excel_importer_1a6ea9538c88282a766562218beb8d0e0b" prot="private" virt="non-virtual"><scope>BudgetExecution::ExcelImporter</scope><name>Filter1</name></member>
+      <member refid="class_budget_execution_1_1_excel_importer_1a028ad914d25f05e36ff301708907c87e" prot="private" virt="non-virtual"><scope>BudgetExecution::ExcelImporter</scope><name>FIlter2</name></member>
+      <member refid="class_budget_execution_1_1_excel_importer_1a73a1cd2e45fb9bce0b5acd01f7ad80af" prot="private" virt="non-virtual"><scope>BudgetExecution::ExcelImporter</scope><name>Filter3</name></member>
+      <member refid="class_budget_execution_1_1_excel_importer_1a590a817dd105183b271827edad54ebf2" prot="private" virt="non-virtual"><scope>BudgetExecution::ExcelImporter</scope><name>flowLayoutPanel1</name></member>
+      <member refid="class_budget_execution_1_1_excel_importer_1abecee11f3284f020953358bb70b8aa7e" prot="private" virt="non-virtual"><scope>BudgetExecution::ExcelImporter</scope><name>GridRefreshButton</name></member>
+      <member refid="class_budget_execution_1_1_excel_importer_1a26a6debf3421c1b4f2d0e90aca9c7d4d" prot="private" virt="non-virtual"><scope>BudgetExecution::ExcelImporter</scope><name>InitializeComponent</name></member>
+      <member refid="class_budget_execution_1_1_excel_importer_1abbca4ce7d99ce92c56009ab114960d6f" prot="private" virt="non-virtual"><scope>BudgetExecution::ExcelImporter</scope><name>label2</name></member>
+      <member refid="class_budget_execution_1_1_excel_importer_1a7a621cdf1e404ff63f1549cb6d0e3453" prot="private" virt="non-virtual"><scope>BudgetExecution::ExcelImporter</scope><name>metroLabel1</name></member>
+      <member refid="class_budget_execution_1_1_excel_importer_1ad029054e3a9ebd15edc9497439824a3d" prot="private" virt="non-virtual"><scope>BudgetExecution::ExcelImporter</scope><name>metroLabel3</name></member>
+      <member refid="class_budget_execution_1_1_excel_importer_1a7aaee6988eb9f3267436b8b84792b142" prot="private" virt="non-virtual"><scope>BudgetExecution::ExcelImporter</scope><name>metroLabel4</name></member>
+      <member refid="class_budget_execution_1_1_excel_importer_1a3c60d532626576d5918c63470e0b2818" prot="private" virt="non-virtual"><scope>BudgetExecution::ExcelImporter</scope><name>metroLabel5</name></member>
+      <member refid="class_budget_execution_1_1_excel_importer_1a836cde18108986fcafbe0b2b3ef92e9c" prot="private" virt="non-virtual"><scope>BudgetExecution::ExcelImporter</scope><name>metroLabel6</name></member>
+      <member refid="class_budget_execution_1_1_excel_importer_1a4c9ba543e416dd5ad9106d5b2d2aa06d" prot="private" virt="non-virtual"><scope>BudgetExecution::ExcelImporter</scope><name>metroPanel1</name></member>
+      <member refid="class_budget_execution_1_1_excel_importer_1a3640b97ebf9606469a4bb03b335b9ae0" prot="private" virt="non-virtual"><scope>BudgetExecution::ExcelImporter</scope><name>metroPanel3</name></member>
+      <member refid="class_budget_execution_1_1_excel_importer_1ab72d702b81028112405a80411130209a" prot="private" virt="non-virtual"><scope>BudgetExecution::ExcelImporter</scope><name>metroPanel4</name></member>
+      <member refid="class_budget_execution_1_1_excel_importer_1a9a30106a1345dcc10886a30536cbf431" prot="private" virt="non-virtual"><scope>BudgetExecution::ExcelImporter</scope><name>metroPanel5</name></member>
+      <member refid="class_budget_execution_1_1_excel_importer_1a56ae32af90499b73710c5db1e06c7391" prot="private" virt="non-virtual"><scope>BudgetExecution::ExcelImporter</scope><name>Navigator</name></member>
+      <member refid="class_budget_execution_1_1_excel_importer_1a6c37bac3a931333e90c8fc468a1f6613" prot="private" virt="non-virtual"><scope>BudgetExecution::ExcelImporter</scope><name>ReprogrammingButton</name></member>
+      <member refid="class_budget_execution_1_1_excel_importer_1a231d4e338e2cb8af9a93849195cda1cf" prot="private" virt="non-virtual"><scope>BudgetExecution::ExcelImporter</scope><name>ResetButton</name></member>
+      <member refid="class_budget_execution_1_1_excel_importer_1a6870d947ce87b62179006e7740a30f1d" prot="private" virt="non-virtual"><scope>BudgetExecution::ExcelImporter</scope><name>SQLiteGrid</name></member>
+      <member refid="class_budget_execution_1_1_excel_importer_1a133a3b3b411ffe09807a1c4e619d2689" prot="private" virt="non-virtual"><scope>BudgetExecution::ExcelImporter</scope><name>toolStripButton10</name></member>
+      <member refid="class_budget_execution_1_1_excel_importer_1a6c070960618a2d62fc90bbbb73ef739b" prot="private" virt="non-virtual"><scope>BudgetExecution::ExcelImporter</scope><name>toolStripButton11</name></member>
+      <member refid="class_budget_execution_1_1_excel_importer_1a427a740deb5108c90af5ca4253d560ce" prot="private" virt="non-virtual"><scope>BudgetExecution::ExcelImporter</scope><name>toolStripButton12</name></member>
+      <member refid="class_budget_execution_1_1_excel_importer_1aa4cebdbca3e75f77b861622e5e7d1087" prot="private" virt="non-virtual"><scope>BudgetExecution::ExcelImporter</scope><name>toolStripButton13</name></member>
+      <member refid="class_budget_execution_1_1_excel_importer_1af63443cb81d8716fe7ff052958fc3e86" prot="private" virt="non-virtual"><scope>BudgetExecution::ExcelImporter</scope><name>toolStripButton14</name></member>
+      <member refid="class_budget_execution_1_1_excel_importer_1a648934b10c05a08d7181efa8db15b718" prot="private" virt="non-virtual"><scope>BudgetExecution::ExcelImporter</scope><name>toolStripButton15</name></member>
+      <member refid="class_budget_execution_1_1_excel_importer_1a76f66c7898599e1abe8fcb1c93c27b69" prot="private" virt="non-virtual"><scope>BudgetExecution::ExcelImporter</scope><name>toolStripButton7</name></member>
+      <member refid="class_budget_execution_1_1_excel_importer_1abe619fb852c7f471ddc1d0cc4ca5f294" prot="private" virt="non-virtual"><scope>BudgetExecution::ExcelImporter</scope><name>toolStripButton9</name></member>
+      <member refid="class_budget_execution_1_1_excel_importer_1ac95ed4d6c6b1aee7acbe5463257ec70c" prot="private" virt="non-virtual"><scope>BudgetExecution::ExcelImporter</scope><name>toolStripLabel2</name></member>
+      <member refid="class_budget_execution_1_1_excel_importer_1aa46945ba1470faa53fb9cd09f388bfd9" prot="private" virt="non-virtual"><scope>BudgetExecution::ExcelImporter</scope><name>toolStripSeparator10</name></member>
+      <member refid="class_budget_execution_1_1_excel_importer_1a395b82a1b359b65a2ba85bb42725eda8" prot="private" virt="non-virtual"><scope>BudgetExecution::ExcelImporter</scope><name>toolStripSeparator11</name></member>
+      <member refid="class_budget_execution_1_1_excel_importer_1a9832c55ad254e5d6d71da8ebfbfb11c4" prot="private" virt="non-virtual"><scope>BudgetExecution::ExcelImporter</scope><name>toolStripSeparator12</name></member>
+      <member refid="class_budget_execution_1_1_excel_importer_1afa6d772adce1b23b57a32831aeb462ee" prot="private" virt="non-virtual"><scope>BudgetExecution::ExcelImporter</scope><name>toolStripSeparator13</name></member>
+      <member refid="class_budget_execution_1_1_excel_importer_1a581565571c55693312d3c2ac54fe4b4e" prot="private" virt="non-virtual"><scope>BudgetExecution::ExcelImporter</scope><name>toolStripSeparator14</name></member>
+      <member refid="class_budget_execution_1_1_excel_importer_1a3164d55868bc930ae3682c4e26e69fa5" prot="private" virt="non-virtual"><scope>BudgetExecution::ExcelImporter</scope><name>toolStripSeparator15</name></member>
+      <member refid="class_budget_execution_1_1_excel_importer_1ae429c317f9c64ffb369e8e3e20bd0720" prot="private" virt="non-virtual"><scope>BudgetExecution::ExcelImporter</scope><name>toolStripSeparator16</name></member>
+      <member refid="class_budget_execution_1_1_excel_importer_1a1ecdf6fb8f423b445bc1d5ca6cd51c9e" prot="private" virt="non-virtual"><scope>BudgetExecution::ExcelImporter</scope><name>toolStripSeparator17</name></member>
+      <member refid="class_budget_execution_1_1_excel_importer_1a7b9a30dfb489ba9da51825e37abf9a67" prot="private" virt="non-virtual"><scope>BudgetExecution::ExcelImporter</scope><name>toolStripSeparator18</name></member>
+      <member refid="class_budget_execution_1_1_excel_importer_1a0f3493bd93cc36b9cce84ce2523bdabf" prot="private" virt="non-virtual"><scope>BudgetExecution::ExcelImporter</scope><name>toolStripSeparator19</name></member>
+      <member refid="class_budget_execution_1_1_excel_importer_1a21e2d0b766969cfa8d308e2d9fa10704" prot="private" virt="non-virtual"><scope>BudgetExecution::ExcelImporter</scope><name>toolStripSeparator20</name></member>
+      <member refid="class_budget_execution_1_1_excel_importer_1a7ac375cc9cb3c7261c2ab75ab1eb7a3b" prot="private" virt="non-virtual"><scope>BudgetExecution::ExcelImporter</scope><name>toolStripSeparator3</name></member>
+      <member refid="class_budget_execution_1_1_excel_importer_1a6bf707ba3dd707d0c6e10cfd4d165f65" prot="private" virt="non-virtual"><scope>BudgetExecution::ExcelImporter</scope><name>toolStripTextBox2</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,155 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_budget_execution_1_1src_1_1_award" kind="class" prot="public">
+    <compoundname>BudgetExecution::src::Award</compoundname>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_budget_execution_1_1src_1_1_award_1ae51a301ae2dd8e63692a64d00ac4d4b7" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>string</type>
+        <definition>string BudgetExecution.src.Award.Type</definition>
+        <argsstring></argsstring>
+        <name>Type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Award.cs" line="15" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Award.cs" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1src_1_1_award_1a5afc1cc735cd4211d4fb04b3c60ea922" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>string</type>
+        <definition>string BudgetExecution.src.Award.RC</definition>
+        <argsstring></argsstring>
+        <name>RC</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Award.cs" line="20" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Award.cs" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1src_1_1_award_1a49b3da204658b189029d37f99af512bb" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>string</type>
+        <definition>string BudgetExecution.src.Award.DivisionName</definition>
+        <argsstring></argsstring>
+        <name>DivisionName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Award.cs" line="25" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Award.cs" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1src_1_1_award_1a50dc4f395b426df245d65a0b85cd8af7" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>string</type>
+        <definition>string BudgetExecution.src.Award.Fund</definition>
+        <argsstring></argsstring>
+        <name>Fund</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Award.cs" line="30" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Award.cs" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1src_1_1_award_1af498f5c6eeef1a29b35f932096c61936" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>string</type>
+        <definition>string BudgetExecution.src.Award.FundName</definition>
+        <argsstring></argsstring>
+        <name>FundName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Award.cs" line="35" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Award.cs" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1src_1_1_award_1a7fd7d7af8b1c802f07c46cd99ed9c5ad" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>string</type>
+        <definition>string BudgetExecution.src.Award.BFY</definition>
+        <argsstring></argsstring>
+        <name>BFY</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Award.cs" line="40" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Award.cs" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1src_1_1_award_1a5ed9ca028843281a4afeced538b951af" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>byte[]</type>
+        <definition>byte [] BudgetExecution.src.Award.BOC</definition>
+        <argsstring></argsstring>
+        <name>BOC</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Award.cs" line="45" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Award.cs" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1src_1_1_award_1a5d702bcf473044f0218fb8504b6a3b13" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>string</type>
+        <definition>string BudgetExecution.src.Award.BocName</definition>
+        <argsstring></argsstring>
+        <name>BocName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Award.cs" line="50" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Award.cs" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1src_1_1_award_1a5b9e984c6d29daf31ba072996fb870a8" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>double</type>
+        <definition>double BudgetExecution.src.Award.Amount</definition>
+        <argsstring></argsstring>
+        <name>Amount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Award.cs" line="52" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Award.cs" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1src_1_1_award_1aa5ee23ede6b6de39faa72a9bcaa7e501" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>string</type>
+        <definition>string BudgetExecution.src.Award.Time</definition>
+        <argsstring></argsstring>
+        <name>Time</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Award.cs" line="55" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Award.cs" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Award.cs" line="11" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Award.cs" bodystart="10" bodyend="56"/>
+    <listofallmembers>
+      <member refid="class_budget_execution_1_1src_1_1_award_1a5b9e984c6d29daf31ba072996fb870a8" prot="public" virt="non-virtual"><scope>BudgetExecution::src::Award</scope><name>Amount</name></member>
+      <member refid="class_budget_execution_1_1src_1_1_award_1a7fd7d7af8b1c802f07c46cd99ed9c5ad" prot="public" virt="non-virtual"><scope>BudgetExecution::src::Award</scope><name>BFY</name></member>
+      <member refid="class_budget_execution_1_1src_1_1_award_1a5ed9ca028843281a4afeced538b951af" prot="public" virt="non-virtual"><scope>BudgetExecution::src::Award</scope><name>BOC</name></member>
+      <member refid="class_budget_execution_1_1src_1_1_award_1a5d702bcf473044f0218fb8504b6a3b13" prot="public" virt="non-virtual"><scope>BudgetExecution::src::Award</scope><name>BocName</name></member>
+      <member refid="class_budget_execution_1_1src_1_1_award_1a49b3da204658b189029d37f99af512bb" prot="public" virt="non-virtual"><scope>BudgetExecution::src::Award</scope><name>DivisionName</name></member>
+      <member refid="class_budget_execution_1_1src_1_1_award_1a50dc4f395b426df245d65a0b85cd8af7" prot="public" virt="non-virtual"><scope>BudgetExecution::src::Award</scope><name>Fund</name></member>
+      <member refid="class_budget_execution_1_1src_1_1_award_1af498f5c6eeef1a29b35f932096c61936" prot="public" virt="non-virtual"><scope>BudgetExecution::src::Award</scope><name>FundName</name></member>
+      <member refid="class_budget_execution_1_1src_1_1_award_1a5afc1cc735cd4211d4fb04b3c60ea922" prot="public" virt="non-virtual"><scope>BudgetExecution::src::Award</scope><name>RC</name></member>
+      <member refid="class_budget_execution_1_1src_1_1_award_1aa5ee23ede6b6de39faa72a9bcaa7e501" prot="public" virt="non-virtual"><scope>BudgetExecution::src::Award</scope><name>Time</name></member>
+      <member refid="class_budget_execution_1_1src_1_1_award_1ae51a301ae2dd8e63692a64d00ac4d4b7" prot="public" virt="non-virtual"><scope>BudgetExecution::src::Award</scope><name>Type</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

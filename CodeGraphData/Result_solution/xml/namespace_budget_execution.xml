@@ -1,0 +1,1659 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="namespace_budget_execution" kind="namespace">
+    <compoundname>BudgetExecution</compoundname>
+    <innerclass refid="class_budget_execution_1_1_account" prot="public">BudgetExecution::Account</innerclass>
+    <innerclass refid="class_budget_execution_1_1_account_control" prot="public">BudgetExecution::AccountControl</innerclass>
+    <innerclass refid="class_budget_execution_1_1_account_manager" prot="public">BudgetExecution::AccountManager</innerclass>
+    <innerclass refid="class_budget_execution_1_1_application" prot="package">BudgetExecution::Application</innerclass>
+    <innerclass refid="class_budget_execution_1_1_appropriation" prot="public">BudgetExecution::Appropriation</innerclass>
+    <innerclass refid="class_budget_execution_1_1_appropriation_selector" prot="public">BudgetExecution::AppropriationSelector</innerclass>
+    <innerclass refid="class_budget_execution_1_1_b_o_c" prot="public">BudgetExecution::BOC</innerclass>
+    <innerclass refid="class_budget_execution_1_1_budget_chart" prot="public">BudgetExecution::BudgetChart</innerclass>
+    <innerclass refid="class_budget_execution_1_1_budget_tools" prot="public">BudgetExecution::BudgetTools</innerclass>
+    <innerclass refid="class_budget_execution_1_1_calculator_form" prot="public">BudgetExecution::CalculatorForm</innerclass>
+    <innerclass refid="class_budget_execution_1_1_calendar" prot="public">BudgetExecution::Calendar</innerclass>
+    <innerclass refid="class_budget_execution_1_1_control_number" prot="public">BudgetExecution::ControlNumber</innerclass>
+    <innerclass refid="class_budget_execution_1_1_database_selector" prot="public">BudgetExecution::DatabaseSelector</innerclass>
+    <innerclass refid="class_budget_execution_1_1_data_builder" prot="public">BudgetExecution::DataBuilder</innerclass>
+    <innerclass refid="class_budget_execution_1_1_data_master" prot="public">BudgetExecution::DataMaster</innerclass>
+    <innerclass refid="class_budget_execution_1_1_division_authority" prot="public">BudgetExecution::DivisionAuthority</innerclass>
+    <innerclass refid="class_budget_execution_1_1_doc_info" prot="public">BudgetExecution::DocInfo</innerclass>
+    <innerclass refid="class_budget_execution_1_1_employee" prot="public">BudgetExecution::Employee</innerclass>
+    <innerclass refid="class_budget_execution_1_1_error" prot="public">BudgetExecution::Error</innerclass>
+    <innerclass refid="class_budget_execution_1_1_excel_form" prot="public">BudgetExecution::ExcelForm</innerclass>
+    <innerclass refid="class_budget_execution_1_1_excel_importer" prot="public">BudgetExecution::ExcelImporter</innerclass>
+    <innerclass refid="class_budget_execution_1_1_excel_query" prot="public">BudgetExecution::ExcelQuery</innerclass>
+    <innerclass refid="class_budget_execution_1_1_excel_report" prot="public">BudgetExecution::ExcelReport</innerclass>
+    <innerclass refid="class_budget_execution_1_1_external_data_reader" prot="public">BudgetExecution::ExternalDataReader</innerclass>
+    <innerclass refid="class_budget_execution_1_1_form_data" prot="public">BudgetExecution::FormData</innerclass>
+    <innerclass refid="class_budget_execution_1_1_f_t_e" prot="public">BudgetExecution::FTE</innerclass>
+    <innerclass refid="class_budget_execution_1_1_functionality_form" prot="public">BudgetExecution::FunctionalityForm</innerclass>
+    <innerclass refid="class_budget_execution_1_1_function_selector" prot="public">BudgetExecution::FunctionSelector</innerclass>
+    <innerclass refid="class_budget_execution_1_1_fund" prot="public">BudgetExecution::Fund</innerclass>
+    <innerclass refid="interface_budget_execution_1_1_i_account" prot="public">BudgetExecution::IAccount</innerclass>
+    <innerclass refid="interface_budget_execution_1_1_i_award" prot="public">BudgetExecution::IAward</innerclass>
+    <innerclass refid="interface_budget_execution_1_1_i_b_o_c" prot="public">BudgetExecution::IBOC</innerclass>
+    <innerclass refid="interface_budget_execution_1_1_i_budget_authority" prot="public">BudgetExecution::IBudgetAuthority</innerclass>
+    <innerclass refid="interface_budget_execution_1_1_i_control_document" prot="package">BudgetExecution::IControlDocument</innerclass>
+    <innerclass refid="interface_budget_execution_1_1_i_data_builder" prot="public">BudgetExecution::IDataBuilder</innerclass>
+    <innerclass refid="interface_budget_execution_1_1_i_employee" prot="public">BudgetExecution::IEmployee</innerclass>
+    <innerclass refid="interface_budget_execution_1_1_i_excel_op" prot="public">BudgetExecution::IExcelOp</innerclass>
+    <innerclass refid="interface_budget_execution_1_1_i_fund" prot="public">BudgetExecution::IFund</innerclass>
+    <innerclass refid="class_budget_execution_1_1_info" prot="public">BudgetExecution::Info</innerclass>
+    <innerclass refid="interface_budget_execution_1_1_i_obligation" prot="public">BudgetExecution::IObligation</innerclass>
+    <innerclass refid="interface_budget_execution_1_1_i_parameter" prot="public">BudgetExecution::IParameter</innerclass>
+    <innerclass refid="interface_budget_execution_1_1_i_payroll" prot="public">BudgetExecution::IPayroll</innerclass>
+    <innerclass refid="interface_budget_execution_1_1_i_p_r_c" prot="public">BudgetExecution::IPRC</innerclass>
+    <innerclass refid="interface_budget_execution_1_1_i_query" prot="public">BudgetExecution::IQuery</innerclass>
+    <innerclass refid="interface_budget_execution_1_1_i_r_c" prot="public">BudgetExecution::IRC</innerclass>
+    <innerclass refid="interface_budget_execution_1_1_i_supplemental_allocation" prot="package">BudgetExecution::ISupplementalAllocation</innerclass>
+    <innerclass refid="class_budget_execution_1_1_main_form" prot="public">BudgetExecution::MainForm</innerclass>
+    <innerclass refid="class_budget_execution_1_1_message" prot="public">BudgetExecution::Message</innerclass>
+    <innerclass refid="class_budget_execution_1_1_n_p_m" prot="public">BudgetExecution::NPM</innerclass>
+    <innerclass refid="class_budget_execution_1_1_obligation" prot="public">BudgetExecution::Obligation</innerclass>
+    <innerclass refid="class_budget_execution_1_1_org" prot="public">BudgetExecution::Org</innerclass>
+    <innerclass refid="class_budget_execution_1_1_payroll_obligation" prot="public">BudgetExecution::PayrollObligation</innerclass>
+    <innerclass refid="class_budget_execution_1_1_pdf_data_reader" prot="public">BudgetExecution::PdfDataReader</innerclass>
+    <innerclass refid="class_budget_execution_1_1_p_r_c" prot="public">BudgetExecution::PRC</innerclass>
+    <innerclass refid="class_budget_execution_1_1_prc_metric" prot="public">BudgetExecution::PrcMetric</innerclass>
+    <innerclass refid="class_budget_execution_1_1_query" prot="public">BudgetExecution::Query</innerclass>
+    <innerclass refid="class_budget_execution_1_1_r_c" prot="public">BudgetExecution::RC</innerclass>
+    <innerclass refid="class_budget_execution_1_1_record_manager" prot="public">BudgetExecution::RecordManager</innerclass>
+    <innerclass refid="class_budget_execution_1_1_regional_authority" prot="public">BudgetExecution::RegionalAuthority</innerclass>
+    <innerclass refid="class_budget_execution_1_1_reimbursable" prot="public">BudgetExecution::Reimbursable</innerclass>
+    <innerclass refid="class_budget_execution_1_1_reprogramming" prot="public">BudgetExecution::Reprogramming</innerclass>
+    <innerclass refid="class_budget_execution_1_1_selector" prot="public">BudgetExecution::Selector</innerclass>
+    <innerclass refid="class_budget_execution_1_1_s_q_lite_data" prot="public">BudgetExecution::SQLiteData</innerclass>
+    <innerclass refid="class_budget_execution_1_1_s_q_lite_query" prot="public">BudgetExecution::SQLiteQuery</innerclass>
+    <innerclass refid="class_budget_execution_1_1_sql_query" prot="public">BudgetExecution::SqlQuery</innerclass>
+    <innerclass refid="class_budget_execution_1_1_sql_server_data" prot="public">BudgetExecution::SqlServerData</innerclass>
+    <innerclass refid="class_budget_execution_1_1_sql_server_query" prot="public">BudgetExecution::SqlServerQuery</innerclass>
+    <innerclass refid="class_budget_execution_1_1_summary_form" prot="public">BudgetExecution::SummaryForm</innerclass>
+    <innerclass refid="class_budget_execution_1_1_transfer" prot="public">BudgetExecution::Transfer</innerclass>
+    <innernamespace refid="namespace_budget_execution_1_1_properties">BudgetExecution::Properties</innernamespace>
+    <innernamespace refid="namespace_budget_execution_1_1_resources">BudgetExecution::Resources</innernamespace>
+    <innernamespace refid="namespace_budget_execution_1_1src">BudgetExecution::src</innernamespace>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="namespace_budget_execution_1a4934c3b090fc5c9bb8fb0023a8c9f965" prot="public" static="no">
+        <name>FileExt</name>
+        <enumvalue id="namespace_budget_execution_1a4934c3b090fc5c9bb8fb0023a8c9f965a3f191d96d6c2c6bc91e4f271801221a0" prot="public">
+          <name>XLSX</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1a4934c3b090fc5c9bb8fb0023a8c9f965acc8d68c551c4a9a6d5313e07de4deafd" prot="public">
+          <name>CSV</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1a4934c3b090fc5c9bb8fb0023a8c9f965a5956a437e724cdfc8b1c70dc7bdeebcb" prot="public">
+          <name>TXT</name>
+          <initializer>= 3</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1a4934c3b090fc5c9bb8fb0023a8c9f965abcd1b68617759b1dfcff0403a6b5a8d1" prot="public">
+          <name>PDF</name>
+          <initializer>= 4</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1a4934c3b090fc5c9bb8fb0023a8c9f965a2e09a5b01eac28408404f266726d465c" prot="public">
+          <name>DOC</name>
+          <initializer>= 5</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Application.cs" line="23" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Application.cs" bodystart="22" bodyend="25"/>
+      </memberdef>
+      <memberdef kind="enum" id="namespace_budget_execution_1afa69cdcc242b50644155cb4adf244d32" prot="public" static="no">
+        <name>FundCode</name>
+        <enumvalue id="namespace_budget_execution_1afa69cdcc242b50644155cb4adf244d32a9d5ed678fe57bcca610140957afab571" prot="public">
+          <name>B</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1afa69cdcc242b50644155cb4adf244d32a19d3326f3137cbadd21ce901a9bed4a7" prot="public">
+          <name>BR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1afa69cdcc242b50644155cb4adf244d32a462e4031546c0cc3f726224eb36c35c5" prot="public">
+          <name>BR2</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1afa69cdcc242b50644155cb4adf244d32a65f877d62c2ecdcf751bca4a05b70c52" prot="public">
+          <name>BR3</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1afa69cdcc242b50644155cb4adf244d32ab9ece18c950afbfa6b0fdbfa4ff731d3" prot="public">
+          <name>T</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1afa69cdcc242b50644155cb4adf244d32aff9c072d42a94d0a5112613019b54eae" prot="public">
+          <name>TC</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1afa69cdcc242b50644155cb4adf244d32afc089489555aee7519548ff7f589f384" prot="public">
+          <name>TD</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1afa69cdcc242b50644155cb4adf244d32aebe021079e5a3c4f42ca6119eab92633" prot="public">
+          <name>TR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1afa69cdcc242b50644155cb4adf244d32a677e544880b8017ff8bd4c952676d0ab" prot="public">
+          <name>TR1</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1afa69cdcc242b50644155cb4adf244d32ae79e9450cd97092eb87124ee8a13e0df" prot="public">
+          <name>TR2</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1afa69cdcc242b50644155cb4adf244d32ab03c680394620b1f098472b1e4938b7e" prot="public">
+          <name>TR2A</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1afa69cdcc242b50644155cb4adf244d32a05720e22b0dc67eeedf38239beb02ecd" prot="public">
+          <name>TR2B</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1afa69cdcc242b50644155cb4adf244d32a67793fc74a84241cd4f7406f4ab29d89" prot="public">
+          <name>TR3</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1afa69cdcc242b50644155cb4adf244d32a800618943025315f869e4e1f09471012" prot="public">
+          <name>F</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1afa69cdcc242b50644155cb4adf244d32a6b8f0029ce30f9b4d5fe0def33875511" prot="public">
+          <name>FC</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1afa69cdcc242b50644155cb4adf244d32aa8fa6b553b655657f943cb8fd85859d1" prot="public">
+          <name>FD</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1afa69cdcc242b50644155cb4adf244d32ac1d9f50f86825a1a2302ec2449c17196" prot="public">
+          <name>H</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1afa69cdcc242b50644155cb4adf244d32af4a5f77dbc261a64bd853d05f8410365" prot="public">
+          <name>HC</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1afa69cdcc242b50644155cb4adf244d32a27178471f2c4019c872d1545a0f154c7" prot="public">
+          <name>HD</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1afa69cdcc242b50644155cb4adf244d32a48ed5d2db39237d7ae5e829b17581629" prot="public">
+          <name>E1</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1afa69cdcc242b50644155cb4adf244d32a22378b529d0cf214105b3f673187965f" prot="public">
+          <name>E1C</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1afa69cdcc242b50644155cb4adf244d32af244cee5b13685b95b1cae1db53d3f6d" prot="public">
+          <name>E1D</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1afa69cdcc242b50644155cb4adf244d32a560fce20abef5cd3f8e4d13c94669a46" prot="public">
+          <name>E2</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1afa69cdcc242b50644155cb4adf244d32a82307b9e9576bc2220615172eb1ad7ff" prot="public">
+          <name>E2C</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1afa69cdcc242b50644155cb4adf244d32a34b9ea27aa21676e8424ef35af9ab0f0" prot="public">
+          <name>E2D</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1afa69cdcc242b50644155cb4adf244d32ab29bcbb0f188e0093434a5f213285f46" prot="public">
+          <name>E3</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1afa69cdcc242b50644155cb4adf244d32ae6e99b56cfebce325c5aa4b205f2021f" prot="public">
+          <name>E3C</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1afa69cdcc242b50644155cb4adf244d32a1bdd0a8d94550f03064ee61dd3bbaec3" prot="public">
+          <name>E3D</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1afa69cdcc242b50644155cb4adf244d32a2157d56d6aff208ae90c869526290656" prot="public">
+          <name>E4</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1afa69cdcc242b50644155cb4adf244d32a287a1360ea08c430b3ebc25f51677c3e" prot="public">
+          <name>E4C</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1afa69cdcc242b50644155cb4adf244d32a229e9c716abb2b77b7dd46dc8c358305" prot="public">
+          <name>E4D</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1afa69cdcc242b50644155cb4adf244d32af9f2d672039ed5d04839b769ad71e1b0" prot="public">
+          <name>E5</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1afa69cdcc242b50644155cb4adf244d32a59131daf82d32bf72bd4005bc5e31e4f" prot="public">
+          <name>E5C</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1afa69cdcc242b50644155cb4adf244d32a98cb841f5ebcbbf614ea4a9d5f1fd1c1" prot="public">
+          <name>E5D</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1afa69cdcc242b50644155cb4adf244d32ad53106f43f77d1f19dd046e0aa90253a" prot="public">
+          <name>ZL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1afa69cdcc242b50644155cb4adf244d32a2f0912f92c162d890ce3533b79502f07" prot="public">
+          <name>FS3</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1afa69cdcc242b50644155cb4adf244d32ad19da1e9579c26c8942bff451c08d2c1" prot="public">
+          <name>TS3</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Application.cs" line="28" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Application.cs" bodystart="27" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="enum" id="namespace_budget_execution_1aad2939654fecf4e3629282ed61ab4dd8" prot="public" static="no">
+        <name>Function</name>
+        <enumvalue id="namespace_budget_execution_1aad2939654fecf4e3629282ed61ab4dd8af05c9c292af35d044a533939780b4124" prot="public">
+          <name>SQLiteData</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1aad2939654fecf4e3629282ed61ab4dd8aaf1d0c98cbf2c44413b6978109e47f16" prot="public">
+          <name>BudgetTools</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1aad2939654fecf4e3629282ed61ab4dd8a96b6f8373c27161e3b2c2c890e40e34a" prot="public">
+          <name>DataTools</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1aad2939654fecf4e3629282ed61ab4dd8ac79d04ef43f4dd45c01bbafe900a809a" prot="public">
+          <name>DataMigration</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1aad2939654fecf4e3629282ed61ab4dd8ad78f9f874b929500da391cdde7491582" prot="public">
+          <name>ExcelImporter</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1aad2939654fecf4e3629282ed61ab4dd8a451dc75fab979d1c1c97afb58dcacff9" prot="public">
+          <name>PdfDataReader</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Application.cs" line="34" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Application.cs" bodystart="33" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="enum" id="namespace_budget_execution_1a7cdc9ee50939f4fa6112619531ea4d80" prot="public" static="no">
+        <name>Goal</name>
+        <enumvalue id="namespace_budget_execution_1a7cdc9ee50939f4fa6112619531ea4d80ac0497521d35d66866e3af408094864c3" prot="public">
+          <name>G1</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1a7cdc9ee50939f4fa6112619531ea4d80ad24bade136bc8cd77e37395ea94226eb" prot="public">
+          <name>G2</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1a7cdc9ee50939f4fa6112619531ea4d80abc75ca3e24efaf835d947dbe27a95c8a" prot="public">
+          <name>G3</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Application.cs" line="39" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Application.cs" bodystart="38" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="enum" id="namespace_budget_execution_1a4bb6ce7543ca92e05f7d224d6887fe1a" prot="public" static="no">
+        <name>HQ</name>
+        <enumvalue id="namespace_budget_execution_1a4bb6ce7543ca92e05f7d224d6887fe1aa7fc56270e7a70fa81a5935b72eacbe29" prot="public">
+          <name>A</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1a4bb6ce7543ca92e05f7d224d6887fe1aa9d5ed678fe57bcca610140957afab571" prot="public">
+          <name>B</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1a4bb6ce7543ca92e05f7d224d6887fe1aa0d61f8370cad1d412f80b84d143e1257" prot="public">
+          <name>C</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1a4bb6ce7543ca92e05f7d224d6887fe1aaf623e75af30e62bbd73d6df5b50bb7b5" prot="public">
+          <name>D</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1a4bb6ce7543ca92e05f7d224d6887fe1aa3a3ea00cfc35332cedf6e5e9a32e94da" prot="public">
+          <name>E</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1a4bb6ce7543ca92e05f7d224d6887fe1aa800618943025315f869e4e1f09471012" prot="public">
+          <name>F</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1a4bb6ce7543ca92e05f7d224d6887fe1aadfcf28d0734569a6a693bc8194de62bf" prot="public">
+          <name>G</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1a4bb6ce7543ca92e05f7d224d6887fe1aac1d9f50f86825a1a2302ec2449c17196" prot="public">
+          <name>H</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1a4bb6ce7543ca92e05f7d224d6887fe1aaff44570aca8241914870afbc310cdb85" prot="public">
+          <name>J</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1a4bb6ce7543ca92e05f7d224d6887fe1aad20caec3b48a1eef164cb4ca81ba2587" prot="public">
+          <name>L</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1a4bb6ce7543ca92e05f7d224d6887fe1aa69691c7bdcc3ce6d5d8a1361f22d04ac" prot="public">
+          <name>M</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Application.cs" line="44" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Application.cs" bodystart="43" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="enum" id="namespace_budget_execution_1ab5abb363821b2c93679f5a1437d90ded" prot="public" static="no">
+        <name>Net</name>
+        <enumvalue id="namespace_budget_execution_1ab5abb363821b2c93679f5a1437d90dedad7ed4ee1df437474d005188535f74875" prot="public">
+          <name>Zero</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1ab5abb363821b2c93679f5a1437d90dedaaac247ca22789872bad95dc8f6c45d37" prot="public">
+          <name>Increase</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1ab5abb363821b2c93679f5a1437d90deda9e661cc6f7c72b95abfd6b372aacbfa1" prot="public">
+          <name>Decrease</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Application.cs" line="49" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Application.cs" bodystart="48" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="enum" id="namespace_budget_execution_1a10cb584d0d894c9165d3319af77c9785" prot="public" static="no">
+        <name>Objective</name>
+        <enumvalue id="namespace_budget_execution_1a10cb584d0d894c9165d3319af77c9785a00594a175ce5a58f286d91ca0a6f15a2" prot="public">
+          <name>O1</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1a10cb584d0d894c9165d3319af77c9785abfc60714f62f15e1e72e0b21454cc99e" prot="public">
+          <name>O2</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1a10cb584d0d894c9165d3319af77c9785a9ee25ee8b4d0a573527fcd2f1e73f8c8" prot="public">
+          <name>O3</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1a10cb584d0d894c9165d3319af77c9785a27148de9dcce4aa2aa6d42ade1f50231" prot="public">
+          <name>O4</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1a10cb584d0d894c9165d3319af77c9785a831d8cbc6803db17c44f67d5a5de6fa4" prot="public">
+          <name>O5</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Application.cs" line="54" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Application.cs" bodystart="53" bodyend="56"/>
+      </memberdef>
+      <memberdef kind="enum" id="namespace_budget_execution_1a6f0ca621613b968c0ba9b8d4771a1fb0" prot="public" static="no">
+        <name>Numeric</name>
+        <enumvalue id="namespace_budget_execution_1a6f0ca621613b968c0ba9b8d4771a1fb0ab718adec73e04ce3ec720dd11a06a308" prot="public">
+          <name>ID</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1a6f0ca621613b968c0ba9b8d4771a1fb0ab2f40690858b404ed10e62bdf422c704" prot="public">
+          <name>Amount</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1a6f0ca621613b968c0ba9b8d4771a1fb0af8bad9960af785d33807b01ad36db3c2" prot="public">
+          <name>Obligations</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1a6f0ca621613b968c0ba9b8d4771a1fb0a2b145709c512f546626a3d0cc604c0b4" prot="public">
+          <name>Commitments</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1a6f0ca621613b968c0ba9b8d4771a1fb0ad3c90559acfdb90b806c3487a3f3e26c" prot="public">
+          <name>LeaveHours</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1a6f0ca621613b968c0ba9b8d4771a1fb0aba9734331549e838aeca36b2c614afd6" prot="public">
+          <name>WorkHours</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Application.cs" line="59" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Application.cs" bodystart="58" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="enum" id="namespace_budget_execution_1acc77f02cde309c445b6e142d257483dd" prot="public" static="no">
+        <name>Command</name>
+        <enumvalue id="namespace_budget_execution_1acc77f02cde309c445b6e142d257483ddae0626222614bdee31951d84c64e5e9ff" prot="public">
+          <name>Select</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1acc77f02cde309c445b6e142d257483ddaa458be0f08b7e4ff3c0f633c100176c0" prot="public">
+          <name>Insert</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1acc77f02cde309c445b6e142d257483dda06933067aafd48425d67bcb01bba5cb6" prot="public">
+          <name>Update</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1acc77f02cde309c445b6e142d257483ddaf2a6c498fb90ee345d997f888fce3b18" prot="public">
+          <name>Delete</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1acc77f02cde309c445b6e142d257483dda686e697538050e4664636337cc3b834f" prot="public">
+          <name>Create</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1acc77f02cde309c445b6e142d257483dda3e679cff5b3a6f6f8f32aead541a0a12" prot="public">
+          <name>Drop</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Application.cs" line="64" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Application.cs" bodystart="63" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="enum" id="namespace_budget_execution_1ad0246bbb878376883d5a914fca5a5de1" prot="public" static="no">
+        <name>Field</name>
+        <enumvalue id="namespace_budget_execution_1ad0246bbb878376883d5a914fca5a5de1ab718adec73e04ce3ec720dd11a06a308" prot="public">
+          <name>ID</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1ad0246bbb878376883d5a914fca5a5de1ac2ab4e5698fe953f55ca9adbfe006437" prot="public">
+          <name>BudgetLevel</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1ad0246bbb878376883d5a914fca5a5de1aae4ea6b9cdd71391b628403d7742753c" prot="public">
+          <name>BFY</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1ad0246bbb878376883d5a914fca5a5de1a4176d60c88a65d7d27c58dcf835a7be4" prot="public">
+          <name>RPIO</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1ad0246bbb878376883d5a914fca5a5de1ac1098dd48f0fb20eeea79235055d02ca" prot="public">
+          <name>Fund</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1ad0246bbb878376883d5a914fca5a5de1aff0dd2b3112c530ebb8b9fb6a4ff534b" prot="public">
+          <name>FundName</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1ad0246bbb878376883d5a914fca5a5de1a86fdba8daca52c460fbbafe6bcd62e58" prot="public">
+          <name>BOC</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1ad0246bbb878376883d5a914fca5a5de1a4abecc93a332315132b53c2ab069666a" prot="public">
+          <name>BocName</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1ad0246bbb878376883d5a914fca5a5de1a86db40731bcba791e7da3675bdeb5177" prot="public">
+          <name>Org</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1ad0246bbb878376883d5a914fca5a5de1a75b9a229bb1873d751a1e0f775ceb2aa" prot="public">
+          <name>RC</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1ad0246bbb878376883d5a914fca5a5de1aca0dbad92a874b2f69b549293387925e" prot="public">
+          <name>Code</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1ad0246bbb878376883d5a914fca5a5de1a00a5cdc4be82fd4ba549d52988ef9e14" prot="public">
+          <name>NPM</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1ad0246bbb878376883d5a914fca5a5de1a12c74214cb4c18cf36d885303d6aa2e1" prot="public">
+          <name>Goal</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1ad0246bbb878376883d5a914fca5a5de1aaf48b85002d617f204dd59485882470a" prot="public">
+          <name>GoalName</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1ad0246bbb878376883d5a914fca5a5de1a40b796b77b40775e1361ce398a9a783c" prot="public">
+          <name>Objective</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1ad0246bbb878376883d5a914fca5a5de1a413be8e659923f97c1bdab2a9fd6445f" prot="public">
+          <name>ObjectiveName</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1ad0246bbb878376883d5a914fca5a5de1a75777aacc09bea6b478c61d897eab71d" prot="public">
+          <name>DivisionName</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1ad0246bbb878376883d5a914fca5a5de1a37320cfec14caa311e7d690431cde2ef" prot="public">
+          <name>ProgramArea</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1ad0246bbb878376883d5a914fca5a5de1afe707529fbe3ee2c32fb1eb7b0171c17" prot="public">
+          <name>ProgramAreaName</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1ad0246bbb878376883d5a914fca5a5de1a9d7e96eab8f307f55ef0e86084c53635" prot="public">
+          <name>ProgramProjectCode</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1ad0246bbb878376883d5a914fca5a5de1a30b119b61b2cb5677b0b9998a4187847" prot="public">
+          <name>ProgramProjectName</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1ad0246bbb878376883d5a914fca5a5de1a29b0a18926da2bde8698ca7167a4c013" prot="public">
+          <name>SiteProjectName</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1ad0246bbb878376883d5a914fca5a5de1a3a95199e8ba92f806c92736f97f6d22c" prot="public">
+          <name>SiteProjectCode</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1ad0246bbb878376883d5a914fca5a5de1a4ff34a5a7eb7ac66bcaf96108ffd89ce" prot="public">
+          <name>NpmName</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1ad0246bbb878376883d5a914fca5a5de1abe864d1f323e5f264984cf956fa4e2be" prot="public">
+          <name>ReimbOrg</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1ad0246bbb878376883d5a914fca5a5de1ae99c19dec2b574bc5d4990504f6cf550" prot="public">
+          <name>AH</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1ad0246bbb878376883d5a914fca5a5de1ab73320ba43afcfc129223f47e069beea" prot="public">
+          <name>DCN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1ad0246bbb878376883d5a914fca5a5de1a22565ef2da5e28fb9a1d0e2d5e953438" prot="public">
+          <name>ControlNumber</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1ad0246bbb878376883d5a914fca5a5de1aca0af182ec51210cedbc7bb60959db7e" prot="public">
+          <name>PurchaseRequest</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1ad0246bbb878376883d5a914fca5a5de1a99c94dd9617cb26c23853a9edbe15efc" prot="public">
+          <name>AgreementNumber</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1ad0246bbb878376883d5a914fca5a5de1aa1fa27779242b4902f7ae3bdd5c6d508" prot="public">
+          <name>Type</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1ad0246bbb878376883d5a914fca5a5de1aa0da7795a932ef7d779cb4e05f16bd6f" prot="public">
+          <name>DivisionID</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1ad0246bbb878376883d5a914fca5a5de1a447f1cf711ae39f61326b689a61990fe" prot="public">
+          <name>DocumentNumber</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1ad0246bbb878376883d5a914fca5a5de1a46a2a41cc6e552044816a2d04634545d" prot="public">
+          <name>State</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1ad0246bbb878376883d5a914fca5a5de1ad6b258792ff06f82933c74eeb8aef591" prot="public">
+          <name>Organization</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1ad0246bbb878376883d5a914fca5a5de1ae0bb2f66e5b61be3235bf8969979de19" prot="public">
+          <name>District</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1ad0246bbb878376883d5a914fca5a5de1a7dafff63a1d4f9034dcbba556722e0b3" prot="public">
+          <name>FocName</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1ad0246bbb878376883d5a914fca5a5de1a539c5300bf48f8a3e3009ce33d49a240" prot="public">
+          <name>LastName</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1ad0246bbb878376883d5a914fca5a5de1add57411829f3abffc3d00083737a6a14" prot="public">
+          <name>WorkCode</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1ad0246bbb878376883d5a914fca5a5de1ae7f0715ebffd7d0f730cb453b3f8bf3e" prot="public">
+          <name>HrOrgCodeName</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Application.cs" line="68" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Application.cs" bodystart="67" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="enum" id="namespace_budget_execution_1a04fd24d7fd477c1db9884745e14ea571" prot="public" static="no">
+        <name>Provider</name>
+        <enumvalue id="namespace_budget_execution_1a04fd24d7fd477c1db9884745e14ea571a497757a9c5b2ec17ded656170b51c788" prot="public">
+          <name>SQLite</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1a04fd24d7fd477c1db9884745e14ea571a636ef3cbcf0f548f55cbee9ead33a0b8" prot="public">
+          <name>OleDb</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1a04fd24d7fd477c1db9884745e14ea571ae86e829e4d4c68b30a4fd26aa2bfca72" prot="public">
+          <name>SqlServer</name>
+          <initializer>= 3</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1a04fd24d7fd477c1db9884745e14ea571aeb2964743a72c8c7222a173dd38d6194" prot="public">
+          <name>SqlCe</name>
+          <initializer>= 4</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Application.cs" line="76" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Application.cs" bodystart="75" bodyend="78"/>
+      </memberdef>
+      <memberdef kind="enum" id="namespace_budget_execution_1a31d755f9fbeb90de04b7b1e2e21acdc8" prot="public" static="no">
+        <name>Source</name>
+        <enumvalue id="namespace_budget_execution_1a31d755f9fbeb90de04b7b1e2e21acdc8a9b945efebb006547a94415eadaa12921" prot="public">
+          <name>Accounts</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1a31d755f9fbeb90de04b7b1e2e21acdc8af66cdb8a3ef49c79c633e1bffcfd1e74" prot="public">
+          <name>Awards</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1a31d755f9fbeb90de04b7b1e2e21acdc8a1032243f9e630e3b2b2aa5cea2eaba5e" prot="public">
+          <name>ControlNumbers</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1a31d755f9fbeb90de04b7b1e2e21acdc8a44b03fd65c81b09730ee43a36a4a9011" prot="public">
+          <name>DivisionAccounts</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1a31d755f9fbeb90de04b7b1e2e21acdc8adc47823215b68363b2e17e447abdbdad" prot="public">
+          <name>DivisionObligations</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1a31d755f9fbeb90de04b7b1e2e21acdc8a4cdcec6941a9e34bc29d4a691c270234" prot="public">
+          <name>Divisions</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1a31d755f9fbeb90de04b7b1e2e21acdc8a3ea68ef43ed0e576f2b250d8f5ba321f" prot="public">
+          <name>DWH</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1a31d755f9fbeb90de04b7b1e2e21acdc8ad20e791e6c5898aafc29c12e6d7bb432" prot="public">
+          <name>EJ</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1a31d755f9fbeb90de04b7b1e2e21acdc8aaa85f1840e282d8a8304dbc2c0d7c9b2" prot="public">
+          <name>EN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1a31d755f9fbeb90de04b7b1e2e21acdc8aeb626c94531ec554f93b2b78a77c8b1b" prot="public">
+          <name>Employees</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1a31d755f9fbeb90de04b7b1e2e21acdc8ade895d1ddf744000f80dd7f2ab45c9a0" prot="public">
+          <name>EPM</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1a31d755f9fbeb90de04b7b1e2e21acdc8a248cb1c4869e0f1449a66f2f14a27894" prot="public">
+          <name>ExternalTransfers</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1a31d755f9fbeb90de04b7b1e2e21acdc8ad42b2bb7ac17fc34a099909c0a2f1de9" prot="public">
+          <name>Funds</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1a31d755f9fbeb90de04b7b1e2e21acdc8aa088994ff8c64a0e7ab18efbf6581af9" prot="public">
+          <name>InternalTransfers</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1a31d755f9fbeb90de04b7b1e2e21acdc8ae01a919b068424df394a7f38a3a02ed2" prot="public">
+          <name>PRC</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1a31d755f9fbeb90de04b7b1e2e21acdc8a35438440b8361f0b85068ccae4f35510" prot="public">
+          <name>RegionalAccounts</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1a31d755f9fbeb90de04b7b1e2e21acdc8af8bad9960af785d33807b01ad36db3c2" prot="public">
+          <name>Obligations</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1a31d755f9fbeb90de04b7b1e2e21acdc8a966435c03db0e693d601dd23996c509d" prot="public">
+          <name>PayrollObligations</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1a31d755f9fbeb90de04b7b1e2e21acdc8a3faa64303d5f5bcd043bb88f6768e603" prot="public">
+          <name>Sites</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1a31d755f9fbeb90de04b7b1e2e21acdc8a9c06ae8d087907ca0bfe18d63690c7ef" prot="public">
+          <name>Reimbursables</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1a31d755f9fbeb90de04b7b1e2e21acdc8a94a714150c4b95a4ca2cf884e812935f" prot="public">
+          <name>LUST</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1a31d755f9fbeb90de04b7b1e2e21acdc8aa2eba9656295fc28d9d3d5259d9b36de" prot="public">
+          <name>OIL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1a31d755f9fbeb90de04b7b1e2e21acdc8a375a8fd626fd6f68abb60f5b477e21d9" prot="public">
+          <name>STAG</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1a31d755f9fbeb90de04b7b1e2e21acdc8acadb9e3d6bb5eb919b5b29b1d61e1703" prot="public">
+          <name>SUPERFUND</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1a31d755f9fbeb90de04b7b1e2e21acdc8a7dc10e66da5549d351765bd940b81be9" prot="public">
+          <name>MD</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1a31d755f9fbeb90de04b7b1e2e21acdc8a75b9a229bb1873d751a1e0f775ceb2aa" prot="public">
+          <name>RC</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1a31d755f9fbeb90de04b7b1e2e21acdc8a36fb81539768d678527f9929625716b7" prot="public">
+          <name>RA</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1a31d755f9fbeb90de04b7b1e2e21acdc8a94a990462684a2fbb5dfc7fab1c8975d" prot="public">
+          <name>SF</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1a31d755f9fbeb90de04b7b1e2e21acdc8a8a7cc34b5468aee1d74754ceee7f35de" prot="public">
+          <name>Transfers</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1a31d755f9fbeb90de04b7b1e2e21acdc8a7a315c4d6725acf5705d4ee6ee7cceeb" prot="public">
+          <name>WQ</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1a31d755f9fbeb90de04b7b1e2e21acdc8aad05f78187c942f9dd521605fa81f1ba" prot="public">
+          <name>MM</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1a31d755f9fbeb90de04b7b1e2e21acdc8a864de0bdede3236b925f3a6a06e89462" prot="public">
+          <name>WSA</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1a31d755f9fbeb90de04b7b1e2e21acdc8afb608636129cb469b7fe911e92e2b563" prot="public">
+          <name>WCF</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1a31d755f9fbeb90de04b7b1e2e21acdc8a07414216e6a672f69afc57e755d572f6" prot="public">
+          <name>MDR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1a31d755f9fbeb90de04b7b1e2e21acdc8aa0448334d12e98797386e9ea4d7fdfe6" prot="public">
+          <name>XA</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1a31d755f9fbeb90de04b7b1e2e21acdc8a9158eeecd83e40ade35da02cd0054d2c" prot="public">
+          <name>PAYROLL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1a31d755f9fbeb90de04b7b1e2e21acdc8a6fdfd4bebe6d5e470f933b504d80d877" prot="public">
+          <name>FTE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1a31d755f9fbeb90de04b7b1e2e21acdc8aa38b1ae01450414fd4fe9e206602989a" prot="public">
+          <name>TRAVEL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1a31d755f9fbeb90de04b7b1e2e21acdc8a7855b412ff9ffa7527dd48642be7f675" prot="public">
+          <name>EXPENSES</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1a31d755f9fbeb90de04b7b1e2e21acdc8a13c0267c57a4b0ee5ea232d3e9fcce0c" prot="public">
+          <name>CONTRACTS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1a31d755f9fbeb90de04b7b1e2e21acdc8aa053a13f5efeae7bb3e6cc2d6f421fc1" prot="public">
+          <name>GRANTS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Application.cs" line="81" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Application.cs" bodystart="80" bodyend="85"/>
+      </memberdef>
+      <memberdef kind="enum" id="namespace_budget_execution_1a3df5d95d2846c10429f5872736ac022e" prot="public" static="no">
+        <name>Stat</name>
+        <enumvalue id="namespace_budget_execution_1a3df5d95d2846c10429f5872736ac022ea96b0141273eabab320119c467cdcaf17" prot="public">
+          <name>Total</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1a3df5d95d2846c10429f5872736ac022eae93f994f01c537c4e2f7d8528c3eb5e9" prot="public">
+          <name>Count</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1a3df5d95d2846c10429f5872736ac022eab1897515d548a960afe49ecf66a29021" prot="public">
+          <name>Average</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1a3df5d95d2846c10429f5872736ac022ea8334a158298fbcf163f4dcb4a387d150" prot="public">
+          <name>Ratio</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Application.cs" line="88" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Application.cs" bodystart="87" bodyend="90"/>
+      </memberdef>
+      <memberdef kind="enum" id="namespace_budget_execution_1a3ece50a47b2d0fe9ef416ef504d17aae" prot="public" static="no">
+        <name>TransferType</name>
+        <enumvalue id="namespace_budget_execution_1a3ece50a47b2d0fe9ef416ef504d17aaeae3afed0047b08059d0fada10f400c1e5" prot="public">
+          <name>Admin</name>
+          <initializer>= 1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1a3ece50a47b2d0fe9ef416ef504d17aaea86fdba8daca52c460fbbafe6bcd62e58" prot="public">
+          <name>BOC</name>
+          <initializer>= 2</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1a3ece50a47b2d0fe9ef416ef504d17aaea1410e97c2e9fbfa2db94002a781b70b4" prot="public">
+          <name>FromHQ</name>
+          <initializer>= 3</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1a3ece50a47b2d0fe9ef416ef504d17aaead8ac08a7915715908d4a771fbb449b30" prot="public">
+          <name>ToHQ</name>
+          <initializer>= 4</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1a3ece50a47b2d0fe9ef416ef504d17aaea3eee387161ac42551e58bdede40ce198" prot="public">
+          <name>FromRpio</name>
+          <initializer>= 5</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1a3ece50a47b2d0fe9ef416ef504d17aaeaca0ae637c5ec2d05463effdfcdb8ae7e" prot="public">
+          <name>ToRpio</name>
+          <initializer>= 6</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1a3ece50a47b2d0fe9ef416ef504d17aaea3928c688476314386d7195afc2a890d4" prot="public">
+          <name>Recertification</name>
+          <initializer>= 7</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1a3ece50a47b2d0fe9ef416ef504d17aaea5f6727b6ed58255e2a7ad19481fa9ed5" prot="public">
+          <name>ToDivision</name>
+          <initializer>= 8</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1a3ece50a47b2d0fe9ef416ef504d17aaeaa5d8b99780293bf62d07ac0e87fc2fc6" prot="public">
+          <name>FromDivsion</name>
+          <initializer>= 9</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_budget_execution_1a3ece50a47b2d0fe9ef416ef504d17aaead67812958335a9e4890b2484509e63f0" prot="public">
+          <name>SubAllowance</name>
+          <initializer>= 10</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Application.cs" line="93" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Application.cs" bodystart="92" bodyend="96"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="namespace_budget_execution_1a670ab8c0c1276c448edd85e8080a9df3" prot="public" static="no">
+        <type>Syncfusion.Windows.Forms.MetroForm</type>
+        <definition>typedef Syncfusion Windows Forms MetroForm BudgetExecution::MetroForm</definition>
+        <argsstring></argsstring>
+        <name>MetroForm</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AppropriationSelector.cs" line="12" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AppropriationSelector.cs" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespace_budget_execution_1aaee22f4b748073f008b025ce18be8276" prot="public" static="no">
+        <type>Microsoft.Office.Interop.Excel.Application</type>
+        <definition>typedef Microsoft Office Interop Excel BudgetExecution::Excel</definition>
+        <argsstring></argsstring>
+        <name>Excel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelReport.cs" line="11" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelReport.cs" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespace_budget_execution_1abcb11f7b4c45b827c8048025c225447b" prot="public" static="no">
+        <type>Microsoft.Office.Interop.Excel.Workbook</type>
+        <definition>using BudgetExecution.Workbook = typedef Microsoft.Office.Interop.Excel.Workbook</definition>
+        <argsstring></argsstring>
+        <name>Workbook</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelReport.cs" line="12" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelReport.cs" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespace_budget_execution_1af92e0c883dcdf143848ef768cd725529" prot="public" static="no">
+        <type>Microsoft.Office.Interop.Excel.Worksheet</type>
+        <definition>using BudgetExecution.Worksheet = typedef Microsoft.Office.Interop.Excel.Worksheet</definition>
+        <argsstring></argsstring>
+        <name>Worksheet</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelReport.cs" line="13" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelReport.cs" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespace_budget_execution_1a5be39b8b82f504ec9b0da9ff50e1c9c9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>delegate double[]</type>
+        <definition>delegate double [] BudgetExecution.Calculator</definition>
+        <argsstring>(DataTable table)</argsstring>
+        <name>Calculator</name>
+        <param>
+          <type>DataTable</type>
+          <declname>table</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Application.cs" line="13" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="namespace_budget_execution_1a8c9783ed8a091093b3ea5301e48b4a62" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>delegate DataTable</type>
+        <definition>delegate DataTable BudgetExecution.DataFilter</definition>
+        <argsstring>(DataTable table, Field prcfilter, string filter)</argsstring>
+        <name>DataFilter</name>
+        <param>
+          <type>DataTable</type>
+          <declname>table</declname>
+        </param>
+        <param>
+          <type><ref refid="namespace_budget_execution_1ad0246bbb878376883d5a914fca5a5de1" kindref="member">Field</ref></type>
+          <declname>prcfilter</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>filter</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Application.cs" line="15" column="1"/>
+        <referencedby refid="class_budget_execution_1_1_division_authority_1a2bc974bbcab3dfc41db5e210d5f2ddb5" compoundref="_division_authority_8cs" startline="15" endline="37">BudgetExecution.DivisionAuthority.DivisionAuthority</referencedby>
+        <referencedby refid="class_budget_execution_1_1_s_q_lite_data_1a9933466bad62bb548d4fc98138cd6673" compoundref="_s_q_lite_data_8cs" startline="21" endline="39">BudgetExecution.SQLiteData.SQLiteData</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="namespace_budget_execution_1ae03538fa8c69634b02da702c4de9bd8d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>delegate string[]</type>
+        <definition>delegate string [] BudgetExecution.ColumnFilter</definition>
+        <argsstring>(DataTable table, string filter)</argsstring>
+        <name>ColumnFilter</name>
+        <param>
+          <type>DataTable</type>
+          <declname>table</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>filter</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Application.cs" line="17" column="1"/>
+        <referencedby refid="class_budget_execution_1_1_s_q_lite_data_1a9933466bad62bb548d4fc98138cd6673" compoundref="_s_q_lite_data_8cs" startline="21" endline="39">BudgetExecution.SQLiteData.SQLiteData</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="namespace_budget_execution_1a1fc33e65b1aabdb61249f17efac6b32b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>delegate ChartControl</type>
+        <definition>delegate ChartControl BudgetExecution.GetChart</definition>
+        <argsstring>(ChartControl chart, string title, Dictionary&lt; string, double &gt; data)</argsstring>
+        <name>GetChart</name>
+        <param>
+          <type>ChartControl</type>
+          <declname>chart</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>title</declname>
+        </param>
+        <param>
+          <type>Dictionary&lt; string, double &gt;</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Application.cs" line="19" column="1"/>
+        <referencedby refid="class_budget_execution_1_1_main_form_1a12093ae2dfbdce8b9a0a6ae5ce55098f" compoundref="_main_form_8cs" startline="15" endline="35">BudgetExecution.MainForm.MainForm</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="[generated]" line="1" column="1"/>
+  </compounddef>
+</doxygen>

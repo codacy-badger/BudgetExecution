@@ -1,0 +1,1050 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_budget_execution_1_1_budget_chart" kind="class" prot="public">
+    <compoundname>BudgetExecution::BudgetChart</compoundname>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_budget_execution_1_1_budget_chart_1a8585a77263c4bdc0e12be9953e1deada" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>string[]</type>
+        <definition>string [] BudgetExecution.BudgetChart.AxisTitle</definition>
+        <argsstring></argsstring>
+        <name>AxisTitle</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/BudgetChart.cs" line="210" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/BudgetChart.cs" bodystart="210" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_budget_chart_1a977b620d9fdece38ede6dae816402b11" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>ChartControl</type>
+        <definition>ChartControl BudgetExecution.BudgetChart.Chart</definition>
+        <argsstring></argsstring>
+        <name>Chart</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/BudgetChart.cs" line="212" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/BudgetChart.cs" bodystart="212" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_budget_chart_1a19a079095df3559f50dcd359789f9dcc" compoundref="_budget_chart_8cs" startline="251" endline="254">BudgetExecution.BudgetChart.Activate</referencedby>
+        <referencedby refid="class_budget_execution_1_1_budget_chart_1a9bfb51e9b19f357d2f64317d4d925615" compoundref="_budget_chart_8cs" startline="21" endline="40">BudgetExecution.BudgetChart.BudgetChart</referencedby>
+        <referencedby refid="class_budget_execution_1_1_budget_chart_1a7b70c7eab93cd9fbc48ff8f708dc981a" compoundref="_budget_chart_8cs" startline="550" endline="581">BudgetExecution.BudgetChart.Configure3DMode</referencedby>
+        <referencedby refid="class_budget_execution_1_1_budget_chart_1aab5d4fc699c0b33b2a81e616f9b24fce" compoundref="_budget_chart_8cs" startline="665" endline="687">BudgetExecution.BudgetChart.ConfigureMainTitle</referencedby>
+        <referencedby refid="class_budget_execution_1_1_budget_chart_1af5376a29318f9f4b94d028e1f16f9e68" compoundref="_budget_chart_8cs" startline="536" endline="548">BudgetExecution.BudgetChart.ConfigurePrimaryAxisLabels</referencedby>
+        <referencedby refid="class_budget_execution_1_1_budget_chart_1a62f3e2447a17bd45e78850524e1afbe9" compoundref="_budget_chart_8cs" startline="639" endline="663">BudgetExecution.BudgetChart.GetLegend</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_budget_chart_1a38441290d0165e053aaa1272afbcbfa3" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type><ref refid="class_budget_execution_1_1_data_builder" kindref="compound">DataBuilder</ref></type>
+        <definition>DataBuilder BudgetExecution.BudgetChart.DbData</definition>
+        <argsstring></argsstring>
+        <name>DbData</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/BudgetChart.cs" line="214" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/BudgetChart.cs" bodystart="214" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_budget_chart_1a4f0992730e431d4ff7ba404b41f12a8e" compoundref="_budget_chart_8cs" startline="42" endline="65">BudgetExecution.BudgetChart.BudgetChart</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_budget_chart_1a0e3faf2de4cec4f5eb7f7d2725c95436" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type><ref refid="class_budget_execution_1_1_prc_metric" kindref="compound">PrcMetric</ref></type>
+        <definition>PrcMetric BudgetExecution.BudgetChart.Metric</definition>
+        <argsstring></argsstring>
+        <name>Metric</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/BudgetChart.cs" line="216" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/BudgetChart.cs" bodystart="216" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_budget_chart_1a4f0992730e431d4ff7ba404b41f12a8e" compoundref="_budget_chart_8cs" startline="42" endline="65">BudgetExecution.BudgetChart.BudgetChart</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_budget_chart_1a905c243fafd03d12eeeab8da033d905f" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>BindingSource</type>
+        <definition>BindingSource BudgetExecution.BudgetChart.BindingSource</definition>
+        <argsstring></argsstring>
+        <name>BindingSource</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/BudgetChart.cs" line="218" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/BudgetChart.cs" bodystart="218" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_budget_chart_1aa1446e6c098445884ffc4c4389a37dcd" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>Dictionary&lt; string, double[]&gt;</type>
+        <definition>Dictionary&lt;string, double[]&gt; BudgetExecution.BudgetChart.DataMetrics</definition>
+        <argsstring></argsstring>
+        <name>DataMetrics</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/BudgetChart.cs" line="220" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/BudgetChart.cs" bodystart="220" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_budget_chart_1af8306b8559e94b968bfa7131a8caa0f7" compoundref="_budget_chart_8cs" startline="67" endline="89">BudgetExecution.BudgetChart.BudgetChart</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_budget_chart_1a37361e42c3789e81ab3b70f704ffa342" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>ChartSeries</type>
+        <definition>ChartSeries BudgetExecution.BudgetChart.DataSeries</definition>
+        <argsstring></argsstring>
+        <name>DataSeries</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/BudgetChart.cs" line="222" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/BudgetChart.cs" bodystart="222" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_budget_chart_1a9bfb51e9b19f357d2f64317d4d925615" compoundref="_budget_chart_8cs" startline="21" endline="40">BudgetExecution.BudgetChart.BudgetChart</referencedby>
+        <referencedby refid="class_budget_execution_1_1_budget_chart_1aa1f3ded33eaf48bf65ebf3fa072b1409" compoundref="_budget_chart_8cs" startline="373" endline="409">BudgetExecution.BudgetChart.ConfigureLargeNumberSeries</referencedby>
+        <referencedby refid="class_budget_execution_1_1_budget_chart_1adf010e659183b1d5972556f040995629" compoundref="_budget_chart_8cs" startline="355" endline="371">BudgetExecution.BudgetChart.ConfigurePieChart</referencedby>
+        <referencedby refid="class_budget_execution_1_1_budget_chart_1af729d9053eb110cf2e5a53b416891041" compoundref="_budget_chart_8cs" startline="411" endline="455">BudgetExecution.BudgetChart.ConfigureSeries</referencedby>
+        <referencedby refid="class_budget_execution_1_1_budget_chart_1ab82a71c4c169bf189ccd4e4975cb55ee" compoundref="_budget_chart_8cs" startline="527" endline="534">BudgetExecution.BudgetChart.ConfigureToolTip</referencedby>
+        <referencedby refid="class_budget_execution_1_1_budget_chart_1a2fd9494586dc6dd8cdc4bc2bb0430757" compoundref="_budget_chart_8cs" startline="256" endline="293">BudgetExecution.BudgetChart.GetSeriesTotals</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_budget_chart_1aeb501850448c6e063ed2f6be09468959" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>Dictionary&lt; string, double &gt;</type>
+        <definition>Dictionary&lt;string, double&gt; BudgetExecution.BudgetChart.DataTotals</definition>
+        <argsstring></argsstring>
+        <name>DataTotals</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/BudgetChart.cs" line="224" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/BudgetChart.cs" bodystart="224" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_budget_chart_1a4f0992730e431d4ff7ba404b41f12a8e" compoundref="_budget_chart_8cs" startline="42" endline="65">BudgetExecution.BudgetChart.BudgetChart</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_budget_chart_1a013770bf63b196a8ea87aa4acfe663f4" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>int[]</type>
+        <definition>int [] BudgetExecution.BudgetChart.Dimension</definition>
+        <argsstring></argsstring>
+        <name>Dimension</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/BudgetChart.cs" line="226" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/BudgetChart.cs" bodystart="226" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_budget_chart_1a56dc3cd3c35fabb4d223168782ad4835" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type><ref refid="namespace_budget_execution_1a31d755f9fbeb90de04b7b1e2e21acdc8" kindref="member">Source</ref></type>
+        <definition>Source BudgetExecution.BudgetChart.Source</definition>
+        <argsstring></argsstring>
+        <name>Source</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/BudgetChart.cs" line="228" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/BudgetChart.cs" bodystart="228" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_budget_chart_1a970458a65a88e9c8163ca331a39e1cfb" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type><ref refid="namespace_budget_execution_1ad0246bbb878376883d5a914fca5a5de1" kindref="member">Field</ref></type>
+        <definition>Field BudgetExecution.BudgetChart.Filter</definition>
+        <argsstring></argsstring>
+        <name>Filter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/BudgetChart.cs" line="230" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/BudgetChart.cs" bodystart="230" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_budget_chart_1ad0442c9b241caceccdd50c1da0fbfbf4" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>ChartSeriesType</type>
+        <definition>ChartSeriesType BudgetExecution.BudgetChart.SeriesType</definition>
+        <argsstring></argsstring>
+        <name>SeriesType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/BudgetChart.cs" line="232" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/BudgetChart.cs" bodystart="232" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_budget_chart_1a9bfb51e9b19f357d2f64317d4d925615" compoundref="_budget_chart_8cs" startline="21" endline="40">BudgetExecution.BudgetChart.BudgetChart</referencedby>
+        <referencedby refid="class_budget_execution_1_1_budget_chart_1a7b70c7eab93cd9fbc48ff8f708dc981a" compoundref="_budget_chart_8cs" startline="550" endline="581">BudgetExecution.BudgetChart.Configure3DMode</referencedby>
+        <referencedby refid="class_budget_execution_1_1_budget_chart_1aa1f3ded33eaf48bf65ebf3fa072b1409" compoundref="_budget_chart_8cs" startline="373" endline="409">BudgetExecution.BudgetChart.ConfigureLargeNumberSeries</referencedby>
+        <referencedby refid="class_budget_execution_1_1_budget_chart_1af729d9053eb110cf2e5a53b416891041" compoundref="_budget_chart_8cs" startline="411" endline="455">BudgetExecution.BudgetChart.ConfigureSeries</referencedby>
+        <referencedby refid="class_budget_execution_1_1_budget_chart_1a2fd9494586dc6dd8cdc4bc2bb0430757" compoundref="_budget_chart_8cs" startline="256" endline="293">BudgetExecution.BudgetChart.GetSeriesTotals</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_budget_chart_1a80fdc4e5284f8b92b2ac2660a904b966" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type><ref refid="namespace_budget_execution_1a3df5d95d2846c10429f5872736ac022e" kindref="member">Stat</ref></type>
+        <definition>Stat BudgetExecution.BudgetChart.Value</definition>
+        <argsstring></argsstring>
+        <name>Value</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/BudgetChart.cs" line="234" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/BudgetChart.cs" bodystart="234" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_budget_chart_1a9bfb51e9b19f357d2f64317d4d925615" compoundref="_budget_chart_8cs" startline="21" endline="40">BudgetExecution.BudgetChart.BudgetChart</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_budget_chart_1a7d891f1621afa8d18707179f8a663d59" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>Dictionary&lt; string, double[]&gt;</type>
+        <definition>Dictionary&lt;string, double[]&gt; BudgetExecution.BudgetChart.InputMetrics</definition>
+        <argsstring></argsstring>
+        <name>InputMetrics</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/BudgetChart.cs" line="236" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/BudgetChart.cs" bodystart="236" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_budget_chart_1a4197714ed09eabb6206d4c047d8a5373" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>Dictionary&lt; string, double &gt;</type>
+        <definition>Dictionary&lt;string, double&gt; BudgetExecution.BudgetChart.InputTotals</definition>
+        <argsstring></argsstring>
+        <name>InputTotals</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/BudgetChart.cs" line="238" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/BudgetChart.cs" bodystart="238" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_budget_chart_1a43bb9c01a74dc8becd09fabb42f66f7b" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>ChartLegend</type>
+        <definition>ChartLegend BudgetExecution.BudgetChart.Legend</definition>
+        <argsstring></argsstring>
+        <name>Legend</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/BudgetChart.cs" line="240" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/BudgetChart.cs" bodystart="240" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_budget_chart_1a94d0d5e08f680eaddcd98f74637bcf19" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>string[]</type>
+        <definition>string [] BudgetExecution.BudgetChart.MainTitle</definition>
+        <argsstring></argsstring>
+        <name>MainTitle</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/BudgetChart.cs" line="242" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/BudgetChart.cs" bodystart="242" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_budget_chart_1a0ffe4a14d332bd47e02356325a981a46" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>ChartDataBindModel</type>
+        <definition>ChartDataBindModel BudgetExecution.BudgetChart.Model</definition>
+        <argsstring></argsstring>
+        <name>Model</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/BudgetChart.cs" line="244" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/BudgetChart.cs" bodystart="244" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_budget_chart_1ac793a6f8a442ff2fc7b6b79bbd899a2e" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>DataTable</type>
+        <definition>DataTable BudgetExecution.BudgetChart.Table</definition>
+        <argsstring></argsstring>
+        <name>Table</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/BudgetChart.cs" line="246" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/BudgetChart.cs" bodystart="246" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_budget_chart_1a4f0992730e431d4ff7ba404b41f12a8e" compoundref="_budget_chart_8cs" startline="42" endline="65">BudgetExecution.BudgetChart.BudgetChart</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_budget_chart_1a66fae0d61ec9179a8a02d5bd260b4cbe" prot="private" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>double</type>
+        <definition>double BudgetExecution.BudgetChart.Total</definition>
+        <argsstring></argsstring>
+        <name>Total</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/BudgetChart.cs" line="248" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/BudgetChart.cs" bodystart="248" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_budget_execution_1_1_budget_chart_1a6bff6d2a2fc43ebc011096a44aabe7cf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>BudgetExecution.BudgetChart.BudgetChart</definition>
+        <argsstring>()</argsstring>
+        <name>BudgetChart</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/BudgetChart.cs" line="17" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/BudgetChart.cs" bodystart="17" bodyend="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_budget_chart_1a9bfb51e9b19f357d2f64317d4d925615" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>BudgetExecution.BudgetChart.BudgetChart</definition>
+        <argsstring>(ChartControl chart, string title, Dictionary&lt; string, double &gt; data)</argsstring>
+        <name>BudgetChart</name>
+        <param>
+          <type>ChartControl</type>
+          <declname>chart</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>title</declname>
+        </param>
+        <param>
+          <type>Dictionary&lt; string, double &gt;</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/BudgetChart.cs" line="21" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/BudgetChart.cs" bodystart="21" bodyend="40"/>
+        <references refid="class_budget_execution_1_1_budget_chart_1a977b620d9fdece38ede6dae816402b11" compoundref="_budget_chart_8cs" startline="212">BudgetExecution.BudgetChart.Chart</references>
+        <references refid="class_budget_execution_1_1_budget_chart_1a7b70c7eab93cd9fbc48ff8f708dc981a" compoundref="_budget_chart_8cs" startline="550" endline="581">BudgetExecution.BudgetChart.Configure3DMode</references>
+        <references refid="class_budget_execution_1_1_budget_chart_1aa1f3ded33eaf48bf65ebf3fa072b1409" compoundref="_budget_chart_8cs" startline="373" endline="409">BudgetExecution.BudgetChart.ConfigureLargeNumberSeries</references>
+        <references refid="class_budget_execution_1_1_budget_chart_1af5376a29318f9f4b94d028e1f16f9e68" compoundref="_budget_chart_8cs" startline="536" endline="548">BudgetExecution.BudgetChart.ConfigurePrimaryAxisLabels</references>
+        <references refid="class_budget_execution_1_1_budget_chart_1a14e83d95271c8d9cfb0405878db17bad" compoundref="_budget_chart_8cs" startline="604" endline="616">BudgetExecution.BudgetChart.ConfigurePrimaryAxisTitle</references>
+        <references refid="class_budget_execution_1_1_budget_chart_1ab82a71c4c169bf189ccd4e4975cb55ee" compoundref="_budget_chart_8cs" startline="527" endline="534">BudgetExecution.BudgetChart.ConfigureToolTip</references>
+        <references refid="class_budget_execution_1_1_budget_chart_1a37361e42c3789e81ab3b70f704ffa342" compoundref="_budget_chart_8cs" startline="222">BudgetExecution.BudgetChart.DataSeries</references>
+        <references refid="class_budget_execution_1_1_budget_chart_1a2fd9494586dc6dd8cdc4bc2bb0430757" compoundref="_budget_chart_8cs" startline="256" endline="293">BudgetExecution.BudgetChart.GetSeriesTotals</references>
+        <references refid="class_budget_execution_1_1_budget_chart_1ad0442c9b241caceccdd50c1da0fbfbf4" compoundref="_budget_chart_8cs" startline="232">BudgetExecution.BudgetChart.SeriesType</references>
+        <references refid="class_budget_execution_1_1_budget_chart_1a80fdc4e5284f8b92b2ac2660a904b966" compoundref="_budget_chart_8cs" startline="234">BudgetExecution.BudgetChart.Value</references>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_budget_chart_1a4f0992730e431d4ff7ba404b41f12a8e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>BudgetExecution.BudgetChart.BudgetChart</definition>
+        <argsstring>(ChartControl chart, DataBuilder data, Field filter)</argsstring>
+        <name>BudgetChart</name>
+        <param>
+          <type>ChartControl</type>
+          <declname>chart</declname>
+        </param>
+        <param>
+          <type><ref refid="class_budget_execution_1_1_data_builder" kindref="compound">DataBuilder</ref></type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type><ref refid="namespace_budget_execution_1ad0246bbb878376883d5a914fca5a5de1" kindref="member">Field</ref></type>
+          <declname>filter</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/BudgetChart.cs" line="42" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/BudgetChart.cs" bodystart="42" bodyend="65"/>
+        <references refid="class_budget_execution_1_1_budget_chart_1a977b620d9fdece38ede6dae816402b11" compoundref="_budget_chart_8cs" startline="212">BudgetExecution.BudgetChart.Chart</references>
+        <references refid="class_budget_execution_1_1_budget_chart_1a7b70c7eab93cd9fbc48ff8f708dc981a" compoundref="_budget_chart_8cs" startline="550" endline="581">BudgetExecution.BudgetChart.Configure3DMode</references>
+        <references refid="class_budget_execution_1_1_budget_chart_1aa1f3ded33eaf48bf65ebf3fa072b1409" compoundref="_budget_chart_8cs" startline="373" endline="409">BudgetExecution.BudgetChart.ConfigureLargeNumberSeries</references>
+        <references refid="class_budget_execution_1_1_budget_chart_1af5376a29318f9f4b94d028e1f16f9e68" compoundref="_budget_chart_8cs" startline="536" endline="548">BudgetExecution.BudgetChart.ConfigurePrimaryAxisLabels</references>
+        <references refid="class_budget_execution_1_1_budget_chart_1ab82a71c4c169bf189ccd4e4975cb55ee" compoundref="_budget_chart_8cs" startline="527" endline="534">BudgetExecution.BudgetChart.ConfigureToolTip</references>
+        <references refid="class_budget_execution_1_1_budget_chart_1a37361e42c3789e81ab3b70f704ffa342" compoundref="_budget_chart_8cs" startline="222">BudgetExecution.BudgetChart.DataSeries</references>
+        <references refid="class_budget_execution_1_1_budget_chart_1aeb501850448c6e063ed2f6be09468959" compoundref="_budget_chart_8cs" startline="224">BudgetExecution.BudgetChart.DataTotals</references>
+        <references refid="class_budget_execution_1_1_budget_chart_1a38441290d0165e053aaa1272afbcbfa3" compoundref="_budget_chart_8cs" startline="214">BudgetExecution.BudgetChart.DbData</references>
+        <references refid="class_budget_execution_1_1_budget_chart_1a2fd9494586dc6dd8cdc4bc2bb0430757" compoundref="_budget_chart_8cs" startline="256" endline="293">BudgetExecution.BudgetChart.GetSeriesTotals</references>
+        <references refid="class_budget_execution_1_1_budget_chart_1a0e3faf2de4cec4f5eb7f7d2725c95436" compoundref="_budget_chart_8cs" startline="216">BudgetExecution.BudgetChart.Metric</references>
+        <references refid="class_budget_execution_1_1_budget_chart_1ad0442c9b241caceccdd50c1da0fbfbf4" compoundref="_budget_chart_8cs" startline="232">BudgetExecution.BudgetChart.SeriesType</references>
+        <references refid="class_budget_execution_1_1_budget_chart_1ac793a6f8a442ff2fc7b6b79bbd899a2e" compoundref="_budget_chart_8cs" startline="246">BudgetExecution.BudgetChart.Table</references>
+        <references refid="class_budget_execution_1_1_budget_chart_1a80fdc4e5284f8b92b2ac2660a904b966" compoundref="_budget_chart_8cs" startline="234">BudgetExecution.BudgetChart.Value</references>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_budget_chart_1af8306b8559e94b968bfa7131a8caa0f7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>BudgetExecution.BudgetChart.BudgetChart</definition>
+        <argsstring>(ChartControl chart, DataBuilder data, Field filter, Stat value, ChartSeriesType type)</argsstring>
+        <name>BudgetChart</name>
+        <param>
+          <type>ChartControl</type>
+          <declname>chart</declname>
+        </param>
+        <param>
+          <type><ref refid="class_budget_execution_1_1_data_builder" kindref="compound">DataBuilder</ref></type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type><ref refid="namespace_budget_execution_1ad0246bbb878376883d5a914fca5a5de1" kindref="member">Field</ref></type>
+          <declname>filter</declname>
+        </param>
+        <param>
+          <type><ref refid="namespace_budget_execution_1a3df5d95d2846c10429f5872736ac022e" kindref="member">Stat</ref></type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>ChartSeriesType</type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/BudgetChart.cs" line="67" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/BudgetChart.cs" bodystart="67" bodyend="89"/>
+        <references refid="class_budget_execution_1_1_budget_chart_1a977b620d9fdece38ede6dae816402b11" compoundref="_budget_chart_8cs" startline="212">BudgetExecution.BudgetChart.Chart</references>
+        <references refid="class_budget_execution_1_1_budget_chart_1a7b70c7eab93cd9fbc48ff8f708dc981a" compoundref="_budget_chart_8cs" startline="550" endline="581">BudgetExecution.BudgetChart.Configure3DMode</references>
+        <references refid="class_budget_execution_1_1_budget_chart_1af5376a29318f9f4b94d028e1f16f9e68" compoundref="_budget_chart_8cs" startline="536" endline="548">BudgetExecution.BudgetChart.ConfigurePrimaryAxisLabels</references>
+        <references refid="class_budget_execution_1_1_budget_chart_1af729d9053eb110cf2e5a53b416891041" compoundref="_budget_chart_8cs" startline="411" endline="455">BudgetExecution.BudgetChart.ConfigureSeries</references>
+        <references refid="class_budget_execution_1_1_budget_chart_1ab82a71c4c169bf189ccd4e4975cb55ee" compoundref="_budget_chart_8cs" startline="527" endline="534">BudgetExecution.BudgetChart.ConfigureToolTip</references>
+        <references refid="class_budget_execution_1_1_budget_chart_1aa1446e6c098445884ffc4c4389a37dcd" compoundref="_budget_chart_8cs" startline="220">BudgetExecution.BudgetChart.DataMetrics</references>
+        <references refid="class_budget_execution_1_1_budget_chart_1a37361e42c3789e81ab3b70f704ffa342" compoundref="_budget_chart_8cs" startline="222">BudgetExecution.BudgetChart.DataSeries</references>
+        <references refid="class_budget_execution_1_1_budget_chart_1a38441290d0165e053aaa1272afbcbfa3" compoundref="_budget_chart_8cs" startline="214">BudgetExecution.BudgetChart.DbData</references>
+        <references refid="class_budget_execution_1_1_budget_chart_1a801d1fea8b976792acd78fa13c560928" compoundref="_budget_chart_8cs" startline="336" endline="353">BudgetExecution.BudgetChart.GetMeasure</references>
+        <references refid="class_budget_execution_1_1_budget_chart_1a2fd9494586dc6dd8cdc4bc2bb0430757" compoundref="_budget_chart_8cs" startline="256" endline="293">BudgetExecution.BudgetChart.GetSeriesTotals</references>
+        <references refid="class_budget_execution_1_1_budget_chart_1a0e3faf2de4cec4f5eb7f7d2725c95436" compoundref="_budget_chart_8cs" startline="216">BudgetExecution.BudgetChart.Metric</references>
+        <references refid="class_budget_execution_1_1_budget_chart_1ad0442c9b241caceccdd50c1da0fbfbf4" compoundref="_budget_chart_8cs" startline="232">BudgetExecution.BudgetChart.SeriesType</references>
+        <references refid="class_budget_execution_1_1_budget_chart_1ac793a6f8a442ff2fc7b6b79bbd899a2e" compoundref="_budget_chart_8cs" startline="246">BudgetExecution.BudgetChart.Table</references>
+        <references refid="class_budget_execution_1_1_budget_chart_1a80fdc4e5284f8b92b2ac2660a904b966" compoundref="_budget_chart_8cs" startline="234">BudgetExecution.BudgetChart.Value</references>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_budget_chart_1a531133d5c8bbe4634359c7471fa8cc2e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>BudgetExecution.BudgetChart.BudgetChart</definition>
+        <argsstring>(ChartControl chart, string[] title, DataBuilder data, Field filter, Stat value, ChartSeriesType type)</argsstring>
+        <name>BudgetChart</name>
+        <param>
+          <type>ChartControl</type>
+          <declname>chart</declname>
+        </param>
+        <param>
+          <type>string[]</type>
+          <declname>title</declname>
+        </param>
+        <param>
+          <type><ref refid="class_budget_execution_1_1_data_builder" kindref="compound">DataBuilder</ref></type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type><ref refid="namespace_budget_execution_1ad0246bbb878376883d5a914fca5a5de1" kindref="member">Field</ref></type>
+          <declname>filter</declname>
+        </param>
+        <param>
+          <type><ref refid="namespace_budget_execution_1a3df5d95d2846c10429f5872736ac022e" kindref="member">Stat</ref></type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>ChartSeriesType</type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/BudgetChart.cs" line="91" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/BudgetChart.cs" bodystart="91" bodyend="115"/>
+        <references refid="class_budget_execution_1_1_budget_chart_1a977b620d9fdece38ede6dae816402b11" compoundref="_budget_chart_8cs" startline="212">BudgetExecution.BudgetChart.Chart</references>
+        <references refid="class_budget_execution_1_1_budget_chart_1a7b70c7eab93cd9fbc48ff8f708dc981a" compoundref="_budget_chart_8cs" startline="550" endline="581">BudgetExecution.BudgetChart.Configure3DMode</references>
+        <references refid="class_budget_execution_1_1_budget_chart_1aab5d4fc699c0b33b2a81e616f9b24fce" compoundref="_budget_chart_8cs" startline="665" endline="687">BudgetExecution.BudgetChart.ConfigureMainTitle</references>
+        <references refid="class_budget_execution_1_1_budget_chart_1af5376a29318f9f4b94d028e1f16f9e68" compoundref="_budget_chart_8cs" startline="536" endline="548">BudgetExecution.BudgetChart.ConfigurePrimaryAxisLabels</references>
+        <references refid="class_budget_execution_1_1_budget_chart_1af729d9053eb110cf2e5a53b416891041" compoundref="_budget_chart_8cs" startline="411" endline="455">BudgetExecution.BudgetChart.ConfigureSeries</references>
+        <references refid="class_budget_execution_1_1_budget_chart_1ab82a71c4c169bf189ccd4e4975cb55ee" compoundref="_budget_chart_8cs" startline="527" endline="534">BudgetExecution.BudgetChart.ConfigureToolTip</references>
+        <references refid="class_budget_execution_1_1_budget_chart_1aa1446e6c098445884ffc4c4389a37dcd" compoundref="_budget_chart_8cs" startline="220">BudgetExecution.BudgetChart.DataMetrics</references>
+        <references refid="class_budget_execution_1_1_budget_chart_1a37361e42c3789e81ab3b70f704ffa342" compoundref="_budget_chart_8cs" startline="222">BudgetExecution.BudgetChart.DataSeries</references>
+        <references refid="class_budget_execution_1_1_budget_chart_1a38441290d0165e053aaa1272afbcbfa3" compoundref="_budget_chart_8cs" startline="214">BudgetExecution.BudgetChart.DbData</references>
+        <references refid="class_budget_execution_1_1_budget_chart_1a801d1fea8b976792acd78fa13c560928" compoundref="_budget_chart_8cs" startline="336" endline="353">BudgetExecution.BudgetChart.GetMeasure</references>
+        <references refid="class_budget_execution_1_1_budget_chart_1a2fd9494586dc6dd8cdc4bc2bb0430757" compoundref="_budget_chart_8cs" startline="256" endline="293">BudgetExecution.BudgetChart.GetSeriesTotals</references>
+        <references refid="class_budget_execution_1_1_budget_chart_1a0e3faf2de4cec4f5eb7f7d2725c95436" compoundref="_budget_chart_8cs" startline="216">BudgetExecution.BudgetChart.Metric</references>
+        <references refid="class_budget_execution_1_1_budget_chart_1ad0442c9b241caceccdd50c1da0fbfbf4" compoundref="_budget_chart_8cs" startline="232">BudgetExecution.BudgetChart.SeriesType</references>
+        <references refid="class_budget_execution_1_1_budget_chart_1ac793a6f8a442ff2fc7b6b79bbd899a2e" compoundref="_budget_chart_8cs" startline="246">BudgetExecution.BudgetChart.Table</references>
+        <references refid="class_budget_execution_1_1_budget_chart_1a80fdc4e5284f8b92b2ac2660a904b966" compoundref="_budget_chart_8cs" startline="234">BudgetExecution.BudgetChart.Value</references>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_budget_chart_1adfcd09021429060a648a98015a519528" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>BudgetExecution.BudgetChart.BudgetChart</definition>
+        <argsstring>(ChartControl chart, string[] title, DataTable table, Field filter, Stat value, ChartSeriesType type)</argsstring>
+        <name>BudgetChart</name>
+        <param>
+          <type>ChartControl</type>
+          <declname>chart</declname>
+        </param>
+        <param>
+          <type>string[]</type>
+          <declname>title</declname>
+        </param>
+        <param>
+          <type>DataTable</type>
+          <declname>table</declname>
+        </param>
+        <param>
+          <type><ref refid="namespace_budget_execution_1ad0246bbb878376883d5a914fca5a5de1" kindref="member">Field</ref></type>
+          <declname>filter</declname>
+        </param>
+        <param>
+          <type><ref refid="namespace_budget_execution_1a3df5d95d2846c10429f5872736ac022e" kindref="member">Stat</ref></type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>ChartSeriesType</type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/BudgetChart.cs" line="117" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/BudgetChart.cs" bodystart="117" bodyend="136"/>
+        <references refid="class_budget_execution_1_1_budget_chart_1a977b620d9fdece38ede6dae816402b11" compoundref="_budget_chart_8cs" startline="212">BudgetExecution.BudgetChart.Chart</references>
+        <references refid="class_budget_execution_1_1_budget_chart_1a7b70c7eab93cd9fbc48ff8f708dc981a" compoundref="_budget_chart_8cs" startline="550" endline="581">BudgetExecution.BudgetChart.Configure3DMode</references>
+        <references refid="class_budget_execution_1_1_budget_chart_1aab5d4fc699c0b33b2a81e616f9b24fce" compoundref="_budget_chart_8cs" startline="665" endline="687">BudgetExecution.BudgetChart.ConfigureMainTitle</references>
+        <references refid="class_budget_execution_1_1_budget_chart_1af5376a29318f9f4b94d028e1f16f9e68" compoundref="_budget_chart_8cs" startline="536" endline="548">BudgetExecution.BudgetChart.ConfigurePrimaryAxisLabels</references>
+        <references refid="class_budget_execution_1_1_budget_chart_1af729d9053eb110cf2e5a53b416891041" compoundref="_budget_chart_8cs" startline="411" endline="455">BudgetExecution.BudgetChart.ConfigureSeries</references>
+        <references refid="class_budget_execution_1_1_budget_chart_1ab82a71c4c169bf189ccd4e4975cb55ee" compoundref="_budget_chart_8cs" startline="527" endline="534">BudgetExecution.BudgetChart.ConfigureToolTip</references>
+        <references refid="class_budget_execution_1_1_budget_chart_1aa1446e6c098445884ffc4c4389a37dcd" compoundref="_budget_chart_8cs" startline="220">BudgetExecution.BudgetChart.DataMetrics</references>
+        <references refid="class_budget_execution_1_1_budget_chart_1a37361e42c3789e81ab3b70f704ffa342" compoundref="_budget_chart_8cs" startline="222">BudgetExecution.BudgetChart.DataSeries</references>
+        <references refid="class_budget_execution_1_1_budget_chart_1a801d1fea8b976792acd78fa13c560928" compoundref="_budget_chart_8cs" startline="336" endline="353">BudgetExecution.BudgetChart.GetMeasure</references>
+        <references refid="class_budget_execution_1_1_budget_chart_1a2fd9494586dc6dd8cdc4bc2bb0430757" compoundref="_budget_chart_8cs" startline="256" endline="293">BudgetExecution.BudgetChart.GetSeriesTotals</references>
+        <references refid="class_budget_execution_1_1_budget_chart_1ad0442c9b241caceccdd50c1da0fbfbf4" compoundref="_budget_chart_8cs" startline="232">BudgetExecution.BudgetChart.SeriesType</references>
+        <references refid="class_budget_execution_1_1_budget_chart_1ac793a6f8a442ff2fc7b6b79bbd899a2e" compoundref="_budget_chart_8cs" startline="246">BudgetExecution.BudgetChart.Table</references>
+        <references refid="class_budget_execution_1_1_budget_chart_1a80fdc4e5284f8b92b2ac2660a904b966" compoundref="_budget_chart_8cs" startline="234">BudgetExecution.BudgetChart.Value</references>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_budget_chart_1a667a87dcb8a0785cc142a6ad09bc4ee7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>BudgetExecution.BudgetChart.BudgetChart</definition>
+        <argsstring>(ChartControl chart, string[] title, Dictionary&lt; string, double &gt; data, Field filter, Stat value, ChartSeriesType type)</argsstring>
+        <name>BudgetChart</name>
+        <param>
+          <type>ChartControl</type>
+          <declname>chart</declname>
+        </param>
+        <param>
+          <type>string[]</type>
+          <declname>title</declname>
+        </param>
+        <param>
+          <type>Dictionary&lt; string, double &gt;</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type><ref refid="namespace_budget_execution_1ad0246bbb878376883d5a914fca5a5de1" kindref="member">Field</ref></type>
+          <declname>filter</declname>
+        </param>
+        <param>
+          <type><ref refid="namespace_budget_execution_1a3df5d95d2846c10429f5872736ac022e" kindref="member">Stat</ref></type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>ChartSeriesType</type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/BudgetChart.cs" line="138" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/BudgetChart.cs" bodystart="138" bodyend="157"/>
+        <references refid="class_budget_execution_1_1_budget_chart_1a977b620d9fdece38ede6dae816402b11" compoundref="_budget_chart_8cs" startline="212">BudgetExecution.BudgetChart.Chart</references>
+        <references refid="class_budget_execution_1_1_budget_chart_1a7b70c7eab93cd9fbc48ff8f708dc981a" compoundref="_budget_chart_8cs" startline="550" endline="581">BudgetExecution.BudgetChart.Configure3DMode</references>
+        <references refid="class_budget_execution_1_1_budget_chart_1aab5d4fc699c0b33b2a81e616f9b24fce" compoundref="_budget_chart_8cs" startline="665" endline="687">BudgetExecution.BudgetChart.ConfigureMainTitle</references>
+        <references refid="class_budget_execution_1_1_budget_chart_1af5376a29318f9f4b94d028e1f16f9e68" compoundref="_budget_chart_8cs" startline="536" endline="548">BudgetExecution.BudgetChart.ConfigurePrimaryAxisLabels</references>
+        <references refid="class_budget_execution_1_1_budget_chart_1ab82a71c4c169bf189ccd4e4975cb55ee" compoundref="_budget_chart_8cs" startline="527" endline="534">BudgetExecution.BudgetChart.ConfigureToolTip</references>
+        <references refid="class_budget_execution_1_1_budget_chart_1a37361e42c3789e81ab3b70f704ffa342" compoundref="_budget_chart_8cs" startline="222">BudgetExecution.BudgetChart.DataSeries</references>
+        <references refid="class_budget_execution_1_1_budget_chart_1ad0442c9b241caceccdd50c1da0fbfbf4" compoundref="_budget_chart_8cs" startline="232">BudgetExecution.BudgetChart.SeriesType</references>
+        <references refid="class_budget_execution_1_1_budget_chart_1a80fdc4e5284f8b92b2ac2660a904b966" compoundref="_budget_chart_8cs" startline="234">BudgetExecution.BudgetChart.Value</references>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_budget_chart_1a9f2bccd06dbd9bf09ce85510863c7d09" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>BudgetExecution.BudgetChart.BudgetChart</definition>
+        <argsstring>(ChartControl chart, string[] title, Source source, Field filter, Stat value, ChartSeriesType type)</argsstring>
+        <name>BudgetChart</name>
+        <param>
+          <type>ChartControl</type>
+          <declname>chart</declname>
+        </param>
+        <param>
+          <type>string[]</type>
+          <declname>title</declname>
+        </param>
+        <param>
+          <type><ref refid="namespace_budget_execution_1a31d755f9fbeb90de04b7b1e2e21acdc8" kindref="member">Source</ref></type>
+          <declname>source</declname>
+        </param>
+        <param>
+          <type><ref refid="namespace_budget_execution_1ad0246bbb878376883d5a914fca5a5de1" kindref="member">Field</ref></type>
+          <declname>filter</declname>
+        </param>
+        <param>
+          <type><ref refid="namespace_budget_execution_1a3df5d95d2846c10429f5872736ac022e" kindref="member">Stat</ref></type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>ChartSeriesType</type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/BudgetChart.cs" line="159" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/BudgetChart.cs" bodystart="159" bodyend="182"/>
+        <references refid="class_budget_execution_1_1_budget_chart_1a977b620d9fdece38ede6dae816402b11" compoundref="_budget_chart_8cs" startline="212">BudgetExecution.BudgetChart.Chart</references>
+        <references refid="class_budget_execution_1_1_budget_chart_1a7b70c7eab93cd9fbc48ff8f708dc981a" compoundref="_budget_chart_8cs" startline="550" endline="581">BudgetExecution.BudgetChart.Configure3DMode</references>
+        <references refid="class_budget_execution_1_1_budget_chart_1aab5d4fc699c0b33b2a81e616f9b24fce" compoundref="_budget_chart_8cs" startline="665" endline="687">BudgetExecution.BudgetChart.ConfigureMainTitle</references>
+        <references refid="class_budget_execution_1_1_budget_chart_1af5376a29318f9f4b94d028e1f16f9e68" compoundref="_budget_chart_8cs" startline="536" endline="548">BudgetExecution.BudgetChart.ConfigurePrimaryAxisLabels</references>
+        <references refid="class_budget_execution_1_1_budget_chart_1af729d9053eb110cf2e5a53b416891041" compoundref="_budget_chart_8cs" startline="411" endline="455">BudgetExecution.BudgetChart.ConfigureSeries</references>
+        <references refid="class_budget_execution_1_1_budget_chart_1ab82a71c4c169bf189ccd4e4975cb55ee" compoundref="_budget_chart_8cs" startline="527" endline="534">BudgetExecution.BudgetChart.ConfigureToolTip</references>
+        <references refid="class_budget_execution_1_1_budget_chart_1aa1446e6c098445884ffc4c4389a37dcd" compoundref="_budget_chart_8cs" startline="220">BudgetExecution.BudgetChart.DataMetrics</references>
+        <references refid="class_budget_execution_1_1_budget_chart_1a37361e42c3789e81ab3b70f704ffa342" compoundref="_budget_chart_8cs" startline="222">BudgetExecution.BudgetChart.DataSeries</references>
+        <references refid="class_budget_execution_1_1_budget_chart_1a38441290d0165e053aaa1272afbcbfa3" compoundref="_budget_chart_8cs" startline="214">BudgetExecution.BudgetChart.DbData</references>
+        <references refid="class_budget_execution_1_1_budget_chart_1a801d1fea8b976792acd78fa13c560928" compoundref="_budget_chart_8cs" startline="336" endline="353">BudgetExecution.BudgetChart.GetMeasure</references>
+        <references refid="class_budget_execution_1_1_budget_chart_1a2fd9494586dc6dd8cdc4bc2bb0430757" compoundref="_budget_chart_8cs" startline="256" endline="293">BudgetExecution.BudgetChart.GetSeriesTotals</references>
+        <references refid="class_budget_execution_1_1_budget_chart_1a0e3faf2de4cec4f5eb7f7d2725c95436" compoundref="_budget_chart_8cs" startline="216">BudgetExecution.BudgetChart.Metric</references>
+        <references refid="class_budget_execution_1_1_budget_chart_1ad0442c9b241caceccdd50c1da0fbfbf4" compoundref="_budget_chart_8cs" startline="232">BudgetExecution.BudgetChart.SeriesType</references>
+        <references refid="class_budget_execution_1_1_budget_chart_1ac793a6f8a442ff2fc7b6b79bbd899a2e" compoundref="_budget_chart_8cs" startline="246">BudgetExecution.BudgetChart.Table</references>
+        <references refid="class_budget_execution_1_1_budget_chart_1a80fdc4e5284f8b92b2ac2660a904b966" compoundref="_budget_chart_8cs" startline="234">BudgetExecution.BudgetChart.Value</references>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_budget_chart_1a2631ac40934765b4904f4ae395e3d87d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>BudgetExecution.BudgetChart.BudgetChart</definition>
+        <argsstring>(ChartControl chart, string[] title, Source source, Dictionary&lt; string, object &gt; param, Field filter, Stat value, ChartSeriesType type)</argsstring>
+        <name>BudgetChart</name>
+        <param>
+          <type>ChartControl</type>
+          <declname>chart</declname>
+        </param>
+        <param>
+          <type>string[]</type>
+          <declname>title</declname>
+        </param>
+        <param>
+          <type><ref refid="namespace_budget_execution_1a31d755f9fbeb90de04b7b1e2e21acdc8" kindref="member">Source</ref></type>
+          <declname>source</declname>
+        </param>
+        <param>
+          <type>Dictionary&lt; string, object &gt;</type>
+          <declname>param</declname>
+        </param>
+        <param>
+          <type><ref refid="namespace_budget_execution_1ad0246bbb878376883d5a914fca5a5de1" kindref="member">Field</ref></type>
+          <declname>filter</declname>
+        </param>
+        <param>
+          <type><ref refid="namespace_budget_execution_1a3df5d95d2846c10429f5872736ac022e" kindref="member">Stat</ref></type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>ChartSeriesType</type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/BudgetChart.cs" line="184" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/BudgetChart.cs" bodystart="184" bodyend="207"/>
+        <references refid="class_budget_execution_1_1_budget_chart_1a977b620d9fdece38ede6dae816402b11" compoundref="_budget_chart_8cs" startline="212">BudgetExecution.BudgetChart.Chart</references>
+        <references refid="class_budget_execution_1_1_budget_chart_1a7b70c7eab93cd9fbc48ff8f708dc981a" compoundref="_budget_chart_8cs" startline="550" endline="581">BudgetExecution.BudgetChart.Configure3DMode</references>
+        <references refid="class_budget_execution_1_1_budget_chart_1aab5d4fc699c0b33b2a81e616f9b24fce" compoundref="_budget_chart_8cs" startline="665" endline="687">BudgetExecution.BudgetChart.ConfigureMainTitle</references>
+        <references refid="class_budget_execution_1_1_budget_chart_1af5376a29318f9f4b94d028e1f16f9e68" compoundref="_budget_chart_8cs" startline="536" endline="548">BudgetExecution.BudgetChart.ConfigurePrimaryAxisLabels</references>
+        <references refid="class_budget_execution_1_1_budget_chart_1af729d9053eb110cf2e5a53b416891041" compoundref="_budget_chart_8cs" startline="411" endline="455">BudgetExecution.BudgetChart.ConfigureSeries</references>
+        <references refid="class_budget_execution_1_1_budget_chart_1ab82a71c4c169bf189ccd4e4975cb55ee" compoundref="_budget_chart_8cs" startline="527" endline="534">BudgetExecution.BudgetChart.ConfigureToolTip</references>
+        <references refid="class_budget_execution_1_1_budget_chart_1aa1446e6c098445884ffc4c4389a37dcd" compoundref="_budget_chart_8cs" startline="220">BudgetExecution.BudgetChart.DataMetrics</references>
+        <references refid="class_budget_execution_1_1_budget_chart_1a37361e42c3789e81ab3b70f704ffa342" compoundref="_budget_chart_8cs" startline="222">BudgetExecution.BudgetChart.DataSeries</references>
+        <references refid="class_budget_execution_1_1_budget_chart_1a38441290d0165e053aaa1272afbcbfa3" compoundref="_budget_chart_8cs" startline="214">BudgetExecution.BudgetChart.DbData</references>
+        <references refid="class_budget_execution_1_1_budget_chart_1a801d1fea8b976792acd78fa13c560928" compoundref="_budget_chart_8cs" startline="336" endline="353">BudgetExecution.BudgetChart.GetMeasure</references>
+        <references refid="class_budget_execution_1_1_budget_chart_1a2fd9494586dc6dd8cdc4bc2bb0430757" compoundref="_budget_chart_8cs" startline="256" endline="293">BudgetExecution.BudgetChart.GetSeriesTotals</references>
+        <references refid="class_budget_execution_1_1_budget_chart_1a0e3faf2de4cec4f5eb7f7d2725c95436" compoundref="_budget_chart_8cs" startline="216">BudgetExecution.BudgetChart.Metric</references>
+        <references refid="class_budget_execution_1_1_budget_chart_1ad0442c9b241caceccdd50c1da0fbfbf4" compoundref="_budget_chart_8cs" startline="232">BudgetExecution.BudgetChart.SeriesType</references>
+        <references refid="class_budget_execution_1_1_budget_chart_1ac793a6f8a442ff2fc7b6b79bbd899a2e" compoundref="_budget_chart_8cs" startline="246">BudgetExecution.BudgetChart.Table</references>
+        <references refid="class_budget_execution_1_1_budget_chart_1a80fdc4e5284f8b92b2ac2660a904b966" compoundref="_budget_chart_8cs" startline="234">BudgetExecution.BudgetChart.Value</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="package-func">
+      <memberdef kind="function" id="class_budget_execution_1_1_budget_chart_1a19a079095df3559f50dcd359789f9dcc" prot="package" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>ChartControl</type>
+        <definition>ChartControl BudgetExecution.BudgetChart.Activate</definition>
+        <argsstring>()</argsstring>
+        <name>Activate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/BudgetChart.cs" line="251" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/BudgetChart.cs" bodystart="251" bodyend="254"/>
+        <references refid="class_budget_execution_1_1_budget_chart_1a977b620d9fdece38ede6dae816402b11" compoundref="_budget_chart_8cs" startline="212">BudgetExecution.BudgetChart.Chart</references>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_budget_chart_1a2fd9494586dc6dd8cdc4bc2bb0430757" prot="package" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>ChartSeries</type>
+        <definition>ChartSeries BudgetExecution.BudgetChart.GetSeriesTotals</definition>
+        <argsstring>(Dictionary&lt; string, double &gt; data)</argsstring>
+        <name>GetSeriesTotals</name>
+        <param>
+          <type>Dictionary&lt; string, double &gt;</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/BudgetChart.cs" line="256" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/BudgetChart.cs" bodystart="256" bodyend="293"/>
+        <references refid="class_budget_execution_1_1_budget_chart_1a37361e42c3789e81ab3b70f704ffa342" compoundref="_budget_chart_8cs" startline="222">BudgetExecution.BudgetChart.DataSeries</references>
+        <references refid="class_budget_execution_1_1_budget_chart_1ad0442c9b241caceccdd50c1da0fbfbf4" compoundref="_budget_chart_8cs" startline="232">BudgetExecution.BudgetChart.SeriesType</references>
+        <referencedby refid="class_budget_execution_1_1_budget_chart_1a9bfb51e9b19f357d2f64317d4d925615" compoundref="_budget_chart_8cs" startline="21" endline="40">BudgetExecution.BudgetChart.BudgetChart</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_budget_chart_1a8924eedff22632a55f159ddee4e71834" prot="package" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>ChartSeries</type>
+        <definition>ChartSeries BudgetExecution.BudgetChart.GetSeriesTotals</definition>
+        <argsstring>(Dictionary&lt; string, double &gt; data, ChartSeriesType type)</argsstring>
+        <name>GetSeriesTotals</name>
+        <param>
+          <type>Dictionary&lt; string, double &gt;</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>ChartSeriesType</type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/BudgetChart.cs" line="295" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/BudgetChart.cs" bodystart="295" bodyend="334"/>
+        <references refid="class_budget_execution_1_1_budget_chart_1a37361e42c3789e81ab3b70f704ffa342" compoundref="_budget_chart_8cs" startline="222">BudgetExecution.BudgetChart.DataSeries</references>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_budget_chart_1adf010e659183b1d5972556f040995629" prot="package" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BudgetExecution.BudgetChart.ConfigurePieChart</definition>
+        <argsstring>(ChartSeries ds)</argsstring>
+        <name>ConfigurePieChart</name>
+        <param>
+          <type>ChartSeries</type>
+          <declname>ds</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/BudgetChart.cs" line="355" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/BudgetChart.cs" bodystart="355" bodyend="371"/>
+        <references refid="class_budget_execution_1_1_budget_chart_1a37361e42c3789e81ab3b70f704ffa342" compoundref="_budget_chart_8cs" startline="222">BudgetExecution.BudgetChart.DataSeries</references>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_budget_chart_1aa1f3ded33eaf48bf65ebf3fa072b1409" prot="package" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BudgetExecution.BudgetChart.ConfigureLargeNumberSeries</definition>
+        <argsstring>(ChartSeries series)</argsstring>
+        <name>ConfigureLargeNumberSeries</name>
+        <param>
+          <type>ChartSeries</type>
+          <declname>series</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/BudgetChart.cs" line="373" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/BudgetChart.cs" bodystart="373" bodyend="409"/>
+        <references refid="class_budget_execution_1_1_budget_chart_1a37361e42c3789e81ab3b70f704ffa342" compoundref="_budget_chart_8cs" startline="222">BudgetExecution.BudgetChart.DataSeries</references>
+        <references refid="class_budget_execution_1_1_budget_chart_1ad0442c9b241caceccdd50c1da0fbfbf4" compoundref="_budget_chart_8cs" startline="232">BudgetExecution.BudgetChart.SeriesType</references>
+        <referencedby refid="class_budget_execution_1_1_budget_chart_1a9bfb51e9b19f357d2f64317d4d925615" compoundref="_budget_chart_8cs" startline="21" endline="40">BudgetExecution.BudgetChart.BudgetChart</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_budget_chart_1af729d9053eb110cf2e5a53b416891041" prot="package" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BudgetExecution.BudgetChart.ConfigureSeries</definition>
+        <argsstring>(ChartSeries series)</argsstring>
+        <name>ConfigureSeries</name>
+        <param>
+          <type>ChartSeries</type>
+          <declname>series</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/BudgetChart.cs" line="411" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/BudgetChart.cs" bodystart="411" bodyend="455"/>
+        <references refid="class_budget_execution_1_1_budget_chart_1ab82a71c4c169bf189ccd4e4975cb55ee" compoundref="_budget_chart_8cs" startline="527" endline="534">BudgetExecution.BudgetChart.ConfigureToolTip</references>
+        <references refid="class_budget_execution_1_1_budget_chart_1a37361e42c3789e81ab3b70f704ffa342" compoundref="_budget_chart_8cs" startline="222">BudgetExecution.BudgetChart.DataSeries</references>
+        <references refid="class_budget_execution_1_1_budget_chart_1ad0442c9b241caceccdd50c1da0fbfbf4" compoundref="_budget_chart_8cs" startline="232">BudgetExecution.BudgetChart.SeriesType</references>
+        <referencedby refid="class_budget_execution_1_1_budget_chart_1af8306b8559e94b968bfa7131a8caa0f7" compoundref="_budget_chart_8cs" startline="67" endline="89">BudgetExecution.BudgetChart.BudgetChart</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_budget_chart_1ab93ac1fed015c255e14f48a410466cc3" prot="package" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BudgetExecution.BudgetChart.ConfigureSeries</definition>
+        <argsstring>(ChartSeries series, Stat value)</argsstring>
+        <name>ConfigureSeries</name>
+        <param>
+          <type>ChartSeries</type>
+          <declname>series</declname>
+        </param>
+        <param>
+          <type><ref refid="namespace_budget_execution_1a3df5d95d2846c10429f5872736ac022e" kindref="member">Stat</ref></type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/BudgetChart.cs" line="457" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/BudgetChart.cs" bodystart="457" bodyend="525"/>
+        <references refid="class_budget_execution_1_1_budget_chart_1a37361e42c3789e81ab3b70f704ffa342" compoundref="_budget_chart_8cs" startline="222">BudgetExecution.BudgetChart.DataSeries</references>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_budget_chart_1ad48cf8e6e52e15972c66489171c928b5" prot="package" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BudgetExecution.BudgetChart.Configure3DMode</definition>
+        <argsstring>(int[] dim)</argsstring>
+        <name>Configure3DMode</name>
+        <param>
+          <type>int[]</type>
+          <declname>dim</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/BudgetChart.cs" line="583" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/BudgetChart.cs" bodystart="583" bodyend="602"/>
+        <references refid="class_budget_execution_1_1_budget_chart_1ad0442c9b241caceccdd50c1da0fbfbf4" compoundref="_budget_chart_8cs" startline="232">BudgetExecution.BudgetChart.SeriesType</references>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_budget_chart_1a14e83d95271c8d9cfb0405878db17bad" prot="package" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BudgetExecution.BudgetChart.ConfigurePrimaryAxisTitle</definition>
+        <argsstring>(string[] title)</argsstring>
+        <name>ConfigurePrimaryAxisTitle</name>
+        <param>
+          <type>string[]</type>
+          <declname>title</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/BudgetChart.cs" line="604" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/BudgetChart.cs" bodystart="604" bodyend="616"/>
+        <referencedby refid="class_budget_execution_1_1_budget_chart_1a9bfb51e9b19f357d2f64317d4d925615" compoundref="_budget_chart_8cs" startline="21" endline="40">BudgetExecution.BudgetChart.BudgetChart</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_budget_chart_1a60440050006712dd4dfc4c1d73a2b3c1" prot="package" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>ChartDataBindModel</type>
+        <definition>ChartDataBindModel BudgetExecution.BudgetChart.GetDataBindingSource</definition>
+        <argsstring>(Dictionary&lt; string, double &gt; data, Field filter)</argsstring>
+        <name>GetDataBindingSource</name>
+        <param>
+          <type>Dictionary&lt; string, double &gt;</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type><ref refid="namespace_budget_execution_1ad0246bbb878376883d5a914fca5a5de1" kindref="member">Field</ref></type>
+          <declname>filter</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/BudgetChart.cs" line="618" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/BudgetChart.cs" bodystart="618" bodyend="637"/>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_budget_chart_1a62f3e2447a17bd45e78850524e1afbe9" prot="package" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>ChartLegend</type>
+        <definition>ChartLegend BudgetExecution.BudgetChart.GetLegend</definition>
+        <argsstring>(ChartControl chart)</argsstring>
+        <name>GetLegend</name>
+        <param>
+          <type>ChartControl</type>
+          <declname>chart</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/BudgetChart.cs" line="639" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/BudgetChart.cs" bodystart="639" bodyend="663"/>
+        <references refid="class_budget_execution_1_1_budget_chart_1a977b620d9fdece38ede6dae816402b11" compoundref="_budget_chart_8cs" startline="212">BudgetExecution.BudgetChart.Chart</references>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_budget_chart_1aab5d4fc699c0b33b2a81e616f9b24fce" prot="package" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BudgetExecution.BudgetChart.ConfigureMainTitle</definition>
+        <argsstring>(string[] t)</argsstring>
+        <name>ConfigureMainTitle</name>
+        <param>
+          <type>string[]</type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/BudgetChart.cs" line="665" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/BudgetChart.cs" bodystart="665" bodyend="687"/>
+        <references refid="class_budget_execution_1_1_budget_chart_1a977b620d9fdece38ede6dae816402b11" compoundref="_budget_chart_8cs" startline="212">BudgetExecution.BudgetChart.Chart</references>
+        <referencedby refid="class_budget_execution_1_1_budget_chart_1a531133d5c8bbe4634359c7471fa8cc2e" compoundref="_budget_chart_8cs" startline="91" endline="115">BudgetExecution.BudgetChart.BudgetChart</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_budget_execution_1_1_budget_chart_1a801d1fea8b976792acd78fa13c560928" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Dictionary&lt; string, double &gt;</type>
+        <definition>Dictionary&lt;string, double&gt; BudgetExecution.BudgetChart.GetMeasure</definition>
+        <argsstring>(Dictionary&lt; string, double[]&gt; data, Stat value)</argsstring>
+        <name>GetMeasure</name>
+        <param>
+          <type>Dictionary&lt; string, double[]&gt;</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type><ref refid="namespace_budget_execution_1a3df5d95d2846c10429f5872736ac022e" kindref="member">Stat</ref></type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/BudgetChart.cs" line="336" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/BudgetChart.cs" bodystart="336" bodyend="353"/>
+        <referencedby refid="class_budget_execution_1_1_budget_chart_1af8306b8559e94b968bfa7131a8caa0f7" compoundref="_budget_chart_8cs" startline="67" endline="89">BudgetExecution.BudgetChart.BudgetChart</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_budget_chart_1ab82a71c4c169bf189ccd4e4975cb55ee" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BudgetExecution.BudgetChart.ConfigureToolTip</definition>
+        <argsstring>(ChartSeries series)</argsstring>
+        <name>ConfigureToolTip</name>
+        <param>
+          <type>ChartSeries</type>
+          <declname>series</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/BudgetChart.cs" line="527" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/BudgetChart.cs" bodystart="527" bodyend="534"/>
+        <references refid="class_budget_execution_1_1_budget_chart_1a37361e42c3789e81ab3b70f704ffa342" compoundref="_budget_chart_8cs" startline="222">BudgetExecution.BudgetChart.DataSeries</references>
+        <referencedby refid="class_budget_execution_1_1_budget_chart_1a9bfb51e9b19f357d2f64317d4d925615" compoundref="_budget_chart_8cs" startline="21" endline="40">BudgetExecution.BudgetChart.BudgetChart</referencedby>
+        <referencedby refid="class_budget_execution_1_1_budget_chart_1af729d9053eb110cf2e5a53b416891041" compoundref="_budget_chart_8cs" startline="411" endline="455">BudgetExecution.BudgetChart.ConfigureSeries</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_budget_chart_1af5376a29318f9f4b94d028e1f16f9e68" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BudgetExecution.BudgetChart.ConfigurePrimaryAxisLabels</definition>
+        <argsstring>(ChartControl chart)</argsstring>
+        <name>ConfigurePrimaryAxisLabels</name>
+        <param>
+          <type>ChartControl</type>
+          <declname>chart</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/BudgetChart.cs" line="536" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/BudgetChart.cs" bodystart="536" bodyend="548"/>
+        <references refid="class_budget_execution_1_1_budget_chart_1a977b620d9fdece38ede6dae816402b11" compoundref="_budget_chart_8cs" startline="212">BudgetExecution.BudgetChart.Chart</references>
+        <references refid="namespace_budget_execution_1afa69cdcc242b50644155cb4adf244d32a800618943025315f869e4e1f09471012">BudgetExecution.F</references>
+        <referencedby refid="class_budget_execution_1_1_budget_chart_1a9bfb51e9b19f357d2f64317d4d925615" compoundref="_budget_chart_8cs" startline="21" endline="40">BudgetExecution.BudgetChart.BudgetChart</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_budget_chart_1a7b70c7eab93cd9fbc48ff8f708dc981a" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BudgetExecution.BudgetChart.Configure3DMode</definition>
+        <argsstring>(ChartControl chart)</argsstring>
+        <name>Configure3DMode</name>
+        <param>
+          <type>ChartControl</type>
+          <declname>chart</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/BudgetChart.cs" line="550" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/BudgetChart.cs" bodystart="550" bodyend="581"/>
+        <references refid="class_budget_execution_1_1_budget_chart_1a977b620d9fdece38ede6dae816402b11" compoundref="_budget_chart_8cs" startline="212">BudgetExecution.BudgetChart.Chart</references>
+        <references refid="class_budget_execution_1_1_budget_chart_1ad0442c9b241caceccdd50c1da0fbfbf4" compoundref="_budget_chart_8cs" startline="232">BudgetExecution.BudgetChart.SeriesType</references>
+        <referencedby refid="class_budget_execution_1_1_budget_chart_1a9bfb51e9b19f357d2f64317d4d925615" compoundref="_budget_chart_8cs" startline="21" endline="40">BudgetExecution.BudgetChart.BudgetChart</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/BudgetChart.cs" line="15" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/BudgetChart.cs" bodystart="14" bodyend="688"/>
+    <listofallmembers>
+      <member refid="class_budget_execution_1_1_budget_chart_1a19a079095df3559f50dcd359789f9dcc" prot="package" virt="non-virtual"><scope>BudgetExecution::BudgetChart</scope><name>Activate</name></member>
+      <member refid="class_budget_execution_1_1_budget_chart_1a8585a77263c4bdc0e12be9953e1deada" prot="public" virt="non-virtual"><scope>BudgetExecution::BudgetChart</scope><name>AxisTitle</name></member>
+      <member refid="class_budget_execution_1_1_budget_chart_1a905c243fafd03d12eeeab8da033d905f" prot="public" virt="non-virtual"><scope>BudgetExecution::BudgetChart</scope><name>BindingSource</name></member>
+      <member refid="class_budget_execution_1_1_budget_chart_1a6bff6d2a2fc43ebc011096a44aabe7cf" prot="public" virt="non-virtual"><scope>BudgetExecution::BudgetChart</scope><name>BudgetChart</name></member>
+      <member refid="class_budget_execution_1_1_budget_chart_1a9bfb51e9b19f357d2f64317d4d925615" prot="public" virt="non-virtual"><scope>BudgetExecution::BudgetChart</scope><name>BudgetChart</name></member>
+      <member refid="class_budget_execution_1_1_budget_chart_1a4f0992730e431d4ff7ba404b41f12a8e" prot="public" virt="non-virtual"><scope>BudgetExecution::BudgetChart</scope><name>BudgetChart</name></member>
+      <member refid="class_budget_execution_1_1_budget_chart_1af8306b8559e94b968bfa7131a8caa0f7" prot="public" virt="non-virtual"><scope>BudgetExecution::BudgetChart</scope><name>BudgetChart</name></member>
+      <member refid="class_budget_execution_1_1_budget_chart_1a531133d5c8bbe4634359c7471fa8cc2e" prot="public" virt="non-virtual"><scope>BudgetExecution::BudgetChart</scope><name>BudgetChart</name></member>
+      <member refid="class_budget_execution_1_1_budget_chart_1adfcd09021429060a648a98015a519528" prot="public" virt="non-virtual"><scope>BudgetExecution::BudgetChart</scope><name>BudgetChart</name></member>
+      <member refid="class_budget_execution_1_1_budget_chart_1a667a87dcb8a0785cc142a6ad09bc4ee7" prot="public" virt="non-virtual"><scope>BudgetExecution::BudgetChart</scope><name>BudgetChart</name></member>
+      <member refid="class_budget_execution_1_1_budget_chart_1a9f2bccd06dbd9bf09ce85510863c7d09" prot="public" virt="non-virtual"><scope>BudgetExecution::BudgetChart</scope><name>BudgetChart</name></member>
+      <member refid="class_budget_execution_1_1_budget_chart_1a2631ac40934765b4904f4ae395e3d87d" prot="public" virt="non-virtual"><scope>BudgetExecution::BudgetChart</scope><name>BudgetChart</name></member>
+      <member refid="class_budget_execution_1_1_budget_chart_1a977b620d9fdece38ede6dae816402b11" prot="public" virt="non-virtual"><scope>BudgetExecution::BudgetChart</scope><name>Chart</name></member>
+      <member refid="class_budget_execution_1_1_budget_chart_1a7b70c7eab93cd9fbc48ff8f708dc981a" prot="private" virt="non-virtual"><scope>BudgetExecution::BudgetChart</scope><name>Configure3DMode</name></member>
+      <member refid="class_budget_execution_1_1_budget_chart_1ad48cf8e6e52e15972c66489171c928b5" prot="package" virt="non-virtual"><scope>BudgetExecution::BudgetChart</scope><name>Configure3DMode</name></member>
+      <member refid="class_budget_execution_1_1_budget_chart_1aa1f3ded33eaf48bf65ebf3fa072b1409" prot="package" virt="non-virtual"><scope>BudgetExecution::BudgetChart</scope><name>ConfigureLargeNumberSeries</name></member>
+      <member refid="class_budget_execution_1_1_budget_chart_1aab5d4fc699c0b33b2a81e616f9b24fce" prot="package" virt="non-virtual"><scope>BudgetExecution::BudgetChart</scope><name>ConfigureMainTitle</name></member>
+      <member refid="class_budget_execution_1_1_budget_chart_1adf010e659183b1d5972556f040995629" prot="package" virt="non-virtual"><scope>BudgetExecution::BudgetChart</scope><name>ConfigurePieChart</name></member>
+      <member refid="class_budget_execution_1_1_budget_chart_1af5376a29318f9f4b94d028e1f16f9e68" prot="private" virt="non-virtual"><scope>BudgetExecution::BudgetChart</scope><name>ConfigurePrimaryAxisLabels</name></member>
+      <member refid="class_budget_execution_1_1_budget_chart_1a14e83d95271c8d9cfb0405878db17bad" prot="package" virt="non-virtual"><scope>BudgetExecution::BudgetChart</scope><name>ConfigurePrimaryAxisTitle</name></member>
+      <member refid="class_budget_execution_1_1_budget_chart_1af729d9053eb110cf2e5a53b416891041" prot="package" virt="non-virtual"><scope>BudgetExecution::BudgetChart</scope><name>ConfigureSeries</name></member>
+      <member refid="class_budget_execution_1_1_budget_chart_1ab93ac1fed015c255e14f48a410466cc3" prot="package" virt="non-virtual"><scope>BudgetExecution::BudgetChart</scope><name>ConfigureSeries</name></member>
+      <member refid="class_budget_execution_1_1_budget_chart_1ab82a71c4c169bf189ccd4e4975cb55ee" prot="private" virt="non-virtual"><scope>BudgetExecution::BudgetChart</scope><name>ConfigureToolTip</name></member>
+      <member refid="class_budget_execution_1_1_budget_chart_1aa1446e6c098445884ffc4c4389a37dcd" prot="public" virt="non-virtual"><scope>BudgetExecution::BudgetChart</scope><name>DataMetrics</name></member>
+      <member refid="class_budget_execution_1_1_budget_chart_1a37361e42c3789e81ab3b70f704ffa342" prot="public" virt="non-virtual"><scope>BudgetExecution::BudgetChart</scope><name>DataSeries</name></member>
+      <member refid="class_budget_execution_1_1_budget_chart_1aeb501850448c6e063ed2f6be09468959" prot="public" virt="non-virtual"><scope>BudgetExecution::BudgetChart</scope><name>DataTotals</name></member>
+      <member refid="class_budget_execution_1_1_budget_chart_1a38441290d0165e053aaa1272afbcbfa3" prot="public" virt="non-virtual"><scope>BudgetExecution::BudgetChart</scope><name>DbData</name></member>
+      <member refid="class_budget_execution_1_1_budget_chart_1a013770bf63b196a8ea87aa4acfe663f4" prot="public" virt="non-virtual"><scope>BudgetExecution::BudgetChart</scope><name>Dimension</name></member>
+      <member refid="class_budget_execution_1_1_budget_chart_1a970458a65a88e9c8163ca331a39e1cfb" prot="public" virt="non-virtual"><scope>BudgetExecution::BudgetChart</scope><name>Filter</name></member>
+      <member refid="class_budget_execution_1_1_budget_chart_1a60440050006712dd4dfc4c1d73a2b3c1" prot="package" virt="non-virtual"><scope>BudgetExecution::BudgetChart</scope><name>GetDataBindingSource</name></member>
+      <member refid="class_budget_execution_1_1_budget_chart_1a62f3e2447a17bd45e78850524e1afbe9" prot="package" virt="non-virtual"><scope>BudgetExecution::BudgetChart</scope><name>GetLegend</name></member>
+      <member refid="class_budget_execution_1_1_budget_chart_1a801d1fea8b976792acd78fa13c560928" prot="private" virt="non-virtual"><scope>BudgetExecution::BudgetChart</scope><name>GetMeasure</name></member>
+      <member refid="class_budget_execution_1_1_budget_chart_1a2fd9494586dc6dd8cdc4bc2bb0430757" prot="package" virt="non-virtual"><scope>BudgetExecution::BudgetChart</scope><name>GetSeriesTotals</name></member>
+      <member refid="class_budget_execution_1_1_budget_chart_1a8924eedff22632a55f159ddee4e71834" prot="package" virt="non-virtual"><scope>BudgetExecution::BudgetChart</scope><name>GetSeriesTotals</name></member>
+      <member refid="class_budget_execution_1_1_budget_chart_1a7d891f1621afa8d18707179f8a663d59" prot="public" virt="non-virtual"><scope>BudgetExecution::BudgetChart</scope><name>InputMetrics</name></member>
+      <member refid="class_budget_execution_1_1_budget_chart_1a4197714ed09eabb6206d4c047d8a5373" prot="public" virt="non-virtual"><scope>BudgetExecution::BudgetChart</scope><name>InputTotals</name></member>
+      <member refid="class_budget_execution_1_1_budget_chart_1a43bb9c01a74dc8becd09fabb42f66f7b" prot="public" virt="non-virtual"><scope>BudgetExecution::BudgetChart</scope><name>Legend</name></member>
+      <member refid="class_budget_execution_1_1_budget_chart_1a94d0d5e08f680eaddcd98f74637bcf19" prot="public" virt="non-virtual"><scope>BudgetExecution::BudgetChart</scope><name>MainTitle</name></member>
+      <member refid="class_budget_execution_1_1_budget_chart_1a0e3faf2de4cec4f5eb7f7d2725c95436" prot="public" virt="non-virtual"><scope>BudgetExecution::BudgetChart</scope><name>Metric</name></member>
+      <member refid="class_budget_execution_1_1_budget_chart_1a0ffe4a14d332bd47e02356325a981a46" prot="public" virt="non-virtual"><scope>BudgetExecution::BudgetChart</scope><name>Model</name></member>
+      <member refid="class_budget_execution_1_1_budget_chart_1ad0442c9b241caceccdd50c1da0fbfbf4" prot="public" virt="non-virtual"><scope>BudgetExecution::BudgetChart</scope><name>SeriesType</name></member>
+      <member refid="class_budget_execution_1_1_budget_chart_1a56dc3cd3c35fabb4d223168782ad4835" prot="public" virt="non-virtual"><scope>BudgetExecution::BudgetChart</scope><name>Source</name></member>
+      <member refid="class_budget_execution_1_1_budget_chart_1ac793a6f8a442ff2fc7b6b79bbd899a2e" prot="public" virt="non-virtual"><scope>BudgetExecution::BudgetChart</scope><name>Table</name></member>
+      <member refid="class_budget_execution_1_1_budget_chart_1a66fae0d61ec9179a8a02d5bd260b4cbe" prot="private" virt="non-virtual"><scope>BudgetExecution::BudgetChart</scope><name>Total</name></member>
+      <member refid="class_budget_execution_1_1_budget_chart_1a80fdc4e5284f8b92b2ac2660a904b966" prot="public" virt="non-virtual"><scope>BudgetExecution::BudgetChart</scope><name>Value</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

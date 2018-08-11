@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="dir_87e7486e396504d73387b822a9ebc0d9" kind="dir">
+    <compoundname>C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources</compoundname>
+    <innerdir refid="dir_9547b5053ed33a5bb52dc4f795249910">C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/NinjaApplicationImages</innerdir>
+    <innerfile refid="_application_images_8_designer_8cs">ApplicationImages.Designer.cs</innerfile>
+    <innerfile refid="_button_icon_8_designer_8cs">ButtonIcon.Designer.cs</innerfile>
+    <innerfile refid="_control_icon_8_designer_8cs">ControlIcon.Designer.cs</innerfile>
+    <innerfile refid="_control_images_8_designer_8cs">ControlImages.Designer.cs</innerfile>
+    <innerfile refid="_division_8_designer_8cs">Division.Designer.cs</innerfile>
+    <innerfile refid="_division_icon_images_8_designer_8cs">DivisionIconImages.Designer.cs</innerfile>
+    <innerfile refid="_division_images_8_designer_8cs">DivisionImages.Designer.cs</innerfile>
+    <innerfile refid="_excel_file_8_designer_8cs">ExcelFile.Designer.cs</innerfile>
+    <innerfile refid="_form_images_8_designer_8cs">FormImages.Designer.cs</innerfile>
+    <innerfile refid="_function_images_8_designer_8cs">FunctionImages.Designer.cs</innerfile>
+    <innerfile refid="_fund_code_images_8_designer_8cs">FundCodeImages.Designer.cs</innerfile>
+    <innerfile refid="_icon_8_designer_8cs">Icon.Designer.cs</innerfile>
+    <innerfile refid="_ninja_icons_8_designer_8cs">NinjaIcons.Designer.cs</innerfile>
+    <innerfile refid="_ninja_icons1_8_designer_8cs">NinjaIcons1.Designer.cs</innerfile>
+    <innerfile refid="_resources_2_resources_8_designer_8cs">Resources.Designer.cs</innerfile>
+    <innerfile refid="_slide_images_8_designer_8cs">SlideImages.Designer.cs</innerfile>
+    <innerfile refid="_summary_images_8_designer_8cs">SummaryImages.Designer.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,149 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="interface_budget_execution_1_1_i_p_r_c" kind="interface" prot="public">
+    <compoundname>BudgetExecution::IPRC</compoundname>
+    <derivedcompoundref refid="class_budget_execution_1_1_f_t_e" prot="public" virt="non-virtual">BudgetExecution.FTE</derivedcompoundref>
+    <derivedcompoundref refid="class_budget_execution_1_1_p_r_c" prot="public" virt="non-virtual">BudgetExecution.PRC</derivedcompoundref>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="interface_budget_execution_1_1_i_p_r_c_1ad85f41018f34705102a8b2a53d890227" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type><ref refid="class_budget_execution_1_1_account" kindref="compound">Account</ref></type>
+        <definition>Account BudgetExecution.IPRC.Account</definition>
+        <argsstring></argsstring>
+        <name>Account</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/IPRC.cs" line="10" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/IPRC.cs" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="interface_budget_execution_1_1_i_p_r_c_1abc3c98d6740ce480360f33007153f03a" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>decimal</type>
+        <definition>decimal BudgetExecution.IPRC.Amount</definition>
+        <argsstring></argsstring>
+        <name>Amount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/IPRC.cs" line="12" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/IPRC.cs" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="interface_budget_execution_1_1_i_p_r_c_1a0c6a72ffa3fb5a0ede1600a21c81f788" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>string</type>
+        <definition>string BudgetExecution.IPRC.BFY</definition>
+        <argsstring></argsstring>
+        <name>BFY</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/IPRC.cs" line="14" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/IPRC.cs" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="interface_budget_execution_1_1_i_p_r_c_1a4d1c66150c0c8b8b4a1cee9695c38bfc" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type><ref refid="class_budget_execution_1_1_b_o_c" kindref="compound">BOC</ref></type>
+        <definition>BOC BudgetExecution.IPRC.BOC</definition>
+        <argsstring></argsstring>
+        <name>BOC</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/IPRC.cs" line="16" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/IPRC.cs" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="interface_budget_execution_1_1_i_p_r_c_1a1f440ff2c7ef8c9af0e037dbeb30c45a" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type><ref refid="class_budget_execution_1_1_fund" kindref="compound">Fund</ref></type>
+        <definition>Fund BudgetExecution.IPRC.Fund</definition>
+        <argsstring></argsstring>
+        <name>Fund</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/IPRC.cs" line="18" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/IPRC.cs" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="interface_budget_execution_1_1_i_p_r_c_1a4418733b29ceca7d1df110352fc09620" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type><ref refid="class_budget_execution_1_1_org" kindref="compound">Org</ref></type>
+        <definition>Org BudgetExecution.IPRC.Org</definition>
+        <argsstring></argsstring>
+        <name>Org</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/IPRC.cs" line="20" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/IPRC.cs" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="interface_budget_execution_1_1_i_p_r_c_1a2cf91c4871a1ddc2de077b7a554b1434" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type><ref refid="class_budget_execution_1_1_r_c" kindref="compound">RC</ref></type>
+        <definition>RC BudgetExecution.IPRC.RC</definition>
+        <argsstring></argsstring>
+        <name>RC</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/IPRC.cs" line="22" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/IPRC.cs" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="interface_budget_execution_1_1_i_p_r_c_1a48b75030c3317cb6f0f1a340960fdbad" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>string</type>
+        <definition>string BudgetExecution.IPRC.RPIO</definition>
+        <argsstring></argsstring>
+        <name>RPIO</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/IPRC.cs" line="24" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/IPRC.cs" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="247">
+        <label>BudgetExecution.IPRC</label>
+        <link refid="interface_budget_execution_1_1_i_p_r_c"/>
+      </node>
+      <node id="248">
+        <label>BudgetExecution.FTE</label>
+        <link refid="class_budget_execution_1_1_f_t_e"/>
+        <childnode refid="247" relation="public-inheritance">
+        </childnode>
+        <childnode refid="249" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="249">
+        <label>BudgetExecution.PRC</label>
+        <link refid="class_budget_execution_1_1_p_r_c"/>
+        <childnode refid="247" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/IPRC.cs" line="8" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/IPRC.cs" bodystart="7" bodyend="25"/>
+    <listofallmembers>
+      <member refid="interface_budget_execution_1_1_i_p_r_c_1ad85f41018f34705102a8b2a53d890227" prot="public" virt="non-virtual"><scope>BudgetExecution::IPRC</scope><name>Account</name></member>
+      <member refid="interface_budget_execution_1_1_i_p_r_c_1abc3c98d6740ce480360f33007153f03a" prot="public" virt="non-virtual"><scope>BudgetExecution::IPRC</scope><name>Amount</name></member>
+      <member refid="interface_budget_execution_1_1_i_p_r_c_1a0c6a72ffa3fb5a0ede1600a21c81f788" prot="public" virt="non-virtual"><scope>BudgetExecution::IPRC</scope><name>BFY</name></member>
+      <member refid="interface_budget_execution_1_1_i_p_r_c_1a4d1c66150c0c8b8b4a1cee9695c38bfc" prot="public" virt="non-virtual"><scope>BudgetExecution::IPRC</scope><name>BOC</name></member>
+      <member refid="interface_budget_execution_1_1_i_p_r_c_1a1f440ff2c7ef8c9af0e037dbeb30c45a" prot="public" virt="non-virtual"><scope>BudgetExecution::IPRC</scope><name>Fund</name></member>
+      <member refid="interface_budget_execution_1_1_i_p_r_c_1a4418733b29ceca7d1df110352fc09620" prot="public" virt="non-virtual"><scope>BudgetExecution::IPRC</scope><name>Org</name></member>
+      <member refid="interface_budget_execution_1_1_i_p_r_c_1a2cf91c4871a1ddc2de077b7a554b1434" prot="public" virt="non-virtual"><scope>BudgetExecution::IPRC</scope><name>RC</name></member>
+      <member refid="interface_budget_execution_1_1_i_p_r_c_1a48b75030c3317cb6f0f1a340960fdbad" prot="public" virt="non-virtual"><scope>BudgetExecution::IPRC</scope><name>RPIO</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

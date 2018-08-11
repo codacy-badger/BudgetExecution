@@ -1,0 +1,1848 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_budget_execution_1_1_account_manager" kind="class" prot="public">
+    <compoundname>BudgetExecution::AccountManager</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MetroForm</basecompoundref>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_budget_execution_1_1_account_manager_1a7c60e03087502cf00647e3ca615e1cb4" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type><ref refid="namespace_budget_execution_1a31d755f9fbeb90de04b7b1e2e21acdc8" kindref="member">Source</ref></type>
+        <definition>Source BudgetExecution.AccountManager.Source</definition>
+        <argsstring></argsstring>
+        <name>Source</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.cs" line="62" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.cs" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_account_manager_1a5035a8d64a418f255c32825dee574b62" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type><ref refid="namespace_budget_execution_1a04fd24d7fd477c1db9884745e14ea571" kindref="member">Provider</ref></type>
+        <definition>Provider BudgetExecution.AccountManager.Provider</definition>
+        <argsstring></argsstring>
+        <name>Provider</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.cs" line="64" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.cs" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_account_manager_1adc8bcfc483e84568b7fb17d91936cfc0" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type><ref refid="class_budget_execution_1_1_data_builder" kindref="compound">DataBuilder</ref></type>
+        <definition>DataBuilder BudgetExecution.AccountManager.DbData</definition>
+        <argsstring></argsstring>
+        <name>DbData</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.cs" line="66" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.cs" bodystart="66" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_account_manager_1a0210984640886e7a1172bca5db7ac349" compoundref="_account_manager_8cs" startline="23" endline="31">BudgetExecution.AccountManager.AccountManager</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_account_manager_1a1f18ff4c4fac6177d1366ccae06130f4" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>DataTable</type>
+        <definition>DataTable BudgetExecution.AccountManager.DbTable</definition>
+        <argsstring></argsstring>
+        <name>DbTable</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.cs" line="68" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.cs" bodystart="68" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_account_manager_1a5a07503bdde13a3962f46038a10e0f60" compoundref="_account_manager_8cs" startline="46" endline="58">BudgetExecution.AccountManager.AccountManager</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_account_manager_1aa8f1512a497387d2a7c1565ffdddd9ba" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>DataRow</type>
+        <definition>DataRow BudgetExecution.AccountManager.DbRow</definition>
+        <argsstring></argsstring>
+        <name>DbRow</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.cs" line="70" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.cs" bodystart="70" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_account_manager_1a5a07503bdde13a3962f46038a10e0f60" compoundref="_account_manager_8cs" startline="46" endline="58">BudgetExecution.AccountManager.AccountManager</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_account_manager_1a05f59ba18644698e1e7e179ee12e6843" prot="private" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>List&lt; Label &gt;</type>
+        <definition>List&lt;Label&gt; BudgetExecution.AccountManager.Labels</definition>
+        <argsstring></argsstring>
+        <name>Labels</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.cs" line="72" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.cs" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_account_manager_1a0b39dae905c3e75eddff9cccacddcc83" prot="private" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>List&lt; MetroSetTextBox &gt;</type>
+        <definition>List&lt;MetroSetTextBox&gt; BudgetExecution.AccountManager.TextBoxes</definition>
+        <argsstring></argsstring>
+        <name>TextBoxes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.cs" line="74" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.cs" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_account_manager_1a1c665d321fe54f04cad39053e350e5fc" prot="private" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>List&lt; MetroSetComboBox &gt;</type>
+        <definition>List&lt;MetroSetComboBox&gt; BudgetExecution.AccountManager.ComboBoxes</definition>
+        <argsstring></argsstring>
+        <name>ComboBoxes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.cs" line="76" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.cs" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_account_manager_1a8f0ed1109d8434807c7e91e19b41dde7" prot="private" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type><ref refid="class_budget_execution_1_1_form_data" kindref="compound">FormData</ref></type>
+        <definition>FormData BudgetExecution.AccountManager.Ninja</definition>
+        <argsstring></argsstring>
+        <name>Ninja</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.cs" line="78" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.cs" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_budget_execution_1_1_account_manager_1ac4107cb73cc9d55b174743987f566c8b" prot="private" static="no" mutable="no">
+        <type>System.ComponentModel.IContainer</type>
+        <definition>System.ComponentModel.IContainer BudgetExecution.AccountManager.components</definition>
+        <argsstring></argsstring>
+        <name>components</name>
+        <initializer>= null</initializer>
+        <briefdescription>
+<para>Required designer variable. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" line="8" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" bodystart="8" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_account_manager_1a381a8107b85e8fbdaa95bff615e65f86" compoundref="_account_manager_8_designer_8cs" startline="14" endline="21">BudgetExecution.AccountManager.Dispose</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_account_manager_1aaf426b9c78fad84eb381db5e6da1f82a" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.GroupBox</type>
+        <definition>System.Windows.Forms.GroupBox BudgetExecution.AccountManager.groupBox2</definition>
+        <argsstring></argsstring>
+        <name>groupBox2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" line="1579" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" bodystart="1579" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_account_manager_1aeb8bd177cad3ffbd6d90a8d9d650cbce" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label BudgetExecution.AccountManager.label8</definition>
+        <argsstring></argsstring>
+        <name>label8</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" line="1580" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" bodystart="1580" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_account_manager_1a6717f12d02d578bd110ea55fc670b4f5" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label BudgetExecution.AccountManager.label7</definition>
+        <argsstring></argsstring>
+        <name>label7</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" line="1581" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" bodystart="1581" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_account_manager_1a2b1567871bd834fa97bb41aae2a4df76" prot="private" static="no" mutable="no">
+        <type>MetroSet_UI.Controls.MetroSetTextBox</type>
+        <definition>MetroSet_UI.Controls.MetroSetTextBox BudgetExecution.AccountManager.Amount1</definition>
+        <argsstring></argsstring>
+        <name>Amount1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" line="1582" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" bodystart="1582" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_account_manager_1a5b662e9da1e2341f3aa8182e9bc0acf1" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.GroupBox</type>
+        <definition>System.Windows.Forms.GroupBox BudgetExecution.AccountManager.groupBox4</definition>
+        <argsstring></argsstring>
+        <name>groupBox4</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" line="1583" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" bodystart="1583" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_account_manager_1a466efbfb7690104cfe8d15b3a927bf33" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label BudgetExecution.AccountManager.label13</definition>
+        <argsstring></argsstring>
+        <name>label13</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" line="1584" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" bodystart="1584" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_account_manager_1af33123e6d500f63eb901370d06ae23bb" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label BudgetExecution.AccountManager.label14</definition>
+        <argsstring></argsstring>
+        <name>label14</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" line="1585" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" bodystart="1585" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_account_manager_1aa8076acbd9d3cdb38a8f2a74846f8f8e" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label BudgetExecution.AccountManager.label15</definition>
+        <argsstring></argsstring>
+        <name>label15</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" line="1586" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" bodystart="1586" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_account_manager_1ae56b70c1b0d6c59d2ca3673b1f4902ed" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label BudgetExecution.AccountManager.label16</definition>
+        <argsstring></argsstring>
+        <name>label16</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" line="1587" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" bodystart="1587" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_account_manager_1a4f5389f8ba0d98a83ec1ea70e4954a7d" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label BudgetExecution.AccountManager.label17</definition>
+        <argsstring></argsstring>
+        <name>label17</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" line="1588" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" bodystart="1588" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_account_manager_1ac15b856307bbde381c96b5ac0d449c33" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label BudgetExecution.AccountManager.label18</definition>
+        <argsstring></argsstring>
+        <name>label18</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" line="1589" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" bodystart="1589" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_account_manager_1af271ea02c4ee39eb99d6bea4ae5f66d7" prot="private" static="no" mutable="no">
+        <type>MetroSet_UI.Controls.MetroSetTextBox</type>
+        <definition>MetroSet_UI.Controls.MetroSetTextBox BudgetExecution.AccountManager.BFY</definition>
+        <argsstring></argsstring>
+        <name>BFY</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" line="1590" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" bodystart="1590" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_account_manager_1adbce203437cb1dc652d90c49ea7042f8" prot="private" static="no" mutable="no">
+        <type>MetroSet_UI.Controls.MetroSetTextBox</type>
+        <definition>MetroSet_UI.Controls.MetroSetTextBox BudgetExecution.AccountManager.SubProject</definition>
+        <argsstring></argsstring>
+        <name>SubProject</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" line="1591" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" bodystart="1591" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_account_manager_1a6bdc66d903db84c85a0cbde9e7308fd5" prot="private" static="no" mutable="no">
+        <type>MetroSet_UI.Controls.MetroSetTextBox</type>
+        <definition>MetroSet_UI.Controls.MetroSetTextBox BudgetExecution.AccountManager.RC</definition>
+        <argsstring></argsstring>
+        <name>RC</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" line="1592" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" bodystart="1592" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_account_manager_1afff67ebf0c2ddaa922834b0a559a2b67" prot="private" static="no" mutable="no">
+        <type>MetroSet_UI.Controls.MetroSetTextBox</type>
+        <definition>MetroSet_UI.Controls.MetroSetTextBox BudgetExecution.AccountManager.Org</definition>
+        <argsstring></argsstring>
+        <name>Org</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" line="1593" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" bodystart="1593" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_account_manager_1a6da490364f88e6143a07d04daf44ea92" prot="private" static="no" mutable="no">
+        <type>MetroSet_UI.Controls.MetroSetTextBox</type>
+        <definition>MetroSet_UI.Controls.MetroSetTextBox BudgetExecution.AccountManager.Code</definition>
+        <argsstring></argsstring>
+        <name>Code</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" line="1594" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" bodystart="1594" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_account_manager_1a1f2bbfc3d68f617bcb62ffad07dda582" prot="private" static="no" mutable="no">
+        <type>MetroSet_UI.Controls.MetroSetTextBox</type>
+        <definition>MetroSet_UI.Controls.MetroSetTextBox BudgetExecution.AccountManager.Fund</definition>
+        <argsstring></argsstring>
+        <name>Fund</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" line="1595" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" bodystart="1595" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_account_manager_1a8f17f25e70163e6fd65a5149b28496fd" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.GroupBox</type>
+        <definition>System.Windows.Forms.GroupBox BudgetExecution.AccountManager.groupBox3</definition>
+        <argsstring></argsstring>
+        <name>groupBox3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" line="1596" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" bodystart="1596" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_account_manager_1aa6a9f36c3280c68e6821b6e0d1969a33" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.BindingSource</type>
+        <definition>System.Windows.Forms.BindingSource BudgetExecution.AccountManager.BindingSource</definition>
+        <argsstring></argsstring>
+        <name>BindingSource</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" line="1597" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" bodystart="1597" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_account_manager_1a0210984640886e7a1172bca5db7ac349" compoundref="_account_manager_8cs" startline="23" endline="31">BudgetExecution.AccountManager.AccountManager</referencedby>
+        <referencedby refid="class_budget_execution_1_1_account_manager_1acf5317a0e94c0f5e2669af80833f8125" compoundref="_account_manager_8cs" startline="89" endline="110">BudgetExecution.AccountManager.ConfigureTextBoxBindings</referencedby>
+        <referencedby refid="class_budget_execution_1_1_account_manager_1a03edabc1552a1caa64abffde538118ad" compoundref="_account_manager_8_designer_8cs" startline="29" endline="1576">BudgetExecution.AccountManager.InitializeComponent</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_account_manager_1acb9497bd7801a65349a2a67f79c55861" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label BudgetExecution.AccountManager.label9</definition>
+        <argsstring></argsstring>
+        <name>label9</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" line="1598" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" bodystart="1598" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_account_manager_1a9afe7e84119bcecfa20a711a6da36b07" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label BudgetExecution.AccountManager.label6</definition>
+        <argsstring></argsstring>
+        <name>label6</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" line="1599" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" bodystart="1599" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_account_manager_1a4e1869608705c838f53ac48c3fdea2c6" prot="private" static="no" mutable="no">
+        <type>MetroSet_UI.Controls.MetroSetTextBox</type>
+        <definition>MetroSet_UI.Controls.MetroSetTextBox BudgetExecution.AccountManager.BudgetLevel</definition>
+        <argsstring></argsstring>
+        <name>BudgetLevel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" line="1600" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" bodystart="1600" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_account_manager_1a353f74213dbe7711522d91b96ad0d43a" prot="private" static="no" mutable="no">
+        <type>MetroSet_UI.Controls.MetroSetTextBox</type>
+        <definition>MetroSet_UI.Controls.MetroSetTextBox BudgetExecution.AccountManager.ID</definition>
+        <argsstring></argsstring>
+        <name>ID</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" line="1601" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" bodystart="1601" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_account_manager_1a9291937037dbdedcb95fdbb2a1a8f7ef" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.GroupBox</type>
+        <definition>System.Windows.Forms.GroupBox BudgetExecution.AccountManager.groupBox6</definition>
+        <argsstring></argsstring>
+        <name>groupBox6</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" line="1602" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" bodystart="1602" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_account_manager_1a284cd405212ef2a58bfef4a2175d85aa" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Button</type>
+        <definition>System.Windows.Forms.Button BudgetExecution.AccountManager.button5</definition>
+        <argsstring></argsstring>
+        <name>button5</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" line="1603" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" bodystart="1603" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_account_manager_1aa3d254da2430418108a5cb67a49a3f03" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Button</type>
+        <definition>System.Windows.Forms.Button BudgetExecution.AccountManager.button1</definition>
+        <argsstring></argsstring>
+        <name>button1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" line="1604" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" bodystart="1604" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_account_manager_1a9b9a5a42c62b5bf280657dbb9671c059" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Button</type>
+        <definition>System.Windows.Forms.Button BudgetExecution.AccountManager.button2</definition>
+        <argsstring></argsstring>
+        <name>button2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" line="1605" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" bodystart="1605" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_account_manager_1afe4cde9d7b827d8b312af290ffe13a20" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.GroupBox</type>
+        <definition>System.Windows.Forms.GroupBox BudgetExecution.AccountManager.groupBox5</definition>
+        <argsstring></argsstring>
+        <name>groupBox5</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" line="1606" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" bodystart="1606" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_account_manager_1a9991c97b98d598e1ae5cb5b9f756f37e" prot="private" static="no" mutable="no">
+        <type>MetroSet_UI.Controls.MetroSetTextBox</type>
+        <definition>MetroSet_UI.Controls.MetroSetTextBox BudgetExecution.AccountManager.metroSetTextBox11</definition>
+        <argsstring></argsstring>
+        <name>metroSetTextBox11</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" line="1607" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" bodystart="1607" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_account_manager_1ab5e0d2eda9338ed6d08de52c0919c847" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.GroupBox</type>
+        <definition>System.Windows.Forms.GroupBox BudgetExecution.AccountManager.RecorDataGroupBox</definition>
+        <argsstring></argsstring>
+        <name>RecorDataGroupBox</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" line="1608" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" bodystart="1608" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_account_manager_1aaed8fd37ce68b9f8f801a9ef164abdff" compoundref="_account_manager_8cs" startline="195" endline="209">BudgetExecution.AccountManager.GetComboBoxes</referencedby>
+        <referencedby refid="class_budget_execution_1_1_account_manager_1aec11dd991ed7dffef613a3253878066c" compoundref="_account_manager_8cs" startline="179" endline="193">BudgetExecution.AccountManager.GetLabels</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_account_manager_1a9aae0a4cd9fe72c7010cda395108d7d3" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label BudgetExecution.AccountManager.label10</definition>
+        <argsstring></argsstring>
+        <name>label10</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" line="1609" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" bodystart="1609" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_account_manager_1ac2da0d81b95c8335b6b5d29d46d41b9c" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label BudgetExecution.AccountManager.label12</definition>
+        <argsstring></argsstring>
+        <name>label12</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" line="1610" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" bodystart="1610" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_account_manager_1acb077d3230b67c08bf61bc5751561f5f" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label BudgetExecution.AccountManager.label19</definition>
+        <argsstring></argsstring>
+        <name>label19</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" line="1611" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" bodystart="1611" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_account_manager_1aeb7da4318b560fa4455720731a8aad85" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label BudgetExecution.AccountManager.label20</definition>
+        <argsstring></argsstring>
+        <name>label20</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" line="1612" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" bodystart="1612" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_account_manager_1a3d5fadef7c3ec7e1dc2a601f28bc548e" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label BudgetExecution.AccountManager.label21</definition>
+        <argsstring></argsstring>
+        <name>label21</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" line="1613" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" bodystart="1613" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_account_manager_1a59683e99918c7881cf93eb1cfa5f64ac" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label BudgetExecution.AccountManager.label22</definition>
+        <argsstring></argsstring>
+        <name>label22</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" line="1614" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" bodystart="1614" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_account_manager_1abf8c481647c87a86f9a48f957adea3ed" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label BudgetExecution.AccountManager.label23</definition>
+        <argsstring></argsstring>
+        <name>label23</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" line="1615" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" bodystart="1615" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_account_manager_1a8dcce5abd642e4b754f84225650358ae" prot="private" static="no" mutable="no">
+        <type>MetroSet_UI.Controls.MetroSetComboBox</type>
+        <definition>MetroSet_UI.Controls.MetroSetComboBox BudgetExecution.AccountManager.ComboBox7</definition>
+        <argsstring></argsstring>
+        <name>ComboBox7</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" line="1616" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" bodystart="1616" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_account_manager_1a798799c144a8d8fe6fb0d711557a6e94" prot="private" static="no" mutable="no">
+        <type>MetroSet_UI.Controls.MetroSetComboBox</type>
+        <definition>MetroSet_UI.Controls.MetroSetComboBox BudgetExecution.AccountManager.ComboBox6</definition>
+        <argsstring></argsstring>
+        <name>ComboBox6</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" line="1617" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" bodystart="1617" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_account_manager_1a2eb6da36a627b3f25e3eaa29f87f516f" prot="private" static="no" mutable="no">
+        <type>MetroSet_UI.Controls.MetroSetComboBox</type>
+        <definition>MetroSet_UI.Controls.MetroSetComboBox BudgetExecution.AccountManager.ComboBox4</definition>
+        <argsstring></argsstring>
+        <name>ComboBox4</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" line="1618" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" bodystart="1618" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_account_manager_1a4318a8398831c3b3c589af28de4498f3" prot="private" static="no" mutable="no">
+        <type>MetroSet_UI.Controls.MetroSetComboBox</type>
+        <definition>MetroSet_UI.Controls.MetroSetComboBox BudgetExecution.AccountManager.ComboBox3</definition>
+        <argsstring></argsstring>
+        <name>ComboBox3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" line="1619" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" bodystart="1619" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_account_manager_1a7dc591c1b1a9d6ce8d07a4d1c7134f87" prot="private" static="no" mutable="no">
+        <type>MetroSet_UI.Controls.MetroSetComboBox</type>
+        <definition>MetroSet_UI.Controls.MetroSetComboBox BudgetExecution.AccountManager.ComboBox8</definition>
+        <argsstring></argsstring>
+        <name>ComboBox8</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" line="1620" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" bodystart="1620" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_account_manager_1a582c6f5873800c4acc8397c0031ae2ff" prot="private" static="no" mutable="no">
+        <type>MetroSet_UI.Controls.MetroSetComboBox</type>
+        <definition>MetroSet_UI.Controls.MetroSetComboBox BudgetExecution.AccountManager.ComboBox1</definition>
+        <argsstring></argsstring>
+        <name>ComboBox1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" line="1621" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" bodystart="1621" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_account_manager_1a4f0d6bad9e3871278d7ea85564be3d8e" prot="private" static="no" mutable="no">
+        <type>MetroSet_UI.Controls.MetroSetComboBox</type>
+        <definition>MetroSet_UI.Controls.MetroSetComboBox BudgetExecution.AccountManager.ComboBox2</definition>
+        <argsstring></argsstring>
+        <name>ComboBox2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" line="1622" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" bodystart="1622" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_account_manager_1a8d6640b4cc042e8dcc1d03361aa130d5" prot="private" static="no" mutable="no">
+        <type>MetroSet_UI.Controls.MetroSetPanel</type>
+        <definition>MetroSet_UI.Controls.MetroSetPanel BudgetExecution.AccountManager.metroSetPanel2</definition>
+        <argsstring></argsstring>
+        <name>metroSetPanel2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" line="1623" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" bodystart="1623" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_account_manager_1a8c347db08c8a739c5f005cdfa9d15cb8" prot="private" static="no" mutable="no">
+        <type>MetroSet_UI.Controls.MetroSetPanel</type>
+        <definition>MetroSet_UI.Controls.MetroSetPanel BudgetExecution.AccountManager.metroSetPanel1</definition>
+        <argsstring></argsstring>
+        <name>metroSetPanel1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" line="1624" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" bodystart="1624" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_account_manager_1ab122bccdd35af6d1473c64c56ba7b5c7" prot="private" static="no" mutable="no">
+        <type>MetroSet_UI.Controls.MetroSetComboBox</type>
+        <definition>MetroSet_UI.Controls.MetroSetComboBox BudgetExecution.AccountManager.ComboBox9</definition>
+        <argsstring></argsstring>
+        <name>ComboBox9</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" line="1625" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" bodystart="1625" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_account_manager_1a235bb2e693f0e45dfcf2fb0298baaa68" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label BudgetExecution.AccountManager.label5</definition>
+        <argsstring></argsstring>
+        <name>label5</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" line="1626" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" bodystart="1626" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_account_manager_1a54b30281d405149f122e657c8da32e82" prot="private" static="no" mutable="no">
+        <type>MetroSet_UI.Controls.MetroSetComboBox</type>
+        <definition>MetroSet_UI.Controls.MetroSetComboBox BudgetExecution.AccountManager.ComboBox5</definition>
+        <argsstring></argsstring>
+        <name>ComboBox5</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" line="1627" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" bodystart="1627" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_account_manager_1afaafeae40ccc5d6fa9cbb69d51fc4162" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label BudgetExecution.AccountManager.label4</definition>
+        <argsstring></argsstring>
+        <name>label4</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" line="1628" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" bodystart="1628" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_account_manager_1a2a312412a77dbb01cd5605c2061b311f" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label BudgetExecution.AccountManager.label3</definition>
+        <argsstring></argsstring>
+        <name>label3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" line="1629" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" bodystart="1629" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_account_manager_1aac37c6a5cc0165749053d51db0b8a1e8" prot="private" static="no" mutable="no">
+        <type>MetroSet_UI.Controls.MetroSetTextBox</type>
+        <definition>MetroSet_UI.Controls.MetroSetTextBox BudgetExecution.AccountManager.ProgramArea</definition>
+        <argsstring></argsstring>
+        <name>ProgramArea</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" line="1630" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" bodystart="1630" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_account_manager_1acd06acdf3815459f863d6e0815e1e742" prot="private" static="no" mutable="no">
+        <type>MetroSet_UI.Controls.MetroSetTextBox</type>
+        <definition>MetroSet_UI.Controls.MetroSetTextBox BudgetExecution.AccountManager.ProgramProject</definition>
+        <argsstring></argsstring>
+        <name>ProgramProject</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" line="1631" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" bodystart="1631" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_account_manager_1ae8ed832b6beef42c9076556b8e415a3a" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label BudgetExecution.AccountManager.label2</definition>
+        <argsstring></argsstring>
+        <name>label2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" line="1632" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" bodystart="1632" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_account_manager_1af6d6b82e01089bfe5570cf56b057e777" prot="private" static="no" mutable="no">
+        <type>MetroSet_UI.Controls.MetroSetTextBox</type>
+        <definition>MetroSet_UI.Controls.MetroSetTextBox BudgetExecution.AccountManager.NewBoc</definition>
+        <argsstring></argsstring>
+        <name>NewBoc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" line="1633" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" bodystart="1633" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_account_manager_1a7a5c2ab5bdb55098af9e68d2db019e58" prot="private" static="no" mutable="no">
+        <type>MetroSet_UI.Controls.MetroSetTextBox</type>
+        <definition>MetroSet_UI.Controls.MetroSetTextBox BudgetExecution.AccountManager.BOC</definition>
+        <argsstring></argsstring>
+        <name>BOC</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" line="1634" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" bodystart="1634" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_account_manager_1aa6de3b9b316951daf14351a5947aa7cd" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label BudgetExecution.AccountManager.label11</definition>
+        <argsstring></argsstring>
+        <name>label11</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" line="1635" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" bodystart="1635" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_account_manager_1a37196694e69bfd651183e85a18d17444" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Button</type>
+        <definition>System.Windows.Forms.Button BudgetExecution.AccountManager.button4</definition>
+        <argsstring></argsstring>
+        <name>button4</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" line="1639" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" bodystart="1639" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_account_manager_1a6def287b1f26f0c57e57a539ffaf5773" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Button</type>
+        <definition>System.Windows.Forms.Button BudgetExecution.AccountManager.button3</definition>
+        <argsstring></argsstring>
+        <name>button3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" line="1640" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" bodystart="1640" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_account_manager_1af3bc190f0c0d46778936fe850c785aa9" prot="private" static="no" mutable="no">
+        <type>MetroSet_UI.Controls.MetroSetTextBox</type>
+        <definition>MetroSet_UI.Controls.MetroSetTextBox BudgetExecution.AccountManager.metroSetTextBox1</definition>
+        <argsstring></argsstring>
+        <name>metroSetTextBox1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" line="1641" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" bodystart="1641" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_account_manager_1ad44da99b442fb18457759e582f5eecab" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label BudgetExecution.AccountManager.label24</definition>
+        <argsstring></argsstring>
+        <name>label24</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" line="1642" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" bodystart="1642" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_account_manager_1a3e89a7555ad2bb8440151effa7153d6e" prot="private" static="no" mutable="no">
+        <type>MetroSet_UI.Controls.MetroSetComboBox</type>
+        <definition>MetroSet_UI.Controls.MetroSetComboBox BudgetExecution.AccountManager.metroSetComboBox3</definition>
+        <argsstring></argsstring>
+        <name>metroSetComboBox3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" line="1643" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" bodystart="1643" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_account_manager_1a1995abcfb2e2d7ebe1c7908cf7ee27b4" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Button</type>
+        <definition>System.Windows.Forms.Button BudgetExecution.AccountManager.button6</definition>
+        <argsstring></argsstring>
+        <name>button6</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" line="1644" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" bodystart="1644" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_account_manager_1a7222150aeab62a76ae74457c8d755a4b" prot="private" static="no" mutable="no">
+        <type>MetroSet_UI.Controls.MetroSetTextBox</type>
+        <definition>MetroSet_UI.Controls.MetroSetTextBox BudgetExecution.AccountManager.metroSetTextBox2</definition>
+        <argsstring></argsstring>
+        <name>metroSetTextBox2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" line="1645" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" bodystart="1645" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_account_manager_1a2a26211998c5a4af6839fcf78715c2d6" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Button</type>
+        <definition>System.Windows.Forms.Button BudgetExecution.AccountManager.button7</definition>
+        <argsstring></argsstring>
+        <name>button7</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" line="1646" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" bodystart="1646" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_account_manager_1ab58c53f2732f9a7e813d3bbe6f9eec40" prot="private" static="no" mutable="no">
+        <type>MetroSet_UI.Controls.MetroSetTextBox</type>
+        <definition>MetroSet_UI.Controls.MetroSetTextBox BudgetExecution.AccountManager.metroSetTextBox3</definition>
+        <argsstring></argsstring>
+        <name>metroSetTextBox3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" line="1647" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" bodystart="1647" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_account_manager_1a686f3fef48ea6d104f983c2ac2c1680b" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripLabel</type>
+        <definition>System.Windows.Forms.ToolStripLabel BudgetExecution.AccountManager.bindingNavigatorCountItem</definition>
+        <argsstring></argsstring>
+        <name>bindingNavigatorCountItem</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" line="1648" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" bodystart="1648" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_account_manager_1acd192237cf0ace3ab4e5db931567bb5b" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripButton</type>
+        <definition>System.Windows.Forms.ToolStripButton BudgetExecution.AccountManager.bindingNavigatorMovePreviousItem</definition>
+        <argsstring></argsstring>
+        <name>bindingNavigatorMovePreviousItem</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" line="1649" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" bodystart="1649" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_account_manager_1a7e5b86b4e6e660fe976dc4969b382e47" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripSeparator</type>
+        <definition>System.Windows.Forms.ToolStripSeparator BudgetExecution.AccountManager.bindingNavigatorSeparator</definition>
+        <argsstring></argsstring>
+        <name>bindingNavigatorSeparator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" line="1650" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" bodystart="1650" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_account_manager_1ad675655c05effddc8db7e1449339551e" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripTextBox</type>
+        <definition>System.Windows.Forms.ToolStripTextBox BudgetExecution.AccountManager.bindingNavigatorPositionItem</definition>
+        <argsstring></argsstring>
+        <name>bindingNavigatorPositionItem</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" line="1651" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" bodystart="1651" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_account_manager_1aea47e4074c9dd23b545bfbe703565b0a" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripSeparator</type>
+        <definition>System.Windows.Forms.ToolStripSeparator BudgetExecution.AccountManager.bindingNavigatorSeparator1</definition>
+        <argsstring></argsstring>
+        <name>bindingNavigatorSeparator1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" line="1652" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" bodystart="1652" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_account_manager_1a01db75d16d3ba070e2c992e550bb1104" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripButton</type>
+        <definition>System.Windows.Forms.ToolStripButton BudgetExecution.AccountManager.bindingNavigatorMoveNextItem</definition>
+        <argsstring></argsstring>
+        <name>bindingNavigatorMoveNextItem</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" line="1653" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" bodystart="1653" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_account_manager_1a3f5375cb456b2c8959c385b6963649fb" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripSeparator</type>
+        <definition>System.Windows.Forms.ToolStripSeparator BudgetExecution.AccountManager.bindingNavigatorSeparator2</definition>
+        <argsstring></argsstring>
+        <name>bindingNavigatorSeparator2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" line="1654" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" bodystart="1654" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_account_manager_1a6f244275f48604338cadbac6a670ca75" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripButton</type>
+        <definition>System.Windows.Forms.ToolStripButton BudgetExecution.AccountManager.AddButton</definition>
+        <argsstring></argsstring>
+        <name>AddButton</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" line="1655" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" bodystart="1655" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_account_manager_1af7cfd6491480bb7f8130d1837b59269f" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripSeparator</type>
+        <definition>System.Windows.Forms.ToolStripSeparator BudgetExecution.AccountManager.toolStripSeparator1</definition>
+        <argsstring></argsstring>
+        <name>toolStripSeparator1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" line="1656" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" bodystart="1656" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="package-attrib">
+      <memberdef kind="variable" id="class_budget_execution_1_1_account_manager_1a5b1010b35cec4a080e323b2eefeffd84" prot="package" static="no" mutable="no">
+        <type>Syncfusion.Windows.Forms.Tools.TabControlAdv</type>
+        <definition>Syncfusion.Windows.Forms.Tools.TabControlAdv BudgetExecution.AccountManager.AccountTabControl</definition>
+        <argsstring></argsstring>
+        <name>AccountTabControl</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" line="1636" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" bodystart="1636" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_account_manager_1a03edabc1552a1caa64abffde538118ad" compoundref="_account_manager_8_designer_8cs" startline="29" endline="1576">BudgetExecution.AccountManager.InitializeComponent</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_account_manager_1a05d33ee2e99701408b28a13e10b08f2c" prot="package" static="no" mutable="no">
+        <type>Syncfusion.Windows.Forms.Tools.TabPageAdv</type>
+        <definition>Syncfusion.Windows.Forms.Tools.TabPageAdv BudgetExecution.AccountManager.UpdateTab</definition>
+        <argsstring></argsstring>
+        <name>UpdateTab</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" line="1637" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" bodystart="1637" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_account_manager_1a774d4a847d75743f01e692abfa6b5ae4" prot="package" static="no" mutable="no">
+        <type>Syncfusion.Windows.Forms.Tools.TabPageAdv</type>
+        <definition>Syncfusion.Windows.Forms.Tools.TabPageAdv BudgetExecution.AccountManager.AddNewTab</definition>
+        <argsstring></argsstring>
+        <name>AddNewTab</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" line="1638" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" bodystart="1638" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_account_manager_1a8d238751c8754ca7a80944f59a667580" compoundref="_account_manager_8cs" startline="82" endline="87">BudgetExecution.AccountManager.AccountManager_Load</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_account_manager_1adf9b70ec68ded9790394bbcaabf46d2e" prot="package" static="no" mutable="no">
+        <type>System.Windows.Forms.BindingNavigator</type>
+        <definition>System.Windows.Forms.BindingNavigator BudgetExecution.AccountManager.AccountNavigator</definition>
+        <argsstring></argsstring>
+        <name>AccountNavigator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" line="1657" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" bodystart="1657" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_account_manager_1a03edabc1552a1caa64abffde538118ad" compoundref="_account_manager_8_designer_8cs" startline="29" endline="1576">BudgetExecution.AccountManager.InitializeComponent</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_budget_execution_1_1_account_manager_1abb145c57d8ad44c7c7ad98dffe33aa64" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>BudgetExecution.AccountManager.AccountManager</definition>
+        <argsstring>()</argsstring>
+        <name>AccountManager</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.cs" line="17" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.cs" bodystart="17" bodyend="20"/>
+        <references refid="class_budget_execution_1_1_account_manager_1a03edabc1552a1caa64abffde538118ad" compoundref="_account_manager_8_designer_8cs" startline="29" endline="1576">BudgetExecution.AccountManager.InitializeComponent</references>
+        <referencedby refid="class_budget_execution_1_1_account_manager_1a4721296b94cd539c7876c379b1d5a65e" compoundref="_account_manager_8cs" startline="296" endline="303">BudgetExecution.AccountManager.AddButton_OnClick</referencedby>
+        <referencedby refid="class_budget_execution_1_1_account_manager_1af0a6945133c43a276470bcbad70273ac" compoundref="_account_manager_8cs" startline="315" endline="323">BudgetExecution.AccountManager.UpdateButton_Click</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_account_manager_1a0210984640886e7a1172bca5db7ac349" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>BudgetExecution.AccountManager.AccountManager</definition>
+        <argsstring>(DataBuilder data)</argsstring>
+        <name>AccountManager</name>
+        <param>
+          <type><ref refid="class_budget_execution_1_1_data_builder" kindref="compound">DataBuilder</ref></type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.cs" line="23" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.cs" bodystart="23" bodyend="31"/>
+        <references refid="class_budget_execution_1_1_account_manager_1aa6a9f36c3280c68e6821b6e0d1969a33" compoundref="_account_manager_8_designer_8cs" startline="1597">BudgetExecution.AccountManager.BindingSource</references>
+        <references refid="class_budget_execution_1_1_account_manager_1adc8bcfc483e84568b7fb17d91936cfc0" compoundref="_account_manager_8cs" startline="66">BudgetExecution.AccountManager.DbData</references>
+        <references refid="class_budget_execution_1_1_account_manager_1a03edabc1552a1caa64abffde538118ad" compoundref="_account_manager_8_designer_8cs" startline="29" endline="1576">BudgetExecution.AccountManager.InitializeComponent</references>
+        <references refid="class_budget_execution_1_1_data_builder_1ae45d4e87b673bd7eb78061cdfdcfb8eb" compoundref="_data_builder_8cs" startline="104">BudgetExecution.DataBuilder.Source</references>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_account_manager_1af4e54719d65cf9ccee04e7aed4bf1dd8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>BudgetExecution.AccountManager.AccountManager</definition>
+        <argsstring>(Source source, Provider provider)</argsstring>
+        <name>AccountManager</name>
+        <param>
+          <type><ref refid="namespace_budget_execution_1a31d755f9fbeb90de04b7b1e2e21acdc8" kindref="member">Source</ref></type>
+          <declname>source</declname>
+        </param>
+        <param>
+          <type><ref refid="namespace_budget_execution_1a04fd24d7fd477c1db9884745e14ea571" kindref="member">Provider</ref></type>
+          <declname>provider</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.cs" line="33" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.cs" bodystart="33" bodyend="44"/>
+        <references refid="class_budget_execution_1_1_account_manager_1aa6a9f36c3280c68e6821b6e0d1969a33" compoundref="_account_manager_8_designer_8cs" startline="1597">BudgetExecution.AccountManager.BindingSource</references>
+        <references refid="class_budget_execution_1_1_account_manager_1adc8bcfc483e84568b7fb17d91936cfc0" compoundref="_account_manager_8cs" startline="66">BudgetExecution.AccountManager.DbData</references>
+        <references refid="class_budget_execution_1_1_account_manager_1a03edabc1552a1caa64abffde538118ad" compoundref="_account_manager_8_designer_8cs" startline="29" endline="1576">BudgetExecution.AccountManager.InitializeComponent</references>
+        <references refid="class_budget_execution_1_1_account_manager_1a9989a43a179256671d9480485c6ecd0d" compoundref="_account_manager_8cs" startline="113" endline="131">BudgetExecution.AccountManager.PopulateComboBoxes</references>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_account_manager_1a5a07503bdde13a3962f46038a10e0f60" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>BudgetExecution.AccountManager.AccountManager</definition>
+        <argsstring>(Source source, Provider provider, Dictionary&lt; string, object &gt; p)</argsstring>
+        <name>AccountManager</name>
+        <param>
+          <type><ref refid="namespace_budget_execution_1a31d755f9fbeb90de04b7b1e2e21acdc8" kindref="member">Source</ref></type>
+          <declname>source</declname>
+        </param>
+        <param>
+          <type><ref refid="namespace_budget_execution_1a04fd24d7fd477c1db9884745e14ea571" kindref="member">Provider</ref></type>
+          <declname>provider</declname>
+        </param>
+        <param>
+          <type>Dictionary&lt; string, object &gt;</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.cs" line="46" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.cs" bodystart="46" bodyend="58"/>
+        <references refid="class_budget_execution_1_1_account_manager_1aa6a9f36c3280c68e6821b6e0d1969a33" compoundref="_account_manager_8_designer_8cs" startline="1597">BudgetExecution.AccountManager.BindingSource</references>
+        <references refid="class_budget_execution_1_1_account_manager_1adc8bcfc483e84568b7fb17d91936cfc0" compoundref="_account_manager_8cs" startline="66">BudgetExecution.AccountManager.DbData</references>
+        <references refid="class_budget_execution_1_1_account_manager_1aa8f1512a497387d2a7c1565ffdddd9ba" compoundref="_account_manager_8cs" startline="70">BudgetExecution.AccountManager.DbRow</references>
+        <references refid="class_budget_execution_1_1_account_manager_1a1f18ff4c4fac6177d1366ccae06130f4" compoundref="_account_manager_8cs" startline="68">BudgetExecution.AccountManager.DbTable</references>
+        <references refid="class_budget_execution_1_1_account_manager_1a03edabc1552a1caa64abffde538118ad" compoundref="_account_manager_8_designer_8cs" startline="29" endline="1576">BudgetExecution.AccountManager.InitializeComponent</references>
+        <references refid="namespace_budget_execution_1acc77f02cde309c445b6e142d257483ddae0626222614bdee31951d84c64e5e9ff">BudgetExecution.Select</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_budget_execution_1_1_account_manager_1a8d238751c8754ca7a80944f59a667580" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BudgetExecution.AccountManager.AccountManager_Load</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>AccountManager_Load</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.cs" line="82" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.cs" bodystart="82" bodyend="87"/>
+        <references refid="class_budget_execution_1_1_account_manager_1a774d4a847d75743f01e692abfa6b5ae4" compoundref="_account_manager_8_designer_8cs" startline="1638">BudgetExecution.AccountManager.AddNewTab</references>
+        <references refid="class_budget_execution_1_1_account_manager_1acf5317a0e94c0f5e2669af80833f8125" compoundref="_account_manager_8cs" startline="89" endline="110">BudgetExecution.AccountManager.ConfigureTextBoxBindings</references>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_account_manager_1acf5317a0e94c0f5e2669af80833f8125" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BudgetExecution.AccountManager.ConfigureTextBoxBindings</definition>
+        <argsstring>()</argsstring>
+        <name>ConfigureTextBoxBindings</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.cs" line="89" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.cs" bodystart="89" bodyend="110"/>
+        <references refid="class_budget_execution_1_1_account_manager_1aa6a9f36c3280c68e6821b6e0d1969a33" compoundref="_account_manager_8_designer_8cs" startline="1597">BudgetExecution.AccountManager.BindingSource</references>
+        <referencedby refid="class_budget_execution_1_1_account_manager_1a8d238751c8754ca7a80944f59a667580" compoundref="_account_manager_8cs" startline="82" endline="87">BudgetExecution.AccountManager.AccountManager_Load</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_account_manager_1a9989a43a179256671d9480485c6ecd0d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BudgetExecution.AccountManager.PopulateComboBoxes</definition>
+        <argsstring>()</argsstring>
+        <name>PopulateComboBoxes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.cs" line="113" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.cs" bodystart="113" bodyend="131"/>
+        <referencedby refid="class_budget_execution_1_1_account_manager_1af4e54719d65cf9ccee04e7aed4bf1dd8" compoundref="_account_manager_8cs" startline="33" endline="44">BudgetExecution.AccountManager.AccountManager</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_account_manager_1ad271c1df1d05ae6db46d11e287cac135" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BudgetExecution.AccountManager.PopuluateFundCodes</definition>
+        <argsstring>()</argsstring>
+        <name>PopuluateFundCodes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.cs" line="133" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.cs" bodystart="133" bodyend="145"/>
+        <references refid="class_budget_execution_1_1_info_1a1bb62030f5f9e2f3f8838570af53b9f7" compoundref="_info_8cs" startline="222">BudgetExecution.Info.AgencyFundCodes</references>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_account_manager_1a28f14f791b8f8d46fe2a6247c9f9e7b9" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; Label &gt;</type>
+        <definition>List&lt;Label&gt; BudgetExecution.AccountManager.GetLabels</definition>
+        <argsstring>(GroupBox gbo)</argsstring>
+        <name>GetLabels</name>
+        <param>
+          <type>GroupBox</type>
+          <declname>gbo</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.cs" line="147" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.cs" bodystart="147" bodyend="161"/>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_account_manager_1a0bb6da739bc4041e0c337cbcdc0823b9" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; MetroSetComboBox &gt;</type>
+        <definition>List&lt;MetroSetComboBox&gt; BudgetExecution.AccountManager.GetComboBoxes</definition>
+        <argsstring>(GroupBox gbo)</argsstring>
+        <name>GetComboBoxes</name>
+        <param>
+          <type>GroupBox</type>
+          <declname>gbo</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.cs" line="163" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.cs" bodystart="163" bodyend="177"/>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_account_manager_1aec11dd991ed7dffef613a3253878066c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; Label &gt;</type>
+        <definition>List&lt;Label&gt; BudgetExecution.AccountManager.GetLabels</definition>
+        <argsstring>()</argsstring>
+        <name>GetLabels</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.cs" line="179" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.cs" bodystart="179" bodyend="193"/>
+        <references refid="class_budget_execution_1_1_account_manager_1ab5e0d2eda9338ed6d08de52c0919c847" compoundref="_account_manager_8_designer_8cs" startline="1608">BudgetExecution.AccountManager.RecorDataGroupBox</references>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_account_manager_1aaed8fd37ce68b9f8f801a9ef164abdff" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; MetroSetComboBox &gt;</type>
+        <definition>List&lt;MetroSetComboBox&gt; BudgetExecution.AccountManager.GetComboBoxes</definition>
+        <argsstring>()</argsstring>
+        <name>GetComboBoxes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.cs" line="195" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.cs" bodystart="195" bodyend="209"/>
+        <references refid="class_budget_execution_1_1_account_manager_1ab5e0d2eda9338ed6d08de52c0919c847" compoundref="_account_manager_8_designer_8cs" startline="1608">BudgetExecution.AccountManager.RecorDataGroupBox</references>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_account_manager_1a9e93af2d4c91d9bc70023a0be8131f7e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Dictionary&lt; string, object &gt;</type>
+        <definition>Dictionary&lt;string, object&gt; BudgetExecution.AccountManager.GetDataFields</definition>
+        <argsstring>(DataTable table)</argsstring>
+        <name>GetDataFields</name>
+        <param>
+          <type>DataTable</type>
+          <declname>table</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.cs" line="211" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.cs" bodystart="211" bodyend="230"/>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_account_manager_1a4721296b94cd539c7876c379b1d5a65e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BudgetExecution.AccountManager.AddButton_OnClick</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>AddButton_OnClick</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.cs" line="296" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.cs" bodystart="296" bodyend="303"/>
+        <references refid="class_budget_execution_1_1_account_manager_1abb145c57d8ad44c7c7ad98dffe33aa64" compoundref="_account_manager_8cs" startline="17" endline="20">BudgetExecution.AccountManager.AccountManager</references>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_account_manager_1a797e77914ec9fcdffe612585d7dd51a4" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BudgetExecution.AccountManager.PreviousButton_OnClick</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>PreviousButton_OnClick</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.cs" line="305" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.cs" bodystart="305" bodyend="308"/>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_account_manager_1a6228bc4ff36e56dfa2ed5bf44aee8bb1" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BudgetExecution.AccountManager.NextButton_OnClick</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>NextButton_OnClick</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.cs" line="310" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.cs" bodystart="310" bodyend="313"/>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_account_manager_1af0a6945133c43a276470bcbad70273ac" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BudgetExecution.AccountManager.UpdateButton_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>UpdateButton_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.cs" line="315" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.cs" bodystart="315" bodyend="323"/>
+        <references refid="class_budget_execution_1_1_account_manager_1abb145c57d8ad44c7c7ad98dffe33aa64" compoundref="_account_manager_8cs" startline="17" endline="20">BudgetExecution.AccountManager.AccountManager</references>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_account_manager_1a5be04d7a19992338c1bdac454661be5c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BudgetExecution.AccountManager.Button1_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>Button1_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.cs" line="325" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.cs" bodystart="325" bodyend="328"/>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_account_manager_1a2086e1134dded58e877b4a85917fe72d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BudgetExecution.AccountManager.CalculatorButton_Click</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>CalculatorButton_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.cs" line="330" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.cs" bodystart="330" bodyend="334"/>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_account_manager_1a03edabc1552a1caa64abffde538118ad" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BudgetExecution.AccountManager.InitializeComponent</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeComponent</name>
+        <briefdescription>
+<para>Required method for Designer support - do not modify the contents of this method with the code editor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" line="29" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" bodystart="29" bodyend="1576"/>
+        <references refid="class_budget_execution_1_1_account_manager_1adf9b70ec68ded9790394bbcaabf46d2e" compoundref="_account_manager_8_designer_8cs" startline="1657">BudgetExecution.AccountManager.AccountNavigator</references>
+        <references refid="class_budget_execution_1_1_account_manager_1a5b1010b35cec4a080e323b2eefeffd84" compoundref="_account_manager_8_designer_8cs" startline="1636">BudgetExecution.AccountManager.AccountTabControl</references>
+        <references refid="class_budget_execution_1_1_account_manager_1aa6a9f36c3280c68e6821b6e0d1969a33" compoundref="_account_manager_8_designer_8cs" startline="1597">BudgetExecution.AccountManager.BindingSource</references>
+        <references refid="namespace_budget_execution_1afa69cdcc242b50644155cb4adf244d32a800618943025315f869e4e1f09471012">BudgetExecution.F</references>
+        <referencedby refid="class_budget_execution_1_1_account_manager_1abb145c57d8ad44c7c7ad98dffe33aa64" compoundref="_account_manager_8cs" startline="17" endline="20">BudgetExecution.AccountManager.AccountManager</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="package-func">
+      <memberdef kind="function" id="class_budget_execution_1_1_account_manager_1ae407bc79a380f9222e36a497407b8e78" prot="package" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BudgetExecution.AccountManager.ConfigureDataGridViewVisibleColumns</definition>
+        <argsstring>(DataGridView dgv)</argsstring>
+        <name>ConfigureDataGridViewVisibleColumns</name>
+        <param>
+          <type>DataGridView</type>
+          <declname>dgv</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.cs" line="232" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.cs" bodystart="232" bodyend="254"/>
+        <referencedby refid="class_budget_execution_1_1_account_manager_1a1aa59b340a3385fbdcfd9be1c77e2b6b" compoundref="_account_manager_8cs" startline="256" endline="269">BudgetExecution.AccountManager.BindGridAndNavigator</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_account_manager_1a1aa59b340a3385fbdcfd9be1c77e2b6b" prot="package" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BudgetExecution.AccountManager.BindGridAndNavigator</definition>
+        <argsstring>(DataTable table, DataGridView dg, BindingSource bs, BindingNavigator bn)</argsstring>
+        <name>BindGridAndNavigator</name>
+        <param>
+          <type>DataTable</type>
+          <declname>table</declname>
+        </param>
+        <param>
+          <type>DataGridView</type>
+          <declname>dg</declname>
+        </param>
+        <param>
+          <type><ref refid="class_budget_execution_1_1_account_manager_1aa6a9f36c3280c68e6821b6e0d1969a33" kindref="member">BindingSource</ref></type>
+          <declname>bs</declname>
+        </param>
+        <param>
+          <type>BindingNavigator</type>
+          <declname>bn</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.cs" line="256" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.cs" bodystart="256" bodyend="269"/>
+        <references refid="class_budget_execution_1_1_account_manager_1ae407bc79a380f9222e36a497407b8e78" compoundref="_account_manager_8cs" startline="232" endline="254">BudgetExecution.AccountManager.ConfigureDataGridViewVisibleColumns</references>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_account_manager_1ad424b0250b2ca84f67d68ef27e73dbe8" prot="package" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Dictionary&lt; string, object &gt;</type>
+        <definition>Dictionary&lt;string, object&gt; BudgetExecution.AccountManager.GetCurrentRowDictionary</definition>
+        <argsstring>(BindingSource bs)</argsstring>
+        <name>GetCurrentRowDictionary</name>
+        <param>
+          <type><ref refid="class_budget_execution_1_1_account_manager_1aa6a9f36c3280c68e6821b6e0d1969a33" kindref="member">BindingSource</ref></type>
+          <declname>bs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.cs" line="271" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.cs" bodystart="271" bodyend="294"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_budget_execution_1_1_account_manager_1a381a8107b85e8fbdaa95bff615e65f86" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void BudgetExecution.AccountManager.Dispose</definition>
+        <argsstring>(bool disposing)</argsstring>
+        <name>Dispose</name>
+        <param>
+          <type>bool</type>
+          <declname>disposing</declname>
+        </param>
+        <briefdescription>
+<para>Clean up any resources being used. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>disposing</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true if managed resources should be disposed; otherwise, false.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" line="14" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.Designer.cs" bodystart="14" bodyend="21"/>
+        <references refid="class_budget_execution_1_1_account_manager_1ac4107cb73cc9d55b174743987f566c8b" compoundref="_account_manager_8_designer_8cs" startline="8">BudgetExecution.AccountManager.components</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="11">
+        <label>Syncfusion::Windows::Forms::MetroForm</label>
+      </node>
+      <node id="10">
+        <label>BudgetExecution.AccountManager</label>
+        <link refid="class_budget_execution_1_1_account_manager"/>
+        <childnode refid="11" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="14">
+        <label>Windows</label>
+      </node>
+      <node id="15">
+        <label>Controls</label>
+      </node>
+      <node id="13">
+        <label>Syncfusion::Windows::Forms::MetroForm</label>
+      </node>
+      <node id="16">
+        <label>System</label>
+      </node>
+      <node id="12">
+        <label>BudgetExecution.AccountManager</label>
+        <link refid="class_budget_execution_1_1_account_manager"/>
+        <childnode refid="13" relation="public-inheritance">
+        </childnode>
+        <childnode refid="14" relation="usage">
+          <edgelabel>AccountTabControl</edgelabel>
+          <edgelabel>UpdateTab</edgelabel>
+          <edgelabel>AddNewTab</edgelabel>
+        </childnode>
+        <childnode refid="15" relation="usage">
+          <edgelabel>Org</edgelabel>
+          <edgelabel>BFY</edgelabel>
+          <edgelabel>metroSetComboBox3</edgelabel>
+          <edgelabel>ProgramProject</edgelabel>
+          <edgelabel>ComboBox1</edgelabel>
+          <edgelabel>Amount1</edgelabel>
+          <edgelabel>ProgramArea</edgelabel>
+          <edgelabel>ComboBox2</edgelabel>
+          <edgelabel>RC</edgelabel>
+          <edgelabel>metroSetTextBox1</edgelabel>
+          <edgelabel>...</edgelabel>
+        </childnode>
+        <childnode refid="16" relation="usage">
+          <edgelabel>bindingNavigatorCountItem</edgelabel>
+          <edgelabel>button4</edgelabel>
+          <edgelabel>bindingNavigatorPositionItem</edgelabel>
+          <edgelabel>button5</edgelabel>
+          <edgelabel>button6</edgelabel>
+          <edgelabel>label2</edgelabel>
+          <edgelabel>AccountNavigator</edgelabel>
+          <edgelabel>button7</edgelabel>
+          <edgelabel>label3</edgelabel>
+          <edgelabel>label4</edgelabel>
+          <edgelabel>...</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.cs" line="15" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AccountManager.cs" bodystart="14" bodyend="336"/>
+    <listofallmembers>
+      <member refid="class_budget_execution_1_1_account_manager_1abb145c57d8ad44c7c7ad98dffe33aa64" prot="public" virt="non-virtual"><scope>BudgetExecution::AccountManager</scope><name>AccountManager</name></member>
+      <member refid="class_budget_execution_1_1_account_manager_1a0210984640886e7a1172bca5db7ac349" prot="public" virt="non-virtual"><scope>BudgetExecution::AccountManager</scope><name>AccountManager</name></member>
+      <member refid="class_budget_execution_1_1_account_manager_1af4e54719d65cf9ccee04e7aed4bf1dd8" prot="public" virt="non-virtual"><scope>BudgetExecution::AccountManager</scope><name>AccountManager</name></member>
+      <member refid="class_budget_execution_1_1_account_manager_1a5a07503bdde13a3962f46038a10e0f60" prot="public" virt="non-virtual"><scope>BudgetExecution::AccountManager</scope><name>AccountManager</name></member>
+      <member refid="class_budget_execution_1_1_account_manager_1a8d238751c8754ca7a80944f59a667580" prot="private" virt="non-virtual"><scope>BudgetExecution::AccountManager</scope><name>AccountManager_Load</name></member>
+      <member refid="class_budget_execution_1_1_account_manager_1adf9b70ec68ded9790394bbcaabf46d2e" prot="package" virt="non-virtual"><scope>BudgetExecution::AccountManager</scope><name>AccountNavigator</name></member>
+      <member refid="class_budget_execution_1_1_account_manager_1a5b1010b35cec4a080e323b2eefeffd84" prot="package" virt="non-virtual"><scope>BudgetExecution::AccountManager</scope><name>AccountTabControl</name></member>
+      <member refid="class_budget_execution_1_1_account_manager_1a6f244275f48604338cadbac6a670ca75" prot="private" virt="non-virtual"><scope>BudgetExecution::AccountManager</scope><name>AddButton</name></member>
+      <member refid="class_budget_execution_1_1_account_manager_1a4721296b94cd539c7876c379b1d5a65e" prot="private" virt="non-virtual"><scope>BudgetExecution::AccountManager</scope><name>AddButton_OnClick</name></member>
+      <member refid="class_budget_execution_1_1_account_manager_1a774d4a847d75743f01e692abfa6b5ae4" prot="package" virt="non-virtual"><scope>BudgetExecution::AccountManager</scope><name>AddNewTab</name></member>
+      <member refid="class_budget_execution_1_1_account_manager_1a2b1567871bd834fa97bb41aae2a4df76" prot="private" virt="non-virtual"><scope>BudgetExecution::AccountManager</scope><name>Amount1</name></member>
+      <member refid="class_budget_execution_1_1_account_manager_1af271ea02c4ee39eb99d6bea4ae5f66d7" prot="private" virt="non-virtual"><scope>BudgetExecution::AccountManager</scope><name>BFY</name></member>
+      <member refid="class_budget_execution_1_1_account_manager_1a1aa59b340a3385fbdcfd9be1c77e2b6b" prot="package" virt="non-virtual"><scope>BudgetExecution::AccountManager</scope><name>BindGridAndNavigator</name></member>
+      <member refid="class_budget_execution_1_1_account_manager_1a686f3fef48ea6d104f983c2ac2c1680b" prot="private" virt="non-virtual"><scope>BudgetExecution::AccountManager</scope><name>bindingNavigatorCountItem</name></member>
+      <member refid="class_budget_execution_1_1_account_manager_1a01db75d16d3ba070e2c992e550bb1104" prot="private" virt="non-virtual"><scope>BudgetExecution::AccountManager</scope><name>bindingNavigatorMoveNextItem</name></member>
+      <member refid="class_budget_execution_1_1_account_manager_1acd192237cf0ace3ab4e5db931567bb5b" prot="private" virt="non-virtual"><scope>BudgetExecution::AccountManager</scope><name>bindingNavigatorMovePreviousItem</name></member>
+      <member refid="class_budget_execution_1_1_account_manager_1ad675655c05effddc8db7e1449339551e" prot="private" virt="non-virtual"><scope>BudgetExecution::AccountManager</scope><name>bindingNavigatorPositionItem</name></member>
+      <member refid="class_budget_execution_1_1_account_manager_1a7e5b86b4e6e660fe976dc4969b382e47" prot="private" virt="non-virtual"><scope>BudgetExecution::AccountManager</scope><name>bindingNavigatorSeparator</name></member>
+      <member refid="class_budget_execution_1_1_account_manager_1aea47e4074c9dd23b545bfbe703565b0a" prot="private" virt="non-virtual"><scope>BudgetExecution::AccountManager</scope><name>bindingNavigatorSeparator1</name></member>
+      <member refid="class_budget_execution_1_1_account_manager_1a3f5375cb456b2c8959c385b6963649fb" prot="private" virt="non-virtual"><scope>BudgetExecution::AccountManager</scope><name>bindingNavigatorSeparator2</name></member>
+      <member refid="class_budget_execution_1_1_account_manager_1aa6a9f36c3280c68e6821b6e0d1969a33" prot="private" virt="non-virtual"><scope>BudgetExecution::AccountManager</scope><name>BindingSource</name></member>
+      <member refid="class_budget_execution_1_1_account_manager_1a7a5c2ab5bdb55098af9e68d2db019e58" prot="private" virt="non-virtual"><scope>BudgetExecution::AccountManager</scope><name>BOC</name></member>
+      <member refid="class_budget_execution_1_1_account_manager_1a4e1869608705c838f53ac48c3fdea2c6" prot="private" virt="non-virtual"><scope>BudgetExecution::AccountManager</scope><name>BudgetLevel</name></member>
+      <member refid="class_budget_execution_1_1_account_manager_1aa3d254da2430418108a5cb67a49a3f03" prot="private" virt="non-virtual"><scope>BudgetExecution::AccountManager</scope><name>button1</name></member>
+      <member refid="class_budget_execution_1_1_account_manager_1a5be04d7a19992338c1bdac454661be5c" prot="private" virt="non-virtual"><scope>BudgetExecution::AccountManager</scope><name>Button1_Click</name></member>
+      <member refid="class_budget_execution_1_1_account_manager_1a9b9a5a42c62b5bf280657dbb9671c059" prot="private" virt="non-virtual"><scope>BudgetExecution::AccountManager</scope><name>button2</name></member>
+      <member refid="class_budget_execution_1_1_account_manager_1a6def287b1f26f0c57e57a539ffaf5773" prot="private" virt="non-virtual"><scope>BudgetExecution::AccountManager</scope><name>button3</name></member>
+      <member refid="class_budget_execution_1_1_account_manager_1a37196694e69bfd651183e85a18d17444" prot="private" virt="non-virtual"><scope>BudgetExecution::AccountManager</scope><name>button4</name></member>
+      <member refid="class_budget_execution_1_1_account_manager_1a284cd405212ef2a58bfef4a2175d85aa" prot="private" virt="non-virtual"><scope>BudgetExecution::AccountManager</scope><name>button5</name></member>
+      <member refid="class_budget_execution_1_1_account_manager_1a1995abcfb2e2d7ebe1c7908cf7ee27b4" prot="private" virt="non-virtual"><scope>BudgetExecution::AccountManager</scope><name>button6</name></member>
+      <member refid="class_budget_execution_1_1_account_manager_1a2a26211998c5a4af6839fcf78715c2d6" prot="private" virt="non-virtual"><scope>BudgetExecution::AccountManager</scope><name>button7</name></member>
+      <member refid="class_budget_execution_1_1_account_manager_1a2086e1134dded58e877b4a85917fe72d" prot="private" virt="non-virtual"><scope>BudgetExecution::AccountManager</scope><name>CalculatorButton_Click</name></member>
+      <member refid="class_budget_execution_1_1_account_manager_1a6da490364f88e6143a07d04daf44ea92" prot="private" virt="non-virtual"><scope>BudgetExecution::AccountManager</scope><name>Code</name></member>
+      <member refid="class_budget_execution_1_1_account_manager_1a582c6f5873800c4acc8397c0031ae2ff" prot="private" virt="non-virtual"><scope>BudgetExecution::AccountManager</scope><name>ComboBox1</name></member>
+      <member refid="class_budget_execution_1_1_account_manager_1a4f0d6bad9e3871278d7ea85564be3d8e" prot="private" virt="non-virtual"><scope>BudgetExecution::AccountManager</scope><name>ComboBox2</name></member>
+      <member refid="class_budget_execution_1_1_account_manager_1a4318a8398831c3b3c589af28de4498f3" prot="private" virt="non-virtual"><scope>BudgetExecution::AccountManager</scope><name>ComboBox3</name></member>
+      <member refid="class_budget_execution_1_1_account_manager_1a2eb6da36a627b3f25e3eaa29f87f516f" prot="private" virt="non-virtual"><scope>BudgetExecution::AccountManager</scope><name>ComboBox4</name></member>
+      <member refid="class_budget_execution_1_1_account_manager_1a54b30281d405149f122e657c8da32e82" prot="private" virt="non-virtual"><scope>BudgetExecution::AccountManager</scope><name>ComboBox5</name></member>
+      <member refid="class_budget_execution_1_1_account_manager_1a798799c144a8d8fe6fb0d711557a6e94" prot="private" virt="non-virtual"><scope>BudgetExecution::AccountManager</scope><name>ComboBox6</name></member>
+      <member refid="class_budget_execution_1_1_account_manager_1a8dcce5abd642e4b754f84225650358ae" prot="private" virt="non-virtual"><scope>BudgetExecution::AccountManager</scope><name>ComboBox7</name></member>
+      <member refid="class_budget_execution_1_1_account_manager_1a7dc591c1b1a9d6ce8d07a4d1c7134f87" prot="private" virt="non-virtual"><scope>BudgetExecution::AccountManager</scope><name>ComboBox8</name></member>
+      <member refid="class_budget_execution_1_1_account_manager_1ab122bccdd35af6d1473c64c56ba7b5c7" prot="private" virt="non-virtual"><scope>BudgetExecution::AccountManager</scope><name>ComboBox9</name></member>
+      <member refid="class_budget_execution_1_1_account_manager_1a1c665d321fe54f04cad39053e350e5fc" prot="private" virt="non-virtual"><scope>BudgetExecution::AccountManager</scope><name>ComboBoxes</name></member>
+      <member refid="class_budget_execution_1_1_account_manager_1ac4107cb73cc9d55b174743987f566c8b" prot="private" virt="non-virtual"><scope>BudgetExecution::AccountManager</scope><name>components</name></member>
+      <member refid="class_budget_execution_1_1_account_manager_1ae407bc79a380f9222e36a497407b8e78" prot="package" virt="non-virtual"><scope>BudgetExecution::AccountManager</scope><name>ConfigureDataGridViewVisibleColumns</name></member>
+      <member refid="class_budget_execution_1_1_account_manager_1acf5317a0e94c0f5e2669af80833f8125" prot="private" virt="non-virtual"><scope>BudgetExecution::AccountManager</scope><name>ConfigureTextBoxBindings</name></member>
+      <member refid="class_budget_execution_1_1_account_manager_1adc8bcfc483e84568b7fb17d91936cfc0" prot="public" virt="non-virtual"><scope>BudgetExecution::AccountManager</scope><name>DbData</name></member>
+      <member refid="class_budget_execution_1_1_account_manager_1aa8f1512a497387d2a7c1565ffdddd9ba" prot="public" virt="non-virtual"><scope>BudgetExecution::AccountManager</scope><name>DbRow</name></member>
+      <member refid="class_budget_execution_1_1_account_manager_1a1f18ff4c4fac6177d1366ccae06130f4" prot="public" virt="non-virtual"><scope>BudgetExecution::AccountManager</scope><name>DbTable</name></member>
+      <member refid="class_budget_execution_1_1_account_manager_1a381a8107b85e8fbdaa95bff615e65f86" prot="protected" virt="non-virtual"><scope>BudgetExecution::AccountManager</scope><name>Dispose</name></member>
+      <member refid="class_budget_execution_1_1_account_manager_1a1f2bbfc3d68f617bcb62ffad07dda582" prot="private" virt="non-virtual"><scope>BudgetExecution::AccountManager</scope><name>Fund</name></member>
+      <member refid="class_budget_execution_1_1_account_manager_1a0bb6da739bc4041e0c337cbcdc0823b9" prot="private" virt="non-virtual"><scope>BudgetExecution::AccountManager</scope><name>GetComboBoxes</name></member>
+      <member refid="class_budget_execution_1_1_account_manager_1aaed8fd37ce68b9f8f801a9ef164abdff" prot="private" virt="non-virtual"><scope>BudgetExecution::AccountManager</scope><name>GetComboBoxes</name></member>
+      <member refid="class_budget_execution_1_1_account_manager_1ad424b0250b2ca84f67d68ef27e73dbe8" prot="package" virt="non-virtual"><scope>BudgetExecution::AccountManager</scope><name>GetCurrentRowDictionary</name></member>
+      <member refid="class_budget_execution_1_1_account_manager_1a9e93af2d4c91d9bc70023a0be8131f7e" prot="private" virt="non-virtual"><scope>BudgetExecution::AccountManager</scope><name>GetDataFields</name></member>
+      <member refid="class_budget_execution_1_1_account_manager_1a28f14f791b8f8d46fe2a6247c9f9e7b9" prot="private" virt="non-virtual"><scope>BudgetExecution::AccountManager</scope><name>GetLabels</name></member>
+      <member refid="class_budget_execution_1_1_account_manager_1aec11dd991ed7dffef613a3253878066c" prot="private" virt="non-virtual"><scope>BudgetExecution::AccountManager</scope><name>GetLabels</name></member>
+      <member refid="class_budget_execution_1_1_account_manager_1aaf426b9c78fad84eb381db5e6da1f82a" prot="private" virt="non-virtual"><scope>BudgetExecution::AccountManager</scope><name>groupBox2</name></member>
+      <member refid="class_budget_execution_1_1_account_manager_1a8f17f25e70163e6fd65a5149b28496fd" prot="private" virt="non-virtual"><scope>BudgetExecution::AccountManager</scope><name>groupBox3</name></member>
+      <member refid="class_budget_execution_1_1_account_manager_1a5b662e9da1e2341f3aa8182e9bc0acf1" prot="private" virt="non-virtual"><scope>BudgetExecution::AccountManager</scope><name>groupBox4</name></member>
+      <member refid="class_budget_execution_1_1_account_manager_1afe4cde9d7b827d8b312af290ffe13a20" prot="private" virt="non-virtual"><scope>BudgetExecution::AccountManager</scope><name>groupBox5</name></member>
+      <member refid="class_budget_execution_1_1_account_manager_1a9291937037dbdedcb95fdbb2a1a8f7ef" prot="private" virt="non-virtual"><scope>BudgetExecution::AccountManager</scope><name>groupBox6</name></member>
+      <member refid="class_budget_execution_1_1_account_manager_1a353f74213dbe7711522d91b96ad0d43a" prot="private" virt="non-virtual"><scope>BudgetExecution::AccountManager</scope><name>ID</name></member>
+      <member refid="class_budget_execution_1_1_account_manager_1a03edabc1552a1caa64abffde538118ad" prot="private" virt="non-virtual"><scope>BudgetExecution::AccountManager</scope><name>InitializeComponent</name></member>
+      <member refid="class_budget_execution_1_1_account_manager_1a9aae0a4cd9fe72c7010cda395108d7d3" prot="private" virt="non-virtual"><scope>BudgetExecution::AccountManager</scope><name>label10</name></member>
+      <member refid="class_budget_execution_1_1_account_manager_1aa6de3b9b316951daf14351a5947aa7cd" prot="private" virt="non-virtual"><scope>BudgetExecution::AccountManager</scope><name>label11</name></member>
+      <member refid="class_budget_execution_1_1_account_manager_1ac2da0d81b95c8335b6b5d29d46d41b9c" prot="private" virt="non-virtual"><scope>BudgetExecution::AccountManager</scope><name>label12</name></member>
+      <member refid="class_budget_execution_1_1_account_manager_1a466efbfb7690104cfe8d15b3a927bf33" prot="private" virt="non-virtual"><scope>BudgetExecution::AccountManager</scope><name>label13</name></member>
+      <member refid="class_budget_execution_1_1_account_manager_1af33123e6d500f63eb901370d06ae23bb" prot="private" virt="non-virtual"><scope>BudgetExecution::AccountManager</scope><name>label14</name></member>
+      <member refid="class_budget_execution_1_1_account_manager_1aa8076acbd9d3cdb38a8f2a74846f8f8e" prot="private" virt="non-virtual"><scope>BudgetExecution::AccountManager</scope><name>label15</name></member>
+      <member refid="class_budget_execution_1_1_account_manager_1ae56b70c1b0d6c59d2ca3673b1f4902ed" prot="private" virt="non-virtual"><scope>BudgetExecution::AccountManager</scope><name>label16</name></member>
+      <member refid="class_budget_execution_1_1_account_manager_1a4f5389f8ba0d98a83ec1ea70e4954a7d" prot="private" virt="non-virtual"><scope>BudgetExecution::AccountManager</scope><name>label17</name></member>
+      <member refid="class_budget_execution_1_1_account_manager_1ac15b856307bbde381c96b5ac0d449c33" prot="private" virt="non-virtual"><scope>BudgetExecution::AccountManager</scope><name>label18</name></member>
+      <member refid="class_budget_execution_1_1_account_manager_1acb077d3230b67c08bf61bc5751561f5f" prot="private" virt="non-virtual"><scope>BudgetExecution::AccountManager</scope><name>label19</name></member>
+      <member refid="class_budget_execution_1_1_account_manager_1ae8ed832b6beef42c9076556b8e415a3a" prot="private" virt="non-virtual"><scope>BudgetExecution::AccountManager</scope><name>label2</name></member>
+      <member refid="class_budget_execution_1_1_account_manager_1aeb7da4318b560fa4455720731a8aad85" prot="private" virt="non-virtual"><scope>BudgetExecution::AccountManager</scope><name>label20</name></member>
+      <member refid="class_budget_execution_1_1_account_manager_1a3d5fadef7c3ec7e1dc2a601f28bc548e" prot="private" virt="non-virtual"><scope>BudgetExecution::AccountManager</scope><name>label21</name></member>
+      <member refid="class_budget_execution_1_1_account_manager_1a59683e99918c7881cf93eb1cfa5f64ac" prot="private" virt="non-virtual"><scope>BudgetExecution::AccountManager</scope><name>label22</name></member>
+      <member refid="class_budget_execution_1_1_account_manager_1abf8c481647c87a86f9a48f957adea3ed" prot="private" virt="non-virtual"><scope>BudgetExecution::AccountManager</scope><name>label23</name></member>
+      <member refid="class_budget_execution_1_1_account_manager_1ad44da99b442fb18457759e582f5eecab" prot="private" virt="non-virtual"><scope>BudgetExecution::AccountManager</scope><name>label24</name></member>
+      <member refid="class_budget_execution_1_1_account_manager_1a2a312412a77dbb01cd5605c2061b311f" prot="private" virt="non-virtual"><scope>BudgetExecution::AccountManager</scope><name>label3</name></member>
+      <member refid="class_budget_execution_1_1_account_manager_1afaafeae40ccc5d6fa9cbb69d51fc4162" prot="private" virt="non-virtual"><scope>BudgetExecution::AccountManager</scope><name>label4</name></member>
+      <member refid="class_budget_execution_1_1_account_manager_1a235bb2e693f0e45dfcf2fb0298baaa68" prot="private" virt="non-virtual"><scope>BudgetExecution::AccountManager</scope><name>label5</name></member>
+      <member refid="class_budget_execution_1_1_account_manager_1a9afe7e84119bcecfa20a711a6da36b07" prot="private" virt="non-virtual"><scope>BudgetExecution::AccountManager</scope><name>label6</name></member>
+      <member refid="class_budget_execution_1_1_account_manager_1a6717f12d02d578bd110ea55fc670b4f5" prot="private" virt="non-virtual"><scope>BudgetExecution::AccountManager</scope><name>label7</name></member>
+      <member refid="class_budget_execution_1_1_account_manager_1aeb8bd177cad3ffbd6d90a8d9d650cbce" prot="private" virt="non-virtual"><scope>BudgetExecution::AccountManager</scope><name>label8</name></member>
+      <member refid="class_budget_execution_1_1_account_manager_1acb9497bd7801a65349a2a67f79c55861" prot="private" virt="non-virtual"><scope>BudgetExecution::AccountManager</scope><name>label9</name></member>
+      <member refid="class_budget_execution_1_1_account_manager_1a05f59ba18644698e1e7e179ee12e6843" prot="private" virt="non-virtual"><scope>BudgetExecution::AccountManager</scope><name>Labels</name></member>
+      <member refid="class_budget_execution_1_1_account_manager_1a3e89a7555ad2bb8440151effa7153d6e" prot="private" virt="non-virtual"><scope>BudgetExecution::AccountManager</scope><name>metroSetComboBox3</name></member>
+      <member refid="class_budget_execution_1_1_account_manager_1a8c347db08c8a739c5f005cdfa9d15cb8" prot="private" virt="non-virtual"><scope>BudgetExecution::AccountManager</scope><name>metroSetPanel1</name></member>
+      <member refid="class_budget_execution_1_1_account_manager_1a8d6640b4cc042e8dcc1d03361aa130d5" prot="private" virt="non-virtual"><scope>BudgetExecution::AccountManager</scope><name>metroSetPanel2</name></member>
+      <member refid="class_budget_execution_1_1_account_manager_1af3bc190f0c0d46778936fe850c785aa9" prot="private" virt="non-virtual"><scope>BudgetExecution::AccountManager</scope><name>metroSetTextBox1</name></member>
+      <member refid="class_budget_execution_1_1_account_manager_1a9991c97b98d598e1ae5cb5b9f756f37e" prot="private" virt="non-virtual"><scope>BudgetExecution::AccountManager</scope><name>metroSetTextBox11</name></member>
+      <member refid="class_budget_execution_1_1_account_manager_1a7222150aeab62a76ae74457c8d755a4b" prot="private" virt="non-virtual"><scope>BudgetExecution::AccountManager</scope><name>metroSetTextBox2</name></member>
+      <member refid="class_budget_execution_1_1_account_manager_1ab58c53f2732f9a7e813d3bbe6f9eec40" prot="private" virt="non-virtual"><scope>BudgetExecution::AccountManager</scope><name>metroSetTextBox3</name></member>
+      <member refid="class_budget_execution_1_1_account_manager_1af6d6b82e01089bfe5570cf56b057e777" prot="private" virt="non-virtual"><scope>BudgetExecution::AccountManager</scope><name>NewBoc</name></member>
+      <member refid="class_budget_execution_1_1_account_manager_1a6228bc4ff36e56dfa2ed5bf44aee8bb1" prot="private" virt="non-virtual"><scope>BudgetExecution::AccountManager</scope><name>NextButton_OnClick</name></member>
+      <member refid="class_budget_execution_1_1_account_manager_1a8f0ed1109d8434807c7e91e19b41dde7" prot="private" virt="non-virtual"><scope>BudgetExecution::AccountManager</scope><name>Ninja</name></member>
+      <member refid="class_budget_execution_1_1_account_manager_1afff67ebf0c2ddaa922834b0a559a2b67" prot="private" virt="non-virtual"><scope>BudgetExecution::AccountManager</scope><name>Org</name></member>
+      <member refid="class_budget_execution_1_1_account_manager_1a9989a43a179256671d9480485c6ecd0d" prot="private" virt="non-virtual"><scope>BudgetExecution::AccountManager</scope><name>PopulateComboBoxes</name></member>
+      <member refid="class_budget_execution_1_1_account_manager_1ad271c1df1d05ae6db46d11e287cac135" prot="private" virt="non-virtual"><scope>BudgetExecution::AccountManager</scope><name>PopuluateFundCodes</name></member>
+      <member refid="class_budget_execution_1_1_account_manager_1a797e77914ec9fcdffe612585d7dd51a4" prot="private" virt="non-virtual"><scope>BudgetExecution::AccountManager</scope><name>PreviousButton_OnClick</name></member>
+      <member refid="class_budget_execution_1_1_account_manager_1aac37c6a5cc0165749053d51db0b8a1e8" prot="private" virt="non-virtual"><scope>BudgetExecution::AccountManager</scope><name>ProgramArea</name></member>
+      <member refid="class_budget_execution_1_1_account_manager_1acd06acdf3815459f863d6e0815e1e742" prot="private" virt="non-virtual"><scope>BudgetExecution::AccountManager</scope><name>ProgramProject</name></member>
+      <member refid="class_budget_execution_1_1_account_manager_1a5035a8d64a418f255c32825dee574b62" prot="public" virt="non-virtual"><scope>BudgetExecution::AccountManager</scope><name>Provider</name></member>
+      <member refid="class_budget_execution_1_1_account_manager_1a6bdc66d903db84c85a0cbde9e7308fd5" prot="private" virt="non-virtual"><scope>BudgetExecution::AccountManager</scope><name>RC</name></member>
+      <member refid="class_budget_execution_1_1_account_manager_1ab5e0d2eda9338ed6d08de52c0919c847" prot="private" virt="non-virtual"><scope>BudgetExecution::AccountManager</scope><name>RecorDataGroupBox</name></member>
+      <member refid="class_budget_execution_1_1_account_manager_1a7c60e03087502cf00647e3ca615e1cb4" prot="public" virt="non-virtual"><scope>BudgetExecution::AccountManager</scope><name>Source</name></member>
+      <member refid="class_budget_execution_1_1_account_manager_1adbce203437cb1dc652d90c49ea7042f8" prot="private" virt="non-virtual"><scope>BudgetExecution::AccountManager</scope><name>SubProject</name></member>
+      <member refid="class_budget_execution_1_1_account_manager_1a0b39dae905c3e75eddff9cccacddcc83" prot="private" virt="non-virtual"><scope>BudgetExecution::AccountManager</scope><name>TextBoxes</name></member>
+      <member refid="class_budget_execution_1_1_account_manager_1af7cfd6491480bb7f8130d1837b59269f" prot="private" virt="non-virtual"><scope>BudgetExecution::AccountManager</scope><name>toolStripSeparator1</name></member>
+      <member refid="class_budget_execution_1_1_account_manager_1af0a6945133c43a276470bcbad70273ac" prot="private" virt="non-virtual"><scope>BudgetExecution::AccountManager</scope><name>UpdateButton_Click</name></member>
+      <member refid="class_budget_execution_1_1_account_manager_1a05d33ee2e99701408b28a13e10b08f2c" prot="package" virt="non-virtual"><scope>BudgetExecution::AccountManager</scope><name>UpdateTab</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

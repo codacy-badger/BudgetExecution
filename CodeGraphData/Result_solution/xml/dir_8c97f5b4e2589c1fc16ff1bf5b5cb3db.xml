@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="dir_8c97f5b4e2589c1fc16ff1bf5b5cb3db" kind="dir">
+    <compoundname>C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution</compoundname>
+    <innerdir refid="dir_bebe5c37d465107e43a2fcf0568ceec1">C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/"/>
+  </compounddef>
+</doxygen>

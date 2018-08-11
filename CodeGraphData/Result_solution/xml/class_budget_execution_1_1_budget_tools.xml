@@ -1,0 +1,210 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_budget_execution_1_1_budget_tools" kind="class" prot="public">
+    <compoundname>BudgetExecution::BudgetTools</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MetroForm</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_budget_execution_1_1_budget_tools_1a66e2439d9ce3e0036d6eaf7df4f4628d" prot="private" static="no" mutable="no">
+        <type>System.ComponentModel.IContainer</type>
+        <definition>System.ComponentModel.IContainer BudgetExecution.BudgetTools.components</definition>
+        <argsstring></argsstring>
+        <name>components</name>
+        <initializer>= null</initializer>
+        <briefdescription>
+<para>Required designer variable. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/BudgetTools.Designer.cs" line="15" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/BudgetTools.Designer.cs" bodystart="15" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_budget_tools_1a501029cc34ac565d3765286daf0b103a" compoundref="_budget_tools_8_designer_8cs" startline="21" endline="28">BudgetExecution.BudgetTools.Dispose</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_budget_tools_1ad7f57bac15a6187ac49b136824d43e25" prot="private" static="no" mutable="no">
+        <type>Syncfusion.Windows.Forms.Tools.SplitContainerAdv</type>
+        <definition>Syncfusion.Windows.Forms.Tools.SplitContainerAdv BudgetExecution.BudgetTools.splitContainerAdv1</definition>
+        <argsstring></argsstring>
+        <name>splitContainerAdv1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/BudgetTools.Designer.cs" line="105" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/BudgetTools.Designer.cs" bodystart="105" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_budget_tools_1a3ae6fde7a5322113a4a23a21e05e36b7" compoundref="_budget_tools_8_designer_8cs" startline="36" endline="101">BudgetExecution.BudgetTools.InitializeComponent</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_budget_tools_1a2ecf1900eae35ebcfb3f96aabff0ce91" prot="private" static="no" mutable="no">
+        <type>MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel</type>
+        <definition>MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel BudgetExecution.BudgetTools.expandCollapsePanel1</definition>
+        <argsstring></argsstring>
+        <name>expandCollapsePanel1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/BudgetTools.Designer.cs" line="106" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/BudgetTools.Designer.cs" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_budget_execution_1_1_budget_tools_1acf7b1232c5e7ffa9236c4bffdd97bb19" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>BudgetExecution.BudgetTools.BudgetTools</definition>
+        <argsstring>()</argsstring>
+        <name>BudgetTools</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/BudgetTools.cs" line="11" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/BudgetTools.cs" bodystart="11" bodyend="14"/>
+        <references refid="class_budget_execution_1_1_budget_tools_1a3ae6fde7a5322113a4a23a21e05e36b7" compoundref="_budget_tools_8_designer_8cs" startline="36" endline="101">BudgetExecution.BudgetTools.InitializeComponent</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_budget_execution_1_1_budget_tools_1a752b913f2ffbc77cf30e50b1d64c7cf6" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BudgetExecution.BudgetTools.BudgetTools_Load</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>BudgetTools_Load</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/BudgetTools.cs" line="16" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/BudgetTools.cs" bodystart="16" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_budget_tools_1aa3abbe42de06c95b6ef08d1095696630" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BudgetExecution.BudgetTools.TabControlAdv1_SelectedIndexChanged</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>TabControlAdv1_SelectedIndexChanged</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/BudgetTools.cs" line="20" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/BudgetTools.cs" bodystart="20" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_budget_tools_1a3ae6fde7a5322113a4a23a21e05e36b7" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BudgetExecution.BudgetTools.InitializeComponent</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeComponent</name>
+        <briefdescription>
+<para>Required method for Designer support - do not modify the contents of this method with the code editor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/BudgetTools.Designer.cs" line="36" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/BudgetTools.Designer.cs" bodystart="36" bodyend="101"/>
+        <references refid="namespace_budget_execution_1afa69cdcc242b50644155cb4adf244d32a800618943025315f869e4e1f09471012">BudgetExecution.F</references>
+        <references refid="class_budget_execution_1_1_budget_tools_1ad7f57bac15a6187ac49b136824d43e25" compoundref="_budget_tools_8_designer_8cs" startline="105">BudgetExecution.BudgetTools.splitContainerAdv1</references>
+        <referencedby refid="class_budget_execution_1_1_budget_tools_1acf7b1232c5e7ffa9236c4bffdd97bb19" compoundref="_budget_tools_8cs" startline="11" endline="14">BudgetExecution.BudgetTools.BudgetTools</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_budget_execution_1_1_budget_tools_1a501029cc34ac565d3765286daf0b103a" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void BudgetExecution.BudgetTools.Dispose</definition>
+        <argsstring>(bool disposing)</argsstring>
+        <name>Dispose</name>
+        <param>
+          <type>bool</type>
+          <declname>disposing</declname>
+        </param>
+        <briefdescription>
+<para>Clean up any resources being used. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>disposing</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true if managed resources should be disposed; otherwise, false.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/BudgetTools.Designer.cs" line="21" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/BudgetTools.Designer.cs" bodystart="21" bodyend="28"/>
+        <references refid="class_budget_execution_1_1_budget_tools_1a66e2439d9ce3e0036d6eaf7df4f4628d" compoundref="_budget_tools_8_designer_8cs" startline="15">BudgetExecution.BudgetTools.components</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="50">
+        <label>BudgetExecution.BudgetTools</label>
+        <link refid="class_budget_execution_1_1_budget_tools"/>
+        <childnode refid="51" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="51">
+        <label>Syncfusion::Windows::Forms::MetroForm</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="54">
+        <label>Windows</label>
+      </node>
+      <node id="55">
+        <label>ExpandCollapsePanel</label>
+      </node>
+      <node id="52">
+        <label>BudgetExecution.BudgetTools</label>
+        <link refid="class_budget_execution_1_1_budget_tools"/>
+        <childnode refid="53" relation="public-inheritance">
+        </childnode>
+        <childnode refid="54" relation="usage">
+          <edgelabel>splitContainerAdv1</edgelabel>
+        </childnode>
+        <childnode refid="55" relation="usage">
+          <edgelabel>expandCollapsePanel1</edgelabel>
+        </childnode>
+        <childnode refid="56" relation="usage">
+          <edgelabel>components</edgelabel>
+        </childnode>
+      </node>
+      <node id="53">
+        <label>Syncfusion::Windows::Forms::MetroForm</label>
+      </node>
+      <node id="56">
+        <label>System</label>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/BudgetTools.cs" line="10" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/BudgetTools.cs" bodystart="9" bodyend="23"/>
+    <listofallmembers>
+      <member refid="class_budget_execution_1_1_budget_tools_1acf7b1232c5e7ffa9236c4bffdd97bb19" prot="public" virt="non-virtual"><scope>BudgetExecution::BudgetTools</scope><name>BudgetTools</name></member>
+      <member refid="class_budget_execution_1_1_budget_tools_1a752b913f2ffbc77cf30e50b1d64c7cf6" prot="private" virt="non-virtual"><scope>BudgetExecution::BudgetTools</scope><name>BudgetTools_Load</name></member>
+      <member refid="class_budget_execution_1_1_budget_tools_1a66e2439d9ce3e0036d6eaf7df4f4628d" prot="private" virt="non-virtual"><scope>BudgetExecution::BudgetTools</scope><name>components</name></member>
+      <member refid="class_budget_execution_1_1_budget_tools_1a501029cc34ac565d3765286daf0b103a" prot="protected" virt="non-virtual"><scope>BudgetExecution::BudgetTools</scope><name>Dispose</name></member>
+      <member refid="class_budget_execution_1_1_budget_tools_1a2ecf1900eae35ebcfb3f96aabff0ce91" prot="private" virt="non-virtual"><scope>BudgetExecution::BudgetTools</scope><name>expandCollapsePanel1</name></member>
+      <member refid="class_budget_execution_1_1_budget_tools_1a3ae6fde7a5322113a4a23a21e05e36b7" prot="private" virt="non-virtual"><scope>BudgetExecution::BudgetTools</scope><name>InitializeComponent</name></member>
+      <member refid="class_budget_execution_1_1_budget_tools_1ad7f57bac15a6187ac49b136824d43e25" prot="private" virt="non-virtual"><scope>BudgetExecution::BudgetTools</scope><name>splitContainerAdv1</name></member>
+      <member refid="class_budget_execution_1_1_budget_tools_1aa3abbe42de06c95b6ef08d1095696630" prot="private" virt="non-virtual"><scope>BudgetExecution::BudgetTools</scope><name>TabControlAdv1_SelectedIndexChanged</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

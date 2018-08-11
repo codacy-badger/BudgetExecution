@@ -1,0 +1,190 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_budget_execution_1_1_appropriation_selector" kind="class" prot="public">
+    <compoundname>BudgetExecution::AppropriationSelector</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MetroForm</basecompoundref>
+    <basecompoundref prot="public" virt="non-virtual">MetroForm</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_budget_execution_1_1_appropriation_selector_1ac3b9f21b45c697ac82a27600afc34421" prot="private" static="no" mutable="no">
+        <type>System.ComponentModel.IContainer</type>
+        <definition>System.ComponentModel.IContainer BudgetExecution.AppropriationSelector.components</definition>
+        <argsstring></argsstring>
+        <name>components</name>
+        <initializer>= null</initializer>
+        <briefdescription>
+<para>Required designer variable. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AppropriationSelector.Designer.cs" line="12" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AppropriationSelector.Designer.cs" bodystart="12" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_appropriation_selector_1a72ada04abb25c974cddf7c9ff9662bc4" compoundref="_appropriation_selector_8_designer_8cs" startline="18" endline="25">BudgetExecution.AppropriationSelector.Dispose</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_appropriation_selector_1ae1cd086a909d3a716bbe67b79dbc4e49" prot="private" static="no" mutable="no">
+        <type>Syncfusion.Windows.Forms.Tools.Carousel</type>
+        <definition>Syncfusion.Windows.Forms.Tools.Carousel BudgetExecution.AppropriationSelector.AppropriationCarousel</definition>
+        <argsstring></argsstring>
+        <name>AppropriationCarousel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AppropriationSelector.Designer.cs" line="87" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AppropriationSelector.Designer.cs" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_budget_execution_1_1_appropriation_selector_1a4d0334723864f5d36861a8ed09f03ef4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>BudgetExecution.AppropriationSelector.AppropriationSelector</definition>
+        <argsstring>()</argsstring>
+        <name>AppropriationSelector</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AppropriationSelector.cs" line="16" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AppropriationSelector.cs" bodystart="16" bodyend="21"/>
+        <references refid="class_budget_execution_1_1_appropriation_selector_1aa52d532b2b4bfbb005227f9ba448c9c9" compoundref="_appropriation_selector_8cs" startline="23" endline="33">BudgetExecution.AppropriationSelector.AppropriationCarousel_OnImageSelected</references>
+        <references refid="class_budget_execution_1_1_appropriation_selector_1a43777ab67c33c7b366926a823f958644" compoundref="_appropriation_selector_8cs" startline="35" endline="53">BudgetExecution.AppropriationSelector.GetAppropriationCarouselImageList</references>
+        <references refid="class_budget_execution_1_1_appropriation_selector_1aa978aaf81f76fdb3f11aef5cb3d56abd" compoundref="_appropriation_selector_8_designer_8cs" startline="33" endline="83">BudgetExecution.AppropriationSelector.InitializeComponent</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_budget_execution_1_1_appropriation_selector_1aa52d532b2b4bfbb005227f9ba448c9c9" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BudgetExecution.AppropriationSelector.AppropriationCarousel_OnImageSelected</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>AppropriationCarousel_OnImageSelected</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AppropriationSelector.cs" line="23" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AppropriationSelector.cs" bodystart="23" bodyend="33"/>
+        <references refid="class_budget_execution_1_1_info_1a4432c11999b272c2bec6cb5bb9e3f39e" compoundref="_info_8cs" startline="26">BudgetExecution.Info.AppropriationImages</references>
+        <referencedby refid="class_budget_execution_1_1_appropriation_selector_1a4d0334723864f5d36861a8ed09f03ef4" compoundref="_appropriation_selector_8cs" startline="16" endline="21">BudgetExecution.AppropriationSelector.AppropriationSelector</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_appropriation_selector_1a43777ab67c33c7b366926a823f958644" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BudgetExecution.AppropriationSelector.GetAppropriationCarouselImageList</definition>
+        <argsstring>()</argsstring>
+        <name>GetAppropriationCarouselImageList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AppropriationSelector.cs" line="35" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AppropriationSelector.cs" bodystart="35" bodyend="53"/>
+        <referencedby refid="class_budget_execution_1_1_appropriation_selector_1a4d0334723864f5d36861a8ed09f03ef4" compoundref="_appropriation_selector_8cs" startline="16" endline="21">BudgetExecution.AppropriationSelector.AppropriationSelector</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_appropriation_selector_1aa978aaf81f76fdb3f11aef5cb3d56abd" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BudgetExecution.AppropriationSelector.InitializeComponent</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeComponent</name>
+        <briefdescription>
+<para>Required method for Designer support - do not modify the contents of this method with the code editor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AppropriationSelector.Designer.cs" line="33" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AppropriationSelector.Designer.cs" bodystart="33" bodyend="83"/>
+        <references refid="namespace_budget_execution_1afa69cdcc242b50644155cb4adf244d32a800618943025315f869e4e1f09471012">BudgetExecution.F</references>
+        <referencedby refid="class_budget_execution_1_1_appropriation_selector_1a4d0334723864f5d36861a8ed09f03ef4" compoundref="_appropriation_selector_8cs" startline="16" endline="21">BudgetExecution.AppropriationSelector.AppropriationSelector</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_budget_execution_1_1_appropriation_selector_1a72ada04abb25c974cddf7c9ff9662bc4" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void BudgetExecution.AppropriationSelector.Dispose</definition>
+        <argsstring>(bool disposing)</argsstring>
+        <name>Dispose</name>
+        <param>
+          <type>bool</type>
+          <declname>disposing</declname>
+        </param>
+        <briefdescription>
+<para>Clean up any resources being used. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>disposing</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true if managed resources should be disposed; otherwise, false.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AppropriationSelector.Designer.cs" line="18" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AppropriationSelector.Designer.cs" bodystart="18" bodyend="25"/>
+        <references refid="class_budget_execution_1_1_appropriation_selector_1ac3b9f21b45c697ac82a27600afc34421" compoundref="_appropriation_selector_8_designer_8cs" startline="12">BudgetExecution.AppropriationSelector.components</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="30">
+        <label>MetroForm</label>
+      </node>
+      <node id="29">
+        <label>BudgetExecution.AppropriationSelector</label>
+        <link refid="class_budget_execution_1_1_appropriation_selector"/>
+        <childnode refid="30" relation="public-inheritance">
+        </childnode>
+        <childnode refid="30" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="32">
+        <label>MetroForm</label>
+      </node>
+      <node id="33">
+        <label>Windows</label>
+      </node>
+      <node id="34">
+        <label>System</label>
+      </node>
+      <node id="31">
+        <label>BudgetExecution.AppropriationSelector</label>
+        <link refid="class_budget_execution_1_1_appropriation_selector"/>
+        <childnode refid="32" relation="public-inheritance">
+        </childnode>
+        <childnode refid="32" relation="public-inheritance">
+        </childnode>
+        <childnode refid="33" relation="usage">
+          <edgelabel>AppropriationCarousel</edgelabel>
+        </childnode>
+        <childnode refid="34" relation="usage">
+          <edgelabel>components</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AppropriationSelector.cs" line="15" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/AppropriationSelector.cs" bodystart="14" bodyend="54"/>
+    <listofallmembers>
+      <member refid="class_budget_execution_1_1_appropriation_selector_1ae1cd086a909d3a716bbe67b79dbc4e49" prot="private" virt="non-virtual"><scope>BudgetExecution::AppropriationSelector</scope><name>AppropriationCarousel</name></member>
+      <member refid="class_budget_execution_1_1_appropriation_selector_1aa52d532b2b4bfbb005227f9ba448c9c9" prot="private" virt="non-virtual"><scope>BudgetExecution::AppropriationSelector</scope><name>AppropriationCarousel_OnImageSelected</name></member>
+      <member refid="class_budget_execution_1_1_appropriation_selector_1a4d0334723864f5d36861a8ed09f03ef4" prot="public" virt="non-virtual"><scope>BudgetExecution::AppropriationSelector</scope><name>AppropriationSelector</name></member>
+      <member refid="class_budget_execution_1_1_appropriation_selector_1ac3b9f21b45c697ac82a27600afc34421" prot="private" virt="non-virtual"><scope>BudgetExecution::AppropriationSelector</scope><name>components</name></member>
+      <member refid="class_budget_execution_1_1_appropriation_selector_1a72ada04abb25c974cddf7c9ff9662bc4" prot="protected" virt="non-virtual"><scope>BudgetExecution::AppropriationSelector</scope><name>Dispose</name></member>
+      <member refid="class_budget_execution_1_1_appropriation_selector_1a43777ab67c33c7b366926a823f958644" prot="private" virt="non-virtual"><scope>BudgetExecution::AppropriationSelector</scope><name>GetAppropriationCarouselImageList</name></member>
+      <member refid="class_budget_execution_1_1_appropriation_selector_1aa978aaf81f76fdb3f11aef5cb3d56abd" prot="private" virt="non-virtual"><scope>BudgetExecution::AppropriationSelector</scope><name>InitializeComponent</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

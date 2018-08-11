@@ -1,0 +1,233 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_budget_execution_1_1_message" kind="class" prot="public">
+    <compoundname>BudgetExecution::Message</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MetroForm</basecompoundref>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_budget_execution_1_1_message_1a034401e613970c94cbdf7921cbe46ae8" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>string</type>
+        <definition>string BudgetExecution.Message.MessageText</definition>
+        <argsstring></argsstring>
+        <name>MessageText</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Message.cs" line="25" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Message.cs" bodystart="25" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_message_1a215754a769de3f951036828be6c65c16" compoundref="_message_8cs" startline="17" endline="22">BudgetExecution.Message.Message</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_budget_execution_1_1_message_1a9eb806cbf54bce5cacb60040a3b8320e" prot="private" static="no" mutable="no">
+        <type>System.ComponentModel.IContainer</type>
+        <definition>System.ComponentModel.IContainer BudgetExecution.Message.components</definition>
+        <argsstring></argsstring>
+        <name>components</name>
+        <initializer>= null</initializer>
+        <briefdescription>
+<para>Required designer variable. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Message.Designer.cs" line="15" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Message.Designer.cs" bodystart="15" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_message_1a173ac3b47ed3b6526d2fe42e8608f592" compoundref="_message_8_designer_8cs" startline="21" endline="28">BudgetExecution.Message.Dispose</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_message_1aa145f8275d225f9df3b1ad2d78454db0" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.RichTextBox</type>
+        <definition>System.Windows.Forms.RichTextBox BudgetExecution.Message.Info</definition>
+        <argsstring></argsstring>
+        <name>Info</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Message.Designer.cs" line="133" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Message.Designer.cs" bodystart="133" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_message_1adbb45cfb60a895d325e65bd36e2d3f1d" prot="private" static="no" mutable="no">
+        <type>MetroSet_UI.Controls.MetroSetButton</type>
+        <definition>MetroSet_UI.Controls.MetroSetButton BudgetExecution.Message.OkButton</definition>
+        <argsstring></argsstring>
+        <name>OkButton</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Message.Designer.cs" line="134" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Message.Designer.cs" bodystart="134" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_message_1a07e4551afe2f3b05e90e18eb32b8b89b" prot="private" static="no" mutable="no">
+        <type>MetroSet_UI.Controls.MetroSetPanel</type>
+        <definition>MetroSet_UI.Controls.MetroSetPanel BudgetExecution.Message.metroSetPanel1</definition>
+        <argsstring></argsstring>
+        <name>metroSetPanel1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Message.Designer.cs" line="135" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Message.Designer.cs" bodystart="135" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_budget_execution_1_1_message_1afd36e44f301af3cbccd192243d53f68f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>BudgetExecution.Message.Message</definition>
+        <argsstring>()</argsstring>
+        <name>Message</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Message.cs" line="12" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Message.cs" bodystart="12" bodyend="15"/>
+        <references refid="class_budget_execution_1_1_message_1a78c645cf403cd2354b3dc5c1c63cef0d" compoundref="_message_8_designer_8cs" startline="36" endline="129">BudgetExecution.Message.InitializeComponent</references>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_message_1a215754a769de3f951036828be6c65c16" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>BudgetExecution.Message.Message</definition>
+        <argsstring>(string message)</argsstring>
+        <name>Message</name>
+        <param>
+          <type>string</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Message.cs" line="17" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Message.cs" bodystart="17" bodyend="22"/>
+        <references refid="class_budget_execution_1_1_message_1a78c645cf403cd2354b3dc5c1c63cef0d" compoundref="_message_8_designer_8cs" startline="36" endline="129">BudgetExecution.Message.InitializeComponent</references>
+        <references refid="class_budget_execution_1_1_message_1a034401e613970c94cbdf7921cbe46ae8" compoundref="_message_8cs" startline="25">BudgetExecution.Message.MessageText</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_budget_execution_1_1_message_1a3a1d628413fb45d4dc8b68cb03180647" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BudgetExecution.Message.OkButton_OnClick</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>OkButton_OnClick</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Message.cs" line="28" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Message.cs" bodystart="28" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_message_1a78c645cf403cd2354b3dc5c1c63cef0d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BudgetExecution.Message.InitializeComponent</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeComponent</name>
+        <briefdescription>
+<para>Required method for Designer support - do not modify the contents of this method with the code editor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Message.Designer.cs" line="36" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Message.Designer.cs" bodystart="36" bodyend="129"/>
+        <references refid="namespace_budget_execution_1afa69cdcc242b50644155cb4adf244d32a800618943025315f869e4e1f09471012">BudgetExecution.F</references>
+        <referencedby refid="class_budget_execution_1_1_message_1afd36e44f301af3cbccd192243d53f68f" compoundref="_message_8cs" startline="12" endline="15">BudgetExecution.Message.Message</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_budget_execution_1_1_message_1a173ac3b47ed3b6526d2fe42e8608f592" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void BudgetExecution.Message.Dispose</definition>
+        <argsstring>(bool disposing)</argsstring>
+        <name>Dispose</name>
+        <param>
+          <type>bool</type>
+          <declname>disposing</declname>
+        </param>
+        <briefdescription>
+<para>Clean up any resources being used. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>disposing</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true if managed resources should be disposed; otherwise, false.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Message.Designer.cs" line="21" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Message.Designer.cs" bodystart="21" bodyend="28"/>
+        <references refid="class_budget_execution_1_1_message_1a9eb806cbf54bce5cacb60040a3b8320e" compoundref="_message_8_designer_8cs" startline="15">BudgetExecution.Message.components</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="270">
+        <label>MetroForm</label>
+      </node>
+      <node id="269">
+        <label>BudgetExecution.Message</label>
+        <link refid="class_budget_execution_1_1_message"/>
+        <childnode refid="270" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="272">
+        <label>MetroForm</label>
+      </node>
+      <node id="273">
+        <label>Controls</label>
+      </node>
+      <node id="274">
+        <label>System</label>
+      </node>
+      <node id="271">
+        <label>BudgetExecution.Message</label>
+        <link refid="class_budget_execution_1_1_message"/>
+        <childnode refid="272" relation="public-inheritance">
+        </childnode>
+        <childnode refid="273" relation="usage">
+          <edgelabel>OkButton</edgelabel>
+          <edgelabel>metroSetPanel1</edgelabel>
+        </childnode>
+        <childnode refid="274" relation="usage">
+          <edgelabel>components</edgelabel>
+          <edgelabel>Info</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Message.cs" line="11" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Message.cs" bodystart="10" bodyend="33"/>
+    <listofallmembers>
+      <member refid="class_budget_execution_1_1_message_1a9eb806cbf54bce5cacb60040a3b8320e" prot="private" virt="non-virtual"><scope>BudgetExecution::Message</scope><name>components</name></member>
+      <member refid="class_budget_execution_1_1_message_1a173ac3b47ed3b6526d2fe42e8608f592" prot="protected" virt="non-virtual"><scope>BudgetExecution::Message</scope><name>Dispose</name></member>
+      <member refid="class_budget_execution_1_1_message_1aa145f8275d225f9df3b1ad2d78454db0" prot="private" virt="non-virtual"><scope>BudgetExecution::Message</scope><name>Info</name></member>
+      <member refid="class_budget_execution_1_1_message_1a78c645cf403cd2354b3dc5c1c63cef0d" prot="private" virt="non-virtual"><scope>BudgetExecution::Message</scope><name>InitializeComponent</name></member>
+      <member refid="class_budget_execution_1_1_message_1afd36e44f301af3cbccd192243d53f68f" prot="public" virt="non-virtual"><scope>BudgetExecution::Message</scope><name>Message</name></member>
+      <member refid="class_budget_execution_1_1_message_1a215754a769de3f951036828be6c65c16" prot="public" virt="non-virtual"><scope>BudgetExecution::Message</scope><name>Message</name></member>
+      <member refid="class_budget_execution_1_1_message_1a034401e613970c94cbdf7921cbe46ae8" prot="public" virt="non-virtual"><scope>BudgetExecution::Message</scope><name>MessageText</name></member>
+      <member refid="class_budget_execution_1_1_message_1a07e4551afe2f3b05e90e18eb32b8b89b" prot="private" virt="non-virtual"><scope>BudgetExecution::Message</scope><name>metroSetPanel1</name></member>
+      <member refid="class_budget_execution_1_1_message_1adbb45cfb60a895d325e65bd36e2d3f1d" prot="private" virt="non-virtual"><scope>BudgetExecution::Message</scope><name>OkButton</name></member>
+      <member refid="class_budget_execution_1_1_message_1a3a1d628413fb45d4dc8b68cb03180647" prot="private" virt="non-virtual"><scope>BudgetExecution::Message</scope><name>OkButton_OnClick</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,808 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_budget_execution_1_1_excel_form" kind="class" prot="public">
+    <compoundname>BudgetExecution::ExcelForm</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MetroForm</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_budget_execution_1_1_excel_form_1ad78c1cf5e1e3bbe3c1bf843ca3a43dc6" prot="private" static="no" mutable="no">
+        <type>System.ComponentModel.IContainer</type>
+        <definition>System.ComponentModel.IContainer BudgetExecution.ExcelForm.components</definition>
+        <argsstring></argsstring>
+        <name>components</name>
+        <initializer>= null</initializer>
+        <briefdescription>
+<para>Required designer variable. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelForm.Designer.cs" line="15" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelForm.Designer.cs" bodystart="15" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_excel_form_1a8f31844759327216c0ec7cce82e210a9" compoundref="_excel_form_8_designer_8cs" startline="21" endline="28">BudgetExecution.ExcelForm.Dispose</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_excel_form_1a845dc8ff3b138828651d191a430ceaff" prot="private" static="no" mutable="no">
+        <type>Syncfusion.Windows.Forms.Tools.ToolStripTabItem</type>
+        <definition>Syncfusion.Windows.Forms.Tools.ToolStripTabItem BudgetExecution.ExcelForm.toolStripTabItem1</definition>
+        <argsstring></argsstring>
+        <name>toolStripTabItem1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelForm.Designer.cs" line="651" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelForm.Designer.cs" bodystart="651" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_excel_form_1aa1e1c317e21910c692e5165ec6ab3ca8" prot="private" static="no" mutable="no">
+        <type>Syncfusion.Windows.Forms.Tools.ToolStripEx</type>
+        <definition>Syncfusion.Windows.Forms.Tools.ToolStripEx BudgetExecution.ExcelForm.toolStripEx1</definition>
+        <argsstring></argsstring>
+        <name>toolStripEx1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelForm.Designer.cs" line="652" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelForm.Designer.cs" bodystart="652" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_excel_form_1a8f60b1f58b4927b082283a51b04b9701" prot="private" static="no" mutable="no">
+        <type>Syncfusion.Windows.Forms.Tools.ToolStripTabItem</type>
+        <definition>Syncfusion.Windows.Forms.Tools.ToolStripTabItem BudgetExecution.ExcelForm.toolStripTabItem2</definition>
+        <argsstring></argsstring>
+        <name>toolStripTabItem2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelForm.Designer.cs" line="653" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelForm.Designer.cs" bodystart="653" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_excel_form_1ae1fcd931a705ada2850bbc49ab715cf8" prot="private" static="no" mutable="no">
+        <type>Syncfusion.Windows.Forms.Tools.ToolStripEx</type>
+        <definition>Syncfusion.Windows.Forms.Tools.ToolStripEx BudgetExecution.ExcelForm.toolStripEx2</definition>
+        <argsstring></argsstring>
+        <name>toolStripEx2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelForm.Designer.cs" line="654" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelForm.Designer.cs" bodystart="654" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_excel_form_1ad3ec2b6a2f9e281d1eeb0692502c1825" prot="private" static="no" mutable="no">
+        <type>Syncfusion.Windows.Forms.Spreadsheet.Spreadsheet</type>
+        <definition>Syncfusion.Windows.Forms.Spreadsheet.Spreadsheet BudgetExecution.ExcelForm.spreadsheet1</definition>
+        <argsstring></argsstring>
+        <name>spreadsheet1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelForm.Designer.cs" line="655" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelForm.Designer.cs" bodystart="655" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_excel_form_1a47be429c27e9c24ab193cb705596f73d" prot="private" static="no" mutable="no">
+        <type>Syncfusion.Windows.Forms.Spreadsheet.SpreadsheetRibbon</type>
+        <definition>Syncfusion.Windows.Forms.Spreadsheet.SpreadsheetRibbon BudgetExecution.ExcelForm.spreadsheetRibbon1</definition>
+        <argsstring></argsstring>
+        <name>spreadsheetRibbon1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelForm.Designer.cs" line="656" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelForm.Designer.cs" bodystart="656" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_excel_form_1adda39ec97c1cff81e598846f06ccb7b9" compoundref="_excel_form_8_designer_8cs" startline="36" endline="648">BudgetExecution.ExcelForm.InitializeComponent</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_excel_form_1a5a6d98e3872fbb225ef98065e4cc9f60" prot="private" static="no" mutable="no">
+        <type>MetroSet_UI.Controls.MetroSetPanel</type>
+        <definition>MetroSet_UI.Controls.MetroSetPanel BudgetExecution.ExcelForm.metroSetPanel1</definition>
+        <argsstring></argsstring>
+        <name>metroSetPanel1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelForm.Designer.cs" line="657" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelForm.Designer.cs" bodystart="657" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_excel_form_1a831cbbeec2b92a836410e004bba8328d" prot="private" static="no" mutable="no">
+        <type>MetroSet_UI.Controls.MetroSetListBox</type>
+        <definition>MetroSet_UI.Controls.MetroSetListBox BudgetExecution.ExcelForm.metroSetListBox1</definition>
+        <argsstring></argsstring>
+        <name>metroSetListBox1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelForm.Designer.cs" line="658" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelForm.Designer.cs" bodystart="658" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_excel_form_1a7f266180a7b78ac2044cfdbd9c917a93" prot="private" static="no" mutable="no">
+        <type>MetroSet_UI.Controls.MetroSetListBox</type>
+        <definition>MetroSet_UI.Controls.MetroSetListBox BudgetExecution.ExcelForm.metroSetListBox2</definition>
+        <argsstring></argsstring>
+        <name>metroSetListBox2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelForm.Designer.cs" line="659" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelForm.Designer.cs" bodystart="659" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_excel_form_1a2638fa770350061c159a9c5283b18445" prot="private" static="no" mutable="no">
+        <type>MetroSet_UI.Controls.MetroSetComboBox</type>
+        <definition>MetroSet_UI.Controls.MetroSetComboBox BudgetExecution.ExcelForm.metroSetComboBox1</definition>
+        <argsstring></argsstring>
+        <name>metroSetComboBox1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelForm.Designer.cs" line="660" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelForm.Designer.cs" bodystart="660" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_excel_form_1a5720392abdaf30a6f1e507eec3c488f8" prot="private" static="no" mutable="no">
+        <type>MetroSet_UI.Controls.MetroSetComboBox</type>
+        <definition>MetroSet_UI.Controls.MetroSetComboBox BudgetExecution.ExcelForm.metroSetComboBox2</definition>
+        <argsstring></argsstring>
+        <name>metroSetComboBox2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelForm.Designer.cs" line="661" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelForm.Designer.cs" bodystart="661" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_excel_form_1acd6ec34103c262719aa9d7a7029dd394" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.BindingNavigator</type>
+        <definition>System.Windows.Forms.BindingNavigator BudgetExecution.ExcelForm.Navigator</definition>
+        <argsstring></argsstring>
+        <name>Navigator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelForm.Designer.cs" line="662" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelForm.Designer.cs" bodystart="662" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_excel_form_1adda39ec97c1cff81e598846f06ccb7b9" compoundref="_excel_form_8_designer_8cs" startline="36" endline="648">BudgetExecution.ExcelForm.InitializeComponent</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_excel_form_1aa479acd79c52e0e306ef704eb0cd9da9" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripLabel</type>
+        <definition>System.Windows.Forms.ToolStripLabel BudgetExecution.ExcelForm.toolStripLabel2</definition>
+        <argsstring></argsstring>
+        <name>toolStripLabel2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelForm.Designer.cs" line="663" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelForm.Designer.cs" bodystart="663" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_excel_form_1a2434e674f75b1012f9dde03176254f33" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripSeparator</type>
+        <definition>System.Windows.Forms.ToolStripSeparator BudgetExecution.ExcelForm.toolStripSeparator3</definition>
+        <argsstring></argsstring>
+        <name>toolStripSeparator3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelForm.Designer.cs" line="664" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelForm.Designer.cs" bodystart="664" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_excel_form_1a8fd23d36a97701731c249465660cb7c8" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripButton</type>
+        <definition>System.Windows.Forms.ToolStripButton BudgetExecution.ExcelForm.toolStripButton10</definition>
+        <argsstring></argsstring>
+        <name>toolStripButton10</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelForm.Designer.cs" line="665" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelForm.Designer.cs" bodystart="665" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_excel_form_1ac1281c181beb92ef87f441272cfd92e8" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripSeparator</type>
+        <definition>System.Windows.Forms.ToolStripSeparator BudgetExecution.ExcelForm.toolStripSeparator10</definition>
+        <argsstring></argsstring>
+        <name>toolStripSeparator10</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelForm.Designer.cs" line="666" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelForm.Designer.cs" bodystart="666" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_excel_form_1adfbac2a1c3cc5e2982bc11f149e9e44e" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripTextBox</type>
+        <definition>System.Windows.Forms.ToolStripTextBox BudgetExecution.ExcelForm.toolStripTextBox2</definition>
+        <argsstring></argsstring>
+        <name>toolStripTextBox2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelForm.Designer.cs" line="667" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelForm.Designer.cs" bodystart="667" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_excel_form_1a5e45f99482660aaa0c81a07015b00da8" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripSeparator</type>
+        <definition>System.Windows.Forms.ToolStripSeparator BudgetExecution.ExcelForm.toolStripSeparator11</definition>
+        <argsstring></argsstring>
+        <name>toolStripSeparator11</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelForm.Designer.cs" line="668" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelForm.Designer.cs" bodystart="668" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_excel_form_1a6642c253314668e246b45bbc38429219" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripButton</type>
+        <definition>System.Windows.Forms.ToolStripButton BudgetExecution.ExcelForm.toolStripButton11</definition>
+        <argsstring></argsstring>
+        <name>toolStripButton11</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelForm.Designer.cs" line="669" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelForm.Designer.cs" bodystart="669" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_excel_form_1a5c21379b1c5961d436b9b7f5a4ff86f3" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripSeparator</type>
+        <definition>System.Windows.Forms.ToolStripSeparator BudgetExecution.ExcelForm.toolStripSeparator13</definition>
+        <argsstring></argsstring>
+        <name>toolStripSeparator13</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelForm.Designer.cs" line="670" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelForm.Designer.cs" bodystart="670" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_excel_form_1a6d766c2cee8e630046ca67f12045bce6" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripButton</type>
+        <definition>System.Windows.Forms.ToolStripButton BudgetExecution.ExcelForm.CopyButton</definition>
+        <argsstring></argsstring>
+        <name>CopyButton</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelForm.Designer.cs" line="671" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelForm.Designer.cs" bodystart="671" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_excel_form_1a29482aa966e080d9ab40dc4670cb9ca7" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripSeparator</type>
+        <definition>System.Windows.Forms.ToolStripSeparator BudgetExecution.ExcelForm.toolStripSeparator15</definition>
+        <argsstring></argsstring>
+        <name>toolStripSeparator15</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelForm.Designer.cs" line="672" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelForm.Designer.cs" bodystart="672" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_excel_form_1ab94abb3ff1821ae4b6d0b77fc5b0bd36" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripButton</type>
+        <definition>System.Windows.Forms.ToolStripButton BudgetExecution.ExcelForm.toolStripButton13</definition>
+        <argsstring></argsstring>
+        <name>toolStripButton13</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelForm.Designer.cs" line="673" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelForm.Designer.cs" bodystart="673" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_excel_form_1a0ad0965d1db95892dd8ae7f9b6086995" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripSeparator</type>
+        <definition>System.Windows.Forms.ToolStripSeparator BudgetExecution.ExcelForm.toolStripSeparator18</definition>
+        <argsstring></argsstring>
+        <name>toolStripSeparator18</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelForm.Designer.cs" line="674" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelForm.Designer.cs" bodystart="674" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_excel_form_1a8f58c8cfd899f617d301d2fd7b3c9ee1" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripButton</type>
+        <definition>System.Windows.Forms.ToolStripButton BudgetExecution.ExcelForm.toolStripButton12</definition>
+        <argsstring></argsstring>
+        <name>toolStripButton12</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelForm.Designer.cs" line="675" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelForm.Designer.cs" bodystart="675" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_excel_form_1a13498af457e0fcdbdc082b91bbccfa4a" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripSeparator</type>
+        <definition>System.Windows.Forms.ToolStripSeparator BudgetExecution.ExcelForm.toolStripSeparator16</definition>
+        <argsstring></argsstring>
+        <name>toolStripSeparator16</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelForm.Designer.cs" line="676" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelForm.Designer.cs" bodystart="676" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_excel_form_1a29df42b48ea9daf52931e4ccd1c37996" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripButton</type>
+        <definition>System.Windows.Forms.ToolStripButton BudgetExecution.ExcelForm.ResetButton</definition>
+        <argsstring></argsstring>
+        <name>ResetButton</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelForm.Designer.cs" line="677" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelForm.Designer.cs" bodystart="677" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_excel_form_1aa616f41f6ea1f2a8acd65184f77b8641" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripSeparator</type>
+        <definition>System.Windows.Forms.ToolStripSeparator BudgetExecution.ExcelForm.toolStripSeparator14</definition>
+        <argsstring></argsstring>
+        <name>toolStripSeparator14</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelForm.Designer.cs" line="678" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelForm.Designer.cs" bodystart="678" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_excel_form_1a72d946bb6c41a723e9b2a402cc4a9434" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripButton</type>
+        <definition>System.Windows.Forms.ToolStripButton BudgetExecution.ExcelForm.AddButton</definition>
+        <argsstring></argsstring>
+        <name>AddButton</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelForm.Designer.cs" line="679" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelForm.Designer.cs" bodystart="679" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_excel_form_1a0004d8567c8f36e94c632da62c5f8484" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripSeparator</type>
+        <definition>System.Windows.Forms.ToolStripSeparator BudgetExecution.ExcelForm.toolStripSeparator19</definition>
+        <argsstring></argsstring>
+        <name>toolStripSeparator19</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelForm.Designer.cs" line="680" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelForm.Designer.cs" bodystart="680" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_excel_form_1a64453a4435812eafea7f165959c0c2cf" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripButton</type>
+        <definition>System.Windows.Forms.ToolStripButton BudgetExecution.ExcelForm.CalculatorButton</definition>
+        <argsstring></argsstring>
+        <name>CalculatorButton</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelForm.Designer.cs" line="681" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelForm.Designer.cs" bodystart="681" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_excel_form_1a46b3122fd75f8f966b00094706cbb4bc" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripSeparator</type>
+        <definition>System.Windows.Forms.ToolStripSeparator BudgetExecution.ExcelForm.GridRefreshButton</definition>
+        <argsstring></argsstring>
+        <name>GridRefreshButton</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelForm.Designer.cs" line="682" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelForm.Designer.cs" bodystart="682" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_excel_form_1a36e4282e46612f346302f468d6a0e7cf" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripButton</type>
+        <definition>System.Windows.Forms.ToolStripButton BudgetExecution.ExcelForm.toolStripButton9</definition>
+        <argsstring></argsstring>
+        <name>toolStripButton9</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelForm.Designer.cs" line="683" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelForm.Designer.cs" bodystart="683" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_excel_form_1ab24434d7b0b81d9eb68bbfa15446ee2d" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripSeparator</type>
+        <definition>System.Windows.Forms.ToolStripSeparator BudgetExecution.ExcelForm.toolStripSeparator12</definition>
+        <argsstring></argsstring>
+        <name>toolStripSeparator12</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelForm.Designer.cs" line="684" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelForm.Designer.cs" bodystart="684" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_excel_form_1ab97d2f8a0cac48fa455d3e11de560a64" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripButton</type>
+        <definition>System.Windows.Forms.ToolStripButton BudgetExecution.ExcelForm.toolStripButton14</definition>
+        <argsstring></argsstring>
+        <name>toolStripButton14</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelForm.Designer.cs" line="685" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelForm.Designer.cs" bodystart="685" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_excel_form_1a531706bf3076c22e357676ad7e95ac3b" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripSeparator</type>
+        <definition>System.Windows.Forms.ToolStripSeparator BudgetExecution.ExcelForm.toolStripSeparator17</definition>
+        <argsstring></argsstring>
+        <name>toolStripSeparator17</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelForm.Designer.cs" line="686" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelForm.Designer.cs" bodystart="686" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_excel_form_1adacc164e44fa8a4bbfbe9696a340be17" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripButton</type>
+        <definition>System.Windows.Forms.ToolStripButton BudgetExecution.ExcelForm.toolStripButton15</definition>
+        <argsstring></argsstring>
+        <name>toolStripButton15</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelForm.Designer.cs" line="687" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelForm.Designer.cs" bodystart="687" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_excel_form_1aa4e62082d19766c30fead9cd4199b6c4" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripSeparator</type>
+        <definition>System.Windows.Forms.ToolStripSeparator BudgetExecution.ExcelForm.toolStripSeparator20</definition>
+        <argsstring></argsstring>
+        <name>toolStripSeparator20</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelForm.Designer.cs" line="688" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelForm.Designer.cs" bodystart="688" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_excel_form_1a7c53f0a53027779e3e29041301facc86" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripButton</type>
+        <definition>System.Windows.Forms.ToolStripButton BudgetExecution.ExcelForm.ReprogrammingButton</definition>
+        <argsstring></argsstring>
+        <name>ReprogrammingButton</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelForm.Designer.cs" line="689" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelForm.Designer.cs" bodystart="689" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_excel_form_1a65634d9e40ab8b85a71efc3de5030947" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Panel</type>
+        <definition>System.Windows.Forms.Panel BudgetExecution.ExcelForm.panel1</definition>
+        <argsstring></argsstring>
+        <name>panel1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelForm.Designer.cs" line="690" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelForm.Designer.cs" bodystart="690" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_budget_execution_1_1_excel_form_1a6ea8904f3a77632c6996663a92372b38" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>BudgetExecution.ExcelForm.ExcelForm</definition>
+        <argsstring>()</argsstring>
+        <name>ExcelForm</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelForm.cs" line="10" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelForm.cs" bodystart="10" bodyend="13"/>
+        <references refid="class_budget_execution_1_1_excel_form_1adda39ec97c1cff81e598846f06ccb7b9" compoundref="_excel_form_8_designer_8cs" startline="36" endline="648">BudgetExecution.ExcelForm.InitializeComponent</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_budget_execution_1_1_excel_form_1ae953a129633cbb0f5a13739396ae4dc5" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BudgetExecution.ExcelForm.ExcelForm_Load</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>ExcelForm_Load</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelForm.cs" line="15" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelForm.cs" bodystart="15" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_excel_form_1a1b6c2401e662fbc233c79690a3eabdef" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BudgetExecution.ExcelForm.CalculatorButton_OnClick</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>CalculatorButton_OnClick</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelForm.cs" line="20" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelForm.cs" bodystart="20" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_excel_form_1a27fa03743cd3f2aba81c21619f6f3cfd" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BudgetExecution.ExcelForm.ExcelButton_OnClick</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>ExcelButton_OnClick</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelForm.cs" line="26" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelForm.cs" bodystart="26" bodyend="30"/>
+        <references refid="namespace_budget_execution_1aad2939654fecf4e3629282ed61ab4dd8ad78f9f874b929500da391cdde7491582">BudgetExecution.ExcelImporter</references>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_excel_form_1ac9dbc87388e751b7652b9984b7524bdb" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BudgetExecution.ExcelForm.ReprogrammingButton_OnClick</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>ReprogrammingButton_OnClick</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelForm.cs" line="32" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelForm.cs" bodystart="32" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_excel_form_1adda39ec97c1cff81e598846f06ccb7b9" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BudgetExecution.ExcelForm.InitializeComponent</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeComponent</name>
+        <briefdescription>
+<para>Required method for Designer support - do not modify the contents of this method with the code editor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelForm.Designer.cs" line="36" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelForm.Designer.cs" bodystart="36" bodyend="648"/>
+        <references refid="namespace_budget_execution_1afa69cdcc242b50644155cb4adf244d32a800618943025315f869e4e1f09471012">BudgetExecution.F</references>
+        <references refid="class_budget_execution_1_1_excel_form_1acd6ec34103c262719aa9d7a7029dd394" compoundref="_excel_form_8_designer_8cs" startline="662">BudgetExecution.ExcelForm.Navigator</references>
+        <references refid="class_budget_execution_1_1_excel_form_1a47be429c27e9c24ab193cb705596f73d" compoundref="_excel_form_8_designer_8cs" startline="656">BudgetExecution.ExcelForm.spreadsheetRibbon1</references>
+        <referencedby refid="class_budget_execution_1_1_excel_form_1a6ea8904f3a77632c6996663a92372b38" compoundref="_excel_form_8cs" startline="10" endline="13">BudgetExecution.ExcelForm.ExcelForm</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_budget_execution_1_1_excel_form_1a8f31844759327216c0ec7cce82e210a9" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void BudgetExecution.ExcelForm.Dispose</definition>
+        <argsstring>(bool disposing)</argsstring>
+        <name>Dispose</name>
+        <param>
+          <type>bool</type>
+          <declname>disposing</declname>
+        </param>
+        <briefdescription>
+<para>Clean up any resources being used. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>disposing</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true if managed resources should be disposed; otherwise, false.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelForm.Designer.cs" line="21" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelForm.Designer.cs" bodystart="21" bodyend="28"/>
+        <references refid="class_budget_execution_1_1_excel_form_1ad78c1cf5e1e3bbe3c1bf843ca3a43dc6" compoundref="_excel_form_8_designer_8cs" startline="15">BudgetExecution.ExcelForm.components</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="140">
+        <label>Syncfusion::Windows::Forms::MetroForm</label>
+      </node>
+      <node id="139">
+        <label>BudgetExecution.ExcelForm</label>
+        <link refid="class_budget_execution_1_1_excel_form"/>
+        <childnode refid="140" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="143">
+        <label>Windows</label>
+      </node>
+      <node id="144">
+        <label>Controls</label>
+      </node>
+      <node id="142">
+        <label>Syncfusion::Windows::Forms::MetroForm</label>
+      </node>
+      <node id="145">
+        <label>System</label>
+      </node>
+      <node id="141">
+        <label>BudgetExecution.ExcelForm</label>
+        <link refid="class_budget_execution_1_1_excel_form"/>
+        <childnode refid="142" relation="public-inheritance">
+        </childnode>
+        <childnode refid="143" relation="usage">
+          <edgelabel>spreadsheetRibbon1</edgelabel>
+          <edgelabel>spreadsheet1</edgelabel>
+          <edgelabel>toolStripEx1</edgelabel>
+          <edgelabel>toolStripEx2</edgelabel>
+          <edgelabel>toolStripTabItem1</edgelabel>
+          <edgelabel>toolStripTabItem2</edgelabel>
+        </childnode>
+        <childnode refid="144" relation="usage">
+          <edgelabel>metroSetComboBox2</edgelabel>
+          <edgelabel>metroSetListBox1</edgelabel>
+          <edgelabel>metroSetPanel1</edgelabel>
+          <edgelabel>metroSetListBox2</edgelabel>
+          <edgelabel>metroSetComboBox1</edgelabel>
+        </childnode>
+        <childnode refid="145" relation="usage">
+          <edgelabel>toolStripSeparator14</edgelabel>
+          <edgelabel>toolStripLabel2</edgelabel>
+          <edgelabel>Navigator</edgelabel>
+          <edgelabel>toolStripSeparator15</edgelabel>
+          <edgelabel>toolStripButton10</edgelabel>
+          <edgelabel>panel1</edgelabel>
+          <edgelabel>ResetButton</edgelabel>
+          <edgelabel>toolStripSeparator16</edgelabel>
+          <edgelabel>CopyButton</edgelabel>
+          <edgelabel>toolStripButton11</edgelabel>
+          <edgelabel>...</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelForm.cs" line="9" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelForm.cs" bodystart="8" bodyend="37"/>
+    <listofallmembers>
+      <member refid="class_budget_execution_1_1_excel_form_1a72d946bb6c41a723e9b2a402cc4a9434" prot="private" virt="non-virtual"><scope>BudgetExecution::ExcelForm</scope><name>AddButton</name></member>
+      <member refid="class_budget_execution_1_1_excel_form_1a64453a4435812eafea7f165959c0c2cf" prot="private" virt="non-virtual"><scope>BudgetExecution::ExcelForm</scope><name>CalculatorButton</name></member>
+      <member refid="class_budget_execution_1_1_excel_form_1a1b6c2401e662fbc233c79690a3eabdef" prot="private" virt="non-virtual"><scope>BudgetExecution::ExcelForm</scope><name>CalculatorButton_OnClick</name></member>
+      <member refid="class_budget_execution_1_1_excel_form_1ad78c1cf5e1e3bbe3c1bf843ca3a43dc6" prot="private" virt="non-virtual"><scope>BudgetExecution::ExcelForm</scope><name>components</name></member>
+      <member refid="class_budget_execution_1_1_excel_form_1a6d766c2cee8e630046ca67f12045bce6" prot="private" virt="non-virtual"><scope>BudgetExecution::ExcelForm</scope><name>CopyButton</name></member>
+      <member refid="class_budget_execution_1_1_excel_form_1a8f31844759327216c0ec7cce82e210a9" prot="protected" virt="non-virtual"><scope>BudgetExecution::ExcelForm</scope><name>Dispose</name></member>
+      <member refid="class_budget_execution_1_1_excel_form_1a27fa03743cd3f2aba81c21619f6f3cfd" prot="private" virt="non-virtual"><scope>BudgetExecution::ExcelForm</scope><name>ExcelButton_OnClick</name></member>
+      <member refid="class_budget_execution_1_1_excel_form_1a6ea8904f3a77632c6996663a92372b38" prot="public" virt="non-virtual"><scope>BudgetExecution::ExcelForm</scope><name>ExcelForm</name></member>
+      <member refid="class_budget_execution_1_1_excel_form_1ae953a129633cbb0f5a13739396ae4dc5" prot="private" virt="non-virtual"><scope>BudgetExecution::ExcelForm</scope><name>ExcelForm_Load</name></member>
+      <member refid="class_budget_execution_1_1_excel_form_1a46b3122fd75f8f966b00094706cbb4bc" prot="private" virt="non-virtual"><scope>BudgetExecution::ExcelForm</scope><name>GridRefreshButton</name></member>
+      <member refid="class_budget_execution_1_1_excel_form_1adda39ec97c1cff81e598846f06ccb7b9" prot="private" virt="non-virtual"><scope>BudgetExecution::ExcelForm</scope><name>InitializeComponent</name></member>
+      <member refid="class_budget_execution_1_1_excel_form_1a2638fa770350061c159a9c5283b18445" prot="private" virt="non-virtual"><scope>BudgetExecution::ExcelForm</scope><name>metroSetComboBox1</name></member>
+      <member refid="class_budget_execution_1_1_excel_form_1a5720392abdaf30a6f1e507eec3c488f8" prot="private" virt="non-virtual"><scope>BudgetExecution::ExcelForm</scope><name>metroSetComboBox2</name></member>
+      <member refid="class_budget_execution_1_1_excel_form_1a831cbbeec2b92a836410e004bba8328d" prot="private" virt="non-virtual"><scope>BudgetExecution::ExcelForm</scope><name>metroSetListBox1</name></member>
+      <member refid="class_budget_execution_1_1_excel_form_1a7f266180a7b78ac2044cfdbd9c917a93" prot="private" virt="non-virtual"><scope>BudgetExecution::ExcelForm</scope><name>metroSetListBox2</name></member>
+      <member refid="class_budget_execution_1_1_excel_form_1a5a6d98e3872fbb225ef98065e4cc9f60" prot="private" virt="non-virtual"><scope>BudgetExecution::ExcelForm</scope><name>metroSetPanel1</name></member>
+      <member refid="class_budget_execution_1_1_excel_form_1acd6ec34103c262719aa9d7a7029dd394" prot="private" virt="non-virtual"><scope>BudgetExecution::ExcelForm</scope><name>Navigator</name></member>
+      <member refid="class_budget_execution_1_1_excel_form_1a65634d9e40ab8b85a71efc3de5030947" prot="private" virt="non-virtual"><scope>BudgetExecution::ExcelForm</scope><name>panel1</name></member>
+      <member refid="class_budget_execution_1_1_excel_form_1a7c53f0a53027779e3e29041301facc86" prot="private" virt="non-virtual"><scope>BudgetExecution::ExcelForm</scope><name>ReprogrammingButton</name></member>
+      <member refid="class_budget_execution_1_1_excel_form_1ac9dbc87388e751b7652b9984b7524bdb" prot="private" virt="non-virtual"><scope>BudgetExecution::ExcelForm</scope><name>ReprogrammingButton_OnClick</name></member>
+      <member refid="class_budget_execution_1_1_excel_form_1a29df42b48ea9daf52931e4ccd1c37996" prot="private" virt="non-virtual"><scope>BudgetExecution::ExcelForm</scope><name>ResetButton</name></member>
+      <member refid="class_budget_execution_1_1_excel_form_1ad3ec2b6a2f9e281d1eeb0692502c1825" prot="private" virt="non-virtual"><scope>BudgetExecution::ExcelForm</scope><name>spreadsheet1</name></member>
+      <member refid="class_budget_execution_1_1_excel_form_1a47be429c27e9c24ab193cb705596f73d" prot="private" virt="non-virtual"><scope>BudgetExecution::ExcelForm</scope><name>spreadsheetRibbon1</name></member>
+      <member refid="class_budget_execution_1_1_excel_form_1a8fd23d36a97701731c249465660cb7c8" prot="private" virt="non-virtual"><scope>BudgetExecution::ExcelForm</scope><name>toolStripButton10</name></member>
+      <member refid="class_budget_execution_1_1_excel_form_1a6642c253314668e246b45bbc38429219" prot="private" virt="non-virtual"><scope>BudgetExecution::ExcelForm</scope><name>toolStripButton11</name></member>
+      <member refid="class_budget_execution_1_1_excel_form_1a8f58c8cfd899f617d301d2fd7b3c9ee1" prot="private" virt="non-virtual"><scope>BudgetExecution::ExcelForm</scope><name>toolStripButton12</name></member>
+      <member refid="class_budget_execution_1_1_excel_form_1ab94abb3ff1821ae4b6d0b77fc5b0bd36" prot="private" virt="non-virtual"><scope>BudgetExecution::ExcelForm</scope><name>toolStripButton13</name></member>
+      <member refid="class_budget_execution_1_1_excel_form_1ab97d2f8a0cac48fa455d3e11de560a64" prot="private" virt="non-virtual"><scope>BudgetExecution::ExcelForm</scope><name>toolStripButton14</name></member>
+      <member refid="class_budget_execution_1_1_excel_form_1adacc164e44fa8a4bbfbe9696a340be17" prot="private" virt="non-virtual"><scope>BudgetExecution::ExcelForm</scope><name>toolStripButton15</name></member>
+      <member refid="class_budget_execution_1_1_excel_form_1a36e4282e46612f346302f468d6a0e7cf" prot="private" virt="non-virtual"><scope>BudgetExecution::ExcelForm</scope><name>toolStripButton9</name></member>
+      <member refid="class_budget_execution_1_1_excel_form_1aa1e1c317e21910c692e5165ec6ab3ca8" prot="private" virt="non-virtual"><scope>BudgetExecution::ExcelForm</scope><name>toolStripEx1</name></member>
+      <member refid="class_budget_execution_1_1_excel_form_1ae1fcd931a705ada2850bbc49ab715cf8" prot="private" virt="non-virtual"><scope>BudgetExecution::ExcelForm</scope><name>toolStripEx2</name></member>
+      <member refid="class_budget_execution_1_1_excel_form_1aa479acd79c52e0e306ef704eb0cd9da9" prot="private" virt="non-virtual"><scope>BudgetExecution::ExcelForm</scope><name>toolStripLabel2</name></member>
+      <member refid="class_budget_execution_1_1_excel_form_1ac1281c181beb92ef87f441272cfd92e8" prot="private" virt="non-virtual"><scope>BudgetExecution::ExcelForm</scope><name>toolStripSeparator10</name></member>
+      <member refid="class_budget_execution_1_1_excel_form_1a5e45f99482660aaa0c81a07015b00da8" prot="private" virt="non-virtual"><scope>BudgetExecution::ExcelForm</scope><name>toolStripSeparator11</name></member>
+      <member refid="class_budget_execution_1_1_excel_form_1ab24434d7b0b81d9eb68bbfa15446ee2d" prot="private" virt="non-virtual"><scope>BudgetExecution::ExcelForm</scope><name>toolStripSeparator12</name></member>
+      <member refid="class_budget_execution_1_1_excel_form_1a5c21379b1c5961d436b9b7f5a4ff86f3" prot="private" virt="non-virtual"><scope>BudgetExecution::ExcelForm</scope><name>toolStripSeparator13</name></member>
+      <member refid="class_budget_execution_1_1_excel_form_1aa616f41f6ea1f2a8acd65184f77b8641" prot="private" virt="non-virtual"><scope>BudgetExecution::ExcelForm</scope><name>toolStripSeparator14</name></member>
+      <member refid="class_budget_execution_1_1_excel_form_1a29482aa966e080d9ab40dc4670cb9ca7" prot="private" virt="non-virtual"><scope>BudgetExecution::ExcelForm</scope><name>toolStripSeparator15</name></member>
+      <member refid="class_budget_execution_1_1_excel_form_1a13498af457e0fcdbdc082b91bbccfa4a" prot="private" virt="non-virtual"><scope>BudgetExecution::ExcelForm</scope><name>toolStripSeparator16</name></member>
+      <member refid="class_budget_execution_1_1_excel_form_1a531706bf3076c22e357676ad7e95ac3b" prot="private" virt="non-virtual"><scope>BudgetExecution::ExcelForm</scope><name>toolStripSeparator17</name></member>
+      <member refid="class_budget_execution_1_1_excel_form_1a0ad0965d1db95892dd8ae7f9b6086995" prot="private" virt="non-virtual"><scope>BudgetExecution::ExcelForm</scope><name>toolStripSeparator18</name></member>
+      <member refid="class_budget_execution_1_1_excel_form_1a0004d8567c8f36e94c632da62c5f8484" prot="private" virt="non-virtual"><scope>BudgetExecution::ExcelForm</scope><name>toolStripSeparator19</name></member>
+      <member refid="class_budget_execution_1_1_excel_form_1aa4e62082d19766c30fead9cd4199b6c4" prot="private" virt="non-virtual"><scope>BudgetExecution::ExcelForm</scope><name>toolStripSeparator20</name></member>
+      <member refid="class_budget_execution_1_1_excel_form_1a2434e674f75b1012f9dde03176254f33" prot="private" virt="non-virtual"><scope>BudgetExecution::ExcelForm</scope><name>toolStripSeparator3</name></member>
+      <member refid="class_budget_execution_1_1_excel_form_1a845dc8ff3b138828651d191a430ceaff" prot="private" virt="non-virtual"><scope>BudgetExecution::ExcelForm</scope><name>toolStripTabItem1</name></member>
+      <member refid="class_budget_execution_1_1_excel_form_1a8f60b1f58b4927b082283a51b04b9701" prot="private" virt="non-virtual"><scope>BudgetExecution::ExcelForm</scope><name>toolStripTabItem2</name></member>
+      <member refid="class_budget_execution_1_1_excel_form_1adfbac2a1c3cc5e2982bc11f149e9e44e" prot="private" virt="non-virtual"><scope>BudgetExecution::ExcelForm</scope><name>toolStripTextBox2</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

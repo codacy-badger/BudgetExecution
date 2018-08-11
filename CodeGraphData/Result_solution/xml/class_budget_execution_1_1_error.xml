@@ -1,0 +1,343 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_budget_execution_1_1_error" kind="class" prot="public">
+    <compoundname>BudgetExecution::Error</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MetroForm</basecompoundref>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_budget_execution_1_1_error_1ac89916e02fcb30fce295d16469ec87cd" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>string</type>
+        <definition>string BudgetExecution.Error.Message</definition>
+        <argsstring></argsstring>
+        <name>Message</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Error.cs" line="27" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Error.cs" bodystart="27" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_error_1af8074266a563e556ce3983d5229e9bca" compoundref="_error_8cs" startline="17" endline="24">BudgetExecution.Error.Error</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_error_1a976417b212e7b3b345b96e0e20f9e17e" prot="private" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>string</type>
+        <definition>string BudgetExecution.Error.Stack</definition>
+        <argsstring></argsstring>
+        <name>Stack</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Error.cs" line="28" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Error.cs" bodystart="28" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_error_1af8074266a563e556ce3983d5229e9bca" compoundref="_error_8cs" startline="17" endline="24">BudgetExecution.Error.Error</referencedby>
+        <referencedby refid="class_budget_execution_1_1_error_1a61b08f1ed290f553e9ff3592ed19936e" compoundref="_error_8cs" startline="37" endline="40">BudgetExecution.Error.StackButton_OnClick</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_error_1aaa24334abde8b2ae5a0e9a0a9243c6e6" prot="private" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>string</type>
+        <definition>string BudgetExecution.Error.Target</definition>
+        <argsstring></argsstring>
+        <name>Target</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Error.cs" line="29" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Error.cs" bodystart="29" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_error_1af8074266a563e556ce3983d5229e9bca" compoundref="_error_8cs" startline="17" endline="24">BudgetExecution.Error.Error</referencedby>
+        <referencedby refid="class_budget_execution_1_1_error_1a390390eb0488be06af145d3a85387b2e" compoundref="_error_8cs" startline="42" endline="45">BudgetExecution.Error.TargetButton_OnClick</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_budget_execution_1_1_error_1a137f028c5fde399cc003757523e0707d" prot="private" static="no" mutable="no">
+        <type>System.ComponentModel.IContainer</type>
+        <definition>System.ComponentModel.IContainer BudgetExecution.Error.components</definition>
+        <argsstring></argsstring>
+        <name>components</name>
+        <initializer>= null</initializer>
+        <briefdescription>
+<para>Required designer variable. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Error.Designer.cs" line="15" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Error.Designer.cs" bodystart="15" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_error_1a4d89a93b4e2ef393b6ab310b44267683" compoundref="_error_8_designer_8cs" startline="21" endline="28">BudgetExecution.Error.Dispose</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_error_1ae3e954a395babad49955cd96d7186353" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.RichTextBox</type>
+        <definition>System.Windows.Forms.RichTextBox BudgetExecution.Error.Info</definition>
+        <argsstring></argsstring>
+        <name>Info</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Error.Designer.cs" line="190" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Error.Designer.cs" bodystart="190" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_error_1aa27d1f70371c69448a2d33d9633a0c12" prot="private" static="no" mutable="no">
+        <type>MetroSet_UI.Controls.MetroSetButton</type>
+        <definition>MetroSet_UI.Controls.MetroSetButton BudgetExecution.Error.OkButton</definition>
+        <argsstring></argsstring>
+        <name>OkButton</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Error.Designer.cs" line="191" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Error.Designer.cs" bodystart="191" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_error_1a585a015d5f90b9c29be16ff5579dc0e7" prot="private" static="no" mutable="no">
+        <type>MetroSet_UI.Controls.MetroSetPanel</type>
+        <definition>MetroSet_UI.Controls.MetroSetPanel BudgetExecution.Error.metroSetPanel1</definition>
+        <argsstring></argsstring>
+        <name>metroSetPanel1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Error.Designer.cs" line="192" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Error.Designer.cs" bodystart="192" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_error_1ac154bffbe8e2f09b73c1d81d611b7154" prot="private" static="no" mutable="no">
+        <type>MetroSet_UI.Controls.MetroSetButton</type>
+        <definition>MetroSet_UI.Controls.MetroSetButton BudgetExecution.Error.StackButton</definition>
+        <argsstring></argsstring>
+        <name>StackButton</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Error.Designer.cs" line="193" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Error.Designer.cs" bodystart="193" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_error_1aabb181e0580deab3a747b8cd655697c9" prot="private" static="no" mutable="no">
+        <type>MetroSet_UI.Controls.MetroSetButton</type>
+        <definition>MetroSet_UI.Controls.MetroSetButton BudgetExecution.Error.TargetButton</definition>
+        <argsstring></argsstring>
+        <name>TargetButton</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Error.Designer.cs" line="194" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Error.Designer.cs" bodystart="194" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_budget_execution_1_1_error_1a6dcdd1c3b84b1b198c1282c707eee61f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>BudgetExecution.Error.Error</definition>
+        <argsstring>()</argsstring>
+        <name>Error</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Error.cs" line="12" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Error.cs" bodystart="12" bodyend="15"/>
+        <references refid="class_budget_execution_1_1_error_1a9050ca641e1aca5120dc6843395dfb17" compoundref="_error_8_designer_8cs" startline="36" endline="186">BudgetExecution.Error.InitializeComponent</references>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_error_1af8074266a563e556ce3983d5229e9bca" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>BudgetExecution.Error.Error</definition>
+        <argsstring>(Exception ex)</argsstring>
+        <name>Error</name>
+        <param>
+          <type>Exception</type>
+          <declname>ex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Error.cs" line="17" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Error.cs" bodystart="17" bodyend="24"/>
+        <references refid="class_budget_execution_1_1_error_1a9050ca641e1aca5120dc6843395dfb17" compoundref="_error_8_designer_8cs" startline="36" endline="186">BudgetExecution.Error.InitializeComponent</references>
+        <references refid="class_budget_execution_1_1_error_1ac89916e02fcb30fce295d16469ec87cd" compoundref="_error_8cs" startline="27">BudgetExecution.Error.Message</references>
+        <references refid="class_budget_execution_1_1_error_1a976417b212e7b3b345b96e0e20f9e17e" compoundref="_error_8cs" startline="28">BudgetExecution.Error.Stack</references>
+        <references refid="class_budget_execution_1_1_error_1aaa24334abde8b2ae5a0e9a0a9243c6e6" compoundref="_error_8cs" startline="29">BudgetExecution.Error.Target</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_budget_execution_1_1_error_1add4c38c0945497b3098a320fa839a3f5" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BudgetExecution.Error.OkButton_OnClick</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>OkButton_OnClick</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Error.cs" line="32" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Error.cs" bodystart="32" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_error_1a61b08f1ed290f553e9ff3592ed19936e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BudgetExecution.Error.StackButton_OnClick</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>StackButton_OnClick</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Error.cs" line="37" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Error.cs" bodystart="37" bodyend="40"/>
+        <references refid="class_budget_execution_1_1_error_1a976417b212e7b3b345b96e0e20f9e17e" compoundref="_error_8cs" startline="28">BudgetExecution.Error.Stack</references>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_error_1a390390eb0488be06af145d3a85387b2e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BudgetExecution.Error.TargetButton_OnClick</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>TargetButton_OnClick</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Error.cs" line="42" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Error.cs" bodystart="42" bodyend="45"/>
+        <references refid="class_budget_execution_1_1_error_1aaa24334abde8b2ae5a0e9a0a9243c6e6" compoundref="_error_8cs" startline="29">BudgetExecution.Error.Target</references>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_error_1a9050ca641e1aca5120dc6843395dfb17" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BudgetExecution.Error.InitializeComponent</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeComponent</name>
+        <briefdescription>
+<para>Required method for Designer support - do not modify the contents of this method with the code editor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Error.Designer.cs" line="36" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Error.Designer.cs" bodystart="36" bodyend="186"/>
+        <references refid="namespace_budget_execution_1afa69cdcc242b50644155cb4adf244d32a800618943025315f869e4e1f09471012">BudgetExecution.F</references>
+        <referencedby refid="class_budget_execution_1_1_error_1a6dcdd1c3b84b1b198c1282c707eee61f" compoundref="_error_8cs" startline="12" endline="15">BudgetExecution.Error.Error</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_budget_execution_1_1_error_1a4d89a93b4e2ef393b6ab310b44267683" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void BudgetExecution.Error.Dispose</definition>
+        <argsstring>(bool disposing)</argsstring>
+        <name>Dispose</name>
+        <param>
+          <type>bool</type>
+          <declname>disposing</declname>
+        </param>
+        <briefdescription>
+<para>Clean up any resources being used. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>disposing</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true if managed resources should be disposed; otherwise, false.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Error.Designer.cs" line="21" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Error.Designer.cs" bodystart="21" bodyend="28"/>
+        <references refid="class_budget_execution_1_1_error_1a137f028c5fde399cc003757523e0707d" compoundref="_error_8_designer_8cs" startline="15">BudgetExecution.Error.components</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="131">
+        <label>MetroForm</label>
+      </node>
+      <node id="130">
+        <label>BudgetExecution.Error</label>
+        <link refid="class_budget_execution_1_1_error"/>
+        <childnode refid="131" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="133">
+        <label>MetroForm</label>
+      </node>
+      <node id="134">
+        <label>Controls</label>
+      </node>
+      <node id="135">
+        <label>System</label>
+      </node>
+      <node id="132">
+        <label>BudgetExecution.Error</label>
+        <link refid="class_budget_execution_1_1_error"/>
+        <childnode refid="133" relation="public-inheritance">
+        </childnode>
+        <childnode refid="134" relation="usage">
+          <edgelabel>OkButton</edgelabel>
+          <edgelabel>TargetButton</edgelabel>
+          <edgelabel>StackButton</edgelabel>
+          <edgelabel>metroSetPanel1</edgelabel>
+        </childnode>
+        <childnode refid="135" relation="usage">
+          <edgelabel>components</edgelabel>
+          <edgelabel>Info</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Error.cs" line="11" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Error.cs" bodystart="10" bodyend="46"/>
+    <listofallmembers>
+      <member refid="class_budget_execution_1_1_error_1a137f028c5fde399cc003757523e0707d" prot="private" virt="non-virtual"><scope>BudgetExecution::Error</scope><name>components</name></member>
+      <member refid="class_budget_execution_1_1_error_1a4d89a93b4e2ef393b6ab310b44267683" prot="protected" virt="non-virtual"><scope>BudgetExecution::Error</scope><name>Dispose</name></member>
+      <member refid="class_budget_execution_1_1_error_1a6dcdd1c3b84b1b198c1282c707eee61f" prot="public" virt="non-virtual"><scope>BudgetExecution::Error</scope><name>Error</name></member>
+      <member refid="class_budget_execution_1_1_error_1af8074266a563e556ce3983d5229e9bca" prot="public" virt="non-virtual"><scope>BudgetExecution::Error</scope><name>Error</name></member>
+      <member refid="class_budget_execution_1_1_error_1ae3e954a395babad49955cd96d7186353" prot="private" virt="non-virtual"><scope>BudgetExecution::Error</scope><name>Info</name></member>
+      <member refid="class_budget_execution_1_1_error_1a9050ca641e1aca5120dc6843395dfb17" prot="private" virt="non-virtual"><scope>BudgetExecution::Error</scope><name>InitializeComponent</name></member>
+      <member refid="class_budget_execution_1_1_error_1ac89916e02fcb30fce295d16469ec87cd" prot="public" virt="non-virtual"><scope>BudgetExecution::Error</scope><name>Message</name></member>
+      <member refid="class_budget_execution_1_1_error_1a585a015d5f90b9c29be16ff5579dc0e7" prot="private" virt="non-virtual"><scope>BudgetExecution::Error</scope><name>metroSetPanel1</name></member>
+      <member refid="class_budget_execution_1_1_error_1aa27d1f70371c69448a2d33d9633a0c12" prot="private" virt="non-virtual"><scope>BudgetExecution::Error</scope><name>OkButton</name></member>
+      <member refid="class_budget_execution_1_1_error_1add4c38c0945497b3098a320fa839a3f5" prot="private" virt="non-virtual"><scope>BudgetExecution::Error</scope><name>OkButton_OnClick</name></member>
+      <member refid="class_budget_execution_1_1_error_1a976417b212e7b3b345b96e0e20f9e17e" prot="private" virt="non-virtual"><scope>BudgetExecution::Error</scope><name>Stack</name></member>
+      <member refid="class_budget_execution_1_1_error_1ac154bffbe8e2f09b73c1d81d611b7154" prot="private" virt="non-virtual"><scope>BudgetExecution::Error</scope><name>StackButton</name></member>
+      <member refid="class_budget_execution_1_1_error_1a61b08f1ed290f553e9ff3592ed19936e" prot="private" virt="non-virtual"><scope>BudgetExecution::Error</scope><name>StackButton_OnClick</name></member>
+      <member refid="class_budget_execution_1_1_error_1aaa24334abde8b2ae5a0e9a0a9243c6e6" prot="private" virt="non-virtual"><scope>BudgetExecution::Error</scope><name>Target</name></member>
+      <member refid="class_budget_execution_1_1_error_1aabb181e0580deab3a747b8cd655697c9" prot="private" virt="non-virtual"><scope>BudgetExecution::Error</scope><name>TargetButton</name></member>
+      <member refid="class_budget_execution_1_1_error_1a390390eb0488be06af145d3a85387b2e" prot="private" virt="non-virtual"><scope>BudgetExecution::Error</scope><name>TargetButton_OnClick</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

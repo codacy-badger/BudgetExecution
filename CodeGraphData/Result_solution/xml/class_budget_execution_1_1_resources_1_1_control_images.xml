@@ -1,0 +1,637 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_budget_execution_1_1_resources_1_1_control_images" kind="class" prot="package">
+    <compoundname>BudgetExecution::Resources::ControlImages</compoundname>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_budget_execution_1_1_resources_1_1_control_images_1a3931e1f7a508b8cd84eb0caa19a95cf1" prot="private" static="yes" mutable="no">
+        <type>global::System.Resources.ResourceManager</type>
+        <definition>global::System.Resources.ResourceManager BudgetExecution.Resources.ControlImages.resourceMan</definition>
+        <argsstring></argsstring>
+        <name>resourceMan</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/ControlImages.Designer.cs" line="27" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/ControlImages.Designer.cs" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_resources_1_1_control_images_1a5a69401b37d197ed6c5265a2e3e08acb" prot="private" static="yes" mutable="no">
+        <type>global::System.Globalization.CultureInfo</type>
+        <definition>global::System.Globalization.CultureInfo BudgetExecution.Resources.ControlImages.resourceCulture</definition>
+        <argsstring></argsstring>
+        <name>resourceCulture</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/ControlImages.Designer.cs" line="29" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/ControlImages.Designer.cs" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_budget_execution_1_1_resources_1_1_control_images_1adeeb51c56fb64d1df45d7e05624938f8" prot="package" static="yes" readable="no" writable="no" gettable="yes" settable="no">
+        <type>global::System.Resources.ResourceManager</type>
+        <definition>global::System.Resources.ResourceManager BudgetExecution.Resources.ControlImages.ResourceManager</definition>
+        <argsstring></argsstring>
+        <name>ResourceManager</name>
+        <briefdescription>
+<para>Returns the cached ResourceManager instance used by this class. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/ControlImages.Designer.cs" line="39" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/ControlImages.Designer.cs" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_resources_1_1_control_images_1aefa5c1da14a0ad32fe6ed55a541da9af" prot="package" static="yes" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>global::System.Globalization.CultureInfo</type>
+        <definition>global::System.Globalization.CultureInfo BudgetExecution.Resources.ControlImages.Culture</definition>
+        <argsstring></argsstring>
+        <name>Culture</name>
+        <briefdescription>
+<para>Overrides the current thread&apos;s CurrentUICulture property for all resource lookups using this strongly typed resource class. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/ControlImages.Designer.cs" line="54" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/ControlImages.Designer.cs" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_resources_1_1_control_images_1a236af22d8213d9c53d2b984c9ba3e244" prot="package" static="yes" readable="no" writable="no" gettable="yes" settable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap BudgetExecution.Resources.ControlImages._123</definition>
+        <argsstring></argsstring>
+        <name>_123</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/ControlImages.Designer.cs" line="66" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/ControlImages.Designer.cs" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_resources_1_1_control_images_1a007d964a4e5313018fd24ca52eb91c2b" prot="package" static="yes" readable="no" writable="no" gettable="yes" settable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap BudgetExecution.Resources.ControlImages._2000px_Applications_database_svg</definition>
+        <argsstring></argsstring>
+        <name>_2000px_Applications_database_svg</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/ControlImages.Designer.cs" line="76" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/ControlImages.Designer.cs" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_resources_1_1_control_images_1af735122c70c00a7c6753eab289522cdf" prot="package" static="yes" readable="no" writable="no" gettable="yes" settable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap BudgetExecution.Resources.ControlImages.Access_New_Wf</definition>
+        <argsstring></argsstring>
+        <name>Access_New_Wf</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/ControlImages.Designer.cs" line="86" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/ControlImages.Designer.cs" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_resources_1_1_control_images_1a731fec2eeb8de76b089460bddbefd721" prot="package" static="yes" readable="no" writable="no" gettable="yes" settable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap BudgetExecution.Resources.ControlImages.Addition</definition>
+        <argsstring></argsstring>
+        <name>Addition</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/ControlImages.Designer.cs" line="96" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/ControlImages.Designer.cs" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_resources_1_1_control_images_1a7d191438d0059dfd4a16c36447c5a22a" prot="package" static="yes" readable="no" writable="no" gettable="yes" settable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap BudgetExecution.Resources.ControlImages.Aim1_WF</definition>
+        <argsstring></argsstring>
+        <name>Aim1_WF</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/ControlImages.Designer.cs" line="106" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/ControlImages.Designer.cs" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_resources_1_1_control_images_1ae02e365bde09c25548f1999d68ddbb59" prot="package" static="yes" readable="no" writable="no" gettable="yes" settable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap BudgetExecution.Resources.ControlImages.Arrow_Left___03</definition>
+        <argsstring></argsstring>
+        <name>Arrow_Left___03</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/ControlImages.Designer.cs" line="116" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/ControlImages.Designer.cs" bodystart="116" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_resources_1_1_control_images_1ab55e2ced0a1fae0dbb6c208248da2cb4" prot="package" static="yes" readable="no" writable="no" gettable="yes" settable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap BudgetExecution.Resources.ControlImages.Arrow_right</definition>
+        <argsstring></argsstring>
+        <name>Arrow_right</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/ControlImages.Designer.cs" line="126" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/ControlImages.Designer.cs" bodystart="126" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_resources_1_1_control_images_1a3d63305066d72387864d0f6586717c28" prot="package" static="yes" readable="no" writable="no" gettable="yes" settable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap BudgetExecution.Resources.ControlImages.Command_Undo_WF_1_</definition>
+        <argsstring></argsstring>
+        <name>Command_Undo_WF_1_</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/ControlImages.Designer.cs" line="136" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/ControlImages.Designer.cs" bodystart="136" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_resources_1_1_control_images_1ae1971dff5820cf20679ef22e1db26be7" prot="package" static="yes" readable="no" writable="no" gettable="yes" settable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap BudgetExecution.Resources.ControlImages.Data_Export</definition>
+        <argsstring></argsstring>
+        <name>Data_Export</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/ControlImages.Designer.cs" line="146" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/ControlImages.Designer.cs" bodystart="146" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_resources_1_1_control_images_1a96d828dd1467d0b75f397d1a61a379d9" prot="package" static="yes" readable="no" writable="no" gettable="yes" settable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap BudgetExecution.Resources.ControlImages.database__8_</definition>
+        <argsstring></argsstring>
+        <name>database__8_</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/ControlImages.Designer.cs" line="156" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/ControlImages.Designer.cs" bodystart="156" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_resources_1_1_control_images_1abf706de5598fd30005f1bc0ed113812b" prot="package" static="yes" readable="no" writable="no" gettable="yes" settable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap BudgetExecution.Resources.ControlImages.Database_WF_1_</definition>
+        <argsstring></argsstring>
+        <name>Database_WF_1_</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/ControlImages.Designer.cs" line="166" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/ControlImages.Designer.cs" bodystart="166" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_resources_1_1_control_images_1a8cd622fafa1ae860a994f0d11bf6047d" prot="package" static="yes" readable="no" writable="no" gettable="yes" settable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap BudgetExecution.Resources.ControlImages.database02</definition>
+        <argsstring></argsstring>
+        <name>database02</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/ControlImages.Designer.cs" line="176" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/ControlImages.Designer.cs" bodystart="176" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_resources_1_1_control_images_1a8f98987e08b2f59fcb2174dff2e17ea2" prot="package" static="yes" readable="no" writable="no" gettable="yes" settable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap BudgetExecution.Resources.ControlImages.Diagram</definition>
+        <argsstring></argsstring>
+        <name>Diagram</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/ControlImages.Designer.cs" line="186" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/ControlImages.Designer.cs" bodystart="186" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_resources_1_1_control_images_1a7d0abb6717095811c54afcc4dc8b426f" prot="package" static="yes" readable="no" writable="no" gettable="yes" settable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap BudgetExecution.Resources.ControlImages.epadarklogoicon</definition>
+        <argsstring></argsstring>
+        <name>epadarklogoicon</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/ControlImages.Designer.cs" line="196" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/ControlImages.Designer.cs" bodystart="196" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_resources_1_1_control_images_1a03c8b35594689fcd2b3651619a4ab80d" prot="package" static="yes" readable="no" writable="no" gettable="yes" settable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap BudgetExecution.Resources.ControlImages.Excel_Export_1_</definition>
+        <argsstring></argsstring>
+        <name>Excel_Export_1_</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/ControlImages.Designer.cs" line="206" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/ControlImages.Designer.cs" bodystart="206" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_resources_1_1_control_images_1a4e29a97a53b085962b2b12f8a7b60fd4" prot="package" static="yes" readable="no" writable="no" gettable="yes" settable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap BudgetExecution.Resources.ControlImages.Excel_Import_and_Export_1_</definition>
+        <argsstring></argsstring>
+        <name>Excel_Import_and_Export_1_</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/ControlImages.Designer.cs" line="216" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/ControlImages.Designer.cs" bodystart="216" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_resources_1_1_control_images_1a16dc93078d0cee8ebdca0d396a77d372" prot="package" static="yes" readable="no" writable="no" gettable="yes" settable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap BudgetExecution.Resources.ControlImages.Excel_Online</definition>
+        <argsstring></argsstring>
+        <name>Excel_Online</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/ControlImages.Designer.cs" line="226" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/ControlImages.Designer.cs" bodystart="226" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_resources_1_1_control_images_1ac0306369940c4d432d7d4d9784d9f430" prot="package" static="yes" readable="no" writable="no" gettable="yes" settable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap BudgetExecution.Resources.ControlImages.Exchange___02_1_</definition>
+        <argsstring></argsstring>
+        <name>Exchange___02_1_</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/ControlImages.Designer.cs" line="236" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/ControlImages.Designer.cs" bodystart="236" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_resources_1_1_control_images_1ac593972cd12be6ffbbd1873aefab4534" prot="package" static="yes" readable="no" writable="no" gettable="yes" settable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap BudgetExecution.Resources.ControlImages.Formula_Support_1_</definition>
+        <argsstring></argsstring>
+        <name>Formula_Support_1_</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/ControlImages.Designer.cs" line="246" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/ControlImages.Designer.cs" bodystart="246" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_resources_1_1_control_images_1ad8d6b5b0d9342d30c6ceb00ce647013a" prot="package" static="yes" readable="no" writable="no" gettable="yes" settable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap BudgetExecution.Resources.ControlImages.Library_Books</definition>
+        <argsstring></argsstring>
+        <name>Library_Books</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/ControlImages.Designer.cs" line="256" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/ControlImages.Designer.cs" bodystart="256" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_resources_1_1_control_images_1a0fdcbbf55a6efbfecdfe75982bf0b85f" prot="package" static="yes" readable="no" writable="no" gettable="yes" settable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap BudgetExecution.Resources.ControlImages.Money_Transfer</definition>
+        <argsstring></argsstring>
+        <name>Money_Transfer</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/ControlImages.Designer.cs" line="266" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/ControlImages.Designer.cs" bodystart="266" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_resources_1_1_control_images_1ab3fbe0d51fd331fcd33d409a6dc1ea1b" prot="package" static="yes" readable="no" writable="no" gettable="yes" settable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap BudgetExecution.Resources.ControlImages.Organization_WF</definition>
+        <argsstring></argsstring>
+        <name>Organization_WF</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/ControlImages.Designer.cs" line="276" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/ControlImages.Designer.cs" bodystart="276" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_resources_1_1_control_images_1abc0af774c7b07d5ecf62f2327b81acff" prot="package" static="yes" readable="no" writable="no" gettable="yes" settable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap BudgetExecution.Resources.ControlImages.Overview_810x301</definition>
+        <argsstring></argsstring>
+        <name>Overview_810x301</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/ControlImages.Designer.cs" line="286" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/ControlImages.Designer.cs" bodystart="286" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_resources_1_1_control_images_1a383de61211fe382be8a7136ef506ceaf" prot="package" static="yes" readable="no" writable="no" gettable="yes" settable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap BudgetExecution.Resources.ControlImages.Project_Plan_01_WF</definition>
+        <argsstring></argsstring>
+        <name>Project_Plan_01_WF</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/ControlImages.Designer.cs" line="296" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/ControlImages.Designer.cs" bodystart="296" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_resources_1_1_control_images_1a0671274b04ae743c5c2c865640d8f249" prot="package" static="yes" readable="no" writable="no" gettable="yes" settable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap BudgetExecution.Resources.ControlImages.qm_icon</definition>
+        <argsstring></argsstring>
+        <name>qm_icon</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/ControlImages.Designer.cs" line="306" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/ControlImages.Designer.cs" bodystart="306" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_resources_1_1_control_images_1af7e7ea61d0cd291b49f984e72c8f1bb4" prot="package" static="yes" readable="no" writable="no" gettable="yes" settable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap BudgetExecution.Resources.ControlImages.Statistical_Analysis</definition>
+        <argsstring></argsstring>
+        <name>Statistical_Analysis</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/ControlImages.Designer.cs" line="316" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/ControlImages.Designer.cs" bodystart="316" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_resources_1_1_control_images_1ab641c8541fa19162d9ba2a49f893e103" prot="package" static="yes" readable="no" writable="no" gettable="yes" settable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap BudgetExecution.Resources.ControlImages.Stock_Exchange_01</definition>
+        <argsstring></argsstring>
+        <name>Stock_Exchange_01</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/ControlImages.Designer.cs" line="326" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/ControlImages.Designer.cs" bodystart="326" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_resources_1_1_control_images_1a15270cc179b6951ed09221dcf1a5074e" prot="package" static="yes" readable="no" writable="no" gettable="yes" settable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap BudgetExecution.Resources.ControlImages.Text_Edit</definition>
+        <argsstring></argsstring>
+        <name>Text_Edit</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/ControlImages.Designer.cs" line="336" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/ControlImages.Designer.cs" bodystart="336" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_resources_1_1_control_images_1a08612efb748ab7abda89d7cb610629ce" prot="package" static="yes" readable="no" writable="no" gettable="yes" settable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap BudgetExecution.Resources.ControlImages.Text_Edit_1_</definition>
+        <argsstring></argsstring>
+        <name>Text_Edit_1_</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/ControlImages.Designer.cs" line="346" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/ControlImages.Designer.cs" bodystart="346" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_resources_1_1_control_images_1a08b2f258784e2693c580daa45872da4c" prot="package" static="yes" readable="no" writable="no" gettable="yes" settable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap BudgetExecution.Resources.ControlImages.Text_Edit_2_</definition>
+        <argsstring></argsstring>
+        <name>Text_Edit_2_</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/ControlImages.Designer.cs" line="356" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/ControlImages.Designer.cs" bodystart="356" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_resources_1_1_control_images_1ac0d7bcbf3b380555ba6940c8b971d2e9" prot="package" static="yes" readable="no" writable="no" gettable="yes" settable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap BudgetExecution.Resources.ControlImages.Text_Edit_3_</definition>
+        <argsstring></argsstring>
+        <name>Text_Edit_3_</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/ControlImages.Designer.cs" line="366" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/ControlImages.Designer.cs" bodystart="366" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_resources_1_1_control_images_1a082ede6ad3990ea5a506aff33a151404" prot="package" static="yes" readable="no" writable="no" gettable="yes" settable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap BudgetExecution.Resources.ControlImages.Text_Edit_4_</definition>
+        <argsstring></argsstring>
+        <name>Text_Edit_4_</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/ControlImages.Designer.cs" line="376" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/ControlImages.Designer.cs" bodystart="376" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_resources_1_1_control_images_1a7ec34dee661107314f6f7cb41b7f8792" prot="package" static="yes" readable="no" writable="no" gettable="yes" settable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap BudgetExecution.Resources.ControlImages.Tools_02</definition>
+        <argsstring></argsstring>
+        <name>Tools_02</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/ControlImages.Designer.cs" line="386" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/ControlImages.Designer.cs" bodystart="386" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_resources_1_1_control_images_1a410062b3507eb1f862b90d458f0d37de" prot="package" static="yes" readable="no" writable="no" gettable="yes" settable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap BudgetExecution.Resources.ControlImages.Transaction_Fee_WF</definition>
+        <argsstring></argsstring>
+        <name>Transaction_Fee_WF</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/ControlImages.Designer.cs" line="396" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/ControlImages.Designer.cs" bodystart="396" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_resources_1_1_control_images_1ae0fea95fbfd09f000feb6b14b1957baa" prot="package" static="yes" readable="no" writable="no" gettable="yes" settable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap BudgetExecution.Resources.ControlImages.Transfer_Arrows</definition>
+        <argsstring></argsstring>
+        <name>Transfer_Arrows</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/ControlImages.Designer.cs" line="406" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/ControlImages.Designer.cs" bodystart="406" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_resources_1_1_control_images_1a7201af14939da40393806cc41738be3c" prot="package" static="yes" readable="no" writable="no" gettable="yes" settable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap BudgetExecution.Resources.ControlImages.unnamed</definition>
+        <argsstring></argsstring>
+        <name>unnamed</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/ControlImages.Designer.cs" line="416" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/ControlImages.Designer.cs" bodystart="416" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_resources_1_1_control_images_1a0b6ec1f20b3cb406ea47820d61afc4f4" prot="package" static="yes" readable="no" writable="no" gettable="yes" settable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap BudgetExecution.Resources.ControlImages.Upload</definition>
+        <argsstring></argsstring>
+        <name>Upload</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/ControlImages.Designer.cs" line="426" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/ControlImages.Designer.cs" bodystart="426" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_resources_1_1_control_images_1a97097388cfc5126b6aad9824606a54bc" prot="package" static="yes" readable="no" writable="no" gettable="yes" settable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap BudgetExecution.Resources.ControlImages.Wallet_WF</definition>
+        <argsstring></argsstring>
+        <name>Wallet_WF</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/ControlImages.Designer.cs" line="436" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/ControlImages.Designer.cs" bodystart="436" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="package-func">
+      <memberdef kind="function" id="class_budget_execution_1_1_resources_1_1_control_images_1a0549f63f4e5eb8f6075b94298552d5ab" prot="package" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>BudgetExecution.Resources.ControlImages.ControlImages</definition>
+        <argsstring>()</argsstring>
+        <name>ControlImages</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/ControlImages.Designer.cs" line="32" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/ControlImages.Designer.cs" bodystart="32" bodyend="33"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A strongly-typed resource class, for looking up localized strings, etc. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="79">
+        <label>BudgetExecution.Resources.Resources</label>
+        <link refid="class_budget_execution_1_1_resources_1_1_resources"/>
+        <childnode refid="79" relation="usage">
+          <edgelabel>resourceMan</edgelabel>
+        </childnode>
+      </node>
+      <node id="78">
+        <label>BudgetExecution.Resources.ControlImages</label>
+        <link refid="class_budget_execution_1_1_resources_1_1_control_images"/>
+        <childnode refid="79" relation="usage">
+          <edgelabel>resourceMan</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/ControlImages.Designer.cs" line="25" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/ControlImages.Designer.cs" bodystart="25" bodyend="442"/>
+    <listofallmembers>
+      <member refid="class_budget_execution_1_1_resources_1_1_control_images_1a236af22d8213d9c53d2b984c9ba3e244" prot="package" virt="non-virtual"><scope>BudgetExecution::Resources::ControlImages</scope><name>_123</name></member>
+      <member refid="class_budget_execution_1_1_resources_1_1_control_images_1a007d964a4e5313018fd24ca52eb91c2b" prot="package" virt="non-virtual"><scope>BudgetExecution::Resources::ControlImages</scope><name>_2000px_Applications_database_svg</name></member>
+      <member refid="class_budget_execution_1_1_resources_1_1_control_images_1af735122c70c00a7c6753eab289522cdf" prot="package" virt="non-virtual"><scope>BudgetExecution::Resources::ControlImages</scope><name>Access_New_Wf</name></member>
+      <member refid="class_budget_execution_1_1_resources_1_1_control_images_1a731fec2eeb8de76b089460bddbefd721" prot="package" virt="non-virtual"><scope>BudgetExecution::Resources::ControlImages</scope><name>Addition</name></member>
+      <member refid="class_budget_execution_1_1_resources_1_1_control_images_1a7d191438d0059dfd4a16c36447c5a22a" prot="package" virt="non-virtual"><scope>BudgetExecution::Resources::ControlImages</scope><name>Aim1_WF</name></member>
+      <member refid="class_budget_execution_1_1_resources_1_1_control_images_1ae02e365bde09c25548f1999d68ddbb59" prot="package" virt="non-virtual"><scope>BudgetExecution::Resources::ControlImages</scope><name>Arrow_Left___03</name></member>
+      <member refid="class_budget_execution_1_1_resources_1_1_control_images_1ab55e2ced0a1fae0dbb6c208248da2cb4" prot="package" virt="non-virtual"><scope>BudgetExecution::Resources::ControlImages</scope><name>Arrow_right</name></member>
+      <member refid="class_budget_execution_1_1_resources_1_1_control_images_1a3d63305066d72387864d0f6586717c28" prot="package" virt="non-virtual"><scope>BudgetExecution::Resources::ControlImages</scope><name>Command_Undo_WF_1_</name></member>
+      <member refid="class_budget_execution_1_1_resources_1_1_control_images_1a0549f63f4e5eb8f6075b94298552d5ab" prot="package" virt="non-virtual"><scope>BudgetExecution::Resources::ControlImages</scope><name>ControlImages</name></member>
+      <member refid="class_budget_execution_1_1_resources_1_1_control_images_1aefa5c1da14a0ad32fe6ed55a541da9af" prot="package" virt="non-virtual"><scope>BudgetExecution::Resources::ControlImages</scope><name>Culture</name></member>
+      <member refid="class_budget_execution_1_1_resources_1_1_control_images_1ae1971dff5820cf20679ef22e1db26be7" prot="package" virt="non-virtual"><scope>BudgetExecution::Resources::ControlImages</scope><name>Data_Export</name></member>
+      <member refid="class_budget_execution_1_1_resources_1_1_control_images_1a8cd622fafa1ae860a994f0d11bf6047d" prot="package" virt="non-virtual"><scope>BudgetExecution::Resources::ControlImages</scope><name>database02</name></member>
+      <member refid="class_budget_execution_1_1_resources_1_1_control_images_1a96d828dd1467d0b75f397d1a61a379d9" prot="package" virt="non-virtual"><scope>BudgetExecution::Resources::ControlImages</scope><name>database__8_</name></member>
+      <member refid="class_budget_execution_1_1_resources_1_1_control_images_1abf706de5598fd30005f1bc0ed113812b" prot="package" virt="non-virtual"><scope>BudgetExecution::Resources::ControlImages</scope><name>Database_WF_1_</name></member>
+      <member refid="class_budget_execution_1_1_resources_1_1_control_images_1a8f98987e08b2f59fcb2174dff2e17ea2" prot="package" virt="non-virtual"><scope>BudgetExecution::Resources::ControlImages</scope><name>Diagram</name></member>
+      <member refid="class_budget_execution_1_1_resources_1_1_control_images_1a7d0abb6717095811c54afcc4dc8b426f" prot="package" virt="non-virtual"><scope>BudgetExecution::Resources::ControlImages</scope><name>epadarklogoicon</name></member>
+      <member refid="class_budget_execution_1_1_resources_1_1_control_images_1a03c8b35594689fcd2b3651619a4ab80d" prot="package" virt="non-virtual"><scope>BudgetExecution::Resources::ControlImages</scope><name>Excel_Export_1_</name></member>
+      <member refid="class_budget_execution_1_1_resources_1_1_control_images_1a4e29a97a53b085962b2b12f8a7b60fd4" prot="package" virt="non-virtual"><scope>BudgetExecution::Resources::ControlImages</scope><name>Excel_Import_and_Export_1_</name></member>
+      <member refid="class_budget_execution_1_1_resources_1_1_control_images_1a16dc93078d0cee8ebdca0d396a77d372" prot="package" virt="non-virtual"><scope>BudgetExecution::Resources::ControlImages</scope><name>Excel_Online</name></member>
+      <member refid="class_budget_execution_1_1_resources_1_1_control_images_1ac0306369940c4d432d7d4d9784d9f430" prot="package" virt="non-virtual"><scope>BudgetExecution::Resources::ControlImages</scope><name>Exchange___02_1_</name></member>
+      <member refid="class_budget_execution_1_1_resources_1_1_control_images_1ac593972cd12be6ffbbd1873aefab4534" prot="package" virt="non-virtual"><scope>BudgetExecution::Resources::ControlImages</scope><name>Formula_Support_1_</name></member>
+      <member refid="class_budget_execution_1_1_resources_1_1_control_images_1ad8d6b5b0d9342d30c6ceb00ce647013a" prot="package" virt="non-virtual"><scope>BudgetExecution::Resources::ControlImages</scope><name>Library_Books</name></member>
+      <member refid="class_budget_execution_1_1_resources_1_1_control_images_1a0fdcbbf55a6efbfecdfe75982bf0b85f" prot="package" virt="non-virtual"><scope>BudgetExecution::Resources::ControlImages</scope><name>Money_Transfer</name></member>
+      <member refid="class_budget_execution_1_1_resources_1_1_control_images_1ab3fbe0d51fd331fcd33d409a6dc1ea1b" prot="package" virt="non-virtual"><scope>BudgetExecution::Resources::ControlImages</scope><name>Organization_WF</name></member>
+      <member refid="class_budget_execution_1_1_resources_1_1_control_images_1abc0af774c7b07d5ecf62f2327b81acff" prot="package" virt="non-virtual"><scope>BudgetExecution::Resources::ControlImages</scope><name>Overview_810x301</name></member>
+      <member refid="class_budget_execution_1_1_resources_1_1_control_images_1a383de61211fe382be8a7136ef506ceaf" prot="package" virt="non-virtual"><scope>BudgetExecution::Resources::ControlImages</scope><name>Project_Plan_01_WF</name></member>
+      <member refid="class_budget_execution_1_1_resources_1_1_control_images_1a0671274b04ae743c5c2c865640d8f249" prot="package" virt="non-virtual"><scope>BudgetExecution::Resources::ControlImages</scope><name>qm_icon</name></member>
+      <member refid="class_budget_execution_1_1_resources_1_1_control_images_1a5a69401b37d197ed6c5265a2e3e08acb" prot="private" virt="non-virtual"><scope>BudgetExecution::Resources::ControlImages</scope><name>resourceCulture</name></member>
+      <member refid="class_budget_execution_1_1_resources_1_1_control_images_1a3931e1f7a508b8cd84eb0caa19a95cf1" prot="private" virt="non-virtual"><scope>BudgetExecution::Resources::ControlImages</scope><name>resourceMan</name></member>
+      <member refid="class_budget_execution_1_1_resources_1_1_control_images_1adeeb51c56fb64d1df45d7e05624938f8" prot="package" virt="non-virtual"><scope>BudgetExecution::Resources::ControlImages</scope><name>ResourceManager</name></member>
+      <member refid="class_budget_execution_1_1_resources_1_1_control_images_1af7e7ea61d0cd291b49f984e72c8f1bb4" prot="package" virt="non-virtual"><scope>BudgetExecution::Resources::ControlImages</scope><name>Statistical_Analysis</name></member>
+      <member refid="class_budget_execution_1_1_resources_1_1_control_images_1ab641c8541fa19162d9ba2a49f893e103" prot="package" virt="non-virtual"><scope>BudgetExecution::Resources::ControlImages</scope><name>Stock_Exchange_01</name></member>
+      <member refid="class_budget_execution_1_1_resources_1_1_control_images_1a15270cc179b6951ed09221dcf1a5074e" prot="package" virt="non-virtual"><scope>BudgetExecution::Resources::ControlImages</scope><name>Text_Edit</name></member>
+      <member refid="class_budget_execution_1_1_resources_1_1_control_images_1a08612efb748ab7abda89d7cb610629ce" prot="package" virt="non-virtual"><scope>BudgetExecution::Resources::ControlImages</scope><name>Text_Edit_1_</name></member>
+      <member refid="class_budget_execution_1_1_resources_1_1_control_images_1a08b2f258784e2693c580daa45872da4c" prot="package" virt="non-virtual"><scope>BudgetExecution::Resources::ControlImages</scope><name>Text_Edit_2_</name></member>
+      <member refid="class_budget_execution_1_1_resources_1_1_control_images_1ac0d7bcbf3b380555ba6940c8b971d2e9" prot="package" virt="non-virtual"><scope>BudgetExecution::Resources::ControlImages</scope><name>Text_Edit_3_</name></member>
+      <member refid="class_budget_execution_1_1_resources_1_1_control_images_1a082ede6ad3990ea5a506aff33a151404" prot="package" virt="non-virtual"><scope>BudgetExecution::Resources::ControlImages</scope><name>Text_Edit_4_</name></member>
+      <member refid="class_budget_execution_1_1_resources_1_1_control_images_1a7ec34dee661107314f6f7cb41b7f8792" prot="package" virt="non-virtual"><scope>BudgetExecution::Resources::ControlImages</scope><name>Tools_02</name></member>
+      <member refid="class_budget_execution_1_1_resources_1_1_control_images_1a410062b3507eb1f862b90d458f0d37de" prot="package" virt="non-virtual"><scope>BudgetExecution::Resources::ControlImages</scope><name>Transaction_Fee_WF</name></member>
+      <member refid="class_budget_execution_1_1_resources_1_1_control_images_1ae0fea95fbfd09f000feb6b14b1957baa" prot="package" virt="non-virtual"><scope>BudgetExecution::Resources::ControlImages</scope><name>Transfer_Arrows</name></member>
+      <member refid="class_budget_execution_1_1_resources_1_1_control_images_1a7201af14939da40393806cc41738be3c" prot="package" virt="non-virtual"><scope>BudgetExecution::Resources::ControlImages</scope><name>unnamed</name></member>
+      <member refid="class_budget_execution_1_1_resources_1_1_control_images_1a0b6ec1f20b3cb406ea47820d61afc4f4" prot="package" virt="non-virtual"><scope>BudgetExecution::Resources::ControlImages</scope><name>Upload</name></member>
+      <member refid="class_budget_execution_1_1_resources_1_1_control_images_1a97097388cfc5126b6aad9824606a54bc" prot="package" virt="non-virtual"><scope>BudgetExecution::Resources::ControlImages</scope><name>Wallet_WF</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

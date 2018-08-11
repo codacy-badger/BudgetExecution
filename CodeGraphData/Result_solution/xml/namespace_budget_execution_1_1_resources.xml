@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="namespace_budget_execution_1_1_resources" kind="namespace">
+    <compoundname>BudgetExecution::Resources</compoundname>
+    <innerclass refid="class_budget_execution_1_1_resources_1_1_application_images" prot="package">BudgetExecution::Resources::ApplicationImages</innerclass>
+    <innerclass refid="class_budget_execution_1_1_resources_1_1_button_icon" prot="package">BudgetExecution::Resources::ButtonIcon</innerclass>
+    <innerclass refid="class_budget_execution_1_1_resources_1_1_control_icon" prot="package">BudgetExecution::Resources::ControlIcon</innerclass>
+    <innerclass refid="class_budget_execution_1_1_resources_1_1_control_images" prot="package">BudgetExecution::Resources::ControlImages</innerclass>
+    <innerclass refid="class_budget_execution_1_1_resources_1_1_division" prot="package">BudgetExecution::Resources::Division</innerclass>
+    <innerclass refid="class_budget_execution_1_1_resources_1_1_division_icon_images" prot="package">BudgetExecution::Resources::DivisionIconImages</innerclass>
+    <innerclass refid="class_budget_execution_1_1_resources_1_1_division_images" prot="package">BudgetExecution::Resources::DivisionImages</innerclass>
+    <innerclass refid="class_budget_execution_1_1_resources_1_1_excel_file" prot="package">BudgetExecution::Resources::ExcelFile</innerclass>
+    <innerclass refid="class_budget_execution_1_1_resources_1_1_form_images" prot="package">BudgetExecution::Resources::FormImages</innerclass>
+    <innerclass refid="class_budget_execution_1_1_resources_1_1_function_images" prot="package">BudgetExecution::Resources::FunctionImages</innerclass>
+    <innerclass refid="class_budget_execution_1_1_resources_1_1_fund_code_images" prot="package">BudgetExecution::Resources::FundCodeImages</innerclass>
+    <innerclass refid="class_budget_execution_1_1_resources_1_1_icon" prot="package">BudgetExecution::Resources::Icon</innerclass>
+    <innerclass refid="class_budget_execution_1_1_resources_1_1_ninja_icons" prot="package">BudgetExecution::Resources::NinjaIcons</innerclass>
+    <innerclass refid="class_budget_execution_1_1_resources_1_1_resources" prot="package">BudgetExecution::Resources::Resources</innerclass>
+    <innerclass refid="class_budget_execution_1_1_resources_1_1_slide_images" prot="package">BudgetExecution::Resources::SlideImages</innerclass>
+    <innerclass refid="class_budget_execution_1_1_resources_1_1_summary_images" prot="package">BudgetExecution::Resources::SummaryImages</innerclass>
+    <innernamespace refid="namespace_budget_execution_1_1_resources_1_1_ninja_application_images">BudgetExecution::Resources::NinjaApplicationImages</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/ApplicationImages.Designer.cs" line="11" column="1"/>
+  </compounddef>
+</doxygen>

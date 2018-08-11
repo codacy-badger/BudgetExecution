@@ -7,17 +7,146 @@ namespace BudgetExecution
     using System;
     using System.Collections.Generic;
     using System.Data;
+    using System.Data.SQLite;
     using System.Linq;
     using System.Windows.Forms;
 
     public static class Info
     {
         public static string[] Sources = Enum.GetNames(typeof(Source));
+        
         public static string Div = @"C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\Resources\Division";
+        
         public static string SummaryImages = @"C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\Resources\SummaryImages";
+        
         public static string FunctionImages = @"C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\Resources\FunctionImages";
+        
         public static string DatabaseImages = @"C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\Resources\Database";
+        
         public static string AppropriationImages = @"C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\Resources\AppropriationImages";
+
+
+        public static Dictionary<string, object> GetInsertionColumns(Source source, Provider provider, Dictionary<string, object> param)
+        {
+            try
+            {
+                var account = new Account(source, provider, param["Fund"].ToString(), param["Code"].ToString());
+                if (!param.ContainsKey("FundName") || param["FundName"] == null)
+                {
+                    param["FundName"] = account.FundName;
+                }
+
+                if (!param.ContainsKey("Org") || param["Org"] == null)
+                {
+                    param["Org"] = account.Org;
+                }
+
+                if (!param.ContainsKey("ProgramProject") || param["ProgramProject"] == null)
+                {
+                    param["ProgramProject"] = account.ProgramProjectCode;
+                    param["ProgramProjectName"] = account.ProgramProjectName;
+                }
+
+                if (!param.ContainsKey("ProgramArea") || param["ProgramArea"] == null)
+                {
+                    param["ProgramArea"] = account.ProgramArea;
+                    param["ProgramAreaName"] = account.ProgramAreaName;
+                }
+
+                if (!param.ContainsKey("Goal") || param["Goal"] == null)
+                {
+                    param["Goal"] = account.Goal;
+                    param["GoalName"] = account.GoalName;
+                }
+
+                if (!param.ContainsKey("Objective") || param["Objective"] == null)
+                {
+                    param["Objective"] = account.Objective;
+                    param["ObjectiveName"] = account.ObjectiveName;
+                }
+
+                return param;
+            }
+            catch (Exception ex)
+            {
+                var _ = new Error(ex).ShowDialog();
+                return null;
+            }
+        }
+
+        public static PRC Select(Source source, Provider provider, Dictionary<string, object> p)
+        {
+            try
+            {
+                var datarow = new DataBuilder(source, provider, p).DbTable.AsEnumerable().Select(prc => prc).First();
+                return new PRC(datarow);
+            }
+            catch (Exception ex)
+            {
+                var _ = new Error(ex).ShowDialog();
+                return null;
+            }
+        }
+
+        public static void Insert(Source source, Provider provider, Dictionary<string, object> p)
+        {
+            try
+            {
+                var param = GetInsertionColumns(source, provider, p);
+                var fields = param.Keys.ToArray();
+                var vals = param.Values.ToArray();
+                var query = new Query(source, provider, param);
+                var cmd = $"INSERT INTO {source.ToString()} {fields} VALUES {vals};";
+                var conn = query.GetConnection(Provider.SQLite) as SQLiteConnection;
+                using (conn)
+                {
+                    var insert = query.GetDataCommand(cmd, conn) as SQLiteCommand;
+                    insert?.ExecuteNonQuery();
+                }
+            }
+            catch (Exception ex)
+            {
+                new Error(ex).ShowDialog();
+            }
+        }
+
+        public static void Update(Source source, Provider provider, Dictionary<string, object> p)
+        {
+            try
+            {
+                var query = new Query(source, provider, p);
+                var cmd = $"UPDATE {source.ToString()} SET Amount = {(decimal)p["Amount"]} WHERE ID = {(int)p["ID"]};";
+                var conn = query.GetConnection(Provider.SQLite) as SQLiteConnection;
+                using (conn)
+                {
+                    var update = query.GetDataCommand(cmd, conn) as SQLiteCommand;
+                    update?.ExecuteNonQuery();
+                }
+            }
+            catch (Exception ex)
+            {
+                new Error(ex).ShowDialog();
+            }
+        }
+
+        public static void Delete(Source source, Provider provider, Dictionary<string, object> p)
+        {
+            try
+            {
+                var query = new Query(source, provider, p);
+                var cmd = $"DELETE ALL FROM {source.ToString()} WHERE ID = {(int)p["ID"]};";
+                var conn = query.GetConnection(Provider.SQLite) as SQLiteConnection;
+                using (conn)
+                {
+                    var update = query.GetDataCommand(cmd, conn) as SQLiteCommand;
+                    update?.ExecuteNonQuery();
+                }
+            }
+            catch (Exception ex)
+            {
+                new Error(ex).ShowDialog();
+            }
+        }
 
         public static DataTable FilterRows(DataTable table, Field prcfilter, string filter)
         {

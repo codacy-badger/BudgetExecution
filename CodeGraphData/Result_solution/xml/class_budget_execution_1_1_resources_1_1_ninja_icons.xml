@@ -1,0 +1,343 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_budget_execution_1_1_resources_1_1_ninja_icons" kind="class" prot="package">
+    <compoundname>BudgetExecution::Resources::NinjaIcons</compoundname>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_budget_execution_1_1_resources_1_1_ninja_icons_1ad4468d6fb2e9bef32f6d8a9057719085" prot="private" static="yes" mutable="no">
+        <type>global::System.Resources.ResourceManager</type>
+        <definition>global::System.Resources.ResourceManager BudgetExecution.Resources.NinjaIcons.resourceMan</definition>
+        <argsstring></argsstring>
+        <name>resourceMan</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/NinjaIcons1.Designer.cs" line="27" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/NinjaIcons1.Designer.cs" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_resources_1_1_ninja_icons_1a760d6f896715668663ddb8c8682033e0" prot="private" static="yes" mutable="no">
+        <type>global::System.Globalization.CultureInfo</type>
+        <definition>global::System.Globalization.CultureInfo BudgetExecution.Resources.NinjaIcons.resourceCulture</definition>
+        <argsstring></argsstring>
+        <name>resourceCulture</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/NinjaIcons1.Designer.cs" line="29" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/NinjaIcons1.Designer.cs" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_budget_execution_1_1_resources_1_1_ninja_icons_1afa541acfca01d8ad22bc8d0892c6b520" prot="package" static="yes" readable="no" writable="no" gettable="yes" settable="no">
+        <type>global::System.Resources.ResourceManager</type>
+        <definition>global::System.Resources.ResourceManager BudgetExecution.Resources.NinjaIcons.ResourceManager</definition>
+        <argsstring></argsstring>
+        <name>ResourceManager</name>
+        <briefdescription>
+<para>Returns the cached ResourceManager instance used by this class. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/NinjaIcons1.Designer.cs" line="39" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/NinjaIcons1.Designer.cs" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_resources_1_1_ninja_icons_1aec41e35edd94263701fa2eace3573e67" prot="package" static="yes" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>global::System.Globalization.CultureInfo</type>
+        <definition>global::System.Globalization.CultureInfo BudgetExecution.Resources.NinjaIcons.Culture</definition>
+        <argsstring></argsstring>
+        <name>Culture</name>
+        <briefdescription>
+<para>Overrides the current thread&apos;s CurrentUICulture property for all resource lookups using this strongly typed resource class. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/NinjaIcons1.Designer.cs" line="54" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/NinjaIcons1.Designer.cs" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_resources_1_1_ninja_icons_1ae22d3dca9d1fbac1cef9f782becb472c" prot="package" static="yes" readable="no" writable="no" gettable="yes" settable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap BudgetExecution.Resources.NinjaIcons.appropriation_icon1</definition>
+        <argsstring></argsstring>
+        <name>appropriation_icon1</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/NinjaIcons1.Designer.cs" line="66" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/NinjaIcons1.Designer.cs" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_resources_1_1_ninja_icons_1a2d125a3327af1fd423a87b91d6c3d15f" prot="package" static="yes" readable="no" writable="no" gettable="yes" settable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap BudgetExecution.Resources.NinjaIcons.appropriation_icon2</definition>
+        <argsstring></argsstring>
+        <name>appropriation_icon2</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/NinjaIcons1.Designer.cs" line="76" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/NinjaIcons1.Designer.cs" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_resources_1_1_ninja_icons_1ae191cfaa7463754cb45577b5fdb4bbf0" prot="package" static="yes" readable="no" writable="no" gettable="yes" settable="no">
+        <type>System.Drawing.Icon</type>
+        <definition>System.Drawing.Icon BudgetExecution.Resources.NinjaIcons.bluedatabase</definition>
+        <argsstring></argsstring>
+        <name>bluedatabase</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Icon similar to (<ref refid="class_budget_execution_1_1_resources_1_1_icon" kindref="compound">Icon</ref>). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/NinjaIcons1.Designer.cs" line="86" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/NinjaIcons1.Designer.cs" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_resources_1_1_ninja_icons_1a9062ec97e267f8f224ba7be757956b8c" prot="package" static="yes" readable="no" writable="no" gettable="yes" settable="no">
+        <type>System.Drawing.Icon</type>
+        <definition>System.Drawing.Icon BudgetExecution.Resources.NinjaIcons.BudgetNinja</definition>
+        <argsstring></argsstring>
+        <name>BudgetNinja</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Icon similar to (<ref refid="class_budget_execution_1_1_resources_1_1_icon" kindref="compound">Icon</ref>). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/NinjaIcons1.Designer.cs" line="96" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/NinjaIcons1.Designer.cs" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_resources_1_1_ninja_icons_1af5b6f5c9d3b639d455e6ea0ec8b6aa37" prot="package" static="yes" readable="no" writable="no" gettable="yes" settable="no">
+        <type>System.Drawing.Icon</type>
+        <definition>System.Drawing.Icon BudgetExecution.Resources.NinjaIcons.epa_seal_medium1</definition>
+        <argsstring></argsstring>
+        <name>epa_seal_medium1</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Icon similar to (<ref refid="class_budget_execution_1_1_resources_1_1_icon" kindref="compound">Icon</ref>). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/NinjaIcons1.Designer.cs" line="106" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/NinjaIcons1.Designer.cs" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_resources_1_1_ninja_icons_1a6690d2cc075966fcac94586c93254818" prot="package" static="yes" readable="no" writable="no" gettable="yes" settable="no">
+        <type>System.Drawing.Icon</type>
+        <definition>System.Drawing.Icon BudgetExecution.Resources.NinjaIcons.if_6_1376009</definition>
+        <argsstring></argsstring>
+        <name>if_6_1376009</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Icon similar to (<ref refid="class_budget_execution_1_1_resources_1_1_icon" kindref="compound">Icon</ref>). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/NinjaIcons1.Designer.cs" line="116" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/NinjaIcons1.Designer.cs" bodystart="116" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_resources_1_1_ninja_icons_1a8466c8ad21066427a8886a87f2eacfef" prot="package" static="yes" readable="no" writable="no" gettable="yes" settable="no">
+        <type>System.Drawing.Icon</type>
+        <definition>System.Drawing.Icon BudgetExecution.Resources.NinjaIcons.if_bar_chart_87411</definition>
+        <argsstring></argsstring>
+        <name>if_bar_chart_87411</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Icon similar to (<ref refid="class_budget_execution_1_1_resources_1_1_icon" kindref="compound">Icon</ref>). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/NinjaIcons1.Designer.cs" line="126" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/NinjaIcons1.Designer.cs" bodystart="126" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_resources_1_1_ninja_icons_1ac2085dd0af95c341f0868b75605463df" prot="package" static="yes" readable="no" writable="no" gettable="yes" settable="no">
+        <type>System.Drawing.Icon</type>
+        <definition>System.Drawing.Icon BudgetExecution.Resources.NinjaIcons.if_pie_chart_87451</definition>
+        <argsstring></argsstring>
+        <name>if_pie_chart_87451</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Icon similar to (<ref refid="class_budget_execution_1_1_resources_1_1_icon" kindref="compound">Icon</ref>). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/NinjaIcons1.Designer.cs" line="136" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/NinjaIcons1.Designer.cs" bodystart="136" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_resources_1_1_ninja_icons_1af5e7ad436370db485739d68a0fa44dd7" prot="package" static="yes" readable="no" writable="no" gettable="yes" settable="no">
+        <type>System.Drawing.Icon</type>
+        <definition>System.Drawing.Icon BudgetExecution.Resources.NinjaIcons.if_processing_2799201__1_</definition>
+        <argsstring></argsstring>
+        <name>if_processing_2799201__1_</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Icon similar to (<ref refid="class_budget_execution_1_1_resources_1_1_icon" kindref="compound">Icon</ref>). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/NinjaIcons1.Designer.cs" line="146" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/NinjaIcons1.Designer.cs" bodystart="146" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_resources_1_1_ninja_icons_1a060922878d164185de92dbe2ec8fbbfe" prot="package" static="yes" readable="no" writable="no" gettable="yes" settable="no">
+        <type>System.Drawing.Icon</type>
+        <definition>System.Drawing.Icon BudgetExecution.Resources.NinjaIcons.if_transfer_87476</definition>
+        <argsstring></argsstring>
+        <name>if_transfer_87476</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Icon similar to (<ref refid="class_budget_execution_1_1_resources_1_1_icon" kindref="compound">Icon</ref>). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/NinjaIcons1.Designer.cs" line="156" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/NinjaIcons1.Designer.cs" bodystart="156" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_resources_1_1_ninja_icons_1ae733ae32175e50e03935034668ddb94e" prot="package" static="yes" readable="no" writable="no" gettable="yes" settable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap BudgetExecution.Resources.NinjaIcons.pie_chart</definition>
+        <argsstring></argsstring>
+        <name>pie_chart</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/NinjaIcons1.Designer.cs" line="166" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/NinjaIcons1.Designer.cs" bodystart="166" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_resources_1_1_ninja_icons_1a7c8f77102fff177af150acbd9a7c9177" prot="package" static="yes" readable="no" writable="no" gettable="yes" settable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap BudgetExecution.Resources.NinjaIcons.RA</definition>
+        <argsstring></argsstring>
+        <name>RA</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/NinjaIcons1.Designer.cs" line="176" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/NinjaIcons1.Designer.cs" bodystart="176" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_resources_1_1_ninja_icons_1ae0bc049f2df4757b55e33fd5ce1a04e6" prot="package" static="yes" readable="no" writable="no" gettable="yes" settable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap BudgetExecution.Resources.NinjaIcons.report_icon</definition>
+        <argsstring></argsstring>
+        <name>report_icon</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/NinjaIcons1.Designer.cs" line="186" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/NinjaIcons1.Designer.cs" bodystart="186" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_resources_1_1_ninja_icons_1aac791c2931e20d623e18a1ce38e19f79" prot="package" static="yes" readable="no" writable="no" gettable="yes" settable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap BudgetExecution.Resources.NinjaIcons.sf_site_icon</definition>
+        <argsstring></argsstring>
+        <name>sf_site_icon</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/NinjaIcons1.Designer.cs" line="196" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/NinjaIcons1.Designer.cs" bodystart="196" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_resources_1_1_ninja_icons_1affa057f24a9c04f13f7932fc821c9899" prot="package" static="yes" readable="no" writable="no" gettable="yes" settable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap BudgetExecution.Resources.NinjaIcons.sql_icon</definition>
+        <argsstring></argsstring>
+        <name>sql_icon</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/NinjaIcons1.Designer.cs" line="206" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/NinjaIcons1.Designer.cs" bodystart="206" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_resources_1_1_ninja_icons_1aff2b6df954cd53c30b8d5a06f4a909bb" prot="package" static="yes" readable="no" writable="no" gettable="yes" settable="no">
+        <type>System.Drawing.Icon</type>
+        <definition>System.Drawing.Icon BudgetExecution.Resources.NinjaIcons.summation_3d_blue_oma_icon</definition>
+        <argsstring></argsstring>
+        <name>summation_3d_blue_oma_icon</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Icon similar to (<ref refid="class_budget_execution_1_1_resources_1_1_icon" kindref="compound">Icon</ref>). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/NinjaIcons1.Designer.cs" line="216" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/NinjaIcons1.Designer.cs" bodystart="216" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_resources_1_1_ninja_icons_1a608541fdecf9170824395b5d4f1b072e" prot="package" static="yes" readable="no" writable="no" gettable="yes" settable="no">
+        <type>System.Drawing.Bitmap</type>
+        <definition>System.Drawing.Bitmap BudgetExecution.Resources.NinjaIcons.transfer_icon</definition>
+        <argsstring></argsstring>
+        <name>transfer_icon</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/NinjaIcons1.Designer.cs" line="226" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/NinjaIcons1.Designer.cs" bodystart="226" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="package-func">
+      <memberdef kind="function" id="class_budget_execution_1_1_resources_1_1_ninja_icons_1a54699f55242c3c5f8d31878c10350c40" prot="package" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>BudgetExecution.Resources.NinjaIcons.NinjaIcons</definition>
+        <argsstring>()</argsstring>
+        <name>NinjaIcons</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/NinjaIcons1.Designer.cs" line="32" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/NinjaIcons1.Designer.cs" bodystart="32" bodyend="33"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A strongly-typed resource class, for looking up localized strings, etc. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="286">
+        <label>BudgetExecution.Resources.NinjaIcons</label>
+        <link refid="class_budget_execution_1_1_resources_1_1_ninja_icons"/>
+        <childnode refid="287" relation="usage">
+          <edgelabel>resourceMan</edgelabel>
+        </childnode>
+      </node>
+      <node id="287">
+        <label>BudgetExecution.Resources.Resources</label>
+        <link refid="class_budget_execution_1_1_resources_1_1_resources"/>
+        <childnode refid="287" relation="usage">
+          <edgelabel>resourceMan</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/NinjaIcons1.Designer.cs" line="25" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/Resources/NinjaIcons1.Designer.cs" bodystart="25" bodyend="232"/>
+    <listofallmembers>
+      <member refid="class_budget_execution_1_1_resources_1_1_ninja_icons_1ae22d3dca9d1fbac1cef9f782becb472c" prot="package" virt="non-virtual"><scope>BudgetExecution::Resources::NinjaIcons</scope><name>appropriation_icon1</name></member>
+      <member refid="class_budget_execution_1_1_resources_1_1_ninja_icons_1a2d125a3327af1fd423a87b91d6c3d15f" prot="package" virt="non-virtual"><scope>BudgetExecution::Resources::NinjaIcons</scope><name>appropriation_icon2</name></member>
+      <member refid="class_budget_execution_1_1_resources_1_1_ninja_icons_1ae191cfaa7463754cb45577b5fdb4bbf0" prot="package" virt="non-virtual"><scope>BudgetExecution::Resources::NinjaIcons</scope><name>bluedatabase</name></member>
+      <member refid="class_budget_execution_1_1_resources_1_1_ninja_icons_1a9062ec97e267f8f224ba7be757956b8c" prot="package" virt="non-virtual"><scope>BudgetExecution::Resources::NinjaIcons</scope><name>BudgetNinja</name></member>
+      <member refid="class_budget_execution_1_1_resources_1_1_ninja_icons_1aec41e35edd94263701fa2eace3573e67" prot="package" virt="non-virtual"><scope>BudgetExecution::Resources::NinjaIcons</scope><name>Culture</name></member>
+      <member refid="class_budget_execution_1_1_resources_1_1_ninja_icons_1af5b6f5c9d3b639d455e6ea0ec8b6aa37" prot="package" virt="non-virtual"><scope>BudgetExecution::Resources::NinjaIcons</scope><name>epa_seal_medium1</name></member>
+      <member refid="class_budget_execution_1_1_resources_1_1_ninja_icons_1a6690d2cc075966fcac94586c93254818" prot="package" virt="non-virtual"><scope>BudgetExecution::Resources::NinjaIcons</scope><name>if_6_1376009</name></member>
+      <member refid="class_budget_execution_1_1_resources_1_1_ninja_icons_1a8466c8ad21066427a8886a87f2eacfef" prot="package" virt="non-virtual"><scope>BudgetExecution::Resources::NinjaIcons</scope><name>if_bar_chart_87411</name></member>
+      <member refid="class_budget_execution_1_1_resources_1_1_ninja_icons_1ac2085dd0af95c341f0868b75605463df" prot="package" virt="non-virtual"><scope>BudgetExecution::Resources::NinjaIcons</scope><name>if_pie_chart_87451</name></member>
+      <member refid="class_budget_execution_1_1_resources_1_1_ninja_icons_1af5e7ad436370db485739d68a0fa44dd7" prot="package" virt="non-virtual"><scope>BudgetExecution::Resources::NinjaIcons</scope><name>if_processing_2799201__1_</name></member>
+      <member refid="class_budget_execution_1_1_resources_1_1_ninja_icons_1a060922878d164185de92dbe2ec8fbbfe" prot="package" virt="non-virtual"><scope>BudgetExecution::Resources::NinjaIcons</scope><name>if_transfer_87476</name></member>
+      <member refid="class_budget_execution_1_1_resources_1_1_ninja_icons_1a54699f55242c3c5f8d31878c10350c40" prot="package" virt="non-virtual"><scope>BudgetExecution::Resources::NinjaIcons</scope><name>NinjaIcons</name></member>
+      <member refid="class_budget_execution_1_1_resources_1_1_ninja_icons_1ae733ae32175e50e03935034668ddb94e" prot="package" virt="non-virtual"><scope>BudgetExecution::Resources::NinjaIcons</scope><name>pie_chart</name></member>
+      <member refid="class_budget_execution_1_1_resources_1_1_ninja_icons_1a7c8f77102fff177af150acbd9a7c9177" prot="package" virt="non-virtual"><scope>BudgetExecution::Resources::NinjaIcons</scope><name>RA</name></member>
+      <member refid="class_budget_execution_1_1_resources_1_1_ninja_icons_1ae0bc049f2df4757b55e33fd5ce1a04e6" prot="package" virt="non-virtual"><scope>BudgetExecution::Resources::NinjaIcons</scope><name>report_icon</name></member>
+      <member refid="class_budget_execution_1_1_resources_1_1_ninja_icons_1a760d6f896715668663ddb8c8682033e0" prot="private" virt="non-virtual"><scope>BudgetExecution::Resources::NinjaIcons</scope><name>resourceCulture</name></member>
+      <member refid="class_budget_execution_1_1_resources_1_1_ninja_icons_1ad4468d6fb2e9bef32f6d8a9057719085" prot="private" virt="non-virtual"><scope>BudgetExecution::Resources::NinjaIcons</scope><name>resourceMan</name></member>
+      <member refid="class_budget_execution_1_1_resources_1_1_ninja_icons_1afa541acfca01d8ad22bc8d0892c6b520" prot="package" virt="non-virtual"><scope>BudgetExecution::Resources::NinjaIcons</scope><name>ResourceManager</name></member>
+      <member refid="class_budget_execution_1_1_resources_1_1_ninja_icons_1aac791c2931e20d623e18a1ce38e19f79" prot="package" virt="non-virtual"><scope>BudgetExecution::Resources::NinjaIcons</scope><name>sf_site_icon</name></member>
+      <member refid="class_budget_execution_1_1_resources_1_1_ninja_icons_1affa057f24a9c04f13f7932fc821c9899" prot="package" virt="non-virtual"><scope>BudgetExecution::Resources::NinjaIcons</scope><name>sql_icon</name></member>
+      <member refid="class_budget_execution_1_1_resources_1_1_ninja_icons_1aff2b6df954cd53c30b8d5a06f4a909bb" prot="package" virt="non-virtual"><scope>BudgetExecution::Resources::NinjaIcons</scope><name>summation_3d_blue_oma_icon</name></member>
+      <member refid="class_budget_execution_1_1_resources_1_1_ninja_icons_1a608541fdecf9170824395b5d4f1b072e" prot="package" virt="non-virtual"><scope>BudgetExecution::Resources::NinjaIcons</scope><name>transfer_icon</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

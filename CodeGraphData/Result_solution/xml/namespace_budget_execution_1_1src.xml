@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="namespace_budget_execution_1_1src" kind="namespace">
+    <compoundname>BudgetExecution::src</compoundname>
+    <innerclass refid="class_budget_execution_1_1src_1_1_award" prot="public">BudgetExecution::src::Award</innerclass>
+    <innerclass refid="class_budget_execution_1_1src_1_1_budget_document" prot="public">BudgetExecution::src::BudgetDocument</innerclass>
+    <innerclass refid="class_budget_execution_1_1src_1_1_c_o_n_t_r_a_c_t_s" prot="public">BudgetExecution::src::CONTRACTS</innerclass>
+    <innerclass refid="class_budget_execution_1_1src_1_1_division__" prot="public">BudgetExecution::src::Division_</innerclass>
+    <innerclass refid="class_budget_execution_1_1src_1_1_division_account" prot="public">BudgetExecution::src::DivisionAccount</innerclass>
+    <innerclass refid="class_budget_execution_1_1src_1_1_e_j" prot="public">BudgetExecution::src::EJ</innerclass>
+    <innerclass refid="class_budget_execution_1_1src_1_1_e_n" prot="public">BudgetExecution::src::EN</innerclass>
+    <innerclass refid="class_budget_execution_1_1src_1_1_e_x_p_e_n_s_e_s" prot="public">BudgetExecution::src::EXPENSES</innerclass>
+    <innerclass refid="class_budget_execution_1_1src_1_1_g_r_a_n_t_s" prot="public">BudgetExecution::src::GRANTS</innerclass>
+    <innerclass refid="class_budget_execution_1_1src_1_1_metro_form1" prot="public">BudgetExecution::src::MetroForm1</innerclass>
+    <innerclass refid="class_budget_execution_1_1src_1_1_obligations" prot="public">BudgetExecution::src::Obligations</innerclass>
+    <innerclass refid="class_budget_execution_1_1src_1_1_region_account" prot="public">BudgetExecution::src::RegionAccount</innerclass>
+    <innerclass refid="class_budget_execution_1_1src_1_1_tool" prot="public">BudgetExecution::src::Tool</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Award.cs" line="2" column="1"/>
+  </compounddef>
+</doxygen>

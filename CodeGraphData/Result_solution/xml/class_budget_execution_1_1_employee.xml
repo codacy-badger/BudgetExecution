@@ -1,0 +1,345 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_budget_execution_1_1_employee" kind="class" prot="public">
+    <compoundname>BudgetExecution::Employee</compoundname>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_budget_execution_1_1_employee_1ae8799e5390576f7ff4db45a7dbedb5a9" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type><ref refid="namespace_budget_execution_1a31d755f9fbeb90de04b7b1e2e21acdc8" kindref="member">Source</ref></type>
+        <definition>Source BudgetExecution.Employee.Source</definition>
+        <argsstring></argsstring>
+        <name>Source</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Employee.cs" line="53" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Employee.cs" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_employee_1a1a94b0a21afe254345756bfc2c2c62cc" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type><ref refid="namespace_budget_execution_1a04fd24d7fd477c1db9884745e14ea571" kindref="member">Provider</ref></type>
+        <definition>Provider BudgetExecution.Employee.Provider</definition>
+        <argsstring></argsstring>
+        <name>Provider</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Employee.cs" line="55" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Employee.cs" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_employee_1a29680ee7054b2948e97396bde1572af2" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type><ref refid="class_budget_execution_1_1_data_builder" kindref="compound">DataBuilder</ref></type>
+        <definition>DataBuilder BudgetExecution.Employee.DbData</definition>
+        <argsstring></argsstring>
+        <name>DbData</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Employee.cs" line="57" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Employee.cs" bodystart="57" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_employee_1ae106e6d39e5d0b1e0a3afb09c953b47b" compoundref="_employee_8cs" startline="12" endline="19">BudgetExecution.Employee.Employee</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_employee_1aa8db0f586c53837597defeea685b9f4a" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type><ref refid="class_budget_execution_1_1_s_q_lite_query" kindref="compound">SQLiteQuery</ref></type>
+        <definition>SQLiteQuery BudgetExecution.Employee.DbQuery</definition>
+        <argsstring></argsstring>
+        <name>DbQuery</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Employee.cs" line="59" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Employee.cs" bodystart="59" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_employee_1ae106e6d39e5d0b1e0a3afb09c953b47b" compoundref="_employee_8cs" startline="12" endline="19">BudgetExecution.Employee.Employee</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_employee_1ae7a72927ec0661536736b2e904d78576" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>DataTable</type>
+        <definition>DataTable BudgetExecution.Employee.DbTable</definition>
+        <argsstring></argsstring>
+        <name>DbTable</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Employee.cs" line="61" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Employee.cs" bodystart="61" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_employee_1ae106e6d39e5d0b1e0a3afb09c953b47b" compoundref="_employee_8cs" startline="12" endline="19">BudgetExecution.Employee.Employee</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_employee_1a3e20046d969185dbf5993a5655a96c3d" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>DataRow</type>
+        <definition>DataRow BudgetExecution.Employee.DbRow</definition>
+        <argsstring></argsstring>
+        <name>DbRow</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Employee.cs" line="63" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Employee.cs" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_employee_1a9aac31acd34e18f5653a5e08265c0bb9" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>int</type>
+        <definition>int BudgetExecution.Employee.ID</definition>
+        <argsstring></argsstring>
+        <name>ID</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Employee.cs" line="65" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Employee.cs" bodystart="65" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_employee_1a8bdab618e42e6890d953a4ab908318e4" compoundref="_employee_8cs" startline="21" endline="37">BudgetExecution.Employee.Employee</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_employee_1af851a9f0fa3b3628d2f1305aa957fecb" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>string</type>
+        <definition>string BudgetExecution.Employee.EmployId</definition>
+        <argsstring></argsstring>
+        <name>EmployId</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Employee.cs" line="67" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Employee.cs" bodystart="67" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_employee_1a8bdab618e42e6890d953a4ab908318e4" compoundref="_employee_8cs" startline="21" endline="37">BudgetExecution.Employee.Employee</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_employee_1a4ea67bd57c7958ac190c6fc263cfa80d" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>string</type>
+        <definition>string BudgetExecution.Employee.First</definition>
+        <argsstring></argsstring>
+        <name>First</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Employee.cs" line="69" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Employee.cs" bodystart="69" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_employee_1a8bdab618e42e6890d953a4ab908318e4" compoundref="_employee_8cs" startline="21" endline="37">BudgetExecution.Employee.Employee</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_employee_1afe2513078369e81ae56d8ff349dd9695" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>string</type>
+        <definition>string BudgetExecution.Employee.HrOrgCode</definition>
+        <argsstring></argsstring>
+        <name>HrOrgCode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Employee.cs" line="71" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Employee.cs" bodystart="71" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_employee_1a8bdab618e42e6890d953a4ab908318e4" compoundref="_employee_8cs" startline="21" endline="37">BudgetExecution.Employee.Employee</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_employee_1ad46826db9b55a3a83ffb7bd0b553dff3" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>string</type>
+        <definition>string BudgetExecution.Employee.HrOrgName</definition>
+        <argsstring></argsstring>
+        <name>HrOrgName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Employee.cs" line="73" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Employee.cs" bodystart="73" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_employee_1a8bdab618e42e6890d953a4ab908318e4" compoundref="_employee_8cs" startline="21" endline="37">BudgetExecution.Employee.Employee</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_employee_1a9db9d1f33d920d2e6ac50cf9c1c5006c" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>string</type>
+        <definition>string BudgetExecution.Employee.Last</definition>
+        <argsstring></argsstring>
+        <name>Last</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Employee.cs" line="75" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Employee.cs" bodystart="75" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_employee_1a8bdab618e42e6890d953a4ab908318e4" compoundref="_employee_8cs" startline="21" endline="37">BudgetExecution.Employee.Employee</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_employee_1ab83ecd3fca8789677dbfc6532fb954e8" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>double</type>
+        <definition>double BudgetExecution.Employee.LeaveHours</definition>
+        <argsstring></argsstring>
+        <name>LeaveHours</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Employee.cs" line="77" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Employee.cs" bodystart="77" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_employee_1a8bdab618e42e6890d953a4ab908318e4" compoundref="_employee_8cs" startline="21" endline="37">BudgetExecution.Employee.Employee</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_employee_1a2a2d9ec4649983115aef5c65db822d3a" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>string</type>
+        <definition>string BudgetExecution.Employee.LeaveType</definition>
+        <argsstring></argsstring>
+        <name>LeaveType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Employee.cs" line="79" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Employee.cs" bodystart="79" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_employee_1a8bdab618e42e6890d953a4ab908318e4" compoundref="_employee_8cs" startline="21" endline="37">BudgetExecution.Employee.Employee</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_employee_1a0ef6ce3770b5317b9891a9b223e0c9ed" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>string</type>
+        <definition>string BudgetExecution.Employee.WorkCode</definition>
+        <argsstring></argsstring>
+        <name>WorkCode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Employee.cs" line="81" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Employee.cs" bodystart="81" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_employee_1a8bdab618e42e6890d953a4ab908318e4" compoundref="_employee_8cs" startline="21" endline="37">BudgetExecution.Employee.Employee</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_budget_execution_1_1_employee_1ae106e6d39e5d0b1e0a3afb09c953b47b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>BudgetExecution.Employee.Employee</definition>
+        <argsstring>()</argsstring>
+        <name>Employee</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Employee.cs" line="12" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Employee.cs" bodystart="12" bodyend="19"/>
+        <references refid="class_budget_execution_1_1_employee_1a29680ee7054b2948e97396bde1572af2" compoundref="_employee_8cs" startline="57">BudgetExecution.Employee.DbData</references>
+        <references refid="class_budget_execution_1_1_employee_1aa8db0f586c53837597defeea685b9f4a" compoundref="_employee_8cs" startline="59">BudgetExecution.Employee.DbQuery</references>
+        <references refid="class_budget_execution_1_1_employee_1ae7a72927ec0661536736b2e904d78576" compoundref="_employee_8cs" startline="61">BudgetExecution.Employee.DbTable</references>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_employee_1a8bdab618e42e6890d953a4ab908318e4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>BudgetExecution.Employee.Employee</definition>
+        <argsstring>(int id, string eid, string hoc, string hon, string wc, string f, string l, string lvt, double leave)</argsstring>
+        <name>Employee</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>eid</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>hoc</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>hon</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>wc</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>l</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>lvt</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>leave</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Employee.cs" line="21" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Employee.cs" bodystart="21" bodyend="37"/>
+        <references refid="class_budget_execution_1_1_employee_1a29680ee7054b2948e97396bde1572af2" compoundref="_employee_8cs" startline="57">BudgetExecution.Employee.DbData</references>
+        <references refid="class_budget_execution_1_1_employee_1aa8db0f586c53837597defeea685b9f4a" compoundref="_employee_8cs" startline="59">BudgetExecution.Employee.DbQuery</references>
+        <references refid="class_budget_execution_1_1_employee_1ae7a72927ec0661536736b2e904d78576" compoundref="_employee_8cs" startline="61">BudgetExecution.Employee.DbTable</references>
+        <references refid="class_budget_execution_1_1_employee_1af851a9f0fa3b3628d2f1305aa957fecb" compoundref="_employee_8cs" startline="67">BudgetExecution.Employee.EmployId</references>
+        <references refid="class_budget_execution_1_1_employee_1a4ea67bd57c7958ac190c6fc263cfa80d" compoundref="_employee_8cs" startline="69">BudgetExecution.Employee.First</references>
+        <references refid="class_budget_execution_1_1_employee_1afe2513078369e81ae56d8ff349dd9695" compoundref="_employee_8cs" startline="71">BudgetExecution.Employee.HrOrgCode</references>
+        <references refid="class_budget_execution_1_1_employee_1ad46826db9b55a3a83ffb7bd0b553dff3" compoundref="_employee_8cs" startline="73">BudgetExecution.Employee.HrOrgName</references>
+        <references refid="class_budget_execution_1_1_employee_1a9aac31acd34e18f5653a5e08265c0bb9" compoundref="_employee_8cs" startline="65">BudgetExecution.Employee.ID</references>
+        <references refid="class_budget_execution_1_1_employee_1a9db9d1f33d920d2e6ac50cf9c1c5006c" compoundref="_employee_8cs" startline="75">BudgetExecution.Employee.Last</references>
+        <references refid="class_budget_execution_1_1_employee_1ab83ecd3fca8789677dbfc6532fb954e8" compoundref="_employee_8cs" startline="77">BudgetExecution.Employee.LeaveHours</references>
+        <references refid="class_budget_execution_1_1_employee_1a2a2d9ec4649983115aef5c65db822d3a" compoundref="_employee_8cs" startline="79">BudgetExecution.Employee.LeaveType</references>
+        <references refid="class_budget_execution_1_1_employee_1a0ef6ce3770b5317b9891a9b223e0c9ed" compoundref="_employee_8cs" startline="81">BudgetExecution.Employee.WorkCode</references>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_employee_1a9591f5ee0f5b328a4fdea3eb091128ad" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>BudgetExecution.Employee.Employee</definition>
+        <argsstring>(DataRow dr)</argsstring>
+        <name>Employee</name>
+        <param>
+          <type>DataRow</type>
+          <declname>dr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Employee.cs" line="39" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Employee.cs" bodystart="39" bodyend="50"/>
+        <references refid="class_budget_execution_1_1_employee_1af851a9f0fa3b3628d2f1305aa957fecb" compoundref="_employee_8cs" startline="67">BudgetExecution.Employee.EmployId</references>
+        <references refid="class_budget_execution_1_1_employee_1a4ea67bd57c7958ac190c6fc263cfa80d" compoundref="_employee_8cs" startline="69">BudgetExecution.Employee.First</references>
+        <references refid="class_budget_execution_1_1_employee_1afe2513078369e81ae56d8ff349dd9695" compoundref="_employee_8cs" startline="71">BudgetExecution.Employee.HrOrgCode</references>
+        <references refid="class_budget_execution_1_1_employee_1ad46826db9b55a3a83ffb7bd0b553dff3" compoundref="_employee_8cs" startline="73">BudgetExecution.Employee.HrOrgName</references>
+        <references refid="class_budget_execution_1_1_employee_1a9aac31acd34e18f5653a5e08265c0bb9" compoundref="_employee_8cs" startline="65">BudgetExecution.Employee.ID</references>
+        <references refid="class_budget_execution_1_1_employee_1a9db9d1f33d920d2e6ac50cf9c1c5006c" compoundref="_employee_8cs" startline="75">BudgetExecution.Employee.Last</references>
+        <references refid="class_budget_execution_1_1_employee_1ab83ecd3fca8789677dbfc6532fb954e8" compoundref="_employee_8cs" startline="77">BudgetExecution.Employee.LeaveHours</references>
+        <references refid="class_budget_execution_1_1_employee_1a2a2d9ec4649983115aef5c65db822d3a" compoundref="_employee_8cs" startline="79">BudgetExecution.Employee.LeaveType</references>
+        <references refid="class_budget_execution_1_1_employee_1a0ef6ce3770b5317b9891a9b223e0c9ed" compoundref="_employee_8cs" startline="81">BudgetExecution.Employee.WorkCode</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Employee.cs" line="10" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Employee.cs" bodystart="9" bodyend="82"/>
+    <listofallmembers>
+      <member refid="class_budget_execution_1_1_employee_1a29680ee7054b2948e97396bde1572af2" prot="public" virt="non-virtual"><scope>BudgetExecution::Employee</scope><name>DbData</name></member>
+      <member refid="class_budget_execution_1_1_employee_1aa8db0f586c53837597defeea685b9f4a" prot="public" virt="non-virtual"><scope>BudgetExecution::Employee</scope><name>DbQuery</name></member>
+      <member refid="class_budget_execution_1_1_employee_1a3e20046d969185dbf5993a5655a96c3d" prot="public" virt="non-virtual"><scope>BudgetExecution::Employee</scope><name>DbRow</name></member>
+      <member refid="class_budget_execution_1_1_employee_1ae7a72927ec0661536736b2e904d78576" prot="public" virt="non-virtual"><scope>BudgetExecution::Employee</scope><name>DbTable</name></member>
+      <member refid="class_budget_execution_1_1_employee_1ae106e6d39e5d0b1e0a3afb09c953b47b" prot="public" virt="non-virtual"><scope>BudgetExecution::Employee</scope><name>Employee</name></member>
+      <member refid="class_budget_execution_1_1_employee_1a8bdab618e42e6890d953a4ab908318e4" prot="public" virt="non-virtual"><scope>BudgetExecution::Employee</scope><name>Employee</name></member>
+      <member refid="class_budget_execution_1_1_employee_1a9591f5ee0f5b328a4fdea3eb091128ad" prot="public" virt="non-virtual"><scope>BudgetExecution::Employee</scope><name>Employee</name></member>
+      <member refid="class_budget_execution_1_1_employee_1af851a9f0fa3b3628d2f1305aa957fecb" prot="public" virt="non-virtual"><scope>BudgetExecution::Employee</scope><name>EmployId</name></member>
+      <member refid="class_budget_execution_1_1_employee_1a4ea67bd57c7958ac190c6fc263cfa80d" prot="public" virt="non-virtual"><scope>BudgetExecution::Employee</scope><name>First</name></member>
+      <member refid="class_budget_execution_1_1_employee_1afe2513078369e81ae56d8ff349dd9695" prot="public" virt="non-virtual"><scope>BudgetExecution::Employee</scope><name>HrOrgCode</name></member>
+      <member refid="class_budget_execution_1_1_employee_1ad46826db9b55a3a83ffb7bd0b553dff3" prot="public" virt="non-virtual"><scope>BudgetExecution::Employee</scope><name>HrOrgName</name></member>
+      <member refid="class_budget_execution_1_1_employee_1a9aac31acd34e18f5653a5e08265c0bb9" prot="public" virt="non-virtual"><scope>BudgetExecution::Employee</scope><name>ID</name></member>
+      <member refid="class_budget_execution_1_1_employee_1a9db9d1f33d920d2e6ac50cf9c1c5006c" prot="public" virt="non-virtual"><scope>BudgetExecution::Employee</scope><name>Last</name></member>
+      <member refid="class_budget_execution_1_1_employee_1ab83ecd3fca8789677dbfc6532fb954e8" prot="public" virt="non-virtual"><scope>BudgetExecution::Employee</scope><name>LeaveHours</name></member>
+      <member refid="class_budget_execution_1_1_employee_1a2a2d9ec4649983115aef5c65db822d3a" prot="public" virt="non-virtual"><scope>BudgetExecution::Employee</scope><name>LeaveType</name></member>
+      <member refid="class_budget_execution_1_1_employee_1a1a94b0a21afe254345756bfc2c2c62cc" prot="public" virt="non-virtual"><scope>BudgetExecution::Employee</scope><name>Provider</name></member>
+      <member refid="class_budget_execution_1_1_employee_1ae8799e5390576f7ff4db45a7dbedb5a9" prot="public" virt="non-virtual"><scope>BudgetExecution::Employee</scope><name>Source</name></member>
+      <member refid="class_budget_execution_1_1_employee_1a0ef6ce3770b5317b9891a9b223e0c9ed" prot="public" virt="non-virtual"><scope>BudgetExecution::Employee</scope><name>WorkCode</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

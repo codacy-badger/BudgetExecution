@@ -1,0 +1,718 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_budget_execution_1_1_excel_query" kind="class" prot="public">
+    <compoundname>BudgetExecution::ExcelQuery</compoundname>
+    <basecompoundref refid="class_budget_execution_1_1_query" prot="public" virt="non-virtual">BudgetExecution.Query</basecompoundref>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_budget_execution_1_1_excel_query_1add6eaef23b6f6b220972c698214bd19d" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>OleDbDataAdapter</type>
+        <definition>OleDbDataAdapter BudgetExecution.ExcelQuery.Adapter</definition>
+        <argsstring></argsstring>
+        <name>Adapter</name>
+        <initializer>data source=C:\Users\terry\Documents\Visual Studio 2017\Projects\Budget\database\sqlclient\R6.mdf&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelQuery.cs" line="55" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelQuery.cs" bodystart="55" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_excel_query_1aef86dc651652b71d21411e6634fb6356" compoundref="_excel_query_8cs" startline="21" endline="35">BudgetExecution.ExcelQuery.ExcelQuery</referencedby>
+        <referencedby refid="class_budget_execution_1_1_excel_query_1a724b01818cf93602762da7c134e35cac" compoundref="_excel_query_8cs" startline="220" endline="231">BudgetExecution.ExcelQuery.GetCommandBuilder</referencedby>
+        <referencedby refid="class_budget_execution_1_1_excel_query_1a5b7cdb3bcb2ce5f7fceb6d7e7bcdd337" compoundref="_excel_query_8cs" startline="318" endline="329">BudgetExecution.ExcelQuery.GetDeleteCommand</referencedby>
+        <referencedby refid="class_budget_execution_1_1_excel_query_1a612f387b7b828227a3f2a16ee206b2d3" compoundref="_excel_query_8cs" startline="331" endline="342">BudgetExecution.ExcelQuery.GetInsertCommand</referencedby>
+        <referencedby refid="class_budget_execution_1_1_excel_query_1a1cc13932e981d4e424a29c24c3004c84" compoundref="_excel_query_8cs" startline="383" endline="394">BudgetExecution.ExcelQuery.GetUpdateCommand</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_excel_query_1afd225852ba75c52fa22ce41a640efa78" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>new OleDbCommandBuilder</type>
+        <definition>new OleDbCommandBuilder BudgetExecution.ExcelQuery.CommandBuilder</definition>
+        <argsstring></argsstring>
+        <name>CommandBuilder</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelQuery.cs" line="57" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelQuery.cs" bodystart="57" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_excel_query_1aef86dc651652b71d21411e6634fb6356" compoundref="_excel_query_8cs" startline="21" endline="35">BudgetExecution.ExcelQuery.ExcelQuery</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_excel_query_1a970e704d5e7823425c647e7b919f8225" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>OleDbConnection</type>
+        <definition>OleDbConnection BudgetExecution.ExcelQuery.Connection</definition>
+        <argsstring></argsstring>
+        <name>Connection</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelQuery.cs" line="59" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelQuery.cs" bodystart="59" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_excel_query_1aef86dc651652b71d21411e6634fb6356" compoundref="_excel_query_8cs" startline="21" endline="35">BudgetExecution.ExcelQuery.ExcelQuery</referencedby>
+        <referencedby refid="class_budget_execution_1_1_excel_query_1a32e67eec41d00e7245391323062a25e2" compoundref="_excel_query_8cs" startline="279" endline="290">BudgetExecution.ExcelQuery.GetDataAdapter</referencedby>
+        <referencedby refid="class_budget_execution_1_1_excel_query_1af15906ace79bbe7d3240436836dbad25" compoundref="_excel_query_8cs" startline="266" endline="277">BudgetExecution.ExcelQuery.GetSelectCommand</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_excel_query_1a87e02ad35b40d5f41d3294f26b8a6886" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>new Dictionary&lt; string, object &gt;</type>
+        <definition>new Dictionary&lt;string, object&gt; BudgetExecution.ExcelQuery.Parameter</definition>
+        <argsstring></argsstring>
+        <name>Parameter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelQuery.cs" line="61" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelQuery.cs" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_excel_query_1a2203a942cdb230fde7f19591cdb4be6b" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>OleDbParameter[]</type>
+        <definition>OleDbParameter [] BudgetExecution.ExcelQuery.Parameters</definition>
+        <argsstring></argsstring>
+        <name>Parameters</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelQuery.cs" line="63" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelQuery.cs" bodystart="63" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_excel_query_1a0e5d42fb7f7dcd5773125d1ea943d5d7" compoundref="_excel_query_8cs" startline="37" endline="52">BudgetExecution.ExcelQuery.ExcelQuery</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_excel_query_1aa7827a7d7fe2255d694c87480fa0451d" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>new OleDbDataReader</type>
+        <definition>new OleDbDataReader BudgetExecution.ExcelQuery.DataReader</definition>
+        <argsstring></argsstring>
+        <name>DataReader</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelQuery.cs" line="65" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelQuery.cs" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_excel_query_1a2caca434073dc1a365165207d8759451" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>new OleDbCommand</type>
+        <definition>new OleDbCommand BudgetExecution.ExcelQuery.SelectCommand</definition>
+        <argsstring></argsstring>
+        <name>SelectCommand</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelQuery.cs" line="67" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelQuery.cs" bodystart="67" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_excel_query_1aef86dc651652b71d21411e6634fb6356" compoundref="_excel_query_8cs" startline="21" endline="35">BudgetExecution.ExcelQuery.ExcelQuery</referencedby>
+        <referencedby refid="class_budget_execution_1_1_excel_query_1aa6bce71ffe8b4035b684de0cfed4151f" compoundref="_excel_query_8cs" startline="233" endline="244">BudgetExecution.ExcelQuery.GetDataAdapter</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_excel_query_1aef076a7df40addaa31c280d8b3b3b30e" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>new string</type>
+        <definition>new string BudgetExecution.ExcelQuery.SelectStatement</definition>
+        <argsstring></argsstring>
+        <name>SelectStatement</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelQuery.cs" line="69" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelQuery.cs" bodystart="69" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_excel_query_1aef86dc651652b71d21411e6634fb6356" compoundref="_excel_query_8cs" startline="21" endline="35">BudgetExecution.ExcelQuery.ExcelQuery</referencedby>
+        <referencedby refid="class_budget_execution_1_1_excel_query_1af15906ace79bbe7d3240436836dbad25" compoundref="_excel_query_8cs" startline="266" endline="277">BudgetExecution.ExcelQuery.GetSelectCommand</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_excel_query_1a904ffdcf19eb8e109df0d820856a3ba9" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>new <ref refid="namespace_budget_execution_1a31d755f9fbeb90de04b7b1e2e21acdc8" kindref="member">Source</ref></type>
+        <definition>new Source BudgetExecution.ExcelQuery.Source</definition>
+        <argsstring></argsstring>
+        <name>Source</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelQuery.cs" line="71" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelQuery.cs" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_excel_query_1aca3be14d174d454d50adef2da87e82e1" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>new <ref refid="namespace_budget_execution_1a04fd24d7fd477c1db9884745e14ea571" kindref="member">Provider</ref></type>
+        <definition>new Provider BudgetExecution.ExcelQuery.Provider</definition>
+        <argsstring></argsstring>
+        <name>Provider</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelQuery.cs" line="73" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelQuery.cs" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_excel_query_1ab0e24535e81442aa808e1f7c40a12032" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>new string</type>
+        <definition>new string BudgetExecution.ExcelQuery.TableName</definition>
+        <argsstring></argsstring>
+        <name>TableName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelQuery.cs" line="75" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelQuery.cs" bodystart="75" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_excel_query_1aef86dc651652b71d21411e6634fb6356" compoundref="_excel_query_8cs" startline="21" endline="35">BudgetExecution.ExcelQuery.ExcelQuery</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_excel_query_1a677d8efd4e76c1a33d9a5cbb4c1b056e" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>new OleDbCommand</type>
+        <definition>new OleDbCommand BudgetExecution.ExcelQuery.UpdateCommand</definition>
+        <argsstring></argsstring>
+        <name>UpdateCommand</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelQuery.cs" line="77" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelQuery.cs" bodystart="77" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_excel_query_1aef86dc651652b71d21411e6634fb6356" compoundref="_excel_query_8cs" startline="21" endline="35">BudgetExecution.ExcelQuery.ExcelQuery</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_excel_query_1ae873ec95863a60ea07403bfcacef191c" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>new OleDbCommand</type>
+        <definition>new OleDbCommand BudgetExecution.ExcelQuery.InsertCommand</definition>
+        <argsstring></argsstring>
+        <name>InsertCommand</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelQuery.cs" line="79" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelQuery.cs" bodystart="79" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_excel_query_1aef86dc651652b71d21411e6634fb6356" compoundref="_excel_query_8cs" startline="21" endline="35">BudgetExecution.ExcelQuery.ExcelQuery</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_excel_query_1aa5c139fd4d4aadd2086d5a8a516cdfca" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>new OleDbCommand</type>
+        <definition>new OleDbCommand BudgetExecution.ExcelQuery.DeleteCommand</definition>
+        <argsstring></argsstring>
+        <name>DeleteCommand</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelQuery.cs" line="81" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelQuery.cs" bodystart="81" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_excel_query_1aef86dc651652b71d21411e6634fb6356" compoundref="_excel_query_8cs" startline="21" endline="35">BudgetExecution.ExcelQuery.ExcelQuery</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_excel_query_1aadb5629110ba02fe994afb65748e2d9a" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>new AppSettingsReader</type>
+        <definition>new AppSettingsReader BudgetExecution.ExcelQuery.Settings</definition>
+        <argsstring></argsstring>
+        <name>Settings</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelQuery.cs" line="83" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelQuery.cs" bodystart="83" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_excel_query_1aef86dc651652b71d21411e6634fb6356" compoundref="_excel_query_8cs" startline="21" endline="35">BudgetExecution.ExcelQuery.ExcelQuery</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_budget_execution_1_1_excel_query_1af5e68ee41a3608afd813474e732bce93" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>BudgetExecution.ExcelQuery.ExcelQuery</definition>
+        <argsstring>()</argsstring>
+        <name>ExcelQuery</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelQuery.cs" line="17" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelQuery.cs" bodystart="17" bodyend="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_excel_query_1aef86dc651652b71d21411e6634fb6356" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>BudgetExecution.ExcelQuery.ExcelQuery</definition>
+        <argsstring>(Source source)</argsstring>
+        <name>ExcelQuery</name>
+        <param>
+          <type><ref refid="namespace_budget_execution_1a31d755f9fbeb90de04b7b1e2e21acdc8" kindref="member">Source</ref></type>
+          <declname>source</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelQuery.cs" line="21" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelQuery.cs" bodystart="21" bodyend="35"/>
+        <references refid="class_budget_execution_1_1_excel_query_1add6eaef23b6f6b220972c698214bd19d" compoundref="_excel_query_8cs" startline="55">BudgetExecution.ExcelQuery.Adapter</references>
+        <references refid="class_budget_execution_1_1_excel_query_1afd225852ba75c52fa22ce41a640efa78" compoundref="_excel_query_8cs" startline="57">BudgetExecution.ExcelQuery.CommandBuilder</references>
+        <references refid="class_budget_execution_1_1_excel_query_1a970e704d5e7823425c647e7b919f8225" compoundref="_excel_query_8cs" startline="59">BudgetExecution.ExcelQuery.Connection</references>
+        <references refid="class_budget_execution_1_1_excel_query_1aa5c139fd4d4aadd2086d5a8a516cdfca" compoundref="_excel_query_8cs" startline="81">BudgetExecution.ExcelQuery.DeleteCommand</references>
+        <references refid="class_budget_execution_1_1_excel_query_1a724b01818cf93602762da7c134e35cac" compoundref="_excel_query_8cs" startline="220" endline="231">BudgetExecution.ExcelQuery.GetCommandBuilder</references>
+        <references refid="class_budget_execution_1_1_excel_query_1ae873ec95863a60ea07403bfcacef191c" compoundref="_excel_query_8cs" startline="79">BudgetExecution.ExcelQuery.InsertCommand</references>
+        <references refid="class_budget_execution_1_1_excel_query_1a2caca434073dc1a365165207d8759451" compoundref="_excel_query_8cs" startline="67">BudgetExecution.ExcelQuery.SelectCommand</references>
+        <references refid="class_budget_execution_1_1_excel_query_1aef076a7df40addaa31c280d8b3b3b30e" compoundref="_excel_query_8cs" startline="69">BudgetExecution.ExcelQuery.SelectStatement</references>
+        <references refid="class_budget_execution_1_1_excel_query_1aadb5629110ba02fe994afb65748e2d9a" compoundref="_excel_query_8cs" startline="83">BudgetExecution.ExcelQuery.Settings</references>
+        <references refid="class_budget_execution_1_1_excel_query_1ab0e24535e81442aa808e1f7c40a12032" compoundref="_excel_query_8cs" startline="75">BudgetExecution.ExcelQuery.TableName</references>
+        <references refid="class_budget_execution_1_1_excel_query_1a677d8efd4e76c1a33d9a5cbb4c1b056e" compoundref="_excel_query_8cs" startline="77">BudgetExecution.ExcelQuery.UpdateCommand</references>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_excel_query_1a0e5d42fb7f7dcd5773125d1ea943d5d7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>BudgetExecution.ExcelQuery.ExcelQuery</definition>
+        <argsstring>(Source source, Dictionary&lt; string, object &gt; param)</argsstring>
+        <name>ExcelQuery</name>
+        <param>
+          <type><ref refid="namespace_budget_execution_1a31d755f9fbeb90de04b7b1e2e21acdc8" kindref="member">Source</ref></type>
+          <declname>source</declname>
+        </param>
+        <param>
+          <type>Dictionary&lt; string, object &gt;</type>
+          <declname>param</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelQuery.cs" line="37" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelQuery.cs" bodystart="37" bodyend="52"/>
+        <references refid="class_budget_execution_1_1_excel_query_1add6eaef23b6f6b220972c698214bd19d" compoundref="_excel_query_8cs" startline="55">BudgetExecution.ExcelQuery.Adapter</references>
+        <references refid="class_budget_execution_1_1_excel_query_1afd225852ba75c52fa22ce41a640efa78" compoundref="_excel_query_8cs" startline="57">BudgetExecution.ExcelQuery.CommandBuilder</references>
+        <references refid="class_budget_execution_1_1_excel_query_1a970e704d5e7823425c647e7b919f8225" compoundref="_excel_query_8cs" startline="59">BudgetExecution.ExcelQuery.Connection</references>
+        <references refid="class_budget_execution_1_1_excel_query_1aa5c139fd4d4aadd2086d5a8a516cdfca" compoundref="_excel_query_8cs" startline="81">BudgetExecution.ExcelQuery.DeleteCommand</references>
+        <references refid="class_budget_execution_1_1_excel_query_1a724b01818cf93602762da7c134e35cac" compoundref="_excel_query_8cs" startline="220" endline="231">BudgetExecution.ExcelQuery.GetCommandBuilder</references>
+        <references refid="class_budget_execution_1_1_excel_query_1a775fe084caa32ea4f36c7cda68e4b0af" compoundref="_excel_query_8cs" startline="86" endline="103">BudgetExecution.ExcelQuery.GetParameter</references>
+        <references refid="class_budget_execution_1_1_excel_query_1a0d5f529e9a61d4bc56c0a5933dfe3c96" compoundref="_excel_query_8cs" startline="357" endline="368">BudgetExecution.ExcelQuery.GetSqlStatement</references>
+        <references refid="class_budget_execution_1_1_excel_query_1ae873ec95863a60ea07403bfcacef191c" compoundref="_excel_query_8cs" startline="79">BudgetExecution.ExcelQuery.InsertCommand</references>
+        <references refid="class_budget_execution_1_1_excel_query_1a2203a942cdb230fde7f19591cdb4be6b" compoundref="_excel_query_8cs" startline="63">BudgetExecution.ExcelQuery.Parameters</references>
+        <references refid="class_budget_execution_1_1_excel_query_1a2caca434073dc1a365165207d8759451" compoundref="_excel_query_8cs" startline="67">BudgetExecution.ExcelQuery.SelectCommand</references>
+        <references refid="class_budget_execution_1_1_excel_query_1aef076a7df40addaa31c280d8b3b3b30e" compoundref="_excel_query_8cs" startline="69">BudgetExecution.ExcelQuery.SelectStatement</references>
+        <references refid="class_budget_execution_1_1_excel_query_1aadb5629110ba02fe994afb65748e2d9a" compoundref="_excel_query_8cs" startline="83">BudgetExecution.ExcelQuery.Settings</references>
+        <references refid="class_budget_execution_1_1_excel_query_1ab0e24535e81442aa808e1f7c40a12032" compoundref="_excel_query_8cs" startline="75">BudgetExecution.ExcelQuery.TableName</references>
+        <references refid="class_budget_execution_1_1_excel_query_1a677d8efd4e76c1a33d9a5cbb4c1b056e" compoundref="_excel_query_8cs" startline="77">BudgetExecution.ExcelQuery.UpdateCommand</references>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_excel_query_1a775fe084caa32ea4f36c7cda68e4b0af" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>OleDbParameter[]</type>
+        <definition>OleDbParameter [] BudgetExecution.ExcelQuery.GetParameter</definition>
+        <argsstring>(DataRow dr)</argsstring>
+        <name>GetParameter</name>
+        <param>
+          <type>DataRow</type>
+          <declname>dr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelQuery.cs" line="86" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelQuery.cs" bodystart="86" bodyend="103"/>
+        <referencedby refid="class_budget_execution_1_1_excel_query_1a0e5d42fb7f7dcd5773125d1ea943d5d7" compoundref="_excel_query_8cs" startline="37" endline="52">BudgetExecution.ExcelQuery.ExcelQuery</referencedby>
+        <referencedby refid="class_budget_execution_1_1_excel_query_1acdd5cd61258c109f513202ba5fd2861e" compoundref="_excel_query_8cs" startline="161" endline="178">BudgetExecution.ExcelQuery.GetParameter</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_excel_query_1a205aed1bd7393dbbe93c3eabde3fc98d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>new OleDbParameter[]</type>
+        <definition>new OleDbParameter [] BudgetExecution.ExcelQuery.GetParameter</definition>
+        <argsstring>(Dictionary&lt; string, object &gt; param)</argsstring>
+        <name>GetParameter</name>
+        <param>
+          <type>Dictionary&lt; string, object &gt;</type>
+          <declname>param</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelQuery.cs" line="105" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelQuery.cs" bodystart="105" bodyend="140"/>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_excel_query_1a6edb4ce784651d50a29dca12dc6d4a13" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; OleDbParameter &gt;</type>
+        <definition>List&lt;OleDbParameter&gt; BudgetExecution.ExcelQuery.GetParameters</definition>
+        <argsstring>(DataRow dr)</argsstring>
+        <name>GetParameters</name>
+        <param>
+          <type>DataRow</type>
+          <declname>dr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelQuery.cs" line="142" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelQuery.cs" bodystart="142" bodyend="159"/>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_excel_query_1acdd5cd61258c109f513202ba5fd2861e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; OleDbParameter[]&gt;</type>
+        <definition>List&lt;OleDbParameter[]&gt; BudgetExecution.ExcelQuery.GetParameter</definition>
+        <argsstring>(DataTable table)</argsstring>
+        <name>GetParameter</name>
+        <param>
+          <type>DataTable</type>
+          <declname>table</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelQuery.cs" line="161" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelQuery.cs" bodystart="161" bodyend="178"/>
+        <references refid="class_budget_execution_1_1_excel_query_1a775fe084caa32ea4f36c7cda68e4b0af" compoundref="_excel_query_8cs" startline="86" endline="103">BudgetExecution.ExcelQuery.GetParameter</references>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_excel_query_1ad691264df8643a593cfeb9c2df5a64a8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>OleDbCommandBuilder</type>
+        <definition>OleDbCommandBuilder BudgetExecution.ExcelQuery.GetCommandBuilder</definition>
+        <argsstring>(OleDbDataAdapter adapter)</argsstring>
+        <name>GetCommandBuilder</name>
+        <param>
+          <type>OleDbDataAdapter</type>
+          <declname>adapter</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelQuery.cs" line="292" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelQuery.cs" bodystart="292" bodyend="303"/>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_excel_query_1a106de8bc12af0fb7f001a5acb30ef7d3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>OleDbDataAdapter</type>
+        <definition>OleDbDataAdapter BudgetExecution.ExcelQuery.GetDataAdapter</definition>
+        <argsstring>(OleDbCommand command)</argsstring>
+        <name>GetDataAdapter</name>
+        <param>
+          <type>OleDbCommand</type>
+          <declname>command</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelQuery.cs" line="305" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelQuery.cs" bodystart="305" bodyend="316"/>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_excel_query_1a5b7cdb3bcb2ce5f7fceb6d7e7bcdd337" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>OleDbCommand</type>
+        <definition>OleDbCommand BudgetExecution.ExcelQuery.GetDeleteCommand</definition>
+        <argsstring>()</argsstring>
+        <name>GetDeleteCommand</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelQuery.cs" line="318" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelQuery.cs" bodystart="318" bodyend="329"/>
+        <references refid="class_budget_execution_1_1_excel_query_1add6eaef23b6f6b220972c698214bd19d" compoundref="_excel_query_8cs" startline="55">BudgetExecution.ExcelQuery.Adapter</references>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_excel_query_1a612f387b7b828227a3f2a16ee206b2d3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>OleDbCommand</type>
+        <definition>OleDbCommand BudgetExecution.ExcelQuery.GetInsertCommand</definition>
+        <argsstring>()</argsstring>
+        <name>GetInsertCommand</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelQuery.cs" line="331" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelQuery.cs" bodystart="331" bodyend="342"/>
+        <references refid="class_budget_execution_1_1_excel_query_1add6eaef23b6f6b220972c698214bd19d" compoundref="_excel_query_8cs" startline="55">BudgetExecution.ExcelQuery.Adapter</references>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_excel_query_1a0fd3497daf3a7ea2c4498ee38baad653" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>OleDbCommand</type>
+        <definition>OleDbCommand BudgetExecution.ExcelQuery.GetSelectCommand</definition>
+        <argsstring>(string select)</argsstring>
+        <name>GetSelectCommand</name>
+        <param>
+          <type>string</type>
+          <declname>select</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelQuery.cs" line="344" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelQuery.cs" bodystart="344" bodyend="355"/>
+        <references refid="class_budget_execution_1_1_excel_query_1a970e704d5e7823425c647e7b919f8225" compoundref="_excel_query_8cs" startline="59">BudgetExecution.ExcelQuery.Connection</references>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_excel_query_1a0d5f529e9a61d4bc56c0a5933dfe3c96" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>string BudgetExecution.ExcelQuery.GetSqlStatement</definition>
+        <argsstring>()</argsstring>
+        <name>GetSqlStatement</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelQuery.cs" line="357" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelQuery.cs" bodystart="357" bodyend="368"/>
+        <referencedby refid="class_budget_execution_1_1_excel_query_1a0e5d42fb7f7dcd5773125d1ea943d5d7" compoundref="_excel_query_8cs" startline="37" endline="52">BudgetExecution.ExcelQuery.ExcelQuery</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_excel_query_1a820179cd4ae2df6ce8fb539a7a0cf3a3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>new string</type>
+        <definition>new string BudgetExecution.ExcelQuery.GetSqlStatement</definition>
+        <argsstring>(string sql)</argsstring>
+        <name>GetSqlStatement</name>
+        <reimplements refid="interface_budget_execution_1_1_i_query_1aa2842d58a8b3757ec44159bace4adb86">GetSqlStatement</reimplements>
+        <param>
+          <type>string</type>
+          <declname>sql</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelQuery.cs" line="370" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelQuery.cs" bodystart="370" bodyend="381"/>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_excel_query_1a1cc13932e981d4e424a29c24c3004c84" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>OleDbCommand</type>
+        <definition>OleDbCommand BudgetExecution.ExcelQuery.GetUpdateCommand</definition>
+        <argsstring>()</argsstring>
+        <name>GetUpdateCommand</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelQuery.cs" line="383" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelQuery.cs" bodystart="383" bodyend="394"/>
+        <references refid="class_budget_execution_1_1_excel_query_1add6eaef23b6f6b220972c698214bd19d" compoundref="_excel_query_8cs" startline="55">BudgetExecution.ExcelQuery.Adapter</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="package-func">
+      <memberdef kind="function" id="class_budget_execution_1_1_excel_query_1a9e933b0e16c3a8d6c883596016dcdf14" prot="package" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>new string</type>
+        <definition>new string BudgetExecution.ExcelQuery.GetSelectParamString</definition>
+        <argsstring>(Dictionary&lt; string, object &gt; param)</argsstring>
+        <name>GetSelectParamString</name>
+        <param>
+          <type>Dictionary&lt; string, object &gt;</type>
+          <declname>param</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelQuery.cs" line="180" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelQuery.cs" bodystart="180" bodyend="198"/>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_excel_query_1aff243147c0bc9f2cdbb30aadfb3919af" prot="package" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>string BudgetExecution.ExcelQuery.GetSelectParamString</definition>
+        <argsstring>(OleDbParameter[] param)</argsstring>
+        <name>GetSelectParamString</name>
+        <param>
+          <type>OleDbParameter[]</type>
+          <declname>param</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelQuery.cs" line="200" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelQuery.cs" bodystart="200" bodyend="218"/>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_excel_query_1a32e67eec41d00e7245391323062a25e2" prot="package" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>OleDbDataAdapter</type>
+        <definition>OleDbDataAdapter BudgetExecution.ExcelQuery.GetDataAdapter</definition>
+        <argsstring>(string sql)</argsstring>
+        <name>GetDataAdapter</name>
+        <param>
+          <type>string</type>
+          <declname>sql</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelQuery.cs" line="279" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelQuery.cs" bodystart="279" bodyend="290"/>
+        <references refid="class_budget_execution_1_1_excel_query_1a970e704d5e7823425c647e7b919f8225" compoundref="_excel_query_8cs" startline="59">BudgetExecution.ExcelQuery.Connection</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_budget_execution_1_1_excel_query_1a724b01818cf93602762da7c134e35cac" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>OleDbCommandBuilder</type>
+        <definition>OleDbCommandBuilder BudgetExecution.ExcelQuery.GetCommandBuilder</definition>
+        <argsstring>()</argsstring>
+        <name>GetCommandBuilder</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelQuery.cs" line="220" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelQuery.cs" bodystart="220" bodyend="231"/>
+        <references refid="class_budget_execution_1_1_excel_query_1add6eaef23b6f6b220972c698214bd19d" compoundref="_excel_query_8cs" startline="55">BudgetExecution.ExcelQuery.Adapter</references>
+        <referencedby refid="class_budget_execution_1_1_excel_query_1aef86dc651652b71d21411e6634fb6356" compoundref="_excel_query_8cs" startline="21" endline="35">BudgetExecution.ExcelQuery.ExcelQuery</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_excel_query_1aa6bce71ffe8b4035b684de0cfed4151f" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>OleDbDataAdapter</type>
+        <definition>OleDbDataAdapter BudgetExecution.ExcelQuery.GetDataAdapter</definition>
+        <argsstring>()</argsstring>
+        <name>GetDataAdapter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelQuery.cs" line="233" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelQuery.cs" bodystart="233" bodyend="244"/>
+        <references refid="class_budget_execution_1_1_excel_query_1a2caca434073dc1a365165207d8759451" compoundref="_excel_query_8cs" startline="67">BudgetExecution.ExcelQuery.SelectCommand</references>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_excel_query_1ae545dbb1ba25e6775e9eb881bd10fe1d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>string BudgetExecution.ExcelQuery.GetParamString</definition>
+        <argsstring>(Dictionary&lt; string, object &gt; param)</argsstring>
+        <name>GetParamString</name>
+        <param>
+          <type>Dictionary&lt; string, object &gt;</type>
+          <declname>param</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelQuery.cs" line="246" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelQuery.cs" bodystart="246" bodyend="264"/>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_excel_query_1af15906ace79bbe7d3240436836dbad25" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>OleDbCommand</type>
+        <definition>OleDbCommand BudgetExecution.ExcelQuery.GetSelectCommand</definition>
+        <argsstring>()</argsstring>
+        <name>GetSelectCommand</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelQuery.cs" line="266" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelQuery.cs" bodystart="266" bodyend="277"/>
+        <references refid="class_budget_execution_1_1_excel_query_1a970e704d5e7823425c647e7b919f8225" compoundref="_excel_query_8cs" startline="59">BudgetExecution.ExcelQuery.Connection</references>
+        <references refid="class_budget_execution_1_1_excel_query_1aef076a7df40addaa31c280d8b3b3b30e" compoundref="_excel_query_8cs" startline="69">BudgetExecution.ExcelQuery.SelectStatement</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="154">
+        <label>Query</label>
+        <link refid="class_budget_execution_1_1_query"/>
+        <childnode refid="155" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="155">
+        <label>IQuery</label>
+        <link refid="interface_budget_execution_1_1_i_query"/>
+      </node>
+      <node id="153">
+        <label>BudgetExecution.ExcelQuery</label>
+        <link refid="class_budget_execution_1_1_excel_query"/>
+        <childnode refid="154" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="157">
+        <label>Query</label>
+        <link refid="class_budget_execution_1_1_query"/>
+        <childnode refid="158" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="158">
+        <label>IQuery</label>
+        <link refid="interface_budget_execution_1_1_i_query"/>
+      </node>
+      <node id="156">
+        <label>BudgetExecution.ExcelQuery</label>
+        <link refid="class_budget_execution_1_1_excel_query"/>
+        <childnode refid="157" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelQuery.cs" line="15" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/ExcelQuery.cs" bodystart="14" bodyend="396"/>
+    <listofallmembers>
+      <member refid="class_budget_execution_1_1_excel_query_1add6eaef23b6f6b220972c698214bd19d" prot="public" virt="non-virtual"><scope>BudgetExecution::ExcelQuery</scope><name>Adapter</name></member>
+      <member refid="class_budget_execution_1_1_excel_query_1afd225852ba75c52fa22ce41a640efa78" prot="public" virt="non-virtual"><scope>BudgetExecution::ExcelQuery</scope><name>CommandBuilder</name></member>
+      <member refid="class_budget_execution_1_1_excel_query_1a970e704d5e7823425c647e7b919f8225" prot="public" virt="non-virtual"><scope>BudgetExecution::ExcelQuery</scope><name>Connection</name></member>
+      <member refid="class_budget_execution_1_1_query_1af6875711ab1b64c9ce292af444775254" prot="public" virt="non-virtual"><scope>BudgetExecution::ExcelQuery</scope><name>DataAdapter</name></member>
+      <member refid="class_budget_execution_1_1_query_1a30a7ea77df2d3ee79b26d19ba1f63715" prot="public" virt="non-virtual"><scope>BudgetExecution::ExcelQuery</scope><name>DataCommand</name></member>
+      <member refid="class_budget_execution_1_1_query_1a5d3e0eb71a917adad7c9aea449190719" prot="public" virt="non-virtual"><scope>BudgetExecution::ExcelQuery</scope><name>DataConnection</name></member>
+      <member refid="class_budget_execution_1_1_excel_query_1aa7827a7d7fe2255d694c87480fa0451d" prot="public" virt="non-virtual"><scope>BudgetExecution::ExcelQuery</scope><name>DataReader</name></member>
+      <member refid="class_budget_execution_1_1_excel_query_1aa5c139fd4d4aadd2086d5a8a516cdfca" prot="public" virt="non-virtual"><scope>BudgetExecution::ExcelQuery</scope><name>DeleteCommand</name></member>
+      <member refid="class_budget_execution_1_1_excel_query_1af5e68ee41a3608afd813474e732bce93" prot="public" virt="non-virtual"><scope>BudgetExecution::ExcelQuery</scope><name>ExcelQuery</name></member>
+      <member refid="class_budget_execution_1_1_excel_query_1aef86dc651652b71d21411e6634fb6356" prot="public" virt="non-virtual"><scope>BudgetExecution::ExcelQuery</scope><name>ExcelQuery</name></member>
+      <member refid="class_budget_execution_1_1_excel_query_1a0e5d42fb7f7dcd5773125d1ea943d5d7" prot="public" virt="non-virtual"><scope>BudgetExecution::ExcelQuery</scope><name>ExcelQuery</name></member>
+      <member refid="class_budget_execution_1_1_excel_query_1a724b01818cf93602762da7c134e35cac" prot="private" virt="non-virtual"><scope>BudgetExecution::ExcelQuery</scope><name>GetCommandBuilder</name></member>
+      <member refid="class_budget_execution_1_1_excel_query_1ad691264df8643a593cfeb9c2df5a64a8" prot="public" virt="non-virtual"><scope>BudgetExecution::ExcelQuery</scope><name>GetCommandBuilder</name></member>
+      <member refid="class_budget_execution_1_1_query_1a5d369c4710c09997a72980c5005b4336" prot="public" virt="non-virtual" ambiguityscope="BudgetExecution::Query."><scope>BudgetExecution::ExcelQuery</scope><name>GetCommandBuilder</name></member>
+      <member refid="class_budget_execution_1_1_query_1a4ff9054aab453792f181553bc53452d9" prot="public" virt="non-virtual"><scope>BudgetExecution::ExcelQuery</scope><name>GetConnection</name></member>
+      <member refid="class_budget_execution_1_1_excel_query_1aa6bce71ffe8b4035b684de0cfed4151f" prot="private" virt="non-virtual"><scope>BudgetExecution::ExcelQuery</scope><name>GetDataAdapter</name></member>
+      <member refid="class_budget_execution_1_1_excel_query_1a32e67eec41d00e7245391323062a25e2" prot="package" virt="non-virtual"><scope>BudgetExecution::ExcelQuery</scope><name>GetDataAdapter</name></member>
+      <member refid="class_budget_execution_1_1_excel_query_1a106de8bc12af0fb7f001a5acb30ef7d3" prot="public" virt="non-virtual"><scope>BudgetExecution::ExcelQuery</scope><name>GetDataAdapter</name></member>
+      <member refid="class_budget_execution_1_1_query_1ae23dc6bdc04cc0e4a4c5393c4dd3af11" prot="public" virt="non-virtual" ambiguityscope="BudgetExecution::Query."><scope>BudgetExecution::ExcelQuery</scope><name>GetDataAdapter</name></member>
+      <member refid="class_budget_execution_1_1_query_1ab142a6ee9dd9a68f29670d6798ab8aed" prot="public" virt="non-virtual"><scope>BudgetExecution::ExcelQuery</scope><name>GetDataCommand</name></member>
+      <member refid="class_budget_execution_1_1_query_1a8e5d8e2c6f179967389871b36510abb6" prot="public" virt="non-virtual"><scope>BudgetExecution::ExcelQuery</scope><name>GetDataCommand</name></member>
+      <member refid="class_budget_execution_1_1_query_1a6c1f606fca9fdd4448abcf160a24e23a" prot="public" virt="non-virtual"><scope>BudgetExecution::ExcelQuery</scope><name>GetDataReader</name></member>
+      <member refid="class_budget_execution_1_1_excel_query_1a5b7cdb3bcb2ce5f7fceb6d7e7bcdd337" prot="public" virt="non-virtual"><scope>BudgetExecution::ExcelQuery</scope><name>GetDeleteCommand</name></member>
+      <member refid="class_budget_execution_1_1_excel_query_1a612f387b7b828227a3f2a16ee206b2d3" prot="public" virt="non-virtual"><scope>BudgetExecution::ExcelQuery</scope><name>GetInsertCommand</name></member>
+      <member refid="class_budget_execution_1_1_query_1a9bed3985968278d5d8f3dc7cf5205063" prot="public" virt="non-virtual" ambiguityscope="BudgetExecution::Query."><scope>BudgetExecution::ExcelQuery</scope><name>GetInsertCommand</name></member>
+      <member refid="class_budget_execution_1_1_excel_query_1a775fe084caa32ea4f36c7cda68e4b0af" prot="public" virt="non-virtual"><scope>BudgetExecution::ExcelQuery</scope><name>GetParameter</name></member>
+      <member refid="class_budget_execution_1_1_excel_query_1a205aed1bd7393dbbe93c3eabde3fc98d" prot="public" virt="non-virtual"><scope>BudgetExecution::ExcelQuery</scope><name>GetParameter</name></member>
+      <member refid="class_budget_execution_1_1_excel_query_1acdd5cd61258c109f513202ba5fd2861e" prot="public" virt="non-virtual"><scope>BudgetExecution::ExcelQuery</scope><name>GetParameter</name></member>
+      <member refid="class_budget_execution_1_1_excel_query_1a6edb4ce784651d50a29dca12dc6d4a13" prot="public" virt="non-virtual"><scope>BudgetExecution::ExcelQuery</scope><name>GetParameters</name></member>
+      <member refid="class_budget_execution_1_1_query_1ac94a37521ac8bb2be818316d999bc72c" prot="public" virt="non-virtual"><scope>BudgetExecution::ExcelQuery</scope><name>GetParameterStrings</name></member>
+      <member refid="class_budget_execution_1_1_excel_query_1ae545dbb1ba25e6775e9eb881bd10fe1d" prot="private" virt="non-virtual"><scope>BudgetExecution::ExcelQuery</scope><name>GetParamString</name></member>
+      <member refid="class_budget_execution_1_1_excel_query_1af15906ace79bbe7d3240436836dbad25" prot="private" virt="non-virtual"><scope>BudgetExecution::ExcelQuery</scope><name>GetSelectCommand</name></member>
+      <member refid="class_budget_execution_1_1_excel_query_1a0fd3497daf3a7ea2c4498ee38baad653" prot="public" virt="non-virtual"><scope>BudgetExecution::ExcelQuery</scope><name>GetSelectCommand</name></member>
+      <member refid="class_budget_execution_1_1_query_1a89bcf1357d2ce762d75c9568ba495ccd" prot="public" virt="non-virtual" ambiguityscope="BudgetExecution::Query."><scope>BudgetExecution::ExcelQuery</scope><name>GetSelectCommand</name></member>
+      <member refid="class_budget_execution_1_1_query_1a8a2fd19247d68d729ca5bf35b6799899" prot="package" virt="non-virtual" ambiguityscope="BudgetExecution::Query."><scope>BudgetExecution::ExcelQuery</scope><name>GetSelectCommand</name></member>
+      <member refid="class_budget_execution_1_1_query_1a7f4e08a4325e421cf835806f5183e54e" prot="package" virt="non-virtual" ambiguityscope="BudgetExecution::Query."><scope>BudgetExecution::ExcelQuery</scope><name>GetSelectCommand</name></member>
+      <member refid="class_budget_execution_1_1_excel_query_1a9e933b0e16c3a8d6c883596016dcdf14" prot="package" virt="non-virtual"><scope>BudgetExecution::ExcelQuery</scope><name>GetSelectParamString</name></member>
+      <member refid="class_budget_execution_1_1_excel_query_1aff243147c0bc9f2cdbb30aadfb3919af" prot="package" virt="non-virtual"><scope>BudgetExecution::ExcelQuery</scope><name>GetSelectParamString</name></member>
+      <member refid="class_budget_execution_1_1_query_1ac2cedaeae2b343b23d07431bd4fafa50" prot="package" virt="non-virtual" ambiguityscope="BudgetExecution::Query."><scope>BudgetExecution::ExcelQuery</scope><name>GetSelectParamString</name></member>
+      <member refid="class_budget_execution_1_1_query_1a08096e37c1e374bb58e436528f3334a5" prot="public" virt="non-virtual"><scope>BudgetExecution::ExcelQuery</scope><name>GetSelectStatement</name></member>
+      <member refid="class_budget_execution_1_1_query_1ae47ef9c0909a89836b55a836fb5dd016" prot="public" virt="non-virtual"><scope>BudgetExecution::ExcelQuery</scope><name>GetSelectStatement</name></member>
+      <member refid="class_budget_execution_1_1_excel_query_1a0d5f529e9a61d4bc56c0a5933dfe3c96" prot="public" virt="non-virtual"><scope>BudgetExecution::ExcelQuery</scope><name>GetSqlStatement</name></member>
+      <member refid="class_budget_execution_1_1_excel_query_1a820179cd4ae2df6ce8fb539a7a0cf3a3" prot="public" virt="non-virtual"><scope>BudgetExecution::ExcelQuery</scope><name>GetSqlStatement</name></member>
+      <member refid="class_budget_execution_1_1_excel_query_1a1cc13932e981d4e424a29c24c3004c84" prot="public" virt="non-virtual"><scope>BudgetExecution::ExcelQuery</scope><name>GetUpdateCommand</name></member>
+      <member refid="class_budget_execution_1_1_query_1a08b6db0b73304180b3eff8cf452624dc" prot="public" virt="non-virtual" ambiguityscope="BudgetExecution::Query."><scope>BudgetExecution::ExcelQuery</scope><name>GetUpdateCommand</name></member>
+      <member refid="class_budget_execution_1_1_excel_query_1ae873ec95863a60ea07403bfcacef191c" prot="public" virt="non-virtual"><scope>BudgetExecution::ExcelQuery</scope><name>InsertCommand</name></member>
+      <member refid="class_budget_execution_1_1_excel_query_1a87e02ad35b40d5f41d3294f26b8a6886" prot="public" virt="non-virtual"><scope>BudgetExecution::ExcelQuery</scope><name>Parameter</name></member>
+      <member refid="class_budget_execution_1_1_excel_query_1a2203a942cdb230fde7f19591cdb4be6b" prot="public" virt="non-virtual"><scope>BudgetExecution::ExcelQuery</scope><name>Parameters</name></member>
+      <member refid="class_budget_execution_1_1_excel_query_1aca3be14d174d454d50adef2da87e82e1" prot="public" virt="non-virtual"><scope>BudgetExecution::ExcelQuery</scope><name>Provider</name></member>
+      <member refid="class_budget_execution_1_1_query_1a40722151896556e0cebb56b6b9d21aae" prot="public" virt="non-virtual"><scope>BudgetExecution::ExcelQuery</scope><name>Query</name></member>
+      <member refid="class_budget_execution_1_1_query_1a7d8a0322cf47af235248f08480580ec3" prot="public" virt="non-virtual"><scope>BudgetExecution::ExcelQuery</scope><name>Query</name></member>
+      <member refid="class_budget_execution_1_1_query_1a80c2ae93ffecd0b012640e70aa8c07ce" prot="public" virt="non-virtual"><scope>BudgetExecution::ExcelQuery</scope><name>Query</name></member>
+      <member refid="class_budget_execution_1_1_excel_query_1a2caca434073dc1a365165207d8759451" prot="public" virt="non-virtual"><scope>BudgetExecution::ExcelQuery</scope><name>SelectCommand</name></member>
+      <member refid="class_budget_execution_1_1_excel_query_1aef076a7df40addaa31c280d8b3b3b30e" prot="public" virt="non-virtual"><scope>BudgetExecution::ExcelQuery</scope><name>SelectStatement</name></member>
+      <member refid="class_budget_execution_1_1_excel_query_1aadb5629110ba02fe994afb65748e2d9a" prot="public" virt="non-virtual"><scope>BudgetExecution::ExcelQuery</scope><name>Settings</name></member>
+      <member refid="class_budget_execution_1_1_excel_query_1a904ffdcf19eb8e109df0d820856a3ba9" prot="public" virt="non-virtual"><scope>BudgetExecution::ExcelQuery</scope><name>Source</name></member>
+      <member refid="class_budget_execution_1_1_query_1a969c9fc5662b6e2e55cc3be6ae93c9f6" prot="public" virt="non-virtual"><scope>BudgetExecution::ExcelQuery</scope><name>SqlStatement</name></member>
+      <member refid="class_budget_execution_1_1_excel_query_1ab0e24535e81442aa808e1f7c40a12032" prot="public" virt="non-virtual"><scope>BudgetExecution::ExcelQuery</scope><name>TableName</name></member>
+      <member refid="class_budget_execution_1_1_excel_query_1a677d8efd4e76c1a33d9a5cbb4c1b056e" prot="public" virt="non-virtual"><scope>BudgetExecution::ExcelQuery</scope><name>UpdateCommand</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

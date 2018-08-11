@@ -1,0 +1,1992 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_budget_execution_1_1_sql_server_data" kind="class" prot="public">
+    <compoundname>BudgetExecution::SqlServerData</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MetroForm</basecompoundref>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_budget_execution_1_1_sql_server_data_1abe6492fc90b1bec1aef56d0c29e1d526" prot="private" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type>SQLiteDataAdapter</type>
+        <definition>SQLiteDataAdapter BudgetExecution.SqlServerData.Adapter</definition>
+        <argsstring></argsstring>
+        <name>Adapter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.cs" line="24" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.cs" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_sql_server_data_1a174d2f9285c1522a2396784e53f2f70c" prot="private" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type><ref refid="class_budget_execution_1_1_data_builder" kindref="compound">DataBuilder</ref></type>
+        <definition>DataBuilder BudgetExecution.SqlServerData.DbData</definition>
+        <argsstring></argsstring>
+        <name>DbData</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.cs" line="26" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.cs" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_sql_server_data_1ac0da229797e916c141e1778dbc826c99" prot="private" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type><ref refid="class_budget_execution_1_1_prc_metric" kindref="compound">PrcMetric</ref></type>
+        <definition>PrcMetric BudgetExecution.SqlServerData.Metric</definition>
+        <argsstring></argsstring>
+        <name>Metric</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.cs" line="28" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.cs" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_sql_server_data_1a74521b522ece306df39091b4a84ad8fa" prot="private" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>Dictionary&lt; string, object &gt;</type>
+        <definition>Dictionary&lt;string, object&gt; BudgetExecution.SqlServerData.Parameter</definition>
+        <argsstring></argsstring>
+        <name>Parameter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.cs" line="30" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.cs" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_sql_server_data_1a31b5aa77026f9e686cb5446cbd7b1cfc" prot="private" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>Dictionary&lt; string, string[]&gt;</type>
+        <definition>Dictionary&lt;string, string[]&gt; BudgetExecution.SqlServerData.ProgramElements</definition>
+        <argsstring></argsstring>
+        <name>ProgramElements</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.cs" line="32" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.cs" bodystart="32" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_sql_server_data_1a33f618679fe63e209a0fbe6572171af5" compoundref="_sql_server_data_8cs" startline="64" endline="86">BudgetExecution.SqlServerData.FundFilter_ItemSelected</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_sql_server_data_1add37a8e84af53bd31900b0dfe3f1b4a3" prot="private" static="no" readable="no" writable="no" gettable="yes" settable="no">
+        <type><ref refid="class_budget_execution_1_1_query" kindref="compound">Query</ref></type>
+        <definition>Query BudgetExecution.SqlServerData.Query</definition>
+        <argsstring></argsstring>
+        <name>Query</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.cs" line="34" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.cs" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_sql_server_data_1a357b16337fba272b03d19c01fbd06909" prot="private" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>DataTable</type>
+        <definition>DataTable BudgetExecution.SqlServerData.Table</definition>
+        <argsstring></argsstring>
+        <name>Table</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.cs" line="36" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.cs" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_budget_execution_1_1_sql_server_data_1a262fb15dff92f439a7cf3605a5ae64b0" prot="private" static="no" mutable="no">
+        <type>System.ComponentModel.IContainer</type>
+        <definition>System.ComponentModel.IContainer BudgetExecution.SqlServerData.components</definition>
+        <argsstring></argsstring>
+        <name>components</name>
+        <initializer>= null</initializer>
+        <briefdescription>
+<para>Required designer variable. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" line="9" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" bodystart="9" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_sql_server_data_1ab04a48ff31a2f48094eda08ffdd053ce" compoundref="_sql_server_data_8designer_8cs" startline="15" endline="22">BudgetExecution.SqlServerData.Dispose</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_sql_server_data_1a5c97544b5caebb8e691e42e938c96840" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.GroupBox</type>
+        <definition>System.Windows.Forms.GroupBox BudgetExecution.SqlServerData.groupBox1</definition>
+        <argsstring></argsstring>
+        <name>groupBox1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" line="1931" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" bodystart="1931" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_sql_server_data_1a9822a9c8f7ae5bc130e3805f66b66469" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.DataGridView</type>
+        <definition>System.Windows.Forms.DataGridView BudgetExecution.SqlServerData.Grid</definition>
+        <argsstring></argsstring>
+        <name>Grid</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" line="1932" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" bodystart="1932" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_sql_server_data_1a2a48af27ba9ff68f93911c7e649dff3a" compoundref="_sql_server_data_8designer_8cs" startline="30" endline="1928">BudgetExecution.SqlServerData.InitializeComponent</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_sql_server_data_1acfd129206316afa0f91b928a13cb617c" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.GroupBox</type>
+        <definition>System.Windows.Forms.GroupBox BudgetExecution.SqlServerData.groupBox2</definition>
+        <argsstring></argsstring>
+        <name>groupBox2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" line="1933" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" bodystart="1933" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_sql_server_data_1a555e9ab13cd6479b240c559e490d497d" prot="private" static="no" mutable="no">
+        <type>Syncfusion.Windows.Forms.Grid.GridDataBoundGrid</type>
+        <definition>Syncfusion.Windows.Forms.Grid.GridDataBoundGrid BudgetExecution.SqlServerData.E6DataGrid</definition>
+        <argsstring></argsstring>
+        <name>E6DataGrid</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" line="1934" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" bodystart="1934" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_sql_server_data_1a2a48af27ba9ff68f93911c7e649dff3a" compoundref="_sql_server_data_8designer_8cs" startline="30" endline="1928">BudgetExecution.SqlServerData.InitializeComponent</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_sql_server_data_1ae9244fb20e396b34270d0686bbfe4c45" prot="private" static="no" mutable="no">
+        <type>MetroSet_UI.Controls.MetroSetComboBox</type>
+        <definition>MetroSet_UI.Controls.MetroSetComboBox BudgetExecution.SqlServerData.MasterFilter1</definition>
+        <argsstring></argsstring>
+        <name>MasterFilter1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" line="1935" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" bodystart="1935" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_sql_server_data_1a7690bdbd558712d988ac3e61511a2b34" prot="private" static="no" mutable="no">
+        <type>Syncfusion.Windows.Forms.Tools.toolstripitem</type>
+        <definition>Syncfusion.Windows.Forms.Tools.toolstripitem BudgetExecution.SqlServerData.toolstripitem1</definition>
+        <argsstring></argsstring>
+        <name>toolstripitem1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" line="1936" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" bodystart="1936" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_sql_server_data_1a006fa32ea719eecd2de4f36ff46e9c36" prot="private" static="no" mutable="no">
+        <type>MetroSet_UI.Controls.MetroSetComboBox</type>
+        <definition>MetroSet_UI.Controls.MetroSetComboBox BudgetExecution.SqlServerData.MasterFIlter2</definition>
+        <argsstring></argsstring>
+        <name>MasterFIlter2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" line="1937" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" bodystart="1937" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_sql_server_data_1ac7304c106beb94baf5710009fad91d4b" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripButton</type>
+        <definition>System.Windows.Forms.ToolStripButton BudgetExecution.SqlServerData.bindingNavigatorAddNewItem</definition>
+        <argsstring></argsstring>
+        <name>bindingNavigatorAddNewItem</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" line="1938" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" bodystart="1938" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_sql_server_data_1a7aeeef39146500477b15d705c105f5e7" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripLabel</type>
+        <definition>System.Windows.Forms.ToolStripLabel BudgetExecution.SqlServerData.bindingNavigatorCountItem</definition>
+        <argsstring></argsstring>
+        <name>bindingNavigatorCountItem</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" line="1939" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" bodystart="1939" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_sql_server_data_1a5765f2ae7d194dc179dee846b656e500" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripButton</type>
+        <definition>System.Windows.Forms.ToolStripButton BudgetExecution.SqlServerData.bindingNavigatorDeleteItem</definition>
+        <argsstring></argsstring>
+        <name>bindingNavigatorDeleteItem</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" line="1940" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" bodystart="1940" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_sql_server_data_1a0874ff929659e60cc2cc246691216346" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripButton</type>
+        <definition>System.Windows.Forms.ToolStripButton BudgetExecution.SqlServerData.bindingNavigatorMoveFirstItem</definition>
+        <argsstring></argsstring>
+        <name>bindingNavigatorMoveFirstItem</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" line="1941" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" bodystart="1941" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_sql_server_data_1add13b13b9bd4e9b48c9e6cb5c7b96eb1" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripButton</type>
+        <definition>System.Windows.Forms.ToolStripButton BudgetExecution.SqlServerData.bindingNavigatorMovePreviousItem</definition>
+        <argsstring></argsstring>
+        <name>bindingNavigatorMovePreviousItem</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" line="1942" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" bodystart="1942" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_sql_server_data_1abbecd8d9d011dd7047d90cdaa80e8276" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripSeparator</type>
+        <definition>System.Windows.Forms.ToolStripSeparator BudgetExecution.SqlServerData.bindingNavigatorSeparator</definition>
+        <argsstring></argsstring>
+        <name>bindingNavigatorSeparator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" line="1943" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" bodystart="1943" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_sql_server_data_1a0d78675b8235a4d77b7fb3e7df615c1e" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripTextBox</type>
+        <definition>System.Windows.Forms.ToolStripTextBox BudgetExecution.SqlServerData.bindingNavigatorPositionItem</definition>
+        <argsstring></argsstring>
+        <name>bindingNavigatorPositionItem</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" line="1944" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" bodystart="1944" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_sql_server_data_1a3f744f6af2c6c9960e5b03327ef79757" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripSeparator</type>
+        <definition>System.Windows.Forms.ToolStripSeparator BudgetExecution.SqlServerData.bindingNavigatorSeparator1</definition>
+        <argsstring></argsstring>
+        <name>bindingNavigatorSeparator1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" line="1945" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" bodystart="1945" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_sql_server_data_1a3ed7bee3c1c5b951c811d9270b94d2ce" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripButton</type>
+        <definition>System.Windows.Forms.ToolStripButton BudgetExecution.SqlServerData.bindingNavigatorMoveNextItem</definition>
+        <argsstring></argsstring>
+        <name>bindingNavigatorMoveNextItem</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" line="1946" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" bodystart="1946" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_sql_server_data_1ab4f1661cebf99e7478bb093dadc4093c" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripButton</type>
+        <definition>System.Windows.Forms.ToolStripButton BudgetExecution.SqlServerData.bindingNavigatorMoveLastItem</definition>
+        <argsstring></argsstring>
+        <name>bindingNavigatorMoveLastItem</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" line="1947" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" bodystart="1947" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_sql_server_data_1aadba1347aa6b548505069c69f6433a03" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripSeparator</type>
+        <definition>System.Windows.Forms.ToolStripSeparator BudgetExecution.SqlServerData.bindingNavigatorSeparator2</definition>
+        <argsstring></argsstring>
+        <name>bindingNavigatorSeparator2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" line="1948" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" bodystart="1948" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_sql_server_data_1a6879b8f8f3161a31388a1a4c37d2b6da" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripButton</type>
+        <definition>System.Windows.Forms.ToolStripButton BudgetExecution.SqlServerData.toolStripButton1</definition>
+        <argsstring></argsstring>
+        <name>toolStripButton1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" line="1949" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" bodystart="1949" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_sql_server_data_1a6ae39f5940c6b28ad879dcd3ff8d91c6" prot="private" static="no" mutable="no">
+        <type>MetroFramework.Controls.MetroPanel</type>
+        <definition>MetroFramework.Controls.MetroPanel BudgetExecution.SqlServerData.metroPanel1</definition>
+        <argsstring></argsstring>
+        <name>metroPanel1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" line="1950" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" bodystart="1950" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_sql_server_data_1ab73cf78686676ab52261c0357bab52d5" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripButton</type>
+        <definition>System.Windows.Forms.ToolStripButton BudgetExecution.SqlServerData.toolStripButton2</definition>
+        <argsstring></argsstring>
+        <name>toolStripButton2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" line="1951" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" bodystart="1951" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_sql_server_data_1a012346e1f2c3851936f80fe9099579af" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.BindingNavigator</type>
+        <definition>System.Windows.Forms.BindingNavigator BudgetExecution.SqlServerData.GridNavigator</definition>
+        <argsstring></argsstring>
+        <name>GridNavigator</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" line="1952" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" bodystart="1952" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_sql_server_data_1a2a48af27ba9ff68f93911c7e649dff3a" compoundref="_sql_server_data_8designer_8cs" startline="30" endline="1928">BudgetExecution.SqlServerData.InitializeComponent</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_sql_server_data_1a40048898a875436d5efb87375a83cd80" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripLabel</type>
+        <definition>System.Windows.Forms.ToolStripLabel BudgetExecution.SqlServerData.bindingNavigatorCountItem1</definition>
+        <argsstring></argsstring>
+        <name>bindingNavigatorCountItem1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" line="1953" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" bodystart="1953" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_sql_server_data_1a7ed7761f1efbfc23750323742eaee28b" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripSeparator</type>
+        <definition>System.Windows.Forms.ToolStripSeparator BudgetExecution.SqlServerData.bindingNavigatorSeparator3</definition>
+        <argsstring></argsstring>
+        <name>bindingNavigatorSeparator3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" line="1954" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" bodystart="1954" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_sql_server_data_1ac41642293a4413227d9c84efddbac8a5" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripTextBox</type>
+        <definition>System.Windows.Forms.ToolStripTextBox BudgetExecution.SqlServerData.bindingNavigatorPositionItem1</definition>
+        <argsstring></argsstring>
+        <name>bindingNavigatorPositionItem1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" line="1955" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" bodystart="1955" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_sql_server_data_1adb117623c3c1f266aba44b11f481386d" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripSeparator</type>
+        <definition>System.Windows.Forms.ToolStripSeparator BudgetExecution.SqlServerData.bindingNavigatorSeparator4</definition>
+        <argsstring></argsstring>
+        <name>bindingNavigatorSeparator4</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" line="1956" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" bodystart="1956" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_sql_server_data_1a83bc45c29cbbcbc893c1b2a7ee9463b7" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripButton</type>
+        <definition>System.Windows.Forms.ToolStripButton BudgetExecution.SqlServerData.bindingNavigatorMoveNextItem1</definition>
+        <argsstring></argsstring>
+        <name>bindingNavigatorMoveNextItem1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" line="1957" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" bodystart="1957" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_sql_server_data_1ad42b2877a7b020f1af2515d14f6cb387" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripSeparator</type>
+        <definition>System.Windows.Forms.ToolStripSeparator BudgetExecution.SqlServerData.bindingNavigatorSeparator5</definition>
+        <argsstring></argsstring>
+        <name>bindingNavigatorSeparator5</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" line="1958" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" bodystart="1958" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_sql_server_data_1a676f3d9162fb9c861f2564e457671426" prot="private" static="no" mutable="no">
+        <type>MetroSet_UI.Controls.MetroSetComboBox</type>
+        <definition>MetroSet_UI.Controls.MetroSetComboBox BudgetExecution.SqlServerData.MasterFilter3</definition>
+        <argsstring></argsstring>
+        <name>MasterFilter3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" line="1959" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" bodystart="1959" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_sql_server_data_1ad7966afa4cb46ccc1890518f32af6153" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label BudgetExecution.SqlServerData.label3</definition>
+        <argsstring></argsstring>
+        <name>label3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" line="1960" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" bodystart="1960" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_sql_server_data_1afc5a6fd79ab62278408621fe021c7128" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label BudgetExecution.SqlServerData.label2</definition>
+        <argsstring></argsstring>
+        <name>label2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" line="1961" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" bodystart="1961" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_sql_server_data_1a5563945ea32a9c7afbc2d19ce5c79e25" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label BudgetExecution.SqlServerData.label1</definition>
+        <argsstring></argsstring>
+        <name>label1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" line="1962" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" bodystart="1962" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_sql_server_data_1abaa34e292a65aba9722b6cef394765fa" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.BindingSource</type>
+        <definition>System.Windows.Forms.BindingSource BudgetExecution.SqlServerData.BindingSource</definition>
+        <argsstring></argsstring>
+        <name>BindingSource</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" line="1963" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" bodystart="1963" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_sql_server_data_1a2a48af27ba9ff68f93911c7e649dff3a" compoundref="_sql_server_data_8designer_8cs" startline="30" endline="1928">BudgetExecution.SqlServerData.InitializeComponent</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_sql_server_data_1a8c6191799758870e58be817b93c91e66" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripButton</type>
+        <definition>System.Windows.Forms.ToolStripButton BudgetExecution.SqlServerData.toolStripButton3</definition>
+        <argsstring></argsstring>
+        <name>toolStripButton3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" line="1964" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" bodystart="1964" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_sql_server_data_1aa4e887c82bdce9293a32bc1e604766fc" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripButton</type>
+        <definition>System.Windows.Forms.ToolStripButton BudgetExecution.SqlServerData.toolStripButton4</definition>
+        <argsstring></argsstring>
+        <name>toolStripButton4</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" line="1965" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" bodystart="1965" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_sql_server_data_1ac72b8b9b272713cdd130d63918a31fd5" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripSeparator</type>
+        <definition>System.Windows.Forms.ToolStripSeparator BudgetExecution.SqlServerData.toolStripSeparator1</definition>
+        <argsstring></argsstring>
+        <name>toolStripSeparator1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" line="1966" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" bodystart="1966" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_sql_server_data_1a794b3e9d30909641b6b87c2c9baaed30" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripButton</type>
+        <definition>System.Windows.Forms.ToolStripButton BudgetExecution.SqlServerData.toolStripButton5</definition>
+        <argsstring></argsstring>
+        <name>toolStripButton5</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" line="1967" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" bodystart="1967" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_sql_server_data_1a56138fe59be1e6afe15c2f0d6e19a5a0" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripSeparator</type>
+        <definition>System.Windows.Forms.ToolStripSeparator BudgetExecution.SqlServerData.toolStripSeparator2</definition>
+        <argsstring></argsstring>
+        <name>toolStripSeparator2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" line="1968" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" bodystart="1968" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_sql_server_data_1a494f4e5fe57ebd15bfb5dad5c541a061" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripButton</type>
+        <definition>System.Windows.Forms.ToolStripButton BudgetExecution.SqlServerData.toolStripButton7</definition>
+        <argsstring></argsstring>
+        <name>toolStripButton7</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" line="1969" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" bodystart="1969" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_sql_server_data_1aae06e0740223930759c7a5b97f39145b" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripSeparator</type>
+        <definition>System.Windows.Forms.ToolStripSeparator BudgetExecution.SqlServerData.toolStripSeparator4</definition>
+        <argsstring></argsstring>
+        <name>toolStripSeparator4</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" line="1970" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" bodystart="1970" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_sql_server_data_1aa2dbdc658ce54a55d6d0bc090494cd85" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripButton</type>
+        <definition>System.Windows.Forms.ToolStripButton BudgetExecution.SqlServerData.toolStripButton9</definition>
+        <argsstring></argsstring>
+        <name>toolStripButton9</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" line="1971" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" bodystart="1971" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_sql_server_data_1af61a25c746c633583029618b5133cf8e" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripSeparator</type>
+        <definition>System.Windows.Forms.ToolStripSeparator BudgetExecution.SqlServerData.toolStripSeparator6</definition>
+        <argsstring></argsstring>
+        <name>toolStripSeparator6</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" line="1972" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" bodystart="1972" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_sql_server_data_1abe0718262ef35f61e42c3b45d1859d43" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripButton</type>
+        <definition>System.Windows.Forms.ToolStripButton BudgetExecution.SqlServerData.toolStripButton8</definition>
+        <argsstring></argsstring>
+        <name>toolStripButton8</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" line="1973" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" bodystart="1973" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_sql_server_data_1aeeebe4828ca9487f73cac9057ab33275" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripSeparator</type>
+        <definition>System.Windows.Forms.ToolStripSeparator BudgetExecution.SqlServerData.toolStripSeparator5</definition>
+        <argsstring></argsstring>
+        <name>toolStripSeparator5</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" line="1974" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" bodystart="1974" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_sql_server_data_1acbeb8480915f710a9f07bafb24831e6a" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripButton</type>
+        <definition>System.Windows.Forms.ToolStripButton BudgetExecution.SqlServerData.toolStripButton6</definition>
+        <argsstring></argsstring>
+        <name>toolStripButton6</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" line="1975" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" bodystart="1975" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_sql_server_data_1ade902962fb8b3f1ca02484259906e858" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.ToolStripSeparator</type>
+        <definition>System.Windows.Forms.ToolStripSeparator BudgetExecution.SqlServerData.toolStripSeparator3</definition>
+        <argsstring></argsstring>
+        <name>toolStripSeparator3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" line="1976" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" bodystart="1976" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_sql_server_data_1aa2ba9b9dc21f0808a4421a3886c7196b" prot="private" static="no" mutable="no">
+        <type>Syncfusion.Windows.Forms.Tools.TabControlAdv</type>
+        <definition>Syncfusion.Windows.Forms.Tools.TabControlAdv BudgetExecution.SqlServerData.tabControlAdv1</definition>
+        <argsstring></argsstring>
+        <name>tabControlAdv1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" line="1977" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" bodystart="1977" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_sql_server_data_1a2a48af27ba9ff68f93911c7e649dff3a" compoundref="_sql_server_data_8designer_8cs" startline="30" endline="1928">BudgetExecution.SqlServerData.InitializeComponent</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_sql_server_data_1ab1b1aeda54b20247db37ec08b46148da" prot="private" static="no" mutable="no">
+        <type>Syncfusion.Windows.Forms.Tools.TabPageAdv</type>
+        <definition>Syncfusion.Windows.Forms.Tools.TabPageAdv BudgetExecution.SqlServerData.tabPageAdv1</definition>
+        <argsstring></argsstring>
+        <name>tabPageAdv1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" line="1978" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" bodystart="1978" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_sql_server_data_1a690230b66ce708d25354631e0218b4fa" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Button</type>
+        <definition>System.Windows.Forms.Button BudgetExecution.SqlServerData.button2</definition>
+        <argsstring></argsstring>
+        <name>button2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" line="1979" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" bodystart="1979" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_sql_server_data_1ae9db0bfdc576c2284d673ead6418f632" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Button</type>
+        <definition>System.Windows.Forms.Button BudgetExecution.SqlServerData.button3</definition>
+        <argsstring></argsstring>
+        <name>button3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" line="1980" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" bodystart="1980" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_sql_server_data_1a3aa08a2a2a5f00368fc4f53ceb9c0e35" prot="private" static="no" mutable="no">
+        <type>MetroSet_UI.Controls.MetroSetTextBox</type>
+        <definition>MetroSet_UI.Controls.MetroSetTextBox BudgetExecution.SqlServerData.metroSetTextBox9</definition>
+        <argsstring></argsstring>
+        <name>metroSetTextBox9</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" line="1981" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" bodystart="1981" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_sql_server_data_1a8e81f5fa367e20473bc040918bc5511f" prot="private" static="no" mutable="no">
+        <type>MetroSet_UI.Controls.MetroSetTextBox</type>
+        <definition>MetroSet_UI.Controls.MetroSetTextBox BudgetExecution.SqlServerData.metroSetTextBox10</definition>
+        <argsstring></argsstring>
+        <name>metroSetTextBox10</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" line="1982" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" bodystart="1982" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_sql_server_data_1a06a77574f65fbc70b082a7b3b1e74ba1" prot="private" static="no" mutable="no">
+        <type>MetroSet_UI.Controls.MetroSetComboBox</type>
+        <definition>MetroSet_UI.Controls.MetroSetComboBox BudgetExecution.SqlServerData.metroSetComboBox5</definition>
+        <argsstring></argsstring>
+        <name>metroSetComboBox5</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" line="1983" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" bodystart="1983" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_sql_server_data_1aa922c5f7592c0a7ddb990d7c21cc3284" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label BudgetExecution.SqlServerData.label8</definition>
+        <argsstring></argsstring>
+        <name>label8</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" line="1984" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" bodystart="1984" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_sql_server_data_1a2198d816518c22390d7898945cb81010" prot="private" static="no" mutable="no">
+        <type>MetroSet_UI.Controls.MetroSetTextBox</type>
+        <definition>MetroSet_UI.Controls.MetroSetTextBox BudgetExecution.SqlServerData.metroSetTextBox11</definition>
+        <argsstring></argsstring>
+        <name>metroSetTextBox11</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" line="1985" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" bodystart="1985" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_sql_server_data_1a0162b61a02f7b341dbe5a5732124f1ef" prot="private" static="no" mutable="no">
+        <type>MetroSet_UI.Controls.MetroSetTextBox</type>
+        <definition>MetroSet_UI.Controls.MetroSetTextBox BudgetExecution.SqlServerData.metroSetTextBox12</definition>
+        <argsstring></argsstring>
+        <name>metroSetTextBox12</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" line="1986" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" bodystart="1986" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_sql_server_data_1a1438f42b27fdbf96c222672d04ae4554" prot="private" static="no" mutable="no">
+        <type>MetroSet_UI.Controls.MetroSetComboBox</type>
+        <definition>MetroSet_UI.Controls.MetroSetComboBox BudgetExecution.SqlServerData.metroSetComboBox6</definition>
+        <argsstring></argsstring>
+        <name>metroSetComboBox6</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" line="1987" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" bodystart="1987" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_sql_server_data_1ac3549f98744f9b39b48c5d892e6b7bc4" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label BudgetExecution.SqlServerData.label9</definition>
+        <argsstring></argsstring>
+        <name>label9</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" line="1988" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" bodystart="1988" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_sql_server_data_1a0ce00a4d3ad57177b6cc4faba5d28269" prot="private" static="no" mutable="no">
+        <type>MetroSet_UI.Controls.MetroSetTextBox</type>
+        <definition>MetroSet_UI.Controls.MetroSetTextBox BudgetExecution.SqlServerData.metroSetTextBox13</definition>
+        <argsstring></argsstring>
+        <name>metroSetTextBox13</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" line="1989" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" bodystart="1989" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_sql_server_data_1aa604c1ff54a149c563b63dd216cdb2ad" prot="private" static="no" mutable="no">
+        <type>MetroSet_UI.Controls.MetroSetTextBox</type>
+        <definition>MetroSet_UI.Controls.MetroSetTextBox BudgetExecution.SqlServerData.metroSetTextBox14</definition>
+        <argsstring></argsstring>
+        <name>metroSetTextBox14</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" line="1990" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" bodystart="1990" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_sql_server_data_1a4a445e5c121ec69505138835ba6e07bc" prot="private" static="no" mutable="no">
+        <type>MetroSet_UI.Controls.MetroSetTextBox</type>
+        <definition>MetroSet_UI.Controls.MetroSetTextBox BudgetExecution.SqlServerData.metroSetTextBox15</definition>
+        <argsstring></argsstring>
+        <name>metroSetTextBox15</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" line="1991" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" bodystart="1991" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_sql_server_data_1a1119001cab663a61bebddbeba068ebd0" prot="private" static="no" mutable="no">
+        <type>MetroSet_UI.Controls.MetroSetComboBox</type>
+        <definition>MetroSet_UI.Controls.MetroSetComboBox BudgetExecution.SqlServerData.metroSetComboBox7</definition>
+        <argsstring></argsstring>
+        <name>metroSetComboBox7</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" line="1992" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" bodystart="1992" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_sql_server_data_1a874fd11ea293e1a03d25fe466037d543" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label BudgetExecution.SqlServerData.label10</definition>
+        <argsstring></argsstring>
+        <name>label10</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" line="1993" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" bodystart="1993" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_sql_server_data_1a508ad3a937bb8b80302292f4acc4c0cb" prot="private" static="no" mutable="no">
+        <type>MetroSet_UI.Controls.MetroSetComboBox</type>
+        <definition>MetroSet_UI.Controls.MetroSetComboBox BudgetExecution.SqlServerData.metroSetComboBox8</definition>
+        <argsstring></argsstring>
+        <name>metroSetComboBox8</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" line="1994" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" bodystart="1994" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_sql_server_data_1ab584ce77e353b0e8bbf1b086cd8fa921" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label BudgetExecution.SqlServerData.label11</definition>
+        <argsstring></argsstring>
+        <name>label11</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" line="1995" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" bodystart="1995" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_sql_server_data_1a713935cbd5c8c0ba65e579085b16f436" prot="private" static="no" mutable="no">
+        <type>MetroSet_UI.Controls.MetroSetTextBox</type>
+        <definition>MetroSet_UI.Controls.MetroSetTextBox BudgetExecution.SqlServerData.metroSetTextBox16</definition>
+        <argsstring></argsstring>
+        <name>metroSetTextBox16</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" line="1996" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" bodystart="1996" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_sql_server_data_1a9ba217355a43751d5553986f74ba3704" prot="private" static="no" mutable="no">
+        <type>Syncfusion.Windows.Forms.Tools.TabPageAdv</type>
+        <definition>Syncfusion.Windows.Forms.Tools.TabPageAdv BudgetExecution.SqlServerData.tabPageAdv2</definition>
+        <argsstring></argsstring>
+        <name>tabPageAdv2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" line="1997" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" bodystart="1997" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_sql_server_data_1a7a25ba8ff37262a1ddc133635ed35ed3" prot="private" static="no" mutable="no">
+        <type>Syncfusion.Windows.Forms.Tools.HubTile</type>
+        <definition>Syncfusion.Windows.Forms.Tools.HubTile BudgetExecution.SqlServerData.hubTile6</definition>
+        <argsstring></argsstring>
+        <name>hubTile6</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" line="1998" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" bodystart="1998" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_sql_server_data_1a054811d966058eaeebb1443a0765ed2f" prot="private" static="no" mutable="no">
+        <type>Syncfusion.Windows.Forms.Tools.HubTile</type>
+        <definition>Syncfusion.Windows.Forms.Tools.HubTile BudgetExecution.SqlServerData.hubTile7</definition>
+        <argsstring></argsstring>
+        <name>hubTile7</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" line="1999" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" bodystart="1999" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_sql_server_data_1a53e5b1950eafe08ab59d8c9715bea966" prot="private" static="no" mutable="no">
+        <type>Syncfusion.Windows.Forms.Tools.HubTile</type>
+        <definition>Syncfusion.Windows.Forms.Tools.HubTile BudgetExecution.SqlServerData.hubTile8</definition>
+        <argsstring></argsstring>
+        <name>hubTile8</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" line="2000" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" bodystart="2000" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_sql_server_data_1a8dfe1c778112dce07fa59f82c42567c7" prot="private" static="no" mutable="no">
+        <type>Syncfusion.Windows.Forms.Tools.TabPageAdv</type>
+        <definition>Syncfusion.Windows.Forms.Tools.TabPageAdv BudgetExecution.SqlServerData.tabPageAdv3</definition>
+        <argsstring></argsstring>
+        <name>tabPageAdv3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" line="2001" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" bodystart="2001" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_sql_server_data_1a68d629876618fc785afa3e5384e8d753" prot="private" static="no" mutable="no">
+        <type>Syncfusion.Windows.Forms.Tools.HubTile</type>
+        <definition>Syncfusion.Windows.Forms.Tools.HubTile BudgetExecution.SqlServerData.hubTile2</definition>
+        <argsstring></argsstring>
+        <name>hubTile2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" line="2002" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" bodystart="2002" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_sql_server_data_1a41290daa86e0b34b7cfbaf4c70f617a9" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Button</type>
+        <definition>System.Windows.Forms.Button BudgetExecution.SqlServerData.button1</definition>
+        <argsstring></argsstring>
+        <name>button1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" line="2003" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" bodystart="2003" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_sql_server_data_1aaff994f3a6123798916c199cf3792a7f" prot="private" static="no" mutable="no">
+        <type>MetroSet_UI.Controls.MetroSetComboBox</type>
+        <definition>MetroSet_UI.Controls.MetroSetComboBox BudgetExecution.SqlServerData.metroSetComboBox1</definition>
+        <argsstring></argsstring>
+        <name>metroSetComboBox1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" line="2004" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" bodystart="2004" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_sql_server_data_1add94cabd084a69de66e6622becef8bc4" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label BudgetExecution.SqlServerData.label4</definition>
+        <argsstring></argsstring>
+        <name>label4</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" line="2005" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" bodystart="2005" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_sql_server_data_1a9bfb044070a583d3cf856511e6d1f090" prot="private" static="no" mutable="no">
+        <type>MetroSet_UI.Controls.MetroSetComboBox</type>
+        <definition>MetroSet_UI.Controls.MetroSetComboBox BudgetExecution.SqlServerData.metroSetComboBox2</definition>
+        <argsstring></argsstring>
+        <name>metroSetComboBox2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" line="2006" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" bodystart="2006" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_sql_server_data_1a33be83c97c25dc46511b4d4d02f3a8b8" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label BudgetExecution.SqlServerData.label5</definition>
+        <argsstring></argsstring>
+        <name>label5</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" line="2007" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" bodystart="2007" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_sql_server_data_1af46783df77650da31c8c0bfc249fa90f" prot="private" static="no" mutable="no">
+        <type>MetroSet_UI.Controls.MetroSetComboBox</type>
+        <definition>MetroSet_UI.Controls.MetroSetComboBox BudgetExecution.SqlServerData.metroSetComboBox3</definition>
+        <argsstring></argsstring>
+        <name>metroSetComboBox3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" line="2008" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" bodystart="2008" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_sql_server_data_1aa51f77ebfad7c62fbf6da43a26455932" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label BudgetExecution.SqlServerData.label6</definition>
+        <argsstring></argsstring>
+        <name>label6</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" line="2009" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" bodystart="2009" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_sql_server_data_1a43c4c6f8a954767cf24301e0719bc798" prot="private" static="no" mutable="no">
+        <type>MetroSet_UI.Controls.MetroSetComboBox</type>
+        <definition>MetroSet_UI.Controls.MetroSetComboBox BudgetExecution.SqlServerData.metroSetComboBox4</definition>
+        <argsstring></argsstring>
+        <name>metroSetComboBox4</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" line="2010" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" bodystart="2010" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_sql_server_data_1af34db3208daa162f7d9c0eff8aa63f8e" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label BudgetExecution.SqlServerData.label7</definition>
+        <argsstring></argsstring>
+        <name>label7</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" line="2011" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" bodystart="2011" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_sql_server_data_1a8b3103b359ccfb78e8847aa5c372755c" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.GroupBox</type>
+        <definition>System.Windows.Forms.GroupBox BudgetExecution.SqlServerData.groupBox3</definition>
+        <argsstring></argsstring>
+        <name>groupBox3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" line="2012" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" bodystart="2012" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_sql_server_data_1aab46bca5e254c72cd8a3d8f9d391aece" prot="private" static="no" mutable="no">
+        <type>MetroSet_UI.Controls.MetroSetComboBox</type>
+        <definition>MetroSet_UI.Controls.MetroSetComboBox BudgetExecution.SqlServerData.metroSetComboBox10</definition>
+        <argsstring></argsstring>
+        <name>metroSetComboBox10</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" line="2013" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" bodystart="2013" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_sql_server_data_1a5a9e2d7364d1c26d23874be3babf017a" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Button</type>
+        <definition>System.Windows.Forms.Button BudgetExecution.SqlServerData.RemoveButton</definition>
+        <argsstring></argsstring>
+        <name>RemoveButton</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" line="2014" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" bodystart="2014" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_sql_server_data_1a243191e1310351e562e550027b8e9c42" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Button</type>
+        <definition>System.Windows.Forms.Button BudgetExecution.SqlServerData.CopyButton</definition>
+        <argsstring></argsstring>
+        <name>CopyButton</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" line="2015" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" bodystart="2015" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_sql_server_data_1a69019172ed812ca9d19ac411ec010b90" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Button</type>
+        <definition>System.Windows.Forms.Button BudgetExecution.SqlServerData.AddButton</definition>
+        <argsstring></argsstring>
+        <name>AddButton</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" line="2016" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" bodystart="2016" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_sql_server_data_1af59202ed644d2da0a2299cd159b884bf" prot="private" static="no" mutable="no">
+        <type>SqlServer</type>
+        <definition>SqlServer BudgetExecution.SqlServerData.SqlServer</definition>
+        <argsstring></argsstring>
+        <name>SqlServer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" line="2017" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" bodystart="2017" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_sql_server_data_1a2a48af27ba9ff68f93911c7e649dff3a" compoundref="_sql_server_data_8designer_8cs" startline="30" endline="1928">BudgetExecution.SqlServerData.InitializeComponent</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_sql_server_data_1a4885da46f0b7d267205b1fe73a495147" prot="private" static="no" mutable="no">
+        <type>SqlServerTableAdapters.PRCTableAdapter</type>
+        <definition>SqlServerTableAdapters.PRCTableAdapter BudgetExecution.SqlServerData.SqlServerTableAdapter</definition>
+        <argsstring></argsstring>
+        <name>SqlServerTableAdapter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" line="2018" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" bodystart="2018" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_sql_server_data_1a84a002821398ed6ec3f1b196a9d39002" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.DataGridViewTextBoxColumn</type>
+        <definition>System.Windows.Forms.DataGridViewTextBoxColumn BudgetExecution.SqlServerData.iDDataGridViewTextBoxColumn</definition>
+        <argsstring></argsstring>
+        <name>iDDataGridViewTextBoxColumn</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" line="2019" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" bodystart="2019" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_sql_server_data_1a08fcb6d859da8dc72dc7494202620242" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.DataGridViewTextBoxColumn</type>
+        <definition>System.Windows.Forms.DataGridViewTextBoxColumn BudgetExecution.SqlServerData.budgetLevelDataGridViewTextBoxColumn</definition>
+        <argsstring></argsstring>
+        <name>budgetLevelDataGridViewTextBoxColumn</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" line="2020" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" bodystart="2020" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_sql_server_data_1aa78818c4d8ce92348100ca4fa788ef4a" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.DataGridViewTextBoxColumn</type>
+        <definition>System.Windows.Forms.DataGridViewTextBoxColumn BudgetExecution.SqlServerData.rPIODataGridViewTextBoxColumn</definition>
+        <argsstring></argsstring>
+        <name>rPIODataGridViewTextBoxColumn</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" line="2021" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" bodystart="2021" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_sql_server_data_1a2dad103f754e34c83b53621de201ee63" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.DataGridViewTextBoxColumn</type>
+        <definition>System.Windows.Forms.DataGridViewTextBoxColumn BudgetExecution.SqlServerData.bFYDataGridViewTextBoxColumn</definition>
+        <argsstring></argsstring>
+        <name>bFYDataGridViewTextBoxColumn</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" line="2022" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" bodystart="2022" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_sql_server_data_1a5f8fdf0f3d13baa345b24f46700e9fe4" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.DataGridViewTextBoxColumn</type>
+        <definition>System.Windows.Forms.DataGridViewTextBoxColumn BudgetExecution.SqlServerData.fundDataGridViewTextBoxColumn</definition>
+        <argsstring></argsstring>
+        <name>fundDataGridViewTextBoxColumn</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" line="2023" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" bodystart="2023" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_sql_server_data_1aeabd50e20a5a0691a7b2f6293162c633" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.DataGridViewTextBoxColumn</type>
+        <definition>System.Windows.Forms.DataGridViewTextBoxColumn BudgetExecution.SqlServerData.fundNameDataGridViewTextBoxColumn</definition>
+        <argsstring></argsstring>
+        <name>fundNameDataGridViewTextBoxColumn</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" line="2024" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" bodystart="2024" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_sql_server_data_1a8c637abe21ee599d891c24a1ad4ece89" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.DataGridViewTextBoxColumn</type>
+        <definition>System.Windows.Forms.DataGridViewTextBoxColumn BudgetExecution.SqlServerData.bOCDataGridViewTextBoxColumn</definition>
+        <argsstring></argsstring>
+        <name>bOCDataGridViewTextBoxColumn</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" line="2025" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" bodystart="2025" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_sql_server_data_1a6f71b9fe8cc900147ad805b81299a163" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.DataGridViewTextBoxColumn</type>
+        <definition>System.Windows.Forms.DataGridViewTextBoxColumn BudgetExecution.SqlServerData.bocNameDataGridViewTextBoxColumn</definition>
+        <argsstring></argsstring>
+        <name>bocNameDataGridViewTextBoxColumn</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" line="2026" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" bodystart="2026" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_sql_server_data_1a01eaf5f9b41db63b8f0dcef2ba6d569c" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.DataGridViewTextBoxColumn</type>
+        <definition>System.Windows.Forms.DataGridViewTextBoxColumn BudgetExecution.SqlServerData.orgDataGridViewTextBoxColumn</definition>
+        <argsstring></argsstring>
+        <name>orgDataGridViewTextBoxColumn</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" line="2027" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" bodystart="2027" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_sql_server_data_1a4bbcab63aae02ada38b4347093d65cad" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.DataGridViewTextBoxColumn</type>
+        <definition>System.Windows.Forms.DataGridViewTextBoxColumn BudgetExecution.SqlServerData.rCDataGridViewTextBoxColumn</definition>
+        <argsstring></argsstring>
+        <name>rCDataGridViewTextBoxColumn</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" line="2028" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" bodystart="2028" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_sql_server_data_1a78d4ed7bc474690a41c29f9059d8b285" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.DataGridViewTextBoxColumn</type>
+        <definition>System.Windows.Forms.DataGridViewTextBoxColumn BudgetExecution.SqlServerData.divisionNameDataGridViewTextBoxColumn</definition>
+        <argsstring></argsstring>
+        <name>divisionNameDataGridViewTextBoxColumn</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" line="2029" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" bodystart="2029" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_sql_server_data_1a8e5f86abb441e2fb296bd079d2da5d1b" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.DataGridViewTextBoxColumn</type>
+        <definition>System.Windows.Forms.DataGridViewTextBoxColumn BudgetExecution.SqlServerData.codeDataGridViewTextBoxColumn</definition>
+        <argsstring></argsstring>
+        <name>codeDataGridViewTextBoxColumn</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" line="2030" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" bodystart="2030" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_sql_server_data_1a3f859505cb6141e7685435a2c948d2f4" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.DataGridViewTextBoxColumn</type>
+        <definition>System.Windows.Forms.DataGridViewTextBoxColumn BudgetExecution.SqlServerData.amountDataGridViewTextBoxColumn</definition>
+        <argsstring></argsstring>
+        <name>amountDataGridViewTextBoxColumn</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" line="2031" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" bodystart="2031" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_sql_server_data_1adee6e576bd373f9a16273ada0907c877" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.DataGridViewTextBoxColumn</type>
+        <definition>System.Windows.Forms.DataGridViewTextBoxColumn BudgetExecution.SqlServerData.subProjectDataGridViewTextBoxColumn</definition>
+        <argsstring></argsstring>
+        <name>subProjectDataGridViewTextBoxColumn</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" line="2032" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" bodystart="2032" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_sql_server_data_1a13bd48728753cf495524aff3261c3ed1" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.DataGridViewTextBoxColumn</type>
+        <definition>System.Windows.Forms.DataGridViewTextBoxColumn BudgetExecution.SqlServerData.nPMDataGridViewTextBoxColumn</definition>
+        <argsstring></argsstring>
+        <name>nPMDataGridViewTextBoxColumn</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" line="2033" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" bodystart="2033" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_sql_server_data_1af04db90ccbf8b83dcdd175ead81007e1" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.DataGridViewTextBoxColumn</type>
+        <definition>System.Windows.Forms.DataGridViewTextBoxColumn BudgetExecution.SqlServerData.npmCodeDataGridViewTextBoxColumn</definition>
+        <argsstring></argsstring>
+        <name>npmCodeDataGridViewTextBoxColumn</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" line="2034" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" bodystart="2034" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_sql_server_data_1a970f56fd8ffb3142a6805274fc5da493" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.DataGridViewTextBoxColumn</type>
+        <definition>System.Windows.Forms.DataGridViewTextBoxColumn BudgetExecution.SqlServerData.programProjectCodeDataGridViewTextBoxColumn</definition>
+        <argsstring></argsstring>
+        <name>programProjectCodeDataGridViewTextBoxColumn</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" line="2035" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" bodystart="2035" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_sql_server_data_1a6d3206582dc421f5226745e6bd564416" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.DataGridViewTextBoxColumn</type>
+        <definition>System.Windows.Forms.DataGridViewTextBoxColumn BudgetExecution.SqlServerData.programProjectNameDataGridViewTextBoxColumn</definition>
+        <argsstring></argsstring>
+        <name>programProjectNameDataGridViewTextBoxColumn</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" line="2036" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" bodystart="2036" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_sql_server_data_1a2d830600741829a57991a25bf66ad11a" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.DataGridViewTextBoxColumn</type>
+        <definition>System.Windows.Forms.DataGridViewTextBoxColumn BudgetExecution.SqlServerData.programAreaDataGridViewTextBoxColumn</definition>
+        <argsstring></argsstring>
+        <name>programAreaDataGridViewTextBoxColumn</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" line="2037" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" bodystart="2037" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_sql_server_data_1aeb79d0623fe8e5836ace3fd934d9c99e" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.DataGridViewTextBoxColumn</type>
+        <definition>System.Windows.Forms.DataGridViewTextBoxColumn BudgetExecution.SqlServerData.programAreaNameDataGridViewTextBoxColumn</definition>
+        <argsstring></argsstring>
+        <name>programAreaNameDataGridViewTextBoxColumn</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" line="2038" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" bodystart="2038" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_sql_server_data_1adfa09f8318c095ebc15b86470c067387" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.DataGridViewTextBoxColumn</type>
+        <definition>System.Windows.Forms.DataGridViewTextBoxColumn BudgetExecution.SqlServerData.goalDataGridViewTextBoxColumn</definition>
+        <argsstring></argsstring>
+        <name>goalDataGridViewTextBoxColumn</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" line="2039" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" bodystart="2039" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_sql_server_data_1ac1496bb5534b142338e422852607b444" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.DataGridViewTextBoxColumn</type>
+        <definition>System.Windows.Forms.DataGridViewTextBoxColumn BudgetExecution.SqlServerData.goalNameDataGridViewTextBoxColumn</definition>
+        <argsstring></argsstring>
+        <name>goalNameDataGridViewTextBoxColumn</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" line="2040" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" bodystart="2040" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_sql_server_data_1a8ec4145ab952e8e7bd8214bd9717334a" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.DataGridViewTextBoxColumn</type>
+        <definition>System.Windows.Forms.DataGridViewTextBoxColumn BudgetExecution.SqlServerData.objectiveDataGridViewTextBoxColumn</definition>
+        <argsstring></argsstring>
+        <name>objectiveDataGridViewTextBoxColumn</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" line="2041" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" bodystart="2041" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_sql_server_data_1ae7a6886f01c47f48baec0d9ef2561a63" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.DataGridViewTextBoxColumn</type>
+        <definition>System.Windows.Forms.DataGridViewTextBoxColumn BudgetExecution.SqlServerData.objectiveNameDataGridViewTextBoxColumn</definition>
+        <argsstring></argsstring>
+        <name>objectiveNameDataGridViewTextBoxColumn</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" line="2042" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" bodystart="2042" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_budget_execution_1_1_sql_server_data_1a622caa90515f60e626f7d634fb096f5a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>BudgetExecution.SqlServerData.SqlServerData</definition>
+        <argsstring>()</argsstring>
+        <name>SqlServerData</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.cs" line="18" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.cs" bodystart="18" bodyend="21"/>
+        <references refid="class_budget_execution_1_1_sql_server_data_1a2a48af27ba9ff68f93911c7e649dff3a" compoundref="_sql_server_data_8designer_8cs" startline="30" endline="1928">BudgetExecution.SqlServerData.InitializeComponent</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_budget_execution_1_1_sql_server_data_1a3b0a7968e2a2e6b3c7601d1103b842fa" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BudgetExecution.SqlServerData.BocFilter_ItemSelected</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>BocFilter_ItemSelected</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.cs" line="39" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.cs" bodystart="39" bodyend="51"/>
+        <referencedby refid="class_budget_execution_1_1_sql_server_data_1a33f618679fe63e209a0fbe6572171af5" compoundref="_sql_server_data_8cs" startline="64" endline="86">BudgetExecution.SqlServerData.FundFilter_ItemSelected</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_sql_server_data_1a1d03569f16d69aede90e314c13ff5a42" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BudgetExecution.SqlServerData.DataMaster_Load</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>DataMaster_Load</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.cs" line="53" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.cs" bodystart="53" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_sql_server_data_1a33f618679fe63e209a0fbe6572171af5" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BudgetExecution.SqlServerData.FundFilter_ItemSelected</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>FundFilter_ItemSelected</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.cs" line="64" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.cs" bodystart="64" bodyend="86"/>
+        <references refid="class_budget_execution_1_1_sql_server_data_1a3b0a7968e2a2e6b3c7601d1103b842fa" compoundref="_sql_server_data_8cs" startline="39" endline="51">BudgetExecution.SqlServerData.BocFilter_ItemSelected</references>
+        <references refid="class_budget_execution_1_1_sql_server_data_1a31b5aa77026f9e686cb5446cbd7b1cfc" compoundref="_sql_server_data_8cs" startline="32">BudgetExecution.SqlServerData.ProgramElements</references>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_sql_server_data_1a56c8a602173a5ad23a7ae46afe06f4ca" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BudgetExecution.SqlServerData.GetFundFilterItems</definition>
+        <argsstring>()</argsstring>
+        <name>GetFundFilterItems</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.cs" line="88" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.cs" bodystart="88" bodyend="102"/>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_sql_server_data_1aa23e83aafacbe8434bf53ea00701562c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BudgetExecution.SqlServerData.GetGridColumns</definition>
+        <argsstring>(DataGridView dgv)</argsstring>
+        <name>GetGridColumns</name>
+        <param>
+          <type>DataGridView</type>
+          <declname>dgv</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.cs" line="104" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.cs" bodystart="104" bodyend="127"/>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_sql_server_data_1aee0f64342e29434501427a641e6872bf" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BudgetExecution.SqlServerData.SqlServerData_Load</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>SqlServerData_Load</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.cs" line="129" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.cs" bodystart="129" bodyend="133"/>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_sql_server_data_1af30d1e1314a39a3b2d3b2139896630e5" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BudgetExecution.SqlServerData.Grid_CellContentClick</definition>
+        <argsstring>(object sender, DataGridViewCellEventArgs e)</argsstring>
+        <name>Grid_CellContentClick</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>DataGridViewCellEventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.cs" line="135" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.cs" bodystart="135" bodyend="138"/>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_sql_server_data_1a2a48af27ba9ff68f93911c7e649dff3a" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BudgetExecution.SqlServerData.InitializeComponent</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeComponent</name>
+        <briefdescription>
+<para>Required method for Designer support - do not modify the contents of this method with the code editor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" line="30" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" bodystart="30" bodyend="1928"/>
+        <references refid="class_budget_execution_1_1_sql_server_data_1abaa34e292a65aba9722b6cef394765fa" compoundref="_sql_server_data_8designer_8cs" startline="1963">BudgetExecution.SqlServerData.BindingSource</references>
+        <references refid="class_budget_execution_1_1_sql_server_data_1a555e9ab13cd6479b240c559e490d497d" compoundref="_sql_server_data_8designer_8cs" startline="1934">BudgetExecution.SqlServerData.E6DataGrid</references>
+        <references refid="namespace_budget_execution_1afa69cdcc242b50644155cb4adf244d32a800618943025315f869e4e1f09471012">BudgetExecution.F</references>
+        <references refid="class_budget_execution_1_1_sql_server_data_1a9822a9c8f7ae5bc130e3805f66b66469" compoundref="_sql_server_data_8designer_8cs" startline="1932">BudgetExecution.SqlServerData.Grid</references>
+        <references refid="class_budget_execution_1_1_sql_server_data_1a012346e1f2c3851936f80fe9099579af" compoundref="_sql_server_data_8designer_8cs" startline="1952">BudgetExecution.SqlServerData.GridNavigator</references>
+        <references refid="class_budget_execution_1_1_sql_server_data_1af59202ed644d2da0a2299cd159b884bf" compoundref="_sql_server_data_8designer_8cs" startline="2017">BudgetExecution.SqlServerData.SqlServer</references>
+        <references refid="class_budget_execution_1_1_sql_server_data_1aa2ba9b9dc21f0808a4421a3886c7196b" compoundref="_sql_server_data_8designer_8cs" startline="1977">BudgetExecution.SqlServerData.tabControlAdv1</references>
+        <referencedby refid="class_budget_execution_1_1_sql_server_data_1a622caa90515f60e626f7d634fb096f5a" compoundref="_sql_server_data_8cs" startline="18" endline="21">BudgetExecution.SqlServerData.SqlServerData</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_budget_execution_1_1_sql_server_data_1ab04a48ff31a2f48094eda08ffdd053ce" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void BudgetExecution.SqlServerData.Dispose</definition>
+        <argsstring>(bool disposing)</argsstring>
+        <name>Dispose</name>
+        <param>
+          <type>bool</type>
+          <declname>disposing</declname>
+        </param>
+        <briefdescription>
+<para>Clean up any resources being used. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>disposing</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true if managed resources should be disposed; otherwise, false.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" line="15" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.designer.cs" bodystart="15" bodyend="22"/>
+        <references refid="class_budget_execution_1_1_sql_server_data_1a262fb15dff92f439a7cf3605a5ae64b0" compoundref="_sql_server_data_8designer_8cs" startline="9">BudgetExecution.SqlServerData.components</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="388">
+        <label>MetroForm</label>
+      </node>
+      <node id="387">
+        <label>BudgetExecution.SqlServerData</label>
+        <link refid="class_budget_execution_1_1_sql_server_data"/>
+        <childnode refid="388" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="390">
+        <label>MetroForm</label>
+      </node>
+      <node id="391">
+        <label>Windows</label>
+      </node>
+      <node id="392">
+        <label>Controls</label>
+      </node>
+      <node id="393">
+        <label>System</label>
+      </node>
+      <node id="389">
+        <label>BudgetExecution.SqlServerData</label>
+        <link refid="class_budget_execution_1_1_sql_server_data"/>
+        <childnode refid="390" relation="public-inheritance">
+        </childnode>
+        <childnode refid="391" relation="usage">
+          <edgelabel>tabPageAdv3</edgelabel>
+          <edgelabel>hubTile6</edgelabel>
+          <edgelabel>hubTile7</edgelabel>
+          <edgelabel>hubTile8</edgelabel>
+          <edgelabel>tabControlAdv1</edgelabel>
+          <edgelabel>E6DataGrid</edgelabel>
+          <edgelabel>toolstripitem1</edgelabel>
+          <edgelabel>hubTile2</edgelabel>
+          <edgelabel>tabPageAdv1</edgelabel>
+          <edgelabel>tabPageAdv2</edgelabel>
+          <edgelabel>...</edgelabel>
+        </childnode>
+        <childnode refid="392" relation="usage">
+          <edgelabel>metroSetComboBox2</edgelabel>
+          <edgelabel>metroSetComboBox3</edgelabel>
+          <edgelabel>metroSetComboBox4</edgelabel>
+          <edgelabel>metroSetTextBox10</edgelabel>
+          <edgelabel>metroSetTextBox11</edgelabel>
+          <edgelabel>metroSetComboBox5</edgelabel>
+          <edgelabel>metroSetComboBox6</edgelabel>
+          <edgelabel>metroSetTextBox12</edgelabel>
+          <edgelabel>metroSetComboBox7</edgelabel>
+          <edgelabel>metroSetTextBox13</edgelabel>
+          <edgelabel>...</edgelabel>
+        </childnode>
+        <childnode refid="393" relation="usage">
+          <edgelabel>toolStripButton5</edgelabel>
+          <edgelabel>bindingNavigatorSeparator3</edgelabel>
+          <edgelabel>bindingNavigatorCountItem</edgelabel>
+          <edgelabel>nPMDataGridViewTextBoxColumn</edgelabel>
+          <edgelabel>toolStripButton6</edgelabel>
+          <edgelabel>label1</edgelabel>
+          <edgelabel>bindingNavigatorSeparator4</edgelabel>
+          <edgelabel>bindingNavigatorPositionItem</edgelabel>
+          <edgelabel>objectiveNameDataGridViewTextBoxColumn</edgelabel>
+          <edgelabel>bocNameDataGridViewTextBoxColumn</edgelabel>
+          <edgelabel>...</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.cs" line="16" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/SqlServerData.cs" bodystart="15" bodyend="139"/>
+    <listofallmembers>
+      <member refid="class_budget_execution_1_1_sql_server_data_1abe6492fc90b1bec1aef56d0c29e1d526" prot="private" virt="non-virtual"><scope>BudgetExecution::SqlServerData</scope><name>Adapter</name></member>
+      <member refid="class_budget_execution_1_1_sql_server_data_1a69019172ed812ca9d19ac411ec010b90" prot="private" virt="non-virtual"><scope>BudgetExecution::SqlServerData</scope><name>AddButton</name></member>
+      <member refid="class_budget_execution_1_1_sql_server_data_1a3f859505cb6141e7685435a2c948d2f4" prot="private" virt="non-virtual"><scope>BudgetExecution::SqlServerData</scope><name>amountDataGridViewTextBoxColumn</name></member>
+      <member refid="class_budget_execution_1_1_sql_server_data_1a2dad103f754e34c83b53621de201ee63" prot="private" virt="non-virtual"><scope>BudgetExecution::SqlServerData</scope><name>bFYDataGridViewTextBoxColumn</name></member>
+      <member refid="class_budget_execution_1_1_sql_server_data_1ac7304c106beb94baf5710009fad91d4b" prot="private" virt="non-virtual"><scope>BudgetExecution::SqlServerData</scope><name>bindingNavigatorAddNewItem</name></member>
+      <member refid="class_budget_execution_1_1_sql_server_data_1a7aeeef39146500477b15d705c105f5e7" prot="private" virt="non-virtual"><scope>BudgetExecution::SqlServerData</scope><name>bindingNavigatorCountItem</name></member>
+      <member refid="class_budget_execution_1_1_sql_server_data_1a40048898a875436d5efb87375a83cd80" prot="private" virt="non-virtual"><scope>BudgetExecution::SqlServerData</scope><name>bindingNavigatorCountItem1</name></member>
+      <member refid="class_budget_execution_1_1_sql_server_data_1a5765f2ae7d194dc179dee846b656e500" prot="private" virt="non-virtual"><scope>BudgetExecution::SqlServerData</scope><name>bindingNavigatorDeleteItem</name></member>
+      <member refid="class_budget_execution_1_1_sql_server_data_1a0874ff929659e60cc2cc246691216346" prot="private" virt="non-virtual"><scope>BudgetExecution::SqlServerData</scope><name>bindingNavigatorMoveFirstItem</name></member>
+      <member refid="class_budget_execution_1_1_sql_server_data_1ab4f1661cebf99e7478bb093dadc4093c" prot="private" virt="non-virtual"><scope>BudgetExecution::SqlServerData</scope><name>bindingNavigatorMoveLastItem</name></member>
+      <member refid="class_budget_execution_1_1_sql_server_data_1a3ed7bee3c1c5b951c811d9270b94d2ce" prot="private" virt="non-virtual"><scope>BudgetExecution::SqlServerData</scope><name>bindingNavigatorMoveNextItem</name></member>
+      <member refid="class_budget_execution_1_1_sql_server_data_1a83bc45c29cbbcbc893c1b2a7ee9463b7" prot="private" virt="non-virtual"><scope>BudgetExecution::SqlServerData</scope><name>bindingNavigatorMoveNextItem1</name></member>
+      <member refid="class_budget_execution_1_1_sql_server_data_1add13b13b9bd4e9b48c9e6cb5c7b96eb1" prot="private" virt="non-virtual"><scope>BudgetExecution::SqlServerData</scope><name>bindingNavigatorMovePreviousItem</name></member>
+      <member refid="class_budget_execution_1_1_sql_server_data_1a0d78675b8235a4d77b7fb3e7df615c1e" prot="private" virt="non-virtual"><scope>BudgetExecution::SqlServerData</scope><name>bindingNavigatorPositionItem</name></member>
+      <member refid="class_budget_execution_1_1_sql_server_data_1ac41642293a4413227d9c84efddbac8a5" prot="private" virt="non-virtual"><scope>BudgetExecution::SqlServerData</scope><name>bindingNavigatorPositionItem1</name></member>
+      <member refid="class_budget_execution_1_1_sql_server_data_1abbecd8d9d011dd7047d90cdaa80e8276" prot="private" virt="non-virtual"><scope>BudgetExecution::SqlServerData</scope><name>bindingNavigatorSeparator</name></member>
+      <member refid="class_budget_execution_1_1_sql_server_data_1a3f744f6af2c6c9960e5b03327ef79757" prot="private" virt="non-virtual"><scope>BudgetExecution::SqlServerData</scope><name>bindingNavigatorSeparator1</name></member>
+      <member refid="class_budget_execution_1_1_sql_server_data_1aadba1347aa6b548505069c69f6433a03" prot="private" virt="non-virtual"><scope>BudgetExecution::SqlServerData</scope><name>bindingNavigatorSeparator2</name></member>
+      <member refid="class_budget_execution_1_1_sql_server_data_1a7ed7761f1efbfc23750323742eaee28b" prot="private" virt="non-virtual"><scope>BudgetExecution::SqlServerData</scope><name>bindingNavigatorSeparator3</name></member>
+      <member refid="class_budget_execution_1_1_sql_server_data_1adb117623c3c1f266aba44b11f481386d" prot="private" virt="non-virtual"><scope>BudgetExecution::SqlServerData</scope><name>bindingNavigatorSeparator4</name></member>
+      <member refid="class_budget_execution_1_1_sql_server_data_1ad42b2877a7b020f1af2515d14f6cb387" prot="private" virt="non-virtual"><scope>BudgetExecution::SqlServerData</scope><name>bindingNavigatorSeparator5</name></member>
+      <member refid="class_budget_execution_1_1_sql_server_data_1abaa34e292a65aba9722b6cef394765fa" prot="private" virt="non-virtual"><scope>BudgetExecution::SqlServerData</scope><name>BindingSource</name></member>
+      <member refid="class_budget_execution_1_1_sql_server_data_1a8c637abe21ee599d891c24a1ad4ece89" prot="private" virt="non-virtual"><scope>BudgetExecution::SqlServerData</scope><name>bOCDataGridViewTextBoxColumn</name></member>
+      <member refid="class_budget_execution_1_1_sql_server_data_1a3b0a7968e2a2e6b3c7601d1103b842fa" prot="private" virt="non-virtual"><scope>BudgetExecution::SqlServerData</scope><name>BocFilter_ItemSelected</name></member>
+      <member refid="class_budget_execution_1_1_sql_server_data_1a6f71b9fe8cc900147ad805b81299a163" prot="private" virt="non-virtual"><scope>BudgetExecution::SqlServerData</scope><name>bocNameDataGridViewTextBoxColumn</name></member>
+      <member refid="class_budget_execution_1_1_sql_server_data_1a08fcb6d859da8dc72dc7494202620242" prot="private" virt="non-virtual"><scope>BudgetExecution::SqlServerData</scope><name>budgetLevelDataGridViewTextBoxColumn</name></member>
+      <member refid="class_budget_execution_1_1_sql_server_data_1a41290daa86e0b34b7cfbaf4c70f617a9" prot="private" virt="non-virtual"><scope>BudgetExecution::SqlServerData</scope><name>button1</name></member>
+      <member refid="class_budget_execution_1_1_sql_server_data_1a690230b66ce708d25354631e0218b4fa" prot="private" virt="non-virtual"><scope>BudgetExecution::SqlServerData</scope><name>button2</name></member>
+      <member refid="class_budget_execution_1_1_sql_server_data_1ae9db0bfdc576c2284d673ead6418f632" prot="private" virt="non-virtual"><scope>BudgetExecution::SqlServerData</scope><name>button3</name></member>
+      <member refid="class_budget_execution_1_1_sql_server_data_1a8e5f86abb441e2fb296bd079d2da5d1b" prot="private" virt="non-virtual"><scope>BudgetExecution::SqlServerData</scope><name>codeDataGridViewTextBoxColumn</name></member>
+      <member refid="class_budget_execution_1_1_sql_server_data_1a262fb15dff92f439a7cf3605a5ae64b0" prot="private" virt="non-virtual"><scope>BudgetExecution::SqlServerData</scope><name>components</name></member>
+      <member refid="class_budget_execution_1_1_sql_server_data_1a243191e1310351e562e550027b8e9c42" prot="private" virt="non-virtual"><scope>BudgetExecution::SqlServerData</scope><name>CopyButton</name></member>
+      <member refid="class_budget_execution_1_1_sql_server_data_1a1d03569f16d69aede90e314c13ff5a42" prot="private" virt="non-virtual"><scope>BudgetExecution::SqlServerData</scope><name>DataMaster_Load</name></member>
+      <member refid="class_budget_execution_1_1_sql_server_data_1a174d2f9285c1522a2396784e53f2f70c" prot="private" virt="non-virtual"><scope>BudgetExecution::SqlServerData</scope><name>DbData</name></member>
+      <member refid="class_budget_execution_1_1_sql_server_data_1ab04a48ff31a2f48094eda08ffdd053ce" prot="protected" virt="non-virtual"><scope>BudgetExecution::SqlServerData</scope><name>Dispose</name></member>
+      <member refid="class_budget_execution_1_1_sql_server_data_1a78d4ed7bc474690a41c29f9059d8b285" prot="private" virt="non-virtual"><scope>BudgetExecution::SqlServerData</scope><name>divisionNameDataGridViewTextBoxColumn</name></member>
+      <member refid="class_budget_execution_1_1_sql_server_data_1a555e9ab13cd6479b240c559e490d497d" prot="private" virt="non-virtual"><scope>BudgetExecution::SqlServerData</scope><name>E6DataGrid</name></member>
+      <member refid="class_budget_execution_1_1_sql_server_data_1a5f8fdf0f3d13baa345b24f46700e9fe4" prot="private" virt="non-virtual"><scope>BudgetExecution::SqlServerData</scope><name>fundDataGridViewTextBoxColumn</name></member>
+      <member refid="class_budget_execution_1_1_sql_server_data_1a33f618679fe63e209a0fbe6572171af5" prot="private" virt="non-virtual"><scope>BudgetExecution::SqlServerData</scope><name>FundFilter_ItemSelected</name></member>
+      <member refid="class_budget_execution_1_1_sql_server_data_1aeabd50e20a5a0691a7b2f6293162c633" prot="private" virt="non-virtual"><scope>BudgetExecution::SqlServerData</scope><name>fundNameDataGridViewTextBoxColumn</name></member>
+      <member refid="class_budget_execution_1_1_sql_server_data_1a56c8a602173a5ad23a7ae46afe06f4ca" prot="private" virt="non-virtual"><scope>BudgetExecution::SqlServerData</scope><name>GetFundFilterItems</name></member>
+      <member refid="class_budget_execution_1_1_sql_server_data_1aa23e83aafacbe8434bf53ea00701562c" prot="private" virt="non-virtual"><scope>BudgetExecution::SqlServerData</scope><name>GetGridColumns</name></member>
+      <member refid="class_budget_execution_1_1_sql_server_data_1adfa09f8318c095ebc15b86470c067387" prot="private" virt="non-virtual"><scope>BudgetExecution::SqlServerData</scope><name>goalDataGridViewTextBoxColumn</name></member>
+      <member refid="class_budget_execution_1_1_sql_server_data_1ac1496bb5534b142338e422852607b444" prot="private" virt="non-virtual"><scope>BudgetExecution::SqlServerData</scope><name>goalNameDataGridViewTextBoxColumn</name></member>
+      <member refid="class_budget_execution_1_1_sql_server_data_1a9822a9c8f7ae5bc130e3805f66b66469" prot="private" virt="non-virtual"><scope>BudgetExecution::SqlServerData</scope><name>Grid</name></member>
+      <member refid="class_budget_execution_1_1_sql_server_data_1af30d1e1314a39a3b2d3b2139896630e5" prot="private" virt="non-virtual"><scope>BudgetExecution::SqlServerData</scope><name>Grid_CellContentClick</name></member>
+      <member refid="class_budget_execution_1_1_sql_server_data_1a012346e1f2c3851936f80fe9099579af" prot="private" virt="non-virtual"><scope>BudgetExecution::SqlServerData</scope><name>GridNavigator</name></member>
+      <member refid="class_budget_execution_1_1_sql_server_data_1a5c97544b5caebb8e691e42e938c96840" prot="private" virt="non-virtual"><scope>BudgetExecution::SqlServerData</scope><name>groupBox1</name></member>
+      <member refid="class_budget_execution_1_1_sql_server_data_1acfd129206316afa0f91b928a13cb617c" prot="private" virt="non-virtual"><scope>BudgetExecution::SqlServerData</scope><name>groupBox2</name></member>
+      <member refid="class_budget_execution_1_1_sql_server_data_1a8b3103b359ccfb78e8847aa5c372755c" prot="private" virt="non-virtual"><scope>BudgetExecution::SqlServerData</scope><name>groupBox3</name></member>
+      <member refid="class_budget_execution_1_1_sql_server_data_1a68d629876618fc785afa3e5384e8d753" prot="private" virt="non-virtual"><scope>BudgetExecution::SqlServerData</scope><name>hubTile2</name></member>
+      <member refid="class_budget_execution_1_1_sql_server_data_1a7a25ba8ff37262a1ddc133635ed35ed3" prot="private" virt="non-virtual"><scope>BudgetExecution::SqlServerData</scope><name>hubTile6</name></member>
+      <member refid="class_budget_execution_1_1_sql_server_data_1a054811d966058eaeebb1443a0765ed2f" prot="private" virt="non-virtual"><scope>BudgetExecution::SqlServerData</scope><name>hubTile7</name></member>
+      <member refid="class_budget_execution_1_1_sql_server_data_1a53e5b1950eafe08ab59d8c9715bea966" prot="private" virt="non-virtual"><scope>BudgetExecution::SqlServerData</scope><name>hubTile8</name></member>
+      <member refid="class_budget_execution_1_1_sql_server_data_1a84a002821398ed6ec3f1b196a9d39002" prot="private" virt="non-virtual"><scope>BudgetExecution::SqlServerData</scope><name>iDDataGridViewTextBoxColumn</name></member>
+      <member refid="class_budget_execution_1_1_sql_server_data_1a2a48af27ba9ff68f93911c7e649dff3a" prot="private" virt="non-virtual"><scope>BudgetExecution::SqlServerData</scope><name>InitializeComponent</name></member>
+      <member refid="class_budget_execution_1_1_sql_server_data_1a5563945ea32a9c7afbc2d19ce5c79e25" prot="private" virt="non-virtual"><scope>BudgetExecution::SqlServerData</scope><name>label1</name></member>
+      <member refid="class_budget_execution_1_1_sql_server_data_1a874fd11ea293e1a03d25fe466037d543" prot="private" virt="non-virtual"><scope>BudgetExecution::SqlServerData</scope><name>label10</name></member>
+      <member refid="class_budget_execution_1_1_sql_server_data_1ab584ce77e353b0e8bbf1b086cd8fa921" prot="private" virt="non-virtual"><scope>BudgetExecution::SqlServerData</scope><name>label11</name></member>
+      <member refid="class_budget_execution_1_1_sql_server_data_1afc5a6fd79ab62278408621fe021c7128" prot="private" virt="non-virtual"><scope>BudgetExecution::SqlServerData</scope><name>label2</name></member>
+      <member refid="class_budget_execution_1_1_sql_server_data_1ad7966afa4cb46ccc1890518f32af6153" prot="private" virt="non-virtual"><scope>BudgetExecution::SqlServerData</scope><name>label3</name></member>
+      <member refid="class_budget_execution_1_1_sql_server_data_1add94cabd084a69de66e6622becef8bc4" prot="private" virt="non-virtual"><scope>BudgetExecution::SqlServerData</scope><name>label4</name></member>
+      <member refid="class_budget_execution_1_1_sql_server_data_1a33be83c97c25dc46511b4d4d02f3a8b8" prot="private" virt="non-virtual"><scope>BudgetExecution::SqlServerData</scope><name>label5</name></member>
+      <member refid="class_budget_execution_1_1_sql_server_data_1aa51f77ebfad7c62fbf6da43a26455932" prot="private" virt="non-virtual"><scope>BudgetExecution::SqlServerData</scope><name>label6</name></member>
+      <member refid="class_budget_execution_1_1_sql_server_data_1af34db3208daa162f7d9c0eff8aa63f8e" prot="private" virt="non-virtual"><scope>BudgetExecution::SqlServerData</scope><name>label7</name></member>
+      <member refid="class_budget_execution_1_1_sql_server_data_1aa922c5f7592c0a7ddb990d7c21cc3284" prot="private" virt="non-virtual"><scope>BudgetExecution::SqlServerData</scope><name>label8</name></member>
+      <member refid="class_budget_execution_1_1_sql_server_data_1ac3549f98744f9b39b48c5d892e6b7bc4" prot="private" virt="non-virtual"><scope>BudgetExecution::SqlServerData</scope><name>label9</name></member>
+      <member refid="class_budget_execution_1_1_sql_server_data_1ae9244fb20e396b34270d0686bbfe4c45" prot="private" virt="non-virtual"><scope>BudgetExecution::SqlServerData</scope><name>MasterFilter1</name></member>
+      <member refid="class_budget_execution_1_1_sql_server_data_1a006fa32ea719eecd2de4f36ff46e9c36" prot="private" virt="non-virtual"><scope>BudgetExecution::SqlServerData</scope><name>MasterFIlter2</name></member>
+      <member refid="class_budget_execution_1_1_sql_server_data_1a676f3d9162fb9c861f2564e457671426" prot="private" virt="non-virtual"><scope>BudgetExecution::SqlServerData</scope><name>MasterFilter3</name></member>
+      <member refid="class_budget_execution_1_1_sql_server_data_1ac0da229797e916c141e1778dbc826c99" prot="private" virt="non-virtual"><scope>BudgetExecution::SqlServerData</scope><name>Metric</name></member>
+      <member refid="class_budget_execution_1_1_sql_server_data_1a6ae39f5940c6b28ad879dcd3ff8d91c6" prot="private" virt="non-virtual"><scope>BudgetExecution::SqlServerData</scope><name>metroPanel1</name></member>
+      <member refid="class_budget_execution_1_1_sql_server_data_1aaff994f3a6123798916c199cf3792a7f" prot="private" virt="non-virtual"><scope>BudgetExecution::SqlServerData</scope><name>metroSetComboBox1</name></member>
+      <member refid="class_budget_execution_1_1_sql_server_data_1aab46bca5e254c72cd8a3d8f9d391aece" prot="private" virt="non-virtual"><scope>BudgetExecution::SqlServerData</scope><name>metroSetComboBox10</name></member>
+      <member refid="class_budget_execution_1_1_sql_server_data_1a9bfb044070a583d3cf856511e6d1f090" prot="private" virt="non-virtual"><scope>BudgetExecution::SqlServerData</scope><name>metroSetComboBox2</name></member>
+      <member refid="class_budget_execution_1_1_sql_server_data_1af46783df77650da31c8c0bfc249fa90f" prot="private" virt="non-virtual"><scope>BudgetExecution::SqlServerData</scope><name>metroSetComboBox3</name></member>
+      <member refid="class_budget_execution_1_1_sql_server_data_1a43c4c6f8a954767cf24301e0719bc798" prot="private" virt="non-virtual"><scope>BudgetExecution::SqlServerData</scope><name>metroSetComboBox4</name></member>
+      <member refid="class_budget_execution_1_1_sql_server_data_1a06a77574f65fbc70b082a7b3b1e74ba1" prot="private" virt="non-virtual"><scope>BudgetExecution::SqlServerData</scope><name>metroSetComboBox5</name></member>
+      <member refid="class_budget_execution_1_1_sql_server_data_1a1438f42b27fdbf96c222672d04ae4554" prot="private" virt="non-virtual"><scope>BudgetExecution::SqlServerData</scope><name>metroSetComboBox6</name></member>
+      <member refid="class_budget_execution_1_1_sql_server_data_1a1119001cab663a61bebddbeba068ebd0" prot="private" virt="non-virtual"><scope>BudgetExecution::SqlServerData</scope><name>metroSetComboBox7</name></member>
+      <member refid="class_budget_execution_1_1_sql_server_data_1a508ad3a937bb8b80302292f4acc4c0cb" prot="private" virt="non-virtual"><scope>BudgetExecution::SqlServerData</scope><name>metroSetComboBox8</name></member>
+      <member refid="class_budget_execution_1_1_sql_server_data_1a8e81f5fa367e20473bc040918bc5511f" prot="private" virt="non-virtual"><scope>BudgetExecution::SqlServerData</scope><name>metroSetTextBox10</name></member>
+      <member refid="class_budget_execution_1_1_sql_server_data_1a2198d816518c22390d7898945cb81010" prot="private" virt="non-virtual"><scope>BudgetExecution::SqlServerData</scope><name>metroSetTextBox11</name></member>
+      <member refid="class_budget_execution_1_1_sql_server_data_1a0162b61a02f7b341dbe5a5732124f1ef" prot="private" virt="non-virtual"><scope>BudgetExecution::SqlServerData</scope><name>metroSetTextBox12</name></member>
+      <member refid="class_budget_execution_1_1_sql_server_data_1a0ce00a4d3ad57177b6cc4faba5d28269" prot="private" virt="non-virtual"><scope>BudgetExecution::SqlServerData</scope><name>metroSetTextBox13</name></member>
+      <member refid="class_budget_execution_1_1_sql_server_data_1aa604c1ff54a149c563b63dd216cdb2ad" prot="private" virt="non-virtual"><scope>BudgetExecution::SqlServerData</scope><name>metroSetTextBox14</name></member>
+      <member refid="class_budget_execution_1_1_sql_server_data_1a4a445e5c121ec69505138835ba6e07bc" prot="private" virt="non-virtual"><scope>BudgetExecution::SqlServerData</scope><name>metroSetTextBox15</name></member>
+      <member refid="class_budget_execution_1_1_sql_server_data_1a713935cbd5c8c0ba65e579085b16f436" prot="private" virt="non-virtual"><scope>BudgetExecution::SqlServerData</scope><name>metroSetTextBox16</name></member>
+      <member refid="class_budget_execution_1_1_sql_server_data_1a3aa08a2a2a5f00368fc4f53ceb9c0e35" prot="private" virt="non-virtual"><scope>BudgetExecution::SqlServerData</scope><name>metroSetTextBox9</name></member>
+      <member refid="class_budget_execution_1_1_sql_server_data_1af04db90ccbf8b83dcdd175ead81007e1" prot="private" virt="non-virtual"><scope>BudgetExecution::SqlServerData</scope><name>npmCodeDataGridViewTextBoxColumn</name></member>
+      <member refid="class_budget_execution_1_1_sql_server_data_1a13bd48728753cf495524aff3261c3ed1" prot="private" virt="non-virtual"><scope>BudgetExecution::SqlServerData</scope><name>nPMDataGridViewTextBoxColumn</name></member>
+      <member refid="class_budget_execution_1_1_sql_server_data_1a8ec4145ab952e8e7bd8214bd9717334a" prot="private" virt="non-virtual"><scope>BudgetExecution::SqlServerData</scope><name>objectiveDataGridViewTextBoxColumn</name></member>
+      <member refid="class_budget_execution_1_1_sql_server_data_1ae7a6886f01c47f48baec0d9ef2561a63" prot="private" virt="non-virtual"><scope>BudgetExecution::SqlServerData</scope><name>objectiveNameDataGridViewTextBoxColumn</name></member>
+      <member refid="class_budget_execution_1_1_sql_server_data_1a01eaf5f9b41db63b8f0dcef2ba6d569c" prot="private" virt="non-virtual"><scope>BudgetExecution::SqlServerData</scope><name>orgDataGridViewTextBoxColumn</name></member>
+      <member refid="class_budget_execution_1_1_sql_server_data_1a74521b522ece306df39091b4a84ad8fa" prot="private" virt="non-virtual"><scope>BudgetExecution::SqlServerData</scope><name>Parameter</name></member>
+      <member refid="class_budget_execution_1_1_sql_server_data_1a2d830600741829a57991a25bf66ad11a" prot="private" virt="non-virtual"><scope>BudgetExecution::SqlServerData</scope><name>programAreaDataGridViewTextBoxColumn</name></member>
+      <member refid="class_budget_execution_1_1_sql_server_data_1aeb79d0623fe8e5836ace3fd934d9c99e" prot="private" virt="non-virtual"><scope>BudgetExecution::SqlServerData</scope><name>programAreaNameDataGridViewTextBoxColumn</name></member>
+      <member refid="class_budget_execution_1_1_sql_server_data_1a31b5aa77026f9e686cb5446cbd7b1cfc" prot="private" virt="non-virtual"><scope>BudgetExecution::SqlServerData</scope><name>ProgramElements</name></member>
+      <member refid="class_budget_execution_1_1_sql_server_data_1a970f56fd8ffb3142a6805274fc5da493" prot="private" virt="non-virtual"><scope>BudgetExecution::SqlServerData</scope><name>programProjectCodeDataGridViewTextBoxColumn</name></member>
+      <member refid="class_budget_execution_1_1_sql_server_data_1a6d3206582dc421f5226745e6bd564416" prot="private" virt="non-virtual"><scope>BudgetExecution::SqlServerData</scope><name>programProjectNameDataGridViewTextBoxColumn</name></member>
+      <member refid="class_budget_execution_1_1_sql_server_data_1add37a8e84af53bd31900b0dfe3f1b4a3" prot="private" virt="non-virtual"><scope>BudgetExecution::SqlServerData</scope><name>Query</name></member>
+      <member refid="class_budget_execution_1_1_sql_server_data_1a4bbcab63aae02ada38b4347093d65cad" prot="private" virt="non-virtual"><scope>BudgetExecution::SqlServerData</scope><name>rCDataGridViewTextBoxColumn</name></member>
+      <member refid="class_budget_execution_1_1_sql_server_data_1a5a9e2d7364d1c26d23874be3babf017a" prot="private" virt="non-virtual"><scope>BudgetExecution::SqlServerData</scope><name>RemoveButton</name></member>
+      <member refid="class_budget_execution_1_1_sql_server_data_1aa78818c4d8ce92348100ca4fa788ef4a" prot="private" virt="non-virtual"><scope>BudgetExecution::SqlServerData</scope><name>rPIODataGridViewTextBoxColumn</name></member>
+      <member refid="class_budget_execution_1_1_sql_server_data_1af59202ed644d2da0a2299cd159b884bf" prot="private" virt="non-virtual"><scope>BudgetExecution::SqlServerData</scope><name>SqlServer</name></member>
+      <member refid="class_budget_execution_1_1_sql_server_data_1a622caa90515f60e626f7d634fb096f5a" prot="public" virt="non-virtual"><scope>BudgetExecution::SqlServerData</scope><name>SqlServerData</name></member>
+      <member refid="class_budget_execution_1_1_sql_server_data_1aee0f64342e29434501427a641e6872bf" prot="private" virt="non-virtual"><scope>BudgetExecution::SqlServerData</scope><name>SqlServerData_Load</name></member>
+      <member refid="class_budget_execution_1_1_sql_server_data_1a4885da46f0b7d267205b1fe73a495147" prot="private" virt="non-virtual"><scope>BudgetExecution::SqlServerData</scope><name>SqlServerTableAdapter</name></member>
+      <member refid="class_budget_execution_1_1_sql_server_data_1adee6e576bd373f9a16273ada0907c877" prot="private" virt="non-virtual"><scope>BudgetExecution::SqlServerData</scope><name>subProjectDataGridViewTextBoxColumn</name></member>
+      <member refid="class_budget_execution_1_1_sql_server_data_1aa2ba9b9dc21f0808a4421a3886c7196b" prot="private" virt="non-virtual"><scope>BudgetExecution::SqlServerData</scope><name>tabControlAdv1</name></member>
+      <member refid="class_budget_execution_1_1_sql_server_data_1a357b16337fba272b03d19c01fbd06909" prot="private" virt="non-virtual"><scope>BudgetExecution::SqlServerData</scope><name>Table</name></member>
+      <member refid="class_budget_execution_1_1_sql_server_data_1ab1b1aeda54b20247db37ec08b46148da" prot="private" virt="non-virtual"><scope>BudgetExecution::SqlServerData</scope><name>tabPageAdv1</name></member>
+      <member refid="class_budget_execution_1_1_sql_server_data_1a9ba217355a43751d5553986f74ba3704" prot="private" virt="non-virtual"><scope>BudgetExecution::SqlServerData</scope><name>tabPageAdv2</name></member>
+      <member refid="class_budget_execution_1_1_sql_server_data_1a8dfe1c778112dce07fa59f82c42567c7" prot="private" virt="non-virtual"><scope>BudgetExecution::SqlServerData</scope><name>tabPageAdv3</name></member>
+      <member refid="class_budget_execution_1_1_sql_server_data_1a6879b8f8f3161a31388a1a4c37d2b6da" prot="private" virt="non-virtual"><scope>BudgetExecution::SqlServerData</scope><name>toolStripButton1</name></member>
+      <member refid="class_budget_execution_1_1_sql_server_data_1ab73cf78686676ab52261c0357bab52d5" prot="private" virt="non-virtual"><scope>BudgetExecution::SqlServerData</scope><name>toolStripButton2</name></member>
+      <member refid="class_budget_execution_1_1_sql_server_data_1a8c6191799758870e58be817b93c91e66" prot="private" virt="non-virtual"><scope>BudgetExecution::SqlServerData</scope><name>toolStripButton3</name></member>
+      <member refid="class_budget_execution_1_1_sql_server_data_1aa4e887c82bdce9293a32bc1e604766fc" prot="private" virt="non-virtual"><scope>BudgetExecution::SqlServerData</scope><name>toolStripButton4</name></member>
+      <member refid="class_budget_execution_1_1_sql_server_data_1a794b3e9d30909641b6b87c2c9baaed30" prot="private" virt="non-virtual"><scope>BudgetExecution::SqlServerData</scope><name>toolStripButton5</name></member>
+      <member refid="class_budget_execution_1_1_sql_server_data_1acbeb8480915f710a9f07bafb24831e6a" prot="private" virt="non-virtual"><scope>BudgetExecution::SqlServerData</scope><name>toolStripButton6</name></member>
+      <member refid="class_budget_execution_1_1_sql_server_data_1a494f4e5fe57ebd15bfb5dad5c541a061" prot="private" virt="non-virtual"><scope>BudgetExecution::SqlServerData</scope><name>toolStripButton7</name></member>
+      <member refid="class_budget_execution_1_1_sql_server_data_1abe0718262ef35f61e42c3b45d1859d43" prot="private" virt="non-virtual"><scope>BudgetExecution::SqlServerData</scope><name>toolStripButton8</name></member>
+      <member refid="class_budget_execution_1_1_sql_server_data_1aa2dbdc658ce54a55d6d0bc090494cd85" prot="private" virt="non-virtual"><scope>BudgetExecution::SqlServerData</scope><name>toolStripButton9</name></member>
+      <member refid="class_budget_execution_1_1_sql_server_data_1a7690bdbd558712d988ac3e61511a2b34" prot="private" virt="non-virtual"><scope>BudgetExecution::SqlServerData</scope><name>toolstripitem1</name></member>
+      <member refid="class_budget_execution_1_1_sql_server_data_1ac72b8b9b272713cdd130d63918a31fd5" prot="private" virt="non-virtual"><scope>BudgetExecution::SqlServerData</scope><name>toolStripSeparator1</name></member>
+      <member refid="class_budget_execution_1_1_sql_server_data_1a56138fe59be1e6afe15c2f0d6e19a5a0" prot="private" virt="non-virtual"><scope>BudgetExecution::SqlServerData</scope><name>toolStripSeparator2</name></member>
+      <member refid="class_budget_execution_1_1_sql_server_data_1ade902962fb8b3f1ca02484259906e858" prot="private" virt="non-virtual"><scope>BudgetExecution::SqlServerData</scope><name>toolStripSeparator3</name></member>
+      <member refid="class_budget_execution_1_1_sql_server_data_1aae06e0740223930759c7a5b97f39145b" prot="private" virt="non-virtual"><scope>BudgetExecution::SqlServerData</scope><name>toolStripSeparator4</name></member>
+      <member refid="class_budget_execution_1_1_sql_server_data_1aeeebe4828ca9487f73cac9057ab33275" prot="private" virt="non-virtual"><scope>BudgetExecution::SqlServerData</scope><name>toolStripSeparator5</name></member>
+      <member refid="class_budget_execution_1_1_sql_server_data_1af61a25c746c633583029618b5133cf8e" prot="private" virt="non-virtual"><scope>BudgetExecution::SqlServerData</scope><name>toolStripSeparator6</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

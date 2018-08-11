@@ -1,0 +1,322 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="class_budget_execution_1_1_selector" kind="class" prot="public">
+    <compoundname>BudgetExecution::Selector</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">MetroForm</basecompoundref>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_budget_execution_1_1_selector_1ae10399d21486d0274a445a37a368d4c9" prot="private" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>string</type>
+        <definition>string BudgetExecution.Selector.DivisionImages</definition>
+        <argsstring></argsstring>
+        <name>DivisionImages</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Selector.cs" line="30" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Selector.cs" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_selector_1ad9ca184c4ce4af7a1b546e21eef7b550" prot="private" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>string</type>
+        <definition>string BudgetExecution.Selector.SummaryImages</definition>
+        <argsstring></argsstring>
+        <name>SummaryImages</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Selector.cs" line="32" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Selector.cs" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_selector_1aa000886d77f7757da0495b718fd50cd5" prot="private" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>string</type>
+        <definition>string BudgetExecution.Selector.FilePath</definition>
+        <argsstring></argsstring>
+        <name>FilePath</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Selector.cs" line="34" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Selector.cs" bodystart="34" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_selector_1abc93020b3ed3e886f5b3f5e7a657f6b9" compoundref="_selector_8cs" startline="41" endline="61">BudgetExecution.Selector.GetViewerCarouselImageList</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_selector_1aabb5c128d51edafd3e73c6a80d009c22" prot="public" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type><ref refid="class_budget_execution_1_1_form_data" kindref="compound">FormData</ref></type>
+        <definition>FormData BudgetExecution.Selector.NinjaData</definition>
+        <argsstring></argsstring>
+        <name>NinjaData</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Selector.cs" line="36" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Selector.cs" bodystart="36" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_selector_1a11255a851ba8d91edecf5560fb66ccd9" compoundref="_selector_8cs" startline="21" endline="27">BudgetExecution.Selector.Selector</referencedby>
+      </memberdef>
+      <memberdef kind="property" id="class_budget_execution_1_1_selector_1af7047630de3bb508681a0758623d1f1a" prot="private" static="no" readable="no" writable="no" gettable="yes" settable="yes">
+        <type>string[]</type>
+        <definition>string [] BudgetExecution.Selector.Images</definition>
+        <argsstring></argsstring>
+        <name>Images</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Selector.cs" line="38" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Selector.cs" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_budget_execution_1_1_selector_1a8842cb48d941427c5854d524ff866b25" prot="private" static="no" mutable="no">
+        <type>System.ComponentModel.IContainer</type>
+        <definition>System.ComponentModel.IContainer BudgetExecution.Selector.components</definition>
+        <argsstring></argsstring>
+        <name>components</name>
+        <initializer>= null</initializer>
+        <briefdescription>
+<para>Required designer variable. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Selector.Designer.cs" line="9" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Selector.Designer.cs" bodystart="9" bodyend="-1"/>
+        <referencedby refid="class_budget_execution_1_1_selector_1aa01bf9b8f2c275e858474db95951ad73" compoundref="_selector_8_designer_8cs" startline="15" endline="22">BudgetExecution.Selector.Dispose</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_selector_1a861d8c44b6350db6b5aef90ed8ef1597" prot="private" static="no" mutable="no">
+        <type>Syncfusion.Windows.Forms.Tools.Carousel</type>
+        <definition>Syncfusion.Windows.Forms.Tools.Carousel BudgetExecution.Selector.ViewerCarousel</definition>
+        <argsstring></argsstring>
+        <name>ViewerCarousel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Selector.Designer.cs" line="93" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Selector.Designer.cs" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_budget_execution_1_1_selector_1a1615f43bf4d7dc9b4be6bbd445292500" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Panel</type>
+        <definition>System.Windows.Forms.Panel BudgetExecution.Selector.panel1</definition>
+        <argsstring></argsstring>
+        <name>panel1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Selector.Designer.cs" line="94" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Selector.Designer.cs" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_budget_execution_1_1_selector_1a144f49c59a3fa499195234ca3ab04fc5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>BudgetExecution.Selector.Selector</definition>
+        <argsstring>()</argsstring>
+        <name>Selector</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Selector.cs" line="17" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Selector.cs" bodystart="17" bodyend="19"/>
+        <referencedby refid="class_budget_execution_1_1_selector_1a486f37c868e5bdaee2a62ce6035e544d" compoundref="_selector_8cs" startline="67" endline="84">BudgetExecution.Selector.ViewerCarousel_OnImageSelected</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_selector_1a11255a851ba8d91edecf5560fb66ccd9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>BudgetExecution.Selector.Selector</definition>
+        <argsstring>(string path)</argsstring>
+        <name>Selector</name>
+        <param>
+          <type>string</type>
+          <declname>path</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Selector.cs" line="21" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Selector.cs" bodystart="21" bodyend="27"/>
+        <references refid="class_budget_execution_1_1_selector_1abc93020b3ed3e886f5b3f5e7a657f6b9" compoundref="_selector_8cs" startline="41" endline="61">BudgetExecution.Selector.GetViewerCarouselImageList</references>
+        <references refid="class_budget_execution_1_1_selector_1adf5403d42f69f3c896bc7eccd6b94756" compoundref="_selector_8_designer_8cs" startline="30" endline="89">BudgetExecution.Selector.InitializeComponent</references>
+        <references refid="class_budget_execution_1_1_selector_1aabb5c128d51edafd3e73c6a80d009c22" compoundref="_selector_8cs" startline="36">BudgetExecution.Selector.NinjaData</references>
+        <references refid="class_budget_execution_1_1_selector_1a486f37c868e5bdaee2a62ce6035e544d" compoundref="_selector_8cs" startline="67" endline="84">BudgetExecution.Selector.ViewerCarousel_OnImageSelected</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_budget_execution_1_1_selector_1abc93020b3ed3e886f5b3f5e7a657f6b9" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BudgetExecution.Selector.GetViewerCarouselImageList</definition>
+        <argsstring>(string path)</argsstring>
+        <name>GetViewerCarouselImageList</name>
+        <param>
+          <type>string</type>
+          <declname>path</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Selector.cs" line="41" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Selector.cs" bodystart="41" bodyend="61"/>
+        <references refid="class_budget_execution_1_1_selector_1aa000886d77f7757da0495b718fd50cd5" compoundref="_selector_8cs" startline="34">BudgetExecution.Selector.FilePath</references>
+        <referencedby refid="class_budget_execution_1_1_selector_1a11255a851ba8d91edecf5560fb66ccd9" compoundref="_selector_8cs" startline="21" endline="27">BudgetExecution.Selector.Selector</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_selector_1a9e554feb6586d1b4a220d3b9d2c02c36" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BudgetExecution.Selector.Selector_Load</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>Selector_Load</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Selector.cs" line="63" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Selector.cs" bodystart="63" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_selector_1a486f37c868e5bdaee2a62ce6035e544d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BudgetExecution.Selector.ViewerCarousel_OnImageSelected</definition>
+        <argsstring>(object sender, EventArgs e)</argsstring>
+        <name>ViewerCarousel_OnImageSelected</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>e</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Selector.cs" line="67" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Selector.cs" bodystart="67" bodyend="84"/>
+        <references refid="class_budget_execution_1_1_info_1a4432c11999b272c2bec6cb5bb9e3f39e" compoundref="_info_8cs" startline="26">BudgetExecution.Info.AppropriationImages</references>
+        <references refid="class_budget_execution_1_1_selector_1a144f49c59a3fa499195234ca3ab04fc5" compoundref="_selector_8cs" startline="17" endline="19">BudgetExecution.Selector.Selector</references>
+        <referencedby refid="class_budget_execution_1_1_selector_1a11255a851ba8d91edecf5560fb66ccd9" compoundref="_selector_8cs" startline="21" endline="27">BudgetExecution.Selector.Selector</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="class_budget_execution_1_1_selector_1adf5403d42f69f3c896bc7eccd6b94756" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BudgetExecution.Selector.InitializeComponent</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeComponent</name>
+        <briefdescription>
+<para>Required method for Designer support - do not modify the contents of this method with the code editor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Selector.Designer.cs" line="30" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Selector.Designer.cs" bodystart="30" bodyend="89"/>
+        <references refid="namespace_budget_execution_1afa69cdcc242b50644155cb4adf244d32a800618943025315f869e4e1f09471012">BudgetExecution.F</references>
+        <referencedby refid="class_budget_execution_1_1_selector_1a11255a851ba8d91edecf5560fb66ccd9" compoundref="_selector_8cs" startline="21" endline="27">BudgetExecution.Selector.Selector</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_budget_execution_1_1_selector_1aa01bf9b8f2c275e858474db95951ad73" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void BudgetExecution.Selector.Dispose</definition>
+        <argsstring>(bool disposing)</argsstring>
+        <name>Dispose</name>
+        <param>
+          <type>bool</type>
+          <declname>disposing</declname>
+        </param>
+        <briefdescription>
+<para>Clean up any resources being used. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>disposing</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true if managed resources should be disposed; otherwise, false.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Selector.Designer.cs" line="15" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Selector.Designer.cs" bodystart="15" bodyend="22"/>
+        <references refid="class_budget_execution_1_1_selector_1a8842cb48d941427c5854d524ff866b25" compoundref="_selector_8_designer_8cs" startline="9">BudgetExecution.Selector.components</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="360">
+        <label>MetroForm</label>
+      </node>
+      <node id="359">
+        <label>BudgetExecution.Selector</label>
+        <link refid="class_budget_execution_1_1_selector"/>
+        <childnode refid="360" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="362">
+        <label>MetroForm</label>
+      </node>
+      <node id="363">
+        <label>Windows</label>
+      </node>
+      <node id="364">
+        <label>System</label>
+      </node>
+      <node id="361">
+        <label>BudgetExecution.Selector</label>
+        <link refid="class_budget_execution_1_1_selector"/>
+        <childnode refid="362" relation="public-inheritance">
+        </childnode>
+        <childnode refid="363" relation="usage">
+          <edgelabel>ViewerCarousel</edgelabel>
+        </childnode>
+        <childnode refid="364" relation="usage">
+          <edgelabel>panel1</edgelabel>
+          <edgelabel>components</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Selector.cs" line="15" column="1" bodyfile="C:/Users/terry/Documents/Visual Studio 2017/Projects/BudgetExecution/Ninja/src/Selector.cs" bodystart="14" bodyend="85"/>
+    <listofallmembers>
+      <member refid="class_budget_execution_1_1_selector_1a8842cb48d941427c5854d524ff866b25" prot="private" virt="non-virtual"><scope>BudgetExecution::Selector</scope><name>components</name></member>
+      <member refid="class_budget_execution_1_1_selector_1aa01bf9b8f2c275e858474db95951ad73" prot="protected" virt="non-virtual"><scope>BudgetExecution::Selector</scope><name>Dispose</name></member>
+      <member refid="class_budget_execution_1_1_selector_1ae10399d21486d0274a445a37a368d4c9" prot="private" virt="non-virtual"><scope>BudgetExecution::Selector</scope><name>DivisionImages</name></member>
+      <member refid="class_budget_execution_1_1_selector_1aa000886d77f7757da0495b718fd50cd5" prot="private" virt="non-virtual"><scope>BudgetExecution::Selector</scope><name>FilePath</name></member>
+      <member refid="class_budget_execution_1_1_selector_1abc93020b3ed3e886f5b3f5e7a657f6b9" prot="private" virt="non-virtual"><scope>BudgetExecution::Selector</scope><name>GetViewerCarouselImageList</name></member>
+      <member refid="class_budget_execution_1_1_selector_1af7047630de3bb508681a0758623d1f1a" prot="private" virt="non-virtual"><scope>BudgetExecution::Selector</scope><name>Images</name></member>
+      <member refid="class_budget_execution_1_1_selector_1adf5403d42f69f3c896bc7eccd6b94756" prot="private" virt="non-virtual"><scope>BudgetExecution::Selector</scope><name>InitializeComponent</name></member>
+      <member refid="class_budget_execution_1_1_selector_1aabb5c128d51edafd3e73c6a80d009c22" prot="public" virt="non-virtual"><scope>BudgetExecution::Selector</scope><name>NinjaData</name></member>
+      <member refid="class_budget_execution_1_1_selector_1a1615f43bf4d7dc9b4be6bbd445292500" prot="private" virt="non-virtual"><scope>BudgetExecution::Selector</scope><name>panel1</name></member>
+      <member refid="class_budget_execution_1_1_selector_1a144f49c59a3fa499195234ca3ab04fc5" prot="public" virt="non-virtual"><scope>BudgetExecution::Selector</scope><name>Selector</name></member>
+      <member refid="class_budget_execution_1_1_selector_1a11255a851ba8d91edecf5560fb66ccd9" prot="public" virt="non-virtual"><scope>BudgetExecution::Selector</scope><name>Selector</name></member>
+      <member refid="class_budget_execution_1_1_selector_1a9e554feb6586d1b4a220d3b9d2c02c36" prot="private" virt="non-virtual"><scope>BudgetExecution::Selector</scope><name>Selector_Load</name></member>
+      <member refid="class_budget_execution_1_1_selector_1ad9ca184c4ce4af7a1b546e21eef7b550" prot="private" virt="non-virtual"><scope>BudgetExecution::Selector</scope><name>SummaryImages</name></member>
+      <member refid="class_budget_execution_1_1_selector_1a861d8c44b6350db6b5aef90ed8ef1597" prot="private" virt="non-virtual"><scope>BudgetExecution::Selector</scope><name>ViewerCarousel</name></member>
+      <member refid="class_budget_execution_1_1_selector_1a486f37c868e5bdaee2a62ce6035e544d" prot="private" virt="non-virtual"><scope>BudgetExecution::Selector</scope><name>ViewerCarousel_OnImageSelected</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
