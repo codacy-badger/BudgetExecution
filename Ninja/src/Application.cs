@@ -7,6 +7,7 @@ namespace BudgetExecution
     using System;
     using System.Collections.Generic;
     using System.Data;
+
     using Syncfusion.Windows.Forms.Chart;
 
     // Delegates
@@ -35,6 +36,7 @@ namespace BudgetExecution
     public enum FundCode
     {
         B, BR, BR2, BR3, T, TC, TD, TR, TR1, TR2, TR2A, TR2B, TR3, F, FC, FD, H, HC, HD, E1, E1C, E1D, E2, E2C, E2D, E3,
+
         E3C, E3D, E4, E4C, E4D, E5, E5C, E5D, ZL, FS3, TS3
     }
 

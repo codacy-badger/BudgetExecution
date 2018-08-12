@@ -7,6 +7,7 @@ namespace BudgetExecution
     using System;
     using System.Collections.Generic;
     using System.Data;
+    using System.Data.SQLite;
     using System.Drawing;
     using System.Linq;
     using System.Windows.Forms;
@@ -21,15 +22,23 @@ namespace BudgetExecution
         {
         }
 
-        public FormData(DataBuilder DbData, BindingSource bs, DataGridView dgv, BindingNavigator bn)
+        public FormData(DataBuilder data, BindingSource bs, DataGridView dgv, BindingNavigator bn)
         {
-            this.DbData = DbData;
+            this.DbData = data;
             DbTable = this.DbData.DbTable;
             BindGridAndNavigator(DbTable, dgv, bs, bn);
             BindingSource = bs;
             Grid = dgv;
             BindingSource.DataSource = DbTable;
             Grid.DataSource = BindingSource.DataSource;
+        }
+        
+        public FormData(Source source, Provider provider)
+        {
+            DbData = new DataBuilder(source, provider);
+            DbTable = DbData.GetDataTable();
+            BindingSource = new BindingSource();
+            BindingSource.DataSource = DbTable;
         }
 
         public FormData(Source source, Provider provider, Dictionary<string, object> param)
@@ -39,7 +48,6 @@ namespace BudgetExecution
             BindingSource = new BindingSource();
             BindingSource.DataSource = DbTable;
         }
-
 
         public FormData(Source source, Provider provider, Dictionary<string, object> param, BindingSource bs, DataGridView dgv, BindingNavigator bn)
         {
@@ -100,18 +108,28 @@ namespace BudgetExecution
             }
         }
 
-        private void GetParameters(DataRow row)
+        private SQLiteParameter[] GetParamArray(DataRow row)
         {
             try
             {
+                var cols = row.Table.Columns;
+                var item = row.ItemArray;
+                SQLiteParameter[] param = new SQLiteParameter[row.ItemArray.Length];
+                for (int i = 0; i < row.ItemArray.Length; i++)
+                {
+                    param[i] = new SQLiteParameter(cols[i].ColumnName, item[i]);
+                }
 
+                return param;
             }
             catch (Exception ex)
             {
                 new Error(ex).ShowDialog();
+                return null;
             }
         }
-        private void CreateTextBoxBindings(DataGridView dgv, MetroSetTextBox[] tbx)
+
+        private void CreateTextBoxPrcBindings(DataGridView dgv, MetroSetTextBox[] tbx)
         {
             try
             {
@@ -358,6 +376,7 @@ namespace BudgetExecution
                     data.Add("BOC", row.Cells["BOC"].ToString());
                     return data;
                 }
+
                 return null;
             }
             catch (Exception ex)
@@ -384,5 +403,43 @@ namespace BudgetExecution
             }
             return -1;
         }
+
+        private void CalculatorButton_OnClick(object sender, EventArgs e)
+        {
+            CalculatorForm cf = new CalculatorForm();
+            cf.ShowDialog();
+        }
+
+        private void ExcelButton_OnClick(object sender, EventArgs e)
+        {
+            ExcelImporter ef = new ExcelImporter();
+            ef.Show();
+        }
+
+        private void ReprogrammingButton_OnClick(object sender, EventArgs e)
+        {
+            Reprogramming rf = new Reprogramming();
+            rf.Show();
+        }
+
+        public List<SQLiteParameter[]> GetParamList(DataTable table)
+        {
+            try
+            {
+                var paramlist = new List<SQLiteParameter[]>();
+                foreach (DataRow row in table.Rows)
+                {
+                    paramlist.Add(GetParamArray(row));
+                }
+
+                return paramlist;
+            }
+            catch (Exception ex)
+            {
+                new Error(ex).ShowDialog();
+                return null;
+            }
+        }
+
     }
 }

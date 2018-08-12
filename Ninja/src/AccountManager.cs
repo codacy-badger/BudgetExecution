@@ -9,6 +9,7 @@ namespace BudgetExecution
     using System.Data;
     using System.Linq;
     using System.Windows.Forms;
+
     using MetroSet_UI.Controls;
 
     public partial class AccountManager : Syncfusion.Windows.Forms.MetroForm
@@ -18,7 +19,6 @@ namespace BudgetExecution
         {
             InitializeComponent();
         }
-
 
         public AccountManager(DataBuilder data)
         {
@@ -57,7 +57,6 @@ namespace BudgetExecution
             AddNewTab.TabVisible = false;
         }
 
-
         // PROPERTIES
         public Source Source { get; }
 
@@ -78,7 +77,6 @@ namespace BudgetExecution
         FormData Ninja { get; set; }
 
         // METHODS
-
         private void AccountManager_Load(object sender, EventArgs e)
         {
             if (AddNewTab.TabVisible == true)
@@ -109,15 +107,15 @@ namespace BudgetExecution
             }
         }
 
-
         private void PopulateComboBoxes()
         {
             DataBuilder data = new DataBuilder(Source, Provider);
-            if(data.DbTable.Columns.Contains("SubProject"))
+            if (data.DbTable.Columns.Contains("SubProject"))
             {
                 foreach (string p in data.ProgramElements["SubProject"])
                     ComboBox5.Items.Add(p);
             }
+
             foreach (string p in data.ProgramElements["Code"])
                 ComboBox6.Items.Add(p);
             foreach (string p in data.ProgramElements["Fund"])
@@ -224,7 +222,7 @@ namespace BudgetExecution
             }
             catch (Exception e)
             {
-                DialogResult  _ = new Error(e).ShowDialog();
+                DialogResult _ = new Error(e).ShowDialog();
                 return null;
             }
         }
@@ -290,16 +288,26 @@ namespace BudgetExecution
                     return null;
                 }
             }
+
             return null;
         }
 
-        private void AddButton_OnClick(object sender, EventArgs e)
+        private void CalculatorButton_OnClick(object sender, EventArgs e)
         {
-            AccountManager addmanager = new AccountManager(Source.PRC, Provider);
-            addmanager.AccountNavigator.Visible = false;
-            addmanager.UpdateTab.TabVisible = false;
-            addmanager.Show();
-            Close();
+            CalculatorForm cf = new CalculatorForm();
+            cf.ShowDialog();
+        }
+
+        private void ExcelButton_OnClick(object sender, EventArgs e)
+        {
+            ExcelImporter ef = new ExcelImporter();
+            ef.Show();
+        }
+
+        private void ReprogrammingButton_OnClick(object sender, EventArgs e)
+        {
+            Reprogramming rf = new Reprogramming();
+            rf.Show();
         }
 
         private void PreviousButton_OnClick(object sender, EventArgs e)
@@ -312,26 +320,34 @@ namespace BudgetExecution
             BindingSource.MoveNext();
         }
 
-        private void UpdateButton_Click(object sender, EventArgs e)
+        private void AddButton_OnClick(object sender, EventArgs e)
         {
-            AccountManager addmanager = new AccountManager(Source, Provider);
-            addmanager.AccountNavigator.Visible = false;
-            addmanager.AddNewTab.TabVisible = false;
-            addmanager.Show();
-            Close();
-
+            try
+            {
+                RecordManager am = new RecordManager(Source, Provider);
+                am.Show();
+            }
+            catch (Exception ex)
+            {
+                new Error(ex).ShowDialog();
+            }
         }
 
-        private void Button1_Click(object sender, EventArgs e)
+        private void RefreshButton_Click(object sender, EventArgs e)
         {
-
         }
 
-        private void CalculatorButton_Click(object sender, EventArgs e)
+        private void CopyButton_OnClick(object sender, EventArgs e)
         {
-            CalculatorForm cf = new CalculatorForm();
-            cf.Show();
+            try
+            {
+                RecordManager am = new RecordManager(Source, Provider);
+                am.Show();
+            }
+            catch (Exception ex)
+            {
+                new Error(ex).ShowDialog();
+            }
         }
-
     }
 }

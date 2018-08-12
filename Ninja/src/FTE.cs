@@ -28,10 +28,6 @@ namespace BudgetExecution
         }
 
         // PROPERTIES
-        private new DataBuilder DbData { get; }
-
-        private PrcMetric Metric { get; }
-
         public DataTable Table { get; }
 
         public Tuple<DataTable, PRC[], decimal, int> AllocationData { get; }
@@ -53,6 +49,10 @@ namespace BudgetExecution
         public Dictionary<string, decimal> ProgramData { get; }
 
         public Dictionary<string, decimal> ProjectData { get; }
+
+        private new DataBuilder DbData { get; }
+
+        private PrcMetric Metric { get; }
 
         BOC IPRC.BOC { get; }
 

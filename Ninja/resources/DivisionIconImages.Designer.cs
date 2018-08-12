@@ -63,9 +63,9 @@ namespace BudgetExecution.Resources {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _06A {
+        internal static System.Drawing.Bitmap EJ {
             get {
-                object obj = ResourceManager.GetObject("_06A", resourceCulture);
+                object obj = ResourceManager.GetObject("EJ", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,9 +73,9 @@ namespace BudgetExecution.Resources {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _06C {
+        internal static System.Drawing.Bitmap EN {
             get {
-                object obj = ResourceManager.GetObject("_06C", resourceCulture);
+                object obj = ResourceManager.GetObject("EN", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -83,9 +83,9 @@ namespace BudgetExecution.Resources {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _06D {
+        internal static System.Drawing.Bitmap MD {
             get {
-                object obj = ResourceManager.GetObject("_06D", resourceCulture);
+                object obj = ResourceManager.GetObject("MD", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -93,9 +93,9 @@ namespace BudgetExecution.Resources {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _06F {
+        internal static System.Drawing.Bitmap MDR {
             get {
-                object obj = ResourceManager.GetObject("_06F", resourceCulture);
+                object obj = ResourceManager.GetObject("MDR", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -103,9 +103,9 @@ namespace BudgetExecution.Resources {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _06G {
+        internal static System.Drawing.Bitmap MM {
             get {
-                object obj = ResourceManager.GetObject("_06G", resourceCulture);
+                object obj = ResourceManager.GetObject("MM", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -113,9 +113,9 @@ namespace BudgetExecution.Resources {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _06J {
+        internal static System.Drawing.Bitmap RA {
             get {
-                object obj = ResourceManager.GetObject("_06J", resourceCulture);
+                object obj = ResourceManager.GetObject("RA", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -123,9 +123,9 @@ namespace BudgetExecution.Resources {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _06K {
+        internal static System.Drawing.Bitmap RC {
             get {
-                object obj = ResourceManager.GetObject("_06K", resourceCulture);
+                object obj = ResourceManager.GetObject("RC", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -133,9 +133,9 @@ namespace BudgetExecution.Resources {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _06L {
+        internal static System.Drawing.Bitmap SF {
             get {
-                object obj = ResourceManager.GetObject("_06L", resourceCulture);
+                object obj = ResourceManager.GetObject("SF", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -143,9 +143,9 @@ namespace BudgetExecution.Resources {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _06M {
+        internal static System.Drawing.Bitmap WCF {
             get {
-                object obj = ResourceManager.GetObject("_06M", resourceCulture);
+                object obj = ResourceManager.GetObject("WCF", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -153,9 +153,9 @@ namespace BudgetExecution.Resources {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _06N {
+        internal static System.Drawing.Bitmap WQ {
             get {
-                object obj = ResourceManager.GetObject("_06N", resourceCulture);
+                object obj = ResourceManager.GetObject("WQ", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -163,9 +163,9 @@ namespace BudgetExecution.Resources {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _06R {
+        internal static System.Drawing.Bitmap WSA {
             get {
-                object obj = ResourceManager.GetObject("_06R", resourceCulture);
+                object obj = ResourceManager.GetObject("WSA", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -173,9 +173,9 @@ namespace BudgetExecution.Resources {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _06X {
+        internal static System.Drawing.Bitmap XA {
             get {
-                object obj = ResourceManager.GetObject("_06X", resourceCulture);
+                object obj = ResourceManager.GetObject("XA", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

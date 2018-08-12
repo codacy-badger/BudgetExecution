@@ -36,8 +36,8 @@ namespace BudgetExecution
             if (q.Source == Source.FTE)
             {
                 DbTable = GetDataTable().AsEnumerable().Where(p => p.Field<string>("BOC").Equals("17"))
-                    .Where(p => p.Field<string>("BudgetLevel").Equals("8"))
-                    .Select(p => p).CopyToDataTable();
+                                        .Where(p => p.Field<string>("BudgetLevel").Equals("8")).Select(p => p)
+                                        .CopyToDataTable();
                 Total = GetFteTotal(DbTable);
                 ProgramElements = GetProgramElements(DbTable);
                 BindingSource = new BindingSource();
@@ -62,8 +62,8 @@ namespace BudgetExecution
             if (source == Source.FTE)
             {
                 DbTable = GetDataTable().AsEnumerable().Where(p => p.Field<string>("BOC").Equals("17"))
-                    .Where(p => p.Field<string>("BudgetLevel").Equals("8"))
-                    .Select(p => p).CopyToDataTable();
+                                        .Where(p => p.Field<string>("BudgetLevel").Equals("8")).Select(p => p)
+                                        .CopyToDataTable();
                 Total = GetFteTotal(DbTable);
                 ProgramElements = GetProgramElements(DbTable);
                 BindingSource = new BindingSource();
@@ -87,8 +87,8 @@ namespace BudgetExecution
             Columns = GetColumnNames(DbTable);
             if (source == Source.FTE)
             {
-                DbTable = GetDataTable().AsEnumerable().Where(p => p.Field<string>("BOC").Equals("17"))
-                    .Select(p => p).CopyToDataTable();
+                DbTable = GetDataTable().AsEnumerable().Where(p => p.Field<string>("BOC").Equals("17")).Select(p => p)
+                                        .CopyToDataTable();
                 Total = GetFteTotal(DbTable);
                 ProgramElements = GetProgramElements(DbTable);
                 BindingSource = new BindingSource();
@@ -120,7 +120,6 @@ namespace BudgetExecution
         // DELEGATES
 
         // METHODS
-
         private SQLiteQuery GetSQLiteQuery(Source source, Provider provider)
         {
             try
@@ -176,6 +175,7 @@ namespace BudgetExecution
                     eq.Parameters = pmr;
                     return eq;
                 }
+
                 return null;
             }
             catch (Exception ex)
@@ -200,16 +200,56 @@ namespace BudgetExecution
             }
         }
 
+        private SQLiteParameter[] GetParamArray(DataRow row)
+        {
+            try
+            {
+                var cols = row.Table.Columns;
+                var item = row.ItemArray;
+                SQLiteParameter[] param = new SQLiteParameter[row.ItemArray.Length];
+                for (int i = 0; i < row.ItemArray.Length; i++)
+                {
+                    param[i] = new SQLiteParameter(cols[i].ColumnName, item[i]);
+                }
+
+                return param;
+            }
+            catch (Exception ex)
+            {
+                new Error(ex).ShowDialog();
+                return null;
+            }
+        }
+
+        public List<SQLiteParameter[]> GetParamList(DataTable table)
+        {
+            try
+            {
+                var paramlist = new List<SQLiteParameter[]>();
+                foreach (DataRow row in table.Rows)
+                {
+                    paramlist.Add(GetParamArray(row));
+                }
+
+                return paramlist;
+            }
+            catch (Exception ex)
+            {
+                new Error(ex).ShowDialog();
+                return null;
+            }
+        }
+
         public static DataTable FilterTable(DataTable table, Field prcfilter, string filter)
         {
             try
             {
                 return table.AsEnumerable().Where(p => p.Field<string>(prcfilter.ToString()).Equals(filter))
-                    .Select(p => p).CopyToDataTable();
+                            .Select(p => p).CopyToDataTable();
             }
             catch (Exception ex)
             {
-                DialogResult  _ = new Error(ex).ShowDialog();
+                DialogResult _ = new Error(ex).ShowDialog();
                 return null;
             }
         }
@@ -227,7 +267,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                DialogResult  _ = new Error(ex).ShowDialog();
+                DialogResult _ = new Error(ex).ShowDialog();
                 return null;
             }
         }
@@ -239,7 +279,9 @@ namespace BudgetExecution
                 Dictionary<string, string[]> data = new Dictionary<string, string[]>();
                 foreach (DataColumn dc in table.Columns)
                 {
-                    if (dc.ColumnName.Equals("ID") || dc.ColumnName.Equals("Amount") || dc.ColumnName.Contains("Obligation") || dc.ColumnName.Contains("Commitment"))
+                    if (dc.ColumnName.Equals("ID") || dc.ColumnName.Equals("Amount")
+                                                   || dc.ColumnName.Contains("Obligation")
+                                                   || dc.ColumnName.Contains("Commitment"))
                     {
                         continue;
                     }
@@ -261,7 +303,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                DialogResult  _ = new Error(ex).ShowDialog();
+                DialogResult _ = new Error(ex).ShowDialog();
                 return null;
             }
         }
@@ -278,14 +320,14 @@ namespace BudgetExecution
                 {
                     foreach (string c in dc)
                     {
-                        if (c.Equals("Amount") || c.Contains("Obligation") || c.Contains("Commitment") || c.Contains("WorkHour") || c.Contains("LeaveHour"))
+                        if (c.Equals("Amount") || c.Contains("Obligation") || c.Contains("Commitment")
+                            || c.Contains("WorkHour") || c.Contains("LeaveHour"))
                         {
                             continue;
                         }
 
                         data.Add(c, r[c]);
                     }
-
                 }
 
                 return data;
@@ -310,7 +352,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                DialogResult  _ = new Error(ex).ShowDialog();
+                DialogResult _ = new Error(ex).ShowDialog();
                 return -1;
             }
         }
@@ -328,7 +370,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                DialogResult  _ = new Error(ex).ShowDialog();
+                DialogResult _ = new Error(ex).ShowDialog();
                 return null;
             }
         }
@@ -347,7 +389,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                DialogResult  _ = new Error(ex).ShowDialog();
+                DialogResult _ = new Error(ex).ShowDialog();
                 return null;
             }
         }
@@ -384,7 +426,7 @@ namespace BudgetExecution
             {
                 DialogResult _ = new Error(e).ShowDialog();
                 return null;
-            } 
+            }
         }
 
         public decimal GetTotal(DataTable table)
@@ -393,16 +435,18 @@ namespace BudgetExecution
             {
                 try
                 {
-                    decimal total = table.AsEnumerable().Where(p => p.Field<string>("BOC") != "17").Select(p => p.Field<decimal>("Amount")).Sum();
-                    if(total > 0)
+                    decimal total = table.AsEnumerable().Where(p => p.Field<string>("BOC") != "17")
+                                         .Select(p => p.Field<decimal>("Amount")).Sum();
+                    if (total > 0)
                         return total;
                 }
                 catch (Exception ex)
                 {
-                    DialogResult  _ = new Error(ex).ShowDialog();
+                    DialogResult _ = new Error(ex).ShowDialog();
                     return -1M;
                 }
             }
+
             return -1;
         }
 
@@ -412,14 +456,15 @@ namespace BudgetExecution
             {
                 if (DbTable.Columns.Contains("Amount"))
                 {
-                    return table.AsEnumerable().Where(p => p.Field<string>("BOC") == "17").Select(p => p.Field<decimal>("Amount")).Sum();
+                    return table.AsEnumerable().Where(p => p.Field<string>("BOC") == "17")
+                                .Select(p => p.Field<decimal>("Amount")).Sum();
                 }
 
                 return 0m;
             }
             catch (Exception ex)
             {
-                DialogResult  _ = new Error(ex).ShowDialog();
+                DialogResult _ = new Error(ex).ShowDialog();
                 return -1M;
             }
         }
@@ -432,25 +477,26 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                DialogResult  _ = new Error(ex).ShowDialog();
+                DialogResult _ = new Error(ex).ShowDialog();
                 return null;
             }
         }
 
         public string[] GetColumnNames(DataTable table)
         {
-            if(table.Rows.Count > 0)
+            if (table.Rows.Count > 0)
             {
                 try
                 {
                     return Info.GetFields(table);
                 }
-                catch(SystemException ex)
+                catch (SystemException ex)
                 {
-                    DialogResult  _ = new Error(ex).ShowDialog();
+                    DialogResult _ = new Error(ex).ShowDialog();
                     return null;
                 }
             }
+
             return null;
         }
     }

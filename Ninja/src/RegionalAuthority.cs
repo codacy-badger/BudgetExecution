@@ -37,12 +37,11 @@ namespace BudgetExecution
         }
 
         // PROPERTIES
+        public static string FiscalYear { get; set; } = "2018";
 
         public DataTable DbTable { get; }
 
         public decimal Total { get; }
-
-        public static string FiscalYear { get; set; } = "2018";
 
         public decimal Average { get; set; }
 
@@ -159,26 +158,6 @@ namespace BudgetExecution
             }
         }
 
-        internal FTE[] GetFTE(DataTable table)
-        {
-            try
-            {
-                DataTable fteTable = table.AsEnumerable().Where(p => p.Field<string>("BOC").Equals("17")).Select(p => p).CopyToDataTable();
-                FTE[] fteArray = new FTE[fteTable.Rows.Count];
-                for (int i = 0; i < fteTable.Rows.Count; i++)
-                {
-                    fteArray[i] = new FTE(fteTable.Rows[i]);
-                }
-
-                return fteArray;
-            }
-            catch (Exception ex)
-            {
-                new Error(ex).ShowDialog();
-                return null;
-            }
-        }
-
         public decimal[] GetMetrics(DataTable table)
         {
             try
@@ -277,26 +256,27 @@ namespace BudgetExecution
                 allocation.Add("Training", training);
                 return allocation;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                new Error(ex).ShowDialog();
                 return null;
             }
         }
 
-        internal void UpdateAmount(DataRow row, decimal amount2)
+        internal void UpdateAmount(Source source, DataRow row, decimal amount2)
         {
             try
             {
                 Dictionary<string, object> parameter = new Dictionary<string, object>();
                 parameter.Add("ID", row["ID"]);
                 parameter.Add("Amount", amount2);
-                Query query = new Query(Source.PRC, Provider.SQLite, parameter);
+                Query query = new Query(source, Provider.SQLite, parameter);
                 DbCommand update = query.UpdateCommand;
                 update.ExecuteNonQuery();
             }
             catch (Exception e)
             {
-                DialogResult  _ = new Error(e).ShowDialog();
+                new Error(e).ShowDialog();
             }
         }
 
@@ -316,7 +296,7 @@ namespace BudgetExecution
             }
             catch (Exception e)
             {
-                DialogResult  _ = new Error(e).ShowDialog();
+                new Error(e).ShowDialog();
             }
         }
 
@@ -337,6 +317,26 @@ namespace BudgetExecution
             {
                 new Error(ex).ShowDialog();
                 return -1;
+            }
+        }
+        
+        internal FTE[] GetFTE(DataTable table)
+        {
+            try
+            {
+                DataTable fteTable = table.AsEnumerable().Where(p => p.Field<string>("BOC").Equals("17")).Select(p => p).CopyToDataTable();
+                FTE[] fteArray = new FTE[fteTable.Rows.Count];
+                for (int i = 0; i < fteTable.Rows.Count; i++)
+                {
+                    fteArray[i] = new FTE(fteTable.Rows[i]);
+                }
+
+                return fteArray;
+            }
+            catch (Exception ex)
+            {
+                new Error(ex).ShowDialog();
+                return null;
             }
         }
     }

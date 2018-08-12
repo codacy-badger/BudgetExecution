@@ -59,16 +59,63 @@ namespace BudgetExecution
 
         private Provider Provider { get; }
 
-        // METHODS
+        // METHODS        
         private void CalculatorButton_OnClick(object sender, EventArgs e)
         {
-            CalculatorForm c = new CalculatorForm();
-            c.Show();
+            CalculatorForm cf = new CalculatorForm();
+            cf.ShowDialog();
         }
 
-        private void Tab2_SelectedIndexChanged(object sender, EventArgs e)
+        private void ExcelButton_OnClick(object sender, EventArgs e)
         {
+            ExcelImporter ef = new ExcelImporter();
+            ef.Show();
+        }
 
+        private void ReprogrammingButton_OnClick(object sender, EventArgs e)
+        {
+            Reprogramming rf = new Reprogramming();
+            rf.Show();
+        }     
+        
+        private void PreviousButton_OnClick(object sender, EventArgs e)
+        {
+            BindingSource.MovePrevious();
+        }
+
+        private void NextButton_OnClick(object sender, EventArgs e)
+        {
+            BindingSource.MoveNext();
+        }
+
+        private void AddButton_OnClick(object sender, EventArgs e)
+        {
+            try
+            {
+                RecordManager am = new RecordManager(Source, Provider);
+                am.Show();
+            }
+            catch (Exception ex)
+            {
+                new Error(ex).ShowDialog();
+            }
+        }
+
+        private void RefreshButton_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void CopyButton_OnClick(object sender, EventArgs e)
+        {
+            try
+            {
+                RecordManager am = new RecordManager(Source, Provider);
+                am.Show();
+            }
+            catch (Exception ex)
+            {
+                new Error(ex).ShowDialog();
+            }
         }
     }
 }

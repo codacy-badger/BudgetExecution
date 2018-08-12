@@ -260,50 +260,6 @@ namespace BudgetExecution
                 new Error(ex).ShowDialog();
             }
         }
-        
-        private void PreviousButton_OnClick(object sender, EventArgs e)
-        {
-            BindingSource.MovePrevious();
-        }
-
-        private void NextButton_OnClick(object sender, EventArgs e)
-        {
-            BindingSource.MoveNext();
-
-        }
-
-        private void AddButton_OnClick(object sender, EventArgs e)
-        {
-            try
-            {
-                RecordManager am = new RecordManager(Source, Provider);
-                am.Show();
-            }
-            catch (Exception ex)
-            {
-
-                new Error(ex).ShowDialog();
-            }
-        }
-
-        private void RefreshButton_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void CopyButton_OnClick(object sender, EventArgs e)
-        {
-            try
-            {
-                RecordManager am = new RecordManager(Source, Provider);
-                am.Show();
-            }
-            catch (Exception ex)
-            {
-
-                new Error(ex).ShowDialog();
-            }
-        }
 
         private void GetPrcGridVisibleColumns(DataGridView dgv)
         {
@@ -727,5 +683,66 @@ namespace BudgetExecution
             }
         }
         
+        private void CalculatorButton_OnClick(object sender, EventArgs e)
+        {
+            CalculatorForm cf = new CalculatorForm();
+            cf.ShowDialog();
+        }
+
+        private void ExcelButton_OnClick(object sender, EventArgs e)
+        {
+            ExcelImporter ef = new ExcelImporter();
+            ef.Show();
+        }
+
+        private void ReprogrammingButton_OnClick(object sender, EventArgs e)
+        {
+            Reprogramming rf = new Reprogramming();
+            rf.Show();
+        }     
+        
+        private void PreviousButton_OnClick(object sender, EventArgs e)
+        {
+            BindingSource.MovePrevious();
+        }
+
+        private void NextButton_OnClick(object sender, EventArgs e)
+        {
+            BindingSource.MoveNext();
+
+        }
+
+        private void AddButton_OnClick(object sender, EventArgs e)
+        {
+            try
+            {
+                RecordManager am = new RecordManager(Source, Provider);
+                am.Show();
+            }
+            catch (Exception ex)
+            {
+
+                new Error(ex).ShowDialog();
+            }
+        }
+
+        private void RefreshButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CopyButton_OnClick(object sender, EventArgs e)
+        {
+            try
+            {
+                RecordManager am = new RecordManager(Source, Provider);
+                am.Show();
+            }
+            catch (Exception ex)
+            {
+
+                new Error(ex).ShowDialog();
+            }
+        }
     }
 }

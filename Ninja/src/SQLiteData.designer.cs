@@ -407,6 +407,7 @@ namespace BudgetExecution
             toolTipInfo1.Footer.Size = new System.Drawing.Size(20, 20);
             toolTipInfo1.Header.Size = new System.Drawing.Size(20, 20);
             this.superToolTip1.SetToolTip(this.toolStripButton10, toolTipInfo1);
+            this.toolStripButton10.Click += new System.EventHandler(this.PreviousButton_OnClick);
             // 
             // toolStripSeparator10
             // 
@@ -440,6 +441,7 @@ namespace BudgetExecution
             this.toolStripButton11.Size = new System.Drawing.Size(24, 24);
             this.toolStripButton11.Text = "Next";
             this.superToolTip1.SetToolTip(this.toolStripButton11, toolTipInfo1);
+            this.toolStripButton11.Click += new System.EventHandler(this.NextButton_OnClick);
             // 
             // toolStripSeparator13
             // 
@@ -475,6 +477,7 @@ namespace BudgetExecution
             this.toolStripButton13.Size = new System.Drawing.Size(24, 24);
             this.toolStripButton13.Text = "toolStripButton13";
             this.superToolTip1.SetToolTip(this.toolStripButton13, toolTipInfo1);
+            this.toolStripButton13.Click += new System.EventHandler(this.RefreshButton_Click);
             // 
             // toolStripSeparator18
             // 
@@ -511,6 +514,7 @@ namespace BudgetExecution
             this.ResetButton.Text = "toolStripButton7";
             this.superToolTip1.SetToolTip(this.ResetButton, toolTipInfo1);
             this.ResetButton.ToolTipText = "Reset DataTable and Filters";
+            this.ResetButton.Click += new System.EventHandler(this.CopyButton_OnClick);
             // 
             // toolStripSeparator14
             // 
@@ -527,6 +531,7 @@ namespace BudgetExecution
             this.AddButton.Size = new System.Drawing.Size(24, 24);
             this.AddButton.Text = "toolStripButton7";
             this.superToolTip1.SetToolTip(this.AddButton, toolTipInfo1);
+            this.AddButton.Click += new System.EventHandler(this.AddButton_OnClick);
             // 
             // toolStripSeparator19
             // 
@@ -543,6 +548,7 @@ namespace BudgetExecution
             this.toolStripButton7.Size = new System.Drawing.Size(24, 24);
             this.toolStripButton7.Text = "toolStripButton7";
             this.superToolTip1.SetToolTip(this.toolStripButton7, toolTipInfo1);
+            this.toolStripButton7.Click += new System.EventHandler(this.CalculatorButton_OnClick);
             // 
             // GridRefreshButton
             // 
@@ -559,6 +565,7 @@ namespace BudgetExecution
             this.toolStripButton9.Size = new System.Drawing.Size(24, 24);
             this.toolStripButton9.Text = "toolStripButton9";
             this.superToolTip1.SetToolTip(this.toolStripButton9, toolTipInfo1);
+            this.toolStripButton9.Click += new System.EventHandler(this.ExcelButton_OnClick);
             // 
             // toolStripSeparator12
             // 
@@ -606,6 +613,7 @@ namespace BudgetExecution
             this.toolStripButton16.Name = "toolStripButton16";
             this.toolStripButton16.Size = new System.Drawing.Size(24, 24);
             this.superToolTip1.SetToolTip(this.toolStripButton16, toolTipInfo1);
+            this.toolStripButton16.Click += new System.EventHandler(this.ReprogrammingButton_OnClick);
             // 
             // tableLayoutPanel1
             // 
@@ -617,7 +625,7 @@ namespace BudgetExecution
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 132F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 143F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 120F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 144F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 145F));
             this.tableLayoutPanel1.Controls.Add(this.label5, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.label10, 5, 0);
             this.tableLayoutPanel1.Controls.Add(this.label6, 1, 0);
@@ -649,7 +657,7 @@ namespace BudgetExecution
             this.label10.AutoSize = true;
             this.label10.Dock = System.Windows.Forms.DockStyle.Left;
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(654, 0);
+            this.label10.Location = new System.Drawing.Point(653, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(60, 34);
             this.label10.TabIndex = 158;
@@ -660,7 +668,7 @@ namespace BudgetExecution
             this.label6.AutoSize = true;
             this.label6.Dock = System.Windows.Forms.DockStyle.Left;
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(66, 0);
+            this.label6.Location = new System.Drawing.Point(65, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(51, 34);
             this.label6.TabIndex = 154;
@@ -671,7 +679,7 @@ namespace BudgetExecution
             this.label9.AutoSize = true;
             this.label9.Dock = System.Windows.Forms.DockStyle.Right;
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(597, 0);
+            this.label9.Location = new System.Drawing.Point(596, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(51, 34);
             this.label9.TabIndex = 157;
@@ -682,7 +690,7 @@ namespace BudgetExecution
             this.label7.AutoSize = true;
             this.label7.Dock = System.Windows.Forms.DockStyle.Right;
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(282, 0);
+            this.label7.Location = new System.Drawing.Point(281, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(51, 34);
             this.label7.TabIndex = 155;
@@ -693,7 +701,7 @@ namespace BudgetExecution
             this.label8.AutoSize = true;
             this.label8.Dock = System.Windows.Forms.DockStyle.Left;
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(339, 0);
+            this.label8.Location = new System.Drawing.Point(338, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(51, 34);
             this.label8.TabIndex = 156;
@@ -704,7 +712,7 @@ namespace BudgetExecution
             this.label11.AutoSize = true;
             this.label11.Dock = System.Windows.Forms.DockStyle.Right;
             this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(834, 0);
+            this.label11.Location = new System.Drawing.Point(833, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(77, 34);
             this.label11.TabIndex = 159;
@@ -715,7 +723,7 @@ namespace BudgetExecution
             this.label12.AutoSize = true;
             this.label12.Dock = System.Windows.Forms.DockStyle.Left;
             this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(917, 0);
+            this.label12.Location = new System.Drawing.Point(916, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(60, 34);
             this.label12.TabIndex = 160;
