@@ -45,7 +45,6 @@ namespace BudgetExecution
                 DbRow = GetDataRecords(DbTable);
                 Columns = GetColumnNames(DbTable);
             }
-
         }
 
         public DataBuilder(Source source, Provider provider)
@@ -72,7 +71,6 @@ namespace BudgetExecution
                 DbRow = GetDataRecords(DbTable);
                 Columns = GetColumnNames(DbTable);
             }
-            
         }
 
         public DataBuilder(Source source, Provider provider, Dictionary<string, object> param)
@@ -120,8 +118,6 @@ namespace BudgetExecution
         public Dictionary<string, object> DataFields { get; set; }
 
         // DELEGATES
-
-        
 
         // METHODS
 

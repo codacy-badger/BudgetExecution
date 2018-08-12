@@ -19,7 +19,6 @@ namespace BudgetExecution
             DataRecords = DbData.DbRow;
             DbTable = DbData.DbTable;
             PrcAllocation = GetPrcArray(DbTable);
-            TableFilter = new DataFilter(DataBuilder.FilterTable);
             Total = Metric.Total;
             Count = Metric.Count;
             Average = Metric.Average;
@@ -34,6 +33,8 @@ namespace BudgetExecution
             {
                 FTE = GetFTE(DbData.DbTable);
             }
+
+            TableFilter = DataBuilder.FilterTable;
         }
 
         public DivisionAuthority(string rc)
@@ -41,7 +42,6 @@ namespace BudgetExecution
             RC = new RC(rc);
             Org = new Org(RC.Code);
             DbData = new DataBuilder(Source.DivisionAccounts, Provider.SQLite, new Dictionary<string, object> { ["RC"] = rc });
-            TableFilter = new DataFilter(DataBuilder.FilterTable);
             Metric = new PrcMetric(DbData);
             DbTable = DbData.DbTable;
             DataRecords = DbData.DbRow;
@@ -60,6 +60,8 @@ namespace BudgetExecution
             {
                 FTE = GetFTE(DbTable);
             }
+
+            TableFilter = DataBuilder.FilterTable;
         }
 
         // PROPERTIES
@@ -108,7 +110,6 @@ namespace BudgetExecution
         public Dictionary<string, decimal> ProjectData { get; set; }
 
         // METHODS
-
         public decimal GetAverage(DataTable table)
         {
             try
@@ -145,26 +146,6 @@ namespace BudgetExecution
             {
                 new Error(ex).ShowDialog();
                 return -1;
-            }
-        }
-
-        internal FTE[] GetFTE(DataTable table)
-        {
-            try
-            {
-                var fteTable = table.AsEnumerable().Where(p => p.Field<string>("BOC").Equals("17")).Select(p => p).CopyToDataTable();
-                var fteArray = new FTE[fteTable.Rows.Count];
-                for (int i = 0; i < fteTable.Rows.Count; i++)
-                {
-                    fteArray[i] = new FTE(fteTable.Rows[i]);
-                }
-
-                return fteArray;
-            }
-            catch (Exception ex)
-            {
-                new Error(ex).ShowDialog();
-                return null;
             }
         }
 
@@ -253,6 +234,26 @@ namespace BudgetExecution
             {
                 new Error(ex).ShowDialog();
                 return -1M;
+            }
+        }
+
+        internal FTE[] GetFTE(DataTable table)
+        {
+            try
+            {
+                var fteTable = table.AsEnumerable().Where(p => p.Field<string>("BOC").Equals("17")).Select(p => p).CopyToDataTable();
+                var fteArray = new FTE[fteTable.Rows.Count];
+                for (int i = 0; i < fteTable.Rows.Count; i++)
+                {
+                    fteArray[i] = new FTE(fteTable.Rows[i]);
+                }
+
+                return fteArray;
+            }
+            catch (Exception ex)
+            {
+                new Error(ex).ShowDialog();
+                return null;
             }
         }
 

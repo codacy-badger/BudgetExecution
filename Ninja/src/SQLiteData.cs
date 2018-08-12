@@ -35,7 +35,7 @@ namespace BudgetExecution
             Text = $"{Source.ToString()} Database";
             FunctionTab.TabVisible = false;
             TableFilter = new DataFilter(Info.FilterRows);
-            FieldFilter = new ColumnFilter(Info.GetColumnValues);
+            FieldFilter = new FieldFilter(Info.GetColumnValues);
         }
 
         public SQLiteData(Source source, Provider provider)
@@ -52,7 +52,7 @@ namespace BudgetExecution
             Text = $"{Source.ToString()} Database";
             FunctionTab.TabVisible = false;
             TableFilter = new DataFilter(Info.FilterRows);
-            FieldFilter = new ColumnFilter(Info.GetColumnValues);
+            FieldFilter = new FieldFilter(Info.GetColumnValues);
 
         }
 
@@ -63,7 +63,7 @@ namespace BudgetExecution
 
         internal DataFilter TableFilter { get; set; }
 
-        internal ColumnFilter FieldFilter { get; set; }
+        internal FieldFilter FieldFilter { get; set; }
 
         internal DataBuilder DbData { get; }
 

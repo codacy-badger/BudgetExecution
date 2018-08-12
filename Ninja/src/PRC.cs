@@ -27,6 +27,7 @@ namespace BudgetExecution
             ID = int.Parse(DbRow["ID"].ToString());
             BudgetLevel = DbRow["BudgetLevel"].ToString();
             RPIO = DbRow["RPIO"].ToString();
+            AH = DbRow["AH"].ToString();
             BFY = DbRow["BFY"].ToString();
             Fund = new Fund(DbRow["Fund"].ToString(), DbRow["BFY"].ToString());
             Org = new Org(DbRow["Org"].ToString());
@@ -110,6 +111,7 @@ namespace BudgetExecution
             ID = int.Parse(row["ID"].ToString());
             BudgetLevel = row["BudgetLevel"].ToString();
             RPIO = row["RPIO"].ToString();
+            AH = row["AH"].ToString();
             BFY = row["BFY"].ToString();
             Fund = new Fund(row["Fund"].ToString(), row["BFY"].ToString());
             Org = new Org(row["Org"].ToString());
@@ -328,21 +330,12 @@ namespace BudgetExecution
             }
         }
 
-        public static void Insert(Source source, Provider provider, Dictionary<string, object> p)
+        public static void Insert(Dictionary<string, object> p)
         {
             try
             {
-                var param = GetInsertionColumns(source, provider, p);
-                var fields = param.Keys.ToArray();
-                var vals = param.Values.ToArray();
-                var query = new Query(source, provider, param);
-                var cmd = $"INSERT INTO {source.ToString()} {fields} VALUES {vals};";
-                var conn = query.GetConnection(Provider.SQLite) as SQLiteConnection;
-                using (conn)
-                {
-                    var insert = query.GetDataCommand(cmd, conn) as SQLiteCommand;
-                    insert?.ExecuteNonQuery();
-                }
+                var insert = new InsertData(Info.Insert);
+                insert(Source.PRC, Provider.SQLite, p);
             }
             catch (Exception ex)
             {
@@ -350,18 +343,12 @@ namespace BudgetExecution
             }
         }
 
-        public static void Update(Source source, Provider provider, Dictionary<string, object> p)
+        public static void Update(Dictionary<string, object> p)
         {
             try
             {
-                var query = new Query(source, provider, p);
-                var cmd = $"UPDATE {source.ToString()} SET Amount = {(decimal)p["Amount"]} WHERE ID = {(int)p["ID"]};";
-                var conn = query.GetConnection(Provider.SQLite) as SQLiteConnection;
-                using (conn)
-                {
-                    var update = query.GetDataCommand(cmd, conn) as SQLiteCommand;
-                    update?.ExecuteNonQuery();
-                }
+                var update = new InsertData(Info.Insert);
+                update(Source.PRC, Provider.SQLite, p);
             }
             catch (Exception ex)
             {
@@ -369,18 +356,12 @@ namespace BudgetExecution
             }
         }
 
-        public static void Delete(Source source, Provider provider, Dictionary<string, object> p)
+        public static void Delete(Dictionary<string, object> p)
         {
             try
             {
-                var query = new Query(source, provider, p);
-                var cmd = $"DELETE ALL FROM {source.ToString()} WHERE ID = {(int)p["ID"]};";
-                var conn = query.GetConnection(Provider.SQLite) as SQLiteConnection;
-                using (conn)
-                {
-                    var update = query.GetDataCommand(cmd, conn) as SQLiteCommand;
-                    update?.ExecuteNonQuery();
-                }
+                var update = new InsertData(Info.Insert);
+                update(Source.PRC, Provider.SQLite, p);
             }
             catch (Exception ex)
             {

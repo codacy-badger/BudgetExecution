@@ -10,6 +10,8 @@ namespace BudgetExecution
     using System.Data.SQLite;
     using System.Linq;
 
+    using Syncfusion.Windows.Forms.Spreadsheet.Commands;
+
     public class Obligation : IObligation
     {
 
@@ -118,11 +120,28 @@ namespace BudgetExecution
             }
         }
 
-        internal DataRow GetData(Source source, Provider provider, Dictionary<string, object> param)
+        internal string[] GetDataFields(DataTable table)
+        {
+            if (table.Rows.Count > 0)
+            {
+                try
+                {
+                    return Info.GetFields(table);
+                }
+                catch (SystemException ex)
+                {
+                    var _ = new Error(ex).ShowDialog();
+                    return null;
+                }
+            }
+            return null;
+        }
+
+        internal DataRow[] GetDataRecords(Source source, Provider provider, Dictionary<string, object> p)
         {
             try
             {
-                return new DataBuilder(source, provider, param).DbTable.AsEnumerable().Select(p => p).First();
+                return new DataBuilder(source, provider, p).DbTable.AsEnumerable().Select(o => o).ToArray<DataRow>();
             }
             catch (Exception ex)
             {
@@ -236,20 +255,12 @@ namespace BudgetExecution
             }
         }
 
-        public static void Insert(Source source, Dictionary<string, object> p)
+        public static void Insert(Dictionary<string, object> p)
         {
             try
             {
-                var param = GetInsertColumns(source, Provider.SQLite, p);
-                var fields = param.Keys.ToArray();
-                var vals = param.Values.ToArray();
-                var query = new SQLiteQuery(source, param);
-                SQLiteConnection conn = query.DataConnection;
-                using (conn)
-                {
-                    var insert = query.InsertCommand;
-                    insert.ExecuteNonQuery();
-                }
+                var insert = new InsertData(Info.Insert);
+                insert(Source.Obligations, Provider.SQLite, p);
             }
             catch (Exception ex)
             {
@@ -257,21 +268,12 @@ namespace BudgetExecution
             }
         }
 
-        public static void Insert(Source source, Provider provider, Dictionary<string, object> p)
+        public static void Update(Dictionary<string, object> p)
         {
             try
             {
-                var param = GetInsertColumns(source, provider, p);
-                var fields = param.Keys.ToArray();
-                var vals = param.Values.ToArray();
-                var query = new Query(source, provider, param);
-                var cmd = $"INSERT INTO {source.ToString()} {fields} VALUES {vals};";
-                SQLiteConnection conn = query.GetConnection(Provider.SQLite) as SQLiteConnection;
-                using (conn)
-                {
-                    var insert = query.GetDataCommand(cmd, conn) as SQLiteCommand;
-                    insert.ExecuteNonQuery();
-                }
+                var update = new InsertData(Info.Update);
+                update(Source.Obligations, Provider.SQLite, p);
             }
             catch (Exception ex)
             {
@@ -279,82 +281,18 @@ namespace BudgetExecution
             }
         }
 
-        public static void Update(Source source, Dictionary<string, object> p)
+        public static void Delete(Dictionary<string, object> p)
         {
             try
             {
-                var query = new SQLiteQuery(source, p);
-                var cmd = $"UPDATE {source.ToString()} SET Amount = {(decimal)p["Amount"]} WHERE ID = {(int)p["ID"]};";
-                SQLiteConnection conn = query.DataConnection;
-                using (conn)
-                {
-                    var update = query.GetDataCommand(cmd, conn);
-                    update.ExecuteNonQuery();
-                }
+                var delete = new InsertData(Info.Delete);
+                delete(Source.Obligations, Provider.SQLite, p);
             }
             catch (Exception ex)
             {
                 new Error(ex).ShowDialog();
             }
         }
-
-        public static void Update(Source source, Provider provider, Dictionary<string, object> p)
-        {
-            try
-            {
-                var query = new Query(source, provider, p);
-                var cmd = $"UPDATE {source.ToString()} SET Amount = {(decimal)p["Amount"]} WHERE ID = {(int)p["ID"]};";
-                SQLiteConnection conn = query.GetConnection(Provider.SQLite) as SQLiteConnection;
-                using (conn)
-                {
-                    var update = query.GetDataCommand(cmd, conn) as SQLiteCommand;
-                    update.ExecuteNonQuery();
-                }
-            }
-            catch (Exception ex)
-            {
-                new Error(ex).ShowDialog();
-            }
-        }
-
-        public static void Delete(Source source, Dictionary<string, object> p)
-        {
-            try
-            {
-                var query = new SQLiteQuery(source, p);
-                var cmd = $"DELETE ALL FROM {source.ToString()} WHERE ID = {(int)p["ID"]};";
-                SQLiteConnection conn = query.DataConnection;
-                using (conn)
-                {
-                    var delete = query.GetDataCommand(cmd, conn);
-                    delete.ExecuteNonQuery();
-                }
-            }
-            catch (Exception ex)
-            {
-                new Error(ex).ShowDialog();
-            }
-        }
-
-        public static void Delete(Source source, Provider provider, Dictionary<string, object> p)
-        {
-            try
-            {
-                var query = new Query(source, provider, p);
-                var cmd = $"DELETE ALL FROM {source.ToString()} WHERE ID = {(int)p["ID"]};";
-                SQLiteConnection conn = query.GetConnection(Provider.SQLite) as SQLiteConnection;
-                using (conn)
-                {
-                    var update = query.GetDataCommand(cmd, conn) as SQLiteCommand;
-                    update.ExecuteNonQuery();
-                }
-            }
-            catch (Exception ex)
-            {
-                new Error(ex).ShowDialog();
-            }
-        }
-
     }
 
 

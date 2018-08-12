@@ -92,16 +92,14 @@ namespace BudgetExecution
         {
             try
             {
-                var param = GetInsertionColumns(source, provider, p);
-                var fields = param.Keys.ToArray();
-                var vals = param.Values.ToArray();
-                var query = new Query(source, provider, param);
-                var cmd = $"INSERT INTO {source.ToString()} {fields} VALUES {vals};";
-                var conn = query.GetConnection(Provider.SQLite) as SQLiteConnection;
-                using (conn)
+                var query = new SQLiteQuery(source);
+                using (query.DataConnection)
                 {
-                    var insert = query.GetDataCommand(cmd, conn) as SQLiteCommand;
-                    insert?.ExecuteNonQuery();
+                    var param = query.GetDbParameters(p);
+                    var command = query.InsertCommand;
+                    foreach (SQLiteParameter pmr in param)
+                        command.Parameters.Add(pmr);
+                    command.ExecuteNonQuery();
                 }
             }
             catch (Exception ex)
@@ -114,13 +112,14 @@ namespace BudgetExecution
         {
             try
             {
-                var query = new Query(source, provider, p);
-                var cmd = $"UPDATE {source.ToString()} SET Amount = {(decimal)p["Amount"]} WHERE ID = {(int)p["ID"]};";
-                var conn = query.GetConnection(Provider.SQLite) as SQLiteConnection;
-                using (conn)
+                var query = new SQLiteQuery(source);
+                using (query.DataConnection)
                 {
-                    var update = query.GetDataCommand(cmd, conn) as SQLiteCommand;
-                    update?.ExecuteNonQuery();
+                    var param = query.GetDbParameters(p);
+                    var command = query.UpdateCommand;
+                    foreach (SQLiteParameter pmr in param)
+                        command.Parameters.Add(pmr);
+                    command.ExecuteNonQuery();
                 }
             }
             catch (Exception ex)
@@ -133,13 +132,14 @@ namespace BudgetExecution
         {
             try
             {
-                var query = new Query(source, provider, p);
-                var cmd = $"DELETE ALL FROM {source.ToString()} WHERE ID = {(int)p["ID"]};";
-                var conn = query.GetConnection(Provider.SQLite) as SQLiteConnection;
-                using (conn)
+                var query = new SQLiteQuery(source);
+                using (query.DataConnection)
                 {
-                    var update = query.GetDataCommand(cmd, conn) as SQLiteCommand;
-                    update?.ExecuteNonQuery();
+                    var param = query.GetDbParameters(p);
+                    var command = query.DeleteCommand;
+                    foreach (SQLiteParameter pmr in param)
+                        command.Parameters.Add(pmr);
+                    command.ExecuteNonQuery();
                 }
             }
             catch (Exception ex)

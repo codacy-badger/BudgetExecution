@@ -9,6 +9,11 @@ namespace BudgetExecution
     public class RC
     {
         // CONSTRUCTORS
+        public RC()
+        {
+
+        }
+
         public RC(string code)
         {
             Code = code;

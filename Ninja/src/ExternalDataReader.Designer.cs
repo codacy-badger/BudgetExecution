@@ -35,6 +35,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ExternalDataReader));
+            Syncfusion.Windows.Forms.Tools.ToolTipInfo toolTipInfo1 = new Syncfusion.Windows.Forms.Tools.ToolTipInfo();
+            Syncfusion.Windows.Forms.Tools.ToolTipInfo toolTipInfo2 = new Syncfusion.Windows.Forms.Tools.ToolTipInfo();
             Syncfusion.Windows.Forms.CaptionImage captionImage1 = new Syncfusion.Windows.Forms.CaptionImage();
             this.commandBar1 = new Syncfusion.Windows.Forms.Tools.CommandBar();
             this.controlBar1 = new Syncfusion.Windows.Forms.Tools.ControlBar();
@@ -71,6 +73,13 @@
             this.toolStripSeparator20 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton16 = new System.Windows.Forms.ToolStripButton();
             this.metroTabControl1 = new MetroFramework.Controls.MetroTabControl();
+            this.metroTabPage3 = new MetroFramework.Controls.MetroTabPage();
+            this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
+            this.button9 = new System.Windows.Forms.Button();
+            this.button11 = new System.Windows.Forms.Button();
+            this.button12 = new System.Windows.Forms.Button();
+            this.button14 = new System.Windows.Forms.Button();
+            this.button15 = new System.Windows.Forms.Button();
             this.metroTabPage1 = new MetroFramework.Controls.MetroTabPage();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.button1 = new System.Windows.Forms.Button();
@@ -85,26 +94,20 @@
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
-            this.metroTabPage3 = new MetroFramework.Controls.MetroTabPage();
-            this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
-            this.button14 = new System.Windows.Forms.Button();
-            this.button15 = new System.Windows.Forms.Button();
             this.metroPanel2 = new MetroFramework.Controls.MetroPanel();
             this.BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.superToolTip1 = new Syncfusion.Windows.Forms.Tools.SuperToolTip(this);
             ((System.ComponentModel.ISupportInitialize)(this.Grid)).BeginInit();
             this.metroPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Navigator)).BeginInit();
             this.Navigator.SuspendLayout();
             this.metroTabControl1.SuspendLayout();
+            this.metroTabPage3.SuspendLayout();
+            this.flowLayoutPanel3.SuspendLayout();
             this.metroTabPage1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.metroTabPage2.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
-            this.metroTabPage3.SuspendLayout();
-            this.flowLayoutPanel3.SuspendLayout();
             this.metroPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BindingSource)).BeginInit();
             this.SuspendLayout();
@@ -277,28 +280,28 @@
             this.toolStripButton15,
             this.toolStripSeparator20,
             this.toolStripButton16});
-            this.Navigator.Location = new System.Drawing.Point(0, 592);
+            this.Navigator.Location = new System.Drawing.Point(0, 591);
             this.Navigator.MoveFirstItem = null;
             this.Navigator.MoveLastItem = null;
             this.Navigator.MoveNextItem = this.toolStripButton11;
             this.Navigator.MovePreviousItem = this.toolStripButton10;
             this.Navigator.Name = "Navigator";
             this.Navigator.PositionItem = this.toolStripTextBox2;
-            this.Navigator.Size = new System.Drawing.Size(1120, 27);
+            this.Navigator.Size = new System.Drawing.Size(1120, 28);
             this.Navigator.TabIndex = 153;
             this.Navigator.Text = "bindingNavigator1";
             // 
             // toolStripLabel2
             // 
             this.toolStripLabel2.Name = "toolStripLabel2";
-            this.toolStripLabel2.Size = new System.Drawing.Size(46, 24);
+            this.toolStripLabel2.Size = new System.Drawing.Size(46, 25);
             this.toolStripLabel2.Text = "of {0}";
             this.toolStripLabel2.ToolTipText = "Total number of items";
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 27);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 28);
             // 
             // toolStripButton10
             // 
@@ -306,13 +309,13 @@
             this.toolStripButton10.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton10.Image")));
             this.toolStripButton10.Name = "toolStripButton10";
             this.toolStripButton10.RightToLeftAutoMirrorImage = true;
-            this.toolStripButton10.Size = new System.Drawing.Size(24, 24);
+            this.toolStripButton10.Size = new System.Drawing.Size(24, 25);
             this.toolStripButton10.Text = "Previous";
             // 
             // toolStripSeparator10
             // 
             this.toolStripSeparator10.Name = "toolStripSeparator10";
-            this.toolStripSeparator10.Size = new System.Drawing.Size(6, 27);
+            this.toolStripSeparator10.Size = new System.Drawing.Size(6, 28);
             // 
             // toolStripTextBox2
             // 
@@ -330,7 +333,7 @@
             // toolStripSeparator11
             // 
             this.toolStripSeparator11.Name = "toolStripSeparator11";
-            this.toolStripSeparator11.Size = new System.Drawing.Size(6, 27);
+            this.toolStripSeparator11.Size = new System.Drawing.Size(6, 28);
             // 
             // toolStripButton11
             // 
@@ -338,13 +341,13 @@
             this.toolStripButton11.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton11.Image")));
             this.toolStripButton11.Name = "toolStripButton11";
             this.toolStripButton11.RightToLeftAutoMirrorImage = true;
-            this.toolStripButton11.Size = new System.Drawing.Size(24, 24);
+            this.toolStripButton11.Size = new System.Drawing.Size(24, 25);
             this.toolStripButton11.Text = "Next";
             // 
             // toolStripSeparator13
             // 
             this.toolStripSeparator13.Name = "toolStripSeparator13";
-            this.toolStripSeparator13.Size = new System.Drawing.Size(6, 27);
+            this.toolStripSeparator13.Size = new System.Drawing.Size(6, 28);
             // 
             // CopyButton
             // 
@@ -352,14 +355,20 @@
             this.CopyButton.Image = ((System.Drawing.Image)(resources.GetObject("CopyButton.Image")));
             this.CopyButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.CopyButton.Name = "CopyButton";
-            this.CopyButton.Size = new System.Drawing.Size(24, 24);
-            this.CopyButton.Text = "toolStripButton7";
-            this.CopyButton.ToolTipText = "Copy DbData Into New Account";
+            this.CopyButton.Size = new System.Drawing.Size(24, 25);
+            toolTipInfo1.BackColor = System.Drawing.Color.Black;
+            toolTipInfo1.Body.RenderHtml = true;
+            toolTipInfo1.Body.Size = new System.Drawing.Size(200, 40);
+            toolTipInfo1.BorderColor = System.Drawing.SystemColors.MenuHighlight;
+            toolTipInfo1.Footer.Size = new System.Drawing.Size(200, 40);
+            toolTipInfo1.ForeColor = System.Drawing.Color.LightSteelBlue;
+            toolTipInfo1.Header.Size = new System.Drawing.Size(200, 40);
+            this.superToolTip1.SetToolTip(this.CopyButton, toolTipInfo1);
             // 
             // toolStripSeparator15
             // 
             this.toolStripSeparator15.Name = "toolStripSeparator15";
-            this.toolStripSeparator15.Size = new System.Drawing.Size(6, 27);
+            this.toolStripSeparator15.Size = new System.Drawing.Size(6, 28);
             // 
             // toolStripButton13
             // 
@@ -369,13 +378,13 @@
             this.toolStripButton13.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton13.Image")));
             this.toolStripButton13.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton13.Name = "toolStripButton13";
-            this.toolStripButton13.Size = new System.Drawing.Size(24, 24);
-            this.toolStripButton13.Text = "toolStripButton13";
+            this.toolStripButton13.Size = new System.Drawing.Size(24, 25);
+            this.superToolTip1.SetToolTip(this.toolStripButton13, toolTipInfo1);
             // 
             // toolStripSeparator18
             // 
             this.toolStripSeparator18.Name = "toolStripSeparator18";
-            this.toolStripSeparator18.Size = new System.Drawing.Size(6, 27);
+            this.toolStripSeparator18.Size = new System.Drawing.Size(6, 28);
             // 
             // toolStripButton12
             // 
@@ -386,13 +395,13 @@
             this.toolStripButton12.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton12.Image")));
             this.toolStripButton12.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton12.Name = "toolStripButton12";
-            this.toolStripButton12.Size = new System.Drawing.Size(24, 24);
-            this.toolStripButton12.Text = "toolStripButton12";
+            this.toolStripButton12.Size = new System.Drawing.Size(24, 25);
+            this.superToolTip1.SetToolTip(this.toolStripButton12, toolTipInfo1);
             // 
             // toolStripSeparator16
             // 
             this.toolStripSeparator16.Name = "toolStripSeparator16";
-            this.toolStripSeparator16.Size = new System.Drawing.Size(6, 27);
+            this.toolStripSeparator16.Size = new System.Drawing.Size(6, 28);
             // 
             // ResetButton
             // 
@@ -400,14 +409,13 @@
             this.ResetButton.Image = ((System.Drawing.Image)(resources.GetObject("ResetButton.Image")));
             this.ResetButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.ResetButton.Name = "ResetButton";
-            this.ResetButton.Size = new System.Drawing.Size(24, 24);
-            this.ResetButton.Text = "toolStripButton7";
-            this.ResetButton.ToolTipText = "Reset DataTable and Filters";
+            this.ResetButton.Size = new System.Drawing.Size(24, 25);
+            this.superToolTip1.SetToolTip(this.ResetButton, toolTipInfo1);
             // 
             // toolStripSeparator14
             // 
             this.toolStripSeparator14.Name = "toolStripSeparator14";
-            this.toolStripSeparator14.Size = new System.Drawing.Size(6, 27);
+            this.toolStripSeparator14.Size = new System.Drawing.Size(6, 28);
             // 
             // AddButton
             // 
@@ -415,13 +423,13 @@
             this.AddButton.Image = ((System.Drawing.Image)(resources.GetObject("AddButton.Image")));
             this.AddButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.AddButton.Name = "AddButton";
-            this.AddButton.Size = new System.Drawing.Size(24, 24);
-            this.AddButton.Text = "toolStripButton7";
+            this.AddButton.Size = new System.Drawing.Size(24, 25);
+            this.superToolTip1.SetToolTip(this.AddButton, toolTipInfo1);
             // 
             // toolStripSeparator19
             // 
             this.toolStripSeparator19.Name = "toolStripSeparator19";
-            this.toolStripSeparator19.Size = new System.Drawing.Size(6, 27);
+            this.toolStripSeparator19.Size = new System.Drawing.Size(6, 28);
             // 
             // toolStripButton7
             // 
@@ -429,13 +437,13 @@
             this.toolStripButton7.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton7.Image")));
             this.toolStripButton7.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton7.Name = "toolStripButton7";
-            this.toolStripButton7.Size = new System.Drawing.Size(24, 24);
-            this.toolStripButton7.Text = "toolStripButton7";
+            this.toolStripButton7.Size = new System.Drawing.Size(24, 25);
+            this.superToolTip1.SetToolTip(this.toolStripButton7, toolTipInfo1);
             // 
             // GridRefreshButton
             // 
             this.GridRefreshButton.Name = "GridRefreshButton";
-            this.GridRefreshButton.Size = new System.Drawing.Size(6, 27);
+            this.GridRefreshButton.Size = new System.Drawing.Size(6, 28);
             // 
             // toolStripButton9
             // 
@@ -443,13 +451,13 @@
             this.toolStripButton9.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton9.Image")));
             this.toolStripButton9.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton9.Name = "toolStripButton9";
-            this.toolStripButton9.Size = new System.Drawing.Size(24, 24);
-            this.toolStripButton9.Text = "toolStripButton9";
+            this.toolStripButton9.Size = new System.Drawing.Size(24, 25);
+            this.superToolTip1.SetToolTip(this.toolStripButton9, toolTipInfo1);
             // 
             // toolStripSeparator12
             // 
             this.toolStripSeparator12.Name = "toolStripSeparator12";
-            this.toolStripSeparator12.Size = new System.Drawing.Size(6, 27);
+            this.toolStripSeparator12.Size = new System.Drawing.Size(6, 28);
             // 
             // toolStripButton14
             // 
@@ -457,13 +465,13 @@
             this.toolStripButton14.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton14.Image")));
             this.toolStripButton14.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton14.Name = "toolStripButton14";
-            this.toolStripButton14.Size = new System.Drawing.Size(24, 24);
-            this.toolStripButton14.Text = "toolStripButton14";
+            this.toolStripButton14.Size = new System.Drawing.Size(24, 25);
+            this.superToolTip1.SetToolTip(this.toolStripButton14, toolTipInfo1);
             // 
             // toolStripSeparator17
             // 
             this.toolStripSeparator17.Name = "toolStripSeparator17";
-            this.toolStripSeparator17.Size = new System.Drawing.Size(6, 27);
+            this.toolStripSeparator17.Size = new System.Drawing.Size(6, 28);
             // 
             // toolStripButton15
             // 
@@ -471,13 +479,13 @@
             this.toolStripButton15.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton15.Image")));
             this.toolStripButton15.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton15.Name = "toolStripButton15";
-            this.toolStripButton15.Size = new System.Drawing.Size(24, 24);
-            this.toolStripButton15.Text = "toolStripButton15";
+            this.toolStripButton15.Size = new System.Drawing.Size(24, 25);
+            this.superToolTip1.SetToolTip(this.toolStripButton15, toolTipInfo1);
             // 
             // toolStripSeparator20
             // 
             this.toolStripSeparator20.Name = "toolStripSeparator20";
-            this.toolStripSeparator20.Size = new System.Drawing.Size(6, 27);
+            this.toolStripSeparator20.Size = new System.Drawing.Size(6, 28);
             // 
             // toolStripButton16
             // 
@@ -485,14 +493,17 @@
             this.toolStripButton16.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton16.Image")));
             this.toolStripButton16.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton16.Name = "toolStripButton16";
-            this.toolStripButton16.Size = new System.Drawing.Size(24, 24);
-            this.toolStripButton16.Text = "toolStripButton16";
+            this.toolStripButton16.Size = new System.Drawing.Size(24, 25);
+            toolTipInfo2.Body.Size = new System.Drawing.Size(20, 20);
+            toolTipInfo2.Footer.Size = new System.Drawing.Size(20, 20);
+            toolTipInfo2.Header.Size = new System.Drawing.Size(20, 20);
+            this.superToolTip1.SetToolTip(this.toolStripButton16, toolTipInfo2);
             // 
             // metroTabControl1
             // 
-            this.metroTabControl1.Controls.Add(this.metroTabPage1);
             this.metroTabControl1.Controls.Add(this.metroTabPage2);
             this.metroTabControl1.Controls.Add(this.metroTabPage3);
+            this.metroTabControl1.Controls.Add(this.metroTabPage1);
             this.metroTabControl1.Location = new System.Drawing.Point(16, 18);
             this.metroTabControl1.Name = "metroTabControl1";
             this.metroTabControl1.SelectedIndex = 2;
@@ -500,6 +511,127 @@
             this.metroTabControl1.TabIndex = 49;
             this.metroTabControl1.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.metroTabControl1.UseSelectable = true;
+            // 
+            // metroTabPage3
+            // 
+            this.metroTabPage3.BackColor = System.Drawing.Color.Transparent;
+            this.metroTabPage3.Controls.Add(this.flowLayoutPanel3);
+            this.metroTabPage3.HorizontalScrollbarBarColor = true;
+            this.metroTabPage3.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroTabPage3.HorizontalScrollbarSize = 10;
+            this.metroTabPage3.Location = new System.Drawing.Point(4, 38);
+            this.metroTabPage3.Name = "metroTabPage3";
+            this.metroTabPage3.Size = new System.Drawing.Size(313, 520);
+            this.metroTabPage3.TabIndex = 2;
+            this.metroTabPage3.Text = "metroTabPage3";
+            this.metroTabPage3.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.metroTabPage3.VerticalScrollbarBarColor = true;
+            this.metroTabPage3.VerticalScrollbarHighlightOnWheel = false;
+            this.metroTabPage3.VerticalScrollbarSize = 10;
+            // 
+            // flowLayoutPanel3
+            // 
+            this.flowLayoutPanel3.BackColor = System.Drawing.Color.Transparent;
+            this.flowLayoutPanel3.Controls.Add(this.button9);
+            this.flowLayoutPanel3.Controls.Add(this.button11);
+            this.flowLayoutPanel3.Controls.Add(this.button12);
+            this.flowLayoutPanel3.Controls.Add(this.button14);
+            this.flowLayoutPanel3.Controls.Add(this.button15);
+            this.flowLayoutPanel3.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.flowLayoutPanel3.Location = new System.Drawing.Point(45, 101);
+            this.flowLayoutPanel3.Name = "flowLayoutPanel3";
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(222, 361);
+            this.flowLayoutPanel3.TabIndex = 47;
+            // 
+            // button9
+            // 
+            this.button9.BackColor = System.Drawing.Color.Transparent;
+            this.button9.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.button9.FlatAppearance.MouseDownBackColor = System.Drawing.Color.PowderBlue;
+            this.button9.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button9.ForeColor = System.Drawing.SystemColors.Info;
+            this.button9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button9.Location = new System.Drawing.Point(3, 3);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(200, 59);
+            this.button9.TabIndex = 32;
+            this.button9.Text = "button9";
+            this.button9.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button9.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button9.UseVisualStyleBackColor = false;
+            // 
+            // button11
+            // 
+            this.button11.BackColor = System.Drawing.Color.Transparent;
+            this.button11.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.button11.FlatAppearance.MouseDownBackColor = System.Drawing.Color.PowderBlue;
+            this.button11.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button11.ForeColor = System.Drawing.SystemColors.Info;
+            this.button11.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button11.Location = new System.Drawing.Point(3, 68);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(200, 68);
+            this.button11.TabIndex = 45;
+            this.button11.Text = "button11";
+            this.button11.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button11.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button11.UseVisualStyleBackColor = false;
+            // 
+            // button12
+            // 
+            this.button12.BackColor = System.Drawing.Color.Transparent;
+            this.button12.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.button12.FlatAppearance.MouseDownBackColor = System.Drawing.Color.PowderBlue;
+            this.button12.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button12.ForeColor = System.Drawing.SystemColors.Info;
+            this.button12.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button12.Location = new System.Drawing.Point(3, 142);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(200, 59);
+            this.button12.TabIndex = 44;
+            this.button12.Text = "button12";
+            this.button12.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button12.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button12.UseVisualStyleBackColor = false;
+            // 
+            // button14
+            // 
+            this.button14.BackColor = System.Drawing.Color.Transparent;
+            this.button14.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.button14.FlatAppearance.MouseDownBackColor = System.Drawing.Color.PowderBlue;
+            this.button14.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button14.ForeColor = System.Drawing.SystemColors.Info;
+            this.button14.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button14.Location = new System.Drawing.Point(3, 207);
+            this.button14.Name = "button14";
+            this.button14.Size = new System.Drawing.Size(200, 62);
+            this.button14.TabIndex = 35;
+            this.button14.Text = "button14";
+            this.button14.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button14.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button14.UseVisualStyleBackColor = false;
+            // 
+            // button15
+            // 
+            this.button15.BackColor = System.Drawing.Color.Transparent;
+            this.button15.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.button15.FlatAppearance.MouseDownBackColor = System.Drawing.Color.PowderBlue;
+            this.button15.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.button15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button15.ForeColor = System.Drawing.SystemColors.Info;
+            this.button15.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button15.Location = new System.Drawing.Point(3, 275);
+            this.button15.Name = "button15";
+            this.button15.Size = new System.Drawing.Size(200, 62);
+            this.button15.TabIndex = 46;
+            this.button15.Text = "button15";
+            this.button15.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button15.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button15.UseVisualStyleBackColor = false;
             // 
             // metroTabPage1
             // 
@@ -742,127 +874,6 @@
             this.button8.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button8.UseVisualStyleBackColor = false;
             // 
-            // metroTabPage3
-            // 
-            this.metroTabPage3.BackColor = System.Drawing.Color.Transparent;
-            this.metroTabPage3.Controls.Add(this.flowLayoutPanel3);
-            this.metroTabPage3.HorizontalScrollbarBarColor = true;
-            this.metroTabPage3.HorizontalScrollbarHighlightOnWheel = false;
-            this.metroTabPage3.HorizontalScrollbarSize = 10;
-            this.metroTabPage3.Location = new System.Drawing.Point(4, 38);
-            this.metroTabPage3.Name = "metroTabPage3";
-            this.metroTabPage3.Size = new System.Drawing.Size(313, 520);
-            this.metroTabPage3.TabIndex = 2;
-            this.metroTabPage3.Text = "metroTabPage3";
-            this.metroTabPage3.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.metroTabPage3.VerticalScrollbarBarColor = true;
-            this.metroTabPage3.VerticalScrollbarHighlightOnWheel = false;
-            this.metroTabPage3.VerticalScrollbarSize = 10;
-            // 
-            // flowLayoutPanel3
-            // 
-            this.flowLayoutPanel3.BackColor = System.Drawing.Color.Transparent;
-            this.flowLayoutPanel3.Controls.Add(this.button9);
-            this.flowLayoutPanel3.Controls.Add(this.button11);
-            this.flowLayoutPanel3.Controls.Add(this.button12);
-            this.flowLayoutPanel3.Controls.Add(this.button14);
-            this.flowLayoutPanel3.Controls.Add(this.button15);
-            this.flowLayoutPanel3.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel3.Location = new System.Drawing.Point(45, 101);
-            this.flowLayoutPanel3.Name = "flowLayoutPanel3";
-            this.flowLayoutPanel3.Size = new System.Drawing.Size(222, 361);
-            this.flowLayoutPanel3.TabIndex = 47;
-            // 
-            // button9
-            // 
-            this.button9.BackColor = System.Drawing.Color.Transparent;
-            this.button9.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button9.FlatAppearance.MouseDownBackColor = System.Drawing.Color.PowderBlue;
-            this.button9.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
-            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.ForeColor = System.Drawing.SystemColors.Info;
-            this.button9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button9.Location = new System.Drawing.Point(3, 3);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(200, 59);
-            this.button9.TabIndex = 32;
-            this.button9.Text = "button9";
-            this.button9.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button9.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button9.UseVisualStyleBackColor = false;
-            // 
-            // button11
-            // 
-            this.button11.BackColor = System.Drawing.Color.Transparent;
-            this.button11.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button11.FlatAppearance.MouseDownBackColor = System.Drawing.Color.PowderBlue;
-            this.button11.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
-            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button11.ForeColor = System.Drawing.SystemColors.Info;
-            this.button11.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button11.Location = new System.Drawing.Point(3, 68);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(200, 68);
-            this.button11.TabIndex = 45;
-            this.button11.Text = "button11";
-            this.button11.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button11.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button11.UseVisualStyleBackColor = false;
-            // 
-            // button12
-            // 
-            this.button12.BackColor = System.Drawing.Color.Transparent;
-            this.button12.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button12.FlatAppearance.MouseDownBackColor = System.Drawing.Color.PowderBlue;
-            this.button12.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
-            this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button12.ForeColor = System.Drawing.SystemColors.Info;
-            this.button12.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button12.Location = new System.Drawing.Point(3, 142);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(200, 59);
-            this.button12.TabIndex = 44;
-            this.button12.Text = "button12";
-            this.button12.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button12.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button12.UseVisualStyleBackColor = false;
-            // 
-            // button14
-            // 
-            this.button14.BackColor = System.Drawing.Color.Transparent;
-            this.button14.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button14.FlatAppearance.MouseDownBackColor = System.Drawing.Color.PowderBlue;
-            this.button14.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
-            this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button14.ForeColor = System.Drawing.SystemColors.Info;
-            this.button14.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button14.Location = new System.Drawing.Point(3, 207);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(200, 62);
-            this.button14.TabIndex = 35;
-            this.button14.Text = "button14";
-            this.button14.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button14.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button14.UseVisualStyleBackColor = false;
-            // 
-            // button15
-            // 
-            this.button15.BackColor = System.Drawing.Color.Transparent;
-            this.button15.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button15.FlatAppearance.MouseDownBackColor = System.Drawing.Color.PowderBlue;
-            this.button15.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
-            this.button15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button15.ForeColor = System.Drawing.SystemColors.Info;
-            this.button15.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button15.Location = new System.Drawing.Point(3, 275);
-            this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(200, 62);
-            this.button15.TabIndex = 46;
-            this.button15.Text = "button15";
-            this.button15.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button15.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button15.UseVisualStyleBackColor = false;
-            // 
             // metroPanel2
             // 
             this.metroPanel2.Controls.Add(this.metroTabControl1);
@@ -877,6 +888,10 @@
             this.metroPanel2.VerticalScrollbarBarColor = true;
             this.metroPanel2.VerticalScrollbarHighlightOnWheel = false;
             this.metroPanel2.VerticalScrollbarSize = 10;
+            // 
+            // superToolTip1
+            // 
+            this.superToolTip1.MetroColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(158)))), ((int)(((byte)(218)))));
             // 
             // ExternalDataReader
             // 
@@ -907,12 +922,12 @@
             this.Navigator.ResumeLayout(false);
             this.Navigator.PerformLayout();
             this.metroTabControl1.ResumeLayout(false);
+            this.metroTabPage3.ResumeLayout(false);
+            this.flowLayoutPanel3.ResumeLayout(false);
             this.metroTabPage1.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.metroTabPage2.ResumeLayout(false);
             this.flowLayoutPanel2.ResumeLayout(false);
-            this.metroTabPage3.ResumeLayout(false);
-            this.flowLayoutPanel3.ResumeLayout(false);
             this.metroPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.BindingSource)).EndInit();
             this.ResumeLayout(false);
@@ -978,6 +993,7 @@
         private System.Windows.Forms.ToolStripButton toolStripButton15;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator20;
         private System.Windows.Forms.ToolStripButton toolStripButton16;
+        private Syncfusion.Windows.Forms.Tools.SuperToolTip superToolTip1;
     }
 }
 

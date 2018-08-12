@@ -117,7 +117,7 @@ namespace BudgetExecution
             try
             {
                 string vals = string.Empty;
-                var sqlparameter = GetParameter(param);
+                var sqlparameter = this.GetDbParameters(param);
                 foreach (SQLiteParameter p in sqlparameter)
                 {
                     vals += $"{p.SourceColumn} = '{p.Value}' AND ";
@@ -203,7 +203,7 @@ namespace BudgetExecution
             }
         }
 
-        public SQLiteParameter[] GetParameter(Dictionary<string, object> param)
+        public SQLiteParameter[] GetDbParameters(Dictionary<string, object> param)
         {
             try
             {

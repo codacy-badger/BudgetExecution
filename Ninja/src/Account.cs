@@ -12,7 +12,6 @@ namespace BudgetExecution
 
     public class Account : IAccount
     {
-
         // CONSTRUCTORS
         public Account()
         {
@@ -139,87 +138,6 @@ namespace BudgetExecution
         public Dictionary<string, object> Parameter { get; }
 
         // METHODS
-        internal Dictionary<string, object> GetAccountParameter(string fund, string code)
-        {
-            try
-            {
-                return new Dictionary<string, object>()
-                {
-                    ["Fund"] = fund,
-                    ["ProgramProjectCode"] = Code.Substring(4, 2)
-                };
-            }
-            catch (Exception ex)
-            {
-                new Error(ex).ShowDialog();
-                return null;
-            }
-        }
-
-        internal Dictionary<string, object> GetAccountProgramData(string fund, string code)
-        {
-            try
-            {
-                var param = GetAccountParameter(fund, code);
-                var data = GetAccountData(Source.Accounts, Provider.SQLite, param);
-                var dr = data.Rows[0];
-                GoalName = dr["GoalName"].ToString();
-                ObjectiveName = dr["ObjectiveName"].ToString();
-                ProgramProjectName = dr["ProgramProjectName"].ToString();
-                param.Add("GoalName", dr["GoalName"].ToString());
-                param.Add("ObjectiveName", dr["ObjectiveName"].ToString());
-                param.Add("ProgramProjectName", dr["ProgramProjectName"].ToString());
-                return param;
-            }
-            catch (Exception ex)
-            {
-                new Error(ex).ShowDialog();
-                return null;
-            }
-        }
-
-        internal DataTable GetAccountData(Source source, Provider provider)
-        {
-            try
-            {
-                var data = new DataBuilder(source, provider);
-                return data.DbTable;
-            }
-            catch (Exception ex)
-            {
-                new Error(ex).ShowDialog();
-                return null;
-            }
-        }
-
-        internal DataTable GetAccountData(Source source, Dictionary<string, object> param)
-        {
-            try
-            {
-                var data = new DataBuilder(source, Provider.SQLite, param);
-                return data.DbTable;
-            }
-            catch (Exception ex)
-            {
-                new Error(ex).ShowDialog();
-                return null;
-            }
-        }
-
-        internal DataTable GetAccountData(Source source, Provider provider, Dictionary<string, object> param)
-        {
-            try
-            {
-                var data = new DataBuilder(source, provider, param);
-                return data.DbTable;
-            }
-            catch (Exception ex)
-            {
-                new Error(ex).ShowDialog();
-                return null;
-            }
-        }
-
         public string GetCode()
         {
             return Code;
@@ -391,20 +309,12 @@ namespace BudgetExecution
             }
         }
 
-        public static void Insert(Source source, Dictionary<string, object> p)
+        public static void Insert(Dictionary<string, object> p)
         {
             try
             {
-                var param = GetInsertFields(source, Provider.SQLite, p);
-                var fields = param.Keys.ToArray();
-                var vals = param.Values.ToArray();
-                var query = new SQLiteQuery(source, param);
-                SQLiteConnection conn = query.DataConnection;
-                using (conn)
-                {
-                    var insert = query.InsertCommand;
-                    insert.ExecuteNonQuery();
-                }
+                var insert = new InsertData(Info.Insert);
+                insert(Source.Accounts, Provider.SQLite, p);
             }
             catch (Exception ex)
             {
@@ -412,21 +322,12 @@ namespace BudgetExecution
             }
         }
 
-        public static void Insert(Source source, Provider provider, Dictionary<string, object> p)
+        public static void Update(Dictionary<string, object> p)
         {
             try
             {
-                var param = GetInsertFields(source, provider, p);
-                var fields = param.Keys.ToArray();
-                var vals = param.Values.ToArray();
-                var query = new Query(source, provider, param);
-                var cmd = $"INSERT INTO {source.ToString()} {fields} VALUES {vals};";
-                SQLiteConnection conn = query.GetConnection(Provider.SQLite) as SQLiteConnection;
-                using (conn)
-                {
-                    var insert = query.GetDataCommand(cmd, conn) as SQLiteCommand;
-                    insert.ExecuteNonQuery();
-                }
+                var update = new InsertData(Info.Update);
+                update(Source.Accounts, Provider.SQLite, p);
             }
             catch (Exception ex)
             {
@@ -434,18 +335,12 @@ namespace BudgetExecution
             }
         }
 
-        public static void Update(Source source, Dictionary<string, object> p)
+        public static void Delete(Dictionary<string, object> p)
         {
             try
             {
-                var query = new SQLiteQuery(source, p);
-                var cmd = $"UPDATE {source.ToString()} SET Amount = {(decimal)p["Amount"]} WHERE ID = {(int)p["ID"]};";
-                SQLiteConnection conn = query.DataConnection;
-                using (conn)
-                {
-                    var update = query.GetDataCommand(cmd, conn);
-                    update.ExecuteNonQuery();
-                }
+                var delete = new InsertData(Info.Insert);
+                delete(Source.Accounts, Provider.SQLite, p);
             }
             catch (Exception ex)
             {
@@ -453,60 +348,84 @@ namespace BudgetExecution
             }
         }
 
-        public static void Update(Source source, Provider provider, Dictionary<string, object> p)
+        internal Dictionary<string, object> GetAccountParameter(string fund, string code)
         {
             try
             {
-                var query = new Query(source, provider, p);
-                var cmd = $"UPDATE {source.ToString()} SET Amount = {(decimal)p["Amount"]} WHERE ID = {(int)p["ID"]};";
-                SQLiteConnection conn = query.GetConnection(Provider.SQLite) as SQLiteConnection;
-                using (conn)
+                return new Dictionary<string, object>()
                 {
-                    var update = query.GetDataCommand(cmd, conn) as SQLiteCommand;
-                    update.ExecuteNonQuery();
-                }
+                    ["Fund"] = fund,
+                    ["ProgramProjectCode"] = Code.Substring(4, 2)
+                };
             }
             catch (Exception ex)
             {
                 new Error(ex).ShowDialog();
+                return null;
             }
         }
 
-        public static void Delete(Source source, Dictionary<string, object> p)
+        internal Dictionary<string, object> GetAccountProgramData(string fund, string code)
         {
             try
             {
-                var query = new SQLiteQuery(source, p);
-                var cmd = $"DELETE ALL FROM {source.ToString()} WHERE ID = {(int)p["ID"]};";
-                SQLiteConnection conn = query.DataConnection;
-                using (conn)
-                {
-                    var delete = query.GetDataCommand(cmd, conn);
-                    delete.ExecuteNonQuery();
-                }
+                var param = GetAccountParameter(fund, code);
+                var data = GetAccountData(Source.Accounts, Provider.SQLite, param);
+                var dr = data.Rows[0];
+                GoalName = dr["GoalName"].ToString();
+                ObjectiveName = dr["ObjectiveName"].ToString();
+                ProgramProjectName = dr["ProgramProjectName"].ToString();
+                param.Add("GoalName", dr["GoalName"].ToString());
+                param.Add("ObjectiveName", dr["ObjectiveName"].ToString());
+                param.Add("ProgramProjectName", dr["ProgramProjectName"].ToString());
+                return param;
             }
             catch (Exception ex)
             {
                 new Error(ex).ShowDialog();
+                return null;
             }
         }
 
-        public static void Delete(Source source, Provider provider, Dictionary<string, object> p)
+        internal DataTable GetAccountData(Source source, Provider provider)
         {
             try
             {
-                var query = new Query(source, provider, p);
-                var cmd = $"DELETE ALL FROM {source.ToString()} WHERE ID = {(int)p["ID"]};";
-                SQLiteConnection conn = query.GetConnection(Provider.SQLite) as SQLiteConnection;
-                using (conn)
-                {
-                    var update = query.GetDataCommand(cmd, conn) as SQLiteCommand;
-                    update.ExecuteNonQuery();
-                }
+                var data = new DataBuilder(source, provider);
+                return data.DbTable;
             }
             catch (Exception ex)
             {
                 new Error(ex).ShowDialog();
+                return null;
+            }
+        }
+
+        internal DataTable GetAccountData(Source source, Dictionary<string, object> param)
+        {
+            try
+            {
+                DataBuilder data = new DataBuilder(source, Provider.SQLite, param);
+                return data.DbTable;
+            }
+            catch (Exception ex)
+            {
+                new Error(ex).ShowDialog();
+                return null;
+            }
+        }
+
+        internal DataTable GetAccountData(Source source, Provider provider, Dictionary<string, object> param)
+        {
+            try
+            {
+                var data = new DataBuilder(source, provider, param);
+                return data.DbTable;
+            }
+            catch (Exception ex)
+            {
+                new Error(ex).ShowDialog();
+                return null;
             }
         }
     }

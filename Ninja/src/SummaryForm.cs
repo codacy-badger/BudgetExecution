@@ -158,7 +158,7 @@ namespace BudgetExecution
                     ProjectTab.TabVisible = false;
                 }
                 BindingSource.DataSource = Table;
-                Navigator.BindingSource = BindingSource;
+                AccountNavigator.BindingSource = BindingSource;
                 Grid.DataSource = BindingSource;
                 DefineVisisbleDataColumns(Grid);
                 PopulateFilterBoxItems(GridFundFilter, Field.FundName);
@@ -506,7 +506,7 @@ namespace BudgetExecution
                 try
                 {
                     BindingSource.Filter = null;
-                    Navigator.BindingSource = BindingSource;
+                    AccountNavigator.BindingSource = BindingSource;
                     Grid.DataSource = BindingSource;
                     label32.Text = DbData.GetTotal(DbData.DbTable).ToString("c");
                     label41.Text = DbData.GetCount(DbData.DbTable).ToString();

@@ -52,6 +52,7 @@ namespace BudgetExecution
             this.metroSetListBox2 = new MetroSet_UI.Controls.MetroSetListBox();
             this.metroSetComboBox1 = new MetroSet_UI.Controls.MetroSetComboBox();
             this.metroSetComboBox2 = new MetroSet_UI.Controls.MetroSetComboBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.Navigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
@@ -71,7 +72,7 @@ namespace BudgetExecution
             this.toolStripSeparator14 = new System.Windows.Forms.ToolStripSeparator();
             this.AddButton = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator19 = new System.Windows.Forms.ToolStripSeparator();
-            this.CalculatorButton = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton7 = new System.Windows.Forms.ToolStripButton();
             this.GridRefreshButton = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton9 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator12 = new System.Windows.Forms.ToolStripSeparator();
@@ -79,15 +80,15 @@ namespace BudgetExecution
             this.toolStripSeparator17 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton15 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator20 = new System.Windows.Forms.ToolStripSeparator();
-            this.ReprogrammingButton = new System.Windows.Forms.ToolStripButton();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.toolStripButton16 = new System.Windows.Forms.ToolStripButton();
+            this.superToolTip1 = new Syncfusion.Windows.Forms.Tools.SuperToolTip(this);
             this.toolStripTabItem1.Panel.SuspendLayout();
             this.toolStripTabItem2.Panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.spreadsheetRibbon1)).BeginInit();
             this.metroSetPanel1.SuspendLayout();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Navigator)).BeginInit();
             this.Navigator.SuspendLayout();
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // toolStripTabItem1
@@ -165,7 +166,7 @@ namespace BudgetExecution
             this.spreadsheet1.DefaultRowCount = 50;
             this.spreadsheet1.DisplayAlerts = true;
             this.spreadsheet1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.spreadsheet1.FileName = "Book3";
+            this.spreadsheet1.FileName = "Book1";
             this.spreadsheet1.FormulaBarVisibility = true;
             formulaRangeSelectionController1.AllowMouseSelection = true;
             formulaRangeSelectionController1.AllowSelectionOnEditing = true;
@@ -343,12 +344,21 @@ namespace BudgetExecution
             this.metroSetComboBox2.ThemeAuthor = "Narwin";
             this.metroSetComboBox2.ThemeName = "MetroDark";
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.Navigator);
+            this.panel1.Location = new System.Drawing.Point(701, 893);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(699, 41);
+            this.panel1.TabIndex = 154;
+            // 
             // Navigator
             // 
             this.Navigator.AddNewItem = null;
             this.Navigator.BackColor = System.Drawing.Color.Transparent;
             this.Navigator.CountItem = this.toolStripLabel2;
             this.Navigator.DeleteItem = null;
+            this.Navigator.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.Navigator.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Navigator.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.Navigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -370,7 +380,7 @@ namespace BudgetExecution
             this.toolStripSeparator14,
             this.AddButton,
             this.toolStripSeparator19,
-            this.CalculatorButton,
+            this.toolStripButton7,
             this.GridRefreshButton,
             this.toolStripButton9,
             this.toolStripSeparator12,
@@ -378,8 +388,8 @@ namespace BudgetExecution
             this.toolStripSeparator17,
             this.toolStripButton15,
             this.toolStripSeparator20,
-            this.ReprogrammingButton});
-            this.Navigator.Location = new System.Drawing.Point(0, 0);
+            this.toolStripButton16});
+            this.Navigator.Location = new System.Drawing.Point(0, 14);
             this.Navigator.MoveFirstItem = null;
             this.Navigator.MoveLastItem = null;
             this.Navigator.MoveNextItem = this.toolStripButton11;
@@ -387,7 +397,7 @@ namespace BudgetExecution
             this.Navigator.Name = "Navigator";
             this.Navigator.PositionItem = this.toolStripTextBox2;
             this.Navigator.Size = new System.Drawing.Size(699, 27);
-            this.Navigator.TabIndex = 153;
+            this.Navigator.TabIndex = 154;
             this.Navigator.Text = "bindingNavigator1";
             // 
             // toolStripLabel2
@@ -455,7 +465,6 @@ namespace BudgetExecution
             this.CopyButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.CopyButton.Name = "CopyButton";
             this.CopyButton.Size = new System.Drawing.Size(24, 24);
-            this.CopyButton.Text = "toolStripButton7";
             this.CopyButton.ToolTipText = "Copy DbData Into New Account";
             // 
             // toolStripSeparator15
@@ -472,7 +481,6 @@ namespace BudgetExecution
             this.toolStripButton13.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton13.Name = "toolStripButton13";
             this.toolStripButton13.Size = new System.Drawing.Size(24, 24);
-            this.toolStripButton13.Text = "toolStripButton13";
             // 
             // toolStripSeparator18
             // 
@@ -489,7 +497,6 @@ namespace BudgetExecution
             this.toolStripButton12.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton12.Name = "toolStripButton12";
             this.toolStripButton12.Size = new System.Drawing.Size(24, 24);
-            this.toolStripButton12.Text = "toolStripButton12";
             // 
             // toolStripSeparator16
             // 
@@ -503,8 +510,6 @@ namespace BudgetExecution
             this.ResetButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.ResetButton.Name = "ResetButton";
             this.ResetButton.Size = new System.Drawing.Size(24, 24);
-            this.ResetButton.Text = "toolStripButton7";
-            this.ResetButton.ToolTipText = "Reset DataTable and Filters";
             // 
             // toolStripSeparator14
             // 
@@ -518,22 +523,19 @@ namespace BudgetExecution
             this.AddButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.AddButton.Name = "AddButton";
             this.AddButton.Size = new System.Drawing.Size(24, 24);
-            this.AddButton.Text = "toolStripButton7";
             // 
             // toolStripSeparator19
             // 
             this.toolStripSeparator19.Name = "toolStripSeparator19";
             this.toolStripSeparator19.Size = new System.Drawing.Size(6, 27);
             // 
-            // CalculatorButton
+            // toolStripButton7
             // 
-            this.CalculatorButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.CalculatorButton.Image = ((System.Drawing.Image)(resources.GetObject("CalculatorButton.Image")));
-            this.CalculatorButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.CalculatorButton.Name = "CalculatorButton";
-            this.CalculatorButton.Size = new System.Drawing.Size(24, 24);
-            this.CalculatorButton.Text = "toolStripButton7";
-            this.CalculatorButton.Click += new System.EventHandler(this.CalculatorButton_OnClick);
+            this.toolStripButton7.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton7.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton7.Image")));
+            this.toolStripButton7.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton7.Name = "toolStripButton7";
+            this.toolStripButton7.Size = new System.Drawing.Size(24, 24);
             // 
             // GridRefreshButton
             // 
@@ -547,8 +549,6 @@ namespace BudgetExecution
             this.toolStripButton9.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton9.Name = "toolStripButton9";
             this.toolStripButton9.Size = new System.Drawing.Size(24, 24);
-            this.toolStripButton9.Text = "toolStripButton9";
-            this.toolStripButton9.Click += new System.EventHandler(this.ExcelButton_OnClick);
             // 
             // toolStripSeparator12
             // 
@@ -562,7 +562,6 @@ namespace BudgetExecution
             this.toolStripButton14.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton14.Name = "toolStripButton14";
             this.toolStripButton14.Size = new System.Drawing.Size(24, 24);
-            this.toolStripButton14.Text = "toolStripButton14";
             // 
             // toolStripSeparator17
             // 
@@ -576,30 +575,23 @@ namespace BudgetExecution
             this.toolStripButton15.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton15.Name = "toolStripButton15";
             this.toolStripButton15.Size = new System.Drawing.Size(24, 24);
-            this.toolStripButton15.Text = "toolStripButton15";
             // 
             // toolStripSeparator20
             // 
             this.toolStripSeparator20.Name = "toolStripSeparator20";
             this.toolStripSeparator20.Size = new System.Drawing.Size(6, 27);
             // 
-            // ReprogrammingButton
+            // toolStripButton16
             // 
-            this.ReprogrammingButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.ReprogrammingButton.Image = ((System.Drawing.Image)(resources.GetObject("ReprogrammingButton.Image")));
-            this.ReprogrammingButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.ReprogrammingButton.Name = "ReprogrammingButton";
-            this.ReprogrammingButton.Size = new System.Drawing.Size(24, 24);
-            this.ReprogrammingButton.Text = "toolStripButton16";
-            this.ReprogrammingButton.Click += new System.EventHandler(this.ReprogrammingButton_OnClick);
+            this.toolStripButton16.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton16.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton16.Image")));
+            this.toolStripButton16.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton16.Name = "toolStripButton16";
+            this.toolStripButton16.Size = new System.Drawing.Size(24, 24);
             // 
-            // panel1
+            // superToolTip1
             // 
-            this.panel1.Controls.Add(this.Navigator);
-            this.panel1.Location = new System.Drawing.Point(701, 893);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(699, 41);
-            this.panel1.TabIndex = 154;
+            this.superToolTip1.MetroColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(158)))), ((int)(((byte)(218)))));
             // 
             // ExcelForm
             // 
@@ -630,7 +622,7 @@ namespace BudgetExecution
             this.MetroColor = System.Drawing.Color.Black;
             this.Name = "ExcelForm";
             this.ShowIcon = false;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ExcelForm";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.ExcelForm_Load);
@@ -638,11 +630,11 @@ namespace BudgetExecution
             this.toolStripTabItem2.Panel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.spreadsheetRibbon1)).EndInit();
             this.metroSetPanel1.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Navigator)).EndInit();
             this.Navigator.ResumeLayout(false);
             this.Navigator.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -659,6 +651,7 @@ namespace BudgetExecution
         private MetroSet_UI.Controls.MetroSetListBox metroSetListBox2;
         private MetroSet_UI.Controls.MetroSetComboBox metroSetComboBox1;
         private MetroSet_UI.Controls.MetroSetComboBox metroSetComboBox2;
+        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.BindingNavigator Navigator;
         private System.Windows.Forms.ToolStripLabel toolStripLabel2;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
@@ -678,7 +671,7 @@ namespace BudgetExecution
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator14;
         private System.Windows.Forms.ToolStripButton AddButton;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator19;
-        private System.Windows.Forms.ToolStripButton CalculatorButton;
+        private System.Windows.Forms.ToolStripButton toolStripButton7;
         private System.Windows.Forms.ToolStripSeparator GridRefreshButton;
         private System.Windows.Forms.ToolStripButton toolStripButton9;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator12;
@@ -686,7 +679,7 @@ namespace BudgetExecution
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator17;
         private System.Windows.Forms.ToolStripButton toolStripButton15;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator20;
-        private System.Windows.Forms.ToolStripButton ReprogrammingButton;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.ToolStripButton toolStripButton16;
+        private Syncfusion.Windows.Forms.Tools.SuperToolTip superToolTip1;
     }
 }

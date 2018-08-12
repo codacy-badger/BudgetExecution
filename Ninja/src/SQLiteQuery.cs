@@ -2,7 +2,6 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
-using Syncfusion.XlsIO.Implementation;
 
 namespace BudgetExecution
 {
@@ -19,7 +18,7 @@ namespace BudgetExecution
         {
         }
 
-        public SQLiteQuery(Source source)  : base(source, Provider.SQLite)
+        public SQLiteQuery(Source source) : base(source, Provider.SQLite)
         {
             Provider = base.Provider;
             Source = source;
@@ -181,7 +180,7 @@ namespace BudgetExecution
             }
         }
 
-        public new SQLiteParameter[] GetParameter(Dictionary<string, object> param)
+        public SQLiteParameter[] GetParameter(Dictionary<string, object> param)
         {
             try
             {
@@ -201,6 +200,32 @@ namespace BudgetExecution
                         {
                             val[i].DbType = DbType.Decimal;
                         }
+
+                        if (kvp.Key.Equals("LeaveHours"))
+                        {
+                            val[i].DbType = DbType.Decimal;
+                        }
+
+                        if (kvp.Key.Equals("Commitments"))
+                        {
+                            val[i].DbType = DbType.Decimal;
+                        }
+
+                        if (kvp.Key.Equals("Obligations"))
+                        {
+                            val[i].DbType = DbType.Decimal;
+                        }
+
+                        if (kvp.Key.Equals("DollarAmount"))
+                        {
+                            val[i].DbType = DbType.Decimal;
+                        }
+
+                        if (kvp.Key.Equals("WorkHours"))
+                        {
+                            val[i].DbType = DbType.Decimal;
+                        }
+
                         else
                         {
                             val[i].DbType = DbType.String;
@@ -230,7 +255,7 @@ namespace BudgetExecution
             }
         }
 
-        public string GetSqlStatement(string table, string sql)
+        public string GetSqlString(DataTable table, string sql)
         {
             try
             {
@@ -243,7 +268,7 @@ namespace BudgetExecution
             }
         }
 
-        public new string GetSqlStatement(string sql)
+        public new string GetSqlString(string sql)
         {
             try
             {
