@@ -87,7 +87,7 @@ namespace BudgetExecution
         {
             try
             {
-                var val = new OleDbParameter[dr.ItemArray.Length];
+                OleDbParameter[] val = new OleDbParameter[dr.ItemArray.Length];
                 for (int i = 0; i < dr.ItemArray.Length; i++)
                 {
                     val[i] = new OleDbParameter(dr.Table.Columns[i].ColumnName, (object)dr[i]);
@@ -106,7 +106,7 @@ namespace BudgetExecution
         {
             try
             {
-                var val = new OleDbParameter[param.Count];
+                OleDbParameter[] val = new OleDbParameter[param.Count];
                 for (int i = 0; i < param.Count; i++)
                 {
                     foreach (KeyValuePair<string, object> kvp in param)
@@ -143,7 +143,7 @@ namespace BudgetExecution
         {
             try
             {
-                var val = new List<OleDbParameter>();
+                List<OleDbParameter> val = new List<OleDbParameter>();
                 for (int i = 0; i < dr.ItemArray.Length; i++)
                 {
                     val.Add(new OleDbParameter(dr.Table.Columns[i].ColumnName, dr[i]));
@@ -162,7 +162,7 @@ namespace BudgetExecution
         {
             try
             {
-                var val = new List<OleDbParameter[]>();
+                List<OleDbParameter[]> val = new List<OleDbParameter[]>();
                 foreach (DataRow dr in table.Rows)
                 {
                     val.Add(GetParameter(dr));
@@ -202,7 +202,7 @@ namespace BudgetExecution
             try
             {
                 string vals = string.Empty;
-                foreach (var p in param)
+                foreach (OleDbParameter p in param)
                 {
                     vals += $"{p.SourceColumn} = '{p.Value}' AND ";
                 }

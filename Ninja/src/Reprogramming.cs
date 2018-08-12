@@ -62,7 +62,7 @@ namespace BudgetExecution
         // METHODS
         private void CalculatorButton_OnClick(object sender, EventArgs e)
         {
-            var c = new CalculatorForm();
+            CalculatorForm c = new CalculatorForm();
             c.Show();
         }
 

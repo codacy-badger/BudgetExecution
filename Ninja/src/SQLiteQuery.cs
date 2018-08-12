@@ -127,7 +127,7 @@ namespace BudgetExecution
         {
             try
             {              
-                var val = new SQLiteParameter[dr.ItemArray.Length];
+                SQLiteParameter[] val = new SQLiteParameter[dr.ItemArray.Length];
                 for (int i = 0; i < dr.ItemArray.Length; i++)
                 {
                     val[i] = new SQLiteParameter(dr.Table.Columns[i].ColumnName, (object)dr[i]);
@@ -146,7 +146,7 @@ namespace BudgetExecution
         {
             try
             {
-                var val = new List<SQLiteParameter>();
+                List<SQLiteParameter> val = new List<SQLiteParameter>();
                 for (int i = 0; i < dr.ItemArray.Length; i++)
                 {
                     val.Add(new SQLiteParameter(dr.Table.Columns[i].ColumnName, dr[i]));
@@ -165,7 +165,7 @@ namespace BudgetExecution
         {
             try
             {
-                var val = new List<SQLiteParameter[]>();
+                List<SQLiteParameter[]> val = new List<SQLiteParameter[]>();
                 foreach(DataRow dr in table.Rows)
                 {
                     val.Add(GetParameter(dr));
@@ -184,7 +184,7 @@ namespace BudgetExecution
         {
             try
             {
-                var val = new SQLiteParameter[param.Count];
+                SQLiteParameter[] val = new SQLiteParameter[param.Count];
                 for (int i = 0; i < param.Count; i++)
                 {
                     foreach (KeyValuePair<string, object> kvp in param)

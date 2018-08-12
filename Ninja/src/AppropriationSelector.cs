@@ -22,10 +22,10 @@ namespace BudgetExecution
 
         private void AppropriationCarousel_OnImageSelected(object sender, EventArgs e)
         {
-            var i = AppropriationCarousel.ActiveImage.Tag.ToString( );
+            string i = AppropriationCarousel.ActiveImage.Tag.ToString( );
             if (i.Contains("Functionality"))
             {
-                var g = new Selector(Info.AppropriationImages);
+                Selector g = new Selector(Info.AppropriationImages);
                 g.Show();
                 this.Close();
             }
@@ -41,9 +41,9 @@ namespace BudgetExecution
             string[] images = Directory.GetFiles(@"C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\Resources\AppropriationImages");
             foreach (string i in images)
             {
-                var b = new Bitmap(i);
+                Bitmap b = new Bitmap(i);
                 b.Tag = i;
-                var c = new CarouselImage();
+                CarouselImage c = new CarouselImage();
                 c.ItemImage = b;
                 ilist.Images.Add(b);
                 icollect.Add(c);

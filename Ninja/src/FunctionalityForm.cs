@@ -34,10 +34,10 @@ namespace BudgetExecution
             string[] images = Directory.GetFiles(path);
             foreach (string i in images)
             {
-                var p = Path.GetFileNameWithoutExtension(i);
-                var b = new Bitmap(i);
+                string p = Path.GetFileNameWithoutExtension(i);
+                Bitmap b = new Bitmap(i);
                 b.Tag = p;
-                var c = new CarouselImage();
+                CarouselImage c = new CarouselImage();
                 c.ItemImage = b;
                 ilist.Images.Add(b);
                 icollect.Add(c);
@@ -48,21 +48,21 @@ namespace BudgetExecution
 
         private void FunctionCarousel_OnImageSelected(object sender, EventArgs e)
         {
-            var i = FunctionCarousel.ActiveImage.Tag.ToString();
-            var a = new SummaryForm(i);
+            string i = FunctionCarousel.ActiveImage.Tag.ToString();
+            SummaryForm a = new SummaryForm(i);
             a.Show();
         }
 
         private void GetD6DataManager(object sender, System.EventArgs e)
         {
-            var datamanager = new SQLiteData();
+            SQLiteData datamanager = new SQLiteData();
             datamanager.Show();
             Close();
         }
 
         private void GetR6DataManager(object sender, System.EventArgs e)
         {
-            var datamanager = new SQLiteData();
+            SQLiteData datamanager = new SQLiteData();
             datamanager.Show();
             Close();
         }

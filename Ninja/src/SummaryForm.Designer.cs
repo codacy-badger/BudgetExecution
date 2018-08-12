@@ -146,6 +146,11 @@ namespace BudgetExecution
             Syncfusion.Windows.Forms.Chart.ChartToolBarTypeItem chartToolBarTypeItem9 = new Syncfusion.Windows.Forms.Chart.ChartToolBarTypeItem();
             Syncfusion.Windows.Forms.Chart.ChartToolBarSeries3DItem chartToolBarSeries3DItem9 = new Syncfusion.Windows.Forms.Chart.ChartToolBarSeries3DItem();
             Syncfusion.Windows.Forms.Chart.ChartToolBarShowLegendItem chartToolBarShowLegendItem9 = new Syncfusion.Windows.Forms.Chart.ChartToolBarShowLegendItem();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SummaryForm));
             Syncfusion.Windows.Forms.Chart.ChartSeries chartSeries19 = new Syncfusion.Windows.Forms.Chart.ChartSeries();
             Syncfusion.Windows.Forms.Chart.ChartCustomShapeInfo chartCustomShapeInfo19 = new Syncfusion.Windows.Forms.Chart.ChartCustomShapeInfo();
@@ -159,22 +164,7 @@ namespace BudgetExecution
             Syncfusion.Windows.Forms.Chart.ChartToolBarTypeItem chartToolBarTypeItem10 = new Syncfusion.Windows.Forms.Chart.ChartToolBarTypeItem();
             Syncfusion.Windows.Forms.Chart.ChartToolBarSeries3DItem chartToolBarSeries3DItem10 = new Syncfusion.Windows.Forms.Chart.ChartToolBarSeries3DItem();
             Syncfusion.Windows.Forms.Chart.ChartToolBarShowLegendItem chartToolBarShowLegendItem10 = new Syncfusion.Windows.Forms.Chart.ChartToolBarShowLegendItem();
-            Syncfusion.Windows.Forms.Tools.ToolTipInfo toolTipInfo11 = new Syncfusion.Windows.Forms.Tools.ToolTipInfo();
             Syncfusion.Windows.Forms.Tools.ToolTipInfo toolTipInfo1 = new Syncfusion.Windows.Forms.Tools.ToolTipInfo();
-            Syncfusion.Windows.Forms.Tools.ToolTipInfo toolTipInfo2 = new Syncfusion.Windows.Forms.Tools.ToolTipInfo();
-            Syncfusion.Windows.Forms.Tools.ToolTipInfo toolTipInfo3 = new Syncfusion.Windows.Forms.Tools.ToolTipInfo();
-            Syncfusion.Windows.Forms.Tools.ToolTipInfo toolTipInfo4 = new Syncfusion.Windows.Forms.Tools.ToolTipInfo();
-            Syncfusion.Windows.Forms.Tools.ToolTipInfo toolTipInfo5 = new Syncfusion.Windows.Forms.Tools.ToolTipInfo();
-            Syncfusion.Windows.Forms.Tools.ToolTipInfo toolTipInfo6 = new Syncfusion.Windows.Forms.Tools.ToolTipInfo();
-            Syncfusion.Windows.Forms.Tools.ToolTipInfo toolTipInfo7 = new Syncfusion.Windows.Forms.Tools.ToolTipInfo();
-            Syncfusion.Windows.Forms.Tools.ToolTipInfo toolTipInfo8 = new Syncfusion.Windows.Forms.Tools.ToolTipInfo();
-            Syncfusion.Windows.Forms.Tools.ToolTipInfo toolTipInfo9 = new Syncfusion.Windows.Forms.Tools.ToolTipInfo();
-            Syncfusion.Windows.Forms.Tools.ToolTipInfo toolTipInfo10 = new Syncfusion.Windows.Forms.Tools.ToolTipInfo();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
@@ -317,6 +307,40 @@ namespace BudgetExecution
             this.DatabaseTab = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.AccountTabControl = new Syncfusion.Windows.Forms.Tools.TabControlAdv();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.label31 = new System.Windows.Forms.Label();
+            this.label32 = new System.Windows.Forms.Label();
+            this.label34 = new System.Windows.Forms.Label();
+            this.label37 = new System.Windows.Forms.Label();
+            this.label40 = new System.Windows.Forms.Label();
+            this.label41 = new System.Windows.Forms.Label();
+            this.AccountNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripSeparator10 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripTextBox2 = new System.Windows.Forms.ToolStripTextBox();
+            this.toolStripSeparator11 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripSeparator13 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripSeparator15 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripSeparator18 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripSeparator16 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripSeparator14 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripSeparator19 = new System.Windows.Forms.ToolStripSeparator();
+            this.GridRefreshButton = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripSeparator12 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripSeparator17 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripSeparator20 = new System.Windows.Forms.ToolStripSeparator();
+            this.lblCount = new MetroSet_UI.Controls.MetroSetLabel();
+            this.Grid = new System.Windows.Forms.DataGridView();
+            this.FilterGroupBox = new System.Windows.Forms.GroupBox();
+            this.lblPrc = new System.Windows.Forms.Label();
+            this.lblBoc = new System.Windows.Forms.Label();
+            this.label33 = new System.Windows.Forms.Label();
+            this.GridAccountFilter = new MetroSet_UI.Controls.MetroSetComboBox();
+            this.GridBocFilter = new MetroSet_UI.Controls.MetroSetComboBox();
+            this.GridFundFilter = new MetroSet_UI.Controls.MetroSetComboBox();
+            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.UpdateTab = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
@@ -349,52 +373,18 @@ namespace BudgetExecution
             this.ExcelButton = new System.Windows.Forms.Button();
             this.CalculatorButton = new System.Windows.Forms.Button();
             this.CalendatButton = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.label31 = new System.Windows.Forms.Label();
-            this.label32 = new System.Windows.Forms.Label();
-            this.label34 = new System.Windows.Forms.Label();
-            this.label37 = new System.Windows.Forms.Label();
-            this.label40 = new System.Windows.Forms.Label();
-            this.label41 = new System.Windows.Forms.Label();
-            this.AccountNavigator = new System.Windows.Forms.BindingNavigator(this.components);
-            this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
-            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton10 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator10 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripTextBox2 = new System.Windows.Forms.ToolStripTextBox();
-            this.toolStripSeparator11 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton11 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator13 = new System.Windows.Forms.ToolStripSeparator();
             this.CopyButton = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator15 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton13 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator18 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton12 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator16 = new System.Windows.Forms.ToolStripSeparator();
             this.ResetButton = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator14 = new System.Windows.Forms.ToolStripSeparator();
             this.AddButton = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator19 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton7 = new System.Windows.Forms.ToolStripButton();
-            this.GridRefreshButton = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton9 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator12 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton14 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator17 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton15 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator20 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton16 = new System.Windows.Forms.ToolStripButton();
-            this.lblCount = new MetroSet_UI.Controls.MetroSetLabel();
-            this.Grid = new System.Windows.Forms.DataGridView();
-            this.FilterGroupBox = new System.Windows.Forms.GroupBox();
-            this.lblPrc = new System.Windows.Forms.Label();
-            this.lblBoc = new System.Windows.Forms.Label();
-            this.label33 = new System.Windows.Forms.Label();
-            this.GridAccountFilter = new MetroSet_UI.Controls.MetroSetComboBox();
-            this.GridBocFilter = new MetroSet_UI.Controls.MetroSetComboBox();
-            this.GridFundFilter = new MetroSet_UI.Controls.MetroSetComboBox();
-            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
@@ -437,15 +427,15 @@ namespace BudgetExecution
             this.groupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AccountTabControl)).BeginInit();
             this.AccountTabControl.SuspendLayout();
-            this.UpdateTab.SuspendLayout();
-            this.tabPageAdv5.SuspendLayout();
-            this.tabPageAdv6.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AccountNavigator)).BeginInit();
             this.AccountNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Grid)).BeginInit();
             this.FilterGroupBox.SuspendLayout();
+            this.UpdateTab.SuspendLayout();
+            this.tabPageAdv5.SuspendLayout();
+            this.tabPageAdv6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -4150,7 +4140,6 @@ namespace BudgetExecution
             // 
             // SummaryTabControl
             // 
-            this.SummaryTabControl.ActiveTabColor = System.Drawing.Color.SteelBlue;
             this.SummaryTabControl.ActiveTabForeColor = System.Drawing.SystemColors.HighlightText;
             this.SummaryTabControl.AdjustTopGap = 5;
             this.SummaryTabControl.BeforeTouchSize = new System.Drawing.Size(1679, 934);
@@ -4171,7 +4160,7 @@ namespace BudgetExecution
             this.SummaryTabControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.SummaryTabControl.FixedSingleBorderColor = System.Drawing.Color.Black;
             this.SummaryTabControl.FocusOnTabClick = false;
-            this.SummaryTabControl.InactiveTabColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.SummaryTabControl.InactiveTabColor = System.Drawing.Color.Black;
             this.SummaryTabControl.InActiveTabForeColor = System.Drawing.Color.DarkGray;
             this.SummaryTabControl.ItemSize = new System.Drawing.Size(150, 45);
             this.SummaryTabControl.Location = new System.Drawing.Point(0, 0);
@@ -4235,12 +4224,11 @@ namespace BudgetExecution
             this.AccountTabControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.AccountTabControl.FixedSingleBorderColor = System.Drawing.SystemColors.MenuHighlight;
             this.AccountTabControl.FocusOnTabClick = false;
-            this.AccountTabControl.InactiveTabColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.AccountTabControl.InactiveTabColor = System.Drawing.Color.Black;
             this.AccountTabControl.InActiveTabForeColor = System.Drawing.Color.DarkGray;
             this.AccountTabControl.ItemSize = new System.Drawing.Size(150, 25);
             this.AccountTabControl.LevelTextAndImage = true;
             this.AccountTabControl.Location = new System.Drawing.Point(3, 22);
-            this.AccountTabControl.Multiline = true;
             this.AccountTabControl.Name = "AccountTabControl";
             this.AccountTabControl.Office2007ColorScheme = Syncfusion.Windows.Forms.Office2007Theme.Black;
             this.AccountTabControl.Office2010ColorTheme = Syncfusion.Windows.Forms.Office2010Theme.Black;
@@ -4253,6 +4241,464 @@ namespace BudgetExecution
             this.AccountTabControl.TabPanelBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.AccountTabControl.TabStyle = typeof(Syncfusion.Windows.Forms.Tools.TabRendererMetro);
             this.AccountTabControl.VSLikeScrollButton = true;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.BackColor = System.Drawing.Color.Black;
+            this.groupBox1.Controls.Add(this.tableLayoutPanel1);
+            this.groupBox1.Controls.Add(this.AccountNavigator);
+            this.groupBox1.Controls.Add(this.lblCount);
+            this.groupBox1.Controls.Add(this.Grid);
+            this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.groupBox1.ForeColor = System.Drawing.SystemColors.Info;
+            this.groupBox1.Location = new System.Drawing.Point(287, 131);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox1.Size = new System.Drawing.Size(853, 547);
+            this.groupBox1.TabIndex = 159;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Database";
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 8;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30.89888F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 69.10112F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 175F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 136F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 19F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 68F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 97F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 111F));
+            this.tableLayoutPanel1.Controls.Add(this.label31, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.label32, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.label34, 2, 0);
+            this.tableLayoutPanel1.Controls.Add(this.label37, 3, 0);
+            this.tableLayoutPanel1.Controls.Add(this.label40, 6, 0);
+            this.tableLayoutPanel1.Controls.Add(this.label41, 7, 0);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(27, 45);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(794, 44);
+            this.tableLayoutPanel1.TabIndex = 159;
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Dock = System.Windows.Forms.DockStyle.Right;
+            this.label31.Location = new System.Drawing.Point(3, 0);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(52, 44);
+            this.label31.TabIndex = 153;
+            this.label31.Text = "Total: ";
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label32.Location = new System.Drawing.Point(61, 0);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(60, 44);
+            this.label32.TabIndex = 154;
+            this.label32.Text = "label32";
+            // 
+            // label34
+            // 
+            this.label34.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label34.AutoSize = true;
+            this.label34.Location = new System.Drawing.Point(283, 0);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(76, 20);
+            this.label34.TabIndex = 155;
+            this.label34.Text = "Average: ";
+            // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label37.Location = new System.Drawing.Point(365, 0);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(60, 44);
+            this.label37.TabIndex = 156;
+            this.label37.Text = "label37";
+            // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.Dock = System.Windows.Forms.DockStyle.Right;
+            this.label40.Location = new System.Drawing.Point(595, 0);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(84, 44);
+            this.label40.TabIndex = 159;
+            this.label40.Text = "Accounts: ";
+            // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label41.Location = new System.Drawing.Point(685, 0);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(60, 44);
+            this.label41.TabIndex = 160;
+            this.label41.Text = "label41";
+            // 
+            // AccountNavigator
+            // 
+            this.AccountNavigator.AddNewItem = null;
+            this.AccountNavigator.BackColor = System.Drawing.Color.Transparent;
+            this.AccountNavigator.CountItem = this.toolStripLabel2;
+            this.AccountNavigator.DeleteItem = null;
+            this.AccountNavigator.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.AccountNavigator.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AccountNavigator.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.AccountNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripSeparator3,
+            this.toolStripButton10,
+            this.toolStripSeparator10,
+            this.toolStripTextBox2,
+            this.toolStripLabel2,
+            this.toolStripSeparator11,
+            this.toolStripButton11,
+            this.toolStripSeparator13,
+            this.CopyButton,
+            this.toolStripSeparator15,
+            this.toolStripButton13,
+            this.toolStripSeparator18,
+            this.toolStripButton12,
+            this.toolStripSeparator16,
+            this.ResetButton,
+            this.toolStripSeparator14,
+            this.AddButton,
+            this.toolStripSeparator19,
+            this.toolStripButton7,
+            this.GridRefreshButton,
+            this.toolStripButton9,
+            this.toolStripSeparator12,
+            this.toolStripButton14,
+            this.toolStripSeparator17,
+            this.toolStripButton15,
+            this.toolStripSeparator20,
+            this.toolStripButton16});
+            this.AccountNavigator.Location = new System.Drawing.Point(2, 518);
+            this.AccountNavigator.MoveFirstItem = null;
+            this.AccountNavigator.MoveLastItem = null;
+            this.AccountNavigator.MoveNextItem = this.toolStripButton11;
+            this.AccountNavigator.MovePreviousItem = this.toolStripButton10;
+            this.AccountNavigator.Name = "AccountNavigator";
+            this.AccountNavigator.PositionItem = this.toolStripTextBox2;
+            this.AccountNavigator.Size = new System.Drawing.Size(849, 27);
+            this.AccountNavigator.TabIndex = 152;
+            this.AccountNavigator.Text = "bindingNavigator1";
+            // 
+            // toolStripLabel2
+            // 
+            this.toolStripLabel2.Name = "toolStripLabel2";
+            this.toolStripLabel2.Size = new System.Drawing.Size(46, 24);
+            this.toolStripLabel2.Text = "of {0}";
+            this.toolStripLabel2.ToolTipText = "Total number of items";
+            // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 27);
+            // 
+            // toolStripSeparator10
+            // 
+            this.toolStripSeparator10.Name = "toolStripSeparator10";
+            this.toolStripSeparator10.Size = new System.Drawing.Size(6, 27);
+            // 
+            // toolStripTextBox2
+            // 
+            this.toolStripTextBox2.AccessibleName = "Position";
+            this.toolStripTextBox2.AutoSize = false;
+            this.toolStripTextBox2.BackColor = System.Drawing.Color.Black;
+            this.toolStripTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.toolStripTextBox2.ForeColor = System.Drawing.Color.White;
+            this.toolStripTextBox2.Name = "toolStripTextBox2";
+            this.toolStripTextBox2.Size = new System.Drawing.Size(42, 24);
+            this.toolStripTextBox2.Text = "0";
+            this.toolStripTextBox2.TextBoxTextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.toolStripTextBox2.ToolTipText = "Current position";
+            // 
+            // toolStripSeparator11
+            // 
+            this.toolStripSeparator11.Name = "toolStripSeparator11";
+            this.toolStripSeparator11.Size = new System.Drawing.Size(6, 27);
+            // 
+            // toolStripSeparator13
+            // 
+            this.toolStripSeparator13.Name = "toolStripSeparator13";
+            this.toolStripSeparator13.Size = new System.Drawing.Size(6, 27);
+            this.superToolTip1.SetToolTip(this.toolStripSeparator13, toolTipInfo1);
+            // 
+            // toolStripSeparator15
+            // 
+            this.toolStripSeparator15.Name = "toolStripSeparator15";
+            this.toolStripSeparator15.Size = new System.Drawing.Size(6, 27);
+            this.superToolTip1.SetToolTip(this.toolStripSeparator15, toolTipInfo1);
+            // 
+            // toolStripSeparator18
+            // 
+            this.toolStripSeparator18.Name = "toolStripSeparator18";
+            this.toolStripSeparator18.Size = new System.Drawing.Size(6, 27);
+            this.superToolTip1.SetToolTip(this.toolStripSeparator18, toolTipInfo1);
+            // 
+            // toolStripSeparator16
+            // 
+            this.toolStripSeparator16.Name = "toolStripSeparator16";
+            this.toolStripSeparator16.Size = new System.Drawing.Size(6, 27);
+            this.superToolTip1.SetToolTip(this.toolStripSeparator16, toolTipInfo1);
+            this.toolStripSeparator16.Click += new System.EventHandler(this.ToolStripSeparator16_Click);
+            // 
+            // toolStripSeparator14
+            // 
+            this.toolStripSeparator14.Name = "toolStripSeparator14";
+            this.toolStripSeparator14.Size = new System.Drawing.Size(6, 27);
+            this.superToolTip1.SetToolTip(this.toolStripSeparator14, toolTipInfo1);
+            // 
+            // toolStripSeparator19
+            // 
+            this.toolStripSeparator19.Name = "toolStripSeparator19";
+            this.toolStripSeparator19.Size = new System.Drawing.Size(6, 27);
+            this.superToolTip1.SetToolTip(this.toolStripSeparator19, toolTipInfo1);
+            // 
+            // GridRefreshButton
+            // 
+            this.GridRefreshButton.Name = "GridRefreshButton";
+            this.GridRefreshButton.Size = new System.Drawing.Size(6, 27);
+            this.superToolTip1.SetToolTip(this.GridRefreshButton, toolTipInfo1);
+            this.GridRefreshButton.Click += new System.EventHandler(this.GridRefreshButton_OnClick);
+            // 
+            // toolStripSeparator12
+            // 
+            this.toolStripSeparator12.Name = "toolStripSeparator12";
+            this.toolStripSeparator12.Size = new System.Drawing.Size(6, 27);
+            this.superToolTip1.SetToolTip(this.toolStripSeparator12, toolTipInfo1);
+            // 
+            // toolStripSeparator17
+            // 
+            this.toolStripSeparator17.Name = "toolStripSeparator17";
+            this.toolStripSeparator17.Size = new System.Drawing.Size(6, 27);
+            this.superToolTip1.SetToolTip(this.toolStripSeparator17, toolTipInfo1);
+            // 
+            // toolStripSeparator20
+            // 
+            this.toolStripSeparator20.Name = "toolStripSeparator20";
+            this.toolStripSeparator20.Size = new System.Drawing.Size(6, 27);
+            this.superToolTip1.SetToolTip(this.toolStripSeparator20, toolTipInfo1);
+            // 
+            // lblCount
+            // 
+            this.lblCount.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.lblCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.lblCount.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblCount.Location = new System.Drawing.Point(651, 66);
+            this.lblCount.Name = "lblCount";
+            this.lblCount.Size = new System.Drawing.Size(111, 23);
+            this.lblCount.Style = MetroSet_UI.Design.Style.Dark;
+            this.lblCount.StyleManager = null;
+            this.lblCount.TabIndex = 149;
+            this.lblCount.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblCount.ThemeAuthor = "Narwin";
+            this.lblCount.ThemeName = "MetroDark";
+            this.lblCount.Click += new System.EventHandler(this.LblCount_Click);
+            // 
+            // Grid
+            // 
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Linen;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            this.Grid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.Grid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            this.Grid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCellsExceptHeaders;
+            this.Grid.BackgroundColor = System.Drawing.Color.SlateGray;
+            this.Grid.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Consolas", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Grid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.Grid.ColumnHeadersHeight = 30;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.LightSteelBlue;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Consolas", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.Info;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Grid.DefaultCellStyle = dataGridViewCellStyle3;
+            this.Grid.EnableHeadersVisualStyles = false;
+            this.Grid.GridColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.Grid.Location = new System.Drawing.Point(30, 101);
+            this.Grid.MultiSelect = false;
+            this.Grid.Name = "Grid";
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Grid.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.Grid.RowHeadersWidth = 30;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.LightSteelBlue;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Consolas", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.NullValue = null;
+            this.Grid.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            this.Grid.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.Grid.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Consolas", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Grid.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
+            this.Grid.RowTemplate.Height = 30;
+            this.Grid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.Grid.Size = new System.Drawing.Size(782, 372);
+            this.Grid.TabIndex = 150;
+            this.Grid.DoubleClick += new System.EventHandler(this.Grid_OnDoubleClick);
+            // 
+            // FilterGroupBox
+            // 
+            this.FilterGroupBox.BackColor = System.Drawing.Color.Black;
+            this.FilterGroupBox.Controls.Add(this.lblPrc);
+            this.FilterGroupBox.Controls.Add(this.lblBoc);
+            this.FilterGroupBox.Controls.Add(this.label33);
+            this.FilterGroupBox.Controls.Add(this.GridAccountFilter);
+            this.FilterGroupBox.Controls.Add(this.GridBocFilter);
+            this.FilterGroupBox.Controls.Add(this.GridFundFilter);
+            this.FilterGroupBox.ForeColor = System.Drawing.SystemColors.Info;
+            this.FilterGroupBox.Location = new System.Drawing.Point(36, 131);
+            this.FilterGroupBox.Name = "FilterGroupBox";
+            this.FilterGroupBox.Size = new System.Drawing.Size(207, 545);
+            this.FilterGroupBox.TabIndex = 160;
+            this.FilterGroupBox.TabStop = false;
+            this.FilterGroupBox.Text = "Filters";
+            // 
+            // lblPrc
+            // 
+            this.lblPrc.AutoSize = true;
+            this.lblPrc.ForeColor = System.Drawing.SystemColors.Info;
+            this.lblPrc.Location = new System.Drawing.Point(45, 327);
+            this.lblPrc.Name = "lblPrc";
+            this.lblPrc.Size = new System.Drawing.Size(105, 20);
+            this.lblPrc.TabIndex = 7;
+            this.lblPrc.Text = "PRC Account\r\n";
+            // 
+            // lblBoc
+            // 
+            this.lblBoc.AutoSize = true;
+            this.lblBoc.ForeColor = System.Drawing.SystemColors.Info;
+            this.lblBoc.Location = new System.Drawing.Point(18, 191);
+            this.lblBoc.Name = "lblBoc";
+            this.lblBoc.Size = new System.Drawing.Size(154, 20);
+            this.lblBoc.TabIndex = 6;
+            this.lblBoc.Text = "Budget Object Class";
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.ForeColor = System.Drawing.SystemColors.Info;
+            this.label33.Location = new System.Drawing.Point(45, 47);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(104, 20);
+            this.label33.TabIndex = 5;
+            this.label33.Text = "Appropriation";
+            // 
+            // GridAccountFilter
+            // 
+            this.GridAccountFilter.AllowDrop = true;
+            this.GridAccountFilter.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.GridAccountFilter.BackColor = System.Drawing.Color.Transparent;
+            this.GridAccountFilter.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.GridAccountFilter.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.GridAccountFilter.CausesValidation = false;
+            this.GridAccountFilter.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.GridAccountFilter.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.GridAccountFilter.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.GridAccountFilter.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.GridAccountFilter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.GridAccountFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.GridAccountFilter.FormattingEnabled = true;
+            this.GridAccountFilter.ItemHeight = 30;
+            this.GridAccountFilter.Location = new System.Drawing.Point(15, 350);
+            this.GridAccountFilter.MaxDropDownItems = 50;
+            this.GridAccountFilter.Name = "GridAccountFilter";
+            this.GridAccountFilter.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.GridAccountFilter.SelectedItemForeColor = System.Drawing.Color.White;
+            this.GridAccountFilter.Size = new System.Drawing.Size(173, 36);
+            this.GridAccountFilter.Style = MetroSet_UI.Design.Style.Dark;
+            this.GridAccountFilter.StyleManager = null;
+            this.GridAccountFilter.TabIndex = 4;
+            this.GridAccountFilter.ThemeAuthor = "Narwin";
+            this.GridAccountFilter.ThemeName = "MetroDark";
+            // 
+            // GridBocFilter
+            // 
+            this.GridBocFilter.AllowDrop = true;
+            this.GridBocFilter.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.GridBocFilter.BackColor = System.Drawing.Color.Transparent;
+            this.GridBocFilter.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.GridBocFilter.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.GridBocFilter.CausesValidation = false;
+            this.GridBocFilter.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.GridBocFilter.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.GridBocFilter.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.GridBocFilter.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.GridBocFilter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.GridBocFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.GridBocFilter.FormattingEnabled = true;
+            this.GridBocFilter.ItemHeight = 30;
+            this.GridBocFilter.Location = new System.Drawing.Point(12, 217);
+            this.GridBocFilter.Name = "GridBocFilter";
+            this.GridBocFilter.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.GridBocFilter.SelectedItemForeColor = System.Drawing.Color.White;
+            this.GridBocFilter.Size = new System.Drawing.Size(173, 36);
+            this.GridBocFilter.Style = MetroSet_UI.Design.Style.Dark;
+            this.GridBocFilter.StyleManager = null;
+            this.GridBocFilter.TabIndex = 3;
+            this.GridBocFilter.ThemeAuthor = "Narwin";
+            this.GridBocFilter.ThemeName = "MetroDark";
+            // 
+            // GridFundFilter
+            // 
+            this.GridFundFilter.AllowDrop = true;
+            this.GridFundFilter.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.GridFundFilter.BackColor = System.Drawing.Color.Transparent;
+            this.GridFundFilter.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.GridFundFilter.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.GridFundFilter.CausesValidation = false;
+            this.GridFundFilter.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.GridFundFilter.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.GridFundFilter.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.GridFundFilter.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.GridFundFilter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.GridFundFilter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.GridFundFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.GridFundFilter.FormattingEnabled = true;
+            this.GridFundFilter.ItemHeight = 30;
+            this.GridFundFilter.Location = new System.Drawing.Point(15, 78);
+            this.GridFundFilter.MaxDropDownItems = 15;
+            this.GridFundFilter.Name = "GridFundFilter";
+            this.GridFundFilter.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.GridFundFilter.SelectedItemForeColor = System.Drawing.Color.White;
+            this.GridFundFilter.Size = new System.Drawing.Size(173, 36);
+            this.GridFundFilter.Style = MetroSet_UI.Design.Style.Dark;
+            this.GridFundFilter.StyleManager = null;
+            this.GridFundFilter.TabIndex = 2;
+            this.GridFundFilter.ThemeAuthor = "Narwin";
+            this.GridFundFilter.ThemeName = "MetroDark";
+            // 
+            // toolStripButton2
+            // 
+            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton2.Name = "toolStripButton2";
+            this.toolStripButton2.Size = new System.Drawing.Size(34, 28);
+            this.toolStripButton2.Text = "toolStripButton2";
             // 
             // UpdateTab
             // 
@@ -4283,11 +4729,11 @@ namespace BudgetExecution
             this.UpdateTab.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UpdateTab.ForeColor = System.Drawing.Color.LightSteelBlue;
             this.UpdateTab.Image = ((System.Drawing.Image)(resources.GetObject("UpdateTab.Image")));
-            this.UpdateTab.ImageSize = new System.Drawing.Size(30, 30);
-            this.UpdateTab.Location = new System.Drawing.Point(0, 44);
+            this.UpdateTab.ImageSize = new System.Drawing.Size(20, 20);
+            this.UpdateTab.Location = new System.Drawing.Point(0, 34);
             this.UpdateTab.Name = "UpdateTab";
             this.UpdateTab.ShowCloseButton = true;
-            this.UpdateTab.Size = new System.Drawing.Size(464, 478);
+            this.UpdateTab.Size = new System.Drawing.Size(464, 488);
             this.UpdateTab.TabIndex = 4;
             this.UpdateTab.ThemesEnabled = false;
             // 
@@ -4761,11 +5207,11 @@ namespace BudgetExecution
             // 
             this.tabPageAdv5.Controls.Add(this.AccountChart);
             this.tabPageAdv5.Image = ((System.Drawing.Image)(resources.GetObject("tabPageAdv5.Image")));
-            this.tabPageAdv5.ImageSize = new System.Drawing.Size(30, 30);
-            this.tabPageAdv5.Location = new System.Drawing.Point(0, 44);
+            this.tabPageAdv5.ImageSize = new System.Drawing.Size(20, 20);
+            this.tabPageAdv5.Location = new System.Drawing.Point(0, 34);
             this.tabPageAdv5.Name = "tabPageAdv5";
             this.tabPageAdv5.ShowCloseButton = true;
-            this.tabPageAdv5.Size = new System.Drawing.Size(464, 478);
+            this.tabPageAdv5.Size = new System.Drawing.Size(464, 488);
             this.tabPageAdv5.TabIndex = 2;
             this.tabPageAdv5.ThemesEnabled = false;
             // 
@@ -4878,7 +5324,7 @@ namespace BudgetExecution
             this.AccountChart.Series3D = true;
             this.AccountChart.SeriesHighlight = true;
             this.AccountChart.ShadowColor = new Syncfusion.Drawing.BrushInfo(Syncfusion.Drawing.GradientStyle.PathRectangle, System.Drawing.SystemColors.WindowText, System.Drawing.Color.Silver);
-            this.AccountChart.Size = new System.Drawing.Size(464, 478);
+            this.AccountChart.Size = new System.Drawing.Size(464, 488);
             this.AccountChart.Spacing = 5F;
             this.AccountChart.SpacingBetweenPoints = 5F;
             this.AccountChart.Style3D = true;
@@ -4906,12 +5352,12 @@ namespace BudgetExecution
             this.tabPageAdv6.Controls.Add(this.ExcelButton);
             this.tabPageAdv6.Controls.Add(this.CalculatorButton);
             this.tabPageAdv6.Controls.Add(this.CalendatButton);
-            this.tabPageAdv6.Image = ((System.Drawing.Image)(resources.GetObject("tabPageAdv6.Image")));
-            this.tabPageAdv6.ImageSize = new System.Drawing.Size(30, 30);
-            this.tabPageAdv6.Location = new System.Drawing.Point(0, 44);
+            this.tabPageAdv6.Image = global::BudgetExecution.Properties.Resources.gears;
+            this.tabPageAdv6.ImageSize = new System.Drawing.Size(20, 20);
+            this.tabPageAdv6.Location = new System.Drawing.Point(0, 34);
             this.tabPageAdv6.Name = "tabPageAdv6";
             this.tabPageAdv6.ShowCloseButton = true;
-            this.tabPageAdv6.Size = new System.Drawing.Size(464, 478);
+            this.tabPageAdv6.Size = new System.Drawing.Size(464, 488);
             this.tabPageAdv6.TabIndex = 3;
             this.tabPageAdv6.ThemesEnabled = false;
             // 
@@ -4924,10 +5370,11 @@ namespace BudgetExecution
             this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.Location = new System.Drawing.Point(68, 71);
+            this.button2.Image = global::BudgetExecution.Properties.Resources.reprogramming;
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.button2.Location = new System.Drawing.Point(68, 87);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(121, 86);
+            this.button2.Size = new System.Drawing.Size(121, 70);
             this.button2.TabIndex = 4;
             this.button2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -4943,11 +5390,11 @@ namespace BudgetExecution
             this.ExcelButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.ExcelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ExcelButton.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.ExcelButton.Image = ((System.Drawing.Image)(resources.GetObject("ExcelButton.Image")));
-            this.ExcelButton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.ExcelButton.Location = new System.Drawing.Point(278, 71);
+            this.ExcelButton.Image = global::BudgetExecution.Properties.Resources.smallxls;
+            this.ExcelButton.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.ExcelButton.Location = new System.Drawing.Point(278, 87);
             this.ExcelButton.Name = "ExcelButton";
-            this.ExcelButton.Size = new System.Drawing.Size(128, 92);
+            this.ExcelButton.Size = new System.Drawing.Size(128, 70);
             this.ExcelButton.TabIndex = 3;
             this.ExcelButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.ExcelButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -4962,10 +5409,11 @@ namespace BudgetExecution
             this.CalculatorButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.CalculatorButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CalculatorButton.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.CalculatorButton.Image = ((System.Drawing.Image)(resources.GetObject("CalculatorButton.Image")));
-            this.CalculatorButton.Location = new System.Drawing.Point(128, 294);
+            this.CalculatorButton.Image = global::BudgetExecution.Properties.Resources.calculator_small;
+            this.CalculatorButton.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.CalculatorButton.Location = new System.Drawing.Point(68, 294);
             this.CalculatorButton.Name = "CalculatorButton";
-            this.CalculatorButton.Size = new System.Drawing.Size(61, 65);
+            this.CalculatorButton.Size = new System.Drawing.Size(121, 65);
             this.CalculatorButton.TabIndex = 2;
             this.CalculatorButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.CalculatorButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -4980,180 +5428,15 @@ namespace BudgetExecution
             this.CalendatButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.CalendatButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CalendatButton.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.CalendatButton.Image = ((System.Drawing.Image)(resources.GetObject("CalendatButton.Image")));
-            this.CalendatButton.Location = new System.Drawing.Point(309, 294);
+            this.CalendatButton.Image = global::BudgetExecution.Properties.Resources.smallcalendar2;
+            this.CalendatButton.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.CalendatButton.Location = new System.Drawing.Point(278, 294);
             this.CalendatButton.Name = "CalendatButton";
-            this.CalendatButton.Size = new System.Drawing.Size(97, 83);
+            this.CalendatButton.Size = new System.Drawing.Size(128, 65);
             this.CalendatButton.TabIndex = 1;
             this.CalendatButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.CalendatButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.CalendatButton.UseVisualStyleBackColor = true;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.BackColor = System.Drawing.Color.Black;
-            this.groupBox1.Controls.Add(this.tableLayoutPanel1);
-            this.groupBox1.Controls.Add(this.AccountNavigator);
-            this.groupBox1.Controls.Add(this.lblCount);
-            this.groupBox1.Controls.Add(this.Grid);
-            this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.groupBox1.ForeColor = System.Drawing.SystemColors.Info;
-            this.groupBox1.Location = new System.Drawing.Point(287, 131);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(853, 547);
-            this.groupBox1.TabIndex = 159;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Database";
-            // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.ColumnCount = 8;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30.89888F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 69.10112F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 175F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 136F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 19F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 68F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 97F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 102F));
-            this.tableLayoutPanel1.Controls.Add(this.label31, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.label32, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.label34, 2, 0);
-            this.tableLayoutPanel1.Controls.Add(this.label37, 3, 0);
-            this.tableLayoutPanel1.Controls.Add(this.label40, 6, 0);
-            this.tableLayoutPanel1.Controls.Add(this.label41, 7, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(27, 45);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 1;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(794, 44);
-            this.tableLayoutPanel1.TabIndex = 159;
-            // 
-            // label31
-            // 
-            this.label31.AutoSize = true;
-            this.label31.Dock = System.Windows.Forms.DockStyle.Right;
-            this.label31.Location = new System.Drawing.Point(5, 0);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(52, 44);
-            this.label31.TabIndex = 153;
-            this.label31.Text = "Total: ";
-            // 
-            // label32
-            // 
-            this.label32.AutoSize = true;
-            this.label32.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label32.Location = new System.Drawing.Point(63, 0);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(60, 44);
-            this.label32.TabIndex = 154;
-            this.label32.Text = "label32";
-            // 
-            // label34
-            // 
-            this.label34.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label34.AutoSize = true;
-            this.label34.Location = new System.Drawing.Point(292, 0);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(76, 20);
-            this.label34.TabIndex = 155;
-            this.label34.Text = "Average: ";
-            // 
-            // label37
-            // 
-            this.label37.AutoSize = true;
-            this.label37.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label37.Location = new System.Drawing.Point(374, 0);
-            this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(60, 44);
-            this.label37.TabIndex = 156;
-            this.label37.Text = "label37";
-            // 
-            // label40
-            // 
-            this.label40.AutoSize = true;
-            this.label40.Dock = System.Windows.Forms.DockStyle.Right;
-            this.label40.Location = new System.Drawing.Point(604, 0);
-            this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(84, 44);
-            this.label40.TabIndex = 159;
-            this.label40.Text = "Accounts: ";
-            // 
-            // label41
-            // 
-            this.label41.AutoSize = true;
-            this.label41.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label41.Location = new System.Drawing.Point(694, 0);
-            this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(60, 44);
-            this.label41.TabIndex = 160;
-            this.label41.Text = "label41";
-            // 
-            // AccountNavigator
-            // 
-            this.AccountNavigator.AddNewItem = null;
-            this.AccountNavigator.BackColor = System.Drawing.Color.Transparent;
-            this.AccountNavigator.CountItem = this.toolStripLabel2;
-            this.AccountNavigator.DeleteItem = null;
-            this.AccountNavigator.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.AccountNavigator.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AccountNavigator.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.AccountNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripSeparator3,
-            this.toolStripButton10,
-            this.toolStripSeparator10,
-            this.toolStripTextBox2,
-            this.toolStripLabel2,
-            this.toolStripSeparator11,
-            this.toolStripButton11,
-            this.toolStripSeparator13,
-            this.CopyButton,
-            this.toolStripSeparator15,
-            this.toolStripButton13,
-            this.toolStripSeparator18,
-            this.toolStripButton12,
-            this.toolStripSeparator16,
-            this.ResetButton,
-            this.toolStripSeparator14,
-            this.AddButton,
-            this.toolStripSeparator19,
-            this.toolStripButton7,
-            this.GridRefreshButton,
-            this.toolStripButton9,
-            this.toolStripSeparator12,
-            this.toolStripButton14,
-            this.toolStripSeparator17,
-            this.toolStripButton15,
-            this.toolStripSeparator20,
-            this.toolStripButton16});
-            this.AccountNavigator.Location = new System.Drawing.Point(2, 518);
-            this.AccountNavigator.MoveFirstItem = null;
-            this.AccountNavigator.MoveLastItem = null;
-            this.AccountNavigator.MoveNextItem = this.toolStripButton11;
-            this.AccountNavigator.MovePreviousItem = this.toolStripButton10;
-            this.AccountNavigator.Name = "AccountNavigator";
-            this.AccountNavigator.PositionItem = this.toolStripTextBox2;
-            this.AccountNavigator.Size = new System.Drawing.Size(849, 27);
-            this.AccountNavigator.TabIndex = 152;
-            this.AccountNavigator.Text = "bindingNavigator1";
-            toolTipInfo11.Body.Size = new System.Drawing.Size(20, 20);
-            toolTipInfo11.Footer.Size = new System.Drawing.Size(20, 20);
-            toolTipInfo11.Header.Size = new System.Drawing.Size(20, 20);
-            this.superToolTip1.SetToolTip(this.AccountNavigator, toolTipInfo11);
-            // 
-            // toolStripLabel2
-            // 
-            this.toolStripLabel2.Name = "toolStripLabel2";
-            this.toolStripLabel2.Size = new System.Drawing.Size(46, 24);
-            this.toolStripLabel2.Text = "of {0}";
-            this.toolStripLabel2.ToolTipText = "Total number of items";
-            // 
-            // toolStripSeparator3
-            // 
-            this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 27);
             // 
             // toolStripButton10
             // 
@@ -5163,29 +5446,16 @@ namespace BudgetExecution
             this.toolStripButton10.RightToLeftAutoMirrorImage = true;
             this.toolStripButton10.Size = new System.Drawing.Size(24, 24);
             this.toolStripButton10.Text = "Previous";
-            // 
-            // toolStripSeparator10
-            // 
-            this.toolStripSeparator10.Name = "toolStripSeparator10";
-            this.toolStripSeparator10.Size = new System.Drawing.Size(6, 27);
-            // 
-            // toolStripTextBox2
-            // 
-            this.toolStripTextBox2.AccessibleName = "Position";
-            this.toolStripTextBox2.AutoSize = false;
-            this.toolStripTextBox2.BackColor = System.Drawing.Color.Black;
-            this.toolStripTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.toolStripTextBox2.ForeColor = System.Drawing.Color.White;
-            this.toolStripTextBox2.Name = "toolStripTextBox2";
-            this.toolStripTextBox2.Size = new System.Drawing.Size(42, 24);
-            this.toolStripTextBox2.Text = "0";
-            this.toolStripTextBox2.TextBoxTextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.toolStripTextBox2.ToolTipText = "Current position";
-            // 
-            // toolStripSeparator11
-            // 
-            this.toolStripSeparator11.Name = "toolStripSeparator11";
-            this.toolStripSeparator11.Size = new System.Drawing.Size(6, 27);
+            toolTipInfo1.BackColor = System.Drawing.Color.Black;
+            toolTipInfo1.Body.ImageScalingSize = new System.Drawing.Size(20, 20);
+            toolTipInfo1.Body.RenderHtml = true;
+            toolTipInfo1.Body.Size = new System.Drawing.Size(200, 40);
+            toolTipInfo1.Body.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            toolTipInfo1.BorderColor = System.Drawing.SystemColors.MenuHighlight;
+            toolTipInfo1.Footer.Size = new System.Drawing.Size(20, 20);
+            toolTipInfo1.ForeColor = System.Drawing.Color.Black;
+            toolTipInfo1.Header.Size = new System.Drawing.Size(20, 20);
+            this.superToolTip1.SetToolTip(this.toolStripButton10, toolTipInfo1);
             // 
             // toolStripButton11
             // 
@@ -5195,11 +5465,7 @@ namespace BudgetExecution
             this.toolStripButton11.RightToLeftAutoMirrorImage = true;
             this.toolStripButton11.Size = new System.Drawing.Size(24, 24);
             this.toolStripButton11.Text = "Next";
-            // 
-            // toolStripSeparator13
-            // 
-            this.toolStripSeparator13.Name = "toolStripSeparator13";
-            this.toolStripSeparator13.Size = new System.Drawing.Size(6, 27);
+            this.superToolTip1.SetToolTip(this.toolStripButton11, toolTipInfo1);
             // 
             // CopyButton
             // 
@@ -5208,22 +5474,8 @@ namespace BudgetExecution
             this.CopyButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.CopyButton.Name = "CopyButton";
             this.CopyButton.Size = new System.Drawing.Size(24, 24);
-            toolTipInfo1.BackColor = System.Drawing.Color.Black;
-            toolTipInfo1.Body.ImageScalingSize = new System.Drawing.Size(20, 20);
-            toolTipInfo1.Body.RenderHtml = true;
-            toolTipInfo1.Body.Size = new System.Drawing.Size(220, 40);
-            toolTipInfo1.BorderColor = System.Drawing.SystemColors.MenuHighlight;
-            toolTipInfo1.Footer.Size = new System.Drawing.Size(220, 40);
-            toolTipInfo1.ForeColor = System.Drawing.Color.LightSteelBlue;
-            toolTipInfo1.Header.Size = new System.Drawing.Size(220, 40);
             this.superToolTip1.SetToolTip(this.CopyButton, toolTipInfo1);
-            this.CopyButton.ToolTipText = "Copy DbData Into New Account";
             this.CopyButton.Click += new System.EventHandler(this.CopyButton_OnClick);
-            // 
-            // toolStripSeparator15
-            // 
-            this.toolStripSeparator15.Name = "toolStripSeparator15";
-            this.toolStripSeparator15.Size = new System.Drawing.Size(6, 27);
             // 
             // toolStripButton13
             // 
@@ -5234,21 +5486,7 @@ namespace BudgetExecution
             this.toolStripButton13.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton13.Name = "toolStripButton13";
             this.toolStripButton13.Size = new System.Drawing.Size(24, 24);
-            toolTipInfo2.BackColor = System.Drawing.Color.Black;
-            toolTipInfo2.Body.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
-            toolTipInfo2.Body.ImageScalingSize = new System.Drawing.Size(20, 20);
-            toolTipInfo2.Body.RenderHtml = true;
-            toolTipInfo2.Body.Size = new System.Drawing.Size(220, 40);
-            toolTipInfo2.BorderColor = System.Drawing.SystemColors.MenuHighlight;
-            toolTipInfo2.Footer.Size = new System.Drawing.Size(220, 40);
-            toolTipInfo2.ForeColor = System.Drawing.Color.LightSteelBlue;
-            toolTipInfo2.Header.Size = new System.Drawing.Size(220, 40);
-            this.superToolTip1.SetToolTip(this.toolStripButton13, toolTipInfo2);
-            // 
-            // toolStripSeparator18
-            // 
-            this.toolStripSeparator18.Name = "toolStripSeparator18";
-            this.toolStripSeparator18.Size = new System.Drawing.Size(6, 27);
+            this.superToolTip1.SetToolTip(this.toolStripButton13, toolTipInfo1);
             // 
             // toolStripButton12
             // 
@@ -5260,22 +5498,7 @@ namespace BudgetExecution
             this.toolStripButton12.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton12.Name = "toolStripButton12";
             this.toolStripButton12.Size = new System.Drawing.Size(24, 24);
-            toolTipInfo3.BackColor = System.Drawing.Color.Black;
-            toolTipInfo3.Body.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image1")));
-            toolTipInfo3.Body.ImageScalingSize = new System.Drawing.Size(20, 20);
-            toolTipInfo3.Body.RenderHtml = true;
-            toolTipInfo3.Body.Size = new System.Drawing.Size(220, 40);
-            toolTipInfo3.BorderColor = System.Drawing.SystemColors.MenuHighlight;
-            toolTipInfo3.Footer.Size = new System.Drawing.Size(220, 40);
-            toolTipInfo3.ForeColor = System.Drawing.Color.LightSteelBlue;
-            toolTipInfo3.Header.Size = new System.Drawing.Size(220, 40);
-            this.superToolTip1.SetToolTip(this.toolStripButton12, toolTipInfo3);
-            // 
-            // toolStripSeparator16
-            // 
-            this.toolStripSeparator16.Name = "toolStripSeparator16";
-            this.toolStripSeparator16.Size = new System.Drawing.Size(6, 27);
-            this.toolStripSeparator16.Click += new System.EventHandler(this.ToolStripSeparator16_Click);
+            this.superToolTip1.SetToolTip(this.toolStripButton12, toolTipInfo1);
             // 
             // ResetButton
             // 
@@ -5284,22 +5507,8 @@ namespace BudgetExecution
             this.ResetButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.ResetButton.Name = "ResetButton";
             this.ResetButton.Size = new System.Drawing.Size(24, 24);
-            toolTipInfo4.BackColor = System.Drawing.Color.Black;
-            toolTipInfo4.Body.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image2")));
-            toolTipInfo4.Body.ImageScalingSize = new System.Drawing.Size(20, 20);
-            toolTipInfo4.Body.RenderHtml = true;
-            toolTipInfo4.Body.Size = new System.Drawing.Size(220, 40);
-            toolTipInfo4.BorderColor = System.Drawing.SystemColors.MenuHighlight;
-            toolTipInfo4.Footer.Size = new System.Drawing.Size(220, 40);
-            toolTipInfo4.ForeColor = System.Drawing.Color.LightSteelBlue;
-            toolTipInfo4.Header.Size = new System.Drawing.Size(220, 40);
-            this.superToolTip1.SetToolTip(this.ResetButton, toolTipInfo4);
+            this.superToolTip1.SetToolTip(this.ResetButton, toolTipInfo1);
             this.ResetButton.Click += new System.EventHandler(this.GridRefreshButton_OnClick);
-            // 
-            // toolStripSeparator14
-            // 
-            this.toolStripSeparator14.Name = "toolStripSeparator14";
-            this.toolStripSeparator14.Size = new System.Drawing.Size(6, 27);
             // 
             // AddButton
             // 
@@ -5308,23 +5517,8 @@ namespace BudgetExecution
             this.AddButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.AddButton.Name = "AddButton";
             this.AddButton.Size = new System.Drawing.Size(24, 24);
-            toolTipInfo5.BackColor = System.Drawing.Color.Black;
-            toolTipInfo5.Body.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image3")));
-            toolTipInfo5.Body.ImageScalingSize = new System.Drawing.Size(20, 20);
-            toolTipInfo5.Body.RenderHtml = true;
-            toolTipInfo5.Body.Size = new System.Drawing.Size(220, 40);
-            toolTipInfo5.BorderColor = System.Drawing.SystemColors.MenuHighlight;
-            toolTipInfo5.Footer.Size = new System.Drawing.Size(220, 40);
-            toolTipInfo5.ForeColor = System.Drawing.Color.LightSteelBlue;
-            toolTipInfo5.Header.ImageScalingSize = new System.Drawing.Size(40, 40);
-            toolTipInfo5.Header.Size = new System.Drawing.Size(220, 40);
-            this.superToolTip1.SetToolTip(this.AddButton, toolTipInfo5);
+            this.superToolTip1.SetToolTip(this.AddButton, toolTipInfo1);
             this.AddButton.Click += new System.EventHandler(this.AddButton_OnClick);
-            // 
-            // toolStripSeparator19
-            // 
-            this.toolStripSeparator19.Name = "toolStripSeparator19";
-            this.toolStripSeparator19.Size = new System.Drawing.Size(6, 27);
             // 
             // toolStripButton7
             // 
@@ -5333,22 +5527,7 @@ namespace BudgetExecution
             this.toolStripButton7.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton7.Name = "toolStripButton7";
             this.toolStripButton7.Size = new System.Drawing.Size(24, 24);
-            toolTipInfo6.BackColor = System.Drawing.Color.Black;
-            toolTipInfo6.Body.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image4")));
-            toolTipInfo6.Body.ImageScalingSize = new System.Drawing.Size(20, 20);
-            toolTipInfo6.Body.RenderHtml = true;
-            toolTipInfo6.Body.Size = new System.Drawing.Size(220, 40);
-            toolTipInfo6.BorderColor = System.Drawing.SystemColors.MenuHighlight;
-            toolTipInfo6.Footer.Size = new System.Drawing.Size(220, 40);
-            toolTipInfo6.ForeColor = System.Drawing.Color.LightSteelBlue;
-            toolTipInfo6.Header.Size = new System.Drawing.Size(220, 40);
-            this.superToolTip1.SetToolTip(this.toolStripButton7, toolTipInfo6);
-            // 
-            // GridRefreshButton
-            // 
-            this.GridRefreshButton.Name = "GridRefreshButton";
-            this.GridRefreshButton.Size = new System.Drawing.Size(6, 27);
-            this.GridRefreshButton.Click += new System.EventHandler(this.GridRefreshButton_OnClick);
+            this.superToolTip1.SetToolTip(this.toolStripButton7, toolTipInfo1);
             // 
             // toolStripButton9
             // 
@@ -5357,21 +5536,7 @@ namespace BudgetExecution
             this.toolStripButton9.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton9.Name = "toolStripButton9";
             this.toolStripButton9.Size = new System.Drawing.Size(24, 24);
-            toolTipInfo7.BackColor = System.Drawing.Color.Black;
-            toolTipInfo7.Body.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image5")));
-            toolTipInfo7.Body.ImageScalingSize = new System.Drawing.Size(50, 50);
-            toolTipInfo7.Body.RenderHtml = true;
-            toolTipInfo7.Body.Size = new System.Drawing.Size(220, 40);
-            toolTipInfo7.BorderColor = System.Drawing.SystemColors.MenuHighlight;
-            toolTipInfo7.Footer.Size = new System.Drawing.Size(220, 40);
-            toolTipInfo7.ForeColor = System.Drawing.Color.LightSteelBlue;
-            toolTipInfo7.Header.Size = new System.Drawing.Size(220, 40);
-            this.superToolTip1.SetToolTip(this.toolStripButton9, toolTipInfo7);
-            // 
-            // toolStripSeparator12
-            // 
-            this.toolStripSeparator12.Name = "toolStripSeparator12";
-            this.toolStripSeparator12.Size = new System.Drawing.Size(6, 27);
+            this.superToolTip1.SetToolTip(this.toolStripButton9, toolTipInfo1);
             // 
             // toolStripButton14
             // 
@@ -5380,22 +5545,7 @@ namespace BudgetExecution
             this.toolStripButton14.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton14.Name = "toolStripButton14";
             this.toolStripButton14.Size = new System.Drawing.Size(24, 24);
-            toolTipInfo8.BackColor = System.Drawing.Color.Black;
-            toolTipInfo8.Body.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image6")));
-            toolTipInfo8.Body.ImageScalingSize = new System.Drawing.Size(20, 20);
-            toolTipInfo8.Body.RenderHtml = true;
-            toolTipInfo8.Body.Size = new System.Drawing.Size(220, 40);
-            toolTipInfo8.BorderColor = System.Drawing.SystemColors.MenuHighlight;
-            toolTipInfo8.Footer.Size = new System.Drawing.Size(220, 40);
-            toolTipInfo8.ForeColor = System.Drawing.Color.LightSteelBlue;
-            toolTipInfo8.Header.Size = new System.Drawing.Size(220, 40);
-            toolTipInfo8.Header.Text = "";
-            this.superToolTip1.SetToolTip(this.toolStripButton14, toolTipInfo8);
-            // 
-            // toolStripSeparator17
-            // 
-            this.toolStripSeparator17.Name = "toolStripSeparator17";
-            this.toolStripSeparator17.Size = new System.Drawing.Size(6, 27);
+            this.superToolTip1.SetToolTip(this.toolStripButton14, toolTipInfo1);
             // 
             // toolStripButton15
             // 
@@ -5404,21 +5554,7 @@ namespace BudgetExecution
             this.toolStripButton15.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton15.Name = "toolStripButton15";
             this.toolStripButton15.Size = new System.Drawing.Size(24, 24);
-            toolTipInfo9.BackColor = System.Drawing.Color.Black;
-            toolTipInfo9.Body.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image7")));
-            toolTipInfo9.Body.ImageScalingSize = new System.Drawing.Size(20, 20);
-            toolTipInfo9.Body.RenderHtml = true;
-            toolTipInfo9.Body.Size = new System.Drawing.Size(220, 40);
-            toolTipInfo9.BorderColor = System.Drawing.SystemColors.MenuHighlight;
-            toolTipInfo9.Footer.Size = new System.Drawing.Size(220, 40);
-            toolTipInfo9.ForeColor = System.Drawing.Color.LightSteelBlue;
-            toolTipInfo9.Header.Size = new System.Drawing.Size(220, 40);
-            this.superToolTip1.SetToolTip(this.toolStripButton15, toolTipInfo9);
-            // 
-            // toolStripSeparator20
-            // 
-            this.toolStripSeparator20.Name = "toolStripSeparator20";
-            this.toolStripSeparator20.Size = new System.Drawing.Size(6, 27);
+            this.superToolTip1.SetToolTip(this.toolStripButton15, toolTipInfo1);
             // 
             // toolStripButton16
             // 
@@ -5427,228 +5563,7 @@ namespace BudgetExecution
             this.toolStripButton16.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton16.Name = "toolStripButton16";
             this.toolStripButton16.Size = new System.Drawing.Size(24, 24);
-            toolTipInfo10.BackColor = System.Drawing.Color.Black;
-            toolTipInfo10.Body.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image8")));
-            toolTipInfo10.Body.ImageScalingSize = new System.Drawing.Size(20, 20);
-            toolTipInfo10.Body.RenderHtml = true;
-            toolTipInfo10.Body.Size = new System.Drawing.Size(220, 40);
-            toolTipInfo10.BorderColor = System.Drawing.SystemColors.MenuHighlight;
-            toolTipInfo10.Footer.Size = new System.Drawing.Size(220, 40);
-            toolTipInfo10.ForeColor = System.Drawing.Color.LightSteelBlue;
-            toolTipInfo10.Header.ImageScalingSize = new System.Drawing.Size(120, 60);
-            toolTipInfo10.Header.Size = new System.Drawing.Size(220, 40);
-            this.superToolTip1.SetToolTip(this.toolStripButton16, toolTipInfo10);
-            // 
-            // lblCount
-            // 
-            this.lblCount.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.lblCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.lblCount.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblCount.Location = new System.Drawing.Point(651, 66);
-            this.lblCount.Name = "lblCount";
-            this.lblCount.Size = new System.Drawing.Size(111, 23);
-            this.lblCount.Style = MetroSet_UI.Design.Style.Dark;
-            this.lblCount.StyleManager = null;
-            this.lblCount.TabIndex = 149;
-            this.lblCount.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblCount.ThemeAuthor = "Narwin";
-            this.lblCount.ThemeName = "MetroDark";
-            this.lblCount.Click += new System.EventHandler(this.LblCount_Click);
-            // 
-            // Grid
-            // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Linen;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            this.Grid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.Grid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
-            this.Grid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCellsExceptHeaders;
-            this.Grid.BackgroundColor = System.Drawing.Color.SlateGray;
-            this.Grid.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Consolas", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Grid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.Grid.ColumnHeadersHeight = 30;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.LightSteelBlue;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Consolas", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.Info;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.Grid.DefaultCellStyle = dataGridViewCellStyle3;
-            this.Grid.EnableHeadersVisualStyles = false;
-            this.Grid.GridColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.Grid.Location = new System.Drawing.Point(30, 101);
-            this.Grid.MultiSelect = false;
-            this.Grid.Name = "Grid";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Grid.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.Grid.RowHeadersWidth = 30;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.LightSteelBlue;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Consolas", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle5.NullValue = null;
-            this.Grid.RowsDefaultCellStyle = dataGridViewCellStyle5;
-            this.Grid.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.Grid.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Consolas", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Grid.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
-            this.Grid.RowTemplate.Height = 30;
-            this.Grid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.Grid.Size = new System.Drawing.Size(782, 372);
-            this.Grid.TabIndex = 150;
-            this.Grid.DoubleClick += new System.EventHandler(this.Grid_OnDoubleClick);
-            // 
-            // FilterGroupBox
-            // 
-            this.FilterGroupBox.BackColor = System.Drawing.Color.Black;
-            this.FilterGroupBox.Controls.Add(this.lblPrc);
-            this.FilterGroupBox.Controls.Add(this.lblBoc);
-            this.FilterGroupBox.Controls.Add(this.label33);
-            this.FilterGroupBox.Controls.Add(this.GridAccountFilter);
-            this.FilterGroupBox.Controls.Add(this.GridBocFilter);
-            this.FilterGroupBox.Controls.Add(this.GridFundFilter);
-            this.FilterGroupBox.ForeColor = System.Drawing.SystemColors.Info;
-            this.FilterGroupBox.Location = new System.Drawing.Point(36, 131);
-            this.FilterGroupBox.Name = "FilterGroupBox";
-            this.FilterGroupBox.Size = new System.Drawing.Size(207, 545);
-            this.FilterGroupBox.TabIndex = 160;
-            this.FilterGroupBox.TabStop = false;
-            this.FilterGroupBox.Text = "Filters";
-            // 
-            // lblPrc
-            // 
-            this.lblPrc.AutoSize = true;
-            this.lblPrc.ForeColor = System.Drawing.SystemColors.Info;
-            this.lblPrc.Location = new System.Drawing.Point(45, 327);
-            this.lblPrc.Name = "lblPrc";
-            this.lblPrc.Size = new System.Drawing.Size(105, 20);
-            this.lblPrc.TabIndex = 7;
-            this.lblPrc.Text = "PRC Account\r\n";
-            // 
-            // lblBoc
-            // 
-            this.lblBoc.AutoSize = true;
-            this.lblBoc.ForeColor = System.Drawing.SystemColors.Info;
-            this.lblBoc.Location = new System.Drawing.Point(18, 191);
-            this.lblBoc.Name = "lblBoc";
-            this.lblBoc.Size = new System.Drawing.Size(154, 20);
-            this.lblBoc.TabIndex = 6;
-            this.lblBoc.Text = "Budget Object Class";
-            // 
-            // label33
-            // 
-            this.label33.AutoSize = true;
-            this.label33.ForeColor = System.Drawing.SystemColors.Info;
-            this.label33.Location = new System.Drawing.Point(45, 47);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(104, 20);
-            this.label33.TabIndex = 5;
-            this.label33.Text = "Appropriation";
-            // 
-            // GridAccountFilter
-            // 
-            this.GridAccountFilter.AllowDrop = true;
-            this.GridAccountFilter.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
-            this.GridAccountFilter.BackColor = System.Drawing.Color.Transparent;
-            this.GridAccountFilter.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
-            this.GridAccountFilter.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
-            this.GridAccountFilter.CausesValidation = false;
-            this.GridAccountFilter.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.GridAccountFilter.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.GridAccountFilter.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.GridAccountFilter.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.GridAccountFilter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.GridAccountFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.GridAccountFilter.FormattingEnabled = true;
-            this.GridAccountFilter.ItemHeight = 30;
-            this.GridAccountFilter.Location = new System.Drawing.Point(15, 350);
-            this.GridAccountFilter.MaxDropDownItems = 50;
-            this.GridAccountFilter.Name = "GridAccountFilter";
-            this.GridAccountFilter.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.GridAccountFilter.SelectedItemForeColor = System.Drawing.Color.White;
-            this.GridAccountFilter.Size = new System.Drawing.Size(173, 36);
-            this.GridAccountFilter.Style = MetroSet_UI.Design.Style.Dark;
-            this.GridAccountFilter.StyleManager = null;
-            this.GridAccountFilter.TabIndex = 4;
-            this.GridAccountFilter.ThemeAuthor = "Narwin";
-            this.GridAccountFilter.ThemeName = "MetroDark";
-            // 
-            // GridBocFilter
-            // 
-            this.GridBocFilter.AllowDrop = true;
-            this.GridBocFilter.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
-            this.GridBocFilter.BackColor = System.Drawing.Color.Transparent;
-            this.GridBocFilter.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
-            this.GridBocFilter.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
-            this.GridBocFilter.CausesValidation = false;
-            this.GridBocFilter.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.GridBocFilter.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.GridBocFilter.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.GridBocFilter.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.GridBocFilter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.GridBocFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.GridBocFilter.FormattingEnabled = true;
-            this.GridBocFilter.ItemHeight = 30;
-            this.GridBocFilter.Location = new System.Drawing.Point(12, 217);
-            this.GridBocFilter.Name = "GridBocFilter";
-            this.GridBocFilter.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.GridBocFilter.SelectedItemForeColor = System.Drawing.Color.White;
-            this.GridBocFilter.Size = new System.Drawing.Size(173, 36);
-            this.GridBocFilter.Style = MetroSet_UI.Design.Style.Dark;
-            this.GridBocFilter.StyleManager = null;
-            this.GridBocFilter.TabIndex = 3;
-            this.GridBocFilter.ThemeAuthor = "Narwin";
-            this.GridBocFilter.ThemeName = "MetroDark";
-            // 
-            // GridFundFilter
-            // 
-            this.GridFundFilter.AllowDrop = true;
-            this.GridFundFilter.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
-            this.GridFundFilter.BackColor = System.Drawing.Color.Transparent;
-            this.GridFundFilter.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
-            this.GridFundFilter.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
-            this.GridFundFilter.CausesValidation = false;
-            this.GridFundFilter.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.GridFundFilter.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.GridFundFilter.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.GridFundFilter.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.GridFundFilter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.GridFundFilter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.GridFundFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.GridFundFilter.FormattingEnabled = true;
-            this.GridFundFilter.ItemHeight = 30;
-            this.GridFundFilter.Location = new System.Drawing.Point(15, 78);
-            this.GridFundFilter.MaxDropDownItems = 15;
-            this.GridFundFilter.Name = "GridFundFilter";
-            this.GridFundFilter.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.GridFundFilter.SelectedItemForeColor = System.Drawing.Color.White;
-            this.GridFundFilter.Size = new System.Drawing.Size(173, 36);
-            this.GridFundFilter.Style = MetroSet_UI.Design.Style.Dark;
-            this.GridFundFilter.StyleManager = null;
-            this.GridFundFilter.TabIndex = 2;
-            this.GridFundFilter.ThemeAuthor = "Narwin";
-            this.GridFundFilter.ThemeName = "MetroDark";
-            // 
-            // toolStripButton2
-            // 
-            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(34, 28);
-            this.toolStripButton2.Text = "toolStripButton2";
+            this.superToolTip1.SetToolTip(this.toolStripButton16, toolTipInfo1);
             // 
             // toolStripButton1
             // 
@@ -5690,7 +5605,6 @@ namespace BudgetExecution
             // superToolTip1
             // 
             this.superToolTip1.MetroColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(158)))), ((int)(((byte)(218)))));
-            this.superToolTip1.ToolTipDuration = 10;
             // 
             // SummaryForm
             // 
@@ -5767,9 +5681,6 @@ namespace BudgetExecution
             this.groupBox5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.AccountTabControl)).EndInit();
             this.AccountTabControl.ResumeLayout(false);
-            this.UpdateTab.ResumeLayout(false);
-            this.tabPageAdv5.ResumeLayout(false);
-            this.tabPageAdv6.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
@@ -5780,6 +5691,9 @@ namespace BudgetExecution
             ((System.ComponentModel.ISupportInitialize)(this.Grid)).EndInit();
             this.FilterGroupBox.ResumeLayout(false);
             this.FilterGroupBox.PerformLayout();
+            this.UpdateTab.ResumeLayout(false);
+            this.tabPageAdv5.ResumeLayout(false);
+            this.tabPageAdv6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.BindingSource)).EndInit();
             this.ResumeLayout(false);
 
@@ -6008,7 +5922,7 @@ namespace BudgetExecution
         private ToolStripButton toolStripButton15;
         private ToolStripSeparator toolStripSeparator20;
         private ToolStripButton toolStripButton16;
-        private SuperToolTip superToolTip1;
         internal BindingNavigator AccountNavigator;
+        private SuperToolTip superToolTip1;
     }
 }

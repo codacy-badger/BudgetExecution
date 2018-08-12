@@ -86,7 +86,7 @@ namespace BudgetExecution
             try
             {
                 string vals = string.Empty;
-                var sqlparameter = GetParameter(param);
+                SqlParameter[] sqlparameter = GetParameter(param);
                 foreach (SqlParameter p in sqlparameter)
                 {
                     vals += $"{p.SourceColumn.ToString()} = '{p.Value}' AND ";
@@ -107,7 +107,7 @@ namespace BudgetExecution
             try
             {
                 string vals = string.Empty;
-                foreach (var p in param)
+                foreach (SqlParameter p in param)
                 {
                     vals += $"{p.SourceColumn} = '{p.Value}' AND ";
                 }
@@ -122,11 +122,11 @@ namespace BudgetExecution
             }
         }
 
-        public new SqlParameter[] GetParameter(Dictionary<string, object> param)
+        public SqlParameter[] GetParameter(Dictionary<string, object> param)
         {
             try
             {
-                var val = new SqlParameter[param.Count];
+                SqlParameter[] val = new SqlParameter[param.Count];
                 for (int i = 0; i < param.Count; i++)
                 {
                     foreach (KeyValuePair<string, object> kvp in param)

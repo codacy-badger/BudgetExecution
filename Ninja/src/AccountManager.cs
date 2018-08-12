@@ -112,7 +112,7 @@ namespace BudgetExecution
 
         private void PopulateComboBoxes()
         {
-            var data = new DataBuilder(Source, Provider);
+            DataBuilder data = new DataBuilder(Source, Provider);
             if(data.DbTable.Columns.Contains("SubProject"))
             {
                 foreach (string p in data.ProgramElements["SubProject"])
@@ -134,7 +134,7 @@ namespace BudgetExecution
         {
             try
             {
-                var codes = Info.AgencyFundCodes;
+                string[] codes = Info.AgencyFundCodes;
                 foreach (string c in codes)
                     ComboBox3.Items.Add(c);
             }
@@ -212,19 +212,19 @@ namespace BudgetExecution
         {
             try
             {
-                var cct = table.Columns.Count;
-                var rct = table.Rows.Count;
-                var row = table.Rows[0];
-                var col = table.GetFields();
-                var val = row.ItemArray;
-                var param = new Dictionary<string, object>();
+                int cct = table.Columns.Count;
+                int rct = table.Rows.Count;
+                DataRow row = table.Rows[0];
+                string[] col = table.GetFields();
+                object[] val = row.ItemArray;
+                Dictionary<string, object> param = new Dictionary<string, object>();
                 for (int i = 0; i < cct; i++)
                     param.Add(col[i], val[i]);
                 return param;
             }
             catch (Exception e)
             {
-                var  _ = new Error(e).ShowDialog();
+                DialogResult  _ = new Error(e).ShowDialog();
                 return null;
             }
         }
@@ -274,8 +274,8 @@ namespace BudgetExecution
             {
                 try
                 {
-                    var row = (DataRow)bs.Current;
-                    var data = new Dictionary<string, object>();
+                    DataRow row = (DataRow)bs.Current;
+                    Dictionary<string, object> data = new Dictionary<string, object>();
                     data.Add("ID", int.Parse(row["ID"].ToString()));
                     data.Add("BudgetLevel", row["BudgetLevel"].ToString());
                     data.Add("Org", row["Org"].ToString());
@@ -295,7 +295,7 @@ namespace BudgetExecution
 
         private void AddButton_OnClick(object sender, EventArgs e)
         {
-            var addmanager = new AccountManager(Source.PRC, Provider);
+            AccountManager addmanager = new AccountManager(Source.PRC, Provider);
             addmanager.AccountNavigator.Visible = false;
             addmanager.UpdateTab.TabVisible = false;
             addmanager.Show();
@@ -314,7 +314,7 @@ namespace BudgetExecution
 
         private void UpdateButton_Click(object sender, EventArgs e)
         {
-            var addmanager = new AccountManager(Source, Provider);
+            AccountManager addmanager = new AccountManager(Source, Provider);
             addmanager.AccountNavigator.Visible = false;
             addmanager.AddNewTab.TabVisible = false;
             addmanager.Show();
@@ -329,7 +329,7 @@ namespace BudgetExecution
 
         private void CalculatorButton_Click(object sender, EventArgs e)
         {
-            var cf = new CalculatorForm();
+            CalculatorForm cf = new CalculatorForm();
             cf.Show();
         }
 

@@ -132,7 +132,7 @@ namespace BudgetExecution
                     label.Visible = true;
                 }
 
-                var filters = data.ProgramElements[colname];
+                string[] filters = data.ProgramElements[colname];
                 control.Tag = colname;
                 foreach (string i in filters)
                 {
@@ -160,7 +160,7 @@ namespace BudgetExecution
                     label.Text = control.Tag.ToString();
                 }
 
-                var filters = FieldFilter(table, colname);
+                string[] filters = FieldFilter(table, colname);
                 foreach (string i in filters)
                 {
                     control.Items.Add(i);
@@ -171,7 +171,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                var _ = new Error(ex).ShowDialog();
+                DialogResult _ = new Error(ex).ShowDialog();
             }
         }
 
@@ -191,7 +191,7 @@ namespace BudgetExecution
                     label.Text = control.Tag.ToString();
                 }
 
-                var items = data.ProgramElements[colname.ToString()];
+                string[] items = data.ProgramElements[colname.ToString()];
                 foreach (string i in items)
                 {
                     control.Items.Add(i);
@@ -217,7 +217,7 @@ namespace BudgetExecution
                     label.Visible = true;
                 }
 
-                var item = FieldFilter(table, colname.ToString());
+                string[] item = FieldFilter(table, colname.ToString());
                 control.Tag = colname.ToString();
                 foreach (string i in item)
                 {
@@ -226,7 +226,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                var _ = new Error(ex).ShowDialog();
+                DialogResult _ = new Error(ex).ShowDialog();
             }
         }
 
@@ -250,9 +250,9 @@ namespace BudgetExecution
         {
             try
             {
-                var button = sender as MetroSetButton;
-                var name = button.Tag.ToString();
-                var source = (Source)Enum.Parse(typeof(Source), name.ToString());
+                MetroSetButton button = sender as MetroSetButton;
+                string name = button.Tag.ToString();
+                Source source = (Source)Enum.Parse(typeof(Source), name.ToString());
                 BindingSource.DataSource = new DataBuilder(source, Provider.SQLite).GetDataTable();
             }
             catch (Exception ex)
@@ -276,7 +276,7 @@ namespace BudgetExecution
         {
             try
             {
-                var am = new RecordManager(Source, Provider);
+                RecordManager am = new RecordManager(Source, Provider);
                 am.Show();
             }
             catch (Exception ex)
@@ -295,7 +295,7 @@ namespace BudgetExecution
         {
             try
             {
-                var am = new RecordManager(Source, Provider);
+                RecordManager am = new RecordManager(Source, Provider);
                 am.Show();
             }
             catch (Exception ex)
@@ -357,10 +357,10 @@ namespace BudgetExecution
         {
             try
             {
-                var filter = sender as MetroSetComboBox;
+                MetroSetComboBox filter = sender as MetroSetComboBox;
                 F1 = filter.SelectedItem.ToString();
                 C1 = (Field)Enum.Parse(typeof(Field), filter.Tag.ToString());
-                var tbl = TableFilter(Table, C1, F1);
+                DataTable tbl = TableFilter(Table, C1, F1);
                 BindingSource.DataSource = tbl;
                 label6.Text = DbData.GetTotal(tbl).ToString("c");
                 label12.Text = DbData.GetCount(tbl).ToString();
@@ -387,8 +387,8 @@ namespace BudgetExecution
                     C2 = (Field) Enum.Parse(typeof(Field), filter.Tag.ToString());
                 }
 
-                var tbl = TableFilter(Table, C1, F1);
-                var tbl2 = TableFilter(tbl, C2, F2);
+                DataTable tbl = TableFilter(Table, C1, F1);
+                DataTable tbl2 = TableFilter(tbl, C2, F2);
                 BindingSource.DataSource = tbl2;
                 label6.Text = DbData.GetTotal(tbl2).ToString("c");
                 label12.Text = tbl2.Rows.ToString();
@@ -406,12 +406,12 @@ namespace BudgetExecution
         {
             try
             {
-                var filter = sender as MetroSetComboBox;
+                MetroSetComboBox filter = sender as MetroSetComboBox;
                 F3 = filter?.SelectedItem.ToString();
                 if (filter != null) C3 = (Field) Enum.Parse(typeof(Field), filter.Tag.ToString());
-                var tbl = TableFilter(Table, C1, F1);
-                var tbl2 = TableFilter(tbl, C2, F2);
-                var tbl3 = TableFilter(tbl2, C3, F3);
+                DataTable tbl = TableFilter(Table, C1, F1);
+                DataTable tbl2 = TableFilter(tbl, C2, F2);
+                DataTable tbl3 = TableFilter(tbl2, C3, F3);
                 BindingSource.DataSource = tbl3;
                 label6.Text = DbData.GetTotal(tbl3).ToString("c");
                 label12.Text = DbData.GetCount(tbl3).ToString();
@@ -430,13 +430,13 @@ namespace BudgetExecution
         {
             try
             {
-                var filter = sender as MetroSetComboBox;
+                MetroSetComboBox filter = sender as MetroSetComboBox;
                 F4 = filter?.SelectedItem.ToString();
                 if (filter != null) C4 = (Field)Enum.Parse(typeof(Field), filter.Tag.ToString());
-                var tbl = TableFilter(Table, C1, F1);
-                var tbl2 = TableFilter(tbl, C2, F2);
-                var tbl3 = TableFilter(tbl2, C3, F3);
-                var tbl4 = TableFilter(tbl3, C4, F4);
+                DataTable tbl = TableFilter(Table, C1, F1);
+                DataTable tbl2 = TableFilter(tbl, C2, F2);
+                DataTable tbl3 = TableFilter(tbl2, C3, F3);
+                DataTable tbl4 = TableFilter(tbl3, C4, F4);
                 BindingSource.DataSource = tbl4;
                 label6.Text = DbData.GetTotal(tbl4).ToString("c");
                 label12.Text = DbData.GetCount(tbl4).ToString();

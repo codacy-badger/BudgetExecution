@@ -9,6 +9,7 @@ namespace BudgetExecution
     using System.Data;
     using System.Data.SQLite;
     using System.Linq;
+    using System.Windows.Forms;
 
     public class PRC : IPRC, IAccount
     {
@@ -193,7 +194,7 @@ namespace BudgetExecution
         {
             try
             {
-                var param = new Dictionary<string, object>()
+                Dictionary<string, object> param = new Dictionary<string, object>()
                 {
                     ["ID"] = ID,
                     ["BudgetLevel"] = BudgetLevel,
@@ -233,7 +234,7 @@ namespace BudgetExecution
 
         public string GetGoal()
         {
-            var goal = Code.Substring(0, 1).ToCharArray();
+            char[] goal = Code.Substring(0, 1).ToCharArray();
             return goal.ToString();
         }
 
@@ -244,7 +245,7 @@ namespace BudgetExecution
 
         public string GetNpmCode()
         {
-            var npm = Code.Substring(2, 1).ToCharArray();
+            char[] npm = Code.Substring(2, 1).ToCharArray();
             return npm.ToString();
         }
 
@@ -272,7 +273,7 @@ namespace BudgetExecution
         {
             try
             {
-                var account = new Account(source, provider, param["Fund"].ToString(), param["Code"].ToString());
+                Account account = new Account(source, provider, param["Fund"].ToString(), param["Code"].ToString());
                 if (!param.ContainsKey("FundName") || param["FundName"] == null)
                 {
                     param["FundName"] = account.FundName;
@@ -311,7 +312,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                var _ = new Error(ex).ShowDialog();
+                DialogResult _ = new Error(ex).ShowDialog();
                 return null;
             }
         }
@@ -320,12 +321,12 @@ namespace BudgetExecution
         {
             try
             {
-                var datarow = new DataBuilder(source, provider, p).DbTable.AsEnumerable().Select(prc => prc).First();
+                DataRow datarow = new DataBuilder(source, provider, p).DbTable.AsEnumerable().Select(prc => prc).First();
                 return new PRC(datarow);
             }
             catch (Exception ex)
             {
-                var _ = new Error(ex).ShowDialog();
+                DialogResult _ = new Error(ex).ShowDialog();
                 return null;
             }
         }
@@ -334,7 +335,7 @@ namespace BudgetExecution
         {
             try
             {
-                var insert = new InsertData(Info.Insert);
+                InsertData insert = Info.Insert;
                 insert(Source.PRC, Provider.SQLite, p);
             }
             catch (Exception ex)
@@ -347,7 +348,7 @@ namespace BudgetExecution
         {
             try
             {
-                var update = new InsertData(Info.Insert);
+                InsertData update = new InsertData(Info.Insert);
                 update(Source.PRC, Provider.SQLite, p);
             }
             catch (Exception ex)
@@ -360,7 +361,7 @@ namespace BudgetExecution
         {
             try
             {
-                var update = new InsertData(Info.Insert);
+                InsertData update = new InsertData(Info.Insert);
                 update(Source.PRC, Provider.SQLite, p);
             }
             catch (Exception ex)

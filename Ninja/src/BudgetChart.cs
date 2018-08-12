@@ -257,7 +257,7 @@ namespace BudgetExecution
         {
             try
             {
-                var series = new ChartSeries("Total", SeriesType);
+                ChartSeries series = new ChartSeries("Total", SeriesType);
                 if(SeriesType == ChartSeriesType.Column)
                 {
                     foreach (KeyValuePair<string, double> kvp in data)
@@ -287,7 +287,7 @@ namespace BudgetExecution
             }
             catch (Exception e)
             {
-                var  _ = new Error(e).ShowDialog();
+                DialogResult  _ = new Error(e).ShowDialog();
                 return null;
             }
         }
@@ -296,7 +296,7 @@ namespace BudgetExecution
         {
             try
             {
-                var series = new ChartSeries("Total", type);
+                ChartSeries series = new ChartSeries("Total", type);
                 if (type == ChartSeriesType.Column)
                 {
                     foreach (KeyValuePair<string, double> kvp in data)
@@ -328,7 +328,7 @@ namespace BudgetExecution
             }
             catch (Exception e)
             {
-                var  _ = new Error(e).ShowDialog();
+                DialogResult  _ = new Error(e).ShowDialog();
                 return null;
             }
         }
@@ -337,7 +337,7 @@ namespace BudgetExecution
         {
             try
             {
-                var total = new Dictionary<string, double>();
+                Dictionary<string, double> total = new Dictionary<string, double>();
                 foreach (KeyValuePair<string, double[]> kvp in data)
                 {
                     total.Add(kvp.Key, kvp.Value[(int)value]);
@@ -404,7 +404,7 @@ namespace BudgetExecution
             }
             catch (Exception e)
             {
-                var  _ = new Error(e).ShowDialog();
+                DialogResult  _ = new Error(e).ShowDialog();
             }
         }
 
@@ -450,7 +450,7 @@ namespace BudgetExecution
             }
             catch (Exception e)
             {
-                var  _ = new Error(e).ShowDialog();
+                DialogResult  _ = new Error(e).ShowDialog();
             }
         }
 
@@ -520,7 +520,7 @@ namespace BudgetExecution
             }
             catch (Exception e)
             {
-                var  _ = new Error(e).ShowDialog();
+                DialogResult  _ = new Error(e).ShowDialog();
             }
         }
 
@@ -543,7 +543,7 @@ namespace BudgetExecution
             }
             catch (Exception e)
             {
-                var  _ = new Error(e).ShowDialog();
+                DialogResult  _ = new Error(e).ShowDialog();
             }
         }
 
@@ -576,7 +576,7 @@ namespace BudgetExecution
             }
             catch (Exception e)
             {
-                var  _ = new Error(e).ShowDialog();
+                DialogResult  _ = new Error(e).ShowDialog();
             }
         }
 
@@ -597,7 +597,7 @@ namespace BudgetExecution
             }
             catch (Exception e)
             {
-                var  _ = new Error(e).ShowDialog();
+                DialogResult  _ = new Error(e).ShowDialog();
             }
         }
 
@@ -611,7 +611,7 @@ namespace BudgetExecution
             }
             catch (Exception e)
             {
-                var  _ = new Error(e).ShowDialog();
+                DialogResult  _ = new Error(e).ShowDialog();
             }
         }
 
@@ -619,13 +619,13 @@ namespace BudgetExecution
         {
             try
             {
-                var chartdata = new SortedList<string, double>();
+                SortedList<string, double> chartdata = new SortedList<string, double>();
                 foreach (KeyValuePair<string, double> kvp in data)
                 {
                     chartdata.Add(kvp.Key, kvp.Value);
                 }
 
-                var model = new ChartDataBindModel(chartdata);
+                ChartDataBindModel model = new ChartDataBindModel(chartdata);
                 model.YNames = new string[] { filter.ToString() };
                 return model;
             }
@@ -645,10 +645,10 @@ namespace BudgetExecution
                     Chart.Legends.Clear();
                 }
 
-                var legend = new ChartLegend(Chart);
+                ChartLegend legend = new ChartLegend(Chart);
                 foreach (string axislabel in Chart.PrimaryXAxis.Labels)
                 {
-                    var item = new ChartLegendItem(axislabel);
+                    ChartLegendItem item = new ChartLegendItem(axislabel);
                 }
 
                 legend.VisibleCheckBox = true;
@@ -657,7 +657,7 @@ namespace BudgetExecution
             }
             catch (Exception e)
             {
-                var  _ = new Error(e).ShowDialog();
+                DialogResult  _ = new Error(e).ShowDialog();
                 return null;
             }
         }
@@ -682,7 +682,7 @@ namespace BudgetExecution
             }
             catch (Exception e)
             {
-                var  _ = new Error(e).ShowDialog();
+                DialogResult  _ = new Error(e).ShowDialog();
             }
         }
     }

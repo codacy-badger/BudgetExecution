@@ -9,6 +9,7 @@ namespace BudgetExecution
     using System.Data;
     using System.Data.SQLite;
     using System.Linq;
+    using System.Windows.Forms;
 
     using Syncfusion.Windows.Forms.Spreadsheet.Commands;
 
@@ -130,7 +131,7 @@ namespace BudgetExecution
                 }
                 catch (SystemException ex)
                 {
-                    var _ = new Error(ex).ShowDialog();
+                    DialogResult _ = new Error(ex).ShowDialog();
                     return null;
                 }
             }
@@ -183,7 +184,7 @@ namespace BudgetExecution
         {
             try
             {
-                var account = new Account(source, provider, param["Fund"].ToString(), param["Code"].ToString());
+                Account account = new Account(source, provider, param["Fund"].ToString(), param["Code"].ToString());
                 if (!param.ContainsKey("FundName") || param["FundName"] == null)
                 {
                     param["FundName"] = account.FundName;
@@ -231,7 +232,7 @@ namespace BudgetExecution
         {
             try
             {
-                var datarow = new DataBuilder(source, Provider.SQLite, p).DbTable.AsEnumerable().Select(prc => prc).First();
+                DataRow datarow = new DataBuilder(source, Provider.SQLite, p).DbTable.AsEnumerable().Select(prc => prc).First();
                 return new Obligation(datarow);
             }
             catch (Exception ex)
@@ -245,7 +246,7 @@ namespace BudgetExecution
         {
             try
             {
-                var query = new DataBuilder(source, provider, param).DbTable.AsEnumerable().Select(p => p).First();
+                DataRow query = new DataBuilder(source, provider, param).DbTable.AsEnumerable().Select(p => p).First();
                 return new Obligation(query);
             }
             catch (Exception ex)
@@ -259,7 +260,7 @@ namespace BudgetExecution
         {
             try
             {
-                var insert = new InsertData(Info.Insert);
+                InsertData insert = new InsertData(Info.Insert);
                 insert(Source.Obligations, Provider.SQLite, p);
             }
             catch (Exception ex)
@@ -272,7 +273,7 @@ namespace BudgetExecution
         {
             try
             {
-                var update = new InsertData(Info.Update);
+                InsertData update = new InsertData(Info.Update);
                 update(Source.Obligations, Provider.SQLite, p);
             }
             catch (Exception ex)
@@ -285,7 +286,7 @@ namespace BudgetExecution
         {
             try
             {
-                var delete = new InsertData(Info.Delete);
+                InsertData delete = new InsertData(Info.Delete);
                 delete(Source.Obligations, Provider.SQLite, p);
             }
             catch (Exception ex)

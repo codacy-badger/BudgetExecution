@@ -87,7 +87,7 @@ namespace BudgetExecution
             try
             {
                 Excel excel = Create();
-                var excelWorkBook = excel.Workbooks.Open(path);
+                Workbook excelWorkBook = excel.Workbooks.Open(path);
                 int tr = table.Rows.Count;
                 Worksheet excelWorkSheet = (Worksheet)excelWorkBook.Sheets[1];
                 excelWorkSheet.Name = table.TableName;
@@ -119,7 +119,7 @@ namespace BudgetExecution
             try
             {
                 Excel excel = Create();
-                var excelWorkBook = excel.Workbooks.Open(filepath);
+                Workbook excelWorkBook = excel.Workbooks.Open(filepath);
                 Worksheet excelWorkSheet = (Worksheet)excelWorkBook.Sheets[1];
                 excelWorkSheet.Name = table.TableName;
                 for (int i = 1; i < table.Columns.Count + 1; i++)
@@ -149,7 +149,7 @@ namespace BudgetExecution
         {
             try
             {
-                var excelWorkBook = Excel.Workbooks.Open(filepath);
+                Workbook excelWorkBook = Excel.Workbooks.Open(filepath);
                 return excelWorkBook;
             }
             catch (Exception ex)
@@ -163,7 +163,7 @@ namespace BudgetExecution
         {
             try
             {
-                var excelWorkBook = Excel.Workbooks.Add();
+                Workbook excelWorkBook = Excel.Workbooks.Add();
                 return excelWorkBook;
             }
             catch (Exception ex)

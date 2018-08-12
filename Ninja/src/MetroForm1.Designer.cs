@@ -5,7 +5,7 @@
 // licensing@syncfusion.com. Any infringement will be prosecuted under
 // applicable laws. 
 #endregion
-namespace BudgetExecution.src
+namespace BudgetExecution
 {
     partial class MetroForm1
     {
@@ -46,10 +46,11 @@ namespace BudgetExecution.src
             this.BorderColor = System.Drawing.SystemColors.MenuHighlight;
             this.CaptionBarColor = System.Drawing.Color.Black;
             this.CaptionForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.ClientSize = new System.Drawing.Size(762, 575);
+            this.ClientSize = new System.Drawing.Size(1588, 953);
             this.ForeColor = System.Drawing.SystemColors.Info;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MetroColor = System.Drawing.Color.Black;
+            this.MaximumSize = new System.Drawing.Size(1600, 1000);
+            this.MetroColor = System.Drawing.Color.SteelBlue;
             this.Name = "MetroForm1";
             this.Text = "MetroForm1";
             this.ResumeLayout(false);

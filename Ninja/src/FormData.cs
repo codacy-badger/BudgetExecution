@@ -83,19 +83,19 @@ namespace BudgetExecution
         {
             try
             {
-                var cct = table.Columns.Count;
-                var rct = table.Rows.Count;
-                var row = table.Rows[0];
-                var col = table.GetFields();
-                var val = row.ItemArray;
-                var param = new Dictionary<string, object>();
+                int cct = table.Columns.Count;
+                int rct = table.Rows.Count;
+                DataRow row = table.Rows[0];
+                string[] col = table.GetFields();
+                object[] val = row.ItemArray;
+                Dictionary<string, object> param = new Dictionary<string, object>();
                 for (int i = 0; i < cct; i++)
                     param.Add(col[i], val[i]);
                 return param;
             }
             catch (Exception e)
             {
-                var  _ = new Error(e).ShowDialog();
+                DialogResult  _ = new Error(e).ShowDialog();
                 return null;
             }
         }
@@ -150,9 +150,9 @@ namespace BudgetExecution
         {
             try
             {
-                var table = (DataTable)bs.DataSource;
-                var row = table.Rows[bs.Position];
-                var binding = new Binding("Text", row, field);
+                DataTable table = (DataTable)bs.DataSource;
+                DataRow row = table.Rows[bs.Position];
+                Binding binding = new Binding("Text", row, field);
                 tb.DataBindings.Add(binding);
             }
             catch (Exception ex)
@@ -165,9 +165,9 @@ namespace BudgetExecution
         {
             try
             {
-                var table = (DataTable)bs.DataSource;
-                var field = table.GetFields();
-                var row = table.Rows[bs.Position];
+                DataTable table = (DataTable)bs.DataSource;
+                string[] field = table.GetFields();
+                DataRow row = table.Rows[bs.Position];
                 Binding binding;
                 for(int i = 0; i < tb.Count; i++)
                 {
@@ -183,7 +183,7 @@ namespace BudgetExecution
 
         internal void BocButton_OnSelect(object sender, EventArgs e)
         {
-            var listbox = sender as Button;
+            Button listbox = sender as Button;
             try
             {
                 BindingSource.Filter = $"{listbox.Tag.ToString()} = '{listbox.Text}'";
@@ -196,7 +196,7 @@ namespace BudgetExecution
 
         internal void ListBoxItem_OnSelect(object sender, EventArgs e)
         {
-            var listbox = sender as ListBox;
+            ListBox listbox = sender as ListBox;
             try
             {
                 BindingSource.Filter = $"{listbox.Tag.ToString()} = '{listbox.SelectedItem.ToString()}'";
@@ -241,7 +241,7 @@ namespace BudgetExecution
                 control.Controls.Clear();
                 foreach (string f in list)
                 {
-                    var b = new MetroSetButton();
+                    MetroSetButton b = new MetroSetButton();
                     b.Text = f;
                     b.Font = new Font("Segoe UI", 8f);
                     b.NormalColor = Color.Black;
@@ -268,7 +268,7 @@ namespace BudgetExecution
         {
             try
             {
-                var box = control as ListBox;
+                ListBox box = control as ListBox;
                 box.Controls.Clear();
                 foreach (string f in list)
                 {
@@ -348,8 +348,8 @@ namespace BudgetExecution
             {
                 if (dgv.CurrentRow != null)
                 {
-                    var row = dgv.CurrentRow;
-                    var data = new Dictionary<string, object>();
+                    DataGridViewRow row = dgv.CurrentRow;
+                    Dictionary<string, object> data = new Dictionary<string, object>();
                     data.Add("ID", int.Parse(row.Cells["ID"].Value.ToString()));
                     data.Add("BudgetLevel", row.Cells["BudgetLevel"].Value.ToString());
                     data.Add("Org", row.Cells["Org"].Value.ToString());

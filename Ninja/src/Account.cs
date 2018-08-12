@@ -145,7 +145,7 @@ namespace BudgetExecution
 
         public string GetGoal()
         {
-            var goal = Code.Substring(0, 1).ToCharArray();
+            char[] goal = Code.Substring(0, 1).ToCharArray();
             return goal.ToString();
         }
 
@@ -156,7 +156,7 @@ namespace BudgetExecution
 
         public string GetNpmCode()
         {
-            var npm = Code.Substring(2, 1).ToCharArray();
+            char[] npm = Code.Substring(2, 1).ToCharArray();
             return npm.ToString();
         }
 
@@ -189,7 +189,7 @@ namespace BudgetExecution
         {
             try
             {
-                var account = new Account(source, Provider.SQLite, param["Fund"].ToString(), param["Code"].ToString());
+                Account account = new Account(source, Provider.SQLite, param["Fund"].ToString(), param["Code"].ToString());
                 if (!param.ContainsKey("Fund") || param["Fund"] == null)
                 {
                     param["FundName"] = account.FundName;
@@ -237,7 +237,7 @@ namespace BudgetExecution
         {
             try
             {
-                var account = new Account(source, provider, param["Fund"].ToString(), param["Code"].ToString());
+                Account account = new Account(source, provider, param["Fund"].ToString(), param["Code"].ToString());
                 if (!param.ContainsKey("FundName") || param["FundName"] == null)
                 {
                     param["FundName"] = account.FundName;
@@ -285,7 +285,7 @@ namespace BudgetExecution
         {
             try
             {
-                var query = new DataBuilder(source, Provider.SQLite, param).DbTable.AsEnumerable().Select(p => p).First();
+                DataRow query = new DataBuilder(source, Provider.SQLite, param).DbTable.AsEnumerable().Select(p => p).First();
                 return new Account(query);
             }
             catch (Exception ex)
@@ -299,7 +299,7 @@ namespace BudgetExecution
         {
             try
             {
-                var query = new DataBuilder(source, provider, param).DbTable.AsEnumerable().Select(p => p).First();
+                DataRow query = new DataBuilder(source, provider, param).DbTable.AsEnumerable().Select(p => p).First();
                 return new Account(query);
             }
             catch (Exception ex)
@@ -313,7 +313,7 @@ namespace BudgetExecution
         {
             try
             {
-                var insert = new InsertData(Info.Insert);
+                InsertData insert = new InsertData(Info.Insert);
                 insert(Source.Accounts, Provider.SQLite, p);
             }
             catch (Exception ex)
@@ -326,7 +326,7 @@ namespace BudgetExecution
         {
             try
             {
-                var update = new InsertData(Info.Update);
+                InsertData update = new InsertData(Info.Update);
                 update(Source.Accounts, Provider.SQLite, p);
             }
             catch (Exception ex)
@@ -339,7 +339,7 @@ namespace BudgetExecution
         {
             try
             {
-                var delete = new InsertData(Info.Insert);
+                InsertData delete = new InsertData(Info.Insert);
                 delete(Source.Accounts, Provider.SQLite, p);
             }
             catch (Exception ex)
@@ -369,9 +369,9 @@ namespace BudgetExecution
         {
             try
             {
-                var param = GetAccountParameter(fund, code);
-                var data = GetAccountData(Source.Accounts, Provider.SQLite, param);
-                var dr = data.Rows[0];
+                Dictionary<string, object> param = GetAccountParameter(fund, code);
+                DataTable data = GetAccountData(Source.Accounts, Provider.SQLite, param);
+                DataRow dr = data.Rows[0];
                 GoalName = dr["GoalName"].ToString();
                 ObjectiveName = dr["ObjectiveName"].ToString();
                 ProgramProjectName = dr["ProgramProjectName"].ToString();
@@ -391,7 +391,7 @@ namespace BudgetExecution
         {
             try
             {
-                var data = new DataBuilder(source, provider);
+                DataBuilder data = new DataBuilder(source, provider);
                 return data.DbTable;
             }
             catch (Exception ex)
@@ -419,7 +419,7 @@ namespace BudgetExecution
         {
             try
             {
-                var data = new DataBuilder(source, provider, param);
+                DataBuilder data = new DataBuilder(source, provider, param);
                 return data.DbTable;
             }
             catch (Exception ex)

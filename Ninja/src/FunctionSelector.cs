@@ -56,10 +56,10 @@ namespace BudgetExecution
             FilePath = path;
             foreach (string i in images)
             {
-                var p = Path.GetFileNameWithoutExtension(i);
-                var b = new Bitmap(i);
+                string p = Path.GetFileNameWithoutExtension(i);
+                Bitmap b = new Bitmap(i);
                 b.Tag = p;
-                var c = new CarouselImage();
+                CarouselImage c = new CarouselImage();
                 c.ItemImage = b;
                 ilist.Images.Add(b);
                 icollect.Add(c);
@@ -74,30 +74,30 @@ namespace BudgetExecution
 
         private void ViewerCarousel_OnImageSelected(object sender, EventArgs e)
         {
-            var carousel = sender as Carousel;
-            var i = carousel.ActiveImage.Tag.ToString();
-            var s = (Function)Enum.Parse(typeof(Function), i);
+            Carousel carousel = sender as Carousel;
+            string i = carousel.ActiveImage.Tag.ToString();
+            Function s = (Function)Enum.Parse(typeof(Function), i);
             switch(s)
             {
                 case Function.SQLiteData:
-                    var sd = new DatabaseSelector(Info.DatabaseImages);
+                    DatabaseSelector sd = new DatabaseSelector(Info.DatabaseImages);
                     sd.Show();
                     Close();
                     break;
                 case Function.BudgetTools:
-                    var bt = new BudgetTools();
+                    BudgetTools bt = new BudgetTools();
                     bt.Show();
                     break;
                 case Function.DataTools:
-                    var dt = new BudgetTools();
+                    BudgetTools dt = new BudgetTools();
                     dt.Show();
                     break;
                 case Function.ExcelImporter:
-                    var ei = new ExcelImporter();
+                    ExcelImporter ei = new ExcelImporter();
                     ei.Show();
                     break;
                 case Function.PdfDataReader:
-                    var pdfdr = new PdfDataReader();
+                    PdfDataReader pdfdr = new PdfDataReader();
                     pdfdr.Show();
                     break;
             }

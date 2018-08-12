@@ -50,19 +50,19 @@ namespace BudgetExecution
 
         private void CalculatorButton_OnClick(object sender, EventArgs e)
         {
-            var cf = new CalculatorForm();
+            CalculatorForm cf = new CalculatorForm();
             cf.ShowDialog();
         }
 
         private void ExcelButton_OnClick(object sender, EventArgs e)
         {
-            var ef = new ExcelImporter();
+            ExcelImporter ef = new ExcelImporter();
             ef.Show();
         }
 
         private void ReprogrammingButton_OnClick(object sender, EventArgs e)
         {
-            var rf = new Reprogramming();
+            Reprogramming rf = new Reprogramming();
             rf.Show();
         }
     }

@@ -154,7 +154,7 @@ namespace BudgetExecution
         {
             try
             {
-                var qtable = table.AsEnumerable().Where(p => p.Field<string>(column).Equals(filter))
+                DataTable qtable = table.AsEnumerable().Where(p => p.Field<string>(column).Equals(filter))
                     .Select(p => p).CopyToDataTable();
                 return new Tuple<DataTable, PRC[], decimal, int>(qtable, GetPrcArray(qtable), GetTotal(qtable), GetCount(qtable));
             }
@@ -171,7 +171,7 @@ namespace BudgetExecution
             {
                 try
                 {
-                    var qtable = table.AsEnumerable().Where(p => p.Field<string>(column).Equals(filter)).Select(p => p).CopyToDataTable();
+                    DataTable qtable = table.AsEnumerable().Where(p => p.Field<string>(column).Equals(filter)).Select(p => p).CopyToDataTable();
                     return new Tuple<DataTable, PRC[], decimal, int>(qtable, GetPrcArray(qtable), GetTotal(qtable), GetCount(qtable));
                 }
                 catch (Exception ex)
@@ -191,7 +191,7 @@ namespace BudgetExecution
 
         public decimal[] GetMetrics(DataTable table)
         {
-            var count = GetCount(table);
+            int count = GetCount(table);
             return new decimal[] { GetTotal(table), (decimal)count, GetAverage(table) };
         }
 
@@ -223,7 +223,7 @@ namespace BudgetExecution
         {
             try
             {
-                var list = GetCodes(table, column);
+                string[] list = GetCodes(table, column);
                 Dictionary<string, decimal[]> info = new Dictionary<string, decimal[]>();
                 foreach (string ftr in list)
                 {
@@ -259,7 +259,7 @@ namespace BudgetExecution
 
         public Dictionary<string, string[]> GetProgramElements(DataTable table)
         {
-            var data = new Dictionary<string, string[]>();
+            Dictionary<string, string[]> data = new Dictionary<string, string[]>();
             foreach (DataColumn dc in table.Columns)
             {
                 if (dc.ColumnName.Equals("Id") || dc.ColumnName.Equals("Amount"))
@@ -300,11 +300,11 @@ namespace BudgetExecution
         {
             try
             {
-                var list = GetCodes(table, column);
+                string[] list = GetCodes(table, column);
                 Dictionary<string, decimal> info = new Dictionary<string, decimal>();
                 foreach (string ftr in list)
                 {
-                    var query = PrcData.Item1.AsEnumerable().Where(p => p.Field<string>(column).Equals(filter))
+                    decimal query = PrcData.Item1.AsEnumerable().Where(p => p.Field<string>(column).Equals(filter))
                         .Sum(p => p.Field<decimal>("Amount"));
                     if (query > 0)
                     {
@@ -349,8 +349,8 @@ namespace BudgetExecution
             {
                 try
                 {
-                    var fteTable = table.AsEnumerable().Where(p => p.Field<string>("BOC").Equals("17")).Select(p => p).CopyToDataTable();
-                    var fteArray = new FTE[fteTable.Rows.Count];
+                    DataTable fteTable = table.AsEnumerable().Where(p => p.Field<string>("BOC").Equals("17")).Select(p => p).CopyToDataTable();
+                    FTE[] fteArray = new FTE[fteTable.Rows.Count];
                     for (int i = 0; i < fteTable.Rows.Count; i++)
                     {
                         fteArray[i] = new FTE(fteTable.Rows[i]);

@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RecordManager));
             Syncfusion.Windows.Forms.Tools.ToolTipInfo toolTipInfo4 = new Syncfusion.Windows.Forms.Tools.ToolTipInfo();
             Syncfusion.Windows.Forms.Tools.ToolTipInfo toolTipInfo1 = new Syncfusion.Windows.Forms.Tools.ToolTipInfo();
             Syncfusion.Windows.Forms.Tools.ToolTipInfo toolTipInfo3 = new Syncfusion.Windows.Forms.Tools.ToolTipInfo();
             Syncfusion.Windows.Forms.Tools.ToolTipInfo toolTipInfo2 = new Syncfusion.Windows.Forms.Tools.ToolTipInfo();
             Syncfusion.Windows.Forms.CaptionImage captionImage1 = new Syncfusion.Windows.Forms.CaptionImage();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RecordManager));
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.RecordNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
@@ -303,6 +303,15 @@
             this.toolStripLabel1.Name = "toolStripLabel1";
             this.toolStripLabel1.Size = new System.Drawing.Size(46, 24);
             this.toolStripLabel1.Text = "of {0}";
+            toolTipInfo4.BackColor = System.Drawing.Color.Black;
+            toolTipInfo4.Body.ImageScalingSize = new System.Drawing.Size(20, 20);
+            toolTipInfo4.Body.RenderHtml = true;
+            toolTipInfo4.Body.Size = new System.Drawing.Size(200, 40);
+            toolTipInfo4.Body.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            toolTipInfo4.BorderColor = System.Drawing.SystemColors.MenuHighlight;
+            toolTipInfo4.Footer.Size = new System.Drawing.Size(20, 20);
+            toolTipInfo4.Header.Size = new System.Drawing.Size(20, 20);
+            this.superToolTip1.SetToolTip(this.toolStripLabel1, toolTipInfo4);
             this.toolStripLabel1.ToolTipText = "Total number of items";
             // 
             // toolStripSeparator3
@@ -318,11 +327,13 @@
             this.toolStripButton10.RightToLeftAutoMirrorImage = true;
             this.toolStripButton10.Size = new System.Drawing.Size(24, 24);
             this.toolStripButton10.Text = "Previous";
+            this.superToolTip1.SetToolTip(this.toolStripButton10, toolTipInfo4);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(6, 27);
+            this.superToolTip1.SetToolTip(this.toolStripSeparator1, toolTipInfo4);
             // 
             // toolStripTextBox1
             // 
@@ -335,12 +346,14 @@
             this.toolStripTextBox1.Size = new System.Drawing.Size(42, 24);
             this.toolStripTextBox1.Text = "0";
             this.toolStripTextBox1.TextBoxTextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.superToolTip1.SetToolTip(this.toolStripTextBox1, toolTipInfo4);
             this.toolStripTextBox1.ToolTipText = "Current position";
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
             this.toolStripSeparator2.Size = new System.Drawing.Size(6, 27);
+            this.superToolTip1.SetToolTip(this.toolStripSeparator2, toolTipInfo4);
             // 
             // toolStripButton11
             // 
@@ -350,11 +363,13 @@
             this.toolStripButton11.RightToLeftAutoMirrorImage = true;
             this.toolStripButton11.Size = new System.Drawing.Size(24, 24);
             this.toolStripButton11.Text = "Next";
+            this.superToolTip1.SetToolTip(this.toolStripButton11, toolTipInfo4);
             // 
             // toolStripSeparator4
             // 
             this.toolStripSeparator4.Name = "toolStripSeparator4";
             this.toolStripSeparator4.Size = new System.Drawing.Size(6, 27);
+            this.superToolTip1.SetToolTip(this.toolStripSeparator4, toolTipInfo4);
             // 
             // CopyButton
             // 
@@ -364,13 +379,14 @@
             this.CopyButton.Name = "CopyButton";
             this.CopyButton.Size = new System.Drawing.Size(24, 24);
             this.CopyButton.Text = "toolStripButton7";
-            this.superToolTip1.SetToolTip(this.CopyButton, toolTipInfo1);
+            this.superToolTip1.SetToolTip(this.CopyButton, toolTipInfo4);
             this.CopyButton.ToolTipText = "Copy DbData Into New Account";
             // 
             // toolStripSeparator15
             // 
             this.toolStripSeparator15.Name = "toolStripSeparator15";
             this.toolStripSeparator15.Size = new System.Drawing.Size(6, 27);
+            this.superToolTip1.SetToolTip(this.toolStripSeparator15, toolTipInfo4);
             // 
             // toolStripButton13
             // 
@@ -382,12 +398,13 @@
             this.toolStripButton13.Name = "toolStripButton13";
             this.toolStripButton13.Size = new System.Drawing.Size(24, 24);
             this.toolStripButton13.Text = "toolStripButton13";
-            this.superToolTip1.SetToolTip(this.toolStripButton13, toolTipInfo1);
+            this.superToolTip1.SetToolTip(this.toolStripButton13, toolTipInfo4);
             // 
             // toolStripSeparator18
             // 
             this.toolStripSeparator18.Name = "toolStripSeparator18";
             this.toolStripSeparator18.Size = new System.Drawing.Size(6, 27);
+            this.superToolTip1.SetToolTip(this.toolStripSeparator18, toolTipInfo4);
             // 
             // toolStripButton12
             // 
@@ -400,12 +417,13 @@
             this.toolStripButton12.Name = "toolStripButton12";
             this.toolStripButton12.Size = new System.Drawing.Size(24, 24);
             this.toolStripButton12.Text = "toolStripButton12";
-            this.superToolTip1.SetToolTip(this.toolStripButton12, toolTipInfo1);
+            this.superToolTip1.SetToolTip(this.toolStripButton12, toolTipInfo4);
             // 
             // toolStripSeparator16
             // 
             this.toolStripSeparator16.Name = "toolStripSeparator16";
             this.toolStripSeparator16.Size = new System.Drawing.Size(6, 27);
+            this.superToolTip1.SetToolTip(this.toolStripSeparator16, toolTipInfo4);
             // 
             // ResetButton
             // 
@@ -415,13 +433,14 @@
             this.ResetButton.Name = "ResetButton";
             this.ResetButton.Size = new System.Drawing.Size(24, 24);
             this.ResetButton.Text = "toolStripButton7";
-            this.superToolTip1.SetToolTip(this.ResetButton, toolTipInfo1);
+            this.superToolTip1.SetToolTip(this.ResetButton, toolTipInfo4);
             this.ResetButton.ToolTipText = "Reset DataTable and Filters";
             // 
             // toolStripSeparator5
             // 
             this.toolStripSeparator5.Name = "toolStripSeparator5";
             this.toolStripSeparator5.Size = new System.Drawing.Size(6, 27);
+            this.superToolTip1.SetToolTip(this.toolStripSeparator5, toolTipInfo4);
             // 
             // AddButton
             // 
@@ -431,12 +450,13 @@
             this.AddButton.Name = "AddButton";
             this.AddButton.Size = new System.Drawing.Size(24, 24);
             this.AddButton.Text = "toolStripButton7";
-            this.superToolTip1.SetToolTip(this.AddButton, toolTipInfo1);
+            this.superToolTip1.SetToolTip(this.AddButton, toolTipInfo4);
             // 
             // toolStripSeparator19
             // 
             this.toolStripSeparator19.Name = "toolStripSeparator19";
             this.toolStripSeparator19.Size = new System.Drawing.Size(6, 27);
+            this.superToolTip1.SetToolTip(this.toolStripSeparator19, toolTipInfo4);
             // 
             // toolStripButton7
             // 
@@ -446,12 +466,13 @@
             this.toolStripButton7.Name = "toolStripButton7";
             this.toolStripButton7.Size = new System.Drawing.Size(24, 24);
             this.toolStripButton7.Text = "toolStripButton7";
-            this.superToolTip1.SetToolTip(this.toolStripButton7, toolTipInfo1);
+            this.superToolTip1.SetToolTip(this.toolStripButton7, toolTipInfo4);
             // 
             // GridRefreshButton
             // 
             this.GridRefreshButton.Name = "GridRefreshButton";
             this.GridRefreshButton.Size = new System.Drawing.Size(6, 27);
+            this.superToolTip1.SetToolTip(this.GridRefreshButton, toolTipInfo4);
             // 
             // toolStripButton9
             // 
@@ -461,12 +482,13 @@
             this.toolStripButton9.Name = "toolStripButton9";
             this.toolStripButton9.Size = new System.Drawing.Size(24, 24);
             this.toolStripButton9.Text = "toolStripButton9";
-            this.superToolTip1.SetToolTip(this.toolStripButton9, toolTipInfo1);
+            this.superToolTip1.SetToolTip(this.toolStripButton9, toolTipInfo4);
             // 
             // toolStripSeparator6
             // 
             this.toolStripSeparator6.Name = "toolStripSeparator6";
             this.toolStripSeparator6.Size = new System.Drawing.Size(6, 27);
+            this.superToolTip1.SetToolTip(this.toolStripSeparator6, toolTipInfo4);
             // 
             // toolStripButton14
             // 
@@ -476,12 +498,13 @@
             this.toolStripButton14.Name = "toolStripButton14";
             this.toolStripButton14.Size = new System.Drawing.Size(24, 24);
             this.toolStripButton14.Text = "toolStripButton14";
-            this.superToolTip1.SetToolTip(this.toolStripButton14, toolTipInfo1);
+            this.superToolTip1.SetToolTip(this.toolStripButton14, toolTipInfo4);
             // 
             // toolStripSeparator17
             // 
             this.toolStripSeparator17.Name = "toolStripSeparator17";
             this.toolStripSeparator17.Size = new System.Drawing.Size(6, 27);
+            this.superToolTip1.SetToolTip(this.toolStripSeparator17, toolTipInfo4);
             // 
             // toolStripButton15
             // 
@@ -491,12 +514,13 @@
             this.toolStripButton15.Name = "toolStripButton15";
             this.toolStripButton15.Size = new System.Drawing.Size(24, 24);
             this.toolStripButton15.Text = "toolStripButton15";
-            this.superToolTip1.SetToolTip(this.toolStripButton15, toolTipInfo1);
+            this.superToolTip1.SetToolTip(this.toolStripButton15, toolTipInfo4);
             // 
             // toolStripSeparator20
             // 
             this.toolStripSeparator20.Name = "toolStripSeparator20";
             this.toolStripSeparator20.Size = new System.Drawing.Size(6, 27);
+            this.superToolTip1.SetToolTip(this.toolStripSeparator20, toolTipInfo4);
             // 
             // toolStripButton16
             // 
@@ -506,15 +530,6 @@
             this.toolStripButton16.Name = "toolStripButton16";
             this.toolStripButton16.Size = new System.Drawing.Size(24, 24);
             this.toolStripButton16.Text = "toolStripButton16";
-            toolTipInfo4.BackColor = System.Drawing.Color.Black;
-            toolTipInfo4.Body.RenderHtml = true;
-            toolTipInfo4.Body.Size = new System.Drawing.Size(200, 40);
-            toolTipInfo4.BorderColor = System.Drawing.SystemColors.MenuHighlight;
-            toolTipInfo4.Footer.RenderHtml = true;
-            toolTipInfo4.Footer.Size = new System.Drawing.Size(200, 40);
-            toolTipInfo4.ForeColor = System.Drawing.Color.LightSteelBlue;
-            toolTipInfo4.Header.RenderHtml = true;
-            toolTipInfo4.Header.Size = new System.Drawing.Size(200, 40);
             this.superToolTip1.SetToolTip(this.toolStripButton16, toolTipInfo4);
             // 
             // label2
@@ -3135,6 +3150,14 @@
             this.toolStripButton1.RightToLeftAutoMirrorImage = true;
             this.toolStripButton1.Size = new System.Drawing.Size(24, 24);
             this.toolStripButton1.Text = "Previous";
+            toolTipInfo2.BackColor = System.Drawing.Color.Black;
+            toolTipInfo2.Body.RenderHtml = true;
+            toolTipInfo2.Body.Size = new System.Drawing.Size(200, 40);
+            toolTipInfo2.Body.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            toolTipInfo2.BorderColor = System.Drawing.SystemColors.MenuHighlight;
+            toolTipInfo2.Footer.Size = new System.Drawing.Size(20, 20);
+            toolTipInfo2.Header.Size = new System.Drawing.Size(20, 20);
+            this.superToolTip1.SetToolTip(this.toolStripButton1, toolTipInfo2);
             // 
             // toolStripSeparator10
             // 
@@ -3167,11 +3190,13 @@
             this.toolStripButton2.RightToLeftAutoMirrorImage = true;
             this.toolStripButton2.Size = new System.Drawing.Size(24, 24);
             this.toolStripButton2.Text = "Next";
+            this.superToolTip1.SetToolTip(this.toolStripButton2, toolTipInfo2);
             // 
             // toolStripSeparator13
             // 
             this.toolStripSeparator13.Name = "toolStripSeparator13";
             this.toolStripSeparator13.Size = new System.Drawing.Size(6, 27);
+            this.superToolTip1.SetToolTip(this.toolStripSeparator13, toolTipInfo2);
             // 
             // toolStripButton3
             // 
@@ -3181,19 +3206,13 @@
             this.toolStripButton3.Name = "toolStripButton3";
             this.toolStripButton3.Size = new System.Drawing.Size(24, 24);
             this.toolStripButton3.Text = "toolStripButton7";
-            toolTipInfo2.BackColor = System.Drawing.Color.Black;
-            toolTipInfo2.Body.RenderHtml = true;
-            toolTipInfo2.Body.Size = new System.Drawing.Size(200, 40);
-            toolTipInfo2.BorderColor = System.Drawing.SystemColors.MenuHighlight;
-            toolTipInfo2.Footer.Size = new System.Drawing.Size(200, 40);
-            toolTipInfo2.ForeColor = System.Drawing.Color.LightSteelBlue;
-            toolTipInfo2.Header.Size = new System.Drawing.Size(200, 40);
             this.superToolTip1.SetToolTip(this.toolStripButton3, toolTipInfo2);
             // 
             // toolStripSeparator8
             // 
             this.toolStripSeparator8.Name = "toolStripSeparator8";
             this.toolStripSeparator8.Size = new System.Drawing.Size(6, 27);
+            this.superToolTip1.SetToolTip(this.toolStripSeparator8, toolTipInfo2);
             // 
             // toolStripButton4
             // 
@@ -3211,6 +3230,7 @@
             // 
             this.toolStripSeparator9.Name = "toolStripSeparator9";
             this.toolStripSeparator9.Size = new System.Drawing.Size(6, 27);
+            this.superToolTip1.SetToolTip(this.toolStripSeparator9, toolTipInfo2);
             // 
             // toolStripButton5
             // 
@@ -3229,6 +3249,7 @@
             // 
             this.toolStripSeparator12.Name = "toolStripSeparator12";
             this.toolStripSeparator12.Size = new System.Drawing.Size(6, 27);
+            this.superToolTip1.SetToolTip(this.toolStripSeparator12, toolTipInfo2);
             // 
             // toolStripButton6
             // 
@@ -3244,6 +3265,7 @@
             // 
             this.toolStripSeparator14.Name = "toolStripSeparator14";
             this.toolStripSeparator14.Size = new System.Drawing.Size(6, 27);
+            this.superToolTip1.SetToolTip(this.toolStripSeparator14, toolTipInfo2);
             // 
             // toolStripButton8
             // 
@@ -3259,6 +3281,7 @@
             // 
             this.toolStripSeparator21.Name = "toolStripSeparator21";
             this.toolStripSeparator21.Size = new System.Drawing.Size(6, 27);
+            this.superToolTip1.SetToolTip(this.toolStripSeparator21, toolTipInfo2);
             // 
             // toolStripButton17
             // 
@@ -3274,6 +3297,7 @@
             // 
             this.toolStripSeparator22.Name = "toolStripSeparator22";
             this.toolStripSeparator22.Size = new System.Drawing.Size(6, 27);
+            this.superToolTip1.SetToolTip(this.toolStripSeparator22, toolTipInfo2);
             // 
             // toolStripButton18
             // 
@@ -3289,6 +3313,7 @@
             // 
             this.toolStripSeparator23.Name = "toolStripSeparator23";
             this.toolStripSeparator23.Size = new System.Drawing.Size(6, 27);
+            this.superToolTip1.SetToolTip(this.toolStripSeparator23, toolTipInfo2);
             // 
             // toolStripButton19
             // 
@@ -3304,6 +3329,7 @@
             // 
             this.toolStripSeparator24.Name = "toolStripSeparator24";
             this.toolStripSeparator24.Size = new System.Drawing.Size(6, 27);
+            this.superToolTip1.SetToolTip(this.toolStripSeparator24, toolTipInfo2);
             // 
             // toolStripButton20
             // 
@@ -3319,6 +3345,7 @@
             // 
             this.toolStripSeparator25.Name = "toolStripSeparator25";
             this.toolStripSeparator25.Size = new System.Drawing.Size(6, 27);
+            this.superToolTip1.SetToolTip(this.toolStripSeparator25, toolTipInfo2);
             // 
             // toolStripButton21
             // 

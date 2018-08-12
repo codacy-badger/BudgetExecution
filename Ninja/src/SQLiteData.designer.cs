@@ -36,10 +36,6 @@ namespace BudgetExecution
             Syncfusion.Windows.Forms.Grid.GridBaseStyle gridBaseStyle4 = new Syncfusion.Windows.Forms.Grid.GridBaseStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SQLiteData));
             Syncfusion.Windows.Forms.Tools.ToolTipInfo toolTipInfo1 = new Syncfusion.Windows.Forms.Tools.ToolTipInfo();
-            Syncfusion.Windows.Forms.Tools.ToolTipInfo toolTipInfo2 = new Syncfusion.Windows.Forms.Tools.ToolTipInfo();
-            Syncfusion.Windows.Forms.Tools.ToolTipInfo toolTipInfo3 = new Syncfusion.Windows.Forms.Tools.ToolTipInfo();
-            Syncfusion.Windows.Forms.Tools.ToolTipInfo toolTipInfo4 = new Syncfusion.Windows.Forms.Tools.ToolTipInfo();
-            Syncfusion.Windows.Forms.Tools.ToolTipInfo toolTipInfo5 = new Syncfusion.Windows.Forms.Tools.ToolTipInfo();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -403,14 +399,13 @@ namespace BudgetExecution
             this.toolStripButton10.Size = new System.Drawing.Size(24, 24);
             this.toolStripButton10.Text = "Previous";
             toolTipInfo1.BackColor = System.Drawing.Color.Black;
+            toolTipInfo1.Body.ImageScalingSize = new System.Drawing.Size(20, 20);
             toolTipInfo1.Body.RenderHtml = true;
             toolTipInfo1.Body.Size = new System.Drawing.Size(200, 40);
+            toolTipInfo1.Body.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             toolTipInfo1.BorderColor = System.Drawing.SystemColors.MenuHighlight;
-            toolTipInfo1.Footer.RenderHtml = true;
-            toolTipInfo1.Footer.Size = new System.Drawing.Size(200, 10);
-            toolTipInfo1.ForeColor = System.Drawing.Color.LightSteelBlue;
-            toolTipInfo1.Header.RenderHtml = true;
-            toolTipInfo1.Header.Size = new System.Drawing.Size(200, 10);
+            toolTipInfo1.Footer.Size = new System.Drawing.Size(20, 20);
+            toolTipInfo1.Header.Size = new System.Drawing.Size(20, 20);
             this.superToolTip1.SetToolTip(this.toolStripButton10, toolTipInfo1);
             // 
             // toolStripSeparator10
@@ -444,19 +439,13 @@ namespace BudgetExecution
             this.toolStripButton11.RightToLeftAutoMirrorImage = true;
             this.toolStripButton11.Size = new System.Drawing.Size(24, 24);
             this.toolStripButton11.Text = "Next";
-            toolTipInfo2.BackColor = System.Drawing.Color.Black;
-            toolTipInfo2.Body.RenderHtml = true;
-            toolTipInfo2.Body.Size = new System.Drawing.Size(200, 40);
-            toolTipInfo2.BorderColor = System.Drawing.SystemColors.MenuHighlight;
-            toolTipInfo2.Footer.Size = new System.Drawing.Size(20, 20);
-            toolTipInfo2.ForeColor = System.Drawing.Color.LightSteelBlue;
-            toolTipInfo2.Header.Size = new System.Drawing.Size(20, 20);
-            this.superToolTip1.SetToolTip(this.toolStripButton11, toolTipInfo2);
+            this.superToolTip1.SetToolTip(this.toolStripButton11, toolTipInfo1);
             // 
             // toolStripSeparator13
             // 
             this.toolStripSeparator13.Name = "toolStripSeparator13";
             this.toolStripSeparator13.Size = new System.Drawing.Size(6, 27);
+            this.superToolTip1.SetToolTip(this.toolStripSeparator13, toolTipInfo1);
             // 
             // CopyButton
             // 
@@ -466,20 +455,14 @@ namespace BudgetExecution
             this.CopyButton.Name = "CopyButton";
             this.CopyButton.Size = new System.Drawing.Size(24, 24);
             this.CopyButton.Text = "toolStripButton7";
-            toolTipInfo3.BackColor = System.Drawing.Color.Black;
-            toolTipInfo3.Body.RenderHtml = true;
-            toolTipInfo3.Body.Size = new System.Drawing.Size(200, 40);
-            toolTipInfo3.BorderColor = System.Drawing.SystemColors.MenuHighlight;
-            toolTipInfo3.Footer.Size = new System.Drawing.Size(200, 40);
-            toolTipInfo3.ForeColor = System.Drawing.Color.LightSteelBlue;
-            toolTipInfo3.Header.Size = new System.Drawing.Size(200, 40);
-            this.superToolTip1.SetToolTip(this.CopyButton, toolTipInfo3);
+            this.superToolTip1.SetToolTip(this.CopyButton, toolTipInfo1);
             this.CopyButton.ToolTipText = "Copy DbData Into New Account";
             // 
             // toolStripSeparator15
             // 
             this.toolStripSeparator15.Name = "toolStripSeparator15";
             this.toolStripSeparator15.Size = new System.Drawing.Size(6, 27);
+            this.superToolTip1.SetToolTip(this.toolStripSeparator15, toolTipInfo1);
             // 
             // toolStripButton13
             // 
@@ -491,12 +474,13 @@ namespace BudgetExecution
             this.toolStripButton13.Name = "toolStripButton13";
             this.toolStripButton13.Size = new System.Drawing.Size(24, 24);
             this.toolStripButton13.Text = "toolStripButton13";
-            this.superToolTip1.SetToolTip(this.toolStripButton13, toolTipInfo3);
+            this.superToolTip1.SetToolTip(this.toolStripButton13, toolTipInfo1);
             // 
             // toolStripSeparator18
             // 
             this.toolStripSeparator18.Name = "toolStripSeparator18";
             this.toolStripSeparator18.Size = new System.Drawing.Size(6, 27);
+            this.superToolTip1.SetToolTip(this.toolStripSeparator18, toolTipInfo1);
             // 
             // toolStripButton12
             // 
@@ -509,12 +493,13 @@ namespace BudgetExecution
             this.toolStripButton12.Name = "toolStripButton12";
             this.toolStripButton12.Size = new System.Drawing.Size(24, 24);
             this.toolStripButton12.Text = "toolStripButton12";
-            this.superToolTip1.SetToolTip(this.toolStripButton12, toolTipInfo3);
+            this.superToolTip1.SetToolTip(this.toolStripButton12, toolTipInfo1);
             // 
             // toolStripSeparator16
             // 
             this.toolStripSeparator16.Name = "toolStripSeparator16";
             this.toolStripSeparator16.Size = new System.Drawing.Size(6, 27);
+            this.superToolTip1.SetToolTip(this.toolStripSeparator16, toolTipInfo1);
             // 
             // ResetButton
             // 
@@ -524,13 +509,14 @@ namespace BudgetExecution
             this.ResetButton.Name = "ResetButton";
             this.ResetButton.Size = new System.Drawing.Size(24, 24);
             this.ResetButton.Text = "toolStripButton7";
-            this.superToolTip1.SetToolTip(this.ResetButton, toolTipInfo3);
+            this.superToolTip1.SetToolTip(this.ResetButton, toolTipInfo1);
             this.ResetButton.ToolTipText = "Reset DataTable and Filters";
             // 
             // toolStripSeparator14
             // 
             this.toolStripSeparator14.Name = "toolStripSeparator14";
             this.toolStripSeparator14.Size = new System.Drawing.Size(6, 27);
+            this.superToolTip1.SetToolTip(this.toolStripSeparator14, toolTipInfo1);
             // 
             // AddButton
             // 
@@ -540,12 +526,13 @@ namespace BudgetExecution
             this.AddButton.Name = "AddButton";
             this.AddButton.Size = new System.Drawing.Size(24, 24);
             this.AddButton.Text = "toolStripButton7";
-            this.superToolTip1.SetToolTip(this.AddButton, toolTipInfo3);
+            this.superToolTip1.SetToolTip(this.AddButton, toolTipInfo1);
             // 
             // toolStripSeparator19
             // 
             this.toolStripSeparator19.Name = "toolStripSeparator19";
             this.toolStripSeparator19.Size = new System.Drawing.Size(6, 27);
+            this.superToolTip1.SetToolTip(this.toolStripSeparator19, toolTipInfo1);
             // 
             // toolStripButton7
             // 
@@ -555,18 +542,13 @@ namespace BudgetExecution
             this.toolStripButton7.Name = "toolStripButton7";
             this.toolStripButton7.Size = new System.Drawing.Size(24, 24);
             this.toolStripButton7.Text = "toolStripButton7";
-            toolTipInfo4.BackColor = System.Drawing.Color.Black;
-            toolTipInfo4.Body.Size = new System.Drawing.Size(200, 40);
-            toolTipInfo4.BorderColor = System.Drawing.SystemColors.MenuHighlight;
-            toolTipInfo4.Footer.Size = new System.Drawing.Size(200, 40);
-            toolTipInfo4.ForeColor = System.Drawing.Color.LightSteelBlue;
-            toolTipInfo4.Header.Size = new System.Drawing.Size(200, 40);
-            this.superToolTip1.SetToolTip(this.toolStripButton7, toolTipInfo4);
+            this.superToolTip1.SetToolTip(this.toolStripButton7, toolTipInfo1);
             // 
             // GridRefreshButton
             // 
             this.GridRefreshButton.Name = "GridRefreshButton";
             this.GridRefreshButton.Size = new System.Drawing.Size(6, 27);
+            this.superToolTip1.SetToolTip(this.GridRefreshButton, toolTipInfo1);
             // 
             // toolStripButton9
             // 
@@ -576,12 +558,13 @@ namespace BudgetExecution
             this.toolStripButton9.Name = "toolStripButton9";
             this.toolStripButton9.Size = new System.Drawing.Size(24, 24);
             this.toolStripButton9.Text = "toolStripButton9";
-            this.superToolTip1.SetToolTip(this.toolStripButton9, toolTipInfo3);
+            this.superToolTip1.SetToolTip(this.toolStripButton9, toolTipInfo1);
             // 
             // toolStripSeparator12
             // 
             this.toolStripSeparator12.Name = "toolStripSeparator12";
             this.toolStripSeparator12.Size = new System.Drawing.Size(6, 27);
+            this.superToolTip1.SetToolTip(this.toolStripSeparator12, toolTipInfo1);
             // 
             // toolStripButton14
             // 
@@ -591,12 +574,13 @@ namespace BudgetExecution
             this.toolStripButton14.Name = "toolStripButton14";
             this.toolStripButton14.Size = new System.Drawing.Size(24, 24);
             this.toolStripButton14.Text = "toolStripButton14";
-            this.superToolTip1.SetToolTip(this.toolStripButton14, toolTipInfo3);
+            this.superToolTip1.SetToolTip(this.toolStripButton14, toolTipInfo1);
             // 
             // toolStripSeparator17
             // 
             this.toolStripSeparator17.Name = "toolStripSeparator17";
             this.toolStripSeparator17.Size = new System.Drawing.Size(6, 27);
+            this.superToolTip1.SetToolTip(this.toolStripSeparator17, toolTipInfo1);
             // 
             // toolStripButton15
             // 
@@ -606,12 +590,13 @@ namespace BudgetExecution
             this.toolStripButton15.Name = "toolStripButton15";
             this.toolStripButton15.Size = new System.Drawing.Size(24, 24);
             this.toolStripButton15.Text = "toolStripButton15";
-            this.superToolTip1.SetToolTip(this.toolStripButton15, toolTipInfo3);
+            this.superToolTip1.SetToolTip(this.toolStripButton15, toolTipInfo1);
             // 
             // toolStripSeparator20
             // 
             this.toolStripSeparator20.Name = "toolStripSeparator20";
             this.toolStripSeparator20.Size = new System.Drawing.Size(6, 27);
+            this.superToolTip1.SetToolTip(this.toolStripSeparator20, toolTipInfo1);
             // 
             // toolStripButton16
             // 
@@ -620,14 +605,7 @@ namespace BudgetExecution
             this.toolStripButton16.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton16.Name = "toolStripButton16";
             this.toolStripButton16.Size = new System.Drawing.Size(24, 24);
-            toolTipInfo5.BackColor = System.Drawing.Color.Black;
-            toolTipInfo5.Body.RenderHtml = true;
-            toolTipInfo5.Body.Size = new System.Drawing.Size(200, 40);
-            toolTipInfo5.BorderColor = System.Drawing.SystemColors.MenuHighlight;
-            toolTipInfo5.Footer.Size = new System.Drawing.Size(200, 40);
-            toolTipInfo5.ForeColor = System.Drawing.Color.LightSteelBlue;
-            toolTipInfo5.Header.Size = new System.Drawing.Size(200, 40);
-            this.superToolTip1.SetToolTip(this.toolStripButton16, toolTipInfo5);
+            this.superToolTip1.SetToolTip(this.toolStripButton16, toolTipInfo1);
             // 
             // tableLayoutPanel1
             // 
@@ -639,7 +617,7 @@ namespace BudgetExecution
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 132F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 143F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 120F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 142F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 144F));
             this.tableLayoutPanel1.Controls.Add(this.label5, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.label10, 5, 0);
             this.tableLayoutPanel1.Controls.Add(this.label6, 1, 0);
@@ -671,7 +649,7 @@ namespace BudgetExecution
             this.label10.AutoSize = true;
             this.label10.Dock = System.Windows.Forms.DockStyle.Left;
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(656, 0);
+            this.label10.Location = new System.Drawing.Point(654, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(60, 34);
             this.label10.TabIndex = 158;
@@ -693,7 +671,7 @@ namespace BudgetExecution
             this.label9.AutoSize = true;
             this.label9.Dock = System.Windows.Forms.DockStyle.Right;
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(599, 0);
+            this.label9.Location = new System.Drawing.Point(597, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(51, 34);
             this.label9.TabIndex = 157;
@@ -704,7 +682,7 @@ namespace BudgetExecution
             this.label7.AutoSize = true;
             this.label7.Dock = System.Windows.Forms.DockStyle.Right;
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(284, 0);
+            this.label7.Location = new System.Drawing.Point(282, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(51, 34);
             this.label7.TabIndex = 155;
@@ -715,7 +693,7 @@ namespace BudgetExecution
             this.label8.AutoSize = true;
             this.label8.Dock = System.Windows.Forms.DockStyle.Left;
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(341, 0);
+            this.label8.Location = new System.Drawing.Point(339, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(51, 34);
             this.label8.TabIndex = 156;
@@ -726,7 +704,7 @@ namespace BudgetExecution
             this.label11.AutoSize = true;
             this.label11.Dock = System.Windows.Forms.DockStyle.Right;
             this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(836, 0);
+            this.label11.Location = new System.Drawing.Point(834, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(77, 34);
             this.label11.TabIndex = 159;
@@ -737,7 +715,7 @@ namespace BudgetExecution
             this.label12.AutoSize = true;
             this.label12.Dock = System.Windows.Forms.DockStyle.Left;
             this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(919, 0);
+            this.label12.Location = new System.Drawing.Point(917, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(60, 34);
             this.label12.TabIndex = 160;

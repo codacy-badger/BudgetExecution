@@ -97,13 +97,13 @@ namespace BudgetExecution
 
         private void DataButton_OnClick(object sender, EventArgs e)
         {
-            var dm = new FunctionSelector();
+            FunctionSelector dm = new FunctionSelector();
             dm.Show();
         }
 
         private void DivisionSummaryButton_OnClick(object sender, EventArgs e)
         {
-            var summary = new SummaryForm(Source.DivisionAccounts);
+            SummaryForm summary = new SummaryForm(Source.DivisionAccounts);
             summary.Show();
         }
 
@@ -111,7 +111,7 @@ namespace BudgetExecution
         {
             try
             {
-                var t = new string[info.Length];
+                string[] t = new string[info.Length];
                 t[0] = "R6 Funds by Appropriation";
                 t[1] = "R6 Funds by Object Class";
                 t[2] = "Division Funds by Appropriation";
@@ -158,37 +158,37 @@ namespace BudgetExecution
 
         private void RegionSummaryButton_OnClick(object sender, EventArgs e)
         {
-            var datamgr = new SummaryForm(Source.RegionalAccounts);
+            SummaryForm datamgr = new SummaryForm(Source.RegionalAccounts);
             datamgr.Show();
         }
 
         private void TransferButton_OnClick(object sender, EventArgs e)
         {
-            var dm = new SummaryForm("06J");
+            SummaryForm dm = new SummaryForm("06J");
             dm.Show();
         }
 
         private void DivisionDataTile_OnClick(object sender, EventArgs e)
         {
-            var s = new Selector(Info.Div);
+            Selector s = new Selector(Info.Div);
             s.Show();
         }
 
         private void SummaryTile_OnClick(object sender, EventArgs e)
         {
-            var summary = new Selector(Info.SummaryImages);
+            Selector summary = new Selector(Info.SummaryImages);
             summary.Show();
         }
 
         private void FunctionalityTile_OnClick(object sender, EventArgs e)
         {
-            var s = new Selector(Info.FunctionImages);
+            Selector s = new Selector(Info.FunctionImages);
             s.Show();
         }
 
         private void DatabaseTile_OnClick(object sender, EventArgs e)
         {
-            var dm = new FunctionSelector();
+            FunctionSelector dm = new FunctionSelector();
             dm.Show();
         }
 

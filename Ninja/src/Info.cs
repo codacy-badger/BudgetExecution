@@ -30,7 +30,7 @@ namespace BudgetExecution
         {
             try
             {
-                var account = new Account(source, provider, param["Fund"].ToString(), param["Code"].ToString());
+                Account account = new Account(source, provider, param["Fund"].ToString(), param["Code"].ToString());
                 if (!param.ContainsKey("FundName") || param["FundName"] == null)
                 {
                     param["FundName"] = account.FundName;
@@ -69,7 +69,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                var _ = new Error(ex).ShowDialog();
+                DialogResult _ = new Error(ex).ShowDialog();
                 return null;
             }
         }
@@ -78,12 +78,12 @@ namespace BudgetExecution
         {
             try
             {
-                var datarow = new DataBuilder(source, provider, p).DbTable.AsEnumerable().Select(prc => prc).First();
+                DataRow datarow = new DataBuilder(source, provider, p).DbTable.AsEnumerable().Select(prc => prc).First();
                 return new PRC(datarow);
             }
             catch (Exception ex)
             {
-                var _ = new Error(ex).ShowDialog();
+                DialogResult _ = new Error(ex).ShowDialog();
                 return null;
             }
         }
@@ -92,11 +92,11 @@ namespace BudgetExecution
         {
             try
             {
-                var query = new SQLiteQuery(source);
+                SQLiteQuery query = new SQLiteQuery(source);
                 using (query.DataConnection)
                 {
-                    var param = query.GetDbParameters(p);
-                    var command = query.InsertCommand;
+                    SQLiteParameter[] param = query.GetDbParameters(p);
+                    SQLiteCommand command = query.InsertCommand;
                     foreach (SQLiteParameter pmr in param)
                         command.Parameters.Add(pmr);
                     command.ExecuteNonQuery();
@@ -112,11 +112,11 @@ namespace BudgetExecution
         {
             try
             {
-                var query = new SQLiteQuery(source);
+                SQLiteQuery query = new SQLiteQuery(source);
                 using (query.DataConnection)
                 {
-                    var param = query.GetDbParameters(p);
-                    var command = query.UpdateCommand;
+                    SQLiteParameter[] param = query.GetDbParameters(p);
+                    SQLiteCommand command = query.UpdateCommand;
                     foreach (SQLiteParameter pmr in param)
                         command.Parameters.Add(pmr);
                     command.ExecuteNonQuery();
@@ -132,11 +132,11 @@ namespace BudgetExecution
         {
             try
             {
-                var query = new SQLiteQuery(source);
+                SQLiteQuery query = new SQLiteQuery(source);
                 using (query.DataConnection)
                 {
-                    var param = query.GetDbParameters(p);
-                    var command = query.DeleteCommand;
+                    SQLiteParameter[] param = query.GetDbParameters(p);
+                    SQLiteCommand command = query.DeleteCommand;
                     foreach (SQLiteParameter pmr in param)
                         command.Parameters.Add(pmr);
                     command.ExecuteNonQuery();
@@ -186,7 +186,7 @@ namespace BudgetExecution
             {
                 try
                 {
-                    var data = new Dictionary<string, string[]>();
+                    Dictionary<string, string[]> data = new Dictionary<string, string[]>();
                     foreach (DataColumn dc in table.Columns)
                     {
                         if (dc.ColumnName.Equals("ID") || dc.ColumnName.Equals("Amount") || dc.ColumnName.Contains("Obligation") || dc.ColumnName.Contains("Commitment"))
@@ -334,7 +334,7 @@ namespace BudgetExecution
         {
             try
             {
-                var d = new Dictionary<string, Source>();
+                Dictionary<string, Source> d = new Dictionary<string, Source>();
                 d.Add("Programs", Source.Accounts);
                 d.Add("Reprogrammings", Source.Transfers);
                 d.Add("Level-7", Source.RegionalAccounts);
@@ -766,7 +766,7 @@ namespace BudgetExecution
         {
             try
             {
-                var columns = table.Columns;
+                DataColumnCollection columns = table.Columns;
                 string[] fields = new string[columns.Count];
                 for (int i = 0; i < columns.Count; i++)
                 {

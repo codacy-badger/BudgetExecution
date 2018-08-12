@@ -153,7 +153,7 @@ namespace BudgetExecution
         {
             try
             {
-                var query = table.AsEnumerable().Where(p => p.Field<string>(column).Equals(filter)).Select(p => p).CopyToDataTable();
+                DataTable query = table.AsEnumerable().Where(p => p.Field<string>(column).Equals(filter)).Select(p => p).CopyToDataTable();
                 return new Tuple<DataTable, PRC[], decimal, int>(query, GetPrcArray(query), GetTotal(query), GetCount(query));
             }
             catch (Exception ex)
@@ -167,7 +167,7 @@ namespace BudgetExecution
         {
             try
             {
-                var count = GetCount(table);
+                int count = GetCount(table);
                 return new decimal[] { GetTotal(table), (decimal)table.Rows.Count, GetAverage(table) };
             }
             catch (Exception ex)
@@ -194,7 +194,7 @@ namespace BudgetExecution
         {
             try
             {
-                var data = new Dictionary<string, string[]>();
+                Dictionary<string, string[]> data = new Dictionary<string, string[]>();
                 foreach (DataColumn dc in table.Columns)
                 {
                     if (dc.ColumnName.Equals("ID") || dc.ColumnName.Equals("Amount"))
@@ -241,8 +241,8 @@ namespace BudgetExecution
         {
             try
             {
-                var fteTable = table.AsEnumerable().Where(p => p.Field<string>("BOC").Equals("17")).Select(p => p).CopyToDataTable();
-                var fteArray = new FTE[fteTable.Rows.Count];
+                DataTable fteTable = table.AsEnumerable().Where(p => p.Field<string>("BOC").Equals("17")).Select(p => p).CopyToDataTable();
+                FTE[] fteArray = new FTE[fteTable.Rows.Count];
                 for (int i = 0; i < fteTable.Rows.Count; i++)
                 {
                     fteArray[i] = new FTE(fteTable.Rows[i]);

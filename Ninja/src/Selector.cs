@@ -48,10 +48,10 @@ namespace BudgetExecution
             FilePath = path;
             foreach (string i in images)
             {
-                var p = Path.GetFileNameWithoutExtension(i);
-                var b = new Bitmap(i);
+                string p = Path.GetFileNameWithoutExtension(i);
+                Bitmap b = new Bitmap(i);
                 b.Tag = p;
-                var c = new CarouselImage();
+                CarouselImage c = new CarouselImage();
                 c.ItemImage = b;
                 ilist.Images.Add(b);
                 icollect.Add(c);
@@ -66,18 +66,18 @@ namespace BudgetExecution
 
         private void ViewerCarousel_OnImageSelected(object sender, EventArgs e)
         {
-            var carousel = sender as Carousel;
-            var i = carousel.ActiveImage.Tag.ToString();
+            Carousel carousel = sender as Carousel;
+            string i = carousel.ActiveImage.Tag.ToString();
             if (i == "Appropriation")
             {
-                var f = new Selector(Info.AppropriationImages);
+                Selector f = new Selector(Info.AppropriationImages);
                 f.Show();
                 this.Close();
             }
             else
             {
-                var s = (Source)Enum.Parse(typeof(Source), i);
-                var summary = new SummaryForm(s);
+                Source s = (Source)Enum.Parse(typeof(Source), i);
+                SummaryForm summary = new SummaryForm(s);
                 summary.Show();
                 Close();
             }

@@ -172,7 +172,7 @@ namespace BudgetExecution
             {
                 if (provider == Provider.OleDb)
                 {
-                    var eq = new ExcelQuery(source);
+                    ExcelQuery eq = new ExcelQuery(source);
                     eq.Parameters = pmr;
                     return eq;
                 }
@@ -209,7 +209,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                var  _ = new Error(ex).ShowDialog();
+                DialogResult  _ = new Error(ex).ShowDialog();
                 return null;
             }
         }
@@ -227,7 +227,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                var  _ = new Error(ex).ShowDialog();
+                DialogResult  _ = new Error(ex).ShowDialog();
                 return null;
             }
         }
@@ -236,7 +236,7 @@ namespace BudgetExecution
         {
             try
             {
-                var data = new Dictionary<string, string[]>();
+                Dictionary<string, string[]> data = new Dictionary<string, string[]>();
                 foreach (DataColumn dc in table.Columns)
                 {
                     if (dc.ColumnName.Equals("ID") || dc.ColumnName.Equals("Amount") || dc.ColumnName.Contains("Obligation") || dc.ColumnName.Contains("Commitment"))
@@ -261,7 +261,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                var  _ = new Error(ex).ShowDialog();
+                DialogResult  _ = new Error(ex).ShowDialog();
                 return null;
             }
         }
@@ -270,13 +270,13 @@ namespace BudgetExecution
         {
             try
             {
-                var ct = table.Columns.Count;
-                var dc = table.Columns.ToList<string>().ToArray();
-                var dr = table.Rows.Count;
-                var data = new Dictionary<string, object>();
+                int ct = table.Columns.Count;
+                string[] dc = table.Columns.ToList<string>().ToArray();
+                int dr = table.Rows.Count;
+                Dictionary<string, object> data = new Dictionary<string, object>();
                 foreach (DataRow r in table.Rows)
                 {
-                    foreach (var c in dc)
+                    foreach (string c in dc)
                     {
                         if (c.Equals("Amount") || c.Contains("Obligation") || c.Contains("Commitment") || c.Contains("WorkHour") || c.Contains("LeaveHour"))
                         {
@@ -292,7 +292,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                var _ = new Error(ex).ShowDialog();
+                DialogResult _ = new Error(ex).ShowDialog();
                 return null;
             }
         }
@@ -310,7 +310,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                var  _ = new Error(ex).ShowDialog();
+                DialogResult  _ = new Error(ex).ShowDialog();
                 return -1;
             }
         }
@@ -319,8 +319,8 @@ namespace BudgetExecution
         {
             try
             {
-                var ds = new DataSet("R6");
-                var dt = new DataTable(Source.ToString());
+                DataSet ds = new DataSet("R6");
+                DataTable dt = new DataTable(Source.ToString());
                 dt.TableName = Source.ToString();
                 ds.Tables.Add(dt);
                 DbQuery.DataAdapter.Fill(ds);
@@ -328,7 +328,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                var  _ = new Error(ex).ShowDialog();
+                DialogResult  _ = new Error(ex).ShowDialog();
                 return null;
             }
         }
@@ -337,9 +337,9 @@ namespace BudgetExecution
         {
             try
             {
-                var ds = new DataSet(dataset);
+                DataSet ds = new DataSet(dataset);
                 ds.DataSetName = dataset;
-                var dt = new DataTable(source.ToString());
+                DataTable dt = new DataTable(source.ToString());
                 dt.TableName = source.ToString();
                 ds.Tables.Add(dt);
                 DbQuery.DataAdapter.Fill(ds);
@@ -347,7 +347,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                var  _ = new Error(ex).ShowDialog();
+                DialogResult  _ = new Error(ex).ShowDialog();
                 return null;
             }
         }
@@ -356,9 +356,9 @@ namespace BudgetExecution
         {
             try
             {
-                var ds = new DataSet("R06");
+                DataSet ds = new DataSet("R06");
                 ds.DataSetName = "R06";
-                var dt = new DataTable(Source.ToString());
+                DataTable dt = new DataTable(Source.ToString());
                 dt.TableName = Source.ToString();
                 ds.Tables.Add(dt);
                 DbQuery.DataAdapter.Fill(ds, Source.ToString());
@@ -366,7 +366,7 @@ namespace BudgetExecution
             }
             catch (Exception e)
             {
-                var _ = new Error(e).ShowDialog();
+                DialogResult _ = new Error(e).ShowDialog();
                 return null;
             }
         }
@@ -375,14 +375,14 @@ namespace BudgetExecution
         {
             try
             {
-                var dt = new DataTable(source.ToString());
+                DataTable dt = new DataTable(source.ToString());
                 dt.TableName = source.ToString();
                 DbQuery.DataAdapter.Fill(dt);
                 return dt;
             }
             catch (Exception e)
             {
-                var _ = new Error(e).ShowDialog();
+                DialogResult _ = new Error(e).ShowDialog();
                 return null;
             } 
         }
@@ -393,13 +393,13 @@ namespace BudgetExecution
             {
                 try
                 {
-                    var total = table.AsEnumerable().Where(p => p.Field<string>("BOC") != "17").Select(p => p.Field<decimal>("Amount")).Sum();
+                    decimal total = table.AsEnumerable().Where(p => p.Field<string>("BOC") != "17").Select(p => p.Field<decimal>("Amount")).Sum();
                     if(total > 0)
                         return total;
                 }
                 catch (Exception ex)
                 {
-                    var  _ = new Error(ex).ShowDialog();
+                    DialogResult  _ = new Error(ex).ShowDialog();
                     return -1M;
                 }
             }
@@ -419,7 +419,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                var  _ = new Error(ex).ShowDialog();
+                DialogResult  _ = new Error(ex).ShowDialog();
                 return -1M;
             }
         }
@@ -432,7 +432,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                var  _ = new Error(ex).ShowDialog();
+                DialogResult  _ = new Error(ex).ShowDialog();
                 return null;
             }
         }
@@ -447,7 +447,7 @@ namespace BudgetExecution
                 }
                 catch(SystemException ex)
                 {
-                    var  _ = new Error(ex).ShowDialog();
+                    DialogResult  _ = new Error(ex).ShowDialog();
                     return null;
                 }
             }

@@ -7,7 +7,9 @@ namespace BudgetExecution
     using System;
     using System.Collections.Generic;
     using System.Data;
+    using System.Data.Common;
     using System.Linq;
+    using System.Windows.Forms;
 
     public class RegionalAuthority : IBudgetAuthority
     {
@@ -120,7 +122,7 @@ namespace BudgetExecution
         {
             try
             {
-                var list = table.AsEnumerable().Select(p => p.Field<string>(column)).ToArray();
+                string[] list = table.AsEnumerable().Select(p => p.Field<string>(column)).ToArray();
                 return list.Select(p => p).Distinct(StringComparer.CurrentCultureIgnoreCase).ToArray();
             }
             catch (Exception ex)
@@ -147,7 +149,7 @@ namespace BudgetExecution
         {
             try
             {
-                var qtable = FilterTable(table, column, filter);
+                DataTable qtable = FilterTable(table, column, filter);
                 return new Tuple<DataTable, PRC[], decimal, int>(qtable, GetPrcArray(qtable), GetTotal(qtable), GetCount(qtable));
             }
             catch (Exception ex)
@@ -161,8 +163,8 @@ namespace BudgetExecution
         {
             try
             {
-                var fteTable = table.AsEnumerable().Where(p => p.Field<string>("BOC").Equals("17")).Select(p => p).CopyToDataTable();
-                var fteArray = new FTE[fteTable.Rows.Count];
+                DataTable fteTable = table.AsEnumerable().Where(p => p.Field<string>("BOC").Equals("17")).Select(p => p).CopyToDataTable();
+                FTE[] fteArray = new FTE[fteTable.Rows.Count];
                 for (int i = 0; i < fteTable.Rows.Count; i++)
                 {
                     fteArray[i] = new FTE(fteTable.Rows[i]);
@@ -181,7 +183,7 @@ namespace BudgetExecution
         {
             try
             {
-                var count = GetCount(table);
+                int count = GetCount(table);
                 return new decimal[] { GetTotal(table), (decimal)count, GetAverage(table) };
             }
             catch (Exception ex)
@@ -208,7 +210,7 @@ namespace BudgetExecution
         {
             try
             {
-                var data = new Dictionary<string, string[]>();
+                Dictionary<string, string[]> data = new Dictionary<string, string[]>();
                 foreach (DataColumn dc in table.Columns)
                 {
                     if (dc.ColumnName.Equals("ID") || dc.ColumnName.Equals("Amount"))
@@ -285,16 +287,16 @@ namespace BudgetExecution
         {
             try
             {
-                var parameter = new Dictionary<string, object>();
+                Dictionary<string, object> parameter = new Dictionary<string, object>();
                 parameter.Add("ID", row["ID"]);
                 parameter.Add("Amount", amount2);
-                var query = new Query(Source.PRC, Provider.SQLite, parameter);
-                var update = query.UpdateCommand;
+                Query query = new Query(Source.PRC, Provider.SQLite, parameter);
+                DbCommand update = query.UpdateCommand;
                 update.ExecuteNonQuery();
             }
             catch (Exception e)
             {
-                var  _ = new Error(e).ShowDialog();
+                DialogResult  _ = new Error(e).ShowDialog();
             }
         }
 
@@ -308,13 +310,13 @@ namespace BudgetExecution
                 }
 
                 p.Add("Amount", amount2);
-                var query = new Query(Source.PRC, Provider.SQLite, p);
-                var update = query.UpdateCommand;
+                Query query = new Query(Source.PRC, Provider.SQLite, p);
+                DbCommand update = query.UpdateCommand;
                 update.ExecuteNonQuery();
             }
             catch (Exception e)
             {
-                var  _ = new Error(e).ShowDialog();
+                DialogResult  _ = new Error(e).ShowDialog();
             }
         }
 
@@ -322,7 +324,7 @@ namespace BudgetExecution
         {
             try
             {
-                var query = table.AsEnumerable().Where(r => r.Field<string>("BFY").Equals(p["BFY"]))
+                DataTable query = table.AsEnumerable().Where(r => r.Field<string>("BFY").Equals(p["BFY"]))
                     .Where(r => r.Field<string>("Fund").Equals(p["Fund"]))
                     .Where(r => r.Field<string>("Code").Equals(p["Code"]))
                     .Where(r => r.Field<string>("Org").Equals(p["Org"]))
