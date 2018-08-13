@@ -1,6 +1,11 @@
-﻿// <copyright file="SummaryForm.cs" company="PlaceholderCompany">
-// Copyright (c) PlaceholderCompany. All rights reserved.
+﻿// --------------------------------------------------------------------------------------------------------------------
+// <copyright file="SummaryForm.cs" company="">
+//   
 // </copyright>
+// <summary>
+//   The summary form.
+// </summary>
+// --------------------------------------------------------------------------------------------------------------------
 
 namespace BudgetExecution
 {
@@ -15,173 +20,283 @@ namespace BudgetExecution
 
     using MetroSet_UI.Controls;
 
+    using Syncfusion.Windows.Forms;
     using Syncfusion.Windows.Forms.Chart;
     using Syncfusion.Windows.Forms.Tools;
 
-    using MetroForm = Syncfusion.Windows.Forms.MetroForm;
-
+    /// <summary>
+    /// The summary form.
+    /// </summary>
     public partial class SummaryForm : MetroForm
     {
         // CONSTRUCTORS
+        /// <summary>
+        /// Initializes a new instance of the <see cref="SummaryForm"/> class.
+        /// </summary>
         public SummaryForm()
         {
-            InitializeComponent();
+            this.InitializeComponent();
         }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="SummaryForm"/> class.
+        /// </summary>
+        /// <param name="rc">
+        /// The rc.
+        /// </param>
         public SummaryForm(string rc)
         {
-            InitializeComponent();
-            Division = rc;
-            Source = Source.DivisionAccounts;
-            Provider = Provider.SQLite;
-            Parameter = new Dictionary<string, object>() { ["RC"] = rc };
-            DbData = new DataBuilder(Source.DivisionAccounts, Provider.SQLite, Parameter);
-            Table = DbData.DbTable;
-            DatabaseTab.TabVisible = true;
-            ProjectTab.TabVisible = true;
-            DivisionTab.TabVisible = false;
-            ProgramElements = DbData.ProgramElements;
-            Metric = new PrcMetric(DbData);
-            Text = string.Format("{0} Summary", Info.DivisionName(rc));
-            CurrentTabIndex = SummaryTabControl.SelectedIndex;
-            SummaryTabControl.SelectedIndexChanged += SummaryTabPage_TabSelected;
-            CurrentTabIndex = 1;
-            TabNames = GetTabNames();
-            UpdateTab.TabVisible = false;
+            this.InitializeComponent();
+            this.Division = rc;
+            this.Source = Source.DivisionAccounts;
+            this.Provider = Provider.SQLite;
+            this.Parameter = new Dictionary<string, object> { ["RC"] = rc };
+            this.DbData = new DataBuilder(Source.DivisionAccounts, Provider.SQLite, this.Parameter);
+            this.Table = this.DbData.DbTable;
+            this.DatabaseTab.TabVisible = true;
+            this.ProjectTab.TabVisible = true;
+            this.DivisionTab.TabVisible = false;
+            this.ProgramElements = this.DbData.ProgramElements;
+            this.Metric = new PrcMetric(this.DbData);
+            this.Text = string.Format("{0} Summary", Info.DivisionName(rc));
+            this.CurrentTabIndex = this.SummaryTabControl.SelectedIndex;
+            this.SummaryTabControl.SelectedIndexChanged += this.SummaryTabPage_TabSelected;
+            this.CurrentTabIndex = 1;
+            this.TabNames = this.GetTabNames();
+            this.UpdateTab.TabVisible = false;
         }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="SummaryForm"/> class.
+        /// </summary>
+        /// <param name="source">
+        /// The source.
+        /// </param>
         public SummaryForm(Source source)
         {
-            InitializeComponent();
-            DbData = new DataBuilder(source, Provider.SQLite);
-            Table = DbData.DbTable;
-            Source = source;
-            Provider = Provider.SQLite;
-            CurrentTabIndex = 0;
-            TabNames = GetTabNames();
-            Text = $@"R6 {Source.ToString()} Summary";
-            Metric = new PrcMetric(DbData);
-            ProgramElements = Metric.ProgramElements;
-            BindingSource.DataSource = Metric.Table;
-            ProjectTab.TabVisible = true;
-            DatabaseTab.TabVisible = true;
-            CurrentTabIndex = SummaryTabControl.SelectedIndex;
-            SummaryTabControl.SelectedIndexChanged += SummaryTabPage_TabSelected;
+            this.InitializeComponent();
+            this.DbData = new DataBuilder(source, Provider.SQLite);
+            this.Table = this.DbData.DbTable;
+            this.Source = source;
+            this.Provider = Provider.SQLite;
+            this.CurrentTabIndex = 0;
+            this.TabNames = this.GetTabNames();
+            this.Text = $@"R6 {this.Source.ToString()} Summary";
+            this.Metric = new PrcMetric(this.DbData);
+            this.ProgramElements = this.Metric.ProgramElements;
+            this.BindingSource.DataSource = this.Metric.Table;
+            this.ProjectTab.TabVisible = true;
+            this.DatabaseTab.TabVisible = true;
+            this.CurrentTabIndex = this.SummaryTabControl.SelectedIndex;
+            this.SummaryTabControl.SelectedIndexChanged += this.SummaryTabPage_TabSelected;
             if (source == Source.RegionalAccounts || source == Source.DivisionAccounts)
             {
-                DbData = new DataBuilder(source, Provider.SQLite);
-                Table = DbData.DbTable;
-                Source = source;
-                CurrentTabIndex = 1;
-                TabNames = GetTabNames();
-                Text = @"R6 Summary";
-                Metric = new PrcMetric(DbData);
-                ProgramElements = Metric.ProgramElements;
-                BindingSource.DataSource = Metric.Table;
-                ProjectTab.TabVisible = false;
-                DatabaseTab.TabVisible = false;
-                CurrentTabIndex = SummaryTabControl.SelectedIndex;
-                SummaryTabControl.SelectedIndexChanged += SummaryTabPage_TabSelected;
+                this.DbData = new DataBuilder(source, Provider.SQLite);
+                this.Table = this.DbData.DbTable;
+                this.Source = source;
+                this.CurrentTabIndex = 1;
+                this.TabNames = this.GetTabNames();
+                this.Text = @"R6 Summary";
+                this.Metric = new PrcMetric(this.DbData);
+                this.ProgramElements = this.Metric.ProgramElements;
+                this.BindingSource.DataSource = this.Metric.Table;
+                this.ProjectTab.TabVisible = false;
+                this.DatabaseTab.TabVisible = false;
+                this.CurrentTabIndex = this.SummaryTabControl.SelectedIndex;
+                this.SummaryTabControl.SelectedIndexChanged += this.SummaryTabPage_TabSelected;
             }
 
-            UpdateTab.TabVisible = false;
+            this.UpdateTab.TabVisible = false;
         }
 
         // PROPERTIES
+        /// <summary>
+        /// Gets the source.
+        /// </summary>
         public Source Source { get; }
 
+        /// <summary>
+        /// Gets the provider.
+        /// </summary>
         public Provider Provider { get; }
 
+        /// <summary>
+        /// Gets or sets the parameter.
+        /// </summary>
         public Dictionary<string, object> Parameter { get; set; }
 
+        /// <summary>
+        /// Gets the db data.
+        /// </summary>
         public DataBuilder DbData { get; }
 
+        /// <summary>
+        /// Gets or sets the table.
+        /// </summary>
         public DataTable Table { get; set; }
 
+        /// <summary>
+        /// Gets or sets the db row.
+        /// </summary>
         public DataRow DbRow { get; set; }
 
+        /// <summary>
+        /// Gets or sets the metric.
+        /// </summary>
         public PrcMetric Metric { get; set; }
 
+        /// <summary>
+        /// Gets or sets the chart type.
+        /// </summary>
         public ChartSeriesType ChartType { get; set; }
 
+        /// <summary>
+        /// Gets or sets the chart field.
+        /// </summary>
         public Field ChartField { get; set; }
 
+        /// <summary>
+        /// Gets or sets the chart filter.
+        /// </summary>
         public string ChartFilter { get; set; }
 
+        /// <summary>
+        /// Gets or sets the division.
+        /// </summary>
         public string Division { get; set; }
 
+        /// <summary>
+        /// Gets or sets the chart group.
+        /// </summary>
         public Field ChartGroup { get; set; }
 
+        /// <summary>
+        /// Gets the program elements.
+        /// </summary>
         public Dictionary<string, string[]> ProgramElements { get; }
 
+        /// <summary>
+        /// Gets or sets the chart main title.
+        /// </summary>
         public string[] ChartMainTitle { get; set; }
 
+        /// <summary>
+        /// Gets or sets the chart axis title.
+        /// </summary>
         public string[] ChartAxisTitle { get; set; }
 
+        /// <summary>
+        /// Gets or sets the current tab index.
+        /// </summary>
         public int CurrentTabIndex { get; set; }
 
+        /// <summary>
+        /// Gets or sets the grid filter control 1.
+        /// </summary>
         public MetroSetComboBox GridFilterControl1 { get; set; }
 
+        /// <summary>
+        /// Gets or sets the grid filter control 2.
+        /// </summary>
         public MetroSetComboBox GridFilterControl2 { get; set; }
 
+        /// <summary>
+        /// Gets or sets the grid filter control 3.
+        /// </summary>
         public MetroSetComboBox GridFilterControl3 { get; set; }
 
+        /// <summary>
+        /// Gets or sets the chart filter control 1.
+        /// </summary>
         public MetroSetComboBox ChartFilterControl1 { get; set; }
 
+        /// <summary>
+        /// Gets or sets the chart filter control 2.
+        /// </summary>
         public MetroSetComboBox ChartFilterControl2 { get; set; }
 
+        /// <summary>
+        /// Gets or sets the chart filter control 3.
+        /// </summary>
         public MetroSetComboBox ChartFilterControl3 { get; set; }
 
+        /// <summary>
+        /// Gets or sets the chart filter control 4.
+        /// </summary>
         public MetroSetComboBox ChartFilterControl4 { get; set; }
 
+        /// <summary>
+        /// Gets or sets the expander 1.
+        /// </summary>
         public ExpandCollapsePanel Expander1 { get; set; }
 
+        /// <summary>
+        /// Gets or sets the expander 2.
+        /// </summary>
         public ExpandCollapsePanel Expander2 { get; set; }
 
+        /// <summary>
+        /// Gets or sets the measure.
+        /// </summary>
         public Stat Measure { get; set; }
 
+        /// <summary>
+        /// Gets or sets the tab.
+        /// </summary>
         private TabPageAdv[] Tab { get; set; }
 
-        private string[] TabNames { get; set; }
+        /// <summary>
+        /// Gets the tab names.
+        /// </summary>
+        private string[] TabNames { get; }
 
         // METHODS
+        /// <summary>
+        /// The form_ load.
+        /// </summary>
+        /// <param name="sender">
+        /// The sender.
+        /// </param>
+        /// <param name="e">
+        /// The e.
+        /// </param>
         private void Form_Load(object sender, EventArgs e)
         {
             try
             {
-                if (DbData.Source == Source.FTE)
+                if (this.DbData.Source == Source.FTE)
                 {
-                    BocTab.TabVisible = false;
+                    this.BocTab.TabVisible = false;
                 }
 
-                if (DbData.Source == Source.RegionalAccounts)
+                if (this.DbData.Source == Source.RegionalAccounts)
                 {
-                    DivisionTab.TabVisible = false;
-                    DatabaseTab.TabVisible = false;
-                    ProjectTab.TabVisible = false;
+                    this.DivisionTab.TabVisible = false;
+                    this.DatabaseTab.TabVisible = false;
+                    this.ProjectTab.TabVisible = false;
                 }
 
-                BindingSource.DataSource = Table;
-                AccountNavigator.BindingSource = BindingSource;
-                Grid.DataSource = BindingSource;
-                DefineVisisbleDataColumns(Grid);
-                PopulateFilterBoxItems(GridFundFilter, Field.FundName);
-                ConfigureTextBoxBindings();
-                label32.Text = DbData.GetTotal(DbData.DbTable).ToString("c");
-                label41.Text = DbData.GetCount(DbData.DbTable).ToString();
-                GridFundFilter.SelectionChangeCommitted += GridFilterControl1_ItemSelected;
-                GridBocFilter.SelectionChangeCommitted += GridFilterControl2_ItemSelected;
-                SummaryTabControl.SelectedIndexChanged += SummaryTabPage_TabSelected;
-                FundChart = new BudgetChart(FundChart, DbData, Field.FundName).Activate();
-                lblPrc.Visible = false;
-                GridAccountFilter.Visible = false;
-                lblBoc.Visible = false;
-                GridBocFilter.Visible = false;
-                GridRefreshButton.Click += GridRefreshButton_OnClick;
-                ExcelButton.Click += ExcelButton_Click;
-                CalendatButton.Click += CalendatButton_Click;
-                CalculatorButton.Click += CalculatorButton_Click;
-                Grid.SelectionChanged += UpdateAccountChart;
+                this.BindingSource.DataSource = this.Table;
+                this.AccountNavigator.BindingSource = this.BindingSource;
+                this.Grid.DataSource = this.BindingSource;
+                this.DefineVisisbleDataColumns(this.Grid);
+                this.PopulateFilterBoxItems(this.GridFundFilter, Field.FundName);
+                this.ConfigureTextBoxBindings();
+                this.label32.Text = this.DbData.GetTotal(this.DbData.DbTable).ToString("c");
+                this.label41.Text = this.DbData.GetCount(this.DbData.DbTable).ToString();
+                this.GridFundFilter.SelectionChangeCommitted += this.GridFilterControl1_ItemSelected;
+                this.GridBocFilter.SelectionChangeCommitted += this.GridFilterControl2_ItemSelected;
+                this.SummaryTabControl.SelectedIndexChanged += this.SummaryTabPage_TabSelected;
+                this.FundChart = new BudgetChart(this.FundChart, this.DbData, Field.FundName).Activate();
+                this.lblPrc.Visible = false;
+                this.GridAccountFilter.Visible = false;
+                this.lblBoc.Visible = false;
+                this.GridBocFilter.Visible = false;
+                this.GridRefreshButton.Click += this.GridRefreshButton_OnClick;
+                this.ExcelButton.Click += this.ExcelButton_Click;
+                this.CalendatButton.Click += this.CalendatButton_Click;
+                this.CalculatorButton.Click += this.CalculatorButton_Click;
+                this.Grid.SelectionChanged += this.UpdateAccountChart;
             }
             catch (Exception ex)
             {
@@ -189,20 +304,29 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The grid filter control 1_ item selected.
+        /// </summary>
+        /// <param name="sender">
+        /// The sender.
+        /// </param>
+        /// <param name="e">
+        /// The e.
+        /// </param>
         private void GridFilterControl1_ItemSelected(object sender, EventArgs e)
         {
             try
             {
                 MetroSetComboBox filter = sender as MetroSetComboBox;
-                GridFundFilter.Tag = filter.SelectedItem.ToString();
+                this.GridFundFilter.Tag = filter.SelectedItem.ToString();
                 string fund = filter.SelectedItem.ToString();
-                BindingSource.Filter = string.Format("FundName = '{0}'", GridFundFilter.SelectedItem.ToString());
-                label41.Text = GetCount(fund).ToString();
-                label37.Text = CalculateAverage(GridFundFilter.SelectedItem.ToString()).ToString("c");
-                label32.Text = CalculateTotal(fund).ToString("c");
-                PopulateGridBocFilterItems();
-                lblBoc.Visible = true;
-                GridBocFilter.Visible = true;
+                this.BindingSource.Filter = string.Format("FundName = '{0}'", this.GridFundFilter.SelectedItem);
+                this.label41.Text = this.GetCount(fund).ToString();
+                this.label37.Text = this.CalculateAverage(this.GridFundFilter.SelectedItem.ToString()).ToString("c");
+                this.label32.Text = this.CalculateTotal(fund).ToString("c");
+                this.PopulateGridBocFilterItems();
+                this.lblBoc.Visible = true;
+                this.GridBocFilter.Visible = true;
             }
             catch (Exception ex)
             {
@@ -210,22 +334,33 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The grid filter control 2_ item selected.
+        /// </summary>
+        /// <param name="sender">
+        /// The sender.
+        /// </param>
+        /// <param name="e">
+        /// The e.
+        /// </param>
         private void GridFilterControl2_ItemSelected(object sender, EventArgs e)
         {
             try
             {
                 MetroSetComboBox boc = sender as MetroSetComboBox;
                 string filter = boc.SelectedItem.ToString();
-                BindingSource.Filter =
-                    $"FundName = '{GridFundFilter.SelectedItem.ToString()}' AND BocName = '{GridBocFilter.SelectedItem.ToString()}'";
-                label32.Text = CalculateTotal(GridFundFilter.SelectedItem.ToString(), filter).ToString("c");
-                label37.Text = CalculateAverage(GridFundFilter.SelectedItem.ToString(), filter).ToString("c");
-                label41.Text = GetCount(GridFundFilter.SelectedItem.ToString(), filter).ToString();
-                GridAccountFilter.Visible = true;
-                lblPrc.Visible = true;
-                GridAccountFilter.Visible = true;
-                PopulateGridAccountFilterItems();
-                GridAccountFilter.SelectionChangeCommitted += GridFilterControl3_ItemSelected;
+                this.BindingSource.Filter =
+                    $"FundName = '{this.GridFundFilter.SelectedItem}' AND BocName = '{this.GridBocFilter.SelectedItem}'";
+                this.label32.Text = this.CalculateTotal(this.GridFundFilter.SelectedItem.ToString(), filter)
+                                        .ToString("c");
+                this.label37.Text = this.CalculateAverage(this.GridFundFilter.SelectedItem.ToString(), filter)
+                                        .ToString("c");
+                this.label41.Text = this.GetCount(this.GridFundFilter.SelectedItem.ToString(), filter).ToString();
+                this.GridAccountFilter.Visible = true;
+                this.lblPrc.Visible = true;
+                this.GridAccountFilter.Visible = true;
+                this.PopulateGridAccountFilterItems();
+                this.GridAccountFilter.SelectionChangeCommitted += this.GridFilterControl3_ItemSelected;
             }
             catch (Exception ex)
             {
@@ -233,16 +368,26 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The grid filter control 3_ item selected.
+        /// </summary>
+        /// <param name="sender">
+        /// The sender.
+        /// </param>
+        /// <param name="e">
+        /// The e.
+        /// </param>
         private void GridFilterControl3_ItemSelected(object sender, EventArgs e)
         {
             try
             {
                 MetroSetComboBox prc = sender as MetroSetComboBox;
                 string filter = prc.SelectedItem.ToString();
-                BindingSource.Filter =
-                    $"FundName = '{GridFundFilter.SelectedItem.ToString()}' AND BocName = '{GridBocFilter.SelectedItem.ToString()}' AND Code = '{filter}'";
-                label32.Text = CalculateTotal(GridFundFilter.SelectedItem.ToString(), filter).ToString("c");
-                label41.Text = GetCount(GridFundFilter.SelectedItem.ToString(), filter).ToString();
+                this.BindingSource.Filter =
+                    $"FundName = '{this.GridFundFilter.SelectedItem}' AND BocName = '{this.GridBocFilter.SelectedItem}' AND Code = '{filter}'";
+                this.label32.Text = this.CalculateTotal(this.GridFundFilter.SelectedItem.ToString(), filter)
+                                        .ToString("c");
+                this.label41.Text = this.GetCount(this.GridFundFilter.SelectedItem.ToString(), filter).ToString();
             }
             catch (Exception ex)
             {
@@ -250,19 +395,22 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The filter data grid.
+        /// </summary>
         private void FilterDataGrid()
         {
             try
             {
-                if (GridFundFilter.SelectedItem.ToString() != null)
+                if (this.GridFundFilter.SelectedItem.ToString() != null)
                 {
-                    BindingSource.Filter = string.Format(
+                    this.BindingSource.Filter = string.Format(
                         "FundName = '{0}' AND BocName = '{1}'",
-                        GridFundFilter.SelectedItem.ToString(),
-                        GridBocFilter.SelectedItem.ToString());
+                        this.GridFundFilter.SelectedItem,
+                        this.GridBocFilter.SelectedItem);
                 }
 
-                BindingSource.Filter = string.Format("FundName = '{0}'", GridBocFilter.SelectedItem.ToString());
+                this.BindingSource.Filter = string.Format("FundName = '{0}'", this.GridBocFilter.SelectedItem);
             }
             catch (Exception ex)
             {
@@ -270,22 +418,25 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The populate grid boc filter items.
+        /// </summary>
         private void PopulateGridBocFilterItems()
         {
             try
             {
-                GridBocFilter.Items.Clear();
-                GridBocFilter.Visible = true;
-                DataTable table = (DataTable)BindingSource.DataSource;
+                this.GridBocFilter.Items.Clear();
+                this.GridBocFilter.Visible = true;
+                DataTable table = (DataTable)this.BindingSource.DataSource;
                 DataTable query = table.AsEnumerable()
                                        .Where(
-                                           p => p.Field<string>("FundName")
-                                                 .Equals(GridFundFilter.SelectedItem.ToString())).Select(p => p)
+                                           p => p.Field<string>("FundName").Equals(
+                                               this.GridFundFilter.SelectedItem.ToString())).Select(p => p)
                                        .Distinct().CopyToDataTable();
                 foreach (string row in query.AsEnumerable().Select(p => p.Field<string>("BocName")).Distinct()
                                             .ToArray())
                 {
-                    GridBocFilter.Items.Add(row);
+                    this.GridBocFilter.Items.Add(row);
                 }
             }
             catch (Exception ex)
@@ -294,23 +445,26 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The populate grid account filter items.
+        /// </summary>
         private void PopulateGridAccountFilterItems()
         {
             try
             {
-                GridAccountFilter.Items.Clear();
-                DataTable table = (DataTable)BindingSource.DataSource;
+                this.GridAccountFilter.Items.Clear();
+                DataTable table = (DataTable)this.BindingSource.DataSource;
                 DataTable query = table.AsEnumerable()
                                        .Where(
-                                           p => p.Field<string>("FundName")
-                                                 .Equals(GridFundFilter.SelectedItem.ToString()))
+                                           p => p.Field<string>("FundName").Equals(
+                                               this.GridFundFilter.SelectedItem.ToString()))
                                        .Where(
                                            p => p.Field<string>("BocName")
-                                                 .Equals(GridBocFilter.SelectedItem.ToString())).Select(p => p)
+                                                 .Equals(this.GridBocFilter.SelectedItem.ToString())).Select(p => p)
                                        .CopyToDataTable();
                 foreach (DataRow row in query.Rows)
                 {
-                    GridAccountFilter.Items.Add(row["Code"].ToString());
+                    this.GridAccountFilter.Items.Add(row["Code"].ToString());
                 }
             }
             catch (Exception ex)
@@ -319,12 +473,21 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The get count.
+        /// </summary>
+        /// <param name="filter">
+        /// The filter.
+        /// </param>
+        /// <returns>
+        /// The <see cref="decimal"/>.
+        /// </returns>
         private decimal GetCount(string filter)
         {
             try
             {
-                return DbData.DbTable.AsEnumerable().Where(p => p.Field<string>("FundName").Equals(filter))
-                             .Select(p => p.Field<decimal>("Amount") > 0).Count();
+                return this.DbData.DbTable.AsEnumerable().Where(p => p.Field<string>("FundName").Equals(filter))
+                           .Select(p => p.Field<decimal>("Amount") > 0).Count();
             }
             catch (Exception ex)
             {
@@ -333,13 +496,25 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The get count.
+        /// </summary>
+        /// <param name="filter1">
+        /// The filter 1.
+        /// </param>
+        /// <param name="filter2">
+        /// The filter 2.
+        /// </param>
+        /// <returns>
+        /// The <see cref="decimal"/>.
+        /// </returns>
         private decimal GetCount(string filter1, string filter2)
         {
             try
             {
-                return DbData.DbTable.AsEnumerable().Where(p => p.Field<string>("FundName").Equals(filter1))
-                             .Where(p => p.Field<string>("BocName").Equals(filter2))
-                             .Select(p => p.Field<decimal>("Amount")).Count();
+                return this.DbData.DbTable.AsEnumerable().Where(p => p.Field<string>("FundName").Equals(filter1))
+                           .Where(p => p.Field<string>("BocName").Equals(filter2))
+                           .Select(p => p.Field<decimal>("Amount")).Count();
             }
             catch (Exception ex)
             {
@@ -348,6 +523,15 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The populate filter box items.
+        /// </summary>
+        /// <param name="cmbox">
+        /// The cmbox.
+        /// </param>
+        /// <param name="prcfilter">
+        /// The prcfilter.
+        /// </param>
         private void PopulateFilterBoxItems(MetroSetComboBox cmbox, Field prcfilter)
         {
             try
@@ -357,7 +541,7 @@ namespace BudgetExecution
                     cmbox.Items.Clear();
                 }
 
-                string[] items = DbData.ProgramElements[prcfilter.ToString()];
+                string[] items = this.DbData.ProgramElements[prcfilter.ToString()];
                 foreach (string i in items)
                 {
                     cmbox.Items.Add(i);
@@ -369,15 +553,24 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The populate filter box items.
+        /// </summary>
+        /// <param name="cmbox">
+        /// The cmbox.
+        /// </param>
+        /// <param name="i">
+        /// The i.
+        /// </param>
         private void PopulateFilterBoxItems(MetroSetComboBox cmbox, int i)
         {
             try
             {
-                foreach (string t in TabNames)
+                foreach (string t in this.TabNames)
                 {
                     cmbox.Items.Clear();
                     cmbox.Items.Add(t);
-                    cmbox.Items.Remove(SummaryTabControl.TabPages[i].Text);
+                    cmbox.Items.Remove(this.SummaryTabControl.TabPages[i].Text);
                 }
             }
             catch (Exception ex)
@@ -386,6 +579,12 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The define visisble data columns.
+        /// </summary>
+        /// <param name="dgv">
+        /// The dgv.
+        /// </param>
         private void DefineVisisbleDataColumns(DataGridView dgv)
         {
             try
@@ -410,6 +609,15 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The configure grid filter buttons.
+        /// </summary>
+        /// <param name="panel">
+        /// The panel.
+        /// </param>
+        /// <param name="list">
+        /// The list.
+        /// </param>
         private void ConfigureGridFilterButtons(FlowLayoutPanel panel, string[] list)
         {
             try
@@ -440,19 +648,22 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The configure text box bindings.
+        /// </summary>
         private void ConfigureTextBoxBindings()
         {
             try
             {
-                ID.DataBindings.Add(new Binding("Text", Grid.DataSource, "ID"));
-                BudgetLevel.DataBindings.Add(new Binding("Text", Grid.DataSource, "BudgetLevel"));
-                BFY.DataBindings.Add(new Binding("Text", Grid.DataSource, "BFY"));
-                Fund.DataBindings.Add(new Binding("Text", Grid.DataSource, "Fund"));
-                Org.DataBindings.Add(new Binding("Text", Grid.DataSource, "Org"));
-                RC.DataBindings.Add(new Binding("Text", Grid.DataSource, "RC"));
-                Code.DataBindings.Add(new Binding("Text", Grid.DataSource, "Code"));
-                BOC.DataBindings.Add(new Binding("Text", Grid.DataSource, "BOC"));
-                Amount.DataBindings.Add(new Binding("Text", Grid.DataSource, "Amount"));
+                this.ID.DataBindings.Add(new Binding("Text", this.Grid.DataSource, "ID"));
+                this.BudgetLevel.DataBindings.Add(new Binding("Text", this.Grid.DataSource, "BudgetLevel"));
+                this.BFY.DataBindings.Add(new Binding("Text", this.Grid.DataSource, "BFY"));
+                this.Fund.DataBindings.Add(new Binding("Text", this.Grid.DataSource, "Fund"));
+                this.Org.DataBindings.Add(new Binding("Text", this.Grid.DataSource, "Org"));
+                this.RC.DataBindings.Add(new Binding("Text", this.Grid.DataSource, "RC"));
+                this.Code.DataBindings.Add(new Binding("Text", this.Grid.DataSource, "Code"));
+                this.BOC.DataBindings.Add(new Binding("Text", this.Grid.DataSource, "BOC"));
+                this.Amount.DataBindings.Add(new Binding("Text", this.Grid.DataSource, "Amount"));
             }
             catch (Exception ex)
             {
@@ -460,12 +671,21 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The calculate average.
+        /// </summary>
+        /// <param name="filter">
+        /// The filter.
+        /// </param>
+        /// <returns>
+        /// The <see cref="decimal"/>.
+        /// </returns>
         private decimal CalculateAverage(string filter)
         {
             try
             {
-                return DbData.DbTable.AsEnumerable().Where(p => p.Field<string>("FundName").Equals(filter))
-                             .Select(p => p.Field<decimal>("Amount")).Average();
+                return this.DbData.DbTable.AsEnumerable().Where(p => p.Field<string>("FundName").Equals(filter))
+                           .Select(p => p.Field<decimal>("Amount")).Average();
             }
             catch (Exception ex)
             {
@@ -474,13 +694,25 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The calculate average.
+        /// </summary>
+        /// <param name="filter1">
+        /// The filter 1.
+        /// </param>
+        /// <param name="filter2">
+        /// The filter 2.
+        /// </param>
+        /// <returns>
+        /// The <see cref="decimal"/>.
+        /// </returns>
         private decimal CalculateAverage(string filter1, string filter2)
         {
             try
             {
-                return Table.AsEnumerable().Where(p => p.Field<string>("FundName").Equals(filter1))
-                            .Where(p => p.Field<string>("BocName").Equals(filter2))
-                            .Select(p => p.Field<decimal>("Amount")).Average();
+                return this.Table.AsEnumerable().Where(p => p.Field<string>("FundName").Equals(filter1))
+                           .Where(p => p.Field<string>("BocName").Equals(filter2))
+                           .Select(p => p.Field<decimal>("Amount")).Average();
             }
             catch (Exception ex)
             {
@@ -489,12 +721,21 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The calculate total.
+        /// </summary>
+        /// <param name="filter">
+        /// The filter.
+        /// </param>
+        /// <returns>
+        /// The <see cref="decimal"/>.
+        /// </returns>
         private decimal CalculateTotal(string filter)
         {
             try
             {
-                return DbData.DbTable.AsEnumerable().Where(p => p.Field<string>("FundName").Equals(filter))
-                             .Select(p => p.Field<decimal>("Amount")).Sum();
+                return this.DbData.DbTable.AsEnumerable().Where(p => p.Field<string>("FundName").Equals(filter))
+                           .Select(p => p.Field<decimal>("Amount")).Sum();
             }
             catch (Exception ex)
             {
@@ -503,13 +744,25 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The calculate total.
+        /// </summary>
+        /// <param name="filter1">
+        /// The filter 1.
+        /// </param>
+        /// <param name="filter2">
+        /// The filter 2.
+        /// </param>
+        /// <returns>
+        /// The <see cref="decimal"/>.
+        /// </returns>
         private decimal CalculateTotal(string filter1, string filter2)
         {
             try
             {
-                return Table.AsEnumerable().Where(p => p.Field<string>("FundName").Equals(filter1))
-                            .Where(p => p.Field<string>("BocName").Equals(filter2))
-                            .Select(p => p.Field<decimal>("Amount")).Sum();
+                return this.Table.AsEnumerable().Where(p => p.Field<string>("FundName").Equals(filter1))
+                           .Where(p => p.Field<string>("BocName").Equals(filter2))
+                           .Select(p => p.Field<decimal>("Amount")).Sum();
             }
             catch (Exception ex)
             {
@@ -518,24 +771,33 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The grid refresh button_ on click.
+        /// </summary>
+        /// <param name="sender">
+        /// The sender.
+        /// </param>
+        /// <param name="e">
+        /// The e.
+        /// </param>
         private void GridRefreshButton_OnClick(object sender, EventArgs e)
         {
-            if (DbData != null)
+            if (this.DbData != null)
             {
                 try
                 {
-                    BindingSource.Filter = null;
-                    AccountNavigator.BindingSource = BindingSource;
-                    Grid.DataSource = BindingSource;
-                    label32.Text = DbData.GetTotal(DbData.DbTable).ToString("c");
-                    label41.Text = DbData.GetCount(DbData.DbTable).ToString();
-                    GridBocFilter.Items.Clear();
-                    GridAccountFilter.Items.Clear();
-                    PopulateFilterBoxItems(GridFundFilter, Field.FundName);
-                    lblBoc.Visible = false;
-                    GridBocFilter.Visible = false;
-                    lblPrc.Visible = false;
-                    GridAccountFilter.Visible = false;
+                    this.BindingSource.Filter = null;
+                    this.AccountNavigator.BindingSource = this.BindingSource;
+                    this.Grid.DataSource = this.BindingSource;
+                    this.label32.Text = this.DbData.GetTotal(this.DbData.DbTable).ToString("c");
+                    this.label41.Text = this.DbData.GetCount(this.DbData.DbTable).ToString();
+                    this.GridBocFilter.Items.Clear();
+                    this.GridAccountFilter.Items.Clear();
+                    this.PopulateFilterBoxItems(this.GridFundFilter, Field.FundName);
+                    this.lblBoc.Visible = false;
+                    this.GridBocFilter.Visible = false;
+                    this.lblPrc.Visible = false;
+                    this.GridAccountFilter.Visible = false;
                 }
                 catch (Exception ex)
                 {
@@ -544,13 +806,19 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The get tab names.
+        /// </summary>
+        /// <returns>
+        /// The <see cref="string[]"/>.
+        /// </returns>
         private string[] GetTabNames()
         {
             try
             {
-                string[] names = new string[SummaryTabControl.TabPages.Count];
-                TabPageAdvCollection tabs = SummaryTabControl.TabPages;
-                for (int i = 0; i < SummaryTabControl.TabPages.Count; i++)
+                string[] names = new string[this.SummaryTabControl.TabPages.Count];
+                TabPageAdvCollection tabs = this.SummaryTabControl.TabPages;
+                for (int i = 0; i < this.SummaryTabControl.TabPages.Count; i++)
                 {
                     names[i] = tabs[i].Text;
                 }
@@ -564,6 +832,15 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The get chart type.
+        /// </summary>
+        /// <param name="ctb">
+        /// The ctb.
+        /// </param>
+        /// <returns>
+        /// The <see cref="ChartSeriesType"/>.
+        /// </returns>
         private ChartSeriesType GetChartType(MetroSetComboBox ctb)
         {
             if (ctb.SelectedItem == null)
@@ -574,27 +851,45 @@ namespace BudgetExecution
             return (ChartSeriesType)Enum.Parse(typeof(ChartSeriesType), ctb.SelectedItem.ToString());
         }
 
+        /// <summary>
+        /// The chart filter control 1_ item selected.
+        /// </summary>
+        /// <param name="sender">
+        /// The sender.
+        /// </param>
+        /// <param name="e">
+        /// The e.
+        /// </param>
         private void ChartFilterControl1_ItemSelected(object sender, EventArgs e)
         {
-            ChartFilterControl1 = sender as MetroSetComboBox;
-            ChartType = (ChartSeriesType)Enum.Parse(
+            this.ChartFilterControl1 = sender as MetroSetComboBox;
+            this.ChartType = (ChartSeriesType)Enum.Parse(
                 typeof(ChartSeriesType),
-                ChartFilterControl1.SelectedItem.ToString());
-            if (Expander2.IsExpanded == true)
+                this.ChartFilterControl1.SelectedItem.ToString());
+            if (this.Expander2.IsExpanded)
             {
-                Expander2.IsExpanded = false;
+                this.Expander2.IsExpanded = false;
             }
         }
 
+        /// <summary>
+        /// The chart filter control 2_ item selected.
+        /// </summary>
+        /// <param name="sender">
+        /// The sender.
+        /// </param>
+        /// <param name="e">
+        /// The e.
+        /// </param>
         private void ChartFilterControl2_ItemSelected(object sender, EventArgs e)
         {
             try
             {
-                ChartFilterControl2 = sender as MetroSetComboBox;
-                Measure = (Stat)Enum.Parse(typeof(Stat), ChartFilterControl2.SelectedItem.ToString());
-                if (Expander2.IsExpanded == false)
+                this.ChartFilterControl2 = sender as MetroSetComboBox;
+                this.Measure = (Stat)Enum.Parse(typeof(Stat), this.ChartFilterControl2.SelectedItem.ToString());
+                if (this.Expander2.IsExpanded == false)
                 {
-                    Expander2.IsExpanded = true;
+                    this.Expander2.IsExpanded = true;
                 }
             }
             catch (Exception ex)
@@ -603,13 +898,22 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The chart filter control 3_ item selected.
+        /// </summary>
+        /// <param name="sender">
+        /// The sender.
+        /// </param>
+        /// <param name="e">
+        /// The e.
+        /// </param>
         private void ChartFilterControl3_ItemSelected(object sender, EventArgs e)
         {
             try
             {
-                ChartFilterControl3 = sender as MetroSetComboBox;
-                ChartField = (Field)Enum.Parse(typeof(Field), ChartFilterControl3.Tag.ToString());
-                ChartFilter = ChartFilterControl3.SelectedItem.ToString();
+                this.ChartFilterControl3 = sender as MetroSetComboBox;
+                this.ChartField = (Field)Enum.Parse(typeof(Field), this.ChartFilterControl3.Tag.ToString());
+                this.ChartFilter = this.ChartFilterControl3.SelectedItem.ToString();
             }
             catch (Exception ex)
             {
@@ -617,97 +921,106 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The chart filter control 4_ item selected.
+        /// </summary>
+        /// <param name="sender">
+        /// The sender.
+        /// </param>
+        /// <param name="e">
+        /// The e.
+        /// </param>
         private void ChartFilterControl4_ItemSelected(object sender, EventArgs e)
         {
             try
             {
-                ChartFilterControl4 = sender as MetroSetComboBox;
-                ChartGroup = (Field)Enum.Parse(typeof(Field), ChartFilterControl4.SelectedItem.ToString());
-                ChartMainTitle = new string[]
-                                 { $"{ChartFilter} Funding By {ChartFilterControl4.SelectedItem.ToString()}" };
+                this.ChartFilterControl4 = sender as MetroSetComboBox;
+                this.ChartGroup = (Field)Enum.Parse(typeof(Field), this.ChartFilterControl4.SelectedItem.ToString());
+                this.ChartMainTitle =
+                    new[] { $"{this.ChartFilter} Funding By {this.ChartFilterControl4.SelectedItem}" };
                 Dictionary<string, object> param =
-                    new Dictionary<string, object>() { [ChartField.ToString()] = ChartFilter };
-                switch (CurrentTabIndex)
+                    new Dictionary<string, object> { [this.ChartField.ToString()] = this.ChartFilter };
+                switch (this.CurrentTabIndex)
                 {
                     case 0:
-                        FundChart = new BudgetChart(
-                            FundChart,
-                            ChartMainTitle,
-                            Source,
+                        this.FundChart = new BudgetChart(
+                            this.FundChart,
+                            this.ChartMainTitle,
+                            this.Source,
                             param,
-                            ChartGroup,
-                            Measure,
-                            ChartType).Activate();
+                            this.ChartGroup,
+                            this.Measure,
+                            this.ChartType).Activate();
                         break;
                     case 1:
-                        BocChart = new BudgetChart(
-                            BocChart,
-                            ChartMainTitle,
-                            Source,
+                        this.BocChart = new BudgetChart(
+                            this.BocChart,
+                            this.ChartMainTitle,
+                            this.Source,
                             param,
-                            ChartGroup,
-                            Measure,
-                            ChartType).Activate();
+                            this.ChartGroup,
+                            this.Measure,
+                            this.ChartType).Activate();
                         break;
                     case 2:
-                        NpmChart = new BudgetChart(
-                            NpmChart,
-                            ChartMainTitle,
-                            Source,
+                        this.NpmChart = new BudgetChart(
+                            this.NpmChart,
+                            this.ChartMainTitle,
+                            this.Source,
                             param,
-                            ChartGroup,
-                            Measure,
-                            ChartType).Activate();
+                            this.ChartGroup,
+                            this.Measure,
+                            this.ChartType).Activate();
                         break;
                     case 3:
-                        GoalChart = new BudgetChart(
-                            GoalChart,
-                            ChartMainTitle,
-                            Source,
+                        this.GoalChart = new BudgetChart(
+                            this.GoalChart,
+                            this.ChartMainTitle,
+                            this.Source,
                             param,
-                            ChartGroup,
-                            Measure,
-                            ChartType).Activate();
+                            this.ChartGroup,
+                            this.Measure,
+                            this.ChartType).Activate();
                         break;
                     case 4:
-                        ObjectiveChart = new BudgetChart(
-                            ObjectiveChart,
-                            ChartMainTitle,
-                            Source,
+                        this.ObjectiveChart = new BudgetChart(
+                            this.ObjectiveChart,
+                            this.ChartMainTitle,
+                            this.Source,
                             param,
-                            ChartGroup,
-                            Measure,
-                            ChartType).Activate();
+                            this.ChartGroup,
+                            this.Measure,
+                            this.ChartType).Activate();
                         break;
                     case 5:
-                        DivisionChart = new BudgetChart(
-                            DivisionChart,
-                            ChartMainTitle,
-                            Source,
+                        this.DivisionChart = new BudgetChart(
+                            this.DivisionChart,
+                            this.ChartMainTitle,
+                            this.Source,
                             param,
-                            ChartGroup,
-                            Measure,
-                            ChartType).Activate();
+                            this.ChartGroup,
+                            this.Measure,
+                            this.ChartType).Activate();
                         break;
                     case 6:
-                        AreaChart = new BudgetChart(
-                            AreaChart,
-                            ChartMainTitle,
-                            Source,
+                        this.AreaChart = new BudgetChart(
+                            this.AreaChart,
+                            this.ChartMainTitle,
+                            this.Source,
                             param,
-                            ChartGroup,
-                            Measure,
-                            ChartType).Activate();
+                            this.ChartGroup,
+                            this.Measure,
+                            this.ChartType).Activate();
                         break;
                     case 7:
-                        ProjectChart = new BudgetChart(
-                            ProjectChart,
-                            ChartMainTitle,
-                            Source,
+                        this.ProjectChart = new BudgetChart(
+                            this.ProjectChart,
+                            this.ChartMainTitle,
+                            this.Source,
                             param,
-                            ChartGroup,
-                            Measure,
-                            ChartType).Activate();
+                            this.ChartGroup,
+                            this.Measure,
+                            this.ChartType).Activate();
                         break;
                 }
             }
@@ -717,28 +1030,52 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The assign chart f ilter controls.
+        /// </summary>
+        /// <param name="filter1">
+        /// The filter 1.
+        /// </param>
+        /// <param name="filter2">
+        /// The filter 2.
+        /// </param>
+        /// <param name="filter3">
+        /// The filter 3.
+        /// </param>
+        /// <param name="filter4">
+        /// The filter 4.
+        /// </param>
         private void AssignChartFIlterControls(
             MetroSetComboBox filter1,
             MetroSetComboBox filter2,
             MetroSetComboBox filter3,
             MetroSetComboBox filter4)
         {
-            ChartFilterControl1 = filter1;
-            ChartFilterControl1.SelectionChangeCommitted += ChartFilterControl1_ItemSelected;
-            ChartFilterControl2 = filter2;
-            ChartFilterControl2.SelectionChangeCommitted += ChartFilterControl2_ItemSelected;
-            ChartFilterControl3 = filter3;
-            ChartFilterControl3.SelectionChangeCommitted += ChartFilterControl3_ItemSelected;
-            ChartFilterControl4 = filter4;
-            ChartFilterControl4.SelectionChangeCommitted += ChartFilterControl4_ItemSelected;
+            this.ChartFilterControl1 = filter1;
+            this.ChartFilterControl1.SelectionChangeCommitted += this.ChartFilterControl1_ItemSelected;
+            this.ChartFilterControl2 = filter2;
+            this.ChartFilterControl2.SelectionChangeCommitted += this.ChartFilterControl2_ItemSelected;
+            this.ChartFilterControl3 = filter3;
+            this.ChartFilterControl3.SelectionChangeCommitted += this.ChartFilterControl3_ItemSelected;
+            this.ChartFilterControl4 = filter4;
+            this.ChartFilterControl4.SelectionChangeCommitted += this.ChartFilterControl4_ItemSelected;
         }
 
+        /// <summary>
+        /// The assign chart expanders.
+        /// </summary>
+        /// <param name="panel1">
+        /// The panel 1.
+        /// </param>
+        /// <param name="panel2">
+        /// The panel 2.
+        /// </param>
         private void AssignChartExpanders(ExpandCollapsePanel panel1, ExpandCollapsePanel panel2)
         {
             try
             {
-                Expander1 = panel1;
-                Expander2 = panel2;
+                this.Expander1 = panel1;
+                this.Expander2 = panel2;
             }
             catch (Exception ex)
             {
@@ -746,242 +1083,284 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The expander_ click.
+        /// </summary>
+        /// <param name="sender">
+        /// The sender.
+        /// </param>
+        /// <param name="e">
+        /// The e.
+        /// </param>
         private void Expander_Click(object sender, EventArgs e)
         {
             ExpandCollapsePanel exp = sender as ExpandCollapsePanel;
-            switch (CurrentTabIndex)
+            switch (this.CurrentTabIndex)
             {
                 case 0:
-                    if (FundExpander2.IsExpanded == true)
+                    if (this.FundExpander2.IsExpanded)
                     {
-                        FundExpander2.IsExpanded = false;
+                        this.FundExpander2.IsExpanded = false;
                     }
 
                     break;
                 case 1:
-                    if (BocExpander2.IsExpanded == true)
+                    if (this.BocExpander2.IsExpanded)
                     {
-                        BocExpander2.IsExpanded = false;
+                        this.BocExpander2.IsExpanded = false;
                     }
 
                     break;
                 case 3:
-                    if (NpmExpander2.IsExpanded == true)
+                    if (this.NpmExpander2.IsExpanded)
                     {
-                        NpmExpander2.IsExpanded = false;
+                        this.NpmExpander2.IsExpanded = false;
                     }
 
                     break;
                 case 4:
-                    if (GoalExpander2.IsExpanded == true)
+                    if (this.GoalExpander2.IsExpanded)
                     {
-                        GoalExpander2.IsExpanded = false;
+                        this.GoalExpander2.IsExpanded = false;
                     }
 
                     break;
                 case 5:
-                    if (ObjectiveExpander2.IsExpanded == true)
+                    if (this.ObjectiveExpander2.IsExpanded)
                     {
-                        ObjectiveExpander2.IsExpanded = false;
+                        this.ObjectiveExpander2.IsExpanded = false;
                     }
 
                     break;
                 case 6:
-                    if (AreaExpander2.IsExpanded == true)
+                    if (this.AreaExpander2.IsExpanded)
                     {
-                        AreaExpander2.IsExpanded = false;
+                        this.AreaExpander2.IsExpanded = false;
                     }
 
                     break;
                 case 7:
-                    if (ProjectExpander2.IsExpanded == true)
+                    if (this.ProjectExpander2.IsExpanded)
                     {
-                        ProjectExpander2.IsExpanded = false;
+                        this.ProjectExpander2.IsExpanded = false;
                     }
 
                     break;
             }
         }
 
+        /// <summary>
+        /// The summary tab page_ tab selected.
+        /// </summary>
+        /// <param name="sender">
+        /// The sender.
+        /// </param>
+        /// <param name="e">
+        /// The e.
+        /// </param>
         private void SummaryTabPage_TabSelected(object sender, EventArgs e)
         {
             try
             {
-                SummaryTabControl = sender as TabControlAdv;
-                CurrentTabIndex = SummaryTabControl.SelectedIndex;
-                switch (CurrentTabIndex)
+                this.SummaryTabControl = sender as TabControlAdv;
+                this.CurrentTabIndex = this.SummaryTabControl.SelectedIndex;
+                switch (this.CurrentTabIndex)
                 {
                     case 0:
-                        AssignChartFIlterControls(FundFilter1, FundFilter2, FundFilter3, FundFilter4);
-                        AssignChartExpanders(FundExpander1, FundExpander2);
-                        PopulateFilterBoxItems(ChartFilterControl3, Field.FundName);
-                        if (Source == Source.RegionalAccounts)
+                        this.AssignChartFIlterControls(
+                            this.FundFilter1,
+                            this.FundFilter2,
+                            this.FundFilter3,
+                            this.FundFilter4);
+                        this.AssignChartExpanders(this.FundExpander1, this.FundExpander2);
+                        this.PopulateFilterBoxItems(this.ChartFilterControl3, Field.FundName);
+                        if (this.Source == Source.RegionalAccounts)
                         {
-                            FundFilter4.Items.Remove("RC");
+                            this.FundFilter4.Items.Remove("RC");
                         }
 
-                        ChartMainTitle = new string[] { "Funding By Appropriation" };
-                        FundChart = new BudgetChart(
-                            FundChart,
-                            ChartMainTitle,
-                            DbData,
+                        this.ChartMainTitle = new[] { "Funding By Appropriation" };
+                        this.FundChart = new BudgetChart(
+                            this.FundChart,
+                            this.ChartMainTitle,
+                            this.DbData,
                             Field.Fund,
                             Stat.Total,
                             ChartSeriesType.Column).Activate();
                         break;
                     case 1:
-                        AssignChartFIlterControls(BocFilter1, BocFilter2, BocFilter3, BocFilter4);
-                        AssignChartExpanders(BocExpander1, BocExpander2);
-                        PopulateFilterBoxItems(ChartFilterControl3, Field.BocName);
-                        if (DbData.Source == Source.RegionalAccounts)
+                        this.AssignChartFIlterControls(
+                            this.BocFilter1,
+                            this.BocFilter2,
+                            this.BocFilter3,
+                            this.BocFilter4);
+                        this.AssignChartExpanders(this.BocExpander1, this.BocExpander2);
+                        this.PopulateFilterBoxItems(this.ChartFilterControl3, Field.BocName);
+                        if (this.DbData.Source == Source.RegionalAccounts)
                         {
-                            BocFilter4.Items.Remove("RC");
+                            this.BocFilter4.Items.Remove("RC");
                         }
 
-                        ChartMainTitle = new string[] { "Funding By Budget Object Class" };
-                        BocChart = new BudgetChart(
-                            BocChart,
-                            ChartMainTitle,
-                            DbData,
+                        this.ChartMainTitle = new[] { "Funding By Budget Object Class" };
+                        this.BocChart = new BudgetChart(
+                            this.BocChart,
+                            this.ChartMainTitle,
+                            this.DbData,
                             Field.BocName,
                             Stat.Total,
                             ChartSeriesType.Column).Activate();
                         break;
                     case 2:
-                        AssignChartFIlterControls(NpmFilter1, NpmFilter2, NpmFilter3, NpmFilter4);
-                        AssignChartExpanders(NpmExpander1, NpmExpander2);
-                        PopulateFilterBoxItems(ChartFilterControl3, Field.NPM);
-                        if (DbData.Source == Source.RegionalAccounts)
+                        this.AssignChartFIlterControls(
+                            this.NpmFilter1,
+                            this.NpmFilter2,
+                            this.NpmFilter3,
+                            this.NpmFilter4);
+                        this.AssignChartExpanders(this.NpmExpander1, this.NpmExpander2);
+                        this.PopulateFilterBoxItems(this.ChartFilterControl3, Field.NPM);
+                        if (this.DbData.Source == Source.RegionalAccounts)
                         {
-                            NpmFilter4.Items.Remove("RC");
+                            this.NpmFilter4.Items.Remove("RC");
                         }
 
-                        ChartMainTitle = new string[] { "Funding By National Program" };
-                        NpmChart = new BudgetChart(
-                            NpmChart,
-                            ChartMainTitle,
-                            DbData,
+                        this.ChartMainTitle = new[] { "Funding By National Program" };
+                        this.NpmChart = new BudgetChart(
+                            this.NpmChart,
+                            this.ChartMainTitle,
+                            this.DbData,
                             Field.NPM,
                             Stat.Total,
                             ChartSeriesType.Column).Activate();
                         break;
                     case 3:
-                        AssignChartFIlterControls(GoalFilter1, GoalFilter2, GoalFilter3, GoalFilter4);
-                        AssignChartExpanders(GoalExpander1, GoalExpander2);
-                        PopulateFilterBoxItems(ChartFilterControl3, Field.GoalName);
-                        if (DbData.Source == Source.RegionalAccounts)
+                        this.AssignChartFIlterControls(
+                            this.GoalFilter1,
+                            this.GoalFilter2,
+                            this.GoalFilter3,
+                            this.GoalFilter4);
+                        this.AssignChartExpanders(this.GoalExpander1, this.GoalExpander2);
+                        this.PopulateFilterBoxItems(this.ChartFilterControl3, Field.GoalName);
+                        if (this.DbData.Source == Source.RegionalAccounts)
                         {
-                            GoalFilter4.Items.Remove("RC");
+                            this.GoalFilter4.Items.Remove("RC");
                         }
 
-                        ChartMainTitle = new string[] { "Funding By Agency Goal" };
-                        GoalChart = new BudgetChart(
-                            GoalChart,
-                            ChartMainTitle,
-                            DbData,
+                        this.ChartMainTitle = new[] { "Funding By Agency Goal" };
+                        this.GoalChart = new BudgetChart(
+                            this.GoalChart,
+                            this.ChartMainTitle,
+                            this.DbData,
                             Field.GoalName,
                             Stat.Total,
                             ChartSeriesType.Column).Activate();
                         break;
                     case 4:
-                        AssignChartFIlterControls(
-                            ObjectiveFilter1,
-                            ObjectiveFilter2,
-                            ObjectiveFilter3,
-                            ObjectiveFilter4);
-                        AssignChartExpanders(ObjectiveExpander1, ObjectiveExpander2);
-                        PopulateFilterBoxItems(ChartFilterControl3, Field.ObjectiveName);
-                        if (DbData.Source == Source.RegionalAccounts)
+                        this.AssignChartFIlterControls(
+                            this.ObjectiveFilter1,
+                            this.ObjectiveFilter2,
+                            this.ObjectiveFilter3,
+                            this.ObjectiveFilter4);
+                        this.AssignChartExpanders(this.ObjectiveExpander1, this.ObjectiveExpander2);
+                        this.PopulateFilterBoxItems(this.ChartFilterControl3, Field.ObjectiveName);
+                        if (this.DbData.Source == Source.RegionalAccounts)
                         {
-                            ObjectiveFilter4.Items.Remove("RC");
+                            this.ObjectiveFilter4.Items.Remove("RC");
                         }
 
-                        ChartMainTitle = new string[] { "Funding By Agency Objective" };
-                        ObjectiveChart = new BudgetChart(
-                            ObjectiveChart,
-                            ChartMainTitle,
-                            DbData,
+                        this.ChartMainTitle = new[] { "Funding By Agency Objective" };
+                        this.ObjectiveChart = new BudgetChart(
+                            this.ObjectiveChart,
+                            this.ChartMainTitle,
+                            this.DbData,
                             Field.ObjectiveName,
                             Stat.Total,
                             ChartSeriesType.Column).Activate();
                         break;
                     case 5:
-                        AssignChartFIlterControls(DivisionFilter1, DivisionFilter2, DivisionFilter3, DivisionFilter4);
-                        AssignChartExpanders(DivisionExpander1, DivisionExpander2);
-                        PopulateFilterBoxItems(ChartFilterControl3, Field.DivisionName);
-                        if (DbData.Source == Source.RegionalAccounts)
+                        this.AssignChartFIlterControls(
+                            this.DivisionFilter1,
+                            this.DivisionFilter2,
+                            this.DivisionFilter3,
+                            this.DivisionFilter4);
+                        this.AssignChartExpanders(this.DivisionExpander1, this.DivisionExpander2);
+                        this.PopulateFilterBoxItems(this.ChartFilterControl3, Field.DivisionName);
+                        if (this.DbData.Source == Source.RegionalAccounts)
                         {
-                            DivisionFilter4.Items.Remove("RC");
+                            this.DivisionFilter4.Items.Remove("RC");
                         }
 
-                        ChartMainTitle = new string[] { "Funding By Division" };
-                        DivisionChart = new BudgetChart(
-                            DivisionChart,
-                            ChartMainTitle,
-                            DbData,
+                        this.ChartMainTitle = new[] { "Funding By Division" };
+                        this.DivisionChart = new BudgetChart(
+                            this.DivisionChart,
+                            this.ChartMainTitle,
+                            this.DbData,
                             Field.RC,
                             Stat.Total,
                             ChartSeriesType.Column).Activate();
                         break;
                     case 6:
-                        AssignChartFIlterControls(AreaFilter1, AreaFilter2, AreaFilter3, AreaFilter4);
-                        AssignChartExpanders(AreaExpander1, AreaExpander2);
-                        PopulateFilterBoxItems(ChartFilterControl3, Field.ProgramAreaName);
-                        if (DbData.Source == Source.RegionalAccounts)
+                        this.AssignChartFIlterControls(
+                            this.AreaFilter1,
+                            this.AreaFilter2,
+                            this.AreaFilter3,
+                            this.AreaFilter4);
+                        this.AssignChartExpanders(this.AreaExpander1, this.AreaExpander2);
+                        this.PopulateFilterBoxItems(this.ChartFilterControl3, Field.ProgramAreaName);
+                        if (this.DbData.Source == Source.RegionalAccounts)
                         {
-                            AreaFilter4.Items.Remove("RC");
+                            this.AreaFilter4.Items.Remove("RC");
                         }
 
-                        ChartMainTitle = new string[] { "Funding By Program Area" };
-                        AreaChart = new BudgetChart(
-                            AreaChart,
-                            ChartMainTitle,
-                            DbData,
+                        this.ChartMainTitle = new[] { "Funding By Program Area" };
+                        this.AreaChart = new BudgetChart(
+                            this.AreaChart,
+                            this.ChartMainTitle,
+                            this.DbData,
                             Field.ProgramArea,
                             Stat.Total,
                             ChartSeriesType.Column).Activate();
                         break;
                     case 7:
-                        AssignChartFIlterControls(ProjectFilter1, ProjectFilter2, ProjectFilter3, ProjectFilter4);
-                        AssignChartExpanders(ProjectExpander1, ProjectExpander2);
-                        PopulateFilterBoxItems(ChartFilterControl3, Field.ProgramProjectName);
-                        if (DbData.Source == Source.RegionalAccounts)
+                        this.AssignChartFIlterControls(
+                            this.ProjectFilter1,
+                            this.ProjectFilter2,
+                            this.ProjectFilter3,
+                            this.ProjectFilter4);
+                        this.AssignChartExpanders(this.ProjectExpander1, this.ProjectExpander2);
+                        this.PopulateFilterBoxItems(this.ChartFilterControl3, Field.ProgramProjectName);
+                        if (this.DbData.Source == Source.RegionalAccounts)
                         {
-                            ProjectFilter4.Items.Remove("RC");
+                            this.ProjectFilter4.Items.Remove("RC");
                         }
 
-                        ChartMainTitle = new string[] { "Funding By Program Project" };
-                        ProjectChart = new BudgetChart(
-                            ProjectChart,
-                            ChartMainTitle,
-                            DbData,
+                        this.ChartMainTitle = new[] { "Funding By Program Project" };
+                        this.ProjectChart = new BudgetChart(
+                            this.ProjectChart,
+                            this.ChartMainTitle,
+                            this.DbData,
                             Field.ProgramProjectCode,
                             Stat.Total,
                             ChartSeriesType.Column).Activate();
                         break;
                     case 8:
-                        int current = BindingSource.Position;
-                        DataRowView dvrow = (DataRowView)BindingSource.Current;
-                        DbRow = Table.Rows[current];
-                        int id = int.Parse(DbRow["ID"].ToString());
+                        int current = this.BindingSource.Position;
+                        DataRowView dvrow = (DataRowView)this.BindingSource.Current;
+                        this.DbRow = this.Table.Rows[current];
+                        int id = int.Parse(this.DbRow["ID"].ToString());
                         string code = dvrow["Code"].ToString();
                         Dictionary<string, object> p = new Dictionary<string, object> { ["ID"] = id };
-                        DataBuilder data = new DataBuilder(Source, Provider.SQLite, p);
-                        decimal total = DbData.GetTotal(DbData.DbTable);
-                        decimal amt = decimal.Parse(DbRow["Amount"].ToString());
+                        DataBuilder data = new DataBuilder(this.Source, Provider.SQLite, p);
+                        decimal total = this.DbData.GetTotal(this.DbData.DbTable);
+                        decimal amt = decimal.Parse(this.DbRow["Amount"].ToString());
                         Dictionary<string, double> d =
-                            new Dictionary<string, double>()
-                            {
-                                ["Total"] = (double)total,
-                                ["Allocation"] = (double)amt
-                            };
-                        ChartMainTitle = new string[]
-                                         {
-                                             $"{Source.ToString()} {DbRow["ProgramProjectName"].ToString()} Funding = {amt.ToString("c")}"
-                                         };
-                        AccountChart = new BudgetChart(
-                            AccountChart,
-                            ChartMainTitle,
+                            new Dictionary<string, double> { ["Total"] = (double)total, ["Allocation"] = (double)amt };
+                        this.ChartMainTitle = new[]
+                                              {
+                                                  $"{this.Source.ToString()} {this.DbRow["ProgramProjectName"]} Funding = {amt.ToString("c")}"
+                                              };
+                        this.AccountChart = new BudgetChart(
+                            this.AccountChart,
+                            this.ChartMainTitle,
                             d,
                             Field.ProgramProjectCode,
                             Stat.Total,
@@ -995,22 +1374,34 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The get title.
+        /// </summary>
+        /// <param name="tab">
+        /// The tab.
+        /// </param>
+        /// <param name="filter">
+        /// The filter.
+        /// </param>
+        /// <returns>
+        /// The <see cref="string[]"/>.
+        /// </returns>
         private string[] GetTitle(TabControlAdv tab, MetroSetComboBox filter)
         {
             try
             {
-                string category = tab.TabPages[CurrentTabIndex].Tag.ToString();
+                string category = tab.TabPages[this.CurrentTabIndex].Tag.ToString();
                 int index = filter.SelectedIndex;
                 switch (index)
                 {
                     case 0:
-                        return new string[] { string.Format("Total Funding by {0}", category) };
+                        return new[] { string.Format("Total Funding by {0}", category) };
                     case 1:
-                        return new string[] { string.Format("Total Accounts by {0}", category) };
+                        return new[] { string.Format("Total Accounts by {0}", category) };
                     case 2:
-                        return new string[] { string.Format("Average Funding by {0}", category) };
+                        return new[] { string.Format("Average Funding by {0}", category) };
                     case 3:
-                        return new string[] { string.Format("Funding Percentage by {0}", category) };
+                        return new[] { string.Format("Funding Percentage by {0}", category) };
                 }
 
                 return null;
@@ -1022,6 +1413,24 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The get title.
+        /// </summary>
+        /// <param name="tab">
+        /// The tab.
+        /// </param>
+        /// <param name="filter1">
+        /// The filter 1.
+        /// </param>
+        /// <param name="filter2">
+        /// The filter 2.
+        /// </param>
+        /// <param name="filter3">
+        /// The filter 3.
+        /// </param>
+        /// <returns>
+        /// The <see cref="string[]"/>.
+        /// </returns>
         private string[] GetTitle(
             TabControlAdv tab,
             MetroSetComboBox filter1,
@@ -1031,19 +1440,19 @@ namespace BudgetExecution
             try
             {
                 string source = filter2.SelectedItem.ToString();
-                string category = tab.TabPages[CurrentTabIndex].Tag.ToString();
+                string category = tab.TabPages[this.CurrentTabIndex].Tag.ToString();
                 int index = filter1.SelectedIndex;
                 string grouping = filter3.SelectedItem.ToString();
                 switch (index)
                 {
                     case 0:
-                        return new string[] { string.Format("Total {0} Funding by {1}", source, grouping) };
+                        return new[] { string.Format("Total {0} Funding by {1}", source, grouping) };
                     case 1:
-                        return new string[] { string.Format("{0}  Accounts by {1}", source, grouping) };
+                        return new[] { string.Format("{0}  Accounts by {1}", source, grouping) };
                     case 2:
-                        return new string[] { string.Format("Average {0} Funding by {1}", source, grouping) };
+                        return new[] { string.Format("Average {0} Funding by {1}", source, grouping) };
                     case 3:
-                        return new string[] { string.Format("{0} Funding Percentage by {1}", source, grouping) };
+                        return new[] { string.Format("{0} Funding Percentage by {1}", source, grouping) };
                 }
 
                 return null;
@@ -1055,6 +1464,15 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The get selected row dictionary.
+        /// </summary>
+        /// <param name="dgv">
+        /// The dgv.
+        /// </param>
+        /// <returns>
+        /// The <see cref="Dictionary"/>.
+        /// </returns>
         private Dictionary<string, object> GetSelectedRowDictionary(DataGridView dgv)
         {
             try
@@ -1081,45 +1499,117 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The tab page adv 7_ click.
+        /// </summary>
+        /// <param name="sender">
+        /// The sender.
+        /// </param>
+        /// <param name="e">
+        /// The e.
+        /// </param>
         private void TabPageAdv7_Click(object sender, EventArgs e)
         {
         }
 
+        /// <summary>
+        /// The calendat button_ click.
+        /// </summary>
+        /// <param name="sender">
+        /// The sender.
+        /// </param>
+        /// <param name="e">
+        /// The e.
+        /// </param>
         private void CalendatButton_Click(object sender, EventArgs e)
         {
             Calendar cal = new Calendar();
             cal.Show();
         }
 
+        /// <summary>
+        /// The calculator button_ click.
+        /// </summary>
+        /// <param name="sender">
+        /// The sender.
+        /// </param>
+        /// <param name="e">
+        /// The e.
+        /// </param>
         private void CalculatorButton_Click(object sender, EventArgs e)
         {
             CalculatorForm cf = new CalculatorForm();
             cf.Show();
         }
 
+        /// <summary>
+        /// The excel button_ click.
+        /// </summary>
+        /// <param name="sender">
+        /// The sender.
+        /// </param>
+        /// <param name="e">
+        /// The e.
+        /// </param>
         private void ExcelButton_Click(object sender, EventArgs e)
         {
             ExcelForm er = new ExcelForm();
             er.Show();
         }
 
+        /// <summary>
+        /// The tool strip separator 16_ click.
+        /// </summary>
+        /// <param name="sender">
+        /// The sender.
+        /// </param>
+        /// <param name="e">
+        /// The e.
+        /// </param>
         private void ToolStripSeparator16_Click(object sender, EventArgs e)
         {
         }
 
+        /// <summary>
+        /// The metro set label 9_ click.
+        /// </summary>
+        /// <param name="sender">
+        /// The sender.
+        /// </param>
+        /// <param name="e">
+        /// The e.
+        /// </param>
         private void MetroSetLabel9_Click(object sender, EventArgs e)
         {
         }
 
+        /// <summary>
+        /// The lbl count_ click.
+        /// </summary>
+        /// <param name="sender">
+        /// The sender.
+        /// </param>
+        /// <param name="e">
+        /// The e.
+        /// </param>
         private void LblCount_Click(object sender, EventArgs e)
         {
         }
 
+        /// <summary>
+        /// The add button_ on click.
+        /// </summary>
+        /// <param name="sender">
+        /// The sender.
+        /// </param>
+        /// <param name="e">
+        /// The e.
+        /// </param>
         private void AddButton_OnClick(object sender, EventArgs e)
         {
             try
             {
-                AccountManager am = new AccountManager(Source.PRC, Provider);
+                AccountManager am = new AccountManager(Source.PRC, this.Provider);
                 am.AccountNavigator.Visible = false;
                 am.UpdateTab.TabVisible = false;
                 am.Show();
@@ -1130,13 +1620,22 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The copy button_ on click.
+        /// </summary>
+        /// <param name="sender">
+        /// The sender.
+        /// </param>
+        /// <param name="e">
+        /// The e.
+        /// </param>
         private void CopyButton_OnClick(object sender, EventArgs e)
         {
             try
             {
-                DataRowView view = (DataRowView)BindingSource.Current;
+                DataRowView view = (DataRowView)this.BindingSource.Current;
                 Dictionary<string, object> prc = new PRC(view.Row).GetDataFields();
-                AccountManager am = new AccountManager(Source, Provider, prc);
+                AccountManager am = new AccountManager(this.Source, this.Provider, prc);
                 am.AccountNavigator.Visible = false;
                 am.AddNewTab.TabVisible = false;
                 am.Show();
@@ -1147,13 +1646,22 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The grid_ on double click.
+        /// </summary>
+        /// <param name="sender">
+        /// The sender.
+        /// </param>
+        /// <param name="e">
+        /// The e.
+        /// </param>
         private void Grid_OnDoubleClick(object sender, EventArgs e)
         {
             try
             {
-                DataRowView view = (DataRowView)BindingSource.Current;
+                DataRowView view = (DataRowView)this.BindingSource.Current;
                 Dictionary<string, object> prc = new PRC(view.Row).GetDataFields();
-                AccountManager am = new AccountManager(Source, Provider.SQLite, prc);
+                AccountManager am = new AccountManager(this.Source, Provider.SQLite, prc);
                 am.Show();
             }
             catch (Exception ex)
@@ -1162,18 +1670,36 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The reprogram button_ on click.
+        /// </summary>
+        /// <param name="sender">
+        /// The sender.
+        /// </param>
+        /// <param name="e">
+        /// The e.
+        /// </param>
         private void ReprogramButton_OnClick(object sender, EventArgs e)
         {
             Reprogramming rp = new Reprogramming();
             rp.Show();
         }
 
+        /// <summary>
+        /// The update account chart.
+        /// </summary>
+        /// <param name="sender">
+        /// The sender.
+        /// </param>
+        /// <param name="e">
+        /// The e.
+        /// </param>
         private void UpdateAccountChart(object sender, EventArgs e)
         {
-            int current = BindingSource.Position;
-            DataRowView dvrow = (DataRowView)BindingSource.Current;
-            DbRow = Table.Rows[current];
-            int id = int.Parse(DbRow["ID"].ToString());
+            int current = this.BindingSource.Position;
+            DataRowView dvrow = (DataRowView)this.BindingSource.Current;
+            this.DbRow = this.Table.Rows[current];
+            int id = int.Parse(this.DbRow["ID"].ToString());
             string code = dvrow["Code"].ToString();
             Dictionary<string, object> p = new Dictionary<string, object> { ["ID"] = id };
             DataBuilder data = new DataBuilder(
@@ -1181,38 +1707,74 @@ namespace BudgetExecution
                 Provider.SQLite,
                 new Dictionary<string, object> { ["Code"] = code });
             decimal total = data.Total;
-            decimal amt = decimal.Parse(DbRow["Amount"].ToString());
+            decimal amt = decimal.Parse(this.DbRow["Amount"].ToString());
             Dictionary<string, double> d =
                 new Dictionary<string, double> { ["Total"] = (double)total, ["Allocation"] = (double)amt };
-            ChartMainTitle = new string[]
-                             {
-                                 $"{Source.ToString()} {DbRow["ProgramProjectName"].ToString()} Funding = {amt.ToString("c")}"
-                             };
-            AccountChart = new BudgetChart(
-                AccountChart,
-                ChartMainTitle,
+            this.ChartMainTitle = new[]
+                                  {
+                                      $"{this.Source.ToString()} {this.DbRow["ProgramProjectName"]} Funding = {amt.ToString("c")}"
+                                  };
+            this.AccountChart = new BudgetChart(
+                this.AccountChart,
+                this.ChartMainTitle,
                 d,
                 Field.ProgramProjectCode,
                 Stat.Total,
                 ChartSeriesType.Column).Activate();
         }
 
+        /// <summary>
+        /// The account tools button_ on click.
+        /// </summary>
+        /// <param name="sender">
+        /// The sender.
+        /// </param>
+        /// <param name="e">
+        /// The e.
+        /// </param>
         private void AccountToolsButton_OnClick(object sender, EventArgs e)
         {
         }
 
+        /// <summary>
+        /// The account chart_ click.
+        /// </summary>
+        /// <param name="sender">
+        /// The sender.
+        /// </param>
+        /// <param name="e">
+        /// The e.
+        /// </param>
         private void AccountChart_Click(object sender, EventArgs e)
         {
         }
 
+        /// <summary>
+        /// The button 4_ click.
+        /// </summary>
+        /// <param name="sender">
+        /// The sender.
+        /// </param>
+        /// <param name="e">
+        /// The e.
+        /// </param>
         private void Button4_Click(object sender, EventArgs e)
         {
-            BindingSource.MovePrevious();
+            this.BindingSource.MovePrevious();
         }
 
+        /// <summary>
+        /// The button 5_ click.
+        /// </summary>
+        /// <param name="sender">
+        /// The sender.
+        /// </param>
+        /// <param name="e">
+        /// The e.
+        /// </param>
         private void button5_Click(object sender, EventArgs e)
         {
-            BindingSource.MoveNext();
+            this.BindingSource.MoveNext();
         }
     }
 }

@@ -1,13 +1,18 @@
 // <copyright file="ExcelForm.cs" company="PlaceholderCompany">
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
+
 namespace BudgetExecution
 {
     using System;
     using System.Collections.Generic;
     using System.Data;
+    using System.Drawing;
     using System.Windows.Forms;
 
+    using MetroSet_UI.Controls;
+
+    using Syncfusion.Styles;
     using Syncfusion.Windows.Forms;
     using Syncfusion.WinForms.DataGrid.Events;
 
@@ -26,6 +31,25 @@ namespace BudgetExecution
             InitializeComponent();
             Source = source;
             Provider = provider;
+            DbData = new DataBuilder(source, provider);
+            BindingSource = new BindingSource();
+            Table = DbData.DbTable;
+            BindingSource.DataSource = Table;
+            ProgramElements = DbData.ProgramElements;
+            Ninja = new FormData(source, provider);
+        }
+
+        public ExcelForm(Source source, Provider provider, Dictionary<string, object> p)
+        {
+            InitializeComponent();
+            Source = source;
+            Provider = provider;
+            DbData = new DataBuilder(source, provider, p);
+            BindingSource = new BindingSource();
+            Table = DbData.DbTable;
+            BindingSource.DataSource = Table;
+            ProgramElements = DbData.ProgramElements;
+            Ninja = new FormData(source, provider, p);
         }
 
         // PROPERTIES
@@ -46,8 +70,57 @@ namespace BudgetExecution
         internal Dictionary<string, string[]> ProgramElements { get; set; }
 
         internal DataTable Table { get; set; }
+        
+        internal FormData Ninja { get; set; }
 
         // METHODS
+        internal void InitializeFilterButtons(Control control, string[] list)
+        {
+            try
+            {
+                control.Controls.Clear();
+                foreach (string f in list)
+                {
+                    MetroSetButton b = new MetroSetButton();
+                    b.Text = f;
+                    b.Font = new Font("Segoe UI", 8f);
+                    b.NormalColor = Color.Black;
+                    b.NormalTextColor = SystemColors.MenuHighlight;
+                    b.NormalBorderColor = Color.Black;
+                    b.HoverBorderColor = Color.Blue;
+                    b.HoverColor = Color.SteelBlue;
+                    b.HoverTextColor = Color.AntiqueWhite;
+                    b.Size = new Size(175, 30);
+                    b.Margin = new Padding(3);
+                    b.Padding = new Padding(1);
+                    control.Controls.Add(b);
+                    control.AutoSize = true;
+                    b.Tag = f;
+                }
+            }
+            catch (Exception ex)
+            {
+                new Error(ex).ShowDialog();
+            }
+        }
+
+        internal void PopulateFilterPanel(FlowLayoutPanel fitlerControl, string[] filter)
+        {
+            try
+            {
+                InitializeFilterButtons(fitlerControl, filter);
+                foreach (MetroSetComboBox c in fitlerControl.Controls)
+                {
+                    var msb = new MetroSetButton();
+                    InitializeFilterButtons(msb, filter);
+                }
+            }
+            catch (Exception ex)
+            {
+                new Error(ex).ShowDialog();
+            }
+        }
+
         private void CalculatorButton_OnClick(object sender, EventArgs e)
         {
             CalculatorForm cf = new CalculatorForm();
@@ -64,8 +137,8 @@ namespace BudgetExecution
         {
             Reprogramming rf = new Reprogramming();
             rf.Show();
-        }     
-        
+        }
+
         private void PreviousButton_OnClick(object sender, EventArgs e)
         {
             BindingSource.MovePrevious();

@@ -730,7 +730,7 @@
             this.toolStripButton11.RightToLeftAutoMirrorImage = true;
             this.toolStripButton11.Size = new System.Drawing.Size(24, 25);
             this.toolStripButton11.Text = "Next";
-            this.superToolTip1.SetToolTip(this.toolStripButton11, toolTipInfo1);
+            this.superToolTip1.SetToolTip(this.toolStripButton11, toolTipInfo2);
             // 
             // toolStripSeparator13
             // 
@@ -869,7 +869,7 @@
             this.toolStripButton16.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton16.Name = "toolStripButton16";
             this.toolStripButton16.Size = new System.Drawing.Size(24, 24);
-            this.superToolTip1.SetToolTip(this.toolStripButton16, toolTipInfo1);
+            this.superToolTip1.SetToolTip(this.toolStripButton16, toolTipInfo2);
             this.toolStripButton16.Click += new System.EventHandler(this.ReprogrammingButton_OnClick);
             // 
             // button4
@@ -938,7 +938,6 @@
             this.button6.Size = new System.Drawing.Size(38, 37);
             this.button6.TabIndex = 15;
             this.button6.UseVisualStyleBackColor = false;
-            this.button6.Click += new System.EventHandler(this.CalculatorButton_Click);
             // 
             // metroSetTextBox2
             // 
@@ -1542,7 +1541,6 @@
             this.button1.Text = "Update";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
             // button2
             // 
@@ -1589,7 +1587,6 @@
             this.button7.Size = new System.Drawing.Size(38, 37);
             this.button7.TabIndex = 21;
             this.button7.UseVisualStyleBackColor = false;
-            this.button7.Click += new System.EventHandler(this.CalculatorButton_Click);
             // 
             // metroSetTextBox3
             // 

@@ -5,9 +5,12 @@
 namespace BudgetExecution
 {
     using System;
+    using System.Collections.Generic;
     using System.Data;
     using System.Runtime.InteropServices;
+    using System.Security.Policy;
     using System.Windows.Forms;
+
     using Excel = Microsoft.Office.Interop.Excel.Application;
     using Workbook = Microsoft.Office.Interop.Excel.Workbook;
     using Worksheet = Microsoft.Office.Interop.Excel.Worksheet;
@@ -33,6 +36,24 @@ namespace BudgetExecution
             Table = data;
             Excel = Create();
         }
+        
+        public ExcelReport(Source source, Provider provider)
+        {
+            Source = source;
+            Provider = provider;
+            DbData = new DataBuilder(Source, Provider);
+            Table = DbData.DbTable;
+            Excel = Create();
+        }
+                
+        public ExcelReport(Source source, Provider provider, Dictionary<string, object> p)
+        {
+            Source = source;
+            Provider = provider;
+            DbData = new DataBuilder(Source, Provider, p);
+            Table = DbData.DbTable;
+            Excel = Create();
+        }
 
         public ExcelReport(DataBuilder data)
         {
@@ -41,8 +62,11 @@ namespace BudgetExecution
             Excel = Create();
         }
 
-
         // PROPERTIES
+        public Source Source { get;set; }
+
+        public Provider Provider { get; set; }
+
         public DataBuilder DbData { get; set; }
 
         public DataTable Table { get; }
@@ -56,6 +80,11 @@ namespace BudgetExecution
         private Excel Excel { get; }
 
         // METHODS
+        public string GetConnectionString(string filepath)
+        {
+            return $@"Provider=Microsoft.ACE.OLEDB.12.0;DbData Source='{filepath}';Extended Properties='Excel 12.0 Macro;HDR=YES;IMEX=1'";
+        }
+
         internal string GetExternalFile()
         {
             try
@@ -75,11 +104,6 @@ namespace BudgetExecution
                 MessageBox.Show(ex.StackTrace);
                 return null;
             }
-        }
-
-        public string GetConnectionString(string filepath)
-        {
-            return $@"Provider=Microsoft.ACE.OLEDB.12.0;DbData Source='{filepath}';Extended Properties='Excel 12.0 Macro;HDR=YES;IMEX=1'";
         }
 
         internal Workbook ExportData(DataTable table)

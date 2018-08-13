@@ -94,22 +94,9 @@ namespace BudgetExecution
 
         public decimal Commitments { get; }
 
-        Dictionary<string, object> ReimbParam { get; }
+        public Dictionary<string, object> ReimbParam { get; }
 
         // METHODS
-        private Dictionary<string, object> GetColumnValues(string bfy, string fund)
-        {
-            try
-            {
-                return new Dictionary<string, object>() { ["BFY"] = bfy, ["Fund"] = fund };
-            }
-            catch (Exception ex)
-            {
-                new Error(ex).ShowDialog();
-                return null;
-            }
-        }
-
         public static Dictionary<string, object> GetInsertFields(Source source, Dictionary<string, object> param)
         {
             try
@@ -298,6 +285,19 @@ namespace BudgetExecution
             catch (Exception ex)
             {
                 new Error(ex).ShowDialog();
+            }
+        }
+
+        private Dictionary<string, object> GetColumnValues(string bfy, string fund)
+        {
+            try
+            {
+                return new Dictionary<string, object>() { ["BFY"] = bfy, ["Fund"] = fund };
+            }
+            catch (Exception ex)
+            {
+                new Error(ex).ShowDialog();
+                return null;
             }
         }
     }

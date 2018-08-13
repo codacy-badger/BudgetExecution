@@ -68,13 +68,13 @@ namespace BudgetExecution
 
         public DataRow DbRow { get; }
 
-        List<Label> Labels { get; set; }
+        public List<Label> Labels { get; set; }
 
-        List<MetroSetTextBox> TextBoxes { get; set; }
+        public List<MetroSetTextBox> TextBoxes { get; set; }
 
-        List<MetroSetComboBox> ComboBoxes { get; set; }
+        public List<MetroSetComboBox> ComboBoxes { get; set; }
 
-        FormData Ninja { get; set; }
+        public FormData Ninja { get; set; }
 
         // METHODS
         private void AccountManager_Load(object sender, EventArgs e)

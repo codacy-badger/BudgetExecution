@@ -86,66 +86,22 @@ namespace BudgetExecution
         internal DataFilter TableFilter { get; set; }
 
         // METHODS
-
-        private Dictionary<string, object> GetDataFields(DataTable table)
+        public List<SQLiteParameter[]> GetParamList(DataTable table)
         {
             try
             {
-                int cct = table.Columns.Count;
-                int rct = table.Rows.Count;
-                DataRow row = table.Rows[0];
-                string[] col = table.GetFields();
-                object[] val = row.ItemArray;
-                Dictionary<string, object> param = new Dictionary<string, object>();
-                for (int i = 0; i < cct; i++)
-                    param.Add(col[i], val[i]);
-                return param;
-            }
-            catch (Exception e)
-            {
-                DialogResult  _ = new Error(e).ShowDialog();
-                return null;
-            }
-        }
-
-        private SQLiteParameter[] GetParamArray(DataRow row)
-        {
-            try
-            {
-                var cols = row.Table.Columns;
-                var item = row.ItemArray;
-                SQLiteParameter[] param = new SQLiteParameter[row.ItemArray.Length];
-                for (int i = 0; i < row.ItemArray.Length; i++)
+                var paramlist = new List<SQLiteParameter[]>();
+                foreach (DataRow row in table.Rows)
                 {
-                    param[i] = new SQLiteParameter(cols[i].ColumnName, item[i]);
+                    paramlist.Add(GetParamArray(row));
                 }
 
-                return param;
+                return paramlist;
             }
             catch (Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
-            }
-        }
-
-        private void CreateTextBoxPrcBindings(DataGridView dgv, MetroSetTextBox[] tbx)
-        {
-            try
-            {
-                tbx[0].DataBindings.Add(new Binding("Text", dgv.DataSource, "ID"));
-                tbx[1].DataBindings.Add(new Binding("Text", dgv.DataSource, "BudgetLevel"));
-                tbx[2].DataBindings.Add(new Binding("Text", dgv.DataSource, "BFY"));
-                tbx[3].DataBindings.Add(new Binding("Text", dgv.DataSource, "Fund"));
-                tbx[4].DataBindings.Add(new Binding("Text", dgv.DataSource, "Org"));
-                tbx[5].DataBindings.Add(new Binding("Text", dgv.DataSource, "RC"));
-                tbx[6].DataBindings.Add(new Binding("Text", dgv.DataSource, "Code"));
-                tbx[7].DataBindings.Add(new Binding("Text", dgv.DataSource, "BOC"));
-                tbx[8].DataBindings.Add(new Binding("Text", dgv.DataSource, "Amount"));
-            }
-            catch (Exception ex)
-            {
-                new Error(ex).ShowDialog();
             }
         }
 
@@ -186,11 +142,9 @@ namespace BudgetExecution
                 DataTable table = (DataTable)bs.DataSource;
                 string[] field = table.GetFields();
                 DataRow row = table.Rows[bs.Position];
-                Binding binding;
                 for(int i = 0; i < tb.Count; i++)
                 {
-                    binding = new Binding("Text", row, field[i]);
-                    tb[i].DataBindings.Add(binding);
+                    tb[i].DataBindings.Add(new Binding("Text", row, field[i]));
                 }
             }
             catch (Exception ex)
@@ -199,12 +153,11 @@ namespace BudgetExecution
             }
         }
 
-        internal void BocButton_OnSelect(object sender, EventArgs e)
+        internal void BocButton_OnSelect(MetroSetComboBox mscb)
         {
-            Button listbox = sender as Button;
             try
             {
-                BindingSource.Filter = $"{listbox.Tag.ToString()} = '{listbox.Text}'";
+                BindingSource.Filter = $"{mscb.Tag} = '{mscb.SelectedItem}'";
             }
             catch (Exception ex)
             {
@@ -217,7 +170,10 @@ namespace BudgetExecution
             ListBox listbox = sender as ListBox;
             try
             {
-                BindingSource.Filter = $"{listbox.Tag.ToString()} = '{listbox.SelectedItem.ToString()}'";
+                if (listbox != null)
+                {
+                    this.BindingSource.Filter = $"{listbox.Tag} = '{listbox.SelectedItem}'";
+                }
             }
             catch (Exception ex)
             {
@@ -241,9 +197,10 @@ namespace BudgetExecution
             try
             {
                 InitializeFilterButtons(fitlerControl, filter);
-                foreach (Control c in fitlerControl.Controls)
+                foreach (MetroSetComboBox c in fitlerControl.Controls)
                 {
-                    c.Click += BocButton_OnSelect;
+                    var msb = new MetroSetButton();                    
+                    InitializeFilterButtons(msb, filter);
                 }
             }
             catch (Exception ex)
@@ -404,6 +361,68 @@ namespace BudgetExecution
             return -1;
         }
 
+        private Dictionary<string, object> GetDataFields(DataTable table)
+        {
+            try
+            {
+                int cct = table.Columns.Count;
+                int rct = table.Rows.Count;
+                DataRow row = table.Rows[0];
+                string[] col = table.GetFields();
+                object[] val = row.ItemArray;
+                Dictionary<string, object> param = new Dictionary<string, object>();
+                for (int i = 0; i < cct; i++)
+                    param.Add(col[i], val[i]);
+                return param;
+            }
+            catch (Exception e)
+            {
+                new Error(e).ShowDialog();
+                return null;
+            }
+        }
+
+        private SQLiteParameter[] GetParamArray(DataRow row)
+        {
+            try
+            {
+                var cols = row.Table.Columns;
+                var item = row.ItemArray;
+                SQLiteParameter[] param = new SQLiteParameter[row.ItemArray.Length];
+                for (int i = 0; i < row.ItemArray.Length; i++)
+                {
+                    param[i] = new SQLiteParameter(cols[i].ColumnName, item[i]);
+                }
+
+                return param;
+            }
+            catch (Exception ex)
+            {
+                new Error(ex).ShowDialog();
+                return null;
+            }
+        }
+
+        private void CreateTextBoxPrcBindings(DataGridView dgv, MetroSetTextBox[] tbx)
+        {
+            try
+            {
+                tbx[0].DataBindings.Add(new Binding("Text", dgv.DataSource, "ID"));
+                tbx[1].DataBindings.Add(new Binding("Text", dgv.DataSource, "BudgetLevel"));
+                tbx[2].DataBindings.Add(new Binding("Text", dgv.DataSource, "BFY"));
+                tbx[3].DataBindings.Add(new Binding("Text", dgv.DataSource, "Fund"));
+                tbx[4].DataBindings.Add(new Binding("Text", dgv.DataSource, "Org"));
+                tbx[5].DataBindings.Add(new Binding("Text", dgv.DataSource, "RC"));
+                tbx[6].DataBindings.Add(new Binding("Text", dgv.DataSource, "Code"));
+                tbx[7].DataBindings.Add(new Binding("Text", dgv.DataSource, "BOC"));
+                tbx[8].DataBindings.Add(new Binding("Text", dgv.DataSource, "Amount"));
+            }
+            catch (Exception ex)
+            {
+                new Error(ex).ShowDialog();
+            }
+        }
+
         private void CalculatorButton_OnClick(object sender, EventArgs e)
         {
             CalculatorForm cf = new CalculatorForm();
@@ -422,22 +441,43 @@ namespace BudgetExecution
             rf.Show();
         }
 
-        public List<SQLiteParameter[]> GetParamList(DataTable table)
+        private void PreviousButton_OnClick(object sender, EventArgs e)
+        {
+            BindingSource.MovePrevious();
+        }
+
+        private void NextButton_OnClick(object sender, EventArgs e)
+        {
+            BindingSource.MoveNext();
+        }
+
+        private void AddButton_OnClick(object sender, EventArgs e)
         {
             try
             {
-                var paramlist = new List<SQLiteParameter[]>();
-                foreach (DataRow row in table.Rows)
-                {
-                    paramlist.Add(GetParamArray(row));
-                }
-
-                return paramlist;
+                RecordManager am = new RecordManager(Source, Provider);
+                am.Show();
             }
             catch (Exception ex)
             {
                 new Error(ex).ShowDialog();
-                return null;
+            }
+        }
+
+        private void RefreshButton_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void CopyButton_OnClick(object sender, EventArgs e)
+        {
+            try
+            {
+                RecordManager am = new RecordManager(Source, Provider);
+                am.Show();
+            }
+            catch (Exception ex)
+            {
+                new Error(ex).ShowDialog();
             }
         }
 
