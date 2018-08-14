@@ -259,40 +259,19 @@ namespace BudgetExecution
                 return null;
             }
         }
-
-        public DbCommand GetDataCommand(Command cmd, DbParameter[] pmr, IDbConnection connection)
+        
+        public string GetSelectStatement(Source source, SQLiteParameter[] param)
         {
             try
             {
-                switch (cmd)
+                string vals = string.Empty;
+                foreach (SQLiteParameter p in param)
                 {
-                    case Command.Select:
-                        string sql = $"SELECT * FROM {Source.ToString()} WHERE {pmr[0].SourceColumn} = '{pmr[0].Value}";
-                        SQLiteCommand select = new SQLiteCommand(sql, connection as SQLiteConnection);
-                        foreach (DbParameter p in pmr) select.Parameters.Add(p);
-                        DataAdapter = new SQLiteDataAdapter(select);
-                        return select;
-                    case Command.Update:
-                        string upd = $"UPDATE {Source.ToString()} SET WHERE {pmr[0].SourceColumn} = '{pmr[0].Value}'";
-                        SQLiteCommand update = new SQLiteCommand(upd, connection as SQLiteConnection);
-                        foreach (DbParameter p in pmr) update.Parameters.Add(p);
-                        return update;
-                    case Command.Insert:
-                        string ins = $"UPDATE {Source.ToString()} SET WHERE {pmr[0].SourceColumn} = '{pmr[0].Value}'";
-                        SQLiteCommand insert = new SQLiteCommand(ins, connection as SQLiteConnection);
-                        foreach (DbParameter p in pmr) insert.Parameters.Add(p);
-                        return insert;
-                    case Command.Delete:
-                        string del = $"UPDATE {Source.ToString()} SET WHERE {pmr[0].SourceColumn} = '{pmr[0].Value}'";
-                        SQLiteCommand delete = new SQLiteCommand(del, connection as SQLiteConnection);
-                        foreach (DbParameter p in pmr) delete.Parameters.Add(p);
-                        return delete;
-                    default:
-                        string dft = $"SELECT * FROM {Source.ToString()} WHERE {pmr[0].SourceColumn} = '{pmr[0].Value}";
-                        SQLiteCommand def = new SQLiteCommand(dft, connection as SQLiteConnection);
-                        foreach (DbParameter p in pmr) def.Parameters.Add(p);
-                        return def;
+                    vals += $"{p.SourceColumn} = '{p.Value}' AND ";
                 }
+
+                vals = vals.Trim().Substring(0, vals.Length - 4);
+                return $"SELECT * FROM {source.ToString()} WHERE {vals}";
             }
             catch (Exception ex)
             {
@@ -301,17 +280,88 @@ namespace BudgetExecution
             }
         }
 
-        public SQLiteCommand GetSelectCommand(Provider provider, SQLiteParameter[] pmr, SQLiteConnection connection)
+        public string GetUpdateStatement(Source source, SQLiteParameter[] param)
+        {
+            try
+            {
+                string vals = string.Empty;
+                int pid = 0;
+                foreach (SQLiteParameter p in param)
+                {
+                    if (p.SourceColumn == "ID")
+                    {
+                        pid = (int)p.Value;
+                    }
+
+                    vals += $"{p.SourceColumn} = '{p.Value}' AND ";
+                }
+
+                vals = vals.Trim().Substring(0, vals.Length - 4);
+                return $"UPDATE {source.ToString()} SET {vals} WHERE ID = '{pid.ToString()}'";
+            }
+            catch (Exception ex)
+            {
+                new Error(ex).ShowDialog();
+                return null;
+            }
+        }
+
+        public string GetInsertStatement(Source source, SQLiteParameter[] param)
+        {
+            try
+            {
+                string cols = string.Empty;
+                string vals = string.Empty;
+                foreach (SQLiteParameter p in param)
+                {
+                    cols += $"{p.SourceColumn}, ";
+                    vals += $"{p.Value}, ";
+                }
+
+                cols = cols.Trim().Substring(0, cols.Length - 2);
+                vals = vals.Trim().Substring(0, vals.Length - 2);
+                return $"INSERT INTO {source.ToString()} ({cols}) VALUES ({vals})";
+            }
+            catch (Exception ex)
+            {
+                new Error(ex).ShowDialog();
+                return null;
+            }
+        }
+
+        public string GetDeleteStatement(Source source, SQLiteParameter[] param)
+        {
+            try
+            {
+                string vals = string.Empty;
+                foreach (SQLiteParameter p in param)
+                {
+                    vals += $"{p.SourceColumn} = '{p.Value}' AND ";
+                }
+
+                vals = vals.Trim().Substring(0, vals.Length - 4);
+                return $"DELETE * FROM {source.ToString()} WHERE {vals}";
+            }
+            catch (Exception ex)
+            {
+                new Error(ex).ShowDialog();
+                return null;
+            }
+        }
+
+        public SQLiteCommand GetSelectCommand(Source source, Provider provider, SQLiteParameter[] pmr, SQLiteConnection connection)
         {
             try
             {
                 if (provider == Provider.SQLite)
                 {
-
-                    string sql = $"SELECT * FROM {Source} WHERE {GetSelectParamString(pmr)}";
+                    string sql = GetSelectStatement(source, pmr);
                     SQLiteCommand select = new SQLiteCommand(sql, connection);
-                    foreach (SQLiteParameter p in pmr) select.Parameters.Add(p);
-                    DataAdapter = new SQLiteDataAdapter(select);
+                    foreach (SQLiteParameter p in pmr)
+                    {
+                        select.Parameters.Add(p);
+                    }
+
                     return select;
                 }
 
@@ -324,15 +374,20 @@ namespace BudgetExecution
             }
         }
 
-        public SQLiteCommand GetUpdateCommand(Provider provider, SQLiteParameter[] pmr, SQLiteConnection connection)
+        public SQLiteCommand GetUpdateCommand(Source source, Provider provider, SQLiteParameter[] pmr, SQLiteConnection connection)
         {
             try
             {
                 if (provider == Provider.SQLite)
                 {
-                    SQLiteCommand update = GetSelectCommand(provider, pmr, connection);
-                    SQLiteDataAdapter adapter = new SQLiteDataAdapter(update);
-                    return adapter.UpdateCommand;
+                    string sql = GetUpdateStatement(source, pmr);
+                    var update = new SQLiteCommand(sql, connection);
+                    foreach (SQLiteParameter p in pmr)
+                    {
+                        update.Parameters.Add(p);
+                    }
+
+                    return update;
                 }
 
                 return null;
@@ -344,15 +399,20 @@ namespace BudgetExecution
             }
         }
 
-        public SQLiteCommand GetInsertCommand(Provider provider, SQLiteParameter[] pmr, SQLiteConnection connection)
+        public SQLiteCommand GetInsertCommand(Source source, Provider provider, SQLiteParameter[] pmr, SQLiteConnection connection)
         {
             try
             {
                 if (provider == Provider.SQLite)
                 {
-                    SQLiteCommand insert = GetSelectCommand(provider, pmr, connection);
-                    SQLiteDataAdapter adapter = new SQLiteDataAdapter(insert);
-                    return adapter.InsertCommand;
+                    string sql = GetInsertStatement(source, pmr);
+                    var insert = new SQLiteCommand(sql, connection);
+                    foreach (SQLiteParameter p in pmr)
+                    {
+                        insert.Parameters.Add(p);
+                    }
+
+                    return insert;
                 }
 
                 return null;
@@ -360,6 +420,56 @@ namespace BudgetExecution
             catch (Exception e)
             {
                 new Error(e).ShowDialog();
+                return null;
+            }
+        }
+
+        public SQLiteCommand GetDeleteCommand(Source source, Provider provider, SQLiteParameter[] pmr, SQLiteConnection connection)
+        {
+            try
+            {
+                if (provider == Provider.SQLite)
+                {
+                    string sql = GetDeleteStatement(source, pmr);
+                    var delete = new SQLiteCommand(sql, connection);
+                    foreach (SQLiteParameter p in pmr)
+                    {
+                        delete.Parameters.Add(p);
+                    }
+
+                    return delete;
+                }
+
+                return null;
+            }
+            catch (Exception e)
+            {
+                new Error(e).ShowDialog();
+                return null;
+            }
+        }
+
+        public SQLiteCommand GetDataCommand(Source source, Provider provider, Sql cmd, SQLiteParameter[] pmr, SQLiteConnection connection)
+        {
+            try
+            {
+                switch (cmd)
+                {
+                    case Sql.SELECT:
+                        return GetSelectCommand(source, provider, pmr, connection);
+                    case Sql.UPDATE:
+                        return GetUpdateCommand(source, provider, pmr, connection);
+                    case Sql.INSERT:
+                        return GetInsertCommand(source, provider, pmr, connection);
+                    case Sql.DELETE:
+                        return GetDeleteCommand(source, provider, pmr, connection);
+                    default:
+                        return GetSelectCommand(source, provider, pmr, connection);
+                }
+            }
+            catch (Exception ex)
+            {
+                new Error(ex).ShowDialog();
                 return null;
             }
         }

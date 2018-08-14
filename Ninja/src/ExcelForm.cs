@@ -6,14 +6,17 @@ namespace BudgetExecution
 {
     using System;
     using System.Collections.Generic;
+    using System.Configuration;
     using System.Data;
     using System.Drawing;
+    using System.IO;
     using System.Windows.Forms;
 
     using MetroSet_UI.Controls;
 
     using Syncfusion.Styles;
     using Syncfusion.Windows.Forms;
+    using Syncfusion.Windows.Forms.Spreadsheet;
     using Syncfusion.WinForms.DataGrid.Events;
 
     public partial class ExcelForm : MetroForm
@@ -24,6 +27,13 @@ namespace BudgetExecution
             InitializeComponent();
             Source = Source.DivisionAccounts;
             Provider = Provider.SQLite;
+            DbData = new DataBuilder(Source, Provider);
+            BindingSource = new BindingSource();
+            Table = DbData.DbTable;
+            BindingSource.DataSource = Table;
+            ProgramElements = DbData.ProgramElements;
+            Ninja = new FormData(Source, Provider);
+            BudgetTemplate = GetInternalFilePath();
         }
 
         public ExcelForm(Source source, Provider provider)
@@ -36,7 +46,8 @@ namespace BudgetExecution
             Table = DbData.DbTable;
             BindingSource.DataSource = Table;
             ProgramElements = DbData.ProgramElements;
-            Ninja = new FormData(source, provider);
+            Ninja = new FormData(Source, Provider);
+            BudgetTemplate = GetInternalFilePath();
         }
 
         public ExcelForm(Source source, Provider provider, Dictionary<string, object> p)
@@ -44,12 +55,13 @@ namespace BudgetExecution
             InitializeComponent();
             Source = source;
             Provider = provider;
-            DbData = new DataBuilder(source, provider, p);
+            DbData = new DataBuilder(Source, Provider, p);
             BindingSource = new BindingSource();
             Table = DbData.DbTable;
             BindingSource.DataSource = Table;
             ProgramElements = DbData.ProgramElements;
-            Ninja = new FormData(source, provider, p);
+            Ninja = new FormData(Source, Provider, p);
+            BudgetTemplate = GetInternalFilePath();
         }
 
         // PROPERTIES
@@ -70,10 +82,40 @@ namespace BudgetExecution
         internal Dictionary<string, string[]> ProgramElements { get; set; }
 
         internal DataTable Table { get; set; }
-        
+
         internal FormData Ninja { get; set; }
 
+        internal string BudgetTemplate { get; set; }
+
         // METHODS
+        public string GetInternalFilePath()
+        {
+            try
+            {
+                var setting = new AppSettingsReader();
+                return (string)setting.GetValue("BudgetReport", typeof(string));
+            }
+            catch (Exception ex)
+            {
+                new Error(ex).ShowDialog();
+                return null;
+            }
+        }
+
+        internal void GetBinary()
+        {
+            try
+            {
+                var setting = new AppSettingsReader();
+                string report = (string)setting.GetValue("BudgetReport", typeof(string));
+                BudgetReport.Open(report);
+            }
+            catch (Exception ex)
+            {
+                new Error(ex).ShowDialog();
+            }
+        }
+
         internal void InitializeFilterButtons(Control control, string[] list)
         {
             try
@@ -177,6 +219,11 @@ namespace BudgetExecution
             {
                 new Error(ex).ShowDialog();
             }
+        }
+
+        private void ExcelForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

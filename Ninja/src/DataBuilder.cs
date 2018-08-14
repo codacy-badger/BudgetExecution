@@ -165,7 +165,7 @@ namespace BudgetExecution
             }
         }
 
-        private ExcelQuery GetExcelQuery(Source source, Provider provider, OleDbParameter[] pmr)
+        public ExcelQuery GetExcelQuery(Source source, Provider provider, OleDbParameter[] pmr)
         {
             try
             {
@@ -185,7 +185,7 @@ namespace BudgetExecution
             }
         }
 
-        private ExcelQuery GetExcelQuery(Source source, Provider provider, Dictionary<string, object> dpr)
+        public ExcelQuery GetExcelQuery(Source source, Provider provider, Dictionary<string, object> dpr)
         {
             try
             {
@@ -200,7 +200,7 @@ namespace BudgetExecution
             }
         }
 
-        private SQLiteParameter[] GetParamArray(DataRow row)
+        public SQLiteParameter[] GetParamArray(DataRow row)
         {
             try
             {

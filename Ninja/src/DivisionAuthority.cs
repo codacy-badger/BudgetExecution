@@ -9,16 +9,19 @@ namespace BudgetExecution
     using System.Data;
     using System.Linq;
 
+    using Remotion.Linq.Clauses;
+
     public class DivisionAuthority : IBudgetAuthority
     {
         // CONSTRUCTORS
         public DivisionAuthority()
         {
-            DbData = new DataBuilder(Source.DivisionAccounts, Provider.SQLite);
+            TableFilter = DataBuilder.FilterTable;
+            DbData = new DataBuilder(Source.DivisionAccounts, Provider.SQLite, new Dictionary<string, object> { ["BFY"] = FiscalYear });
             Metric = new PrcMetric(DbData);
             DataRecords = DbData.DbRow;
             DbTable = DbData.DbTable;
-            PrcAllocation = GetPrcArray(DbTable);
+            this.Allocation = GetPrcArray(DbTable);
             Total = Metric.Total;
             Count = Metric.Count;
             Average = Metric.Average;
@@ -33,23 +36,26 @@ namespace BudgetExecution
             {
                 FTE = GetFTE(DbData.DbTable);
             }
-
+        
+            Awards = new DataBuilder(Source.Awards, Provider.SQLite, new Dictionary<string, object> { ["BFY"] = FiscalYear }).DbTable;
             TableFilter = DataBuilder.FilterTable;
         }
 
         public DivisionAuthority(string rc)
         {
+            TableFilter = DataBuilder.FilterTable;
             RC = new RC(rc);
             Org = new Org(RC.Code);
-            DbData = new DataBuilder(Source.DivisionAccounts, Provider.SQLite, new Dictionary<string, object> { ["RC"] = rc });
+            DbData = new DataBuilder(Source.DivisionAccounts, Provider.SQLite, new Dictionary<string, object> { ["RC"] = RC.Code, ["BFY"] = FiscalYear });
             Metric = new PrcMetric(DbData);
             DbTable = DbData.DbTable;
             DataRecords = DbData.DbRow;
-            PrcAllocation = GetPrcArray(DbTable);
+            this.Allocation = GetPrcArray(DbTable);
             Total = Metric.Total;
             Count = Metric.Count;
             Average = Metric.Average;
             ProgramElements = GetProgramElements(DbTable);
+            Appropriation = GetAppropriation(ProgramElements["Fund"]);
             FundData = Metric.FundTotals;
             BocData = Metric.BocTotals;
             NpmData = Metric.NpmTotals;
@@ -61,7 +67,14 @@ namespace BudgetExecution
                 FTE = GetFTE(DbTable);
             }
 
-            TableFilter = DataBuilder.FilterTable;
+            EPM = GetEPM(DbTable);
+            LUST = GetLUST(DbTable);
+            STAG = GetSTAG(DbTable);
+            SUPERFUND = GetSUPERFUND(DbTable);
+            SF6A = GetSF6A(DbTable);
+            TR = GetTR(DbTable);
+            OIL = GetOIL(DbTable);
+            Awards = new DataBuilder(Source.Awards, Provider.SQLite, new Dictionary<string, object> { ["RC"] = RC.Code, ["BFY"] = FiscalYear }).DbTable;
         }
 
         // PROPERTIES
@@ -73,13 +86,37 @@ namespace BudgetExecution
 
         public DataRow[] DataRecords { get; }
 
-        public PRC[] PrcAllocation { get; }
+        public PRC[] Allocation { get; }
+
+        public Appropriation[] Appropriation { get; set; }
 
         public DataBuilder DbData { get; set; }
 
         public PrcMetric Metric { get; }
 
         public DataTable DbTable { get; }
+
+        public DataTable EPM { get; set; }
+
+        public DataTable SUPERFUND { get; set; }
+
+        public DataTable LUST { get; set; }
+
+        public DataTable STAG { get; set; }
+
+        public DataTable OIL { get; set; }
+
+        public DataTable TR { get; set; }
+
+        public DataTable SF6A { get; set; }
+
+        public DataTable DWH { get; set; }
+
+        public DataTable TS3 { get; set; }
+
+        public DataTable FS3{ get; set; }
+
+        public DataTable Awards { get; }
 
         public Dictionary<string, string[]> ProgramElements { get; }
 
@@ -91,7 +128,7 @@ namespace BudgetExecution
 
         public decimal Average { get; }
 
-        public DataFilter TableFilter { get; }
+        public DataFilter TableFilter { get; } 
 
         public Dictionary<string, decimal> ProgramData { get; set; }
 
@@ -108,6 +145,8 @@ namespace BudgetExecution
         public Dictionary<string, decimal> ProgramAreaData { get; set; }
 
         public Dictionary<string, decimal> ProjectData { get; set; }
+
+        public ExcelReport Budget { get; set; }
 
         // METHODS
         public decimal GetAverage(DataTable table)
@@ -257,5 +296,121 @@ namespace BudgetExecution
             }
         }
 
+        internal DataTable GetEPM(DataTable approp)
+        {
+            try
+            {
+                return approp.AsEnumerable().Where(a => a.Field<string>("Fund").StartsWith("B")).Select(a => a).CopyToDataTable();
+            }
+            catch (Exception ex)
+            {
+                new Error(ex).ShowDialog();
+                return null;
+            } 
+        }
+
+        internal DataTable GetSTAG(DataTable approp)
+        {
+            try
+            {
+                return approp.AsEnumerable().Where(a => a.Field<string>("Fund").StartsWith("E")).Select(a => a).CopyToDataTable();
+            }
+            catch (Exception ex)
+            {
+                new Error(ex).ShowDialog();
+                return null;
+            }
+        }
+
+        internal DataTable GetOIL(DataTable approp)
+        {
+            try
+            {
+                return approp.AsEnumerable().Where(a => a.Field<string>("Fund").StartsWith("H")).Select(a => a).CopyToDataTable();
+            }
+            catch (Exception ex)
+            {
+                new Error(ex).ShowDialog();
+                return null;
+            }
+        }
+
+        internal DataTable GetLUST(DataTable approp)
+        {
+            try
+            {
+                return approp.AsEnumerable().Where(a => a.Field<string>("Fund").StartsWith("F")).Select(a => a).CopyToDataTable();
+            }
+            catch (Exception ex)
+            {
+                new Error(ex).ShowDialog();
+                return null;
+            }
+        }
+        
+        internal DataTable GetSF6A(DataTable approp)
+        {
+            try
+            {
+                return approp.AsEnumerable().Where(a => a.Field<string>("Fund").Equals("T"))
+                    .Where(a => a.Field<string>("Org").StartsWith("6A")).Select(a => a).CopyToDataTable();
+            }
+            catch (Exception ex)
+            {
+                new Error(ex).ShowDialog();
+                return null;
+            }
+        }
+        
+        internal DataTable GetTR(DataTable approp)
+        {
+            try
+            {
+                return approp.AsEnumerable().Where(a => a.Field<string>("Fund").StartsWith("TR")).Select(a => a).CopyToDataTable();
+            }
+            catch (Exception ex)
+            {
+                new Error(ex).ShowDialog();
+                return null;
+            }
+        }
+        
+        internal DataTable GetSUPERFUND(DataTable approp)
+        {
+            try
+            {
+                return approp.AsEnumerable().Where(a => a.Field<string>("Fund").Equals("T"))
+                    .Where(p => p.Field<string>("Org").StartsWith("6A")).Select(a => a).CopyToDataTable();
+            }
+            catch (Exception ex)
+            {
+                new Error(ex).ShowDialog();
+                return null;
+            }
+        }
+
+        internal Appropriation[] GetAppropriation(string[] funds)
+        {
+            if (funds.Length > 0)
+            {
+                try
+                {
+                    Appropriation[] approp = new Appropriation[funds.Length];
+                    for (int i = 0; i < funds.Length; i++)
+                    {
+                        approp[i] = new Appropriation(funds[i], FiscalYear);
+                    }
+
+                    return approp;
+                }
+                catch (Exception ex)
+                {
+                    new Error(ex).ShowDialog();
+                    return null;
+                } 
+            }
+
+            return null;
+        }
     }
 }

@@ -70,10 +70,11 @@ namespace BudgetExecution
         ID, Amount, Obligations, Commitments, LeaveHours, WorkHours
     }
 
-    public enum Command
+    public enum Sql
     {
-        Select, Insert, Update, Delete, Create, Drop
+        SELECT, INSERT, UPDATE, DELETE, CREATE, DROP
     }
+
     public enum Field
     {
         ID, BudgetLevel, BFY, RPIO, Fund, FundName, BOC, BocName, Org, RC, Code, NPM, Goal, GoalName, Objective,
@@ -91,7 +92,6 @@ namespace BudgetExecution
     {
         Accounts, Awards, ControlNumbers, DivisionAccounts, DivisionObligations, Divisions, DWH, EJ, EN, Employees, EPM, ExternalTransfers, Funds, InternalTransfers, PRC, RegionalAccounts,
         Obligations, PayrollObligations, Sites, Reimbursables, LUST, OIL, STAG, SUPERFUND, MD, RC, RA, SF, Transfers, WQ,MM, WSA, WCF, MDR, XA, PAYROLL, FTE, TRAVEL, EXPENSES, CONTRACTS, GRANTS
-
     }
 
     public enum Stat

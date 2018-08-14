@@ -10,6 +10,7 @@ namespace BudgetExecution
     using System.Runtime.InteropServices;
     using System.Security.Policy;
     using System.Windows.Forms;
+    using System.Configuration;
 
     using Excel = Microsoft.Office.Interop.Excel.Application;
     using Workbook = Microsoft.Office.Interop.Excel.Workbook;
@@ -17,7 +18,7 @@ namespace BudgetExecution
 
     public class ExcelReport
     {
-        private string path = @"C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\Report\BudgetControlTemplate.xlsx";
+        private string path = @"C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\Report\BudgetControlTemplate.xlsb";
 
         // CONSTRUCTORS
         public ExcelReport()
@@ -26,40 +27,45 @@ namespace BudgetExecution
 
         public ExcelReport(string filepath)
         {
-            FilePath = filepath;
-            ConnectionString = GetConnectionString(FilePath);
-            Excel = Create();
+            ExternalFilePath = filepath;
+            ConnectionString = GetConnectionString(ExternalFilePath);
+            Excel = new Excel();
+            BudgetTemplate = GetInternalFilePath();
         }
 
         public ExcelReport(DataTable data)
         {
             Table = data;
-            Excel = Create();
+            Excel = new Excel();
+            BudgetTemplate = GetInternalFilePath();
         }
         
         public ExcelReport(Source source, Provider provider)
         {
             Source = source;
             Provider = provider;
-            DbData = new DataBuilder(Source, Provider);
+            this.D6 = new DivisionAuthority();
+            DbData = this.D6.DbData;
             Table = DbData.DbTable;
-            Excel = Create();
+            Authority = D6.GetAppropriation(DbData.ProgramElements["Fund"]);
+            Excel = new Excel();
+            BudgetTemplate = GetInternalFilePath();
         }
                 
         public ExcelReport(Source source, Provider provider, Dictionary<string, object> p)
         {
             Source = source;
             Provider = provider;
-            DbData = new DataBuilder(Source, Provider, p);
-            Table = DbData.DbTable;
-            Excel = Create();
-        }
+            if (p.ContainsKey("RC"))
+            {
+                this.D6 = new DivisionAuthority(p["RC"].ToString());
+                DbData = this.D6.DbData;
+                Table = DbData.DbTable;
+                Authority = D6.GetAppropriation(DbData.ProgramElements["Fund"]);
+            }
 
-        public ExcelReport(DataBuilder data)
-        {
-            DbData = data;
-            Table = DbData.DbTable;
-            Excel = Create();
+            Excel = new Excel();
+            BudgetTemplate = GetInternalFilePath();
         }
 
         // PROPERTIES
@@ -67,25 +73,28 @@ namespace BudgetExecution
 
         public Provider Provider { get; set; }
 
+        public DivisionAuthority D6 { get; set; }
+
         public DataBuilder DbData { get; set; }
 
-        public DataTable Table { get; }
+        public Appropriation[] Authority { get; set; }
 
-        public string FilePath { get; }
+        public DataTable Table { get; set; }
+
+        public string ExternalFilePath { get; set; }
+
+        public string InternalFilePath { get; set; }
+
+        public string BudgetTemplate { get; set; }
+
+        public Excel Excel { get; }
 
         internal string ConnectionString { get; set; }
 
         private DocInfo AccountingInfo { get; set; }
 
-        private Excel Excel { get; }
-
         // METHODS
-        public string GetConnectionString(string filepath)
-        {
-            return $@"Provider=Microsoft.ACE.OLEDB.12.0;DbData Source='{filepath}';Extended Properties='Excel 12.0 Macro;HDR=YES;IMEX=1'";
-        }
-
-        internal string GetExternalFile()
+        public string GetInternalFilePath()
         {
             try
             {
@@ -101,9 +110,39 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.StackTrace);
+                new Error(ex).ShowDialog();
                 return null;
             }
+        }
+        
+        public string GetExternalFilePath()
+        {
+            try
+            {
+                OpenFileDialog od = new OpenFileDialog();
+                od.Filter = "Excel Files | *.xls; * .xlsx";
+                DialogResult dr = od.ShowDialog();
+                if (dr == DialogResult.OK)
+                {
+                    return od.SafeFileName;
+                }
+
+                return null;
+            }
+            catch (Exception ex)
+            {
+                new Error(ex).ShowDialog();
+                return null;
+            }
+        }
+
+        public string GetConnectionString(string filepath)
+        {
+            return $@"Provider=Microsoft.ACE.OLEDB.12.0;DbData Source='{filepath}';Extended Properties='Excel 12.0 Macro;HDR=YES;IMEX=1'";
+        }
+
+        internal void LoadInternalData()
+        {
         }
 
         internal Workbook ExportData(DataTable table)
