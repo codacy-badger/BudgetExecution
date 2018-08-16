@@ -8,6 +8,7 @@ namespace BudgetExecution
     using System.Drawing;
     using System.IO;
     using System.Windows.Forms;
+
     using Syncfusion.Windows.Forms.Tools;
 
     public partial class FunctionalityForm : Syncfusion.Windows.Forms.MetroForm
@@ -53,14 +54,14 @@ namespace BudgetExecution
             a.Show();
         }
 
-        private void GetD6DataManager(object sender, System.EventArgs e)
+        private void GetD6DataManager(object sender, EventArgs e)
         {
             SQLiteData datamanager = new SQLiteData();
             datamanager.Show();
             Close();
         }
 
-        private void GetR6DataManager(object sender, System.EventArgs e)
+        private void GetR6DataManager(object sender, EventArgs e)
         {
             SQLiteData datamanager = new SQLiteData();
             datamanager.Show();

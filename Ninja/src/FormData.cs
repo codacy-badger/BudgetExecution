@@ -11,7 +11,9 @@ namespace BudgetExecution
     using System.Drawing;
     using System.Linq;
     using System.Windows.Forms;
+
     using MetroSet_UI.Controls;
+
     using Syncfusion.Windows.Forms;
     using Syncfusion.Windows.Forms.Chart;
 
@@ -24,15 +26,15 @@ namespace BudgetExecution
 
         public FormData(DataBuilder data, BindingSource bs, DataGridView dgv, BindingNavigator bn)
         {
-            this.DbData = data;
-            DbTable = this.DbData.DbTable;
+            DbData = data;
+            DbTable = DbData.DbTable;
             BindGridAndNavigator(DbTable, dgv, bs, bn);
             BindingSource = bs;
             Grid = dgv;
             BindingSource.DataSource = DbTable;
             Grid.DataSource = BindingSource.DataSource;
         }
-        
+
         public FormData(Source source, Provider provider)
         {
             DbData = new DataBuilder(source, provider);
@@ -142,7 +144,7 @@ namespace BudgetExecution
                 DataTable table = (DataTable)bs.DataSource;
                 string[] field = table.GetFields();
                 DataRow row = table.Rows[bs.Position];
-                for(int i = 0; i < tb.Count; i++)
+                for (int i = 0; i < tb.Count; i++)
                 {
                     tb[i].DataBindings.Add(new Binding("Text", row, field[i]));
                 }
@@ -172,7 +174,7 @@ namespace BudgetExecution
             {
                 if (listbox != null)
                 {
-                    this.BindingSource.Filter = $"{listbox.Tag} = '{listbox.SelectedItem}'";
+                    BindingSource.Filter = $"{listbox.Tag} = '{listbox.SelectedItem}'";
                 }
             }
             catch (Exception ex)
@@ -199,7 +201,7 @@ namespace BudgetExecution
                 InitializeFilterButtons(fitlerControl, filter);
                 foreach (MetroSetComboBox c in fitlerControl.Controls)
                 {
-                    var msb = new MetroSetButton();                    
+                    var msb = new MetroSetButton();
                     InitializeFilterButtons(msb, filter);
                 }
             }
@@ -345,12 +347,11 @@ namespace BudgetExecution
 
         internal decimal GetCount(DataTable table, Field column, string filter)
         {
-            if(table.Columns.Contains("Amount"))
+            if (table.Columns.Contains("Amount"))
             {
                 try
                 {
-                    return table.AsEnumerable().Where(p => p.Field<string>(column.ToString()).
-                        Equals(filter)).Select(p => p.Field<decimal>("Amount") > 0).Count();
+                    return table.AsEnumerable().Where(p => p.Field<string>(column.ToString()).Equals(filter)).Select(p => p.Field<decimal>("Amount") > 0).Count();
                 }
                 catch (Exception ex)
                 {
@@ -358,6 +359,7 @@ namespace BudgetExecution
                     return -1;
                 }
             }
+
             return -1;
         }
 
@@ -480,6 +482,5 @@ namespace BudgetExecution
                 new Error(ex).ShowDialog();
             }
         }
-
     }
 }

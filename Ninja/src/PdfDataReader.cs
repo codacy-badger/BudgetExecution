@@ -1,4 +1,3 @@
-
 namespace BudgetExecution
 {
     public partial class PdfDataReader : Syncfusion.Windows.Forms.MetroForm

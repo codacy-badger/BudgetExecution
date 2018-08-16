@@ -35,9 +35,7 @@ namespace BudgetExecution
             Columns = GetColumnNames(DbTable);
             if (q.Source == Source.FTE)
             {
-                DbTable = GetDataTable().AsEnumerable().Where(p => p.Field<string>("BOC").Equals("17"))
-                                        .Where(p => p.Field<string>("BudgetLevel").Equals("8")).Select(p => p)
-                                        .CopyToDataTable();
+                DbTable = GetDataTable().AsEnumerable().Where(p => p.Field<string>("BOC").Equals("17")).Where(p => p.Field<string>("BudgetLevel").Equals("8")).Select(p => p).CopyToDataTable();
                 Total = GetFteTotal(DbTable);
                 ProgramElements = GetProgramElements(DbTable);
                 BindingSource = new BindingSource();
@@ -61,9 +59,7 @@ namespace BudgetExecution
             Columns = GetColumnNames(DbTable);
             if (source == Source.FTE)
             {
-                DbTable = GetDataTable().AsEnumerable().Where(p => p.Field<string>("BOC").Equals("17"))
-                                        .Where(p => p.Field<string>("BudgetLevel").Equals("8")).Select(p => p)
-                                        .CopyToDataTable();
+                DbTable = GetDataTable().AsEnumerable().Where(p => p.Field<string>("BOC").Equals("17")).Where(p => p.Field<string>("BudgetLevel").Equals("8")).Select(p => p).CopyToDataTable();
                 Total = GetFteTotal(DbTable);
                 ProgramElements = GetProgramElements(DbTable);
                 BindingSource = new BindingSource();
@@ -87,8 +83,7 @@ namespace BudgetExecution
             Columns = GetColumnNames(DbTable);
             if (source == Source.FTE)
             {
-                DbTable = GetDataTable().AsEnumerable().Where(p => p.Field<string>("BOC").Equals("17")).Select(p => p)
-                                        .CopyToDataTable();
+                DbTable = GetDataTable().AsEnumerable().Where(p => p.Field<string>("BOC").Equals("17")).Select(p => p).CopyToDataTable();
                 Total = GetFteTotal(DbTable);
                 ProgramElements = GetProgramElements(DbTable);
                 BindingSource = new BindingSource();
@@ -244,8 +239,7 @@ namespace BudgetExecution
         {
             try
             {
-                return table.AsEnumerable().Where(p => p.Field<string>(prcfilter.ToString()).Equals(filter))
-                            .Select(p => p).CopyToDataTable();
+                return table.AsEnumerable().Where(p => p.Field<string>(prcfilter.ToString()).Equals(filter)).Select(p => p).CopyToDataTable();
             }
             catch (Exception ex)
             {
@@ -279,9 +273,7 @@ namespace BudgetExecution
                 Dictionary<string, string[]> data = new Dictionary<string, string[]>();
                 foreach (DataColumn dc in table.Columns)
                 {
-                    if (dc.ColumnName.Equals("ID") || dc.ColumnName.Equals("Amount")
-                                                   || dc.ColumnName.Contains("Obligation")
-                                                   || dc.ColumnName.Contains("Commitment"))
+                    if (dc.ColumnName.Equals("ID") || dc.ColumnName.Equals("Amount") || dc.ColumnName.Contains("Obligation") || dc.ColumnName.Contains("Commitment"))
                     {
                         continue;
                     }
@@ -320,8 +312,7 @@ namespace BudgetExecution
                 {
                     foreach (string c in dc)
                     {
-                        if (c.Equals("Amount") || c.Contains("Obligation") || c.Contains("Commitment")
-                            || c.Contains("WorkHour") || c.Contains("LeaveHour"))
+                        if (c.Equals("Amount") || c.Contains("Obligation") || c.Contains("Commitment") || c.Contains("WorkHour") || c.Contains("LeaveHour"))
                         {
                             continue;
                         }
@@ -435,8 +426,7 @@ namespace BudgetExecution
             {
                 try
                 {
-                    decimal total = table.AsEnumerable().Where(p => p.Field<string>("BOC") != "17")
-                                         .Select(p => p.Field<decimal>("Amount")).Sum();
+                    decimal total = table.AsEnumerable().Where(p => p.Field<string>("BOC") != "17").Select(p => p.Field<decimal>("Amount")).Sum();
                     if (total > 0)
                         return total;
                 }
@@ -456,8 +446,7 @@ namespace BudgetExecution
             {
                 if (DbTable.Columns.Contains("Amount"))
                 {
-                    return table.AsEnumerable().Where(p => p.Field<string>("BOC") == "17")
-                                .Select(p => p.Field<decimal>("Amount")).Sum();
+                    return table.AsEnumerable().Where(p => p.Field<string>("BOC") == "17").Select(p => p.Field<decimal>("Amount")).Sum();
                 }
 
                 return 0m;

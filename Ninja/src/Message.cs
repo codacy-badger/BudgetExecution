@@ -5,6 +5,7 @@
 namespace BudgetExecution
 {
     using System;
+
     using Syncfusion.Windows.Forms;
 
     public partial class Message : MetroForm
@@ -25,10 +26,9 @@ namespace BudgetExecution
         public string MessageText { get; set; }
 
         // METHODS
-        void OkButton_OnClick(object sender, EventArgs e)
+        private void OkButton_OnClick(object sender, EventArgs e)
         {
             Close();
         }
-        
     }
 }

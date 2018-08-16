@@ -5,6 +5,7 @@
 namespace BudgetExecution
 {
     using System;
+
     using Syncfusion.Windows.Forms;
 
     public partial class Error : MetroForm
@@ -13,7 +14,7 @@ namespace BudgetExecution
         {
             InitializeComponent();
         }
-        
+
         public Error(Exception ex)
         {
             InitializeComponent();
@@ -25,21 +26,23 @@ namespace BudgetExecution
 
         // PROPERTIES
         public string Message { get; set; }
-        string Stack { get; }
-        string Target { get; }
+
+        private string Stack { get; }
+
+        private string Target { get; }
 
         // METHODS
-        void OkButton_OnClick(object sender, EventArgs e)
+        private void OkButton_OnClick(object sender, EventArgs e)
         {
             Close();
         }
 
-        void StackButton_OnClick(object sender, EventArgs e)
+        private void StackButton_OnClick(object sender, EventArgs e)
         {
             Info.Text = "Call Stack: \n\n" + Stack;
         }
 
-        void TargetButton_OnClick(object sender, EventArgs e)
+        private void TargetButton_OnClick(object sender, EventArgs e)
         {
             Info.Text = "Target Site: \n\n" + Target;
         }

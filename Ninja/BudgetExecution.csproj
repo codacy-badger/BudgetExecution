@@ -501,12 +501,6 @@
       <DependentUpon>PrcDataGrid.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Resources\ApplicationImages.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ApplicationImages.resx</DependentUpon>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Compile>
     <Compile Include="Resources\FormImages.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -624,11 +618,6 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Resources\ApplicationImages.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>ApplicationImages.Designer.cs</LastGenOutput>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\Division.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -850,7 +839,6 @@
     <None Include="Resources\databaseheader.ico" />
     <None Include="Resources\epablue.ico" />
     <None Include="Resources\PdfDataReader.ico" />
-    <None Include="Resources\transfer.ico" />
     <None Include="Resources\databaseheader1.ico" />
     <None Include="Resources\computerdatabase1.ico" />
     <None Include="Resources\DivisionPuzzle\06A.ico" />
@@ -912,6 +900,24 @@
     <None Include="Resources\Puzzles.png" />
     <None Include="Resources\6-2-environment-png-file.png" />
     <None Include="Resources\green-america-project-earth-logo.gif" />
+    <None Include="Resources\insert.ico" />
+    <None Include="Resources\upload1.ico" />
+    <None Include="Resources\copy.ico" />
+    <None Include="Resources\search.ico" />
+    <None Include="Resources\transfer.ico" />
+    <None Include="Resources\upload.ico" />
+    <None Include="Resources\xls.ico" />
+    <None Include="Resources\EJ.ico" />
+    <None Include="Resources\EN.ico" />
+    <None Include="Resources\MD.ico" />
+    <None Include="Resources\MDR.ico" />
+    <None Include="Resources\MM.ico" />
+    <None Include="Resources\RA.ico" />
+    <None Include="Resources\RC.ico" />
+    <None Include="Resources\WCF.ico" />
+    <None Include="Resources\WQ.ico" />
+    <None Include="Resources\WSA.ico" />
+    <None Include="Resources\XA.ico" />
     <Content Include="summation_3d_blue_oma_icon.ico" />
     <None Include="Resources\SummaryImages\RegionalAccounts.png" />
     <None Include="Resources\SummaryImages\FTE.png" />

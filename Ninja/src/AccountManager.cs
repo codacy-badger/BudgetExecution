@@ -39,7 +39,7 @@ namespace BudgetExecution
             BindingSource = new BindingSource();
             BindingSource.DataSource = DbData.DbTable;
             AccountNavigator.BindingSource = BindingSource;
-            UpdateTab.TabVisible = false;
+            Update.TabVisible = false;
             PopulateComboBoxes();
         }
 
@@ -54,7 +54,7 @@ namespace BudgetExecution
             BindingSource = new BindingSource();
             BindingSource.DataSource = DbTable;
             AccountNavigator.BindingSource = BindingSource;
-            AddNewTab.TabVisible = false;
+            Insert.TabVisible = false;
         }
 
         // PROPERTIES
@@ -79,7 +79,7 @@ namespace BudgetExecution
         // METHODS
         private void AccountManager_Load(object sender, EventArgs e)
         {
-            if (AddNewTab.TabVisible == true)
+            if (Insert.TabVisible == true)
                 AddButton.Visible = false;
             ConfigureTextBoxBindings();
         }
@@ -275,7 +275,7 @@ namespace BudgetExecution
                     DataRow row = (DataRow)bs.Current;
                     Dictionary<string, object> data = new Dictionary<string, object>();
                     data.Add("ID", int.Parse(row["ID"].ToString()));
-                    data.Add("BudgetLevel", row["BudgetLevel"].ToString());
+                    data.Add("AH", row["AH"].ToString());
                     data.Add("Org", row["Org"].ToString());
                     data.Add("RC", row["RC"].ToString());
                     data.Add("Code", row["Code"].ToString());

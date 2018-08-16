@@ -1,13 +1,10 @@
-
 namespace BudgetExecution
 {
-    using Syncfusion.Windows;
     using System;
     using System.Collections.Generic;
     using System.Data;
-    using System.Data.SQLite;
     using System.Windows.Forms;
-    using MetroSet_UI.Controls;
+
     using Syncfusion.Windows.Forms;
 
     /// <summary>
@@ -18,12 +15,12 @@ namespace BudgetExecution
         // CONSTRUCTORS
         public Reprogramming()
         {
-           this.InitializeComponent();
+            InitializeComponent();
         }
 
         public Reprogramming(Source source, Provider provider)
         {
-            this.InitializeComponent();
+            InitializeComponent();
             Source = source;
             Provider = provider;
             DbQuery = new Query(Source, Provider);
@@ -36,9 +33,7 @@ namespace BudgetExecution
             TableFilter = Info.FilterRows;
         }
 
-
         // PROPERTIES
-
         public Query DbQuery { get; }
 
         public DataTable DbTable { get; }
@@ -59,7 +54,7 @@ namespace BudgetExecution
 
         private Provider Provider { get; }
 
-        // METHODS        
+        // METHODS
         private void CalculatorButton_OnClick(object sender, EventArgs e)
         {
             CalculatorForm cf = new CalculatorForm();
@@ -76,8 +71,8 @@ namespace BudgetExecution
         {
             Reprogramming rf = new Reprogramming();
             rf.Show();
-        }     
-        
+        }
+
         private void PreviousButton_OnClick(object sender, EventArgs e)
         {
             BindingSource.MovePrevious();

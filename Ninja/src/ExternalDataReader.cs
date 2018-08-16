@@ -5,8 +5,8 @@
 namespace BudgetExecution
 {
     using System;
-    using MetroForm = Syncfusion.Windows.Forms.MetroForm;
 
+    using MetroForm = Syncfusion.Windows.Forms.MetroForm;
 
     public partial class ExternalDataReader : MetroForm
     {
@@ -16,24 +16,20 @@ namespace BudgetExecution
             InitializeComponent();
         }
 
-        private void Button16_Click(object sender, System.EventArgs e)
+        private void Button16_Click(object sender, EventArgs e)
         {
-
         }
 
-        private void Button9_Click(object sender, System.EventArgs e)
+        private void Button9_Click(object sender, EventArgs e)
         {
-
         }
 
-        private void Button4_Click(object sender, System.EventArgs e)
+        private void Button4_Click(object sender, EventArgs e)
         {
-
         }
 
         private void Button6_Click(object sender, EventArgs e)
         {
-
         }
     }
 }

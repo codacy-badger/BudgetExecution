@@ -30,10 +30,11 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AccountManager));
-            Syncfusion.Windows.Forms.Tools.ToolTipInfo toolTipInfo2 = new Syncfusion.Windows.Forms.Tools.ToolTipInfo();
+            Syncfusion.Windows.Forms.Tools.ToolTipInfo toolTipInfo1 = new Syncfusion.Windows.Forms.Tools.ToolTipInfo();
+            Syncfusion.Windows.Forms.CaptionImage captionImage1 = new Syncfusion.Windows.Forms.CaptionImage();
             Syncfusion.Windows.Forms.CaptionImage captionImage2 = new Syncfusion.Windows.Forms.CaptionImage();
             this.AccountTabControl = new Syncfusion.Windows.Forms.Tools.TabControlAdv();
-            this.UpdateTab = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
+            this.Update = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
             this.metroSetPanel2 = new MetroSet_UI.Controls.MetroSetPanel();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -97,7 +98,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.Amount1 = new MetroSet_UI.Controls.MetroSetTextBox();
-            this.AddNewTab = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
+            this.Insert = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
             this.metroSetPanel1 = new MetroSet_UI.Controls.MetroSetPanel();
             this.RecorDataGroupBox = new System.Windows.Forms.GroupBox();
             this.label24 = new System.Windows.Forms.Label();
@@ -132,14 +133,14 @@
             this.superToolTip1 = new Syncfusion.Windows.Forms.Tools.SuperToolTip(this);
             ((System.ComponentModel.ISupportInitialize)(this.AccountTabControl)).BeginInit();
             this.AccountTabControl.SuspendLayout();
-            this.UpdateTab.SuspendLayout();
+            this.Update.SuspendLayout();
             this.metroSetPanel2.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AccountNavigator)).BeginInit();
             this.AccountNavigator.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            this.AddNewTab.SuspendLayout();
+            this.Insert.SuspendLayout();
             this.metroSetPanel1.SuspendLayout();
             this.RecorDataGroupBox.SuspendLayout();
             this.groupBox6.SuspendLayout();
@@ -156,8 +157,8 @@
             this.AccountTabControl.CloseButtonForeColor = System.Drawing.Color.Empty;
             this.AccountTabControl.CloseButtonHoverForeColor = System.Drawing.Color.Black;
             this.AccountTabControl.CloseButtonPressedForeColor = System.Drawing.Color.Black;
-            this.AccountTabControl.Controls.Add(this.UpdateTab);
-            this.AccountTabControl.Controls.Add(this.AddNewTab);
+            this.AccountTabControl.Controls.Add(this.Update);
+            this.AccountTabControl.Controls.Add(this.Insert);
             this.AccountTabControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.AccountTabControl.FixedSingleBorderColor = System.Drawing.Color.SteelBlue;
             this.AccountTabControl.FocusOnTabClick = false;
@@ -174,19 +175,19 @@
             this.AccountTabControl.TabPanelBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             this.AccountTabControl.TabStyle = typeof(Syncfusion.Windows.Forms.Tools.TabRendererMetro);
             // 
-            // UpdateTab
+            // Update
             // 
-            this.UpdateTab.BackColor = System.Drawing.Color.Black;
-            this.UpdateTab.Controls.Add(this.metroSetPanel2);
-            this.UpdateTab.Image = null;
-            this.UpdateTab.ImageSize = new System.Drawing.Size(16, 16);
-            this.UpdateTab.Location = new System.Drawing.Point(0, 48);
-            this.UpdateTab.Name = "UpdateTab";
-            this.UpdateTab.ShowCloseButton = true;
-            this.UpdateTab.Size = new System.Drawing.Size(1276, 503);
-            this.UpdateTab.TabIndex = 1;
-            this.UpdateTab.Text = "Update ";
-            this.UpdateTab.ThemesEnabled = false;
+            this.Update.BackColor = System.Drawing.Color.Black;
+            this.Update.Controls.Add(this.metroSetPanel2);
+            this.Update.Image = null;
+            this.Update.ImageSize = new System.Drawing.Size(16, 16);
+            this.Update.Location = new System.Drawing.Point(0, 48);
+            this.Update.Name = "Update";
+            this.Update.ShowCloseButton = true;
+            this.Update.Size = new System.Drawing.Size(1276, 503);
+            this.Update.TabIndex = 1;
+            this.Update.Text = "Update ";
+            this.Update.ThemesEnabled = false;
             // 
             // metroSetPanel2
             // 
@@ -673,14 +674,14 @@
             // toolStripLabel2
             // 
             this.toolStripLabel2.Name = "toolStripLabel2";
-            this.toolStripLabel2.Size = new System.Drawing.Size(46, 25);
+            this.toolStripLabel2.Size = new System.Drawing.Size(46, 24);
             this.toolStripLabel2.Text = "of {0}";
             this.toolStripLabel2.ToolTipText = "Total number of items";
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 28);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 27);
             // 
             // toolStripButton10
             // 
@@ -690,19 +691,19 @@
             this.toolStripButton10.RightToLeftAutoMirrorImage = true;
             this.toolStripButton10.Size = new System.Drawing.Size(24, 24);
             this.toolStripButton10.Text = "Previous";
-            toolTipInfo2.BackColor = System.Drawing.Color.Black;
-            toolTipInfo2.Body.RenderHtml = true;
-            toolTipInfo2.Body.Size = new System.Drawing.Size(200, 40);
-            toolTipInfo2.Body.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            toolTipInfo2.BorderColor = System.Drawing.SystemColors.MenuHighlight;
-            toolTipInfo2.Footer.Size = new System.Drawing.Size(20, 20);
-            toolTipInfo2.Header.Size = new System.Drawing.Size(20, 20);
-            this.superToolTip1.SetToolTip(this.toolStripButton10, toolTipInfo2);
+            toolTipInfo1.BackColor = System.Drawing.Color.Black;
+            toolTipInfo1.Body.RenderHtml = true;
+            toolTipInfo1.Body.Size = new System.Drawing.Size(200, 40);
+            toolTipInfo1.Body.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            toolTipInfo1.BorderColor = System.Drawing.SystemColors.MenuHighlight;
+            toolTipInfo1.Footer.Size = new System.Drawing.Size(20, 20);
+            toolTipInfo1.Header.Size = new System.Drawing.Size(20, 20);
+            this.superToolTip1.SetToolTip(this.toolStripButton10, toolTipInfo1);
             // 
             // toolStripSeparator10
             // 
             this.toolStripSeparator10.Name = "toolStripSeparator10";
-            this.toolStripSeparator10.Size = new System.Drawing.Size(6, 28);
+            this.toolStripSeparator10.Size = new System.Drawing.Size(6, 27);
             // 
             // toolStripTextBox2
             // 
@@ -720,7 +721,7 @@
             // toolStripSeparator11
             // 
             this.toolStripSeparator11.Name = "toolStripSeparator11";
-            this.toolStripSeparator11.Size = new System.Drawing.Size(6, 28);
+            this.toolStripSeparator11.Size = new System.Drawing.Size(6, 27);
             // 
             // toolStripButton11
             // 
@@ -728,14 +729,14 @@
             this.toolStripButton11.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton11.Image")));
             this.toolStripButton11.Name = "toolStripButton11";
             this.toolStripButton11.RightToLeftAutoMirrorImage = true;
-            this.toolStripButton11.Size = new System.Drawing.Size(24, 25);
+            this.toolStripButton11.Size = new System.Drawing.Size(24, 24);
             this.toolStripButton11.Text = "Next";
-            this.superToolTip1.SetToolTip(this.toolStripButton11, toolTipInfo2);
+            this.superToolTip1.SetToolTip(this.toolStripButton11, toolTipInfo1);
             // 
             // toolStripSeparator13
             // 
             this.toolStripSeparator13.Name = "toolStripSeparator13";
-            this.toolStripSeparator13.Size = new System.Drawing.Size(6, 28);
+            this.toolStripSeparator13.Size = new System.Drawing.Size(6, 27);
             // 
             // CopyButton
             // 
@@ -743,13 +744,13 @@
             this.CopyButton.Image = ((System.Drawing.Image)(resources.GetObject("CopyButton.Image")));
             this.CopyButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.CopyButton.Name = "CopyButton";
-            this.CopyButton.Size = new System.Drawing.Size(24, 25);
+            this.CopyButton.Size = new System.Drawing.Size(24, 24);
             this.CopyButton.ToolTipText = "Copy DbData Into New Account";
             // 
             // toolStripSeparator15
             // 
             this.toolStripSeparator15.Name = "toolStripSeparator15";
-            this.toolStripSeparator15.Size = new System.Drawing.Size(6, 28);
+            this.toolStripSeparator15.Size = new System.Drawing.Size(6, 27);
             // 
             // toolStripButton13
             // 
@@ -759,12 +760,12 @@
             this.toolStripButton13.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton13.Image")));
             this.toolStripButton13.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton13.Name = "toolStripButton13";
-            this.toolStripButton13.Size = new System.Drawing.Size(24, 25);
+            this.toolStripButton13.Size = new System.Drawing.Size(24, 24);
             // 
             // toolStripSeparator18
             // 
             this.toolStripSeparator18.Name = "toolStripSeparator18";
-            this.toolStripSeparator18.Size = new System.Drawing.Size(6, 28);
+            this.toolStripSeparator18.Size = new System.Drawing.Size(6, 27);
             // 
             // toolStripButton12
             // 
@@ -775,12 +776,12 @@
             this.toolStripButton12.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton12.Image")));
             this.toolStripButton12.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton12.Name = "toolStripButton12";
-            this.toolStripButton12.Size = new System.Drawing.Size(24, 25);
+            this.toolStripButton12.Size = new System.Drawing.Size(24, 24);
             // 
             // toolStripSeparator16
             // 
             this.toolStripSeparator16.Name = "toolStripSeparator16";
-            this.toolStripSeparator16.Size = new System.Drawing.Size(6, 28);
+            this.toolStripSeparator16.Size = new System.Drawing.Size(6, 27);
             // 
             // ResetButton
             // 
@@ -788,12 +789,12 @@
             this.ResetButton.Image = ((System.Drawing.Image)(resources.GetObject("ResetButton.Image")));
             this.ResetButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.ResetButton.Name = "ResetButton";
-            this.ResetButton.Size = new System.Drawing.Size(24, 25);
+            this.ResetButton.Size = new System.Drawing.Size(24, 24);
             // 
             // toolStripSeparator14
             // 
             this.toolStripSeparator14.Name = "toolStripSeparator14";
-            this.toolStripSeparator14.Size = new System.Drawing.Size(6, 28);
+            this.toolStripSeparator14.Size = new System.Drawing.Size(6, 27);
             // 
             // AddButton
             // 
@@ -801,12 +802,12 @@
             this.AddButton.Image = ((System.Drawing.Image)(resources.GetObject("AddButton.Image")));
             this.AddButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.AddButton.Name = "AddButton";
-            this.AddButton.Size = new System.Drawing.Size(24, 25);
+            this.AddButton.Size = new System.Drawing.Size(24, 24);
             // 
             // toolStripSeparator19
             // 
             this.toolStripSeparator19.Name = "toolStripSeparator19";
-            this.toolStripSeparator19.Size = new System.Drawing.Size(6, 28);
+            this.toolStripSeparator19.Size = new System.Drawing.Size(6, 27);
             // 
             // toolStripButton7
             // 
@@ -814,13 +815,13 @@
             this.toolStripButton7.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton7.Image")));
             this.toolStripButton7.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton7.Name = "toolStripButton7";
-            this.toolStripButton7.Size = new System.Drawing.Size(24, 25);
+            this.toolStripButton7.Size = new System.Drawing.Size(24, 24);
             this.toolStripButton7.Click += new System.EventHandler(this.CalculatorButton_OnClick);
             // 
             // GridRefreshButton
             // 
             this.GridRefreshButton.Name = "GridRefreshButton";
-            this.GridRefreshButton.Size = new System.Drawing.Size(6, 28);
+            this.GridRefreshButton.Size = new System.Drawing.Size(6, 27);
             // 
             // toolStripButton9
             // 
@@ -828,13 +829,13 @@
             this.toolStripButton9.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton9.Image")));
             this.toolStripButton9.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton9.Name = "toolStripButton9";
-            this.toolStripButton9.Size = new System.Drawing.Size(24, 25);
+            this.toolStripButton9.Size = new System.Drawing.Size(24, 24);
             this.toolStripButton9.Click += new System.EventHandler(this.ExcelButton_OnClick);
             // 
             // toolStripSeparator12
             // 
             this.toolStripSeparator12.Name = "toolStripSeparator12";
-            this.toolStripSeparator12.Size = new System.Drawing.Size(6, 28);
+            this.toolStripSeparator12.Size = new System.Drawing.Size(6, 27);
             // 
             // toolStripButton14
             // 
@@ -842,12 +843,12 @@
             this.toolStripButton14.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton14.Image")));
             this.toolStripButton14.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton14.Name = "toolStripButton14";
-            this.toolStripButton14.Size = new System.Drawing.Size(24, 25);
+            this.toolStripButton14.Size = new System.Drawing.Size(24, 24);
             // 
             // toolStripSeparator17
             // 
             this.toolStripSeparator17.Name = "toolStripSeparator17";
-            this.toolStripSeparator17.Size = new System.Drawing.Size(6, 28);
+            this.toolStripSeparator17.Size = new System.Drawing.Size(6, 27);
             // 
             // toolStripButton15
             // 
@@ -855,12 +856,12 @@
             this.toolStripButton15.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton15.Image")));
             this.toolStripButton15.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton15.Name = "toolStripButton15";
-            this.toolStripButton15.Size = new System.Drawing.Size(24, 25);
+            this.toolStripButton15.Size = new System.Drawing.Size(24, 24);
             // 
             // toolStripSeparator20
             // 
             this.toolStripSeparator20.Name = "toolStripSeparator20";
-            this.toolStripSeparator20.Size = new System.Drawing.Size(6, 28);
+            this.toolStripSeparator20.Size = new System.Drawing.Size(6, 27);
             // 
             // toolStripButton16
             // 
@@ -869,7 +870,7 @@
             this.toolStripButton16.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton16.Name = "toolStripButton16";
             this.toolStripButton16.Size = new System.Drawing.Size(24, 24);
-            this.superToolTip1.SetToolTip(this.toolStripButton16, toolTipInfo2);
+            this.superToolTip1.SetToolTip(this.toolStripButton16, toolTipInfo1);
             this.toolStripButton16.Click += new System.EventHandler(this.ReprogrammingButton_OnClick);
             // 
             // button4
@@ -1087,19 +1088,19 @@
             this.Amount1.UseSystemPasswordChar = false;
             this.Amount1.WatermarkText = "";
             // 
-            // AddNewTab
+            // Insert
             // 
-            this.AddNewTab.BackColor = System.Drawing.Color.Black;
-            this.AddNewTab.Controls.Add(this.metroSetPanel1);
-            this.AddNewTab.Image = null;
-            this.AddNewTab.ImageSize = new System.Drawing.Size(16, 16);
-            this.AddNewTab.Location = new System.Drawing.Point(0, 48);
-            this.AddNewTab.Name = "AddNewTab";
-            this.AddNewTab.ShowCloseButton = true;
-            this.AddNewTab.Size = new System.Drawing.Size(1276, 503);
-            this.AddNewTab.TabIndex = 2;
-            this.AddNewTab.Text = "Add ";
-            this.AddNewTab.ThemesEnabled = false;
+            this.Insert.BackColor = System.Drawing.Color.Black;
+            this.Insert.Controls.Add(this.metroSetPanel1);
+            this.Insert.Image = null;
+            this.Insert.ImageSize = new System.Drawing.Size(16, 16);
+            this.Insert.Location = new System.Drawing.Point(0, 48);
+            this.Insert.Name = "Insert";
+            this.Insert.ShowCloseButton = true;
+            this.Insert.Size = new System.Drawing.Size(1276, 503);
+            this.Insert.TabIndex = 2;
+            this.Insert.Text = "Add ";
+            this.Insert.ThemesEnabled = false;
             // 
             // metroSetPanel1
             // 
@@ -1713,11 +1714,13 @@
             this.BorderColor = System.Drawing.SystemColors.MenuHighlight;
             this.CaptionBarColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             this.CaptionBarHeight = 35;
+            captionImage1.BackColor = System.Drawing.Color.Black;
+            captionImage1.Image = ((System.Drawing.Image)(resources.GetObject("captionImage1.Image")));
+            captionImage1.Name = "Insert";
             captionImage2.BackColor = System.Drawing.Color.Black;
             captionImage2.Image = ((System.Drawing.Image)(resources.GetObject("captionImage2.Image")));
-            captionImage2.Location = new System.Drawing.Point(10, 10);
-            captionImage2.Name = "CaptionImage1";
-            captionImage2.Size = new System.Drawing.Size(20, 20);
+            captionImage2.Name = "Update";
+            this.CaptionImages.Add(captionImage1);
             this.CaptionImages.Add(captionImage2);
             this.ClientSize = new System.Drawing.Size(1276, 551);
             this.Controls.Add(this.AccountTabControl);
@@ -1728,7 +1731,7 @@
             this.Load += new System.EventHandler(this.AccountManager_Load);
             ((System.ComponentModel.ISupportInitialize)(this.AccountTabControl)).EndInit();
             this.AccountTabControl.ResumeLayout(false);
-            this.UpdateTab.ResumeLayout(false);
+            this.Update.ResumeLayout(false);
             this.metroSetPanel2.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
@@ -1739,7 +1742,7 @@
             this.AccountNavigator.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            this.AddNewTab.ResumeLayout(false);
+            this.Insert.ResumeLayout(false);
             this.metroSetPanel1.ResumeLayout(false);
             this.RecorDataGroupBox.ResumeLayout(false);
             this.RecorDataGroupBox.PerformLayout();
@@ -1809,8 +1812,8 @@
         private MetroSet_UI.Controls.MetroSetTextBox BOC;
         private System.Windows.Forms.Label label11;
         internal Syncfusion.Windows.Forms.Tools.TabControlAdv AccountTabControl;
-        internal Syncfusion.Windows.Forms.Tools.TabPageAdv UpdateTab;
-        internal Syncfusion.Windows.Forms.Tools.TabPageAdv AddNewTab;
+        internal Syncfusion.Windows.Forms.Tools.TabPageAdv Update;
+        internal Syncfusion.Windows.Forms.Tools.TabPageAdv Insert;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
         private MetroSet_UI.Controls.MetroSetTextBox metroSetTextBox1;

@@ -96,8 +96,10 @@ namespace BudgetExecution
                 {
                     case Provider.SQLite:
                         return new SQLiteConnection(@"datasource=C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\database\SQLite\R6.db");
+
                     case Provider.SqlCe:
                         return new SqlConnection(@"datasource=C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\database\SqlCe\R6.sdf");
+
                     case Provider.SqlServer:
                         return new SqlConnection(@"DbData Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\database\SqlServerQuery\R6.mdf;Integrated Security=True;Connect Timeout=30");
                     case Provider.OleDb:
@@ -118,7 +120,7 @@ namespace BudgetExecution
             try
             {
                 string vals = string.Empty;
-                SQLiteParameter[] sqlparameter = this.GetDbParameters(param);
+                SQLiteParameter[] sqlparameter = GetDbParameters(param);
                 foreach (SQLiteParameter p in sqlparameter)
                 {
                     vals += $"{p.SourceColumn} = '{p.Value}' AND ";
@@ -138,7 +140,7 @@ namespace BudgetExecution
         {
             try
             {
-                 return $"SELECT * FROM {table} WHERE {GetSelectParamString(param)}";
+                return $"SELECT * FROM {table} WHERE {GetSelectParamString(param)}";
             }
             catch (Exception ex)
             {
@@ -259,7 +261,7 @@ namespace BudgetExecution
                 return null;
             }
         }
-        
+
         public string GetSelectStatement(Source source, SQLiteParameter[] param)
         {
             try
@@ -457,12 +459,16 @@ namespace BudgetExecution
                 {
                     case Sql.SELECT:
                         return GetSelectCommand(source, provider, pmr, connection);
+
                     case Sql.UPDATE:
                         return GetUpdateCommand(source, provider, pmr, connection);
+
                     case Sql.INSERT:
                         return GetInsertCommand(source, provider, pmr, connection);
+
                     case Sql.DELETE:
                         return GetDeleteCommand(source, provider, pmr, connection);
+
                     default:
                         return GetSelectCommand(source, provider, pmr, connection);
                 }

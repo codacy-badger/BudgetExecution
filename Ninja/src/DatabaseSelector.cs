@@ -8,6 +8,7 @@ namespace BudgetExecution
     using System.Drawing;
     using System.IO;
     using System.Windows.Forms;
+
     using Syncfusion.Windows.Forms;
     using Syncfusion.Windows.Forms.Tools;
 
@@ -79,9 +80,9 @@ namespace BudgetExecution
             Carousel carousel = sender as Carousel;
             string i = carousel.ActiveImage.Tag.ToString();
             Source s = (Source)Enum.Parse(typeof(Source), i);
-            SQLiteData data = new SQLiteData(s, Provider.SQLite);
-            data.Show();
-            Close();           
+            SQLiteData sqlitedata = new SQLiteData(s, Provider.SQLite);
+            sqlitedata.Show();
+            Close();
         }
     }
 }

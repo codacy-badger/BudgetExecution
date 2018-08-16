@@ -64,7 +64,7 @@ namespace BudgetExecution
 
         public DataTable DbTable { get; }
 
-        public PRC[] Allocation {get; set; }
+        public PRC[] Allocation { get; set; }
 
         public decimal Amount { get; }
 
@@ -160,8 +160,7 @@ namespace BudgetExecution
         {
             try
             {
-                DataTable qtable = table.AsEnumerable().Where(p => p.Field<string>(column).Equals(filter))
-                    .Select(p => p).CopyToDataTable();
+                DataTable qtable = table.AsEnumerable().Where(p => p.Field<string>(column).Equals(filter)).Select(p => p).CopyToDataTable();
                 return new Tuple<DataTable, PRC[], decimal, int>(qtable, GetPrcArray(qtable), GetTotal(qtable), GetCount(qtable));
             }
             catch (Exception ex)
@@ -198,7 +197,7 @@ namespace BudgetExecution
         public decimal[] GetMetrics(DataTable table)
         {
             int count = GetCount(table);
-            return new decimal[] { GetTotal(table), (decimal)count, GetAverage(table) };
+            return new decimal[] { GetTotal(table), count, GetAverage(table) };
         }
 
         public Dictionary<string, decimal[]> GetMetrics(DataTable table, string[] list, string column)
@@ -210,7 +209,7 @@ namespace BudgetExecution
                 {
                     decimal[] stat = new decimal[4];
                     stat[0] = GetDataValues(table, column, filter).Item3;
-                    stat[1] = (decimal)GetDataValues(table, column, filter).Item4;
+                    stat[1] = GetDataValues(table, column, filter).Item4;
                     stat[2] = stat[0] / stat[1];
                     stat[3] = (stat[0] / Total) * 100;
                     info.Add(filter, stat);
@@ -235,7 +234,7 @@ namespace BudgetExecution
                 {
                     decimal[] stat = new decimal[4];
                     stat[0] = GetDataValues(table, column, filter).Item3;
-                    stat[1] = (decimal)GetDataValues(table, column, filter).Item4;
+                    stat[1] = GetDataValues(table, column, filter).Item4;
                     stat[2] = stat[0] / stat[1];
                     stat[3] = (stat[0] / Total) * 100;
                     info.Add(filter, stat);
@@ -310,8 +309,7 @@ namespace BudgetExecution
                 Dictionary<string, decimal> info = new Dictionary<string, decimal>();
                 foreach (string ftr in list)
                 {
-                    decimal query = PrcData.Item1.AsEnumerable().Where(p => p.Field<string>(column).Equals(filter))
-                        .Sum(p => p.Field<decimal>("Amount"));
+                    decimal query = PrcData.Item1.AsEnumerable().Where(p => p.Field<string>(column).Equals(filter)).Sum(p => p.Field<decimal>("Amount"));
                     if (query > 0)
                     {
                         info.Add(filter, query);

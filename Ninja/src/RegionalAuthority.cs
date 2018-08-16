@@ -9,7 +9,6 @@ namespace BudgetExecution
     using System.Data;
     using System.Data.Common;
     using System.Linq;
-    using System.Windows.Forms;
 
     public class RegionalAuthority : IBudgetAuthority
     {
@@ -163,7 +162,7 @@ namespace BudgetExecution
             try
             {
                 int count = GetCount(table);
-                return new decimal[] { GetTotal(table), (decimal)count, GetAverage(table) };
+                return new decimal[] { GetTotal(table), count, GetAverage(table) };
             }
             catch (Exception ex)
             {
@@ -304,12 +303,7 @@ namespace BudgetExecution
         {
             try
             {
-                DataTable query = table.AsEnumerable().Where(r => r.Field<string>("BFY").Equals(p["BFY"]))
-                    .Where(r => r.Field<string>("Fund").Equals(p["Fund"]))
-                    .Where(r => r.Field<string>("Code").Equals(p["Code"]))
-                    .Where(r => r.Field<string>("Org").Equals(p["Org"]))
-                    .Where(r => r.Field<string>("BOC").Equals(p["BOC"]))
-                    .Select(r => r).CopyToDataTable();
+                DataTable query = table.AsEnumerable().Where(r => r.Field<string>("BFY").Equals(p["BFY"])).Where(r => r.Field<string>("Fund").Equals(p["Fund"])).Where(r => r.Field<string>("Code").Equals(p["Code"])).Where(r => r.Field<string>("Org").Equals(p["Org"])).Where(r => r.Field<string>("BOC").Equals(p["BOC"])).Select(r => r).CopyToDataTable();
                 DataRow row = query.Rows[0];
                 return (int)row["Id"];
             }
@@ -319,7 +313,7 @@ namespace BudgetExecution
                 return -1;
             }
         }
-        
+
         internal FTE[] GetFTE(DataTable table)
         {
             try

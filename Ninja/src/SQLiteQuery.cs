@@ -2,7 +2,6 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
-
 namespace BudgetExecution
 {
     using System;
@@ -33,7 +32,7 @@ namespace BudgetExecution
             DeleteCommand = CommandBuilder.GetDeleteCommand();
             Settings = new AppSettingsReader();
         }
-        
+
         public SQLiteQuery(Source source, Dictionary<string, object> param)
         {
             Provider = Provider.SQLite;
@@ -51,7 +50,7 @@ namespace BudgetExecution
             DeleteCommand = CommandBuilder.GetDeleteCommand();
             Settings = new AppSettingsReader();
         }
-        
+
         public SQLiteQuery(Source source, SQLiteParameter[] param)
         {
             Provider = Provider.SQLite;
@@ -143,11 +142,11 @@ namespace BudgetExecution
         public SQLiteParameter[] GetParameter(DataRow dr)
         {
             try
-            {              
+            {
                 SQLiteParameter[] val = new SQLiteParameter[dr.ItemArray.Length];
                 for (int i = 0; i < dr.ItemArray.Length; i++)
                 {
-                    val[i] = new SQLiteParameter(dr.Table.Columns[i].ColumnName, (object)dr[i]);
+                    val[i] = new SQLiteParameter(dr.Table.Columns[i].ColumnName, dr[i]);
                 }
 
                 return val;
@@ -183,7 +182,7 @@ namespace BudgetExecution
             try
             {
                 List<SQLiteParameter[]> val = new List<SQLiteParameter[]>();
-                foreach(DataRow dr in table.Rows)
+                foreach (DataRow dr in table.Rows)
                 {
                     val.Add(GetParameter(dr));
                 }
@@ -206,7 +205,7 @@ namespace BudgetExecution
                 {
                     foreach (KeyValuePair<string, object> kvp in param)
                     {
-                        val[i] = new SQLiteParameter(kvp.Key, (object)kvp.Value);
+                        val[i] = new SQLiteParameter(kvp.Key, kvp.Value);
                         val[i].SourceColumn = kvp.Key;
                         if (kvp.Key.Equals("ID"))
                         {
@@ -242,7 +241,6 @@ namespace BudgetExecution
                         {
                             val[i].DbType = DbType.Decimal;
                         }
-
                         else
                         {
                             val[i].DbType = DbType.String;
@@ -276,7 +274,7 @@ namespace BudgetExecution
         {
             try
             {
-                 return new SQLiteConnection(@"datasource=C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\database\SQLite\R6.SQLite");
+                return new SQLiteConnection(@"datasource=C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\database\SQLite\R6.SQLite");
             }
             catch (Exception ex)
             {
@@ -284,7 +282,7 @@ namespace BudgetExecution
                 return null;
             }
         }
-        
+
         public new string GetSelectStatement(Source source, SQLiteParameter[] param)
         {
             try
@@ -482,12 +480,16 @@ namespace BudgetExecution
                 {
                     case Sql.SELECT:
                         return GetSelectCommand(source, provider, pmr, connection);
+
                     case Sql.UPDATE:
                         return GetUpdateCommand(source, provider, pmr, connection);
+
                     case Sql.INSERT:
                         return GetInsertCommand(source, provider, pmr, connection);
+
                     case Sql.DELETE:
                         return GetDeleteCommand(source, provider, pmr, connection);
+
                     default:
                         return GetSelectCommand(source, provider, pmr, connection);
                 }
@@ -498,7 +500,7 @@ namespace BudgetExecution
                 return null;
             }
         }
-        
+
         public SQLiteCommand GetDataCommand(string select, SQLiteConnection connection)
         {
             try
@@ -517,7 +519,7 @@ namespace BudgetExecution
         {
             try
             {
-               return new SQLiteDataAdapter(command);
+                return new SQLiteDataAdapter(command);
             }
             catch (Exception ex)
             {
@@ -530,7 +532,7 @@ namespace BudgetExecution
         {
             try
             {
-               return command.ExecuteReader();
+                return command.ExecuteReader();
             }
             catch (Exception ex)
             {

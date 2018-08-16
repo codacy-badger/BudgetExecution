@@ -7,15 +7,11 @@ namespace BudgetExecution
     using System;
     using System.Collections.Generic;
     using System.Data;
-    using System.Data.SQLite;
     using System.Linq;
     using System.Windows.Forms;
 
-    using Syncfusion.Windows.Forms.Spreadsheet.Commands;
-
     public class Obligation : IObligation
     {
-
         public Obligation()
         {
         }
@@ -60,7 +56,7 @@ namespace BudgetExecution
             Amount = decimal.Parse(dr["ObligationAmount"].ToString());
         }
 
-        //Properties
+        // Properties
         public Source Source { get; }
 
         public Provider Provider { get; }
@@ -102,16 +98,7 @@ namespace BudgetExecution
         {
             try
             {
-                Dictionary<string, object> param = new Dictionary<string, object>()
-                {
-                    ["ID"] = ID,
-                    ["RPIO"] = RPIO,
-                    ["BFY"] = BFY,
-                    ["Fund"] = Fund.Code,
-                    ["RC"] = RC,
-                    ["BOC"] = BOC.Code,
-                    ["Code"] = ProgramProjectCode
-                };
+                Dictionary<string, object> param = new Dictionary<string, object>() { ["ID"] = ID, ["RPIO"] = RPIO, ["BFY"] = BFY, ["Fund"] = Fund.Code, ["RC"] = RC, ["BOC"] = BOC.Code, ["Code"] = ProgramProjectCode };
                 return param;
             }
             catch (Exception ex)
@@ -135,6 +122,7 @@ namespace BudgetExecution
                     return null;
                 }
             }
+
             return null;
         }
 
@@ -295,6 +283,4 @@ namespace BudgetExecution
             }
         }
     }
-
-
 }

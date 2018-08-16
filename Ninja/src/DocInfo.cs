@@ -79,7 +79,7 @@ namespace BudgetExecution
         {
             try
             {
-                return new ControlNumber();   
+                return new ControlNumber();
             }
             catch (Exception ex)
             {

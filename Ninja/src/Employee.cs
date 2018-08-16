@@ -13,8 +13,8 @@ namespace BudgetExecution
         {
             Source = Source.Employees;
             Provider = Provider.SQLite;
-            DbQuery = new SQLiteQuery(Source); 
-            DbData= new DataBuilder(DbQuery);
+            DbQuery = new SQLiteQuery(Source);
+            DbData = new DataBuilder(DbQuery);
             DbTable = DbData.DbTable;
         }
 
@@ -38,7 +38,7 @@ namespace BudgetExecution
 
         public Employee(DataRow dr)
         {
-            ID =  int.Parse(dr["ID"].ToString());
+            ID = int.Parse(dr["ID"].ToString());
             EmployId = dr["EmployId"].ToString();
             HrOrgCode = dr["HrOrgCode"].ToString();
             HrOrgName = dr["HrOrgName"].ToString();
@@ -56,7 +56,7 @@ namespace BudgetExecution
 
         public DataBuilder DbData { get; }
 
-        public SQLiteQuery DbQuery { get; set; } 
+        public SQLiteQuery DbQuery { get; set; }
 
         public DataTable DbTable { get; }
 

@@ -6,6 +6,7 @@ using System.Linq;
 
 namespace BudgetExecution
 {
+    using System;
     using System.Collections.Generic;
     using System.Data;
 
@@ -136,7 +137,7 @@ namespace BudgetExecution
             {
                 return new Dictionary<string, object>() { ["Code"] = code, ["BFY"] = bfy };
             }
-            catch (System.Exception ex)
+            catch (Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;

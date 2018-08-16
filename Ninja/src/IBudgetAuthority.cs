@@ -20,7 +20,6 @@ namespace BudgetExecution
         Dictionary<string, string[]> ProgramElements { get; }
 
         // METHODS
-
         string[] GetCodes(DataTable table, string column);
 
         Tuple<DataTable, PRC[], decimal, int> GetDataValues(DataTable table, string column, string filter);

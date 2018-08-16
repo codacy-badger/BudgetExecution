@@ -8,7 +8,9 @@ namespace BudgetExecution
     using System.Drawing;
     using System.IO;
     using System.Windows.Forms;
+
     using Syncfusion.Windows.Forms.Tools;
+
     using MetroForm = Syncfusion.Windows.Forms.MetroForm;
 
     public partial class AppropriationSelector : MetroForm
@@ -22,13 +24,14 @@ namespace BudgetExecution
 
         private void AppropriationCarousel_OnImageSelected(object sender, EventArgs e)
         {
-            string i = AppropriationCarousel.ActiveImage.Tag.ToString( );
+            string i = AppropriationCarousel.ActiveImage.Tag.ToString();
             if (i.Contains("Functionality"))
             {
                 Selector g = new Selector(Info.AppropriationImages);
                 g.Show();
-                this.Close();
+                Close();
             }
+
             return;
         }
 

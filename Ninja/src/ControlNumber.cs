@@ -16,7 +16,6 @@ namespace BudgetExecution
         // CONSTRUCTORS
         public ControlNumber()
         {
-
         }
 
         /// <summary>
@@ -61,7 +60,6 @@ namespace BudgetExecution
             BudgetControlNumber = GetDivisionCount(division) + 1;
         }
 
-
         // PROPERTIES
         public static string Region { get; set; }
 
@@ -85,14 +83,13 @@ namespace BudgetExecution
 
         public int BudgetControlNumber { get; set; }
 
-        public Dictionary<string, object> Parameter { get; }
+        public Dictionary<string, object> Parameter { get; set; }
 
         private Source Source { get; set; }
 
         private Provider Provider { get; set; }
 
         private DataTable Table { get; set; }
-
 
         // METHODS
 
@@ -368,7 +365,6 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-
                 new Error(ex).ShowDialog();
                 return -1;
             }
@@ -387,7 +383,6 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-
                 new Error(ex).ShowDialog();
                 return -1;
             }
@@ -405,7 +400,6 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-
                 new Error(ex).ShowDialog();
                 return -1;
             }
@@ -416,7 +410,6 @@ namespace BudgetExecution
             int reg = GetRegionCount() + 1;
             int fd = GetFundCount(fund) + 1;
             int dc = GetDivisionCount(divisionid) + 1;
-
         }
     }
 }

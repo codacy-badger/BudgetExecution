@@ -4292,7 +4292,7 @@ namespace BudgetExecution
             this.button5.Size = new System.Drawing.Size(75, 44);
             this.button5.TabIndex = 160;
             this.button5.UseVisualStyleBackColor = false;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.button5.Click += new System.EventHandler(this.Button5_Click);
             // 
             // button4
             // 
@@ -5009,7 +5009,7 @@ namespace BudgetExecution
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 19F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 68F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 97F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 113F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 115F));
             this.tableLayoutPanel1.Controls.Add(this.label31, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.label32, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.label34, 2, 0);
@@ -5027,7 +5027,7 @@ namespace BudgetExecution
             // 
             this.label31.AutoSize = true;
             this.label31.Dock = System.Windows.Forms.DockStyle.Right;
-            this.label31.Location = new System.Drawing.Point(6, 0);
+            this.label31.Location = new System.Drawing.Point(5, 0);
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(48, 44);
             this.label31.TabIndex = 153;
@@ -5037,7 +5037,7 @@ namespace BudgetExecution
             // 
             this.label32.AutoSize = true;
             this.label32.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label32.Location = new System.Drawing.Point(60, 0);
+            this.label32.Location = new System.Drawing.Point(59, 0);
             this.label32.Name = "label32";
             this.label32.Size = new System.Drawing.Size(60, 44);
             this.label32.TabIndex = 154;
@@ -5047,7 +5047,7 @@ namespace BudgetExecution
             // 
             this.label34.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label34.AutoSize = true;
-            this.label34.Location = new System.Drawing.Point(281, 0);
+            this.label34.Location = new System.Drawing.Point(279, 0);
             this.label34.Name = "label34";
             this.label34.Size = new System.Drawing.Size(76, 20);
             this.label34.TabIndex = 155;
@@ -5057,7 +5057,7 @@ namespace BudgetExecution
             // 
             this.label37.AutoSize = true;
             this.label37.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label37.Location = new System.Drawing.Point(363, 0);
+            this.label37.Location = new System.Drawing.Point(361, 0);
             this.label37.Name = "label37";
             this.label37.Size = new System.Drawing.Size(60, 44);
             this.label37.TabIndex = 156;
@@ -5067,7 +5067,7 @@ namespace BudgetExecution
             // 
             this.label40.AutoSize = true;
             this.label40.Dock = System.Windows.Forms.DockStyle.Right;
-            this.label40.Location = new System.Drawing.Point(593, 0);
+            this.label40.Location = new System.Drawing.Point(591, 0);
             this.label40.Name = "label40";
             this.label40.Size = new System.Drawing.Size(84, 44);
             this.label40.TabIndex = 159;
@@ -5077,7 +5077,7 @@ namespace BudgetExecution
             // 
             this.label41.AutoSize = true;
             this.label41.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label41.Location = new System.Drawing.Point(683, 0);
+            this.label41.Location = new System.Drawing.Point(681, 0);
             this.label41.Name = "label41";
             this.label41.Size = new System.Drawing.Size(60, 44);
             this.label41.TabIndex = 160;

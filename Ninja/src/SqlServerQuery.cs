@@ -101,7 +101,7 @@ namespace BudgetExecution
                 return null;
             }
         }
-        
+
         public string GetSelectParamString(SqlParameter[] param)
         {
             try
@@ -131,7 +131,7 @@ namespace BudgetExecution
                 {
                     foreach (KeyValuePair<string, object> kvp in param)
                     {
-                        val[i] = new SqlParameter(kvp.Key.ToString(), (object)kvp.Value);
+                        val[i] = new SqlParameter(kvp.Key.ToString(), kvp.Value);
                         val[i].SourceColumn = kvp.Key.ToString();
                         if (kvp.Key.ToString().Equals("ID"))
                         {
@@ -201,7 +201,7 @@ namespace BudgetExecution
         {
             try
             {
-                 return new SqlConnection(@"datasource=C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\database\SqlCe\R6.sdf");
+                return new SqlConnection(@"datasource=C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\database\SqlCe\R6.sdf");
             }
             catch (Exception ex)
             {
@@ -228,7 +228,7 @@ namespace BudgetExecution
         {
             try
             {
-               return new SqlDataAdapter(command);
+                return new SqlDataAdapter(command);
             }
             catch (Exception ex)
             {
@@ -241,7 +241,7 @@ namespace BudgetExecution
         {
             try
             {
-               return command.ExecuteReader();
+                return command.ExecuteReader();
             }
             catch (Exception ex)
             {

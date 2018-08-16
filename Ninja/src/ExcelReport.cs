@@ -8,9 +8,7 @@ namespace BudgetExecution
     using System.Collections.Generic;
     using System.Data;
     using System.Runtime.InteropServices;
-    using System.Security.Policy;
     using System.Windows.Forms;
-    using System.Configuration;
 
     using Excel = Microsoft.Office.Interop.Excel.Application;
     using Workbook = Microsoft.Office.Interop.Excel.Workbook;
@@ -39,27 +37,27 @@ namespace BudgetExecution
             Excel = new Excel();
             BudgetTemplate = GetInternalFilePath();
         }
-        
+
         public ExcelReport(Source source, Provider provider)
         {
             Source = source;
             Provider = provider;
-            this.D6 = new DivisionAuthority();
-            DbData = this.D6.DbData;
+            D6 = new DivisionAuthority();
+            DbData = D6.DbData;
             Table = DbData.DbTable;
             Authority = D6.GetAppropriation(DbData.ProgramElements["Fund"]);
             Excel = new Excel();
             BudgetTemplate = GetInternalFilePath();
         }
-                
+
         public ExcelReport(Source source, Provider provider, Dictionary<string, object> p)
         {
             Source = source;
             Provider = provider;
             if (p.ContainsKey("RC"))
             {
-                this.D6 = new DivisionAuthority(p["RC"].ToString());
-                DbData = this.D6.DbData;
+                D6 = new DivisionAuthority(p["RC"].ToString());
+                DbData = D6.DbData;
                 Table = DbData.DbTable;
                 Authority = D6.GetAppropriation(DbData.ProgramElements["Fund"]);
             }
@@ -69,7 +67,7 @@ namespace BudgetExecution
         }
 
         // PROPERTIES
-        public Source Source { get;set; }
+        public Source Source { get; set; }
 
         public Provider Provider { get; set; }
 
@@ -114,7 +112,7 @@ namespace BudgetExecution
                 return null;
             }
         }
-        
+
         public string GetExternalFilePath()
         {
             try
@@ -257,7 +255,7 @@ namespace BudgetExecution
 
         internal void Close(Workbook wb)
         {
-            if(wb != null)
+            if (wb != null)
             {
                 try
                 {

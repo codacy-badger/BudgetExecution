@@ -2,14 +2,13 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
-
 namespace BudgetExecution
 {
     using System;
     using System.Collections.Generic;
+    using System.Configuration;
     using System.Data;
     using System.Data.OleDb;
-    using System.Configuration;
 
     public class ExcelQuery : Query
     {
@@ -18,7 +17,7 @@ namespace BudgetExecution
         {
         }
 
-        public ExcelQuery(Source source)  : base(source, Provider.OleDb)
+        public ExcelQuery(Source source) : base(source, Provider.OleDb)
         {
             Source = source;
             Provider = base.Provider;
@@ -54,13 +53,13 @@ namespace BudgetExecution
         // Properties
         public OleDbDataAdapter Adapter { get; set; }
 
-        public  new OleDbCommandBuilder CommandBuilder { get; }
+        public new OleDbCommandBuilder CommandBuilder { get; }
 
         public OleDbConnection Connection { get; }
 
         public new Dictionary<string, object> Parameter { get; }
 
-        public OleDbParameter[] Parameters {  get; set; }
+        public OleDbParameter[] Parameters { get; set; }
 
         public new OleDbDataReader DataReader { get; set; }
 
@@ -71,7 +70,7 @@ namespace BudgetExecution
         public new Source Source { get; }
 
         public new Provider Provider { get; set; }
-        
+
         public new string TableName { get; }
 
         public new OleDbCommand UpdateCommand { get; }
@@ -90,7 +89,7 @@ namespace BudgetExecution
                 OleDbParameter[] val = new OleDbParameter[dr.ItemArray.Length];
                 for (int i = 0; i < dr.ItemArray.Length; i++)
                 {
-                    val[i] = new OleDbParameter(dr.Table.Columns[i].ColumnName, (object)dr[i]);
+                    val[i] = new OleDbParameter(dr.Table.Columns[i].ColumnName, dr[i]);
                 }
 
                 return val;
@@ -102,7 +101,7 @@ namespace BudgetExecution
             }
         }
 
-        public new OleDbParameter[] GetParameter(Dictionary<string, object> param)
+        public OleDbParameter[] GetParameter(Dictionary<string, object> param)
         {
             try
             {
@@ -111,7 +110,7 @@ namespace BudgetExecution
                 {
                     foreach (KeyValuePair<string, object> kvp in param)
                     {
-                        val[i] = new OleDbParameter(kvp.Key, (object)kvp.Value);
+                        val[i] = new OleDbParameter(kvp.Key, kvp.Value);
                         val[i].SourceColumn = kvp.Key;
                         if (kvp.Key.Equals("ID"))
                         {
@@ -126,7 +125,6 @@ namespace BudgetExecution
                         {
                             val[i].DbType = DbType.String;
                         }
-
                     }
                 }
 
@@ -392,6 +390,5 @@ namespace BudgetExecution
                 return null;
             }
         }
-
     }
 }

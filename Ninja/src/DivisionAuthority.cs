@@ -9,8 +9,6 @@ namespace BudgetExecution
     using System.Data;
     using System.Linq;
 
-    using Remotion.Linq.Clauses;
-
     public class DivisionAuthority : IBudgetAuthority
     {
         // CONSTRUCTORS
@@ -21,7 +19,7 @@ namespace BudgetExecution
             Metric = new PrcMetric(DbData);
             DataRecords = DbData.DbRow;
             DbTable = DbData.DbTable;
-            this.Allocation = GetPrcArray(DbTable);
+            PRC = GetPrcArray(DbTable);
             Total = Metric.Total;
             Count = Metric.Count;
             Average = Metric.Average;
@@ -36,7 +34,7 @@ namespace BudgetExecution
             {
                 FTE = GetFTE(DbData.DbTable);
             }
-        
+
             Awards = new DataBuilder(Source.Awards, Provider.SQLite, new Dictionary<string, object> { ["BFY"] = FiscalYear }).DbTable;
             TableFilter = DataBuilder.FilterTable;
         }
@@ -50,7 +48,7 @@ namespace BudgetExecution
             Metric = new PrcMetric(DbData);
             DbTable = DbData.DbTable;
             DataRecords = DbData.DbRow;
-            this.Allocation = GetPrcArray(DbTable);
+            PRC = GetPrcArray(DbTable);
             Total = Metric.Total;
             Count = Metric.Count;
             Average = Metric.Average;
@@ -86,11 +84,13 @@ namespace BudgetExecution
 
         public DataRow[] DataRecords { get; }
 
-        public PRC[] Allocation { get; }
+        public PRC[] PRC { get; }
 
         public Appropriation[] Appropriation { get; set; }
 
         public DataBuilder DbData { get; set; }
+
+        public DataSet Allocation { get; set; }
 
         public PrcMetric Metric { get; }
 
@@ -114,7 +114,7 @@ namespace BudgetExecution
 
         public DataTable TS3 { get; set; }
 
-        public DataTable FS3{ get; set; }
+        public DataTable FS3 { get; set; }
 
         public DataTable Awards { get; }
 
@@ -128,11 +128,9 @@ namespace BudgetExecution
 
         public decimal Average { get; }
 
-        public DataFilter TableFilter { get; } 
+        public DataFilter TableFilter { get; }
 
-        public Dictionary<string, decimal> ProgramData { get; set; }
-
-        public FTE[] FTE { get; }
+        public DataTable FTE { get; }
 
         public Dictionary<string, decimal> BocData { get; set; }
 
@@ -207,7 +205,7 @@ namespace BudgetExecution
             try
             {
                 int count = GetCount(table);
-                return new decimal[] { GetTotal(table), (decimal)table.Rows.Count, GetAverage(table) };
+                return new decimal[] { GetTotal(table), table.Rows.Count, GetAverage(table) };
             }
             catch (Exception ex)
             {
@@ -276,117 +274,148 @@ namespace BudgetExecution
             }
         }
 
-        internal FTE[] GetFTE(DataTable table)
+        internal DataTable GetFTE(DataTable table)
         {
-            try
+            if (GetCodes(table, "BOC").Contains("17"))
             {
-                DataTable fteTable = table.AsEnumerable().Where(p => p.Field<string>("BOC").Equals("17")).Select(p => p).CopyToDataTable();
-                FTE[] fteArray = new FTE[fteTable.Rows.Count];
-                for (int i = 0; i < fteTable.Rows.Count; i++)
+                try
                 {
-                    fteArray[i] = new FTE(fteTable.Rows[i]);
+                    return table.AsEnumerable().Where(p => p.Field<string>("BOC").Equals("17")).Select(p => p).CopyToDataTable();
                 }
+                catch (Exception ex)
+                {
+                    new Error(ex).ShowDialog();
+                    return null;
+                }
+            }
 
-                return fteArray;
-            }
-            catch (Exception ex)
-            {
-                new Error(ex).ShowDialog();
-                return null;
-            }
+            return null;
         }
 
         internal DataTable GetEPM(DataTable approp)
         {
-            try
+            if (GetCodes(approp, "Fund").Contains("T"))
             {
-                return approp.AsEnumerable().Where(a => a.Field<string>("Fund").StartsWith("B")).Select(a => a).CopyToDataTable();
+                try
+                {
+                    return approp.AsEnumerable().Where(a => a.Field<string>("Fund").StartsWith("B")).Select(a => a).CopyToDataTable();
+                }
+                catch (Exception ex)
+                {
+                    new Error(ex).ShowDialog();
+                    return null;
+                }
             }
-            catch (Exception ex)
-            {
-                new Error(ex).ShowDialog();
-                return null;
-            } 
+
+            return null;
         }
 
         internal DataTable GetSTAG(DataTable approp)
         {
-            try
+            if (GetCodes(approp, "Fund").Contains("E"))
             {
-                return approp.AsEnumerable().Where(a => a.Field<string>("Fund").StartsWith("E")).Select(a => a).CopyToDataTable();
+                try
+                {
+                    return approp.AsEnumerable().Where(a => a.Field<string>("Fund").StartsWith("E")).Select(a => a).CopyToDataTable();
+                }
+                catch (Exception ex)
+                {
+                    new Error(ex).ShowDialog();
+                    return null;
+                }
             }
-            catch (Exception ex)
-            {
-                new Error(ex).ShowDialog();
-                return null;
-            }
+
+            return null;
         }
 
         internal DataTable GetOIL(DataTable approp)
         {
-            try
+            if (GetCodes(approp, "Fund").Contains("H"))
             {
-                return approp.AsEnumerable().Where(a => a.Field<string>("Fund").StartsWith("H")).Select(a => a).CopyToDataTable();
+                try
+                {
+                    return approp.AsEnumerable().Where(a => a.Field<string>("Fund").StartsWith("H")).Select(a => a).CopyToDataTable();
+                }
+                catch (Exception ex)
+                {
+                    new Error(ex).ShowDialog();
+                    return null;
+                }
             }
-            catch (Exception ex)
-            {
-                new Error(ex).ShowDialog();
-                return null;
-            }
+
+            return null;
         }
 
         internal DataTable GetLUST(DataTable approp)
         {
-            try
+            if (GetCodes(approp, "Fund").Contains("F"))
             {
-                return approp.AsEnumerable().Where(a => a.Field<string>("Fund").StartsWith("F")).Select(a => a).CopyToDataTable();
+                try
+                {
+                    return approp.AsEnumerable().Where(a => a.Field<string>("Fund").StartsWith("F")).Select(a => a).CopyToDataTable();
+                }
+                catch (Exception ex)
+                {
+                    new Error(ex).ShowDialog();
+                    return null;
+                }
             }
-            catch (Exception ex)
-            {
-                new Error(ex).ShowDialog();
-                return null;
-            }
+
+            return null;
         }
-        
+
         internal DataTable GetSF6A(DataTable approp)
         {
-            try
+            if (GetCodes(approp, "Fund").Contains("T"))
             {
-                return approp.AsEnumerable().Where(a => a.Field<string>("Fund").Equals("T"))
-                    .Where(a => a.Field<string>("Org").StartsWith("6A")).Select(a => a).CopyToDataTable();
+                try
+                {
+                    return approp.AsEnumerable().Where(a => a.Field<string>("Fund").Equals("T")).Where(a => a.Field<string>("Org").StartsWith("6A")).Select(a => a).CopyToDataTable();
+                }
+                catch (Exception ex)
+                {
+                    new Error(ex).ShowDialog();
+                    return null;
+                }
             }
-            catch (Exception ex)
-            {
-                new Error(ex).ShowDialog();
-                return null;
-            }
+
+            return null;
         }
-        
+
         internal DataTable GetTR(DataTable approp)
         {
-            try
+            if (GetCodes(approp, "Fund").Contains("TR"))
             {
-                return approp.AsEnumerable().Where(a => a.Field<string>("Fund").StartsWith("TR")).Select(a => a).CopyToDataTable();
+                try
+                {
+                    return approp.AsEnumerable().Where(a => a.Field<string>("Fund").StartsWith("TR")).Select(a => a).CopyToDataTable();
+                }
+                catch (Exception ex)
+                {
+                    new Error(ex).ShowDialog();
+                    return null;
+                }
             }
-            catch (Exception ex)
-            {
-                new Error(ex).ShowDialog();
-                return null;
-            }
+
+            return null;
         }
-        
+
         internal DataTable GetSUPERFUND(DataTable approp)
         {
-            try
+            if (GetCodes(approp, "Fund").Contains("T"))
             {
-                return approp.AsEnumerable().Where(a => a.Field<string>("Fund").Equals("T"))
-                    .Where(p => p.Field<string>("Org").StartsWith("6A")).Select(a => a).CopyToDataTable();
+                try
+                {
+                    return approp.AsEnumerable().Where(a => a.Field<string>("Fund").Equals("T")).Where(p => p.Field<string>("Org").StartsWith("6A")).Select(a => a).CopyToDataTable();
+                }
+                catch (Exception ex)
+                {
+                    new Error(ex).ShowDialog();
+                    return null;
+                }
             }
-            catch (Exception ex)
-            {
-                new Error(ex).ShowDialog();
-                return null;
-            }
+
+            return null;
         }
 
         internal Appropriation[] GetAppropriation(string[] funds)
@@ -407,7 +436,7 @@ namespace BudgetExecution
                 {
                     new Error(ex).ShowDialog();
                     return null;
-                } 
+                }
             }
 
             return null;

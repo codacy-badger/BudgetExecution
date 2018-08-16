@@ -7,13 +7,11 @@ namespace BudgetExecution
     using System;
     using System.Collections.Generic;
     using System.Data;
-    using System.Data.SQLite;
     using System.Linq;
     using System.Windows.Forms;
 
     public class PRC : IPRC, IAccount
     {
-
         // CONSTRUCTORS
         public PRC()
         {
@@ -194,17 +192,7 @@ namespace BudgetExecution
         {
             try
             {
-                Dictionary<string, object> param = new Dictionary<string, object>()
-                {
-                    ["ID"] = ID,
-                    ["BudgetLevel"] = BudgetLevel,
-                    ["RPIO"] = RPIO,
-                    ["BFY"] = BFY,
-                    ["Fund"] = Fund.Code,
-                    ["RC"] = RC,
-                    ["BOC"] = BOC.Code,
-                    ["Code"] = Account.Code,
-                };
+                Dictionary<string, object> param = new Dictionary<string, object>() { ["ID"] = ID, ["BudgetLevel"] = BudgetLevel, ["RPIO"] = RPIO, ["BFY"] = BFY, ["Fund"] = Fund.Code, ["RC"] = RC, ["BOC"] = BOC.Code, ["Code"] = Account.Code, };
                 return param;
             }
             catch (Exception ex)
@@ -268,7 +256,7 @@ namespace BudgetExecution
         {
             return Account.Code;
         }
-        
+
         public static Dictionary<string, object> GetInsertionColumns(Source source, Provider provider, Dictionary<string, object> param)
         {
             try

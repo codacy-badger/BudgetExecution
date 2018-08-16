@@ -159,7 +159,6 @@ namespace BudgetExecution
             this.Tab3Fp1 = new System.Windows.Forms.FlowLayoutPanel();
             this.metroPanel9 = new MetroFramework.Controls.MetroPanel();
             this.Tab3Fp3 = new System.Windows.Forms.FlowLayoutPanel();
-            this.TransferBinding = new System.Windows.Forms.BindingSource(this.components);
             this.Tab2 = new Syncfusion.Windows.Forms.Tools.TabControlAdv();
             this.Tab1 = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
             this.Tab1P2 = new MetroFramework.Controls.MetroPanel();
@@ -227,6 +226,7 @@ namespace BudgetExecution
             this.tabPageAdv2 = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
             this.Tab3 = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
             this.superToolTip1 = new Syncfusion.Windows.Forms.Tools.SuperToolTip(this);
+            this.TransferBinding = new System.Windows.Forms.BindingSource(this.components);
             this.Tab2P2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
@@ -241,7 +241,6 @@ namespace BudgetExecution
             this.metroPanel10.SuspendLayout();
             this.metroPanel7.SuspendLayout();
             this.metroPanel9.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.TransferBinding)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Tab2)).BeginInit();
             this.Tab2.SuspendLayout();
             this.Tab1.SuspendLayout();
@@ -251,6 +250,7 @@ namespace BudgetExecution
             this.Tab1P1.SuspendLayout();
             this.tabPageAdv2.SuspendLayout();
             this.Tab3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.TransferBinding)).BeginInit();
             this.SuspendLayout();
             // 
             // Tab2P2
@@ -1896,7 +1896,6 @@ namespace BudgetExecution
             this.Tab2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Tab2.FixedSingleBorderColor = System.Drawing.Color.SteelBlue;
             this.Tab2.FocusOnTabClick = false;
-            this.Tab2.InactiveTabColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.Tab2.InActiveTabForeColor = System.Drawing.Color.Gray;
             this.Tab2.Location = new System.Drawing.Point(0, 0);
             this.Tab2.Name = "Tab2";
@@ -1906,7 +1905,6 @@ namespace BudgetExecution
             this.Tab2.TabIndex = 2;
             this.Tab2.TabPanelBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             this.Tab2.TabStyle = typeof(Syncfusion.Windows.Forms.Tools.TabRendererMetro);
-            this.Tab2.SelectedIndexChanged += new System.EventHandler(this.ExcelButton_OnClick);
             // 
             // Tab1
             // 
@@ -2908,10 +2906,10 @@ namespace BudgetExecution
             this.CaptionFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CaptionForeColor = System.Drawing.SystemColors.MenuHighlight;
             captionImage1.BackColor = System.Drawing.Color.Black;
-            captionImage1.Image = global::BudgetExecution.Properties.Resources.Shuffle_New;
-            captionImage1.Location = new System.Drawing.Point(10, 5);
+            captionImage1.Image = ((System.Drawing.Image)(resources.GetObject("captionImage1.Image")));
+            captionImage1.Location = new System.Drawing.Point(10, 7);
             captionImage1.Name = "CaptionImage1";
-            captionImage1.Size = new System.Drawing.Size(40, 25);
+            captionImage1.Size = new System.Drawing.Size(30, 20);
             this.CaptionImages.Add(captionImage1);
             this.ClientSize = new System.Drawing.Size(1588, 951);
             this.Controls.Add(this.Tab2);
@@ -2941,7 +2939,6 @@ namespace BudgetExecution
             this.metroPanel10.ResumeLayout(false);
             this.metroPanel7.ResumeLayout(false);
             this.metroPanel9.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.TransferBinding)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Tab2)).EndInit();
             this.Tab2.ResumeLayout(false);
             this.Tab1.ResumeLayout(false);
@@ -2954,6 +2951,7 @@ namespace BudgetExecution
             this.Tab1P1.PerformLayout();
             this.tabPageAdv2.ResumeLayout(false);
             this.Tab3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.TransferBinding)).EndInit();
             this.ResumeLayout(false);
 
         }

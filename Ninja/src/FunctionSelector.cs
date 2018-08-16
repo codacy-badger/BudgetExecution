@@ -8,6 +8,7 @@ namespace BudgetExecution
     using System.Drawing;
     using System.IO;
     using System.Windows.Forms;
+
     using Syncfusion.Windows.Forms;
     using Syncfusion.Windows.Forms.Tools;
 
@@ -77,30 +78,35 @@ namespace BudgetExecution
             Carousel carousel = sender as Carousel;
             string i = carousel.ActiveImage.Tag.ToString();
             Function s = (Function)Enum.Parse(typeof(Function), i);
-            switch(s)
+            switch (s)
             {
                 case Function.SQLiteData:
                     DatabaseSelector sd = new DatabaseSelector(Info.DatabaseImages);
                     sd.Show();
                     Close();
                     break;
+
                 case Function.BudgetTools:
                     BudgetTools bt = new BudgetTools();
                     bt.Show();
                     break;
+
                 case Function.DataTools:
                     BudgetTools dt = new BudgetTools();
                     dt.Show();
                     break;
+
                 case Function.ExcelImporter:
                     ExcelImporter ei = new ExcelImporter();
                     ei.Show();
                     break;
+
                 case Function.PdfDataReader:
                     PdfDataReader pdfdr = new PdfDataReader();
                     pdfdr.Show();
                     break;
             }
+
             Close();
         }
     }

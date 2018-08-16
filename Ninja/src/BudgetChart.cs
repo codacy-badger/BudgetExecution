@@ -9,6 +9,7 @@ namespace BudgetExecution
     using System.Data;
     using System.Drawing;
     using System.Windows.Forms;
+
     using Syncfusion.Windows.Forms.Chart;
 
     public class BudgetChart
@@ -111,7 +112,6 @@ namespace BudgetExecution
             Configure3DMode(Chart);
             ConfigureToolTip(DataSeries);
             Chart.ShowToolTips = true;
-            
         }
 
         public BudgetChart(ChartControl chart, string[] title, DataTable table, Field filter, Stat value, ChartSeriesType type)
@@ -146,6 +146,7 @@ namespace BudgetExecution
             {
                 Chart.Series.Clear();
             }
+
             DataSeries = new ChartSeries();
             DataSeries.Type = SeriesType;
             foreach (KeyValuePair<string, double> kvp in data)
@@ -258,13 +259,14 @@ namespace BudgetExecution
             try
             {
                 ChartSeries series = new ChartSeries("Total", SeriesType);
-                if(SeriesType == ChartSeriesType.Column)
+                if (SeriesType == ChartSeriesType.Column)
                 {
                     foreach (KeyValuePair<string, double> kvp in data)
                     {
                         series.Points.Add(kvp.Key, kvp.Value);
                     }
                 }
+
                 if (SeriesType == ChartSeriesType.Pie)
                 {
                     foreach (KeyValuePair<string, double> kvp in data)
@@ -287,7 +289,7 @@ namespace BudgetExecution
             }
             catch (Exception e)
             {
-                DialogResult  _ = new Error(e).ShowDialog();
+                DialogResult _ = new Error(e).ShowDialog();
                 return null;
             }
         }
@@ -304,6 +306,7 @@ namespace BudgetExecution
                         series.Points.Add(kvp.Key, kvp.Value);
                     }
                 }
+
                 if (type == ChartSeriesType.Pie)
                 {
                     foreach (KeyValuePair<string, double> kvp in data)
@@ -328,7 +331,7 @@ namespace BudgetExecution
             }
             catch (Exception e)
             {
-                DialogResult  _ = new Error(e).ShowDialog();
+                DialogResult _ = new Error(e).ShowDialog();
                 return null;
             }
         }
@@ -404,7 +407,7 @@ namespace BudgetExecution
             }
             catch (Exception e)
             {
-                DialogResult  _ = new Error(e).ShowDialog();
+                DialogResult _ = new Error(e).ShowDialog();
             }
         }
 
@@ -432,6 +435,7 @@ namespace BudgetExecution
                 {
                     DataSeries.Style.TextFormat = "${0:N2}";
                 }
+
                 if (SeriesType == ChartSeriesType.Column)
                 {
                     DataSeries.SmartLabels = true;
@@ -446,11 +450,10 @@ namespace BudgetExecution
                     DataSeries.ConfigItems.ColumnItem.PhongAlpha = 2;
                     ConfigureToolTip(DataSeries);
                 }
-                
             }
             catch (Exception e)
             {
-                DialogResult  _ = new Error(e).ShowDialog();
+                DialogResult _ = new Error(e).ShowDialog();
             }
         }
 
@@ -480,7 +483,6 @@ namespace BudgetExecution
 
                 if (DataSeries.Type == ChartSeriesType.Pie)
                 {
-
                     DataSeries.Style.DisplayText = true;
                     DataSeries.SmartLabels = true;
                     DataSeries.SortPoints = true;
@@ -497,9 +499,9 @@ namespace BudgetExecution
                     DataSeries.ShowTicks = true;
                     Chart.Series[0].ConfigItems.PieItem.HeightCoeficient = 0.1f;
                 }
+
                 if (DataSeries.Type == ChartSeriesType.Column)
                 {
-
                     DataSeries.SmartLabels = true;
                     DataSeries.SortPoints = true;
                     DataSeries.Style.DisplayText = true;
@@ -520,7 +522,7 @@ namespace BudgetExecution
             }
             catch (Exception e)
             {
-                DialogResult  _ = new Error(e).ShowDialog();
+                DialogResult _ = new Error(e).ShowDialog();
             }
         }
 
@@ -543,7 +545,7 @@ namespace BudgetExecution
             }
             catch (Exception e)
             {
-                DialogResult  _ = new Error(e).ShowDialog();
+                DialogResult _ = new Error(e).ShowDialog();
             }
         }
 
@@ -576,7 +578,7 @@ namespace BudgetExecution
             }
             catch (Exception e)
             {
-                DialogResult  _ = new Error(e).ShowDialog();
+                DialogResult _ = new Error(e).ShowDialog();
             }
         }
 
@@ -597,7 +599,7 @@ namespace BudgetExecution
             }
             catch (Exception e)
             {
-                DialogResult  _ = new Error(e).ShowDialog();
+                DialogResult _ = new Error(e).ShowDialog();
             }
         }
 
@@ -611,7 +613,7 @@ namespace BudgetExecution
             }
             catch (Exception e)
             {
-                DialogResult  _ = new Error(e).ShowDialog();
+                DialogResult _ = new Error(e).ShowDialog();
             }
         }
 
@@ -657,7 +659,7 @@ namespace BudgetExecution
             }
             catch (Exception e)
             {
-                DialogResult  _ = new Error(e).ShowDialog();
+                DialogResult _ = new Error(e).ShowDialog();
                 return null;
             }
         }
@@ -682,7 +684,7 @@ namespace BudgetExecution
             }
             catch (Exception e)
             {
-                DialogResult  _ = new Error(e).ShowDialog();
+                DialogResult _ = new Error(e).ShowDialog();
             }
         }
     }

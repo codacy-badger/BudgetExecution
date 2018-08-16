@@ -9,15 +9,11 @@ namespace BudgetExecution
     using System.Configuration;
     using System.Data;
     using System.Drawing;
-    using System.IO;
     using System.Windows.Forms;
 
     using MetroSet_UI.Controls;
 
-    using Syncfusion.Styles;
     using Syncfusion.Windows.Forms;
-    using Syncfusion.Windows.Forms.Spreadsheet;
-    using Syncfusion.WinForms.DataGrid.Events;
 
     public partial class ExcelForm : MetroForm
     {
@@ -223,7 +219,6 @@ namespace BudgetExecution
 
         private void ExcelForm_Load(object sender, EventArgs e)
         {
-
         }
     }
 }

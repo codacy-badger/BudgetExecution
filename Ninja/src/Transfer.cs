@@ -12,7 +12,6 @@ namespace BudgetExecution
 
     public class Transfer
     {
-
         // CONSTRUCTORS
         public Transfer()
         {
@@ -101,7 +100,7 @@ namespace BudgetExecution
 
         public string TCN { get; }
 
-        // METHODS       
+        // METHODS
         public static Dictionary<string, object> GetInsertionColumns(Source source, Provider provider, Dictionary<string, object> param)
         {
             try
@@ -111,7 +110,6 @@ namespace BudgetExecution
                 {
                     param["Name"] = account.Name;
                 }
-
 
                 if (!param.ContainsKey("TreasurySymbol") || param["TreasurySymbol"] == null)
                 {

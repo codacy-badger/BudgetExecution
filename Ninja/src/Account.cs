@@ -7,7 +7,6 @@ namespace BudgetExecution
     using System;
     using System.Collections.Generic;
     using System.Data;
-    using System.Data.SQLite;
     using System.Linq;
 
     public class Account : IAccount
@@ -352,11 +351,7 @@ namespace BudgetExecution
         {
             try
             {
-                return new Dictionary<string, object>()
-                {
-                    ["Fund"] = fund,
-                    ["ProgramProjectCode"] = Code.Substring(4, 2)
-                };
+                return new Dictionary<string, object>() { ["Fund"] = fund, ["ProgramProjectCode"] = Code.Substring(4, 2) };
             }
             catch (Exception ex)
             {

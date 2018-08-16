@@ -4,6 +4,7 @@
 
 namespace BudgetExecution
 {
+    using System;
     using System.Collections.Generic;
 
     public class BOC
@@ -37,7 +38,7 @@ namespace BudgetExecution
             {
                 return new Dictionary<string, object>() { ["Code"] = code };
             }
-            catch (System.Exception ex)
+            catch (Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
