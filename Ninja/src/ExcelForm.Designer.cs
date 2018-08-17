@@ -103,8 +103,8 @@ namespace BudgetExecution
             spreadsheetCopyPaste1.AllowPasteOptionPopup = true;
             spreadsheetCopyPaste1.DefaultPasteOption = Syncfusion.Windows.Forms.Spreadsheet.PasteOptions.Paste;
             this.BudgetReport.CopyPaste = spreadsheetCopyPaste1;
-            this.BudgetReport.DefaultColumnCount = 10;
-            this.BudgetReport.DefaultRowCount = 40;
+            this.BudgetReport.DefaultColumnCount = 15;
+            this.BudgetReport.DefaultRowCount = 60;
             this.BudgetReport.DisplayAlerts = true;
             this.BudgetReport.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.BudgetReport.FileName = "Book1";
@@ -115,12 +115,13 @@ namespace BudgetExecution
             formulaRangeSelectionController1.AllowSelectionOnEditing = true;
             this.BudgetReport.FormulaRangeSelectionController = formulaRangeSelectionController1;
             this.BudgetReport.IsCustomTabItemContextMenuEnabled = false;
-            this.BudgetReport.Location = new System.Drawing.Point(0, 219);
+            this.BudgetReport.Location = new System.Drawing.Point(0, 156);
+            this.BudgetReport.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BudgetReport.Name = "BudgetReport";
             this.BudgetReport.SelectedTabIndex = 0;
             this.BudgetReport.SelectedTabItem = null;
             this.BudgetReport.ShowBusyIndicator = true;
-            this.BudgetReport.Size = new System.Drawing.Size(1170, 600);
+            this.BudgetReport.Size = new System.Drawing.Size(780, 390);
             this.BudgetReport.TabIndex = 1;
             this.BudgetReport.TabItemContextMenu = null;
             this.BudgetReport.ThemeName = "Default";
@@ -193,9 +194,10 @@ namespace BudgetExecution
             this.metroSetPanel1.BorderThickness = 1;
             this.metroSetPanel1.Controls.Add(this.BudgetReport);
             this.metroSetPanel1.Controls.Add(this.BudgetReportRibbon1);
-            this.metroSetPanel1.Location = new System.Drawing.Point(383, 55);
+            this.metroSetPanel1.Location = new System.Drawing.Point(316, 36);
+            this.metroSetPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.metroSetPanel1.Name = "metroSetPanel1";
-            this.metroSetPanel1.Size = new System.Drawing.Size(1170, 819);
+            this.metroSetPanel1.Size = new System.Drawing.Size(780, 546);
             this.metroSetPanel1.Style = MetroSet_UI.Design.Style.Dark;
             this.metroSetPanel1.StyleManager = null;
             this.metroSetPanel1.TabIndex = 2;
@@ -211,6 +213,7 @@ namespace BudgetExecution
             this.BudgetReportRibbon1.HideMenuButtonToolTip = true;
             this.BudgetReportRibbon1.LauncherStyle = Syncfusion.Windows.Forms.Tools.LauncherStyle.Metro;
             this.BudgetReportRibbon1.Location = new System.Drawing.Point(0, 0);
+            this.BudgetReportRibbon1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BudgetReportRibbon1.MenuButtonFont = new System.Drawing.Font("Microsoft Sans Serif", 8.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BudgetReportRibbon1.MenuButtonText = "FILE";
             this.BudgetReportRibbon1.MenuButtonWidth = 56;
@@ -222,7 +225,6 @@ namespace BudgetExecution
             // 
             // BudgetReportRibbon1.OfficeMenu
             // 
-            this.BudgetReportRibbon1.OfficeMenu.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.BudgetReportRibbon1.OfficeMenu.Name = "OfficeMenu";
             this.BudgetReportRibbon1.OfficeMenu.ShowItemToolTips = true;
             this.BudgetReportRibbon1.OfficeMenu.Size = new System.Drawing.Size(12, 65);
@@ -231,7 +233,7 @@ namespace BudgetExecution
             this.BudgetReportRibbon1.RibbonStyle = Syncfusion.Windows.Forms.Tools.RibbonStyle.Office2016;
             this.BudgetReportRibbon1.ShowQuickItemsDropDownButton = false;
             this.BudgetReportRibbon1.ShowRibbonDisplayOptionButton = false;
-            this.BudgetReportRibbon1.Size = new System.Drawing.Size(1170, 209);
+            this.BudgetReportRibbon1.Size = new System.Drawing.Size(780, 152);
             this.BudgetReportRibbon1.Spreadsheet = this.BudgetReport;
             this.BudgetReportRibbon1.SystemText.QuickAccessDialogDropDownName = "Start menu";
             this.BudgetReportRibbon1.SystemText.RenameDisplayLabelText = "&Display Name:";
@@ -251,7 +253,8 @@ namespace BudgetExecution
             this.metroSetListBox1.HoveredItemBackColor = System.Drawing.Color.LightGray;
             this.metroSetListBox1.HoveredItemColor = System.Drawing.Color.DimGray;
             this.metroSetListBox1.ItemHeight = 30;
-            this.metroSetListBox1.Location = new System.Drawing.Point(32, 57);
+            this.metroSetListBox1.Location = new System.Drawing.Point(55, 36);
+            this.metroSetListBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.metroSetListBox1.MultiSelect = false;
             this.metroSetListBox1.Name = "metroSetListBox1";
             this.metroSetListBox1.SelectedIndex = -1;
@@ -260,7 +263,7 @@ namespace BudgetExecution
             this.metroSetListBox1.SelectedItemColor = System.Drawing.Color.White;
             this.metroSetListBox1.ShowBorder = true;
             this.metroSetListBox1.ShowScrollBar = false;
-            this.metroSetListBox1.Size = new System.Drawing.Size(320, 408);
+            this.metroSetListBox1.Size = new System.Drawing.Size(213, 265);
             this.metroSetListBox1.Style = MetroSet_UI.Design.Style.Dark;
             this.metroSetListBox1.StyleManager = null;
             this.metroSetListBox1.TabIndex = 42;
@@ -276,7 +279,8 @@ namespace BudgetExecution
             this.metroSetListBox2.HoveredItemBackColor = System.Drawing.Color.LightGray;
             this.metroSetListBox2.HoveredItemColor = System.Drawing.Color.DimGray;
             this.metroSetListBox2.ItemHeight = 30;
-            this.metroSetListBox2.Location = new System.Drawing.Point(32, 495);
+            this.metroSetListBox2.Location = new System.Drawing.Point(55, 322);
+            this.metroSetListBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.metroSetListBox2.MultiSelect = false;
             this.metroSetListBox2.Name = "metroSetListBox2";
             this.metroSetListBox2.SelectedIndex = -1;
@@ -285,7 +289,7 @@ namespace BudgetExecution
             this.metroSetListBox2.SelectedItemColor = System.Drawing.Color.White;
             this.metroSetListBox2.ShowBorder = true;
             this.metroSetListBox2.ShowScrollBar = false;
-            this.metroSetListBox2.Size = new System.Drawing.Size(320, 379);
+            this.metroSetListBox2.Size = new System.Drawing.Size(213, 246);
             this.metroSetListBox2.Style = MetroSet_UI.Design.Style.Dark;
             this.metroSetListBox2.StyleManager = null;
             this.metroSetListBox2.TabIndex = 43;
@@ -308,11 +312,12 @@ namespace BudgetExecution
             this.metroSetComboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.metroSetComboBox1.FormattingEnabled = true;
             this.metroSetComboBox1.ItemHeight = 20;
-            this.metroSetComboBox1.Location = new System.Drawing.Point(83, 700);
+            this.metroSetComboBox1.Location = new System.Drawing.Point(90, 452);
+            this.metroSetComboBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.metroSetComboBox1.Name = "metroSetComboBox1";
             this.metroSetComboBox1.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.metroSetComboBox1.SelectedItemForeColor = System.Drawing.Color.White;
-            this.metroSetComboBox1.Size = new System.Drawing.Size(225, 26);
+            this.metroSetComboBox1.Size = new System.Drawing.Size(151, 26);
             this.metroSetComboBox1.Style = MetroSet_UI.Design.Style.Dark;
             this.metroSetComboBox1.StyleManager = null;
             this.metroSetComboBox1.TabIndex = 44;
@@ -335,11 +340,12 @@ namespace BudgetExecution
             this.metroSetComboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.metroSetComboBox2.FormattingEnabled = true;
             this.metroSetComboBox2.ItemHeight = 20;
-            this.metroSetComboBox2.Location = new System.Drawing.Point(83, 567);
+            this.metroSetComboBox2.Location = new System.Drawing.Point(90, 365);
+            this.metroSetComboBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.metroSetComboBox2.Name = "metroSetComboBox2";
             this.metroSetComboBox2.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.metroSetComboBox2.SelectedItemForeColor = System.Drawing.Color.White;
-            this.metroSetComboBox2.Size = new System.Drawing.Size(225, 26);
+            this.metroSetComboBox2.Size = new System.Drawing.Size(151, 26);
             this.metroSetComboBox2.Style = MetroSet_UI.Design.Style.Dark;
             this.metroSetComboBox2.StyleManager = null;
             this.metroSetComboBox2.TabIndex = 45;
@@ -349,9 +355,10 @@ namespace BudgetExecution
             // panel1
             // 
             this.panel1.Controls.Add(this.Navigator);
-            this.panel1.Location = new System.Drawing.Point(877, 896);
+            this.panel1.Location = new System.Drawing.Point(569, 604);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(699, 41);
+            this.panel1.Size = new System.Drawing.Size(466, 52);
             this.panel1.TabIndex = 154;
             // 
             // Navigator
@@ -391,21 +398,21 @@ namespace BudgetExecution
             this.toolStripButton15,
             this.toolStripSeparator20,
             this.toolStripButton16});
-            this.Navigator.Location = new System.Drawing.Point(0, 14);
+            this.Navigator.Location = new System.Drawing.Point(0, 25);
             this.Navigator.MoveFirstItem = null;
             this.Navigator.MoveLastItem = null;
             this.Navigator.MoveNextItem = this.toolStripButton11;
             this.Navigator.MovePreviousItem = this.toolStripButton10;
             this.Navigator.Name = "Navigator";
             this.Navigator.PositionItem = this.toolStripTextBox2;
-            this.Navigator.Size = new System.Drawing.Size(699, 27);
+            this.Navigator.Size = new System.Drawing.Size(466, 27);
             this.Navigator.TabIndex = 154;
             this.Navigator.Text = "bindingNavigator1";
             // 
             // toolStripLabel2
             // 
             this.toolStripLabel2.Name = "toolStripLabel2";
-            this.toolStripLabel2.Size = new System.Drawing.Size(46, 24);
+            this.toolStripLabel2.Size = new System.Drawing.Size(33, 24);
             this.toolStripLabel2.Text = "of {0}";
             this.toolStripLabel2.ToolTipText = "Total number of items";
             // 
@@ -446,7 +453,7 @@ namespace BudgetExecution
             this.toolStripTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.toolStripTextBox2.ForeColor = System.Drawing.Color.White;
             this.toolStripTextBox2.Name = "toolStripTextBox2";
-            this.toolStripTextBox2.Size = new System.Drawing.Size(42, 24);
+            this.toolStripTextBox2.Size = new System.Drawing.Size(28, 16);
             this.toolStripTextBox2.Text = "0";
             this.toolStripTextBox2.TextBoxTextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.toolStripTextBox2.ToolTipText = "Current position";
@@ -635,14 +642,15 @@ namespace BudgetExecution
             // 
             // flowLayoutPanel1
             // 
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(50, 74);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(72, 54);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(292, 382);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(179, 227);
             this.flowLayoutPanel1.TabIndex = 155;
             // 
             // ExcelForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(25)))), ((int)(((byte)(25)))));
             this.BorderColor = System.Drawing.SystemColors.MenuHighlight;
@@ -657,7 +665,7 @@ namespace BudgetExecution
             captionImage1.Name = "CaptionImage1";
             captionImage1.Size = new System.Drawing.Size(30, 30);
             this.CaptionImages.Add(captionImage1);
-            this.ClientSize = new System.Drawing.Size(1588, 949);
+            this.ClientSize = new System.Drawing.Size(1266, 667);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.metroSetComboBox2);
@@ -666,9 +674,10 @@ namespace BudgetExecution
             this.Controls.Add(this.metroSetListBox1);
             this.Controls.Add(this.metroSetPanel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximumSize = new System.Drawing.Size(1600, 1000);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.MaximumSize = new System.Drawing.Size(1278, 718);
             this.MetroColor = System.Drawing.Color.Black;
-            this.MinimumSize = new System.Drawing.Size(1600, 1000);
+            this.MinimumSize = new System.Drawing.Size(1278, 718);
             this.Name = "ExcelForm";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

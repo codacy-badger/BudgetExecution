@@ -1,5 +1,0 @@
-CREATE VIEW "SUPERFUND" (
-    AS SELECT * 
-    FROM PRC 
-    WHERE Fund LIKE 'T%'
-);

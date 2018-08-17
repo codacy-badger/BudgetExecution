@@ -1,5 +1,0 @@
-CREATE VIEW "WCF" (
-    AS SELECT * 
-    FROM PRC 
-    WHERE BOC = '38'
-);

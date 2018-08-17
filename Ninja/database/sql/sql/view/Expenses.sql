@@ -1,5 +1,0 @@
-CREATE VIEW "EXPENSES" (
-    AS SELECT * 
-    FROM PRC 
-    WHERE BOC = '36'
-);

@@ -47,6 +47,7 @@ namespace BudgetExecution
             this.monthCalendarAdv1.Border3DStyle = System.Windows.Forms.Border3DStyle.Flat;
             this.monthCalendarAdv1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(211)))), ((int)(((byte)(212)))));
             this.monthCalendarAdv1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.monthCalendarAdv1.BottomHeight = 13;
             this.monthCalendarAdv1.Culture = new System.Globalization.CultureInfo("");
             this.monthCalendarAdv1.DayNamesColor = System.Drawing.Color.SteelBlue;
             this.monthCalendarAdv1.DayNamesFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
@@ -55,15 +56,16 @@ namespace BudgetExecution
             this.monthCalendarAdv1.FirstDayOfWeek = System.Windows.Forms.Day.Monday;
             this.monthCalendarAdv1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.monthCalendarAdv1.GridLines = Syncfusion.Windows.Forms.Grid.GridBorderStyle.None;
-            this.monthCalendarAdv1.HeaderHeight = 34;
+            this.monthCalendarAdv1.HeaderHeight = 22;
             this.monthCalendarAdv1.HeaderStartColor = System.Drawing.Color.White;
             this.monthCalendarAdv1.HighlightColor = System.Drawing.Color.Black;
             this.monthCalendarAdv1.Iso8601CalenderFormat = false;
             this.monthCalendarAdv1.Location = new System.Drawing.Point(0, 0);
+            this.monthCalendarAdv1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.monthCalendarAdv1.MetroColor = System.Drawing.Color.SteelBlue;
             this.monthCalendarAdv1.Name = "monthCalendarAdv1";
-            this.monthCalendarAdv1.ScrollButtonSize = new System.Drawing.Size(24, 24);
-            this.monthCalendarAdv1.Size = new System.Drawing.Size(722, 599);
+            this.monthCalendarAdv1.ScrollButtonSize = new System.Drawing.Size(16, 16);
+            this.monthCalendarAdv1.Size = new System.Drawing.Size(521, 426);
             this.monthCalendarAdv1.Style = Syncfusion.Windows.Forms.VisualStyle.Metro;
             this.monthCalendarAdv1.TabIndex = 0;
             this.monthCalendarAdv1.WeekFont = new System.Drawing.Font("Verdana", 8F);
@@ -75,8 +77,9 @@ namespace BudgetExecution
             this.monthCalendarAdv1.NoneButton.BeforeTouchSize = new System.Drawing.Size(75, 23);
             this.monthCalendarAdv1.NoneButton.ForeColor = System.Drawing.Color.White;
             this.monthCalendarAdv1.NoneButton.IsBackStageButton = false;
-            this.monthCalendarAdv1.NoneButton.Location = new System.Drawing.Point(360, 1);
-            this.monthCalendarAdv1.NoneButton.Size = new System.Drawing.Size(361, 16);
+            this.monthCalendarAdv1.NoneButton.Location = new System.Drawing.Point(280, 0);
+            this.monthCalendarAdv1.NoneButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.monthCalendarAdv1.NoneButton.Size = new System.Drawing.Size(241, 13);
             this.monthCalendarAdv1.NoneButton.Text = "None";
             this.monthCalendarAdv1.NoneButton.UseVisualStyle = true;
             // 
@@ -87,14 +90,15 @@ namespace BudgetExecution
             this.monthCalendarAdv1.TodayButton.BeforeTouchSize = new System.Drawing.Size(75, 23);
             this.monthCalendarAdv1.TodayButton.ForeColor = System.Drawing.Color.White;
             this.monthCalendarAdv1.TodayButton.IsBackStageButton = false;
-            this.monthCalendarAdv1.TodayButton.Location = new System.Drawing.Point(2, 1);
-            this.monthCalendarAdv1.TodayButton.Size = new System.Drawing.Size(358, 16);
+            this.monthCalendarAdv1.TodayButton.Location = new System.Drawing.Point(0, 0);
+            this.monthCalendarAdv1.TodayButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.monthCalendarAdv1.TodayButton.Size = new System.Drawing.Size(280, 13);
             this.monthCalendarAdv1.TodayButton.Text = "Today";
             this.monthCalendarAdv1.TodayButton.UseVisualStyle = true;
             // 
             // Calendar
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.BorderColor = System.Drawing.SystemColors.MenuHighlight;
@@ -106,8 +110,9 @@ namespace BudgetExecution
             captionImage1.Location = new System.Drawing.Point(10, 10);
             captionImage1.Name = "CaptionImage1";
             this.CaptionImages.Add(captionImage1);
-            this.ClientSize = new System.Drawing.Size(722, 599);
+            this.ClientSize = new System.Drawing.Size(521, 426);
             this.Controls.Add(this.monthCalendarAdv1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MetroColor = System.Drawing.Color.Black;
             this.Name = "Calendar";
             this.ShowIcon = false;

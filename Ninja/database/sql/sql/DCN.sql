@@ -1,4 +1,0 @@
-SELECT * 
-FROM Obligations
-WHERE BOC NOT LIKE '1%' 
-GROUP BY BFY, Fund, RC, DCN, Code, BOC
