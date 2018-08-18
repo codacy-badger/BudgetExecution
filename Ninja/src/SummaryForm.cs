@@ -282,8 +282,8 @@ namespace BudgetExecution
                     DatabaseTab.TabVisible = true;
                     ProjectTab.TabVisible = false;
                 }
+
                 BindingSource.DataSource = Table;
-                AccountNavigator.BindingSource = BindingSource;
                 Grid.DataSource = BindingSource;
                 DefineVisisbleDataColumns(Grid);
                 PopulateFilterBoxItems(GridFundFilter, Field.FundName);
@@ -770,7 +770,6 @@ namespace BudgetExecution
                 try
                 {
                     BindingSource.Filter = null;
-                    AccountNavigator.BindingSource = BindingSource;
                     Grid.DataSource = BindingSource;
                     label32.Text = DbData.GetTotal(DbData.DbTable).ToString("c");
                     label41.Text = DbData.GetCount(DbData.DbTable).ToString();
@@ -1601,7 +1600,7 @@ namespace BudgetExecution
         /// <param name="e">
         /// The e.
         /// </param>
-        private void Button4_Click(object sender, EventArgs e)
+        private void PreviousButton_OnClick(object sender, EventArgs e)
         {
             BindingSource.MovePrevious();
         }
@@ -1615,9 +1614,14 @@ namespace BudgetExecution
         /// <param name="e">
         /// The e.
         /// </param>
-        private void Button5_Click(object sender, EventArgs e)
+        private void NextButton_OnClick(object sender, EventArgs e)
         {
             BindingSource.MoveNext();
+        }
+
+        private void tableLayoutPanel3_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

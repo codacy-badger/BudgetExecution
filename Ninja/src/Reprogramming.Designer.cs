@@ -208,24 +208,18 @@ namespace BudgetExecution
             this.Tab1Tx4 = new MetroSet_UI.Controls.MetroSetTextBox();
             this.Tab1Tx1 = new MetroSet_UI.Controls.MetroSetTextBox();
             this.tabPageAdv2 = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
+            this.Tab2P2 = new MetroFramework.Controls.MetroPanel();
+            this.Tab2Lb15 = new System.Windows.Forms.Label();
+            this.Tab2Lb14 = new System.Windows.Forms.Label();
+            this.Tab2Lb13 = new System.Windows.Forms.Label();
+            this.Tab2Cb3 = new MetroSet_UI.Controls.MetroSetComboBox();
+            this.Tab2Cb2 = new MetroSet_UI.Controls.MetroSetComboBox();
+            this.Tab2Cb1 = new MetroSet_UI.Controls.MetroSetComboBox();
+            this.Tab2Rtx = new System.Windows.Forms.RichTextBox();
+            this.metroSetLabel25 = new MetroSet_UI.Controls.MetroSetLabel();
             this.Tab3 = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
             this.superToolTip1 = new Syncfusion.Windows.Forms.Tools.SuperToolTip(this);
-            this.TransferBinding = new System.Windows.Forms.BindingSource(this.components);
-            this.metroSetLabel25 = new MetroSet_UI.Controls.MetroSetLabel();
-            this.Tab2Rtx = new System.Windows.Forms.RichTextBox();
-            this.Tab2Cb1 = new MetroSet_UI.Controls.MetroSetComboBox();
-            this.Tab2Cb2 = new MetroSet_UI.Controls.MetroSetComboBox();
-            this.Tab2Cb3 = new MetroSet_UI.Controls.MetroSetComboBox();
-            this.Tab2Lb13 = new System.Windows.Forms.Label();
-            this.Tab2Lb14 = new System.Windows.Forms.Label();
-            this.Tab2Lb15 = new System.Windows.Forms.Label();
-            this.miniToolStrip = new System.Windows.Forms.BindingNavigator(this.components);
-            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton10 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator10 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
-            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton11 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
@@ -246,7 +240,13 @@ namespace BudgetExecution
             this.toolStripSeparator34 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton29 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator35 = new System.Windows.Forms.ToolStripSeparator();
-            this.Tab2P2 = new MetroFramework.Controls.MetroPanel();
+            this.TransferBinding = new System.Windows.Forms.BindingSource(this.components);
+            this.miniToolStrip = new System.Windows.Forms.BindingNavigator(this.components);
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripSeparator10 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
+            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
             this.Tab2P1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -267,10 +267,10 @@ namespace BudgetExecution
             this.Navigator.SuspendLayout();
             this.Tab1P1.SuspendLayout();
             this.tabPageAdv2.SuspendLayout();
+            this.Tab2P2.SuspendLayout();
             this.Tab3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TransferBinding)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.miniToolStrip)).BeginInit();
-            this.Tab2P2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
             this.SuspendLayout();
@@ -307,7 +307,7 @@ namespace BudgetExecution
             this.Tab2P1.HorizontalScrollbarHighlightOnWheel = false;
             this.Tab2P1.HorizontalScrollbarSize = 6;
             this.Tab2P1.Location = new System.Drawing.Point(59, 87);
-            this.Tab2P1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Tab2P1.Margin = new System.Windows.Forms.Padding(2);
             this.Tab2P1.Name = "Tab2P1";
             this.Tab2P1.Size = new System.Drawing.Size(419, 429);
             this.Tab2P1.TabIndex = 4;
@@ -327,7 +327,7 @@ namespace BudgetExecution
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
             this.button2.Location = new System.Drawing.Point(377, 294);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(27, 25);
             this.button2.TabIndex = 40;
@@ -347,7 +347,7 @@ namespace BudgetExecution
             this.Tab2Tx12.Image = null;
             this.Tab2Tx12.Lines = null;
             this.Tab2Tx12.Location = new System.Drawing.Point(274, 294);
-            this.Tab2Tx12.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Tab2Tx12.Margin = new System.Windows.Forms.Padding(2);
             this.Tab2Tx12.MaxLength = 32767;
             this.Tab2Tx12.Multiline = false;
             this.Tab2Tx12.Name = "Tab2Tx12";
@@ -509,7 +509,7 @@ namespace BudgetExecution
             this.Tab2Tx5.Image = null;
             this.Tab2Tx5.Lines = null;
             this.Tab2Tx5.Location = new System.Drawing.Point(156, 144);
-            this.Tab2Tx5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Tab2Tx5.Margin = new System.Windows.Forms.Padding(2);
             this.Tab2Tx5.MaxLength = 32767;
             this.Tab2Tx5.Multiline = false;
             this.Tab2Tx5.Name = "Tab2Tx5";
@@ -539,7 +539,7 @@ namespace BudgetExecution
             this.Tab2Tx9.Image = null;
             this.Tab2Tx9.Lines = null;
             this.Tab2Tx9.Location = new System.Drawing.Point(274, 218);
-            this.Tab2Tx9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Tab2Tx9.Margin = new System.Windows.Forms.Padding(2);
             this.Tab2Tx9.MaxLength = 32767;
             this.Tab2Tx9.Multiline = false;
             this.Tab2Tx9.Name = "Tab2Tx9";
@@ -569,7 +569,7 @@ namespace BudgetExecution
             this.Tab2Tx11.Image = null;
             this.Tab2Tx11.Lines = null;
             this.Tab2Tx11.Location = new System.Drawing.Point(156, 294);
-            this.Tab2Tx11.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Tab2Tx11.Margin = new System.Windows.Forms.Padding(2);
             this.Tab2Tx11.MaxLength = 32767;
             this.Tab2Tx11.Multiline = false;
             this.Tab2Tx11.Name = "Tab2Tx11";
@@ -599,7 +599,7 @@ namespace BudgetExecution
             this.Tab2Tx10.Image = null;
             this.Tab2Tx10.Lines = null;
             this.Tab2Tx10.Location = new System.Drawing.Point(21, 293);
-            this.Tab2Tx10.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Tab2Tx10.Margin = new System.Windows.Forms.Padding(2);
             this.Tab2Tx10.MaxLength = 32767;
             this.Tab2Tx10.Multiline = false;
             this.Tab2Tx10.Name = "Tab2Tx10";
@@ -629,7 +629,7 @@ namespace BudgetExecution
             this.Tab2Tx3.Image = null;
             this.Tab2Tx3.Lines = null;
             this.Tab2Tx3.Location = new System.Drawing.Point(274, 61);
-            this.Tab2Tx3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Tab2Tx3.Margin = new System.Windows.Forms.Padding(2);
             this.Tab2Tx3.MaxLength = 32767;
             this.Tab2Tx3.Multiline = false;
             this.Tab2Tx3.Name = "Tab2Tx3";
@@ -659,7 +659,7 @@ namespace BudgetExecution
             this.Tab2Tx6.Image = null;
             this.Tab2Tx6.Lines = null;
             this.Tab2Tx6.Location = new System.Drawing.Point(276, 144);
-            this.Tab2Tx6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Tab2Tx6.Margin = new System.Windows.Forms.Padding(2);
             this.Tab2Tx6.MaxLength = 32767;
             this.Tab2Tx6.Multiline = false;
             this.Tab2Tx6.Name = "Tab2Tx6";
@@ -689,7 +689,7 @@ namespace BudgetExecution
             this.Tab2Tx8.Image = null;
             this.Tab2Tx8.Lines = null;
             this.Tab2Tx8.Location = new System.Drawing.Point(156, 218);
-            this.Tab2Tx8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Tab2Tx8.Margin = new System.Windows.Forms.Padding(2);
             this.Tab2Tx8.MaxLength = 32767;
             this.Tab2Tx8.Multiline = false;
             this.Tab2Tx8.Name = "Tab2Tx8";
@@ -719,7 +719,7 @@ namespace BudgetExecution
             this.Tab2Tx2.Image = null;
             this.Tab2Tx2.Lines = null;
             this.Tab2Tx2.Location = new System.Drawing.Point(154, 61);
-            this.Tab2Tx2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Tab2Tx2.Margin = new System.Windows.Forms.Padding(2);
             this.Tab2Tx2.MaxLength = 32767;
             this.Tab2Tx2.Multiline = false;
             this.Tab2Tx2.Name = "Tab2Tx2";
@@ -749,7 +749,7 @@ namespace BudgetExecution
             this.Tab2Tx7.Image = null;
             this.Tab2Tx7.Lines = null;
             this.Tab2Tx7.Location = new System.Drawing.Point(21, 218);
-            this.Tab2Tx7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Tab2Tx7.Margin = new System.Windows.Forms.Padding(2);
             this.Tab2Tx7.MaxLength = 32767;
             this.Tab2Tx7.Multiline = false;
             this.Tab2Tx7.Name = "Tab2Tx7";
@@ -779,7 +779,7 @@ namespace BudgetExecution
             this.Tab2Tx4.Image = null;
             this.Tab2Tx4.Lines = null;
             this.Tab2Tx4.Location = new System.Drawing.Point(21, 144);
-            this.Tab2Tx4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Tab2Tx4.Margin = new System.Windows.Forms.Padding(2);
             this.Tab2Tx4.MaxLength = 32767;
             this.Tab2Tx4.Multiline = false;
             this.Tab2Tx4.Name = "Tab2Tx4";
@@ -809,7 +809,7 @@ namespace BudgetExecution
             this.Tab2Tx1.Image = null;
             this.Tab2Tx1.Lines = null;
             this.Tab2Tx1.Location = new System.Drawing.Point(15, 61);
-            this.Tab2Tx1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Tab2Tx1.Margin = new System.Windows.Forms.Padding(2);
             this.Tab2Tx1.MaxLength = 32767;
             this.Tab2Tx1.Multiline = false;
             this.Tab2Tx1.Name = "Tab2Tx1";
@@ -842,10 +842,10 @@ namespace BudgetExecution
             this.groupBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.ForeColor = System.Drawing.SystemColors.Info;
-            this.groupBox2.Location = new System.Drawing.Point(728, 114);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Location = new System.Drawing.Point(623, 114);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox2.Size = new System.Drawing.Size(418, 428);
             this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
@@ -1182,7 +1182,7 @@ namespace BudgetExecution
             this.metroPanel12.HorizontalScrollbarHighlightOnWheel = false;
             this.metroPanel12.HorizontalScrollbarSize = 6;
             this.metroPanel12.Location = new System.Drawing.Point(32, 263);
-            this.metroPanel12.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.metroPanel12.Margin = new System.Windows.Forms.Padding(2);
             this.metroPanel12.Name = "metroPanel12";
             this.metroPanel12.Size = new System.Drawing.Size(355, 131);
             this.metroPanel12.TabIndex = 6;
@@ -1195,7 +1195,7 @@ namespace BudgetExecution
             // 
             this.Tab3Rtx.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.Tab3Rtx.Location = new System.Drawing.Point(11, 14);
-            this.Tab3Rtx.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Tab3Rtx.Margin = new System.Windows.Forms.Padding(2);
             this.Tab3Rtx.Name = "Tab3Rtx";
             this.Tab3Rtx.Size = new System.Drawing.Size(330, 105);
             this.Tab3Rtx.TabIndex = 2;
@@ -1215,7 +1215,7 @@ namespace BudgetExecution
             this.Tab3Tx2.Image = null;
             this.Tab3Tx2.Lines = null;
             this.Tab3Tx2.Location = new System.Drawing.Point(227, 204);
-            this.Tab3Tx2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Tab3Tx2.Margin = new System.Windows.Forms.Padding(2);
             this.Tab3Tx2.MaxLength = 32767;
             this.Tab3Tx2.Multiline = false;
             this.Tab3Tx2.Name = "Tab3Tx2";
@@ -1238,7 +1238,7 @@ namespace BudgetExecution
             this.metroPanel11.HorizontalScrollbarHighlightOnWheel = false;
             this.metroPanel11.HorizontalScrollbarSize = 6;
             this.metroPanel11.Location = new System.Drawing.Point(26, 61);
-            this.metroPanel11.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.metroPanel11.Margin = new System.Windows.Forms.Padding(2);
             this.metroPanel11.Name = "metroPanel11";
             this.metroPanel11.Size = new System.Drawing.Size(161, 107);
             this.metroPanel11.TabIndex = 2;
@@ -1251,7 +1251,7 @@ namespace BudgetExecution
             // 
             this.Tab3Fp4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Tab3Fp4.Location = new System.Drawing.Point(0, 0);
-            this.Tab3Fp4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Tab3Fp4.Margin = new System.Windows.Forms.Padding(2);
             this.Tab3Fp4.Name = "Tab3Fp4";
             this.Tab3Fp4.Size = new System.Drawing.Size(161, 107);
             this.Tab3Fp4.TabIndex = 3;
@@ -1273,7 +1273,7 @@ namespace BudgetExecution
             this.Tab3Cb2.FormattingEnabled = true;
             this.Tab3Cb2.ItemHeight = 30;
             this.Tab3Cb2.Location = new System.Drawing.Point(26, 204);
-            this.Tab3Cb2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Tab3Cb2.Margin = new System.Windows.Forms.Padding(2);
             this.Tab3Cb2.Name = "Tab3Cb2";
             this.Tab3Cb2.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.Tab3Cb2.SelectedItemForeColor = System.Drawing.Color.White;
@@ -1291,7 +1291,7 @@ namespace BudgetExecution
             this.metroPanel8.HorizontalScrollbarHighlightOnWheel = false;
             this.metroPanel8.HorizontalScrollbarSize = 6;
             this.metroPanel8.Location = new System.Drawing.Point(227, 61);
-            this.metroPanel8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.metroPanel8.Margin = new System.Windows.Forms.Padding(2);
             this.metroPanel8.Name = "metroPanel8";
             this.metroPanel8.Size = new System.Drawing.Size(161, 107);
             this.metroPanel8.TabIndex = 1;
@@ -1304,7 +1304,7 @@ namespace BudgetExecution
             // 
             this.Tab3Fp5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Tab3Fp5.Location = new System.Drawing.Point(0, 0);
-            this.Tab3Fp5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Tab3Fp5.Margin = new System.Windows.Forms.Padding(2);
             this.Tab3Fp5.Name = "Tab3Fp5";
             this.Tab3Fp5.Size = new System.Drawing.Size(161, 107);
             this.Tab3Fp5.TabIndex = 3;
@@ -1326,9 +1326,9 @@ namespace BudgetExecution
             this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox1.ForeColor = System.Drawing.SystemColors.Info;
             this.groupBox1.Location = new System.Drawing.Point(140, 114);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(418, 428);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
@@ -1344,7 +1344,7 @@ namespace BudgetExecution
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.Location = new System.Drawing.Point(369, 349);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(27, 25);
             this.button1.TabIndex = 33;
@@ -1364,7 +1364,7 @@ namespace BudgetExecution
             this.Tab3Tx1.Image = null;
             this.Tab3Tx1.Lines = null;
             this.Tab3Tx1.Location = new System.Drawing.Point(233, 351);
-            this.Tab3Tx1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Tab3Tx1.Margin = new System.Windows.Forms.Padding(2);
             this.Tab3Tx1.MaxLength = 32767;
             this.Tab3Tx1.Multiline = false;
             this.Tab3Tx1.Name = "Tab3Tx1";
@@ -1452,7 +1452,7 @@ namespace BudgetExecution
             this.Tab3Cb1.FormattingEnabled = true;
             this.Tab3Cb1.ItemHeight = 30;
             this.Tab3Cb1.Location = new System.Drawing.Point(233, 243);
-            this.Tab3Cb1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Tab3Cb1.Margin = new System.Windows.Forms.Padding(2);
             this.Tab3Cb1.Name = "Tab3Cb1";
             this.Tab3Cb1.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.Tab3Cb1.SelectedItemForeColor = System.Drawing.Color.White;
@@ -1470,7 +1470,7 @@ namespace BudgetExecution
             this.metroPanel10.HorizontalScrollbarHighlightOnWheel = false;
             this.metroPanel10.HorizontalScrollbarSize = 6;
             this.metroPanel10.Location = new System.Drawing.Point(233, 61);
-            this.metroPanel10.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.metroPanel10.Margin = new System.Windows.Forms.Padding(2);
             this.metroPanel10.Name = "metroPanel10";
             this.metroPanel10.Size = new System.Drawing.Size(151, 107);
             this.metroPanel10.TabIndex = 1;
@@ -1483,7 +1483,7 @@ namespace BudgetExecution
             // 
             this.Tab3Fp2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Tab3Fp2.Location = new System.Drawing.Point(0, 0);
-            this.Tab3Fp2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Tab3Fp2.Margin = new System.Windows.Forms.Padding(2);
             this.Tab3Fp2.Name = "Tab3Fp2";
             this.Tab3Fp2.Size = new System.Drawing.Size(151, 107);
             this.Tab3Fp2.TabIndex = 3;
@@ -1495,7 +1495,7 @@ namespace BudgetExecution
             this.metroPanel7.HorizontalScrollbarHighlightOnWheel = false;
             this.metroPanel7.HorizontalScrollbarSize = 6;
             this.metroPanel7.Location = new System.Drawing.Point(26, 61);
-            this.metroPanel7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.metroPanel7.Margin = new System.Windows.Forms.Padding(2);
             this.metroPanel7.Name = "metroPanel7";
             this.metroPanel7.Size = new System.Drawing.Size(151, 107);
             this.metroPanel7.TabIndex = 0;
@@ -1508,7 +1508,7 @@ namespace BudgetExecution
             // 
             this.Tab3Fp1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Tab3Fp1.Location = new System.Drawing.Point(0, 0);
-            this.Tab3Fp1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Tab3Fp1.Margin = new System.Windows.Forms.Padding(2);
             this.Tab3Fp1.Name = "Tab3Fp1";
             this.Tab3Fp1.Size = new System.Drawing.Size(151, 107);
             this.Tab3Fp1.TabIndex = 3;
@@ -1520,7 +1520,7 @@ namespace BudgetExecution
             this.metroPanel9.HorizontalScrollbarHighlightOnWheel = false;
             this.metroPanel9.HorizontalScrollbarSize = 6;
             this.metroPanel9.Location = new System.Drawing.Point(27, 244);
-            this.metroPanel9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.metroPanel9.Margin = new System.Windows.Forms.Padding(2);
             this.metroPanel9.Name = "metroPanel9";
             this.metroPanel9.Size = new System.Drawing.Size(150, 158);
             this.metroPanel9.TabIndex = 2;
@@ -1533,7 +1533,7 @@ namespace BudgetExecution
             // 
             this.Tab3Fp3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Tab3Fp3.Location = new System.Drawing.Point(0, 0);
-            this.Tab3Fp3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Tab3Fp3.Margin = new System.Windows.Forms.Padding(2);
             this.Tab3Fp3.Name = "Tab3Fp3";
             this.Tab3Fp3.Size = new System.Drawing.Size(150, 158);
             this.Tab3Fp3.TabIndex = 2;
@@ -1543,7 +1543,7 @@ namespace BudgetExecution
             this.Tab2.ActiveTabForeColor = System.Drawing.Color.Empty;
             this.Tab2.AdjustTopGap = 5;
             this.Tab2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.Tab2.BeforeTouchSize = new System.Drawing.Size(1288, 694);
+            this.Tab2.BeforeTouchSize = new System.Drawing.Size(1138, 654);
             this.Tab2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Tab2.CloseButtonForeColor = System.Drawing.Color.Empty;
             this.Tab2.CloseButtonHoverForeColor = System.Drawing.Color.Empty;
@@ -1557,11 +1557,11 @@ namespace BudgetExecution
             this.Tab2.InactiveTabColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             this.Tab2.InActiveTabForeColor = System.Drawing.Color.Gray;
             this.Tab2.Location = new System.Drawing.Point(0, 0);
-            this.Tab2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Tab2.Margin = new System.Windows.Forms.Padding(2);
             this.Tab2.Name = "Tab2";
             this.Tab2.SeparatorColor = System.Drawing.Color.SteelBlue;
             this.Tab2.ShowSeparator = false;
-            this.Tab2.Size = new System.Drawing.Size(1288, 694);
+            this.Tab2.Size = new System.Drawing.Size(1138, 654);
             this.Tab2.TabGap = 5;
             this.Tab2.TabIndex = 2;
             this.Tab2.TabPanelBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
@@ -1574,10 +1574,10 @@ namespace BudgetExecution
             this.Tab1.Image = null;
             this.Tab1.ImageSize = new System.Drawing.Size(16, 16);
             this.Tab1.Location = new System.Drawing.Point(1, 27);
-            this.Tab1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Tab1.Margin = new System.Windows.Forms.Padding(2);
             this.Tab1.Name = "Tab1";
             this.Tab1.ShowCloseButton = true;
-            this.Tab1.Size = new System.Drawing.Size(1286, 666);
+            this.Tab1.Size = new System.Drawing.Size(1136, 626);
             this.Tab1.TabIndex = 1;
             this.Tab1.Text = "tabPageAdv1";
             this.Tab1.ThemesEnabled = false;
@@ -1597,8 +1597,8 @@ namespace BudgetExecution
             this.Tab1P2.HorizontalScrollbarBarColor = true;
             this.Tab1P2.HorizontalScrollbarHighlightOnWheel = false;
             this.Tab1P2.HorizontalScrollbarSize = 6;
-            this.Tab1P2.Location = new System.Drawing.Point(573, 87);
-            this.Tab1P2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Tab1P2.Location = new System.Drawing.Point(521, 87);
+            this.Tab1P2.Margin = new System.Windows.Forms.Padding(2);
             this.Tab1P2.Name = "Tab1P2";
             this.Tab1P2.Size = new System.Drawing.Size(581, 429);
             this.Tab1P2.TabIndex = 8;
@@ -1917,7 +1917,7 @@ namespace BudgetExecution
             this.Tab1Cb3.FormattingEnabled = true;
             this.Tab1Cb3.ItemHeight = 30;
             this.Tab1Cb3.Location = new System.Drawing.Point(427, 324);
-            this.Tab1Cb3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Tab1Cb3.Margin = new System.Windows.Forms.Padding(2);
             this.Tab1Cb3.Name = "Tab1Cb3";
             this.Tab1Cb3.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.Tab1Cb3.SelectedItemForeColor = System.Drawing.Color.White;
@@ -1945,7 +1945,7 @@ namespace BudgetExecution
             this.Tab1Cb2.FormattingEnabled = true;
             this.Tab1Cb2.ItemHeight = 30;
             this.Tab1Cb2.Location = new System.Drawing.Point(233, 324);
-            this.Tab1Cb2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Tab1Cb2.Margin = new System.Windows.Forms.Padding(2);
             this.Tab1Cb2.Name = "Tab1Cb2";
             this.Tab1Cb2.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.Tab1Cb2.SelectedItemForeColor = System.Drawing.Color.White;
@@ -1973,7 +1973,7 @@ namespace BudgetExecution
             this.Tab1Cb1.FormattingEnabled = true;
             this.Tab1Cb1.ItemHeight = 30;
             this.Tab1Cb1.Location = new System.Drawing.Point(41, 324);
-            this.Tab1Cb1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Tab1Cb1.Margin = new System.Windows.Forms.Padding(2);
             this.Tab1Cb1.Name = "Tab1Cb1";
             this.Tab1Cb1.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.Tab1Cb1.SelectedItemForeColor = System.Drawing.Color.White;
@@ -1989,7 +1989,7 @@ namespace BudgetExecution
             this.Tab1Rtx.BackColor = System.Drawing.Color.DarkGray;
             this.Tab1Rtx.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Tab1Rtx.Location = new System.Drawing.Point(18, 40);
-            this.Tab1Rtx.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Tab1Rtx.Margin = new System.Windows.Forms.Padding(2);
             this.Tab1Rtx.Name = "Tab1Rtx";
             this.Tab1Rtx.Size = new System.Drawing.Size(533, 195);
             this.Tab1Rtx.TabIndex = 2;
@@ -2041,7 +2041,7 @@ namespace BudgetExecution
             this.Tab1P1.HorizontalScrollbarHighlightOnWheel = false;
             this.Tab1P1.HorizontalScrollbarSize = 6;
             this.Tab1P1.Location = new System.Drawing.Point(58, 87);
-            this.Tab1P1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Tab1P1.Margin = new System.Windows.Forms.Padding(2);
             this.Tab1P1.Name = "Tab1P1";
             this.Tab1P1.Size = new System.Drawing.Size(419, 429);
             this.Tab1P1.TabIndex = 5;
@@ -2061,7 +2061,7 @@ namespace BudgetExecution
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
             this.button3.Location = new System.Drawing.Point(379, 292);
-            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(27, 25);
             this.button3.TabIndex = 40;
@@ -2082,7 +2082,7 @@ namespace BudgetExecution
             this.Tab1Tx12.Image = null;
             this.Tab1Tx12.Lines = null;
             this.Tab1Tx12.Location = new System.Drawing.Point(274, 294);
-            this.Tab1Tx12.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Tab1Tx12.Margin = new System.Windows.Forms.Padding(2);
             this.Tab1Tx12.MaxLength = 32767;
             this.Tab1Tx12.Multiline = false;
             this.Tab1Tx12.Name = "Tab1Tx12";
@@ -2244,7 +2244,7 @@ namespace BudgetExecution
             this.Tab1Tx5.Image = null;
             this.Tab1Tx5.Lines = null;
             this.Tab1Tx5.Location = new System.Drawing.Point(156, 144);
-            this.Tab1Tx5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Tab1Tx5.Margin = new System.Windows.Forms.Padding(2);
             this.Tab1Tx5.MaxLength = 32767;
             this.Tab1Tx5.Multiline = false;
             this.Tab1Tx5.Name = "Tab1Tx5";
@@ -2274,7 +2274,7 @@ namespace BudgetExecution
             this.Tab1Tx9.Image = null;
             this.Tab1Tx9.Lines = null;
             this.Tab1Tx9.Location = new System.Drawing.Point(274, 218);
-            this.Tab1Tx9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Tab1Tx9.Margin = new System.Windows.Forms.Padding(2);
             this.Tab1Tx9.MaxLength = 32767;
             this.Tab1Tx9.Multiline = false;
             this.Tab1Tx9.Name = "Tab1Tx9";
@@ -2304,7 +2304,7 @@ namespace BudgetExecution
             this.Tab1Tx11.Image = null;
             this.Tab1Tx11.Lines = null;
             this.Tab1Tx11.Location = new System.Drawing.Point(156, 294);
-            this.Tab1Tx11.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Tab1Tx11.Margin = new System.Windows.Forms.Padding(2);
             this.Tab1Tx11.MaxLength = 32767;
             this.Tab1Tx11.Multiline = false;
             this.Tab1Tx11.Name = "Tab1Tx11";
@@ -2334,7 +2334,7 @@ namespace BudgetExecution
             this.Tab1Tx10.Image = null;
             this.Tab1Tx10.Lines = null;
             this.Tab1Tx10.Location = new System.Drawing.Point(21, 293);
-            this.Tab1Tx10.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Tab1Tx10.Margin = new System.Windows.Forms.Padding(2);
             this.Tab1Tx10.MaxLength = 32767;
             this.Tab1Tx10.Multiline = false;
             this.Tab1Tx10.Name = "Tab1Tx10";
@@ -2364,7 +2364,7 @@ namespace BudgetExecution
             this.Tab1Tx3.Image = null;
             this.Tab1Tx3.Lines = null;
             this.Tab1Tx3.Location = new System.Drawing.Point(274, 61);
-            this.Tab1Tx3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Tab1Tx3.Margin = new System.Windows.Forms.Padding(2);
             this.Tab1Tx3.MaxLength = 32767;
             this.Tab1Tx3.Multiline = false;
             this.Tab1Tx3.Name = "Tab1Tx3";
@@ -2394,7 +2394,7 @@ namespace BudgetExecution
             this.Tab1Tx6.Image = null;
             this.Tab1Tx6.Lines = null;
             this.Tab1Tx6.Location = new System.Drawing.Point(276, 144);
-            this.Tab1Tx6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Tab1Tx6.Margin = new System.Windows.Forms.Padding(2);
             this.Tab1Tx6.MaxLength = 32767;
             this.Tab1Tx6.Multiline = false;
             this.Tab1Tx6.Name = "Tab1Tx6";
@@ -2424,7 +2424,7 @@ namespace BudgetExecution
             this.Tab1Tx8.Image = null;
             this.Tab1Tx8.Lines = null;
             this.Tab1Tx8.Location = new System.Drawing.Point(156, 218);
-            this.Tab1Tx8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Tab1Tx8.Margin = new System.Windows.Forms.Padding(2);
             this.Tab1Tx8.MaxLength = 32767;
             this.Tab1Tx8.Multiline = false;
             this.Tab1Tx8.Name = "Tab1Tx8";
@@ -2454,7 +2454,7 @@ namespace BudgetExecution
             this.Tab1Tx2.Image = null;
             this.Tab1Tx2.Lines = null;
             this.Tab1Tx2.Location = new System.Drawing.Point(154, 61);
-            this.Tab1Tx2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Tab1Tx2.Margin = new System.Windows.Forms.Padding(2);
             this.Tab1Tx2.MaxLength = 32767;
             this.Tab1Tx2.Multiline = false;
             this.Tab1Tx2.Name = "Tab1Tx2";
@@ -2484,7 +2484,7 @@ namespace BudgetExecution
             this.Tab1Tx7.Image = null;
             this.Tab1Tx7.Lines = null;
             this.Tab1Tx7.Location = new System.Drawing.Point(21, 218);
-            this.Tab1Tx7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Tab1Tx7.Margin = new System.Windows.Forms.Padding(2);
             this.Tab1Tx7.MaxLength = 32767;
             this.Tab1Tx7.Multiline = false;
             this.Tab1Tx7.Name = "Tab1Tx7";
@@ -2514,7 +2514,7 @@ namespace BudgetExecution
             this.Tab1Tx4.Image = null;
             this.Tab1Tx4.Lines = null;
             this.Tab1Tx4.Location = new System.Drawing.Point(21, 144);
-            this.Tab1Tx4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Tab1Tx4.Margin = new System.Windows.Forms.Padding(2);
             this.Tab1Tx4.MaxLength = 32767;
             this.Tab1Tx4.Multiline = false;
             this.Tab1Tx4.Name = "Tab1Tx4";
@@ -2544,7 +2544,7 @@ namespace BudgetExecution
             this.Tab1Tx1.Image = null;
             this.Tab1Tx1.Lines = null;
             this.Tab1Tx1.Location = new System.Drawing.Point(15, 61);
-            this.Tab1Tx1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Tab1Tx1.Margin = new System.Windows.Forms.Padding(2);
             this.Tab1Tx1.MaxLength = 32767;
             this.Tab1Tx1.Multiline = false;
             this.Tab1Tx1.Name = "Tab1Tx1";
@@ -2567,114 +2567,72 @@ namespace BudgetExecution
             this.tabPageAdv2.Image = null;
             this.tabPageAdv2.ImageSize = new System.Drawing.Size(16, 16);
             this.tabPageAdv2.Location = new System.Drawing.Point(1, 27);
-            this.tabPageAdv2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPageAdv2.Margin = new System.Windows.Forms.Padding(2);
             this.tabPageAdv2.Name = "tabPageAdv2";
             this.tabPageAdv2.ShowCloseButton = true;
-            this.tabPageAdv2.Size = new System.Drawing.Size(1286, 666);
+            this.tabPageAdv2.Size = new System.Drawing.Size(1136, 626);
             this.tabPageAdv2.TabBackColor = System.Drawing.Color.Black;
             this.tabPageAdv2.TabIndex = 2;
             this.tabPageAdv2.Text = "tabPageAdv2";
             this.tabPageAdv2.ThemesEnabled = false;
             // 
-            // Tab3
+            // Tab2P2
             // 
-            this.Tab3.Controls.Add(this.groupBox2);
-            this.Tab3.Controls.Add(this.groupBox1);
-            this.Tab3.Image = null;
-            this.Tab3.ImageSize = new System.Drawing.Size(16, 16);
-            this.Tab3.Location = new System.Drawing.Point(1, 27);
-            this.Tab3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.Tab3.Name = "Tab3";
-            this.Tab3.ShowCloseButton = true;
-            this.Tab3.Size = new System.Drawing.Size(1286, 666);
-            this.Tab3.TabIndex = 3;
-            this.Tab3.Text = "tabPageAdv3";
-            this.Tab3.ThemesEnabled = false;
+            this.Tab2P2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Tab2P2.Controls.Add(this.Tab2Lb15);
+            this.Tab2P2.Controls.Add(this.Tab2Lb14);
+            this.Tab2P2.Controls.Add(this.Tab2Lb13);
+            this.Tab2P2.Controls.Add(this.Tab2Cb3);
+            this.Tab2P2.Controls.Add(this.Tab2Cb2);
+            this.Tab2P2.Controls.Add(this.Tab2Cb1);
+            this.Tab2P2.Controls.Add(this.Tab2Rtx);
+            this.Tab2P2.Controls.Add(this.metroSetLabel25);
+            this.Tab2P2.HorizontalScrollbarBarColor = true;
+            this.Tab2P2.HorizontalScrollbarHighlightOnWheel = false;
+            this.Tab2P2.HorizontalScrollbarSize = 6;
+            this.Tab2P2.Location = new System.Drawing.Point(502, 87);
+            this.Tab2P2.Margin = new System.Windows.Forms.Padding(2);
+            this.Tab2P2.Name = "Tab2P2";
+            this.Tab2P2.Size = new System.Drawing.Size(611, 429);
+            this.Tab2P2.TabIndex = 7;
+            this.Tab2P2.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.Tab2P2.UseCustomBackColor = true;
+            this.Tab2P2.VerticalScrollbarBarColor = true;
+            this.Tab2P2.VerticalScrollbarHighlightOnWheel = false;
+            this.Tab2P2.VerticalScrollbarSize = 7;
             // 
-            // superToolTip1
+            // Tab2Lb15
             // 
-            this.superToolTip1.MetroColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(158)))), ((int)(((byte)(218)))));
+            this.Tab2Lb15.AutoSize = true;
+            this.Tab2Lb15.BackColor = System.Drawing.Color.Transparent;
+            this.Tab2Lb15.Location = new System.Drawing.Point(515, 304);
+            this.Tab2Lb15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Tab2Lb15.Name = "Tab2Lb15";
+            this.Tab2Lb15.Size = new System.Drawing.Size(41, 13);
+            this.Tab2Lb15.TabIndex = 29;
+            this.Tab2Lb15.Text = "label30";
             // 
-            // metroSetLabel25
+            // Tab2Lb14
             // 
-            this.metroSetLabel25.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.metroSetLabel25.Location = new System.Drawing.Point(18, 15);
-            this.metroSetLabel25.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.metroSetLabel25.Name = "metroSetLabel25";
-            this.metroSetLabel25.Size = new System.Drawing.Size(67, 15);
-            this.metroSetLabel25.Style = MetroSet_UI.Design.Style.Light;
-            this.metroSetLabel25.StyleManager = null;
-            this.metroSetLabel25.TabIndex = 2;
-            this.metroSetLabel25.Text = "Purpose";
-            this.metroSetLabel25.ThemeAuthor = "Narwin";
-            this.metroSetLabel25.ThemeName = "MetroLite";
+            this.Tab2Lb14.AutoSize = true;
+            this.Tab2Lb14.BackColor = System.Drawing.Color.Transparent;
+            this.Tab2Lb14.Location = new System.Drawing.Point(302, 294);
+            this.Tab2Lb14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Tab2Lb14.Name = "Tab2Lb14";
+            this.Tab2Lb14.Size = new System.Drawing.Size(41, 13);
+            this.Tab2Lb14.TabIndex = 28;
+            this.Tab2Lb14.Text = "label29";
             // 
-            // Tab2Rtx
+            // Tab2Lb13
             // 
-            this.Tab2Rtx.BackColor = System.Drawing.Color.DarkGray;
-            this.Tab2Rtx.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Tab2Rtx.Location = new System.Drawing.Point(18, 40);
-            this.Tab2Rtx.Margin = new System.Windows.Forms.Padding(2);
-            this.Tab2Rtx.Name = "Tab2Rtx";
-            this.Tab2Rtx.Size = new System.Drawing.Size(569, 195);
-            this.Tab2Rtx.TabIndex = 2;
-            this.Tab2Rtx.Text = "";
-            // 
-            // Tab2Cb1
-            // 
-            this.Tab2Cb1.AllowDrop = true;
-            this.Tab2Cb1.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
-            this.Tab2Cb1.BackColor = System.Drawing.Color.Transparent;
-            this.Tab2Cb1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
-            this.Tab2Cb1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
-            this.Tab2Cb1.CausesValidation = false;
-            this.Tab2Cb1.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.Tab2Cb1.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.Tab2Cb1.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.Tab2Cb1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.Tab2Cb1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.Tab2Cb1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.Tab2Cb1.FormattingEnabled = true;
-            this.Tab2Cb1.ItemHeight = 30;
-            this.Tab2Cb1.Location = new System.Drawing.Point(17, 324);
-            this.Tab2Cb1.Margin = new System.Windows.Forms.Padding(2);
-            this.Tab2Cb1.Name = "Tab2Cb1";
-            this.Tab2Cb1.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.Tab2Cb1.SelectedItemForeColor = System.Drawing.Color.White;
-            this.Tab2Cb1.Size = new System.Drawing.Size(103, 36);
-            this.Tab2Cb1.Style = MetroSet_UI.Design.Style.Dark;
-            this.Tab2Cb1.StyleManager = null;
-            this.Tab2Cb1.TabIndex = 3;
-            this.Tab2Cb1.ThemeAuthor = "Narwin";
-            this.Tab2Cb1.ThemeName = "MetroDark";
-            // 
-            // Tab2Cb2
-            // 
-            this.Tab2Cb2.AllowDrop = true;
-            this.Tab2Cb2.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
-            this.Tab2Cb2.BackColor = System.Drawing.Color.Transparent;
-            this.Tab2Cb2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
-            this.Tab2Cb2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
-            this.Tab2Cb2.CausesValidation = false;
-            this.Tab2Cb2.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
-            this.Tab2Cb2.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.Tab2Cb2.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.Tab2Cb2.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.Tab2Cb2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.Tab2Cb2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.Tab2Cb2.FormattingEnabled = true;
-            this.Tab2Cb2.ItemHeight = 30;
-            this.Tab2Cb2.Location = new System.Drawing.Point(247, 324);
-            this.Tab2Cb2.Margin = new System.Windows.Forms.Padding(2);
-            this.Tab2Cb2.Name = "Tab2Cb2";
-            this.Tab2Cb2.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
-            this.Tab2Cb2.SelectedItemForeColor = System.Drawing.Color.White;
-            this.Tab2Cb2.Size = new System.Drawing.Size(96, 36);
-            this.Tab2Cb2.Style = MetroSet_UI.Design.Style.Dark;
-            this.Tab2Cb2.StyleManager = null;
-            this.Tab2Cb2.TabIndex = 4;
-            this.Tab2Cb2.ThemeAuthor = "Narwin";
-            this.Tab2Cb2.ThemeName = "MetroDark";
+            this.Tab2Lb13.AutoSize = true;
+            this.Tab2Lb13.BackColor = System.Drawing.Color.Transparent;
+            this.Tab2Lb13.Location = new System.Drawing.Point(38, 304);
+            this.Tab2Lb13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Tab2Lb13.Name = "Tab2Lb13";
+            this.Tab2Lb13.Size = new System.Drawing.Size(41, 13);
+            this.Tab2Lb13.TabIndex = 27;
+            this.Tab2Lb13.Text = "label28";
             // 
             // Tab2Cb3
             // 
@@ -2704,67 +2662,105 @@ namespace BudgetExecution
             this.Tab2Cb3.ThemeAuthor = "Narwin";
             this.Tab2Cb3.ThemeName = "MetroDark";
             // 
-            // Tab2Lb13
+            // Tab2Cb2
             // 
-            this.Tab2Lb13.AutoSize = true;
-            this.Tab2Lb13.BackColor = System.Drawing.Color.Transparent;
-            this.Tab2Lb13.Location = new System.Drawing.Point(38, 304);
-            this.Tab2Lb13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.Tab2Lb13.Name = "Tab2Lb13";
-            this.Tab2Lb13.Size = new System.Drawing.Size(41, 13);
-            this.Tab2Lb13.TabIndex = 27;
-            this.Tab2Lb13.Text = "label28";
+            this.Tab2Cb2.AllowDrop = true;
+            this.Tab2Cb2.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.Tab2Cb2.BackColor = System.Drawing.Color.Transparent;
+            this.Tab2Cb2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.Tab2Cb2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.Tab2Cb2.CausesValidation = false;
+            this.Tab2Cb2.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.Tab2Cb2.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.Tab2Cb2.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.Tab2Cb2.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.Tab2Cb2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Tab2Cb2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.Tab2Cb2.FormattingEnabled = true;
+            this.Tab2Cb2.ItemHeight = 30;
+            this.Tab2Cb2.Location = new System.Drawing.Point(247, 324);
+            this.Tab2Cb2.Margin = new System.Windows.Forms.Padding(2);
+            this.Tab2Cb2.Name = "Tab2Cb2";
+            this.Tab2Cb2.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.Tab2Cb2.SelectedItemForeColor = System.Drawing.Color.White;
+            this.Tab2Cb2.Size = new System.Drawing.Size(96, 36);
+            this.Tab2Cb2.Style = MetroSet_UI.Design.Style.Dark;
+            this.Tab2Cb2.StyleManager = null;
+            this.Tab2Cb2.TabIndex = 4;
+            this.Tab2Cb2.ThemeAuthor = "Narwin";
+            this.Tab2Cb2.ThemeName = "MetroDark";
             // 
-            // Tab2Lb14
+            // Tab2Cb1
             // 
-            this.Tab2Lb14.AutoSize = true;
-            this.Tab2Lb14.BackColor = System.Drawing.Color.Transparent;
-            this.Tab2Lb14.Location = new System.Drawing.Point(302, 294);
-            this.Tab2Lb14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.Tab2Lb14.Name = "Tab2Lb14";
-            this.Tab2Lb14.Size = new System.Drawing.Size(41, 13);
-            this.Tab2Lb14.TabIndex = 28;
-            this.Tab2Lb14.Text = "label29";
+            this.Tab2Cb1.AllowDrop = true;
+            this.Tab2Cb1.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.Tab2Cb1.BackColor = System.Drawing.Color.Transparent;
+            this.Tab2Cb1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(34)))));
+            this.Tab2Cb1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.Tab2Cb1.CausesValidation = false;
+            this.Tab2Cb1.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.Tab2Cb1.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.Tab2Cb1.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.Tab2Cb1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.Tab2Cb1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Tab2Cb1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.Tab2Cb1.FormattingEnabled = true;
+            this.Tab2Cb1.ItemHeight = 30;
+            this.Tab2Cb1.Location = new System.Drawing.Point(17, 324);
+            this.Tab2Cb1.Margin = new System.Windows.Forms.Padding(2);
+            this.Tab2Cb1.Name = "Tab2Cb1";
+            this.Tab2Cb1.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.Tab2Cb1.SelectedItemForeColor = System.Drawing.Color.White;
+            this.Tab2Cb1.Size = new System.Drawing.Size(103, 36);
+            this.Tab2Cb1.Style = MetroSet_UI.Design.Style.Dark;
+            this.Tab2Cb1.StyleManager = null;
+            this.Tab2Cb1.TabIndex = 3;
+            this.Tab2Cb1.ThemeAuthor = "Narwin";
+            this.Tab2Cb1.ThemeName = "MetroDark";
             // 
-            // Tab2Lb15
+            // Tab2Rtx
             // 
-            this.Tab2Lb15.AutoSize = true;
-            this.Tab2Lb15.BackColor = System.Drawing.Color.Transparent;
-            this.Tab2Lb15.Location = new System.Drawing.Point(515, 304);
-            this.Tab2Lb15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.Tab2Lb15.Name = "Tab2Lb15";
-            this.Tab2Lb15.Size = new System.Drawing.Size(41, 13);
-            this.Tab2Lb15.TabIndex = 29;
-            this.Tab2Lb15.Text = "label30";
+            this.Tab2Rtx.BackColor = System.Drawing.Color.DarkGray;
+            this.Tab2Rtx.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Tab2Rtx.Location = new System.Drawing.Point(18, 40);
+            this.Tab2Rtx.Margin = new System.Windows.Forms.Padding(2);
+            this.Tab2Rtx.Name = "Tab2Rtx";
+            this.Tab2Rtx.Size = new System.Drawing.Size(569, 195);
+            this.Tab2Rtx.TabIndex = 2;
+            this.Tab2Rtx.Text = "";
             // 
-            // miniToolStrip
+            // metroSetLabel25
             // 
-            this.miniToolStrip.AccessibleName = "New item selection";
-            this.miniToolStrip.AccessibleRole = System.Windows.Forms.AccessibleRole.ButtonDropDown;
-            this.miniToolStrip.AddNewItem = null;
-            this.miniToolStrip.AutoSize = false;
-            this.miniToolStrip.BackColor = System.Drawing.Color.Transparent;
-            this.miniToolStrip.CanOverflow = false;
-            this.miniToolStrip.CountItem = null;
-            this.miniToolStrip.DeleteItem = null;
-            this.miniToolStrip.Dock = System.Windows.Forms.DockStyle.None;
-            this.miniToolStrip.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.miniToolStrip.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
-            this.miniToolStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.miniToolStrip.Location = new System.Drawing.Point(1, 29);
-            this.miniToolStrip.MoveFirstItem = null;
-            this.miniToolStrip.MoveLastItem = null;
-            this.miniToolStrip.MoveNextItem = null;
-            this.miniToolStrip.MovePreviousItem = null;
-            this.miniToolStrip.Name = "miniToolStrip";
-            this.miniToolStrip.PositionItem = null;
-            this.miniToolStrip.Size = new System.Drawing.Size(417, 27);
-            this.miniToolStrip.TabIndex = 153;
+            this.metroSetLabel25.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.metroSetLabel25.Location = new System.Drawing.Point(18, 15);
+            this.metroSetLabel25.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.metroSetLabel25.Name = "metroSetLabel25";
+            this.metroSetLabel25.Size = new System.Drawing.Size(67, 15);
+            this.metroSetLabel25.Style = MetroSet_UI.Design.Style.Light;
+            this.metroSetLabel25.StyleManager = null;
+            this.metroSetLabel25.TabIndex = 2;
+            this.metroSetLabel25.Text = "Purpose";
+            this.metroSetLabel25.ThemeAuthor = "Narwin";
+            this.metroSetLabel25.ThemeName = "MetroLite";
             // 
-            // toolStripSeparator3
+            // Tab3
             // 
-            this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 27);
+            this.Tab3.Controls.Add(this.groupBox2);
+            this.Tab3.Controls.Add(this.groupBox1);
+            this.Tab3.Image = null;
+            this.Tab3.ImageSize = new System.Drawing.Size(16, 16);
+            this.Tab3.Location = new System.Drawing.Point(1, 27);
+            this.Tab3.Margin = new System.Windows.Forms.Padding(2);
+            this.Tab3.Name = "Tab3";
+            this.Tab3.ShowCloseButton = true;
+            this.Tab3.Size = new System.Drawing.Size(1136, 626);
+            this.Tab3.TabIndex = 3;
+            this.Tab3.Text = "tabPageAdv3";
+            this.Tab3.ThemesEnabled = false;
+            // 
+            // superToolTip1
+            // 
+            this.superToolTip1.MetroColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(158)))), ((int)(((byte)(218)))));
             // 
             // toolStripButton10
             // 
@@ -2784,36 +2780,6 @@ namespace BudgetExecution
             toolTipInfo3.Header.Size = new System.Drawing.Size(20, 20);
             this.superToolTip1.SetToolTip(this.toolStripButton10, toolTipInfo3);
             this.toolStripButton10.Click += new System.EventHandler(this.PreviousButton_OnClick);
-            // 
-            // toolStripSeparator10
-            // 
-            this.toolStripSeparator10.Name = "toolStripSeparator10";
-            this.toolStripSeparator10.Size = new System.Drawing.Size(6, 27);
-            // 
-            // toolStripTextBox1
-            // 
-            this.toolStripTextBox1.AccessibleName = "Position";
-            this.toolStripTextBox1.AutoSize = false;
-            this.toolStripTextBox1.BackColor = System.Drawing.Color.Black;
-            this.toolStripTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.toolStripTextBox1.ForeColor = System.Drawing.Color.White;
-            this.toolStripTextBox1.Name = "toolStripTextBox1";
-            this.toolStripTextBox1.Size = new System.Drawing.Size(28, 16);
-            this.toolStripTextBox1.Text = "0";
-            this.toolStripTextBox1.TextBoxTextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.toolStripTextBox1.ToolTipText = "Current position";
-            // 
-            // toolStripLabel1
-            // 
-            this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(33, 24);
-            this.toolStripLabel1.Text = "of {0}";
-            this.toolStripLabel1.ToolTipText = "Total number of items";
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 27);
             // 
             // toolStripButton11
             // 
@@ -3138,30 +3104,64 @@ namespace BudgetExecution
             toolTipInfo23.Header.Size = new System.Drawing.Size(20, 20);
             this.superToolTip1.SetToolTip(this.toolStripSeparator35, toolTipInfo23);
             // 
-            // Tab2P2
+            // miniToolStrip
             // 
-            this.Tab2P2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Tab2P2.Controls.Add(this.Tab2Lb15);
-            this.Tab2P2.Controls.Add(this.Tab2Lb14);
-            this.Tab2P2.Controls.Add(this.Tab2Lb13);
-            this.Tab2P2.Controls.Add(this.Tab2Cb3);
-            this.Tab2P2.Controls.Add(this.Tab2Cb2);
-            this.Tab2P2.Controls.Add(this.Tab2Cb1);
-            this.Tab2P2.Controls.Add(this.Tab2Rtx);
-            this.Tab2P2.Controls.Add(this.metroSetLabel25);
-            this.Tab2P2.HorizontalScrollbarBarColor = true;
-            this.Tab2P2.HorizontalScrollbarHighlightOnWheel = false;
-            this.Tab2P2.HorizontalScrollbarSize = 6;
-            this.Tab2P2.Location = new System.Drawing.Point(573, 87);
-            this.Tab2P2.Margin = new System.Windows.Forms.Padding(2);
-            this.Tab2P2.Name = "Tab2P2";
-            this.Tab2P2.Size = new System.Drawing.Size(611, 429);
-            this.Tab2P2.TabIndex = 7;
-            this.Tab2P2.Theme = MetroFramework.MetroThemeStyle.Dark;
-            this.Tab2P2.UseCustomBackColor = true;
-            this.Tab2P2.VerticalScrollbarBarColor = true;
-            this.Tab2P2.VerticalScrollbarHighlightOnWheel = false;
-            this.Tab2P2.VerticalScrollbarSize = 7;
+            this.miniToolStrip.AccessibleName = "New item selection";
+            this.miniToolStrip.AccessibleRole = System.Windows.Forms.AccessibleRole.ButtonDropDown;
+            this.miniToolStrip.AddNewItem = null;
+            this.miniToolStrip.AutoSize = false;
+            this.miniToolStrip.BackColor = System.Drawing.Color.Transparent;
+            this.miniToolStrip.CanOverflow = false;
+            this.miniToolStrip.CountItem = null;
+            this.miniToolStrip.DeleteItem = null;
+            this.miniToolStrip.Dock = System.Windows.Forms.DockStyle.None;
+            this.miniToolStrip.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.miniToolStrip.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.miniToolStrip.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.miniToolStrip.Location = new System.Drawing.Point(1, 29);
+            this.miniToolStrip.MoveFirstItem = null;
+            this.miniToolStrip.MoveLastItem = null;
+            this.miniToolStrip.MoveNextItem = null;
+            this.miniToolStrip.MovePreviousItem = null;
+            this.miniToolStrip.Name = "miniToolStrip";
+            this.miniToolStrip.PositionItem = null;
+            this.miniToolStrip.Size = new System.Drawing.Size(417, 27);
+            this.miniToolStrip.TabIndex = 153;
+            // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 27);
+            // 
+            // toolStripSeparator10
+            // 
+            this.toolStripSeparator10.Name = "toolStripSeparator10";
+            this.toolStripSeparator10.Size = new System.Drawing.Size(6, 27);
+            // 
+            // toolStripTextBox1
+            // 
+            this.toolStripTextBox1.AccessibleName = "Position";
+            this.toolStripTextBox1.AutoSize = false;
+            this.toolStripTextBox1.BackColor = System.Drawing.Color.Black;
+            this.toolStripTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.toolStripTextBox1.ForeColor = System.Drawing.Color.White;
+            this.toolStripTextBox1.Name = "toolStripTextBox1";
+            this.toolStripTextBox1.Size = new System.Drawing.Size(28, 16);
+            this.toolStripTextBox1.Text = "0";
+            this.toolStripTextBox1.TextBoxTextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.toolStripTextBox1.ToolTipText = "Current position";
+            // 
+            // toolStripLabel1
+            // 
+            this.toolStripLabel1.Name = "toolStripLabel1";
+            this.toolStripLabel1.Size = new System.Drawing.Size(33, 24);
+            this.toolStripLabel1.Text = "of {0}";
+            this.toolStripLabel1.ToolTipText = "Total number of items";
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 27);
             // 
             // bindingNavigator1
             // 
@@ -3226,13 +3226,14 @@ namespace BudgetExecution
             captionImage1.Name = "CaptionImage1";
             captionImage1.Size = new System.Drawing.Size(30, 20);
             this.CaptionImages.Add(captionImage1);
-            this.ClientSize = new System.Drawing.Size(1288, 694);
+            this.ClientSize = new System.Drawing.Size(1138, 654);
             this.Controls.Add(this.Tab2);
             this.ForeColor = System.Drawing.SystemColors.Info;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.MaximumSize = new System.Drawing.Size(1150, 700);
             this.MetroColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.MinimumSize = new System.Drawing.Size(1278, 718);
+            this.MinimumSize = new System.Drawing.Size(1150, 700);
             this.Name = "Reprogramming";
             this.ShowIcon = false;
             this.Text = "Reprogramming Form";
@@ -3262,11 +3263,11 @@ namespace BudgetExecution
             this.Tab1P1.ResumeLayout(false);
             this.Tab1P1.PerformLayout();
             this.tabPageAdv2.ResumeLayout(false);
+            this.Tab2P2.ResumeLayout(false);
+            this.Tab2P2.PerformLayout();
             this.Tab3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.TransferBinding)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.miniToolStrip)).EndInit();
-            this.Tab2P2.ResumeLayout(false);
-            this.Tab2P2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
             this.bindingNavigator1.ResumeLayout(false);
             this.bindingNavigator1.PerformLayout();

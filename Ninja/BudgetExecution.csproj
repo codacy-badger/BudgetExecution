@@ -92,6 +92,9 @@
     <Reference Include="ExcelDataReader.DataSet, Version=3.4.0.0, Culture=neutral, PublicKeyToken=93517dbe6a4012fa, processorArchitecture=MSIL">
       <HintPath>..\packages\ExcelDataReader.DataSet.3.4.0\lib\net45\ExcelDataReader.DataSet.dll</HintPath>
     </Reference>
+    <Reference Include="LimitlessUI_2.0.0">
+      <HintPath>..\lib\LimitlessUI_2.0.0.dll</HintPath>
+    </Reference>
     <Reference Include="linq2db, Version=2.2.0.0, Culture=neutral, PublicKeyToken=e41013125f9e410a, processorArchitecture=MSIL">
       <HintPath>..\packages\linq2db.2.2.0\lib\net45\linq2db.dll</HintPath>
     </Reference>
