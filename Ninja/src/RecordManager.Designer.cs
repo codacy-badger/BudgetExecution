@@ -245,9 +245,9 @@
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.ForeColor = System.Drawing.SystemColors.Info;
             this.groupBox2.Location = new System.Drawing.Point(438, 281);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox2.Size = new System.Drawing.Size(404, 38);
             this.groupBox2.TabIndex = 56;
             this.groupBox2.TabStop = false;
@@ -549,7 +549,7 @@
             // AccountTabControl
             // 
             this.AccountTabControl.ActiveTabForeColor = System.Drawing.Color.White;
-            this.AccountTabControl.AdjustTopGap = 10;
+            this.AccountTabControl.AdjustTopGap = 5;
             this.AccountTabControl.BeforeTouchSize = new System.Drawing.Size(851, 364);
             this.AccountTabControl.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.AccountTabControl.CloseButtonForeColor = System.Drawing.Color.Empty;
@@ -561,7 +561,7 @@
             this.AccountTabControl.FocusOnTabClick = false;
             this.AccountTabControl.InActiveTabForeColor = System.Drawing.Color.Gray;
             this.AccountTabControl.Location = new System.Drawing.Point(0, 0);
-            this.AccountTabControl.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.AccountTabControl.Margin = new System.Windows.Forms.Padding(2);
             this.AccountTabControl.Name = "AccountTabControl";
             this.AccountTabControl.Padding = new System.Drawing.Point(6, 8);
             this.AccountTabControl.SeparatorColor = System.Drawing.SystemColors.ControlDark;
@@ -578,11 +578,11 @@
             this.UpdateTab.Controls.Add(this.groupBox2);
             this.UpdateTab.Image = null;
             this.UpdateTab.ImageSize = new System.Drawing.Size(16, 16);
-            this.UpdateTab.Location = new System.Drawing.Point(0, 41);
-            this.UpdateTab.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.UpdateTab.Location = new System.Drawing.Point(0, 36);
+            this.UpdateTab.Margin = new System.Windows.Forms.Padding(2);
             this.UpdateTab.Name = "UpdateTab";
             this.UpdateTab.ShowCloseButton = true;
-            this.UpdateTab.Size = new System.Drawing.Size(851, 323);
+            this.UpdateTab.Size = new System.Drawing.Size(851, 328);
             this.UpdateTab.TabIndex = 3;
             this.UpdateTab.Text = "Update";
             this.UpdateTab.ThemesEnabled = false;
@@ -666,7 +666,7 @@
             this.RecordTabelPanel.Controls.Add(this.box28, 4, 9);
             this.RecordTabelPanel.ForeColor = System.Drawing.Color.LightGray;
             this.RecordTabelPanel.Location = new System.Drawing.Point(19, 22);
-            this.RecordTabelPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.RecordTabelPanel.Margin = new System.Windows.Forms.Padding(2);
             this.RecordTabelPanel.Name = "RecordTabelPanel";
             this.RecordTabelPanel.RowCount = 10;
             this.RecordTabelPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 14F));
@@ -717,7 +717,7 @@
             this.box29.Image = null;
             this.box29.Lines = null;
             this.box29.Location = new System.Drawing.Point(689, 227);
-            this.box29.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.box29.Margin = new System.Windows.Forms.Padding(2);
             this.box29.MaxLength = 32767;
             this.box29.Multiline = false;
             this.box29.Name = "box29";
@@ -767,7 +767,7 @@
             this.box0.Image = null;
             this.box0.Lines = null;
             this.box0.Location = new System.Drawing.Point(2, 16);
-            this.box0.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.box0.Margin = new System.Windows.Forms.Padding(2);
             this.box0.MaxLength = 32767;
             this.box0.Multiline = false;
             this.box0.Name = "box0";
@@ -797,7 +797,7 @@
             this.box4.Image = null;
             this.box4.Lines = null;
             this.box4.Location = new System.Drawing.Point(549, 16);
-            this.box4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.box4.Margin = new System.Windows.Forms.Padding(2);
             this.box4.MaxLength = 32767;
             this.box4.Multiline = false;
             this.box4.Name = "box4";
@@ -847,7 +847,7 @@
             this.box1.Image = null;
             this.box1.Lines = null;
             this.box1.Location = new System.Drawing.Point(137, 16);
-            this.box1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.box1.Margin = new System.Windows.Forms.Padding(2);
             this.box1.MaxLength = 32767;
             this.box1.Multiline = false;
             this.box1.Name = "box1";
@@ -887,7 +887,7 @@
             this.box3.Image = null;
             this.box3.Lines = null;
             this.box3.Location = new System.Drawing.Point(414, 16);
-            this.box3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.box3.Margin = new System.Windows.Forms.Padding(2);
             this.box3.MaxLength = 32767;
             this.box3.Multiline = false;
             this.box3.Name = "box3";
@@ -947,7 +947,7 @@
             this.box5.Image = null;
             this.box5.Lines = null;
             this.box5.Location = new System.Drawing.Point(689, 16);
-            this.box5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.box5.Margin = new System.Windows.Forms.Padding(2);
             this.box5.MaxLength = 32767;
             this.box5.Multiline = false;
             this.box5.Name = "box5";
@@ -987,7 +987,7 @@
             this.box6.Image = null;
             this.box6.Lines = null;
             this.box6.Location = new System.Drawing.Point(2, 69);
-            this.box6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.box6.Margin = new System.Windows.Forms.Padding(2);
             this.box6.MaxLength = 32767;
             this.box6.Multiline = false;
             this.box6.Name = "box6";
@@ -1027,7 +1027,7 @@
             this.box7.Image = null;
             this.box7.Lines = null;
             this.box7.Location = new System.Drawing.Point(137, 69);
-            this.box7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.box7.Margin = new System.Windows.Forms.Padding(2);
             this.box7.MaxLength = 32767;
             this.box7.Multiline = false;
             this.box7.Name = "box7";
@@ -1067,7 +1067,7 @@
             this.box8.Image = null;
             this.box8.Lines = null;
             this.box8.Location = new System.Drawing.Point(276, 69);
-            this.box8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.box8.Margin = new System.Windows.Forms.Padding(2);
             this.box8.MaxLength = 32767;
             this.box8.Multiline = false;
             this.box8.Name = "box8";
@@ -1107,7 +1107,7 @@
             this.box9.Image = null;
             this.box9.Lines = null;
             this.box9.Location = new System.Drawing.Point(414, 69);
-            this.box9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.box9.Margin = new System.Windows.Forms.Padding(2);
             this.box9.MaxLength = 32767;
             this.box9.Multiline = false;
             this.box9.Name = "box9";
@@ -1147,7 +1147,7 @@
             this.box10.Image = null;
             this.box10.Lines = null;
             this.box10.Location = new System.Drawing.Point(549, 69);
-            this.box10.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.box10.Margin = new System.Windows.Forms.Padding(2);
             this.box10.MaxLength = 32767;
             this.box10.Multiline = false;
             this.box10.Name = "box10";
@@ -1187,7 +1187,7 @@
             this.box11.Image = null;
             this.box11.Lines = null;
             this.box11.Location = new System.Drawing.Point(689, 69);
-            this.box11.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.box11.Margin = new System.Windows.Forms.Padding(2);
             this.box11.MaxLength = 32767;
             this.box11.Multiline = false;
             this.box11.Name = "box11";
@@ -1227,7 +1227,7 @@
             this.box12.Image = null;
             this.box12.Lines = null;
             this.box12.Location = new System.Drawing.Point(2, 120);
-            this.box12.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.box12.Margin = new System.Windows.Forms.Padding(2);
             this.box12.MaxLength = 32767;
             this.box12.Multiline = false;
             this.box12.Name = "box12";
@@ -1267,7 +1267,7 @@
             this.box13.Image = null;
             this.box13.Lines = null;
             this.box13.Location = new System.Drawing.Point(137, 120);
-            this.box13.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.box13.Margin = new System.Windows.Forms.Padding(2);
             this.box13.MaxLength = 32767;
             this.box13.Multiline = false;
             this.box13.Name = "box13";
@@ -1307,7 +1307,7 @@
             this.box14.Image = null;
             this.box14.Lines = null;
             this.box14.Location = new System.Drawing.Point(276, 120);
-            this.box14.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.box14.Margin = new System.Windows.Forms.Padding(2);
             this.box14.MaxLength = 32767;
             this.box14.Multiline = false;
             this.box14.Name = "box14";
@@ -1347,7 +1347,7 @@
             this.box15.Image = null;
             this.box15.Lines = null;
             this.box15.Location = new System.Drawing.Point(414, 120);
-            this.box15.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.box15.Margin = new System.Windows.Forms.Padding(2);
             this.box15.MaxLength = 32767;
             this.box15.Multiline = false;
             this.box15.Name = "box15";
@@ -1387,7 +1387,7 @@
             this.box16.Image = null;
             this.box16.Lines = null;
             this.box16.Location = new System.Drawing.Point(549, 120);
-            this.box16.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.box16.Margin = new System.Windows.Forms.Padding(2);
             this.box16.MaxLength = 32767;
             this.box16.Multiline = false;
             this.box16.Name = "box16";
@@ -1427,7 +1427,7 @@
             this.box17.Image = null;
             this.box17.Lines = null;
             this.box17.Location = new System.Drawing.Point(689, 120);
-            this.box17.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.box17.Margin = new System.Windows.Forms.Padding(2);
             this.box17.MaxLength = 32767;
             this.box17.Multiline = false;
             this.box17.Name = "box17";
@@ -1477,7 +1477,7 @@
             this.box19.Image = null;
             this.box19.Lines = null;
             this.box19.Location = new System.Drawing.Point(137, 170);
-            this.box19.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.box19.Margin = new System.Windows.Forms.Padding(2);
             this.box19.MaxLength = 32767;
             this.box19.Multiline = false;
             this.box19.Name = "box19";
@@ -1517,7 +1517,7 @@
             this.box20.Image = null;
             this.box20.Lines = null;
             this.box20.Location = new System.Drawing.Point(276, 170);
-            this.box20.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.box20.Margin = new System.Windows.Forms.Padding(2);
             this.box20.MaxLength = 32767;
             this.box20.Multiline = false;
             this.box20.Name = "box20";
@@ -1557,7 +1557,7 @@
             this.box21.Image = null;
             this.box21.Lines = null;
             this.box21.Location = new System.Drawing.Point(414, 170);
-            this.box21.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.box21.Margin = new System.Windows.Forms.Padding(2);
             this.box21.MaxLength = 32767;
             this.box21.Multiline = false;
             this.box21.Name = "box21";
@@ -1597,7 +1597,7 @@
             this.box22.Image = null;
             this.box22.Lines = null;
             this.box22.Location = new System.Drawing.Point(549, 170);
-            this.box22.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.box22.Margin = new System.Windows.Forms.Padding(2);
             this.box22.MaxLength = 32767;
             this.box22.Multiline = false;
             this.box22.Name = "box22";
@@ -1637,7 +1637,7 @@
             this.box23.Image = null;
             this.box23.Lines = null;
             this.box23.Location = new System.Drawing.Point(689, 170);
-            this.box23.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.box23.Margin = new System.Windows.Forms.Padding(2);
             this.box23.MaxLength = 32767;
             this.box23.Multiline = false;
             this.box23.Name = "box23";
@@ -1677,7 +1677,7 @@
             this.box2.Image = null;
             this.box2.Lines = null;
             this.box2.Location = new System.Drawing.Point(276, 16);
-            this.box2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.box2.Margin = new System.Windows.Forms.Padding(2);
             this.box2.MaxLength = 32767;
             this.box2.Multiline = false;
             this.box2.Name = "box2";
@@ -1717,7 +1717,7 @@
             this.box18.Image = null;
             this.box18.Lines = null;
             this.box18.Location = new System.Drawing.Point(2, 170);
-            this.box18.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.box18.Margin = new System.Windows.Forms.Padding(2);
             this.box18.MaxLength = 32767;
             this.box18.Multiline = false;
             this.box18.Name = "box18";
@@ -1747,7 +1747,7 @@
             this.box24.Image = null;
             this.box24.Lines = null;
             this.box24.Location = new System.Drawing.Point(2, 227);
-            this.box24.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.box24.Margin = new System.Windows.Forms.Padding(2);
             this.box24.MaxLength = 32767;
             this.box24.Multiline = false;
             this.box24.Name = "box24";
@@ -1777,7 +1777,7 @@
             this.box25.Image = null;
             this.box25.Lines = null;
             this.box25.Location = new System.Drawing.Point(137, 227);
-            this.box25.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.box25.Margin = new System.Windows.Forms.Padding(2);
             this.box25.MaxLength = 32767;
             this.box25.Multiline = false;
             this.box25.Name = "box25";
@@ -1807,7 +1807,7 @@
             this.box27.Image = null;
             this.box27.Lines = null;
             this.box27.Location = new System.Drawing.Point(414, 227);
-            this.box27.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.box27.Margin = new System.Windows.Forms.Padding(2);
             this.box27.MaxLength = 32767;
             this.box27.Multiline = false;
             this.box27.Name = "box27";
@@ -1837,7 +1837,7 @@
             this.box26.Image = null;
             this.box26.Lines = null;
             this.box26.Location = new System.Drawing.Point(276, 227);
-            this.box26.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.box26.Margin = new System.Windows.Forms.Padding(2);
             this.box26.MaxLength = 32767;
             this.box26.Multiline = false;
             this.box26.Name = "box26";
@@ -1867,7 +1867,7 @@
             this.box28.Image = null;
             this.box28.Lines = null;
             this.box28.Location = new System.Drawing.Point(549, 227);
-            this.box28.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.box28.Margin = new System.Windows.Forms.Padding(2);
             this.box28.MaxLength = 32767;
             this.box28.Multiline = false;
             this.box28.Name = "box28";
@@ -1890,11 +1890,11 @@
             this.AddNewTab.Controls.Add(this.groupBox1);
             this.AddNewTab.Image = null;
             this.AddNewTab.ImageSize = new System.Drawing.Size(16, 16);
-            this.AddNewTab.Location = new System.Drawing.Point(0, 41);
-            this.AddNewTab.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.AddNewTab.Location = new System.Drawing.Point(0, 36);
+            this.AddNewTab.Margin = new System.Windows.Forms.Padding(2);
             this.AddNewTab.Name = "AddNewTab";
             this.AddNewTab.ShowCloseButton = true;
-            this.AddNewTab.Size = new System.Drawing.Size(851, 323);
+            this.AddNewTab.Size = new System.Drawing.Size(851, 328);
             this.AddNewTab.TabIndex = 2;
             this.AddNewTab.Text = "Add ";
             this.AddNewTab.ThemesEnabled = false;
@@ -1970,7 +1970,7 @@
             this.tableLayoutPanel1.Controls.Add(this.metroSetTextBox30, 4, 9);
             this.tableLayoutPanel1.ForeColor = System.Drawing.Color.LightGray;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(23, 21);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 10;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 14F));
@@ -2021,7 +2021,7 @@
             this.metroSetTextBox1.Image = null;
             this.metroSetTextBox1.Lines = null;
             this.metroSetTextBox1.Location = new System.Drawing.Point(689, 227);
-            this.metroSetTextBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.metroSetTextBox1.Margin = new System.Windows.Forms.Padding(2);
             this.metroSetTextBox1.MaxLength = 32767;
             this.metroSetTextBox1.Multiline = false;
             this.metroSetTextBox1.Name = "metroSetTextBox1";
@@ -2071,7 +2071,7 @@
             this.metroSetTextBox2.Image = null;
             this.metroSetTextBox2.Lines = null;
             this.metroSetTextBox2.Location = new System.Drawing.Point(2, 16);
-            this.metroSetTextBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.metroSetTextBox2.Margin = new System.Windows.Forms.Padding(2);
             this.metroSetTextBox2.MaxLength = 32767;
             this.metroSetTextBox2.Multiline = false;
             this.metroSetTextBox2.Name = "metroSetTextBox2";
@@ -2101,7 +2101,7 @@
             this.metroSetTextBox3.Image = null;
             this.metroSetTextBox3.Lines = null;
             this.metroSetTextBox3.Location = new System.Drawing.Point(549, 16);
-            this.metroSetTextBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.metroSetTextBox3.Margin = new System.Windows.Forms.Padding(2);
             this.metroSetTextBox3.MaxLength = 32767;
             this.metroSetTextBox3.Multiline = false;
             this.metroSetTextBox3.Name = "metroSetTextBox3";
@@ -2151,7 +2151,7 @@
             this.metroSetTextBox4.Image = null;
             this.metroSetTextBox4.Lines = null;
             this.metroSetTextBox4.Location = new System.Drawing.Point(137, 16);
-            this.metroSetTextBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.metroSetTextBox4.Margin = new System.Windows.Forms.Padding(2);
             this.metroSetTextBox4.MaxLength = 32767;
             this.metroSetTextBox4.Multiline = false;
             this.metroSetTextBox4.Name = "metroSetTextBox4";
@@ -2191,7 +2191,7 @@
             this.metroSetTextBox5.Image = null;
             this.metroSetTextBox5.Lines = null;
             this.metroSetTextBox5.Location = new System.Drawing.Point(414, 16);
-            this.metroSetTextBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.metroSetTextBox5.Margin = new System.Windows.Forms.Padding(2);
             this.metroSetTextBox5.MaxLength = 32767;
             this.metroSetTextBox5.Multiline = false;
             this.metroSetTextBox5.Name = "metroSetTextBox5";
@@ -2251,7 +2251,7 @@
             this.metroSetTextBox6.Image = null;
             this.metroSetTextBox6.Lines = null;
             this.metroSetTextBox6.Location = new System.Drawing.Point(689, 16);
-            this.metroSetTextBox6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.metroSetTextBox6.Margin = new System.Windows.Forms.Padding(2);
             this.metroSetTextBox6.MaxLength = 32767;
             this.metroSetTextBox6.Multiline = false;
             this.metroSetTextBox6.Name = "metroSetTextBox6";
@@ -2291,7 +2291,7 @@
             this.metroSetTextBox7.Image = null;
             this.metroSetTextBox7.Lines = null;
             this.metroSetTextBox7.Location = new System.Drawing.Point(2, 69);
-            this.metroSetTextBox7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.metroSetTextBox7.Margin = new System.Windows.Forms.Padding(2);
             this.metroSetTextBox7.MaxLength = 32767;
             this.metroSetTextBox7.Multiline = false;
             this.metroSetTextBox7.Name = "metroSetTextBox7";
@@ -2331,7 +2331,7 @@
             this.metroSetTextBox8.Image = null;
             this.metroSetTextBox8.Lines = null;
             this.metroSetTextBox8.Location = new System.Drawing.Point(137, 69);
-            this.metroSetTextBox8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.metroSetTextBox8.Margin = new System.Windows.Forms.Padding(2);
             this.metroSetTextBox8.MaxLength = 32767;
             this.metroSetTextBox8.Multiline = false;
             this.metroSetTextBox8.Name = "metroSetTextBox8";
@@ -2371,7 +2371,7 @@
             this.metroSetTextBox9.Image = null;
             this.metroSetTextBox9.Lines = null;
             this.metroSetTextBox9.Location = new System.Drawing.Point(276, 69);
-            this.metroSetTextBox9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.metroSetTextBox9.Margin = new System.Windows.Forms.Padding(2);
             this.metroSetTextBox9.MaxLength = 32767;
             this.metroSetTextBox9.Multiline = false;
             this.metroSetTextBox9.Name = "metroSetTextBox9";
@@ -2411,7 +2411,7 @@
             this.metroSetTextBox10.Image = null;
             this.metroSetTextBox10.Lines = null;
             this.metroSetTextBox10.Location = new System.Drawing.Point(414, 69);
-            this.metroSetTextBox10.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.metroSetTextBox10.Margin = new System.Windows.Forms.Padding(2);
             this.metroSetTextBox10.MaxLength = 32767;
             this.metroSetTextBox10.Multiline = false;
             this.metroSetTextBox10.Name = "metroSetTextBox10";
@@ -2451,7 +2451,7 @@
             this.metroSetTextBox11.Image = null;
             this.metroSetTextBox11.Lines = null;
             this.metroSetTextBox11.Location = new System.Drawing.Point(549, 69);
-            this.metroSetTextBox11.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.metroSetTextBox11.Margin = new System.Windows.Forms.Padding(2);
             this.metroSetTextBox11.MaxLength = 32767;
             this.metroSetTextBox11.Multiline = false;
             this.metroSetTextBox11.Name = "metroSetTextBox11";
@@ -2491,7 +2491,7 @@
             this.metroSetTextBox12.Image = null;
             this.metroSetTextBox12.Lines = null;
             this.metroSetTextBox12.Location = new System.Drawing.Point(689, 69);
-            this.metroSetTextBox12.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.metroSetTextBox12.Margin = new System.Windows.Forms.Padding(2);
             this.metroSetTextBox12.MaxLength = 32767;
             this.metroSetTextBox12.Multiline = false;
             this.metroSetTextBox12.Name = "metroSetTextBox12";
@@ -2531,7 +2531,7 @@
             this.metroSetTextBox13.Image = null;
             this.metroSetTextBox13.Lines = null;
             this.metroSetTextBox13.Location = new System.Drawing.Point(2, 120);
-            this.metroSetTextBox13.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.metroSetTextBox13.Margin = new System.Windows.Forms.Padding(2);
             this.metroSetTextBox13.MaxLength = 32767;
             this.metroSetTextBox13.Multiline = false;
             this.metroSetTextBox13.Name = "metroSetTextBox13";
@@ -2571,7 +2571,7 @@
             this.metroSetTextBox14.Image = null;
             this.metroSetTextBox14.Lines = null;
             this.metroSetTextBox14.Location = new System.Drawing.Point(137, 120);
-            this.metroSetTextBox14.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.metroSetTextBox14.Margin = new System.Windows.Forms.Padding(2);
             this.metroSetTextBox14.MaxLength = 32767;
             this.metroSetTextBox14.Multiline = false;
             this.metroSetTextBox14.Name = "metroSetTextBox14";
@@ -2611,7 +2611,7 @@
             this.metroSetTextBox15.Image = null;
             this.metroSetTextBox15.Lines = null;
             this.metroSetTextBox15.Location = new System.Drawing.Point(276, 120);
-            this.metroSetTextBox15.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.metroSetTextBox15.Margin = new System.Windows.Forms.Padding(2);
             this.metroSetTextBox15.MaxLength = 32767;
             this.metroSetTextBox15.Multiline = false;
             this.metroSetTextBox15.Name = "metroSetTextBox15";
@@ -2651,7 +2651,7 @@
             this.metroSetTextBox16.Image = null;
             this.metroSetTextBox16.Lines = null;
             this.metroSetTextBox16.Location = new System.Drawing.Point(414, 120);
-            this.metroSetTextBox16.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.metroSetTextBox16.Margin = new System.Windows.Forms.Padding(2);
             this.metroSetTextBox16.MaxLength = 32767;
             this.metroSetTextBox16.Multiline = false;
             this.metroSetTextBox16.Name = "metroSetTextBox16";
@@ -2691,7 +2691,7 @@
             this.metroSetTextBox17.Image = null;
             this.metroSetTextBox17.Lines = null;
             this.metroSetTextBox17.Location = new System.Drawing.Point(549, 120);
-            this.metroSetTextBox17.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.metroSetTextBox17.Margin = new System.Windows.Forms.Padding(2);
             this.metroSetTextBox17.MaxLength = 32767;
             this.metroSetTextBox17.Multiline = false;
             this.metroSetTextBox17.Name = "metroSetTextBox17";
@@ -2731,7 +2731,7 @@
             this.metroSetTextBox18.Image = null;
             this.metroSetTextBox18.Lines = null;
             this.metroSetTextBox18.Location = new System.Drawing.Point(689, 120);
-            this.metroSetTextBox18.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.metroSetTextBox18.Margin = new System.Windows.Forms.Padding(2);
             this.metroSetTextBox18.MaxLength = 32767;
             this.metroSetTextBox18.Multiline = false;
             this.metroSetTextBox18.Name = "metroSetTextBox18";
@@ -2781,7 +2781,7 @@
             this.metroSetTextBox19.Image = null;
             this.metroSetTextBox19.Lines = null;
             this.metroSetTextBox19.Location = new System.Drawing.Point(137, 170);
-            this.metroSetTextBox19.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.metroSetTextBox19.Margin = new System.Windows.Forms.Padding(2);
             this.metroSetTextBox19.MaxLength = 32767;
             this.metroSetTextBox19.Multiline = false;
             this.metroSetTextBox19.Name = "metroSetTextBox19";
@@ -2821,7 +2821,7 @@
             this.metroSetTextBox20.Image = null;
             this.metroSetTextBox20.Lines = null;
             this.metroSetTextBox20.Location = new System.Drawing.Point(276, 170);
-            this.metroSetTextBox20.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.metroSetTextBox20.Margin = new System.Windows.Forms.Padding(2);
             this.metroSetTextBox20.MaxLength = 32767;
             this.metroSetTextBox20.Multiline = false;
             this.metroSetTextBox20.Name = "metroSetTextBox20";
@@ -2861,7 +2861,7 @@
             this.metroSetTextBox21.Image = null;
             this.metroSetTextBox21.Lines = null;
             this.metroSetTextBox21.Location = new System.Drawing.Point(414, 170);
-            this.metroSetTextBox21.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.metroSetTextBox21.Margin = new System.Windows.Forms.Padding(2);
             this.metroSetTextBox21.MaxLength = 32767;
             this.metroSetTextBox21.Multiline = false;
             this.metroSetTextBox21.Name = "metroSetTextBox21";
@@ -2901,7 +2901,7 @@
             this.metroSetTextBox22.Image = null;
             this.metroSetTextBox22.Lines = null;
             this.metroSetTextBox22.Location = new System.Drawing.Point(549, 170);
-            this.metroSetTextBox22.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.metroSetTextBox22.Margin = new System.Windows.Forms.Padding(2);
             this.metroSetTextBox22.MaxLength = 32767;
             this.metroSetTextBox22.Multiline = false;
             this.metroSetTextBox22.Name = "metroSetTextBox22";
@@ -2941,7 +2941,7 @@
             this.metroSetTextBox23.Image = null;
             this.metroSetTextBox23.Lines = null;
             this.metroSetTextBox23.Location = new System.Drawing.Point(689, 170);
-            this.metroSetTextBox23.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.metroSetTextBox23.Margin = new System.Windows.Forms.Padding(2);
             this.metroSetTextBox23.MaxLength = 32767;
             this.metroSetTextBox23.Multiline = false;
             this.metroSetTextBox23.Name = "metroSetTextBox23";
@@ -2981,7 +2981,7 @@
             this.metroSetTextBox24.Image = null;
             this.metroSetTextBox24.Lines = null;
             this.metroSetTextBox24.Location = new System.Drawing.Point(276, 16);
-            this.metroSetTextBox24.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.metroSetTextBox24.Margin = new System.Windows.Forms.Padding(2);
             this.metroSetTextBox24.MaxLength = 32767;
             this.metroSetTextBox24.Multiline = false;
             this.metroSetTextBox24.Name = "metroSetTextBox24";
@@ -3021,7 +3021,7 @@
             this.metroSetTextBox25.Image = null;
             this.metroSetTextBox25.Lines = null;
             this.metroSetTextBox25.Location = new System.Drawing.Point(2, 170);
-            this.metroSetTextBox25.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.metroSetTextBox25.Margin = new System.Windows.Forms.Padding(2);
             this.metroSetTextBox25.MaxLength = 32767;
             this.metroSetTextBox25.Multiline = false;
             this.metroSetTextBox25.Name = "metroSetTextBox25";
@@ -3051,7 +3051,7 @@
             this.metroSetTextBox26.Image = null;
             this.metroSetTextBox26.Lines = null;
             this.metroSetTextBox26.Location = new System.Drawing.Point(2, 227);
-            this.metroSetTextBox26.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.metroSetTextBox26.Margin = new System.Windows.Forms.Padding(2);
             this.metroSetTextBox26.MaxLength = 32767;
             this.metroSetTextBox26.Multiline = false;
             this.metroSetTextBox26.Name = "metroSetTextBox26";
@@ -3081,7 +3081,7 @@
             this.metroSetTextBox27.Image = null;
             this.metroSetTextBox27.Lines = null;
             this.metroSetTextBox27.Location = new System.Drawing.Point(137, 227);
-            this.metroSetTextBox27.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.metroSetTextBox27.Margin = new System.Windows.Forms.Padding(2);
             this.metroSetTextBox27.MaxLength = 32767;
             this.metroSetTextBox27.Multiline = false;
             this.metroSetTextBox27.Name = "metroSetTextBox27";
@@ -3111,7 +3111,7 @@
             this.metroSetTextBox28.Image = null;
             this.metroSetTextBox28.Lines = null;
             this.metroSetTextBox28.Location = new System.Drawing.Point(414, 227);
-            this.metroSetTextBox28.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.metroSetTextBox28.Margin = new System.Windows.Forms.Padding(2);
             this.metroSetTextBox28.MaxLength = 32767;
             this.metroSetTextBox28.Multiline = false;
             this.metroSetTextBox28.Name = "metroSetTextBox28";
@@ -3141,7 +3141,7 @@
             this.metroSetTextBox29.Image = null;
             this.metroSetTextBox29.Lines = null;
             this.metroSetTextBox29.Location = new System.Drawing.Point(276, 227);
-            this.metroSetTextBox29.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.metroSetTextBox29.Margin = new System.Windows.Forms.Padding(2);
             this.metroSetTextBox29.MaxLength = 32767;
             this.metroSetTextBox29.Multiline = false;
             this.metroSetTextBox29.Name = "metroSetTextBox29";
@@ -3171,7 +3171,7 @@
             this.metroSetTextBox30.Image = null;
             this.metroSetTextBox30.Lines = null;
             this.metroSetTextBox30.Location = new System.Drawing.Point(549, 227);
-            this.metroSetTextBox30.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.metroSetTextBox30.Margin = new System.Windows.Forms.Padding(2);
             this.metroSetTextBox30.MaxLength = 32767;
             this.metroSetTextBox30.Multiline = false;
             this.metroSetTextBox30.Name = "metroSetTextBox30";
@@ -3194,9 +3194,9 @@
             this.groupBox1.Controls.Add(this.label32);
             this.groupBox1.ForeColor = System.Drawing.SystemColors.Info;
             this.groupBox1.Location = new System.Drawing.Point(441, 281);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(401, 38);
             this.groupBox1.TabIndex = 59;
             this.groupBox1.TabStop = false;
@@ -3521,7 +3521,7 @@
             this.CaptionImages.Add(captionImage2);
             this.ClientSize = new System.Drawing.Size(851, 364);
             this.Controls.Add(this.AccountTabControl);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximumSize = new System.Drawing.Size(863, 438);
             this.MetroColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             this.MinimumSize = new System.Drawing.Size(863, 400);

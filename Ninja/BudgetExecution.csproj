@@ -278,11 +278,11 @@
     <Compile Include="src\AccountManager.Designer.cs">
       <DependentUpon>AccountManager.cs</DependentUpon>
     </Compile>
-    <Compile Include="src\Message.cs">
+    <Compile Include="src\ExcelBrowser.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="src\Message.Designer.cs">
-      <DependentUpon>Message.cs</DependentUpon>
+    <Compile Include="src\ExcelBrowser.Designer.cs">
+      <DependentUpon>ExcelBrowser.cs</DependentUpon>
     </Compile>
     <Compile Include="src\ExcelImporter.cs">
       <SubType>Form</SubType>
@@ -295,6 +295,12 @@
     </Compile>
     <Compile Include="src\DatabaseSelector.Designer.cs">
       <DependentUpon>DatabaseSelector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Message.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Message.Designer.cs">
+      <DependentUpon>Message.cs</DependentUpon>
     </Compile>
     <Compile Include="src\Reprogramming.cs">
       <SubType>Form</SubType>
@@ -572,11 +578,11 @@
     <EmbeddedResource Include="src\DataTools.resx">
       <DependentUpon>DataTools.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="src\ExcelBrowser.resx">
+      <DependentUpon>ExcelBrowser.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="src\ExternalDataReader.resx">
       <DependentUpon>ExternalDataReader.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="src\Message.resx">
-      <DependentUpon>Message.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="src\ExcelForm.resx">
       <DependentUpon>ExcelForm.cs</DependentUpon>
@@ -592,6 +598,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="src\Error.resx">
       <DependentUpon>Error.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Message.resx">
+      <DependentUpon>Message.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="src\MetroForm1.resx">
       <DependentUpon>MetroForm1.cs</DependentUpon>

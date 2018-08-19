@@ -24,26 +24,14 @@ namespace BudgetExecution
     using Syncfusion.Windows.Forms.Chart;
     using Syncfusion.Windows.Forms.Tools;
 
-    /// <summary>
-    /// The summary form.
-    /// </summary>
     public partial class SummaryForm : MetroForm
     {
         // CONSTRUCTORS
-        /// <summary>
-        /// Initializes a new instance of the <see cref="SummaryForm"/> class.
-        /// </summary>
         public SummaryForm()
         {
             InitializeComponent();
         }
 
-        /// <summary>
-        /// Initializes a new instance of the <see cref="SummaryForm"/> class.
-        /// </summary>
-        /// <param name="rc">
-        /// The rc.
-        /// </param>
         public SummaryForm(string rc)
         {
             InitializeComponent();
@@ -63,15 +51,9 @@ namespace BudgetExecution
             SummaryTabControl.SelectedIndexChanged += SummaryTabPage_TabSelected;
             CurrentTabIndex = 8;
             TabNames = GetTabNames();
-            UpdateTab.TabVisible = false;
+            EditTab.TabVisible = false;
         }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="SummaryForm"/> class.
-        /// </summary>
-        /// <param name="source">
-        /// The source.
-        /// </param>
+        
         public SummaryForm(Source source)
         {
             InitializeComponent();
@@ -105,161 +87,66 @@ namespace BudgetExecution
                 SummaryTabControl.SelectedIndexChanged += SummaryTabPage_TabSelected;
             }
 
-            UpdateTab.TabVisible = false;
         }
 
         // PROPERTIES
-
-        /// <summary>
-        /// Gets the source.
-        /// </summary>
         public Source Source { get; }
 
-        /// <summary>
-        /// Gets the provider.
-        /// </summary>
         public Provider Provider { get; }
 
-        /// <summary>
-        /// Gets or sets the parameter.
-        /// </summary>
         public Dictionary<string, object> Parameter { get; set; }
 
-        /// <summary>
-        /// Gets the db data.
-        /// </summary>
         public DataBuilder DbData { get; }
 
-        /// <summary>
-        /// Gets or sets the table.
-        /// </summary>
         public DataTable Table { get; set; }
 
-        /// <summary>
-        /// Gets or sets the db row.
-        /// </summary>
         public DataRow DbRow { get; set; }
 
-        /// <summary>
-        /// Gets or sets the metric.
-        /// </summary>
         public PrcMetric Metric { get; set; }
 
-        /// <summary>
-        /// Gets or sets the chart type.
-        /// </summary>
         public ChartSeriesType ChartType { get; set; }
 
-        /// <summary>
-        /// Gets or sets the chart field.
-        /// </summary>
         public Field ChartField { get; set; }
 
-        /// <summary>
-        /// Gets or sets the chart filter.
-        /// </summary>
         public string ChartFilter { get; set; }
 
-        /// <summary>
-        /// Gets or sets the division.
-        /// </summary>
         public string Division { get; set; }
 
-        /// <summary>
-        /// Gets or sets the chart group.
-        /// </summary>
         public Field ChartGroup { get; set; }
 
-        /// <summary>
-        /// Gets the program elements.
-        /// </summary>
         public Dictionary<string, string[]> ProgramElements { get; }
 
-        /// <summary>
-        /// Gets or sets the chart main title.
-        /// </summary>
         public string[] ChartMainTitle { get; set; }
 
-        /// <summary>
-        /// Gets or sets the chart axis title.
-        /// </summary>
         public string[] ChartAxisTitle { get; set; }
 
-        /// <summary>
-        /// Gets or sets the current tab index.
-        /// </summary>
         public int CurrentTabIndex { get; set; }
 
-        /// <summary>
-        /// Gets or sets the grid filter control 1.
-        /// </summary>
         public MetroSetComboBox GridFilterControl1 { get; set; }
 
-        /// <summary>
-        /// Gets or sets the grid filter control 2.
-        /// </summary>
         public MetroSetComboBox GridFilterControl2 { get; set; }
 
-        /// <summary>
-        /// Gets or sets the grid filter control 3.
-        /// </summary>
         public MetroSetComboBox GridFilterControl3 { get; set; }
 
-        /// <summary>
-        /// Gets or sets the chart filter control 1.
-        /// </summary>
         public MetroSetComboBox ChartFilterControl1 { get; set; }
 
-        /// <summary>
-        /// Gets or sets the chart filter control 2.
-        /// </summary>
         public MetroSetComboBox ChartFilterControl2 { get; set; }
 
-        /// <summary>
-        /// Gets or sets the chart filter control 3.
-        /// </summary>
         public MetroSetComboBox ChartFilterControl3 { get; set; }
 
-        /// <summary>
-        /// Gets or sets the chart filter control 4.
-        /// </summary>
         public MetroSetComboBox ChartFilterControl4 { get; set; }
 
-        /// <summary>
-        /// Gets or sets the expander 1.
-        /// </summary>
         public ExpandCollapsePanel Expander1 { get; set; }
 
-        /// <summary>
-        /// Gets or sets the expander 2.
-        /// </summary>
         public ExpandCollapsePanel Expander2 { get; set; }
 
-        /// <summary>
-        /// Gets or sets the measure.
-        /// </summary>
         public Stat Measure { get; set; }
 
-        /// <summary>
-        /// Gets or sets the tab.
-        /// </summary>
         private TabPageAdv[] Tab { get; set; }
 
-        /// <summary>
-        /// Gets the tab names.
-        /// </summary>
         private string[] TabNames { get; }
 
         // METHODS
-        /// <summary>
-        /// The form_ load.
-        /// </summary>
-        /// <param name="sender">
-        /// The sender.
-        /// </param>
-        /// <param name="e">
-        /// The e.
-        /// </param>
         private void Form_Load(object sender, EventArgs e)
         {
             try
@@ -267,6 +154,7 @@ namespace BudgetExecution
                 if (DbData.Source == Source.FTE)
                 {
                     BocTab.TabVisible = false;
+                    EditTab.TabVisible = false;
                 }
 
                 if (DbData.Source == Source.RegionalAccounts)
@@ -274,6 +162,7 @@ namespace BudgetExecution
                     DivisionTab.TabVisible = false;
                     DatabaseTab.TabVisible = false;
                     ProjectTab.TabVisible = false;
+                    EditTab.TabVisible = false;
                 }
                 
                 if (DbData.Source == Source.DivisionAccounts)
@@ -281,8 +170,11 @@ namespace BudgetExecution
                     DivisionTab.TabVisible = false;
                     DatabaseTab.TabVisible = true;
                     ProjectTab.TabVisible = false;
+                    EditTab.TabVisible = false;
                 }
-
+                
+                EditTab.TabVisible = false;
+                DivisionTab.TabVisible = false;
                 BindingSource.DataSource = Table;
                 Grid.DataSource = BindingSource;
                 DefineVisisbleDataColumns(Grid);
@@ -310,29 +202,21 @@ namespace BudgetExecution
             }
         }
 
-        /// <summary>
-        /// The grid filter control 1_ item selected.
-        /// </summary>
-        /// <param name="sender">
-        /// The sender.
-        /// </param>
-        /// <param name="e">
-        /// The e.
-        /// </param>
         private void GridFilterControl1_ItemSelected(object sender, EventArgs e)
         {
             try
             {
-                MetroSetComboBox filter = sender as MetroSetComboBox;
-                GridFundFilter.Tag = filter.SelectedItem.ToString();
-                string fund = filter.SelectedItem.ToString();
+                GridFilterControl1 = sender as MetroSetComboBox;
+                GridFundFilter.Tag = GridFilterControl1?.SelectedItem.ToString();
+                string fund = GridFilterControl1?.SelectedItem.ToString();
                 BindingSource.Filter = string.Format("FundName = '{0}'", GridFundFilter.SelectedItem);
                 label41.Text = GetCount(fund).ToString();
-                label37.Text = CalculateAverage(GridFundFilter.SelectedItem.ToString()).ToString("c");
+                label37.Text = CalculateAverage(fund).ToString();
                 label32.Text = CalculateTotal(fund).ToString("c");
                 PopulateGridBocFilterItems();
                 lblBoc.Visible = true;
                 GridBocFilter.Visible = true;
+                this.GridGroupBox.Text = $"{Source.ToString()} {GridFilterControl1?.SelectedItem} Database";
             }
             catch (Exception ex)
             {
@@ -340,21 +224,12 @@ namespace BudgetExecution
             }
         }
 
-        /// <summary>
-        /// The grid filter control 2_ item selected.
-        /// </summary>
-        /// <param name="sender">
-        /// The sender.
-        /// </param>
-        /// <param name="e">
-        /// The e.
-        /// </param>
         private void GridFilterControl2_ItemSelected(object sender, EventArgs e)
         {
             try
             {
-                MetroSetComboBox boc = sender as MetroSetComboBox;
-                string filter = boc.SelectedItem.ToString();
+                GridFilterControl2 = sender as MetroSetComboBox;
+                string filter = GridFilterControl2?.SelectedItem.ToString();
                 BindingSource.Filter = $"FundName = '{GridFundFilter.SelectedItem}' AND BocName = '{GridBocFilter.SelectedItem}'";
                 label32.Text = CalculateTotal(GridFundFilter.SelectedItem.ToString(), filter).ToString("c");
                 label37.Text = CalculateAverage(GridFundFilter.SelectedItem.ToString(), filter).ToString("c");
@@ -364,6 +239,7 @@ namespace BudgetExecution
                 GridAccountFilter.Visible = true;
                 PopulateGridAccountFilterItems();
                 GridAccountFilter.SelectionChangeCommitted += GridFilterControl3_ItemSelected;
+                this.GridGroupBox.Text = $"{Source.ToString()} {GridFilterControl1?.SelectedItem} {GridFilterControl2?.SelectedItem} Database";
             }
             catch (Exception ex)
             {
@@ -371,15 +247,6 @@ namespace BudgetExecution
             }
         }
 
-        /// <summary>
-        /// The grid filter control 3_ item selected.
-        /// </summary>
-        /// <param name="sender">
-        /// The sender.
-        /// </param>
-        /// <param name="e">
-        /// The e.
-        /// </param>
         private void GridFilterControl3_ItemSelected(object sender, EventArgs e)
         {
             try
@@ -396,9 +263,6 @@ namespace BudgetExecution
             }
         }
 
-        /// <summary>
-        /// The filter data grid.
-        /// </summary>
         private void FilterDataGrid()
         {
             try
@@ -416,9 +280,6 @@ namespace BudgetExecution
             }
         }
 
-        /// <summary>
-        /// The populate grid boc filter items.
-        /// </summary>
         private void PopulateGridBocFilterItems()
         {
             try
@@ -438,9 +299,6 @@ namespace BudgetExecution
             }
         }
 
-        /// <summary>
-        /// The populate grid account filter items.
-        /// </summary>
         private void PopulateGridAccountFilterItems()
         {
             try
@@ -459,15 +317,6 @@ namespace BudgetExecution
             }
         }
 
-        /// <summary>
-        /// The get count.
-        /// </summary>
-        /// <param name="filter">
-        /// The filter.
-        /// </param>
-        /// <returns>
-        /// The <see cref="decimal"/>.
-        /// </returns>
         private decimal GetCount(string filter)
         {
             try
@@ -481,18 +330,6 @@ namespace BudgetExecution
             }
         }
 
-        /// <summary>
-        /// The get count.
-        /// </summary>
-        /// <param name="filter1">
-        /// The filter 1.
-        /// </param>
-        /// <param name="filter2">
-        /// The filter 2.
-        /// </param>
-        /// <returns>
-        /// The <see cref="decimal"/>.
-        /// </returns>
         private decimal GetCount(string filter1, string filter2)
         {
             try
@@ -506,15 +343,6 @@ namespace BudgetExecution
             }
         }
 
-        /// <summary>
-        /// The populate filter box items.
-        /// </summary>
-        /// <param name="cmbox">
-        /// The cmbox.
-        /// </param>
-        /// <param name="prcfilter">
-        /// The prcfilter.
-        /// </param>
         private void PopulateFilterBoxItems(MetroSetComboBox cmbox, Field prcfilter)
         {
             try
@@ -536,15 +364,6 @@ namespace BudgetExecution
             }
         }
 
-        /// <summary>
-        /// The populate filter box items.
-        /// </summary>
-        /// <param name="cmbox">
-        /// The cmbox.
-        /// </param>
-        /// <param name="i">
-        /// The i.
-        /// </param>
         private void PopulateFilterBoxItems(MetroSetComboBox cmbox, int i)
         {
             try
@@ -562,12 +381,6 @@ namespace BudgetExecution
             }
         }
 
-        /// <summary>
-        /// The define visisble data columns.
-        /// </summary>
-        /// <param name="dgv">
-        /// The dgv.
-        /// </param>
         private void DefineVisisbleDataColumns(DataGridView dgv)
         {
             try
@@ -578,19 +391,27 @@ namespace BudgetExecution
                 }
 
                 dgv.Columns[0].Visible = true;
-                dgv.Columns[1].Visible = true;
-                dgv.Columns[2].Visible = true;
+                
+                //dgv.Columns[1].Visible = true;
+
+                //dgv.Columns[2].Visible = true;
+                
                 dgv.Columns[3].Visible = true;
                 dgv.Columns[4].Visible = true;
-                dgv.Columns[5].Visible = true;
+                
+                //dgv.Columns[5].Visible = true;
                 dgv.Columns[6].Visible = true;
-                dgv.Columns[7].Visible = true;
+                
+                //dgv.Columns[7].Visible = true;
                 dgv.Columns[8].Visible = true;
-                dgv.Columns[9].Visible = true;
+                
+                //dgv.Columns[9].Visible = true;
                 dgv.Columns[10].Visible = true;
-                dgv.Columns[11].Visible = true;
+                
+                //dgv.Columns[11].Visible = true;
                 dgv.Columns[12].Visible = true;
-                dgv.Columns[12].DefaultCellStyle.Format = "c";
+                dgv.Columns[13].Visible = true;
+                dgv.Columns[13].DefaultCellStyle.Format = "c";
             }
             catch (Exception ex)
             {
@@ -598,15 +419,6 @@ namespace BudgetExecution
             }
         }
 
-        /// <summary>
-        /// The configure grid filter buttons.
-        /// </summary>
-        /// <param name="panel">
-        /// The panel.
-        /// </param>
-        /// <param name="list">
-        /// The list.
-        /// </param>
         private void ConfigureGridFilterButtons(FlowLayoutPanel panel, string[] list)
         {
             try
@@ -637,9 +449,6 @@ namespace BudgetExecution
             }
         }
 
-        /// <summary>
-        /// The configure text box bindings.
-        /// </summary>
         private void ConfigureTextBoxBindings()
         {
             try
@@ -660,20 +469,14 @@ namespace BudgetExecution
             }
         }
 
-        /// <summary>
-        /// The calculate average.
-        /// </summary>
-        /// <param name="filter">
-        /// The filter.
-        /// </param>
-        /// <returns>
-        /// The <see cref="decimal"/>.
-        /// </returns>
-        private decimal CalculateAverage(string filter)
+        private decimal CalculateAverage(string filter1)
         {
             try
             {
-                return DbData.DbTable.AsEnumerable().Where(p => p.Field<string>("FundName").Equals(filter)).Select(p => p.Field<decimal>("Amount")).Average();
+                return Table.AsEnumerable()
+                    .Where(p => p.Field<string>("FundName").Equals(filter1))
+                    .Select(p => p.Field<decimal>("Amount"))
+                    .Average();
             }
             catch (Exception ex)
             {
@@ -682,18 +485,6 @@ namespace BudgetExecution
             }
         }
 
-        /// <summary>
-        /// The calculate average.
-        /// </summary>
-        /// <param name="filter1">
-        /// The filter 1.
-        /// </param>
-        /// <param name="filter2">
-        /// The filter 2.
-        /// </param>
-        /// <returns>
-        /// The <see cref="decimal"/>.
-        /// </returns>
         private decimal CalculateAverage(string filter1, string filter2)
         {
             try
@@ -707,15 +498,6 @@ namespace BudgetExecution
             }
         }
 
-        /// <summary>
-        /// The calculate total.
-        /// </summary>
-        /// <param name="filter">
-        /// The filter.
-        /// </param>
-        /// <returns>
-        /// The <see cref="decimal"/>.
-        /// </returns>
         private decimal CalculateTotal(string filter)
         {
             try
@@ -729,18 +511,6 @@ namespace BudgetExecution
             }
         }
 
-        /// <summary>
-        /// The calculate total.
-        /// </summary>
-        /// <param name="filter1">
-        /// The filter 1.
-        /// </param>
-        /// <param name="filter2">
-        /// The filter 2.
-        /// </param>
-        /// <returns>
-        /// The <see cref="decimal"/>.
-        /// </returns>
         private decimal CalculateTotal(string filter1, string filter2)
         {
             try
@@ -754,15 +524,6 @@ namespace BudgetExecution
             }
         }
 
-        /// <summary>
-        /// The grid refresh button_ on click.
-        /// </summary>
-        /// <param name="sender">
-        /// The sender.
-        /// </param>
-        /// <param name="e">
-        /// The e.
-        /// </param>
         private void GridRefreshButton_OnClick(object sender, EventArgs e)
         {
             if (DbData != null)
@@ -788,12 +549,6 @@ namespace BudgetExecution
             }
         }
 
-        /// <summary>
-        /// The get tab names.
-        /// </summary>
-        /// <returns>
-        /// The <see cref="string[]"/>.
-        /// </returns>
         private string[] GetTabNames()
         {
             try
@@ -814,15 +569,6 @@ namespace BudgetExecution
             }
         }
 
-        /// <summary>
-        /// The get chart type.
-        /// </summary>
-        /// <param name="ctb">
-        /// The ctb.
-        /// </param>
-        /// <returns>
-        /// The <see cref="ChartSeriesType"/>.
-        /// </returns>
         private ChartSeriesType GetChartType(MetroSetComboBox ctb)
         {
             if (ctb.SelectedItem == null)
@@ -833,15 +579,6 @@ namespace BudgetExecution
             return (ChartSeriesType)Enum.Parse(typeof(ChartSeriesType), ctb.SelectedItem.ToString());
         }
 
-        /// <summary>
-        /// The chart filter control 1_ item selected.
-        /// </summary>
-        /// <param name="sender">
-        /// The sender.
-        /// </param>
-        /// <param name="e">
-        /// The e.
-        /// </param>
         private void ChartFilterControl1_ItemSelected(object sender, EventArgs e)
         {
             ChartFilterControl1 = sender as MetroSetComboBox;
@@ -852,15 +589,6 @@ namespace BudgetExecution
             }
         }
 
-        /// <summary>
-        /// The chart filter control 2_ item selected.
-        /// </summary>
-        /// <param name="sender">
-        /// The sender.
-        /// </param>
-        /// <param name="e">
-        /// The e.
-        /// </param>
         private void ChartFilterControl2_ItemSelected(object sender, EventArgs e)
         {
             try
@@ -878,15 +606,6 @@ namespace BudgetExecution
             }
         }
 
-        /// <summary>
-        /// The chart filter control 3_ item selected.
-        /// </summary>
-        /// <param name="sender">
-        /// The sender.
-        /// </param>
-        /// <param name="e">
-        /// The e.
-        /// </param>
         private void ChartFilterControl3_ItemSelected(object sender, EventArgs e)
         {
             try
@@ -901,15 +620,6 @@ namespace BudgetExecution
             }
         }
 
-        /// <summary>
-        /// The chart filter control 4_ item selected.
-        /// </summary>
-        /// <param name="sender">
-        /// The sender.
-        /// </param>
-        /// <param name="e">
-        /// The e.
-        /// </param>
         private void ChartFilterControl4_ItemSelected(object sender, EventArgs e)
         {
             try
@@ -959,21 +669,6 @@ namespace BudgetExecution
             }
         }
 
-        /// <summary>
-        /// The assign chart f ilter controls.
-        /// </summary>
-        /// <param name="filter1">
-        /// The filter 1.
-        /// </param>
-        /// <param name="filter2">
-        /// The filter 2.
-        /// </param>
-        /// <param name="filter3">
-        /// The filter 3.
-        /// </param>
-        /// <param name="filter4">
-        /// The filter 4.
-        /// </param>
         private void AssignChartFIlterControls(MetroSetComboBox filter1, MetroSetComboBox filter2, MetroSetComboBox filter3, MetroSetComboBox filter4)
         {
             ChartFilterControl1 = filter1;
@@ -986,15 +681,6 @@ namespace BudgetExecution
             ChartFilterControl4.SelectionChangeCommitted += ChartFilterControl4_ItemSelected;
         }
 
-        /// <summary>
-        /// The assign chart expanders.
-        /// </summary>
-        /// <param name="panel1">
-        /// The panel 1.
-        /// </param>
-        /// <param name="panel2">
-        /// The panel 2.
-        /// </param>
         private void AssignChartExpanders(ExpandCollapsePanel panel1, ExpandCollapsePanel panel2)
         {
             try
@@ -1008,15 +694,6 @@ namespace BudgetExecution
             }
         }
 
-        /// <summary>
-        /// The expander_ click.
-        /// </summary>
-        /// <param name="sender">
-        /// The sender.
-        /// </param>
-        /// <param name="e">
-        /// The e.
-        /// </param>
         private void Expander_Click(object sender, EventArgs e)
         {
             ExpandCollapsePanel exp = sender as ExpandCollapsePanel;
@@ -1080,15 +757,6 @@ namespace BudgetExecution
             }
         }
 
-        /// <summary>
-        /// The summary tab page_ tab selected.
-        /// </summary>
-        /// <param name="sender">
-        /// The sender.
-        /// </param>
-        /// <param name="e">
-        /// The e.
-        /// </param>
         private void SummaryTabPage_TabSelected(object sender, EventArgs e)
         {
             try
@@ -1223,18 +891,6 @@ namespace BudgetExecution
             }
         }
 
-        /// <summary>
-        /// The get title.
-        /// </summary>
-        /// <param name="tab">
-        /// The tab.
-        /// </param>
-        /// <param name="filter">
-        /// The filter.
-        /// </param>
-        /// <returns>
-        /// The <see cref="string[]"/>.
-        /// </returns>
         private string[] GetTitle(TabControlAdv tab, MetroSetComboBox filter)
         {
             try
@@ -1265,24 +921,6 @@ namespace BudgetExecution
             }
         }
 
-        /// <summary>
-        /// The get title.
-        /// </summary>
-        /// <param name="tab">
-        /// The tab.
-        /// </param>
-        /// <param name="filter1">
-        /// The filter 1.
-        /// </param>
-        /// <param name="filter2">
-        /// The filter 2.
-        /// </param>
-        /// <param name="filter3">
-        /// The filter 3.
-        /// </param>
-        /// <returns>
-        /// The <see cref="string[]"/>.
-        /// </returns>
         private string[] GetTitle(TabControlAdv tab, MetroSetComboBox filter1, MetroSetComboBox filter2, MetroSetComboBox filter3)
         {
             try
@@ -1315,15 +953,6 @@ namespace BudgetExecution
             }
         }
 
-        /// <summary>
-        /// The get selected row dictionary.
-        /// </summary>
-        /// <param name="dgv">
-        /// The dgv.
-        /// </param>
-        /// <returns>
-        /// The <see cref="Dictionary"/>.
-        /// </returns>
         private Dictionary<string, object> GetSelectedRowDictionary(DataGridView dgv)
         {
             try
@@ -1350,112 +979,24 @@ namespace BudgetExecution
             }
         }
 
-        /// <summary>
-        /// The tab page adv 7_ click.
-        /// </summary>
-        /// <param name="sender">
-        /// The sender.
-        /// </param>
-        /// <param name="e">
-        /// The e.
-        /// </param>
-        private void TabPageAdv7_Click(object sender, EventArgs e)
-        {
-        }
-
-        /// <summary>
-        /// The calendat button_ click.
-        /// </summary>
-        /// <param name="sender">
-        /// The sender.
-        /// </param>
-        /// <param name="e">
-        /// The e.
-        /// </param>
         private void CalendatButton_Click(object sender, EventArgs e)
         {
             Calendar cal = new Calendar();
             cal.Show();
         }
 
-        /// <summary>
-        /// The calculator button_ click.
-        /// </summary>
-        /// <param name="sender">
-        /// The sender.
-        /// </param>
-        /// <param name="e">
-        /// The e.
-        /// </param>
         private void CalculatorButton_Click(object sender, EventArgs e)
         {
             CalculatorForm cf = new CalculatorForm();
             cf.Show();
         }
 
-        /// <summary>
-        /// The excel button_ click.
-        /// </summary>
-        /// <param name="sender">
-        /// The sender.
-        /// </param>
-        /// <param name="e">
-        /// The e.
-        /// </param>
         private void ExcelButton_Click(object sender, EventArgs e)
         {
             ExcelForm er = new ExcelForm();
             er.Show();
         }
 
-        /// <summary>
-        /// The tool strip separator 16_ click.
-        /// </summary>
-        /// <param name="sender">
-        /// The sender.
-        /// </param>
-        /// <param name="e">
-        /// The e.
-        /// </param>
-        private void ToolStripSeparator16_Click(object sender, EventArgs e)
-        {
-        }
-
-        /// <summary>
-        /// The metro set label 9_ click.
-        /// </summary>
-        /// <param name="sender">
-        /// The sender.
-        /// </param>
-        /// <param name="e">
-        /// The e.
-        /// </param>
-        private void MetroSetLabel9_Click(object sender, EventArgs e)
-        {
-        }
-
-        /// <summary>
-        /// The lbl count_ click.
-        /// </summary>
-        /// <param name="sender">
-        /// The sender.
-        /// </param>
-        /// <param name="e">
-        /// The e.
-        /// </param>
-        private void LblCount_Click(object sender, EventArgs e)
-        {
-        }
-
-        /// <summary>
-        /// The add button_ on click.
-        /// </summary>
-        /// <param name="sender">
-        /// The sender.
-        /// </param>
-        /// <param name="e">
-        /// The e.
-        /// </param>
         private void AddButton_OnClick(object sender, EventArgs e)
         {
             try
@@ -1473,27 +1014,18 @@ namespace BudgetExecution
             }
         }
 
-        /// <summary>
-        /// The copy button_ on click.
-        /// </summary>
-        /// <param name="sender">
-        /// The sender.
-        /// </param>
-        /// <param name="e">
-        /// The e.
-        /// </param>
         private void CopyButton_OnClick(object sender, EventArgs e)
         {
             try
             {
-                DataRowView view = (DataRowView)BindingSource.Current;
-                Dictionary<string, object> prc = new PRC(view.Row).GetDataFields();
-                AccountManager am = new AccountManager(Source, Provider, prc);
-                am.AccountNavigator.Visible = false;
-                am.Insert.TabVisible = false;
-                am.AccountTabControl.SelectedIndex = 0;
-                am.CaptionImages[0].Image = new Bitmap(Image.FromFile(@"C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\Resources\Icon\upload.ico"));
-                am.Show();
+                if (EditTab.Visible == false)
+                {
+                    EditTab.Visible = true;
+                }
+                else
+                {
+                    this.EditTab.Visible = false;
+                }
             }
             catch (Exception ex)
             {
@@ -1501,15 +1033,6 @@ namespace BudgetExecution
             }
         }
 
-        /// <summary>
-        /// The grid_ on double click.
-        /// </summary>
-        /// <param name="sender">
-        /// The sender.
-        /// </param>
-        /// <param name="e">
-        /// The e.
-        /// </param>
         private void Grid_OnDoubleClick(object sender, EventArgs e)
         {
             try
@@ -1525,103 +1048,29 @@ namespace BudgetExecution
             }
         }
 
-        /// <summary>
-        /// The reprogram button_ on click.
-        /// </summary>
-        /// <param name="sender">
-        /// The sender.
-        /// </param>
-        /// <param name="e">
-        /// The e.
-        /// </param>
         private void ReprogramButton_OnClick(object sender, EventArgs e)
         {
             Reprogramming rp = new Reprogramming();
             rp.Show();
         }
 
-        /// <summary>
-        /// The update account chart.
-        /// </summary>
-        /// <param name="sender">
-        /// The sender.
-        /// </param>
-        /// <param name="e">
-        /// The e.
-        /// </param>
         private void UpdateAccountChart(object sender, EventArgs e)
         {
-            int current = BindingSource.Position;
-            DataRowView dvrow = (DataRowView)BindingSource.Current;
-            DbRow = Table.Rows[current];
-            int id = int.Parse(DbRow["ID"].ToString());
-            string code = dvrow["Code"].ToString();
-            Dictionary<string, object> p = new Dictionary<string, object> { ["ID"] = id };
-            DataBuilder data = new DataBuilder(Source.RegionalAccounts, Provider.SQLite, new Dictionary<string, object> { ["Code"] = code });
-            decimal total = data.Total;
-            decimal amt = decimal.Parse(DbRow["Amount"].ToString());
-            Dictionary<string, double> d = new Dictionary<string, double> { ["Total"] = (double)total, ["Allocation"] = (double)amt };
-            ChartMainTitle = new[] { $"{Source.ToString()} {DbRow["ProgramProjectName"]} Funding = {amt.ToString("c")}" };
-            AccountChart = new BudgetChart(AccountChart, ChartMainTitle, d, Field.ProgramProjectCode, Stat.Total, ChartSeriesType.Column).Activate();
+
         }
 
-        /// <summary>
-        /// The account tools button_ on click.
-        /// </summary>
-        /// <param name="sender">
-        /// The sender.
-        /// </param>
-        /// <param name="e">
-        /// The e.
-        /// </param>
-        private void AccountToolsButton_OnClick(object sender, EventArgs e)
-        {
-        }
-
-        /// <summary>
-        /// The account chart_ click.
-        /// </summary>
-        /// <param name="sender">
-        /// The sender.
-        /// </param>
-        /// <param name="e">
-        /// The e.
-        /// </param>
         private void AccountChart_Click(object sender, EventArgs e)
         {
         }
 
-        /// <summary>
-        /// The button 4_ click.
-        /// </summary>
-        /// <param name="sender">
-        /// The sender.
-        /// </param>
-        /// <param name="e">
-        /// The e.
-        /// </param>
         private void PreviousButton_OnClick(object sender, EventArgs e)
         {
             BindingSource.MovePrevious();
         }
 
-        /// <summary>
-        /// The button 5_ click.
-        /// </summary>
-        /// <param name="sender">
-        /// The sender.
-        /// </param>
-        /// <param name="e">
-        /// The e.
-        /// </param>
         private void NextButton_OnClick(object sender, EventArgs e)
         {
             BindingSource.MoveNext();
-        }
-
-        private void tableLayoutPanel3_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }

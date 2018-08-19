@@ -30,9 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AccountManager));
-            Syncfusion.Windows.Forms.Tools.ToolTipInfo toolTipInfo2 = new Syncfusion.Windows.Forms.Tools.ToolTipInfo();
-            Syncfusion.Windows.Forms.CaptionImage captionImage3 = new Syncfusion.Windows.Forms.CaptionImage();
-            Syncfusion.Windows.Forms.CaptionImage captionImage4 = new Syncfusion.Windows.Forms.CaptionImage();
+            Syncfusion.Windows.Forms.Tools.ToolTipInfo toolTipInfo1 = new Syncfusion.Windows.Forms.Tools.ToolTipInfo();
+            Syncfusion.Windows.Forms.CaptionImage captionImage1 = new Syncfusion.Windows.Forms.CaptionImage();
+            Syncfusion.Windows.Forms.CaptionImage captionImage2 = new Syncfusion.Windows.Forms.CaptionImage();
             this.AccountTabControl = new Syncfusion.Windows.Forms.Tools.TabControlAdv();
             this.Update = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
             this.metroSetPanel2 = new MetroSet_UI.Controls.MetroSetPanel();
@@ -164,7 +164,7 @@
             this.AccountTabControl.InactiveTabColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
             this.AccountTabControl.InActiveTabForeColor = System.Drawing.Color.Gray;
             this.AccountTabControl.Location = new System.Drawing.Point(0, 0);
-            this.AccountTabControl.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.AccountTabControl.Margin = new System.Windows.Forms.Padding(2);
             this.AccountTabControl.Name = "AccountTabControl";
             this.AccountTabControl.Padding = new System.Drawing.Point(6, 8);
             this.AccountTabControl.SeparatorColor = System.Drawing.SystemColors.ControlDark;
@@ -182,7 +182,7 @@
             this.Update.Image = null;
             this.Update.ImageSize = new System.Drawing.Size(16, 16);
             this.Update.Location = new System.Drawing.Point(0, 41);
-            this.Update.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Update.Margin = new System.Windows.Forms.Padding(2);
             this.Update.Name = "Update";
             this.Update.ShowCloseButton = true;
             this.Update.Size = new System.Drawing.Size(851, 318);
@@ -200,7 +200,7 @@
             this.metroSetPanel2.Controls.Add(this.groupBox2);
             this.metroSetPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.metroSetPanel2.Location = new System.Drawing.Point(0, 0);
-            this.metroSetPanel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.metroSetPanel2.Margin = new System.Windows.Forms.Padding(2);
             this.metroSetPanel2.Name = "metroSetPanel2";
             this.metroSetPanel2.Size = new System.Drawing.Size(851, 318);
             this.metroSetPanel2.Style = MetroSet_UI.Design.Style.Custom;
@@ -235,9 +235,9 @@
             this.groupBox4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox4.ForeColor = System.Drawing.SystemColors.Info;
             this.groupBox4.Location = new System.Drawing.Point(57, 15);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox4.Size = new System.Drawing.Size(756, 131);
             this.groupBox4.TabIndex = 18;
             this.groupBox4.TabStop = false;
@@ -277,7 +277,7 @@
             this.ProgramArea.Image = null;
             this.ProgramArea.Lines = null;
             this.ProgramArea.Location = new System.Drawing.Point(555, 77);
-            this.ProgramArea.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ProgramArea.Margin = new System.Windows.Forms.Padding(2);
             this.ProgramArea.MaxLength = 32767;
             this.ProgramArea.Multiline = false;
             this.ProgramArea.Name = "ProgramArea";
@@ -306,7 +306,7 @@
             this.ProgramProject.Image = null;
             this.ProgramProject.Lines = null;
             this.ProgramProject.Location = new System.Drawing.Point(555, 31);
-            this.ProgramProject.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ProgramProject.Margin = new System.Windows.Forms.Padding(2);
             this.ProgramProject.MaxLength = 32767;
             this.ProgramProject.Multiline = false;
             this.ProgramProject.Name = "ProgramProject";
@@ -355,7 +355,7 @@
             this.BudgetLevel.Image = null;
             this.BudgetLevel.Lines = null;
             this.BudgetLevel.Location = new System.Drawing.Point(55, 77);
-            this.BudgetLevel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BudgetLevel.Margin = new System.Windows.Forms.Padding(2);
             this.BudgetLevel.MaxLength = 32767;
             this.BudgetLevel.Multiline = false;
             this.BudgetLevel.Name = "BudgetLevel";
@@ -384,7 +384,7 @@
             this.ID.Image = null;
             this.ID.Lines = null;
             this.ID.Location = new System.Drawing.Point(55, 29);
-            this.ID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ID.Margin = new System.Windows.Forms.Padding(2);
             this.ID.MaxLength = 32767;
             this.ID.Multiline = false;
             this.ID.Name = "ID";
@@ -473,7 +473,7 @@
             this.BFY.Image = null;
             this.BFY.Lines = null;
             this.BFY.Location = new System.Drawing.Point(151, 29);
-            this.BFY.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BFY.Margin = new System.Windows.Forms.Padding(2);
             this.BFY.MaxLength = 32767;
             this.BFY.Multiline = false;
             this.BFY.Name = "BFY";
@@ -502,7 +502,7 @@
             this.SubProject.Image = null;
             this.SubProject.Lines = null;
             this.SubProject.Location = new System.Drawing.Point(403, 77);
-            this.SubProject.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.SubProject.Margin = new System.Windows.Forms.Padding(2);
             this.SubProject.MaxLength = 32767;
             this.SubProject.Multiline = false;
             this.SubProject.Name = "SubProject";
@@ -531,7 +531,7 @@
             this.RC.Image = null;
             this.RC.Lines = null;
             this.RC.Location = new System.Drawing.Point(151, 77);
-            this.RC.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.RC.Margin = new System.Windows.Forms.Padding(2);
             this.RC.MaxLength = 32767;
             this.RC.Multiline = false;
             this.RC.Name = "RC";
@@ -560,7 +560,7 @@
             this.Org.Image = null;
             this.Org.Lines = null;
             this.Org.Location = new System.Drawing.Point(403, 29);
-            this.Org.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Org.Margin = new System.Windows.Forms.Padding(2);
             this.Org.MaxLength = 32767;
             this.Org.Multiline = false;
             this.Org.Name = "Org";
@@ -589,7 +589,7 @@
             this.Code.Image = null;
             this.Code.Lines = null;
             this.Code.Location = new System.Drawing.Point(263, 77);
-            this.Code.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Code.Margin = new System.Windows.Forms.Padding(2);
             this.Code.MaxLength = 32767;
             this.Code.Multiline = false;
             this.Code.Name = "Code";
@@ -618,7 +618,7 @@
             this.Fund.Image = null;
             this.Fund.Lines = null;
             this.Fund.Location = new System.Drawing.Point(263, 29);
-            this.Fund.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Fund.Margin = new System.Windows.Forms.Padding(2);
             this.Fund.MaxLength = 32767;
             this.Fund.Multiline = false;
             this.Fund.Name = "Fund";
@@ -641,9 +641,9 @@
             this.groupBox3.Controls.Add(this.button3);
             this.groupBox3.ForeColor = System.Drawing.SystemColors.Info;
             this.groupBox3.Location = new System.Drawing.Point(487, 168);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox3.Size = new System.Drawing.Size(325, 120);
             this.groupBox3.TabIndex = 17;
             this.groupBox3.TabStop = false;
@@ -717,14 +717,14 @@
             this.toolStripButton10.RightToLeftAutoMirrorImage = true;
             this.toolStripButton10.Size = new System.Drawing.Size(24, 24);
             this.toolStripButton10.Text = "Previous";
-            toolTipInfo2.BackColor = System.Drawing.Color.Black;
-            toolTipInfo2.Body.RenderHtml = true;
-            toolTipInfo2.Body.Size = new System.Drawing.Size(200, 40);
-            toolTipInfo2.Body.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            toolTipInfo2.BorderColor = System.Drawing.SystemColors.MenuHighlight;
-            toolTipInfo2.Footer.Size = new System.Drawing.Size(20, 20);
-            toolTipInfo2.Header.Size = new System.Drawing.Size(20, 20);
-            this.superToolTip1.SetToolTip(this.toolStripButton10, toolTipInfo2);
+            toolTipInfo1.BackColor = System.Drawing.Color.Black;
+            toolTipInfo1.Body.RenderHtml = true;
+            toolTipInfo1.Body.Size = new System.Drawing.Size(200, 40);
+            toolTipInfo1.Body.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            toolTipInfo1.BorderColor = System.Drawing.SystemColors.MenuHighlight;
+            toolTipInfo1.Footer.Size = new System.Drawing.Size(20, 20);
+            toolTipInfo1.Header.Size = new System.Drawing.Size(20, 20);
+            this.superToolTip1.SetToolTip(this.toolStripButton10, toolTipInfo1);
             // 
             // toolStripSeparator10
             // 
@@ -757,7 +757,7 @@
             this.toolStripButton11.RightToLeftAutoMirrorImage = true;
             this.toolStripButton11.Size = new System.Drawing.Size(24, 24);
             this.toolStripButton11.Text = "Next";
-            this.superToolTip1.SetToolTip(this.toolStripButton11, toolTipInfo2);
+            this.superToolTip1.SetToolTip(this.toolStripButton11, toolTipInfo1);
             // 
             // toolStripSeparator13
             // 
@@ -896,41 +896,44 @@
             this.toolStripButton16.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton16.Name = "toolStripButton16";
             this.toolStripButton16.Size = new System.Drawing.Size(24, 24);
-            this.superToolTip1.SetToolTip(this.toolStripButton16, toolTipInfo2);
+            this.superToolTip1.SetToolTip(this.toolStripButton16, toolTipInfo1);
             this.toolStripButton16.Click += new System.EventHandler(this.ReprogrammingButton_OnClick);
             // 
             // button4
             // 
             this.button4.BackColor = System.Drawing.Color.Transparent;
             this.button4.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.button4.FlatAppearance.BorderSize = 0;
             this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.ForeColor = System.Drawing.SystemColors.Info;
             this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.Location = new System.Drawing.Point(173, 20);
-            this.button4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button4.Location = new System.Drawing.Point(160, 20);
+            this.button4.Margin = new System.Windows.Forms.Padding(2);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(132, 65);
+            this.button4.Size = new System.Drawing.Size(114, 65);
             this.button4.TabIndex = 159;
             this.button4.Text = "Delete";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button4.UseVisualStyleBackColor = false;
             // 
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.Transparent;
             this.button3.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.ForeColor = System.Drawing.SystemColors.Info;
             this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
             this.button3.Location = new System.Drawing.Point(15, 20);
-            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(119, 65);
             this.button3.TabIndex = 158;
             this.button3.Text = "Save";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button3.UseVisualStyleBackColor = false;
             // 
             // groupBox2
@@ -948,9 +951,9 @@
             this.groupBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox2.ForeColor = System.Drawing.SystemColors.Info;
             this.groupBox2.Location = new System.Drawing.Point(57, 168);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox2.Size = new System.Drawing.Size(399, 120);
             this.groupBox2.TabIndex = 8;
             this.groupBox2.TabStop = false;
@@ -963,7 +966,7 @@
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
             this.button6.Location = new System.Drawing.Point(351, 66);
-            this.button6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button6.Margin = new System.Windows.Forms.Padding(2);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(25, 24);
             this.button6.TabIndex = 15;
@@ -983,7 +986,7 @@
             this.metroSetTextBox2.Image = null;
             this.metroSetTextBox2.Lines = null;
             this.metroSetTextBox2.Location = new System.Drawing.Point(239, 66);
-            this.metroSetTextBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.metroSetTextBox2.Margin = new System.Windows.Forms.Padding(2);
             this.metroSetTextBox2.MaxLength = 32767;
             this.metroSetTextBox2.Multiline = false;
             this.metroSetTextBox2.Name = "metroSetTextBox2";
@@ -1032,7 +1035,7 @@
             this.NewBoc.Image = null;
             this.NewBoc.Lines = null;
             this.NewBoc.Location = new System.Drawing.Point(71, 66);
-            this.NewBoc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.NewBoc.Margin = new System.Windows.Forms.Padding(2);
             this.NewBoc.MaxLength = 32767;
             this.NewBoc.Multiline = false;
             this.NewBoc.Name = "NewBoc";
@@ -1061,7 +1064,7 @@
             this.BOC.Image = null;
             this.BOC.Lines = null;
             this.BOC.Location = new System.Drawing.Point(71, 20);
-            this.BOC.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BOC.Margin = new System.Windows.Forms.Padding(2);
             this.BOC.MaxLength = 32767;
             this.BOC.Multiline = false;
             this.BOC.Name = "BOC";
@@ -1110,7 +1113,7 @@
             this.Amount1.Image = null;
             this.Amount1.Lines = null;
             this.Amount1.Location = new System.Drawing.Point(239, 20);
-            this.Amount1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Amount1.Margin = new System.Windows.Forms.Padding(2);
             this.Amount1.MaxLength = 32767;
             this.Amount1.Multiline = false;
             this.Amount1.Name = "Amount1";
@@ -1132,7 +1135,7 @@
             this.Insert.Image = null;
             this.Insert.ImageSize = new System.Drawing.Size(16, 16);
             this.Insert.Location = new System.Drawing.Point(0, 41);
-            this.Insert.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Insert.Margin = new System.Windows.Forms.Padding(2);
             this.Insert.Name = "Insert";
             this.Insert.ShowCloseButton = true;
             this.Insert.Size = new System.Drawing.Size(851, 318);
@@ -1150,7 +1153,7 @@
             this.metroSetPanel1.Controls.Add(this.groupBox5);
             this.metroSetPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.metroSetPanel1.Location = new System.Drawing.Point(0, 0);
-            this.metroSetPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.metroSetPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.metroSetPanel1.Name = "metroSetPanel1";
             this.metroSetPanel1.Size = new System.Drawing.Size(851, 318);
             this.metroSetPanel1.Style = MetroSet_UI.Design.Style.Custom;
@@ -1183,9 +1186,9 @@
             this.RecorDataGroupBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.RecorDataGroupBox.ForeColor = System.Drawing.SystemColors.Info;
             this.RecorDataGroupBox.Location = new System.Drawing.Point(55, 10);
-            this.RecorDataGroupBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.RecorDataGroupBox.Margin = new System.Windows.Forms.Padding(2);
             this.RecorDataGroupBox.Name = "RecorDataGroupBox";
-            this.RecorDataGroupBox.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.RecorDataGroupBox.Padding = new System.Windows.Forms.Padding(2);
             this.RecorDataGroupBox.Size = new System.Drawing.Size(757, 146);
             this.RecorDataGroupBox.TabIndex = 19;
             this.RecorDataGroupBox.TabStop = false;
@@ -1218,7 +1221,7 @@
             this.metroSetComboBox3.FormattingEnabled = true;
             this.metroSetComboBox3.ItemHeight = 25;
             this.metroSetComboBox3.Location = new System.Drawing.Point(417, 45);
-            this.metroSetComboBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.metroSetComboBox3.Margin = new System.Windows.Forms.Padding(2);
             this.metroSetComboBox3.Name = "metroSetComboBox3";
             this.metroSetComboBox3.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.metroSetComboBox3.SelectedItemForeColor = System.Drawing.Color.White;
@@ -1256,7 +1259,7 @@
             this.ComboBox8.FormattingEnabled = true;
             this.ComboBox8.ItemHeight = 25;
             this.ComboBox8.Location = new System.Drawing.Point(581, 97);
-            this.ComboBox8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ComboBox8.Margin = new System.Windows.Forms.Padding(2);
             this.ComboBox8.Name = "ComboBox8";
             this.ComboBox8.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.ComboBox8.SelectedItemForeColor = System.Drawing.Color.White;
@@ -1286,7 +1289,7 @@
             this.ComboBox5.FormattingEnabled = true;
             this.ComboBox5.ItemHeight = 25;
             this.ComboBox5.Location = new System.Drawing.Point(31, 97);
-            this.ComboBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ComboBox5.Margin = new System.Windows.Forms.Padding(2);
             this.ComboBox5.Name = "ComboBox5";
             this.ComboBox5.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.ComboBox5.SelectedItemForeColor = System.Drawing.Color.White;
@@ -1317,7 +1320,7 @@
             "7",
             "8"});
             this.ComboBox1.Location = new System.Drawing.Point(31, 43);
-            this.ComboBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ComboBox1.Margin = new System.Windows.Forms.Padding(2);
             this.ComboBox1.Name = "ComboBox1";
             this.ComboBox1.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.ComboBox1.SelectedItemForeColor = System.Drawing.Color.White;
@@ -1353,7 +1356,7 @@
             "2023",
             "2024"});
             this.ComboBox2.Location = new System.Drawing.Point(133, 43);
-            this.ComboBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ComboBox2.Margin = new System.Windows.Forms.Padding(2);
             this.ComboBox2.Name = "ComboBox2";
             this.ComboBox2.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.ComboBox2.SelectedItemForeColor = System.Drawing.Color.White;
@@ -1401,7 +1404,7 @@
             this.ComboBox6.FormattingEnabled = true;
             this.ComboBox6.ItemHeight = 25;
             this.ComboBox6.Location = new System.Drawing.Point(239, 97);
-            this.ComboBox6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ComboBox6.Margin = new System.Windows.Forms.Padding(2);
             this.ComboBox6.Name = "ComboBox6";
             this.ComboBox6.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.ComboBox6.SelectedItemForeColor = System.Drawing.Color.White;
@@ -1458,7 +1461,7 @@
             "38",
             "41"});
             this.ComboBox7.Location = new System.Drawing.Point(417, 97);
-            this.ComboBox7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ComboBox7.Margin = new System.Windows.Forms.Padding(2);
             this.ComboBox7.Name = "ComboBox7";
             this.ComboBox7.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.ComboBox7.SelectedItemForeColor = System.Drawing.Color.White;
@@ -1486,7 +1489,7 @@
             this.ComboBox4.FormattingEnabled = true;
             this.ComboBox4.ItemHeight = 25;
             this.ComboBox4.Location = new System.Drawing.Point(581, 45);
-            this.ComboBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ComboBox4.Margin = new System.Windows.Forms.Padding(2);
             this.ComboBox4.Name = "ComboBox4";
             this.ComboBox4.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.ComboBox4.SelectedItemForeColor = System.Drawing.Color.White;
@@ -1544,7 +1547,7 @@
             this.ComboBox3.FormattingEnabled = true;
             this.ComboBox3.ItemHeight = 25;
             this.ComboBox3.Location = new System.Drawing.Point(278, 43);
-            this.ComboBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ComboBox3.Margin = new System.Windows.Forms.Padding(2);
             this.ComboBox3.Name = "ComboBox3";
             this.ComboBox3.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.ComboBox3.SelectedItemForeColor = System.Drawing.Color.White;
@@ -1562,9 +1565,9 @@
             this.groupBox6.Controls.Add(this.button2);
             this.groupBox6.ForeColor = System.Drawing.SystemColors.Info;
             this.groupBox6.Location = new System.Drawing.Point(509, 167);
-            this.groupBox6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox6.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox6.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox6.Size = new System.Drawing.Size(303, 129);
             this.groupBox6.TabIndex = 21;
             this.groupBox6.TabStop = false;
@@ -1574,16 +1577,17 @@
             // 
             this.button1.BackColor = System.Drawing.Color.Transparent;
             this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ForeColor = System.Drawing.SystemColors.Info;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.Location = new System.Drawing.Point(163, 29);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(102, 73);
             this.button1.TabIndex = 12;
-            this.button1.Text = "Update";
+            this.button1.Text = "Remove";
             this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button1.UseVisualStyleBackColor = false;
             // 
@@ -1591,12 +1595,13 @@
             // 
             this.button2.BackColor = System.Drawing.Color.Transparent;
             this.button2.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.ForeColor = System.Drawing.SystemColors.Info;
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
             this.button2.Location = new System.Drawing.Point(26, 29);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(99, 73);
             this.button2.TabIndex = 9;
@@ -1615,9 +1620,9 @@
             this.groupBox5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox5.ForeColor = System.Drawing.SystemColors.Info;
             this.groupBox5.Location = new System.Drawing.Point(53, 167);
-            this.groupBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox5.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox5.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox5.Size = new System.Drawing.Size(438, 129);
             this.groupBox5.TabIndex = 20;
             this.groupBox5.TabStop = false;
@@ -1630,7 +1635,7 @@
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button7.Image = ((System.Drawing.Image)(resources.GetObject("button7.Image")));
             this.button7.Location = new System.Drawing.Point(401, 79);
-            this.button7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button7.Margin = new System.Windows.Forms.Padding(2);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(25, 24);
             this.button7.TabIndex = 21;
@@ -1650,7 +1655,7 @@
             this.metroSetTextBox3.Image = null;
             this.metroSetTextBox3.Lines = null;
             this.metroSetTextBox3.Location = new System.Drawing.Point(279, 70);
-            this.metroSetTextBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.metroSetTextBox3.Margin = new System.Windows.Forms.Padding(2);
             this.metroSetTextBox3.MaxLength = 32767;
             this.metroSetTextBox3.Multiline = false;
             this.metroSetTextBox3.Name = "metroSetTextBox3";
@@ -1679,7 +1684,7 @@
             this.metroSetTextBox1.Image = null;
             this.metroSetTextBox1.Lines = null;
             this.metroSetTextBox1.Location = new System.Drawing.Point(279, 29);
-            this.metroSetTextBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.metroSetTextBox1.Margin = new System.Windows.Forms.Padding(2);
             this.metroSetTextBox1.MaxLength = 32767;
             this.metroSetTextBox1.Multiline = false;
             this.metroSetTextBox1.Name = "metroSetTextBox1";
@@ -1712,7 +1717,7 @@
             this.ComboBox9.FormattingEnabled = true;
             this.ComboBox9.ItemHeight = 25;
             this.ComboBox9.Location = new System.Drawing.Point(53, 29);
-            this.ComboBox9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ComboBox9.Margin = new System.Windows.Forms.Padding(2);
             this.ComboBox9.Name = "ComboBox9";
             this.ComboBox9.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.ComboBox9.SelectedItemForeColor = System.Drawing.Color.White;
@@ -1737,7 +1742,7 @@
             this.metroSetTextBox11.Image = null;
             this.metroSetTextBox11.Lines = null;
             this.metroSetTextBox11.Location = new System.Drawing.Point(53, 70);
-            this.metroSetTextBox11.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.metroSetTextBox11.Margin = new System.Windows.Forms.Padding(2);
             this.metroSetTextBox11.MaxLength = 32767;
             this.metroSetTextBox11.Multiline = false;
             this.metroSetTextBox11.Name = "metroSetTextBox11";
@@ -1765,19 +1770,19 @@
             this.BorderColor = System.Drawing.SystemColors.MenuHighlight;
             this.CaptionBarColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             this.CaptionBarHeight = 35;
-            captionImage3.BackColor = System.Drawing.Color.Black;
-            captionImage3.Image = ((System.Drawing.Image)(resources.GetObject("captionImage3.Image")));
-            captionImage3.Location = new System.Drawing.Point(15, 4);
-            captionImage3.Name = "Insert";
-            captionImage4.BackColor = System.Drawing.Color.Black;
-            captionImage4.Image = ((System.Drawing.Image)(resources.GetObject("captionImage4.Image")));
-            captionImage4.Location = new System.Drawing.Point(15, 4);
-            captionImage4.Name = "Update";
-            this.CaptionImages.Add(captionImage3);
-            this.CaptionImages.Add(captionImage4);
+            captionImage1.BackColor = System.Drawing.Color.Black;
+            captionImage1.Image = ((System.Drawing.Image)(resources.GetObject("captionImage1.Image")));
+            captionImage1.Location = new System.Drawing.Point(15, 4);
+            captionImage1.Name = "Insert";
+            captionImage2.BackColor = System.Drawing.Color.Black;
+            captionImage2.Image = ((System.Drawing.Image)(resources.GetObject("captionImage2.Image")));
+            captionImage2.Location = new System.Drawing.Point(15, 4);
+            captionImage2.Name = "Update";
+            this.CaptionImages.Add(captionImage1);
+            this.CaptionImages.Add(captionImage2);
             this.ClientSize = new System.Drawing.Size(851, 359);
             this.Controls.Add(this.AccountTabControl);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximumSize = new System.Drawing.Size(863, 400);
             this.MetroColor = System.Drawing.Color.Black;
             this.MinimumSize = new System.Drawing.Size(863, 400);
@@ -1827,7 +1832,6 @@
         private MetroSet_UI.Controls.MetroSetTextBox Code;
         private MetroSet_UI.Controls.MetroSetTextBox Fund;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.BindingSource BindingSource;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label6;
         private MetroSet_UI.Controls.MetroSetTextBox BudgetLevel;
@@ -1907,6 +1911,7 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator20;
         private System.Windows.Forms.ToolStripButton toolStripButton16;
         private Syncfusion.Windows.Forms.Tools.SuperToolTip superToolTip1;
+        internal System.Windows.Forms.BindingSource BindingSource;
     }
 }
 

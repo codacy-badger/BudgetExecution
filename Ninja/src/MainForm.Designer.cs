@@ -32,19 +32,19 @@ namespace BudgetExecution
         private void InitializeComponent( )
         {
             this.components = new System.ComponentModel.Container();
+            Syncfusion.Windows.Forms.Tools.TextItem textItem13 = new Syncfusion.Windows.Forms.Tools.TextItem();
+            Syncfusion.Windows.Forms.Tools.TextItem textItem14 = new Syncfusion.Windows.Forms.Tools.TextItem();
+            Syncfusion.Windows.Forms.Tools.TextItem textItem15 = new Syncfusion.Windows.Forms.Tools.TextItem();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
+            Syncfusion.Windows.Forms.Tools.TextItem textItem16 = new Syncfusion.Windows.Forms.Tools.TextItem();
+            Syncfusion.Windows.Forms.Tools.TextItem textItem17 = new Syncfusion.Windows.Forms.Tools.TextItem();
+            Syncfusion.Windows.Forms.Tools.TextItem textItem18 = new Syncfusion.Windows.Forms.Tools.TextItem();
+            Syncfusion.Windows.Forms.Tools.TextItem textItem19 = new Syncfusion.Windows.Forms.Tools.TextItem();
+            Syncfusion.Windows.Forms.Tools.TextItem textItem20 = new Syncfusion.Windows.Forms.Tools.TextItem();
             Syncfusion.Windows.Forms.Tools.TextItem textItem1 = new Syncfusion.Windows.Forms.Tools.TextItem();
             Syncfusion.Windows.Forms.Tools.TextItem textItem2 = new Syncfusion.Windows.Forms.Tools.TextItem();
             Syncfusion.Windows.Forms.Tools.TextItem textItem3 = new Syncfusion.Windows.Forms.Tools.TextItem();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             Syncfusion.Windows.Forms.Tools.TextItem textItem4 = new Syncfusion.Windows.Forms.Tools.TextItem();
-            Syncfusion.Windows.Forms.Tools.TextItem textItem5 = new Syncfusion.Windows.Forms.Tools.TextItem();
-            Syncfusion.Windows.Forms.Tools.TextItem textItem6 = new Syncfusion.Windows.Forms.Tools.TextItem();
-            Syncfusion.Windows.Forms.Tools.TextItem textItem7 = new Syncfusion.Windows.Forms.Tools.TextItem();
-            Syncfusion.Windows.Forms.Tools.TextItem textItem8 = new Syncfusion.Windows.Forms.Tools.TextItem();
-            Syncfusion.Windows.Forms.Tools.TextItem textItem9 = new Syncfusion.Windows.Forms.Tools.TextItem();
-            Syncfusion.Windows.Forms.Tools.TextItem textItem10 = new Syncfusion.Windows.Forms.Tools.TextItem();
-            Syncfusion.Windows.Forms.Tools.TextItem textItem11 = new Syncfusion.Windows.Forms.Tools.TextItem();
-            Syncfusion.Windows.Forms.Tools.TextItem textItem12 = new Syncfusion.Windows.Forms.Tools.TextItem();
             Syncfusion.Windows.Forms.Chart.ChartSeries chartSeries1 = new Syncfusion.Windows.Forms.Chart.ChartSeries();
             Syncfusion.Windows.Forms.Chart.ChartCustomShapeInfo chartCustomShapeInfo1 = new Syncfusion.Windows.Forms.Chart.ChartCustomShapeInfo();
             Syncfusion.Windows.Forms.Chart.ChartLineInfo chartLineInfo1 = new Syncfusion.Windows.Forms.Chart.ChartLineInfo();
@@ -60,36 +60,41 @@ namespace BudgetExecution
             Syncfusion.Windows.Forms.Chart.ChartToolBarTypeItem chartToolBarTypeItem1 = new Syncfusion.Windows.Forms.Chart.ChartToolBarTypeItem();
             Syncfusion.Windows.Forms.Chart.ChartToolBarSeries3DItem chartToolBarSeries3DItem1 = new Syncfusion.Windows.Forms.Chart.ChartToolBarSeries3DItem();
             Syncfusion.Windows.Forms.Chart.ChartToolBarShowLegendItem chartToolBarShowLegendItem1 = new Syncfusion.Windows.Forms.Chart.ChartToolBarShowLegendItem();
+            Syncfusion.Windows.Forms.Tools.TextItem textItem5 = new Syncfusion.Windows.Forms.Tools.TextItem();
+            Syncfusion.Windows.Forms.Tools.TextItem textItem6 = new Syncfusion.Windows.Forms.Tools.TextItem();
+            Syncfusion.Windows.Forms.Tools.TextItem textItem7 = new Syncfusion.Windows.Forms.Tools.TextItem();
+            Syncfusion.Windows.Forms.Tools.TextItem textItem8 = new Syncfusion.Windows.Forms.Tools.TextItem();
             this.DivisionBudgetTile = new Syncfusion.Windows.Forms.Tools.HubTile();
             this.SummaryTile = new Syncfusion.Windows.Forms.Tools.HubTile();
             this.DataMasterTile = new Syncfusion.Windows.Forms.Tools.HubTile();
             this.MainChart = new Syncfusion.Windows.Forms.Chart.ChartControl();
             this.expandCollapsePanel1 = new MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel();
+            this.hubTile1 = new Syncfusion.Windows.Forms.Tools.HubTile();
             this.expandCollapsePanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // DivisionBudgetTile
             // 
             this.DivisionBudgetTile.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            textItem1.Font = new System.Drawing.Font("Segoe UI Semibold", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            textItem1.HubTile = this.DivisionBudgetTile;
-            textItem1.Text = "Division Budgets ";
-            this.DivisionBudgetTile.Banner = textItem1;
+            textItem13.Font = new System.Drawing.Font("Segoe UI Semibold", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            textItem13.HubTile = this.DivisionBudgetTile;
+            textItem13.Text = "Division Budgets ";
+            this.DivisionBudgetTile.Banner = textItem13;
             this.DivisionBudgetTile.BannerColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.DivisionBudgetTile.BannerHeight = 25;
-            textItem2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(0)));
-            textItem2.HubTile = this.DivisionBudgetTile;
-            this.DivisionBudgetTile.Body = textItem2;
+            this.DivisionBudgetTile.BannerHeight = 20;
+            textItem14.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(0)));
+            textItem14.HubTile = this.DivisionBudgetTile;
+            this.DivisionBudgetTile.Body = textItem14;
             this.DivisionBudgetTile.EnableSelectionMarker = false;
             this.DivisionBudgetTile.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(0)));
-            textItem3.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            textItem3.HubTile = this.DivisionBudgetTile;
-            textItem3.TextColor = System.Drawing.SystemColors.MenuHighlight;
-            this.DivisionBudgetTile.Footer = textItem3;
+            textItem15.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            textItem15.HubTile = this.DivisionBudgetTile;
+            textItem15.TextColor = System.Drawing.SystemColors.MenuHighlight;
+            this.DivisionBudgetTile.Footer = textItem15;
             this.DivisionBudgetTile.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(130)))), ((int)(((byte)(180)))));
             this.DivisionBudgetTile.HoveredBorderColor = System.Drawing.SystemColors.MenuHighlight;
             this.DivisionBudgetTile.ImageSource = ((System.Drawing.Image)(resources.GetObject("DivisionBudgetTile.ImageSource")));
-            this.DivisionBudgetTile.Location = new System.Drawing.Point(9, 227);
+            this.DivisionBudgetTile.Location = new System.Drawing.Point(9, 200);
             this.DivisionBudgetTile.Margin = new System.Windows.Forms.Padding(1);
             this.DivisionBudgetTile.MinimumSize = new System.Drawing.Size(47, 43);
             this.DivisionBudgetTile.Name = "DivisionBudgetTile";
@@ -98,35 +103,35 @@ namespace BudgetExecution
             this.DivisionBudgetTile.ShowBanner = true;
             this.DivisionBudgetTile.ShowBannerIcon = true;
             this.DivisionBudgetTile.ShowRotateTileBanner = true;
-            this.DivisionBudgetTile.Size = new System.Drawing.Size(187, 123);
+            this.DivisionBudgetTile.Size = new System.Drawing.Size(211, 78);
             this.DivisionBudgetTile.SwitchRotateTileBannerVisibility = true;
             this.DivisionBudgetTile.TabIndex = 20;
-            textItem4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            textItem4.HubTile = this.DivisionBudgetTile;
-            this.DivisionBudgetTile.Title = textItem4;
+            textItem16.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            textItem16.HubTile = this.DivisionBudgetTile;
+            this.DivisionBudgetTile.Title = textItem16;
             // 
             // SummaryTile
             // 
             this.SummaryTile.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            textItem5.Font = new System.Drawing.Font("Segoe UI Semibold", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            textItem5.HubTile = this.SummaryTile;
-            textItem5.Text = "Summary";
-            this.SummaryTile.Banner = textItem5;
+            textItem17.Font = new System.Drawing.Font("Segoe UI Semibold", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            textItem17.HubTile = this.SummaryTile;
+            textItem17.Text = "Summary";
+            this.SummaryTile.Banner = textItem17;
             this.SummaryTile.BannerColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.SummaryTile.BannerHeight = 25;
-            textItem6.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(0)));
-            textItem6.HubTile = this.SummaryTile;
-            this.SummaryTile.Body = textItem6;
+            this.SummaryTile.BannerHeight = 20;
+            textItem18.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(0)));
+            textItem18.HubTile = this.SummaryTile;
+            this.SummaryTile.Body = textItem18;
             this.SummaryTile.EnableSelectionMarker = false;
             this.SummaryTile.EnableTileSlideEffect = false;
             this.SummaryTile.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(0)));
-            textItem7.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            textItem7.HubTile = this.SummaryTile;
-            this.SummaryTile.Footer = textItem7;
+            textItem19.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            textItem19.HubTile = this.SummaryTile;
+            this.SummaryTile.Footer = textItem19;
             this.SummaryTile.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(130)))), ((int)(((byte)(180)))));
             this.SummaryTile.HoveredBorderColor = System.Drawing.SystemColors.MenuHighlight;
             this.SummaryTile.ImageSource = ((System.Drawing.Image)(resources.GetObject("SummaryTile.ImageSource")));
-            this.SummaryTile.Location = new System.Drawing.Point(9, 44);
+            this.SummaryTile.Location = new System.Drawing.Point(9, 55);
             this.SummaryTile.Margin = new System.Windows.Forms.Padding(1);
             this.SummaryTile.MinimumSize = new System.Drawing.Size(47, 43);
             this.SummaryTile.Name = "SummaryTile";
@@ -136,34 +141,34 @@ namespace BudgetExecution
             this.SummaryTile.ShowBanner = true;
             this.SummaryTile.ShowBannerIcon = true;
             this.SummaryTile.ShowRotateTileBanner = true;
-            this.SummaryTile.Size = new System.Drawing.Size(187, 110);
+            this.SummaryTile.Size = new System.Drawing.Size(211, 76);
             this.SummaryTile.SwitchRotateTileBannerVisibility = true;
             this.SummaryTile.TabIndex = 23;
-            textItem8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            textItem8.HubTile = this.SummaryTile;
-            this.SummaryTile.Title = textItem8;
+            textItem20.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            textItem20.HubTile = this.SummaryTile;
+            this.SummaryTile.Title = textItem20;
             // 
             // DataMasterTile
             // 
             this.DataMasterTile.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            textItem9.Font = new System.Drawing.Font("Segoe UI Semibold", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            textItem9.HubTile = this.DataMasterTile;
-            textItem9.Text = "DbData Management";
-            textItem9.TextColor = System.Drawing.Color.WhiteSmoke;
-            this.DataMasterTile.Banner = textItem9;
+            textItem1.Font = new System.Drawing.Font("Segoe UI Semibold", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            textItem1.HubTile = this.DataMasterTile;
+            textItem1.Text = "DbData Management";
+            textItem1.TextColor = System.Drawing.Color.WhiteSmoke;
+            this.DataMasterTile.Banner = textItem1;
             this.DataMasterTile.BannerColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.DataMasterTile.BannerHeight = 20;
-            textItem10.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(0)));
-            textItem10.HubTile = this.DataMasterTile;
-            this.DataMasterTile.Body = textItem10;
+            textItem2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(0)));
+            textItem2.HubTile = this.DataMasterTile;
+            this.DataMasterTile.Body = textItem2;
             this.DataMasterTile.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(0)));
-            textItem11.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(0)));
-            textItem11.HubTile = this.DataMasterTile;
-            this.DataMasterTile.Footer = textItem11;
+            textItem3.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(0)));
+            textItem3.HubTile = this.DataMasterTile;
+            this.DataMasterTile.Footer = textItem3;
             this.DataMasterTile.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(130)))), ((int)(((byte)(180)))));
             this.DataMasterTile.HoveredBorderColor = System.Drawing.SystemColors.MenuHighlight;
-            this.DataMasterTile.ImageSource = global::BudgetExecution.Properties.Resources.computerdatabase;
-            this.DataMasterTile.Location = new System.Drawing.Point(9, 426);
+            this.DataMasterTile.ImageSource = ((System.Drawing.Image)(resources.GetObject("DataMasterTile.ImageSource")));
+            this.DataMasterTile.Location = new System.Drawing.Point(9, 347);
             this.DataMasterTile.Margin = new System.Windows.Forms.Padding(1);
             this.DataMasterTile.MinimumSize = new System.Drawing.Size(67, 65);
             this.DataMasterTile.Name = "DataMasterTile";
@@ -171,12 +176,12 @@ namespace BudgetExecution
             this.DataMasterTile.ShowBanner = true;
             this.DataMasterTile.ShowBannerIcon = true;
             this.DataMasterTile.ShowRotateTileBanner = true;
-            this.DataMasterTile.Size = new System.Drawing.Size(187, 134);
+            this.DataMasterTile.Size = new System.Drawing.Size(211, 79);
             this.DataMasterTile.SwitchRotateTileBannerVisibility = true;
             this.DataMasterTile.TabIndex = 71;
-            textItem12.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(0)));
-            textItem12.HubTile = this.DataMasterTile;
-            this.DataMasterTile.Title = textItem12;
+            textItem4.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(0)));
+            textItem4.HubTile = this.DataMasterTile;
+            this.DataMasterTile.Title = textItem4;
             // 
             // MainChart
             // 
@@ -210,7 +215,7 @@ namespace BudgetExecution
             // 
             // 
             this.MainChart.Legend.Location = new System.Drawing.Point(5, 4);
-            this.MainChart.Legend.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.MainChart.Legend.Margin = new System.Windows.Forms.Padding(1);
             this.MainChart.Legend.Position = Syncfusion.Windows.Forms.Chart.ChartDock.Floating;
             this.MainChart.Legend.Visible = false;
             this.MainChart.LegendsPlacement = Syncfusion.Windows.Forms.Chart.ChartPlacement.Outside;
@@ -312,18 +317,54 @@ namespace BudgetExecution
             this.expandCollapsePanel1.BackColor = System.Drawing.Color.Black;
             this.expandCollapsePanel1.ButtonSize = MakarovDev.ExpandCollapsePanel.ExpandCollapseButton.ExpandButtonSize.Small;
             this.expandCollapsePanel1.ButtonStyle = MakarovDev.ExpandCollapsePanel.ExpandCollapseButton.ExpandButtonStyle.Circle;
+            this.expandCollapsePanel1.Controls.Add(this.hubTile1);
             this.expandCollapsePanel1.Controls.Add(this.DataMasterTile);
             this.expandCollapsePanel1.Controls.Add(this.DivisionBudgetTile);
             this.expandCollapsePanel1.Controls.Add(this.SummaryTile);
-            this.expandCollapsePanel1.ExpandedHeight = 883;
+            this.expandCollapsePanel1.ExpandedHeight = 588;
             this.expandCollapsePanel1.IsExpanded = false;
-            this.expandCollapsePanel1.Location = new System.Drawing.Point(902, 60);
-            this.expandCollapsePanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.expandCollapsePanel1.Location = new System.Drawing.Point(894, 35);
+            this.expandCollapsePanel1.Margin = new System.Windows.Forms.Padding(2);
             this.expandCollapsePanel1.Name = "expandCollapsePanel1";
-            this.expandCollapsePanel1.Size = new System.Drawing.Size(207, 35);
+            this.expandCollapsePanel1.Size = new System.Drawing.Size(233, 35);
             this.expandCollapsePanel1.TabIndex = 72;
             this.expandCollapsePanel1.Text = "Main Navigation";
             this.expandCollapsePanel1.UseAnimation = true;
+            // 
+            // hubTile1
+            // 
+            this.hubTile1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            textItem5.Font = new System.Drawing.Font("Segoe UI Semibold", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            textItem5.HubTile = this.hubTile1;
+            textItem5.Text = "DbData Management";
+            textItem5.TextColor = System.Drawing.Color.WhiteSmoke;
+            this.hubTile1.Banner = textItem5;
+            this.hubTile1.BannerColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.hubTile1.BannerHeight = 20;
+            textItem6.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(0)));
+            textItem6.HubTile = this.hubTile1;
+            this.hubTile1.Body = textItem6;
+            this.hubTile1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(0)));
+            textItem7.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(0)));
+            textItem7.HubTile = this.hubTile1;
+            this.hubTile1.Footer = textItem7;
+            this.hubTile1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(130)))), ((int)(((byte)(180)))));
+            this.hubTile1.HoveredBorderColor = System.Drawing.SystemColors.MenuHighlight;
+            this.hubTile1.ImageSource = ((System.Drawing.Image)(resources.GetObject("hubTile1.ImageSource")));
+            this.hubTile1.Location = new System.Drawing.Point(9, 503);
+            this.hubTile1.Margin = new System.Windows.Forms.Padding(1);
+            this.hubTile1.MinimumSize = new System.Drawing.Size(67, 65);
+            this.hubTile1.Name = "hubTile1";
+            this.hubTile1.SelectionMarkerColor = System.Drawing.Color.SteelBlue;
+            this.hubTile1.ShowBanner = true;
+            this.hubTile1.ShowBannerIcon = true;
+            this.hubTile1.ShowRotateTileBanner = true;
+            this.hubTile1.Size = new System.Drawing.Size(211, 73);
+            this.hubTile1.SwitchRotateTileBannerVisibility = true;
+            this.hubTile1.TabIndex = 72;
+            textItem8.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.World, ((byte)(0)));
+            textItem8.HubTile = this.hubTile1;
+            this.hubTile1.Title = textItem8;
             // 
             // MainForm
             // 
@@ -335,7 +376,7 @@ namespace BudgetExecution
             this.ClientSize = new System.Drawing.Size(1138, 664);
             this.Controls.Add(this.expandCollapsePanel1);
             this.Controls.Add(this.MainChart);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MinimumSize = new System.Drawing.Size(1150, 700);
             this.Name = "MainForm";
             this.ShowIcon = false;
@@ -352,5 +393,6 @@ namespace BudgetExecution
         private Syncfusion.Windows.Forms.Tools.HubTile DivisionBudgetTile;
         private Syncfusion.Windows.Forms.Tools.HubTile DataMasterTile;
         private MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel expandCollapsePanel1;
+        private Syncfusion.Windows.Forms.Tools.HubTile hubTile1;
     }
 }

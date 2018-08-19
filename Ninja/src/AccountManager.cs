@@ -49,11 +49,10 @@ namespace BudgetExecution
             Source = source;
             Provider = provider;
             DbData = new DataBuilder(Source, Provider, p);
-            DbTable = DbData.DbTable;
-            DbRow = DbTable.AsEnumerable().Select(prc => prc).First();
-            BindingSource = new BindingSource();
-            BindingSource.DataSource = DbTable;
-            AccountNavigator.BindingSource = BindingSource;
+            Table = DbData.DbTable;
+            DbRow = Table.Rows[0];
+            BindingSource.DataSource = Table;
+            AccountNavigator.Visible = false;
             Insert.TabVisible = false;
         }
 
@@ -64,7 +63,7 @@ namespace BudgetExecution
 
         public DataBuilder DbData { get; }
 
-        public DataTable DbTable { get; set; }
+        public DataTable Table { get; set; }
 
         public DataRow DbRow { get; }
 
