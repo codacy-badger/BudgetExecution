@@ -211,7 +211,7 @@ namespace BudgetExecution
                 string fund = GridFilterControl1?.SelectedItem.ToString();
                 BindingSource.Filter = string.Format("FundName = '{0}'", GridFundFilter.SelectedItem);
                 label41.Text = GetCount(fund).ToString();
-                label37.Text = CalculateAverage(fund).ToString();
+                label37.Text = CalculateAverage(fund).ToString("N");
                 label32.Text = CalculateTotal(fund).ToString("c");
                 PopulateGridBocFilterItems();
                 lblBoc.Visible = true;
@@ -489,7 +489,9 @@ namespace BudgetExecution
         {
             try
             {
-                return Table.AsEnumerable().Where(p => p.Field<string>("FundName").Equals(filter1)).Where(p => p.Field<string>("BocName").Equals(filter2)).Select(p => p.Field<decimal>("Amount")).Average();
+                return Table.AsEnumerable().Where(p => p.Field<string>("FundName").Equals(filter1))
+                    .Where(p => p.Field<string>("BocName").Equals(filter2))
+                    .Select(p => p.Field<decimal>("Amount")).Average();
             }
             catch (Exception ex)
             {
