@@ -334,10 +334,16 @@ namespace BudgetExecution
             this.GraphTab = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
             this.AccountChart = new Syncfusion.Windows.Forms.Chart.ChartControl();
             this.ToolNavTab = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
-            this.button2 = new System.Windows.Forms.Button();
-            this.ExcelButton = new System.Windows.Forms.Button();
-            this.CalculatorButton = new System.Windows.Forms.Button();
+            this.expandCollapsePanel1 = new MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel();
+            this.button8 = new System.Windows.Forms.Button();
+            this.button14 = new System.Windows.Forms.Button();
+            this.button13 = new System.Windows.Forms.Button();
+            this.button15 = new System.Windows.Forms.Button();
+            this.button16 = new System.Windows.Forms.Button();
             this.CalendatButton = new System.Windows.Forms.Button();
+            this.CalculatorButton = new System.Windows.Forms.Button();
+            this.ExcelButton = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.GridGroupBox = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.button6 = new System.Windows.Forms.Button();
@@ -369,12 +375,6 @@ namespace BudgetExecution
             this.toolStripButton8 = new System.Windows.Forms.ToolStripButton();
             this.BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.metroSetToolTip1 = new MetroSet_UI.Components.MetroSetToolTip();
-            this.expandCollapsePanel1 = new MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel();
-            this.button14 = new System.Windows.Forms.Button();
-            this.button15 = new System.Windows.Forms.Button();
-            this.button16 = new System.Windows.Forms.Button();
-            this.button13 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
             this.tabPageAdv4.SuspendLayout();
             this.tabPageAdv3.SuspendLayout();
             this.chartControl1.SuspendLayout();
@@ -414,13 +414,13 @@ namespace BudgetExecution
             this.EditTab.SuspendLayout();
             this.GraphTab.SuspendLayout();
             this.ToolNavTab.SuspendLayout();
+            this.expandCollapsePanel1.SuspendLayout();
             this.GridGroupBox.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Grid)).BeginInit();
             this.FilterGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BindingSource)).BeginInit();
-            this.expandCollapsePanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // toolStripLabel1
@@ -1197,11 +1197,10 @@ namespace BudgetExecution
             this.ProjectTab.Controls.Add(this.ProjectChart);
             this.ProjectTab.Image = null;
             this.ProjectTab.ImageSize = new System.Drawing.Size(16, 16);
-            this.ProjectTab.Location = new System.Drawing.Point(0, 32);
-            this.ProjectTab.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ProjectTab.Location = new System.Drawing.Point(0, 39);
             this.ProjectTab.Name = "ProjectTab";
             this.ProjectTab.ShowCloseButton = true;
-            this.ProjectTab.Size = new System.Drawing.Size(1266, 620);
+            this.ProjectTab.Size = new System.Drawing.Size(1894, 969);
             this.ProjectTab.TabForeColor = System.Drawing.Color.LightSteelBlue;
             this.ProjectTab.TabIndex = 8;
             this.ProjectTab.Tag = "Program Project";
@@ -1220,10 +1219,9 @@ namespace BudgetExecution
             this.ProjectExpander2.Controls.Add(this.ProjectFilter3);
             this.ProjectExpander2.ExpandedHeight = 292;
             this.ProjectExpander2.IsExpanded = false;
-            this.ProjectExpander2.Location = new System.Drawing.Point(1061, 271);
-            this.ProjectExpander2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ProjectExpander2.Location = new System.Drawing.Point(1587, 417);
             this.ProjectExpander2.Name = "ProjectExpander2";
-            this.ProjectExpander2.Size = new System.Drawing.Size(175, 35);
+            this.ProjectExpander2.Size = new System.Drawing.Size(262, 37);
             this.ProjectExpander2.TabIndex = 110;
             this.ProjectExpander2.Text = "Chart Filters";
             this.ProjectExpander2.UseAnimation = true;
@@ -1233,10 +1231,9 @@ namespace BudgetExecution
             this.label22.AutoSize = true;
             this.label22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.label22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(130)))), ((int)(((byte)(180)))));
-            this.label22.Location = new System.Drawing.Point(28, 43);
-            this.label22.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label22.Location = new System.Drawing.Point(42, 66);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(34, 15);
+            this.label22.Size = new System.Drawing.Size(50, 22);
             this.label22.TabIndex = 117;
             this.label22.Text = "Filter";
             // 
@@ -1245,10 +1242,9 @@ namespace BudgetExecution
             this.label30.AutoSize = true;
             this.label30.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.label30.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(130)))), ((int)(((byte)(180)))));
-            this.label30.Location = new System.Drawing.Point(30, 128);
-            this.label30.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label30.Location = new System.Drawing.Point(45, 197);
             this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(58, 15);
+            this.label30.Size = new System.Drawing.Size(84, 22);
             this.label30.TabIndex = 118;
             this.label30.Text = "Grouping";
             // 
@@ -1276,13 +1272,12 @@ namespace BudgetExecution
             "Goal",
             "Objective",
             "RC"});
-            this.ProjectFilter4.Location = new System.Drawing.Point(16, 149);
-            this.ProjectFilter4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ProjectFilter4.Location = new System.Drawing.Point(24, 229);
             this.ProjectFilter4.MaxDropDownItems = 20;
             this.ProjectFilter4.Name = "ProjectFilter4";
             this.ProjectFilter4.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.ProjectFilter4.SelectedItemForeColor = System.Drawing.Color.White;
-            this.ProjectFilter4.Size = new System.Drawing.Size(117, 36);
+            this.ProjectFilter4.Size = new System.Drawing.Size(174, 36);
             this.ProjectFilter4.Style = MetroSet_UI.Design.Style.Dark;
             this.ProjectFilter4.StyleManager = null;
             this.ProjectFilter4.TabIndex = 108;
@@ -1312,13 +1307,12 @@ namespace BudgetExecution
             "Count",
             "Average",
             "Ratio"});
-            this.ProjectFilter3.Location = new System.Drawing.Point(16, 59);
-            this.ProjectFilter3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ProjectFilter3.Location = new System.Drawing.Point(24, 91);
             this.ProjectFilter3.MaxDropDownItems = 20;
             this.ProjectFilter3.Name = "ProjectFilter3";
             this.ProjectFilter3.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.ProjectFilter3.SelectedItemForeColor = System.Drawing.Color.White;
-            this.ProjectFilter3.Size = new System.Drawing.Size(117, 36);
+            this.ProjectFilter3.Size = new System.Drawing.Size(174, 36);
             this.ProjectFilter3.Style = MetroSet_UI.Design.Style.Dark;
             this.ProjectFilter3.StyleManager = null;
             this.ProjectFilter3.TabIndex = 108;
@@ -1338,10 +1332,9 @@ namespace BudgetExecution
             this.ProjectExpander1.Controls.Add(this.ProjectFilter2);
             this.ProjectExpander1.ExpandedHeight = 268;
             this.ProjectExpander1.IsExpanded = false;
-            this.ProjectExpander1.Location = new System.Drawing.Point(1061, 65);
-            this.ProjectExpander1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ProjectExpander1.Location = new System.Drawing.Point(1587, 100);
             this.ProjectExpander1.Name = "ProjectExpander1";
-            this.ProjectExpander1.Size = new System.Drawing.Size(175, 35);
+            this.ProjectExpander1.Size = new System.Drawing.Size(262, 37);
             this.ProjectExpander1.TabIndex = 108;
             this.ProjectExpander1.Text = "Chart Configuration";
             this.ProjectExpander1.UseAnimation = true;
@@ -1351,10 +1344,9 @@ namespace BudgetExecution
             this.label23.AutoSize = true;
             this.label23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.label23.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(130)))), ((int)(((byte)(180)))));
-            this.label23.Location = new System.Drawing.Point(13, 122);
-            this.label23.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label23.Location = new System.Drawing.Point(20, 188);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(56, 15);
+            this.label23.Size = new System.Drawing.Size(79, 22);
             this.label23.TabIndex = 119;
             this.label23.Text = "Measure";
             // 
@@ -1363,10 +1355,9 @@ namespace BudgetExecution
             this.label24.AutoSize = true;
             this.label24.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.label24.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(130)))), ((int)(((byte)(180)))));
-            this.label24.Location = new System.Drawing.Point(13, 48);
-            this.label24.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label24.Location = new System.Drawing.Point(20, 74);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(65, 15);
+            this.label24.Size = new System.Drawing.Size(100, 22);
             this.label24.TabIndex = 118;
             this.label24.Text = "Chart Type";
             // 
@@ -1390,13 +1381,12 @@ namespace BudgetExecution
             this.ProjectFilter1.Items.AddRange(new object[] {
             "Pie ",
             "Column"});
-            this.ProjectFilter1.Location = new System.Drawing.Point(16, 64);
-            this.ProjectFilter1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ProjectFilter1.Location = new System.Drawing.Point(24, 98);
             this.ProjectFilter1.MaxDropDownItems = 20;
             this.ProjectFilter1.Name = "ProjectFilter1";
             this.ProjectFilter1.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.ProjectFilter1.SelectedItemForeColor = System.Drawing.Color.White;
-            this.ProjectFilter1.Size = new System.Drawing.Size(117, 36);
+            this.ProjectFilter1.Size = new System.Drawing.Size(174, 36);
             this.ProjectFilter1.Style = MetroSet_UI.Design.Style.Dark;
             this.ProjectFilter1.StyleManager = null;
             this.ProjectFilter1.TabIndex = 113;
@@ -1425,13 +1415,12 @@ namespace BudgetExecution
             "Count",
             "Average",
             "Ratio"});
-            this.ProjectFilter2.Location = new System.Drawing.Point(16, 138);
-            this.ProjectFilter2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ProjectFilter2.Location = new System.Drawing.Point(24, 212);
             this.ProjectFilter2.MaxDropDownItems = 20;
             this.ProjectFilter2.Name = "ProjectFilter2";
             this.ProjectFilter2.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.ProjectFilter2.SelectedItemForeColor = System.Drawing.Color.White;
-            this.ProjectFilter2.Size = new System.Drawing.Size(117, 36);
+            this.ProjectFilter2.Size = new System.Drawing.Size(174, 36);
             this.ProjectFilter2.Style = MetroSet_UI.Design.Style.Dark;
             this.ProjectFilter2.StyleManager = null;
             this.ProjectFilter2.TabIndex = 1;
@@ -1473,14 +1462,14 @@ namespace BudgetExecution
             // 
             // 
             // 
-            this.ProjectChart.Legend.Location = new System.Drawing.Point(5, 5);
-            this.ProjectChart.Legend.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.ProjectChart.Legend.Location = new System.Drawing.Point(8, 8);
+            this.ProjectChart.Legend.Margin = new System.Windows.Forms.Padding(2);
             this.ProjectChart.Legend.Position = Syncfusion.Windows.Forms.Chart.ChartDock.Floating;
             this.ProjectChart.Legend.Visible = false;
             this.ProjectChart.LegendsPlacement = Syncfusion.Windows.Forms.Chart.ChartPlacement.Outside;
             this.ProjectChart.Localize = null;
-            this.ProjectChart.Location = new System.Drawing.Point(13, 65);
-            this.ProjectChart.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.ProjectChart.Location = new System.Drawing.Point(20, 100);
+            this.ProjectChart.Margin = new System.Windows.Forms.Padding(2);
             this.ProjectChart.Name = "ProjectChart";
             this.ProjectChart.Palette = Syncfusion.Windows.Forms.Chart.ChartColorPalette.Custom;
             this.ProjectChart.PrimaryXAxis.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1547,7 +1536,7 @@ namespace BudgetExecution
             this.ProjectChart.Series3D = true;
             this.ProjectChart.SeriesHighlight = true;
             this.ProjectChart.ShadowColor = new Syncfusion.Drawing.BrushInfo(Syncfusion.Drawing.GradientStyle.PathRectangle, System.Drawing.SystemColors.WindowText, System.Drawing.Color.Silver);
-            this.ProjectChart.Size = new System.Drawing.Size(1000, 468);
+            this.ProjectChart.Size = new System.Drawing.Size(1500, 720);
             this.ProjectChart.Spacing = 5F;
             this.ProjectChart.SpacingBetweenPoints = 5F;
             this.ProjectChart.Style3D = true;
@@ -1584,11 +1573,10 @@ namespace BudgetExecution
             this.AreaTab.Controls.Add(this.AreaChart);
             this.AreaTab.Image = null;
             this.AreaTab.ImageSize = new System.Drawing.Size(16, 16);
-            this.AreaTab.Location = new System.Drawing.Point(0, 32);
-            this.AreaTab.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.AreaTab.Location = new System.Drawing.Point(0, 39);
             this.AreaTab.Name = "AreaTab";
             this.AreaTab.ShowCloseButton = true;
-            this.AreaTab.Size = new System.Drawing.Size(1266, 620);
+            this.AreaTab.Size = new System.Drawing.Size(1894, 969);
             this.AreaTab.TabForeColor = System.Drawing.Color.LightSteelBlue;
             this.AreaTab.TabIndex = 7;
             this.AreaTab.Tag = "Program Area";
@@ -1607,10 +1595,9 @@ namespace BudgetExecution
             this.AreaExpander2.Controls.Add(this.AreaFilter3);
             this.AreaExpander2.ExpandedHeight = 292;
             this.AreaExpander2.IsExpanded = false;
-            this.AreaExpander2.Location = new System.Drawing.Point(1085, 271);
-            this.AreaExpander2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.AreaExpander2.Location = new System.Drawing.Point(1623, 417);
             this.AreaExpander2.Name = "AreaExpander2";
-            this.AreaExpander2.Size = new System.Drawing.Size(147, 35);
+            this.AreaExpander2.Size = new System.Drawing.Size(220, 37);
             this.AreaExpander2.TabIndex = 110;
             this.AreaExpander2.Text = "Chart Filters";
             this.AreaExpander2.UseAnimation = true;
@@ -1620,10 +1607,9 @@ namespace BudgetExecution
             this.label19.AutoSize = true;
             this.label19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.label19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(130)))), ((int)(((byte)(180)))));
-            this.label19.Location = new System.Drawing.Point(19, 37);
-            this.label19.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label19.Location = new System.Drawing.Point(28, 57);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(34, 15);
+            this.label19.Size = new System.Drawing.Size(50, 22);
             this.label19.TabIndex = 117;
             this.label19.Text = "Filter";
             // 
@@ -1632,10 +1618,9 @@ namespace BudgetExecution
             this.label29.AutoSize = true;
             this.label29.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.label29.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(130)))), ((int)(((byte)(180)))));
-            this.label29.Location = new System.Drawing.Point(21, 122);
-            this.label29.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label29.Location = new System.Drawing.Point(32, 188);
             this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(58, 15);
+            this.label29.Size = new System.Drawing.Size(84, 22);
             this.label29.TabIndex = 118;
             this.label29.Text = "Grouping";
             // 
@@ -1663,13 +1648,12 @@ namespace BudgetExecution
             "Goal",
             "Objective",
             "RC"});
-            this.AreaFilter4.Location = new System.Drawing.Point(15, 140);
-            this.AreaFilter4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.AreaFilter4.Location = new System.Drawing.Point(22, 215);
             this.AreaFilter4.MaxDropDownItems = 20;
             this.AreaFilter4.Name = "AreaFilter4";
             this.AreaFilter4.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.AreaFilter4.SelectedItemForeColor = System.Drawing.Color.White;
-            this.AreaFilter4.Size = new System.Drawing.Size(117, 36);
+            this.AreaFilter4.Size = new System.Drawing.Size(174, 36);
             this.AreaFilter4.Style = MetroSet_UI.Design.Style.Dark;
             this.AreaFilter4.StyleManager = null;
             this.AreaFilter4.TabIndex = 108;
@@ -1699,13 +1683,12 @@ namespace BudgetExecution
             "Count",
             "Average",
             "Ratio"});
-            this.AreaFilter3.Location = new System.Drawing.Point(15, 53);
-            this.AreaFilter3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.AreaFilter3.Location = new System.Drawing.Point(22, 82);
             this.AreaFilter3.MaxDropDownItems = 20;
             this.AreaFilter3.Name = "AreaFilter3";
             this.AreaFilter3.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.AreaFilter3.SelectedItemForeColor = System.Drawing.Color.White;
-            this.AreaFilter3.Size = new System.Drawing.Size(117, 36);
+            this.AreaFilter3.Size = new System.Drawing.Size(174, 36);
             this.AreaFilter3.Style = MetroSet_UI.Design.Style.Dark;
             this.AreaFilter3.StyleManager = null;
             this.AreaFilter3.TabIndex = 108;
@@ -1725,10 +1708,9 @@ namespace BudgetExecution
             this.AreaExpander1.Controls.Add(this.AreaFilter2);
             this.AreaExpander1.ExpandedHeight = 260;
             this.AreaExpander1.IsExpanded = false;
-            this.AreaExpander1.Location = new System.Drawing.Point(1085, 65);
-            this.AreaExpander1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.AreaExpander1.Location = new System.Drawing.Point(1623, 100);
             this.AreaExpander1.Name = "AreaExpander1";
-            this.AreaExpander1.Size = new System.Drawing.Size(147, 35);
+            this.AreaExpander1.Size = new System.Drawing.Size(220, 37);
             this.AreaExpander1.TabIndex = 108;
             this.AreaExpander1.Text = "Chart Configuration";
             this.AreaExpander1.UseAnimation = true;
@@ -1738,10 +1720,9 @@ namespace BudgetExecution
             this.label20.AutoSize = true;
             this.label20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.label20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(130)))), ((int)(((byte)(180)))));
-            this.label20.Location = new System.Drawing.Point(13, 110);
-            this.label20.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label20.Location = new System.Drawing.Point(20, 169);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(56, 15);
+            this.label20.Size = new System.Drawing.Size(79, 22);
             this.label20.TabIndex = 119;
             this.label20.Text = "Measure";
             // 
@@ -1750,10 +1731,9 @@ namespace BudgetExecution
             this.label21.AutoSize = true;
             this.label21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.label21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(130)))), ((int)(((byte)(180)))));
-            this.label21.Location = new System.Drawing.Point(13, 37);
-            this.label21.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label21.Location = new System.Drawing.Point(20, 57);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(65, 15);
+            this.label21.Size = new System.Drawing.Size(100, 22);
             this.label21.TabIndex = 118;
             this.label21.Text = "Chart Type";
             // 
@@ -1777,13 +1757,12 @@ namespace BudgetExecution
             this.AreaFilter1.Items.AddRange(new object[] {
             "Pie ",
             "Column"});
-            this.AreaFilter1.Location = new System.Drawing.Point(15, 53);
-            this.AreaFilter1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.AreaFilter1.Location = new System.Drawing.Point(22, 82);
             this.AreaFilter1.MaxDropDownItems = 20;
             this.AreaFilter1.Name = "AreaFilter1";
             this.AreaFilter1.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.AreaFilter1.SelectedItemForeColor = System.Drawing.Color.White;
-            this.AreaFilter1.Size = new System.Drawing.Size(105, 36);
+            this.AreaFilter1.Size = new System.Drawing.Size(156, 36);
             this.AreaFilter1.Style = MetroSet_UI.Design.Style.Dark;
             this.AreaFilter1.StyleManager = null;
             this.AreaFilter1.TabIndex = 113;
@@ -1812,13 +1791,12 @@ namespace BudgetExecution
             "Count",
             "Average",
             "Ratio"});
-            this.AreaFilter2.Location = new System.Drawing.Point(15, 126);
-            this.AreaFilter2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.AreaFilter2.Location = new System.Drawing.Point(22, 194);
             this.AreaFilter2.MaxDropDownItems = 20;
             this.AreaFilter2.Name = "AreaFilter2";
             this.AreaFilter2.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.AreaFilter2.SelectedItemForeColor = System.Drawing.Color.White;
-            this.AreaFilter2.Size = new System.Drawing.Size(105, 36);
+            this.AreaFilter2.Size = new System.Drawing.Size(156, 36);
             this.AreaFilter2.Style = MetroSet_UI.Design.Style.Dark;
             this.AreaFilter2.StyleManager = null;
             this.AreaFilter2.TabIndex = 1;
@@ -1860,14 +1838,14 @@ namespace BudgetExecution
             // 
             // 
             // 
-            this.AreaChart.Legend.Location = new System.Drawing.Point(5, 5);
-            this.AreaChart.Legend.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.AreaChart.Legend.Location = new System.Drawing.Point(8, 8);
+            this.AreaChart.Legend.Margin = new System.Windows.Forms.Padding(2);
             this.AreaChart.Legend.Position = Syncfusion.Windows.Forms.Chart.ChartDock.Floating;
             this.AreaChart.Legend.Visible = false;
             this.AreaChart.LegendsPlacement = Syncfusion.Windows.Forms.Chart.ChartPlacement.Outside;
             this.AreaChart.Localize = null;
-            this.AreaChart.Location = new System.Drawing.Point(13, 65);
-            this.AreaChart.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.AreaChart.Location = new System.Drawing.Point(20, 100);
+            this.AreaChart.Margin = new System.Windows.Forms.Padding(2);
             this.AreaChart.Name = "AreaChart";
             this.AreaChart.Palette = Syncfusion.Windows.Forms.Chart.ChartColorPalette.Custom;
             this.AreaChart.PrimaryXAxis.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1934,7 +1912,7 @@ namespace BudgetExecution
             this.AreaChart.Series3D = true;
             this.AreaChart.SeriesHighlight = true;
             this.AreaChart.ShadowColor = new Syncfusion.Drawing.BrushInfo(Syncfusion.Drawing.GradientStyle.PathRectangle, System.Drawing.SystemColors.WindowText, System.Drawing.Color.Silver);
-            this.AreaChart.Size = new System.Drawing.Size(1000, 468);
+            this.AreaChart.Size = new System.Drawing.Size(1500, 720);
             this.AreaChart.Spacing = 5F;
             this.AreaChart.SpacingBetweenPoints = 5F;
             this.AreaChart.Style3D = true;
@@ -1962,11 +1940,10 @@ namespace BudgetExecution
             this.DivisionTab.Controls.Add(this.DivisionChart);
             this.DivisionTab.Image = null;
             this.DivisionTab.ImageSize = new System.Drawing.Size(16, 16);
-            this.DivisionTab.Location = new System.Drawing.Point(0, 32);
-            this.DivisionTab.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DivisionTab.Location = new System.Drawing.Point(0, 39);
             this.DivisionTab.Name = "DivisionTab";
             this.DivisionTab.ShowCloseButton = true;
-            this.DivisionTab.Size = new System.Drawing.Size(1266, 620);
+            this.DivisionTab.Size = new System.Drawing.Size(1894, 969);
             this.DivisionTab.TabBackColor = System.Drawing.Color.Black;
             this.DivisionTab.TabForeColor = System.Drawing.Color.LightSteelBlue;
             this.DivisionTab.TabIndex = 6;
@@ -1986,10 +1963,9 @@ namespace BudgetExecution
             this.DivisionExpander2.Controls.Add(this.DivisionFilter3);
             this.DivisionExpander2.ExpandedHeight = 292;
             this.DivisionExpander2.IsExpanded = false;
-            this.DivisionExpander2.Location = new System.Drawing.Point(1061, 268);
-            this.DivisionExpander2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DivisionExpander2.Location = new System.Drawing.Point(1587, 412);
             this.DivisionExpander2.Name = "DivisionExpander2";
-            this.DivisionExpander2.Size = new System.Drawing.Size(154, 35);
+            this.DivisionExpander2.Size = new System.Drawing.Size(231, 37);
             this.DivisionExpander2.TabIndex = 110;
             this.DivisionExpander2.Text = "Chart Filters";
             this.DivisionExpander2.UseAnimation = true;
@@ -1999,10 +1975,9 @@ namespace BudgetExecution
             this.label16.AutoSize = true;
             this.label16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(130)))), ((int)(((byte)(180)))));
-            this.label16.Location = new System.Drawing.Point(18, 47);
-            this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label16.Location = new System.Drawing.Point(27, 72);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(34, 15);
+            this.label16.Size = new System.Drawing.Size(50, 22);
             this.label16.TabIndex = 117;
             this.label16.Text = "Filter";
             // 
@@ -2011,10 +1986,9 @@ namespace BudgetExecution
             this.label28.AutoSize = true;
             this.label28.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.label28.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(130)))), ((int)(((byte)(180)))));
-            this.label28.Location = new System.Drawing.Point(18, 131);
-            this.label28.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label28.Location = new System.Drawing.Point(27, 202);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(58, 15);
+            this.label28.Size = new System.Drawing.Size(84, 22);
             this.label28.TabIndex = 118;
             this.label28.Text = "Grouping";
             // 
@@ -2043,13 +2017,12 @@ namespace BudgetExecution
             "Objective",
             "ProgramArea",
             "ProgramProject"});
-            this.DivisionFilter4.Location = new System.Drawing.Point(15, 155);
-            this.DivisionFilter4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DivisionFilter4.Location = new System.Drawing.Point(22, 238);
             this.DivisionFilter4.MaxDropDownItems = 20;
             this.DivisionFilter4.Name = "DivisionFilter4";
             this.DivisionFilter4.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.DivisionFilter4.SelectedItemForeColor = System.Drawing.Color.White;
-            this.DivisionFilter4.Size = new System.Drawing.Size(117, 36);
+            this.DivisionFilter4.Size = new System.Drawing.Size(174, 36);
             this.DivisionFilter4.Style = MetroSet_UI.Design.Style.Dark;
             this.DivisionFilter4.StyleManager = null;
             this.DivisionFilter4.TabIndex = 108;
@@ -2074,13 +2047,12 @@ namespace BudgetExecution
             this.DivisionFilter3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.DivisionFilter3.FormattingEnabled = true;
             this.DivisionFilter3.ItemHeight = 30;
-            this.DivisionFilter3.Location = new System.Drawing.Point(15, 68);
-            this.DivisionFilter3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DivisionFilter3.Location = new System.Drawing.Point(22, 105);
             this.DivisionFilter3.MaxDropDownItems = 20;
             this.DivisionFilter3.Name = "DivisionFilter3";
             this.DivisionFilter3.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.DivisionFilter3.SelectedItemForeColor = System.Drawing.Color.White;
-            this.DivisionFilter3.Size = new System.Drawing.Size(117, 36);
+            this.DivisionFilter3.Size = new System.Drawing.Size(174, 36);
             this.DivisionFilter3.Style = MetroSet_UI.Design.Style.Dark;
             this.DivisionFilter3.StyleManager = null;
             this.DivisionFilter3.TabIndex = 108;
@@ -2100,10 +2072,9 @@ namespace BudgetExecution
             this.DivisionExpander1.Controls.Add(this.DivisionFilter2);
             this.DivisionExpander1.ExpandedHeight = 266;
             this.DivisionExpander1.IsExpanded = false;
-            this.DivisionExpander1.Location = new System.Drawing.Point(1061, 65);
-            this.DivisionExpander1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DivisionExpander1.Location = new System.Drawing.Point(1587, 100);
             this.DivisionExpander1.Name = "DivisionExpander1";
-            this.DivisionExpander1.Size = new System.Drawing.Size(154, 35);
+            this.DivisionExpander1.Size = new System.Drawing.Size(231, 37);
             this.DivisionExpander1.TabIndex = 108;
             this.DivisionExpander1.Text = "Chart Configuration";
             this.DivisionExpander1.UseAnimation = true;
@@ -2113,10 +2084,9 @@ namespace BudgetExecution
             this.label17.AutoSize = true;
             this.label17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.label17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(130)))), ((int)(((byte)(180)))));
-            this.label17.Location = new System.Drawing.Point(15, 111);
-            this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label17.Location = new System.Drawing.Point(22, 171);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(56, 15);
+            this.label17.Size = new System.Drawing.Size(79, 22);
             this.label17.TabIndex = 119;
             this.label17.Text = "Measure";
             // 
@@ -2125,10 +2095,9 @@ namespace BudgetExecution
             this.label18.AutoSize = true;
             this.label18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(130)))), ((int)(((byte)(180)))));
-            this.label18.Location = new System.Drawing.Point(15, 39);
-            this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label18.Location = new System.Drawing.Point(22, 60);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(65, 15);
+            this.label18.Size = new System.Drawing.Size(100, 22);
             this.label18.TabIndex = 118;
             this.label18.Text = "Chart Type";
             // 
@@ -2152,13 +2121,12 @@ namespace BudgetExecution
             this.DivisionFilter1.Items.AddRange(new object[] {
             "Pie ",
             "Column"});
-            this.DivisionFilter1.Location = new System.Drawing.Point(18, 55);
-            this.DivisionFilter1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DivisionFilter1.Location = new System.Drawing.Point(27, 85);
             this.DivisionFilter1.MaxDropDownItems = 20;
             this.DivisionFilter1.Name = "DivisionFilter1";
             this.DivisionFilter1.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.DivisionFilter1.SelectedItemForeColor = System.Drawing.Color.White;
-            this.DivisionFilter1.Size = new System.Drawing.Size(117, 36);
+            this.DivisionFilter1.Size = new System.Drawing.Size(174, 36);
             this.DivisionFilter1.Style = MetroSet_UI.Design.Style.Dark;
             this.DivisionFilter1.StyleManager = null;
             this.DivisionFilter1.TabIndex = 113;
@@ -2187,13 +2155,12 @@ namespace BudgetExecution
             "Count",
             "Average",
             "Ratio"});
-            this.DivisionFilter2.Location = new System.Drawing.Point(18, 127);
-            this.DivisionFilter2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DivisionFilter2.Location = new System.Drawing.Point(27, 195);
             this.DivisionFilter2.MaxDropDownItems = 20;
             this.DivisionFilter2.Name = "DivisionFilter2";
             this.DivisionFilter2.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.DivisionFilter2.SelectedItemForeColor = System.Drawing.Color.White;
-            this.DivisionFilter2.Size = new System.Drawing.Size(117, 36);
+            this.DivisionFilter2.Size = new System.Drawing.Size(174, 36);
             this.DivisionFilter2.Style = MetroSet_UI.Design.Style.Dark;
             this.DivisionFilter2.StyleManager = null;
             this.DivisionFilter2.TabIndex = 0;
@@ -2235,14 +2202,14 @@ namespace BudgetExecution
             // 
             // 
             // 
-            this.DivisionChart.Legend.Location = new System.Drawing.Point(5, 5);
-            this.DivisionChart.Legend.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.DivisionChart.Legend.Location = new System.Drawing.Point(8, 8);
+            this.DivisionChart.Legend.Margin = new System.Windows.Forms.Padding(2);
             this.DivisionChart.Legend.Position = Syncfusion.Windows.Forms.Chart.ChartDock.Floating;
             this.DivisionChart.Legend.Visible = false;
             this.DivisionChart.LegendsPlacement = Syncfusion.Windows.Forms.Chart.ChartPlacement.Outside;
             this.DivisionChart.Localize = null;
-            this.DivisionChart.Location = new System.Drawing.Point(13, 65);
-            this.DivisionChart.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.DivisionChart.Location = new System.Drawing.Point(20, 100);
+            this.DivisionChart.Margin = new System.Windows.Forms.Padding(2);
             this.DivisionChart.Name = "DivisionChart";
             this.DivisionChart.Palette = Syncfusion.Windows.Forms.Chart.ChartColorPalette.Custom;
             this.DivisionChart.PrimaryXAxis.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -2309,7 +2276,7 @@ namespace BudgetExecution
             this.DivisionChart.Series3D = true;
             this.DivisionChart.SeriesHighlight = true;
             this.DivisionChart.ShadowColor = new Syncfusion.Drawing.BrushInfo(Syncfusion.Drawing.GradientStyle.PathRectangle, System.Drawing.SystemColors.WindowText, System.Drawing.Color.Silver);
-            this.DivisionChart.Size = new System.Drawing.Size(1000, 468);
+            this.DivisionChart.Size = new System.Drawing.Size(1500, 720);
             this.DivisionChart.Spacing = 5F;
             this.DivisionChart.SpacingBetweenPoints = 5F;
             this.DivisionChart.Style3D = true;
@@ -2336,11 +2303,10 @@ namespace BudgetExecution
             this.ObjectiveTab.Controls.Add(this.ObjectiveChart);
             this.ObjectiveTab.Image = null;
             this.ObjectiveTab.ImageSize = new System.Drawing.Size(16, 16);
-            this.ObjectiveTab.Location = new System.Drawing.Point(0, 32);
-            this.ObjectiveTab.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ObjectiveTab.Location = new System.Drawing.Point(0, 39);
             this.ObjectiveTab.Name = "ObjectiveTab";
             this.ObjectiveTab.ShowCloseButton = true;
-            this.ObjectiveTab.Size = new System.Drawing.Size(1266, 620);
+            this.ObjectiveTab.Size = new System.Drawing.Size(1894, 969);
             this.ObjectiveTab.TabForeColor = System.Drawing.Color.LightSteelBlue;
             this.ObjectiveTab.TabIndex = 5;
             this.ObjectiveTab.Tag = "Agency Objective";
@@ -2359,10 +2325,9 @@ namespace BudgetExecution
             this.ObjectiveExpander2.Controls.Add(this.ObjectiveFilter3);
             this.ObjectiveExpander2.ExpandedHeight = 292;
             this.ObjectiveExpander2.IsExpanded = false;
-            this.ObjectiveExpander2.Location = new System.Drawing.Point(1061, 271);
-            this.ObjectiveExpander2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ObjectiveExpander2.Location = new System.Drawing.Point(1587, 417);
             this.ObjectiveExpander2.Name = "ObjectiveExpander2";
-            this.ObjectiveExpander2.Size = new System.Drawing.Size(176, 35);
+            this.ObjectiveExpander2.Size = new System.Drawing.Size(264, 37);
             this.ObjectiveExpander2.TabIndex = 110;
             this.ObjectiveExpander2.Text = "Chart Filters";
             this.ObjectiveExpander2.UseAnimation = true;
@@ -2372,10 +2337,9 @@ namespace BudgetExecution
             this.label13.AutoSize = true;
             this.label13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(130)))), ((int)(((byte)(180)))));
-            this.label13.Location = new System.Drawing.Point(25, 38);
-            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label13.Location = new System.Drawing.Point(38, 58);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(34, 15);
+            this.label13.Size = new System.Drawing.Size(50, 22);
             this.label13.TabIndex = 117;
             this.label13.Text = "Filter";
             // 
@@ -2384,10 +2348,9 @@ namespace BudgetExecution
             this.label26.AutoSize = true;
             this.label26.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.label26.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(130)))), ((int)(((byte)(180)))));
-            this.label26.Location = new System.Drawing.Point(27, 123);
-            this.label26.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label26.Location = new System.Drawing.Point(40, 189);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(58, 15);
+            this.label26.Size = new System.Drawing.Size(84, 22);
             this.label26.TabIndex = 118;
             this.label26.Text = "Grouping";
             // 
@@ -2415,13 +2378,12 @@ namespace BudgetExecution
             "Goal",
             "RC",
             "ProgramArea"});
-            this.ObjectiveFilter4.Location = new System.Drawing.Point(17, 140);
-            this.ObjectiveFilter4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ObjectiveFilter4.Location = new System.Drawing.Point(26, 215);
             this.ObjectiveFilter4.MaxDropDownItems = 20;
             this.ObjectiveFilter4.Name = "ObjectiveFilter4";
             this.ObjectiveFilter4.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.ObjectiveFilter4.SelectedItemForeColor = System.Drawing.Color.White;
-            this.ObjectiveFilter4.Size = new System.Drawing.Size(148, 36);
+            this.ObjectiveFilter4.Size = new System.Drawing.Size(220, 36);
             this.ObjectiveFilter4.Style = MetroSet_UI.Design.Style.Dark;
             this.ObjectiveFilter4.StyleManager = null;
             this.ObjectiveFilter4.TabIndex = 108;
@@ -2446,13 +2408,12 @@ namespace BudgetExecution
             this.ObjectiveFilter3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.ObjectiveFilter3.FormattingEnabled = true;
             this.ObjectiveFilter3.ItemHeight = 30;
-            this.ObjectiveFilter3.Location = new System.Drawing.Point(17, 54);
-            this.ObjectiveFilter3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ObjectiveFilter3.Location = new System.Drawing.Point(26, 83);
             this.ObjectiveFilter3.MaxDropDownItems = 20;
             this.ObjectiveFilter3.Name = "ObjectiveFilter3";
             this.ObjectiveFilter3.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.ObjectiveFilter3.SelectedItemForeColor = System.Drawing.Color.White;
-            this.ObjectiveFilter3.Size = new System.Drawing.Size(148, 36);
+            this.ObjectiveFilter3.Size = new System.Drawing.Size(220, 36);
             this.ObjectiveFilter3.Style = MetroSet_UI.Design.Style.Dark;
             this.ObjectiveFilter3.StyleManager = null;
             this.ObjectiveFilter3.TabIndex = 108;
@@ -2472,10 +2433,9 @@ namespace BudgetExecution
             this.ObjectiveExpander1.Controls.Add(this.ObjectiveFilter2);
             this.ObjectiveExpander1.ExpandedHeight = 268;
             this.ObjectiveExpander1.IsExpanded = false;
-            this.ObjectiveExpander1.Location = new System.Drawing.Point(1061, 65);
-            this.ObjectiveExpander1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ObjectiveExpander1.Location = new System.Drawing.Point(1587, 100);
             this.ObjectiveExpander1.Name = "ObjectiveExpander1";
-            this.ObjectiveExpander1.Size = new System.Drawing.Size(176, 35);
+            this.ObjectiveExpander1.Size = new System.Drawing.Size(264, 37);
             this.ObjectiveExpander1.TabIndex = 108;
             this.ObjectiveExpander1.Text = "Chart Configuration";
             this.ObjectiveExpander1.UseAnimation = true;
@@ -2485,10 +2445,9 @@ namespace BudgetExecution
             this.label14.AutoSize = true;
             this.label14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(130)))), ((int)(((byte)(180)))));
-            this.label14.Location = new System.Drawing.Point(17, 113);
-            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label14.Location = new System.Drawing.Point(26, 174);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(56, 15);
+            this.label14.Size = new System.Drawing.Size(79, 22);
             this.label14.TabIndex = 119;
             this.label14.Text = "Measure";
             // 
@@ -2497,10 +2456,9 @@ namespace BudgetExecution
             this.label15.AutoSize = true;
             this.label15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(130)))), ((int)(((byte)(180)))));
-            this.label15.Location = new System.Drawing.Point(17, 40);
-            this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label15.Location = new System.Drawing.Point(26, 62);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(65, 15);
+            this.label15.Size = new System.Drawing.Size(100, 22);
             this.label15.TabIndex = 118;
             this.label15.Text = "Chart Type";
             // 
@@ -2524,13 +2482,12 @@ namespace BudgetExecution
             this.ObjectiveFilter1.Items.AddRange(new object[] {
             "Pie ",
             "Column"});
-            this.ObjectiveFilter1.Location = new System.Drawing.Point(19, 59);
-            this.ObjectiveFilter1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ObjectiveFilter1.Location = new System.Drawing.Point(28, 91);
             this.ObjectiveFilter1.MaxDropDownItems = 20;
             this.ObjectiveFilter1.Name = "ObjectiveFilter1";
             this.ObjectiveFilter1.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.ObjectiveFilter1.SelectedItemForeColor = System.Drawing.Color.White;
-            this.ObjectiveFilter1.Size = new System.Drawing.Size(117, 36);
+            this.ObjectiveFilter1.Size = new System.Drawing.Size(174, 36);
             this.ObjectiveFilter1.Style = MetroSet_UI.Design.Style.Dark;
             this.ObjectiveFilter1.StyleManager = null;
             this.ObjectiveFilter1.TabIndex = 113;
@@ -2559,13 +2516,12 @@ namespace BudgetExecution
             "Count",
             "Average",
             "Ratio"});
-            this.ObjectiveFilter2.Location = new System.Drawing.Point(19, 131);
-            this.ObjectiveFilter2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ObjectiveFilter2.Location = new System.Drawing.Point(28, 202);
             this.ObjectiveFilter2.MaxDropDownItems = 20;
             this.ObjectiveFilter2.Name = "ObjectiveFilter2";
             this.ObjectiveFilter2.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.ObjectiveFilter2.SelectedItemForeColor = System.Drawing.Color.White;
-            this.ObjectiveFilter2.Size = new System.Drawing.Size(117, 36);
+            this.ObjectiveFilter2.Size = new System.Drawing.Size(174, 36);
             this.ObjectiveFilter2.Style = MetroSet_UI.Design.Style.Dark;
             this.ObjectiveFilter2.StyleManager = null;
             this.ObjectiveFilter2.TabIndex = 1;
@@ -2607,14 +2563,14 @@ namespace BudgetExecution
             // 
             // 
             // 
-            this.ObjectiveChart.Legend.Location = new System.Drawing.Point(5, 5);
-            this.ObjectiveChart.Legend.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.ObjectiveChart.Legend.Location = new System.Drawing.Point(8, 8);
+            this.ObjectiveChart.Legend.Margin = new System.Windows.Forms.Padding(2);
             this.ObjectiveChart.Legend.Position = Syncfusion.Windows.Forms.Chart.ChartDock.Floating;
             this.ObjectiveChart.Legend.Visible = false;
             this.ObjectiveChart.LegendsPlacement = Syncfusion.Windows.Forms.Chart.ChartPlacement.Outside;
             this.ObjectiveChart.Localize = null;
-            this.ObjectiveChart.Location = new System.Drawing.Point(13, 65);
-            this.ObjectiveChart.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.ObjectiveChart.Location = new System.Drawing.Point(20, 100);
+            this.ObjectiveChart.Margin = new System.Windows.Forms.Padding(2);
             this.ObjectiveChart.Name = "ObjectiveChart";
             this.ObjectiveChart.Palette = Syncfusion.Windows.Forms.Chart.ChartColorPalette.Custom;
             this.ObjectiveChart.PrimaryXAxis.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -2681,7 +2637,7 @@ namespace BudgetExecution
             this.ObjectiveChart.Series3D = true;
             this.ObjectiveChart.SeriesHighlight = true;
             this.ObjectiveChart.ShadowColor = new Syncfusion.Drawing.BrushInfo(Syncfusion.Drawing.GradientStyle.PathRectangle, System.Drawing.SystemColors.WindowText, System.Drawing.Color.Silver);
-            this.ObjectiveChart.Size = new System.Drawing.Size(1000, 468);
+            this.ObjectiveChart.Size = new System.Drawing.Size(1500, 720);
             this.ObjectiveChart.Spacing = 5F;
             this.ObjectiveChart.SpacingBetweenPoints = 5F;
             this.ObjectiveChart.Style3D = true;
@@ -2708,11 +2664,10 @@ namespace BudgetExecution
             this.GoalTab.Controls.Add(this.GoalChart);
             this.GoalTab.Image = null;
             this.GoalTab.ImageSize = new System.Drawing.Size(16, 16);
-            this.GoalTab.Location = new System.Drawing.Point(0, 32);
-            this.GoalTab.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.GoalTab.Location = new System.Drawing.Point(0, 39);
             this.GoalTab.Name = "GoalTab";
             this.GoalTab.ShowCloseButton = true;
-            this.GoalTab.Size = new System.Drawing.Size(1266, 620);
+            this.GoalTab.Size = new System.Drawing.Size(1894, 969);
             this.GoalTab.TabForeColor = System.Drawing.Color.LightSteelBlue;
             this.GoalTab.TabIndex = 4;
             this.GoalTab.Tag = "Agency Goal";
@@ -2731,10 +2686,9 @@ namespace BudgetExecution
             this.GoalExpander2.Controls.Add(this.GoalFilter3);
             this.GoalExpander2.ExpandedHeight = 292;
             this.GoalExpander2.IsExpanded = false;
-            this.GoalExpander2.Location = new System.Drawing.Point(1061, 271);
-            this.GoalExpander2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.GoalExpander2.Location = new System.Drawing.Point(1587, 417);
             this.GoalExpander2.Name = "GoalExpander2";
-            this.GoalExpander2.Size = new System.Drawing.Size(151, 35);
+            this.GoalExpander2.Size = new System.Drawing.Size(226, 37);
             this.GoalExpander2.TabIndex = 110;
             this.GoalExpander2.Text = "Chart Filters";
             this.GoalExpander2.UseAnimation = true;
@@ -2744,10 +2698,9 @@ namespace BudgetExecution
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(130)))), ((int)(((byte)(180)))));
-            this.label4.Location = new System.Drawing.Point(19, 39);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(28, 60);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(34, 15);
+            this.label4.Size = new System.Drawing.Size(50, 22);
             this.label4.TabIndex = 117;
             this.label4.Text = "Filter";
             // 
@@ -2756,10 +2709,9 @@ namespace BudgetExecution
             this.label10.AutoSize = true;
             this.label10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(130)))), ((int)(((byte)(180)))));
-            this.label10.Location = new System.Drawing.Point(21, 124);
-            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label10.Location = new System.Drawing.Point(32, 191);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(58, 15);
+            this.label10.Size = new System.Drawing.Size(84, 22);
             this.label10.TabIndex = 118;
             this.label10.Text = "Grouping";
             // 
@@ -2787,13 +2739,12 @@ namespace BudgetExecution
             "RC",
             "Objective",
             "ProgramArea"});
-            this.GoalFilter4.Location = new System.Drawing.Point(14, 142);
-            this.GoalFilter4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.GoalFilter4.Location = new System.Drawing.Point(21, 218);
             this.GoalFilter4.MaxDropDownItems = 20;
             this.GoalFilter4.Name = "GoalFilter4";
             this.GoalFilter4.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.GoalFilter4.SelectedItemForeColor = System.Drawing.Color.White;
-            this.GoalFilter4.Size = new System.Drawing.Size(117, 36);
+            this.GoalFilter4.Size = new System.Drawing.Size(174, 36);
             this.GoalFilter4.Style = MetroSet_UI.Design.Style.Dark;
             this.GoalFilter4.StyleManager = null;
             this.GoalFilter4.TabIndex = 108;
@@ -2823,13 +2774,12 @@ namespace BudgetExecution
             "Count",
             "Average",
             "Ratio"});
-            this.GoalFilter3.Location = new System.Drawing.Point(14, 55);
-            this.GoalFilter3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.GoalFilter3.Location = new System.Drawing.Point(21, 85);
             this.GoalFilter3.MaxDropDownItems = 20;
             this.GoalFilter3.Name = "GoalFilter3";
             this.GoalFilter3.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.GoalFilter3.SelectedItemForeColor = System.Drawing.Color.White;
-            this.GoalFilter3.Size = new System.Drawing.Size(117, 36);
+            this.GoalFilter3.Size = new System.Drawing.Size(174, 36);
             this.GoalFilter3.Style = MetroSet_UI.Design.Style.Dark;
             this.GoalFilter3.StyleManager = null;
             this.GoalFilter3.TabIndex = 108;
@@ -2849,10 +2799,9 @@ namespace BudgetExecution
             this.GoalExpander1.Controls.Add(this.GoalFilter2);
             this.GoalExpander1.ExpandedHeight = 281;
             this.GoalExpander1.IsExpanded = false;
-            this.GoalExpander1.Location = new System.Drawing.Point(1061, 65);
-            this.GoalExpander1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.GoalExpander1.Location = new System.Drawing.Point(1587, 100);
             this.GoalExpander1.Name = "GoalExpander1";
-            this.GoalExpander1.Size = new System.Drawing.Size(151, 35);
+            this.GoalExpander1.Size = new System.Drawing.Size(226, 37);
             this.GoalExpander1.TabIndex = 108;
             this.GoalExpander1.Text = "Chart Configuration";
             this.GoalExpander1.UseAnimation = true;
@@ -2862,10 +2811,9 @@ namespace BudgetExecution
             this.label11.AutoSize = true;
             this.label11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(130)))), ((int)(((byte)(180)))));
-            this.label11.Location = new System.Drawing.Point(11, 109);
-            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label11.Location = new System.Drawing.Point(16, 168);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(56, 15);
+            this.label11.Size = new System.Drawing.Size(79, 22);
             this.label11.TabIndex = 119;
             this.label11.Text = "Measure";
             // 
@@ -2874,10 +2822,9 @@ namespace BudgetExecution
             this.label12.AutoSize = true;
             this.label12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(130)))), ((int)(((byte)(180)))));
-            this.label12.Location = new System.Drawing.Point(11, 37);
-            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label12.Location = new System.Drawing.Point(16, 57);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(65, 15);
+            this.label12.Size = new System.Drawing.Size(100, 22);
             this.label12.TabIndex = 118;
             this.label12.Text = "Chart Type";
             // 
@@ -2901,13 +2848,12 @@ namespace BudgetExecution
             this.GoalFilter1.Items.AddRange(new object[] {
             "Pie ",
             "Column"});
-            this.GoalFilter1.Location = new System.Drawing.Point(13, 54);
-            this.GoalFilter1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.GoalFilter1.Location = new System.Drawing.Point(20, 83);
             this.GoalFilter1.MaxDropDownItems = 20;
             this.GoalFilter1.Name = "GoalFilter1";
             this.GoalFilter1.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.GoalFilter1.SelectedItemForeColor = System.Drawing.Color.White;
-            this.GoalFilter1.Size = new System.Drawing.Size(117, 36);
+            this.GoalFilter1.Size = new System.Drawing.Size(174, 36);
             this.GoalFilter1.Style = MetroSet_UI.Design.Style.Dark;
             this.GoalFilter1.StyleManager = null;
             this.GoalFilter1.TabIndex = 113;
@@ -2936,13 +2882,12 @@ namespace BudgetExecution
             "Count",
             "Average",
             "Ratio"});
-            this.GoalFilter2.Location = new System.Drawing.Point(14, 127);
-            this.GoalFilter2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.GoalFilter2.Location = new System.Drawing.Point(21, 195);
             this.GoalFilter2.MaxDropDownItems = 20;
             this.GoalFilter2.Name = "GoalFilter2";
             this.GoalFilter2.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.GoalFilter2.SelectedItemForeColor = System.Drawing.Color.White;
-            this.GoalFilter2.Size = new System.Drawing.Size(117, 36);
+            this.GoalFilter2.Size = new System.Drawing.Size(174, 36);
             this.GoalFilter2.Style = MetroSet_UI.Design.Style.Dark;
             this.GoalFilter2.StyleManager = null;
             this.GoalFilter2.TabIndex = 1;
@@ -2984,14 +2929,14 @@ namespace BudgetExecution
             // 
             // 
             // 
-            this.GoalChart.Legend.Location = new System.Drawing.Point(5, 5);
-            this.GoalChart.Legend.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.GoalChart.Legend.Location = new System.Drawing.Point(8, 8);
+            this.GoalChart.Legend.Margin = new System.Windows.Forms.Padding(2);
             this.GoalChart.Legend.Position = Syncfusion.Windows.Forms.Chart.ChartDock.Floating;
             this.GoalChart.Legend.Visible = false;
             this.GoalChart.LegendsPlacement = Syncfusion.Windows.Forms.Chart.ChartPlacement.Outside;
             this.GoalChart.Localize = null;
-            this.GoalChart.Location = new System.Drawing.Point(13, 65);
-            this.GoalChart.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.GoalChart.Location = new System.Drawing.Point(20, 100);
+            this.GoalChart.Margin = new System.Windows.Forms.Padding(2);
             this.GoalChart.Name = "GoalChart";
             this.GoalChart.Palette = Syncfusion.Windows.Forms.Chart.ChartColorPalette.Custom;
             this.GoalChart.PrimaryXAxis.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -3058,7 +3003,7 @@ namespace BudgetExecution
             this.GoalChart.Series3D = true;
             this.GoalChart.SeriesHighlight = true;
             this.GoalChart.ShadowColor = new Syncfusion.Drawing.BrushInfo(Syncfusion.Drawing.GradientStyle.PathRectangle, System.Drawing.SystemColors.WindowText, System.Drawing.Color.Silver);
-            this.GoalChart.Size = new System.Drawing.Size(1000, 468);
+            this.GoalChart.Size = new System.Drawing.Size(1500, 720);
             this.GoalChart.Spacing = 5F;
             this.GoalChart.SpacingBetweenPoints = 5F;
             this.GoalChart.Style3D = true;
@@ -3085,11 +3030,10 @@ namespace BudgetExecution
             this.NpmTab.Controls.Add(this.NpmChart);
             this.NpmTab.Image = null;
             this.NpmTab.ImageSize = new System.Drawing.Size(16, 16);
-            this.NpmTab.Location = new System.Drawing.Point(0, 32);
-            this.NpmTab.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.NpmTab.Location = new System.Drawing.Point(0, 39);
             this.NpmTab.Name = "NpmTab";
             this.NpmTab.ShowCloseButton = true;
-            this.NpmTab.Size = new System.Drawing.Size(1266, 620);
+            this.NpmTab.Size = new System.Drawing.Size(1894, 969);
             this.NpmTab.TabForeColor = System.Drawing.Color.LightSteelBlue;
             this.NpmTab.TabIndex = 3;
             this.NpmTab.Tag = "HQ National Program Office";
@@ -3108,10 +3052,9 @@ namespace BudgetExecution
             this.NpmExpander2.Controls.Add(this.NpmFilter3);
             this.NpmExpander2.ExpandedHeight = 292;
             this.NpmExpander2.IsExpanded = false;
-            this.NpmExpander2.Location = new System.Drawing.Point(1061, 271);
-            this.NpmExpander2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.NpmExpander2.Location = new System.Drawing.Point(1587, 417);
             this.NpmExpander2.Name = "NpmExpander2";
-            this.NpmExpander2.Size = new System.Drawing.Size(147, 35);
+            this.NpmExpander2.Size = new System.Drawing.Size(220, 37);
             this.NpmExpander2.TabIndex = 110;
             this.NpmExpander2.Text = "Chart Filters";
             this.NpmExpander2.UseAnimation = true;
@@ -3121,10 +3064,9 @@ namespace BudgetExecution
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(130)))), ((int)(((byte)(180)))));
-            this.label7.Location = new System.Drawing.Point(18, 49);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Location = new System.Drawing.Point(27, 75);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(37, 15);
+            this.label7.Size = new System.Drawing.Size(55, 22);
             this.label7.TabIndex = 116;
             this.label7.Text = " Filter";
             // 
@@ -3133,10 +3075,9 @@ namespace BudgetExecution
             this.label27.AutoSize = true;
             this.label27.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.label27.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(130)))), ((int)(((byte)(180)))));
-            this.label27.Location = new System.Drawing.Point(18, 118);
-            this.label27.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label27.Location = new System.Drawing.Point(27, 182);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(58, 15);
+            this.label27.Size = new System.Drawing.Size(84, 22);
             this.label27.TabIndex = 116;
             this.label27.Text = "Grouping";
             // 
@@ -3164,13 +3105,12 @@ namespace BudgetExecution
             "RC",
             "Objective",
             "ProgramArea"});
-            this.NpmFilter4.Location = new System.Drawing.Point(18, 140);
-            this.NpmFilter4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.NpmFilter4.Location = new System.Drawing.Point(27, 215);
             this.NpmFilter4.MaxDropDownItems = 20;
             this.NpmFilter4.Name = "NpmFilter4";
             this.NpmFilter4.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.NpmFilter4.SelectedItemForeColor = System.Drawing.Color.White;
-            this.NpmFilter4.Size = new System.Drawing.Size(117, 36);
+            this.NpmFilter4.Size = new System.Drawing.Size(174, 36);
             this.NpmFilter4.Style = MetroSet_UI.Design.Style.Dark;
             this.NpmFilter4.StyleManager = null;
             this.NpmFilter4.TabIndex = 108;
@@ -3200,13 +3140,12 @@ namespace BudgetExecution
             "Count",
             "Average",
             "Ratio"});
-            this.NpmFilter3.Location = new System.Drawing.Point(18, 71);
-            this.NpmFilter3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.NpmFilter3.Location = new System.Drawing.Point(27, 109);
             this.NpmFilter3.MaxDropDownItems = 20;
             this.NpmFilter3.Name = "NpmFilter3";
             this.NpmFilter3.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.NpmFilter3.SelectedItemForeColor = System.Drawing.Color.White;
-            this.NpmFilter3.Size = new System.Drawing.Size(117, 36);
+            this.NpmFilter3.Size = new System.Drawing.Size(174, 36);
             this.NpmFilter3.Style = MetroSet_UI.Design.Style.Dark;
             this.NpmFilter3.StyleManager = null;
             this.NpmFilter3.TabIndex = 108;
@@ -3226,10 +3165,9 @@ namespace BudgetExecution
             this.NpmExpander1.Controls.Add(this.NpmFilter1);
             this.NpmExpander1.ExpandedHeight = 275;
             this.NpmExpander1.IsExpanded = false;
-            this.NpmExpander1.Location = new System.Drawing.Point(1061, 65);
-            this.NpmExpander1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.NpmExpander1.Location = new System.Drawing.Point(1587, 100);
             this.NpmExpander1.Name = "NpmExpander1";
-            this.NpmExpander1.Size = new System.Drawing.Size(147, 35);
+            this.NpmExpander1.Size = new System.Drawing.Size(220, 37);
             this.NpmExpander1.TabIndex = 108;
             this.NpmExpander1.Text = "Chart Configuration";
             this.NpmExpander1.UseAnimation = true;
@@ -3239,10 +3177,9 @@ namespace BudgetExecution
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(130)))), ((int)(((byte)(180)))));
-            this.label8.Location = new System.Drawing.Point(23, 107);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Location = new System.Drawing.Point(34, 165);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(56, 15);
+            this.label8.Size = new System.Drawing.Size(79, 22);
             this.label8.TabIndex = 119;
             this.label8.Text = "Measure";
             // 
@@ -3251,10 +3188,9 @@ namespace BudgetExecution
             this.label9.AutoSize = true;
             this.label9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(130)))), ((int)(((byte)(180)))));
-            this.label9.Location = new System.Drawing.Point(23, 42);
-            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Location = new System.Drawing.Point(34, 65);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(65, 15);
+            this.label9.Size = new System.Drawing.Size(100, 22);
             this.label9.TabIndex = 118;
             this.label9.Text = "Chart Type";
             // 
@@ -3280,13 +3216,12 @@ namespace BudgetExecution
             "Count",
             "Average",
             "Ratio"});
-            this.NpmFilter2.Location = new System.Drawing.Point(18, 128);
-            this.NpmFilter2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.NpmFilter2.Location = new System.Drawing.Point(27, 197);
             this.NpmFilter2.MaxDropDownItems = 20;
             this.NpmFilter2.Name = "NpmFilter2";
             this.NpmFilter2.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.NpmFilter2.SelectedItemForeColor = System.Drawing.Color.White;
-            this.NpmFilter2.Size = new System.Drawing.Size(109, 36);
+            this.NpmFilter2.Size = new System.Drawing.Size(162, 36);
             this.NpmFilter2.Style = MetroSet_UI.Design.Style.Dark;
             this.NpmFilter2.StyleManager = null;
             this.NpmFilter2.TabIndex = 110;
@@ -3314,13 +3249,12 @@ namespace BudgetExecution
             this.NpmFilter1.Items.AddRange(new object[] {
             "Pie ",
             "Column"});
-            this.NpmFilter1.Location = new System.Drawing.Point(18, 59);
-            this.NpmFilter1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.NpmFilter1.Location = new System.Drawing.Point(27, 91);
             this.NpmFilter1.MaxDropDownItems = 20;
             this.NpmFilter1.Name = "NpmFilter1";
             this.NpmFilter1.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.NpmFilter1.SelectedItemForeColor = System.Drawing.Color.White;
-            this.NpmFilter1.Size = new System.Drawing.Size(109, 36);
+            this.NpmFilter1.Size = new System.Drawing.Size(162, 36);
             this.NpmFilter1.Style = MetroSet_UI.Design.Style.Dark;
             this.NpmFilter1.StyleManager = null;
             this.NpmFilter1.TabIndex = 113;
@@ -3362,14 +3296,14 @@ namespace BudgetExecution
             // 
             // 
             // 
-            this.NpmChart.Legend.Location = new System.Drawing.Point(5, 5);
-            this.NpmChart.Legend.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.NpmChart.Legend.Location = new System.Drawing.Point(8, 8);
+            this.NpmChart.Legend.Margin = new System.Windows.Forms.Padding(2);
             this.NpmChart.Legend.Position = Syncfusion.Windows.Forms.Chart.ChartDock.Floating;
             this.NpmChart.Legend.Visible = false;
             this.NpmChart.LegendsPlacement = Syncfusion.Windows.Forms.Chart.ChartPlacement.Outside;
             this.NpmChart.Localize = null;
-            this.NpmChart.Location = new System.Drawing.Point(13, 65);
-            this.NpmChart.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.NpmChart.Location = new System.Drawing.Point(20, 100);
+            this.NpmChart.Margin = new System.Windows.Forms.Padding(2);
             this.NpmChart.Name = "NpmChart";
             this.NpmChart.Palette = Syncfusion.Windows.Forms.Chart.ChartColorPalette.Custom;
             this.NpmChart.PrimaryXAxis.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -3436,7 +3370,7 @@ namespace BudgetExecution
             this.NpmChart.Series3D = true;
             this.NpmChart.SeriesHighlight = true;
             this.NpmChart.ShadowColor = new Syncfusion.Drawing.BrushInfo(Syncfusion.Drawing.GradientStyle.PathRectangle, System.Drawing.SystemColors.WindowText, System.Drawing.Color.Silver);
-            this.NpmChart.Size = new System.Drawing.Size(1000, 468);
+            this.NpmChart.Size = new System.Drawing.Size(1500, 720);
             this.NpmChart.Spacing = 5F;
             this.NpmChart.SpacingBetweenPoints = 5F;
             this.NpmChart.Style3D = true;
@@ -3463,11 +3397,10 @@ namespace BudgetExecution
             this.BocTab.Controls.Add(this.BocChart);
             this.BocTab.Image = null;
             this.BocTab.ImageSize = new System.Drawing.Size(16, 16);
-            this.BocTab.Location = new System.Drawing.Point(0, 32);
-            this.BocTab.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BocTab.Location = new System.Drawing.Point(0, 39);
             this.BocTab.Name = "BocTab";
             this.BocTab.ShowCloseButton = true;
-            this.BocTab.Size = new System.Drawing.Size(1266, 620);
+            this.BocTab.Size = new System.Drawing.Size(1894, 969);
             this.BocTab.TabForeColor = System.Drawing.Color.LightSteelBlue;
             this.BocTab.TabIndex = 2;
             this.BocTab.Tag = "Budget Object Class";
@@ -3486,10 +3419,9 @@ namespace BudgetExecution
             this.BocExpander2.Controls.Add(this.BocFilter3);
             this.BocExpander2.ExpandedHeight = 292;
             this.BocExpander2.IsExpanded = false;
-            this.BocExpander2.Location = new System.Drawing.Point(1061, 271);
-            this.BocExpander2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BocExpander2.Location = new System.Drawing.Point(1587, 417);
             this.BocExpander2.Name = "BocExpander2";
-            this.BocExpander2.Size = new System.Drawing.Size(155, 35);
+            this.BocExpander2.Size = new System.Drawing.Size(232, 37);
             this.BocExpander2.TabIndex = 109;
             this.BocExpander2.Text = "Chart Filters";
             this.BocExpander2.UseAnimation = true;
@@ -3499,10 +3431,9 @@ namespace BudgetExecution
             this.label35.AutoSize = true;
             this.label35.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.label35.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(130)))), ((int)(((byte)(180)))));
-            this.label35.Location = new System.Drawing.Point(14, 43);
-            this.label35.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label35.Location = new System.Drawing.Point(21, 66);
             this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(34, 15);
+            this.label35.Size = new System.Drawing.Size(50, 22);
             this.label35.TabIndex = 117;
             this.label35.Text = "Filter";
             // 
@@ -3511,10 +3442,9 @@ namespace BudgetExecution
             this.label36.AutoSize = true;
             this.label36.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.label36.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(130)))), ((int)(((byte)(180)))));
-            this.label36.Location = new System.Drawing.Point(16, 128);
-            this.label36.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label36.Location = new System.Drawing.Point(24, 197);
             this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(58, 15);
+            this.label36.Size = new System.Drawing.Size(84, 22);
             this.label36.TabIndex = 118;
             this.label36.Text = "Grouping";
             // 
@@ -3542,13 +3472,12 @@ namespace BudgetExecution
             "RC",
             "Objective",
             "ProgramArea"});
-            this.BocFilter4.Location = new System.Drawing.Point(16, 143);
-            this.BocFilter4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BocFilter4.Location = new System.Drawing.Point(24, 220);
             this.BocFilter4.MaxDropDownItems = 20;
             this.BocFilter4.Name = "BocFilter4";
             this.BocFilter4.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.BocFilter4.SelectedItemForeColor = System.Drawing.Color.White;
-            this.BocFilter4.Size = new System.Drawing.Size(117, 36);
+            this.BocFilter4.Size = new System.Drawing.Size(174, 36);
             this.BocFilter4.Style = MetroSet_UI.Design.Style.Dark;
             this.BocFilter4.StyleManager = null;
             this.BocFilter4.TabIndex = 108;
@@ -3578,13 +3507,12 @@ namespace BudgetExecution
             "Count",
             "Average",
             "Ratio"});
-            this.BocFilter3.Location = new System.Drawing.Point(16, 59);
-            this.BocFilter3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BocFilter3.Location = new System.Drawing.Point(24, 91);
             this.BocFilter3.MaxDropDownItems = 20;
             this.BocFilter3.Name = "BocFilter3";
             this.BocFilter3.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.BocFilter3.SelectedItemForeColor = System.Drawing.Color.White;
-            this.BocFilter3.Size = new System.Drawing.Size(117, 36);
+            this.BocFilter3.Size = new System.Drawing.Size(174, 36);
             this.BocFilter3.Style = MetroSet_UI.Design.Style.Dark;
             this.BocFilter3.StyleManager = null;
             this.BocFilter3.TabIndex = 108;
@@ -3604,10 +3532,9 @@ namespace BudgetExecution
             this.BocExpander1.Controls.Add(this.BocFilter2);
             this.BocExpander1.ExpandedHeight = 258;
             this.BocExpander1.IsExpanded = false;
-            this.BocExpander1.Location = new System.Drawing.Point(1061, 65);
-            this.BocExpander1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BocExpander1.Location = new System.Drawing.Point(1587, 100);
             this.BocExpander1.Name = "BocExpander1";
-            this.BocExpander1.Size = new System.Drawing.Size(155, 35);
+            this.BocExpander1.Size = new System.Drawing.Size(232, 37);
             this.BocExpander1.TabIndex = 108;
             this.BocExpander1.Text = "Chart Configuration";
             this.BocExpander1.UseAnimation = true;
@@ -3617,10 +3544,9 @@ namespace BudgetExecution
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(130)))), ((int)(((byte)(180)))));
-            this.label5.Location = new System.Drawing.Point(13, 105);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Location = new System.Drawing.Point(20, 162);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(56, 15);
+            this.label5.Size = new System.Drawing.Size(79, 22);
             this.label5.TabIndex = 119;
             this.label5.Text = "Measure";
             // 
@@ -3629,10 +3555,9 @@ namespace BudgetExecution
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(130)))), ((int)(((byte)(180)))));
-            this.label6.Location = new System.Drawing.Point(13, 38);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Location = new System.Drawing.Point(20, 58);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(65, 15);
+            this.label6.Size = new System.Drawing.Size(100, 22);
             this.label6.TabIndex = 118;
             this.label6.Text = "Chart Type";
             // 
@@ -3656,13 +3581,12 @@ namespace BudgetExecution
             this.BocFilter1.Items.AddRange(new object[] {
             "Pie ",
             "Column"});
-            this.BocFilter1.Location = new System.Drawing.Point(19, 55);
-            this.BocFilter1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BocFilter1.Location = new System.Drawing.Point(28, 85);
             this.BocFilter1.MaxDropDownItems = 20;
             this.BocFilter1.Name = "BocFilter1";
             this.BocFilter1.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.BocFilter1.SelectedItemForeColor = System.Drawing.Color.White;
-            this.BocFilter1.Size = new System.Drawing.Size(117, 36);
+            this.BocFilter1.Size = new System.Drawing.Size(174, 36);
             this.BocFilter1.Style = MetroSet_UI.Design.Style.Dark;
             this.BocFilter1.StyleManager = null;
             this.BocFilter1.TabIndex = 112;
@@ -3692,13 +3616,12 @@ namespace BudgetExecution
             "Count",
             "Average",
             "Ratio"});
-            this.BocFilter2.Location = new System.Drawing.Point(19, 123);
-            this.BocFilter2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BocFilter2.Location = new System.Drawing.Point(28, 189);
             this.BocFilter2.MaxDropDownItems = 20;
             this.BocFilter2.Name = "BocFilter2";
             this.BocFilter2.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.BocFilter2.SelectedItemForeColor = System.Drawing.Color.White;
-            this.BocFilter2.Size = new System.Drawing.Size(117, 36);
+            this.BocFilter2.Size = new System.Drawing.Size(174, 36);
             this.BocFilter2.Style = MetroSet_UI.Design.Style.Dark;
             this.BocFilter2.StyleManager = null;
             this.BocFilter2.TabIndex = 1;
@@ -3740,14 +3663,14 @@ namespace BudgetExecution
             // 
             // 
             // 
-            this.BocChart.Legend.Location = new System.Drawing.Point(5, 5);
-            this.BocChart.Legend.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.BocChart.Legend.Location = new System.Drawing.Point(8, 8);
+            this.BocChart.Legend.Margin = new System.Windows.Forms.Padding(2);
             this.BocChart.Legend.Position = Syncfusion.Windows.Forms.Chart.ChartDock.Floating;
             this.BocChart.Legend.Visible = false;
             this.BocChart.LegendsPlacement = Syncfusion.Windows.Forms.Chart.ChartPlacement.Outside;
             this.BocChart.Localize = null;
-            this.BocChart.Location = new System.Drawing.Point(13, 65);
-            this.BocChart.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.BocChart.Location = new System.Drawing.Point(20, 100);
+            this.BocChart.Margin = new System.Windows.Forms.Padding(2);
             this.BocChart.Name = "BocChart";
             this.BocChart.Palette = Syncfusion.Windows.Forms.Chart.ChartColorPalette.Custom;
             this.BocChart.PrimaryXAxis.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -3814,7 +3737,7 @@ namespace BudgetExecution
             this.BocChart.Series3D = true;
             this.BocChart.SeriesHighlight = true;
             this.BocChart.ShadowColor = new Syncfusion.Drawing.BrushInfo(Syncfusion.Drawing.GradientStyle.PathRectangle, System.Drawing.SystemColors.WindowText, System.Drawing.Color.Silver);
-            this.BocChart.Size = new System.Drawing.Size(1000, 468);
+            this.BocChart.Size = new System.Drawing.Size(1500, 720);
             this.BocChart.Spacing = 5F;
             this.BocChart.SpacingBetweenPoints = 5F;
             this.BocChart.Style3D = true;
@@ -3841,11 +3764,10 @@ namespace BudgetExecution
             this.FundTab.Controls.Add(this.FundChart);
             this.FundTab.Image = null;
             this.FundTab.ImageSize = new System.Drawing.Size(16, 16);
-            this.FundTab.Location = new System.Drawing.Point(0, 32);
-            this.FundTab.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.FundTab.Location = new System.Drawing.Point(0, 39);
             this.FundTab.Name = "FundTab";
             this.FundTab.ShowCloseButton = true;
-            this.FundTab.Size = new System.Drawing.Size(1266, 620);
+            this.FundTab.Size = new System.Drawing.Size(1894, 969);
             this.FundTab.TabForeColor = System.Drawing.Color.LightSteelBlue;
             this.FundTab.TabIndex = 1;
             this.FundTab.Tag = "Appropriation";
@@ -3864,10 +3786,9 @@ namespace BudgetExecution
             this.FundExpander2.Controls.Add(this.FundFilter3);
             this.FundExpander2.ExpandedHeight = 292;
             this.FundExpander2.IsExpanded = false;
-            this.FundExpander2.Location = new System.Drawing.Point(1061, 271);
-            this.FundExpander2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.FundExpander2.Location = new System.Drawing.Point(1587, 417);
             this.FundExpander2.Name = "FundExpander2";
-            this.FundExpander2.Size = new System.Drawing.Size(153, 35);
+            this.FundExpander2.Size = new System.Drawing.Size(230, 37);
             this.FundExpander2.TabIndex = 108;
             this.FundExpander2.Text = "Chart Filters";
             this.FundExpander2.UseAnimation = true;
@@ -3877,10 +3798,9 @@ namespace BudgetExecution
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(130)))), ((int)(((byte)(180)))));
-            this.label3.Location = new System.Drawing.Point(21, 42);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(32, 65);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(34, 15);
+            this.label3.Size = new System.Drawing.Size(50, 22);
             this.label3.TabIndex = 116;
             this.label3.Text = "Filter";
             // 
@@ -3889,10 +3809,9 @@ namespace BudgetExecution
             this.label25.AutoSize = true;
             this.label25.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.label25.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(130)))), ((int)(((byte)(180)))));
-            this.label25.Location = new System.Drawing.Point(23, 127);
-            this.label25.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label25.Location = new System.Drawing.Point(34, 195);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(58, 15);
+            this.label25.Size = new System.Drawing.Size(84, 22);
             this.label25.TabIndex = 116;
             this.label25.Text = "Grouping";
             // 
@@ -3920,13 +3839,12 @@ namespace BudgetExecution
             "Objective",
             "RC",
             "ProgramArea"});
-            this.FundFilter4.Location = new System.Drawing.Point(23, 149);
-            this.FundFilter4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.FundFilter4.Location = new System.Drawing.Point(34, 229);
             this.FundFilter4.MaxDropDownItems = 20;
             this.FundFilter4.Name = "FundFilter4";
             this.FundFilter4.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.FundFilter4.SelectedItemForeColor = System.Drawing.Color.White;
-            this.FundFilter4.Size = new System.Drawing.Size(117, 36);
+            this.FundFilter4.Size = new System.Drawing.Size(174, 36);
             this.FundFilter4.Style = MetroSet_UI.Design.Style.Dark;
             this.FundFilter4.StyleManager = null;
             this.FundFilter4.TabIndex = 108;
@@ -3956,13 +3874,12 @@ namespace BudgetExecution
             "Count",
             "Average",
             "Ratio"});
-            this.FundFilter3.Location = new System.Drawing.Point(23, 64);
-            this.FundFilter3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.FundFilter3.Location = new System.Drawing.Point(34, 98);
             this.FundFilter3.MaxDropDownItems = 20;
             this.FundFilter3.Name = "FundFilter3";
             this.FundFilter3.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.FundFilter3.SelectedItemForeColor = System.Drawing.Color.White;
-            this.FundFilter3.Size = new System.Drawing.Size(117, 36);
+            this.FundFilter3.Size = new System.Drawing.Size(174, 36);
             this.FundFilter3.Style = MetroSet_UI.Design.Style.Dark;
             this.FundFilter3.StyleManager = null;
             this.FundFilter3.TabIndex = 108;
@@ -3982,10 +3899,9 @@ namespace BudgetExecution
             this.FundExpander1.Controls.Add(this.FundFilter2);
             this.FundExpander1.ExpandedHeight = 283;
             this.FundExpander1.IsExpanded = false;
-            this.FundExpander1.Location = new System.Drawing.Point(1061, 65);
-            this.FundExpander1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.FundExpander1.Location = new System.Drawing.Point(1587, 100);
             this.FundExpander1.Name = "FundExpander1";
-            this.FundExpander1.Size = new System.Drawing.Size(153, 35);
+            this.FundExpander1.Size = new System.Drawing.Size(230, 37);
             this.FundExpander1.TabIndex = 107;
             this.FundExpander1.Text = "Chart Configuration";
             this.FundExpander1.UseAnimation = true;
@@ -3995,10 +3911,9 @@ namespace BudgetExecution
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(130)))), ((int)(((byte)(180)))));
-            this.label2.Location = new System.Drawing.Point(21, 112);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(32, 172);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(56, 15);
+            this.label2.Size = new System.Drawing.Size(79, 22);
             this.label2.TabIndex = 115;
             this.label2.Text = "Measure";
             // 
@@ -4007,10 +3922,9 @@ namespace BudgetExecution
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(130)))), ((int)(((byte)(180)))));
-            this.label1.Location = new System.Drawing.Point(21, 42);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(32, 65);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(65, 15);
+            this.label1.Size = new System.Drawing.Size(100, 22);
             this.label1.TabIndex = 114;
             this.label1.Text = "Chart Type";
             // 
@@ -4034,13 +3948,12 @@ namespace BudgetExecution
             this.FundFilter1.Items.AddRange(new object[] {
             "Pie ",
             "Column"});
-            this.FundFilter1.Location = new System.Drawing.Point(21, 58);
-            this.FundFilter1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.FundFilter1.Location = new System.Drawing.Point(32, 89);
             this.FundFilter1.MaxDropDownItems = 20;
             this.FundFilter1.Name = "FundFilter1";
             this.FundFilter1.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.FundFilter1.SelectedItemForeColor = System.Drawing.Color.White;
-            this.FundFilter1.Size = new System.Drawing.Size(117, 36);
+            this.FundFilter1.Size = new System.Drawing.Size(174, 36);
             this.FundFilter1.Style = MetroSet_UI.Design.Style.Dark;
             this.FundFilter1.StyleManager = null;
             this.FundFilter1.TabIndex = 113;
@@ -4069,13 +3982,12 @@ namespace BudgetExecution
             "Count",
             "Average",
             "Ratio"});
-            this.FundFilter2.Location = new System.Drawing.Point(21, 129);
-            this.FundFilter2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.FundFilter2.Location = new System.Drawing.Point(32, 198);
             this.FundFilter2.MaxDropDownItems = 20;
             this.FundFilter2.Name = "FundFilter2";
             this.FundFilter2.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.FundFilter2.SelectedItemForeColor = System.Drawing.Color.White;
-            this.FundFilter2.Size = new System.Drawing.Size(117, 36);
+            this.FundFilter2.Size = new System.Drawing.Size(174, 36);
             this.FundFilter2.Style = MetroSet_UI.Design.Style.Dark;
             this.FundFilter2.StyleManager = null;
             this.FundFilter2.TabIndex = 1;
@@ -4118,13 +4030,12 @@ namespace BudgetExecution
             // 
             // 
             // 
-            this.FundChart.Legend.Location = new System.Drawing.Point(701, 6);
-            this.FundChart.Legend.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.FundChart.Legend.Location = new System.Drawing.Point(1052, 9);
             this.FundChart.Legend.Visible = false;
             this.FundChart.LegendsPlacement = Syncfusion.Windows.Forms.Chart.ChartPlacement.Outside;
             this.FundChart.Localize = null;
-            this.FundChart.Location = new System.Drawing.Point(13, 65);
-            this.FundChart.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.FundChart.Location = new System.Drawing.Point(20, 100);
+            this.FundChart.Margin = new System.Windows.Forms.Padding(2);
             this.FundChart.Name = "FundChart";
             this.FundChart.Palette = Syncfusion.Windows.Forms.Chart.ChartColorPalette.Custom;
             this.FundChart.PrimaryXAxis.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -4192,7 +4103,7 @@ namespace BudgetExecution
             this.FundChart.Series3D = true;
             this.FundChart.SeriesHighlight = true;
             this.FundChart.ShadowColor = new Syncfusion.Drawing.BrushInfo(Syncfusion.Drawing.GradientStyle.PathRectangle, System.Drawing.SystemColors.WindowText, System.Drawing.Color.Silver);
-            this.FundChart.Size = new System.Drawing.Size(1000, 468);
+            this.FundChart.Size = new System.Drawing.Size(1500, 720);
             this.FundChart.Spacing = 5F;
             this.FundChart.SpacingBetweenPoints = 5F;
             this.FundChart.Style3D = true;
@@ -4215,7 +4126,7 @@ namespace BudgetExecution
             // 
             this.SummaryTabControl.ActiveTabForeColor = System.Drawing.SystemColors.HighlightText;
             this.SummaryTabControl.AdjustTopGap = 5;
-            this.SummaryTabControl.BeforeTouchSize = new System.Drawing.Size(1266, 652);
+            this.SummaryTabControl.BeforeTouchSize = new System.Drawing.Size(1894, 1008);
             this.SummaryTabControl.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.SummaryTabControl.BorderWidth = 0;
             this.SummaryTabControl.CloseButtonForeColor = System.Drawing.Color.Empty;
@@ -4237,14 +4148,13 @@ namespace BudgetExecution
             this.SummaryTabControl.InActiveTabForeColor = System.Drawing.Color.DarkGray;
             this.SummaryTabControl.ItemSize = new System.Drawing.Size(150, 45);
             this.SummaryTabControl.Location = new System.Drawing.Point(0, 0);
-            this.SummaryTabControl.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.SummaryTabControl.Multiline = true;
             this.SummaryTabControl.Name = "SummaryTabControl";
             this.SummaryTabControl.Padding = new System.Drawing.Point(10, 6);
             this.SummaryTabControl.SeparatorColor = System.Drawing.Color.Black;
             this.SummaryTabControl.ShowScroll = false;
             this.SummaryTabControl.ShowSeparator = true;
-            this.SummaryTabControl.Size = new System.Drawing.Size(1266, 652);
+            this.SummaryTabControl.Size = new System.Drawing.Size(1894, 1008);
             this.SummaryTabControl.TabGap = 5;
             this.SummaryTabControl.TabIndex = 0;
             this.SummaryTabControl.TabPanelBackColor = System.Drawing.Color.Black;
@@ -4259,12 +4169,11 @@ namespace BudgetExecution
             this.DatabaseTab.Controls.Add(this.FilterGroupBox);
             this.DatabaseTab.Image = null;
             this.DatabaseTab.ImageSize = new System.Drawing.Size(20, 20);
-            this.DatabaseTab.Location = new System.Drawing.Point(0, 32);
-            this.DatabaseTab.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DatabaseTab.Location = new System.Drawing.Point(0, 39);
             this.DatabaseTab.Name = "DatabaseTab";
-            this.DatabaseTab.Padding = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.DatabaseTab.Padding = new System.Windows.Forms.Padding(2);
             this.DatabaseTab.ShowCloseButton = true;
-            this.DatabaseTab.Size = new System.Drawing.Size(1266, 620);
+            this.DatabaseTab.Size = new System.Drawing.Size(1894, 969);
             this.DatabaseTab.TabIndex = 9;
             this.DatabaseTab.Tag = "Database";
             this.DatabaseTab.Text = "Account Manager";
@@ -4275,11 +4184,9 @@ namespace BudgetExecution
             this.groupBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             this.groupBox5.Controls.Add(this.AccountTabControl);
             this.groupBox5.ForeColor = System.Drawing.SystemColors.Info;
-            this.groupBox5.Location = new System.Drawing.Point(930, 105);
-            this.groupBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox5.Location = new System.Drawing.Point(1395, 162);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.groupBox5.Size = new System.Drawing.Size(305, 367);
+            this.groupBox5.Size = new System.Drawing.Size(458, 565);
             this.groupBox5.TabIndex = 161;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Allocation";
@@ -4290,7 +4197,7 @@ namespace BudgetExecution
             this.AccountTabControl.ActiveTabForeColor = System.Drawing.Color.White;
             this.AccountTabControl.AdjustTopGap = 10;
             this.AccountTabControl.BackColor = System.Drawing.Color.Black;
-            this.AccountTabControl.BeforeTouchSize = new System.Drawing.Size(301, 350);
+            this.AccountTabControl.BeforeTouchSize = new System.Drawing.Size(452, 540);
             this.AccountTabControl.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.AccountTabControl.BorderWidth = 1;
             this.AccountTabControl.CloseButtonForeColor = System.Drawing.Color.Empty;
@@ -4307,8 +4214,7 @@ namespace BudgetExecution
             this.AccountTabControl.InActiveTabForeColor = System.Drawing.Color.DarkGray;
             this.AccountTabControl.ItemSize = new System.Drawing.Size(150, 25);
             this.AccountTabControl.LevelTextAndImage = true;
-            this.AccountTabControl.Location = new System.Drawing.Point(2, 15);
-            this.AccountTabControl.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.AccountTabControl.Location = new System.Drawing.Point(3, 22);
             this.AccountTabControl.Multiline = true;
             this.AccountTabControl.Name = "AccountTabControl";
             this.AccountTabControl.Office2007ColorScheme = Syncfusion.Windows.Forms.Office2007Theme.Black;
@@ -4316,7 +4222,7 @@ namespace BudgetExecution
             this.AccountTabControl.Padding = new System.Drawing.Point(1, 1);
             this.AccountTabControl.SeparatorColor = System.Drawing.Color.Black;
             this.AccountTabControl.ShowSeparator = true;
-            this.AccountTabControl.Size = new System.Drawing.Size(301, 350);
+            this.AccountTabControl.Size = new System.Drawing.Size(452, 540);
             this.AccountTabControl.TabGap = 7;
             this.AccountTabControl.TabIndex = 150;
             this.AccountTabControl.TabPanelBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
@@ -4354,11 +4260,10 @@ namespace BudgetExecution
             this.EditTab.ForeColor = System.Drawing.Color.LightSteelBlue;
             this.EditTab.Image = ((System.Drawing.Image)(resources.GetObject("EditTab.Image")));
             this.EditTab.ImageSize = new System.Drawing.Size(20, 20);
-            this.EditTab.Location = new System.Drawing.Point(2, 36);
-            this.EditTab.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.EditTab.Location = new System.Drawing.Point(2, 1);
             this.EditTab.Name = "EditTab";
             this.EditTab.ShowCloseButton = true;
-            this.EditTab.Size = new System.Drawing.Size(297, 312);
+            this.EditTab.Size = new System.Drawing.Size(448, 537);
             this.EditTab.TabIndex = 4;
             this.EditTab.Text = "Edit";
             this.EditTab.ThemesEnabled = false;
@@ -4370,10 +4275,9 @@ namespace BudgetExecution
             this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
-            this.button5.Location = new System.Drawing.Point(211, 271);
-            this.button5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button5.Location = new System.Drawing.Point(316, 417);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(36, 29);
+            this.button5.Size = new System.Drawing.Size(54, 45);
             this.button5.TabIndex = 160;
             this.metroSetToolTip1.SetToolTip(this.button5, "Next Account");
             this.button5.UseVisualStyleBackColor = false;
@@ -4386,10 +4290,9 @@ namespace BudgetExecution
             this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.Location = new System.Drawing.Point(149, 271);
-            this.button4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button4.Location = new System.Drawing.Point(224, 417);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(38, 29);
+            this.button4.Size = new System.Drawing.Size(57, 45);
             this.button4.TabIndex = 159;
             this.metroSetToolTip1.SetToolTip(this.button4, "Previous Account");
             this.button4.UseVisualStyleBackColor = false;
@@ -4403,10 +4306,9 @@ namespace BudgetExecution
             this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.Location = new System.Drawing.Point(211, 206);
-            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button3.Location = new System.Drawing.Point(316, 317);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(36, 38);
+            this.button3.Size = new System.Drawing.Size(54, 58);
             this.button3.TabIndex = 158;
             this.metroSetToolTip1.SetToolTip(this.button3, "Remove Account");
             this.button3.UseVisualStyleBackColor = false;
@@ -4419,10 +4321,9 @@ namespace BudgetExecution
             this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(149, 206);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Location = new System.Drawing.Point(224, 317);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(47, 38);
+            this.button1.Size = new System.Drawing.Size(70, 58);
             this.button1.TabIndex = 157;
             this.metroSetToolTip1.SetToolTip(this.button1, "Upload Changes ");
             this.button1.UseVisualStyleBackColor = false;
@@ -4430,10 +4331,9 @@ namespace BudgetExecution
             // metroSetLabel20
             // 
             this.metroSetLabel20.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.metroSetLabel20.Location = new System.Drawing.Point(62, 28);
-            this.metroSetLabel20.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.metroSetLabel20.Location = new System.Drawing.Point(93, 43);
             this.metroSetLabel20.Name = "metroSetLabel20";
-            this.metroSetLabel20.Size = new System.Drawing.Size(41, 15);
+            this.metroSetLabel20.Size = new System.Drawing.Size(62, 23);
             this.metroSetLabel20.Style = MetroSet_UI.Design.Style.Dark;
             this.metroSetLabel20.StyleManager = null;
             this.metroSetLabel20.TabIndex = 156;
@@ -4454,13 +4354,12 @@ namespace BudgetExecution
             this.BudgetLevel.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.BudgetLevel.Image = null;
             this.BudgetLevel.Lines = null;
-            this.BudgetLevel.Location = new System.Drawing.Point(63, 56);
-            this.BudgetLevel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BudgetLevel.Location = new System.Drawing.Point(94, 86);
             this.BudgetLevel.MaxLength = 32767;
             this.BudgetLevel.Multiline = false;
             this.BudgetLevel.Name = "BudgetLevel";
             this.BudgetLevel.ReadOnly = false;
-            this.BudgetLevel.Size = new System.Drawing.Size(41, 26);
+            this.BudgetLevel.Size = new System.Drawing.Size(62, 40);
             this.BudgetLevel.Style = MetroSet_UI.Design.Style.Dark;
             this.BudgetLevel.StyleManager = null;
             this.BudgetLevel.TabIndex = 155;
@@ -4473,10 +4372,9 @@ namespace BudgetExecution
             // metroSetLabel19
             // 
             this.metroSetLabel19.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.metroSetLabel19.Location = new System.Drawing.Point(9, 28);
-            this.metroSetLabel19.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.metroSetLabel19.Location = new System.Drawing.Point(14, 43);
             this.metroSetLabel19.Name = "metroSetLabel19";
-            this.metroSetLabel19.Size = new System.Drawing.Size(41, 15);
+            this.metroSetLabel19.Size = new System.Drawing.Size(62, 23);
             this.metroSetLabel19.Style = MetroSet_UI.Design.Style.Dark;
             this.metroSetLabel19.StyleManager = null;
             this.metroSetLabel19.TabIndex = 154;
@@ -4497,13 +4395,12 @@ namespace BudgetExecution
             this.ID.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.ID.Image = null;
             this.ID.Lines = null;
-            this.ID.Location = new System.Drawing.Point(9, 56);
-            this.ID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ID.Location = new System.Drawing.Point(14, 86);
             this.ID.MaxLength = 32767;
             this.ID.Multiline = false;
             this.ID.Name = "ID";
             this.ID.ReadOnly = false;
-            this.ID.Size = new System.Drawing.Size(41, 26);
+            this.ID.Size = new System.Drawing.Size(62, 40);
             this.ID.Style = MetroSet_UI.Design.Style.Dark;
             this.ID.StyleManager = null;
             this.ID.TabIndex = 153;
@@ -4516,10 +4413,9 @@ namespace BudgetExecution
             // metroSetLabel1
             // 
             this.metroSetLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.metroSetLabel1.Location = new System.Drawing.Point(197, 111);
-            this.metroSetLabel1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.metroSetLabel1.Location = new System.Drawing.Point(296, 171);
             this.metroSetLabel1.Name = "metroSetLabel1";
-            this.metroSetLabel1.Size = new System.Drawing.Size(41, 15);
+            this.metroSetLabel1.Size = new System.Drawing.Size(62, 23);
             this.metroSetLabel1.Style = MetroSet_UI.Design.Style.Dark;
             this.metroSetLabel1.StyleManager = null;
             this.metroSetLabel1.TabIndex = 139;
@@ -4530,10 +4426,9 @@ namespace BudgetExecution
             // metroSetLabel2
             // 
             this.metroSetLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.metroSetLabel2.Location = new System.Drawing.Point(119, 111);
-            this.metroSetLabel2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.metroSetLabel2.Location = new System.Drawing.Point(178, 171);
             this.metroSetLabel2.Name = "metroSetLabel2";
-            this.metroSetLabel2.Size = new System.Drawing.Size(41, 15);
+            this.metroSetLabel2.Size = new System.Drawing.Size(62, 23);
             this.metroSetLabel2.Style = MetroSet_UI.Design.Style.Dark;
             this.metroSetLabel2.StyleManager = null;
             this.metroSetLabel2.TabIndex = 138;
@@ -4554,13 +4449,12 @@ namespace BudgetExecution
             this.metroSetTextBox1.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.metroSetTextBox1.Image = null;
             this.metroSetTextBox1.Lines = null;
-            this.metroSetTextBox1.Location = new System.Drawing.Point(9, 274);
-            this.metroSetTextBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.metroSetTextBox1.Location = new System.Drawing.Point(14, 422);
             this.metroSetTextBox1.MaxLength = 32767;
             this.metroSetTextBox1.Multiline = false;
             this.metroSetTextBox1.Name = "metroSetTextBox1";
             this.metroSetTextBox1.ReadOnly = false;
-            this.metroSetTextBox1.Size = new System.Drawing.Size(110, 26);
+            this.metroSetTextBox1.Size = new System.Drawing.Size(165, 40);
             this.metroSetTextBox1.Style = MetroSet_UI.Design.Style.Dark;
             this.metroSetTextBox1.StyleManager = null;
             this.metroSetTextBox1.TabIndex = 137;
@@ -4584,13 +4478,12 @@ namespace BudgetExecution
             this.Amount.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.Amount.Image = null;
             this.Amount.Lines = null;
-            this.Amount.Location = new System.Drawing.Point(9, 208);
-            this.Amount.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Amount.Location = new System.Drawing.Point(14, 320);
             this.Amount.MaxLength = 32767;
             this.Amount.Multiline = false;
             this.Amount.Name = "Amount";
             this.Amount.ReadOnly = false;
-            this.Amount.Size = new System.Drawing.Size(110, 26);
+            this.Amount.Size = new System.Drawing.Size(165, 40);
             this.Amount.Style = MetroSet_UI.Design.Style.Dark;
             this.Amount.StyleManager = null;
             this.Amount.TabIndex = 136;
@@ -4613,13 +4506,12 @@ namespace BudgetExecution
             this.Code.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.Code.Image = null;
             this.Code.Lines = null;
-            this.Code.Location = new System.Drawing.Point(174, 137);
-            this.Code.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Code.Location = new System.Drawing.Point(261, 211);
             this.Code.MaxLength = 32767;
             this.Code.Multiline = false;
             this.Code.Name = "Code";
             this.Code.ReadOnly = false;
-            this.Code.Size = new System.Drawing.Size(93, 26);
+            this.Code.Size = new System.Drawing.Size(140, 40);
             this.Code.Style = MetroSet_UI.Design.Style.Dark;
             this.Code.StyleManager = null;
             this.Code.TabIndex = 135;
@@ -4642,13 +4534,12 @@ namespace BudgetExecution
             this.BOC.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.BOC.Image = null;
             this.BOC.Lines = null;
-            this.BOC.Location = new System.Drawing.Point(119, 137);
-            this.BOC.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BOC.Location = new System.Drawing.Point(178, 211);
             this.BOC.MaxLength = 32767;
             this.BOC.Multiline = false;
             this.BOC.Name = "BOC";
             this.BOC.ReadOnly = false;
-            this.BOC.Size = new System.Drawing.Size(41, 26);
+            this.BOC.Size = new System.Drawing.Size(62, 40);
             this.BOC.Style = MetroSet_UI.Design.Style.Dark;
             this.BOC.StyleManager = null;
             this.BOC.TabIndex = 134;
@@ -4661,10 +4552,9 @@ namespace BudgetExecution
             // metroSetLabel12
             // 
             this.metroSetLabel12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.metroSetLabel12.Location = new System.Drawing.Point(9, 252);
-            this.metroSetLabel12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.metroSetLabel12.Location = new System.Drawing.Point(14, 388);
             this.metroSetLabel12.Name = "metroSetLabel12";
-            this.metroSetLabel12.Size = new System.Drawing.Size(97, 15);
+            this.metroSetLabel12.Size = new System.Drawing.Size(146, 23);
             this.metroSetLabel12.Style = MetroSet_UI.Design.Style.Dark;
             this.metroSetLabel12.StyleManager = null;
             this.metroSetLabel12.TabIndex = 133;
@@ -4675,10 +4565,9 @@ namespace BudgetExecution
             // metroSetLabel13
             // 
             this.metroSetLabel13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.metroSetLabel13.Location = new System.Drawing.Point(9, 191);
-            this.metroSetLabel13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.metroSetLabel13.Location = new System.Drawing.Point(14, 294);
             this.metroSetLabel13.Name = "metroSetLabel13";
-            this.metroSetLabel13.Size = new System.Drawing.Size(63, 15);
+            this.metroSetLabel13.Size = new System.Drawing.Size(94, 23);
             this.metroSetLabel13.Style = MetroSet_UI.Design.Style.Dark;
             this.metroSetLabel13.StyleManager = null;
             this.metroSetLabel13.TabIndex = 132;
@@ -4689,10 +4578,9 @@ namespace BudgetExecution
             // metroSetLabel14
             // 
             this.metroSetLabel14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.metroSetLabel14.Location = new System.Drawing.Point(197, 28);
-            this.metroSetLabel14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.metroSetLabel14.Location = new System.Drawing.Point(296, 43);
             this.metroSetLabel14.Name = "metroSetLabel14";
-            this.metroSetLabel14.Size = new System.Drawing.Size(41, 15);
+            this.metroSetLabel14.Size = new System.Drawing.Size(62, 23);
             this.metroSetLabel14.Style = MetroSet_UI.Design.Style.Dark;
             this.metroSetLabel14.StyleManager = null;
             this.metroSetLabel14.TabIndex = 131;
@@ -4703,10 +4591,9 @@ namespace BudgetExecution
             // metroSetLabel16
             // 
             this.metroSetLabel16.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.metroSetLabel16.Location = new System.Drawing.Point(65, 111);
-            this.metroSetLabel16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.metroSetLabel16.Location = new System.Drawing.Point(98, 171);
             this.metroSetLabel16.Name = "metroSetLabel16";
-            this.metroSetLabel16.Size = new System.Drawing.Size(41, 15);
+            this.metroSetLabel16.Size = new System.Drawing.Size(62, 23);
             this.metroSetLabel16.Style = MetroSet_UI.Design.Style.Dark;
             this.metroSetLabel16.StyleManager = null;
             this.metroSetLabel16.TabIndex = 130;
@@ -4727,13 +4614,12 @@ namespace BudgetExecution
             this.RC.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.RC.Image = null;
             this.RC.Lines = null;
-            this.RC.Location = new System.Drawing.Point(65, 137);
-            this.RC.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.RC.Location = new System.Drawing.Point(98, 211);
             this.RC.MaxLength = 32767;
             this.RC.Multiline = false;
             this.RC.Name = "RC";
             this.RC.ReadOnly = false;
-            this.RC.Size = new System.Drawing.Size(41, 26);
+            this.RC.Size = new System.Drawing.Size(62, 40);
             this.RC.Style = MetroSet_UI.Design.Style.Dark;
             this.RC.StyleManager = null;
             this.RC.TabIndex = 129;
@@ -4756,13 +4642,12 @@ namespace BudgetExecution
             this.Fund.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.Fund.Image = null;
             this.Fund.Lines = null;
-            this.Fund.Location = new System.Drawing.Point(197, 56);
-            this.Fund.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Fund.Location = new System.Drawing.Point(296, 86);
             this.Fund.MaxLength = 32767;
             this.Fund.Multiline = false;
             this.Fund.Name = "Fund";
             this.Fund.ReadOnly = false;
-            this.Fund.Size = new System.Drawing.Size(50, 26);
+            this.Fund.Size = new System.Drawing.Size(75, 40);
             this.Fund.Style = MetroSet_UI.Design.Style.Dark;
             this.Fund.StyleManager = null;
             this.Fund.TabIndex = 128;
@@ -4775,10 +4660,9 @@ namespace BudgetExecution
             // metroSetLabel17
             // 
             this.metroSetLabel17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.metroSetLabel17.Location = new System.Drawing.Point(119, 28);
-            this.metroSetLabel17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.metroSetLabel17.Location = new System.Drawing.Point(178, 43);
             this.metroSetLabel17.Name = "metroSetLabel17";
-            this.metroSetLabel17.Size = new System.Drawing.Size(41, 15);
+            this.metroSetLabel17.Size = new System.Drawing.Size(62, 23);
             this.metroSetLabel17.Style = MetroSet_UI.Design.Style.Dark;
             this.metroSetLabel17.StyleManager = null;
             this.metroSetLabel17.TabIndex = 16;
@@ -4789,10 +4673,9 @@ namespace BudgetExecution
             // metroSetLabel18
             // 
             this.metroSetLabel18.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.metroSetLabel18.Location = new System.Drawing.Point(9, 111);
-            this.metroSetLabel18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.metroSetLabel18.Location = new System.Drawing.Point(14, 171);
             this.metroSetLabel18.Name = "metroSetLabel18";
-            this.metroSetLabel18.Size = new System.Drawing.Size(49, 15);
+            this.metroSetLabel18.Size = new System.Drawing.Size(74, 23);
             this.metroSetLabel18.Style = MetroSet_UI.Design.Style.Dark;
             this.metroSetLabel18.StyleManager = null;
             this.metroSetLabel18.TabIndex = 17;
@@ -4813,13 +4696,12 @@ namespace BudgetExecution
             this.BFY.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.BFY.Image = null;
             this.BFY.Lines = null;
-            this.BFY.Location = new System.Drawing.Point(119, 56);
-            this.BFY.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BFY.Location = new System.Drawing.Point(178, 86);
             this.BFY.MaxLength = 32767;
             this.BFY.Multiline = false;
             this.BFY.Name = "BFY";
             this.BFY.ReadOnly = false;
-            this.BFY.Size = new System.Drawing.Size(62, 26);
+            this.BFY.Size = new System.Drawing.Size(93, 40);
             this.BFY.Style = MetroSet_UI.Design.Style.Dark;
             this.BFY.StyleManager = null;
             this.BFY.TabIndex = 125;
@@ -4842,13 +4724,12 @@ namespace BudgetExecution
             this.Org.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.Org.Image = null;
             this.Org.Lines = null;
-            this.Org.Location = new System.Drawing.Point(9, 137);
-            this.Org.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Org.Location = new System.Drawing.Point(14, 211);
             this.Org.MaxLength = 32767;
             this.Org.Multiline = false;
             this.Org.Name = "Org";
             this.Org.ReadOnly = false;
-            this.Org.Size = new System.Drawing.Size(49, 26);
+            this.Org.Size = new System.Drawing.Size(74, 40);
             this.Org.Style = MetroSet_UI.Design.Style.Dark;
             this.Org.StyleManager = null;
             this.Org.TabIndex = 124;
@@ -4863,11 +4744,10 @@ namespace BudgetExecution
             this.GraphTab.Controls.Add(this.AccountChart);
             this.GraphTab.Image = ((System.Drawing.Image)(resources.GetObject("GraphTab.Image")));
             this.GraphTab.ImageSize = new System.Drawing.Size(20, 20);
-            this.GraphTab.Location = new System.Drawing.Point(2, 36);
-            this.GraphTab.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.GraphTab.Location = new System.Drawing.Point(2, 1);
             this.GraphTab.Name = "GraphTab";
             this.GraphTab.ShowCloseButton = true;
-            this.GraphTab.Size = new System.Drawing.Size(297, 312);
+            this.GraphTab.Size = new System.Drawing.Size(448, 537);
             this.GraphTab.TabBackColor = System.Drawing.Color.Black;
             this.GraphTab.TabIndex = 2;
             this.GraphTab.Text = "Graph";
@@ -4908,14 +4788,14 @@ namespace BudgetExecution
             // 
             // 
             // 
-            this.AccountChart.Legend.Location = new System.Drawing.Point(5, 5);
-            this.AccountChart.Legend.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.AccountChart.Legend.Location = new System.Drawing.Point(8, 8);
+            this.AccountChart.Legend.Margin = new System.Windows.Forms.Padding(2);
             this.AccountChart.Legend.Position = Syncfusion.Windows.Forms.Chart.ChartDock.Floating;
             this.AccountChart.Legend.Visible = false;
             this.AccountChart.LegendsPlacement = Syncfusion.Windows.Forms.Chart.ChartPlacement.Outside;
             this.AccountChart.Localize = null;
             this.AccountChart.Location = new System.Drawing.Point(0, 0);
-            this.AccountChart.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.AccountChart.Margin = new System.Windows.Forms.Padding(2);
             this.AccountChart.Name = "AccountChart";
             this.AccountChart.Palette = Syncfusion.Windows.Forms.Chart.ChartColorPalette.Custom;
             this.AccountChart.PrimaryXAxis.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -4982,7 +4862,7 @@ namespace BudgetExecution
             this.AccountChart.Series3D = true;
             this.AccountChart.SeriesHighlight = true;
             this.AccountChart.ShadowColor = new Syncfusion.Drawing.BrushInfo(Syncfusion.Drawing.GradientStyle.PathRectangle, System.Drawing.SystemColors.WindowText, System.Drawing.Color.Silver);
-            this.AccountChart.Size = new System.Drawing.Size(297, 312);
+            this.AccountChart.Size = new System.Drawing.Size(448, 537);
             this.AccountChart.Spacing = 5F;
             this.AccountChart.SpacingBetweenPoints = 5F;
             this.AccountChart.Style3D = true;
@@ -5009,86 +4889,136 @@ namespace BudgetExecution
             this.ToolNavTab.Controls.Add(this.expandCollapsePanel1);
             this.ToolNavTab.Image = ((System.Drawing.Image)(resources.GetObject("ToolNavTab.Image")));
             this.ToolNavTab.ImageSize = new System.Drawing.Size(20, 20);
-            this.ToolNavTab.Location = new System.Drawing.Point(2, 36);
-            this.ToolNavTab.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ToolNavTab.Location = new System.Drawing.Point(2, 1);
             this.ToolNavTab.Name = "ToolNavTab";
             this.ToolNavTab.ShowCloseButton = true;
-            this.ToolNavTab.Size = new System.Drawing.Size(297, 312);
+            this.ToolNavTab.Size = new System.Drawing.Size(448, 537);
             this.ToolNavTab.TabIndex = 3;
             this.ToolNavTab.Text = "Tools";
             this.ToolNavTab.ThemesEnabled = false;
             // 
-            // button2
+            // expandCollapsePanel1
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSteelBlue;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(196)))), ((int)(((byte)(222)))));
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.button2.Location = new System.Drawing.Point(25, 43);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(110, 37);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "Tranfer Form";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.BottomRight;
-            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.metroSetToolTip1.SetToolTip(this.button2, "Transfer");
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.ReprogramButton_OnClick);
+            this.expandCollapsePanel1.BackColor = System.Drawing.Color.Black;
+            this.expandCollapsePanel1.ButtonSize = MakarovDev.ExpandCollapsePanel.ExpandCollapseButton.ExpandButtonSize.Small;
+            this.expandCollapsePanel1.ButtonStyle = MakarovDev.ExpandCollapsePanel.ExpandCollapseButton.ExpandButtonStyle.Circle;
+            this.expandCollapsePanel1.Controls.Add(this.button8);
+            this.expandCollapsePanel1.Controls.Add(this.button14);
+            this.expandCollapsePanel1.Controls.Add(this.button13);
+            this.expandCollapsePanel1.Controls.Add(this.button15);
+            this.expandCollapsePanel1.Controls.Add(this.button16);
+            this.expandCollapsePanel1.Controls.Add(this.CalendatButton);
+            this.expandCollapsePanel1.Controls.Add(this.CalculatorButton);
+            this.expandCollapsePanel1.Controls.Add(this.ExcelButton);
+            this.expandCollapsePanel1.Controls.Add(this.button2);
+            this.expandCollapsePanel1.ExpandedHeight = 275;
+            this.expandCollapsePanel1.IsExpanded = false;
+            this.expandCollapsePanel1.Location = new System.Drawing.Point(21, 23);
+            this.expandCollapsePanel1.Name = "expandCollapsePanel1";
+            this.expandCollapsePanel1.Size = new System.Drawing.Size(392, 37);
+            this.expandCollapsePanel1.TabIndex = 170;
+            this.expandCollapsePanel1.Text = "Main Navigation";
+            this.expandCollapsePanel1.UseAnimation = true;
             // 
-            // ExcelButton
+            // button8
             // 
-            this.ExcelButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.ExcelButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ExcelButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.ExcelButton.FlatAppearance.BorderSize = 0;
-            this.ExcelButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSteelBlue;
-            this.ExcelButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
-            this.ExcelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ExcelButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(196)))), ((int)(((byte)(222)))));
-            this.ExcelButton.Image = ((System.Drawing.Image)(resources.GetObject("ExcelButton.Image")));
-            this.ExcelButton.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.ExcelButton.Location = new System.Drawing.Point(25, 96);
-            this.ExcelButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.ExcelButton.Name = "ExcelButton";
-            this.ExcelButton.Size = new System.Drawing.Size(110, 37);
-            this.ExcelButton.TabIndex = 3;
-            this.ExcelButton.Text = "Excel Report";
-            this.ExcelButton.TextAlign = System.Drawing.ContentAlignment.BottomRight;
-            this.ExcelButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.metroSetToolTip1.SetToolTip(this.ExcelButton, "Excel Export");
-            this.ExcelButton.UseVisualStyleBackColor = false;
-            this.ExcelButton.Click += new System.EventHandler(this.ExcelButton_Click);
+            this.button8.BackColor = System.Drawing.Color.Transparent;
+            this.button8.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.button8.FlatAppearance.BorderSize = 0;
+            this.button8.FlatAppearance.MouseDownBackColor = System.Drawing.Color.PowderBlue;
+            this.button8.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(225)))));
+            this.button8.Image = ((System.Drawing.Image)(resources.GetObject("button8.Image")));
+            this.button8.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.button8.Location = new System.Drawing.Point(226, 317);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(152, 58);
+            this.button8.TabIndex = 32;
+            this.button8.Text = "Import";
+            this.button8.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.button8.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button8.UseVisualStyleBackColor = false;
             // 
-            // CalculatorButton
+            // button14
             // 
-            this.CalculatorButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.CalculatorButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.CalculatorButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.CalculatorButton.FlatAppearance.BorderSize = 0;
-            this.CalculatorButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSteelBlue;
-            this.CalculatorButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
-            this.CalculatorButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CalculatorButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(196)))), ((int)(((byte)(222)))));
-            this.CalculatorButton.Image = ((System.Drawing.Image)(resources.GetObject("CalculatorButton.Image")));
-            this.CalculatorButton.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.CalculatorButton.Location = new System.Drawing.Point(25, 137);
-            this.CalculatorButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.CalculatorButton.Name = "CalculatorButton";
-            this.CalculatorButton.Size = new System.Drawing.Size(110, 41);
-            this.CalculatorButton.TabIndex = 2;
-            this.CalculatorButton.Text = "Calculator";
-            this.CalculatorButton.TextAlign = System.Drawing.ContentAlignment.BottomRight;
-            this.CalculatorButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.metroSetToolTip1.SetToolTip(this.CalculatorButton, "Budget Calculator");
-            this.CalculatorButton.UseVisualStyleBackColor = false;
-            this.CalculatorButton.Click += new System.EventHandler(this.CalculatorButton_Click);
+            this.button14.BackColor = System.Drawing.Color.Transparent;
+            this.button14.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.button14.FlatAppearance.BorderSize = 0;
+            this.button14.FlatAppearance.MouseDownBackColor = System.Drawing.Color.PowderBlue;
+            this.button14.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(225)))));
+            this.button14.Image = ((System.Drawing.Image)(resources.GetObject("button14.Image")));
+            this.button14.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.button14.Location = new System.Drawing.Point(226, 234);
+            this.button14.Name = "button14";
+            this.button14.Size = new System.Drawing.Size(152, 58);
+            this.button14.TabIndex = 44;
+            this.button14.Text = "Add File";
+            this.button14.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.button14.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button14.UseVisualStyleBackColor = false;
+            // 
+            // button13
+            // 
+            this.button13.BackColor = System.Drawing.Color.Transparent;
+            this.button13.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.button13.FlatAppearance.BorderSize = 0;
+            this.button13.FlatAppearance.MouseDownBackColor = System.Drawing.Color.PowderBlue;
+            this.button13.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(225)))));
+            this.button13.Image = ((System.Drawing.Image)(resources.GetObject("button13.Image")));
+            this.button13.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.button13.Location = new System.Drawing.Point(226, 142);
+            this.button13.Name = "button13";
+            this.button13.Size = new System.Drawing.Size(152, 68);
+            this.button13.TabIndex = 45;
+            this.button13.Text = "Add Table";
+            this.button13.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.button13.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button13.UseVisualStyleBackColor = false;
+            // 
+            // button15
+            // 
+            this.button15.BackColor = System.Drawing.Color.Transparent;
+            this.button15.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.button15.FlatAppearance.BorderSize = 0;
+            this.button15.FlatAppearance.MouseDownBackColor = System.Drawing.Color.PowderBlue;
+            this.button15.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.button15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(225)))));
+            this.button15.Image = ((System.Drawing.Image)(resources.GetObject("button15.Image")));
+            this.button15.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.button15.Location = new System.Drawing.Point(226, 58);
+            this.button15.Name = "button15";
+            this.button15.Size = new System.Drawing.Size(134, 62);
+            this.button15.TabIndex = 35;
+            this.button15.Text = "button15";
+            this.button15.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.button15.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button15.UseVisualStyleBackColor = false;
+            // 
+            // button16
+            // 
+            this.button16.BackColor = System.Drawing.Color.Transparent;
+            this.button16.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.button16.FlatAppearance.BorderSize = 0;
+            this.button16.FlatAppearance.MouseDownBackColor = System.Drawing.Color.PowderBlue;
+            this.button16.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.button16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(225)))));
+            this.button16.Image = ((System.Drawing.Image)(resources.GetObject("button16.Image")));
+            this.button16.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.button16.Location = new System.Drawing.Point(38, 349);
+            this.button16.Name = "button16";
+            this.button16.Size = new System.Drawing.Size(165, 62);
+            this.button16.TabIndex = 46;
+            this.button16.Text = "button16";
+            this.button16.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.button16.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button16.UseVisualStyleBackColor = false;
             // 
             // CalendatButton
             // 
@@ -5102,10 +5032,9 @@ namespace BudgetExecution
             this.CalendatButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(196)))), ((int)(((byte)(222)))));
             this.CalendatButton.Image = ((System.Drawing.Image)(resources.GetObject("CalendatButton.Image")));
             this.CalendatButton.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.CalendatButton.Location = new System.Drawing.Point(25, 183);
-            this.CalendatButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CalendatButton.Location = new System.Drawing.Point(38, 282);
             this.CalendatButton.Name = "CalendatButton";
-            this.CalendatButton.Size = new System.Drawing.Size(110, 36);
+            this.CalendatButton.Size = new System.Drawing.Size(165, 55);
             this.CalendatButton.TabIndex = 1;
             this.CalendatButton.Text = "Calendar";
             this.CalendatButton.TextAlign = System.Drawing.ContentAlignment.BottomRight;
@@ -5113,6 +5042,75 @@ namespace BudgetExecution
             this.metroSetToolTip1.SetToolTip(this.CalendatButton, "Calendar");
             this.CalendatButton.UseVisualStyleBackColor = false;
             this.CalendatButton.Click += new System.EventHandler(this.CalendatButton_Click);
+            // 
+            // CalculatorButton
+            // 
+            this.CalculatorButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.CalculatorButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.CalculatorButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.CalculatorButton.FlatAppearance.BorderSize = 0;
+            this.CalculatorButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSteelBlue;
+            this.CalculatorButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.CalculatorButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CalculatorButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(196)))), ((int)(((byte)(222)))));
+            this.CalculatorButton.Image = ((System.Drawing.Image)(resources.GetObject("CalculatorButton.Image")));
+            this.CalculatorButton.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.CalculatorButton.Location = new System.Drawing.Point(38, 211);
+            this.CalculatorButton.Name = "CalculatorButton";
+            this.CalculatorButton.Size = new System.Drawing.Size(165, 63);
+            this.CalculatorButton.TabIndex = 2;
+            this.CalculatorButton.Text = "Calculator";
+            this.CalculatorButton.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.CalculatorButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.metroSetToolTip1.SetToolTip(this.CalculatorButton, "Budget Calculator");
+            this.CalculatorButton.UseVisualStyleBackColor = false;
+            this.CalculatorButton.Click += new System.EventHandler(this.CalculatorButton_Click);
+            // 
+            // ExcelButton
+            // 
+            this.ExcelButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.ExcelButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ExcelButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.ExcelButton.FlatAppearance.BorderSize = 0;
+            this.ExcelButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSteelBlue;
+            this.ExcelButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.ExcelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ExcelButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(196)))), ((int)(((byte)(222)))));
+            this.ExcelButton.Image = ((System.Drawing.Image)(resources.GetObject("ExcelButton.Image")));
+            this.ExcelButton.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.ExcelButton.Location = new System.Drawing.Point(38, 148);
+            this.ExcelButton.Name = "ExcelButton";
+            this.ExcelButton.Size = new System.Drawing.Size(165, 57);
+            this.ExcelButton.TabIndex = 3;
+            this.ExcelButton.Text = "Excel Report";
+            this.ExcelButton.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.ExcelButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.metroSetToolTip1.SetToolTip(this.ExcelButton, "Excel Export");
+            this.ExcelButton.UseVisualStyleBackColor = false;
+            this.ExcelButton.Click += new System.EventHandler(this.ExcelButton_Click);
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSteelBlue;
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(176)))), ((int)(((byte)(196)))), ((int)(((byte)(222)))));
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.button2.Location = new System.Drawing.Point(38, 66);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(165, 57);
+            this.button2.TabIndex = 4;
+            this.button2.Text = "Tranfer Form";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.metroSetToolTip1.SetToolTip(this.button2, "Transfer");
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.ReprogramButton_OnClick);
             // 
             // GridGroupBox
             // 
@@ -5122,11 +5120,11 @@ namespace BudgetExecution
             this.GridGroupBox.Controls.Add(this.Grid);
             this.GridGroupBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.GridGroupBox.ForeColor = System.Drawing.SystemColors.Info;
-            this.GridGroupBox.Location = new System.Drawing.Point(239, 105);
-            this.GridGroupBox.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.GridGroupBox.Location = new System.Drawing.Point(358, 162);
+            this.GridGroupBox.Margin = new System.Windows.Forms.Padding(2);
             this.GridGroupBox.Name = "GridGroupBox";
-            this.GridGroupBox.Padding = new System.Windows.Forms.Padding(1, 1, 1, 1);
-            this.GridGroupBox.Size = new System.Drawing.Size(649, 367);
+            this.GridGroupBox.Padding = new System.Windows.Forms.Padding(2);
+            this.GridGroupBox.Size = new System.Drawing.Size(974, 565);
             this.GridGroupBox.TabIndex = 159;
             this.GridGroupBox.TabStop = false;
             this.GridGroupBox.Text = "Database";
@@ -5136,11 +5134,11 @@ namespace BudgetExecution
             this.tableLayoutPanel2.ColumnCount = 7;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 53.25444F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 46.74556F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 83F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 86F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 87F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 96F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 95F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 124F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 129F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 130F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 144F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 147F));
             this.tableLayoutPanel2.Controls.Add(this.button6, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.button12, 6, 0);
             this.tableLayoutPanel2.Controls.Add(this.button7, 1, 0);
@@ -5148,11 +5146,12 @@ namespace BudgetExecution
             this.tableLayoutPanel2.Controls.Add(this.GridRefreshButton, 2, 0);
             this.tableLayoutPanel2.Controls.Add(this.button9, 3, 0);
             this.tableLayoutPanel2.Controls.Add(this.button10, 4, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(20, 325);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(30, 500);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 65.57377F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(602, 37);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(903, 57);
             this.tableLayoutPanel2.TabIndex = 169;
             // 
             // button6
@@ -5163,9 +5162,10 @@ namespace BudgetExecution
             this.button6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
-            this.button6.Location = new System.Drawing.Point(3, 3);
+            this.button6.Location = new System.Drawing.Point(4, 5);
+            this.button6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(60, 23);
+            this.button6.Size = new System.Drawing.Size(90, 35);
             this.button6.TabIndex = 162;
             this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.metroSetToolTip1.SetToolTip(this.button6, "Previous Account");
@@ -5180,9 +5180,10 @@ namespace BudgetExecution
             this.button12.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button12.Image = ((System.Drawing.Image)(resources.GetObject("button12.Image")));
-            this.button12.Location = new System.Drawing.Point(509, 3);
+            this.button12.Location = new System.Drawing.Point(759, 5);
+            this.button12.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(70, 23);
+            this.button12.Size = new System.Drawing.Size(105, 35);
             this.button12.TabIndex = 168;
             this.button12.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.metroSetToolTip1.SetToolTip(this.button12, "Remove Account");
@@ -5196,9 +5197,10 @@ namespace BudgetExecution
             this.button7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button7.Image = ((System.Drawing.Image)(resources.GetObject("button7.Image")));
-            this.button7.Location = new System.Drawing.Point(85, 3);
+            this.button7.Location = new System.Drawing.Point(125, 5);
+            this.button7.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(51, 23);
+            this.button7.Size = new System.Drawing.Size(76, 35);
             this.button7.TabIndex = 163;
             this.button7.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.metroSetToolTip1.SetToolTip(this.button7, "Next Account");
@@ -5213,9 +5215,10 @@ namespace BudgetExecution
             this.button11.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button11.Image = ((System.Drawing.Image)(resources.GetObject("button11.Image")));
-            this.button11.Location = new System.Drawing.Point(413, 3);
+            this.button11.Location = new System.Drawing.Point(615, 5);
+            this.button11.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(70, 23);
+            this.button11.Size = new System.Drawing.Size(105, 35);
             this.button11.TabIndex = 167;
             this.button11.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.metroSetToolTip1.SetToolTip(this.button11, "Copy Account\r\n");
@@ -5231,9 +5234,10 @@ namespace BudgetExecution
             this.GridRefreshButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.GridRefreshButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.GridRefreshButton.Image = ((System.Drawing.Image)(resources.GetObject("GridRefreshButton.Image")));
-            this.GridRefreshButton.Location = new System.Drawing.Point(157, 3);
+            this.GridRefreshButton.Location = new System.Drawing.Point(232, 5);
+            this.GridRefreshButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.GridRefreshButton.Name = "GridRefreshButton";
-            this.GridRefreshButton.Size = new System.Drawing.Size(65, 23);
+            this.GridRefreshButton.Size = new System.Drawing.Size(98, 35);
             this.GridRefreshButton.TabIndex = 164;
             this.GridRefreshButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.metroSetToolTip1.SetToolTip(this.GridRefreshButton, "Refresh Data");
@@ -5249,9 +5253,10 @@ namespace BudgetExecution
             this.button9.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button9.Image = ((System.Drawing.Image)(resources.GetObject("button9.Image")));
-            this.button9.Location = new System.Drawing.Point(240, 3);
+            this.button9.Location = new System.Drawing.Point(356, 5);
+            this.button9.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(59, 23);
+            this.button9.Size = new System.Drawing.Size(88, 35);
             this.button9.TabIndex = 165;
             this.button9.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.metroSetToolTip1.SetToolTip(this.button9, "Edit Account");
@@ -5268,9 +5273,10 @@ namespace BudgetExecution
             this.button10.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button10.Image = ((System.Drawing.Image)(resources.GetObject("button10.Image")));
-            this.button10.Location = new System.Drawing.Point(326, 3);
+            this.button10.Location = new System.Drawing.Point(485, 5);
+            this.button10.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(61, 23);
+            this.button10.Size = new System.Drawing.Size(92, 35);
             this.button10.TabIndex = 166;
             this.button10.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.metroSetToolTip1.SetToolTip(this.button10, "Add  Account");
@@ -5282,24 +5288,23 @@ namespace BudgetExecution
             this.tableLayoutPanel1.ColumnCount = 8;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30.89888F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 69.10112F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 117F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 91F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 13F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 65F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 86F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 176F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 136F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 68F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 98F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 133F));
             this.tableLayoutPanel1.Controls.Add(this.label31, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.label32, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.label34, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.label37, 3, 0);
             this.tableLayoutPanel1.Controls.Add(this.label40, 6, 0);
             this.tableLayoutPanel1.Controls.Add(this.label41, 7, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(18, 29);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(27, 45);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(584, 29);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(876, 45);
             this.tableLayoutPanel1.TabIndex = 159;
             // 
             // label31
@@ -5307,10 +5312,9 @@ namespace BudgetExecution
             this.label31.AutoSize = true;
             this.label31.Dock = System.Windows.Forms.DockStyle.Right;
             this.label31.ForeColor = System.Drawing.SystemColors.Info;
-            this.label31.Location = new System.Drawing.Point(12, 0);
-            this.label31.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label31.Location = new System.Drawing.Point(20, 0);
             this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(37, 29);
+            this.label31.Size = new System.Drawing.Size(52, 45);
             this.label31.TabIndex = 153;
             this.label31.Text = "Total: ";
             // 
@@ -5318,10 +5322,9 @@ namespace BudgetExecution
             // 
             this.label32.AutoSize = true;
             this.label32.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label32.Location = new System.Drawing.Point(53, 0);
-            this.label32.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label32.Location = new System.Drawing.Point(78, 0);
             this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(41, 29);
+            this.label32.Size = new System.Drawing.Size(60, 45);
             this.label32.TabIndex = 154;
             this.label32.Text = "label32";
             // 
@@ -5330,10 +5333,9 @@ namespace BudgetExecution
             this.label34.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label34.AutoSize = true;
             this.label34.ForeColor = System.Drawing.SystemColors.Info;
-            this.label34.Location = new System.Drawing.Point(228, 0);
-            this.label34.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label34.Location = new System.Drawing.Point(341, 0);
             this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(53, 13);
+            this.label34.Size = new System.Drawing.Size(76, 20);
             this.label34.TabIndex = 155;
             this.label34.Text = "Average: ";
             // 
@@ -5341,10 +5343,9 @@ namespace BudgetExecution
             // 
             this.label37.AutoSize = true;
             this.label37.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label37.Location = new System.Drawing.Point(285, 0);
-            this.label37.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label37.Location = new System.Drawing.Point(423, 0);
             this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(41, 29);
+            this.label37.Size = new System.Drawing.Size(60, 45);
             this.label37.TabIndex = 156;
             this.label37.Text = "label37";
             // 
@@ -5353,10 +5354,9 @@ namespace BudgetExecution
             this.label40.AutoSize = true;
             this.label40.Dock = System.Windows.Forms.DockStyle.Right;
             this.label40.ForeColor = System.Drawing.SystemColors.Info;
-            this.label40.Location = new System.Drawing.Point(437, 0);
-            this.label40.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label40.Location = new System.Drawing.Point(655, 0);
             this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(58, 29);
+            this.label40.Size = new System.Drawing.Size(84, 45);
             this.label40.TabIndex = 159;
             this.label40.Text = "Accounts: ";
             // 
@@ -5364,10 +5364,9 @@ namespace BudgetExecution
             // 
             this.label41.AutoSize = true;
             this.label41.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label41.Location = new System.Drawing.Point(499, 0);
-            this.label41.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label41.Location = new System.Drawing.Point(745, 0);
             this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(41, 29);
+            this.label41.Size = new System.Drawing.Size(60, 45);
             this.label41.TabIndex = 160;
             this.label41.Text = "label41";
             // 
@@ -5399,8 +5398,7 @@ namespace BudgetExecution
             this.Grid.DefaultCellStyle = dataGridViewCellStyle3;
             this.Grid.EnableHeadersVisualStyles = false;
             this.Grid.GridColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.Grid.Location = new System.Drawing.Point(20, 66);
-            this.Grid.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Grid.Location = new System.Drawing.Point(30, 102);
             this.Grid.MultiSelect = false;
             this.Grid.Name = "Grid";
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -5423,7 +5421,7 @@ namespace BudgetExecution
             this.Grid.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
             this.Grid.RowTemplate.Height = 30;
             this.Grid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.Grid.Size = new System.Drawing.Size(602, 252);
+            this.Grid.Size = new System.Drawing.Size(903, 388);
             this.Grid.TabIndex = 150;
             this.Grid.DoubleClick += new System.EventHandler(this.Grid_OnDoubleClick);
             // 
@@ -5437,11 +5435,9 @@ namespace BudgetExecution
             this.FilterGroupBox.Controls.Add(this.GridBocFilter);
             this.FilterGroupBox.Controls.Add(this.GridFundFilter);
             this.FilterGroupBox.ForeColor = System.Drawing.SystemColors.Info;
-            this.FilterGroupBox.Location = new System.Drawing.Point(33, 105);
-            this.FilterGroupBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.FilterGroupBox.Location = new System.Drawing.Point(50, 162);
             this.FilterGroupBox.Name = "FilterGroupBox";
-            this.FilterGroupBox.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.FilterGroupBox.Size = new System.Drawing.Size(165, 367);
+            this.FilterGroupBox.Size = new System.Drawing.Size(248, 565);
             this.FilterGroupBox.TabIndex = 160;
             this.FilterGroupBox.TabStop = false;
             this.FilterGroupBox.Text = "Filters";
@@ -5450,10 +5446,9 @@ namespace BudgetExecution
             // 
             this.lblPrc.AutoSize = true;
             this.lblPrc.ForeColor = System.Drawing.SystemColors.Info;
-            this.lblPrc.Location = new System.Drawing.Point(18, 257);
-            this.lblPrc.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblPrc.Location = new System.Drawing.Point(27, 395);
             this.lblPrc.Name = "lblPrc";
-            this.lblPrc.Size = new System.Drawing.Size(72, 13);
+            this.lblPrc.Size = new System.Drawing.Size(105, 20);
             this.lblPrc.TabIndex = 7;
             this.lblPrc.Text = "PRC Account\r\n";
             // 
@@ -5461,10 +5456,9 @@ namespace BudgetExecution
             // 
             this.lblBoc.AutoSize = true;
             this.lblBoc.ForeColor = System.Drawing.SystemColors.Info;
-            this.lblBoc.Location = new System.Drawing.Point(18, 147);
-            this.lblBoc.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblBoc.Location = new System.Drawing.Point(27, 226);
             this.lblBoc.Name = "lblBoc";
-            this.lblBoc.Size = new System.Drawing.Size(103, 13);
+            this.lblBoc.Size = new System.Drawing.Size(154, 20);
             this.lblBoc.TabIndex = 6;
             this.lblBoc.Text = "Budget Object Class";
             // 
@@ -5472,10 +5466,9 @@ namespace BudgetExecution
             // 
             this.label33.AutoSize = true;
             this.label33.ForeColor = System.Drawing.SystemColors.Info;
-            this.label33.Location = new System.Drawing.Point(18, 29);
-            this.label33.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label33.Location = new System.Drawing.Point(27, 45);
             this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(69, 13);
+            this.label33.Size = new System.Drawing.Size(104, 20);
             this.label33.TabIndex = 5;
             this.label33.Text = "Appropriation";
             // 
@@ -5495,13 +5488,12 @@ namespace BudgetExecution
             this.GridAccountFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.GridAccountFilter.FormattingEnabled = true;
             this.GridAccountFilter.ItemHeight = 30;
-            this.GridAccountFilter.Location = new System.Drawing.Point(21, 282);
-            this.GridAccountFilter.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.GridAccountFilter.Location = new System.Drawing.Point(32, 434);
             this.GridAccountFilter.MaxDropDownItems = 50;
             this.GridAccountFilter.Name = "GridAccountFilter";
             this.GridAccountFilter.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.GridAccountFilter.SelectedItemForeColor = System.Drawing.Color.White;
-            this.GridAccountFilter.Size = new System.Drawing.Size(117, 36);
+            this.GridAccountFilter.Size = new System.Drawing.Size(174, 36);
             this.GridAccountFilter.Style = MetroSet_UI.Design.Style.Dark;
             this.GridAccountFilter.StyleManager = null;
             this.GridAccountFilter.TabIndex = 4;
@@ -5524,12 +5516,11 @@ namespace BudgetExecution
             this.GridBocFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.GridBocFilter.FormattingEnabled = true;
             this.GridBocFilter.ItemHeight = 30;
-            this.GridBocFilter.Location = new System.Drawing.Point(21, 162);
-            this.GridBocFilter.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.GridBocFilter.Location = new System.Drawing.Point(32, 249);
             this.GridBocFilter.Name = "GridBocFilter";
             this.GridBocFilter.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.GridBocFilter.SelectedItemForeColor = System.Drawing.Color.White;
-            this.GridBocFilter.Size = new System.Drawing.Size(117, 36);
+            this.GridBocFilter.Size = new System.Drawing.Size(174, 36);
             this.GridBocFilter.Style = MetroSet_UI.Design.Style.Dark;
             this.GridBocFilter.StyleManager = null;
             this.GridBocFilter.TabIndex = 3;
@@ -5553,13 +5544,12 @@ namespace BudgetExecution
             this.GridFundFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.GridFundFilter.FormattingEnabled = true;
             this.GridFundFilter.ItemHeight = 30;
-            this.GridFundFilter.Location = new System.Drawing.Point(21, 58);
-            this.GridFundFilter.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.GridFundFilter.Location = new System.Drawing.Point(32, 89);
             this.GridFundFilter.MaxDropDownItems = 15;
             this.GridFundFilter.Name = "GridFundFilter";
             this.GridFundFilter.SelectedItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.GridFundFilter.SelectedItemForeColor = System.Drawing.Color.White;
-            this.GridFundFilter.Size = new System.Drawing.Size(117, 36);
+            this.GridFundFilter.Size = new System.Drawing.Size(174, 36);
             this.GridFundFilter.Style = MetroSet_UI.Design.Style.Dark;
             this.GridFundFilter.StyleManager = null;
             this.GridFundFilter.TabIndex = 2;
@@ -5625,138 +5615,9 @@ namespace BudgetExecution
             this.metroSetToolTip1.ThemeAuthor = "Narwin";
             this.metroSetToolTip1.ThemeName = "MetroDark";
             // 
-            // expandCollapsePanel1
-            // 
-            this.expandCollapsePanel1.BackColor = System.Drawing.Color.Black;
-            this.expandCollapsePanel1.ButtonSize = MakarovDev.ExpandCollapsePanel.ExpandCollapseButton.ExpandButtonSize.Small;
-            this.expandCollapsePanel1.ButtonStyle = MakarovDev.ExpandCollapsePanel.ExpandCollapseButton.ExpandButtonStyle.Circle;
-            this.expandCollapsePanel1.Controls.Add(this.button8);
-            this.expandCollapsePanel1.Controls.Add(this.button14);
-            this.expandCollapsePanel1.Controls.Add(this.button13);
-            this.expandCollapsePanel1.Controls.Add(this.button15);
-            this.expandCollapsePanel1.Controls.Add(this.button16);
-            this.expandCollapsePanel1.Controls.Add(this.CalendatButton);
-            this.expandCollapsePanel1.Controls.Add(this.CalculatorButton);
-            this.expandCollapsePanel1.Controls.Add(this.ExcelButton);
-            this.expandCollapsePanel1.Controls.Add(this.button2);
-            this.expandCollapsePanel1.ExpandedHeight = 275;
-            this.expandCollapsePanel1.IsExpanded = false;
-            this.expandCollapsePanel1.Location = new System.Drawing.Point(14, 15);
-            this.expandCollapsePanel1.Margin = new System.Windows.Forms.Padding(2);
-            this.expandCollapsePanel1.Name = "expandCollapsePanel1";
-            this.expandCollapsePanel1.Size = new System.Drawing.Size(261, 35);
-            this.expandCollapsePanel1.TabIndex = 170;
-            this.expandCollapsePanel1.Text = "Main Navigation";
-            this.expandCollapsePanel1.UseAnimation = true;
-            // 
-            // button14
-            // 
-            this.button14.BackColor = System.Drawing.Color.Transparent;
-            this.button14.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button14.FlatAppearance.BorderSize = 0;
-            this.button14.FlatAppearance.MouseDownBackColor = System.Drawing.Color.PowderBlue;
-            this.button14.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
-            this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(225)))));
-            this.button14.Image = ((System.Drawing.Image)(resources.GetObject("button14.Image")));
-            this.button14.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.button14.Location = new System.Drawing.Point(151, 152);
-            this.button14.Margin = new System.Windows.Forms.Padding(2);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(101, 38);
-            this.button14.TabIndex = 44;
-            this.button14.Text = "Add File";
-            this.button14.TextAlign = System.Drawing.ContentAlignment.BottomRight;
-            this.button14.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button14.UseVisualStyleBackColor = false;
-            // 
-            // button15
-            // 
-            this.button15.BackColor = System.Drawing.Color.Transparent;
-            this.button15.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button15.FlatAppearance.BorderSize = 0;
-            this.button15.FlatAppearance.MouseDownBackColor = System.Drawing.Color.PowderBlue;
-            this.button15.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
-            this.button15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(225)))));
-            this.button15.Image = ((System.Drawing.Image)(resources.GetObject("button15.Image")));
-            this.button15.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.button15.Location = new System.Drawing.Point(151, 38);
-            this.button15.Margin = new System.Windows.Forms.Padding(2);
-            this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(89, 40);
-            this.button15.TabIndex = 35;
-            this.button15.Text = "button15";
-            this.button15.TextAlign = System.Drawing.ContentAlignment.BottomRight;
-            this.button15.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button15.UseVisualStyleBackColor = false;
-            // 
-            // button16
-            // 
-            this.button16.BackColor = System.Drawing.Color.Transparent;
-            this.button16.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button16.FlatAppearance.BorderSize = 0;
-            this.button16.FlatAppearance.MouseDownBackColor = System.Drawing.Color.PowderBlue;
-            this.button16.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
-            this.button16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(225)))));
-            this.button16.Image = ((System.Drawing.Image)(resources.GetObject("button16.Image")));
-            this.button16.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.button16.Location = new System.Drawing.Point(25, 227);
-            this.button16.Margin = new System.Windows.Forms.Padding(2);
-            this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(110, 40);
-            this.button16.TabIndex = 46;
-            this.button16.Text = "button16";
-            this.button16.TextAlign = System.Drawing.ContentAlignment.BottomRight;
-            this.button16.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button16.UseVisualStyleBackColor = false;
-            // 
-            // button13
-            // 
-            this.button13.BackColor = System.Drawing.Color.Transparent;
-            this.button13.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button13.FlatAppearance.BorderSize = 0;
-            this.button13.FlatAppearance.MouseDownBackColor = System.Drawing.Color.PowderBlue;
-            this.button13.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
-            this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(225)))));
-            this.button13.Image = ((System.Drawing.Image)(resources.GetObject("button13.Image")));
-            this.button13.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.button13.Location = new System.Drawing.Point(151, 92);
-            this.button13.Margin = new System.Windows.Forms.Padding(2);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(101, 44);
-            this.button13.TabIndex = 45;
-            this.button13.Text = "Add Table";
-            this.button13.TextAlign = System.Drawing.ContentAlignment.BottomRight;
-            this.button13.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button13.UseVisualStyleBackColor = false;
-            // 
-            // button8
-            // 
-            this.button8.BackColor = System.Drawing.Color.Transparent;
-            this.button8.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button8.FlatAppearance.BorderSize = 0;
-            this.button8.FlatAppearance.MouseDownBackColor = System.Drawing.Color.PowderBlue;
-            this.button8.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(225)))));
-            this.button8.Image = ((System.Drawing.Image)(resources.GetObject("button8.Image")));
-            this.button8.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.button8.Location = new System.Drawing.Point(151, 206);
-            this.button8.Margin = new System.Windows.Forms.Padding(2);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(101, 38);
-            this.button8.TabIndex = 32;
-            this.button8.Text = "Import";
-            this.button8.TextAlign = System.Drawing.ContentAlignment.BottomRight;
-            this.button8.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button8.UseVisualStyleBackColor = false;
-            // 
             // SummaryForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.BorderColor = System.Drawing.SystemColors.MenuHighlight;
@@ -5766,17 +5627,17 @@ namespace BudgetExecution
             this.CaptionFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CaptionForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.CaptionVerticalAlignment = Syncfusion.Windows.Forms.VerticalAlignment.Top;
-            this.ClientSize = new System.Drawing.Size(1266, 652);
+            this.ClientSize = new System.Drawing.Size(1894, 1008);
             this.Controls.Add(this.SummaryTabControl);
             this.ForeColor = System.Drawing.Color.LightSteelBlue;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IconTextRelation = System.Windows.Forms.LeftRightAlignment.Right;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.MaximumSize = new System.Drawing.Size(1600, 1000);
+            this.MaximumSize = new System.Drawing.Size(2389, 1508);
             this.MetroColor = System.Drawing.Color.Black;
-            this.MinimumSize = new System.Drawing.Size(1278, 718);
+            this.MinimumSize = new System.Drawing.Size(1906, 1074);
             this.Name = "SummaryForm";
             this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SumForm";
             this.Load += new System.EventHandler(this.Form_Load);
             this.tabPageAdv4.ResumeLayout(false);
@@ -5835,6 +5696,8 @@ namespace BudgetExecution
             this.EditTab.ResumeLayout(false);
             this.GraphTab.ResumeLayout(false);
             this.ToolNavTab.ResumeLayout(false);
+            this.expandCollapsePanel1.ResumeLayout(false);
+            this.expandCollapsePanel1.PerformLayout();
             this.GridGroupBox.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
@@ -5843,8 +5706,6 @@ namespace BudgetExecution
             this.FilterGroupBox.ResumeLayout(false);
             this.FilterGroupBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BindingSource)).EndInit();
-            this.expandCollapsePanel1.ResumeLayout(false);
-            this.expandCollapsePanel1.PerformLayout();
             this.ResumeLayout(false);
 
         }

@@ -25,9 +25,6 @@ namespace BudgetExecution
             Title = GetChartTitles(Values);
             Chart = new GetChart(GetMainChart);
             MainChart = new BudgetChart(MainChart, Title[1], Values[1]).Activate();
-            SummaryTile.Click += SummaryTile_OnClick;
-            DivisionBudgetTile.Click += DivisionDataTile_OnClick;
-            DataMasterTile.Click += DatabaseTile_OnClick;
         }
 
         // PROPERTIES
@@ -164,25 +161,31 @@ namespace BudgetExecution
             dm.Show();
         }
 
-        private void DivisionDataTile_OnClick(object sender, EventArgs e)
+        public void DivisionDataTile_OnClick(object sender, EventArgs e)
         {
             Selector s = new Selector(Info.Div);
             s.Show();
         }
 
-        private void SummaryTile_OnClick(object sender, EventArgs e)
+        public void SummaryTile_OnClick(object sender, EventArgs e)
         {
             Selector summary = new Selector(Info.SummaryImages);
             summary.Show();
         }
+        
+        public void EnterTile_OnClick(object sender, EventArgs e)
+        {
+            Selector summary = new Selector(Info.Enter);
+            summary.Show();
+        }
 
-        private void FunctionalityTile_OnClick(object sender, EventArgs e)
+        public void FunctionalityTile_OnClick(object sender, EventArgs e)
         {
             Selector s = new Selector(Info.FunctionImages);
             s.Show();
         }
 
-        private void DatabaseTile_OnClick(object sender, EventArgs e)
+        public void DatabaseTile_OnClick(object sender, EventArgs e)
         {
             FunctionSelector dm = new FunctionSelector();
             dm.Show();

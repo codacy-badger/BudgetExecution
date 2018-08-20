@@ -18,31 +18,22 @@ namespace BudgetExecution
         public FunctionSelector()
         {
             InitializeComponent();
-            FunctionImages = Info.FunctionImages;
-            NinjaData = new FormData();
-            GetViewerCarouselImageList(FunctionImages);
+            FilePath = Info.FunctionImages;
+            GetViewerCarouselImageList(FilePath);
             ViewerCarousel.OnCarouselItemFocused += ViewerCarousel_OnImageSelected;
         }
 
         public FunctionSelector(string path)
         {
             InitializeComponent();
-            NinjaData = new FormData();
-            GetViewerCarouselImageList(path);
+            FilePath = Info.FunctionImages;
+            GetViewerCarouselImageList(FilePath);
             ViewerCarousel.OnCarouselItemFocused += ViewerCarousel_OnImageSelected;
         }
 
         // PROPERTIES
-        // PROPERTIES
-        private string FunctionImages { get; set; }
-
-        private string DivisionImages { get; set; }
-
-        private string SummaryImages { get; set; }
 
         private string FilePath { get; set; }
-
-        public FormData NinjaData { get; set; }
 
         private string[] Images { get; set; }
 

@@ -953,7 +953,7 @@ namespace BudgetExecution
             }
         }
 
-        private Dictionary<string, object> GetSelectedRowDictionary(DataGridView dgv)
+        private Dictionary<string, object> GetDataGridSelectedRowDictionary(DataGridView dgv)
         {
             try
             {

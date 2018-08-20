@@ -325,6 +325,8 @@ namespace BudgetExecution
 
         DivisionObligations,
 
+        TravelObligations,
+
         Divisions,
 
         DWH,
@@ -360,6 +362,8 @@ namespace BudgetExecution
         OIL,
 
         STAG,
+
+        SF6A,
 
         SUPERFUND,
 

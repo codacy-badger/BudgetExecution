@@ -18,9 +18,10 @@ namespace BudgetExecution
         public DatabaseSelector()
         {
             InitializeComponent();
-            FunctionImages = Info.FunctionImages;
+            FilePath = Info.FunctionImages;
             NinjaData = new FormData();
-            GetViewerCarouselImageList(FunctionImages);
+            FilePath = Info.DatabaseImages;
+            GetViewerCarouselImageList(FilePath);
             ViewerCarousel.OnCarouselItemFocused += ViewerCarousel_OnImageSelected;
         }
 
@@ -28,47 +29,46 @@ namespace BudgetExecution
         {
             InitializeComponent();
             NinjaData = new FormData();
-            GetViewerCarouselImageList(path);
+            FilePath = path;
+            GetViewerCarouselImageList(FilePath);
             ViewerCarousel.OnCarouselItemFocused += ViewerCarousel_OnImageSelected;
         }
-
+        
         // PROPERTIES
-        // PROPERTIES
-        private string FunctionImages { get; set; }
-
-        private string DivisionImages { get; set; }
-
-        private string SummaryImages { get; set; }
-
-        private string AppropriationImages { get; set; }
-
         private string FilePath { get; set; }
 
-        public FormData NinjaData { get; set; }
-
         private string[] Images { get; set; }
+
+        public FormData NinjaData { get; set; }
 
         // METHODS
         private void GetViewerCarouselImageList(string path)
         {
-            ImageList ilist = new ImageList();
-            CarouselImageCollection icollect = ViewerCarousel.ImageListCollection;
-            ViewerCarousel.ImageSlides = true;
-            ViewerCarousel.UseOriginalImageinPreview = true;
-            string[] images = Directory.GetFiles(path);
-            FilePath = path;
-            foreach (string i in images)
+            try
             {
-                string p = Path.GetFileNameWithoutExtension(i);
-                Bitmap b = new Bitmap(i);
-                b.Tag = p;
-                CarouselImage c = new CarouselImage();
-                c.ItemImage = b;
-                ilist.Images.Add(b);
-                icollect.Add(c);
-            }
+                ImageList ilist = new ImageList();
+                CarouselImageCollection icollect = ViewerCarousel.ImageListCollection;
+                ViewerCarousel.ImageSlides = true;
+                ViewerCarousel.UseOriginalImageinPreview = true;
+                string[] images = Directory.GetFiles(path);
+                FilePath = path;
+                foreach (string i in images)
+                {
+                    string p = Path.GetFileNameWithoutExtension(i);
+                    Bitmap b = new Bitmap(i);
+                    b.Tag = p;
+                    CarouselImage c = new CarouselImage();
+                    c.ItemImage = b;
+                    ilist.Images.Add(b);
+                    icollect.Add(c);
+                }
 
-            ViewerCarousel.ImageList = ilist;
+                ViewerCarousel.ImageList = ilist;
+            }
+            catch(Exception ex)
+            {
+                new Error(ex).ShowDialog();
+            }
         }
 
         private void Selector_Load(object sender, EventArgs e)
@@ -77,12 +77,19 @@ namespace BudgetExecution
 
         private void ViewerCarousel_OnImageSelected(object sender, EventArgs e)
         {
-            Carousel carousel = sender as Carousel;
-            string i = carousel.ActiveImage.Tag.ToString();
-            Source s = (Source)Enum.Parse(typeof(Source), i);
-            SQLiteData sqlitedata = new SQLiteData(s, Provider.SQLite);
-            sqlitedata.Show();
-            Close();
+            try
+            {
+                Carousel carousel = sender as Carousel;
+                string i = carousel.ActiveImage.Tag.ToString();
+                Source s = (Source)Enum.Parse(typeof(Source), i);
+                SQLiteData sqlitedata = new SQLiteData(s, Provider.SQLite);
+                sqlitedata.Show();
+                Close();
+            }
+            catch(Exception ex)
+            {
+                new Error(ex).ShowDialog();
+            }
         }
     }
 }

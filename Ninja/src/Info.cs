@@ -24,6 +24,8 @@ namespace BudgetExecution
         public static string DatabaseImages = @"C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\Resources\Database";
 
         public static string AppropriationImages = @"C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\Resources\AppropriationImages";
+        
+        public static string Enter = @"C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\Resources\enter";
 
         public static Dictionary<string, object> GetInsertionColumns(Source source, Provider provider, Dictionary<string, object> param)
         {
@@ -68,7 +70,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                DialogResult _ = new Error(ex).ShowDialog();
+                new Error(ex).ShowDialog();
                 return null;
             }
         }
@@ -82,7 +84,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                DialogResult _ = new Error(ex).ShowDialog();
+                new Error(ex).ShowDialog();
                 return null;
             }
         }

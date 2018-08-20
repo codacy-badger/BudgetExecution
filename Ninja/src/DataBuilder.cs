@@ -243,7 +243,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                DialogResult _ = new Error(ex).ShowDialog();
+                new Error(ex).ShowDialog();
                 return null;
             }
         }
@@ -261,7 +261,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                DialogResult _ = new Error(ex).ShowDialog();
+                new Error(ex).ShowDialog();
                 return null;
             }
         }
@@ -295,7 +295,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                DialogResult _ = new Error(ex).ShowDialog();
+                new Error(ex).ShowDialog();
                 return null;
             }
         }
@@ -325,7 +325,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                DialogResult _ = new Error(ex).ShowDialog();
+                new Error(ex).ShowDialog();
                 return null;
             }
         }
@@ -343,7 +343,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                DialogResult _ = new Error(ex).ShowDialog();
+                new Error(ex).ShowDialog();
                 return -1;
             }
         }
@@ -361,7 +361,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                DialogResult _ = new Error(ex).ShowDialog();
+                new Error(ex).ShowDialog();
                 return null;
             }
         }
@@ -380,7 +380,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                DialogResult _ = new Error(ex).ShowDialog();
+                new Error(ex).ShowDialog();
                 return null;
             }
         }
@@ -399,7 +399,7 @@ namespace BudgetExecution
             }
             catch (Exception e)
             {
-                DialogResult _ = new Error(e).ShowDialog();
+                new Error(e).ShowDialog();
                 return null;
             }
         }
@@ -415,7 +415,7 @@ namespace BudgetExecution
             }
             catch (Exception e)
             {
-                DialogResult _ = new Error(e).ShowDialog();
+                new Error(e).ShowDialog();
                 return null;
             }
         }
@@ -428,11 +428,96 @@ namespace BudgetExecution
                 {
                     decimal total = table.AsEnumerable().Where(p => p.Field<string>("BOC") != "17").Select(p => p.Field<decimal>("Amount")).Sum();
                     if (total > 0)
+                    {
+                        return total;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    new Error(ex).ShowDialog();
+                    return -1M;
+                }
+            }
+            
+            if (DbTable.Columns.Contains("DollarAmount"))
+            {
+                try
+                {
+                    decimal total = table.AsEnumerable().Select(p => p.Field<decimal>("DollarAmount")).Sum();
+                    if (total > 0)
+                    {
+                        return total;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    new Error(ex).ShowDialog();
+                    return -1M;
+                }
+            }
+
+            if (DbTable.Columns.Contains("Obligataions"))
+            {
+                try
+                {
+                    decimal total = table.AsEnumerable().Select(p => p.Field<decimal>("Obligations")).Sum();
+                    if (total > 0)
                         return total;
                 }
                 catch (Exception ex)
                 {
-                    DialogResult _ = new Error(ex).ShowDialog();
+                    new Error(ex).ShowDialog();
+                    return -1M;
+                }
+            }
+
+            if (DbTable.Columns.Contains("Commitments"))
+            {
+                try
+                {
+                    decimal total = table.AsEnumerable().Select(p => p.Field<decimal>("Commitments")).Sum();
+                    if (total > 0)
+                    {
+                        return total;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    new Error(ex).ShowDialog();
+                    return -1M;
+                }
+            }
+
+            if (DbTable.Columns.Contains("LeaveHours"))
+            {
+                try
+                {
+                    decimal total = table.AsEnumerable().Select(p => p.Field<decimal>("LeaveHours")).Sum();
+                    if (total > 0)
+                    {
+                        return total;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    new Error(ex).ShowDialog();
+                    return -1M;
+                }
+            }
+
+            if (DbTable.Columns.Contains("WorkHours"))
+            {
+                try
+                {
+                    decimal total = table.AsEnumerable().Select(p => p.Field<decimal>("WorkHours")).Sum();
+                    if (total > 0)
+                    {
+                        return total;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    new Error(ex).ShowDialog();
                     return -1M;
                 }
             }
@@ -444,7 +529,7 @@ namespace BudgetExecution
         {
             try
             {
-                if (DbTable.Columns.Contains("Amount"))
+                if (DbTable.Columns.Contains("Amount") && ProgramElements["BOC"].Contains("17"))
                 {
                     return table.AsEnumerable().Where(p => p.Field<string>("BOC") == "17").Select(p => p.Field<decimal>("Amount")).Sum();
                 }
@@ -453,7 +538,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                DialogResult _ = new Error(ex).ShowDialog();
+                new Error(ex).ShowDialog();
                 return -1M;
             }
         }
@@ -466,7 +551,7 @@ namespace BudgetExecution
             }
             catch (Exception ex)
             {
-                DialogResult _ = new Error(ex).ShowDialog();
+                new Error(ex).ShowDialog();
                 return null;
             }
         }
@@ -481,7 +566,7 @@ namespace BudgetExecution
                 }
                 catch (SystemException ex)
                 {
-                    DialogResult _ = new Error(ex).ShowDialog();
+                    new Error(ex).ShowDialog();
                     return null;
                 }
             }

@@ -221,7 +221,7 @@ namespace BudgetExecution
             }
             catch (Exception e)
             {
-                DialogResult _ = new Error(e).ShowDialog();
+                new Error(e).ShowDialog();
                 return null;
             }
         }

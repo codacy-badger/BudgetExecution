@@ -39,7 +39,7 @@ namespace BudgetExecution
         private string[] Images { get; set; }
 
         // METHODS
-        private void GetViewerCarouselImageList(string path)
+        public void GetViewerCarouselImageList(string path)
         {
             ImageList ilist = new ImageList();
             CarouselImageCollection icollect = ViewerCarousel.ImageListCollection;
@@ -65,22 +65,46 @@ namespace BudgetExecution
         {
         }
 
-        private void ViewerCarousel_OnImageSelected(object sender, EventArgs e)
+        public void ViewerCarousel_OnImageSelected(object sender, EventArgs e)
         {
             Carousel carousel = sender as Carousel;
-            string i = carousel.ActiveImage.Tag.ToString();
-            if (i == "Appropriation")
+            if (carousel.ActiveImage.Tag != null)
             {
-                Selector f = new Selector(Info.AppropriationImages);
-                f.Show();
-                Close();
-            }
-            else
-            {
-                Source s = (Source)Enum.Parse(typeof(Source), i);
-                SummaryForm summary = new SummaryForm(s);
-                summary.Show();
-                Close();
+                string i = carousel.ActiveImage.Tag.ToString();
+                switch (i)
+                {
+                    case "SummaryImages":
+                        var f = new Selector(Info.SummaryImages);
+                        f.Show();
+                        this.Close();
+                        return;
+
+                    case "DatabaseImages":
+                        var ds = new DatabaseSelector(Info.DatabaseImages);
+                        ds.Show();
+                        this.Close();
+                        return;
+                    case "Division":
+                        var d = new Selector(Info.Div);
+                        d.Show();
+                        this.Close();
+                        return;
+                    case "FunctionImages":
+                        var fi = new FunctionSelector(Info.FunctionImages);
+                        fi.Show();
+                        this.Close();
+                        return;
+                    case "Appropriation":
+                        var aps = new Selector(Info.AppropriationImages);
+                        aps.Show();
+                        this.Close();
+                        return;
+                }
+
+                Source source = (Source)Enum.Parse(typeof(Source), i);
+                SummaryForm sf = new SummaryForm(source);
+                sf.Show();
+                this.Close();
             }
         }
     }

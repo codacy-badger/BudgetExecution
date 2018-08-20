@@ -41,19 +41,19 @@ namespace BudgetExecution
             this.ViewerCarousel.CarouselBounds = 200;
             this.ViewerCarousel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ViewerCarousel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ViewerCarousel.HighlightColor = System.Drawing.SystemColors.MenuHighlight;
-            this.ViewerCarousel.ImageshadeColor = System.Drawing.Color.Black;
+            this.ViewerCarousel.HighlightColor = System.Drawing.Color.SteelBlue;
+            this.ViewerCarousel.ImageshadeColor = System.Drawing.Color.MidnightBlue;
             this.ViewerCarousel.ImageSlides = true;
             this.ViewerCarousel.Location = new System.Drawing.Point(0, 0);
             this.ViewerCarousel.Margin = new System.Windows.Forms.Padding(2);
             this.ViewerCarousel.Name = "ViewerCarousel";
-            this.ViewerCarousel.PadX = 1;
-            this.ViewerCarousel.PadY = 0;
-            this.ViewerCarousel.Perspective = 4F;
+            this.ViewerCarousel.PadX = 2;
+            this.ViewerCarousel.PadY = 1;
+            this.ViewerCarousel.Perspective = 6F;
             this.ViewerCarousel.RotateAlways = false;
             this.ViewerCarousel.ShowImagePreview = true;
             this.ViewerCarousel.ShowImageShadow = true;
-            this.ViewerCarousel.Size = new System.Drawing.Size(1588, 953);
+            this.ViewerCarousel.Size = new System.Drawing.Size(1702, 1017);
             this.ViewerCarousel.TabIndex = 2;
             this.ViewerCarousel.Text = "carousel2";
             this.ViewerCarousel.TouchTransitionSpeed = 3F;
@@ -66,7 +66,7 @@ namespace BudgetExecution
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1588, 953);
+            this.panel1.Size = new System.Drawing.Size(1702, 1017);
             this.panel1.TabIndex = 3;
             // 
             // Selector
@@ -76,13 +76,15 @@ namespace BudgetExecution
             this.BackColor = System.Drawing.Color.Black;
             this.BorderColor = System.Drawing.SystemColors.MenuHighlight;
             this.CaptionBarColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(1588, 953);
+            this.ClientSize = new System.Drawing.Size(1702, 1017);
             this.Controls.Add(this.panel1);
-            this.MaximumSize = new System.Drawing.Size(1600, 1000);
+            this.MaximumSize = new System.Drawing.Size(1714, 1064);
             this.MetroColor = System.Drawing.Color.Black;
+            this.MinimumSize = new System.Drawing.Size(1714, 1064);
             this.Name = "Selector";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 

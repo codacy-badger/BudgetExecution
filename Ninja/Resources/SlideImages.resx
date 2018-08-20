@@ -126,6 +126,9 @@
   <data name="DivisionImages" xml:space="preserve">
     <value>C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\Resources\DivisionImages</value>
   </data>
+  <data name="Enter" xml:space="preserve">
+    <value>C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\Resources\enter</value>
+  </data>
   <data name="FunctionImages" xml:space="preserve">
     <value>C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\Resources\FunctionImages</value>
   </data>

@@ -18,41 +18,64 @@ namespace BudgetExecution
         public AppropriationSelector()
         {
             InitializeComponent();
-            GetAppropriationCarouselImageList();
+            GetAppropriationCarouselImageList(Info.AppropriationImages);
             AppropriationCarousel.OnCarouselItemFocused += AppropriationCarousel_OnImageSelected;
         }
 
+        public AppropriationSelector(string path)
+        {
+            InitializeComponent();
+            FilePath = path;
+            GetAppropriationCarouselImageList(path);
+            AppropriationCarousel.OnCarouselItemFocused += AppropriationCarousel_OnImageSelected;
+        }
+        
+        // PROPERTIES
+        private string FilePath { get; set; }
+
+        // METHODS
         private void AppropriationCarousel_OnImageSelected(object sender, EventArgs e)
         {
-            string i = AppropriationCarousel.ActiveImage.Tag.ToString();
-            if (i.Contains("Functionality"))
+            try
             {
-                Selector g = new Selector(Info.AppropriationImages);
-                g.Show();
+                Carousel carousel = sender as Carousel;
+                string i = carousel.ActiveImage.Tag.ToString();
+                Source s = (Source)Enum.Parse(typeof(Source), i);
+                var sf = new SummaryForm(s);
+                sf.Show();
                 Close();
             }
-
-            return;
+            catch (Exception ex)
+            {
+                new Error(ex).ShowDialog();
+            }
         }
 
-        private void GetAppropriationCarouselImageList()
+        private void GetAppropriationCarouselImageList(string path)
         {
-            ImageList ilist = new ImageList();
-            CarouselImageCollection icollect = AppropriationCarousel.ImageListCollection;
-            AppropriationCarousel.ImageSlides = true;
-            AppropriationCarousel.UseOriginalImageinPreview = true;
-            string[] images = Directory.GetFiles(@"C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\Resources\AppropriationImages");
-            foreach (string i in images)
+            try
             {
-                Bitmap b = new Bitmap(i);
-                b.Tag = i;
-                CarouselImage c = new CarouselImage();
-                c.ItemImage = b;
-                ilist.Images.Add(b);
-                icollect.Add(c);
-            }
+                ImageList ilist = new ImageList();
+                CarouselImageCollection icollect = AppropriationCarousel.ImageListCollection;
+                AppropriationCarousel.ImageSlides = true;
+                AppropriationCarousel.UseOriginalImageinPreview = true;
+                string[] images = Directory.GetFiles(path);
+                foreach (string i in images)
+                {
+                    Bitmap b = new Bitmap(i);
+                    b.Tag = i;
+                    CarouselImage c = new CarouselImage();
+                    c.ItemImage = b;
+                    ilist.Images.Add(b);
+                    icollect.Add(c);
+                }
 
-            AppropriationCarousel.ImageList = ilist;
+                AppropriationCarousel.ImageList = ilist;
+            }
+            catch (Exception e)
+            {
+                new Error(e).ShowDialog();
+            }
         }
     }
 }

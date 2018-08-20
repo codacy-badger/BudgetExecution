@@ -40,11 +40,12 @@ namespace BudgetExecution
             this.AppropriationCarousel.BackColor = System.Drawing.Color.Black;
             this.AppropriationCarousel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.AppropriationCarousel.CarouselBounds = 200;
+            this.AppropriationCarousel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.AppropriationCarousel.Font = new System.Drawing.Font("Segoe UI Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AppropriationCarousel.HighlightColor = System.Drawing.Color.Lavender;
-            this.AppropriationCarousel.ImageshadeColor = System.Drawing.Color.MidnightBlue;
+            this.AppropriationCarousel.HighlightColor = System.Drawing.Color.SteelBlue;
+            this.AppropriationCarousel.ImageshadeColor = System.Drawing.Color.Black;
             this.AppropriationCarousel.ImageSlides = true;
-            this.AppropriationCarousel.Location = new System.Drawing.Point(263, 189);
+            this.AppropriationCarousel.Location = new System.Drawing.Point(0, 0);
             this.AppropriationCarousel.Name = "AppropriationCarousel";
             this.AppropriationCarousel.PadX = 0;
             this.AppropriationCarousel.PadY = 1;
@@ -52,11 +53,11 @@ namespace BudgetExecution
             this.AppropriationCarousel.RotateAlways = false;
             this.AppropriationCarousel.ShowImagePreview = true;
             this.AppropriationCarousel.ShowImageShadow = true;
-            this.AppropriationCarousel.Size = new System.Drawing.Size(1159, 455);
+            this.AppropriationCarousel.Size = new System.Drawing.Size(1702, 989);
             this.AppropriationCarousel.TabIndex = 8;
             this.AppropriationCarousel.Text = "carousel2";
             this.AppropriationCarousel.TouchTransitionSpeed = 3F;
-            this.AppropriationCarousel.UseOriginalImageinPreview = true;
+            this.AppropriationCarousel.UseOriginalImageinPreview = false;
             this.AppropriationCarousel.VisualStyle = Syncfusion.Windows.Forms.Tools.CarouselVisualStyle.Default;
             // 
             // AppropriationSelector
@@ -69,15 +70,17 @@ namespace BudgetExecution
             this.CaptionBarHeight = 60;
             this.CaptionFont = new System.Drawing.Font("Segoe UI Light", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CaptionForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.ClientSize = new System.Drawing.Size(1788, 925);
+            this.ClientSize = new System.Drawing.Size(1702, 989);
             this.Controls.Add(this.AppropriationCarousel);
             this.Font = new System.Drawing.Font("Segoe UI Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.MaximumSize = new System.Drawing.Size(1714, 1064);
             this.MetroColor = System.Drawing.Color.Black;
+            this.MinimumSize = new System.Drawing.Size(1714, 1064);
             this.Name = "AppropriationSelector";
             this.ShowIcon = false;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.ResumeLayout(false);
 
         }

@@ -118,7 +118,7 @@ namespace BudgetExecution
                 }
                 catch (SystemException ex)
                 {
-                    DialogResult _ = new Error(ex).ShowDialog();
+                    new Error(ex).ShowDialog();
                     return null;
                 }
             }

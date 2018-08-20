@@ -88,6 +88,15 @@ namespace BudgetExecution.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\Resources\enter.
+        /// </summary>
+        internal static string Enter {
+            get {
+                return ResourceManager.GetString("Enter", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\Resources\FunctionImages.
         /// </summary>
         internal static string FunctionImages {
