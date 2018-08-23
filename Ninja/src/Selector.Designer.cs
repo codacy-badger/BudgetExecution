@@ -29,8 +29,10 @@ namespace BudgetExecution
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.ViewerCarousel = new Syncfusion.Windows.Forms.Tools.Carousel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -49,11 +51,11 @@ namespace BudgetExecution
             this.ViewerCarousel.Name = "ViewerCarousel";
             this.ViewerCarousel.PadX = 2;
             this.ViewerCarousel.PadY = 1;
-            this.ViewerCarousel.Perspective = 6F;
+            this.ViewerCarousel.Perspective = 4F;
             this.ViewerCarousel.RotateAlways = false;
             this.ViewerCarousel.ShowImagePreview = true;
             this.ViewerCarousel.ShowImageShadow = true;
-            this.ViewerCarousel.Size = new System.Drawing.Size(1702, 1017);
+            this.ViewerCarousel.Size = new System.Drawing.Size(1552, 918);
             this.ViewerCarousel.TabIndex = 2;
             this.ViewerCarousel.Text = "carousel2";
             this.ViewerCarousel.TouchTransitionSpeed = 3F;
@@ -63,11 +65,16 @@ namespace BudgetExecution
             // panel1
             // 
             this.panel1.Controls.Add(this.ViewerCarousel);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Location = new System.Drawing.Point(84, 87);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1702, 1017);
+            this.panel1.Size = new System.Drawing.Size(1552, 918);
             this.panel1.TabIndex = 3;
+            // 
+            // toolTip1
+            // 
+            this.toolTip1.BackColor = System.Drawing.Color.Black;
+            this.toolTip1.ForeColor = System.Drawing.Color.White;
+            this.toolTip1.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
             // 
             // Selector
             // 
@@ -94,5 +101,6 @@ namespace BudgetExecution
 
         private Syncfusion.Windows.Forms.Tools.Carousel ViewerCarousel;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

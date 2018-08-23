@@ -68,7 +68,7 @@ namespace BudgetExecution
         public void ViewerCarousel_OnImageSelected(object sender, EventArgs e)
         {
             Carousel carousel = sender as Carousel;
-            if (carousel.ActiveImage.Tag != null)
+            if (carousel?.ActiveImage.Tag != null)
             {
                 string i = carousel.ActiveImage.Tag.ToString();
                 switch (i)
@@ -76,36 +76,40 @@ namespace BudgetExecution
                     case "SummaryImages":
                         var f = new Selector(Info.SummaryImages);
                         f.Show();
-                        this.Close();
+                        Close();
                         return;
 
                     case "DatabaseImages":
                         var ds = new DatabaseSelector(Info.DatabaseImages);
                         ds.Show();
-                        this.Close();
+                        Close();
                         return;
                     case "Division":
                         var d = new Selector(Info.Div);
                         d.Show();
-                        this.Close();
+                        Close();
                         return;
                     case "FunctionImages":
                         var fi = new FunctionSelector(Info.FunctionImages);
                         fi.Show();
-                        this.Close();
+                        Close();
                         return;
                     case "Appropriation":
                         var aps = new Selector(Info.AppropriationImages);
                         aps.Show();
-                        this.Close();
+                        Close();
                         return;
                 }
 
                 Source source = (Source)Enum.Parse(typeof(Source), i);
                 SummaryForm sf = new SummaryForm(source);
                 sf.Show();
-                this.Close();
+                Close();
             }
+        }
+
+        private void ImageItem_OnHover(object sender, System.EventArgs e)
+        {
         }
     }
 }

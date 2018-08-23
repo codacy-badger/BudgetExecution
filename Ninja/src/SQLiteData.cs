@@ -30,7 +30,7 @@ namespace BudgetExecution
             BindingSource = DbData.BindingSource;
             Grid.DataSource = BindingSource;
             Navigator.BindingSource = BindingSource;
-            ProgramElements = DbData.GetProgramElements(DbData.DbTable);
+            ProgramElements = DbData.GetProgramElements(Table);
             Navigator.BindingSource = BindingSource;
             Grid.DataSource = BindingSource.DataSource;
             PopulateFilterButtons(Filter1, Info.Sources);
@@ -50,11 +50,11 @@ namespace BudgetExecution
             BindingSource = DbData.BindingSource;
             Grid.DataSource = DbData.BindingSource;
             Navigator.BindingSource = DbData.BindingSource;
-            ProgramElements = DbData.GetProgramElements(DbData.DbTable);
+            ProgramElements = DbData.GetProgramElements(Table);
             Text = $"{Source.ToString()} Database";
             FunctionTab.TabVisible = false;
-            TableFilter = new DataFilter(Info.FilterRows);
-            FieldFilter = new FieldFilter(Info.GetColumnValues);
+            TableFilter = Info.FilterRows;
+            FieldFilter = Info.GetColumnValues;
         }
 
         // PROPERTIES
@@ -192,8 +192,9 @@ namespace BudgetExecution
                     label.Text = control.Tag.ToString();
                 }
 
-                string[] items = data.ProgramElements[colname.ToString()];
-                foreach (string i in items)
+                string[] item = FieldFilter(data.DbTable, colname.ToString());
+                //string[] items = ProgramElements[colname.ToString()];
+                foreach (string i in item)
                 {
                     control.Items.Add(i);
                 }
@@ -320,7 +321,7 @@ namespace BudgetExecution
                 DataTable tbl = TableFilter(Table, C1, F1);
                 BindingSource.DataSource = tbl;
                 label6.Text = DbData.GetTotal(tbl).ToString("c");
-                label12.Text = DbData.GetCount(tbl).ToString();
+                label12.Text = tbl.Rows.Count.ToString();
                 PopulateFilterItems(Filter2.Tag.ToString(), tbl, Filter2, label2);
                 Filter3.Visible = false;
                 label3.Visible = false;
@@ -494,10 +495,10 @@ namespace BudgetExecution
                         break;
 
                     case Source.Transfers:
-                        label1.Text = "Organization";
-                        PopulateFilterItems(Field.Organization, DbData, Filter1, label1);
+                        label1.Text = "BudgetLevel";
+                        PopulateFilterItems(Field.BudgetLevel, DbData, Filter1, label1);
                         Filter2.Tag = "Fund";
-                        Filter3.Tag = "BOC";
+                        Filter3.Tag = "RC";
                         break;
 
                     case Source.FTE:

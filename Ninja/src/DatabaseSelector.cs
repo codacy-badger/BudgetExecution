@@ -18,7 +18,6 @@ namespace BudgetExecution
         public DatabaseSelector()
         {
             InitializeComponent();
-            FilePath = Info.FunctionImages;
             NinjaData = new FormData();
             FilePath = Info.DatabaseImages;
             GetViewerCarouselImageList(FilePath);
@@ -80,10 +79,14 @@ namespace BudgetExecution
             try
             {
                 Carousel carousel = sender as Carousel;
-                string i = carousel.ActiveImage.Tag.ToString();
-                Source s = (Source)Enum.Parse(typeof(Source), i);
-                SQLiteData sqlitedata = new SQLiteData(s, Provider.SQLite);
-                sqlitedata.Show();
+                if (carousel != null)
+                {
+                    string i = carousel.ActiveImage.Tag.ToString();
+                    Source s = (Source)Enum.Parse(typeof(Source), i);
+                    SQLiteData sqlitedata = new SQLiteData(s, Provider.SQLite);
+                    sqlitedata.Show();
+                }
+
                 Close();
             }
             catch(Exception ex)

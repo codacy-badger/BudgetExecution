@@ -181,6 +181,7 @@ namespace BudgetExecution
                 PopulateFilterBoxItems(GridFundFilter, Field.FundName);
                 ConfigureTextBoxBindings();
                 label32.Text = DbData.GetTotal(DbData.DbTable).ToString("c");
+                label37.Text = DbData.DbTable.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Average().ToString("N");
                 label41.Text = DbData.GetCount(DbData.DbTable).ToString();
                 GridFundFilter.SelectionChangeCommitted += GridFilterControl1_ItemSelected;
                 GridBocFilter.SelectionChangeCommitted += GridFilterControl2_ItemSelected;
@@ -216,7 +217,7 @@ namespace BudgetExecution
                 PopulateGridBocFilterItems();
                 lblBoc.Visible = true;
                 GridBocFilter.Visible = true;
-                this.GridGroupBox.Text = $"{Source.ToString()} {GridFilterControl1?.SelectedItem} Database";
+                GridGroupBox.Text = $"{Source.ToString()} {GridFilterControl1?.SelectedItem} Database";
             }
             catch (Exception ex)
             {
@@ -239,7 +240,7 @@ namespace BudgetExecution
                 GridAccountFilter.Visible = true;
                 PopulateGridAccountFilterItems();
                 GridAccountFilter.SelectionChangeCommitted += GridFilterControl3_ItemSelected;
-                this.GridGroupBox.Text = $"{Source.ToString()} {GridFilterControl1?.SelectedItem} {GridFilterControl2?.SelectedItem} Database";
+                GridGroupBox.Text = $"{Source.ToString()} {GridFilterControl1?.SelectedItem} {GridFilterControl2?.SelectedItem} Database";
             }
             catch (Exception ex)
             {
@@ -1026,7 +1027,7 @@ namespace BudgetExecution
                 }
                 else
                 {
-                    this.EditTab.Visible = false;
+                    EditTab.Visible = false;
                 }
             }
             catch (Exception ex)
