@@ -29,7 +29,7 @@ namespace BudgetExecution
                 Chart.Series.Clear();
             }
 
-            ConfigurePrimaryAxisTitle(new string[] { title });
+            ConfigurePrimaryAxisTitle(new string[] {title});
             DataSeries = GetSeriesTotals(data);
             DataSeries.Type = SeriesType;
             Chart.Series.Add(DataSeries);
@@ -44,6 +44,7 @@ namespace BudgetExecution
         {
             SeriesType = ChartSeriesType.Column;
             Chart = chart;
+            Configure3DMode(Chart);
             DbData = data;
             Source = data.Source;
             Value = Stat.Total;
@@ -60,7 +61,6 @@ namespace BudgetExecution
             DataSeries.Type = SeriesType;
             ConfigureLargeNumberSeries(DataSeries);
             ConfigurePrimaryAxisLabels(Chart);
-            Configure3DMode(Chart);
             ConfigureToolTip(DataSeries);
             Chart.ShowToolTips = true;
         }
@@ -107,7 +107,10 @@ namespace BudgetExecution
             Metric = new PrcMetric(DbData);
             DataMetrics = Metric.GetChartMetrics(Table, filter);
             DataSeries = GetSeriesTotals(GetMeasure(DataMetrics, Value), type);
-            Chart.Series.Add(DataSeries);
+            Table = DbData.DbTable;
+            Metric = new PrcMetric(DbData);
+            DataMetrics = Metric.GetChartMetrics(Table, filter);
+            Chart.Series?.Add(DataSeries);
             DataSeries.Type = type;
             ConfigureSeries(DataSeries, Value);
             Configure3DMode(Chart);
@@ -140,20 +143,21 @@ namespace BudgetExecution
             Chart = chart;
             Value = value;
             SeriesType = type;
-            ConfigurePrimaryAxisLabels(Chart);
-            ConfigureMainTitle(title);
-            if (Chart.Series != null)
+            if (Chart.Series.Count > 0)
             {
                 Chart.Series.Clear();
             }
 
             DataSeries = new ChartSeries();
+            ConfigureSeries(DataSeries, Value);
             DataSeries.Type = SeriesType;
             foreach (KeyValuePair<string, double> kvp in data)
                 DataSeries.Points.Add(kvp.Key, kvp.Value);
-            Chart.Series.Add(DataSeries);
+            Chart.Series?.Add(DataSeries);
             Configure3DMode(Chart);
             ConfigureToolTip(DataSeries);
+            ConfigurePrimaryAxisLabels(Chart);
+            ConfigureMainTitle(title);
             Chart.ShowToolTips = true;
         }
 
@@ -185,11 +189,12 @@ namespace BudgetExecution
         public BudgetChart(ChartControl chart, string[] title, Source source, Dictionary<string, object> param, Field filter, Stat value, ChartSeriesType type)
         {
             Chart = chart;
-            if (Chart.Series != null)
+            if (Chart.Series.Count > 0)
             {
                 Chart.Series.Clear();
             }
-
+            
+            Configure3DMode(Chart);
             SeriesType = type;
             Source = source;
             Value = value;
@@ -198,12 +203,11 @@ namespace BudgetExecution
             Metric = new PrcMetric(DbData);
             DataMetrics = Metric.GetChartMetrics(Table, filter);           
             DataSeries = GetSeriesTotals(GetMeasure(DataMetrics, Value), SeriesType);
-            Chart.Series.Add(DataSeries);
+            Chart.Series?.Add(DataSeries);
             ConfigureSeries(DataSeries, Value);
             ConfigureToolTip(DataSeries);
             ConfigurePrimaryAxisLabels(Chart);
             ConfigureMainTitle(title);
-            Configure3DMode(Chart);
             Chart.ShowToolTips = true;
         }
 
@@ -356,7 +360,7 @@ namespace BudgetExecution
                 DataSeries.ExplosionOffset = 20f;
                 DataSeries.ShowTicks = true;
                 DataSeries.Style.DisplayText = true;
-                DataSeries.Style.TextFormat = "{0}";
+                DataSeries.Style.TextFormat = "{0:N2}";
                 DataSeries.PointsToolTipFormat = "Funding:{4}";
             }
             catch (Exception ex)
@@ -475,6 +479,11 @@ namespace BudgetExecution
 
                 if (DataSeries.Type == ChartSeriesType.Pie)
                 {
+                    for (int i = 0; i < DataSeries.Points.Count; i++)
+                    {
+                        DataSeries.Styles[i].ToolTip = $"{DataSeries.Points[i].Category}";
+                    }
+
                     DataSeries.Style.DisplayText = true;
                     DataSeries.SmartLabels = true;
                     DataSeries.SortPoints = true;
@@ -490,7 +499,7 @@ namespace BudgetExecution
                     DataSeries.Style.Font.Facename = "SegoeUI";
                     DataSeries.ShowTicks = true;
                     Chart.Series[0].ConfigItems.PieItem.HeightCoeficient = 0.1f;
-                    ConfigurePieChart(DataSeries);
+                    //ConfigurePieChart(DataSeries);
                     return;
                 }
 
@@ -547,27 +556,24 @@ namespace BudgetExecution
         {
             try
             {
+                Chart = chart;
+                Chart.Style3D = true;
+                Chart.ChartArea.Series3D = true;
                 if (SeriesType == ChartSeriesType.Column)
                 {
-                    Chart = chart;
-                    Chart.Style3D = true;
-                    Chart.ChartArea.Series3D = true;
-                    Chart.RealMode3D = true;
-                    Chart.Tilt = 0.0f;
+                    Chart.Tilt = 1f;
                     Chart.Depth = 250;
                     Chart.Rotation = 20;
                     Chart.SpacingBetweenSeries = 2;
+                    Chart.RealMode3D = true;
+                    return;
                 }
 
                 if (SeriesType == ChartSeriesType.Pie)
                 {
-                    Chart = chart;
-                    Chart.Style3D = true;
-                    Chart.ChartArea.Series3D = true;
-                    Chart.RealMode3D = true;
                     Chart.Tilt = -15f;
                     Chart.Depth = 250;
-                    Chart.Rotation = 0;
+                    Chart.RealMode3D = false;
                 }
             }
             catch (Exception e)

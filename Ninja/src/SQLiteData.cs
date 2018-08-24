@@ -36,8 +36,9 @@ namespace BudgetExecution
             PopulateFilterButtons(Filter1, Info.Sources);
             Text = $"{Source.ToString()} Database";
             FunctionTab.TabVisible = false;
-            TableFilter = new DataFilter(Info.FilterRows);
-            FieldFilter = new FieldFilter(Info.GetColumnValues);
+            TableFilter = Info.FilterRows;
+            FieldFilter = Info.GetColumnValues;
+            label12.Text = Table.Rows.Count.ToString();
         }
 
         public SQLiteData(Source source, Provider provider)
@@ -55,6 +56,7 @@ namespace BudgetExecution
             FunctionTab.TabVisible = false;
             TableFilter = Info.FilterRows;
             FieldFilter = Info.GetColumnValues;
+            label12.Text = Table.Rows.Count.ToString();
         }
 
         // PROPERTIES
@@ -372,7 +374,7 @@ namespace BudgetExecution
                 DataTable tbl3 = TableFilter(tbl2, C3, F3);
                 BindingSource.DataSource = tbl3;
                 label6.Text = DbData.GetTotal(tbl3).ToString("c");
-                label12.Text = DbData.GetCount(tbl3).ToString();
+                label12.Text = tbl3.Rows.Count.ToString();
                 if (Filter4.Tag != null)
                 {
                     PopulateFilterItems(Filter4.Tag.ToString(), tbl3, Filter4, label4);
@@ -398,7 +400,7 @@ namespace BudgetExecution
                 DataTable tbl4 = TableFilter(tbl3, C4, F4);
                 BindingSource.DataSource = tbl4;
                 label6.Text = DbData.GetTotal(tbl4).ToString("c");
-                label12.Text = DbData.GetCount(tbl4).ToString();
+                label12.Text = tbl4.Rows.Count.ToString();
             }
             catch (Exception ex)
             {

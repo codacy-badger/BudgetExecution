@@ -168,7 +168,7 @@ namespace BudgetExecution
                 if (DbData.Source == Source.DivisionAccounts)
                 {
                     DivisionTab.TabVisible = false;
-                    DatabaseTab.TabVisible = true;
+                    DatabaseTab.TabVisible = false;
                     ProjectTab.TabVisible = false;
                     EditTab.TabVisible = false;
                 }
@@ -193,7 +193,7 @@ namespace BudgetExecution
                 GridBocFilter.Visible = false;
                 GridRefreshButton.Click += GridRefreshButton_OnClick;
                 ExcelButton.Click += ExcelButton_Click;
-                CalendatButton.Click += CalendatButton_Click;
+                CalendatButton.Click += CalendarButton_Click;
                 CalculatorButton.Click += CalculatorButton_Click;
                 Grid.SelectionChanged += UpdateAccountChart;
             }
@@ -629,7 +629,7 @@ namespace BudgetExecution
             {
                 ChartFilterControl4 = sender as MetroSetComboBox;
                 ChartGroup = (Field)Enum.Parse(typeof(Field), ChartFilterControl4.SelectedItem.ToString());
-                ChartMainTitle = new[] { $"{ChartFilter} Funding By {ChartFilterControl4.SelectedItem}" };
+                ChartMainTitle = new[] { $"{Text} {ChartFilter} By {ChartFilterControl4.SelectedItem} " };
                 Dictionary<string, object> param = new Dictionary<string, object> { [ChartField.ToString()] = ChartFilter };
                 switch (CurrentTabIndex)
                 {
@@ -777,7 +777,15 @@ namespace BudgetExecution
                             FundFilter4.Items.Remove("RC");
                         }
 
-                        ChartMainTitle = new[] { "Funding By Appropriation" };
+                        if (Division != null)
+                        {
+                            ChartMainTitle = new[] {$"{Division} Funding By Appropriation"};
+                        }
+                        else
+                        {
+                            ChartMainTitle = new[] {$"{Source.ToString()} Funding By Appropriation"};
+                        }
+
                         FundChart = new BudgetChart(FundChart, ChartMainTitle, DbData, Field.Fund, Stat.Total, ChartSeriesType.Column).Activate();
                         break;
 
@@ -790,7 +798,15 @@ namespace BudgetExecution
                             BocFilter4.Items.Remove("RC");
                         }
 
-                        ChartMainTitle = new[] { "Funding By Budget Object Class" };
+                        if (Division != null)
+                        {
+                            ChartMainTitle = new[] {$"{Division} Funding By Object Class"};
+                        }
+                        else
+                        {
+                            ChartMainTitle = new[] {$"{Source.ToString()} Funding By Object Class"};
+                        }
+
                         BocChart = new BudgetChart(BocChart, ChartMainTitle, DbData, Field.BocName, Stat.Total, ChartSeriesType.Column).Activate();
                         break;
 
@@ -798,12 +814,20 @@ namespace BudgetExecution
                         AssignChartFIlterControls(NpmFilter1, NpmFilter2, NpmFilter3, NpmFilter4);
                         AssignChartExpanders(NpmExpander1, NpmExpander2);
                         PopulateFilterBoxItems(ChartFilterControl3, Field.NPM);
-                        if (DbData.Source == Source.RegionalAccounts)
+                        if(DbData.Source == Source.RegionalAccounts)
                         {
                             NpmFilter4.Items.Remove("RC");
                         }
 
-                        ChartMainTitle = new[] { "Funding By National Program" };
+                        if(Division != null)
+                        {
+                            ChartMainTitle = new[] {$"{Division} Funding By HQ NPM"};
+                        }
+                        else
+                        {
+                            ChartMainTitle = new[] {$"{Source.ToString()} Funding By HQ NPM"};
+                        }
+
                         NpmChart = new BudgetChart(NpmChart, ChartMainTitle, DbData, Field.NPM, Stat.Total, ChartSeriesType.Column).Activate();
                         break;
 
@@ -815,8 +839,16 @@ namespace BudgetExecution
                         {
                             GoalFilter4.Items.Remove("RC");
                         }
+                        
+                        if(Division != null)
+                        {
+                            ChartMainTitle = new[] {$"{Division} Funding By Agency Goal"};
+                        }
+                        else
+                        {
+                            ChartMainTitle = new[] {$"{Source.ToString()} Funding By Agency Goal"};
+                        }
 
-                        ChartMainTitle = new[] { "Funding By Agency Goal" };
                         GoalChart = new BudgetChart(GoalChart, ChartMainTitle, DbData, Field.GoalName, Stat.Total, ChartSeriesType.Column).Activate();
                         break;
 
@@ -828,8 +860,16 @@ namespace BudgetExecution
                         {
                             ObjectiveFilter4.Items.Remove("RC");
                         }
+                        
+                        if (Division != null)
+                        {
+                            ChartMainTitle = new[] {$"{Division} Funding By Objective"};
+                        }
+                        else
+                        {
+                            ChartMainTitle = new[] {$"{Source.ToString()} Funding By Objective"};
+                        }
 
-                        ChartMainTitle = new[] { "Funding By Agency Objective" };
                         ObjectiveChart = new BudgetChart(ObjectiveChart, ChartMainTitle, DbData, Field.ObjectiveName, Stat.Total, ChartSeriesType.Column).Activate();
                         break;
 
@@ -841,8 +881,16 @@ namespace BudgetExecution
                         {
                             DivisionFilter4.Items.Remove("RC");
                         }
+                        
+                        if (Division != null)
+                        {
+                            ChartMainTitle = new[] {$"{Division} Funding By Division"};
+                        }
+                        else
+                        {
+                            ChartMainTitle = new[] {$"{Source.ToString()} Funding By Division"};
+                        }
 
-                        ChartMainTitle = new[] { "Funding By Division" };
                         DivisionChart = new BudgetChart(DivisionChart, ChartMainTitle, DbData, Field.RC, Stat.Total, ChartSeriesType.Column).Activate();
                         break;
 
@@ -854,8 +902,16 @@ namespace BudgetExecution
                         {
                             AreaFilter4.Items.Remove("RC");
                         }
+                        
+                        if (Division != null)
+                        {
+                            ChartMainTitle = new[] {$"{Division} Funding By Program Area"};
+                        }
+                        else
+                        {
+                            ChartMainTitle = new[] {$"{Source.ToString()} Funding By Program Area"};
+                        }
 
-                        ChartMainTitle = new[] { "Funding By Program Area" };
                         AreaChart = new BudgetChart(AreaChart, ChartMainTitle, DbData, Field.ProgramArea, Stat.Total, ChartSeriesType.Column).Activate();
                         break;
 
@@ -867,24 +923,21 @@ namespace BudgetExecution
                         {
                             ProjectFilter4.Items.Remove("RC");
                         }
+                        
+                        if (Division != null)
+                        {
+                            ChartMainTitle = new[] {$"{Division} Funding By Program Project"};
+                        }
+                        else
+                        {
+                            ChartMainTitle = new[] {$"{Source.ToString()} Funding By Program Project"};
+                        }
 
-                        ChartMainTitle = new[] { "Funding By Program Project" };
                         ProjectChart = new BudgetChart(ProjectChart, ChartMainTitle, DbData, Field.ProgramProjectCode, Stat.Total, ChartSeriesType.Column).Activate();
                         break;
 
                     case 8:
-                        int current = BindingSource.Position;
-                        DataRowView dvrow = (DataRowView)BindingSource.Current;
-                        DbRow = Table.Rows[current];
-                        int id = int.Parse(DbRow["ID"].ToString());
-                        string code = dvrow["Code"].ToString();
-                        Dictionary<string, object> p = new Dictionary<string, object> { ["ID"] = id };
-                        DataBuilder data = new DataBuilder(Source, Provider.SQLite, p);
-                        decimal total = DbData.GetTotal(DbData.DbTable);
-                        decimal amt = decimal.Parse(DbRow["Amount"].ToString());
-                        Dictionary<string, double> d = new Dictionary<string, double> { ["Total"] = (double)total, ["Allocation"] = (double)amt };
-                        ChartMainTitle = new[] { $"{Source.ToString()} {DbRow["ProgramProjectName"]} Funding = {amt.ToString("c")}" };
-                        AccountChart = new BudgetChart(AccountChart, ChartMainTitle, d, Field.ProgramProjectCode, Stat.Total, ChartSeriesType.Column).Activate();
+                        UpdateAccountChart();
                         break;
                 }
             }
@@ -956,20 +1009,21 @@ namespace BudgetExecution
             }
         }
 
-        private Dictionary<string, object> GetDataGridSelectedRowDictionary(DataGridView dgv)
+        private Dictionary<string, object> GetSelectedRowPrcDictionary()
         {
             try
             {
-                if (dgv.CurrentRow != null)
+                if (Grid.CurrentRow != null)
                 {
-                    DataGridViewRow dgvRow = dgv.CurrentRow;
+                    DataGridViewRow dgvRow = Grid.CurrentRow;
                     Dictionary<string, object> data = new Dictionary<string, object>();
                     data.Add("ID", int.Parse(dgvRow.Cells["ID"].Value.ToString()));
-                    data.Add("Fund", dgvRow.Cells["Fund"].Value.ToString());
-                    data.Add("Org", dgvRow.Cells["Org"].Value.ToString());
-                    data.Add("RC", dgvRow.Cells["RC"].ToString());
-                    data.Add("Code", dgvRow.Cells["Code"].ToString());
-                    data.Add("BOC", dgvRow.Cells["BOC"].ToString());
+                    //data.Add("Fund", dgvRow.Cells["Fund"].Value.ToString());
+                    //data.Add("AH", dgvRow.Cells["AH"].Value.ToString());
+                    //data.Add("Org", dgvRow.Cells["Org"].Value.ToString());
+                    //data.Add("RC", dgvRow.Cells["RC"].ToString());
+                    //data.Add("Code", dgvRow.Cells["Code"].ToString());
+                    //data.Add("BOC", dgvRow.Cells["BOC"].ToString());
                     return data;
                 }
 
@@ -982,7 +1036,7 @@ namespace BudgetExecution
             }
         }
 
-        private void CalendatButton_Click(object sender, EventArgs e)
+        private void CalendarButton_Click(object sender, EventArgs e)
         {
             Calendar cal = new Calendar();
             cal.Show();
@@ -1057,8 +1111,34 @@ namespace BudgetExecution
             rp.Show();
         }
 
+        private void UpdateAccountChart()
+        {           
+            try
+            {
+                var drv = (DataRowView)BindingSource.Current;
+                var current = drv.Row;
+                decimal amt = decimal.Parse(current["Amount"].ToString());
+                Dictionary<string, double> d = new Dictionary<string, double>{["Total"] = (double)DbData.Total, 
+                    ["Allocation"] = (double)amt};
+                ChartMainTitle = new[] {$"{Division} PRC {current["Code"]} BOC {current["BOC"]} Funding: {amt.ToString("c")}"};
+                AccountChart = new BudgetChart(AccountChart, ChartMainTitle, d, Field.ProgramProjectCode, Stat.Total, ChartSeriesType.Column).Activate();
+            }
+            catch (Exception ex)
+            {
+                new Error(ex).ShowDialog();
+            }
+        }
+
         private void UpdateAccountChart(object sender, EventArgs e)
         {
+            try
+            {
+                UpdateAccountChart();
+            }
+            catch (Exception ex)
+            {
+                new Error(ex).ShowDialog();
+            }
 
         }
 
@@ -1074,6 +1154,11 @@ namespace BudgetExecution
         private void NextButton_OnClick(object sender, EventArgs e)
         {
             BindingSource.MoveNext();
+        }
+
+        private void BocExpander1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
