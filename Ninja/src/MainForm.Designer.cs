@@ -75,7 +75,7 @@ namespace BudgetExecution
             this.hubTile2.ForeColor = System.Drawing.SystemColors.Info;
             this.hubTile2.HoveredBorderColor = System.Drawing.SystemColors.MenuHighlight;
             this.hubTile2.ImageSource = ((System.Drawing.Image)(resources.GetObject("hubTile2.ImageSource")));
-            this.hubTile2.Location = new System.Drawing.Point(1450, 46);
+            this.hubTile2.Location = new System.Drawing.Point(1530, 886);
             this.hubTile2.Margin = new System.Windows.Forms.Padding(2);
             this.hubTile2.MinimumSize = new System.Drawing.Size(70, 66);
             this.hubTile2.Name = "hubTile2";
@@ -84,7 +84,7 @@ namespace BudgetExecution
             this.hubTile2.ShowBanner = true;
             this.hubTile2.ShowBannerIcon = true;
             this.hubTile2.ShowRotateTileBanner = true;
-            this.hubTile2.Size = new System.Drawing.Size(241, 99);
+            this.hubTile2.Size = new System.Drawing.Size(134, 66);
             this.hubTile2.SwitchRotateTileBannerVisibility = true;
             this.hubTile2.TabIndex = 73;
             textItem4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -129,7 +129,7 @@ namespace BudgetExecution
             this.MainChart.Legend.Visible = false;
             this.MainChart.LegendsPlacement = Syncfusion.Windows.Forms.Chart.ChartPlacement.Outside;
             this.MainChart.Localize = null;
-            this.MainChart.Location = new System.Drawing.Point(27, 125);
+            this.MainChart.Location = new System.Drawing.Point(34, 100);
             this.MainChart.Margin = new System.Windows.Forms.Padding(0);
             this.MainChart.Name = "MainChart";
             this.MainChart.Palette = Syncfusion.Windows.Forms.Chart.ChartColorPalette.Custom;
@@ -197,7 +197,7 @@ namespace BudgetExecution
             this.MainChart.Series3D = true;
             this.MainChart.SeriesHighlight = true;
             this.MainChart.ShadowColor = new Syncfusion.Drawing.BrushInfo(Syncfusion.Drawing.GradientStyle.PathRectangle, System.Drawing.SystemColors.WindowText, System.Drawing.Color.Silver);
-            this.MainChart.Size = new System.Drawing.Size(1430, 707);
+            this.MainChart.Size = new System.Drawing.Size(1370, 707);
             this.MainChart.Spacing = 5F;
             this.MainChart.SpacingBetweenPoints = 5F;
             this.MainChart.Style3D = true;

@@ -29,43 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Syncfusion.Windows.Forms.Tools.ToolTipInfo toolTipInfo4 = new Syncfusion.Windows.Forms.Tools.ToolTipInfo();
-            Syncfusion.Windows.Forms.Tools.ToolTipInfo toolTipInfo1 = new Syncfusion.Windows.Forms.Tools.ToolTipInfo();
-            Syncfusion.Windows.Forms.Tools.ToolTipInfo toolTipInfo3 = new Syncfusion.Windows.Forms.Tools.ToolTipInfo();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RecordManager));
-            Syncfusion.Windows.Forms.Tools.ToolTipInfo toolTipInfo2 = new Syncfusion.Windows.Forms.Tools.ToolTipInfo();
             Syncfusion.Windows.Forms.CaptionImage captionImage1 = new Syncfusion.Windows.Forms.CaptionImage();
             Syncfusion.Windows.Forms.CaptionImage captionImage2 = new Syncfusion.Windows.Forms.CaptionImage();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.RecordNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
-            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
-            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton10 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton11 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
-            this.CopyButton = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator15 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton13 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator18 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton12 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator16 = new System.Windows.Forms.ToolStripSeparator();
-            this.ResetButton = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
-            this.AddButton = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator19 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton7 = new System.Windows.Forms.ToolStripButton();
-            this.GridRefreshButton = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton9 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton14 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator17 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton15 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator20 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton16 = new System.Windows.Forms.ToolStripButton();
-            this.label2 = new System.Windows.Forms.Label();
             this.AccountTabControl = new Syncfusion.Windows.Forms.Tools.TabControlAdv();
             this.UpdateTab = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
             this.RecordTabelPanel = new System.Windows.Forms.TableLayoutPanel();
@@ -191,366 +157,41 @@
             this.metroSetTextBox28 = new MetroSet_UI.Controls.MetroSetTextBox();
             this.metroSetTextBox29 = new MetroSet_UI.Controls.MetroSetTextBox();
             this.metroSetTextBox30 = new MetroSet_UI.Controls.MetroSetTextBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.RecordNavigator2 = new System.Windows.Forms.BindingNavigator(this.components);
-            this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
-            this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator10 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripTextBox2 = new System.Windows.Forms.ToolStripTextBox();
-            this.toolStripSeparator11 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator13 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator8 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator9 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator12 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton6 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator14 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton8 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator21 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton17 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator22 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton18 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator23 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton19 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator24 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton20 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator25 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton21 = new System.Windows.Forms.ToolStripButton();
-            this.label32 = new System.Windows.Forms.Label();
-            this.superToolTip1 = new Syncfusion.Windows.Forms.Tools.SuperToolTip(this);
             this.BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.RecordNavigator1)).BeginInit();
-            this.RecordNavigator1.SuspendLayout();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button12 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button11 = new System.Windows.Forms.Button();
+            this.GridRefreshButton = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
+            this.button10 = new System.Windows.Forms.Button();
+            this.button13 = new System.Windows.Forms.Button();
+            this.metroSetToolTip1 = new MetroSet_UI.Components.MetroSetToolTip();
+            this.metroSetToolTip2 = new MetroSet_UI.Components.MetroSetToolTip();
             ((System.ComponentModel.ISupportInitialize)(this.AccountTabControl)).BeginInit();
             this.AccountTabControl.SuspendLayout();
             this.UpdateTab.SuspendLayout();
             this.RecordTabelPanel.SuspendLayout();
             this.AddNewTab.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.RecordNavigator2)).BeginInit();
-            this.RecordNavigator2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BindingSource)).BeginInit();
+            this.tableLayoutPanel2.SuspendLayout();
+            this.tableLayoutPanel3.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.groupBox2.Controls.Add(this.RecordNavigator1);
-            this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.ForeColor = System.Drawing.SystemColors.Info;
-            this.groupBox2.Location = new System.Drawing.Point(438, 281);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox2.Size = new System.Drawing.Size(404, 38);
-            this.groupBox2.TabIndex = 56;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Commands";
-            // 
-            // RecordNavigator1
-            // 
-            this.RecordNavigator1.AddNewItem = null;
-            this.RecordNavigator1.BackColor = System.Drawing.Color.Transparent;
-            this.RecordNavigator1.CountItem = this.toolStripLabel1;
-            this.RecordNavigator1.DeleteItem = null;
-            this.RecordNavigator1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.RecordNavigator1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RecordNavigator1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.RecordNavigator1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripSeparator3,
-            this.toolStripButton10,
-            this.toolStripSeparator1,
-            this.toolStripTextBox1,
-            this.toolStripLabel1,
-            this.toolStripSeparator2,
-            this.toolStripButton11,
-            this.toolStripSeparator4,
-            this.CopyButton,
-            this.toolStripSeparator15,
-            this.toolStripButton13,
-            this.toolStripSeparator18,
-            this.toolStripButton12,
-            this.toolStripSeparator16,
-            this.ResetButton,
-            this.toolStripSeparator5,
-            this.AddButton,
-            this.toolStripSeparator19,
-            this.toolStripButton7,
-            this.GridRefreshButton,
-            this.toolStripButton9,
-            this.toolStripSeparator6,
-            this.toolStripButton14,
-            this.toolStripSeparator17,
-            this.toolStripButton15,
-            this.toolStripSeparator20,
-            this.toolStripButton16});
-            this.RecordNavigator1.Location = new System.Drawing.Point(2, 9);
-            this.RecordNavigator1.MoveFirstItem = null;
-            this.RecordNavigator1.MoveLastItem = null;
-            this.RecordNavigator1.MoveNextItem = this.toolStripButton11;
-            this.RecordNavigator1.MovePreviousItem = this.toolStripButton10;
-            this.RecordNavigator1.Name = "RecordNavigator1";
-            this.RecordNavigator1.PositionItem = this.toolStripTextBox1;
-            this.RecordNavigator1.Size = new System.Drawing.Size(400, 27);
-            this.RecordNavigator1.TabIndex = 153;
-            this.RecordNavigator1.Text = "bindingNavigator1";
-            // 
-            // toolStripLabel1
-            // 
-            this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(33, 24);
-            this.toolStripLabel1.Text = "of {0}";
-            toolTipInfo4.BackColor = System.Drawing.Color.Black;
-            toolTipInfo4.Body.ImageScalingSize = new System.Drawing.Size(20, 20);
-            toolTipInfo4.Body.RenderHtml = true;
-            toolTipInfo4.Body.Size = new System.Drawing.Size(200, 40);
-            toolTipInfo4.Body.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            toolTipInfo4.BorderColor = System.Drawing.SystemColors.MenuHighlight;
-            toolTipInfo4.Footer.Size = new System.Drawing.Size(20, 20);
-            toolTipInfo4.Header.Size = new System.Drawing.Size(20, 20);
-            this.superToolTip1.SetToolTip(this.toolStripLabel1, toolTipInfo4);
-            this.toolStripLabel1.ToolTipText = "Total number of items";
-            // 
-            // toolStripSeparator3
-            // 
-            this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 27);
-            // 
-            // toolStripButton10
-            // 
-            this.toolStripButton10.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton10.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton10.Image")));
-            this.toolStripButton10.Name = "toolStripButton10";
-            this.toolStripButton10.RightToLeftAutoMirrorImage = true;
-            this.toolStripButton10.Size = new System.Drawing.Size(24, 24);
-            this.toolStripButton10.Text = "Previous";
-            this.superToolTip1.SetToolTip(this.toolStripButton10, toolTipInfo4);
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 27);
-            this.superToolTip1.SetToolTip(this.toolStripSeparator1, toolTipInfo4);
-            // 
-            // toolStripTextBox1
-            // 
-            this.toolStripTextBox1.AccessibleName = "Position";
-            this.toolStripTextBox1.AutoSize = false;
-            this.toolStripTextBox1.BackColor = System.Drawing.Color.Black;
-            this.toolStripTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.toolStripTextBox1.ForeColor = System.Drawing.Color.White;
-            this.toolStripTextBox1.Name = "toolStripTextBox1";
-            this.toolStripTextBox1.Size = new System.Drawing.Size(28, 16);
-            this.toolStripTextBox1.Text = "0";
-            this.toolStripTextBox1.TextBoxTextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.superToolTip1.SetToolTip(this.toolStripTextBox1, toolTipInfo4);
-            this.toolStripTextBox1.ToolTipText = "Current position";
-            // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 27);
-            this.superToolTip1.SetToolTip(this.toolStripSeparator2, toolTipInfo4);
-            // 
-            // toolStripButton11
-            // 
-            this.toolStripButton11.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton11.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton11.Image")));
-            this.toolStripButton11.Name = "toolStripButton11";
-            this.toolStripButton11.RightToLeftAutoMirrorImage = true;
-            this.toolStripButton11.Size = new System.Drawing.Size(24, 24);
-            this.toolStripButton11.Text = "Next";
-            this.superToolTip1.SetToolTip(this.toolStripButton11, toolTipInfo4);
-            // 
-            // toolStripSeparator4
-            // 
-            this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 27);
-            this.superToolTip1.SetToolTip(this.toolStripSeparator4, toolTipInfo4);
-            // 
-            // CopyButton
-            // 
-            this.CopyButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.CopyButton.Image = ((System.Drawing.Image)(resources.GetObject("CopyButton.Image")));
-            this.CopyButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.CopyButton.Name = "CopyButton";
-            this.CopyButton.Size = new System.Drawing.Size(24, 24);
-            this.CopyButton.Text = "toolStripButton7";
-            this.superToolTip1.SetToolTip(this.CopyButton, toolTipInfo4);
-            this.CopyButton.ToolTipText = "Copy DbData Into New Account";
-            // 
-            // toolStripSeparator15
-            // 
-            this.toolStripSeparator15.Name = "toolStripSeparator15";
-            this.toolStripSeparator15.Size = new System.Drawing.Size(6, 27);
-            this.superToolTip1.SetToolTip(this.toolStripSeparator15, toolTipInfo4);
-            // 
-            // toolStripButton13
-            // 
-            this.toolStripButton13.BackColor = System.Drawing.Color.Black;
-            this.toolStripButton13.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton13.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.toolStripButton13.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton13.Image")));
-            this.toolStripButton13.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton13.Name = "toolStripButton13";
-            this.toolStripButton13.Size = new System.Drawing.Size(24, 24);
-            this.toolStripButton13.Text = "toolStripButton13";
-            this.superToolTip1.SetToolTip(this.toolStripButton13, toolTipInfo4);
-            // 
-            // toolStripSeparator18
-            // 
-            this.toolStripSeparator18.Name = "toolStripSeparator18";
-            this.toolStripSeparator18.Size = new System.Drawing.Size(6, 27);
-            this.superToolTip1.SetToolTip(this.toolStripSeparator18, toolTipInfo4);
-            // 
-            // toolStripButton12
-            // 
-            this.toolStripButton12.BackColor = System.Drawing.Color.Black;
-            this.toolStripButton12.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("toolStripButton12.BackgroundImage")));
-            this.toolStripButton12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.toolStripButton12.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton12.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton12.Image")));
-            this.toolStripButton12.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton12.Name = "toolStripButton12";
-            this.toolStripButton12.Size = new System.Drawing.Size(24, 24);
-            this.toolStripButton12.Text = "toolStripButton12";
-            this.superToolTip1.SetToolTip(this.toolStripButton12, toolTipInfo4);
-            // 
-            // toolStripSeparator16
-            // 
-            this.toolStripSeparator16.Name = "toolStripSeparator16";
-            this.toolStripSeparator16.Size = new System.Drawing.Size(6, 27);
-            this.superToolTip1.SetToolTip(this.toolStripSeparator16, toolTipInfo4);
-            // 
-            // ResetButton
-            // 
-            this.ResetButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.ResetButton.Image = ((System.Drawing.Image)(resources.GetObject("ResetButton.Image")));
-            this.ResetButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.ResetButton.Name = "ResetButton";
-            this.ResetButton.Size = new System.Drawing.Size(24, 24);
-            this.ResetButton.Text = "toolStripButton7";
-            this.superToolTip1.SetToolTip(this.ResetButton, toolTipInfo4);
-            this.ResetButton.ToolTipText = "Reset DataTable and Filters";
-            // 
-            // toolStripSeparator5
-            // 
-            this.toolStripSeparator5.Name = "toolStripSeparator5";
-            this.toolStripSeparator5.Size = new System.Drawing.Size(6, 27);
-            this.superToolTip1.SetToolTip(this.toolStripSeparator5, toolTipInfo4);
-            // 
-            // AddButton
-            // 
-            this.AddButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.AddButton.Image = ((System.Drawing.Image)(resources.GetObject("AddButton.Image")));
-            this.AddButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.AddButton.Name = "AddButton";
-            this.AddButton.Size = new System.Drawing.Size(24, 24);
-            this.AddButton.Text = "toolStripButton7";
-            this.superToolTip1.SetToolTip(this.AddButton, toolTipInfo4);
-            // 
-            // toolStripSeparator19
-            // 
-            this.toolStripSeparator19.Name = "toolStripSeparator19";
-            this.toolStripSeparator19.Size = new System.Drawing.Size(6, 27);
-            this.superToolTip1.SetToolTip(this.toolStripSeparator19, toolTipInfo4);
-            // 
-            // toolStripButton7
-            // 
-            this.toolStripButton7.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton7.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton7.Image")));
-            this.toolStripButton7.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton7.Name = "toolStripButton7";
-            this.toolStripButton7.Size = new System.Drawing.Size(24, 24);
-            this.toolStripButton7.Text = "toolStripButton7";
-            this.superToolTip1.SetToolTip(this.toolStripButton7, toolTipInfo4);
-            // 
-            // GridRefreshButton
-            // 
-            this.GridRefreshButton.Name = "GridRefreshButton";
-            this.GridRefreshButton.Size = new System.Drawing.Size(6, 27);
-            this.superToolTip1.SetToolTip(this.GridRefreshButton, toolTipInfo4);
-            // 
-            // toolStripButton9
-            // 
-            this.toolStripButton9.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton9.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton9.Image")));
-            this.toolStripButton9.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton9.Name = "toolStripButton9";
-            this.toolStripButton9.Size = new System.Drawing.Size(24, 24);
-            this.toolStripButton9.Text = "toolStripButton9";
-            this.superToolTip1.SetToolTip(this.toolStripButton9, toolTipInfo4);
-            // 
-            // toolStripSeparator6
-            // 
-            this.toolStripSeparator6.Name = "toolStripSeparator6";
-            this.toolStripSeparator6.Size = new System.Drawing.Size(6, 27);
-            this.superToolTip1.SetToolTip(this.toolStripSeparator6, toolTipInfo4);
-            // 
-            // toolStripButton14
-            // 
-            this.toolStripButton14.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton14.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton14.Image")));
-            this.toolStripButton14.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton14.Name = "toolStripButton14";
-            this.toolStripButton14.Size = new System.Drawing.Size(24, 24);
-            this.toolStripButton14.Text = "toolStripButton14";
-            this.superToolTip1.SetToolTip(this.toolStripButton14, toolTipInfo4);
-            // 
-            // toolStripSeparator17
-            // 
-            this.toolStripSeparator17.Name = "toolStripSeparator17";
-            this.toolStripSeparator17.Size = new System.Drawing.Size(6, 27);
-            this.superToolTip1.SetToolTip(this.toolStripSeparator17, toolTipInfo4);
-            // 
-            // toolStripButton15
-            // 
-            this.toolStripButton15.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton15.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton15.Image")));
-            this.toolStripButton15.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton15.Name = "toolStripButton15";
-            this.toolStripButton15.Size = new System.Drawing.Size(24, 24);
-            this.toolStripButton15.Text = "toolStripButton15";
-            this.superToolTip1.SetToolTip(this.toolStripButton15, toolTipInfo4);
-            // 
-            // toolStripSeparator20
-            // 
-            this.toolStripSeparator20.Name = "toolStripSeparator20";
-            this.toolStripSeparator20.Size = new System.Drawing.Size(6, 27);
-            this.superToolTip1.SetToolTip(this.toolStripSeparator20, toolTipInfo4);
-            // 
-            // toolStripButton16
-            // 
-            this.toolStripButton16.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton16.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton16.Image")));
-            this.toolStripButton16.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton16.Name = "toolStripButton16";
-            this.toolStripButton16.Size = new System.Drawing.Size(24, 24);
-            this.toolStripButton16.Text = "toolStripButton16";
-            this.superToolTip1.SetToolTip(this.toolStripButton16, toolTipInfo4);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.ForeColor = System.Drawing.SystemColors.Info;
-            this.label2.Location = new System.Drawing.Point(257, 142);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(24, 13);
-            this.label2.TabIndex = 23;
-            this.label2.Text = "ID: ";
             // 
             // AccountTabControl
             // 
             this.AccountTabControl.ActiveTabForeColor = System.Drawing.Color.White;
             this.AccountTabControl.AdjustTopGap = 5;
-            this.AccountTabControl.BeforeTouchSize = new System.Drawing.Size(851, 364);
+            this.AccountTabControl.BeforeTouchSize = new System.Drawing.Size(1272, 555);
             this.AccountTabControl.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.AccountTabControl.CloseButtonForeColor = System.Drawing.Color.Empty;
             this.AccountTabControl.CloseButtonHoverForeColor = System.Drawing.Color.Black;
@@ -561,12 +202,11 @@
             this.AccountTabControl.FocusOnTabClick = false;
             this.AccountTabControl.InActiveTabForeColor = System.Drawing.Color.Gray;
             this.AccountTabControl.Location = new System.Drawing.Point(0, 0);
-            this.AccountTabControl.Margin = new System.Windows.Forms.Padding(2);
             this.AccountTabControl.Name = "AccountTabControl";
             this.AccountTabControl.Padding = new System.Drawing.Point(6, 8);
             this.AccountTabControl.SeparatorColor = System.Drawing.SystemColors.ControlDark;
             this.AccountTabControl.ShowSeparator = false;
-            this.AccountTabControl.Size = new System.Drawing.Size(851, 364);
+            this.AccountTabControl.Size = new System.Drawing.Size(1272, 555);
             this.AccountTabControl.TabGap = 5;
             this.AccountTabControl.TabIndex = 24;
             this.AccountTabControl.TabPanelBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
@@ -574,36 +214,27 @@
             // 
             // UpdateTab
             // 
+            this.UpdateTab.Controls.Add(this.tableLayoutPanel2);
             this.UpdateTab.Controls.Add(this.RecordTabelPanel);
-            this.UpdateTab.Controls.Add(this.groupBox2);
             this.UpdateTab.Image = null;
             this.UpdateTab.ImageSize = new System.Drawing.Size(16, 16);
-            this.UpdateTab.Location = new System.Drawing.Point(0, 36);
-            this.UpdateTab.Margin = new System.Windows.Forms.Padding(2);
+            this.UpdateTab.Location = new System.Drawing.Point(0, 43);
             this.UpdateTab.Name = "UpdateTab";
             this.UpdateTab.ShowCloseButton = true;
-            this.UpdateTab.Size = new System.Drawing.Size(851, 328);
+            this.UpdateTab.Size = new System.Drawing.Size(1272, 512);
             this.UpdateTab.TabIndex = 3;
             this.UpdateTab.Text = "Update";
             this.UpdateTab.ThemesEnabled = false;
-            toolTipInfo1.BackColor = System.Drawing.Color.Black;
-            toolTipInfo1.Body.RenderHtml = true;
-            toolTipInfo1.Body.Size = new System.Drawing.Size(200, 40);
-            toolTipInfo1.BorderColor = System.Drawing.SystemColors.MenuHighlight;
-            toolTipInfo1.Footer.Size = new System.Drawing.Size(200, 40);
-            toolTipInfo1.ForeColor = System.Drawing.Color.LightSteelBlue;
-            toolTipInfo1.Header.Size = new System.Drawing.Size(200, 40);
-            this.superToolTip1.SetToolTip(this.UpdateTab, toolTipInfo1);
             // 
             // RecordTabelPanel
             // 
             this.RecordTabelPanel.ColumnCount = 6;
-            this.RecordTabelPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 135F));
-            this.RecordTabelPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 139F));
-            this.RecordTabelPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 138F));
-            this.RecordTabelPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 135F));
-            this.RecordTabelPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 140F));
-            this.RecordTabelPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 129F));
+            this.RecordTabelPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 202F));
+            this.RecordTabelPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 208F));
+            this.RecordTabelPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 207F));
+            this.RecordTabelPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 202F));
+            this.RecordTabelPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 210F));
+            this.RecordTabelPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 194F));
             this.RecordTabelPanel.Controls.Add(this.lbl29, 5, 8);
             this.RecordTabelPanel.Controls.Add(this.lbl28, 4, 8);
             this.RecordTabelPanel.Controls.Add(this.box29, 5, 9);
@@ -665,41 +296,38 @@
             this.RecordTabelPanel.Controls.Add(this.box26, 2, 9);
             this.RecordTabelPanel.Controls.Add(this.box28, 4, 9);
             this.RecordTabelPanel.ForeColor = System.Drawing.Color.LightGray;
-            this.RecordTabelPanel.Location = new System.Drawing.Point(19, 22);
-            this.RecordTabelPanel.Margin = new System.Windows.Forms.Padding(2);
+            this.RecordTabelPanel.Location = new System.Drawing.Point(28, 34);
             this.RecordTabelPanel.Name = "RecordTabelPanel";
             this.RecordTabelPanel.RowCount = 10;
-            this.RecordTabelPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 14F));
-            this.RecordTabelPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.RecordTabelPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 13F));
-            this.RecordTabelPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 38F));
-            this.RecordTabelPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 13F));
-            this.RecordTabelPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 39F));
-            this.RecordTabelPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 11F));
-            this.RecordTabelPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 42F));
-            this.RecordTabelPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 15F));
-            this.RecordTabelPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 80F));
-            this.RecordTabelPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 13F));
-            this.RecordTabelPanel.Size = new System.Drawing.Size(807, 255);
+            this.RecordTabelPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 22F));
+            this.RecordTabelPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 62F));
+            this.RecordTabelPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.RecordTabelPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 58F));
+            this.RecordTabelPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.RecordTabelPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
+            this.RecordTabelPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 17F));
+            this.RecordTabelPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 65F));
+            this.RecordTabelPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 23F));
+            this.RecordTabelPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 123F));
+            this.RecordTabelPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.RecordTabelPanel.Size = new System.Drawing.Size(1210, 392);
             this.RecordTabelPanel.TabIndex = 57;
             // 
             // lbl29
             // 
             this.lbl29.AutoSize = true;
-            this.lbl29.Location = new System.Drawing.Point(689, 210);
-            this.lbl29.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl29.Location = new System.Drawing.Point(1032, 324);
             this.lbl29.Name = "lbl29";
-            this.lbl29.Size = new System.Drawing.Size(32, 13);
+            this.lbl29.Size = new System.Drawing.Size(47, 20);
             this.lbl29.TabIndex = 58;
             this.lbl29.Text = "Code";
             // 
             // lbl28
             // 
             this.lbl28.AutoSize = true;
-            this.lbl28.Location = new System.Drawing.Point(549, 210);
-            this.lbl28.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl28.Location = new System.Drawing.Point(822, 324);
             this.lbl28.Name = "lbl28";
-            this.lbl28.Size = new System.Drawing.Size(32, 13);
+            this.lbl28.Size = new System.Drawing.Size(47, 20);
             this.lbl28.TabIndex = 58;
             this.lbl28.Text = "Code";
             // 
@@ -716,13 +344,12 @@
             this.box29.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.box29.Image = null;
             this.box29.Lines = null;
-            this.box29.Location = new System.Drawing.Point(689, 227);
-            this.box29.Margin = new System.Windows.Forms.Padding(2);
+            this.box29.Location = new System.Drawing.Point(1032, 350);
             this.box29.MaxLength = 32767;
             this.box29.Multiline = false;
             this.box29.Name = "box29";
             this.box29.ReadOnly = false;
-            this.box29.Size = new System.Drawing.Size(116, 19);
+            this.box29.Size = new System.Drawing.Size(174, 29);
             this.box29.Style = MetroSet_UI.Design.Style.Dark;
             this.box29.StyleManager = null;
             this.box29.TabIndex = 61;
@@ -736,20 +363,18 @@
             // lbl27
             // 
             this.lbl27.AutoSize = true;
-            this.lbl27.Location = new System.Drawing.Point(414, 210);
-            this.lbl27.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl27.Location = new System.Drawing.Point(620, 324);
             this.lbl27.Name = "lbl27";
-            this.lbl27.Size = new System.Drawing.Size(32, 13);
+            this.lbl27.Size = new System.Drawing.Size(47, 20);
             this.lbl27.TabIndex = 58;
             this.lbl27.Text = "Code";
             // 
             // lbl26
             // 
             this.lbl26.AutoSize = true;
-            this.lbl26.Location = new System.Drawing.Point(276, 210);
-            this.lbl26.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl26.Location = new System.Drawing.Point(413, 324);
             this.lbl26.Name = "lbl26";
-            this.lbl26.Size = new System.Drawing.Size(32, 13);
+            this.lbl26.Size = new System.Drawing.Size(47, 20);
             this.lbl26.TabIndex = 62;
             this.lbl26.Text = "Code";
             // 
@@ -766,13 +391,12 @@
             this.box0.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.box0.Image = null;
             this.box0.Lines = null;
-            this.box0.Location = new System.Drawing.Point(2, 16);
-            this.box0.Margin = new System.Windows.Forms.Padding(2);
+            this.box0.Location = new System.Drawing.Point(3, 25);
             this.box0.MaxLength = 32767;
             this.box0.Multiline = false;
             this.box0.Name = "box0";
             this.box0.ReadOnly = false;
-            this.box0.Size = new System.Drawing.Size(111, 19);
+            this.box0.Size = new System.Drawing.Size(166, 29);
             this.box0.Style = MetroSet_UI.Design.Style.Dark;
             this.box0.StyleManager = null;
             this.box0.TabIndex = 12;
@@ -796,13 +420,12 @@
             this.box4.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.box4.Image = null;
             this.box4.Lines = null;
-            this.box4.Location = new System.Drawing.Point(549, 16);
-            this.box4.Margin = new System.Windows.Forms.Padding(2);
+            this.box4.Location = new System.Drawing.Point(822, 25);
             this.box4.MaxLength = 32767;
             this.box4.Multiline = false;
             this.box4.Name = "box4";
             this.box4.ReadOnly = false;
-            this.box4.Size = new System.Drawing.Size(117, 19);
+            this.box4.Size = new System.Drawing.Size(176, 29);
             this.box4.Style = MetroSet_UI.Design.Style.Dark;
             this.box4.StyleManager = null;
             this.box4.TabIndex = 52;
@@ -816,20 +439,18 @@
             // lbl0
             // 
             this.lbl0.AutoSize = true;
-            this.lbl0.Location = new System.Drawing.Point(2, 0);
-            this.lbl0.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl0.Location = new System.Drawing.Point(3, 0);
             this.lbl0.Name = "lbl0";
-            this.lbl0.Size = new System.Drawing.Size(18, 13);
+            this.lbl0.Size = new System.Drawing.Size(26, 20);
             this.lbl0.TabIndex = 14;
             this.lbl0.Text = "ID";
             // 
             // lbl1
             // 
             this.lbl1.AutoSize = true;
-            this.lbl1.Location = new System.Drawing.Point(137, 0);
-            this.lbl1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl1.Location = new System.Drawing.Point(205, 0);
             this.lbl1.Name = "lbl1";
-            this.lbl1.Size = new System.Drawing.Size(70, 13);
+            this.lbl1.Size = new System.Drawing.Size(102, 20);
             this.lbl1.TabIndex = 15;
             this.lbl1.Text = "Budget Level";
             // 
@@ -846,13 +467,12 @@
             this.box1.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.box1.Image = null;
             this.box1.Lines = null;
-            this.box1.Location = new System.Drawing.Point(137, 16);
-            this.box1.Margin = new System.Windows.Forms.Padding(2);
+            this.box1.Location = new System.Drawing.Point(205, 25);
             this.box1.MaxLength = 32767;
             this.box1.Multiline = false;
             this.box1.Name = "box1";
             this.box1.ReadOnly = false;
-            this.box1.Size = new System.Drawing.Size(116, 19);
+            this.box1.Size = new System.Drawing.Size(174, 29);
             this.box1.Style = MetroSet_UI.Design.Style.Dark;
             this.box1.StyleManager = null;
             this.box1.TabIndex = 22;
@@ -866,10 +486,9 @@
             // lbl3
             // 
             this.lbl3.AutoSize = true;
-            this.lbl3.Location = new System.Drawing.Point(414, 0);
-            this.lbl3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl3.Location = new System.Drawing.Point(620, 0);
             this.lbl3.Name = "lbl3";
-            this.lbl3.Size = new System.Drawing.Size(18, 13);
+            this.lbl3.Size = new System.Drawing.Size(26, 20);
             this.lbl3.TabIndex = 44;
             this.lbl3.Text = "ID";
             // 
@@ -886,13 +505,12 @@
             this.box3.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.box3.Image = null;
             this.box3.Lines = null;
-            this.box3.Location = new System.Drawing.Point(414, 16);
-            this.box3.Margin = new System.Windows.Forms.Padding(2);
+            this.box3.Location = new System.Drawing.Point(620, 25);
             this.box3.MaxLength = 32767;
             this.box3.Multiline = false;
             this.box3.Name = "box3";
             this.box3.ReadOnly = false;
-            this.box3.Size = new System.Drawing.Size(116, 19);
+            this.box3.Size = new System.Drawing.Size(174, 29);
             this.box3.Style = MetroSet_UI.Design.Style.Dark;
             this.box3.StyleManager = null;
             this.box3.TabIndex = 42;
@@ -906,30 +524,27 @@
             // lbl2
             // 
             this.lbl2.AutoSize = true;
-            this.lbl2.Location = new System.Drawing.Point(276, 0);
-            this.lbl2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl2.Location = new System.Drawing.Point(413, 0);
             this.lbl2.Name = "lbl2";
-            this.lbl2.Size = new System.Drawing.Size(18, 13);
+            this.lbl2.Size = new System.Drawing.Size(26, 20);
             this.lbl2.TabIndex = 34;
             this.lbl2.Text = "ID";
             // 
             // lbl4
             // 
             this.lbl4.AutoSize = true;
-            this.lbl4.Location = new System.Drawing.Point(549, 0);
-            this.lbl4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl4.Location = new System.Drawing.Point(822, 0);
             this.lbl4.Name = "lbl4";
-            this.lbl4.Size = new System.Drawing.Size(18, 13);
+            this.lbl4.Size = new System.Drawing.Size(26, 20);
             this.lbl4.TabIndex = 54;
             this.lbl4.Text = "ID";
             // 
             // lbl5
             // 
             this.lbl5.AutoSize = true;
-            this.lbl5.Location = new System.Drawing.Point(689, 0);
-            this.lbl5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl5.Location = new System.Drawing.Point(1032, 0);
             this.lbl5.Name = "lbl5";
-            this.lbl5.Size = new System.Drawing.Size(18, 13);
+            this.lbl5.Size = new System.Drawing.Size(26, 20);
             this.lbl5.TabIndex = 24;
             this.lbl5.Text = "ID";
             // 
@@ -946,13 +561,12 @@
             this.box5.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.box5.Image = null;
             this.box5.Lines = null;
-            this.box5.Location = new System.Drawing.Point(689, 16);
-            this.box5.Margin = new System.Windows.Forms.Padding(2);
+            this.box5.Location = new System.Drawing.Point(1032, 25);
             this.box5.MaxLength = 32767;
             this.box5.Multiline = false;
             this.box5.Name = "box5";
             this.box5.ReadOnly = false;
-            this.box5.Size = new System.Drawing.Size(109, 19);
+            this.box5.Size = new System.Drawing.Size(164, 29);
             this.box5.Style = MetroSet_UI.Design.Style.Dark;
             this.box5.StyleManager = null;
             this.box5.TabIndex = 13;
@@ -966,10 +580,9 @@
             // lbl6
             // 
             this.lbl6.AutoSize = true;
-            this.lbl6.Location = new System.Drawing.Point(2, 54);
-            this.lbl6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl6.Location = new System.Drawing.Point(3, 84);
             this.lbl6.Name = "lbl6";
-            this.lbl6.Size = new System.Drawing.Size(70, 13);
+            this.lbl6.Size = new System.Drawing.Size(102, 20);
             this.lbl6.TabIndex = 25;
             this.lbl6.Text = "Budget Level";
             // 
@@ -986,13 +599,12 @@
             this.box6.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.box6.Image = null;
             this.box6.Lines = null;
-            this.box6.Location = new System.Drawing.Point(2, 69);
-            this.box6.Margin = new System.Windows.Forms.Padding(2);
+            this.box6.Location = new System.Drawing.Point(3, 107);
             this.box6.MaxLength = 32767;
             this.box6.Multiline = false;
             this.box6.Name = "box6";
             this.box6.ReadOnly = false;
-            this.box6.Size = new System.Drawing.Size(116, 19);
+            this.box6.Size = new System.Drawing.Size(174, 29);
             this.box6.Style = MetroSet_UI.Design.Style.Dark;
             this.box6.StyleManager = null;
             this.box6.TabIndex = 23;
@@ -1006,10 +618,9 @@
             // lbl7
             // 
             this.lbl7.AutoSize = true;
-            this.lbl7.Location = new System.Drawing.Point(137, 54);
-            this.lbl7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl7.Location = new System.Drawing.Point(205, 84);
             this.lbl7.Name = "lbl7";
-            this.lbl7.Size = new System.Drawing.Size(70, 13);
+            this.lbl7.Size = new System.Drawing.Size(102, 20);
             this.lbl7.TabIndex = 35;
             this.lbl7.Text = "Budget Level";
             // 
@@ -1026,13 +637,12 @@
             this.box7.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.box7.Image = null;
             this.box7.Lines = null;
-            this.box7.Location = new System.Drawing.Point(137, 69);
-            this.box7.Margin = new System.Windows.Forms.Padding(2);
+            this.box7.Location = new System.Drawing.Point(205, 107);
             this.box7.MaxLength = 32767;
             this.box7.Multiline = false;
             this.box7.Name = "box7";
             this.box7.ReadOnly = false;
-            this.box7.Size = new System.Drawing.Size(116, 19);
+            this.box7.Size = new System.Drawing.Size(174, 29);
             this.box7.Style = MetroSet_UI.Design.Style.Dark;
             this.box7.StyleManager = null;
             this.box7.TabIndex = 33;
@@ -1046,10 +656,9 @@
             // lbl8
             // 
             this.lbl8.AutoSize = true;
-            this.lbl8.Location = new System.Drawing.Point(276, 54);
-            this.lbl8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl8.Location = new System.Drawing.Point(413, 84);
             this.lbl8.Name = "lbl8";
-            this.lbl8.Size = new System.Drawing.Size(70, 13);
+            this.lbl8.Size = new System.Drawing.Size(102, 20);
             this.lbl8.TabIndex = 45;
             this.lbl8.Text = "Budget Level";
             // 
@@ -1066,13 +675,12 @@
             this.box8.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.box8.Image = null;
             this.box8.Lines = null;
-            this.box8.Location = new System.Drawing.Point(276, 69);
-            this.box8.Margin = new System.Windows.Forms.Padding(2);
+            this.box8.Location = new System.Drawing.Point(413, 107);
             this.box8.MaxLength = 32767;
             this.box8.Multiline = false;
             this.box8.Name = "box8";
             this.box8.ReadOnly = false;
-            this.box8.Size = new System.Drawing.Size(116, 19);
+            this.box8.Size = new System.Drawing.Size(174, 29);
             this.box8.Style = MetroSet_UI.Design.Style.Dark;
             this.box8.StyleManager = null;
             this.box8.TabIndex = 43;
@@ -1086,10 +694,9 @@
             // lbl9
             // 
             this.lbl9.AutoSize = true;
-            this.lbl9.Location = new System.Drawing.Point(414, 54);
-            this.lbl9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl9.Location = new System.Drawing.Point(620, 84);
             this.lbl9.Name = "lbl9";
-            this.lbl9.Size = new System.Drawing.Size(70, 13);
+            this.lbl9.Size = new System.Drawing.Size(102, 20);
             this.lbl9.TabIndex = 55;
             this.lbl9.Text = "Budget Level";
             // 
@@ -1106,13 +713,12 @@
             this.box9.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.box9.Image = null;
             this.box9.Lines = null;
-            this.box9.Location = new System.Drawing.Point(414, 69);
-            this.box9.Margin = new System.Windows.Forms.Padding(2);
+            this.box9.Location = new System.Drawing.Point(620, 107);
             this.box9.MaxLength = 32767;
             this.box9.Multiline = false;
             this.box9.Name = "box9";
             this.box9.ReadOnly = false;
-            this.box9.Size = new System.Drawing.Size(115, 19);
+            this.box9.Size = new System.Drawing.Size(172, 29);
             this.box9.Style = MetroSet_UI.Design.Style.Dark;
             this.box9.StyleManager = null;
             this.box9.TabIndex = 53;
@@ -1126,10 +732,9 @@
             // lbl10
             // 
             this.lbl10.AutoSize = true;
-            this.lbl10.Location = new System.Drawing.Point(549, 54);
-            this.lbl10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl10.Location = new System.Drawing.Point(822, 84);
             this.lbl10.Name = "lbl10";
-            this.lbl10.Size = new System.Drawing.Size(29, 13);
+            this.lbl10.Size = new System.Drawing.Size(43, 20);
             this.lbl10.TabIndex = 6;
             this.lbl10.Text = "Year";
             // 
@@ -1146,13 +751,12 @@
             this.box10.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.box10.Image = null;
             this.box10.Lines = null;
-            this.box10.Location = new System.Drawing.Point(549, 69);
-            this.box10.Margin = new System.Windows.Forms.Padding(2);
+            this.box10.Location = new System.Drawing.Point(822, 107);
             this.box10.MaxLength = 32767;
             this.box10.Multiline = false;
             this.box10.Name = "box10";
             this.box10.ReadOnly = false;
-            this.box10.Size = new System.Drawing.Size(115, 19);
+            this.box10.Size = new System.Drawing.Size(172, 29);
             this.box10.Style = MetroSet_UI.Design.Style.Dark;
             this.box10.StyleManager = null;
             this.box10.TabIndex = 0;
@@ -1166,10 +770,9 @@
             // lbl11
             // 
             this.lbl11.AutoSize = true;
-            this.lbl11.Location = new System.Drawing.Point(689, 54);
-            this.lbl11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl11.Location = new System.Drawing.Point(1032, 84);
             this.lbl11.Name = "lbl11";
-            this.lbl11.Size = new System.Drawing.Size(29, 13);
+            this.lbl11.Size = new System.Drawing.Size(43, 20);
             this.lbl11.TabIndex = 19;
             this.lbl11.Text = "Year";
             // 
@@ -1186,13 +789,12 @@
             this.box11.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.box11.Image = null;
             this.box11.Lines = null;
-            this.box11.Location = new System.Drawing.Point(689, 69);
-            this.box11.Margin = new System.Windows.Forms.Padding(2);
+            this.box11.Location = new System.Drawing.Point(1032, 107);
             this.box11.MaxLength = 32767;
             this.box11.Multiline = false;
             this.box11.Name = "box11";
             this.box11.ReadOnly = false;
-            this.box11.Size = new System.Drawing.Size(109, 19);
+            this.box11.Size = new System.Drawing.Size(164, 29);
             this.box11.Style = MetroSet_UI.Design.Style.Dark;
             this.box11.StyleManager = null;
             this.box11.TabIndex = 16;
@@ -1206,10 +808,9 @@
             // lbl12
             // 
             this.lbl12.AutoSize = true;
-            this.lbl12.Location = new System.Drawing.Point(2, 105);
-            this.lbl12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl12.Location = new System.Drawing.Point(3, 162);
             this.lbl12.Name = "lbl12";
-            this.lbl12.Size = new System.Drawing.Size(29, 13);
+            this.lbl12.Size = new System.Drawing.Size(43, 20);
             this.lbl12.TabIndex = 29;
             this.lbl12.Text = "Year";
             // 
@@ -1226,13 +827,12 @@
             this.box12.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.box12.Image = null;
             this.box12.Lines = null;
-            this.box12.Location = new System.Drawing.Point(2, 120);
-            this.box12.Margin = new System.Windows.Forms.Padding(2);
+            this.box12.Location = new System.Drawing.Point(3, 185);
             this.box12.MaxLength = 32767;
             this.box12.Multiline = false;
             this.box12.Name = "box12";
             this.box12.ReadOnly = false;
-            this.box12.Size = new System.Drawing.Size(116, 19);
+            this.box12.Size = new System.Drawing.Size(174, 29);
             this.box12.Style = MetroSet_UI.Design.Style.Dark;
             this.box12.StyleManager = null;
             this.box12.TabIndex = 26;
@@ -1246,10 +846,9 @@
             // lbl13
             // 
             this.lbl13.AutoSize = true;
-            this.lbl13.Location = new System.Drawing.Point(137, 105);
-            this.lbl13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl13.Location = new System.Drawing.Point(205, 162);
             this.lbl13.Name = "lbl13";
-            this.lbl13.Size = new System.Drawing.Size(29, 13);
+            this.lbl13.Size = new System.Drawing.Size(43, 20);
             this.lbl13.TabIndex = 39;
             this.lbl13.Text = "Year";
             // 
@@ -1266,13 +865,12 @@
             this.box13.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.box13.Image = null;
             this.box13.Lines = null;
-            this.box13.Location = new System.Drawing.Point(137, 120);
-            this.box13.Margin = new System.Windows.Forms.Padding(2);
+            this.box13.Location = new System.Drawing.Point(205, 185);
             this.box13.MaxLength = 32767;
             this.box13.Multiline = false;
             this.box13.Name = "box13";
             this.box13.ReadOnly = false;
-            this.box13.Size = new System.Drawing.Size(116, 19);
+            this.box13.Size = new System.Drawing.Size(174, 29);
             this.box13.Style = MetroSet_UI.Design.Style.Dark;
             this.box13.StyleManager = null;
             this.box13.TabIndex = 36;
@@ -1286,10 +884,9 @@
             // lbl14
             // 
             this.lbl14.AutoSize = true;
-            this.lbl14.Location = new System.Drawing.Point(276, 105);
-            this.lbl14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl14.Location = new System.Drawing.Point(413, 162);
             this.lbl14.Name = "lbl14";
-            this.lbl14.Size = new System.Drawing.Size(29, 13);
+            this.lbl14.Size = new System.Drawing.Size(43, 20);
             this.lbl14.TabIndex = 49;
             this.lbl14.Text = "Year";
             // 
@@ -1306,13 +903,12 @@
             this.box14.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.box14.Image = null;
             this.box14.Lines = null;
-            this.box14.Location = new System.Drawing.Point(276, 120);
-            this.box14.Margin = new System.Windows.Forms.Padding(2);
+            this.box14.Location = new System.Drawing.Point(413, 185);
             this.box14.MaxLength = 32767;
             this.box14.Multiline = false;
             this.box14.Name = "box14";
             this.box14.ReadOnly = false;
-            this.box14.Size = new System.Drawing.Size(115, 19);
+            this.box14.Size = new System.Drawing.Size(172, 29);
             this.box14.Style = MetroSet_UI.Design.Style.Dark;
             this.box14.StyleManager = null;
             this.box14.TabIndex = 46;
@@ -1326,10 +922,9 @@
             // lbl15
             // 
             this.lbl15.AutoSize = true;
-            this.lbl15.Location = new System.Drawing.Point(414, 105);
-            this.lbl15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl15.Location = new System.Drawing.Point(620, 162);
             this.lbl15.Name = "lbl15";
-            this.lbl15.Size = new System.Drawing.Size(31, 13);
+            this.lbl15.Size = new System.Drawing.Size(46, 20);
             this.lbl15.TabIndex = 7;
             this.lbl15.Text = "Fund";
             // 
@@ -1346,13 +941,12 @@
             this.box15.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.box15.Image = null;
             this.box15.Lines = null;
-            this.box15.Location = new System.Drawing.Point(414, 120);
-            this.box15.Margin = new System.Windows.Forms.Padding(2);
+            this.box15.Location = new System.Drawing.Point(620, 185);
             this.box15.MaxLength = 32767;
             this.box15.Multiline = false;
             this.box15.Name = "box15";
             this.box15.ReadOnly = false;
-            this.box15.Size = new System.Drawing.Size(115, 19);
+            this.box15.Size = new System.Drawing.Size(172, 29);
             this.box15.Style = MetroSet_UI.Design.Style.Dark;
             this.box15.StyleManager = null;
             this.box15.TabIndex = 3;
@@ -1366,10 +960,9 @@
             // lbl16
             // 
             this.lbl16.AutoSize = true;
-            this.lbl16.Location = new System.Drawing.Point(549, 105);
-            this.lbl16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl16.Location = new System.Drawing.Point(822, 162);
             this.lbl16.Name = "lbl16";
-            this.lbl16.Size = new System.Drawing.Size(31, 13);
+            this.lbl16.Size = new System.Drawing.Size(46, 20);
             this.lbl16.TabIndex = 20;
             this.lbl16.Text = "Fund";
             // 
@@ -1386,13 +979,12 @@
             this.box16.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.box16.Image = null;
             this.box16.Lines = null;
-            this.box16.Location = new System.Drawing.Point(549, 120);
-            this.box16.Margin = new System.Windows.Forms.Padding(2);
+            this.box16.Location = new System.Drawing.Point(822, 185);
             this.box16.MaxLength = 32767;
             this.box16.Multiline = false;
             this.box16.Name = "box16";
             this.box16.ReadOnly = false;
-            this.box16.Size = new System.Drawing.Size(109, 19);
+            this.box16.Size = new System.Drawing.Size(164, 29);
             this.box16.Style = MetroSet_UI.Design.Style.Dark;
             this.box16.StyleManager = null;
             this.box16.TabIndex = 18;
@@ -1406,10 +998,9 @@
             // lbl17
             // 
             this.lbl17.AutoSize = true;
-            this.lbl17.Location = new System.Drawing.Point(689, 105);
-            this.lbl17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl17.Location = new System.Drawing.Point(1032, 162);
             this.lbl17.Name = "lbl17";
-            this.lbl17.Size = new System.Drawing.Size(31, 13);
+            this.lbl17.Size = new System.Drawing.Size(46, 20);
             this.lbl17.TabIndex = 30;
             this.lbl17.Text = "Fund";
             // 
@@ -1426,13 +1017,12 @@
             this.box17.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.box17.Image = null;
             this.box17.Lines = null;
-            this.box17.Location = new System.Drawing.Point(689, 120);
-            this.box17.Margin = new System.Windows.Forms.Padding(2);
+            this.box17.Location = new System.Drawing.Point(1032, 185);
             this.box17.MaxLength = 32767;
             this.box17.Multiline = false;
             this.box17.Name = "box17";
             this.box17.ReadOnly = false;
-            this.box17.Size = new System.Drawing.Size(111, 19);
+            this.box17.Size = new System.Drawing.Size(166, 29);
             this.box17.Style = MetroSet_UI.Design.Style.Dark;
             this.box17.StyleManager = null;
             this.box17.TabIndex = 28;
@@ -1446,20 +1036,18 @@
             // lbl18
             // 
             this.lbl18.AutoSize = true;
-            this.lbl18.Location = new System.Drawing.Point(2, 157);
-            this.lbl18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl18.Location = new System.Drawing.Point(3, 242);
             this.lbl18.Name = "lbl18";
-            this.lbl18.Size = new System.Drawing.Size(31, 11);
+            this.lbl18.Size = new System.Drawing.Size(46, 17);
             this.lbl18.TabIndex = 40;
             this.lbl18.Text = "Fund";
             // 
             // lbl19
             // 
             this.lbl19.AutoSize = true;
-            this.lbl19.Location = new System.Drawing.Point(137, 157);
-            this.lbl19.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl19.Location = new System.Drawing.Point(205, 242);
             this.lbl19.Name = "lbl19";
-            this.lbl19.Size = new System.Drawing.Size(31, 11);
+            this.lbl19.Size = new System.Drawing.Size(46, 17);
             this.lbl19.TabIndex = 50;
             this.lbl19.Text = "Fund";
             // 
@@ -1476,13 +1064,12 @@
             this.box19.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.box19.Image = null;
             this.box19.Lines = null;
-            this.box19.Location = new System.Drawing.Point(137, 170);
-            this.box19.Margin = new System.Windows.Forms.Padding(2);
+            this.box19.Location = new System.Drawing.Point(205, 262);
             this.box19.MaxLength = 32767;
             this.box19.Multiline = false;
             this.box19.Name = "box19";
             this.box19.ReadOnly = false;
-            this.box19.Size = new System.Drawing.Size(116, 19);
+            this.box19.Size = new System.Drawing.Size(174, 29);
             this.box19.Style = MetroSet_UI.Design.Style.Dark;
             this.box19.StyleManager = null;
             this.box19.TabIndex = 48;
@@ -1496,10 +1083,9 @@
             // lbl20
             // 
             this.lbl20.AutoSize = true;
-            this.lbl20.Location = new System.Drawing.Point(276, 157);
-            this.lbl20.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl20.Location = new System.Drawing.Point(413, 242);
             this.lbl20.Name = "lbl20";
-            this.lbl20.Size = new System.Drawing.Size(32, 11);
+            this.lbl20.Size = new System.Drawing.Size(47, 17);
             this.lbl20.TabIndex = 10;
             this.lbl20.Text = "Code";
             // 
@@ -1516,13 +1102,12 @@
             this.box20.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.box20.Image = null;
             this.box20.Lines = null;
-            this.box20.Location = new System.Drawing.Point(276, 170);
-            this.box20.Margin = new System.Windows.Forms.Padding(2);
+            this.box20.Location = new System.Drawing.Point(413, 262);
             this.box20.MaxLength = 32767;
             this.box20.Multiline = false;
             this.box20.Name = "box20";
             this.box20.ReadOnly = false;
-            this.box20.Size = new System.Drawing.Size(116, 19);
+            this.box20.Size = new System.Drawing.Size(174, 29);
             this.box20.Style = MetroSet_UI.Design.Style.Dark;
             this.box20.StyleManager = null;
             this.box20.TabIndex = 1;
@@ -1536,10 +1121,9 @@
             // lbl21
             // 
             this.lbl21.AutoSize = true;
-            this.lbl21.Location = new System.Drawing.Point(414, 157);
-            this.lbl21.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl21.Location = new System.Drawing.Point(620, 242);
             this.lbl21.Name = "lbl21";
-            this.lbl21.Size = new System.Drawing.Size(32, 11);
+            this.lbl21.Size = new System.Drawing.Size(47, 17);
             this.lbl21.TabIndex = 21;
             this.lbl21.Text = "Code";
             // 
@@ -1556,13 +1140,12 @@
             this.box21.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.box21.Image = null;
             this.box21.Lines = null;
-            this.box21.Location = new System.Drawing.Point(414, 170);
-            this.box21.Margin = new System.Windows.Forms.Padding(2);
+            this.box21.Location = new System.Drawing.Point(620, 262);
             this.box21.MaxLength = 32767;
             this.box21.Multiline = false;
             this.box21.Name = "box21";
             this.box21.ReadOnly = false;
-            this.box21.Size = new System.Drawing.Size(109, 19);
+            this.box21.Size = new System.Drawing.Size(164, 29);
             this.box21.Style = MetroSet_UI.Design.Style.Dark;
             this.box21.StyleManager = null;
             this.box21.TabIndex = 17;
@@ -1576,10 +1159,9 @@
             // lbl22
             // 
             this.lbl22.AutoSize = true;
-            this.lbl22.Location = new System.Drawing.Point(549, 157);
-            this.lbl22.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl22.Location = new System.Drawing.Point(822, 242);
             this.lbl22.Name = "lbl22";
-            this.lbl22.Size = new System.Drawing.Size(32, 11);
+            this.lbl22.Size = new System.Drawing.Size(47, 17);
             this.lbl22.TabIndex = 31;
             this.lbl22.Text = "Code";
             // 
@@ -1596,13 +1178,12 @@
             this.box22.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.box22.Image = null;
             this.box22.Lines = null;
-            this.box22.Location = new System.Drawing.Point(549, 170);
-            this.box22.Margin = new System.Windows.Forms.Padding(2);
+            this.box22.Location = new System.Drawing.Point(822, 262);
             this.box22.MaxLength = 32767;
             this.box22.Multiline = false;
             this.box22.Name = "box22";
             this.box22.ReadOnly = false;
-            this.box22.Size = new System.Drawing.Size(111, 19);
+            this.box22.Size = new System.Drawing.Size(166, 29);
             this.box22.Style = MetroSet_UI.Design.Style.Dark;
             this.box22.StyleManager = null;
             this.box22.TabIndex = 27;
@@ -1616,10 +1197,9 @@
             // lbl23
             // 
             this.lbl23.AutoSize = true;
-            this.lbl23.Location = new System.Drawing.Point(689, 157);
-            this.lbl23.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl23.Location = new System.Drawing.Point(1032, 242);
             this.lbl23.Name = "lbl23";
-            this.lbl23.Size = new System.Drawing.Size(32, 11);
+            this.lbl23.Size = new System.Drawing.Size(47, 17);
             this.lbl23.TabIndex = 41;
             this.lbl23.Text = "Code";
             // 
@@ -1636,13 +1216,12 @@
             this.box23.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.box23.Image = null;
             this.box23.Lines = null;
-            this.box23.Location = new System.Drawing.Point(689, 170);
-            this.box23.Margin = new System.Windows.Forms.Padding(2);
+            this.box23.Location = new System.Drawing.Point(1032, 262);
             this.box23.MaxLength = 32767;
             this.box23.Multiline = false;
             this.box23.Name = "box23";
             this.box23.ReadOnly = false;
-            this.box23.Size = new System.Drawing.Size(116, 19);
+            this.box23.Size = new System.Drawing.Size(174, 29);
             this.box23.Style = MetroSet_UI.Design.Style.Dark;
             this.box23.StyleManager = null;
             this.box23.TabIndex = 37;
@@ -1656,10 +1235,9 @@
             // lbl24
             // 
             this.lbl24.AutoSize = true;
-            this.lbl24.Location = new System.Drawing.Point(2, 210);
-            this.lbl24.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl24.Location = new System.Drawing.Point(3, 324);
             this.lbl24.Name = "lbl24";
-            this.lbl24.Size = new System.Drawing.Size(32, 13);
+            this.lbl24.Size = new System.Drawing.Size(47, 20);
             this.lbl24.TabIndex = 51;
             this.lbl24.Text = "Code";
             // 
@@ -1676,13 +1254,12 @@
             this.box2.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.box2.Image = null;
             this.box2.Lines = null;
-            this.box2.Location = new System.Drawing.Point(276, 16);
-            this.box2.Margin = new System.Windows.Forms.Padding(2);
+            this.box2.Location = new System.Drawing.Point(413, 25);
             this.box2.MaxLength = 32767;
             this.box2.Multiline = false;
             this.box2.Name = "box2";
             this.box2.ReadOnly = false;
-            this.box2.Size = new System.Drawing.Size(115, 19);
+            this.box2.Size = new System.Drawing.Size(172, 29);
             this.box2.Style = MetroSet_UI.Design.Style.Dark;
             this.box2.StyleManager = null;
             this.box2.TabIndex = 32;
@@ -1696,10 +1273,9 @@
             // lbl25
             // 
             this.lbl25.AutoSize = true;
-            this.lbl25.Location = new System.Drawing.Point(137, 210);
-            this.lbl25.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl25.Location = new System.Drawing.Point(205, 324);
             this.lbl25.Name = "lbl25";
-            this.lbl25.Size = new System.Drawing.Size(32, 13);
+            this.lbl25.Size = new System.Drawing.Size(47, 20);
             this.lbl25.TabIndex = 56;
             this.lbl25.Text = "Code";
             // 
@@ -1716,13 +1292,12 @@
             this.box18.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.box18.Image = null;
             this.box18.Lines = null;
-            this.box18.Location = new System.Drawing.Point(2, 170);
-            this.box18.Margin = new System.Windows.Forms.Padding(2);
+            this.box18.Location = new System.Drawing.Point(3, 262);
             this.box18.MaxLength = 32767;
             this.box18.Multiline = false;
             this.box18.Name = "box18";
             this.box18.ReadOnly = false;
-            this.box18.Size = new System.Drawing.Size(116, 19);
+            this.box18.Size = new System.Drawing.Size(174, 29);
             this.box18.Style = MetroSet_UI.Design.Style.Dark;
             this.box18.StyleManager = null;
             this.box18.TabIndex = 38;
@@ -1746,13 +1321,12 @@
             this.box24.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.box24.Image = null;
             this.box24.Lines = null;
-            this.box24.Location = new System.Drawing.Point(2, 227);
-            this.box24.Margin = new System.Windows.Forms.Padding(2);
+            this.box24.Location = new System.Drawing.Point(3, 350);
             this.box24.MaxLength = 32767;
             this.box24.Multiline = false;
             this.box24.Name = "box24";
             this.box24.ReadOnly = false;
-            this.box24.Size = new System.Drawing.Size(115, 19);
+            this.box24.Size = new System.Drawing.Size(172, 29);
             this.box24.Style = MetroSet_UI.Design.Style.Dark;
             this.box24.StyleManager = null;
             this.box24.TabIndex = 47;
@@ -1776,13 +1350,12 @@
             this.box25.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.box25.Image = null;
             this.box25.Lines = null;
-            this.box25.Location = new System.Drawing.Point(137, 227);
-            this.box25.Margin = new System.Windows.Forms.Padding(2);
+            this.box25.Location = new System.Drawing.Point(205, 350);
             this.box25.MaxLength = 32767;
             this.box25.Multiline = false;
             this.box25.Name = "box25";
             this.box25.ReadOnly = false;
-            this.box25.Size = new System.Drawing.Size(116, 19);
+            this.box25.Size = new System.Drawing.Size(174, 29);
             this.box25.Style = MetroSet_UI.Design.Style.Dark;
             this.box25.StyleManager = null;
             this.box25.TabIndex = 57;
@@ -1806,13 +1379,12 @@
             this.box27.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.box27.Image = null;
             this.box27.Lines = null;
-            this.box27.Location = new System.Drawing.Point(414, 227);
-            this.box27.Margin = new System.Windows.Forms.Padding(2);
+            this.box27.Location = new System.Drawing.Point(620, 350);
             this.box27.MaxLength = 32767;
             this.box27.Multiline = false;
             this.box27.Name = "box27";
             this.box27.ReadOnly = false;
-            this.box27.Size = new System.Drawing.Size(116, 19);
+            this.box27.Size = new System.Drawing.Size(174, 29);
             this.box27.Style = MetroSet_UI.Design.Style.Dark;
             this.box27.StyleManager = null;
             this.box27.TabIndex = 58;
@@ -1836,13 +1408,12 @@
             this.box26.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.box26.Image = null;
             this.box26.Lines = null;
-            this.box26.Location = new System.Drawing.Point(276, 227);
-            this.box26.Margin = new System.Windows.Forms.Padding(2);
+            this.box26.Location = new System.Drawing.Point(413, 350);
             this.box26.MaxLength = 32767;
             this.box26.Multiline = false;
             this.box26.Name = "box26";
             this.box26.ReadOnly = false;
-            this.box26.Size = new System.Drawing.Size(116, 19);
+            this.box26.Size = new System.Drawing.Size(174, 29);
             this.box26.Style = MetroSet_UI.Design.Style.Dark;
             this.box26.StyleManager = null;
             this.box26.TabIndex = 60;
@@ -1866,13 +1437,12 @@
             this.box28.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.box28.Image = null;
             this.box28.Lines = null;
-            this.box28.Location = new System.Drawing.Point(549, 227);
-            this.box28.Margin = new System.Windows.Forms.Padding(2);
+            this.box28.Location = new System.Drawing.Point(822, 350);
             this.box28.MaxLength = 32767;
             this.box28.Multiline = false;
             this.box28.Name = "box28";
             this.box28.ReadOnly = false;
-            this.box28.Size = new System.Drawing.Size(116, 19);
+            this.box28.Size = new System.Drawing.Size(174, 29);
             this.box28.Style = MetroSet_UI.Design.Style.Dark;
             this.box28.StyleManager = null;
             this.box28.TabIndex = 59;
@@ -1886,15 +1456,14 @@
             // AddNewTab
             // 
             this.AddNewTab.BackColor = System.Drawing.Color.Transparent;
+            this.AddNewTab.Controls.Add(this.tableLayoutPanel3);
             this.AddNewTab.Controls.Add(this.tableLayoutPanel1);
-            this.AddNewTab.Controls.Add(this.groupBox1);
             this.AddNewTab.Image = null;
             this.AddNewTab.ImageSize = new System.Drawing.Size(16, 16);
-            this.AddNewTab.Location = new System.Drawing.Point(0, 36);
-            this.AddNewTab.Margin = new System.Windows.Forms.Padding(2);
+            this.AddNewTab.Location = new System.Drawing.Point(0, 43);
             this.AddNewTab.Name = "AddNewTab";
             this.AddNewTab.ShowCloseButton = true;
-            this.AddNewTab.Size = new System.Drawing.Size(851, 328);
+            this.AddNewTab.Size = new System.Drawing.Size(1272, 512);
             this.AddNewTab.TabIndex = 2;
             this.AddNewTab.Text = "Add ";
             this.AddNewTab.ThemesEnabled = false;
@@ -1902,12 +1471,12 @@
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 6;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 135F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 139F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 138F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 135F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 140F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 129F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 202F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 208F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 207F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 202F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 210F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 194F));
             this.tableLayoutPanel1.Controls.Add(this.label1, 5, 8);
             this.tableLayoutPanel1.Controls.Add(this.label3, 4, 8);
             this.tableLayoutPanel1.Controls.Add(this.metroSetTextBox1, 5, 9);
@@ -1969,41 +1538,38 @@
             this.tableLayoutPanel1.Controls.Add(this.metroSetTextBox29, 2, 9);
             this.tableLayoutPanel1.Controls.Add(this.metroSetTextBox30, 4, 9);
             this.tableLayoutPanel1.ForeColor = System.Drawing.Color.LightGray;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(23, 21);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(34, 32);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 10;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 14F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 13F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 38F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 13F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 39F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 11F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 42F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 15F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 80F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 13F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(807, 255);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 22F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 62F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 58F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 17F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 65F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 23F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 123F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1210, 392);
             this.tableLayoutPanel1.TabIndex = 58;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(689, 210);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(1032, 324);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(32, 13);
+            this.label1.Size = new System.Drawing.Size(47, 20);
             this.label1.TabIndex = 58;
             this.label1.Text = "Code";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(549, 210);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(822, 324);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(32, 13);
+            this.label3.Size = new System.Drawing.Size(47, 20);
             this.label3.TabIndex = 58;
             this.label3.Text = "Code";
             // 
@@ -2020,13 +1586,12 @@
             this.metroSetTextBox1.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.metroSetTextBox1.Image = null;
             this.metroSetTextBox1.Lines = null;
-            this.metroSetTextBox1.Location = new System.Drawing.Point(689, 227);
-            this.metroSetTextBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.metroSetTextBox1.Location = new System.Drawing.Point(1032, 350);
             this.metroSetTextBox1.MaxLength = 32767;
             this.metroSetTextBox1.Multiline = false;
             this.metroSetTextBox1.Name = "metroSetTextBox1";
             this.metroSetTextBox1.ReadOnly = false;
-            this.metroSetTextBox1.Size = new System.Drawing.Size(116, 19);
+            this.metroSetTextBox1.Size = new System.Drawing.Size(174, 29);
             this.metroSetTextBox1.Style = MetroSet_UI.Design.Style.Dark;
             this.metroSetTextBox1.StyleManager = null;
             this.metroSetTextBox1.TabIndex = 61;
@@ -2040,20 +1605,18 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(414, 210);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(620, 324);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(32, 13);
+            this.label4.Size = new System.Drawing.Size(47, 20);
             this.label4.TabIndex = 58;
             this.label4.Text = "Code";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(276, 210);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Location = new System.Drawing.Point(413, 324);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(32, 13);
+            this.label5.Size = new System.Drawing.Size(47, 20);
             this.label5.TabIndex = 62;
             this.label5.Text = "Code";
             // 
@@ -2070,13 +1633,12 @@
             this.metroSetTextBox2.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.metroSetTextBox2.Image = null;
             this.metroSetTextBox2.Lines = null;
-            this.metroSetTextBox2.Location = new System.Drawing.Point(2, 16);
-            this.metroSetTextBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.metroSetTextBox2.Location = new System.Drawing.Point(3, 25);
             this.metroSetTextBox2.MaxLength = 32767;
             this.metroSetTextBox2.Multiline = false;
             this.metroSetTextBox2.Name = "metroSetTextBox2";
             this.metroSetTextBox2.ReadOnly = false;
-            this.metroSetTextBox2.Size = new System.Drawing.Size(111, 19);
+            this.metroSetTextBox2.Size = new System.Drawing.Size(166, 29);
             this.metroSetTextBox2.Style = MetroSet_UI.Design.Style.Dark;
             this.metroSetTextBox2.StyleManager = null;
             this.metroSetTextBox2.TabIndex = 12;
@@ -2100,13 +1662,12 @@
             this.metroSetTextBox3.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.metroSetTextBox3.Image = null;
             this.metroSetTextBox3.Lines = null;
-            this.metroSetTextBox3.Location = new System.Drawing.Point(549, 16);
-            this.metroSetTextBox3.Margin = new System.Windows.Forms.Padding(2);
+            this.metroSetTextBox3.Location = new System.Drawing.Point(822, 25);
             this.metroSetTextBox3.MaxLength = 32767;
             this.metroSetTextBox3.Multiline = false;
             this.metroSetTextBox3.Name = "metroSetTextBox3";
             this.metroSetTextBox3.ReadOnly = false;
-            this.metroSetTextBox3.Size = new System.Drawing.Size(117, 19);
+            this.metroSetTextBox3.Size = new System.Drawing.Size(176, 29);
             this.metroSetTextBox3.Style = MetroSet_UI.Design.Style.Dark;
             this.metroSetTextBox3.StyleManager = null;
             this.metroSetTextBox3.TabIndex = 52;
@@ -2120,20 +1681,18 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(2, 0);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Location = new System.Drawing.Point(3, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(18, 13);
+            this.label6.Size = new System.Drawing.Size(26, 20);
             this.label6.TabIndex = 14;
             this.label6.Text = "ID";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(137, 0);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Location = new System.Drawing.Point(205, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(70, 13);
+            this.label7.Size = new System.Drawing.Size(102, 20);
             this.label7.TabIndex = 15;
             this.label7.Text = "Budget Level";
             // 
@@ -2150,13 +1709,12 @@
             this.metroSetTextBox4.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.metroSetTextBox4.Image = null;
             this.metroSetTextBox4.Lines = null;
-            this.metroSetTextBox4.Location = new System.Drawing.Point(137, 16);
-            this.metroSetTextBox4.Margin = new System.Windows.Forms.Padding(2);
+            this.metroSetTextBox4.Location = new System.Drawing.Point(205, 25);
             this.metroSetTextBox4.MaxLength = 32767;
             this.metroSetTextBox4.Multiline = false;
             this.metroSetTextBox4.Name = "metroSetTextBox4";
             this.metroSetTextBox4.ReadOnly = false;
-            this.metroSetTextBox4.Size = new System.Drawing.Size(116, 19);
+            this.metroSetTextBox4.Size = new System.Drawing.Size(174, 29);
             this.metroSetTextBox4.Style = MetroSet_UI.Design.Style.Dark;
             this.metroSetTextBox4.StyleManager = null;
             this.metroSetTextBox4.TabIndex = 22;
@@ -2170,10 +1728,9 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(414, 0);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Location = new System.Drawing.Point(620, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(18, 13);
+            this.label8.Size = new System.Drawing.Size(26, 20);
             this.label8.TabIndex = 44;
             this.label8.Text = "ID";
             // 
@@ -2190,13 +1747,12 @@
             this.metroSetTextBox5.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.metroSetTextBox5.Image = null;
             this.metroSetTextBox5.Lines = null;
-            this.metroSetTextBox5.Location = new System.Drawing.Point(414, 16);
-            this.metroSetTextBox5.Margin = new System.Windows.Forms.Padding(2);
+            this.metroSetTextBox5.Location = new System.Drawing.Point(620, 25);
             this.metroSetTextBox5.MaxLength = 32767;
             this.metroSetTextBox5.Multiline = false;
             this.metroSetTextBox5.Name = "metroSetTextBox5";
             this.metroSetTextBox5.ReadOnly = false;
-            this.metroSetTextBox5.Size = new System.Drawing.Size(116, 19);
+            this.metroSetTextBox5.Size = new System.Drawing.Size(174, 29);
             this.metroSetTextBox5.Style = MetroSet_UI.Design.Style.Dark;
             this.metroSetTextBox5.StyleManager = null;
             this.metroSetTextBox5.TabIndex = 42;
@@ -2210,30 +1766,27 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(276, 0);
-            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Location = new System.Drawing.Point(413, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(18, 13);
+            this.label9.Size = new System.Drawing.Size(26, 20);
             this.label9.TabIndex = 34;
             this.label9.Text = "ID";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(549, 0);
-            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label10.Location = new System.Drawing.Point(822, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(18, 13);
+            this.label10.Size = new System.Drawing.Size(26, 20);
             this.label10.TabIndex = 54;
             this.label10.Text = "ID";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(689, 0);
-            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label11.Location = new System.Drawing.Point(1032, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(18, 13);
+            this.label11.Size = new System.Drawing.Size(26, 20);
             this.label11.TabIndex = 24;
             this.label11.Text = "ID";
             // 
@@ -2250,13 +1803,12 @@
             this.metroSetTextBox6.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.metroSetTextBox6.Image = null;
             this.metroSetTextBox6.Lines = null;
-            this.metroSetTextBox6.Location = new System.Drawing.Point(689, 16);
-            this.metroSetTextBox6.Margin = new System.Windows.Forms.Padding(2);
+            this.metroSetTextBox6.Location = new System.Drawing.Point(1032, 25);
             this.metroSetTextBox6.MaxLength = 32767;
             this.metroSetTextBox6.Multiline = false;
             this.metroSetTextBox6.Name = "metroSetTextBox6";
             this.metroSetTextBox6.ReadOnly = false;
-            this.metroSetTextBox6.Size = new System.Drawing.Size(109, 19);
+            this.metroSetTextBox6.Size = new System.Drawing.Size(164, 29);
             this.metroSetTextBox6.Style = MetroSet_UI.Design.Style.Dark;
             this.metroSetTextBox6.StyleManager = null;
             this.metroSetTextBox6.TabIndex = 13;
@@ -2270,10 +1822,9 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(2, 54);
-            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label12.Location = new System.Drawing.Point(3, 84);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(70, 13);
+            this.label12.Size = new System.Drawing.Size(102, 20);
             this.label12.TabIndex = 25;
             this.label12.Text = "Budget Level";
             // 
@@ -2290,13 +1841,12 @@
             this.metroSetTextBox7.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.metroSetTextBox7.Image = null;
             this.metroSetTextBox7.Lines = null;
-            this.metroSetTextBox7.Location = new System.Drawing.Point(2, 69);
-            this.metroSetTextBox7.Margin = new System.Windows.Forms.Padding(2);
+            this.metroSetTextBox7.Location = new System.Drawing.Point(3, 107);
             this.metroSetTextBox7.MaxLength = 32767;
             this.metroSetTextBox7.Multiline = false;
             this.metroSetTextBox7.Name = "metroSetTextBox7";
             this.metroSetTextBox7.ReadOnly = false;
-            this.metroSetTextBox7.Size = new System.Drawing.Size(116, 19);
+            this.metroSetTextBox7.Size = new System.Drawing.Size(174, 29);
             this.metroSetTextBox7.Style = MetroSet_UI.Design.Style.Dark;
             this.metroSetTextBox7.StyleManager = null;
             this.metroSetTextBox7.TabIndex = 23;
@@ -2310,10 +1860,9 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(137, 54);
-            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label13.Location = new System.Drawing.Point(205, 84);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(70, 13);
+            this.label13.Size = new System.Drawing.Size(102, 20);
             this.label13.TabIndex = 35;
             this.label13.Text = "Budget Level";
             // 
@@ -2330,13 +1879,12 @@
             this.metroSetTextBox8.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.metroSetTextBox8.Image = null;
             this.metroSetTextBox8.Lines = null;
-            this.metroSetTextBox8.Location = new System.Drawing.Point(137, 69);
-            this.metroSetTextBox8.Margin = new System.Windows.Forms.Padding(2);
+            this.metroSetTextBox8.Location = new System.Drawing.Point(205, 107);
             this.metroSetTextBox8.MaxLength = 32767;
             this.metroSetTextBox8.Multiline = false;
             this.metroSetTextBox8.Name = "metroSetTextBox8";
             this.metroSetTextBox8.ReadOnly = false;
-            this.metroSetTextBox8.Size = new System.Drawing.Size(116, 19);
+            this.metroSetTextBox8.Size = new System.Drawing.Size(174, 29);
             this.metroSetTextBox8.Style = MetroSet_UI.Design.Style.Dark;
             this.metroSetTextBox8.StyleManager = null;
             this.metroSetTextBox8.TabIndex = 33;
@@ -2350,10 +1898,9 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(276, 54);
-            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label14.Location = new System.Drawing.Point(413, 84);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(70, 13);
+            this.label14.Size = new System.Drawing.Size(102, 20);
             this.label14.TabIndex = 45;
             this.label14.Text = "Budget Level";
             // 
@@ -2370,13 +1917,12 @@
             this.metroSetTextBox9.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.metroSetTextBox9.Image = null;
             this.metroSetTextBox9.Lines = null;
-            this.metroSetTextBox9.Location = new System.Drawing.Point(276, 69);
-            this.metroSetTextBox9.Margin = new System.Windows.Forms.Padding(2);
+            this.metroSetTextBox9.Location = new System.Drawing.Point(413, 107);
             this.metroSetTextBox9.MaxLength = 32767;
             this.metroSetTextBox9.Multiline = false;
             this.metroSetTextBox9.Name = "metroSetTextBox9";
             this.metroSetTextBox9.ReadOnly = false;
-            this.metroSetTextBox9.Size = new System.Drawing.Size(116, 19);
+            this.metroSetTextBox9.Size = new System.Drawing.Size(174, 29);
             this.metroSetTextBox9.Style = MetroSet_UI.Design.Style.Dark;
             this.metroSetTextBox9.StyleManager = null;
             this.metroSetTextBox9.TabIndex = 43;
@@ -2390,10 +1936,9 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(414, 54);
-            this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label15.Location = new System.Drawing.Point(620, 84);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(70, 13);
+            this.label15.Size = new System.Drawing.Size(102, 20);
             this.label15.TabIndex = 55;
             this.label15.Text = "Budget Level";
             // 
@@ -2410,13 +1955,12 @@
             this.metroSetTextBox10.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.metroSetTextBox10.Image = null;
             this.metroSetTextBox10.Lines = null;
-            this.metroSetTextBox10.Location = new System.Drawing.Point(414, 69);
-            this.metroSetTextBox10.Margin = new System.Windows.Forms.Padding(2);
+            this.metroSetTextBox10.Location = new System.Drawing.Point(620, 107);
             this.metroSetTextBox10.MaxLength = 32767;
             this.metroSetTextBox10.Multiline = false;
             this.metroSetTextBox10.Name = "metroSetTextBox10";
             this.metroSetTextBox10.ReadOnly = false;
-            this.metroSetTextBox10.Size = new System.Drawing.Size(115, 19);
+            this.metroSetTextBox10.Size = new System.Drawing.Size(172, 29);
             this.metroSetTextBox10.Style = MetroSet_UI.Design.Style.Dark;
             this.metroSetTextBox10.StyleManager = null;
             this.metroSetTextBox10.TabIndex = 53;
@@ -2430,10 +1974,9 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(549, 54);
-            this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label16.Location = new System.Drawing.Point(822, 84);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(29, 13);
+            this.label16.Size = new System.Drawing.Size(43, 20);
             this.label16.TabIndex = 6;
             this.label16.Text = "Year";
             // 
@@ -2450,13 +1993,12 @@
             this.metroSetTextBox11.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.metroSetTextBox11.Image = null;
             this.metroSetTextBox11.Lines = null;
-            this.metroSetTextBox11.Location = new System.Drawing.Point(549, 69);
-            this.metroSetTextBox11.Margin = new System.Windows.Forms.Padding(2);
+            this.metroSetTextBox11.Location = new System.Drawing.Point(822, 107);
             this.metroSetTextBox11.MaxLength = 32767;
             this.metroSetTextBox11.Multiline = false;
             this.metroSetTextBox11.Name = "metroSetTextBox11";
             this.metroSetTextBox11.ReadOnly = false;
-            this.metroSetTextBox11.Size = new System.Drawing.Size(115, 19);
+            this.metroSetTextBox11.Size = new System.Drawing.Size(172, 29);
             this.metroSetTextBox11.Style = MetroSet_UI.Design.Style.Dark;
             this.metroSetTextBox11.StyleManager = null;
             this.metroSetTextBox11.TabIndex = 0;
@@ -2470,10 +2012,9 @@
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(689, 54);
-            this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label17.Location = new System.Drawing.Point(1032, 84);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(29, 13);
+            this.label17.Size = new System.Drawing.Size(43, 20);
             this.label17.TabIndex = 19;
             this.label17.Text = "Year";
             // 
@@ -2490,13 +2031,12 @@
             this.metroSetTextBox12.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.metroSetTextBox12.Image = null;
             this.metroSetTextBox12.Lines = null;
-            this.metroSetTextBox12.Location = new System.Drawing.Point(689, 69);
-            this.metroSetTextBox12.Margin = new System.Windows.Forms.Padding(2);
+            this.metroSetTextBox12.Location = new System.Drawing.Point(1032, 107);
             this.metroSetTextBox12.MaxLength = 32767;
             this.metroSetTextBox12.Multiline = false;
             this.metroSetTextBox12.Name = "metroSetTextBox12";
             this.metroSetTextBox12.ReadOnly = false;
-            this.metroSetTextBox12.Size = new System.Drawing.Size(109, 19);
+            this.metroSetTextBox12.Size = new System.Drawing.Size(164, 29);
             this.metroSetTextBox12.Style = MetroSet_UI.Design.Style.Dark;
             this.metroSetTextBox12.StyleManager = null;
             this.metroSetTextBox12.TabIndex = 16;
@@ -2510,10 +2050,9 @@
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(2, 105);
-            this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label18.Location = new System.Drawing.Point(3, 162);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(29, 13);
+            this.label18.Size = new System.Drawing.Size(43, 20);
             this.label18.TabIndex = 29;
             this.label18.Text = "Year";
             // 
@@ -2530,13 +2069,12 @@
             this.metroSetTextBox13.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.metroSetTextBox13.Image = null;
             this.metroSetTextBox13.Lines = null;
-            this.metroSetTextBox13.Location = new System.Drawing.Point(2, 120);
-            this.metroSetTextBox13.Margin = new System.Windows.Forms.Padding(2);
+            this.metroSetTextBox13.Location = new System.Drawing.Point(3, 185);
             this.metroSetTextBox13.MaxLength = 32767;
             this.metroSetTextBox13.Multiline = false;
             this.metroSetTextBox13.Name = "metroSetTextBox13";
             this.metroSetTextBox13.ReadOnly = false;
-            this.metroSetTextBox13.Size = new System.Drawing.Size(116, 19);
+            this.metroSetTextBox13.Size = new System.Drawing.Size(174, 29);
             this.metroSetTextBox13.Style = MetroSet_UI.Design.Style.Dark;
             this.metroSetTextBox13.StyleManager = null;
             this.metroSetTextBox13.TabIndex = 26;
@@ -2550,10 +2088,9 @@
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(137, 105);
-            this.label19.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label19.Location = new System.Drawing.Point(205, 162);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(29, 13);
+            this.label19.Size = new System.Drawing.Size(43, 20);
             this.label19.TabIndex = 39;
             this.label19.Text = "Year";
             // 
@@ -2570,13 +2107,12 @@
             this.metroSetTextBox14.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.metroSetTextBox14.Image = null;
             this.metroSetTextBox14.Lines = null;
-            this.metroSetTextBox14.Location = new System.Drawing.Point(137, 120);
-            this.metroSetTextBox14.Margin = new System.Windows.Forms.Padding(2);
+            this.metroSetTextBox14.Location = new System.Drawing.Point(205, 185);
             this.metroSetTextBox14.MaxLength = 32767;
             this.metroSetTextBox14.Multiline = false;
             this.metroSetTextBox14.Name = "metroSetTextBox14";
             this.metroSetTextBox14.ReadOnly = false;
-            this.metroSetTextBox14.Size = new System.Drawing.Size(116, 19);
+            this.metroSetTextBox14.Size = new System.Drawing.Size(174, 29);
             this.metroSetTextBox14.Style = MetroSet_UI.Design.Style.Dark;
             this.metroSetTextBox14.StyleManager = null;
             this.metroSetTextBox14.TabIndex = 36;
@@ -2590,10 +2126,9 @@
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(276, 105);
-            this.label20.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label20.Location = new System.Drawing.Point(413, 162);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(29, 13);
+            this.label20.Size = new System.Drawing.Size(43, 20);
             this.label20.TabIndex = 49;
             this.label20.Text = "Year";
             // 
@@ -2610,13 +2145,12 @@
             this.metroSetTextBox15.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.metroSetTextBox15.Image = null;
             this.metroSetTextBox15.Lines = null;
-            this.metroSetTextBox15.Location = new System.Drawing.Point(276, 120);
-            this.metroSetTextBox15.Margin = new System.Windows.Forms.Padding(2);
+            this.metroSetTextBox15.Location = new System.Drawing.Point(413, 185);
             this.metroSetTextBox15.MaxLength = 32767;
             this.metroSetTextBox15.Multiline = false;
             this.metroSetTextBox15.Name = "metroSetTextBox15";
             this.metroSetTextBox15.ReadOnly = false;
-            this.metroSetTextBox15.Size = new System.Drawing.Size(115, 19);
+            this.metroSetTextBox15.Size = new System.Drawing.Size(172, 29);
             this.metroSetTextBox15.Style = MetroSet_UI.Design.Style.Dark;
             this.metroSetTextBox15.StyleManager = null;
             this.metroSetTextBox15.TabIndex = 46;
@@ -2630,10 +2164,9 @@
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(414, 105);
-            this.label21.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label21.Location = new System.Drawing.Point(620, 162);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(31, 13);
+            this.label21.Size = new System.Drawing.Size(46, 20);
             this.label21.TabIndex = 7;
             this.label21.Text = "Fund";
             // 
@@ -2650,13 +2183,12 @@
             this.metroSetTextBox16.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.metroSetTextBox16.Image = null;
             this.metroSetTextBox16.Lines = null;
-            this.metroSetTextBox16.Location = new System.Drawing.Point(414, 120);
-            this.metroSetTextBox16.Margin = new System.Windows.Forms.Padding(2);
+            this.metroSetTextBox16.Location = new System.Drawing.Point(620, 185);
             this.metroSetTextBox16.MaxLength = 32767;
             this.metroSetTextBox16.Multiline = false;
             this.metroSetTextBox16.Name = "metroSetTextBox16";
             this.metroSetTextBox16.ReadOnly = false;
-            this.metroSetTextBox16.Size = new System.Drawing.Size(115, 19);
+            this.metroSetTextBox16.Size = new System.Drawing.Size(172, 29);
             this.metroSetTextBox16.Style = MetroSet_UI.Design.Style.Dark;
             this.metroSetTextBox16.StyleManager = null;
             this.metroSetTextBox16.TabIndex = 3;
@@ -2670,10 +2202,9 @@
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(549, 105);
-            this.label22.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label22.Location = new System.Drawing.Point(822, 162);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(31, 13);
+            this.label22.Size = new System.Drawing.Size(46, 20);
             this.label22.TabIndex = 20;
             this.label22.Text = "Fund";
             // 
@@ -2690,13 +2221,12 @@
             this.metroSetTextBox17.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.metroSetTextBox17.Image = null;
             this.metroSetTextBox17.Lines = null;
-            this.metroSetTextBox17.Location = new System.Drawing.Point(549, 120);
-            this.metroSetTextBox17.Margin = new System.Windows.Forms.Padding(2);
+            this.metroSetTextBox17.Location = new System.Drawing.Point(822, 185);
             this.metroSetTextBox17.MaxLength = 32767;
             this.metroSetTextBox17.Multiline = false;
             this.metroSetTextBox17.Name = "metroSetTextBox17";
             this.metroSetTextBox17.ReadOnly = false;
-            this.metroSetTextBox17.Size = new System.Drawing.Size(109, 19);
+            this.metroSetTextBox17.Size = new System.Drawing.Size(164, 29);
             this.metroSetTextBox17.Style = MetroSet_UI.Design.Style.Dark;
             this.metroSetTextBox17.StyleManager = null;
             this.metroSetTextBox17.TabIndex = 18;
@@ -2710,10 +2240,9 @@
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(689, 105);
-            this.label23.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label23.Location = new System.Drawing.Point(1032, 162);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(31, 13);
+            this.label23.Size = new System.Drawing.Size(46, 20);
             this.label23.TabIndex = 30;
             this.label23.Text = "Fund";
             // 
@@ -2730,13 +2259,12 @@
             this.metroSetTextBox18.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.metroSetTextBox18.Image = null;
             this.metroSetTextBox18.Lines = null;
-            this.metroSetTextBox18.Location = new System.Drawing.Point(689, 120);
-            this.metroSetTextBox18.Margin = new System.Windows.Forms.Padding(2);
+            this.metroSetTextBox18.Location = new System.Drawing.Point(1032, 185);
             this.metroSetTextBox18.MaxLength = 32767;
             this.metroSetTextBox18.Multiline = false;
             this.metroSetTextBox18.Name = "metroSetTextBox18";
             this.metroSetTextBox18.ReadOnly = false;
-            this.metroSetTextBox18.Size = new System.Drawing.Size(111, 19);
+            this.metroSetTextBox18.Size = new System.Drawing.Size(166, 29);
             this.metroSetTextBox18.Style = MetroSet_UI.Design.Style.Dark;
             this.metroSetTextBox18.StyleManager = null;
             this.metroSetTextBox18.TabIndex = 28;
@@ -2750,20 +2278,18 @@
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(2, 157);
-            this.label24.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label24.Location = new System.Drawing.Point(3, 242);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(31, 11);
+            this.label24.Size = new System.Drawing.Size(46, 17);
             this.label24.TabIndex = 40;
             this.label24.Text = "Fund";
             // 
             // label25
             // 
             this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(137, 157);
-            this.label25.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label25.Location = new System.Drawing.Point(205, 242);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(31, 11);
+            this.label25.Size = new System.Drawing.Size(46, 17);
             this.label25.TabIndex = 50;
             this.label25.Text = "Fund";
             // 
@@ -2780,13 +2306,12 @@
             this.metroSetTextBox19.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.metroSetTextBox19.Image = null;
             this.metroSetTextBox19.Lines = null;
-            this.metroSetTextBox19.Location = new System.Drawing.Point(137, 170);
-            this.metroSetTextBox19.Margin = new System.Windows.Forms.Padding(2);
+            this.metroSetTextBox19.Location = new System.Drawing.Point(205, 262);
             this.metroSetTextBox19.MaxLength = 32767;
             this.metroSetTextBox19.Multiline = false;
             this.metroSetTextBox19.Name = "metroSetTextBox19";
             this.metroSetTextBox19.ReadOnly = false;
-            this.metroSetTextBox19.Size = new System.Drawing.Size(116, 19);
+            this.metroSetTextBox19.Size = new System.Drawing.Size(174, 29);
             this.metroSetTextBox19.Style = MetroSet_UI.Design.Style.Dark;
             this.metroSetTextBox19.StyleManager = null;
             this.metroSetTextBox19.TabIndex = 48;
@@ -2800,10 +2325,9 @@
             // label26
             // 
             this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(276, 157);
-            this.label26.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label26.Location = new System.Drawing.Point(413, 242);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(32, 11);
+            this.label26.Size = new System.Drawing.Size(47, 17);
             this.label26.TabIndex = 10;
             this.label26.Text = "Code";
             // 
@@ -2820,13 +2344,12 @@
             this.metroSetTextBox20.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.metroSetTextBox20.Image = null;
             this.metroSetTextBox20.Lines = null;
-            this.metroSetTextBox20.Location = new System.Drawing.Point(276, 170);
-            this.metroSetTextBox20.Margin = new System.Windows.Forms.Padding(2);
+            this.metroSetTextBox20.Location = new System.Drawing.Point(413, 262);
             this.metroSetTextBox20.MaxLength = 32767;
             this.metroSetTextBox20.Multiline = false;
             this.metroSetTextBox20.Name = "metroSetTextBox20";
             this.metroSetTextBox20.ReadOnly = false;
-            this.metroSetTextBox20.Size = new System.Drawing.Size(116, 19);
+            this.metroSetTextBox20.Size = new System.Drawing.Size(174, 29);
             this.metroSetTextBox20.Style = MetroSet_UI.Design.Style.Dark;
             this.metroSetTextBox20.StyleManager = null;
             this.metroSetTextBox20.TabIndex = 1;
@@ -2840,10 +2363,9 @@
             // label27
             // 
             this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(414, 157);
-            this.label27.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label27.Location = new System.Drawing.Point(620, 242);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(32, 11);
+            this.label27.Size = new System.Drawing.Size(47, 17);
             this.label27.TabIndex = 21;
             this.label27.Text = "Code";
             // 
@@ -2860,13 +2382,12 @@
             this.metroSetTextBox21.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.metroSetTextBox21.Image = null;
             this.metroSetTextBox21.Lines = null;
-            this.metroSetTextBox21.Location = new System.Drawing.Point(414, 170);
-            this.metroSetTextBox21.Margin = new System.Windows.Forms.Padding(2);
+            this.metroSetTextBox21.Location = new System.Drawing.Point(620, 262);
             this.metroSetTextBox21.MaxLength = 32767;
             this.metroSetTextBox21.Multiline = false;
             this.metroSetTextBox21.Name = "metroSetTextBox21";
             this.metroSetTextBox21.ReadOnly = false;
-            this.metroSetTextBox21.Size = new System.Drawing.Size(109, 19);
+            this.metroSetTextBox21.Size = new System.Drawing.Size(164, 29);
             this.metroSetTextBox21.Style = MetroSet_UI.Design.Style.Dark;
             this.metroSetTextBox21.StyleManager = null;
             this.metroSetTextBox21.TabIndex = 17;
@@ -2880,10 +2401,9 @@
             // label28
             // 
             this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(549, 157);
-            this.label28.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label28.Location = new System.Drawing.Point(822, 242);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(32, 11);
+            this.label28.Size = new System.Drawing.Size(47, 17);
             this.label28.TabIndex = 31;
             this.label28.Text = "Code";
             // 
@@ -2900,13 +2420,12 @@
             this.metroSetTextBox22.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.metroSetTextBox22.Image = null;
             this.metroSetTextBox22.Lines = null;
-            this.metroSetTextBox22.Location = new System.Drawing.Point(549, 170);
-            this.metroSetTextBox22.Margin = new System.Windows.Forms.Padding(2);
+            this.metroSetTextBox22.Location = new System.Drawing.Point(822, 262);
             this.metroSetTextBox22.MaxLength = 32767;
             this.metroSetTextBox22.Multiline = false;
             this.metroSetTextBox22.Name = "metroSetTextBox22";
             this.metroSetTextBox22.ReadOnly = false;
-            this.metroSetTextBox22.Size = new System.Drawing.Size(111, 19);
+            this.metroSetTextBox22.Size = new System.Drawing.Size(166, 29);
             this.metroSetTextBox22.Style = MetroSet_UI.Design.Style.Dark;
             this.metroSetTextBox22.StyleManager = null;
             this.metroSetTextBox22.TabIndex = 27;
@@ -2920,10 +2439,9 @@
             // label29
             // 
             this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(689, 157);
-            this.label29.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label29.Location = new System.Drawing.Point(1032, 242);
             this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(32, 11);
+            this.label29.Size = new System.Drawing.Size(47, 17);
             this.label29.TabIndex = 41;
             this.label29.Text = "Code";
             // 
@@ -2940,13 +2458,12 @@
             this.metroSetTextBox23.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.metroSetTextBox23.Image = null;
             this.metroSetTextBox23.Lines = null;
-            this.metroSetTextBox23.Location = new System.Drawing.Point(689, 170);
-            this.metroSetTextBox23.Margin = new System.Windows.Forms.Padding(2);
+            this.metroSetTextBox23.Location = new System.Drawing.Point(1032, 262);
             this.metroSetTextBox23.MaxLength = 32767;
             this.metroSetTextBox23.Multiline = false;
             this.metroSetTextBox23.Name = "metroSetTextBox23";
             this.metroSetTextBox23.ReadOnly = false;
-            this.metroSetTextBox23.Size = new System.Drawing.Size(116, 19);
+            this.metroSetTextBox23.Size = new System.Drawing.Size(174, 29);
             this.metroSetTextBox23.Style = MetroSet_UI.Design.Style.Dark;
             this.metroSetTextBox23.StyleManager = null;
             this.metroSetTextBox23.TabIndex = 37;
@@ -2960,10 +2477,9 @@
             // label30
             // 
             this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(2, 210);
-            this.label30.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label30.Location = new System.Drawing.Point(3, 324);
             this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(32, 13);
+            this.label30.Size = new System.Drawing.Size(47, 20);
             this.label30.TabIndex = 51;
             this.label30.Text = "Code";
             // 
@@ -2980,13 +2496,12 @@
             this.metroSetTextBox24.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.metroSetTextBox24.Image = null;
             this.metroSetTextBox24.Lines = null;
-            this.metroSetTextBox24.Location = new System.Drawing.Point(276, 16);
-            this.metroSetTextBox24.Margin = new System.Windows.Forms.Padding(2);
+            this.metroSetTextBox24.Location = new System.Drawing.Point(413, 25);
             this.metroSetTextBox24.MaxLength = 32767;
             this.metroSetTextBox24.Multiline = false;
             this.metroSetTextBox24.Name = "metroSetTextBox24";
             this.metroSetTextBox24.ReadOnly = false;
-            this.metroSetTextBox24.Size = new System.Drawing.Size(115, 19);
+            this.metroSetTextBox24.Size = new System.Drawing.Size(172, 29);
             this.metroSetTextBox24.Style = MetroSet_UI.Design.Style.Dark;
             this.metroSetTextBox24.StyleManager = null;
             this.metroSetTextBox24.TabIndex = 32;
@@ -3000,10 +2515,9 @@
             // label31
             // 
             this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(137, 210);
-            this.label31.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label31.Location = new System.Drawing.Point(205, 324);
             this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(32, 13);
+            this.label31.Size = new System.Drawing.Size(47, 20);
             this.label31.TabIndex = 56;
             this.label31.Text = "Code";
             // 
@@ -3020,13 +2534,12 @@
             this.metroSetTextBox25.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.metroSetTextBox25.Image = null;
             this.metroSetTextBox25.Lines = null;
-            this.metroSetTextBox25.Location = new System.Drawing.Point(2, 170);
-            this.metroSetTextBox25.Margin = new System.Windows.Forms.Padding(2);
+            this.metroSetTextBox25.Location = new System.Drawing.Point(3, 262);
             this.metroSetTextBox25.MaxLength = 32767;
             this.metroSetTextBox25.Multiline = false;
             this.metroSetTextBox25.Name = "metroSetTextBox25";
             this.metroSetTextBox25.ReadOnly = false;
-            this.metroSetTextBox25.Size = new System.Drawing.Size(116, 19);
+            this.metroSetTextBox25.Size = new System.Drawing.Size(174, 29);
             this.metroSetTextBox25.Style = MetroSet_UI.Design.Style.Dark;
             this.metroSetTextBox25.StyleManager = null;
             this.metroSetTextBox25.TabIndex = 38;
@@ -3050,13 +2563,12 @@
             this.metroSetTextBox26.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.metroSetTextBox26.Image = null;
             this.metroSetTextBox26.Lines = null;
-            this.metroSetTextBox26.Location = new System.Drawing.Point(2, 227);
-            this.metroSetTextBox26.Margin = new System.Windows.Forms.Padding(2);
+            this.metroSetTextBox26.Location = new System.Drawing.Point(3, 350);
             this.metroSetTextBox26.MaxLength = 32767;
             this.metroSetTextBox26.Multiline = false;
             this.metroSetTextBox26.Name = "metroSetTextBox26";
             this.metroSetTextBox26.ReadOnly = false;
-            this.metroSetTextBox26.Size = new System.Drawing.Size(115, 19);
+            this.metroSetTextBox26.Size = new System.Drawing.Size(172, 29);
             this.metroSetTextBox26.Style = MetroSet_UI.Design.Style.Dark;
             this.metroSetTextBox26.StyleManager = null;
             this.metroSetTextBox26.TabIndex = 47;
@@ -3080,13 +2592,12 @@
             this.metroSetTextBox27.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.metroSetTextBox27.Image = null;
             this.metroSetTextBox27.Lines = null;
-            this.metroSetTextBox27.Location = new System.Drawing.Point(137, 227);
-            this.metroSetTextBox27.Margin = new System.Windows.Forms.Padding(2);
+            this.metroSetTextBox27.Location = new System.Drawing.Point(205, 350);
             this.metroSetTextBox27.MaxLength = 32767;
             this.metroSetTextBox27.Multiline = false;
             this.metroSetTextBox27.Name = "metroSetTextBox27";
             this.metroSetTextBox27.ReadOnly = false;
-            this.metroSetTextBox27.Size = new System.Drawing.Size(116, 19);
+            this.metroSetTextBox27.Size = new System.Drawing.Size(174, 29);
             this.metroSetTextBox27.Style = MetroSet_UI.Design.Style.Dark;
             this.metroSetTextBox27.StyleManager = null;
             this.metroSetTextBox27.TabIndex = 57;
@@ -3110,13 +2621,12 @@
             this.metroSetTextBox28.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.metroSetTextBox28.Image = null;
             this.metroSetTextBox28.Lines = null;
-            this.metroSetTextBox28.Location = new System.Drawing.Point(414, 227);
-            this.metroSetTextBox28.Margin = new System.Windows.Forms.Padding(2);
+            this.metroSetTextBox28.Location = new System.Drawing.Point(620, 350);
             this.metroSetTextBox28.MaxLength = 32767;
             this.metroSetTextBox28.Multiline = false;
             this.metroSetTextBox28.Name = "metroSetTextBox28";
             this.metroSetTextBox28.ReadOnly = false;
-            this.metroSetTextBox28.Size = new System.Drawing.Size(116, 19);
+            this.metroSetTextBox28.Size = new System.Drawing.Size(174, 29);
             this.metroSetTextBox28.Style = MetroSet_UI.Design.Style.Dark;
             this.metroSetTextBox28.StyleManager = null;
             this.metroSetTextBox28.TabIndex = 58;
@@ -3140,13 +2650,12 @@
             this.metroSetTextBox29.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.metroSetTextBox29.Image = null;
             this.metroSetTextBox29.Lines = null;
-            this.metroSetTextBox29.Location = new System.Drawing.Point(276, 227);
-            this.metroSetTextBox29.Margin = new System.Windows.Forms.Padding(2);
+            this.metroSetTextBox29.Location = new System.Drawing.Point(413, 350);
             this.metroSetTextBox29.MaxLength = 32767;
             this.metroSetTextBox29.Multiline = false;
             this.metroSetTextBox29.Name = "metroSetTextBox29";
             this.metroSetTextBox29.ReadOnly = false;
-            this.metroSetTextBox29.Size = new System.Drawing.Size(116, 19);
+            this.metroSetTextBox29.Size = new System.Drawing.Size(174, 29);
             this.metroSetTextBox29.Style = MetroSet_UI.Design.Style.Dark;
             this.metroSetTextBox29.StyleManager = null;
             this.metroSetTextBox29.TabIndex = 60;
@@ -3170,13 +2679,12 @@
             this.metroSetTextBox30.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.metroSetTextBox30.Image = null;
             this.metroSetTextBox30.Lines = null;
-            this.metroSetTextBox30.Location = new System.Drawing.Point(549, 227);
-            this.metroSetTextBox30.Margin = new System.Windows.Forms.Padding(2);
+            this.metroSetTextBox30.Location = new System.Drawing.Point(822, 350);
             this.metroSetTextBox30.MaxLength = 32767;
             this.metroSetTextBox30.Multiline = false;
             this.metroSetTextBox30.Name = "metroSetTextBox30";
             this.metroSetTextBox30.ReadOnly = false;
-            this.metroSetTextBox30.Size = new System.Drawing.Size(116, 19);
+            this.metroSetTextBox30.Size = new System.Drawing.Size(174, 29);
             this.metroSetTextBox30.Style = MetroSet_UI.Design.Style.Dark;
             this.metroSetTextBox30.StyleManager = null;
             this.metroSetTextBox30.TabIndex = 59;
@@ -3187,323 +2695,313 @@
             this.metroSetTextBox30.UseSystemPasswordChar = false;
             this.metroSetTextBox30.WatermarkText = "";
             // 
-            // groupBox1
+            // tableLayoutPanel2
             // 
-            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox1.Controls.Add(this.RecordNavigator2);
-            this.groupBox1.Controls.Add(this.label32);
-            this.groupBox1.ForeColor = System.Drawing.SystemColors.Info;
-            this.groupBox1.Location = new System.Drawing.Point(441, 281);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(401, 38);
-            this.groupBox1.TabIndex = 59;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Commands";
+            this.tableLayoutPanel2.ColumnCount = 7;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 53.25444F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 46.74556F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 124F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 129F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 130F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 144F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 153F));
+            this.tableLayoutPanel2.Controls.Add(this.button2, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.button12, 6, 0);
+            this.tableLayoutPanel2.Controls.Add(this.button3, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.button11, 5, 0);
+            this.tableLayoutPanel2.Controls.Add(this.GridRefreshButton, 2, 0);
+            this.tableLayoutPanel2.Controls.Add(this.button9, 3, 0);
+            this.tableLayoutPanel2.Controls.Add(this.button4, 4, 0);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(335, 441);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 1;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 65.57377F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(903, 57);
+            this.tableLayoutPanel2.TabIndex = 171;
             // 
-            // RecordNavigator2
+            // button2
             // 
-            this.RecordNavigator2.AddNewItem = null;
-            this.RecordNavigator2.BackColor = System.Drawing.Color.Transparent;
-            this.RecordNavigator2.CountItem = this.toolStripLabel2;
-            this.RecordNavigator2.DeleteItem = null;
-            this.RecordNavigator2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.RecordNavigator2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RecordNavigator2.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.RecordNavigator2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripSeparator7,
-            this.toolStripButton1,
-            this.toolStripSeparator10,
-            this.toolStripTextBox2,
-            this.toolStripLabel2,
-            this.toolStripSeparator11,
-            this.toolStripButton2,
-            this.toolStripSeparator13,
-            this.toolStripButton3,
-            this.toolStripSeparator8,
-            this.toolStripButton4,
-            this.toolStripSeparator9,
-            this.toolStripButton5,
-            this.toolStripSeparator12,
-            this.toolStripButton6,
-            this.toolStripSeparator14,
-            this.toolStripButton8,
-            this.toolStripSeparator21,
-            this.toolStripButton17,
-            this.toolStripSeparator22,
-            this.toolStripButton18,
-            this.toolStripSeparator23,
-            this.toolStripButton19,
-            this.toolStripSeparator24,
-            this.toolStripButton20,
-            this.toolStripSeparator25,
-            this.toolStripButton21});
-            this.RecordNavigator2.Location = new System.Drawing.Point(2, 9);
-            this.RecordNavigator2.MoveFirstItem = null;
-            this.RecordNavigator2.MoveLastItem = null;
-            this.RecordNavigator2.MoveNextItem = this.toolStripButton2;
-            this.RecordNavigator2.MovePreviousItem = this.toolStripButton1;
-            this.RecordNavigator2.Name = "RecordNavigator2";
-            this.RecordNavigator2.PositionItem = this.toolStripTextBox2;
-            this.RecordNavigator2.Size = new System.Drawing.Size(397, 27);
-            this.RecordNavigator2.TabIndex = 153;
-            this.RecordNavigator2.Text = "bindingNavigator1";
-            toolTipInfo3.BackColor = System.Drawing.Color.Black;
-            toolTipInfo3.Body.RenderHtml = true;
-            toolTipInfo3.Body.Size = new System.Drawing.Size(200, 40);
-            toolTipInfo3.BorderColor = System.Drawing.SystemColors.MenuHighlight;
-            toolTipInfo3.Footer.RenderHtml = true;
-            toolTipInfo3.Footer.Size = new System.Drawing.Size(200, 40);
-            toolTipInfo3.ForeColor = System.Drawing.Color.LightSteelBlue;
-            toolTipInfo3.Header.RenderHtml = true;
-            toolTipInfo3.Header.Size = new System.Drawing.Size(200, 40);
-            this.superToolTip1.SetToolTip(this.RecordNavigator2, toolTipInfo3);
+            this.button2.BackColor = System.Drawing.Color.Transparent;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SlateGray;
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.Location = new System.Drawing.Point(4, 5);
+            this.button2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(90, 35);
+            this.button2.TabIndex = 162;
+            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button2.UseVisualStyleBackColor = false;
             // 
-            // toolStripLabel2
+            // button12
             // 
-            this.toolStripLabel2.Name = "toolStripLabel2";
-            this.toolStripLabel2.Size = new System.Drawing.Size(33, 24);
-            this.toolStripLabel2.Text = "of {0}";
-            this.toolStripLabel2.ToolTipText = "Total number of items";
+            this.button12.BackColor = System.Drawing.Color.Transparent;
+            this.button12.FlatAppearance.BorderSize = 0;
+            this.button12.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SlateGray;
+            this.button12.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button12.Image = ((System.Drawing.Image)(resources.GetObject("button12.Image")));
+            this.button12.Location = new System.Drawing.Point(753, 5);
+            this.button12.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(105, 35);
+            this.button12.TabIndex = 168;
+            this.button12.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button12.UseVisualStyleBackColor = false;
             // 
-            // toolStripSeparator7
+            // button3
             // 
-            this.toolStripSeparator7.Name = "toolStripSeparator7";
-            this.toolStripSeparator7.Size = new System.Drawing.Size(6, 27);
+            this.button3.BackColor = System.Drawing.Color.Transparent;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SlateGray;
+            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
+            this.button3.Location = new System.Drawing.Point(122, 5);
+            this.button3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(76, 35);
+            this.button3.TabIndex = 163;
+            this.button3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button3.UseVisualStyleBackColor = false;
             // 
-            // toolStripButton1
+            // button11
             // 
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.RightToLeftAutoMirrorImage = true;
-            this.toolStripButton1.Size = new System.Drawing.Size(24, 24);
-            this.toolStripButton1.Text = "Previous";
-            toolTipInfo2.BackColor = System.Drawing.Color.Black;
-            toolTipInfo2.Body.RenderHtml = true;
-            toolTipInfo2.Body.Size = new System.Drawing.Size(200, 40);
-            toolTipInfo2.Body.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            toolTipInfo2.BorderColor = System.Drawing.SystemColors.MenuHighlight;
-            toolTipInfo2.Footer.Size = new System.Drawing.Size(20, 20);
-            toolTipInfo2.Header.Size = new System.Drawing.Size(20, 20);
-            this.superToolTip1.SetToolTip(this.toolStripButton1, toolTipInfo2);
+            this.button11.BackColor = System.Drawing.Color.Transparent;
+            this.button11.FlatAppearance.BorderSize = 0;
+            this.button11.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SlateGray;
+            this.button11.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button11.Image = ((System.Drawing.Image)(resources.GetObject("button11.Image")));
+            this.button11.Location = new System.Drawing.Point(609, 5);
+            this.button11.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(105, 35);
+            this.button11.TabIndex = 167;
+            this.button11.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button11.UseVisualStyleBackColor = false;
             // 
-            // toolStripSeparator10
+            // GridRefreshButton
             // 
-            this.toolStripSeparator10.Name = "toolStripSeparator10";
-            this.toolStripSeparator10.Size = new System.Drawing.Size(6, 27);
+            this.GridRefreshButton.BackColor = System.Drawing.Color.Transparent;
+            this.GridRefreshButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.GridRefreshButton.FlatAppearance.BorderSize = 0;
+            this.GridRefreshButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SlateGray;
+            this.GridRefreshButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.GridRefreshButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.GridRefreshButton.Image = ((System.Drawing.Image)(resources.GetObject("GridRefreshButton.Image")));
+            this.GridRefreshButton.Location = new System.Drawing.Point(226, 5);
+            this.GridRefreshButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.GridRefreshButton.Name = "GridRefreshButton";
+            this.GridRefreshButton.Size = new System.Drawing.Size(98, 35);
+            this.GridRefreshButton.TabIndex = 164;
+            this.GridRefreshButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.GridRefreshButton.UseVisualStyleBackColor = false;
             // 
-            // toolStripTextBox2
+            // button9
             // 
-            this.toolStripTextBox2.AccessibleName = "Position";
-            this.toolStripTextBox2.AutoSize = false;
-            this.toolStripTextBox2.BackColor = System.Drawing.Color.Black;
-            this.toolStripTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.toolStripTextBox2.ForeColor = System.Drawing.Color.White;
-            this.toolStripTextBox2.Name = "toolStripTextBox2";
-            this.toolStripTextBox2.Size = new System.Drawing.Size(28, 16);
-            this.toolStripTextBox2.Text = "0";
-            this.toolStripTextBox2.TextBoxTextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.toolStripTextBox2.ToolTipText = "Current position";
+            this.button9.BackColor = System.Drawing.Color.Transparent;
+            this.button9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button9.FlatAppearance.BorderSize = 0;
+            this.button9.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SlateGray;
+            this.button9.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button9.Image = ((System.Drawing.Image)(resources.GetObject("button9.Image")));
+            this.button9.Location = new System.Drawing.Point(350, 5);
+            this.button9.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(88, 35);
+            this.button9.TabIndex = 165;
+            this.button9.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button9.UseCompatibleTextRendering = true;
+            this.button9.UseVisualStyleBackColor = true;
             // 
-            // toolStripSeparator11
+            // button4
             // 
-            this.toolStripSeparator11.Name = "toolStripSeparator11";
-            this.toolStripSeparator11.Size = new System.Drawing.Size(6, 27);
+            this.button4.BackColor = System.Drawing.Color.Transparent;
+            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SlateGray;
+            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
+            this.button4.Location = new System.Drawing.Point(479, 5);
+            this.button4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(92, 35);
+            this.button4.TabIndex = 166;
+            this.button4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button4.UseVisualStyleBackColor = false;
             // 
-            // toolStripButton2
+            // tableLayoutPanel3
             // 
-            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
-            this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.RightToLeftAutoMirrorImage = true;
-            this.toolStripButton2.Size = new System.Drawing.Size(24, 24);
-            this.toolStripButton2.Text = "Next";
-            this.superToolTip1.SetToolTip(this.toolStripButton2, toolTipInfo2);
+            this.tableLayoutPanel3.ColumnCount = 7;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 53.25444F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 46.74556F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 124F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 129F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 130F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 144F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 153F));
+            this.tableLayoutPanel3.Controls.Add(this.button1, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.button5, 6, 0);
+            this.tableLayoutPanel3.Controls.Add(this.button6, 1, 0);
+            this.tableLayoutPanel3.Controls.Add(this.button7, 5, 0);
+            this.tableLayoutPanel3.Controls.Add(this.button8, 2, 0);
+            this.tableLayoutPanel3.Controls.Add(this.button10, 3, 0);
+            this.tableLayoutPanel3.Controls.Add(this.button13, 4, 0);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(337, 441);
+            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 1;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 65.57377F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(903, 57);
+            this.tableLayoutPanel3.TabIndex = 171;
             // 
-            // toolStripSeparator13
+            // button1
             // 
-            this.toolStripSeparator13.Name = "toolStripSeparator13";
-            this.toolStripSeparator13.Size = new System.Drawing.Size(6, 27);
-            this.superToolTip1.SetToolTip(this.toolStripSeparator13, toolTipInfo2);
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SlateGray;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.Location = new System.Drawing.Point(4, 5);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(90, 35);
+            this.button1.TabIndex = 162;
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.UseVisualStyleBackColor = false;
             // 
-            // toolStripButton3
+            // button5
             // 
-            this.toolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.Image")));
-            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton3.Name = "toolStripButton3";
-            this.toolStripButton3.Size = new System.Drawing.Size(24, 24);
-            this.toolStripButton3.Text = "toolStripButton7";
-            this.superToolTip1.SetToolTip(this.toolStripButton3, toolTipInfo2);
+            this.button5.BackColor = System.Drawing.Color.Transparent;
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SlateGray;
+            this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
+            this.button5.Location = new System.Drawing.Point(753, 5);
+            this.button5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(105, 35);
+            this.button5.TabIndex = 168;
+            this.button5.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button5.UseVisualStyleBackColor = false;
             // 
-            // toolStripSeparator8
+            // button6
             // 
-            this.toolStripSeparator8.Name = "toolStripSeparator8";
-            this.toolStripSeparator8.Size = new System.Drawing.Size(6, 27);
-            this.superToolTip1.SetToolTip(this.toolStripSeparator8, toolTipInfo2);
+            this.button6.BackColor = System.Drawing.Color.Transparent;
+            this.button6.FlatAppearance.BorderSize = 0;
+            this.button6.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SlateGray;
+            this.button6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
+            this.button6.Location = new System.Drawing.Point(122, 5);
+            this.button6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(76, 35);
+            this.button6.TabIndex = 163;
+            this.button6.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button6.UseVisualStyleBackColor = false;
             // 
-            // toolStripButton4
+            // button7
             // 
-            this.toolStripButton4.BackColor = System.Drawing.Color.Black;
-            this.toolStripButton4.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton4.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.toolStripButton4.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton4.Image")));
-            this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton4.Name = "toolStripButton4";
-            this.toolStripButton4.Size = new System.Drawing.Size(24, 24);
-            this.toolStripButton4.Text = "toolStripButton13";
-            this.superToolTip1.SetToolTip(this.toolStripButton4, toolTipInfo2);
+            this.button7.BackColor = System.Drawing.Color.Transparent;
+            this.button7.FlatAppearance.BorderSize = 0;
+            this.button7.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SlateGray;
+            this.button7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button7.Image = ((System.Drawing.Image)(resources.GetObject("button7.Image")));
+            this.button7.Location = new System.Drawing.Point(609, 5);
+            this.button7.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(105, 35);
+            this.button7.TabIndex = 167;
+            this.button7.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button7.UseVisualStyleBackColor = false;
             // 
-            // toolStripSeparator9
+            // button8
             // 
-            this.toolStripSeparator9.Name = "toolStripSeparator9";
-            this.toolStripSeparator9.Size = new System.Drawing.Size(6, 27);
-            this.superToolTip1.SetToolTip(this.toolStripSeparator9, toolTipInfo2);
+            this.button8.BackColor = System.Drawing.Color.Transparent;
+            this.button8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button8.FlatAppearance.BorderSize = 0;
+            this.button8.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SlateGray;
+            this.button8.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button8.Image = ((System.Drawing.Image)(resources.GetObject("button8.Image")));
+            this.button8.Location = new System.Drawing.Point(226, 5);
+            this.button8.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(98, 35);
+            this.button8.TabIndex = 164;
+            this.button8.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button8.UseVisualStyleBackColor = false;
             // 
-            // toolStripButton5
+            // button10
             // 
-            this.toolStripButton5.BackColor = System.Drawing.Color.Black;
-            this.toolStripButton5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("toolStripButton5.BackgroundImage")));
-            this.toolStripButton5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.toolStripButton5.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton5.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton5.Image")));
-            this.toolStripButton5.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton5.Name = "toolStripButton5";
-            this.toolStripButton5.Size = new System.Drawing.Size(24, 24);
-            this.toolStripButton5.Text = "toolStripButton12";
-            this.superToolTip1.SetToolTip(this.toolStripButton5, toolTipInfo2);
+            this.button10.BackColor = System.Drawing.Color.Transparent;
+            this.button10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button10.FlatAppearance.BorderSize = 0;
+            this.button10.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SlateGray;
+            this.button10.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button10.Image = ((System.Drawing.Image)(resources.GetObject("button10.Image")));
+            this.button10.Location = new System.Drawing.Point(350, 5);
+            this.button10.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(88, 35);
+            this.button10.TabIndex = 165;
+            this.button10.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button10.UseCompatibleTextRendering = true;
+            this.button10.UseVisualStyleBackColor = true;
             // 
-            // toolStripSeparator12
+            // button13
             // 
-            this.toolStripSeparator12.Name = "toolStripSeparator12";
-            this.toolStripSeparator12.Size = new System.Drawing.Size(6, 27);
-            this.superToolTip1.SetToolTip(this.toolStripSeparator12, toolTipInfo2);
+            this.button13.BackColor = System.Drawing.Color.Transparent;
+            this.button13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button13.FlatAppearance.BorderSize = 0;
+            this.button13.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SlateGray;
+            this.button13.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button13.Image = ((System.Drawing.Image)(resources.GetObject("button13.Image")));
+            this.button13.Location = new System.Drawing.Point(479, 5);
+            this.button13.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button13.Name = "button13";
+            this.button13.Size = new System.Drawing.Size(92, 35);
+            this.button13.TabIndex = 166;
+            this.button13.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.button13.UseVisualStyleBackColor = false;
             // 
-            // toolStripButton6
+            // metroSetToolTip1
             // 
-            this.toolStripButton6.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton6.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton6.Image")));
-            this.toolStripButton6.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton6.Name = "toolStripButton6";
-            this.toolStripButton6.Size = new System.Drawing.Size(24, 24);
-            this.toolStripButton6.Text = "toolStripButton7";
-            this.superToolTip1.SetToolTip(this.toolStripButton6, toolTipInfo2);
+            this.metroSetToolTip1.BackColor = System.Drawing.Color.White;
+            this.metroSetToolTip1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.metroSetToolTip1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
+            this.metroSetToolTip1.OwnerDraw = true;
+            this.metroSetToolTip1.Style = MetroSet_UI.Design.Style.Light;
+            this.metroSetToolTip1.StyleManager = null;
+            this.metroSetToolTip1.ThemeAuthor = "Narwin";
+            this.metroSetToolTip1.ThemeName = "MetroLite";
             // 
-            // toolStripSeparator14
+            // metroSetToolTip2
             // 
-            this.toolStripSeparator14.Name = "toolStripSeparator14";
-            this.toolStripSeparator14.Size = new System.Drawing.Size(6, 27);
-            this.superToolTip1.SetToolTip(this.toolStripSeparator14, toolTipInfo2);
-            // 
-            // toolStripButton8
-            // 
-            this.toolStripButton8.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton8.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton8.Image")));
-            this.toolStripButton8.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton8.Name = "toolStripButton8";
-            this.toolStripButton8.Size = new System.Drawing.Size(24, 24);
-            this.toolStripButton8.Text = "toolStripButton7";
-            this.superToolTip1.SetToolTip(this.toolStripButton8, toolTipInfo2);
-            // 
-            // toolStripSeparator21
-            // 
-            this.toolStripSeparator21.Name = "toolStripSeparator21";
-            this.toolStripSeparator21.Size = new System.Drawing.Size(6, 27);
-            this.superToolTip1.SetToolTip(this.toolStripSeparator21, toolTipInfo2);
-            // 
-            // toolStripButton17
-            // 
-            this.toolStripButton17.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton17.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton17.Image")));
-            this.toolStripButton17.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton17.Name = "toolStripButton17";
-            this.toolStripButton17.Size = new System.Drawing.Size(24, 24);
-            this.toolStripButton17.Text = "toolStripButton7";
-            this.superToolTip1.SetToolTip(this.toolStripButton17, toolTipInfo2);
-            // 
-            // toolStripSeparator22
-            // 
-            this.toolStripSeparator22.Name = "toolStripSeparator22";
-            this.toolStripSeparator22.Size = new System.Drawing.Size(6, 27);
-            this.superToolTip1.SetToolTip(this.toolStripSeparator22, toolTipInfo2);
-            // 
-            // toolStripButton18
-            // 
-            this.toolStripButton18.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton18.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton18.Image")));
-            this.toolStripButton18.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton18.Name = "toolStripButton18";
-            this.toolStripButton18.Size = new System.Drawing.Size(24, 24);
-            this.toolStripButton18.Text = "toolStripButton9";
-            this.superToolTip1.SetToolTip(this.toolStripButton18, toolTipInfo2);
-            // 
-            // toolStripSeparator23
-            // 
-            this.toolStripSeparator23.Name = "toolStripSeparator23";
-            this.toolStripSeparator23.Size = new System.Drawing.Size(6, 27);
-            this.superToolTip1.SetToolTip(this.toolStripSeparator23, toolTipInfo2);
-            // 
-            // toolStripButton19
-            // 
-            this.toolStripButton19.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton19.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton19.Image")));
-            this.toolStripButton19.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton19.Name = "toolStripButton19";
-            this.toolStripButton19.Size = new System.Drawing.Size(24, 24);
-            this.toolStripButton19.Text = "toolStripButton14";
-            this.superToolTip1.SetToolTip(this.toolStripButton19, toolTipInfo2);
-            // 
-            // toolStripSeparator24
-            // 
-            this.toolStripSeparator24.Name = "toolStripSeparator24";
-            this.toolStripSeparator24.Size = new System.Drawing.Size(6, 27);
-            this.superToolTip1.SetToolTip(this.toolStripSeparator24, toolTipInfo2);
-            // 
-            // toolStripButton20
-            // 
-            this.toolStripButton20.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton20.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton20.Image")));
-            this.toolStripButton20.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton20.Name = "toolStripButton20";
-            this.toolStripButton20.Size = new System.Drawing.Size(24, 24);
-            this.toolStripButton20.Text = "toolStripButton15";
-            this.superToolTip1.SetToolTip(this.toolStripButton20, toolTipInfo2);
-            // 
-            // toolStripSeparator25
-            // 
-            this.toolStripSeparator25.Name = "toolStripSeparator25";
-            this.toolStripSeparator25.Size = new System.Drawing.Size(6, 27);
-            this.superToolTip1.SetToolTip(this.toolStripSeparator25, toolTipInfo2);
-            // 
-            // toolStripButton21
-            // 
-            this.toolStripButton21.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton21.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton21.Image")));
-            this.toolStripButton21.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton21.Name = "toolStripButton21";
-            this.toolStripButton21.Size = new System.Drawing.Size(24, 24);
-            this.superToolTip1.SetToolTip(this.toolStripButton21, toolTipInfo2);
-            // 
-            // label32
-            // 
-            this.label32.AutoSize = true;
-            this.label32.ForeColor = System.Drawing.SystemColors.Info;
-            this.label32.Location = new System.Drawing.Point(257, 142);
-            this.label32.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(24, 13);
-            this.label32.TabIndex = 23;
-            this.label32.Text = "ID: ";
-            // 
-            // superToolTip1
-            // 
-            this.superToolTip1.MetroColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(158)))), ((int)(((byte)(218)))));
+            this.metroSetToolTip2.BackColor = System.Drawing.Color.White;
+            this.metroSetToolTip2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.metroSetToolTip2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
+            this.metroSetToolTip2.OwnerDraw = true;
+            this.metroSetToolTip2.Style = MetroSet_UI.Design.Style.Light;
+            this.metroSetToolTip2.StyleManager = null;
+            this.metroSetToolTip2.ThemeAuthor = "Narwin";
+            this.metroSetToolTip2.ThemeName = "MetroLite";
             // 
             // RecordManager
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             this.BorderColor = System.Drawing.SystemColors.MenuHighlight;
@@ -3519,19 +3017,13 @@
             captionImage2.Name = "CaptionImage2";
             this.CaptionImages.Add(captionImage1);
             this.CaptionImages.Add(captionImage2);
-            this.ClientSize = new System.Drawing.Size(851, 364);
+            this.ClientSize = new System.Drawing.Size(1272, 555);
             this.Controls.Add(this.AccountTabControl);
-            this.Margin = new System.Windows.Forms.Padding(2);
-            this.MaximumSize = new System.Drawing.Size(863, 438);
+            this.MaximumSize = new System.Drawing.Size(1284, 644);
             this.MetroColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.MinimumSize = new System.Drawing.Size(863, 400);
+            this.MinimumSize = new System.Drawing.Size(1284, 585);
             this.Name = "RecordManager";
             this.ShowIcon = false;
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.RecordNavigator1)).EndInit();
-            this.RecordNavigator1.ResumeLayout(false);
-            this.RecordNavigator1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AccountTabControl)).EndInit();
             this.AccountTabControl.ResumeLayout(false);
             this.UpdateTab.ResumeLayout(false);
@@ -3540,12 +3032,9 @@
             this.AddNewTab.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.RecordNavigator2)).EndInit();
-            this.RecordNavigator2.ResumeLayout(false);
-            this.RecordNavigator2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BindingSource)).EndInit();
+            this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -3555,8 +3044,6 @@
         private Syncfusion.Windows.Forms.Tools.TabControlAdv AccountTabControl;
         private Syncfusion.Windows.Forms.Tools.TabPageAdv UpdateTab;
         private Syncfusion.Windows.Forms.Tools.TabPageAdv AddNewTab;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TableLayoutPanel RecordTabelPanel;
         private MetroSet_UI.Controls.MetroSetTextBox box0;
         private MetroSet_UI.Controls.MetroSetTextBox box4;
@@ -3618,8 +3105,6 @@
         private MetroSet_UI.Controls.MetroSetTextBox box29;
         private MetroSet_UI.Controls.MetroSetTextBox box26;
         private MetroSet_UI.Controls.MetroSetTextBox box28;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label32;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
@@ -3681,63 +3166,24 @@
         private MetroSet_UI.Controls.MetroSetTextBox metroSetTextBox28;
         private MetroSet_UI.Controls.MetroSetTextBox metroSetTextBox29;
         private MetroSet_UI.Controls.MetroSetTextBox metroSetTextBox30;
-        private System.Windows.Forms.BindingNavigator RecordNavigator1;
-        private System.Windows.Forms.ToolStripLabel toolStripLabel1;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
-        private System.Windows.Forms.ToolStripButton toolStripButton10;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-        private System.Windows.Forms.ToolStripTextBox toolStripTextBox1;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
-        private System.Windows.Forms.ToolStripButton toolStripButton11;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
-        private System.Windows.Forms.ToolStripButton CopyButton;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator15;
-        private System.Windows.Forms.ToolStripButton toolStripButton13;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator18;
-        private System.Windows.Forms.ToolStripButton toolStripButton12;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator16;
-        private System.Windows.Forms.ToolStripButton ResetButton;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
-        private System.Windows.Forms.ToolStripButton AddButton;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator19;
-        private System.Windows.Forms.ToolStripButton toolStripButton7;
-        private System.Windows.Forms.ToolStripSeparator GridRefreshButton;
-        private System.Windows.Forms.ToolStripButton toolStripButton9;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator6;
-        private System.Windows.Forms.ToolStripButton toolStripButton14;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator17;
-        private System.Windows.Forms.ToolStripButton toolStripButton15;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator20;
-        private System.Windows.Forms.ToolStripButton toolStripButton16;
-        private System.Windows.Forms.BindingNavigator RecordNavigator2;
-        private System.Windows.Forms.ToolStripLabel toolStripLabel2;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator7;
-        private System.Windows.Forms.ToolStripButton toolStripButton1;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator10;
-        private System.Windows.Forms.ToolStripTextBox toolStripTextBox2;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator11;
-        private System.Windows.Forms.ToolStripButton toolStripButton2;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator13;
-        private System.Windows.Forms.ToolStripButton toolStripButton3;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator8;
-        private System.Windows.Forms.ToolStripButton toolStripButton4;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator9;
-        private System.Windows.Forms.ToolStripButton toolStripButton5;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator12;
-        private System.Windows.Forms.ToolStripButton toolStripButton6;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator14;
-        private System.Windows.Forms.ToolStripButton toolStripButton8;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator21;
-        private System.Windows.Forms.ToolStripButton toolStripButton17;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator22;
-        private System.Windows.Forms.ToolStripButton toolStripButton18;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator23;
-        private System.Windows.Forms.ToolStripButton toolStripButton19;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator24;
-        private System.Windows.Forms.ToolStripButton toolStripButton20;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator25;
-        private System.Windows.Forms.ToolStripButton toolStripButton21;
-        private Syncfusion.Windows.Forms.Tools.SuperToolTip superToolTip1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.Button GridRefreshButton;
+        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button button13;
+        private MetroSet_UI.Components.MetroSetToolTip metroSetToolTip1;
+        private MetroSet_UI.Components.MetroSetToolTip metroSetToolTip2;
     }
 }
 

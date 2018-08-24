@@ -1060,7 +1060,6 @@ namespace BudgetExecution
             {
                 AccountManager am = new AccountManager(Source.PRC, Provider);
                 am.CaptionImages[1].Image = new Bitmap(Image.FromFile(@"C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\Resources\Icon\insert.ico"));
-                am.AccountNavigator.Visible = false;
                 am.Update.TabVisible = false;
                 am.AccountTabControl.SelectedIndex = 1;
                 am.Show();

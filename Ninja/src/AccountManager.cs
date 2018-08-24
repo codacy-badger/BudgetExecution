@@ -27,7 +27,6 @@
 
             BindingSource = new BindingSource();
             BindingSource.DataSource = new DataBuilder(data.Source, Provider.SQLite);
-            AccountNavigator.BindingSource = BindingSource;
         }
 
         public AccountManager(Source source, Provider provider)
@@ -38,7 +37,6 @@
             DbData = new DataBuilder(Source, Provider);
             BindingSource = new BindingSource();
             BindingSource.DataSource = DbData.DbTable;
-            AccountNavigator.BindingSource = BindingSource;
             Update.TabVisible = false;
             PopulateComboBoxes();
         }
@@ -52,7 +50,6 @@
             Table = DbData.DbTable;
             DbRow = Table.Rows[0];
             BindingSource.DataSource = Table;
-            AccountNavigator.Visible = false;
             Insert.TabVisible = false;
         }
 
@@ -143,11 +140,6 @@
 
         private void AccountManager_Load(object sender, EventArgs e)
         {
-            if (Insert.TabVisible)
-            {
-                AddButton.Visible = false;
-            }
-
             ConfigureTextBoxBindings();
         }
 

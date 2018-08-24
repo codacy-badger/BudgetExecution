@@ -29,9 +29,7 @@ namespace BudgetExecution
             Table = DbData.DbTable;
             BindingSource = DbData.BindingSource;
             Grid.DataSource = BindingSource;
-            Navigator.BindingSource = BindingSource;
             ProgramElements = DbData.GetProgramElements(Table);
-            Navigator.BindingSource = BindingSource;
             Grid.DataSource = BindingSource.DataSource;
             PopulateFilterButtons(Filter1, Info.Sources);
             Text = $"{Source.ToString()} Database";
@@ -50,7 +48,6 @@ namespace BudgetExecution
             Table = DbData.DbTable;
             BindingSource = DbData.BindingSource;
             Grid.DataSource = DbData.BindingSource;
-            Navigator.BindingSource = DbData.BindingSource;
             ProgramElements = DbData.GetProgramElements(Table);
             Text = $"{Source.ToString()} Database";
             FunctionTab.TabVisible = false;

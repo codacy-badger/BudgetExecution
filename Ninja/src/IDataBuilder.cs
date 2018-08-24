@@ -18,6 +18,6 @@ namespace BudgetExecution
         // METHODS
         DataTable GetDataTable();
 
-        DataRow[] GetDataRecords(DataTable table);
+        DataRow[] GetRecords(DataTable table);
     }
 }
