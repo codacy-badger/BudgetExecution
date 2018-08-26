@@ -18,11 +18,12 @@ namespace BudgetExecution
 
     using MakarovDev.ExpandCollapsePanel;
 
-    using MetroSet_UI.Controls;
+    using VisualPlus.Toolkit.Controls.Interactivity;
 
     using Syncfusion.Windows.Forms;
     using Syncfusion.Windows.Forms.Chart;
     using Syncfusion.Windows.Forms.Tools;
+    using MetroSet_UI.Controls;
 
     public partial class SummaryForm : MetroForm
     {
@@ -86,7 +87,6 @@ namespace BudgetExecution
                 SummaryTabControl.SelectedIndex = 8;
                 SummaryTabControl.SelectedIndexChanged += SummaryTabPage_TabSelected;
             }
-
         }
 
         // PROPERTIES
@@ -122,19 +122,19 @@ namespace BudgetExecution
 
         public int CurrentTabIndex { get; set; }
 
-        public MetroSetComboBox GridFilterControl1 { get; set; }
+        public VisualComboBox GridFilterControl1 { get; set; }
 
-        public MetroSetComboBox GridFilterControl2 { get; set; }
+        public VisualComboBox GridFilterControl2 { get; set; }
 
-        public MetroSetComboBox GridFilterControl3 { get; set; }
+        public VisualComboBox GridFilterControl3 { get; set; }
 
-        public MetroSetComboBox ChartFilterControl1 { get; set; }
+        public VisualComboBox ChartFilterControl1 { get; set; }
 
-        public MetroSetComboBox ChartFilterControl2 { get; set; }
+        public VisualComboBox ChartFilterControl2 { get; set; }
 
-        public MetroSetComboBox ChartFilterControl3 { get; set; }
+        public VisualComboBox ChartFilterControl3 { get; set; }
 
-        public MetroSetComboBox ChartFilterControl4 { get; set; }
+        public VisualComboBox ChartFilterControl4 { get; set; }
 
         public ExpandCollapsePanel Expander1 { get; set; }
 
@@ -192,8 +192,6 @@ namespace BudgetExecution
                 lblBoc.Visible = false;
                 GridBocFilter.Visible = false;
                 GridRefreshButton.Click += GridRefreshButton_OnClick;
-                ExcelButton.Click += ExcelButton_Click;
-                CalendatButton.Click += CalendarButton_Click;
                 CalculatorButton.Click += CalculatorButton_Click;
                 Grid.SelectionChanged += UpdateAccountChart;
             }
@@ -207,7 +205,7 @@ namespace BudgetExecution
         {
             try
             {
-                GridFilterControl1 = sender as MetroSetComboBox;
+                GridFilterControl1 = sender as VisualComboBox;
                 GridFundFilter.Tag = GridFilterControl1?.SelectedItem.ToString();
                 string fund = GridFilterControl1?.SelectedItem.ToString();
                 BindingSource.Filter = string.Format("FundName = '{0}'", GridFundFilter.SelectedItem);
@@ -229,7 +227,7 @@ namespace BudgetExecution
         {
             try
             {
-                GridFilterControl2 = sender as MetroSetComboBox;
+                GridFilterControl2 = sender as VisualComboBox ;
                 string filter = GridFilterControl2?.SelectedItem.ToString();
                 BindingSource.Filter = $"FundName = '{GridFundFilter.SelectedItem}' AND BocName = '{GridBocFilter.SelectedItem}'";
                 label32.Text = CalculateTotal(GridFundFilter.SelectedItem.ToString(), filter).ToString("c");
@@ -252,7 +250,7 @@ namespace BudgetExecution
         {
             try
             {
-                MetroSetComboBox prc = sender as MetroSetComboBox;
+                VisualComboBox  prc = sender as VisualComboBox ;
                 string filter = prc.SelectedItem.ToString();
                 BindingSource.Filter = $"FundName = '{GridFundFilter.SelectedItem}' AND BocName = '{GridBocFilter.SelectedItem}' AND Code = '{filter}'";
                 label32.Text = CalculateTotal(GridFundFilter.SelectedItem.ToString(), filter).ToString("c");
@@ -344,7 +342,7 @@ namespace BudgetExecution
             }
         }
 
-        private void PopulateFilterBoxItems(MetroSetComboBox cmbox, Field prcfilter)
+        private void PopulateFilterBoxItems(VisualComboBox cmbox, Field prcfilter)
         {
             try
             {
@@ -365,7 +363,7 @@ namespace BudgetExecution
             }
         }
 
-        private void PopulateFilterBoxItems(MetroSetComboBox cmbox, int i)
+        private void PopulateFilterBoxItems(VisualComboBox cmbox, int i)
         {
             try
             {
@@ -572,7 +570,7 @@ namespace BudgetExecution
             }
         }
 
-        private ChartSeriesType GetChartType(MetroSetComboBox ctb)
+        private ChartSeriesType GetChartType(VisualComboBox ctb)
         {
             if (ctb.SelectedItem == null)
             {
@@ -584,7 +582,7 @@ namespace BudgetExecution
 
         private void ChartFilterControl1_ItemSelected(object sender, EventArgs e)
         {
-            ChartFilterControl1 = sender as MetroSetComboBox;
+            ChartFilterControl1 = sender as VisualComboBox ;
             ChartType = (ChartSeriesType)Enum.Parse(typeof(ChartSeriesType), ChartFilterControl1.SelectedItem.ToString());
             if (Expander2.IsExpanded)
             {
@@ -596,7 +594,7 @@ namespace BudgetExecution
         {
             try
             {
-                ChartFilterControl2 = sender as MetroSetComboBox;
+                ChartFilterControl2 = sender as VisualComboBox ;
                 Measure = (Stat)Enum.Parse(typeof(Stat), ChartFilterControl2.SelectedItem.ToString());
                 if (Expander2.IsExpanded == false)
                 {
@@ -613,7 +611,7 @@ namespace BudgetExecution
         {
             try
             {
-                ChartFilterControl3 = sender as MetroSetComboBox;
+                ChartFilterControl3 = sender as VisualComboBox;
                 ChartField = (Field)Enum.Parse(typeof(Field), ChartFilterControl3.Tag.ToString());
                 ChartFilter = ChartFilterControl3.SelectedItem.ToString();
             }
@@ -627,7 +625,7 @@ namespace BudgetExecution
         {
             try
             {
-                ChartFilterControl4 = sender as MetroSetComboBox;
+                ChartFilterControl4 = sender as VisualComboBox ;
                 ChartGroup = (Field)Enum.Parse(typeof(Field), ChartFilterControl4.SelectedItem.ToString());
                 ChartMainTitle = new[] { $"{Text} {ChartFilter} By {ChartFilterControl4.SelectedItem} " };
                 Dictionary<string, object> param = new Dictionary<string, object> { [ChartField.ToString()] = ChartFilter };
@@ -672,7 +670,7 @@ namespace BudgetExecution
             }
         }
 
-        private void AssignChartFIlterControls(MetroSetComboBox filter1, MetroSetComboBox filter2, MetroSetComboBox filter3, MetroSetComboBox filter4)
+        private void AssignChartFilterControls(VisualComboBox filter1, VisualComboBox filter2, VisualComboBox filter3, VisualComboBox filter4)
         {
             ChartFilterControl1 = filter1;
             ChartFilterControl1.SelectionChangeCommitted += ChartFilterControl1_ItemSelected;
@@ -769,7 +767,7 @@ namespace BudgetExecution
                 switch (CurrentTabIndex)
                 {
                     case 0:
-                        AssignChartFIlterControls(FundFilter1, FundFilter2, FundFilter3, FundFilter4);
+                        AssignChartFilterControls(FundFilter1, FundFilter2, FundFilter3, FundFilter4);
                         AssignChartExpanders(FundExpander1, FundExpander2);
                         PopulateFilterBoxItems(ChartFilterControl3, Field.FundName);
                         if (Source == Source.RegionalAccounts)
@@ -790,7 +788,7 @@ namespace BudgetExecution
                         break;
 
                     case 1:
-                        AssignChartFIlterControls(BocFilter1, BocFilter2, BocFilter3, BocFilter4);
+                        AssignChartFilterControls(BocFilter1, BocFilter2, BocFilter3, BocFilter4);
                         AssignChartExpanders(BocExpander1, BocExpander2);
                         PopulateFilterBoxItems(ChartFilterControl3, Field.BocName);
                         if (DbData.Source == Source.RegionalAccounts)
@@ -811,7 +809,7 @@ namespace BudgetExecution
                         break;
 
                     case 2:
-                        AssignChartFIlterControls(NpmFilter1, NpmFilter2, NpmFilter3, NpmFilter4);
+                        AssignChartFilterControls(NpmFilter1, NpmFilter2, NpmFilter3, NpmFilter4);
                         AssignChartExpanders(NpmExpander1, NpmExpander2);
                         PopulateFilterBoxItems(ChartFilterControl3, Field.NPM);
                         if(DbData.Source == Source.RegionalAccounts)
@@ -832,7 +830,7 @@ namespace BudgetExecution
                         break;
 
                     case 3:
-                        AssignChartFIlterControls(GoalFilter1, GoalFilter2, GoalFilter3, GoalFilter4);
+                        AssignChartFilterControls(GoalFilter1, GoalFilter2, GoalFilter3, GoalFilter4);
                         AssignChartExpanders(GoalExpander1, GoalExpander2);
                         PopulateFilterBoxItems(ChartFilterControl3, Field.GoalName);
                         if (DbData.Source == Source.RegionalAccounts)
@@ -853,7 +851,7 @@ namespace BudgetExecution
                         break;
 
                     case 4:
-                        AssignChartFIlterControls(ObjectiveFilter1, ObjectiveFilter2, ObjectiveFilter3, ObjectiveFilter4);
+                        AssignChartFilterControls(ObjectiveFilter1, ObjectiveFilter2, ObjectiveFilter3, ObjectiveFilter4);
                         AssignChartExpanders(ObjectiveExpander1, ObjectiveExpander2);
                         PopulateFilterBoxItems(ChartFilterControl3, Field.ObjectiveName);
                         if (DbData.Source == Source.RegionalAccounts)
@@ -874,7 +872,7 @@ namespace BudgetExecution
                         break;
 
                     case 5:
-                        AssignChartFIlterControls(DivisionFilter1, DivisionFilter2, DivisionFilter3, DivisionFilter4);
+                        AssignChartFilterControls(DivisionFilter1, DivisionFilter2, DivisionFilter3, DivisionFilter4);
                         AssignChartExpanders(DivisionExpander1, DivisionExpander2);
                         PopulateFilterBoxItems(ChartFilterControl3, Field.DivisionName);
                         if (DbData.Source == Source.RegionalAccounts)
@@ -895,7 +893,7 @@ namespace BudgetExecution
                         break;
 
                     case 6:
-                        AssignChartFIlterControls(AreaFilter1, AreaFilter2, AreaFilter3, AreaFilter4);
+                        AssignChartFilterControls(AreaFilter1, AreaFilter2, AreaFilter3, AreaFilter4);
                         AssignChartExpanders(AreaExpander1, AreaExpander2);
                         PopulateFilterBoxItems(ChartFilterControl3, Field.ProgramAreaName);
                         if (DbData.Source == Source.RegionalAccounts)
@@ -916,7 +914,7 @@ namespace BudgetExecution
                         break;
 
                     case 7:
-                        AssignChartFIlterControls(ProjectFilter1, ProjectFilter2, ProjectFilter3, ProjectFilter4);
+                        AssignChartFilterControls(ProjectFilter1, ProjectFilter2, ProjectFilter3, ProjectFilter4);
                         AssignChartExpanders(ProjectExpander1, ProjectExpander2);
                         PopulateFilterBoxItems(ChartFilterControl3, Field.ProgramProjectName);
                         if (DbData.Source == Source.RegionalAccounts)
@@ -947,7 +945,7 @@ namespace BudgetExecution
             }
         }
 
-        private string[] GetTitle(TabControlAdv tab, MetroSetComboBox filter)
+        private string[] GetTitle(TabControlAdv tab, VisualComboBox filter)
         {
             try
             {
@@ -977,7 +975,7 @@ namespace BudgetExecution
             }
         }
 
-        private string[] GetTitle(TabControlAdv tab, MetroSetComboBox filter1, MetroSetComboBox filter2, MetroSetComboBox filter3)
+        private string[] GetTitle(TabControlAdv tab, VisualComboBox filter1, VisualComboBox  filter2, VisualComboBox  filter3)
         {
             try
             {
