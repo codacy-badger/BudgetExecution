@@ -230,6 +230,7 @@ namespace BudgetExecution
             this.ClientSize = new System.Drawing.Size(1702, 1017);
             this.Controls.Add(this.hubTile2);
             this.Controls.Add(this.MainChart);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(1714, 1064);
             this.MinimumSize = new System.Drawing.Size(1714, 1064);
             this.Name = "MainForm";

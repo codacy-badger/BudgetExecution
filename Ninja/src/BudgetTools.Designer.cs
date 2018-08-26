@@ -36,6 +36,7 @@ namespace BudgetExecution
         private void InitializeComponent( )
         {
             Syncfusion.Windows.Forms.CaptionImage captionImage1 = new Syncfusion.Windows.Forms.CaptionImage();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BudgetTools));
             this.splitContainerAdv1 = new Syncfusion.Windows.Forms.Tools.SplitContainerAdv();
             this.expandCollapsePanel1 = new MakarovDev.ExpandCollapsePanel.ExpandCollapsePanel();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerAdv1)).BeginInit();
@@ -48,19 +49,13 @@ namespace BudgetExecution
             this.splitContainerAdv1.BeforeTouchSize = 7;
             this.splitContainerAdv1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainerAdv1.Location = new System.Drawing.Point(0, 0);
-            this.splitContainerAdv1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.splitContainerAdv1.Name = "splitContainerAdv1";
-            // 
-            // splitContainerAdv1.Panel1
-            // 
-            this.splitContainerAdv1.Panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             // 
             // splitContainerAdv1.Panel2
             // 
             this.splitContainerAdv1.Panel2.Controls.Add(this.expandCollapsePanel1);
-            this.splitContainerAdv1.Panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.splitContainerAdv1.Size = new System.Drawing.Size(1193, 628);
-            this.splitContainerAdv1.SplitterDistance = 905;
+            this.splitContainerAdv1.Size = new System.Drawing.Size(1691, 961);
+            this.splitContainerAdv1.SplitterDistance = 1282;
             this.splitContainerAdv1.TabIndex = 0;
             this.splitContainerAdv1.Text = "splitContainerAdv1";
             // 
@@ -70,17 +65,16 @@ namespace BudgetExecution
             this.expandCollapsePanel1.ButtonStyle = MakarovDev.ExpandCollapsePanel.ExpandCollapseButton.ExpandButtonStyle.Circle;
             this.expandCollapsePanel1.ExpandedHeight = 0;
             this.expandCollapsePanel1.IsExpanded = true;
-            this.expandCollapsePanel1.Location = new System.Drawing.Point(15, 23);
-            this.expandCollapsePanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.expandCollapsePanel1.Location = new System.Drawing.Point(22, 35);
             this.expandCollapsePanel1.Name = "expandCollapsePanel1";
-            this.expandCollapsePanel1.Size = new System.Drawing.Size(234, 430);
+            this.expandCollapsePanel1.Size = new System.Drawing.Size(351, 662);
             this.expandCollapsePanel1.TabIndex = 0;
             this.expandCollapsePanel1.Text = "expandCollapsePanel1";
             this.expandCollapsePanel1.UseAnimation = true;
             // 
             // BudgetTools
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.BorderColor = System.Drawing.SystemColors.MenuHighlight;
@@ -91,11 +85,11 @@ namespace BudgetExecution
             captionImage1.Name = "CaptionImage1";
             captionImage1.Size = new System.Drawing.Size(50, 35);
             this.CaptionImages.Add(captionImage1);
-            this.ClientSize = new System.Drawing.Size(1193, 628);
+            this.ClientSize = new System.Drawing.Size(1691, 961);
             this.Controls.Add(this.splitContainerAdv1);
             this.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.MaximumSize = new System.Drawing.Size(1600, 1000);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximumSize = new System.Drawing.Size(2389, 1508);
             this.MetroColor = System.Drawing.Color.Black;
             this.Name = "BudgetTools";
             this.ShowIcon = false;

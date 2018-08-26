@@ -601,6 +601,9 @@
     <EmbeddedResource Include="src\DatabaseSelector.resx">
       <DependentUpon>DatabaseSelector.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="src\FunctionalityForm.resx">
+      <DependentUpon>FunctionalityForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="src\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>

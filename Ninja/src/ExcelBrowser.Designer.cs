@@ -35,11 +35,13 @@ namespace BudgetExecution
         /// </summary>
         private void InitializeComponent()
         {
-            Syncfusion.Windows.Forms.CaptionImage captionImage1 = new Syncfusion.Windows.Forms.CaptionImage();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ExcelBrowser));
+            Syncfusion.Windows.Forms.CaptionImage captionImage1 = new Syncfusion.Windows.Forms.CaptionImage();
             this.Info = new System.Windows.Forms.RichTextBox();
             this.metroSetPanel1 = new MetroSet_UI.Controls.MetroSetPanel();
             this.ExcelGrabber = new System.Windows.Forms.OpenFileDialog();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.metroSetPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -48,10 +50,9 @@ namespace BudgetExecution
             this.Info.BackColor = System.Drawing.Color.Black;
             this.Info.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Info.ForeColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.Info.Location = new System.Drawing.Point(39, 19);
-            this.Info.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Info.Location = new System.Drawing.Point(58, 29);
             this.Info.Name = "Info";
-            this.Info.Size = new System.Drawing.Size(325, 80);
+            this.Info.Size = new System.Drawing.Size(488, 123);
             this.Info.TabIndex = 0;
             this.Info.Text = "Message Here";
             // 
@@ -61,10 +62,9 @@ namespace BudgetExecution
             this.metroSetPanel1.BorderColor = System.Drawing.Color.SteelBlue;
             this.metroSetPanel1.BorderThickness = 1;
             this.metroSetPanel1.Controls.Add(this.Info);
-            this.metroSetPanel1.Location = new System.Drawing.Point(21, 16);
-            this.metroSetPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.metroSetPanel1.Location = new System.Drawing.Point(45, 26);
             this.metroSetPanel1.Name = "metroSetPanel1";
-            this.metroSetPanel1.Size = new System.Drawing.Size(400, 123);
+            this.metroSetPanel1.Size = new System.Drawing.Size(600, 189);
             this.metroSetPanel1.Style = MetroSet_UI.Design.Style.Custom;
             this.metroSetPanel1.StyleManager = null;
             this.metroSetPanel1.TabIndex = 2;
@@ -77,9 +77,33 @@ namespace BudgetExecution
             this.ExcelGrabber.FileName = "openFileDialog1";
             this.ExcelGrabber.Title = "Grab Excel File";
             // 
-            // Message
+            // button1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.Location = new System.Drawing.Point(117, 272);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(141, 71);
+            this.button1.TabIndex = 3;
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.Transparent;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.Location = new System.Drawing.Point(398, 272);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(141, 71);
+            this.button2.TabIndex = 4;
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // ExcelBrowser
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.BorderColor = System.Drawing.SystemColors.MenuHighlight;
@@ -91,11 +115,12 @@ namespace BudgetExecution
             captionImage1.Name = "CaptionImage1";
             captionImage1.Size = new System.Drawing.Size(30, 20);
             this.CaptionImages.Add(captionImage1);
-            this.ClientSize = new System.Drawing.Size(468, 255);
+            this.ClientSize = new System.Drawing.Size(697, 387);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.metroSetPanel1);
             this.ForeColor = System.Drawing.Color.LightSteelBlue;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.MetroColor = System.Drawing.Color.Black;
             this.MinimizeBox = false;
@@ -115,5 +140,7 @@ namespace BudgetExecution
         private System.Windows.Forms.RichTextBox Info;
         private MetroSet_UI.Controls.MetroSetPanel metroSetPanel1;
         private System.Windows.Forms.OpenFileDialog ExcelGrabber;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }
