@@ -347,6 +347,12 @@ namespace BudgetExecution
 
         PRC,
 
+        Programs,
+
+        Benefits,
+
+        ProgramObligations,
+
         RegionalAccounts,
 
         Obligations,

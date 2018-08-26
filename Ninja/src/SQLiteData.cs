@@ -33,7 +33,6 @@ namespace BudgetExecution
             Grid.DataSource = BindingSource.DataSource;
             PopulateFilterButtons(Filter1, Info.Sources);
             Text = $"{Source.ToString()} Database";
-            FunctionTab.TabVisible = false;
             TableFilter = Info.FilterRows;
             FieldFilter = Info.GetColumnValues;
             label12.Text = Table.Rows.Count.ToString();
@@ -50,7 +49,6 @@ namespace BudgetExecution
             Grid.DataSource = DbData.BindingSource;
             ProgramElements = DbData.GetProgramElements(Table);
             Text = $"{Source.ToString()} Database";
-            FunctionTab.TabVisible = false;
             TableFilter = Info.FilterRows;
             FieldFilter = Info.GetColumnValues;
             label12.Text = Table.Rows.Count.ToString();
@@ -775,6 +773,32 @@ namespace BudgetExecution
             {
                 RecordManager am = new RecordManager(Source, Provider);
                 am.Show();
+            }
+            catch (Exception ex)
+            {
+                new Error(ex).ShowDialog();
+            }
+        }
+
+        private void FilterButton_OnClick(object sender, EventArgs e)
+        {
+            try
+            {
+                FilterTab.TabVisible = true;
+                FunctionTab.TabVisible = false;
+            }
+            catch (Exception ex)
+            {
+                new Error(ex).ShowDialog();
+            }
+        }
+
+        private void FunctionButton_OnClick(object sender, EventArgs e)
+        {
+            try
+            {               
+                FunctionTab.TabVisible = true;
+                FilterTab.TabVisible = false;
             }
             catch (Exception ex)
             {

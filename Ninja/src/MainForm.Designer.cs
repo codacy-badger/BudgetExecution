@@ -75,7 +75,7 @@ namespace BudgetExecution
             this.hubTile2.ForeColor = System.Drawing.SystemColors.Info;
             this.hubTile2.HoveredBorderColor = System.Drawing.SystemColors.MenuHighlight;
             this.hubTile2.ImageSource = ((System.Drawing.Image)(resources.GetObject("hubTile2.ImageSource")));
-            this.hubTile2.Location = new System.Drawing.Point(1530, 886);
+            this.hubTile2.Location = new System.Drawing.Point(1546, 100);
             this.hubTile2.Margin = new System.Windows.Forms.Padding(2);
             this.hubTile2.MinimumSize = new System.Drawing.Size(70, 66);
             this.hubTile2.Name = "hubTile2";

@@ -376,5 +376,10 @@
                 new Error(ex).ShowDialog();
             }
         }
+
+        private void AccountTabControl_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

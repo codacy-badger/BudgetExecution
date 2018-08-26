@@ -1059,7 +1059,6 @@ namespace BudgetExecution
             try
             {
                 AccountManager am = new AccountManager(Source.PRC, Provider);
-                am.CaptionImages[1].Image = new Bitmap(Image.FromFile(@"C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\Resources\Icon\insert.ico"));
                 am.Update.TabVisible = false;
                 am.AccountTabControl.SelectedIndex = 1;
                 am.Show();
@@ -1115,11 +1114,13 @@ namespace BudgetExecution
             try
             {
                 var drv = (DataRowView)BindingSource.Current;
+                var code = drv["Code"].ToString();
+                var total = drv.DataView.Table.AsEnumerable().Where(p => p.Field<string>("Code").Equals(code)).Select(p => p.Field<decimal>("Amount")).Sum();
                 var current = drv.Row;
                 decimal amt = decimal.Parse(current["Amount"].ToString());
-                Dictionary<string, double> d = new Dictionary<string, double>{["Total"] = (double)DbData.Total, 
-                    ["Allocation"] = (double)amt};
-                ChartMainTitle = new[] {$"{Division} PRC {current["Code"]} BOC {current["BOC"]} Funding: {amt.ToString("c")}"};
+                var ratio = amt / total;
+                Dictionary<string, double> d = new Dictionary<string, double>{["Total"] = (double)total, ["Allocation"] = (double)amt};
+                ChartMainTitle = new[] {$"{ratio.ToString("P")} PRC {current["Code"]} Funding"};
                 AccountChart = new BudgetChart(AccountChart, ChartMainTitle, d, Field.ProgramProjectCode, Stat.Total, ChartSeriesType.Column).Activate();
             }
             catch (Exception ex)
