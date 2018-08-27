@@ -58,19 +58,6 @@ namespace BudgetExecution
         public SummaryForm(Source source)
         {
             InitializeComponent();
-            DbData = new DataBuilder(source, Provider.SQLite);
-            Table = DbData.DbTable;
-            Source = source;
-            Provider = Provider.SQLite;
-            TabNames = GetTabNames();
-            Text = $@"R6 {Source.ToString()} Summary";
-            Metric = new PrcMetric(DbData);
-            ProgramElements = Metric.ProgramElements;
-            BindingSource.DataSource = Metric.Table;
-            ProjectTab.TabVisible = true;
-            DatabaseTab.TabVisible = true;
-            SummaryTabControl.SelectedIndex = 8;
-            SummaryTabControl.SelectedIndexChanged += SummaryTabPage_TabSelected;
             if (source == Source.RegionalAccounts || source == Source.DivisionAccounts)
             {
                 DbData = new DataBuilder(source, Provider.SQLite);
@@ -85,6 +72,25 @@ namespace BudgetExecution
                 DatabaseTab.TabVisible = true;
                 CurrentTabIndex = SummaryTabControl.SelectedIndex;
                 SummaryTabControl.SelectedIndex = 2;
+                SummaryTabControl.SelectedIndexChanged += SummaryTabPage_TabSelected;
+            }
+            else
+            {                
+                DbData = new DataBuilder(source, Provider.SQLite);
+                Table = DbData.DbTable;
+                Source = source;
+                Provider = Provider.SQLite;
+                TabNames = GetTabNames();
+                Text = $@"R6 {Source.ToString()} Summary";
+                Metric = new PrcMetric(DbData);
+                ProgramElements = Metric.ProgramElements;
+                BindingSource.DataSource = Metric.Table;
+                ProjectTab.TabVisible = true;
+                DatabaseTab.TabVisible = true;
+                DivisionTab.TabVisible = false;
+                GoalTab.TabVisible = false;
+                ObjectiveTab.TabVisible = false;
+                SummaryTabControl.SelectedIndex = 8;
                 SummaryTabControl.SelectedIndexChanged += SummaryTabPage_TabSelected;
             }
         }
@@ -150,29 +156,7 @@ namespace BudgetExecution
         private void Form_Load(object sender, EventArgs e)
         {
             try
-            {
-                if (DbData.Source == Source.FTE)
-                {
-                    BocTab.TabVisible = false;
-                    EditTab.TabVisible = false;
-                }
-
-                if (DbData.Source == Source.RegionalAccounts)
-                {
-                    DivisionTab.TabVisible = false;
-                    DatabaseTab.TabVisible = false;
-                    ProjectTab.TabVisible = false;
-                    EditTab.TabVisible = false;
-                }
-                
-                if (DbData.Source == Source.DivisionAccounts)
-                {
-                    DivisionTab.TabVisible = false;
-                    DatabaseTab.TabVisible = false;
-                    ProjectTab.TabVisible = false;
-                    EditTab.TabVisible = false;
-                }
-                
+            {                
                 EditTab.TabVisible = false;
                 DivisionTab.TabVisible = false;
                 BindingSource.DataSource = Table;
@@ -194,6 +178,25 @@ namespace BudgetExecution
                 GridRefreshButton.Click += GridRefreshButton_OnClick;
                 CalculatorButton.Click += CalculatorButton_Click;
                 Grid.SelectionChanged += UpdateAccountChart;
+                switch (Source)
+                {
+                    case Source.FTE:
+                        BocTab.TabVisible = false;
+                        EditTab.TabVisible = false;
+                        break;
+                    case Source.RegionalAccounts:
+                        DivisionTab.TabVisible = false;
+                        DatabaseTab.TabVisible = false;
+                        ProjectTab.TabVisible = false;
+                        EditTab.TabVisible = false;
+                        break;
+                    case Source.DivisionAccounts:
+                        DivisionTab.TabVisible = false;
+                        DatabaseTab.TabVisible = false;
+                        ProjectTab.TabVisible = false;
+                        EditTab.TabVisible = false;
+                        break;
+                }
             }
             catch (Exception ex)
             {
@@ -628,7 +631,7 @@ namespace BudgetExecution
                 ChartFilterControl4 = sender as VisualComboBox ;
                 ChartGroup = (Field)Enum.Parse(typeof(Field), ChartFilterControl4.SelectedItem.ToString());
                 ChartMainTitle = new[] { $"{Text} {ChartFilter} By {ChartFilterControl4.SelectedItem} " };
-                Dictionary<string, object> param = new Dictionary<string, object> { [ChartField.ToString()] = ChartFilter };
+                Dictionary<string, object> param = new Dictionary<string, object> {[ChartField.ToString()] = ChartFilter };
                 switch (CurrentTabIndex)
                 {
                     case 0:

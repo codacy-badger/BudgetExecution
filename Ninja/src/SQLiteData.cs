@@ -10,6 +10,7 @@ namespace BudgetExecution
     using System.Windows.Forms;
 
     using MetroSet_UI.Controls;
+    using VisualPlus.Toolkit.Controls.Interactivity;
 
     using Syncfusion.Windows.Forms;
 
@@ -116,7 +117,7 @@ namespace BudgetExecution
             }
         }
 
-        internal void PopulateFilterItems(string colname, DataBuilder data, MetroSetComboBox control, Label label)
+        internal void PopulateFilterItems(string colname, DataBuilder data, VisualComboBox control, Label label)
         {
             try
             {
@@ -143,7 +144,7 @@ namespace BudgetExecution
             }
         }
 
-        internal void PopulateFilterItems(string colname, DataTable table, MetroSetComboBox control, Label label)
+        internal void PopulateFilterItems(string colname, DataTable table, VisualComboBox control, Label label)
         {
             try
             {
@@ -173,7 +174,7 @@ namespace BudgetExecution
             }
         }
 
-        internal void PopulateFilterItems(Field colname, DataBuilder data, MetroSetComboBox control, Label label)
+        internal void PopulateFilterItems(Field colname, DataBuilder data, VisualComboBox control, Label label)
         {
             try
             {
@@ -202,7 +203,7 @@ namespace BudgetExecution
             }
         }
 
-        internal void PopulateFilterItems(Field colname, DataTable table, MetroSetComboBox control, Label label)
+        internal void PopulateFilterItems(Field colname, DataTable table, VisualComboBox control, Label label)
         {
             try
             {
@@ -229,7 +230,7 @@ namespace BudgetExecution
             }
         }
 
-        internal void PopulateFilterButtons(MetroSetComboBox control, string[] list)
+        internal void PopulateFilterButtons(VisualComboBox control, string[] list)
         {
             try
             {
@@ -312,7 +313,7 @@ namespace BudgetExecution
         {
             try
             {
-                MetroSetComboBox filter = sender as MetroSetComboBox;
+                VisualComboBox filter = sender as VisualComboBox;
                 F1 = filter.SelectedItem.ToString();
                 C1 = (Field)Enum.Parse(typeof(Field), filter.Tag.ToString());
                 DataTable tbl = TableFilter(Table, C1, F1);
@@ -335,7 +336,7 @@ namespace BudgetExecution
         {
             try
             {
-                if (sender is MetroSetComboBox filter)
+                if (sender is VisualComboBox filter)
                 {
                     F2 = filter.SelectedItem.ToString();
                     C2 = (Field)Enum.Parse(typeof(Field), filter.Tag.ToString());
@@ -360,7 +361,7 @@ namespace BudgetExecution
         {
             try
             {
-                MetroSetComboBox filter = sender as MetroSetComboBox;
+                VisualComboBox filter = sender as VisualComboBox;
                 F3 = filter?.SelectedItem.ToString();
                 if (filter != null)
                     C3 = (Field)Enum.Parse(typeof(Field), filter.Tag.ToString());
@@ -385,7 +386,7 @@ namespace BudgetExecution
         {
             try
             {
-                MetroSetComboBox filter = sender as MetroSetComboBox;
+                VisualComboBox filter = sender as VisualComboBox;
                 F4 = filter?.SelectedItem.ToString();
                 if (filter != null)
                     C4 = (Field)Enum.Parse(typeof(Field), filter.Tag.ToString());
@@ -804,6 +805,11 @@ namespace BudgetExecution
             {
                 new Error(ex).ShowDialog();
             }
+        }
+
+        private void visualGroupBox1_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

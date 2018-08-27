@@ -152,7 +152,7 @@ namespace BudgetExecution
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            VisualPlus.Structure.TextStyle textStyle37 = new VisualPlus.Structure.TextStyle();
+            VisualPlus.Structure.TextStyle textStyle48 = new VisualPlus.Structure.TextStyle();
             Syncfusion.Windows.Forms.Chart.ChartSeries chartSeries19 = new Syncfusion.Windows.Forms.Chart.ChartSeries();
             Syncfusion.Windows.Forms.Chart.ChartCustomShapeInfo chartCustomShapeInfo19 = new Syncfusion.Windows.Forms.Chart.ChartCustomShapeInfo();
             Syncfusion.Windows.Forms.Chart.ChartLineInfo chartLineInfo10 = new Syncfusion.Windows.Forms.Chart.ChartLineInfo();
@@ -200,6 +200,17 @@ namespace BudgetExecution
             VisualPlus.Structure.TextStyle textStyle4 = new VisualPlus.Structure.TextStyle();
             VisualPlus.Structure.TextStyle textStyle1 = new VisualPlus.Structure.TextStyle();
             VisualPlus.Structure.TextStyle textStyle2 = new VisualPlus.Structure.TextStyle();
+            VisualPlus.Structure.TextStyle textStyle47 = new VisualPlus.Structure.TextStyle();
+            VisualPlus.Structure.TextStyle textStyle46 = new VisualPlus.Structure.TextStyle();
+            VisualPlus.Structure.TextStyle textStyle45 = new VisualPlus.Structure.TextStyle();
+            VisualPlus.Structure.TextStyle textStyle44 = new VisualPlus.Structure.TextStyle();
+            VisualPlus.Structure.TextStyle textStyle43 = new VisualPlus.Structure.TextStyle();
+            VisualPlus.Structure.TextStyle textStyle42 = new VisualPlus.Structure.TextStyle();
+            VisualPlus.Structure.TextStyle textStyle41 = new VisualPlus.Structure.TextStyle();
+            VisualPlus.Structure.TextStyle textStyle40 = new VisualPlus.Structure.TextStyle();
+            VisualPlus.Structure.TextStyle textStyle39 = new VisualPlus.Structure.TextStyle();
+            VisualPlus.Structure.TextStyle textStyle38 = new VisualPlus.Structure.TextStyle();
+            VisualPlus.Structure.TextStyle textStyle37 = new VisualPlus.Structure.TextStyle();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
@@ -339,24 +350,14 @@ namespace BudgetExecution
             this.button3 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.CalculatorButton = new System.Windows.Forms.Button();
-            this.metroSetLabel20 = new MetroSet_UI.Controls.MetroSetLabel();
             this.BudgetLevel = new MetroSet_UI.Controls.MetroSetTextBox();
-            this.metroSetLabel19 = new MetroSet_UI.Controls.MetroSetLabel();
             this.ID = new MetroSet_UI.Controls.MetroSetTextBox();
-            this.metroSetLabel1 = new MetroSet_UI.Controls.MetroSetLabel();
-            this.metroSetLabel2 = new MetroSet_UI.Controls.MetroSetLabel();
             this.metroSetTextBox1 = new MetroSet_UI.Controls.MetroSetTextBox();
             this.Amount = new MetroSet_UI.Controls.MetroSetTextBox();
             this.Code = new MetroSet_UI.Controls.MetroSetTextBox();
             this.BOC = new MetroSet_UI.Controls.MetroSetTextBox();
-            this.metroSetLabel12 = new MetroSet_UI.Controls.MetroSetLabel();
-            this.metroSetLabel13 = new MetroSet_UI.Controls.MetroSetLabel();
-            this.metroSetLabel14 = new MetroSet_UI.Controls.MetroSetLabel();
-            this.metroSetLabel16 = new MetroSet_UI.Controls.MetroSetLabel();
             this.RC = new MetroSet_UI.Controls.MetroSetTextBox();
             this.Fund = new MetroSet_UI.Controls.MetroSetTextBox();
-            this.metroSetLabel17 = new MetroSet_UI.Controls.MetroSetLabel();
-            this.metroSetLabel18 = new MetroSet_UI.Controls.MetroSetLabel();
             this.BFY = new MetroSet_UI.Controls.MetroSetTextBox();
             this.Org = new MetroSet_UI.Controls.MetroSetTextBox();
             this.GraphTab = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
@@ -404,6 +405,18 @@ namespace BudgetExecution
             this.ProjectFilter2 = new VisualPlus.Toolkit.Controls.Interactivity.VisualComboBox();
             this.ProjectFilter3 = new VisualPlus.Toolkit.Controls.Interactivity.VisualComboBox();
             this.ProjectFilter4 = new VisualPlus.Toolkit.Controls.Interactivity.VisualComboBox();
+            this.visualLabel1 = new VisualPlus.Toolkit.Controls.Interactivity.VisualLabel();
+            this.visualLabel2 = new VisualPlus.Toolkit.Controls.Interactivity.VisualLabel();
+            this.visualLabel3 = new VisualPlus.Toolkit.Controls.Interactivity.VisualLabel();
+            this.visualLabel4 = new VisualPlus.Toolkit.Controls.Interactivity.VisualLabel();
+            this.visualLabel5 = new VisualPlus.Toolkit.Controls.Interactivity.VisualLabel();
+            this.visualLabel6 = new VisualPlus.Toolkit.Controls.Interactivity.VisualLabel();
+            this.visualLabel7 = new VisualPlus.Toolkit.Controls.Interactivity.VisualLabel();
+            this.visualLabel8 = new VisualPlus.Toolkit.Controls.Interactivity.VisualLabel();
+            this.visualLabel9 = new VisualPlus.Toolkit.Controls.Interactivity.VisualLabel();
+            this.visualLabel10 = new VisualPlus.Toolkit.Controls.Interactivity.VisualLabel();
+            this.metroSetTextBox3 = new MetroSet_UI.Controls.MetroSetTextBox();
+            this.visualLabel11 = new VisualPlus.Toolkit.Controls.Interactivity.VisualLabel();
             this.tabPageAdv4.SuspendLayout();
             this.tabPageAdv3.SuspendLayout();
             this.chartControl1.SuspendLayout();
@@ -1232,7 +1245,7 @@ namespace BudgetExecution
             this.ProjectTab.Size = new System.Drawing.Size(1843, 987);
             this.ProjectTab.TabForeColor = System.Drawing.Color.LightSteelBlue;
             this.ProjectTab.TabIndex = 8;
-            this.ProjectTab.Tag = "Program Project";
+            this.ProjectTab.Tag = "ProgramProjectName";
             this.ProjectTab.Text = "ProgramProject";
             this.ProjectTab.ThemesEnabled = false;
             // 
@@ -1248,7 +1261,7 @@ namespace BudgetExecution
             this.ProjectExpander2.Controls.Add(this.label30);
             this.ProjectExpander2.ExpandedHeight = 292;
             this.ProjectExpander2.IsExpanded = true;
-            this.ProjectExpander2.Location = new System.Drawing.Point(1610, 402);
+            this.ProjectExpander2.Location = new System.Drawing.Point(1542, 412);
             this.ProjectExpander2.Name = "ProjectExpander2";
             this.ProjectExpander2.Size = new System.Drawing.Size(230, 292);
             this.ProjectExpander2.TabIndex = 110;
@@ -1289,7 +1302,7 @@ namespace BudgetExecution
             this.ProjectExpander1.Controls.Add(this.label24);
             this.ProjectExpander1.ExpandedHeight = 268;
             this.ProjectExpander1.IsExpanded = true;
-            this.ProjectExpander1.Location = new System.Drawing.Point(1610, 121);
+            this.ProjectExpander1.Location = new System.Drawing.Point(1542, 115);
             this.ProjectExpander1.Name = "ProjectExpander1";
             this.ProjectExpander1.Size = new System.Drawing.Size(230, 268);
             this.ProjectExpander1.TabIndex = 108;
@@ -1469,7 +1482,7 @@ namespace BudgetExecution
             this.AreaTab.Size = new System.Drawing.Size(1843, 987);
             this.AreaTab.TabForeColor = System.Drawing.Color.LightSteelBlue;
             this.AreaTab.TabIndex = 7;
-            this.AreaTab.Tag = "Program Area";
+            this.AreaTab.Tag = "ProgramAreaName";
             this.AreaTab.Text = "ProgramArea";
             this.AreaTab.ThemesEnabled = false;
             // 
@@ -1485,7 +1498,7 @@ namespace BudgetExecution
             this.AreaExpander2.Controls.Add(this.label29);
             this.AreaExpander2.ExpandedHeight = 292;
             this.AreaExpander2.IsExpanded = true;
-            this.AreaExpander2.Location = new System.Drawing.Point(1610, 402);
+            this.AreaExpander2.Location = new System.Drawing.Point(1542, 404);
             this.AreaExpander2.Name = "AreaExpander2";
             this.AreaExpander2.Size = new System.Drawing.Size(221, 292);
             this.AreaExpander2.TabIndex = 110;
@@ -1526,7 +1539,7 @@ namespace BudgetExecution
             this.AreaExpander1.Controls.Add(this.label21);
             this.AreaExpander1.ExpandedHeight = 260;
             this.AreaExpander1.IsExpanded = true;
-            this.AreaExpander1.Location = new System.Drawing.Point(1610, 121);
+            this.AreaExpander1.Location = new System.Drawing.Point(1542, 115);
             this.AreaExpander1.Name = "AreaExpander1";
             this.AreaExpander1.Size = new System.Drawing.Size(221, 260);
             this.AreaExpander1.TabIndex = 108;
@@ -1698,7 +1711,7 @@ namespace BudgetExecution
             this.DivisionTab.TabBackColor = System.Drawing.Color.Black;
             this.DivisionTab.TabForeColor = System.Drawing.Color.LightSteelBlue;
             this.DivisionTab.TabIndex = 6;
-            this.DivisionTab.Tag = "RC";
+            this.DivisionTab.Tag = "Division";
             this.DivisionTab.Text = "Division";
             this.DivisionTab.ThemesEnabled = false;
             // 
@@ -1714,7 +1727,7 @@ namespace BudgetExecution
             this.DivisionExpander2.Controls.Add(this.label28);
             this.DivisionExpander2.ExpandedHeight = 292;
             this.DivisionExpander2.IsExpanded = true;
-            this.DivisionExpander2.Location = new System.Drawing.Point(1610, 402);
+            this.DivisionExpander2.Location = new System.Drawing.Point(1542, 387);
             this.DivisionExpander2.Name = "DivisionExpander2";
             this.DivisionExpander2.Size = new System.Drawing.Size(230, 292);
             this.DivisionExpander2.TabIndex = 110;
@@ -1755,7 +1768,7 @@ namespace BudgetExecution
             this.DivisionExpander1.Controls.Add(this.label18);
             this.DivisionExpander1.ExpandedHeight = 266;
             this.DivisionExpander1.IsExpanded = true;
-            this.DivisionExpander1.Location = new System.Drawing.Point(1610, 121);
+            this.DivisionExpander1.Location = new System.Drawing.Point(1542, 115);
             this.DivisionExpander1.Name = "DivisionExpander1";
             this.DivisionExpander1.Size = new System.Drawing.Size(230, 266);
             this.DivisionExpander1.TabIndex = 108;
@@ -1925,7 +1938,7 @@ namespace BudgetExecution
             this.ObjectiveTab.Size = new System.Drawing.Size(1843, 987);
             this.ObjectiveTab.TabForeColor = System.Drawing.Color.LightSteelBlue;
             this.ObjectiveTab.TabIndex = 5;
-            this.ObjectiveTab.Tag = "Agency Objective";
+            this.ObjectiveTab.Tag = "ObjectiveName";
             this.ObjectiveTab.Text = "Objective";
             this.ObjectiveTab.ThemesEnabled = false;
             // 
@@ -1941,7 +1954,7 @@ namespace BudgetExecution
             this.ObjectiveExpander2.Controls.Add(this.label26);
             this.ObjectiveExpander2.ExpandedHeight = 292;
             this.ObjectiveExpander2.IsExpanded = true;
-            this.ObjectiveExpander2.Location = new System.Drawing.Point(1610, 402);
+            this.ObjectiveExpander2.Location = new System.Drawing.Point(1542, 404);
             this.ObjectiveExpander2.Name = "ObjectiveExpander2";
             this.ObjectiveExpander2.Size = new System.Drawing.Size(230, 292);
             this.ObjectiveExpander2.TabIndex = 110;
@@ -1982,7 +1995,7 @@ namespace BudgetExecution
             this.ObjectiveExpander1.Controls.Add(this.label15);
             this.ObjectiveExpander1.ExpandedHeight = 268;
             this.ObjectiveExpander1.IsExpanded = true;
-            this.ObjectiveExpander1.Location = new System.Drawing.Point(1610, 121);
+            this.ObjectiveExpander1.Location = new System.Drawing.Point(1542, 115);
             this.ObjectiveExpander1.Name = "ObjectiveExpander1";
             this.ObjectiveExpander1.Size = new System.Drawing.Size(230, 268);
             this.ObjectiveExpander1.TabIndex = 108;
@@ -2152,7 +2165,7 @@ namespace BudgetExecution
             this.GoalTab.Size = new System.Drawing.Size(1843, 987);
             this.GoalTab.TabForeColor = System.Drawing.Color.LightSteelBlue;
             this.GoalTab.TabIndex = 4;
-            this.GoalTab.Tag = "Agency Goal";
+            this.GoalTab.Tag = "GoalName";
             this.GoalTab.Text = "Goal";
             this.GoalTab.ThemesEnabled = false;
             // 
@@ -2168,7 +2181,7 @@ namespace BudgetExecution
             this.GoalExpander2.Controls.Add(this.label10);
             this.GoalExpander2.ExpandedHeight = 292;
             this.GoalExpander2.IsExpanded = true;
-            this.GoalExpander2.Location = new System.Drawing.Point(1610, 402);
+            this.GoalExpander2.Location = new System.Drawing.Point(1542, 402);
             this.GoalExpander2.Name = "GoalExpander2";
             this.GoalExpander2.Size = new System.Drawing.Size(230, 292);
             this.GoalExpander2.TabIndex = 110;
@@ -2209,7 +2222,7 @@ namespace BudgetExecution
             this.GoalExpander1.Controls.Add(this.label12);
             this.GoalExpander1.ExpandedHeight = 281;
             this.GoalExpander1.IsExpanded = true;
-            this.GoalExpander1.Location = new System.Drawing.Point(1610, 121);
+            this.GoalExpander1.Location = new System.Drawing.Point(1542, 115);
             this.GoalExpander1.Name = "GoalExpander1";
             this.GoalExpander1.Size = new System.Drawing.Size(230, 281);
             this.GoalExpander1.TabIndex = 108;
@@ -2379,7 +2392,7 @@ namespace BudgetExecution
             this.NpmTab.Size = new System.Drawing.Size(1843, 987);
             this.NpmTab.TabForeColor = System.Drawing.Color.LightSteelBlue;
             this.NpmTab.TabIndex = 3;
-            this.NpmTab.Tag = "HQ National Program Office";
+            this.NpmTab.Tag = "NpmName";
             this.NpmTab.Text = "NPM";
             this.NpmTab.ThemesEnabled = false;
             // 
@@ -2395,7 +2408,7 @@ namespace BudgetExecution
             this.NpmExpander2.Controls.Add(this.label27);
             this.NpmExpander2.ExpandedHeight = 292;
             this.NpmExpander2.IsExpanded = true;
-            this.NpmExpander2.Location = new System.Drawing.Point(1610, 402);
+            this.NpmExpander2.Location = new System.Drawing.Point(1542, 405);
             this.NpmExpander2.Name = "NpmExpander2";
             this.NpmExpander2.Size = new System.Drawing.Size(230, 292);
             this.NpmExpander2.TabIndex = 110;
@@ -2436,7 +2449,7 @@ namespace BudgetExecution
             this.NpmExpander1.Controls.Add(this.NpmFilter1);
             this.NpmExpander1.ExpandedHeight = 275;
             this.NpmExpander1.IsExpanded = true;
-            this.NpmExpander1.Location = new System.Drawing.Point(1610, 121);
+            this.NpmExpander1.Location = new System.Drawing.Point(1542, 115);
             this.NpmExpander1.Name = "NpmExpander1";
             this.NpmExpander1.Size = new System.Drawing.Size(230, 275);
             this.NpmExpander1.TabIndex = 108;
@@ -2606,7 +2619,7 @@ namespace BudgetExecution
             this.BocTab.Size = new System.Drawing.Size(1843, 987);
             this.BocTab.TabForeColor = System.Drawing.Color.LightSteelBlue;
             this.BocTab.TabIndex = 2;
-            this.BocTab.Tag = "Budget Object Class";
+            this.BocTab.Tag = "BocName";
             this.BocTab.Text = "BOC";
             this.BocTab.ThemesEnabled = false;
             // 
@@ -2622,7 +2635,7 @@ namespace BudgetExecution
             this.BocExpander2.Controls.Add(this.label36);
             this.BocExpander2.ExpandedHeight = 292;
             this.BocExpander2.IsExpanded = true;
-            this.BocExpander2.Location = new System.Drawing.Point(1610, 402);
+            this.BocExpander2.Location = new System.Drawing.Point(1542, 402);
             this.BocExpander2.Name = "BocExpander2";
             this.BocExpander2.Size = new System.Drawing.Size(230, 292);
             this.BocExpander2.TabIndex = 109;
@@ -2663,7 +2676,7 @@ namespace BudgetExecution
             this.BocExpander1.Controls.Add(this.BocFilter1);
             this.BocExpander1.ExpandedHeight = 258;
             this.BocExpander1.IsExpanded = true;
-            this.BocExpander1.Location = new System.Drawing.Point(1610, 121);
+            this.BocExpander1.Location = new System.Drawing.Point(1542, 115);
             this.BocExpander1.Name = "BocExpander1";
             this.BocExpander1.Size = new System.Drawing.Size(230, 258);
             this.BocExpander1.TabIndex = 108;
@@ -2850,7 +2863,7 @@ namespace BudgetExecution
             this.FundExpander2.Controls.Add(this.label25);
             this.FundExpander2.ExpandedHeight = 292;
             this.FundExpander2.IsExpanded = true;
-            this.FundExpander2.Location = new System.Drawing.Point(1610, 402);
+            this.FundExpander2.Location = new System.Drawing.Point(1542, 404);
             this.FundExpander2.Name = "FundExpander2";
             this.FundExpander2.Size = new System.Drawing.Size(230, 292);
             this.FundExpander2.TabIndex = 108;
@@ -2891,7 +2904,7 @@ namespace BudgetExecution
             this.FundExpander1.Controls.Add(this.label1);
             this.FundExpander1.ExpandedHeight = 283;
             this.FundExpander1.IsExpanded = true;
-            this.FundExpander1.Location = new System.Drawing.Point(1610, 121);
+            this.FundExpander1.Location = new System.Drawing.Point(1542, 115);
             this.FundExpander1.Name = "FundExpander1";
             this.FundExpander1.Size = new System.Drawing.Size(230, 283);
             this.FundExpander1.TabIndex = 107;
@@ -3134,11 +3147,11 @@ namespace BudgetExecution
             this.GridGroupBox.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
             this.GridGroupBox.Name = "GridGroupBox";
             this.GridGroupBox.Padding = new System.Windows.Forms.Padding(5, 26, 5, 5);
-            this.GridGroupBox.Separator = true;
+            this.GridGroupBox.Separator = false;
             this.GridGroupBox.SeparatorColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.GridGroupBox.Size = new System.Drawing.Size(1160, 739);
             this.GridGroupBox.TabIndex = 162;
-            this.GridGroupBox.Text = "Database";
+            this.GridGroupBox.Text = "vcbs";
             this.GridGroupBox.TextAlignment = System.Drawing.StringAlignment.Center;
             this.GridGroupBox.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.GridGroupBox.TextLineAlignment = System.Drawing.StringAlignment.Center;
@@ -3183,7 +3196,7 @@ namespace BudgetExecution
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 65.57377F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(903, 55);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(903, 52);
             this.tableLayoutPanel2.TabIndex = 169;
             // 
             // button6
@@ -3198,7 +3211,7 @@ namespace BudgetExecution
             this.button6.Location = new System.Drawing.Point(4, 5);
             this.button6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(122, 45);
+            this.button6.Size = new System.Drawing.Size(122, 42);
             this.button6.TabIndex = 162;
             this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.metroSetToolTip1.SetToolTip(this.button6, "Previous Account");
@@ -3217,7 +3230,7 @@ namespace BudgetExecution
             this.button12.Location = new System.Drawing.Point(768, 5);
             this.button12.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(131, 45);
+            this.button12.Size = new System.Drawing.Size(131, 42);
             this.button12.TabIndex = 168;
             this.button12.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.metroSetToolTip1.SetToolTip(this.button12, "Remove Account");
@@ -3235,7 +3248,7 @@ namespace BudgetExecution
             this.button7.Location = new System.Drawing.Point(134, 5);
             this.button7.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(106, 45);
+            this.button7.Size = new System.Drawing.Size(106, 42);
             this.button7.TabIndex = 163;
             this.button7.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.metroSetToolTip1.SetToolTip(this.button7, "Next Account");
@@ -3254,7 +3267,7 @@ namespace BudgetExecution
             this.button11.Location = new System.Drawing.Point(633, 5);
             this.button11.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(127, 45);
+            this.button11.Size = new System.Drawing.Size(127, 42);
             this.button11.TabIndex = 167;
             this.button11.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.metroSetToolTip1.SetToolTip(this.button11, "Copy Account\r\n");
@@ -3274,7 +3287,7 @@ namespace BudgetExecution
             this.GridRefreshButton.Location = new System.Drawing.Point(248, 5);
             this.GridRefreshButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.GridRefreshButton.Name = "GridRefreshButton";
-            this.GridRefreshButton.Size = new System.Drawing.Size(119, 45);
+            this.GridRefreshButton.Size = new System.Drawing.Size(119, 42);
             this.GridRefreshButton.TabIndex = 164;
             this.GridRefreshButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.metroSetToolTip1.SetToolTip(this.GridRefreshButton, "Refresh Data");
@@ -3294,7 +3307,7 @@ namespace BudgetExecution
             this.button9.Location = new System.Drawing.Point(375, 5);
             this.button9.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(123, 45);
+            this.button9.Size = new System.Drawing.Size(123, 42);
             this.button9.TabIndex = 165;
             this.button9.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.metroSetToolTip1.SetToolTip(this.button9, "Edit Account");
@@ -3315,7 +3328,7 @@ namespace BudgetExecution
             this.button10.Location = new System.Drawing.Point(506, 5);
             this.button10.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(119, 45);
+            this.button10.Size = new System.Drawing.Size(119, 42);
             this.button10.TabIndex = 166;
             this.button10.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.metroSetToolTip1.SetToolTip(this.button10, "Add  Account");
@@ -3512,7 +3525,7 @@ namespace BudgetExecution
             this.visualGroupBox1.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
             this.visualGroupBox1.Name = "visualGroupBox1";
             this.visualGroupBox1.Padding = new System.Windows.Forms.Padding(5, 26, 5, 5);
-            this.visualGroupBox1.Separator = true;
+            this.visualGroupBox1.Separator = false;
             this.visualGroupBox1.SeparatorColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.visualGroupBox1.Size = new System.Drawing.Size(574, 739);
             this.visualGroupBox1.TabIndex = 161;
@@ -3520,11 +3533,11 @@ namespace BudgetExecution
             this.visualGroupBox1.TextAlignment = System.Drawing.StringAlignment.Center;
             this.visualGroupBox1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.visualGroupBox1.TextLineAlignment = System.Drawing.StringAlignment.Center;
-            textStyle37.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-            textStyle37.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            textStyle37.Hover = System.Drawing.Color.Empty;
-            textStyle37.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            this.visualGroupBox1.TextStyle = textStyle37;
+            textStyle48.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
+            textStyle48.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            textStyle48.Hover = System.Drawing.Color.Empty;
+            textStyle48.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.visualGroupBox1.TextStyle = textStyle48;
             this.visualGroupBox1.TitleBoxHeight = 35;
             // 
             // panel1
@@ -3574,26 +3587,28 @@ namespace BudgetExecution
             // EditTab
             // 
             this.EditTab.BackColor = System.Drawing.Color.Transparent;
+            this.EditTab.Controls.Add(this.visualLabel11);
+            this.EditTab.Controls.Add(this.metroSetTextBox3);
+            this.EditTab.Controls.Add(this.visualLabel10);
+            this.EditTab.Controls.Add(this.visualLabel9);
+            this.EditTab.Controls.Add(this.visualLabel8);
+            this.EditTab.Controls.Add(this.visualLabel7);
+            this.EditTab.Controls.Add(this.visualLabel6);
+            this.EditTab.Controls.Add(this.visualLabel5);
+            this.EditTab.Controls.Add(this.visualLabel4);
+            this.EditTab.Controls.Add(this.visualLabel3);
+            this.EditTab.Controls.Add(this.visualLabel2);
+            this.EditTab.Controls.Add(this.visualLabel1);
             this.EditTab.Controls.Add(this.tableLayoutPanel3);
             this.EditTab.Controls.Add(this.CalculatorButton);
-            this.EditTab.Controls.Add(this.metroSetLabel20);
             this.EditTab.Controls.Add(this.BudgetLevel);
-            this.EditTab.Controls.Add(this.metroSetLabel19);
             this.EditTab.Controls.Add(this.ID);
-            this.EditTab.Controls.Add(this.metroSetLabel1);
-            this.EditTab.Controls.Add(this.metroSetLabel2);
             this.EditTab.Controls.Add(this.metroSetTextBox1);
             this.EditTab.Controls.Add(this.Amount);
             this.EditTab.Controls.Add(this.Code);
             this.EditTab.Controls.Add(this.BOC);
-            this.EditTab.Controls.Add(this.metroSetLabel12);
-            this.EditTab.Controls.Add(this.metroSetLabel13);
-            this.EditTab.Controls.Add(this.metroSetLabel14);
-            this.EditTab.Controls.Add(this.metroSetLabel16);
             this.EditTab.Controls.Add(this.RC);
             this.EditTab.Controls.Add(this.Fund);
-            this.EditTab.Controls.Add(this.metroSetLabel17);
-            this.EditTab.Controls.Add(this.metroSetLabel18);
             this.EditTab.Controls.Add(this.BFY);
             this.EditTab.Controls.Add(this.Org);
             this.EditTab.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -3625,7 +3640,7 @@ namespace BudgetExecution
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(473, 55);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(473, 50);
             this.tableLayoutPanel3.TabIndex = 163;
             // 
             // button4
@@ -3638,7 +3653,7 @@ namespace BudgetExecution
             this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
             this.button4.Location = new System.Drawing.Point(3, 3);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(109, 49);
+            this.button4.Size = new System.Drawing.Size(109, 44);
             this.button4.TabIndex = 159;
             this.metroSetToolTip1.SetToolTip(this.button4, "Previous Account");
             this.button4.UseVisualStyleBackColor = false;
@@ -3654,7 +3669,7 @@ namespace BudgetExecution
             this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
             this.button5.Location = new System.Drawing.Point(118, 3);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(129, 49);
+            this.button5.Size = new System.Drawing.Size(129, 44);
             this.button5.TabIndex = 160;
             this.metroSetToolTip1.SetToolTip(this.button5, "Next Account");
             this.button5.UseVisualStyleBackColor = false;
@@ -3671,7 +3686,7 @@ namespace BudgetExecution
             this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
             this.button3.Location = new System.Drawing.Point(371, 3);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(99, 49);
+            this.button3.Size = new System.Drawing.Size(99, 44);
             this.button3.TabIndex = 158;
             this.metroSetToolTip1.SetToolTip(this.button3, "Remove Account");
             this.button3.UseVisualStyleBackColor = false;
@@ -3687,7 +3702,7 @@ namespace BudgetExecution
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.Location = new System.Drawing.Point(253, 3);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(112, 49);
+            this.button1.Size = new System.Drawing.Size(112, 44);
             this.button1.TabIndex = 157;
             this.metroSetToolTip1.SetToolTip(this.button1, "Upload Changes ");
             this.button1.UseVisualStyleBackColor = false;
@@ -3701,27 +3716,12 @@ namespace BudgetExecution
             this.CalculatorButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.CalculatorButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CalculatorButton.Image = ((System.Drawing.Image)(resources.GetObject("CalculatorButton.Image")));
-            this.CalculatorButton.Location = new System.Drawing.Point(211, 376);
+            this.CalculatorButton.Location = new System.Drawing.Point(200, 364);
             this.CalculatorButton.Name = "CalculatorButton";
-            this.CalculatorButton.Size = new System.Drawing.Size(51, 55);
+            this.CalculatorButton.Size = new System.Drawing.Size(51, 71);
             this.CalculatorButton.TabIndex = 162;
             this.metroSetToolTip1.SetToolTip(this.CalculatorButton, "Budget Calculator");
             this.CalculatorButton.UseVisualStyleBackColor = false;
-            // 
-            // metroSetLabel20
-            // 
-            this.metroSetLabel20.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.metroSetLabel20.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.metroSetLabel20.Location = new System.Drawing.Point(200, 33);
-            this.metroSetLabel20.Name = "metroSetLabel20";
-            this.metroSetLabel20.Size = new System.Drawing.Size(62, 23);
-            this.metroSetLabel20.Style = MetroSet_UI.Design.Style.Custom;
-            this.metroSetLabel20.StyleManager = null;
-            this.metroSetLabel20.TabIndex = 156;
-            this.metroSetLabel20.Text = "Level";
-            this.metroSetLabel20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.metroSetLabel20.ThemeAuthor = "Narwin";
-            this.metroSetLabel20.ThemeName = "MetroDark";
             // 
             // BudgetLevel
             // 
@@ -3751,21 +3751,6 @@ namespace BudgetExecution
             this.BudgetLevel.UseSystemPasswordChar = false;
             this.BudgetLevel.WatermarkText = "";
             // 
-            // metroSetLabel19
-            // 
-            this.metroSetLabel19.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.metroSetLabel19.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.metroSetLabel19.Location = new System.Drawing.Point(29, 33);
-            this.metroSetLabel19.Name = "metroSetLabel19";
-            this.metroSetLabel19.Size = new System.Drawing.Size(62, 23);
-            this.metroSetLabel19.Style = MetroSet_UI.Design.Style.Custom;
-            this.metroSetLabel19.StyleManager = null;
-            this.metroSetLabel19.TabIndex = 154;
-            this.metroSetLabel19.Text = "ID";
-            this.metroSetLabel19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.metroSetLabel19.ThemeAuthor = "Narwin";
-            this.metroSetLabel19.ThemeName = "MetroDark";
-            // 
             // ID
             // 
             this.ID.AutoCompleteCustomSource = null;
@@ -3793,36 +3778,6 @@ namespace BudgetExecution
             this.ID.ThemeName = "MetroDark";
             this.ID.UseSystemPasswordChar = false;
             this.ID.WatermarkText = "";
-            // 
-            // metroSetLabel1
-            // 
-            this.metroSetLabel1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.metroSetLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.metroSetLabel1.Location = new System.Drawing.Point(145, 237);
-            this.metroSetLabel1.Name = "metroSetLabel1";
-            this.metroSetLabel1.Size = new System.Drawing.Size(62, 23);
-            this.metroSetLabel1.Style = MetroSet_UI.Design.Style.Custom;
-            this.metroSetLabel1.StyleManager = null;
-            this.metroSetLabel1.TabIndex = 139;
-            this.metroSetLabel1.Text = "Code";
-            this.metroSetLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.metroSetLabel1.ThemeAuthor = "Narwin";
-            this.metroSetLabel1.ThemeName = "MetroDark";
-            // 
-            // metroSetLabel2
-            // 
-            this.metroSetLabel2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.metroSetLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.metroSetLabel2.Location = new System.Drawing.Point(33, 228);
-            this.metroSetLabel2.Name = "metroSetLabel2";
-            this.metroSetLabel2.Size = new System.Drawing.Size(62, 23);
-            this.metroSetLabel2.Style = MetroSet_UI.Design.Style.Custom;
-            this.metroSetLabel2.StyleManager = null;
-            this.metroSetLabel2.TabIndex = 138;
-            this.metroSetLabel2.Text = "BOC";
-            this.metroSetLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.metroSetLabel2.ThemeAuthor = "Narwin";
-            this.metroSetLabel2.ThemeName = "MetroDark";
             // 
             // metroSetTextBox1
             // 
@@ -3937,66 +3892,6 @@ namespace BudgetExecution
             this.BOC.UseSystemPasswordChar = false;
             this.BOC.WatermarkText = "";
             // 
-            // metroSetLabel12
-            // 
-            this.metroSetLabel12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.metroSetLabel12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.metroSetLabel12.Location = new System.Drawing.Point(33, 344);
-            this.metroSetLabel12.Name = "metroSetLabel12";
-            this.metroSetLabel12.Size = new System.Drawing.Size(102, 18);
-            this.metroSetLabel12.Style = MetroSet_UI.Design.Style.Custom;
-            this.metroSetLabel12.StyleManager = null;
-            this.metroSetLabel12.TabIndex = 133;
-            this.metroSetLabel12.Text = "New Amount\r\n\r\n";
-            this.metroSetLabel12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.metroSetLabel12.ThemeAuthor = "Narwin";
-            this.metroSetLabel12.ThemeName = "MetroDark";
-            // 
-            // metroSetLabel13
-            // 
-            this.metroSetLabel13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.metroSetLabel13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.metroSetLabel13.Location = new System.Drawing.Point(330, 237);
-            this.metroSetLabel13.Name = "metroSetLabel13";
-            this.metroSetLabel13.Size = new System.Drawing.Size(94, 23);
-            this.metroSetLabel13.Style = MetroSet_UI.Design.Style.Custom;
-            this.metroSetLabel13.StyleManager = null;
-            this.metroSetLabel13.TabIndex = 132;
-            this.metroSetLabel13.Text = "Amount\r\n";
-            this.metroSetLabel13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.metroSetLabel13.ThemeAuthor = "Narwin";
-            this.metroSetLabel13.ThemeName = "MetroDark";
-            // 
-            // metroSetLabel14
-            // 
-            this.metroSetLabel14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.metroSetLabel14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.metroSetLabel14.Location = new System.Drawing.Point(32, 134);
-            this.metroSetLabel14.Name = "metroSetLabel14";
-            this.metroSetLabel14.Size = new System.Drawing.Size(62, 23);
-            this.metroSetLabel14.Style = MetroSet_UI.Design.Style.Custom;
-            this.metroSetLabel14.StyleManager = null;
-            this.metroSetLabel14.TabIndex = 131;
-            this.metroSetLabel14.Text = "Fund";
-            this.metroSetLabel14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.metroSetLabel14.ThemeAuthor = "Narwin";
-            this.metroSetLabel14.ThemeName = "MetroDark";
-            // 
-            // metroSetLabel16
-            // 
-            this.metroSetLabel16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.metroSetLabel16.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.metroSetLabel16.Location = new System.Drawing.Point(362, 134);
-            this.metroSetLabel16.Name = "metroSetLabel16";
-            this.metroSetLabel16.Size = new System.Drawing.Size(62, 23);
-            this.metroSetLabel16.Style = MetroSet_UI.Design.Style.Custom;
-            this.metroSetLabel16.StyleManager = null;
-            this.metroSetLabel16.TabIndex = 130;
-            this.metroSetLabel16.Text = "RC";
-            this.metroSetLabel16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.metroSetLabel16.ThemeAuthor = "Narwin";
-            this.metroSetLabel16.ThemeName = "MetroDark";
-            // 
             // RC
             // 
             this.RC.AutoCompleteCustomSource = null;
@@ -4010,7 +3905,7 @@ namespace BudgetExecution
             this.RC.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.RC.Image = null;
             this.RC.Lines = null;
-            this.RC.Location = new System.Drawing.Point(359, 169);
+            this.RC.Location = new System.Drawing.Point(380, 160);
             this.RC.MaxLength = 32767;
             this.RC.Multiline = false;
             this.RC.Name = "RC";
@@ -4053,36 +3948,6 @@ namespace BudgetExecution
             this.Fund.UseSystemPasswordChar = false;
             this.Fund.WatermarkText = "";
             // 
-            // metroSetLabel17
-            // 
-            this.metroSetLabel17.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.metroSetLabel17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.metroSetLabel17.Location = new System.Drawing.Point(362, 33);
-            this.metroSetLabel17.Name = "metroSetLabel17";
-            this.metroSetLabel17.Size = new System.Drawing.Size(62, 23);
-            this.metroSetLabel17.Style = MetroSet_UI.Design.Style.Custom;
-            this.metroSetLabel17.StyleManager = null;
-            this.metroSetLabel17.TabIndex = 16;
-            this.metroSetLabel17.Text = "Year";
-            this.metroSetLabel17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.metroSetLabel17.ThemeAuthor = "Narwin";
-            this.metroSetLabel17.ThemeName = "MetroDark";
-            // 
-            // metroSetLabel18
-            // 
-            this.metroSetLabel18.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.metroSetLabel18.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.metroSetLabel18.Location = new System.Drawing.Point(200, 134);
-            this.metroSetLabel18.Name = "metroSetLabel18";
-            this.metroSetLabel18.Size = new System.Drawing.Size(74, 23);
-            this.metroSetLabel18.Style = MetroSet_UI.Design.Style.Custom;
-            this.metroSetLabel18.StyleManager = null;
-            this.metroSetLabel18.TabIndex = 17;
-            this.metroSetLabel18.Text = "AH/Org";
-            this.metroSetLabel18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.metroSetLabel18.ThemeAuthor = "Narwin";
-            this.metroSetLabel18.ThemeName = "MetroDark";
-            // 
             // BFY
             // 
             this.BFY.AutoCompleteCustomSource = null;
@@ -4124,7 +3989,7 @@ namespace BudgetExecution
             this.Org.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.Org.Image = null;
             this.Org.Lines = null;
-            this.Org.Location = new System.Drawing.Point(200, 169);
+            this.Org.Location = new System.Drawing.Point(147, 160);
             this.Org.MaxLength = 32767;
             this.Org.Multiline = false;
             this.Org.Name = "Org";
@@ -4393,6 +4258,7 @@ namespace BudgetExecution
             this.GridFundFilter.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
             this.GridFundFilter.Name = "GridFundFilter";
             this.GridFundFilter.SeparatorColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.GridFundFilter.SeparatorVisible = false;
             this.GridFundFilter.Size = new System.Drawing.Size(147, 30);
             this.GridFundFilter.State = VisualPlus.Enumerators.MouseStates.Normal;
             this.GridFundFilter.TabIndex = 170;
@@ -4449,6 +4315,7 @@ namespace BudgetExecution
             this.GridBocFilter.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
             this.GridBocFilter.Name = "GridBocFilter";
             this.GridBocFilter.SeparatorColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.GridBocFilter.SeparatorVisible = false;
             this.GridBocFilter.Size = new System.Drawing.Size(147, 30);
             this.GridBocFilter.State = VisualPlus.Enumerators.MouseStates.Normal;
             this.GridBocFilter.TabIndex = 171;
@@ -4505,6 +4372,7 @@ namespace BudgetExecution
             this.GridAccountFilter.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
             this.GridAccountFilter.Name = "GridAccountFilter";
             this.GridAccountFilter.SeparatorColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.GridAccountFilter.SeparatorVisible = false;
             this.GridAccountFilter.Size = new System.Drawing.Size(147, 30);
             this.GridAccountFilter.State = VisualPlus.Enumerators.MouseStates.Normal;
             this.GridAccountFilter.TabIndex = 172;
@@ -4687,6 +4555,7 @@ namespace BudgetExecution
             this.FundFilter3.Size = new System.Drawing.Size(147, 30);
             this.FundFilter3.State = VisualPlus.Enumerators.MouseStates.Normal;
             this.FundFilter3.TabIndex = 171;
+            this.FundFilter3.Tag = "FundName";
             this.FundFilter3.TextAlignment = System.Drawing.StringAlignment.Center;
             this.FundFilter3.TextDisabledColor = System.Drawing.Color.Empty;
             this.FundFilter3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -6203,7 +6072,6 @@ namespace BudgetExecution
             this.ProjectFilter1.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
             this.ProjectFilter1.Name = "ProjectFilter1";
             this.ProjectFilter1.SeparatorColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ProjectFilter1.SeparatorVisible = false;
             this.ProjectFilter1.Size = new System.Drawing.Size(147, 30);
             this.ProjectFilter1.State = VisualPlus.Enumerators.MouseStates.Normal;
             this.ProjectFilter1.TabIndex = 172;
@@ -6265,7 +6133,6 @@ namespace BudgetExecution
             this.ProjectFilter2.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
             this.ProjectFilter2.Name = "ProjectFilter2";
             this.ProjectFilter2.SeparatorColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ProjectFilter2.SeparatorVisible = false;
             this.ProjectFilter2.Size = new System.Drawing.Size(147, 30);
             this.ProjectFilter2.State = VisualPlus.Enumerators.MouseStates.Normal;
             this.ProjectFilter2.TabIndex = 173;
@@ -6321,7 +6188,6 @@ namespace BudgetExecution
             this.ProjectFilter3.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
             this.ProjectFilter3.Name = "ProjectFilter3";
             this.ProjectFilter3.SeparatorColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ProjectFilter3.SeparatorVisible = false;
             this.ProjectFilter3.Size = new System.Drawing.Size(147, 30);
             this.ProjectFilter3.State = VisualPlus.Enumerators.MouseStates.Normal;
             this.ProjectFilter3.TabIndex = 174;
@@ -6377,7 +6243,6 @@ namespace BudgetExecution
             this.ProjectFilter4.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
             this.ProjectFilter4.Name = "ProjectFilter4";
             this.ProjectFilter4.SeparatorColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ProjectFilter4.SeparatorVisible = false;
             this.ProjectFilter4.Size = new System.Drawing.Size(147, 30);
             this.ProjectFilter4.State = VisualPlus.Enumerators.MouseStates.Normal;
             this.ProjectFilter4.TabIndex = 175;
@@ -6396,6 +6261,342 @@ namespace BudgetExecution
             this.ProjectFilter4.Watermark.InactiveColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(211)))), ((int)(((byte)(211)))));
             this.ProjectFilter4.Watermark.Text = "Watermark text";
             this.ProjectFilter4.Watermark.Visible = false;
+            // 
+            // visualLabel1
+            // 
+            this.visualLabel1.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.visualLabel1.ForeColor = System.Drawing.Color.LightSteelBlue;
+            this.visualLabel1.Location = new System.Drawing.Point(19, 24);
+            this.visualLabel1.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
+            this.visualLabel1.Name = "visualLabel1";
+            this.visualLabel1.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            this.visualLabel1.Outline = false;
+            this.visualLabel1.OutlineColor = System.Drawing.Color.Red;
+            this.visualLabel1.OutlineLocation = new System.Drawing.Point(0, 0);
+            this.visualLabel1.ReflectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.visualLabel1.ReflectionSpacing = 0;
+            this.visualLabel1.ShadowColor = System.Drawing.Color.Black;
+            this.visualLabel1.ShadowDirection = 315;
+            this.visualLabel1.ShadowLocation = new System.Drawing.Point(0, 0);
+            this.visualLabel1.ShadowOpacity = 100;
+            this.visualLabel1.Size = new System.Drawing.Size(85, 32);
+            this.visualLabel1.TabIndex = 164;
+            this.visualLabel1.Text = "ID";
+            this.visualLabel1.TextAlignment = System.Drawing.StringAlignment.Center;
+            this.visualLabel1.TextLineAlignment = System.Drawing.StringAlignment.Center;
+            textStyle47.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
+            textStyle47.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            textStyle47.Hover = System.Drawing.Color.Empty;
+            textStyle47.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.visualLabel1.TextStyle = textStyle47;
+            // 
+            // visualLabel2
+            // 
+            this.visualLabel2.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.visualLabel2.ForeColor = System.Drawing.Color.LightSteelBlue;
+            this.visualLabel2.Location = new System.Drawing.Point(177, 24);
+            this.visualLabel2.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
+            this.visualLabel2.Name = "visualLabel2";
+            this.visualLabel2.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            this.visualLabel2.Outline = false;
+            this.visualLabel2.OutlineColor = System.Drawing.Color.Red;
+            this.visualLabel2.OutlineLocation = new System.Drawing.Point(0, 0);
+            this.visualLabel2.ReflectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.visualLabel2.ReflectionSpacing = 0;
+            this.visualLabel2.ShadowColor = System.Drawing.Color.Black;
+            this.visualLabel2.ShadowDirection = 315;
+            this.visualLabel2.ShadowLocation = new System.Drawing.Point(0, 0);
+            this.visualLabel2.ShadowOpacity = 100;
+            this.visualLabel2.Size = new System.Drawing.Size(115, 32);
+            this.visualLabel2.TabIndex = 165;
+            this.visualLabel2.Text = "Budget Level";
+            this.visualLabel2.TextAlignment = System.Drawing.StringAlignment.Center;
+            this.visualLabel2.TextLineAlignment = System.Drawing.StringAlignment.Center;
+            textStyle46.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
+            textStyle46.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            textStyle46.Hover = System.Drawing.Color.Empty;
+            textStyle46.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.visualLabel2.TextStyle = textStyle46;
+            // 
+            // visualLabel3
+            // 
+            this.visualLabel3.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.visualLabel3.ForeColor = System.Drawing.Color.LightSteelBlue;
+            this.visualLabel3.Location = new System.Drawing.Point(356, 28);
+            this.visualLabel3.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
+            this.visualLabel3.Name = "visualLabel3";
+            this.visualLabel3.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            this.visualLabel3.Outline = false;
+            this.visualLabel3.OutlineColor = System.Drawing.Color.Red;
+            this.visualLabel3.OutlineLocation = new System.Drawing.Point(0, 0);
+            this.visualLabel3.ReflectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.visualLabel3.ReflectionSpacing = 0;
+            this.visualLabel3.ShadowColor = System.Drawing.Color.Black;
+            this.visualLabel3.ShadowDirection = 315;
+            this.visualLabel3.ShadowLocation = new System.Drawing.Point(0, 0);
+            this.visualLabel3.ShadowOpacity = 100;
+            this.visualLabel3.Size = new System.Drawing.Size(115, 32);
+            this.visualLabel3.TabIndex = 166;
+            this.visualLabel3.Text = "Fiscal Year";
+            this.visualLabel3.TextAlignment = System.Drawing.StringAlignment.Center;
+            this.visualLabel3.TextLineAlignment = System.Drawing.StringAlignment.Center;
+            textStyle45.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
+            textStyle45.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            textStyle45.Hover = System.Drawing.Color.Empty;
+            textStyle45.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.visualLabel3.TextStyle = textStyle45;
+            // 
+            // visualLabel4
+            // 
+            this.visualLabel4.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.visualLabel4.ForeColor = System.Drawing.Color.LightSteelBlue;
+            this.visualLabel4.Location = new System.Drawing.Point(3, 122);
+            this.visualLabel4.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
+            this.visualLabel4.Name = "visualLabel4";
+            this.visualLabel4.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            this.visualLabel4.Outline = false;
+            this.visualLabel4.OutlineColor = System.Drawing.Color.Red;
+            this.visualLabel4.OutlineLocation = new System.Drawing.Point(0, 0);
+            this.visualLabel4.ReflectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.visualLabel4.ReflectionSpacing = 0;
+            this.visualLabel4.ShadowColor = System.Drawing.Color.Black;
+            this.visualLabel4.ShadowDirection = 315;
+            this.visualLabel4.ShadowLocation = new System.Drawing.Point(0, 0);
+            this.visualLabel4.ShadowOpacity = 100;
+            this.visualLabel4.Size = new System.Drawing.Size(115, 32);
+            this.visualLabel4.TabIndex = 167;
+            this.visualLabel4.Text = "Fund";
+            this.visualLabel4.TextAlignment = System.Drawing.StringAlignment.Center;
+            this.visualLabel4.TextLineAlignment = System.Drawing.StringAlignment.Center;
+            textStyle44.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
+            textStyle44.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            textStyle44.Hover = System.Drawing.Color.Empty;
+            textStyle44.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.visualLabel4.TextStyle = textStyle44;
+            // 
+            // visualLabel5
+            // 
+            this.visualLabel5.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.visualLabel5.ForeColor = System.Drawing.Color.LightSteelBlue;
+            this.visualLabel5.Location = new System.Drawing.Point(150, 122);
+            this.visualLabel5.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
+            this.visualLabel5.Name = "visualLabel5";
+            this.visualLabel5.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            this.visualLabel5.Outline = false;
+            this.visualLabel5.OutlineColor = System.Drawing.Color.Red;
+            this.visualLabel5.OutlineLocation = new System.Drawing.Point(0, 0);
+            this.visualLabel5.ReflectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.visualLabel5.ReflectionSpacing = 0;
+            this.visualLabel5.ShadowColor = System.Drawing.Color.Black;
+            this.visualLabel5.ShadowDirection = 315;
+            this.visualLabel5.ShadowLocation = new System.Drawing.Point(0, 0);
+            this.visualLabel5.ShadowOpacity = 100;
+            this.visualLabel5.Size = new System.Drawing.Size(58, 32);
+            this.visualLabel5.TabIndex = 168;
+            this.visualLabel5.Text = "AH ";
+            this.visualLabel5.TextAlignment = System.Drawing.StringAlignment.Center;
+            this.visualLabel5.TextLineAlignment = System.Drawing.StringAlignment.Center;
+            textStyle43.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
+            textStyle43.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            textStyle43.Hover = System.Drawing.Color.Empty;
+            textStyle43.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.visualLabel5.TextStyle = textStyle43;
+            // 
+            // visualLabel6
+            // 
+            this.visualLabel6.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.visualLabel6.ForeColor = System.Drawing.Color.LightSteelBlue;
+            this.visualLabel6.Location = new System.Drawing.Point(356, 131);
+            this.visualLabel6.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
+            this.visualLabel6.Name = "visualLabel6";
+            this.visualLabel6.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            this.visualLabel6.Outline = false;
+            this.visualLabel6.OutlineColor = System.Drawing.Color.Red;
+            this.visualLabel6.OutlineLocation = new System.Drawing.Point(0, 0);
+            this.visualLabel6.ReflectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.visualLabel6.ReflectionSpacing = 0;
+            this.visualLabel6.ShadowColor = System.Drawing.Color.Black;
+            this.visualLabel6.ShadowDirection = 315;
+            this.visualLabel6.ShadowLocation = new System.Drawing.Point(0, 0);
+            this.visualLabel6.ShadowOpacity = 100;
+            this.visualLabel6.Size = new System.Drawing.Size(115, 32);
+            this.visualLabel6.TabIndex = 169;
+            this.visualLabel6.Text = "RC";
+            this.visualLabel6.TextAlignment = System.Drawing.StringAlignment.Center;
+            this.visualLabel6.TextLineAlignment = System.Drawing.StringAlignment.Center;
+            textStyle42.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
+            textStyle42.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            textStyle42.Hover = System.Drawing.Color.Empty;
+            textStyle42.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.visualLabel6.TextStyle = textStyle42;
+            // 
+            // visualLabel7
+            // 
+            this.visualLabel7.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.visualLabel7.ForeColor = System.Drawing.Color.LightSteelBlue;
+            this.visualLabel7.Location = new System.Drawing.Point(3, 221);
+            this.visualLabel7.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
+            this.visualLabel7.Name = "visualLabel7";
+            this.visualLabel7.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            this.visualLabel7.Outline = false;
+            this.visualLabel7.OutlineColor = System.Drawing.Color.Red;
+            this.visualLabel7.OutlineLocation = new System.Drawing.Point(0, 0);
+            this.visualLabel7.ReflectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.visualLabel7.ReflectionSpacing = 0;
+            this.visualLabel7.ShadowColor = System.Drawing.Color.Black;
+            this.visualLabel7.ShadowDirection = 315;
+            this.visualLabel7.ShadowLocation = new System.Drawing.Point(0, 0);
+            this.visualLabel7.ShadowOpacity = 100;
+            this.visualLabel7.Size = new System.Drawing.Size(115, 32);
+            this.visualLabel7.TabIndex = 170;
+            this.visualLabel7.Text = "BOC";
+            this.visualLabel7.TextAlignment = System.Drawing.StringAlignment.Center;
+            this.visualLabel7.TextLineAlignment = System.Drawing.StringAlignment.Center;
+            textStyle41.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
+            textStyle41.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            textStyle41.Hover = System.Drawing.Color.Empty;
+            textStyle41.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.visualLabel7.TextStyle = textStyle41;
+            // 
+            // visualLabel8
+            // 
+            this.visualLabel8.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.visualLabel8.ForeColor = System.Drawing.Color.LightSteelBlue;
+            this.visualLabel8.Location = new System.Drawing.Point(147, 225);
+            this.visualLabel8.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
+            this.visualLabel8.Name = "visualLabel8";
+            this.visualLabel8.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            this.visualLabel8.Outline = false;
+            this.visualLabel8.OutlineColor = System.Drawing.Color.Red;
+            this.visualLabel8.OutlineLocation = new System.Drawing.Point(0, 0);
+            this.visualLabel8.ReflectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.visualLabel8.ReflectionSpacing = 0;
+            this.visualLabel8.ShadowColor = System.Drawing.Color.Black;
+            this.visualLabel8.ShadowDirection = 315;
+            this.visualLabel8.ShadowLocation = new System.Drawing.Point(0, 0);
+            this.visualLabel8.ShadowOpacity = 100;
+            this.visualLabel8.Size = new System.Drawing.Size(115, 32);
+            this.visualLabel8.TabIndex = 171;
+            this.visualLabel8.Text = "PRC Code";
+            this.visualLabel8.TextAlignment = System.Drawing.StringAlignment.Center;
+            this.visualLabel8.TextLineAlignment = System.Drawing.StringAlignment.Center;
+            textStyle40.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
+            textStyle40.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            textStyle40.Hover = System.Drawing.Color.Empty;
+            textStyle40.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.visualLabel8.TextStyle = textStyle40;
+            // 
+            // visualLabel9
+            // 
+            this.visualLabel9.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.visualLabel9.ForeColor = System.Drawing.Color.LightSteelBlue;
+            this.visualLabel9.Location = new System.Drawing.Point(325, 225);
+            this.visualLabel9.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
+            this.visualLabel9.Name = "visualLabel9";
+            this.visualLabel9.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            this.visualLabel9.Outline = false;
+            this.visualLabel9.OutlineColor = System.Drawing.Color.Red;
+            this.visualLabel9.OutlineLocation = new System.Drawing.Point(0, 0);
+            this.visualLabel9.ReflectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.visualLabel9.ReflectionSpacing = 0;
+            this.visualLabel9.ShadowColor = System.Drawing.Color.Black;
+            this.visualLabel9.ShadowDirection = 315;
+            this.visualLabel9.ShadowLocation = new System.Drawing.Point(0, 0);
+            this.visualLabel9.ShadowOpacity = 100;
+            this.visualLabel9.Size = new System.Drawing.Size(146, 32);
+            this.visualLabel9.TabIndex = 172;
+            this.visualLabel9.Text = "Original Amount";
+            this.visualLabel9.TextAlignment = System.Drawing.StringAlignment.Center;
+            this.visualLabel9.TextLineAlignment = System.Drawing.StringAlignment.Center;
+            textStyle39.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
+            textStyle39.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            textStyle39.Hover = System.Drawing.Color.Empty;
+            textStyle39.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.visualLabel9.TextStyle = textStyle39;
+            // 
+            // visualLabel10
+            // 
+            this.visualLabel10.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.visualLabel10.ForeColor = System.Drawing.Color.LightSteelBlue;
+            this.visualLabel10.Location = new System.Drawing.Point(35, 338);
+            this.visualLabel10.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
+            this.visualLabel10.Name = "visualLabel10";
+            this.visualLabel10.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            this.visualLabel10.Outline = false;
+            this.visualLabel10.OutlineColor = System.Drawing.Color.Red;
+            this.visualLabel10.OutlineLocation = new System.Drawing.Point(0, 0);
+            this.visualLabel10.ReflectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.visualLabel10.ReflectionSpacing = 0;
+            this.visualLabel10.ShadowColor = System.Drawing.Color.Black;
+            this.visualLabel10.ShadowDirection = 315;
+            this.visualLabel10.ShadowLocation = new System.Drawing.Point(0, 0);
+            this.visualLabel10.ShadowOpacity = 100;
+            this.visualLabel10.Size = new System.Drawing.Size(115, 32);
+            this.visualLabel10.TabIndex = 173;
+            this.visualLabel10.Text = "New Amount";
+            this.visualLabel10.TextAlignment = System.Drawing.StringAlignment.Center;
+            this.visualLabel10.TextLineAlignment = System.Drawing.StringAlignment.Center;
+            textStyle38.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
+            textStyle38.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            textStyle38.Hover = System.Drawing.Color.Empty;
+            textStyle38.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.visualLabel10.TextStyle = textStyle38;
+            // 
+            // metroSetTextBox3
+            // 
+            this.metroSetTextBox3.AutoCompleteCustomSource = null;
+            this.metroSetTextBox3.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.metroSetTextBox3.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.metroSetTextBox3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(110)))), ((int)(((byte)(110)))));
+            this.metroSetTextBox3.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
+            this.metroSetTextBox3.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.metroSetTextBox3.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.metroSetTextBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.metroSetTextBox3.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
+            this.metroSetTextBox3.Image = null;
+            this.metroSetTextBox3.Lines = null;
+            this.metroSetTextBox3.Location = new System.Drawing.Point(256, 160);
+            this.metroSetTextBox3.MaxLength = 32767;
+            this.metroSetTextBox3.Multiline = false;
+            this.metroSetTextBox3.Name = "metroSetTextBox3";
+            this.metroSetTextBox3.ReadOnly = false;
+            this.metroSetTextBox3.Size = new System.Drawing.Size(74, 40);
+            this.metroSetTextBox3.Style = MetroSet_UI.Design.Style.Dark;
+            this.metroSetTextBox3.StyleManager = null;
+            this.metroSetTextBox3.TabIndex = 174;
+            this.metroSetTextBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.metroSetTextBox3.ThemeAuthor = "Narwin";
+            this.metroSetTextBox3.ThemeName = "MetroDark";
+            this.metroSetTextBox3.UseSystemPasswordChar = false;
+            this.metroSetTextBox3.WatermarkText = "";
+            // 
+            // visualLabel11
+            // 
+            this.visualLabel11.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.visualLabel11.ForeColor = System.Drawing.Color.LightSteelBlue;
+            this.visualLabel11.Location = new System.Drawing.Point(256, 131);
+            this.visualLabel11.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
+            this.visualLabel11.Name = "visualLabel11";
+            this.visualLabel11.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            this.visualLabel11.Outline = false;
+            this.visualLabel11.OutlineColor = System.Drawing.Color.Red;
+            this.visualLabel11.OutlineLocation = new System.Drawing.Point(0, 0);
+            this.visualLabel11.ReflectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.visualLabel11.ReflectionSpacing = 0;
+            this.visualLabel11.ShadowColor = System.Drawing.Color.Black;
+            this.visualLabel11.ShadowDirection = 315;
+            this.visualLabel11.ShadowLocation = new System.Drawing.Point(0, 0);
+            this.visualLabel11.ShadowOpacity = 100;
+            this.visualLabel11.Size = new System.Drawing.Size(58, 23);
+            this.visualLabel11.TabIndex = 175;
+            this.visualLabel11.Text = "ORG";
+            this.visualLabel11.TextAlignment = System.Drawing.StringAlignment.Center;
+            this.visualLabel11.TextLineAlignment = System.Drawing.StringAlignment.Center;
+            textStyle37.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
+            textStyle37.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            textStyle37.Hover = System.Drawing.Color.Empty;
+            textStyle37.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.visualLabel11.TextStyle = textStyle37;
             // 
             // SummaryForm
             // 
@@ -6609,24 +6810,14 @@ namespace BudgetExecution
         private Button button4;
         private Button button3;
         private Button button1;
-        private MetroSetLabel metroSetLabel20;
         private MetroSetTextBox BudgetLevel;
-        private MetroSetLabel metroSetLabel19;
         private MetroSetTextBox ID;
-        private MetroSetLabel metroSetLabel1;
-        private MetroSetLabel metroSetLabel2;
         private MetroSetTextBox metroSetTextBox1;
         private MetroSetTextBox Amount;
         private MetroSetTextBox Code;
         private MetroSetTextBox BOC;
-        private MetroSetLabel metroSetLabel12;
-        private MetroSetLabel metroSetLabel13;
-        private MetroSetLabel metroSetLabel14;
-        private MetroSetLabel metroSetLabel16;
         private MetroSetTextBox RC;
         private MetroSetTextBox Fund;
-        private MetroSetLabel metroSetLabel17;
-        private MetroSetLabel metroSetLabel18;
         private MetroSetTextBox BFY;
         private MetroSetTextBox Org;
         private TabPageAdv GraphTab;
@@ -6693,5 +6884,17 @@ namespace BudgetExecution
         private VisualPlus.Toolkit.Controls.Interactivity.VisualComboBox FundFilter3;
         private VisualPlus.Toolkit.Controls.Interactivity.VisualComboBox FundFilter2;
         private VisualPlus.Toolkit.Controls.Interactivity.VisualComboBox FundFilter1;
+        private VisualPlus.Toolkit.Controls.Interactivity.VisualLabel visualLabel10;
+        private VisualPlus.Toolkit.Controls.Interactivity.VisualLabel visualLabel9;
+        private VisualPlus.Toolkit.Controls.Interactivity.VisualLabel visualLabel8;
+        private VisualPlus.Toolkit.Controls.Interactivity.VisualLabel visualLabel7;
+        private VisualPlus.Toolkit.Controls.Interactivity.VisualLabel visualLabel6;
+        private VisualPlus.Toolkit.Controls.Interactivity.VisualLabel visualLabel5;
+        private VisualPlus.Toolkit.Controls.Interactivity.VisualLabel visualLabel4;
+        private VisualPlus.Toolkit.Controls.Interactivity.VisualLabel visualLabel3;
+        private VisualPlus.Toolkit.Controls.Interactivity.VisualLabel visualLabel2;
+        private VisualPlus.Toolkit.Controls.Interactivity.VisualLabel visualLabel1;
+        private VisualPlus.Toolkit.Controls.Interactivity.VisualLabel visualLabel11;
+        private MetroSetTextBox metroSetTextBox3;
     }
 }
