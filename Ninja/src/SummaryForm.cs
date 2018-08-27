@@ -84,7 +84,7 @@ namespace BudgetExecution
                 ProjectTab.TabVisible = false;
                 DatabaseTab.TabVisible = true;
                 CurrentTabIndex = SummaryTabControl.SelectedIndex;
-                SummaryTabControl.SelectedIndex = 8;
+                SummaryTabControl.SelectedIndex = 2;
                 SummaryTabControl.SelectedIndexChanged += SummaryTabPage_TabSelected;
             }
         }

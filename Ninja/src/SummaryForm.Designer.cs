@@ -151,6 +151,7 @@ namespace BudgetExecution
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             VisualPlus.Structure.TextStyle textStyle37 = new VisualPlus.Structure.TextStyle();
             Syncfusion.Windows.Forms.Chart.ChartSeries chartSeries19 = new Syncfusion.Windows.Forms.Chart.ChartSeries();
             Syncfusion.Windows.Forms.Chart.ChartCustomShapeInfo chartCustomShapeInfo19 = new Syncfusion.Windows.Forms.Chart.ChartCustomShapeInfo();
@@ -1228,7 +1229,7 @@ namespace BudgetExecution
             this.ProjectTab.Location = new System.Drawing.Point(0, 34);
             this.ProjectTab.Name = "ProjectTab";
             this.ProjectTab.ShowCloseButton = true;
-            this.ProjectTab.Size = new System.Drawing.Size(1843, 974);
+            this.ProjectTab.Size = new System.Drawing.Size(1843, 987);
             this.ProjectTab.TabForeColor = System.Drawing.Color.LightSteelBlue;
             this.ProjectTab.TabIndex = 8;
             this.ProjectTab.Tag = "Program Project";
@@ -1465,7 +1466,7 @@ namespace BudgetExecution
             this.AreaTab.Location = new System.Drawing.Point(0, 34);
             this.AreaTab.Name = "AreaTab";
             this.AreaTab.ShowCloseButton = true;
-            this.AreaTab.Size = new System.Drawing.Size(1843, 974);
+            this.AreaTab.Size = new System.Drawing.Size(1843, 987);
             this.AreaTab.TabForeColor = System.Drawing.Color.LightSteelBlue;
             this.AreaTab.TabIndex = 7;
             this.AreaTab.Tag = "Program Area";
@@ -1693,7 +1694,7 @@ namespace BudgetExecution
             this.DivisionTab.Location = new System.Drawing.Point(0, 34);
             this.DivisionTab.Name = "DivisionTab";
             this.DivisionTab.ShowCloseButton = true;
-            this.DivisionTab.Size = new System.Drawing.Size(1843, 974);
+            this.DivisionTab.Size = new System.Drawing.Size(1843, 987);
             this.DivisionTab.TabBackColor = System.Drawing.Color.Black;
             this.DivisionTab.TabForeColor = System.Drawing.Color.LightSteelBlue;
             this.DivisionTab.TabIndex = 6;
@@ -1921,7 +1922,7 @@ namespace BudgetExecution
             this.ObjectiveTab.Location = new System.Drawing.Point(0, 34);
             this.ObjectiveTab.Name = "ObjectiveTab";
             this.ObjectiveTab.ShowCloseButton = true;
-            this.ObjectiveTab.Size = new System.Drawing.Size(1843, 974);
+            this.ObjectiveTab.Size = new System.Drawing.Size(1843, 987);
             this.ObjectiveTab.TabForeColor = System.Drawing.Color.LightSteelBlue;
             this.ObjectiveTab.TabIndex = 5;
             this.ObjectiveTab.Tag = "Agency Objective";
@@ -2148,7 +2149,7 @@ namespace BudgetExecution
             this.GoalTab.Location = new System.Drawing.Point(0, 34);
             this.GoalTab.Name = "GoalTab";
             this.GoalTab.ShowCloseButton = true;
-            this.GoalTab.Size = new System.Drawing.Size(1843, 974);
+            this.GoalTab.Size = new System.Drawing.Size(1843, 987);
             this.GoalTab.TabForeColor = System.Drawing.Color.LightSteelBlue;
             this.GoalTab.TabIndex = 4;
             this.GoalTab.Tag = "Agency Goal";
@@ -2375,7 +2376,7 @@ namespace BudgetExecution
             this.NpmTab.Location = new System.Drawing.Point(0, 34);
             this.NpmTab.Name = "NpmTab";
             this.NpmTab.ShowCloseButton = true;
-            this.NpmTab.Size = new System.Drawing.Size(1843, 974);
+            this.NpmTab.Size = new System.Drawing.Size(1843, 987);
             this.NpmTab.TabForeColor = System.Drawing.Color.LightSteelBlue;
             this.NpmTab.TabIndex = 3;
             this.NpmTab.Tag = "HQ National Program Office";
@@ -2602,7 +2603,7 @@ namespace BudgetExecution
             this.BocTab.Location = new System.Drawing.Point(0, 34);
             this.BocTab.Name = "BocTab";
             this.BocTab.ShowCloseButton = true;
-            this.BocTab.Size = new System.Drawing.Size(1843, 974);
+            this.BocTab.Size = new System.Drawing.Size(1843, 987);
             this.BocTab.TabForeColor = System.Drawing.Color.LightSteelBlue;
             this.BocTab.TabIndex = 2;
             this.BocTab.Tag = "Budget Object Class";
@@ -2830,7 +2831,7 @@ namespace BudgetExecution
             this.FundTab.Location = new System.Drawing.Point(0, 34);
             this.FundTab.Name = "FundTab";
             this.FundTab.ShowCloseButton = true;
-            this.FundTab.Size = new System.Drawing.Size(1843, 974);
+            this.FundTab.Size = new System.Drawing.Size(1843, 987);
             this.FundTab.TabForeColor = System.Drawing.Color.LightSteelBlue;
             this.FundTab.TabIndex = 1;
             this.FundTab.Tag = "Appropriation";
@@ -3048,8 +3049,9 @@ namespace BudgetExecution
             // 
             // SummaryTabControl
             // 
+            this.SummaryTabControl.ActiveTabColor = System.Drawing.Color.SteelBlue;
             this.SummaryTabControl.ActiveTabForeColor = System.Drawing.SystemColors.HighlightText;
-            this.SummaryTabControl.BeforeTouchSize = new System.Drawing.Size(1843, 1008);
+            this.SummaryTabControl.BeforeTouchSize = new System.Drawing.Size(1843, 1021);
             this.SummaryTabControl.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.SummaryTabControl.BorderWidth = 0;
             this.SummaryTabControl.CloseButtonForeColor = System.Drawing.Color.Empty;
@@ -3077,7 +3079,7 @@ namespace BudgetExecution
             this.SummaryTabControl.SeparatorColor = System.Drawing.Color.Black;
             this.SummaryTabControl.ShowScroll = false;
             this.SummaryTabControl.ShowSeparator = true;
-            this.SummaryTabControl.Size = new System.Drawing.Size(1843, 1008);
+            this.SummaryTabControl.Size = new System.Drawing.Size(1843, 1021);
             this.SummaryTabControl.TabGap = 5;
             this.SummaryTabControl.TabIndex = 0;
             this.SummaryTabControl.TabPanelBackColor = System.Drawing.Color.Black;
@@ -3132,7 +3134,7 @@ namespace BudgetExecution
             this.GridGroupBox.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
             this.GridGroupBox.Name = "GridGroupBox";
             this.GridGroupBox.Padding = new System.Windows.Forms.Padding(5, 26, 5, 5);
-            this.GridGroupBox.Separator = false;
+            this.GridGroupBox.Separator = true;
             this.GridGroupBox.SeparatorColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.GridGroupBox.Size = new System.Drawing.Size(1160, 739);
             this.GridGroupBox.TabIndex = 162;
@@ -3176,7 +3178,7 @@ namespace BudgetExecution
             this.tableLayoutPanel2.Controls.Add(this.GridRefreshButton, 2, 0);
             this.tableLayoutPanel2.Controls.Add(this.button9, 3, 0);
             this.tableLayoutPanel2.Controls.Add(this.button10, 4, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(203, 647);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(220, 600);
             this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
@@ -3324,39 +3326,39 @@ namespace BudgetExecution
             // 
             this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.Controls.Add(this.Grid);
-            this.panel2.Location = new System.Drawing.Point(203, 153);
+            this.panel2.Location = new System.Drawing.Point(207, 116);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(927, 473);
+            this.panel2.Size = new System.Drawing.Size(927, 460);
             this.panel2.TabIndex = 160;
             // 
             // Grid
             // 
             this.Grid.AllowUserToResizeRows = false;
+            this.Grid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.Grid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCellsExceptHeaders;
             this.Grid.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            this.Grid.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.Grid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.Grid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.SteelBlue;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.Grid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.Grid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Grid.ColumnHeadersHeight = 20;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.Grid.DefaultCellStyle = dataGridViewCellStyle2;
-            this.Grid.EnableHeadersVisualStyles = false;
             this.Grid.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.Grid.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            this.Grid.Location = new System.Drawing.Point(13, 28);
+            this.Grid.GridColor = System.Drawing.Color.Gray;
+            this.Grid.Location = new System.Drawing.Point(13, 15);
+            this.Grid.MultiSelect = false;
             this.Grid.Name = "Grid";
             this.Grid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -3369,12 +3371,16 @@ namespace BudgetExecution
             this.Grid.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.Grid.RowHeadersWidth = 25;
             this.Grid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            this.Grid.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.Grid.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.White;
             this.Grid.RowTemplate.Height = 28;
             this.Grid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.Grid.Size = new System.Drawing.Size(899, 391);
             this.Grid.TabIndex = 170;
             this.Grid.Theme = MetroFramework.MetroThemeStyle.Dark;
+            this.Grid.UseCustomBackColor = true;
+            this.Grid.UseCustomForeColor = true;
             // 
             // lblBoc
             // 
@@ -3405,11 +3411,11 @@ namespace BudgetExecution
             this.tableLayoutPanel1.Controls.Add(this.label37, 3, 0);
             this.tableLayoutPanel1.Controls.Add(this.label40, 6, 0);
             this.tableLayoutPanel1.Controls.Add(this.label41, 7, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(203, 95);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(207, 77);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(903, 45);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(927, 33);
             this.tableLayoutPanel1.TabIndex = 159;
             // 
             // label31
@@ -3417,9 +3423,9 @@ namespace BudgetExecution
             this.label31.AutoSize = true;
             this.label31.Dock = System.Windows.Forms.DockStyle.Right;
             this.label31.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.label31.Location = new System.Drawing.Point(21, 0);
+            this.label31.Location = new System.Drawing.Point(28, 0);
             this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(55, 45);
+            this.label31.Size = new System.Drawing.Size(55, 33);
             this.label31.TabIndex = 153;
             this.label31.Text = "Total: ";
             // 
@@ -3427,9 +3433,9 @@ namespace BudgetExecution
             // 
             this.label32.AutoSize = true;
             this.label32.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label32.Location = new System.Drawing.Point(82, 0);
+            this.label32.Location = new System.Drawing.Point(89, 0);
             this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(64, 45);
+            this.label32.Size = new System.Drawing.Size(64, 33);
             this.label32.TabIndex = 154;
             this.label32.Text = "label32";
             // 
@@ -3438,7 +3444,7 @@ namespace BudgetExecution
             this.label34.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label34.AutoSize = true;
             this.label34.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.label34.Location = new System.Drawing.Point(359, 0);
+            this.label34.Location = new System.Drawing.Point(383, 0);
             this.label34.Name = "label34";
             this.label34.Size = new System.Drawing.Size(81, 23);
             this.label34.TabIndex = 155;
@@ -3448,9 +3454,9 @@ namespace BudgetExecution
             // 
             this.label37.AutoSize = true;
             this.label37.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label37.Location = new System.Drawing.Point(446, 0);
+            this.label37.Location = new System.Drawing.Point(470, 0);
             this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(64, 45);
+            this.label37.Size = new System.Drawing.Size(64, 33);
             this.label37.TabIndex = 156;
             this.label37.Text = "label37";
             // 
@@ -3459,9 +3465,9 @@ namespace BudgetExecution
             this.label40.AutoSize = true;
             this.label40.Dock = System.Windows.Forms.DockStyle.Right;
             this.label40.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.label40.Location = new System.Drawing.Point(690, 0);
+            this.label40.Location = new System.Drawing.Point(714, 0);
             this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(89, 45);
+            this.label40.Size = new System.Drawing.Size(89, 33);
             this.label40.TabIndex = 159;
             this.label40.Text = "Accounts: ";
             // 
@@ -3469,9 +3475,9 @@ namespace BudgetExecution
             // 
             this.label41.AutoSize = true;
             this.label41.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label41.Location = new System.Drawing.Point(785, 0);
+            this.label41.Location = new System.Drawing.Point(809, 0);
             this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(64, 45);
+            this.label41.Size = new System.Drawing.Size(64, 33);
             this.label41.TabIndex = 160;
             this.label41.Text = "label41";
             // 
@@ -3506,7 +3512,7 @@ namespace BudgetExecution
             this.visualGroupBox1.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
             this.visualGroupBox1.Name = "visualGroupBox1";
             this.visualGroupBox1.Padding = new System.Windows.Forms.Padding(5, 26, 5, 5);
-            this.visualGroupBox1.Separator = false;
+            this.visualGroupBox1.Separator = true;
             this.visualGroupBox1.SeparatorColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.visualGroupBox1.Size = new System.Drawing.Size(574, 739);
             this.visualGroupBox1.TabIndex = 161;
@@ -3615,7 +3621,7 @@ namespace BudgetExecution
             this.tableLayoutPanel3.Controls.Add(this.button5, 1, 0);
             this.tableLayoutPanel3.Controls.Add(this.button3, 3, 0);
             this.tableLayoutPanel3.Controls.Add(this.button1, 2, 0);
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(18, 513);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(32, 468);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -3695,7 +3701,7 @@ namespace BudgetExecution
             this.CalculatorButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.CalculatorButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CalculatorButton.Image = ((System.Drawing.Image)(resources.GetObject("CalculatorButton.Image")));
-            this.CalculatorButton.Location = new System.Drawing.Point(140, 344);
+            this.CalculatorButton.Location = new System.Drawing.Point(211, 376);
             this.CalculatorButton.Name = "CalculatorButton";
             this.CalculatorButton.Size = new System.Drawing.Size(51, 55);
             this.CalculatorButton.TabIndex = 162;
@@ -3831,7 +3837,7 @@ namespace BudgetExecution
             this.metroSetTextBox1.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.metroSetTextBox1.Image = null;
             this.metroSetTextBox1.Lines = null;
-            this.metroSetTextBox1.Location = new System.Drawing.Point(29, 405);
+            this.metroSetTextBox1.Location = new System.Drawing.Point(32, 376);
             this.metroSetTextBox1.MaxLength = 32767;
             this.metroSetTextBox1.Multiline = false;
             this.metroSetTextBox1.Name = "metroSetTextBox1";
@@ -3935,7 +3941,7 @@ namespace BudgetExecution
             // 
             this.metroSetLabel12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.metroSetLabel12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.metroSetLabel12.Location = new System.Drawing.Point(43, 364);
+            this.metroSetLabel12.Location = new System.Drawing.Point(33, 344);
             this.metroSetLabel12.Name = "metroSetLabel12";
             this.metroSetLabel12.Size = new System.Drawing.Size(102, 18);
             this.metroSetLabel12.Style = MetroSet_UI.Design.Style.Custom;
@@ -4387,7 +4393,6 @@ namespace BudgetExecution
             this.GridFundFilter.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
             this.GridFundFilter.Name = "GridFundFilter";
             this.GridFundFilter.SeparatorColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.GridFundFilter.SeparatorVisible = false;
             this.GridFundFilter.Size = new System.Drawing.Size(147, 30);
             this.GridFundFilter.State = VisualPlus.Enumerators.MouseStates.Normal;
             this.GridFundFilter.TabIndex = 170;
@@ -4444,7 +4449,6 @@ namespace BudgetExecution
             this.GridBocFilter.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
             this.GridBocFilter.Name = "GridBocFilter";
             this.GridBocFilter.SeparatorColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.GridBocFilter.SeparatorVisible = false;
             this.GridBocFilter.Size = new System.Drawing.Size(147, 30);
             this.GridBocFilter.State = VisualPlus.Enumerators.MouseStates.Normal;
             this.GridBocFilter.TabIndex = 171;
@@ -4501,7 +4505,6 @@ namespace BudgetExecution
             this.GridAccountFilter.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
             this.GridAccountFilter.Name = "GridAccountFilter";
             this.GridAccountFilter.SeparatorColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.GridAccountFilter.SeparatorVisible = false;
             this.GridAccountFilter.Size = new System.Drawing.Size(147, 30);
             this.GridAccountFilter.State = VisualPlus.Enumerators.MouseStates.Normal;
             this.GridAccountFilter.TabIndex = 172;
@@ -4541,6 +4544,7 @@ namespace BudgetExecution
             this.FundFilter1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
             this.FundFilter1.DropDownHeight = 100;
             this.FundFilter1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.FundFilter1.DropDownWidth = 83;
             this.FundFilter1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.FundFilter1.Font = new System.Drawing.Font("Segoe UI", 8.25F);
             this.FundFilter1.ForeColor = System.Drawing.Color.LightSteelBlue;
@@ -4551,6 +4555,9 @@ namespace BudgetExecution
             this.FundFilter1.IntegralHeight = false;
             this.FundFilter1.ItemHeight = 24;
             this.FundFilter1.ItemImageVisible = true;
+            this.FundFilter1.Items.AddRange(new object[] {
+            "Column",
+            "Pie"});
             this.FundFilter1.Location = new System.Drawing.Point(38, 99);
             this.FundFilter1.MenuItemHover = System.Drawing.Color.SteelBlue;
             this.FundFilter1.MenuItemNormal = System.Drawing.Color.Black;
@@ -4558,6 +4565,7 @@ namespace BudgetExecution
             this.FundFilter1.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
             this.FundFilter1.Name = "FundFilter1";
             this.FundFilter1.SeparatorColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.FundFilter1.SeparatorVisible = false;
             this.FundFilter1.Size = new System.Drawing.Size(147, 30);
             this.FundFilter1.State = VisualPlus.Enumerators.MouseStates.Normal;
             this.FundFilter1.TabIndex = 171;
@@ -4619,6 +4627,7 @@ namespace BudgetExecution
             this.FundFilter2.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
             this.FundFilter2.Name = "FundFilter2";
             this.FundFilter2.SeparatorColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.FundFilter2.SeparatorVisible = false;
             this.FundFilter2.Size = new System.Drawing.Size(147, 30);
             this.FundFilter2.State = VisualPlus.Enumerators.MouseStates.Normal;
             this.FundFilter2.TabIndex = 172;
@@ -4674,6 +4683,7 @@ namespace BudgetExecution
             this.FundFilter3.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
             this.FundFilter3.Name = "FundFilter3";
             this.FundFilter3.SeparatorColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.FundFilter3.SeparatorVisible = false;
             this.FundFilter3.Size = new System.Drawing.Size(147, 30);
             this.FundFilter3.State = VisualPlus.Enumerators.MouseStates.Normal;
             this.FundFilter3.TabIndex = 171;
@@ -4729,6 +4739,7 @@ namespace BudgetExecution
             this.FundFilter4.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
             this.FundFilter4.Name = "FundFilter4";
             this.FundFilter4.SeparatorColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.FundFilter4.SeparatorVisible = false;
             this.FundFilter4.Size = new System.Drawing.Size(147, 30);
             this.FundFilter4.State = VisualPlus.Enumerators.MouseStates.Normal;
             this.FundFilter4.TabIndex = 172;
@@ -4767,6 +4778,7 @@ namespace BudgetExecution
             this.BocFilter1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
             this.BocFilter1.DropDownHeight = 100;
             this.BocFilter1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.BocFilter1.DropDownWidth = 83;
             this.BocFilter1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BocFilter1.Font = new System.Drawing.Font("Segoe UI", 8.25F);
             this.BocFilter1.ForeColor = System.Drawing.Color.LightSteelBlue;
@@ -4777,6 +4789,9 @@ namespace BudgetExecution
             this.BocFilter1.IntegralHeight = false;
             this.BocFilter1.ItemHeight = 24;
             this.BocFilter1.ItemImageVisible = true;
+            this.BocFilter1.Items.AddRange(new object[] {
+            "Column",
+            "Pie"});
             this.BocFilter1.Location = new System.Drawing.Point(24, 88);
             this.BocFilter1.MenuItemHover = System.Drawing.Color.SteelBlue;
             this.BocFilter1.MenuItemNormal = System.Drawing.Color.Black;
@@ -4997,6 +5012,7 @@ namespace BudgetExecution
             this.NpmFilter1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
             this.NpmFilter1.DropDownHeight = 100;
             this.NpmFilter1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.NpmFilter1.DropDownWidth = 83;
             this.NpmFilter1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.NpmFilter1.Font = new System.Drawing.Font("Segoe UI", 8.25F);
             this.NpmFilter1.ForeColor = System.Drawing.Color.LightSteelBlue;
@@ -5007,6 +5023,9 @@ namespace BudgetExecution
             this.NpmFilter1.IntegralHeight = false;
             this.NpmFilter1.ItemHeight = 24;
             this.NpmFilter1.ItemImageVisible = true;
+            this.NpmFilter1.Items.AddRange(new object[] {
+            "Column",
+            "Pie"});
             this.NpmFilter1.Location = new System.Drawing.Point(31, 90);
             this.NpmFilter1.MenuItemHover = System.Drawing.Color.SteelBlue;
             this.NpmFilter1.MenuItemNormal = System.Drawing.Color.Black;
@@ -5227,6 +5246,7 @@ namespace BudgetExecution
             this.GoalFilter1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
             this.GoalFilter1.DropDownHeight = 100;
             this.GoalFilter1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.GoalFilter1.DropDownWidth = 83;
             this.GoalFilter1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.GoalFilter1.Font = new System.Drawing.Font("Segoe UI", 8.25F);
             this.GoalFilter1.ForeColor = System.Drawing.Color.LightSteelBlue;
@@ -5237,6 +5257,9 @@ namespace BudgetExecution
             this.GoalFilter1.IntegralHeight = false;
             this.GoalFilter1.ItemHeight = 24;
             this.GoalFilter1.ItemImageVisible = true;
+            this.GoalFilter1.Items.AddRange(new object[] {
+            "Column",
+            "Pie"});
             this.GoalFilter1.Location = new System.Drawing.Point(20, 82);
             this.GoalFilter1.MenuItemHover = System.Drawing.Color.SteelBlue;
             this.GoalFilter1.MenuItemNormal = System.Drawing.Color.Black;
@@ -5355,7 +5378,7 @@ namespace BudgetExecution
             this.GoalFilter3.IntegralHeight = false;
             this.GoalFilter3.ItemHeight = 24;
             this.GoalFilter3.ItemImageVisible = true;
-            this.GoalFilter3.Location = new System.Drawing.Point(36, 85);
+            this.GoalFilter3.Location = new System.Drawing.Point(20, 85);
             this.GoalFilter3.MenuItemHover = System.Drawing.Color.SteelBlue;
             this.GoalFilter3.MenuItemNormal = System.Drawing.Color.Black;
             this.GoalFilter3.MenuTextColor = System.Drawing.Color.LightSteelBlue;
@@ -5411,7 +5434,7 @@ namespace BudgetExecution
             this.GoalFilter4.IntegralHeight = false;
             this.GoalFilter4.ItemHeight = 24;
             this.GoalFilter4.ItemImageVisible = true;
-            this.GoalFilter4.Location = new System.Drawing.Point(36, 216);
+            this.GoalFilter4.Location = new System.Drawing.Point(20, 216);
             this.GoalFilter4.MenuItemHover = System.Drawing.Color.SteelBlue;
             this.GoalFilter4.MenuItemNormal = System.Drawing.Color.Black;
             this.GoalFilter4.MenuTextColor = System.Drawing.Color.LightSteelBlue;
@@ -5457,6 +5480,7 @@ namespace BudgetExecution
             this.ObjectiveFilter1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
             this.ObjectiveFilter1.DropDownHeight = 100;
             this.ObjectiveFilter1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ObjectiveFilter1.DropDownWidth = 83;
             this.ObjectiveFilter1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ObjectiveFilter1.Font = new System.Drawing.Font("Segoe UI", 8.25F);
             this.ObjectiveFilter1.ForeColor = System.Drawing.Color.LightSteelBlue;
@@ -5467,6 +5491,9 @@ namespace BudgetExecution
             this.ObjectiveFilter1.IntegralHeight = false;
             this.ObjectiveFilter1.ItemHeight = 24;
             this.ObjectiveFilter1.ItemImageVisible = true;
+            this.ObjectiveFilter1.Items.AddRange(new object[] {
+            "Column",
+            "Pie"});
             this.ObjectiveFilter1.Location = new System.Drawing.Point(30, 87);
             this.ObjectiveFilter1.MenuItemHover = System.Drawing.Color.SteelBlue;
             this.ObjectiveFilter1.MenuItemNormal = System.Drawing.Color.Black;
@@ -5585,7 +5612,7 @@ namespace BudgetExecution
             this.ObjectiveFilter3.IntegralHeight = false;
             this.ObjectiveFilter3.ItemHeight = 24;
             this.ObjectiveFilter3.ItemImageVisible = true;
-            this.ObjectiveFilter3.Location = new System.Drawing.Point(42, 83);
+            this.ObjectiveFilter3.Location = new System.Drawing.Point(30, 83);
             this.ObjectiveFilter3.MenuItemHover = System.Drawing.Color.SteelBlue;
             this.ObjectiveFilter3.MenuItemNormal = System.Drawing.Color.Black;
             this.ObjectiveFilter3.MenuTextColor = System.Drawing.Color.LightSteelBlue;
@@ -5641,7 +5668,7 @@ namespace BudgetExecution
             this.ObjectiveFilter4.IntegralHeight = false;
             this.ObjectiveFilter4.ItemHeight = 24;
             this.ObjectiveFilter4.ItemImageVisible = true;
-            this.ObjectiveFilter4.Location = new System.Drawing.Point(42, 214);
+            this.ObjectiveFilter4.Location = new System.Drawing.Point(30, 214);
             this.ObjectiveFilter4.MenuItemHover = System.Drawing.Color.SteelBlue;
             this.ObjectiveFilter4.MenuItemNormal = System.Drawing.Color.Black;
             this.ObjectiveFilter4.MenuTextColor = System.Drawing.Color.LightSteelBlue;
@@ -5687,6 +5714,7 @@ namespace BudgetExecution
             this.DivisionFilter1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
             this.DivisionFilter1.DropDownHeight = 100;
             this.DivisionFilter1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.DivisionFilter1.DropDownWidth = 83;
             this.DivisionFilter1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.DivisionFilter1.Font = new System.Drawing.Font("Segoe UI", 8.25F);
             this.DivisionFilter1.ForeColor = System.Drawing.Color.LightSteelBlue;
@@ -5697,6 +5725,9 @@ namespace BudgetExecution
             this.DivisionFilter1.IntegralHeight = false;
             this.DivisionFilter1.ItemHeight = 24;
             this.DivisionFilter1.ItemImageVisible = true;
+            this.DivisionFilter1.Items.AddRange(new object[] {
+            "Column",
+            "Pie"});
             this.DivisionFilter1.Location = new System.Drawing.Point(26, 85);
             this.DivisionFilter1.MenuItemHover = System.Drawing.Color.SteelBlue;
             this.DivisionFilter1.MenuItemNormal = System.Drawing.Color.Black;
@@ -5871,7 +5902,7 @@ namespace BudgetExecution
             this.DivisionFilter4.IntegralHeight = false;
             this.DivisionFilter4.ItemHeight = 24;
             this.DivisionFilter4.ItemImageVisible = true;
-            this.DivisionFilter4.Location = new System.Drawing.Point(31, 227);
+            this.DivisionFilter4.Location = new System.Drawing.Point(26, 227);
             this.DivisionFilter4.MenuItemHover = System.Drawing.Color.SteelBlue;
             this.DivisionFilter4.MenuItemNormal = System.Drawing.Color.Black;
             this.DivisionFilter4.MenuTextColor = System.Drawing.Color.LightSteelBlue;
@@ -5917,6 +5948,7 @@ namespace BudgetExecution
             this.AreaFilter1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
             this.AreaFilter1.DropDownHeight = 100;
             this.AreaFilter1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.AreaFilter1.DropDownWidth = 83;
             this.AreaFilter1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AreaFilter1.Font = new System.Drawing.Font("Segoe UI", 8.25F);
             this.AreaFilter1.ForeColor = System.Drawing.Color.LightSteelBlue;
@@ -5927,6 +5959,9 @@ namespace BudgetExecution
             this.AreaFilter1.IntegralHeight = false;
             this.AreaFilter1.ItemHeight = 24;
             this.AreaFilter1.ItemImageVisible = true;
+            this.AreaFilter1.Items.AddRange(new object[] {
+            "Column",
+            "Pie"});
             this.AreaFilter1.Location = new System.Drawing.Point(24, 82);
             this.AreaFilter1.MenuItemHover = System.Drawing.Color.SteelBlue;
             this.AreaFilter1.MenuItemNormal = System.Drawing.Color.Black;
@@ -6147,6 +6182,7 @@ namespace BudgetExecution
             this.ProjectFilter1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
             this.ProjectFilter1.DropDownHeight = 100;
             this.ProjectFilter1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ProjectFilter1.DropDownWidth = 83;
             this.ProjectFilter1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ProjectFilter1.Font = new System.Drawing.Font("Segoe UI", 8.25F);
             this.ProjectFilter1.ForeColor = System.Drawing.Color.LightSteelBlue;
@@ -6157,6 +6193,9 @@ namespace BudgetExecution
             this.ProjectFilter1.IntegralHeight = false;
             this.ProjectFilter1.ItemHeight = 24;
             this.ProjectFilter1.ItemImageVisible = true;
+            this.ProjectFilter1.Items.AddRange(new object[] {
+            "Column",
+            "Pie"});
             this.ProjectFilter1.Location = new System.Drawing.Point(24, 99);
             this.ProjectFilter1.MenuItemHover = System.Drawing.Color.SteelBlue;
             this.ProjectFilter1.MenuItemNormal = System.Drawing.Color.Black;
@@ -6366,11 +6405,11 @@ namespace BudgetExecution
             this.BorderColor = System.Drawing.SystemColors.MenuHighlight;
             this.CaptionAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.CaptionBarColor = System.Drawing.Color.Black;
-            this.CaptionBarHeight = 60;
+            this.CaptionBarHeight = 40;
             this.CaptionFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CaptionForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.CaptionVerticalAlignment = Syncfusion.Windows.Forms.VerticalAlignment.Top;
-            this.ClientSize = new System.Drawing.Size(1843, 1008);
+            this.ClientSize = new System.Drawing.Size(1843, 1021);
             this.Controls.Add(this.SummaryTabControl);
             this.ForeColor = System.Drawing.Color.LightSteelBlue;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
