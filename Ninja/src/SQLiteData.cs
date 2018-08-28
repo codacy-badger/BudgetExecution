@@ -109,6 +109,7 @@ namespace BudgetExecution
                         Filter3.Items.Add(rc);
                 }
 
+                FunctionTab.TabVisible = false;
                 GetDataBase(Source);
             }
             catch (Exception ex)
@@ -189,10 +190,9 @@ namespace BudgetExecution
                     label.Visible = true;
                     label.Text = control.Tag.ToString();
                 }
-
-                string[] item = FieldFilter(data.DbTable, colname.ToString());
-                //string[] items = ProgramElements[colname.ToString()];
-                foreach (string i in item)
+                
+                string[] items = ProgramElements[colname.ToString()];
+                foreach (string i in items)
                 {
                     control.Items.Add(i);
                 }
@@ -460,6 +460,14 @@ namespace BudgetExecution
                         Filter4.Tag = "FiscalYear";
                         break;
 
+                    case Source.Benefits:
+                        label1.Text = "HROrgCodeName";
+                        PopulateFilterItems(Field.DivisionName, DbData, Filter1, label1);
+                        Filter2.Tag = "OccupationalSeries";
+                        Filter3.Tag = "HROrgCode";
+                        Filter4.Tag = "LastName";
+                        break;
+
                     case Source.Obligations:
                         label1.Text = "FundName";
                         PopulateFilterItems(Field.FundName, DbData, Filter1, label1);
@@ -477,6 +485,22 @@ namespace BudgetExecution
                         break;
 
                     case Source.PayrollObligations:
+                        label1.Text = "DivisionName";
+                        PopulateFilterItems(Field.DivisionName, DbData, Filter1, label1);
+                        Filter2.Tag = "Fund";
+                        Filter3.Tag = "BocName";
+                        Filter4.Tag = "FocName";
+                        break;
+
+                    case Source.ProgramObligations:
+                        label1.Text = "DivisionName";
+                        PopulateFilterItems(Field.DivisionName, DbData, Filter1, label1);
+                        Filter2.Tag = "Fund";
+                        Filter3.Tag = "BocName";
+                        Filter4.Tag = "FocName";
+                        break;
+
+                    case Source.TravelObligations:
                         label1.Text = "DivisionName";
                         PopulateFilterItems(Field.DivisionName, DbData, Filter1, label1);
                         Filter2.Tag = "Fund";
@@ -731,7 +755,7 @@ namespace BudgetExecution
 
         private void ExcelButton_OnClick(object sender, EventArgs e)
         {
-            ExcelImporter ef = new ExcelImporter();
+            ExcelReader ef = new ExcelReader();
             ef.Show();
         }
 

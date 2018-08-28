@@ -20,7 +20,7 @@
 
         Org Org { get; set; }
 
-        PRC PRC { get; set; }
+        PRC[] PRC { get; set; }
 
         string ProgramProjectCode { get; set; }
 

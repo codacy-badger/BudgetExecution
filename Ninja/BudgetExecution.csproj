@@ -288,11 +288,11 @@
     <Compile Include="src\ExcelBrowser.Designer.cs">
       <DependentUpon>ExcelBrowser.cs</DependentUpon>
     </Compile>
-    <Compile Include="src\ExcelImporter.cs">
+    <Compile Include="src\ExcelReader.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="src\ExcelImporter.Designer.cs">
-      <DependentUpon>ExcelImporter.cs</DependentUpon>
+    <Compile Include="src\ExcelReader.Designer.cs">
+      <DependentUpon>ExcelReader.cs</DependentUpon>
     </Compile>
     <Compile Include="src\DatabaseSelector.cs">
       <SubType>Form</SubType>
@@ -595,8 +595,8 @@
     <EmbeddedResource Include="src\ExcelForm.resx">
       <DependentUpon>ExcelForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="src\ExcelImporter.resx">
-      <DependentUpon>ExcelImporter.cs</DependentUpon>
+    <EmbeddedResource Include="src\ExcelReader.resx">
+      <DependentUpon>ExcelReader.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="src\DatabaseSelector.resx">
       <DependentUpon>DatabaseSelector.cs</DependentUpon>

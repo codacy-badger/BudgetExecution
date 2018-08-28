@@ -327,7 +327,7 @@
 
         private void ExcelButton_OnClick(object sender, EventArgs e)
         {
-            ExcelImporter ef = new ExcelImporter();
+            ExcelReader ef = new ExcelReader();
             ef.Show();
         }
 

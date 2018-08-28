@@ -24,12 +24,12 @@ namespace BudgetExecution
             Count = Metric.Count;
             Average = Metric.Average;
             ProgramElements = GetProgramElements(DbTable);
-            FundData = Metric.FundTotals;
-            BocData = Metric.BocTotals;
-            NpmData = Metric.NpmTotals;
-            GoalData = Metric.GoalTotals;
-            ProgramAreaData = Metric.ProgramAreaTotals;
-            ProjectData = Metric.ProgramProjectTotals;
+            FundAuthority = Metric.FundTotals;
+            BocAuthority = Metric.BocTotals;
+            NpmAuthority = Metric.NpmTotals;
+            GoalAuthority = Metric.GoalTotals;
+            ProgramAreaAuthority = Metric.ProgramAreaTotals;
+            ProgramProjectAuthority = Metric.ProgramProjectTotals;
             if (ProgramElements["BOC"].Contains("17"))
             {
                 FTE = GetFTE(DbData.DbTable);
@@ -54,12 +54,12 @@ namespace BudgetExecution
             Average = Metric.Average;
             ProgramElements = GetProgramElements(DbTable);
             Appropriation = GetAppropriation(ProgramElements["Fund"]);
-            FundData = Metric.FundTotals;
-            BocData = Metric.BocTotals;
-            NpmData = Metric.NpmTotals;
-            GoalData = Metric.GoalTotals;
-            ProgramAreaData = Metric.ProgramAreaTotals;
-            ProjectData = Metric.ProgramProjectTotals;
+            FundAuthority = Metric.FundTotals;
+            BocAuthority = Metric.BocTotals;
+            NpmAuthority = Metric.NpmTotals;
+            GoalAuthority = Metric.GoalTotals;
+            ProgramAreaAuthority = Metric.ProgramAreaTotals;
+            ProgramProjectAuthority = Metric.ProgramProjectTotals;
             if (ProgramElements["BOC"].Contains("17"))
             {
                 FTE = GetFTE(DbTable);
@@ -90,11 +90,11 @@ namespace BudgetExecution
 
         public DataBuilder DbData { get; set; }
 
+        public DataTable DbTable { get; }
+
         public DataSet Allocation { get; set; }
 
         public PrcMetric Metric { get; }
-
-        public DataTable DbTable { get; }
 
         public DataTable EPM { get; set; }
 
@@ -132,17 +132,17 @@ namespace BudgetExecution
 
         public DataTable FTE { get; }
 
-        public Dictionary<string, decimal> BocData { get; set; }
+        public Dictionary<string, decimal> BocAuthority { get; set; }
 
-        public Dictionary<string, decimal> FundData { get; set; }
+        public Dictionary<string, decimal> FundAuthority { get; set; }
 
-        public Dictionary<string, decimal> GoalData { get; set; }
+        public Dictionary<string, decimal> GoalAuthority { get; set; }
 
-        public Dictionary<string, decimal> NpmData { get; set; }
+        public Dictionary<string, decimal> NpmAuthority { get; set; }
 
-        public Dictionary<string, decimal> ProgramAreaData { get; set; }
+        public Dictionary<string, decimal> ProgramAreaAuthority { get; set; }
 
-        public Dictionary<string, decimal> ProjectData { get; set; }
+        public Dictionary<string, decimal> ProgramProjectAuthority { get; set; }
 
         public ExcelReport Budget { get; set; }
 

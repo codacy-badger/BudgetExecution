@@ -216,7 +216,7 @@ namespace BudgetExecution
 
         private void ExcelButton_OnClick(object sender, EventArgs e)
         {
-            ExcelImporter ef = new ExcelImporter();
+            ExcelReader ef = new ExcelReader();
             ef.Show();
         }
 
@@ -234,36 +234,6 @@ namespace BudgetExecution
         private void NextButton_OnClick(object sender, EventArgs e)
         {
             BindingSource.MoveNext();
-        }
-
-        private void AddButton_OnClick(object sender, EventArgs e)
-        {
-            try
-            {
-                RecordManager am = new RecordManager(Source, Provider);
-                am.Show();
-            }
-            catch (Exception ex)
-            {
-                new Error(ex).ShowDialog();
-            }
-        }
-
-        private void RefreshButton_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void CopyButton_OnClick(object sender, EventArgs e)
-        {
-            try
-            {
-                RecordManager am = new RecordManager(Source, Provider);
-                am.Show();
-            }
-            catch (Exception ex)
-            {
-                new Error(ex).ShowDialog();
-            }
         }
     }
 }

@@ -33,14 +33,6 @@
             Syncfusion.Windows.Forms.CaptionImage captionImage1 = new Syncfusion.Windows.Forms.CaptionImage();
             this.AccountTabControl = new Syncfusion.Windows.Forms.Tools.TabControlAdv();
             this.UpdateTab = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
-            this.GridRefreshButton = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
             this.RecordTabelPanel = new System.Windows.Forms.TableLayoutPanel();
             this.lbl29 = new System.Windows.Forms.Label();
             this.lbl28 = new System.Windows.Forms.Label();
@@ -103,14 +95,6 @@
             this.box26 = new MetroSet_UI.Controls.MetroSetTextBox();
             this.box28 = new MetroSet_UI.Controls.MetroSetTextBox();
             this.AddNewTab = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
-            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button13 = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -175,22 +159,39 @@
             this.BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.metroSetToolTip1 = new MetroSet_UI.Components.MetroSetToolTip();
             this.metroSetToolTip2 = new MetroSet_UI.Components.MetroSetToolTip();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button12 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button11 = new System.Windows.Forms.Button();
+            this.GridRefreshButton = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
+            this.button10 = new System.Windows.Forms.Button();
+            this.button13 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.AccountTabControl)).BeginInit();
             this.AccountTabControl.SuspendLayout();
             this.UpdateTab.SuspendLayout();
-            this.tableLayoutPanel2.SuspendLayout();
             this.RecordTabelPanel.SuspendLayout();
             this.AddNewTab.SuspendLayout();
-            this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BindingSource)).BeginInit();
+            this.tableLayoutPanel2.SuspendLayout();
+            this.tableLayoutPanel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // AccountTabControl
             // 
+            this.AccountTabControl.ActiveTabColor = System.Drawing.Color.SteelBlue;
             this.AccountTabControl.ActiveTabForeColor = System.Drawing.Color.White;
             this.AccountTabControl.AdjustTopGap = 5;
-            this.AccountTabControl.BeforeTouchSize = new System.Drawing.Size(1272, 555);
+            this.AccountTabControl.BeforeTouchSize = new System.Drawing.Size(1272, 538);
             this.AccountTabControl.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.AccountTabControl.CloseButtonForeColor = System.Drawing.Color.Empty;
             this.AccountTabControl.CloseButtonHoverForeColor = System.Drawing.Color.Black;
@@ -198,17 +199,19 @@
             this.AccountTabControl.Controls.Add(this.UpdateTab);
             this.AccountTabControl.Controls.Add(this.AddNewTab);
             this.AccountTabControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.AccountTabControl.FixedSingleBorderColor = System.Drawing.SystemColors.MenuHighlight;
             this.AccountTabControl.FocusOnTabClick = false;
+            this.AccountTabControl.InactiveTabColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.AccountTabControl.InActiveTabForeColor = System.Drawing.Color.Gray;
             this.AccountTabControl.Location = new System.Drawing.Point(0, 0);
             this.AccountTabControl.Name = "AccountTabControl";
             this.AccountTabControl.Padding = new System.Drawing.Point(6, 8);
             this.AccountTabControl.SeparatorColor = System.Drawing.SystemColors.ControlDark;
             this.AccountTabControl.ShowSeparator = false;
-            this.AccountTabControl.Size = new System.Drawing.Size(1272, 555);
+            this.AccountTabControl.Size = new System.Drawing.Size(1272, 538);
             this.AccountTabControl.TabGap = 5;
             this.AccountTabControl.TabIndex = 24;
-            this.AccountTabControl.TabPanelBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.AccountTabControl.TabPanelBackColor = System.Drawing.Color.Black;
             this.AccountTabControl.TabStyle = typeof(Syncfusion.Windows.Forms.Tools.TabRendererMetro);
             // 
             // UpdateTab
@@ -220,164 +223,10 @@
             this.UpdateTab.Location = new System.Drawing.Point(0, 43);
             this.UpdateTab.Name = "UpdateTab";
             this.UpdateTab.ShowCloseButton = true;
-            this.UpdateTab.Size = new System.Drawing.Size(1272, 512);
+            this.UpdateTab.Size = new System.Drawing.Size(1272, 495);
             this.UpdateTab.TabIndex = 3;
             this.UpdateTab.Text = "Update";
             this.UpdateTab.ThemesEnabled = false;
-            // 
-            // tableLayoutPanel2
-            // 
-            this.tableLayoutPanel2.ColumnCount = 7;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 53.25444F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 46.74556F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 119F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 139F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 127F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 134F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 133F));
-            this.tableLayoutPanel2.Controls.Add(this.button2, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.button12, 6, 0);
-            this.tableLayoutPanel2.Controls.Add(this.button3, 1, 0);
-            this.tableLayoutPanel2.Controls.Add(this.button11, 5, 0);
-            this.tableLayoutPanel2.Controls.Add(this.GridRefreshButton, 2, 0);
-            this.tableLayoutPanel2.Controls.Add(this.button9, 3, 0);
-            this.tableLayoutPanel2.Controls.Add(this.button4, 4, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(331, 434);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 1;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 65.57377F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(903, 57);
-            this.tableLayoutPanel2.TabIndex = 171;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.Transparent;
-            this.button2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SlateGray;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.Location = new System.Drawing.Point(4, 5);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(125, 47);
-            this.button2.TabIndex = 162;
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.metroSetToolTip1.SetToolTip(this.button2, "Previous Record");
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // button12
-            // 
-            this.button12.BackColor = System.Drawing.Color.Transparent;
-            this.button12.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button12.FlatAppearance.BorderSize = 0;
-            this.button12.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SlateGray;
-            this.button12.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
-            this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button12.Image = ((System.Drawing.Image)(resources.GetObject("button12.Image")));
-            this.button12.Location = new System.Drawing.Point(773, 5);
-            this.button12.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(126, 47);
-            this.button12.TabIndex = 168;
-            this.button12.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.metroSetToolTip1.SetToolTip(this.button12, "Remove Record");
-            this.button12.UseVisualStyleBackColor = false;
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.Transparent;
-            this.button3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SlateGray;
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.Location = new System.Drawing.Point(137, 5);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(109, 47);
-            this.button3.TabIndex = 163;
-            this.button3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.metroSetToolTip1.SetToolTip(this.button3, "Next Record");
-            this.button3.UseVisualStyleBackColor = false;
-            // 
-            // button11
-            // 
-            this.button11.BackColor = System.Drawing.Color.Transparent;
-            this.button11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button11.FlatAppearance.BorderSize = 0;
-            this.button11.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SlateGray;
-            this.button11.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
-            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button11.Image = ((System.Drawing.Image)(resources.GetObject("button11.Image")));
-            this.button11.Location = new System.Drawing.Point(639, 5);
-            this.button11.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(126, 47);
-            this.button11.TabIndex = 167;
-            this.button11.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.metroSetToolTip1.SetToolTip(this.button11, "Copy Record");
-            this.button11.UseVisualStyleBackColor = false;
-            // 
-            // GridRefreshButton
-            // 
-            this.GridRefreshButton.BackColor = System.Drawing.Color.Transparent;
-            this.GridRefreshButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.GridRefreshButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.GridRefreshButton.FlatAppearance.BorderSize = 0;
-            this.GridRefreshButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SlateGray;
-            this.GridRefreshButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
-            this.GridRefreshButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.GridRefreshButton.Image = ((System.Drawing.Image)(resources.GetObject("GridRefreshButton.Image")));
-            this.GridRefreshButton.Location = new System.Drawing.Point(254, 5);
-            this.GridRefreshButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.GridRefreshButton.Name = "GridRefreshButton";
-            this.GridRefreshButton.Size = new System.Drawing.Size(111, 47);
-            this.GridRefreshButton.TabIndex = 164;
-            this.GridRefreshButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.metroSetToolTip1.SetToolTip(this.GridRefreshButton, "Upload Changes");
-            this.GridRefreshButton.UseVisualStyleBackColor = false;
-            // 
-            // button9
-            // 
-            this.button9.BackColor = System.Drawing.Color.Transparent;
-            this.button9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button9.FlatAppearance.BorderSize = 0;
-            this.button9.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SlateGray;
-            this.button9.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
-            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.Image = ((System.Drawing.Image)(resources.GetObject("button9.Image")));
-            this.button9.Location = new System.Drawing.Point(373, 5);
-            this.button9.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(131, 47);
-            this.button9.TabIndex = 165;
-            this.button9.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button9.UseCompatibleTextRendering = true;
-            this.button9.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.Transparent;
-            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SlateGray;
-            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.Location = new System.Drawing.Point(512, 5);
-            this.button4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(119, 47);
-            this.button4.TabIndex = 166;
-            this.button4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.metroSetToolTip1.SetToolTip(this.button4, "Insert Record");
-            this.button4.UseVisualStyleBackColor = false;
             // 
             // RecordTabelPanel
             // 
@@ -1616,161 +1465,10 @@
             this.AddNewTab.Location = new System.Drawing.Point(0, 43);
             this.AddNewTab.Name = "AddNewTab";
             this.AddNewTab.ShowCloseButton = true;
-            this.AddNewTab.Size = new System.Drawing.Size(1272, 512);
+            this.AddNewTab.Size = new System.Drawing.Size(1272, 495);
             this.AddNewTab.TabIndex = 2;
             this.AddNewTab.Text = "Add ";
             this.AddNewTab.ThemesEnabled = false;
-            // 
-            // tableLayoutPanel3
-            // 
-            this.tableLayoutPanel3.ColumnCount = 7;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 53.25444F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 46.74556F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 123F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 128F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 134F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 134F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 138F));
-            this.tableLayoutPanel3.Controls.Add(this.button1, 0, 0);
-            this.tableLayoutPanel3.Controls.Add(this.button5, 6, 0);
-            this.tableLayoutPanel3.Controls.Add(this.button6, 1, 0);
-            this.tableLayoutPanel3.Controls.Add(this.button7, 5, 0);
-            this.tableLayoutPanel3.Controls.Add(this.button8, 2, 0);
-            this.tableLayoutPanel3.Controls.Add(this.button10, 3, 0);
-            this.tableLayoutPanel3.Controls.Add(this.button13, 4, 0);
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(337, 441);
-            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
-            this.tableLayoutPanel3.RowCount = 1;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 65.57377F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(903, 57);
-            this.tableLayoutPanel3.TabIndex = 171;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SlateGray;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(4, 5);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(123, 47);
-            this.button1.TabIndex = 162;
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // button5
-            // 
-            this.button5.BackColor = System.Drawing.Color.Transparent;
-            this.button5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SlateGray;
-            this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
-            this.button5.Location = new System.Drawing.Point(768, 5);
-            this.button5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(131, 47);
-            this.button5.TabIndex = 168;
-            this.button5.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.metroSetToolTip1.SetToolTip(this.button5, "Remove Record");
-            this.button5.UseVisualStyleBackColor = false;
-            // 
-            // button6
-            // 
-            this.button6.BackColor = System.Drawing.Color.Transparent;
-            this.button6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SlateGray;
-            this.button6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
-            this.button6.Location = new System.Drawing.Point(135, 5);
-            this.button6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(106, 47);
-            this.button6.TabIndex = 163;
-            this.button6.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button6.UseVisualStyleBackColor = false;
-            // 
-            // button7
-            // 
-            this.button7.BackColor = System.Drawing.Color.Transparent;
-            this.button7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button7.FlatAppearance.BorderSize = 0;
-            this.button7.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SlateGray;
-            this.button7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Image = ((System.Drawing.Image)(resources.GetObject("button7.Image")));
-            this.button7.Location = new System.Drawing.Point(634, 5);
-            this.button7.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(126, 47);
-            this.button7.TabIndex = 167;
-            this.button7.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.metroSetToolTip1.SetToolTip(this.button7, "Copy Record");
-            this.button7.UseVisualStyleBackColor = false;
-            // 
-            // button8
-            // 
-            this.button8.BackColor = System.Drawing.Color.Transparent;
-            this.button8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button8.FlatAppearance.BorderSize = 0;
-            this.button8.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SlateGray;
-            this.button8.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Image = ((System.Drawing.Image)(resources.GetObject("button8.Image")));
-            this.button8.Location = new System.Drawing.Point(249, 5);
-            this.button8.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(115, 47);
-            this.button8.TabIndex = 164;
-            this.button8.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.metroSetToolTip1.SetToolTip(this.button8, "Upload Changes");
-            this.button8.UseVisualStyleBackColor = false;
-            // 
-            // button10
-            // 
-            this.button10.BackColor = System.Drawing.Color.Transparent;
-            this.button10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button10.FlatAppearance.BorderSize = 0;
-            this.button10.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SlateGray;
-            this.button10.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
-            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button10.Image = ((System.Drawing.Image)(resources.GetObject("button10.Image")));
-            this.button10.Location = new System.Drawing.Point(372, 5);
-            this.button10.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(120, 47);
-            this.button10.TabIndex = 165;
-            this.button10.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button10.UseCompatibleTextRendering = true;
-            this.button10.UseVisualStyleBackColor = true;
-            // 
-            // button13
-            // 
-            this.button13.BackColor = System.Drawing.Color.Transparent;
-            this.button13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button13.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button13.FlatAppearance.BorderSize = 0;
-            this.button13.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SlateGray;
-            this.button13.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
-            this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button13.Image = ((System.Drawing.Image)(resources.GetObject("button13.Image")));
-            this.button13.Location = new System.Drawing.Point(500, 5);
-            this.button13.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(126, 47);
-            this.button13.TabIndex = 166;
-            this.button13.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button13.UseVisualStyleBackColor = false;
             // 
             // tableLayoutPanel1
             // 
@@ -3021,13 +2719,325 @@
             this.metroSetToolTip2.ThemeAuthor = "Narwin";
             this.metroSetToolTip2.ThemeName = "MetroLite";
             // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.BackColor = System.Drawing.Color.Black;
+            this.tableLayoutPanel2.ColumnCount = 7;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 53.25444F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 46.74556F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 127F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 131F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 127F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 135F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 138F));
+            this.tableLayoutPanel2.Controls.Add(this.button2, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.button12, 6, 0);
+            this.tableLayoutPanel2.Controls.Add(this.button3, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.button11, 5, 0);
+            this.tableLayoutPanel2.Controls.Add(this.GridRefreshButton, 2, 0);
+            this.tableLayoutPanel2.Controls.Add(this.button9, 3, 0);
+            this.tableLayoutPanel2.Controls.Add(this.button4, 4, 0);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(323, 434);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 1;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 65.57377F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(903, 47);
+            this.tableLayoutPanel2.TabIndex = 171;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.Transparent;
+            this.button2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SlateGray;
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
+            this.button2.Location = new System.Drawing.Point(4, 5);
+            this.button2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(122, 37);
+            this.button2.TabIndex = 162;
+            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.metroSetToolTip1.SetToolTip(this.button2, "Previous Account");
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // button12
+            // 
+            this.button12.BackColor = System.Drawing.Color.Transparent;
+            this.button12.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button12.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button12.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SlateGray;
+            this.button12.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button12.Image = ((System.Drawing.Image)(resources.GetObject("button12.Image")));
+            this.button12.Location = new System.Drawing.Point(768, 5);
+            this.button12.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(131, 37);
+            this.button12.TabIndex = 168;
+            this.button12.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.metroSetToolTip1.SetToolTip(this.button12, "Remove Account");
+            this.button12.UseVisualStyleBackColor = false;
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.Transparent;
+            this.button3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SlateGray;
+            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
+            this.button3.Location = new System.Drawing.Point(134, 5);
+            this.button3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(106, 37);
+            this.button3.TabIndex = 163;
+            this.button3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.metroSetToolTip1.SetToolTip(this.button3, "Next Account");
+            this.button3.UseVisualStyleBackColor = false;
+            // 
+            // button11
+            // 
+            this.button11.BackColor = System.Drawing.Color.Transparent;
+            this.button11.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button11.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button11.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SlateGray;
+            this.button11.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button11.Image = ((System.Drawing.Image)(resources.GetObject("button11.Image")));
+            this.button11.Location = new System.Drawing.Point(633, 5);
+            this.button11.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(127, 37);
+            this.button11.TabIndex = 167;
+            this.button11.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.metroSetToolTip1.SetToolTip(this.button11, "Copy Account\r\n");
+            this.button11.UseVisualStyleBackColor = false;
+            // 
+            // GridRefreshButton
+            // 
+            this.GridRefreshButton.BackColor = System.Drawing.Color.Transparent;
+            this.GridRefreshButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.GridRefreshButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.GridRefreshButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.GridRefreshButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SlateGray;
+            this.GridRefreshButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.GridRefreshButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.GridRefreshButton.Image = ((System.Drawing.Image)(resources.GetObject("GridRefreshButton.Image")));
+            this.GridRefreshButton.Location = new System.Drawing.Point(248, 5);
+            this.GridRefreshButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.GridRefreshButton.Name = "GridRefreshButton";
+            this.GridRefreshButton.Size = new System.Drawing.Size(119, 37);
+            this.GridRefreshButton.TabIndex = 164;
+            this.GridRefreshButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.metroSetToolTip1.SetToolTip(this.GridRefreshButton, "Refresh Data");
+            this.GridRefreshButton.UseVisualStyleBackColor = false;
+            // 
+            // button9
+            // 
+            this.button9.BackColor = System.Drawing.Color.Transparent;
+            this.button9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button9.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button9.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button9.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SlateGray;
+            this.button9.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button9.Image = ((System.Drawing.Image)(resources.GetObject("button9.Image")));
+            this.button9.Location = new System.Drawing.Point(375, 5);
+            this.button9.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(123, 37);
+            this.button9.TabIndex = 165;
+            this.button9.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.metroSetToolTip1.SetToolTip(this.button9, "Edit Account");
+            this.button9.UseCompatibleTextRendering = true;
+            this.button9.UseVisualStyleBackColor = true;
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.Transparent;
+            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SlateGray;
+            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
+            this.button4.Location = new System.Drawing.Point(506, 5);
+            this.button4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(119, 37);
+            this.button4.TabIndex = 166;
+            this.button4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.metroSetToolTip1.SetToolTip(this.button4, "Add  Account");
+            this.button4.UseVisualStyleBackColor = false;
+            // 
+            // tableLayoutPanel3
+            // 
+            this.tableLayoutPanel3.BackColor = System.Drawing.Color.Black;
+            this.tableLayoutPanel3.ColumnCount = 7;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 53.25444F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 46.74556F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 127F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 131F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 127F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 135F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 138F));
+            this.tableLayoutPanel3.Controls.Add(this.button1, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.button5, 6, 0);
+            this.tableLayoutPanel3.Controls.Add(this.button6, 1, 0);
+            this.tableLayoutPanel3.Controls.Add(this.button7, 5, 0);
+            this.tableLayoutPanel3.Controls.Add(this.button8, 2, 0);
+            this.tableLayoutPanel3.Controls.Add(this.button10, 3, 0);
+            this.tableLayoutPanel3.Controls.Add(this.button13, 4, 0);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(337, 432);
+            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 1;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 65.57377F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(903, 48);
+            this.tableLayoutPanel3.TabIndex = 171;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SlateGray;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.Location = new System.Drawing.Point(4, 5);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(122, 38);
+            this.button1.TabIndex = 162;
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.metroSetToolTip1.SetToolTip(this.button1, "Previous Account");
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.Transparent;
+            this.button5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button5.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SlateGray;
+            this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
+            this.button5.Location = new System.Drawing.Point(768, 5);
+            this.button5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(131, 38);
+            this.button5.TabIndex = 168;
+            this.button5.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.metroSetToolTip1.SetToolTip(this.button5, "Remove Account");
+            this.button5.UseVisualStyleBackColor = false;
+            // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.Transparent;
+            this.button6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button6.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button6.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SlateGray;
+            this.button6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
+            this.button6.Location = new System.Drawing.Point(134, 5);
+            this.button6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(106, 38);
+            this.button6.TabIndex = 163;
+            this.button6.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.metroSetToolTip1.SetToolTip(this.button6, "Next Account");
+            this.button6.UseVisualStyleBackColor = false;
+            // 
+            // button7
+            // 
+            this.button7.BackColor = System.Drawing.Color.Transparent;
+            this.button7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button7.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button7.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SlateGray;
+            this.button7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button7.Image = ((System.Drawing.Image)(resources.GetObject("button7.Image")));
+            this.button7.Location = new System.Drawing.Point(633, 5);
+            this.button7.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(127, 38);
+            this.button7.TabIndex = 167;
+            this.button7.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.metroSetToolTip1.SetToolTip(this.button7, "Copy Account\r\n");
+            this.button7.UseVisualStyleBackColor = false;
+            // 
+            // button8
+            // 
+            this.button8.BackColor = System.Drawing.Color.Transparent;
+            this.button8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button8.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button8.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SlateGray;
+            this.button8.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button8.Image = ((System.Drawing.Image)(resources.GetObject("button8.Image")));
+            this.button8.Location = new System.Drawing.Point(248, 5);
+            this.button8.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(119, 38);
+            this.button8.TabIndex = 164;
+            this.button8.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.metroSetToolTip1.SetToolTip(this.button8, "Refresh Data");
+            this.button8.UseVisualStyleBackColor = false;
+            // 
+            // button10
+            // 
+            this.button10.BackColor = System.Drawing.Color.Transparent;
+            this.button10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button10.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button10.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button10.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SlateGray;
+            this.button10.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button10.Image = ((System.Drawing.Image)(resources.GetObject("button10.Image")));
+            this.button10.Location = new System.Drawing.Point(375, 5);
+            this.button10.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(123, 38);
+            this.button10.TabIndex = 165;
+            this.button10.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.metroSetToolTip1.SetToolTip(this.button10, "Edit Account");
+            this.button10.UseCompatibleTextRendering = true;
+            this.button10.UseVisualStyleBackColor = true;
+            // 
+            // button13
+            // 
+            this.button13.BackColor = System.Drawing.Color.Transparent;
+            this.button13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button13.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button13.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.button13.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SlateGray;
+            this.button13.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button13.Image = ((System.Drawing.Image)(resources.GetObject("button13.Image")));
+            this.button13.Location = new System.Drawing.Point(506, 5);
+            this.button13.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button13.Name = "button13";
+            this.button13.Size = new System.Drawing.Size(119, 38);
+            this.button13.TabIndex = 166;
+            this.button13.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.metroSetToolTip1.SetToolTip(this.button13, "Add  Account");
+            this.button13.UseVisualStyleBackColor = false;
+            // 
             // RecordManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.BackColor = System.Drawing.Color.Black;
             this.BorderColor = System.Drawing.SystemColors.MenuHighlight;
-            this.CaptionBarColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.CaptionBarColor = System.Drawing.Color.Black;
             this.CaptionBarHeight = 30;
             this.CaptionForeColor = System.Drawing.Color.SteelBlue;
             captionImage1.BackColor = System.Drawing.Color.Black;
@@ -3035,7 +3045,7 @@
             captionImage1.Location = new System.Drawing.Point(4, 4);
             captionImage1.Name = "CaptionImage2";
             this.CaptionImages.Add(captionImage1);
-            this.ClientSize = new System.Drawing.Size(1272, 555);
+            this.ClientSize = new System.Drawing.Size(1272, 538);
             this.Controls.Add(this.AccountTabControl);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(1284, 644);
@@ -3046,14 +3056,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.AccountTabControl)).EndInit();
             this.AccountTabControl.ResumeLayout(false);
             this.UpdateTab.ResumeLayout(false);
-            this.tableLayoutPanel2.ResumeLayout(false);
             this.RecordTabelPanel.ResumeLayout(false);
             this.RecordTabelPanel.PerformLayout();
             this.AddNewTab.ResumeLayout(false);
-            this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BindingSource)).EndInit();
+            this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -3185,6 +3195,8 @@
         private MetroSet_UI.Controls.MetroSetTextBox metroSetTextBox28;
         private MetroSet_UI.Controls.MetroSetTextBox metroSetTextBox29;
         private MetroSet_UI.Controls.MetroSetTextBox metroSetTextBox30;
+        private MetroSet_UI.Components.MetroSetToolTip metroSetToolTip1;
+        private MetroSet_UI.Components.MetroSetToolTip metroSetToolTip2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button12;
@@ -3201,8 +3213,6 @@
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Button button13;
-        private MetroSet_UI.Components.MetroSetToolTip metroSetToolTip1;
-        private MetroSet_UI.Components.MetroSetToolTip metroSetToolTip2;
     }
 }
 

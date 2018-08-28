@@ -40,7 +40,7 @@ namespace BudgetExecution
                 FTE = GetFTE(DbTable);
             }
 
-            Count = PrcData.Item1.Rows.Count;
+            Count = DbTable.Rows.Count;
             BocData = Metric.BocTotals;
             NpmData = Metric.NpmTotals;
             ProgramData = Metric.ProgramAreaTotals;
