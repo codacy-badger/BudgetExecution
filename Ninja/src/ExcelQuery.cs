@@ -19,35 +19,35 @@ namespace BudgetExecution
 
         public ExcelQuery(Source source) : base(source, Provider.OleDb)
         {
+            Settings = new AppSettingsReader();
             Source = source;
             Provider = base.Provider;
             TableName = source.ToString();
             SelectStatement = $"SELECT * FROM {source.ToString()}";
-            Connection = new OleDbConnection(@"data source=C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\database\SqlServerQuery\R6.mdf");
+            Connection = new OleDbConnection(@"data source=C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\database\OleDb\R6.xlsx");
             SelectCommand = new OleDbCommand(SelectStatement, Connection);
             Adapter = new OleDbDataAdapter(SelectCommand);
             CommandBuilder = GetCommandBuilder(Adapter);
             InsertCommand = CommandBuilder.GetInsertCommand();
             UpdateCommand = CommandBuilder.GetInsertCommand();
             DeleteCommand = CommandBuilder.GetInsertCommand();
-            Settings = new AppSettingsReader();
         }
 
         public ExcelQuery(Source source, Dictionary<string, object> param)
         {
+            Settings = new AppSettingsReader();
             Source = source;
             Provider = Provider.OleDb;
             TableName = source.ToString();
             Parameters = GetParameter(param);
             SelectStatement = GetSqlStatement();
-            Connection = new OleDbConnection(@"data source=C:\Users\terry\Documents\Visual Studio 2017\Projects\Budget\database\sqlclient\R6.mdf");
+            Connection = new OleDbConnection(@"data source=C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\database\OleDb\R6.xlsx");
             SelectCommand = new OleDbCommand(SelectStatement, Connection);
             Adapter = new OleDbDataAdapter(SelectCommand);
             CommandBuilder = GetCommandBuilder(Adapter);
             InsertCommand = CommandBuilder.GetInsertCommand();
             UpdateCommand = CommandBuilder.GetInsertCommand();
             DeleteCommand = CommandBuilder.GetInsertCommand();
-            Settings = new AppSettingsReader();
         }
 
         // Properties

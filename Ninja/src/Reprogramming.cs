@@ -63,7 +63,7 @@ namespace BudgetExecution
 
         private void ExcelButton_OnClick(object sender, EventArgs e)
         {
-            ExcelReader ef = new ExcelReader();
+            ExcelDataReader ef = new ExcelDataReader();
             ef.Show();
         }
 

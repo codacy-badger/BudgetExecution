@@ -2,7 +2,6 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
-using Syncfusion.Data.Extensions;
 
 namespace BudgetExecution
 {
@@ -13,6 +12,7 @@ namespace BudgetExecution
     using System.Data.SQLite;
     using System.Linq;
     using System.Windows.Forms;
+    using Syncfusion.Data.Extensions;
 
     public class DataBuilder : IDataBuilder
     {
@@ -158,6 +158,25 @@ namespace BudgetExecution
                 new Error(ex).ShowDialog();
                 return null;
             }
+        }       
+
+        public ExcelQuery GetExcelQuery(Source source, Provider provider)
+        {
+            try
+            {
+                if (provider == Provider.OleDb)
+                {
+                    ExcelQuery eq = new ExcelQuery(source);
+                    return eq;
+                }
+
+                return null;
+            }
+            catch (Exception ex)
+            {
+                new Error(ex).ShowDialog();
+                return null;
+            }
         }
 
         public ExcelQuery GetExcelQuery(Source source, Provider provider, OleDbParameter[] pmr)
@@ -179,7 +198,7 @@ namespace BudgetExecution
                 return null;
             }
         }
-
+ 
         public ExcelQuery GetExcelQuery(Source source, Provider provider, Dictionary<string, object> dpr)
         {
             try
@@ -240,6 +259,19 @@ namespace BudgetExecution
             try
             {
                 return table.AsEnumerable().Where(p => p.Field<string>(prcfilter.ToString()).Equals(filter)).Select(p => p).CopyToDataTable();
+            }
+            catch (Exception ex)
+            {
+                new Error(ex).ShowDialog();
+                return null;
+            }
+        }
+        
+        public static DataTable FilterTable(DataTable table, Field[] col, string[] filter)
+        {
+            try
+            {
+                return table.AsEnumerable().Where(p => p.Field<string>(col.ToString()).Equals(filter)).Select(p => p).CopyToDataTable();
             }
             catch (Exception ex)
             {

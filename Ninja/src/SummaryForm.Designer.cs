@@ -1242,7 +1242,7 @@ namespace BudgetExecution
             this.ProjectTab.Location = new System.Drawing.Point(0, 34);
             this.ProjectTab.Name = "ProjectTab";
             this.ProjectTab.ShowCloseButton = true;
-            this.ProjectTab.Size = new System.Drawing.Size(1843, 987);
+            this.ProjectTab.Size = new System.Drawing.Size(1757, 987);
             this.ProjectTab.TabForeColor = System.Drawing.Color.LightSteelBlue;
             this.ProjectTab.TabIndex = 8;
             this.ProjectTab.Tag = "ProgramProjectName";
@@ -1261,7 +1261,7 @@ namespace BudgetExecution
             this.ProjectExpander2.Controls.Add(this.label30);
             this.ProjectExpander2.ExpandedHeight = 292;
             this.ProjectExpander2.IsExpanded = true;
-            this.ProjectExpander2.Location = new System.Drawing.Point(1542, 412);
+            this.ProjectExpander2.Location = new System.Drawing.Point(1524, 427);
             this.ProjectExpander2.Name = "ProjectExpander2";
             this.ProjectExpander2.Size = new System.Drawing.Size(230, 292);
             this.ProjectExpander2.TabIndex = 110;
@@ -1414,7 +1414,7 @@ namespace BudgetExecution
             this.ProjectExpander1.Controls.Add(this.label24);
             this.ProjectExpander1.ExpandedHeight = 268;
             this.ProjectExpander1.IsExpanded = true;
-            this.ProjectExpander1.Location = new System.Drawing.Point(1542, 115);
+            this.ProjectExpander1.Location = new System.Drawing.Point(1524, 114);
             this.ProjectExpander1.Name = "ProjectExpander1";
             this.ProjectExpander1.Size = new System.Drawing.Size(230, 268);
             this.ProjectExpander1.TabIndex = 108;
@@ -1713,7 +1713,7 @@ namespace BudgetExecution
             this.AreaTab.Location = new System.Drawing.Point(0, 34);
             this.AreaTab.Name = "AreaTab";
             this.AreaTab.ShowCloseButton = true;
-            this.AreaTab.Size = new System.Drawing.Size(1843, 987);
+            this.AreaTab.Size = new System.Drawing.Size(1757, 987);
             this.AreaTab.TabForeColor = System.Drawing.Color.LightSteelBlue;
             this.AreaTab.TabIndex = 7;
             this.AreaTab.Tag = "ProgramAreaName";
@@ -1732,7 +1732,7 @@ namespace BudgetExecution
             this.AreaExpander2.Controls.Add(this.label29);
             this.AreaExpander2.ExpandedHeight = 292;
             this.AreaExpander2.IsExpanded = true;
-            this.AreaExpander2.Location = new System.Drawing.Point(1542, 404);
+            this.AreaExpander2.Location = new System.Drawing.Point(1533, 407);
             this.AreaExpander2.Name = "AreaExpander2";
             this.AreaExpander2.Size = new System.Drawing.Size(221, 292);
             this.AreaExpander2.TabIndex = 110;
@@ -1885,7 +1885,7 @@ namespace BudgetExecution
             this.AreaExpander1.Controls.Add(this.label21);
             this.AreaExpander1.ExpandedHeight = 260;
             this.AreaExpander1.IsExpanded = true;
-            this.AreaExpander1.Location = new System.Drawing.Point(1542, 115);
+            this.AreaExpander1.Location = new System.Drawing.Point(1525, 116);
             this.AreaExpander1.Name = "AreaExpander1";
             this.AreaExpander1.Size = new System.Drawing.Size(221, 260);
             this.AreaExpander1.TabIndex = 108;
@@ -2175,7 +2175,7 @@ namespace BudgetExecution
             this.DivisionTab.Location = new System.Drawing.Point(0, 34);
             this.DivisionTab.Name = "DivisionTab";
             this.DivisionTab.ShowCloseButton = true;
-            this.DivisionTab.Size = new System.Drawing.Size(1843, 987);
+            this.DivisionTab.Size = new System.Drawing.Size(1757, 987);
             this.DivisionTab.TabBackColor = System.Drawing.Color.Black;
             this.DivisionTab.TabForeColor = System.Drawing.Color.LightSteelBlue;
             this.DivisionTab.TabIndex = 6;
@@ -2195,7 +2195,7 @@ namespace BudgetExecution
             this.DivisionExpander2.Controls.Add(this.label28);
             this.DivisionExpander2.ExpandedHeight = 292;
             this.DivisionExpander2.IsExpanded = true;
-            this.DivisionExpander2.Location = new System.Drawing.Point(1542, 387);
+            this.DivisionExpander2.Location = new System.Drawing.Point(1522, 421);
             this.DivisionExpander2.Name = "DivisionExpander2";
             this.DivisionExpander2.Size = new System.Drawing.Size(230, 292);
             this.DivisionExpander2.TabIndex = 110;
@@ -2348,7 +2348,7 @@ namespace BudgetExecution
             this.DivisionExpander1.Controls.Add(this.label18);
             this.DivisionExpander1.ExpandedHeight = 266;
             this.DivisionExpander1.IsExpanded = true;
-            this.DivisionExpander1.Location = new System.Drawing.Point(1542, 115);
+            this.DivisionExpander1.Location = new System.Drawing.Point(1522, 115);
             this.DivisionExpander1.Name = "DivisionExpander1";
             this.DivisionExpander1.Size = new System.Drawing.Size(230, 266);
             this.DivisionExpander1.TabIndex = 108;
@@ -2637,7 +2637,7 @@ namespace BudgetExecution
             this.ObjectiveTab.Location = new System.Drawing.Point(0, 34);
             this.ObjectiveTab.Name = "ObjectiveTab";
             this.ObjectiveTab.ShowCloseButton = true;
-            this.ObjectiveTab.Size = new System.Drawing.Size(1843, 987);
+            this.ObjectiveTab.Size = new System.Drawing.Size(1757, 987);
             this.ObjectiveTab.TabForeColor = System.Drawing.Color.LightSteelBlue;
             this.ObjectiveTab.TabIndex = 5;
             this.ObjectiveTab.Tag = "ObjectiveName";
@@ -2656,7 +2656,7 @@ namespace BudgetExecution
             this.ObjectiveExpander2.Controls.Add(this.label26);
             this.ObjectiveExpander2.ExpandedHeight = 292;
             this.ObjectiveExpander2.IsExpanded = true;
-            this.ObjectiveExpander2.Location = new System.Drawing.Point(1542, 404);
+            this.ObjectiveExpander2.Location = new System.Drawing.Point(1515, 434);
             this.ObjectiveExpander2.Name = "ObjectiveExpander2";
             this.ObjectiveExpander2.Size = new System.Drawing.Size(230, 292);
             this.ObjectiveExpander2.TabIndex = 110;
@@ -2809,7 +2809,7 @@ namespace BudgetExecution
             this.ObjectiveExpander1.Controls.Add(this.label15);
             this.ObjectiveExpander1.ExpandedHeight = 268;
             this.ObjectiveExpander1.IsExpanded = true;
-            this.ObjectiveExpander1.Location = new System.Drawing.Point(1542, 115);
+            this.ObjectiveExpander1.Location = new System.Drawing.Point(1524, 130);
             this.ObjectiveExpander1.Name = "ObjectiveExpander1";
             this.ObjectiveExpander1.Size = new System.Drawing.Size(230, 268);
             this.ObjectiveExpander1.TabIndex = 108;
@@ -3098,7 +3098,7 @@ namespace BudgetExecution
             this.GoalTab.Location = new System.Drawing.Point(0, 34);
             this.GoalTab.Name = "GoalTab";
             this.GoalTab.ShowCloseButton = true;
-            this.GoalTab.Size = new System.Drawing.Size(1843, 987);
+            this.GoalTab.Size = new System.Drawing.Size(1757, 987);
             this.GoalTab.TabForeColor = System.Drawing.Color.LightSteelBlue;
             this.GoalTab.TabIndex = 4;
             this.GoalTab.Tag = "GoalName";
@@ -3117,7 +3117,7 @@ namespace BudgetExecution
             this.GoalExpander2.Controls.Add(this.label10);
             this.GoalExpander2.ExpandedHeight = 292;
             this.GoalExpander2.IsExpanded = true;
-            this.GoalExpander2.Location = new System.Drawing.Point(1542, 402);
+            this.GoalExpander2.Location = new System.Drawing.Point(1524, 414);
             this.GoalExpander2.Name = "GoalExpander2";
             this.GoalExpander2.Size = new System.Drawing.Size(230, 292);
             this.GoalExpander2.TabIndex = 110;
@@ -3270,7 +3270,7 @@ namespace BudgetExecution
             this.GoalExpander1.Controls.Add(this.label12);
             this.GoalExpander1.ExpandedHeight = 281;
             this.GoalExpander1.IsExpanded = true;
-            this.GoalExpander1.Location = new System.Drawing.Point(1542, 115);
+            this.GoalExpander1.Location = new System.Drawing.Point(1524, 115);
             this.GoalExpander1.Name = "GoalExpander1";
             this.GoalExpander1.Size = new System.Drawing.Size(230, 281);
             this.GoalExpander1.TabIndex = 108;
@@ -3559,7 +3559,7 @@ namespace BudgetExecution
             this.NpmTab.Location = new System.Drawing.Point(0, 34);
             this.NpmTab.Name = "NpmTab";
             this.NpmTab.ShowCloseButton = true;
-            this.NpmTab.Size = new System.Drawing.Size(1843, 987);
+            this.NpmTab.Size = new System.Drawing.Size(1757, 987);
             this.NpmTab.TabForeColor = System.Drawing.Color.LightSteelBlue;
             this.NpmTab.TabIndex = 3;
             this.NpmTab.Tag = "NpmName";
@@ -3578,7 +3578,7 @@ namespace BudgetExecution
             this.NpmExpander2.Controls.Add(this.label27);
             this.NpmExpander2.ExpandedHeight = 292;
             this.NpmExpander2.IsExpanded = true;
-            this.NpmExpander2.Location = new System.Drawing.Point(1542, 405);
+            this.NpmExpander2.Location = new System.Drawing.Point(1527, 414);
             this.NpmExpander2.Name = "NpmExpander2";
             this.NpmExpander2.Size = new System.Drawing.Size(230, 292);
             this.NpmExpander2.TabIndex = 110;
@@ -3731,7 +3731,7 @@ namespace BudgetExecution
             this.NpmExpander1.Controls.Add(this.NpmFilter1);
             this.NpmExpander1.ExpandedHeight = 275;
             this.NpmExpander1.IsExpanded = true;
-            this.NpmExpander1.Location = new System.Drawing.Point(1542, 115);
+            this.NpmExpander1.Location = new System.Drawing.Point(1515, 124);
             this.NpmExpander1.Name = "NpmExpander1";
             this.NpmExpander1.Size = new System.Drawing.Size(230, 275);
             this.NpmExpander1.TabIndex = 108;
@@ -3990,7 +3990,7 @@ namespace BudgetExecution
             this.NpmChart.Series3D = true;
             this.NpmChart.SeriesHighlight = true;
             this.NpmChart.ShadowColor = new Syncfusion.Drawing.BrushInfo(Syncfusion.Drawing.GradientStyle.PathRectangle, System.Drawing.SystemColors.WindowText, System.Drawing.Color.Silver);
-            this.NpmChart.Size = new System.Drawing.Size(1500, 720);
+            this.NpmChart.Size = new System.Drawing.Size(1422, 720);
             this.NpmChart.Spacing = 5F;
             this.NpmChart.SpacingBetweenPoints = 5F;
             this.NpmChart.Style3D = true;
@@ -4020,7 +4020,7 @@ namespace BudgetExecution
             this.BocTab.Location = new System.Drawing.Point(0, 34);
             this.BocTab.Name = "BocTab";
             this.BocTab.ShowCloseButton = true;
-            this.BocTab.Size = new System.Drawing.Size(1843, 987);
+            this.BocTab.Size = new System.Drawing.Size(1757, 987);
             this.BocTab.TabForeColor = System.Drawing.Color.LightSteelBlue;
             this.BocTab.TabIndex = 2;
             this.BocTab.Tag = "BocName";
@@ -4039,7 +4039,7 @@ namespace BudgetExecution
             this.BocExpander2.Controls.Add(this.label36);
             this.BocExpander2.ExpandedHeight = 292;
             this.BocExpander2.IsExpanded = true;
-            this.BocExpander2.Location = new System.Drawing.Point(1542, 402);
+            this.BocExpander2.Location = new System.Drawing.Point(1515, 404);
             this.BocExpander2.Name = "BocExpander2";
             this.BocExpander2.Size = new System.Drawing.Size(230, 292);
             this.BocExpander2.TabIndex = 109;
@@ -4192,7 +4192,7 @@ namespace BudgetExecution
             this.BocExpander1.Controls.Add(this.BocFilter1);
             this.BocExpander1.ExpandedHeight = 258;
             this.BocExpander1.IsExpanded = true;
-            this.BocExpander1.Location = new System.Drawing.Point(1542, 115);
+            this.BocExpander1.Location = new System.Drawing.Point(1515, 117);
             this.BocExpander1.Name = "BocExpander1";
             this.BocExpander1.Size = new System.Drawing.Size(230, 258);
             this.BocExpander1.TabIndex = 108;
@@ -4452,7 +4452,7 @@ namespace BudgetExecution
             this.BocChart.Series3D = true;
             this.BocChart.SeriesHighlight = true;
             this.BocChart.ShadowColor = new Syncfusion.Drawing.BrushInfo(Syncfusion.Drawing.GradientStyle.PathRectangle, System.Drawing.SystemColors.WindowText, System.Drawing.Color.Silver);
-            this.BocChart.Size = new System.Drawing.Size(1500, 720);
+            this.BocChart.Size = new System.Drawing.Size(1465, 720);
             this.BocChart.Spacing = 5F;
             this.BocChart.SpacingBetweenPoints = 5F;
             this.BocChart.Style3D = true;
@@ -4482,7 +4482,7 @@ namespace BudgetExecution
             this.FundTab.Location = new System.Drawing.Point(0, 34);
             this.FundTab.Name = "FundTab";
             this.FundTab.ShowCloseButton = true;
-            this.FundTab.Size = new System.Drawing.Size(1843, 987);
+            this.FundTab.Size = new System.Drawing.Size(1757, 987);
             this.FundTab.TabForeColor = System.Drawing.Color.LightSteelBlue;
             this.FundTab.TabIndex = 1;
             this.FundTab.Tag = "Appropriation";
@@ -4501,7 +4501,7 @@ namespace BudgetExecution
             this.FundExpander2.Controls.Add(this.label25);
             this.FundExpander2.ExpandedHeight = 292;
             this.FundExpander2.IsExpanded = true;
-            this.FundExpander2.Location = new System.Drawing.Point(1542, 404);
+            this.FundExpander2.Location = new System.Drawing.Point(1524, 404);
             this.FundExpander2.Name = "FundExpander2";
             this.FundExpander2.Size = new System.Drawing.Size(230, 292);
             this.FundExpander2.TabIndex = 108;
@@ -4655,7 +4655,7 @@ namespace BudgetExecution
             this.FundExpander1.Controls.Add(this.label1);
             this.FundExpander1.ExpandedHeight = 283;
             this.FundExpander1.IsExpanded = true;
-            this.FundExpander1.Location = new System.Drawing.Point(1542, 115);
+            this.FundExpander1.Location = new System.Drawing.Point(1524, 115);
             this.FundExpander1.Name = "FundExpander1";
             this.FundExpander1.Size = new System.Drawing.Size(230, 283);
             this.FundExpander1.TabIndex = 107;
@@ -4937,7 +4937,7 @@ namespace BudgetExecution
             // 
             this.SummaryTabControl.ActiveTabColor = System.Drawing.Color.SteelBlue;
             this.SummaryTabControl.ActiveTabForeColor = System.Drawing.SystemColors.HighlightText;
-            this.SummaryTabControl.BeforeTouchSize = new System.Drawing.Size(1843, 1021);
+            this.SummaryTabControl.BeforeTouchSize = new System.Drawing.Size(1757, 1021);
             this.SummaryTabControl.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.SummaryTabControl.BorderWidth = 0;
             this.SummaryTabControl.CloseButtonForeColor = System.Drawing.Color.Empty;
@@ -4965,7 +4965,7 @@ namespace BudgetExecution
             this.SummaryTabControl.SeparatorColor = System.Drawing.Color.Black;
             this.SummaryTabControl.ShowScroll = false;
             this.SummaryTabControl.ShowSeparator = true;
-            this.SummaryTabControl.Size = new System.Drawing.Size(1843, 1021);
+            this.SummaryTabControl.Size = new System.Drawing.Size(1757, 1021);
             this.SummaryTabControl.TabGap = 5;
             this.SummaryTabControl.TabIndex = 0;
             this.SummaryTabControl.TabPanelBackColor = System.Drawing.Color.Black;
@@ -4985,7 +4985,7 @@ namespace BudgetExecution
             this.DatabaseTab.Name = "DatabaseTab";
             this.DatabaseTab.Padding = new System.Windows.Forms.Padding(2);
             this.DatabaseTab.ShowCloseButton = true;
-            this.DatabaseTab.Size = new System.Drawing.Size(1843, 987);
+            this.DatabaseTab.Size = new System.Drawing.Size(1843, 969);
             this.DatabaseTab.TabIndex = 9;
             this.DatabaseTab.Tag = "Database";
             this.DatabaseTab.Text = "Account Manager";
@@ -5016,11 +5016,11 @@ namespace BudgetExecution
             this.GridGroupBox.Font = new System.Drawing.Font("Segoe UI", 8.25F);
             this.GridGroupBox.ForeColor = System.Drawing.Color.LightSteelBlue;
             this.GridGroupBox.Image = null;
-            this.GridGroupBox.Location = new System.Drawing.Point(28, 109);
+            this.GridGroupBox.Location = new System.Drawing.Point(12, 109);
             this.GridGroupBox.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
             this.GridGroupBox.Name = "GridGroupBox";
             this.GridGroupBox.Padding = new System.Windows.Forms.Padding(5, 26, 5, 5);
-            this.GridGroupBox.Separator = true;
+            this.GridGroupBox.Separator = false;
             this.GridGroupBox.SeparatorColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.GridGroupBox.Size = new System.Drawing.Size(1160, 739);
             this.GridGroupBox.TabIndex = 162;
@@ -5227,7 +5227,7 @@ namespace BudgetExecution
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 131F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 127F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 135F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 140F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 142F));
             this.tableLayoutPanel2.Controls.Add(this.button6, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.button12, 6, 0);
             this.tableLayoutPanel2.Controls.Add(this.button7, 1, 0);
@@ -5255,7 +5255,7 @@ namespace BudgetExecution
             this.button6.Location = new System.Drawing.Point(4, 5);
             this.button6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(121, 42);
+            this.button6.Size = new System.Drawing.Size(120, 42);
             this.button6.TabIndex = 162;
             this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.metroSetToolTip1.SetToolTip(this.button6, "Previous Account");
@@ -5271,10 +5271,10 @@ namespace BudgetExecution
             this.button12.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button12.Image = ((System.Drawing.Image)(resources.GetObject("button12.Image")));
-            this.button12.Location = new System.Drawing.Point(766, 5);
+            this.button12.Location = new System.Drawing.Point(764, 5);
             this.button12.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(133, 42);
+            this.button12.Size = new System.Drawing.Size(135, 42);
             this.button12.TabIndex = 168;
             this.button12.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.metroSetToolTip1.SetToolTip(this.button12, "Remove Account");
@@ -5289,10 +5289,10 @@ namespace BudgetExecution
             this.button7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button7.Image = ((System.Drawing.Image)(resources.GetObject("button7.Image")));
-            this.button7.Location = new System.Drawing.Point(133, 5);
+            this.button7.Location = new System.Drawing.Point(132, 5);
             this.button7.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(105, 42);
+            this.button7.Size = new System.Drawing.Size(104, 42);
             this.button7.TabIndex = 163;
             this.button7.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.metroSetToolTip1.SetToolTip(this.button7, "Next Account");
@@ -5308,7 +5308,7 @@ namespace BudgetExecution
             this.button11.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button11.Image = ((System.Drawing.Image)(resources.GetObject("button11.Image")));
-            this.button11.Location = new System.Drawing.Point(631, 5);
+            this.button11.Location = new System.Drawing.Point(629, 5);
             this.button11.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(127, 42);
@@ -5328,7 +5328,7 @@ namespace BudgetExecution
             this.GridRefreshButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.GridRefreshButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.GridRefreshButton.Image = ((System.Drawing.Image)(resources.GetObject("GridRefreshButton.Image")));
-            this.GridRefreshButton.Location = new System.Drawing.Point(246, 5);
+            this.GridRefreshButton.Location = new System.Drawing.Point(244, 5);
             this.GridRefreshButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.GridRefreshButton.Name = "GridRefreshButton";
             this.GridRefreshButton.Size = new System.Drawing.Size(119, 42);
@@ -5348,7 +5348,7 @@ namespace BudgetExecution
             this.button9.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button9.Image = ((System.Drawing.Image)(resources.GetObject("button9.Image")));
-            this.button9.Location = new System.Drawing.Point(373, 5);
+            this.button9.Location = new System.Drawing.Point(371, 5);
             this.button9.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(123, 42);
@@ -5369,7 +5369,7 @@ namespace BudgetExecution
             this.button10.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button10.Image = ((System.Drawing.Image)(resources.GetObject("button10.Image")));
-            this.button10.Location = new System.Drawing.Point(504, 5);
+            this.button10.Location = new System.Drawing.Point(502, 5);
             this.button10.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(119, 42);
@@ -5464,7 +5464,7 @@ namespace BudgetExecution
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 16F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 68F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 126F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 122F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 124F));
             this.tableLayoutPanel1.Controls.Add(this.label31, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.label32, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.label34, 2, 0);
@@ -5483,7 +5483,7 @@ namespace BudgetExecution
             this.label31.AutoSize = true;
             this.label31.Dock = System.Windows.Forms.DockStyle.Right;
             this.label31.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.label31.Location = new System.Drawing.Point(28, 0);
+            this.label31.Location = new System.Drawing.Point(27, 0);
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(55, 33);
             this.label31.TabIndex = 153;
@@ -5493,7 +5493,7 @@ namespace BudgetExecution
             // 
             this.label32.AutoSize = true;
             this.label32.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label32.Location = new System.Drawing.Point(89, 0);
+            this.label32.Location = new System.Drawing.Point(88, 0);
             this.label32.Name = "label32";
             this.label32.Size = new System.Drawing.Size(64, 33);
             this.label32.TabIndex = 154;
@@ -5504,7 +5504,7 @@ namespace BudgetExecution
             this.label34.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label34.AutoSize = true;
             this.label34.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.label34.Location = new System.Drawing.Point(381, 0);
+            this.label34.Location = new System.Drawing.Point(379, 0);
             this.label34.Name = "label34";
             this.label34.Size = new System.Drawing.Size(81, 23);
             this.label34.TabIndex = 155;
@@ -5514,7 +5514,7 @@ namespace BudgetExecution
             // 
             this.label37.AutoSize = true;
             this.label37.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label37.Location = new System.Drawing.Point(468, 0);
+            this.label37.Location = new System.Drawing.Point(466, 0);
             this.label37.Name = "label37";
             this.label37.Size = new System.Drawing.Size(64, 33);
             this.label37.TabIndex = 156;
@@ -5525,7 +5525,7 @@ namespace BudgetExecution
             this.label40.AutoSize = true;
             this.label40.Dock = System.Windows.Forms.DockStyle.Right;
             this.label40.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.label40.Location = new System.Drawing.Point(712, 0);
+            this.label40.Location = new System.Drawing.Point(710, 0);
             this.label40.Name = "label40";
             this.label40.Size = new System.Drawing.Size(89, 33);
             this.label40.TabIndex = 159;
@@ -5535,7 +5535,7 @@ namespace BudgetExecution
             // 
             this.label41.AutoSize = true;
             this.label41.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label41.Location = new System.Drawing.Point(807, 0);
+            this.label41.Location = new System.Drawing.Point(805, 0);
             this.label41.Name = "label41";
             this.label41.Size = new System.Drawing.Size(64, 33);
             this.label41.TabIndex = 160;
@@ -5568,12 +5568,12 @@ namespace BudgetExecution
             this.visualGroupBox1.Font = new System.Drawing.Font("Segoe UI", 8.25F);
             this.visualGroupBox1.ForeColor = System.Drawing.Color.LightSteelBlue;
             this.visualGroupBox1.Image = null;
-            this.visualGroupBox1.Location = new System.Drawing.Point(1238, 109);
+            this.visualGroupBox1.Location = new System.Drawing.Point(1178, 109);
             this.visualGroupBox1.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
             this.visualGroupBox1.Name = "visualGroupBox1";
             this.visualGroupBox1.Padding = new System.Windows.Forms.Padding(5, 26, 5, 5);
-            this.visualGroupBox1.Separator = true;
-            this.visualGroupBox1.SeparatorColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.visualGroupBox1.Separator = false;
+            this.visualGroupBox1.SeparatorColor = System.Drawing.Color.Transparent;
             this.visualGroupBox1.Size = new System.Drawing.Size(574, 739);
             this.visualGroupBox1.TabIndex = 161;
             this.visualGroupBox1.Text = "Allocation";
@@ -6015,7 +6015,7 @@ namespace BudgetExecution
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 45.9854F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 54.0146F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 118F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 106F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 108F));
             this.tableLayoutPanel3.Controls.Add(this.button4, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.button5, 1, 0);
             this.tableLayoutPanel3.Controls.Add(this.button3, 3, 0);
@@ -6037,7 +6037,7 @@ namespace BudgetExecution
             this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
             this.button4.Location = new System.Drawing.Point(3, 3);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(108, 44);
+            this.button4.Size = new System.Drawing.Size(107, 44);
             this.button4.TabIndex = 159;
             this.metroSetToolTip1.SetToolTip(this.button4, "Previous Account");
             this.button4.UseVisualStyleBackColor = false;
@@ -6051,9 +6051,9 @@ namespace BudgetExecution
             this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
-            this.button5.Location = new System.Drawing.Point(117, 3);
+            this.button5.Location = new System.Drawing.Point(116, 3);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(128, 44);
+            this.button5.Size = new System.Drawing.Size(127, 44);
             this.button5.TabIndex = 160;
             this.metroSetToolTip1.SetToolTip(this.button5, "Next Account");
             this.button5.UseVisualStyleBackColor = false;
@@ -6068,9 +6068,9 @@ namespace BudgetExecution
             this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.Location = new System.Drawing.Point(369, 3);
+            this.button3.Location = new System.Drawing.Point(367, 3);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(101, 44);
+            this.button3.Size = new System.Drawing.Size(103, 44);
             this.button3.TabIndex = 158;
             this.metroSetToolTip1.SetToolTip(this.button3, "Remove Account");
             this.button3.UseVisualStyleBackColor = false;
@@ -6084,7 +6084,7 @@ namespace BudgetExecution
             this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(251, 3);
+            this.button1.Location = new System.Drawing.Point(249, 3);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(112, 44);
             this.button1.TabIndex = 157;
@@ -6618,7 +6618,7 @@ namespace BudgetExecution
             this.CaptionFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CaptionForeColor = System.Drawing.SystemColors.MenuHighlight;
             this.CaptionVerticalAlignment = Syncfusion.Windows.Forms.VerticalAlignment.Top;
-            this.ClientSize = new System.Drawing.Size(1843, 1021);
+            this.ClientSize = new System.Drawing.Size(1757, 1021);
             this.Controls.Add(this.SummaryTabControl);
             this.ForeColor = System.Drawing.Color.LightSteelBlue;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

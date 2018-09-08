@@ -10,9 +10,7 @@ namespace BudgetExecution
     using System.Data;
     using System.Drawing;
     using System.Windows.Forms;
-
     using MetroSet_UI.Controls;
-
     using Syncfusion.Windows.Forms;
 
     public partial class ExcelForm : MetroForm
@@ -167,7 +165,7 @@ namespace BudgetExecution
 
         private void ExcelButton_OnClick(object sender, EventArgs e)
         {
-            ExcelReader ef = new ExcelReader();
+            ExcelDataReader ef = new ExcelDataReader();
             ef.Show();
         }
 

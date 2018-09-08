@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\linq2db.SQLite.2.2.0\build\linq2db.SQLite.props" Condition="Exists('..\packages\linq2db.SQLite.2.2.0\build\linq2db.SQLite.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -288,11 +289,11 @@
     <Compile Include="src\ExcelBrowser.Designer.cs">
       <DependentUpon>ExcelBrowser.cs</DependentUpon>
     </Compile>
-    <Compile Include="src\ExcelReader.cs">
+    <Compile Include="src\ExcelDataReader.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="src\ExcelReader.Designer.cs">
-      <DependentUpon>ExcelReader.cs</DependentUpon>
+    <Compile Include="src\ExcelDataReader.Designer.cs">
+      <DependentUpon>ExcelDataReader.cs</DependentUpon>
     </Compile>
     <Compile Include="src\DatabaseSelector.cs">
       <SubType>Form</SubType>
@@ -595,8 +596,8 @@
     <EmbeddedResource Include="src\ExcelForm.resx">
       <DependentUpon>ExcelForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="src\ExcelReader.resx">
-      <DependentUpon>ExcelReader.cs</DependentUpon>
+    <EmbeddedResource Include="src\ExcelDataReader.resx">
+      <DependentUpon>ExcelDataReader.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="src\DatabaseSelector.resx">
       <DependentUpon>DatabaseSelector.cs</DependentUpon>
@@ -677,6 +678,21 @@
     <EmbeddedResource Include="src\Calendar.resx">
       <DependentUpon>Calendar.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="LinqToDB.Templates\DataAnnotations.ttinclude" />
+    <None Include="LinqToDB.Templates\DataModel.ttinclude" />
+    <None Include="LinqToDB.Templates\EditableObject.ttinclude" />
+    <None Include="LinqToDB.Templates\Humanizer.ttinclude" />
+    <None Include="LinqToDB.Templates\LinqToDB.SQLite.Tools.ttinclude" />
+    <None Include="LinqToDB.Templates\LinqToDB.SQLite.ttinclude" />
+    <None Include="LinqToDB.Templates\LinqToDB.Tools.ttinclude" />
+    <None Include="LinqToDB.Templates\LinqToDB.ttinclude" />
+    <None Include="LinqToDB.Templates\MultipleFiles.ttinclude" />
+    <None Include="LinqToDB.Templates\NotifyDataErrorInfo.ttinclude" />
+    <None Include="LinqToDB.Templates\NotifyPropertyChanged.ttinclude" />
+    <None Include="LinqToDB.Templates\ObsoleteAttributes.ttinclude" />
+    <None Include="LinqToDB.Templates\PluralizationService.ttinclude" />
+    <None Include="LinqToDB.Templates\T4Model.ttinclude" />
+    <None Include="LinqToDB.Templates\Validation.ttinclude" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -947,6 +963,7 @@
     <None Include="Resources\WQ.ico" />
     <None Include="Resources\WSA.ico" />
     <None Include="Resources\XA.ico" />
+    <Content Include="LinqToDB.Templates\CopyMe.SQLite.tt.txt" />
     <Content Include="summation_3d_blue_oma_icon.ico" />
     <None Include="Resources\SummaryImages\RegionalAccounts.png" />
     <None Include="Resources\SummaryImages\FTE.png" />
@@ -1108,5 +1125,6 @@
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
     <Error Condition="!Exists('..\packages\System.Data.SQLite.Core.1.0.109.1\build\net46\System.Data.SQLite.Core.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\System.Data.SQLite.Core.1.0.109.1\build\net46\System.Data.SQLite.Core.targets'))" />
+    <Error Condition="!Exists('..\packages\linq2db.SQLite.2.2.0\build\linq2db.SQLite.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\linq2db.SQLite.2.2.0\build\linq2db.SQLite.props'))" />
   </Target>
 </Project>

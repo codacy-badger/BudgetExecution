@@ -73,7 +73,7 @@
         public FormData Ninja { get; set; }
 
         // METHODS
-        internal void ConfigureDataGridViewVisibleColumns(DataGridView dgv)
+        internal void ConfigureGridVisibleColumns(DataGridView dgv)
         {
             try
             {
@@ -104,7 +104,7 @@
                 bs.DataSource = table;
                 dg.DataSource = bs;
                 bn.BindingSource = bs;
-                ConfigureDataGridViewVisibleColumns(dg);
+                ConfigureGridVisibleColumns(dg);
             }
             catch (Exception ex)
             {
@@ -327,7 +327,7 @@
 
         private void ExcelButton_OnClick(object sender, EventArgs e)
         {
-            ExcelReader ef = new ExcelReader();
+            ExcelDataReader ef = new ExcelDataReader();
             ef.Show();
         }
 

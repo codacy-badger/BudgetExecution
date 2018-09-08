@@ -6,16 +6,17 @@ namespace BudgetExecution
     using System;
     using System.Data;
     using System.Windows.Forms;
+    using Syncfusion.Windows.Forms;
 
-    public partial class ExcelReader : Syncfusion.Windows.Forms.MetroForm
+    public partial class ExcelDataReader : MetroForm
     {
-        public ExcelReader()
+        public ExcelDataReader()
         {
             InitializeComponent();
             FilterTab.TabVisible = false;
         }
 
-        public ExcelReader(Source source)
+        public ExcelDataReader(Source source)
         {
             InitializeComponent();
             FilterTab.TabVisible = false;
@@ -23,7 +24,7 @@ namespace BudgetExecution
             Provider = Provider.OleDb;
         }
 
-        public ExcelReader(Source source, Provider provider)
+        public ExcelDataReader(Source source, Provider provider)
         {
             InitializeComponent();
             FilterTab.TabVisible = false;
@@ -53,7 +54,7 @@ namespace BudgetExecution
 
         private void ExcelButton_OnClick(object sender, EventArgs e)
         {
-            ExcelReader ef = new ExcelReader();
+            ExcelDataReader ef = new ExcelDataReader();
             ef.Show();
         }
 
