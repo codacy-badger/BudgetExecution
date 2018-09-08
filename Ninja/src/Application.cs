@@ -40,7 +40,7 @@ namespace BudgetExecution
 
         DOC = 5
     }
-
+    
     public enum FundCode
     {
         B,
