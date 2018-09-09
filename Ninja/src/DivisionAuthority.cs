@@ -17,7 +17,7 @@ namespace BudgetExecution
             TableFilter = DataBuilder.FilterTable;
             DbData = new DataBuilder(Source.DivisionAccounts, Provider.SQLite, new Dictionary<string, object> { ["BFY"] = FiscalYear });
             Metric = new PrcMetric(DbData);
-            DataRecords = DbData.DbRow;
+            DataRecords = DbData.Records;
             DbTable = DbData.DbTable;
             PRC = GetPrcArray(DbTable);
             Total = Metric.Total;
@@ -47,7 +47,7 @@ namespace BudgetExecution
             DbData = new DataBuilder(Source.DivisionAccounts, Provider.SQLite, new Dictionary<string, object> { ["RC"] = RC.Code, ["BFY"] = FiscalYear });
             Metric = new PrcMetric(DbData);
             DbTable = DbData.DbTable;
-            DataRecords = DbData.DbRow;
+            DataRecords = DbData.Records;
             PRC = GetPrcArray(DbTable);
             Total = Metric.Total;
             Count = Metric.Count;

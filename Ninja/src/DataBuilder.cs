@@ -31,7 +31,7 @@ namespace BudgetExecution
             ProgramElements = GetProgramElements(DbTable);
             BindingSource = new BindingSource();
             BindingSource.DataSource = DbTable;
-            DbRow = GetRecords(DbTable);
+            Records = GetRecords(DbTable);
             Columns = GetColumnNames(DbTable);
             if (q.Source == Source.FTE)
             {
@@ -40,7 +40,7 @@ namespace BudgetExecution
                 ProgramElements = GetProgramElements(DbTable);
                 BindingSource = new BindingSource();
                 BindingSource.DataSource = DbTable;
-                DbRow = GetRecords(DbTable);
+                Records = GetRecords(DbTable);
                 Columns = GetColumnNames(DbTable);
             }
         }
@@ -55,7 +55,7 @@ namespace BudgetExecution
             ProgramElements = GetProgramElements(DbTable);
             BindingSource = new BindingSource();
             BindingSource.DataSource = DbTable;
-            DbRow = GetRecords(DbTable);
+            Records = GetRecords(DbTable);
             Columns = GetColumnNames(DbTable);
             if (source == Source.FTE)
             {
@@ -64,7 +64,7 @@ namespace BudgetExecution
                 ProgramElements = GetProgramElements(DbTable);
                 BindingSource = new BindingSource();
                 BindingSource.DataSource = DbTable;
-                DbRow = GetRecords(DbTable);
+                Records = GetRecords(DbTable);
                 Columns = GetColumnNames(DbTable);
             }
         }
@@ -79,7 +79,7 @@ namespace BudgetExecution
             ProgramElements = GetProgramElements(DbTable);
             BindingSource = new BindingSource();
             BindingSource.DataSource = DbTable;
-            DbRow = GetRecords(DbTable);
+            Records = GetRecords(DbTable);
             Columns = GetColumnNames(DbTable);
             if (source == Source.FTE)
             {
@@ -88,7 +88,7 @@ namespace BudgetExecution
                 ProgramElements = GetProgramElements(DbTable);
                 BindingSource = new BindingSource();
                 BindingSource.DataSource = DbTable;
-                DbRow = GetRecords(DbTable);
+                Records = GetRecords(DbTable);
                 Columns = GetColumnNames(DbTable);
             }
         }
@@ -104,7 +104,7 @@ namespace BudgetExecution
 
         public string[] Columns { get; }
 
-        public DataRow[] DbRow { get; }
+        public DataRow[] Records { get; }
 
         public BindingSource BindingSource { get; set; }
 

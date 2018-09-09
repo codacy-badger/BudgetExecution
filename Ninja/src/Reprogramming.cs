@@ -26,7 +26,7 @@ namespace BudgetExecution
             DbQuery = new Query(Source, Provider);
             DbData = new DataBuilder(DbQuery);
             DbTable = DbData.DbTable;
-            DbRow = DbData.DbRow;
+            DbRow = DbData.Records;
             ProgramElements = DbData.GetProgramElements(DbTable);
             Columns = DbData.Columns;
             BindingSource = new BindingSource();

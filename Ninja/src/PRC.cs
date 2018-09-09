@@ -17,7 +17,7 @@ namespace BudgetExecution
         {
         }
 
-        public PRC(Source source, Provider provider)
+        public PRC(Source source = Source.PRC, Provider provider = Provider.SQLite)
         {
             Source = source;
             Provider = provider;
