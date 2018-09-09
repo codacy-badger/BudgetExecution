@@ -831,9 +831,8 @@ namespace BudgetExecution
             }
         }
 
-        private void visualGroupBox1_Enter(object sender, EventArgs e)
+        private void VisualGroupBox1_Enter(object sender, EventArgs e)
         {
-
         }
     }
 }

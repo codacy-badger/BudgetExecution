@@ -1094,7 +1094,7 @@ namespace BudgetExecution
             textStyle5.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
             this.visualGroupBox1.TextStyle = textStyle5;
             this.visualGroupBox1.TitleBoxHeight = 40;
-            this.visualGroupBox1.Enter += new System.EventHandler(this.visualGroupBox1_Enter);
+            this.visualGroupBox1.Enter += new System.EventHandler(this.VisualGroupBox1_Enter);
             // 
             // Grid
             // 
