@@ -115,13 +115,11 @@ namespace BudgetExecution
         // DELEGATES
 
         // METHODS
-        private SQLiteQuery GetSQLiteQuery(Source source, Provider provider)
+        private SQLiteQuery GetSQLiteQuery(Source source)
         {
             try
             {
-                if (provider == Provider.SQLite)
-                    return new SQLiteQuery(source);
-                return null;
+                return new SQLiteQuery(source);
             }
             catch (Exception ex)
             {
@@ -130,13 +128,11 @@ namespace BudgetExecution
             }
         }
 
-        private SQLiteQuery GetSQLiteQuery(Source source, Provider provider, SQLiteParameter[] pmr)
+        private SQLiteQuery GetSQLiteQuery(Source source, SQLiteParameter[] pmr)
         {
             try
             {
-                if (provider == Provider.SQLite)
-                    return new SQLiteQuery(source);
-                return null;
+                return new SQLiteQuery(source, pmr);
             }
             catch (Exception ex)
             {
@@ -145,13 +141,11 @@ namespace BudgetExecution
             }
         }
 
-        private SQLiteQuery GetSQLiteQuery(Source source, Provider provider, Dictionary<string, object> dpr)
+        private SQLiteQuery GetSQLiteQuery(Source source, Dictionary<string, object> dpr)
         {
             try
             {
-                if (provider == Provider.SQLite)
-                    return new SQLiteQuery(source, provider, dpr);
-                return null;
+                return new SQLiteQuery(source, dpr);
             }
             catch (Exception ex)
             {
@@ -235,7 +229,7 @@ namespace BudgetExecution
             }
         }
 
-        public List<SQLiteParameter[]> GetParamList(DataTable table)
+        public List<SQLiteParameter[]> GetParameterList(DataTable table)
         {
             try
             {
@@ -254,20 +248,7 @@ namespace BudgetExecution
             }
         }
 
-        public static DataTable FilterTable(DataTable table, Field prcfilter, string filter)
-        {
-            try
-            {
-                return table.AsEnumerable().Where(p => p.Field<string>(prcfilter.ToString()).Equals(filter)).Select(p => p).CopyToDataTable();
-            }
-            catch (Exception ex)
-            {
-                new Error(ex).ShowDialog();
-                return null;
-            }
-        }
-        
-        public static DataTable FilterTable(DataTable table, Field[] col, string[] filter)
+        public static DataTable FilterRecords(DataTable table, Field col, string filter)
         {
             try
             {
@@ -279,8 +260,34 @@ namespace BudgetExecution
                 return null;
             }
         }
+        
+        public static DataTable FilterRecords(DataTable table, Field[] col, string[] filter)
+        {
+            try
+            {
+                if (col.Length == 2 && filter.Length == 2)
+                {
+                    return table.AsEnumerable().Where(p => p.Field<string>(col[0].ToString()).Equals(filter[0])).
+                        Where(p => p.Field<string>(col[1].ToString()).Equals(filter[1])).Select(p => p).CopyToDataTable();
+                }
 
-        public string[] GetCodes(DataTable table, string column)
+                if (col.Length == 3 && filter.Length == 3)
+                {
+                    return table.AsEnumerable().Where(p => p.Field<string>(col[0].ToString()).Equals(filter[0])).
+                        Where(p => p.Field<string>(col[1].ToString()).Equals(filter[1])).                       
+                        Where(p => p.Field<string>(col[2].ToString()).Equals(filter[2])).Select(p => p).CopyToDataTable();
+                }
+
+                return null;
+            }
+            catch (Exception ex)
+            {
+                new Error(ex).ShowDialog();
+                return null;
+            }
+        }
+
+        public string[] GetUniqueValues(DataTable table, string column)
         {
             try
             {
@@ -310,7 +317,7 @@ namespace BudgetExecution
                         continue;
                     }
 
-                    data.Add(dc.ColumnName, GetCodes(table, dc.ColumnName));
+                    data.Add(dc.ColumnName, GetUniqueValues(table, dc.ColumnName));
                 }
 
                 if (data.ContainsKey("ID"))
@@ -321,36 +328,6 @@ namespace BudgetExecution
                 if (data.ContainsKey("Amount"))
                 {
                     data.Remove("Amount");
-                }
-
-                return data;
-            }
-            catch (Exception ex)
-            {
-                new Error(ex).ShowDialog();
-                return null;
-            }
-        }
-
-        public Dictionary<string, object> GetParamVals(DataTable table)
-        {
-            try
-            {
-                int ct = table.Columns.Count;
-                string[] dc = table.Columns.ToList<string>().ToArray();
-                int dr = table.Rows.Count;
-                Dictionary<string, object> data = new Dictionary<string, object>();
-                foreach (DataRow r in table.Rows)
-                {
-                    foreach (string c in dc)
-                    {
-                        if (c.Equals("Amount") || c.Contains("Obligation") || c.Contains("Commitment") || c.Contains("WorkHour") || c.Contains("LeaveHour"))
-                        {
-                            continue;
-                        }
-
-                        data.Add(c, r[c]);
-                    }
                 }
 
                 return data;
@@ -398,12 +375,12 @@ namespace BudgetExecution
             }
         }
 
-        public DataSet GetDataSet(string dataset, Source source)
+        public DataSet GetDataSet(string name, Source source)
         {
             try
             {
-                DataSet ds = new DataSet(dataset);
-                ds.DataSetName = dataset;
+                DataSet ds = new DataSet(name);
+                ds.DataSetName = name;
                 DataTable dt = new DataTable(source.ToString());
                 dt.TableName = source.ToString();
                 ds.Tables.Add(dt);
