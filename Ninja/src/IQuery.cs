@@ -25,13 +25,13 @@ namespace BudgetExecution
         string SqlStatement { get; set; }
 
         // METHODS
-        DbCommandBuilder GetCommandBuilder(IDbDataAdapter adapter);
+        DbCommandBuilder GetCommandBuilder(DbDataAdapter adapter);
 
         DbConnection GetConnection(Provider connection);
 
         DbDataAdapter GetDataAdapter(IDbCommand command);
 
-        DbCommand GetDataCommand(string sql, IDbConnection dataConnection);
+        DbCommand GetDataCommand(string sql, DbConnection dataConnection);
 
         DbDataReader GetDataReader(IDbCommand command);
 
