@@ -63,7 +63,7 @@ namespace BudgetExecution
 
         public Provider Provider { get; set; }
 
-        internal DataFilter TableFilter { get; set; }
+        internal DataSelector TableSelector { get; set; }
 
         internal FieldFilter FieldFilter { get; set; }
 
@@ -96,7 +96,7 @@ namespace BudgetExecution
             }
         }
 
-        internal void GetBinary()
+        internal void GetBudgetTemplate()
         {
             try
             {

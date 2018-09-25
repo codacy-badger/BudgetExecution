@@ -253,7 +253,7 @@ namespace BudgetExecution
         {
             try
             {
-                VisualComboBox  prc = sender as VisualComboBox ;
+                VisualComboBox  prc = sender as VisualComboBox;
                 string filter = prc.SelectedItem.ToString();
                 BindingSource.Filter = $"FundName = '{GridFundFilter.SelectedItem}' AND BocName = '{GridBocFilter.SelectedItem}' AND Code = '{filter}'";
                 label32.Text = CalculateTotal(GridFundFilter.SelectedItem.ToString(), filter).ToString("c");
@@ -269,12 +269,7 @@ namespace BudgetExecution
         {
             try
             {
-                if (GridFundFilter.SelectedItem.ToString() != null)
-                {
-                    BindingSource.Filter = string.Format("FundName = '{0}' AND BocName = '{1}'", GridFundFilter.SelectedItem, GridBocFilter.SelectedItem);
-                }
-
-                BindingSource.Filter = string.Format("FundName = '{0}'", GridBocFilter.SelectedItem);
+                BindingSource.Filter = $"FundName = '{GridBocFilter.SelectedItem}'";
             }
             catch (Exception ex)
             {
@@ -288,7 +283,7 @@ namespace BudgetExecution
             {
                 GridBocFilter.Items.Clear();
                 GridBocFilter.Visible = true;
-                DataTable table = (DataTable)BindingSource.DataSource;
+                DataTable table = (DataTable) BindingSource.DataSource;
                 DataTable query = table.AsEnumerable().Where(p => p.Field<string>("FundName").Equals(GridFundFilter.SelectedItem.ToString())).Select(p => p).Distinct().CopyToDataTable();
                 foreach (string row in query.AsEnumerable().Select(p => p.Field<string>("BocName")).Distinct().ToArray())
                 {

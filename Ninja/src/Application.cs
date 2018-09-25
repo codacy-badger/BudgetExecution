@@ -13,17 +13,17 @@ namespace BudgetExecution
     // Delegates
     public delegate double[] Calculator(DataTable table);
 
-    public delegate DataTable DataFilter(DataTable table, Field prcfilter, string filter);
+    public delegate DataTable DataSelector(DataTable table, Field column, string filter);
 
     public delegate string[] FieldFilter(DataTable table, string filter);
 
     public delegate ChartControl GetChart(ChartControl chart, string title, Dictionary<string, double> data);
 
-    public delegate void InsertData(Source source, Provider provider, Dictionary<string, object> dpr);
+    public delegate void Insert(Source source, Provider provider, Dictionary<string, object> dpr);
 
-    public delegate void UpdateData(Source source, Provider provider, Dictionary<string, object> dpr);
+    public delegate void Update(Source source, Provider provider, Dictionary<string, object> dpr);
 
-    public delegate void DeleteData(Source source, Provider provider, Dictionary<string, object> dpr);
+    public delegate void Delete(Source source, Provider provider, Dictionary<string, object> dpr);
 
     public delegate string[] FieldName(DataTable table);
 

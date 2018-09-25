@@ -85,7 +85,7 @@ namespace BudgetExecution
 
         public DataGridView Grid { get; set; }
 
-        internal DataFilter TableFilter { get; set; }
+        internal DataSelector TableSelector { get; set; }
 
         // METHODS
         public List<SQLiteParameter[]> GetParamList(DataTable table)

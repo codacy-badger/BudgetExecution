@@ -34,7 +34,7 @@ namespace BudgetExecution
             Grid.DataSource = BindingSource.DataSource;
             PopulateFilterButtons(Filter1, Info.Sources);
             Text = $"{Source.ToString()} Database";
-            TableFilter = Info.FilterRows;
+            TableSelector = Info.FilterRows;
             FieldFilter = Info.GetColumnValues;
             label12.Text = Table.Rows.Count.ToString();
         }
@@ -50,7 +50,7 @@ namespace BudgetExecution
             Grid.DataSource = DbData.BindingSource;
             ProgramElements = DbData.GetProgramElements(Table);
             Text = $"{Source.ToString()} Database";
-            TableFilter = Info.FilterRows;
+            TableSelector = Info.FilterRows;
             FieldFilter = Info.GetColumnValues;
             label12.Text = Table.Rows.Count.ToString();
         }
@@ -60,7 +60,7 @@ namespace BudgetExecution
 
         private Provider Provider { get; }
 
-        internal DataFilter TableFilter { get; set; }
+        internal DataSelector TableSelector { get; set; }
 
         internal FieldFilter FieldFilter { get; set; }
 
@@ -316,7 +316,7 @@ namespace BudgetExecution
                 VisualComboBox filter = sender as VisualComboBox;
                 F1 = filter.SelectedItem.ToString();
                 C1 = (Field)Enum.Parse(typeof(Field), filter.Tag.ToString());
-                DataTable tbl = TableFilter(Table, C1, F1);
+                DataTable tbl = TableSelector(Table, C1, F1);
                 BindingSource.DataSource = tbl;
                 label6.Text = DbData.GetTotal(tbl).ToString("c");
                 label12.Text = tbl.Rows.Count.ToString();
@@ -342,8 +342,8 @@ namespace BudgetExecution
                     C2 = (Field)Enum.Parse(typeof(Field), filter.Tag.ToString());
                 }
 
-                DataTable tbl = TableFilter(Table, C1, F1);
-                DataTable tbl2 = TableFilter(tbl, C2, F2);
+                DataTable tbl = TableSelector(Table, C1, F1);
+                DataTable tbl2 = TableSelector(tbl, C2, F2);
                 BindingSource.DataSource = tbl2;
                 label6.Text = DbData.GetTotal(tbl2).ToString("c");
                 label12.Text = tbl2.Rows.ToString();
@@ -365,9 +365,9 @@ namespace BudgetExecution
                 F3 = filter?.SelectedItem.ToString();
                 if (filter != null)
                     C3 = (Field)Enum.Parse(typeof(Field), filter.Tag.ToString());
-                DataTable tbl = TableFilter(Table, C1, F1);
-                DataTable tbl2 = TableFilter(tbl, C2, F2);
-                DataTable tbl3 = TableFilter(tbl2, C3, F3);
+                DataTable tbl = TableSelector(Table, C1, F1);
+                DataTable tbl2 = TableSelector(tbl, C2, F2);
+                DataTable tbl3 = TableSelector(tbl2, C3, F3);
                 BindingSource.DataSource = tbl3;
                 label6.Text = DbData.GetTotal(tbl3).ToString("c");
                 label12.Text = tbl3.Rows.Count.ToString();
@@ -390,10 +390,10 @@ namespace BudgetExecution
                 F4 = filter?.SelectedItem.ToString();
                 if (filter != null)
                     C4 = (Field)Enum.Parse(typeof(Field), filter.Tag.ToString());
-                DataTable tbl = TableFilter(Table, C1, F1);
-                DataTable tbl2 = TableFilter(tbl, C2, F2);
-                DataTable tbl3 = TableFilter(tbl2, C3, F3);
-                DataTable tbl4 = TableFilter(tbl3, C4, F4);
+                DataTable tbl = TableSelector(Table, C1, F1);
+                DataTable tbl2 = TableSelector(tbl, C2, F2);
+                DataTable tbl3 = TableSelector(tbl2, C3, F3);
+                DataTable tbl4 = TableSelector(tbl3, C4, F4);
                 BindingSource.DataSource = tbl4;
                 label6.Text = DbData.GetTotal(tbl4).ToString("c");
                 label12.Text = tbl4.Rows.Count.ToString();

@@ -252,7 +252,7 @@ namespace BudgetExecution
         {
             try
             {
-                InsertData insert = new InsertData(Info.Insert);
+                Insert insert = new Insert(Info.Insert);
                 insert(Source.Obligations, Provider.SQLite, p);
             }
             catch (Exception ex)
@@ -265,7 +265,7 @@ namespace BudgetExecution
         {
             try
             {
-                InsertData update = new InsertData(Info.Update);
+                Insert update = new Insert(Info.Update);
                 update(Source.Obligations, Provider.SQLite, p);
             }
             catch (Exception ex)
@@ -278,7 +278,7 @@ namespace BudgetExecution
         {
             try
             {
-                InsertData delete = new InsertData(Info.Delete);
+                Insert delete = new Insert(Info.Delete);
                 delete(Source.Obligations, Provider.SQLite, p);
             }
             catch (Exception ex)

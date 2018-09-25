@@ -54,10 +54,10 @@ namespace BudgetExecution
             }
         }
 
-        public PrcMetric(DataBuilder data, Field prcfilter, string filter)
+        public PrcMetric(DataBuilder data, Field column, string filter)
         {
             DbData = data;
-            Table = Info.FilterRows(DbData.DbTable, prcfilter, filter);
+            Table = Info.FilterRows(DbData.DbTable, column, filter);
             ProgramElements = GetProgramElements(Table);
             Total = GetTotals(Table);
             Count = Table.Rows.Count;
@@ -90,9 +90,9 @@ namespace BudgetExecution
             }
         }
 
-        public PrcMetric(DataTable table, Field prcfilter, string filter)
+        public PrcMetric(DataTable table, Field column, string filter)
         {
-            Table = Info.FilterRows(table, prcfilter, filter);
+            Table = Info.FilterRows(table, column, filter);
             ProgramElements = GetProgramElements(Table);
             Total = GetTotals(Table);
             Count = Table.Rows.Count;

@@ -323,7 +323,7 @@ namespace BudgetExecution
         {
             try
             {
-                InsertData insert = Info.Insert;
+                Insert insert = Info.Insert;
                 insert(Source.PRC, Provider.SQLite, p);
             }
             catch (Exception ex)
@@ -336,7 +336,7 @@ namespace BudgetExecution
         {
             try
             {
-                InsertData update = new InsertData(Info.Insert);
+                Insert update = new Insert(Info.Insert);
                 update(Source.PRC, Provider.SQLite, p);
             }
             catch (Exception ex)
@@ -349,7 +349,7 @@ namespace BudgetExecution
         {
             try
             {
-                InsertData update = new InsertData(Info.Insert);
+                Insert update = new Insert(Info.Insert);
                 update(Source.PRC, Provider.SQLite, p);
             }
             catch (Exception ex)
