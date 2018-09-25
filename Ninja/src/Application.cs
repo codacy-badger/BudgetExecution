@@ -447,7 +447,7 @@ namespace BudgetExecution
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
-        [STAThread]
+        [ STAThread ]
         private static void Main()
         {
             System.Windows.Forms.Application.EnableVisualStyles();

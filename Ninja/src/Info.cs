@@ -99,7 +99,10 @@ namespace BudgetExecution
                     SQLiteParameter[] param = query.GetDbParameters(p);
                     SQLiteCommand command = query.InsertCommand;
                     foreach (SQLiteParameter pmr in param)
+                    {
                         command.Parameters.Add(pmr);
+                    }
+
                     command.ExecuteNonQuery();
                 }
             }
@@ -119,7 +122,10 @@ namespace BudgetExecution
                     SQLiteParameter[] param = query.GetDbParameters(p);
                     SQLiteCommand command = query.UpdateCommand;
                     foreach (SQLiteParameter pmr in param)
+                    {
                         command.Parameters.Add(pmr);
+                    }
+
                     command.ExecuteNonQuery();
                 }
             }
@@ -139,7 +145,10 @@ namespace BudgetExecution
                     SQLiteParameter[] param = query.GetDbParameters(p);
                     SQLiteCommand command = query.DeleteCommand;
                     foreach (SQLiteParameter pmr in param)
+                    {
                         command.Parameters.Add(pmr);
+                    }
+
                     command.ExecuteNonQuery();
                 }
             }

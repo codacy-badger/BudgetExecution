@@ -152,7 +152,10 @@ namespace BudgetExecution
             ConfigureSeries(DataSeries, Value);
             DataSeries.Type = SeriesType;
             foreach (KeyValuePair<string, double> kvp in data)
+            {
                 DataSeries.Points.Add(kvp.Key, kvp.Value);
+            }
+
             Chart.Series?.Add(DataSeries);
             Configure3DMode(Chart);
             ConfigureToolTip(DataSeries);
@@ -462,9 +465,12 @@ namespace BudgetExecution
                 {
                     DataSeries.Style.TextFormat = "{0}";
                 }
-                else if (value == Stat.Total || value == Stat.Average)
+                else
                 {
-                    DataSeries.Style.TextFormat = "{0:N2}";
+                    if (value == Stat.Total || value == Stat.Average)
+                    {
+                        DataSeries.Style.TextFormat = "{0:N2}";
+                    }
                 }
 
                 if (value == Stat.Ratio)

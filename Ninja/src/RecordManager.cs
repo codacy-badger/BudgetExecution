@@ -80,7 +80,9 @@ namespace BudgetExecution
             {
                 string[] codes = Info.AgencyFundCodes;
                 foreach (string c in codes)
+                {
                     FundComboBox.Items.Add(c);
+                }
             }
             catch (Exception ex)
             {
@@ -94,7 +96,9 @@ namespace BudgetExecution
             {
                 string[] codes = new string[] { "10", "17", "21", "28", "36", "37", "38", "41" };
                 foreach (string c in codes)
+                {
                     BocBox.Items.Add(c);
+                }
             }
             catch (Exception ex)
             {
@@ -136,15 +140,21 @@ namespace BudgetExecution
             {
                 Label[] lbl = GetLabels();
                 foreach (Label l in lbl)
+                {
                     l.Visible = false;
+                }
 
                 MetroSetTextBox[] tbx = GetTextBoxes();
                 foreach (MetroSetTextBox tb in tbx)
+                {
                     tb.Visible = false;
+                }
 
                 List<string> cn = new List<string>();
                 foreach (DataColumn dc in dt.Columns)
+                {
                     cn.Add(dc.ColumnName);
+                }
 
                 int current = bs.Position;
                 for (int i = 0; i < cn.Count; i++)
@@ -167,15 +177,21 @@ namespace BudgetExecution
             {
                 Label[] lbl = GetLabels();
                 foreach (Label l in lbl)
+                {
                     l.Visible = false;
+                }
 
                 MetroSetTextBox[] tbx = GetTextBoxes();
                 foreach (MetroSetTextBox tb in tbx)
+                {
                     tb.Visible = false;
+                }
 
                 List<string> cn = new List<string>();
                 foreach (DataColumn dc in DbTable.Columns)
+                {
                     cn.Add(dc.ColumnName);
+                }
 
                 int current = BindingSource.Position;
                 for (int i = 0; i < cn.Count; i++)
@@ -198,7 +214,10 @@ namespace BudgetExecution
             {
                 List<MetroSetComboBox> labels = null;
                 foreach (MetroSetComboBox lbl in RecordTabelPanel.Controls)
+                {
                     labels.Add(lbl);
+                }
+
                 return labels;
             }
             catch (Exception ex)

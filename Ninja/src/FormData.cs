@@ -374,7 +374,10 @@ namespace BudgetExecution
                 object[] val = row.ItemArray;
                 Dictionary<string, object> param = new Dictionary<string, object>();
                 for (int i = 0; i < cct; i++)
+                {
                     param.Add(col[i], val[i]);
+                }
+
                 return param;
             }
             catch (Exception e)

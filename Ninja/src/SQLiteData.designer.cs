@@ -1,7 +1,7 @@
 ﻿
 namespace BudgetExecution
 {
-    partial class SQLiteData
+    sealed partial class SQLiteData
     {
         /// <summary>
         /// Required designer variable.
