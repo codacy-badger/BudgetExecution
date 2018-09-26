@@ -2,18 +2,17 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
+using System;
+using System.Collections.Generic;
+using System.Data;
+using Syncfusion.Windows.Forms.Chart;
+
 namespace BudgetExecution
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Data;
-
-    using Syncfusion.Windows.Forms.Chart;
-
     // Delegates
     public delegate double[] Calculator(DataTable table);
 
-    public delegate DataTable DataSelector(DataTable table, Field column, string filter);
+    public delegate DataTable DataFilter(DataTable table, Field column, string filter);
 
     public delegate string[] FieldFilter(DataTable table, string filter);
 
@@ -27,425 +26,41 @@ namespace BudgetExecution
 
     public delegate string[] FieldName(DataTable table);
 
+    public delegate Dictionary<string, string[]> ProgramElement(DataTable table, Field column);
+
     // Enum
-    public enum FileExt
-    {
-        XLSX = 1,
+    public enum FileExt { XLSX = 1, CSV = 2, TXT = 3, PDF = 4, DOC = 5 }
 
-        CSV = 2,
+    public enum FundCode { B, BR, BR2, BR3, T, TC, TD, TR, TR1, TR2, TR2A, TR2B, TR3, F, FC, FD, H, HC, HD, E1, E1C, E1D, E2, E2C, E2D, E3, E3C, E3D, E4, E4C, E4D, E5, E5C, E5D, ZL, FS3, TS3 }
 
-        TXT = 3,
+    public enum Function { SQLiteData, BudgetTools, DataTools, DataMigration, ExcelImporter, PdfDataReader }
 
-        PDF = 4,
+    public enum Goal { G1, G2, G3 }
 
-        DOC = 5
-    }
-    
-    public enum FundCode
-    {
-        B,
+    public enum HQ { A, B, C, D, E, F, G, H, J, L, M }
 
-        BR,
+    public enum Net { Zero, Increase, Decrease }
 
-        BR2,
+    public enum Objective { O1, O2, O3, O4, O5 }
 
-        BR3,
+    public enum Numeric { ID, Amount, Obligations, Commitments, LeaveHours, WorkHours }
 
-        T,
+    public enum Sql { SELECT, INSERT, UPDATE, DELETE, CREATE, DROP }
 
-        TC,
+    public enum Field { ID, BudgetLevel, BFY, RPIO, Fund, FundName, BOC, BocName, Org, RC, Code, NPM, Goal, GoalName, Objective, ObjectiveName, DivisionName, ProgramArea, ProgramAreaName, ProgramProjectCode, ProgramProjectName, SiteProjectName, SiteProjectCode, NpmName, ReimbOrg, AH, DCN, ControlNumber, PurchaseRequest, AgreementNumber, Type, DivisionID, DocumentNumber, State, Organization, District, FocName, LastName, WorkCode, HrOrgCodeName }
 
-        TD,
+    public enum Provider { SQLite = 1, OleDb = 2, SqlServer = 3, SqlCe = 4 }
 
-        TR,
+    public enum Source { Accounts, Awards, ControlNumbers, DivisionAccounts, DivisionObligations, TravelObligations, Divisions, DWH, EJ, EN, Employees, EPM, ExternalTransfers, Funds, InternalTransfers, PRC, Programs, Benefits, ProgramObligations, RegionalAccounts, Obligations, PayrollObligations, Sites, Reimbursables, LUST, OIL, STAG, SF6A, SUPERFUND, MD, RC, RA, SF, Transfers, WQ, MM, WSA, WCF, MDR, XA, PAYROLL, FTE, TRAVEL, EXPENSES, CONTRACTS, GRANTS }
 
-        TR1,
+    public enum Stat { Total, Count, Average, Ratio }
 
-        TR2,
+    public enum TransferType { Admin = 1, BOC = 2, FromHQ = 3, ToHQ = 4, FromRpio = 5, ToRpio = 6, Recertification = 7, ToDivision = 8, FromDivsion = 9, SubAllowance = 10 }
 
-        TR2A,
-
-        TR2B,
-
-        TR3,
-
-        F,
-
-        FC,
-
-        FD,
-
-        H,
-
-        HC,
-
-        HD,
-
-        E1,
-
-        E1C,
-
-        E1D,
-
-        E2,
-
-        E2C,
-
-        E2D,
-
-        E3,
-
-        E3C,
-
-        E3D,
-
-        E4,
-
-        E4C,
-
-        E4D,
-
-        E5,
-
-        E5C,
-
-        E5D,
-
-        ZL,
-
-        FS3,
-
-        TS3
-    }
-
-    public enum Function
-    {
-        SQLiteData,
-
-        BudgetTools,
-
-        DataTools,
-
-        DataMigration,
-
-        ExcelImporter,
-
-        PdfDataReader
-    }
-
-    public enum Goal
-    {
-        G1,
-
-        G2,
-
-        G3
-    }
-
-    public enum HQ
-    {
-        A,
-
-        B,
-
-        C,
-
-        D,
-
-        E,
-
-        F,
-
-        G,
-
-        H,
-
-        J,
-
-        L,
-
-        M,
-    }
-
-    public enum Net
-    {
-        Zero,
-
-        Increase,
-
-        Decrease
-    }
-
-    public enum Objective
-    {
-        O1,
-
-        O2,
-
-        O3,
-
-        O4,
-
-        O5
-    }
-
-    public enum Numeric
-    {
-        ID,
-
-        Amount,
-
-        Obligations,
-
-        Commitments,
-
-        LeaveHours,
-
-        WorkHours
-    }
-
-    public enum Sql
-    {
-        SELECT,
-
-        INSERT,
-
-        UPDATE,
-
-        DELETE,
-
-        CREATE,
-
-        DROP
-    }
-
-    public enum Field
-    {
-        ID,
-
-        BudgetLevel,
-
-        BFY,
-
-        RPIO,
-
-        Fund,
-
-        FundName,
-
-        BOC,
-
-        BocName,
-
-        Org,
-
-        RC,
-
-        Code,
-
-        NPM,
-
-        Goal,
-
-        GoalName,
-
-        Objective,
-
-        ObjectiveName,
-
-        DivisionName,
-
-        ProgramArea,
-
-        ProgramAreaName,
-
-        ProgramProjectCode,
-
-        ProgramProjectName,
-
-        SiteProjectName,
-
-        SiteProjectCode,
-
-        NpmName,
-
-        ReimbOrg,
-
-        AH,
-
-        DCN,
-
-        ControlNumber,
-
-        PurchaseRequest,
-
-        AgreementNumber,
-
-        Type,
-
-        DivisionID,
-
-        DocumentNumber,
-
-        State,
-
-        Organization,
-
-        District,
-
-        FocName,
-
-        LastName,
-
-        WorkCode,
-
-        HrOrgCodeName
-    }
-
-    public enum Provider
-    {
-        SQLite = 1,
-
-        OleDb = 2,
-
-        SqlServer = 3,
-
-        SqlCe = 4
-    }
-
-    public enum Source
-    {
-        Accounts,
-
-        Awards,
-
-        ControlNumbers,
-
-        DivisionAccounts,
-
-        DivisionObligations,
-
-        TravelObligations,
-
-        Divisions,
-
-        DWH,
-
-        EJ,
-
-        EN,
-
-        Employees,
-
-        EPM,
-
-        ExternalTransfers,
-
-        Funds,
-
-        InternalTransfers,
-
-        PRC,
-
-        Programs,
-
-        Benefits,
-
-        ProgramObligations,
-
-        RegionalAccounts,
-
-        Obligations,
-
-        PayrollObligations,
-
-        Sites,
-
-        Reimbursables,
-
-        LUST,
-
-        OIL,
-
-        STAG,
-
-        SF6A,
-
-        SUPERFUND,
-
-        MD,
-
-        RC,
-
-        RA,
-
-        SF,
-
-        Transfers,
-
-        WQ,
-
-        MM,
-
-        WSA,
-
-        WCF,
-
-        MDR,
-
-        XA,
-
-        PAYROLL,
-
-        FTE,
-
-        TRAVEL,
-
-        EXPENSES,
-
-        CONTRACTS,
-
-        GRANTS
-    }
-
-    public enum Stat
-    {
-        Total,
-
-        Count,
-
-        Average,
-
-        Ratio
-    }
-
-    public enum TransferType
-    {
-        Admin = 1,
-
-        BOC = 2,
-
-        FromHQ = 3,
-
-        ToHQ = 4,
-
-        FromRpio = 5,
-
-        ToRpio = 6,
-
-        Recertification = 7,
-
-        ToDivision = 8,
-
-        FromDivsion = 9,
-
-        SubAllowance = 10
-    }
-
-    internal static class Application
+    static internal class Application
     {
         /// <summary>
-        /// The main entry point for the application.
+        ///     The main entry point for the application.
         /// </summary>
         [ STAThread ]
         private static void Main()

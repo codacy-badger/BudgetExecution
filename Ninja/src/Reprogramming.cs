@@ -29,7 +29,7 @@ namespace BudgetExecution
             ProgramElements = DbData.GetProgramElements(DbTable);
             Columns = DbData.Columns;
             BindingSource = new BindingSource();
-            TableSelector = Info.FilterRows;
+            TableFilter = Info.FilterRows;
         }
 
         // PROPERTIES
@@ -45,7 +45,7 @@ namespace BudgetExecution
 
         public BindingSource BindingSource { get; set; }
 
-        internal DataSelector TableSelector { get; set; }
+        internal DataFilter TableFilter { get; set; }
 
         internal DataBuilder DbData { get; set; }
 

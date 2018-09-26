@@ -10,7 +10,7 @@ namespace BudgetExecution
         // CONSTRUCTORS
         public DivisionAuthority()
         {
-            TableSelector = DataBuilder.FilterRecords;
+            TableFilter = DataBuilder.FilterRecords;
             DbData = new DataBuilder(Source.DivisionAccounts, Provider.SQLite, new Dictionary<string, object> { ["BFY"] = FiscalYear });
             Metric = new PrcMetric(DbData);
             DataRecords = DbData.Records;
@@ -32,12 +32,12 @@ namespace BudgetExecution
             }
 
             Awards = new DataBuilder(Source.Awards, Provider.SQLite, new Dictionary<string, object> { ["BFY"] = FiscalYear }).Table;
-            TableSelector = DataBuilder.FilterRecords;
+            TableFilter = DataBuilder.FilterRecords;
         }
 
         public DivisionAuthority(string rc)
         {
-            TableSelector = DataBuilder.FilterRecords;
+            TableFilter = DataBuilder.FilterRecords;
             RC = new RC(rc);
             Org = new Org(RC.Code);
             DbData = new DataBuilder(Source.DivisionAccounts, Provider.SQLite, new Dictionary<string, object> { ["RC"] = RC.Code, ["BFY"] = FiscalYear });
@@ -116,7 +116,7 @@ namespace BudgetExecution
 
         public decimal Average { get; }
 
-        public DataSelector TableSelector { get; }
+        public DataFilter TableFilter { get; }
 
         public DataTable FTE { get; }
 
