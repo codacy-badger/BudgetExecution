@@ -36,7 +36,7 @@
             Provider = provider;
             DbData = new DataBuilder(Source, Provider);
             BindingSource = new BindingSource();
-            BindingSource.DataSource = DbData.DbTable;
+            BindingSource.DataSource = DbData.Table;
             Update.TabVisible = false;
             PopulateComboBoxes();
         }
@@ -47,7 +47,7 @@
             Source = source;
             Provider = provider;
             DbData = new DataBuilder(Source, Provider, p);
-            Table = DbData.DbTable;
+            Table = DbData.Table;
             DbRow = Table.Rows[0];
             BindingSource.DataSource = Table;
             Insert.TabVisible = false;
@@ -169,7 +169,7 @@
         private void PopulateComboBoxes()
         {
             DataBuilder data = new DataBuilder(Source, Provider);
-            if (data.DbTable.Columns.Contains("SubProject"))
+            if (data.Table.Columns.Contains("SubProject"))
             {
                 foreach (string p in data.ProgramElements["SubProject"])
                 {

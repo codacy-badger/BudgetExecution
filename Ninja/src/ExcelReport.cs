@@ -44,7 +44,7 @@ namespace BudgetExecution
             Provider = provider;
             D6 = new DivisionAuthority();
             DbData = D6.DbData;
-            Table = DbData.DbTable;
+            Table = DbData.Table;
             Authority = D6.GetAppropriation(DbData.ProgramElements["Fund"]);
             Excel = new Excel();
             BudgetTemplate = GetInternalFilePath();
@@ -58,7 +58,7 @@ namespace BudgetExecution
             {
                 D6 = new DivisionAuthority(p["RC"].ToString());
                 DbData = D6.DbData;
-                Table = DbData.DbTable;
+                Table = DbData.Table;
                 Authority = D6.GetAppropriation(DbData.ProgramElements["Fund"]);
             }
 

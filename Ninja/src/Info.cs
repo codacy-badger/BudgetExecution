@@ -79,7 +79,7 @@ namespace BudgetExecution
         {
             try
             {
-                DataRow datarow = new DataBuilder(source, provider, p).DbTable.AsEnumerable().Select(prc => prc).First();
+                DataRow datarow = new DataBuilder(source, provider, p).Table.AsEnumerable().Select(prc => prc).First();
                 return new PRC(datarow);
             }
             catch (Exception ex)

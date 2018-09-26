@@ -24,7 +24,7 @@ namespace BudgetExecution
         {
             DbData = new DataBuilder(source, provider, param);
             Metric = new PrcMetric(DbData);
-            Table = DbData.DbTable;
+            Table = DbData.Table;
         }
 
         // PROPERTIES

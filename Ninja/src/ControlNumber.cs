@@ -28,7 +28,7 @@ namespace BudgetExecution
             Source = source;
             Provider = provider;
             DbData = new DataBuilder(Source, Provider);
-            Table = DbData.DbTable;
+            Table = DbData.Table;
             DbRow = Table.Rows[0];
             ID = int.Parse(DbRow["ID"].ToString());
             Region = "R6";
@@ -50,7 +50,7 @@ namespace BudgetExecution
             Fund = fund;
             DivisionID = division;
             DbData = new DataBuilder(Source, Provider, GetParamData(fund, division));
-            Table = DbData.DbTable;
+            Table = DbData.Table;
             DbRow = Table.Rows[0];
             ID = int.Parse(DbRow["ID"].ToString());
             FiscalYear = DbRow["FiscalYear"].ToString();
@@ -142,7 +142,7 @@ namespace BudgetExecution
         {
             try
             {
-                DataRow datarow = new DataBuilder(source, Provider.SQLite, p).DbTable.AsEnumerable().Select(prc => prc).First();
+                DataRow datarow = new DataBuilder(source, Provider.SQLite, p).Table.AsEnumerable().Select(prc => prc).First();
                 return new Fund(datarow);
             }
             catch (Exception ex)
@@ -163,7 +163,7 @@ namespace BudgetExecution
         {
             try
             {
-                DataRow datarow = new DataBuilder(source, provider, p).DbTable.AsEnumerable().Select(prc => prc).First();
+                DataRow datarow = new DataBuilder(source, provider, p).Table.AsEnumerable().Select(prc => prc).First();
                 return new Fund(datarow);
             }
             catch (Exception ex)
@@ -396,7 +396,7 @@ namespace BudgetExecution
         {
             try
             {
-                return DbData.DbTable.AsEnumerable().Count();
+                return DbData.Table.AsEnumerable().Count();
             }
             catch (Exception ex)
             {

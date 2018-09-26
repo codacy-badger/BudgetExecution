@@ -14,7 +14,7 @@ namespace BudgetExecution
             DbData = new DataBuilder(Source.RegionalAccounts, Provider.SQLite, new Dictionary<string, object> { ["BFY"] = FiscalYear });
             TableSelector = DataBuilder.FilterRecords;
             Metric = new PrcMetric(DbData);
-            DbTable = DbData.DbTable;
+            DbTable = DbData.Table;
             Total = Metric.Total;
             Count = Metric.Count;
             Average = Metric.Average;
@@ -220,7 +220,7 @@ namespace BudgetExecution
         {
             try
             {
-                return DbData.DbTable.AsEnumerable().Select(p => p.Field<string>(filter)).Distinct().ToArray();
+                return DbData.Table.AsEnumerable().Select(p => p.Field<string>(filter)).Distinct().ToArray();
             }
             catch(Exception ex)
             {

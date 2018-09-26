@@ -48,7 +48,7 @@ namespace BudgetExecution
             DbData = data;
             Source = data.Source;
             Value = Stat.Total;
-            Table = DbData.DbTable;
+            Table = DbData.Table;
             Metric = new PrcMetric(DbData);
             DataTotals = Metric.GetChartTotals(Table, filter);
             if (Chart.Series != null)
@@ -78,7 +78,7 @@ namespace BudgetExecution
                 Chart.Series.Clear();
             }
 
-            Table = DbData.DbTable;
+            Table = DbData.Table;
             Metric = new PrcMetric(DbData);
             DataMetrics = Metric.GetChartMetrics(Table, filter);
             DataSeries = GetSeriesTotals(GetMeasure(DataMetrics, Value), type);
@@ -103,11 +103,11 @@ namespace BudgetExecution
             Value = value;
             SeriesType = type;
             ConfigureMainTitle(title);
-            Table = DbData.DbTable;
+            Table = DbData.Table;
             Metric = new PrcMetric(DbData);
             DataMetrics = Metric.GetChartMetrics(Table, filter);
             DataSeries = GetSeriesTotals(GetMeasure(DataMetrics, Value), type);
-            Table = DbData.DbTable;
+            Table = DbData.Table;
             Metric = new PrcMetric(DbData);
             DataMetrics = Metric.GetChartMetrics(Table, filter);
             Chart.Series?.Add(DataSeries);
@@ -178,7 +178,7 @@ namespace BudgetExecution
                 Chart.Series.Clear();
             }
 
-            Table = DbData.DbTable;
+            Table = DbData.Table;
             Metric = new PrcMetric(DbData);
             DataMetrics = Metric.GetChartMetrics(Table, filter);
             DataSeries = GetSeriesTotals(GetMeasure(DataMetrics, Value), type);
@@ -202,7 +202,7 @@ namespace BudgetExecution
             Source = source;
             Value = value;
             DbData = new DataBuilder(source, Provider.SQLite, param);
-            Table = DbData.DbTable;
+            Table = DbData.Table;
             Metric = new PrcMetric(DbData);
             DataMetrics = Metric.GetChartMetrics(Table, filter);           
             DataSeries = GetSeriesTotals(GetMeasure(DataMetrics, Value), SeriesType);

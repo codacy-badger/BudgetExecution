@@ -7,7 +7,7 @@ using Syncfusion.Windows.Forms;
 namespace BudgetExecution
 {
     /// <summary>
-    /// class Reprogramming
+    ///     class Reprogramming
     /// </summary>
     public partial class Reprogramming : MetroForm
     {
@@ -24,7 +24,7 @@ namespace BudgetExecution
             Provider = provider;
             DbQuery = new Query(Source, Provider);
             DbData = new DataBuilder(DbQuery);
-            DbTable = DbData.DbTable;
+            DbTable = DbData.Table;
             DbRow = DbData.Records;
             ProgramElements = DbData.GetProgramElements(DbTable);
             Columns = DbData.Columns;

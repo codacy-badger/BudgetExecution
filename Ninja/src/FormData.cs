@@ -27,7 +27,7 @@ namespace BudgetExecution
         public FormData(DataBuilder data, BindingSource bs, DataGridView dgv, BindingNavigator bn)
         {
             DbData = data;
-            DbTable = DbData.DbTable;
+            DbTable = DbData.Table;
             BindGridAndNavigator(DbTable, dgv, bs, bn);
             BindingSource = bs;
             Grid = dgv;
@@ -310,7 +310,7 @@ namespace BudgetExecution
         {
             try
             {
-                DbTable = DbData.DbTable;
+                DbTable = DbData.Table;
                 BindingSource.DataSource = DbTable;
             }
             catch (Exception ex)

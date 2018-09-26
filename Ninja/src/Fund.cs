@@ -21,7 +21,7 @@ namespace BudgetExecution
         {
             Source = source;
             Provider = provider;
-            Table = new DataBuilder(Source, Provider).DbTable;
+            Table = new DataBuilder(Source, Provider).Table;
         }
 
         public Fund(string code, string bfy) : this(Source.Funds, Provider.SQLite)
@@ -137,7 +137,7 @@ namespace BudgetExecution
             try
             {
                 DataBuilder data = new DataBuilder(source, provider, param);
-                return data.DbTable;
+                return data.Table;
             }
             catch (Exception ex)
             {
@@ -209,7 +209,7 @@ namespace BudgetExecution
         {
             try
             {
-                DataRow datarow = new DataBuilder(source, Provider.SQLite, p).DbTable.AsEnumerable().Select(prc => prc).First();
+                DataRow datarow = new DataBuilder(source, Provider.SQLite, p).Table.AsEnumerable().Select(prc => prc).First();
                 return new Fund(datarow);
             }
             catch (Exception ex)
@@ -223,7 +223,7 @@ namespace BudgetExecution
         {
             try
             {
-                DataRow datarow = new DataBuilder(source, provider, p).DbTable.AsEnumerable().Select(prc => prc).First();
+                DataRow datarow = new DataBuilder(source, provider, p).Table.AsEnumerable().Select(prc => prc).First();
                 return new Fund(datarow);
             }
             catch (Exception ex)

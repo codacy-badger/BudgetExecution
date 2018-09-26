@@ -18,7 +18,7 @@ namespace BudgetExecution
             Source = Source.ProgramObligations;
             Provider = Provider.SQLite;
             DbData = new DataBuilder(Source, Provider);
-            Table = DbData.DbTable;
+            Table = DbData.Table;
             Records = Table.AsEnumerable().Select(o => o).ToArray();
             DbRow = Records[0];
         }
@@ -28,7 +28,7 @@ namespace BudgetExecution
             Source = source;
             Provider = provider;
             DbData = new DataBuilder(Source, Provider, param);
-            Table = DbData.DbTable;
+            Table = DbData.Table;
             Records = Table.AsEnumerable().Select(o => o).ToArray();
             DbRow = Records[0];
         }

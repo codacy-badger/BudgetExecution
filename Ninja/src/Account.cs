@@ -284,7 +284,7 @@ namespace BudgetExecution
         {
             try
             {
-                DataRow query = new DataBuilder(source, Provider.SQLite, param).DbTable.AsEnumerable().Select(p => p).First();
+                DataRow query = new DataBuilder(source, Provider.SQLite, param).Table.AsEnumerable().Select(p => p).First();
                 return new Account(query);
             }
             catch (Exception ex)
@@ -298,7 +298,7 @@ namespace BudgetExecution
         {
             try
             {
-                DataRow query = new DataBuilder(source, provider, param).DbTable.AsEnumerable().Select(p => p).First();
+                DataRow query = new DataBuilder(source, provider, param).Table.AsEnumerable().Select(p => p).First();
                 return new Account(query);
             }
             catch (Exception ex)
@@ -387,7 +387,7 @@ namespace BudgetExecution
             try
             {
                 DataBuilder data = new DataBuilder(source, provider);
-                return data.DbTable;
+                return data.Table;
             }
             catch (Exception ex)
             {
@@ -401,7 +401,7 @@ namespace BudgetExecution
             try
             {
                 DataBuilder data = new DataBuilder(source, Provider.SQLite, param);
-                return data.DbTable;
+                return data.Table;
             }
             catch (Exception ex)
             {
@@ -415,7 +415,7 @@ namespace BudgetExecution
             try
             {
                 DataBuilder data = new DataBuilder(source, provider, param);
-                return data.DbTable;
+                return data.Table;
             }
             catch (Exception ex)
             {

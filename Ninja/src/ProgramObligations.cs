@@ -18,7 +18,7 @@ namespace BudgetExecution
             Source = Source.ProgramObligations;
             Provider = Provider.SQLite;
             DbData = new DataBuilder(Source, Provider);
-            Table = DbData.DbTable;
+            Table = DbData.Table;
             Records = Table.AsEnumerable().Select(o => o).ToArray();
             DbRow = Records[0];
         }
@@ -28,7 +28,7 @@ namespace BudgetExecution
             Source = source;
             Provider = provider;
             DbData = new DataBuilder(Source, Provider, param);
-            Table = DbData.DbTable;
+            Table = DbData.Table;
             Records = Table.AsEnumerable().Select(o => o).ToArray();
             DbRow = Records[0];
         }
@@ -38,7 +38,7 @@ namespace BudgetExecution
             Source = source;
             Provider = provider;
             DbData = new DataBuilder(Source, Provider, param);
-            Table = DbData.DbTable;
+            Table = DbData.Table;
             Records = Table.AsEnumerable().Select(ob => ob).ToArray();
             DbRow = Records[0];
             ID = int.Parse(DbRow["ID"].ToString());
@@ -142,7 +142,7 @@ namespace BudgetExecution
         {
             try
             {
-                return new DataBuilder(source, provider, param).DbTable.AsEnumerable().Select(p => p).First();
+                return new DataBuilder(source, provider, param).Table.AsEnumerable().Select(p => p).First();
             }
             catch (Exception ex)
             {
@@ -232,7 +232,7 @@ namespace BudgetExecution
         {
             try
             {
-                var datarow = new DataBuilder(source, Provider.SQLite, p).DbTable.AsEnumerable().Select(prc => prc).First();
+                var datarow = new DataBuilder(source, Provider.SQLite, p).Table.AsEnumerable().Select(prc => prc).First();
                 return new Obligation(datarow);
             }
             catch (Exception ex)
@@ -246,7 +246,7 @@ namespace BudgetExecution
         {
             try
             {
-                var query = new DataBuilder(source, provider, param).DbTable.AsEnumerable().Select(p => p).First();
+                var query = new DataBuilder(source, provider, param).Table.AsEnumerable().Select(p => p).First();
                 return new Obligation(query);
             }
             catch (Exception ex)

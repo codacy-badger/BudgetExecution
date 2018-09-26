@@ -20,7 +20,7 @@ namespace BudgetExecution
         public PrcMetric(DataBuilder data)
         {
             DbData = data;
-            Table = DbData.DbTable;
+            Table = DbData.Table;
             ProgramElements = DbData.GetProgramElements(Table);
             Total = GetTotals(Table);
             Count = Table.Rows.Count;
@@ -57,7 +57,7 @@ namespace BudgetExecution
         public PrcMetric(DataBuilder data, Field column, string filter)
         {
             DbData = data;
-            Table = Info.FilterRows(DbData.DbTable, column, filter);
+            Table = Info.FilterRows(DbData.Table, column, filter);
             ProgramElements = GetProgramElements(Table);
             Total = GetTotals(Table);
             Count = Table.Rows.Count;
@@ -79,8 +79,8 @@ namespace BudgetExecution
             ObjectiveMetrics = GetMetrics(Table, Field.ObjectiveName);
             if (DbData.Source == Source.DivisionAccounts)
             {
-                DivisionTotals = GetDataTotals(DbData.DbTable, Field.RC);
-                DivisionMetrics = GetMetrics(DbData.DbTable, Field.RC);
+                DivisionTotals = GetDataTotals(DbData.Table, Field.RC);
+                DivisionMetrics = GetMetrics(DbData.Table, Field.RC);
             }
             else
             {

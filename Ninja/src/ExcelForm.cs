@@ -23,7 +23,7 @@ namespace BudgetExecution
             Provider = Provider.SQLite;
             DbData = new DataBuilder(Source, Provider);
             BindingSource = new BindingSource();
-            Table = DbData.DbTable;
+            Table = DbData.Table;
             BindingSource.DataSource = Table;
             ProgramElements = DbData.ProgramElements;
             Ninja = new FormData(Source, Provider);
@@ -37,7 +37,7 @@ namespace BudgetExecution
             Provider = provider;
             DbData = new DataBuilder(source, provider);
             BindingSource = new BindingSource();
-            Table = DbData.DbTable;
+            Table = DbData.Table;
             BindingSource.DataSource = Table;
             ProgramElements = DbData.ProgramElements;
             Ninja = new FormData(Source, Provider);
@@ -51,7 +51,7 @@ namespace BudgetExecution
             Provider = provider;
             DbData = new DataBuilder(Source, Provider, p);
             BindingSource = new BindingSource();
-            Table = DbData.DbTable;
+            Table = DbData.Table;
             BindingSource.DataSource = Table;
             ProgramElements = DbData.ProgramElements;
             Ninja = new FormData(Source, Provider, p);

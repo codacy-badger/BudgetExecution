@@ -15,7 +15,7 @@ namespace BudgetExecution
             Provider = Provider.SQLite;
             DbQuery = new SQLiteQuery(Source);
             DbData = new DataBuilder(DbQuery);
-            DbTable = DbData.DbTable;
+            DbTable = DbData.Table;
         }
 
         public Employee(int id, string eid, string hoc, string hon, string wc, string f, string l, string lvt, double leave)
@@ -24,7 +24,7 @@ namespace BudgetExecution
             Provider = Provider.SQLite;
             DbQuery = new SQLiteQuery(Source);
             DbData = new DataBuilder(DbQuery);
-            DbTable = DbData.DbTable;
+            DbTable = DbData.Table;
             ID = id;
             EmployId = eid;
             HrOrgCode = hoc;

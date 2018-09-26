@@ -14,7 +14,7 @@ namespace BudgetExecution
             DbData = new DataBuilder(Source.DivisionAccounts, Provider.SQLite, new Dictionary<string, object> { ["BFY"] = FiscalYear });
             Metric = new PrcMetric(DbData);
             DataRecords = DbData.Records;
-            DbTable = DbData.DbTable;
+            DbTable = DbData.Table;
             PRC = GetPrcArray(DbTable);
             Total = Metric.Total;
             Count = Metric.Count;
@@ -28,10 +28,10 @@ namespace BudgetExecution
             ProgramProjectAuthority = Metric.ProgramProjectTotals;
             if(ProgramElements["BOC"].Contains("17"))
             {
-                FTE = GetFTE(DbData.DbTable);
+                FTE = GetFTE(DbData.Table);
             }
 
-            Awards = new DataBuilder(Source.Awards, Provider.SQLite, new Dictionary<string, object> { ["BFY"] = FiscalYear }).DbTable;
+            Awards = new DataBuilder(Source.Awards, Provider.SQLite, new Dictionary<string, object> { ["BFY"] = FiscalYear }).Table;
             TableSelector = DataBuilder.FilterRecords;
         }
 
@@ -42,7 +42,7 @@ namespace BudgetExecution
             Org = new Org(RC.Code);
             DbData = new DataBuilder(Source.DivisionAccounts, Provider.SQLite, new Dictionary<string, object> { ["RC"] = RC.Code, ["BFY"] = FiscalYear });
             Metric = new PrcMetric(DbData);
-            DbTable = DbData.DbTable;
+            DbTable = DbData.Table;
             DataRecords = DbData.Records;
             PRC = GetPrcArray(DbTable);
             Total = Metric.Total;
@@ -68,7 +68,7 @@ namespace BudgetExecution
             SF6A = GetSF6A(DbTable);
             TR = GetTR(DbTable);
             OIL = GetOIL(DbTable);
-            Awards = new DataBuilder(Source.Awards, Provider.SQLite, new Dictionary<string, object> { ["RC"] = RC.Code, ["BFY"] = FiscalYear }).DbTable;
+            Awards = new DataBuilder(Source.Awards, Provider.SQLite, new Dictionary<string, object> { ["RC"] = RC.Code, ["BFY"] = FiscalYear }).Table;
         }
 
         // PROPERTIES

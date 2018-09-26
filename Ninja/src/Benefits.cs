@@ -18,8 +18,8 @@ namespace BudgetExecution
             Source = Source.Benefits;
             Provider = Provider.SQLite;
             DbData = new DataBuilder(Source, Provider);
-            Table = DbData.DbTable;
-            Records = DbData.DbTable.AsEnumerable().Select(a => a).ToArray();
+            Table = DbData.Table;
+            Records = DbData.Table.AsEnumerable().Select(a => a).ToArray();
         }
 
         public Benefits(Source source, Provider provider)
@@ -27,8 +27,8 @@ namespace BudgetExecution
             Source = source;
             Provider = provider;
             DbData = new DataBuilder(Source, Provider);
-            Table = DbData.DbTable;
-            Records = DbData.DbTable.AsEnumerable().Select(a => a).ToArray();
+            Table = DbData.Table;
+            Records = DbData.Table.AsEnumerable().Select(a => a).ToArray();
             DbRow = Records[0];
         }
 
@@ -37,8 +37,8 @@ namespace BudgetExecution
             Source = source;
             Provider = provider;
             DbData = new DataBuilder(Source, Provider, p);
-            Table = DbData.DbTable;
-            Records = DbData.DbTable.AsEnumerable().Select(a => a).ToArray();
+            Table = DbData.Table;
+            Records = DbData.Table.AsEnumerable().Select(a => a).ToArray();
             DbRow = Records[0];
         }
 

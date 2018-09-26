@@ -18,8 +18,8 @@ namespace BudgetExecution
             Source = Source.Programs;
             Provider = Provider.SQLite;
             DbData = new DataBuilder(Source, Provider);
-            Table = DbData.DbTable;
-            Records = DbData.DbTable.AsEnumerable().Select(a => a).ToArray();
+            Table = DbData.Table;
+            Records = DbData.Table.AsEnumerable().Select(a => a).ToArray();
         }
 
         // PROPERTIES

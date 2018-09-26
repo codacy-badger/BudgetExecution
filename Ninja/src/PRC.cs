@@ -22,7 +22,7 @@ namespace BudgetExecution
             Source = source;
             Provider = provider;
             DbData = new DataBuilder(source, provider);
-            DbRow = DbData.DbTable.AsEnumerable().Select(p => p).First();
+            DbRow = DbData.Table.AsEnumerable().Select(p => p).First();
             ID = int.Parse(DbRow["ID"].ToString());
             BudgetLevel = DbRow["BudgetLevel"].ToString();
             RPIO = DbRow["RPIO"].ToString();
@@ -52,7 +52,7 @@ namespace BudgetExecution
             Source = source;
             Provider = provider;
             DbData = new DataBuilder(source, provider, param);
-            DbRow = DbData.DbTable.AsEnumerable().Select(p => p).First();
+            DbRow = DbData.Table.AsEnumerable().Select(p => p).First();
             ID = int.Parse(DbRow["ID"].ToString());
             BudgetLevel = DbRow["BudgetLevel"].ToString();
             RPIO = DbRow["RPIO"].ToString();
@@ -206,7 +206,7 @@ namespace BudgetExecution
         {
             try
             {
-                return new DataBuilder(source, provider, param).DbTable.AsEnumerable().Select(p => p).First();
+                return new DataBuilder(source, provider, param).Table.AsEnumerable().Select(p => p).First();
             }
             catch (Exception ex)
             {
@@ -309,7 +309,7 @@ namespace BudgetExecution
         {
             try
             {
-                DataRow datarow = new DataBuilder(source, provider, p).DbTable.AsEnumerable().Select(prc => prc).First();
+                DataRow datarow = new DataBuilder(source, provider, p).Table.AsEnumerable().Select(prc => prc).First();
                 return new PRC(datarow);
             }
             catch (Exception ex)

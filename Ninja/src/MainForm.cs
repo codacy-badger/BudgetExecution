@@ -21,7 +21,7 @@ namespace BudgetExecution
             D6 = new DataBuilder(Source.DivisionAccounts, Provider.SQLite);
             Metric = new PrcMetric(R6);
             Timer = new Timer();
-            Values = new Dictionary<string, double>[] { Metric.GetChartTotals(R6.DbTable, Field.Fund), Metric.GetChartTotals(R6.DbTable, Field.BOC), Metric.GetChartTotals(D6.DbTable, Field.Fund), Metric.GetChartTotals(R6.DbTable, Field.NPM), Metric.GetChartTotals(D6.DbTable, Field.NPM), Metric.GetChartTotals(R6.DbTable, Field.GoalName), Metric.GetChartTotals(D6.DbTable, Field.GoalName) };
+            Values = new Dictionary<string, double>[] { Metric.GetChartTotals(R6.Table, Field.Fund), Metric.GetChartTotals(R6.Table, Field.BOC), Metric.GetChartTotals(D6.Table, Field.Fund), Metric.GetChartTotals(R6.Table, Field.NPM), Metric.GetChartTotals(D6.Table, Field.NPM), Metric.GetChartTotals(R6.Table, Field.GoalName), Metric.GetChartTotals(D6.Table, Field.GoalName) };
             Title = GetChartTitles(Values);
             Chart = new GetChart(GetMainChart);
             MainChart = new BudgetChart(MainChart, Title[1], Values[1]).Activate();

@@ -43,7 +43,7 @@ namespace BudgetExecution
             Source = source;
             Provider = provider;
             DbData = new DataBuilder(Source, Provider, p);
-            DbTable = DbData.DbTable;
+            DbTable = DbData.Table;
             DbRow = DbTable.AsEnumerable().Select(prc => prc).First();
             RPIO = DbRow["RPIO"].ToString();
             BFY = DbRow["BFY "].ToString();

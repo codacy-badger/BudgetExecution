@@ -21,7 +21,7 @@ namespace BudgetExecution
             Source = Source.RegionalAccounts;
             Provider = Provider.SQLite;
             DbData = new DataBuilder(Source, Provider);
-            Table = DbData.DbTable;
+            Table = DbData.Table;
             BindingSource = DbData.BindingSource;
             Grid.DataSource = BindingSource;
             ProgramElements = DbData.GetProgramElements(Table);
@@ -39,7 +39,7 @@ namespace BudgetExecution
             Source = source;
             Provider = provider;
             DbData = new DataBuilder(Source, Provider);
-            Table = DbData.DbTable;
+            Table = DbData.Table;
             BindingSource = DbData.BindingSource;
             Grid.DataSource = DbData.BindingSource;
             ProgramElements = DbData.GetProgramElements(Table);

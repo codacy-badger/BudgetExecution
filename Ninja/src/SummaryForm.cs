@@ -41,7 +41,7 @@ namespace BudgetExecution
             Provider = Provider.SQLite;
             Parameter = new Dictionary<string, object> { ["RC"] = rc };
             DbData = new DataBuilder(Source.DivisionAccounts, Provider.SQLite, Parameter);
-            Table = DbData.DbTable;
+            Table = DbData.Table;
             DatabaseTab.TabVisible = true;
             ProjectTab.TabVisible = true;
             DivisionTab.TabVisible = false;
@@ -61,7 +61,7 @@ namespace BudgetExecution
             if (source == Source.RegionalAccounts || source == Source.DivisionAccounts)
             {
                 DbData = new DataBuilder(source, Provider.SQLite);
-                Table = DbData.DbTable;
+                Table = DbData.Table;
                 Source = source;
                 TabNames = GetTabNames();
                 Text = @"R6 Summary";
@@ -77,7 +77,7 @@ namespace BudgetExecution
             else
             {                
                 DbData = new DataBuilder(source, Provider.SQLite);
-                Table = DbData.DbTable;
+                Table = DbData.Table;
                 Source = source;
                 Provider = Provider.SQLite;
                 TabNames = GetTabNames();
@@ -164,9 +164,9 @@ namespace BudgetExecution
                 DefineVisisbleDataColumns(Grid);
                 PopulateFilterBoxItems(GridFundFilter, Field.FundName);
                 ConfigureTextBoxBindings();
-                label32.Text = DbData.GetTotal(DbData.DbTable).ToString("c");
-                label37.Text = DbData.DbTable.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Average().ToString("N");
-                label41.Text = DbData.GetCount(DbData.DbTable).ToString();
+                label32.Text = DbData.GetTotal(DbData.Table).ToString("c");
+                label37.Text = DbData.Table.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Average().ToString("N");
+                label41.Text = DbData.GetCount(DbData.Table).ToString();
                 GridFundFilter.SelectionChangeCommitted += GridFilterControl1_ItemSelected;
                 GridBocFilter.SelectionChangeCommitted += GridFilterControl2_ItemSelected;
                 SummaryTabControl.SelectedIndexChanged += SummaryTabPage_TabSelected;
@@ -318,7 +318,7 @@ namespace BudgetExecution
         {
             try
             {
-                return DbData.DbTable.AsEnumerable().Where(p => p.Field<string>("FundName").Equals(filter)).Select(p => p.Field<decimal>("Amount") > 0).Count();
+                return DbData.Table.AsEnumerable().Where(p => p.Field<string>("FundName").Equals(filter)).Select(p => p.Field<decimal>("Amount") > 0).Count();
             }
             catch (Exception ex)
             {
@@ -331,7 +331,7 @@ namespace BudgetExecution
         {
             try
             {
-                return DbData.DbTable.AsEnumerable().Where(p => p.Field<string>("FundName").Equals(filter1)).Where(p => p.Field<string>("BocName").Equals(filter2)).Select(p => p.Field<decimal>("Amount")).Count();
+                return DbData.Table.AsEnumerable().Where(p => p.Field<string>("FundName").Equals(filter1)).Where(p => p.Field<string>("BocName").Equals(filter2)).Select(p => p.Field<decimal>("Amount")).Count();
             }
             catch (Exception ex)
             {
@@ -501,7 +501,7 @@ namespace BudgetExecution
         {
             try
             {
-                return DbData.DbTable.AsEnumerable().Where(p => p.Field<string>("FundName").Equals(filter)).Select(p => p.Field<decimal>("Amount")).Sum();
+                return DbData.Table.AsEnumerable().Where(p => p.Field<string>("FundName").Equals(filter)).Select(p => p.Field<decimal>("Amount")).Sum();
             }
             catch (Exception ex)
             {
@@ -531,8 +531,8 @@ namespace BudgetExecution
                 {
                     BindingSource.Filter = null;
                     Grid.DataSource = BindingSource;
-                    label32.Text = DbData.GetTotal(DbData.DbTable).ToString("c");
-                    label41.Text = DbData.GetCount(DbData.DbTable).ToString();
+                    label32.Text = DbData.GetTotal(DbData.Table).ToString("c");
+                    label41.Text = DbData.GetCount(DbData.Table).ToString();
                     GridBocFilter.Items.Clear();
                     GridAccountFilter.Items.Clear();
                     PopulateFilterBoxItems(GridFundFilter, Field.FundName);
