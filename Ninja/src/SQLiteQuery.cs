@@ -10,7 +10,7 @@ using System.Data.SQLite;
 
 namespace BudgetExecution
 {
-    public class SQLiteQuery : Query
+    public class SQLiteQuery : Query, IQuery
     {
         // CONSTRUCTORS
         public SQLiteQuery() { }
@@ -21,7 +21,7 @@ namespace BudgetExecution
             Source = source;
             DataConnection = GetConnection();
             TableName = source.ToString();
-            SelectStatement = $"SELECT * FROM {source.ToString()}";
+            SelectStatement = $"SELECT * FROM {TableName}";
             SelectCommand = GetSelectCommand(SelectStatement, DataConnection);
             DataAdapter = GetDataAdapter(SelectCommand);
             CommandBuilder = GetCommandBuilder(DataAdapter);

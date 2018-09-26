@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Data.OleDb;
 using System.Data.SQLite;
 using System.Linq;
 using System.Windows.Forms;
@@ -184,7 +183,7 @@ namespace BudgetExecution
             {
                 if(pmr != null)
                 {
-                    ExcelQuery eq = new ExcelQuery(pmr);
+                    ExcelQuery eq = new ExcelQuery(Source, pmr);
                     return eq;
                 }
 
