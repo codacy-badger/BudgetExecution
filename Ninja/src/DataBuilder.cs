@@ -434,7 +434,9 @@ namespace BudgetExecution
 
         public decimal GetTotal(DataTable table)
         {
-            if(Table.Columns.Contains("Amount"))
+            var cols = table.GetFields();
+            if(cols.Contains("Amount") || cols.Contains("Obligations") || cols.Contains("Commitments") || 
+               cols.Contains("LeaveHours") || cols.Contains("DollarAmount") || cols.Contains("WorkHours"))
             {
                 try
                 {
@@ -449,93 +451,8 @@ namespace BudgetExecution
                     new Error(ex).ShowDialog();
                     return 0;
                 }
-            }
+            }           
 
-            if(Table.Columns.Contains("DollarAmount"))
-            {
-                try
-                {
-                    decimal total = table.AsEnumerable().Select(p => p.Field<decimal>("DollarAmount")).Sum();
-                    if(total > 0)
-                    {
-                        return total;
-                    }
-                }
-                catch(Exception ex)
-                {
-                    new Error(ex).ShowDialog();
-                    return 0;
-                }
-            }
-
-            if(Table.Columns.Contains("Obligataions"))
-            {
-                try
-                {
-                    decimal total = table.AsEnumerable().Select(p => p.Field<decimal>("Obligations")).Sum();
-                    if(total > 0)
-                    {
-                        return total;
-                    }
-                }
-                catch(Exception ex)
-                {
-                    new Error(ex).ShowDialog();
-                    return 0;
-                }
-            }
-
-            if(Table.Columns.Contains("Commitments"))
-            {
-                try
-                {
-                    decimal total = table.AsEnumerable().Select(p => p.Field<decimal>("Commitments")).Sum();
-                    if(total > 0)
-                    {
-                        return total;
-                    }
-                }
-                catch(Exception ex)
-                {
-                    new Error(ex).ShowDialog();
-                    return 0;
-                }
-            }
-
-            if(Table.Columns.Contains("LeaveHours"))
-            {
-                try
-                {
-                    decimal total = table.AsEnumerable().Select(p => p.Field<decimal>("LeaveHours")).Sum();
-                    if(total > 0)
-                    {
-                        return total;
-                    }
-                }
-                catch(Exception ex)
-                {
-                    new Error(ex).ShowDialog();
-                    return 0;
-                }
-            }
-
-            if(Table.Columns.Contains("WorkHours"))
-            {
-                try
-                {
-                    decimal total = table.AsEnumerable().Select(p => p.Field<decimal>("WorkHours")).Sum();
-                    if(total > 0)
-                    {
-                        return total;
-                    }
-                }
-                catch(Exception ex)
-                {
-                    new Error(ex).ShowDialog();
-                    return 0;
-                }
-            }
-            
             return 0;
         }
 
