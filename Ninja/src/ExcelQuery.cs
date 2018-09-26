@@ -13,9 +13,20 @@ namespace BudgetExecution
     public class ExcelQuery : Query, IQuery
     {
         // Constructors
-        public ExcelQuery(Dictionary<string, object> parameter) : base(Source.PRC, Provider.OleDb)
+        public ExcelQuery(Source source) : base(source)
         {
-            Parameter = parameter;
+            Provider = base.Provider;
+            Source = source;
+            DataConnection = GetConnection(Provider) as OleDbConnection;
+            TableName = source.ToString();
+            SelectStatement = $"SELECT * FROM {source.ToString()}";
+            SelectCommand = GetSelectCommand(SelectStatement, DataConnection) as OleDbCommand;
+            DataAdapter = GetDataAdapter(SelectCommand);
+            CommandBuilder = GetCommandBuilder(DataAdapter) as OleDbCommandBuilder;
+            UpdateCommand = CommandBuilder?.GetUpdateCommand();
+            InsertCommand = CommandBuilder?.GetInsertCommand();
+            DeleteCommand = CommandBuilder?.GetDeleteCommand();
+            Settings = new AppSettingsReader();
         }
 
         public ExcelQuery(Source source, Dictionary<string, object> parameter) : base(source, Provider.OleDb)
@@ -26,8 +37,8 @@ namespace BudgetExecution
             Provider = base.Provider;
             TableName = source.ToString();
             SelectStatement = $"SELECT * FROM {source.ToString()}";
-            Connection = new OleDbConnection(@"data source=C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\database\OleDb\R6.xlsx");
-            SelectCommand = new OleDbCommand(SelectStatement, Connection);
+            DataConnection = new OleDbConnection(@"data source=C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\database\OleDb\R6.xlsx");
+            SelectCommand = new OleDbCommand(SelectStatement, DataConnection);
             Adapter = new OleDbDataAdapter(SelectCommand);
             CommandBuilder = GetCommandBuilder(Adapter);
             InsertCommand = CommandBuilder.GetInsertCommand();
@@ -44,8 +55,8 @@ namespace BudgetExecution
             TableName = source.ToString();
             Parameters = GetParameter(param);
             SelectStatement = GetSqlStatement();
-            Connection = new OleDbConnection(@"data source=C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\database\OleDb\R6.xlsx");
-            SelectCommand = new OleDbCommand(SelectStatement, Connection);
+            DataConnection = new OleDbConnection(@"data source=C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\database\OleDb\R6.xlsx");
+            SelectCommand = new OleDbCommand(SelectStatement, DataConnection);
             Adapter = new OleDbDataAdapter(SelectCommand);
             CommandBuilder = GetCommandBuilder(Adapter);
             InsertCommand = CommandBuilder.GetInsertCommand();
@@ -56,9 +67,9 @@ namespace BudgetExecution
         // Properties
         public OleDbDataAdapter Adapter { get; set; }
 
-        public new OleDbCommandBuilder CommandBuilder { get; set; }
+        public new OleDbCommandBuilder CommandBuilder { get; internal set; }
 
-        public OleDbConnection Connection { get; }
+        public new OleDbConnection DataConnection { get; }
 
         public new Dictionary<string, object> Parameter { get; }
 
@@ -268,7 +279,7 @@ namespace BudgetExecution
         {
             try
             {
-                return new OleDbCommand(SelectStatement, Connection);
+                return new OleDbCommand(SelectStatement, DataConnection);
             }
             catch(Exception ex)
             {
@@ -281,7 +292,7 @@ namespace BudgetExecution
         {
             try
             {
-                return new OleDbDataAdapter(sql, Connection);
+                return new OleDbDataAdapter(sql, DataConnection);
             }
             catch(Exception ex)
             {
@@ -346,7 +357,7 @@ namespace BudgetExecution
         {
             try
             {
-                return new OleDbCommand(select, Connection);
+                return new OleDbCommand(select, DataConnection);
             }
             catch(Exception ex)
             {
