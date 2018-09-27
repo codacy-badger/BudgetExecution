@@ -1,0 +1,15 @@
+CREATE TABLE "Programs" ( 
+    "ID" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE, 
+    "RpioName" TEXT, 
+    "RPIO" TEXT, 
+    "BFY" TEXT, 
+    "Fund" TEXT, 
+    "FundName" TEXT, 
+    "AH" TEXT, 
+    "AllowanceHolderName" TEXT, 
+    "Org" TEXT, 
+    "DivisionName" TEXT, 
+    "ProgramProjectCode" TEXT, 
+    "ProgramProjectName" TEXT, 
+    "BOC" TEXT, 
+    "BocName" TEXT );

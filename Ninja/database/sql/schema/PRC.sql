@@ -3,6 +3,7 @@ CREATE TABLE "PRC" (
 	"BudgetLevel"	TEXT,
 	"RPIO"	TEXT DEFAULT 06,
     "AH" TEXT DEFAULT "06",
+    "AH" TEXT DEFAULT "06",
 	"BFY"	TEXT,
 	"Fund"	TEXT,
 	"FundName"	TEXT,
