@@ -2,16 +2,16 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
+using System;
+using System.Drawing;
+using System.IO;
+using System.Windows.Forms;
+using Syncfusion.Windows.Forms;
+using Syncfusion.Windows.Forms.Tools;
+
 namespace BudgetExecution
 {
-    using System;
-    using System.Drawing;
-    using System.IO;
-    using System.Windows.Forms;
-
-    using Syncfusion.Windows.Forms.Tools;
-
-    public partial class FunctionalityForm : Syncfusion.Windows.Forms.MetroForm
+    public partial class FunctionalityForm : MetroForm
     {
         public FunctionalityForm()
         {
@@ -23,7 +23,7 @@ namespace BudgetExecution
         // PROPERTIES
         private string[] Images { get; set; }
 
-        private FormData NinjaData { get; set; }
+        private FormData NinjaData { get; }
 
         // METHODS
         private void GetFunctionCarouselImageList(string path)
@@ -33,7 +33,7 @@ namespace BudgetExecution
             FunctionCarousel.ImageSlides = true;
             FunctionCarousel.UseOriginalImageinPreview = true;
             string[] images = Directory.GetFiles(path);
-            foreach (string i in images)
+            foreach(string i in images)
             {
                 string p = Path.GetFileNameWithoutExtension(i);
                 Bitmap b = new Bitmap(i);
@@ -68,8 +68,6 @@ namespace BudgetExecution
             Close();
         }
 
-        private void FunctionCarousel_Click(object sender, EventArgs e)
-        {
-        }
+        private void FunctionCarousel_Click(object sender, EventArgs e) { }
     }
 }

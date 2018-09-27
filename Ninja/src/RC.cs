@@ -2,18 +2,16 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
+using System;
+using System.Collections.Generic;
+using System.Data.SQLite;
+
 namespace BudgetExecution
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Data.SQLite;
-
     public class RC
     {
         // CONSTRUCTORS
-        public RC()
-        {
-        }
+        public RC() { }
 
         public RC(string code)
         {
@@ -39,9 +37,9 @@ namespace BudgetExecution
         {
             try
             {
-                return new Dictionary<string, object>() { ["Code"] = code };
+                return new Dictionary<string, object> { ["Code"] = code };
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -53,9 +51,9 @@ namespace BudgetExecution
             try
             {
                 SQLiteParameter[] parms = new SQLiteParameter[p.Count];
-                for (int i = 0; i < p.Count; i++)
+                for(int i = 0; i < p.Count; i++)
                 {
-                    foreach (KeyValuePair<string, object> kvp in p)
+                    foreach(KeyValuePair<string, object> kvp in p)
                     {
                         parms[i] = new SQLiteParameter(kvp.Key, kvp.Value);
                     }
@@ -63,7 +61,7 @@ namespace BudgetExecution
 
                 return parms;
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;

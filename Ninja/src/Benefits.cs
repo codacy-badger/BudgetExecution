@@ -2,14 +2,12 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
+using System.Collections.Generic;
+using System.Data;
+using System.Linq;
+
 namespace BudgetExecution
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Data;
-    using System.Data.SQLite;
-    using System.Linq;
-
     public class Benefits
     {
         // CONSTRUCTORS
@@ -55,46 +53,46 @@ namespace BudgetExecution
 
         public DataRow DbRow { get; set; }
 
-        public int ID { get; set; }  
+        public int ID { get; set; }
 
-        public string EmployeeID { get; set; } 
+        public string EmployeeID { get; set; }
 
-        public string FirstName { get; set; } 
+        public string FirstName { get; set; }
 
-        public string LastName { get; set; } 
+        public string LastName { get; set; }
 
-        public string ServiceDate { get; set; } 
+        public string ServiceDate { get; set; }
 
-        public string HireDate { get; set; } 
+        public string HireDate { get; set; }
 
-        public string JobTitle { get; set; } 
+        public string JobTitle { get; set; }
 
-        public string OccupationalSeries { get; set; } 
+        public string OccupationalSeries { get; set; }
 
-        public string HROrgCode { get; set; } 
+        public string HROrgCode { get; set; }
 
-        public string HROrgCodeName { get; set; } 
+        public string HROrgCodeName { get; set; }
 
-        public string Grade { get; set; } 
+        public string Grade { get; set; }
 
-        public string Step { get; set; } 
+        public string Step { get; set; }
 
-        public string GradeEntryDate { get; set; } 
+        public string GradeEntryDate { get; set; }
 
-        public string StepEntry { get; set; } 
+        public string StepEntry { get; set; }
 
-        public string WigiDueDate { get; set; } 
+        public string WigiDueDate { get; set; }
 
         public string AppointmentAuthority { get; set; }
 
-        public string AppointmentType { get; set; } 
+        public string AppointmentType { get; set; }
 
-        public string BargainingUnit { get; set; } 
+        public string BargainingUnit { get; set; }
 
-        public string EmployeeStatus { get; set; } 
+        public string EmployeeStatus { get; set; }
 
-        public string RetirementPlan { get; set; } 
+        public string RetirementPlan { get; set; }
 
-        public decimal CompensationRate { get; set; } 
+        public decimal CompensationRate { get; set; }
     }
 }

@@ -103,6 +103,8 @@ namespace BudgetExecution
 
         public DataRow[] Records { get; }
 
+
+        // METHODS
         public DataTable GetDataTable()
         {
             try
@@ -135,9 +137,6 @@ namespace BudgetExecution
             }
         }
 
-        // DELEGATES
-
-        // METHODS
         private SQLiteQuery GetSQLiteQuery(Source source)
         {
             try
@@ -237,8 +236,8 @@ namespace BudgetExecution
         {
             try
             {
-                var cols = row.Table.Columns;
-                var item = row.ItemArray;
+                DataColumnCollection cols = row.Table.Columns;
+                object[] item = row.ItemArray;
                 SQLiteParameter[] param = new SQLiteParameter[row.ItemArray.Length];
                 for(int i = 0; i < row.ItemArray.Length; i++)
                 {
@@ -258,7 +257,7 @@ namespace BudgetExecution
         {
             try
             {
-                var paramlist = new List<SQLiteParameter[]>();
+                List<SQLiteParameter[]> paramlist = new List<SQLiteParameter[]>();
                 foreach(DataRow row in table.Rows)
                 {
                     paramlist.Add(GetParamArray(row));
@@ -434,9 +433,13 @@ namespace BudgetExecution
 
         public decimal GetTotal(DataTable table)
         {
-            var cols = table.GetFields();
-            if(cols.Contains("Amount") || cols.Contains("Obligations") || cols.Contains("Commitments") || 
-               cols.Contains("LeaveHours") || cols.Contains("DollarAmount") || cols.Contains("WorkHours"))
+            string[] cols = table.GetFields();
+            if(cols.Contains("Amount") ||
+               cols.Contains("Obligations") ||
+               cols.Contains("Commitments") ||
+               cols.Contains("LeaveHours") ||
+               cols.Contains("DollarAmount") ||
+               cols.Contains("WorkHours"))
             {
                 try
                 {
@@ -451,7 +454,7 @@ namespace BudgetExecution
                     new Error(ex).ShowDialog();
                     return 0;
                 }
-            }           
+            }
 
             return 0;
         }

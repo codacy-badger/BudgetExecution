@@ -4,7 +4,5 @@
 
 namespace BudgetExecution
 {
-    public interface IPayroll
-    {
-    }
+    public interface IPayroll { }
 }

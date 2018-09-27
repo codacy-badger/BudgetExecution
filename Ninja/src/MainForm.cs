@@ -2,15 +2,15 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
+using System;
+using System.Collections.Generic;
+using System.Windows.Forms;
+using Syncfusion.Windows.Forms;
+using Syncfusion.Windows.Forms.Chart;
+
 namespace BudgetExecution
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Windows.Forms;
-
-    using Syncfusion.Windows.Forms.Chart;
-
-    public partial class MainForm : Syncfusion.Windows.Forms.MetroForm
+    public partial class MainForm : MetroForm
     {
         // CONSTRUCTORS
         public MainForm()
@@ -21,9 +21,18 @@ namespace BudgetExecution
             D6 = new DataBuilder(Source.DivisionAccounts, Provider.SQLite);
             Metric = new PrcMetric(R6);
             Timer = new Timer();
-            Values = new Dictionary<string, double>[] { Metric.GetChartTotals(R6.Table, Field.Fund), Metric.GetChartTotals(R6.Table, Field.BOC), Metric.GetChartTotals(D6.Table, Field.Fund), Metric.GetChartTotals(R6.Table, Field.NPM), Metric.GetChartTotals(D6.Table, Field.NPM), Metric.GetChartTotals(R6.Table, Field.GoalName), Metric.GetChartTotals(D6.Table, Field.GoalName) };
+            Values = new[]
+            {
+                Metric.GetChartTotals(R6.Table, Field.Fund),
+                Metric.GetChartTotals(R6.Table, Field.BOC),
+                Metric.GetChartTotals(D6.Table, Field.Fund),
+                Metric.GetChartTotals(R6.Table, Field.NPM),
+                Metric.GetChartTotals(D6.Table, Field.NPM),
+                Metric.GetChartTotals(R6.Table, Field.GoalName),
+                Metric.GetChartTotals(D6.Table, Field.GoalName)
+            };
             Title = GetChartTitles(Values);
-            Chart = new GetChart(GetMainChart);
+            Chart = GetMainChart;
             MainChart = new BudgetChart(MainChart, Title[1], Values[1]).Activate();
         }
 
@@ -59,7 +68,7 @@ namespace BudgetExecution
                 Timer.Enabled = true;
                 Timer.Interval = 5000;
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
             }
@@ -69,20 +78,20 @@ namespace BudgetExecution
         {
             try
             {
-                if (Counter >= Values.Length)
+                if(Counter >= Values.Length)
                 {
                     Counter = 0;
                     MainChart = Chart(MainChart, Title[Counter], Values[Counter]);
                     Counter++;
                 }
 
-                if (Counter < Values.Length)
+                if(Counter < Values.Length)
                 {
                     MainChart = Chart(MainChart, Title[Counter], Values[Counter]);
                     Counter++;
                 }
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
             }
@@ -114,7 +123,7 @@ namespace BudgetExecution
                 t[6] = "Division Funds by HQ NPM";
                 return t;
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -128,7 +137,7 @@ namespace BudgetExecution
                 MainChart = new BudgetChart(chart, title[0], data).Activate();
                 return MainChart;
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -142,7 +151,7 @@ namespace BudgetExecution
                 MainChart = new BudgetChart(chart, title, data).Activate();
                 return MainChart;
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -172,7 +181,7 @@ namespace BudgetExecution
             Selector summary = new Selector(Info.SummaryImages);
             summary.Show();
         }
-        
+
         public void EnterTile_OnClick(object sender, EventArgs e)
         {
             Selector summary = new Selector(Info.Enter);
@@ -191,8 +200,6 @@ namespace BudgetExecution
             dm.Show();
         }
 
-        private void TransferButton_Click(object sender, EventArgs e)
-        {
-        }
+        private void TransferButton_Click(object sender, EventArgs e) { }
     }
 }

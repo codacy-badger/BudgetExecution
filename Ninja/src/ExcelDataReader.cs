@@ -1,13 +1,9 @@
-
-
+using System;
+using System.Data;
+using Syncfusion.Windows.Forms;
 
 namespace BudgetExecution
 {
-    using System;
-    using System.Data;
-    using System.Windows.Forms;
-    using Syncfusion.Windows.Forms;
-
     public partial class ExcelDataReader : MetroForm
     {
         public ExcelDataReader()
@@ -42,9 +38,7 @@ namespace BudgetExecution
         public DataTable Table { get; set; }
 
         // METHODS
-        private void ExcelImporter_Load(object sender, EventArgs e)
-        {
-        }
+        private void ExcelImporter_Load(object sender, EventArgs e) { }
 
         private void CalculatorButton_OnClick(object sender, EventArgs e)
         {
@@ -81,15 +75,13 @@ namespace BudgetExecution
                 RecordManager am = new RecordManager(Source, Provider);
                 am.Show();
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
             }
         }
 
-        private void RefreshButton_Click(object sender, EventArgs e)
-        {
-        }
+        private void RefreshButton_Click(object sender, EventArgs e) { }
 
         private void CopyButton_OnClick(object sender, EventArgs e)
         {
@@ -98,7 +90,7 @@ namespace BudgetExecution
                 RecordManager am = new RecordManager(Source, Provider);
                 am.Show();
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
             }
@@ -111,7 +103,7 @@ namespace BudgetExecution
                 FilterTab.TabVisible = true;
                 FunctionTab.TabVisible = false;
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
             }
@@ -120,11 +112,11 @@ namespace BudgetExecution
         private void FunctionButton_OnClick(object sender, EventArgs e)
         {
             try
-            {               
+            {
                 FunctionTab.TabVisible = true;
                 FilterTab.TabVisible = false;
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
             }

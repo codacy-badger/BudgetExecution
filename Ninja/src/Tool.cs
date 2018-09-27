@@ -8,9 +8,11 @@
 
 #endregion
 
+using Syncfusion.Windows.Forms;
+
 namespace BudgetExecution.src
 {
-    public partial class Tool : Syncfusion.Windows.Forms.MetroForm
+    public partial class Tool : MetroForm
     {
         public Tool()
         {

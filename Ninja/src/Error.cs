@@ -2,12 +2,11 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
+using System;
+using Syncfusion.Windows.Forms;
+
 namespace BudgetExecution
 {
-    using System;
-
-    using Syncfusion.Windows.Forms;
-
     public partial class Error : MetroForm
     {
         public Error()

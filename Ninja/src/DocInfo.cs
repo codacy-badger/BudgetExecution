@@ -2,17 +2,15 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
+using System;
+using System.Collections.Generic;
+
 namespace BudgetExecution
 {
-    using System;
-    using System.Collections.Generic;
-
     public class DocInfo
     {
         // CONSTRUCTORS
-        public DocInfo()
-        {
-        }
+        public DocInfo() { }
 
         public DocInfo(DivisionAuthority budget)
         {
@@ -81,7 +79,7 @@ namespace BudgetExecution
             {
                 return new ControlNumber();
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -101,7 +99,7 @@ namespace BudgetExecution
                 param.Add("Purpose", Purpose);
                 return param;
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -135,10 +133,10 @@ namespace BudgetExecution
             {
                 return new DataBuilder(Source.InternalTransfers, Provider.SQLite).Table.Rows.Count + 1;
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
-                return -1;
+                return-1;
             }
         }
 

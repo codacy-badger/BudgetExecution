@@ -4,7 +4,5 @@
 
 namespace BudgetExecution
 {
-    public interface IEmployee
-    {
-    }
+    public interface IEmployee { }
 }

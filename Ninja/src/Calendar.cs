@@ -8,9 +8,11 @@
 
 #endregion
 
+using Syncfusion.Windows.Forms;
+
 namespace BudgetExecution
 {
-    public partial class Calendar : Syncfusion.Windows.Forms.MetroForm
+    public partial class Calendar : MetroForm
     {
         public Calendar()
         {

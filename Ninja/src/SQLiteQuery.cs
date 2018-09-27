@@ -65,11 +65,6 @@ namespace BudgetExecution
             DeleteCommand = CommandBuilder.GetDeleteCommand();
             Settings = new AppSettingsReader();
         }
-        
-        // PROPERTIES
-        public new Source Source { get; }
-
-        public new Provider Provider { get; }
 
         public new AppSettingsReader Settings { get; }
 
@@ -80,8 +75,6 @@ namespace BudgetExecution
         public SQLiteParameter[] Parameters { get; set; }
 
         public new string TableName { get; }
-
-        public new string SqlStatement { get; set; }
 
         public new string SelectStatement { get; set; }
 
@@ -98,6 +91,13 @@ namespace BudgetExecution
         public new SQLiteCommand InsertCommand { get; set; }
 
         public new SQLiteCommand UpdateCommand { get; set; }
+
+        // PROPERTIES
+        public new Source Source { get; }
+
+        public new Provider Provider { get; }
+
+        public new string SqlStatement { get; set; }
 
         // METHODS
         public new string GetParameterStrings(Dictionary<string, object> param)

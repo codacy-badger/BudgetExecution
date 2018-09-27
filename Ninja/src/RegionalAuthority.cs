@@ -74,7 +74,7 @@ namespace BudgetExecution
 
         // METHODS
         /// <summary>
-        /// Returns array of strings consisting of unique values within a columns
+        ///     Returns array of strings consisting of unique values within a columns
         /// </summary>
         /// <param name="table"></param>
         /// <param name="column"></param>

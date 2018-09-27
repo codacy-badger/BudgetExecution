@@ -2,17 +2,15 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
+using System;
+using System.Collections.Generic;
+
 namespace BudgetExecution
 {
-    using System;
-    using System.Collections.Generic;
-
     public class Org
     {
         // CONSTRUCTORS
-        public Org()
-        {
-        }
+        public Org() { }
 
         public Org(string code)
         {
@@ -33,9 +31,9 @@ namespace BudgetExecution
         {
             try
             {
-                return new Dictionary<string, object>() { ["Code"] = code };
+                return new Dictionary<string, object> { ["Code"] = code };
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;

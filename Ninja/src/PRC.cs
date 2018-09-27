@@ -2,20 +2,17 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Linq;
+
 namespace BudgetExecution
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Data;
-    using System.Linq;
-    using System.Windows.Forms;
-
     public class PRC : IPRC, IAccount
     {
         // CONSTRUCTORS
-        public PRC()
-        {
-        }
+        public PRC() { }
 
         public PRC(Source source = Source.PRC, Provider provider = Provider.SQLite)
         {
@@ -145,75 +142,31 @@ namespace BudgetExecution
 
         public string BudgetLevel { get; set; }
 
-        public string RPIO { get; set; }
-
-        public string BFY { get; set; }
-
-        public Fund Fund { get; }
-
         public string AH { get; }
-
-        public Org Org { get; }
-
-        public RC RC { get; }
-
-        public string Code { get; set; }
-
-        public Account Account { get; }
-
-        public decimal Amount { get; set; }
-
-        public BOC BOC { get; }
 
         public FTE FTE { get; set; }
 
-        public string NPM { get; set; }
-
         public string NpmCode { get; set; }
-
-        public string ProgramProjectCode { get; }
 
         public string ProgramProjectName { get; set; }
 
         public string ProgramArea { get; set; }
 
-        public string Goal { get; }
-
         public string GoalName { get; }
-
-        public string Objective { get; }
 
         public string ObjectiveName { get; }
 
         internal Dictionary<string, object> Parameter { get; set; }
 
-        // METHODS
-        internal Dictionary<string, object> GetDataFields()
-        {
-            try
-            {
-                Dictionary<string, object> param = new Dictionary<string, object>() { ["ID"] = ID, ["BudgetLevel"] = BudgetLevel, ["RPIO"] = RPIO, ["BFY"] = BFY, ["Fund"] = Fund.Code, ["RC"] = RC, ["BOC"] = BOC.Code, ["Code"] = Account.Code, };
-                return param;
-            }
-            catch (Exception ex)
-            {
-                new Error(ex).ShowDialog();
-                return null;
-            }
-        }
+        public string Code { get; set; }
 
-        internal DataRow GetData(Source source, Provider provider, Dictionary<string, object> param)
-        {
-            try
-            {
-                return new DataBuilder(source, provider, param).Table.AsEnumerable().Select(p => p).First();
-            }
-            catch (Exception ex)
-            {
-                new Error(ex).ShowDialog();
-                return null;
-            }
-        }
+        public string NPM { get; set; }
+
+        public string ProgramProjectCode { get; }
+
+        public string Goal { get; }
+
+        public string Objective { get; }
 
         public string GetCode()
         {
@@ -252,6 +205,50 @@ namespace BudgetExecution
             return Code.Substring(5, 2);
         }
 
+        public string RPIO { get; set; }
+
+        public string BFY { get; set; }
+
+        public Fund Fund { get; }
+
+        public Org Org { get; }
+
+        public RC RC { get; }
+
+        public Account Account { get; }
+
+        public decimal Amount { get; set; }
+
+        public BOC BOC { get; }
+
+        // METHODS
+        internal Dictionary<string, object> GetDataFields()
+        {
+            try
+            {
+                Dictionary<string, object> param = new Dictionary<string, object> { ["ID"] = ID, ["BudgetLevel"] = BudgetLevel, ["RPIO"] = RPIO, ["BFY"] = BFY, ["Fund"] = Fund.Code, ["RC"] = RC, ["BOC"] = BOC.Code, ["Code"] = Account.Code };
+                return param;
+            }
+            catch(Exception ex)
+            {
+                new Error(ex).ShowDialog();
+                return null;
+            }
+        }
+
+        internal DataRow GetData(Source source, Provider provider, Dictionary<string, object> param)
+        {
+            try
+            {
+                return new DataBuilder(source, provider, param).Table.AsEnumerable().Select(p => p).First();
+            }
+            catch(Exception ex)
+            {
+                new Error(ex).ShowDialog();
+                return null;
+            }
+        }
+
         public override string ToString()
         {
             return Account.Code;
@@ -262,35 +259,35 @@ namespace BudgetExecution
             try
             {
                 Account account = new Account(source, provider, param["Fund"].ToString(), param["Code"].ToString());
-                if (!param.ContainsKey("FundName") || param["FundName"] == null)
+                if(!param.ContainsKey("FundName") || param["FundName"] == null)
                 {
                     param["FundName"] = account.FundName;
                 }
 
-                if (!param.ContainsKey("Org") || param["Org"] == null)
+                if(!param.ContainsKey("Org") || param["Org"] == null)
                 {
                     param["Org"] = account.Org;
                 }
 
-                if (!param.ContainsKey("ProgramProject") || param["ProgramProject"] == null)
+                if(!param.ContainsKey("ProgramProject") || param["ProgramProject"] == null)
                 {
                     param["ProgramProject"] = account.ProgramProjectCode;
                     param["ProgramProjectName"] = account.ProgramProjectName;
                 }
 
-                if (!param.ContainsKey("ProgramArea") || param["ProgramArea"] == null)
+                if(!param.ContainsKey("ProgramArea") || param["ProgramArea"] == null)
                 {
                     param["ProgramArea"] = account.ProgramArea;
                     param["ProgramAreaName"] = account.ProgramAreaName;
                 }
 
-                if (!param.ContainsKey("Goal") || param["Goal"] == null)
+                if(!param.ContainsKey("Goal") || param["Goal"] == null)
                 {
                     param["Goal"] = account.Goal;
                     param["GoalName"] = account.GoalName;
                 }
 
-                if (!param.ContainsKey("Objective") || param["Objective"] == null)
+                if(!param.ContainsKey("Objective") || param["Objective"] == null)
                 {
                     param["Objective"] = account.Objective;
                     param["ObjectiveName"] = account.ObjectiveName;
@@ -298,7 +295,7 @@ namespace BudgetExecution
 
                 return param;
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -312,7 +309,7 @@ namespace BudgetExecution
                 DataRow datarow = new DataBuilder(source, provider, p).Table.AsEnumerable().Select(prc => prc).First();
                 return new PRC(datarow);
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -326,7 +323,7 @@ namespace BudgetExecution
                 Insert insert = Info.Insert;
                 insert(Source.PRC, Provider.SQLite, p);
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
             }
@@ -336,10 +333,10 @@ namespace BudgetExecution
         {
             try
             {
-                Insert update = new Insert(Info.Insert);
+                Insert update = Info.Insert;
                 update(Source.PRC, Provider.SQLite, p);
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
             }
@@ -349,10 +346,10 @@ namespace BudgetExecution
         {
             try
             {
-                Insert update = new Insert(Info.Insert);
+                Insert update = Info.Insert;
                 update(Source.PRC, Provider.SQLite, p);
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
             }

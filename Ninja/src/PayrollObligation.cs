@@ -2,20 +2,17 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
+using System;
+using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 
 namespace BudgetExecution
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Data;
-
     public class PayrollObligation
     {
         // CONSTRUCTORS
-        public PayrollObligation()
-        {
-        }
+        public PayrollObligation() { }
 
         public PayrollObligation(string rpio, string bfy, string fund, string org, string rc, string code, string progproj, string progprojname, string hoc, string wc, string wcn, decimal amount, decimal ybp, double ybh, decimal yotp, double yoth)
         {
@@ -135,9 +132,9 @@ namespace BudgetExecution
         {
             try
             {
-                return new Dictionary<string, object>() { ["Code"] = code, ["BFY"] = bfy };
+                return new Dictionary<string, object> { ["Code"] = code, ["BFY"] = bfy };
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;

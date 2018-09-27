@@ -2,11 +2,11 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
+using System.ComponentModel;
+using System.Configuration;
+
 namespace BudgetExecution.Properties
 {
-    using System.ComponentModel;
-    using System.Configuration;
-
     // This class allows you to handle specific events on the settings class:
     // The SettingChanging event is raised before a setting's value is changed.
     // The PropertyChanged event is raised after a setting's value is changed.
@@ -14,13 +14,6 @@ namespace BudgetExecution.Properties
     // The SettingsSaving event is raised before the setting values are saved.
     internal sealed partial class Settings
     {
-        public Settings()
-        {
-            // // To add event handlers for saving and changing settings, uncomment the lines below:
-            // this.SettingChanging += this.SettingChangingEventHandler;
-            // this.SettingsSaving += this.SettingsSavingEventHandler;
-        }
-
         private void SettingChangingEventHandler(object sender, SettingChangingEventArgs e)
         {
             // Add code to handle the SettingChangingEvent event here.

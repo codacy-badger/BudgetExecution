@@ -2,10 +2,10 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
+using Syncfusion.Windows.Forms;
+
 namespace Ninja.Data.Forms
 {
-    using Syncfusion.Windows.Forms;
-
     public partial class NinjaForm5 : MetroForm
     {
         public NinjaForm5()

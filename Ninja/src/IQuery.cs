@@ -2,11 +2,11 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
+using System.Data;
+using System.Data.Common;
+
 namespace BudgetExecution
 {
-    using System.Data;
-    using System.Data.Common;
-
     public interface IQuery
     {
         // PROPERTIES

@@ -1,14 +1,12 @@
-﻿namespace BudgetExecution
+﻿using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Windows.Forms;
+using MetroSet_UI.Controls;
+using Syncfusion.Windows.Forms;
+
+namespace BudgetExecution
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Data;
-    using System.Windows.Forms;
-
-    using MetroSet_UI.Controls;
-
-    using Syncfusion.Windows.Forms;
-
     public partial class AccountManager : MetroForm
     {
         // CONSTRUCTORS
@@ -20,7 +18,7 @@
         public AccountManager(DataBuilder data)
         {
             InitializeComponent();
-            if (DbData == null)
+            if(DbData == null)
             {
                 DbData = data;
             }
@@ -77,7 +75,7 @@
         {
             try
             {
-                foreach (DataGridViewColumn dc in dgv.Columns)
+                foreach(DataGridViewColumn dc in dgv.Columns)
                 {
                     dc.Visible = false;
                 }
@@ -91,7 +89,7 @@
                 dgv.Columns[12].Visible = true;
                 dgv.Columns[12].DefaultCellStyle.Format = "c";
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
             }
@@ -106,7 +104,7 @@
                 bn.BindingSource = bs;
                 ConfigureGridVisibleColumns(dg);
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
             }
@@ -114,11 +112,11 @@
 
         internal Dictionary<string, object> GetCurrentRowDictionary(BindingSource bs)
         {
-            if (bs.DataSource != null)
+            if(bs.DataSource != null)
             {
                 try
                 {
-                    DataRow row = (DataRow)bs.Current;
+                    DataRow row = (DataRow) bs.Current;
                     Dictionary<string, object> data = new Dictionary<string, object>();
                     data.Add("ID", int.Parse(row["ID"].ToString()));
                     data.Add("AH", row["AH"].ToString());
@@ -128,7 +126,7 @@
                     data.Add("BOC", row["BOC"].ToString());
                     return data;
                 }
-                catch (Exception ex)
+                catch(Exception ex)
                 {
                     new Error(ex).ShowDialog();
                     return null;
@@ -160,7 +158,7 @@
                 ProgramArea.DataBindings.Add(new Binding("Text", BindingSource.DataSource, "ProgramAreaName"));
                 Amount1.DataBindings.Add(new Binding("Text", BindingSource.DataSource, "Amount"));
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
             }
@@ -169,35 +167,35 @@
         private void PopulateComboBoxes()
         {
             DataBuilder data = new DataBuilder(Source, Provider);
-            if (data.Table.Columns.Contains("SubProject"))
+            if(data.Table.Columns.Contains("SubProject"))
             {
-                foreach (string p in data.ProgramElements["SubProject"])
+                foreach(string p in data.ProgramElements["SubProject"])
                 {
                     ComboBox5.Items.Add(p);
                 }
             }
 
-            foreach (string p in data.ProgramElements["Code"])
+            foreach(string p in data.ProgramElements["Code"])
             {
                 ComboBox6.Items.Add(p);
             }
 
-            foreach (string p in data.ProgramElements["Fund"])
+            foreach(string p in data.ProgramElements["Fund"])
             {
                 ComboBox3.Items.Add(p);
             }
 
-            foreach (string p in data.ProgramElements["RC"])
+            foreach(string p in data.ProgramElements["RC"])
             {
                 ComboBox8.Items.Add(p);
             }
 
-            foreach (string p in data.ProgramElements["Org"])
+            foreach(string p in data.ProgramElements["Org"])
             {
                 ComboBox4.Items.Add(p);
             }
 
-            foreach (string p in data.ProgramElements["BOC"])
+            foreach(string p in data.ProgramElements["BOC"])
             {
                 ComboBox7.Items.Add(p);
             }
@@ -208,12 +206,12 @@
             try
             {
                 string[] codes = Info.AgencyFundCodes;
-                foreach (string c in codes)
+                foreach(string c in codes)
                 {
                     ComboBox3.Items.Add(c);
                 }
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
             }
@@ -224,14 +222,14 @@
             try
             {
                 List<Label> lblList = null;
-                foreach (Label lbl in gbo.Controls)
+                foreach(Label lbl in gbo.Controls)
                 {
                     lblList.Add(lbl);
                 }
 
                 return lblList;
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -243,14 +241,14 @@
             try
             {
                 List<MetroSetComboBox> cboList = new List<MetroSetComboBox>();
-                foreach (MetroSetComboBox cbo in gbo.Controls)
+                foreach(MetroSetComboBox cbo in gbo.Controls)
                 {
                     cboList.Add(cbo);
                 }
 
                 return cboList;
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -262,14 +260,14 @@
             try
             {
                 List<Label> labels = new List<Label>();
-                foreach (Label lbl in RecorDataGroupBox.Controls)
+                foreach(Label lbl in RecorDataGroupBox.Controls)
                 {
                     labels.Add(lbl);
                 }
 
                 return labels;
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -281,14 +279,14 @@
             try
             {
                 List<MetroSetComboBox> labels = null;
-                foreach (MetroSetComboBox lbl in RecorDataGroupBox.Controls)
+                foreach(MetroSetComboBox lbl in RecorDataGroupBox.Controls)
                 {
                     labels.Add(lbl);
                 }
 
                 return labels;
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -305,14 +303,14 @@
                 string[] col = table.GetFields();
                 object[] val = row.ItemArray;
                 Dictionary<string, object> param = new Dictionary<string, object>();
-                for (int i = 0; i < cct; i++)
+                for(int i = 0; i < cct; i++)
                 {
                     param.Add(col[i], val[i]);
                 }
 
                 return param;
             }
-            catch (Exception e)
+            catch(Exception e)
             {
                 new Error(e).ShowDialog();
                 return null;
@@ -354,15 +352,13 @@
                 RecordManager am = new RecordManager(Source, Provider);
                 am.Show();
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
             }
         }
 
-        private void RefreshButton_Click(object sender, EventArgs e)
-        {
-        }
+        private void RefreshButton_Click(object sender, EventArgs e) { }
 
         private void CopyButton_OnClick(object sender, EventArgs e)
         {
@@ -371,15 +367,12 @@
                 RecordManager am = new RecordManager(Source, Provider);
                 am.Show();
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
             }
         }
 
-        private void AccountTabControl_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
+        private void AccountTabControl_SelectedIndexChanged(object sender, EventArgs e) { }
     }
 }

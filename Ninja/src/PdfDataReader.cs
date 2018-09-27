@@ -1,6 +1,8 @@
+using Syncfusion.Windows.Forms;
+
 namespace BudgetExecution
 {
-    public partial class PdfDataReader : Syncfusion.Windows.Forms.MetroForm
+    public partial class PdfDataReader : MetroForm
     {
         public PdfDataReader()
         {

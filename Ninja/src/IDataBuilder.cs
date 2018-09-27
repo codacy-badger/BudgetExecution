@@ -2,10 +2,10 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
+using System.Data;
+
 namespace BudgetExecution
 {
-    using System.Data;
-
     public interface IDataBuilder
     {
         // PROPERTIES

@@ -2,12 +2,11 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
+using System.Windows.Forms;
+using Syncfusion.Windows.Forms.Chart;
+
 namespace Ninja.Data
 {
-    using System.Windows.Forms;
-
-    using Syncfusion.Windows.Forms.Chart;
-
     public partial class BudgetDataGrid : UserControl
     {
         public BudgetDataGrid()
@@ -17,8 +16,6 @@ namespace Ninja.Data
 
         public ChartDataBindModel ChartData { get; set; }
 
-        private void GridListBox_SelectedIndexChanged(object sender)
-        {
-        }
+        private void GridListBox_SelectedIndexChanged(object sender) { }
     }
 }

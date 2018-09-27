@@ -2,22 +2,19 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
+using System;
+using System.Drawing;
+using System.IO;
+using System.Windows.Forms;
+using Syncfusion.Windows.Forms;
+using Syncfusion.Windows.Forms.Tools;
+
 namespace BudgetExecution
 {
-    using System;
-    using System.Drawing;
-    using System.IO;
-    using System.Windows.Forms;
-
-    using Syncfusion.Windows.Forms;
-    using Syncfusion.Windows.Forms.Tools;
-
     public partial class Selector : MetroForm
     {
         // CONSTRUCTORS
-        public Selector()
-        {
-        }
+        public Selector() { }
 
         public Selector(string path)
         {
@@ -47,7 +44,7 @@ namespace BudgetExecution
             ViewerCarousel.UseOriginalImageinPreview = true;
             string[] images = Directory.GetFiles(path);
             FilePath = path;
-            foreach (string i in images)
+            foreach(string i in images)
             {
                 string p = Path.GetFileNameWithoutExtension(i);
                 Bitmap b = new Bitmap(i);
@@ -61,55 +58,51 @@ namespace BudgetExecution
             ViewerCarousel.ImageList = ilist;
         }
 
-        private void Selector_Load(object sender, EventArgs e)
-        {
-        }
+        private void Selector_Load(object sender, EventArgs e) { }
 
         public void ViewerCarousel_OnImageSelected(object sender, EventArgs e)
         {
             Carousel carousel = sender as Carousel;
-            if (carousel?.ActiveImage.Tag != null)
+            if(carousel?.ActiveImage.Tag != null)
             {
                 string i = carousel.ActiveImage.Tag.ToString();
-                switch (i)
+                switch(i)
                 {
-                    case "SummaryImages":
-                        var f = new Selector(Info.SummaryImages);
+                    case"SummaryImages":
+                        Selector f = new Selector(Info.SummaryImages);
                         f.Show();
                         Close();
                         return;
 
-                    case "DatabaseImages":
-                        var ds = new DatabaseSelector(Info.DatabaseImages);
+                    case"DatabaseImages":
+                        DatabaseSelector ds = new DatabaseSelector(Info.DatabaseImages);
                         ds.Show();
                         Close();
                         return;
-                    case "Division":
-                        var d = new Selector(Info.Div);
+                    case"Division":
+                        Selector d = new Selector(Info.Div);
                         d.Show();
                         Close();
                         return;
-                    case "FunctionImages":
-                        var fi = new FunctionSelector(Info.FunctionImages);
+                    case"FunctionImages":
+                        FunctionSelector fi = new FunctionSelector(Info.FunctionImages);
                         fi.Show();
                         Close();
                         return;
-                    case "Appropriation":
-                        var aps = new Selector(Info.AppropriationImages);
+                    case"Appropriation":
+                        Selector aps = new Selector(Info.AppropriationImages);
                         aps.Show();
                         Close();
                         return;
                 }
 
-                Source source = (Source)Enum.Parse(typeof(Source), i);
+                Source source = (Source) Enum.Parse(typeof(Source), i);
                 SummaryForm sf = new SummaryForm(source);
                 sf.Show();
                 Close();
             }
         }
 
-        private void ImageItem_OnHover(object sender, System.EventArgs e)
-        {
-        }
+        private void ImageItem_OnHover(object sender, EventArgs e) { }
     }
 }

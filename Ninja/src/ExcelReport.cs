@@ -2,26 +2,21 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
+using System;
+using System.Collections.Generic;
+using System.Runtime.InteropServices;
+using System.Windows.Forms;
+using Microsoft.Office.Interop.Excel;
+using DataTable = System.Data.DataTable;
+
 namespace BudgetExecution
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Data;
-    using System.Runtime.InteropServices;
-    using System.Windows.Forms;
-
     using Excel = Microsoft.Office.Interop.Excel.Application;
-    using Workbook = Microsoft.Office.Interop.Excel.Workbook;
-    using Worksheet = Microsoft.Office.Interop.Excel.Worksheet;
 
     public class ExcelReport
     {
-        private string path = @"C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\Report\BudgetControlTemplate.xlsb";
-
         // CONSTRUCTORS
-        public ExcelReport()
-        {
-        }
+        public ExcelReport() { }
 
         public ExcelReport(string filepath)
         {
@@ -54,7 +49,7 @@ namespace BudgetExecution
         {
             Source = source;
             Provider = provider;
-            if (p.ContainsKey("RC"))
+            if(p.ContainsKey("RC"))
             {
                 D6 = new DivisionAuthority(p["RC"].ToString());
                 DbData = D6.DbData;
@@ -65,6 +60,8 @@ namespace BudgetExecution
             Excel = new Excel();
             BudgetTemplate = GetInternalFilePath();
         }
+
+        private readonly string path = @"C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\Report\BudgetControlTemplate.xlsb";
 
         // PROPERTIES
         public Source Source { get; set; }
@@ -99,14 +96,14 @@ namespace BudgetExecution
                 OpenFileDialog od = new OpenFileDialog();
                 od.Filter = "Excel Files | *.xls; * .xlsx";
                 DialogResult dr = od.ShowDialog();
-                if (dr == DialogResult.OK)
+                if(dr == DialogResult.OK)
                 {
                     return od.SafeFileName;
                 }
 
                 return null;
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -120,14 +117,14 @@ namespace BudgetExecution
                 OpenFileDialog od = new OpenFileDialog();
                 od.Filter = "Excel Files | *.xls; * .xlsx";
                 DialogResult dr = od.ShowDialog();
-                if (dr == DialogResult.OK)
+                if(dr == DialogResult.OK)
                 {
                     return od.SafeFileName;
                 }
 
                 return null;
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -136,12 +133,10 @@ namespace BudgetExecution
 
         public string GetConnectionString(string filepath)
         {
-            return $@"Provider=Microsoft.ACE.OLEDB.12.0;DbData Source='{filepath}';Extended Properties='Excel 12.0 Macro;HDR=YES;IMEX=1'";
+            return$@"Provider=Microsoft.ACE.OLEDB.12.0;DbData Source='{filepath}';Extended Properties='Excel 12.0 Macro;HDR=YES;IMEX=1'";
         }
 
-        internal void LoadInternalData()
-        {
-        }
+        internal void LoadInternalData() { }
 
         internal Workbook ExportData(DataTable table)
         {
@@ -150,16 +145,16 @@ namespace BudgetExecution
                 Excel excel = Create();
                 Workbook excelWorkBook = excel.Workbooks.Open(path);
                 int tr = table.Rows.Count;
-                Worksheet excelWorkSheet = (Worksheet)excelWorkBook.Sheets[1];
+                Worksheet excelWorkSheet = (Worksheet) excelWorkBook.Sheets[1];
                 excelWorkSheet.Name = table.TableName;
-                for (int i = 1; i < table.Columns.Count + 1; i++)
+                for(int i = 1; i < table.Columns.Count + 1; i++)
                 {
                     excelWorkSheet.Cells[1, i] = table.Columns[i - 1].ColumnName;
                 }
 
-                for (int j = 0; j < table.Rows.Count; j++)
+                for(int j = 0; j < table.Rows.Count; j++)
                 {
-                    for (int k = 0; k < table.Columns.Count; k++)
+                    for(int k = 0; k < table.Columns.Count; k++)
                     {
                         excelWorkSheet.Cells[j + 2, k + 1] = table.Rows[j].ItemArray[k].ToString();
                     }
@@ -168,7 +163,7 @@ namespace BudgetExecution
                 excel.Visible = true;
                 return excelWorkBook;
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 MessageBox.Show(ex.Message);
                 return null;
@@ -181,16 +176,16 @@ namespace BudgetExecution
             {
                 Excel excel = Create();
                 Workbook excelWorkBook = excel.Workbooks.Open(filepath);
-                Worksheet excelWorkSheet = (Worksheet)excelWorkBook.Sheets[1];
+                Worksheet excelWorkSheet = (Worksheet) excelWorkBook.Sheets[1];
                 excelWorkSheet.Name = table.TableName;
-                for (int i = 1; i < table.Columns.Count + 1; i++)
+                for(int i = 1; i < table.Columns.Count + 1; i++)
                 {
                     excelWorkSheet.Cells[1, i] = table.Columns[i - 1].ColumnName;
                 }
 
-                for (int j = 0; j < table.Rows.Count; j++)
+                for(int j = 0; j < table.Rows.Count; j++)
                 {
-                    for (int k = 0; k < table.Columns.Count; k++)
+                    for(int k = 0; k < table.Columns.Count; k++)
                     {
                         excelWorkSheet.Cells[j + 2, k + 1] = table.Rows[j].ItemArray[k].ToString();
                     }
@@ -199,7 +194,7 @@ namespace BudgetExecution
                 excel.Visible = true;
                 return excelWorkBook;
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 MessageBox.Show(ex.Message);
                 return null;
@@ -213,7 +208,7 @@ namespace BudgetExecution
                 Workbook excelWorkBook = Excel.Workbooks.Open(filepath);
                 return excelWorkBook;
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 MessageBox.Show("ERROR!" + ex.StackTrace);
                 return null;
@@ -227,7 +222,7 @@ namespace BudgetExecution
                 Workbook excelWorkBook = Excel.Workbooks.Add();
                 return excelWorkBook;
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 MessageBox.Show("ERROR!" + ex.StackTrace);
                 return null;
@@ -247,7 +242,7 @@ namespace BudgetExecution
                 wb.Application.Quit();
                 Marshal.ReleaseComObject(wb.Application);
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 MessageBox.Show("ERROR!" + ex.StackTrace);
             }
@@ -255,13 +250,13 @@ namespace BudgetExecution
 
         internal void Close(Workbook wb)
         {
-            if (wb != null)
+            if(wb != null)
             {
                 try
                 {
                     GC.Collect();
                     GC.WaitForPendingFinalizers();
-                    if (wb.Worksheets != null)
+                    if(wb.Worksheets != null)
                     {
                         Marshal.ReleaseComObject(wb.Worksheets);
                     }
@@ -271,7 +266,7 @@ namespace BudgetExecution
                     wb.Application.Quit();
                     Marshal.ReleaseComObject(wb.Application);
                 }
-                catch (Exception ex)
+                catch(Exception ex)
                 {
                     MessageBox.Show("ERROR!" + ex.StackTrace);
                 }
@@ -284,7 +279,7 @@ namespace BudgetExecution
             {
                 return new Excel();
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 MessageBox.Show("ERROR!" + ex.StackTrace);
                 return null;
@@ -295,13 +290,13 @@ namespace BudgetExecution
         {
             try
             {
-                System.Runtime.InteropServices.Marshal.ReleaseComObject(obj);
+                Marshal.ReleaseComObject(obj);
                 obj = null;
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 obj = null;
-                MessageBox.Show("Unable to release the Object " + ex.ToString());
+                MessageBox.Show("Unable to release the Object " + ex);
             }
             finally
             {

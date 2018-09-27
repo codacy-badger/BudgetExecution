@@ -2,12 +2,11 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
+using System;
+using Microsoft.Office.Interop.Excel;
+
 namespace BudgetExecution
 {
-    using System;
-
-    using Excel = Microsoft.Office.Interop.Excel;
-
     public interface IExcelOp
     {
         // PROPERTIES
@@ -16,16 +15,16 @@ namespace BudgetExecution
         string ExcelFile { get; set; }
 
         // METHODS
-        Excel.Application GetApplication();
+        Microsoft.Office.Interop.Excel.Application GetApplication();
 
         string GetConnectionString();
 
         string GetFile();
 
-        Excel.Workbook GetWorkbook(Excel.Application excel, string filepath);
+        Workbook GetWorkbook(Microsoft.Office.Interop.Excel.Application excel, string filepath);
 
         void ReleaseObject(object obj);
 
-        void SaveWorkBook(Excel.Workbook wb);
+        void SaveWorkBook(Workbook wb);
     }
 }

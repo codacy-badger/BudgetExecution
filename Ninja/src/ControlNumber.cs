@@ -2,24 +2,22 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Data.SQLite;
+using System.Linq;
+using System.Text;
+
 namespace BudgetExecution
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Data;
-    using System.Data.SQLite;
-    using System.Linq;
-    using System.Text;
-
     public class ControlNumber
     {
         // CONSTRUCTORS
-        public ControlNumber()
-        {
-        }
+        public ControlNumber() { }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="ControlNumber"/> class.
+        ///     Initializes a new instance of the <see cref="ControlNumber" /> class.
         /// </summary>
         /// <param name="source">The source.</param>
         /// <param name="provider">The provider.</param>
@@ -39,7 +37,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="ControlNumber"/> class.
+        ///     Initializes a new instance of the <see cref="ControlNumber" /> class.
         /// </summary>
         /// <param name="fund">The fund.</param>
         /// <param name="division">The division.</param>
@@ -85,16 +83,16 @@ namespace BudgetExecution
 
         public Dictionary<string, object> Parameter { get; set; }
 
-        private Source Source { get; set; }
+        private Source Source { get; }
 
-        private Provider Provider { get; set; }
+        private Provider Provider { get; }
 
-        private DataTable Table { get; set; }
+        private DataTable Table { get; }
 
         // METHODS
 
         /// <summary>
-        /// Gets the parameter data.
+        ///     Gets the parameter data.
         /// </summary>
         /// <param name="fund">The fund.</param>
         /// <param name="divisionid">The divisionid.</param>
@@ -103,9 +101,9 @@ namespace BudgetExecution
         {
             try
             {
-                return new Dictionary<string, object>() { ["Fund"] = fund, ["DivisionID"] = divisionid };
+                return new Dictionary<string, object> { ["Fund"] = fund, ["DivisionID"] = divisionid };
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -113,7 +111,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Gets the insertion columns.
+        ///     Gets the insertion columns.
         /// </summary>
         /// <param name="param">The parameter.</param>
         /// <returns></returns>
@@ -125,7 +123,7 @@ namespace BudgetExecution
 
                 return param;
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -133,7 +131,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Selects the specified source.
+        ///     Selects the specified source.
         /// </summary>
         /// <param name="source">The source.</param>
         /// <param name="p">The p.</param>
@@ -145,7 +143,7 @@ namespace BudgetExecution
                 DataRow datarow = new DataBuilder(source, Provider.SQLite, p).Table.AsEnumerable().Select(prc => prc).First();
                 return new Fund(datarow);
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -153,7 +151,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Selects the specified source.
+        ///     Selects the specified source.
         /// </summary>
         /// <param name="source">The source.</param>
         /// <param name="provider">The provider.</param>
@@ -166,7 +164,7 @@ namespace BudgetExecution
                 DataRow datarow = new DataBuilder(source, provider, p).Table.AsEnumerable().Select(prc => prc).First();
                 return new Fund(datarow);
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -174,7 +172,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Inserts the specified p.
+        ///     Inserts the specified p.
         /// </summary>
         /// <param name="p">The p.</param>
         public static void Insert(Dictionary<string, object> p)
@@ -186,20 +184,20 @@ namespace BudgetExecution
                 object[] vals = param.Values.ToArray();
                 SQLiteQuery query = new SQLiteQuery(Source.ControlNumbers, param);
                 SQLiteConnection conn = query.DataConnection;
-                using (conn)
+                using(conn)
                 {
                     SQLiteCommand insert = query.InsertCommand;
                     insert.ExecuteNonQuery();
                 }
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
             }
         }
 
         /// <summary>
-        /// Inserts the specified source.
+        ///     Inserts the specified source.
         /// </summary>
         /// <param name="source">The source.</param>
         /// <param name="provider">The provider.</param>
@@ -214,20 +212,20 @@ namespace BudgetExecution
                 Query query = new Query(source, provider, param);
                 string cmd = $"INSERT INTO {source.ToString()} {fields} VALUES {vals};";
                 SQLiteConnection conn = query.GetConnection(Provider.SQLite) as SQLiteConnection;
-                using (conn)
+                using(conn)
                 {
                     SQLiteCommand insert = query.GetDataCommand(cmd, conn) as SQLiteCommand;
                     insert.ExecuteNonQuery();
                 }
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
             }
         }
 
         /// <summary>
-        /// Updates the specified source.
+        ///     Updates the specified source.
         /// </summary>
         /// <param name="source">The source.</param>
         /// <param name="p">The p.</param>
@@ -236,22 +234,22 @@ namespace BudgetExecution
             try
             {
                 SQLiteQuery query = new SQLiteQuery(source, p);
-                string cmd = $"UPDATE {source.ToString()} SET Amount = {(decimal)p["Amount"]} WHERE ID = {(int)p["ID"]};";
+                string cmd = $"UPDATE {source.ToString()} SET Amount = {(decimal) p["Amount"]} WHERE ID = {(int) p["ID"]};";
                 SQLiteConnection conn = query.DataConnection;
-                using (conn)
+                using(conn)
                 {
                     SQLiteCommand update = query.GetDataCommand(cmd, conn);
                     update.ExecuteNonQuery();
                 }
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
             }
         }
 
         /// <summary>
-        /// Updates the specified source.
+        ///     Updates the specified source.
         /// </summary>
         /// <param name="source">The source.</param>
         /// <param name="provider">The provider.</param>
@@ -261,22 +259,22 @@ namespace BudgetExecution
             try
             {
                 Query query = new Query(source, provider, p);
-                string cmd = $"UPDATE {source.ToString()} SET Amount = {(decimal)p["Amount"]} WHERE ID = {(int)p["ID"]};";
+                string cmd = $"UPDATE {source.ToString()} SET Amount = {(decimal) p["Amount"]} WHERE ID = {(int) p["ID"]};";
                 SQLiteConnection conn = query.GetConnection(Provider.SQLite) as SQLiteConnection;
-                using (conn)
+                using(conn)
                 {
                     SQLiteCommand update = query.GetDataCommand(cmd, conn) as SQLiteCommand;
                     update.ExecuteNonQuery();
                 }
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
             }
         }
 
         /// <summary>
-        /// Deletes the specified source.
+        ///     Deletes the specified source.
         /// </summary>
         /// <param name="source">The source.</param>
         /// <param name="p">The p.</param>
@@ -285,22 +283,22 @@ namespace BudgetExecution
             try
             {
                 SQLiteQuery query = new SQLiteQuery(source, p);
-                string cmd = $"DELETE ALL FROM {source.ToString()} WHERE ID = {(int)p["ID"]};";
+                string cmd = $"DELETE ALL FROM {source.ToString()} WHERE ID = {(int) p["ID"]};";
                 SQLiteConnection conn = query.DataConnection;
-                using (conn)
+                using(conn)
                 {
                     SQLiteCommand delete = query.GetDataCommand(cmd, conn);
                     delete.ExecuteNonQuery();
                 }
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
             }
         }
 
         /// <summary>
-        /// Deletes the specified source.
+        ///     Deletes the specified source.
         /// </summary>
         /// <param name="source">The source.</param>
         /// <param name="provider">The provider.</param>
@@ -310,25 +308,25 @@ namespace BudgetExecution
             try
             {
                 Query query = new Query(source, provider, p);
-                string cmd = $"DELETE ALL FROM {source.ToString()} WHERE ID = {(int)p["ID"]};";
+                string cmd = $"DELETE ALL FROM {source.ToString()} WHERE ID = {(int) p["ID"]};";
                 SQLiteConnection conn = query.GetConnection(Provider.SQLite) as SQLiteConnection;
-                using (conn)
+                using(conn)
                 {
                     SQLiteCommand update = query.GetDataCommand(cmd, conn) as SQLiteCommand;
                     update.ExecuteNonQuery();
                 }
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
             }
         }
 
         /// <summary>
-        /// Returns a <see cref="System.String" /> that represents this instance.
+        ///     Returns a <see cref="System.String" /> that represents this instance.
         /// </summary>
         /// <returns>
-        /// A <see cref="System.String" /> that represents this instance.
+        ///     A <see cref="System.String" /> that represents this instance.
         /// </returns>
         public override string ToString()
         {
@@ -336,7 +334,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Gets the column names.
+        ///     Gets the column names.
         /// </summary>
         /// <returns></returns>
         internal string[] GetColumnNames()
@@ -345,7 +343,7 @@ namespace BudgetExecution
             {
                 return Table.GetFields();
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;
@@ -353,7 +351,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Gets the fund count.
+        ///     Gets the fund count.
         /// </summary>
         /// <param name="fund">The fund.</param>
         /// <returns></returns>
@@ -363,15 +361,15 @@ namespace BudgetExecution
             {
                 return Table.AsEnumerable().Where(p => p.Field<string>("Fund").Equals(fund)).Select(p => p).Count();
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
-                return -1;
+                return-1;
             }
         }
 
         /// <summary>
-        /// Gets the division count.
+        ///     Gets the division count.
         /// </summary>
         /// <param name="divisionid">The divisionid.</param>
         /// <returns></returns>
@@ -381,15 +379,15 @@ namespace BudgetExecution
             {
                 return Table.AsEnumerable().Where(p => p.Field<string>("DivisionID").Equals(divisionId)).Select(p => p).Count();
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
-                return -1;
+                return-1;
             }
         }
 
         /// <summary>
-        /// Gets the region count.
+        ///     Gets the region count.
         /// </summary>
         /// <returns>return integer representing the number of records</returns>
         internal int GetRegionCount()
@@ -398,10 +396,10 @@ namespace BudgetExecution
             {
                 return DbData.Table.AsEnumerable().Count();
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
-                return -1;
+                return-1;
             }
         }
 

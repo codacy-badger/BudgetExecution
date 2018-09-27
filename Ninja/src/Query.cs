@@ -51,7 +51,7 @@ namespace BudgetExecution
             DeleteCommand = CommandBuilder.GetDeleteCommand();
             Settings = new AppSettingsReader();
         }
-        
+
         // PROPERTIES
         public AppSettingsReader Settings { get; }
 
@@ -130,7 +130,7 @@ namespace BudgetExecution
         {
             try
             {
-                switch(connection) 
+                switch(connection)
                 {
                     case SQLiteConnection liteConnection:
                         SelectStatement = sql;
@@ -156,7 +156,7 @@ namespace BudgetExecution
         {
             try
             {
-                switch(command) 
+                switch(command)
                 {
                     case SQLiteCommand liteCommand:
                         return new SQLiteDataAdapter(liteCommand);
@@ -202,7 +202,7 @@ namespace BudgetExecution
         {
             try
             {
-                switch(adapter) 
+                switch(adapter)
                 {
                     case SQLiteDataAdapter _:
                         CommandBuilder = new SQLiteCommandBuilder(adapter as SQLiteDataAdapter);

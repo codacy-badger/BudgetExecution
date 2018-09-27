@@ -2,16 +2,15 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
+using System;
+using System.Drawing;
+using System.IO;
+using System.Windows.Forms;
+using Syncfusion.Windows.Forms;
+using Syncfusion.Windows.Forms.Tools;
+
 namespace BudgetExecution
 {
-    using System;
-    using System.Drawing;
-    using System.IO;
-    using System.Windows.Forms;
-
-    using Syncfusion.Windows.Forms;
-    using Syncfusion.Windows.Forms.Tools;
-
     public partial class DatabaseSelector : MetroForm
     {
         // CONSTRUCTORS
@@ -32,7 +31,7 @@ namespace BudgetExecution
             GetViewerCarouselImageList(FilePath);
             ViewerCarousel.OnCarouselItemFocused += ViewerCarousel_OnImageSelected;
         }
-        
+
         // PROPERTIES
         private string FilePath { get; set; }
 
@@ -51,7 +50,7 @@ namespace BudgetExecution
                 ViewerCarousel.UseOriginalImageinPreview = true;
                 string[] images = Directory.GetFiles(path);
                 FilePath = path;
-                foreach (string i in images)
+                foreach(string i in images)
                 {
                     string p = Path.GetFileNameWithoutExtension(i);
                     Bitmap b = new Bitmap(i);
@@ -70,19 +69,17 @@ namespace BudgetExecution
             }
         }
 
-        private void Selector_Load(object sender, EventArgs e)
-        {
-        }
+        private void Selector_Load(object sender, EventArgs e) { }
 
         private void ViewerCarousel_OnImageSelected(object sender, EventArgs e)
         {
             try
             {
                 Carousel carousel = sender as Carousel;
-                if (carousel != null)
+                if(carousel != null)
                 {
                     string i = carousel.ActiveImage.Tag.ToString();
-                    Source s = (Source)Enum.Parse(typeof(Source), i);
+                    Source s = (Source) Enum.Parse(typeof(Source), i);
                     SQLiteData sqlitedata = new SQLiteData(s, Provider.SQLite);
                     sqlitedata.Show();
                 }

@@ -9,7 +9,7 @@ using VisualPlus.Toolkit.Controls.Interactivity;
 namespace BudgetExecution
 {
     /// <summary>
-    /// UI for the SQLiteData class.
+    ///     UI for the SQLiteData class.
     /// </summary>
     /// <seealso cref="Syncfusion.Windows.Forms.MetroForm" />
     public sealed partial class SQLiteData : MetroForm
@@ -394,7 +394,7 @@ namespace BudgetExecution
                 switch(source)
                 {
                     case Source.Accounts:
-                        label1.Text = $@"Fund";
+                        label1.Text = @"Fund";
                         PopulateFilterItems(Field.Fund, DbData, Filter1, label1);
                         Filter2.Tag = "GoalName";
                         Filter3.Tag = "ProgramProjectName";

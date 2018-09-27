@@ -2,16 +2,14 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
+using System.Collections.Generic;
+using System.Data;
+using System.Linq;
+
 namespace BudgetExecution
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Data;
-    using System.Data.SQLite;
-    using System.Linq;
-
     // CONSTRUCTORS
-    public class TravelObligations 
+    public class TravelObligations
     {
         public TravelObligations()
         {
@@ -42,7 +40,7 @@ namespace BudgetExecution
 
         public DataTable Table { get; }
 
-        public DataRow[] Records {get; set;}
+        public DataRow[] Records { get; set; }
 
         public DataRow DbRow { get; }
 

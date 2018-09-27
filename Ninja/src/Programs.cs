@@ -2,15 +2,12 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
+using System.Data;
+using System.Linq;
+
 namespace BudgetExecution
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Data;
-    using System.Data.SQLite;
-    using System.Linq;
-
-    public class Programs 
+    public class Programs
     {
         // CONSTRUCTORS
         public Programs()
@@ -35,11 +32,11 @@ namespace BudgetExecution
 
         public DataRow DbRow { get; set; }
 
-        public int ID { get; set;}
+        public int ID { get; set; }
 
-        public string RpioName { get; set; } 
+        public string RpioName { get; set; }
 
-        public string RPIO { get; set; } 
+        public string RPIO { get; set; }
 
         public string BFY { get; set; }
 
@@ -50,12 +47,12 @@ namespace BudgetExecution
         public string AH { get; set; }
 
         public string AllowanceHolderName { get; set; }
-        
+
         public Org Org { get; set; }
 
         public string DivisionName { get; set; }
 
-        public string ProgramProjectCode { get; set; } 
+        public string ProgramProjectCode { get; set; }
 
         public string ProgramProjectName { get; set; }
 

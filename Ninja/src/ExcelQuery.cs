@@ -81,10 +81,6 @@ namespace BudgetExecution
 
         public new string SelectStatement { get; }
 
-        public new Source Source { get; }
-
-        public new Provider Provider { get; set; }
-
         public new string TableName { get; }
 
         public new OleDbCommand UpdateCommand { get; }
@@ -94,6 +90,23 @@ namespace BudgetExecution
         public new OleDbCommand DeleteCommand { get; }
 
         public new AppSettingsReader Settings { get; set; }
+
+        public new Source Source { get; }
+
+        public new Provider Provider { get; set; }
+
+        public new string GetSqlStatement(string sql)
+        {
+            try
+            {
+                return$"SELECT * FROM {TableName} WHERE {sql}";
+            }
+            catch(Exception ex)
+            {
+                new Error(ex).ShowDialog();
+                return null;
+            }
+        }
 
         // Methods
         public OleDbParameter[] GetParameter(DataRow dr)
@@ -371,19 +384,6 @@ namespace BudgetExecution
             try
             {
                 return$"SELECT * FROM {TableName} WHERE {GetParamString(Parameter)}";
-            }
-            catch(Exception ex)
-            {
-                new Error(ex).ShowDialog();
-                return null;
-            }
-        }
-
-        public new string GetSqlStatement(string sql)
-        {
-            try
-            {
-                return$"SELECT * FROM {TableName} WHERE {sql}";
             }
             catch(Exception ex)
             {

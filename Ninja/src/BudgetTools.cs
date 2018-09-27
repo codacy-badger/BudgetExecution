@@ -2,23 +2,20 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
+using System;
+using Syncfusion.Windows.Forms;
+
 namespace BudgetExecution
 {
-    using System;
-
-    public partial class BudgetTools : Syncfusion.Windows.Forms.MetroForm
+    public partial class BudgetTools : MetroForm
     {
         public BudgetTools()
         {
             InitializeComponent();
         }
 
-        private void BudgetTools_Load(object sender, EventArgs e)
-        {
-        }
+        private void BudgetTools_Load(object sender, EventArgs e) { }
 
-        private void TabControlAdv1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-        }
+        private void TabControlAdv1_SelectedIndexChanged(object sender, EventArgs e) { }
     }
 }
