@@ -12,6 +12,15 @@ namespace BudgetExecution
     public class Obligation : IObligation
     {
         public Obligation() { }
+        
+        public Obligation(Source source = Source.Obligations, Provider provider = Provider.SQLite)
+        {
+            Source = source;
+            Provider = provider;
+            DbData = new DataBuilder(source, provider);
+            Table = DbData.Table;
+            Records = Table.AsEnumerable().Select(p => p).ToArray();
+        }
 
         public Obligation(Source source, Provider provider, Dictionary<string, object> param)
         {

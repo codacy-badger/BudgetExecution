@@ -21,7 +21,7 @@ namespace BudgetExecution
         /// </summary>
         /// <param name="source">The source.</param>
         /// <param name="provider">The provider.</param>
-        public ControlNumber(Source source, Provider provider)
+        public ControlNumber(Source source = Source.ControlNumbers, Provider provider = Provider.SQLite)
         {
             Source = source;
             Provider = provider;

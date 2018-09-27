@@ -21,7 +21,7 @@ namespace BudgetExecution
             DbTable = GetAccountData(Source, Provider);
         }
 
-        public Account(Source source, Provider provider)
+        public Account(Source source = Source.Accounts, Provider provider = Provider.SQLite)
         {
             Source = source;
             Provider = provider;
