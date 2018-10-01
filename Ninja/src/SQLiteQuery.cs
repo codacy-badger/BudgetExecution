@@ -64,8 +64,9 @@ namespace BudgetExecution
             InsertCommand = CommandBuilder.GetInsertCommand();
             DeleteCommand = CommandBuilder.GetDeleteCommand();
             Settings = new AppSettingsReader();
-        }
+        }       
 
+        // PROPERTIES
         public new AppSettingsReader Settings { get; }
 
         public new SQLiteConnection DataConnection { get; }
@@ -92,7 +93,6 @@ namespace BudgetExecution
 
         public new SQLiteCommand UpdateCommand { get; set; }
 
-        // PROPERTIES
         public new Source Source { get; }
 
         public new Provider Provider { get; }
