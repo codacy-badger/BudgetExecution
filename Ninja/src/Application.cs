@@ -2,19 +2,24 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
-using System;
-using System.Collections.Generic;
-using System.Data;
-using Syncfusion.Windows.Forms.Chart;
-
 namespace BudgetExecution
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Data;
+    using System.Data.Common;
+    using Syncfusion.Windows.Forms.Chart;
+
     // Delegates
     public delegate double[] Calculator(DataTable table);
 
+    public delegate DbParameter[] Paramaker(Dictionary<string, object> param);
+
     public delegate DataTable DataFilter(DataTable table, Field column, string filter);
 
-    public delegate string[] FieldFilter(DataTable table, string filter);
+    public delegate DataTable DataFiltr(DataTable table, Field[] column, string[] filter);
+
+    public delegate string[] Fields(DataTable table, string filter);
 
     public delegate ChartControl GetChart(ChartControl chart, string title, Dictionary<string, double> data);
 
@@ -23,8 +28,6 @@ namespace BudgetExecution
     public delegate void Update(Source source, Provider provider, Dictionary<string, object> dpr);
 
     public delegate void Delete(Source source, Provider provider, Dictionary<string, object> dpr);
-
-    public delegate string[] FieldName(DataTable table);
 
     public delegate Dictionary<string, string[]> ProgramElement(DataTable table, Field column);
 

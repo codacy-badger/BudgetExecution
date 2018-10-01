@@ -29,7 +29,7 @@ namespace BudgetExecution
             PopulateFilterButtons(Filter1, Info.Sources);
             Text = $@"{Source.ToString()} Database";
             TableFilter = Info.FilterRows;
-            FieldFilter = Info.GetColumnValues;
+            Fields = Info.GetColumnValues;
             label12.Text = Table.Rows.Count.ToString();
         }
 
@@ -45,7 +45,7 @@ namespace BudgetExecution
             ProgramElements = DbData.GetProgramElements(Table);
             Text = $@"{Source.ToString()} Database";
             TableFilter = Info.FilterRows;
-            FieldFilter = Info.GetColumnValues;
+            Fields = Info.GetColumnValues;
             label12.Text = Table.Rows.Count.ToString();
         }
 
@@ -56,7 +56,7 @@ namespace BudgetExecution
 
         internal DataFilter TableFilter { get; set; }
 
-        internal FieldFilter FieldFilter { get; set; }
+        internal Fields Fields { get; set; }
 
         internal DataBuilder DbData { get; }
 
@@ -159,7 +159,7 @@ namespace BudgetExecution
                     label.Text = control.Tag.ToString();
                 }
 
-                string[] filters = FieldFilter(table, colname);
+                string[] filters = Fields(table, colname);
                 foreach(string i in filters)
                 {
                     control.Items.Add(i);
@@ -218,7 +218,7 @@ namespace BudgetExecution
                     label.Visible = true;
                 }
 
-                string[] item = FieldFilter(table, colname.ToString());
+                string[] item = Fields(table, colname.ToString());
                 control.Tag = colname.ToString();
                 foreach(string i in item)
                 {

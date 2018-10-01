@@ -86,6 +86,11 @@ namespace BudgetExecution
         public DbCommand DataCommand { get; set; }
 
         // METHODS
+        /// <summary>
+        /// Gets the connection.
+        /// </summary>
+        /// <param name="provider">The provider.</param>
+        /// <returns></returns>
         public DbConnection GetConnection(Provider provider)
         {
             try
@@ -113,6 +118,11 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// Gets the SQL statement.
+        /// </summary>
+        /// <param name="sql">The SQL.</param>
+        /// <returns></returns>
         public string GetSqlStatement(string sql)
         {
             try
@@ -126,6 +136,12 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// Gets the data command.
+        /// </summary>
+        /// <param name="sql">The SQL.</param>
+        /// <param name="connection">The connection.</param>
+        /// <returns></returns>
         public DbCommand GetDataCommand(string sql, DbConnection connection)
         {
             try
@@ -152,6 +168,11 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// Gets the data adapter.
+        /// </summary>
+        /// <param name="command">The command.</param>
+        /// <returns></returns>
         public DbDataAdapter GetDataAdapter(IDbCommand command)
         {
             try
@@ -175,6 +196,11 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// Gets the data reader.
+        /// </summary>
+        /// <param name="command">The command.</param>
+        /// <returns></returns>
         public DbDataReader GetDataReader(IDbCommand command)
         {
             try
@@ -198,6 +224,11 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// Gets the command builder.
+        /// </summary>
+        /// <param name="adapter">The adapter.</param>
+        /// <returns></returns>
         public DbCommandBuilder GetCommandBuilder(DbDataAdapter adapter)
         {
             try
@@ -224,13 +255,18 @@ namespace BudgetExecution
             }
         }
 
-        public string GetParameterStrings(Dictionary<string, object> param)
+        /// <summary>
+        /// Gets the parameter strings.
+        /// </summary>
+        /// <param name="param">The parameter.</param>
+        /// <returns></returns>
+        public string GetSqlParameterString(Dictionary<string, object> param)
         {
             try
             {
                 string vals = string.Empty;
-                SQLiteParameter[] sqlparameter = GetDbParameters(param);
-                foreach(SQLiteParameter p in sqlparameter)
+                DbParameter[] sqlparameter = GetDataParameters(param);
+                foreach(var p in sqlparameter)
                 {
                     vals += $"{p.SourceColumn} = '{p.Value}' AND ";
                 }
@@ -245,11 +281,17 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// Gets the select statement.
+        /// </summary>
+        /// <param name="table">The table.</param>
+        /// <param name="param">The parameter.</param>
+        /// <returns></returns>
         public string GetSelectStatement(string table, Dictionary<string, object> param)
         {
             try
             {
-                return$"SELECT * FROM {table} WHERE {GetSelectParamString(param)}";
+                return$"SELECT * FROM {table} WHERE {GetSqlParameterString(param)}";
             }
             catch(Exception ex)
             {
@@ -258,6 +300,12 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// Gets the select statement.
+        /// </summary>
+        /// <param name="tableName">Name of the table.</param>
+        /// <param name="sql">The SQL.</param>
+        /// <returns></returns>
         public string GetSelectStatement(string tableName, string sql)
         {
             try
@@ -271,11 +319,16 @@ namespace BudgetExecution
             }
         }
 
-        public SQLiteParameter[] GetDbParameters(Dictionary<string, object> input)
+        /// <summary>
+        /// Gets the database parameters.
+        /// </summary>
+        /// <param name="input">The input.</param>
+        /// <returns></returns>
+        public DbParameter[] GetDataParameters(Dictionary<string, object> input)
         {
             try
             {
-                SQLiteParameter[] val = new SQLiteParameter[input.Count];
+                DbParameter[] val = new DbParameter[input.Count];
                 for(int i = 0; i < input.Count; i++)
                 {
                     foreach(KeyValuePair<string, object> kvp in input)
@@ -320,6 +373,12 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// Gets the select statement.
+        /// </summary>
+        /// <param name="source">The source.</param>
+        /// <param name="param">The parameter.</param>
+        /// <returns></returns>
         public string GetSelectStatement(Source source, SQLiteParameter[] param)
         {
             try
@@ -340,6 +399,12 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// Gets the update statement.
+        /// </summary>
+        /// <param name="source">The source.</param>
+        /// <param name="update">The update.</param>
+        /// <returns></returns>
         public string GetUpdateStatement(Source source, SQLiteParameter[] update)
         {
             try
@@ -366,6 +431,12 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// Gets the insert statement.
+        /// </summary>
+        /// <param name="source">The source.</param>
+        /// <param name="param">The parameter.</param>
+        /// <returns></returns>
         public string GetInsertStatement(Source source, SQLiteParameter[] param)
         {
             try
@@ -389,6 +460,12 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// Gets the delete statement.
+        /// </summary>
+        /// <param name="source">The source.</param>
+        /// <param name="param">The parameter.</param>
+        /// <returns></returns>
         public string GetDeleteStatement(Source source, SQLiteParameter[] param)
         {
             try
@@ -409,6 +486,13 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// Gets the select command.
+        /// </summary>
+        /// <param name="pmr">The PMR.</param>
+        /// <param name="connection">The connection.</param>
+        /// <param name="source">The source.</param>
+        /// <returns></returns>
         public SQLiteCommand GetSelectCommand(SQLiteParameter[] pmr, SQLiteConnection connection, Source source = Source.PRC)
         {
             try
@@ -434,6 +518,13 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// Gets the update command.
+        /// </summary>
+        /// <param name="pmr">The PMR.</param>
+        /// <param name="connection">The connection.</param>
+        /// <param name="source">The source.</param>
+        /// <returns></returns>
         public SQLiteCommand GetUpdateCommand(SQLiteParameter[] pmr, SQLiteConnection connection, Source source = Source.PRC)
         {
             try
@@ -459,6 +550,13 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// Gets the insert command.
+        /// </summary>
+        /// <param name="pmr">The PMR.</param>
+        /// <param name="connection">The connection.</param>
+        /// <param name="source">The source.</param>
+        /// <returns></returns>
         public SQLiteCommand GetInsertCommand(SQLiteParameter[] pmr, SQLiteConnection connection, Source source = Source.PRC)
         {
             try
@@ -484,6 +582,13 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// Gets the delete command.
+        /// </summary>
+        /// <param name="source">The source.</param>
+        /// <param name="pmr">The PMR.</param>
+        /// <param name="connection">The connection.</param>
+        /// <returns></returns>
         public SQLiteCommand GetDeleteCommand(Source source, SQLiteParameter[] pmr, SQLiteConnection connection)
         {
             try
@@ -509,6 +614,14 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// Gets the data command.
+        /// </summary>
+        /// <param name="pmr">The PMR.</param>
+        /// <param name="connection">The connection.</param>
+        /// <param name="cmd">The command.</param>
+        /// <param name="source">The source.</param>
+        /// <returns></returns>
         public SQLiteCommand GetDataCommand(SQLiteParameter[] pmr, SQLiteConnection connection, Sql cmd, Source source = Source.PRC)
         {
             try
@@ -538,6 +651,12 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// Gets the select command.
+        /// </summary>
+        /// <param name="select">The select.</param>
+        /// <param name="connection">The connection.</param>
+        /// <returns></returns>
         internal DbCommand GetSelectCommand(string select, IDbConnection connection)
         {
             try
@@ -569,25 +688,31 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// Gets the select command.
+        /// </summary>
+        /// <param name="param">The parameter.</param>
+        /// <param name="connection">The connection.</param>
+        /// <returns></returns>
         internal DbCommand GetSelectCommand(Dictionary<string, object> param, IDbConnection connection)
         {
             try
             {
                 if(connection is SQLiteConnection)
                 {
-                    SelectStatement = GetSelectParamString(param);
+                    SelectStatement = GetSelectParamString(GetDataParameters(param));
                     return new SQLiteCommand(SelectStatement, (SQLiteConnection) connection);
                 }
 
                 if(connection is OleDbConnection)
                 {
-                    SelectStatement = GetSelectParamString(param);
+                    SelectStatement = GetSelectParamString(GetDataParameters(param));
                     return new OleDbCommand(SelectStatement, (OleDbConnection) connection);
                 }
 
                 if(connection is SqlConnection)
                 {
-                    SelectStatement = GetSelectParamString(param);
+                    SelectStatement = GetSelectParamString(GetDataParameters(param));
                     return new SqlCommand(SelectStatement, (SqlConnection) connection);
                 }
 
@@ -600,32 +725,17 @@ namespace BudgetExecution
             }
         }
 
-        internal string GetSelectParamString(Dictionary<string, object> param)
+        /// <summary>
+        /// Gets the select parameter string.
+        /// </summary>
+        /// <param name="param">The parameter.</param>
+        /// <returns></returns>
+        internal string GetSelectParamString(DbParameter[] param)
         {
             try
             {
                 string vals = string.Empty;
-                foreach(KeyValuePair<string, object> kvp in param)
-                {
-                    vals += $"{kvp.Key} = '{kvp.Value}' AND ";
-                }
-
-                vals = vals.Trim().Substring(0, vals.Length - 4);
-                return vals;
-            }
-            catch(Exception ex)
-            {
-                new Error(ex).ShowDialog();
-                return null;
-            }
-        }
-
-        internal string GetSelectParamString(SQLiteParameter[] param)
-        {
-            try
-            {
-                string vals = string.Empty;
-                foreach(SQLiteParameter p in param)
+                foreach(var p in param)
                 {
                     vals += $"{p.SourceColumn} = '{p.Value}' AND ";
                 }

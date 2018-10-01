@@ -36,27 +36,26 @@ namespace BudgetExecution
             }
         }
 
-        public DataBuilder(Source source, Provider provider)
+        public DataBuilder(Source source, Provider provider = Provider.SQLite)
         {
             DataFields = null;
             Source = source;
             Query = new Query(source, provider);
             Table = GetDataTable(Source);
+            Columns = Table.GetFields();
             Total = GetTotal(Table);
             ProgramElements = GetProgramElements(Table);
-            BindingSource = new BindingSource();
-            BindingSource.DataSource = Table;
+            BindingSource = new BindingSource(Table.DataSet, Table.TableName);
             Records = GetRecords(Table);
-            Columns = GetColumnNames(Table);
+            Columns = Table.GetFields();
             if(source == Source.FTE)
             {
                 Table = GetDataTable().AsEnumerable().Where(p => p.Field<string>("BOC").Equals("17")).Where(p => p.Field<string>("BudgetLevel").Equals("8")).Select(p => p).CopyToDataTable();
                 Total = GetFteTotal(Table);
                 ProgramElements = GetProgramElements(Table);
-                BindingSource = new BindingSource();
-                BindingSource.DataSource = Table;
+                BindingSource = new BindingSource(Table.DataSet, Table.TableName);
                 Records = GetRecords(Table);
-                Columns = GetColumnNames(Table);
+                Columns = Table.GetFields();
             }
         }
 
@@ -68,19 +67,17 @@ namespace BudgetExecution
             Table = GetDataTable(Source);
             Total = GetTotal(Table);
             ProgramElements = GetProgramElements(Table);
-            BindingSource = new BindingSource();
-            BindingSource.DataSource = Table;
+            BindingSource = new BindingSource(Table.DataSet, Table.TableName);
             Records = GetRecords(Table);
-            Columns = GetColumnNames(Table);
+            Columns = Table.GetFields();
             if(source == Source.FTE)
             {
                 Table = GetDataTable().AsEnumerable().Where(p => p.Field<string>("BOC").Equals("17")).Select(p => p).CopyToDataTable();
                 Total = GetFteTotal(Table);
                 ProgramElements = GetProgramElements(Table);
-                BindingSource = new BindingSource();
-                BindingSource.DataSource = Table;
+                BindingSource = new BindingSource(Table.DataSet, Table.TableName);
                 Records = GetRecords(Table);
-                Columns = GetColumnNames(Table);
+                Columns = Table.GetFields();
             }
         }
 
@@ -105,13 +102,17 @@ namespace BudgetExecution
 
 
         // METHODS
+        /// <summary>
+        /// Gets the data table.
+        /// </summary>
+        /// <returns></returns>
         public DataTable GetDataTable()
         {
             try
             {
                 DataSet ds = new DataSet("R06");
                 ds.DataSetName = "R06";
-                DataTable dt = new DataTable(Source.ToString());
+                DataTable dt = new DataTable();
                 dt.TableName = Source.ToString();
                 ds.Tables.Add(dt);
                 Query.DataAdapter.Fill(ds, Source.ToString());
@@ -124,6 +125,35 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// Gets the data table.
+        /// </summary>
+        /// <param name="source">The source.</param>
+        /// <returns></returns>
+        public DataTable GetDataTable(Source source)
+        {
+            try
+            {
+                DataSet ds = new DataSet("R06");
+                ds.DataSetName = "R06";
+                DataTable dt = new DataTable();
+                dt.TableName = source.ToString();
+                ds.Tables.Add(dt);
+                Query.DataAdapter.Fill(ds, Source.ToString());
+                return dt;
+            }
+            catch(Exception e)
+            {
+                new Error(e).ShowDialog();
+                return null;
+            }
+        }
+
+        /// <summary>
+        /// Gets the records in the table as an Array of DataRows.
+        /// </summary>
+        /// <param name="table">The table.</param>
+        /// <returns></returns>
         public DataRow[] GetRecords(DataTable table)
         {
             try
@@ -137,6 +167,11 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// Gets the sqlite query.
+        /// </summary>
+        /// <param name="source">The source.</param>
+        /// <returns></returns>
         private SQLiteQuery GetSQLiteQuery(Source source)
         {
             try
@@ -150,6 +185,12 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// Gets the sq lite query.
+        /// </summary>
+        /// <param name="source">The source.</param>
+        /// <param name="pmr">The PMR.</param>
+        /// <returns></returns>
         private SQLiteQuery GetSQLiteQuery(Source source, SQLiteParameter[] pmr)
         {
             try
@@ -163,6 +204,12 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// Gets the sq lite query.
+        /// </summary>
+        /// <param name="source">The source.</param>
+        /// <param name="dpr">The DPR.</param>
+        /// <returns></returns>
         private SQLiteQuery GetSQLiteQuery(Source source, Dictionary<string, object> dpr)
         {
             try
@@ -176,6 +223,11 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// Gets the excel query.
+        /// </summary>
+        /// <param name="pmr">The PMR.</param>
+        /// <returns></returns>
         public ExcelQuery GetExcelQuery(Dictionary<string, object> pmr)
         {
             try
@@ -195,6 +247,12 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// Gets the excel query.
+        /// </summary>
+        /// <param name="source">The source.</param>
+        /// <param name="pmr">The PMR.</param>
+        /// <returns></returns>
         public ExcelQuery GetExcelQuery(Source source, Dictionary<string, object> pmr)
         {
             try
@@ -214,24 +272,11 @@ namespace BudgetExecution
             }
         }
 
-        public ExcelQuery GetExcelQuery(Source source, Provider provider, Dictionary<string, object> dpr)
-        {
-            try
-            {
-                if(provider == Provider.OleDb)
-                {
-                    return new ExcelQuery(source, dpr);
-                }
-
-                return null;
-            }
-            catch(Exception ex)
-            {
-                new Error(ex).ShowDialog();
-                return null;
-            }
-        }
-
+        /// <summary>
+        /// Gets the parameter array.
+        /// </summary>
+        /// <param name="row">The row.</param>
+        /// <returns></returns>
         public SQLiteParameter[] GetParamArray(DataRow row)
         {
             try
@@ -253,6 +298,11 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// Gets the parameter list.
+        /// </summary>
+        /// <param name="table">The table.</param>
+        /// <returns></returns>
         public List<SQLiteParameter[]> GetParameterList(DataTable table)
         {
             try
@@ -272,6 +322,13 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// Filters the records.
+        /// </summary>
+        /// <param name="table">The table.</param>
+        /// <param name="col">The col.</param>
+        /// <param name="filter">The filter.</param>
+        /// <returns></returns>
         public static DataTable FilterRecords(DataTable table, Field col, string filter)
         {
             try
@@ -285,18 +342,36 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// Filters the records.
+        /// </summary>
+        /// <param name="table">The table.</param>
+        /// <param name="col">The col.</param>
+        /// <param name="filter">The filter.</param>
+        /// <returns></returns>
         public static DataTable FilterRecords(DataTable table, Field[] col, string[] filter)
         {
             try
             {
+                if(col.Length == 1 && filter.Length == 1)
+                {
+                    return table.AsEnumerable().Where(p => p.Field<string>(col[0].ToString()).Equals(filter[0]))
+                                .Select(p => p).CopyToDataTable();
+                }
+
                 if(col.Length == 2 && filter.Length == 2)
                 {
-                    return table.AsEnumerable().Where(p => p.Field<string>(col[0].ToString()).Equals(filter[0])).Where(p => p.Field<string>(col[1].ToString()).Equals(filter[1])).Select(p => p).CopyToDataTable();
+                    return table.AsEnumerable().Where(p => p.Field<string>(col[0].ToString()).Equals(filter[0]))
+                                .Where(p => p.Field<string>(col[1].ToString()).Equals(filter[1]))
+                                .Select(p => p).CopyToDataTable();
                 }
 
                 if(col.Length == 3 && filter.Length == 3)
                 {
-                    return table.AsEnumerable().Where(p => p.Field<string>(col[0].ToString()).Equals(filter[0])).Where(p => p.Field<string>(col[1].ToString()).Equals(filter[1])).Where(p => p.Field<string>(col[2].ToString()).Equals(filter[2])).Select(p => p).CopyToDataTable();
+                    return table.AsEnumerable().Where(p => p.Field<string>(col[0].ToString()).Equals(filter[0]))
+                                .Where(p => p.Field<string>(col[1].ToString()).Equals(filter[1]))
+                                .Where(p => p.Field<string>(col[2].ToString()).Equals(filter[2]))
+                                .Select(p => p).CopyToDataTable();
                 }
 
                 return null;
@@ -308,6 +383,12 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// Gets the unique values.
+        /// </summary>
+        /// <param name="table">The table.</param>
+        /// <param name="column">The column.</param>
+        /// <returns></returns>
         public string[] GetUniqueValues(DataTable table, string column)
         {
             try
@@ -326,6 +407,11 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// Gets the program elements.
+        /// </summary>
+        /// <param name="table">The table.</param>
+        /// <returns></returns>
         public Dictionary<string, string[]> GetProgramElements(DataTable table)
         {
             try
@@ -360,6 +446,11 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// Gets the count.
+        /// </summary>
+        /// <param name="table">The table.</param>
+        /// <returns></returns>
         public int GetCount(DataTable table)
         {
             try
@@ -378,6 +469,10 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// Gets the data set.
+        /// </summary>
+        /// <returns></returns>
         public DataSet GetDataSet()
         {
             try
@@ -396,16 +491,21 @@ namespace BudgetExecution
             }
         }
 
-        public DataSet GetDataSet(string name, Source source)
+        /// <summary>
+        /// Gets the data set.
+        /// </summary>
+        /// <param name="source">The source.</param>
+        /// <returns></returns>
+        public DataSet GetDataSet(Source source)
         {
             try
             {
-                DataSet ds = new DataSet(name);
-                ds.DataSetName = name;
+                DataSet ds = new DataSet();
+                ds.DataSetName = "R06";
                 DataTable dt = new DataTable(source.ToString());
                 dt.TableName = source.ToString();
                 ds.Tables.Add(dt);
-                Query.DataAdapter.Fill(ds);
+                Query.DataAdapter.Fill(ds, dt.TableName);
                 return ds;
             }
             catch(Exception ex)
@@ -415,22 +515,11 @@ namespace BudgetExecution
             }
         }
 
-        public DataTable GetDataTable(Source source)
-        {
-            try
-            {
-                DataTable dt = new DataTable(source.ToString());
-                dt.TableName = source.ToString();
-                Query.DataAdapter.Fill(dt);
-                return dt;
-            }
-            catch(Exception e)
-            {
-                new Error(e).ShowDialog();
-                return null;
-            }
-        }
-
+        /// <summary>
+        /// Gets the total.
+        /// </summary>
+        /// <param name="table">The table.</param>
+        /// <returns></returns>
         public decimal GetTotal(DataTable table)
         {
             string[] cols = table.GetFields();
@@ -459,6 +548,11 @@ namespace BudgetExecution
             return 0;
         }
 
+        /// <summary>
+        /// Gets the fte total.
+        /// </summary>
+        /// <param name="table">The table.</param>
+        /// <returns></returns>
         public decimal GetFteTotal(DataTable table)
         {
             try
@@ -477,6 +571,11 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// Gets the column names.
+        /// </summary>
+        /// <param name="table">The table.</param>
+        /// <returns></returns>
         public string[] GetColumnNames(DataTable table)
         {
             if(table.Rows.Count > 0)

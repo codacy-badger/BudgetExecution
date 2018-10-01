@@ -895,11 +895,14 @@ namespace BudgetExecution
                 SQLiteQuery query = new SQLiteQuery(source);
                 using(query.DataConnection)
                 {
-                    SQLiteParameter[] param = query.GetDbParameters(p);
+                    SQLiteParameter[] param = query.GetDataParameters(p) as SQLiteParameter[];
                     SQLiteCommand command = query.InsertCommand;
-                    foreach(SQLiteParameter pmr in param)
+                    if(param != null)
                     {
-                        command.Parameters.Add(pmr);
+                        foreach(SQLiteParameter pmr in param)
+                        {
+                            command.Parameters.Add(pmr);
+                        }
                     }
 
                     command.ExecuteNonQuery();
@@ -918,11 +921,14 @@ namespace BudgetExecution
                 SQLiteQuery query = new SQLiteQuery(source);
                 using(query.DataConnection)
                 {
-                    SQLiteParameter[] param = query.GetDbParameters(p);
+                    SQLiteParameter[] param = query.GetDataParameters(p) as SQLiteParameter[];
                     SQLiteCommand command = query.UpdateCommand;
-                    foreach(SQLiteParameter pmr in param)
+                    if(param != null)
                     {
-                        command.Parameters.Add(pmr);
+                        foreach(SQLiteParameter pmr in param)
+                        {
+                            command.Parameters.Add(pmr);
+                        }
                     }
 
                     command.ExecuteNonQuery();
@@ -941,11 +947,14 @@ namespace BudgetExecution
                 SQLiteQuery query = new SQLiteQuery(source);
                 using(query.DataConnection)
                 {
-                    SQLiteParameter[] param = query.GetDbParameters(p);
+                    SQLiteParameter[] param = query.GetDataParameters(p) as SQLiteParameter[];
                     SQLiteCommand command = query.DeleteCommand;
-                    foreach(SQLiteParameter pmr in param)
+                    if(param != null)
                     {
-                        command.Parameters.Add(pmr);
+                        foreach(SQLiteParameter pmr in param)
+                        {
+                            command.Parameters.Add(pmr);
+                        }
                     }
 
                     command.ExecuteNonQuery();

@@ -14,26 +14,19 @@ namespace BudgetExecution
         // CONSTRUCTORS
         public Account() { }
 
-        public Account(Source source)
-        {
-            Source = source;
-            Provider = Provider.SQLite;
-            DbTable = GetAccountData(Source, Provider);
-        }
-
         public Account(Source source = Source.Accounts, Provider provider = Provider.SQLite)
         {
             Source = source;
             Provider = provider;
-            DbTable = GetAccountData(Source, Provider);
+            DbData = new DataBuilder(Source, Provider);
+            DbTable = DbData.Table;
         }
 
-        public Account(string fund, string code) : this(Source.Accounts, Provider.SQLite)
+        public Account(string fund, string code, Source source, Provider provider) : this(source, provider)
         {
             Code = code;
             ProgramProjectCode = Code.Substring(4, 2);
             Parameter = GetAccountParameter(fund, code);
-            DbTable = GetAccountData(Source.Accounts, Provider.SQLite, Parameter);
             DbRow = DbTable.AsEnumerable().First();
             Goal = Code.Substring(0, 1);
             Objective = Code.Substring(1, 2);
@@ -57,8 +50,9 @@ namespace BudgetExecution
             Code = code;
             ProgramProjectCode = Code.Substring(4, 2);
             Parameter = GetAccountParameter(fund, code);
-            DbTable = GetAccountData(source, provider, Parameter);
-            DbRow = DbTable.AsEnumerable().First();
+            DbData = new DataBuilder(Source, Provider);
+            DbTable = DbData.Table;
+            DbRow = DbData.Table.AsEnumerable().First();
             Goal = Code.Substring(0, 1);
             Objective = Code.Substring(1, 2);
             NpmCode = Code.Substring(3, 1);
@@ -134,54 +128,100 @@ namespace BudgetExecution
 
         public string ProgramProjectCode { get; }
 
+        // METHODS
+        /// <summary>
+        /// Gets the goal.
+        /// </summary>
+        /// <returns></returns>
         public string GetGoal()
         {
             char[] goal = Code.Substring(0, 1).ToCharArray();
             return goal.ToString();
         }
 
+        /// <summary>
+        /// Gets the name of the goal.
+        /// </summary>
+        /// <param name="code">The code.</param>
+        /// <returns></returns>
         public string GetGoalName(string code)
         {
             return Info.GetGoalName(code);
         }
 
+        /// <summary>
+        /// Gets the NPM code.
+        /// </summary>
+        /// <returns></returns>
         public string GetNpmCode()
         {
             char[] npm = Code.Substring(2, 1).ToCharArray();
             return npm.ToString();
         }
 
+        /// <summary>
+        /// Gets the objective.
+        /// </summary>
+        /// <returns></returns>
         public string GetObjective()
         {
             return Code.Substring(1, 2);
         }
 
+        /// <summary>
+        /// Gets the name of the objective.
+        /// </summary>
+        /// <param name="code">The code.</param>
+        /// <returns></returns>
         public string GetObjectiveName(string code)
         {
             return Info.GetObjectiveName(code);
         }
 
+        /// <summary>
+        /// Gets the program project code.
+        /// </summary>
+        /// <returns></returns>
         public string GetProgramProjectCode()
         {
             return Code.Substring(5, 2);
         }
 
+        /// <summary>
+        /// Gets the code.
+        /// </summary>
+        /// <returns></returns>
         string IAccount.GetCode()
         {
             return Code;
         }
 
-        // METHODS
+        /// <summary>
+        /// Gets the code.
+        /// </summary>
+        /// <returns></returns>
         public string GetCode()
         {
             return Code;
         }
 
+        /// <summary>
+        /// Returns a <see cref="System.String" /> that represents this instance.
+        /// </summary>
+        /// <returns>
+        /// A <see cref="System.String" /> that represents this instance.
+        /// </returns>
         public override string ToString()
         {
             return Code;
         }
 
+        /// <summary>
+        /// Gets the insert fields.
+        /// </summary>
+        /// <param name="source">The source.</param>
+        /// <param name="param">The parameter.</param>
+        /// <returns></returns>
         public static Dictionary<string, object> GetInsertFields(Source source, Dictionary<string, object> param)
         {
             try
@@ -230,6 +270,13 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// Gets the insert fields.
+        /// </summary>
+        /// <param name="source">The source.</param>
+        /// <param name="provider">The provider.</param>
+        /// <param name="param">The parameter.</param>
+        /// <returns></returns>
         public static Dictionary<string, object> GetInsertFields(Source source, Provider provider, Dictionary<string, object> param)
         {
             try
@@ -278,6 +325,12 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// Selects the specified source.
+        /// </summary>
+        /// <param name="source">The source.</param>
+        /// <param name="param">The parameter.</param>
+        /// <returns></returns>
         public static Account Select(Source source, Dictionary<string, object> param)
         {
             try
@@ -292,6 +345,13 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// Selects the specified source.
+        /// </summary>
+        /// <param name="source">The source.</param>
+        /// <param name="provider">The provider.</param>
+        /// <param name="param">The parameter.</param>
+        /// <returns></returns>
         public static Account Select(Source source, Provider provider, Dictionary<string, object> param)
         {
             try
@@ -306,6 +366,10 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// Inserts the specified p.
+        /// </summary>
+        /// <param name="p">The p.</param>
         public static void Insert(Dictionary<string, object> p)
         {
             try
@@ -319,6 +383,10 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// Updates the specified p.
+        /// </summary>
+        /// <param name="p">The p.</param>
         public static void Update(Dictionary<string, object> p)
         {
             try
@@ -332,6 +400,10 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// Deletes the specified p.
+        /// </summary>
+        /// <param name="p">The p.</param>
         public static void Delete(Dictionary<string, object> p)
         {
             try
@@ -345,6 +417,12 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// Gets the account parameter.
+        /// </summary>
+        /// <param name="fund">The fund.</param>
+        /// <param name="code">The code.</param>
+        /// <returns></returns>
         internal Dictionary<string, object> GetAccountParameter(string fund, string code)
         {
             try
@@ -358,6 +436,32 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// Gets the account parameter.
+        /// </summary>
+        /// <param name="bfy">The bfy.</param>
+        /// <param name="fund">The fund.</param>
+        /// <param name="code">The code.</param>
+        /// <returns></returns>
+        internal Dictionary<string, object> GetAccountParameter(string bfy, string fund, string code)
+        {
+            try
+            {
+                return new Dictionary<string, object> { ["BFY"] = bfy, ["Fund"] = fund, ["ProgramProjectCode"] = Code.Substring(4, 2) };
+            }
+            catch(Exception ex)
+            {
+                new Error(ex).ShowDialog();
+                return null;
+            }
+        }
+
+        /// <summary>
+        /// Gets the account program data.
+        /// </summary>
+        /// <param name="fund">The fund.</param>
+        /// <param name="code">The code.</param>
+        /// <returns></returns>
         internal Dictionary<string, object> GetAccountProgramData(string fund, string code)
         {
             try
@@ -380,6 +484,12 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// Gets the account data.
+        /// </summary>
+        /// <param name="source">The source.</param>
+        /// <param name="provider">The provider.</param>
+        /// <returns></returns>
         internal DataTable GetAccountData(Source source, Provider provider)
         {
             try
@@ -394,6 +504,12 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// Gets the account data.
+        /// </summary>
+        /// <param name="source">The source.</param>
+        /// <param name="param">The parameter.</param>
+        /// <returns></returns>
         internal DataTable GetAccountData(Source source, Dictionary<string, object> param)
         {
             try
@@ -408,6 +524,13 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// Gets the account data.
+        /// </summary>
+        /// <param name="source">The source.</param>
+        /// <param name="provider">The provider.</param>
+        /// <param name="param">The parameter.</param>
+        /// <returns></returns>
         internal DataTable GetAccountData(Source source, Provider provider, Dictionary<string, object> param)
         {
             try

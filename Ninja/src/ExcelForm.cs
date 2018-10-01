@@ -65,7 +65,7 @@ namespace BudgetExecution
 
         internal DataFilter TableFilter { get; set; }
 
-        internal FieldFilter FieldFilter { get; set; }
+        internal Fields Fields { get; set; }
 
         internal BindingSource BindingSource { get; set; }
 
