@@ -895,9 +895,8 @@ namespace BudgetExecution
                 SQLiteQuery query = new SQLiteQuery(source);
                 using(query.DataConnection)
                 {
-                    SQLiteParameter[] param = query.GetDataParameters(p) as SQLiteParameter[];
                     SQLiteCommand command = query.InsertCommand;
-                    if(param != null)
+                    if(query.GetDataParameters(p) is SQLiteParameter[] param)
                     {
                         foreach(SQLiteParameter pmr in param)
                         {
@@ -921,9 +920,8 @@ namespace BudgetExecution
                 SQLiteQuery query = new SQLiteQuery(source);
                 using(query.DataConnection)
                 {
-                    SQLiteParameter[] param = query.GetDataParameters(p) as SQLiteParameter[];
                     SQLiteCommand command = query.UpdateCommand;
-                    if(param != null)
+                    if(query.GetDataParameters(p) is SQLiteParameter[] param)
                     {
                         foreach(SQLiteParameter pmr in param)
                         {
@@ -947,9 +945,8 @@ namespace BudgetExecution
                 SQLiteQuery query = new SQLiteQuery(source);
                 using(query.DataConnection)
                 {
-                    SQLiteParameter[] param = query.GetDataParameters(p) as SQLiteParameter[];
                     SQLiteCommand command = query.DeleteCommand;
-                    if(param != null)
+                    if(query.GetDataParameters(p) is SQLiteParameter[] param)
                     {
                         foreach(SQLiteParameter pmr in param)
                         {

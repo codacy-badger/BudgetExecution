@@ -56,20 +56,8 @@
     <ApplicationIcon>summation_3d_blue_oma_icon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="ADONetHelper, Version=3.0.6.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\ADONetHelper.3.0.6\lib\net45\ADONetHelper.dll</HintPath>
-    </Reference>
     <Reference Include="CommonLibrary">
       <HintPath>..\..\FormsApplication\Starter\lib\CommonLibrary.dll</HintPath>
-    </Reference>
-    <Reference Include="cooldatagridview">
-      <HintPath>..\lib\cooldatagridview.dll</HintPath>
-    </Reference>
-    <Reference Include="Devart.Data, Version=5.0.1982.0, Culture=neutral, PublicKeyToken=09af7300eec23701, processorArchitecture=MSIL">
-      <HintPath>..\packages\dotConnect.Express.for.SQLite.5.11.1190\lib\Devart.Data.dll</HintPath>
-    </Reference>
-    <Reference Include="Devart.Data.SQLite, Version=5.11.1190.0, Culture=neutral, PublicKeyToken=09af7300eec23701, processorArchitecture=MSIL">
-      <HintPath>..\packages\dotConnect.Express.for.SQLite.5.11.1190\lib\Devart.Data.SQLite.dll</HintPath>
     </Reference>
     <Reference Include="DgvFilterPopup">
       <HintPath>..\..\FormsApplication\Starter\lib\DgvFilterPopup.dll</HintPath>
@@ -962,10 +950,10 @@
     <None Include="resources\WQ.ico" />
     <None Include="resources\WSA.ico" />
     <None Include="resources\XA.ico" />
+    <Content Include="external\sqlce\CompactView.exe" />
+    <Content Include="external\sqlce\CompactView_en-EN.xml" />
     <Content Include="LinqToDB.Templates\CopyMe.SQLite.tt.txt" />
-    <EmbeddedResource Include="external\sqlite\SQLite.exe">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </EmbeddedResource>
+    <Content Include="external\sqlite\SQLite.exe" />
     <Content Include="summation_3d_blue_oma_icon.ico" />
     <None Include="resources\SummaryImages\RegionalAccounts.png" />
     <None Include="resources\SummaryImages\FTE.png" />
