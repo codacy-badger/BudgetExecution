@@ -1,8 +1,4 @@
-﻿// <copyright file="Reimbursable.cs" company="PlaceholderCompany">
-// Copyright (c) PlaceholderCompany. All rights reserved.
-// </copyright>
-
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SQLite;
@@ -13,9 +9,11 @@ namespace BudgetExecution
     public class Reimbursable
     {
         // CONSTRUCTORS
-        public Reimbursable() { }
+        public Reimbursable()
+        {
+        }
 
-        public Reimbursable(Source source, Provider provider)
+        public Reimbursable(Source source = Source.Reimbursables, Provider provider = Provider.SQLite)
         {
             Source = source;
             Provider = provider;
@@ -34,11 +32,28 @@ namespace BudgetExecution
             BFY = bfy;
             Fund = new Fund(fund, bfy);
             OrgCode = org;
-            Account = new Account(fund, code, Source.Accounts, (Provider) 0);
+            Account = new Account(fund, code, Source.Accounts, 0);
             SiteProjectCode = spc;
             AgreementNumber = an;
             Obligations = auth;
             Commitments = amout;
+        }
+
+        public Reimbursable(Dictionary<string, object> p)
+        {
+            Source = Source.Reimbursables;
+            Provider = Provider.SQLite;
+            DbData = new DataBuilder(Source, Provider, p);
+            DbTable = DbData.Table;
+            DbRow = DbTable.Rows[0];
+            BFY = p["BFY"].ToString();
+            Fund = new Fund(p["Fund"].ToString(), p["Fund"].ToString());
+            OrgCode = p["OrgCode"].ToString();
+            Account = new Account(Fund.Code, p[Account.Code].ToString(), Source.Accounts, 0);
+            SiteProjectCode = p["SiteProjectCode"].ToString();
+            AgreementNumber = p["AgreementNumber"].ToString();
+            Obligations = decimal.Parse(p["Obligations"].ToString());
+            Commitments = decimal.Parse(p["Commitments"].ToString());
         }
 
         public Reimbursable(DataRow dr)
@@ -47,7 +62,7 @@ namespace BudgetExecution
             BFY = dr["BFY"].ToString();
             Fund = new Fund(dr["Fund"].ToString(), BFY);
             OrgCode = dr["OrgCode"].ToString();
-            Account = new Account(dr["Fund"].ToString(), dr["Code"].ToString(), Source.Accounts, (Provider) 0);
+            Account = new Account(dr["Fund"].ToString(), dr["Code"].ToString(), Source.Accounts, 0);
             SiteProjectCode = dr["SiteProjectCode"].ToString();
             AgreementNumber = dr["Agreement"].ToString();
             Commitments = decimal.Parse(dr["Commitments"].ToString());
@@ -76,25 +91,31 @@ namespace BudgetExecution
 
         public string AgreementNumber { get; }
 
-        public string DocumentNumber { get; }
+        public string DocumentNumber { get; set; }
 
         public string SiteProjectCode { get; }
 
         public string OrgCode { get; }
 
-        public string Code { get; }
+        public string Code { get; set; }
 
-        public BOC BOC { get; }
+        public BOC BOC { get; set; }
 
-        public string FOC { get; }
+        public string FOC { get; set; }
 
         public decimal Obligations { get; }
 
         public decimal Commitments { get; }
 
-        public Dictionary<string, object> ReimbParam { get; }
+        public Dictionary<string, object> ReimbParam { get; set; }
 
         // METHODS
+        /// <summary>
+        ///     Gets the insert fields.
+        /// </summary>
+        /// <param name="source">The source.</param>
+        /// <param name="param">The parameter.</param>
+        /// <returns></returns>
         public static Dictionary<string, object> GetInsertFields(Source source, Dictionary<string, object> param)
         {
             try
@@ -139,6 +160,12 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// Selects the specified source.
+        /// </summary>
+        /// <param name="source">The source.</param>
+        /// <param name="p">The p.</param>
+        /// <returns></returns>
         public static Reimbursable Select(Source source, Dictionary<string, object> p)
         {
             try
@@ -153,6 +180,13 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// Selects the specified source.
+        /// </summary>
+        /// <param name="source">The source.</param>
+        /// <param name="provider">The provider.</param>
+        /// <param name="p">The p.</param>
+        /// <returns></returns>
         public static Reimbursable Select(Source source, Provider provider, Dictionary<string, object> p)
         {
             try
@@ -167,12 +201,16 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// Inserts the specified source.
+        /// </summary>
+        /// <param name="source">The source.</param>
+        /// <param name="p">The p.</param>
         public static void Insert(Source source, Dictionary<string, object> p)
         {
             try
             {
                 Dictionary<string, object> param = GetInsertFields(source, p);
-                string[] fields = param.Keys.ToArray();
                 object[] vals = param.Values.ToArray();
                 SQLiteQuery query = new SQLiteQuery(source, param);
                 SQLiteConnection conn = query.DataConnection;
@@ -188,6 +226,12 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// Inserts the specified source.
+        /// </summary>
+        /// <param name="source">The source.</param>
+        /// <param name="provider">The provider.</param>
+        /// <param name="p">The p.</param>
         public static void Insert(Source source, Provider provider, Dictionary<string, object> p)
         {
             try
@@ -210,6 +254,11 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// Updates the specified source.
+        /// </summary>
+        /// <param name="source">The source.</param>
+        /// <param name="p">The p.</param>
         public static void Update(Source source, Dictionary<string, object> p)
         {
             try
@@ -229,6 +278,12 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// Updates the specified source.
+        /// </summary>
+        /// <param name="source">The source.</param>
+        /// <param name="provider">The provider.</param>
+        /// <param name="p">The p.</param>
         public static void Update(Source source, Provider provider, Dictionary<string, object> p)
         {
             try
@@ -248,6 +303,11 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// Deletes the specified source.
+        /// </summary>
+        /// <param name="source">The source.</param>
+        /// <param name="p">The p.</param>
         public static void Delete(Source source, Dictionary<string, object> p)
         {
             try
@@ -267,6 +327,12 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// Deletes the specified source.
+        /// </summary>
+        /// <param name="source">The source.</param>
+        /// <param name="provider">The provider.</param>
+        /// <param name="p">The p.</param>
         public static void Delete(Source source, Provider provider, Dictionary<string, object> p)
         {
             try
@@ -286,6 +352,12 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// Gets the column values.
+        /// </summary>
+        /// <param name="bfy">The bfy.</param>
+        /// <param name="fund">The fund.</param>
+        /// <returns></returns>
         private Dictionary<string, object> GetColumnValues(string bfy, string fund)
         {
             try
