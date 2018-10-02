@@ -120,7 +120,7 @@ namespace BudgetExecution
         {
             try
             {
-                Reimbursable account = new Reimbursable(source, Provider.SQLite);
+                Reimbursable account = new Reimbursable(source);
                 if(!param.ContainsKey("AgreementNumber") || param["AgreementNumber"] == null)
                 {
                     param["AgreementNumber"] = account.AgreementNumber;
@@ -211,7 +211,6 @@ namespace BudgetExecution
             try
             {
                 Dictionary<string, object> param = GetInsertFields(source, p);
-                object[] vals = param.Values.ToArray();
                 SQLiteQuery query = new SQLiteQuery(source, param);
                 SQLiteConnection conn = query.DataConnection;
                 using(conn)
@@ -245,7 +244,7 @@ namespace BudgetExecution
                 using(conn)
                 {
                     SQLiteCommand insert = query.GetDataCommand(cmd, conn) as SQLiteCommand;
-                    insert.ExecuteNonQuery();
+                    insert?.ExecuteNonQuery();
                 }
             }
             catch(Exception ex)
@@ -294,7 +293,7 @@ namespace BudgetExecution
                 using(conn)
                 {
                     SQLiteCommand update = query.GetDataCommand(cmd, conn) as SQLiteCommand;
-                    update.ExecuteNonQuery();
+                    update?.ExecuteNonQuery();
                 }
             }
             catch(Exception ex)
@@ -343,7 +342,7 @@ namespace BudgetExecution
                 using(conn)
                 {
                     SQLiteCommand update = query.GetDataCommand(cmd, conn) as SQLiteCommand;
-                    update.ExecuteNonQuery();
+                    update?.ExecuteNonQuery();
                 }
             }
             catch(Exception ex)

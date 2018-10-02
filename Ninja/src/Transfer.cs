@@ -13,7 +13,9 @@ namespace BudgetExecution
     public class Transfer
     {
         // CONSTRUCTORS
-        public Transfer() { }
+        public Transfer()
+        {
+        }
 
         public Transfer(string bl, string docType, string rpio, string org, string rc, string bfy, string fund, string tcn, string qtr, string date, string code, string progproj, string ppn, string npmcode, string fromto, string boc, decimal amount)
         {
@@ -58,7 +60,7 @@ namespace BudgetExecution
         // PROPERTIES
         public DataBuilder DbData { get; }
 
-        public DataRow DbTable { get; }
+        public DataTable DbTable { get; }
 
         public DataRow DbRow { get; }
 
@@ -99,6 +101,13 @@ namespace BudgetExecution
         public string TCN { get; }
 
         // METHODS
+        /// <summary>
+        /// Gets the insertion columns.
+        /// </summary>
+        /// <param name="source">The source.</param>
+        /// <param name="provider">The provider.</param>
+        /// <param name="param">The parameter.</param>
+        /// <returns></returns>
         public static Dictionary<string, object> GetInsertionColumns(Source source, Provider provider, Dictionary<string, object> param)
         {
             try
@@ -128,6 +137,12 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// Selects the specified source.
+        /// </summary>
+        /// <param name="source">The source.</param>
+        /// <param name="p">The p.</param>
+        /// <returns></returns>
         public static Transfer Select(Source source, Dictionary<string, object> p)
         {
             try
@@ -142,6 +157,13 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// Selects the specified source.
+        /// </summary>
+        /// <param name="source">The source.</param>
+        /// <param name="provider">The provider.</param>
+        /// <param name="p">The p.</param>
+        /// <returns></returns>
         public static Transfer Select(Source source, Provider provider, Dictionary<string, object> p)
         {
             try
@@ -156,6 +178,11 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// Inserts the specified source.
+        /// </summary>
+        /// <param name="source">The source.</param>
+        /// <param name="p">The p.</param>
         public static void Insert(Source source, Dictionary<string, object> p)
         {
             try
@@ -177,6 +204,12 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// Inserts the specified source.
+        /// </summary>
+        /// <param name="source">The source.</param>
+        /// <param name="provider">The provider.</param>
+        /// <param name="p">The p.</param>
         public static void Insert(Source source, Provider provider, Dictionary<string, object> p)
         {
             try
@@ -199,6 +232,11 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// Updates the specified source.
+        /// </summary>
+        /// <param name="source">The source.</param>
+        /// <param name="p">The p.</param>
         public static void Update(Source source, Dictionary<string, object> p)
         {
             try
@@ -218,6 +256,12 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// Updates the specified source.
+        /// </summary>
+        /// <param name="source">The source.</param>
+        /// <param name="provider">The provider.</param>
+        /// <param name="p">The p.</param>
         public static void Update(Source source, Provider provider, Dictionary<string, object> p)
         {
             try
@@ -237,6 +281,11 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// Deletes the specified source.
+        /// </summary>
+        /// <param name="source">The source.</param>
+        /// <param name="p">The p.</param>
         public static void Delete(Source source, Dictionary<string, object> p)
         {
             try
@@ -256,6 +305,12 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// Deletes the specified source.
+        /// </summary>
+        /// <param name="source">The source.</param>
+        /// <param name="provider">The provider.</param>
+        /// <param name="p">The p.</param>
         public static void Delete(Source source, Provider provider, Dictionary<string, object> p)
         {
             try

@@ -10,7 +10,9 @@ namespace BudgetExecution
     public class DataBuilder : IDataBuilder
     {
         // CONSTRUCTORS
-        public DataBuilder() { }
+        public DataBuilder()
+        {
+        }
 
         public DataBuilder(Query q)
         {
@@ -99,7 +101,6 @@ namespace BudgetExecution
         public DataTable Table { get; }
 
         public DataRow[] Records { get; }
-
 
         // METHODS
         /// <summary>
@@ -389,13 +390,37 @@ namespace BudgetExecution
         /// <param name="table">The table.</param>
         /// <param name="column">The column.</param>
         /// <returns></returns>
-        public string[] GetUniqueValues(DataTable table, string column)
+        public string[] GetUniqueFieldValues(DataTable table, string column)
         {
             try
             {
-                if(table.Columns.Contains(column))
+                if(table.GetFields().Contains(column))
                 {
                     return table.AsEnumerable().Select(p => p.Field<string>(column)).Distinct().ToArray();
+                }
+
+                return null;
+            }
+            catch(Exception ex)
+            {
+                new Error(ex).ShowDialog();
+                return null;
+            }
+        }
+
+        /// <summary>
+        /// Gets the unique field values.
+        /// </summary>
+        /// <param name="table">The table.</param>
+        /// <param name="column">The column.</param>
+        /// <returns></returns>
+        public static string[] GetUniqueFieldValues(DataTable table, Field column)
+        {
+            try
+            {
+                if(table.GetFields().Contains(column.ToString()))
+                {
+                    return table.AsEnumerable().Select(p => p.Field<string>(column.ToString())).Distinct().ToArray();
                 }
 
                 return null;
@@ -424,7 +449,7 @@ namespace BudgetExecution
                         continue;
                     }
 
-                    data.Add(dc.ColumnName, GetUniqueValues(table, dc.ColumnName));
+                    data.Add(dc.ColumnName, GetUniqueFieldValues(table, dc.ColumnName));
                 }
 
                 if(data.ContainsKey("ID"))
