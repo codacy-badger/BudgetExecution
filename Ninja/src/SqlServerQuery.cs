@@ -79,7 +79,7 @@ namespace BudgetExecution
         public new SqlCommand UpdateCommand { get; set; }
 
         // METHODS
-        public new string GetSelectParamString(Dictionary<string, object> param)
+        public string GetSelectParamString(Dictionary<string, object> param)
         {
             try
             {

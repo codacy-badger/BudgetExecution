@@ -537,7 +537,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Report\BudgetControlTemplate.xlsx" />
+    <EmbeddedResource Include="report\BudgetControlTemplate.xlsx" />
     <EmbeddedResource Include="resources\ControlIcon.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>ControlIcon.Designer.cs</LastGenOutput>
@@ -677,7 +677,6 @@
     <EmbeddedResource Include="src\Calendar.resx">
       <DependentUpon>Calendar.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="ClassDiagram1.cd" />
     <None Include="LinqToDB.Templates\DataAnnotations.ttinclude" />
     <None Include="LinqToDB.Templates\DataModel.ttinclude" />
     <None Include="LinqToDB.Templates\EditableObject.ttinclude" />
@@ -964,6 +963,7 @@
     <None Include="resources\WSA.ico" />
     <None Include="resources\XA.ico" />
     <Content Include="LinqToDB.Templates\CopyMe.SQLite.tt.txt" />
+    <Content Include="external\sqlite\SQLite.exe" />
     <Content Include="summation_3d_blue_oma_icon.ico" />
     <None Include="resources\SummaryImages\RegionalAccounts.png" />
     <None Include="resources\SummaryImages\FTE.png" />

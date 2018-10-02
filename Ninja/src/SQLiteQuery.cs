@@ -100,7 +100,7 @@ namespace BudgetExecution
         public new string SqlStatement { get; set; }
 
         // METHODS
-        public new string GetParameterStrings(Dictionary<string, object> param)
+        public string GetParameterStrings(Dictionary<string, object> param)
         {
             try
             {

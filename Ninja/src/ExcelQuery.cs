@@ -202,7 +202,7 @@ namespace BudgetExecution
             }
         }
 
-        internal new string GetSelectParamString(Dictionary<string, object> param)
+        internal string GetSelectParamString(Dictionary<string, object> param)
         {
             try
             {
