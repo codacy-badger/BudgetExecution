@@ -8,7 +8,9 @@ namespace BudgetExecution
     public class Awards
     {
         // CONSTRUCTORS
-        public Awards() { }
+        public Awards()
+        {
+        }
 
         public Awards(Source source = Source.Awards, Provider provider = Provider.SQLite)
         {

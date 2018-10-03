@@ -22,7 +22,7 @@ namespace BudgetExecution
             DbTable = DbData.Table;
         }
 
-        public Account(string fund, string code, Source source, Provider provider) : this(source, provider)
+        public Account(string fund, string code, Source source = Source.Accounts, Provider provider = Provider.SQLite) : this(source, provider)
         {
             Code = code;
             ProgramProjectCode = Code.Substring(4, 2);
@@ -44,7 +44,7 @@ namespace BudgetExecution
             ProgramAreaName = DbRow["ProgramAreaName"].ToString();
         }
 
-        public Account(Source source, Provider provider, string fund, string code)
+        public Account(Source source, Provider provider, string fund, string code) : this(source, provider)
         {
             Fund = fund;
             Code = code;

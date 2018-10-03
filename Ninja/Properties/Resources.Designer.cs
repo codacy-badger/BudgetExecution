@@ -73,26 +73,6 @@ namespace BudgetExecution.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Arrow_Left___03 {
-            get {
-                object obj = ResourceManager.GetObject("Arrow Left - 03", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Arrow_right_ {
-            get {
-                object obj = ResourceManager.GetObject("Arrow right ", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap budgetclear {
             get {
                 object obj = ResourceManager.GetObject("budgetclear", resourceCulture);
@@ -283,16 +263,6 @@ namespace BudgetExecution.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Excel_Online {
-            get {
-                object obj = ResourceManager.GetObject("Excel Online", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap fte {
             get {
                 object obj = ResourceManager.GetObject("fte", resourceCulture);
@@ -353,26 +323,6 @@ namespace BudgetExecution.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap PDF_File_Extension {
-            get {
-                object obj = ResourceManager.GetObject("PDF File Extension", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap PDF_Files {
-            get {
-                object obj = ResourceManager.GetObject("PDF Files", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap PdfDataReader {
             get {
                 object obj = ResourceManager.GetObject("PdfDataReader", resourceCulture);
@@ -406,16 +356,6 @@ namespace BudgetExecution.Properties {
         internal static System.Drawing.Bitmap pdfwhite {
             get {
                 object obj = ResourceManager.GetObject("pdfwhite", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap remove_from_database {
-            get {
-                object obj = ResourceManager.GetObject("remove-from-database", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -466,16 +406,6 @@ namespace BudgetExecution.Properties {
         internal static System.Drawing.Bitmap SF6A {
             get {
                 object obj = ResourceManager.GetObject("SF6A", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Shuffle_New {
-            get {
-                object obj = ResourceManager.GetObject("Shuffle New", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -546,16 +476,6 @@ namespace BudgetExecution.Properties {
         internal static System.Drawing.Bitmap transfer {
             get {
                 object obj = ResourceManager.GetObject("transfer", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Transfer_Arrows {
-            get {
-                object obj = ResourceManager.GetObject("Transfer-Arrows", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

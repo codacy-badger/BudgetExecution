@@ -951,6 +951,9 @@
     <None Include="resources\WSA.ico" />
     <None Include="resources\XA.ico" />
     <Content Include="LinqToDB.Templates\CopyMe.SQLite.tt.txt" />
+    <None Include="resources\BlueIcon\Excel Online1.ico" />
+    <None Include="resources\PDF File Extension1.ico" />
+    <None Include="resources\PDF Files1.ico" />
     <Content Include="summation_3d_blue_oma_icon.ico" />
     <None Include="resources\SummaryImages\RegionalAccounts.png" />
     <None Include="resources\SummaryImages\FTE.png" />
