@@ -950,10 +950,7 @@
     <None Include="resources\WQ.ico" />
     <None Include="resources\WSA.ico" />
     <None Include="resources\XA.ico" />
-    <Content Include="external\sqlce\CompactView.exe" />
-    <Content Include="external\sqlce\CompactView_en-EN.xml" />
     <Content Include="LinqToDB.Templates\CopyMe.SQLite.tt.txt" />
-    <Content Include="external\sqlite\SQLite.exe" />
     <Content Include="summation_3d_blue_oma_icon.ico" />
     <None Include="resources\SummaryImages\RegionalAccounts.png" />
     <None Include="resources\SummaryImages\FTE.png" />

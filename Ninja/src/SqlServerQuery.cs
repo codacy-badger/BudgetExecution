@@ -13,7 +13,9 @@ namespace BudgetExecution
     public class SqlServerQuery : Query
     {
         // CONSTRUCTORS
-        public SqlServerQuery() { }
+        public SqlServerQuery()
+        {
+        }
 
         public SqlServerQuery(Source source) : base(source, Provider.SqlServer)
         {
