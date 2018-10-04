@@ -19,6 +19,7 @@ using Syncfusion.Windows.Forms;
 using Syncfusion.Windows.Forms.Chart;
 using Syncfusion.Windows.Forms.Tools;
 using VisualPlus.Toolkit.Controls.Interactivity;
+using DataTable = System.Data.DataTable;
 
 namespace BudgetExecution
 {
@@ -39,15 +40,15 @@ namespace BudgetExecution
             Parameter = new Dictionary<string, object> { ["RC"] = rc };
             DbData = new DataBuilder(Source.DivisionAccounts, Provider.SQLite, Parameter);
             Table = DbData.Table;
+            BindingSource = new BindingSource();
+            BindingSource.DataSource = Table;
+            Grid.DataSource = BindingSource;
             DatabaseTab.TabVisible = true;
             ProjectTab.TabVisible = true;
             DivisionTab.TabVisible = false;
-            ProgramElements = DbData.ProgramElements;
             Metric = new PrcMetric(DbData);
             Text = string.Format("{0} Summary", Info.DivisionName(rc));
-            CurrentTabIndex = SummaryTabControl.SelectedIndex;
             SummaryTabControl.SelectedIndexChanged += SummaryTabPage_TabSelected;
-            CurrentTabIndex = 8;
             TabNames = GetTabNames();
             EditTab.TabVisible = false;
         }
@@ -57,38 +58,38 @@ namespace BudgetExecution
             InitializeComponent();
             if(source == Source.RegionalAccounts || source == Source.DivisionAccounts)
             {
-                DbData = new DataBuilder(source, Provider.SQLite);
+                DbData = new DataBuilder(source);
                 Table = DbData.Table;
+                ProgramElements = DbData.GetProgramElements(Table);
+                BindingSource.DataSource = DbData.Table;
+                Grid.DataSource = BindingSource;
                 Source = source;
                 TabNames = GetTabNames();
                 Text = @"R6 Summary";
                 Metric = new PrcMetric(DbData);
-                ProgramElements = Metric.ProgramElements;
-                BindingSource.DataSource = Metric.Table;
                 ProjectTab.TabVisible = false;
                 DatabaseTab.TabVisible = true;
-                CurrentTabIndex = SummaryTabControl.SelectedIndex;
-                SummaryTabControl.SelectedIndex = 2;
                 SummaryTabControl.SelectedIndexChanged += SummaryTabPage_TabSelected;
+                SummaryTabControl.SelectedIndex = 1;
             }
             else
             {
-                DbData = new DataBuilder(source, Provider.SQLite);
-                Table = DbData.Table;
                 Source = source;
-                Provider = Provider.SQLite;
+                DbData = new DataBuilder(source);
+                Table = DbData.Table;
+                ProgramElements = DbData.GetProgramElements(Table);
                 TabNames = GetTabNames();
                 Text = $@"R6 {Source.ToString()} Summary";
                 Metric = new PrcMetric(DbData);
-                ProgramElements = Metric.ProgramElements;
-                BindingSource.DataSource = Metric.Table;
+                BindingSource.DataSource = DbData.Table;
+                Grid.DataSource = BindingSource;
                 ProjectTab.TabVisible = true;
                 DatabaseTab.TabVisible = true;
                 DivisionTab.TabVisible = false;
                 GoalTab.TabVisible = false;
                 ObjectiveTab.TabVisible = false;
-                SummaryTabControl.SelectedIndex = 8;
                 SummaryTabControl.SelectedIndexChanged += SummaryTabPage_TabSelected;
+                SummaryTabControl.SelectedIndex = 8;
             }
         }
 
@@ -99,7 +100,7 @@ namespace BudgetExecution
 
         public Dictionary<string, object> Parameter { get; set; }
 
-        public DataBuilder DbData { get; }
+        public DataBuilder DbData { get; set; }
 
         public DataTable Table { get; set; }
 
@@ -117,7 +118,7 @@ namespace BudgetExecution
 
         public Field ChartGroup { get; set; }
 
-        public Dictionary<string, string[]> ProgramElements { get; }
+        public Dictionary<string, string[]> ProgramElements { get; set; }
 
         public string[] ChartMainTitle { get; set; }
 
@@ -156,18 +157,14 @@ namespace BudgetExecution
             {
                 EditTab.TabVisible = false;
                 DivisionTab.TabVisible = false;
-                BindingSource.DataSource = Table;
-                Grid.DataSource = BindingSource;
                 DefineVisisbleDataColumns(Grid);
-                PopulateFilterBoxItems(GridFundFilter, Field.FundName);
                 ConfigureTextBoxBindings();
-                label32.Text = DbData.GetTotal(DbData.Table).ToString("c");
+                label32.Text = DbData.Total.ToString("c");
                 label37.Text = DbData.Table.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Average().ToString("N");
-                label41.Text = DbData.GetCount(DbData.Table).ToString();
+                label41.Text = DbData.GetCount(Table).ToString();
                 GridFundFilter.SelectionChangeCommitted += GridFilterControl1_ItemSelected;
                 GridBocFilter.SelectionChangeCommitted += GridFilterControl2_ItemSelected;
-                SummaryTabControl.SelectedIndexChanged += SummaryTabPage_TabSelected;
-                FundChart = new BudgetChart(FundChart, DbData, Field.FundName).Activate();
+                SummaryTabControl.SelectedIndex = 8;
                 lblPrc.Visible = false;
                 GridAccountFilter.Visible = false;
                 lblBoc.Visible = false;
@@ -189,11 +186,12 @@ namespace BudgetExecution
                         break;
                     case Source.DivisionAccounts:
                         DivisionTab.TabVisible = false;
-                        DatabaseTab.TabVisible = false;
                         ProjectTab.TabVisible = false;
                         EditTab.TabVisible = false;
                         break;
                 }
+
+                PopulateGridFundFilterItems();
             }
             catch(Exception ex)
             {
@@ -205,17 +203,16 @@ namespace BudgetExecution
         {
             try
             {
-                GridFilterControl1 = sender as VisualComboBox;
-                GridFundFilter.Tag = GridFilterControl1?.SelectedItem.ToString();
-                string fund = GridFilterControl1?.SelectedItem.ToString();
-                BindingSource.Filter = string.Format("FundName = '{0}'", GridFundFilter.SelectedItem);
+                GridFundFilter = sender as VisualComboBox;
+                string fund = GridFundFilter?.SelectedItem.ToString();
+                BindingSource.Filter = string.Format("FundName = '{0}'", fund);
                 label41.Text = GetCount(fund).ToString();
                 label37.Text = CalculateAverage(fund).ToString("N");
                 label32.Text = CalculateTotal(fund).ToString("c");
                 PopulateGridBocFilterItems();
                 lblBoc.Visible = true;
                 GridBocFilter.Visible = true;
-                GridGroupBox.Text = $"{Source.ToString()} {GridFilterControl1?.SelectedItem} Database";
+                GridGroupBox.Text = $"{Source.ToString()} {fund} Database";
             }
             catch(Exception ex)
             {
@@ -238,7 +235,7 @@ namespace BudgetExecution
                 GridAccountFilter.Visible = true;
                 PopulateGridAccountFilterItems();
                 GridAccountFilter.SelectionChangeCommitted += GridFilterControl3_ItemSelected;
-                GridGroupBox.Text = $"{Source.ToString()} {GridFilterControl1?.SelectedItem} {GridFilterControl2?.SelectedItem} Database";
+                GridGroupBox.Text = $"{Source.ToString()} {GridFundFilter.SelectedItem.ToString()} {filter} Database";
             }
             catch(Exception ex)
             {
@@ -266,7 +263,26 @@ namespace BudgetExecution
         {
             try
             {
-                BindingSource.Filter = $"FundName = '{GridBocFilter.SelectedItem}'";
+                BindingSource.Filter = $"FundName = '{GridFundFilter.SelectedItem}'";
+            }
+            catch(Exception ex)
+            {
+                new Error(ex).ShowDialog();
+            }
+        }
+        
+        internal void PopulateGridFundFilterItems()
+        {
+            try
+            {
+                GridFundFilter.Items.Clear();
+                GridFundFilter.Visible = true;
+                DataTable table = new DataTable();
+                table = (DataTable) BindingSource.DataSource;
+                foreach(string row in table.AsEnumerable().Select(p => p.Field<string>("FundName")).Distinct().ToArray())
+                {
+                    GridFundFilter.Items.Add(row);
+                }
             }
             catch(Exception ex)
             {
@@ -280,8 +296,9 @@ namespace BudgetExecution
             {
                 GridBocFilter.Items.Clear();
                 GridBocFilter.Visible = true;
-                DataTable table = (DataTable) BindingSource.DataSource;
-                DataTable query = table.AsEnumerable().Where(p => p.Field<string>("FundName").Equals(GridFundFilter.SelectedItem.ToString())).Select(p => p).Distinct().CopyToDataTable();
+                DataTable table = new DataTable();
+                table = (DataTable) BindingSource.DataSource;
+                DataTable query = table.AsEnumerable().Where(p => p.Field<string>("FundName").Equals(GridFundFilter.SelectedText.ToString())).Select(p => p).Distinct().CopyToDataTable();
                 foreach(string row in query.AsEnumerable().Select(p => p.Field<string>("BocName")).Distinct().ToArray())
                 {
                     GridBocFilter.Items.Add(row);
@@ -298,8 +315,9 @@ namespace BudgetExecution
             try
             {
                 GridAccountFilter.Items.Clear();
-                DataTable table = (DataTable) BindingSource.DataSource;
-                DataTable query = table.AsEnumerable().Where(p => p.Field<string>("FundName").Equals(GridFundFilter.SelectedItem.ToString())).Where(p => p.Field<string>("BocName").Equals(GridBocFilter.SelectedItem.ToString())).Select(p => p).CopyToDataTable();
+                DataTable table = new DataTable();
+                table = (DataTable) BindingSource.DataSource;
+                DataTable query = table.AsEnumerable().Where(p => p.Field<string>("FundName").Equals(GridFundFilter.SelectedText.ToString())).Where(p => p.Field<string>("BocName").Equals(GridBocFilter.SelectedText.ToString())).Select(p => p).CopyToDataTable();
                 foreach(DataRow row in query.Rows)
                 {
                     GridAccountFilter.Items.Add(row["Code"].ToString());
@@ -337,7 +355,7 @@ namespace BudgetExecution
             }
         }
 
-        private void PopulateFilterBoxItems(VisualComboBox cmbox, Field prcfilter)
+        internal void PopulateFilterBoxItems(VisualComboBox cmbox, string prcfilter)
         {
             try
             {
@@ -345,11 +363,12 @@ namespace BudgetExecution
                 {
                     cmbox.Items.Clear();
                 }
-
-                string[] items = DbData.ProgramElements[prcfilter.ToString()];
-                foreach(string i in items)
+                
+                DataTable table = new DataTable();
+                table = (DataTable) BindingSource.DataSource;
+                foreach(var row in table.AsEnumerable().Where(p => p.Field<string>("FundName").Equals(prcfilter)).Select(p => p).ToArray())
                 {
-                    cmbox.Items.Add(i);
+                    cmbox.Items.Add(row["FundName"].ToString());
                 }
             }
             catch(Exception ex)
@@ -358,15 +377,14 @@ namespace BudgetExecution
             }
         }
 
-        private void PopulateFilterBoxItems(VisualComboBox cmbox, int i)
+        internal void PopulateFilterBoxItems(ComboBox cmbox, string[] names)
         {
             try
             {
-                foreach(string t in TabNames)
+                foreach(string t in names)
                 {
                     cmbox.Items.Clear();
                     cmbox.Items.Add(t);
-                    cmbox.Items.Remove(SummaryTabControl.TabPages[i].Text);
                 }
             }
             catch(Exception ex)
@@ -534,7 +552,7 @@ namespace BudgetExecution
                     label41.Text = DbData.GetCount(DbData.Table).ToString();
                     GridBocFilter.Items.Clear();
                     GridAccountFilter.Items.Clear();
-                    PopulateFilterBoxItems(GridFundFilter, Field.FundName);
+                    PopulateFilterBoxItems(GridFundFilter, "FundName");
                     lblBoc.Visible = false;
                     GridBocFilter.Visible = false;
                     lblPrc.Visible = false;
@@ -758,7 +776,7 @@ namespace BudgetExecution
             }
         }
 
-        private void SummaryTabPage_TabSelected(object sender, EventArgs e)
+        internal void SummaryTabPage_TabSelected(object sender, EventArgs e)
         {
             try
             {
@@ -769,7 +787,7 @@ namespace BudgetExecution
                     case 0:
                         AssignChartFilterControls(FundFilter1, FundFilter2, FundFilter3, FundFilter4);
                         AssignChartExpanders(FundExpander1, FundExpander2);
-                        PopulateFilterBoxItems(ChartFilterControl3, Field.FundName);
+                        PopulateFilterBoxItems(ChartFilterControl3, "FundName");
                         if(Source == Source.RegionalAccounts)
                         {
                             FundFilter4.Items.Remove("RC");
@@ -796,7 +814,7 @@ namespace BudgetExecution
                     case 1:
                         AssignChartFilterControls(BocFilter1, BocFilter2, BocFilter3, BocFilter4);
                         AssignChartExpanders(BocExpander1, BocExpander2);
-                        PopulateFilterBoxItems(ChartFilterControl3, Field.BocName);
+                        PopulateFilterBoxItems(ChartFilterControl3, "Fund");
                         if(DbData.Source == Source.RegionalAccounts)
                         {
                             BocFilter4.Items.Remove("RC");
@@ -823,7 +841,7 @@ namespace BudgetExecution
                     case 2:
                         AssignChartFilterControls(NpmFilter1, NpmFilter2, NpmFilter3, NpmFilter4);
                         AssignChartExpanders(NpmExpander1, NpmExpander2);
-                        PopulateFilterBoxItems(ChartFilterControl3, Field.NPM);
+                        PopulateFilterBoxItems(ChartFilterControl3, Field.NPM.ToString());
                         if(DbData.Source == Source.RegionalAccounts)
                         {
                             NpmFilter4.Items.Remove("RC");
@@ -850,7 +868,7 @@ namespace BudgetExecution
                     case 3:
                         AssignChartFilterControls(GoalFilter1, GoalFilter2, GoalFilter3, GoalFilter4);
                         AssignChartExpanders(GoalExpander1, GoalExpander2);
-                        PopulateFilterBoxItems(ChartFilterControl3, Field.GoalName);
+                        PopulateFilterBoxItems(ChartFilterControl3, Field.NPM.ToString());
                         if(DbData.Source == Source.RegionalAccounts)
                         {
                             GoalFilter4.Items.Remove("RC");
@@ -871,13 +889,13 @@ namespace BudgetExecution
                             };
                         }
 
-                        GoalChart = new BudgetChart(GoalChart, ChartMainTitle, DbData, Field.GoalName, Stat.Total, ChartSeriesType.Column).Activate();
+                        GoalChart = new BudgetChart(GoalChart, ChartMainTitle, DbData, Field.ObjectiveName, Stat.Total, ChartSeriesType.Column).Activate();
                         break;
 
                     case 4:
                         AssignChartFilterControls(ObjectiveFilter1, ObjectiveFilter2, ObjectiveFilter3, ObjectiveFilter4);
                         AssignChartExpanders(ObjectiveExpander1, ObjectiveExpander2);
-                        PopulateFilterBoxItems(ChartFilterControl3, Field.ObjectiveName);
+                        PopulateFilterBoxItems(ChartFilterControl3, Field.ObjectiveName.ToString());
                         if(DbData.Source == Source.RegionalAccounts)
                         {
                             ObjectiveFilter4.Items.Remove("RC");
@@ -898,13 +916,13 @@ namespace BudgetExecution
                             };
                         }
 
-                        ObjectiveChart = new BudgetChart(ObjectiveChart, ChartMainTitle, DbData, Field.ObjectiveName, Stat.Total, ChartSeriesType.Column).Activate();
+                        ObjectiveChart = new BudgetChart(ObjectiveChart, ChartMainTitle, DbData, Field.DivisionName, Stat.Total, ChartSeriesType.Column).Activate();
                         break;
 
                     case 5:
                         AssignChartFilterControls(DivisionFilter1, DivisionFilter2, DivisionFilter3, DivisionFilter4);
                         AssignChartExpanders(DivisionExpander1, DivisionExpander2);
-                        PopulateFilterBoxItems(ChartFilterControl3, Field.DivisionName);
+                        PopulateFilterBoxItems(ChartFilterControl3, Field.DivisionName.ToString());
                         if(DbData.Source == Source.RegionalAccounts)
                         {
                             DivisionFilter4.Items.Remove("RC");
@@ -925,13 +943,13 @@ namespace BudgetExecution
                             };
                         }
 
-                        DivisionChart = new BudgetChart(DivisionChart, ChartMainTitle, DbData, Field.RC, Stat.Total, ChartSeriesType.Column).Activate();
+                        DivisionChart = new BudgetChart(DivisionChart, ChartMainTitle, DbData, Field.ProgramAreaName, Stat.Total, ChartSeriesType.Column).Activate();
                         break;
 
                     case 6:
                         AssignChartFilterControls(AreaFilter1, AreaFilter2, AreaFilter3, AreaFilter4);
                         AssignChartExpanders(AreaExpander1, AreaExpander2);
-                        PopulateFilterBoxItems(ChartFilterControl3, Field.ProgramAreaName);
+                        PopulateFilterBoxItems(ChartFilterControl3, Field.ProgramAreaName.ToString());
                         if(DbData.Source == Source.RegionalAccounts)
                         {
                             AreaFilter4.Items.Remove("RC");
@@ -958,7 +976,7 @@ namespace BudgetExecution
                     case 7:
                         AssignChartFilterControls(ProjectFilter1, ProjectFilter2, ProjectFilter3, ProjectFilter4);
                         AssignChartExpanders(ProjectExpander1, ProjectExpander2);
-                        PopulateFilterBoxItems(ChartFilterControl3, Field.ProgramProjectName);
+                        PopulateFilterBoxItems(ChartFilterControl3, Field.ProgramArea.ToString());
                         if(DbData.Source == Source.RegionalAccounts)
                         {
                             ProjectFilter4.Items.Remove("RC");
@@ -983,6 +1001,7 @@ namespace BudgetExecution
                         break;
 
                     case 8:
+                        PopulateGridFundFilterItems();
                         UpdateAccountChart();
                         break;
                 }
