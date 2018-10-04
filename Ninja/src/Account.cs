@@ -19,7 +19,7 @@ namespace BudgetExecution
             Source = source;
             Provider = provider;
             DbData = new DataBuilder(Source, Provider);
-            DbTable = DbData.Table;
+            Table = DbData.Table;
         }
 
         public Account(string fund, string code, Source source = Source.Accounts, Provider provider = Provider.SQLite) : this(source, provider)
@@ -27,21 +27,21 @@ namespace BudgetExecution
             Code = code;
             ProgramProjectCode = Code.Substring(4, 2);
             Parameter = GetAccountParameter(fund, code);
-            DbRow = DbTable.AsEnumerable().First();
+            DbRow = Table.AsEnumerable().First();
             Goal = Code.Substring(0, 1);
             Objective = Code.Substring(1, 2);
             NpmCode = Code.Substring(3, 1);
             ProgramProjectCode = Code.Substring(4, 2);
-            Org = DbRow["Org"].ToString();
-            Fund = DbRow["Fund"].ToString();
-            FundName = DbRow["FundName"].ToString();
-            ProgramProjectName = DbRow["ProgramProjectName"].ToString();
-            ID = int.Parse(DbRow["ID"].ToString());
-            NPM = DbRow["NPM"].ToString();
-            ObjectiveName = DbRow["ObjectiveName"].ToString();
-            GoalName = DbRow["GoalName"].ToString();
-            ProgramArea = DbRow["ProgramArea"].ToString();
-            ProgramAreaName = DbRow["ProgramAreaName"].ToString();
+            Org = Table.Rows[0]["Org"].ToString();
+            Fund = Table.Rows[0]["Fund"].ToString();
+            FundName = Table.Rows[0]["FundName"].ToString();
+            ProgramProjectName = Table.Rows[0]["ProgramProjectName"].ToString();
+            ID = int.Parse(Table.Rows[0]["ID"].ToString());
+            NPM = Table.Rows[0]["NPM"].ToString();
+            ObjectiveName = Table.Rows[0]["ObjectiveName"].ToString();
+            GoalName = Table.Rows[0]["GoalName"].ToString();
+            ProgramArea = Table.Rows[0]["ProgramArea"].ToString();
+            ProgramAreaName = Table.Rows[0]["ProgramAreaName"].ToString();
         }
 
         public Account(Source source, Provider provider, string fund, string code) : this(source, provider)
@@ -51,20 +51,20 @@ namespace BudgetExecution
             ProgramProjectCode = Code.Substring(4, 2);
             Parameter = GetAccountParameter(fund, code);
             DbData = new DataBuilder(Source, Provider);
-            DbTable = DbData.Table;
+            Table = DbData.Table;
             DbRow = DbData.Table.AsEnumerable().First();
             Goal = Code.Substring(0, 1);
             Objective = Code.Substring(1, 2);
             NpmCode = Code.Substring(3, 1);
-            Org = DbRow["Org"].ToString();
-            Fund = DbRow["Fund"].ToString();
+            Org = Table.Rows[0]["Org"].ToString();
+            Fund = Table.Rows[0]["Fund"].ToString();
             ProgramProjectName = DbRow["ProgramProjectName"].ToString();
-            ID = int.Parse(DbRow["ID"].ToString());
-            NPM = DbRow["NPM"].ToString();
-            ObjectiveName = DbRow["ObjectiveName"].ToString();
-            GoalName = DbRow["GoalName"].ToString();
-            ProgramArea = DbRow["ProgramArea"].ToString();
-            ProgramAreaName = DbRow["ProgramAreaName"].ToString();
+            ID = int.Parse(Table.Rows[0]["ID"].ToString());
+            NPM = Table.Rows[0]["NPM"].ToString();
+            ObjectiveName = Table.Rows[0]["ObjectiveName"].ToString();
+            GoalName = Table.Rows[0]["GoalName"].ToString();
+            ProgramArea = Table.Rows[0]["ProgramArea"].ToString();
+            ProgramAreaName = Table.Rows[0]["ProgramAreaName"].ToString();
         }
 
         public Account(DataRow data)
@@ -74,15 +74,15 @@ namespace BudgetExecution
             Objective = Code.Substring(1, 2);
             NpmCode = Code.Substring(3, 1);
             ProgramProjectCode = Code.Substring(4, 2);
-            Fund = DbRow["Fund"].ToString();
-            FundName = DbRow["FundName"].ToString();
-            ProgramProjectName = DbRow["ProgramProjectName"].ToString();
-            ID = int.Parse(DbRow["ID"].ToString());
-            NPM = DbRow["NPM"].ToString();
-            ObjectiveName = DbRow["ObjectiveName"].ToString();
-            GoalName = DbRow["GoalName"].ToString();
-            ProgramArea = DbRow["ProgramArea"].ToString();
-            ProgramAreaName = DbRow["ProgramAreaName"].ToString();
+            Fund = data["Fund"].ToString();
+            FundName = data["FundName"].ToString();
+            ProgramProjectName = data["ProgramProjectName"].ToString();
+            ID = int.Parse(data["ID"].ToString());
+            NPM = data["NPM"].ToString();
+            ObjectiveName = data["ObjectiveName"].ToString();
+            GoalName = data["GoalName"].ToString();
+            ProgramArea = data["ProgramArea"].ToString();
+            ProgramAreaName = data["ProgramAreaName"].ToString();
         }
 
         // PROPERTIES
@@ -92,7 +92,7 @@ namespace BudgetExecution
 
         public DataBuilder DbData { get; }
 
-        public DataTable DbTable { get; }
+        public DataTable Table { get; }
 
         public DataRow DbRow { get; }
 
