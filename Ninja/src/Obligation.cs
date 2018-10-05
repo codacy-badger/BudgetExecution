@@ -11,7 +11,9 @@ namespace BudgetExecution
 {
     public class Obligation : IObligation
     {
-        public Obligation() { }
+        public Obligation()
+        {
+        }
         
         public Obligation(Source source = Source.Obligations, Provider provider = Provider.SQLite)
         {
@@ -19,6 +21,7 @@ namespace BudgetExecution
             Provider = provider;
             DbData = new DataBuilder(source, provider);
             Table = DbData.Table;
+            DbRow = Table.Rows[0];
             Records = Table.AsEnumerable().Select(p => p).ToArray();
         }
 
@@ -26,8 +29,9 @@ namespace BudgetExecution
         {
             Source = source;
             Provider = provider;
-            DbData = new DataBuilder(source, provider);
+            DbData = new DataBuilder(source, provider, param);
             Table = DbData.Table;
+            DbRow = Table.Rows[0];
             Records = Table.AsEnumerable().Select(p => p).ToArray();
         }
 
@@ -37,8 +41,9 @@ namespace BudgetExecution
             Provider = provider;
             DbData = new DataBuilder(source, provider, param);
             Table = DbData.Table;
+            DbRow = Table.Rows[0];
             Records = Table.AsEnumerable().Select(p => p).ToArray();
-            ID = int.Parse(Records[0]["ID"].ToString());
+            ObligId = int.Parse(Records[0]["ID"].ToString());
             RPIO = rpio;
             BFY = fy;
             Fund = new Fund(source, provider, fund, fy);
@@ -53,7 +58,7 @@ namespace BudgetExecution
 
         public Obligation(DataRow dr)
         {
-            ID = int.Parse(dr["ID"].ToString());
+            ObligId = int.Parse(dr["ID"].ToString());
             RPIO = dr["RPIO "].ToString();
             BFY = dr["BFY"].ToString();
             Fund = new Fund(dr["Fund"].ToString(), BFY);
@@ -77,7 +82,9 @@ namespace BudgetExecution
 
         public DataRow[] Records { get; }
 
-        public int ID { get; set; }
+        public DataRow DbRow { get; }
+
+        public int ObligId { get; set; }
 
         public PRC[] PRC { get; set; }
 
@@ -108,7 +115,7 @@ namespace BudgetExecution
         {
             try
             {
-                Dictionary<string, object> param = new Dictionary<string, object> { ["ID"] = ID, ["RPIO"] = RPIO, ["BFY"] = BFY, ["Fund"] = Fund.Code, ["RC"] = RC, ["BOC"] = BOC.Code, ["Code"] = ProgramProjectCode };
+                Dictionary<string, object> param = new Dictionary<string, object> { ["ID"] = ObligId, ["RPIO"] = RPIO, ["BFY"] = BFY, ["Fund"] = Fund.Code, ["RC"] = RC, ["BOC"] = BOC.Code, ["Code"] = ProgramProjectCode };
                 return param;
             }
             catch(Exception ex)

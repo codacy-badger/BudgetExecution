@@ -19,8 +19,8 @@ namespace BudgetExecution
             Source = source;
             Provider = provider;
             DbData = new DataBuilder(source, provider);
-            DbRow = DbData.Table.AsEnumerable().Select(p => p).First();
-            ID = int.Parse(DbRow["ID"].ToString());
+            DbRow = DbData.Table.Rows[0];
+            PrcId = int.Parse(DbRow["ID"].ToString());
             BudgetLevel = DbRow["BudgetLevel"].ToString();
             RPIO = DbRow["RPIO"].ToString();
             AH = DbRow["AH"].ToString();
@@ -29,7 +29,7 @@ namespace BudgetExecution
             Org = new Org(DbRow["Org"].ToString());
             BOC = new BOC(DbRow["BOC"].ToString());
             RC = new RC(DbRow["RC"].ToString());
-            Account = new Account(Source.Accounts, Provider.SQLite, Fund.Code, DbRow["Code"].ToString());
+            Account = new Account(Fund.Code, DbRow["Code"].ToString());
             Code = Account.Code;
             Amount = decimal.Parse(DbRow["Amount"].ToString());
             Parameter = GetDataFields();
@@ -49,8 +49,8 @@ namespace BudgetExecution
             Source = source;
             Provider = provider;
             DbData = new DataBuilder(source, provider, param);
-            DbRow = DbData.Table.AsEnumerable().Select(p => p).First();
-            ID = int.Parse(DbRow["ID"].ToString());
+            DbRow = DbData.Table.Rows[0];
+            PrcId = int.Parse(DbRow["ID"].ToString());
             BudgetLevel = DbRow["BudgetLevel"].ToString();
             RPIO = DbRow["RPIO"].ToString();
             AH = DbRow["AH"].ToString();
@@ -75,10 +75,10 @@ namespace BudgetExecution
             ObjectiveName = Account.ObjectiveName;
         }
 
-        public PRC(int id, string bl, string rpio, string bfy, string fund, string ah, string org, string rc, string code, string boc, decimal amount)
+        public PRC(int prcId, string bl, string rpio, string bfy, string fund, string ah, string org, string rc, string code, string boc, decimal amount)
         {
             BudgetLevel = bl;
-            ID = id;
+            PrcId = prcId;
             RPIO = rpio;
             AH = ah;
             BFY = bfy;
@@ -104,7 +104,7 @@ namespace BudgetExecution
 
         public PRC(DataRow row)
         {
-            ID = int.Parse(row["ID"].ToString());
+            PrcId = int.Parse(row["ID"].ToString());
             BudgetLevel = row["BudgetLevel"].ToString();
             RPIO = row["RPIO"].ToString();
             AH = row["AH"].ToString();
@@ -138,7 +138,7 @@ namespace BudgetExecution
 
         public DataRow DbRow { get; }
 
-        public int ID { get; set; }
+        public int PrcId { get; set; }
 
         public string BudgetLevel { get; set; }
 
@@ -168,6 +168,23 @@ namespace BudgetExecution
 
         public string Objective { get; }
 
+        public string RPIO { get; set; }
+
+        public string BFY { get; set; }
+
+        public Fund Fund { get; }
+
+        public Org Org { get; }
+
+        public RC RC { get; }
+
+        public Account Account { get; }
+
+        public decimal Amount { get; set; }
+
+        public BOC BOC { get; }
+
+        // METHODS
         public string GetCode()
         {
             return Code;
@@ -205,28 +222,11 @@ namespace BudgetExecution
             return Code.Substring(5, 2);
         }
 
-        public string RPIO { get; set; }
-
-        public string BFY { get; set; }
-
-        public Fund Fund { get; }
-
-        public Org Org { get; }
-
-        public RC RC { get; }
-
-        public Account Account { get; }
-
-        public decimal Amount { get; set; }
-
-        public BOC BOC { get; }
-
-        // METHODS
         internal Dictionary<string, object> GetDataFields()
         {
             try
             {
-                Dictionary<string, object> param = new Dictionary<string, object> { ["ID"] = ID, ["BudgetLevel"] = BudgetLevel, ["RPIO"] = RPIO, ["BFY"] = BFY, ["Fund"] = Fund.Code, ["RC"] = RC, ["BOC"] = BOC.Code, ["Code"] = Account.Code };
+                Dictionary<string, object> param = new Dictionary<string, object> { ["ID"] = PrcId, ["BudgetLevel"] = BudgetLevel, ["RPIO"] = RPIO, ["BFY"] = BFY, ["Fund"] = Fund.Code, ["RC"] = RC, ["BOC"] = BOC.Code, ["Code"] = Account.Code };
                 return param;
             }
             catch(Exception ex)

@@ -15,6 +15,22 @@ namespace BudgetExecution
         // CONSTRUCTORS
         public Transfer()
         {
+            Source = Source.Transfers;
+            Provider = Provider.SQLite;
+            DbData = new DataBuilder(Source, Provider);
+            Table = DbData.Table;
+            DbRow = Table.Rows[0];
+            TransId = int.Parse(DbRow["ID"].ToString());
+        }
+
+        public Transfer(Source source = Source.Transfers, Provider provider = Provider.SQLite)
+        {
+            Source = source;
+            Provider = provider;
+            DbData = new DataBuilder(Source, Provider);
+            Table = DbData.Table;
+            DbRow = Table.Rows[0];
+            TransId = int.Parse(DbRow["ID"].ToString());
         }
 
         public Transfer(string bl, string docType, string rpio, string org, string rc, string bfy, string fund, string tcn, string qtr, string date, string code, string progproj, string ppn, string npmcode, string fromto, string boc, decimal amount)
@@ -39,6 +55,7 @@ namespace BudgetExecution
 
         public Transfer(DataRow dr)
         {
+            TransId = int.Parse(dr["ID"].ToString());
             BudgetLevel = dr["BudgetLevel"].ToString();
             DocType = dr["DocType"].ToString();
             RPIO = dr["RPIO"].ToString();
@@ -58,15 +75,18 @@ namespace BudgetExecution
         }
 
         // PROPERTIES
-        public DataBuilder DbData { get; }
-
-        public DataTable DbTable { get; }
-
-        public DataRow DbRow { get; }
 
         public Source Source { get; }
 
         public Provider Provider { get; }
+
+        public DataBuilder DbData { get; }
+
+        public DataTable Table { get; }
+
+        public int TransId { get; }
+
+        public DataRow DbRow { get; }
 
         public Account Account { get; }
 

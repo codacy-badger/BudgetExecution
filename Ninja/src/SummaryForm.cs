@@ -344,33 +344,7 @@ namespace BudgetExecution
                 new Error(ex).ShowDialog();
             }
         }
-
-        private decimal GetCount(string filter)
-        {
-            try
-            {
-                return DbData.Table.AsEnumerable().Where(p => p.Field<string>("FundName").Equals(filter)).Select(p => p.Field<decimal>("Amount") > 0).Count();
-            }
-            catch(Exception ex)
-            {
-                new Error(ex).ShowDialog();
-                return-1;
-            }
-        }
-
-        private decimal GetCount(string filter1, string filter2)
-        {
-            try
-            {
-                return DbData.Table.AsEnumerable().Where(p => p.Field<string>("FundName").Equals(filter1)).Where(p => p.Field<string>("BocName").Equals(filter2)).Select(p => p.Field<decimal>("Amount")).Count();
-            }
-            catch(Exception ex)
-            {
-                new Error(ex).ShowDialog();
-                return-1;
-            }
-        }
-
+       
         internal void PopulateFilterBoxItems(VisualComboBox cmbox, string prcfilter)
         {
             try
@@ -445,37 +419,7 @@ namespace BudgetExecution
                 new Error(ex).ShowDialog();
             }
         }
-
-        private void ConfigureGridFilterButtons(FlowLayoutPanel panel, string[] list)
-        {
-            try
-            {
-                panel.Controls.Clear();
-                foreach(string f in list)
-                {
-                    MetroSetButton b = new MetroSetButton();
-                    b.Text = f;
-                    b.Font = new Font("Segoe UI", 8f);
-                    b.NormalColor = Color.Black;
-                    b.NormalTextColor = SystemColors.MenuHighlight;
-                    b.NormalBorderColor = Color.Black;
-                    b.HoverBorderColor = Color.SteelBlue;
-                    b.HoverColor = Color.SteelBlue;
-                    b.HoverTextColor = Color.AntiqueWhite;
-                    b.Size = new Size(150, 30);
-                    b.Margin = new Padding(3);
-                    b.Padding = new Padding(1);
-                    panel.Controls.Add(b);
-                    panel.AutoSize = true;
-                    b.Tag = f;
-                }
-            }
-            catch(Exception ex)
-            {
-                new Error(ex).ShowDialog();
-            }
-        }
-
+       
         private void ConfigureTextBoxBindings()
         {
             try
@@ -494,65 +438,6 @@ namespace BudgetExecution
             catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
-            }
-        }
-
-        private decimal CalculateAverage(string filter1)
-        {
-            try
-            {
-                return Table.AsEnumerable()
-                            .Where(p => p.Field<string>("FundName").Equals(filter1))
-                            .Select(p => p.Field<decimal>("Amount"))
-                            .Average();
-            }
-            catch(Exception ex)
-            {
-                new Error(ex).ShowDialog();
-                return-1;
-            }
-        }
-
-        private decimal CalculateAverage(string filter1, string filter2)
-        {
-            try
-            {
-                return Table.AsEnumerable()
-                            .Where(p => p.Field<string>("FundName").Equals(filter1))
-                            .Where(p => p.Field<string>("BocName").Equals(filter2))
-                            .Select(p => p.Field<decimal>("Amount"))
-                            .Average();
-            }
-            catch(Exception ex)
-            {
-                new Error(ex).ShowDialog();
-                return-1;
-            }
-        }
-
-        private decimal CalculateTotal(string filter)
-        {
-            try
-            {
-                return DbData.Table.AsEnumerable().Where(p => p.Field<string>("FundName").Equals(filter)).Select(p => p.Field<decimal>("Amount")).Sum();
-            }
-            catch(Exception ex)
-            {
-                new Error(ex).ShowDialog();
-                return-1;
-            }
-        }
-
-        private decimal CalculateTotal(string filter1, string filter2)
-        {
-            try
-            {
-                return Table.AsEnumerable().Where(p => p.Field<string>("FundName").Equals(filter1)).Where(p => p.Field<string>("BocName").Equals(filter2)).Select(p => p.Field<decimal>("Amount")).Sum();
-            }
-            catch(Exception ex)
-            {
-                new Error(ex).ShowDialog();
-                return-1;
             }
         }
 
@@ -602,16 +487,6 @@ namespace BudgetExecution
                 new Error(ex).ShowDialog();
                 return null;
             }
-        }
-
-        private ChartSeriesType GetChartType(VisualComboBox ctb)
-        {
-            if(ctb.SelectedItem == null)
-            {
-                return ChartSeriesType.Column;
-            }
-
-            return(ChartSeriesType) Enum.Parse(typeof(ChartSeriesType), ctb.SelectedItem.ToString());
         }
 
         private void ChartFilterControl1_ItemSelected(object sender, EventArgs e)
@@ -731,70 +606,7 @@ namespace BudgetExecution
                 new Error(ex).ShowDialog();
             }
         }
-
-        private void Expander_Click(object sender, EventArgs e)
-        {
-            ExpandCollapsePanel exp = sender as ExpandCollapsePanel;
-            switch(CurrentTabIndex)
-            {
-                case 0:
-                    if(FundExpander2.IsExpanded)
-                    {
-                        FundExpander2.IsExpanded = false;
-                    }
-
-                    break;
-
-                case 1:
-                    if(BocExpander2.IsExpanded)
-                    {
-                        BocExpander2.IsExpanded = false;
-                    }
-
-                    break;
-
-                case 3:
-                    if(NpmExpander2.IsExpanded)
-                    {
-                        NpmExpander2.IsExpanded = false;
-                    }
-
-                    break;
-
-                case 4:
-                    if(GoalExpander2.IsExpanded)
-                    {
-                        GoalExpander2.IsExpanded = false;
-                    }
-
-                    break;
-
-                case 5:
-                    if(ObjectiveExpander2.IsExpanded)
-                    {
-                        ObjectiveExpander2.IsExpanded = false;
-                    }
-
-                    break;
-
-                case 6:
-                    if(AreaExpander2.IsExpanded)
-                    {
-                        AreaExpander2.IsExpanded = false;
-                    }
-
-                    break;
-
-                case 7:
-                    if(ProjectExpander2.IsExpanded)
-                    {
-                        ProjectExpander2.IsExpanded = false;
-                    }
-
-                    break;
-            }
-        }
-
+        
         internal void SummaryTabPage_TabSelected(object sender, EventArgs e)
         {
             try
@@ -1036,49 +848,7 @@ namespace BudgetExecution
                 new Error(ex).ShowDialog();
             }
         }
-
-        private string[] GetTitle(TabControlAdv tab, VisualComboBox filter)
-        {
-            try
-            {
-                string category = tab.TabPages[CurrentTabIndex].Tag.ToString();
-                int index = filter.SelectedIndex;
-                switch(index)
-                {
-                    case 0:
-                        return new[]
-                        {
-                            string.Format("Total Funding by {0}", category)
-                        };
-
-                    case 1:
-                        return new[]
-                        {
-                            string.Format("Total Accounts by {0}", category)
-                        };
-
-                    case 2:
-                        return new[]
-                        {
-                            string.Format("Average Funding by {0}", category)
-                        };
-
-                    case 3:
-                        return new[]
-                        {
-                            string.Format("Funding Percentage by {0}", category)
-                        };
-                }
-
-                return null;
-            }
-            catch(Exception ex)
-            {
-                new Error(ex).ShowDialog();
-                return null;
-            }
-        }
-
+        
         private string[] GetTitle(TabControlAdv tab, VisualComboBox filter1, VisualComboBox filter2, VisualComboBox filter3)
         {
             try

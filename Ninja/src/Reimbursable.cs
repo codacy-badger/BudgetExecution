@@ -18,8 +18,8 @@ namespace BudgetExecution
             Source = source;
             Provider = provider;
             DbData = new DataBuilder(Source, Provider);
-            DbTable = DbData.Table;
-            DbRow = DbTable.Rows[0];
+            Table = DbData.Table;
+            DbRow = Table.Rows[0];
         }
 
         public Reimbursable(string fund, string bfy, string org, string code, string spc, string an, decimal auth, decimal amout)
@@ -27,8 +27,8 @@ namespace BudgetExecution
             Source = Source.Reimbursables;
             Provider = Provider.SQLite;
             DbData = new DataBuilder(Source, Provider);
-            DbTable = DbData.Table;
-            DbRow = DbTable.Rows[0];
+            Table = DbData.Table;
+            DbRow = Table.Rows[0];
             BFY = bfy;
             Fund = new Fund(fund, bfy);
             OrgCode = org;
@@ -44,8 +44,9 @@ namespace BudgetExecution
             Source = Source.Reimbursables;
             Provider = Provider.SQLite;
             DbData = new DataBuilder(Source, Provider, p);
-            DbTable = DbData.Table;
-            DbRow = DbTable.Rows[0];
+            Table = DbData.Table;
+            DbRow = Table.Rows[0];
+            ReimbId = int.Parse(DbRow["ID"].ToString());
             BFY = p["BFY"].ToString();
             Fund = new Fund(p["Fund"].ToString(), p["Fund"].ToString());
             OrgCode = p["OrgCode"].ToString();
@@ -58,7 +59,8 @@ namespace BudgetExecution
 
         public Reimbursable(DataRow dr)
         {
-            ID = int.Parse(dr["ID"].ToString());
+            DbRow = dr;
+            ReimbId = int.Parse(dr["ID"].ToString());
             BFY = dr["BFY"].ToString();
             Fund = new Fund(dr["Fund"].ToString(), BFY);
             OrgCode = dr["OrgCode"].ToString();
@@ -67,7 +69,6 @@ namespace BudgetExecution
             AgreementNumber = dr["Agreement"].ToString();
             Commitments = decimal.Parse(dr["Commitments"].ToString());
             Obligations = decimal.Parse(dr["Obligations"].ToString());
-            DbRow = dr;
         }
 
         // PROPERTIES
@@ -77,11 +78,11 @@ namespace BudgetExecution
 
         public DataBuilder DbData { get; }
 
-        public DataTable DbTable { get; }
+        public DataTable Table { get; }
 
         public DataRow DbRow { get; }
 
-        public int ID { get; }
+        public int ReimbId { get; }
 
         public string BFY { get; }
 

@@ -1,22 +1,20 @@
-﻿// <copyright file="Query.cs" company="PlaceholderCompany">
-// Copyright (c) PlaceholderCompany. All rights reserved.
-// </copyright>
-
-using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Data;
-using System.Data.Common;
-using System.Data.OleDb;
-using System.Data.SqlClient;
-using System.Data.SQLite;
-
-namespace BudgetExecution
+﻿namespace BudgetExecution
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Configuration;
+    using System.Data;
+    using System.Data.Common;
+    using System.Data.OleDb;
+    using System.Data.SqlClient;
+    using System.Data.SQLite;
+
     public class Query : IQuery
     {
         // CONSTRUCTORS
-        public Query() { }
+        public Query()
+        {
+        }
 
         public Query(Source source = Source.PRC, Provider provider = Provider.SQLite)
         {
@@ -87,7 +85,7 @@ namespace BudgetExecution
 
         // METHODS
         /// <summary>
-        /// Gets the connection.
+        ///     Gets the connection.
         /// </summary>
         /// <param name="provider">The provider.</param>
         /// <returns></returns>
@@ -119,7 +117,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Gets the SQL statement.
+        ///     Gets the SQL statement.
         /// </summary>
         /// <param name="sql">The SQL.</param>
         /// <returns></returns>
@@ -137,7 +135,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Gets the data command.
+        ///     Gets the data command.
         /// </summary>
         /// <param name="sql">The SQL.</param>
         /// <param name="connection">The connection.</param>
@@ -169,7 +167,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Gets the data adapter.
+        ///     Gets the data adapter.
         /// </summary>
         /// <param name="command">The command.</param>
         /// <returns></returns>
@@ -197,7 +195,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Gets the data reader.
+        ///     Gets the data reader.
         /// </summary>
         /// <param name="command">The command.</param>
         /// <returns></returns>
@@ -225,7 +223,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Gets the command builder.
+        ///     Gets the command builder.
         /// </summary>
         /// <param name="adapter">The adapter.</param>
         /// <returns></returns>
@@ -256,7 +254,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Gets the parameter strings.
+        ///     Gets the parameter strings.
         /// </summary>
         /// <param name="param">The parameter.</param>
         /// <returns></returns>
@@ -282,7 +280,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Gets the select statement.
+        ///     Gets the select statement.
         /// </summary>
         /// <param name="table">The table.</param>
         /// <param name="param">The parameter.</param>
@@ -301,7 +299,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Gets the select statement.
+        ///     Gets the select statement.
         /// </summary>
         /// <param name="tableName">Name of the table.</param>
         /// <param name="sql">The SQL.</param>
@@ -320,7 +318,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Gets the database parameters.
+        ///     Gets the database parameters.
         /// </summary>
         /// <param name="input">The input.</param>
         /// <returns></returns>
@@ -374,7 +372,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Gets the select statement.
+        ///     Gets the select statement.
         /// </summary>
         /// <param name="source">The source.</param>
         /// <param name="param">The parameter.</param>
@@ -400,7 +398,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Gets the update statement.
+        ///     Gets the update statement.
         /// </summary>
         /// <param name="source">The source.</param>
         /// <param name="update">The update.</param>
@@ -432,7 +430,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Gets the insert statement.
+        ///     Gets the insert statement.
         /// </summary>
         /// <param name="source">The source.</param>
         /// <param name="param">The parameter.</param>
@@ -461,7 +459,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Gets the delete statement.
+        ///     Gets the delete statement.
         /// </summary>
         /// <param name="source">The source.</param>
         /// <param name="param">The parameter.</param>
@@ -487,7 +485,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Gets the select command.
+        ///     Gets the select command.
         /// </summary>
         /// <param name="pmr">The PMR.</param>
         /// <param name="connection">The connection.</param>
@@ -519,7 +517,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Gets the update command.
+        ///     Gets the update command.
         /// </summary>
         /// <param name="pmr">The PMR.</param>
         /// <param name="connection">The connection.</param>
@@ -551,7 +549,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Gets the insert command.
+        ///     Gets the insert command.
         /// </summary>
         /// <param name="pmr">The PMR.</param>
         /// <param name="connection">The connection.</param>
@@ -583,7 +581,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Gets the delete command.
+        ///     Gets the delete command.
         /// </summary>
         /// <param name="source">The source.</param>
         /// <param name="pmr">The PMR.</param>
@@ -615,7 +613,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Gets the data command.
+        ///     Gets the data command.
         /// </summary>
         /// <param name="pmr">The PMR.</param>
         /// <param name="connection">The connection.</param>
@@ -652,7 +650,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Gets the select command.
+        ///     Gets the select command.
         /// </summary>
         /// <param name="select">The select.</param>
         /// <param name="connection">The connection.</param>
@@ -689,7 +687,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Gets the select command.
+        ///     Gets the select command.
         /// </summary>
         /// <param name="param">The parameter.</param>
         /// <param name="connection">The connection.</param>
@@ -726,7 +724,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Gets the select parameter string.
+        ///     Gets the select parameter string.
         /// </summary>
         /// <param name="param">The parameter.</param>
         /// <returns></returns>

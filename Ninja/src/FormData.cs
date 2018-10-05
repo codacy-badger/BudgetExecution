@@ -18,44 +18,46 @@ namespace BudgetExecution
     public class FormData
     {
         // CONSTRUCTORS
-        public FormData() { }
+        public FormData()
+        {
+        }
 
         public FormData(DataBuilder data, BindingSource bs, DataGridView dgv, BindingNavigator bn)
         {
             DbData = data;
-            DbTable = DbData.Table;
-            BindGridAndNavigator(DbTable, dgv, bs, bn);
+            Table = DbData.Table;
+            BindGridAndNavigator(Table, dgv, bs, bn);
             BindingSource = bs;
             Grid = dgv;
-            BindingSource.DataSource = DbTable;
+            BindingSource.DataSource = Table;
             Grid.DataSource = BindingSource.DataSource;
         }
 
         public FormData(Source source, Provider provider)
         {
             DbData = new DataBuilder(source, provider);
-            DbTable = DbData.GetDataTable();
+            Table = DbData.GetDataTable();
             BindingSource = new BindingSource();
-            BindingSource.DataSource = DbTable;
+            BindingSource.DataSource = Table;
         }
 
         public FormData(Source source, Provider provider, Dictionary<string, object> param)
         {
             DbData = new DataBuilder(source, provider, param);
-            DbTable = DbData.GetDataTable();
+            Table = DbData.GetDataTable();
             BindingSource = new BindingSource();
-            BindingSource.DataSource = DbTable;
+            BindingSource.DataSource = Table;
         }
 
         public FormData(Source source, Provider provider, Dictionary<string, object> param, BindingSource bs, DataGridView dgv, BindingNavigator bn)
         {
             DbData = new DataBuilder(source, provider, param);
-            DbTable = DbData.GetDataTable();
+            Table = DbData.GetDataTable();
             BindingSource = new BindingSource();
-            BindingSource.DataSource = DbTable;
-            BindGridAndNavigator(DbTable, dgv, bs, bn);
+            BindingSource.DataSource = Table;
+            BindGridAndNavigator(Table, dgv, bs, bn);
             BindingSource = bs;
-            BindingSource.DataSource = DbTable;
+            BindingSource.DataSource = Table;
             Grid = dgv;
             Grid.DataSource = BindingSource.DataSource;
         }
@@ -75,7 +77,7 @@ namespace BudgetExecution
 
         public DataSet DataSet { get; set; }
 
-        public DataTable DbTable { get; set; }
+        public DataTable Table { get; set; }
 
         public int Count { get; set; }
 
@@ -304,8 +306,8 @@ namespace BudgetExecution
         {
             try
             {
-                DbTable = DbData.Table;
-                BindingSource.DataSource = DbTable;
+                Table = DbData.Table;
+                BindingSource.DataSource = Table;
             }
             catch(Exception ex)
             {
@@ -402,7 +404,7 @@ namespace BudgetExecution
             }
         }
 
-        private void CreateTextBoxPrcBindings(DataGridView dgv, MetroSetTextBox[] tbx)
+        private void CreateTextBoxPrcBindings(DataGridView dgv, TextBox[] tbx)
         {
             try
             {
