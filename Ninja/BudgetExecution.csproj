@@ -652,6 +652,7 @@
     <EmbeddedResource Include="src\Calendar.resx">
       <DependentUpon>Calendar.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
     <None Include="LinqToDB.Templates\DataAnnotations.ttinclude" />
     <None Include="LinqToDB.Templates\DataModel.ttinclude" />
     <None Include="LinqToDB.Templates\EditableObject.ttinclude" />
@@ -677,6 +678,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="database\sqlite\R6.db" />
     <None Include="resources\epa_seal_medium.ico" />
   </ItemGroup>
   <ItemGroup>
@@ -941,6 +943,9 @@
     <None Include="resources\BlueIcon\Excel Online1.ico" />
     <None Include="resources\PDF File Extension1.ico" />
     <None Include="resources\PDF Files1.ico" />
+    <Content Include="database\oledb\R6.mdb" />
+    <Content Include="database\sqlce\R6.sdf" />
+    <Content Include="database\sqlserver\R6.mdf" />
     <Content Include="summation_3d_blue_oma_icon.ico" />
     <None Include="resources\SummaryImages\RegionalAccounts.png" />
     <None Include="resources\SummaryImages\FTE.png" />
