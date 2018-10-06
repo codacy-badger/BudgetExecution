@@ -1,12 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Windows.Forms;
-using MetroSet_UI.Controls;
-using Syncfusion.Windows.Forms;
-
-namespace BudgetExecution
+﻿namespace BudgetExecution
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Data;
+    using System.Windows.Forms;
+    using MetroSet_UI.Controls;
+    using Syncfusion.Windows.Forms;
+
     public partial class AccountManager : MetroForm
     {
         // CONSTRUCTORS
