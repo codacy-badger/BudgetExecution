@@ -171,7 +171,7 @@ namespace BudgetExecution
         {
             try
             {
-                DataRow datarow = new DataBuilder(source, Provider.SQLite, p).Table.AsEnumerable().Select(prc => prc).First();
+                DataRow datarow = new DataBuilder(source, Provider.SQLite, p).Table.Rows[0];
                 return new Reimbursable(datarow);
             }
             catch(Exception ex)
@@ -192,7 +192,7 @@ namespace BudgetExecution
         {
             try
             {
-                DataRow datarow = new DataBuilder(source, provider, p).Table.AsEnumerable().Select(prc => prc).First();
+                DataRow datarow = new DataBuilder(source, provider, p).Table.Rows[0];
                 return new Reimbursable(datarow);
             }
             catch(Exception ex)
@@ -349,25 +349,6 @@ namespace BudgetExecution
             catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
-            }
-        }
-
-        /// <summary>
-        /// Gets the column values.
-        /// </summary>
-        /// <param name="bfy">The bfy.</param>
-        /// <param name="fund">The fund.</param>
-        /// <returns></returns>
-        private Dictionary<string, object> GetColumnValues(string bfy, string fund)
-        {
-            try
-            {
-                return new Dictionary<string, object> { ["BFY"] = bfy, ["Fund"] = fund };
-            }
-            catch(Exception ex)
-            {
-                new Error(ex).ShowDialog();
-                return null;
             }
         }
     }

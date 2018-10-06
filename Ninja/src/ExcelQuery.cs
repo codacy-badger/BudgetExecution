@@ -109,6 +109,11 @@ namespace BudgetExecution
         }
 
         // Methods
+        /// <summary>
+        /// Gets the parameter.
+        /// </summary>
+        /// <param name="dr">The dr.</param>
+        /// <returns></returns>
         public OleDbParameter[] GetParameter(DataRow dr)
         {
             try
@@ -128,6 +133,11 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// Gets the parameter.
+        /// </summary>
+        /// <param name="param">The parameter.</param>
+        /// <returns></returns>
         public OleDbParameter[] GetParameter(Dictionary<string, object> param)
         {
             try
@@ -164,6 +174,11 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// Gets the parameters.
+        /// </summary>
+        /// <param name="dr">The dr.</param>
+        /// <returns></returns>
         public List<OleDbParameter> GetParameters(DataRow dr)
         {
             try
@@ -183,6 +198,11 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// Gets the parameter.
+        /// </summary>
+        /// <param name="table">The table.</param>
+        /// <returns></returns>
         public List<OleDbParameter[]> GetParameter(DataTable table)
         {
             try
@@ -202,6 +222,11 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// Gets the select parameter string.
+        /// </summary>
+        /// <param name="param">The parameter.</param>
+        /// <returns></returns>
         internal string GetSelectParamString(Dictionary<string, object> param)
         {
             try
@@ -222,6 +247,11 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// Gets the select parameter string.
+        /// </summary>
+        /// <param name="param">The parameter.</param>
+        /// <returns></returns>
         internal string GetSelectParamString(OleDbParameter[] param)
         {
             try
@@ -242,6 +272,10 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// Gets the command builder.
+        /// </summary>
+        /// <returns></returns>
         private OleDbCommandBuilder GetCommandBuilder()
         {
             try
@@ -255,6 +289,10 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// Gets the data adapter.
+        /// </summary>
+        /// <returns></returns>
         private OleDbDataAdapter GetDataAdapter()
         {
             try
@@ -268,6 +306,11 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// Gets the parameter string.
+        /// </summary>
+        /// <param name="param">The parameter.</param>
+        /// <returns></returns>
         private string GetParamString(Dictionary<string, object> param)
         {
             try
@@ -288,6 +331,10 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// Gets the select command.
+        /// </summary>
+        /// <returns></returns>
         private OleDbCommand GetSelectCommand()
         {
             try
@@ -301,6 +348,11 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// Gets the data adapter.
+        /// </summary>
+        /// <param name="sql">The SQL.</param>
+        /// <returns></returns>
         internal OleDbDataAdapter GetDataAdapter(string sql)
         {
             try
@@ -314,6 +366,11 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// Gets the command builder.
+        /// </summary>
+        /// <param name="adapter">The adapter.</param>
+        /// <returns></returns>
         public OleDbCommandBuilder GetCommandBuilder(OleDbDataAdapter adapter)
         {
             try
@@ -327,6 +384,11 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// Gets the data adapter.
+        /// </summary>
+        /// <param name="command">The command.</param>
+        /// <returns></returns>
         public OleDbDataAdapter GetDataAdapter(OleDbCommand command)
         {
             try
@@ -340,6 +402,10 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// Gets the delete command.
+        /// </summary>
+        /// <returns></returns>
         public OleDbCommand GetDeleteCommand()
         {
             try
@@ -353,6 +419,10 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// Gets the insert command.
+        /// </summary>
+        /// <returns></returns>
         public OleDbCommand GetInsertCommand()
         {
             try
@@ -366,6 +436,11 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// Gets the select command.
+        /// </summary>
+        /// <param name="select">The select.</param>
+        /// <returns></returns>
         public OleDbCommand GetSelectCommand(string select)
         {
             try
@@ -379,6 +454,10 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// Gets the SQL statement.
+        /// </summary>
+        /// <returns></returns>
         public string GetSqlStatement()
         {
             try
@@ -392,6 +471,10 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// Gets the update command.
+        /// </summary>
+        /// <returns></returns>
         public OleDbCommand GetUpdateCommand()
         {
             try

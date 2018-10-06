@@ -424,7 +424,12 @@ namespace BudgetExecution
         {
             try
             {
-                Id.DataBindings.Add(new Binding("Text", Grid.DataSource, "ID"));
+                if(DataBindings.Count > 0)
+                {
+                    DataBindings.Clear();
+                }
+
+                id.DataBindings.Add(new Binding("Text", Grid.DataSource, "ID"));
                 BudgetLevel.DataBindings.Add(new Binding("Text", Grid.DataSource, "BudgetLevel"));
                 BFY.DataBindings.Add(new Binding("Text", Grid.DataSource, "BFY"));
                 Fund.DataBindings.Add(new Binding("Text", Grid.DataSource, "Fund"));
@@ -492,7 +497,11 @@ namespace BudgetExecution
         private void ChartFilterControl1_ItemSelected(object sender, EventArgs e)
         {
             ChartFilterControl1 = sender as VisualComboBox;
-            ChartType = (ChartSeriesType) Enum.Parse(typeof(ChartSeriesType), ChartFilterControl1.SelectedItem.ToString());
+            if(ChartFilterControl1 != null)
+            {
+                ChartType = (ChartSeriesType) Enum.Parse(typeof(ChartSeriesType), ChartFilterControl1.SelectedItem.ToString());
+            }
+
             if(Expander2.IsExpanded)
             {
                 Expander2.IsExpanded = false;
@@ -504,7 +513,11 @@ namespace BudgetExecution
             try
             {
                 ChartFilterControl2 = sender as VisualComboBox;
-                Measure = (Stat) Enum.Parse(typeof(Stat), ChartFilterControl2.SelectedItem.ToString());
+                if(ChartFilterControl2?.SelectedItem != null)
+                {
+                    Measure = (Stat) Enum.Parse(typeof(Stat), ChartFilterControl2?.SelectedItem.ToString());
+                }
+
                 if(Expander2.IsExpanded == false)
                 {
                     Expander2.IsExpanded = true;
@@ -521,7 +534,7 @@ namespace BudgetExecution
             try
             {
                 ChartFilterControl3 = sender as VisualComboBox;
-                ChartField = (Field) Enum.Parse(typeof(Field), ChartFilterControl3.Tag.ToString());
+                ChartField = (Field) Enum.Parse(typeof(Field), ChartFilterControl3?.Tag.ToString() ?? throw new InvalidOperationException());
                 ChartFilter = ChartFilterControl3.SelectedItem.ToString();
             }
             catch(Exception ex)
@@ -535,11 +548,15 @@ namespace BudgetExecution
             try
             {
                 ChartFilterControl4 = sender as VisualComboBox;
-                ChartGroup = (Field) Enum.Parse(typeof(Field), ChartFilterControl4.SelectedItem.ToString());
-                ChartMainTitle = new[]
+                if(ChartFilterControl4 != null)
                 {
-                    $"{Text} {ChartFilter} By {ChartFilterControl4.SelectedItem} "
-                };
+                    ChartGroup = (Field) Enum.Parse(typeof(Field), ChartFilterControl4?.SelectedItem.ToString());
+                    ChartMainTitle = new[]
+                    {
+                        $"{Text} {ChartFilter} By {ChartFilterControl4.SelectedItem} "
+                    };
+                }
+
                 Dictionary<string, object> param = new Dictionary<string, object> { [ChartField.ToString()] = ChartFilter };
                 switch(CurrentTabIndex)
                 {
@@ -612,7 +629,11 @@ namespace BudgetExecution
             try
             {
                 SummaryTabControl = sender as TabControlAdv;
-                CurrentTabIndex = SummaryTabControl.SelectedIndex;
+                if(SummaryTabControl != null)
+                {
+                    CurrentTabIndex = SummaryTabControl.SelectedIndex;
+                }
+
                 switch(CurrentTabIndex)
                 {
                     case 0:
@@ -901,7 +922,7 @@ namespace BudgetExecution
                 {
                     DataGridViewRow dgvRow = Grid.CurrentRow;
                     Dictionary<string, object> data = new Dictionary<string, object>();
-                    data.Add("ID", int.Parse(dgvRow.Cells["ID"].Value.ToString()));
+                    //data.Add("ID", int.Parse(dgvRow.Cells["ID"].Value.ToString()));
                     //data.Add("Fund", dgvRow.Cells["Fund"].Value.ToString());
                     //data.Add("AH", dgvRow.Cells["AH"].Value.ToString());
                     //data.Add("Org", dgvRow.Cells["Org"].Value.ToString());
