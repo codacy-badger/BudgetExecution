@@ -507,7 +507,6 @@
       <DependentUpon>FundCodeImages.resx</DependentUpon>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Compile>
-    <Compile Include="resources\NinjaIcons.Designer.cs" />
     <Compile Include="src\TravelObligations.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -1011,8 +1010,6 @@
     <None Include="resources\Division\XA.png" />
     <Content Include="resources\FunctionImages\BudgetTools.png" />
     <Content Include="resources\FunctionImages\DataTools.png" />
-    <Content Include="resources\FunctionImages\Reprogramming.png" />
-    <Content Include="resources\FunctionImages\Transfer.png" />
     <None Include="resources\Solutions - 03.png" />
     <None Include="resources\pie_chart.png" />
     <None Include="resources\images %284%29.png" />

@@ -71,6 +71,16 @@ namespace BudgetExecution.resources {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] BudgetControlTemplate {
+            get {
+                object obj = ResourceManager.GetObject("BudgetControlTemplate", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\Report\BudgetControlTemplate.xlsx.
         /// </summary>
         internal static string BudgetReport {
