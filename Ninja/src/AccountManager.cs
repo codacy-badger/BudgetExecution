@@ -33,9 +33,19 @@
             Source = source;
             Provider = provider;
             DbData = new DataBuilder(Source, Provider);
+            ProgramElements = DbData.ProgramElements;
             BindingSource = new BindingSource();
             BindingSource.DataSource = DbData.Table;
             Update.TabVisible = false;
+            PopulateComboBox(AddLevel, ProgramElements["BudgetLevel"]);
+            PopulateComboBox(AddYear, ProgramElements["BFY"]);
+            PopulateComboBox(AddFund, ProgramElements["Fund"]);
+            PopulateComboBox(AddCode, ProgramElements["Code"]);
+            PopulateComboBox(AddSubProject, ProgramElements["SubProjectCode"]);
+            PopulateComboBox(AddBoc, ProgramElements["BOC"]);
+            PopulateComboBox(AddAh, ProgramElements["AH"]);
+            PopulateComboBox(AddOrg, ProgramElements["Org"]);
+            PopulateComboBox(AddRc, ProgramElements["RC"]);
         }
 
         public AccountManager(Source source, Provider provider, Dictionary<string, object> p)
@@ -44,10 +54,20 @@
             Source = source;
             Provider = provider;
             DbData = new DataBuilder(Source, Provider, p);
+            ProgramElements = DbData.ProgramElements;
             Table = DbData.Table;
             DbRow = Table.Rows[0];
             BindingSource.DataSource = Table;
             Insert.TabVisible = false;
+            PopulateComboBox(AddLevel, ProgramElements["BudgetLevel"]);
+            PopulateComboBox(AddYear, ProgramElements["BFY"]);
+            PopulateComboBox(AddFund, ProgramElements["Fund"]);
+            PopulateComboBox(AddCode, ProgramElements["Code"]);
+            PopulateComboBox(AddSubProject, ProgramElements["SubProjectCode"]);
+            PopulateComboBox(AddBoc, ProgramElements["BOC"]);
+            PopulateComboBox(AddAh, ProgramElements["AH"]);
+            PopulateComboBox(AddOrg, ProgramElements["Org"]);
+            PopulateComboBox(AddRc, ProgramElements["RC"]);
         }
 
         // PROPERTIES
@@ -56,6 +76,8 @@
         public Provider Provider { get; }
 
         public DataBuilder DbData { get; }
+
+        public Dictionary<string, string[]> ProgramElements { get; set; }
 
         public DataTable Table { get; set; }
 
@@ -144,18 +166,18 @@
         {
             try
             {
-                ID.DataBindings.Add(new Binding("Text", BindingSource.DataSource, "ID"));
-                BudgetLevel.DataBindings.Add(new Binding("Text", BindingSource.DataSource, "BudgetLevel"));
-                BFY.DataBindings.Add(new Binding("Text", BindingSource.DataSource, "BFY"));
-                Fund.DataBindings.Add(new Binding("Text", BindingSource.DataSource, "Fund"));
-                Org.DataBindings.Add(new Binding("Text", BindingSource.DataSource, "Org"));
-                RC.DataBindings.Add(new Binding("Text", BindingSource.DataSource, "RC"));
-                Code.DataBindings.Add(new Binding("Text", BindingSource.DataSource, "Code"));
-                SubProject.DataBindings.Add(new Binding("Text", BindingSource.DataSource, "SubProject"));
-                BOC.DataBindings.Add(new Binding("Text", BindingSource.DataSource, "BOC"));
-                ProgramProject.DataBindings.Add(new Binding("Text", BindingSource.DataSource, "ProgramProjectName"));
-                ProgramArea.DataBindings.Add(new Binding("Text", BindingSource.DataSource, "ProgramAreaName"));
-                Amount1.DataBindings.Add(new Binding("Text", BindingSource.DataSource, "Amount"));
+                UpdateID.DataBindings.Add(new Binding("Text", BindingSource.DataSource, "ID"));
+                UpdateLevel.DataBindings.Add(new Binding("Text", BindingSource.DataSource, "BudgetLevel"));
+                UpdateYear.DataBindings.Add(new Binding("Text", BindingSource.DataSource, "BFY"));
+                UpdateFund.DataBindings.Add(new Binding("Text", BindingSource.DataSource, "Fund"));
+                UpdateAh.DataBindings.Add(new Binding("Text", BindingSource.DataSource, "Org"));
+                UpdateRc.DataBindings.Add(new Binding("Text", BindingSource.DataSource, "RC"));
+                UpdateCode.DataBindings.Add(new Binding("Text", BindingSource.DataSource, "Code"));
+                UpdateSubProject.DataBindings.Add(new Binding("Text", BindingSource.DataSource, "SubProject"));
+                UpdateBoc.DataBindings.Add(new Binding("Text", BindingSource.DataSource, "BOC"));
+                UpdateProgramProject.DataBindings.Add(new Binding("Text", BindingSource.DataSource, "ProgramProjectName"));
+                UpdateProgramArea.DataBindings.Add(new Binding("Text", BindingSource.DataSource, "ProgramAreaName"));
+                UpdateAmount.DataBindings.Add(new Binding("Text", BindingSource.DataSource, "Amount"));
             }
             catch(Exception ex)
             {
@@ -170,33 +192,33 @@
             {
                 foreach(string p in data.ProgramElements["SubProject"])
                 {
-                    ComboBox5.Items.Add(p);
+                    AddSubProject.Items.Add(p);
                 }
             }
 
             foreach(string p in data.ProgramElements["Code"])
             {
-                ComboBox6.Items.Add(p);
+                AddCode.Items.Add(p);
             }
 
             foreach(string p in data.ProgramElements["Fund"])
             {
-                ComboBox3.Items.Add(p);
+                AddFund.Items.Add(p);
             }
 
             foreach(string p in data.ProgramElements["RC"])
             {
-                ComboBox8.Items.Add(p);
+                AddRc.Items.Add(p);
             }
 
             foreach(string p in data.ProgramElements["Org"])
             {
-                ComboBox4.Items.Add(p);
+                AddOrg.Items.Add(p);
             }
 
             foreach(string p in data.ProgramElements["BOC"])
             {
-                ComboBox7.Items.Add(p);
+                AddBoc.Items.Add(p);
             }
         }
 
@@ -207,7 +229,7 @@
                 string[] codes = Info.AgencyFundCodes;
                 foreach(string c in codes)
                 {
-                    ComboBox3.Items.Add(c);
+                    AddFund.Items.Add(c);
                 }
             }
             catch(Exception ex)
@@ -373,5 +395,20 @@
         }
 
         private void AccountTabControl_SelectedIndexChanged(object sender, EventArgs e) { }
+
+        internal void PopulateComboBox(ComboBox comboBox, string[] list)
+        {
+            try
+            {
+                foreach(var s in list)
+                {
+                    comboBox.Items.Add(s);
+                }
+            }
+            catch(Exception ex)
+            {
+                new Error(ex).ShowDialog();
+            }
+        }
     }
 }

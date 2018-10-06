@@ -941,6 +941,10 @@
     <None Include="resources\WQ.ico" />
     <None Include="resources\WSA.ico" />
     <None Include="resources\XA.ico" />
+    <Content Include="database\sqlserver\R6_log.ldf">
+      <DependentUpon>R6.mdf</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="LinqToDB.Templates\CopyMe.SQLite.tt.txt" />
     <None Include="resources\BlueIcon\Excel Online1.ico" />
     <None Include="resources\PDF File Extension1.ico" />
