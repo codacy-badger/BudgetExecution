@@ -1,0 +1,4 @@
+﻿CREATE VIEW "XA" 
+AS SELECT * 
+FROM PRC 
+WHERE RC = '06X';

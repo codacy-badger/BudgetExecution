@@ -1,0 +1,4 @@
+﻿CREATE VIEW "LUST" 
+AS SELECT * 
+FROM PRC 
+WHERE Fund LIKE 'F%';
