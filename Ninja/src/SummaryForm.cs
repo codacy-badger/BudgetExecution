@@ -49,7 +49,6 @@ namespace BudgetExecution
             DivisionTab.TabVisible = false;
             Metric = new PrcMetric(DbData);
             Text = string.Format("{0} Summary", Info.DivisionName(rc));
-            SummaryTabControl.SelectedIndexChanged += SummaryTabPage_TabSelected;
             TabNames = GetTabNames();
             EditTab.TabVisible = false;
         }
@@ -69,9 +68,8 @@ namespace BudgetExecution
                 Text = @"R6 Summary";
                 Metric = new PrcMetric(DbData);
                 ProjectTab.TabVisible = false;
-                DatabaseTab.TabVisible = true;
-                SummaryTabControl.SelectedIndexChanged += SummaryTabPage_TabSelected;
-                SummaryTabControl.SelectedIndex = 1;
+                DatabaseTab.TabVisible = false;
+                EditTab.TabVisible = false;
             }
             else
             {
@@ -86,12 +84,20 @@ namespace BudgetExecution
                 Grid.DataSource = BindingSource;
                 ProjectTab.TabVisible = true;
                 DatabaseTab.TabVisible = true;
+                EditTab.TabVisible = false;
                 DivisionTab.TabVisible = false;
                 GoalTab.TabVisible = false;
                 ObjectiveTab.TabVisible = false;
-                SummaryTabControl.SelectedIndexChanged += SummaryTabPage_TabSelected;
-                SummaryTabControl.SelectedIndex = 8;
-                GridGroupBox.Text = $"{Source.ToString()}";
+                GridGroupBox.Text = $"{Source.ToString()}";                
+                label32.Text = DbData.Table.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Sum().ToString("c");
+                label37.Text = DbData.Table.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Average().ToString("N");
+                label41.Text = DbData.GetCount(Table).ToString();
+                lblPrc.Visible = false;
+                GridAccountFilter.Visible = false;
+                lblBoc.Visible = false;
+                GridBocFilter.Visible = false;
+                PopulateGridFundFilterItems();
+                ConfigureTextBoxBindings();
             }
         }
 
@@ -163,40 +169,9 @@ namespace BudgetExecution
         {
             try
             {
-                EditTab.TabVisible = false;
-                DivisionTab.TabVisible = false;
-                DefineVisisbleDataColumns(Grid);
-                label32.Text = DbData.Table.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Sum().ToString("c");
-                label37.Text = DbData.Table.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Average().ToString("N");
-                label41.Text = DbData.GetCount(Table).ToString();
-                lblPrc.Visible = false;
-                GridAccountFilter.Visible = false;
-                lblBoc.Visible = false;
-                GridBocFilter.Visible = false;
-                GridRefreshButton.Click += GridRefreshButton_OnClick;
-                CalculatorButton.Click += CalculatorButton_Click;
-                Grid.SelectionChanged += UpdateAccountChart;
-                switch(Source)
-                {
-                    case Source.FTE:
-                        BocTab.TabVisible = false;
-                        EditTab.TabVisible = false;
-                        break;
-                    case Source.RegionalAccounts:
-                        DivisionTab.TabVisible = false;
-                        DatabaseTab.TabVisible = false;
-                        ProjectTab.TabVisible = false;
-                        EditTab.TabVisible = false;
-                        break;
-                    case Source.DivisionAccounts:
-                        DivisionTab.TabVisible = false;
-                        ProjectTab.TabVisible = false;
-                        EditTab.TabVisible = false;
-                        break;
-                }
-
                 PopulateGridFundFilterItems();
             }
+
             catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
@@ -355,7 +330,7 @@ namespace BudgetExecution
                 }               
                 
                 DataTable table = (DataTable) BindingSource.DataSource;
-                foreach(var row in table.AsEnumerable().Where(p => p.Field<string>("FundName").Equals(prcfilter)).Select(p => p).ToArray())
+                foreach(var row in table.AsEnumerable().Where(p => p.Field<string>("FundName").Equals(prcfilter)).Select(p => p).Distinct().ToArray())
                 {
                     cmbox.Items.Add(row["FundName"].ToString());
                 }
@@ -424,11 +399,6 @@ namespace BudgetExecution
         {
             try
             {
-                if(DataBindings.Count > 0)
-                {
-                    DataBindings.Clear();
-                }
-
                 id.DataBindings.Add(new Binding("Text", Grid.DataSource, "ID"));
                 BudgetLevel.DataBindings.Add(new Binding("Text", Grid.DataSource, "BudgetLevel"));
                 BFY.DataBindings.Add(new Binding("Text", Grid.DataSource, "BFY"));
@@ -666,7 +636,7 @@ namespace BudgetExecution
                     case 1:
                         AssignChartFilterControls(BocFilter1, BocFilter2, BocFilter3, BocFilter4);
                         AssignChartExpanders(BocExpander1, BocExpander2);
-                        PopulateFilterBoxItems(ChartFilterControl3, "Fund");
+                        PopulateFilterBoxItems(ChartFilterControl3, "BocName");
                         if(DbData.Source == Source.RegionalAccounts)
                         {
                             BocFilter4.Items.Remove("RC");
@@ -720,7 +690,7 @@ namespace BudgetExecution
                     case 3:
                         AssignChartFilterControls(GoalFilter1, GoalFilter2, GoalFilter3, GoalFilter4);
                         AssignChartExpanders(GoalExpander1, GoalExpander2);
-                        PopulateFilterBoxItems(ChartFilterControl3, Field.NPM.ToString());
+                        PopulateFilterBoxItems(ChartFilterControl3, Field.GoalName.ToString());
                         if(DbData.Source == Source.RegionalAccounts)
                         {
                             GoalFilter4.Items.Remove("RC");
@@ -741,7 +711,7 @@ namespace BudgetExecution
                             };
                         }
 
-                        GoalChart = new BudgetChart(GoalChart, ChartMainTitle, DbData, Field.ObjectiveName, Stat.Total, ChartSeriesType.Column).Activate();
+                        GoalChart = new BudgetChart(GoalChart, ChartMainTitle, DbData, Field.GoalName, Stat.Total, ChartSeriesType.Column).Activate();
                         break;
 
                     case 4:
@@ -768,7 +738,7 @@ namespace BudgetExecution
                             };
                         }
 
-                        ObjectiveChart = new BudgetChart(ObjectiveChart, ChartMainTitle, DbData, Field.DivisionName, Stat.Total, ChartSeriesType.Column).Activate();
+                        ObjectiveChart = new BudgetChart(ObjectiveChart, ChartMainTitle, DbData, Field.ObjectiveName, Stat.Total, ChartSeriesType.Column).Activate();
                         break;
 
                     case 5:
@@ -795,7 +765,7 @@ namespace BudgetExecution
                             };
                         }
 
-                        DivisionChart = new BudgetChart(DivisionChart, ChartMainTitle, DbData, Field.ProgramAreaName, Stat.Total, ChartSeriesType.Column).Activate();
+                        DivisionChart = new BudgetChart(DivisionChart, ChartMainTitle, DbData, Field.DivisionName, Stat.Total, ChartSeriesType.Column).Activate();
                         break;
 
                     case 6:
@@ -822,13 +792,13 @@ namespace BudgetExecution
                             };
                         }
 
-                        AreaChart = new BudgetChart(AreaChart, ChartMainTitle, DbData, Field.ProgramArea, Stat.Total, ChartSeriesType.Column).Activate();
+                        AreaChart = new BudgetChart(AreaChart, ChartMainTitle, DbData, Field.ProgramAreaName, Stat.Total, ChartSeriesType.Column).Activate();
                         break;
 
                     case 7:
                         AssignChartFilterControls(ProjectFilter1, ProjectFilter2, ProjectFilter3, ProjectFilter4);
                         AssignChartExpanders(ProjectExpander1, ProjectExpander2);
-                        PopulateFilterBoxItems(ChartFilterControl3, Field.ProgramArea.ToString());
+                        PopulateFilterBoxItems(ChartFilterControl3, Field.ProgramProjectCode.ToString());
                         if(DbData.Source == Source.RegionalAccounts)
                         {
                             ProjectFilter4.Items.Remove("RC");
@@ -853,8 +823,7 @@ namespace BudgetExecution
                         break;
 
                     case 8:
-                        PopulateGridFundFilterItems();
-                        ConfigureTextBoxBindings();
+                        DefineVisisbleDataColumns(Grid);
                         var table = DbData.Table.AsEnumerable().Select(p => p).CopyToDataTable();
                         label41.Text = table.Rows.Count.ToString();
                         label37.Text = table.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Average().ToString("N");
@@ -963,7 +932,7 @@ namespace BudgetExecution
         {
             try
             {
-                AccountManager am = new AccountManager(Source.PRC, Provider);
+                AccountManager am = new AccountManager(Source.PRC, Provider.SQLite);
                 am.Update.TabVisible = false;
                 am.AccountTabControl.SelectedIndex = 1;
                 am.Show();

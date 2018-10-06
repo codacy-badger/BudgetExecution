@@ -36,7 +36,6 @@ namespace BudgetExecution
             BindingSource = new BindingSource();
             BindingSource.DataSource = DbData.Table;
             Update.TabVisible = false;
-            PopulateComboBoxes();
         }
 
         public AccountManager(Source source, Provider provider, Dictionary<string, object> p)
