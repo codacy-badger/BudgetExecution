@@ -1115,6 +1115,7 @@
             this.AddLevel.ItemHeight = 24;
             this.AddLevel.ItemImageVisible = true;
             this.AddLevel.Location = new System.Drawing.Point(127, 94);
+            this.AddLevel.MaxDropDownItems = 30;
             this.AddLevel.MenuItemHover = System.Drawing.Color.SteelBlue;
             this.AddLevel.MenuItemNormal = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
             this.AddLevel.MenuTextColor = System.Drawing.Color.LightSteelBlue;

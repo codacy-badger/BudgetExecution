@@ -36,16 +36,16 @@
             ProgramElements = DbData.ProgramElements;
             BindingSource = new BindingSource();
             BindingSource.DataSource = DbData.Table;
+            BindComboBoex();
             Update.TabVisible = false;
-            PopulateComboBox(AddLevel, ProgramElements["BudgetLevel"]);
-            PopulateComboBox(AddYear, ProgramElements["BFY"]);
-            PopulateComboBox(AddFund, ProgramElements["Fund"]);
-            PopulateComboBox(AddCode, ProgramElements["Code"]);
-            PopulateComboBox(AddSubProject, ProgramElements["SubProjectCode"]);
-            PopulateComboBox(AddBoc, ProgramElements["BOC"]);
-            PopulateComboBox(AddAh, ProgramElements["AH"]);
-            PopulateComboBox(AddOrg, ProgramElements["Org"]);
-            PopulateComboBox(AddRc, ProgramElements["RC"]);
+            BFY = ProgramElements["BFY"];
+            BudgetLevel = ProgramElements["BudgetLevel"];
+            Org = ProgramElements["Org"];
+            AH = ProgramElements["AH"];
+            RC = ProgramElements["RC"];
+            BOC = ProgramElements["BOC"];
+            Code = ProgramElements["Code"];
+            SubProject = ProgramElements["SubProject"];
         }
 
         public AccountManager(Source source, Provider provider, Dictionary<string, object> p)
@@ -59,15 +59,15 @@
             DbRow = Table.Rows[0];
             BindingSource.DataSource = Table;
             Insert.TabVisible = false;
-            PopulateComboBox(AddLevel, ProgramElements["BudgetLevel"]);
-            PopulateComboBox(AddYear, ProgramElements["BFY"]);
-            PopulateComboBox(AddFund, ProgramElements["Fund"]);
-            PopulateComboBox(AddCode, ProgramElements["Code"]);
-            PopulateComboBox(AddSubProject, ProgramElements["SubProjectCode"]);
-            PopulateComboBox(AddBoc, ProgramElements["BOC"]);
-            PopulateComboBox(AddAh, ProgramElements["AH"]);
-            PopulateComboBox(AddOrg, ProgramElements["Org"]);
-            PopulateComboBox(AddRc, ProgramElements["RC"]);
+            BFY = ProgramElements["BFY"];
+            BudgetLevel = ProgramElements["BudgetLevel"];
+            Org = ProgramElements["Org"];
+            AH = ProgramElements["AH"];
+            RC = ProgramElements["RC"];
+            BOC = ProgramElements["BOC"];
+            Code = ProgramElements["Code"];
+            SubProject = ProgramElements["SubProject"];
+            PopulateComboBoxes();
         }
 
         // PROPERTIES
@@ -90,6 +90,24 @@
         public List<MetroSetComboBox> ComboBoxes { get; set; }
 
         public FormData Ninja { get; set; }
+
+        public string[] BudgetLevel { get; set; }
+
+        public string[] BFY { get; set; }
+
+        public string[] Org { get; set; }
+
+        public string[] RC { get; set; }
+
+        public string[] AH { get; set; }
+
+        public string[] Code { get; set; }
+
+        public string[] BOC { get; set; }
+
+        public string[] Fund { get; set; }
+
+        public string[] SubProject { get; set; }
 
         // METHODS
         internal void ConfigureGridVisibleColumns(DataGridView dgv)
@@ -166,7 +184,7 @@
         {
             try
             {
-                UpdateID.DataBindings.Add(new Binding("Text", BindingSource.DataSource, "ID"));
+                UpdateID.DataBindings.Add(new Binding("Text", BindingSource.DataSource, "PrcID"));
                 UpdateLevel.DataBindings.Add(new Binding("Text", BindingSource.DataSource, "BudgetLevel"));
                 UpdateYear.DataBindings.Add(new Binding("Text", BindingSource.DataSource, "BFY"));
                 UpdateFund.DataBindings.Add(new Binding("Text", BindingSource.DataSource, "Fund"));
@@ -185,40 +203,69 @@
             }
         }
 
-        private void PopulateComboBoxes()
+        internal void BindComboBoex()
         {
-            DataBuilder data = new DataBuilder(Source, Provider);
-            if(data.Table.Columns.Contains("SubProject"))
+            try
+            {               
+                AddSubProject.DataSource = BindingSource;
+                AddSubProject.DisplayMember = "SubProject";
+                AddLevel.DataSource = BindingSource;
+                AddLevel.DisplayMember = "BudgetLevel";
+                AddBoc.DataSource = BindingSource;
+                AddBoc.DisplayMember = "BOC";
+                AddRc.DataSource = BindingSource;
+                AddRc.DisplayMember = "RC";
+                AddAh.DataSource = BindingSource;
+                AddAh.DisplayMember = "AH";
+                AddCode.DataSource = BindingSource;
+                AddCode.DisplayMember = "Code";
+                AddOrg.DataSource = BindingSource;
+                AddOrg.DisplayMember = "Org";
+                AddYear.DataSource = BindingSource;
+                AddYear.DisplayMember = "BFY";
+            }
+            catch(Exception e)
             {
-                foreach(string p in data.ProgramElements["SubProject"])
-                {
-                    AddSubProject.Items.Add(p);
-                }
+                Console.WriteLine(e);
+                throw;
+            }
+        }
+
+        internal void PopulateComboBoxes()
+        {
+            foreach(string s in SubProject)
+            {
+                AddSubProject.Items.Add(s);
             }
 
-            foreach(string p in data.ProgramElements["Code"])
+            foreach(string c in Code)
             {
-                AddCode.Items.Add(p);
+                AddCode.Items.Add(c);
             }
 
-            foreach(string p in data.ProgramElements["Fund"])
+            foreach(string f in Fund)
             {
-                AddFund.Items.Add(p);
+                AddFund.Items.Add(f);
             }
 
-            foreach(string p in data.ProgramElements["RC"])
+            foreach(string r in RC)
             {
-                AddRc.Items.Add(p);
+                AddRc.Items.Add(r);
             }
 
-            foreach(string p in data.ProgramElements["Org"])
+            foreach(string o in Org)
             {
-                AddOrg.Items.Add(p);
+                AddOrg.Items.Add(o);
+            }
+            
+            foreach(string a in AH)
+            {
+                AddAh.Items.Add(a);
             }
 
-            foreach(string p in data.ProgramElements["BOC"])
+            foreach(string b in BOC)
             {
-                AddBoc.Items.Add(p);
+                AddBoc.Items.Add(b);
             }
         }
 
