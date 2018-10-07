@@ -43,7 +43,7 @@ namespace BudgetExecution
             DataFields = null;
             Source = source;
             Query = new Query(source, provider);
-            Table = GetDataTable(Source);
+            Table = GetDataTable(Source).AsEnumerable().Where(p => p.Field<decimal>("Amount") > 0).Select(p => p).CopyToDataTable();
             Columns = Table.GetFields();
             Total = GetTotal(Table);
             ProgramElements = GetProgramElements(Table);
@@ -52,7 +52,8 @@ namespace BudgetExecution
             Columns = Table.GetFields();
             if(source == Source.FTE)
             {
-                Table = GetDataTable().AsEnumerable().Where(p => p.Field<string>("BOC").Equals("17")).Where(p => p.Field<string>("BudgetLevel").Equals("8")).Select(p => p).CopyToDataTable();
+                Table = GetDataTable().AsEnumerable().Where(p => p.Field<string>("BOC").Equals("17"))
+                                      .Where(p => p.Field<decimal>("Amount") > 0).Select(p => p).CopyToDataTable();
                 Total = GetFteTotal(Table);
                 ProgramElements = GetProgramElements(Table);
                 BindingSource = new BindingSource(Table.DataSet, Table.TableName);
@@ -66,7 +67,7 @@ namespace BudgetExecution
             Source = source;
             DataFields = param;
             Query = new Query(source, provider, DataFields);
-            Table = GetDataTable(Source);
+            Table = GetDataTable(Source).AsEnumerable().Where(p => p.Field<decimal>("Amount") > 0).Select(p => p).CopyToDataTable();
             Total = GetTotal(Table);
             ProgramElements = GetProgramElements(Table);
             BindingSource = new BindingSource(Table.DataSet, Table.TableName);
@@ -74,7 +75,8 @@ namespace BudgetExecution
             Columns = Table.GetFields();
             if(source == Source.FTE)
             {
-                Table = GetDataTable().AsEnumerable().Where(p => p.Field<string>("BOC").Equals("17")).Select(p => p).CopyToDataTable();
+                Table = GetDataTable().AsEnumerable().Where(p => p.Field<string>("BOC").Equals("17"))
+                                      .Where(p => p.Field<decimal>("Amount") > 0).Select(p => p).CopyToDataTable();
                 Total = GetFteTotal(Table);
                 ProgramElements = GetProgramElements(Table);
                 BindingSource = new BindingSource(Table.DataSet, Table.TableName);
