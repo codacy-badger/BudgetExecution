@@ -61,14 +61,7 @@ namespace BudgetExecution
                 DbData = new DataBuilder(source);
                 Table = DbData.Table;
                 ProgramElements = DbData.GetProgramElements(Table);
-                BFY = ProgramElements["BFY"];
-                BudgetLevel = ProgramElements["BudgetLevel"];
-                Org = ProgramElements["Org"];
-                AH = ProgramElements["AH"];
-                RC = ProgramElements["RC"];
-                BOC = ProgramElements["BOC"];
-                Code = ProgramElements["Code"];
-                SubProject = ProgramElements["SubProject"];
+                BindingSource = new BindingSource();
                 BindingSource.DataSource = DbData.Table;
                 Grid.DataSource = BindingSource;
                 Source = source;
@@ -82,6 +75,8 @@ namespace BudgetExecution
                 GridBocFilter.Visible = false;
                 lblBoc.Visible = false;
                 PopulateGridYearFilterItems();
+                ChartMainTitle = new string[] { $"{Source.ToString()} Funding By Appropriation"};
+                FundChart = new BudgetChart(FundChart, ChartMainTitle, DbData, Field.Fund, Stat.Total, ChartSeriesType.Column).Activate();
             }
             else
             {
@@ -89,17 +84,10 @@ namespace BudgetExecution
                 DbData = new DataBuilder(source);
                 Table = DbData.Table;
                 ProgramElements = DbData.GetProgramElements(Table);
-                BFY = ProgramElements["BFY"];
-                BudgetLevel = ProgramElements["BudgetLevel"];
-                Org = ProgramElements["Org"];
-                AH = ProgramElements["AH"];
-                RC = ProgramElements["RC"];
-                BOC = ProgramElements["BOC"];
-                Code = ProgramElements["Code"];
-                SubProject = ProgramElements["SubProject"];
                 TabNames = GetTabNames();
                 Text = $@"R6 {Source.ToString()} Summary";
                 Metric = new PrcMetric(DbData);
+                BindingSource = new BindingSource();
                 BindingSource.DataSource = DbData.Table;
                 Grid.DataSource = BindingSource;
                 ProjectTab.TabVisible = true;
@@ -108,15 +96,19 @@ namespace BudgetExecution
                 GoalTab.TabVisible = false;
                 ObjectiveTab.TabVisible = false;
                 GridGroupBox.Text = $"{Source.ToString()}";                
-                label32.Text = DbData.Table.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Sum().ToString("c");
-                label37.Text = DbData.Table.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Average().ToString("N");
-                label41.Text = DbData.GetCount(Table).ToString();
+                lblTotal.Text = DbData.Table.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Sum().ToString("c");
+                lblAve.Text = DbData.Table.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Average().ToString("N");
+                lblDev.Text = ((double)DbData.Table.Compute("StDev(Amount)", "Amount > 0")).ToString("N");
+                lblVar.Text = ((double)DbData.Table.Compute("Var(Amount)", "Amount > 0")).ToString("N");
+                lblCount.Text = DbData.GetCount(Table).ToString();
                 lblFund.Visible = false;
                 GridFundFilter.Visible = false;
                 lblBoc.Visible = false;
                 GridBocFilter.Visible = false;
                 PopulateGridYearFilterItems();
                 ConfigureTextBoxBindings();
+                ChartMainTitle = new string[] { $"{Source.ToString()} Funding By Appropriation"};
+                FundChart = new BudgetChart(FundChart, ChartMainTitle, DbData, Field.Fund, Stat.Total, ChartSeriesType.Column).Activate();
             }
         }
 
@@ -207,7 +199,6 @@ namespace BudgetExecution
             try
             {
                 PopulateComboBoxes();
-                PopulateGridFundFilterItems();
             }
 
             catch(Exception ex)
@@ -220,15 +211,20 @@ namespace BudgetExecution
         {
             try
             {
-                GridYearFilter = sender as VisualComboBox;
                 GridFilter1 = GridYearFilter?.SelectedItem.ToString();
                 BindingSource.Filter = $"BFY = '{GridFilter1}'";
-                var table = DbData.Table.AsEnumerable().Where(p => p.Field<string>("BFY").Equals(GridFilter1)).Select(p => p).CopyToDataTable();
-                label41.Text = table.Rows.Count.ToString();
-                label37.Text = table.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Average().ToString("N");
-                label32.Text = table.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Sum().ToString("N");
+                DataTable table = new DataTable();
+                table = ((DataTable) BindingSource.DataSource).AsEnumerable()
+                              .Where(p => p.Field<decimal>("Amount") > 0)
+                              .Where(p => p.Field<string>("BFY").Equals(GridYearFilter.SelectedItem.ToString()))
+                              .Select(p => p).CopyToDataTable();
+                lblCount.Text = table.Rows.Count.ToString();
+                lblAve.Text = table.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Average().ToString("N");
+                lblTotal.Text = table.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Sum().ToString("N");
+                lblDev.Text = ((double)table.Compute("StDev(Amount)", "Amount > 0")).ToString("N");
+                lblVar.Text = ((double)table.Compute("Var(Amount)", "Amount > 0")).ToString("N");
                 PopulateGridFundFilterItems();
-                lblBoc.Visible = true;
+                lblFund.Visible = true;
                 GridFundFilter.Visible = true;
                 if(GridBocFilter.Visible == true)
                 {
@@ -247,17 +243,22 @@ namespace BudgetExecution
         {
             try
             {
-                GridFundFilter = sender as VisualComboBox;
-                GridFilter1 = GridYearFilter?.SelectedItem.ToString();
                 GridFilter2 = GridFundFilter?.SelectedItem.ToString();
-                BindingSource.Filter = $"BFY = '{GridFilter1}' AND FundName = '{GridFilter2}'";
-                var table = DbData.Table.AsEnumerable().Where(p => p.Field<string>("FundName").Equals(GridFilter1)).Where(p => p.Field<string>("BocName").Equals(GridFilter2)).Select(p => p).CopyToDataTable();
-                label41.Text = table.Rows.Count.ToString();
-                label37.Text = table.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Average().ToString("N");
-                label32.Text = table.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Sum().ToString("N");
+                BindingSource.Filter = $"BFY = '{GridYearFilter.SelectedItem}' AND FundName = '{GridFundFilter.SelectedItem}'";
+                DataTable table = new DataTable();
+                table = ((DataTable) BindingSource.DataSource).AsEnumerable()
+                                          .Where(p => p.Field<decimal>("Amount") > 0)
+                                          .Where(p => p.Field<string>("BFY").Equals(GridYearFilter.SelectedItem.ToString()))
+                                          .Where(p => p.Field<string>("FundName").Equals(GridFundFilter.SelectedItem.ToString()))
+                                          .Select(p => p).CopyToDataTable();
+                lblCount.Text = table.Rows.Count.ToString();
+                lblAve.Text = table.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Average().ToString("N");
+                lblTotal.Text = table.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Sum().ToString("N");
+                lblDev.Text = ((double)table.Compute("StDev(Amount)", "Amount > 0")).ToString("N");
+                lblVar.Text = ((double)table.Compute("Var(Amount)", "Amount > 0")).ToString("N");
                 PopulateGridBocFilterItems();
+                lblBoc.Visible = true;
                 GridBocFilter.Visible = true;
-                GridBocFilter.SelectionChangeCommitted += GridFilterControl3_ItemSelected;
                 GridGroupBox.Text = $"{Source.ToString()} {GridFilter1} {GridFilter2}";
             }
             catch(Exception ex)
@@ -270,16 +271,19 @@ namespace BudgetExecution
         {
             try
             {
-                GridBocFilter = sender as VisualComboBox;
-                GridFilter1 = GridYearFilter?.SelectedItem.ToString();
-                GridFilter2 = GridFundFilter?.SelectedItem.ToString();
-                GridFilter3 = GridBocFilter?.SelectedItem.ToString();
-                BindingSource.Filter = $"BFY = '{GridFilter1}' AND FundName = '{GridFilter2}' AND BocName = '{GridFilter3}'";
-                var table = DbData.Table.AsEnumerable().Where(p => p.Field<string>("BFY").Equals(GridFilter1)).Where(p => p.Field<string>("FundName").Equals(GridFilter2))
-                                  .Where(p => p.Field<string>("BocName").Equals(GridFilter3)).Select(p => p).CopyToDataTable();
-                label41.Text = table.Rows.Count.ToString();
-                label37.Text = table.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Average().ToString("N");
-                label32.Text = table.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Sum().ToString("N");
+                BindingSource.Filter = $"BFY = '{GridYearFilter?.SelectedItem}' AND FundName = '{GridFundFilter?.SelectedItem}' AND BocName = '{GridBocFilter?.SelectedItem}'";
+                DataTable table = new DataTable();
+                table = ((DataTable) BindingSource.DataSource).AsEnumerable()
+                        .Where(p => p.Field<decimal>("Amount") > 0)
+                        .Where(p => p.Field<string>("BFY").Equals(GridYearFilter.SelectedItem.ToString()))
+                        .Where(p => p.Field<string>("FundName").Equals(GridFundFilter.SelectedItem.ToString()))
+                        .Where(p => p.Field<string>("BocName").Equals(GridBocFilter.SelectedItem.ToString()))
+                        .Select(p => p).CopyToDataTable();
+                lblCount.Text = table.Rows.Count.ToString();
+                lblAve.Text = table.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Average().ToString("N");
+                lblTotal.Text = table.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Sum().ToString("N");
+                lblDev.Text = ((double)table.Compute("StDev(Amount)", "Amount > 0")).ToString("N");
+                lblVar.Text = ((double)table.Compute("Var(Amount)", "Amount > 0")).ToString("N");
                 GridGroupBox.Text = $"{Source.ToString()} {GridFilter2} {GridFilter1} {GridFilter3} ";
             }
             catch(Exception ex)
@@ -305,9 +309,10 @@ namespace BudgetExecution
             try
             {
                 GridFundFilter.Items.Clear();
-                GridFundFilter.Visible = true;
-                DataTable table = (DataTable) BindingSource.DataSource;
-                foreach(string row in table.AsEnumerable().Select(p => p.Field<string>("FundName")).Distinct().ToArray())
+                DataTable table = new DataTable();
+                table = (DataTable) BindingSource.DataSource;
+                DataTable query = table.AsEnumerable().Where(p => p.Field<string>("BFY").Equals(GridFilter1)).Select(p => p).CopyToDataTable();
+                foreach(string row in query.AsEnumerable().Select(p => p.Field<string>("FundName")).Distinct().ToArray())
                 {
                     GridFundFilter.Items.Add(row);
                 }
@@ -323,10 +328,8 @@ namespace BudgetExecution
             try
             {
                 GridBocFilter.Items.Clear();
-                GridBocFilter.Visible = true;
-                DataTable table = new DataTable();
-                table = (DataTable) BindingSource.DataSource;
-                DataTable query = table.AsEnumerable().Where(p => p.Field<string>("FundName").Equals(GridFundFilter.SelectedItem.ToString())).Select(p => p).Distinct().CopyToDataTable();
+                DataTable table = (DataTable) BindingSource.DataSource;
+                DataTable query = table.AsEnumerable().Where(p => p.Field<string>("BFY").Equals(GridFilter1)).Where(p => p.Field<string>("FundName").Equals(GridFilter2)).Select(p => p).CopyToDataTable();
                 foreach(string row in query.AsEnumerable().Select(p => p.Field<string>("BocName")).Distinct().ToArray())
                 {
                     GridBocFilter.Items.Add(row);
@@ -521,16 +524,19 @@ namespace BudgetExecution
                     BindingSource.Filter = null;
                     Grid.DataSource = BindingSource;
                     var table = DbData.Table.AsEnumerable().Select(p => p).CopyToDataTable();
-                    label41.Text = table.Rows.Count.ToString();
-                    label37.Text = table.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Average().ToString("N");
-                    label32.Text = table.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Sum().ToString("N");
+                    lblCount.Text = table.Rows.Count.ToString();
+                    lblAve.Text = table.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Average().ToString("N");
+                    lblTotal.Text = table.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Sum().ToString("N");
                     GridBocFilter.Items.Clear();
                     GridYearFilter.Items.Clear();
+                    GridFundFilter.Items.Clear();
+                    GridFundFilter.Visible = false;
+                    lblFund.Visible = false;
                     lblBoc.Visible = false;
                     GridBocFilter.Visible = false;
-                    lblPrc.Visible = false;
-                    GridYearFilter.Visible = false;
-                    PopulateGridFundFilterItems();
+                    lblYear.Visible = true;
+                    GridYearFilter.Visible = true;
+                    PopulateGridYearFilterItems();
                     GridGroupBox.Text = $"{Source.ToString()}";
                 }
                 catch(Exception ex)
@@ -921,9 +927,9 @@ namespace BudgetExecution
                     case 8:
                         DefineVisisbleDataColumns(Grid);
                         var table = DbData.Table.AsEnumerable().Select(p => p).CopyToDataTable();
-                        label41.Text = table.Rows.Count.ToString();
-                        label37.Text = table.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Average().ToString("N");
-                        label32.Text = table.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Sum().ToString("N");
+                        lblCount.Text = table.Rows.Count.ToString();
+                        lblAve.Text = table.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Average().ToString("N");
+                        lblTotal.Text = table.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Sum().ToString("N");
                         GridGroupBox.Text = $"{Source.ToString()}";
                         UpdateAccountChart();
                         break;
@@ -1096,15 +1102,14 @@ namespace BudgetExecution
             {
                 Grid = sender as MetroGrid;
                 DataRowView drv = (DataRowView) BindingSource.Current;
-                string code = drv["Code"].ToString();
+                string code = drv.Row["Code"].ToString();
                 decimal total = DbData.Table.AsEnumerable().Where(p => p.Field<string>("Code").Contains(code)).Select(p => p.Field<decimal>("Amount")).Sum();
-                DataRow current = drv.Row;
-                decimal amt = decimal.Parse(current["Amount"].ToString());
+                decimal amt = decimal.Parse(drv["Amount"].ToString());
                 decimal ratio = amt / total;
                 Dictionary<string, double> d = new Dictionary<string, double> { ["Total"] = (double) total, ["Allocation"] = (double) amt };
                 ChartMainTitle = new[]
                 {
-                    $"{ratio.ToString("P")} PRC {current["Code"]} Funding"
+                    $"{ratio.ToString("P")} PRC {drv["Code"]} Funding"
                 };
                 AccountChart = new BudgetChart(AccountChart, ChartMainTitle, d, Field.ProgramProjectCode, Stat.Total, ChartSeriesType.Column).Activate();
             }
@@ -1128,7 +1133,12 @@ namespace BudgetExecution
 
         private void BocExpander1_Paint(object sender, PaintEventArgs e) { }
 
-        private void lblPrc_Click(object sender, EventArgs e)
+        private void LblPrc_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Panel2_Paint(object sender, PaintEventArgs e)
         {
 
         }

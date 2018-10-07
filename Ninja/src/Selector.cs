@@ -99,7 +99,7 @@ namespace BudgetExecution
                 Source source = (Source) Enum.Parse(typeof(Source), i);
                 SummaryForm sf = new SummaryForm(source);
                 sf.Show();
-                Close();
+                this.Close();
             }
         }
 

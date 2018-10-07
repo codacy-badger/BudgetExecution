@@ -49,38 +49,6 @@ namespace BudgetExecution.Properties {
         <ProviderName>System.DbData.SqlClient</ProviderName>
         </SerializableConnectionString>
       ")]
-        public string SqlServer {
-            get {
-                return ((string)(this["SqlServer"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute(@"
-        <?xml version=""1.0"" encoding=""utf-16""?>
-        <SerializableConnectionString xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xmlns:xsd=""http://www.w3.org/2001/XMLSchema"">
-        <ConnectionString>data source=""C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\database\SqlCe\R6.sdf""</ConnectionString>
-        <ProviderName>System.DbData.SQLite.EF6</ProviderName>
-        </SerializableConnectionString>
-      ")]
-        public string SqlCe {
-            get {
-                return ((string)(this["SqlCe"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute(@"
-        <?xml version=""1.0"" encoding=""utf-16""?>
-        <SerializableConnectionString xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xmlns:xsd=""http://www.w3.org/2001/XMLSchema"">
-        <ConnectionString>DbData Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DbDataDirectory|\database\SqlServerQuery\R6.mdf;Integrated Security=True;Connect Timeout=30</ConnectionString>
-        <ProviderName>System.DbData.SqlClient</ProviderName>
-        </SerializableConnectionString>
-      ")]
         public string R6ConnectionString {
             get {
                 return ((string)(this["R6ConnectionString"]));
@@ -100,6 +68,38 @@ namespace BudgetExecution.Properties {
         public string SqliteConnectionString {
             get {
                 return ((string)(this["SqliteConnectionString"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute(@"
+        <?xml version=""1.0"" encoding=""utf-16""?>
+        <SerializableConnectionString xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xmlns:xsd=""http://www.w3.org/2001/XMLSchema"">
+        <ConnectionString>DbData Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DbDataDirectory|\database\SqlServerQuery\R6.mdf;Integrated Security=True;Connect Timeout=30</ConnectionString>
+        <ProviderName>System.DbData.SqlClient</ProviderName>
+        </SerializableConnectionString>
+      ")]
+        public string SqlServer {
+            get {
+                return ((string)(this["SqlServer"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute(@"
+        <?xml version=""1.0"" encoding=""utf-16""?>
+        <SerializableConnectionString xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xmlns:xsd=""http://www.w3.org/2001/XMLSchema"">
+        <ConnectionString>data source=""C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\database\SqlCe\R6.sdf""</ConnectionString>
+        <ProviderName>System.DbData.SQLite.EF6</ProviderName>
+        </SerializableConnectionString>
+      ")]
+        public string SqlCe {
+            get {
+                return ((string)(this["SqlCe"]));
             }
         }
         
