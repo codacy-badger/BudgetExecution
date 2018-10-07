@@ -71,11 +71,11 @@
         }
 
         // PROPERTIES
-        public Source Source { get; }
+        public Source Source { get; set; }
 
-        public Provider Provider { get; }
+        public Provider Provider { get; set; }
 
-        public DataBuilder DbData { get; }
+        public DataBuilder DbData { get; set; }
 
         public Dictionary<string, string[]> ProgramElements { get; set; }
 
