@@ -21,7 +21,7 @@ namespace BudgetExecution
             Query = new Query(q.Source, q.Provider);
             Table = GetDataTable(q.Source);
             Total = GetTotal(Table);
-            ProgramElements = GetProgramElements(Table);
+            ProgramElements = GetProgramElements();
             BindingSource = new BindingSource();
             BindingSource.DataSource = Table;
             Records = GetRecords(Table);
@@ -30,7 +30,7 @@ namespace BudgetExecution
             {
                 Table = GetDataTable().AsEnumerable().Where(p => p.Field<string>("BOC").Equals("17")).Where(p => p.Field<string>("BudgetLevel").Equals("8")).Select(p => p).CopyToDataTable();
                 Total = GetFteTotal(Table);
-                ProgramElements = GetProgramElements(Table);
+                ProgramElements = GetProgramElements();
                 BindingSource = new BindingSource();
                 BindingSource.DataSource = Table;
                 Records = GetRecords(Table);
@@ -43,10 +43,22 @@ namespace BudgetExecution
             DataFields = null;
             Source = source;
             Query = new Query(source, provider);
-            Table = GetDataTable(Source).AsEnumerable().Where(p => p.Field<decimal>("Amount") > 0).Select(p => p).CopyToDataTable();
+            if(source == Source.PRC)
+            {
+                Table = GetDataTable(Source).AsEnumerable().Where(p => p.Field<decimal>("Amount") > 0).Select(p => p).CopyToDataTable();
+            }
+            else
+            {
+                Table = GetDataTable(Source).AsEnumerable().Select(p => p).CopyToDataTable();
+            }
+
             Columns = Table.GetFields();
-            Total = GetTotal(Table);
-            ProgramElements = GetProgramElements(Table);
+            if(Columns.Contains("Amount"))
+            {
+                Total = GetTotal(Table);
+            }
+
+            ProgramElements = GetProgramElements();
             BindingSource = new BindingSource(Table.DataSet, Table.TableName);
             Records = GetRecords(Table);
             Columns = Table.GetFields();
@@ -55,7 +67,7 @@ namespace BudgetExecution
                 Table = GetDataTable().AsEnumerable().Where(p => p.Field<string>("BOC").Equals("17"))
                                       .Where(p => p.Field<decimal>("Amount") > 0).Select(p => p).CopyToDataTable();
                 Total = GetFteTotal(Table);
-                ProgramElements = GetProgramElements(Table);
+                ProgramElements = GetProgramElements();
                 BindingSource = new BindingSource(Table.DataSet, Table.TableName);
                 Records = GetRecords(Table);
                 Columns = Table.GetFields();
@@ -67,30 +79,42 @@ namespace BudgetExecution
             Source = source;
             DataFields = param;
             Query = new Query(source, provider, DataFields);
-            Table = GetDataTable(Source).AsEnumerable().Where(p => p.Field<decimal>("Amount") > 0).Select(p => p).CopyToDataTable();
-            Total = GetTotal(Table);
-            ProgramElements = GetProgramElements(Table);
+            if(source == Source.PRC)
+            {
+                Table = GetDataTable(Source).AsEnumerable().Where(p => p.Field<decimal>("Amount") > 0).Select(p => p).CopyToDataTable();
+            }
+            else
+            {
+                Table = GetDataTable(Source).AsEnumerable().Select(p => p).CopyToDataTable();
+            }
+            
+            Columns = Table.GetFields();
+            if(Columns.Contains("Amount"))
+            {
+                Total = GetTotal(Table);
+            }
+
+            ProgramElements = GetProgramElements();
             BindingSource = new BindingSource(Table.DataSet, Table.TableName);
             Records = GetRecords(Table);
-            Columns = Table.GetFields();
             if(source == Source.FTE)
             {
                 Table = GetDataTable().AsEnumerable().Where(p => p.Field<string>("BOC").Equals("17"))
                                       .Where(p => p.Field<decimal>("Amount") > 0).Select(p => p).CopyToDataTable();
-                Total = GetFteTotal(Table);
-                ProgramElements = GetProgramElements(Table);
+                ProgramElements = GetProgramElements();
                 BindingSource = new BindingSource(Table.DataSet, Table.TableName);
                 Records = GetRecords(Table);
                 Columns = Table.GetFields();
+                Total = GetFteTotal(Table);
             }
         }
 
         // PROPERTIES
         public Source Source { get; }
 
-        public Dictionary<string, string[]> ProgramElements { get; }
+        public Dictionary<string, string[]> ProgramElements { get; set; }
 
-        public string[] Columns { get; }
+        public string[] Columns { get; set; }
 
         public BindingSource BindingSource { get; set; }
 
@@ -100,9 +124,9 @@ namespace BudgetExecution
 
         public Query Query { get; }
 
-        public DataTable Table { get; }
+        public DataTable Table { get; set; }
 
-        public DataRow[] Records { get; }
+        public DataRow[] Records { get; set; }
 
         // METHODS
         /// <summary>
@@ -439,29 +463,47 @@ namespace BudgetExecution
         /// </summary>
         /// <param name="table">The table.</param>
         /// <returns></returns>
+        public Dictionary<string, string[]> GetProgramElements()
+        {
+            try
+            {
+                Dictionary<string, string[]> data = new Dictionary<string, string[]>();
+                string[] list = null;
+                foreach(DataColumn dc in Table.Columns)
+                {
+                    if(dc.ColumnName.Contains("ID") || dc.ColumnName.Equals("Amount") || dc.ColumnName.Contains("Obligation") || dc.ColumnName.Contains("Commitment"))
+                    {
+                        continue;
+                    }
+
+                    list = GetUniqueFieldValues(Table, dc.ColumnName);
+                    data.Add(dc.ColumnName, list);
+                }
+
+                return data;
+            }
+            catch(Exception ex)
+            {
+                new Error(ex).ShowDialog();
+                return null;
+            }
+        }
+
         public Dictionary<string, string[]> GetProgramElements(DataTable table)
         {
             try
             {
                 Dictionary<string, string[]> data = new Dictionary<string, string[]>();
+                string[] list = null;
                 foreach(DataColumn dc in table.Columns)
                 {
-                    if(dc.ColumnName.Equals("ID") || dc.ColumnName.Equals("Amount") || dc.ColumnName.Contains("Obligation") || dc.ColumnName.Contains("Commitment"))
+                    if(dc.ColumnName.Contains("ID") || dc.ColumnName.Equals("Amount") || dc.ColumnName.Contains("Obligation") || dc.ColumnName.Contains("Commitment"))
                     {
                         continue;
                     }
 
-                    data.Add(dc.ColumnName, GetUniqueFieldValues(table, dc.ColumnName));
-                }
-
-                if(data.ContainsKey("ID"))
-                {
-                    data.Remove("ID");
-                }
-
-                if(data.ContainsKey("Amount"))
-                {
-                    data.Remove("Amount");
+                    list = GetUniqueFieldValues(table, dc.ColumnName);
+                    data.Add(dc.ColumnName, list);
                 }
 
                 return data;

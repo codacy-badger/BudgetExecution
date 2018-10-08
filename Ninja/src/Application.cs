@@ -52,7 +52,7 @@ namespace BudgetExecution
 
     public enum Field { ID, BudgetLevel, BFY, RPIO, Fund, FundName, BOC, BocName, Org, RC, Code, NPM, Goal, GoalName, Objective, ObjectiveName, DivisionName, ProgramArea, ProgramAreaName, ProgramProjectCode, ProgramProjectName, SiteProjectName, SiteProjectCode, NpmName, ReimbOrg, AH, DCN, ControlNumber, PurchaseRequest, AgreementNumber, Type, DivisionID, DocumentNumber, State, Organization, District, FocName, LastName, WorkCode, HrOrgCodeName }
 
-    public enum Provider { SQLite = 1, OleDb = 2, SqlServer = 3, SqlCe = 4 }
+    public enum Provider { SQLite = 0, Excel = 1, SqlServer = 2, SqlCe = 3, Access = 4, OleDb = 5 }
 
     public enum Source { Accounts, Awards, ControlNumbers, DivisionAccounts, DivisionObligations, TravelObligations, Divisions, DWH, EJ, EN, Employees, EPM, ExternalTransfers, Funds, InternalTransfers, PRC, Programs, Benefits, ProgramObligations, RegionalAccounts, Obligations, PayrollObligations, Sites, Reimbursables, LUST, OIL, STAG, SF6A, SUPERFUND, MD, RC, RA, SF, Transfers, WQ, MM, WSA, WCF, MDR, XA, PAYROLL, FTE, TRAVEL, EXPENSES, CONTRACTS, GRANTS }
 

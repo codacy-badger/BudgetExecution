@@ -17,7 +17,7 @@ namespace BudgetExecution
         {
             Provider = base.Provider;
             Source = source;
-            DataConnection = GetConnection(Provider) as OleDbConnection;
+            DataConnection = GetDataConnection(Provider) as OleDbConnection;
             TableName = source.ToString();
             SelectStatement = $"SELECT * FROM {source.ToString()}";
             SelectCommand = GetSelectCommand(SelectStatement, DataConnection) as OleDbCommand;
@@ -73,7 +73,7 @@ namespace BudgetExecution
 
         public new Dictionary<string, object> Parameter { get; }
 
-        public OleDbParameter[] Parameters { get; set; }
+        public new OleDbParameter[] Parameters { get; set; }
 
         public new OleDbDataReader DataReader { get; set; }
 

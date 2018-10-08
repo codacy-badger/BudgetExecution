@@ -27,7 +27,7 @@ namespace BudgetExecution
         // METHODS
         DbCommandBuilder GetCommandBuilder(DbDataAdapter adapter);
 
-        DbConnection GetConnection(Provider connection);
+        DbConnection GetDataConnection(Provider connection);
 
         DbDataAdapter GetDataAdapter(IDbCommand command);
 

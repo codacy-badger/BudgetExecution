@@ -77,10 +77,6 @@ namespace BudgetExecution
 
         public DataBuilder DbData { get; }
 
-        public DataTable DbTable { get; }
-
-        public DataRow DbRow { get; }
-
         public int ID { get; set; }
 
         public DataRow Data { get; set; }
@@ -261,7 +257,7 @@ namespace BudgetExecution
                 object[] vals = param.Values.ToArray();
                 Query query = new Query(source, provider, param);
                 string cmd = $"INSERT INTO {source.ToString()} {fields} VALUES {vals};";
-                SQLiteConnection conn = query.GetConnection(Provider.SQLite) as SQLiteConnection;
+                SQLiteConnection conn = query.GetDataConnection(Provider.SQLite) as SQLiteConnection;
                 using(conn)
                 {
                     SQLiteCommand insert = query.GetDataCommand(cmd, conn) as SQLiteCommand;
@@ -299,7 +295,7 @@ namespace BudgetExecution
             {
                 Query query = new Query(source, provider, p);
                 string cmd = $"UPDATE {source.ToString()} SET Amount = {(decimal) p["Amount"]} WHERE ID = {(int) p["ID"]};";
-                SQLiteConnection conn = query.GetConnection(Provider.SQLite) as SQLiteConnection;
+                SQLiteConnection conn = query.GetDataConnection(Provider.SQLite) as SQLiteConnection;
                 using(conn)
                 {
                     SQLiteCommand update = query.GetDataCommand(cmd, conn) as SQLiteCommand;
@@ -337,7 +333,7 @@ namespace BudgetExecution
             {
                 Query query = new Query(source, provider, p);
                 string cmd = $"DELETE ALL FROM {source.ToString()} WHERE ID = {(int) p["ID"]};";
-                SQLiteConnection conn = query.GetConnection(Provider.SQLite) as SQLiteConnection;
+                SQLiteConnection conn = query.GetDataConnection(Provider.SQLite) as SQLiteConnection;
                 using(conn)
                 {
                     SQLiteCommand update = query.GetDataCommand(cmd, conn) as SQLiteCommand;

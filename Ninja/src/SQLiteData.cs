@@ -24,7 +24,7 @@ namespace BudgetExecution
             Table = DbData.Table;
             BindingSource = DbData.BindingSource;
             Grid.DataSource = BindingSource;
-            ProgramElements = DbData.GetProgramElements(Table);
+            ProgramElements = DbData.ProgramElements;
             Grid.DataSource = BindingSource.DataSource;
             PopulateFilterButtons(Filter1, Info.Sources);
             Text = $@"{Source.ToString()} Database";
@@ -42,7 +42,7 @@ namespace BudgetExecution
             Table = DbData.Table;
             BindingSource = DbData.BindingSource;
             Grid.DataSource = DbData.BindingSource;
-            ProgramElements = DbData.GetProgramElements(Table);
+            ProgramElements = DbData.ProgramElements;
             Text = $@"{Source.ToString()} Database";
             TableFilter = Info.FilterRows;
             Fields = Info.GetColumnValues;
@@ -96,13 +96,13 @@ namespace BudgetExecution
                     label5.Visible = true;
                     label5.Text = @"Total: ";
                     label6.Visible = true;
-                    foreach(string f in DbData.ProgramElements["Fund"])
+                    foreach(string f in ProgramElements["Fund"])
                     {
                         Filter2.Items.Add(f);
                     }
 
                     Filter3.Text = @"RC";
-                    foreach(string rc in DbData.ProgramElements["RC"])
+                    foreach(string rc in ProgramElements["RC"])
                     {
                         Filter3.Items.Add(rc);
                     }
@@ -395,34 +395,34 @@ namespace BudgetExecution
                 {
                     case Source.Accounts:
                         label1.Text = @"Fund";
-                        PopulateFilterItems(Field.Fund, DbData, Filter1, label1);
+                        PopulateFilterItems(Field.Fund, Table, Filter1, label1);
                         Filter2.Tag = "GoalName";
                         Filter3.Tag = "ProgramProjectName";
                         break;
 
                     case Source.Awards:
                         label1.Text = @"DivisionName";
-                        PopulateFilterItems(Field.DivisionName, DbData, Filter1, label1);
+                        PopulateFilterItems(Field.DivisionName, Table, Filter1, label1);
                         Filter2.Tag = "FundName";
                         Filter3.Tag = "Type";
                         break;
 
                     case Source.Reimbursables:
                         label1.Text = @"AgreementNumber";
-                        PopulateFilterItems("AgreementNumber", DbData, Filter1, label1);
+                        PopulateFilterItems("AgreementNumber", Table, Filter1, label1);
                         Filter2.Tag = "ReimbOrg";
                         Filter3.Tag = "FundName";
                         break;
 
                     case Source.ControlNumbers:
                         label1.Text = @"DivisionID";
-                        PopulateFilterItems("DivisionID", DbData, Filter1, label1);
+                        PopulateFilterItems("DivisionID", Table, Filter1, label1);
                         Filter2.Tag = "Fund";
                         break;
 
                     case Source.Divisions:
                         label1.Text = @"DivisionName";
-                        PopulateFilterItems("Name", DbData, Filter1, label1);
+                        PopulateFilterItems("Name", Table, Filter1, label1);
                         Filter2.Tag = "Title";
                         Filter3.Tag = "RC";
                         Filter4.Tag = "Code";
@@ -430,14 +430,14 @@ namespace BudgetExecution
 
                     case Source.Employees:
                         label1.Text = "HrOrgCodeName";
-                        PopulateFilterItems(Field.HrOrgCodeName, DbData, Filter1, label1);
+                        PopulateFilterItems(Field.HrOrgCodeName, Table, Filter1, label1);
                         Filter2.Tag = "WorkCode";
                         Filter3.Tag = "LastName";
                         break;
 
                     case Source.Funds:
                         label1.Text = "Name";
-                        PopulateFilterItems("Name", DbData, Filter1, label1);
+                        PopulateFilterItems("Name", Table, Filter1, label1);
                         Filter2.Tag = "Title";
                         Filter3.Tag = "Code";
                         Filter4.Tag = "FiscalYear";
@@ -445,7 +445,7 @@ namespace BudgetExecution
 
                     case Source.Benefits:
                         label1.Text = "HROrgCodeName";
-                        PopulateFilterItems(Field.DivisionName, DbData, Filter1, label1);
+                        PopulateFilterItems(Field.DivisionName, Table, Filter1, label1);
                         Filter2.Tag = "OccupationalSeries";
                         Filter3.Tag = "HROrgCode";
                         Filter4.Tag = "LastName";
@@ -453,7 +453,7 @@ namespace BudgetExecution
 
                     case Source.Obligations:
                         label1.Text = "FundName";
-                        PopulateFilterItems(Field.FundName, DbData, Filter1, label1);
+                        PopulateFilterItems(Field.FundName, Table, Filter1, label1);
                         Filter2.Tag = "BocName";
                         Filter3.Tag = "ProgramArea";
                         Filter4.Tag = "DCN";
@@ -461,7 +461,7 @@ namespace BudgetExecution
 
                     case Source.DivisionObligations:
                         label1.Text = "DivisionName";
-                        PopulateFilterItems(Field.DivisionName, DbData, Filter1, label1);
+                        PopulateFilterItems(Field.DivisionName, Table, Filter1, label1);
                         Filter2.Tag = "FundName";
                         Filter3.Tag = "BocName";
                         Filter4.Tag = "DCN";
@@ -469,7 +469,7 @@ namespace BudgetExecution
 
                     case Source.PayrollObligations:
                         label1.Text = "DivisionName";
-                        PopulateFilterItems(Field.DivisionName, DbData, Filter1, label1);
+                        PopulateFilterItems(Field.DivisionName, Table, Filter1, label1);
                         Filter2.Tag = "Fund";
                         Filter3.Tag = "BocName";
                         Filter4.Tag = "FocName";
@@ -477,7 +477,7 @@ namespace BudgetExecution
 
                     case Source.ProgramObligations:
                         label1.Text = "DivisionName";
-                        PopulateFilterItems(Field.DivisionName, DbData, Filter1, label1);
+                        PopulateFilterItems(Field.DivisionName, Table, Filter1, label1);
                         Filter2.Tag = "Fund";
                         Filter3.Tag = "BocName";
                         Filter4.Tag = "FocName";
@@ -485,7 +485,7 @@ namespace BudgetExecution
 
                     case Source.TravelObligations:
                         label1.Text = "DivisionName";
-                        PopulateFilterItems(Field.DivisionName, DbData, Filter1, label1);
+                        PopulateFilterItems(Field.DivisionName, Table, Filter1, label1);
                         Filter2.Tag = "Fund";
                         Filter3.Tag = "BocName";
                         Filter4.Tag = "FocName";
@@ -493,7 +493,7 @@ namespace BudgetExecution
 
                     case Source.PRC:
                         label1.Text = "BudgetLevel";
-                        PopulateFilterItems(Field.BudgetLevel, DbData, Filter1, label1);
+                        PopulateFilterItems(Field.BudgetLevel, Table, Filter1, label1);
                         Filter2.Tag = "FundName";
                         Filter3.Tag = "BocName";
                         Filter4.Tag = "ProgramAreaName";
@@ -501,14 +501,14 @@ namespace BudgetExecution
 
                     case Source.Transfers:
                         label1.Text = "BudgetLevel";
-                        PopulateFilterItems(Field.BudgetLevel, DbData, Filter1, label1);
+                        PopulateFilterItems(Field.BudgetLevel, Table, Filter1, label1);
                         Filter2.Tag = "Fund";
                         Filter3.Tag = "RC";
                         break;
 
                     case Source.FTE:
                         label1.Text = "FundName";
-                        PopulateFilterItems(Field.FundName, DbData, Filter1, label1);
+                        PopulateFilterItems(Field.FundName, Table, Filter1, label1);
                         Filter2.Tag = "BudgetLevel";
                         Filter3.Tag = "DivisionName";
                         Filter4.Tag = "ProgramProjectName";
@@ -516,7 +516,7 @@ namespace BudgetExecution
 
                     case Source.PAYROLL:
                         label1.Text = "FundName";
-                        PopulateFilterItems(Field.FundName, DbData, Filter1, label1);
+                        PopulateFilterItems(Field.FundName, Table, Filter1, label1);
                         Filter2.Tag = "ProgramAreaName";
                         Filter3.Tag = "NpmCode";
                         Filter4.Tag = "ProgramProjectName";
@@ -524,7 +524,7 @@ namespace BudgetExecution
 
                     case Source.EPM:
                         label1.Text = "DivisionName";
-                        PopulateFilterItems(Field.BudgetLevel, DbData, Filter1, label1);
+                        PopulateFilterItems(Field.BudgetLevel, Table, Filter1, label1);
                         Filter2.Tag = "BocName";
                         Filter3.Tag = "ProgramAreaName";
                         Filter4.Tag = "ProgramProjectName";
@@ -532,7 +532,7 @@ namespace BudgetExecution
 
                     case Source.OIL:
                         label1.Text = "DivisionName";
-                        PopulateFilterItems(Field.BudgetLevel, DbData, Filter1, label1);
+                        PopulateFilterItems(Field.BudgetLevel, Table, Filter1, label1);
                         Filter2.Tag = "BocName";
                         Filter3.Tag = "ProgramAreaName";
                         Filter4.Tag = "ProgramProjectName";
@@ -540,7 +540,7 @@ namespace BudgetExecution
 
                     case Source.SUPERFUND:
                         label1.Text = "DivisionName";
-                        PopulateFilterItems(Field.BudgetLevel, DbData, Filter1, label1);
+                        PopulateFilterItems(Field.BudgetLevel, Table, Filter1, label1);
                         Filter2.Tag = "BocName";
                         Filter3.Tag = "ProgramAreaName";
                         Filter4.Tag = "ProgramProjectName";
@@ -548,7 +548,7 @@ namespace BudgetExecution
 
                     case Source.STAG:
                         label1.Text = "DivisionName";
-                        PopulateFilterItems(Field.BudgetLevel, DbData, Filter1, label1);
+                        PopulateFilterItems(Field.BudgetLevel, Table, Filter1, label1);
                         Filter2.Tag = "BocName";
                         Filter3.Tag = "ProgramAreaName";
                         Filter4.Tag = "ProgramProjectName";
@@ -556,7 +556,7 @@ namespace BudgetExecution
 
                     case Source.LUST:
                         label1.Text = "DivisionName";
-                        PopulateFilterItems(Field.BudgetLevel, DbData, Filter1, label1);
+                        PopulateFilterItems(Field.BudgetLevel, Table, Filter1, label1);
                         Filter2.Tag = "BocName";
                         Filter3.Tag = "ProgramAreaName";
                         Filter4.Tag = "ProgramProjectName";
@@ -564,7 +564,7 @@ namespace BudgetExecution
 
                     case Source.DWH:
                         label1.Text = "DivisionName";
-                        PopulateFilterItems(Field.BudgetLevel, DbData, Filter1, label1);
+                        PopulateFilterItems(Field.BudgetLevel, Table, Filter1, label1);
                         Filter2.Tag = "BocName";
                         Filter3.Tag = "ProgramAreaName";
                         Filter4.Tag = "ProgramProjectName";
@@ -572,7 +572,7 @@ namespace BudgetExecution
 
                     case Source.TRAVEL:
                         label1.Text = "FundName";
-                        PopulateFilterItems(Field.BudgetLevel, DbData, Filter1, label1);
+                        PopulateFilterItems(Field.BudgetLevel, Table, Filter1, label1);
                         Filter2.Tag = "DivisionName";
                         Filter3.Tag = "ProgramAreaName";
                         Filter4.Tag = "ProgramProjectName";
@@ -580,7 +580,7 @@ namespace BudgetExecution
 
                     case Source.EXPENSES:
                         label1.Text = "FundName";
-                        PopulateFilterItems(Field.BudgetLevel, DbData, Filter1, label1);
+                        PopulateFilterItems(Field.BudgetLevel, Table, Filter1, label1);
                         Filter2.Tag = "DivisionName";
                         Filter3.Tag = "ProgramAreaName";
                         Filter4.Tag = "ProgramProjectName";
@@ -588,7 +588,7 @@ namespace BudgetExecution
 
                     case Source.CONTRACTS:
                         label1.Text = "FundName";
-                        PopulateFilterItems(Field.BudgetLevel, DbData, Filter1, label1);
+                        PopulateFilterItems(Field.BudgetLevel, Table, Filter1, label1);
                         Filter2.Tag = "DivisionName";
                         Filter3.Tag = "ProgramAreaName";
                         Filter4.Tag = "ProgramProjectName";
@@ -596,7 +596,7 @@ namespace BudgetExecution
 
                     case Source.GRANTS:
                         label1.Text = "FundName";
-                        PopulateFilterItems(Field.BudgetLevel, DbData, Filter1, label1);
+                        PopulateFilterItems(Field.BudgetLevel, Table, Filter1, label1);
                         Filter2.Tag = "DivisionName";
                         Filter3.Tag = "ProgramAreaName";
                         Filter4.Tag = "ProgramProjectName";
@@ -604,14 +604,14 @@ namespace BudgetExecution
 
                     case Source.WCF:
                         label1.Text = "BudgetLevel";
-                        PopulateFilterItems(Field.BudgetLevel, DbData, Filter1, label1);
+                        PopulateFilterItems(Field.BudgetLevel, Table, Filter1, label1);
                         Filter2.Tag = "FundName";
                         Filter3.Tag = "ProgramAreaName";
                         break;
 
                     case Source.DivisionAccounts:
                         label1.Text = "DivisionName";
-                        PopulateFilterItems(Field.DivisionName, DbData, Filter1, label1);
+                        PopulateFilterItems(Field.DivisionName, Table, Filter1, label1);
                         Filter2.Tag = "FundName";
                         Filter3.Tag = "BocName";
                         Filter4.Tag = "ProgramAreaName";
@@ -619,21 +619,21 @@ namespace BudgetExecution
 
                     case Source.EJ:
                         label1.Text = "FundName";
-                        PopulateFilterItems(Field.FundName, DbData, Filter1, label1);
+                        PopulateFilterItems(Field.FundName, Table, Filter1, label1);
                         Filter2.Tag = "BocName";
                         Filter3.Tag = "ProgramAreaName";
                         break;
 
                     case Source.EN:
                         label1.Text = "FundName";
-                        PopulateFilterItems(Field.FundName, DbData, Filter1, label1);
+                        PopulateFilterItems(Field.FundName, Table, Filter1, label1);
                         Filter2.Tag = "BocName";
                         Filter3.Tag = "ProgramAreaName";
                         break;
 
                     case Source.ExternalTransfers:
                         label1.Text = "DocumentNumber";
-                        PopulateFilterItems(Field.DocumentNumber, DbData, Filter1, label1);
+                        PopulateFilterItems(Field.DocumentNumber, Table, Filter1, label1);
                         Filter2.Tag = "Type";
                         Filter3.Tag = "Fund";
                         Filter4.Tag = "BOC";
@@ -641,84 +641,84 @@ namespace BudgetExecution
 
                     case Source.InternalTransfers:
                         label1.Text = "DivisionName";
-                        PopulateFilterItems(Field.DivisionName, DbData, Filter1, label1);
+                        PopulateFilterItems(Field.DivisionName, Table, Filter1, label1);
                         Filter2.Tag = "Fund";
                         Filter3.Tag = "BOC";
                         break;
 
                     case Source.RegionalAccounts:
                         label1.Text = "FundName";
-                        PopulateFilterItems(Field.FundName, DbData, Filter1, label1);
+                        PopulateFilterItems(Field.FundName, Table, Filter1, label1);
                         Filter2.Tag = "BocName";
                         Filter3.Tag = "ProgramAreaName";
                         break;
 
                     case Source.Sites:
                         label1.Text = "State";
-                        PopulateFilterItems(Field.State, DbData, Filter1, label1);
+                        PopulateFilterItems(Field.State, Table, Filter1, label1);
                         Filter2.Tag = "District";
                         Filter3.Tag = "FocName";
                         break;
 
                     case Source.MD:
                         label1.Text = "FundName";
-                        PopulateFilterItems(Field.FundName, DbData, Filter1, label1);
+                        PopulateFilterItems(Field.FundName, Table, Filter1, label1);
                         Filter2.Tag = "BocName";
                         Filter3.Tag = "ProgramAreaName";
                         break;
 
                     case Source.RC:
                         label1.Text = "FundName";
-                        PopulateFilterItems(Field.FundName, DbData, Filter1, label1);
+                        PopulateFilterItems(Field.FundName, Table, Filter1, label1);
                         Filter2.Tag = "BocName";
                         Filter3.Tag = "ProgramAreaName";
                         break;
 
                     case Source.RA:
                         label1.Text = "FundName";
-                        PopulateFilterItems(Field.FundName, DbData, Filter1, label1);
+                        PopulateFilterItems(Field.FundName, Table, Filter1, label1);
                         Filter2.Tag = "BocName";
                         Filter3.Tag = "ProgramAreaName";
                         break;
 
                     case Source.SF:
                         label1.Text = "FundName";
-                        PopulateFilterItems(Field.FundName, DbData, Filter1, label1);
+                        PopulateFilterItems(Field.FundName, Table, Filter1, label1);
                         Filter2.Tag = "BocName";
                         Filter3.Tag = "ProgramAreaName";
                         break;
 
                     case Source.WQ:
                         label1.Text = "FundName";
-                        PopulateFilterItems(Field.FundName, DbData, Filter1, label1);
+                        PopulateFilterItems(Field.FundName, Table, Filter1, label1);
                         Filter2.Tag = "BocName";
                         Filter3.Tag = "ProgramAreaName";
                         break;
 
                     case Source.MM:
                         label1.Text = "FundName";
-                        PopulateFilterItems(Field.FundName, DbData, Filter1, label1);
+                        PopulateFilterItems(Field.FundName, Table, Filter1, label1);
                         Filter2.Tag = "BocName";
                         Filter3.Tag = "ProgramAreaName";
                         break;
 
                     case Source.WSA:
                         label1.Text = "FundName";
-                        PopulateFilterItems(Field.FundName, DbData, Filter1, label1);
+                        PopulateFilterItems(Field.FundName, Table, Filter1, label1);
                         Filter2.Tag = "BocName";
                         Filter3.Tag = "ProgramAreaName";
                         break;
 
                     case Source.MDR:
                         label1.Text = "FundName";
-                        PopulateFilterItems(Field.FundName, DbData, Filter1, label1);
+                        PopulateFilterItems(Field.FundName, Table, Filter1, label1);
                         Filter2.Tag = "BocName";
                         Filter3.Tag = "ProgramAreaName";
                         break;
 
                     case Source.XA:
                         label1.Text = "FundName";
-                        PopulateFilterItems(Field.FundName, DbData, Filter1, label1);
+                        PopulateFilterItems(Field.FundName, Table, Filter1, label1);
                         Filter2.Tag = "BocName";
                         Filter3.Tag = "ProgramAreaName";
                         break;

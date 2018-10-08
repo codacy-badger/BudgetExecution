@@ -20,7 +20,7 @@
         {
             Provider = provider;
             Source = source;
-            DataConnection = GetConnection(Provider);
+            DataConnection = GetDataConnection(Provider);
             TableName = Source.ToString();
             SelectStatement = $"SELECT * FROM {TableName}";
             SelectCommand = GetSelectCommand(SelectStatement, DataConnection);
@@ -37,7 +37,7 @@
             Provider = provider;
             Source = source;
             Parameter = param;
-            DataConnection = GetConnection(Provider);
+            DataConnection = GetDataConnection(Provider);
             TableName = Source.ToString();
             SelectStatement = GetSelectStatement(TableName, Parameter);
             SelectCommand = GetSelectCommand(SelectStatement, DataConnection);
@@ -55,6 +55,8 @@
 
         public Dictionary<string, object> Parameter { get; }
 
+        public DbParameter[] Parameters { get; set; }
+
         public string TableName { get; }
 
         public string SelectStatement { get; set; }
@@ -63,11 +65,11 @@
 
         public DbCommandBuilder CommandBuilder { get; internal set; }
 
-        public DbCommand DeleteCommand { get; set; }
+        public DbCommand DeleteCommand { get; internal set; }
 
-        public DbCommand InsertCommand { get; set; }
+        public DbCommand InsertCommand { get; internal set; }
 
-        public DbCommand UpdateCommand { get; set; }
+        public DbCommand UpdateCommand { get; internal set; }
 
         public Source Source { get; }
 
@@ -89,7 +91,7 @@
         /// </summary>
         /// <param name="provider">The provider.</param>
         /// <returns></returns>
-        public DbConnection GetConnection(Provider provider)
+        public DbConnection GetDataConnection(Provider provider)
         {
             try
             {
@@ -105,6 +107,12 @@
                         return new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\database\SqlServerQuery\R6.mdf;Integrated Security=True;Connect Timeout=30");
                     case Provider.OleDb:
                         return new OleDbConnection(@"Provider = Microsoft.ACE.OLEDB.12.0; DbData Source =| DataDirectory |\database\OleDb\R6.accdb");
+                    
+                    case Provider.Access:
+                        return new OleDbConnection(@"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\database\oledb\R6.mdb;Persist Security Info=True");
+                    
+                    case Provider.Excel:
+                        return new OleDbConnection(@"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\database\oledb\R6.mdb;Persist Security Info=True");
                 }
 
                 return null;
@@ -147,14 +155,14 @@
                 switch(connection)
                 {
                     case SQLiteConnection liteConnection:
-                        SelectStatement = sql;
-                        return new SQLiteCommand(sql, liteConnection);
+                        SqlStatement = sql;
+                        return new SQLiteCommand(SqlStatement, liteConnection);
                     case OleDbConnection dbConnection:
-                        SelectStatement = sql;
-                        return new OleDbCommand(sql, dbConnection);
+                        SqlStatement = sql;
+                        return new OleDbCommand(SqlStatement, dbConnection);
                     case SqlConnection sqlConnection:
-                        SelectStatement = sql;
-                        return new SqlCommand(sql, sqlConnection);
+                        SqlStatement = sql;
+                        return new SqlCommand(SqlStatement, sqlConnection);
                     default:
                         return null;
                 }
@@ -264,7 +272,7 @@
             {
                 string vals = string.Empty;
                 DbParameter[] sqlparameter = GetDataParameters(param);
-                foreach(var p in sqlparameter)
+                foreach(DbParameter p in sqlparameter)
                 {
                     vals += $"{p.SourceColumn} = '{p.Value}' AND ";
                 }
@@ -372,6 +380,32 @@
         }
 
         /// <summary>
+        /// Gets the select statement.
+        /// </summary>
+        /// <param name="source">The source.</param>
+        /// <param name="param">The parameter.</param>
+        /// <returns></returns>
+        public string GetSelectStatement(Source source, DbParameter[] param)
+        {
+            try
+            {
+                string vals = string.Empty;
+                foreach(DbParameter p in param)
+                {
+                    vals += $"{p.SourceColumn} = '{p.Value}' AND ";
+                }
+
+                vals = vals.Trim().Substring(0, vals.Length - 4);
+                return $"SELECT * FROM {source.ToString()} WHERE {vals}";
+            }
+            catch(Exception ex)
+            {
+                new Error(ex).ShowDialog();
+                return null;
+            }
+        }
+
+        /// <summary>
         ///     Gets the select statement.
         /// </summary>
         /// <param name="source">The source.</param>
@@ -403,13 +437,13 @@
         /// <param name="source">The source.</param>
         /// <param name="update">The update.</param>
         /// <returns></returns>
-        public string GetUpdateStatement(Source source, SQLiteParameter[] update)
+        public string GetUpdateStatement(Source source, DbParameter[] update)
         {
             try
             {
                 string vals = string.Empty;
                 int pid = 0;
-                foreach(SQLiteParameter p in update)
+                foreach(DbParameter p in update)
                 {
                     if(p.SourceColumn == "ID")
                     {
@@ -435,13 +469,13 @@
         /// <param name="source">The source.</param>
         /// <param name="param">The parameter.</param>
         /// <returns></returns>
-        public string GetInsertStatement(Source source, SQLiteParameter[] param)
+        public string GetInsertStatement(Source source, DbParameter[] param)
         {
             try
             {
                 string cols = string.Empty;
                 string vals = string.Empty;
-                foreach(SQLiteParameter p in param)
+                foreach(DbParameter p in param)
                 {
                     cols += $"{p.SourceColumn}, ";
                     vals += $"{p.Value}, ";
@@ -464,12 +498,12 @@
         /// <param name="source">The source.</param>
         /// <param name="param">The parameter.</param>
         /// <returns></returns>
-        public string GetDeleteStatement(Source source, SQLiteParameter[] param)
+        public string GetDeleteStatement(Source source, DbParameter[] param)
         {
             try
             {
                 string vals = string.Empty;
-                foreach(SQLiteParameter p in param)
+                foreach(DbParameter p in param)
                 {
                     vals += $"{p.SourceColumn} = '{p.Value}' AND ";
                 }
@@ -480,6 +514,39 @@
             catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
+                return null;
+            }
+        }
+
+        /// <summary>
+        /// Gets the select command.
+        /// </summary>
+        /// <param name="pmr">The PMR.</param>
+        /// <param name="connection">The connection.</param>
+        /// <param name="source">The source.</param>
+        /// <param name="provider">The provider.</param>
+        /// <returns></returns>
+        public DbCommand GetSelectCommand(DbParameter[] pmr, DbConnection connection, Source source = Source.PRC)
+        {
+            try
+            {
+                if(pmr.Length > 0 && connection != null)
+                {
+                    string sql = GetSelectStatement(source, pmr);
+                    DbCommand select = GetDataCommand(sql, connection);
+                    foreach(DbParameter p in pmr)
+                    {
+                        select.Parameters.Add(p);
+                    }
+
+                    return select;
+                }
+
+                return null;
+            }
+            catch(Exception e)
+            {
+                new Error(e).ShowDialog();
                 return null;
             }
         }
@@ -523,15 +590,15 @@
         /// <param name="connection">The connection.</param>
         /// <param name="source">The source.</param>
         /// <returns></returns>
-        public SQLiteCommand GetUpdateCommand(SQLiteParameter[] pmr, SQLiteConnection connection, Source source = Source.PRC)
+        public DbCommand GetUpdateCommand(DbParameter[] pmr, DbConnection connection, Source source = Source.PRC)
         {
             try
             {
                 if(pmr.Length > 0 && connection != null)
                 {
                     string sql = GetUpdateStatement(source, pmr);
-                    SQLiteCommand update = new SQLiteCommand(sql, connection);
-                    foreach(SQLiteParameter p in pmr)
+                    DbCommand update = GetDataCommand(sql, connection);
+                    foreach(DbParameter p in pmr)
                     {
                         update.Parameters.Add(p);
                     }
@@ -555,15 +622,15 @@
         /// <param name="connection">The connection.</param>
         /// <param name="source">The source.</param>
         /// <returns></returns>
-        public SQLiteCommand GetInsertCommand(SQLiteParameter[] pmr, SQLiteConnection connection, Source source = Source.PRC)
+        public DbCommand GetInsertCommand(DbParameter[] pmr, DbConnection connection, Source source = Source.PRC)
         {
             try
             {
                 if(pmr.Length > 0 && connection != null)
                 {
                     string sql = GetInsertStatement(source, pmr);
-                    SQLiteCommand insert = new SQLiteCommand(sql, connection);
-                    foreach(SQLiteParameter p in pmr)
+                    DbCommand insert = GetDataCommand(sql, connection);
+                    foreach(DbParameter p in pmr)
                     {
                         insert.Parameters.Add(p);
                     }
@@ -587,15 +654,15 @@
         /// <param name="pmr">The PMR.</param>
         /// <param name="connection">The connection.</param>
         /// <returns></returns>
-        public SQLiteCommand GetDeleteCommand(Source source, SQLiteParameter[] pmr, SQLiteConnection connection)
+        public DbCommand GetDeleteCommand(Source source, DbParameter[] pmr, DbConnection connection)
         {
             try
             {
                 if(pmr.Length > 0 && connection != null)
                 {
                     string sql = GetDeleteStatement(source, pmr);
-                    SQLiteCommand delete = new SQLiteCommand(sql, connection);
-                    foreach(SQLiteParameter p in pmr)
+                    DbCommand delete = GetDataCommand(sql, connection);
+                    foreach(DbParameter p in pmr)
                     {
                         delete.Parameters.Add(p);
                     }
@@ -620,7 +687,7 @@
         /// <param name="cmd">The command.</param>
         /// <param name="source">The source.</param>
         /// <returns></returns>
-        public SQLiteCommand GetDataCommand(SQLiteParameter[] pmr, SQLiteConnection connection, Sql cmd, Source source = Source.PRC)
+        public DbCommand GetDataCommand(DbParameter[] pmr, DbConnection connection, Sql cmd, Source source = Source.PRC)
         {
             try
             {
