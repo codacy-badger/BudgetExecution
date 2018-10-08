@@ -4881,14 +4881,15 @@ namespace BudgetExecution
             this.FundChart.EnableMouseRotation = true;
             this.FundChart.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FundChart.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.FundChart.HidePartialLabels = true;
             this.FundChart.HighlightSymbol = true;
             this.FundChart.Indexed = true;
             this.FundChart.IsWindowLess = false;
             // 
             // 
             // 
-            this.FundChart.Legend.Location = new System.Drawing.Point(1052, 9);
-            this.FundChart.Legend.Visible = false;
+            this.FundChart.Legend.Location = new System.Drawing.Point(1369, 10);
+            this.FundChart.Legend.VisibleCheckBox = true;
             this.FundChart.LegendsPlacement = Syncfusion.Windows.Forms.Chart.ChartPlacement.Outside;
             this.FundChart.Localize = null;
             this.FundChart.Location = new System.Drawing.Point(2, 100);
@@ -4897,6 +4898,7 @@ namespace BudgetExecution
             this.FundChart.Palette = Syncfusion.Windows.Forms.Chart.ChartColorPalette.Custom;
             this.FundChart.PrimaryXAxis.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FundChart.PrimaryXAxis.GridLineType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(182)))), ((int)(((byte)(183)))));
+            this.FundChart.PrimaryXAxis.HidePartialLabels = true;
             this.FundChart.PrimaryXAxis.LineType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(182)))), ((int)(((byte)(183)))));
             this.FundChart.PrimaryXAxis.LogLabelsDisplayMode = Syncfusion.Windows.Forms.Chart.LogLabelsDisplayMode.Default;
             this.FundChart.PrimaryXAxis.Margin = true;
@@ -4906,6 +4908,7 @@ namespace BudgetExecution
             this.FundChart.PrimaryXAxis.TitleFont = new System.Drawing.Font("Segoe UI", 14F);
             this.FundChart.PrimaryYAxis.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FundChart.PrimaryYAxis.GridLineType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(182)))), ((int)(((byte)(183)))));
+            this.FundChart.PrimaryYAxis.HidePartialLabels = true;
             this.FundChart.PrimaryYAxis.LineType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(182)))), ((int)(((byte)(183)))));
             this.FundChart.PrimaryYAxis.LogLabelsDisplayMode = Syncfusion.Windows.Forms.Chart.LogLabelsDisplayMode.Default;
             this.FundChart.PrimaryYAxis.Margin = true;
@@ -4913,7 +4916,7 @@ namespace BudgetExecution
             this.FundChart.PrimaryYAxis.TitleColor = System.Drawing.Color.White;
             this.FundChart.PrimaryYAxis.TitleFont = new System.Drawing.Font("Segoe UI", 14F);
             this.FundChart.RealMode3D = true;
-            this.FundChart.Rotation = 20F;
+            this.FundChart.Rotation = 10F;
             chartSeries17.FancyToolTip.ResizeInsideSymbol = true;
             chartSeries17.Name = "Default0";
             chartSeries17.Points.Add(1D, ((double)(55D)));
@@ -4963,6 +4966,7 @@ namespace BudgetExecution
             this.FundChart.Size = new System.Drawing.Size(1500, 720);
             this.FundChart.Spacing = 5F;
             this.FundChart.SpacingBetweenPoints = 5F;
+            this.FundChart.SpacingBetweenSeries = 5F;
             this.FundChart.Style3D = true;
             this.FundChart.TabIndex = 43;
             this.FundChart.Tilt = 5F;
@@ -5661,7 +5665,7 @@ namespace BudgetExecution
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 131F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 127F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 135F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 157F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 158F));
             this.tableLayoutPanel2.Controls.Add(this.button6, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.button7, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.GridRefreshButton, 2, 0);
@@ -5708,7 +5712,7 @@ namespace BudgetExecution
             this.button7.Location = new System.Drawing.Point(115, 5);
             this.button7.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(90, 42);
+            this.button7.Size = new System.Drawing.Size(89, 42);
             this.button7.TabIndex = 163;
             this.button7.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.metroSetToolTip1.SetToolTip(this.button7, "Next Account");
@@ -5725,7 +5729,7 @@ namespace BudgetExecution
             this.GridRefreshButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.GridRefreshButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.GridRefreshButton.Image = ((System.Drawing.Image)(resources.GetObject("GridRefreshButton.Image")));
-            this.GridRefreshButton.Location = new System.Drawing.Point(213, 5);
+            this.GridRefreshButton.Location = new System.Drawing.Point(212, 5);
             this.GridRefreshButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.GridRefreshButton.Name = "GridRefreshButton";
             this.GridRefreshButton.Size = new System.Drawing.Size(119, 42);
@@ -5744,10 +5748,10 @@ namespace BudgetExecution
             this.button11.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button11.Image = ((System.Drawing.Image)(resources.GetObject("button11.Image")));
-            this.button11.Location = new System.Drawing.Point(733, 5);
+            this.button11.Location = new System.Drawing.Point(732, 5);
             this.button11.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(150, 42);
+            this.button11.Size = new System.Drawing.Size(151, 42);
             this.button11.TabIndex = 167;
             this.button11.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.metroSetToolTip1.SetToolTip(this.button11, "Copy Account\r\n");
@@ -5764,7 +5768,7 @@ namespace BudgetExecution
             this.button9.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button9.Image = ((System.Drawing.Image)(resources.GetObject("button9.Image")));
-            this.button9.Location = new System.Drawing.Point(340, 5);
+            this.button9.Location = new System.Drawing.Point(339, 5);
             this.button9.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(123, 42);
@@ -5785,7 +5789,7 @@ namespace BudgetExecution
             this.button10.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button10.Image = ((System.Drawing.Image)(resources.GetObject("button10.Image")));
-            this.button10.Location = new System.Drawing.Point(471, 5);
+            this.button10.Location = new System.Drawing.Point(470, 5);
             this.button10.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(119, 42);
@@ -5804,7 +5808,7 @@ namespace BudgetExecution
             this.button12.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button12.Image = ((System.Drawing.Image)(resources.GetObject("button12.Image")));
-            this.button12.Location = new System.Drawing.Point(598, 5);
+            this.button12.Location = new System.Drawing.Point(597, 5);
             this.button12.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button12.Name = "button12";
             this.button12.Size = new System.Drawing.Size(127, 42);
@@ -5858,7 +5862,7 @@ namespace BudgetExecution
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 45.9854F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 54.0146F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 118F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 123F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 124F));
             this.tableLayoutPanel3.Controls.Add(this.button4, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.button5, 1, 0);
             this.tableLayoutPanel3.Controls.Add(this.button3, 3, 0);
@@ -5896,7 +5900,7 @@ namespace BudgetExecution
             this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
             this.button5.Location = new System.Drawing.Point(109, 3);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(119, 44);
+            this.button5.Size = new System.Drawing.Size(118, 44);
             this.button5.TabIndex = 160;
             this.metroSetToolTip1.SetToolTip(this.button5, "Next Account");
             this.button5.UseVisualStyleBackColor = false;
@@ -5911,9 +5915,9 @@ namespace BudgetExecution
             this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.Location = new System.Drawing.Point(352, 3);
+            this.button3.Location = new System.Drawing.Point(351, 3);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(118, 44);
+            this.button3.Size = new System.Drawing.Size(119, 44);
             this.button3.TabIndex = 158;
             this.metroSetToolTip1.SetToolTip(this.button3, "Remove Account");
             this.button3.UseVisualStyleBackColor = false;
@@ -5927,7 +5931,7 @@ namespace BudgetExecution
             this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(234, 3);
+            this.button1.Location = new System.Drawing.Point(233, 3);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(112, 44);
             this.button1.TabIndex = 157;

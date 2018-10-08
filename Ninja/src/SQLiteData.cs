@@ -156,7 +156,7 @@ namespace BudgetExecution
                 if(label.Visible == false)
                 {
                     label.Visible = true;
-                    label.Text = control.Tag.ToString();
+                    label.Text = control.Tag?.ToString() ?? colname;
                 }
 
                 string[] filters = Fields(table, colname);
@@ -409,20 +409,20 @@ namespace BudgetExecution
 
                     case Source.Reimbursables:
                         label1.Text = @"AgreementNumber";
-                        PopulateFilterItems("AgreementNumber", Table, Filter1, label1);
+                        PopulateFilterItems(Field.AgreementNumber, Table, Filter1, label1);
                         Filter2.Tag = "ReimbOrg";
                         Filter3.Tag = "FundName";
                         break;
 
                     case Source.ControlNumbers:
                         label1.Text = @"DivisionID";
-                        PopulateFilterItems("DivisionID", Table, Filter1, label1);
+                        PopulateFilterItems(Field.DivisionID, Table, Filter1, label1);
                         Filter2.Tag = "Fund";
                         break;
 
                     case Source.Divisions:
                         label1.Text = @"DivisionName";
-                        PopulateFilterItems("Name", Table, Filter1, label1);
+                        PopulateFilterItems(Field.Name, Table, Filter1, label1);
                         Filter2.Tag = "Title";
                         Filter3.Tag = "RC";
                         Filter4.Tag = "Code";
@@ -437,7 +437,7 @@ namespace BudgetExecution
 
                     case Source.Funds:
                         label1.Text = "Name";
-                        PopulateFilterItems("Name", Table, Filter1, label1);
+                        PopulateFilterItems(Field.Name, Table, Filter1, label1);
                         Filter2.Tag = "Title";
                         Filter3.Tag = "Code";
                         Filter4.Tag = "FiscalYear";
@@ -445,7 +445,7 @@ namespace BudgetExecution
 
                     case Source.Benefits:
                         label1.Text = "HROrgCodeName";
-                        PopulateFilterItems(Field.DivisionName, Table, Filter1, label1);
+                        PopulateFilterItems(Field.HrOrgCodeName, Table, Filter1, label1);
                         Filter2.Tag = "OccupationalSeries";
                         Filter3.Tag = "HROrgCode";
                         Filter4.Tag = "LastName";

@@ -1,4 +1,4 @@
 ﻿CREATE VIEW "FTE" 
 AS SELECT * 
 FROM PRC 
-WHERE BOC = '17';
+WHERE BOC = '17' AND Amount > 0;

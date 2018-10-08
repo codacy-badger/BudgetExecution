@@ -1,4 +1,4 @@
 ﻿CREATE VIEW "OIL" 
 AS SELECT * 
 FROM PRC 
-WHERE Fund LIKE 'H%';
+WHERE Fund LIKE 'H%' AND Amount > 0;

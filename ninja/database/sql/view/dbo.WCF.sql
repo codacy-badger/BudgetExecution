@@ -1,4 +1,4 @@
 ﻿CREATE VIEW "WCF" 
 AS SELECT * 
 FROM PRC 
-WHERE BOC = '38';
+WHERE BOC = '38' AND Amount > 0;

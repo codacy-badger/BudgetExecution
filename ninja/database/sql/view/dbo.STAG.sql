@@ -1,4 +1,4 @@
 ﻿CREATE VIEW "STAG" 
 AS SELECT * 
 FROM PRC 
-WHERE Fund LIKE 'E%';
+WHERE Fund LIKE 'E%' AND Amount > 0;

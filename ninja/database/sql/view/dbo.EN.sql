@@ -1,4 +1,4 @@
 ﻿CREATE VIEW "EN" 
 AS SELECT * 
 FROM PRC 
-WHERE RC = '06M';
+WHERE RC = '06M' AND Amount > 0;

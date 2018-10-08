@@ -1,4 +1,4 @@
 ﻿CREATE VIEW "MD" 
 AS SELECT * 
 FROM PRC 
-WHERE RC = '06C';
+WHERE RC = '06C' AND Amount > 0;

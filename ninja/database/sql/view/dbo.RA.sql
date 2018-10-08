@@ -1,4 +1,4 @@
 ﻿CREATE VIEW "RA" 
 AS SELECT * 
 FROM PRC 
-WHERE RC = '06A';
+WHERE RC = '06A' AND Amount > 0;

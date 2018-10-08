@@ -1,4 +1,4 @@
 ﻿CREATE VIEW "GRANTS" 
 AS SELECT * 
 FROM PRC 
-WHERE BOC = '41';
+WHERE BOC = '41' AND Amount > 0;

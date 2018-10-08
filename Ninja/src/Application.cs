@@ -50,7 +50,7 @@ namespace BudgetExecution
 
     public enum Sql { SELECT, INSERT, UPDATE, DELETE, CREATE, DROP }
 
-    public enum Field { ID, BudgetLevel, BFY, RPIO, Fund, FundName, BOC, BocName, Org, RC, Code, NPM, Goal, GoalName, Objective, ObjectiveName, DivisionName, ProgramArea, ProgramAreaName, ProgramProjectCode, ProgramProjectName, SiteProjectName, SiteProjectCode, NpmName, ReimbOrg, AH, DCN, ControlNumber, PurchaseRequest, AgreementNumber, Type, DivisionID, DocumentNumber, State, Organization, District, FocName, LastName, WorkCode, HrOrgCodeName }
+    public enum Field { ID, BudgetLevel, BFY, RPIO, Fund, FundName, BOC, BocName, Org, RC, Code, NPM, Goal, GoalName, Objective, ObjectiveName, DivisionName, ProgramArea, ProgramAreaName, ProgramProjectCode, ProgramProjectName, SiteProjectName, SiteProjectCode, NpmName, ReimbOrg, AH, DCN, ControlNumber, PurchaseRequest, AgreementNumber, Type, DivisionID, DocumentNumber, State, Organization, District, FocName, LastName, WorkCode, HrOrgCodeName, Name }
 
     public enum Provider { SQLite = 0, Excel = 1, SqlServer = 2, SqlCe = 3, Access = 4, OleDb = 5 }
 

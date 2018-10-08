@@ -1,4 +1,4 @@
 ﻿CREATE VIEW "LUST" 
 AS SELECT * 
 FROM PRC 
-WHERE Fund LIKE 'F%';
+WHERE Fund LIKE 'F%' AND Amount > 0;

@@ -80,10 +80,18 @@ namespace BudgetExecution
             }
 
             Table = DbData.Table;
+            CarryOver = DbData.Table.AsEnumerable().Where(p => p.Field<string>("BFY").Equals("2018")).Select(p => p).CopyToDataTable();
+            CurrentYear = DbData.Table.AsEnumerable().Where(p => p.Field<string>("BFY").Equals("2019")).Select(p => p).CopyToDataTable();
             Metric = new PrcMetric(DbData);
             DataMetrics = Metric.GetChartMetrics(Table, filter);
+            CarryOverMetrics = Metric.GetChartMetrics(CarryOver, filter);
+            CurrentYearMetrics = Metric.GetChartMetrics(CurrentYear, filter);
             DataSeries = GetSeriesTotals(GetMeasure(DataMetrics, Value), type);
             DataSeries.Type = type;
+            CarryOverSeries = GetSeriesTotals(GetMeasure(CarryOverMetrics, Value), type);
+            CarryOverSeries.Type = type;
+            CurrentYearSeries = GetSeriesTotals(GetMeasure(CurrentYearMetrics, Value), type);
+            CurrentYearSeries.Type = type;
             ConfigureSeries(DataSeries, Value);
             Configure3DMode(Chart);
             ConfigureToolTip(DataSeries);
@@ -105,18 +113,32 @@ namespace BudgetExecution
             SeriesType = type;
             ConfigureMainTitle(title);
             Table = DbData.Table;
+            CarryOver = DbData.Table.AsEnumerable().Where(p => p.Field<string>("BFY").Equals("2018")).Select(p => p).CopyToDataTable();
+            CurrentYear = DbData.Table.AsEnumerable().Where(p => p.Field<string>("BFY").Equals("2019")).Select(p => p).CopyToDataTable();
             Metric = new PrcMetric(DbData);
             DataMetrics = Metric.GetChartMetrics(Table, filter);
+            CarryOverMetrics = Metric.GetChartMetrics(CarryOver, filter);
+            CurrentYearMetrics = Metric.GetChartMetrics(CurrentYear, filter);
             DataSeries = GetSeriesTotals(GetMeasure(DataMetrics, Value), type);
-            Table = DbData.Table;
-            Metric = new PrcMetric(DbData);
-            DataMetrics = Metric.GetChartMetrics(Table, filter);
-            Chart.Series?.Add(DataSeries);
             DataSeries.Type = type;
-            ConfigureSeries(DataSeries, Value);
+            DataSeries.Name = "Combined Years";
+            CarryOverSeries = GetSeriesTotals(GetMeasure(CarryOverMetrics, Value), type);
+            CarryOverSeries.Type = type;
+            CarryOverSeries.Name = "Carry Over";
+            CurrentYearSeries = GetSeriesTotals(GetMeasure(CurrentYearMetrics, Value), type);
+            CurrentYearSeries.Type = type;
+            CurrentYearSeries.Name = "Current Year";
+            Chart.Series?.Add(CarryOverSeries);
+            Chart.Series?.Add(CurrentYearSeries);
+            DataSeries.Type = type;
+            ConfigureSeries(CarryOverSeries, Value);
+            ConfigureSeries(CurrentYearSeries, Value);
             Configure3DMode(Chart);
-            ConfigureToolTip(DataSeries);
+            ConfigureToolTip(CarryOverSeries);
+            ConfigureToolTip(CurrentYearSeries);
             ConfigurePrimaryAxisLabels(Chart);
+            Chart.ShowLegend = true;
+            ConfigureLegend(Chart);
         }
 
         public BudgetChart(ChartControl chart, string[] title, DataTable table, Field filter, Stat value, ChartSeriesType type)
@@ -228,9 +250,21 @@ namespace BudgetExecution
 
         public Dictionary<string, double[]> DataMetrics { get; set; }
 
+        public Dictionary<string, double[]> CarryOverMetrics { get; set; }
+
+        public Dictionary<string, double[]> CurrentYearMetrics { get; set; }
+
         public ChartSeries DataSeries { get; set; }
 
+        public ChartSeries CarryOverSeries { get; set; }
+
+        public ChartSeries CurrentYearSeries { get; set; }
+
         public Dictionary<string, double> DataTotals { get; set; }
+
+        public Dictionary<string, double> CarryOverTotals { get; set; }
+
+        public Dictionary<string, double> CurrentYearTotals { get; set; }
 
         public int[] Dimension { get; set; }
 
@@ -242,10 +276,6 @@ namespace BudgetExecution
 
         public Stat Value { get; set; }
 
-        public Dictionary<string, double[]> InputMetrics { get; set; }
-
-        public Dictionary<string, double> InputTotals { get; set; }
-
         public ChartLegend Legend { get; set; }
 
         public string[] MainTitle { get; set; }
@@ -254,7 +284,9 @@ namespace BudgetExecution
 
         public DataTable Table { get; set; }
 
-        private double Total { get; }
+        public DataTable CarryOver { get;set; }
+
+        public DataTable CurrentYear { get; set; }
 
         // METHODS
         internal ChartControl Activate()
@@ -670,6 +702,18 @@ namespace BudgetExecution
             {
                 new Error(e).ShowDialog();
                 return null;
+            }
+        }
+        
+        internal void ConfigureLegend(ChartControl chart)
+        {
+            try
+            {
+                chart.Legend.VisibleCheckBox = true;
+            }
+            catch(Exception e)
+            {
+                new Error(e).ShowDialog();
             }
         }
 
