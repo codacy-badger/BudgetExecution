@@ -107,6 +107,7 @@ namespace BudgetExecution
                 GridBocFilter.Visible = false;
                 PopulateGridYearFilterItems();
                 ConfigureTextBoxBindings();
+                DefineVisisbleDataColumns(Grid);
                 ChartMainTitle = new string[] { $"{Source.ToString()} Funding By Appropriation"};
                 FundChart = new BudgetChart(FundChart, ChartMainTitle, DbData, Field.Fund, Stat.Total, ChartSeriesType.Column).Activate();
             }
@@ -522,11 +523,9 @@ namespace BudgetExecution
                 try
                 {
                     BindingSource.Filter = null;
-                    Grid.DataSource = BindingSource;
-                    var table = DbData.Table.AsEnumerable().Select(p => p).CopyToDataTable();
-                    lblCount.Text = table.Rows.Count.ToString();
-                    lblAve.Text = table.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Average().ToString("N");
-                    lblTotal.Text = table.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Sum().ToString("N");
+                    lblCount.Text = DbData.Table.Rows.Count.ToString();
+                    lblAve.Text = DbData.Table.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Average().ToString("N");
+                    lblTotal.Text = DbData.Table.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Sum().ToString("N");
                     GridBocFilter.Items.Clear();
                     GridYearFilter.Items.Clear();
                     GridFundFilter.Items.Clear();
@@ -925,7 +924,6 @@ namespace BudgetExecution
                         break;
 
                     case 8:
-                        DefineVisisbleDataColumns(Grid);
                         var table = DbData.Table.AsEnumerable().Select(p => p).CopyToDataTable();
                         lblCount.Text = table.Rows.Count.ToString();
                         lblAve.Text = table.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Average().ToString("N");

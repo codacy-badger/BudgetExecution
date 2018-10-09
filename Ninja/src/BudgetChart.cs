@@ -37,7 +37,6 @@ namespace BudgetExecution
             ConfigureLargeNumberSeries(DataSeries);
             ConfigurePrimaryAxisLabels(Chart);
             Configure3DMode(Chart);
-            ConfigureToolTip(DataSeries);
             Chart.ShowToolTips = true;
         }
 
@@ -62,7 +61,6 @@ namespace BudgetExecution
             DataSeries.Type = SeriesType;
             ConfigureLargeNumberSeries(DataSeries);
             ConfigurePrimaryAxisLabels(Chart);
-            ConfigureToolTip(DataSeries);
             Chart.ShowToolTips = true;
         }
 
@@ -84,17 +82,19 @@ namespace BudgetExecution
             CurrentYear = DbData.Table.AsEnumerable().Where(p => p.Field<string>("BFY").Equals("2019")).Select(p => p).CopyToDataTable();
             Metric = new PrcMetric(DbData);
             DataMetrics = Metric.GetChartMetrics(Table, filter);
-            CarryOverMetrics = Metric.GetChartMetrics(CarryOver, filter);
             CurrentYearMetrics = Metric.GetChartMetrics(CurrentYear, filter);
+            CarryOverMetrics = Metric.GetChartMetrics(CarryOver, filter);
             DataSeries = GetSeriesTotals(GetMeasure(DataMetrics, Value), type);
             DataSeries.Type = type;
-            CarryOverSeries = GetSeriesTotals(GetMeasure(CarryOverMetrics, Value), type);
-            CarryOverSeries.Type = type;
             CurrentYearSeries = GetSeriesTotals(GetMeasure(CurrentYearMetrics, Value), type);
             CurrentYearSeries.Type = type;
-            ConfigureSeries(DataSeries, Value);
+            CurrentYearSeries.Text = "Current Year";
+            CarryOverSeries = GetSeriesTotals(GetMeasure(CarryOverMetrics, Value), type);
+            CarryOverSeries.Type = type;
+            CarryOverSeries.Text = "Carry Over";
+            ConfigureSeries(CurrentYearSeries, Value);
+            ConfigureSeries(CarryOverSeries, Value);
             Configure3DMode(Chart);
-            ConfigureToolTip(DataSeries);
             Chart.ShowToolTips = true;
         }
 
@@ -117,25 +117,27 @@ namespace BudgetExecution
             CurrentYear = DbData.Table.AsEnumerable().Where(p => p.Field<string>("BFY").Equals("2019")).Select(p => p).CopyToDataTable();
             Metric = new PrcMetric(DbData);
             DataMetrics = Metric.GetChartMetrics(Table, filter);
-            CarryOverMetrics = Metric.GetChartMetrics(CarryOver, filter);
             CurrentYearMetrics = Metric.GetChartMetrics(CurrentYear, filter);
+            CarryOverMetrics = Metric.GetChartMetrics(CarryOver, filter);
             DataSeries = GetSeriesTotals(GetMeasure(DataMetrics, Value), type);
             DataSeries.Type = type;
             DataSeries.Name = "Combined Years";
-            CarryOverSeries = GetSeriesTotals(GetMeasure(CarryOverMetrics, Value), type);
-            CarryOverSeries.Type = type;
-            CarryOverSeries.Name = "Carry Over";
             CurrentYearSeries = GetSeriesTotals(GetMeasure(CurrentYearMetrics, Value), type);
             CurrentYearSeries.Type = type;
+            CurrentYearSeries.Text = "Current Year";
             CurrentYearSeries.Name = "Current Year";
-            Chart.Series?.Add(CarryOverSeries);
-            Chart.Series?.Add(CurrentYearSeries);
-            DataSeries.Type = type;
-            ConfigureSeries(CarryOverSeries, Value);
+            CarryOverSeries = GetSeriesTotals(GetMeasure(CarryOverMetrics, Value), type);
+            CarryOverSeries.Type = type;
+            CarryOverSeries.Text = "Carry Over";
+            CarryOverSeries.Name = "Carry Over";
+            Chart.ShowToolTips = true;
             ConfigureSeries(CurrentYearSeries, Value);
-            Configure3DMode(Chart);
-            ConfigureToolTip(CarryOverSeries);
+            ConfigureSeries(CarryOverSeries, Value);
+            Chart.Series?.Add(CurrentYearSeries);
             ConfigureToolTip(CurrentYearSeries);
+            Chart.Series?.Add(CarryOverSeries);
+            ConfigureToolTip(CarryOverSeries);
+            Configure3DMode(Chart);
             ConfigurePrimaryAxisLabels(Chart);
             Chart.ShowLegend = true;
             ConfigureLegend(Chart);
@@ -157,7 +159,6 @@ namespace BudgetExecution
             ConfigurePrimaryAxisLabels(Chart);
             ConfigureMainTitle(title);
             Configure3DMode(Chart);
-            ConfigureToolTip(DataSeries);
             Chart.ShowToolTips = true;
         }
 
@@ -181,7 +182,6 @@ namespace BudgetExecution
 
             Chart.Series?.Add(DataSeries);
             Configure3DMode(Chart);
-            ConfigureToolTip(DataSeries);
             ConfigurePrimaryAxisLabels(Chart);
             ConfigureMainTitle(title);
             Chart.ShowToolTips = true;
@@ -208,7 +208,6 @@ namespace BudgetExecution
             DataSeries.Type = SeriesType;
             ConfigureSeries(DataSeries, Value);
             Configure3DMode(Chart);
-            ConfigureToolTip(DataSeries);
             Chart.ShowToolTips = true;
         }
 
@@ -231,7 +230,6 @@ namespace BudgetExecution
             DataSeries = GetSeriesTotals(GetMeasure(DataMetrics, Value), SeriesType);
             Chart.Series?.Add(DataSeries);
             ConfigureSeries(DataSeries, Value);
-            ConfigureToolTip(DataSeries);
             ConfigurePrimaryAxisLabels(Chart);
             ConfigureMainTitle(title);
             Chart.ShowToolTips = true;
@@ -443,44 +441,43 @@ namespace BudgetExecution
             }
         }
 
-        internal void ConfigureSeries(ChartSeries series)
+        internal void ConfigureSeries(ChartSeries Series)
         {
             try
             {
-                DataSeries = series;
-                DataSeries.SmartLabels = true;
-                DataSeries.SortPoints = true;
-                DataSeries.Style.DisplayText = true;
-                DataSeries.Style.TextOffset = 15.0F;
-                DataSeries.Style.TextOrientation = ChartTextOrientation.Up;
-                DataSeries.Style.DisplayShadow = true;
-                DataSeries.Style.TextColor = Color.White;
-                DataSeries.PointsToolTipFormat = "Funding:{0}-{4:N2}";
-                DataSeries.Style.Font.Size = 12.0F;
-                DataSeries.Style.Font.Facename = "Segoe UI";
-                DataSeries.Style.Font.FontStyle = FontStyle.Bold;
+                Series.SmartLabels = true;
+                Series.SortPoints = true;
+                Series.Style.DisplayText = true;
+                Series.Style.TextOffset = 15.0F;
+                Series.Style.TextOrientation = ChartTextOrientation.Up;
+                Series.Style.DisplayShadow = true;
+                Series.Style.TextColor = Color.White;
+                Series.PointsToolTipFormat = "{0}-{1}";
+                Series.Style.Font.Size = 12.0F;
+                Series.Style.Font.Facename = "Segoe UI";
+                Series.Style.Font.FontStyle = FontStyle.Bold;
                 if(Source == Source.FTE)
                 {
-                    DataSeries.Style.TextFormat = "{0}";
+                    Series.Style.TextFormat = "{0}";
                 }
                 else
                 {
-                    DataSeries.Style.TextFormat = "${0:N2}";
+                    Series.Style.TextFormat = "${0:N2}";
                 }
 
                 if(SeriesType == ChartSeriesType.Column)
                 {
-                    DataSeries.SmartLabels = true;
-                    DataSeries.SortPoints = true;
-                    DataSeries.Style.DisplayText = true;
-                    DataSeries.Style.TextOffset = 15.0F;
-                    DataSeries.Style.TextOrientation = ChartTextOrientation.Up;
-                    DataSeries.Style.DisplayShadow = true;
-                    DataSeries.Style.TextColor = Color.White;
-                    DataSeries.ConfigItems.ColumnItem.ShadingMode = ChartColumnShadingMode.PhongCylinder;
-                    DataSeries.ConfigItems.ColumnItem.LightColor = Color.SteelBlue;
-                    DataSeries.ConfigItems.ColumnItem.PhongAlpha = 2;
-                    ConfigureToolTip(DataSeries);
+                    Series.SmartLabels = true;
+                    Series.SortPoints = true;
+                    Series.Style.DisplayText = true;
+                    Series.Style.TextOffset = 15.0F;
+                    Series.Style.TextOrientation = ChartTextOrientation.Up;
+                    Series.Style.DisplayShadow = true;
+                    Series.Style.TextColor = Color.White;
+                    Series.ConfigItems.ColumnItem.ShadingMode = ChartColumnShadingMode.PhongCylinder;
+                    Series.ConfigItems.ColumnItem.LightColor = Color.SteelBlue;
+                    Series.ConfigItems.ColumnItem.PhongAlpha = 2;
+                    ConfigureToolTip(Series);
                 }
             }
             catch(Exception e)
@@ -493,72 +490,75 @@ namespace BudgetExecution
         {
             try
             {
-                DataSeries = series;
                 if(Source == Source.FTE)
                 {
-                    DataSeries.Style.TextFormat = "{0}";
+                    series.Style.TextFormat = "{0}";
                 }
                 else
                 {
                     if(value == Stat.Total || value == Stat.Average)
                     {
-                        DataSeries.Style.TextFormat = "{0:N2}";
+                        series.Style.TextFormat = "{0:N2}";
                     }
                 }
 
                 if(value == Stat.Ratio)
                 {
-                    DataSeries.Style.TextFormat = "{0:P}";
+                    series.Style.TextFormat = "{0:P}";
                 }
 
                 if(value == Stat.Count)
                 {
-                    DataSeries.Style.TextFormat = "{0}";
+                    series.Style.TextFormat = "{0}";
                 }
 
-                if(DataSeries.Type == ChartSeriesType.Pie)
+                if(series.Type == ChartSeriesType.Pie)
                 {
-                    for(int i = 0; i < DataSeries.Points.Count; i++)
+                    for(int i = 0; i < series.Points.Count; i++)
                     {
-                        DataSeries.Styles[i].ToolTip = $"{DataSeries.Points[i].Category}";
+                        series.Styles[i].ToolTip = $"{series.Points[i].Category}";
                     }
 
-                    DataSeries.Style.DisplayText = true;
-                    DataSeries.SmartLabels = true;
-                    DataSeries.SortPoints = true;
-                    DataSeries.Style.DisplayText = true;
-                    DataSeries.Style.DisplayShadow = true;
-                    DataSeries.Style.TextOffset = 20.0F;
-                    DataSeries.Style.TextOrientation = ChartTextOrientation.Up;
-                    DataSeries.Style.DisplayShadow = true;
-                    DataSeries.Style.TextColor = Color.White;
-                    DataSeries.PointsToolTipFormat = "{3} - {4}";
-                    DataSeries.Style.Font.Size = 10.0F;
-                    DataSeries.Style.Font.FontStyle = FontStyle.Bold;
-                    DataSeries.Style.Font.Facename = "SegoeUI";
-                    DataSeries.ShowTicks = true;
+                    series.Style.DisplayText = true;
+                    series.SmartLabels = true;
+                    series.SortPoints = true;
+                    series.Style.DisplayText = true;
+                    series.Style.DisplayShadow = true;
+                    series.Style.TextOffset = 20.0F;
+                    series.Style.TextOrientation = ChartTextOrientation.Up;
+                    series.Style.DisplayShadow = true;
+                    series.Style.TextColor = Color.White;
+                    series.Style.Font.Size = 10.0F;
+                    series.Style.Font.FontStyle = FontStyle.Bold;
+                    series.Style.Font.Facename = "SegoeUI";
+                    series.ShowTicks = true;
                     Chart.Series[0].ConfigItems.PieItem.HeightCoeficient = 0.1f;
-                    //ConfigurePieChart(DataSeries);
+                    //ConfigurePieChart(series);
                     return;
                 }
 
-                if(DataSeries.Type == ChartSeriesType.Column)
+                if(series.Type == ChartSeriesType.Column)
                 {
-                    DataSeries.SmartLabels = true;
-                    DataSeries.SortPoints = true;
-                    DataSeries.Style.DisplayText = true;
-                    DataSeries.Style.TextOffset = 20.0F;
-                    DataSeries.Style.TextOrientation = ChartTextOrientation.Up;
-                    DataSeries.Style.DisplayShadow = true;
-                    DataSeries.Style.TextColor = Color.White;
-                    DataSeries.PointsToolTipFormat = "{3} - {4}";
-                    DataSeries.Style.Font.Size = 10.0F;
-                    DataSeries.Style.Font.FontStyle = FontStyle.Bold;
-                    DataSeries.Style.Font.Facename = "SegoeUI";
-                    DataSeries.ShowTicks = true;
-                    DataSeries.ConfigItems.ColumnItem.ShadingMode = ChartColumnShadingMode.PhongCylinder;
-                    DataSeries.ConfigItems.ColumnItem.LightColor = Color.SteelBlue;
-                    DataSeries.ConfigItems.ColumnItem.PhongAlpha = 2;
+                    series.SmartLabels = true;
+                    series.SortPoints = true;
+                    series.Style.DisplayText = true;
+                    if(Source == Source.FTE)
+                    {
+                        series.PointsToolTipFormat = "{0}\nFTE: {4:N}";
+                    }
+
+                    series.PointsToolTipFormat = "{0}\nFunding: {4:C}";
+                    series.Style.TextOffset = 20.0F;
+                    series.Style.TextOrientation = ChartTextOrientation.Up;
+                    series.Style.DisplayShadow = true;
+                    series.Style.TextColor = Color.White;
+                    series.Style.Font.Size = 10.0F;
+                    series.Style.Font.FontStyle = FontStyle.Bold;
+                    series.Style.Font.Facename = "SegoeUI";
+                    series.ShowTicks = true;
+                    series.ConfigItems.ColumnItem.ShadingMode = ChartColumnShadingMode.PhongCylinder;
+                    series.ConfigItems.ColumnItem.LightColor = Color.SteelBlue;
+                    series.ConfigItems.ColumnItem.PhongAlpha = 2;
                 }
             }
             catch(Exception e)
@@ -569,10 +569,9 @@ namespace BudgetExecution
 
         internal void ConfigureToolTip(ChartSeries series)
         {
-            DataSeries = series;
-            for(int i = 0; i < DataSeries.Points.Count; i++)
+            for(int i = 0; i < series.Points.Count; i++)
             {
-                DataSeries.Styles[i].ToolTip = string.Format("{0}", DataSeries.Points[i].Category);
+                series.Styles[0].ToolTip = $"{series.Points[i].Category}";
             }
         }
 
@@ -601,8 +600,8 @@ namespace BudgetExecution
                 {
                     Chart.Tilt = 1f;
                     Chart.Depth = 250;
-                    Chart.Rotation = 20;
-                    Chart.SpacingBetweenSeries = 2;
+                    Chart.Rotation = 10;
+                    Chart.SpacingBetweenSeries = 1;
                     Chart.RealMode3D = true;
                     return;
                 }

@@ -13,7 +13,7 @@ namespace BudgetExecution
     // Delegates
     public delegate double[] Calculator(DataTable table);
 
-    public delegate DbParameter[] Paramaker(Dictionary<string, object> param);
+    public delegate DbParameter[] Param(Dictionary<string, object> param);
 
     public delegate DataTable DataFilter(DataTable table, Field column, string filter);
 

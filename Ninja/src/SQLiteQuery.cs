@@ -13,7 +13,9 @@ namespace BudgetExecution
     public class SQLiteQuery : Query, IQuery
     {
         // CONSTRUCTORS
-        public SQLiteQuery() { }
+        public SQLiteQuery()
+        {
+        }
 
         public SQLiteQuery(Source source) : base(source)
         {
@@ -73,7 +75,7 @@ namespace BudgetExecution
 
         public new Dictionary<string, object> Parameter { get; }
 
-        public SQLiteParameter[] Parameters { get; set; }
+        public new SQLiteParameter[] Parameters { get; set; }
 
         public new string TableName { get; }
 
@@ -284,7 +286,7 @@ namespace BudgetExecution
             }
         }
 
-        public new string GetUpdateStatement(Source source, SQLiteParameter[] param)
+        public string GetUpdateStatement(Source source, SQLiteParameter[] param)
         {
             try
             {
@@ -310,7 +312,7 @@ namespace BudgetExecution
             }
         }
 
-        public new string GetInsertStatement(Source source, SQLiteParameter[] param)
+        public string GetInsertStatement(Source source, SQLiteParameter[] param)
         {
             try
             {
@@ -333,7 +335,7 @@ namespace BudgetExecution
             }
         }
 
-        public new string GetDeleteStatement(Source source, SQLiteParameter[] param)
+        public string GetDeleteStatement(Source source, SQLiteParameter[] param)
         {
             try
             {

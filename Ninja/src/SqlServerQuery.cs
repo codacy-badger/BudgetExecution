@@ -197,7 +197,7 @@ namespace BudgetExecution
             }
         }
 
-        public new SqlConnection GetConnection(Provider provider)
+        public SqlConnection GetConnection(Provider provider)
         {
             try
             {
