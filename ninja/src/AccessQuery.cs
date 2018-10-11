@@ -1,12 +1,11 @@
-﻿
-using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Data;
-using System.Data.OleDb;
-
-namespace BudgetExecution
+﻿namespace BudgetExecution
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Configuration;
+    using System.Data;
+    using System.Data.OleDb;
+
     public class AccessQuery : Query, IQuery
     {
         // Constructors

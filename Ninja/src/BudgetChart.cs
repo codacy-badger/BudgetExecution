@@ -149,17 +149,34 @@ namespace BudgetExecution
             Value = value;
             SeriesType = type;
             Table = table;
+            CarryOver = Table.AsEnumerable().Where(p => p.Field<string>("BFY").Equals("2018")).Select(p => p).CopyToDataTable();
+            CurrentYear = Table.AsEnumerable().Where(p => p.Field<string>("BFY").Equals("2019")).Select(p => p).CopyToDataTable();
+            Metric = new PrcMetric(Table, filter, filter.ToString());
             DataMetrics = Metric.GetChartMetrics(Table, filter);
-            if(Chart.Series != null)
-            {
-                Chart.Series.Clear();
-            }
-
+            CurrentYearMetrics = Metric.GetChartMetrics(CurrentYear, filter);
+            CarryOverMetrics = Metric.GetChartMetrics(CarryOver, filter);
             DataSeries = GetSeriesTotals(GetMeasure(DataMetrics, Value), type);
-            ConfigurePrimaryAxisLabels(Chart);
-            ConfigureMainTitle(title);
-            Configure3DMode(Chart);
+            DataSeries.Type = type;
+            DataSeries.Name = "Combined Years";
+            CurrentYearSeries = GetSeriesTotals(GetMeasure(CurrentYearMetrics, Value), type);
+            CurrentYearSeries.Type = type;
+            CurrentYearSeries.Text = "Current Year";
+            CurrentYearSeries.Name = "Current Year";
+            CarryOverSeries = GetSeriesTotals(GetMeasure(CarryOverMetrics, Value), type);
+            CarryOverSeries.Type = type;
+            CarryOverSeries.Text = "Carry Over";
+            CarryOverSeries.Name = "Carry Over";
             Chart.ShowToolTips = true;
+            ConfigureSeries(CurrentYearSeries, Value);
+            ConfigureSeries(CarryOverSeries, Value);
+            Chart.Series?.Add(CurrentYearSeries);
+            ConfigureToolTip(CurrentYearSeries);
+            Chart.Series?.Add(CarryOverSeries);
+            ConfigureToolTip(CarryOverSeries);
+            Configure3DMode(Chart);
+            ConfigurePrimaryAxisLabels(Chart);
+            Chart.ShowLegend = true;
+            ConfigureLegend(Chart);
         }
 
         public BudgetChart(ChartControl chart, string[] title, Dictionary<string, double> data, Field filter, Stat value, ChartSeriesType type)

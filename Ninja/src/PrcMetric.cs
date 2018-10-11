@@ -89,7 +89,7 @@ namespace BudgetExecution
 
         public PrcMetric(DataTable table, Field column, string filter)
         {
-            Table = Info.FilterRows(table, column, filter);
+            Table = table;
             ProgramElements = GetProgramElements(Table);
             Total = GetTotals(Table);
             Count = Table.Rows.Count;

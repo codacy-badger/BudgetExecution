@@ -8,6 +8,7 @@
     using System.Data.OleDb;
     using System.Data.SqlClient;
     using System.Data.SQLite;
+    using System.Data.SqlServerCe;
 
     public class Query : IQuery
     {
@@ -98,21 +99,22 @@
                 switch(provider)
                 {
                     case Provider.SQLite:
-                        return new SQLiteConnection(@"datasource=C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\database\SQLite\R6.db");
+                        return new SQLiteConnection(@"datasource=C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\ninja\database\sqlite\R6.db");
 
                     case Provider.SqlCe:
-                        return new SqlConnection(@"datasource=C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\database\SqlCe\R6.sdf");
+                        return new SqlCeConnection(@"datasource=C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\ninja\database\sqlce\R6.sdf");
 
                     case Provider.SqlServer:
-                        return new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\database\SqlServerQuery\R6.mdf;Integrated Security=True;Connect Timeout=30");
+                        return new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\database\sqlserver\R6.mdf;Integrated Security=True;Connect Timeout=30");
+                    
                     case Provider.OleDb:
-                        return new OleDbConnection(@"Provider = Microsoft.ACE.OLEDB.12.0; DbData Source =| DataDirectory |\database\OleDb\R6.accdb");
+                        return new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0; DbData Source =| DataDirectory |\database\oledb\R6.accdb");
                     
                     case Provider.Access:
-                        return new OleDbConnection(@"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\database\oledb\R6.mdb;Persist Security Info=True");
+                        return new OleDbConnection(@"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\ninja\database\oledb\R6.mdb;Persist Security Info=True");
                     
                     case Provider.Excel:
-                        return new OleDbConnection(@"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\database\oledb\R6.mdb;Persist Security Info=True");
+                        return new OleDbConnection(@"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\ninja\database\oledb\R6.mdb;Persist Security Info=True");
                 }
 
                 return null;
@@ -160,6 +162,9 @@
                     case OleDbConnection dbConnection:
                         SqlStatement = sql;
                         return new OleDbCommand(SqlStatement, dbConnection);
+                    case SqlCeConnection sqlceConnection:
+                        SqlStatement = sql;
+                        return new SqlCeCommand(SqlStatement, sqlceConnection);
                     case SqlConnection sqlConnection:
                         SqlStatement = sql;
                         return new SqlCommand(SqlStatement, sqlConnection);
@@ -189,6 +194,8 @@
                         return new SQLiteDataAdapter(liteCommand);
                     case OleDbCommand dbCommand:
                         return new OleDbDataAdapter(dbCommand);
+                    case SqlCeCommand sqlCommand:
+                        return new SqlCeDataAdapter(sqlCommand);
                     case SqlCommand sqlCommand:
                         return new SqlDataAdapter(sqlCommand);
                     default:
@@ -219,6 +226,8 @@
                         return dbCommand.ExecuteReader();
                     case SqlCommand sqlCommand:
                         return sqlCommand.ExecuteReader();
+                    case SqlCeCommand sqlceCommand:
+                        return sqlceCommand.ExecuteReader();
                     default:
                         return null;
                 }
@@ -246,6 +255,9 @@
                         return CommandBuilder;
                     case OleDbDataAdapter _:
                         CommandBuilder = new OleDbCommandBuilder(adapter as OleDbDataAdapter);
+                        return CommandBuilder;
+                    case SqlCeDataAdapter _:
+                        CommandBuilder = new SqlCeCommandBuilder(adapter as SqlCeDataAdapter);
                         return CommandBuilder;
                     case SqlDataAdapter _:
                         CommandBuilder = new SqlCommandBuilder(adapter as SqlDataAdapter);

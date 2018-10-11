@@ -6,24 +6,23 @@
 //   The summary form.
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
-
-using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Windows.Forms;
-using MakarovDev.ExpandCollapsePanel;
-using MetroFramework.Controls;
-using MetroSet_UI.Controls;
-using Syncfusion.Windows.Forms;
-using Syncfusion.Windows.Forms.Chart;
-using Syncfusion.Windows.Forms.Tools;
-using VisualPlus.Toolkit.Controls.Interactivity;
-using DataTable = System.Data.DataTable;
-
 namespace BudgetExecution
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Data;
+    using System.Drawing;
+    using System.Linq;
+    using System.Windows.Forms;
+    using MakarovDev.ExpandCollapsePanel;
+    using MetroFramework.Controls;
+    using MetroSet_UI.Controls;
+    using Syncfusion.Windows.Forms;
+    using Syncfusion.Windows.Forms.Chart;
+    using Syncfusion.Windows.Forms.Tools;
+    using VisualPlus.Toolkit.Controls.Interactivity;
+    using DataTable = System.Data.DataTable;
+
     public partial class SummaryForm : MetroForm
     {
         // CONSTRUCTORS
@@ -41,6 +40,7 @@ namespace BudgetExecution
             Parameter = new Dictionary<string, object> { ["RC"] = rc };
             DbData = new DataBuilder(Source.DivisionAccounts, Provider.SQLite, Parameter);
             Table = DbData.Table;
+            ProgramElements = DbData.GetProgramElements(Table);
             BindingSource = new BindingSource();
             BindingSource.DataSource = Table;
             Grid.DataSource = BindingSource;
@@ -190,7 +190,7 @@ namespace BudgetExecution
 
         public Stat Measure { get; set; }
 
-        private TabPageAdv[] Tab { get; set; }
+        public TabPageAdv[] Tab { get; set; }
 
         private string[] TabNames { get; }
 
@@ -200,6 +200,14 @@ namespace BudgetExecution
             try
             {
                 PopulateComboBoxes();
+                FundExpander2.Visible = false;
+                BocExpander2.Visible = false;
+                NpmExpander2.Visible = false;
+                GoalExpander2.Visible = false;
+                ObjectiveExpander2.Visible = false;
+                DivisionExpander2.Visible = false;
+                AreaExpander2.Visible = false;
+                ProjectExpander2.Visible = false;
             }
 
             catch(Exception ex)
@@ -361,7 +369,7 @@ namespace BudgetExecution
             }
         }
        
-        internal void PopulateFilterBoxItems(VisualComboBox cmbox, string prcfilter)
+        internal void PopulateFilterBoxItems(VisualComboBox cmbox, Field col, string prcfilter)
         {
             try
             {
@@ -371,7 +379,7 @@ namespace BudgetExecution
                 }               
                 
                 DataTable table = (DataTable) BindingSource.DataSource;
-                foreach(var row in table.AsEnumerable().Where(p => p.Field<string>("FundName").Equals(prcfilter)).Select(p => p).Distinct().ToArray())
+                foreach(var row in table.AsEnumerable().Where(p => p.Field<string>(col.ToString()).Equals(prcfilter)).Select(p => p).Distinct().ToArray())
                 {
                     cmbox.Items.Add(row["FundName"].ToString());
                 }
@@ -382,13 +390,17 @@ namespace BudgetExecution
             }
         }
 
-        internal void PopulateFilterBoxItems(ComboBox cmbox, string[] names)
+        internal void PopulateFilterBoxItems(VisualComboBox cmbox, string[] names)
         {
             try
             {
-                foreach(string t in names)
+                if(cmbox.Items.Count > 0)
                 {
                     cmbox.Items.Clear();
+                }
+
+                foreach(string t in names)
+                {
                     cmbox.Items.Add(t);
                 }
             }
@@ -565,6 +577,26 @@ namespace BudgetExecution
             }
         }
 
+        private string[] GetTabPageTags()
+        {
+            try
+            {
+                string[] names = new string[SummaryTabControl.TabPages.Count];
+                TabPageAdvCollection tabs = SummaryTabControl.TabPages;
+                for(int i = 0; i < SummaryTabControl.TabPages.Count; i++)
+                {
+                    names[i] = tabs[i].Tag.ToString();
+                }
+
+                return names;
+            }
+            catch(Exception ex)
+            {
+                new Error(ex).ShowDialog();
+                return null;
+            }
+        }
+
         private void ChartFilterControl1_ItemSelected(object sender, EventArgs e)
         {
             ChartFilterControl1 = sender as VisualComboBox;
@@ -573,7 +605,7 @@ namespace BudgetExecution
                 ChartType = (ChartSeriesType) Enum.Parse(typeof(ChartSeriesType), ChartFilterControl1.SelectedItem.ToString());
             }
 
-            if(Expander2.IsExpanded)
+            if(Expander2.Visible && Expander2.IsExpanded)
             {
                 Expander2.IsExpanded = false;
             }
@@ -589,8 +621,9 @@ namespace BudgetExecution
                     Measure = (Stat) Enum.Parse(typeof(Stat), ChartFilterControl2?.SelectedItem.ToString());
                 }
 
-                if(Expander2.IsExpanded == false)
+                if(!Expander2.Visible || Expander2.IsExpanded == false)
                 {
+                    Expander2.Visible = true;
                     Expander2.IsExpanded = true;
                 }
             }
@@ -605,8 +638,10 @@ namespace BudgetExecution
             try
             {
                 ChartFilterControl3 = sender as VisualComboBox;
-                ChartField = (Field) Enum.Parse(typeof(Field), ChartFilterControl3?.Tag.ToString() ?? throw new InvalidOperationException());
-                ChartFilter = ChartFilterControl3.SelectedItem.ToString();
+                if(ChartFilterControl3?.SelectedItem != null)
+                {
+                    ChartFilter = ChartFilterControl3?.SelectedItem.ToString();
+                }                
             }
             catch(Exception ex)
             {
@@ -627,40 +662,55 @@ namespace BudgetExecution
                         $"{Text} {ChartFilter} By {ChartFilterControl4.SelectedItem} "
                     };
                 }
-
-                Dictionary<string, object> param = new Dictionary<string, object> { [ChartField.ToString()] = ChartFilter };
+                
                 switch(CurrentTabIndex)
                 {
                     case 0:
-                        FundChart = new BudgetChart(FundChart, ChartMainTitle, Source, param, ChartGroup, Measure, ChartType).Activate();
+                        var fp = new Dictionary<string, object> { [SummaryTabControl.SelectedTab.Tag.ToString()] = ChartFilter };
+                        var fd = new DataBuilder(Source, Provider, fp);
+                        FundChart = new BudgetChart(FundChart, ChartMainTitle, fd, ChartGroup, Measure, ChartType).Activate();
                         break;
 
                     case 1:
-                        BocChart = new BudgetChart(BocChart, ChartMainTitle, Source, param, ChartGroup, Measure, ChartType).Activate();
+                        var bp = new Dictionary<string, object> { [SummaryTabControl.SelectedTab.Tag.ToString()] = ChartFilter };
+                        var bd = new DataBuilder(Source, Provider, bp);
+                        BocChart = new BudgetChart(BocChart, ChartMainTitle, bd, ChartGroup, Measure, ChartType).Activate();
                         break;
 
                     case 2:
-                        NpmChart = new BudgetChart(NpmChart, ChartMainTitle, Source, param, ChartGroup, Measure, ChartType).Activate();
+                        var np = new Dictionary<string, object> { [SummaryTabControl.SelectedTab.Tag.ToString()] = ChartFilter };
+                        var nd = new DataBuilder(Source, Provider, np);
+                        NpmChart = new BudgetChart(NpmChart, ChartMainTitle, nd, ChartGroup, Measure, ChartType).Activate();
                         break;
 
                     case 3:
-                        GoalChart = new BudgetChart(GoalChart, ChartMainTitle, Source, param, ChartGroup, Measure, ChartType).Activate();
+                        var gp = new Dictionary<string, object> { [SummaryTabControl.SelectedTab.Tag.ToString()] = ChartFilter };
+                        var gd = new DataBuilder(Source, Provider, gp);
+                        GoalChart = new BudgetChart(GoalChart, ChartMainTitle, gd, ChartGroup, Measure, ChartType).Activate();
                         break;
 
                     case 4:
-                        ObjectiveChart = new BudgetChart(ObjectiveChart, ChartMainTitle, Source, param, ChartGroup, Measure, ChartType).Activate();
+                        var op = new Dictionary<string, object> { [SummaryTabControl.SelectedTab.Tag.ToString()] = ChartFilter };
+                        var od = new DataBuilder(Source, Provider, op);
+                        ObjectiveChart = new BudgetChart(ObjectiveChart, ChartMainTitle, od, ChartGroup, Measure, ChartType).Activate();
                         break;
 
                     case 5:
-                        DivisionChart = new BudgetChart(DivisionChart, ChartMainTitle, Source, param, ChartGroup, Measure, ChartType).Activate();
+                        var dp = new Dictionary<string, object> { [SummaryTabControl.SelectedTab.Tag.ToString()] = ChartFilter };
+                        var dd = new DataBuilder(Source, Provider, dp);
+                        DivisionChart = new BudgetChart(DivisionChart, ChartMainTitle, dd, ChartGroup, Measure, ChartType).Activate();
                         break;
 
                     case 6:
-                        AreaChart = new BudgetChart(AreaChart, ChartMainTitle, Source, param, ChartGroup, Measure, ChartType).Activate();
+                        var ap = new Dictionary<string, object> { [SummaryTabControl.SelectedTab.Tag.ToString()] = ChartFilter };
+                        var ad = new DataBuilder(Source, Provider, ap);
+                        AreaChart = new BudgetChart(AreaChart, ChartMainTitle, ad, ChartGroup, Measure, ChartType).Activate();
                         break;
 
                     case 7:
-                        ProjectChart = new BudgetChart(ProjectChart, ChartMainTitle, Source, param, ChartGroup, Measure, ChartType).Activate();
+                        var pp = new Dictionary<string, object> { [SummaryTabControl.SelectedTab.Tag.ToString()] = ChartFilter };
+                        var pd = new DataBuilder(Source, Provider, pp);
+                        ProjectChart = new BudgetChart(ProjectChart, ChartMainTitle, pd, ChartGroup, Measure, ChartType).Activate();
                         break;
                 }
             }
@@ -673,13 +723,9 @@ namespace BudgetExecution
         private void AssignChartFilterControls(VisualComboBox filter1, VisualComboBox filter2, VisualComboBox filter3, VisualComboBox filter4)
         {
             ChartFilterControl1 = filter1;
-            ChartFilterControl1.SelectionChangeCommitted += ChartFilterControl1_ItemSelected;
             ChartFilterControl2 = filter2;
-            ChartFilterControl2.SelectionChangeCommitted += ChartFilterControl2_ItemSelected;
             ChartFilterControl3 = filter3;
-            ChartFilterControl3.SelectionChangeCommitted += ChartFilterControl3_ItemSelected;
             ChartFilterControl4 = filter4;
-            ChartFilterControl4.SelectionChangeCommitted += ChartFilterControl4_ItemSelected;
         }
 
         private void AssignChartExpanders(ExpandCollapsePanel panel1, ExpandCollapsePanel panel2)
@@ -710,7 +756,9 @@ namespace BudgetExecution
                     case 0:
                         AssignChartFilterControls(FundFilter1, FundFilter2, FundFilter3, FundFilter4);
                         AssignChartExpanders(FundExpander1, FundExpander2);
-                        PopulateFilterBoxItems(ChartFilterControl3, "FundName");
+                        PopulateFilterBoxItems(FundFilter3, DbData.ProgramElements["FundName"]);
+                        PopulateFilterBoxItems(FundFilter4, GetTabPageTags());
+                        FundFilter4.Items.Remove("FundName");
                         if(Source == Source.RegionalAccounts)
                         {
                             FundFilter4.Items.Remove("RC");
@@ -737,7 +785,9 @@ namespace BudgetExecution
                     case 1:
                         AssignChartFilterControls(BocFilter1, BocFilter2, BocFilter3, BocFilter4);
                         AssignChartExpanders(BocExpander1, BocExpander2);
-                        PopulateFilterBoxItems(ChartFilterControl3, "BocName");
+                        PopulateFilterBoxItems(BocFilter3, DbData.ProgramElements["BocName"]);
+                        PopulateFilterBoxItems(BocFilter4, GetTabPageTags());
+                        BocFilter4.Items.Remove("BocName");
                         if(DbData.Source == Source.RegionalAccounts)
                         {
                             BocFilter4.Items.Remove("RC");
@@ -764,7 +814,9 @@ namespace BudgetExecution
                     case 2:
                         AssignChartFilterControls(NpmFilter1, NpmFilter2, NpmFilter3, NpmFilter4);
                         AssignChartExpanders(NpmExpander1, NpmExpander2);
-                        PopulateFilterBoxItems(ChartFilterControl3, Field.NPM.ToString());
+                        PopulateFilterBoxItems(NpmFilter3, DbData.ProgramElements["NPM"]);
+                        PopulateFilterBoxItems(NpmFilter4, GetTabPageTags());
+                        NpmFilter4.Items.Remove("NPM");
                         if(DbData.Source == Source.RegionalAccounts)
                         {
                             NpmFilter4.Items.Remove("RC");
@@ -791,7 +843,9 @@ namespace BudgetExecution
                     case 3:
                         AssignChartFilterControls(GoalFilter1, GoalFilter2, GoalFilter3, GoalFilter4);
                         AssignChartExpanders(GoalExpander1, GoalExpander2);
-                        PopulateFilterBoxItems(ChartFilterControl3, Field.GoalName.ToString());
+                        PopulateFilterBoxItems(GoalFilter3, DbData.ProgramElements["GoalName"]);
+                        PopulateFilterBoxItems(GoalFilter4, GetTabPageTags());
+                        GoalFilter4.Items.Remove("GoalName");
                         if(DbData.Source == Source.RegionalAccounts)
                         {
                             GoalFilter4.Items.Remove("RC");
@@ -818,7 +872,9 @@ namespace BudgetExecution
                     case 4:
                         AssignChartFilterControls(ObjectiveFilter1, ObjectiveFilter2, ObjectiveFilter3, ObjectiveFilter4);
                         AssignChartExpanders(ObjectiveExpander1, ObjectiveExpander2);
-                        PopulateFilterBoxItems(ChartFilterControl3, Field.ObjectiveName.ToString());
+                        PopulateFilterBoxItems(ObjectiveFilter3, DbData.ProgramElements["ObjectiveName"]);
+                        PopulateFilterBoxItems(ObjectiveFilter4, GetTabPageTags());
+                        ObjectiveFilter4.Items.Remove("ObjectiveName");
                         if(DbData.Source == Source.RegionalAccounts)
                         {
                             ObjectiveFilter4.Items.Remove("RC");
@@ -845,7 +901,9 @@ namespace BudgetExecution
                     case 5:
                         AssignChartFilterControls(DivisionFilter1, DivisionFilter2, DivisionFilter3, DivisionFilter4);
                         AssignChartExpanders(DivisionExpander1, DivisionExpander2);
-                        PopulateFilterBoxItems(ChartFilterControl3, Field.DivisionName.ToString());
+                        PopulateFilterBoxItems(DivisionFilter3, DbData.ProgramElements["DivisionName"]);
+                        PopulateFilterBoxItems(DivisionFilter4, GetTabPageTags());
+                        DivisionFilter4.Items.Remove("DivisionName");
                         if(DbData.Source == Source.RegionalAccounts)
                         {
                             DivisionFilter4.Items.Remove("RC");
@@ -872,7 +930,9 @@ namespace BudgetExecution
                     case 6:
                         AssignChartFilterControls(AreaFilter1, AreaFilter2, AreaFilter3, AreaFilter4);
                         AssignChartExpanders(AreaExpander1, AreaExpander2);
-                        PopulateFilterBoxItems(ChartFilterControl3, Field.ProgramAreaName.ToString());
+                        PopulateFilterBoxItems(AreaFilter3, DbData.ProgramElements["ProgramArea"]);
+                        PopulateFilterBoxItems(AreaFilter4, GetTabPageTags());
+                        AreaFilter4.Items.Remove("ProgramAreaName");
                         if(DbData.Source == Source.RegionalAccounts)
                         {
                             AreaFilter4.Items.Remove("RC");
@@ -899,7 +959,9 @@ namespace BudgetExecution
                     case 7:
                         AssignChartFilterControls(ProjectFilter1, ProjectFilter2, ProjectFilter3, ProjectFilter4);
                         AssignChartExpanders(ProjectExpander1, ProjectExpander2);
-                        PopulateFilterBoxItems(ChartFilterControl3, Field.ProgramProjectCode.ToString());
+                        PopulateFilterBoxItems(ProjectFilter3, DbData.ProgramElements["ProgramProject"]);
+                        PopulateFilterBoxItems(ProjectFilter4, GetTabPageTags());
+                        ProjectFilter4.Items.Remove("ProgramProjectName");
                         if(DbData.Source == Source.RegionalAccounts)
                         {
                             ProjectFilter4.Items.Remove("RC");
