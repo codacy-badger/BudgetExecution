@@ -364,6 +364,14 @@ namespace BudgetExecution
 
                         return DataSeries;
 
+                    case ChartSeriesType.Area:
+                        foreach(KeyValuePair<string, double> kvp in data)
+                        {
+                            DataSeries.Points.Add(kvp.Key, kvp.Value);
+                        }
+
+                        return DataSeries;
+
                     case ChartSeriesType.Pie:
                         ArrayList list = new ArrayList();
                         foreach(KeyValuePair<string, double> kvp in data)
@@ -529,18 +537,17 @@ namespace BudgetExecution
                     series.Style.TextFormat = "{0}";
                 }
 
-                if(series.Type == ChartSeriesType.Pie)
+                if(series.Type == ChartSeriesType.Area)
                 {
-                    for(int i = 0; i < series.Points.Count; i++)
-                    {
-                        series.Styles[i].ToolTip = $"{series.Points[i].Category}";
-                    }
-
-                    series.Style.DisplayText = true;
                     series.SmartLabels = true;
                     series.SortPoints = true;
                     series.Style.DisplayText = true;
-                    series.Style.DisplayShadow = true;
+                    if(Source == Source.FTE)
+                    {
+                        series.PointsToolTipFormat = "{0}\nFTE: {4:N}";
+                    }
+
+                    series.PointsToolTipFormat = "{0}\nFunding: {4:C}";
                     series.Style.TextOffset = 20.0F;
                     series.Style.TextOrientation = ChartTextOrientation.Up;
                     series.Style.DisplayShadow = true;
@@ -549,8 +556,9 @@ namespace BudgetExecution
                     series.Style.Font.FontStyle = FontStyle.Bold;
                     series.Style.Font.Facename = "SegoeUI";
                     series.ShowTicks = true;
-                    Chart.Series[0].ConfigItems.PieItem.HeightCoeficient = 0.1f;
-                    //ConfigurePieChart(series);
+                    series.ConfigItems.ColumnItem.ShadingMode = ChartColumnShadingMode.PhongCylinder;
+                    series.ConfigItems.ColumnItem.LightColor = Color.SteelBlue;
+                    series.ConfigItems.ColumnItem.PhongAlpha = 2;
                     return;
                 }
 

@@ -49,7 +49,7 @@ namespace BudgetExecution
             }
             else
             {
-                Table = GetDataTable(Source).AsEnumerable().Select(p => p).CopyToDataTable();
+                Table = GetDataTable(Source);
             }
 
             Columns = Table.GetFields();
@@ -83,6 +83,16 @@ namespace BudgetExecution
             {
                 Table = GetDataTable(Source).AsEnumerable().Where(p => p.Field<decimal>("Amount") > 0).Select(p => p).CopyToDataTable();
             }
+
+            if(source == Source.FTE)
+            {
+                Table = GetDataTable()
+                        .AsEnumerable()
+                        .Where(p => p.Field<string>("BOC").Equals("17"))
+                        .Where(p => p.Field<decimal>("Amount") > 0)
+                        .Select(p => p)
+                        .CopyToDataTable();
+            }
             else
             {
                 Table = GetDataTable(Source).AsEnumerable().Select(p => p).CopyToDataTable();
@@ -97,16 +107,6 @@ namespace BudgetExecution
             ProgramElements = GetProgramElements(Table);
             BindingSource = new BindingSource(Table.DataSet, Table.TableName);
             Records = GetRecords(Table);
-            if(source == Source.FTE)
-            {
-                Table = GetDataTable().AsEnumerable().Where(p => p.Field<string>("BOC").Equals("17"))
-                                      .Where(p => p.Field<decimal>("Amount") > 0).Select(p => p).CopyToDataTable();
-                ProgramElements = GetProgramElements(Table);
-                BindingSource = new BindingSource(Table.DataSet, Table.TableName);
-                Records = GetRecords(Table);
-                Columns = Table.GetFields();
-                Total = GetFteTotal(Table);
-            }
         }
 
         // PROPERTIES
@@ -126,13 +126,34 @@ namespace BudgetExecution
 
         public DataTable Table { get; set; }
 
+        public DataSet R6 { get; set; }
+
         public DataRow[] Records { get; set; }
 
         // METHODS
         /// <summary>
-        /// Gets the data table.
+        /// Gets the data set.
         /// </summary>
         /// <returns></returns>
+        public DataSet GetDataSet()
+        {
+            try
+            {
+                DataSet ds = new DataSet("R06");
+                ds.DataSetName = "R06";
+                DataTable dt = new DataTable();
+                dt.TableName = Source.ToString();
+                ds.Tables.Add(dt);
+                Query.DataAdapter.Fill(ds, Source.ToString());
+                return ds;
+            }
+            catch(Exception e)
+            {
+                new Error(e).ShowDialog();
+                return null;
+            }
+        }
+
         public DataTable GetDataTable()
         {
             try
@@ -526,53 +547,8 @@ namespace BudgetExecution
                 return 0;
             }
         }
-
-        /// <summary>
-        /// Gets the data set.
-        /// </summary>
-        /// <returns></returns>
-        public DataSet GetDataSet()
-        {
-            try
-            {
-                DataSet ds = new DataSet("R6");
-                DataTable dt = new DataTable(Source.ToString());
-                dt.TableName = Source.ToString();
-                ds.Tables.Add(dt);
-                Query.DataAdapter.Fill(ds);
-                return ds;
-            }
-            catch(Exception ex)
-            {
-                new Error(ex).ShowDialog();
-                return null;
-            }
-        }
-
-        /// <summary>
-        /// Gets the data set.
-        /// </summary>
-        /// <param name="source">The source.</param>
-        /// <returns></returns>
-        public DataSet GetDataSet(Source source)
-        {
-            try
-            {
-                DataSet ds = new DataSet();
-                ds.DataSetName = "R06";
-                DataTable dt = new DataTable(source.ToString());
-                dt.TableName = source.ToString();
-                ds.Tables.Add(dt);
-                Query.DataAdapter.Fill(ds, dt.TableName);
-                return ds;
-            }
-            catch(Exception ex)
-            {
-                new Error(ex).ShowDialog();
-                return null;
-            }
-        }
-
+        
+       
         /// <summary>
         /// Gets the total.
         /// </summary>
