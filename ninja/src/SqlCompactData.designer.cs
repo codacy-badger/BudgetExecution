@@ -1,7 +1,7 @@
 ﻿
 namespace BudgetExecution
 {
-    sealed partial class SQLiteData
+    sealed partial class SqlCompactData
     {
         /// <summary>
         /// Required designer variable.
@@ -14,7 +14,7 @@ namespace BudgetExecution
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
-            if (disposing && (components != null))
+            if(disposing && (components != null))
             {
                 components.Dispose();
             }
@@ -34,7 +34,7 @@ namespace BudgetExecution
             Syncfusion.Windows.Forms.Grid.GridBaseStyle gridBaseStyle2 = new Syncfusion.Windows.Forms.Grid.GridBaseStyle();
             Syncfusion.Windows.Forms.Grid.GridBaseStyle gridBaseStyle3 = new Syncfusion.Windows.Forms.Grid.GridBaseStyle();
             Syncfusion.Windows.Forms.Grid.GridBaseStyle gridBaseStyle4 = new Syncfusion.Windows.Forms.Grid.GridBaseStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SQLiteData));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SqlServerData));
             VisualPlus.Structure.TextStyle textStyle1 = new VisualPlus.Structure.TextStyle();
             VisualPlus.Structure.TextStyle textStyle2 = new VisualPlus.Structure.TextStyle();
             VisualPlus.Structure.TextStyle textStyle3 = new VisualPlus.Structure.TextStyle();
@@ -1174,7 +1174,7 @@ namespace BudgetExecution
             this.Grid.Size = new System.Drawing.Size(1010, 400);
             this.Grid.TabIndex = 171;
             // 
-            // SQLiteData
+            // SqlServerData
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -1185,10 +1185,10 @@ namespace BudgetExecution
             this.CaptionFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CaptionForeColor = System.Drawing.SystemColors.MenuHighlight;
             captionImage1.BackColor = System.Drawing.Color.Transparent;
-            captionImage1.Image = global::BudgetExecution.Properties.Resources.databaseheader;
-            captionImage1.Location = new System.Drawing.Point(10, 10);
+            captionImage1.Image = ((System.Drawing.Image)(resources.GetObject("captionImage1.Image")));
+            captionImage1.Location = new System.Drawing.Point(10, 3);
             captionImage1.Name = "CaptionImage1";
-            captionImage1.Size = new System.Drawing.Size(110, 30);
+            captionImage1.Size = new System.Drawing.Size(150, 35);
             this.CaptionImages.Add(captionImage1);
             this.ClientSize = new System.Drawing.Size(1702, 998);
             this.Controls.Add(this.visualGroupBox2);
@@ -1198,7 +1198,7 @@ namespace BudgetExecution
             this.MaximumSize = new System.Drawing.Size(1714, 1047);
             this.MetroColor = System.Drawing.Color.Black;
             this.MinimumSize = new System.Drawing.Size(1714, 1047);
-            this.Name = "SQLiteData";
+            this.Name = "SqlServerData";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "DataMaster";

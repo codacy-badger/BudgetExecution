@@ -126,6 +126,8 @@ namespace BudgetExecution
 
         public DataTable Table { get; set; }
 
+        public Dictionary<string, Type> Schema { get; set; }
+
         public DataSet R6 { get; set; }
 
         public DataRow[] Records { get; set; }
@@ -193,6 +195,55 @@ namespace BudgetExecution
             catch(Exception e)
             {
                 new Error(e).ShowDialog();
+                return null;
+            }
+        }
+
+        /// <summary>
+        /// Gets the parameter array.
+        /// </summary>
+        /// <param name="row">The row.</param>
+        /// <returns></returns>
+        public SQLiteParameter[] GetParamArray(DataRow row)
+        {
+            try
+            {
+                DataColumnCollection cols = row.Table.Columns;
+                SQLiteParameter[] param = new SQLiteParameter[row.ItemArray.Length];
+                for(int i = 0; i < row.ItemArray.Length; i++)
+                {
+                    param[i] = new SQLiteParameter(cols[i].ColumnName, row.ItemArray[i]);
+                }
+
+                return param;
+            }
+            catch(Exception ex)
+            {
+                new Error(ex).ShowDialog();
+                return null;
+            }
+        }
+
+        /// <summary>
+        /// Gets the parameter list.
+        /// </summary>
+        /// <param name="table">The table.</param>
+        /// <returns></returns>
+        public List<SQLiteParameter[]> GetParameterList(DataTable table)
+        {
+            try
+            {
+                List<SQLiteParameter[]> paramlist = new List<SQLiteParameter[]>();
+                foreach(DataRow row in table.Rows)
+                {
+                    paramlist.Add(GetParamArray(row));
+                }
+
+                return paramlist;
+            }
+            catch(Exception ex)
+            {
+                new Error(ex).ShowDialog();
                 return null;
             }
         }
@@ -321,56 +372,6 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Gets the parameter array.
-        /// </summary>
-        /// <param name="row">The row.</param>
-        /// <returns></returns>
-        public SQLiteParameter[] GetParamArray(DataRow row)
-        {
-            try
-            {
-                DataColumnCollection cols = row.Table.Columns;
-                object[] item = row.ItemArray;
-                SQLiteParameter[] param = new SQLiteParameter[row.ItemArray.Length];
-                for(int i = 0; i < row.ItemArray.Length; i++)
-                {
-                    param[i] = new SQLiteParameter(cols[i].ColumnName, item[i]);
-                }
-
-                return param;
-            }
-            catch(Exception ex)
-            {
-                new Error(ex).ShowDialog();
-                return null;
-            }
-        }
-
-        /// <summary>
-        /// Gets the parameter list.
-        /// </summary>
-        /// <param name="table">The table.</param>
-        /// <returns></returns>
-        public List<SQLiteParameter[]> GetParameterList(DataTable table)
-        {
-            try
-            {
-                List<SQLiteParameter[]> paramlist = new List<SQLiteParameter[]>();
-                foreach(DataRow row in table.Rows)
-                {
-                    paramlist.Add(GetParamArray(row));
-                }
-
-                return paramlist;
-            }
-            catch(Exception ex)
-            {
-                new Error(ex).ShowDialog();
-                return null;
-            }
-        }
-
-        /// <summary>
         /// Filters the records.
         /// </summary>
         /// <param name="table">The table.</param>
@@ -489,7 +490,7 @@ namespace BudgetExecution
             try
             {
                 Dictionary<string, string[]> data = new Dictionary<string, string[]>();
-                string[] list = null;
+                string[] list;
                 foreach(DataColumn dc in table.Columns)
                 {
                     if(dc.ColumnName.Contains("ID") || dc.ColumnName.Contains("Amount") || dc.ColumnName.Contains("Obligation") || dc.ColumnName.Contains("Commitment"))
@@ -546,8 +547,7 @@ namespace BudgetExecution
                 new Error(ex).ShowDialog();
                 return 0;
             }
-        }
-        
+        }       
        
         /// <summary>
         /// Gets the total.
@@ -600,7 +600,6 @@ namespace BudgetExecution
                     {
                         decimal total = table.AsEnumerable().Select(p => p.Field<decimal>("WorkHours")).Sum();
                         return total > 0 ? total : 0m;
-
                     }
 
                     if(cols.Contains("LeaveHours"))

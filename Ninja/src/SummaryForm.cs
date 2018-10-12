@@ -6,17 +6,16 @@
 //   The summary form.
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
+
 namespace BudgetExecution
 {
     using System;
     using System.Collections.Generic;
     using System.Data;
-    using System.Drawing;
     using System.Linq;
     using System.Windows.Forms;
     using MakarovDev.ExpandCollapsePanel;
     using MetroFramework.Controls;
-    using MetroSet_UI.Controls;
     using Syncfusion.Windows.Forms;
     using Syncfusion.Windows.Forms.Chart;
     using Syncfusion.Windows.Forms.Tools;
@@ -49,7 +48,7 @@ namespace BudgetExecution
             DivisionTab.TabVisible = false;
             Metric = new PrcMetric(DbData);
             Text = string.Format("{0} Summary", Info.DivisionName(rc));
-            TabNames = GetTabNames();
+            GetTabNames();
             EditTab.TabVisible = false;
         }
 
@@ -65,7 +64,7 @@ namespace BudgetExecution
                 BindingSource.DataSource = DbData.Table;
                 Grid.DataSource = BindingSource;
                 Source = source;
-                TabNames = GetTabNames();
+                GetTabNames();
                 Text = @"R6 Summary";
                 Metric = new PrcMetric(DbData);
                 ProjectTab.TabVisible = false;
@@ -75,7 +74,7 @@ namespace BudgetExecution
                 GridBocFilter.Visible = false;
                 lblBoc.Visible = false;
                 PopulateGridYearFilterItems();
-                ChartMainTitle = new string[] { $"{Source.ToString()} Funding By Appropriation"};
+                ChartMainTitle = new[] { $"{Source.ToString()} Funding By Appropriation"};
                 FundChart = new BudgetChart(FundChart, ChartMainTitle, DbData, Field.Fund, Stat.Total, ChartSeriesType.Column).Activate();
             }
             else
@@ -84,7 +83,7 @@ namespace BudgetExecution
                 DbData = new DataBuilder(source);
                 Table = DbData.Table;
                 ProgramElements = DbData.GetProgramElements(Table);
-                TabNames = GetTabNames();
+                GetTabNames();
                 Text = $@"R6 {Source.ToString()} Summary";
                 Metric = new PrcMetric(DbData);
                 BindingSource = new BindingSource();
@@ -98,8 +97,8 @@ namespace BudgetExecution
                 GridGroupBox.Text = $"{Source.ToString()}";                
                 lblTotal.Text = DbData.Table.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Sum().ToString("c");
                 lblAve.Text = DbData.Table.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Average().ToString("N");
-                lblDev.Text = ((double)DbData.Table.Compute("StDev(Amount)", "Amount > 0")).ToString("N");
-                lblVar.Text = ((double)DbData.Table.Compute("Var(Amount)", "Amount > 0")).ToString("N");
+                lblDev.Text = ((double) DbData.Table.Compute("StDev(Amount)", "Amount > 0")).ToString("N");
+                lblVar.Text = ((double) DbData.Table.Compute("Var(Amount)", "Amount > 0")).ToString("N");
                 lblCount.Text = DbData.GetCount(Table).ToString();
                 lblFund.Visible = false;
                 GridFundFilter.Visible = false;
@@ -108,7 +107,7 @@ namespace BudgetExecution
                 PopulateGridYearFilterItems();
                 ConfigureTextBoxBindings();
                 DefineVisisbleDataColumns(Grid);
-                ChartMainTitle = new string[] { $"{Source.ToString()} Funding By Appropriation"};
+                ChartMainTitle = new[] { $"{Source.ToString()} Funding By Appropriation"};
                 FundChart = new BudgetChart(FundChart, ChartMainTitle, DbData, Field.Fund, Stat.Total, ChartSeriesType.Column).Activate();
             }
         }
@@ -191,8 +190,6 @@ namespace BudgetExecution
         public Stat Measure { get; set; }
 
         public TabPageAdv[] Tab { get; set; }
-
-        private string[] TabNames { get; }
 
         // METHODS
         private void Form_Load(object sender, EventArgs e)
@@ -511,7 +508,7 @@ namespace BudgetExecution
         {
             try
             {
-                Updateid.DataBindings.Add(new Binding("Text", Grid.DataSource, "PrcID"));
+                Updateid.DataBindings.Add(new Binding("Text", Grid.DataSource, "ID"));
                 UpdateBudgetLevel.DataBindings.Add(new Binding("Text", Grid.DataSource, "BudgetLevel"));
                 UpdateBFY.DataBindings.Add(new Binding("Text", Grid.DataSource, "BFY"));
                 UpdateFund.DataBindings.Add(new Binding("Text", Grid.DataSource, "Fund"));
@@ -959,7 +956,7 @@ namespace BudgetExecution
                     case 7:
                         AssignChartFilterControls(ProjectFilter1, ProjectFilter2, ProjectFilter3, ProjectFilter4);
                         AssignChartExpanders(ProjectExpander1, ProjectExpander2);
-                        PopulateFilterBoxItems(ProjectFilter3, DbData.ProgramElements["ProgramProject"]);
+                        PopulateFilterBoxItems(ProjectFilter3, DbData.ProgramElements["ProgramProjectCode"]);
                         PopulateFilterBoxItems(ProjectFilter4, GetTabPageTags());
                         ProjectFilter4.Items.Remove("ProgramProjectName");
                         if(DbData.Source == Source.RegionalAccounts)
@@ -1179,7 +1176,9 @@ namespace BudgetExecution
             }
         }
 
-        private void AccountChart_Click(object sender, EventArgs e) { }
+        private void AccountChart_Click(object sender, EventArgs e)
+        {
+        }
 
         private void PreviousButton_OnClick(object sender, EventArgs e)
         {
@@ -1191,16 +1190,16 @@ namespace BudgetExecution
             BindingSource.MoveNext();
         }
 
-        private void BocExpander1_Paint(object sender, PaintEventArgs e) { }
+        private void BocExpander1_Paint(object sender, PaintEventArgs e)
+        {
+        }
 
         private void LblPrc_Click(object sender, EventArgs e)
         {
-
         }
 
         private void Panel2_Paint(object sender, PaintEventArgs e)
         {
-
         }
     }
 }

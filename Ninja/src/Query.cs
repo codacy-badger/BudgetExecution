@@ -17,7 +17,7 @@
         {
         }
 
-        public Query(Source source = Source.PRC, Provider provider = Provider.SQLite)
+        public Query(Source source = Source.PRC, Provider provider = Provider.SQLite, Sql cmb = Sql.SELECT)
         {
             Provider = provider;
             Source = source;
@@ -38,6 +38,7 @@
             Provider = provider;
             Source = source;
             Parameter = param;
+            CommandType = Sql.SELECT;
             DataConnection = GetDataConnection(Provider);
             TableName = Source.ToString();
             SelectStatement = GetSelectStatement(TableName, Parameter);
@@ -51,6 +52,20 @@
             Settings = new AppSettingsReader();
         }
 
+        public Query(Source source, Provider provider, Sql command, Dictionary<string, object> param)
+        {
+            Provider = provider;
+            Source = source;
+            Parameter = param;
+            CommandType = command;
+            DataConnection = GetDataConnection(Provider);
+            TableName = Source.ToString();
+            SqlStatement = GetSqlStatement(Source, DataConnection, Parameter, CommandType);
+            DataCommand = GetDataCommand(Parameters, DataConnection, Source);
+            DataAdapter = GetDataAdapter(DataCommand, CommandType);
+            Settings = new AppSettingsReader();
+        }
+
         // PROPERTIES
         public AppSettingsReader Settings { get; }
 
@@ -59,6 +74,8 @@
         public DbParameter[] Parameters { get; set; }
 
         public string TableName { get; }
+
+        public Sql CommandType { get; }
 
         public string SelectStatement { get; set; }
 
@@ -144,6 +161,40 @@
             }
         }
 
+        public string GetSqlStatement(Source source, DbConnection connection, Dictionary<string, object> p, Sql cmd = Sql.SELECT)
+        {
+            try
+            {
+                switch(cmd)
+                {
+                    case Sql.SELECT:
+                        var select = GetDataParameters(connection, p);
+                        return GetSelectStatement(source, select);
+
+                    case Sql.UPDATE:
+                        var update = GetDataParameters(connection, p);
+                        return GetUpdateStatement(source, update);
+
+                    case Sql.INSERT:
+                        var insert = GetDataParameters(connection, p);
+                        return GetInsertStatement(source, insert);
+
+                    case Sql.DELETE: 
+                        var delete = GetDataParameters(connection, p);
+                        return GetDeleteStatement(source, delete);
+
+                    default:
+                        var def = GetDataParameters(connection, p);
+                        return GetSelectStatement(source, def);
+                }
+            }
+            catch(Exception ex)
+            {
+                new Error(ex).ShowDialog();
+                return null;
+            }
+        }
+
         /// <summary>
         ///     Gets the data command.
         /// </summary>
@@ -177,7 +228,45 @@
                 new Error(ex).ShowDialog();
                 return null;
             }
+        }        
+        
+        /// <summary>
+        ///     Gets the data command.
+        /// </summary>
+        /// <param name="pmr">The PMR.</param>
+        /// <param name="connection">The connection.</param>
+        /// <param name="cmd">The command.</param>
+        /// <param name="source">The source.</param>
+        /// <returns></returns>
+        public DbCommand GetDataCommand(DbParameter[] pmr, DbConnection connection, Source source = Source.PRC)
+        {
+            try
+            {
+                switch(CommandType)
+                {
+                    case Sql.SELECT:
+                        return GetSelectCommand(pmr, connection);
+
+                    case Sql.UPDATE:
+                        return GetUpdateCommand(pmr, connection);
+
+                    case Sql.INSERT:
+                        return GetInsertCommand(pmr, connection);
+
+                    case Sql.DELETE:
+                        return GetDeleteCommand(source, pmr, connection);
+
+                    default:
+                        return GetSelectCommand(pmr, connection);
+                }
+            }
+            catch(Exception ex)
+            {
+                new Error(ex).ShowDialog();
+                return null;
+            }
         }
+
 
         /// <summary>
         ///     Gets the data adapter.
@@ -209,6 +298,158 @@
             }
         }
 
+
+        /// <summary>
+        ///     Gets the data adapter.
+        /// </summary>
+        /// <param name="command">The command.</param>
+        /// <param name="cmd"></param>
+        /// <returns></returns>
+        public DbDataAdapter GetDataAdapter(DbCommand command, Sql cmd)
+        {
+            try
+            {
+                switch(cmd)
+                {
+                    case Sql.SELECT:
+                        if(command is SQLiteCommand)
+                        {
+                            var sqlite = new SQLiteDataAdapter();
+                            sqlite.SelectCommand = (SQLiteCommand)command;
+                            return sqlite;
+                        }
+
+                        if(command is OleDbCommand)
+                        {
+                            var ole = new OleDbDataAdapter();
+                            ole.SelectCommand = (OleDbCommand)command;
+                            return ole;
+                        }
+
+                        if(command is SqlCeCommand)
+                        {
+                            var sqlce = new SqlCeDataAdapter();
+                            sqlce.SelectCommand = (SqlCeCommand)command;
+                            return sqlce;
+                        }
+
+                        if(command is SqlCommand)
+                        {
+                            var sql = new SqlDataAdapter();
+                            sql.SelectCommand = (SqlCommand)command;
+                            return sql;
+                        }
+
+                        break;
+
+                    case Sql.UPDATE:
+                        if(command is SQLiteCommand)
+                        {
+                            var update = new SQLiteDataAdapter();
+                            update.UpdateCommand = (SQLiteCommand)command;
+                            return update;
+                        }
+
+                        if(command is OleDbCommand)
+                        {
+                            var update = new OleDbDataAdapter();
+                            update.UpdateCommand = (OleDbCommand)command;
+                            return update;
+                        }
+
+                        if(command is SqlCeCommand)
+                        {
+                            var update = new SqlCeDataAdapter();
+                            update.UpdateCommand = (SqlCeCommand)command;
+                            return update;
+                        }
+
+                        if(command is SqlCommand)
+                        {
+                            var update = new SqlDataAdapter();
+                            update.UpdateCommand = (SqlCommand)command;
+                            return update;
+                        }
+
+                        break;
+
+                    case Sql.INSERT:
+                        if(command is SQLiteCommand)
+                        {
+                            var insert = new SQLiteDataAdapter();
+                            insert.InsertCommand = (SQLiteCommand)command;
+                            return insert;
+                        }
+
+                        if(command is OleDbCommand)
+                        {
+                            var insert = new OleDbDataAdapter();
+                            insert.InsertCommand = (OleDbCommand)command;
+                            return insert;
+                        }
+
+                        if(command is SqlCeCommand)
+                        {
+                            var insert = new SqlCeDataAdapter();
+                            insert.InsertCommand = (SqlCeCommand)command;
+                            return insert;
+                        }
+
+                        if(command is SqlCommand)
+                        {
+                            var insert = new SqlDataAdapter();
+                            insert.InsertCommand = (SqlCommand)command;
+                            return insert;
+                        }
+
+                        break;
+
+                    case Sql.DELETE:
+                        if(command is SQLiteCommand)
+                        {
+                            var delete = new SQLiteDataAdapter();
+                            delete.DeleteCommand = (SQLiteCommand)command;
+                            return delete;
+                        }
+
+                        if(command is OleDbCommand)
+                        {
+                            var delete = new OleDbDataAdapter();
+                            delete.DeleteCommand = (OleDbCommand)command;
+                            return delete;
+                        }
+
+                        if(command is SqlCeCommand)
+                        {
+                            var delete = new SqlCeDataAdapter();
+                            delete.DeleteCommand = (SqlCeCommand)command;
+                            return delete;
+                        }
+
+                        if(command is SqlCommand)
+                        {
+                            var delete = new SqlDataAdapter();
+                            delete.DeleteCommand = (SqlCommand)command;
+                            return delete;
+                        }
+
+                        break;
+
+                    default:
+                        var select = new SQLiteDataAdapter();
+                        select.SelectCommand = (SQLiteCommand)command;
+                        return select;
+                }
+
+                return null;
+            }
+            catch(Exception ex)
+            {
+                new Error(ex).ShowDialog();
+                return null;
+            }
+        }
+        
         /// <summary>
         ///     Gets the data reader.
         /// </summary>
@@ -349,36 +590,111 @@
                 DbParameter[] val = new DbParameter[input.Count];
                 for(int i = 0; i < input.Count; i++)
                 {
-                    foreach(KeyValuePair<string, object> kvp in input)
+                    if(Provider == Provider.Access)
                     {
-                        val[i] = new SQLiteParameter(kvp.Key, kvp.Value);
-                        val[i].SourceColumn = kvp.Key;
-                        if(kvp.Key.Equals("ID"))
+                        foreach(KeyValuePair<string, object> kvp in input)
                         {
-                            val[i].DbType = DbType.Int64;
+                            val[i] = new OleDbParameter();
+                            val[i].SourceColumn = kvp.Key;
+                            val[i].Value = kvp.Value;
                         }
+                    }
 
-                        if(kvp.Key.Equals("Obligations"))
+                    if(Provider == Provider.Excel)
+                    {
+                        foreach(KeyValuePair<string, object> kvp in input)
                         {
-                            val[i].DbType = DbType.Decimal;
+                            val[i] = new OleDbParameter();
+                            val[i].SourceColumn = kvp.Key;
+                            val[i].Value = kvp.Value;
                         }
+                    }
 
-                        if(kvp.Key.Equals("Commitments"))
+                    if(Provider == Provider.SQLite)
+                    {
+                        foreach(KeyValuePair<string, object> kvp in input)
                         {
-                            val[i].DbType = DbType.Decimal;
+                            val[i] = new SQLiteParameter();
+                            val[i].SourceColumn = kvp.Key;
+                            val[i].Value = kvp.Value;
                         }
+                    }
 
-                        if(kvp.Key.Equals("LeaveHours"))
+                    if(Provider == Provider.SqlCe)
+                    {
+                        foreach(KeyValuePair<string, object> kvp in input)
                         {
-                            val[i].DbType = DbType.Decimal;
+                            val[i] = new SqlCeParameter();
+                            val[i].SourceColumn = kvp.Key;
+                            val[i].Value = kvp.Value;
                         }
+                    }
 
-                        if(kvp.Key.Equals("WorkHours"))
+                    if(Provider == Provider.SqlServer)
+                    {
+                        foreach(KeyValuePair<string, object> kvp in input)
                         {
-                            val[i].DbType = DbType.Decimal;
+                            val[i] = new SqlParameter();
+                            val[i].SourceColumn = kvp.Key;
+                            val[i].Value = kvp.Value;
                         }
+                    }
+                }
 
-                        val[i].DbType = kvp.Key.Equals("Amount") ? DbType.Decimal : DbType.String;
+                return val;
+            }
+            catch(Exception ex)
+            {
+                new Error(ex).ShowDialog();
+                return null;
+            }
+        }
+
+        public DbParameter[] GetDataParameters(DbConnection connection, Dictionary<string, object> input)
+        {
+            try
+            {
+                DbParameter[] val = new DbParameter[input.Count];
+                for(int i = 0; i < input.Count; i++)
+                {
+                    if(connection is OleDbConnection)
+                    {
+                        foreach(KeyValuePair<string, object> kvp in input)
+                        {
+                            val[i] = new OleDbParameter();
+                            val[i].SourceColumn = kvp.Key;
+                            val[i].Value = kvp.Value;
+                        }
+                    }                    
+                
+                    if(connection is SQLiteConnection)
+                    {
+                        foreach(KeyValuePair<string, object> kvp in input)
+                        {
+                            val[i] = new SQLiteParameter();
+                            val[i].SourceColumn = kvp.Key;
+                            val[i].Value = kvp.Value;
+                        }
+                    }
+
+                    if(connection is SqlCeConnection)
+                    {
+                        foreach(KeyValuePair<string, object> kvp in input)
+                        {
+                            val[i] = new SqlCeParameter();
+                            val[i].SourceColumn = kvp.Key;
+                            val[i].Value = kvp.Value;
+                        }
+                    }
+
+                    if(connection is SqlConnection)
+                    {
+                        foreach(KeyValuePair<string, object> kvp in input)
+                        {
+                            val[i] = new SqlParameter();
+                            val[i].SourceColumn = kvp.Key;
+                            val[i].Value = kvp.Value;
+                        }
                     }
                 }
 
@@ -414,7 +730,7 @@
             {
                 new Error(ex).ShowDialog();
                 return null;
-            }
+            } 
         }
 
         /// <summary>
@@ -536,7 +852,6 @@
         /// <param name="pmr">The PMR.</param>
         /// <param name="connection">The connection.</param>
         /// <param name="source">The source.</param>
-        /// <param name="provider">The provider.</param>
         /// <returns></returns>
         public DbCommand GetSelectCommand(DbParameter[] pmr, DbConnection connection, Source source = Source.PRC)
         {
@@ -546,6 +861,8 @@
                 {
                     string sql = GetSelectStatement(source, pmr);
                     DbCommand select = GetDataCommand(sql, connection);
+                    select.CommandText = sql;
+                    select.Connection = connection;
                     foreach(DbParameter p in pmr)
                     {
                         select.Parameters.Add(p);
@@ -562,39 +879,7 @@
                 return null;
             }
         }
-
-        /// <summary>
-        ///     Gets the select command.
-        /// </summary>
-        /// <param name="pmr">The PMR.</param>
-        /// <param name="connection">The connection.</param>
-        /// <param name="source">The source.</param>
-        /// <returns></returns>
-        public SQLiteCommand GetSelectCommand(SQLiteParameter[] pmr, SQLiteConnection connection, Source source = Source.PRC)
-        {
-            try
-            {
-                if(pmr.Length > 0 && connection != null)
-                {
-                    string sql = GetSelectStatement(source, pmr);
-                    SQLiteCommand select = new SQLiteCommand(sql, connection);
-                    foreach(SQLiteParameter p in pmr)
-                    {
-                        select.Parameters.Add(p);
-                    }
-
-                    return select;
-                }
-
-                return null;
-            }
-            catch(Exception e)
-            {
-                new Error(e).ShowDialog();
-                return null;
-            }
-        }
-
+        
         /// <summary>
         ///     Gets the update command.
         /// </summary>
@@ -610,6 +895,8 @@
                 {
                     string sql = GetUpdateStatement(source, pmr);
                     DbCommand update = GetDataCommand(sql, connection);
+                    update.CommandText = sql;
+                    update.Connection = connection;
                     foreach(DbParameter p in pmr)
                     {
                         update.Parameters.Add(p);
@@ -642,6 +929,8 @@
                 {
                     string sql = GetInsertStatement(source, pmr);
                     DbCommand insert = GetDataCommand(sql, connection);
+                    insert.CommandText = sql;
+                    insert.Connection = connection;
                     foreach(DbParameter p in pmr)
                     {
                         insert.Parameters.Add(p);
@@ -674,6 +963,8 @@
                 {
                     string sql = GetDeleteStatement(source, pmr);
                     DbCommand delete = GetDataCommand(sql, connection);
+                    delete.CommandText = sql;
+                    delete.Connection = connection;
                     foreach(DbParameter p in pmr)
                     {
                         delete.Parameters.Add(p);
@@ -687,43 +978,6 @@
             catch(Exception e)
             {
                 new Error(e).ShowDialog();
-                return null;
-            }
-        }
-
-        /// <summary>
-        ///     Gets the data command.
-        /// </summary>
-        /// <param name="pmr">The PMR.</param>
-        /// <param name="connection">The connection.</param>
-        /// <param name="cmd">The command.</param>
-        /// <param name="source">The source.</param>
-        /// <returns></returns>
-        public DbCommand GetDataCommand(DbParameter[] pmr, DbConnection connection, Sql cmd, Source source = Source.PRC)
-        {
-            try
-            {
-                switch(cmd)
-                {
-                    case Sql.SELECT:
-                        return GetSelectCommand(pmr, connection);
-
-                    case Sql.UPDATE:
-                        return GetUpdateCommand(pmr, connection);
-
-                    case Sql.INSERT:
-                        return GetInsertCommand(pmr, connection);
-
-                    case Sql.DELETE:
-                        return GetDeleteCommand(source, pmr, connection);
-
-                    default:
-                        return GetSelectCommand(pmr, connection);
-                }
-            }
-            catch(Exception ex)
-            {
-                new Error(ex).ShowDialog();
                 return null;
             }
         }

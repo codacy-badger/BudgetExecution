@@ -444,6 +444,12 @@
     <Compile Include="src\Selector.Designer.cs">
       <DependentUpon>Selector.cs</DependentUpon>
     </Compile>
+    <Compile Include="src\SqlCompactData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\SqlCompactData.designer.cs">
+      <DependentUpon>SqlCompactData.cs</DependentUpon>
+    </Compile>
     <Compile Include="src\SqlServerQuery.cs" />
     <Compile Include="src\SummaryForm.cs">
       <SubType>Form</SubType>
@@ -633,6 +639,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="src\SqlServerData.resx">
       <DependentUpon>SqlServerData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\SqlCompactData.resx">
+      <DependentUpon>SqlCompactData.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="src\SummaryForm.resx">
       <DependentUpon>SummaryForm.cs</DependentUpon>
