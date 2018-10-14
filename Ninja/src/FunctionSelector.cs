@@ -1,8 +1,4 @@
-﻿// <copyright file="Selector.cs" company="PlaceholderCompany">
-// Copyright (c) PlaceholderCompany. All rights reserved.
-// </copyright>
-
-using System;
+﻿using System;
 using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
@@ -59,7 +55,9 @@ namespace BudgetExecution
             ViewerCarousel.ImageList = ilist;
         }
 
-        private void Selector_Load(object sender, EventArgs e) { }
+        private void Selector_Load(object sender, EventArgs e)
+        {
+        }
 
         private void ViewerCarousel_OnImageSelected(object sender, EventArgs e)
         {
@@ -68,28 +66,28 @@ namespace BudgetExecution
             Function s = (Function) Enum.Parse(typeof(Function), i);
             switch(s)
             {
-                case Function.SQLiteData:
+                case Function.SQLiteData :
                     DatabaseSelector sd = new DatabaseSelector(Info.DatabaseImages);
                     sd.Show();
                     Close();
                     break;
 
-                case Function.BudgetTools:
+                case Function.BudgetTools :
                     BudgetTools bt = new BudgetTools();
                     bt.Show();
                     break;
 
-                case Function.DataTools:
+                case Function.DataTools :
                     BudgetTools dt = new BudgetTools();
                     dt.Show();
                     break;
 
-                case Function.ExcelImporter:
+                case Function.ExcelImporter :
                     ExcelData ei = new ExcelData();
                     ei.Show();
                     break;
 
-                case Function.PdfDataReader:
+                case Function.PdfDataReader :
                     PdfDataReader pdfdr = new PdfDataReader();
                     pdfdr.Show();
                     break;

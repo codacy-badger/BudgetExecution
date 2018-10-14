@@ -1,10 +1,7 @@
-﻿namespace BudgetExecution
-{
-    using System.Collections.Generic;
-    using System.Configuration;
-    using System.Data;
-    using System.Data.SQLite;
+﻿using System.Data;
 
+namespace BudgetExecution
+{
     public class Awards
     {
         // CONSTRUCTORS
@@ -20,7 +17,7 @@
         }
 
         // PROPERTIES
-        public Source Source { get; set; } 
+        public Source Source { get; set; }
 
         public Provider Provider { get; set; }
 
@@ -28,5 +25,4 @@
 
         // METHODS
     }
-
 }

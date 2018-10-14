@@ -1,8 +1,4 @@
-﻿// <copyright file="IExcelOp.cs" company="PlaceholderCompany">
-// Copyright (c) PlaceholderCompany. All rights reserved.
-// </copyright>
-
-using System;
+﻿using System;
 using Microsoft.Office.Interop.Excel;
 
 namespace BudgetExecution

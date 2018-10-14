@@ -1,20 +1,18 @@
-﻿// <copyright file="Query.cs" company="PlaceholderCompany">
-// Copyright (c) PlaceholderCompany. All rights reserved.
-// </copyright>
+﻿using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Data.SQLite;
+using System.Linq;
+using System.Text;
 
 namespace BudgetExecution
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Data;
-    using System.Data.SQLite;
-    using System.Linq;
-    using System.Text;
-
     public class ControlNumber
     {
         // CONSTRUCTORS
-        public ControlNumber() { }
+        public ControlNumber()
+        {
+        }
 
         /// <summary>
         ///     Initializes a new instance of the <see cref="ControlNumber" /> class.

@@ -1,8 +1,4 @@
-﻿// <copyright file="FTE.cs" company="PlaceholderCompany">
-// Copyright (c) PlaceholderCompany. All rights reserved.
-// </copyright>
-
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -11,7 +7,9 @@ namespace BudgetExecution
 {
     public class FTE : PRC, IPRC
     {
-        public FTE() { }
+        public FTE()
+        {
+        }
 
         public FTE(DataRow datarow) : base(datarow)
         {

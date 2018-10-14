@@ -214,6 +214,11 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="resources\NinjaIcons1.Designer.cs">
+      <DependentUpon>NinjaIcons.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
     <Compile Include="src\ExcelData.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -553,6 +558,10 @@
     <EmbeddedResource Include="resources\NinjaApplicationImages\ApplicationIconsImages.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>ApplicationIconsImages.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resources\NinjaIcons.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>NinjaIcons1.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="resources\SlideImages.resx">
       <Generator>ResXFileCodeGenerator</Generator>

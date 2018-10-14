@@ -1,8 +1,4 @@
-﻿// <copyright file="IControlDocument.cs" company="PlaceholderCompany">
-// Copyright (c) PlaceholderCompany. All rights reserved.
-// </copyright>
-
-namespace BudgetExecution
+﻿namespace BudgetExecution
 {
     internal interface IControlDocument : ISupplementalAllocation
     {

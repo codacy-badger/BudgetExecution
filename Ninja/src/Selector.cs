@@ -1,8 +1,4 @@
-﻿// <copyright file="Selector.cs" company="PlaceholderCompany">
-// Copyright (c) PlaceholderCompany. All rights reserved.
-// </copyright>
-
-using System;
+﻿using System;
 using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
@@ -14,7 +10,9 @@ namespace BudgetExecution
     public partial class Selector : MetroForm
     {
         // CONSTRUCTORS
-        public Selector() { }
+        public Selector()
+        {
+        }
 
         public Selector(string path)
         {
@@ -58,7 +56,9 @@ namespace BudgetExecution
             ViewerCarousel.ImageList = ilist;
         }
 
-        private void Selector_Load(object sender, EventArgs e) { }
+        private void Selector_Load(object sender, EventArgs e)
+        {
+        }
 
         public void ViewerCarousel_OnImageSelected(object sender, EventArgs e)
         {
@@ -68,28 +68,28 @@ namespace BudgetExecution
                 string i = carousel.ActiveImage.Tag.ToString();
                 switch(i)
                 {
-                    case"SummaryImages":
+                    case"SummaryImages" :
                         Selector f = new Selector(Info.SummaryImages);
                         f.Show();
                         Close();
                         return;
 
-                    case"DatabaseImages":
+                    case"DatabaseImages" :
                         DatabaseSelector ds = new DatabaseSelector(Info.DatabaseImages);
                         ds.Show();
                         Close();
                         return;
-                    case"Division":
+                    case"Division" :
                         Selector d = new Selector(Info.DivisionImages);
                         d.Show();
                         Close();
                         return;
-                    case"FunctionImages":
+                    case"FunctionImages" :
                         FunctionSelector fi = new FunctionSelector(Info.FunctionImages);
                         fi.Show();
                         Close();
                         return;
-                    case"Appropriation":
+                    case"Appropriation" :
                         Selector aps = new Selector(Info.AppropriationImages);
                         aps.Show();
                         Close();
@@ -99,10 +99,12 @@ namespace BudgetExecution
                 Source source = (Source) Enum.Parse(typeof(Source), i);
                 SummaryForm sf = new SummaryForm(source);
                 sf.Show();
-                this.Close();
+                Close();
             }
         }
 
-        private void ImageItem_OnHover(object sender, EventArgs e) { }
+        private void ImageItem_OnHover(object sender, EventArgs e)
+        {
+        }
     }
 }

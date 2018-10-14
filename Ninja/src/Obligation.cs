@@ -1,8 +1,4 @@
-﻿// <copyright file="Obligation.cs" company="PlaceholderCompany">
-// Copyright (c) PlaceholderCompany. All rights reserved.
-// </copyright>
-
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -14,7 +10,7 @@ namespace BudgetExecution
         public Obligation()
         {
         }
-        
+
         public Obligation(Source source = Source.Obligations, Provider provider = Provider.SQLite)
         {
             Source = source;

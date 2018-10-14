@@ -1,8 +1,4 @@
-﻿// <copyright file="ExcelReport.cs" company="PlaceholderCompany">
-// Copyright (c) PlaceholderCompany. All rights reserved.
-// </copyright>
-
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
@@ -16,7 +12,9 @@ namespace BudgetExecution
     public class ExcelReport
     {
         // CONSTRUCTORS
-        public ExcelReport() { }
+        public ExcelReport()
+        {
+        }
 
         public ExcelReport(string filepath)
         {
@@ -136,7 +134,9 @@ namespace BudgetExecution
             return$@"Provider=Microsoft.ACE.OLEDB.12.0;DbData Source='{filepath}';Extended Properties='Excel 12.0 Macro;HDR=YES;IMEX=1'";
         }
 
-        internal void LoadInternalData() { }
+        internal void LoadInternalData()
+        {
+        }
 
         internal Workbook ExportData(DataTable table)
         {

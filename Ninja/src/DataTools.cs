@@ -1,8 +1,4 @@
-﻿// <copyright file="DataTools.cs" company="PlaceholderCompany">
-// Copyright (c) PlaceholderCompany. All rights reserved.
-// </copyright>
-
-using Syncfusion.Windows.Forms;
+﻿using Syncfusion.Windows.Forms;
 
 namespace Ninja.Data.Forms
 {

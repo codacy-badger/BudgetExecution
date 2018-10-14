@@ -1,8 +1,4 @@
-﻿// <copyright file="IRC.cs" company="PlaceholderCompany">
-// Copyright (c) PlaceholderCompany. All rights reserved.
-// </copyright>
-
-namespace BudgetExecution
+﻿namespace BudgetExecution
 {
     public interface IRC
     {

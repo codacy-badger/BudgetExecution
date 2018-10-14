@@ -1,8 +1,4 @@
-﻿// <copyright file="PrcMetric.cs" company="PlaceholderCompany">
-// Copyright (c) PlaceholderCompany. All rights reserved.
-// </copyright>
-
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -21,11 +17,13 @@ namespace BudgetExecution
             DbData = data;
             Table = DbData.Table;
             CarryOverTable = DbData.Table.AsEnumerable()
-                                 .Where(p => p.Field<string>("BFY").Equals("2018"))
-                                 .Select(p => p).CopyToDataTable();
+                                   .Where(p => p.Field<string>("BFY").Equals("2018"))
+                                   .Select(p => p)
+                                   .CopyToDataTable();
             CurrentYearTable = DbData.Table.AsEnumerable()
-                                 .Where(p => p.Field<string>("BFY").Equals("2019"))
-                                 .Select(p => p).CopyToDataTable();
+                                     .Where(p => p.Field<string>("BFY").Equals("2019"))
+                                     .Select(p => p)
+                                     .CopyToDataTable();
             ProgramElements = DbData.GetProgramElements(DbData.Table);
             Total = GetTotals(Table);
             CarryOverTotal = GetTotals(CarryOverTable);
@@ -68,12 +66,16 @@ namespace BudgetExecution
         {
             DbData = data;
             Table = Info.FilterRows(DbData.Table, column, filter);
-            CarryOverTable = Info.FilterRows(DbData.Table, column, filter).AsEnumerable()
+            CarryOverTable = Info.FilterRows(DbData.Table, column, filter)
+                                 .AsEnumerable()
                                  .Where(p => p.Field<string>("BFY").Equals("2018"))
-                                 .Select(p => p).CopyToDataTable();
-            CurrentYearTable = Info.FilterRows(DbData.Table, column, filter).AsEnumerable()
-                                 .Where(p => p.Field<string>("BFY").Equals("2019"))
-                                 .Select(p => p).CopyToDataTable();
+                                 .Select(p => p)
+                                 .CopyToDataTable();
+            CurrentYearTable = Info.FilterRows(DbData.Table, column, filter)
+                                   .AsEnumerable()
+                                   .Where(p => p.Field<string>("BFY").Equals("2019"))
+                                   .Select(p => p)
+                                   .CopyToDataTable();
             ProgramElements = GetProgramElements(Table);
             Total = GetTotals(Table);
             CarryOverTotal = GetTotals(CarryOverTable);
@@ -254,7 +256,7 @@ namespace BudgetExecution
                 (double) GetTotals(table),
                 GetCount(table),
                 (double) GetAverage(table),
-                (double) GetTotals(table) / (double)Total
+                (double) GetTotals(table) / (double) Total
             };
         }
 

@@ -1,8 +1,4 @@
-﻿// <copyright file="Info.cs" company="PlaceholderCompany">
-// Copyright (c) PlaceholderCompany. All rights reserved.
-// </copyright>
-
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SQLite;
@@ -24,7 +20,7 @@ namespace BudgetExecution
         public static string DatabaseImages = @"C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\Resources\Database";
 
         public static string AppropriationImages = @"C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\Resources\AppropriationImages";
-        
+
         public static string Enter = @"C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\Resources\enter";
 
         public static string[] AgencyFundCodes = Enum.GetNames(typeof(FundCode));
@@ -1101,52 +1097,52 @@ namespace BudgetExecution
         {
             switch(rc)
             {
-                case"06K":
+                case"06K" :
                     return"WATER DIVISION";
 
-                case"06C":
+                case"06C" :
                     return"MANAGEMENT DIVISION";
 
-                case"06N":
+                case"06N" :
                     return"WORKFORCE SUPPORT";
 
-                case"06G":
+                case"06G" :
                     return"WORKING CAPITAL";
 
-                case"06J":
+                case"06J" :
                     return"MULTIMEDIA DIVISION";
 
-                case"06R":
+                case"06R" :
                     return"REGIONAL RESERVE";
 
-                case"06M":
+                case"06M" :
                     return"ENFORCEMENT DIVISION";
 
-                case"06D":
+                case"06D" :
                     return"REGIONAL COUNSEL";
 
-                case"06A":
+                case"06A" :
                     return"REGIONAL ADMINISTRATOR";
 
-                case"06L":
+                case"06L" :
                     return"SUPERFUND DIVISION";
 
-                case"6A":
+                case"6A" :
                     return"SUPERFUND DIVISION";
 
-                case"06X":
+                case"06X" :
                     return"EXTERNAL AFFAIRS";
 
-                case"06":
+                case"06" :
                     return"R06";
 
-                case"06F":
+                case"06F" :
                     return"ENVIRONMENTAL JUSTICE";
 
-                case"":
+                case"" :
                     return"R06";
 
-                default:
+                default :
                     return"R06";
             }
         }
@@ -1155,106 +1151,106 @@ namespace BudgetExecution
         {
             switch(fundcode)
             {
-                case"B":
+                case"B" :
                     return"EPM";
 
-                case"BR":
+                case"BR" :
                     return"EPM REIMB.";
 
-                case"BR1":
+                case"BR1" :
                     return"EPM BR1";
 
-                case"BR3":
+                case"BR3" :
                     return"EPM BR3";
 
-                case"T":
+                case"T" :
                     return"SUPERFUND";
 
-                case"TD":
+                case"TD" :
                     return"SF RECOVERIES";
 
-                case"TR":
+                case"TR" :
                     return"SF REIMB.";
 
-                case"TR1":
+                case"TR1" :
                     return"SF SSC";
 
-                case"TR2":
+                case"TR2" :
                     return"SF SP ACCT NON-FED";
 
-                case"TR2A":
+                case"TR2A" :
                     return"SF FED SPECIAL ACCT";
 
-                case"TR2B":
+                case"TR2B" :
                     return"SF NONFED SPECIAL ACCT";
 
-                case"F":
+                case"F" :
                     return"LUST";
 
-                case"FC":
+                case"FC" :
                     return"LUST CARRYOVER";
 
-                case"FD":
+                case"FD" :
                     return"LUST RECOVERIES";
 
-                case"H":
+                case"H" :
                     return"OIL";
 
-                case"HC":
+                case"HC" :
                     return"OIL CARRYOVER";
 
-                case"HD":
+                case"HD" :
                     return"OIL RECOVERIES";
 
-                case"HR":
+                case"HR" :
                     return"OIL REIMB";
 
-                case"E1":
+                case"E1" :
                     return"CATEGORICAL GRANTS";
 
-                case"E1C":
+                case"E1C" :
                     return"CATEGGORICAL CARRYOVER";
 
-                case"E1D":
+                case"E1D" :
                     return"CATEGORICAL RECOVERIES";
 
-                case"E2":
+                case"E2" :
                     return"CLEAN WATER SRF";
 
-                case"E2C":
+                case"E2C" :
                     return"CWSRF CARRYOVERY";
 
-                case"E2D":
+                case"E2D" :
                     return"CWSRF RECOVERIES";
 
-                case"E3":
+                case"E3" :
                     return"DRINKING WATER SRF";
 
-                case"E3C":
+                case"E3C" :
                     return"DWSRF CARRYOVER";
 
-                case"E3D":
+                case"E3D" :
                     return"DWSRF RECOVERIES";
 
-                case"E4":
+                case"E4" :
                     return"SPECIAL PROJECTS";
 
-                case"E4C":
+                case"E4C" :
                     return"SP PROJ CARRYOVER";
 
-                case"E4D":
+                case"E4D" :
                     return"SP PROJ RECOVERIES";
 
-                case"E5":
+                case"E5" :
                     return"STAG EARMARKS";
 
-                case"E5C":
+                case"E5C" :
                     return"OLD EARMARKS CARRYOVER";
 
-                case"E5D":
+                case"E5D" :
                     return"OLD EARMARKS RECOVERY";
 
-                case"ZL":
+                case"ZL" :
                     return"DEEP WATER HORIZON";
             }
 
@@ -1265,103 +1261,103 @@ namespace BudgetExecution
         {
             switch(fundcode)
             {
-                case"B":
+                case"B" :
                     return"ENVIRONMENTAL PROGRAMS AND MANAGEMENT";
 
-                case"BR":
+                case"BR" :
                     return"EPM REIMB MULTIYEAR";
 
-                case"BR1":
+                case"BR1" :
                     return"EPM REIMB";
 
-                case"BR3":
+                case"BR3" :
                     return"EPM REIMB IPA NONFED";
 
-                case"T":
+                case"T" :
                     return"SUPERFUND APPROPRIATION";
 
-                case"TD":
+                case"TD" :
                     return"SUPERFUND RECOVERIES";
 
-                case"TR":
+                case"TR" :
                     return"SUPERFUND REIMB";
 
-                case"TR1":
+                case"TR1" :
                     return"SF STATE CONTRACT";
 
-                case"TR2":
+                case"TR2" :
                     return"SF SP ACCT NON-FED";
 
-                case"TR2A":
+                case"TR2A" :
                     return"SF FED SPECIAL ACCT";
 
-                case"TR2B":
+                case"TR2B" :
                     return"SF NONFED SPECIAL ACCT";
 
-                case"F":
+                case"F" :
                     return"UNDERGROUND STORAGE TANKS";
 
-                case"FC":
+                case"FC" :
                     return"UNDERGROUND STORAGE TANKS CARRYOVER";
 
-                case"FD":
+                case"FD" :
                     return"UNDERGROUND STORAGE TANKS RECOVERIES";
 
-                case"H":
+                case"H" :
                     return"OIL SPILL TRUSTFUND";
 
-                case"HC":
+                case"HC" :
                     return"OIL SPILL TRUSTFUND CARRYOVER";
 
-                case"HD":
+                case"HD" :
                     return"OIL SPILL TRUSTFUND RECOVERIES";
 
-                case"HR":
+                case"HR" :
                     return"OIL SPILL TRUSTFUND REIMB";
 
-                case"E1":
+                case"E1" :
                     return"STAG CATEGORICAL GRANTS";
 
-                case"E1C":
+                case"E1C" :
                     return"STAG CATEGORICAL GRANTS CARRYOVER";
 
-                case"E1D":
+                case"E1D" :
                     return"STAG CATEGORICAL GRANTS RECOVERIES";
 
-                case"E2":
+                case"E2" :
                     return"STAG CLEAN WATER SRF";
 
-                case"E2C":
+                case"E2C" :
                     return"STAG CLEAN WATER SRF CARRYOVER";
 
-                case"E2D":
+                case"E2D" :
                     return"STAG CLEAN WATER SRF RECOVERIES";
 
-                case"E3":
+                case"E3" :
                     return"STAG DRINKING WATER SRF";
 
-                case"E3C":
+                case"E3C" :
                     return"STAG DRINKING WATER SRF CARRYOVER";
 
-                case"E3D":
+                case"E3D" :
                     return"STAG DRINKING WATER SRF RECOVERIES";
 
-                case"E4":
+                case"E4" :
                     return"STAG SPECIAL PROJECTS AND BROWNFIELDS";
 
-                case"E4C":
+                case"E4C" :
                     return"STAG SPECIAL PROJECTS AND BROWNFIELDS CARRYOVER";
 
-                case"E4D":
+                case"E4D" :
                     return"STAG SPECIAL PROJECTS AND BROWNFIELDS RECOVERIES";
 
-                case"E5":
+                case"E5" :
                     return"OLD EARMARKS";
 
-                case"E5C":
+                case"E5C" :
                     return"OLD EARMARKS CARRYOVER";
 
-                case"E5D":
+                case"E5D" :
                     return"OLD EARMARKS RECOVERIES";
             }
 
@@ -1374,31 +1370,31 @@ namespace BudgetExecution
             {
                 switch(boc)
                 {
-                    case"10":
+                    case"10" :
                         return"PAYROLL";
 
-                    case"17":
+                    case"17" :
                         return"FTE";
 
-                    case"21":
+                    case"21" :
                         return"TRAVEL";
 
-                    case"28":
+                    case"28" :
                         return"SITE TRAVEL";
 
-                    case"36":
+                    case"36" :
                         return"EXPENSES";
 
-                    case"37":
+                    case"37" :
                         return"CONTRACTS";
 
-                    case"38":
+                    case"38" :
                         return"WCF";
 
-                    case"41":
+                    case"41" :
                         return"GRANTS";
 
-                    default:
+                    default :
                         return"NONE";
                 }
             }
@@ -1415,49 +1411,49 @@ namespace BudgetExecution
             {
                 switch(org)
                 {
-                    case"06K":
+                    case"06K" :
                         return"6WQ";
 
-                    case"06G":
+                    case"06G" :
                         return"6WCF";
 
-                    case"06C":
+                    case"06C" :
                         return"6MD";
 
-                    case"06R":
+                    case"06R" :
                         return"6MDR";
 
-                    case"06N":
+                    case"06N" :
                         return"6WSA";
 
-                    case"06J":
+                    case"06J" :
                         return"6MM";
 
-                    case"06M":
+                    case"06M" :
                         return"6EN";
 
-                    case"06D":
+                    case"06D" :
                         return"6RC";
 
-                    case"06A":
+                    case"06A" :
                         return"6RA";
 
-                    case"06L":
+                    case"06L" :
                         return"6SF";
 
-                    case"6A":
+                    case"6A" :
                         return"6SF";
 
-                    case"06X":
+                    case"06X" :
                         return"6XA";
 
-                    case"06F":
+                    case"06F" :
                         return"6EJ";
 
-                    case"06":
+                    case"06" :
                         return"R06";
 
-                    default:
+                    default :
                         return"R06";
                 }
             }
@@ -1497,25 +1493,25 @@ namespace BudgetExecution
             {
                 switch(goal)
                 {
-                    case"01":
+                    case"01" :
                         return"CORE MISSION";
 
-                    case"1":
+                    case"1" :
                         return"CORE MISSION";
 
-                    case"2":
+                    case"2" :
                         return"COOPERATIVE FEDERALISM";
 
-                    case"02":
+                    case"02" :
                         return"COOPERATIVE FEDERALISM";
 
-                    case"3":
+                    case"3" :
                         return"RULE OF LAW AND PROCESS";
 
-                    case"03":
+                    case"03" :
                         return"RULE OF LAW AND PROCESS";
 
-                    default:
+                    default :
                         return goal;
                 }
             }
@@ -1532,37 +1528,37 @@ namespace BudgetExecution
             {
                 switch(obj)
                 {
-                    case"1":
+                    case"1" :
                         return"COMPLIANCE WITH THE LAW";
 
-                    case"01":
+                    case"01" :
                         return"COMPLIANCE WITH THE LAW";
 
-                    case"2":
+                    case"2" :
                         return"CREATE CONSISTENCY & CERTAINTY";
 
-                    case"02":
+                    case"02" :
                         return"CREATE CONSISTENCY & CERTAINTY";
 
-                    case"3":
+                    case"3" :
                         return"PRIORITIZE ROBUST SCIENCE";
 
-                    case"03":
+                    case"03" :
                         return"PRIORITIZE ROBUST SCIENCE";
 
-                    case"4":
+                    case"4" :
                         return"STREAMLINE & MODERNIZE";
 
-                    case"04":
+                    case"04" :
                         return"STREAMLINE & MODERNIZE";
 
-                    case"5":
+                    case"5" :
                         return"IMPROVE EFFICIENCY & EFFECTIVENESS";
 
-                    case"05":
+                    case"05" :
                         return"IMPROVE EFFICIENCY & EFFECTIVENESS";
 
-                    default:
+                    default :
                         return obj;
                 }
             }
@@ -1579,106 +1575,106 @@ namespace BudgetExecution
             {
                 switch(fundcode)
                 {
-                    case"B":
+                    case"B" :
                         return"068/0108";
 
-                    case"BR":
+                    case"BR" :
                         return"068/0108";
 
-                    case"BR1":
+                    case"BR1" :
                         return"068/0108";
 
-                    case"BR3":
+                    case"BR3" :
                         return"068/0108";
 
-                    case"T":
+                    case"T" :
                         return"68-68X8145";
 
-                    case"TD":
+                    case"TD" :
                         return"68-68X8145";
 
-                    case"TR":
+                    case"TR" :
                         return"68-68X8145";
 
-                    case"TR1":
+                    case"TR1" :
                         return"68-68X8145";
 
-                    case"TR2":
+                    case"TR2" :
                         return"68-68X8145";
 
-                    case"TR2A":
+                    case"TR2A" :
                         return"68-68X8145";
 
-                    case"TR2B":
+                    case"TR2B" :
                         return"68-68X8145";
 
-                    case"F":
+                    case"F" :
                         return"068-68X8153";
 
-                    case"FC":
+                    case"FC" :
                         return"068-68X8153";
 
-                    case"FD":
+                    case"FD" :
                         return"068-68X8153";
 
-                    case"H":
+                    case"H" :
                         return"068X8221";
 
-                    case"HC":
+                    case"HC" :
                         return"068X8221";
 
-                    case"HD":
+                    case"HD" :
                         return"068X8221";
 
-                    case"HR":
+                    case"HR" :
                         return"068X8221";
 
-                    case"E1":
+                    case"E1" :
                         return"068X0103";
 
-                    case"E1C":
+                    case"E1C" :
                         return"068X0103";
 
-                    case"E1D":
+                    case"E1D" :
                         return"068X0103";
 
-                    case"E2":
+                    case"E2" :
                         return"068X0103";
 
-                    case"E2C":
+                    case"E2C" :
                         return"068X0103";
 
-                    case"E2D":
+                    case"E2D" :
                         return"068X0103";
 
-                    case"E3":
+                    case"E3" :
                         return"068X0103";
 
-                    case"E3C":
+                    case"E3C" :
                         return"068X0103";
 
-                    case"E3D":
+                    case"E3D" :
                         return"068X0103";
 
-                    case"E4":
+                    case"E4" :
                         return"068X0103";
 
-                    case"E4C":
+                    case"E4C" :
                         return"068X0103";
 
-                    case"E4D":
+                    case"E4D" :
                         return"068X0103";
 
-                    case"E5":
+                    case"E5" :
                         return"068X0103";
 
-                    case"E5C":
+                    case"E5C" :
                         return"068X0103";
 
-                    case"E5D":
+                    case"E5D" :
                         return"068X0103";
 
-                    case"ZL":
+                    case"ZL" :
                         return"68 - 68X8145";
                 }
 

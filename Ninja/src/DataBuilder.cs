@@ -64,8 +64,12 @@ namespace BudgetExecution
             Columns = Table.GetFields();
             if(source == Source.FTE)
             {
-                Table = GetDataTable().AsEnumerable().Where(p => p.Field<string>("BOC").Equals("17"))
-                                      .Where(p => p.Field<decimal>("Amount") > 0).Select(p => p).CopyToDataTable();
+                Table = GetDataTable()
+                        .AsEnumerable()
+                        .Where(p => p.Field<string>("BOC").Equals("17"))
+                        .Where(p => p.Field<decimal>("Amount") > 0)
+                        .Select(p => p)
+                        .CopyToDataTable();
                 Total = GetFteTotal(Table);
                 ProgramElements = GetProgramElements(Table);
                 BindingSource = new BindingSource(Table.DataSet, Table.TableName);
@@ -97,7 +101,7 @@ namespace BudgetExecution
             {
                 Table = GetDataTable(Source).AsEnumerable().Select(p => p).CopyToDataTable();
             }
-            
+
             Columns = Table.GetFields();
             if(Columns.Contains("Amount"))
             {
@@ -122,39 +126,15 @@ namespace BudgetExecution
 
         public Dictionary<string, object> DataFields { get; set; }
 
-        public Query Query { get; }
-
-        public DataTable Table { get; set; }
-
         public Dictionary<string, Type> Schema { get; set; }
 
         public DataSet R6 { get; set; }
 
-        public DataRow[] Records { get; set; }
+        public Query Query { get; }
 
-        // METHODS
-        /// <summary>
-        /// Gets the data set.
-        /// </summary>
-        /// <returns></returns>
-        public DataSet GetDataSet(Source source)
-        {
-            try
-            {
-                DataSet ds = new DataSet("R06");
-                ds.DataSetName = "R06";
-                DataTable dt = new DataTable();
-                dt.TableName = source.ToString();
-                ds.Tables.Add(dt);
-                Query.DataAdapter.Fill(ds, Source.ToString());
-                return ds;
-            }
-            catch(Exception e)
-            {
-                new Error(e).ShowDialog();
-                return null;
-            }
-        }
+        public DataTable Table { get; set; }
+
+        public DataRow[] Records { get; set; }
 
         public DataTable GetDataTable()
         {
@@ -176,7 +156,49 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Gets the data table.
+        ///     Gets the records in the table as an Array of DataRows.
+        /// </summary>
+        /// <param name="table">The table.</param>
+        /// <returns></returns>
+        public DataRow[] GetRecords(DataTable table)
+        {
+            try
+            {
+                return table.AsEnumerable().Select(p => p).ToArray();
+            }
+            catch(Exception ex)
+            {
+                new Error(ex).ShowDialog();
+                return null;
+            }
+        }
+
+        // METHODS
+        /// <summary>
+        ///     Gets the data set.
+        /// </summary>
+        /// <returns></returns>
+        public DataSet GetDataSet(Source source)
+        {
+            try
+            {
+                DataSet ds = new DataSet("R06");
+                ds.DataSetName = "R06";
+                DataTable dt = new DataTable();
+                dt.TableName = source.ToString();
+                ds.Tables.Add(dt);
+                Query.DataAdapter.Fill(ds, Source.ToString());
+                return ds;
+            }
+            catch(Exception e)
+            {
+                new Error(e).ShowDialog();
+                return null;
+            }
+        }
+
+        /// <summary>
+        ///     Gets the data table.
         /// </summary>
         /// <param name="source">The source.</param>
         /// <returns></returns>
@@ -200,7 +222,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Gets the parameter array.
+        ///     Gets the parameter array.
         /// </summary>
         /// <param name="row">The row.</param>
         /// <returns></returns>
@@ -225,7 +247,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Gets the parameter list.
+        ///     Gets the parameter list.
         /// </summary>
         /// <param name="table">The table.</param>
         /// <returns></returns>
@@ -249,25 +271,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Gets the records in the table as an Array of DataRows.
-        /// </summary>
-        /// <param name="table">The table.</param>
-        /// <returns></returns>
-        public DataRow[] GetRecords(DataTable table)
-        {
-            try
-            {
-                return table.AsEnumerable().Select(p => p).ToArray();
-            }
-            catch(Exception ex)
-            {
-                new Error(ex).ShowDialog();
-                return null;
-            }
-        }
-
-        /// <summary>
-        /// Gets the sqlite query.
+        ///     Gets the sqlite query.
         /// </summary>
         /// <param name="source">The source.</param>
         /// <returns></returns>
@@ -285,7 +289,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Gets the sq lite query.
+        ///     Gets the sq lite query.
         /// </summary>
         /// <param name="source">The source.</param>
         /// <param name="pmr">The PMR.</param>
@@ -304,7 +308,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Gets the sq lite query.
+        ///     Gets the sq lite query.
         /// </summary>
         /// <param name="source">The source.</param>
         /// <param name="dpr">The DPR.</param>
@@ -323,7 +327,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Gets the excel query.
+        ///     Gets the excel query.
         /// </summary>
         /// <param name="pmr">The PMR.</param>
         /// <returns></returns>
@@ -347,7 +351,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Gets the excel query.
+        ///     Gets the excel query.
         /// </summary>
         /// <param name="source">The source.</param>
         /// <param name="pmr">The PMR.</param>
@@ -372,7 +376,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Filters the records.
+        ///     Filters the records.
         /// </summary>
         /// <param name="table">The table.</param>
         /// <param name="col">The col.</param>
@@ -392,7 +396,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Filters the records.
+        ///     Filters the records.
         /// </summary>
         /// <param name="table">The table.</param>
         /// <param name="col">The col.</param>
@@ -404,23 +408,29 @@ namespace BudgetExecution
             {
                 if(col.Length == 1 && filter.Length == 1)
                 {
-                    return table.AsEnumerable().Where(p => p.Field<string>(col[0].ToString()).Equals(filter[0]))
-                                .Select(p => p).CopyToDataTable();
+                    return table.AsEnumerable()
+                                .Where(p => p.Field<string>(col[0].ToString()).Equals(filter[0]))
+                                .Select(p => p)
+                                .CopyToDataTable();
                 }
 
                 if(col.Length == 2 && filter.Length == 2)
                 {
-                    return table.AsEnumerable().Where(p => p.Field<string>(col[0].ToString()).Equals(filter[0]))
+                    return table.AsEnumerable()
+                                .Where(p => p.Field<string>(col[0].ToString()).Equals(filter[0]))
                                 .Where(p => p.Field<string>(col[1].ToString()).Equals(filter[1]))
-                                .Select(p => p).CopyToDataTable();
+                                .Select(p => p)
+                                .CopyToDataTable();
                 }
 
                 if(col.Length == 3 && filter.Length == 3)
                 {
-                    return table.AsEnumerable().Where(p => p.Field<string>(col[0].ToString()).Equals(filter[0]))
+                    return table.AsEnumerable()
+                                .Where(p => p.Field<string>(col[0].ToString()).Equals(filter[0]))
                                 .Where(p => p.Field<string>(col[1].ToString()).Equals(filter[1]))
                                 .Where(p => p.Field<string>(col[2].ToString()).Equals(filter[2]))
-                                .Select(p => p).CopyToDataTable();
+                                .Select(p => p)
+                                .CopyToDataTable();
                 }
 
                 return null;
@@ -433,7 +443,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Gets the unique values.
+        ///     Gets the unique values.
         /// </summary>
         /// <param name="table">The table.</param>
         /// <param name="column">The column.</param>
@@ -457,7 +467,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Gets the unique field values.
+        ///     Gets the unique field values.
         /// </summary>
         /// <param name="table">The table.</param>
         /// <param name="column">The column.</param>
@@ -481,7 +491,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Gets the program elements.
+        ///     Gets the program elements.
         /// </summary>
         /// <param name="table">The table.</param>
         /// <returns></returns>
@@ -494,28 +504,43 @@ namespace BudgetExecution
                 foreach(DataColumn dc in table.Columns)
                 {
                     if(dc.ColumnName.Contains("ID") || dc.ColumnName.Contains("Amount") || dc.ColumnName.Contains("Obligation") || dc.ColumnName.Contains("Commitment"))
+                    {
                         continue;
+                    }
+
                     list = table.AsEnumerable().Select(p => p.Field<string>(dc.ColumnName)).Distinct().ToArray();
                     data.Add(dc.ColumnName, list);
                 }
 
                 if(data.ContainsKey("ID"))
+                {
                     data.Remove("ID");
+                }
 
                 if(data.ContainsKey("Amount"))
+                {
                     data.Remove("Amount");
+                }
 
                 if(data.ContainsKey("Obligation"))
+                {
                     data.Remove("Obligation");
+                }
 
                 if(data.ContainsKey("Commitment"))
+                {
                     data.Remove("Commitment");
+                }
 
                 if(data.ContainsKey("WorkHours"))
+                {
                     data.Remove("WorkHours");
+                }
 
                 if(data.ContainsKey("LeaveHours"))
+                {
                     data.Remove("LeaveHours");
+                }
 
                 return data;
             }
@@ -527,7 +552,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Gets the count.
+        ///     Gets the count.
         /// </summary>
         /// <param name="table">The table.</param>
         /// <returns></returns>
@@ -547,10 +572,10 @@ namespace BudgetExecution
                 new Error(ex).ShowDialog();
                 return 0;
             }
-        }       
-       
+        }
+
         /// <summary>
-        /// Gets the total.
+        ///     Gets the total.
         /// </summary>
         /// <param name="table">The table.</param>
         /// <returns></returns>
@@ -558,7 +583,7 @@ namespace BudgetExecution
         {
             try
             {
-                return table.AsEnumerable().Where(p => p.Field<string>("BOC") != "17").Select(p => p.Field<decimal>("Amount")).Sum();                   
+                return table.AsEnumerable().Where(p => p.Field<string>("BOC") != "17").Select(p => p.Field<decimal>("Amount")).Sum();
             }
             catch(Exception ex)
             {
@@ -568,7 +593,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Gets the fte total.
+        ///     Gets the fte total.
         /// </summary>
         /// <param name="table">The table.</param>
         /// <returns></returns>
@@ -591,7 +616,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Gets the column names.
+        ///     Gets the column names.
         /// </summary>
         /// <param name="table">The table.</param>
         /// <returns></returns>

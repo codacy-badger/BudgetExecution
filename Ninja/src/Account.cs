@@ -1,8 +1,4 @@
-﻿// <copyright file="Account.cs" company="PlaceholderCompany">
-// Copyright (c) PlaceholderCompany. All rights reserved.
-// </copyright>
-
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -137,7 +133,7 @@ namespace BudgetExecution
 
         // METHODS
         /// <summary>
-        /// Gets the goal.
+        ///     Gets the goal.
         /// </summary>
         /// <returns></returns>
         public string GetGoal()
@@ -147,7 +143,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Gets the name of the goal.
+        ///     Gets the name of the goal.
         /// </summary>
         /// <param name="code">The code.</param>
         /// <returns></returns>
@@ -157,7 +153,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Gets the NPM code.
+        ///     Gets the NPM code.
         /// </summary>
         /// <returns></returns>
         public string GetNpmCode()
@@ -167,7 +163,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Gets the objective.
+        ///     Gets the objective.
         /// </summary>
         /// <returns></returns>
         public string GetObjective()
@@ -176,7 +172,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Gets the name of the objective.
+        ///     Gets the name of the objective.
         /// </summary>
         /// <param name="code">The code.</param>
         /// <returns></returns>
@@ -186,7 +182,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Gets the program project code.
+        ///     Gets the program project code.
         /// </summary>
         /// <returns></returns>
         public string GetProgramProjectCode()
@@ -195,7 +191,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Gets the code.
+        ///     Gets the code.
         /// </summary>
         /// <returns></returns>
         string IAccount.GetCode()
@@ -204,7 +200,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Gets the code.
+        ///     Gets the code.
         /// </summary>
         /// <returns></returns>
         public string GetCode()
@@ -213,10 +209,10 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Returns a <see cref="System.String" /> that represents this instance.
+        ///     Returns a <see cref="System.String" /> that represents this instance.
         /// </summary>
         /// <returns>
-        /// A <see cref="System.String" /> that represents this instance.
+        ///     A <see cref="System.String" /> that represents this instance.
         /// </returns>
         public override string ToString()
         {
@@ -224,7 +220,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Gets the insert fields.
+        ///     Gets the insert fields.
         /// </summary>
         /// <param name="source">The source.</param>
         /// <param name="param">The parameter.</param>
@@ -278,7 +274,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Gets the insert fields.
+        ///     Gets the insert fields.
         /// </summary>
         /// <param name="source">The source.</param>
         /// <param name="provider">The provider.</param>
@@ -333,7 +329,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Selects the specified source.
+        ///     Selects the specified source.
         /// </summary>
         /// <param name="source">The source.</param>
         /// <param name="param">The parameter.</param>
@@ -353,7 +349,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Selects the specified source.
+        ///     Selects the specified source.
         /// </summary>
         /// <param name="source">The source.</param>
         /// <param name="provider">The provider.</param>
@@ -374,7 +370,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Inserts the specified p.
+        ///     Inserts the specified p.
         /// </summary>
         /// <param name="p">The p.</param>
         public static void Insert(Dictionary<string, object> p)
@@ -391,7 +387,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Updates the specified p.
+        ///     Updates the specified p.
         /// </summary>
         /// <param name="p">The p.</param>
         public static void Update(Dictionary<string, object> p)
@@ -408,7 +404,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Deletes the specified p.
+        ///     Deletes the specified p.
         /// </summary>
         /// <param name="p">The p.</param>
         public static void Delete(Dictionary<string, object> p)
@@ -425,7 +421,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Gets the account parameter.
+        ///     Gets the account parameter.
         /// </summary>
         /// <param name="fund">The fund.</param>
         /// <param name="code">The code.</param>
@@ -444,7 +440,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Gets the account parameter.
+        ///     Gets the account parameter.
         /// </summary>
         /// <param name="bfy">The bfy.</param>
         /// <param name="fund">The fund.</param>
@@ -464,7 +460,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Gets the account program data.
+        ///     Gets the account program data.
         /// </summary>
         /// <param name="fund">The fund.</param>
         /// <param name="code">The code.</param>
@@ -492,7 +488,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Gets the account data.
+        ///     Gets the account data.
         /// </summary>
         /// <param name="source">The source.</param>
         /// <param name="provider">The provider.</param>
@@ -512,7 +508,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Gets the account data.
+        ///     Gets the account data.
         /// </summary>
         /// <param name="source">The source.</param>
         /// <param name="param">The parameter.</param>
@@ -532,7 +528,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Gets the account data.
+        ///     Gets the account data.
         /// </summary>
         /// <param name="source">The source.</param>
         /// <param name="provider">The provider.</param>

@@ -1,8 +1,4 @@
-﻿// <copyright file="PayrollObligation.cs" company="PlaceholderCompany">
-// Copyright (c) PlaceholderCompany. All rights reserved.
-// </copyright>
-
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -12,7 +8,9 @@ namespace BudgetExecution
     public class PayrollObligation
     {
         // CONSTRUCTORS
-        public PayrollObligation() { }
+        public PayrollObligation()
+        {
+        }
 
         public PayrollObligation(string rpio, string bfy, string fund, string org, string rc, string code, string progproj, string progprojname, string hoc, string wc, string wcn, decimal amount, decimal ybp, double ybh, decimal yotp, double yoth)
         {

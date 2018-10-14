@@ -1,8 +1,4 @@
-﻿// <copyright file="SQLiteQuery.cs" company="PlaceholderCompany">
-// Copyright (c) PlaceholderCompany. All rights reserved.
-// </copyright>
-
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
@@ -66,7 +62,7 @@ namespace BudgetExecution
             InsertCommand = CommandBuilder.GetInsertCommand();
             DeleteCommand = CommandBuilder.GetDeleteCommand();
             Settings = new AppSettingsReader();
-        }       
+        }
 
         // PROPERTIES
         public new AppSettingsReader Settings { get; }
@@ -461,19 +457,19 @@ namespace BudgetExecution
             {
                 switch(cmd)
                 {
-                    case Sql.SELECT:
+                    case Sql.SELECT :
                         return GetSelectCommand(source, provider, pmr, connection);
 
-                    case Sql.UPDATE:
+                    case Sql.UPDATE :
                         return GetUpdateCommand(source, provider, pmr, connection);
 
-                    case Sql.INSERT:
+                    case Sql.INSERT :
                         return GetInsertCommand(source, provider, pmr, connection);
 
-                    case Sql.DELETE:
+                    case Sql.DELETE :
                         return GetDeleteCommand(source, provider, pmr, connection);
 
-                    default:
+                    default :
                         return GetSelectCommand(source, provider, pmr, connection);
                 }
             }

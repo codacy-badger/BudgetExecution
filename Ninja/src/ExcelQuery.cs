@@ -1,15 +1,11 @@
-﻿// <copyright file="ExcelQuery.cs" company="PlaceholderCompany">
-// Copyright (c) PlaceholderCompany. All rights reserved.
-// </copyright>
+﻿using System;
+using System.Collections.Generic;
+using System.Configuration;
+using System.Data;
+using System.Data.OleDb;
 
 namespace BudgetExecution
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Configuration;
-    using System.Data;
-    using System.Data.OleDb;
-
     public class ExcelQuery : Query, IQuery
     {
         // Constructors
@@ -110,7 +106,7 @@ namespace BudgetExecution
 
         // Methods
         /// <summary>
-        /// Gets the parameter.
+        ///     Gets the parameter.
         /// </summary>
         /// <param name="dr">The dr.</param>
         /// <returns></returns>
@@ -134,7 +130,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Gets the parameter.
+        ///     Gets the parameter.
         /// </summary>
         /// <param name="param">The parameter.</param>
         /// <returns></returns>
@@ -175,7 +171,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Gets the parameters.
+        ///     Gets the parameters.
         /// </summary>
         /// <param name="dr">The dr.</param>
         /// <returns></returns>
@@ -199,7 +195,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Gets the parameter.
+        ///     Gets the parameter.
         /// </summary>
         /// <param name="table">The table.</param>
         /// <returns></returns>
@@ -223,7 +219,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Gets the select parameter string.
+        ///     Gets the select parameter string.
         /// </summary>
         /// <param name="param">The parameter.</param>
         /// <returns></returns>
@@ -248,7 +244,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Gets the select parameter string.
+        ///     Gets the select parameter string.
         /// </summary>
         /// <param name="param">The parameter.</param>
         /// <returns></returns>
@@ -273,7 +269,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Gets the command builder.
+        ///     Gets the command builder.
         /// </summary>
         /// <returns></returns>
         private OleDbCommandBuilder GetCommandBuilder()
@@ -290,7 +286,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Gets the data adapter.
+        ///     Gets the data adapter.
         /// </summary>
         /// <returns></returns>
         private OleDbDataAdapter GetDataAdapter()
@@ -307,7 +303,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Gets the parameter string.
+        ///     Gets the parameter string.
         /// </summary>
         /// <param name="param">The parameter.</param>
         /// <returns></returns>
@@ -332,7 +328,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Gets the select command.
+        ///     Gets the select command.
         /// </summary>
         /// <returns></returns>
         private OleDbCommand GetSelectCommand()
@@ -349,7 +345,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Gets the data adapter.
+        ///     Gets the data adapter.
         /// </summary>
         /// <param name="sql">The SQL.</param>
         /// <returns></returns>
@@ -367,7 +363,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Gets the command builder.
+        ///     Gets the command builder.
         /// </summary>
         /// <param name="adapter">The adapter.</param>
         /// <returns></returns>
@@ -385,7 +381,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Gets the data adapter.
+        ///     Gets the data adapter.
         /// </summary>
         /// <param name="command">The command.</param>
         /// <returns></returns>
@@ -403,7 +399,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Gets the delete command.
+        ///     Gets the delete command.
         /// </summary>
         /// <returns></returns>
         public OleDbCommand GetDeleteCommand()
@@ -420,7 +416,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Gets the insert command.
+        ///     Gets the insert command.
         /// </summary>
         /// <returns></returns>
         public OleDbCommand GetInsertCommand()
@@ -437,7 +433,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Gets the select command.
+        ///     Gets the select command.
         /// </summary>
         /// <param name="select">The select.</param>
         /// <returns></returns>
@@ -455,7 +451,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Gets the SQL statement.
+        ///     Gets the SQL statement.
         /// </summary>
         /// <returns></returns>
         public string GetSqlStatement()
@@ -472,7 +468,7 @@ namespace BudgetExecution
         }
 
         /// <summary>
-        /// Gets the update command.
+        ///     Gets the update command.
         /// </summary>
         /// <returns></returns>
         public OleDbCommand GetUpdateCommand()

@@ -1,8 +1,4 @@
-﻿// <copyright file="Selector.cs" company="PlaceholderCompany">
-// Copyright (c) PlaceholderCompany. All rights reserved.
-// </copyright>
-
-using System;
+﻿using System;
 using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
@@ -69,7 +65,9 @@ namespace BudgetExecution
             }
         }
 
-        private void Selector_Load(object sender, EventArgs e) { }
+        private void Selector_Load(object sender, EventArgs e)
+        {
+        }
 
         private void ViewerCarousel_OnImageSelected(object sender, EventArgs e)
         {

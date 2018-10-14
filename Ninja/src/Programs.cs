@@ -1,8 +1,4 @@
-﻿// <copyright file="Programs.cs" company="PlaceholderCompany">
-// Copyright (c) PlaceholderCompany. All rights reserved.
-// </copyright>
-
-using System.Data;
+﻿using System.Data;
 using System.Linq;
 
 namespace BudgetExecution

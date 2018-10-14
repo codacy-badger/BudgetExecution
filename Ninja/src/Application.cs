@@ -1,15 +1,11 @@
-﻿// <copyright file="Application.cs" company="PlaceholderCompany">
-// Copyright (c) PlaceholderCompany. All rights reserved.
-// </copyright>
+﻿using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Data.Common;
+using Syncfusion.Windows.Forms.Chart;
 
 namespace BudgetExecution
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Data;
-    using System.Data.Common;
-    using Syncfusion.Windows.Forms.Chart;
-
     // Delegates
     public delegate double[] Calculator(DataTable table);
 

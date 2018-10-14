@@ -1,12 +1,12 @@
-﻿namespace BudgetExecution
-{
-    using System;
-    using System.Collections.Generic;
-    using System.Data;
-    using System.Windows.Forms;
-    using MetroSet_UI.Controls;
-    using Syncfusion.Windows.Forms;
+﻿using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Windows.Forms;
+using MetroSet_UI.Controls;
+using Syncfusion.Windows.Forms;
 
+namespace BudgetExecution
+{
     public partial class AccountManager : MetroForm
     {
         // CONSTRUCTORS
@@ -206,7 +206,7 @@
         internal void BindComboBoex()
         {
             try
-            {               
+            {
                 AddSubProject.DataSource = BindingSource;
                 AddSubProject.DisplayMember = "SubProject";
                 AddLevel.DataSource = BindingSource;
@@ -257,7 +257,7 @@
             {
                 AddOrg.Items.Add(o);
             }
-            
+
             foreach(string a in AH)
             {
                 AddAh.Items.Add(a);
@@ -426,7 +426,9 @@
             }
         }
 
-        private void RefreshButton_Click(object sender, EventArgs e) { }
+        private void RefreshButton_Click(object sender, EventArgs e)
+        {
+        }
 
         private void CopyButton_OnClick(object sender, EventArgs e)
         {
@@ -441,7 +443,9 @@
             }
         }
 
-        private void AccountTabControl_SelectedIndexChanged(object sender, EventArgs e) { }
+        private void AccountTabControl_SelectedIndexChanged(object sender, EventArgs e)
+        {
+        }
 
         internal void PopulateComboBox(ComboBox comboBox, string[] list)
         {

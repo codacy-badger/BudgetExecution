@@ -1,8 +1,4 @@
-﻿// <copyright file="Fund.cs" company="PlaceholderCompany">
-// Copyright (c) PlaceholderCompany. All rights reserved.
-// </copyright>
-
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SQLite;
@@ -13,7 +9,9 @@ namespace BudgetExecution
     public class Fund : IFund
     {
         // CONSTRUCTORS
-        public Fund() { }
+        public Fund()
+        {
+        }
 
         public Fund(Source source, Provider provider)
         {

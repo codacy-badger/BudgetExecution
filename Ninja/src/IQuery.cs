@@ -1,8 +1,4 @@
-﻿// <copyright file="IQuery.cs" company="PlaceholderCompany">
-// Copyright (c) PlaceholderCompany. All rights reserved.
-// </copyright>
-
-using System.Data;
+﻿using System.Data;
 using System.Data.Common;
 
 namespace BudgetExecution

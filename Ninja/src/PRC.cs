@@ -1,8 +1,4 @@
-﻿// <copyright file="PRC.cs" company="PlaceholderCompany">
-// Copyright (c) PlaceholderCompany. All rights reserved.
-// </copyright>
-
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -12,7 +8,9 @@ namespace BudgetExecution
     public class PRC : IPRC, IAccount
     {
         // CONSTRUCTORS
-        public PRC() { }
+        public PRC()
+        {
+        }
 
         public PRC(Source source = Source.PRC, Provider provider = Provider.SQLite)
         {
@@ -168,22 +166,6 @@ namespace BudgetExecution
 
         public string Objective { get; }
 
-        public string RPIO { get; set; }
-
-        public string BFY { get; set; }
-
-        public Fund Fund { get; }
-
-        public Org Org { get; }
-
-        public RC RC { get; }
-
-        public Account Account { get; }
-
-        public decimal Amount { get; set; }
-
-        public BOC BOC { get; }
-
         // METHODS
         public string GetCode()
         {
@@ -221,6 +203,22 @@ namespace BudgetExecution
         {
             return Code.Substring(5, 2);
         }
+
+        public string RPIO { get; set; }
+
+        public string BFY { get; set; }
+
+        public Fund Fund { get; }
+
+        public Org Org { get; }
+
+        public RC RC { get; }
+
+        public Account Account { get; }
+
+        public decimal Amount { get; set; }
+
+        public BOC BOC { get; }
 
         internal Dictionary<string, object> GetDataFields()
         {

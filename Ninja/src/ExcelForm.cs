@@ -1,7 +1,3 @@
-// <copyright file="ExcelForm.cs" company="PlaceholderCompany">
-// Copyright (c) PlaceholderCompany. All rights reserved.
-// </copyright>
-
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -198,7 +194,9 @@ namespace BudgetExecution
             }
         }
 
-        private void RefreshButton_Click(object sender, EventArgs e) { }
+        private void RefreshButton_Click(object sender, EventArgs e)
+        {
+        }
 
         private void CopyButton_OnClick(object sender, EventArgs e)
         {
@@ -213,6 +211,8 @@ namespace BudgetExecution
             }
         }
 
-        private void ExcelForm_Load(object sender, EventArgs e) { }
+        private void ExcelForm_Load(object sender, EventArgs e)
+        {
+        }
     }
 }

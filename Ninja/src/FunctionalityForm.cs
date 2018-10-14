@@ -1,7 +1,3 @@
-// <copyright file="FunctionalityForm.cs" company="PlaceholderCompany">
-// Copyright (c) PlaceholderCompany. All rights reserved.
-// </copyright>
-
 using System;
 using System.Drawing;
 using System.IO;
@@ -50,7 +46,7 @@ namespace BudgetExecution
         private void FunctionCarousel_OnImageSelected(object sender, EventArgs e)
         {
             string i = FunctionCarousel.ActiveImage.Tag.ToString();
-            var s = (Source)Enum.Parse(typeof(Source), i);
+            var s = (Source) Enum.Parse(typeof(Source), i);
             SummaryForm a = new SummaryForm(s);
             a.Show();
         }
@@ -69,6 +65,8 @@ namespace BudgetExecution
             Close();
         }
 
-        private void FunctionCarousel_Click(object sender, EventArgs e) { }
+        private void FunctionCarousel_Click(object sender, EventArgs e)
+        {
+        }
     }
 }

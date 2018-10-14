@@ -1,8 +1,4 @@
-﻿// <copyright file="IFund.cs" company="PlaceholderCompany">
-// Copyright (c) PlaceholderCompany. All rights reserved.
-// </copyright>
-
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Data;
 
 namespace BudgetExecution

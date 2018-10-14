@@ -174,7 +174,12 @@ namespace BudgetExecution
         {
             try
             {
-                return new[] { GetTotal(table), table.Rows.Count, GetAverage(table) };
+                return new[]
+                {
+                    GetTotal(table),
+                    table.Rows.Count,
+                    GetAverage(table)
+                };
             }
             catch(Exception ex)
             {

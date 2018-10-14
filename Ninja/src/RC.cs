@@ -1,8 +1,4 @@
-﻿// <copyright file="RC.cs" company="PlaceholderCompany">
-// Copyright (c) PlaceholderCompany. All rights reserved.
-// </copyright>
-
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Data.SQLite;
 
@@ -11,7 +7,9 @@ namespace BudgetExecution
     public class RC
     {
         // CONSTRUCTORS
-        public RC() { }
+        public RC()
+        {
+        }
 
         public RC(string code)
         {

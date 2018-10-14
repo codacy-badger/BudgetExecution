@@ -1,8 +1,4 @@
-﻿// <copyright file="Form1.cs" company="PlaceholderCompany">
-// Copyright (c) PlaceholderCompany. All rights reserved.
-// </copyright>
-
-using System;
+﻿using System;
 using Syncfusion.Windows.Forms;
 
 namespace BudgetExecution
@@ -15,12 +11,20 @@ namespace BudgetExecution
             InitializeComponent();
         }
 
-        private void Button16_Click(object sender, EventArgs e) { }
+        private void Button16_Click(object sender, EventArgs e)
+        {
+        }
 
-        private void Button9_Click(object sender, EventArgs e) { }
+        private void Button9_Click(object sender, EventArgs e)
+        {
+        }
 
-        private void Button4_Click(object sender, EventArgs e) { }
+        private void Button4_Click(object sender, EventArgs e)
+        {
+        }
 
-        private void Button6_Click(object sender, EventArgs e) { }
+        private void Button6_Click(object sender, EventArgs e)
+        {
+        }
     }
 }

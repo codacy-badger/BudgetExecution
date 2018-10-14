@@ -1,8 +1,4 @@
-﻿// <copyright file="SearchBox.cs" company="PlaceholderCompany">
-// Copyright (c) PlaceholderCompany. All rights reserved.
-// </copyright>
-
-using System.Windows.Forms;
+﻿using System.Windows.Forms;
 
 namespace Ninja.Data.Forms
 {

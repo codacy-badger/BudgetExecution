@@ -1,8 +1,4 @@
-﻿// <copyright file="BudgetChart.cs" company="PlaceholderCompany">
-// Copyright (c) PlaceholderCompany. All rights reserved.
-// </copyright>
-
-using System;
+﻿using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Data;
@@ -15,7 +11,9 @@ namespace BudgetExecution
     public class BudgetChart
     {
         // CONSTRUCTORS
-        public BudgetChart() { }
+        public BudgetChart()
+        {
+        }
 
         public BudgetChart(ChartControl chart, string title, Dictionary<string, double> data)
         {
@@ -301,7 +299,7 @@ namespace BudgetExecution
 
         public DataTable Table { get; set; }
 
-        public DataTable CarryOver { get;set; }
+        public DataTable CarryOver { get; set; }
 
         public DataTable CurrentYear { get; set; }
 
@@ -320,7 +318,7 @@ namespace BudgetExecution
                    SeriesType == ChartSeriesType.Line ||
                    SeriesType == ChartSeriesType.Spline ||
                    SeriesType == ChartSeriesType.SplineArea ||
-                   SeriesType == ChartSeriesType.StackingColumn )
+                   SeriesType == ChartSeriesType.StackingColumn)
                 {
                     foreach(KeyValuePair<string, double> kvp in data)
                     {
@@ -362,7 +360,7 @@ namespace BudgetExecution
                 DataSeries = new ChartSeries("Total", type);
                 switch(type)
                 {
-                    case ChartSeriesType.Column:
+                    case ChartSeriesType.Column :
                         foreach(KeyValuePair<string, double> kvp in data)
                         {
                             DataSeries.Points.Add(kvp.Key, kvp.Value);
@@ -370,7 +368,7 @@ namespace BudgetExecution
 
                         return DataSeries;
 
-                    case ChartSeriesType.Area:
+                    case ChartSeriesType.Area :
                         foreach(KeyValuePair<string, double> kvp in data)
                         {
                             DataSeries.Points.Add(kvp.Key, kvp.Value);
@@ -378,7 +376,7 @@ namespace BudgetExecution
 
                         return DataSeries;
 
-                    case ChartSeriesType.Pie:
+                    case ChartSeriesType.Pie :
                         ArrayList list = new ArrayList();
                         foreach(KeyValuePair<string, double> kvp in data)
                         {
@@ -577,11 +575,19 @@ namespace BudgetExecution
                 Chart.PrimaryXAxis.ForeColor = SystemColors.MenuHighlight;
                 Chart.PrimaryXAxis.ValueType = ChartValueType.Category;
                 if(Source != Source.FTE)
+                {
                     Chart.PrimaryYAxis.Format = "C";
+                }
+
                 if(Source == Source.FTE)
+                {
                     Chart.PrimaryYAxis.Format = "N";
+                }
+
                 if(Value == Stat.Ratio)
+                {
                     Chart.PrimaryYAxis.Format = "P";
+                }
             }
             catch(Exception e)
             {
@@ -703,7 +709,7 @@ namespace BudgetExecution
                 return null;
             }
         }
-        
+
         internal void ConfigureLegend(ChartControl chart)
         {
             try

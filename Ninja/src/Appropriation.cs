@@ -8,7 +8,9 @@ namespace BudgetExecution
     public class Appropriation : IBudgetAuthority
     {
         // CONSTRUCTORS
-        public Appropriation() { }
+        public Appropriation()
+        {
+        }
 
         public Appropriation(string fundcode, string bfy)
         {

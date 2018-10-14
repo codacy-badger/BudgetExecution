@@ -1,8 +1,4 @@
-﻿// <copyright file="Org.cs" company="PlaceholderCompany">
-// Copyright (c) PlaceholderCompany. All rights reserved.
-// </copyright>
-
-using System;
+﻿using System;
 using System.Collections.Generic;
 
 namespace BudgetExecution
@@ -10,7 +6,9 @@ namespace BudgetExecution
     public class Org
     {
         // CONSTRUCTORS
-        public Org() { }
+        public Org()
+        {
+        }
 
         public Org(string code)
         {

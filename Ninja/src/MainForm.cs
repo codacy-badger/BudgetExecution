@@ -1,7 +1,3 @@
-// <copyright file="MainForm.cs" company="PlaceholderCompany">
-// Copyright (c) PlaceholderCompany. All rights reserved.
-// </copyright>
-
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
@@ -200,6 +196,8 @@ namespace BudgetExecution
             dm.Show();
         }
 
-        private void TransferButton_Click(object sender, EventArgs e) { }
+        private void TransferButton_Click(object sender, EventArgs e)
+        {
+        }
     }
 }

@@ -1,8 +1,4 @@
-﻿// <copyright file="IDataBuilder.cs" company="PlaceholderCompany">
-// Copyright (c) PlaceholderCompany. All rights reserved.
-// </copyright>
-
-using System.Data;
+﻿using System.Data;
 
 namespace BudgetExecution
 {
