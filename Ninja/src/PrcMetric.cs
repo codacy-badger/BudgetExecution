@@ -12,17 +12,30 @@ namespace BudgetExecution
     public class PrcMetric
     {
         // CONSTRUCTORS
-        public PrcMetric() { }
+        public PrcMetric()
+        {
+        }
 
         public PrcMetric(DataBuilder data)
         {
             DbData = data;
             Table = DbData.Table;
-            ProgramElements = DbData.GetProgramElements(Table);
+            CarryOverTable = DbData.Table.AsEnumerable()
+                                 .Where(p => p.Field<string>("BFY").Equals("2018"))
+                                 .Select(p => p).CopyToDataTable();
+            CurrentYearTable = DbData.Table.AsEnumerable()
+                                 .Where(p => p.Field<string>("BFY").Equals("2019"))
+                                 .Select(p => p).CopyToDataTable();
+            ProgramElements = DbData.GetProgramElements(DbData.Table);
             Total = GetTotals(Table);
+            CarryOverTotal = GetTotals(CarryOverTable);
+            CurrentYearTotal = GetTotals(CurrentYearTable);
             Count = Table.Rows.Count;
-            Average = GetAverage(Table);
+            CarryOverCount = CarryOverTable.Rows.Count;
+            CurrentYearCount = CurrentYearTable.Rows.Count;
             Metrics = GetMetrics(Table);
+            CarryOverMetrics = GetMetrics(CarryOverTable);
+            CurrentYearMetrics = GetMetrics(CurrentYearTable);
             FundTotals = GetDataTotals(Table, Field.FundName);
             FundMetrics = GetMetrics(Table, Field.FundName);
             BocTotals = GetDataTotals(Table, Field.BocName);
@@ -55,9 +68,19 @@ namespace BudgetExecution
         {
             DbData = data;
             Table = Info.FilterRows(DbData.Table, column, filter);
+            CarryOverTable = Info.FilterRows(DbData.Table, column, filter).AsEnumerable()
+                                 .Where(p => p.Field<string>("BFY").Equals("2018"))
+                                 .Select(p => p).CopyToDataTable();
+            CurrentYearTable = Info.FilterRows(DbData.Table, column, filter).AsEnumerable()
+                                 .Where(p => p.Field<string>("BFY").Equals("2019"))
+                                 .Select(p => p).CopyToDataTable();
             ProgramElements = GetProgramElements(Table);
             Total = GetTotals(Table);
+            CarryOverTotal = GetTotals(CarryOverTable);
+            CurrentYearTotal = GetTotals(CurrentYearTable);
             Count = Table.Rows.Count;
+            CarryOverCount = CarryOverTable.Rows.Count;
+            CurrentYearCount = CurrentYearTable.Rows.Count;
             Average = GetAverage(Table);
             Metrics = GetMetrics(Table);
             FundTotals = GetDataTotals(Table, Field.FundName);
@@ -116,13 +139,33 @@ namespace BudgetExecution
 
         public decimal Average { get; set; }
 
+        public decimal CarryOverAverage { get; set; }
+
+        public decimal CurrentYearAverage { get; set; }
+
         public int Count { get; }
+
+        public int CarryOverCount { get; }
+
+        public int CurrentYearCount { get; }
 
         public double[] Metrics { get; }
 
+        public double[] CurrentYearMetrics { get; }
+
+        public double[] CarryOverMetrics { get; }
+
         public DataTable Table { get; set; }
 
+        public DataTable CarryOverTable { get; set; }
+
+        public DataTable CurrentYearTable { get; set; }
+
         public decimal Total { get; }
+
+        public decimal CarryOverTotal { get; }
+
+        public decimal CurrentYearTotal { get; }
 
         public Dictionary<string, double[]> BocMetrics { get; set; }
 
@@ -182,7 +225,7 @@ namespace BudgetExecution
         {
             try
             {
-                return table.AsEnumerable().Sum(p => p.Field<decimal>("Amount"));
+                return table.AsEnumerable().Where(p => p.Field<decimal>("Amount") > 0).Sum(p => p.Field<decimal>("Amount"));
             }
             catch(Exception ex)
             {
@@ -211,7 +254,7 @@ namespace BudgetExecution
                 (double) GetTotals(table),
                 GetCount(table),
                 (double) GetAverage(table),
-                (double) GetTotals(table) / (double) DbData.Total
+                (double) GetTotals(table) / (double)Total
             };
         }
 

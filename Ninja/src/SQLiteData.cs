@@ -416,7 +416,7 @@ namespace BudgetExecution
 
                     case Source.ControlNumbers:
                         label1.Text = @"DivisionID";
-                        PopulateFilterItems(Field.DivisionID, Table, Filter1, label1);
+                        PopulateFilterItems(Field.Division, Table, Filter1, label1);
                         Filter2.Tag = "Fund";
                         break;
 

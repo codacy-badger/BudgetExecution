@@ -166,7 +166,7 @@ namespace BudgetExecution
 
         private void TransferButton_OnClick(object sender, EventArgs e)
         {
-            SummaryForm dm = new SummaryForm("06J");
+            SummaryForm dm = new SummaryForm(Source.MM);
             dm.Show();
         }
 

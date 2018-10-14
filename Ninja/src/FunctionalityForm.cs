@@ -50,7 +50,8 @@ namespace BudgetExecution
         private void FunctionCarousel_OnImageSelected(object sender, EventArgs e)
         {
             string i = FunctionCarousel.ActiveImage.Tag.ToString();
-            SummaryForm a = new SummaryForm(i);
+            var s = (Source)Enum.Parse(typeof(Source), i);
+            SummaryForm a = new SummaryForm(s);
             a.Show();
         }
 

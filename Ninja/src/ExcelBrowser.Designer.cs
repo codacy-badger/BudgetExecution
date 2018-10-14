@@ -50,9 +50,9 @@ namespace BudgetExecution
             this.Info.BackColor = System.Drawing.Color.Black;
             this.Info.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Info.ForeColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.Info.Location = new System.Drawing.Point(58, 29);
+            this.Info.Location = new System.Drawing.Point(38, 29);
             this.Info.Name = "Info";
-            this.Info.Size = new System.Drawing.Size(488, 123);
+            this.Info.Size = new System.Drawing.Size(530, 123);
             this.Info.TabIndex = 0;
             this.Info.Text = "Message Here";
             // 

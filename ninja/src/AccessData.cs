@@ -1,13 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Windows.Forms;
-using MetroSet_UI.Controls;
-using Syncfusion.Windows.Forms;
-using VisualPlus.Toolkit.Controls.Interactivity;
+﻿
 
 namespace BudgetExecution
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Data;
+    using System.Windows.Forms;
+    using MetroSet_UI.Controls;
+    using Syncfusion.Windows.Forms;
+    using VisualPlus.Toolkit.Controls.Interactivity; 
+
     /// <summary>
     ///     UI for the SQLiteData class.
     /// </summary>
@@ -416,7 +418,7 @@ namespace BudgetExecution
 
                     case Source.ControlNumbers:
                         label1.Text = @"DivisionID";
-                        PopulateFilterItems(Field.DivisionID, Table, Filter1, label1);
+                        PopulateFilterItems(Field.Division, Table, Filter1, label1);
                         Filter2.Tag = "Fund";
                         break;
 

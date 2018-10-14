@@ -95,7 +95,9 @@ namespace BudgetExecution
             ConfigureSeries(CurrentYearSeries, Value);
             ConfigureSeries(CarryOverSeries, Value);
             Configure3DMode(Chart);
-            Chart.ShowToolTips = true;
+            ConfigurePrimaryAxisLabels(Chart);
+            Chart.ShowLegend = true;
+            ConfigureLegend(Chart);
         }
 
         public BudgetChart(ChartControl chart, string[] title, DataBuilder data, Field filter, Stat value, ChartSeriesType type)
@@ -314,7 +316,11 @@ namespace BudgetExecution
             try
             {
                 ChartSeries series = new ChartSeries("Total", SeriesType);
-                if(SeriesType == ChartSeriesType.Column)
+                if(SeriesType == ChartSeriesType.Column ||
+                   SeriesType == ChartSeriesType.Line ||
+                   SeriesType == ChartSeriesType.Spline ||
+                   SeriesType == ChartSeriesType.SplineArea ||
+                   SeriesType == ChartSeriesType.StackingColumn )
                 {
                     foreach(KeyValuePair<string, double> kvp in data)
                     {
@@ -515,16 +521,9 @@ namespace BudgetExecution
         {
             try
             {
-                if(Source == Source.FTE)
+                if(value == Stat.Total || value == Stat.Average)
                 {
-                    series.Style.TextFormat = "{0}";
-                }
-                else
-                {
-                    if(value == Stat.Total || value == Stat.Average)
-                    {
-                        series.Style.TextFormat = "{0:N2}";
-                    }
+                    series.Style.TextFormat = "{0:C}";
                 }
 
                 if(value == Stat.Ratio)
@@ -537,47 +536,16 @@ namespace BudgetExecution
                     series.Style.TextFormat = "{0}";
                 }
 
-                if(series.Type == ChartSeriesType.Area)
+                if(series.Type == ChartSeriesType.Area || series.Type == ChartSeriesType.Column)
                 {
                     series.SmartLabels = true;
                     series.SortPoints = true;
                     series.Style.DisplayText = true;
-                    if(Source == Source.FTE)
-                    {
-                        series.PointsToolTipFormat = "{0}\nFTE: {4:N}";
-                    }
-
-                    series.PointsToolTipFormat = "{0}\nFunding: {4:C}";
                     series.Style.TextOffset = 20.0F;
                     series.Style.TextOrientation = ChartTextOrientation.Up;
                     series.Style.DisplayShadow = true;
                     series.Style.TextColor = Color.White;
-                    series.Style.Font.Size = 10.0F;
-                    series.Style.Font.FontStyle = FontStyle.Bold;
-                    series.Style.Font.Facename = "SegoeUI";
-                    series.ShowTicks = true;
-                    series.ConfigItems.ColumnItem.ShadingMode = ChartColumnShadingMode.PhongCylinder;
-                    series.ConfigItems.ColumnItem.LightColor = Color.SteelBlue;
-                    series.ConfigItems.ColumnItem.PhongAlpha = 2;
-                    return;
-                }
-
-                if(series.Type == ChartSeriesType.Column)
-                {
-                    series.SmartLabels = true;
-                    series.SortPoints = true;
-                    series.Style.DisplayText = true;
-                    if(Source == Source.FTE)
-                    {
-                        series.PointsToolTipFormat = "{0}\nFTE: {4:N}";
-                    }
-
-                    series.PointsToolTipFormat = "{0}\nFunding: {4:C}";
-                    series.Style.TextOffset = 20.0F;
-                    series.Style.TextOrientation = ChartTextOrientation.Up;
-                    series.Style.DisplayShadow = true;
-                    series.Style.TextColor = Color.White;
-                    series.Style.Font.Size = 10.0F;
+                    series.Style.Font.Size = 11F;
                     series.Style.Font.FontStyle = FontStyle.Bold;
                     series.Style.Font.Facename = "SegoeUI";
                     series.ShowTicks = true;
@@ -607,6 +575,13 @@ namespace BudgetExecution
                 Chart = chart;
                 Chart.PrimaryXAxis.Font = new Font("SegoeUI", 10F, FontStyle.Bold);
                 Chart.PrimaryXAxis.ForeColor = SystemColors.MenuHighlight;
+                Chart.PrimaryXAxis.ValueType = ChartValueType.Category;
+                if(Source != Source.FTE)
+                    Chart.PrimaryYAxis.Format = "C";
+                if(Source == Source.FTE)
+                    Chart.PrimaryYAxis.Format = "N";
+                if(Value == Stat.Ratio)
+                    Chart.PrimaryYAxis.Format = "P";
             }
             catch(Exception e)
             {

@@ -137,14 +137,14 @@ namespace BudgetExecution
         /// Gets the data set.
         /// </summary>
         /// <returns></returns>
-        public DataSet GetDataSet()
+        public DataSet GetDataSet(Source source)
         {
             try
             {
                 DataSet ds = new DataSet("R06");
                 ds.DataSetName = "R06";
                 DataTable dt = new DataTable();
-                dt.TableName = Source.ToString();
+                dt.TableName = source.ToString();
                 ds.Tables.Add(dt);
                 Query.DataAdapter.Fill(ds, Source.ToString());
                 return ds;
@@ -163,9 +163,9 @@ namespace BudgetExecution
                 DataSet ds = new DataSet("R06");
                 ds.DataSetName = "R06";
                 DataTable dt = new DataTable();
-                dt.TableName = Source.ToString();
+                dt.TableName = Source.PRC.ToString();
                 ds.Tables.Add(dt);
-                Query.DataAdapter.Fill(ds, Source.ToString());
+                Query.DataAdapter.Fill(ds, dt.TableName);
                 return dt;
             }
             catch(Exception e)
@@ -189,7 +189,7 @@ namespace BudgetExecution
                 DataTable dt = new DataTable();
                 dt.TableName = source.ToString();
                 ds.Tables.Add(dt);
-                Query.DataAdapter.Fill(ds, Source.ToString());
+                Query.DataAdapter.Fill(ds, dt.TableName);
                 return dt;
             }
             catch(Exception e)
@@ -556,66 +556,15 @@ namespace BudgetExecution
         /// <returns></returns>
         public decimal GetTotal(DataTable table)
         {
-            string[] cols = table.GetFields();
-            if(cols.Contains("Amount") ||
-               cols.Contains("Obligations") ||
-               cols.Contains("Commitments") ||
-               cols.Contains("LeaveHours") ||
-               cols.Contains("DollarAmount") ||
-               cols.Contains("WorkHours"))
+            try
             {
-                try
-                {
-                    if(cols.Contains("Amount") && Source == Source.PRC)
-                    {
-                        decimal total = table.AsEnumerable().Where(p => p.Field<string>("BOC") != "17").Select(p => p.Field<decimal>("Amount")).Sum();
-                        return total > 0 ? total : 0m;
-                    }
-
-                    if(cols.Contains("Amount") && Source == Source.FTE)
-                    {
-                        decimal total = table.AsEnumerable().Where(p => p.Field<string>("BOC").Equals("17")).Select(p => p.Field<decimal>("Amount")).Sum();
-                        return total > 0 ? total : 0m;
-                    }
-
-                    if(cols.Contains("Obligations"))
-                    {
-                        decimal total = table.AsEnumerable().Select(p => p.Field<decimal>("Obligations")).Sum();
-                        return total > 0 ? total : 0m;
-                    }
-
-                    if(cols.Contains("Commitments"))
-                    {
-                        decimal total = table.AsEnumerable().Select(p => p.Field<decimal>("Commitments")).Sum();
-                        return total > 0 ? total : 0m;
-                    }
-
-                    if(cols.Contains("DollarAmount"))
-                    {
-                        decimal total = table.AsEnumerable().Select(p => p.Field<decimal>("DollarAmount")).Sum();
-                        return total > 0 ? total : 0m;
-                    }
-
-                    if(cols.Contains("WorkHours"))
-                    {
-                        decimal total = table.AsEnumerable().Select(p => p.Field<decimal>("WorkHours")).Sum();
-                        return total > 0 ? total : 0m;
-                    }
-
-                    if(cols.Contains("LeaveHours"))
-                    {
-                        decimal total = table.AsEnumerable().Select(p => p.Field<decimal>("LeaveHours")).Sum();
-                        return total > 0 ? total : 0m;
-                    }
-                }
-                catch(Exception ex)
-                {
-                    new Error(ex).ShowDialog();
-                    return 0;
-                }
+                return table.AsEnumerable().Where(p => p.Field<string>("BOC") != "17").Select(p => p.Field<decimal>("Amount")).Sum();                   
             }
-
-            return 0;
+            catch(Exception ex)
+            {
+                new Error(ex).ShowDialog();
+                return 0;
+            }
         }
 
         /// <summary>

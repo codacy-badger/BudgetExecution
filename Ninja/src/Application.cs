@@ -50,13 +50,13 @@ namespace BudgetExecution
 
     public enum Sql { SELECT, INSERT, UPDATE, DELETE, CREATE, DROP }
 
-    public enum Field { ID, BudgetLevel, BFY, RPIO, Fund, FundName, BOC, BocName, Org, RC, Code, NPM, Goal, GoalName, Objective, ObjectiveName, DivisionName, ProgramArea, ProgramAreaName, ProgramProjectCode, ProgramProjectName, SiteProjectName, SiteProjectCode, NpmName, ReimbOrg, AH, DCN, ControlNumber, PurchaseRequest, AgreementNumber, Type, DivisionID, DocumentNumber, State, Organization, District, FocName, LastName, WorkCode, HrOrgCodeName, Name }
+    public enum Field { ID, BudgetLevel, BFY, RPIO, Fund, FundName, BOC, BocName, Org, RC, Code, NPM, Goal, GoalName, Objective, ObjectiveName, DivisionName, ProgramArea, ProgramAreaName, ProgramProjectCode, ProgramProjectName, SiteProjectName, SiteProjectCode, NpmName, ReimbOrg, AH, DCN, ControlNumber, PurchaseRequest, AgreementNumber, Type, Division, DocumentNumber, State, Organization, District, FocName, LastName, WorkCode, HrOrgCodeName, Name }
 
     public enum Provider { SQLite = 0, Excel = 1, SqlServer = 2, SqlCe = 3, Access = 4, OleDb = 5 }
 
     public enum Source { Accounts, Awards, ControlNumbers, DivisionAccounts, DivisionObligations, TravelObligations, Divisions, DWH, EJ, EN, Employees, EPM, ExternalTransfers, Funds, InternalTransfers, PRC, Programs, Benefits, ProgramObligations, RegionalAccounts, Obligations, PayrollObligations, Sites, Reimbursables, LUST, OIL, STAG, SF6A, SUPERFUND, MD, RC, RA, SF, Transfers, WQ, MM, WSA, WCF, MDR, XA, PAYROLL, FTE, TRAVEL, EXPENSES, CONTRACTS, GRANTS }
 
-    public enum Stat { Total, Count, Average, Ratio }
+    public enum Stat { Total = 0, Count = 1, Average = 2, Ratio = 3 }
 
     public enum TransferType { Admin = 1, BOC = 2, FromHQ = 3, ToHQ = 4, FromRpio = 5, ToRpio = 6, Recertification = 7, ToDivision = 8, FromDivsion = 9, SubAllowance = 10 }
 

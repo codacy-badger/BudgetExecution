@@ -266,7 +266,7 @@ namespace BudgetExecution
             }
         }
 
-        public new string GetSelectStatement(Source source, SQLiteParameter[] param)
+        public string GetSelectStatement(Source source, SQLiteParameter[] param)
         {
             try
             {
