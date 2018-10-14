@@ -1,15 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Data;
-using System.Data.Common;
-using System.Data.OleDb;
-using System.Data.SqlClient;
-using System.Data.SqlServerCe;
-using System.Data.SQLite;
-
-namespace BudgetExecution
+﻿namespace BudgetExecution
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Configuration;
+    using System.Data;
+    using System.Data.Common;
+    using System.Data.OleDb;
+    using System.Data.SqlClient;
+    using System.Data.SQLite;
+    using System.Data.SqlServerCe;
+
     public class Query : IQuery
     {
         // CONSTRUCTORS
@@ -90,7 +90,6 @@ namespace BudgetExecution
         public DbCommandBuilder CommandBuilder { get; internal set; }
 
         // PROPERTIES
-
         public Source Source { get; }
 
         public Provider Provider { get; }
@@ -116,22 +115,22 @@ namespace BudgetExecution
             {
                 switch(provider)
                 {
-                    case Provider.SQLite :
+                    case Provider.SQLite:
                         return new SQLiteConnection(@"data source=C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\ninja\database\sqlite\R6.db;foreign keys=True;datetime kind=Local;default database type=String");
 
-                    case Provider.SqlCe :
+                    case Provider.SqlCe:
                         return new SqlCeConnection(@"Data Source=C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\ninja\database\sqlce\R6.sdf");
 
-                    case Provider.SqlServer :
+                    case Provider.SqlServer:
                         return new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\ninja\database\sqlserver\R6.mdf;Integrated Security=True;Connect Timeout=30");
 
-                    case Provider.Access :
+                    case Provider.Access:
                         return new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\ninja\database\oledb\R6.accdb");
 
-                    case Provider.OleDb :
+                    case Provider.OleDb:
                         return new OleDbConnection(@"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\ninja\database\oledb\R6.mdb;Persist Security Info=True");
 
-                    case Provider.Excel :
+                    case Provider.Excel:
                         return new OleDbConnection(@"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\ninja\database\oledb\R6.mdb;Persist Security Info=True");
                 }
 
@@ -164,6 +163,7 @@ namespace BudgetExecution
 
         // COMMAND METHODS----------------------------------------------------------------
         // -------------------------------------------------------------------------------
+
         /// <summary>
         ///     Gets the data command.
         /// </summary>
@@ -176,19 +176,19 @@ namespace BudgetExecution
             {
                 switch(connection)
                 {
-                    case SQLiteConnection liteConnection :
+                    case SQLiteConnection liteConnection:
                         SqlStatement = sql;
                         return new SQLiteCommand(SqlStatement, liteConnection);
-                    case OleDbConnection dbConnection :
+                    case OleDbConnection dbConnection:
                         SqlStatement = sql;
                         return new OleDbCommand(SqlStatement, dbConnection);
-                    case SqlCeConnection sqlceConnection :
+                    case SqlCeConnection sqlceConnection:
                         SqlStatement = sql;
                         return new SqlCeCommand(SqlStatement, sqlceConnection);
-                    case SqlConnection sqlConnection :
+                    case SqlConnection sqlConnection:
                         SqlStatement = sql;
                         return new SqlCommand(SqlStatement, sqlConnection);
-                    default :
+                    default:
                         return null;
                 }
             }
@@ -210,15 +210,15 @@ namespace BudgetExecution
             {
                 switch(command)
                 {
-                    case SQLiteCommand liteCommand :
+                    case SQLiteCommand liteCommand:
                         return new SQLiteDataAdapter(liteCommand);
-                    case OleDbCommand dbCommand :
+                    case OleDbCommand dbCommand:
                         return new OleDbDataAdapter(dbCommand);
-                    case SqlCeCommand sqlCommand :
+                    case SqlCeCommand sqlCommand:
                         return new SqlCeDataAdapter(sqlCommand);
-                    case SqlCommand sqlCommand :
+                    case SqlCommand sqlCommand:
                         return new SqlDataAdapter(sqlCommand);
-                    default :
+                    default:
                         return null;
                 }
             }
@@ -240,15 +240,15 @@ namespace BudgetExecution
             {
                 switch(command)
                 {
-                    case SQLiteCommand liteCommand :
+                    case SQLiteCommand liteCommand:
                         return liteCommand.ExecuteReader();
-                    case OleDbCommand dbCommand :
+                    case OleDbCommand dbCommand:
                         return dbCommand.ExecuteReader();
-                    case SqlCommand sqlCommand :
+                    case SqlCommand sqlCommand:
                         return sqlCommand.ExecuteReader();
-                    case SqlCeCommand sqlceCommand :
+                    case SqlCeCommand sqlceCommand:
                         return sqlceCommand.ExecuteReader();
-                    default :
+                    default:
                         return null;
                 }
             }
@@ -270,19 +270,19 @@ namespace BudgetExecution
             {
                 switch(adapter)
                 {
-                    case SQLiteDataAdapter _ :
+                    case SQLiteDataAdapter _:
                         CommandBuilder = new SQLiteCommandBuilder(adapter as SQLiteDataAdapter);
                         return CommandBuilder;
-                    case OleDbDataAdapter _ :
+                    case OleDbDataAdapter _:
                         CommandBuilder = new OleDbCommandBuilder(adapter as OleDbDataAdapter);
                         return CommandBuilder;
-                    case SqlCeDataAdapter _ :
+                    case SqlCeDataAdapter _:
                         CommandBuilder = new SqlCeCommandBuilder(adapter as SqlCeDataAdapter);
                         return CommandBuilder;
-                    case SqlDataAdapter _ :
+                    case SqlDataAdapter _:
                         CommandBuilder = new SqlCommandBuilder(adapter as SqlDataAdapter);
                         return CommandBuilder;
-                    default :
+                    default:
                         return null;
                 }
             }
@@ -293,9 +293,9 @@ namespace BudgetExecution
             }
         }
 
-
         // STRING METHODS----------------------------------------------------------------
         // -------------------------------------------------------------------------------
+
         /// <summary>
         ///     Gets the database parameters.
         /// </summary>
@@ -310,7 +310,7 @@ namespace BudgetExecution
                 {
                     switch(Provider)
                     {
-                        case Provider.Access :
+                        case Provider.Access:
                         {
                             foreach(KeyValuePair<string, object> kvp in input)
                             {
@@ -321,7 +321,8 @@ namespace BudgetExecution
 
                             break;
                         }
-                        case Provider.Excel :
+
+                        case Provider.Excel:
                         {
                             foreach(KeyValuePair<string, object> kvp in input)
                             {
@@ -332,7 +333,8 @@ namespace BudgetExecution
 
                             break;
                         }
-                        case Provider.SQLite :
+
+                        case Provider.SQLite:
                         {
                             foreach(KeyValuePair<string, object> kvp in input)
                             {
@@ -343,7 +345,8 @@ namespace BudgetExecution
 
                             break;
                         }
-                        case Provider.SqlCe :
+
+                        case Provider.SqlCe:
                         {
                             foreach(KeyValuePair<string, object> kvp in input)
                             {
@@ -354,7 +357,8 @@ namespace BudgetExecution
 
                             break;
                         }
-                        case Provider.SqlServer :
+
+                        case Provider.SqlServer:
                         {
                             foreach(KeyValuePair<string, object> kvp in input)
                             {
@@ -392,7 +396,7 @@ namespace BudgetExecution
                 {
                     switch(connection)
                     {
-                        case OleDbConnection _ :
+                        case OleDbConnection _:
                         {
                             foreach(KeyValuePair<string, object> kvp in input)
                             {
@@ -403,7 +407,8 @@ namespace BudgetExecution
 
                             break;
                         }
-                        case SQLiteConnection _ :
+
+                        case SQLiteConnection _:
                         {
                             foreach(KeyValuePair<string, object> kvp in input)
                             {
@@ -414,7 +419,8 @@ namespace BudgetExecution
 
                             break;
                         }
-                        case SqlCeConnection _ :
+
+                        case SqlCeConnection _:
                         {
                             foreach(KeyValuePair<string, object> kvp in input)
                             {
@@ -425,7 +431,8 @@ namespace BudgetExecution
 
                             break;
                         }
-                        case SqlConnection _ :
+
+                        case SqlConnection _:
                         {
                             foreach(KeyValuePair<string, object> kvp in input)
                             {
@@ -484,7 +491,7 @@ namespace BudgetExecution
             try
             {
                 string vals = string.Empty;
-                foreach(var p in param)
+                foreach(DbParameter p in param)
                 {
                     vals += $"{p.SourceColumn} = '{p.Value}' AND ";
                 }
@@ -513,24 +520,24 @@ namespace BudgetExecution
             {
                 switch(cmd)
                 {
-                    case Sql.SELECT :
-                        var select = GetDataParameters(connection, p);
+                    case Sql.SELECT:
+                        DbParameter[] select = GetDataParameters(connection, p);
                         return GetSelectStatement(source, select);
 
-                    case Sql.UPDATE :
-                        var update = GetDataParameters(connection, p);
+                    case Sql.UPDATE:
+                        DbParameter[] update = GetDataParameters(connection, p);
                         return GetUpdateStatement(source, update);
 
-                    case Sql.INSERT :
-                        var insert = GetDataParameters(connection, p);
+                    case Sql.INSERT:
+                        DbParameter[] insert = GetDataParameters(connection, p);
                         return GetInsertStatement(source, insert);
 
-                    case Sql.DELETE :
-                        var delete = GetDataParameters(connection, p);
+                    case Sql.DELETE:
+                        DbParameter[] delete = GetDataParameters(connection, p);
                         return GetDeleteStatement(source, delete);
 
-                    default :
-                        var def = GetDataParameters(connection, p);
+                    default:
+                        DbParameter[] def = GetDataParameters(connection, p);
                         return GetSelectStatement(source, def);
                 }
             }
@@ -602,7 +609,7 @@ namespace BudgetExecution
                 {
                     if(p.SourceColumn == "ID")
                     {
-                        pid = (int) p.Value;
+                        pid = (int)p.Value;
                     }
 
                     vals += $"{p.SourceColumn} = '{p.Value}' AND ";
@@ -687,19 +694,19 @@ namespace BudgetExecution
             {
                 switch(cmd)
                 {
-                    case Sql.SELECT :
+                    case Sql.SELECT:
                         return GetSelectCommand(pmr, connection);
 
-                    case Sql.UPDATE :
+                    case Sql.UPDATE:
                         return GetUpdateCommand(pmr, connection);
 
-                    case Sql.INSERT :
+                    case Sql.INSERT:
                         return GetInsertCommand(pmr, connection);
 
-                    case Sql.DELETE :
+                    case Sql.DELETE:
                         return GetDeleteCommand(source, pmr, connection);
 
-                    default :
+                    default:
                         return GetSelectCommand(pmr, connection);
                 }
             }
@@ -757,19 +764,19 @@ namespace BudgetExecution
                 if(connection is SQLiteConnection)
                 {
                     SelectStatement = select;
-                    return new SQLiteCommand(SelectStatement, (SQLiteConnection) connection);
+                    return new SQLiteCommand(SelectStatement, (SQLiteConnection)connection);
                 }
 
                 if(connection is OleDbConnection)
                 {
                     SelectStatement = select;
-                    return new OleDbCommand(SelectStatement, (OleDbConnection) connection);
+                    return new OleDbCommand(SelectStatement, (OleDbConnection)connection);
                 }
 
                 if(connection is SqlConnection)
                 {
                     SelectStatement = select;
-                    return new SqlCommand(SelectStatement, (SqlConnection) connection);
+                    return new SqlCommand(SelectStatement, (SqlConnection)connection);
                 }
 
                 return null;
@@ -794,19 +801,19 @@ namespace BudgetExecution
                 if(connection is SQLiteConnection)
                 {
                     SelectStatement = GetSelectParamString(GetDataParameters(param));
-                    return new SQLiteCommand(SelectStatement, (SQLiteConnection) connection);
+                    return new SQLiteCommand(SelectStatement, (SQLiteConnection)connection);
                 }
 
                 if(connection is OleDbConnection)
                 {
                     SelectStatement = GetSelectParamString(GetDataParameters(param));
-                    return new OleDbCommand(SelectStatement, (OleDbConnection) connection);
+                    return new OleDbCommand(SelectStatement, (OleDbConnection)connection);
                 }
 
                 if(connection is SqlConnection)
                 {
                     SelectStatement = GetSelectParamString(GetDataParameters(param));
-                    return new SqlCommand(SelectStatement, (SqlConnection) connection);
+                    return new SqlCommand(SelectStatement, (SqlConnection)connection);
                 }
 
                 return null;
@@ -920,7 +927,6 @@ namespace BudgetExecution
             }
         }
 
-
         // ADAPTER METHODS----------------------------------------------------------------
         // -------------------------------------------------------------------------------
         /// <summary>
@@ -935,12 +941,12 @@ namespace BudgetExecution
             {
                 switch(cmd)
                 {
-                    case Sql.SELECT :
+                    case Sql.SELECT:
                         if(command is SQLiteCommand)
                         {
-                            var sqliteselect = new SQLiteDataAdapter();
-                            sqliteselect.SelectCommand = (SQLiteCommand) command;
-                            var builder = (SQLiteCommandBuilder) GetCommandBuilder(sqliteselect);
+                            SQLiteDataAdapter sqliteselect = new SQLiteDataAdapter();
+                            sqliteselect.SelectCommand = (SQLiteCommand)command;
+                            SQLiteCommandBuilder builder = (SQLiteCommandBuilder)GetCommandBuilder(sqliteselect);
                             sqliteselect.InsertCommand = builder.GetInsertCommand();
                             sqliteselect.UpdateCommand = builder.GetUpdateCommand();
                             sqliteselect.DeleteCommand = builder.GetDeleteCommand();
@@ -949,9 +955,9 @@ namespace BudgetExecution
 
                         if(command is OleDbCommand)
                         {
-                            var oledbselect = new OleDbDataAdapter();
-                            oledbselect.SelectCommand = (OleDbCommand) command;
-                            var builder = (OleDbCommandBuilder) GetCommandBuilder(oledbselect);
+                            OleDbDataAdapter oledbselect = new OleDbDataAdapter();
+                            oledbselect.SelectCommand = (OleDbCommand)command;
+                            OleDbCommandBuilder builder = (OleDbCommandBuilder)GetCommandBuilder(oledbselect);
                             oledbselect.InsertCommand = builder.GetInsertCommand();
                             oledbselect.UpdateCommand = builder.GetUpdateCommand();
                             oledbselect.DeleteCommand = builder.GetDeleteCommand();
@@ -960,9 +966,9 @@ namespace BudgetExecution
 
                         if(command is SqlCeCommand)
                         {
-                            var sqlceselect = new SqlCeDataAdapter();
-                            sqlceselect.SelectCommand = (SqlCeCommand) command;
-                            var builder = (SqlCeCommandBuilder) GetCommandBuilder(sqlceselect);
+                            SqlCeDataAdapter sqlceselect = new SqlCeDataAdapter();
+                            sqlceselect.SelectCommand = (SqlCeCommand)command;
+                            SqlCeCommandBuilder builder = (SqlCeCommandBuilder)GetCommandBuilder(sqlceselect);
                             sqlceselect.InsertCommand = builder.GetInsertCommand();
                             sqlceselect.UpdateCommand = builder.GetUpdateCommand();
                             sqlceselect.DeleteCommand = builder.GetDeleteCommand();
@@ -971,9 +977,9 @@ namespace BudgetExecution
 
                         if(command is SqlCommand)
                         {
-                            var sqlselect = new SqlDataAdapter();
-                            sqlselect.SelectCommand = (SqlCommand) command;
-                            var builder = (SqlCommandBuilder) GetCommandBuilder(sqlselect);
+                            SqlDataAdapter sqlselect = new SqlDataAdapter();
+                            sqlselect.SelectCommand = (SqlCommand)command;
+                            SqlCommandBuilder builder = (SqlCommandBuilder)GetCommandBuilder(sqlselect);
                             sqlselect.InsertCommand = builder.GetInsertCommand();
                             sqlselect.UpdateCommand = builder.GetUpdateCommand();
                             sqlselect.DeleteCommand = builder.GetDeleteCommand();
@@ -982,102 +988,102 @@ namespace BudgetExecution
 
                         break;
 
-                    case Sql.UPDATE :
+                    case Sql.UPDATE:
                         if(command is SQLiteCommand)
                         {
-                            var update = new SQLiteDataAdapter();
-                            update.UpdateCommand = (SQLiteCommand) command;
+                            SQLiteDataAdapter update = new SQLiteDataAdapter();
+                            update.UpdateCommand = (SQLiteCommand)command;
                             return update;
                         }
 
                         if(command is OleDbCommand)
                         {
-                            var update = new OleDbDataAdapter();
-                            update.UpdateCommand = (OleDbCommand) command;
+                            OleDbDataAdapter update = new OleDbDataAdapter();
+                            update.UpdateCommand = (OleDbCommand)command;
                             return update;
                         }
 
                         if(command is SqlCeCommand)
                         {
-                            var update = new SqlCeDataAdapter();
-                            update.UpdateCommand = (SqlCeCommand) command;
+                            SqlCeDataAdapter update = new SqlCeDataAdapter();
+                            update.UpdateCommand = (SqlCeCommand)command;
                             return update;
                         }
 
                         if(command is SqlCommand)
                         {
-                            var update = new SqlDataAdapter();
-                            update.UpdateCommand = (SqlCommand) command;
+                            SqlDataAdapter update = new SqlDataAdapter();
+                            update.UpdateCommand = (SqlCommand)command;
                             return update;
                         }
 
                         break;
 
-                    case Sql.INSERT :
+                    case Sql.INSERT:
                         if(command is SQLiteCommand)
                         {
-                            var insert = new SQLiteDataAdapter();
-                            insert.InsertCommand = (SQLiteCommand) command;
+                            SQLiteDataAdapter insert = new SQLiteDataAdapter();
+                            insert.InsertCommand = (SQLiteCommand)command;
                             return insert;
                         }
 
                         if(command is OleDbCommand)
                         {
-                            var insert = new OleDbDataAdapter();
-                            insert.InsertCommand = (OleDbCommand) command;
+                            OleDbDataAdapter insert = new OleDbDataAdapter();
+                            insert.InsertCommand = (OleDbCommand)command;
                             return insert;
                         }
 
                         if(command is SqlCeCommand)
                         {
-                            var insert = new SqlCeDataAdapter();
-                            insert.InsertCommand = (SqlCeCommand) command;
+                            SqlCeDataAdapter insert = new SqlCeDataAdapter();
+                            insert.InsertCommand = (SqlCeCommand)command;
                             return insert;
                         }
 
                         if(command is SqlCommand)
                         {
-                            var insert = new SqlDataAdapter();
-                            insert.InsertCommand = (SqlCommand) command;
+                            SqlDataAdapter insert = new SqlDataAdapter();
+                            insert.InsertCommand = (SqlCommand)command;
                             return insert;
                         }
 
                         break;
 
-                    case Sql.DELETE :
+                    case Sql.DELETE:
                         if(command is SQLiteCommand)
                         {
-                            var delete = new SQLiteDataAdapter();
-                            delete.DeleteCommand = (SQLiteCommand) command;
+                            SQLiteDataAdapter delete = new SQLiteDataAdapter();
+                            delete.DeleteCommand = (SQLiteCommand)command;
                             return delete;
                         }
 
                         if(command is OleDbCommand)
                         {
-                            var delete = new OleDbDataAdapter();
-                            delete.DeleteCommand = (OleDbCommand) command;
+                            OleDbDataAdapter delete = new OleDbDataAdapter();
+                            delete.DeleteCommand = (OleDbCommand)command;
                             return delete;
                         }
 
                         if(command is SqlCeCommand)
                         {
                             SqlCeDataAdapter delete = new SqlCeDataAdapter();
-                            delete.DeleteCommand = (SqlCeCommand) command;
+                            delete.DeleteCommand = (SqlCeCommand)command;
                             return delete;
                         }
 
                         if(command is SqlCommand)
                         {
-                            var delete = new SqlDataAdapter();
-                            delete.DeleteCommand = (SqlCommand) command;
+                            SqlDataAdapter delete = new SqlDataAdapter();
+                            delete.DeleteCommand = (SqlCommand)command;
                             return delete;
                         }
 
                         break;
 
-                    default :
-                        var select = new SQLiteDataAdapter();
-                        select.SelectCommand = (SQLiteCommand) command;
+                    default:
+                        SQLiteDataAdapter select = new SQLiteDataAdapter();
+                        select.SelectCommand = (SQLiteCommand)command;
                         return select;
                 }
 

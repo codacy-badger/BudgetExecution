@@ -1,6 +1,6 @@
 ﻿using Syncfusion.Windows.Forms;
 
-namespace Ninja.Data.Forms
+namespace BudgetExecution
 {
     public partial class DataNavigator : MetroForm
     {

@@ -1,167 +1,309 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.IO;
-using System.Linq;
-using System.Windows.Forms;
-using MakarovDev.ExpandCollapsePanel;
-using MetroFramework.Controls;
-using Syncfusion.Windows.Forms;
-using Syncfusion.Windows.Forms.Chart;
-using Syncfusion.Windows.Forms.Tools;
-using VisualPlus.Toolkit.Controls.Interactivity;
-
-namespace BudgetExecution
+﻿namespace BudgetExecution
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Data;
+    using System.IO;
+    using System.Linq;
+    using System.Windows.Forms;
+
+    using MakarovDev.ExpandCollapsePanel;
+
+    using MetroFramework.Controls;
+
+    using Syncfusion.Windows.Forms;
+    using Syncfusion.Windows.Forms.Chart;
+    using Syncfusion.Windows.Forms.Tools;
+
+    using VisualPlus.Toolkit.Controls.Interactivity;
+
+    /// <summary>
+    /// Defines the <see cref="SummaryForm" />
+    /// </summary>
     public partial class SummaryForm : MetroForm
     {
         // CONSTRUCTORS
-        public SummaryForm()
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="SummaryForm"/> class.
+        /// </summary>
+        /// <param name="provider">The provider<see cref="Provider"/></param>
+        public SummaryForm(Provider provider)
         {
+            Provider = provider;
             InitializeComponent();
         }
 
-        public SummaryForm(Source source)
+        /// <summary>
+        /// Initializes a new instance of the <see cref="SummaryForm"/> class.
+        /// </summary>
+        /// <param name="source">The source<see cref="Source"/></param>
+        /// <param name="provider">The provider<see cref="Provider"/></param>
+        public SummaryForm(Source source, Provider provider)
         {
+            Provider = provider;
             InitializeComponent();
-            if(source == Source.RegionalAccounts || source == Source.DivisionAccounts)
+            switch(source)
             {
-                DbData = new DataBuilder(source);
-                Table = DbData.Table;
-                ProgramElements = DbData.GetProgramElements(Table);
-                BindingSource = new BindingSource();
-                BindingSource.DataSource = DbData.Table;
-                Grid.DataSource = BindingSource;
-                Source = source;
-                GetTabNames();
-                Text = @"R6 Summary";
-                Metric = new PrcMetric(DbData);
-                DatabaseTab.TabVisible = false;
-                GridFundFilter.Visible = false;
-                lblFund.Visible = false;
-                GridBocFilter.Visible = false;
-                lblBoc.Visible = false;
-                PopulateGridYearFilterItems();
-                ChartMainTitle = new[]
-                {
-                    $"{Source.ToString()} Funding By Appropriation"
-                };
-                BocChart = new BudgetChart(BocChart, ChartMainTitle, DbData, Field.Fund, Stat.Total, ChartSeriesType.Column).Activate();
-            }
-            else
-            {
-                Source = source;
-                DbData = new DataBuilder(source);
-                Table = DbData.Table;
-                ProgramElements = DbData.GetProgramElements(Table);
-                GetTabNames();
-                Text = $@"R6 {Source.ToString()} Summary";
-                Metric = new PrcMetric(DbData);
-                BindingSource = new BindingSource();
-                BindingSource.DataSource = DbData.Table;
-                Grid.DataSource = BindingSource;
-                DatabaseTab.TabVisible = true;
-                GridGroupBox.Text = $"{Source.ToString()}";
-                lblTotal.Text = DbData.Table.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Sum().ToString("c");
-                lblAve.Text = DbData.Table.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Average().ToString("N");
-                lblDev.Text = ((double) DbData.Table.Compute("StDev(Amount)", "Amount > 0")).ToString("N");
-                lblVar.Text = ((double) DbData.Table.Compute("Var(Amount)", "Amount > 0")).ToString("N");
-                lblCount.Text = DbData.GetCount(Table).ToString();
-                lblFund.Visible = false;
-                GridFundFilter.Visible = false;
-                lblBoc.Visible = false;
-                GridBocFilter.Visible = false;
-                PopulateGridYearFilterItems();
-                ConfigureTextBoxBindings();
-                DefineVisisbleDataColumns(Grid);
-                ChartMainTitle = new[]
-                {
-                    $"{Source.ToString()} Funding By Appropriation"
-                };
-                BocChart = new BudgetChart(BocChart, ChartMainTitle, DbData, Field.Fund, Stat.Total, ChartSeriesType.Column).Activate();
+                case Source.RegionalAccounts :
+                case Source.DivisionAccounts :
+                    DbData = new DataBuilder(source);
+                    Table = DbData.Table;
+                    ProgramElements = DbData.GetProgramElements(Table);
+                    BindingSource = new BindingSource();
+                    BindingSource.DataSource = DbData.Table;
+                    Grid.DataSource = BindingSource;
+                    Source = source;
+                    GetTabNames();
+                    Metric = new PrcMetric(DbData);
+                    DatabaseTab.TabVisible = false;
+                    GridFundFilter.Visible = false;
+                    lblFund.Visible = false;
+                    GridBocFilter.Visible = false;
+                    lblBoc.Visible = false;
+                    PopulateGridYearFilterItems();
+                    ChartMainTitle = new[]
+                                              {
+                                                  $"{Source.ToString()} Funding By Appropriation"
+                                              };
+                    BocChart = new BudgetChart(BocChart, ChartMainTitle, DbData, Field.Fund, Stat.Total, ChartSeriesType.Column).Activate();
+                    break;
+                default :
+                    Source = source;
+                    DbData = new DataBuilder(source);
+                    Table = DbData.Table;
+                    ProgramElements = DbData.GetProgramElements(Table);
+                    GetTabNames();
+                    Metric = new PrcMetric(DbData);
+                    BindingSource = new BindingSource();
+                    BindingSource.DataSource = DbData.Table;
+                    Grid.DataSource = BindingSource;
+                    DatabaseTab.TabVisible = true;
+                    GridGroupBox.Text = $"{Source.ToString()}";
+                    lblTotal.Text = DbData.Table.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Sum().ToString("c");
+                    lblAve.Text = DbData.Table.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Average().ToString("N");
+                    lblDev.Text = ((double)DbData.Table.Compute("StDev(Amount)", "Amount > 0")).ToString("N");
+                    lblVar.Text = ((double)DbData.Table.Compute("Var(Amount)", "Amount > 0")).ToString("N");
+                    lblCount.Text = DbData.GetCount(Table).ToString();
+                    lblFund.Visible = false;
+                    GridFundFilter.Visible = false;
+                    lblBoc.Visible = false;
+                    GridBocFilter.Visible = false;
+                    PopulateGridYearFilterItems();
+                    ConfigureTextBoxBindings();
+                    DefineVisisbleDataColumns(Grid);
+                    ChartMainTitle = new[]
+                                              {
+                                                  $"{Source.ToString()} Funding By Appropriation"
+                                              };
+                    BocChart = new BudgetChart(BocChart, ChartMainTitle, DbData, Field.Fund, Stat.Total, ChartSeriesType.Column).Activate();
+                    break;
             }
         }
 
         // PROPERTIES
+        /// <summary>
+        /// Gets the Source
+        /// </summary>
         public Source Source { get; }
 
+        /// <summary>
+        /// Gets the Provider
+        /// </summary>
         public Provider Provider { get; }
 
+        /// <summary>
+        /// Gets or sets the Parameter
+        /// </summary>
         public Dictionary<string, object> Parameter { get; set; }
 
+        /// <summary>
+        /// Gets or sets the DbData
+        /// </summary>
         public DataBuilder DbData { get; set; }
 
+        /// <summary>
+        /// Gets or sets the Table
+        /// </summary>
         public DataTable Table { get; set; }
 
+        /// <summary>
+        /// Gets or sets the DbRow
+        /// </summary>
         public DataRow DbRow { get; set; }
 
+        /// <summary>
+        /// Gets or sets the Metric
+        /// </summary>
         public PrcMetric Metric { get; set; }
 
+        /// <summary>
+        /// Gets or sets the ChartType
+        /// </summary>
         public ChartSeriesType ChartType { get; set; }
 
+        /// <summary>
+        /// Gets or sets the BudgetLevel
+        /// </summary>
         public string[] BudgetLevel { get; set; }
 
+        /// <summary>
+        /// Gets or sets the BFY
+        /// </summary>
         public string[] BFY { get; set; }
 
+        /// <summary>
+        /// Gets or sets the Org
+        /// </summary>
         public string[] Org { get; set; }
 
+        /// <summary>
+        /// Gets or sets the RC
+        /// </summary>
         public string[] RC { get; set; }
 
+        /// <summary>
+        /// Gets or sets the AH
+        /// </summary>
         public string[] AH { get; set; }
 
+        /// <summary>
+        /// Gets or sets the Code
+        /// </summary>
         public string[] Code { get; set; }
 
+        /// <summary>
+        /// Gets or sets the BOC
+        /// </summary>
         public string[] BOC { get; set; }
 
+        /// <summary>
+        /// Gets or sets the Fund
+        /// </summary>
         public string[] Fund { get; set; }
 
+        /// <summary>
+        /// Gets or sets the SubProject
+        /// </summary>
         public string[] SubProject { get; set; }
 
+        /// <summary>
+        /// Gets or sets the ChartField
+        /// </summary>
         public Field ChartField { get; set; }
 
+        /// <summary>
+        /// Gets or sets the ChartFilter
+        /// </summary>
         public string ChartFilter { get; set; }
 
+        /// <summary>
+        /// Gets or sets the GridFilter1
+        /// </summary>
         public string GridFilter1 { get; set; }
 
+        /// <summary>
+        /// Gets or sets the GridFilter2
+        /// </summary>
         public string GridFilter2 { get; set; }
 
+        /// <summary>
+        /// Gets or sets the GridFilter3
+        /// </summary>
         public string GridFilter3 { get; set; }
 
+        /// <summary>
+        /// Gets or sets the Division
+        /// </summary>
         public string Division { get; set; }
 
+        /// <summary>
+        /// Gets or sets the ChartGroup
+        /// </summary>
         public Field ChartGroup { get; set; }
 
+        /// <summary>
+        /// Gets or sets the ProgramElements
+        /// </summary>
         public Dictionary<string, string[]> ProgramElements { get; set; }
 
+        /// <summary>
+        /// Gets or sets the ChartMainTitle
+        /// </summary>
         public string[] ChartMainTitle { get; set; }
 
+        /// <summary>
+        /// Gets or sets the ChartAxisTitle
+        /// </summary>
         public string[] ChartAxisTitle { get; set; }
 
+        /// <summary>
+        /// Gets or sets the CurrentIndex
+        /// </summary>
         public int CurrentIndex { get; set; }
 
+        /// <summary>
+        /// Gets or sets the GridFilterControl1
+        /// </summary>
         public VisualComboBox GridFilterControl1 { get; set; }
 
+        /// <summary>
+        /// Gets or sets the GridFilterControl2
+        /// </summary>
         public VisualComboBox GridFilterControl2 { get; set; }
 
+        /// <summary>
+        /// Gets or sets the GridFilterControl3
+        /// </summary>
         public VisualComboBox GridFilterControl3 { get; set; }
 
+        /// <summary>
+        /// Gets or sets the ChartFilterControl1
+        /// </summary>
         public VisualComboBox ChartFilterControl1 { get; set; }
 
+        /// <summary>
+        /// Gets or sets the ChartFilterControl2
+        /// </summary>
         public VisualComboBox ChartFilterControl2 { get; set; }
 
+        /// <summary>
+        /// Gets or sets the ChartFilterControl3
+        /// </summary>
         public VisualComboBox ChartFilterControl3 { get; set; }
 
+        /// <summary>
+        /// Gets or sets the ChartFilterControl4
+        /// </summary>
         public VisualComboBox ChartFilterControl4 { get; set; }
 
+        /// <summary>
+        /// Gets or sets the Expander1
+        /// </summary>
         public ExpandCollapsePanel Expander1 { get; set; }
 
+        /// <summary>
+        /// Gets or sets the Expander2
+        /// </summary>
         public ExpandCollapsePanel Expander2 { get; set; }
 
+        /// <summary>
+        /// Gets or sets the Measure
+        /// </summary>
         public Stat Measure { get; set; }
 
+        /// <summary>
+        /// Gets or sets the Tab
+        /// </summary>
         public TabPageAdv[] Tab { get; set; }
 
         // METHODS
+
+        /// <summary>
+        /// The Form_Load
+        /// </summary>
+        /// <param name="sender">The sender<see cref="object"/></param>
+        /// <param name="e">The e<see cref="EventArgs"/></param>
         private void Form_Load(object sender, EventArgs e)
         {
             try
@@ -172,30 +314,29 @@ namespace BudgetExecution
                 EditTab.Visible = false;
                 AddTab.Visible = false;
             }
-
             catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
             }
         }
 
+        /// <summary>
+        /// The GridFilterControl1_ItemSelected
+        /// </summary>
+        /// <param name="sender">The sender<see cref="object"/></param>
+        /// <param name="e">The e<see cref="EventArgs"/></param>
         private void GridFilterControl1_ItemSelected(object sender, EventArgs e)
         {
             try
             {
                 GridFilter1 = GridYearFilter?.SelectedItem.ToString();
                 BindingSource.Filter = $"BFY = '{GridFilter1}'";
-                DataTable table = new DataTable();
-                table = ((DataTable) BindingSource.DataSource).AsEnumerable()
-                                                              .Where(p => p.Field<decimal>("Amount") > 0)
-                                                              .Where(p => p.Field<string>("BFY").Equals(GridYearFilter.SelectedItem.ToString()))
-                                                              .Select(p => p)
-                                                              .CopyToDataTable();
+                DataTable table = ((DataTable)BindingSource.DataSource).AsEnumerable().Where(p => p.Field<decimal>("Amount") > 0).Where(p => p.Field<string>("BFY").Equals(GridYearFilter.SelectedItem.ToString())).Select(p => p).CopyToDataTable();
                 lblCount.Text = table.Rows.Count.ToString();
                 lblAve.Text = table.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Average().ToString("N");
                 lblTotal.Text = table.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Sum().ToString("N");
-                lblDev.Text = ((double) table.Compute("StDev(Amount)", "Amount > 0")).ToString("N");
-                lblVar.Text = ((double) table.Compute("Var(Amount)", "Amount > 0")).ToString("N");
+                lblDev.Text = ((double)table.Compute("StDev(Amount)", "Amount > 0")).ToString("N");
+                lblVar.Text = ((double)table.Compute("Var(Amount)", "Amount > 0")).ToString("N");
                 PopulateGridFundFilterItems();
                 lblFund.Visible = true;
                 GridFundFilter.Visible = true;
@@ -212,26 +353,30 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The GridFilterControl2_ItemSelected
+        /// </summary>
+        /// <param name="sender">The sender<see cref="object"/></param>
+        /// <param name="e">The e<see cref="EventArgs"/></param>
         private void GridFilterControl2_ItemSelected(object sender, EventArgs e)
         {
             try
             {
                 GridFilter2 = GridFundFilter?.SelectedItem.ToString();
-                BindingSource.Filter = $"BFY = '{GridYearFilter.SelectedItem}' AND FundName = '{GridFundFilter.SelectedItem}'";
-                DataTable table = new DataTable();
-                table = ((DataTable) BindingSource.DataSource).AsEnumerable()
-                                                              .Where(p => p.Field<decimal>("Amount") > 0)
-                                                              .Where(p => p.Field<string>("BFY").Equals(GridYearFilter.SelectedItem.ToString()))
-                                                              .Where(p => p.Field<string>("FundName").Equals(GridFundFilter.SelectedItem.ToString()))
-                                                              .Select(p => p)
-                                                              .CopyToDataTable();
-                lblCount.Text = table.Rows.Count.ToString();
-                lblAve.Text = table.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Average().ToString("N");
-                lblTotal.Text = table.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Sum().ToString("N");
-                if(int.Parse(lblCount.Text) >= 4)
+                VisualComboBox gridFundFilter = GridFundFilter;
+                if(gridFundFilter != null)
                 {
-                    lblDev.Text = ((double) table.Compute("StDev(Amount)", "Amount > 0")).ToString("N");
-                    lblVar.Text = ((double) table.Compute("Var(Amount)", "Amount > 0")).ToString("N");
+                    BindingSource.Filter = $"BFY = '{GridYearFilter.SelectedItem}' AND FundName = '{gridFundFilter.SelectedItem}'";
+                    DataTable table;
+                    table = ((DataTable)BindingSource.DataSource).AsEnumerable().Where(p => p.Field<decimal>("Amount") > 0).Where(p => p.Field<string>("BFY").Equals(GridYearFilter.SelectedItem.ToString())).Where(p => p.Field<string>("FundName").Equals(gridFundFilter.SelectedItem.ToString())).Select(p => p).CopyToDataTable();
+                    lblCount.Text = table.Rows.Count.ToString();
+                    lblAve.Text = table.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Average().ToString("N");
+                    lblTotal.Text = table.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Sum().ToString("N");
+                    if(int.Parse(lblCount.Text) >= 4)
+                    {
+                        lblDev.Text = ((double)table.Compute("StDev(Amount)", "Amount > 0")).ToString("N");
+                        lblVar.Text = ((double)table.Compute("Var(Amount)", "Amount > 0")).ToString("N");
+                    }
                 }
 
                 if(int.Parse(lblCount.Text) < 4)
@@ -251,26 +396,24 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The GridFilterControl3_ItemSelected
+        /// </summary>
+        /// <param name="sender">The sender<see cref="object"/></param>
+        /// <param name="e">The e<see cref="EventArgs"/></param>
         private void GridFilterControl3_ItemSelected(object sender, EventArgs e)
         {
             try
             {
                 BindingSource.Filter = $"BFY = '{GridYearFilter?.SelectedItem}' AND FundName = '{GridFundFilter?.SelectedItem}' AND BocName = '{GridBocFilter?.SelectedItem}'";
-                DataTable table = new DataTable();
-                table = ((DataTable) BindingSource.DataSource).AsEnumerable()
-                                                              .Where(p => p.Field<decimal>("Amount") > 0)
-                                                              .Where(p => p.Field<string>("BFY").Equals(GridYearFilter.SelectedItem.ToString()))
-                                                              .Where(p => p.Field<string>("FundName").Equals(GridFundFilter.SelectedItem.ToString()))
-                                                              .Where(p => p.Field<string>("BocName").Equals(GridBocFilter.SelectedItem.ToString()))
-                                                              .Select(p => p)
-                                                              .CopyToDataTable();
+                DataTable table = ((DataTable)BindingSource.DataSource).AsEnumerable().Where(p => p.Field<decimal>("Amount") > 0).Where(p => p.Field<string>("BFY").Equals(GridYearFilter.SelectedItem.ToString())).Where(p => p.Field<string>("FundName").Equals(GridFundFilter.SelectedItem.ToString())).Where(p => p.Field<string>("BocName").Equals(GridBocFilter.SelectedItem.ToString())).Select(p => p).CopyToDataTable();
                 lblCount.Text = table.Rows.Count.ToString();
                 lblAve.Text = table.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Average().ToString("N");
                 lblTotal.Text = table.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Sum().ToString("N");
                 if(int.Parse(lblCount.Text) >= 4)
                 {
-                    lblDev.Text = ((double) table.Compute("StDev(Amount)", "Amount > 0")).ToString("N");
-                    lblVar.Text = ((double) table.Compute("Var(Amount)", "Amount > 0")).ToString("N");
+                    lblDev.Text = ((double)table.Compute("StDev(Amount)", "Amount > 0")).ToString("N");
+                    lblVar.Text = ((double)table.Compute("Var(Amount)", "Amount > 0")).ToString("N");
                 }
 
                 if(int.Parse(lblCount.Text) < 4)
@@ -287,6 +430,9 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The FilterDataGrid
+        /// </summary>
         private void FilterDataGrid()
         {
             try
@@ -299,13 +445,15 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The PopulateGridFundFilterItems
+        /// </summary>
         internal void PopulateGridFundFilterItems()
         {
             try
             {
                 GridFundFilter.Items.Clear();
-                DataTable table = new DataTable();
-                table = (DataTable) BindingSource.DataSource;
+                DataTable table = (DataTable)BindingSource.DataSource;
                 DataTable query = table.AsEnumerable().Where(p => p.Field<string>("BFY").Equals(GridFilter1)).Select(p => p).CopyToDataTable();
                 foreach(string row in query.AsEnumerable().Select(p => p.Field<string>("FundName")).Distinct().ToArray())
                 {
@@ -318,12 +466,15 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The PopulateGridBocFilterItems
+        /// </summary>
         internal void PopulateGridBocFilterItems()
         {
             try
             {
                 GridBocFilter.Items.Clear();
-                DataTable table = (DataTable) BindingSource.DataSource;
+                DataTable table = (DataTable)BindingSource.DataSource;
                 DataTable query = table.AsEnumerable().Where(p => p.Field<string>("BFY").Equals(GridFilter1)).Where(p => p.Field<string>("FundName").Equals(GridFilter2)).Select(p => p).CopyToDataTable();
                 foreach(string row in query.AsEnumerable().Select(p => p.Field<string>("BocName")).Distinct().ToArray())
                 {
@@ -336,13 +487,15 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The PopulateGridYearFilterItems
+        /// </summary>
         internal void PopulateGridYearFilterItems()
         {
             try
             {
                 GridYearFilter.Items.Clear();
-                DataTable table = new DataTable();
-                table = (DataTable) BindingSource.DataSource;
+                DataTable table = (DataTable)BindingSource.DataSource;
                 var query = table.AsEnumerable().Select(p => p.Field<string>("BFY")).Distinct().ToArray();
                 foreach(string row in query)
                 {
@@ -355,6 +508,12 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The PopulateFilterBoxItems
+        /// </summary>
+        /// <param name="cmbox">The cmbox<see cref="VisualComboBox"/></param>
+        /// <param name="col">The col<see cref="Field"/></param>
+        /// <param name="prcfilter">The prcfilter<see cref="string"/></param>
         internal void PopulateFilterBoxItems(VisualComboBox cmbox, Field col, string prcfilter)
         {
             try
@@ -364,7 +523,7 @@ namespace BudgetExecution
                     cmbox.Items.Clear();
                 }
 
-                DataTable table = (DataTable) BindingSource.DataSource;
+                DataTable table = (DataTable)BindingSource.DataSource;
                 foreach(var row in table.AsEnumerable().Where(p => p.Field<string>(col.ToString()).Equals(prcfilter)).Select(p => p).Distinct().ToArray())
                 {
                     cmbox.Items.Add(row["FundName"].ToString());
@@ -376,6 +535,14 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The PopulateFilterBoxItems
+        /// </summary>
+        /// <param name="cmbox">The cmbox<see cref="VisualComboBox"/></param>
+        /// <param name="names">The names<see>
+        ///         <cref>string[]</cref>
+        ///     </see>
+        /// </param>
         internal void PopulateFilterBoxItems(VisualComboBox cmbox, string[] names)
         {
             try
@@ -392,6 +559,10 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The DefineVisisbleDataColumns
+        /// </summary>
+        /// <param name="dgv">The dgv<see cref="DataGridView"/></param>
         private void DefineVisisbleDataColumns(DataGridView dgv)
         {
             try
@@ -401,19 +572,23 @@ namespace BudgetExecution
                     dc.Visible = false;
                 }
 
-                //dgv.Columns[0].Visible = true;
-                //dgv.Columns[1].Visible = true;
-                //dgv.Columns[2].Visible = true;
+                // dgv.Columns[0].Visible = true;
+                // dgv.Columns[1].Visible = true;
+                // dgv.Columns[2].Visible = true;
                 dgv.Columns[3].Visible = true;
                 dgv.Columns[4].Visible = true;
-                //dgv.Columns[5].Visible = true;
+
+                // dgv.Columns[5].Visible = true;
                 dgv.Columns[6].Visible = true;
-                //dgv.Columns[7].Visible = true;
+
+                // dgv.Columns[7].Visible = true;
                 dgv.Columns[8].Visible = true;
-                //dgv.Columns[9].Visible = true;
+
+                // dgv.Columns[9].Visible = true;
                 dgv.Columns[10].Visible = true;
-                //dgv.Columns[11].Visible = true;
-                //dgv.Columns[12].Visible = true;
+
+                // dgv.Columns[11].Visible = true;
+                // dgv.Columns[12].Visible = true;
                 dgv.Columns[13].Visible = true;
                 dgv.Columns[14].Visible = true;
                 dgv.Columns[14].DefaultCellStyle.Format = "c";
@@ -424,6 +599,9 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The PopulateComboBoxes
+        /// </summary>
         internal void PopulateComboBoxes()
         {
             DataTable table = new DataBuilder(Source.PRC).Table;
@@ -464,9 +642,9 @@ namespace BudgetExecution
             }
 
             var org = table.AsEnumerable().Select(p => p.Field<string>("Org")).Distinct().ToArray();
-            foreach(string o in org)
+            foreach(string oo in org)
             {
-                AddOrg.Items.Add(o);
+                AddOrg.Items.Add(oo);
             }
 
             var ah = table.AsEnumerable().Select(p => p.Field<string>("AH")).Distinct().ToArray();
@@ -482,6 +660,9 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The ConfigureTextBoxBindings
+        /// </summary>
         private void ConfigureTextBoxBindings()
         {
             try
@@ -503,6 +684,11 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The GridRefreshButton_OnClick
+        /// </summary>
+        /// <param name="sender">The sender<see cref="object"/></param>
+        /// <param name="e">The e<see cref="EventArgs"/></param>
         private void GridRefreshButton_OnClick(object sender, EventArgs e)
         {
             if(DbData != null)
@@ -532,6 +718,10 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The GetTabNames
+        /// </summary>
+        /// <returns>The <see /></returns>
         private string[] GetTabNames()
         {
             try
@@ -552,21 +742,28 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The GetTabPageTags
+        /// </summary>
+        /// <returns>The <see>
+        ///         <cref>string[]</cref>
+        ///     </see>
+        /// </returns>
         private string[] GetTabPageTags()
         {
             try
             {
                 var filters = new[]
-                {
-                    "FundName",
-                    "BocName",
-                    "NPM",
-                    "GoalName",
-                    "ObjectiveName",
-                    "Division",
-                    "ProgramArea",
-                    "ProgramProjectCode"
-                };
+                                  {
+                                      "FundName",
+                                      "BocName",
+                                      "NPM",
+                                      "GoalName",
+                                      "ObjectiveName",
+                                      "Division",
+                                      "ProgramArea",
+                                      "ProgramProjectCode"
+                                  };
 
                 return filters;
             }
@@ -577,12 +774,17 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The ChartFilterControl1_ItemSelected
+        /// </summary>
+        /// <param name="sender">The sender<see cref="object"/></param>
+        /// <param name="e">The e<see cref="EventArgs"/></param>
         private void ChartFilterControl1_ItemSelected(object sender, EventArgs e)
         {
             ChartFilterControl1 = sender as VisualComboBox;
             if(ChartFilterControl1 != null)
             {
-                ChartType = (ChartSeriesType) Enum.Parse(typeof(ChartSeriesType), ChartFilterControl1.SelectedItem.ToString());
+                ChartType = (ChartSeriesType)Enum.Parse(typeof(ChartSeriesType), ChartFilterControl1.SelectedItem.ToString());
             }
 
             if(Expander2.Visible && Expander2.IsExpanded)
@@ -591,14 +793,20 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The ChartFilterControl2_ItemSelected
+        /// </summary>
+        /// <param name="sender">The sender<see cref="object"/></param>
+        /// <param name="e">The e<see cref="EventArgs"/></param>
         private void ChartFilterControl2_ItemSelected(object sender, EventArgs e)
         {
             try
             {
                 ChartFilterControl2 = sender as VisualComboBox;
-                if(ChartFilterControl2.SelectedItem != null)
+                VisualComboBox chartFilterControl2 = ChartFilterControl2;
+                if(chartFilterControl2 != null && chartFilterControl2.SelectedItem != null)
                 {
-                    Measure = (Stat) Enum.Parse(typeof(Stat), ChartFilterControl2.SelectedItem.ToString());
+                    Measure = (Stat)Enum.Parse(typeof(Stat), ChartFilterControl2.SelectedItem.ToString());
                 }
 
                 if(!Expander2.Visible || Expander2.IsExpanded == false)
@@ -613,6 +821,11 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The ChartFilterControl3_ItemSelected
+        /// </summary>
+        /// <param name="sender">The sender<see cref="object"/></param>
+        /// <param name="e">The e<see cref="EventArgs"/></param>
         private void ChartFilterControl3_ItemSelected(object sender, EventArgs e)
         {
             try
@@ -625,16 +838,16 @@ namespace BudgetExecution
 
                 BocFilter4.Items.Clear();
                 var filters = new[]
-                {
-                    "FundName",
-                    "BocName",
-                    "NPM",
-                    "GoalName",
-                    "ObjectiveName",
-                    "Division",
-                    "ProgramArea",
-                    "ProgramProjectCode"
-                };
+                                  {
+                                      "FundName",
+                                      "BocName",
+                                      "NPM",
+                                      "GoalName",
+                                      "ObjectiveName",
+                                      "Division",
+                                      "ProgramArea",
+                                      "ProgramProjectCode"
+                                  };
 
                 foreach(string s in filters)
                 {
@@ -649,6 +862,11 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The ChartFilterControl4_ItemSelected
+        /// </summary>
+        /// <param name="sender">The sender<see cref="object"/></param>
+        /// <param name="e">The e<see cref="EventArgs"/></param>
         private void ChartFilterControl4_ItemSelected(object sender, EventArgs e)
         {
             try
@@ -656,11 +874,11 @@ namespace BudgetExecution
                 ChartFilterControl4 = sender as VisualComboBox;
                 if(ChartFilterControl4 != null)
                 {
-                    ChartGroup = (Field) Enum.Parse(typeof(Field), ChartFilterControl4.SelectedItem.ToString());
+                    ChartGroup = (Field)Enum.Parse(typeof(Field), ChartFilterControl4.SelectedItem.ToString());
                     ChartMainTitle = new[]
-                    {
-                        $"{Text} {ChartFilter} By {ChartFilterControl4.SelectedItem} "
-                    };
+                                              {
+                                                  $"{Text} {ChartFilter} By {ChartFilterControl4.SelectedItem} "
+                                              };
                 }
 
                 switch(ChartGroup)
@@ -720,6 +938,13 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The AssignChartFilterControls
+        /// </summary>
+        /// <param name="filter1">The filter1<see cref="VisualComboBox"/></param>
+        /// <param name="filter2">The filter2<see cref="VisualComboBox"/></param>
+        /// <param name="filter3">The filter3<see cref="VisualComboBox"/></param>
+        /// <param name="filter4">The filter4<see cref="VisualComboBox"/></param>
         private void AssignChartFilterControls(VisualComboBox filter1, VisualComboBox filter2, VisualComboBox filter3, VisualComboBox filter4)
         {
             ChartFilterControl1 = filter1;
@@ -728,6 +953,11 @@ namespace BudgetExecution
             ChartFilterControl4 = filter4;
         }
 
+        /// <summary>
+        /// The AssignChartExpanders
+        /// </summary>
+        /// <param name="panel1">The panel1<see cref="ExpandCollapsePanel"/></param>
+        /// <param name="panel2">The panel2<see cref="ExpandCollapsePanel"/></param>
         private void AssignChartExpanders(ExpandCollapsePanel panel1, ExpandCollapsePanel panel2)
         {
             try
@@ -741,6 +971,11 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The PrimaryFilterControl_ItemSelected
+        /// </summary>
+        /// <param name="sender">The sender<see cref="object"/></param>
+        /// <param name="e">The e<see cref="EventArgs"/></param>
         internal void PrimaryFilterControl_ItemSelected(object sender, EventArgs e)
         {
             try
@@ -773,16 +1008,16 @@ namespace BudgetExecution
                         if(Division != null)
                         {
                             ChartMainTitle = new[]
-                            {
-                                $"{Division} Funding By Appropriation"
-                            };
+                                                      {
+                                                          $"{Division} Funding By Appropriation"
+                                                      };
                         }
                         else
                         {
                             ChartMainTitle = new[]
-                            {
-                                $"{Source.ToString()} Funding By Appropriation"
-                            };
+                                                      {
+                                                          $"{Source.ToString()} Funding By Appropriation"
+                                                      };
                         }
 
                         BocChart = new BudgetChart(BocChart, ChartMainTitle, DbData, Field.FundName, Stat.Total, ChartSeriesType.Column).Activate();
@@ -802,16 +1037,16 @@ namespace BudgetExecution
                         if(Division != null)
                         {
                             ChartMainTitle = new[]
-                            {
-                                $"{Division} Funding By Object Class"
-                            };
+                                                      {
+                                                          $"{Division} Funding By Object Class"
+                                                      };
                         }
                         else
                         {
                             ChartMainTitle = new[]
-                            {
-                                $"{Source.ToString()} Funding By Object Class"
-                            };
+                                                      {
+                                                          $"{Source.ToString()} Funding By Object Class"
+                                                      };
                         }
 
                         BocChart = new BudgetChart(BocChart, ChartMainTitle, DbData, Field.BocName, Stat.Total, ChartSeriesType.Column).Activate();
@@ -831,16 +1066,16 @@ namespace BudgetExecution
                         if(Division != null)
                         {
                             ChartMainTitle = new[]
-                            {
-                                $"{Division} Funding By HQ NPM"
-                            };
+                                                      {
+                                                          $"{Division} Funding By HQ NPM"
+                                                      };
                         }
                         else
                         {
                             ChartMainTitle = new[]
-                            {
-                                $"{Source.ToString()} Funding By HQ NPM"
-                            };
+                                                      {
+                                                          $"{Source.ToString()} Funding By HQ NPM"
+                                                      };
                         }
 
                         BocChart = new BudgetChart(BocChart, ChartMainTitle, DbData, Field.NPM, Stat.Total, ChartSeriesType.Column).Activate();
@@ -860,16 +1095,16 @@ namespace BudgetExecution
                         if(Division != null)
                         {
                             ChartMainTitle = new[]
-                            {
-                                $"{Division} Funding By Agency Goal"
-                            };
+                                                      {
+                                                          $"{Division} Funding By Agency Goal"
+                                                      };
                         }
                         else
                         {
                             ChartMainTitle = new[]
-                            {
-                                $"{Source.ToString()} Funding By Agency Goal"
-                            };
+                                                      {
+                                                          $"{Source.ToString()} Funding By Agency Goal"
+                                                      };
                         }
 
                         BocChart = new BudgetChart(BocChart, ChartMainTitle, DbData, Field.GoalName, Stat.Total, ChartSeriesType.Column).Activate();
@@ -889,16 +1124,16 @@ namespace BudgetExecution
                         if(Division != null)
                         {
                             ChartMainTitle = new[]
-                            {
-                                $"{Division} Funding By Objective"
-                            };
+                                                      {
+                                                          $"{Division} Funding By Objective"
+                                                      };
                         }
                         else
                         {
                             ChartMainTitle = new[]
-                            {
-                                $"{Source.ToString()} Funding By Objective"
-                            };
+                                                      {
+                                                          $"{Source.ToString()} Funding By Objective"
+                                                      };
                         }
 
                         BocChart = new BudgetChart(BocChart, ChartMainTitle, DbData, Field.ObjectiveName, Stat.Total, ChartSeriesType.Column).Activate();
@@ -918,16 +1153,16 @@ namespace BudgetExecution
                         if(Division != null)
                         {
                             ChartMainTitle = new[]
-                            {
-                                $"{Division} Funding By Division"
-                            };
+                                                      {
+                                                          $"{Division} Funding By Division"
+                                                      };
                         }
                         else
                         {
                             ChartMainTitle = new[]
-                            {
-                                $"{Source.ToString()} Funding By Division"
-                            };
+                                                      {
+                                                          $"{Source.ToString()} Funding By Division"
+                                                      };
                         }
 
                         BocChart = new BudgetChart(BocChart, ChartMainTitle, DbData, Field.Division, Stat.Total, ChartSeriesType.Column).Activate();
@@ -947,16 +1182,16 @@ namespace BudgetExecution
                         if(Division != null)
                         {
                             ChartMainTitle = new[]
-                            {
-                                $"{Division} Funding By Program Area"
-                            };
+                                                      {
+                                                          $"{Division} Funding By Program Area"
+                                                      };
                         }
                         else
                         {
                             ChartMainTitle = new[]
-                            {
-                                $"{Source.ToString()} Funding By Program Area"
-                            };
+                                                      {
+                                                          $"{Source.ToString()} Funding By Program Area"
+                                                      };
                         }
 
                         BocChart = new BudgetChart(BocChart, ChartMainTitle, DbData, Field.ProgramArea, Stat.Total, ChartSeriesType.Column).Activate();
@@ -976,16 +1211,16 @@ namespace BudgetExecution
                         if(Division != null)
                         {
                             ChartMainTitle = new[]
-                            {
-                                $"{Division} Funding By Program Project"
-                            };
+                                                      {
+                                                          $"{Division} Funding By Program Project"
+                                                      };
                         }
                         else
                         {
                             ChartMainTitle = new[]
-                            {
-                                $"{Source.ToString()} Funding By Program Project"
-                            };
+                                                      {
+                                                          $"{Source.ToString()} Funding By Program Project"
+                                                      };
                         }
 
                         BocChart = new BudgetChart(BocChart, ChartMainTitle, DbData, Field.ProgramProjectCode, Stat.Total, ChartSeriesType.Column).Activate();
@@ -998,6 +1233,11 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The SummaryTabPage_TabSelected
+        /// </summary>
+        /// <param name="sender">The sender<see cref="object"/></param>
+        /// <param name="e">The e<see cref="EventArgs"/></param>
         internal void SummaryTabPage_TabSelected(object sender, EventArgs e)
         {
             try
@@ -1024,16 +1264,16 @@ namespace BudgetExecution
                         if(Division != null)
                         {
                             ChartMainTitle = new[]
-                            {
-                                $"{Division} Funding By Object Class"
-                            };
+                                                      {
+                                                          $"{Division} Funding By Object Class"
+                                                      };
                         }
                         else
                         {
                             ChartMainTitle = new[]
-                            {
-                                $"{Source.ToString()} Funding By Object Class"
-                            };
+                                                      {
+                                                          $"{Source.ToString()} Funding By Object Class"
+                                                      };
                         }
 
                         BocChart = new BudgetChart(BocChart, ChartMainTitle, DbData, Field.BocName, Stat.Total, ChartSeriesType.Column).Activate();
@@ -1055,6 +1295,14 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The GetTitle
+        /// </summary>
+        /// <param name="tab">The tab<see cref="TabControlAdv"/></param>
+        /// <param name="filter1">The filter1<see cref="VisualComboBox"/></param>
+        /// <param name="filter2">The filter2<see cref="VisualComboBox"/></param>
+        /// <param name="filter3">The filter3<see cref="VisualComboBox"/></param>
+        /// <returns>The <see cref="string[]"/></returns>
         private string[] GetTitle(TabControlAdv tab, VisualComboBox filter1, VisualComboBox filter2, VisualComboBox filter3)
         {
             try
@@ -1067,27 +1315,27 @@ namespace BudgetExecution
                 {
                     case 0 :
                         return new[]
-                        {
-                            string.Format("Total {0} Funding by {1}", source, grouping)
-                        };
+                                   {
+                                       string.Format("Total {0} Funding by {1}", source, grouping)
+                                   };
 
                     case 1 :
                         return new[]
-                        {
-                            string.Format("{0}  Accounts by {1}", source, grouping)
-                        };
+                                   {
+                                       string.Format("{0}  Accounts by {1}", source, grouping)
+                                   };
 
                     case 2 :
                         return new[]
-                        {
-                            string.Format("Average {0} Funding by {1}", source, grouping)
-                        };
+                                   {
+                                       string.Format("Average {0} Funding by {1}", source, grouping)
+                                   };
 
                     case 3 :
                         return new[]
-                        {
-                            string.Format("{0} Funding Percentage by {1}", source, grouping)
-                        };
+                                   {
+                                       string.Format("{0} Funding Percentage by {1}", source, grouping)
+                                   };
                 }
 
                 return null;
@@ -1099,6 +1347,10 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The GetSelectedRowPrcDictionary
+        /// </summary>
+        /// <returns>The <see cref="Dictionary{string, object}"/></returns>
         private Dictionary<string, object> GetSelectedRowPrcDictionary()
         {
             try
@@ -1107,13 +1359,14 @@ namespace BudgetExecution
                 {
                     DataGridViewRow dgvRow = Grid.CurrentRow;
                     Dictionary<string, object> data = new Dictionary<string, object>();
-                    //data.Add("ID", int.Parse(dgvRow.Cells["ID"].Value.ToString()));
-                    //data.Add("Fund", dgvRow.Cells["Fund"].Value.ToString());
-                    //data.Add("AH", dgvRow.Cells["AH"].Value.ToString());
-                    //data.Add("Org", dgvRow.Cells["Org"].Value.ToString());
-                    //data.Add("RC", dgvRow.Cells["RC"].ToString());
-                    //data.Add("Code", dgvRow.Cells["Code"].ToString());
-                    //data.Add("BOC", dgvRow.Cells["BOC"].ToString());
+
+                    // data.Add("ID", int.Parse(dgvRow.Cells["ID"].Value.ToString()));
+                    // data.Add("Fund", dgvRow.Cells["Fund"].Value.ToString());
+                    // data.Add("AH", dgvRow.Cells["AH"].Value.ToString());
+                    // data.Add("Org", dgvRow.Cells["Org"].Value.ToString());
+                    // data.Add("RC", dgvRow.Cells["RC"].ToString());
+                    // data.Add("Code", dgvRow.Cells["Code"].ToString());
+                    // data.Add("BOC", dgvRow.Cells["BOC"].ToString());
                     return data;
                 }
 
@@ -1126,24 +1379,44 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The CalendarButton_Click
+        /// </summary>
+        /// <param name="sender">The sender<see cref="object"/></param>
+        /// <param name="e">The e<see cref="EventArgs"/></param>
         private void CalendarButton_Click(object sender, EventArgs e)
         {
             Calendar cal = new Calendar();
             cal.Show();
         }
 
+        /// <summary>
+        /// The CalculatorButton_Click
+        /// </summary>
+        /// <param name="sender">The sender<see cref="object"/></param>
+        /// <param name="e">The e<see cref="EventArgs"/></param>
         private void CalculatorButton_Click(object sender, EventArgs e)
         {
             CalculatorForm cf = new CalculatorForm();
             cf.Show();
         }
 
+        /// <summary>
+        /// The ExcelButton_Click
+        /// </summary>
+        /// <param name="sender">The sender<see cref="object"/></param>
+        /// <param name="e">The e<see cref="EventArgs"/></param>
         private void ExcelButton_Click(object sender, EventArgs e)
         {
             ExcelForm er = new ExcelForm();
             er.Show();
         }
 
+        /// <summary>
+        /// The AddButton_OnClick
+        /// </summary>
+        /// <param name="sender">The sender<see cref="object"/></param>
+        /// <param name="e">The e<see cref="EventArgs"/></param>
         private void AddButton_OnClick(object sender, EventArgs e)
         {
             try
@@ -1170,6 +1443,11 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The EditButton_OnClick
+        /// </summary>
+        /// <param name="sender">The sender<see cref="object"/></param>
+        /// <param name="e">The e<see cref="EventArgs"/></param>
         private void EditButton_OnClick(object sender, EventArgs e)
         {
             try
@@ -1196,6 +1474,11 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The CopyButton_OnClick
+        /// </summary>
+        /// <param name="sender">The sender<see cref="object"/></param>
+        /// <param name="e">The e<see cref="EventArgs"/></param>
         private void CopyButton_OnClick(object sender, EventArgs e)
         {
             try
@@ -1207,11 +1490,16 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The Grid_OnDoubleClick
+        /// </summary>
+        /// <param name="sender">The sender<see cref="object"/></param>
+        /// <param name="e">The e<see cref="EventArgs"/></param>
         private void Grid_OnDoubleClick(object sender, EventArgs e)
         {
             try
             {
-                DataRowView view = (DataRowView) BindingSource.Current;
+                DataRowView view = (DataRowView)BindingSource.Current;
                 Dictionary<string, object> prc = new PRC(view.Row).GetDataFields();
                 AccountManager am = new AccountManager(Source, Provider.SQLite, prc);
                 am.Show();
@@ -1222,27 +1510,35 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The ReprogramButton_OnClick
+        /// </summary>
+        /// <param name="sender">The sender<see cref="object"/></param>
+        /// <param name="e">The e<see cref="EventArgs"/></param>
         private void ReprogramButton_OnClick(object sender, EventArgs e)
         {
             Reprogramming rp = new Reprogramming();
             rp.Show();
         }
 
+        /// <summary>
+        /// The UpdateAccountChart
+        /// </summary>
         internal void UpdateAccountChart()
         {
             try
             {
-                DataRowView drv = (DataRowView) BindingSource.Current;
+                DataRowView drv = (DataRowView)BindingSource.Current;
                 string code = drv["Code"].ToString();
                 decimal total = DbData.Table.AsEnumerable().Where(p => p.Field<string>("Code").Contains(code)).Select(p => p.Field<decimal>("Amount")).Sum();
                 DataRow current = drv.Row;
                 decimal amt = decimal.Parse(current["Amount"].ToString());
                 decimal ratio = amt / total;
-                Dictionary<string, double> d = new Dictionary<string, double> { ["Total"] = (double) total, ["Allocation"] = (double) amt };
+                Dictionary<string, double> d = new Dictionary<string, double> { ["Total"] = (double)total, ["Allocation"] = (double)amt };
                 ChartMainTitle = new[]
-                {
-                    $"{ratio.ToString("P")} {Source.ToString()} PRC {current["Code"]} Funding"
-                };
+                                          {
+                                              $"{ratio.ToString("P")} {Source.ToString()} PRC {current["Code"]} Funding"
+                                          };
                 AccountChart = new BudgetChart(AccountChart, ChartMainTitle, d, Field.ProgramProjectCode, Stat.Total, ChartSeriesType.Column).Activate();
             }
             catch(Exception ex)
@@ -1251,26 +1547,27 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The UpdateAccountChart
+        /// </summary>
+        /// <param name="sender">The sender<see cref="object"/></param>
+        /// <param name="e">The e<see cref="EventArgs"/></param>
         private void UpdateAccountChart(object sender, EventArgs e)
         {
             try
             {
                 Grid = sender as MetroGrid;
-                DataRowView drv = (DataRowView) BindingSource.Current;
+                DataRowView drv = (DataRowView)BindingSource.Current;
                 string code = drv.Row["Code"].ToString();
                 string bfy = drv.Row["BFY"].ToString();
-                decimal total = DbData.Table.AsEnumerable()
-                                      .Where(p => p.Field<string>("Code").Contains(code))
-                                      .Where(p => p.Field<string>("BFY").Equals(bfy))
-                                      .Select(p => p.Field<decimal>("Amount"))
-                                      .Sum();
+                decimal total = DbData.Table.AsEnumerable().Where(p => p.Field<string>("Code").Contains(code)).Where(p => p.Field<string>("BFY").Equals(bfy)).Select(p => p.Field<decimal>("Amount")).Sum();
                 decimal amt = decimal.Parse(drv["Amount"].ToString());
                 decimal ratio = amt / total;
-                Dictionary<string, double> d = new Dictionary<string, double> { ["Total"] = (double) total, ["Allocation"] = (double) amt };
+                Dictionary<string, double> d = new Dictionary<string, double> { ["Total"] = (double)total, ["Allocation"] = (double)amt };
                 ChartMainTitle = new[]
-                {
-                    $"{ratio.ToString("P")} - {drv["Division"]}  {drv["ProgramProjectName"]} Funding"
-                };
+                                          {
+                                              $"{ratio.ToString("P")} - {drv["Division"]}  {drv["ProgramProjectName"]} Funding"
+                                          };
                 AccountChart = new BudgetChart(AccountChart, ChartMainTitle, d, Field.ProgramProjectCode, Stat.Total, ChartSeriesType.Column).Activate();
             }
             catch(Exception ex)
@@ -1279,20 +1576,40 @@ namespace BudgetExecution
             }
         }
 
+        /// <summary>
+        /// The AccountChart_Click
+        /// </summary>
+        /// <param name="sender">The sender<see cref="object"/></param>
+        /// <param name="e">The e<see cref="EventArgs"/></param>
         private void AccountChart_Click(object sender, EventArgs e)
         {
         }
 
+        /// <summary>
+        /// The PreviousButton_OnClick
+        /// </summary>
+        /// <param name="sender">The sender<see cref="object"/></param>
+        /// <param name="e">The e<see cref="EventArgs"/></param>
         private void PreviousButton_OnClick(object sender, EventArgs e)
         {
             BindingSource.MovePrevious();
         }
 
+        /// <summary>
+        /// The NextButton_OnClick
+        /// </summary>
+        /// <param name="sender">The sender<see cref="object"/></param>
+        /// <param name="e">The e<see cref="EventArgs"/></param>
         private void NextButton_OnClick(object sender, EventArgs e)
         {
             BindingSource.MoveNext();
         }
 
+        /// <summary>
+        /// The DatabaseSearchButton_OnClick
+        /// </summary>
+        /// <param name="sender">The sender<see cref="object"/></param>
+        /// <param name="e">The e<see cref="EventArgs"/></param>
         private void DatabaseSearchButton_OnClick(object sender, EventArgs e)
         {
             var sd = new SQLiteData(Source.PRC);
@@ -1300,14 +1617,28 @@ namespace BudgetExecution
             Close();
         }
 
+        /// <summary>
+        /// The LblPrc_Click
+        /// </summary>
+        /// <param name="sender">The sender<see cref="object"/></param>
+        /// <param name="e">The e<see cref="EventArgs"/></param>
         private void LblPrc_Click(object sender, EventArgs e)
         {
         }
 
+        /// <summary>
+        /// The Panel2_Paint
+        /// </summary>
+        /// <param name="sender">The sender<see cref="object"/></param>
+        /// <param name="e">The e<see cref="PaintEventArgs"/></param>
         private void Panel2_Paint(object sender, PaintEventArgs e)
         {
         }
 
+        /// <summary>
+        /// The GetCaption
+        /// </summary>
+        /// <param name="source">The source<see cref="Source"/></param>
         private void GetCaption(Source source)
         {
             try

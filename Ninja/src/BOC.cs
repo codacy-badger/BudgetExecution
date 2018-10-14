@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace BudgetExecution
 {
-    public class BOC
+    public struct BOC
     {
         // CONSTRUCTORS
         public BOC(string code)

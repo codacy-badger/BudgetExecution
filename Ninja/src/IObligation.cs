@@ -16,7 +16,7 @@
 
         Fund Fund { get; set; }
 
-        int ObligId { get; set; }
+        int ID { get; set; }
 
         Org Org { get; set; }
 
