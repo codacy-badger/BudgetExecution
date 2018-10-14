@@ -323,11 +323,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="resources\Division.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Division.resx</DependentUpon>
-    </Compile>
     <Compile Include="resources\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -342,11 +337,6 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DivisionIconImages.resx</DependentUpon>
-    </Compile>
-    <Compile Include="resources\NinjaIcons1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>NinjaIcons.resx</DependentUpon>
     </Compile>
     <Compile Include="resources\SummaryImages.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -651,11 +641,6 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="resources\Division.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <LastGenOutput>Division.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
     <EmbeddedResource Include="resources\FormImages.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>FormImages.Designer.cs</LastGenOutput>
@@ -664,10 +649,6 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>FundCodeImages.Designer.cs</LastGenOutput>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="resources\NinjaIcons.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>NinjaIcons1.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="resources\SummaryImages.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -986,6 +967,11 @@
     <Content Include="database\sqlserver\R6.mdf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="resources\NinjaDivisionIcons\EN.png" />
+    <None Include="resources\NinjaDivisionIcons\MDR.png" />
+    <None Include="resources\NinjaDivisionIcons\RC.png" />
+    <None Include="resources\NinjaDivisionIcons\SF.png" />
+    <None Include="resources\NinjaDivisionIcons\WSA.png" />
     <Content Include="summation_3d_blue_oma_icon.ico" />
     <None Include="resources\SummaryImages\RegionalAccounts.png" />
     <None Include="resources\SummaryImages\FTE.png" />

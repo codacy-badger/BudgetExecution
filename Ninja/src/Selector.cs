@@ -80,7 +80,7 @@ namespace BudgetExecution
                         Close();
                         return;
                     case"Division":
-                        Selector d = new Selector(Info.Div);
+                        Selector d = new Selector(Info.DivisionImages);
                         d.Show();
                         Close();
                         return;

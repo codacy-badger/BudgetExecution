@@ -7,6 +7,8 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
+using System.IO;
+
 namespace BudgetExecution
 {
     using System;
@@ -14,6 +16,7 @@ namespace BudgetExecution
     using System.Data;
     using System.Linq;
     using System.Windows.Forms;
+    using System.Resources;
     using MakarovDev.ExpandCollapsePanel;
     using MetroFramework.Controls;
     using Syncfusion.Windows.Forms;
@@ -1145,6 +1148,7 @@ namespace BudgetExecution
         {
             try
             {
+                AccountTabControl.SelectedTab = AddTab;
                 if(AddTab.Visible == false)
                     AddTab.Visible = true;
                 if(GraphTab.Visible == true)
@@ -1238,13 +1242,16 @@ namespace BudgetExecution
                 Grid = sender as MetroGrid;
                 DataRowView drv = (DataRowView) BindingSource.Current;
                 string code = drv.Row["Code"].ToString();
-                decimal total = DbData.Table.AsEnumerable().Where(p => p.Field<string>("Code").Contains(code)).Select(p => p.Field<decimal>("Amount")).Sum();
+                string bfy = drv.Row["BFY"].ToString();
+                decimal total = DbData.Table.AsEnumerable().Where(p => p.Field<string>("Code").Contains(code))
+                                      .Where(p => p.Field<string>("BFY").Equals(bfy))
+                                      .Select(p => p.Field<decimal>("Amount")).Sum();
                 decimal amt = decimal.Parse(drv["Amount"].ToString());
                 decimal ratio = amt / total;
                 Dictionary<string, double> d = new Dictionary<string, double> { ["Total"] = (double) total, ["Allocation"] = (double) amt };
                 ChartMainTitle = new[]
                 {
-                    $"{ratio.ToString("P")} PRC {drv["Code"]} Funding"
+                    $"{ratio.ToString("P")} - {drv["Division"]}  {drv["ProgramProjectName"]} Funding"
                 };
                 AccountChart = new BudgetChart(AccountChart, ChartMainTitle, d, Field.ProgramProjectCode, Stat.Total, ChartSeriesType.Column).Activate();
             }
@@ -1281,6 +1288,21 @@ namespace BudgetExecution
 
         private void Panel2_Paint(object sender, PaintEventArgs e)
         {
+        }
+
+        private void GetCaption(Source source)
+        {
+            try
+            {
+                string division = source.ToString();
+                string[] files = Directory.GetFiles(Info.DivisionImages);
+
+            }
+            catch(Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
         }
     }
 }

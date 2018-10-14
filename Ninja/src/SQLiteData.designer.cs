@@ -35,15 +35,16 @@ namespace BudgetExecution
             Syncfusion.Windows.Forms.Grid.GridBaseStyle gridBaseStyle3 = new Syncfusion.Windows.Forms.Grid.GridBaseStyle();
             Syncfusion.Windows.Forms.Grid.GridBaseStyle gridBaseStyle4 = new Syncfusion.Windows.Forms.Grid.GridBaseStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SQLiteData));
-            VisualPlus.Structure.TextStyle textStyle1 = new VisualPlus.Structure.TextStyle();
             VisualPlus.Structure.TextStyle textStyle2 = new VisualPlus.Structure.TextStyle();
             VisualPlus.Structure.TextStyle textStyle3 = new VisualPlus.Structure.TextStyle();
             VisualPlus.Structure.TextStyle textStyle4 = new VisualPlus.Structure.TextStyle();
             VisualPlus.Structure.TextStyle textStyle5 = new VisualPlus.Structure.TextStyle();
             VisualPlus.Structure.TextStyle textStyle6 = new VisualPlus.Structure.TextStyle();
+            VisualPlus.Structure.TextStyle textStyle7 = new VisualPlus.Structure.TextStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            VisualPlus.Structure.TextStyle textStyle1 = new VisualPlus.Structure.TextStyle();
             Syncfusion.Windows.Forms.CaptionImage captionImage1 = new Syncfusion.Windows.Forms.CaptionImage();
             this.E6DataGrid = new Syncfusion.Windows.Forms.Grid.GridDataBoundGrid();
             this.toolstripitem1 = new Syncfusion.Windows.Forms.Tools.toolstripitem();
@@ -83,11 +84,11 @@ namespace BudgetExecution
             this.Filter3 = new VisualPlus.Toolkit.Controls.Interactivity.VisualComboBox();
             this.Filter2 = new VisualPlus.Toolkit.Controls.Interactivity.VisualComboBox();
             this.Filter1 = new VisualPlus.Toolkit.Controls.Interactivity.VisualComboBox();
-            this.button5 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.button5 = new System.Windows.Forms.Button();
             this.metroPanel4 = new MetroFramework.Controls.MetroPanel();
             this.button8 = new System.Windows.Forms.Button();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
@@ -100,9 +101,11 @@ namespace BudgetExecution
             this.FilterTab = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
             this.FunctionTab = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
             this.metroSetToolTip1 = new MetroSet_UI.Components.MetroSetToolTip();
-            this.visualGroupBox1 = new VisualPlus.Toolkit.Controls.Layout.VisualGroupBox();
-            this.visualGroupBox2 = new VisualPlus.Toolkit.Controls.Layout.VisualGroupBox();
+            this.FilterGroupBox = new VisualPlus.Toolkit.Controls.Layout.VisualGroupBox();
+            this.DataGroupBox = new VisualPlus.Toolkit.Controls.Layout.VisualGroupBox();
             this.Grid = new System.Windows.Forms.DataGridView();
+            this.Filter5 = new VisualPlus.Toolkit.Controls.Interactivity.VisualComboBox();
+            this.label13 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.E6DataGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BindingSource)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
@@ -114,8 +117,8 @@ namespace BudgetExecution
             this.DataTabControl.SuspendLayout();
             this.FilterTab.SuspendLayout();
             this.FunctionTab.SuspendLayout();
-            this.visualGroupBox1.SuspendLayout();
-            this.visualGroupBox2.SuspendLayout();
+            this.FilterGroupBox.SuspendLayout();
+            this.DataGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Grid)).BeginInit();
             this.SuspendLayout();
             // 
@@ -271,7 +274,7 @@ namespace BudgetExecution
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 131F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 127F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 135F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 141F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 142F));
             this.tableLayoutPanel2.Controls.Add(this.button2, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.button12, 6, 0);
             this.tableLayoutPanel2.Controls.Add(this.button3, 1, 0);
@@ -315,10 +318,10 @@ namespace BudgetExecution
             this.button12.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button12.Image = ((System.Drawing.Image)(resources.GetObject("button12.Image")));
-            this.button12.Location = new System.Drawing.Point(765, 5);
+            this.button12.Location = new System.Drawing.Point(764, 5);
             this.button12.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(134, 39);
+            this.button12.Size = new System.Drawing.Size(135, 39);
             this.button12.TabIndex = 168;
             this.button12.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.metroSetToolTip1.SetToolTip(this.button12, "Remove Account");
@@ -336,7 +339,7 @@ namespace BudgetExecution
             this.button3.Location = new System.Drawing.Point(132, 5);
             this.button3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(105, 39);
+            this.button3.Size = new System.Drawing.Size(104, 39);
             this.button3.TabIndex = 163;
             this.button3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.metroSetToolTip1.SetToolTip(this.button3, "Next Account");
@@ -352,7 +355,7 @@ namespace BudgetExecution
             this.button11.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button11.Image = ((System.Drawing.Image)(resources.GetObject("button11.Image")));
-            this.button11.Location = new System.Drawing.Point(630, 5);
+            this.button11.Location = new System.Drawing.Point(629, 5);
             this.button11.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(127, 39);
@@ -372,7 +375,7 @@ namespace BudgetExecution
             this.GridRefreshButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.GridRefreshButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.GridRefreshButton.Image = ((System.Drawing.Image)(resources.GetObject("GridRefreshButton.Image")));
-            this.GridRefreshButton.Location = new System.Drawing.Point(245, 5);
+            this.GridRefreshButton.Location = new System.Drawing.Point(244, 5);
             this.GridRefreshButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.GridRefreshButton.Name = "GridRefreshButton";
             this.GridRefreshButton.Size = new System.Drawing.Size(119, 39);
@@ -392,7 +395,7 @@ namespace BudgetExecution
             this.button9.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button9.Image = ((System.Drawing.Image)(resources.GetObject("button9.Image")));
-            this.button9.Location = new System.Drawing.Point(372, 5);
+            this.button9.Location = new System.Drawing.Point(371, 5);
             this.button9.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(123, 39);
@@ -413,7 +416,7 @@ namespace BudgetExecution
             this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.Location = new System.Drawing.Point(503, 5);
+            this.button4.Location = new System.Drawing.Point(502, 5);
             this.button4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(119, 39);
@@ -434,7 +437,7 @@ namespace BudgetExecution
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 132F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 142F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 120F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 162F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 163F));
             this.tableLayoutPanel1.Controls.Add(this.label5, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.label10, 5, 0);
             this.tableLayoutPanel1.Controls.Add(this.label6, 1, 0);
@@ -466,7 +469,7 @@ namespace BudgetExecution
             this.label10.AutoSize = true;
             this.label10.Dock = System.Windows.Forms.DockStyle.Left;
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(637, 0);
+            this.label10.Location = new System.Drawing.Point(636, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(64, 33);
             this.label10.TabIndex = 158;
@@ -477,7 +480,7 @@ namespace BudgetExecution
             this.label6.AutoSize = true;
             this.label6.Dock = System.Windows.Forms.DockStyle.Left;
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(62, 0);
+            this.label6.Location = new System.Drawing.Point(61, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(55, 33);
             this.label6.TabIndex = 154;
@@ -488,7 +491,7 @@ namespace BudgetExecution
             this.label9.AutoSize = true;
             this.label9.Dock = System.Windows.Forms.DockStyle.Right;
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(576, 0);
+            this.label9.Location = new System.Drawing.Point(575, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(55, 33);
             this.label9.TabIndex = 157;
@@ -499,7 +502,7 @@ namespace BudgetExecution
             this.label7.AutoSize = true;
             this.label7.Dock = System.Windows.Forms.DockStyle.Right;
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(261, 0);
+            this.label7.Location = new System.Drawing.Point(260, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(55, 33);
             this.label7.TabIndex = 155;
@@ -510,7 +513,7 @@ namespace BudgetExecution
             this.label8.AutoSize = true;
             this.label8.Dock = System.Windows.Forms.DockStyle.Left;
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(322, 0);
+            this.label8.Location = new System.Drawing.Point(321, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(55, 33);
             this.label8.TabIndex = 156;
@@ -521,7 +524,7 @@ namespace BudgetExecution
             this.label11.AutoSize = true;
             this.label11.Dock = System.Windows.Forms.DockStyle.Right;
             this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(814, 0);
+            this.label11.Location = new System.Drawing.Point(813, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(79, 33);
             this.label11.TabIndex = 159;
@@ -532,7 +535,7 @@ namespace BudgetExecution
             this.label12.AutoSize = true;
             this.label12.Dock = System.Windows.Forms.DockStyle.Left;
             this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(899, 0);
+            this.label12.Location = new System.Drawing.Point(898, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(64, 33);
             this.label12.TabIndex = 160;
@@ -541,6 +544,9 @@ namespace BudgetExecution
             // metroPanel3
             // 
             this.metroPanel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.metroPanel3.Controls.Add(this.label13);
+            this.metroPanel3.Controls.Add(this.button5);
+            this.metroPanel3.Controls.Add(this.Filter5);
             this.metroPanel3.Controls.Add(this.Filter4);
             this.metroPanel3.Controls.Add(this.Filter3);
             this.metroPanel3.Controls.Add(this.Filter2);
@@ -552,9 +558,9 @@ namespace BudgetExecution
             this.metroPanel3.HorizontalScrollbarBarColor = true;
             this.metroPanel3.HorizontalScrollbarHighlightOnWheel = false;
             this.metroPanel3.HorizontalScrollbarSize = 9;
-            this.metroPanel3.Location = new System.Drawing.Point(92, 49);
+            this.metroPanel3.Location = new System.Drawing.Point(67, 49);
             this.metroPanel3.Name = "metroPanel3";
-            this.metroPanel3.Size = new System.Drawing.Size(273, 634);
+            this.metroPanel3.Size = new System.Drawing.Size(298, 634);
             this.metroPanel3.TabIndex = 154;
             this.metroPanel3.Theme = MetroFramework.MetroThemeStyle.Dark;
             this.metroSetToolTip1.SetToolTip(this.metroPanel3, "\r\n");
@@ -600,7 +606,7 @@ namespace BudgetExecution
             this.Filter4.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
             this.Filter4.Name = "Filter4";
             this.Filter4.SeparatorColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.Filter4.Size = new System.Drawing.Size(176, 30);
+            this.Filter4.Size = new System.Drawing.Size(215, 30);
             this.Filter4.State = VisualPlus.Enumerators.MouseStates.Normal;
             this.Filter4.TabIndex = 172;
             this.Filter4.TextAlignment = System.Drawing.StringAlignment.Center;
@@ -608,11 +614,11 @@ namespace BudgetExecution
             this.Filter4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.Filter4.TextLineAlignment = System.Drawing.StringAlignment.Center;
             this.Filter4.TextRendering = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            textStyle1.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-            textStyle1.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            textStyle1.Hover = System.Drawing.Color.Empty;
-            textStyle1.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            this.Filter4.TextStyle = textStyle1;
+            textStyle2.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
+            textStyle2.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            textStyle2.Hover = System.Drawing.Color.Empty;
+            textStyle2.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.Filter4.TextStyle = textStyle2;
             this.metroSetToolTip1.SetToolTip(this.Filter4, "\r\n");
             this.Filter4.Watermark.ActiveColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.Filter4.Watermark.Font = new System.Drawing.Font("Segoe UI", 8.25F);
@@ -657,7 +663,7 @@ namespace BudgetExecution
             this.Filter3.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
             this.Filter3.Name = "Filter3";
             this.Filter3.SeparatorColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.Filter3.Size = new System.Drawing.Size(176, 30);
+            this.Filter3.Size = new System.Drawing.Size(220, 30);
             this.Filter3.State = VisualPlus.Enumerators.MouseStates.Normal;
             this.Filter3.TabIndex = 161;
             this.Filter3.TextAlignment = System.Drawing.StringAlignment.Center;
@@ -665,11 +671,11 @@ namespace BudgetExecution
             this.Filter3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.Filter3.TextLineAlignment = System.Drawing.StringAlignment.Center;
             this.Filter3.TextRendering = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            textStyle2.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-            textStyle2.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            textStyle2.Hover = System.Drawing.Color.Empty;
-            textStyle2.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            this.Filter3.TextStyle = textStyle2;
+            textStyle3.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
+            textStyle3.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            textStyle3.Hover = System.Drawing.Color.Empty;
+            textStyle3.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.Filter3.TextStyle = textStyle3;
             this.metroSetToolTip1.SetToolTip(this.Filter3, "\r\n");
             this.Filter3.Watermark.ActiveColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.Filter3.Watermark.Font = new System.Drawing.Font("Segoe UI", 8.25F);
@@ -714,7 +720,7 @@ namespace BudgetExecution
             this.Filter2.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
             this.Filter2.Name = "Filter2";
             this.Filter2.SeparatorColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.Filter2.Size = new System.Drawing.Size(176, 30);
+            this.Filter2.Size = new System.Drawing.Size(220, 30);
             this.Filter2.State = VisualPlus.Enumerators.MouseStates.Normal;
             this.Filter2.TabIndex = 160;
             this.Filter2.TextAlignment = System.Drawing.StringAlignment.Center;
@@ -722,11 +728,11 @@ namespace BudgetExecution
             this.Filter2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.Filter2.TextLineAlignment = System.Drawing.StringAlignment.Center;
             this.Filter2.TextRendering = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            textStyle3.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-            textStyle3.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            textStyle3.Hover = System.Drawing.Color.Empty;
-            textStyle3.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            this.Filter2.TextStyle = textStyle3;
+            textStyle4.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
+            textStyle4.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            textStyle4.Hover = System.Drawing.Color.Empty;
+            textStyle4.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.Filter2.TextStyle = textStyle4;
             this.metroSetToolTip1.SetToolTip(this.Filter2, "\r\n");
             this.Filter2.Watermark.ActiveColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.Filter2.Watermark.Font = new System.Drawing.Font("Segoe UI", 8.25F);
@@ -771,7 +777,7 @@ namespace BudgetExecution
             this.Filter1.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
             this.Filter1.Name = "Filter1";
             this.Filter1.SeparatorColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.Filter1.Size = new System.Drawing.Size(176, 30);
+            this.Filter1.Size = new System.Drawing.Size(220, 30);
             this.Filter1.State = VisualPlus.Enumerators.MouseStates.Normal;
             this.Filter1.TabIndex = 159;
             this.Filter1.TextAlignment = System.Drawing.StringAlignment.Center;
@@ -779,11 +785,11 @@ namespace BudgetExecution
             this.Filter1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.Filter1.TextLineAlignment = System.Drawing.StringAlignment.Center;
             this.Filter1.TextRendering = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            textStyle4.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-            textStyle4.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            textStyle4.Hover = System.Drawing.Color.Empty;
-            textStyle4.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            this.Filter1.TextStyle = textStyle4;
+            textStyle5.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
+            textStyle5.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            textStyle5.Hover = System.Drawing.Color.Empty;
+            textStyle5.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.Filter1.TextStyle = textStyle5;
             this.metroSetToolTip1.SetToolTip(this.Filter1, "\r\n");
             this.Filter1.Watermark.ActiveColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.Filter1.Watermark.Font = new System.Drawing.Font("Segoe UI", 8.25F);
@@ -791,21 +797,6 @@ namespace BudgetExecution
             this.Filter1.Watermark.Text = "Watermark text";
             this.Filter1.Watermark.Visible = false;
             this.Filter1.SelectedIndexChanged += new System.EventHandler(this.Filter1_SelectedIndexChanged);
-            // 
-            // button5
-            // 
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
-            this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
-            this.button5.Location = new System.Drawing.Point(11, 592);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 36);
-            this.button5.TabIndex = 158;
-            this.metroSetToolTip1.SetToolTip(this.button5, "\r\n");
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.FunctionButton_OnClick);
             // 
             // label4
             // 
@@ -850,6 +841,21 @@ namespace BudgetExecution
             this.label1.TabIndex = 154;
             this.label1.Text = "label1 ";
             this.metroSetToolTip1.SetToolTip(this.label1, "\r\n");
+            // 
+            // button5
+            // 
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
+            this.button5.Location = new System.Drawing.Point(42, 574);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(75, 36);
+            this.button5.TabIndex = 158;
+            this.metroSetToolTip1.SetToolTip(this.button5, "\r\n");
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.FunctionButton_OnClick);
             // 
             // metroPanel4
             // 
@@ -1019,7 +1025,6 @@ namespace BudgetExecution
             // FilterTab
             // 
             this.FilterTab.Controls.Add(this.metroPanel3);
-            this.FilterTab.Controls.Add(this.button5);
             this.FilterTab.Image = ((System.Drawing.Image)(resources.GetObject("FilterTab.Image")));
             this.FilterTab.ImageSize = new System.Drawing.Size(16, 16);
             this.FilterTab.Location = new System.Drawing.Point(0, 31);
@@ -1059,78 +1064,78 @@ namespace BudgetExecution
             this.metroSetToolTip1.ThemeAuthor = "Narwin";
             this.metroSetToolTip1.ThemeName = "MetroDark";
             // 
-            // visualGroupBox1
+            // FilterGroupBox
             // 
-            this.visualGroupBox1.BackColorState.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.visualGroupBox1.BackColorState.Enabled = System.Drawing.Color.Black;
-            this.visualGroupBox1.Border.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.visualGroupBox1.Border.HoverColor = System.Drawing.SystemColors.MenuHighlight;
-            this.visualGroupBox1.Border.HoverVisible = true;
-            this.visualGroupBox1.Border.Rounding = 6;
-            this.visualGroupBox1.Border.Thickness = 1;
-            this.visualGroupBox1.Border.Type = VisualPlus.Enumerators.ShapeType.Rounded;
-            this.visualGroupBox1.Border.Visible = true;
-            this.visualGroupBox1.BoxStyle = VisualPlus.Toolkit.Controls.Layout.VisualGroupBox.GroupBoxStyle.Default;
-            this.visualGroupBox1.Controls.Add(this.DataTabControl);
-            this.visualGroupBox1.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.visualGroupBox1.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.visualGroupBox1.Image = null;
-            this.visualGroupBox1.Location = new System.Drawing.Point(22, 97);
-            this.visualGroupBox1.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
-            this.visualGroupBox1.Name = "visualGroupBox1";
-            this.visualGroupBox1.Padding = new System.Windows.Forms.Padding(5, 26, 5, 5);
-            this.visualGroupBox1.Separator = true;
-            this.visualGroupBox1.SeparatorColor = System.Drawing.Color.Black;
-            this.visualGroupBox1.Size = new System.Drawing.Size(492, 856);
-            this.visualGroupBox1.TabIndex = 157;
-            this.visualGroupBox1.Text = "visualGroupBox1";
-            this.visualGroupBox1.TextAlignment = System.Drawing.StringAlignment.Center;
-            this.visualGroupBox1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.visualGroupBox1.TextLineAlignment = System.Drawing.StringAlignment.Center;
-            textStyle5.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-            textStyle5.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            textStyle5.Hover = System.Drawing.Color.Empty;
-            textStyle5.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            this.visualGroupBox1.TextStyle = textStyle5;
-            this.visualGroupBox1.TitleBoxHeight = 40;
-            this.visualGroupBox1.Enter += new System.EventHandler(this.VisualGroupBox1_Enter);
-            // 
-            // visualGroupBox2
-            // 
-            this.visualGroupBox2.BackColorState.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.visualGroupBox2.BackColorState.Enabled = System.Drawing.Color.Black;
-            this.visualGroupBox2.Border.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.visualGroupBox2.Border.HoverColor = System.Drawing.SystemColors.MenuHighlight;
-            this.visualGroupBox2.Border.HoverVisible = true;
-            this.visualGroupBox2.Border.Rounding = 6;
-            this.visualGroupBox2.Border.Thickness = 1;
-            this.visualGroupBox2.Border.Type = VisualPlus.Enumerators.ShapeType.Rounded;
-            this.visualGroupBox2.Border.Visible = true;
-            this.visualGroupBox2.BoxStyle = VisualPlus.Toolkit.Controls.Layout.VisualGroupBox.GroupBoxStyle.Default;
-            this.visualGroupBox2.Controls.Add(this.Grid);
-            this.visualGroupBox2.Controls.Add(this.tableLayoutPanel2);
-            this.visualGroupBox2.Controls.Add(this.tableLayoutPanel1);
-            this.visualGroupBox2.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.visualGroupBox2.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.visualGroupBox2.Image = null;
-            this.visualGroupBox2.Location = new System.Drawing.Point(557, 97);
-            this.visualGroupBox2.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
-            this.visualGroupBox2.Name = "visualGroupBox2";
-            this.visualGroupBox2.Padding = new System.Windows.Forms.Padding(5, 26, 5, 5);
-            this.visualGroupBox2.Separator = true;
-            this.visualGroupBox2.SeparatorColor = System.Drawing.Color.Black;
-            this.visualGroupBox2.Size = new System.Drawing.Size(1123, 751);
-            this.visualGroupBox2.TabIndex = 158;
-            this.visualGroupBox2.Text = "visualGroupBox2";
-            this.visualGroupBox2.TextAlignment = System.Drawing.StringAlignment.Center;
-            this.visualGroupBox2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.visualGroupBox2.TextLineAlignment = System.Drawing.StringAlignment.Center;
+            this.FilterGroupBox.BackColorState.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.FilterGroupBox.BackColorState.Enabled = System.Drawing.Color.Black;
+            this.FilterGroupBox.Border.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.FilterGroupBox.Border.HoverColor = System.Drawing.SystemColors.MenuHighlight;
+            this.FilterGroupBox.Border.HoverVisible = true;
+            this.FilterGroupBox.Border.Rounding = 6;
+            this.FilterGroupBox.Border.Thickness = 1;
+            this.FilterGroupBox.Border.Type = VisualPlus.Enumerators.ShapeType.Rounded;
+            this.FilterGroupBox.Border.Visible = true;
+            this.FilterGroupBox.BoxStyle = VisualPlus.Toolkit.Controls.Layout.VisualGroupBox.GroupBoxStyle.Default;
+            this.FilterGroupBox.Controls.Add(this.DataTabControl);
+            this.FilterGroupBox.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.FilterGroupBox.ForeColor = System.Drawing.Color.LightSteelBlue;
+            this.FilterGroupBox.Image = null;
+            this.FilterGroupBox.Location = new System.Drawing.Point(22, 97);
+            this.FilterGroupBox.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
+            this.FilterGroupBox.Name = "FilterGroupBox";
+            this.FilterGroupBox.Padding = new System.Windows.Forms.Padding(5, 26, 5, 5);
+            this.FilterGroupBox.Separator = true;
+            this.FilterGroupBox.SeparatorColor = System.Drawing.Color.Black;
+            this.FilterGroupBox.Size = new System.Drawing.Size(492, 856);
+            this.FilterGroupBox.TabIndex = 157;
+            this.FilterGroupBox.Text = "visualGroupBox1";
+            this.FilterGroupBox.TextAlignment = System.Drawing.StringAlignment.Center;
+            this.FilterGroupBox.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.FilterGroupBox.TextLineAlignment = System.Drawing.StringAlignment.Center;
             textStyle6.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
             textStyle6.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             textStyle6.Hover = System.Drawing.Color.Empty;
             textStyle6.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            this.visualGroupBox2.TextStyle = textStyle6;
-            this.visualGroupBox2.TitleBoxHeight = 40;
+            this.FilterGroupBox.TextStyle = textStyle6;
+            this.FilterGroupBox.TitleBoxHeight = 40;
+            this.FilterGroupBox.Enter += new System.EventHandler(this.VisualGroupBox1_Enter);
+            // 
+            // DataGroupBox
+            // 
+            this.DataGroupBox.BackColorState.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.DataGroupBox.BackColorState.Enabled = System.Drawing.Color.Black;
+            this.DataGroupBox.Border.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.DataGroupBox.Border.HoverColor = System.Drawing.SystemColors.MenuHighlight;
+            this.DataGroupBox.Border.HoverVisible = true;
+            this.DataGroupBox.Border.Rounding = 6;
+            this.DataGroupBox.Border.Thickness = 1;
+            this.DataGroupBox.Border.Type = VisualPlus.Enumerators.ShapeType.Rounded;
+            this.DataGroupBox.Border.Visible = true;
+            this.DataGroupBox.BoxStyle = VisualPlus.Toolkit.Controls.Layout.VisualGroupBox.GroupBoxStyle.Default;
+            this.DataGroupBox.Controls.Add(this.Grid);
+            this.DataGroupBox.Controls.Add(this.tableLayoutPanel2);
+            this.DataGroupBox.Controls.Add(this.tableLayoutPanel1);
+            this.DataGroupBox.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.DataGroupBox.ForeColor = System.Drawing.Color.LightSteelBlue;
+            this.DataGroupBox.Image = null;
+            this.DataGroupBox.Location = new System.Drawing.Point(557, 97);
+            this.DataGroupBox.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
+            this.DataGroupBox.Name = "DataGroupBox";
+            this.DataGroupBox.Padding = new System.Windows.Forms.Padding(5, 26, 5, 5);
+            this.DataGroupBox.Separator = true;
+            this.DataGroupBox.SeparatorColor = System.Drawing.Color.Black;
+            this.DataGroupBox.Size = new System.Drawing.Size(1123, 751);
+            this.DataGroupBox.TabIndex = 158;
+            this.DataGroupBox.Text = "visualGroupBox2";
+            this.DataGroupBox.TextAlignment = System.Drawing.StringAlignment.Center;
+            this.DataGroupBox.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.DataGroupBox.TextLineAlignment = System.Drawing.StringAlignment.Center;
+            textStyle7.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
+            textStyle7.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            textStyle7.Hover = System.Drawing.Color.Empty;
+            textStyle7.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.DataGroupBox.TextStyle = textStyle7;
+            this.DataGroupBox.TitleBoxHeight = 40;
             // 
             // Grid
             // 
@@ -1174,6 +1179,73 @@ namespace BudgetExecution
             this.Grid.Size = new System.Drawing.Size(1010, 400);
             this.Grid.TabIndex = 171;
             // 
+            // Filter5
+            // 
+            this.Filter5.BackColor = System.Drawing.Color.Transparent;
+            this.Filter5.BackColorState.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Filter5.BackColorState.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(10)))), ((int)(((byte)(10)))));
+            this.Filter5.Border.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Filter5.Border.HoverColor = System.Drawing.SystemColors.MenuHighlight;
+            this.Filter5.Border.HoverVisible = true;
+            this.Filter5.Border.Rounding = 6;
+            this.Filter5.Border.Thickness = 1;
+            this.Filter5.Border.Type = VisualPlus.Enumerators.ShapeType.Rounded;
+            this.Filter5.Border.Visible = true;
+            this.Filter5.ButtonColor = System.Drawing.Color.SteelBlue;
+            this.Filter5.ButtonImage = null;
+            this.Filter5.ButtonStyle = VisualPlus.Toolkit.Controls.Interactivity.VisualComboBox.ButtonStyles.Arrow;
+            this.Filter5.ButtonWidth = 30;
+            this.Filter5.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.Filter5.DropDownHeight = 100;
+            this.Filter5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Filter5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Filter5.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.Filter5.ForeColor = System.Drawing.Color.LightSteelBlue;
+            this.Filter5.FormattingEnabled = true;
+            this.Filter5.ImageList = null;
+            this.Filter5.ImageVisible = false;
+            this.Filter5.Index = 0;
+            this.Filter5.IntegralHeight = false;
+            this.Filter5.ItemHeight = 24;
+            this.Filter5.ItemImageVisible = true;
+            this.Filter5.Location = new System.Drawing.Point(37, 520);
+            this.Filter5.MenuItemHover = System.Drawing.Color.SteelBlue;
+            this.Filter5.MenuItemNormal = System.Drawing.Color.Black;
+            this.Filter5.MenuTextColor = System.Drawing.Color.LightSteelBlue;
+            this.Filter5.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
+            this.Filter5.Name = "Filter5";
+            this.Filter5.SeparatorColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Filter5.Size = new System.Drawing.Size(215, 30);
+            this.Filter5.State = VisualPlus.Enumerators.MouseStates.Normal;
+            this.Filter5.TabIndex = 173;
+            this.Filter5.TextAlignment = System.Drawing.StringAlignment.Center;
+            this.Filter5.TextDisabledColor = System.Drawing.Color.Empty;
+            this.Filter5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.Filter5.TextLineAlignment = System.Drawing.StringAlignment.Center;
+            this.Filter5.TextRendering = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            textStyle1.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
+            textStyle1.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            textStyle1.Hover = System.Drawing.Color.Empty;
+            textStyle1.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.Filter5.TextStyle = textStyle1;
+            this.metroSetToolTip1.SetToolTip(this.Filter5, "\r\n");
+            this.Filter5.Watermark.ActiveColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.Filter5.Watermark.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.Filter5.Watermark.InactiveColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(211)))), ((int)(((byte)(211)))));
+            this.Filter5.Watermark.Text = "Watermark text";
+            this.Filter5.Watermark.Visible = false;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.ForeColor = System.Drawing.Color.White;
+            this.label13.Location = new System.Drawing.Point(40, 484);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(60, 23);
+            this.label13.TabIndex = 174;
+            this.label13.Text = "label4 ";
+            this.metroSetToolTip1.SetToolTip(this.label13, "\r\n");
+            // 
             // SQLiteData
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -1191,8 +1263,8 @@ namespace BudgetExecution
             captionImage1.Size = new System.Drawing.Size(110, 30);
             this.CaptionImages.Add(captionImage1);
             this.ClientSize = new System.Drawing.Size(1702, 998);
-            this.Controls.Add(this.visualGroupBox2);
-            this.Controls.Add(this.visualGroupBox1);
+            this.Controls.Add(this.DataGroupBox);
+            this.Controls.Add(this.FilterGroupBox);
             this.ForeColor = System.Drawing.Color.LightSteelBlue;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(1714, 1047);
@@ -1216,8 +1288,8 @@ namespace BudgetExecution
             this.DataTabControl.ResumeLayout(false);
             this.FilterTab.ResumeLayout(false);
             this.FunctionTab.ResumeLayout(false);
-            this.visualGroupBox1.ResumeLayout(false);
-            this.visualGroupBox2.ResumeLayout(false);
+            this.FilterGroupBox.ResumeLayout(false);
+            this.DataGroupBox.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Grid)).EndInit();
             this.ResumeLayout(false);
 
@@ -1275,12 +1347,14 @@ namespace BudgetExecution
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button8;
-        private VisualPlus.Toolkit.Controls.Layout.VisualGroupBox visualGroupBox1;
+        private VisualPlus.Toolkit.Controls.Layout.VisualGroupBox FilterGroupBox;
         private VisualPlus.Toolkit.Controls.Interactivity.VisualComboBox Filter4;
         private VisualPlus.Toolkit.Controls.Interactivity.VisualComboBox Filter3;
         private VisualPlus.Toolkit.Controls.Interactivity.VisualComboBox Filter2;
         private VisualPlus.Toolkit.Controls.Interactivity.VisualComboBox Filter1;
-        private VisualPlus.Toolkit.Controls.Layout.VisualGroupBox visualGroupBox2;
+        private VisualPlus.Toolkit.Controls.Layout.VisualGroupBox DataGroupBox;
         private System.Windows.Forms.DataGridView Grid;
+        private System.Windows.Forms.Label label13;
+        private VisualPlus.Toolkit.Controls.Interactivity.VisualComboBox Filter5;
     }
 }

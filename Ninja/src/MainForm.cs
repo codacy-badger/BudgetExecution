@@ -172,7 +172,7 @@ namespace BudgetExecution
 
         public void DivisionDataTile_OnClick(object sender, EventArgs e)
         {
-            Selector s = new Selector(Info.Div);
+            Selector s = new Selector(Info.DivisionImages);
             s.Show();
         }
 

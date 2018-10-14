@@ -15,7 +15,7 @@ namespace BudgetExecution
     {
         public static string[] Sources = Enum.GetNames(typeof(Source));
 
-        public static string Div = @"C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\Resources\Division";
+        public static string DivisionImages = @"C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\Resources\Division";
 
         public static string SummaryImages = @"C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\Resources\SummaryImages";
 
@@ -24,7 +24,7 @@ namespace BudgetExecution
         public static string DatabaseImages = @"C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\Resources\Database";
 
         public static string AppropriationImages = @"C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\Resources\AppropriationImages";
-
+        
         public static string Enter = @"C:\Users\terry\Documents\Visual Studio 2017\Projects\BudgetExecution\Ninja\Resources\enter";
 
         public static string[] AgencyFundCodes = Enum.GetNames(typeof(FundCode));
