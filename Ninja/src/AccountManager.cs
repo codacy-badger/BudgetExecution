@@ -393,7 +393,7 @@
 
         private void ExcelButton_OnClick(object sender, EventArgs e)
         {
-            ExcelDataReader ef = new ExcelDataReader();
+            ExcelData ef = new ExcelData();
             ef.Show();
         }
 

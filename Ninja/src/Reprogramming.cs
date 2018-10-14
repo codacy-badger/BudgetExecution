@@ -1,11 +1,11 @@
-using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Windows.Forms;
-using Syncfusion.Windows.Forms;
-
 namespace BudgetExecution
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Data;
+    using System.Windows.Forms;
+    using Syncfusion.Windows.Forms;
+
     /// <summary>
     ///     class Reprogramming
     /// </summary>
@@ -62,7 +62,7 @@ namespace BudgetExecution
 
         private void ExcelButton_OnClick(object sender, EventArgs e)
         {
-            ExcelDataReader ef = new ExcelDataReader();
+            ExcelData ef = new ExcelData();
             ef.Show();
         }
 

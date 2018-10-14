@@ -1268,9 +1268,9 @@ namespace BudgetExecution
             BindingSource.MoveNext();
         }
 
-        private void DatabaseButton_OnClick(object sender, EventArgs e)
+        private void DatabaseSearchButton_OnClick(object sender, EventArgs e)
         {
-            var sd = new SQLiteData(Source.PRC, Provider.SQLite);
+            var sd = new SQLiteData(Source.PRC);
             sd.Show();
             Close();
         }

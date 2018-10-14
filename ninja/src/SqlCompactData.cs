@@ -21,7 +21,7 @@ namespace BudgetExecution
         {
             InitializeComponent();
             Source = Source.RegionalAccounts;
-            Provider = Provider.SQLite;
+            Provider = Provider.SqlCe;
             DbData = new DataBuilder(Source, Provider);
             Table = DbData.Table;
             BindingSource = DbData.BindingSource;
@@ -740,7 +740,7 @@ namespace BudgetExecution
 
         private void ExcelButton_OnClick(object sender, EventArgs e)
         {
-            ExcelDataReader ef = new ExcelDataReader();
+            ExcelData ef = new ExcelData();
             ef.Show();
         }
 

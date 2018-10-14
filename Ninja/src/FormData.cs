@@ -2,19 +2,19 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
-using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Data.SQLite;
-using System.Drawing;
-using System.Linq;
-using System.Windows.Forms;
-using MetroSet_UI.Controls;
-using Syncfusion.Windows.Forms;
-using Syncfusion.Windows.Forms.Chart;
-
 namespace BudgetExecution
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Data;
+    using System.Data.SQLite;
+    using System.Drawing;
+    using System.Linq;
+    using System.Windows.Forms;
+    using MetroSet_UI.Controls;
+    using Syncfusion.Windows.Forms;
+    using Syncfusion.Windows.Forms.Chart;
+
     public class FormData
     {
         // CONSTRUCTORS
@@ -432,7 +432,7 @@ namespace BudgetExecution
 
         private void ExcelButton_OnClick(object sender, EventArgs e)
         {
-            ExcelDataReader ef = new ExcelDataReader();
+            ExcelData ef = new ExcelData();
             ef.Show();
         }
 

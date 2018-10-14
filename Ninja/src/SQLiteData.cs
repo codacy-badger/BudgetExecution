@@ -1,13 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Windows.Forms;
-using MetroSet_UI.Controls;
-using Syncfusion.Windows.Forms;
-using VisualPlus.Toolkit.Controls.Interactivity;
-
-namespace BudgetExecution
+﻿namespace BudgetExecution
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Data;
+    using System.Windows.Forms;
+    using MetroSet_UI.Controls;
+    using Syncfusion.Windows.Forms;
+    using VisualPlus.Toolkit.Controls.Interactivity;
+
     /// <summary>
     ///     UI for the SQLiteData class.
     /// </summary>
@@ -33,7 +33,7 @@ namespace BudgetExecution
             label12.Text = Table.Rows.Count.ToString();
         }
 
-        public SQLiteData(Source source, Provider provider)
+        public SQLiteData(Source source = Source.PRC, Provider provider = Provider.SQLite)
         {
             InitializeComponent();
             Source = source;
@@ -738,7 +738,7 @@ namespace BudgetExecution
 
         private void ExcelButton_OnClick(object sender, EventArgs e)
         {
-            ExcelDataReader ef = new ExcelDataReader();
+            ExcelData ef = new ExcelData();
             ef.Show();
         }
 
@@ -777,7 +777,10 @@ namespace BudgetExecution
         {
             try
             {
-                RecordManager am = new RecordManager(Source, Provider);
+                DataGridViewRow dgvRow = Grid.CurrentRow;
+                Dictionary<string, object> data = new Dictionary<string, object>();
+                data.Add("ID", int.Parse(dgvRow.Cells["ID"].Value.ToString()));
+                RecordManager am = new RecordManager(Source, Provider, data);
                 am.Show();
             }
             catch(Exception ex)

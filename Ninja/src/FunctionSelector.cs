@@ -85,7 +85,7 @@ namespace BudgetExecution
                     break;
 
                 case Function.ExcelImporter:
-                    ExcelDataReader ei = new ExcelDataReader();
+                    ExcelData ei = new ExcelData();
                     ei.Show();
                     break;
 

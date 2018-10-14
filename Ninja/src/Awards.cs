@@ -1,10 +1,10 @@
-﻿using System.Collections.Generic;
-using System.Configuration;
-using System.Data;
-using System.Data.SQLite;
-
-namespace BudgetExecution
+﻿namespace BudgetExecution
 {
+    using System.Collections.Generic;
+    using System.Configuration;
+    using System.Data;
+    using System.Data.SQLite;
+
     public class Awards
     {
         // CONSTRUCTORS
