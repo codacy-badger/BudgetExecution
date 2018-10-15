@@ -82,7 +82,7 @@ namespace BudgetExecution
         {
             Source = source;
             DataFields = param;
-            Query = new Query(source, provider, DataFields);
+            Query = new Query(source, provider, Sql.SELECT, DataFields);
             if(source == Source.PRC)
             {
                 Table = GetDataTable(Source).AsEnumerable().Where(p => p.Field<decimal>("Amount") > 0).Select(p => p).CopyToDataTable();

@@ -34,39 +34,21 @@
             Settings = new AppSettingsReader();
         }
 
-        public Query(Source source, Provider provider, Dictionary<string, object> param)
-        {
-            Provider = provider;
-            Source = source;
-            Parameter = param;
-            CommandType = Sql.SELECT;
-            DataConnection = GetDataConnection(Provider);
-            TableName = Source.ToString();
-            SelectStatement = GetSelectStatement(TableName, Parameter);
-            SelectCommand = GetSelectCommand(SelectStatement, DataConnection);
-            DataAdapter = GetDataAdapter(SelectCommand);
-            Settings = new AppSettingsReader();
-            CommandBuilder = GetCommandBuilder(DataAdapter);
-            UpdateCommand = CommandBuilder.GetUpdateCommand();
-            InsertCommand = CommandBuilder.GetInsertCommand();
-            DeleteCommand = CommandBuilder.GetDeleteCommand();
-            Settings = new AppSettingsReader();
-        }
-
         public Query(Source source, Provider provider, Sql command, Dictionary<string, object> param)
         {
             Provider = provider;
             Source = source;
-            Parameter = param;
+            Parameters = GetDataParameters(param);            
             CommandType = command;
             DataConnection = GetDataConnection(Provider);
             TableName = Source.ToString();
-            SqlStatement = GetSqlStatement(Source, DataConnection, Parameter, CommandType);
+            SqlStatement = GetSqlStatement(Source, DataConnection, Parameters, CommandType);
             DataCommand = GetDataCommand(SqlStatement, DataConnection);
             DataAdapter = GetDataAdapter(DataCommand, CommandType);
             Settings = new AppSettingsReader();
         }
 
+        // PROPERTIES
         public Sql CommandType { get; }
 
         public Dictionary<string, object> Parameter { get; }
@@ -79,6 +61,12 @@
 
         public string SelectStatement { get; set; }
 
+        public string UpdateStatement { get; set; }
+
+        public string InsertStatement { get; set; }
+
+        public string DeleteStatement { get; set; }
+
         public DbCommand SelectCommand { get; set; }
 
         public DbCommand DeleteCommand { get; internal set; }
@@ -89,7 +77,6 @@
 
         public DbCommandBuilder CommandBuilder { get; internal set; }
 
-        // PROPERTIES
         public Source Source { get; }
 
         public Provider Provider { get; }
@@ -104,8 +91,445 @@
 
         public DbDataAdapter DataAdapter { get; set; }
 
+        /* STRING METHODS----------------------------------------------------------------
+        -------------------------------------------------------------------------------*/
+
         /// <summary>
         ///     Gets the connection.
+        /// </summary>
+        /// <param name="provider">The provider.</param>
+        /// <returns></returns>
+        /// <summary>
+        ///     Gets the parameter strings.
+        /// </summary>
+        /// <param name="param">The parameter.</param>
+        /// <returns></returns>
+        public string GetSqlParameterString(Dictionary<string, object> param)
+        {
+            try
+            {
+                string vals = string.Empty;
+                DbParameter[] sqlparameter = GetDataParameters(param);
+                foreach(DbParameter p in sqlparameter)
+                {
+                    vals += $"{p.SourceColumn} = '{p.Value}' AND ";
+                }
+
+                vals = vals.Trim().Substring(0, vals.Length - 4);
+                return vals;
+            }
+            catch(Exception ex)
+            {
+                new Error(ex).ShowDialog();
+                return null;
+            }
+        }
+
+        /// <summary>
+        ///     Gets the select parameter string.
+        /// </summary>
+        /// <param name="param">The parameter.</param>
+        /// <returns></returns>
+        internal string GetSelectParamString(DbParameter[] param)
+        {
+            try
+            {
+                string vals = string.Empty;
+                foreach(DbParameter p in param)
+                {
+                    vals += $"{p.SourceColumn} = '{p.Value}' AND ";
+                }
+
+                vals = vals.Trim().Substring(0, vals.Length - 4);
+                return vals;
+            }
+            catch(Exception ex)
+            {
+                new Error(ex).ShowDialog();
+                return null;
+            }
+        }
+        
+        /// <summary>
+        ///     Gets the database parameters.
+        /// </summary>
+        /// <param name="input">The input.</param>
+        /// <returns></returns>
+        public DbParameter[] GetDataParameters(Dictionary<string, object> input)
+        {
+            try
+            {
+                DbParameter[] val = new DbParameter[input.Count];
+                for(int i = 0; i < input.Count; i++)
+                {
+                    switch(Provider)
+                    {
+                        case Provider.Access:
+                        {
+                            foreach(KeyValuePair<string, object> kvp in input)
+                            {
+                                val[i] = new OleDbParameter();
+                                val[i].SourceColumn = kvp.Key;
+                                val[i].Value = kvp.Value;
+                            }
+
+                            break;
+                        }
+
+                        case Provider.Excel:
+                        {
+                            foreach(KeyValuePair<string, object> kvp in input)
+                            {
+                                val[i] = new OleDbParameter();
+                                val[i].SourceColumn = kvp.Key;
+                                val[i].Value = kvp.Value;
+                            }
+
+                            break;
+                        }
+
+                        case Provider.SQLite:
+                        {
+                            foreach(KeyValuePair<string, object> kvp in input)
+                            {
+                                val[i] = new SQLiteParameter();
+                                val[i].SourceColumn = kvp.Key;
+                                val[i].Value = kvp.Value;
+                            }
+
+                            break;
+                        }
+
+                        case Provider.SqlCe:
+                        {
+                            foreach(KeyValuePair<string, object> kvp in input)
+                            {
+                                val[i] = new SqlCeParameter();
+                                val[i].SourceColumn = kvp.Key;
+                                val[i].Value = kvp.Value;
+                            }
+
+                            break;
+                        }
+
+                        case Provider.SqlServer:
+                        {
+                            foreach(KeyValuePair<string, object> kvp in input)
+                            {
+                                val[i] = new SqlParameter();
+                                val[i].SourceColumn = kvp.Key;
+                                val[i].Value = kvp.Value;
+                            }
+
+                            break;
+                        }
+                    }
+                }
+
+                return val;
+            }
+            catch(Exception ex)
+            {
+                new Error(ex).ShowDialog();
+                return null;
+            }
+        }
+
+        /// <summary>
+        ///     Gets the data parameters.
+        /// </summary>
+        /// <param name="connection">The connection.</param>
+        /// <param name="input">The input.</param>
+        /// <returns></returns>
+        public DbParameter[] GetDataParameters(DbConnection connection, Dictionary<string, object> input)
+        {
+            try
+            {
+                DbParameter[] val = new DbParameter[input.Count];
+                for(int i = 0; i < input.Count; i++)
+                {
+                    switch(connection)
+                    {
+                        case OleDbConnection _:
+                        {
+                            foreach(KeyValuePair<string, object> kvp in input)
+                            {
+                                val[i] = new OleDbParameter();
+                                val[i].SourceColumn = kvp.Key;
+                                val[i].Value = kvp.Value;
+                            }
+
+                            break;
+                        }
+
+                        case SQLiteConnection _:
+                        {
+                            foreach(KeyValuePair<string, object> kvp in input)
+                            {
+                                val[i] = new SQLiteParameter();
+                                val[i].SourceColumn = kvp.Key;
+                                val[i].Value = kvp.Value;
+                            }
+
+                            break;
+                        }
+
+                        case SqlCeConnection _:
+                        {
+                            foreach(KeyValuePair<string, object> kvp in input)
+                            {
+                                val[i] = new SqlCeParameter();
+                                val[i].SourceColumn = kvp.Key;
+                                val[i].Value = kvp.Value;
+                            }
+
+                            break;
+                        }
+
+                        case SqlConnection _:
+                        {
+                            foreach(KeyValuePair<string, object> kvp in input)
+                            {
+                                val[i] = new SqlParameter();
+                                val[i].SourceColumn = kvp.Key;
+                                val[i].Value = kvp.Value;
+                            }
+
+                            break;
+                        }
+                    }
+                }
+
+                return val;
+            }
+            catch(Exception ex)
+            {
+                new Error(ex).ShowDialog();
+                return null;
+            }
+        }
+
+        /// <summary>
+        ///     Gets the SQL statement.
+        /// </summary>
+        /// <param name="source">The source.</param>
+        /// <param name="connection">The connection.</param>
+        /// <param name="p">The p.</param>
+        /// <param name="cmd">The command.</param>
+        /// <returns></returns>
+        public string GetSqlStatement(Source source, DbConnection connection, Dictionary<string, object> p, Sql cmd)
+        {
+            try
+            {
+                switch(cmd)
+                {
+                    case Sql.SELECT:
+                        DbParameter[] select = GetDataParameters(connection, p);
+                        SelectStatement = GetSelectStatement(source, select);
+                        return SelectStatement;
+
+                    case Sql.UPDATE:
+                        DbParameter[] update = GetDataParameters(connection, p);
+                        UpdateStatement = GetUpdateStatement(source, update);
+                        return UpdateStatement;
+
+                    case Sql.INSERT:
+                        DbParameter[] insert = GetDataParameters(connection, p);
+                        InsertStatement = GetInsertStatement(source, insert);
+                        return InsertStatement;
+
+                    case Sql.DELETE:
+                        DbParameter[] delete = GetDataParameters(connection, p);
+                        DeleteStatement = GetDeleteStatement(source, delete);
+                        return DeleteStatement;
+
+                    default:
+                        DbParameter[] def = GetDataParameters(connection, p);
+                        return GetSelectStatement(source, def);
+                }
+            }
+            catch(Exception ex)
+            {
+                new Error(ex).ShowDialog();
+                return null;
+            }
+        }
+
+        /// <summary>
+        ///     Gets the SQL statement.
+        /// </summary>
+        /// <param name="source">The source.</param>
+        /// <param name="connection">The connection.</param>
+        /// <param name="p">The p.</param>
+        /// <param name="cmd">The command.</param>
+        /// <returns></returns>
+        public string GetSqlStatement(Source source, DbConnection connection, DbParameter[] p, Sql cmd)
+        {
+            try
+            {
+                switch(cmd)
+                {
+                    case Sql.SELECT:
+                        SelectStatement = GetSelectStatement(source, p);
+                        return SelectStatement;
+
+                    case Sql.UPDATE:
+                        UpdateStatement = GetUpdateStatement(source, p);
+                        return UpdateStatement;
+
+                    case Sql.INSERT:
+                        InsertStatement = GetInsertStatement(source, p);
+                        return InsertStatement;
+
+                    case Sql.DELETE:
+                        DeleteStatement = GetDeleteStatement(source, p);
+                        return DeleteStatement;
+
+                    default:
+                        return GetSelectStatement(source, p);
+                }
+            }
+            catch(Exception ex)
+            {
+                new Error(ex).ShowDialog();
+                return null;
+            }
+        }
+
+        /// <summary>
+        ///     Gets the select statement.
+        /// </summary>
+        /// <param name="table">The table.</param>
+        /// <param name="param">The parameter.</param>
+        /// <returns></returns>
+        public string GetSelectStatement(string table, Dictionary<string, object> param)
+        {
+            try
+            {
+                return$"SELECT * FROM {table} WHERE {GetSqlParameterString(param)}";
+            }
+            catch(Exception ex)
+            {
+                new Error(ex).ShowDialog();
+                return null;
+            }
+        }
+
+        /// <summary>
+        ///     Gets the select statement.
+        /// </summary>
+        /// <param name="source">The source.</param>
+        /// <param name="param">The parameter.</param>
+        /// <returns></returns>
+        public string GetSelectStatement(Source source, DbParameter[] param)
+        {
+            try
+            {
+                string vals = string.Empty;
+                foreach(DbParameter p in param)
+                {
+                    vals += $"{p.SourceColumn} = '{p.Value}' AND ";
+                }
+
+                vals = vals.Trim().Substring(0, vals.Length - 4);
+                return$"SELECT * FROM {source.ToString()} WHERE {vals}";
+            }
+            catch(Exception ex)
+            {
+                new Error(ex).ShowDialog();
+                return null;
+            }
+        }
+
+        /// <summary>
+        ///     Gets the update statement.
+        /// </summary>
+        /// <param name="source">The source.</param>
+        /// <param name="update">The update.</param>
+        /// <returns></returns>
+        public string GetUpdateStatement(Source source, DbParameter[] update)
+        {
+            try
+            {
+                string vals = string.Empty;
+                int pid = 0;
+                foreach(DbParameter p in update)
+                {
+                    if(p.SourceColumn == "ID")
+                    {
+                        pid = (int)p.Value;
+                    }
+
+                    vals += $"{p.SourceColumn} = '{p.Value}' AND ";
+                }
+
+                vals = vals.Trim().Substring(0, vals.Length - 4);
+                return$"UPDATE {source.ToString()} SET {vals} WHERE ID = '{pid.ToString()}'";
+            }
+            catch(Exception ex)
+            {
+                new Error(ex).ShowDialog();
+                return null;
+            }
+        }
+
+        /// <summary>
+        ///     Gets the insert statement.
+        /// </summary>
+        /// <param name="source">The source.</param>
+        /// <param name="param">The parameter.</param>
+        /// <returns></returns>
+        public string GetInsertStatement(Source source, DbParameter[] param)
+        {
+            try
+            {
+                string cols = string.Empty;
+                string vals = string.Empty;
+                foreach(DbParameter p in param)
+                {
+                    cols += $"{p.SourceColumn}, ";
+                    vals += $"{p.Value}, ";
+                }
+
+                cols = cols.Trim().Substring(0, cols.Length - 2);
+                vals = vals.Trim().Substring(0, vals.Length - 2);
+                return$"INSERT INTO {source.ToString()} ({cols}) VALUES ({vals})";
+            }
+            catch(Exception ex)
+            {
+                new Error(ex).ShowDialog();
+                return null;
+            }
+        }
+
+        /// <summary>
+        ///     Gets the delete statement.
+        /// </summary>
+        /// <param name="source">The source.</param>
+        /// <param name="param">The parameter.</param>
+        /// <returns></returns>
+        public string GetDeleteStatement(Source source, DbParameter[] param)
+        {
+            try
+            {
+                string vals = string.Empty;
+                foreach(DbParameter p in param)
+                {
+                    vals += $"{p.SourceColumn} = '{p.Value}' AND ";
+                }
+
+                vals = vals.Trim().Substring(0, vals.Length - 4);
+                return$"DELETE * FROM {source.ToString()} WHERE {vals}";
+            }
+            catch(Exception ex)
+            {
+                new Error(ex).ShowDialog();
+                return null;
+            }
+        }
+
+        /// <summary>
+        /// Gets the data connection.
         /// </summary>
         /// <param name="provider">The provider.</param>
         /// <returns></returns>
@@ -287,393 +711,6 @@
                 }
             }
             catch(SystemException ex)
-            {
-                new Error(ex).ShowDialog();
-                return null;
-            }
-        }
-
-        // STRING METHODS----------------------------------------------------------------
-        // -------------------------------------------------------------------------------
-
-        /// <summary>
-        ///     Gets the database parameters.
-        /// </summary>
-        /// <param name="input">The input.</param>
-        /// <returns></returns>
-        public DbParameter[] GetDataParameters(Dictionary<string, object> input)
-        {
-            try
-            {
-                DbParameter[] val = new DbParameter[input.Count];
-                for(int i = 0; i < input.Count; i++)
-                {
-                    switch(Provider)
-                    {
-                        case Provider.Access:
-                        {
-                            foreach(KeyValuePair<string, object> kvp in input)
-                            {
-                                val[i] = new OleDbParameter();
-                                val[i].SourceColumn = kvp.Key;
-                                val[i].Value = kvp.Value;
-                            }
-
-                            break;
-                        }
-
-                        case Provider.Excel:
-                        {
-                            foreach(KeyValuePair<string, object> kvp in input)
-                            {
-                                val[i] = new OleDbParameter();
-                                val[i].SourceColumn = kvp.Key;
-                                val[i].Value = kvp.Value;
-                            }
-
-                            break;
-                        }
-
-                        case Provider.SQLite:
-                        {
-                            foreach(KeyValuePair<string, object> kvp in input)
-                            {
-                                val[i] = new SQLiteParameter();
-                                val[i].SourceColumn = kvp.Key;
-                                val[i].Value = kvp.Value;
-                            }
-
-                            break;
-                        }
-
-                        case Provider.SqlCe:
-                        {
-                            foreach(KeyValuePair<string, object> kvp in input)
-                            {
-                                val[i] = new SqlCeParameter();
-                                val[i].SourceColumn = kvp.Key;
-                                val[i].Value = kvp.Value;
-                            }
-
-                            break;
-                        }
-
-                        case Provider.SqlServer:
-                        {
-                            foreach(KeyValuePair<string, object> kvp in input)
-                            {
-                                val[i] = new SqlParameter();
-                                val[i].SourceColumn = kvp.Key;
-                                val[i].Value = kvp.Value;
-                            }
-
-                            break;
-                        }
-                    }
-                }
-
-                return val;
-            }
-            catch(Exception ex)
-            {
-                new Error(ex).ShowDialog();
-                return null;
-            }
-        }
-
-        /// <summary>
-        ///     Gets the data parameters.
-        /// </summary>
-        /// <param name="connection">The connection.</param>
-        /// <param name="input">The input.</param>
-        /// <returns></returns>
-        public DbParameter[] GetDataParameters(DbConnection connection, Dictionary<string, object> input)
-        {
-            try
-            {
-                DbParameter[] val = new DbParameter[input.Count];
-                for(int i = 0; i < input.Count; i++)
-                {
-                    switch(connection)
-                    {
-                        case OleDbConnection _:
-                        {
-                            foreach(KeyValuePair<string, object> kvp in input)
-                            {
-                                val[i] = new OleDbParameter();
-                                val[i].SourceColumn = kvp.Key;
-                                val[i].Value = kvp.Value;
-                            }
-
-                            break;
-                        }
-
-                        case SQLiteConnection _:
-                        {
-                            foreach(KeyValuePair<string, object> kvp in input)
-                            {
-                                val[i] = new SQLiteParameter();
-                                val[i].SourceColumn = kvp.Key;
-                                val[i].Value = kvp.Value;
-                            }
-
-                            break;
-                        }
-
-                        case SqlCeConnection _:
-                        {
-                            foreach(KeyValuePair<string, object> kvp in input)
-                            {
-                                val[i] = new SqlCeParameter();
-                                val[i].SourceColumn = kvp.Key;
-                                val[i].Value = kvp.Value;
-                            }
-
-                            break;
-                        }
-
-                        case SqlConnection _:
-                        {
-                            foreach(KeyValuePair<string, object> kvp in input)
-                            {
-                                val[i] = new SqlParameter();
-                                val[i].SourceColumn = kvp.Key;
-                                val[i].Value = kvp.Value;
-                            }
-
-                            break;
-                        }
-                    }
-                }
-
-                return val;
-            }
-            catch(Exception ex)
-            {
-                new Error(ex).ShowDialog();
-                return null;
-            }
-        }
-
-        /// <summary>
-        ///     Gets the parameter strings.
-        /// </summary>
-        /// <param name="param">The parameter.</param>
-        /// <returns></returns>
-        public string GetSqlParameterString(Dictionary<string, object> param)
-        {
-            try
-            {
-                string vals = string.Empty;
-                DbParameter[] sqlparameter = GetDataParameters(param);
-                foreach(DbParameter p in sqlparameter)
-                {
-                    vals += $"{p.SourceColumn} = '{p.Value}' AND ";
-                }
-
-                vals = vals.Trim().Substring(0, vals.Length - 4);
-                return vals;
-            }
-            catch(Exception ex)
-            {
-                new Error(ex).ShowDialog();
-                return null;
-            }
-        }
-
-        /// <summary>
-        ///     Gets the select parameter string.
-        /// </summary>
-        /// <param name="param">The parameter.</param>
-        /// <returns></returns>
-        internal string GetSelectParamString(DbParameter[] param)
-        {
-            try
-            {
-                string vals = string.Empty;
-                foreach(DbParameter p in param)
-                {
-                    vals += $"{p.SourceColumn} = '{p.Value}' AND ";
-                }
-
-                vals = vals.Trim().Substring(0, vals.Length - 4);
-                return vals;
-            }
-            catch(Exception ex)
-            {
-                new Error(ex).ShowDialog();
-                return null;
-            }
-        }
-
-        /// <summary>
-        ///     Gets the SQL statement.
-        /// </summary>
-        /// <param name="source">The source.</param>
-        /// <param name="connection">The connection.</param>
-        /// <param name="p">The p.</param>
-        /// <param name="cmd">The command.</param>
-        /// <returns></returns>
-        public string GetSqlStatement(Source source, DbConnection connection, Dictionary<string, object> p, Sql cmd = Sql.SELECT)
-        {
-            try
-            {
-                switch(cmd)
-                {
-                    case Sql.SELECT:
-                        DbParameter[] select = GetDataParameters(connection, p);
-                        return GetSelectStatement(source, select);
-
-                    case Sql.UPDATE:
-                        DbParameter[] update = GetDataParameters(connection, p);
-                        return GetUpdateStatement(source, update);
-
-                    case Sql.INSERT:
-                        DbParameter[] insert = GetDataParameters(connection, p);
-                        return GetInsertStatement(source, insert);
-
-                    case Sql.DELETE:
-                        DbParameter[] delete = GetDataParameters(connection, p);
-                        return GetDeleteStatement(source, delete);
-
-                    default:
-                        DbParameter[] def = GetDataParameters(connection, p);
-                        return GetSelectStatement(source, def);
-                }
-            }
-            catch(Exception ex)
-            {
-                new Error(ex).ShowDialog();
-                return null;
-            }
-        }
-
-        /// <summary>
-        ///     Gets the select statement.
-        /// </summary>
-        /// <param name="table">The table.</param>
-        /// <param name="param">The parameter.</param>
-        /// <returns></returns>
-        public string GetSelectStatement(string table, Dictionary<string, object> param)
-        {
-            try
-            {
-                return$"SELECT * FROM {table} WHERE {GetSqlParameterString(param)}";
-            }
-            catch(Exception ex)
-            {
-                new Error(ex).ShowDialog();
-                return null;
-            }
-        }
-
-        /// <summary>
-        ///     Gets the select statement.
-        /// </summary>
-        /// <param name="source">The source.</param>
-        /// <param name="param">The parameter.</param>
-        /// <returns></returns>
-        public string GetSelectStatement(Source source, DbParameter[] param)
-        {
-            try
-            {
-                string vals = string.Empty;
-                foreach(DbParameter p in param)
-                {
-                    vals += $"{p.SourceColumn} = '{p.Value}' AND ";
-                }
-
-                vals = vals.Trim().Substring(0, vals.Length - 4);
-                return$"SELECT * FROM {source.ToString()} WHERE {vals}";
-            }
-            catch(Exception ex)
-            {
-                new Error(ex).ShowDialog();
-                return null;
-            }
-        }
-
-        /// <summary>
-        ///     Gets the update statement.
-        /// </summary>
-        /// <param name="source">The source.</param>
-        /// <param name="update">The update.</param>
-        /// <returns></returns>
-        public string GetUpdateStatement(Source source, DbParameter[] update)
-        {
-            try
-            {
-                string vals = string.Empty;
-                int pid = 0;
-                foreach(DbParameter p in update)
-                {
-                    if(p.SourceColumn == "ID")
-                    {
-                        pid = (int)p.Value;
-                    }
-
-                    vals += $"{p.SourceColumn} = '{p.Value}' AND ";
-                }
-
-                vals = vals.Trim().Substring(0, vals.Length - 4);
-                return$"UPDATE {source.ToString()} SET {vals} WHERE ID = '{pid.ToString()}'";
-            }
-            catch(Exception ex)
-            {
-                new Error(ex).ShowDialog();
-                return null;
-            }
-        }
-
-        /// <summary>
-        ///     Gets the insert statement.
-        /// </summary>
-        /// <param name="source">The source.</param>
-        /// <param name="param">The parameter.</param>
-        /// <returns></returns>
-        public string GetInsertStatement(Source source, DbParameter[] param)
-        {
-            try
-            {
-                string cols = string.Empty;
-                string vals = string.Empty;
-                foreach(DbParameter p in param)
-                {
-                    cols += $"{p.SourceColumn}, ";
-                    vals += $"{p.Value}, ";
-                }
-
-                cols = cols.Trim().Substring(0, cols.Length - 2);
-                vals = vals.Trim().Substring(0, vals.Length - 2);
-                return$"INSERT INTO {source.ToString()} ({cols}) VALUES ({vals})";
-            }
-            catch(Exception ex)
-            {
-                new Error(ex).ShowDialog();
-                return null;
-            }
-        }
-
-        /// <summary>
-        ///     Gets the delete statement.
-        /// </summary>
-        /// <param name="source">The source.</param>
-        /// <param name="param">The parameter.</param>
-        /// <returns></returns>
-        public string GetDeleteStatement(Source source, DbParameter[] param)
-        {
-            try
-            {
-                string vals = string.Empty;
-                foreach(DbParameter p in param)
-                {
-                    vals += $"{p.SourceColumn} = '{p.Value}' AND ";
-                }
-
-                vals = vals.Trim().Substring(0, vals.Length - 4);
-                return$"DELETE * FROM {source.ToString()} WHERE {vals}";
-            }
-            catch(Exception ex)
             {
                 new Error(ex).ShowDialog();
                 return null;

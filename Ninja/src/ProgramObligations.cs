@@ -264,19 +264,20 @@ namespace BudgetExecution
             }
         }
 
-        public static void Insert(Source source, Provider provider, Dictionary<string, object> p)
+        public static void Insert(Source source, Provider provider,Dictionary<string, object> p)
         {
             try
             {
                 Dictionary<string, object> param = GetInsertColumns(source, provider, p);
                 string[] fields = param.Keys.ToArray();
                 object[] vals = param.Values.ToArray();
-                Query query = new Query(source, provider, param);
-                string cmd = $"INSERT INTO {source.ToString()} {fields} VALUES {vals};";
-                SQLiteConnection conn = query.GetDataConnection(Provider.SQLite) as SQLiteConnection;
+                Query query = new Query(source, provider, Sql.INSERT, param);
+                string cmd = query.InsertStatement;
+                SQLiteConnection conn = (SQLiteConnection)query.GetDataConnection(Provider.SQLite);
+                conn.Open();
                 using(conn)
                 {
-                    SQLiteCommand insert = query.GetDataCommand(cmd, conn) as SQLiteCommand;
+                    SQLiteCommand insert = (SQLiteCommand)query.GetDataCommand(cmd, conn);
                     insert.ExecuteNonQuery();
                 }
             }
@@ -309,7 +310,7 @@ namespace BudgetExecution
         {
             try
             {
-                Query query = new Query(source, provider, p);
+                Query query = new Query(source, provider,Sql.UPDATE, p);
                 string cmd = $"UPDATE {source.ToString()} SET Amount = {(decimal) p["Amount"]} WHERE ID = {(int) p["ID"]};";
                 SQLiteConnection conn = query.GetDataConnection(Provider.SQLite) as SQLiteConnection;
                 using(conn)
@@ -347,7 +348,7 @@ namespace BudgetExecution
         {
             try
             {
-                Query query = new Query(source, provider, p);
+                Query query = new Query(source, provider, Sql.DELETE, p);
                 string cmd = $"DELETE ALL FROM {source.ToString()} WHERE ID = {(int) p["ID"]};";
                 SQLiteConnection conn = query.GetDataConnection(Provider.SQLite) as SQLiteConnection;
                 using(conn)

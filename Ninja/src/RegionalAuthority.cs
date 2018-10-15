@@ -280,7 +280,7 @@ namespace BudgetExecution
                 Dictionary<string, object> parameter = new Dictionary<string, object>();
                 parameter.Add("ID", row["ID"]);
                 parameter.Add("Amount", amount2);
-                Query query = new Query(source, Provider.SQLite, parameter);
+                Query query = new Query(source, Provider.SQLite, Sql.UPDATE, parameter);
                 DbCommand update = query.UpdateCommand;
                 update.ExecuteNonQuery();
             }
@@ -300,7 +300,7 @@ namespace BudgetExecution
                 }
 
                 p.Add("Amount", amount2);
-                Query query = new Query(Source.PRC, Provider.SQLite, p);
+                Query query = new Query(Source.PRC, Provider.SQLite, Sql.UPDATE, p);
                 DbCommand update = query.UpdateCommand;
                 update.ExecuteNonQuery();
             }

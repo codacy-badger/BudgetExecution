@@ -27,7 +27,7 @@ namespace BudgetExecution
             DeleteCommand = CommandBuilder.GetInsertCommand();
         }
 
-        public SqlServerQuery(Source source, Dictionary<string, object> param) : base(source, Provider.SqlServer, param)
+        public SqlServerQuery(Source source, Dictionary<string, object> param) : base(source, Provider.SqlServer, Sql.SELECT, param)
         {
             Source = source;
             Provider = Provider.SqlServer;
