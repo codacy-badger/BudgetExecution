@@ -414,13 +414,13 @@ namespace BudgetExecution
                         Filter3.Tag = "FundName";
                         break;
 
-                    case Source.ControlNumbers :
-                        label1.Text = @"DivisionID";
+                    case Source.ControlNumbers:
+                        label1.Text = @"Division";
                         PopulateFilterItems(Field.Division, Table, Filter1, label1);
                         Filter2.Tag = "Fund";
                         break;
 
-                    case Source.Divisions :
+                    case Source.Divisions:
                         label1.Text = @"DivisionName";
                         PopulateFilterItems(Field.Name, Table, Filter1, label1);
                         Filter2.Tag = "Title";

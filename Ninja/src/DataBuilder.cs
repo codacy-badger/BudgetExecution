@@ -18,7 +18,7 @@ namespace BudgetExecution
         {
             DataFields = null;
             Source = q.Source;
-            Query = new Query(q.Source, q.Provider);
+            Query = new Query(q.Source, q.Provider, q.CommandType);
             Table = GetDataTable(q.Source);
             Total = GetTotal(Table);
             ProgramElements = GetProgramElements(Table);
@@ -508,7 +508,12 @@ namespace BudgetExecution
                         continue;
                     }
 
-                    list = table.AsEnumerable().Select(p => p.Field<string>(dc.ColumnName)).Distinct().ToArray();
+                    list = table.AsEnumerable()
+                                .Where(p => p.Field<string>(dc.ColumnName) != "ID")
+                                .Where(p => p.Field<string>(dc.ColumnName) != "Amount")
+                                .Where(p => p.Field<string>(dc.ColumnName) != "Obligations")
+                                .Where(p => p.Field<string>(dc.ColumnName) != "Commitments")
+                                .Select(p => p.Field<string>(dc.ColumnName)).Distinct().ToArray();
                     data.Add(dc.ColumnName, list);
                 }
 
@@ -583,7 +588,14 @@ namespace BudgetExecution
         {
             try
             {
-                return table.AsEnumerable().Where(p => p.Field<string>("BOC") != "17").Select(p => p.Field<decimal>("Amount")).Sum();
+                if(table.Columns.Contains("BOC"))
+                {
+                    return table.AsEnumerable()
+                                .Where(p => p.Field<string>("BOC") != "17")
+                                .Select(p => p.Field<decimal>("Amount")).Sum();
+                }
+                    
+                return 0m;
             }
             catch(Exception ex)
             {

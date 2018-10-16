@@ -21,12 +21,12 @@
         {
             Provider = provider;
             Source = source;
-            CommandType = Sql.SELECT;
+            CommandType = cmb;
             DataConnection = GetDataConnection(Provider);
             TableName = Source.ToString();
             SelectStatement = $"SELECT * FROM {TableName}";
             SelectCommand = GetSelectCommand(SelectStatement, DataConnection);
-            DataAdapter = GetDataAdapter(SelectCommand);
+            DataAdapter = GetDataAdapter(SelectCommand, CommandType);
             CommandBuilder = GetCommandBuilder(DataAdapter);
             UpdateCommand = CommandBuilder.GetUpdateCommand();
             InsertCommand = CommandBuilder.GetInsertCommand();
@@ -622,37 +622,7 @@
                 return null;
             }
         }
-
-        /// <summary>
-        ///     Gets the data adapter.
-        /// </summary>
-        /// <param name="command">The command.</param>
-        /// <returns></returns>
-        public DbDataAdapter GetDataAdapter(IDbCommand command)
-        {
-            try
-            {
-                switch(command)
-                {
-                    case SQLiteCommand liteCommand:
-                        return new SQLiteDataAdapter(liteCommand);
-                    case OleDbCommand dbCommand:
-                        return new OleDbDataAdapter(dbCommand);
-                    case SqlCeCommand sqlCommand:
-                        return new SqlCeDataAdapter(sqlCommand);
-                    case SqlCommand sqlCommand:
-                        return new SqlDataAdapter(sqlCommand);
-                    default:
-                        return null;
-                }
-            }
-            catch(Exception ex)
-            {
-                new Error(ex).ShowDialog();
-                return null;
-            }
-        }
-
+        
         /// <summary>
         ///     Gets the data reader.
         /// </summary>
@@ -725,7 +695,7 @@
         /// <param name="cmd">The command.</param>
         /// <param name="source">The source.</param>
         /// <returns></returns>
-        public DbCommand GetDataCommand(DbParameter[] pmr, DbConnection connection, Sql cmd, Source source = Source.PRC)
+        public DbCommand GetDataCommand(Sql cmd, DbParameter[] pmr, DbConnection connection)
         {
             try
             {
@@ -741,7 +711,7 @@
                         return GetInsertCommand(pmr, connection);
 
                     case Sql.DELETE:
-                        return GetDeleteCommand(source, pmr, connection);
+                        return GetDeleteCommand(pmr, connection);
 
                     default:
                         return GetSelectCommand(pmr, connection);
@@ -761,7 +731,7 @@
         /// <param name="pmr">The PMR.</param>
         /// <param name="connection">The connection.</param>
         /// <returns></returns>
-        public DbCommand GetDeleteCommand(Source source, DbParameter[] pmr, DbConnection connection)
+        public DbCommand GetDeleteCommand(DbParameter[] pmr, DbConnection connection, Source source = Source.PRC)
         {
             try
             {
@@ -981,18 +951,15 @@
                     case Sql.SELECT:
                         if(command is SQLiteCommand)
                         {
-                            SQLiteDataAdapter sqliteselect = new SQLiteDataAdapter();
+                            SQLiteDataAdapter sqliteselect = new SQLiteDataAdapter((SQLiteCommand)command);
                             sqliteselect.SelectCommand = (SQLiteCommand)command;
                             SQLiteCommandBuilder builder = (SQLiteCommandBuilder)GetCommandBuilder(sqliteselect);
-                            sqliteselect.InsertCommand = builder.GetInsertCommand();
-                            sqliteselect.UpdateCommand = builder.GetUpdateCommand();
-                            sqliteselect.DeleteCommand = builder.GetDeleteCommand();
                             return sqliteselect;
                         }
 
                         if(command is OleDbCommand)
                         {
-                            OleDbDataAdapter oledbselect = new OleDbDataAdapter();
+                            OleDbDataAdapter oledbselect = new OleDbDataAdapter((OleDbCommand)command);
                             oledbselect.SelectCommand = (OleDbCommand)command;
                             OleDbCommandBuilder builder = (OleDbCommandBuilder)GetCommandBuilder(oledbselect);
                             oledbselect.InsertCommand = builder.GetInsertCommand();
@@ -1003,7 +970,7 @@
 
                         if(command is SqlCeCommand)
                         {
-                            SqlCeDataAdapter sqlceselect = new SqlCeDataAdapter();
+                            SqlCeDataAdapter sqlceselect = new SqlCeDataAdapter((SqlCeCommand)command);
                             sqlceselect.SelectCommand = (SqlCeCommand)command;
                             SqlCeCommandBuilder builder = (SqlCeCommandBuilder)GetCommandBuilder(sqlceselect);
                             sqlceselect.InsertCommand = builder.GetInsertCommand();
@@ -1014,7 +981,7 @@
 
                         if(command is SqlCommand)
                         {
-                            SqlDataAdapter sqlselect = new SqlDataAdapter();
+                            SqlDataAdapter sqlselect = new SqlDataAdapter((SqlCommand)command);
                             sqlselect.SelectCommand = (SqlCommand)command;
                             SqlCommandBuilder builder = (SqlCommandBuilder)GetCommandBuilder(sqlselect);
                             sqlselect.InsertCommand = builder.GetInsertCommand();
@@ -1028,28 +995,28 @@
                     case Sql.UPDATE:
                         if(command is SQLiteCommand)
                         {
-                            SQLiteDataAdapter update = new SQLiteDataAdapter();
+                            SQLiteDataAdapter update = new SQLiteDataAdapter((SQLiteCommand)command);
                             update.UpdateCommand = (SQLiteCommand)command;
                             return update;
                         }
 
                         if(command is OleDbCommand)
                         {
-                            OleDbDataAdapter update = new OleDbDataAdapter();
+                            OleDbDataAdapter update = new OleDbDataAdapter((OleDbCommand)command);
                             update.UpdateCommand = (OleDbCommand)command;
                             return update;
                         }
 
                         if(command is SqlCeCommand)
                         {
-                            SqlCeDataAdapter update = new SqlCeDataAdapter();
+                            SqlCeDataAdapter update = new SqlCeDataAdapter((SqlCeCommand)command);
                             update.UpdateCommand = (SqlCeCommand)command;
                             return update;
                         }
 
                         if(command is SqlCommand)
                         {
-                            SqlDataAdapter update = new SqlDataAdapter();
+                            SqlDataAdapter update = new SqlDataAdapter((SqlCommand)command);
                             update.UpdateCommand = (SqlCommand)command;
                             return update;
                         }
@@ -1059,28 +1026,28 @@
                     case Sql.INSERT:
                         if(command is SQLiteCommand)
                         {
-                            SQLiteDataAdapter insert = new SQLiteDataAdapter();
+                            SQLiteDataAdapter insert = new SQLiteDataAdapter((SQLiteCommand)command);
                             insert.InsertCommand = (SQLiteCommand)command;
                             return insert;
                         }
 
                         if(command is OleDbCommand)
                         {
-                            OleDbDataAdapter insert = new OleDbDataAdapter();
+                            OleDbDataAdapter insert = new OleDbDataAdapter((OleDbCommand)command);
                             insert.InsertCommand = (OleDbCommand)command;
                             return insert;
                         }
 
                         if(command is SqlCeCommand)
                         {
-                            SqlCeDataAdapter insert = new SqlCeDataAdapter();
+                            SqlCeDataAdapter insert = new SqlCeDataAdapter((SqlCeCommand)command);
                             insert.InsertCommand = (SqlCeCommand)command;
                             return insert;
                         }
 
                         if(command is SqlCommand)
                         {
-                            SqlDataAdapter insert = new SqlDataAdapter();
+                            SqlDataAdapter insert = new SqlDataAdapter((SqlCommand)command);
                             insert.InsertCommand = (SqlCommand)command;
                             return insert;
                         }
@@ -1090,28 +1057,28 @@
                     case Sql.DELETE:
                         if(command is SQLiteCommand)
                         {
-                            SQLiteDataAdapter delete = new SQLiteDataAdapter();
+                            SQLiteDataAdapter delete = new SQLiteDataAdapter((SQLiteCommand)command);
                             delete.DeleteCommand = (SQLiteCommand)command;
                             return delete;
                         }
 
                         if(command is OleDbCommand)
                         {
-                            OleDbDataAdapter delete = new OleDbDataAdapter();
+                            OleDbDataAdapter delete = new OleDbDataAdapter((OleDbCommand)command);
                             delete.DeleteCommand = (OleDbCommand)command;
                             return delete;
                         }
 
                         if(command is SqlCeCommand)
                         {
-                            SqlCeDataAdapter delete = new SqlCeDataAdapter();
+                            SqlCeDataAdapter delete = new SqlCeDataAdapter((SqlCeCommand)command);
                             delete.DeleteCommand = (SqlCeCommand)command;
                             return delete;
                         }
 
                         if(command is SqlCommand)
                         {
-                            SqlDataAdapter delete = new SqlDataAdapter();
+                            SqlDataAdapter delete = new SqlDataAdapter((SqlCommand)command);
                             delete.DeleteCommand = (SqlCommand)command;
                             return delete;
                         }
@@ -1119,7 +1086,7 @@
                         break;
 
                     default:
-                        SQLiteDataAdapter select = new SQLiteDataAdapter();
+                        SQLiteDataAdapter select = new SQLiteDataAdapter((SQLiteCommand)command);
                         select.SelectCommand = (SQLiteCommand)command;
                         return select;
                 }
@@ -1131,6 +1098,11 @@
                 new Error(ex).ShowDialog();
                 return null;
             }
+        }
+
+        public DbDataAdapter GetDataAdapter(IDbCommand command)
+        {
+            throw new NotImplementedException();
         }
     }
 }

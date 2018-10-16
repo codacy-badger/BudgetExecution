@@ -97,7 +97,7 @@ namespace BudgetExecution
                 }
 
                 Source source = (Source) Enum.Parse(typeof(Source), i);
-                SummaryForm sf = new SummaryForm(source);
+                SummaryForm sf = new SummaryForm(source, Provider.SQLite);
                 sf.Show();
                 Close();
             }

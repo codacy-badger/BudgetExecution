@@ -101,7 +101,7 @@ namespace BudgetExecution
 
         private void DivisionSummaryButton_OnClick(object sender, EventArgs e)
         {
-            SummaryForm summary = new SummaryForm(Source.DivisionAccounts);
+            SummaryForm summary = new SummaryForm(Source.DivisionAccounts, Provider.SQLite);
             summary.Show();
         }
 
@@ -156,13 +156,13 @@ namespace BudgetExecution
 
         private void RegionSummaryButton_OnClick(object sender, EventArgs e)
         {
-            SummaryForm datamgr = new SummaryForm(Source.RegionalAccounts);
+            SummaryForm datamgr = new SummaryForm(Source.RegionalAccounts, Provider.SQLite);
             datamgr.Show();
         }
 
         private void TransferButton_OnClick(object sender, EventArgs e)
         {
-            SummaryForm dm = new SummaryForm(Source.MM);
+            SummaryForm dm = new SummaryForm(Source.MM, Provider.SQLite);
             dm.Show();
         }
 

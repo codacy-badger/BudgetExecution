@@ -27,10 +27,10 @@
         /// <summary>
         /// Initializes a new instance of the <see cref="SummaryForm"/> class.
         /// </summary>
-        /// <param name="provider">The provider<see cref="Provider"/></param>
-        public SummaryForm(Provider provider)
+        /// <param name="source">The provider<see cref="Provider"/></param>
+        public SummaryForm(Source source)
         {
-            Provider = provider;
+            Source = source;
             InitializeComponent();
         }
 
@@ -1008,16 +1008,16 @@
                         if(Division != null)
                         {
                             ChartMainTitle = new[]
-                                                      {
-                                                          $"{Division} Funding By Appropriation"
-                                                      };
+                            {
+                                $"{Division} Funding By Appropriation"
+                            };
                         }
                         else
                         {
                             ChartMainTitle = new[]
-                                                      {
-                                                          $"{Source.ToString()} Funding By Appropriation"
-                                                      };
+                            {
+                                $"{Source.ToString()} Funding By Appropriation"
+                            };
                         }
 
                         BocChart = new BudgetChart(BocChart, ChartMainTitle, DbData, Field.FundName, Stat.Total, ChartSeriesType.Column).Activate();
