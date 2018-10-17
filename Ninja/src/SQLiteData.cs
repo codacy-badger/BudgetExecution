@@ -302,7 +302,7 @@ namespace BudgetExecution
                 C1 = (Field) Enum.Parse(typeof(Field), filter?.Tag.ToString());
                 DataTable tbl = TableFilter(Table, C1, F1);
                 BindingSource.DataSource = tbl;
-                label6.Text = DbData.GetTotalAuthority(tbl).ToString("c");
+                label6.Text = DbData.GetTotal(Source, tbl).ToString("c");
                 label12.Text = tbl.Rows.Count.ToString();
                 PopulateFilterItems(Filter2.Tag.ToString(), tbl, Filter2, label2);
                 Filter3.Visible = false;
@@ -332,7 +332,7 @@ namespace BudgetExecution
                                  .Select(p => p)
                                  .CopyToDataTable();
                 BindingSource.DataSource = table;
-                label6.Text = DbData.GetTotalAuthority(table).ToString("c");
+                label6.Text = DbData.GetTotal(Source, table).ToString("c");
                 label12.Text = table.Rows.Count.ToString();
                 PopulateFilterItems(Filter3.Tag.ToString(), table, Filter3, label3);
                 Filter4.Visible = false;
@@ -362,7 +362,7 @@ namespace BudgetExecution
                                  .Select(p => p)
                                  .CopyToDataTable();
                 BindingSource.DataSource = table;
-                label6.Text = DbData.GetTotalAuthority(table).ToString("c") ?? "0";
+                label6.Text = DbData.GetTotal(Source, table).ToString("c") ?? "0";
                 label12.Text = table.Rows.Count.ToString() ?? "0";
                 if(Filter4.Tag != null)
                 {
@@ -396,7 +396,7 @@ namespace BudgetExecution
                 BindingSource.DataSource = table;
                 if(table.Columns.Contains("Amount"))
                 {
-                    label6.Text = DbData.GetTotalAuthority(table).ToString("c");
+                    label6.Text = DbData.GetTotal(Source, table).ToString("c");
                 }
 
                 label12.Text = table.Rows.Count.ToString();

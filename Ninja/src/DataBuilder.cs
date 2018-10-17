@@ -29,7 +29,6 @@ namespace BudgetExecution
                                             .Where(p => p.Field<decimal>("Amount") > 0)
                                             .Select(p => p)
                                             .CopyToDataTable();
-                Total = GetTotalAuthority(Table);
             }
 
             if(q.Source == Source.FTE)
@@ -40,18 +39,18 @@ namespace BudgetExecution
                         .Where(p => p.Field<decimal>("Amount") > 0)
                         .Select(p => p)
                         .CopyToDataTable();
-                Total = GetTotalAuthority(Table);
             }
             else
             {
                 Table = GetDataTable();
             }
 
+            Total = GetTotal(Source, Table);
+            Columns = GetColumnNames(Table);
             ProgramElements = GetProgramElements(Table);
             BindingSource = new BindingSource();
             BindingSource.DataSource = Table;
             Records = GetRecords(Table);
-            Columns = GetColumnNames(Table);
         }
 
         public DataBuilder(Source source, Provider provider = Provider.SQLite)
@@ -67,7 +66,6 @@ namespace BudgetExecution
                                             .Where(p => p.Field<decimal>("Amount") > 0)
                                             .Select(p => p)
                                             .CopyToDataTable();
-                Total = GetTotalAuthority(Table);
             }
 
             if(source == Source.FTE)
@@ -78,18 +76,17 @@ namespace BudgetExecution
                         .Where(p => p.Field<decimal>("Amount") > 0)
                         .Select(p => p)
                         .CopyToDataTable();
-                Total = GetTotalAuthority(Table);
             }
             else
             {
                 Table = GetDataTable();
             }
 
-            Columns = Table.GetFields();
+            Total = GetTotal(Source, Table);
+            Columns = GetColumnNames(Table);
             ProgramElements = GetProgramElements(Table);
             BindingSource = new BindingSource(Table.DataSet, Table.TableName);
             Records = GetRecords(Table);
-            Columns = Table.GetFields();
         }
 
         public DataBuilder(Source source, Provider provider, Dictionary<string, object> param)
@@ -104,7 +101,6 @@ namespace BudgetExecution
                                             .Where(p => p.Field<decimal>("Amount") > 0)
                                             .Select(p => p)
                                             .CopyToDataTable();
-                Total = GetTotalAuthority(Table);
             }
 
             if(source == Source.FTE)
@@ -115,14 +111,14 @@ namespace BudgetExecution
                         .Where(p => p.Field<decimal>("Amount") > 0)
                         .Select(p => p)
                         .CopyToDataTable();
-                Total = GetTotalAuthority(Table);
             }
             else
             {
                 Table = GetDataTable();
             }
 
-            Columns = Table.GetFields();
+            Total = GetTotal(Source, Table);
+            Columns = GetColumnNames(Table);
             ProgramElements = GetProgramElements(Table);
             BindingSource = new BindingSource(Table.DataSet, Table.TableName);
             Records = GetRecords(Table);
@@ -512,73 +508,43 @@ namespace BudgetExecution
         /// <returns></returns>
         public Dictionary<string, string[]> GetProgramElements(DataTable table)
         {
-            try
+            if(table != null)
             {
-                Dictionary<string, string[]> data = new Dictionary<string, string[]>();
-                string[] list;
-                foreach(DataColumn dc in table.Columns)
+                try
                 {
-                    list = table.AsEnumerable()
-                                .Select(p => p.Field<string>(dc.ColumnName)).Distinct().ToArray();
-                    data.Add(dc.ColumnName, list);
-                }
-
-                if(data.ContainsKey("ID"))
-                {
-                    data.Remove("ID");
-                }
-
-                if(data.ContainsKey("Amount"))
-                {
-                    data.Remove("Amount");
-                }
-
-                if(data.ContainsKey("Obligations"))
-                {
-                    data.Remove("Obligations");
-                }
-
-                if(data.ContainsKey("TotalObligations"))
-                {
-                    data.Remove("TotalObligations");
-                }
-
-                if(data.ContainsKey("ULO"))
-                {
-                    data.Remove("ULO");
-                }
-
-                if(data.ContainsKey("Commitments"))
-                {
-                    data.Remove("Commitmenst");
-                }
-
-                if(data.ContainsKey("OpenCommitments"))
-                {
-                    data.Remove("OpenCommitmenst");
-
-                    if(data.ContainsKey("WorkHours"))
+                    Dictionary<string, string[]> data = new Dictionary<string, string[]>();
+                    foreach(DataColumn dc in table.Columns)
                     {
-                        data.Remove("WorkHours");
+                        if(dc.ColumnName.Equals("ID") || dc.ColumnName.Equals("Amount") || dc.ColumnName.Contains("Obligation") || dc.ColumnName.Contains("Commitment"))
+                        {
+                            continue;
+                        }
+
+                        data.Add(dc.ColumnName, table.AsEnumerable().Select(p => p.Field<string>(dc)).Distinct().ToArray());
                     }
 
-                    if(data.ContainsKey("LeaveHours"))
+                    if(data.ContainsKey("ID"))
                     {
-                        data.Remove("LeaveHours");
+                        data.Remove("ID");
+                    }
+
+                    if(data.ContainsKey("Amount"))
+                    {
+                        data.Remove("Amount");
                     }
 
                     return data;
                 }
-            }
-            catch(Exception ex)
-            {
-                new Error(ex).ShowDialog();
-                return null;
+                catch(Exception ex)
+                {
+                    new Error(ex).ShowDialog();
+                    return null;
+                }
             }
 
             return null;
         }
-
+            
         /// <summary>
         ///     Gets the count.
         /// </summary>
@@ -588,11 +554,6 @@ namespace BudgetExecution
         {
             try
             {
-                if(Table.Columns.Contains("Amount"))
-                {
-                    return table.AsEnumerable().Where(p => p.Field<decimal>("Amount") > 0m).Select(p => p).Count();
-                }
-
                 return table.Rows.Count;
             }
             catch(Exception ex)
@@ -622,149 +583,19 @@ namespace BudgetExecution
                                      .Sum();
                     case Source.ProgramObligations:
                         return table.AsEnumerable()
-                                     .Where(p => p.Field<string>("BOC") == "17")
-                                     .Where(p => p.Field<decimal>("Amount") > 0m)
                                      .Select(p => p.Field<decimal>("Obligations"))
                                      .Sum();
                     case Source.TravelObligations:
                         return table.AsEnumerable()
-                                     .Where(p => p.Field<string>("BOC") == "17")
-                                     .Where(p => p.Field<decimal>("Amount") > 0m)
                                      .Select(p => p.Field<decimal>("Obligations"))
                                      .Sum();
                     case Source.PayrollObligations:
                         return table.AsEnumerable()
-                                     .Where(p => p.Field<string>("BOC") == "17")
-                                     .Where(p => p.Field<decimal>("Amount") > 0m)
                                      .Select(p => p.Field<decimal>("Obligations"))
                                      .Sum();
                     default:
                         return 0m;
                 }
-            }
-            catch(Exception ex)
-            {
-                new Error(ex).ShowDialog();
-                return 0;
-            }
-        }
-
-        /// <summary>
-        ///     Gets the total.
-        /// </summary>
-        /// <param name="table">The table.</param>
-        /// <returns></returns>
-        public decimal GetTotalAuthority(DataTable table)
-        {
-            try
-            {
-                if(table.Columns.Contains("BOC"))
-                {
-                    return table.AsEnumerable()
-                                .Where(p => p.Field<string>("BOC") != "17")
-                                .Select(p => p.Field<decimal>("Amount")).Sum();
-                }
-                    
-                return 0m;
-            }
-            catch(Exception ex)
-            {
-                new Error(ex).ShowDialog();
-                return 0;
-            }
-        }
-
-        /// <summary>
-        ///     Gets the total.
-        /// </summary>
-        /// <param name="table">The table.</param>
-        /// <returns></returns>
-        public decimal GetTotalObligations(DataTable table)
-        {
-            try
-            {
-                if(table.Columns.Contains("Obligations")) 
-                {
-                    return table.AsEnumerable()
-                                .Where(p => p.Field<string>("BOC") != "17")
-                                .Select(p => p.Field<decimal>("Obligations"))
-                                .Sum();
-                }
-
-                if(table.Columns.Contains("TotalObligations"))
-                {
-                    return table.AsEnumerable()
-                                .Where(p => p.Field<string>("BOC") != "17")
-                                .Select(p => p.Field<decimal>("TotalObligations"))
-                                .Sum();
-                }
-
-                if(table.Columns.Contains("ULO"))
-                {
-                    return table.AsEnumerable()
-                                .Where(p => p.Field<string>("BOC") != "17")
-                                .Select(p => p.Field<decimal>("ULO"))
-                                .Sum();
-                }
-
-                return 0m;
-            }
-            catch(Exception ex)
-            {
-                new Error(ex).ShowDialog();
-                return 0;
-            }
-        }
-
-        /// <summary>
-        ///     Gets the total.
-        /// </summary>
-        /// <param name="table">The table.</param>
-        /// <returns></returns>
-        public decimal GetTotalCommitments(DataTable table)
-        {
-            try
-            {
-                if(table.Columns.Contains("OpenCommitments"))
-                {
-                    return table.AsEnumerable()
-                                .Where(p => p.Field<string>("BOC") != "17")
-                                .Select(p => p.Field<decimal>("OpenCommitments"))
-                                .Sum();
-                }
-
-                if(table.Columns.Contains("Commitments"))
-                {
-                   return table.AsEnumerable()
-                               .Where(p => p.Field<string>("BOC") != "17")
-                               .Select(p => p.Field<decimal>("Commitments"))
-                               .Sum();
-                }
-
-                return 0m;
-            }
-            catch(Exception ex)
-            {
-                new Error(ex).ShowDialog();
-                return 0;
-            }
-        }
-
-        /// <summary>
-        ///     Gets the fte total.
-        /// </summary>
-        /// <param name="table">The table.</param>
-        /// <returns></returns>
-        public decimal GetFteTotal(DataTable table)
-        {
-            try
-            {
-                if(Table.Columns.Contains("Amount") && ProgramElements["BOC"].Contains("17"))
-                {
-                    return table.AsEnumerable().Where(p => p.Field<string>("BOC") == "17").Select(p => p.Field<decimal>("Amount")).Sum();
-                }
-
-                return 0;
             }
             catch(Exception ex)
             {

@@ -41,19 +41,19 @@
         /// <param name="provider">The provider<see cref="Provider"/></param>
         public SummaryForm(Source source, Provider provider)
         {
-            Provider = provider;
             InitializeComponent();
+            Source = source;
+            Provider = provider;
             switch(source)
             {
                 case Source.RegionalAccounts :
                 case Source.DivisionAccounts :
-                    DbData = new DataBuilder(source);
+                    DbData = new DataBuilder(Source, Provider);
                     Table = DbData.Table;
-                    ProgramElements = DbData.GetProgramElements(Table);
+                    ProgramElements = DbData.ProgramElements;
                     BindingSource = new BindingSource();
                     BindingSource.DataSource = DbData.Table;
                     Grid.DataSource = BindingSource;
-                    Source = source;
                     GetTabNames();
                     Metric = new PrcMetric(DbData);
                     DatabaseTab.TabVisible = false;
@@ -69,8 +69,7 @@
                     BocChart = new BudgetChart(BocChart, ChartMainTitle, DbData, Field.Fund, Stat.Total, ChartSeriesType.Column).Activate();
                     break;
                 default :
-                    Source = source;
-                    DbData = new DataBuilder(source);
+                    DbData = new DataBuilder(Source, Provider);
                     Table = DbData.Table;
                     ProgramElements = DbData.GetProgramElements(Table);
                     GetTabNames();
@@ -997,7 +996,7 @@
                     case 0 :
                         AssignChartFilterControls(BocFilter1, BocFilter2, BocFilter3, BocFilter4);
                         AssignChartExpanders(BocExpander1, BocExpander2);
-                        PopulateFilterBoxItems(BocFilter3, DbData.ProgramElements["FundName"]);
+                        PopulateFilterBoxItems(BocFilter3, ProgramElements["FundName"]);
                         PopulateFilterBoxItems(BocFilter4, GetTabPageTags());
                         BocFilter4.Items.Remove("FundName");
                         if(Source == Source.RegionalAccounts)
@@ -1026,7 +1025,7 @@
                     case 1 :
                         AssignChartFilterControls(BocFilter1, BocFilter2, BocFilter3, BocFilter4);
                         AssignChartExpanders(BocExpander1, BocExpander2);
-                        PopulateFilterBoxItems(BocFilter3, DbData.ProgramElements["BocName"]);
+                        PopulateFilterBoxItems(BocFilter3, ProgramElements["BocName"]);
                         PopulateFilterBoxItems(BocFilter4, GetTabPageTags());
                         BocFilter4.Items.Remove("BocName");
                         if(DbData.Source == Source.RegionalAccounts)
