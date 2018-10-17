@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Linq;
 using System.Windows.Forms;
 using MetroSet_UI.Controls;
 using Syncfusion.Windows.Forms;
@@ -43,7 +44,7 @@ namespace BudgetExecution
             BindingSource = DbData.BindingSource;
             Grid.DataSource = DbData.BindingSource;
             ProgramElements = DbData.ProgramElements;
-            Text = $@"{Source.ToString()} Database";
+            Text = $@"{Source.ToString()} - Database";
             TableFilter = Info.FilterRows;
             Fields = Info.GetColumnValues;
             label12.Text = Table.Rows.Count.ToString();
@@ -159,7 +160,10 @@ namespace BudgetExecution
                     label.Text = control.Tag?.ToString() ?? colname;
                 }
 
-                string[] filters = Fields(table, colname);
+                string[] filters = table.AsEnumerable()
+                                        .Select(p => p.Field<string>(colname))
+                                        .Distinct()
+                                        .ToArray();
                 foreach(string i in filters)
                 {
                     control.Items.Add(i);
@@ -218,7 +222,10 @@ namespace BudgetExecution
                     label.Visible = true;
                 }
 
-                string[] item = Fields(table, colname.ToString());
+                string[] item = table.AsEnumerable()
+                                        .Select(p => p.Field<string>(colname.ToString()))
+                                        .Distinct()
+                                        .ToArray();
                 control.Tag = colname.ToString();
                 foreach(string i in item)
                 {
@@ -295,7 +302,7 @@ namespace BudgetExecution
                 C1 = (Field) Enum.Parse(typeof(Field), filter?.Tag.ToString());
                 DataTable tbl = TableFilter(Table, C1, F1);
                 BindingSource.DataSource = tbl;
-                label6.Text = DbData.GetTotal(tbl).ToString("c");
+                label6.Text = DbData.GetTotalAuthority(tbl).ToString("c");
                 label12.Text = tbl.Rows.Count.ToString();
                 PopulateFilterItems(Filter2.Tag.ToString(), tbl, Filter2, label2);
                 Filter3.Visible = false;
@@ -319,12 +326,15 @@ namespace BudgetExecution
                     C2 = (Field) Enum.Parse(typeof(Field), filter.Tag.ToString());
                 }
 
-                DataTable tbl = TableFilter(Table, C1, F1);
-                DataTable tbl2 = TableFilter(tbl, C2, F2);
-                BindingSource.DataSource = tbl2;
-                label6.Text = DbData.GetTotal(tbl2).ToString("c");
-                label12.Text = tbl2.Rows.ToString();
-                PopulateFilterItems(Filter3.Tag.ToString(), tbl2, Filter3, label3);
+                var table = Table.AsEnumerable()
+                                 .Where(p => p.Field<string>(C1.ToString()).Equals(F1))
+                                 .Where(p => p.Field<string>(C2.ToString()).Equals(F2))
+                                 .Select(p => p)
+                                 .CopyToDataTable();
+                BindingSource.DataSource = table;
+                label6.Text = DbData.GetTotalAuthority(table).ToString("c");
+                label12.Text = table.Rows.Count.ToString();
+                PopulateFilterItems(Filter3.Tag.ToString(), table, Filter3, label3);
                 Filter4.Visible = false;
                 label4.Visible = false;
             }
@@ -339,21 +349,24 @@ namespace BudgetExecution
             try
             {
                 VisualComboBox filter = sender as VisualComboBox;
-                F3 = filter?.SelectedItem.ToString();
-                if(filter != null)
+                if(filter?.SelectedItem != null)
                 {
+                    F3 = filter.SelectedItem.ToString();
                     C3 = (Field) Enum.Parse(typeof(Field), filter.Tag.ToString());
                 }
 
-                DataTable tbl = TableFilter(Table, C1, F1);
-                DataTable tbl2 = TableFilter(tbl, C2, F2);
-                DataTable tbl3 = TableFilter(tbl2, C3, F3);
-                BindingSource.DataSource = tbl3;
-                label6.Text = DbData.GetTotal(tbl3).ToString("c");
-                label12.Text = tbl3.Rows.Count.ToString();
+                var table = Table.AsEnumerable()
+                                 .Where(p => p.Field<string>(C1.ToString()).Equals(F1))
+                                 .Where(p => p.Field<string>(C2.ToString()).Equals(F2))
+                                 .Where(p => p.Field<string>(C3.ToString()).Equals(F3))
+                                 .Select(p => p)
+                                 .CopyToDataTable();
+                BindingSource.DataSource = table;
+                label6.Text = DbData.GetTotalAuthority(table).ToString("c") ?? "0";
+                label12.Text = table.Rows.Count.ToString() ?? "0";
                 if(Filter4.Tag != null)
                 {
-                    PopulateFilterItems(Filter4.Tag.ToString(), tbl3, Filter4, label4);
+                    PopulateFilterItems(Filter4.Tag.ToString(), table, Filter4, label4);
                 }
             }
             catch(Exception ex)
@@ -367,19 +380,26 @@ namespace BudgetExecution
             try
             {
                 VisualComboBox filter = sender as VisualComboBox;
-                F4 = filter?.SelectedItem.ToString();
-                if(filter != null)
+                if(filter.SelectedItem != null)
                 {
-                    C4 = (Field) Enum.Parse(typeof(Field), filter.Tag.ToString());
+                    F4 = filter.SelectedItem.ToString();
+                    C4 = (Field)Enum.Parse(typeof(Field), filter.Tag.ToString());
                 }
 
-                DataTable tbl = TableFilter(Table, C1, F1);
-                DataTable tbl2 = TableFilter(tbl, C2, F2);
-                DataTable tbl3 = TableFilter(tbl2, C3, F3);
-                DataTable tbl4 = TableFilter(tbl3, C4, F4);
-                BindingSource.DataSource = tbl4;
-                label6.Text = DbData.GetTotal(tbl4).ToString("c");
-                label12.Text = tbl4.Rows.Count.ToString();
+                var table = Table.AsEnumerable()
+                                 .Where(p => p.Field<string>(C1.ToString()).Equals(F1))
+                                 .Where(p => p.Field<string>(C2.ToString()).Equals(F2))
+                                 .Where(p => p.Field<string>(C3.ToString()).Equals(F3))
+                                 .Where(p => p.Field<string>(C4.ToString()).Equals(F4))
+                                 .Select(p => p)
+                                 .CopyToDataTable();
+                BindingSource.DataSource = table;
+                if(table.Columns.Contains("Amount"))
+                {
+                    label6.Text = DbData.GetTotalAuthority(table).ToString("c");
+                }
+
+                label12.Text = table.Rows.Count.ToString();
             }
             catch(Exception ex)
             {
@@ -460,34 +480,34 @@ namespace BudgetExecution
                         break;
 
                     case Source.DivisionObligations :
-                        label1.Text = "DivisionName";
-                        PopulateFilterItems(Field.DivisionName, Table, Filter1, label1);
+                        label1.Text = "Division";
+                        PopulateFilterItems(Field.Division, Table, Filter1, label1);
                         Filter2.Tag = "FundName";
                         Filter3.Tag = "BocName";
                         Filter4.Tag = "DCN";
                         break;
 
                     case Source.PayrollObligations :
-                        label1.Text = "DivisionName";
-                        PopulateFilterItems(Field.DivisionName, Table, Filter1, label1);
+                        label1.Text = "Division";
+                        PopulateFilterItems(Field.Division, Table, Filter1, label1);
                         Filter2.Tag = "Fund";
                         Filter3.Tag = "BocName";
                         Filter4.Tag = "FocName";
                         break;
 
                     case Source.ProgramObligations :
-                        label1.Text = "DivisionName";
-                        PopulateFilterItems(Field.DivisionName, Table, Filter1, label1);
+                        label1.Text = "Division";
+                        PopulateFilterItems(Field.Division, Table, Filter1, label1);
                         Filter2.Tag = "Fund";
                         Filter3.Tag = "BocName";
                         Filter4.Tag = "FocName";
                         break;
 
                     case Source.TravelObligations :
-                        label1.Text = "DivisionName";
-                        PopulateFilterItems(Field.DivisionName, Table, Filter1, label1);
-                        Filter2.Tag = "Fund";
-                        Filter3.Tag = "BocName";
+                        label1.Text = "Division";
+                        PopulateFilterItems(Field.Division, Table, Filter1, label1);
+                        Filter2.Tag = "FundName";
+                        Filter3.Tag = "Traveller";
                         Filter4.Tag = "FocName";
                         break;
 
@@ -502,7 +522,7 @@ namespace BudgetExecution
                     case Source.Transfers :
                         label1.Text = "BudgetLevel";
                         PopulateFilterItems(Field.BudgetLevel, Table, Filter1, label1);
-                        Filter2.Tag = "Fund";
+                        Filter2.Tag = "FundName";
                         Filter3.Tag = "RC";
                         break;
 
@@ -641,7 +661,7 @@ namespace BudgetExecution
 
                     case Source.InternalTransfers :
                         label1.Text = "DivisionName";
-                        PopulateFilterItems(Field.DivisionName, Table, Filter1, label1);
+                        PopulateFilterItems(Field.Division, Table, Filter1, label1);
                         Filter2.Tag = "Fund";
                         Filter3.Tag = "BOC";
                         break;

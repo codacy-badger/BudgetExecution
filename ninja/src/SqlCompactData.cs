@@ -295,7 +295,7 @@ namespace BudgetExecution
                 C1 = (Field) Enum.Parse(typeof(Field), filter?.Tag.ToString());
                 DataTable tbl = TableFilter(Table, C1, F1);
                 BindingSource.DataSource = tbl;
-                label6.Text = DbData.GetTotal(tbl).ToString("c");
+                label6.Text = DbData.GetTotalAuthority(tbl).ToString("c");
                 label12.Text = tbl.Rows.Count.ToString();
                 PopulateFilterItems(Filter2.Tag.ToString(), tbl, Filter2, label2);
                 Filter3.Visible = false;
@@ -322,7 +322,7 @@ namespace BudgetExecution
                 DataTable tbl = TableFilter(Table, C1, F1);
                 DataTable tbl2 = TableFilter(tbl, C2, F2);
                 BindingSource.DataSource = tbl2;
-                label6.Text = DbData.GetTotal(tbl2).ToString("c");
+                label6.Text = DbData.GetTotalAuthority(tbl2).ToString("c");
                 label12.Text = tbl2.Rows.ToString();
                 PopulateFilterItems(Filter3.Tag.ToString(), tbl2, Filter3, label3);
                 Filter4.Visible = false;
@@ -349,7 +349,7 @@ namespace BudgetExecution
                 DataTable tbl2 = TableFilter(tbl, C2, F2);
                 DataTable tbl3 = TableFilter(tbl2, C3, F3);
                 BindingSource.DataSource = tbl3;
-                label6.Text = DbData.GetTotal(tbl3).ToString("c");
+                label6.Text = DbData.GetTotalAuthority(tbl3).ToString("c");
                 label12.Text = tbl3.Rows.Count.ToString();
                 if(Filter4.Tag != null)
                 {
@@ -378,7 +378,7 @@ namespace BudgetExecution
                 DataTable tbl3 = TableFilter(tbl2, C3, F3);
                 DataTable tbl4 = TableFilter(tbl3, C4, F4);
                 BindingSource.DataSource = tbl4;
-                label6.Text = DbData.GetTotal(tbl4).ToString("c");
+                label6.Text = DbData.GetTotalAuthority(tbl4).ToString("c");
                 label12.Text = tbl4.Rows.Count.ToString();
             }
             catch(Exception ex)

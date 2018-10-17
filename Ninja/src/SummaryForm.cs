@@ -115,7 +115,7 @@
         /// <summary>
         /// Gets or sets the Parameter
         /// </summary>
-        public Dictionary<string, object> Parameter { get; set; }
+        public Dictionary<string, object> Input { get; set; }
 
         /// <summary>
         /// Gets or sets the DbData
