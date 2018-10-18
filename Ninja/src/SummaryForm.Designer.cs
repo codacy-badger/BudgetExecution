@@ -1181,7 +1181,7 @@ namespace BudgetExecution
             this.BocExpander2.Controls.Add(this.BocFilter3);
             this.BocExpander2.Controls.Add(this.label35);
             this.BocExpander2.Controls.Add(this.label36);
-            this.BocExpander2.ExpandedHeight = 254;
+            this.BocExpander2.ExpandedHeight = 298;
             this.BocExpander2.IsExpanded = false;
             this.BocExpander2.Location = new System.Drawing.Point(1502, 468);
             this.BocExpander2.Name = "BocExpander2";
@@ -2281,7 +2281,7 @@ namespace BudgetExecution
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 131F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 127F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 135F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 181F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 182F));
             this.tableLayoutPanel2.Controls.Add(this.button6, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.button7, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.GridRefreshButton, 2, 0);
@@ -2309,7 +2309,7 @@ namespace BudgetExecution
             this.button6.Location = new System.Drawing.Point(4, 5);
             this.button6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(91, 57);
+            this.button6.Size = new System.Drawing.Size(90, 57);
             this.button6.TabIndex = 162;
             this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.metroSetToolTip1.SetToolTip(this.button6, "Previous Account");
@@ -2325,7 +2325,7 @@ namespace BudgetExecution
             this.button7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button7.Image = ((System.Drawing.Image)(resources.GetObject("button7.Image")));
-            this.button7.Location = new System.Drawing.Point(103, 5);
+            this.button7.Location = new System.Drawing.Point(102, 5);
             this.button7.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(78, 57);
@@ -2345,7 +2345,7 @@ namespace BudgetExecution
             this.GridRefreshButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.GridRefreshButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.GridRefreshButton.Image = ((System.Drawing.Image)(resources.GetObject("GridRefreshButton.Image")));
-            this.GridRefreshButton.Location = new System.Drawing.Point(189, 5);
+            this.GridRefreshButton.Location = new System.Drawing.Point(188, 5);
             this.GridRefreshButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.GridRefreshButton.Name = "GridRefreshButton";
             this.GridRefreshButton.Size = new System.Drawing.Size(119, 57);
@@ -2364,10 +2364,10 @@ namespace BudgetExecution
             this.DatabaseSearchButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.DatabaseSearchButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.DatabaseSearchButton.Image = ((System.Drawing.Image)(resources.GetObject("DatabaseSearchButton.Image")));
-            this.DatabaseSearchButton.Location = new System.Drawing.Point(709, 5);
+            this.DatabaseSearchButton.Location = new System.Drawing.Point(708, 5);
             this.DatabaseSearchButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.DatabaseSearchButton.Name = "DatabaseSearchButton";
-            this.DatabaseSearchButton.Size = new System.Drawing.Size(174, 57);
+            this.DatabaseSearchButton.Size = new System.Drawing.Size(175, 57);
             this.DatabaseSearchButton.TabIndex = 167;
             this.DatabaseSearchButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.metroSetToolTip1.SetToolTip(this.DatabaseSearchButton, "Search Database");
@@ -2384,7 +2384,7 @@ namespace BudgetExecution
             this.EditButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.EditButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.EditButton.Image = ((System.Drawing.Image)(resources.GetObject("EditButton.Image")));
-            this.EditButton.Location = new System.Drawing.Point(316, 5);
+            this.EditButton.Location = new System.Drawing.Point(315, 5);
             this.EditButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.EditButton.Name = "EditButton";
             this.EditButton.Size = new System.Drawing.Size(123, 57);
@@ -2405,7 +2405,7 @@ namespace BudgetExecution
             this.AddButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.AddButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AddButton.Image = ((System.Drawing.Image)(resources.GetObject("AddButton.Image")));
-            this.AddButton.Location = new System.Drawing.Point(447, 5);
+            this.AddButton.Location = new System.Drawing.Point(446, 5);
             this.AddButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.AddButton.Name = "AddButton";
             this.AddButton.Size = new System.Drawing.Size(119, 57);
@@ -2424,7 +2424,7 @@ namespace BudgetExecution
             this.CopyButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.CopyButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CopyButton.Image = ((System.Drawing.Image)(resources.GetObject("CopyButton.Image")));
-            this.CopyButton.Location = new System.Drawing.Point(574, 5);
+            this.CopyButton.Location = new System.Drawing.Point(573, 5);
             this.CopyButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.CopyButton.Name = "CopyButton";
             this.CopyButton.Size = new System.Drawing.Size(127, 57);
@@ -2479,7 +2479,7 @@ namespace BudgetExecution
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 45.9854F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 54.0146F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 118F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 147F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 148F));
             this.tableLayoutPanel3.Controls.Add(this.button4, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.button5, 1, 0);
             this.tableLayoutPanel3.Controls.Add(this.button3, 3, 0);
@@ -2517,7 +2517,7 @@ namespace BudgetExecution
             this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
             this.button5.Location = new System.Drawing.Point(98, 3);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(106, 56);
+            this.button5.Size = new System.Drawing.Size(105, 56);
             this.button5.TabIndex = 160;
             this.metroSetToolTip1.SetToolTip(this.button5, "Next Account");
             this.button5.UseVisualStyleBackColor = false;
@@ -2532,9 +2532,9 @@ namespace BudgetExecution
             this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.Location = new System.Drawing.Point(328, 3);
+            this.button3.Location = new System.Drawing.Point(327, 3);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(142, 56);
+            this.button3.Size = new System.Drawing.Size(143, 56);
             this.button3.TabIndex = 158;
             this.metroSetToolTip1.SetToolTip(this.button3, "Remove Account");
             this.button3.UseVisualStyleBackColor = false;
@@ -2548,7 +2548,7 @@ namespace BudgetExecution
             this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(210, 3);
+            this.button1.Location = new System.Drawing.Point(209, 3);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(112, 56);
             this.button1.TabIndex = 157;

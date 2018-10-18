@@ -48,7 +48,7 @@ namespace BudgetExecution
             GoalMetrics = GetMetrics(Table, Field.GoalName);
             ObjectiveTotals = GetDataTotals(Table, Field.ObjectiveName);
             ObjectiveMetrics = GetMetrics(Table, Field.ObjectiveName);
-            if(DbData.Source == Source.DivisionAccounts && DbData.DataFields == null)
+            if(DbData.Source == Source.DivisionAccounts && DbData.Input == null)
             {
                 DivisionTotals = GetDataTotals(Table, Field.RC);
                 DivisionMetrics = GetMetrics(Table, Field.RC);

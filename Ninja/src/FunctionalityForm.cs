@@ -47,7 +47,7 @@ namespace BudgetExecution
         {
             string i = FunctionCarousel.ActiveImage.Tag.ToString();
             Source s = (Source) Enum.Parse(typeof(Source), i);
-            SummaryForm a = new SummaryForm(s);
+            SummaryForm a = new SummaryForm(s, Provider.SQLite);
             a.Show();
         }
 

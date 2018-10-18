@@ -25,12 +25,12 @@ namespace BudgetExecution
 
         DbConnection GetDataConnection(Provider connection);
 
-        DbDataAdapter GetDataAdapter(IDbCommand command);
+        string GetSqlStatement(string sqlStatement);
 
         DbCommand GetDataCommand(string sql, DbConnection dataConnection);
 
-        DbDataReader GetDataReader(IDbCommand command);
+        DbDataAdapter GetDataAdapter(DbCommand command, Sql cmd);
 
-        string GetSqlStatement(string sqlStatement);
+        DbDataReader GetDataReader(DbCommand command);
     }
 }

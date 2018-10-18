@@ -28,9 +28,8 @@
         /// Initializes a new instance of the <see cref="SummaryForm"/> class.
         /// </summary>
         /// <param name="source">The provider<see cref="Provider"/></param>
-        public SummaryForm(Source source)
+        public SummaryForm()
         {
-            Source = source;
             InitializeComponent();
         }
 
@@ -46,8 +45,8 @@
             Provider = provider;
             switch(source)
             {
-                case Source.RegionalAccounts :
-                case Source.DivisionAccounts :
+                case Source.RegionalAccounts:
+                case Source.DivisionAccounts:
                     DbData = new DataBuilder(Source, Provider);
                     Table = DbData.Table;
                     ProgramElements = DbData.ProgramElements;
@@ -63,12 +62,13 @@
                     lblBoc.Visible = false;
                     PopulateGridYearFilterItems();
                     ChartMainTitle = new[]
-                                              {
-                                                  $"{Source.ToString()} Funding By Appropriation"
-                                              };
+                    {
+                          $"{Source.ToString()} Funding By Appropriation"
+                    };
                     BocChart = new BudgetChart(BocChart, ChartMainTitle, DbData, Field.Fund, Stat.Total, ChartSeriesType.Column).Activate();
                     break;
-                default :
+
+                default:
                     DbData = new DataBuilder(Source, Provider);
                     Table = DbData.Table;
                     ProgramElements = DbData.GetProgramElements(Table);
@@ -92,9 +92,9 @@
                     ConfigureTextBoxBindings();
                     DefineVisisbleDataColumns(Grid);
                     ChartMainTitle = new[]
-                                              {
-                                                  $"{Source.ToString()} Funding By Appropriation"
-                                              };
+                    {
+                          $"{Source.ToString()} Funding By Appropriation"
+                    };
                     BocChart = new BudgetChart(BocChart, ChartMainTitle, DbData, Field.Fund, Stat.Total, ChartSeriesType.Column).Activate();
                     break;
             }
@@ -836,17 +836,7 @@
                 }
 
                 BocFilter4.Items.Clear();
-                var filters = new[]
-                                  {
-                                      "FundName",
-                                      "BocName",
-                                      "NPM",
-                                      "GoalName",
-                                      "ObjectiveName",
-                                      "Division",
-                                      "ProgramArea",
-                                      "ProgramProjectCode"
-                                  };
+                var filters = new[]{"FundName","BocName", "NPM", "GoalName", "ObjectiveName", "Division", "ProgramArea", "ProgramProjectCode"};
 
                 foreach(string s in filters)
                 {
@@ -1036,16 +1026,16 @@
                         if(Division != null)
                         {
                             ChartMainTitle = new[]
-                                                      {
-                                                          $"{Division} Funding By Object Class"
-                                                      };
+                            {
+                                $"{Division} Funding By Object Class"
+                            };
                         }
                         else
                         {
                             ChartMainTitle = new[]
-                                                      {
-                                                          $"{Source.ToString()} Funding By Object Class"
-                                                      };
+                            {
+                                $"{Source.ToString()} Funding By Object Class"
+                            };
                         }
 
                         BocChart = new BudgetChart(BocChart, ChartMainTitle, DbData, Field.BocName, Stat.Total, ChartSeriesType.Column).Activate();
@@ -1065,16 +1055,16 @@
                         if(Division != null)
                         {
                             ChartMainTitle = new[]
-                                                      {
-                                                          $"{Division} Funding By HQ NPM"
-                                                      };
+                            {
+                                $"{Division} Funding By HQ NPM"
+                            };
                         }
                         else
                         {
                             ChartMainTitle = new[]
-                                                      {
-                                                          $"{Source.ToString()} Funding By HQ NPM"
-                                                      };
+                            {
+                                $"{Source.ToString()} Funding By HQ NPM"
+                            };
                         }
 
                         BocChart = new BudgetChart(BocChart, ChartMainTitle, DbData, Field.NPM, Stat.Total, ChartSeriesType.Column).Activate();
@@ -1094,16 +1084,16 @@
                         if(Division != null)
                         {
                             ChartMainTitle = new[]
-                                                      {
-                                                          $"{Division} Funding By Agency Goal"
-                                                      };
+                            {
+                                $"{Division} Funding By Agency Goal"
+                            };
                         }
                         else
                         {
                             ChartMainTitle = new[]
-                                                      {
-                                                          $"{Source.ToString()} Funding By Agency Goal"
-                                                      };
+                            {
+                                $"{Source.ToString()} Funding By Agency Goal"
+                            };
                         }
 
                         BocChart = new BudgetChart(BocChart, ChartMainTitle, DbData, Field.GoalName, Stat.Total, ChartSeriesType.Column).Activate();
@@ -1123,16 +1113,16 @@
                         if(Division != null)
                         {
                             ChartMainTitle = new[]
-                                                      {
-                                                          $"{Division} Funding By Objective"
-                                                      };
+                            {
+                                $"{Division} Funding By Objective"
+                            };
                         }
                         else
                         {
                             ChartMainTitle = new[]
-                                                      {
-                                                          $"{Source.ToString()} Funding By Objective"
-                                                      };
+                            {
+                                $"{Source.ToString()} Funding By Objective"
+                            };
                         }
 
                         BocChart = new BudgetChart(BocChart, ChartMainTitle, DbData, Field.ObjectiveName, Stat.Total, ChartSeriesType.Column).Activate();
@@ -1152,16 +1142,16 @@
                         if(Division != null)
                         {
                             ChartMainTitle = new[]
-                                                      {
-                                                          $"{Division} Funding By Division"
-                                                      };
+                          {
+                              $"{Division} Funding By Division"
+                          };
                         }
                         else
                         {
                             ChartMainTitle = new[]
-                                                      {
-                                                          $"{Source.ToString()} Funding By Division"
-                                                      };
+                            {
+                                $"{Source.ToString()} Funding By Division"
+                            };
                         }
 
                         BocChart = new BudgetChart(BocChart, ChartMainTitle, DbData, Field.Division, Stat.Total, ChartSeriesType.Column).Activate();
@@ -1181,16 +1171,16 @@
                         if(Division != null)
                         {
                             ChartMainTitle = new[]
-                                                      {
-                                                          $"{Division} Funding By Program Area"
-                                                      };
+                            {
+                                $"{Division} Funding By Program Area"
+                            };
                         }
                         else
                         {
                             ChartMainTitle = new[]
-                                                      {
-                                                          $"{Source.ToString()} Funding By Program Area"
-                                                      };
+                            {
+                                $"{Source.ToString()} Funding By Program Area"
+                            };
                         }
 
                         BocChart = new BudgetChart(BocChart, ChartMainTitle, DbData, Field.ProgramArea, Stat.Total, ChartSeriesType.Column).Activate();
@@ -1210,16 +1200,16 @@
                         if(Division != null)
                         {
                             ChartMainTitle = new[]
-                                                      {
-                                                          $"{Division} Funding By Program Project"
-                                                      };
+                            {
+                                $"{Division} Funding By Program Project"
+                            };
                         }
                         else
                         {
                             ChartMainTitle = new[]
-                                                      {
-                                                          $"{Source.ToString()} Funding By Program Project"
-                                                      };
+                            {
+                                $"{Source.ToString()} Funding By Program Project"
+                            };
                         }
 
                         BocChart = new BudgetChart(BocChart, ChartMainTitle, DbData, Field.ProgramProjectCode, Stat.Total, ChartSeriesType.Column).Activate();

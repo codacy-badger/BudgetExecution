@@ -1,11 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Data.Linq;
 using System.Data.SQLite;
 using System.Linq;
 using System.Windows.Forms;
-using Syncfusion.Data.Extensions;
 
 namespace BudgetExecution
 {
@@ -18,7 +16,7 @@ namespace BudgetExecution
 
         public DataBuilder(Query q)
         {
-            DataFields = null;
+            Input = null;
             Source = q.Source;
             Query = new Query(q.Source, q.Provider, q.CommandType);
 
@@ -55,7 +53,7 @@ namespace BudgetExecution
 
         public DataBuilder(Source source, Provider provider = Provider.SQLite)
         {
-            DataFields = null;
+            Input = null;
             Source = source;
             Query = new Query(source, provider);
 
@@ -92,8 +90,8 @@ namespace BudgetExecution
         public DataBuilder(Source source, Provider provider, Dictionary<string, object> param)
         {
             Source = source;
-            DataFields = param;
-            Query = new Query(source, provider, Sql.SELECT, DataFields);
+            Input = param;
+            Query = new Query(source, provider, Sql.SELECT, Input);
             if(source == Source.PRC)
             {
                 Table = GetDataTable(Source).AsEnumerable()
@@ -135,7 +133,7 @@ namespace BudgetExecution
 
         public decimal Total { get; }
 
-        public Dictionary<string, object> DataFields { get; set; }
+        public Dictionary<string, object> Input { get; set; }
 
         public Dictionary<string, Type> Schema { get; set; }
 

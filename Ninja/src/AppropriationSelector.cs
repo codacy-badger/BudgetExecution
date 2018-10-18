@@ -35,7 +35,7 @@ namespace BudgetExecution
                 Carousel carousel = sender as Carousel;
                 string i = carousel.ActiveImage.Tag.ToString();
                 Source s = (Source) Enum.Parse(typeof(Source), i);
-                SummaryForm sf = new SummaryForm(s);
+                SummaryForm sf = new SummaryForm(s, Provider.SQLite);
                 sf.Show();
                 Close();
             }
