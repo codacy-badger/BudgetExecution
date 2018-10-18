@@ -312,6 +312,33 @@
                 BocExpander2.Visible = false;
                 EditTab.Visible = false;
                 AddTab.Visible = false;
+                BudgetLevel = new string[]
+                {
+                    "7",
+                    "8"
+                };
+
+                switch(Source)
+                {
+                    case Source.PRC:
+                        L7.Visible = true;
+                        L7.Checked = true;
+                        L8.Visible = true;
+                        L8.Checked = false;
+                        break;
+
+                    case Source.FTE:
+                        L7.Visible = true;
+                        L7.Checked = true;
+                        L8.Visible = true;
+                        L8.Checked = false;
+                        break;
+
+                    default:
+                        L7.Visible = false;
+                        L8.Visible = false;
+                        break;                  
+                }
             }
             catch(Exception ex)
             {
@@ -329,7 +356,10 @@
             try
             {
                 GridFilter1 = GridYearFilter?.SelectedItem.ToString();
-                BindingSource.Filter = $"BFY = '{GridFilter1}'";
+                if(L7.Checked)
+                    BindingSource.Filter = $"BFY = '{GridFilter1}' AND BudgetLevel = '{BudgetLevel[0]}'";
+                if(L8.Checked)
+                    BindingSource.Filter = $"BFY = '{GridFilter1}' AND BudgetLevel = '{BudgetLevel[1]}'";
                 DataTable table = ((DataTable)BindingSource.DataSource).AsEnumerable().Where(p => p.Field<decimal>("Amount") > 0).Where(p => p.Field<string>("BFY").Equals(GridYearFilter.SelectedItem.ToString())).Select(p => p).CopyToDataTable();
                 lblCount.Text = table.Rows.Count.ToString();
                 lblAve.Text = table.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Average().ToString("N");
@@ -365,7 +395,10 @@
                 VisualComboBox gridFundFilter = GridFundFilter;
                 if(gridFundFilter != null)
                 {
-                    BindingSource.Filter = $"BFY = '{GridYearFilter.SelectedItem}' AND FundName = '{gridFundFilter.SelectedItem}'";
+                    if(L7.Checked)
+                        BindingSource.Filter = $"BudgetLevel = '{BudgetLevel[0]}' AND BFY = '{GridYearFilter.SelectedItem}' AND FundName = '{gridFundFilter.SelectedItem}'";
+                    if(L8.Checked)
+                        BindingSource.Filter = $"BudgetLevel = '{BudgetLevel[1]}' AND BFY = '{GridYearFilter.SelectedItem}' AND FundName = '{gridFundFilter.SelectedItem}'";
                     DataTable table;
                     table = ((DataTable)BindingSource.DataSource).AsEnumerable().Where(p => p.Field<decimal>("Amount") > 0).Where(p => p.Field<string>("BFY").Equals(GridYearFilter.SelectedItem.ToString())).Where(p => p.Field<string>("FundName").Equals(gridFundFilter.SelectedItem.ToString())).Select(p => p).CopyToDataTable();
                     lblCount.Text = table.Rows.Count.ToString();
@@ -404,7 +437,10 @@
         {
             try
             {
-                BindingSource.Filter = $"BFY = '{GridYearFilter?.SelectedItem}' AND FundName = '{GridFundFilter?.SelectedItem}' AND BocName = '{GridBocFilter?.SelectedItem}'";
+                if(L7.Checked)
+                    BindingSource.Filter = $"BudgetLevel = '{BudgetLevel[0]}' AND BFY = '{GridYearFilter?.SelectedItem}' AND FundName = '{GridFundFilter?.SelectedItem}' AND BocName = '{GridBocFilter?.SelectedItem}'";
+                if(L8.Checked)
+                    BindingSource.Filter = $"BudgetLevel = '{BudgetLevel[1]}' AND BFY = '{GridYearFilter?.SelectedItem}' AND FundName = '{GridFundFilter?.SelectedItem}' AND BocName = '{GridBocFilter?.SelectedItem}'";
                 DataTable table = ((DataTable)BindingSource.DataSource).AsEnumerable().Where(p => p.Field<decimal>("Amount") > 0).Where(p => p.Field<string>("BFY").Equals(GridYearFilter.SelectedItem.ToString())).Where(p => p.Field<string>("FundName").Equals(GridFundFilter.SelectedItem.ToString())).Where(p => p.Field<string>("BocName").Equals(GridBocFilter.SelectedItem.ToString())).Select(p => p).CopyToDataTable();
                 lblCount.Text = table.Rows.Count.ToString();
                 lblAve.Text = table.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Average().ToString("N");
