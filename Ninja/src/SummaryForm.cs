@@ -326,11 +326,13 @@
                     case Source.FTE:
                         L7.Visible = true;
                         L8.Visible = true;
+                        LevelFilter.Visible = true;
                         break;
 
                     default:
                         L7.Visible = false;
                         L8.Visible = false;
+                        LevelFilter.Visible = false;
                         break;                  
                 }
             }

@@ -451,22 +451,6 @@ namespace BudgetExecution
                         Filter4.Tag = "LastName";
                         break;
 
-                    case Source.Obligations :
-                        label1.Text = "FundName";
-                        PopulateFilterItems(Field.FundName, Table, Filter1, label1);
-                        Filter2.Tag = "BocName";
-                        Filter3.Tag = "ProgramArea";
-                        Filter4.Tag = "DCN";
-                        break;
-
-                    case Source.DivisionObligations :
-                        label1.Text = "DivisionName";
-                        PopulateFilterItems(Field.DivisionName, Table, Filter1, label1);
-                        Filter2.Tag = "FundName";
-                        Filter3.Tag = "BocName";
-                        Filter4.Tag = "DCN";
-                        break;
-
                     case Source.PayrollObligations :
                         label1.Text = "DivisionName";
                         PopulateFilterItems(Field.DivisionName, Table, Filter1, label1);

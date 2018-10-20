@@ -11,7 +11,7 @@ namespace BudgetExecution
         {
         }
 
-        public Obligation(Source source = Source.Obligations, Provider provider = Provider.SQLite)
+        public Obligation(Source source = Source.ProgramObligations, Provider provider = Provider.SQLite)
         {
             Source = source;
             Provider = provider;
@@ -262,7 +262,7 @@ namespace BudgetExecution
             try
             {
                 Insert insert = Info.Insert;
-                insert(Source.Obligations, Provider.SQLite, p);
+                insert(Source.ProgramObligations, Provider.SQLite, p);
             }
             catch(Exception ex)
             {
@@ -275,7 +275,7 @@ namespace BudgetExecution
             try
             {
                 Insert update = Info.Update;
-                update(Source.Obligations, Provider.SQLite, p);
+                update(Source.ProgramObligations, Provider.SQLite, p);
             }
             catch(Exception ex)
             {
@@ -288,7 +288,7 @@ namespace BudgetExecution
             try
             {
                 Insert delete = Info.Delete;
-                delete(Source.Obligations, Provider.SQLite, p);
+                delete(Source.ProgramObligations, Provider.SQLite, p);
             }
             catch(Exception ex)
             {
