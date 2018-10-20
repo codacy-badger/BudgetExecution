@@ -365,6 +365,238 @@
         }
 
         /// <summary>
+        /// The FilterDataGrid
+        /// </summary>
+        private void FilterDataGridYear()
+        {
+            try
+            {
+                Grid.SelectionChanged -= UpdateAccountChart;
+                BindingSource.Filter = $"BFY = '{GridFilter1}'";
+                DataTable table = ((DataTable)BindingSource.DataSource).AsEnumerable()
+                                                           .Where(p => p.Field<decimal>("Amount") > 0)
+                                                           .Where(p => p.Field<string>("BFY").Equals(GridFilter1))
+                                                           .Select(p => p).CopyToDataTable();
+                BindingSource.DataSource = table;
+                lblCount.Text = table.Rows.Count.ToString();
+                lblAve.Text = table.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Average().ToString("N");
+                lblTotal.Text = table.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Sum().ToString("N");
+                lblDev.Text = ((double)table.Compute("StDev(Amount)", "Amount > 0")).ToString("N");
+                lblVar.Text = ((double)table.Compute("Var(Amount)", "Amount > 0")).ToString("N");
+                PopulateGridFundFilterItems();
+                GridFundFilter.Visible = true;
+                if(GridBocFilter.Visible)
+                {
+                    GridBocFilter.Items.Clear();
+                }
+
+                GridGroupBox.Text = $"{Source.ToString()} {GridFilter1}";
+                TransitionChart(table);
+                Grid.SelectionChanged += UpdateAccountChart;
+            }
+            catch(Exception ex)
+            {
+                new Error(ex).ShowDialog();
+            }
+        }
+
+        private void FilterDataGridYear(VisualRadioButton rb)
+        {
+            try
+            {
+                string level = rb.Tag.ToString();
+                Grid.SelectionChanged -= UpdateAccountChart;
+                BindingSource.Filter = $"BudgetLevel = '{level}' AND BFY = '{GridFilter1}'";
+                DataTable table = ((DataTable)BindingSource.DataSource).AsEnumerable()
+                                                           .Where(p => p.Field<decimal>("Amount") > 0)
+                                                           .Where(p => p.Field<string>("BudgetLevel").Equals(level))
+                                                           .Where(p => p.Field<string>("BFY").Equals(GridFilter1))
+                                                           .Select(p => p).CopyToDataTable();
+                BindingSource.DataSource = table;
+                lblCount.Text = table.Rows.Count.ToString();
+                lblAve.Text = table.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Average().ToString("N");
+                lblTotal.Text = table.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Sum().ToString("N");
+                lblDev.Text = ((double)table.Compute("StDev(Amount)", "Amount > 0")).ToString("N");
+                lblVar.Text = ((double)table.Compute("Var(Amount)", "Amount > 0")).ToString("N");
+                PopulateGridFundFilterItems();
+                GridFundFilter.Visible = true;
+                if(GridBocFilter.Visible)
+                {
+                    GridBocFilter.Items.Clear();
+                }
+
+                GridGroupBox.Text = $"{Source.ToString()} Level-{level} {GridFilter1}";
+                TransitionChart(table);
+                Grid.SelectionChanged += UpdateAccountChart;
+            }
+            catch(Exception ex)
+            {
+                new Error(ex).ShowDialog();
+            }
+        }
+        
+        private void FilterDataGridFund()
+        {
+            try
+            {
+                Grid.SelectionChanged -= UpdateAccountChart;
+                DataTable table = new DataTable();
+                BindingSource.Filter = $"BFY = '{GridFilter1}' AND FundName = '{GridFilter2}'";
+                table = ((DataTable)BindingSource.DataSource).AsEnumerable()
+                                                             .Where(p => p.Field<string>("BFY").Equals(GridFilter1))
+                                                             .Where(p => p.Field<string>("FundName").Equals(GridFilter2))
+                                                             .Where(p => p.Field<decimal>("Amount") > 0)
+                                                             .Select(p => p).CopyToDataTable();
+                BindingSource.DataSource = table;
+                lblCount.Text = table.Rows.Count.ToString();
+                lblAve.Text = table.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Average().ToString("N");
+                lblTotal.Text = table.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Sum().ToString("N");
+                if(int.Parse(lblCount.Text) >= 4)
+                {
+                    lblDev.Text = ((double)table.Compute("StDev(Amount)", "Amount > 0")).ToString("N");
+                    lblVar.Text = ((double)table.Compute("Var(Amount)", "Amount > 0")).ToString("N");
+                }
+
+                if(int.Parse(lblCount.Text) < 4)
+                {
+                    lblDev.Text = "NA";
+                    lblVar.Text = "NA";
+                }
+
+                PopulateGridBocFilterItems();
+                GridBocFilter.Visible = true;
+                GridGroupBox.Text = $"{Source.ToString()} {GridFilter1} {GridFilter2}";
+                TransitionChart(table);
+                Grid.SelectionChanged += UpdateAccountChart;
+            }
+            catch(Exception ex)
+            {
+                new Error(ex).ShowDialog();
+            }
+        }
+
+        private void FilterDataGridFund(VisualRadioButton rb)
+        {
+            try
+            {
+                string level = rb.Tag.ToString();
+                Grid.SelectionChanged -= UpdateAccountChart;
+                BindingSource.Filter = $"BudgetLevel = '{level}' AND BFY = '{GridFilter1}' AND FundName = '{GridFilter2}'";
+                DataTable table = ((DataTable)BindingSource.DataSource).AsEnumerable()
+                                                           .Where(p => p.Field<decimal>("Amount") > 0)
+                                                           .Where(p => p.Field<string>("BudgetLevel").Equals(level))
+                                                           .Where(p => p.Field<string>("BFY").Equals(GridFilter1))
+                                                           .Where(p => p.Field<string>("FundName").Equals(GridFilter2))
+                                                           .Select(p => p).CopyToDataTable();
+                BindingSource.DataSource = table;
+                lblCount.Text = table.Rows.Count.ToString();
+                lblAve.Text = table.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Average().ToString("N");
+                lblTotal.Text = table.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Sum().ToString("N");
+                if(int.Parse(lblCount.Text) >= 4)
+                {
+                    lblDev.Text = ((double)table.Compute("StDev(Amount)", "Amount > 0")).ToString("N");
+                    lblVar.Text = ((double)table.Compute("Var(Amount)", "Amount > 0")).ToString("N");
+                }
+
+                if(int.Parse(lblCount.Text) < 4)
+                {
+                    lblDev.Text = "NA";
+                    lblVar.Text = "NA";
+                }
+
+                PopulateGridBocFilterItems();
+                GridBocFilter.Visible = true;
+                GridGroupBox.Text = $"{Source.ToString()} Level-{level} {GridFilter1} {GridFilter2}";
+                TransitionChart(table);
+                Grid.SelectionChanged += UpdateAccountChart;
+            }
+            catch(Exception ex)
+            {
+                new Error(ex).ShowDialog();
+            }
+        }
+        
+        private void FilterDataGridBoc()
+        {
+            try
+            {
+                Grid.SelectionChanged -= UpdateAccountChart;
+                BindingSource.Filter = $"BFY = '{GridFilter1}' AND FundName = '{GridFilter2}' AND BocName = '{GridFilter3}'";
+                DataTable table = new DataTable();
+                table = ((DataTable)BindingSource.DataSource).AsEnumerable()
+                                                            .Where(p => p.Field<string>("BFY").Equals(GridFilter1))
+                                                            .Where(p => p.Field<string>("FundName").Equals(GridFilter2))
+                                                            .Where(p => p.Field<string>("BocName").Equals(GridFilter3))
+                                                            .Where(p => p.Field<decimal>("Amount") > 0)
+                                                            .Select(p => p).CopyToDataTable();
+                BindingSource.DataSource = table;
+                lblCount.Text = table.Rows.Count.ToString();
+                lblAve.Text = table.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Average().ToString("N");
+                lblTotal.Text = table.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Sum().ToString("N");
+
+                if(int.Parse(lblCount.Text) >= 4)
+                {
+                    lblDev.Text = ((double)table.Compute("StDev(Amount)", "Amount > 0")).ToString("N");
+                    lblVar.Text = ((double)table.Compute("Var(Amount)", "Amount > 0")).ToString("N");
+                }
+
+                if(int.Parse(lblCount.Text) < 4)
+                {
+                    lblDev.Text = "NA";
+                    lblVar.Text = "NA";
+                }
+
+                GridGroupBox.Text = $"{Source.ToString()} {GridFilter2} {GridFilter1} {GridFilter3} ";
+                TransitionChart(table);
+                Grid.SelectionChanged += UpdateAccountChart;
+            }
+            catch(Exception ex)
+            {
+                new Error(ex).ShowDialog();
+            }
+        }
+
+        private void FilterDataGridBoc(VisualRadioButton rb)
+        {
+            try
+            {
+                string level = rb.Tag.ToString();
+                Grid.SelectionChanged -= UpdateAccountChart;
+                BindingSource.Filter = $"BFY = '{GridFilter1}' AND BudgetLevel = '{level}' AND FundName = '{GridFilter2}' AND BocName = '{GridFilter3}'";
+                DataTable table = ((DataTable)BindingSource.DataSource).AsEnumerable()
+                                                           .Where(p => p.Field<decimal>("Amount") > 0)
+                                                           .Where(p => p.Field<string>("BudgetLevel").Equals(level))
+                                                           .Where(p => p.Field<string>("BFY").Equals(GridFilter1))
+                                                           .Where(p => p.Field<string>("FundName").Equals(GridFilter2))
+                                                           .Where(p => p.Field<string>("BocName").Equals(GridFilter3))
+                                                           .Select(p => p).CopyToDataTable();
+                BindingSource.DataSource = table;
+                lblCount.Text = table.Rows.Count.ToString();
+                lblAve.Text = table.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Average().ToString("N");
+                lblTotal.Text = table.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Sum().ToString("N");
+                if(int.Parse(lblCount.Text) >= 4)
+                {
+                    lblDev.Text = ((double)table.Compute("StDev(Amount)", "Amount > 0")).ToString("N");
+                    lblVar.Text = ((double)table.Compute("Var(Amount)", "Amount > 0")).ToString("N");
+                }
+
+                if(int.Parse(lblCount.Text) < 4)
+                {
+                    lblDev.Text = "NA";
+                    lblVar.Text = "NA";
+                }
+
+                TransitionChart(table);
+                GridGroupBox.Text = $"{Source.ToString()} Level-{level} {GridFilter1} {GridFilter2} {GridFilter3}";
+                Grid.SelectionChanged += UpdateAccountChart;
+            }
+            catch(Exception ex)
+            {
+                new Error(ex).ShowDialog();
+            }
+        }
+
+        /// <summary>
         /// The GridFilterControl1_ItemSelected
         /// </summary>
         /// <param name="sender">The sender<see cref="object"/></param>
@@ -374,93 +606,21 @@
             try
             {
                 BindingSource.DataSource = Table;
-                string level;
+                GridFilterControl1 = sender as VisualComboBox;
+                GridFilter1 = GridFilterControl1?.SelectedItem.ToString();
                 if(L7.Checked)
                 {
-                    GridFilterControl1 = sender as VisualComboBox;
-                    GridFilter1 = GridFilterControl1?.SelectedItem.ToString();
-                    level = L7.Tag.ToString();
-                    Grid.SelectionChanged -= UpdateAccountChart;
-                    BindingSource.Filter = $"BudgetLevel = '{level}' AND BFY = '{GridFilter1}'";
-                    DataTable table = ((DataTable)BindingSource.DataSource).AsEnumerable()
-                                                               .Where(p => p.Field<decimal>("Amount") > 0)
-                                                               .Where(p => p.Field<string>("BudgetLevel").Equals(level))
-                                                               .Where(p => p.Field<string>("BFY").Equals(GridFilter1))
-                                                               .Select(p => p).CopyToDataTable();
-                    BindingSource.DataSource = table;
-                    lblCount.Text = table.Rows.Count.ToString();
-                    lblAve.Text = table.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Average().ToString("N");
-                    lblTotal.Text = table.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Sum().ToString("N");
-                    lblDev.Text = ((double)table.Compute("StDev(Amount)", "Amount > 0")).ToString("N");
-                    lblVar.Text = ((double)table.Compute("Var(Amount)", "Amount > 0")).ToString("N");
-                    PopulateGridFundFilterItems();
-                    GridFundFilter.Visible = true;
-                    if(GridBocFilter.Visible)
-                    {
-                        GridBocFilter.Items.Clear();
-                    }
-
-                    GridGroupBox.Text = $"{Source.ToString()} Level-{level} {GridFilter1}";
-                    TransitionChart(table);
-                    Grid.SelectionChanged += UpdateAccountChart;
+                    FilterDataGridYear(L7);
                 }
 
                 if(L8.Checked)
                 {
-                    GridFilterControl1 = sender as VisualComboBox;
-                    GridFilter1 = GridFilterControl1?.SelectedItem.ToString();
-                    level = L8.Tag.ToString();
-                    Grid.SelectionChanged -= UpdateAccountChart;
-                    BindingSource.Filter = $"BudgetLevel = '{level}' AND BFY = '{GridFilter1}'";
-                    DataTable table = ((DataTable)BindingSource.DataSource).AsEnumerable()
-                                                               .Where(p => p.Field<decimal>("Amount") > 0)
-                                                               .Where(p => p.Field<string>("BudgetLevel").Equals(level))
-                                                               .Where(p => p.Field<string>("BFY").Equals(GridFilter1))
-                                                               .Select(p => p).CopyToDataTable();
-                    BindingSource.DataSource = table;
-                    lblCount.Text = table.Rows.Count.ToString();
-                    lblAve.Text = table.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Average().ToString("N");
-                    lblTotal.Text = table.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Sum().ToString("N");
-                    lblDev.Text = ((double)table.Compute("StDev(Amount)", "Amount > 0")).ToString("N");
-                    lblVar.Text = ((double)table.Compute("Var(Amount)", "Amount > 0")).ToString("N");
-                    PopulateGridFundFilterItems();
-                    GridFundFilter.Visible = true;
-                    if(GridBocFilter.Visible)
-                    {
-                        GridBocFilter.Items.Clear();
-                    }
-
-                    GridGroupBox.Text = $"{Source.ToString()} Level-{level} {GridFilter1}";
-                    TransitionChart(table);
-                    Grid.SelectionChanged += UpdateAccountChart;
+                    FilterDataGridYear(L8);
                 }
 
                 else
                 {
-                    GridFilterControl1 = sender as VisualComboBox;
-                    GridFilter1 = GridFilterControl1?.SelectedItem.ToString();
-                    Grid.SelectionChanged -= UpdateAccountChart;
-                    BindingSource.Filter = $"BFY = '{GridFilter1}'";
-                    DataTable table = ((DataTable)BindingSource.DataSource).AsEnumerable()
-                                                               .Where(p => p.Field<decimal>("Amount") > 0)
-                                                               .Where(p => p.Field<string>("BFY").Equals(GridFilter1))
-                                                               .Select(p => p).CopyToDataTable();
-                    BindingSource.DataSource = table;
-                    lblCount.Text = table.Rows.Count.ToString();
-                    lblAve.Text = table.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Average().ToString("N");
-                    lblTotal.Text = table.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Sum().ToString("N");
-                    lblDev.Text = ((double)table.Compute("StDev(Amount)", "Amount > 0")).ToString("N");
-                    lblVar.Text = ((double)table.Compute("Var(Amount)", "Amount > 0")).ToString("N");
-                    PopulateGridFundFilterItems();
-                    GridFundFilter.Visible = true;
-                    if(GridBocFilter.Visible)
-                    {
-                        GridBocFilter.Items.Clear();
-                    }
-
-                    GridGroupBox.Text = $"{Source.ToString()} {GridFilter1}";
-                    TransitionChart(table);
-                    Grid.SelectionChanged += UpdateAccountChart;
+                    FilterDataGridYear();
                 }
             }
             catch(Exception ex)
@@ -478,112 +638,21 @@
         {
             try
             {
-                string level;
+                GridFilterControl2 = sender as VisualComboBox;
+                GridFilter2 = GridFilterControl2?.SelectedItem.ToString();
                 if(L7.Checked)
                 {
-                    GridFilterControl2 = sender as VisualComboBox;
-                    GridFilter2 = GridFilterControl2?.SelectedItem.ToString();
-                    level = L7.Tag.ToString();
-                    Grid.SelectionChanged -= UpdateAccountChart;
-                    BindingSource.Filter = $"BudgetLevel = '{level}' AND BFY = '{GridFilter1}' AND FundName = '{GridFilter2}'";
-                    DataTable table = ((DataTable)BindingSource.DataSource).AsEnumerable()
-                                                               .Where(p => p.Field<decimal>("Amount") > 0)
-                                                               .Where(p => p.Field<string>("BudgetLevel").Equals(level))
-                                                               .Where(p => p.Field<string>("BFY").Equals(GridFilter1))
-                                                               .Where(p => p.Field<string>("FundName").Equals(GridFilter2))
-                                                               .Select(p => p).CopyToDataTable();
-                    BindingSource.DataSource = table;
-                    lblCount.Text = table.Rows.Count.ToString();
-                    lblAve.Text = table.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Average().ToString("N");
-                    lblTotal.Text = table.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Sum().ToString("N");
-                    if(int.Parse(lblCount.Text) >= 4)
-                    {
-                        lblDev.Text = ((double)table.Compute("StDev(Amount)", "Amount > 0")).ToString("N");
-                        lblVar.Text = ((double)table.Compute("Var(Amount)", "Amount > 0")).ToString("N");
-                    }
-
-                    if(int.Parse(lblCount.Text) < 4)
-                    {
-                        lblDev.Text = "NA";
-                        lblVar.Text = "NA";
-                    }
-
-                    PopulateGridBocFilterItems();
-                    GridBocFilter.Visible = true;
-                    GridGroupBox.Text = $"{Source.ToString()} Level-{level} {GridFilter1} {GridFilter2}";
-                    TransitionChart(table);
-                    Grid.SelectionChanged += UpdateAccountChart;
+                    FilterDataGridFund(L7);
                 }
 
                 if(L8.Checked)
                 {
-                    GridFilterControl2 = sender as VisualComboBox;
-                    GridFilter2 = GridFilterControl2?.SelectedItem.ToString();
-                    level = L8.Tag.ToString();
-                    Grid.SelectionChanged -= UpdateAccountChart;
-                    BindingSource.Filter = $"BudgetLevel = '{level}' AND BFY = '{GridFilter1}' AND FundName = '{GridFilter2}'";
-                    DataTable table = ((DataTable)BindingSource.DataSource).AsEnumerable()
-                                                               .Where(p => p.Field<decimal>("Amount") > 0)
-                                                               .Where(p => p.Field<string>("BudgetLevel").Equals(level))
-                                                               .Where(p => p.Field<string>("BFY").Equals(GridFilter1))
-                                                               .Where(p => p.Field<string>("FundName").Equals(GridFilter2))
-                                                               .Select(p => p).CopyToDataTable();
-                    BindingSource.DataSource = table;
-                    lblCount.Text = table.Rows.Count.ToString();
-                    lblAve.Text = table.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Average().ToString("N");
-                    lblTotal.Text = table.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Sum().ToString("N");
-                    if(int.Parse(lblCount.Text) >= 4)
-                    {
-                        lblDev.Text = ((double)table.Compute("StDev(Amount)", "Amount > 0")).ToString("N");
-                        lblVar.Text = ((double)table.Compute("Var(Amount)", "Amount > 0")).ToString("N");
-                    }
-
-                    if(int.Parse(lblCount.Text) < 4)
-                    {
-                        lblDev.Text = "NA";
-                        lblVar.Text = "NA";
-                    }
-
-                    PopulateGridBocFilterItems();
-                    GridBocFilter.Visible = true;
-                    GridGroupBox.Text = $"{Source.ToString()} Level-{level} {GridFilter1} {GridFilter2}";
-                    TransitionChart(table);
-                    Grid.SelectionChanged += UpdateAccountChart;
+                    FilterDataGridFund(L8);
                 }
 
                 else
                 {
-                    GridFilterControl2 = sender as VisualComboBox;
-                    GridFilter2 = GridFilterControl2?.SelectedItem.ToString();
-                    Grid.SelectionChanged -= UpdateAccountChart;
-                    DataTable table = new DataTable();
-                    BindingSource.Filter = $"BFY = '{GridFilter1}' AND FundName = '{GridFilter2}'";
-                    table = ((DataTable)BindingSource.DataSource).AsEnumerable()
-                                                                 .Where(p => p.Field<string>("BFY").Equals(GridFilter1))
-                                                                 .Where(p => p.Field<string>("FundName").Equals(GridFilter2))
-                                                                 .Where(p => p.Field<decimal>("Amount") > 0)
-                                                                 .Select(p => p).CopyToDataTable();
-                    BindingSource.DataSource = table;
-                    lblCount.Text = table.Rows.Count.ToString();
-                    lblAve.Text = table.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Average().ToString("N");
-                    lblTotal.Text = table.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Sum().ToString("N");
-                    if(int.Parse(lblCount.Text) >= 4)
-                    {
-                        lblDev.Text = ((double)table.Compute("StDev(Amount)", "Amount > 0")).ToString("N");
-                        lblVar.Text = ((double)table.Compute("Var(Amount)", "Amount > 0")).ToString("N");
-                    }
-
-                    if(int.Parse(lblCount.Text) < 4)
-                    {
-                        lblDev.Text = "NA";
-                        lblVar.Text = "NA";
-                    }
-
-                    PopulateGridBocFilterItems();
-                    GridBocFilter.Visible = true;
-                    GridGroupBox.Text = $"{Source.ToString()} {GridFilter1} {GridFilter2}";
-                    TransitionChart(table);
-                    Grid.SelectionChanged += UpdateAccountChart;
+                    FilterDataGridFund();
                 }
             }
             catch(Exception ex)
@@ -601,124 +670,22 @@
         {
             try
             {
-                string level;
+                GridFilterControl3 = sender as VisualComboBox;
+                GridFilter3 = GridFilterControl3?.SelectedItem.ToString();
                 if(L7.Checked)
                 {
-                    GridFilterControl3 = sender as VisualComboBox;
-                    GridFilter3 = GridFilterControl3?.SelectedItem.ToString();
-                    level = L7.Tag.ToString();
-                    Grid.SelectionChanged -= UpdateAccountChart;
-                    BindingSource.Filter = $"BFY = '{GridFilter1}' AND BudgetLevel = '{level}' AND FundName = '{GridFilter2}' AND BocName = '{GridFilter3}'";
-                    DataTable table = ((DataTable)BindingSource.DataSource).AsEnumerable()
-                                                               .Where(p => p.Field<decimal>("Amount") > 0)
-                                                               .Where(p => p.Field<string>("BudgetLevel").Equals(level))
-                                                               .Where(p => p.Field<string>("BFY").Equals(GridFilter1))
-                                                               .Where(p => p.Field<string>("FundName").Equals(GridFilter2))
-                                                               .Select(p => p).CopyToDataTable();
-                    BindingSource.DataSource = table;
-                    lblCount.Text = table.Rows.Count.ToString();
-                    lblAve.Text = table.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Average().ToString("N");
-                    lblTotal.Text = table.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Sum().ToString("N");
-                    if(int.Parse(lblCount.Text) >= 4)
-                    {
-                        lblDev.Text = ((double)table.Compute("StDev(Amount)", "Amount > 0")).ToString("N");
-                        lblVar.Text = ((double)table.Compute("Var(Amount)", "Amount > 0")).ToString("N");
-                    }
+                    FilterDataGridBoc(L7);
+                }
 
-                    if(int.Parse(lblCount.Text) < 4)
-                    {
-                        lblDev.Text = "NA";
-                        lblVar.Text = "NA";
-                    }
-
-                    TransitionChart(table);
-                    GridGroupBox.Text = $"{Source.ToString()} Level-{level} {GridFilter1} {GridFilter2} {GridFilter3}";
-                    Grid.SelectionChanged += UpdateAccountChart;
-                }              
-                
                 if(L8.Checked)
                 {
-                    GridFilterControl3 = sender as VisualComboBox;
-                    GridFilter3 = GridFilterControl3?.SelectedItem.ToString();
-                    level = L8.Tag.ToString();
-                    Grid.SelectionChanged -= UpdateAccountChart;
-                    BindingSource.Filter = $"BFY = '{GridFilter1}' AND BudgetLevel = '{level}' AND FundName = '{GridFilter2}' AND BocName = '{GridFilter3}'";
-                    DataTable table = ((DataTable)BindingSource.DataSource).AsEnumerable()
-                                                               .Where(p => p.Field<decimal>("Amount") > 0)
-                                                               .Where(p => p.Field<string>("BudgetLevel").Equals(level))
-                                                               .Where(p => p.Field<string>("BFY").Equals(GridFilter1))
-                                                               .Where(p => p.Field<string>("FundName").Equals(GridFilter2))
-                                                               .Select(p => p).CopyToDataTable();
-                    BindingSource.DataSource = table;
-                    lblCount.Text = table.Rows.Count.ToString();
-                    lblAve.Text = table.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Average().ToString("N");
-                    lblTotal.Text = table.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Sum().ToString("N");
-                    if(int.Parse(lblCount.Text) >= 4)
-                    {
-                        lblDev.Text = ((double)table.Compute("StDev(Amount)", "Amount > 0")).ToString("N");
-                        lblVar.Text = ((double)table.Compute("Var(Amount)", "Amount > 0")).ToString("N");
-                    }
-
-                    if(int.Parse(lblCount.Text) < 4)
-                    {
-                        lblDev.Text = "NA";
-                        lblVar.Text = "NA";
-                    }
-
-                    TransitionChart(table);
-                    GridGroupBox.Text = $"{Source.ToString()} Level-{level} {GridFilter1} {GridFilter2} {GridFilter3}";
-                    Grid.SelectionChanged += UpdateAccountChart;
+                    FilterDataGridBoc(L8);
                 }
 
                 else
                 {
-                    GridFilterControl3 = sender as VisualComboBox;
-                    GridFilter3 = GridFilterControl3?.SelectedItem.ToString();
-                    Grid.SelectionChanged -= UpdateAccountChart;
-                    BindingSource.Filter = $"BFY = '{GridFilter1}' AND FundName = '{GridFilter2}' AND BocName = '{GridFilter3}'";
-                    DataTable table = new DataTable();
-                    table = ((DataTable)BindingSource.DataSource).AsEnumerable()
-                                                                .Where(p => p.Field<string>("BFY").Equals(GridFilter1))
-                                                                .Where(p => p.Field<string>("FundName").Equals(GridFilter2))
-                                                                .Where(p => p.Field<string>("BocName").Equals(GridFilter3))
-                                                                .Where(p => p.Field<decimal>("Amount") > 0)
-                                                                .Select(p => p).CopyToDataTable();
-                    BindingSource.DataSource = table;
-                    lblCount.Text = table.Rows.Count.ToString();
-                    lblAve.Text = table.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Average().ToString("N");
-                    lblTotal.Text = table.AsEnumerable().Select(p => p.Field<decimal>("Amount")).Sum().ToString("N");
-
-                    if(int.Parse(lblCount.Text) >= 4)
-                    {
-                        lblDev.Text = ((double)table.Compute("StDev(Amount)", "Amount > 0")).ToString("N");
-                        lblVar.Text = ((double)table.Compute("Var(Amount)", "Amount > 0")).ToString("N");
-                    }
-
-                    if(int.Parse(lblCount.Text) < 4)
-                    {
-                        lblDev.Text = "NA";
-                        lblVar.Text = "NA";
-                    }
-
-                    GridGroupBox.Text = $"{Source.ToString()} {GridFilter2} {GridFilter1} {GridFilter3} ";
-                    TransitionChart(table);
-                    Grid.SelectionChanged += UpdateAccountChart;
+                    FilterDataGridBoc();
                 }
-            }
-            catch(Exception ex)
-            {
-                new Error(ex).ShowDialog();
-            }
-        }
-
-        /// <summary>
-        /// The FilterDataGrid
-        /// </summary>
-        private void FilterDataGrid()
-        {
-            try
-            {
-                BindingSource.Filter = $"FundName = '{GridFundFilter.SelectedItem}'";
             }
             catch(Exception ex)
             {
