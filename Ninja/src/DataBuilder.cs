@@ -152,7 +152,7 @@ namespace BudgetExecution
                 DataSet ds = new DataSet("R06");
                 ds.DataSetName = "R06";
                 DataTable dt = new DataTable();
-                dt.TableName = Source.PRC.ToString();
+                dt.TableName = Source.ToString();
                 ds.Tables.Add(dt);
                 Query.DataAdapter.Fill(ds, dt.TableName);
                 return dt;
@@ -461,7 +461,7 @@ namespace BudgetExecution
         {
             try
             {
-                if(table.GetFields().Contains(column))
+                if(table.GetColumnNames().Contains(column))
                 {
                     return table.AsEnumerable().Select(p => p.Field<string>(column)).Distinct().ToArray();
                 }
@@ -485,7 +485,7 @@ namespace BudgetExecution
         {
             try
             {
-                if(table.GetFields().Contains(column.ToString()))
+                if(table.GetColumnNames().Contains(column.ToString()))
                 {
                     return table.AsEnumerable().Select(p => p.Field<string>(column.ToString())).Distinct().ToArray();
                 }
@@ -580,13 +580,7 @@ namespace BudgetExecution
                                      .Select(p => p.Field<decimal>("Amount"))
                                      .Sum();
                     case Source.ProgramObligations:
-                        return table.AsEnumerable()
-                                     .Select(p => p.Field<decimal>("Obligations"))
-                                     .Sum();
                     case Source.TravelObligations:
-                        return table.AsEnumerable()
-                                     .Select(p => p.Field<decimal>("Obligations"))
-                                     .Sum();
                     case Source.PayrollObligations:
                         return table.AsEnumerable()
                                      .Select(p => p.Field<decimal>("Obligations"))
@@ -613,7 +607,7 @@ namespace BudgetExecution
             {
                 try
                 {
-                    return table.GetFields();
+                    return table.GetColumnNames();
                 }
                 catch(SystemException ex)
                 {

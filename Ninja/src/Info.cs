@@ -27,9 +27,9 @@ namespace BudgetExecution
 
         public static string[] ActivityCodes =
         {
-            "1",
-            "2",
-            "3",
+            "01",
+            "02",
+            "03",
             "P1",
             "P3",
             "P8",
@@ -46,11 +46,11 @@ namespace BudgetExecution
             "54",
             "55",
             "56",
-            "4",
-            "5",
-            "6",
-            "8",
-            "9",
+            "04",
+            "05",
+            "06",
+            "08",
+            "09",
             "10",
             "11",
             "12",
@@ -730,14 +730,14 @@ namespace BudgetExecution
         {
             "6MD | MANAGEMENT DIVISION | 06C",
             "6MM | MULTIMEDIA DIVISION | 06J",
-            "6EN | COMPLIANCE & ENFORCEMENT DIVISION | 06M",
-            "6RC | OFFICE OF REGIONAL COUNSEL | 06D",
+            "6EN | ENFORCEMENT DIVISION | 06M",
+            "6RC | REGIONAL COUNSEL | 06D",
             "6SF | SUPERFUND DIVISION | 06L",
-            "6RA | OFFICE OF THE REGIONAL ADMINISTRATOR | 06A",
-            "6EJ | ENVIRONMENTAL JUSTICE & TRIBAL AFFAIRS DIVISION | 06F",
-            "6XA | THE OFFICE OF EXTERNAL AFFAIRS | 06X",
-            "6WQ | WATER QUALITY DIVISION | 06K",
-            "6WSA | WORKFORCE SUPPORT ACCOUNT | 06N",
+            "6RA | REGIONAL ADMINISTRATOR | 06A",
+            "6EJ | ENVIRONMENTAL JUSTICE | 06F",
+            "6XA | EXTERNAL AFFAIRS | 06X",
+            "6WQ | WATER DIVISION | 06K",
+            "6WSA | WORKFORCE SUPPORT | 06N",
             "6WCF | WORKING CAPITAL FUND | 06G"
         };
 
@@ -992,14 +992,16 @@ namespace BudgetExecution
 
         public static Dictionary<string, string[]> GetProgramElements(DataTable table, string column)
         {
-            if(table != null && table.Columns.Contains(column))
+            if(table != null && table.GetColumnNames().Contains(column))
             {
                 try
                 {
                     Dictionary<string, string[]> data = new Dictionary<string, string[]>();
                     foreach(DataColumn dc in table.Columns)
                     {
-                        if(dc.ColumnName.Equals("ID") || dc.ColumnName.Equals("Amount") || dc.ColumnName.Contains("Obligation") || dc.ColumnName.Contains("Commitment"))
+                        if(dc.ColumnName.Equals("ID") || dc.ColumnName.Equals("Amount") ||
+                           dc.ColumnName.Contains("Obligation") || dc.ColumnName.Contains("Commitment") ||
+                           dc.ColumnName.Contains("ULO"))
                         {
                             continue;
                         }
@@ -1029,40 +1031,42 @@ namespace BudgetExecution
             return null;
         }
 
-        public static Dictionary<string, Source> SourceTitleDictionary()
+        public static Dictionary<string, Source> SourceDictionary()
         {
             try
             {
                 Dictionary<string, Source> d = new Dictionary<string, Source>();
                 d.Add("Programs", Source.Accounts);
                 d.Add("Reprogrammings", Source.Transfers);
-                d.Add("Level-7", Source.RegionalAccounts);
-                d.Add("Level-8", Source.DivisionAccounts);
+                d.Add("PRC Level-7", Source.RegionalAccounts);
+                d.Add("PRC Level-8", Source.DivisionAccounts);
                 d.Add("R6 PRC", Source.PRC);
                 d.Add("Division Details", Source.Divisions);
                 d.Add("Employee Leave", Source.Employees);
-                d.Add("Appropriations", Source.Funds);
-                d.Add("Obligations", Source.Obligations);
-                d.Add("Compensation and Benefits", Source.PayrollObligations);
+                d.Add("Treasury Fund Data", Source.Funds);
+                d.Add("Programmatic Obligations", Source.ProgramObligations);
+                d.Add("Payroll Obligations", Source.PayrollObligations);
+                d.Add("Travel Obligations", Source.TravelObligations);
+                d.Add("Compensation & Benefits", Source.Benefits);
                 d.Add("EPM Appropriation", Source.EPM);
                 d.Add("Oil Spill", Source.OIL);
                 d.Add("Superfund Appropriation", Source.SUPERFUND);
+                d.Add("Superfund Extramural Allocation", Source.SF6A);
                 d.Add("Underground Storage Tanks", Source.LUST);
                 d.Add("STAG Appropriation", Source.STAG);
-                d.Add("PayrollObligation", Source.PAYROLL);
-                d.Add("FTE", Source.FTE);
-                d.Add("Travel", Source.TRAVEL);
-                d.Add("Expenses", Source.EXPENSES);
-                d.Add("Contracts", Source.CONTRACTS);
-                d.Add("WCF", Source.WCF);
-                d.Add("Grants", Source.GRANTS);
+                d.Add("Payroll Allocation", Source.PAYROLL);
+                d.Add("FTE Allocation", Source.FTE);
+                d.Add("Travel Allocation", Source.TRAVEL);
+                d.Add("Expense Allocation", Source.EXPENSES);
+                d.Add("Contracts Allocation", Source.CONTRACTS);
+                d.Add("Grants Allocation", Source.GRANTS);
                 d.Add("Regional Administrator", Source.RA);
                 d.Add("External Affairs", Source.XA);
                 d.Add("Environmental Justice", Source.EJ);
                 d.Add("Regional Counsel", Source.RC);
                 d.Add("Enforcement Division", Source.EN);
                 d.Add("Superfund Division", Source.SF);
-                d.Add("Multi-Media Division", Source.MM);
+                d.Add("MultiMedia Division", Source.MM);
                 d.Add("Management Division", Source.MD);
                 d.Add("Water Quality Division", Source.WQ);
                 d.Add("Workforce Support", Source.WSA);
@@ -1170,7 +1174,7 @@ namespace BudgetExecution
                     return"SF RECOVERIES";
 
                 case"TR" :
-                    return"SF REIMB.";
+                    return"SF REIMB";
 
                 case"TR1" :
                     return"SF SSC";
@@ -1292,7 +1296,7 @@ namespace BudgetExecution
                     return"SF FED SPECIAL ACCT";
 
                 case"TR2B" :
-                    return"SF NONFED SPECIAL ACCT";
+                    return"SF NON-FED SPECIAL ACCT";
 
                 case"F" :
                     return"UNDERGROUND STORAGE TANKS";
@@ -1304,16 +1308,16 @@ namespace BudgetExecution
                     return"UNDERGROUND STORAGE TANKS RECOVERIES";
 
                 case"H" :
-                    return"OIL SPILL TRUSTFUND";
+                    return"OIL SPILL TRUST FUND";
 
                 case"HC" :
-                    return"OIL SPILL TRUSTFUND CARRYOVER";
+                    return"OIL SPILL TRUST FUND CARRYOVER";
 
                 case"HD" :
-                    return"OIL SPILL TRUSTFUND RECOVERIES";
+                    return"OIL SPILL TRUST FUND RECOVERIES";
 
                 case"HR" :
-                    return"OIL SPILL TRUSTFUND REIMB";
+                    return"OIL SPILL TRUST FUND REIMB";
 
                 case"E1" :
                     return"STAG CATEGORICAL GRANTS";
@@ -1464,7 +1468,7 @@ namespace BudgetExecution
             }
         }
 
-        public static string[] GetFields(this DataTable table)
+        public static string[] GetColumnNames(this DataTable table)
         {
             try
             {
@@ -1684,42 +1688,6 @@ namespace BudgetExecution
             {
                 new Error(ex).ShowDialog();
                 return null;
-            }
-        }
-
-        public static bool IsChildOf(this DataRow child, DataRow parent)
-        {
-            try
-            {
-                if(child["BudgetLevel"].ToString().Equals("8") && child["BFY"].ToString().Equals(parent["BFY"].ToString()) && child["Fund"].ToString().Equals(parent["Fund"].ToString()) && child["Code"].ToString().Equals(parent["Code"].ToString()) && child["BOC"].ToString().Equals(parent["BOC"].ToString()))
-                {
-                    return true;
-                }
-
-                return false;
-            }
-            catch(Exception ex)
-            {
-                new Error(ex).ShowDialog();
-                return false;
-            }
-        }
-
-        public static bool IsParentOf(this DataRow parent, DataRow child)
-        {
-            try
-            {
-                if(parent["BudgetLevel"].ToString().Equals("7") && parent["BFY"].ToString().Equals(child["BFY"].ToString()) && parent["Fund"].ToString().Equals(child["Fund"].ToString()) && parent["Code"].ToString().Equals(child["Code"].ToString()) && parent["BOC"].ToString().Equals(child["BOC"].ToString()))
-                {
-                    return true;
-                }
-
-                return false;
-            }
-            catch(Exception ex)
-            {
-                new Error(ex).ShowDialog();
-                return false;
             }
         }
     }

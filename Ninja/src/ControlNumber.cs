@@ -339,7 +339,7 @@ namespace BudgetExecution
         {
             try
             {
-                return Table.GetFields();
+                return Table.GetColumnNames();
             }
             catch(Exception ex)
             {

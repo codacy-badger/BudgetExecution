@@ -189,10 +189,7 @@ namespace BudgetExecution
             this.L7 = new VisualPlus.Toolkit.Controls.Interactivity.VisualRadioButton();
             this.visualGroupBox5 = new VisualPlus.Toolkit.Controls.Layout.VisualGroupBox();
             this.GridYearFilter = new VisualPlus.Toolkit.Controls.Interactivity.VisualComboBox();
-            this.lblBoc = new System.Windows.Forms.Label();
             this.GridBocFilter = new VisualPlus.Toolkit.Controls.Interactivity.VisualComboBox();
-            this.lblFund = new System.Windows.Forms.Label();
-            this.lblYear = new System.Windows.Forms.Label();
             this.GridFundFilter = new VisualPlus.Toolkit.Controls.Interactivity.VisualComboBox();
             this.visualGroupBox3 = new VisualPlus.Toolkit.Controls.Layout.VisualGroupBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -1109,6 +1106,7 @@ namespace BudgetExecution
             this.AllocationTab.Tag = "BocName";
             this.AllocationTab.Text = "Authority";
             this.AllocationTab.ThemesEnabled = false;
+            this.AllocationTab.Click += new System.EventHandler(this.AllocationTab_Click);
             // 
             // PrimaryFilter
             // 
@@ -1149,7 +1147,7 @@ namespace BudgetExecution
             "Division",
             "ProgramArea",
             "ProgramProjectCode"});
-            this.PrimaryFilter.Location = new System.Drawing.Point(1525, 69);
+            this.PrimaryFilter.Location = new System.Drawing.Point(1524, 143);
             this.PrimaryFilter.MenuItemHover = System.Drawing.Color.SteelBlue;
             this.PrimaryFilter.MenuItemNormal = System.Drawing.Color.Black;
             this.PrimaryFilter.MenuTextColor = System.Drawing.Color.LightSteelBlue;
@@ -1189,7 +1187,7 @@ namespace BudgetExecution
             this.BocExpander2.Controls.Add(this.label36);
             this.BocExpander2.ExpandedHeight = 298;
             this.BocExpander2.IsExpanded = false;
-            this.BocExpander2.Location = new System.Drawing.Point(1501, 469);
+            this.BocExpander2.Location = new System.Drawing.Point(1501, 484);
             this.BocExpander2.Name = "BocExpander2";
             this.BocExpander2.Size = new System.Drawing.Size(230, 37);
             this.BocExpander2.TabIndex = 109;
@@ -1345,10 +1343,10 @@ namespace BudgetExecution
             this.BocExpander1.Controls.Add(this.label6);
             this.BocExpander1.Controls.Add(this.BocFilter1);
             this.BocExpander1.ExpandedHeight = 245;
-            this.BocExpander1.IsExpanded = false;
-            this.BocExpander1.Location = new System.Drawing.Point(1501, 163);
+            this.BocExpander1.IsExpanded = true;
+            this.BocExpander1.Location = new System.Drawing.Point(1501, 221);
             this.BocExpander1.Name = "BocExpander1";
-            this.BocExpander1.Size = new System.Drawing.Size(230, 37);
+            this.BocExpander1.Size = new System.Drawing.Size(230, 245);
             this.BocExpander1.TabIndex = 108;
             this.BocExpander1.Text = "Chart Configuration";
             this.BocExpander1.UseAnimation = true;
@@ -1757,6 +1755,7 @@ namespace BudgetExecution
             this.L8.Name = "L8";
             this.L8.Size = new System.Drawing.Size(92, 29);
             this.L8.TabIndex = 178;
+            this.L8.Tag = "8";
             this.L8.Text = "Level 8";
             this.L8.TextSize = new System.Drawing.Size(57, 24);
             textStyle6.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
@@ -1764,6 +1763,7 @@ namespace BudgetExecution
             textStyle6.Hover = System.Drawing.Color.Empty;
             textStyle6.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
             this.L8.TextStyle = textStyle6;
+            this.L8.Click += new System.EventHandler(this.L8_OnClicked);
             // 
             // L7
             // 
@@ -1781,7 +1781,6 @@ namespace BudgetExecution
             this.L7.BoxColorState.Hover = System.Drawing.Color.SteelBlue;
             this.L7.BoxColorState.Pressed = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.L7.BoxSpacing = 2;
-            this.L7.Checked = true;
             this.L7.CheckStyle.AutoSize = true;
             this.L7.CheckStyle.Bounds = new System.Drawing.Rectangle(0, 0, 8, 8);
             this.L7.CheckStyle.Character = '✔';
@@ -1801,6 +1800,7 @@ namespace BudgetExecution
             this.L7.Name = "L7";
             this.L7.Size = new System.Drawing.Size(91, 29);
             this.L7.TabIndex = 177;
+            this.L7.Tag = "7";
             this.L7.Text = "Level 7";
             this.L7.TextSize = new System.Drawing.Size(57, 24);
             textStyle7.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
@@ -1808,6 +1808,7 @@ namespace BudgetExecution
             textStyle7.Hover = System.Drawing.Color.Empty;
             textStyle7.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
             this.L7.TextStyle = textStyle7;
+            this.L7.Click += new System.EventHandler(this.L7_OnClicked);
             // 
             // visualGroupBox5
             // 
@@ -1823,10 +1824,7 @@ namespace BudgetExecution
             this.visualGroupBox5.Border.Visible = true;
             this.visualGroupBox5.BoxStyle = VisualPlus.Toolkit.Controls.Layout.VisualGroupBox.GroupBoxStyle.Default;
             this.visualGroupBox5.Controls.Add(this.GridYearFilter);
-            this.visualGroupBox5.Controls.Add(this.lblBoc);
             this.visualGroupBox5.Controls.Add(this.GridBocFilter);
-            this.visualGroupBox5.Controls.Add(this.lblFund);
-            this.visualGroupBox5.Controls.Add(this.lblYear);
             this.visualGroupBox5.Controls.Add(this.GridFundFilter);
             this.visualGroupBox5.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
             this.visualGroupBox5.ForeColor = System.Drawing.Color.LightSteelBlue;
@@ -1909,18 +1907,6 @@ namespace BudgetExecution
             this.GridYearFilter.SelectedIndexChanged += new System.EventHandler(this.GridFilterControl1_ItemSelected);
             this.GridYearFilter.SelectedValueChanged += new System.EventHandler(this.GridFilterControl1_ItemSelected);
             // 
-            // lblBoc
-            // 
-            this.lblBoc.AutoSize = true;
-            this.lblBoc.BackColor = System.Drawing.Color.Transparent;
-            this.lblBoc.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBoc.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.lblBoc.Location = new System.Drawing.Point(10, 221);
-            this.lblBoc.Name = "lblBoc";
-            this.lblBoc.Size = new System.Drawing.Size(41, 21);
-            this.lblBoc.TabIndex = 6;
-            this.lblBoc.Text = "BOC";
-            // 
             // GridBocFilter
             // 
             this.GridBocFilter.BackColor = System.Drawing.Color.Transparent;
@@ -1950,7 +1936,7 @@ namespace BudgetExecution
             this.GridBocFilter.IntegralHeight = false;
             this.GridBocFilter.ItemHeight = 24;
             this.GridBocFilter.ItemImageVisible = true;
-            this.GridBocFilter.Location = new System.Drawing.Point(8, 255);
+            this.GridBocFilter.Location = new System.Drawing.Point(8, 212);
             this.GridBocFilter.MenuItemHover = System.Drawing.Color.SteelBlue;
             this.GridBocFilter.MenuItemNormal = System.Drawing.Color.Black;
             this.GridBocFilter.MenuTextColor = System.Drawing.Color.LightSteelBlue;
@@ -1979,31 +1965,6 @@ namespace BudgetExecution
             this.GridBocFilter.Watermark.Visible = false;
             this.GridBocFilter.SelectedIndexChanged += new System.EventHandler(this.GridFilterControl3_ItemSelected);
             this.GridBocFilter.SelectedValueChanged += new System.EventHandler(this.GridFilterControl3_ItemSelected);
-            // 
-            // lblFund
-            // 
-            this.lblFund.AutoSize = true;
-            this.lblFund.BackColor = System.Drawing.Color.Transparent;
-            this.lblFund.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFund.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.lblFund.Location = new System.Drawing.Point(10, 134);
-            this.lblFund.Name = "lblFund";
-            this.lblFund.Size = new System.Drawing.Size(107, 21);
-            this.lblFund.TabIndex = 5;
-            this.lblFund.Text = "Appropriation";
-            // 
-            // lblYear
-            // 
-            this.lblYear.AutoSize = true;
-            this.lblYear.BackColor = System.Drawing.Color.Transparent;
-            this.lblYear.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblYear.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.lblYear.Location = new System.Drawing.Point(19, 50);
-            this.lblYear.Name = "lblYear";
-            this.lblYear.Size = new System.Drawing.Size(40, 21);
-            this.lblYear.TabIndex = 7;
-            this.lblYear.Text = "Year";
-            this.lblYear.Click += new System.EventHandler(this.LblPrc_Click);
             // 
             // GridFundFilter
             // 
@@ -2034,7 +1995,7 @@ namespace BudgetExecution
             this.GridFundFilter.IntegralHeight = false;
             this.GridFundFilter.ItemHeight = 24;
             this.GridFundFilter.ItemImageVisible = true;
-            this.GridFundFilter.Location = new System.Drawing.Point(8, 167);
+            this.GridFundFilter.Location = new System.Drawing.Point(8, 145);
             this.GridFundFilter.MenuItemHover = System.Drawing.Color.SteelBlue;
             this.GridFundFilter.MenuItemNormal = System.Drawing.Color.Black;
             this.GridFundFilter.MenuTextColor = System.Drawing.Color.LightSteelBlue;
@@ -2296,7 +2257,7 @@ namespace BudgetExecution
             this.Grid.BackgroundColor = System.Drawing.Color.LightSteelBlue;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.SteelBlue;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
@@ -2380,7 +2341,7 @@ namespace BudgetExecution
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 104F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 109F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 114F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 109F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 111F));
             this.tableLayoutPanel2.Controls.Add(this.DatabaseSearchButton, 7, 0);
             this.tableLayoutPanel2.Controls.Add(this.button6, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.button7, 1, 0);
@@ -2406,10 +2367,10 @@ namespace BudgetExecution
             this.DatabaseSearchButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.DatabaseSearchButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.DatabaseSearchButton.Image = ((System.Drawing.Image)(resources.GetObject("DatabaseSearchButton.Image")));
-            this.DatabaseSearchButton.Location = new System.Drawing.Point(781, 5);
+            this.DatabaseSearchButton.Location = new System.Drawing.Point(779, 5);
             this.DatabaseSearchButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.DatabaseSearchButton.Name = "DatabaseSearchButton";
-            this.DatabaseSearchButton.Size = new System.Drawing.Size(102, 57);
+            this.DatabaseSearchButton.Size = new System.Drawing.Size(104, 57);
             this.DatabaseSearchButton.TabIndex = 169;
             this.DatabaseSearchButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.metroSetToolTip1.SetToolTip(this.DatabaseSearchButton, "Search Database");
@@ -2428,7 +2389,7 @@ namespace BudgetExecution
             this.button6.Location = new System.Drawing.Point(4, 5);
             this.button6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(104, 57);
+            this.button6.Size = new System.Drawing.Size(103, 57);
             this.button6.TabIndex = 162;
             this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.metroSetToolTip1.SetToolTip(this.button6, "Previous Account");
@@ -2444,10 +2405,10 @@ namespace BudgetExecution
             this.button7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button7.Image = ((System.Drawing.Image)(resources.GetObject("button7.Image")));
-            this.button7.Location = new System.Drawing.Point(116, 5);
+            this.button7.Location = new System.Drawing.Point(115, 5);
             this.button7.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(91, 57);
+            this.button7.Size = new System.Drawing.Size(90, 57);
             this.button7.TabIndex = 163;
             this.button7.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.metroSetToolTip1.SetToolTip(this.button7, "Next Account");
@@ -2464,7 +2425,7 @@ namespace BudgetExecution
             this.GridRefreshButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.GridRefreshButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.GridRefreshButton.Image = ((System.Drawing.Image)(resources.GetObject("GridRefreshButton.Image")));
-            this.GridRefreshButton.Location = new System.Drawing.Point(215, 5);
+            this.GridRefreshButton.Location = new System.Drawing.Point(213, 5);
             this.GridRefreshButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.GridRefreshButton.Name = "GridRefreshButton";
             this.GridRefreshButton.Size = new System.Drawing.Size(102, 57);
@@ -2483,7 +2444,7 @@ namespace BudgetExecution
             this.ChartButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.ChartButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ChartButton.Image = ((System.Drawing.Image)(resources.GetObject("ChartButton.Image")));
-            this.ChartButton.Location = new System.Drawing.Point(667, 5);
+            this.ChartButton.Location = new System.Drawing.Point(665, 5);
             this.ChartButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ChartButton.Name = "ChartButton";
             this.ChartButton.Size = new System.Drawing.Size(106, 57);
@@ -2503,7 +2464,7 @@ namespace BudgetExecution
             this.EditButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.EditButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.EditButton.Image = ((System.Drawing.Image)(resources.GetObject("EditButton.Image")));
-            this.EditButton.Location = new System.Drawing.Point(325, 5);
+            this.EditButton.Location = new System.Drawing.Point(323, 5);
             this.EditButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.EditButton.Name = "EditButton";
             this.EditButton.Size = new System.Drawing.Size(121, 57);
@@ -2524,7 +2485,7 @@ namespace BudgetExecution
             this.AddButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.AddButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AddButton.Image = ((System.Drawing.Image)(resources.GetObject("AddButton.Image")));
-            this.AddButton.Location = new System.Drawing.Point(454, 5);
+            this.AddButton.Location = new System.Drawing.Point(452, 5);
             this.AddButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.AddButton.Name = "AddButton";
             this.AddButton.Size = new System.Drawing.Size(96, 57);
@@ -2543,7 +2504,7 @@ namespace BudgetExecution
             this.CopyButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.CopyButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CopyButton.Image = ((System.Drawing.Image)(resources.GetObject("CopyButton.Image")));
-            this.CopyButton.Location = new System.Drawing.Point(558, 5);
+            this.CopyButton.Location = new System.Drawing.Point(556, 5);
             this.CopyButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.CopyButton.Name = "CopyButton";
             this.CopyButton.Size = new System.Drawing.Size(101, 57);
@@ -2598,7 +2559,7 @@ namespace BudgetExecution
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 45.9854F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 54.0146F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 118F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 154F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 156F));
             this.tableLayoutPanel3.Controls.Add(this.button4, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.button5, 1, 0);
             this.tableLayoutPanel3.Controls.Add(this.button3, 3, 0);
@@ -2620,7 +2581,7 @@ namespace BudgetExecution
             this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
             this.button4.Location = new System.Drawing.Point(3, 3);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(86, 56);
+            this.button4.Size = new System.Drawing.Size(85, 56);
             this.button4.TabIndex = 159;
             this.metroSetToolTip1.SetToolTip(this.button4, "Previous Account");
             this.button4.UseVisualStyleBackColor = false;
@@ -2634,9 +2595,9 @@ namespace BudgetExecution
             this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
-            this.button5.Location = new System.Drawing.Point(95, 3);
+            this.button5.Location = new System.Drawing.Point(94, 3);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(102, 56);
+            this.button5.Size = new System.Drawing.Size(101, 56);
             this.button5.TabIndex = 160;
             this.metroSetToolTip1.SetToolTip(this.button5, "Next Account");
             this.button5.UseVisualStyleBackColor = false;
@@ -2651,9 +2612,9 @@ namespace BudgetExecution
             this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.Location = new System.Drawing.Point(321, 3);
+            this.button3.Location = new System.Drawing.Point(319, 3);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(149, 56);
+            this.button3.Size = new System.Drawing.Size(151, 56);
             this.button3.TabIndex = 158;
             this.metroSetToolTip1.SetToolTip(this.button3, "Remove Account");
             this.button3.UseVisualStyleBackColor = false;
@@ -2667,7 +2628,7 @@ namespace BudgetExecution
             this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(203, 3);
+            this.button1.Location = new System.Drawing.Point(201, 3);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(112, 56);
             this.button1.TabIndex = 157;
@@ -2703,7 +2664,7 @@ namespace BudgetExecution
             this.AccountTabControl.ImageOffset = 1;
             this.AccountTabControl.InactiveTabColor = System.Drawing.Color.Black;
             this.AccountTabControl.InActiveTabForeColor = System.Drawing.Color.Black;
-            this.AccountTabControl.ItemSize = new System.Drawing.Size(150, 30);
+            this.AccountTabControl.ItemSize = new System.Drawing.Size(150, 40);
             this.AccountTabControl.LevelTextAndImage = true;
             this.AccountTabControl.Location = new System.Drawing.Point(12, 18);
             this.AccountTabControl.Name = "AccountTabControl";
@@ -2724,10 +2685,10 @@ namespace BudgetExecution
             this.GraphTab.Controls.Add(this.AccountChart);
             this.GraphTab.Image = null;
             this.GraphTab.ImageSize = new System.Drawing.Size(20, 20);
-            this.GraphTab.Location = new System.Drawing.Point(0, 32);
+            this.GraphTab.Location = new System.Drawing.Point(0, 42);
             this.GraphTab.Name = "GraphTab";
             this.GraphTab.ShowCloseButton = true;
-            this.GraphTab.Size = new System.Drawing.Size(528, 459);
+            this.GraphTab.Size = new System.Drawing.Size(528, 449);
             this.GraphTab.TabBackColor = System.Drawing.Color.Black;
             this.GraphTab.TabIndex = 2;
             this.GraphTab.Text = "Account Graph";
@@ -2843,7 +2804,7 @@ namespace BudgetExecution
             this.AccountChart.Series3D = true;
             this.AccountChart.SeriesHighlight = true;
             this.AccountChart.ShadowColor = new Syncfusion.Drawing.BrushInfo(Syncfusion.Drawing.GradientStyle.PathRectangle, System.Drawing.SystemColors.WindowText, System.Drawing.Color.Silver);
-            this.AccountChart.Size = new System.Drawing.Size(528, 459);
+            this.AccountChart.Size = new System.Drawing.Size(528, 449);
             this.AccountChart.Spacing = 5F;
             this.AccountChart.SpacingBetweenPoints = 5F;
             this.AccountChart.Style3D = true;
@@ -2893,10 +2854,10 @@ namespace BudgetExecution
             this.EditTab.ForeColor = System.Drawing.Color.LightSteelBlue;
             this.EditTab.Image = null;
             this.EditTab.ImageSize = new System.Drawing.Size(20, 20);
-            this.EditTab.Location = new System.Drawing.Point(0, 32);
+            this.EditTab.Location = new System.Drawing.Point(0, 42);
             this.EditTab.Name = "EditTab";
             this.EditTab.ShowCloseButton = true;
-            this.EditTab.Size = new System.Drawing.Size(528, 459);
+            this.EditTab.Size = new System.Drawing.Size(528, 449);
             this.EditTab.TabBackColor = System.Drawing.Color.Transparent;
             this.EditTab.TabForeColor = System.Drawing.Color.LightSkyBlue;
             this.EditTab.TabIndex = 4;
@@ -2907,7 +2868,7 @@ namespace BudgetExecution
             // 
             this.visualLabel11.Font = new System.Drawing.Font("Segoe UI", 8.25F);
             this.visualLabel11.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.visualLabel11.Location = new System.Drawing.Point(256, 131);
+            this.visualLabel11.Location = new System.Drawing.Point(160, 132);
             this.visualLabel11.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
             this.visualLabel11.Name = "visualLabel11";
             this.visualLabel11.Orientation = System.Windows.Forms.Orientation.Horizontal;
@@ -2944,7 +2905,7 @@ namespace BudgetExecution
             this.UpdateOrg.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.UpdateOrg.Image = null;
             this.UpdateOrg.Lines = null;
-            this.UpdateOrg.Location = new System.Drawing.Point(245, 160);
+            this.UpdateOrg.Location = new System.Drawing.Point(147, 161);
             this.UpdateOrg.MaxLength = 32767;
             this.UpdateOrg.Multiline = false;
             this.UpdateOrg.Name = "UpdateOrg";
@@ -3019,7 +2980,7 @@ namespace BudgetExecution
             // 
             this.visualLabel8.Font = new System.Drawing.Font("Segoe UI", 8.25F);
             this.visualLabel8.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.visualLabel8.Location = new System.Drawing.Point(147, 225);
+            this.visualLabel8.Location = new System.Drawing.Point(38, 225);
             this.visualLabel8.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
             this.visualLabel8.Name = "visualLabel8";
             this.visualLabel8.Orientation = System.Windows.Forms.Orientation.Horizontal;
@@ -3047,7 +3008,7 @@ namespace BudgetExecution
             // 
             this.visualLabel7.Font = new System.Drawing.Font("Segoe UI", 8.25F);
             this.visualLabel7.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.visualLabel7.Location = new System.Drawing.Point(3, 221);
+            this.visualLabel7.Location = new System.Drawing.Point(409, 123);
             this.visualLabel7.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
             this.visualLabel7.Name = "visualLabel7";
             this.visualLabel7.Orientation = System.Windows.Forms.Orientation.Horizontal;
@@ -3060,7 +3021,7 @@ namespace BudgetExecution
             this.visualLabel7.ShadowDirection = 315;
             this.visualLabel7.ShadowLocation = new System.Drawing.Point(0, 0);
             this.visualLabel7.ShadowOpacity = 100;
-            this.visualLabel7.Size = new System.Drawing.Size(115, 32);
+            this.visualLabel7.Size = new System.Drawing.Size(62, 32);
             this.visualLabel7.TabIndex = 170;
             this.visualLabel7.Text = "BOC";
             this.visualLabel7.TextAlignment = System.Drawing.StringAlignment.Center;
@@ -3075,7 +3036,7 @@ namespace BudgetExecution
             // 
             this.visualLabel6.Font = new System.Drawing.Font("Segoe UI", 8.25F);
             this.visualLabel6.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.visualLabel6.Location = new System.Drawing.Point(356, 131);
+            this.visualLabel6.Location = new System.Drawing.Point(299, 131);
             this.visualLabel6.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
             this.visualLabel6.Name = "visualLabel6";
             this.visualLabel6.Orientation = System.Windows.Forms.Orientation.Horizontal;
@@ -3088,7 +3049,7 @@ namespace BudgetExecution
             this.visualLabel6.ShadowDirection = 315;
             this.visualLabel6.ShadowLocation = new System.Drawing.Point(0, 0);
             this.visualLabel6.ShadowOpacity = 100;
-            this.visualLabel6.Size = new System.Drawing.Size(115, 23);
+            this.visualLabel6.Size = new System.Drawing.Size(62, 23);
             this.visualLabel6.TabIndex = 169;
             this.visualLabel6.Text = "RC";
             this.visualLabel6.TextAlignment = System.Drawing.StringAlignment.Center;
@@ -3103,7 +3064,7 @@ namespace BudgetExecution
             // 
             this.visualLabel5.Font = new System.Drawing.Font("Segoe UI", 8.25F);
             this.visualLabel5.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.visualLabel5.Location = new System.Drawing.Point(136, 122);
+            this.visualLabel5.Location = new System.Drawing.Point(38, 122);
             this.visualLabel5.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
             this.visualLabel5.Name = "visualLabel5";
             this.visualLabel5.Orientation = System.Windows.Forms.Orientation.Horizontal;
@@ -3131,7 +3092,7 @@ namespace BudgetExecution
             // 
             this.visualLabel4.Font = new System.Drawing.Font("Segoe UI", 8.25F);
             this.visualLabel4.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.visualLabel4.Location = new System.Drawing.Point(3, 122);
+            this.visualLabel4.Location = new System.Drawing.Point(356, 28);
             this.visualLabel4.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
             this.visualLabel4.Name = "visualLabel4";
             this.visualLabel4.Orientation = System.Windows.Forms.Orientation.Horizontal;
@@ -3159,7 +3120,7 @@ namespace BudgetExecution
             // 
             this.visualLabel3.Font = new System.Drawing.Font("Segoe UI", 8.25F);
             this.visualLabel3.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.visualLabel3.Location = new System.Drawing.Point(356, 28);
+            this.visualLabel3.Location = new System.Drawing.Point(222, 28);
             this.visualLabel3.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
             this.visualLabel3.Name = "visualLabel3";
             this.visualLabel3.Orientation = System.Windows.Forms.Orientation.Horizontal;
@@ -3187,7 +3148,7 @@ namespace BudgetExecution
             // 
             this.visualLabel2.Font = new System.Drawing.Font("Segoe UI", 8.25F);
             this.visualLabel2.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.visualLabel2.Location = new System.Drawing.Point(177, 24);
+            this.visualLabel2.Location = new System.Drawing.Point(127, 24);
             this.visualLabel2.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
             this.visualLabel2.Name = "visualLabel2";
             this.visualLabel2.Orientation = System.Windows.Forms.Orientation.Horizontal;
@@ -3200,9 +3161,9 @@ namespace BudgetExecution
             this.visualLabel2.ShadowDirection = 315;
             this.visualLabel2.ShadowLocation = new System.Drawing.Point(0, 0);
             this.visualLabel2.ShadowOpacity = 100;
-            this.visualLabel2.Size = new System.Drawing.Size(115, 32);
+            this.visualLabel2.Size = new System.Drawing.Size(62, 32);
             this.visualLabel2.TabIndex = 165;
-            this.visualLabel2.Text = "Budget Level";
+            this.visualLabel2.Text = "Level";
             this.visualLabel2.TextAlignment = System.Drawing.StringAlignment.Center;
             this.visualLabel2.TextLineAlignment = System.Drawing.StringAlignment.Center;
             textStyle25.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
@@ -3269,7 +3230,7 @@ namespace BudgetExecution
             this.UpdateBudgetLevel.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.UpdateBudgetLevel.Image = null;
             this.UpdateBudgetLevel.Lines = null;
-            this.UpdateBudgetLevel.Location = new System.Drawing.Point(200, 66);
+            this.UpdateBudgetLevel.Location = new System.Drawing.Point(136, 66);
             this.UpdateBudgetLevel.MaxLength = 32767;
             this.UpdateBudgetLevel.Multiline = false;
             this.UpdateBudgetLevel.Name = "UpdateBudgetLevel";
@@ -3382,12 +3343,12 @@ namespace BudgetExecution
             this.UpdateCode.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.UpdateCode.Image = null;
             this.UpdateCode.Lines = null;
-            this.UpdateCode.Location = new System.Drawing.Point(127, 263);
+            this.UpdateCode.Location = new System.Drawing.Point(38, 263);
             this.UpdateCode.MaxLength = 32767;
             this.UpdateCode.Multiline = false;
             this.UpdateCode.Name = "UpdateCode";
             this.UpdateCode.ReadOnly = false;
-            this.UpdateCode.Size = new System.Drawing.Size(165, 40);
+            this.UpdateCode.Size = new System.Drawing.Size(194, 40);
             this.UpdateCode.Style = MetroSet_UI.Design.Style.Dark;
             this.UpdateCode.StyleManager = null;
             this.UpdateCode.TabIndex = 135;
@@ -3410,7 +3371,7 @@ namespace BudgetExecution
             this.UpdateBOC.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.UpdateBOC.Image = null;
             this.UpdateBOC.Lines = null;
-            this.UpdateBOC.Location = new System.Drawing.Point(33, 263);
+            this.UpdateBOC.Location = new System.Drawing.Point(409, 160);
             this.UpdateBOC.MaxLength = 32767;
             this.UpdateBOC.Multiline = false;
             this.UpdateBOC.Name = "UpdateBOC";
@@ -3438,7 +3399,7 @@ namespace BudgetExecution
             this.UpdateRC.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.UpdateRC.Image = null;
             this.UpdateRC.Lines = null;
-            this.UpdateRC.Location = new System.Drawing.Point(390, 160);
+            this.UpdateRC.Location = new System.Drawing.Point(299, 160);
             this.UpdateRC.MaxLength = 32767;
             this.UpdateRC.Multiline = false;
             this.UpdateRC.Name = "UpdateRC";
@@ -3466,7 +3427,7 @@ namespace BudgetExecution
             this.UpdateFund.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.UpdateFund.Image = null;
             this.UpdateFund.Lines = null;
-            this.UpdateFund.Location = new System.Drawing.Point(29, 160);
+            this.UpdateFund.Location = new System.Drawing.Point(377, 66);
             this.UpdateFund.MaxLength = 32767;
             this.UpdateFund.Multiline = false;
             this.UpdateFund.Name = "UpdateFund";
@@ -3494,7 +3455,7 @@ namespace BudgetExecution
             this.UpdateBFY.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.UpdateBFY.Image = null;
             this.UpdateBFY.Lines = null;
-            this.UpdateBFY.Location = new System.Drawing.Point(359, 66);
+            this.UpdateBFY.Location = new System.Drawing.Point(238, 66);
             this.UpdateBFY.MaxLength = 32767;
             this.UpdateBFY.Multiline = false;
             this.UpdateBFY.Name = "UpdateBFY";
@@ -3522,7 +3483,7 @@ namespace BudgetExecution
             this.UpdateAH.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(177)))), ((int)(((byte)(225)))));
             this.UpdateAH.Image = null;
             this.UpdateAH.Lines = null;
-            this.UpdateAH.Location = new System.Drawing.Point(136, 160);
+            this.UpdateAH.Location = new System.Drawing.Point(35, 160);
             this.UpdateAH.MaxLength = 32767;
             this.UpdateAH.Multiline = false;
             this.UpdateAH.Name = "UpdateAH";
@@ -3560,10 +3521,10 @@ namespace BudgetExecution
             this.AddTab.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.AddTab.Image = null;
             this.AddTab.ImageSize = new System.Drawing.Size(16, 16);
-            this.AddTab.Location = new System.Drawing.Point(0, 32);
+            this.AddTab.Location = new System.Drawing.Point(0, 42);
             this.AddTab.Name = "AddTab";
             this.AddTab.ShowCloseButton = true;
-            this.AddTab.Size = new System.Drawing.Size(528, 459);
+            this.AddTab.Size = new System.Drawing.Size(528, 449);
             this.AddTab.TabIndex = 5;
             this.AddTab.Text = "Add Account";
             this.AddTab.ThemesEnabled = false;
@@ -4505,7 +4466,6 @@ namespace BudgetExecution
             this.DatabaseTab.ResumeLayout(false);
             this.GridGroupBox.ResumeLayout(false);
             this.visualGroupBox5.ResumeLayout(false);
-            this.visualGroupBox5.PerformLayout();
             this.visualGroupBox3.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
@@ -4610,9 +4570,6 @@ namespace BudgetExecution
         private Label lblAve;
         private Label label40;
         private Label lblCount;
-        private Label lblYear;
-        private Label lblBoc;
-        private Label lblFund;
         private Button button7;
         private Button button6;
         private TableLayoutPanel tableLayoutPanel2;

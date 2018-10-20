@@ -368,7 +368,7 @@ namespace BudgetExecution
                 int cct = table.Columns.Count;
                 int rct = table.Rows.Count;
                 DataRow row = table.Rows[0];
-                string[] col = table.GetFields();
+                string[] col = table.GetColumnNames();
                 object[] val = row.ItemArray;
                 Dictionary<string, object> param = new Dictionary<string, object>();
                 for(int i = 0; i < cct; i++)

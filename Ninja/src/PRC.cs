@@ -17,6 +17,7 @@ namespace BudgetExecution
             Source = source;
             Provider = provider;
             DbData = new DataBuilder(source, provider);
+            Allocation = DbData.Records;
             DbRow = DbData.Table.Rows[0];
             ID = int.Parse(DbRow["ID"].ToString());
             BudgetLevel = DbRow["BudgetLevel"].ToString();
@@ -30,7 +31,7 @@ namespace BudgetExecution
             Account = new Account(Fund.Code, DbRow["Code"].ToString());
             Code = Account.Code;
             Amount = decimal.Parse(DbRow["Amount"].ToString());
-            Parameter = GetDataFields();
+            Parameter = GetDataDictionary();
             ProgramProjectCode = Account.ProgramProjectCode;
             ProgramProjectName = Account.ProgramProjectName;
             ProgramArea = Account.ProgramArea;
@@ -59,9 +60,7 @@ namespace BudgetExecution
             Account = new Account(Source.Accounts, Provider.SQLite, Fund.Code, DbRow["Code"].ToString());
             Code = Account.Code;
             BOC = new BOC(DbRow["BOC"].ToString());
-            Parameter = GetDataFields();
             Amount = decimal.Parse(DbRow["Amount"].ToString());
-            Parameter = GetDataFields();
             ProgramProjectCode = Account.ProgramProjectCode;
             ProgramProjectName = Account.ProgramProjectName;
             ProgramArea = Account.ProgramArea;
@@ -75,20 +74,20 @@ namespace BudgetExecution
 
         public PRC(int id, string bl, string rpio, string bfy, string fund, string ah, string org, string rc, string code, string boc, decimal amount)
         {
-            BudgetLevel = bl;
             ID = id;
+            BudgetLevel = bl;
             RPIO = rpio;
-            AH = ah;
             BFY = bfy;
             Fund = new Fund(Source.Funds, Provider.SQLite, fund, bfy);
+            AH = ah;
             RC = new RC(rc);
             Org = new Org(org);
             Account = new Account(Source.Accounts, Provider.SQLite, Fund.Code, code);
             Code = Account.Code;
             BOC = new BOC(boc, amount);
-            Parameter = GetDataFields();
+            Parameter = GetDataDictionary();
             Amount = amount;
-            Parameter = GetDataFields();
+            Parameter = GetDataDictionary();
             ProgramProjectCode = Account.ProgramProjectCode;
             ProgramProjectName = Account.ProgramProjectName;
             ProgramArea = Account.ProgramArea;
@@ -113,9 +112,9 @@ namespace BudgetExecution
             Account = new Account(Source.Accounts, Provider.SQLite, Fund.Code, row["Code"].ToString());
             Code = Account.Code;
             BOC = new BOC(row["BOC"].ToString());
-            Parameter = GetDataFields();
+            Parameter = GetDataDictionary();
             Amount = decimal.Parse(row["Amount"].ToString());
-            Parameter = GetDataFields();
+            Parameter = GetDataDictionary();
             ProgramProjectCode = Account.ProgramProjectCode;
             ProgramProjectName = Account.ProgramProjectName;
             ProgramArea = Account.ProgramArea;
@@ -133,6 +132,8 @@ namespace BudgetExecution
         public Provider Provider { get; }
 
         public DataBuilder DbData { get; }
+
+        public DataRow[] Allocation { get; }
 
         public DataRow DbRow { get; }
 
@@ -220,12 +221,11 @@ namespace BudgetExecution
 
         public BOC BOC { get; }
 
-        internal Dictionary<string, object> GetDataFields()
+        internal Dictionary<string, object> GetDataDictionary()
         {
             try
             {
-                Dictionary<string, object> param = new Dictionary<string, object> { ["ID"] = ID, ["BudgetLevel"] = BudgetLevel, ["RPIO"] = RPIO, ["BFY"] = BFY, ["Fund"] = Fund.Code, ["RC"] = RC, ["BOC"] = BOC.Code, ["Code"] = Account.Code };
-                return param;
+                return new Dictionary<string, object> { ["ID"] = ID, ["BudgetLevel"] = BudgetLevel, ["RPIO"] = RPIO, ["BFY"] = BFY, ["Fund"] = Fund.Code, ["AH"] = AH, ["Org"] = Org, ["RC"] = RC, ["BOC"] = BOC.Code, ["Code"] = Account.Code };                
             }
             catch(Exception ex)
             {
@@ -234,11 +234,11 @@ namespace BudgetExecution
             }
         }
 
-        internal DataRow GetData(Source source, Provider provider, Dictionary<string, object> param)
+        internal DataRow GetData(Dictionary<string, object> param)
         {
             try
             {
-                return new DataBuilder(source, provider, param).Table.AsEnumerable().Select(p => p).First();
+                return new DataBuilder(Source, Provider, param).Table.AsEnumerable().Select(p => p).First();
             }
             catch(Exception ex)
             {

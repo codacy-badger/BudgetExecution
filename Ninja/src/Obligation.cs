@@ -127,7 +127,7 @@ namespace BudgetExecution
             {
                 try
                 {
-                    return table.GetFields();
+                    return table.GetColumnNames();
                 }
                 catch(SystemException ex)
                 {
