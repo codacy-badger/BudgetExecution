@@ -1801,13 +1801,25 @@
                 new Error(ex).ShowDialog();
             }
         }
+
         /// <summary>
         /// The AccountChart_Click
         /// </summary>
         /// <param name="sender">The sender<see cref="object"/></param>
         /// <param name="e">The e<see cref="EventArgs"/></param>
-        private void AccountChart_Click(object sender, EventArgs e)
+        private void ChartButton_OnClick(object sender, EventArgs e)
         {
+            try
+            {
+                AccountTabControl.SelectedTab = GraphTab;
+                GraphTab.Visible = true;
+                EditTab.Visible = false;
+                AddTab.Visible = false;
+            }
+            catch(Exception ex)
+            {
+                new Error(ex).ShowDialog();
+            }
         }
 
         /// <summary>

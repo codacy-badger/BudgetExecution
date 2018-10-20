@@ -68,15 +68,15 @@ namespace BudgetExecution
             Syncfusion.Windows.Forms.Chart.ChartToolBarSeries3DItem chartToolBarSeries3DItem2 = new Syncfusion.Windows.Forms.Chart.ChartToolBarSeries3DItem();
             Syncfusion.Windows.Forms.Chart.ChartToolBarShowLegendItem chartToolBarShowLegendItem2 = new Syncfusion.Windows.Forms.Chart.ChartToolBarShowLegendItem();
             VisualPlus.Structure.TextStyle textStyle15 = new VisualPlus.Structure.TextStyle();
-            VisualPlus.Structure.TextStyle textStyle9 = new VisualPlus.Structure.TextStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SummaryForm));
             VisualPlus.Structure.TextStyle textStyle6 = new VisualPlus.Structure.TextStyle();
             VisualPlus.Structure.TextStyle textStyle7 = new VisualPlus.Structure.TextStyle();
-            VisualPlus.Structure.TextStyle textStyle8 = new VisualPlus.Structure.TextStyle();
-            VisualPlus.Structure.TextStyle textStyle10 = new VisualPlus.Structure.TextStyle();
-            VisualPlus.Structure.TextStyle textStyle13 = new VisualPlus.Structure.TextStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SummaryForm));
             VisualPlus.Structure.TextStyle textStyle11 = new VisualPlus.Structure.TextStyle();
+            VisualPlus.Structure.TextStyle textStyle8 = new VisualPlus.Structure.TextStyle();
+            VisualPlus.Structure.TextStyle textStyle9 = new VisualPlus.Structure.TextStyle();
+            VisualPlus.Structure.TextStyle textStyle10 = new VisualPlus.Structure.TextStyle();
             VisualPlus.Structure.TextStyle textStyle12 = new VisualPlus.Structure.TextStyle();
+            VisualPlus.Structure.TextStyle textStyle13 = new VisualPlus.Structure.TextStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -185,6 +185,8 @@ namespace BudgetExecution
             this.SummaryTabControl = new Syncfusion.Windows.Forms.Tools.TabControlAdv();
             this.DatabaseTab = new Syncfusion.Windows.Forms.Tools.TabPageAdv();
             this.GridGroupBox = new VisualPlus.Toolkit.Controls.Layout.VisualGroupBox();
+            this.L8 = new VisualPlus.Toolkit.Controls.Interactivity.VisualRadioButton();
+            this.L7 = new VisualPlus.Toolkit.Controls.Interactivity.VisualRadioButton();
             this.visualGroupBox5 = new VisualPlus.Toolkit.Controls.Layout.VisualGroupBox();
             this.GridYearFilter = new VisualPlus.Toolkit.Controls.Interactivity.VisualComboBox();
             this.lblBoc = new System.Windows.Forms.Label();
@@ -203,16 +205,15 @@ namespace BudgetExecution
             this.label34 = new System.Windows.Forms.Label();
             this.lblAve = new System.Windows.Forms.Label();
             this.visualGroupBox4 = new VisualPlus.Toolkit.Controls.Layout.VisualGroupBox();
-            this.L8 = new VisualPlus.Toolkit.Controls.Interactivity.VisualRadioButton();
-            this.L7 = new VisualPlus.Toolkit.Controls.Interactivity.VisualRadioButton();
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
             this.Grid = new System.Windows.Forms.DataGridView();
             this.visualGroupBox2 = new VisualPlus.Toolkit.Controls.Layout.VisualGroupBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.DatabaseSearchButton = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.GridRefreshButton = new System.Windows.Forms.Button();
-            this.DatabaseSearchButton = new System.Windows.Forms.Button();
+            this.ChartButton = new System.Windows.Forms.Button();
             this.EditButton = new System.Windows.Forms.Button();
             this.AddButton = new System.Windows.Forms.Button();
             this.CopyButton = new System.Windows.Forms.Button();
@@ -1099,6 +1100,7 @@ namespace BudgetExecution
             this.AllocationTab.ImageSize = new System.Drawing.Size(16, 16);
             this.AllocationTab.Location = new System.Drawing.Point(0, 32);
             this.AllocationTab.Name = "AllocationTab";
+            this.AllocationTab.Padding = new System.Windows.Forms.Padding(1);
             this.AllocationTab.ShowCloseButton = true;
             this.AllocationTab.Size = new System.Drawing.Size(1788, 971);
             this.AllocationTab.TabBackColor = System.Drawing.Color.Black;
@@ -1187,7 +1189,7 @@ namespace BudgetExecution
             this.BocExpander2.Controls.Add(this.label36);
             this.BocExpander2.ExpandedHeight = 298;
             this.BocExpander2.IsExpanded = false;
-            this.BocExpander2.Location = new System.Drawing.Point(1502, 468);
+            this.BocExpander2.Location = new System.Drawing.Point(1501, 469);
             this.BocExpander2.Name = "BocExpander2";
             this.BocExpander2.Size = new System.Drawing.Size(230, 37);
             this.BocExpander2.TabIndex = 109;
@@ -1344,7 +1346,7 @@ namespace BudgetExecution
             this.BocExpander1.Controls.Add(this.BocFilter1);
             this.BocExpander1.ExpandedHeight = 245;
             this.BocExpander1.IsExpanded = false;
-            this.BocExpander1.Location = new System.Drawing.Point(1502, 162);
+            this.BocExpander1.Location = new System.Drawing.Point(1501, 163);
             this.BocExpander1.Name = "BocExpander1";
             this.BocExpander1.Size = new System.Drawing.Size(230, 37);
             this.BocExpander1.TabIndex = 108;
@@ -1646,6 +1648,7 @@ namespace BudgetExecution
             this.SummaryTabControl.InactiveTabColor = System.Drawing.Color.Black;
             this.SummaryTabControl.InActiveTabForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.SummaryTabControl.ItemSize = new System.Drawing.Size(150, 30);
+            this.SummaryTabControl.LevelTextAndImage = true;
             this.SummaryTabControl.Location = new System.Drawing.Point(0, 0);
             this.SummaryTabControl.Name = "SummaryTabControl";
             this.SummaryTabControl.Padding = new System.Drawing.Point(15, 3);
@@ -1662,21 +1665,20 @@ namespace BudgetExecution
             // DatabaseTab
             // 
             this.DatabaseTab.BackColor = System.Drawing.Color.Black;
+            this.DatabaseTab.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.DatabaseTab.Controls.Add(this.GridGroupBox);
             this.DatabaseTab.Controls.Add(this.visualGroupBox1);
             this.DatabaseTab.Image = null;
-            this.DatabaseTab.ImageSize = new System.Drawing.Size(20, 20);
+            this.DatabaseTab.ImageSize = new System.Drawing.Size(16, 16);
             this.DatabaseTab.Location = new System.Drawing.Point(0, 32);
-            this.DatabaseTab.MaximumSize = new System.Drawing.Size(1900, 1000);
-            this.DatabaseTab.MinimumSize = new System.Drawing.Size(1900, 1000);
             this.DatabaseTab.Name = "DatabaseTab";
-            this.DatabaseTab.Padding = new System.Windows.Forms.Padding(2);
+            this.DatabaseTab.Padding = new System.Windows.Forms.Padding(1);
             this.DatabaseTab.ShowCloseButton = true;
             this.DatabaseTab.Size = new System.Drawing.Size(1788, 971);
             this.DatabaseTab.TabBackColor = System.Drawing.Color.Black;
             this.DatabaseTab.TabIndex = 9;
             this.DatabaseTab.Tag = "Database";
-            this.DatabaseTab.Text = "Account Manager";
+            this.DatabaseTab.Text = "Database";
             this.DatabaseTab.ThemesEnabled = false;
             // 
             // GridGroupBox
@@ -1692,6 +1694,8 @@ namespace BudgetExecution
             this.GridGroupBox.Border.Type = VisualPlus.Enumerators.ShapeType.Rounded;
             this.GridGroupBox.Border.Visible = true;
             this.GridGroupBox.BoxStyle = VisualPlus.Toolkit.Controls.Layout.VisualGroupBox.GroupBoxStyle.Default;
+            this.GridGroupBox.Controls.Add(this.L8);
+            this.GridGroupBox.Controls.Add(this.L7);
             this.GridGroupBox.Controls.Add(this.visualGroupBox5);
             this.GridGroupBox.Controls.Add(this.visualGroupBox3);
             this.GridGroupBox.Controls.Add(this.visualGroupBox4);
@@ -1717,6 +1721,93 @@ namespace BudgetExecution
             textStyle15.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
             this.GridGroupBox.TextStyle = textStyle15;
             this.GridGroupBox.TitleBoxHeight = 35;
+            // 
+            // L8
+            // 
+            this.L8.BackColor = System.Drawing.Color.Transparent;
+            this.L8.Border.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+            this.L8.Border.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
+            this.L8.Border.HoverVisible = true;
+            this.L8.Border.Rounding = 12;
+            this.L8.Border.Thickness = 1;
+            this.L8.Border.Type = VisualPlus.Enumerators.ShapeType.Rounded;
+            this.L8.Border.Visible = true;
+            this.L8.Box = new System.Drawing.Size(14, 10);
+            this.L8.BoxColorState.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.L8.BoxColorState.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
+            this.L8.BoxColorState.Hover = System.Drawing.Color.SteelBlue;
+            this.L8.BoxColorState.Pressed = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.L8.BoxSpacing = 2;
+            this.L8.CheckStyle.AutoSize = true;
+            this.L8.CheckStyle.Bounds = new System.Drawing.Rectangle(0, 0, 8, 8);
+            this.L8.CheckStyle.Character = '✔';
+            this.L8.CheckStyle.CheckColor = System.Drawing.SystemColors.Highlight;
+            this.L8.CheckStyle.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.L8.CheckStyle.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
+            this.L8.CheckStyle.ShapeRounding = 6;
+            this.L8.CheckStyle.ShapeType = VisualPlus.Enumerators.ShapeType.Rounded;
+            this.L8.CheckStyle.Style = VisualPlus.Structure.CheckStyle.CheckType.Shape;
+            this.L8.CheckStyle.Thickness = 2F;
+            this.L8.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.L8.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.L8.ForeColor = System.Drawing.Color.LightSteelBlue;
+            this.L8.IsBoxLarger = false;
+            this.L8.Location = new System.Drawing.Point(1066, 3);
+            this.L8.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
+            this.L8.Name = "L8";
+            this.L8.Size = new System.Drawing.Size(92, 29);
+            this.L8.TabIndex = 178;
+            this.L8.Text = "Level 8";
+            this.L8.TextSize = new System.Drawing.Size(57, 24);
+            textStyle6.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
+            textStyle6.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            textStyle6.Hover = System.Drawing.Color.Empty;
+            textStyle6.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.L8.TextStyle = textStyle6;
+            // 
+            // L7
+            // 
+            this.L7.BackColor = System.Drawing.Color.Transparent;
+            this.L7.Border.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+            this.L7.Border.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
+            this.L7.Border.HoverVisible = true;
+            this.L7.Border.Rounding = 12;
+            this.L7.Border.Thickness = 1;
+            this.L7.Border.Type = VisualPlus.Enumerators.ShapeType.Rounded;
+            this.L7.Border.Visible = true;
+            this.L7.Box = new System.Drawing.Size(14, 10);
+            this.L7.BoxColorState.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.L7.BoxColorState.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
+            this.L7.BoxColorState.Hover = System.Drawing.Color.SteelBlue;
+            this.L7.BoxColorState.Pressed = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.L7.BoxSpacing = 2;
+            this.L7.Checked = true;
+            this.L7.CheckStyle.AutoSize = true;
+            this.L7.CheckStyle.Bounds = new System.Drawing.Rectangle(0, 0, 8, 8);
+            this.L7.CheckStyle.Character = '✔';
+            this.L7.CheckStyle.CheckColor = System.Drawing.SystemColors.Highlight;
+            this.L7.CheckStyle.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.L7.CheckStyle.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image1")));
+            this.L7.CheckStyle.ShapeRounding = 6;
+            this.L7.CheckStyle.ShapeType = VisualPlus.Enumerators.ShapeType.Rounded;
+            this.L7.CheckStyle.Style = VisualPlus.Structure.CheckStyle.CheckType.Shape;
+            this.L7.CheckStyle.Thickness = 2F;
+            this.L7.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.L7.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.L7.ForeColor = System.Drawing.Color.LightSteelBlue;
+            this.L7.IsBoxLarger = false;
+            this.L7.Location = new System.Drawing.Point(954, 3);
+            this.L7.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
+            this.L7.Name = "L7";
+            this.L7.Size = new System.Drawing.Size(91, 29);
+            this.L7.TabIndex = 177;
+            this.L7.Text = "Level 7";
+            this.L7.TextSize = new System.Drawing.Size(57, 24);
+            textStyle7.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
+            textStyle7.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            textStyle7.Hover = System.Drawing.Color.Empty;
+            textStyle7.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.L7.TextStyle = textStyle7;
             // 
             // visualGroupBox5
             // 
@@ -1752,11 +1843,11 @@ namespace BudgetExecution
             this.visualGroupBox5.TextAlignment = System.Drawing.StringAlignment.Center;
             this.visualGroupBox5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.visualGroupBox5.TextLineAlignment = System.Drawing.StringAlignment.Center;
-            textStyle9.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-            textStyle9.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            textStyle9.Hover = System.Drawing.Color.Empty;
-            textStyle9.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            this.visualGroupBox5.TextStyle = textStyle9;
+            textStyle11.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
+            textStyle11.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            textStyle11.Hover = System.Drawing.Color.Empty;
+            textStyle11.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.visualGroupBox5.TextStyle = textStyle11;
             this.visualGroupBox5.TitleBoxHeight = 25;
             // 
             // GridYearFilter
@@ -1805,11 +1896,11 @@ namespace BudgetExecution
             this.GridYearFilter.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.GridYearFilter.TextLineAlignment = System.Drawing.StringAlignment.Center;
             this.GridYearFilter.TextRendering = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            textStyle6.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-            textStyle6.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            textStyle6.Hover = System.Drawing.Color.Empty;
-            textStyle6.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            this.GridYearFilter.TextStyle = textStyle6;
+            textStyle8.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
+            textStyle8.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            textStyle8.Hover = System.Drawing.Color.Empty;
+            textStyle8.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.GridYearFilter.TextStyle = textStyle8;
             this.GridYearFilter.Watermark.ActiveColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.GridYearFilter.Watermark.Font = new System.Drawing.Font("Segoe UI", 8.25F);
             this.GridYearFilter.Watermark.InactiveColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(211)))), ((int)(((byte)(211)))));
@@ -1876,11 +1967,11 @@ namespace BudgetExecution
             this.GridBocFilter.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.GridBocFilter.TextLineAlignment = System.Drawing.StringAlignment.Center;
             this.GridBocFilter.TextRendering = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            textStyle7.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-            textStyle7.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            textStyle7.Hover = System.Drawing.Color.Empty;
-            textStyle7.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            this.GridBocFilter.TextStyle = textStyle7;
+            textStyle9.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
+            textStyle9.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            textStyle9.Hover = System.Drawing.Color.Empty;
+            textStyle9.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.GridBocFilter.TextStyle = textStyle9;
             this.GridBocFilter.Watermark.ActiveColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.GridBocFilter.Watermark.Font = new System.Drawing.Font("Segoe UI", 8.25F);
             this.GridBocFilter.Watermark.InactiveColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(211)))), ((int)(((byte)(211)))));
@@ -1960,11 +2051,11 @@ namespace BudgetExecution
             this.GridFundFilter.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.GridFundFilter.TextLineAlignment = System.Drawing.StringAlignment.Center;
             this.GridFundFilter.TextRendering = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            textStyle8.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-            textStyle8.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            textStyle8.Hover = System.Drawing.Color.Empty;
-            textStyle8.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            this.GridFundFilter.TextStyle = textStyle8;
+            textStyle10.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
+            textStyle10.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            textStyle10.Hover = System.Drawing.Color.Empty;
+            textStyle10.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.GridFundFilter.TextStyle = textStyle10;
             this.GridFundFilter.Watermark.ActiveColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.GridFundFilter.Watermark.Font = new System.Drawing.Font("Segoe UI", 8.25F);
             this.GridFundFilter.Watermark.InactiveColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(211)))), ((int)(((byte)(211)))));
@@ -2002,11 +2093,11 @@ namespace BudgetExecution
             this.visualGroupBox3.TextAlignment = System.Drawing.StringAlignment.Center;
             this.visualGroupBox3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.visualGroupBox3.TextLineAlignment = System.Drawing.StringAlignment.Center;
-            textStyle10.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-            textStyle10.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            textStyle10.Hover = System.Drawing.Color.Empty;
-            textStyle10.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            this.visualGroupBox3.TextStyle = textStyle10;
+            textStyle12.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
+            textStyle12.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            textStyle12.Hover = System.Drawing.Color.Empty;
+            textStyle12.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
+            this.visualGroupBox3.TextStyle = textStyle12;
             this.visualGroupBox3.TitleBoxHeight = 25;
             // 
             // tableLayoutPanel1
@@ -2159,8 +2250,6 @@ namespace BudgetExecution
             this.visualGroupBox4.Border.Type = VisualPlus.Enumerators.ShapeType.Rounded;
             this.visualGroupBox4.Border.Visible = true;
             this.visualGroupBox4.BoxStyle = VisualPlus.Toolkit.Controls.Layout.VisualGroupBox.GroupBoxStyle.Default;
-            this.visualGroupBox4.Controls.Add(this.L8);
-            this.visualGroupBox4.Controls.Add(this.L7);
             this.visualGroupBox4.Controls.Add(this.metroPanel1);
             this.visualGroupBox4.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
             this.visualGroupBox4.ForeColor = System.Drawing.Color.LightSteelBlue;
@@ -2184,93 +2273,6 @@ namespace BudgetExecution
             this.visualGroupBox4.TextStyle = textStyle13;
             this.visualGroupBox4.TitleBoxHeight = 25;
             // 
-            // L8
-            // 
-            this.L8.BackColor = System.Drawing.Color.Transparent;
-            this.L8.Border.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
-            this.L8.Border.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
-            this.L8.Border.HoverVisible = true;
-            this.L8.Border.Rounding = 12;
-            this.L8.Border.Thickness = 1;
-            this.L8.Border.Type = VisualPlus.Enumerators.ShapeType.Rounded;
-            this.L8.Border.Visible = true;
-            this.L8.Box = new System.Drawing.Size(14, 10);
-            this.L8.BoxColorState.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.L8.BoxColorState.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
-            this.L8.BoxColorState.Hover = System.Drawing.Color.SteelBlue;
-            this.L8.BoxColorState.Pressed = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.L8.BoxSpacing = 2;
-            this.L8.CheckStyle.AutoSize = true;
-            this.L8.CheckStyle.Bounds = new System.Drawing.Rectangle(0, 0, 8, 8);
-            this.L8.CheckStyle.Character = '✔';
-            this.L8.CheckStyle.CheckColor = System.Drawing.SystemColors.Highlight;
-            this.L8.CheckStyle.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.L8.CheckStyle.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
-            this.L8.CheckStyle.ShapeRounding = 6;
-            this.L8.CheckStyle.ShapeType = VisualPlus.Enumerators.ShapeType.Rounded;
-            this.L8.CheckStyle.Style = VisualPlus.Structure.CheckStyle.CheckType.Shape;
-            this.L8.CheckStyle.Thickness = 2F;
-            this.L8.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.L8.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.L8.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.L8.IsBoxLarger = false;
-            this.L8.Location = new System.Drawing.Point(144, 18);
-            this.L8.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
-            this.L8.Name = "L8";
-            this.L8.Size = new System.Drawing.Size(92, 29);
-            this.L8.TabIndex = 178;
-            this.L8.Text = "Level 8";
-            this.L8.TextSize = new System.Drawing.Size(57, 24);
-            textStyle11.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-            textStyle11.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            textStyle11.Hover = System.Drawing.Color.Empty;
-            textStyle11.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            this.L8.TextStyle = textStyle11;
-            // 
-            // L7
-            // 
-            this.L7.BackColor = System.Drawing.Color.Transparent;
-            this.L7.Border.Color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
-            this.L7.Border.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(183)))), ((int)(((byte)(230)))));
-            this.L7.Border.HoverVisible = true;
-            this.L7.Border.Rounding = 12;
-            this.L7.Border.Thickness = 1;
-            this.L7.Border.Type = VisualPlus.Enumerators.ShapeType.Rounded;
-            this.L7.Border.Visible = true;
-            this.L7.Box = new System.Drawing.Size(14, 10);
-            this.L7.BoxColorState.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.L7.BoxColorState.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
-            this.L7.BoxColorState.Hover = System.Drawing.Color.SteelBlue;
-            this.L7.BoxColorState.Pressed = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.L7.BoxSpacing = 2;
-            this.L7.Checked = true;
-            this.L7.CheckStyle.AutoSize = true;
-            this.L7.CheckStyle.Bounds = new System.Drawing.Rectangle(0, 0, 8, 8);
-            this.L7.CheckStyle.Character = '✔';
-            this.L7.CheckStyle.CheckColor = System.Drawing.SystemColors.Highlight;
-            this.L7.CheckStyle.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.L7.CheckStyle.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image1")));
-            this.L7.CheckStyle.ShapeRounding = 6;
-            this.L7.CheckStyle.ShapeType = VisualPlus.Enumerators.ShapeType.Rounded;
-            this.L7.CheckStyle.Style = VisualPlus.Structure.CheckStyle.CheckType.Shape;
-            this.L7.CheckStyle.Thickness = 2F;
-            this.L7.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.L7.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            this.L7.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.L7.IsBoxLarger = false;
-            this.L7.Location = new System.Drawing.Point(26, 18);
-            this.L7.MouseState = VisualPlus.Enumerators.MouseStates.Normal;
-            this.L7.Name = "L7";
-            this.L7.Size = new System.Drawing.Size(91, 29);
-            this.L7.TabIndex = 177;
-            this.L7.Text = "Level 7";
-            this.L7.TextSize = new System.Drawing.Size(57, 24);
-            textStyle12.Disabled = System.Drawing.Color.FromArgb(((int)(((byte)(131)))), ((int)(((byte)(129)))), ((int)(((byte)(129)))));
-            textStyle12.Enabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            textStyle12.Hover = System.Drawing.Color.Empty;
-            textStyle12.TextRenderingHint = System.Drawing.Text.TextRenderingHint.ClearTypeGridFit;
-            this.L7.TextStyle = textStyle12;
-            // 
             // metroPanel1
             // 
             this.metroPanel1.BackColor = System.Drawing.Color.Transparent;
@@ -2290,12 +2292,12 @@ namespace BudgetExecution
             // Grid
             // 
             this.Grid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.Grid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCellsExceptHeaders;
+            this.Grid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.Grid.BackgroundColor = System.Drawing.Color.LightSteelBlue;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.SteelBlue;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.SteelBlue;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
@@ -2370,18 +2372,20 @@ namespace BudgetExecution
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.BackColor = System.Drawing.Color.Transparent;
-            this.tableLayoutPanel2.ColumnCount = 7;
+            this.tableLayoutPanel2.ColumnCount = 8;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 53.25444F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 46.74556F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 127F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 131F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 127F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 135F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 187F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 110F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 129F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 104F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 109F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 114F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 109F));
+            this.tableLayoutPanel2.Controls.Add(this.DatabaseSearchButton, 7, 0);
             this.tableLayoutPanel2.Controls.Add(this.button6, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.button7, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.GridRefreshButton, 2, 0);
-            this.tableLayoutPanel2.Controls.Add(this.DatabaseSearchButton, 6, 0);
+            this.tableLayoutPanel2.Controls.Add(this.ChartButton, 6, 0);
             this.tableLayoutPanel2.Controls.Add(this.EditButton, 3, 0);
             this.tableLayoutPanel2.Controls.Add(this.AddButton, 4, 0);
             this.tableLayoutPanel2.Controls.Add(this.CopyButton, 5, 0);
@@ -2392,6 +2396,25 @@ namespace BudgetExecution
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 65.57377F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(887, 67);
             this.tableLayoutPanel2.TabIndex = 169;
+            // 
+            // DatabaseSearchButton
+            // 
+            this.DatabaseSearchButton.BackColor = System.Drawing.Color.Transparent;
+            this.DatabaseSearchButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DatabaseSearchButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.DatabaseSearchButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SlateGray;
+            this.DatabaseSearchButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.DatabaseSearchButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.DatabaseSearchButton.Image = ((System.Drawing.Image)(resources.GetObject("DatabaseSearchButton.Image")));
+            this.DatabaseSearchButton.Location = new System.Drawing.Point(781, 5);
+            this.DatabaseSearchButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.DatabaseSearchButton.Name = "DatabaseSearchButton";
+            this.DatabaseSearchButton.Size = new System.Drawing.Size(102, 57);
+            this.DatabaseSearchButton.TabIndex = 169;
+            this.DatabaseSearchButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.metroSetToolTip1.SetToolTip(this.DatabaseSearchButton, "Search Database");
+            this.DatabaseSearchButton.UseVisualStyleBackColor = false;
+            this.DatabaseSearchButton.Click += new System.EventHandler(this.DatabaseSearchButton_OnClick);
             // 
             // button6
             // 
@@ -2405,7 +2428,7 @@ namespace BudgetExecution
             this.button6.Location = new System.Drawing.Point(4, 5);
             this.button6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(87, 57);
+            this.button6.Size = new System.Drawing.Size(104, 57);
             this.button6.TabIndex = 162;
             this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.metroSetToolTip1.SetToolTip(this.button6, "Previous Account");
@@ -2421,10 +2444,10 @@ namespace BudgetExecution
             this.button7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button7.Image = ((System.Drawing.Image)(resources.GetObject("button7.Image")));
-            this.button7.Location = new System.Drawing.Point(99, 5);
+            this.button7.Location = new System.Drawing.Point(116, 5);
             this.button7.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(76, 57);
+            this.button7.Size = new System.Drawing.Size(91, 57);
             this.button7.TabIndex = 163;
             this.button7.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.metroSetToolTip1.SetToolTip(this.button7, "Next Account");
@@ -2441,34 +2464,34 @@ namespace BudgetExecution
             this.GridRefreshButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.GridRefreshButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.GridRefreshButton.Image = ((System.Drawing.Image)(resources.GetObject("GridRefreshButton.Image")));
-            this.GridRefreshButton.Location = new System.Drawing.Point(183, 5);
+            this.GridRefreshButton.Location = new System.Drawing.Point(215, 5);
             this.GridRefreshButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.GridRefreshButton.Name = "GridRefreshButton";
-            this.GridRefreshButton.Size = new System.Drawing.Size(119, 57);
+            this.GridRefreshButton.Size = new System.Drawing.Size(102, 57);
             this.GridRefreshButton.TabIndex = 164;
             this.GridRefreshButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.metroSetToolTip1.SetToolTip(this.GridRefreshButton, "Refresh Data");
             this.GridRefreshButton.UseVisualStyleBackColor = false;
             this.GridRefreshButton.Click += new System.EventHandler(this.GridRefreshButton_OnClick);
             // 
-            // DatabaseSearchButton
+            // ChartButton
             // 
-            this.DatabaseSearchButton.BackColor = System.Drawing.Color.Transparent;
-            this.DatabaseSearchButton.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DatabaseSearchButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.DatabaseSearchButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SlateGray;
-            this.DatabaseSearchButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
-            this.DatabaseSearchButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.DatabaseSearchButton.Image = ((System.Drawing.Image)(resources.GetObject("DatabaseSearchButton.Image")));
-            this.DatabaseSearchButton.Location = new System.Drawing.Point(703, 5);
-            this.DatabaseSearchButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.DatabaseSearchButton.Name = "DatabaseSearchButton";
-            this.DatabaseSearchButton.Size = new System.Drawing.Size(180, 57);
-            this.DatabaseSearchButton.TabIndex = 167;
-            this.DatabaseSearchButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.metroSetToolTip1.SetToolTip(this.DatabaseSearchButton, "Search Database");
-            this.DatabaseSearchButton.UseVisualStyleBackColor = false;
-            this.DatabaseSearchButton.Click += new System.EventHandler(this.DatabaseSearchButton_OnClick);
+            this.ChartButton.BackColor = System.Drawing.Color.Transparent;
+            this.ChartButton.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ChartButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.ChartButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SlateGray;
+            this.ChartButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.ChartButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ChartButton.Image = ((System.Drawing.Image)(resources.GetObject("ChartButton.Image")));
+            this.ChartButton.Location = new System.Drawing.Point(667, 5);
+            this.ChartButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.ChartButton.Name = "ChartButton";
+            this.ChartButton.Size = new System.Drawing.Size(106, 57);
+            this.ChartButton.TabIndex = 167;
+            this.ChartButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.metroSetToolTip1.SetToolTip(this.ChartButton, "Search Database");
+            this.ChartButton.UseVisualStyleBackColor = false;
+            this.ChartButton.Click += new System.EventHandler(this.ChartButton_OnClick);
             // 
             // EditButton
             // 
@@ -2480,10 +2503,10 @@ namespace BudgetExecution
             this.EditButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.EditButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.EditButton.Image = ((System.Drawing.Image)(resources.GetObject("EditButton.Image")));
-            this.EditButton.Location = new System.Drawing.Point(310, 5);
+            this.EditButton.Location = new System.Drawing.Point(325, 5);
             this.EditButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.EditButton.Name = "EditButton";
-            this.EditButton.Size = new System.Drawing.Size(123, 57);
+            this.EditButton.Size = new System.Drawing.Size(121, 57);
             this.EditButton.TabIndex = 165;
             this.EditButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.metroSetToolTip1.SetToolTip(this.EditButton, "Edit Account");
@@ -2501,10 +2524,10 @@ namespace BudgetExecution
             this.AddButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.AddButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AddButton.Image = ((System.Drawing.Image)(resources.GetObject("AddButton.Image")));
-            this.AddButton.Location = new System.Drawing.Point(441, 5);
+            this.AddButton.Location = new System.Drawing.Point(454, 5);
             this.AddButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.AddButton.Name = "AddButton";
-            this.AddButton.Size = new System.Drawing.Size(119, 57);
+            this.AddButton.Size = new System.Drawing.Size(96, 57);
             this.AddButton.TabIndex = 166;
             this.AddButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.metroSetToolTip1.SetToolTip(this.AddButton, "Add  Account");
@@ -2520,10 +2543,10 @@ namespace BudgetExecution
             this.CopyButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.CopyButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CopyButton.Image = ((System.Drawing.Image)(resources.GetObject("CopyButton.Image")));
-            this.CopyButton.Location = new System.Drawing.Point(568, 5);
+            this.CopyButton.Location = new System.Drawing.Point(558, 5);
             this.CopyButton.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.CopyButton.Name = "CopyButton";
-            this.CopyButton.Size = new System.Drawing.Size(127, 57);
+            this.CopyButton.Size = new System.Drawing.Size(101, 57);
             this.CopyButton.TabIndex = 168;
             this.CopyButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.metroSetToolTip1.SetToolTip(this.CopyButton, "Transfer Funds");
@@ -2575,7 +2598,7 @@ namespace BudgetExecution
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 45.9854F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 54.0146F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 118F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 153F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 154F));
             this.tableLayoutPanel3.Controls.Add(this.button4, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.button5, 1, 0);
             this.tableLayoutPanel3.Controls.Add(this.button3, 3, 0);
@@ -2613,7 +2636,7 @@ namespace BudgetExecution
             this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
             this.button5.Location = new System.Drawing.Point(95, 3);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(103, 56);
+            this.button5.Size = new System.Drawing.Size(102, 56);
             this.button5.TabIndex = 160;
             this.metroSetToolTip1.SetToolTip(this.button5, "Next Account");
             this.button5.UseVisualStyleBackColor = false;
@@ -2628,9 +2651,9 @@ namespace BudgetExecution
             this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.Location = new System.Drawing.Point(322, 3);
+            this.button3.Location = new System.Drawing.Point(321, 3);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(148, 56);
+            this.button3.Size = new System.Drawing.Size(149, 56);
             this.button3.TabIndex = 158;
             this.metroSetToolTip1.SetToolTip(this.button3, "Remove Account");
             this.button3.UseVisualStyleBackColor = false;
@@ -2644,7 +2667,7 @@ namespace BudgetExecution
             this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(204, 3);
+            this.button1.Location = new System.Drawing.Point(203, 3);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(112, 56);
             this.button1.TabIndex = 157;
@@ -2839,7 +2862,6 @@ namespace BudgetExecution
             this.AccountChart.ToolBar.Items.Add(chartToolBarTypeItem3);
             this.AccountChart.ToolBar.Items.Add(chartToolBarSeries3DItem3);
             this.AccountChart.ToolBar.Items.Add(chartToolBarShowLegendItem3);
-            this.AccountChart.Click += new System.EventHandler(this.AccountChart_Click);
             // 
             // EditTab
             // 
@@ -2871,10 +2893,10 @@ namespace BudgetExecution
             this.EditTab.ForeColor = System.Drawing.Color.LightSteelBlue;
             this.EditTab.Image = null;
             this.EditTab.ImageSize = new System.Drawing.Size(20, 20);
-            this.EditTab.Location = new System.Drawing.Point(0, -1);
+            this.EditTab.Location = new System.Drawing.Point(0, 32);
             this.EditTab.Name = "EditTab";
             this.EditTab.ShowCloseButton = true;
-            this.EditTab.Size = new System.Drawing.Size(528, 492);
+            this.EditTab.Size = new System.Drawing.Size(528, 459);
             this.EditTab.TabBackColor = System.Drawing.Color.Transparent;
             this.EditTab.TabForeColor = System.Drawing.Color.LightSkyBlue;
             this.EditTab.TabIndex = 4;
@@ -3538,10 +3560,10 @@ namespace BudgetExecution
             this.AddTab.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.AddTab.Image = null;
             this.AddTab.ImageSize = new System.Drawing.Size(16, 16);
-            this.AddTab.Location = new System.Drawing.Point(0, -1);
+            this.AddTab.Location = new System.Drawing.Point(0, 32);
             this.AddTab.Name = "AddTab";
             this.AddTab.ShowCloseButton = true;
-            this.AddTab.Size = new System.Drawing.Size(528, 492);
+            this.AddTab.Size = new System.Drawing.Size(528, 459);
             this.AddTab.TabIndex = 5;
             this.AddTab.Text = "Add Account";
             this.AddTab.ThemesEnabled = false;
@@ -4595,7 +4617,7 @@ namespace BudgetExecution
         private Button button6;
         private TableLayoutPanel tableLayoutPanel2;
         private Button CopyButton;
-        private Button DatabaseSearchButton;
+        private Button ChartButton;
         private Button GridRefreshButton;
         private Button AddButton;
         private Button EditButton;
@@ -4658,5 +4680,6 @@ namespace BudgetExecution
         private VisualPlus.Toolkit.Controls.Interactivity.VisualLabel visualLabel12;
         private VisualPlus.Toolkit.Controls.Interactivity.VisualRadioButton L8;
         private VisualPlus.Toolkit.Controls.Interactivity.VisualRadioButton L7;
+        private Button DatabaseSearchButton;
     }
 }
